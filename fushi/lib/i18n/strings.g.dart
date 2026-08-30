@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 67473 (3969 per locale)
+/// Strings: 67898 (3994 per locale)
 ///
-/// Built on 2026-08-30 at 10:21 UTC
+/// Built on 2026-08-30 at 11:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5430,6 +5430,53 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Native window (4K, hardware DRM; cards are queued for later)';
   String web_video_mine_switch_builtin({required Object count}) =>
       'Switch to built-in mode to create ${count} queued cards';
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -14654,6 +14701,78 @@ class _StringsAr extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -24093,6 +24212,78 @@ class _StringsDe extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -33578,6 +33769,78 @@ class _StringsEs extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Cambiar al modo integrado para crear ${count} tarjetas en cola';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -43097,6 +43360,78 @@ class _StringsFr extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Passer en mode intégré pour créer ${count} cartes en attente';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -52438,6 +52773,78 @@ class _StringsId extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -61861,6 +62268,78 @@ class _StringsIt extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Passa alla modalità integrata per creare ${count} carte in coda';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -70709,6 +71188,78 @@ class _StringsJa extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       '内蔵モードに切り替えて ${count} 件のカードを作成';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -79569,6 +80120,78 @@ class _StringsKo extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -88945,6 +89568,78 @@ class _StringsNl extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -98377,6 +99072,78 @@ class _StringsPtBr extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Mudar para o modo integrado para criar ${count} cartões na fila';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -107785,6 +108552,78 @@ class _StringsRu extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -117004,6 +117843,78 @@ class _StringsTh extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -126331,6 +127242,78 @@ class _StringsTr extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -135637,6 +136620,78 @@ class _StringsVi extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 // Path: <root>
@@ -144202,6 +145257,69 @@ class _StringsZhCn extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       '切到内置模式制作 ${count} 张排队卡片';
+  @override
+  String get onboarding_step_click_lookup_title => '点击查词';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      '在 Fushi 里，书籍正文、漫画 OCR 文字和视频字幕都能从你点中的字符直接查词。';
+  @override
+  String get onboarding_click_lookup_tap_title => '点一下文字';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      '手机轻点一个字，电脑用鼠标左键单击。Fushi 会从这里开始匹配最长的词。';
+  @override
+  String get onboarding_click_lookup_nested_title => '在弹窗里继续查';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      '点释义里的另一个词会展开下一层查词；返回或点弹窗外可关闭一层。';
+  @override
+  String get onboarding_click_lookup_mine_title => '把结果做成卡片';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      '确认词义后点加号（＋），把当前词、句子、音频和画面送到制卡器。';
+  @override
+  String get onboarding_step_global_lookup_title => '全局查词';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      '在 Windows 上，先在其他应用里选中文字，就能直接唤出词典，不必切回 Fushi。';
+  @override
+  String get onboarding_global_lookup_windows_select_title => '在任意应用里选中文字';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      '拖选要查的词或短语，并保持文字处于选中状态。';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title => '按 Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      '这是默认全局快捷键。Fushi 会抓取当前选区，并在鼠标附近打开查词卡片。';
+  @override
+  String get onboarding_global_lookup_windows_customize_title => '需要时修改快捷键';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      '前往设置 → 快捷键 → 全局（应用外），可以换成你习惯的组合键。';
+  @override
+  String get onboarding_global_lookup_windows_action => '打开快捷键设置';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      '可修改应用外查词快捷键；默认 Ctrl+Alt+D 已可直接使用，因此不改也没关系。';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      '在 Android 上，由系统通过文字菜单或分享面板把选中文本交给 Fushi；手机没有可自定义的全局热键。';
+  @override
+  String get onboarding_global_lookup_android_select_title => '在其他应用里选中文字';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      '长按文字，再拖动选区手柄，让它覆盖要查的词或短语。';
+  @override
+  String get onboarding_global_lookup_android_open_title => '选择 Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      '在文字选择菜单中点 Fushi；如果菜单没显示，就点分享，再从分享面板选择 Fushi。';
+  @override
+  String get onboarding_global_lookup_android_continue_title => '在独立弹窗中继续';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      '查词结果会独立打开；你可以继续点释义里的词，关闭后回到刚才的应用。';
 }
 
 // Path: <root>
@@ -152772,6 +153890,78 @@ class _StringsZhHk extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       '切換到內建模式製作 ${count} 張排隊卡片';
+  @override
+  String get onboarding_step_click_lookup_title => 'Tap to look up words';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+  @override
+  String get onboarding_click_lookup_tap_title => 'Tap the text';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_click_lookup_nested_title =>
+      'Keep exploring in the popup';
+  @override
+  String get onboarding_click_lookup_nested_body =>
+      'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+  @override
+  String get onboarding_click_lookup_mine_title =>
+      'Turn the result into a card';
+  @override
+  String get onboarding_click_lookup_mine_body =>
+      'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+  @override
+  String get onboarding_step_global_lookup_title =>
+      'Look up text outside Fushi';
+  @override
+  String get onboarding_global_lookup_windows_body =>
+      'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+  @override
+  String get onboarding_global_lookup_windows_select_title =>
+      'Select text in any app';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the word or phrase you want to look up and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_title =>
+      'Press Ctrl+Alt+D';
+  @override
+  String get onboarding_global_lookup_windows_shortcut_body =>
+      'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+  @override
+  String get onboarding_global_lookup_windows_customize_title =>
+      'Change the shortcut if needed';
+  @override
+  String get onboarding_global_lookup_windows_customize_body =>
+      'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+  @override
+  String get onboarding_global_lookup_windows_action =>
+      'Open shortcut settings';
+  @override
+  String get onboarding_global_lookup_windows_action_desc =>
+      'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+  @override
+  String get onboarding_global_lookup_android_body =>
+      'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+  @override
+  String get onboarding_global_lookup_android_select_title =>
+      'Select text in another app';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+  @override
+  String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
+  @override
+  String get onboarding_global_lookup_android_open_body =>
+      'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+  @override
+  String get onboarding_global_lookup_android_continue_title =>
+      'Use the standalone popup';
+  @override
+  String get onboarding_global_lookup_android_continue_body =>
+      'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
 }
 
 /// Flat map(s) containing all translations.
@@ -160921,6 +162111,56 @@ extension on _StringsEn {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Switch to built-in mode to create ${count} queued cards';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -169066,6 +170306,56 @@ extension on _StringsAr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -177254,6 +178544,56 @@ extension on _StringsDe {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -185434,6 +186774,56 @@ extension on _StringsEs {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Cambiar al modo integrado para crear ${count} tarjetas en cola';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -193622,6 +195012,56 @@ extension on _StringsFr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Passer en mode intégré pour créer ${count} cartes en attente';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -201782,6 +203222,56 @@ extension on _StringsId {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -209963,6 +211453,56 @@ extension on _StringsIt {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Passa alla modalità integrata per creare ${count} carte in coda';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -218074,6 +219614,56 @@ extension on _StringsJa {
         return 'ネイティブウィンドウ（4K、ハードウェア DRM；カードは後でキュー処理）';
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) => '内蔵モードに切り替えて ${count} 件のカードを作成';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -226188,6 +227778,56 @@ extension on _StringsKo {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -234363,6 +236003,56 @@ extension on _StringsNl {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -242533,6 +244223,56 @@ extension on _StringsPtBr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Mudar para o modo integrado para criar ${count} cartões na fila';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -250709,6 +252449,56 @@ extension on _StringsRu {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -258858,6 +260648,56 @@ extension on _StringsTh {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -267023,6 +268863,56 @@ extension on _StringsTr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -275181,6 +277071,56 @@ extension on _StringsVi {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
@@ -283270,6 +285210,56 @@ extension on _StringsZhCn {
         return '原生窗口（4K 硬件 DRM；制卡先排队）';
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) => '切到内置模式制作 ${count} 张排队卡片';
+      case 'onboarding_step_click_lookup_title':
+        return '点击查词';
+      case 'onboarding_step_click_lookup_body':
+        return '在 Fushi 里，书籍正文、漫画 OCR 文字和视频字幕都能从你点中的字符直接查词。';
+      case 'onboarding_click_lookup_tap_title':
+        return '点一下文字';
+      case 'onboarding_click_lookup_tap_body':
+        return '手机轻点一个字，电脑用鼠标左键单击。Fushi 会从这里开始匹配最长的词。';
+      case 'onboarding_click_lookup_nested_title':
+        return '在弹窗里继续查';
+      case 'onboarding_click_lookup_nested_body':
+        return '点释义里的另一个词会展开下一层查词；返回或点弹窗外可关闭一层。';
+      case 'onboarding_click_lookup_mine_title':
+        return '把结果做成卡片';
+      case 'onboarding_click_lookup_mine_body':
+        return '确认词义后点加号（＋），把当前词、句子、音频和画面送到制卡器。';
+      case 'onboarding_step_global_lookup_title':
+        return '全局查词';
+      case 'onboarding_global_lookup_windows_body':
+        return '在 Windows 上，先在其他应用里选中文字，就能直接唤出词典，不必切回 Fushi。';
+      case 'onboarding_global_lookup_windows_select_title':
+        return '在任意应用里选中文字';
+      case 'onboarding_global_lookup_windows_select_body':
+        return '拖选要查的词或短语，并保持文字处于选中状态。';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return '按 Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return '这是默认全局快捷键。Fushi 会抓取当前选区，并在鼠标附近打开查词卡片。';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return '需要时修改快捷键';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return '前往设置 → 快捷键 → 全局（应用外），可以换成你习惯的组合键。';
+      case 'onboarding_global_lookup_windows_action':
+        return '打开快捷键设置';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return '可修改应用外查词快捷键；默认 Ctrl+Alt+D 已可直接使用，因此不改也没关系。';
+      case 'onboarding_global_lookup_android_body':
+        return '在 Android 上，由系统通过文字菜单或分享面板把选中文本交给 Fushi；手机没有可自定义的全局热键。';
+      case 'onboarding_global_lookup_android_select_title':
+        return '在其他应用里选中文字';
+      case 'onboarding_global_lookup_android_select_body':
+        return '长按文字，再拖动选区手柄，让它覆盖要查的词或短语。';
+      case 'onboarding_global_lookup_android_open_title':
+        return '选择 Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return '在文字选择菜单中点 Fushi；如果菜单没显示，就点分享，再从分享面板选择 Fushi。';
+      case 'onboarding_global_lookup_android_continue_title':
+        return '在独立弹窗中继续';
+      case 'onboarding_global_lookup_android_continue_body':
+        return '查词结果会独立打开；你可以继续点释义里的词，关闭后回到刚才的应用。';
       default:
         return null;
     }
@@ -291360,6 +293350,56 @@ extension on _StringsZhHk {
         return '原生視窗（4K 硬體 DRM；製卡先排隊）';
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) => '切換到內建模式製作 ${count} 張排隊卡片';
+      case 'onboarding_step_click_lookup_title':
+        return 'Tap to look up words';
+      case 'onboarding_step_click_lookup_body':
+        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
+      case 'onboarding_click_lookup_tap_title':
+        return 'Tap the text';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_click_lookup_nested_title':
+        return 'Keep exploring in the popup';
+      case 'onboarding_click_lookup_nested_body':
+        return 'Tap another word inside a definition to open a deeper lookup. Go back or tap outside to close one level.';
+      case 'onboarding_click_lookup_mine_title':
+        return 'Turn the result into a card';
+      case 'onboarding_click_lookup_mine_body':
+        return 'When the definition looks right, tap + to send the word, sentence, audio and image to the card creator.';
+      case 'onboarding_step_global_lookup_title':
+        return 'Look up text outside Fushi';
+      case 'onboarding_global_lookup_windows_body':
+        return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
+      case 'onboarding_global_lookup_windows_select_title':
+        return 'Select text in any app';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the word or phrase you want to look up and leave the selection active.';
+      case 'onboarding_global_lookup_windows_shortcut_title':
+        return 'Press Ctrl+Alt+D';
+      case 'onboarding_global_lookup_windows_shortcut_body':
+        return 'This is the default global shortcut. Fushi captures the current selection and opens a lookup card near the pointer.';
+      case 'onboarding_global_lookup_windows_customize_title':
+        return 'Change the shortcut if needed';
+      case 'onboarding_global_lookup_windows_customize_body':
+        return 'Open Settings > Shortcuts > Global (app-external) to assign a different key combination.';
+      case 'onboarding_global_lookup_windows_action':
+        return 'Open shortcut settings';
+      case 'onboarding_global_lookup_windows_action_desc':
+        return 'Lets you change the app-external lookup shortcut. The default Ctrl+Alt+D already works, so this is optional.';
+      case 'onboarding_global_lookup_android_body':
+        return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
+      case 'onboarding_global_lookup_android_select_title':
+        return 'Select text in another app';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
+      case 'onboarding_global_lookup_android_open_title':
+        return 'Choose Fushi';
+      case 'onboarding_global_lookup_android_open_body':
+        return 'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
+      case 'onboarding_global_lookup_android_continue_title':
+        return 'Use the standalone popup';
+      case 'onboarding_global_lookup_android_continue_body':
+        return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       default:
         return null;
     }
