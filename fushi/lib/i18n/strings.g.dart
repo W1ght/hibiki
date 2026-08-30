@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 66861 (3933 per locale)
+/// Strings: 67473 (3969 per locale)
 ///
-/// Built on 2026-08-30 at 09:35 UTC
+/// Built on 2026-08-30 at 10:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5377,6 +5377,59 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Route P2P (torrent) traffic through the proxy';
   String get network_proxy_p2p_warning =>
       'Off by default: P2P connects directly. Routing it through the proxy can reduce speed, and many proxy providers forbid BitTorrent traffic, so your proxy account may be throttled, warned or terminated. Applies to the built-in engine; an external qBittorrent uses its own proxy settings.';
+  String get video_ajatt_settings_hint =>
+      'Free Japanese subtitle archive (kitsunekko mirror). No account needed; subtitle files download from GitHub.';
+  String get video_ajatt_enabled_hint =>
+      'Off means the AJATT archive is skipped when searching subtitles.';
+  String get video_subtitle_workbench_title => 'Subtitles';
+  String get video_subtitle_scope_episode => 'This episode';
+  String get video_subtitle_scope_collection => 'Whole collection';
+  String get video_subtitle_search_open => 'Search subtitles online';
+  String get video_subtitle_collection_settings =>
+      'Collection subtitle settings';
+  String get video_subtitle_collection_language => 'Default subtitle language';
+  String get video_subtitle_collection_language_hint =>
+      'Applies to every episode in this collection. Empty = follow the video\'s own language.';
+  String get video_subtitle_collection_release_group => 'Preferred version';
+  String get video_subtitle_collection_release_group_hint =>
+      'Batch downloads pick this version first so the whole season shares one timing.';
+  String get video_subtitle_collection_release_group_any => 'Any version';
+  String get video_subtitle_source_label => 'Source';
+  String get video_subtitle_collection_members_hint =>
+      'Episodes are matched by number from file names; season packs are split automatically.';
+  String get video_subtitle_adjust_title => 'Subtitle adjustments';
+  String get video_subtitle_adjust_collapse => 'Collapse';
+  String get video_subtitle_adjust_expand => 'Expand';
+  String get settings_section_reading_stats => 'Reading statistics';
+  String get reading_stats_idle_timeout => 'Idle timeout';
+  String get reading_stats_idle_timeout_hint =>
+      'Stop counting reading time after this many minutes without turning a page, scrolling, or looking up a word. Applies to novels, PDFs and manga only; video counts while playing.';
+  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
+  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_empty => 'No queued cards';
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
+  String get web_video_hosting_menu => 'Playback mode';
+  String get web_video_hosting_builtin =>
+      'Built-in (1080p; super-resolution, screenshots and cards available)';
+  String get web_video_hosting_windowed =>
+      'Native window (4K, hardware DRM; cards are queued for later)';
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Switch to built-in mode to create ${count} queued cards';
 }
 
 // Path: <root>
@@ -14513,6 +14566,94 @@ class _StringsAr extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       'معطّل افتراضيًا؛ يتصل P2P مباشرة. قد يؤدي التمرير عبر الوكيل إلى خفض السرعة، وكثير من مزودي الوكلاء يحظرون حركة BitTorrent: قد يتم تقييد حساب الوكيل أو تحذيره أو إنهاؤه. ينطبق على المحرك المدمج فقط؛ يستخدم qBittorrent الخارجي إعدادات الوكيل الخاصة به.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'أرشيف مجاني للترجمات اليابانية (مرآة kitsunekko). لا يتطلب حسابًا؛ تُنزَّل ملفات الترجمة من GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'عند الإيقاف يتم تخطي أرشيف AJATT عند البحث عن الترجمات.';
+  @override
+  String get video_subtitle_workbench_title => 'الترجمات';
+  @override
+  String get video_subtitle_scope_episode => 'هذه الحلقة';
+  @override
+  String get video_subtitle_scope_collection => 'المجموعة كاملة';
+  @override
+  String get video_subtitle_search_open => 'البحث عن ترجمات عبر الإنترنت';
+  @override
+  String get video_subtitle_collection_settings => 'إعدادات ترجمة المجموعة';
+  @override
+  String get video_subtitle_collection_language => 'لغة الترجمة الافتراضية';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      'تنطبق على كل حلقة في هذه المجموعة. فارغ = اتباع لغة الفيديو نفسه.';
+  @override
+  String get video_subtitle_collection_release_group => 'الإصدار المفضل';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      'يختار التنزيل الجماعي هذا الإصدار أولًا ليشترك الموسم كله في توقيت واحد.';
+  @override
+  String get video_subtitle_collection_release_group_any => 'أي إصدار';
+  @override
+  String get video_subtitle_source_label => 'المصدر';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      'تُطابَق الحلقات بالرقم في اسم الملف؛ وتُقسَّم حزم المواسم تلقائيًا.';
+  @override
+  String get video_subtitle_adjust_title => 'ضبط الترجمة';
+  @override
+  String get video_subtitle_adjust_collapse => 'طيّ';
+  @override
+  String get video_subtitle_adjust_expand => 'توسيع';
+  @override
+  String get settings_section_reading_stats => 'إحصائيات القراءة';
+  @override
+  String get reading_stats_idle_timeout => 'مهلة الخمول';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'إيقاف احتساب وقت القراءة بعد هذا العدد من الدقائق دون تقليب صفحة أو تمرير أو بحث عن كلمة. ينطبق على الروايات وملفات PDF والمانغا فقط؛ يُحتسب الفيديو أثناء التشغيل.';
+  @override
+  String get web_video_track_menu => 'مسار الترجمة';
+  @override
+  String get web_video_track_live => 'ترجمة مباشرة (مأخوذة من الصفحة)';
+  @override
+  String get web_video_no_tracks => 'لم يتم التقاط أي ترجمة بعد';
+  @override
+  String get web_video_hide_native_subtitles => 'إخفاء ترجمة الموقع';
+  @override
+  String get web_video_import_hint =>
+      'هذه صفحة ويب (وليست بثًا مباشرًا). ستُفتح في مشغّل الويب المدمج.';
+  @override
+  String get web_video_platform_unsupported =>
+      'مشغّل الويب المدمج متاح حاليًا على Windows فقط.';
+  @override
+  String get web_video_mine_queue_run => 'إنشاء البطاقات المنتظرة';
+  @override
+  String get web_video_mine_queue_stop => 'إيقاف إنشاء البطاقات';
+  @override
+  String get web_video_mine_queue_empty => 'لا توجد بطاقات في قائمة الانتظار';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'أُضيف إلى قائمة انتظار إنشاء البطاقات (${count} معلّقة)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'جارٍ إنشاء البطاقات ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'البطاقات المُنشأة: ${ok}، الفاشلة: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'وضع التشغيل';
+  @override
+  String get web_video_hosting_builtin =>
+      'مدمج (1080p؛ يتوفر تحسين الدقة ولقطات الشاشة والبطاقات)';
+  @override
+  String get web_video_hosting_windowed =>
+      'نافذة أصلية (4K، DRM عتادي؛ تُوضع البطاقات في قائمة الانتظار)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
 }
 
 // Path: <root>
@@ -23863,6 +24004,95 @@ class _StringsDe extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       'Standardmäßig aus – P2P verbindet sich direkt. Über den Proxy kann die Geschwindigkeit sinken, und viele Proxy-Anbieter verbieten BitTorrent-Verkehr: Dein Proxy-Konto kann gedrosselt, verwarnt oder gekündigt werden. Gilt nur für die integrierte Engine; ein externes qBittorrent nutzt seine eigenen Proxy-Einstellungen.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Kostenloses Archiv japanischer Untertitel (kitsunekko-Spiegel). Kein Konto nötig; Untertiteldateien werden von GitHub geladen.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Aus bedeutet, dass das AJATT-Archiv bei der Untertitelsuche übersprungen wird.';
+  @override
+  String get video_subtitle_workbench_title => 'Untertitel';
+  @override
+  String get video_subtitle_scope_episode => 'Diese Folge';
+  @override
+  String get video_subtitle_scope_collection => 'Ganze Sammlung';
+  @override
+  String get video_subtitle_search_open => 'Untertitel online suchen';
+  @override
+  String get video_subtitle_collection_settings =>
+      'Untertitel-Einstellungen der Sammlung';
+  @override
+  String get video_subtitle_collection_language => 'Standard-Untertitelsprache';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      'Gilt für jede Folge dieser Sammlung. Leer = der Sprache des Videos folgen.';
+  @override
+  String get video_subtitle_collection_release_group => 'Bevorzugte Version';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      'Sammel-Downloads wählen zuerst diese Version, damit die ganze Staffel dasselbe Timing teilt.';
+  @override
+  String get video_subtitle_collection_release_group_any => 'Beliebige Version';
+  @override
+  String get video_subtitle_source_label => 'Quelle';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      'Folgen werden anhand der Nummer im Dateinamen zugeordnet; Staffelpakete werden automatisch aufgeteilt.';
+  @override
+  String get video_subtitle_adjust_title => 'Untertitel anpassen';
+  @override
+  String get video_subtitle_adjust_collapse => 'Einklappen';
+  @override
+  String get video_subtitle_adjust_expand => 'Ausklappen';
+  @override
+  String get settings_section_reading_stats => 'Lesestatistik';
+  @override
+  String get reading_stats_idle_timeout => 'Inaktivitäts-Timeout';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Lesezeit nach so vielen Minuten ohne Umblättern, Scrollen oder Wortsuche nicht mehr zählen. Gilt nur für Romane, PDFs und Manga; Video zählt, solange es läuft.';
+  @override
+  String get web_video_track_menu => 'Untertitelspur';
+  @override
+  String get web_video_track_live => 'Live-Untertitel (von der Seite erfasst)';
+  @override
+  String get web_video_no_tracks => 'Noch keine Untertitel erfasst';
+  @override
+  String get web_video_hide_native_subtitles => 'Website-Untertitel ausblenden';
+  @override
+  String get web_video_import_hint =>
+      'Dies ist eine Webseite (kein direkter Stream). Sie wird im integrierten Web-Player geöffnet.';
+  @override
+  String get web_video_platform_unsupported =>
+      'Der integrierte Web-Player ist derzeit nur unter Windows verfügbar.';
+  @override
+  String get web_video_mine_queue_run => 'Wartende Karten erstellen';
+  @override
+  String get web_video_mine_queue_stop => 'Kartenerstellung stoppen';
+  @override
+  String get web_video_mine_queue_empty => 'Keine wartenden Karten';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Für die Kartenerstellung vorgemerkt (${count} ausstehend)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Karten werden erstellt ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Karten erstellt: ${ok}, fehlgeschlagen: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Wiedergabemodus';
+  @override
+  String get web_video_hosting_builtin =>
+      'Integriert (1080p; Hochskalierung, Screenshots und Karten verfügbar)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Natives Fenster (4K, Hardware-DRM; Karten werden später erstellt)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
 }
 
 // Path: <root>
@@ -33257,6 +33487,97 @@ class _StringsEs extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       'Desactivado de forma predeterminada: P2P se conecta directamente. Pasar por el proxy puede reducir la velocidad y muchos proveedores de proxy prohíben el tráfico BitTorrent: su cuenta de proxy podría ser limitada, advertida o cancelada. Solo se aplica al motor integrado; un qBittorrent externo usa su propia configuración de proxy.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Archivo gratuito de subtítulos en japonés (réplica de kitsunekko). No requiere cuenta; los archivos se descargan desde GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Desactivado significa que el archivo AJATT se omite al buscar subtítulos.';
+  @override
+  String get video_subtitle_workbench_title => 'Subtítulos';
+  @override
+  String get video_subtitle_scope_episode => 'Este episodio';
+  @override
+  String get video_subtitle_scope_collection => 'Toda la colección';
+  @override
+  String get video_subtitle_search_open => 'Buscar subtítulos en línea';
+  @override
+  String get video_subtitle_collection_settings =>
+      'Ajustes de subtítulos de la colección';
+  @override
+  String get video_subtitle_collection_language =>
+      'Idioma de subtítulos predeterminado';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      'Se aplica a todos los episodios de esta colección. Vacío = seguir el idioma del vídeo.';
+  @override
+  String get video_subtitle_collection_release_group => 'Versión preferida';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      'Las descargas en lote eligen primero esta versión para que toda la temporada comparta la misma sincronización.';
+  @override
+  String get video_subtitle_collection_release_group_any => 'Cualquier versión';
+  @override
+  String get video_subtitle_source_label => 'Fuente';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      'Los episodios se emparejan por el número del nombre de archivo; los packs de temporada se dividen automáticamente.';
+  @override
+  String get video_subtitle_adjust_title => 'Ajustes de subtítulos';
+  @override
+  String get video_subtitle_adjust_collapse => 'Contraer';
+  @override
+  String get video_subtitle_adjust_expand => 'Expandir';
+  @override
+  String get settings_section_reading_stats => 'Estadísticas de lectura';
+  @override
+  String get reading_stats_idle_timeout => 'Tiempo de inactividad';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Dejar de contar el tiempo de lectura tras estos minutos sin pasar página, desplazarse o buscar una palabra. Solo para novelas, PDF y manga; el vídeo cuenta mientras se reproduce.';
+  @override
+  String get web_video_track_menu => 'Pista de subtítulos';
+  @override
+  String get web_video_track_live =>
+      'Subtítulos en vivo (capturados de la página)';
+  @override
+  String get web_video_no_tracks => 'Aún no se han capturado subtítulos';
+  @override
+  String get web_video_hide_native_subtitles => 'Ocultar subtítulos del sitio';
+  @override
+  String get web_video_import_hint =>
+      'Esto es una página web (no una transmisión directa). Se abrirá en el reproductor web integrado.';
+  @override
+  String get web_video_platform_unsupported =>
+      'El reproductor web integrado solo está disponible en Windows por ahora.';
+  @override
+  String get web_video_mine_queue_run => 'Crear las tarjetas en cola';
+  @override
+  String get web_video_mine_queue_stop => 'Detener la creación de tarjetas';
+  @override
+  String get web_video_mine_queue_empty => 'No hay tarjetas en cola';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'En cola para crear tarjetas (${count} pendientes)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creando tarjetas ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Tarjetas creadas: ${ok}, fallidas: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Modo de reproducción';
+  @override
+  String get web_video_hosting_builtin =>
+      'Integrado (1080p; superresolución, capturas y tarjetas disponibles)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Ventana nativa (4K, DRM por hardware; las tarjetas se ponen en cola)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Cambiar al modo integrado para crear ${count} tarjetas en cola';
 }
 
 // Path: <root>
@@ -42683,6 +43004,99 @@ class _StringsFr extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       'Désactivé par défaut : le P2P se connecte directement. Passer par le proxy peut réduire la vitesse, et de nombreux fournisseurs de proxy interdisent le trafic BitTorrent : votre compte proxy peut être bridé, averti ou résilié. Ne s\'applique qu\'au moteur intégré ; un qBittorrent externe utilise ses propres paramètres de proxy.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Archive gratuite de sous-titres japonais (miroir kitsunekko). Aucun compte requis ; les fichiers sont téléchargés depuis GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Désactivé : l\'archive AJATT est ignorée lors de la recherche de sous-titres.';
+  @override
+  String get video_subtitle_workbench_title => 'Sous-titres';
+  @override
+  String get video_subtitle_scope_episode => 'Cet épisode';
+  @override
+  String get video_subtitle_scope_collection => 'Toute la collection';
+  @override
+  String get video_subtitle_search_open =>
+      'Rechercher des sous-titres en ligne';
+  @override
+  String get video_subtitle_collection_settings =>
+      'Réglages de sous-titres de la collection';
+  @override
+  String get video_subtitle_collection_language =>
+      'Langue de sous-titres par défaut';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      'S’applique à chaque épisode de cette collection. Vide = suivre la langue de la vidéo.';
+  @override
+  String get video_subtitle_collection_release_group => 'Version préférée';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      'Les téléchargements groupés choisissent d’abord cette version pour que toute la saison partage la même synchronisation.';
+  @override
+  String get video_subtitle_collection_release_group_any => 'Toute version';
+  @override
+  String get video_subtitle_source_label => 'Source';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      'Les épisodes sont associés par leur numéro dans le nom de fichier ; les packs de saison sont découpés automatiquement.';
+  @override
+  String get video_subtitle_adjust_title => 'Réglages des sous-titres';
+  @override
+  String get video_subtitle_adjust_collapse => 'Réduire';
+  @override
+  String get video_subtitle_adjust_expand => 'Développer';
+  @override
+  String get settings_section_reading_stats => 'Statistiques de lecture';
+  @override
+  String get reading_stats_idle_timeout => 'Délai d\'inactivité';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Cesser de compter le temps de lecture après ce nombre de minutes sans tourner de page, faire défiler ou chercher un mot. Romans, PDF et mangas uniquement ; la vidéo compte tant qu\'elle est en lecture.';
+  @override
+  String get web_video_track_menu => 'Piste de sous-titres';
+  @override
+  String get web_video_track_live =>
+      'Sous-titres en direct (capturés sur la page)';
+  @override
+  String get web_video_no_tracks => 'Aucun sous-titre capturé pour l’instant';
+  @override
+  String get web_video_hide_native_subtitles =>
+      'Masquer les sous-titres du site';
+  @override
+  String get web_video_import_hint =>
+      'Il s’agit d’une page web (pas d’un flux direct). Elle s’ouvrira dans le lecteur web intégré.';
+  @override
+  String get web_video_platform_unsupported =>
+      'Le lecteur web intégré n’est disponible que sous Windows pour le moment.';
+  @override
+  String get web_video_mine_queue_run => 'Créer les cartes en attente';
+  @override
+  String get web_video_mine_queue_stop => 'Arrêter la création de cartes';
+  @override
+  String get web_video_mine_queue_empty => 'Aucune carte en attente';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Mis en attente pour la création de cartes (${count} en attente)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Création des cartes ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cartes créées : ${ok}, échecs : ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Mode de lecture';
+  @override
+  String get web_video_hosting_builtin =>
+      'Intégré (1080p ; super-résolution, captures et cartes disponibles)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Fenêtre native (4K, DRM matériel ; les cartes sont mises en attente)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Passer en mode intégré pour créer ${count} cartes en attente';
 }
 
 // Path: <root>
@@ -51935,6 +52349,95 @@ class _StringsId extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       'Nonaktif secara default — P2P terhubung langsung. Melewati proksi dapat menurunkan kecepatan, dan banyak penyedia proksi melarang lalu lintas BitTorrent: akun proksi Anda bisa dibatasi, diperingatkan, atau dihentikan. Hanya berlaku untuk mesin bawaan; qBittorrent eksternal memakai pengaturan proksinya sendiri.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Arsip subtitle bahasa Jepang gratis (cermin kitsunekko). Tidak perlu akun; berkas subtitle diunduh dari GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Nonaktif berarti arsip AJATT dilewati saat mencari subtitle.';
+  @override
+  String get video_subtitle_workbench_title => 'Subtitle';
+  @override
+  String get video_subtitle_scope_episode => 'Episode ini';
+  @override
+  String get video_subtitle_scope_collection => 'Seluruh koleksi';
+  @override
+  String get video_subtitle_search_open => 'Cari subtitle daring';
+  @override
+  String get video_subtitle_collection_settings =>
+      'Pengaturan subtitle koleksi';
+  @override
+  String get video_subtitle_collection_language => 'Bahasa subtitle default';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      'Berlaku untuk setiap episode di koleksi ini. Kosong = ikuti bahasa video itu sendiri.';
+  @override
+  String get video_subtitle_collection_release_group => 'Versi pilihan';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      'Unduhan massal memilih versi ini lebih dulu agar satu musim berbagi timing yang sama.';
+  @override
+  String get video_subtitle_collection_release_group_any => 'Versi apa pun';
+  @override
+  String get video_subtitle_source_label => 'Sumber';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      'Episode dicocokkan berdasarkan nomor di nama berkas; paket musim dipisah otomatis.';
+  @override
+  String get video_subtitle_adjust_title => 'Penyesuaian subtitle';
+  @override
+  String get video_subtitle_adjust_collapse => 'Ciutkan';
+  @override
+  String get video_subtitle_adjust_expand => 'Perluas';
+  @override
+  String get settings_section_reading_stats => 'Statistik membaca';
+  @override
+  String get reading_stats_idle_timeout => 'Batas waktu idle';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Berhenti menghitung waktu membaca setelah sekian menit tanpa membalik halaman, menggulir, atau mencari kata. Hanya untuk novel, PDF, dan manga; video dihitung selama diputar.';
+  @override
+  String get web_video_track_menu => 'Trek subtitel';
+  @override
+  String get web_video_track_live => 'Teks langsung (diambil dari halaman)';
+  @override
+  String get web_video_no_tracks => 'Belum ada subtitel yang ditangkap';
+  @override
+  String get web_video_hide_native_subtitles => 'Sembunyikan subtitel situs';
+  @override
+  String get web_video_import_hint =>
+      'Ini halaman web (bukan stream langsung). Akan dibuka di pemutar web bawaan.';
+  @override
+  String get web_video_platform_unsupported =>
+      'Pemutar web bawaan saat ini hanya tersedia di Windows.';
+  @override
+  String get web_video_mine_queue_run => 'Buat kartu yang antre';
+  @override
+  String get web_video_mine_queue_stop => 'Hentikan pembuatan kartu';
+  @override
+  String get web_video_mine_queue_empty => 'Tidak ada kartu yang antre';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Masuk antrean pembuatan kartu (${count} menunggu)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Membuat kartu ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Kartu dibuat: ${ok}, gagal: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Mode pemutaran';
+  @override
+  String get web_video_hosting_builtin =>
+      'Bawaan (1080p; resolusi super, tangkapan layar, dan kartu tersedia)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Jendela native (4K, DRM perangkat keras; kartu diantrekan dulu)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
 }
 
 // Path: <root>
@@ -61265,6 +61768,99 @@ class _StringsIt extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       'Disattivato per impostazione predefinita: il P2P si connette direttamente. Passare dal proxy può ridurre la velocità e molti provider proxy vietano il traffico BitTorrent: l\'account proxy potrebbe essere limitato, avvisato o chiuso. Vale solo per il motore integrato; un qBittorrent esterno usa le proprie impostazioni proxy.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Archivio gratuito di sottotitoli giapponesi (mirror kitsunekko). Nessun account richiesto; i file vengono scaricati da GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Disattivato: l\'archivio AJATT viene ignorato nella ricerca dei sottotitoli.';
+  @override
+  String get video_subtitle_workbench_title => 'Sottotitoli';
+  @override
+  String get video_subtitle_scope_episode => 'Questo episodio';
+  @override
+  String get video_subtitle_scope_collection => 'Intera raccolta';
+  @override
+  String get video_subtitle_search_open => 'Cerca sottotitoli online';
+  @override
+  String get video_subtitle_collection_settings =>
+      'Impostazioni sottotitoli della raccolta';
+  @override
+  String get video_subtitle_collection_language =>
+      'Lingua sottotitoli predefinita';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      'Vale per ogni episodio di questa raccolta. Vuoto = segui la lingua del video.';
+  @override
+  String get video_subtitle_collection_release_group => 'Versione preferita';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      'I download in blocco scelgono prima questa versione così l’intera stagione condivide lo stesso timing.';
+  @override
+  String get video_subtitle_collection_release_group_any =>
+      'Qualsiasi versione';
+  @override
+  String get video_subtitle_source_label => 'Fonte';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      'Gli episodi vengono abbinati dal numero nel nome file; i pacchetti di stagione vengono divisi automaticamente.';
+  @override
+  String get video_subtitle_adjust_title => 'Regolazioni sottotitoli';
+  @override
+  String get video_subtitle_adjust_collapse => 'Comprimi';
+  @override
+  String get video_subtitle_adjust_expand => 'Espandi';
+  @override
+  String get settings_section_reading_stats => 'Statistiche di lettura';
+  @override
+  String get reading_stats_idle_timeout => 'Timeout di inattività';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Smetti di contare il tempo di lettura dopo questi minuti senza voltare pagina, scorrere o cercare una parola. Solo per romanzi, PDF e manga; il video conta mentre è in riproduzione.';
+  @override
+  String get web_video_track_menu => 'Traccia sottotitoli';
+  @override
+  String get web_video_track_live =>
+      'Sottotitoli live (campionati dalla pagina)';
+  @override
+  String get web_video_no_tracks => 'Nessun sottotitolo acquisito ancora';
+  @override
+  String get web_video_hide_native_subtitles =>
+      'Nascondi i sottotitoli del sito';
+  @override
+  String get web_video_import_hint =>
+      'Questa è una pagina web (non uno stream diretto). Si aprirà nel lettore web integrato.';
+  @override
+  String get web_video_platform_unsupported =>
+      'Il lettore web integrato è disponibile per ora solo su Windows.';
+  @override
+  String get web_video_mine_queue_run => 'Crea le carte in coda';
+  @override
+  String get web_video_mine_queue_stop => 'Interrompi la creazione delle carte';
+  @override
+  String get web_video_mine_queue_empty => 'Nessuna carta in coda';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'In coda per la creazione di carte (${count} in attesa)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creazione carte ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Carte create: ${ok}, non riuscite: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Modalità di riproduzione';
+  @override
+  String get web_video_hosting_builtin =>
+      'Integrato (1080p; super-risoluzione, screenshot e carte disponibili)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Finestra nativa (4K, DRM hardware; le carte vengono messe in coda)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Passa alla modalità integrata per creare ${count} carte in coda';
 }
 
 // Path: <root>
@@ -70027,6 +70623,92 @@ class _StringsJa extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       '既定ではオフで、P2P は直接接続します。プロキシ経由にすると速度が低下する場合があり、多くのプロキシ事業者は BitTorrent 通信を禁止しているため、プロキシアカウントが帯域制限・警告・停止される恐れがあります。内蔵エンジンにのみ適用され、外部 qBittorrent は自身のプロキシ設定を使用します。';
+  @override
+  String get video_ajatt_settings_hint =>
+      '無料の日本語字幕アーカイブ（kitsunekko ミラー）。アカウント不要。字幕ファイルは GitHub からダウンロードされます。';
+  @override
+  String get video_ajatt_enabled_hint => 'オフにすると字幕検索時に AJATT アーカイブをスキップします。';
+  @override
+  String get video_subtitle_workbench_title => '字幕';
+  @override
+  String get video_subtitle_scope_episode => 'このエピソード';
+  @override
+  String get video_subtitle_scope_collection => 'コレクション全体';
+  @override
+  String get video_subtitle_search_open => 'オンラインで字幕を検索';
+  @override
+  String get video_subtitle_collection_settings => 'コレクションの字幕設定';
+  @override
+  String get video_subtitle_collection_language => '既定の字幕言語';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      'このコレクションの全エピソードに適用。空欄 = 動画自身の言語に従う。';
+  @override
+  String get video_subtitle_collection_release_group => '優先バージョン';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      '一括ダウンロードではこのバージョンを優先し、シーズン全体で同じタイミングを共有します。';
+  @override
+  String get video_subtitle_collection_release_group_any => 'バージョン指定なし';
+  @override
+  String get video_subtitle_source_label => 'ソース';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      '各話はファイル名の話数で照合され、シーズンパックは自動で分割されます。';
+  @override
+  String get video_subtitle_adjust_title => '字幕の調整';
+  @override
+  String get video_subtitle_adjust_collapse => '折りたたむ';
+  @override
+  String get video_subtitle_adjust_expand => '展開';
+  @override
+  String get settings_section_reading_stats => '読書統計';
+  @override
+  String get reading_stats_idle_timeout => 'アイドル判定時間';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'ページめくり・スクロール・辞書引きがこの分数ないと読書時間の計測を止めます。小説・PDF・漫画のみ対象。動画は再生中なら計測します。';
+  @override
+  String get web_video_track_menu => '字幕トラック';
+  @override
+  String get web_video_track_live => 'ライブ字幕（ページから取得）';
+  @override
+  String get web_video_no_tracks => '字幕はまだ取得されていません';
+  @override
+  String get web_video_hide_native_subtitles => 'サイトの字幕を隠す';
+  @override
+  String get web_video_import_hint =>
+      'これは（直接ストリームではなく）Web ページです。内蔵 Web プレーヤーで開きます。';
+  @override
+  String get web_video_platform_unsupported =>
+      '内蔵 Web プレーヤーは現在 Windows でのみ利用できます。';
+  @override
+  String get web_video_mine_queue_run => 'キューのカードを作成';
+  @override
+  String get web_video_mine_queue_stop => 'カード作成を停止';
+  @override
+  String get web_video_mine_queue_empty => 'キューにカードはありません';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'カード作成のキューに追加しました（残り ${count} 件）';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'カード作成中 ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'カード作成完了：成功 ${ok}、失敗 ${failed}';
+  @override
+  String get web_video_hosting_menu => '再生モード';
+  @override
+  String get web_video_hosting_builtin => '内蔵（1080p；超解像・スクリーンショット・カード作成が可能）';
+  @override
+  String get web_video_hosting_windowed =>
+      'ネイティブウィンドウ（4K、ハードウェア DRM；カードは後でキュー処理）';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '内蔵モードに切り替えて ${count} 件のカードを作成';
 }
 
 // Path: <root>
@@ -78802,6 +79484,91 @@ class _StringsKo extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       '기본적으로 꺼져 있으며 P2P는 직접 연결합니다. 프록시를 거치면 속도가 떨어질 수 있고, 많은 프록시 제공업체가 BitTorrent 트래픽을 금지하므로 프록시 계정이 속도 제한·경고·해지될 수 있습니다. 내장 엔진에만 적용되며 외부 qBittorrent는 자체 프록시 설정을 사용합니다.';
+  @override
+  String get video_ajatt_settings_hint =>
+      '무료 일본어 자막 아카이브(kitsunekko 미러). 계정 불필요. 자막 파일은 GitHub에서 다운로드됩니다.';
+  @override
+  String get video_ajatt_enabled_hint => '끄면 자막 검색 시 AJATT 아카이브를 건너뜁니다.';
+  @override
+  String get video_subtitle_workbench_title => '자막';
+  @override
+  String get video_subtitle_scope_episode => '이 에피소드';
+  @override
+  String get video_subtitle_scope_collection => '컬렉션 전체';
+  @override
+  String get video_subtitle_search_open => '온라인 자막 검색';
+  @override
+  String get video_subtitle_collection_settings => '컬렉션 자막 설정';
+  @override
+  String get video_subtitle_collection_language => '기본 자막 언어';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      '이 컬렉션의 모든 에피소드에 적용됩니다. 비워 두면 영상 자체 언어를 따릅니다.';
+  @override
+  String get video_subtitle_collection_release_group => '선호 버전';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      '일괄 다운로드 시 이 버전을 우선 선택해 시즌 전체가 같은 타이밍을 공유합니다.';
+  @override
+  String get video_subtitle_collection_release_group_any => '버전 무관';
+  @override
+  String get video_subtitle_source_label => '출처';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      '에피소드는 파일 이름의 화수로 매칭되며, 시즌 팩은 자동으로 분리됩니다.';
+  @override
+  String get video_subtitle_adjust_title => '자막 조정';
+  @override
+  String get video_subtitle_adjust_collapse => '접기';
+  @override
+  String get video_subtitle_adjust_expand => '펼치기';
+  @override
+  String get settings_section_reading_stats => '독서 통계';
+  @override
+  String get reading_stats_idle_timeout => '유휴 판정 시간';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      '페이지 넘김·스크롤·단어 검색이 이 시간(분) 동안 없으면 독서 시간 집계를 멈춥니다. 소설·PDF·만화에만 적용되며, 동영상은 재생 중이면 집계합니다.';
+  @override
+  String get web_video_track_menu => '자막 트랙';
+  @override
+  String get web_video_track_live => '실시간 자막(페이지에서 수집)';
+  @override
+  String get web_video_no_tracks => '아직 수집된 자막이 없습니다';
+  @override
+  String get web_video_hide_native_subtitles => '사이트 자막 숨기기';
+  @override
+  String get web_video_import_hint => '직접 스트림이 아닌 웹 페이지입니다. 내장 웹 플레이어에서 열립니다.';
+  @override
+  String get web_video_platform_unsupported =>
+      '내장 웹 플레이어는 현재 Windows에서만 사용할 수 있습니다.';
+  @override
+  String get web_video_mine_queue_run => '대기 중인 카드 만들기';
+  @override
+  String get web_video_mine_queue_stop => '카드 만들기 중지';
+  @override
+  String get web_video_mine_queue_empty => '대기 중인 카드가 없습니다';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      '카드 만들기 대기열에 추가됨(${count}개 대기)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      '카드 만드는 중 ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      '카드 만들기 완료: 성공 ${ok}, 실패 ${failed}';
+  @override
+  String get web_video_hosting_menu => '재생 모드';
+  @override
+  String get web_video_hosting_builtin => '내장(1080p; 초해상도, 스크린샷, 카드 만들기 가능)';
+  @override
+  String get web_video_hosting_windowed =>
+      '네이티브 창(4K, 하드웨어 DRM; 카드는 나중에 대기열 처리)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
 }
 
 // Path: <root>
@@ -88088,6 +88855,96 @@ class _StringsNl extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       'Standaard uit: P2P maakt rechtstreeks verbinding. Via de proxy kan de snelheid dalen en veel proxyaanbieders verbieden BitTorrent-verkeer: je proxyaccount kan worden afgeknepen, gewaarschuwd of opgezegd. Geldt alleen voor de ingebouwde engine; een externe qBittorrent gebruikt zijn eigen proxy-instellingen.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Gratis archief met Japanse ondertitels (kitsunekko-mirror). Geen account nodig; bestanden worden van GitHub gedownload.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Uit betekent dat het AJATT-archief wordt overgeslagen bij het zoeken naar ondertitels.';
+  @override
+  String get video_subtitle_workbench_title => 'Ondertitels';
+  @override
+  String get video_subtitle_scope_episode => 'Deze aflevering';
+  @override
+  String get video_subtitle_scope_collection => 'Hele verzameling';
+  @override
+  String get video_subtitle_search_open => 'Ondertitels online zoeken';
+  @override
+  String get video_subtitle_collection_settings =>
+      'Ondertitelinstellingen van verzameling';
+  @override
+  String get video_subtitle_collection_language => 'Standaard ondertiteltaal';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      'Geldt voor elke aflevering in deze verzameling. Leeg = de taal van de video volgen.';
+  @override
+  String get video_subtitle_collection_release_group => 'Voorkeursversie';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      'Bulkdownloads kiezen eerst deze versie zodat het hele seizoen dezelfde timing deelt.';
+  @override
+  String get video_subtitle_collection_release_group_any => 'Elke versie';
+  @override
+  String get video_subtitle_source_label => 'Bron';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      'Afleveringen worden gekoppeld op het nummer in de bestandsnaam; seizoenspakketten worden automatisch gesplitst.';
+  @override
+  String get video_subtitle_adjust_title => 'Ondertitels aanpassen';
+  @override
+  String get video_subtitle_adjust_collapse => 'Inklappen';
+  @override
+  String get video_subtitle_adjust_expand => 'Uitklappen';
+  @override
+  String get settings_section_reading_stats => 'Leesstatistieken';
+  @override
+  String get reading_stats_idle_timeout => 'Inactiviteitstime-out';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Stop met het tellen van leestijd na dit aantal minuten zonder bladeren, scrollen of een woord opzoeken. Alleen voor romans, pdf\'s en manga; video telt zolang het afspeelt.';
+  @override
+  String get web_video_track_menu => 'Ondertitelspoor';
+  @override
+  String get web_video_track_live => 'Live-ondertitels (van de pagina)';
+  @override
+  String get web_video_no_tracks => 'Nog geen ondertitels vastgelegd';
+  @override
+  String get web_video_hide_native_subtitles =>
+      'Ondertitels van de site verbergen';
+  @override
+  String get web_video_import_hint =>
+      'Dit is een webpagina (geen directe stream). Deze wordt in de ingebouwde webspeler geopend.';
+  @override
+  String get web_video_platform_unsupported =>
+      'De ingebouwde webspeler is voorlopig alleen beschikbaar op Windows.';
+  @override
+  String get web_video_mine_queue_run => 'Wachtende kaarten aanmaken';
+  @override
+  String get web_video_mine_queue_stop => 'Kaarten aanmaken stoppen';
+  @override
+  String get web_video_mine_queue_empty => 'Geen wachtende kaarten';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'In wachtrij voor kaart aanmaken (${count} wachtend)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Kaarten aanmaken ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Kaarten aangemaakt: ${ok}, mislukt: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Afspeelmodus';
+  @override
+  String get web_video_hosting_builtin =>
+      'Ingebouwd (1080p; superresolutie, schermafbeeldingen en kaarten beschikbaar)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Native venster (4K, hardware-DRM; kaarten komen in de wachtrij)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
 }
 
 // Path: <root>
@@ -97431,6 +98288,95 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       'Desativado por padrão: o P2P se conecta diretamente. Passar pelo proxy pode reduzir a velocidade, e muitos provedores de proxy proíbem tráfego BitTorrent: sua conta de proxy pode ser limitada, advertida ou encerrada. Aplica-se apenas ao mecanismo integrado; um qBittorrent externo usa suas próprias configurações de proxy.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Arquivo gratuito de legendas em japonês (espelho do kitsunekko). Não precisa de conta; os arquivos são baixados do GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Desligado significa que o arquivo AJATT é ignorado ao buscar legendas.';
+  @override
+  String get video_subtitle_workbench_title => 'Legendas';
+  @override
+  String get video_subtitle_scope_episode => 'Este episódio';
+  @override
+  String get video_subtitle_scope_collection => 'Coleção inteira';
+  @override
+  String get video_subtitle_search_open => 'Buscar legendas online';
+  @override
+  String get video_subtitle_collection_settings =>
+      'Configurações de legenda da coleção';
+  @override
+  String get video_subtitle_collection_language => 'Idioma de legenda padrão';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      'Vale para todos os episódios desta coleção. Vazio = seguir o idioma do vídeo.';
+  @override
+  String get video_subtitle_collection_release_group => 'Versão preferida';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      'Downloads em lote escolhem esta versão primeiro para que toda a temporada compartilhe a mesma sincronia.';
+  @override
+  String get video_subtitle_collection_release_group_any => 'Qualquer versão';
+  @override
+  String get video_subtitle_source_label => 'Fonte';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      'Os episódios são combinados pelo número no nome do arquivo; pacotes de temporada são divididos automaticamente.';
+  @override
+  String get video_subtitle_adjust_title => 'Ajustes de legenda';
+  @override
+  String get video_subtitle_adjust_collapse => 'Recolher';
+  @override
+  String get video_subtitle_adjust_expand => 'Expandir';
+  @override
+  String get settings_section_reading_stats => 'Estatísticas de leitura';
+  @override
+  String get reading_stats_idle_timeout => 'Tempo de inatividade';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Parar de contar o tempo de leitura após esses minutos sem virar página, rolar ou pesquisar uma palavra. Apenas para romances, PDFs e mangás; o vídeo conta enquanto estiver reproduzindo.';
+  @override
+  String get web_video_track_menu => 'Faixa de legendas';
+  @override
+  String get web_video_track_live => 'Legendas ao vivo (capturadas da página)';
+  @override
+  String get web_video_no_tracks => 'Nenhuma legenda capturada ainda';
+  @override
+  String get web_video_hide_native_subtitles => 'Ocultar legendas do site';
+  @override
+  String get web_video_import_hint =>
+      'Isto é uma página web (não um stream direto). Será aberta no player web integrado.';
+  @override
+  String get web_video_platform_unsupported =>
+      'O player web integrado só está disponível no Windows por enquanto.';
+  @override
+  String get web_video_mine_queue_run => 'Criar cartões na fila';
+  @override
+  String get web_video_mine_queue_stop => 'Parar de criar cartões';
+  @override
+  String get web_video_mine_queue_empty => 'Nenhum cartão na fila';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Na fila para criar cartões (${count} pendentes)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Criando cartões ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cartões criados: ${ok}, falhas: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Modo de reprodução';
+  @override
+  String get web_video_hosting_builtin =>
+      'Integrado (1080p; super-resolução, capturas e cartões disponíveis)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Janela nativa (4K, DRM por hardware; cartões ficam na fila)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Mudar para o modo integrado para criar ${count} cartões na fila';
 }
 
 // Path: <root>
@@ -106748,6 +107694,97 @@ class _StringsRu extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       'По умолчанию выключено — P2P подключается напрямую. Через прокси скорость может снизиться, а многие прокси-провайдеры запрещают BitTorrent-трафик: аккаунт прокси могут ограничить, предупредить или заблокировать. Действует только для встроенного движка; внешний qBittorrent использует собственные настройки прокси.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Бесплатный архив японских субтитров (зеркало kitsunekko). Аккаунт не нужен; файлы скачиваются с GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Выключено — архив AJATT пропускается при поиске субтитров.';
+  @override
+  String get video_subtitle_workbench_title => 'Субтитры';
+  @override
+  String get video_subtitle_scope_episode => 'Эта серия';
+  @override
+  String get video_subtitle_scope_collection => 'Вся коллекция';
+  @override
+  String get video_subtitle_search_open => 'Искать субтитры онлайн';
+  @override
+  String get video_subtitle_collection_settings =>
+      'Настройки субтитров коллекции';
+  @override
+  String get video_subtitle_collection_language =>
+      'Язык субтитров по умолчанию';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      'Применяется ко всем сериям коллекции. Пусто = следовать языку видео.';
+  @override
+  String get video_subtitle_collection_release_group =>
+      'Предпочтительная версия';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      'Пакетная загрузка сначала выбирает эту версию, чтобы весь сезон имел одинаковый тайминг.';
+  @override
+  String get video_subtitle_collection_release_group_any => 'Любая версия';
+  @override
+  String get video_subtitle_source_label => 'Источник';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      'Серии сопоставляются по номеру в имени файла; сезонные паки разбиваются автоматически.';
+  @override
+  String get video_subtitle_adjust_title => 'Настройка субтитров';
+  @override
+  String get video_subtitle_adjust_collapse => 'Свернуть';
+  @override
+  String get video_subtitle_adjust_expand => 'Развернуть';
+  @override
+  String get settings_section_reading_stats => 'Статистика чтения';
+  @override
+  String get reading_stats_idle_timeout => 'Тайм-аут бездействия';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Не засчитывать время чтения после стольких минут без перелистывания, прокрутки или поиска слова. Только для романов, PDF и манги; видео засчитывается, пока воспроизводится.';
+  @override
+  String get web_video_track_menu => 'Дорожка субтитров';
+  @override
+  String get web_video_track_live => 'Живые субтитры (с страницы)';
+  @override
+  String get web_video_no_tracks => 'Субтитры пока не получены';
+  @override
+  String get web_video_hide_native_subtitles => 'Скрыть субтитры сайта';
+  @override
+  String get web_video_import_hint =>
+      'Это веб-страница (не прямой поток). Она откроется во встроенном веб-плеере.';
+  @override
+  String get web_video_platform_unsupported =>
+      'Встроенный веб-плеер пока доступен только в Windows.';
+  @override
+  String get web_video_mine_queue_run => 'Создать карточки из очереди';
+  @override
+  String get web_video_mine_queue_stop => 'Остановить создание карточек';
+  @override
+  String get web_video_mine_queue_empty => 'Очередь карточек пуста';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Добавлено в очередь на создание карточек (ожидает: ${count})';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Создание карточек ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Карточек создано: ${ok}, ошибок: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Режим воспроизведения';
+  @override
+  String get web_video_hosting_builtin =>
+      'Встроенный (1080p; доступны суперразрешение, скриншоты и карточки)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Нативное окно (4K, аппаратный DRM; карточки ставятся в очередь)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
 }
 
 // Path: <root>
@@ -115878,6 +116915,95 @@ class _StringsTh extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       'ปิดตามค่าเริ่มต้น P2P จะเชื่อมต่อโดยตรง การส่งผ่านพร็อกซีอาจทำให้ความเร็วลดลง และผู้ให้บริการพร็อกซีจำนวนมากห้ามการรับส่งข้อมูล BitTorrent บัญชีพร็อกซีของคุณอาจถูกจำกัดความเร็ว เตือน หรือยกเลิก มีผลเฉพาะเอนจินในตัวเท่านั้น qBittorrent ภายนอกใช้การตั้งค่าพร็อกซีของตัวเอง';
+  @override
+  String get video_ajatt_settings_hint =>
+      'คลังซับไตเติลภาษาญี่ปุ่นฟรี (มิเรอร์ kitsunekko) ไม่ต้องใช้บัญชี ไฟล์ซับไตเติลดาวน์โหลดจาก GitHub';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'ปิดหมายถึงข้ามคลัง AJATT เมื่อค้นหาซับไตเติล';
+  @override
+  String get video_subtitle_workbench_title => 'ซับไตเติล';
+  @override
+  String get video_subtitle_scope_episode => 'ตอนนี้';
+  @override
+  String get video_subtitle_scope_collection => 'ทั้งคอลเลกชัน';
+  @override
+  String get video_subtitle_search_open => 'ค้นหาซับไตเติลออนไลน์';
+  @override
+  String get video_subtitle_collection_settings =>
+      'การตั้งค่าซับไตเติลของคอลเลกชัน';
+  @override
+  String get video_subtitle_collection_language => 'ภาษาซับไตเติลเริ่มต้น';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      'ใช้กับทุกตอนในคอลเลกชันนี้ เว้นว่าง = ตามภาษาของวิดีโอเอง';
+  @override
+  String get video_subtitle_collection_release_group => 'เวอร์ชันที่ต้องการ';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      'การดาวน์โหลดแบบกลุ่มจะเลือกเวอร์ชันนี้ก่อน เพื่อให้ทั้งซีซันใช้ไทม์มิ่งเดียวกัน';
+  @override
+  String get video_subtitle_collection_release_group_any => 'เวอร์ชันใดก็ได้';
+  @override
+  String get video_subtitle_source_label => 'แหล่งที่มา';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      'จับคู่แต่ละตอนตามหมายเลขในชื่อไฟล์ แพ็กทั้งซีซันจะถูกแยกอัตโนมัติ';
+  @override
+  String get video_subtitle_adjust_title => 'ปรับซับไตเติล';
+  @override
+  String get video_subtitle_adjust_collapse => 'ย่อ';
+  @override
+  String get video_subtitle_adjust_expand => 'ขยาย';
+  @override
+  String get settings_section_reading_stats => 'สถิติการอ่าน';
+  @override
+  String get reading_stats_idle_timeout => 'เวลาพักการอ่าน';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'หยุดนับเวลาอ่านเมื่อไม่มีการพลิกหน้า เลื่อน หรือค้นหาคำนานเท่านี้นาที ใช้กับนิยาย PDF และมังงะเท่านั้น วิดีโอจะนับขณะเล่น';
+  @override
+  String get web_video_track_menu => 'แทร็กคำบรรยาย';
+  @override
+  String get web_video_track_live => 'คำบรรยายสด (เก็บจากหน้าเว็บ)';
+  @override
+  String get web_video_no_tracks => 'ยังไม่ได้เก็บคำบรรยาย';
+  @override
+  String get web_video_hide_native_subtitles => 'ซ่อนคำบรรยายของเว็บไซต์';
+  @override
+  String get web_video_import_hint =>
+      'นี่คือหน้าเว็บ (ไม่ใช่สตรีมโดยตรง) จะเปิดในเว็บเพลเยอร์ในตัว';
+  @override
+  String get web_video_platform_unsupported =>
+      'ตอนนี้เว็บเพลเยอร์ในตัวใช้ได้เฉพาะบน Windows';
+  @override
+  String get web_video_mine_queue_run => 'สร้างการ์ดที่อยู่ในคิว';
+  @override
+  String get web_video_mine_queue_stop => 'หยุดสร้างการ์ด';
+  @override
+  String get web_video_mine_queue_empty => 'ไม่มีการ์ดในคิว';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'เพิ่มในคิวสร้างการ์ดแล้ว (รอ ${count} รายการ)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'กำลังสร้างการ์ด ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'สร้างการ์ดแล้ว: ${ok} รายการ ล้มเหลว: ${failed} รายการ';
+  @override
+  String get web_video_hosting_menu => 'โหมดเล่น';
+  @override
+  String get web_video_hosting_builtin =>
+      'ในตัว (1080p; ใช้ซูเปอร์เรโซลูชัน ภาพหน้าจอ และการ์ดได้)';
+  @override
+  String get web_video_hosting_windowed =>
+      'หน้าต่างเนทีฟ (4K, DRM ฮาร์ดแวร์; การ์ดจะเข้าคิวไว้ก่อน)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
 }
 
 // Path: <root>
@@ -125115,6 +126241,96 @@ class _StringsTr extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       'Varsayılan olarak kapalı; P2P doğrudan bağlanır. Proxy üzerinden geçmek hızı düşürebilir ve birçok proxy sağlayıcısı BitTorrent trafiğini yasaklar: proxy hesabınız kısıtlanabilir, uyarılabilir veya kapatılabilir. Yalnızca yerleşik motor için geçerlidir; harici qBittorrent kendi proxy ayarlarını kullanır.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Ücretsiz Japonca altyazı arşivi (kitsunekko yansıması). Hesap gerekmez; altyazı dosyaları GitHub\'dan indirilir.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Kapalıysa altyazı aranırken AJATT arşivi atlanır.';
+  @override
+  String get video_subtitle_workbench_title => 'Altyazılar';
+  @override
+  String get video_subtitle_scope_episode => 'Bu bölüm';
+  @override
+  String get video_subtitle_scope_collection => 'Tüm koleksiyon';
+  @override
+  String get video_subtitle_search_open => 'Çevrimiçi altyazı ara';
+  @override
+  String get video_subtitle_collection_settings =>
+      'Koleksiyon altyazı ayarları';
+  @override
+  String get video_subtitle_collection_language => 'Varsayılan altyazı dili';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      'Bu koleksiyondaki her bölüme uygulanır. Boş = videonun kendi dilini izle.';
+  @override
+  String get video_subtitle_collection_release_group => 'Tercih edilen sürüm';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      'Toplu indirmeler önce bu sürümü seçer, böylece tüm sezon aynı zamanlamayı paylaşır.';
+  @override
+  String get video_subtitle_collection_release_group_any =>
+      'Herhangi bir sürüm';
+  @override
+  String get video_subtitle_source_label => 'Kaynak';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      'Bölümler dosya adındaki numaraya göre eşleştirilir; sezon paketleri otomatik olarak bölünür.';
+  @override
+  String get video_subtitle_adjust_title => 'Altyazı ayarları';
+  @override
+  String get video_subtitle_adjust_collapse => 'Daralt';
+  @override
+  String get video_subtitle_adjust_expand => 'Genişlet';
+  @override
+  String get settings_section_reading_stats => 'Okuma istatistikleri';
+  @override
+  String get reading_stats_idle_timeout => 'Boşta kalma süresi';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Sayfa çevirme, kaydırma veya sözcük arama olmadan bu kadar dakika geçince okuma süresini saymayı durdur. Yalnızca roman, PDF ve manga için; video oynatılırken sayılır.';
+  @override
+  String get web_video_track_menu => 'Altyazı parçası';
+  @override
+  String get web_video_track_live => 'Canlı altyazılar (sayfadan alınan)';
+  @override
+  String get web_video_no_tracks => 'Henüz altyazı yakalanmadı';
+  @override
+  String get web_video_hide_native_subtitles => 'Site altyazılarını gizle';
+  @override
+  String get web_video_import_hint =>
+      'Bu bir web sayfası (doğrudan akış değil). Yerleşik web oynatıcıda açılacak.';
+  @override
+  String get web_video_platform_unsupported =>
+      'Yerleşik web oynatıcı şimdilik yalnızca Windows’ta kullanılabilir.';
+  @override
+  String get web_video_mine_queue_run => 'Sıradaki kartları oluştur';
+  @override
+  String get web_video_mine_queue_stop => 'Kart oluşturmayı durdur';
+  @override
+  String get web_video_mine_queue_empty => 'Sırada kart yok';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Kart oluşturma sırasına alındı (${count} bekliyor)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Kartlar oluşturuluyor ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Oluşturulan kart: ${ok}, başarısız: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Oynatma modu';
+  @override
+  String get web_video_hosting_builtin =>
+      'Yerleşik (1080p; süper çözünürlük, ekran görüntüsü ve kartlar kullanılabilir)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Yerel pencere (4K, donanımsal DRM; kartlar sonra sıraya alınır)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
 }
 
 // Path: <root>
@@ -134332,6 +135548,95 @@ class _StringsVi extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       'Mặc định tắt — P2P kết nối trực tiếp. Đi qua proxy có thể làm giảm tốc độ, và nhiều nhà cung cấp proxy cấm lưu lượng BitTorrent: tài khoản proxy của bạn có thể bị giới hạn, cảnh báo hoặc chấm dứt. Chỉ áp dụng cho engine tích hợp; qBittorrent bên ngoài dùng cài đặt proxy riêng.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Kho phụ đề tiếng Nhật miễn phí (bản sao kitsunekko). Không cần tài khoản; tệp phụ đề tải từ GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Tắt nghĩa là bỏ qua kho AJATT khi tìm phụ đề.';
+  @override
+  String get video_subtitle_workbench_title => 'Phụ đề';
+  @override
+  String get video_subtitle_scope_episode => 'Tập này';
+  @override
+  String get video_subtitle_scope_collection => 'Toàn bộ bộ sưu tập';
+  @override
+  String get video_subtitle_search_open => 'Tìm phụ đề trực tuyến';
+  @override
+  String get video_subtitle_collection_settings =>
+      'Cài đặt phụ đề của bộ sưu tập';
+  @override
+  String get video_subtitle_collection_language => 'Ngôn ngữ phụ đề mặc định';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      'Áp dụng cho mọi tập trong bộ sưu tập này. Để trống = theo ngôn ngữ của video.';
+  @override
+  String get video_subtitle_collection_release_group => 'Phiên bản ưu tiên';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      'Tải hàng loạt sẽ chọn phiên bản này trước để cả mùa dùng chung một mốc thời gian.';
+  @override
+  String get video_subtitle_collection_release_group_any => 'Phiên bản bất kỳ';
+  @override
+  String get video_subtitle_source_label => 'Nguồn';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      'Các tập được khớp theo số trong tên tệp; gói cả mùa được tách tự động.';
+  @override
+  String get video_subtitle_adjust_title => 'Điều chỉnh phụ đề';
+  @override
+  String get video_subtitle_adjust_collapse => 'Thu gọn';
+  @override
+  String get video_subtitle_adjust_expand => 'Mở rộng';
+  @override
+  String get settings_section_reading_stats => 'Thống kê đọc';
+  @override
+  String get reading_stats_idle_timeout => 'Thời gian không hoạt động';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Ngừng tính thời gian đọc sau số phút này nếu không lật trang, cuộn hoặc tra từ. Chỉ áp dụng cho tiểu thuyết, PDF và manga; video được tính khi đang phát.';
+  @override
+  String get web_video_track_menu => 'Rãnh phụ đề';
+  @override
+  String get web_video_track_live => 'Phụ đề trực tiếp (lấy từ trang)';
+  @override
+  String get web_video_no_tracks => 'Chưa bắt được phụ đề nào';
+  @override
+  String get web_video_hide_native_subtitles => 'Ẩn phụ đề của trang';
+  @override
+  String get web_video_import_hint =>
+      'Đây là trang web (không phải luồng trực tiếp). Sẽ mở trong trình phát web tích hợp.';
+  @override
+  String get web_video_platform_unsupported =>
+      'Trình phát web tích hợp hiện chỉ có trên Windows.';
+  @override
+  String get web_video_mine_queue_run => 'Tạo các thẻ đang chờ';
+  @override
+  String get web_video_mine_queue_stop => 'Dừng tạo thẻ';
+  @override
+  String get web_video_mine_queue_empty => 'Không có thẻ nào đang chờ';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Đã xếp hàng để tạo thẻ (${count} đang chờ)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Đang tạo thẻ ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Đã tạo thẻ: ${ok}, thất bại: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Chế độ phát';
+  @override
+  String get web_video_hosting_builtin =>
+      'Tích hợp (1080p; có siêu phân giải, ảnh chụp màn hình và thẻ)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Cửa sổ gốc (4K, DRM phần cứng; thẻ được xếp hàng để làm sau)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
 }
 
 // Path: <root>
@@ -142814,6 +144119,89 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       '默认关闭，P2P 直连。走代理可能降低速度；且不少代理服务商禁止 BT 流量，可能导致代理账号被限速、警告甚至封禁。仅对内置引擎生效，外接 qBittorrent 请在其自身设置中配置。';
+  @override
+  String get video_ajatt_settings_hint =>
+      '免费日语字幕库（kitsunekko 镜像）。无需账号；字幕文件从 GitHub 下载。';
+  @override
+  String get video_ajatt_enabled_hint => '关闭后搜索字幕时跳过 AJATT 字幕库。';
+  @override
+  String get video_subtitle_workbench_title => '字幕';
+  @override
+  String get video_subtitle_scope_episode => '本集';
+  @override
+  String get video_subtitle_scope_collection => '整个合集';
+  @override
+  String get video_subtitle_search_open => '在线搜索字幕';
+  @override
+  String get video_subtitle_collection_settings => '合集字幕设置';
+  @override
+  String get video_subtitle_collection_language => '默认字幕语言';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      '对本合集所有集生效；留空 = 跟随视频自身语言。';
+  @override
+  String get video_subtitle_collection_release_group => '偏好版本';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      '批量下载优先选这个版本，整季共用一套时间轴。';
+  @override
+  String get video_subtitle_collection_release_group_any => '不限版本';
+  @override
+  String get video_subtitle_source_label => '来源';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      '各集按文件名里的集号匹配；整季打包字幕自动拆分。';
+  @override
+  String get video_subtitle_adjust_title => '字幕调整';
+  @override
+  String get video_subtitle_adjust_collapse => '收起';
+  @override
+  String get video_subtitle_adjust_expand => '展开';
+  @override
+  String get settings_section_reading_stats => '阅读统计';
+  @override
+  String get reading_stats_idle_timeout => '空闲判定时长';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      '这么久没有翻页、滚动或查词就停止计入阅读时长。只对小说、PDF、漫画生效；视频以播放状态为准。';
+  @override
+  String get web_video_track_menu => '字幕轨';
+  @override
+  String get web_video_track_live => '实时采集（页面字幕）';
+  @override
+  String get web_video_no_tracks => '尚未采集到字幕';
+  @override
+  String get web_video_hide_native_subtitles => '隐藏站点字幕';
+  @override
+  String get web_video_import_hint => '这是网页地址（非直链），将用内置网页播放器打开。';
+  @override
+  String get web_video_platform_unsupported => '内置网页播放器目前仅支持 Windows。';
+  @override
+  String get web_video_mine_queue_run => '制作队列中的卡片';
+  @override
+  String get web_video_mine_queue_stop => '停止制卡';
+  @override
+  String get web_video_mine_queue_empty => '制卡队列为空';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      '已加入制卡队列（待制 ${count} 张）';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      '制卡中 ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      '制卡完成：成功 ${ok}，失败 ${failed}';
+  @override
+  String get web_video_hosting_menu => '播放模式';
+  @override
+  String get web_video_hosting_builtin => '内置（1080p；可超分、可截图制卡）';
+  @override
+  String get web_video_hosting_windowed => '原生窗口（4K 硬件 DRM；制卡先排队）';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '切到内置模式制作 ${count} 张排队卡片';
 }
 
 // Path: <root>
@@ -151301,6 +152689,89 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get network_proxy_p2p_warning =>
       '預設關閉，P2P 直連。走代理可能降低速度；且不少代理服務商禁止 BT 流量，可能導致代理帳號被限速、警告甚至封禁。僅對內建引擎生效，外接 qBittorrent 請在其自身設定中配置。';
+  @override
+  String get video_ajatt_settings_hint =>
+      '免費日語字幕庫（kitsunekko 鏡像）。無需帳號；字幕檔案從 GitHub 下載。';
+  @override
+  String get video_ajatt_enabled_hint => '關閉後搜尋字幕時跳過 AJATT 字幕庫。';
+  @override
+  String get video_subtitle_workbench_title => '字幕';
+  @override
+  String get video_subtitle_scope_episode => '本集';
+  @override
+  String get video_subtitle_scope_collection => '整個合集';
+  @override
+  String get video_subtitle_search_open => '線上搜尋字幕';
+  @override
+  String get video_subtitle_collection_settings => '合集字幕設定';
+  @override
+  String get video_subtitle_collection_language => '預設字幕語言';
+  @override
+  String get video_subtitle_collection_language_hint =>
+      '對本合集所有集生效；留空 = 跟隨影片自身語言。';
+  @override
+  String get video_subtitle_collection_release_group => '偏好版本';
+  @override
+  String get video_subtitle_collection_release_group_hint =>
+      '批次下載優先選這個版本，整季共用一套時間軸。';
+  @override
+  String get video_subtitle_collection_release_group_any => '不限版本';
+  @override
+  String get video_subtitle_source_label => '來源';
+  @override
+  String get video_subtitle_collection_members_hint =>
+      '各集按檔名中的集數匹配；整季打包字幕自動拆分。';
+  @override
+  String get video_subtitle_adjust_title => '字幕調整';
+  @override
+  String get video_subtitle_adjust_collapse => '收起';
+  @override
+  String get video_subtitle_adjust_expand => '展開';
+  @override
+  String get settings_section_reading_stats => '閱讀統計';
+  @override
+  String get reading_stats_idle_timeout => '閒置判定時長';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      '這麼久沒有翻頁、捲動或查詞就停止計入閱讀時長。只對小說、PDF、漫畫生效；影片以播放狀態為準。';
+  @override
+  String get web_video_track_menu => '字幕軌';
+  @override
+  String get web_video_track_live => '即時字幕（從頁面取樣）';
+  @override
+  String get web_video_no_tracks => '尚未擷取到字幕';
+  @override
+  String get web_video_hide_native_subtitles => '隱藏網站字幕';
+  @override
+  String get web_video_import_hint => '這是網頁（不是直接串流），將在內建網頁播放器中開啟。';
+  @override
+  String get web_video_platform_unsupported => '內建網頁播放器目前僅支援 Windows。';
+  @override
+  String get web_video_mine_queue_run => '製作佇列中的卡片';
+  @override
+  String get web_video_mine_queue_stop => '停止製作卡片';
+  @override
+  String get web_video_mine_queue_empty => '佇列中沒有卡片';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      '已加入製卡佇列（待製 ${count} 張）';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      '製卡中 ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      '製卡完成：成功 ${ok}，失敗 ${failed}';
+  @override
+  String get web_video_hosting_menu => '播放模式';
+  @override
+  String get web_video_hosting_builtin => '內建（1080p；可超解析、截圖、製卡）';
+  @override
+  String get web_video_hosting_windowed => '原生視窗（4K 硬體 DRM；製卡先排隊）';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '切換到內建模式製作 ${count} 張排隊卡片';
 }
 
 /// Flat map(s) containing all translations.
@@ -159374,6 +160845,82 @@ extension on _StringsEn {
         return 'Route P2P (torrent) traffic through the proxy';
       case 'network_proxy_p2p_warning':
         return 'Off by default: P2P connects directly. Routing it through the proxy can reduce speed, and many proxy providers forbid BitTorrent traffic, so your proxy account may be throttled, warned or terminated. Applies to the built-in engine; an external qBittorrent uses its own proxy settings.';
+      case 'video_ajatt_settings_hint':
+        return 'Free Japanese subtitle archive (kitsunekko mirror). No account needed; subtitle files download from GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Off means the AJATT archive is skipped when searching subtitles.';
+      case 'video_subtitle_workbench_title':
+        return 'Subtitles';
+      case 'video_subtitle_scope_episode':
+        return 'This episode';
+      case 'video_subtitle_scope_collection':
+        return 'Whole collection';
+      case 'video_subtitle_search_open':
+        return 'Search subtitles online';
+      case 'video_subtitle_collection_settings':
+        return 'Collection subtitle settings';
+      case 'video_subtitle_collection_language':
+        return 'Default subtitle language';
+      case 'video_subtitle_collection_language_hint':
+        return 'Applies to every episode in this collection. Empty = follow the video\'s own language.';
+      case 'video_subtitle_collection_release_group':
+        return 'Preferred version';
+      case 'video_subtitle_collection_release_group_hint':
+        return 'Batch downloads pick this version first so the whole season shares one timing.';
+      case 'video_subtitle_collection_release_group_any':
+        return 'Any version';
+      case 'video_subtitle_source_label':
+        return 'Source';
+      case 'video_subtitle_collection_members_hint':
+        return 'Episodes are matched by number from file names; season packs are split automatically.';
+      case 'video_subtitle_adjust_title':
+        return 'Subtitle adjustments';
+      case 'video_subtitle_adjust_collapse':
+        return 'Collapse';
+      case 'video_subtitle_adjust_expand':
+        return 'Expand';
+      case 'settings_section_reading_stats':
+        return 'Reading statistics';
+      case 'reading_stats_idle_timeout':
+        return 'Idle timeout';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Stop counting reading time after this many minutes without turning a page, scrolling, or looking up a word. Applies to novels, PDFs and manga only; video counts while playing.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Playback mode';
+      case 'web_video_hosting_builtin':
+        return 'Built-in (1080p; super-resolution, screenshots and cards available)';
+      case 'web_video_hosting_windowed':
+        return 'Native window (4K, hardware DRM; cards are queued for later)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Switch to built-in mode to create ${count} queued cards';
       default:
         return null;
     }
@@ -167443,6 +168990,82 @@ extension on _StringsAr {
         return 'تمرير حركة P2P (torrent) عبر الوكيل';
       case 'network_proxy_p2p_warning':
         return 'معطّل افتراضيًا؛ يتصل P2P مباشرة. قد يؤدي التمرير عبر الوكيل إلى خفض السرعة، وكثير من مزودي الوكلاء يحظرون حركة BitTorrent: قد يتم تقييد حساب الوكيل أو تحذيره أو إنهاؤه. ينطبق على المحرك المدمج فقط؛ يستخدم qBittorrent الخارجي إعدادات الوكيل الخاصة به.';
+      case 'video_ajatt_settings_hint':
+        return 'أرشيف مجاني للترجمات اليابانية (مرآة kitsunekko). لا يتطلب حسابًا؛ تُنزَّل ملفات الترجمة من GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'عند الإيقاف يتم تخطي أرشيف AJATT عند البحث عن الترجمات.';
+      case 'video_subtitle_workbench_title':
+        return 'الترجمات';
+      case 'video_subtitle_scope_episode':
+        return 'هذه الحلقة';
+      case 'video_subtitle_scope_collection':
+        return 'المجموعة كاملة';
+      case 'video_subtitle_search_open':
+        return 'البحث عن ترجمات عبر الإنترنت';
+      case 'video_subtitle_collection_settings':
+        return 'إعدادات ترجمة المجموعة';
+      case 'video_subtitle_collection_language':
+        return 'لغة الترجمة الافتراضية';
+      case 'video_subtitle_collection_language_hint':
+        return 'تنطبق على كل حلقة في هذه المجموعة. فارغ = اتباع لغة الفيديو نفسه.';
+      case 'video_subtitle_collection_release_group':
+        return 'الإصدار المفضل';
+      case 'video_subtitle_collection_release_group_hint':
+        return 'يختار التنزيل الجماعي هذا الإصدار أولًا ليشترك الموسم كله في توقيت واحد.';
+      case 'video_subtitle_collection_release_group_any':
+        return 'أي إصدار';
+      case 'video_subtitle_source_label':
+        return 'المصدر';
+      case 'video_subtitle_collection_members_hint':
+        return 'تُطابَق الحلقات بالرقم في اسم الملف؛ وتُقسَّم حزم المواسم تلقائيًا.';
+      case 'video_subtitle_adjust_title':
+        return 'ضبط الترجمة';
+      case 'video_subtitle_adjust_collapse':
+        return 'طيّ';
+      case 'video_subtitle_adjust_expand':
+        return 'توسيع';
+      case 'settings_section_reading_stats':
+        return 'إحصائيات القراءة';
+      case 'reading_stats_idle_timeout':
+        return 'مهلة الخمول';
+      case 'reading_stats_idle_timeout_hint':
+        return 'إيقاف احتساب وقت القراءة بعد هذا العدد من الدقائق دون تقليب صفحة أو تمرير أو بحث عن كلمة. ينطبق على الروايات وملفات PDF والمانغا فقط؛ يُحتسب الفيديو أثناء التشغيل.';
+      case 'web_video_track_menu':
+        return 'مسار الترجمة';
+      case 'web_video_track_live':
+        return 'ترجمة مباشرة (مأخوذة من الصفحة)';
+      case 'web_video_no_tracks':
+        return 'لم يتم التقاط أي ترجمة بعد';
+      case 'web_video_hide_native_subtitles':
+        return 'إخفاء ترجمة الموقع';
+      case 'web_video_import_hint':
+        return 'هذه صفحة ويب (وليست بثًا مباشرًا). ستُفتح في مشغّل الويب المدمج.';
+      case 'web_video_platform_unsupported':
+        return 'مشغّل الويب المدمج متاح حاليًا على Windows فقط.';
+      case 'web_video_mine_queue_run':
+        return 'إنشاء البطاقات المنتظرة';
+      case 'web_video_mine_queue_stop':
+        return 'إيقاف إنشاء البطاقات';
+      case 'web_video_mine_queue_empty':
+        return 'لا توجد بطاقات في قائمة الانتظار';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'أُضيف إلى قائمة انتظار إنشاء البطاقات (${count} معلّقة)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'جارٍ إنشاء البطاقات ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'البطاقات المُنشأة: ${ok}، الفاشلة: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'وضع التشغيل';
+      case 'web_video_hosting_builtin':
+        return 'مدمج (1080p؛ يتوفر تحسين الدقة ولقطات الشاشة والبطاقات)';
+      case 'web_video_hosting_windowed':
+        return 'نافذة أصلية (4K، DRM عتادي؛ تُوضع البطاقات في قائمة الانتظار)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
       default:
         return null;
     }
@@ -175555,6 +177178,82 @@ extension on _StringsDe {
         return 'P2P-(Torrent-)Verkehr über den Proxy leiten';
       case 'network_proxy_p2p_warning':
         return 'Standardmäßig aus – P2P verbindet sich direkt. Über den Proxy kann die Geschwindigkeit sinken, und viele Proxy-Anbieter verbieten BitTorrent-Verkehr: Dein Proxy-Konto kann gedrosselt, verwarnt oder gekündigt werden. Gilt nur für die integrierte Engine; ein externes qBittorrent nutzt seine eigenen Proxy-Einstellungen.';
+      case 'video_ajatt_settings_hint':
+        return 'Kostenloses Archiv japanischer Untertitel (kitsunekko-Spiegel). Kein Konto nötig; Untertiteldateien werden von GitHub geladen.';
+      case 'video_ajatt_enabled_hint':
+        return 'Aus bedeutet, dass das AJATT-Archiv bei der Untertitelsuche übersprungen wird.';
+      case 'video_subtitle_workbench_title':
+        return 'Untertitel';
+      case 'video_subtitle_scope_episode':
+        return 'Diese Folge';
+      case 'video_subtitle_scope_collection':
+        return 'Ganze Sammlung';
+      case 'video_subtitle_search_open':
+        return 'Untertitel online suchen';
+      case 'video_subtitle_collection_settings':
+        return 'Untertitel-Einstellungen der Sammlung';
+      case 'video_subtitle_collection_language':
+        return 'Standard-Untertitelsprache';
+      case 'video_subtitle_collection_language_hint':
+        return 'Gilt für jede Folge dieser Sammlung. Leer = der Sprache des Videos folgen.';
+      case 'video_subtitle_collection_release_group':
+        return 'Bevorzugte Version';
+      case 'video_subtitle_collection_release_group_hint':
+        return 'Sammel-Downloads wählen zuerst diese Version, damit die ganze Staffel dasselbe Timing teilt.';
+      case 'video_subtitle_collection_release_group_any':
+        return 'Beliebige Version';
+      case 'video_subtitle_source_label':
+        return 'Quelle';
+      case 'video_subtitle_collection_members_hint':
+        return 'Folgen werden anhand der Nummer im Dateinamen zugeordnet; Staffelpakete werden automatisch aufgeteilt.';
+      case 'video_subtitle_adjust_title':
+        return 'Untertitel anpassen';
+      case 'video_subtitle_adjust_collapse':
+        return 'Einklappen';
+      case 'video_subtitle_adjust_expand':
+        return 'Ausklappen';
+      case 'settings_section_reading_stats':
+        return 'Lesestatistik';
+      case 'reading_stats_idle_timeout':
+        return 'Inaktivitäts-Timeout';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Lesezeit nach so vielen Minuten ohne Umblättern, Scrollen oder Wortsuche nicht mehr zählen. Gilt nur für Romane, PDFs und Manga; Video zählt, solange es läuft.';
+      case 'web_video_track_menu':
+        return 'Untertitelspur';
+      case 'web_video_track_live':
+        return 'Live-Untertitel (von der Seite erfasst)';
+      case 'web_video_no_tracks':
+        return 'Noch keine Untertitel erfasst';
+      case 'web_video_hide_native_subtitles':
+        return 'Website-Untertitel ausblenden';
+      case 'web_video_import_hint':
+        return 'Dies ist eine Webseite (kein direkter Stream). Sie wird im integrierten Web-Player geöffnet.';
+      case 'web_video_platform_unsupported':
+        return 'Der integrierte Web-Player ist derzeit nur unter Windows verfügbar.';
+      case 'web_video_mine_queue_run':
+        return 'Wartende Karten erstellen';
+      case 'web_video_mine_queue_stop':
+        return 'Kartenerstellung stoppen';
+      case 'web_video_mine_queue_empty':
+        return 'Keine wartenden Karten';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Für die Kartenerstellung vorgemerkt (${count} ausstehend)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Karten werden erstellt ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Karten erstellt: ${ok}, fehlgeschlagen: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Wiedergabemodus';
+      case 'web_video_hosting_builtin':
+        return 'Integriert (1080p; Hochskalierung, Screenshots und Karten verfügbar)';
+      case 'web_video_hosting_windowed':
+        return 'Natives Fenster (4K, Hardware-DRM; Karten werden später erstellt)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
       default:
         return null;
     }
@@ -183659,6 +185358,82 @@ extension on _StringsEs {
         return 'Enrutar el tráfico P2P (torrent) por el proxy';
       case 'network_proxy_p2p_warning':
         return 'Desactivado de forma predeterminada: P2P se conecta directamente. Pasar por el proxy puede reducir la velocidad y muchos proveedores de proxy prohíben el tráfico BitTorrent: su cuenta de proxy podría ser limitada, advertida o cancelada. Solo se aplica al motor integrado; un qBittorrent externo usa su propia configuración de proxy.';
+      case 'video_ajatt_settings_hint':
+        return 'Archivo gratuito de subtítulos en japonés (réplica de kitsunekko). No requiere cuenta; los archivos se descargan desde GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Desactivado significa que el archivo AJATT se omite al buscar subtítulos.';
+      case 'video_subtitle_workbench_title':
+        return 'Subtítulos';
+      case 'video_subtitle_scope_episode':
+        return 'Este episodio';
+      case 'video_subtitle_scope_collection':
+        return 'Toda la colección';
+      case 'video_subtitle_search_open':
+        return 'Buscar subtítulos en línea';
+      case 'video_subtitle_collection_settings':
+        return 'Ajustes de subtítulos de la colección';
+      case 'video_subtitle_collection_language':
+        return 'Idioma de subtítulos predeterminado';
+      case 'video_subtitle_collection_language_hint':
+        return 'Se aplica a todos los episodios de esta colección. Vacío = seguir el idioma del vídeo.';
+      case 'video_subtitle_collection_release_group':
+        return 'Versión preferida';
+      case 'video_subtitle_collection_release_group_hint':
+        return 'Las descargas en lote eligen primero esta versión para que toda la temporada comparta la misma sincronización.';
+      case 'video_subtitle_collection_release_group_any':
+        return 'Cualquier versión';
+      case 'video_subtitle_source_label':
+        return 'Fuente';
+      case 'video_subtitle_collection_members_hint':
+        return 'Los episodios se emparejan por el número del nombre de archivo; los packs de temporada se dividen automáticamente.';
+      case 'video_subtitle_adjust_title':
+        return 'Ajustes de subtítulos';
+      case 'video_subtitle_adjust_collapse':
+        return 'Contraer';
+      case 'video_subtitle_adjust_expand':
+        return 'Expandir';
+      case 'settings_section_reading_stats':
+        return 'Estadísticas de lectura';
+      case 'reading_stats_idle_timeout':
+        return 'Tiempo de inactividad';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Dejar de contar el tiempo de lectura tras estos minutos sin pasar página, desplazarse o buscar una palabra. Solo para novelas, PDF y manga; el vídeo cuenta mientras se reproduce.';
+      case 'web_video_track_menu':
+        return 'Pista de subtítulos';
+      case 'web_video_track_live':
+        return 'Subtítulos en vivo (capturados de la página)';
+      case 'web_video_no_tracks':
+        return 'Aún no se han capturado subtítulos';
+      case 'web_video_hide_native_subtitles':
+        return 'Ocultar subtítulos del sitio';
+      case 'web_video_import_hint':
+        return 'Esto es una página web (no una transmisión directa). Se abrirá en el reproductor web integrado.';
+      case 'web_video_platform_unsupported':
+        return 'El reproductor web integrado solo está disponible en Windows por ahora.';
+      case 'web_video_mine_queue_run':
+        return 'Crear las tarjetas en cola';
+      case 'web_video_mine_queue_stop':
+        return 'Detener la creación de tarjetas';
+      case 'web_video_mine_queue_empty':
+        return 'No hay tarjetas en cola';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'En cola para crear tarjetas (${count} pendientes)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creando tarjetas ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Tarjetas creadas: ${ok}, fallidas: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Modo de reproducción';
+      case 'web_video_hosting_builtin':
+        return 'Integrado (1080p; superresolución, capturas y tarjetas disponibles)';
+      case 'web_video_hosting_windowed':
+        return 'Ventana nativa (4K, DRM por hardware; las tarjetas se ponen en cola)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Cambiar al modo integrado para crear ${count} tarjetas en cola';
       default:
         return null;
     }
@@ -191771,6 +193546,82 @@ extension on _StringsFr {
         return 'Faire passer le trafic P2P (torrent) par le proxy';
       case 'network_proxy_p2p_warning':
         return 'Désactivé par défaut : le P2P se connecte directement. Passer par le proxy peut réduire la vitesse, et de nombreux fournisseurs de proxy interdisent le trafic BitTorrent : votre compte proxy peut être bridé, averti ou résilié. Ne s\'applique qu\'au moteur intégré ; un qBittorrent externe utilise ses propres paramètres de proxy.';
+      case 'video_ajatt_settings_hint':
+        return 'Archive gratuite de sous-titres japonais (miroir kitsunekko). Aucun compte requis ; les fichiers sont téléchargés depuis GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Désactivé : l\'archive AJATT est ignorée lors de la recherche de sous-titres.';
+      case 'video_subtitle_workbench_title':
+        return 'Sous-titres';
+      case 'video_subtitle_scope_episode':
+        return 'Cet épisode';
+      case 'video_subtitle_scope_collection':
+        return 'Toute la collection';
+      case 'video_subtitle_search_open':
+        return 'Rechercher des sous-titres en ligne';
+      case 'video_subtitle_collection_settings':
+        return 'Réglages de sous-titres de la collection';
+      case 'video_subtitle_collection_language':
+        return 'Langue de sous-titres par défaut';
+      case 'video_subtitle_collection_language_hint':
+        return 'S’applique à chaque épisode de cette collection. Vide = suivre la langue de la vidéo.';
+      case 'video_subtitle_collection_release_group':
+        return 'Version préférée';
+      case 'video_subtitle_collection_release_group_hint':
+        return 'Les téléchargements groupés choisissent d’abord cette version pour que toute la saison partage la même synchronisation.';
+      case 'video_subtitle_collection_release_group_any':
+        return 'Toute version';
+      case 'video_subtitle_source_label':
+        return 'Source';
+      case 'video_subtitle_collection_members_hint':
+        return 'Les épisodes sont associés par leur numéro dans le nom de fichier ; les packs de saison sont découpés automatiquement.';
+      case 'video_subtitle_adjust_title':
+        return 'Réglages des sous-titres';
+      case 'video_subtitle_adjust_collapse':
+        return 'Réduire';
+      case 'video_subtitle_adjust_expand':
+        return 'Développer';
+      case 'settings_section_reading_stats':
+        return 'Statistiques de lecture';
+      case 'reading_stats_idle_timeout':
+        return 'Délai d\'inactivité';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Cesser de compter le temps de lecture après ce nombre de minutes sans tourner de page, faire défiler ou chercher un mot. Romans, PDF et mangas uniquement ; la vidéo compte tant qu\'elle est en lecture.';
+      case 'web_video_track_menu':
+        return 'Piste de sous-titres';
+      case 'web_video_track_live':
+        return 'Sous-titres en direct (capturés sur la page)';
+      case 'web_video_no_tracks':
+        return 'Aucun sous-titre capturé pour l’instant';
+      case 'web_video_hide_native_subtitles':
+        return 'Masquer les sous-titres du site';
+      case 'web_video_import_hint':
+        return 'Il s’agit d’une page web (pas d’un flux direct). Elle s’ouvrira dans le lecteur web intégré.';
+      case 'web_video_platform_unsupported':
+        return 'Le lecteur web intégré n’est disponible que sous Windows pour le moment.';
+      case 'web_video_mine_queue_run':
+        return 'Créer les cartes en attente';
+      case 'web_video_mine_queue_stop':
+        return 'Arrêter la création de cartes';
+      case 'web_video_mine_queue_empty':
+        return 'Aucune carte en attente';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Mis en attente pour la création de cartes (${count} en attente)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Création des cartes ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cartes créées : ${ok}, échecs : ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Mode de lecture';
+      case 'web_video_hosting_builtin':
+        return 'Intégré (1080p ; super-résolution, captures et cartes disponibles)';
+      case 'web_video_hosting_windowed':
+        return 'Fenêtre native (4K, DRM matériel ; les cartes sont mises en attente)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Passer en mode intégré pour créer ${count} cartes en attente';
       default:
         return null;
     }
@@ -199855,6 +201706,82 @@ extension on _StringsId {
         return 'Rutekan lalu lintas P2P (torrent) melalui proksi';
       case 'network_proxy_p2p_warning':
         return 'Nonaktif secara default — P2P terhubung langsung. Melewati proksi dapat menurunkan kecepatan, dan banyak penyedia proksi melarang lalu lintas BitTorrent: akun proksi Anda bisa dibatasi, diperingatkan, atau dihentikan. Hanya berlaku untuk mesin bawaan; qBittorrent eksternal memakai pengaturan proksinya sendiri.';
+      case 'video_ajatt_settings_hint':
+        return 'Arsip subtitle bahasa Jepang gratis (cermin kitsunekko). Tidak perlu akun; berkas subtitle diunduh dari GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Nonaktif berarti arsip AJATT dilewati saat mencari subtitle.';
+      case 'video_subtitle_workbench_title':
+        return 'Subtitle';
+      case 'video_subtitle_scope_episode':
+        return 'Episode ini';
+      case 'video_subtitle_scope_collection':
+        return 'Seluruh koleksi';
+      case 'video_subtitle_search_open':
+        return 'Cari subtitle daring';
+      case 'video_subtitle_collection_settings':
+        return 'Pengaturan subtitle koleksi';
+      case 'video_subtitle_collection_language':
+        return 'Bahasa subtitle default';
+      case 'video_subtitle_collection_language_hint':
+        return 'Berlaku untuk setiap episode di koleksi ini. Kosong = ikuti bahasa video itu sendiri.';
+      case 'video_subtitle_collection_release_group':
+        return 'Versi pilihan';
+      case 'video_subtitle_collection_release_group_hint':
+        return 'Unduhan massal memilih versi ini lebih dulu agar satu musim berbagi timing yang sama.';
+      case 'video_subtitle_collection_release_group_any':
+        return 'Versi apa pun';
+      case 'video_subtitle_source_label':
+        return 'Sumber';
+      case 'video_subtitle_collection_members_hint':
+        return 'Episode dicocokkan berdasarkan nomor di nama berkas; paket musim dipisah otomatis.';
+      case 'video_subtitle_adjust_title':
+        return 'Penyesuaian subtitle';
+      case 'video_subtitle_adjust_collapse':
+        return 'Ciutkan';
+      case 'video_subtitle_adjust_expand':
+        return 'Perluas';
+      case 'settings_section_reading_stats':
+        return 'Statistik membaca';
+      case 'reading_stats_idle_timeout':
+        return 'Batas waktu idle';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Berhenti menghitung waktu membaca setelah sekian menit tanpa membalik halaman, menggulir, atau mencari kata. Hanya untuk novel, PDF, dan manga; video dihitung selama diputar.';
+      case 'web_video_track_menu':
+        return 'Trek subtitel';
+      case 'web_video_track_live':
+        return 'Teks langsung (diambil dari halaman)';
+      case 'web_video_no_tracks':
+        return 'Belum ada subtitel yang ditangkap';
+      case 'web_video_hide_native_subtitles':
+        return 'Sembunyikan subtitel situs';
+      case 'web_video_import_hint':
+        return 'Ini halaman web (bukan stream langsung). Akan dibuka di pemutar web bawaan.';
+      case 'web_video_platform_unsupported':
+        return 'Pemutar web bawaan saat ini hanya tersedia di Windows.';
+      case 'web_video_mine_queue_run':
+        return 'Buat kartu yang antre';
+      case 'web_video_mine_queue_stop':
+        return 'Hentikan pembuatan kartu';
+      case 'web_video_mine_queue_empty':
+        return 'Tidak ada kartu yang antre';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Masuk antrean pembuatan kartu (${count} menunggu)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Membuat kartu ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Kartu dibuat: ${ok}, gagal: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Mode pemutaran';
+      case 'web_video_hosting_builtin':
+        return 'Bawaan (1080p; resolusi super, tangkapan layar, dan kartu tersedia)';
+      case 'web_video_hosting_windowed':
+        return 'Jendela native (4K, DRM perangkat keras; kartu diantrekan dulu)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
       default:
         return null;
     }
@@ -207960,6 +209887,82 @@ extension on _StringsIt {
         return 'Instrada il traffico P2P (torrent) tramite il proxy';
       case 'network_proxy_p2p_warning':
         return 'Disattivato per impostazione predefinita: il P2P si connette direttamente. Passare dal proxy può ridurre la velocità e molti provider proxy vietano il traffico BitTorrent: l\'account proxy potrebbe essere limitato, avvisato o chiuso. Vale solo per il motore integrato; un qBittorrent esterno usa le proprie impostazioni proxy.';
+      case 'video_ajatt_settings_hint':
+        return 'Archivio gratuito di sottotitoli giapponesi (mirror kitsunekko). Nessun account richiesto; i file vengono scaricati da GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Disattivato: l\'archivio AJATT viene ignorato nella ricerca dei sottotitoli.';
+      case 'video_subtitle_workbench_title':
+        return 'Sottotitoli';
+      case 'video_subtitle_scope_episode':
+        return 'Questo episodio';
+      case 'video_subtitle_scope_collection':
+        return 'Intera raccolta';
+      case 'video_subtitle_search_open':
+        return 'Cerca sottotitoli online';
+      case 'video_subtitle_collection_settings':
+        return 'Impostazioni sottotitoli della raccolta';
+      case 'video_subtitle_collection_language':
+        return 'Lingua sottotitoli predefinita';
+      case 'video_subtitle_collection_language_hint':
+        return 'Vale per ogni episodio di questa raccolta. Vuoto = segui la lingua del video.';
+      case 'video_subtitle_collection_release_group':
+        return 'Versione preferita';
+      case 'video_subtitle_collection_release_group_hint':
+        return 'I download in blocco scelgono prima questa versione così l’intera stagione condivide lo stesso timing.';
+      case 'video_subtitle_collection_release_group_any':
+        return 'Qualsiasi versione';
+      case 'video_subtitle_source_label':
+        return 'Fonte';
+      case 'video_subtitle_collection_members_hint':
+        return 'Gli episodi vengono abbinati dal numero nel nome file; i pacchetti di stagione vengono divisi automaticamente.';
+      case 'video_subtitle_adjust_title':
+        return 'Regolazioni sottotitoli';
+      case 'video_subtitle_adjust_collapse':
+        return 'Comprimi';
+      case 'video_subtitle_adjust_expand':
+        return 'Espandi';
+      case 'settings_section_reading_stats':
+        return 'Statistiche di lettura';
+      case 'reading_stats_idle_timeout':
+        return 'Timeout di inattività';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Smetti di contare il tempo di lettura dopo questi minuti senza voltare pagina, scorrere o cercare una parola. Solo per romanzi, PDF e manga; il video conta mentre è in riproduzione.';
+      case 'web_video_track_menu':
+        return 'Traccia sottotitoli';
+      case 'web_video_track_live':
+        return 'Sottotitoli live (campionati dalla pagina)';
+      case 'web_video_no_tracks':
+        return 'Nessun sottotitolo acquisito ancora';
+      case 'web_video_hide_native_subtitles':
+        return 'Nascondi i sottotitoli del sito';
+      case 'web_video_import_hint':
+        return 'Questa è una pagina web (non uno stream diretto). Si aprirà nel lettore web integrato.';
+      case 'web_video_platform_unsupported':
+        return 'Il lettore web integrato è disponibile per ora solo su Windows.';
+      case 'web_video_mine_queue_run':
+        return 'Crea le carte in coda';
+      case 'web_video_mine_queue_stop':
+        return 'Interrompi la creazione delle carte';
+      case 'web_video_mine_queue_empty':
+        return 'Nessuna carta in coda';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'In coda per la creazione di carte (${count} in attesa)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creazione carte ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Carte create: ${ok}, non riuscite: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Modalità di riproduzione';
+      case 'web_video_hosting_builtin':
+        return 'Integrato (1080p; super-risoluzione, screenshot e carte disponibili)';
+      case 'web_video_hosting_windowed':
+        return 'Finestra nativa (4K, DRM hardware; le carte vengono messe in coda)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Passa alla modalità integrata per creare ${count} carte in coda';
       default:
         return null;
     }
@@ -215997,6 +218000,80 @@ extension on _StringsJa {
         return 'P2P（torrent）通信をプロキシ経由にする';
       case 'network_proxy_p2p_warning':
         return '既定ではオフで、P2P は直接接続します。プロキシ経由にすると速度が低下する場合があり、多くのプロキシ事業者は BitTorrent 通信を禁止しているため、プロキシアカウントが帯域制限・警告・停止される恐れがあります。内蔵エンジンにのみ適用され、外部 qBittorrent は自身のプロキシ設定を使用します。';
+      case 'video_ajatt_settings_hint':
+        return '無料の日本語字幕アーカイブ（kitsunekko ミラー）。アカウント不要。字幕ファイルは GitHub からダウンロードされます。';
+      case 'video_ajatt_enabled_hint':
+        return 'オフにすると字幕検索時に AJATT アーカイブをスキップします。';
+      case 'video_subtitle_workbench_title':
+        return '字幕';
+      case 'video_subtitle_scope_episode':
+        return 'このエピソード';
+      case 'video_subtitle_scope_collection':
+        return 'コレクション全体';
+      case 'video_subtitle_search_open':
+        return 'オンラインで字幕を検索';
+      case 'video_subtitle_collection_settings':
+        return 'コレクションの字幕設定';
+      case 'video_subtitle_collection_language':
+        return '既定の字幕言語';
+      case 'video_subtitle_collection_language_hint':
+        return 'このコレクションの全エピソードに適用。空欄 = 動画自身の言語に従う。';
+      case 'video_subtitle_collection_release_group':
+        return '優先バージョン';
+      case 'video_subtitle_collection_release_group_hint':
+        return '一括ダウンロードではこのバージョンを優先し、シーズン全体で同じタイミングを共有します。';
+      case 'video_subtitle_collection_release_group_any':
+        return 'バージョン指定なし';
+      case 'video_subtitle_source_label':
+        return 'ソース';
+      case 'video_subtitle_collection_members_hint':
+        return '各話はファイル名の話数で照合され、シーズンパックは自動で分割されます。';
+      case 'video_subtitle_adjust_title':
+        return '字幕の調整';
+      case 'video_subtitle_adjust_collapse':
+        return '折りたたむ';
+      case 'video_subtitle_adjust_expand':
+        return '展開';
+      case 'settings_section_reading_stats':
+        return '読書統計';
+      case 'reading_stats_idle_timeout':
+        return 'アイドル判定時間';
+      case 'reading_stats_idle_timeout_hint':
+        return 'ページめくり・スクロール・辞書引きがこの分数ないと読書時間の計測を止めます。小説・PDF・漫画のみ対象。動画は再生中なら計測します。';
+      case 'web_video_track_menu':
+        return '字幕トラック';
+      case 'web_video_track_live':
+        return 'ライブ字幕（ページから取得）';
+      case 'web_video_no_tracks':
+        return '字幕はまだ取得されていません';
+      case 'web_video_hide_native_subtitles':
+        return 'サイトの字幕を隠す';
+      case 'web_video_import_hint':
+        return 'これは（直接ストリームではなく）Web ページです。内蔵 Web プレーヤーで開きます。';
+      case 'web_video_platform_unsupported':
+        return '内蔵 Web プレーヤーは現在 Windows でのみ利用できます。';
+      case 'web_video_mine_queue_run':
+        return 'キューのカードを作成';
+      case 'web_video_mine_queue_stop':
+        return 'カード作成を停止';
+      case 'web_video_mine_queue_empty':
+        return 'キューにカードはありません';
+      case 'web_video_mine_queued':
+        return ({required Object count}) => 'カード作成のキューに追加しました（残り ${count} 件）';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'カード作成中 ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'カード作成完了：成功 ${ok}、失敗 ${failed}';
+      case 'web_video_hosting_menu':
+        return '再生モード';
+      case 'web_video_hosting_builtin':
+        return '内蔵（1080p；超解像・スクリーンショット・カード作成が可能）';
+      case 'web_video_hosting_windowed':
+        return 'ネイティブウィンドウ（4K、ハードウェア DRM；カードは後でキュー処理）';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) => '内蔵モードに切り替えて ${count} 件のカードを作成';
       default:
         return null;
     }
@@ -224036,6 +226113,81 @@ extension on _StringsKo {
         return 'P2P(토렌트) 전송을 프록시로 라우팅';
       case 'network_proxy_p2p_warning':
         return '기본적으로 꺼져 있으며 P2P는 직접 연결합니다. 프록시를 거치면 속도가 떨어질 수 있고, 많은 프록시 제공업체가 BitTorrent 트래픽을 금지하므로 프록시 계정이 속도 제한·경고·해지될 수 있습니다. 내장 엔진에만 적용되며 외부 qBittorrent는 자체 프록시 설정을 사용합니다.';
+      case 'video_ajatt_settings_hint':
+        return '무료 일본어 자막 아카이브(kitsunekko 미러). 계정 불필요. 자막 파일은 GitHub에서 다운로드됩니다.';
+      case 'video_ajatt_enabled_hint':
+        return '끄면 자막 검색 시 AJATT 아카이브를 건너뜁니다.';
+      case 'video_subtitle_workbench_title':
+        return '자막';
+      case 'video_subtitle_scope_episode':
+        return '이 에피소드';
+      case 'video_subtitle_scope_collection':
+        return '컬렉션 전체';
+      case 'video_subtitle_search_open':
+        return '온라인 자막 검색';
+      case 'video_subtitle_collection_settings':
+        return '컬렉션 자막 설정';
+      case 'video_subtitle_collection_language':
+        return '기본 자막 언어';
+      case 'video_subtitle_collection_language_hint':
+        return '이 컬렉션의 모든 에피소드에 적용됩니다. 비워 두면 영상 자체 언어를 따릅니다.';
+      case 'video_subtitle_collection_release_group':
+        return '선호 버전';
+      case 'video_subtitle_collection_release_group_hint':
+        return '일괄 다운로드 시 이 버전을 우선 선택해 시즌 전체가 같은 타이밍을 공유합니다.';
+      case 'video_subtitle_collection_release_group_any':
+        return '버전 무관';
+      case 'video_subtitle_source_label':
+        return '출처';
+      case 'video_subtitle_collection_members_hint':
+        return '에피소드는 파일 이름의 화수로 매칭되며, 시즌 팩은 자동으로 분리됩니다.';
+      case 'video_subtitle_adjust_title':
+        return '자막 조정';
+      case 'video_subtitle_adjust_collapse':
+        return '접기';
+      case 'video_subtitle_adjust_expand':
+        return '펼치기';
+      case 'settings_section_reading_stats':
+        return '독서 통계';
+      case 'reading_stats_idle_timeout':
+        return '유휴 판정 시간';
+      case 'reading_stats_idle_timeout_hint':
+        return '페이지 넘김·스크롤·단어 검색이 이 시간(분) 동안 없으면 독서 시간 집계를 멈춥니다. 소설·PDF·만화에만 적용되며, 동영상은 재생 중이면 집계합니다.';
+      case 'web_video_track_menu':
+        return '자막 트랙';
+      case 'web_video_track_live':
+        return '실시간 자막(페이지에서 수집)';
+      case 'web_video_no_tracks':
+        return '아직 수집된 자막이 없습니다';
+      case 'web_video_hide_native_subtitles':
+        return '사이트 자막 숨기기';
+      case 'web_video_import_hint':
+        return '직접 스트림이 아닌 웹 페이지입니다. 내장 웹 플레이어에서 열립니다.';
+      case 'web_video_platform_unsupported':
+        return '내장 웹 플레이어는 현재 Windows에서만 사용할 수 있습니다.';
+      case 'web_video_mine_queue_run':
+        return '대기 중인 카드 만들기';
+      case 'web_video_mine_queue_stop':
+        return '카드 만들기 중지';
+      case 'web_video_mine_queue_empty':
+        return '대기 중인 카드가 없습니다';
+      case 'web_video_mine_queued':
+        return ({required Object count}) => '카드 만들기 대기열에 추가됨(${count}개 대기)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            '카드 만드는 중 ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            '카드 만들기 완료: 성공 ${ok}, 실패 ${failed}';
+      case 'web_video_hosting_menu':
+        return '재생 모드';
+      case 'web_video_hosting_builtin':
+        return '내장(1080p; 초해상도, 스크린샷, 카드 만들기 가능)';
+      case 'web_video_hosting_windowed':
+        return '네이티브 창(4K, 하드웨어 DRM; 카드는 나중에 대기열 처리)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
       default:
         return null;
     }
@@ -232135,6 +234287,82 @@ extension on _StringsNl {
         return 'P2P-verkeer (torrent) via de proxy leiden';
       case 'network_proxy_p2p_warning':
         return 'Standaard uit: P2P maakt rechtstreeks verbinding. Via de proxy kan de snelheid dalen en veel proxyaanbieders verbieden BitTorrent-verkeer: je proxyaccount kan worden afgeknepen, gewaarschuwd of opgezegd. Geldt alleen voor de ingebouwde engine; een externe qBittorrent gebruikt zijn eigen proxy-instellingen.';
+      case 'video_ajatt_settings_hint':
+        return 'Gratis archief met Japanse ondertitels (kitsunekko-mirror). Geen account nodig; bestanden worden van GitHub gedownload.';
+      case 'video_ajatt_enabled_hint':
+        return 'Uit betekent dat het AJATT-archief wordt overgeslagen bij het zoeken naar ondertitels.';
+      case 'video_subtitle_workbench_title':
+        return 'Ondertitels';
+      case 'video_subtitle_scope_episode':
+        return 'Deze aflevering';
+      case 'video_subtitle_scope_collection':
+        return 'Hele verzameling';
+      case 'video_subtitle_search_open':
+        return 'Ondertitels online zoeken';
+      case 'video_subtitle_collection_settings':
+        return 'Ondertitelinstellingen van verzameling';
+      case 'video_subtitle_collection_language':
+        return 'Standaard ondertiteltaal';
+      case 'video_subtitle_collection_language_hint':
+        return 'Geldt voor elke aflevering in deze verzameling. Leeg = de taal van de video volgen.';
+      case 'video_subtitle_collection_release_group':
+        return 'Voorkeursversie';
+      case 'video_subtitle_collection_release_group_hint':
+        return 'Bulkdownloads kiezen eerst deze versie zodat het hele seizoen dezelfde timing deelt.';
+      case 'video_subtitle_collection_release_group_any':
+        return 'Elke versie';
+      case 'video_subtitle_source_label':
+        return 'Bron';
+      case 'video_subtitle_collection_members_hint':
+        return 'Afleveringen worden gekoppeld op het nummer in de bestandsnaam; seizoenspakketten worden automatisch gesplitst.';
+      case 'video_subtitle_adjust_title':
+        return 'Ondertitels aanpassen';
+      case 'video_subtitle_adjust_collapse':
+        return 'Inklappen';
+      case 'video_subtitle_adjust_expand':
+        return 'Uitklappen';
+      case 'settings_section_reading_stats':
+        return 'Leesstatistieken';
+      case 'reading_stats_idle_timeout':
+        return 'Inactiviteitstime-out';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Stop met het tellen van leestijd na dit aantal minuten zonder bladeren, scrollen of een woord opzoeken. Alleen voor romans, pdf\'s en manga; video telt zolang het afspeelt.';
+      case 'web_video_track_menu':
+        return 'Ondertitelspoor';
+      case 'web_video_track_live':
+        return 'Live-ondertitels (van de pagina)';
+      case 'web_video_no_tracks':
+        return 'Nog geen ondertitels vastgelegd';
+      case 'web_video_hide_native_subtitles':
+        return 'Ondertitels van de site verbergen';
+      case 'web_video_import_hint':
+        return 'Dit is een webpagina (geen directe stream). Deze wordt in de ingebouwde webspeler geopend.';
+      case 'web_video_platform_unsupported':
+        return 'De ingebouwde webspeler is voorlopig alleen beschikbaar op Windows.';
+      case 'web_video_mine_queue_run':
+        return 'Wachtende kaarten aanmaken';
+      case 'web_video_mine_queue_stop':
+        return 'Kaarten aanmaken stoppen';
+      case 'web_video_mine_queue_empty':
+        return 'Geen wachtende kaarten';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'In wachtrij voor kaart aanmaken (${count} wachtend)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Kaarten aanmaken ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Kaarten aangemaakt: ${ok}, mislukt: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Afspeelmodus';
+      case 'web_video_hosting_builtin':
+        return 'Ingebouwd (1080p; superresolutie, schermafbeeldingen en kaarten beschikbaar)';
+      case 'web_video_hosting_windowed':
+        return 'Native venster (4K, hardware-DRM; kaarten komen in de wachtrij)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
       default:
         return null;
     }
@@ -240229,6 +242457,82 @@ extension on _StringsPtBr {
         return 'Rotear o tráfego P2P (torrent) pelo proxy';
       case 'network_proxy_p2p_warning':
         return 'Desativado por padrão: o P2P se conecta diretamente. Passar pelo proxy pode reduzir a velocidade, e muitos provedores de proxy proíbem tráfego BitTorrent: sua conta de proxy pode ser limitada, advertida ou encerrada. Aplica-se apenas ao mecanismo integrado; um qBittorrent externo usa suas próprias configurações de proxy.';
+      case 'video_ajatt_settings_hint':
+        return 'Arquivo gratuito de legendas em japonês (espelho do kitsunekko). Não precisa de conta; os arquivos são baixados do GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Desligado significa que o arquivo AJATT é ignorado ao buscar legendas.';
+      case 'video_subtitle_workbench_title':
+        return 'Legendas';
+      case 'video_subtitle_scope_episode':
+        return 'Este episódio';
+      case 'video_subtitle_scope_collection':
+        return 'Coleção inteira';
+      case 'video_subtitle_search_open':
+        return 'Buscar legendas online';
+      case 'video_subtitle_collection_settings':
+        return 'Configurações de legenda da coleção';
+      case 'video_subtitle_collection_language':
+        return 'Idioma de legenda padrão';
+      case 'video_subtitle_collection_language_hint':
+        return 'Vale para todos os episódios desta coleção. Vazio = seguir o idioma do vídeo.';
+      case 'video_subtitle_collection_release_group':
+        return 'Versão preferida';
+      case 'video_subtitle_collection_release_group_hint':
+        return 'Downloads em lote escolhem esta versão primeiro para que toda a temporada compartilhe a mesma sincronia.';
+      case 'video_subtitle_collection_release_group_any':
+        return 'Qualquer versão';
+      case 'video_subtitle_source_label':
+        return 'Fonte';
+      case 'video_subtitle_collection_members_hint':
+        return 'Os episódios são combinados pelo número no nome do arquivo; pacotes de temporada são divididos automaticamente.';
+      case 'video_subtitle_adjust_title':
+        return 'Ajustes de legenda';
+      case 'video_subtitle_adjust_collapse':
+        return 'Recolher';
+      case 'video_subtitle_adjust_expand':
+        return 'Expandir';
+      case 'settings_section_reading_stats':
+        return 'Estatísticas de leitura';
+      case 'reading_stats_idle_timeout':
+        return 'Tempo de inatividade';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Parar de contar o tempo de leitura após esses minutos sem virar página, rolar ou pesquisar uma palavra. Apenas para romances, PDFs e mangás; o vídeo conta enquanto estiver reproduzindo.';
+      case 'web_video_track_menu':
+        return 'Faixa de legendas';
+      case 'web_video_track_live':
+        return 'Legendas ao vivo (capturadas da página)';
+      case 'web_video_no_tracks':
+        return 'Nenhuma legenda capturada ainda';
+      case 'web_video_hide_native_subtitles':
+        return 'Ocultar legendas do site';
+      case 'web_video_import_hint':
+        return 'Isto é uma página web (não um stream direto). Será aberta no player web integrado.';
+      case 'web_video_platform_unsupported':
+        return 'O player web integrado só está disponível no Windows por enquanto.';
+      case 'web_video_mine_queue_run':
+        return 'Criar cartões na fila';
+      case 'web_video_mine_queue_stop':
+        return 'Parar de criar cartões';
+      case 'web_video_mine_queue_empty':
+        return 'Nenhum cartão na fila';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Na fila para criar cartões (${count} pendentes)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Criando cartões ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cartões criados: ${ok}, falhas: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Modo de reprodução';
+      case 'web_video_hosting_builtin':
+        return 'Integrado (1080p; super-resolução, capturas e cartões disponíveis)';
+      case 'web_video_hosting_windowed':
+        return 'Janela nativa (4K, DRM por hardware; cartões ficam na fila)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Mudar para o modo integrado para criar ${count} cartões na fila';
       default:
         return null;
     }
@@ -248329,6 +250633,82 @@ extension on _StringsRu {
         return 'Пропускать P2P-трафик (torrent) через прокси';
       case 'network_proxy_p2p_warning':
         return 'По умолчанию выключено — P2P подключается напрямую. Через прокси скорость может снизиться, а многие прокси-провайдеры запрещают BitTorrent-трафик: аккаунт прокси могут ограничить, предупредить или заблокировать. Действует только для встроенного движка; внешний qBittorrent использует собственные настройки прокси.';
+      case 'video_ajatt_settings_hint':
+        return 'Бесплатный архив японских субтитров (зеркало kitsunekko). Аккаунт не нужен; файлы скачиваются с GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Выключено — архив AJATT пропускается при поиске субтитров.';
+      case 'video_subtitle_workbench_title':
+        return 'Субтитры';
+      case 'video_subtitle_scope_episode':
+        return 'Эта серия';
+      case 'video_subtitle_scope_collection':
+        return 'Вся коллекция';
+      case 'video_subtitle_search_open':
+        return 'Искать субтитры онлайн';
+      case 'video_subtitle_collection_settings':
+        return 'Настройки субтитров коллекции';
+      case 'video_subtitle_collection_language':
+        return 'Язык субтитров по умолчанию';
+      case 'video_subtitle_collection_language_hint':
+        return 'Применяется ко всем сериям коллекции. Пусто = следовать языку видео.';
+      case 'video_subtitle_collection_release_group':
+        return 'Предпочтительная версия';
+      case 'video_subtitle_collection_release_group_hint':
+        return 'Пакетная загрузка сначала выбирает эту версию, чтобы весь сезон имел одинаковый тайминг.';
+      case 'video_subtitle_collection_release_group_any':
+        return 'Любая версия';
+      case 'video_subtitle_source_label':
+        return 'Источник';
+      case 'video_subtitle_collection_members_hint':
+        return 'Серии сопоставляются по номеру в имени файла; сезонные паки разбиваются автоматически.';
+      case 'video_subtitle_adjust_title':
+        return 'Настройка субтитров';
+      case 'video_subtitle_adjust_collapse':
+        return 'Свернуть';
+      case 'video_subtitle_adjust_expand':
+        return 'Развернуть';
+      case 'settings_section_reading_stats':
+        return 'Статистика чтения';
+      case 'reading_stats_idle_timeout':
+        return 'Тайм-аут бездействия';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Не засчитывать время чтения после стольких минут без перелистывания, прокрутки или поиска слова. Только для романов, PDF и манги; видео засчитывается, пока воспроизводится.';
+      case 'web_video_track_menu':
+        return 'Дорожка субтитров';
+      case 'web_video_track_live':
+        return 'Живые субтитры (с страницы)';
+      case 'web_video_no_tracks':
+        return 'Субтитры пока не получены';
+      case 'web_video_hide_native_subtitles':
+        return 'Скрыть субтитры сайта';
+      case 'web_video_import_hint':
+        return 'Это веб-страница (не прямой поток). Она откроется во встроенном веб-плеере.';
+      case 'web_video_platform_unsupported':
+        return 'Встроенный веб-плеер пока доступен только в Windows.';
+      case 'web_video_mine_queue_run':
+        return 'Создать карточки из очереди';
+      case 'web_video_mine_queue_stop':
+        return 'Остановить создание карточек';
+      case 'web_video_mine_queue_empty':
+        return 'Очередь карточек пуста';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Добавлено в очередь на создание карточек (ожидает: ${count})';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Создание карточек ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Карточек создано: ${ok}, ошибок: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Режим воспроизведения';
+      case 'web_video_hosting_builtin':
+        return 'Встроенный (1080p; доступны суперразрешение, скриншоты и карточки)';
+      case 'web_video_hosting_windowed':
+        return 'Нативное окно (4K, аппаратный DRM; карточки ставятся в очередь)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
       default:
         return null;
     }
@@ -256402,6 +258782,82 @@ extension on _StringsTh {
         return 'ส่งการรับส่งข้อมูล P2P (torrent) ผ่านพร็อกซี';
       case 'network_proxy_p2p_warning':
         return 'ปิดตามค่าเริ่มต้น P2P จะเชื่อมต่อโดยตรง การส่งผ่านพร็อกซีอาจทำให้ความเร็วลดลง และผู้ให้บริการพร็อกซีจำนวนมากห้ามการรับส่งข้อมูล BitTorrent บัญชีพร็อกซีของคุณอาจถูกจำกัดความเร็ว เตือน หรือยกเลิก มีผลเฉพาะเอนจินในตัวเท่านั้น qBittorrent ภายนอกใช้การตั้งค่าพร็อกซีของตัวเอง';
+      case 'video_ajatt_settings_hint':
+        return 'คลังซับไตเติลภาษาญี่ปุ่นฟรี (มิเรอร์ kitsunekko) ไม่ต้องใช้บัญชี ไฟล์ซับไตเติลดาวน์โหลดจาก GitHub';
+      case 'video_ajatt_enabled_hint':
+        return 'ปิดหมายถึงข้ามคลัง AJATT เมื่อค้นหาซับไตเติล';
+      case 'video_subtitle_workbench_title':
+        return 'ซับไตเติล';
+      case 'video_subtitle_scope_episode':
+        return 'ตอนนี้';
+      case 'video_subtitle_scope_collection':
+        return 'ทั้งคอลเลกชัน';
+      case 'video_subtitle_search_open':
+        return 'ค้นหาซับไตเติลออนไลน์';
+      case 'video_subtitle_collection_settings':
+        return 'การตั้งค่าซับไตเติลของคอลเลกชัน';
+      case 'video_subtitle_collection_language':
+        return 'ภาษาซับไตเติลเริ่มต้น';
+      case 'video_subtitle_collection_language_hint':
+        return 'ใช้กับทุกตอนในคอลเลกชันนี้ เว้นว่าง = ตามภาษาของวิดีโอเอง';
+      case 'video_subtitle_collection_release_group':
+        return 'เวอร์ชันที่ต้องการ';
+      case 'video_subtitle_collection_release_group_hint':
+        return 'การดาวน์โหลดแบบกลุ่มจะเลือกเวอร์ชันนี้ก่อน เพื่อให้ทั้งซีซันใช้ไทม์มิ่งเดียวกัน';
+      case 'video_subtitle_collection_release_group_any':
+        return 'เวอร์ชันใดก็ได้';
+      case 'video_subtitle_source_label':
+        return 'แหล่งที่มา';
+      case 'video_subtitle_collection_members_hint':
+        return 'จับคู่แต่ละตอนตามหมายเลขในชื่อไฟล์ แพ็กทั้งซีซันจะถูกแยกอัตโนมัติ';
+      case 'video_subtitle_adjust_title':
+        return 'ปรับซับไตเติล';
+      case 'video_subtitle_adjust_collapse':
+        return 'ย่อ';
+      case 'video_subtitle_adjust_expand':
+        return 'ขยาย';
+      case 'settings_section_reading_stats':
+        return 'สถิติการอ่าน';
+      case 'reading_stats_idle_timeout':
+        return 'เวลาพักการอ่าน';
+      case 'reading_stats_idle_timeout_hint':
+        return 'หยุดนับเวลาอ่านเมื่อไม่มีการพลิกหน้า เลื่อน หรือค้นหาคำนานเท่านี้นาที ใช้กับนิยาย PDF และมังงะเท่านั้น วิดีโอจะนับขณะเล่น';
+      case 'web_video_track_menu':
+        return 'แทร็กคำบรรยาย';
+      case 'web_video_track_live':
+        return 'คำบรรยายสด (เก็บจากหน้าเว็บ)';
+      case 'web_video_no_tracks':
+        return 'ยังไม่ได้เก็บคำบรรยาย';
+      case 'web_video_hide_native_subtitles':
+        return 'ซ่อนคำบรรยายของเว็บไซต์';
+      case 'web_video_import_hint':
+        return 'นี่คือหน้าเว็บ (ไม่ใช่สตรีมโดยตรง) จะเปิดในเว็บเพลเยอร์ในตัว';
+      case 'web_video_platform_unsupported':
+        return 'ตอนนี้เว็บเพลเยอร์ในตัวใช้ได้เฉพาะบน Windows';
+      case 'web_video_mine_queue_run':
+        return 'สร้างการ์ดที่อยู่ในคิว';
+      case 'web_video_mine_queue_stop':
+        return 'หยุดสร้างการ์ด';
+      case 'web_video_mine_queue_empty':
+        return 'ไม่มีการ์ดในคิว';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'เพิ่มในคิวสร้างการ์ดแล้ว (รอ ${count} รายการ)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'กำลังสร้างการ์ด ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'สร้างการ์ดแล้ว: ${ok} รายการ ล้มเหลว: ${failed} รายการ';
+      case 'web_video_hosting_menu':
+        return 'โหมดเล่น';
+      case 'web_video_hosting_builtin':
+        return 'ในตัว (1080p; ใช้ซูเปอร์เรโซลูชัน ภาพหน้าจอ และการ์ดได้)';
+      case 'web_video_hosting_windowed':
+        return 'หน้าต่างเนทีฟ (4K, DRM ฮาร์ดแวร์; การ์ดจะเข้าคิวไว้ก่อน)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
       default:
         return null;
     }
@@ -264491,6 +266947,82 @@ extension on _StringsTr {
         return 'P2P (torrent) trafiğini proxy üzerinden yönlendir';
       case 'network_proxy_p2p_warning':
         return 'Varsayılan olarak kapalı; P2P doğrudan bağlanır. Proxy üzerinden geçmek hızı düşürebilir ve birçok proxy sağlayıcısı BitTorrent trafiğini yasaklar: proxy hesabınız kısıtlanabilir, uyarılabilir veya kapatılabilir. Yalnızca yerleşik motor için geçerlidir; harici qBittorrent kendi proxy ayarlarını kullanır.';
+      case 'video_ajatt_settings_hint':
+        return 'Ücretsiz Japonca altyazı arşivi (kitsunekko yansıması). Hesap gerekmez; altyazı dosyaları GitHub\'dan indirilir.';
+      case 'video_ajatt_enabled_hint':
+        return 'Kapalıysa altyazı aranırken AJATT arşivi atlanır.';
+      case 'video_subtitle_workbench_title':
+        return 'Altyazılar';
+      case 'video_subtitle_scope_episode':
+        return 'Bu bölüm';
+      case 'video_subtitle_scope_collection':
+        return 'Tüm koleksiyon';
+      case 'video_subtitle_search_open':
+        return 'Çevrimiçi altyazı ara';
+      case 'video_subtitle_collection_settings':
+        return 'Koleksiyon altyazı ayarları';
+      case 'video_subtitle_collection_language':
+        return 'Varsayılan altyazı dili';
+      case 'video_subtitle_collection_language_hint':
+        return 'Bu koleksiyondaki her bölüme uygulanır. Boş = videonun kendi dilini izle.';
+      case 'video_subtitle_collection_release_group':
+        return 'Tercih edilen sürüm';
+      case 'video_subtitle_collection_release_group_hint':
+        return 'Toplu indirmeler önce bu sürümü seçer, böylece tüm sezon aynı zamanlamayı paylaşır.';
+      case 'video_subtitle_collection_release_group_any':
+        return 'Herhangi bir sürüm';
+      case 'video_subtitle_source_label':
+        return 'Kaynak';
+      case 'video_subtitle_collection_members_hint':
+        return 'Bölümler dosya adındaki numaraya göre eşleştirilir; sezon paketleri otomatik olarak bölünür.';
+      case 'video_subtitle_adjust_title':
+        return 'Altyazı ayarları';
+      case 'video_subtitle_adjust_collapse':
+        return 'Daralt';
+      case 'video_subtitle_adjust_expand':
+        return 'Genişlet';
+      case 'settings_section_reading_stats':
+        return 'Okuma istatistikleri';
+      case 'reading_stats_idle_timeout':
+        return 'Boşta kalma süresi';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Sayfa çevirme, kaydırma veya sözcük arama olmadan bu kadar dakika geçince okuma süresini saymayı durdur. Yalnızca roman, PDF ve manga için; video oynatılırken sayılır.';
+      case 'web_video_track_menu':
+        return 'Altyazı parçası';
+      case 'web_video_track_live':
+        return 'Canlı altyazılar (sayfadan alınan)';
+      case 'web_video_no_tracks':
+        return 'Henüz altyazı yakalanmadı';
+      case 'web_video_hide_native_subtitles':
+        return 'Site altyazılarını gizle';
+      case 'web_video_import_hint':
+        return 'Bu bir web sayfası (doğrudan akış değil). Yerleşik web oynatıcıda açılacak.';
+      case 'web_video_platform_unsupported':
+        return 'Yerleşik web oynatıcı şimdilik yalnızca Windows’ta kullanılabilir.';
+      case 'web_video_mine_queue_run':
+        return 'Sıradaki kartları oluştur';
+      case 'web_video_mine_queue_stop':
+        return 'Kart oluşturmayı durdur';
+      case 'web_video_mine_queue_empty':
+        return 'Sırada kart yok';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Kart oluşturma sırasına alındı (${count} bekliyor)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Kartlar oluşturuluyor ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Oluşturulan kart: ${ok}, başarısız: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Oynatma modu';
+      case 'web_video_hosting_builtin':
+        return 'Yerleşik (1080p; süper çözünürlük, ekran görüntüsü ve kartlar kullanılabilir)';
+      case 'web_video_hosting_windowed':
+        return 'Yerel pencere (4K, donanımsal DRM; kartlar sonra sıraya alınır)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
       default:
         return null;
     }
@@ -272573,6 +275105,82 @@ extension on _StringsVi {
         return 'Định tuyến lưu lượng P2P (torrent) qua proxy';
       case 'network_proxy_p2p_warning':
         return 'Mặc định tắt — P2P kết nối trực tiếp. Đi qua proxy có thể làm giảm tốc độ, và nhiều nhà cung cấp proxy cấm lưu lượng BitTorrent: tài khoản proxy của bạn có thể bị giới hạn, cảnh báo hoặc chấm dứt. Chỉ áp dụng cho engine tích hợp; qBittorrent bên ngoài dùng cài đặt proxy riêng.';
+      case 'video_ajatt_settings_hint':
+        return 'Kho phụ đề tiếng Nhật miễn phí (bản sao kitsunekko). Không cần tài khoản; tệp phụ đề tải từ GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Tắt nghĩa là bỏ qua kho AJATT khi tìm phụ đề.';
+      case 'video_subtitle_workbench_title':
+        return 'Phụ đề';
+      case 'video_subtitle_scope_episode':
+        return 'Tập này';
+      case 'video_subtitle_scope_collection':
+        return 'Toàn bộ bộ sưu tập';
+      case 'video_subtitle_search_open':
+        return 'Tìm phụ đề trực tuyến';
+      case 'video_subtitle_collection_settings':
+        return 'Cài đặt phụ đề của bộ sưu tập';
+      case 'video_subtitle_collection_language':
+        return 'Ngôn ngữ phụ đề mặc định';
+      case 'video_subtitle_collection_language_hint':
+        return 'Áp dụng cho mọi tập trong bộ sưu tập này. Để trống = theo ngôn ngữ của video.';
+      case 'video_subtitle_collection_release_group':
+        return 'Phiên bản ưu tiên';
+      case 'video_subtitle_collection_release_group_hint':
+        return 'Tải hàng loạt sẽ chọn phiên bản này trước để cả mùa dùng chung một mốc thời gian.';
+      case 'video_subtitle_collection_release_group_any':
+        return 'Phiên bản bất kỳ';
+      case 'video_subtitle_source_label':
+        return 'Nguồn';
+      case 'video_subtitle_collection_members_hint':
+        return 'Các tập được khớp theo số trong tên tệp; gói cả mùa được tách tự động.';
+      case 'video_subtitle_adjust_title':
+        return 'Điều chỉnh phụ đề';
+      case 'video_subtitle_adjust_collapse':
+        return 'Thu gọn';
+      case 'video_subtitle_adjust_expand':
+        return 'Mở rộng';
+      case 'settings_section_reading_stats':
+        return 'Thống kê đọc';
+      case 'reading_stats_idle_timeout':
+        return 'Thời gian không hoạt động';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Ngừng tính thời gian đọc sau số phút này nếu không lật trang, cuộn hoặc tra từ. Chỉ áp dụng cho tiểu thuyết, PDF và manga; video được tính khi đang phát.';
+      case 'web_video_track_menu':
+        return 'Rãnh phụ đề';
+      case 'web_video_track_live':
+        return 'Phụ đề trực tiếp (lấy từ trang)';
+      case 'web_video_no_tracks':
+        return 'Chưa bắt được phụ đề nào';
+      case 'web_video_hide_native_subtitles':
+        return 'Ẩn phụ đề của trang';
+      case 'web_video_import_hint':
+        return 'Đây là trang web (không phải luồng trực tiếp). Sẽ mở trong trình phát web tích hợp.';
+      case 'web_video_platform_unsupported':
+        return 'Trình phát web tích hợp hiện chỉ có trên Windows.';
+      case 'web_video_mine_queue_run':
+        return 'Tạo các thẻ đang chờ';
+      case 'web_video_mine_queue_stop':
+        return 'Dừng tạo thẻ';
+      case 'web_video_mine_queue_empty':
+        return 'Không có thẻ nào đang chờ';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Đã xếp hàng để tạo thẻ (${count} đang chờ)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Đang tạo thẻ ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Đã tạo thẻ: ${ok}, thất bại: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Chế độ phát';
+      case 'web_video_hosting_builtin':
+        return 'Tích hợp (1080p; có siêu phân giải, ảnh chụp màn hình và thẻ)';
+      case 'web_video_hosting_windowed':
+        return 'Cửa sổ gốc (4K, DRM phần cứng; thẻ được xếp hàng để làm sau)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
       default:
         return null;
     }
@@ -280588,6 +283196,80 @@ extension on _StringsZhCn {
         return 'P2P（torrent）传输走代理';
       case 'network_proxy_p2p_warning':
         return '默认关闭，P2P 直连。走代理可能降低速度；且不少代理服务商禁止 BT 流量，可能导致代理账号被限速、警告甚至封禁。仅对内置引擎生效，外接 qBittorrent 请在其自身设置中配置。';
+      case 'video_ajatt_settings_hint':
+        return '免费日语字幕库（kitsunekko 镜像）。无需账号；字幕文件从 GitHub 下载。';
+      case 'video_ajatt_enabled_hint':
+        return '关闭后搜索字幕时跳过 AJATT 字幕库。';
+      case 'video_subtitle_workbench_title':
+        return '字幕';
+      case 'video_subtitle_scope_episode':
+        return '本集';
+      case 'video_subtitle_scope_collection':
+        return '整个合集';
+      case 'video_subtitle_search_open':
+        return '在线搜索字幕';
+      case 'video_subtitle_collection_settings':
+        return '合集字幕设置';
+      case 'video_subtitle_collection_language':
+        return '默认字幕语言';
+      case 'video_subtitle_collection_language_hint':
+        return '对本合集所有集生效；留空 = 跟随视频自身语言。';
+      case 'video_subtitle_collection_release_group':
+        return '偏好版本';
+      case 'video_subtitle_collection_release_group_hint':
+        return '批量下载优先选这个版本，整季共用一套时间轴。';
+      case 'video_subtitle_collection_release_group_any':
+        return '不限版本';
+      case 'video_subtitle_source_label':
+        return '来源';
+      case 'video_subtitle_collection_members_hint':
+        return '各集按文件名里的集号匹配；整季打包字幕自动拆分。';
+      case 'video_subtitle_adjust_title':
+        return '字幕调整';
+      case 'video_subtitle_adjust_collapse':
+        return '收起';
+      case 'video_subtitle_adjust_expand':
+        return '展开';
+      case 'settings_section_reading_stats':
+        return '阅读统计';
+      case 'reading_stats_idle_timeout':
+        return '空闲判定时长';
+      case 'reading_stats_idle_timeout_hint':
+        return '这么久没有翻页、滚动或查词就停止计入阅读时长。只对小说、PDF、漫画生效；视频以播放状态为准。';
+      case 'web_video_track_menu':
+        return '字幕轨';
+      case 'web_video_track_live':
+        return '实时采集（页面字幕）';
+      case 'web_video_no_tracks':
+        return '尚未采集到字幕';
+      case 'web_video_hide_native_subtitles':
+        return '隐藏站点字幕';
+      case 'web_video_import_hint':
+        return '这是网页地址（非直链），将用内置网页播放器打开。';
+      case 'web_video_platform_unsupported':
+        return '内置网页播放器目前仅支持 Windows。';
+      case 'web_video_mine_queue_run':
+        return '制作队列中的卡片';
+      case 'web_video_mine_queue_stop':
+        return '停止制卡';
+      case 'web_video_mine_queue_empty':
+        return '制卡队列为空';
+      case 'web_video_mine_queued':
+        return ({required Object count}) => '已加入制卡队列（待制 ${count} 张）';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            '制卡中 ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            '制卡完成：成功 ${ok}，失败 ${failed}';
+      case 'web_video_hosting_menu':
+        return '播放模式';
+      case 'web_video_hosting_builtin':
+        return '内置（1080p；可超分、可截图制卡）';
+      case 'web_video_hosting_windowed':
+        return '原生窗口（4K 硬件 DRM；制卡先排队）';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) => '切到内置模式制作 ${count} 张排队卡片';
       default:
         return null;
     }
@@ -288604,6 +291286,80 @@ extension on _StringsZhHk {
         return 'P2P（torrent）傳輸走代理';
       case 'network_proxy_p2p_warning':
         return '預設關閉，P2P 直連。走代理可能降低速度；且不少代理服務商禁止 BT 流量，可能導致代理帳號被限速、警告甚至封禁。僅對內建引擎生效，外接 qBittorrent 請在其自身設定中配置。';
+      case 'video_ajatt_settings_hint':
+        return '免費日語字幕庫（kitsunekko 鏡像）。無需帳號；字幕檔案從 GitHub 下載。';
+      case 'video_ajatt_enabled_hint':
+        return '關閉後搜尋字幕時跳過 AJATT 字幕庫。';
+      case 'video_subtitle_workbench_title':
+        return '字幕';
+      case 'video_subtitle_scope_episode':
+        return '本集';
+      case 'video_subtitle_scope_collection':
+        return '整個合集';
+      case 'video_subtitle_search_open':
+        return '線上搜尋字幕';
+      case 'video_subtitle_collection_settings':
+        return '合集字幕設定';
+      case 'video_subtitle_collection_language':
+        return '預設字幕語言';
+      case 'video_subtitle_collection_language_hint':
+        return '對本合集所有集生效；留空 = 跟隨影片自身語言。';
+      case 'video_subtitle_collection_release_group':
+        return '偏好版本';
+      case 'video_subtitle_collection_release_group_hint':
+        return '批次下載優先選這個版本，整季共用一套時間軸。';
+      case 'video_subtitle_collection_release_group_any':
+        return '不限版本';
+      case 'video_subtitle_source_label':
+        return '來源';
+      case 'video_subtitle_collection_members_hint':
+        return '各集按檔名中的集數匹配；整季打包字幕自動拆分。';
+      case 'video_subtitle_adjust_title':
+        return '字幕調整';
+      case 'video_subtitle_adjust_collapse':
+        return '收起';
+      case 'video_subtitle_adjust_expand':
+        return '展開';
+      case 'settings_section_reading_stats':
+        return '閱讀統計';
+      case 'reading_stats_idle_timeout':
+        return '閒置判定時長';
+      case 'reading_stats_idle_timeout_hint':
+        return '這麼久沒有翻頁、捲動或查詞就停止計入閱讀時長。只對小說、PDF、漫畫生效；影片以播放狀態為準。';
+      case 'web_video_track_menu':
+        return '字幕軌';
+      case 'web_video_track_live':
+        return '即時字幕（從頁面取樣）';
+      case 'web_video_no_tracks':
+        return '尚未擷取到字幕';
+      case 'web_video_hide_native_subtitles':
+        return '隱藏網站字幕';
+      case 'web_video_import_hint':
+        return '這是網頁（不是直接串流），將在內建網頁播放器中開啟。';
+      case 'web_video_platform_unsupported':
+        return '內建網頁播放器目前僅支援 Windows。';
+      case 'web_video_mine_queue_run':
+        return '製作佇列中的卡片';
+      case 'web_video_mine_queue_stop':
+        return '停止製作卡片';
+      case 'web_video_mine_queue_empty':
+        return '佇列中沒有卡片';
+      case 'web_video_mine_queued':
+        return ({required Object count}) => '已加入製卡佇列（待製 ${count} 張）';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            '製卡中 ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            '製卡完成：成功 ${ok}，失敗 ${failed}';
+      case 'web_video_hosting_menu':
+        return '播放模式';
+      case 'web_video_hosting_builtin':
+        return '內建（1080p；可超解析、截圖、製卡）';
+      case 'web_video_hosting_windowed':
+        return '原生視窗（4K 硬體 DRM；製卡先排隊）';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) => '切換到內建模式製作 ${count} 張排隊卡片';
       default:
         return null;
     }
