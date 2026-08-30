@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 66827 (3931 per locale)
 ///
-/// Built on 2026-08-30 at 07:48 UTC
+/// Built on 2026-08-30 at 09:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -14447,65 +14447,64 @@ class _StringsAr extends _StringsEn {
   String get anki_connect_port_auto_fix_none =>
       'لم يُعثر على أي منفذ حر على هذا الجهاز.';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => 'مطلوب';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => 'موصى به';
   @override
-  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_action_badge_optional => 'اختياري';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      'ينزّل الحزمة كاملة في الخلفية ثم يستوردها. يمكنك الإلغاء في أي وقت، وسيُستأنف التنزيل من حيث توقّف.';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      'الحزمة منزَّلة بالفعل، وهذا يستوردها. اختر «دمج» في نافذة التأكيد لتبقى بياناتك الحالية كما هي.';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      'حصلت على ملف zip للحزمة من مكان آخر؟ استوردها من القرص وتخطَّ التنزيل بالكامل.';
   @override
-  String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+  String get onboarding_pack_action_website => 'فتح صفحة التنزيل في الموقع';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      'يفتح الموقع الرسمي في متصفحك. يوفّر قسم الحزمة روابط أجزاء يمكن تمريرها إلى مدير تنزيل، ثم عد إلى هنا واستخدم «اختيار ملف حزمة محلي» لاستيراد ما حصلت عليه.';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      'تتعلّم لغة غير اليابانية؟ تخطَّ الحزمة واستورد هنا قواميس لغتك.';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      'مصدر مقاطع النطق الصوتية. الحزمة تغطّي اليابانية والإنجليزية بالفعل؛ أضف هنا مصادر عبر الإنترنت للغات الأخرى.';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      'يتحقّق من قدرة Fushi على الاتصال بـ Anki ويحمّل مجموعاتك وأنواع الملاحظات. لا يُنشأ أي شيء بعد.';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      'يعيد تحميل المجموعات وأنواع الملاحظات من Anki. استخدمه بعد إنشاء مجموعة جديدة داخل Anki.';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      'يفتح صفحة AnkiDroid في المتجر. يكتب Fushi بطاقاته داخله، لذا يجب تثبيته أولاً.';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      'يفتح صفحة تنزيل Anki. ثبّت Anki وأبقِه مفتوحًا أثناء إنشاء البطاقات.';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      'يفكّ ضغط إضافة AnkiConnect المرفقة داخل Anki، وهي ما يتيح لـ Fushi التخاطب معه. أعد تشغيل Anki بعد ذلك.';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      'قالب البطاقة وربط الحقول ولقطات الشاشة والصوت: أي تفاصيل شكل البطاقة الناتجة. تكفي المجموعة ونوع الملاحظة أعلاه للبدء، فلا تفتح هذا إلا إذا أردت تغيير طريقة بناء البطاقات.';
   @override
   String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      'اختر خدمة نسخ احتياطي وسجّل الدخول، لتبقى مكتبتك سليمة عند فقدان الجهاز أو استبداله.';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      'يقرن هذا الجهاز بأجهزتك الأخرى لمشاركة مكتبة واحدة وإبقاء التقدّم متزامنًا.';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      'يوضّح كيفية تثبيت إضافة المتصفح وربطها بـ Fushi، لتتمكّن من البحث عن الكلمات في صفحات الويب أيضًا.';
   @override
   String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+      'أضف ملفات خطوطك الخاصة واختر الخط الذي تستخدمه كل لغة.';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      'يُنزَّل على أجزاء متوازية من GitHub والموقع الرسمي ومرآة احتياطية في آنٍ واحد، مع التحقّق من كل جزء. يقيس Fushi سرعة المصادر أثناء العمل ويمنح الأسرع في تلك اللحظة عددًا أكبر من الأجزاء، فلا شيء تختاره هنا.';
 }
 
 // Path: <root>
@@ -23792,65 +23791,65 @@ class _StringsDe extends _StringsEn {
   String get anki_connect_port_auto_fix_none =>
       'Auf diesem Rechner wurde kein freier Port gefunden.';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => 'Erforderlich';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => 'Empfohlen';
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      'Lädt das gesamte Paket im Hintergrund herunter und importiert es anschließend. Jederzeit abbrechbar; der Download wird an der Abbruchstelle fortgesetzt.';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      'Das Paket ist bereits heruntergeladen; hier wird es importiert. Wähle im Bestätigungsdialog „Zusammenführen“, dann bleiben deine vorhandenen Daten unangetastet.';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      'Du hast das Paket-ZIP bereits anderweitig bekommen? Importiere es von der Festplatte und überspringe den Download komplett.';
   @override
   String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+      'Download-Seite der Website öffnen';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      'Öffnet die offizielle Website im Browser. Im Paket-Abschnitt findest du Teil-Links, die du einem Downloadmanager übergeben kannst; komm danach hierher zurück und importiere das Ergebnis über „Lokale Paketdatei wählen“.';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      'Du lernst eine andere Sprache als Japanisch? Überspring das Paket und importiere hier stattdessen Wörterbücher für deine Sprache.';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      'Woher die Aussprache-Audios kommen. Japanisch und Englisch deckt das Paket bereits ab; für andere Sprachen fügst du hier Online-Quellen hinzu.';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      'Prüft, ob Fushi Anki erreicht, und lädt deine Stapel und Notiztypen. Es wird noch nichts angelegt.';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      'Lädt Stapel und Notiztypen erneut aus Anki. Nutze das, nachdem du in Anki einen neuen Stapel angelegt hast.';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      'Öffnet die Store-Seite von AnkiDroid. Fushi schreibt seine Karten dorthin, es muss also zuerst installiert sein.';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      'Öffnet die Download-Seite von Anki. Installiere Anki und lass es beim Kartenerstellen laufen.';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      'Entpackt das mitgelieferte AnkiConnect-Add-on für dich nach Anki – darüber spricht Fushi mit Anki. Starte Anki danach neu.';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      'Kartenvorlage, Feldzuordnung, Screenshots und Audio: die Details dazu, wie eine erzeugte Karte aussieht. Stapel und Notiztyp oben genügen zum Loslegen – öffne das hier nur, wenn du ändern willst, wie Karten gebaut werden.';
   @override
   String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      'Wähle ein Backup-Backend und melde dich an, damit deine Bibliothek einen Geräteverlust oder -wechsel übersteht.';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      'Koppelt dieses Gerät mit deinen anderen Geräten, um eine Bibliothek zu teilen und den Fortschritt synchron zu halten.';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      'Zeigt, wie du die Browser-Erweiterung installierst und mit Fushi verbindest, damit du auch auf Webseiten nachschlagen kannst.';
   @override
   String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+      'Eigene Schriftdateien hinzufügen und festlegen, welche Schrift jede Sprache verwendet.';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      'Wird parallel in Teilstücken gleichzeitig von GitHub, der offiziellen Website und einem Ersatz-Spiegel geladen, jedes Teilstück mit Prüfsumme. Fushi misst die Quellen währenddessen und gibt der aktuell schnellsten mehr Teilstücke – hier gibt es also nichts auszuwählen.';
 }
 
 // Path: <root>
@@ -33180,65 +33179,65 @@ class _StringsEs extends _StringsEn {
   String get anki_connect_port_auto_fix_none =>
       'No se encontró ningún puerto libre en este equipo.';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => 'Obligatorio';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => 'Recomendado';
   @override
-  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_action_badge_optional => 'Opcional';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      'Descarga todo el paquete en segundo plano y luego lo importa. Puedes cancelar cuando quieras; la próxima vez continúa desde donde se detuvo.';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      'El paquete ya está descargado; esto lo importa. Elige «Combinar» en el diálogo de confirmación y tus datos actuales quedarán intactos.';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      '¿Ya conseguiste el zip del paquete por otro lado? Impórtalo desde el disco y sáltate la descarga por completo.';
   @override
   String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+      'Abrir la página de descarga del sitio';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      'Abre el sitio oficial en tu navegador. Su sección de paquete lista enlaces por fragmentos que puedes pasar a un gestor de descargas; vuelve después aquí y usa «Elegir un archivo de paquete local» para importar lo que obtuviste.';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      '¿Aprendes un idioma distinto del japonés? Sáltate el paquete e importa aquí diccionarios de tu propio idioma.';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      'De dónde sale el audio de pronunciación. El paquete ya cubre japonés e inglés; añade aquí fuentes en línea para otros idiomas.';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      'Comprueba que Fushi puede conectarse con Anki y carga tus mazos y tipos de nota. Todavía no se crea nada.';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      'Vuelve a cargar mazos y tipos de nota desde Anki. Úsalo después de crear un mazo nuevo dentro de Anki.';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      'Abre la página de la tienda de AnkiDroid. Fushi escribe ahí sus tarjetas, así que hay que instalarlo primero.';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      'Abre la página de descarga de Anki. Instala Anki y déjalo abierto mientras creas tarjetas.';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      'Descomprime por ti el complemento AnkiConnect incluido dentro de Anki, que es lo que permite a Fushi comunicarse con él. Reinicia Anki después.';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      'Plantilla de tarjeta, asignación de campos, capturas y audio: los detalles de qué aspecto tiene una tarjeta creada. Con el mazo y el tipo de nota de arriba ya puedes empezar, así que abre esto solo si quieres cambiar cómo se construyen las tarjetas.';
   @override
   String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      'Elige un servicio de copia de seguridad e inicia sesión, para que tu biblioteca sobreviva a la pérdida o el cambio de dispositivo.';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      'Empareja este dispositivo con tus otros dispositivos para compartir una misma biblioteca y mantener el progreso sincronizado.';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      'Muestra cómo instalar la extensión de navegador y conectarla con Fushi, para poder buscar palabras también en páginas web.';
   @override
   String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+      'Añade tus propios archivos de fuente y elige cuál usa cada idioma.';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      'Se descarga en fragmentos paralelos desde GitHub, el sitio oficial y un espejo de respaldo a la vez, con suma de verificación en cada fragmento. Fushi mide las fuentes sobre la marcha y da más fragmentos a la que sea más rápida en ese momento, así que aquí no hay nada que elegir.';
 }
 
 // Path: <root>
@@ -42601,65 +42600,65 @@ class _StringsFr extends _StringsEn {
   String get anki_connect_port_auto_fix_none =>
       'Aucun port libre trouvé sur cette machine.';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => 'Requis';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => 'Recommandé';
   @override
-  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_action_badge_optional => 'Facultatif';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      'Télécharge tout le pack en arrière-plan, puis l’importe. Annulable à tout moment ; la reprise repart du point d’arrêt.';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      'Le pack est déjà téléchargé ; ceci l’importe. Choisissez « Fusionner » dans la boîte de confirmation et vos données existantes ne seront pas touchées.';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      'Vous avez déjà récupéré le zip du pack ailleurs ? Importez-le depuis le disque et sautez complètement le téléchargement.';
   @override
   String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+      'Ouvrir la page de téléchargement du site';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      'Ouvre le site officiel dans votre navigateur. Sa section pack liste des liens par morceaux que vous pouvez donner à un gestionnaire de téléchargement ; revenez ensuite ici et utilisez « Choisir un fichier de pack local » pour importer ce que vous avez obtenu.';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      'Vous apprenez une autre langue que le japonais ? Passez le pack et importez ici les dictionnaires de votre langue.';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      'D’où viennent les audios de prononciation. Le pack couvre déjà le japonais et l’anglais ; ajoutez ici des sources en ligne pour les autres langues.';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      'Vérifie que Fushi joint bien Anki et charge vos paquets et types de notes. Rien n’est encore créé.';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      'Recharge les paquets et types de notes depuis Anki. À utiliser après avoir créé un paquet dans Anki.';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      'Ouvre la page du store d’AnkiDroid. Fushi y écrit ses cartes, il doit donc être installé d’abord.';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      'Ouvre la page de téléchargement d’Anki. Installez Anki et laissez-le ouvert pendant la création de cartes.';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      'Décompresse pour vous le module AnkiConnect fourni dans Anki ; c’est lui qui permet à Fushi de lui parler. Redémarrez Anki ensuite.';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      'Modèle de carte, correspondance des champs, captures et audio : les détails de l’apparence d’une carte créée. Le paquet et le type de note ci-dessus suffisent pour commencer, n’ouvrez ceci que si vous voulez changer la façon dont les cartes sont fabriquées.';
   @override
   String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      'Choisissez un service de sauvegarde et connectez-vous, pour que votre bibliothèque survive à la perte ou au remplacement d’un appareil.';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      'Associe cet appareil à vos autres appareils pour partager une même bibliothèque et garder la progression synchronisée.';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      'Montre comment installer l’extension de navigateur et la connecter à Fushi, pour pouvoir aussi chercher des mots sur les pages web.';
   @override
   String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+      'Ajoutez vos propres fichiers de police et choisissez celle utilisée par chaque langue.';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      'Téléchargé en morceaux parallèles depuis GitHub, le site officiel et un miroir de secours à la fois, chaque morceau vérifié par somme de contrôle. Fushi mesure les sources au fil de l’eau et donne plus de morceaux à la plus rapide du moment ; il n’y a donc rien à choisir ici.';
 }
 
 // Path: <root>
@@ -51848,65 +51847,65 @@ class _StringsId extends _StringsEn {
   String get anki_connect_port_auto_fix_none =>
       'Tidak ditemukan port kosong di komputer ini.';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => 'Wajib';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => 'Disarankan';
   @override
-  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_action_badge_optional => 'Opsional';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      'Mengunduh seluruh paket di latar belakang, lalu mengimpornya. Bisa dibatalkan kapan saja; berikutnya dilanjutkan dari titik terakhir.';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      'Paket sudah terunduh; tombol ini mengimpornya. Pilih «Gabungkan» pada dialog konfirmasi agar data yang sudah ada tidak tersentuh.';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      'Sudah punya zip paketnya dari tempat lain? Impor dari disk dan lewati proses unduh sepenuhnya.';
   @override
   String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+      'Buka halaman unduh di situs web';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      'Membuka situs resmi di peramban. Bagian paket di sana memuat tautan per potongan yang bisa diberikan ke pengelola unduhan; setelah itu kembali ke sini dan gunakan «Pilih berkas paket lokal» untuk mengimpor hasilnya.';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      'Sedang belajar bahasa selain Jepang? Lewati paketnya dan impor kamus untuk bahasamu sendiri di sini.';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      'Dari mana audio pelafalan berasal. Paket sudah mencakup bahasa Jepang dan Inggris; untuk bahasa lain tambahkan sumber daring di sini.';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      'Memeriksa apakah Fushi bisa menghubungi Anki dan memuat dek serta jenis catatanmu. Belum ada yang dibuat.';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      'Memuat ulang dek dan jenis catatan dari Anki. Gunakan setelah membuat dek baru di dalam Anki.';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      'Membuka halaman toko AnkiDroid. Fushi menulis kartunya ke sana, jadi harus dipasang lebih dulu.';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      'Membuka halaman unduh Anki. Pasang Anki dan biarkan tetap berjalan selagi kamu membuat kartu.';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      'Mengekstrak add-on AnkiConnect bawaan ke dalam Anki untukmu; itulah yang membuat Fushi bisa berbicara dengannya. Mulai ulang Anki setelahnya.';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      'Templat kartu, pemetaan bidang, tangkapan layar, dan audio: yaitu rincian seperti apa kartu yang dihasilkan. Dek dan jenis catatan di atas sudah cukup untuk mulai, jadi buka ini hanya jika kamu ingin mengubah cara kartu disusun.';
   @override
   String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      'Pilih backend cadangan dan masuk, supaya pustakamu selamat saat perangkat hilang atau diganti.';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      'Memasangkan perangkat ini dengan perangkatmu yang lain untuk berbagi satu pustaka dan menyelaraskan progres.';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      'Menunjukkan cara memasang ekstensi peramban dan menghubungkannya ke Fushi, supaya kamu juga bisa mencari kata di halaman web.';
   @override
   String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+      'Tambahkan berkas fonmu sendiri dan pilih fon yang dipakai tiap bahasa.';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      'Diunduh dalam potongan paralel dari GitHub, situs resmi, dan satu cermin cadangan sekaligus, tiap potongan diperiksa checksum-nya. Fushi mengukur kecepatan sumber sambil berjalan dan memberi lebih banyak potongan ke yang tercepat saat itu, jadi tidak ada yang perlu dipilih di sini.';
 }
 
 // Path: <root>
@@ -61172,65 +61171,65 @@ class _StringsIt extends _StringsEn {
   String get anki_connect_port_auto_fix_none =>
       'Nessuna porta libera trovata su questo computer.';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => 'Obbligatorio';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => 'Consigliato';
   @override
-  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_action_badge_optional => 'Facoltativo';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      'Scarica l’intero pacchetto in background e poi lo importa. Puoi annullare in qualsiasi momento; la volta dopo riprende dal punto in cui si era fermato.';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      'Il pacchetto è già scaricato; qui viene importato. Scegli «Unisci» nella finestra di conferma e i dati esistenti resteranno intatti.';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      'Hai già preso lo zip del pacchetto da un’altra parte? Importalo dal disco e salta del tutto il download.';
   @override
   String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+      'Apri la pagina di download del sito';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      'Apre il sito ufficiale nel browser. La sezione dedicata al pacchetto elenca link a spezzoni che puoi passare a un download manager; poi torna qui e usa «Scegli un file pacchetto locale» per importare quello che hai ottenuto.';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      'Stai studiando una lingua diversa dal giapponese? Salta il pacchetto e importa qui i dizionari della tua lingua.';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      'Da dove arriva l’audio della pronuncia. Il pacchetto copre già giapponese e inglese; per le altre lingue aggiungi qui le sorgenti online.';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      'Verifica che Fushi riesca a raggiungere Anki e carica i tuoi mazzi e tipi di nota. Per ora non viene creato nulla.';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      'Ricarica mazzi e tipi di nota da Anki. Usalo dopo aver creato un nuovo mazzo dentro Anki.';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      'Apre la pagina dello store di AnkiDroid. Fushi ci scrive dentro le sue carte, quindi va installato prima.';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      'Apre la pagina di download di Anki. Installa Anki e tienilo aperto mentre crei le carte.';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      'Estrae per te il componente aggiuntivo AnkiConnect incluso dentro Anki: è ciò che permette a Fushi di parlarci. Al termine riavvia Anki.';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      'Modello di carta, mappatura dei campi, screenshot e audio: i dettagli di come appare una carta creata. Il mazzo e il tipo di nota qui sopra bastano per iniziare, quindi apri questa sezione solo se vuoi cambiare come vengono costruite le carte.';
   @override
   String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      'Scegli un servizio di backup e accedi, così la tua libreria sopravvive alla perdita o alla sostituzione del dispositivo.';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      'Associa questo dispositivo agli altri tuoi dispositivi per condividere un’unica libreria e mantenere sincronizzati i progressi.';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      'Mostra come installare l’estensione del browser e collegarla a Fushi, così puoi cercare le parole anche nelle pagine web.';
   @override
   String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+      'Aggiungi i tuoi file di font e scegli quale usare per ciascuna lingua.';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      'Scaricato in spezzoni paralleli contemporaneamente da GitHub, dal sito ufficiale e da un mirror di riserva, con checksum su ogni spezzone. Fushi misura le sorgenti strada facendo e assegna più spezzoni a quella più veloce in quel momento, quindi qui non c’è nulla da scegliere.';
 }
 
 // Path: <root>
@@ -69931,65 +69930,64 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none => 'このマシンに空いているポートが見つかりませんでした。';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => '必須';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => '推奨';
   @override
-  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_action_badge_optional => '任意';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      'おすすめパック全体をバックグラウンドでダウンロードし、完了後そのままインポートに進みます。いつでも中止でき、次回は中断した位置から再開します。';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      'パックはダウンロード済みです。ここからインポートします。確認ダイアログで「統合」を選べば、既存のデータはそのまま残ります。';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      'すでに別の場所からパックの zip を入手済みですか？ディスクからインポートすれば、ダウンロードはまるごと省けます。';
   @override
-  String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+  String get onboarding_pack_action_website => '公式サイトのダウンロードページを開く';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      'ブラウザで公式サイトを開きます。パックの項に、ダウンロードマネージャーへ渡せる分割リンクが載っています。入手後はここに戻り、「ローカルのパックファイルを選ぶ」からインポートしてください。';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      '日本語以外の言語を学んでいますか？パックは飛ばして、ここで自分の言語の辞書をインポートしてください。';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      '発音音声の取得元です。パックには日本語と英語が含まれています。その他の言語はここでオンラインソースを追加してください。';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      'Fushi が Anki に接続できるか確認し、デッキとノートタイプを読み込みます。この時点では何も作成されません。';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      'デッキとノートタイプを Anki から読み込み直します。Anki 側で新しいデッキを作った後に使ってください。';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      'AnkiDroid のストアページを開きます。Fushi はここにカードを書き込むので、先にインストールが必要です。';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      'Anki のダウンロードページを開きます。Anki をインストールし、カード作成中は起動したままにしてください。';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      '同梱の AnkiConnect アドオンを Anki に展開します。Fushi はこれを通じて Anki と通信します。完了後に Anki を再起動してください。';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      'カードテンプレート、フィールド対応、スクリーンショットと音声——つまり「出来上がるカードの見た目」です。上でデッキとノートタイプを選べばカード作成は始められるので、カードの作られ方を変えたいときだけ開いてください。';
   @override
   String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      'バックアップ先を選んでサインインしておけば、端末を紛失・買い替えてもライブラリは残ります。';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      'この端末を他の端末とペアリングして、同じライブラリを共有し進捗を同期します。';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      'ブラウザ拡張機能のインストール方法と Fushi への接続手順を案内します。ウェブページ上でも辞書を引けるようになります。';
   @override
   String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+      '自分のフォントファイルを追加し、言語ごとにどれを使うか指定します。';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      'GitHub・公式サイト・予備ミラーから同時に分割ダウンロードし、各断片をチェックサムで検証します。ダウンロード中も各ソースの速度を実測し、その時点で最も速いソースに多くの断片を割り当てるため、ここで選ぶ必要はありません。';
 }
 
 // Path: <root>
@@ -78703,65 +78701,64 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none => '이 컴퓨터에서 비어 있는 포트를 찾지 못했습니다.';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => '필수';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => '권장';
   @override
-  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_action_badge_optional => '선택';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      '추천 팩 전체를 백그라운드로 내려받은 뒤 이어서 가져오기를 진행합니다. 언제든 취소할 수 있고, 다음에 중단된 지점부터 이어받습니다.';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      '팩이 이미 내려받아져 있습니다. 여기서 바로 가져옵니다. 확인 창에서 «병합»을 고르면 기존 데이터는 그대로 유지됩니다.';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      '다른 곳에서 이미 팩 zip을 받으셨나요? 디스크에서 가져오면 내려받기를 통째로 건너뛸 수 있습니다.';
   @override
-  String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+  String get onboarding_pack_action_website => '공식 사이트 다운로드 페이지 열기';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      '브라우저에서 공식 사이트를 엽니다. 팩 항목에 다운로드 관리자에 넣을 수 있는 분할 링크가 있습니다. 받은 뒤 여기로 돌아와 «로컬 팩 파일 선택»으로 가져오세요.';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      '일본어 말고 다른 언어를 배우시나요? 팩은 건너뛰고 여기서 해당 언어의 사전을 가져오세요.';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      '발음 오디오의 출처입니다. 팩에는 일본어와 영어가 이미 들어 있습니다. 다른 언어는 여기서 온라인 소스를 추가하세요.';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      'Fushi가 Anki에 연결되는지 확인하고 덱과 노트 유형을 불러옵니다. 이 단계에서는 아무것도 만들지 않습니다.';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      'Anki에서 덱과 노트 유형을 다시 불러옵니다. Anki에서 새 덱을 만든 뒤에 사용하세요.';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      'AnkiDroid 스토어 페이지를 엽니다. Fushi가 여기에 카드를 쓰므로 먼저 설치해야 합니다.';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      'Anki 다운로드 페이지를 엽니다. Anki를 설치하고 카드를 만드는 동안 켜 두세요.';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      '내장된 AnkiConnect 애드온을 Anki에 풀어 넣습니다. Fushi는 이것을 통해 Anki와 통신합니다. 설치 후 Anki를 다시 시작하세요.';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      '카드 템플릿, 필드 매핑, 스크린샷과 오디오 — 즉 «만들어진 카드가 어떻게 생겼는지»입니다. 위에서 덱과 노트 유형만 고르면 카드 만들기를 시작할 수 있으니, 카드가 만들어지는 방식을 바꾸고 싶을 때만 들어오세요.';
   @override
   String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      '백업 백엔드를 고르고 로그인해 두면 기기를 잃어버리거나 바꿔도 라이브러리가 남습니다.';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      '이 기기를 다른 기기와 페어링해 같은 라이브러리를 공유하고 진도를 동기화합니다.';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      '브라우저 확장을 설치하고 Fushi에 연결하는 방법을 안내합니다. 웹페이지에서도 단어를 찾을 수 있게 됩니다.';
   @override
   String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+      '자신의 글꼴 파일을 추가하고 언어마다 어떤 글꼴을 쓸지 지정합니다.';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      'GitHub, 공식 사이트, 예비 미러에서 동시에 조각을 나눠 내려받고 조각마다 체크섬을 확인합니다. 내려받는 동안 각 소스의 속도를 실측해 그 순간 가장 빠른 쪽에 더 많은 조각을 맡기므로, 여기서 고를 것은 없습니다.';
 }
 
 // Path: <root>
@@ -87984,65 +87981,65 @@ class _StringsNl extends _StringsEn {
   String get anki_connect_port_auto_fix_none =>
       'Geen vrije poort gevonden op deze machine.';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => 'Verplicht';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => 'Aanbevolen';
   @override
-  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_action_badge_optional => 'Optioneel';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      'Downloadt het hele pakket op de achtergrond en importeert het daarna. Je kunt altijd annuleren; de volgende keer gaat het verder waar het gebleven was.';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      'Het pakket is al gedownload; hiermee importeer je het. Kies «Samenvoegen» in het bevestigingsvenster, dan blijft je bestaande data ongemoeid.';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      'Heb je de zip van het pakket al ergens anders vandaan? Importeer hem van schijf en sla de download helemaal over.';
   @override
   String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+      'Downloadpagina van de website openen';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      'Opent de officiële site in je browser. In het pakketgedeelte staan losse deel-links die je aan een downloadmanager kunt geven; kom daarna hier terug en gebruik «Kies een lokaal pakketbestand» om te importeren wat je hebt.';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      'Leer je een andere taal dan Japans? Sla het pakket over en importeer hier woordenboeken voor je eigen taal.';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      'Waar de uitspraakaudio vandaan komt. Het pakket dekt Japans en Engels al; voeg hier online bronnen toe voor andere talen.';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      'Controleert of Fushi Anki kan bereiken en laadt je decks en notitietypes. Er wordt nog niets aangemaakt.';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      'Laadt decks en notitietypes opnieuw uit Anki. Gebruik dit nadat je in Anki een nieuw deck hebt gemaakt.';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      'Opent de storepagina van AnkiDroid. Fushi schrijft zijn kaarten daarin, dus het moet eerst geïnstalleerd zijn.';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      'Opent de downloadpagina van Anki. Installeer Anki en laat het draaien terwijl je kaarten maakt.';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      'Pakt de meegeleverde AnkiConnect-add-on voor je uit in Anki; daarmee kan Fushi ermee praten. Start Anki daarna opnieuw op.';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      'Kaartsjabloon, veldtoewijzing, schermafbeeldingen en audio: de details van hoe een gemaakte kaart eruitziet. Het deck en notitietype hierboven zijn genoeg om te beginnen, dus open dit alleen als je wilt veranderen hoe kaarten worden opgebouwd.';
   @override
   String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      'Kies een back-upbackend en meld je aan, zodat je bibliotheek een verloren of vervangen apparaat overleeft.';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      'Koppelt dit apparaat aan je andere apparaten om één bibliotheek te delen en de voortgang gelijk te houden.';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      'Laat zien hoe je de browserextensie installeert en met Fushi verbindt, zodat je ook op webpagina’s woorden kunt opzoeken.';
   @override
   String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+      'Voeg je eigen lettertypebestanden toe en kies welk lettertype elke taal gebruikt.';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      'Wordt in parallelle stukken tegelijk van GitHub, de officiële site en een reservespiegel gehaald, met een checksum per stuk. Fushi meet de bronnen onderweg en geeft meer stukken aan degene die op dat moment het snelst is, dus hier valt niets te kiezen.';
 }
 
 // Path: <root>
@@ -97321,65 +97318,65 @@ class _StringsPtBr extends _StringsEn {
   String get anki_connect_port_auto_fix_none =>
       'Nenhuma porta livre encontrada nesta máquina.';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => 'Obrigatório';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => 'Recomendado';
   @override
-  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_action_badge_optional => 'Opcional';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      'Baixa o pacote inteiro em segundo plano e depois o importa. Dá para cancelar a qualquer momento; da próxima vez ele retoma de onde parou.';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      'O pacote já foi baixado; isto o importa. Escolha «Mesclar» na caixa de confirmação e seus dados atuais ficam intactos.';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      'Já pegou o zip do pacote em outro lugar? Importe do disco e pule o download por completo.';
   @override
   String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+      'Abrir a página de download do site';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      'Abre o site oficial no navegador. A seção do pacote lista links por partes que você pode passar a um gerenciador de downloads; depois volte aqui e use «Escolher um arquivo de pacote local» para importar o que baixou.';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      'Está aprendendo um idioma que não é japonês? Pule o pacote e importe aqui dicionários do seu próprio idioma.';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      'De onde vem o áudio de pronúncia. O pacote já cobre japonês e inglês; adicione aqui fontes on-line para outros idiomas.';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      'Verifica se o Fushi consegue falar com o Anki e carrega seus baralhos e tipos de nota. Nada é criado ainda.';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      'Recarrega baralhos e tipos de nota a partir do Anki. Use depois de criar um baralho novo dentro do Anki.';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      'Abre a página do AnkiDroid na loja. O Fushi grava os cartões nele, então precisa estar instalado antes.';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      'Abre a página de download do Anki. Instale o Anki e deixe-o aberto enquanto cria cartões.';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      'Descompacta para você o complemento AnkiConnect embutido dentro do Anki, que é o que permite ao Fushi conversar com ele. Reinicie o Anki depois.';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      'Modelo de cartão, mapeamento de campos, capturas e áudio: os detalhes de como fica um cartão criado. O baralho e o tipo de nota acima já bastam para começar, então abra isto só se quiser mudar como os cartões são montados.';
   @override
   String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      'Escolha um serviço de backup e entre na conta, para que sua biblioteca sobreviva à perda ou troca de aparelho.';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      'Pareia este aparelho com seus outros aparelhos para compartilhar uma mesma biblioteca e manter o progresso em sincronia.';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      'Mostra como instalar a extensão de navegador e conectá-la ao Fushi, para você também consultar palavras em páginas da web.';
   @override
   String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+      'Adicione seus próprios arquivos de fonte e escolha qual cada idioma usa.';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      'Baixado em partes paralelas do GitHub, do site oficial e de um espelho reserva ao mesmo tempo, com checksum em cada parte. O Fushi mede as fontes durante o processo e dá mais partes para a que estiver mais rápida no momento, então não há nada a escolher aqui.';
 }
 
 // Path: <root>
@@ -106632,65 +106629,65 @@ class _StringsRu extends _StringsEn {
   String get anki_connect_port_auto_fix_none =>
       'На этом компьютере не найдено свободных портов.';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => 'Обязательно';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => 'Рекомендуется';
   @override
-  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_action_badge_optional => 'По желанию';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      'Скачивает весь пакет в фоне, а затем импортирует его. Отменить можно в любой момент; в следующий раз загрузка продолжится с места остановки.';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      'Пакет уже скачан; здесь он импортируется. Выберите «Объединить» в окне подтверждения — существующие данные останутся нетронутыми.';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      'Уже получили zip пакета из другого места? Импортируйте его с диска и полностью пропустите загрузку.';
   @override
   String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+      'Открыть страницу загрузки на сайте';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      'Открывает официальный сайт в браузере. В разделе про пакет есть ссылки на отдельные части, которые можно отдать менеджеру загрузок; затем вернитесь сюда и импортируйте полученное через «Выбрать локальный файл пакета».';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      'Учите не японский, а другой язык? Пропустите пакет и импортируйте здесь словари для своего языка.';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      'Откуда берётся аудио произношения. Японский и английский пакет уже покрывает; для других языков добавьте здесь онлайн-источники.';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      'Проверяет, что Fushi может связаться с Anki, и загружает ваши колоды и типы заметок. Пока ничего не создаётся.';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      'Заново загружает колоды и типы заметок из Anki. Используйте после создания новой колоды в Anki.';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      'Открывает страницу AnkiDroid в магазине. Fushi записывает карточки именно туда, поэтому его нужно установить первым.';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      'Открывает страницу загрузки Anki. Установите Anki и держите его запущенным, пока создаёте карточки.';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      'Распаковывает встроенное дополнение AnkiConnect в Anki — именно через него Fushi общается с Anki. После этого перезапустите Anki.';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      'Шаблон карточки, сопоставление полей, скриншоты и аудио — то, как выглядит созданная карточка. Колоды и типа заметки выше уже достаточно, чтобы начать, так что заходите сюда только если хотите изменить, как собираются карточки.';
   @override
   String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      'Выберите хранилище для резервных копий и войдите в него, чтобы библиотека пережила потерю или замену устройства.';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      'Связывает это устройство с вашими другими устройствами: одна общая библиотека и синхронный прогресс.';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      'Показывает, как установить расширение для браузера и подключить его к Fushi, чтобы искать слова и на веб-страницах.';
   @override
   String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+      'Добавьте свои файлы шрифтов и выберите, какой из них использует каждый язык.';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      'Скачивается параллельными частями одновременно с GitHub, официального сайта и резервного зеркала, каждая часть проверяется контрольной суммой. Fushi по ходу измеряет источники и отдаёт больше частей тому, кто быстрее прямо сейчас, поэтому выбирать здесь нечего.';
 }
 
 // Path: <root>
@@ -115758,65 +115755,64 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none => 'ไม่พบพอร์ตที่ว่างบนเครื่องนี้';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => 'จำเป็น';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => 'แนะนำ';
   @override
-  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_action_badge_optional => 'ไม่บังคับ';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      'ดาวน์โหลดแพ็กทั้งชุดในเบื้องหลัง แล้วนำเข้าให้ต่อ ยกเลิกได้ทุกเมื่อ ครั้งถัดไปจะดาวน์โหลดต่อจากจุดที่หยุดไว้';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      'แพ็กดาวน์โหลดไว้แล้ว ปุ่มนี้คือการนำเข้า เลือก «รวมเข้ากับคลังเดิม» ในกล่องยืนยัน แล้วข้อมูลเดิมของคุณจะไม่ถูกแตะต้อง';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      'ได้ไฟล์ zip ของแพ็กมาจากที่อื่นแล้วหรือ? นำเข้าจากดิสก์ได้เลย ข้ามการดาวน์โหลดทั้งหมด';
   @override
-  String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+  String get onboarding_pack_action_website => 'เปิดหน้าดาวน์โหลดบนเว็บไซต์';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      'เปิดเว็บไซต์ทางการในเบราว์เซอร์ ในหัวข้อแพ็กจะมีลิงก์แบบแบ่งส่วนที่ป้อนให้โปรแกรมช่วยดาวน์โหลดได้ เมื่อโหลดเสร็จให้กลับมาที่นี่แล้วใช้ «เลือกไฟล์แพ็กในเครื่อง» เพื่อนำเข้า';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      'กำลังเรียนภาษาอื่นที่ไม่ใช่ญี่ปุ่นใช่ไหม? ข้ามแพ็กไป แล้วนำเข้าพจนานุกรมของภาษาคุณที่นี่แทน';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      'เสียงอ่านออกเสียงมาจากไหน แพ็กครอบคลุมภาษาญี่ปุ่นและอังกฤษอยู่แล้ว ภาษาอื่นให้เพิ่มแหล่งออนไลน์ที่นี่';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      'ตรวจสอบว่า Fushi ติดต่อ Anki ได้ และโหลดสำรับกับชนิดโน้ตของคุณเข้ามา ขั้นนี้ยังไม่สร้างอะไรทั้งสิ้น';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      'โหลดสำรับและชนิดโน้ตจาก Anki ใหม่ ใช้หลังจากสร้างสำรับใหม่ใน Anki';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      'เปิดหน้าร้านค้าของ AnkiDroid เนื่องจาก Fushi เขียนการ์ดลงในนั้น จึงต้องติดตั้งก่อน';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      'เปิดหน้าดาวน์โหลด Anki ติดตั้ง Anki แล้วเปิดค้างไว้ระหว่างสร้างการ์ด';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      'แตกส่วนเสริม AnkiConnect ที่มาพร้อมโปรแกรมเข้าไปใน Anki ให้คุณ ซึ่งเป็นสิ่งที่ทำให้ Fushi คุยกับ Anki ได้ เสร็จแล้วให้รีสตาร์ท Anki';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      'เทมเพลตการ์ด การจับคู่ฟิลด์ ภาพหน้าจอ และเสียง — ก็คือรายละเอียดว่าการ์ดที่สร้างออกมาหน้าตาเป็นอย่างไร แค่เลือกสำรับกับชนิดโน้ตด้านบนก็เริ่มสร้างการ์ดได้แล้ว จึงเปิดตรงนี้เฉพาะเมื่อต้องการเปลี่ยนวิธีประกอบการ์ด';
   @override
   String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      'เลือกปลายทางสำรองข้อมูลแล้วลงชื่อเข้าใช้ เพื่อให้คลังของคุณอยู่รอดเมื่อทำอุปกรณ์หายหรือเปลี่ยนเครื่อง';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      'จับคู่อุปกรณ์นี้กับอุปกรณ์อื่นของคุณ เพื่อใช้คลังเดียวกันและซิงก์ความคืบหน้า';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      'แสดงวิธีติดตั้งส่วนขยายเบราว์เซอร์และเชื่อมกับ Fushi เพื่อให้เปิดหาคำศัพท์บนหน้าเว็บได้ด้วย';
   @override
   String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+      'เพิ่มไฟล์ฟอนต์ของคุณเอง แล้วเลือกว่าภาษาไหนใช้ฟอนต์ใด';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      'ดาวน์โหลดแบบแบ่งส่วนขนานกันจาก GitHub เว็บไซต์ทางการ และมิเรอร์สำรองพร้อมกัน โดยตรวจสอบค่าแฮชทุกส่วน ระหว่างดาวน์โหลด Fushi จะวัดความเร็วของแต่ละแหล่งจริง แล้วแบ่งส่วนให้แหล่งที่เร็วที่สุดในขณะนั้นมากขึ้น จึงไม่มีอะไรให้เลือกตรงนี้';
 }
 
 // Path: <root>
@@ -124991,65 +124987,64 @@ class _StringsTr extends _StringsEn {
   String get anki_connect_port_auto_fix_none =>
       'Bu makinede boş bağlantı noktası bulunamadı.';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => 'Zorunlu';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => 'Önerilir';
   @override
-  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_action_badge_optional => 'İsteğe bağlı';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      'Paketin tamamını arka planda indirir, ardından içe aktarır. İstediğin an iptal edebilirsin; bir dahaki sefere kaldığı yerden devam eder.';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      'Paket zaten indirilmiş durumda; bu onu içe aktarır. Onay penceresinde «Birleştir» seçersen mevcut verilerine dokunulmaz.';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      'Paketin zip dosyasını başka bir yerden aldın mı? Diskten içe aktar, indirmeyi tamamen atla.';
   @override
-  String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+  String get onboarding_pack_action_website => 'Sitedeki indirme sayfasını aç';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      'Resmî siteyi tarayıcında açar. Paket bölümünde bir indirme yöneticisine verebileceğin parça bağlantıları var; sonra buraya dönüp «Yerel paket dosyası seç» ile indirdiğini içe aktar.';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      'Japonca dışında bir dil mi öğreniyorsun? Paketi atla ve burada kendi dilinin sözlüklerini içe aktar.';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      'Telaffuz seslerinin nereden geldiği. Paket Japonca ve İngilizceyi zaten kapsıyor; diğer diller için buradan çevrimiçi kaynak ekle.';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      'Fushi’nin Anki’ye ulaşıp ulaşamadığını denetler ve destelerinle not türlerini yükler. Henüz hiçbir şey oluşturulmaz.';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      'Desteleri ve not türlerini Anki’den yeniden yükler. Anki içinde yeni bir deste oluşturduktan sonra kullan.';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      'AnkiDroid’in mağaza sayfasını açar. Fushi kartlarını onun içine yazdığı için önce kurulu olması gerekir.';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      'Anki’nin indirme sayfasını açar. Anki’yi kur ve kart üretirken açık bırak.';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      'Birlikte gelen AnkiConnect eklentisini senin için Anki’ye açar; Fushi onunla konuşmasını buna borçlu. Sonrasında Anki’yi yeniden başlat.';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      'Kart şablonu, alan eşlemesi, ekran görüntüleri ve ses: yani üretilen kartın nasıl göründüğünün ayrıntıları. Yukarıdaki deste ve not türü başlamak için yeterli, bu yüzden buraya yalnızca kartların nasıl kurulduğunu değiştirmek istiyorsan gir.';
   @override
   String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      'Bir yedekleme arka ucu seç ve oturum aç ki kitaplığın cihaz kaybını veya değişimini atlatsın.';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      'Bu cihazı diğer cihazlarınla eşler; tek bir kitaplığı paylaşır ve ilerlemeyi eşitler.';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      'Tarayıcı uzantısını nasıl kurup Fushi’ye bağlayacağını gösterir; böylece web sayfalarında da kelime arayabilirsin.';
   @override
   String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+      'Kendi yazı tipi dosyalarını ekle ve her dilin hangisini kullanacağını seç.';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      'Aynı anda GitHub’dan, resmî siteden ve bir yedek aynadan paralel parçalar hâlinde indirilir; her parça sağlama toplamıyla doğrulanır. Fushi kaynakları yol boyunca ölçer ve o an en hızlı olana daha çok parça verir, bu yüzden burada seçilecek bir şey yok.';
 }
 
 // Path: <root>
@@ -134204,65 +134199,64 @@ class _StringsVi extends _StringsEn {
   String get anki_connect_port_auto_fix_none =>
       'Không tìm thấy cổng nào còn trống trên máy này.';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => 'Bắt buộc';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => 'Nên làm';
   @override
-  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_action_badge_optional => 'Tuỳ chọn';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      'Tải toàn bộ gói ở chế độ nền rồi nhập vào. Có thể huỷ bất cứ lúc nào; lần sau sẽ tải tiếp từ chỗ đã dừng.';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      'Gói đã tải xong; thao tác này nhập nó vào. Chọn «Gộp» trong hộp xác nhận thì dữ liệu hiện có của bạn sẽ được giữ nguyên.';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      'Đã lấy được tệp zip của gói từ nơi khác? Nhập từ ổ đĩa và bỏ qua hoàn toàn phần tải về.';
   @override
-  String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+  String get onboarding_pack_action_website => 'Mở trang tải về trên website';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      'Mở trang chính thức trong trình duyệt. Mục về gói ở đó liệt kê các liên kết theo từng phần để bạn đưa cho trình quản lý tải; xong rồi quay lại đây và dùng «Chọn tệp gói trên máy» để nhập.';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      'Bạn học ngôn ngữ khác ngoài tiếng Nhật? Bỏ qua gói và nhập từ điển cho ngôn ngữ của bạn ở đây.';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      'Âm thanh phát âm lấy từ đâu. Gói đã bao gồm tiếng Nhật và tiếng Anh; các ngôn ngữ khác thì thêm nguồn trực tuyến ở đây.';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      'Kiểm tra xem Fushi có kết nối được với Anki không và nạp các bộ thẻ cùng loại ghi chú của bạn. Chưa tạo ra thứ gì cả.';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      'Nạp lại bộ thẻ và loại ghi chú từ Anki. Dùng sau khi bạn tạo bộ thẻ mới trong Anki.';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      'Mở trang cửa hàng của AnkiDroid. Fushi ghi thẻ vào đó nên phải cài nó trước.';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      'Mở trang tải Anki. Cài Anki và để nó chạy trong lúc bạn tạo thẻ.';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      'Giải nén tiện ích AnkiConnect đi kèm vào Anki giúp bạn — đó chính là thứ cho phép Fushi nói chuyện với Anki. Xong rồi khởi động lại Anki.';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      'Mẫu thẻ, ánh xạ trường, ảnh chụp màn hình và âm thanh: tức là chi tiết về hình hài của tấm thẻ được tạo ra. Bộ thẻ và loại ghi chú ở trên là đủ để bắt đầu, nên chỉ mở phần này khi bạn muốn đổi cách dựng thẻ.';
   @override
   String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      'Chọn nơi sao lưu và đăng nhập, để thư viện của bạn sống sót khi mất máy hoặc đổi máy.';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      'Ghép nối thiết bị này với các thiết bị khác của bạn để dùng chung một thư viện và đồng bộ tiến độ.';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      'Hướng dẫn cách cài tiện ích trình duyệt và kết nối nó với Fushi, để bạn tra từ ngay trên trang web.';
   @override
   String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+      'Thêm tệp phông chữ của riêng bạn và chọn phông cho từng ngôn ngữ.';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      'Được tải song song theo từng phần, đồng thời từ GitHub, trang chính thức và một máy chủ gương dự phòng, mỗi phần đều được kiểm tra checksum. Fushi đo tốc độ các nguồn ngay trong lúc tải và giao nhiều phần hơn cho nguồn đang nhanh nhất, nên ở đây không có gì để chọn.';
 }
 
 // Path: <root>
@@ -151168,65 +151162,62 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none => '本機找不到空閒的連接埠。';
   @override
-  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_required => '必做';
   @override
-  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_recommended => '推薦';
   @override
-  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_action_badge_optional => '可選';
   @override
   String get onboarding_pack_action_download_desc =>
-      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      '在後台下載整個推薦包，下完自動進入匯入。隨時可以取消，下次從斷點續傳。';
   @override
   String get onboarding_pack_action_import_existing_desc =>
-      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      '包已經下好了，這裏直接匯入。確認框裏選「合併到現有庫」不會動你已有的資料。';
   @override
   String get onboarding_pack_action_pick_desc =>
-      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      '已經從別處拿到包的 zip？從硬碟匯入，整段下載都可以跳過。';
   @override
-  String get onboarding_pack_action_website =>
-      'Open the download page on the website';
+  String get onboarding_pack_action_website => '在官網下載頁打開';
   @override
   String get onboarding_pack_action_website_desc =>
-      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      '在瀏覽器打開官網。那裏的推薦包一節給出可以餵給下載工具的分片直連；下完回到這裏，用「選擇本機包檔案」匯入。';
   @override
   String get onboarding_pack_action_dictionary_desc =>
-      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      '學日語以外的語言？跳過推薦包，在這裏按語言匯入詞典。';
   @override
   String get onboarding_pack_action_audio_desc =>
-      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      '發音音訊從哪裏來。推薦包已經含日語和英語；其它語言在這裏加線上來源。';
   @override
   String get onboarding_anki_action_test_desc =>
-      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      '檢查 Fushi 能不能連上 Anki，並把你的牌組和筆記類型拉過來。這一步不會建立任何東西。';
   @override
   String get onboarding_anki_action_refresh_desc =>
-      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      '重新從 Anki 拉牌組和筆記類型。在 Anki 裏新建了牌組之後點它。';
   @override
   String get onboarding_anki_action_get_ankidroid_desc =>
-      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      '打開 AnkiDroid 的商店頁。Fushi 的卡片寫進它裏面，得先裝上。';
   @override
   String get onboarding_anki_action_get_anki_desc =>
-      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      '打開 Anki 的下載頁。裝好 Anki，製卡時讓它開着。';
   @override
   String get onboarding_anki_action_install_addon_desc =>
-      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      '把內建的 AnkiConnect 外掛解壓進 Anki——Fushi 靠它和 Anki 通話。裝完重啟 Anki。';
   @override
   String get onboarding_step_anki_action_desc =>
-      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      '卡片範本、欄位對應、截圖和音訊——也就是「做出來的卡長甚麼樣」。上面選好牌組和筆記類型就能開始製卡了，想改卡片怎麼做才需要進來。';
   @override
-  String get onboarding_step_backup_action_desc =>
-      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+  String get onboarding_step_backup_action_desc => '選備份後端並登入，換機器或丟裝置時庫還在。';
   @override
   String get onboarding_step_interconnect_action_desc =>
-      'Pair this device with your other devices to share one library and keep progress in sync.';
+      '把這台裝置和你的其它裝置配對，共用同一個庫並同步進度。';
   @override
   String get onboarding_step_extension_action_desc =>
-      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      '告訴你怎麼裝瀏覽器擴充功能並連上 Fushi，之後在網頁上也能查詞。';
   @override
-  String get onboarding_step_fonts_action_desc =>
-      'Add your own font files and pick which one each language uses.';
+  String get onboarding_step_fonts_action_desc => '匯入自己的字型檔案，並給每種語言指定用哪個。';
   @override
   String get onboarding_pack_sources_hint =>
-      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      '同時從 GitHub、官網和備用鏡像分片並發下載，每片都校驗。下載過程中會實測各來源速度，哪家快就多分給哪家，所以這裏不用你選。';
 }
 
 /// Flat map(s) containing all translations.
@@ -167320,47 +167311,47 @@ extension on _StringsAr {
       case 'anki_connect_port_auto_fix_none':
         return 'لم يُعثر على أي منفذ حر على هذا الجهاز.';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return 'مطلوب';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return 'موصى به';
       case 'onboarding_action_badge_optional':
-        return 'Optional';
+        return 'اختياري';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return 'ينزّل الحزمة كاملة في الخلفية ثم يستوردها. يمكنك الإلغاء في أي وقت، وسيُستأنف التنزيل من حيث توقّف.';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return 'الحزمة منزَّلة بالفعل، وهذا يستوردها. اختر «دمج» في نافذة التأكيد لتبقى بياناتك الحالية كما هي.';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return 'حصلت على ملف zip للحزمة من مكان آخر؟ استوردها من القرص وتخطَّ التنزيل بالكامل.';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return 'فتح صفحة التنزيل في الموقع';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return 'يفتح الموقع الرسمي في متصفحك. يوفّر قسم الحزمة روابط أجزاء يمكن تمريرها إلى مدير تنزيل، ثم عد إلى هنا واستخدم «اختيار ملف حزمة محلي» لاستيراد ما حصلت عليه.';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return 'تتعلّم لغة غير اليابانية؟ تخطَّ الحزمة واستورد هنا قواميس لغتك.';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return 'مصدر مقاطع النطق الصوتية. الحزمة تغطّي اليابانية والإنجليزية بالفعل؛ أضف هنا مصادر عبر الإنترنت للغات الأخرى.';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return 'يتحقّق من قدرة Fushi على الاتصال بـ Anki ويحمّل مجموعاتك وأنواع الملاحظات. لا يُنشأ أي شيء بعد.';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return 'يعيد تحميل المجموعات وأنواع الملاحظات من Anki. استخدمه بعد إنشاء مجموعة جديدة داخل Anki.';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return 'يفتح صفحة AnkiDroid في المتجر. يكتب Fushi بطاقاته داخله، لذا يجب تثبيته أولاً.';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return 'يفتح صفحة تنزيل Anki. ثبّت Anki وأبقِه مفتوحًا أثناء إنشاء البطاقات.';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return 'يفكّ ضغط إضافة AnkiConnect المرفقة داخل Anki، وهي ما يتيح لـ Fushi التخاطب معه. أعد تشغيل Anki بعد ذلك.';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return 'قالب البطاقة وربط الحقول ولقطات الشاشة والصوت: أي تفاصيل شكل البطاقة الناتجة. تكفي المجموعة ونوع الملاحظة أعلاه للبدء، فلا تفتح هذا إلا إذا أردت تغيير طريقة بناء البطاقات.';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return 'اختر خدمة نسخ احتياطي وسجّل الدخول، لتبقى مكتبتك سليمة عند فقدان الجهاز أو استبداله.';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return 'يقرن هذا الجهاز بأجهزتك الأخرى لمشاركة مكتبة واحدة وإبقاء التقدّم متزامنًا.';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return 'يوضّح كيفية تثبيت إضافة المتصفح وربطها بـ Fushi، لتتمكّن من البحث عن الكلمات في صفحات الويب أيضًا.';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return 'أضف ملفات خطوطك الخاصة واختر الخط الذي تستخدمه كل لغة.';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return 'يُنزَّل على أجزاء متوازية من GitHub والموقع الرسمي ومرآة احتياطية في آنٍ واحد، مع التحقّق من كل جزء. يقيس Fushi سرعة المصادر أثناء العمل ويمنح الأسرع في تلك اللحظة عددًا أكبر من الأجزاء، فلا شيء تختاره هنا.';
       default:
         return null;
     }
@@ -175428,47 +175419,47 @@ extension on _StringsDe {
       case 'anki_connect_port_auto_fix_none':
         return 'Auf diesem Rechner wurde kein freier Port gefunden.';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return 'Erforderlich';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return 'Empfohlen';
       case 'onboarding_action_badge_optional':
         return 'Optional';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return 'Lädt das gesamte Paket im Hintergrund herunter und importiert es anschließend. Jederzeit abbrechbar; der Download wird an der Abbruchstelle fortgesetzt.';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return 'Das Paket ist bereits heruntergeladen; hier wird es importiert. Wähle im Bestätigungsdialog „Zusammenführen“, dann bleiben deine vorhandenen Daten unangetastet.';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return 'Du hast das Paket-ZIP bereits anderweitig bekommen? Importiere es von der Festplatte und überspringe den Download komplett.';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return 'Download-Seite der Website öffnen';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return 'Öffnet die offizielle Website im Browser. Im Paket-Abschnitt findest du Teil-Links, die du einem Downloadmanager übergeben kannst; komm danach hierher zurück und importiere das Ergebnis über „Lokale Paketdatei wählen“.';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return 'Du lernst eine andere Sprache als Japanisch? Überspring das Paket und importiere hier stattdessen Wörterbücher für deine Sprache.';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return 'Woher die Aussprache-Audios kommen. Japanisch und Englisch deckt das Paket bereits ab; für andere Sprachen fügst du hier Online-Quellen hinzu.';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return 'Prüft, ob Fushi Anki erreicht, und lädt deine Stapel und Notiztypen. Es wird noch nichts angelegt.';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return 'Lädt Stapel und Notiztypen erneut aus Anki. Nutze das, nachdem du in Anki einen neuen Stapel angelegt hast.';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return 'Öffnet die Store-Seite von AnkiDroid. Fushi schreibt seine Karten dorthin, es muss also zuerst installiert sein.';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return 'Öffnet die Download-Seite von Anki. Installiere Anki und lass es beim Kartenerstellen laufen.';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return 'Entpackt das mitgelieferte AnkiConnect-Add-on für dich nach Anki – darüber spricht Fushi mit Anki. Starte Anki danach neu.';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return 'Kartenvorlage, Feldzuordnung, Screenshots und Audio: die Details dazu, wie eine erzeugte Karte aussieht. Stapel und Notiztyp oben genügen zum Loslegen – öffne das hier nur, wenn du ändern willst, wie Karten gebaut werden.';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return 'Wähle ein Backup-Backend und melde dich an, damit deine Bibliothek einen Geräteverlust oder -wechsel übersteht.';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return 'Koppelt dieses Gerät mit deinen anderen Geräten, um eine Bibliothek zu teilen und den Fortschritt synchron zu halten.';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return 'Zeigt, wie du die Browser-Erweiterung installierst und mit Fushi verbindest, damit du auch auf Webseiten nachschlagen kannst.';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return 'Eigene Schriftdateien hinzufügen und festlegen, welche Schrift jede Sprache verwendet.';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return 'Wird parallel in Teilstücken gleichzeitig von GitHub, der offiziellen Website und einem Ersatz-Spiegel geladen, jedes Teilstück mit Prüfsumme. Fushi misst die Quellen währenddessen und gibt der aktuell schnellsten mehr Teilstücke – hier gibt es also nichts auszuwählen.';
       default:
         return null;
     }
@@ -183528,47 +183519,47 @@ extension on _StringsEs {
       case 'anki_connect_port_auto_fix_none':
         return 'No se encontró ningún puerto libre en este equipo.';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return 'Obligatorio';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return 'Recomendado';
       case 'onboarding_action_badge_optional':
-        return 'Optional';
+        return 'Opcional';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return 'Descarga todo el paquete en segundo plano y luego lo importa. Puedes cancelar cuando quieras; la próxima vez continúa desde donde se detuvo.';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return 'El paquete ya está descargado; esto lo importa. Elige «Combinar» en el diálogo de confirmación y tus datos actuales quedarán intactos.';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return '¿Ya conseguiste el zip del paquete por otro lado? Impórtalo desde el disco y sáltate la descarga por completo.';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return 'Abrir la página de descarga del sitio';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return 'Abre el sitio oficial en tu navegador. Su sección de paquete lista enlaces por fragmentos que puedes pasar a un gestor de descargas; vuelve después aquí y usa «Elegir un archivo de paquete local» para importar lo que obtuviste.';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return '¿Aprendes un idioma distinto del japonés? Sáltate el paquete e importa aquí diccionarios de tu propio idioma.';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return 'De dónde sale el audio de pronunciación. El paquete ya cubre japonés e inglés; añade aquí fuentes en línea para otros idiomas.';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return 'Comprueba que Fushi puede conectarse con Anki y carga tus mazos y tipos de nota. Todavía no se crea nada.';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return 'Vuelve a cargar mazos y tipos de nota desde Anki. Úsalo después de crear un mazo nuevo dentro de Anki.';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return 'Abre la página de la tienda de AnkiDroid. Fushi escribe ahí sus tarjetas, así que hay que instalarlo primero.';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return 'Abre la página de descarga de Anki. Instala Anki y déjalo abierto mientras creas tarjetas.';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return 'Descomprime por ti el complemento AnkiConnect incluido dentro de Anki, que es lo que permite a Fushi comunicarse con él. Reinicia Anki después.';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return 'Plantilla de tarjeta, asignación de campos, capturas y audio: los detalles de qué aspecto tiene una tarjeta creada. Con el mazo y el tipo de nota de arriba ya puedes empezar, así que abre esto solo si quieres cambiar cómo se construyen las tarjetas.';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return 'Elige un servicio de copia de seguridad e inicia sesión, para que tu biblioteca sobreviva a la pérdida o el cambio de dispositivo.';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return 'Empareja este dispositivo con tus otros dispositivos para compartir una misma biblioteca y mantener el progreso sincronizado.';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return 'Muestra cómo instalar la extensión de navegador y conectarla con Fushi, para poder buscar palabras también en páginas web.';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return 'Añade tus propios archivos de fuente y elige cuál usa cada idioma.';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return 'Se descarga en fragmentos paralelos desde GitHub, el sitio oficial y un espejo de respaldo a la vez, con suma de verificación en cada fragmento. Fushi mide las fuentes sobre la marcha y da más fragmentos a la que sea más rápida en ese momento, así que aquí no hay nada que elegir.';
       default:
         return null;
     }
@@ -191636,47 +191627,47 @@ extension on _StringsFr {
       case 'anki_connect_port_auto_fix_none':
         return 'Aucun port libre trouvé sur cette machine.';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return 'Requis';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return 'Recommandé';
       case 'onboarding_action_badge_optional':
-        return 'Optional';
+        return 'Facultatif';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return 'Télécharge tout le pack en arrière-plan, puis l’importe. Annulable à tout moment ; la reprise repart du point d’arrêt.';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return 'Le pack est déjà téléchargé ; ceci l’importe. Choisissez « Fusionner » dans la boîte de confirmation et vos données existantes ne seront pas touchées.';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return 'Vous avez déjà récupéré le zip du pack ailleurs ? Importez-le depuis le disque et sautez complètement le téléchargement.';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return 'Ouvrir la page de téléchargement du site';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return 'Ouvre le site officiel dans votre navigateur. Sa section pack liste des liens par morceaux que vous pouvez donner à un gestionnaire de téléchargement ; revenez ensuite ici et utilisez « Choisir un fichier de pack local » pour importer ce que vous avez obtenu.';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return 'Vous apprenez une autre langue que le japonais ? Passez le pack et importez ici les dictionnaires de votre langue.';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return 'D’où viennent les audios de prononciation. Le pack couvre déjà le japonais et l’anglais ; ajoutez ici des sources en ligne pour les autres langues.';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return 'Vérifie que Fushi joint bien Anki et charge vos paquets et types de notes. Rien n’est encore créé.';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return 'Recharge les paquets et types de notes depuis Anki. À utiliser après avoir créé un paquet dans Anki.';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return 'Ouvre la page du store d’AnkiDroid. Fushi y écrit ses cartes, il doit donc être installé d’abord.';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return 'Ouvre la page de téléchargement d’Anki. Installez Anki et laissez-le ouvert pendant la création de cartes.';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return 'Décompresse pour vous le module AnkiConnect fourni dans Anki ; c’est lui qui permet à Fushi de lui parler. Redémarrez Anki ensuite.';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return 'Modèle de carte, correspondance des champs, captures et audio : les détails de l’apparence d’une carte créée. Le paquet et le type de note ci-dessus suffisent pour commencer, n’ouvrez ceci que si vous voulez changer la façon dont les cartes sont fabriquées.';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return 'Choisissez un service de sauvegarde et connectez-vous, pour que votre bibliothèque survive à la perte ou au remplacement d’un appareil.';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return 'Associe cet appareil à vos autres appareils pour partager une même bibliothèque et garder la progression synchronisée.';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return 'Montre comment installer l’extension de navigateur et la connecter à Fushi, pour pouvoir aussi chercher des mots sur les pages web.';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return 'Ajoutez vos propres fichiers de police et choisissez celle utilisée par chaque langue.';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return 'Téléchargé en morceaux parallèles depuis GitHub, le site officiel et un miroir de secours à la fois, chaque morceau vérifié par somme de contrôle. Fushi mesure les sources au fil de l’eau et donne plus de morceaux à la plus rapide du moment ; il n’y a donc rien à choisir ici.';
       default:
         return null;
     }
@@ -199716,47 +199707,47 @@ extension on _StringsId {
       case 'anki_connect_port_auto_fix_none':
         return 'Tidak ditemukan port kosong di komputer ini.';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return 'Wajib';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return 'Disarankan';
       case 'onboarding_action_badge_optional':
-        return 'Optional';
+        return 'Opsional';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return 'Mengunduh seluruh paket di latar belakang, lalu mengimpornya. Bisa dibatalkan kapan saja; berikutnya dilanjutkan dari titik terakhir.';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return 'Paket sudah terunduh; tombol ini mengimpornya. Pilih «Gabungkan» pada dialog konfirmasi agar data yang sudah ada tidak tersentuh.';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return 'Sudah punya zip paketnya dari tempat lain? Impor dari disk dan lewati proses unduh sepenuhnya.';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return 'Buka halaman unduh di situs web';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return 'Membuka situs resmi di peramban. Bagian paket di sana memuat tautan per potongan yang bisa diberikan ke pengelola unduhan; setelah itu kembali ke sini dan gunakan «Pilih berkas paket lokal» untuk mengimpor hasilnya.';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return 'Sedang belajar bahasa selain Jepang? Lewati paketnya dan impor kamus untuk bahasamu sendiri di sini.';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return 'Dari mana audio pelafalan berasal. Paket sudah mencakup bahasa Jepang dan Inggris; untuk bahasa lain tambahkan sumber daring di sini.';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return 'Memeriksa apakah Fushi bisa menghubungi Anki dan memuat dek serta jenis catatanmu. Belum ada yang dibuat.';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return 'Memuat ulang dek dan jenis catatan dari Anki. Gunakan setelah membuat dek baru di dalam Anki.';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return 'Membuka halaman toko AnkiDroid. Fushi menulis kartunya ke sana, jadi harus dipasang lebih dulu.';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return 'Membuka halaman unduh Anki. Pasang Anki dan biarkan tetap berjalan selagi kamu membuat kartu.';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return 'Mengekstrak add-on AnkiConnect bawaan ke dalam Anki untukmu; itulah yang membuat Fushi bisa berbicara dengannya. Mulai ulang Anki setelahnya.';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return 'Templat kartu, pemetaan bidang, tangkapan layar, dan audio: yaitu rincian seperti apa kartu yang dihasilkan. Dek dan jenis catatan di atas sudah cukup untuk mulai, jadi buka ini hanya jika kamu ingin mengubah cara kartu disusun.';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return 'Pilih backend cadangan dan masuk, supaya pustakamu selamat saat perangkat hilang atau diganti.';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return 'Memasangkan perangkat ini dengan perangkatmu yang lain untuk berbagi satu pustaka dan menyelaraskan progres.';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return 'Menunjukkan cara memasang ekstensi peramban dan menghubungkannya ke Fushi, supaya kamu juga bisa mencari kata di halaman web.';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return 'Tambahkan berkas fonmu sendiri dan pilih fon yang dipakai tiap bahasa.';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return 'Diunduh dalam potongan paralel dari GitHub, situs resmi, dan satu cermin cadangan sekaligus, tiap potongan diperiksa checksum-nya. Fushi mengukur kecepatan sumber sambil berjalan dan memberi lebih banyak potongan ke yang tercepat saat itu, jadi tidak ada yang perlu dipilih di sini.';
       default:
         return null;
     }
@@ -207817,47 +207808,47 @@ extension on _StringsIt {
       case 'anki_connect_port_auto_fix_none':
         return 'Nessuna porta libera trovata su questo computer.';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return 'Obbligatorio';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return 'Consigliato';
       case 'onboarding_action_badge_optional':
-        return 'Optional';
+        return 'Facoltativo';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return 'Scarica l’intero pacchetto in background e poi lo importa. Puoi annullare in qualsiasi momento; la volta dopo riprende dal punto in cui si era fermato.';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return 'Il pacchetto è già scaricato; qui viene importato. Scegli «Unisci» nella finestra di conferma e i dati esistenti resteranno intatti.';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return 'Hai già preso lo zip del pacchetto da un’altra parte? Importalo dal disco e salta del tutto il download.';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return 'Apri la pagina di download del sito';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return 'Apre il sito ufficiale nel browser. La sezione dedicata al pacchetto elenca link a spezzoni che puoi passare a un download manager; poi torna qui e usa «Scegli un file pacchetto locale» per importare quello che hai ottenuto.';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return 'Stai studiando una lingua diversa dal giapponese? Salta il pacchetto e importa qui i dizionari della tua lingua.';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return 'Da dove arriva l’audio della pronuncia. Il pacchetto copre già giapponese e inglese; per le altre lingue aggiungi qui le sorgenti online.';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return 'Verifica che Fushi riesca a raggiungere Anki e carica i tuoi mazzi e tipi di nota. Per ora non viene creato nulla.';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return 'Ricarica mazzi e tipi di nota da Anki. Usalo dopo aver creato un nuovo mazzo dentro Anki.';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return 'Apre la pagina dello store di AnkiDroid. Fushi ci scrive dentro le sue carte, quindi va installato prima.';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return 'Apre la pagina di download di Anki. Installa Anki e tienilo aperto mentre crei le carte.';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return 'Estrae per te il componente aggiuntivo AnkiConnect incluso dentro Anki: è ciò che permette a Fushi di parlarci. Al termine riavvia Anki.';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return 'Modello di carta, mappatura dei campi, screenshot e audio: i dettagli di come appare una carta creata. Il mazzo e il tipo di nota qui sopra bastano per iniziare, quindi apri questa sezione solo se vuoi cambiare come vengono costruite le carte.';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return 'Scegli un servizio di backup e accedi, così la tua libreria sopravvive alla perdita o alla sostituzione del dispositivo.';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return 'Associa questo dispositivo agli altri tuoi dispositivi per condividere un’unica libreria e mantenere sincronizzati i progressi.';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return 'Mostra come installare l’estensione del browser e collegarla a Fushi, così puoi cercare le parole anche nelle pagine web.';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return 'Aggiungi i tuoi file di font e scegli quale usare per ciascuna lingua.';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return 'Scaricato in spezzoni paralleli contemporaneamente da GitHub, dal sito ufficiale e da un mirror di riserva, con checksum su ogni spezzone. Fushi misura le sorgenti strada facendo e assegna più spezzoni a quella più veloce in quel momento, quindi qui non c’è nulla da scegliere.';
       default:
         return null;
     }
@@ -215850,47 +215841,47 @@ extension on _StringsJa {
       case 'anki_connect_port_auto_fix_none':
         return 'このマシンに空いているポートが見つかりませんでした。';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return '必須';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return '推奨';
       case 'onboarding_action_badge_optional':
-        return 'Optional';
+        return '任意';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return 'おすすめパック全体をバックグラウンドでダウンロードし、完了後そのままインポートに進みます。いつでも中止でき、次回は中断した位置から再開します。';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return 'パックはダウンロード済みです。ここからインポートします。確認ダイアログで「統合」を選べば、既存のデータはそのまま残ります。';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return 'すでに別の場所からパックの zip を入手済みですか？ディスクからインポートすれば、ダウンロードはまるごと省けます。';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return '公式サイトのダウンロードページを開く';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return 'ブラウザで公式サイトを開きます。パックの項に、ダウンロードマネージャーへ渡せる分割リンクが載っています。入手後はここに戻り、「ローカルのパックファイルを選ぶ」からインポートしてください。';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return '日本語以外の言語を学んでいますか？パックは飛ばして、ここで自分の言語の辞書をインポートしてください。';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return '発音音声の取得元です。パックには日本語と英語が含まれています。その他の言語はここでオンラインソースを追加してください。';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return 'Fushi が Anki に接続できるか確認し、デッキとノートタイプを読み込みます。この時点では何も作成されません。';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return 'デッキとノートタイプを Anki から読み込み直します。Anki 側で新しいデッキを作った後に使ってください。';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return 'AnkiDroid のストアページを開きます。Fushi はここにカードを書き込むので、先にインストールが必要です。';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return 'Anki のダウンロードページを開きます。Anki をインストールし、カード作成中は起動したままにしてください。';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return '同梱の AnkiConnect アドオンを Anki に展開します。Fushi はこれを通じて Anki と通信します。完了後に Anki を再起動してください。';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return 'カードテンプレート、フィールド対応、スクリーンショットと音声——つまり「出来上がるカードの見た目」です。上でデッキとノートタイプを選べばカード作成は始められるので、カードの作られ方を変えたいときだけ開いてください。';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return 'バックアップ先を選んでサインインしておけば、端末を紛失・買い替えてもライブラリは残ります。';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return 'この端末を他の端末とペアリングして、同じライブラリを共有し進捗を同期します。';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return 'ブラウザ拡張機能のインストール方法と Fushi への接続手順を案内します。ウェブページ上でも辞書を引けるようになります。';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return '自分のフォントファイルを追加し、言語ごとにどれを使うか指定します。';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return 'GitHub・公式サイト・予備ミラーから同時に分割ダウンロードし、各断片をチェックサムで検証します。ダウンロード中も各ソースの速度を実測し、その時点で最も速いソースに多くの断片を割り当てるため、ここで選ぶ必要はありません。';
       default:
         return null;
     }
@@ -223885,47 +223876,47 @@ extension on _StringsKo {
       case 'anki_connect_port_auto_fix_none':
         return '이 컴퓨터에서 비어 있는 포트를 찾지 못했습니다.';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return '필수';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return '권장';
       case 'onboarding_action_badge_optional':
-        return 'Optional';
+        return '선택';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return '추천 팩 전체를 백그라운드로 내려받은 뒤 이어서 가져오기를 진행합니다. 언제든 취소할 수 있고, 다음에 중단된 지점부터 이어받습니다.';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return '팩이 이미 내려받아져 있습니다. 여기서 바로 가져옵니다. 확인 창에서 «병합»을 고르면 기존 데이터는 그대로 유지됩니다.';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return '다른 곳에서 이미 팩 zip을 받으셨나요? 디스크에서 가져오면 내려받기를 통째로 건너뛸 수 있습니다.';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return '공식 사이트 다운로드 페이지 열기';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return '브라우저에서 공식 사이트를 엽니다. 팩 항목에 다운로드 관리자에 넣을 수 있는 분할 링크가 있습니다. 받은 뒤 여기로 돌아와 «로컬 팩 파일 선택»으로 가져오세요.';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return '일본어 말고 다른 언어를 배우시나요? 팩은 건너뛰고 여기서 해당 언어의 사전을 가져오세요.';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return '발음 오디오의 출처입니다. 팩에는 일본어와 영어가 이미 들어 있습니다. 다른 언어는 여기서 온라인 소스를 추가하세요.';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return 'Fushi가 Anki에 연결되는지 확인하고 덱과 노트 유형을 불러옵니다. 이 단계에서는 아무것도 만들지 않습니다.';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return 'Anki에서 덱과 노트 유형을 다시 불러옵니다. Anki에서 새 덱을 만든 뒤에 사용하세요.';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return 'AnkiDroid 스토어 페이지를 엽니다. Fushi가 여기에 카드를 쓰므로 먼저 설치해야 합니다.';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return 'Anki 다운로드 페이지를 엽니다. Anki를 설치하고 카드를 만드는 동안 켜 두세요.';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return '내장된 AnkiConnect 애드온을 Anki에 풀어 넣습니다. Fushi는 이것을 통해 Anki와 통신합니다. 설치 후 Anki를 다시 시작하세요.';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return '카드 템플릿, 필드 매핑, 스크린샷과 오디오 — 즉 «만들어진 카드가 어떻게 생겼는지»입니다. 위에서 덱과 노트 유형만 고르면 카드 만들기를 시작할 수 있으니, 카드가 만들어지는 방식을 바꾸고 싶을 때만 들어오세요.';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return '백업 백엔드를 고르고 로그인해 두면 기기를 잃어버리거나 바꿔도 라이브러리가 남습니다.';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return '이 기기를 다른 기기와 페어링해 같은 라이브러리를 공유하고 진도를 동기화합니다.';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return '브라우저 확장을 설치하고 Fushi에 연결하는 방법을 안내합니다. 웹페이지에서도 단어를 찾을 수 있게 됩니다.';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return '자신의 글꼴 파일을 추가하고 언어마다 어떤 글꼴을 쓸지 지정합니다.';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return 'GitHub, 공식 사이트, 예비 미러에서 동시에 조각을 나눠 내려받고 조각마다 체크섬을 확인합니다. 내려받는 동안 각 소스의 속도를 실측해 그 순간 가장 빠른 쪽에 더 많은 조각을 맡기므로, 여기서 고를 것은 없습니다.';
       default:
         return null;
     }
@@ -231980,47 +231971,47 @@ extension on _StringsNl {
       case 'anki_connect_port_auto_fix_none':
         return 'Geen vrije poort gevonden op deze machine.';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return 'Verplicht';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return 'Aanbevolen';
       case 'onboarding_action_badge_optional':
-        return 'Optional';
+        return 'Optioneel';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return 'Downloadt het hele pakket op de achtergrond en importeert het daarna. Je kunt altijd annuleren; de volgende keer gaat het verder waar het gebleven was.';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return 'Het pakket is al gedownload; hiermee importeer je het. Kies «Samenvoegen» in het bevestigingsvenster, dan blijft je bestaande data ongemoeid.';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return 'Heb je de zip van het pakket al ergens anders vandaan? Importeer hem van schijf en sla de download helemaal over.';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return 'Downloadpagina van de website openen';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return 'Opent de officiële site in je browser. In het pakketgedeelte staan losse deel-links die je aan een downloadmanager kunt geven; kom daarna hier terug en gebruik «Kies een lokaal pakketbestand» om te importeren wat je hebt.';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return 'Leer je een andere taal dan Japans? Sla het pakket over en importeer hier woordenboeken voor je eigen taal.';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return 'Waar de uitspraakaudio vandaan komt. Het pakket dekt Japans en Engels al; voeg hier online bronnen toe voor andere talen.';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return 'Controleert of Fushi Anki kan bereiken en laadt je decks en notitietypes. Er wordt nog niets aangemaakt.';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return 'Laadt decks en notitietypes opnieuw uit Anki. Gebruik dit nadat je in Anki een nieuw deck hebt gemaakt.';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return 'Opent de storepagina van AnkiDroid. Fushi schrijft zijn kaarten daarin, dus het moet eerst geïnstalleerd zijn.';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return 'Opent de downloadpagina van Anki. Installeer Anki en laat het draaien terwijl je kaarten maakt.';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return 'Pakt de meegeleverde AnkiConnect-add-on voor je uit in Anki; daarmee kan Fushi ermee praten. Start Anki daarna opnieuw op.';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return 'Kaartsjabloon, veldtoewijzing, schermafbeeldingen en audio: de details van hoe een gemaakte kaart eruitziet. Het deck en notitietype hierboven zijn genoeg om te beginnen, dus open dit alleen als je wilt veranderen hoe kaarten worden opgebouwd.';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return 'Kies een back-upbackend en meld je aan, zodat je bibliotheek een verloren of vervangen apparaat overleeft.';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return 'Koppelt dit apparaat aan je andere apparaten om één bibliotheek te delen en de voortgang gelijk te houden.';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return 'Laat zien hoe je de browserextensie installeert en met Fushi verbindt, zodat je ook op webpagina’s woorden kunt opzoeken.';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return 'Voeg je eigen lettertypebestanden toe en kies welk lettertype elke taal gebruikt.';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return 'Wordt in parallelle stukken tegelijk van GitHub, de officiële site en een reservespiegel gehaald, met een checksum per stuk. Fushi meet de bronnen onderweg en geeft meer stukken aan degene die op dat moment het snelst is, dus hier valt niets te kiezen.';
       default:
         return null;
     }
@@ -240070,47 +240061,47 @@ extension on _StringsPtBr {
       case 'anki_connect_port_auto_fix_none':
         return 'Nenhuma porta livre encontrada nesta máquina.';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return 'Obrigatório';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return 'Recomendado';
       case 'onboarding_action_badge_optional':
-        return 'Optional';
+        return 'Opcional';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return 'Baixa o pacote inteiro em segundo plano e depois o importa. Dá para cancelar a qualquer momento; da próxima vez ele retoma de onde parou.';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return 'O pacote já foi baixado; isto o importa. Escolha «Mesclar» na caixa de confirmação e seus dados atuais ficam intactos.';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return 'Já pegou o zip do pacote em outro lugar? Importe do disco e pule o download por completo.';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return 'Abrir a página de download do site';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return 'Abre o site oficial no navegador. A seção do pacote lista links por partes que você pode passar a um gerenciador de downloads; depois volte aqui e use «Escolher um arquivo de pacote local» para importar o que baixou.';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return 'Está aprendendo um idioma que não é japonês? Pule o pacote e importe aqui dicionários do seu próprio idioma.';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return 'De onde vem o áudio de pronúncia. O pacote já cobre japonês e inglês; adicione aqui fontes on-line para outros idiomas.';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return 'Verifica se o Fushi consegue falar com o Anki e carrega seus baralhos e tipos de nota. Nada é criado ainda.';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return 'Recarrega baralhos e tipos de nota a partir do Anki. Use depois de criar um baralho novo dentro do Anki.';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return 'Abre a página do AnkiDroid na loja. O Fushi grava os cartões nele, então precisa estar instalado antes.';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return 'Abre a página de download do Anki. Instale o Anki e deixe-o aberto enquanto cria cartões.';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return 'Descompacta para você o complemento AnkiConnect embutido dentro do Anki, que é o que permite ao Fushi conversar com ele. Reinicie o Anki depois.';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return 'Modelo de cartão, mapeamento de campos, capturas e áudio: os detalhes de como fica um cartão criado. O baralho e o tipo de nota acima já bastam para começar, então abra isto só se quiser mudar como os cartões são montados.';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return 'Escolha um serviço de backup e entre na conta, para que sua biblioteca sobreviva à perda ou troca de aparelho.';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return 'Pareia este aparelho com seus outros aparelhos para compartilhar uma mesma biblioteca e manter o progresso em sincronia.';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return 'Mostra como instalar a extensão de navegador e conectá-la ao Fushi, para você também consultar palavras em páginas da web.';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return 'Adicione seus próprios arquivos de fonte e escolha qual cada idioma usa.';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return 'Baixado em partes paralelas do GitHub, do site oficial e de um espelho reserva ao mesmo tempo, com checksum em cada parte. O Fushi mede as fontes durante o processo e dá mais partes para a que estiver mais rápida no momento, então não há nada a escolher aqui.';
       default:
         return null;
     }
@@ -248166,47 +248157,47 @@ extension on _StringsRu {
       case 'anki_connect_port_auto_fix_none':
         return 'На этом компьютере не найдено свободных портов.';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return 'Обязательно';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return 'Рекомендуется';
       case 'onboarding_action_badge_optional':
-        return 'Optional';
+        return 'По желанию';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return 'Скачивает весь пакет в фоне, а затем импортирует его. Отменить можно в любой момент; в следующий раз загрузка продолжится с места остановки.';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return 'Пакет уже скачан; здесь он импортируется. Выберите «Объединить» в окне подтверждения — существующие данные останутся нетронутыми.';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return 'Уже получили zip пакета из другого места? Импортируйте его с диска и полностью пропустите загрузку.';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return 'Открыть страницу загрузки на сайте';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return 'Открывает официальный сайт в браузере. В разделе про пакет есть ссылки на отдельные части, которые можно отдать менеджеру загрузок; затем вернитесь сюда и импортируйте полученное через «Выбрать локальный файл пакета».';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return 'Учите не японский, а другой язык? Пропустите пакет и импортируйте здесь словари для своего языка.';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return 'Откуда берётся аудио произношения. Японский и английский пакет уже покрывает; для других языков добавьте здесь онлайн-источники.';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return 'Проверяет, что Fushi может связаться с Anki, и загружает ваши колоды и типы заметок. Пока ничего не создаётся.';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return 'Заново загружает колоды и типы заметок из Anki. Используйте после создания новой колоды в Anki.';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return 'Открывает страницу AnkiDroid в магазине. Fushi записывает карточки именно туда, поэтому его нужно установить первым.';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return 'Открывает страницу загрузки Anki. Установите Anki и держите его запущенным, пока создаёте карточки.';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return 'Распаковывает встроенное дополнение AnkiConnect в Anki — именно через него Fushi общается с Anki. После этого перезапустите Anki.';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return 'Шаблон карточки, сопоставление полей, скриншоты и аудио — то, как выглядит созданная карточка. Колоды и типа заметки выше уже достаточно, чтобы начать, так что заходите сюда только если хотите изменить, как собираются карточки.';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return 'Выберите хранилище для резервных копий и войдите в него, чтобы библиотека пережила потерю или замену устройства.';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return 'Связывает это устройство с вашими другими устройствами: одна общая библиотека и синхронный прогресс.';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return 'Показывает, как установить расширение для браузера и подключить его к Fushi, чтобы искать слова и на веб-страницах.';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return 'Добавьте свои файлы шрифтов и выберите, какой из них использует каждый язык.';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return 'Скачивается параллельными частями одновременно с GitHub, официального сайта и резервного зеркала, каждая часть проверяется контрольной суммой. Fushi по ходу измеряет источники и отдаёт больше частей тому, кто быстрее прямо сейчас, поэтому выбирать здесь нечего.';
       default:
         return null;
     }
@@ -256235,47 +256226,47 @@ extension on _StringsTh {
       case 'anki_connect_port_auto_fix_none':
         return 'ไม่พบพอร์ตที่ว่างบนเครื่องนี้';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return 'จำเป็น';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return 'แนะนำ';
       case 'onboarding_action_badge_optional':
-        return 'Optional';
+        return 'ไม่บังคับ';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return 'ดาวน์โหลดแพ็กทั้งชุดในเบื้องหลัง แล้วนำเข้าให้ต่อ ยกเลิกได้ทุกเมื่อ ครั้งถัดไปจะดาวน์โหลดต่อจากจุดที่หยุดไว้';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return 'แพ็กดาวน์โหลดไว้แล้ว ปุ่มนี้คือการนำเข้า เลือก «รวมเข้ากับคลังเดิม» ในกล่องยืนยัน แล้วข้อมูลเดิมของคุณจะไม่ถูกแตะต้อง';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return 'ได้ไฟล์ zip ของแพ็กมาจากที่อื่นแล้วหรือ? นำเข้าจากดิสก์ได้เลย ข้ามการดาวน์โหลดทั้งหมด';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return 'เปิดหน้าดาวน์โหลดบนเว็บไซต์';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return 'เปิดเว็บไซต์ทางการในเบราว์เซอร์ ในหัวข้อแพ็กจะมีลิงก์แบบแบ่งส่วนที่ป้อนให้โปรแกรมช่วยดาวน์โหลดได้ เมื่อโหลดเสร็จให้กลับมาที่นี่แล้วใช้ «เลือกไฟล์แพ็กในเครื่อง» เพื่อนำเข้า';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return 'กำลังเรียนภาษาอื่นที่ไม่ใช่ญี่ปุ่นใช่ไหม? ข้ามแพ็กไป แล้วนำเข้าพจนานุกรมของภาษาคุณที่นี่แทน';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return 'เสียงอ่านออกเสียงมาจากไหน แพ็กครอบคลุมภาษาญี่ปุ่นและอังกฤษอยู่แล้ว ภาษาอื่นให้เพิ่มแหล่งออนไลน์ที่นี่';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return 'ตรวจสอบว่า Fushi ติดต่อ Anki ได้ และโหลดสำรับกับชนิดโน้ตของคุณเข้ามา ขั้นนี้ยังไม่สร้างอะไรทั้งสิ้น';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return 'โหลดสำรับและชนิดโน้ตจาก Anki ใหม่ ใช้หลังจากสร้างสำรับใหม่ใน Anki';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return 'เปิดหน้าร้านค้าของ AnkiDroid เนื่องจาก Fushi เขียนการ์ดลงในนั้น จึงต้องติดตั้งก่อน';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return 'เปิดหน้าดาวน์โหลด Anki ติดตั้ง Anki แล้วเปิดค้างไว้ระหว่างสร้างการ์ด';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return 'แตกส่วนเสริม AnkiConnect ที่มาพร้อมโปรแกรมเข้าไปใน Anki ให้คุณ ซึ่งเป็นสิ่งที่ทำให้ Fushi คุยกับ Anki ได้ เสร็จแล้วให้รีสตาร์ท Anki';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return 'เทมเพลตการ์ด การจับคู่ฟิลด์ ภาพหน้าจอ และเสียง — ก็คือรายละเอียดว่าการ์ดที่สร้างออกมาหน้าตาเป็นอย่างไร แค่เลือกสำรับกับชนิดโน้ตด้านบนก็เริ่มสร้างการ์ดได้แล้ว จึงเปิดตรงนี้เฉพาะเมื่อต้องการเปลี่ยนวิธีประกอบการ์ด';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return 'เลือกปลายทางสำรองข้อมูลแล้วลงชื่อเข้าใช้ เพื่อให้คลังของคุณอยู่รอดเมื่อทำอุปกรณ์หายหรือเปลี่ยนเครื่อง';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return 'จับคู่อุปกรณ์นี้กับอุปกรณ์อื่นของคุณ เพื่อใช้คลังเดียวกันและซิงก์ความคืบหน้า';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return 'แสดงวิธีติดตั้งส่วนขยายเบราว์เซอร์และเชื่อมกับ Fushi เพื่อให้เปิดหาคำศัพท์บนหน้าเว็บได้ด้วย';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return 'เพิ่มไฟล์ฟอนต์ของคุณเอง แล้วเลือกว่าภาษาไหนใช้ฟอนต์ใด';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return 'ดาวน์โหลดแบบแบ่งส่วนขนานกันจาก GitHub เว็บไซต์ทางการ และมิเรอร์สำรองพร้อมกัน โดยตรวจสอบค่าแฮชทุกส่วน ระหว่างดาวน์โหลด Fushi จะวัดความเร็วของแต่ละแหล่งจริง แล้วแบ่งส่วนให้แหล่งที่เร็วที่สุดในขณะนั้นมากขึ้น จึงไม่มีอะไรให้เลือกตรงนี้';
       default:
         return null;
     }
@@ -264320,47 +264311,47 @@ extension on _StringsTr {
       case 'anki_connect_port_auto_fix_none':
         return 'Bu makinede boş bağlantı noktası bulunamadı.';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return 'Zorunlu';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return 'Önerilir';
       case 'onboarding_action_badge_optional':
-        return 'Optional';
+        return 'İsteğe bağlı';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return 'Paketin tamamını arka planda indirir, ardından içe aktarır. İstediğin an iptal edebilirsin; bir dahaki sefere kaldığı yerden devam eder.';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return 'Paket zaten indirilmiş durumda; bu onu içe aktarır. Onay penceresinde «Birleştir» seçersen mevcut verilerine dokunulmaz.';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return 'Paketin zip dosyasını başka bir yerden aldın mı? Diskten içe aktar, indirmeyi tamamen atla.';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return 'Sitedeki indirme sayfasını aç';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return 'Resmî siteyi tarayıcında açar. Paket bölümünde bir indirme yöneticisine verebileceğin parça bağlantıları var; sonra buraya dönüp «Yerel paket dosyası seç» ile indirdiğini içe aktar.';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return 'Japonca dışında bir dil mi öğreniyorsun? Paketi atla ve burada kendi dilinin sözlüklerini içe aktar.';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return 'Telaffuz seslerinin nereden geldiği. Paket Japonca ve İngilizceyi zaten kapsıyor; diğer diller için buradan çevrimiçi kaynak ekle.';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return 'Fushi’nin Anki’ye ulaşıp ulaşamadığını denetler ve destelerinle not türlerini yükler. Henüz hiçbir şey oluşturulmaz.';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return 'Desteleri ve not türlerini Anki’den yeniden yükler. Anki içinde yeni bir deste oluşturduktan sonra kullan.';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return 'AnkiDroid’in mağaza sayfasını açar. Fushi kartlarını onun içine yazdığı için önce kurulu olması gerekir.';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return 'Anki’nin indirme sayfasını açar. Anki’yi kur ve kart üretirken açık bırak.';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return 'Birlikte gelen AnkiConnect eklentisini senin için Anki’ye açar; Fushi onunla konuşmasını buna borçlu. Sonrasında Anki’yi yeniden başlat.';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return 'Kart şablonu, alan eşlemesi, ekran görüntüleri ve ses: yani üretilen kartın nasıl göründüğünün ayrıntıları. Yukarıdaki deste ve not türü başlamak için yeterli, bu yüzden buraya yalnızca kartların nasıl kurulduğunu değiştirmek istiyorsan gir.';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return 'Bir yedekleme arka ucu seç ve oturum aç ki kitaplığın cihaz kaybını veya değişimini atlatsın.';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return 'Bu cihazı diğer cihazlarınla eşler; tek bir kitaplığı paylaşır ve ilerlemeyi eşitler.';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return 'Tarayıcı uzantısını nasıl kurup Fushi’ye bağlayacağını gösterir; böylece web sayfalarında da kelime arayabilirsin.';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return 'Kendi yazı tipi dosyalarını ekle ve her dilin hangisini kullanacağını seç.';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return 'Aynı anda GitHub’dan, resmî siteden ve bir yedek aynadan paralel parçalar hâlinde indirilir; her parça sağlama toplamıyla doğrulanır. Fushi kaynakları yol boyunca ölçer ve o an en hızlı olana daha çok parça verir, bu yüzden burada seçilecek bir şey yok.';
       default:
         return null;
     }
@@ -272398,47 +272389,47 @@ extension on _StringsVi {
       case 'anki_connect_port_auto_fix_none':
         return 'Không tìm thấy cổng nào còn trống trên máy này.';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return 'Bắt buộc';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return 'Nên làm';
       case 'onboarding_action_badge_optional':
-        return 'Optional';
+        return 'Tuỳ chọn';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return 'Tải toàn bộ gói ở chế độ nền rồi nhập vào. Có thể huỷ bất cứ lúc nào; lần sau sẽ tải tiếp từ chỗ đã dừng.';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return 'Gói đã tải xong; thao tác này nhập nó vào. Chọn «Gộp» trong hộp xác nhận thì dữ liệu hiện có của bạn sẽ được giữ nguyên.';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return 'Đã lấy được tệp zip của gói từ nơi khác? Nhập từ ổ đĩa và bỏ qua hoàn toàn phần tải về.';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return 'Mở trang tải về trên website';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return 'Mở trang chính thức trong trình duyệt. Mục về gói ở đó liệt kê các liên kết theo từng phần để bạn đưa cho trình quản lý tải; xong rồi quay lại đây và dùng «Chọn tệp gói trên máy» để nhập.';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return 'Bạn học ngôn ngữ khác ngoài tiếng Nhật? Bỏ qua gói và nhập từ điển cho ngôn ngữ của bạn ở đây.';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return 'Âm thanh phát âm lấy từ đâu. Gói đã bao gồm tiếng Nhật và tiếng Anh; các ngôn ngữ khác thì thêm nguồn trực tuyến ở đây.';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return 'Kiểm tra xem Fushi có kết nối được với Anki không và nạp các bộ thẻ cùng loại ghi chú của bạn. Chưa tạo ra thứ gì cả.';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return 'Nạp lại bộ thẻ và loại ghi chú từ Anki. Dùng sau khi bạn tạo bộ thẻ mới trong Anki.';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return 'Mở trang cửa hàng của AnkiDroid. Fushi ghi thẻ vào đó nên phải cài nó trước.';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return 'Mở trang tải Anki. Cài Anki và để nó chạy trong lúc bạn tạo thẻ.';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return 'Giải nén tiện ích AnkiConnect đi kèm vào Anki giúp bạn — đó chính là thứ cho phép Fushi nói chuyện với Anki. Xong rồi khởi động lại Anki.';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return 'Mẫu thẻ, ánh xạ trường, ảnh chụp màn hình và âm thanh: tức là chi tiết về hình hài của tấm thẻ được tạo ra. Bộ thẻ và loại ghi chú ở trên là đủ để bắt đầu, nên chỉ mở phần này khi bạn muốn đổi cách dựng thẻ.';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return 'Chọn nơi sao lưu và đăng nhập, để thư viện của bạn sống sót khi mất máy hoặc đổi máy.';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return 'Ghép nối thiết bị này với các thiết bị khác của bạn để dùng chung một thư viện và đồng bộ tiến độ.';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return 'Hướng dẫn cách cài tiện ích trình duyệt và kết nối nó với Fushi, để bạn tra từ ngay trên trang web.';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return 'Thêm tệp phông chữ của riêng bạn và chọn phông cho từng ngôn ngữ.';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return 'Được tải song song theo từng phần, đồng thời từ GitHub, trang chính thức và một máy chủ gương dự phòng, mỗi phần đều được kiểm tra checksum. Fushi đo tốc độ các nguồn ngay trong lúc tải và giao nhiều phần hơn cho nguồn đang nhanh nhất, nên ở đây không có gì để chọn.';
       default:
         return null;
     }
@@ -288421,47 +288412,47 @@ extension on _StringsZhHk {
       case 'anki_connect_port_auto_fix_none':
         return '本機找不到空閒的連接埠。';
       case 'onboarding_action_badge_required':
-        return 'Required';
+        return '必做';
       case 'onboarding_action_badge_recommended':
-        return 'Recommended';
+        return '推薦';
       case 'onboarding_action_badge_optional':
-        return 'Optional';
+        return '可選';
       case 'onboarding_pack_action_download_desc':
-        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+        return '在後台下載整個推薦包，下完自動進入匯入。隨時可以取消，下次從斷點續傳。';
       case 'onboarding_pack_action_import_existing_desc':
-        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+        return '包已經下好了，這裏直接匯入。確認框裏選「合併到現有庫」不會動你已有的資料。';
       case 'onboarding_pack_action_pick_desc':
-        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+        return '已經從別處拿到包的 zip？從硬碟匯入，整段下載都可以跳過。';
       case 'onboarding_pack_action_website':
-        return 'Open the download page on the website';
+        return '在官網下載頁打開';
       case 'onboarding_pack_action_website_desc':
-        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+        return '在瀏覽器打開官網。那裏的推薦包一節給出可以餵給下載工具的分片直連；下完回到這裏，用「選擇本機包檔案」匯入。';
       case 'onboarding_pack_action_dictionary_desc':
-        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+        return '學日語以外的語言？跳過推薦包，在這裏按語言匯入詞典。';
       case 'onboarding_pack_action_audio_desc':
-        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+        return '發音音訊從哪裏來。推薦包已經含日語和英語；其它語言在這裏加線上來源。';
       case 'onboarding_anki_action_test_desc':
-        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+        return '檢查 Fushi 能不能連上 Anki，並把你的牌組和筆記類型拉過來。這一步不會建立任何東西。';
       case 'onboarding_anki_action_refresh_desc':
-        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+        return '重新從 Anki 拉牌組和筆記類型。在 Anki 裏新建了牌組之後點它。';
       case 'onboarding_anki_action_get_ankidroid_desc':
-        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+        return '打開 AnkiDroid 的商店頁。Fushi 的卡片寫進它裏面，得先裝上。';
       case 'onboarding_anki_action_get_anki_desc':
-        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+        return '打開 Anki 的下載頁。裝好 Anki，製卡時讓它開着。';
       case 'onboarding_anki_action_install_addon_desc':
-        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+        return '把內建的 AnkiConnect 外掛解壓進 Anki——Fushi 靠它和 Anki 通話。裝完重啟 Anki。';
       case 'onboarding_step_anki_action_desc':
-        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+        return '卡片範本、欄位對應、截圖和音訊——也就是「做出來的卡長甚麼樣」。上面選好牌組和筆記類型就能開始製卡了，想改卡片怎麼做才需要進來。';
       case 'onboarding_step_backup_action_desc':
-        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+        return '選備份後端並登入，換機器或丟裝置時庫還在。';
       case 'onboarding_step_interconnect_action_desc':
-        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+        return '把這台裝置和你的其它裝置配對，共用同一個庫並同步進度。';
       case 'onboarding_step_extension_action_desc':
-        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+        return '告訴你怎麼裝瀏覽器擴充功能並連上 Fushi，之後在網頁上也能查詞。';
       case 'onboarding_step_fonts_action_desc':
-        return 'Add your own font files and pick which one each language uses.';
+        return '匯入自己的字型檔案，並給每種語言指定用哪個。';
       case 'onboarding_pack_sources_hint':
-        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+        return '同時從 GitHub、官網和備用鏡像分片並發下載，每片都校驗。下載過程中會實測各來源速度，哪家快就多分給哪家，所以這裏不用你選。';
       default:
         return null;
     }
