@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69275 (4075 per locale)
+/// Strings: 69292 (4076 per locale)
 ///
-/// Built on 2026-08-30 at 16:09 UTC
+/// Built on 2026-08-31 at 08:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5588,6 +5588,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
   String get delete_choices_remember => 'Remember these choices';
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -15069,6 +15071,9 @@ class _StringsAr extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'تذكّر هذه الخيارات';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -24772,6 +24777,9 @@ class _StringsDe extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Diese Auswahl merken';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -34522,6 +34530,9 @@ class _StringsEs extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Recordar estas opciones';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -44307,6 +44318,9 @@ class _StringsFr extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Mémoriser ces choix';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -53911,6 +53925,9 @@ class _StringsId extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Ingat pilihan ini';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -63599,6 +63616,9 @@ class _StringsIt extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Ricorda queste scelte';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -72696,6 +72716,9 @@ class _StringsJa extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'この選択を記憶する';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -81804,6 +81827,9 @@ class _StringsKo extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => '이 선택 기억하기';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -91445,6 +91471,9 @@ class _StringsNl extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Deze keuzes onthouden';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -101143,6 +101172,9 @@ class _StringsPtBr extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Lembrar estas escolhas';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -110815,6 +110847,9 @@ class _StringsRu extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Запомнить этот выбор';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -120291,6 +120326,9 @@ class _StringsTh extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'จดจำตัวเลือกเหล่านี้';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -129880,6 +129918,9 @@ class _StringsTr extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Bu seçimleri hatırla';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -139446,6 +139487,9 @@ class _StringsVi extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Ghi nhớ các lựa chọn này';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 // Path: <root>
@@ -148251,6 +148295,9 @@ class _StringsZhCn extends _StringsEn {
   String get game_lookup_attached_probe_waiting => '等待游戏内对应字形点击';
   @override
   String get delete_choices_remember => '记住这些选择';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      '无法制卡：当前没有可连接的已配对设备。请确认配对设备上的 Fushi 正在运行；如果要在本机制卡，请关闭「制卡到已配对设备」。';
 }
 
 // Path: <root>
@@ -157068,6 +157115,9 @@ class _StringsZhHk extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => '記住這些選擇';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
 }
 
 /// Flat map(s) containing all translations.
@@ -165429,6 +165479,8 @@ extension on _StringsEn {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Remember these choices';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -173786,6 +173838,8 @@ extension on _StringsAr {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'تذكّر هذه الخيارات';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -182186,6 +182240,8 @@ extension on _StringsDe {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Diese Auswahl merken';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -190578,6 +190634,8 @@ extension on _StringsEs {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Recordar estas opciones';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -198978,6 +199036,8 @@ extension on _StringsFr {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Mémoriser ces choix';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -207350,6 +207410,8 @@ extension on _StringsId {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Ingat pilihan ini';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -215743,6 +215805,8 @@ extension on _StringsIt {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Ricorda queste scelte';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -224066,6 +224130,8 @@ extension on _StringsJa {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'この選択を記憶する';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -232392,6 +232458,8 @@ extension on _StringsKo {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return '이 선택 기억하기';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -240779,6 +240847,8 @@ extension on _StringsNl {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Deze keuzes onthouden';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -249161,6 +249231,8 @@ extension on _StringsPtBr {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Lembrar estas escolhas';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -257549,6 +257621,8 @@ extension on _StringsRu {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Запомнить этот выбор';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -265910,6 +265984,8 @@ extension on _StringsTh {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'จดจำตัวเลือกเหล่านี้';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -274287,6 +274363,8 @@ extension on _StringsTr {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Bu seçimleri hatırla';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -282657,6 +282735,8 @@ extension on _StringsVi {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Ghi nhớ các lựa chọn này';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
@@ -290958,6 +291038,8 @@ extension on _StringsZhCn {
         return '等待游戏内对应字形点击';
       case 'delete_choices_remember':
         return '记住这些选择';
+      case 'anki_error_paired_device_unreachable':
+        return '无法制卡：当前没有可连接的已配对设备。请确认配对设备上的 Fushi 正在运行；如果要在本机制卡，请关闭「制卡到已配对设备」。';
       default:
         return null;
     }
@@ -299260,6 +299342,8 @@ extension on _StringsZhHk {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return '記住這些選擇';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       default:
         return null;
     }
