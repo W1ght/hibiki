@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69275 (4075 per locale)
+/// Strings: 69598 (4094 per locale)
 ///
-/// Built on 2026-08-30 at 16:09 UTC
+/// Built on 2026-08-31 at 05:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5588,6 +5588,32 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
   String get delete_choices_remember => 'Remember these choices';
+  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_password => 'Proxy password (optional)';
+  String get storage_category_backups => 'Local backups';
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_github => 'GitHub direct';
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -15069,6 +15095,51 @@ class _StringsAr extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'تذكّر هذه الخيارات';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -24772,6 +24843,51 @@ class _StringsDe extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Diese Auswahl merken';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -34522,6 +34638,51 @@ class _StringsEs extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Recordar estas opciones';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -44307,6 +44468,51 @@ class _StringsFr extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Mémoriser ces choix';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -53911,6 +54117,51 @@ class _StringsId extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Ingat pilihan ini';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -63599,6 +63850,51 @@ class _StringsIt extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Ricorda queste scelte';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -72696,6 +72992,51 @@ class _StringsJa extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'この選択を記憶する';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -81804,6 +82145,51 @@ class _StringsKo extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => '이 선택 기억하기';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -91445,6 +91831,51 @@ class _StringsNl extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Deze keuzes onthouden';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -101143,6 +101574,51 @@ class _StringsPtBr extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Lembrar estas escolhas';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -110815,6 +111291,51 @@ class _StringsRu extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Запомнить этот выбор';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -120291,6 +120812,51 @@ class _StringsTh extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'จดจำตัวเลือกเหล่านี้';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -129880,6 +130446,51 @@ class _StringsTr extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Bu seçimleri hatırla';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -139446,6 +140057,51 @@ class _StringsVi extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Ghi nhớ các lựa chọn này';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
@@ -148251,6 +148907,46 @@ class _StringsZhCn extends _StringsEn {
   String get game_lookup_attached_probe_waiting => '等待游戏内对应字形点击';
   @override
   String get delete_choices_remember => '记住这些选择';
+  @override
+  String get network_proxy_mode_label => '代理模式';
+  @override
+  String get network_proxy_mode_auto => '自动';
+  @override
+  String get network_proxy_mode_auto_hint => '先读取环境变量，再读取已启用的系统代理';
+  @override
+  String get network_proxy_mode_direct => '直连';
+  @override
+  String get network_proxy_mode_direct_hint => '应用不使用任何代理';
+  @override
+  String get network_proxy_mode_manual => '手动';
+  @override
+  String get network_proxy_mode_manual_hint => '使用下方服务器与可选认证信息';
+  @override
+  String get network_proxy_manual_hint => '供应用全部公网请求使用的 HTTP 代理服务器';
+  @override
+  String get network_proxy_username => '代理用户名（可选）';
+  @override
+  String get network_proxy_password => '代理密码（可选）';
+  @override
+  String get storage_category_backups => '本地备份';
+  @override
+  String storage_entry_backups_label({required Object n}) => '${n} 个备份归档';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      '确定清除这些临时本地备份吗？请先确认需要保留的副本已经保存或分享出去。';
+  @override
+  String get update_download_source_preference => '首选下载源';
+  @override
+  String get update_download_source_preference_hint =>
+      '优先尝试所选来源；不可用时仍会自动回退到其他来源。';
+  @override
+  String get update_download_source_auto => '自动（推荐）';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare 镜像';
+  @override
+  String get update_download_source_github => 'GitHub 直连';
+  @override
+  String update_download_source_proxy({required Object host}) => '代理站：${host}';
 }
 
 // Path: <root>
@@ -157068,6 +157764,51 @@ class _StringsZhHk extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => '記住這些選擇';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 /// Flat map(s) containing all translations.
@@ -165429,6 +166170,44 @@ extension on _StringsEn {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Remember these choices';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -173786,6 +174565,44 @@ extension on _StringsAr {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'تذكّر هذه الخيارات';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -182186,6 +183003,44 @@ extension on _StringsDe {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Diese Auswahl merken';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -190578,6 +191433,44 @@ extension on _StringsEs {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Recordar estas opciones';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -198978,6 +199871,44 @@ extension on _StringsFr {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Mémoriser ces choix';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -207350,6 +208281,44 @@ extension on _StringsId {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Ingat pilihan ini';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -215743,6 +216712,44 @@ extension on _StringsIt {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Ricorda queste scelte';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -224066,6 +225073,44 @@ extension on _StringsJa {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'この選択を記憶する';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -232392,6 +233437,44 @@ extension on _StringsKo {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return '이 선택 기억하기';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -240779,6 +241862,44 @@ extension on _StringsNl {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Deze keuzes onthouden';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -249161,6 +250282,44 @@ extension on _StringsPtBr {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Lembrar estas escolhas';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -257549,6 +258708,44 @@ extension on _StringsRu {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Запомнить этот выбор';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -265910,6 +267107,44 @@ extension on _StringsTh {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'จดจำตัวเลือกเหล่านี้';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -274287,6 +275522,44 @@ extension on _StringsTr {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Bu seçimleri hatırla';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -282657,6 +283930,44 @@ extension on _StringsVi {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Ghi nhớ các lựa chọn này';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -290958,6 +292269,44 @@ extension on _StringsZhCn {
         return '等待游戏内对应字形点击';
       case 'delete_choices_remember':
         return '记住这些选择';
+      case 'network_proxy_mode_label':
+        return '代理模式';
+      case 'network_proxy_mode_auto':
+        return '自动';
+      case 'network_proxy_mode_auto_hint':
+        return '先读取环境变量，再读取已启用的系统代理';
+      case 'network_proxy_mode_direct':
+        return '直连';
+      case 'network_proxy_mode_direct_hint':
+        return '应用不使用任何代理';
+      case 'network_proxy_mode_manual':
+        return '手动';
+      case 'network_proxy_mode_manual_hint':
+        return '使用下方服务器与可选认证信息';
+      case 'network_proxy_manual_hint':
+        return '供应用全部公网请求使用的 HTTP 代理服务器';
+      case 'network_proxy_username':
+        return '代理用户名（可选）';
+      case 'network_proxy_password':
+        return '代理密码（可选）';
+      case 'storage_category_backups':
+        return '本地备份';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} 个备份归档';
+      case 'storage_entry_delete_backups_confirm_body':
+        return '确定清除这些临时本地备份吗？请先确认需要保留的副本已经保存或分享出去。';
+      case 'update_download_source_preference':
+        return '首选下载源';
+      case 'update_download_source_preference_hint':
+        return '优先尝试所选来源；不可用时仍会自动回退到其他来源。';
+      case 'update_download_source_auto':
+        return '自动（推荐）';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare 镜像';
+      case 'update_download_source_github':
+        return 'GitHub 直连';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => '代理站：${host}';
       default:
         return null;
     }
@@ -299260,6 +300609,44 @@ extension on _StringsZhHk {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return '記住這些選擇';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
