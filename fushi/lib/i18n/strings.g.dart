@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69632 (4096 per locale)
+/// Strings: 69666 (4098 per locale)
 ///
-/// Built on 2026-09-01 at 02:40 UTC
+/// Built on 2026-09-01 at 02:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5616,6 +5616,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Proxy: ${host}';
   String get stat_detail_ungrouped => 'Ungrouped';
   String get stat_detail_empty => 'No activity in this period';
+  String get stat_center_title => 'Statistics center';
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -15146,6 +15148,10 @@ class _StringsAr extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -24898,6 +24904,10 @@ class _StringsDe extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -34697,6 +34707,10 @@ class _StringsEs extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -44531,6 +44545,10 @@ class _StringsFr extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -54184,6 +54202,10 @@ class _StringsId extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -63921,6 +63943,10 @@ class _StringsIt extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -73067,6 +73093,10 @@ class _StringsJa extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -82224,6 +82254,10 @@ class _StringsKo extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -91914,6 +91948,10 @@ class _StringsNl extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -101661,6 +101699,10 @@ class _StringsPtBr extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -111382,6 +111424,10 @@ class _StringsRu extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -120907,6 +120953,10 @@ class _StringsTh extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -130545,6 +130595,10 @@ class _StringsTr extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -140160,6 +140214,10 @@ class _StringsVi extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -149009,6 +149067,10 @@ class _StringsZhCn extends _StringsEn {
   String get stat_detail_ungrouped => '未分组';
   @override
   String get stat_detail_empty => '此时段暂无记录';
+  @override
+  String get stat_center_title => '统计中心';
+  @override
+  String get stat_center_tab_overview => '总览';
 }
 
 // Path: <root>
@@ -157875,6 +157937,10 @@ class _StringsZhHk extends _StringsEn {
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 /// Flat map(s) containing all translations.
@@ -166278,6 +166344,10 @@ extension on _StringsEn {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -174677,6 +174747,10 @@ extension on _StringsAr {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -183119,6 +183193,10 @@ extension on _StringsDe {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -191553,6 +191631,10 @@ extension on _StringsEs {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -199995,6 +200077,10 @@ extension on _StringsFr {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -208409,6 +208495,10 @@ extension on _StringsId {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -216844,6 +216934,10 @@ extension on _StringsIt {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -225209,6 +225303,10 @@ extension on _StringsJa {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -233577,6 +233675,10 @@ extension on _StringsKo {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -242006,6 +242108,10 @@ extension on _StringsNl {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -250430,6 +250536,10 @@ extension on _StringsPtBr {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -258860,6 +258970,10 @@ extension on _StringsRu {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -267263,6 +267377,10 @@ extension on _StringsTh {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -275682,6 +275800,10 @@ extension on _StringsTr {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -284094,6 +284216,10 @@ extension on _StringsVi {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -292437,6 +292563,10 @@ extension on _StringsZhCn {
         return '未分组';
       case 'stat_detail_empty':
         return '此时段暂无记录';
+      case 'stat_center_title':
+        return '统计中心';
+      case 'stat_center_tab_overview':
+        return '总览';
       default:
         return null;
     }
@@ -300781,6 +300911,10 @@ extension on _StringsZhHk {
         return 'Ungrouped';
       case 'stat_detail_empty':
         return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
