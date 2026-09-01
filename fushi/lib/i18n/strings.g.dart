@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69700 (4100 per locale)
+/// Strings: 69717 (4101 per locale)
 ///
-/// Built on 2026-09-01 at 10:23 UTC
+/// Built on 2026-09-01 at 14:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5618,6 +5618,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${source} is not available for this file; falling back to the automatic order';
   String get network_proxy_credentials_scope_hint =>
       'Credentials apply to HTTP requests only; the built-in torrent engine cannot use them';
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
   String get stat_detail_ungrouped => 'Ungrouped';
   String get stat_detail_empty => 'No activity in this period';
   String get stat_center_title => 'Statistics center';
@@ -15154,6 +15156,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get network_proxy_credentials_scope_hint =>
       'بيانات الاعتماد تُستخدم لطلبات HTTP فقط، ومحرك التورنت المدمج لا يمكنه استخدامها';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
   @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
@@ -24917,6 +24922,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get network_proxy_credentials_scope_hint =>
       'Zugangsdaten gelten nur für HTTP-Anfragen; die integrierte Torrent-Engine kann sie nicht verwenden';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
   @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
@@ -34729,6 +34737,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get network_proxy_credentials_scope_hint =>
       'Las credenciales solo se aplican a las solicitudes HTTP; el motor de torrents integrado no puede usarlas';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
   @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
@@ -44577,6 +44588,9 @@ class _StringsFr extends _StringsEn {
   String get network_proxy_credentials_scope_hint =>
       'Les identifiants ne s\'appliquent qu\'aux requêtes HTTP ; le moteur torrent intégré ne peut pas les utiliser';
   @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
@@ -54240,6 +54254,9 @@ class _StringsId extends _StringsEn {
   @override
   String get network_proxy_credentials_scope_hint =>
       'Kredensial hanya berlaku untuk permintaan HTTP; mesin torrent bawaan tidak dapat menggunakannya';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
   @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
@@ -63989,6 +64006,9 @@ class _StringsIt extends _StringsEn {
   String get network_proxy_credentials_scope_hint =>
       'Le credenziali valgono solo per le richieste HTTP; il motore torrent integrato non può usarle';
   @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
@@ -73141,6 +73161,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get network_proxy_credentials_scope_hint =>
       '認証情報は HTTP 通信にのみ適用されます。内蔵 torrent エンジンでは使用できません';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
   @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
@@ -82305,6 +82328,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get network_proxy_credentials_scope_hint =>
       '자격 증명은 HTTP 요청에만 적용되며, 내장 토렌트 엔진은 사용할 수 없습니다';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
   @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
@@ -92007,6 +92033,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get network_proxy_credentials_scope_hint =>
       'Inloggegevens gelden alleen voor HTTP-verzoeken; de ingebouwde torrent-engine kan ze niet gebruiken';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
   @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
@@ -101766,6 +101795,9 @@ class _StringsPtBr extends _StringsEn {
   String get network_proxy_credentials_scope_hint =>
       'As credenciais valem apenas para requisições HTTP; o motor de torrent integrado não consegue usá-las';
   @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
@@ -111500,6 +111532,9 @@ class _StringsRu extends _StringsEn {
   String get network_proxy_credentials_scope_hint =>
       'Учётные данные применяются только к HTTP-запросам; встроенный torrent-движок не может их использовать';
   @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
@@ -121034,6 +121069,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get network_proxy_credentials_scope_hint =>
       'ข้อมูลรับรองใช้ได้กับคำขอ HTTP เท่านั้น เอนจิน torrent ในตัวไม่สามารถใช้ได้';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
   @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
@@ -130685,6 +130723,9 @@ class _StringsTr extends _StringsEn {
   String get network_proxy_credentials_scope_hint =>
       'Kimlik bilgileri yalnızca HTTP istekleri için geçerlidir; yerleşik torrent motoru bunları kullanamaz';
   @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
@@ -140311,6 +140352,9 @@ class _StringsVi extends _StringsEn {
   String get network_proxy_credentials_scope_hint =>
       'Thông tin đăng nhập chỉ áp dụng cho yêu cầu HTTP; công cụ torrent tích hợp không dùng được';
   @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
@@ -149170,6 +149214,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get network_proxy_credentials_scope_hint =>
       '凭据仅用于 HTTP 请求；内置 torrent 引擎无法使用';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      '无法制卡：当前没有可连接的已配对设备。请确认配对设备上的 Fushi 正在运行；如果要在本机制卡，请关闭「制卡到已配对设备」。';
   @override
   String get stat_detail_ungrouped => '未分组';
   @override
@@ -158042,6 +158089,9 @@ class _StringsZhHk extends _StringsEn {
   String get network_proxy_credentials_scope_hint =>
       '憑證僅用於 HTTP 請求；內建 torrent 引擎無法使用';
   @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
   String get stat_detail_ungrouped => 'Ungrouped';
   @override
   String get stat_detail_empty => 'No activity in this period';
@@ -166454,6 +166504,8 @@ extension on _StringsEn {
             '${source} is not available for this file; falling back to the automatic order';
       case 'network_proxy_credentials_scope_hint':
         return 'Credentials apply to HTTP requests only; the built-in torrent engine cannot use them';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -174862,6 +174914,8 @@ extension on _StringsAr {
             '${source} غير متاح لهذا الملف، وتمت العودة إلى الترتيب التلقائي';
       case 'network_proxy_credentials_scope_hint':
         return 'بيانات الاعتماد تُستخدم لطلبات HTTP فقط، ومحرك التورنت المدمج لا يمكنه استخدامها';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -183314,6 +183368,8 @@ extension on _StringsDe {
             '${source} ist für diese Datei nicht verfügbar; es wird auf die automatische Reihenfolge zurückgegriffen';
       case 'network_proxy_credentials_scope_hint':
         return 'Zugangsdaten gelten nur für HTTP-Anfragen; die integrierte Torrent-Engine kann sie nicht verwenden';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -191758,6 +191814,8 @@ extension on _StringsEs {
             '${source} no está disponible para este archivo; se vuelve al orden automático';
       case 'network_proxy_credentials_scope_hint':
         return 'Las credenciales solo se aplican a las solicitudes HTTP; el motor de torrents integrado no puede usarlas';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -200210,6 +200268,8 @@ extension on _StringsFr {
             '${source} n\'est pas disponible pour ce fichier ; retour à l\'ordre automatique';
       case 'network_proxy_credentials_scope_hint':
         return 'Les identifiants ne s\'appliquent qu\'aux requêtes HTTP ; le moteur torrent intégré ne peut pas les utiliser';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -208634,6 +208694,8 @@ extension on _StringsId {
             '${source} tidak tersedia untuk berkas ini; kembali ke urutan otomatis';
       case 'network_proxy_credentials_scope_hint':
         return 'Kredensial hanya berlaku untuk permintaan HTTP; mesin torrent bawaan tidak dapat menggunakannya';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -217079,6 +217141,8 @@ extension on _StringsIt {
             '${source} non è disponibile per questo file; si torna all\'ordine automatico';
       case 'network_proxy_credentials_scope_hint':
         return 'Le credenziali valgono solo per le richieste HTTP; il motore torrent integrato non può usarle';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -225453,6 +225517,8 @@ extension on _StringsJa {
             '${source} はこのファイルでは利用できないため、自動順に戻しました';
       case 'network_proxy_credentials_scope_hint':
         return '認証情報は HTTP 通信にのみ適用されます。内蔵 torrent エンジンでは使用できません';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -233830,6 +233896,8 @@ extension on _StringsKo {
             '이 파일에는 ${source} 을(를) 사용할 수 없어 자동 순서로 되돌렸습니다';
       case 'network_proxy_credentials_scope_hint':
         return '자격 증명은 HTTP 요청에만 적용되며, 내장 토렌트 엔진은 사용할 수 없습니다';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -242269,6 +242337,8 @@ extension on _StringsNl {
             '${source} is niet beschikbaar voor dit bestand; er wordt teruggevallen op de automatische volgorde';
       case 'network_proxy_credentials_scope_hint':
         return 'Inloggegevens gelden alleen voor HTTP-verzoeken; de ingebouwde torrent-engine kan ze niet gebruiken';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -250703,6 +250773,8 @@ extension on _StringsPtBr {
             '${source} não está disponível para este arquivo; voltando à ordem automática';
       case 'network_proxy_credentials_scope_hint':
         return 'As credenciais valem apenas para requisições HTTP; o motor de torrent integrado não consegue usá-las';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -259143,6 +259215,8 @@ extension on _StringsRu {
             '${source} недоступен для этого файла; выполнен возврат к автоматическому порядку';
       case 'network_proxy_credentials_scope_hint':
         return 'Учётные данные применяются только к HTTP-запросам; встроенный torrent-движок не может их использовать';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -267556,6 +267630,8 @@ extension on _StringsTh {
             '${source} ใช้กับไฟล์นี้ไม่ได้ จึงกลับไปใช้ลำดับอัตโนมัติ';
       case 'network_proxy_credentials_scope_hint':
         return 'ข้อมูลรับรองใช้ได้กับคำขอ HTTP เท่านั้น เอนจิน torrent ในตัวไม่สามารถใช้ได้';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -275984,6 +276060,8 @@ extension on _StringsTr {
             '${source} bu dosya için kullanılamıyor; otomatik sıraya geri dönüldü';
       case 'network_proxy_credentials_scope_hint':
         return 'Kimlik bilgileri yalnızca HTTP istekleri için geçerlidir; yerleşik torrent motoru bunları kullanamaz';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -284406,6 +284484,8 @@ extension on _StringsVi {
             '${source} không khả dụng cho tệp này; đã quay lại thứ tự tự động';
       case 'network_proxy_credentials_scope_hint':
         return 'Thông tin đăng nhập chỉ áp dụng cho yêu cầu HTTP; công cụ torrent tích hợp không dùng được';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
@@ -292757,6 +292837,8 @@ extension on _StringsZhCn {
         return ({required Object source}) => '${source} 不适用于该文件，已回退到自动顺序';
       case 'network_proxy_credentials_scope_hint':
         return '凭据仅用于 HTTP 请求；内置 torrent 引擎无法使用';
+      case 'anki_error_paired_device_unreachable':
+        return '无法制卡：当前没有可连接的已配对设备。请确认配对设备上的 Fushi 正在运行；如果要在本机制卡，请关闭「制卡到已配对设备」。';
       case 'stat_detail_ungrouped':
         return '未分组';
       case 'stat_detail_empty':
@@ -301109,6 +301191,8 @@ extension on _StringsZhHk {
         return ({required Object source}) => '${source} 不適用於此檔案，已回退到自動順序';
       case 'network_proxy_credentials_scope_hint':
         return '憑證僅用於 HTTP 請求；內建 torrent 引擎無法使用';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
       case 'stat_detail_ungrouped':
         return 'Ungrouped';
       case 'stat_detail_empty':
