@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69683 (4099 per locale)
+/// Strings: 69734 (4102 per locale)
 ///
-/// Built on 2026-09-01 at 04:07 UTC
+/// Built on 2026-09-01 at 04:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5624,6 +5624,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -15165,6 +15171,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -24928,6 +24943,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -34738,6 +34762,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -44583,6 +44616,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -54247,6 +54289,15 @@ class _StringsId extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -63995,6 +64046,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -73152,6 +73212,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -82320,6 +82389,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -92021,6 +92099,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -101779,6 +101866,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -111511,6 +111607,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -121047,6 +121152,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -130696,6 +130810,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -140322,6 +140445,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -149180,6 +149312,14 @@ class _StringsZhCn extends _StringsEn {
       '这些条目还没有确认的作品身份。搜索并选中正确的作品即可完成刮削。';
   @override
   String get video_source_scrape_enabled_toggle => '启用此来源的刮削';
+  @override
+  String get video_discovery_anidb_identity_confirm_title => '确认作品身份';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB 上有多个可能的匹配。选中正确的作品后，下载导入将直接按该身份刮削；跳过则可稍后在待确认列表手动指定。';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      '未能在 AniDB 识别该作品：仍会正常下载，导入后在待确认列表等待手动指定身份。';
 }
 
 // Path: <root>
@@ -158057,6 +158197,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 /// Flat map(s) containing all translations.
@@ -166466,6 +166615,12 @@ extension on _StringsEn {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -174871,6 +175026,12 @@ extension on _StringsAr {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -183319,6 +183480,12 @@ extension on _StringsDe {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -191759,6 +191926,12 @@ extension on _StringsEs {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -200207,6 +200380,12 @@ extension on _StringsFr {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -208627,6 +208806,12 @@ extension on _StringsId {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -217068,6 +217253,12 @@ extension on _StringsIt {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -225439,6 +225630,12 @@ extension on _StringsJa {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -233813,6 +234010,12 @@ extension on _StringsKo {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -242248,6 +242451,12 @@ extension on _StringsNl {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -250678,6 +250887,12 @@ extension on _StringsPtBr {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -259114,6 +259329,12 @@ extension on _StringsRu {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -267523,6 +267744,12 @@ extension on _StringsTh {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -275948,6 +276175,12 @@ extension on _StringsTr {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -284366,6 +284599,12 @@ extension on _StringsVi {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -292715,6 +292954,12 @@ extension on _StringsZhCn {
         return '这些条目还没有确认的作品身份。搜索并选中正确的作品即可完成刮削。';
       case 'video_source_scrape_enabled_toggle':
         return '启用此来源的刮削';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return '确认作品身份';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB 上有多个可能的匹配。选中正确的作品后，下载导入将直接按该身份刮削；跳过则可稍后在待确认列表手动指定。';
+      case 'video_discovery_anidb_identity_not_found':
+        return '未能在 AniDB 识别该作品：仍会正常下载，导入后在待确认列表等待手动指定身份。';
       default:
         return null;
     }
@@ -301065,6 +301310,12 @@ extension on _StringsZhHk {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
