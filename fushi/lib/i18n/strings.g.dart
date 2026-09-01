@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69598 (4094 per locale)
+/// Strings: 69649 (4097 per locale)
 ///
-/// Built on 2026-08-31 at 05:08 UTC
+/// Built on 2026-09-01 at 07:01 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5373,10 +5373,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get network_proxy_invalid => 'Invalid proxy. Use host:port';
   String get network_proxy_label => 'Network proxy';
   String get section_network => 'Network';
-  String get network_proxy_p2p_label =>
-      'Route P2P (torrent) traffic through the proxy';
-  String get network_proxy_p2p_warning =>
-      'Off by default: P2P connects directly. Routing it through the proxy can reduce speed, and many proxy providers forbid BitTorrent traffic, so your proxy account may be throttled, warned or terminated. Applies to the built-in engine; an external qBittorrent uses its own proxy settings.';
   String get video_ajatt_settings_hint =>
       'Free Japanese subtitle archive (kitsunekko mirror). No account needed; subtitle files download from GitHub.';
   String get video_ajatt_enabled_hint =>
@@ -5614,6 +5610,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_download_source_github => 'GitHub direct';
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -14746,11 +14748,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get section_network => 'الشبكة';
   @override
-  String get network_proxy_p2p_label => 'تمرير حركة P2P (torrent) عبر الوكيل';
-  @override
-  String get network_proxy_p2p_warning =>
-      'معطّل افتراضيًا؛ يتصل P2P مباشرة. قد يؤدي التمرير عبر الوكيل إلى خفض السرعة، وكثير من مزودي الوكلاء يحظرون حركة BitTorrent: قد يتم تقييد حساب الوكيل أو تحذيره أو إنهاؤه. ينطبق على المحرك المدمج فقط؛ يستخدم qBittorrent الخارجي إعدادات الوكيل الخاصة به.';
-  @override
   String get video_ajatt_settings_hint =>
       'أرشيف مجاني للترجمات اليابانية (مرآة kitsunekko). لا يتطلب حسابًا؛ تُنزَّل ملفات الترجمة من GitHub.';
   @override
@@ -15140,6 +15137,17 @@ class _StringsAr extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -24485,12 +24493,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get section_network => 'Netzwerk';
   @override
-  String get network_proxy_p2p_label =>
-      'P2P-(Torrent-)Verkehr über den Proxy leiten';
-  @override
-  String get network_proxy_p2p_warning =>
-      'Standardmäßig aus – P2P verbindet sich direkt. Über den Proxy kann die Geschwindigkeit sinken, und viele Proxy-Anbieter verbieten BitTorrent-Verkehr: Dein Proxy-Konto kann gedrosselt, verwarnt oder gekündigt werden. Gilt nur für die integrierte Engine; ein externes qBittorrent nutzt seine eigenen Proxy-Einstellungen.';
-  @override
   String get video_ajatt_settings_hint =>
       'Kostenloses Archiv japanischer Untertitel (kitsunekko-Spiegel). Kein Konto nötig; Untertiteldateien werden von GitHub geladen.';
   @override
@@ -24888,6 +24890,17 @@ class _StringsDe extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -34277,12 +34290,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get section_network => 'Red';
   @override
-  String get network_proxy_p2p_label =>
-      'Enrutar el tráfico P2P (torrent) por el proxy';
-  @override
-  String get network_proxy_p2p_warning =>
-      'Desactivado de forma predeterminada: P2P se conecta directamente. Pasar por el proxy puede reducir la velocidad y muchos proveedores de proxy prohíben el tráfico BitTorrent: su cuenta de proxy podría ser limitada, advertida o cancelada. Solo se aplica al motor integrado; un qBittorrent externo usa su propia configuración de proxy.';
-  @override
   String get video_ajatt_settings_hint =>
       'Archivo gratuito de subtítulos en japonés (réplica de kitsunekko). No requiere cuenta; los archivos se descargan desde GitHub.';
   @override
@@ -34683,6 +34690,17 @@ class _StringsEs extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -44104,12 +44122,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get section_network => 'Réseau';
   @override
-  String get network_proxy_p2p_label =>
-      'Faire passer le trafic P2P (torrent) par le proxy';
-  @override
-  String get network_proxy_p2p_warning =>
-      'Désactivé par défaut : le P2P se connecte directement. Passer par le proxy peut réduire la vitesse, et de nombreux fournisseurs de proxy interdisent le trafic BitTorrent : votre compte proxy peut être bridé, averti ou résilié. Ne s\'applique qu\'au moteur intégré ; un qBittorrent externe utilise ses propres paramètres de proxy.';
-  @override
   String get video_ajatt_settings_hint =>
       'Archive gratuite de sous-titres japonais (miroir kitsunekko). Aucun compte requis ; les fichiers sont téléchargés depuis GitHub.';
   @override
@@ -44513,6 +44525,17 @@ class _StringsFr extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -53760,12 +53783,6 @@ class _StringsId extends _StringsEn {
   @override
   String get section_network => 'Jaringan';
   @override
-  String get network_proxy_p2p_label =>
-      'Rutekan lalu lintas P2P (torrent) melalui proksi';
-  @override
-  String get network_proxy_p2p_warning =>
-      'Nonaktif secara default — P2P terhubung langsung. Melewati proksi dapat menurunkan kecepatan, dan banyak penyedia proksi melarang lalu lintas BitTorrent: akun proksi Anda bisa dibatasi, diperingatkan, atau dihentikan. Hanya berlaku untuk mesin bawaan; qBittorrent eksternal memakai pengaturan proksinya sendiri.';
-  @override
   String get video_ajatt_settings_hint =>
       'Arsip subtitle bahasa Jepang gratis (cermin kitsunekko). Tidak perlu akun; berkas subtitle diunduh dari GitHub.';
   @override
@@ -54162,6 +54179,17 @@ class _StringsId extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -63487,12 +63515,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get section_network => 'Rete';
   @override
-  String get network_proxy_p2p_label =>
-      'Instrada il traffico P2P (torrent) tramite il proxy';
-  @override
-  String get network_proxy_p2p_warning =>
-      'Disattivato per impostazione predefinita: il P2P si connette direttamente. Passare dal proxy può ridurre la velocità e molti provider proxy vietano il traffico BitTorrent: l\'account proxy potrebbe essere limitato, avvisato o chiuso. Vale solo per il motore integrato; un qBittorrent esterno usa le proprie impostazioni proxy.';
-  @override
   String get video_ajatt_settings_hint =>
       'Archivio gratuito di sottotitoli giapponesi (mirror kitsunekko). Nessun account richiesto; i file vengono scaricati da GitHub.';
   @override
@@ -63895,6 +63917,17 @@ class _StringsIt extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -72653,11 +72686,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get section_network => 'ネットワーク';
   @override
-  String get network_proxy_p2p_label => 'P2P（torrent）通信をプロキシ経由にする';
-  @override
-  String get network_proxy_p2p_warning =>
-      '既定ではオフで、P2P は直接接続します。プロキシ経由にすると速度が低下する場合があり、多くのプロキシ事業者は BitTorrent 通信を禁止しているため、プロキシアカウントが帯域制限・警告・停止される恐れがあります。内蔵エンジンにのみ適用され、外部 qBittorrent は自身のプロキシ設定を使用します。';
-  @override
   String get video_ajatt_settings_hint =>
       '無料の日本語字幕アーカイブ（kitsunekko ミラー）。アカウント不要。字幕ファイルは GitHub からダウンロードされます。';
   @override
@@ -73037,6 +73065,17 @@ class _StringsJa extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -81808,11 +81847,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get section_network => '네트워크';
   @override
-  String get network_proxy_p2p_label => 'P2P(토렌트) 전송을 프록시로 라우팅';
-  @override
-  String get network_proxy_p2p_warning =>
-      '기본적으로 꺼져 있으며 P2P는 직접 연결합니다. 프록시를 거치면 속도가 떨어질 수 있고, 많은 프록시 제공업체가 BitTorrent 트래픽을 금지하므로 프록시 계정이 속도 제한·경고·해지될 수 있습니다. 내장 엔진에만 적용되며 외부 qBittorrent는 자체 프록시 설정을 사용합니다.';
-  @override
   String get video_ajatt_settings_hint =>
       '무료 일본어 자막 아카이브(kitsunekko 미러). 계정 불필요. 자막 파일은 GitHub에서 다운로드됩니다.';
   @override
@@ -82190,6 +82224,17 @@ class _StringsKo extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -91471,12 +91516,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get section_network => 'Netwerk';
   @override
-  String get network_proxy_p2p_label =>
-      'P2P-verkeer (torrent) via de proxy leiden';
-  @override
-  String get network_proxy_p2p_warning =>
-      'Standaard uit: P2P maakt rechtstreeks verbinding. Via de proxy kan de snelheid dalen en veel proxyaanbieders verbieden BitTorrent-verkeer: je proxyaccount kan worden afgeknepen, gewaarschuwd of opgezegd. Geldt alleen voor de ingebouwde engine; een externe qBittorrent gebruikt zijn eigen proxy-instellingen.';
-  @override
   String get video_ajatt_settings_hint =>
       'Gratis archief met Japanse ondertitels (kitsunekko-mirror). Geen account nodig; bestanden worden van GitHub gedownload.';
   @override
@@ -91876,6 +91915,17 @@ class _StringsNl extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -101214,12 +101264,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get section_network => 'Rede';
   @override
-  String get network_proxy_p2p_label =>
-      'Rotear o tráfego P2P (torrent) pelo proxy';
-  @override
-  String get network_proxy_p2p_warning =>
-      'Desativado por padrão: o P2P se conecta diretamente. Passar pelo proxy pode reduzir a velocidade, e muitos provedores de proxy proíbem tráfego BitTorrent: sua conta de proxy pode ser limitada, advertida ou encerrada. Aplica-se apenas ao mecanismo integrado; um qBittorrent externo usa suas próprias configurações de proxy.';
-  @override
   String get video_ajatt_settings_hint =>
       'Arquivo gratuito de legendas em japonês (espelho do kitsunekko). Não precisa de conta; os arquivos são baixados do GitHub.';
   @override
@@ -101619,6 +101663,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -110931,12 +110986,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get section_network => 'Сеть';
   @override
-  String get network_proxy_p2p_label =>
-      'Пропускать P2P-трафик (torrent) через прокси';
-  @override
-  String get network_proxy_p2p_warning =>
-      'По умолчанию выключено — P2P подключается напрямую. Через прокси скорость может снизиться, а многие прокси-провайдеры запрещают BitTorrent-трафик: аккаунт прокси могут ограничить, предупредить или заблокировать. Действует только для встроенного движка; внешний qBittorrent использует собственные настройки прокси.';
-  @override
   String get video_ajatt_settings_hint =>
       'Бесплатный архив японских субтитров (зеркало kitsunekko). Аккаунт не нужен; файлы скачиваются с GitHub.';
   @override
@@ -111336,6 +111385,17 @@ class _StringsRu extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -120461,12 +120521,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get section_network => 'เครือข่าย';
   @override
-  String get network_proxy_p2p_label =>
-      'ส่งการรับส่งข้อมูล P2P (torrent) ผ่านพร็อกซี';
-  @override
-  String get network_proxy_p2p_warning =>
-      'ปิดตามค่าเริ่มต้น P2P จะเชื่อมต่อโดยตรง การส่งผ่านพร็อกซีอาจทำให้ความเร็วลดลง และผู้ให้บริการพร็อกซีจำนวนมากห้ามการรับส่งข้อมูล BitTorrent บัญชีพร็อกซีของคุณอาจถูกจำกัดความเร็ว เตือน หรือยกเลิก มีผลเฉพาะเอนจินในตัวเท่านั้น qBittorrent ภายนอกใช้การตั้งค่าพร็อกซีของตัวเอง';
-  @override
   String get video_ajatt_settings_hint =>
       'คลังซับไตเติลภาษาญี่ปุ่นฟรี (มิเรอร์ kitsunekko) ไม่ต้องใช้บัญชี ไฟล์ซับไตเติลดาวน์โหลดจาก GitHub';
   @override
@@ -120857,6 +120911,17 @@ class _StringsTh extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -130089,12 +130154,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get section_network => 'Ağ';
   @override
-  String get network_proxy_p2p_label =>
-      'P2P (torrent) trafiğini proxy üzerinden yönlendir';
-  @override
-  String get network_proxy_p2p_warning =>
-      'Varsayılan olarak kapalı; P2P doğrudan bağlanır. Proxy üzerinden geçmek hızı düşürebilir ve birçok proxy sağlayıcısı BitTorrent trafiğini yasaklar: proxy hesabınız kısıtlanabilir, uyarılabilir veya kapatılabilir. Yalnızca yerleşik motor için geçerlidir; harici qBittorrent kendi proxy ayarlarını kullanır.';
-  @override
   String get video_ajatt_settings_hint =>
       'Ücretsiz Japonca altyazı arşivi (kitsunekko yansıması). Hesap gerekmez; altyazı dosyaları GitHub\'dan indirilir.';
   @override
@@ -130491,6 +130550,17 @@ class _StringsTr extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -139703,12 +139773,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get section_network => 'Mạng';
   @override
-  String get network_proxy_p2p_label =>
-      'Định tuyến lưu lượng P2P (torrent) qua proxy';
-  @override
-  String get network_proxy_p2p_warning =>
-      'Mặc định tắt — P2P kết nối trực tiếp. Đi qua proxy có thể làm giảm tốc độ, và nhiều nhà cung cấp proxy cấm lưu lượng BitTorrent: tài khoản proxy của bạn có thể bị giới hạn, cảnh báo hoặc chấm dứt. Chỉ áp dụng cho engine tích hợp; qBittorrent bên ngoài dùng cài đặt proxy riêng.';
-  @override
   String get video_ajatt_settings_hint =>
       'Kho phụ đề tiếng Nhật miễn phí (bản sao kitsunekko). Không cần tài khoản; tệp phụ đề tải từ GitHub.';
   @override
@@ -140102,6 +140166,17 @@ class _StringsVi extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -148580,11 +148655,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get section_network => '网络';
   @override
-  String get network_proxy_p2p_label => 'P2P（torrent）传输走代理';
-  @override
-  String get network_proxy_p2p_warning =>
-      '默认关闭，P2P 直连。走代理可能降低速度；且不少代理服务商禁止 BT 流量，可能导致代理账号被限速、警告甚至封禁。仅对内置引擎生效，外接 qBittorrent 请在其自身设置中配置。';
-  @override
   String get video_ajatt_settings_hint =>
       '免费日语字幕库（kitsunekko 镜像）。无需账号；字幕文件从 GitHub 下载。';
   @override
@@ -148947,6 +149017,17 @@ class _StringsZhCn extends _StringsEn {
   String get update_download_source_github => 'GitHub 直连';
   @override
   String update_download_source_proxy({required Object host}) => '代理站：${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P（torrent）代理';
+  @override
+  String get network_proxy_p2p_warning =>
+      '默认直连。走代理：全部 P2P 流量经全局代理——可能降速，且不少代理服务商禁止 BT 流量（限速、警告甚至封号）。混合：tracker 请求经代理、DHT 与 peer 直连——节点获取范围最大，但真实 IP 会暴露给 tracker/DHT/peer（只解决连通性，无隐私作用）。仅对内置引擎生效，外接 qBittorrent 请在其自身设置中配置。';
+  @override
+  String get network_proxy_p2p_mode_direct => '直连';
+  @override
+  String get network_proxy_p2p_mode_proxy => '走代理';
+  @override
+  String get network_proxy_p2p_mode_mixed => '混合';
 }
 
 // Path: <root>
@@ -157430,11 +157511,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get section_network => '網路';
   @override
-  String get network_proxy_p2p_label => 'P2P（torrent）傳輸走代理';
-  @override
-  String get network_proxy_p2p_warning =>
-      '預設關閉，P2P 直連。走代理可能降低速度；且不少代理服務商禁止 BT 流量，可能導致代理帳號被限速、警告甚至封禁。僅對內建引擎生效，外接 qBittorrent 請在其自身設定中配置。';
-  @override
   String get video_ajatt_settings_hint =>
       '免費日語字幕庫（kitsunekko 鏡像）。無需帳號；字幕檔案從 GitHub 下載。';
   @override
@@ -157809,6 +157885,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
+  String get network_proxy_p2p_mode_direct => 'Direct';
+  @override
+  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  @override
+  String get network_proxy_p2p_mode_mixed => 'Mixed';
 }
 
 /// Flat map(s) containing all translations.
@@ -165878,10 +165965,6 @@ extension on _StringsEn {
         return 'Network proxy';
       case 'section_network':
         return 'Network';
-      case 'network_proxy_p2p_label':
-        return 'Route P2P (torrent) traffic through the proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Off by default: P2P connects directly. Routing it through the proxy can reduce speed, and many proxy providers forbid BitTorrent traffic, so your proxy account may be throttled, warned or terminated. Applies to the built-in engine; an external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return 'Free Japanese subtitle archive (kitsunekko mirror). No account needed; subtitle files download from GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -166208,6 +166291,16 @@ extension on _StringsEn {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -174273,10 +174366,6 @@ extension on _StringsAr {
         return 'وكيل الشبكة';
       case 'section_network':
         return 'الشبكة';
-      case 'network_proxy_p2p_label':
-        return 'تمرير حركة P2P (torrent) عبر الوكيل';
-      case 'network_proxy_p2p_warning':
-        return 'معطّل افتراضيًا؛ يتصل P2P مباشرة. قد يؤدي التمرير عبر الوكيل إلى خفض السرعة، وكثير من مزودي الوكلاء يحظرون حركة BitTorrent: قد يتم تقييد حساب الوكيل أو تحذيره أو إنهاؤه. ينطبق على المحرك المدمج فقط؛ يستخدم qBittorrent الخارجي إعدادات الوكيل الخاصة به.';
       case 'video_ajatt_settings_hint':
         return 'أرشيف مجاني للترجمات اليابانية (مرآة kitsunekko). لا يتطلب حسابًا؛ تُنزَّل ملفات الترجمة من GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -174603,6 +174692,16 @@ extension on _StringsAr {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -182711,10 +182810,6 @@ extension on _StringsDe {
         return 'Netzwerk-Proxy';
       case 'section_network':
         return 'Netzwerk';
-      case 'network_proxy_p2p_label':
-        return 'P2P-(Torrent-)Verkehr über den Proxy leiten';
-      case 'network_proxy_p2p_warning':
-        return 'Standardmäßig aus – P2P verbindet sich direkt. Über den Proxy kann die Geschwindigkeit sinken, und viele Proxy-Anbieter verbieten BitTorrent-Verkehr: Dein Proxy-Konto kann gedrosselt, verwarnt oder gekündigt werden. Gilt nur für die integrierte Engine; ein externes qBittorrent nutzt seine eigenen Proxy-Einstellungen.';
       case 'video_ajatt_settings_hint':
         return 'Kostenloses Archiv japanischer Untertitel (kitsunekko-Spiegel). Kein Konto nötig; Untertiteldateien werden von GitHub geladen.';
       case 'video_ajatt_enabled_hint':
@@ -183041,6 +183136,16 @@ extension on _StringsDe {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -191141,10 +191246,6 @@ extension on _StringsEs {
         return 'Proxy de red';
       case 'section_network':
         return 'Red';
-      case 'network_proxy_p2p_label':
-        return 'Enrutar el tráfico P2P (torrent) por el proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Desactivado de forma predeterminada: P2P se conecta directamente. Pasar por el proxy puede reducir la velocidad y muchos proveedores de proxy prohíben el tráfico BitTorrent: su cuenta de proxy podría ser limitada, advertida o cancelada. Solo se aplica al motor integrado; un qBittorrent externo usa su propia configuración de proxy.';
       case 'video_ajatt_settings_hint':
         return 'Archivo gratuito de subtítulos en japonés (réplica de kitsunekko). No requiere cuenta; los archivos se descargan desde GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -191471,6 +191572,16 @@ extension on _StringsEs {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -199579,10 +199690,6 @@ extension on _StringsFr {
         return 'Proxy réseau';
       case 'section_network':
         return 'Réseau';
-      case 'network_proxy_p2p_label':
-        return 'Faire passer le trafic P2P (torrent) par le proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Désactivé par défaut : le P2P se connecte directement. Passer par le proxy peut réduire la vitesse, et de nombreux fournisseurs de proxy interdisent le trafic BitTorrent : votre compte proxy peut être bridé, averti ou résilié. Ne s\'applique qu\'au moteur intégré ; un qBittorrent externe utilise ses propres paramètres de proxy.';
       case 'video_ajatt_settings_hint':
         return 'Archive gratuite de sous-titres japonais (miroir kitsunekko). Aucun compte requis ; les fichiers sont téléchargés depuis GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -199909,6 +200016,16 @@ extension on _StringsFr {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -207989,10 +208106,6 @@ extension on _StringsId {
         return 'Proksi jaringan';
       case 'section_network':
         return 'Jaringan';
-      case 'network_proxy_p2p_label':
-        return 'Rutekan lalu lintas P2P (torrent) melalui proksi';
-      case 'network_proxy_p2p_warning':
-        return 'Nonaktif secara default — P2P terhubung langsung. Melewati proksi dapat menurunkan kecepatan, dan banyak penyedia proksi melarang lalu lintas BitTorrent: akun proksi Anda bisa dibatasi, diperingatkan, atau dihentikan. Hanya berlaku untuk mesin bawaan; qBittorrent eksternal memakai pengaturan proksinya sendiri.';
       case 'video_ajatt_settings_hint':
         return 'Arsip subtitle bahasa Jepang gratis (cermin kitsunekko). Tidak perlu akun; berkas subtitle diunduh dari GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -208319,6 +208432,16 @@ extension on _StringsId {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -216420,10 +216543,6 @@ extension on _StringsIt {
         return 'Proxy di rete';
       case 'section_network':
         return 'Rete';
-      case 'network_proxy_p2p_label':
-        return 'Instrada il traffico P2P (torrent) tramite il proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Disattivato per impostazione predefinita: il P2P si connette direttamente. Passare dal proxy può ridurre la velocità e molti provider proxy vietano il traffico BitTorrent: l\'account proxy potrebbe essere limitato, avvisato o chiuso. Vale solo per il motore integrato; un qBittorrent esterno usa le proprie impostazioni proxy.';
       case 'video_ajatt_settings_hint':
         return 'Archivio gratuito di sottotitoli giapponesi (mirror kitsunekko). Nessun account richiesto; i file vengono scaricati da GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -216750,6 +216869,16 @@ extension on _StringsIt {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -224783,10 +224912,6 @@ extension on _StringsJa {
         return 'ネットワークプロキシ';
       case 'section_network':
         return 'ネットワーク';
-      case 'network_proxy_p2p_label':
-        return 'P2P（torrent）通信をプロキシ経由にする';
-      case 'network_proxy_p2p_warning':
-        return '既定ではオフで、P2P は直接接続します。プロキシ経由にすると速度が低下する場合があり、多くのプロキシ事業者は BitTorrent 通信を禁止しているため、プロキシアカウントが帯域制限・警告・停止される恐れがあります。内蔵エンジンにのみ適用され、外部 qBittorrent は自身のプロキシ設定を使用します。';
       case 'video_ajatt_settings_hint':
         return '無料の日本語字幕アーカイブ（kitsunekko ミラー）。アカウント不要。字幕ファイルは GitHub からダウンロードされます。';
       case 'video_ajatt_enabled_hint':
@@ -225111,6 +225236,16 @@ extension on _StringsJa {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -233146,10 +233281,6 @@ extension on _StringsKo {
         return '네트워크 프록시';
       case 'section_network':
         return '네트워크';
-      case 'network_proxy_p2p_label':
-        return 'P2P(토렌트) 전송을 프록시로 라우팅';
-      case 'network_proxy_p2p_warning':
-        return '기본적으로 꺼져 있으며 P2P는 직접 연결합니다. 프록시를 거치면 속도가 떨어질 수 있고, 많은 프록시 제공업체가 BitTorrent 트래픽을 금지하므로 프록시 계정이 속도 제한·경고·해지될 수 있습니다. 내장 엔진에만 적용되며 외부 qBittorrent는 자체 프록시 설정을 사용합니다.';
       case 'video_ajatt_settings_hint':
         return '무료 일본어 자막 아카이브(kitsunekko 미러). 계정 불필요. 자막 파일은 GitHub에서 다운로드됩니다.';
       case 'video_ajatt_enabled_hint':
@@ -233475,6 +233606,16 @@ extension on _StringsKo {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -241570,10 +241711,6 @@ extension on _StringsNl {
         return 'Netwerkproxy';
       case 'section_network':
         return 'Netwerk';
-      case 'network_proxy_p2p_label':
-        return 'P2P-verkeer (torrent) via de proxy leiden';
-      case 'network_proxy_p2p_warning':
-        return 'Standaard uit: P2P maakt rechtstreeks verbinding. Via de proxy kan de snelheid dalen en veel proxyaanbieders verbieden BitTorrent-verkeer: je proxyaccount kan worden afgeknepen, gewaarschuwd of opgezegd. Geldt alleen voor de ingebouwde engine; een externe qBittorrent gebruikt zijn eigen proxy-instellingen.';
       case 'video_ajatt_settings_hint':
         return 'Gratis archief met Japanse ondertitels (kitsunekko-mirror). Geen account nodig; bestanden worden van GitHub gedownload.';
       case 'video_ajatt_enabled_hint':
@@ -241900,6 +242037,16 @@ extension on _StringsNl {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -249990,10 +250137,6 @@ extension on _StringsPtBr {
         return 'Proxy de rede';
       case 'section_network':
         return 'Rede';
-      case 'network_proxy_p2p_label':
-        return 'Rotear o tráfego P2P (torrent) pelo proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Desativado por padrão: o P2P se conecta diretamente. Passar pelo proxy pode reduzir a velocidade, e muitos provedores de proxy proíbem tráfego BitTorrent: sua conta de proxy pode ser limitada, advertida ou encerrada. Aplica-se apenas ao mecanismo integrado; um qBittorrent externo usa suas próprias configurações de proxy.';
       case 'video_ajatt_settings_hint':
         return 'Arquivo gratuito de legendas em japonês (espelho do kitsunekko). Não precisa de conta; os arquivos são baixados do GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -250320,6 +250463,16 @@ extension on _StringsPtBr {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -258416,10 +258569,6 @@ extension on _StringsRu {
         return 'Сетевой прокси';
       case 'section_network':
         return 'Сеть';
-      case 'network_proxy_p2p_label':
-        return 'Пропускать P2P-трафик (torrent) через прокси';
-      case 'network_proxy_p2p_warning':
-        return 'По умолчанию выключено — P2P подключается напрямую. Через прокси скорость может снизиться, а многие прокси-провайдеры запрещают BitTorrent-трафик: аккаунт прокси могут ограничить, предупредить или заблокировать. Действует только для встроенного движка; внешний qBittorrent использует собственные настройки прокси.';
       case 'video_ajatt_settings_hint':
         return 'Бесплатный архив японских субтитров (зеркало kitsunekko). Аккаунт не нужен; файлы скачиваются с GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -258746,6 +258895,16 @@ extension on _StringsRu {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -266815,10 +266974,6 @@ extension on _StringsTh {
         return 'พร็อกซีเครือข่าย';
       case 'section_network':
         return 'เครือข่าย';
-      case 'network_proxy_p2p_label':
-        return 'ส่งการรับส่งข้อมูล P2P (torrent) ผ่านพร็อกซี';
-      case 'network_proxy_p2p_warning':
-        return 'ปิดตามค่าเริ่มต้น P2P จะเชื่อมต่อโดยตรง การส่งผ่านพร็อกซีอาจทำให้ความเร็วลดลง และผู้ให้บริการพร็อกซีจำนวนมากห้ามการรับส่งข้อมูล BitTorrent บัญชีพร็อกซีของคุณอาจถูกจำกัดความเร็ว เตือน หรือยกเลิก มีผลเฉพาะเอนจินในตัวเท่านั้น qBittorrent ภายนอกใช้การตั้งค่าพร็อกซีของตัวเอง';
       case 'video_ajatt_settings_hint':
         return 'คลังซับไตเติลภาษาญี่ปุ่นฟรี (มิเรอร์ kitsunekko) ไม่ต้องใช้บัญชี ไฟล์ซับไตเติลดาวน์โหลดจาก GitHub';
       case 'video_ajatt_enabled_hint':
@@ -267145,6 +267300,16 @@ extension on _StringsTh {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -275230,10 +275395,6 @@ extension on _StringsTr {
         return 'Ağ proxy\'si';
       case 'section_network':
         return 'Ağ';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) trafiğini proxy üzerinden yönlendir';
-      case 'network_proxy_p2p_warning':
-        return 'Varsayılan olarak kapalı; P2P doğrudan bağlanır. Proxy üzerinden geçmek hızı düşürebilir ve birçok proxy sağlayıcısı BitTorrent trafiğini yasaklar: proxy hesabınız kısıtlanabilir, uyarılabilir veya kapatılabilir. Yalnızca yerleşik motor için geçerlidir; harici qBittorrent kendi proxy ayarlarını kullanır.';
       case 'video_ajatt_settings_hint':
         return 'Ücretsiz Japonca altyazı arşivi (kitsunekko yansıması). Hesap gerekmez; altyazı dosyaları GitHub\'dan indirilir.';
       case 'video_ajatt_enabled_hint':
@@ -275560,6 +275721,16 @@ extension on _StringsTr {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -283638,10 +283809,6 @@ extension on _StringsVi {
         return 'Proxy mạng';
       case 'section_network':
         return 'Mạng';
-      case 'network_proxy_p2p_label':
-        return 'Định tuyến lưu lượng P2P (torrent) qua proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Mặc định tắt — P2P kết nối trực tiếp. Đi qua proxy có thể làm giảm tốc độ, và nhiều nhà cung cấp proxy cấm lưu lượng BitTorrent: tài khoản proxy của bạn có thể bị giới hạn, cảnh báo hoặc chấm dứt. Chỉ áp dụng cho engine tích hợp; qBittorrent bên ngoài dùng cài đặt proxy riêng.';
       case 'video_ajatt_settings_hint':
         return 'Kho phụ đề tiếng Nhật miễn phí (bản sao kitsunekko). Không cần tài khoản; tệp phụ đề tải từ GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -283968,6 +284135,16 @@ extension on _StringsVi {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -291979,10 +292156,6 @@ extension on _StringsZhCn {
         return '网络代理';
       case 'section_network':
         return '网络';
-      case 'network_proxy_p2p_label':
-        return 'P2P（torrent）传输走代理';
-      case 'network_proxy_p2p_warning':
-        return '默认关闭，P2P 直连。走代理可能降低速度；且不少代理服务商禁止 BT 流量，可能导致代理账号被限速、警告甚至封禁。仅对内置引擎生效，外接 qBittorrent 请在其自身设置中配置。';
       case 'video_ajatt_settings_hint':
         return '免费日语字幕库（kitsunekko 镜像）。无需账号；字幕文件从 GitHub 下载。';
       case 'video_ajatt_enabled_hint':
@@ -292307,6 +292480,16 @@ extension on _StringsZhCn {
         return 'GitHub 直连';
       case 'update_download_source_proxy':
         return ({required Object host}) => '代理站：${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P（torrent）代理';
+      case 'network_proxy_p2p_warning':
+        return '默认直连。走代理：全部 P2P 流量经全局代理——可能降速，且不少代理服务商禁止 BT 流量（限速、警告甚至封号）。混合：tracker 请求经代理、DHT 与 peer 直连——节点获取范围最大，但真实 IP 会暴露给 tracker/DHT/peer（只解决连通性，无隐私作用）。仅对内置引擎生效，外接 qBittorrent 请在其自身设置中配置。';
+      case 'network_proxy_p2p_mode_direct':
+        return '直连';
+      case 'network_proxy_p2p_mode_proxy':
+        return '走代理';
+      case 'network_proxy_p2p_mode_mixed':
+        return '混合';
       default:
         return null;
     }
@@ -300319,10 +300502,6 @@ extension on _StringsZhHk {
         return '網路代理';
       case 'section_network':
         return '網路';
-      case 'network_proxy_p2p_label':
-        return 'P2P（torrent）傳輸走代理';
-      case 'network_proxy_p2p_warning':
-        return '預設關閉，P2P 直連。走代理可能降低速度；且不少代理服務商禁止 BT 流量，可能導致代理帳號被限速、警告甚至封禁。僅對內建引擎生效，外接 qBittorrent 請在其自身設定中配置。';
       case 'video_ajatt_settings_hint':
         return '免費日語字幕庫（kitsunekko 鏡像）。無需帳號；字幕檔案從 GitHub 下載。';
       case 'video_ajatt_enabled_hint':
@@ -300647,6 +300826,16 @@ extension on _StringsZhHk {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'network_proxy_p2p_mode_direct':
+        return 'Direct';
+      case 'network_proxy_p2p_mode_proxy':
+        return 'Via proxy';
+      case 'network_proxy_p2p_mode_mixed':
+        return 'Mixed';
       default:
         return null;
     }
