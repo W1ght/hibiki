@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69649 (4097 per locale)
+/// Strings: 69904 (4112 per locale)
 ///
-/// Built on 2026-09-01 at 10:52 UTC
+/// Built on 2026-09-01 at 15:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4712,7 +4712,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_import_folder_as_source_hint =>
       'Keep scanning this folder for new manga';
   String get download_no_managed_video_source =>
-      'No managed video source yet. Downloads need a local video folder to land in.';
+      'No managed video source yet. Add a local folder to store downloaded files so finished videos can land in your library.';
   String get download_add_video_source => 'Add video source';
   String get video_subtitle_prev_cue_align => 'Align previous line to now';
   String get video_subtitle_next_cue_align => 'Align next line to now';
@@ -5620,6 +5620,31 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Credentials apply to HTTP requests only; the built-in torrent engine cannot use them';
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_empty => 'No activity in this period';
+  String get stat_center_title => 'Statistics center';
+  String get stat_center_tab_overview => 'Overview';
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -13634,7 +13659,7 @@ class _StringsAr extends _StringsEn {
       'الاستمرار بفحص هذا المجلد بحثاً عن مانغا جديدة';
   @override
   String get download_no_managed_video_source =>
-      'لا يوجد مصدر فيديو مُدار بعد. التحميلات تحتاج مجلد فيديو محلي للحفظ فيه.';
+      'لا يوجد مصدر فيديو مُدار بعد. أضف مجلدًا محليًا لحفظ الملفات التي يتم تنزيلها كي تدخل مقاطع الفيديو المكتملة إلى المكتبة.';
   @override
   String get download_add_video_source => 'إضافة مصدر فيديو';
   @override
@@ -15155,6 +15180,46 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -23358,7 +23423,7 @@ class _StringsDe extends _StringsEn {
       'Diesen Ordner weiterhin nach neuem Manga durchsuchen';
   @override
   String get download_no_managed_video_source =>
-      'Noch keine verwaltete Videoquelle. Downloads benötigen einen lokalen Videoordner als Ziel.';
+      'Noch keine verwaltete Videoquelle. Füge einen lokalen Ordner für die heruntergeladenen Dateien hinzu, damit fertige Videos in der Bibliothek landen.';
   @override
   String get download_add_video_source => 'Videoquelle hinzufügen';
   @override
@@ -24913,6 +24978,46 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -33152,7 +33257,7 @@ class _StringsEs extends _StringsEn {
       'Seguir escaneando esta carpeta en busca de nuevo manga';
   @override
   String get download_no_managed_video_source =>
-      'Aún no hay fuente de vídeo gestionada. Las descargas necesitan una carpeta de vídeo local donde aterrizar.';
+      'Aún no hay fuente de vídeo gestionada. Añade una carpeta local donde guardar los archivos descargados para que los vídeos terminados entren en la biblioteca.';
   @override
   String get download_add_video_source => 'Añadir fuente de vídeo';
   @override
@@ -34720,6 +34825,46 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -42988,7 +43133,7 @@ class _StringsFr extends _StringsEn {
       'Scanner continuellement ce dossier pour de nouveaux manga';
   @override
   String get download_no_managed_video_source =>
-      'Aucune source vidéo gérée. Les téléchargements ont besoin d\'un dossier vidéo local.';
+      'Aucune source vidéo gérée. Ajoutez un dossier local où stocker les fichiers téléchargés pour que les vidéos terminées entrent dans la bibliothèque.';
   @override
   String get download_add_video_source => 'Ajouter une source vidéo';
   @override
@@ -44562,6 +44707,46 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -52678,7 +52863,7 @@ class _StringsId extends _StringsEn {
       'Terus pindai folder ini untuk manga baru';
   @override
   String get download_no_managed_video_source =>
-      'Belum ada sumber video terkelola. Unduhan memerlukan folder video lokal sebagai tujuan.';
+      'Belum ada sumber video terkelola. Tambahkan folder lokal untuk menyimpan berkas yang diunduh agar video yang selesai masuk ke pustaka.';
   @override
   String get download_add_video_source => 'Tambah sumber video';
   @override
@@ -54221,6 +54406,46 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -62407,7 +62632,7 @@ class _StringsIt extends _StringsEn {
       'Continua a scansionare questa cartella per nuovi manga';
   @override
   String get download_no_managed_video_source =>
-      'Nessuna fonte video gestita. I download necessitano di una cartella video locale come destinazione.';
+      'Nessuna fonte video gestita. Aggiungi una cartella locale in cui salvare i file scaricati, così i video completati entrano nella libreria.';
   @override
   String get download_add_video_source => 'Aggiungi fonte video';
   @override
@@ -63964,6 +64189,46 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -71646,7 +71911,7 @@ class _StringsJa extends _StringsEn {
   String get manga_import_folder_as_source_hint => 'このフォルダを継続スキャンして新しいマンガを検出';
   @override
   String get download_no_managed_video_source =>
-      '管理対象の動画ソースがまだありません。ダウンロードにはローカル動画フォルダが必要です。';
+      '管理対象の動画ソースがまだありません。ダウンロードしたファイルを保存するローカルフォルダを追加すると、完了した動画がライブラリに入ります。';
   @override
   String get download_add_video_source => '動画ソースを追加';
   @override
@@ -73112,6 +73377,46 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -80806,7 +81111,7 @@ class _StringsKo extends _StringsEn {
   String get manga_import_folder_as_source_hint => '이 폴더에서 새 만화를 계속 스캔';
   @override
   String get download_no_managed_video_source =>
-      '관리 중인 동영상 소스가 없습니다. 다운로드를 저장할 로컬 동영상 폴더가 필요합니다.';
+      '관리 중인 동영상 소스가 없습니다. 다운로드한 파일을 보관할 로컬 폴더를 추가해야 완료된 동영상이 라이브러리에 등록됩니다.';
   @override
   String get download_add_video_source => '동영상 소스 추가';
   @override
@@ -82271,6 +82576,46 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -90418,7 +90763,7 @@ class _StringsNl extends _StringsEn {
       'Blijf deze map scannen op nieuwe manga';
   @override
   String get download_no_managed_video_source =>
-      'Nog geen beheerde videobron. Downloads hebben een lokale videomap nodig om in te landen.';
+      'Nog geen beheerde videobron. Voeg een lokale map toe om de gedownloade bestanden in te bewaren, zodat voltooide video\'s in de bibliotheek landen.';
   @override
   String get download_add_video_source => 'Videobron toevoegen';
   @override
@@ -91968,6 +92313,46 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -100160,7 +100545,7 @@ class _StringsPtBr extends _StringsEn {
       'Continuar varrendo esta pasta para novos mangás';
   @override
   String get download_no_managed_video_source =>
-      'Nenhuma fonte de vídeo gerenciada ainda. Downloads precisam de uma pasta de vídeo local para salvar.';
+      'Nenhuma fonte de vídeo gerenciada ainda. Adicione uma pasta local para guardar os arquivos baixados, para que os vídeos concluídos entrem na biblioteca.';
   @override
   String get download_add_video_source => 'Adicionar fonte de vídeo';
   @override
@@ -101721,6 +102106,46 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -109892,7 +110317,7 @@ class _StringsRu extends _StringsEn {
       'Продолжать сканировать эту папку на наличие новой манги';
   @override
   String get download_no_managed_video_source =>
-      'Управляемый видеоисточник ещё не добавлен. Для загрузок нужна локальная видеопапка.';
+      'Управляемый видеоисточник ещё не добавлен. Добавьте локальную папку для хранения загруженных файлов, чтобы готовые видео попадали в библиотеку.';
   @override
   String get download_add_video_source => 'Добавить видеоисточник';
   @override
@@ -111450,6 +111875,46 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -119452,7 +119917,7 @@ class _StringsTh extends _StringsEn {
       'สแกนโฟลเดอร์นี้ต่อเนื่องเพื่อหามังงะใหม่';
   @override
   String get download_no_managed_video_source =>
-      'ยังไม่มีแหล่งวิดีโอที่จัดการ การดาวน์โหลดต้องมีโฟลเดอร์วิดีโอในเครื่องเพื่อจัดเก็บ';
+      'ยังไม่มีแหล่งวิดีโอที่จัดการ เพิ่มโฟลเดอร์ในเครื่องสำหรับเก็บไฟล์ที่ดาวน์โหลด เพื่อให้วิดีโอที่เสร็จแล้วเข้าคลัง';
   @override
   String get download_add_video_source => 'เพิ่มแหล่งวิดีโอ';
   @override
@@ -120980,6 +121445,46 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -129081,7 +129586,7 @@ class _StringsTr extends _StringsEn {
       'Yeni manga için bu klasörü taramaya devam et';
   @override
   String get download_no_managed_video_source =>
-      'Henüz yönetilen bir video kaynağı yok. İndirmelerin ineceği yerel bir video klasörü gerekiyor.';
+      'Henüz yönetilen bir video kaynağı yok. İndirilen dosyaların saklanacağı yerel bir klasör ekleyin ki tamamlanan videolar kitaplığa girsin.';
   @override
   String get download_add_video_source => 'Video kaynağı ekle';
   @override
@@ -130625,6 +131130,46 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -138704,7 +139249,7 @@ class _StringsVi extends _StringsEn {
       'Tiếp tục quét thư mục này để tìm truyện tranh mới';
   @override
   String get download_no_managed_video_source =>
-      'Chưa có nguồn video được quản lý. Tải xuống cần một thư mục video cục bộ để lưu.';
+      'Chưa có nguồn video được quản lý. Hãy thêm một thư mục cục bộ để lưu các tệp đã tải xuống, video hoàn tất mới vào được thư viện.';
   @override
   String get download_add_video_source => 'Thêm nguồn video';
   @override
@@ -140246,6 +140791,46 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -147695,7 +148280,7 @@ class _StringsZhCn extends _StringsEn {
   String get manga_import_folder_as_source_hint => '以后自动扫描此文件夹里的新漫画';
   @override
   String get download_no_managed_video_source =>
-      '还没有受管视频来源。下载完成的视频需要一个本地视频文件夹才能入库。';
+      '还没有受管视频来源。请添加一个存放下载文件的本地文件夹，下载完成的视频才能入库。';
   @override
   String get download_add_video_source => '添加视频来源';
   @override
@@ -149101,6 +149686,42 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       '无法制卡：当前没有可连接的已配对设备。请确认配对设备上的 Fushi 正在运行；如果要在本机制卡，请关闭「制卡到已配对设备」。';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      '关闭后：手动、扫描后、下载导入后与后台自动补刮都会跳过此来源。';
+  @override
+  String get video_source_scrape_work_missing =>
+      '该作品已不在当前来源计划中（文件可能已改名、移动或删除）。请重新刮削此来源刷新待确认列表。';
+  @override
+  String get video_source_scrape_pending_works => '待确认作品';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      '这些条目还没有确认的作品身份。搜索并选中正确的作品即可完成刮削。';
+  @override
+  String get video_source_scrape_enabled_toggle => '启用此来源的刮削';
+  @override
+  String get video_library_scrape_auto_backfill => '自动补齐缺失的作品资料';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      '进入视频库时，自动刮削仍未确认身份的条目。关闭后不再有任何后台元数据下载。';
+  @override
+  String get stat_detail_ungrouped => '未分组';
+  @override
+  String get stat_detail_empty => '此时段暂无记录';
+  @override
+  String get stat_center_title => '统计中心';
+  @override
+  String get stat_center_tab_overview => '总览';
+  @override
+  String get shortcut_action_video_dismiss_dict => '关闭词典';
+  @override
+  String get video_discovery_anidb_identity_confirm_title => '确认作品身份';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB 上有多个可能的匹配。选中正确的作品后，下载导入将直接按该身份刮削；跳过则可稍后在待确认列表手动指定。';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      '未能在 AniDB 识别该作品：仍会正常下载，导入后在待确认列表等待手动指定身份。';
 }
 
 // Path: <root>
@@ -156556,7 +157177,7 @@ class _StringsZhHk extends _StringsEn {
   String get manga_import_folder_as_source_hint => '以後自動掃描此資料夾裡的新漫畫';
   @override
   String get download_no_managed_video_source =>
-      '還沒有受管影片來源。下載完成的影片需要一個本地影片資料夾才能入庫。';
+      '還沒有受管影片來源。請新增一個存放下載檔案的本機資料夾，下載完成的影片才能入庫。';
   @override
   String get download_add_video_source => '添加影片來源';
   @override
@@ -157967,6 +158588,46 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 /// Flat map(s) containing all translations.
@@ -165092,7 +165753,7 @@ extension on _StringsEn {
       case 'manga_import_folder_as_source_hint':
         return 'Keep scanning this folder for new manga';
       case 'download_no_managed_video_source':
-        return 'No managed video source yet. Downloads need a local video folder to land in.';
+        return 'No managed video source yet. Add a local folder to store downloaded files so finished videos can land in your library.';
       case 'download_add_video_source':
         return 'Add video source';
       case 'video_subtitle_prev_cue_align':
@@ -166374,6 +167035,36 @@ extension on _StringsEn {
         return 'Credentials apply to HTTP requests only; the built-in torrent engine cannot use them';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -173495,7 +174186,7 @@ extension on _StringsAr {
       case 'manga_import_folder_as_source_hint':
         return 'الاستمرار بفحص هذا المجلد بحثاً عن مانغا جديدة';
       case 'download_no_managed_video_source':
-        return 'لا يوجد مصدر فيديو مُدار بعد. التحميلات تحتاج مجلد فيديو محلي للحفظ فيه.';
+        return 'لا يوجد مصدر فيديو مُدار بعد. أضف مجلدًا محليًا لحفظ الملفات التي يتم تنزيلها كي تدخل مقاطع الفيديو المكتملة إلى المكتبة.';
       case 'download_add_video_source':
         return 'إضافة مصدر فيديو';
       case 'video_subtitle_prev_cue_align':
@@ -174776,6 +175467,36 @@ extension on _StringsAr {
         return 'بيانات الاعتماد تُستخدم لطلبات HTTP فقط، ومحرك التورنت المدمج لا يمكنه استخدامها';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -181934,7 +182655,7 @@ extension on _StringsDe {
       case 'manga_import_folder_as_source_hint':
         return 'Diesen Ordner weiterhin nach neuem Manga durchsuchen';
       case 'download_no_managed_video_source':
-        return 'Noch keine verwaltete Videoquelle. Downloads benötigen einen lokalen Videoordner als Ziel.';
+        return 'Noch keine verwaltete Videoquelle. Füge einen lokalen Ordner für die heruntergeladenen Dateien hinzu, damit fertige Videos in der Bibliothek landen.';
       case 'download_add_video_source':
         return 'Videoquelle hinzufügen';
       case 'video_subtitle_prev_cue_align':
@@ -183222,6 +183943,36 @@ extension on _StringsDe {
         return 'Zugangsdaten gelten nur für HTTP-Anfragen; die integrierte Torrent-Engine kann sie nicht verwenden';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -190373,7 +191124,7 @@ extension on _StringsEs {
       case 'manga_import_folder_as_source_hint':
         return 'Seguir escaneando esta carpeta en busca de nuevo manga';
       case 'download_no_managed_video_source':
-        return 'Aún no hay fuente de vídeo gestionada. Las descargas necesitan una carpeta de vídeo local donde aterrizar.';
+        return 'Aún no hay fuente de vídeo gestionada. Añade una carpeta local donde guardar los archivos descargados para que los vídeos terminados entren en la biblioteca.';
       case 'download_add_video_source':
         return 'Añadir fuente de vídeo';
       case 'video_subtitle_prev_cue_align':
@@ -191660,6 +192411,36 @@ extension on _StringsEs {
         return 'Las credenciales solo se aplican a las solicitudes HTTP; el motor de torrents integrado no puede usarlas';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -198820,7 +199601,7 @@ extension on _StringsFr {
       case 'manga_import_folder_as_source_hint':
         return 'Scanner continuellement ce dossier pour de nouveaux manga';
       case 'download_no_managed_video_source':
-        return 'Aucune source vidéo gérée. Les téléchargements ont besoin d\'un dossier vidéo local.';
+        return 'Aucune source vidéo gérée. Ajoutez un dossier local où stocker les fichiers téléchargés pour que les vidéos terminées entrent dans la bibliothèque.';
       case 'download_add_video_source':
         return 'Ajouter une source vidéo';
       case 'video_subtitle_prev_cue_align':
@@ -200106,6 +200887,36 @@ extension on _StringsFr {
         return 'Les identifiants ne s\'appliquent qu\'aux requêtes HTTP ; le moteur torrent intégré ne peut pas les utiliser';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -207242,7 +208053,7 @@ extension on _StringsId {
       case 'manga_import_folder_as_source_hint':
         return 'Terus pindai folder ini untuk manga baru';
       case 'download_no_managed_video_source':
-        return 'Belum ada sumber video terkelola. Unduhan memerlukan folder video lokal sebagai tujuan.';
+        return 'Belum ada sumber video terkelola. Tambahkan folder lokal untuk menyimpan berkas yang diunduh agar video yang selesai masuk ke pustaka.';
       case 'download_add_video_source':
         return 'Tambah sumber video';
       case 'video_subtitle_prev_cue_align':
@@ -208524,6 +209335,36 @@ extension on _StringsId {
         return 'Kredensial hanya berlaku untuk permintaan HTTP; mesin torrent bawaan tidak dapat menggunakannya';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -215678,7 +216519,7 @@ extension on _StringsIt {
       case 'manga_import_folder_as_source_hint':
         return 'Continua a scansionare questa cartella per nuovi manga';
       case 'download_no_managed_video_source':
-        return 'Nessuna fonte video gestita. I download necessitano di una cartella video locale come destinazione.';
+        return 'Nessuna fonte video gestita. Aggiungi una cartella locale in cui salvare i file scaricati, così i video completati entrano nella libreria.';
       case 'download_add_video_source':
         return 'Aggiungi fonte video';
       case 'video_subtitle_prev_cue_align':
@@ -216963,6 +217804,36 @@ extension on _StringsIt {
         return 'Le credenziali valgono solo per le richieste HTTP; il motore torrent integrato non può usarle';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -224055,7 +224926,7 @@ extension on _StringsJa {
       case 'manga_import_folder_as_source_hint':
         return 'このフォルダを継続スキャンして新しいマンガを検出';
       case 'download_no_managed_video_source':
-        return '管理対象の動画ソースがまだありません。ダウンロードにはローカル動画フォルダが必要です。';
+        return '管理対象の動画ソースがまだありません。ダウンロードしたファイルを保存するローカルフォルダを追加すると、完了した動画がライブラリに入ります。';
       case 'download_add_video_source':
         return '動画ソースを追加';
       case 'video_subtitle_prev_cue_align':
@@ -225331,6 +226202,36 @@ extension on _StringsJa {
         return '認証情報は HTTP 通信にのみ適用されます。内蔵 torrent エンジンでは使用できません';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -232425,7 +233326,7 @@ extension on _StringsKo {
       case 'manga_import_folder_as_source_hint':
         return '이 폴더에서 새 만화를 계속 스캔';
       case 'download_no_managed_video_source':
-        return '관리 중인 동영상 소스가 없습니다. 다운로드를 저장할 로컬 동영상 폴더가 필요합니다.';
+        return '관리 중인 동영상 소스가 없습니다. 다운로드한 파일을 보관할 로컬 폴더를 추가해야 완료된 동영상이 라이브러리에 등록됩니다.';
       case 'download_add_video_source':
         return '동영상 소스 추가';
       case 'video_subtitle_prev_cue_align':
@@ -233702,6 +234603,36 @@ extension on _StringsKo {
         return '자격 증명은 HTTP 요청에만 적용되며, 내장 토렌트 엔진은 사용할 수 없습니다';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -240849,7 +241780,7 @@ extension on _StringsNl {
       case 'manga_import_folder_as_source_hint':
         return 'Blijf deze map scannen op nieuwe manga';
       case 'download_no_managed_video_source':
-        return 'Nog geen beheerde videobron. Downloads hebben een lokale videomap nodig om in te landen.';
+        return 'Nog geen beheerde videobron. Voeg een lokale map toe om de gedownloade bestanden in te bewaren, zodat voltooide video\'s in de bibliotheek landen.';
       case 'download_add_video_source':
         return 'Videobron toevoegen';
       case 'video_subtitle_prev_cue_align':
@@ -242135,6 +243066,36 @@ extension on _StringsNl {
         return 'Inloggegevens gelden alleen voor HTTP-verzoeken; de ingebouwde torrent-engine kan ze niet gebruiken';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -249278,7 +250239,7 @@ extension on _StringsPtBr {
       case 'manga_import_folder_as_source_hint':
         return 'Continuar varrendo esta pasta para novos mangás';
       case 'download_no_managed_video_source':
-        return 'Nenhuma fonte de vídeo gerenciada ainda. Downloads precisam de uma pasta de vídeo local para salvar.';
+        return 'Nenhuma fonte de vídeo gerenciada ainda. Adicione uma pasta local para guardar os arquivos baixados, para que os vídeos concluídos entrem na biblioteca.';
       case 'download_add_video_source':
         return 'Adicionar fonte de vídeo';
       case 'video_subtitle_prev_cue_align':
@@ -250563,6 +251524,36 @@ extension on _StringsPtBr {
         return 'As credenciais valem apenas para requisições HTTP; o motor de torrent integrado não consegue usá-las';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -257713,7 +258704,7 @@ extension on _StringsRu {
       case 'manga_import_folder_as_source_hint':
         return 'Продолжать сканировать эту папку на наличие новой манги';
       case 'download_no_managed_video_source':
-        return 'Управляемый видеоисточник ещё не добавлен. Для загрузок нужна локальная видеопапка.';
+        return 'Управляемый видеоисточник ещё не добавлен. Добавьте локальную папку для хранения загруженных файлов, чтобы готовые видео попадали в библиотеку.';
       case 'download_add_video_source':
         return 'Добавить видеоисточник';
       case 'video_subtitle_prev_cue_align':
@@ -258997,6 +259988,36 @@ extension on _StringsRu {
         return 'Учётные данные применяются только к HTTP-запросам; встроенный torrent-движок не может их использовать';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -266123,7 +267144,7 @@ extension on _StringsTh {
       case 'manga_import_folder_as_source_hint':
         return 'สแกนโฟลเดอร์นี้ต่อเนื่องเพื่อหามังงะใหม่';
       case 'download_no_managed_video_source':
-        return 'ยังไม่มีแหล่งวิดีโอที่จัดการ การดาวน์โหลดต้องมีโฟลเดอร์วิดีโอในเครื่องเพื่อจัดเก็บ';
+        return 'ยังไม่มีแหล่งวิดีโอที่จัดการ เพิ่มโฟลเดอร์ในเครื่องสำหรับเก็บไฟล์ที่ดาวน์โหลด เพื่อให้วิดีโอที่เสร็จแล้วเข้าคลัง';
       case 'download_add_video_source':
         return 'เพิ่มแหล่งวิดีโอ';
       case 'video_subtitle_prev_cue_align':
@@ -267404,6 +268425,36 @@ extension on _StringsTh {
         return 'ข้อมูลรับรองใช้ได้กับคำขอ HTTP เท่านั้น เอนจิน torrent ในตัวไม่สามารถใช้ได้';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -274544,7 +275595,7 @@ extension on _StringsTr {
       case 'manga_import_folder_as_source_hint':
         return 'Yeni manga için bu klasörü taramaya devam et';
       case 'download_no_managed_video_source':
-        return 'Henüz yönetilen bir video kaynağı yok. İndirmelerin ineceği yerel bir video klasörü gerekiyor.';
+        return 'Henüz yönetilen bir video kaynağı yok. İndirilen dosyaların saklanacağı yerel bir klasör ekleyin ki tamamlanan videolar kitaplığa girsin.';
       case 'download_add_video_source':
         return 'Video kaynağı ekle';
       case 'video_subtitle_prev_cue_align':
@@ -275826,6 +276877,36 @@ extension on _StringsTr {
         return 'Kimlik bilgileri yalnızca HTTP istekleri için geçerlidir; yerleşik torrent motoru bunları kullanamaz';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -282960,7 +284041,7 @@ extension on _StringsVi {
       case 'manga_import_folder_as_source_hint':
         return 'Tiếp tục quét thư mục này để tìm truyện tranh mới';
       case 'download_no_managed_video_source':
-        return 'Chưa có nguồn video được quản lý. Tải xuống cần một thư mục video cục bộ để lưu.';
+        return 'Chưa có nguồn video được quản lý. Hãy thêm một thư mục cục bộ để lưu các tệp đã tải xuống, video hoàn tất mới vào được thư viện.';
       case 'download_add_video_source':
         return 'Thêm nguồn video';
       case 'video_subtitle_prev_cue_align':
@@ -284242,6 +285323,36 @@ extension on _StringsVi {
         return 'Thông tin đăng nhập chỉ áp dụng cho yêu cầu HTTP; công cụ torrent tích hợp không dùng được';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -291315,7 +292426,7 @@ extension on _StringsZhCn {
       case 'manga_import_folder_as_source_hint':
         return '以后自动扫描此文件夹里的新漫画';
       case 'download_no_managed_video_source':
-        return '还没有受管视频来源。下载完成的视频需要一个本地视频文件夹才能入库。';
+        return '还没有受管视频来源。请添加一个存放下载文件的本地文件夹，下载完成的视频才能入库。';
       case 'download_add_video_source':
         return '添加视频来源';
       case 'video_subtitle_prev_cue_align':
@@ -292587,6 +293698,36 @@ extension on _StringsZhCn {
         return '凭据仅用于 HTTP 请求；内置 torrent 引擎无法使用';
       case 'anki_error_paired_device_unreachable':
         return '无法制卡：当前没有可连接的已配对设备。请确认配对设备上的 Fushi 正在运行；如果要在本机制卡，请关闭「制卡到已配对设备」。';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return '关闭后：手动、扫描后、下载导入后与后台自动补刮都会跳过此来源。';
+      case 'video_source_scrape_work_missing':
+        return '该作品已不在当前来源计划中（文件可能已改名、移动或删除）。请重新刮削此来源刷新待确认列表。';
+      case 'video_source_scrape_pending_works':
+        return '待确认作品';
+      case 'video_source_scrape_pending_works_hint':
+        return '这些条目还没有确认的作品身份。搜索并选中正确的作品即可完成刮削。';
+      case 'video_source_scrape_enabled_toggle':
+        return '启用此来源的刮削';
+      case 'video_library_scrape_auto_backfill':
+        return '自动补齐缺失的作品资料';
+      case 'video_library_scrape_auto_backfill_hint':
+        return '进入视频库时，自动刮削仍未确认身份的条目。关闭后不再有任何后台元数据下载。';
+      case 'stat_detail_ungrouped':
+        return '未分组';
+      case 'stat_detail_empty':
+        return '此时段暂无记录';
+      case 'stat_center_title':
+        return '统计中心';
+      case 'stat_center_tab_overview':
+        return '总览';
+      case 'shortcut_action_video_dismiss_dict':
+        return '关闭词典';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return '确认作品身份';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB 上有多个可能的匹配。选中正确的作品后，下载导入将直接按该身份刮削；跳过则可稍后在待确认列表手动指定。';
+      case 'video_discovery_anidb_identity_not_found':
+        return '未能在 AniDB 识别该作品：仍会正常下载，导入后在待确认列表等待手动指定身份。';
       default:
         return null;
     }
@@ -299661,7 +300802,7 @@ extension on _StringsZhHk {
       case 'manga_import_folder_as_source_hint':
         return '以後自動掃描此資料夾裡的新漫畫';
       case 'download_no_managed_video_source':
-        return '還沒有受管影片來源。下載完成的影片需要一個本地影片資料夾才能入庫。';
+        return '還沒有受管影片來源。請新增一個存放下載檔案的本機資料夾，下載完成的影片才能入庫。';
       case 'download_add_video_source':
         return '添加影片來源';
       case 'video_subtitle_prev_cue_align':
@@ -300933,6 +302074,36 @@ extension on _StringsZhHk {
         return '憑證僅用於 HTTP 請求；內建 torrent 引擎無法使用';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
