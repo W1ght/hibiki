@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69649 (4097 per locale)
+/// Strings: 69955 (4115 per locale)
 ///
-/// Built on 2026-09-01 at 07:01 UTC
+/// Built on 2026-09-01 at 16:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4712,7 +4712,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_import_folder_as_source_hint =>
       'Keep scanning this folder for new manga';
   String get download_no_managed_video_source =>
-      'No managed video source yet. Downloads need a local video folder to land in.';
+      'No managed video source yet. Add a local folder to store downloaded files so finished videos can land in your library.';
   String get download_add_video_source => 'Add video source';
   String get video_subtitle_prev_cue_align => 'Align previous line to now';
   String get video_subtitle_next_cue_align => 'Align next line to now';
@@ -5373,6 +5373,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get network_proxy_invalid => 'Invalid proxy. Use host:port';
   String get network_proxy_label => 'Network proxy';
   String get section_network => 'Network';
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
   String get video_ajatt_settings_hint =>
       'Free Japanese subtitle archive (kitsunekko mirror). No account needed; subtitle files download from GitHub.';
   String get video_ajatt_enabled_hint =>
@@ -5593,13 +5596,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get network_proxy_mode_manual => 'Manual';
   String get network_proxy_mode_manual_hint =>
       'Use the server and optional credentials below';
-  String get network_proxy_manual_hint =>
+  String get network_proxy_address_hint =>
       'HTTP proxy server used by all public internet requests';
   String get network_proxy_username => 'Proxy username (optional)';
   String get network_proxy_password => 'Proxy password (optional)';
-  String get storage_category_backups => 'Local backups';
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
   String get storage_entry_delete_backups_confirm_body =>
       'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
   String get update_download_source_preference => 'Preferred download source';
@@ -5610,9 +5610,40 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_download_source_github => 'GitHub direct';
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String get storage_category_backups => 'Leftover backup archives';
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} archive(s) left by the last export';
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} is not available for this file; falling back to the automatic order';
+  String get network_proxy_credentials_scope_hint =>
+      'Credentials apply to HTTP requests only; the built-in torrent engine cannot use them';
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_empty => 'No activity in this period';
+  String get stat_center_title => 'Statistics center';
+  String get stat_center_tab_overview => 'Overview';
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   String get network_proxy_p2p_mode_direct => 'Direct';
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   String get network_proxy_p2p_mode_mixed => 'Mixed';
@@ -13630,7 +13661,7 @@ class _StringsAr extends _StringsEn {
       'الاستمرار بفحص هذا المجلد بحثاً عن مانغا جديدة';
   @override
   String get download_no_managed_video_source =>
-      'لا يوجد مصدر فيديو مُدار بعد. التحميلات تحتاج مجلد فيديو محلي للحفظ فيه.';
+      'لا يوجد مصدر فيديو مُدار بعد. أضف مجلدًا محليًا لحفظ الملفات التي يتم تنزيلها كي تدخل مقاطع الفيديو المكتملة إلى المكتبة.';
   @override
   String get download_add_video_source => 'إضافة مصدر فيديو';
   @override
@@ -14748,6 +14779,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get section_network => 'الشبكة';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       'أرشيف مجاني للترجمات اليابانية (مرآة kitsunekko). لا يتطلب حسابًا؛ تُنزَّل ملفات الترجمة من GitHub.';
   @override
@@ -15093,55 +15129,99 @@ class _StringsAr extends _StringsEn {
   @override
   String get delete_choices_remember => 'تذكّر هذه الخيارات';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'وضع الوكيل';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'تلقائي';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'استخدام متغيرات البيئة ثم وكيل النظام المفعّل';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'اتصال مباشر';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint => 'تعطيل استخدام الوكيل للتطبيق';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'يدوي';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'استخدام الخادم وبيانات الاعتماد الاختيارية أدناه';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'خادم وكيل HTTP تستخدمه كل طلبات الإنترنت العامة';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'اسم مستخدم الوكيل (اختياري)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'كلمة مرور الوكيل (اختياري)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'هل تريد حذف أرشيفات النسخ الاحتياطي المحلية المؤقتة هذه؟ تأكد من حفظ أو مشاركة أي نسخة ما زلت بحاجة إليها.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => 'مصدر التنزيل المفضل';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'تتم تجربة المصدر المحدد أولاً، والمصادر غير المتاحة تتراجع تلقائيًا كما كان.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'تلقائي (موصى به)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'مرآة Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub مباشرة';
   @override
   String update_download_source_proxy({required Object host}) =>
-      'Proxy: ${host}';
+      'وكيل: ${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups => 'أرشيفات نسخ احتياطي متبقية';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} أرشيف متبقٍ من آخر عملية تصدير';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} غير متاح لهذا الملف، وتمت العودة إلى الترتيب التلقائي';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'بيانات الاعتماد تُستخدم لطلبات HTTP فقط، ومحرك التورنت المدمج لا يمكنه استخدامها';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -23351,7 +23431,7 @@ class _StringsDe extends _StringsEn {
       'Diesen Ordner weiterhin nach neuem Manga durchsuchen';
   @override
   String get download_no_managed_video_source =>
-      'Noch keine verwaltete Videoquelle. Downloads benötigen einen lokalen Videoordner als Ziel.';
+      'Noch keine verwaltete Videoquelle. Füge einen lokalen Ordner für die heruntergeladenen Dateien hinzu, damit fertige Videos in der Bibliothek landen.';
   @override
   String get download_add_video_source => 'Videoquelle hinzufügen';
   @override
@@ -24493,6 +24573,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get section_network => 'Netzwerk';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       'Kostenloses Archiv japanischer Untertitel (kitsunekko-Spiegel). Kein Konto nötig; Untertiteldateien werden von GitHub geladen.';
   @override
@@ -24846,55 +24931,100 @@ class _StringsDe extends _StringsEn {
   @override
   String get delete_choices_remember => 'Diese Auswahl merken';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Proxy-Modus';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Automatisch';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Umgebungsvariablen verwenden, dann den aktivierten Systemproxy';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Direkt';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Proxy-Nutzung für die App deaktivieren';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'Manuell';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Server und optionale Zugangsdaten unten verwenden';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'HTTP-Proxyserver für alle Anfragen ins öffentliche Internet';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Proxy-Benutzername (optional)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Proxy-Passwort (optional)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Diese temporären lokalen Backup-Archive löschen? Stelle sicher, dass du jede noch benötigte Kopie gespeichert oder geteilt hast.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => 'Bevorzugte Downloadquelle';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'Die gewählte Quelle wird zuerst versucht; nicht verfügbare Quellen weichen weiterhin automatisch aus.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Automatisch (empfohlen)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Cloudflare-Spiegel';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub direkt';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups => 'Übrig gebliebene Backup-Archive';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} Archiv(e) vom letzten Export übrig';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} ist für diese Datei nicht verfügbar; es wird auf die automatische Reihenfolge zurückgegriffen';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Zugangsdaten gelten nur für HTTP-Anfragen; die integrierte Torrent-Engine kann sie nicht verwenden';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -33140,7 +33270,7 @@ class _StringsEs extends _StringsEn {
       'Seguir escaneando esta carpeta en busca de nuevo manga';
   @override
   String get download_no_managed_video_source =>
-      'Aún no hay fuente de vídeo gestionada. Las descargas necesitan una carpeta de vídeo local donde aterrizar.';
+      'Aún no hay fuente de vídeo gestionada. Añade una carpeta local donde guardar los archivos descargados para que los vídeos terminados entren en la biblioteca.';
   @override
   String get download_add_video_source => 'Añadir fuente de vídeo';
   @override
@@ -34290,6 +34420,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get section_network => 'Red';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       'Archivo gratuito de subtítulos en japonés (réplica de kitsunekko). No requiere cuenta; los archivos se descargan desde GitHub.';
   @override
@@ -34646,55 +34781,102 @@ class _StringsEs extends _StringsEn {
   @override
   String get delete_choices_remember => 'Recordar estas opciones';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Modo de proxy';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Automático';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Usar variables de entorno y luego el proxy del sistema activado';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Directo';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Desactivar el uso de proxy para la aplicación';
   @override
   String get network_proxy_mode_manual => 'Manual';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Usar el servidor y las credenciales opcionales de abajo';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'Servidor proxy HTTP usado por todas las solicitudes a Internet público';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Usuario del proxy (opcional)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Contraseña del proxy (opcional)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      '¿Eliminar estos archivos de copia de seguridad locales temporales? Asegúrate de haber guardado o compartido cualquier copia que aún necesites.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference =>
+      'Fuente de descarga preferida';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'La fuente seleccionada se intenta primero; las fuentes no disponibles siguen recurriendo automáticamente a otras.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Automático (recomendado)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Espejo de Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub directo';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups =>
+      'Archivos de copia de seguridad sobrantes';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} archivo(s) que dejó la última exportación';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} no está disponible para este archivo; se vuelve al orden automático';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Las credenciales solo se aplican a las solicitudes HTTP; el motor de torrents integrado no puede usarlas';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -42969,7 +43151,7 @@ class _StringsFr extends _StringsEn {
       'Scanner continuellement ce dossier pour de nouveaux manga';
   @override
   String get download_no_managed_video_source =>
-      'Aucune source vidéo gérée. Les téléchargements ont besoin d\'un dossier vidéo local.';
+      'Aucune source vidéo gérée. Ajoutez un dossier local où stocker les fichiers téléchargés pour que les vidéos terminées entrent dans la bibliothèque.';
   @override
   String get download_add_video_source => 'Ajouter une source vidéo';
   @override
@@ -44122,6 +44304,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get section_network => 'Réseau';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       'Archive gratuite de sous-titres japonais (miroir kitsunekko). Aucun compte requis ; les fichiers sont téléchargés depuis GitHub.';
   @override
@@ -44481,55 +44668,102 @@ class _StringsFr extends _StringsEn {
   @override
   String get delete_choices_remember => 'Mémoriser ces choix';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Mode proxy';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Automatique';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Utiliser les variables d\'environnement, puis le proxy système activé';
   @override
   String get network_proxy_mode_direct => 'Direct';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Désactiver l\'utilisation du proxy pour l\'application';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'Manuel';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Utiliser le serveur et les identifiants facultatifs ci-dessous';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'Serveur proxy HTTP utilisé par toutes les requêtes vers Internet public';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username =>
+      'Nom d\'utilisateur du proxy (facultatif)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Mot de passe du proxy (facultatif)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Supprimer ces archives de sauvegarde locales temporaires ? Assurez-vous d\'avoir enregistré ou partagé toute copie encore nécessaire.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference =>
+      'Source de téléchargement préférée';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'La source sélectionnée est essayée en premier ; les sources indisponibles basculent toujours automatiquement.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Automatique (recommandé)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Miroir Cloudflare';
   @override
   String get update_download_source_github => 'GitHub direct';
   @override
   String update_download_source_proxy({required Object host}) =>
-      'Proxy: ${host}';
+      'Proxy : ${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups => 'Archives de sauvegarde restantes';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} archive(s) laissée(s) par la dernière exportation';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} n\'est pas disponible pour ce fichier ; retour à l\'ordre automatique';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Les identifiants ne s\'appliquent qu\'aux requêtes HTTP ; le moteur torrent intégré ne peut pas les utiliser';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -52652,7 +52886,7 @@ class _StringsId extends _StringsEn {
       'Terus pindai folder ini untuk manga baru';
   @override
   String get download_no_managed_video_source =>
-      'Belum ada sumber video terkelola. Unduhan memerlukan folder video lokal sebagai tujuan.';
+      'Belum ada sumber video terkelola. Tambahkan folder lokal untuk menyimpan berkas yang diunduh agar video yang selesai masuk ke pustaka.';
   @override
   String get download_add_video_source => 'Tambah sumber video';
   @override
@@ -53783,6 +54017,11 @@ class _StringsId extends _StringsEn {
   @override
   String get section_network => 'Jaringan';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       'Arsip subtitle bahasa Jepang gratis (cermin kitsunekko). Tidak perlu akun; berkas subtitle diunduh dari GitHub.';
   @override
@@ -54135,55 +54374,100 @@ class _StringsId extends _StringsEn {
   @override
   String get delete_choices_remember => 'Ingat pilihan ini';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Mode proxy';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Otomatis';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Gunakan variabel lingkungan, lalu proxy sistem yang aktif';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Langsung';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Nonaktifkan penggunaan proxy untuk aplikasi';
   @override
   String get network_proxy_mode_manual => 'Manual';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Gunakan server dan kredensial opsional di bawah';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'Server proxy HTTP yang dipakai semua permintaan internet publik';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Nama pengguna proxy (opsional)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Kata sandi proxy (opsional)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Hapus arsip cadangan lokal sementara ini? Pastikan Anda sudah menyimpan atau membagikan salinan yang masih diperlukan.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => 'Sumber unduhan pilihan';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'Sumber yang dipilih dicoba lebih dulu; sumber yang tidak tersedia tetap dialihkan otomatis.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Otomatis (disarankan)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Mirror Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub langsung';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups => 'Arsip cadangan tersisa';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} arsip yang tersisa dari ekspor terakhir';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} tidak tersedia untuk berkas ini; kembali ke urutan otomatis';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Kredensial hanya berlaku untuk permintaan HTTP; mesin torrent bawaan tidak dapat menggunakannya';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -62376,7 +62660,7 @@ class _StringsIt extends _StringsEn {
       'Continua a scansionare questa cartella per nuovi manga';
   @override
   String get download_no_managed_video_source =>
-      'Nessuna fonte video gestita. I download necessitano di una cartella video locale come destinazione.';
+      'Nessuna fonte video gestita. Aggiungi una cartella locale in cui salvare i file scaricati, così i video completati entrano nella libreria.';
   @override
   String get download_add_video_source => 'Aggiungi fonte video';
   @override
@@ -63515,6 +63799,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get section_network => 'Rete';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       'Archivio gratuito di sottotitoli giapponesi (mirror kitsunekko). Nessun account richiesto; i file vengono scaricati da GitHub.';
   @override
@@ -63873,55 +64162,100 @@ class _StringsIt extends _StringsEn {
   @override
   String get delete_choices_remember => 'Ricorda queste scelte';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Modalità proxy';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Automatica';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Usa le variabili d\'ambiente, poi il proxy di sistema attivo';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Diretta';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Disattiva l\'uso del proxy per l\'app';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'Manuale';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Usa il server e le credenziali facoltative qui sotto';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'Server proxy HTTP usato da tutte le richieste verso Internet pubblico';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Nome utente del proxy (facoltativo)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Password del proxy (facoltativa)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Eliminare questi archivi di backup locali temporanei? Assicurati di aver salvato o condiviso ogni copia che ti serve ancora.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => 'Fonte di download preferita';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'La fonte selezionata viene provata per prima; le fonti non disponibili continuano a ripiegare automaticamente.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Automatica (consigliata)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Mirror Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub diretto';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups => 'Archivi di backup residui';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} archivio/i lasciato/i dall\'ultima esportazione';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} non è disponibile per questo file; si torna all\'ordine automatico';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Le credenziali valgono solo per le richieste HTTP; il motore torrent integrato non può usarle';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -71610,7 +71944,7 @@ class _StringsJa extends _StringsEn {
   String get manga_import_folder_as_source_hint => 'このフォルダを継続スキャンして新しいマンガを検出';
   @override
   String get download_no_managed_video_source =>
-      '管理対象の動画ソースがまだありません。ダウンロードにはローカル動画フォルダが必要です。';
+      '管理対象の動画ソースがまだありません。ダウンロードしたファイルを保存するローカルフォルダを追加すると、完了した動画がライブラリに入ります。';
   @override
   String get download_add_video_source => '動画ソースを追加';
   @override
@@ -72686,6 +73020,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get section_network => 'ネットワーク';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       '無料の日本語字幕アーカイブ（kitsunekko ミラー）。アカウント不要。字幕ファイルは GitHub からダウンロードされます。';
   @override
@@ -73021,55 +73360,96 @@ class _StringsJa extends _StringsEn {
   @override
   String get delete_choices_remember => 'この選択を記憶する';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'プロキシモード';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => '自動';
   @override
-  String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+  String get network_proxy_mode_auto_hint => '環境変数、次に有効なシステムプロキシを使用';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => '直接接続';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint => 'アプリでのプロキシ使用を無効にする';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => '手動';
   @override
-  String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+  String get network_proxy_mode_manual_hint => '下のサーバーと任意の認証情報を使用';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint => 'すべての公開インターネット通信で使う HTTP プロキシサーバー';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'プロキシのユーザー名（任意）';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'プロキシのパスワード（任意）';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'これらの一時的なローカルバックアップ書庫を削除しますか？まだ必要な控えは保存または共有済みか確認してください。';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => '優先ダウンロード元';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      '選んだ配布元を最初に試します。利用できない場合も自動で他の配布元にフォールバックします。';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => '自動（推奨）';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Cloudflare ミラー';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub 直接';
   @override
   String update_download_source_proxy({required Object host}) =>
-      'Proxy: ${host}';
+      'プロキシ: ${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups => '残っているバックアップ書庫';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      '前回のエクスポートで残った ${n} 個の書庫';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} はこのファイルでは利用できないため、自動順に戻しました';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      '認証情報は HTTP 通信にのみ適用されます。内蔵 torrent エンジンでは使用できません';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -80770,7 +81150,7 @@ class _StringsKo extends _StringsEn {
   String get manga_import_folder_as_source_hint => '이 폴더에서 새 만화를 계속 스캔';
   @override
   String get download_no_managed_video_source =>
-      '관리 중인 동영상 소스가 없습니다. 다운로드를 저장할 로컬 동영상 폴더가 필요합니다.';
+      '관리 중인 동영상 소스가 없습니다. 다운로드한 파일을 보관할 로컬 폴더를 추가해야 완료된 동영상이 라이브러리에 등록됩니다.';
   @override
   String get download_add_video_source => '동영상 소스 추가';
   @override
@@ -81847,6 +82227,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get section_network => '네트워크';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       '무료 일본어 자막 아카이브(kitsunekko 미러). 계정 불필요. 자막 파일은 GitHub에서 다운로드됩니다.';
   @override
@@ -82180,55 +82565,96 @@ class _StringsKo extends _StringsEn {
   @override
   String get delete_choices_remember => '이 선택 기억하기';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => '프록시 모드';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => '자동';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      '환경 변수를 먼저 사용하고, 그다음 활성화된 시스템 프록시를 사용';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => '직접 연결';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint => '앱의 프록시 사용 중지';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => '수동';
   @override
-  String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+  String get network_proxy_mode_manual_hint => '아래의 서버와 선택적 자격 증명 사용';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint => '모든 공용 인터넷 요청에 사용되는 HTTP 프록시 서버';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => '프록시 사용자 이름(선택 사항)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => '프록시 비밀번호(선택 사항)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      '이 임시 로컬 백업 아카이브를 삭제할까요? 아직 필요한 사본은 저장하거나 공유했는지 확인하세요.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => '선호하는 다운로드 소스';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      '선택한 소스를 먼저 시도하며, 사용할 수 없는 소스는 계속 자동으로 대체됩니다.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => '자동(권장)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Cloudflare 미러';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub 직접';
   @override
-  String update_download_source_proxy({required Object host}) =>
-      'Proxy: ${host}';
+  String update_download_source_proxy({required Object host}) => '프록시: ${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups => '남아 있는 백업 아카이브';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      '마지막 내보내기에서 남은 아카이브 ${n} 개';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '이 파일에는 ${source} 을(를) 사용할 수 없어 자동 순서로 되돌렸습니다';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      '자격 증명은 HTTP 요청에만 적용되며, 내장 토렌트 엔진은 사용할 수 없습니다';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -90382,7 +90808,7 @@ class _StringsNl extends _StringsEn {
       'Blijf deze map scannen op nieuwe manga';
   @override
   String get download_no_managed_video_source =>
-      'Nog geen beheerde videobron. Downloads hebben een lokale videomap nodig om in te landen.';
+      'Nog geen beheerde videobron. Voeg een lokale map toe om de gedownloade bestanden in te bewaren, zodat voltooide video\'s in de bibliotheek landen.';
   @override
   String get download_add_video_source => 'Videobron toevoegen';
   @override
@@ -91516,6 +91942,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get section_network => 'Netwerk';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       'Gratis archief met Japanse ondertitels (kitsunekko-mirror). Geen account nodig; bestanden worden van GitHub gedownload.';
   @override
@@ -91871,55 +92302,101 @@ class _StringsNl extends _StringsEn {
   @override
   String get delete_choices_remember => 'Deze keuzes onthouden';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Proxymodus';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Automatisch';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Gebruik omgevingsvariabelen en daarna de ingeschakelde systeemproxy';
   @override
   String get network_proxy_mode_direct => 'Direct';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Proxygebruik voor de app uitschakelen';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'Handmatig';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Gebruik de server en optionele inloggegevens hieronder';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'HTTP-proxyserver die door alle verzoeken naar het publieke internet wordt gebruikt';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Proxygebruikersnaam (optioneel)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Proxywachtwoord (optioneel)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Deze tijdelijke lokale back-uparchieven verwijderen? Zorg dat je elke kopie die je nog nodig hebt hebt opgeslagen of gedeeld.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference =>
+      'Voorkeursbron voor downloads';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'De gekozen bron wordt als eerste geprobeerd; niet-beschikbare bronnen vallen nog steeds automatisch terug.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Automatisch (aanbevolen)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Cloudflare-mirror';
   @override
   String get update_download_source_github => 'GitHub direct';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups => 'Achtergebleven back-uparchieven';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} archief(en) achtergelaten door de laatste export';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} is niet beschikbaar voor dit bestand; er wordt teruggevallen op de automatische volgorde';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Inloggegevens gelden alleen voor HTTP-verzoeken; de ingebouwde torrent-engine kan ze niet gebruiken';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -100118,7 +100595,7 @@ class _StringsPtBr extends _StringsEn {
       'Continuar varrendo esta pasta para novos mangás';
   @override
   String get download_no_managed_video_source =>
-      'Nenhuma fonte de vídeo gerenciada ainda. Downloads precisam de uma pasta de vídeo local para salvar.';
+      'Nenhuma fonte de vídeo gerenciada ainda. Adicione uma pasta local para guardar os arquivos baixados, para que os vídeos concluídos entrem na biblioteca.';
   @override
   String get download_add_video_source => 'Adicionar fonte de vídeo';
   @override
@@ -101264,6 +101741,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get section_network => 'Rede';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       'Arquivo gratuito de legendas em japonês (espelho do kitsunekko). Não precisa de conta; os arquivos são baixados do GitHub.';
   @override
@@ -101619,55 +102101,100 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get delete_choices_remember => 'Lembrar estas escolhas';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Modo de proxy';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Automático';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Usar variáveis de ambiente e depois o proxy do sistema ativado';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Direto';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Desativar o uso de proxy pelo aplicativo';
   @override
   String get network_proxy_mode_manual => 'Manual';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Usar o servidor e as credenciais opcionais abaixo';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'Servidor proxy HTTP usado por todas as requisições à internet pública';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Usuário do proxy (opcional)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Senha do proxy (opcional)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Excluir estes arquivos de backup locais temporários? Confirme que você salvou ou compartilhou qualquer cópia que ainda precise.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => 'Fonte de download preferida';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'A fonte selecionada é tentada primeiro; fontes indisponíveis continuam recorrendo automaticamente a outras.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Automático (recomendado)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Espelho Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub direto';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups => 'Arquivos de backup restantes';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} arquivo(s) deixado(s) pela última exportação';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} não está disponível para este arquivo; voltando à ordem automática';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'As credenciais valem apenas para requisições HTTP; o motor de torrent integrado não consegue usá-las';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -109845,7 +110372,7 @@ class _StringsRu extends _StringsEn {
       'Продолжать сканировать эту папку на наличие новой манги';
   @override
   String get download_no_managed_video_source =>
-      'Управляемый видеоисточник ещё не добавлен. Для загрузок нужна локальная видеопапка.';
+      'Управляемый видеоисточник ещё не добавлен. Добавьте локальную папку для хранения загруженных файлов, чтобы готовые видео попадали в библиотеку.';
   @override
   String get download_add_video_source => 'Добавить видеоисточник';
   @override
@@ -110986,6 +111513,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get section_network => 'Сеть';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       'Бесплатный архив японских субтитров (зеркало kitsunekko). Аккаунт не нужен; файлы скачиваются с GitHub.';
   @override
@@ -111341,55 +111873,102 @@ class _StringsRu extends _StringsEn {
   @override
   String get delete_choices_remember => 'Запомнить этот выбор';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Режим прокси';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Автоматически';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Использовать переменные среды, затем включённый системный прокси';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Прямое подключение';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Отключить использование прокси для приложения';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'Вручную';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Использовать сервер и необязательные учётные данные ниже';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'HTTP-прокси, через который идут все запросы в публичный интернет';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username =>
+      'Имя пользователя прокси (необязательно)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Пароль прокси (необязательно)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Удалить эти временные локальные архивы резервных копий? Убедитесь, что вы сохранили или отправили все нужные копии.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference =>
+      'Предпочитаемый источник загрузки';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'Выбранный источник пробуется первым; недоступные источники по-прежнему автоматически заменяются.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Автоматически (рекомендуется)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Зеркало Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub напрямую';
   @override
   String update_download_source_proxy({required Object host}) =>
-      'Proxy: ${host}';
+      'Прокси: ${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups => 'Оставшиеся архивы резервных копий';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      'Архивов, оставшихся после последнего экспорта: ${n}';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} недоступен для этого файла; выполнен возврат к автоматическому порядку';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Учётные данные применяются только к HTTP-запросам; встроенный torrent-движок не может их использовать';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -119398,7 +119977,7 @@ class _StringsTh extends _StringsEn {
       'สแกนโฟลเดอร์นี้ต่อเนื่องเพื่อหามังงะใหม่';
   @override
   String get download_no_managed_video_source =>
-      'ยังไม่มีแหล่งวิดีโอที่จัดการ การดาวน์โหลดต้องมีโฟลเดอร์วิดีโอในเครื่องเพื่อจัดเก็บ';
+      'ยังไม่มีแหล่งวิดีโอที่จัดการ เพิ่มโฟลเดอร์ในเครื่องสำหรับเก็บไฟล์ที่ดาวน์โหลด เพื่อให้วิดีโอที่เสร็จแล้วเข้าคลัง';
   @override
   String get download_add_video_source => 'เพิ่มแหล่งวิดีโอ';
   @override
@@ -120521,6 +121100,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get section_network => 'เครือข่าย';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       'คลังซับไตเติลภาษาญี่ปุ่นฟรี (มิเรอร์ kitsunekko) ไม่ต้องใช้บัญชี ไฟล์ซับไตเติลดาวน์โหลดจาก GitHub';
   @override
@@ -120867,55 +121451,99 @@ class _StringsTh extends _StringsEn {
   @override
   String get delete_choices_remember => 'จดจำตัวเลือกเหล่านี้';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'โหมดพร็อกซี';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'อัตโนมัติ';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'ใช้ตัวแปรสภาพแวดล้อม แล้วจึงใช้พร็อกซีของระบบที่เปิดอยู่';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'เชื่อมต่อโดยตรง';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint => 'ปิดการใช้พร็อกซีสำหรับแอป';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'กำหนดเอง';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'ใช้เซิร์ฟเวอร์และข้อมูลรับรอง (ถ้ามี) ด้านล่าง';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'เซิร์ฟเวอร์พร็อกซี HTTP ที่ใช้กับคำขออินเทอร์เน็ตสาธารณะทั้งหมด';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'ชื่อผู้ใช้พร็อกซี (ไม่บังคับ)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'รหัสผ่านพร็อกซี (ไม่บังคับ)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'ลบไฟล์สำรองข้อมูลชั่วคราวในเครื่องเหล่านี้หรือไม่ โปรดตรวจสอบว่าคุณได้บันทึกหรือแชร์สำเนาที่ยังต้องใช้แล้ว';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => 'แหล่งดาวน์โหลดที่ต้องการ';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'ระบบจะลองแหล่งที่เลือกก่อน หากแหล่งนั้นใช้ไม่ได้จะสำรองไปแหล่งอื่นโดยอัตโนมัติ';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'อัตโนมัติ (แนะนำ)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'มิเรอร์ Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub โดยตรง';
   @override
   String update_download_source_proxy({required Object host}) =>
-      'Proxy: ${host}';
+      'พร็อกซี: ${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups => 'ไฟล์สำรองข้อมูลที่ตกค้าง';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      'ไฟล์เก็บถาวร ${n} รายการที่ตกค้างจากการส่งออกครั้งล่าสุด';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} ใช้กับไฟล์นี้ไม่ได้ จึงกลับไปใช้ลำดับอัตโนมัติ';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'ข้อมูลรับรองใช้ได้กับคำขอ HTTP เท่านั้น เอนจิน torrent ในตัวไม่สามารถใช้ได้';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -129023,7 +129651,7 @@ class _StringsTr extends _StringsEn {
       'Yeni manga için bu klasörü taramaya devam et';
   @override
   String get download_no_managed_video_source =>
-      'Henüz yönetilen bir video kaynağı yok. İndirmelerin ineceği yerel bir video klasörü gerekiyor.';
+      'Henüz yönetilen bir video kaynağı yok. İndirilen dosyaların saklanacağı yerel bir klasör ekleyin ki tamamlanan videolar kitaplığa girsin.';
   @override
   String get download_add_video_source => 'Video kaynağı ekle';
   @override
@@ -130154,6 +130782,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get section_network => 'Ağ';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       'Ücretsiz Japonca altyazı arşivi (kitsunekko yansıması). Hesap gerekmez; altyazı dosyaları GitHub\'dan indirilir.';
   @override
@@ -130506,55 +131139,101 @@ class _StringsTr extends _StringsEn {
   @override
   String get delete_choices_remember => 'Bu seçimleri hatırla';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Proxy modu';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Otomatik';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Önce ortam değişkenlerini, sonra etkin sistem proxy\'sini kullan';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Doğrudan';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Uygulama için proxy kullanımını devre dışı bırak';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'Elle';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Aşağıdaki sunucuyu ve isteğe bağlı kimlik bilgilerini kullan';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'Tüm genel internet isteklerinde kullanılan HTTP proxy sunucusu';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Proxy kullanıcı adı (isteğe bağlı)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Proxy parolası (isteğe bağlı)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Bu geçici yerel yedek arşivleri silinsin mi? Hâlâ ihtiyacınız olan kopyaları kaydettiğinizden veya paylaştığınızdan emin olun.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference =>
+      'Tercih edilen indirme kaynağı';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'Seçilen kaynak önce denenir; kullanılamayan kaynaklar yine de otomatik olarak yedeğe döner.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Otomatik (önerilir)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Cloudflare aynası';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub doğrudan';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups => 'Artakalan yedek arşivleri';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      'Son dışa aktarmadan kalan ${n} arşiv';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} bu dosya için kullanılamıyor; otomatik sıraya geri dönüldü';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Kimlik bilgileri yalnızca HTTP istekleri için geçerlidir; yerleşik torrent motoru bunları kullanamaz';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -138640,7 +139319,7 @@ class _StringsVi extends _StringsEn {
       'Tiếp tục quét thư mục này để tìm truyện tranh mới';
   @override
   String get download_no_managed_video_source =>
-      'Chưa có nguồn video được quản lý. Tải xuống cần một thư mục video cục bộ để lưu.';
+      'Chưa có nguồn video được quản lý. Hãy thêm một thư mục cục bộ để lưu các tệp đã tải xuống, video hoàn tất mới vào được thư viện.';
   @override
   String get download_add_video_source => 'Thêm nguồn video';
   @override
@@ -139773,6 +140452,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get section_network => 'Mạng';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       'Kho phụ đề tiếng Nhật miễn phí (bản sao kitsunekko). Không cần tài khoản; tệp phụ đề tải từ GitHub.';
   @override
@@ -140122,55 +140806,100 @@ class _StringsVi extends _StringsEn {
   @override
   String get delete_choices_remember => 'Ghi nhớ các lựa chọn này';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Chế độ proxy';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Tự động';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Dùng biến môi trường, sau đó là proxy hệ thống đang bật';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Kết nối trực tiếp';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Tắt việc dùng proxy cho ứng dụng';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'Thủ công';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Dùng máy chủ và thông tin đăng nhập tùy chọn bên dưới';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'Máy chủ proxy HTTP dùng cho mọi yêu cầu ra Internet công cộng';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Tên người dùng proxy (tùy chọn)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Mật khẩu proxy (tùy chọn)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Xóa các kho lưu trữ sao lưu cục bộ tạm thời này? Hãy chắc chắn bạn đã lưu hoặc chia sẻ bản sao nào còn cần.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => 'Nguồn tải xuống ưu tiên';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'Nguồn đã chọn sẽ được thử trước; các nguồn không khả dụng vẫn tự động chuyển sang nguồn khác.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Tự động (khuyến nghị)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Máy chủ gương Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub trực tiếp';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups => 'Kho lưu trữ sao lưu còn sót';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} kho lưu trữ còn sót từ lần xuất trước';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} không khả dụng cho tệp này; đã quay lại thứ tự tự động';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Thông tin đăng nhập chỉ áp dụng cho yêu cầu HTTP; công cụ torrent tích hợp không dùng được';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -147626,7 +148355,7 @@ class _StringsZhCn extends _StringsEn {
   String get manga_import_folder_as_source_hint => '以后自动扫描此文件夹里的新漫画';
   @override
   String get download_no_managed_video_source =>
-      '还没有受管视频来源。下载完成的视频需要一个本地视频文件夹才能入库。';
+      '还没有受管视频来源。请添加一个存放下载文件的本地文件夹，下载完成的视频才能入库。';
   @override
   String get download_add_video_source => '添加视频来源';
   @override
@@ -148655,6 +149384,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get section_network => '网络';
   @override
+  String get network_proxy_p2p_label => 'P2P（torrent）代理';
+  @override
+  String get network_proxy_p2p_warning =>
+      '默认直连。走代理：全部 P2P 流量经全局代理——可能降速，且不少代理服务商禁止 BT 流量（限速、警告甚至封号）。混合：tracker 请求经代理、DHT 与 peer 直连——节点获取范围最大，但真实 IP 会暴露给 tracker/DHT/peer（只解决连通性，无隐私作用）。仅对内置引擎生效，外接 qBittorrent 请在其自身设置中配置。';
+  @override
   String get video_ajatt_settings_hint =>
       '免费日语字幕库（kitsunekko 镜像）。无需账号；字幕文件从 GitHub 下载。';
   @override
@@ -148992,15 +149726,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get network_proxy_mode_manual_hint => '使用下方服务器与可选认证信息';
   @override
-  String get network_proxy_manual_hint => '供应用全部公网请求使用的 HTTP 代理服务器';
+  String get network_proxy_address_hint => '供应用全部公网请求使用的 HTTP 代理服务器';
   @override
   String get network_proxy_username => '代理用户名（可选）';
   @override
   String get network_proxy_password => '代理密码（可选）';
-  @override
-  String get storage_category_backups => '本地备份';
-  @override
-  String storage_entry_backups_label({required Object n}) => '${n} 个备份归档';
   @override
   String get storage_entry_delete_backups_confirm_body =>
       '确定清除这些临时本地备份吗？请先确认需要保留的副本已经保存或分享出去。';
@@ -149018,10 +149748,55 @@ class _StringsZhCn extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) => '代理站：${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P（torrent）代理';
+  String get storage_category_backups => '遗留的备份包';
   @override
-  String get network_proxy_p2p_warning =>
-      '默认直连。走代理：全部 P2P 流量经全局代理——可能降速，且不少代理服务商禁止 BT 流量（限速、警告甚至封号）。混合：tracker 请求经代理、DHT 与 peer 直连——节点获取范围最大，但真实 IP 会暴露给 tracker/DHT/peer（只解决连通性，无隐私作用）。仅对内置引擎生效，外接 qBittorrent 请在其自身设置中配置。';
+  String storage_entry_backups_label({required Object n}) =>
+      '上次导出遗留的 ${n} 个备份包';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} 不适用于该文件，已回退到自动顺序';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      '凭据仅用于 HTTP 请求；内置 torrent 引擎无法使用';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      '无法制卡：当前没有可连接的已配对设备。请确认配对设备上的 Fushi 正在运行；如果要在本机制卡，请关闭「制卡到已配对设备」。';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      '关闭后：手动、扫描后、下载导入后与后台自动补刮都会跳过此来源。';
+  @override
+  String get video_source_scrape_work_missing =>
+      '该作品已不在当前来源计划中（文件可能已改名、移动或删除）。请重新刮削此来源刷新待确认列表。';
+  @override
+  String get video_source_scrape_pending_works => '待确认作品';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      '这些条目还没有确认的作品身份。搜索并选中正确的作品即可完成刮削。';
+  @override
+  String get video_source_scrape_enabled_toggle => '启用此来源的刮削';
+  @override
+  String get video_library_scrape_auto_backfill => '自动补齐缺失的作品资料';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      '进入视频库时，自动刮削仍未确认身份的条目。关闭后不再有任何后台元数据下载。';
+  @override
+  String get stat_detail_ungrouped => '未分组';
+  @override
+  String get stat_detail_empty => '此时段暂无记录';
+  @override
+  String get stat_center_title => '统计中心';
+  @override
+  String get stat_center_tab_overview => '总览';
+  @override
+  String get shortcut_action_video_dismiss_dict => '关闭词典';
+  @override
+  String get video_discovery_anidb_identity_confirm_title => '确认作品身份';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB 上有多个可能的匹配。选中正确的作品后，下载导入将直接按该身份刮削；跳过则可稍后在待确认列表手动指定。';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      '未能在 AniDB 识别该作品：仍会正常下载，导入后在待确认列表等待手动指定身份。';
   @override
   String get network_proxy_p2p_mode_direct => '直连';
   @override
@@ -156483,7 +157258,7 @@ class _StringsZhHk extends _StringsEn {
   String get manga_import_folder_as_source_hint => '以後自動掃描此資料夾裡的新漫畫';
   @override
   String get download_no_managed_video_source =>
-      '還沒有受管影片來源。下載完成的影片需要一個本地影片資料夾才能入庫。';
+      '還沒有受管影片來源。請新增一個存放下載檔案的本機資料夾，下載完成的影片才能入庫。';
   @override
   String get download_add_video_source => '添加影片來源';
   @override
@@ -157511,6 +158286,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get section_network => '網路';
   @override
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  @override
   String get video_ajatt_settings_hint =>
       '免費日語字幕庫（kitsunekko 鏡像）。無需帳號；字幕檔案從 GitHub 下載。';
   @override
@@ -157841,55 +158621,94 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get delete_choices_remember => '記住這些選擇';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => '代理模式';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => '自動';
   @override
-  String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+  String get network_proxy_mode_auto_hint => '先用環境變數，再用已啟用的系統代理';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => '直連';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint => '停用應用程式的代理';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => '手動';
   @override
-  String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+  String get network_proxy_mode_manual_hint => '使用下方的伺服器與選填憑證';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint => '所有公網請求都會使用的 HTTP 代理伺服器';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => '代理使用者名稱（選填）';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => '代理密碼（選填）';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      '要刪除這些暫存的本機備份封存檔嗎？請確認仍需要的副本已儲存或分享。';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => '偏好的下載來源';
   @override
-  String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+  String get update_download_source_preference_hint => '會先嘗試所選來源；來源不可用時仍會自動回退。';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => '自動（建議）';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Cloudflare 鏡像';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub 直連';
   @override
-  String update_download_source_proxy({required Object host}) =>
-      'Proxy: ${host}';
+  String update_download_source_proxy({required Object host}) => '代理：${host}';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get storage_category_backups => '遺留的備份封存檔';
   @override
-  String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+  String storage_entry_backups_label({required Object n}) =>
+      '上次匯出遺留的 ${n} 個備份封存檔';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} 不適用於此檔案，已回退到自動順序';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      '憑證僅用於 HTTP 請求；內建 torrent 引擎無法使用';
+  @override
+  String get anki_error_paired_device_unreachable =>
+      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
+  @override
+  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
@@ -165021,7 +165840,7 @@ extension on _StringsEn {
       case 'manga_import_folder_as_source_hint':
         return 'Keep scanning this folder for new manga';
       case 'download_no_managed_video_source':
-        return 'No managed video source yet. Downloads need a local video folder to land in.';
+        return 'No managed video source yet. Add a local folder to store downloaded files so finished videos can land in your library.';
       case 'download_add_video_source':
         return 'Add video source';
       case 'video_subtitle_prev_cue_align':
@@ -165965,6 +166784,10 @@ extension on _StringsEn {
         return 'Network proxy';
       case 'section_network':
         return 'Network';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return 'Free Japanese subtitle archive (kitsunekko mirror). No account needed; subtitle files download from GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -166267,16 +167090,12 @@ extension on _StringsEn {
         return 'Manual';
       case 'network_proxy_mode_manual_hint':
         return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
+      case 'network_proxy_address_hint':
         return 'HTTP proxy server used by all public internet requests';
       case 'network_proxy_username':
         return 'Proxy username (optional)';
       case 'network_proxy_password':
         return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
       case 'storage_entry_delete_backups_confirm_body':
         return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
       case 'update_download_source_preference':
@@ -166291,10 +167110,48 @@ extension on _StringsEn {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'storage_category_backups':
+        return 'Leftover backup archives';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} archive(s) left by the last export';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} is not available for this file; falling back to the automatic order';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Credentials apply to HTTP requests only; the built-in torrent engine cannot use them';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -173422,7 +174279,7 @@ extension on _StringsAr {
       case 'manga_import_folder_as_source_hint':
         return 'الاستمرار بفحص هذا المجلد بحثاً عن مانغا جديدة';
       case 'download_no_managed_video_source':
-        return 'لا يوجد مصدر فيديو مُدار بعد. التحميلات تحتاج مجلد فيديو محلي للحفظ فيه.';
+        return 'لا يوجد مصدر فيديو مُدار بعد. أضف مجلدًا محليًا لحفظ الملفات التي يتم تنزيلها كي تدخل مقاطع الفيديو المكتملة إلى المكتبة.';
       case 'download_add_video_source':
         return 'إضافة مصدر فيديو';
       case 'video_subtitle_prev_cue_align':
@@ -174366,6 +175223,10 @@ extension on _StringsAr {
         return 'وكيل الشبكة';
       case 'section_network':
         return 'الشبكة';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return 'أرشيف مجاني للترجمات اليابانية (مرآة kitsunekko). لا يتطلب حسابًا؛ تُنزَّل ملفات الترجمة من GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -174655,47 +175516,80 @@ extension on _StringsAr {
       case 'delete_choices_remember':
         return 'تذكّر هذه الخيارات';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'وضع الوكيل';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'تلقائي';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'استخدام متغيرات البيئة ثم وكيل النظام المفعّل';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'اتصال مباشر';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'تعطيل استخدام الوكيل للتطبيق';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'يدوي';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'استخدام الخادم وبيانات الاعتماد الاختيارية أدناه';
+      case 'network_proxy_address_hint':
+        return 'خادم وكيل HTTP تستخدمه كل طلبات الإنترنت العامة';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'اسم مستخدم الوكيل (اختياري)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'كلمة مرور الوكيل (اختياري)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'هل تريد حذف أرشيفات النسخ الاحتياطي المحلية المؤقتة هذه؟ تأكد من حفظ أو مشاركة أي نسخة ما زلت بحاجة إليها.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'مصدر التنزيل المفضل';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'تتم تجربة المصدر المحدد أولاً، والمصادر غير المتاحة تتراجع تلقائيًا كما كان.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'تلقائي (موصى به)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'مرآة Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub مباشرة';
       case 'update_download_source_proxy':
-        return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return ({required Object host}) => 'وكيل: ${host}';
+      case 'storage_category_backups':
+        return 'أرشيفات نسخ احتياطي متبقية';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} أرشيف متبقٍ من آخر عملية تصدير';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} غير متاح لهذا الملف، وتمت العودة إلى الترتيب التلقائي';
+      case 'network_proxy_credentials_scope_hint':
+        return 'بيانات الاعتماد تُستخدم لطلبات HTTP فقط، ومحرك التورنت المدمج لا يمكنه استخدامها';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -181860,7 +182754,7 @@ extension on _StringsDe {
       case 'manga_import_folder_as_source_hint':
         return 'Diesen Ordner weiterhin nach neuem Manga durchsuchen';
       case 'download_no_managed_video_source':
-        return 'Noch keine verwaltete Videoquelle. Downloads benötigen einen lokalen Videoordner als Ziel.';
+        return 'Noch keine verwaltete Videoquelle. Füge einen lokalen Ordner für die heruntergeladenen Dateien hinzu, damit fertige Videos in der Bibliothek landen.';
       case 'download_add_video_source':
         return 'Videoquelle hinzufügen';
       case 'video_subtitle_prev_cue_align':
@@ -182810,6 +183704,10 @@ extension on _StringsDe {
         return 'Netzwerk-Proxy';
       case 'section_network':
         return 'Netzwerk';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return 'Kostenloses Archiv japanischer Untertitel (kitsunekko-Spiegel). Kein Konto nötig; Untertiteldateien werden von GitHub geladen.';
       case 'video_ajatt_enabled_hint':
@@ -183099,47 +183997,81 @@ extension on _StringsDe {
       case 'delete_choices_remember':
         return 'Diese Auswahl merken';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Proxy-Modus';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Automatisch';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Umgebungsvariablen verwenden, dann den aktivierten Systemproxy';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Direkt';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Proxy-Nutzung für die App deaktivieren';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'Manuell';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Server und optionale Zugangsdaten unten verwenden';
+      case 'network_proxy_address_hint':
+        return 'HTTP-Proxyserver für alle Anfragen ins öffentliche Internet';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Proxy-Benutzername (optional)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Proxy-Passwort (optional)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Diese temporären lokalen Backup-Archive löschen? Stelle sicher, dass du jede noch benötigte Kopie gespeichert oder geteilt hast.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Bevorzugte Downloadquelle';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'Die gewählte Quelle wird zuerst versucht; nicht verfügbare Quellen weichen weiterhin automatisch aus.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Automatisch (empfohlen)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Cloudflare-Spiegel';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub direkt';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'storage_category_backups':
+        return 'Übrig gebliebene Backup-Archive';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} Archiv(e) vom letzten Export übrig';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} ist für diese Datei nicht verfügbar; es wird auf die automatische Reihenfolge zurückgegriffen';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Zugangsdaten gelten nur für HTTP-Anfragen; die integrierte Torrent-Engine kann sie nicht verwenden';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -190297,7 +191229,7 @@ extension on _StringsEs {
       case 'manga_import_folder_as_source_hint':
         return 'Seguir escaneando esta carpeta en busca de nuevo manga';
       case 'download_no_managed_video_source':
-        return 'Aún no hay fuente de vídeo gestionada. Las descargas necesitan una carpeta de vídeo local donde aterrizar.';
+        return 'Aún no hay fuente de vídeo gestionada. Añade una carpeta local donde guardar los archivos descargados para que los vídeos terminados entren en la biblioteca.';
       case 'download_add_video_source':
         return 'Añadir fuente de vídeo';
       case 'video_subtitle_prev_cue_align':
@@ -191246,6 +192178,10 @@ extension on _StringsEs {
         return 'Proxy de red';
       case 'section_network':
         return 'Red';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return 'Archivo gratuito de subtítulos en japonés (réplica de kitsunekko). No requiere cuenta; los archivos se descargan desde GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -191535,47 +192471,81 @@ extension on _StringsEs {
       case 'delete_choices_remember':
         return 'Recordar estas opciones';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Modo de proxy';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Automático';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Usar variables de entorno y luego el proxy del sistema activado';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Directo';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Desactivar el uso de proxy para la aplicación';
       case 'network_proxy_mode_manual':
         return 'Manual';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Usar el servidor y las credenciales opcionales de abajo';
+      case 'network_proxy_address_hint':
+        return 'Servidor proxy HTTP usado por todas las solicitudes a Internet público';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Usuario del proxy (opcional)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Contraseña del proxy (opcional)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return '¿Eliminar estos archivos de copia de seguridad locales temporales? Asegúrate de haber guardado o compartido cualquier copia que aún necesites.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Fuente de descarga preferida';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'La fuente seleccionada se intenta primero; las fuentes no disponibles siguen recurriendo automáticamente a otras.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Automático (recomendado)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Espejo de Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub directo';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'storage_category_backups':
+        return 'Archivos de copia de seguridad sobrantes';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} archivo(s) que dejó la última exportación';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} no está disponible para este archivo; se vuelve al orden automático';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Las credenciales solo se aplican a las solicitudes HTTP; el motor de torrents integrado no puede usarlas';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -198742,7 +199712,7 @@ extension on _StringsFr {
       case 'manga_import_folder_as_source_hint':
         return 'Scanner continuellement ce dossier pour de nouveaux manga';
       case 'download_no_managed_video_source':
-        return 'Aucune source vidéo gérée. Les téléchargements ont besoin d\'un dossier vidéo local.';
+        return 'Aucune source vidéo gérée. Ajoutez un dossier local où stocker les fichiers téléchargés pour que les vidéos terminées entrent dans la bibliothèque.';
       case 'download_add_video_source':
         return 'Ajouter une source vidéo';
       case 'video_subtitle_prev_cue_align':
@@ -199690,6 +200660,10 @@ extension on _StringsFr {
         return 'Proxy réseau';
       case 'section_network':
         return 'Réseau';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return 'Archive gratuite de sous-titres japonais (miroir kitsunekko). Aucun compte requis ; les fichiers sont téléchargés depuis GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -199979,47 +200953,81 @@ extension on _StringsFr {
       case 'delete_choices_remember':
         return 'Mémoriser ces choix';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Mode proxy';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Automatique';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Utiliser les variables d\'environnement, puis le proxy système activé';
       case 'network_proxy_mode_direct':
         return 'Direct';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Désactiver l\'utilisation du proxy pour l\'application';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'Manuel';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Utiliser le serveur et les identifiants facultatifs ci-dessous';
+      case 'network_proxy_address_hint':
+        return 'Serveur proxy HTTP utilisé par toutes les requêtes vers Internet public';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Nom d\'utilisateur du proxy (facultatif)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Mot de passe du proxy (facultatif)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Supprimer ces archives de sauvegarde locales temporaires ? Assurez-vous d\'avoir enregistré ou partagé toute copie encore nécessaire.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Source de téléchargement préférée';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'La source sélectionnée est essayée en premier ; les sources indisponibles basculent toujours automatiquement.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Automatique (recommandé)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Miroir Cloudflare';
       case 'update_download_source_github':
         return 'GitHub direct';
       case 'update_download_source_proxy':
-        return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return ({required Object host}) => 'Proxy : ${host}';
+      case 'storage_category_backups':
+        return 'Archives de sauvegarde restantes';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} archive(s) laissée(s) par la dernière exportation';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} n\'est pas disponible pour ce fichier ; retour à l\'ordre automatique';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Les identifiants ne s\'appliquent qu\'aux requêtes HTTP ; le moteur torrent intégré ne peut pas les utiliser';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -207162,7 +208170,7 @@ extension on _StringsId {
       case 'manga_import_folder_as_source_hint':
         return 'Terus pindai folder ini untuk manga baru';
       case 'download_no_managed_video_source':
-        return 'Belum ada sumber video terkelola. Unduhan memerlukan folder video lokal sebagai tujuan.';
+        return 'Belum ada sumber video terkelola. Tambahkan folder lokal untuk menyimpan berkas yang diunduh agar video yang selesai masuk ke pustaka.';
       case 'download_add_video_source':
         return 'Tambah sumber video';
       case 'video_subtitle_prev_cue_align':
@@ -208106,6 +209114,10 @@ extension on _StringsId {
         return 'Proksi jaringan';
       case 'section_network':
         return 'Jaringan';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return 'Arsip subtitle bahasa Jepang gratis (cermin kitsunekko). Tidak perlu akun; berkas subtitle diunduh dari GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -208395,47 +209407,81 @@ extension on _StringsId {
       case 'delete_choices_remember':
         return 'Ingat pilihan ini';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Mode proxy';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Otomatis';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Gunakan variabel lingkungan, lalu proxy sistem yang aktif';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Langsung';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Nonaktifkan penggunaan proxy untuk aplikasi';
       case 'network_proxy_mode_manual':
         return 'Manual';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Gunakan server dan kredensial opsional di bawah';
+      case 'network_proxy_address_hint':
+        return 'Server proxy HTTP yang dipakai semua permintaan internet publik';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Nama pengguna proxy (opsional)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Kata sandi proxy (opsional)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Hapus arsip cadangan lokal sementara ini? Pastikan Anda sudah menyimpan atau membagikan salinan yang masih diperlukan.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Sumber unduhan pilihan';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'Sumber yang dipilih dicoba lebih dulu; sumber yang tidak tersedia tetap dialihkan otomatis.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Otomatis (disarankan)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Mirror Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub langsung';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'storage_category_backups':
+        return 'Arsip cadangan tersisa';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} arsip yang tersisa dari ekspor terakhir';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} tidak tersedia untuk berkas ini; kembali ke urutan otomatis';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Kredensial hanya berlaku untuk permintaan HTTP; mesin torrent bawaan tidak dapat menggunakannya';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -215596,7 +216642,7 @@ extension on _StringsIt {
       case 'manga_import_folder_as_source_hint':
         return 'Continua a scansionare questa cartella per nuovi manga';
       case 'download_no_managed_video_source':
-        return 'Nessuna fonte video gestita. I download necessitano di una cartella video locale come destinazione.';
+        return 'Nessuna fonte video gestita. Aggiungi una cartella locale in cui salvare i file scaricati, così i video completati entrano nella libreria.';
       case 'download_add_video_source':
         return 'Aggiungi fonte video';
       case 'video_subtitle_prev_cue_align':
@@ -216543,6 +217589,10 @@ extension on _StringsIt {
         return 'Proxy di rete';
       case 'section_network':
         return 'Rete';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return 'Archivio gratuito di sottotitoli giapponesi (mirror kitsunekko). Nessun account richiesto; i file vengono scaricati da GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -216832,47 +217882,81 @@ extension on _StringsIt {
       case 'delete_choices_remember':
         return 'Ricorda queste scelte';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Modalità proxy';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Automatica';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Usa le variabili d\'ambiente, poi il proxy di sistema attivo';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Diretta';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Disattiva l\'uso del proxy per l\'app';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'Manuale';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Usa il server e le credenziali facoltative qui sotto';
+      case 'network_proxy_address_hint':
+        return 'Server proxy HTTP usato da tutte le richieste verso Internet pubblico';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Nome utente del proxy (facoltativo)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Password del proxy (facoltativa)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Eliminare questi archivi di backup locali temporanei? Assicurati di aver salvato o condiviso ogni copia che ti serve ancora.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Fonte di download preferita';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'La fonte selezionata viene provata per prima; le fonti non disponibili continuano a ripiegare automaticamente.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Automatica (consigliata)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Mirror Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub diretto';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'storage_category_backups':
+        return 'Archivi di backup residui';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} archivio/i lasciato/i dall\'ultima esportazione';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} non è disponibile per questo file; si torna all\'ordine automatico';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Le credenziali valgono solo per le richieste HTTP; il motore torrent integrato non può usarle';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -223971,7 +225055,7 @@ extension on _StringsJa {
       case 'manga_import_folder_as_source_hint':
         return 'このフォルダを継続スキャンして新しいマンガを検出';
       case 'download_no_managed_video_source':
-        return '管理対象の動画ソースがまだありません。ダウンロードにはローカル動画フォルダが必要です。';
+        return '管理対象の動画ソースがまだありません。ダウンロードしたファイルを保存するローカルフォルダを追加すると、完了した動画がライブラリに入ります。';
       case 'download_add_video_source':
         return '動画ソースを追加';
       case 'video_subtitle_prev_cue_align':
@@ -224912,6 +225996,10 @@ extension on _StringsJa {
         return 'ネットワークプロキシ';
       case 'section_network':
         return 'ネットワーク';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return '無料の日本語字幕アーカイブ（kitsunekko ミラー）。アカウント不要。字幕ファイルは GitHub からダウンロードされます。';
       case 'video_ajatt_enabled_hint':
@@ -225199,47 +226287,80 @@ extension on _StringsJa {
       case 'delete_choices_remember':
         return 'この選択を記憶する';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'プロキシモード';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return '自動';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return '環境変数、次に有効なシステムプロキシを使用';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return '直接接続';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'アプリでのプロキシ使用を無効にする';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return '手動';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return '下のサーバーと任意の認証情報を使用';
+      case 'network_proxy_address_hint':
+        return 'すべての公開インターネット通信で使う HTTP プロキシサーバー';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'プロキシのユーザー名（任意）';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'プロキシのパスワード（任意）';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'これらの一時的なローカルバックアップ書庫を削除しますか？まだ必要な控えは保存または共有済みか確認してください。';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return '優先ダウンロード元';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return '選んだ配布元を最初に試します。利用できない場合も自動で他の配布元にフォールバックします。';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return '自動（推奨）';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Cloudflare ミラー';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub 直接';
       case 'update_download_source_proxy':
-        return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return ({required Object host}) => 'プロキシ: ${host}';
+      case 'storage_category_backups':
+        return '残っているバックアップ書庫';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '前回のエクスポートで残った ${n} 個の書庫';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} はこのファイルでは利用できないため、自動順に戻しました';
+      case 'network_proxy_credentials_scope_hint':
+        return '認証情報は HTTP 通信にのみ適用されます。内蔵 torrent エンジンでは使用できません';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -232340,7 +233461,7 @@ extension on _StringsKo {
       case 'manga_import_folder_as_source_hint':
         return '이 폴더에서 새 만화를 계속 스캔';
       case 'download_no_managed_video_source':
-        return '관리 중인 동영상 소스가 없습니다. 다운로드를 저장할 로컬 동영상 폴더가 필요합니다.';
+        return '관리 중인 동영상 소스가 없습니다. 다운로드한 파일을 보관할 로컬 폴더를 추가해야 완료된 동영상이 라이브러리에 등록됩니다.';
       case 'download_add_video_source':
         return '동영상 소스 추가';
       case 'video_subtitle_prev_cue_align':
@@ -233281,6 +234402,10 @@ extension on _StringsKo {
         return '네트워크 프록시';
       case 'section_network':
         return '네트워크';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return '무료 일본어 자막 아카이브(kitsunekko 미러). 계정 불필요. 자막 파일은 GitHub에서 다운로드됩니다.';
       case 'video_ajatt_enabled_hint':
@@ -233569,47 +234694,80 @@ extension on _StringsKo {
       case 'delete_choices_remember':
         return '이 선택 기억하기';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return '프록시 모드';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return '자동';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return '환경 변수를 먼저 사용하고, 그다음 활성화된 시스템 프록시를 사용';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return '직접 연결';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return '앱의 프록시 사용 중지';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return '수동';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return '아래의 서버와 선택적 자격 증명 사용';
+      case 'network_proxy_address_hint':
+        return '모든 공용 인터넷 요청에 사용되는 HTTP 프록시 서버';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return '프록시 사용자 이름(선택 사항)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return '프록시 비밀번호(선택 사항)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return '이 임시 로컬 백업 아카이브를 삭제할까요? 아직 필요한 사본은 저장하거나 공유했는지 확인하세요.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return '선호하는 다운로드 소스';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return '선택한 소스를 먼저 시도하며, 사용할 수 없는 소스는 계속 자동으로 대체됩니다.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return '자동(권장)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Cloudflare 미러';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub 직접';
       case 'update_download_source_proxy':
-        return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return ({required Object host}) => '프록시: ${host}';
+      case 'storage_category_backups':
+        return '남아 있는 백업 아카이브';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '마지막 내보내기에서 남은 아카이브 ${n} 개';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '이 파일에는 ${source} 을(를) 사용할 수 없어 자동 순서로 되돌렸습니다';
+      case 'network_proxy_credentials_scope_hint':
+        return '자격 증명은 HTTP 요청에만 적용되며, 내장 토렌트 엔진은 사용할 수 없습니다';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -240763,7 +241921,7 @@ extension on _StringsNl {
       case 'manga_import_folder_as_source_hint':
         return 'Blijf deze map scannen op nieuwe manga';
       case 'download_no_managed_video_source':
-        return 'Nog geen beheerde videobron. Downloads hebben een lokale videomap nodig om in te landen.';
+        return 'Nog geen beheerde videobron. Voeg een lokale map toe om de gedownloade bestanden in te bewaren, zodat voltooide video\'s in de bibliotheek landen.';
       case 'download_add_video_source':
         return 'Videobron toevoegen';
       case 'video_subtitle_prev_cue_align':
@@ -241711,6 +242869,10 @@ extension on _StringsNl {
         return 'Netwerkproxy';
       case 'section_network':
         return 'Netwerk';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return 'Gratis archief met Japanse ondertitels (kitsunekko-mirror). Geen account nodig; bestanden worden van GitHub gedownload.';
       case 'video_ajatt_enabled_hint':
@@ -242000,47 +243162,81 @@ extension on _StringsNl {
       case 'delete_choices_remember':
         return 'Deze keuzes onthouden';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Proxymodus';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Automatisch';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Gebruik omgevingsvariabelen en daarna de ingeschakelde systeemproxy';
       case 'network_proxy_mode_direct':
         return 'Direct';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Proxygebruik voor de app uitschakelen';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'Handmatig';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Gebruik de server en optionele inloggegevens hieronder';
+      case 'network_proxy_address_hint':
+        return 'HTTP-proxyserver die door alle verzoeken naar het publieke internet wordt gebruikt';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Proxygebruikersnaam (optioneel)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Proxywachtwoord (optioneel)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Deze tijdelijke lokale back-uparchieven verwijderen? Zorg dat je elke kopie die je nog nodig hebt hebt opgeslagen of gedeeld.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Voorkeursbron voor downloads';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'De gekozen bron wordt als eerste geprobeerd; niet-beschikbare bronnen vallen nog steeds automatisch terug.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Automatisch (aanbevolen)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Cloudflare-mirror';
       case 'update_download_source_github':
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'storage_category_backups':
+        return 'Achtergebleven back-uparchieven';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} archief(en) achtergelaten door de laatste export';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} is niet beschikbaar voor dit bestand; er wordt teruggevallen op de automatische volgorde';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Inloggegevens gelden alleen voor HTTP-verzoeken; de ingebouwde torrent-engine kan ze niet gebruiken';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -249190,7 +250386,7 @@ extension on _StringsPtBr {
       case 'manga_import_folder_as_source_hint':
         return 'Continuar varrendo esta pasta para novos mangás';
       case 'download_no_managed_video_source':
-        return 'Nenhuma fonte de vídeo gerenciada ainda. Downloads precisam de uma pasta de vídeo local para salvar.';
+        return 'Nenhuma fonte de vídeo gerenciada ainda. Adicione uma pasta local para guardar os arquivos baixados, para que os vídeos concluídos entrem na biblioteca.';
       case 'download_add_video_source':
         return 'Adicionar fonte de vídeo';
       case 'video_subtitle_prev_cue_align':
@@ -250137,6 +251333,10 @@ extension on _StringsPtBr {
         return 'Proxy de rede';
       case 'section_network':
         return 'Rede';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return 'Arquivo gratuito de legendas em japonês (espelho do kitsunekko). Não precisa de conta; os arquivos são baixados do GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -250426,47 +251626,81 @@ extension on _StringsPtBr {
       case 'delete_choices_remember':
         return 'Lembrar estas escolhas';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Modo de proxy';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Automático';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Usar variáveis de ambiente e depois o proxy do sistema ativado';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Direto';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Desativar o uso de proxy pelo aplicativo';
       case 'network_proxy_mode_manual':
         return 'Manual';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Usar o servidor e as credenciais opcionais abaixo';
+      case 'network_proxy_address_hint':
+        return 'Servidor proxy HTTP usado por todas as requisições à internet pública';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Usuário do proxy (opcional)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Senha do proxy (opcional)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Excluir estes arquivos de backup locais temporários? Confirme que você salvou ou compartilhou qualquer cópia que ainda precise.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Fonte de download preferida';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'A fonte selecionada é tentada primeiro; fontes indisponíveis continuam recorrendo automaticamente a outras.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Automático (recomendado)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Espelho Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub direto';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'storage_category_backups':
+        return 'Arquivos de backup restantes';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} arquivo(s) deixado(s) pela última exportação';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} não está disponível para este arquivo; voltando à ordem automática';
+      case 'network_proxy_credentials_scope_hint':
+        return 'As credenciais valem apenas para requisições HTTP; o motor de torrent integrado não consegue usá-las';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -257623,7 +258857,7 @@ extension on _StringsRu {
       case 'manga_import_folder_as_source_hint':
         return 'Продолжать сканировать эту папку на наличие новой манги';
       case 'download_no_managed_video_source':
-        return 'Управляемый видеоисточник ещё не добавлен. Для загрузок нужна локальная видеопапка.';
+        return 'Управляемый видеоисточник ещё не добавлен. Добавьте локальную папку для хранения загруженных файлов, чтобы готовые видео попадали в библиотеку.';
       case 'download_add_video_source':
         return 'Добавить видеоисточник';
       case 'video_subtitle_prev_cue_align':
@@ -258569,6 +259803,10 @@ extension on _StringsRu {
         return 'Сетевой прокси';
       case 'section_network':
         return 'Сеть';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return 'Бесплатный архив японских субтитров (зеркало kitsunekko). Аккаунт не нужен; файлы скачиваются с GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -258858,47 +260096,81 @@ extension on _StringsRu {
       case 'delete_choices_remember':
         return 'Запомнить этот выбор';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Режим прокси';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Автоматически';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Использовать переменные среды, затем включённый системный прокси';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Прямое подключение';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Отключить использование прокси для приложения';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'Вручную';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Использовать сервер и необязательные учётные данные ниже';
+      case 'network_proxy_address_hint':
+        return 'HTTP-прокси, через который идут все запросы в публичный интернет';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Имя пользователя прокси (необязательно)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Пароль прокси (необязательно)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Удалить эти временные локальные архивы резервных копий? Убедитесь, что вы сохранили или отправили все нужные копии.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Предпочитаемый источник загрузки';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'Выбранный источник пробуется первым; недоступные источники по-прежнему автоматически заменяются.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Автоматически (рекомендуется)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Зеркало Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub напрямую';
       case 'update_download_source_proxy':
-        return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return ({required Object host}) => 'Прокси: ${host}';
+      case 'storage_category_backups':
+        return 'Оставшиеся архивы резервных копий';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            'Архивов, оставшихся после последнего экспорта: ${n}';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} недоступен для этого файла; выполнен возврат к автоматическому порядку';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Учётные данные применяются только к HTTP-запросам; встроенный torrent-движок не может их использовать';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -266031,7 +267303,7 @@ extension on _StringsTh {
       case 'manga_import_folder_as_source_hint':
         return 'สแกนโฟลเดอร์นี้ต่อเนื่องเพื่อหามังงะใหม่';
       case 'download_no_managed_video_source':
-        return 'ยังไม่มีแหล่งวิดีโอที่จัดการ การดาวน์โหลดต้องมีโฟลเดอร์วิดีโอในเครื่องเพื่อจัดเก็บ';
+        return 'ยังไม่มีแหล่งวิดีโอที่จัดการ เพิ่มโฟลเดอร์ในเครื่องสำหรับเก็บไฟล์ที่ดาวน์โหลด เพื่อให้วิดีโอที่เสร็จแล้วเข้าคลัง';
       case 'download_add_video_source':
         return 'เพิ่มแหล่งวิดีโอ';
       case 'video_subtitle_prev_cue_align':
@@ -266974,6 +268246,10 @@ extension on _StringsTh {
         return 'พร็อกซีเครือข่าย';
       case 'section_network':
         return 'เครือข่าย';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return 'คลังซับไตเติลภาษาญี่ปุ่นฟรี (มิเรอร์ kitsunekko) ไม่ต้องใช้บัญชี ไฟล์ซับไตเติลดาวน์โหลดจาก GitHub';
       case 'video_ajatt_enabled_hint':
@@ -267263,47 +268539,81 @@ extension on _StringsTh {
       case 'delete_choices_remember':
         return 'จดจำตัวเลือกเหล่านี้';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'โหมดพร็อกซี';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'อัตโนมัติ';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'ใช้ตัวแปรสภาพแวดล้อม แล้วจึงใช้พร็อกซีของระบบที่เปิดอยู่';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'เชื่อมต่อโดยตรง';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'ปิดการใช้พร็อกซีสำหรับแอป';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'กำหนดเอง';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'ใช้เซิร์ฟเวอร์และข้อมูลรับรอง (ถ้ามี) ด้านล่าง';
+      case 'network_proxy_address_hint':
+        return 'เซิร์ฟเวอร์พร็อกซี HTTP ที่ใช้กับคำขออินเทอร์เน็ตสาธารณะทั้งหมด';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'ชื่อผู้ใช้พร็อกซี (ไม่บังคับ)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'รหัสผ่านพร็อกซี (ไม่บังคับ)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'ลบไฟล์สำรองข้อมูลชั่วคราวในเครื่องเหล่านี้หรือไม่ โปรดตรวจสอบว่าคุณได้บันทึกหรือแชร์สำเนาที่ยังต้องใช้แล้ว';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'แหล่งดาวน์โหลดที่ต้องการ';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'ระบบจะลองแหล่งที่เลือกก่อน หากแหล่งนั้นใช้ไม่ได้จะสำรองไปแหล่งอื่นโดยอัตโนมัติ';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'อัตโนมัติ (แนะนำ)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'มิเรอร์ Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub โดยตรง';
       case 'update_download_source_proxy':
-        return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return ({required Object host}) => 'พร็อกซี: ${host}';
+      case 'storage_category_backups':
+        return 'ไฟล์สำรองข้อมูลที่ตกค้าง';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            'ไฟล์เก็บถาวร ${n} รายการที่ตกค้างจากการส่งออกครั้งล่าสุด';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} ใช้กับไฟล์นี้ไม่ได้ จึงกลับไปใช้ลำดับอัตโนมัติ';
+      case 'network_proxy_credentials_scope_hint':
+        return 'ข้อมูลรับรองใช้ได้กับคำขอ HTTP เท่านั้น เอนจิน torrent ในตัวไม่สามารถใช้ได้';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -274450,7 +275760,7 @@ extension on _StringsTr {
       case 'manga_import_folder_as_source_hint':
         return 'Yeni manga için bu klasörü taramaya devam et';
       case 'download_no_managed_video_source':
-        return 'Henüz yönetilen bir video kaynağı yok. İndirmelerin ineceği yerel bir video klasörü gerekiyor.';
+        return 'Henüz yönetilen bir video kaynağı yok. İndirilen dosyaların saklanacağı yerel bir klasör ekleyin ki tamamlanan videolar kitaplığa girsin.';
       case 'download_add_video_source':
         return 'Video kaynağı ekle';
       case 'video_subtitle_prev_cue_align':
@@ -275395,6 +276705,10 @@ extension on _StringsTr {
         return 'Ağ proxy\'si';
       case 'section_network':
         return 'Ağ';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return 'Ücretsiz Japonca altyazı arşivi (kitsunekko yansıması). Hesap gerekmez; altyazı dosyaları GitHub\'dan indirilir.';
       case 'video_ajatt_enabled_hint':
@@ -275684,47 +276998,80 @@ extension on _StringsTr {
       case 'delete_choices_remember':
         return 'Bu seçimleri hatırla';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Proxy modu';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Otomatik';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Önce ortam değişkenlerini, sonra etkin sistem proxy\'sini kullan';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Doğrudan';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Uygulama için proxy kullanımını devre dışı bırak';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'Elle';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Aşağıdaki sunucuyu ve isteğe bağlı kimlik bilgilerini kullan';
+      case 'network_proxy_address_hint':
+        return 'Tüm genel internet isteklerinde kullanılan HTTP proxy sunucusu';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Proxy kullanıcı adı (isteğe bağlı)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Proxy parolası (isteğe bağlı)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Bu geçici yerel yedek arşivleri silinsin mi? Hâlâ ihtiyacınız olan kopyaları kaydettiğinizden veya paylaştığınızdan emin olun.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Tercih edilen indirme kaynağı';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'Seçilen kaynak önce denenir; kullanılamayan kaynaklar yine de otomatik olarak yedeğe döner.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Otomatik (önerilir)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Cloudflare aynası';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub doğrudan';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'storage_category_backups':
+        return 'Artakalan yedek arşivleri';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => 'Son dışa aktarmadan kalan ${n} arşiv';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} bu dosya için kullanılamıyor; otomatik sıraya geri dönüldü';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Kimlik bilgileri yalnızca HTTP istekleri için geçerlidir; yerleşik torrent motoru bunları kullanamaz';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -282865,7 +284212,7 @@ extension on _StringsVi {
       case 'manga_import_folder_as_source_hint':
         return 'Tiếp tục quét thư mục này để tìm truyện tranh mới';
       case 'download_no_managed_video_source':
-        return 'Chưa có nguồn video được quản lý. Tải xuống cần một thư mục video cục bộ để lưu.';
+        return 'Chưa có nguồn video được quản lý. Hãy thêm một thư mục cục bộ để lưu các tệp đã tải xuống, video hoàn tất mới vào được thư viện.';
       case 'download_add_video_source':
         return 'Thêm nguồn video';
       case 'video_subtitle_prev_cue_align':
@@ -283809,6 +285156,10 @@ extension on _StringsVi {
         return 'Proxy mạng';
       case 'section_network':
         return 'Mạng';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return 'Kho phụ đề tiếng Nhật miễn phí (bản sao kitsunekko). Không cần tài khoản; tệp phụ đề tải từ GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -284098,47 +285449,81 @@ extension on _StringsVi {
       case 'delete_choices_remember':
         return 'Ghi nhớ các lựa chọn này';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Chế độ proxy';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Tự động';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Dùng biến môi trường, sau đó là proxy hệ thống đang bật';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Kết nối trực tiếp';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Tắt việc dùng proxy cho ứng dụng';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'Thủ công';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Dùng máy chủ và thông tin đăng nhập tùy chọn bên dưới';
+      case 'network_proxy_address_hint':
+        return 'Máy chủ proxy HTTP dùng cho mọi yêu cầu ra Internet công cộng';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Tên người dùng proxy (tùy chọn)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Mật khẩu proxy (tùy chọn)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Xóa các kho lưu trữ sao lưu cục bộ tạm thời này? Hãy chắc chắn bạn đã lưu hoặc chia sẻ bản sao nào còn cần.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Nguồn tải xuống ưu tiên';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'Nguồn đã chọn sẽ được thử trước; các nguồn không khả dụng vẫn tự động chuyển sang nguồn khác.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Tự động (khuyến nghị)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Máy chủ gương Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub trực tiếp';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      case 'storage_category_backups':
+        return 'Kho lưu trữ sao lưu còn sót';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} kho lưu trữ còn sót từ lần xuất trước';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} không khả dụng cho tệp này; đã quay lại thứ tự tự động';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Thông tin đăng nhập chỉ áp dụng cho yêu cầu HTTP; công cụ torrent tích hợp không dùng được';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
@@ -291218,7 +292603,7 @@ extension on _StringsZhCn {
       case 'manga_import_folder_as_source_hint':
         return '以后自动扫描此文件夹里的新漫画';
       case 'download_no_managed_video_source':
-        return '还没有受管视频来源。下载完成的视频需要一个本地视频文件夹才能入库。';
+        return '还没有受管视频来源。请添加一个存放下载文件的本地文件夹，下载完成的视频才能入库。';
       case 'download_add_video_source':
         return '添加视频来源';
       case 'video_subtitle_prev_cue_align':
@@ -292156,6 +293541,10 @@ extension on _StringsZhCn {
         return '网络代理';
       case 'section_network':
         return '网络';
+      case 'network_proxy_p2p_label':
+        return 'P2P（torrent）代理';
+      case 'network_proxy_p2p_warning':
+        return '默认直连。走代理：全部 P2P 流量经全局代理——可能降速，且不少代理服务商禁止 BT 流量（限速、警告甚至封号）。混合：tracker 请求经代理、DHT 与 peer 直连——节点获取范围最大，但真实 IP 会暴露给 tracker/DHT/peer（只解决连通性，无隐私作用）。仅对内置引擎生效，外接 qBittorrent 请在其自身设置中配置。';
       case 'video_ajatt_settings_hint':
         return '免费日语字幕库（kitsunekko 镜像）。无需账号；字幕文件从 GitHub 下载。';
       case 'video_ajatt_enabled_hint':
@@ -292456,16 +293845,12 @@ extension on _StringsZhCn {
         return '手动';
       case 'network_proxy_mode_manual_hint':
         return '使用下方服务器与可选认证信息';
-      case 'network_proxy_manual_hint':
+      case 'network_proxy_address_hint':
         return '供应用全部公网请求使用的 HTTP 代理服务器';
       case 'network_proxy_username':
         return '代理用户名（可选）';
       case 'network_proxy_password':
         return '代理密码（可选）';
-      case 'storage_category_backups':
-        return '本地备份';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} 个备份归档';
       case 'storage_entry_delete_backups_confirm_body':
         return '确定清除这些临时本地备份吗？请先确认需要保留的副本已经保存或分享出去。';
       case 'update_download_source_preference':
@@ -292480,10 +293865,46 @@ extension on _StringsZhCn {
         return 'GitHub 直连';
       case 'update_download_source_proxy':
         return ({required Object host}) => '代理站：${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P（torrent）代理';
-      case 'network_proxy_p2p_warning':
-        return '默认直连。走代理：全部 P2P 流量经全局代理——可能降速，且不少代理服务商禁止 BT 流量（限速、警告甚至封号）。混合：tracker 请求经代理、DHT 与 peer 直连——节点获取范围最大，但真实 IP 会暴露给 tracker/DHT/peer（只解决连通性，无隐私作用）。仅对内置引擎生效，外接 qBittorrent 请在其自身设置中配置。';
+      case 'storage_category_backups':
+        return '遗留的备份包';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '上次导出遗留的 ${n} 个备份包';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) => '${source} 不适用于该文件，已回退到自动顺序';
+      case 'network_proxy_credentials_scope_hint':
+        return '凭据仅用于 HTTP 请求；内置 torrent 引擎无法使用';
+      case 'anki_error_paired_device_unreachable':
+        return '无法制卡：当前没有可连接的已配对设备。请确认配对设备上的 Fushi 正在运行；如果要在本机制卡，请关闭「制卡到已配对设备」。';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return '关闭后：手动、扫描后、下载导入后与后台自动补刮都会跳过此来源。';
+      case 'video_source_scrape_work_missing':
+        return '该作品已不在当前来源计划中（文件可能已改名、移动或删除）。请重新刮削此来源刷新待确认列表。';
+      case 'video_source_scrape_pending_works':
+        return '待确认作品';
+      case 'video_source_scrape_pending_works_hint':
+        return '这些条目还没有确认的作品身份。搜索并选中正确的作品即可完成刮削。';
+      case 'video_source_scrape_enabled_toggle':
+        return '启用此来源的刮削';
+      case 'video_library_scrape_auto_backfill':
+        return '自动补齐缺失的作品资料';
+      case 'video_library_scrape_auto_backfill_hint':
+        return '进入视频库时，自动刮削仍未确认身份的条目。关闭后不再有任何后台元数据下载。';
+      case 'stat_detail_ungrouped':
+        return '未分组';
+      case 'stat_detail_empty':
+        return '此时段暂无记录';
+      case 'stat_center_title':
+        return '统计中心';
+      case 'stat_center_tab_overview':
+        return '总览';
+      case 'shortcut_action_video_dismiss_dict':
+        return '关闭词典';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return '确认作品身份';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB 上有多个可能的匹配。选中正确的作品后，下载导入将直接按该身份刮削；跳过则可稍后在待确认列表手动指定。';
+      case 'video_discovery_anidb_identity_not_found':
+        return '未能在 AniDB 识别该作品：仍会正常下载，导入后在待确认列表等待手动指定身份。';
       case 'network_proxy_p2p_mode_direct':
         return '直连';
       case 'network_proxy_p2p_mode_proxy':
@@ -299564,7 +300985,7 @@ extension on _StringsZhHk {
       case 'manga_import_folder_as_source_hint':
         return '以後自動掃描此資料夾裡的新漫畫';
       case 'download_no_managed_video_source':
-        return '還沒有受管影片來源。下載完成的影片需要一個本地影片資料夾才能入庫。';
+        return '還沒有受管影片來源。請新增一個存放下載檔案的本機資料夾，下載完成的影片才能入庫。';
       case 'download_add_video_source':
         return '添加影片來源';
       case 'video_subtitle_prev_cue_align':
@@ -300502,6 +301923,10 @@ extension on _StringsZhHk {
         return '網路代理';
       case 'section_network':
         return '網路';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
       case 'video_ajatt_settings_hint':
         return '免費日語字幕庫（kitsunekko 鏡像）。無需帳號；字幕檔案從 GitHub 下載。';
       case 'video_ajatt_enabled_hint':
@@ -300789,47 +302214,79 @@ extension on _StringsZhHk {
       case 'delete_choices_remember':
         return '記住這些選擇';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return '代理模式';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return '自動';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return '先用環境變數，再用已啟用的系統代理';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return '直連';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return '停用應用程式的代理';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return '手動';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return '使用下方的伺服器與選填憑證';
+      case 'network_proxy_address_hint':
+        return '所有公網請求都會使用的 HTTP 代理伺服器';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return '代理使用者名稱（選填）';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return '代理密碼（選填）';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return '要刪除這些暫存的本機備份封存檔嗎？請確認仍需要的副本已儲存或分享。';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return '偏好的下載來源';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return '會先嘗試所選來源；來源不可用時仍會自動回退。';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return '自動（建議）';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Cloudflare 鏡像';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub 直連';
       case 'update_download_source_proxy':
-        return ({required Object host}) => 'Proxy: ${host}';
-      case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
-      case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return ({required Object host}) => '代理：${host}';
+      case 'storage_category_backups':
+        return '遺留的備份封存檔';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '上次匯出遺留的 ${n} 個備份封存檔';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) => '${source} 不適用於此檔案，已回退到自動順序';
+      case 'network_proxy_credentials_scope_hint':
+        return '憑證僅用於 HTTP 請求；內建 torrent 引擎無法使用';
+      case 'anki_error_paired_device_unreachable':
+        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
+      case 'shortcut_action_video_dismiss_dict':
+        return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
