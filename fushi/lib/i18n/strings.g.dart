@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69768 (4104 per locale)
+/// Strings: 69836 (4108 per locale)
 ///
-/// Built on 2026-09-01 at 14:04 UTC
+/// Built on 2026-09-01 at 15:30 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5634,6 +5634,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Auto-fill missing series info';
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_empty => 'No activity in this period';
+  String get stat_center_title => 'Statistics center';
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -15190,6 +15194,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -24969,6 +24981,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -34797,6 +34817,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -44660,6 +44688,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -54340,6 +54376,14 @@ class _StringsId extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -64104,6 +64148,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -73273,6 +73325,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -82453,6 +82513,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -92171,6 +92239,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -101945,6 +102021,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -111695,6 +111779,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -121246,6 +121338,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -130912,6 +131012,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -140554,6 +140662,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 // Path: <root>
@@ -149427,6 +149543,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       '进入视频库时，自动刮削仍未确认身份的条目。关闭后不再有任何后台元数据下载。';
+  @override
+  String get stat_detail_ungrouped => '未分组';
+  @override
+  String get stat_detail_empty => '此时段暂无记录';
+  @override
+  String get stat_center_title => '统计中心';
+  @override
+  String get stat_center_tab_overview => '总览';
 }
 
 // Path: <root>
@@ -158314,6 +158438,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_library_scrape_auto_backfill_hint =>
       'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
+  @override
+  String get stat_center_title => 'Statistics center';
+  @override
+  String get stat_center_tab_overview => 'Overview';
 }
 
 /// Flat map(s) containing all translations.
@@ -166735,6 +166867,14 @@ extension on _StringsEn {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -175151,6 +175291,14 @@ extension on _StringsAr {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -183611,6 +183759,14 @@ extension on _StringsDe {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -192063,6 +192219,14 @@ extension on _StringsEs {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -200523,6 +200687,14 @@ extension on _StringsFr {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -208955,6 +209127,14 @@ extension on _StringsId {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -217408,6 +217588,14 @@ extension on _StringsIt {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -225790,6 +225978,14 @@ extension on _StringsJa {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -234175,6 +234371,14 @@ extension on _StringsKo {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -242622,6 +242826,14 @@ extension on _StringsNl {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -251064,6 +251276,14 @@ extension on _StringsPtBr {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -259512,6 +259732,14 @@ extension on _StringsRu {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -267933,6 +268161,14 @@ extension on _StringsTh {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -276369,6 +276605,14 @@ extension on _StringsTr {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -284799,6 +285043,14 @@ extension on _StringsVi {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
@@ -293158,6 +293410,14 @@ extension on _StringsZhCn {
         return '自动补齐缺失的作品资料';
       case 'video_library_scrape_auto_backfill_hint':
         return '进入视频库时，自动刮削仍未确认身份的条目。关闭后不再有任何后台元数据下载。';
+      case 'stat_detail_ungrouped':
+        return '未分组';
+      case 'stat_detail_empty':
+        return '此时段暂无记录';
+      case 'stat_center_title':
+        return '统计中心';
+      case 'stat_center_tab_overview':
+        return '总览';
       default:
         return null;
     }
@@ -301518,6 +301778,14 @@ extension on _StringsZhHk {
         return 'Auto-fill missing series info';
       case 'video_library_scrape_auto_backfill_hint':
         return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
+      case 'stat_center_title':
+        return 'Statistics center';
+      case 'stat_center_tab_overview':
+        return 'Overview';
       default:
         return null;
     }
