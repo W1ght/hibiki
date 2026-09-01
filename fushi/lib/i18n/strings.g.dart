@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69853 (4109 per locale)
+/// Strings: 69904 (4112 per locale)
 ///
-/// Built on 2026-09-01 at 15:32 UTC
+/// Built on 2026-09-01 at 15:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5639,6 +5639,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get stat_center_title => 'Statistics center';
   String get stat_center_tab_overview => 'Overview';
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -15205,6 +15211,15 @@ class _StringsAr extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -24994,6 +25009,15 @@ class _StringsDe extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -34832,6 +34856,15 @@ class _StringsEs extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -44705,6 +44738,15 @@ class _StringsFr extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -54395,6 +54437,15 @@ class _StringsId extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -64169,6 +64220,15 @@ class _StringsIt extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -73348,6 +73408,15 @@ class _StringsJa extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -82538,6 +82607,15 @@ class _StringsKo extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -92266,6 +92344,15 @@ class _StringsNl extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -102050,6 +102137,15 @@ class _StringsPtBr extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -111810,6 +111906,15 @@ class _StringsRu extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -121371,6 +121476,15 @@ class _StringsTh extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -131047,6 +131161,15 @@ class _StringsTr extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -140699,6 +140822,15 @@ class _StringsVi extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 // Path: <root>
@@ -149582,6 +149714,14 @@ class _StringsZhCn extends _StringsEn {
   String get stat_center_tab_overview => '总览';
   @override
   String get shortcut_action_video_dismiss_dict => '关闭词典';
+  @override
+  String get video_discovery_anidb_identity_confirm_title => '确认作品身份';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB 上有多个可能的匹配。选中正确的作品后，下载导入将直接按该身份刮削；跳过则可稍后在待确认列表手动指定。';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      '未能在 AniDB 识别该作品：仍会正常下载，导入后在待确认列表等待手动指定身份。';
 }
 
 // Path: <root>
@@ -158479,6 +158619,15 @@ class _StringsZhHk extends _StringsEn {
   String get stat_center_tab_overview => 'Overview';
   @override
   String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  @override
+  String get video_discovery_anidb_identity_confirm_title =>
+      'Confirm the work identity';
+  @override
+  String get video_discovery_anidb_identity_confirm_hint =>
+      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+  @override
+  String get video_discovery_anidb_identity_not_found =>
+      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
 }
 
 /// Flat map(s) containing all translations.
@@ -166910,6 +167059,12 @@ extension on _StringsEn {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -175336,6 +175491,12 @@ extension on _StringsAr {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -183806,6 +183967,12 @@ extension on _StringsDe {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -192268,6 +192435,12 @@ extension on _StringsEs {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -200738,6 +200911,12 @@ extension on _StringsFr {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -209180,6 +209359,12 @@ extension on _StringsId {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -217643,6 +217828,12 @@ extension on _StringsIt {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -226035,6 +226226,12 @@ extension on _StringsJa {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -234430,6 +234627,12 @@ extension on _StringsKo {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -242887,6 +243090,12 @@ extension on _StringsNl {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -251339,6 +251548,12 @@ extension on _StringsPtBr {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -259797,6 +260012,12 @@ extension on _StringsRu {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -268228,6 +268449,12 @@ extension on _StringsTh {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -276674,6 +276901,12 @@ extension on _StringsTr {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -285114,6 +285347,12 @@ extension on _StringsVi {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
@@ -293483,6 +293722,12 @@ extension on _StringsZhCn {
         return '总览';
       case 'shortcut_action_video_dismiss_dict':
         return '关闭词典';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return '确认作品身份';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB 上有多个可能的匹配。选中正确的作品后，下载导入将直接按该身份刮削；跳过则可稍后在待确认列表手动指定。';
+      case 'video_discovery_anidb_identity_not_found':
+        return '未能在 AniDB 识别该作品：仍会正常下载，导入后在待确认列表等待手动指定身份。';
       default:
         return null;
     }
@@ -301853,6 +302098,12 @@ extension on _StringsZhHk {
         return 'Overview';
       case 'shortcut_action_video_dismiss_dict':
         return 'Dismiss dictionary';
+      case 'video_discovery_anidb_identity_confirm_title':
+        return 'Confirm the work identity';
+      case 'video_discovery_anidb_identity_confirm_hint':
+        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      case 'video_discovery_anidb_identity_not_found':
+        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
       default:
         return null;
     }
