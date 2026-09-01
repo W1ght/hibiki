@@ -33,7 +33,7 @@
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
-| [BUG-1989](bugs/BUG-1989-krkr-ingame-lookup-risk-admission.md) | ✅ | ✅ | KiriKiri 风险准入前仍提交并吞点击，宿主拒收后无弹窗 |
+| [BUG-2021](bugs/BUG-2021-krkr-native-input-transient-dismiss-regression.md) | ✅ | 🚧 | KiriKiri 将瞬时 provider 非 ownership 当撤权，导致点击穿透与选区消失 |
 | [BUG-1988](bugs/BUG-1988-sgre-ingame-lookup-provider-admission.md) | ✅ | ✅ | SGRE 游戏内查词命中被原生提供者准入门静默丢弃 |
 | [BUG-1983](bugs/BUG-1983-gal-layout-whitespace-fold.md) | ✅ | ✅ | Gal 同句换行快照未原地折叠导致换行错乱 |
 | [BUG-1982](bugs/BUG-1982-global-lookup-stale-route-flash.md) | 🚧 | ✅ | 全局查词旧尺寸消息冒充新查询导致首次闪跳 |

@@ -2877,134 +2877,6 @@ def find_unshared_main_window_area_criterion(overlay_source: str) -> list[str]:
     return offenders
 
 
-# v21 native-input admission: KiriKiri may keep its geometry sensor alive while
-# the per-executable risk decision is pending, but its TJS hooks must not paint a
-# submitted selection or consume left-click/Shift until the registry grants the
-# current provider input ownership. Revocation must run before every sensor
-# backoff return, and a queued submit must be fenced again at publication.
-SYNC_NATIVE_INPUT_ENTRY = "bool SyncKirikiriLookupNativeInputReady(bool ready) "
-PUBLISH_KIRIKIRI_HIT_ENTRY = "bool PublishKirikiriLookupHit(bool new_notification) "
-PUMP_KIRIKIRI_LOOKUP_ENTRY = "void PumpKirikiriLookup() "
-
-
-def find_invalid_native_input_admission(source: MaskedSource) -> list[str]:
-    violations: list[str] = []
-    tjs = _joined_tjs_payload(source)
-    joined = _compact_tjs(tjs.masked)
-    if joined.count("global.fushiLookupNativeInputReady=0;") != 1:
-        violations.append(
-            f"{ADAPTER.name}: native input gate 必须在 TJS bootstrap 中唯一初始化为 0"
-        )
-
-    setters = _assigned_tjs_functions(tjs, "fushiLookupSetNativeInputReady")
-    setter = _compact_tjs(setters[0][1]) if len(setters) == 1 else ""
-    setter_contract = (
-        "varnext=ready==1?1:0;"
-        "if(global.fushiLookupNativeInputReady==next)return;"
-        "global.fushiLookupNativeInputReady=next;"
-        "if(next==0){global.fushiLookupAdvanceDismissFence();"
-        "global.fushiLookupDismiss();}"
-    )
-    if len(setters) != 1 or setter != setter_contract:
-        violations.append(
-            f"{ADAPTER.name}: native input 撤权必须原子清门并退休 submit/视觉状态"
-        )
-
-    probes = _assigned_tjs_functions(tjs, "fushiLookupProbe")
-    probe = _compact_tjs(probes[0][1]) if len(probes) == 1 else ""
-    probe_gate = (
-        "if(submit&&global.fushiLookupNativeInputReady!=1)returnfalse;"
-    )
-    probe_prefix = (
-        "global.fushiLookupFlushVisualWork();"
-        "global.fushiLookupRefreshPendingCaptures();"
-        "global.fushiLookupFlushVisualWork();" + probe_gate
-    )
-    if len(probes) != 1 or not probe.startswith(probe_prefix):
-        violations.append(
-            f"{ADAPTER.name}: submit Probe 必须先退休既有 visual work，再在新命中/高亮/SubmitSeq 前按 native input gate fail-open"
-        )
-
-    sync_body = _cpp_function_body(source, SYNC_NATIVE_INPUT_ENTRY)
-    sync = _compact_tjs(sync_body or "")
-    if (
-        sync_body is None
-        or "g_lookup_native_input_ready_synced&&"
-        "g_lookup_native_input_ready_last==ready" not in sync
-        or "EvaluateTjsInteger(" not in sync
-        or "g_lookup_native_input_ready_synced=false;" not in sync
-        or "g_lookup_native_input_ready_last=ready;" not in sync
-    ):
-        violations.append(
-            f"{ADAPTER.name}: C++→TJS native input 同步必须回读确认并在失败后重试"
-        )
-    for literal in (
-        'L"global.fushiLookupSetNativeInputReady(1);"',
-        'L"global.fushiLookupSetNativeInputReady(0);"',
-        'L"global.fushiLookupNativeInputReady"',
-    ):
-        if source.text.count(literal) != 1:
-            violations.append(
-                f"{ADAPTER.name}: native input 同步缺少唯一的受控 TJS 字面量 {literal}"
-            )
-
-    publish_body = _cpp_function_body(source, PUBLISH_KIRIKIRI_HIT_ENTRY)
-    publish = _compact_tjs(publish_body or "")
-    owns_at = publish.find("OwnsReadyProvider(")
-    submit_at = publish.find("int64_tsubmit_seq_value=0;")
-    if (
-        publish_body is None
-        or owns_at < 0
-        or submit_at < 0
-        or owns_at > submit_at
-        or "kLookupGeometryProviderIdKirikiri" not in publish[:submit_at]
-    ):
-        violations.append(
-            f"{ADAPTER.name}: queued submit 发布前必须再次验证 KiriKiri registry input ownership"
-        )
-
-    pump_body = _cpp_function_body(source, PUMP_KIRIKIRI_LOOKUP_ENTRY)
-    pump = _compact_tjs(pump_body or "")
-    false_syncs = list(
-        _iter_find(pump, "SyncKirikiriLookupNativeInputReady(false)")
-    )
-    sensor_wait = pump.find("if(!g_lookup_sensor_live)")
-    sensor_backoff = pump.find("if(g_lookup_sensor_eval_backoff>0)")
-    sensor_eval = pump.find(
-        'if(!EvaluateTjsInteger(',
-    )
-    offer = pump.find("OfferReady(")
-    owns = list(_iter_find(pump, "OwnsReadyProvider("))
-    positive_sync = pump.find(
-        "SyncKirikiriLookupNativeInputReady(owns_native_input)"
-    )
-    negative_edge_ok = (
-        len(false_syncs) == 2
-        and sensor_wait >= 0
-        and sensor_backoff >= 0
-        and sensor_eval >= 0
-        and false_syncs[0] < false_syncs[1] < sensor_wait < sensor_backoff < sensor_eval
-        and "if(g_lookup_sensor_live&&" in pump[: false_syncs[1]]
-        and len(owns) == 2
-        and owns[0] < false_syncs[1]
-    )
-    positive_edge_ok = (
-        offer >= 0
-        and len(owns) == 2
-        and positive_sync >= 0
-        and offer < owns[1] < positive_sync
-    )
-    if pump_body is None or not negative_edge_ok:
-        violations.append(
-            f"{ADAPTER.name}: native input 撤权必须在 sensor wait/backoff/eval early-return 前完成"
-        )
-    if pump_body is None or not positive_edge_ok:
-        violations.append(
-            f"{ADAPTER.name}: native input 授权必须在 OfferReady 后按 registry ownership 同步"
-        )
-    return violations
-
-
 # ── 扫真文件 ────────────────────────────────────────────────────────────────
 
 
@@ -3125,14 +2997,6 @@ class RealAdapterTest(unittest.TestCase):
             find_invalid_lookup_entry_visibility_lifecycle(self.source),
             "page/index ledger 只能在完整 candidate 后提交；无 candidate 不推进/不 dismiss，"
             "同句保留 binding，Probe 只接受当前 generation 的 activeEntry。",
-        )
-
-    def test_native_input_waits_for_per_executable_admission(self) -> None:
-        self.assertEqual(
-            [],
-            find_invalid_native_input_admission(self.source),
-            "geometry discovery 可以在风险确认前保持 Ready；KiriKiri 只有持有 v21 native "
-            "input ownership 后才能提交选区/吞输入，撤权在下一次 pump 不得被 sensor 退避延后。",
         )
 
     def test_card_dismissal_is_scoped_to_the_owning_line(self) -> None:
@@ -4427,88 +4291,6 @@ HWND FindGameMainWindow() {
 }
 """
 
-NATIVE_INPUT_ADMISSION_CLEAN_SAMPLE = r'''
-static const wchar_t kLookupBootstrap[] = LR"TJS(
-global.fushiLookupNativeInputReady = 0;
-global.fushiLookupSetNativeInputReady = function(ready)
-{
-  var next = ready == 1 ? 1 : 0;
-  if(global.fushiLookupNativeInputReady == next) return;
-  global.fushiLookupNativeInputReady = next;
-  if(next == 0)
-  {
-    global.fushiLookupAdvanceDismissFence();
-    global.fushiLookupDismiss();
-  }
-};
-global.fushiLookupProbe = function(submit)
-{
-  global.fushiLookupFlushVisualWork();
-  global.fushiLookupRefreshPendingCaptures();
-  global.fushiLookupFlushVisualWork();
-  if(submit && global.fushiLookupNativeInputReady != 1) return false;
-  return true;
-};
-)TJS";
-
-bool SyncKirikiriLookupNativeInputReady(bool ready) {
-  if (g_lookup_native_input_ready_synced &&
-      g_lookup_native_input_ready_last == ready) return true;
-  ExecuteTjsScriptGuarded(ready
-      ? L"global.fushiLookupSetNativeInputReady(1);"
-      : L"global.fushiLookupSetNativeInputReady(0);");
-  int64_t applied = -1;
-  if (!EvaluateTjsInteger(L"global.fushiLookupNativeInputReady", &applied) ||
-      applied != (ready ? 1 : 0)) {
-    g_lookup_native_input_ready_synced = false;
-    return false;
-  }
-  g_lookup_native_input_ready_last = ready;
-  g_lookup_native_input_ready_synced = true;
-  return true;
-}
-
-bool PublishKirikiriLookupHit(bool new_notification) {
-  if (!g_geometry_provider_registry.OwnsReadyProvider(
-          g_header, kLookupGeometryProviderRuntimeLayout,
-          kLookupGeometryProviderIdKirikiri)) return true;
-  int64_t submit_seq_value = 0;
-  return PublishHit(submit_seq_value, new_notification);
-}
-
-void PumpKirikiriLookup() {
-  if (!enabled_now) {
-    SyncKirikiriLookupNativeInputReady(false);
-    return;
-  }
-  if (!g_lookup_variant_ready) {
-    if (!ProbeTjsVariantLayout()) return;
-    g_lookup_variant_ready = true;
-  }
-  if (g_lookup_sensor_live &&
-      !g_geometry_provider_registry.OwnsReadyProvider(
-          g_header, kLookupGeometryProviderRuntimeLayout,
-          kLookupGeometryProviderIdKirikiri) &&
-      !SyncKirikiriLookupNativeInputReady(false)) {
-    SetLookupDiag(kLookupDiagSensorFault);
-  }
-  if (!g_lookup_sensor_live) return;
-  if (g_lookup_sensor_eval_backoff > 0) return;
-  int64_t notify = 0;
-  if (!EvaluateTjsInteger(L"global.fushiLookupNotify", &notify)) return;
-  g_geometry_provider_registry.OfferReady(
-      g_header, kLookupGeometryProviderRuntimeLayout,
-      kLookupGeometryProviderIdKirikiri);
-  const bool owns_native_input =
-      g_geometry_provider_registry.OwnsReadyProvider(
-          g_header, kLookupGeometryProviderRuntimeLayout,
-          kLookupGeometryProviderIdKirikiri);
-  if (!SyncKirikiriLookupNativeInputReady(owns_native_input)) {
-    SetLookupDiag(kLookupDiagSensorFault);
-  }
-}
-'''
-
 
 class MutationSelfTest(unittest.TestCase):
     """把每条规则要抓的东西真的塞进合成源码，确认规则会红。"""
@@ -4522,7 +4304,6 @@ class MutationSelfTest(unittest.TestCase):
         self.entry_lifecycle_clean = MaskedSource(
             ENTRY_VISIBILITY_LIFECYCLE_CLEAN_SAMPLE
         )
-        self.native_input_clean = MaskedSource(NATIVE_INPUT_ADMISSION_CLEAN_SAMPLE)
 
     def _mutate(self, old: str, new: str) -> MaskedSource:
         self.assertIn(old, CLEAN_SAMPLE, "变异锚点必须真的存在于干净样本里")
@@ -4571,68 +4352,6 @@ class MutationSelfTest(unittest.TestCase):
             "entry 生命周期变异样本必须真的与干净样本不同",
         )
         return MaskedSource(dirty)
-
-    def _mutate_native_input(self, old: str, new: str) -> MaskedSource:
-        self.assertIn(
-            old,
-            NATIVE_INPUT_ADMISSION_CLEAN_SAMPLE,
-            "native input admission 变异锚点必须存在于干净样本里",
-        )
-        dirty = NATIVE_INPUT_ADMISSION_CLEAN_SAMPLE.replace(old, new, 1)
-        self.assertNotEqual(dirty, NATIVE_INPUT_ADMISSION_CLEAN_SAMPLE)
-        return MaskedSource(dirty)
-
-    def test_native_input_admission_sample_is_green(self) -> None:
-        self.assertEqual(
-            [], find_invalid_native_input_admission(self.native_input_clean)
-        )
-
-    def test_native_input_admission_mutations_are_red(self) -> None:
-        mutations = (
-            (
-                "global.fushiLookupNativeInputReady = 0;",
-                "global.fushiLookupNativeInputReady = 1;",
-            ),
-            (
-                "  global.fushiLookupFlushVisualWork();\n"
-                "  if(submit && global.fushiLookupNativeInputReady != 1) return false;",
-                "  if(submit && global.fushiLookupNativeInputReady != 1) return false;\n"
-                "  global.fushiLookupFlushVisualWork();",
-            ),
-            (
-                "    global.fushiLookupAdvanceDismissFence();\n"
-                "    global.fushiLookupDismiss();",
-                "    global.fushiLookupDismiss();",
-            ),
-            (
-                "  if (g_lookup_sensor_live &&\n"
-                "      !g_geometry_provider_registry.OwnsReadyProvider(\n"
-                "          g_header, kLookupGeometryProviderRuntimeLayout,\n"
-                "          kLookupGeometryProviderIdKirikiri) &&\n"
-                "      !SyncKirikiriLookupNativeInputReady(false)) {\n"
-                "    SetLookupDiag(kLookupDiagSensorFault);\n"
-                "  }\n"
-                "  if (!g_lookup_sensor_live) return;",
-                "  if (!g_lookup_sensor_live) return;\n"
-                "  if (g_lookup_sensor_live &&\n"
-                "      !g_geometry_provider_registry.OwnsReadyProvider(\n"
-                "          g_header, kLookupGeometryProviderRuntimeLayout,\n"
-                "          kLookupGeometryProviderIdKirikiri) &&\n"
-                "      !SyncKirikiriLookupNativeInputReady(false)) {\n"
-                "    SetLookupDiag(kLookupDiagSensorFault);\n"
-                "  }",
-            ),
-            (
-                "  if (!g_geometry_provider_registry.OwnsReadyProvider(\n"
-                "          g_header, kLookupGeometryProviderRuntimeLayout,\n"
-                "          kLookupGeometryProviderIdKirikiri)) return true;",
-                "  if (!LookupEnabledNow()) return true;",
-            ),
-        )
-        for old, new in mutations:
-            with self.subTest(old=old.strip().splitlines()[0]):
-                dirty = self._mutate_native_input(old, new)
-                self.assertNotEqual([], find_invalid_native_input_admission(dirty))
 
     def test_own_enum_windows_in_resolver_is_red(self) -> None:
         self.assertNotEqual(

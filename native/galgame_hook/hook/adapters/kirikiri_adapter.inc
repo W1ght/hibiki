@@ -885,10 +885,6 @@ if(typeof global.fushiLookupBootstrap == "undefined")
 			global.fushiLookupSubmitLine = "";
 			global.fushiLookupInputQueue = [];
 			global.fushiLookupShiftDown = false;
-			// v21 把“传感器可发现”与“允许原生输入钩消费点击”拆开。默认必须
-			// fail-open 给游戏；只有 host 完成逐 exe 风险准入且 registry 仍由
-			// KiriKiri provider 持有时，C++ 泵才会把它切成 1。
-			global.fushiLookupNativeInputReady = 0;
 			global.fushiLookupProbeMode = __FUSHI_PROBE_MODE__;
 			global.fushiLookupProbeDrawText = 0;
 			global.fushiLookupProbeProcessCh = 0;
@@ -2069,20 +2065,6 @@ if(typeof global.fushiLookupBootstrap == "undefined")
 			{
 				global.fushiLookupPendingVisualDismiss = true;
 				return global.fushiLookupFlushVisualWork();
-			};
-
-			// C++ 每次 provider/risk 准入边沿调用。撤权必须同时退休当前 submit
-			// 与视觉层，避免风险确认前被拒的点击在稍后重新授权时“复活”。
-			global.fushiLookupSetNativeInputReady = function(ready)
-			{
-				var next = ready == 1 ? 1 : 0;
-				if(global.fushiLookupNativeInputReady == next) return;
-				global.fushiLookupNativeInputReady = next;
-				if(next == 0)
-				{
-					global.fushiLookupAdvanceDismissFence();
-					global.fushiLookupDismiss();
-				}
 			};
 
 )TJS" LR"TJS(
@@ -3286,10 +3268,6 @@ if(typeof global.fushiLookupBootstrap == "undefined")
 				global.fushiLookupFlushVisualWork();
 				global.fushiLookupRefreshPendingCaptures();
 				global.fushiLookupFlushVisualWork();
-				// lookup_enabled 只允许几何传感器继续观察；它不是吞输入的许可。
-				// 先完成既有事务的退休工作，再在任何新命中、高亮或 SubmitSeq 写入
-				// 之前 fail-open；hover Probe(false) 仍可维持几何发现。
-				if(submit && global.fushiLookupNativeInputReady != 1) return false;
 				var primary = global.kag.primaryLayer;
 				// 两套坐标，用途不同，混用就是恒定偏移：
 				//   px/py = primary **图像**坐标，只用于把命中换算成卡片落点（视口尺寸
@@ -4670,8 +4648,6 @@ int64_t g_lookup_last_notify = -1;
 bool g_lookup_card_shown = false;
 bool g_lookup_enabled_last = false;
 bool g_lookup_sensor_live = false;
-bool g_lookup_native_input_ready_last = false;
-bool g_lookup_native_input_ready_synced = false;
 // v19 准入上报用的只读访问器。传感器状态本身不外露给别的编译单元，registry 只需要
 // 这一个布尔——保持窄接口，别让准入汇总去读一堆 KiriKiri 内部状态。
 bool KirikiriLookupSensorLive() { return g_lookup_sensor_live; }
@@ -4844,25 +4820,6 @@ void ExecuteTjsScriptGuarded(const wchar_t* script) {
     // 插件 ABI 边界绝不把 C++/TJS 异常抛回游戏事件循环。
   }
   if (text != nullptr) g_lookup_release_string(text);
-}
-
-bool SyncKirikiriLookupNativeInputReady(bool ready) {
-  if (g_lookup_native_input_ready_synced &&
-      g_lookup_native_input_ready_last == ready) {
-    return true;
-  }
-  ExecuteTjsScriptGuarded(ready
-                              ? L"global.fushiLookupSetNativeInputReady(1);"
-                              : L"global.fushiLookupSetNativeInputReady(0);");
-  int64_t applied = -1;
-  if (!EvaluateTjsInteger(L"global.fushiLookupNativeInputReady", &applied) ||
-      applied != (ready ? 1 : 0)) {
-    g_lookup_native_input_ready_synced = false;
-    return false;
-  }
-  g_lookup_native_input_ready_last = ready;
-  g_lookup_native_input_ready_synced = true;
-  return true;
 }
 
 void ApplyKirikiriLookupHighlight(uint32_t highlight_start,
@@ -5374,14 +5331,6 @@ void ObserveKirikiriLookupDismissFence() {
 
 bool PublishKirikiriLookupHit(bool new_notification) {
   if (!fushi_voice_hook::HasLookupRegion(g_header)) return false;
-  // TJS 的 fail-open 门避免吞输入；这里再以 registry 的权威快照拒绝
-  // 撤权边沿上已经排队的旧 submit，不能让它在重新授权后复活。
-  if (!fushi_voice_hook::g_geometry_provider_registry.OwnsReadyProvider(
-          g_header,
-          fushi_voice_hook::kLookupGeometryProviderRuntimeLayout,
-          fushi_voice_hook::kLookupGeometryProviderIdKirikiri)) {
-    return true;
-  }
   int64_t submit_seq_value = 0;
   bool have_submit_seq = false;
   if (g_lookup_submit_retry_backoff > 0) {
@@ -5549,7 +5498,6 @@ void PumpKirikiriLookup() {
   CommitKirikiriLookupCaptureSuppressAck();
   const bool enabled_now = LookupEnabledNow() != 0;
   if (!enabled_now) {
-    SyncKirikiriLookupNativeInputReady(false);
     // 禁用边沿强制对齐一次 TJS/C++ 可见状态；禁用稳态不再每帧执行一段 TJS。
     if (g_lookup_enabled_last || g_lookup_card_shown) HideKirikiriLookupCard();
     fushi_voice_hook::g_geometry_provider_registry.Retire(
@@ -5563,17 +5511,6 @@ void PumpKirikiriLookup() {
     if (!ProbeTjsVariantLayout()) return;
     g_lookup_variant_ready = true;
     SetLookupDiag(fushi_voice_hook::kLookupDiagExpressionReady);
-  }
-  // 撤权不能等 sensor notify：host 可能恰好在 TJS 求值退避期间清掉
-  // native_input_ready。负边沿放在下一次 game pump 的所有 sensor early-return
-  // 之前，避免退避继续拖长上一帧已 armed 的 leftClick/Shift hook。
-  if (g_lookup_sensor_live &&
-      !fushi_voice_hook::g_geometry_provider_registry.OwnsReadyProvider(
-          g_header,
-          fushi_voice_hook::kLookupGeometryProviderRuntimeLayout,
-          fushi_voice_hook::kLookupGeometryProviderIdKirikiri) &&
-      !SyncKirikiriLookupNativeInputReady(false)) {
-    SetLookupDiag(fushi_voice_hook::kLookupDiagSensorFault);
   }
   if (!g_lookup_sensor_live) {
     // TJS bootstrap 由 System.addContinuousHandler 驱动，可能比这里晚若干帧；在它建立
@@ -5611,14 +5548,6 @@ void PumpKirikiriLookup() {
   fushi_voice_hook::g_geometry_provider_registry.OfferReady(
       g_header, fushi_voice_hook::kLookupGeometryProviderRuntimeLayout,
       fushi_voice_hook::kLookupGeometryProviderIdKirikiri);
-  const bool owns_native_input =
-      fushi_voice_hook::g_geometry_provider_registry.OwnsReadyProvider(
-          g_header,
-          fushi_voice_hook::kLookupGeometryProviderRuntimeLayout,
-          fushi_voice_hook::kLookupGeometryProviderIdKirikiri);
-  if (!SyncKirikiriLookupNativeInputReady(owns_native_input)) {
-    SetLookupDiag(fushi_voice_hook::kLookupDiagSensorFault);
-  }
   // 采集面自证。**不能**挂在 notify 变化上：notify 只有用户真悬停到字上才动，而这两位
   // 恰恰是用来诊断「一个字都没采到」的——那种情况下 notify 永远不动，挂上去就等于永远读
   // 不到。改为低频轮询（约每 60 帧一次），读到 2（真捕到字形）就彻底停。

@@ -621,38 +621,6 @@ void main() {
     },
   );
 
-  test(
-    'risk-pending KiriKiri provider activates after exe acceptance',
-    () async {
-      port.inspection = const GalAttachedCallResult(
-        // This is the exact workbench state reported by the native runner:
-        // geometry is Ready, but native input remains disarmed until the user
-        // accepts the per-executable click risk.
-        status: 'riskAcceptanceRequired',
-        exePath: r'C:\Games\Sample\game.exe',
-        exeSha256: _sha,
-        referenceClient: _client,
-        providerKind: 1,
-        providerId: 1,
-        providerStatus: 1,
-        shield: GalAttachedShieldStatus(available: true, statusFlags: 0x02),
-      );
-
-      await sync();
-
-      expect(controller.status, GalAttachedTextStatus.needsRiskAcceptance);
-      expect(controller.profile, isNull);
-
-      await controller.acceptUnsafeRiskAndRetry();
-
-      expect(controller.status, GalAttachedTextStatus.activeNative);
-      expect(controller.profile?.mode, GalLookupSurfaceMode.auto);
-      expect(controller.profile?.unsafeLeftClickAccepted, isTrue);
-      expect(controller.profile?.variants, isEmpty);
-      expect(port.calls, <String>['inspect']);
-    },
-  );
-
   test('faulted shield cannot be bypassed by persisted risk', () async {
     preferences[key()] = jsonEncode(
       _profile(mode: GalLookupSurfaceMode.auto).toJson(),

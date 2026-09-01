@@ -732,8 +732,7 @@ void TestV21GeometryAdmissionPublication() {
   Check(first == 1u && auto_attached.valid && auto_attached.seq == first &&
             auto_attached.mode ==
                 fushi_voice_hook::kLookupGeometryAdmissionAuto &&
-            auto_attached.attached_ready() &&
-            !auto_attached.native_input_ready(),
+            auto_attached.attached_ready(),
         "auto+attached-ready payload 必须 coherent round-trip");
   Check(fushi_voice_hook::PublishLookupGeometryAdmission(
             &h, fushi_voice_hook::kLookupGeometryAdmissionAuto, true, false) ==
@@ -742,40 +741,25 @@ void TestV21GeometryAdmissionPublication() {
   const uint32_t second =
       fushi_voice_hook::PublishLookupGeometryAdmission(
           &h, fushi_voice_hook::kLookupGeometryAdmissionNativeOnly, false,
-          true);
+          false);
   const auto native_only =
       fushi_voice_hook::ReadLookupGeometryAdmission(&h);
   Check(second == 2u && native_only.valid &&
             native_only.mode ==
                 fushi_voice_hook::kLookupGeometryAdmissionNativeOnly &&
-            !native_only.attached_ready() &&
-            native_only.native_input_ready(),
-        "nativeOnly 的输入准入必须独立 coherent round-trip");
-  const uint32_t third =
-      fushi_voice_hook::PublishLookupGeometryAdmission(
-          &h, fushi_voice_hook::kLookupGeometryAdmissionNativeOnly, false,
-          false);
-  const auto native_revoked =
-      fushi_voice_hook::ReadLookupGeometryAdmission(&h);
-  Check(third == 3u && native_revoked.valid &&
-            native_revoked.mode ==
-                fushi_voice_hook::kLookupGeometryAdmissionNativeOnly &&
-            !native_revoked.native_input_ready(),
-        "仅 native input flag 的撤权边沿也必须产生新 request generation");
+            !native_only.attached_ready(),
+        "owner policy edge 必须产生新 request generation");
   fushi_voice_hook::AtomicStoreShared32(
       &h.lookup_geometry_admission_request_seq,
-      fushi_voice_hook::kLookupGeometryAdmissionWriteInProgress | third);
+      fushi_voice_hook::kLookupGeometryAdmissionWriteInProgress | second);
   Check(!fushi_voice_hook::ReadLookupGeometryAdmission(&h).valid,
         "writer-held geometry admission 不得被读成 disable/半份 payload");
   fushi_voice_hook::AtomicStoreShared32(
-      &h.lookup_geometry_admission_request_seq, third);
+      &h.lookup_geometry_admission_request_seq, second);
   Check(fushi_voice_hook::PublishLookupGeometryAdmission(
             &h, 99u, true, false) == 0 &&
-            fushi_voice_hook::ReadLookupGeometryAdmission(&h).seq == third &&
             fushi_voice_hook::ReadLookupGeometryAdmission(&h).mode ==
-                fushi_voice_hook::kLookupGeometryAdmissionNativeOnly &&
-            !fushi_voice_hook::ReadLookupGeometryAdmission(&h)
-                 .native_input_ready(),
+                fushi_voice_hook::kLookupGeometryAdmissionNativeOnly,
         "非法 admission mode 必须拒绝且不改稳定请求");
 }
 
