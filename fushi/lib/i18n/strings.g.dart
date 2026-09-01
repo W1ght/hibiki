@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69598 (4094 per locale)
+/// Strings: 69683 (4099 per locale)
 ///
-/// Built on 2026-08-31 at 05:08 UTC
+/// Built on 2026-09-01 at 04:07 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5614,6 +5614,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_download_source_github => 'GitHub direct';
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -15140,6 +15150,21 @@ class _StringsAr extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -24888,6 +24913,21 @@ class _StringsDe extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -34683,6 +34723,21 @@ class _StringsEs extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -44513,6 +44568,21 @@ class _StringsFr extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -54162,6 +54232,21 @@ class _StringsId extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -63895,6 +63980,21 @@ class _StringsIt extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -73037,6 +73137,21 @@ class _StringsJa extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -82190,6 +82305,21 @@ class _StringsKo extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -91876,6 +92006,21 @@ class _StringsNl extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -101619,6 +101764,21 @@ class _StringsPtBr extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -111336,6 +111496,21 @@ class _StringsRu extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -120857,6 +121032,21 @@ class _StringsTh extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -130491,6 +130681,21 @@ class _StringsTr extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -140102,6 +140307,21 @@ class _StringsVi extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 // Path: <root>
@@ -148947,6 +149167,19 @@ class _StringsZhCn extends _StringsEn {
   String get update_download_source_github => 'GitHub 直连';
   @override
   String update_download_source_proxy({required Object host}) => '代理站：${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      '关闭后：手动、扫描后、下载导入后与后台自动补刮都会跳过此来源。';
+  @override
+  String get video_source_scrape_work_missing =>
+      '该作品已不在当前来源计划中（文件可能已改名、移动或删除）。请重新刮削此来源刷新待确认列表。';
+  @override
+  String get video_source_scrape_pending_works => '待确认作品';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      '这些条目还没有确认的作品身份。搜索并选中正确的作品即可完成刮削。';
+  @override
+  String get video_source_scrape_enabled_toggle => '启用此来源的刮削';
 }
 
 // Path: <root>
@@ -157809,6 +158042,21 @@ class _StringsZhHk extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
 }
 
 /// Flat map(s) containing all translations.
@@ -166208,6 +166456,16 @@ extension on _StringsEn {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -174603,6 +174861,16 @@ extension on _StringsAr {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -183041,6 +183309,16 @@ extension on _StringsDe {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -191471,6 +191749,16 @@ extension on _StringsEs {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -199909,6 +200197,16 @@ extension on _StringsFr {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -208319,6 +208617,16 @@ extension on _StringsId {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -216750,6 +217058,16 @@ extension on _StringsIt {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -225111,6 +225429,16 @@ extension on _StringsJa {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -233475,6 +233803,16 @@ extension on _StringsKo {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -241900,6 +242238,16 @@ extension on _StringsNl {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -250320,6 +250668,16 @@ extension on _StringsPtBr {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -258746,6 +259104,16 @@ extension on _StringsRu {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -267145,6 +267513,16 @@ extension on _StringsTh {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -275560,6 +275938,16 @@ extension on _StringsTr {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -283968,6 +284356,16 @@ extension on _StringsVi {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
@@ -292307,6 +292705,16 @@ extension on _StringsZhCn {
         return 'GitHub 直连';
       case 'update_download_source_proxy':
         return ({required Object host}) => '代理站：${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return '关闭后：手动、扫描后、下载导入后与后台自动补刮都会跳过此来源。';
+      case 'video_source_scrape_work_missing':
+        return '该作品已不在当前来源计划中（文件可能已改名、移动或删除）。请重新刮削此来源刷新待确认列表。';
+      case 'video_source_scrape_pending_works':
+        return '待确认作品';
+      case 'video_source_scrape_pending_works_hint':
+        return '这些条目还没有确认的作品身份。搜索并选中正确的作品即可完成刮削。';
+      case 'video_source_scrape_enabled_toggle':
+        return '启用此来源的刮削';
       default:
         return null;
     }
@@ -300647,6 +301055,16 @@ extension on _StringsZhHk {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
       default:
         return null;
     }
