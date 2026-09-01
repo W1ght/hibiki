@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69683 (4099 per locale)
+/// Strings: 69717 (4101 per locale)
 ///
-/// Built on 2026-09-01 at 04:07 UTC
+/// Built on 2026-09-01 at 11:00 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5624,6 +5624,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -15165,6 +15169,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -24928,6 +24938,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -34738,6 +34754,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -44583,6 +44605,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -54247,6 +54275,12 @@ class _StringsId extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -63995,6 +64029,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -73152,6 +73192,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -82320,6 +82366,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -92021,6 +92073,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -101779,6 +101837,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -111511,6 +111575,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -121047,6 +121117,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -130696,6 +130772,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -140322,6 +140404,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -149180,6 +149268,11 @@ class _StringsZhCn extends _StringsEn {
       '这些条目还没有确认的作品身份。搜索并选中正确的作品即可完成刮削。';
   @override
   String get video_source_scrape_enabled_toggle => '启用此来源的刮削';
+  @override
+  String get video_library_scrape_auto_backfill => '自动补齐缺失的作品资料';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      '进入视频库时，自动刮削仍未确认身份的条目。关闭后不再有任何后台元数据下载。';
 }
 
 // Path: <root>
@@ -158057,6 +158150,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_scrape_enabled_toggle =>
       'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 /// Flat map(s) containing all translations.
@@ -166466,6 +166565,10 @@ extension on _StringsEn {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -174871,6 +174974,10 @@ extension on _StringsAr {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -183319,6 +183426,10 @@ extension on _StringsDe {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -191759,6 +191870,10 @@ extension on _StringsEs {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -200207,6 +200322,10 @@ extension on _StringsFr {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -208627,6 +208746,10 @@ extension on _StringsId {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -217068,6 +217191,10 @@ extension on _StringsIt {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -225439,6 +225566,10 @@ extension on _StringsJa {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -233813,6 +233944,10 @@ extension on _StringsKo {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -242248,6 +242383,10 @@ extension on _StringsNl {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -250678,6 +250817,10 @@ extension on _StringsPtBr {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -259114,6 +259257,10 @@ extension on _StringsRu {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -267523,6 +267670,10 @@ extension on _StringsTh {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -275948,6 +276099,10 @@ extension on _StringsTr {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -284366,6 +284521,10 @@ extension on _StringsVi {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -292715,6 +292874,10 @@ extension on _StringsZhCn {
         return '这些条目还没有确认的作品身份。搜索并选中正确的作品即可完成刮削。';
       case 'video_source_scrape_enabled_toggle':
         return '启用此来源的刮削';
+      case 'video_library_scrape_auto_backfill':
+        return '自动补齐缺失的作品资料';
+      case 'video_library_scrape_auto_backfill_hint':
+        return '进入视频库时，自动刮削仍未确认身份的条目。关闭后不再有任何后台元数据下载。';
       default:
         return null;
     }
@@ -301065,6 +301228,10 @@ extension on _StringsZhHk {
         return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
       case 'video_source_scrape_enabled_toggle':
         return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
