@@ -29,10 +29,11 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 1861 条。点号进各自文件。
+> 共 1862 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-1989](bugs/BUG-1989-krkr-ingame-lookup-risk-admission.md) | ✅ | ✅ | KiriKiri 风险准入前仍提交并吞点击，宿主拒收后无弹窗 |
 | [BUG-1988](bugs/BUG-1988-sgre-ingame-lookup-provider-admission.md) | ✅ | ✅ | SGRE 游戏内查词命中被原生提供者准入门静默丢弃 |
 | [BUG-1983](bugs/BUG-1983-gal-layout-whitespace-fold.md) | ✅ | ✅ | Gal 同句换行快照未原地折叠导致换行错乱 |
 | [BUG-1982](bugs/BUG-1982-global-lookup-stale-route-flash.md) | 🚧 | ✅ | 全局查词旧尺寸消息冒充新查询导致首次闪跳 |

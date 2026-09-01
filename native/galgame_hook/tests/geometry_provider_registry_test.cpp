@@ -508,6 +508,47 @@ void TestNativePreemptionRevokesAttachedOwnership() {
         "post-switch ownership check must reject an immutable attached hit snapshot");
 }
 
+void TestNativeInputOwnershipRequiresHostAdmission() {
+  FakeMapping mapping;
+  GeometryProviderRegistry registry;
+  registry.Reset(mapping.header());
+  const uint32_t kind =
+      fushi_voice_hook::kLookupGeometryProviderRuntimeLayout;
+  const uint32_t id = fushi_voice_hook::kLookupGeometryProviderIdKirikiri;
+
+  Check(registry.OfferReady(mapping.header(), kind, id),
+        "KiriKiri geometry discovery must remain ready before risk acceptance");
+  Check(!registry.OwnsReadyProvider(mapping.header(), kind, id),
+        "a ready geometry provider must not own native input before host admission");
+
+  Check(fushi_voice_hook::PublishLookupGeometryAdmission(
+            mapping.header(), fushi_voice_hook::kLookupGeometryAdmissionAuto,
+            false, true) != 0,
+        "host must be able to admit native input independently from geometry discovery");
+  Check(registry.OwnsReadyProvider(mapping.header(), kind, id),
+        "the current Ready KiriKiri provider must own input after per-exe admission");
+  Check(!registry.OwnsReadyProvider(
+            mapping.header(), kind,
+            fushi_voice_hook::kLookupGeometryProviderIdRenpy),
+        "native input admission must not authorize a non-owning provider");
+
+  Check(fushi_voice_hook::PublishLookupGeometryAdmission(
+            mapping.header(), fushi_voice_hook::kLookupGeometryAdmissionAuto,
+            false, false) != 0,
+        "host must be able to revoke native input without disabling sensors");
+  Check(!registry.OwnsReadyProvider(mapping.header(), kind, id) &&
+            mapping.header()->lookup_enabled == 1,
+        "risk revocation must remove registry input ownership while geometry discovery stays enabled");
+
+  Check(fushi_voice_hook::PublishLookupGeometryAdmission(
+            mapping.header(),
+            fushi_voice_hook::kLookupGeometryAdmissionAttachedOnly, true,
+            true) != 0,
+        "attached ownership request must publish coherently");
+  Check(!registry.OwnsReadyProvider(mapping.header(), kind, id),
+        "attachedOnly must never authorize a native provider to consume input");
+}
+
 }  // namespace
 
 int main() {
@@ -519,6 +560,7 @@ int main() {
   TestHostAdmissionSeparatesGeometryFromShieldRuntime();
   TestProviderSwitchWaitsForShieldRequestWriter();
   TestNativePreemptionRevokesAttachedOwnership();
+  TestNativeInputOwnershipRequiresHostAdmission();
   std::puts("geometry provider registry test ok");
   return 0;
 }
