@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69598 (4094 per locale)
+/// Strings: 69632 (4096 per locale)
 ///
-/// Built on 2026-08-31 at 05:08 UTC
+/// Built on 2026-09-01 at 02:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5614,6 +5614,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_download_source_github => 'GitHub direct';
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -15140,6 +15142,10 @@ class _StringsAr extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -24888,6 +24894,10 @@ class _StringsDe extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -34683,6 +34693,10 @@ class _StringsEs extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -44513,6 +44527,10 @@ class _StringsFr extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -54162,6 +54180,10 @@ class _StringsId extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -63895,6 +63917,10 @@ class _StringsIt extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -73037,6 +73063,10 @@ class _StringsJa extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -82190,6 +82220,10 @@ class _StringsKo extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -91876,6 +91910,10 @@ class _StringsNl extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -101619,6 +101657,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -111336,6 +111378,10 @@ class _StringsRu extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -120857,6 +120903,10 @@ class _StringsTh extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -130491,6 +130541,10 @@ class _StringsTr extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -140102,6 +140156,10 @@ class _StringsVi extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 // Path: <root>
@@ -148947,6 +149005,10 @@ class _StringsZhCn extends _StringsEn {
   String get update_download_source_github => 'GitHub 直连';
   @override
   String update_download_source_proxy({required Object host}) => '代理站：${host}';
+  @override
+  String get stat_detail_ungrouped => '未分组';
+  @override
+  String get stat_detail_empty => '此时段暂无记录';
 }
 
 // Path: <root>
@@ -157809,6 +157871,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get stat_detail_ungrouped => 'Ungrouped';
+  @override
+  String get stat_detail_empty => 'No activity in this period';
 }
 
 /// Flat map(s) containing all translations.
@@ -166208,6 +166274,10 @@ extension on _StringsEn {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -174603,6 +174673,10 @@ extension on _StringsAr {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -183041,6 +183115,10 @@ extension on _StringsDe {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -191471,6 +191549,10 @@ extension on _StringsEs {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -199909,6 +199991,10 @@ extension on _StringsFr {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -208319,6 +208405,10 @@ extension on _StringsId {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -216750,6 +216840,10 @@ extension on _StringsIt {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -225111,6 +225205,10 @@ extension on _StringsJa {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -233475,6 +233573,10 @@ extension on _StringsKo {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -241900,6 +242002,10 @@ extension on _StringsNl {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -250320,6 +250426,10 @@ extension on _StringsPtBr {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -258746,6 +258856,10 @@ extension on _StringsRu {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -267145,6 +267259,10 @@ extension on _StringsTh {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -275560,6 +275678,10 @@ extension on _StringsTr {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -283968,6 +284090,10 @@ extension on _StringsVi {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
@@ -292307,6 +292433,10 @@ extension on _StringsZhCn {
         return 'GitHub 直连';
       case 'update_download_source_proxy':
         return ({required Object host}) => '代理站：${host}';
+      case 'stat_detail_ungrouped':
+        return '未分组';
+      case 'stat_detail_empty':
+        return '此时段暂无记录';
       default:
         return null;
     }
@@ -300647,6 +300777,10 @@ extension on _StringsZhHk {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'stat_detail_ungrouped':
+        return 'Ungrouped';
+      case 'stat_detail_empty':
+        return 'No activity in this period';
       default:
         return null;
     }
