@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69649 (4097 per locale)
+/// Strings: 69768 (4104 per locale)
 ///
-/// Built on 2026-09-01 at 10:52 UTC
+/// Built on 2026-09-01 at 14:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5620,6 +5620,20 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Credentials apply to HTTP requests only; the built-in torrent engine cannot use them';
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -15155,6 +15169,27 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -24913,6 +24948,27 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -34720,6 +34776,27 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -44562,6 +44639,27 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -54221,6 +54319,27 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -63964,6 +64083,27 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -73112,6 +73252,27 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -82271,6 +82432,27 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -91968,6 +92150,27 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -101721,6 +101924,27 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -111450,6 +111674,27 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -120980,6 +121225,27 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -130625,6 +130891,27 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -140246,6 +140533,27 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 // Path: <root>
@@ -149101,6 +149409,24 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       '无法制卡：当前没有可连接的已配对设备。请确认配对设备上的 Fushi 正在运行；如果要在本机制卡，请关闭「制卡到已配对设备」。';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      '关闭后：手动、扫描后、下载导入后与后台自动补刮都会跳过此来源。';
+  @override
+  String get video_source_scrape_work_missing =>
+      '该作品已不在当前来源计划中（文件可能已改名、移动或删除）。请重新刮削此来源刷新待确认列表。';
+  @override
+  String get video_source_scrape_pending_works => '待确认作品';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      '这些条目还没有确认的作品身份。搜索并选中正确的作品即可完成刮削。';
+  @override
+  String get video_source_scrape_enabled_toggle => '启用此来源的刮削';
+  @override
+  String get video_library_scrape_auto_backfill => '自动补齐缺失的作品资料';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      '进入视频库时，自动刮削仍未确认身份的条目。关闭后不再有任何后台元数据下载。';
 }
 
 // Path: <root>
@@ -157967,6 +158293,27 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_error_paired_device_unreachable =>
       'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+  @override
+  String get video_source_scrape_enabled_toggle_hint =>
+      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+  @override
+  String get video_source_scrape_work_missing =>
+      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+  @override
+  String get video_source_scrape_pending_works =>
+      'Works awaiting identification';
+  @override
+  String get video_source_scrape_pending_works_hint =>
+      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+  @override
+  String get video_source_scrape_enabled_toggle =>
+      'Enable scraping for this source';
+  @override
+  String get video_library_scrape_auto_backfill =>
+      'Auto-fill missing series info';
+  @override
+  String get video_library_scrape_auto_backfill_hint =>
+      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
 }
 
 /// Flat map(s) containing all translations.
@@ -166374,6 +166721,20 @@ extension on _StringsEn {
         return 'Credentials apply to HTTP requests only; the built-in torrent engine cannot use them';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -174776,6 +175137,20 @@ extension on _StringsAr {
         return 'بيانات الاعتماد تُستخدم لطلبات HTTP فقط، ومحرك التورنت المدمج لا يمكنه استخدامها';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -183222,6 +183597,20 @@ extension on _StringsDe {
         return 'Zugangsdaten gelten nur für HTTP-Anfragen; die integrierte Torrent-Engine kann sie nicht verwenden';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -191660,6 +192049,20 @@ extension on _StringsEs {
         return 'Las credenciales solo se aplican a las solicitudes HTTP; el motor de torrents integrado no puede usarlas';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -200106,6 +200509,20 @@ extension on _StringsFr {
         return 'Les identifiants ne s\'appliquent qu\'aux requêtes HTTP ; le moteur torrent intégré ne peut pas les utiliser';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -208524,6 +208941,20 @@ extension on _StringsId {
         return 'Kredensial hanya berlaku untuk permintaan HTTP; mesin torrent bawaan tidak dapat menggunakannya';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -216963,6 +217394,20 @@ extension on _StringsIt {
         return 'Le credenziali valgono solo per le richieste HTTP; il motore torrent integrato non può usarle';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -225331,6 +225776,20 @@ extension on _StringsJa {
         return '認証情報は HTTP 通信にのみ適用されます。内蔵 torrent エンジンでは使用できません';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -233702,6 +234161,20 @@ extension on _StringsKo {
         return '자격 증명은 HTTP 요청에만 적용되며, 내장 토렌트 엔진은 사용할 수 없습니다';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -242135,6 +242608,20 @@ extension on _StringsNl {
         return 'Inloggegevens gelden alleen voor HTTP-verzoeken; de ingebouwde torrent-engine kan ze niet gebruiken';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -250563,6 +251050,20 @@ extension on _StringsPtBr {
         return 'As credenciais valem apenas para requisições HTTP; o motor de torrent integrado não consegue usá-las';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -258997,6 +259498,20 @@ extension on _StringsRu {
         return 'Учётные данные применяются только к HTTP-запросам; встроенный torrent-движок не может их использовать';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -267404,6 +267919,20 @@ extension on _StringsTh {
         return 'ข้อมูลรับรองใช้ได้กับคำขอ HTTP เท่านั้น เอนจิน torrent ในตัวไม่สามารถใช้ได้';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -275826,6 +276355,20 @@ extension on _StringsTr {
         return 'Kimlik bilgileri yalnızca HTTP istekleri için geçerlidir; yerleşik torrent motoru bunları kullanamaz';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -284242,6 +284785,20 @@ extension on _StringsVi {
         return 'Thông tin đăng nhập chỉ áp dụng cho yêu cầu HTTP; công cụ torrent tích hợp không dùng được';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
@@ -292587,6 +293144,20 @@ extension on _StringsZhCn {
         return '凭据仅用于 HTTP 请求；内置 torrent 引擎无法使用';
       case 'anki_error_paired_device_unreachable':
         return '无法制卡：当前没有可连接的已配对设备。请确认配对设备上的 Fushi 正在运行；如果要在本机制卡，请关闭「制卡到已配对设备」。';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return '关闭后：手动、扫描后、下载导入后与后台自动补刮都会跳过此来源。';
+      case 'video_source_scrape_work_missing':
+        return '该作品已不在当前来源计划中（文件可能已改名、移动或删除）。请重新刮削此来源刷新待确认列表。';
+      case 'video_source_scrape_pending_works':
+        return '待确认作品';
+      case 'video_source_scrape_pending_works_hint':
+        return '这些条目还没有确认的作品身份。搜索并选中正确的作品即可完成刮削。';
+      case 'video_source_scrape_enabled_toggle':
+        return '启用此来源的刮削';
+      case 'video_library_scrape_auto_backfill':
+        return '自动补齐缺失的作品资料';
+      case 'video_library_scrape_auto_backfill_hint':
+        return '进入视频库时，自动刮削仍未确认身份的条目。关闭后不再有任何后台元数据下载。';
       default:
         return null;
     }
@@ -300933,6 +301504,20 @@ extension on _StringsZhHk {
         return '憑證僅用於 HTTP 請求；內建 torrent 引擎無法使用';
       case 'anki_error_paired_device_unreachable':
         return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      case 'video_source_scrape_enabled_toggle_hint':
+        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      case 'video_source_scrape_work_missing':
+        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      case 'video_source_scrape_pending_works':
+        return 'Works awaiting identification';
+      case 'video_source_scrape_pending_works_hint':
+        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      case 'video_source_scrape_enabled_toggle':
+        return 'Enable scraping for this source';
+      case 'video_library_scrape_auto_backfill':
+        return 'Auto-fill missing series info';
+      case 'video_library_scrape_auto_backfill_hint':
+        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
       default:
         return null;
     }
