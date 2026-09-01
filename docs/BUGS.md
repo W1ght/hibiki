@@ -29,10 +29,11 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 1862 条。点号进各自文件。
+> 共 1863 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2023](bugs/BUG-2023-krkr-risk-acceptance-entry-focus-loss.md) | ✅ | ✅ | KRKR 风险确认入口在切回 Fushi 后消失 |
 | [BUG-2021](bugs/BUG-2021-krkr-native-input-transient-dismiss-regression.md) | ✅ | 🚧 | KiriKiri 将瞬时 provider 非 ownership 当撤权，导致点击穿透与选区消失 |
 | [BUG-1988](bugs/BUG-1988-sgre-ingame-lookup-provider-admission.md) | ✅ | ✅ | SGRE 游戏内查词命中被原生提供者准入门静默丢弃 |
 | [BUG-1983](bugs/BUG-1983-gal-layout-whitespace-fold.md) | ✅ | ✅ | Gal 同句换行快照未原地折叠导致换行错乱 |
