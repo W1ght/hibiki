@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69598 (4094 per locale)
+/// Strings: 69632 (4096 per locale)
 ///
-/// Built on 2026-08-31 at 05:08 UTC
+/// Built on 2026-08-31 at 06:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5597,13 +5597,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get network_proxy_mode_manual => 'Manual';
   String get network_proxy_mode_manual_hint =>
       'Use the server and optional credentials below';
-  String get network_proxy_manual_hint =>
+  String get network_proxy_address_hint =>
       'HTTP proxy server used by all public internet requests';
   String get network_proxy_username => 'Proxy username (optional)';
   String get network_proxy_password => 'Proxy password (optional)';
-  String get storage_category_backups => 'Local backups';
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
   String get storage_entry_delete_backups_confirm_body =>
       'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
   String get update_download_source_preference => 'Preferred download source';
@@ -5614,6 +5611,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_download_source_github => 'GitHub direct';
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  String get storage_category_backups => 'Leftover backup archives';
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} archive(s) left by the last export';
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} is not available for this file; falling back to the automatic order';
+  String get network_proxy_credentials_scope_hint =>
+      'Credentials apply to HTTP requests only; the built-in torrent engine cannot use them';
 }
 
 // Path: <root>
@@ -15096,50 +15100,56 @@ class _StringsAr extends _StringsEn {
   @override
   String get delete_choices_remember => 'تذكّر هذه الخيارات';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'وضع الوكيل';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'تلقائي';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'استخدام متغيرات البيئة ثم وكيل النظام المفعّل';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'اتصال مباشر';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint => 'تعطيل استخدام الوكيل للتطبيق';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'يدوي';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'استخدام الخادم وبيانات الاعتماد الاختيارية أدناه';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'خادم وكيل HTTP تستخدمه كل طلبات الإنترنت العامة';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'اسم مستخدم الوكيل (اختياري)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'كلمة مرور الوكيل (اختياري)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'هل تريد حذف أرشيفات النسخ الاحتياطي المحلية المؤقتة هذه؟ تأكد من حفظ أو مشاركة أي نسخة ما زلت بحاجة إليها.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => 'مصدر التنزيل المفضل';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'تتم تجربة المصدر المحدد أولاً، والمصادر غير المتاحة تتراجع تلقائيًا كما كان.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'تلقائي (موصى به)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'مرآة Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub مباشرة';
   @override
   String update_download_source_proxy({required Object host}) =>
-      'Proxy: ${host}';
+      'وكيل: ${host}';
+  @override
+  String get storage_category_backups => 'أرشيفات نسخ احتياطي متبقية';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} أرشيف متبقٍ من آخر عملية تصدير';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} غير متاح لهذا الملف، وتمت العودة إلى الترتيب التلقائي';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'بيانات الاعتماد تُستخدم لطلبات HTTP فقط، ومحرك التورنت المدمج لا يمكنه استخدامها';
 }
 
 // Path: <root>
@@ -24844,50 +24854,57 @@ class _StringsDe extends _StringsEn {
   @override
   String get delete_choices_remember => 'Diese Auswahl merken';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Proxy-Modus';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Automatisch';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Umgebungsvariablen verwenden, dann den aktivierten Systemproxy';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Direkt';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Proxy-Nutzung für die App deaktivieren';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'Manuell';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Server und optionale Zugangsdaten unten verwenden';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'HTTP-Proxyserver für alle Anfragen ins öffentliche Internet';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Proxy-Benutzername (optional)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Proxy-Passwort (optional)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Diese temporären lokalen Backup-Archive löschen? Stelle sicher, dass du jede noch benötigte Kopie gespeichert oder geteilt hast.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => 'Bevorzugte Downloadquelle';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'Die gewählte Quelle wird zuerst versucht; nicht verfügbare Quellen weichen weiterhin automatisch aus.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Automatisch (empfohlen)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Cloudflare-Spiegel';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub direkt';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get storage_category_backups => 'Übrig gebliebene Backup-Archive';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} Archiv(e) vom letzten Export übrig';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} ist für diese Datei nicht verfügbar; es wird auf die automatische Reihenfolge zurückgegriffen';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Zugangsdaten gelten nur für HTTP-Anfragen; die integrierte Torrent-Engine kann sie nicht verwenden';
 }
 
 // Path: <root>
@@ -34639,50 +34656,59 @@ class _StringsEs extends _StringsEn {
   @override
   String get delete_choices_remember => 'Recordar estas opciones';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Modo de proxy';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Automático';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Usar variables de entorno y luego el proxy del sistema activado';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Directo';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Desactivar el uso de proxy para la aplicación';
   @override
   String get network_proxy_mode_manual => 'Manual';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Usar el servidor y las credenciales opcionales de abajo';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'Servidor proxy HTTP usado por todas las solicitudes a Internet público';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Usuario del proxy (opcional)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Contraseña del proxy (opcional)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      '¿Eliminar estos archivos de copia de seguridad locales temporales? Asegúrate de haber guardado o compartido cualquier copia que aún necesites.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference =>
+      'Fuente de descarga preferida';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'La fuente seleccionada se intenta primero; las fuentes no disponibles siguen recurriendo automáticamente a otras.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Automático (recomendado)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Espejo de Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub directo';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get storage_category_backups =>
+      'Archivos de copia de seguridad sobrantes';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} archivo(s) que dejó la última exportación';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} no está disponible para este archivo; se vuelve al orden automático';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Las credenciales solo se aplican a las solicitudes HTTP; el motor de torrents integrado no puede usarlas';
 }
 
 // Path: <root>
@@ -44469,50 +44495,59 @@ class _StringsFr extends _StringsEn {
   @override
   String get delete_choices_remember => 'Mémoriser ces choix';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Mode proxy';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Automatique';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Utiliser les variables d\'environnement, puis le proxy système activé';
   @override
   String get network_proxy_mode_direct => 'Direct';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Désactiver l\'utilisation du proxy pour l\'application';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'Manuel';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Utiliser le serveur et les identifiants facultatifs ci-dessous';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'Serveur proxy HTTP utilisé par toutes les requêtes vers Internet public';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username =>
+      'Nom d\'utilisateur du proxy (facultatif)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Mot de passe du proxy (facultatif)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Supprimer ces archives de sauvegarde locales temporaires ? Assurez-vous d\'avoir enregistré ou partagé toute copie encore nécessaire.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference =>
+      'Source de téléchargement préférée';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'La source sélectionnée est essayée en premier ; les sources indisponibles basculent toujours automatiquement.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Automatique (recommandé)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Miroir Cloudflare';
   @override
   String get update_download_source_github => 'GitHub direct';
   @override
   String update_download_source_proxy({required Object host}) =>
-      'Proxy: ${host}';
+      'Proxy : ${host}';
+  @override
+  String get storage_category_backups => 'Archives de sauvegarde restantes';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} archive(s) laissée(s) par la dernière exportation';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} n\'est pas disponible pour ce fichier ; retour à l\'ordre automatique';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Les identifiants ne s\'appliquent qu\'aux requêtes HTTP ; le moteur torrent intégré ne peut pas les utiliser';
 }
 
 // Path: <root>
@@ -54118,50 +54153,57 @@ class _StringsId extends _StringsEn {
   @override
   String get delete_choices_remember => 'Ingat pilihan ini';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Mode proxy';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Otomatis';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Gunakan variabel lingkungan, lalu proxy sistem yang aktif';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Langsung';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Nonaktifkan penggunaan proxy untuk aplikasi';
   @override
   String get network_proxy_mode_manual => 'Manual';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Gunakan server dan kredensial opsional di bawah';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'Server proxy HTTP yang dipakai semua permintaan internet publik';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Nama pengguna proxy (opsional)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Kata sandi proxy (opsional)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Hapus arsip cadangan lokal sementara ini? Pastikan Anda sudah menyimpan atau membagikan salinan yang masih diperlukan.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => 'Sumber unduhan pilihan';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'Sumber yang dipilih dicoba lebih dulu; sumber yang tidak tersedia tetap dialihkan otomatis.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Otomatis (disarankan)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Mirror Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub langsung';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get storage_category_backups => 'Arsip cadangan tersisa';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} arsip yang tersisa dari ekspor terakhir';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} tidak tersedia untuk berkas ini; kembali ke urutan otomatis';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Kredensial hanya berlaku untuk permintaan HTTP; mesin torrent bawaan tidak dapat menggunakannya';
 }
 
 // Path: <root>
@@ -63851,50 +63893,57 @@ class _StringsIt extends _StringsEn {
   @override
   String get delete_choices_remember => 'Ricorda queste scelte';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Modalità proxy';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Automatica';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Usa le variabili d\'ambiente, poi il proxy di sistema attivo';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Diretta';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Disattiva l\'uso del proxy per l\'app';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'Manuale';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Usa il server e le credenziali facoltative qui sotto';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'Server proxy HTTP usato da tutte le richieste verso Internet pubblico';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Nome utente del proxy (facoltativo)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Password del proxy (facoltativa)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Eliminare questi archivi di backup locali temporanei? Assicurati di aver salvato o condiviso ogni copia che ti serve ancora.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => 'Fonte di download preferita';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'La fonte selezionata viene provata per prima; le fonti non disponibili continuano a ripiegare automaticamente.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Automatica (consigliata)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Mirror Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub diretto';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get storage_category_backups => 'Archivi di backup residui';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} archivio/i lasciato/i dall\'ultima esportazione';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} non è disponibile per questo file; si torna all\'ordine automatico';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Le credenziali valgono solo per le richieste HTTP; il motore torrent integrato non può usarle';
 }
 
 // Path: <root>
@@ -72993,50 +73042,53 @@ class _StringsJa extends _StringsEn {
   @override
   String get delete_choices_remember => 'この選択を記憶する';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'プロキシモード';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => '自動';
   @override
-  String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+  String get network_proxy_mode_auto_hint => '環境変数、次に有効なシステムプロキシを使用';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => '直接接続';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint => 'アプリでのプロキシ使用を無効にする';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => '手動';
   @override
-  String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+  String get network_proxy_mode_manual_hint => '下のサーバーと任意の認証情報を使用';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint => 'すべての公開インターネット通信で使う HTTP プロキシサーバー';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'プロキシのユーザー名（任意）';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'プロキシのパスワード（任意）';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'これらの一時的なローカルバックアップ書庫を削除しますか？まだ必要な控えは保存または共有済みか確認してください。';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => '優先ダウンロード元';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      '選んだ配布元を最初に試します。利用できない場合も自動で他の配布元にフォールバックします。';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => '自動（推奨）';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Cloudflare ミラー';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub 直接';
   @override
   String update_download_source_proxy({required Object host}) =>
-      'Proxy: ${host}';
+      'プロキシ: ${host}';
+  @override
+  String get storage_category_backups => '残っているバックアップ書庫';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '前回のエクスポートで残った ${n} 個の書庫';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} はこのファイルでは利用できないため、自動順に戻しました';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      '認証情報は HTTP 通信にのみ適用されます。内蔵 torrent エンジンでは使用できません';
 }
 
 // Path: <root>
@@ -82146,50 +82198,53 @@ class _StringsKo extends _StringsEn {
   @override
   String get delete_choices_remember => '이 선택 기억하기';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => '프록시 모드';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => '자동';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      '환경 변수를 먼저 사용하고, 그다음 활성화된 시스템 프록시를 사용';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => '직접 연결';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint => '앱의 프록시 사용 중지';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => '수동';
   @override
-  String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+  String get network_proxy_mode_manual_hint => '아래의 서버와 선택적 자격 증명 사용';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint => '모든 공용 인터넷 요청에 사용되는 HTTP 프록시 서버';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => '프록시 사용자 이름(선택 사항)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => '프록시 비밀번호(선택 사항)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      '이 임시 로컬 백업 아카이브를 삭제할까요? 아직 필요한 사본은 저장하거나 공유했는지 확인하세요.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => '선호하는 다운로드 소스';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      '선택한 소스를 먼저 시도하며, 사용할 수 없는 소스는 계속 자동으로 대체됩니다.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => '자동(권장)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Cloudflare 미러';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub 직접';
   @override
-  String update_download_source_proxy({required Object host}) =>
-      'Proxy: ${host}';
+  String update_download_source_proxy({required Object host}) => '프록시: ${host}';
+  @override
+  String get storage_category_backups => '남아 있는 백업 아카이브';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '마지막 내보내기에서 남은 아카이브 ${n} 개';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '이 파일에는 ${source} 을(를) 사용할 수 없어 자동 순서로 되돌렸습니다';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      '자격 증명은 HTTP 요청에만 적용되며, 내장 토렌트 엔진은 사용할 수 없습니다';
 }
 
 // Path: <root>
@@ -91832,50 +91887,58 @@ class _StringsNl extends _StringsEn {
   @override
   String get delete_choices_remember => 'Deze keuzes onthouden';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Proxymodus';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Automatisch';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Gebruik omgevingsvariabelen en daarna de ingeschakelde systeemproxy';
   @override
   String get network_proxy_mode_direct => 'Direct';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Proxygebruik voor de app uitschakelen';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'Handmatig';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Gebruik de server en optionele inloggegevens hieronder';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'HTTP-proxyserver die door alle verzoeken naar het publieke internet wordt gebruikt';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Proxygebruikersnaam (optioneel)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Proxywachtwoord (optioneel)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Deze tijdelijke lokale back-uparchieven verwijderen? Zorg dat je elke kopie die je nog nodig hebt hebt opgeslagen of gedeeld.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference =>
+      'Voorkeursbron voor downloads';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'De gekozen bron wordt als eerste geprobeerd; niet-beschikbare bronnen vallen nog steeds automatisch terug.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Automatisch (aanbevolen)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Cloudflare-mirror';
   @override
   String get update_download_source_github => 'GitHub direct';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get storage_category_backups => 'Achtergebleven back-uparchieven';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} archief(en) achtergelaten door de laatste export';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} is niet beschikbaar voor dit bestand; er wordt teruggevallen op de automatische volgorde';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Inloggegevens gelden alleen voor HTTP-verzoeken; de ingebouwde torrent-engine kan ze niet gebruiken';
 }
 
 // Path: <root>
@@ -101575,50 +101638,57 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get delete_choices_remember => 'Lembrar estas escolhas';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Modo de proxy';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Automático';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Usar variáveis de ambiente e depois o proxy do sistema ativado';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Direto';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Desativar o uso de proxy pelo aplicativo';
   @override
   String get network_proxy_mode_manual => 'Manual';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Usar o servidor e as credenciais opcionais abaixo';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'Servidor proxy HTTP usado por todas as requisições à internet pública';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Usuário do proxy (opcional)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Senha do proxy (opcional)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Excluir estes arquivos de backup locais temporários? Confirme que você salvou ou compartilhou qualquer cópia que ainda precise.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => 'Fonte de download preferida';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'A fonte selecionada é tentada primeiro; fontes indisponíveis continuam recorrendo automaticamente a outras.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Automático (recomendado)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Espelho Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub direto';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get storage_category_backups => 'Arquivos de backup restantes';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} arquivo(s) deixado(s) pela última exportação';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} não está disponível para este arquivo; voltando à ordem automática';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'As credenciais valem apenas para requisições HTTP; o motor de torrent integrado não consegue usá-las';
 }
 
 // Path: <root>
@@ -111292,50 +111362,59 @@ class _StringsRu extends _StringsEn {
   @override
   String get delete_choices_remember => 'Запомнить этот выбор';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Режим прокси';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Автоматически';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Использовать переменные среды, затем включённый системный прокси';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Прямое подключение';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Отключить использование прокси для приложения';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'Вручную';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Использовать сервер и необязательные учётные данные ниже';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'HTTP-прокси, через который идут все запросы в публичный интернет';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username =>
+      'Имя пользователя прокси (необязательно)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Пароль прокси (необязательно)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Удалить эти временные локальные архивы резервных копий? Убедитесь, что вы сохранили или отправили все нужные копии.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference =>
+      'Предпочитаемый источник загрузки';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'Выбранный источник пробуется первым; недоступные источники по-прежнему автоматически заменяются.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Автоматически (рекомендуется)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Зеркало Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub напрямую';
   @override
   String update_download_source_proxy({required Object host}) =>
-      'Proxy: ${host}';
+      'Прокси: ${host}';
+  @override
+  String get storage_category_backups => 'Оставшиеся архивы резервных копий';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      'Архивов, оставшихся после последнего экспорта: ${n}';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} недоступен для этого файла; выполнен возврат к автоматическому порядку';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Учётные данные применяются только к HTTP-запросам; встроенный torrent-движок не может их использовать';
 }
 
 // Path: <root>
@@ -120813,50 +120892,56 @@ class _StringsTh extends _StringsEn {
   @override
   String get delete_choices_remember => 'จดจำตัวเลือกเหล่านี้';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'โหมดพร็อกซี';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'อัตโนมัติ';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'ใช้ตัวแปรสภาพแวดล้อม แล้วจึงใช้พร็อกซีของระบบที่เปิดอยู่';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'เชื่อมต่อโดยตรง';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint => 'ปิดการใช้พร็อกซีสำหรับแอป';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'กำหนดเอง';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'ใช้เซิร์ฟเวอร์และข้อมูลรับรอง (ถ้ามี) ด้านล่าง';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'เซิร์ฟเวอร์พร็อกซี HTTP ที่ใช้กับคำขออินเทอร์เน็ตสาธารณะทั้งหมด';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'ชื่อผู้ใช้พร็อกซี (ไม่บังคับ)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'รหัสผ่านพร็อกซี (ไม่บังคับ)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'ลบไฟล์สำรองข้อมูลชั่วคราวในเครื่องเหล่านี้หรือไม่ โปรดตรวจสอบว่าคุณได้บันทึกหรือแชร์สำเนาที่ยังต้องใช้แล้ว';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => 'แหล่งดาวน์โหลดที่ต้องการ';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'ระบบจะลองแหล่งที่เลือกก่อน หากแหล่งนั้นใช้ไม่ได้จะสำรองไปแหล่งอื่นโดยอัตโนมัติ';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'อัตโนมัติ (แนะนำ)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'มิเรอร์ Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub โดยตรง';
   @override
   String update_download_source_proxy({required Object host}) =>
-      'Proxy: ${host}';
+      'พร็อกซี: ${host}';
+  @override
+  String get storage_category_backups => 'ไฟล์สำรองข้อมูลที่ตกค้าง';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      'ไฟล์เก็บถาวร ${n} รายการที่ตกค้างจากการส่งออกครั้งล่าสุด';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} ใช้กับไฟล์นี้ไม่ได้ จึงกลับไปใช้ลำดับอัตโนมัติ';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'ข้อมูลรับรองใช้ได้กับคำขอ HTTP เท่านั้น เอนจิน torrent ในตัวไม่สามารถใช้ได้';
 }
 
 // Path: <root>
@@ -130447,50 +130532,58 @@ class _StringsTr extends _StringsEn {
   @override
   String get delete_choices_remember => 'Bu seçimleri hatırla';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Proxy modu';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Otomatik';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Önce ortam değişkenlerini, sonra etkin sistem proxy\'sini kullan';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Doğrudan';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Uygulama için proxy kullanımını devre dışı bırak';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'Elle';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Aşağıdaki sunucuyu ve isteğe bağlı kimlik bilgilerini kullan';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'Tüm genel internet isteklerinde kullanılan HTTP proxy sunucusu';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Proxy kullanıcı adı (isteğe bağlı)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Proxy parolası (isteğe bağlı)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Bu geçici yerel yedek arşivleri silinsin mi? Hâlâ ihtiyacınız olan kopyaları kaydettiğinizden veya paylaştığınızdan emin olun.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference =>
+      'Tercih edilen indirme kaynağı';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'Seçilen kaynak önce denenir; kullanılamayan kaynaklar yine de otomatik olarak yedeğe döner.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Otomatik (önerilir)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Cloudflare aynası';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub doğrudan';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get storage_category_backups => 'Artakalan yedek arşivleri';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      'Son dışa aktarmadan kalan ${n} arşiv';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} bu dosya için kullanılamıyor; otomatik sıraya geri dönüldü';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Kimlik bilgileri yalnızca HTTP istekleri için geçerlidir; yerleşik torrent motoru bunları kullanamaz';
 }
 
 // Path: <root>
@@ -140058,50 +140151,57 @@ class _StringsVi extends _StringsEn {
   @override
   String get delete_choices_remember => 'Ghi nhớ các lựa chọn này';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => 'Chế độ proxy';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => 'Tự động';
   @override
   String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+      'Dùng biến môi trường, sau đó là proxy hệ thống đang bật';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => 'Kết nối trực tiếp';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint =>
+      'Tắt việc dùng proxy cho ứng dụng';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => 'Thủ công';
   @override
   String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+      'Dùng máy chủ và thông tin đăng nhập tùy chọn bên dưới';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint =>
+      'Máy chủ proxy HTTP dùng cho mọi yêu cầu ra Internet công cộng';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => 'Tên người dùng proxy (tùy chọn)';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => 'Mật khẩu proxy (tùy chọn)';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      'Xóa các kho lưu trữ sao lưu cục bộ tạm thời này? Hãy chắc chắn bạn đã lưu hoặc chia sẻ bản sao nào còn cần.';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => 'Nguồn tải xuống ưu tiên';
   @override
   String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+      'Nguồn đã chọn sẽ được thử trước; các nguồn không khả dụng vẫn tự động chuyển sang nguồn khác.';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => 'Tự động (khuyến nghị)';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Máy chủ gương Cloudflare';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub trực tiếp';
   @override
   String update_download_source_proxy({required Object host}) =>
       'Proxy: ${host}';
+  @override
+  String get storage_category_backups => 'Kho lưu trữ sao lưu còn sót';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} kho lưu trữ còn sót từ lần xuất trước';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} không khả dụng cho tệp này; đã quay lại thứ tự tự động';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      'Thông tin đăng nhập chỉ áp dụng cho yêu cầu HTTP; công cụ torrent tích hợp không dùng được';
 }
 
 // Path: <root>
@@ -148922,15 +149022,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get network_proxy_mode_manual_hint => '使用下方服务器与可选认证信息';
   @override
-  String get network_proxy_manual_hint => '供应用全部公网请求使用的 HTTP 代理服务器';
+  String get network_proxy_address_hint => '供应用全部公网请求使用的 HTTP 代理服务器';
   @override
   String get network_proxy_username => '代理用户名（可选）';
   @override
   String get network_proxy_password => '代理密码（可选）';
-  @override
-  String get storage_category_backups => '本地备份';
-  @override
-  String storage_entry_backups_label({required Object n}) => '${n} 个备份归档';
   @override
   String get storage_entry_delete_backups_confirm_body =>
       '确定清除这些临时本地备份吗？请先确认需要保留的副本已经保存或分享出去。';
@@ -148947,6 +149043,17 @@ class _StringsZhCn extends _StringsEn {
   String get update_download_source_github => 'GitHub 直连';
   @override
   String update_download_source_proxy({required Object host}) => '代理站：${host}';
+  @override
+  String get storage_category_backups => '遗留的备份包';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '上次导出遗留的 ${n} 个备份包';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} 不适用于该文件，已回退到自动顺序';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      '凭据仅用于 HTTP 请求；内置 torrent 引擎无法使用';
 }
 
 // Path: <root>
@@ -157765,50 +157872,51 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get delete_choices_remember => '記住這些選擇';
   @override
-  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_label => '代理模式';
   @override
-  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto => '自動';
   @override
-  String get network_proxy_mode_auto_hint =>
-      'Use environment variables, then the enabled system proxy';
+  String get network_proxy_mode_auto_hint => '先用環境變數，再用已啟用的系統代理';
   @override
-  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct => '直連';
   @override
-  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_direct_hint => '停用應用程式的代理';
   @override
-  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual => '手動';
   @override
-  String get network_proxy_mode_manual_hint =>
-      'Use the server and optional credentials below';
+  String get network_proxy_mode_manual_hint => '使用下方的伺服器與選填憑證';
   @override
-  String get network_proxy_manual_hint =>
-      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_address_hint => '所有公網請求都會使用的 HTTP 代理伺服器';
   @override
-  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_username => '代理使用者名稱（選填）';
   @override
-  String get network_proxy_password => 'Proxy password (optional)';
-  @override
-  String get storage_category_backups => 'Local backups';
-  @override
-  String storage_entry_backups_label({required Object n}) =>
-      '${n} backup archive(s)';
+  String get network_proxy_password => '代理密碼（選填）';
   @override
   String get storage_entry_delete_backups_confirm_body =>
-      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      '要刪除這些暫存的本機備份封存檔嗎？請確認仍需要的副本已儲存或分享。';
   @override
-  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference => '偏好的下載來源';
   @override
-  String get update_download_source_preference_hint =>
-      'The selected source is tried first; unavailable sources still fall back automatically.';
+  String get update_download_source_preference_hint => '會先嘗試所選來源；來源不可用時仍會自動回退。';
   @override
-  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_auto => '自動（建議）';
   @override
-  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_cloudflare => 'Cloudflare 鏡像';
   @override
-  String get update_download_source_github => 'GitHub direct';
+  String get update_download_source_github => 'GitHub 直連';
   @override
-  String update_download_source_proxy({required Object host}) =>
-      'Proxy: ${host}';
+  String update_download_source_proxy({required Object host}) => '代理：${host}';
+  @override
+  String get storage_category_backups => '遺留的備份封存檔';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '上次匯出遺留的 ${n} 個備份封存檔';
+  @override
+  String update_download_source_unavailable({required Object source}) =>
+      '${source} 不適用於此檔案，已回退到自動順序';
+  @override
+  String get network_proxy_credentials_scope_hint =>
+      '憑證僅用於 HTTP 請求；內建 torrent 引擎無法使用';
 }
 
 /// Flat map(s) containing all translations.
@@ -166184,16 +166292,12 @@ extension on _StringsEn {
         return 'Manual';
       case 'network_proxy_mode_manual_hint':
         return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
+      case 'network_proxy_address_hint':
         return 'HTTP proxy server used by all public internet requests';
       case 'network_proxy_username':
         return 'Proxy username (optional)';
       case 'network_proxy_password':
         return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
       case 'storage_entry_delete_backups_confirm_body':
         return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
       case 'update_download_source_preference':
@@ -166208,6 +166312,16 @@ extension on _StringsEn {
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'storage_category_backups':
+        return 'Leftover backup archives';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} archive(s) left by the last export';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} is not available for this file; falling back to the automatic order';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Credentials apply to HTTP requests only; the built-in torrent engine cannot use them';
       default:
         return null;
     }
@@ -174566,43 +174680,48 @@ extension on _StringsAr {
       case 'delete_choices_remember':
         return 'تذكّر هذه الخيارات';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'وضع الوكيل';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'تلقائي';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'استخدام متغيرات البيئة ثم وكيل النظام المفعّل';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'اتصال مباشر';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'تعطيل استخدام الوكيل للتطبيق';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'يدوي';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'استخدام الخادم وبيانات الاعتماد الاختيارية أدناه';
+      case 'network_proxy_address_hint':
+        return 'خادم وكيل HTTP تستخدمه كل طلبات الإنترنت العامة';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'اسم مستخدم الوكيل (اختياري)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'كلمة مرور الوكيل (اختياري)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'هل تريد حذف أرشيفات النسخ الاحتياطي المحلية المؤقتة هذه؟ تأكد من حفظ أو مشاركة أي نسخة ما زلت بحاجة إليها.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'مصدر التنزيل المفضل';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'تتم تجربة المصدر المحدد أولاً، والمصادر غير المتاحة تتراجع تلقائيًا كما كان.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'تلقائي (موصى به)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'مرآة Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub مباشرة';
       case 'update_download_source_proxy':
-        return ({required Object host}) => 'Proxy: ${host}';
+        return ({required Object host}) => 'وكيل: ${host}';
+      case 'storage_category_backups':
+        return 'أرشيفات نسخ احتياطي متبقية';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} أرشيف متبقٍ من آخر عملية تصدير';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} غير متاح لهذا الملف، وتمت العودة إلى الترتيب التلقائي';
+      case 'network_proxy_credentials_scope_hint':
+        return 'بيانات الاعتماد تُستخدم لطلبات HTTP فقط، ومحرك التورنت المدمج لا يمكنه استخدامها';
       default:
         return null;
     }
@@ -183004,43 +183123,49 @@ extension on _StringsDe {
       case 'delete_choices_remember':
         return 'Diese Auswahl merken';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Proxy-Modus';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Automatisch';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Umgebungsvariablen verwenden, dann den aktivierten Systemproxy';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Direkt';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Proxy-Nutzung für die App deaktivieren';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'Manuell';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Server und optionale Zugangsdaten unten verwenden';
+      case 'network_proxy_address_hint':
+        return 'HTTP-Proxyserver für alle Anfragen ins öffentliche Internet';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Proxy-Benutzername (optional)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Proxy-Passwort (optional)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Diese temporären lokalen Backup-Archive löschen? Stelle sicher, dass du jede noch benötigte Kopie gespeichert oder geteilt hast.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Bevorzugte Downloadquelle';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'Die gewählte Quelle wird zuerst versucht; nicht verfügbare Quellen weichen weiterhin automatisch aus.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Automatisch (empfohlen)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Cloudflare-Spiegel';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub direkt';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'storage_category_backups':
+        return 'Übrig gebliebene Backup-Archive';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} Archiv(e) vom letzten Export übrig';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} ist für diese Datei nicht verfügbar; es wird auf die automatische Reihenfolge zurückgegriffen';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Zugangsdaten gelten nur für HTTP-Anfragen; die integrierte Torrent-Engine kann sie nicht verwenden';
       default:
         return null;
     }
@@ -191434,43 +191559,49 @@ extension on _StringsEs {
       case 'delete_choices_remember':
         return 'Recordar estas opciones';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Modo de proxy';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Automático';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Usar variables de entorno y luego el proxy del sistema activado';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Directo';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Desactivar el uso de proxy para la aplicación';
       case 'network_proxy_mode_manual':
         return 'Manual';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Usar el servidor y las credenciales opcionales de abajo';
+      case 'network_proxy_address_hint':
+        return 'Servidor proxy HTTP usado por todas las solicitudes a Internet público';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Usuario del proxy (opcional)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Contraseña del proxy (opcional)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return '¿Eliminar estos archivos de copia de seguridad locales temporales? Asegúrate de haber guardado o compartido cualquier copia que aún necesites.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Fuente de descarga preferida';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'La fuente seleccionada se intenta primero; las fuentes no disponibles siguen recurriendo automáticamente a otras.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Automático (recomendado)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Espejo de Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub directo';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'storage_category_backups':
+        return 'Archivos de copia de seguridad sobrantes';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} archivo(s) que dejó la última exportación';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} no está disponible para este archivo; se vuelve al orden automático';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Las credenciales solo se aplican a las solicitudes HTTP; el motor de torrents integrado no puede usarlas';
       default:
         return null;
     }
@@ -199872,43 +200003,49 @@ extension on _StringsFr {
       case 'delete_choices_remember':
         return 'Mémoriser ces choix';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Mode proxy';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Automatique';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Utiliser les variables d\'environnement, puis le proxy système activé';
       case 'network_proxy_mode_direct':
         return 'Direct';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Désactiver l\'utilisation du proxy pour l\'application';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'Manuel';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Utiliser le serveur et les identifiants facultatifs ci-dessous';
+      case 'network_proxy_address_hint':
+        return 'Serveur proxy HTTP utilisé par toutes les requêtes vers Internet public';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Nom d\'utilisateur du proxy (facultatif)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Mot de passe du proxy (facultatif)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Supprimer ces archives de sauvegarde locales temporaires ? Assurez-vous d\'avoir enregistré ou partagé toute copie encore nécessaire.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Source de téléchargement préférée';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'La source sélectionnée est essayée en premier ; les sources indisponibles basculent toujours automatiquement.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Automatique (recommandé)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Miroir Cloudflare';
       case 'update_download_source_github':
         return 'GitHub direct';
       case 'update_download_source_proxy':
-        return ({required Object host}) => 'Proxy: ${host}';
+        return ({required Object host}) => 'Proxy : ${host}';
+      case 'storage_category_backups':
+        return 'Archives de sauvegarde restantes';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} archive(s) laissée(s) par la dernière exportation';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} n\'est pas disponible pour ce fichier ; retour à l\'ordre automatique';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Les identifiants ne s\'appliquent qu\'aux requêtes HTTP ; le moteur torrent intégré ne peut pas les utiliser';
       default:
         return null;
     }
@@ -208282,43 +208419,49 @@ extension on _StringsId {
       case 'delete_choices_remember':
         return 'Ingat pilihan ini';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Mode proxy';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Otomatis';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Gunakan variabel lingkungan, lalu proxy sistem yang aktif';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Langsung';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Nonaktifkan penggunaan proxy untuk aplikasi';
       case 'network_proxy_mode_manual':
         return 'Manual';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Gunakan server dan kredensial opsional di bawah';
+      case 'network_proxy_address_hint':
+        return 'Server proxy HTTP yang dipakai semua permintaan internet publik';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Nama pengguna proxy (opsional)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Kata sandi proxy (opsional)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Hapus arsip cadangan lokal sementara ini? Pastikan Anda sudah menyimpan atau membagikan salinan yang masih diperlukan.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Sumber unduhan pilihan';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'Sumber yang dipilih dicoba lebih dulu; sumber yang tidak tersedia tetap dialihkan otomatis.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Otomatis (disarankan)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Mirror Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub langsung';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'storage_category_backups':
+        return 'Arsip cadangan tersisa';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} arsip yang tersisa dari ekspor terakhir';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} tidak tersedia untuk berkas ini; kembali ke urutan otomatis';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Kredensial hanya berlaku untuk permintaan HTTP; mesin torrent bawaan tidak dapat menggunakannya';
       default:
         return null;
     }
@@ -216713,43 +216856,49 @@ extension on _StringsIt {
       case 'delete_choices_remember':
         return 'Ricorda queste scelte';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Modalità proxy';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Automatica';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Usa le variabili d\'ambiente, poi il proxy di sistema attivo';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Diretta';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Disattiva l\'uso del proxy per l\'app';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'Manuale';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Usa il server e le credenziali facoltative qui sotto';
+      case 'network_proxy_address_hint':
+        return 'Server proxy HTTP usato da tutte le richieste verso Internet pubblico';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Nome utente del proxy (facoltativo)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Password del proxy (facoltativa)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Eliminare questi archivi di backup locali temporanei? Assicurati di aver salvato o condiviso ogni copia che ti serve ancora.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Fonte di download preferita';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'La fonte selezionata viene provata per prima; le fonti non disponibili continuano a ripiegare automaticamente.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Automatica (consigliata)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Mirror Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub diretto';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'storage_category_backups':
+        return 'Archivi di backup residui';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} archivio/i lasciato/i dall\'ultima esportazione';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} non è disponibile per questo file; si torna all\'ordine automatico';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Le credenziali valgono solo per le richieste HTTP; il motore torrent integrato non può usarle';
       default:
         return null;
     }
@@ -225074,43 +225223,48 @@ extension on _StringsJa {
       case 'delete_choices_remember':
         return 'この選択を記憶する';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'プロキシモード';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return '自動';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return '環境変数、次に有効なシステムプロキシを使用';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return '直接接続';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'アプリでのプロキシ使用を無効にする';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return '手動';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return '下のサーバーと任意の認証情報を使用';
+      case 'network_proxy_address_hint':
+        return 'すべての公開インターネット通信で使う HTTP プロキシサーバー';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'プロキシのユーザー名（任意）';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'プロキシのパスワード（任意）';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'これらの一時的なローカルバックアップ書庫を削除しますか？まだ必要な控えは保存または共有済みか確認してください。';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return '優先ダウンロード元';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return '選んだ配布元を最初に試します。利用できない場合も自動で他の配布元にフォールバックします。';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return '自動（推奨）';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Cloudflare ミラー';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub 直接';
       case 'update_download_source_proxy':
-        return ({required Object host}) => 'Proxy: ${host}';
+        return ({required Object host}) => 'プロキシ: ${host}';
+      case 'storage_category_backups':
+        return '残っているバックアップ書庫';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '前回のエクスポートで残った ${n} 個の書庫';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} はこのファイルでは利用できないため、自動順に戻しました';
+      case 'network_proxy_credentials_scope_hint':
+        return '認証情報は HTTP 通信にのみ適用されます。内蔵 torrent エンジンでは使用できません';
       default:
         return null;
     }
@@ -233438,43 +233592,48 @@ extension on _StringsKo {
       case 'delete_choices_remember':
         return '이 선택 기억하기';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return '프록시 모드';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return '자동';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return '환경 변수를 먼저 사용하고, 그다음 활성화된 시스템 프록시를 사용';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return '직접 연결';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return '앱의 프록시 사용 중지';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return '수동';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return '아래의 서버와 선택적 자격 증명 사용';
+      case 'network_proxy_address_hint':
+        return '모든 공용 인터넷 요청에 사용되는 HTTP 프록시 서버';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return '프록시 사용자 이름(선택 사항)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return '프록시 비밀번호(선택 사항)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return '이 임시 로컬 백업 아카이브를 삭제할까요? 아직 필요한 사본은 저장하거나 공유했는지 확인하세요.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return '선호하는 다운로드 소스';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return '선택한 소스를 먼저 시도하며, 사용할 수 없는 소스는 계속 자동으로 대체됩니다.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return '자동(권장)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Cloudflare 미러';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub 직접';
       case 'update_download_source_proxy':
-        return ({required Object host}) => 'Proxy: ${host}';
+        return ({required Object host}) => '프록시: ${host}';
+      case 'storage_category_backups':
+        return '남아 있는 백업 아카이브';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '마지막 내보내기에서 남은 아카이브 ${n} 개';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '이 파일에는 ${source} 을(를) 사용할 수 없어 자동 순서로 되돌렸습니다';
+      case 'network_proxy_credentials_scope_hint':
+        return '자격 증명은 HTTP 요청에만 적용되며, 내장 토렌트 엔진은 사용할 수 없습니다';
       default:
         return null;
     }
@@ -241863,43 +242022,49 @@ extension on _StringsNl {
       case 'delete_choices_remember':
         return 'Deze keuzes onthouden';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Proxymodus';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Automatisch';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Gebruik omgevingsvariabelen en daarna de ingeschakelde systeemproxy';
       case 'network_proxy_mode_direct':
         return 'Direct';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Proxygebruik voor de app uitschakelen';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'Handmatig';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Gebruik de server en optionele inloggegevens hieronder';
+      case 'network_proxy_address_hint':
+        return 'HTTP-proxyserver die door alle verzoeken naar het publieke internet wordt gebruikt';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Proxygebruikersnaam (optioneel)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Proxywachtwoord (optioneel)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Deze tijdelijke lokale back-uparchieven verwijderen? Zorg dat je elke kopie die je nog nodig hebt hebt opgeslagen of gedeeld.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Voorkeursbron voor downloads';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'De gekozen bron wordt als eerste geprobeerd; niet-beschikbare bronnen vallen nog steeds automatisch terug.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Automatisch (aanbevolen)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Cloudflare-mirror';
       case 'update_download_source_github':
         return 'GitHub direct';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'storage_category_backups':
+        return 'Achtergebleven back-uparchieven';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} archief(en) achtergelaten door de laatste export';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} is niet beschikbaar voor dit bestand; er wordt teruggevallen op de automatische volgorde';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Inloggegevens gelden alleen voor HTTP-verzoeken; de ingebouwde torrent-engine kan ze niet gebruiken';
       default:
         return null;
     }
@@ -250283,43 +250448,49 @@ extension on _StringsPtBr {
       case 'delete_choices_remember':
         return 'Lembrar estas escolhas';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Modo de proxy';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Automático';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Usar variáveis de ambiente e depois o proxy do sistema ativado';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Direto';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Desativar o uso de proxy pelo aplicativo';
       case 'network_proxy_mode_manual':
         return 'Manual';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Usar o servidor e as credenciais opcionais abaixo';
+      case 'network_proxy_address_hint':
+        return 'Servidor proxy HTTP usado por todas as requisições à internet pública';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Usuário do proxy (opcional)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Senha do proxy (opcional)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Excluir estes arquivos de backup locais temporários? Confirme que você salvou ou compartilhou qualquer cópia que ainda precise.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Fonte de download preferida';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'A fonte selecionada é tentada primeiro; fontes indisponíveis continuam recorrendo automaticamente a outras.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Automático (recomendado)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Espelho Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub direto';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'storage_category_backups':
+        return 'Arquivos de backup restantes';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} arquivo(s) deixado(s) pela última exportação';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} não está disponível para este arquivo; voltando à ordem automática';
+      case 'network_proxy_credentials_scope_hint':
+        return 'As credenciais valem apenas para requisições HTTP; o motor de torrent integrado não consegue usá-las';
       default:
         return null;
     }
@@ -258709,43 +258880,49 @@ extension on _StringsRu {
       case 'delete_choices_remember':
         return 'Запомнить этот выбор';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Режим прокси';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Автоматически';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Использовать переменные среды, затем включённый системный прокси';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Прямое подключение';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Отключить использование прокси для приложения';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'Вручную';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Использовать сервер и необязательные учётные данные ниже';
+      case 'network_proxy_address_hint':
+        return 'HTTP-прокси, через который идут все запросы в публичный интернет';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Имя пользователя прокси (необязательно)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Пароль прокси (необязательно)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Удалить эти временные локальные архивы резервных копий? Убедитесь, что вы сохранили или отправили все нужные копии.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Предпочитаемый источник загрузки';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'Выбранный источник пробуется первым; недоступные источники по-прежнему автоматически заменяются.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Автоматически (рекомендуется)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Зеркало Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub напрямую';
       case 'update_download_source_proxy':
-        return ({required Object host}) => 'Proxy: ${host}';
+        return ({required Object host}) => 'Прокси: ${host}';
+      case 'storage_category_backups':
+        return 'Оставшиеся архивы резервных копий';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            'Архивов, оставшихся после последнего экспорта: ${n}';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} недоступен для этого файла; выполнен возврат к автоматическому порядку';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Учётные данные применяются только к HTTP-запросам; встроенный torrent-движок не может их использовать';
       default:
         return null;
     }
@@ -267108,43 +267285,49 @@ extension on _StringsTh {
       case 'delete_choices_remember':
         return 'จดจำตัวเลือกเหล่านี้';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'โหมดพร็อกซี';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'อัตโนมัติ';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'ใช้ตัวแปรสภาพแวดล้อม แล้วจึงใช้พร็อกซีของระบบที่เปิดอยู่';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'เชื่อมต่อโดยตรง';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'ปิดการใช้พร็อกซีสำหรับแอป';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'กำหนดเอง';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'ใช้เซิร์ฟเวอร์และข้อมูลรับรอง (ถ้ามี) ด้านล่าง';
+      case 'network_proxy_address_hint':
+        return 'เซิร์ฟเวอร์พร็อกซี HTTP ที่ใช้กับคำขออินเทอร์เน็ตสาธารณะทั้งหมด';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'ชื่อผู้ใช้พร็อกซี (ไม่บังคับ)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'รหัสผ่านพร็อกซี (ไม่บังคับ)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'ลบไฟล์สำรองข้อมูลชั่วคราวในเครื่องเหล่านี้หรือไม่ โปรดตรวจสอบว่าคุณได้บันทึกหรือแชร์สำเนาที่ยังต้องใช้แล้ว';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'แหล่งดาวน์โหลดที่ต้องการ';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'ระบบจะลองแหล่งที่เลือกก่อน หากแหล่งนั้นใช้ไม่ได้จะสำรองไปแหล่งอื่นโดยอัตโนมัติ';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'อัตโนมัติ (แนะนำ)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'มิเรอร์ Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub โดยตรง';
       case 'update_download_source_proxy':
-        return ({required Object host}) => 'Proxy: ${host}';
+        return ({required Object host}) => 'พร็อกซี: ${host}';
+      case 'storage_category_backups':
+        return 'ไฟล์สำรองข้อมูลที่ตกค้าง';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            'ไฟล์เก็บถาวร ${n} รายการที่ตกค้างจากการส่งออกครั้งล่าสุด';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} ใช้กับไฟล์นี้ไม่ได้ จึงกลับไปใช้ลำดับอัตโนมัติ';
+      case 'network_proxy_credentials_scope_hint':
+        return 'ข้อมูลรับรองใช้ได้กับคำขอ HTTP เท่านั้น เอนจิน torrent ในตัวไม่สามารถใช้ได้';
       default:
         return null;
     }
@@ -275523,43 +275706,48 @@ extension on _StringsTr {
       case 'delete_choices_remember':
         return 'Bu seçimleri hatırla';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Proxy modu';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Otomatik';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Önce ortam değişkenlerini, sonra etkin sistem proxy\'sini kullan';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Doğrudan';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Uygulama için proxy kullanımını devre dışı bırak';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'Elle';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Aşağıdaki sunucuyu ve isteğe bağlı kimlik bilgilerini kullan';
+      case 'network_proxy_address_hint':
+        return 'Tüm genel internet isteklerinde kullanılan HTTP proxy sunucusu';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Proxy kullanıcı adı (isteğe bağlı)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Proxy parolası (isteğe bağlı)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Bu geçici yerel yedek arşivleri silinsin mi? Hâlâ ihtiyacınız olan kopyaları kaydettiğinizden veya paylaştığınızdan emin olun.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Tercih edilen indirme kaynağı';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'Seçilen kaynak önce denenir; kullanılamayan kaynaklar yine de otomatik olarak yedeğe döner.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Otomatik (önerilir)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Cloudflare aynası';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub doğrudan';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'storage_category_backups':
+        return 'Artakalan yedek arşivleri';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => 'Son dışa aktarmadan kalan ${n} arşiv';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} bu dosya için kullanılamıyor; otomatik sıraya geri dönüldü';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Kimlik bilgileri yalnızca HTTP istekleri için geçerlidir; yerleşik torrent motoru bunları kullanamaz';
       default:
         return null;
     }
@@ -283931,43 +284119,49 @@ extension on _StringsVi {
       case 'delete_choices_remember':
         return 'Ghi nhớ các lựa chọn này';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return 'Chế độ proxy';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return 'Tự động';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return 'Dùng biến môi trường, sau đó là proxy hệ thống đang bật';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return 'Kết nối trực tiếp';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return 'Tắt việc dùng proxy cho ứng dụng';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return 'Thủ công';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return 'Dùng máy chủ và thông tin đăng nhập tùy chọn bên dưới';
+      case 'network_proxy_address_hint':
+        return 'Máy chủ proxy HTTP dùng cho mọi yêu cầu ra Internet công cộng';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return 'Tên người dùng proxy (tùy chọn)';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return 'Mật khẩu proxy (tùy chọn)';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return 'Xóa các kho lưu trữ sao lưu cục bộ tạm thời này? Hãy chắc chắn bạn đã lưu hoặc chia sẻ bản sao nào còn cần.';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return 'Nguồn tải xuống ưu tiên';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return 'Nguồn đã chọn sẽ được thử trước; các nguồn không khả dụng vẫn tự động chuyển sang nguồn khác.';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return 'Tự động (khuyến nghị)';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Máy chủ gương Cloudflare';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub trực tiếp';
       case 'update_download_source_proxy':
         return ({required Object host}) => 'Proxy: ${host}';
+      case 'storage_category_backups':
+        return 'Kho lưu trữ sao lưu còn sót';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) =>
+            '${n} kho lưu trữ còn sót từ lần xuất trước';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) =>
+            '${source} không khả dụng cho tệp này; đã quay lại thứ tự tự động';
+      case 'network_proxy_credentials_scope_hint':
+        return 'Thông tin đăng nhập chỉ áp dụng cho yêu cầu HTTP; công cụ torrent tích hợp không dùng được';
       default:
         return null;
     }
@@ -292283,16 +292477,12 @@ extension on _StringsZhCn {
         return '手动';
       case 'network_proxy_mode_manual_hint':
         return '使用下方服务器与可选认证信息';
-      case 'network_proxy_manual_hint':
+      case 'network_proxy_address_hint':
         return '供应用全部公网请求使用的 HTTP 代理服务器';
       case 'network_proxy_username':
         return '代理用户名（可选）';
       case 'network_proxy_password':
         return '代理密码（可选）';
-      case 'storage_category_backups':
-        return '本地备份';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} 个备份归档';
       case 'storage_entry_delete_backups_confirm_body':
         return '确定清除这些临时本地备份吗？请先确认需要保留的副本已经保存或分享出去。';
       case 'update_download_source_preference':
@@ -292307,6 +292497,14 @@ extension on _StringsZhCn {
         return 'GitHub 直连';
       case 'update_download_source_proxy':
         return ({required Object host}) => '代理站：${host}';
+      case 'storage_category_backups':
+        return '遗留的备份包';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '上次导出遗留的 ${n} 个备份包';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) => '${source} 不适用于该文件，已回退到自动顺序';
+      case 'network_proxy_credentials_scope_hint':
+        return '凭据仅用于 HTTP 请求；内置 torrent 引擎无法使用';
       default:
         return null;
     }
@@ -300610,43 +300808,47 @@ extension on _StringsZhHk {
       case 'delete_choices_remember':
         return '記住這些選擇';
       case 'network_proxy_mode_label':
-        return 'Proxy mode';
+        return '代理模式';
       case 'network_proxy_mode_auto':
-        return 'Automatic';
+        return '自動';
       case 'network_proxy_mode_auto_hint':
-        return 'Use environment variables, then the enabled system proxy';
+        return '先用環境變數，再用已啟用的系統代理';
       case 'network_proxy_mode_direct':
-        return 'Direct';
+        return '直連';
       case 'network_proxy_mode_direct_hint':
-        return 'Disable proxy use for the app';
+        return '停用應用程式的代理';
       case 'network_proxy_mode_manual':
-        return 'Manual';
+        return '手動';
       case 'network_proxy_mode_manual_hint':
-        return 'Use the server and optional credentials below';
-      case 'network_proxy_manual_hint':
-        return 'HTTP proxy server used by all public internet requests';
+        return '使用下方的伺服器與選填憑證';
+      case 'network_proxy_address_hint':
+        return '所有公網請求都會使用的 HTTP 代理伺服器';
       case 'network_proxy_username':
-        return 'Proxy username (optional)';
+        return '代理使用者名稱（選填）';
       case 'network_proxy_password':
-        return 'Proxy password (optional)';
-      case 'storage_category_backups':
-        return 'Local backups';
-      case 'storage_entry_backups_label':
-        return ({required Object n}) => '${n} backup archive(s)';
+        return '代理密碼（選填）';
       case 'storage_entry_delete_backups_confirm_body':
-        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+        return '要刪除這些暫存的本機備份封存檔嗎？請確認仍需要的副本已儲存或分享。';
       case 'update_download_source_preference':
-        return 'Preferred download source';
+        return '偏好的下載來源';
       case 'update_download_source_preference_hint':
-        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+        return '會先嘗試所選來源；來源不可用時仍會自動回退。';
       case 'update_download_source_auto':
-        return 'Automatic (recommended)';
+        return '自動（建議）';
       case 'update_download_source_cloudflare':
-        return 'Cloudflare mirror';
+        return 'Cloudflare 鏡像';
       case 'update_download_source_github':
-        return 'GitHub direct';
+        return 'GitHub 直連';
       case 'update_download_source_proxy':
-        return ({required Object host}) => 'Proxy: ${host}';
+        return ({required Object host}) => '代理：${host}';
+      case 'storage_category_backups':
+        return '遺留的備份封存檔';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '上次匯出遺留的 ${n} 個備份封存檔';
+      case 'update_download_source_unavailable':
+        return ({required Object source}) => '${source} 不適用於此檔案，已回退到自動順序';
+      case 'network_proxy_credentials_scope_hint':
+        return '憑證僅用於 HTTP 請求；內建 torrent 引擎無法使用';
       default:
         return null;
     }
