@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69955 (4115 per locale)
+/// Strings: 70278 (4134 per locale)
 ///
-/// Built on 2026-09-01 at 16:45 UTC
+/// Built on 2026-09-02 at 05:27 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5647,6 +5647,32 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get network_proxy_p2p_mode_direct => 'Direct';
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  String get discovery_opds_add => 'Add OPDS server';
+  String get discovery_opds_remove => 'Remove';
+  String get discovery_opds_enabled => 'Enabled';
+  String get discovery_opds_name => 'Display name';
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  String get discovery_opds_url => 'Catalog URL';
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  String get discovery_opds_username => 'Username';
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  String get discovery_opds_password => 'Password';
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  String get discovery_opds_test => 'Test connection';
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -15228,6 +15254,51 @@ class _StringsAr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -25031,6 +25102,51 @@ class _StringsDe extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -34883,6 +34999,51 @@ class _StringsEs extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -44770,6 +44931,51 @@ class _StringsFr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -54474,6 +54680,51 @@ class _StringsId extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -64262,6 +64513,51 @@ class _StringsIt extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -73456,6 +73752,51 @@ class _StringsJa extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -82661,6 +83002,51 @@ class _StringsKo extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -92403,6 +92789,51 @@ class _StringsNl extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -102201,6 +102632,51 @@ class _StringsPtBr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -111975,6 +112451,51 @@ class _StringsRu extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -121550,6 +122071,51 @@ class _StringsTh extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -131240,6 +131806,51 @@ class _StringsTr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -140906,6 +141517,51 @@ class _StringsVi extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -149803,6 +150459,48 @@ class _StringsZhCn extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => '走代理';
   @override
   String get network_proxy_p2p_mode_mixed => '混合';
+  @override
+  String get discovery_opds_settings_title => 'OPDS 书目服务器';
+  @override
+  String get discovery_opds_settings_hint =>
+      '从你自己的 OPDS 服务器浏览并下载书籍与漫画，例如 BookOrbit、Calibre-Web、Komga、Kavita';
+  @override
+  String get discovery_opds_add => '添加 OPDS 服务器';
+  @override
+  String get discovery_opds_remove => '移除';
+  @override
+  String get discovery_opds_enabled => '启用';
+  @override
+  String get discovery_opds_name => '显示名';
+  @override
+  String get discovery_opds_name_hint => '留空则使用主机名';
+  @override
+  String get discovery_opds_url => '目录地址';
+  @override
+  String get discovery_opds_url_hint =>
+      'OPDS 端点，例如 https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid => '请填写有效的 HTTP 或 HTTPS 目录地址';
+  @override
+  String get discovery_opds_url_needs_http_optin => '明文 HTTP 需要打开下面的开关';
+  @override
+  String get discovery_opds_username => '用户名';
+  @override
+  String get discovery_opds_username_hint => '公开目录留空即可';
+  @override
+  String get discovery_opds_password => '密码';
+  @override
+  String get discovery_opds_allow_http => '允许明文 HTTP';
+  @override
+  String get discovery_opds_allow_http_hint => '局域网自建服务器需要打开';
+  @override
+  String get discovery_opds_test => '测试连接';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      '连接成功，根目录有 ${count} 个条目';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      '连接失败：${reason}';
 }
 
 // Path: <root>
@@ -158715,6 +159413,51 @@ class _StringsZhHk extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  @override
+  String get discovery_opds_add => 'Add OPDS server';
+  @override
+  String get discovery_opds_remove => 'Remove';
+  @override
+  String get discovery_opds_enabled => 'Enabled';
+  @override
+  String get discovery_opds_name => 'Display name';
+  @override
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_opds_url => 'Catalog URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_opds_username => 'Username';
+  @override
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  @override
+  String get discovery_opds_test => 'Test connection';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 /// Flat map(s) containing all translations.
@@ -167158,6 +167901,45 @@ extension on _StringsEn {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -175596,6 +176378,45 @@ extension on _StringsAr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -184078,6 +184899,45 @@ extension on _StringsDe {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -192552,6 +193412,45 @@ extension on _StringsEs {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -201034,6 +201933,45 @@ extension on _StringsFr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -209488,6 +210426,45 @@ extension on _StringsId {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -217963,6 +218940,45 @@ extension on _StringsIt {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -226367,6 +227383,45 @@ extension on _StringsJa {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -234774,6 +235829,45 @@ extension on _StringsKo {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -243243,6 +244337,45 @@ extension on _StringsNl {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -251707,6 +252840,45 @@ extension on _StringsPtBr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -260177,6 +261349,45 @@ extension on _StringsRu {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -268620,6 +269831,45 @@ extension on _StringsTh {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -277078,6 +278328,45 @@ extension on _StringsTr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -285530,6 +286819,45 @@ extension on _StringsVi {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -293911,6 +295239,44 @@ extension on _StringsZhCn {
         return '走代理';
       case 'network_proxy_p2p_mode_mixed':
         return '混合';
+      case 'discovery_opds_settings_title':
+        return 'OPDS 书目服务器';
+      case 'discovery_opds_settings_hint':
+        return '从你自己的 OPDS 服务器浏览并下载书籍与漫画，例如 BookOrbit、Calibre-Web、Komga、Kavita';
+      case 'discovery_opds_add':
+        return '添加 OPDS 服务器';
+      case 'discovery_opds_remove':
+        return '移除';
+      case 'discovery_opds_enabled':
+        return '启用';
+      case 'discovery_opds_name':
+        return '显示名';
+      case 'discovery_opds_name_hint':
+        return '留空则使用主机名';
+      case 'discovery_opds_url':
+        return '目录地址';
+      case 'discovery_opds_url_hint':
+        return 'OPDS 端点，例如 https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return '请填写有效的 HTTP 或 HTTPS 目录地址';
+      case 'discovery_opds_url_needs_http_optin':
+        return '明文 HTTP 需要打开下面的开关';
+      case 'discovery_opds_username':
+        return '用户名';
+      case 'discovery_opds_username_hint':
+        return '公开目录留空即可';
+      case 'discovery_opds_password':
+        return '密码';
+      case 'discovery_opds_allow_http':
+        return '允许明文 HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return '局域网自建服务器需要打开';
+      case 'discovery_opds_test':
+        return '测试连接';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) => '连接成功，根目录有 ${count} 个条目';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => '连接失败：${reason}';
       default:
         return null;
     }
@@ -302293,6 +303659,45 @@ extension on _StringsZhHk {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
