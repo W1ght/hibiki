@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 70125 (4125 per locale)
+/// Strings: 70601 (4153 per locale)
 ///
-/// Built on 2026-09-02 at 14:56 UTC
+/// Built on 2026-09-02 at 21:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3016,8 +3016,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Screenshot ready: ${file}';
   String video_screenshot_saved_to({required Object path}) =>
       'Screenshot saved: ${path}';
-  String get video_secondary_subtitle_hint =>
-      'Rendered by player (not lookupable)';
   String get video_secondary_subtitle_sources => 'Secondary subtitle';
   String get video_setting_auto_play_next => 'Auto-play next episode';
   String get video_setting_auto_scrape => 'Auto-fetch series info';
@@ -5606,6 +5604,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get network_proxy_p2p_mode_direct => 'Direct';
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  String get download_task_audiobook_pair => 'Add alignment file';
+  String get audiobook_material_library => 'Audiobook material library';
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  String get audiobook_material_add_dir => 'Add folder';
+  String get audiobook_material_missing_dir => 'Missing';
+  String get audiobook_material_none => 'No folders added yet';
   String get onboarding_feature_fonts => 'Custom fonts';
   String get onboarding_feature_fonts_hint =>
       'Use your own fonts for the interface, book text and dictionary';
@@ -5645,6 +5655,45 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Open the practice sentence and tap a word.';
   String get onboarding_first_anki_action_desc =>
       'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      'Evidence: ${evidence}';
+  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always on.';
+  String get game_session_japanese_locale_evidence_insufficient =>
+      'insufficient evidence';
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      'Content language is Japanese';
+  String get game_japanese_locale_evidence_user_language_other =>
+      'Content language is not Japanese';
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'Manifest declares a UTF-8 code page';
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      'Version resource is Japanese';
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      'Version resource is Chinese';
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      'Executable contains Shift-JIS strings';
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      'File names contain kana';
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      'File names mark a Chinese patch';
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      'Text files are Shift-JIS';
+  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      'Text files contain Simplified Chinese';
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'The game was started without a Japanese locale: this system already uses the Japanese (CP932) code page, so nothing needs to change.';
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'The game was started without a Japanese locale: the auto verdict says it needs one, but Locale Emulator only supports 32-bit games.';
+  String get gal_card_lookup_independent_size =>
+      'Independent in-game card size';
+  String get gal_card_lookup_independent_size_hint =>
+      'Size the in-game lookup card separately from the desktop overlay card';
+  String get gal_card_lookup_max_width => 'In-game card max width';
+  String get gal_card_lookup_max_height => 'In-game card max height';
 }
 
 // Path: <root>
@@ -10745,9 +10794,6 @@ class _StringsAr extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'تم حفظ لقطة الشاشة: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'يُعرض بواسطة المشغّل (لا يمكن البحث فيه)';
-  @override
   String get video_secondary_subtitle_sources => 'ترجمة ثانوية';
   @override
   String get video_setting_auto_play_next => 'التشغيل التلقائي للحلقة التالية';
@@ -15179,6 +15225,26 @@ class _StringsAr extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'خطوط مخصّصة';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -15241,6 +15307,69 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'يفتح جملة التدريب في صفحة البحث. انقر على كلمة، ثم على +، وراجع الحقول ثم احفظ.';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      'الأدلة: ${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped =>
+      'لم تُطبَّق الإعدادات المحلية';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      'بدأت اللعبة بدون الإعدادات المحلية اليابانية (الحكم التلقائي: ${evidence}). إذا ظهر النص مشوّهًا، فاضبط الإعدادات المحلية اليابانية لهذه اللعبة على «تشغيل دائم».';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient =>
+      'أدلة غير كافية';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      'لغة المحتوى هي اليابانية';
+  @override
+  String get game_japanese_locale_evidence_user_language_other =>
+      'لغة المحتوى ليست اليابانية';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'يعلن البيان صفحة الرموز UTF-8';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      'مورد الإصدار ياباني';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      'مورد الإصدار صيني';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      'يحتوي الملف التنفيذي على سلاسل Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      'أسماء الملفات تحتوي على كانا';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      'أسماء الملفات تشير إلى رقعة صينية';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      'الملفات النصية بترميز Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'الملفات النصية بترميز GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      'الملفات النصية تحتوي على صينية مبسطة';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'بدأت اللعبة بدون الإعدادات المحلية اليابانية: يستخدم هذا النظام بالفعل صفحة الرموز اليابانية (CP932)، فلا حاجة لأي تغيير.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'بدأت اللعبة بدون الإعدادات المحلية اليابانية: يرى الحكم التلقائي أنها ضرورية، لكن Locale Emulator يدعم ألعاب 32 بت فقط.';
+  @override
+  String get gal_card_lookup_independent_size =>
+      'حجم منفصل للبطاقة داخل اللعبة';
+  @override
+  String get gal_card_lookup_independent_size_hint =>
+      'إعطاء بطاقة البحث داخل اللعبة حجماً خاصاً بها منفصلاً عن نافذة البحث المنبثقة';
+  @override
+  String get gal_card_lookup_max_width => 'العرض الأقصى للبطاقة داخل اللعبة';
+  @override
+  String get gal_card_lookup_max_height =>
+      'الارتفاع الأقصى للبطاقة داخل اللعبة';
 }
 
 // Path: <root>
@@ -20456,9 +20585,6 @@ class _StringsDe extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Screenshot gespeichert: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Vom Player gerendert (nicht nachschlagbar)';
-  @override
   String get video_secondary_subtitle_sources => 'Sekundärer Untertitel';
   @override
   String get video_setting_auto_play_next =>
@@ -24992,6 +25118,26 @@ class _StringsDe extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Eigene Schriften';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -25056,6 +25202,69 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Öffnet den Übungssatz auf der Nachschlageseite. Tippen Sie auf ein Wort, dann auf +, prüfen Sie die Felder und speichern Sie.';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      'Indizien: ${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped => 'Locale nicht angewendet';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      'Das Spiel wurde ohne japanische Locale gestartet (automatische Einschätzung: ${evidence}). Falls der Text verstümmelt ist, stelle die japanische Locale dieses Spiels auf „Immer an“.';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient =>
+      'unzureichende Indizien';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      'Inhaltssprache ist Japanisch';
+  @override
+  String get game_japanese_locale_evidence_user_language_other =>
+      'Inhaltssprache ist nicht Japanisch';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'Manifest deklariert UTF-8-Codepage';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      'Versionsressource ist Japanisch';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      'Versionsressource ist Chinesisch';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      'Programmdatei enthält Shift-JIS-Zeichenketten';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      'Dateinamen enthalten Kana';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      'Dateinamen deuten auf einen chinesischen Patch';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      'Textdateien sind Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Textdateien sind GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      'Textdateien enthalten vereinfachtes Chinesisch';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Das Spiel wurde ohne japanische Locale gestartet: Dieses System nutzt bereits die japanische Codepage (CP932), es ist nichts zu ändern.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Das Spiel wurde ohne japanische Locale gestartet: Die automatische Einschätzung hält sie für nötig, aber Locale Emulator unterstützt nur 32-Bit-Spiele.';
+  @override
+  String get gal_card_lookup_independent_size =>
+      'Eigene Größe für Nachschlagekarte im Spiel';
+  @override
+  String get gal_card_lookup_independent_size_hint =>
+      'Die Nachschlagekarte im Spiel unabhängig vom externen Nachschlage-Fenster dimensionieren';
+  @override
+  String get gal_card_lookup_max_width =>
+      'Max. Breite der Nachschlagekarte im Spiel';
+  @override
+  String get gal_card_lookup_max_height =>
+      'Max. Höhe der Nachschlagekarte im Spiel';
 }
 
 // Path: <root>
@@ -30294,9 +30503,6 @@ class _StringsEs extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Captura guardada: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Renderizado por el reproductor (no se puede buscar)';
-  @override
   String get video_secondary_subtitle_sources => 'Subtítulo secundario';
   @override
   String get video_setting_auto_play_next =>
@@ -34857,6 +35063,26 @@ class _StringsEs extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Fuentes personalizadas';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -34921,6 +35147,70 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Abre la frase de práctica en la página de consulta. Toque una palabra, toque +, revise los campos y guarde.';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      'Indicios: ${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped =>
+      'Configuración regional no aplicada';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      'El juego se inició sin configuración regional japonesa (veredicto automático: ${evidence}). Si el texto se ve ilegible, pon la configuración regional japonesa de este juego en «Siempre activada».';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient =>
+      'indicios insuficientes';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      'El idioma del contenido es japonés';
+  @override
+  String get game_japanese_locale_evidence_user_language_other =>
+      'El idioma del contenido no es japonés';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'El manifiesto declara la página de códigos UTF-8';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      'El recurso de versión es japonés';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      'El recurso de versión es chino';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      'El ejecutable contiene cadenas Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      'Los nombres de archivo contienen kana';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      'Los nombres de archivo indican un parche chino';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      'Los archivos de texto son Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Los archivos de texto son GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      'Los archivos de texto contienen chino simplificado';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'El juego se inició sin configuración regional japonesa: este sistema ya usa la página de códigos japonesa (CP932), no hay nada que cambiar.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'El juego se inició sin configuración regional japonesa: el veredicto automático dice que la necesita, pero Locale Emulator solo admite juegos de 32 bits.';
+  @override
+  String get gal_card_lookup_independent_size =>
+      'Tamaño separado para la tarjeta dentro del juego';
+  @override
+  String get gal_card_lookup_independent_size_hint =>
+      'Dimensiona la tarjeta de búsqueda dentro del juego por separado de la ventana de búsqueda emergente';
+  @override
+  String get gal_card_lookup_max_width =>
+      'Ancho máximo de la tarjeta dentro del juego';
+  @override
+  String get gal_card_lookup_max_height =>
+      'Altura máxima de la tarjeta dentro del juego';
 }
 
 // Path: <root>
@@ -40172,9 +40462,6 @@ class _StringsFr extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Capture d\'écran enregistrée : ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Affiché par le lecteur (non consultable)';
-  @override
   String get video_secondary_subtitle_sources => 'Sous-titre secondaire';
   @override
   String get video_setting_auto_play_next =>
@@ -44756,6 +45043,26 @@ class _StringsFr extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Polices personnalisées';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -44821,6 +45128,68 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Ouvre la phrase d\'entraînement dans la page de recherche. Touchez un mot, touchez +, vérifiez les champs et enregistrez.';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      'Indices : ${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped =>
+      'Paramètres régionaux non appliqués';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      'Le jeu a été lancé sans paramètres régionaux japonais (verdict automatique : ${evidence}). Si le texte est illisible, réglez les paramètres régionaux japonais de ce jeu sur « Toujours activé ».';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient =>
+      'indices insuffisants';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      'La langue du contenu est le japonais';
+  @override
+  String get game_japanese_locale_evidence_user_language_other =>
+      'La langue du contenu n\'est pas le japonais';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'Le manifeste déclare la page de codes UTF-8';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      'La ressource de version est en japonais';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      'La ressource de version est en chinois';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      'L\'exécutable contient des chaînes Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      'Les noms de fichiers contiennent des kana';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      'Les noms de fichiers signalent un patch chinois';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      'Les fichiers texte sont en Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Les fichiers texte sont en GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      'Les fichiers texte contiennent du chinois simplifié';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Le jeu a été lancé sans paramètres régionaux japonais : ce système utilise déjà la page de codes japonaise (CP932), rien à changer.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Le jeu a été lancé sans paramètres régionaux japonais : le verdict automatique les juge nécessaires, mais Locale Emulator ne prend en charge que les jeux 32 bits.';
+  @override
+  String get gal_card_lookup_independent_size =>
+      'Taille séparée pour la carte en jeu';
+  @override
+  String get gal_card_lookup_independent_size_hint =>
+      'Dimensionner la carte de recherche en jeu indépendamment de la fenêtre de recherche pop-out';
+  @override
+  String get gal_card_lookup_max_width => 'Largeur max de la carte en jeu';
+  @override
+  String get gal_card_lookup_max_height => 'Hauteur max de la carte en jeu';
 }
 
 // Path: <root>
@@ -49986,9 +50355,6 @@ class _StringsId extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Tangkapan layar tersimpan: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Dirender oleh pemutar (tidak bisa dicari)';
-  @override
   String get video_secondary_subtitle_sources => 'Subtitle sekunder';
   @override
   String get video_setting_auto_play_next =>
@@ -54470,6 +54836,26 @@ class _StringsId extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Font kustom';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -54534,6 +54920,67 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Membuka kalimat latihan di halaman pencarian. Ketuk sebuah kata, ketuk +, periksa kolomnya, lalu simpan.';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      'Bukti: ${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped => 'Lokal tidak diterapkan';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      'Game dimulai tanpa lokal Jepang (putusan otomatis: ${evidence}). Jika teksnya rusak, atur lokal Jepang game ini ke “Selalu aktif”.';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient =>
+      'bukti tidak cukup';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      'Bahasa konten adalah Jepang';
+  @override
+  String get game_japanese_locale_evidence_user_language_other =>
+      'Bahasa konten bukan Jepang';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'Manifest mendeklarasikan code page UTF-8';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      'Sumber daya versi berbahasa Jepang';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      'Sumber daya versi berbahasa Tionghoa';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      'Berkas executable berisi string Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      'Nama berkas berisi kana';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      'Nama berkas menandai patch Tionghoa';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      'Berkas teks berformat Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Berkas teks berformat GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      'Berkas teks berisi Tionghoa Sederhana';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Game dimulai tanpa lokal Jepang: sistem ini sudah memakai code page Jepang (CP932), tidak ada yang perlu diubah.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Game dimulai tanpa lokal Jepang: putusan otomatis menyatakan perlu, tetapi Locale Emulator hanya mendukung game 32-bit.';
+  @override
+  String get gal_card_lookup_independent_size =>
+      'Ukuran terpisah untuk kartu dalam game';
+  @override
+  String get gal_card_lookup_independent_size_hint =>
+      'Atur ukuran kartu pencarian dalam game terpisah dari jendela pencarian pop-out';
+  @override
+  String get gal_card_lookup_max_width => 'Lebar maks kartu dalam game';
+  @override
+  String get gal_card_lookup_max_height => 'Tinggi maks kartu dalam game';
 }
 
 // Path: <root>
@@ -59744,9 +60191,6 @@ class _StringsIt extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Screenshot salvato: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Renderizzato dal player (non cercabile)';
-  @override
   String get video_secondary_subtitle_sources => 'Sottotitolo secondario';
   @override
   String get video_setting_auto_play_next =>
@@ -64269,6 +64713,26 @@ class _StringsIt extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Font personalizzati';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -64333,6 +64797,68 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Apre la frase di esercizio nella pagina di ricerca. Tocca una parola, tocca +, controlla i campi e salva.';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      'Indizi: ${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped =>
+      'Impostazioni locali non applicate';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      'Il gioco è stato avviato senza impostazioni locali giapponesi (verdetto automatico: ${evidence}). Se il testo appare illeggibile, imposta le impostazioni locali giapponesi di questo gioco su «Sempre attivo».';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient =>
+      'indizi insufficienti';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      'La lingua dei contenuti è il giapponese';
+  @override
+  String get game_japanese_locale_evidence_user_language_other =>
+      'La lingua dei contenuti non è il giapponese';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'Il manifest dichiara la code page UTF-8';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      'La risorsa di versione è giapponese';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      'La risorsa di versione è cinese';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      'L\'eseguibile contiene stringhe Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      'I nomi dei file contengono kana';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      'I nomi dei file indicano una patch cinese';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      'I file di testo sono Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'I file di testo sono GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      'I file di testo contengono cinese semplificato';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Il gioco è stato avviato senza impostazioni locali giapponesi: questo sistema usa già la code page giapponese (CP932), non c\'è nulla da cambiare.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Il gioco è stato avviato senza impostazioni locali giapponesi: il verdetto automatico le ritiene necessarie, ma Locale Emulator supporta solo giochi a 32 bit.';
+  @override
+  String get gal_card_lookup_independent_size =>
+      'Dimensione separata per la carta nel gioco';
+  @override
+  String get gal_card_lookup_independent_size_hint =>
+      'Dimensiona la carta di ricerca nel gioco separatamente dalla finestra di ricerca pop-out';
+  @override
+  String get gal_card_lookup_max_width => 'Larghezza max carta nel gioco';
+  @override
+  String get gal_card_lookup_max_height => 'Altezza max carta nel gioco';
 }
 
 // Path: <root>
@@ -69248,8 +69774,6 @@ class _StringsJa extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'スクリーンショットを保存しました：${path}';
   @override
-  String get video_secondary_subtitle_hint => 'プレーヤーで描画（辞書検索不可）';
-  @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
   String get video_setting_auto_play_next => '次のエピソードを自動再生';
@@ -73481,6 +74005,26 @@ class _StringsJa extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'カスタムフォント';
   @override
   String get onboarding_feature_fonts_hint => 'UI・本文・辞書に好きなフォントを使う';
@@ -73540,6 +74084,64 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       '練習用の文を辞書ページで開きます。単語をタップし、「＋」をタップして、項目を確認してから保存します。';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      '判定根拠：${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped => 'ロケール未適用';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      'このセッションは日本語ロケールなしで起動しました（自動判定：${evidence}）。文字化けする場合は、このゲームの日本語ロケールを「常にオン」にしてください。';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient => '根拠不足';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      'コンテンツ言語が日本語';
+  @override
+  String get game_japanese_locale_evidence_user_language_other =>
+      'コンテンツ言語が日本語以外';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'マニフェストが UTF-8 コードページを宣言';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      'バージョンリソースが日本語';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      'バージョンリソースが中国語';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      '実行ファイルに Shift-JIS 文字列あり';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      'ファイル名にかなを含む';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      'ファイル名に中国語化パッチの印';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      'テキストファイルが Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk => 'テキストファイルが GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      'テキストファイルに簡体字中国語あり';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      '日本語ロケールなしで起動しました：このシステムは既に日本語（CP932）コードページなので変更は不要です。';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      '日本語ロケールなしで起動しました：自動判定では必要ですが、Locale Emulator は 32 ビットのゲームのみ対応です。';
+  @override
+  String get gal_card_lookup_independent_size => 'ゲーム内辞書カードの個別サイズ';
+  @override
+  String get gal_card_lookup_independent_size_hint =>
+      'ゲーム内辞書カードのサイズをポップアウト辞書ウィンドウとは別に設定します';
+  @override
+  String get gal_card_lookup_max_width => 'ゲーム内辞書カードの最大幅';
+  @override
+  String get gal_card_lookup_max_height => 'ゲーム内辞書カードの最大高さ';
 }
 
 // Path: <root>
@@ -78457,8 +79059,6 @@ class _StringsKo extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       '스크린샷이 저장됨: ${path}';
   @override
-  String get video_secondary_subtitle_hint => '플레이어가 렌더링 (사전 검색 불가)';
-  @override
   String get video_secondary_subtitle_sources => '보조 자막';
   @override
   String get video_setting_auto_play_next => '다음 에피소드 자동 재생';
@@ -82699,6 +83299,26 @@ class _StringsKo extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => '사용자 지정 글꼴';
   @override
   String get onboarding_feature_fonts_hint => '인터페이스, 책 본문, 사전에 원하는 글꼴 사용';
@@ -82758,6 +83378,64 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       '단어 찾기 페이지에서 연습 문장을 엽니다. 단어를 탭하고 +를 탭한 뒤, 필드를 확인하고 저장하세요.';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      '판정 근거: ${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped => '로케일 미적용';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      '이번 세션은 일본어 로케일 없이 시작되었습니다(자동 판정: ${evidence}). 글자가 깨지면 이 게임의 일본어 로케일을 「항상 켜기」로 바꾸세요.';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient => '근거 부족';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      '콘텐츠 언어가 일본어';
+  @override
+  String get game_japanese_locale_evidence_user_language_other =>
+      '콘텐츠 언어가 일본어가 아님';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      '매니페스트가 UTF-8 코드 페이지를 선언';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      '버전 리소스가 일본어';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      '버전 리소스가 중국어';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      '실행 파일에 Shift-JIS 문자열 있음';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      '파일 이름에 가나 포함';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      '파일 이름에 중국어 패치 표시';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      '텍스트 파일이 Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk => '텍스트 파일이 GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      '텍스트 파일에 간체 중국어 포함';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      '일본어 로케일 없이 시작됨: 이 시스템은 이미 일본어(CP932) 코드 페이지를 사용하므로 변경할 것이 없습니다.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      '일본어 로케일 없이 시작됨: 자동 판정은 필요하다고 하지만 Locale Emulator는 32비트 게임만 지원합니다.';
+  @override
+  String get gal_card_lookup_independent_size => '인게임 사전 카드 별도 크기';
+  @override
+  String get gal_card_lookup_independent_size_hint =>
+      '인게임 사전 카드 크기를 팝아웃 검색 창과 별도로 지정합니다';
+  @override
+  String get gal_card_lookup_max_width => '인게임 사전 카드 최대 너비';
+  @override
+  String get gal_card_lookup_max_height => '인게임 사전 카드 최대 높이';
 }
 
 // Path: <root>
@@ -87942,9 +88620,6 @@ class _StringsNl extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Schermafbeelding opgeslagen: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Gerenderd door de speler (niet opzoekbaar)';
-  @override
   String get video_secondary_subtitle_sources => 'Secundaire ondertitel';
   @override
   String get video_setting_auto_play_next =>
@@ -92448,6 +93123,26 @@ class _StringsNl extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Eigen lettertypen';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -92512,6 +93207,68 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Opent de oefenzin in de opzoekpagina. Tik op een woord, tik op +, controleer de velden en sla op.';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      'Aanwijzingen: ${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped =>
+      'Landinstelling niet toegepast';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      'Het spel is gestart zonder Japanse landinstelling (automatisch oordeel: ${evidence}). Als de tekst onleesbaar is, zet dan de Japanse landinstelling van dit spel op ‘Altijd aan’.';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient =>
+      'onvoldoende aanwijzingen';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      'Inhoudstaal is Japans';
+  @override
+  String get game_japanese_locale_evidence_user_language_other =>
+      'Inhoudstaal is niet Japans';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'Manifest declareert UTF-8-codepagina';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      'Versiebron is Japans';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      'Versiebron is Chinees';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      'Uitvoerbaar bestand bevat Shift-JIS-tekenreeksen';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      'Bestandsnamen bevatten kana';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      'Bestandsnamen wijzen op een Chinese patch';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      'Tekstbestanden zijn Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Tekstbestanden zijn GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      'Tekstbestanden bevatten vereenvoudigd Chinees';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Het spel is gestart zonder Japanse landinstelling: dit systeem gebruikt al de Japanse codepagina (CP932), er hoeft niets te veranderen.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Het spel is gestart zonder Japanse landinstelling: het automatische oordeel acht die nodig, maar Locale Emulator ondersteunt alleen 32-bits spellen.';
+  @override
+  String get gal_card_lookup_independent_size =>
+      'Aparte grootte voor in-game zoekkaart';
+  @override
+  String get gal_card_lookup_independent_size_hint =>
+      'Geef de in-game zoekkaart een eigen grootte, los van de uitklapopzoeker';
+  @override
+  String get gal_card_lookup_max_width => 'In-game zoekkaart max. breedte';
+  @override
+  String get gal_card_lookup_max_height => 'In-game zoekkaart max. hoogte';
 }
 
 // Path: <root>
@@ -97719,9 +98476,6 @@ class _StringsPtBr extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Captura de tela salva: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Renderizado pelo player (não consultável)';
-  @override
   String get video_secondary_subtitle_sources => 'Legenda secundária';
   @override
   String get video_setting_auto_play_next =>
@@ -102256,6 +103010,26 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Fontes personalizadas';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -102320,6 +103094,67 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Abre a frase de prática na página de consulta. Toque em uma palavra, toque em +, confira os campos e salve.';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      'Indícios: ${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped => 'Localidade não aplicada';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      'O jogo foi iniciado sem a localidade japonesa (veredito automático: ${evidence}). Se o texto aparecer ilegível, defina a localidade japonesa deste jogo como “Sempre ativada”.';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient =>
+      'indícios insuficientes';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      'O idioma do conteúdo é japonês';
+  @override
+  String get game_japanese_locale_evidence_user_language_other =>
+      'O idioma do conteúdo não é japonês';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'O manifesto declara a página de código UTF-8';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      'O recurso de versão é japonês';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      'O recurso de versão é chinês';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      'O executável contém strings Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      'Os nomes de arquivo contêm kana';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      'Os nomes de arquivo indicam um patch chinês';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      'Os arquivos de texto são Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Os arquivos de texto são GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      'Os arquivos de texto contêm chinês simplificado';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'O jogo foi iniciado sem a localidade japonesa: este sistema já usa a página de código japonesa (CP932), nada precisa mudar.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'O jogo foi iniciado sem a localidade japonesa: o veredito automático diz que ela é necessária, mas o Locale Emulator só suporta jogos de 32 bits.';
+  @override
+  String get gal_card_lookup_independent_size =>
+      'Tamanho separado para o cartão no jogo';
+  @override
+  String get gal_card_lookup_independent_size_hint =>
+      'Dimensionar o cartão de consulta no jogo separadamente da janela de consulta pop-out';
+  @override
+  String get gal_card_lookup_max_width => 'Largura máxima do cartão no jogo';
+  @override
+  String get gal_card_lookup_max_height => 'Altura máxima do cartão no jogo';
 }
 
 // Path: <root>
@@ -107517,9 +108352,6 @@ class _StringsRu extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Скриншот сохранён: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Отображается плеером (недоступны для поиска слов)';
-  @override
   String get video_secondary_subtitle_sources => 'Вторичные субтитры';
   @override
   String get video_setting_auto_play_next =>
@@ -112039,6 +112871,26 @@ class _StringsRu extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Свои шрифты';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -112104,6 +112956,67 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Открывает тренировочное предложение на странице поиска. Нажмите на слово, затем на +, проверьте поля и сохраните.';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      'Признаки: ${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped => 'Локаль не применена';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      'Игра запущена без японской локали (автоматический вердикт: ${evidence}). Если текст отображается неверно, установите японскую локаль этой игры в «Всегда включена».';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient =>
+      'недостаточно признаков';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      'Язык контента — японский';
+  @override
+  String get game_japanese_locale_evidence_user_language_other =>
+      'Язык контента — не японский';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'Манифест объявляет кодовую страницу UTF-8';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      'Ресурс версии на японском';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      'Ресурс версии на китайском';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      'Исполняемый файл содержит строки Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      'Имена файлов содержат кану';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      'Имена файлов указывают на китайский патч';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      'Текстовые файлы в Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Текстовые файлы в GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      'Текстовые файлы содержат упрощённый китайский';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Игра запущена без японской локали: система уже использует японскую кодовую страницу (CP932), менять ничего не нужно.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Игра запущена без японской локали: автоматический вердикт считает её нужной, но Locale Emulator поддерживает только 32-битные игры.';
+  @override
+  String get gal_card_lookup_independent_size =>
+      'Отдельный размер для карточки в игре';
+  @override
+  String get gal_card_lookup_independent_size_hint =>
+      'Задать размер карточки словаря в игре отдельно от всплывающего окна поиска';
+  @override
+  String get gal_card_lookup_max_width => 'Макс. ширина карточки в игре';
+  @override
+  String get gal_card_lookup_max_height => 'Макс. высота карточки в игре';
 }
 
 // Path: <root>
@@ -117205,9 +118118,6 @@ class _StringsTh extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'บันทึกภาพหน้าจอแล้ว: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'เรนเดอร์โดยตัวเล่น (ค้นหาคำไม่ได้)';
-  @override
   String get video_secondary_subtitle_sources => 'คำบรรยายรอง';
   @override
   String get video_setting_auto_play_next => 'เล่นตอนถัดไปอัตโนมัติ';
@@ -121631,6 +122541,26 @@ class _StringsTh extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'ฟอนต์กำหนดเอง';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -121693,6 +122623,66 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'เปิดประโยคฝึกในหน้าค้นคำ แตะที่คำหนึ่งคำ แตะ + ตรวจดูข้อมูลในช่องต่าง ๆ แล้วบันทึก';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      'หลักฐาน: ${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped => 'ไม่ได้ใช้โลแคล';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      'เกมเริ่มโดยไม่ใช้โลแคลภาษาญี่ปุ่น (การตัดสินอัตโนมัติ: ${evidence}) หากตัวอักษรเพี้ยน ให้ตั้งโลแคลภาษาญี่ปุ่นของเกมนี้เป็น “เปิดเสมอ”';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient =>
+      'หลักฐานไม่เพียงพอ';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      'ภาษาของเนื้อหาเป็นภาษาญี่ปุ่น';
+  @override
+  String get game_japanese_locale_evidence_user_language_other =>
+      'ภาษาของเนื้อหาไม่ใช่ภาษาญี่ปุ่น';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'Manifest ประกาศ code page เป็น UTF-8';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      'ทรัพยากรเวอร์ชันเป็นภาษาญี่ปุ่น';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      'ทรัพยากรเวอร์ชันเป็นภาษาจีน';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      'ไฟล์ปฏิบัติการมีสตริง Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      'ชื่อไฟล์มีอักษรคานะ';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      'ชื่อไฟล์บ่งชี้แพตช์ภาษาจีน';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      'ไฟล์ข้อความเป็น Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'ไฟล์ข้อความเป็น GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      'ไฟล์ข้อความมีภาษาจีนตัวย่อ';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'เกมเริ่มโดยไม่ใช้โลแคลภาษาญี่ปุ่น: ระบบนี้ใช้ code page ภาษาญี่ปุ่น (CP932) อยู่แล้ว ไม่ต้องเปลี่ยนอะไร';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'เกมเริ่มโดยไม่ใช้โลแคลภาษาญี่ปุ่น: การตัดสินอัตโนมัติบอกว่าจำเป็น แต่ Locale Emulator รองรับเฉพาะเกม 32 บิต';
+  @override
+  String get gal_card_lookup_independent_size => 'ขนาดแยกสำหรับการ์ดในเกม';
+  @override
+  String get gal_card_lookup_independent_size_hint =>
+      'กำหนดขนาดการ์ดค้นหาในเกมแยกจากหน้าต่างค้นหาลอย';
+  @override
+  String get gal_card_lookup_max_width => 'ความกว้างสูงสุดของการ์ดในเกม';
+  @override
+  String get gal_card_lookup_max_height => 'ความสูงสูงสุดของการ์ดในเกม';
 }
 
 // Path: <root>
@@ -126846,9 +127836,6 @@ class _StringsTr extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Ekran görüntüsü kaydedildi: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Oynatıcı tarafından oluşturulur (sözcük aranamaz)';
-  @override
   String get video_secondary_subtitle_sources => 'İkincil altyazı';
   @override
   String get video_setting_auto_play_next => 'Sonraki bölümü otomatik oynat';
@@ -131332,6 +132319,26 @@ class _StringsTr extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Özel yazı tipleri';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -131396,6 +132403,67 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Alıştırma cümlesini arama sayfasında açar. Bir kelimeye dokunun, + düğmesine dokunun, alanları kontrol edip kaydedin.';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      'Kanıtlar: ${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped => 'Yerel ayar uygulanmadı';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      'Oyun Japonca yerel ayar olmadan başlatıldı (otomatik karar: ${evidence}). Metin bozuk görünüyorsa bu oyunun Japonca yerel ayarını “Her zaman açık” yapın.';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient =>
+      'yetersiz kanıt';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      'İçerik dili Japonca';
+  @override
+  String get game_japanese_locale_evidence_user_language_other =>
+      'İçerik dili Japonca değil';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'Manifest UTF-8 kod sayfası bildiriyor';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      'Sürüm kaynağı Japonca';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      'Sürüm kaynağı Çince';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      'Çalıştırılabilir dosya Shift-JIS dizeleri içeriyor';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      'Dosya adları kana içeriyor';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      'Dosya adları Çince yama işareti taşıyor';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      'Metin dosyaları Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Metin dosyaları GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      'Metin dosyaları Basitleştirilmiş Çince içeriyor';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Oyun Japonca yerel ayar olmadan başlatıldı: bu sistem zaten Japonca (CP932) kod sayfasını kullanıyor, değiştirilecek bir şey yok.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Oyun Japonca yerel ayar olmadan başlatıldı: otomatik karar gerekli diyor ama Locale Emulator yalnızca 32 bit oyunları destekliyor.';
+  @override
+  String get gal_card_lookup_independent_size =>
+      'Oyun içi kart için ayrı boyut';
+  @override
+  String get gal_card_lookup_independent_size_hint =>
+      'Oyun içi arama kartını açılır arama penceresinden ayrı boyutlandırın';
+  @override
+  String get gal_card_lookup_max_width => 'Oyun içi kart maks. genişlik';
+  @override
+  String get gal_card_lookup_max_height => 'Oyun içi kart maks. yükseklik';
 }
 
 // Path: <root>
@@ -136544,9 +137612,6 @@ class _StringsVi extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Đã lưu ảnh chụp: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Hiển thị bởi trình phát (không tra cứu được)';
-  @override
   String get video_secondary_subtitle_sources => 'Phụ đề phụ';
   @override
   String get video_setting_auto_play_next => 'Tự phát tập tiếp theo';
@@ -141009,6 +142074,26 @@ class _StringsVi extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Phông chữ tùy chỉnh';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -141071,6 +142156,69 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Mở câu luyện tập trong trang tra từ. Chạm vào một từ, chạm +, kiểm tra các trường rồi lưu.';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      'Bằng chứng: ${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped =>
+      'Chưa áp dụng ngôn ngữ hệ thống';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      'Game được khởi động không dùng ngôn ngữ hệ thống tiếng Nhật (phán đoán tự động: ${evidence}). Nếu chữ bị lỗi, hãy đặt ngôn ngữ hệ thống tiếng Nhật của game này thành “Luôn bật”.';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient =>
+      'chưa đủ bằng chứng';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese =>
+      'Ngôn ngữ nội dung là tiếng Nhật';
+  @override
+  String get game_japanese_locale_evidence_user_language_other =>
+      'Ngôn ngữ nội dung không phải tiếng Nhật';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'Manifest khai báo code page UTF-8';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese =>
+      'Tài nguyên phiên bản là tiếng Nhật';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese =>
+      'Tài nguyên phiên bản là tiếng Trung';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      'Tệp thực thi chứa chuỗi Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese =>
+      'Tên tệp chứa kana';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      'Tên tệp cho thấy bản vá tiếng Trung';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      'Tệp văn bản là Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk => 'Tệp văn bản là GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      'Tệp văn bản chứa tiếng Trung giản thể';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Game được khởi động không dùng ngôn ngữ hệ thống tiếng Nhật: hệ thống này đã dùng code page tiếng Nhật (CP932), không cần thay đổi.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Game được khởi động không dùng ngôn ngữ hệ thống tiếng Nhật: phán đoán tự động cho là cần, nhưng Locale Emulator chỉ hỗ trợ game 32-bit.';
+  @override
+  String get gal_card_lookup_independent_size =>
+      'Kích thước riêng cho thẻ trong trò chơi';
+  @override
+  String get gal_card_lookup_independent_size_hint =>
+      'Đặt kích thước thẻ tra cứu trong trò chơi tách khỏi cửa sổ tra cứu nổi';
+  @override
+  String get gal_card_lookup_max_width =>
+      'Chiều rộng tối đa thẻ trong trò chơi';
+  @override
+  String get gal_card_lookup_max_height =>
+      'Chiều cao tối đa thẻ trong trò chơi';
 }
 
 // Path: <root>
@@ -145849,8 +146997,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String video_screenshot_saved_to({required Object path}) => '截图已保存：${path}';
   @override
-  String get video_secondary_subtitle_hint => '由播放器渲染（不可查词）';
-  @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
   String get video_setting_auto_play_next => '自动连播下一集';
@@ -149912,6 +151058,26 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => '混合';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      '只下到音频 - 还需要一个对齐文件（字幕）才能作为书打开。';
+  @override
+  String get download_task_audiobook_pair => '补对齐文件';
+  @override
+  String get audiobook_material_library => '有声书素材库';
+  @override
+  String get audiobook_material_library_hint =>
+      '存放按作品编号命名的字幕与正文文件的目录。下载完成后自动据此配对。';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} 个目录，认得 ${works} 部作品';
+  @override
+  String get audiobook_material_add_dir => '添加目录';
+  @override
+  String get audiobook_material_missing_dir => '目录不存在';
+  @override
+  String get audiobook_material_none => '还没有添加目录';
+  @override
   String get onboarding_feature_fonts => '自定义字体';
   @override
   String get onboarding_feature_fonts_hint => '界面、正文、词典各用自己喜欢的字体';
@@ -149967,6 +151133,58 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_first_anki_lookup_desc => '打开练习句子，点一个词。';
   @override
   String get onboarding_first_anki_action_desc => '在查词页打开练习句子。点词、点加号、检查字段、保存。';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      '判据：${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped => '未转区';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      '本局未转区（自动判定：${evidence}）。若游戏文字乱码，可把该游戏的日语区域改为「始终开启」。';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient => '证据不足';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese => '内容语言设为日语';
+  @override
+  String get game_japanese_locale_evidence_user_language_other => '内容语言非日语';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      '程序清单声明 UTF-8 代码页';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese => '版本资源为日语';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese => '版本资源为中文';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      '程序内含 Shift-JIS 字符串';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese => '目录文件名含假名';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      '目录文件名含汉化标记';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      '目录文本为 Shift-JIS 编码';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk => '目录文本为 GBK 编码';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      '目录文本含简体中文';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      '本局未转区：系统本就是日文区域 (CP932)，无需转区。';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      '本局未转区：自动判定需要日文区域，但 Locale Emulator 只支持 32 位游戏。';
+  @override
+  String get gal_card_lookup_independent_size => '游戏内查词卡独立尺寸';
+  @override
+  String get gal_card_lookup_independent_size_hint => '让游戏内查词卡与桌面覆盖查词窗各自设置大小';
+  @override
+  String get gal_card_lookup_max_width => '游戏内查词卡最大宽度';
+  @override
+  String get gal_card_lookup_max_height => '游戏内查词卡最大高度';
 }
 
 // Path: <root>
@@ -154749,8 +155967,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String video_screenshot_saved_to({required Object path}) => '截圖已儲存：${path}';
   @override
-  String get video_secondary_subtitle_hint => '由播放器渲染（不可查詞）';
-  @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
   String get video_setting_auto_play_next => '自動連播下一集';
@@ -158824,6 +160040,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => '自定義字體';
   @override
   String get onboarding_feature_fonts_hint => '界面、正文、詞典各用自己喜歡的字體';
@@ -158879,6 +160115,58 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_first_anki_lookup_desc => '打開練習句子，點一個詞。';
   @override
   String get onboarding_first_anki_action_desc => '在查詞頁打開練習句子。點詞、點加號、檢查欄位、儲存。';
+  @override
+  String game_session_japanese_locale_evidence({required Object evidence}) =>
+      '判據：${evidence}';
+  @override
+  String get game_session_japanese_locale_skipped => '未轉區';
+  @override
+  String game_session_japanese_locale_skipped_hint(
+          {required Object evidence}) =>
+      '本局未轉區（自動判定：${evidence}）。若遊戲文字亂碼，可把該遊戲的日語區域改為「始終開啟」。';
+  @override
+  String get game_session_japanese_locale_evidence_insufficient => '證據不足';
+  @override
+  String get game_japanese_locale_evidence_user_language_japanese => '內容語言為日語';
+  @override
+  String get game_japanese_locale_evidence_user_language_other => '內容語言非日語';
+  @override
+  String get game_japanese_locale_evidence_manifest_utf8_code_page =>
+      'Manifest 宣告 UTF-8 代碼頁';
+  @override
+  String get game_japanese_locale_evidence_version_info_japanese => '版本資源為日語';
+  @override
+  String get game_japanese_locale_evidence_version_info_chinese => '版本資源為中文';
+  @override
+  String get game_japanese_locale_evidence_exe_shift_jis_strings =>
+      '執行檔含 Shift-JIS 字串';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_japanese => '檔名含假名';
+  @override
+  String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
+      '檔名帶漢化標記';
+  @override
+  String get game_japanese_locale_evidence_dir_text_shift_jis =>
+      '文字檔為 Shift-JIS';
+  @override
+  String get game_japanese_locale_evidence_dir_text_gbk => '文字檔為 GBK';
+  @override
+  String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
+      '文字檔含簡體中文';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      '本局未轉區：系統本就是日文區域 (CP932)，無需轉區。';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      '本局未轉區：自動判定需要日文區域，但 Locale Emulator 只支援 32 位元遊戲。';
+  @override
+  String get gal_card_lookup_independent_size => '遊戲內查詞卡獨立尺寸';
+  @override
+  String get gal_card_lookup_independent_size_hint => '讓遊戲內查詞卡與彈出查詞窗各自設定大小';
+  @override
+  String get gal_card_lookup_max_width => '遊戲內查詞卡最大寬度';
+  @override
+  String get gal_card_lookup_max_height => '遊戲內查詞卡最大高度';
 }
 
 /// Flat map(s) containing all translations.
@@ -163481,8 +164769,6 @@ extension on _StringsEn {
         return ({required Object file}) => 'Screenshot ready: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Screenshot saved: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Rendered by player (not lookupable)';
       case 'video_secondary_subtitle_sources':
         return 'Secondary subtitle';
       case 'video_setting_auto_play_next':
@@ -167292,6 +168578,23 @@ extension on _StringsEn {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Custom fonts';
       case 'onboarding_feature_fonts_hint':
@@ -167342,6 +168645,49 @@ extension on _StringsEn {
         return 'Open the practice sentence and tap a word.';
       case 'onboarding_first_anki_action_desc':
         return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => 'Evidence: ${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return 'Locale not applied';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always on.';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return 'insufficient evidence';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return 'Content language is Japanese';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return 'Content language is not Japanese';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'Manifest declares a UTF-8 code page';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return 'Version resource is Japanese';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return 'Version resource is Chinese';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return 'Executable contains Shift-JIS strings';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return 'File names contain kana';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return 'File names mark a Chinese patch';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return 'Text files are Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return 'Text files are GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return 'Text files contain Simplified Chinese';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'The game was started without a Japanese locale: this system already uses the Japanese (CP932) code page, so nothing needs to change.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'The game was started without a Japanese locale: the auto verdict says it needs one, but Locale Emulator only supports 32-bit games.';
+      case 'gal_card_lookup_independent_size':
+        return 'Independent in-game card size';
+      case 'gal_card_lookup_independent_size_hint':
+        return 'Size the in-game lookup card separately from the desktop overlay card';
+      case 'gal_card_lookup_max_width':
+        return 'In-game card max width';
+      case 'gal_card_lookup_max_height':
+        return 'In-game card max height';
       default:
         return null;
     }
@@ -171938,8 +173284,6 @@ extension on _StringsAr {
         return ({required Object file}) => 'لقطة الشاشة جاهزة: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'تم حفظ لقطة الشاشة: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'يُعرض بواسطة المشغّل (لا يمكن البحث فيه)';
       case 'video_secondary_subtitle_sources':
         return 'ترجمة ثانوية';
       case 'video_setting_auto_play_next':
@@ -175750,6 +177094,23 @@ extension on _StringsAr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'خطوط مخصّصة';
       case 'onboarding_feature_fonts_hint':
@@ -175800,6 +177161,49 @@ extension on _StringsAr {
         return 'افتح جملة التدريب وانقر على كلمة.';
       case 'onboarding_first_anki_action_desc':
         return 'يفتح جملة التدريب في صفحة البحث. انقر على كلمة، ثم على +، وراجع الحقول ثم احفظ.';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => 'الأدلة: ${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return 'لم تُطبَّق الإعدادات المحلية';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            'بدأت اللعبة بدون الإعدادات المحلية اليابانية (الحكم التلقائي: ${evidence}). إذا ظهر النص مشوّهًا، فاضبط الإعدادات المحلية اليابانية لهذه اللعبة على «تشغيل دائم».';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return 'أدلة غير كافية';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return 'لغة المحتوى هي اليابانية';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return 'لغة المحتوى ليست اليابانية';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'يعلن البيان صفحة الرموز UTF-8';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return 'مورد الإصدار ياباني';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return 'مورد الإصدار صيني';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return 'يحتوي الملف التنفيذي على سلاسل Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return 'أسماء الملفات تحتوي على كانا';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return 'أسماء الملفات تشير إلى رقعة صينية';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return 'الملفات النصية بترميز Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return 'الملفات النصية بترميز GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return 'الملفات النصية تحتوي على صينية مبسطة';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'بدأت اللعبة بدون الإعدادات المحلية اليابانية: يستخدم هذا النظام بالفعل صفحة الرموز اليابانية (CP932)، فلا حاجة لأي تغيير.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'بدأت اللعبة بدون الإعدادات المحلية اليابانية: يرى الحكم التلقائي أنها ضرورية، لكن Locale Emulator يدعم ألعاب 32 بت فقط.';
+      case 'gal_card_lookup_independent_size':
+        return 'حجم منفصل للبطاقة داخل اللعبة';
+      case 'gal_card_lookup_independent_size_hint':
+        return 'إعطاء بطاقة البحث داخل اللعبة حجماً خاصاً بها منفصلاً عن نافذة البحث المنبثقة';
+      case 'gal_card_lookup_max_width':
+        return 'العرض الأقصى للبطاقة داخل اللعبة';
+      case 'gal_card_lookup_max_height':
+        return 'الارتفاع الأقصى للبطاقة داخل اللعبة';
       default:
         return null;
     }
@@ -180424,8 +181828,6 @@ extension on _StringsDe {
         return ({required Object file}) => 'Screenshot bereit: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Screenshot gespeichert: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Vom Player gerendert (nicht nachschlagbar)';
       case 'video_secondary_subtitle_sources':
         return 'Sekundärer Untertitel';
       case 'video_setting_auto_play_next':
@@ -184252,6 +185654,23 @@ extension on _StringsDe {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Eigene Schriften';
       case 'onboarding_feature_fonts_hint':
@@ -184302,6 +185721,49 @@ extension on _StringsDe {
         return 'Öffnen Sie den Übungssatz und tippen Sie auf ein Wort.';
       case 'onboarding_first_anki_action_desc':
         return 'Öffnet den Übungssatz auf der Nachschlageseite. Tippen Sie auf ein Wort, dann auf +, prüfen Sie die Felder und speichern Sie.';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => 'Indizien: ${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return 'Locale nicht angewendet';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            'Das Spiel wurde ohne japanische Locale gestartet (automatische Einschätzung: ${evidence}). Falls der Text verstümmelt ist, stelle die japanische Locale dieses Spiels auf „Immer an“.';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return 'unzureichende Indizien';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return 'Inhaltssprache ist Japanisch';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return 'Inhaltssprache ist nicht Japanisch';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'Manifest deklariert UTF-8-Codepage';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return 'Versionsressource ist Japanisch';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return 'Versionsressource ist Chinesisch';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return 'Programmdatei enthält Shift-JIS-Zeichenketten';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return 'Dateinamen enthalten Kana';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return 'Dateinamen deuten auf einen chinesischen Patch';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return 'Textdateien sind Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return 'Textdateien sind GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return 'Textdateien enthalten vereinfachtes Chinesisch';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Das Spiel wurde ohne japanische Locale gestartet: Dieses System nutzt bereits die japanische Codepage (CP932), es ist nichts zu ändern.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Das Spiel wurde ohne japanische Locale gestartet: Die automatische Einschätzung hält sie für nötig, aber Locale Emulator unterstützt nur 32-Bit-Spiele.';
+      case 'gal_card_lookup_independent_size':
+        return 'Eigene Größe für Nachschlagekarte im Spiel';
+      case 'gal_card_lookup_independent_size_hint':
+        return 'Die Nachschlagekarte im Spiel unabhängig vom externen Nachschlage-Fenster dimensionieren';
+      case 'gal_card_lookup_max_width':
+        return 'Max. Breite der Nachschlagekarte im Spiel';
+      case 'gal_card_lookup_max_height':
+        return 'Max. Höhe der Nachschlagekarte im Spiel';
       default:
         return null;
     }
@@ -188926,8 +190388,6 @@ extension on _StringsEs {
         return ({required Object file}) => 'Captura lista: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Captura guardada: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Renderizado por el reproductor (no se puede buscar)';
       case 'video_secondary_subtitle_sources':
         return 'Subtítulo secundario';
       case 'video_setting_auto_play_next':
@@ -192746,6 +194206,23 @@ extension on _StringsEs {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Fuentes personalizadas';
       case 'onboarding_feature_fonts_hint':
@@ -192796,6 +194273,49 @@ extension on _StringsEs {
         return 'Abra la frase de práctica y toque una palabra.';
       case 'onboarding_first_anki_action_desc':
         return 'Abre la frase de práctica en la página de consulta. Toque una palabra, toque +, revise los campos y guarde.';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => 'Indicios: ${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return 'Configuración regional no aplicada';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            'El juego se inició sin configuración regional japonesa (veredicto automático: ${evidence}). Si el texto se ve ilegible, pon la configuración regional japonesa de este juego en «Siempre activada».';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return 'indicios insuficientes';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return 'El idioma del contenido es japonés';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return 'El idioma del contenido no es japonés';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'El manifiesto declara la página de códigos UTF-8';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return 'El recurso de versión es japonés';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return 'El recurso de versión es chino';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return 'El ejecutable contiene cadenas Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return 'Los nombres de archivo contienen kana';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return 'Los nombres de archivo indican un parche chino';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return 'Los archivos de texto son Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return 'Los archivos de texto son GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return 'Los archivos de texto contienen chino simplificado';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'El juego se inició sin configuración regional japonesa: este sistema ya usa la página de códigos japonesa (CP932), no hay nada que cambiar.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'El juego se inició sin configuración regional japonesa: el veredicto automático dice que la necesita, pero Locale Emulator solo admite juegos de 32 bits.';
+      case 'gal_card_lookup_independent_size':
+        return 'Tamaño separado para la tarjeta dentro del juego';
+      case 'gal_card_lookup_independent_size_hint':
+        return 'Dimensiona la tarjeta de búsqueda dentro del juego por separado de la ventana de búsqueda emergente';
+      case 'gal_card_lookup_max_width':
+        return 'Ancho máximo de la tarjeta dentro del juego';
+      case 'gal_card_lookup_max_height':
+        return 'Altura máxima de la tarjeta dentro del juego';
       default:
         return null;
     }
@@ -197427,8 +198947,6 @@ extension on _StringsFr {
       case 'video_screenshot_saved_to':
         return ({required Object path}) =>
             'Capture d\'écran enregistrée : ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Affiché par le lecteur (non consultable)';
       case 'video_secondary_subtitle_sources':
         return 'Sous-titre secondaire';
       case 'video_setting_auto_play_next':
@@ -201248,6 +202766,23 @@ extension on _StringsFr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Polices personnalisées';
       case 'onboarding_feature_fonts_hint':
@@ -201298,6 +202833,49 @@ extension on _StringsFr {
         return 'Ouvrez la phrase d\'entraînement et touchez un mot.';
       case 'onboarding_first_anki_action_desc':
         return 'Ouvre la phrase d\'entraînement dans la page de recherche. Touchez un mot, touchez +, vérifiez les champs et enregistrez.';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => 'Indices : ${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return 'Paramètres régionaux non appliqués';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            'Le jeu a été lancé sans paramètres régionaux japonais (verdict automatique : ${evidence}). Si le texte est illisible, réglez les paramètres régionaux japonais de ce jeu sur « Toujours activé ».';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return 'indices insuffisants';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return 'La langue du contenu est le japonais';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return 'La langue du contenu n\'est pas le japonais';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'Le manifeste déclare la page de codes UTF-8';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return 'La ressource de version est en japonais';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return 'La ressource de version est en chinois';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return 'L\'exécutable contient des chaînes Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return 'Les noms de fichiers contiennent des kana';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return 'Les noms de fichiers signalent un patch chinois';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return 'Les fichiers texte sont en Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return 'Les fichiers texte sont en GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return 'Les fichiers texte contiennent du chinois simplifié';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Le jeu a été lancé sans paramètres régionaux japonais : ce système utilise déjà la page de codes japonaise (CP932), rien à changer.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Le jeu a été lancé sans paramètres régionaux japonais : le verdict automatique les juge nécessaires, mais Locale Emulator ne prend en charge que les jeux 32 bits.';
+      case 'gal_card_lookup_independent_size':
+        return 'Taille séparée pour la carte en jeu';
+      case 'gal_card_lookup_independent_size_hint':
+        return 'Dimensionner la carte de recherche en jeu indépendamment de la fenêtre de recherche pop-out';
+      case 'gal_card_lookup_max_width':
+        return 'Largeur max de la carte en jeu';
+      case 'gal_card_lookup_max_height':
+        return 'Hauteur max de la carte en jeu';
       default:
         return null;
     }
@@ -205908,8 +207486,6 @@ extension on _StringsId {
         return ({required Object file}) => 'Tangkapan layar siap: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Tangkapan layar tersimpan: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Dirender oleh pemutar (tidak bisa dicari)';
       case 'video_secondary_subtitle_sources':
         return 'Subtitle sekunder';
       case 'video_setting_auto_play_next':
@@ -209722,6 +211298,23 @@ extension on _StringsId {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Font kustom';
       case 'onboarding_feature_fonts_hint':
@@ -209772,6 +211365,49 @@ extension on _StringsId {
         return 'Buka kalimat latihan lalu ketuk sebuah kata.';
       case 'onboarding_first_anki_action_desc':
         return 'Membuka kalimat latihan di halaman pencarian. Ketuk sebuah kata, ketuk +, periksa kolomnya, lalu simpan.';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => 'Bukti: ${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return 'Lokal tidak diterapkan';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            'Game dimulai tanpa lokal Jepang (putusan otomatis: ${evidence}). Jika teksnya rusak, atur lokal Jepang game ini ke “Selalu aktif”.';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return 'bukti tidak cukup';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return 'Bahasa konten adalah Jepang';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return 'Bahasa konten bukan Jepang';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'Manifest mendeklarasikan code page UTF-8';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return 'Sumber daya versi berbahasa Jepang';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return 'Sumber daya versi berbahasa Tionghoa';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return 'Berkas executable berisi string Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return 'Nama berkas berisi kana';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return 'Nama berkas menandai patch Tionghoa';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return 'Berkas teks berformat Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return 'Berkas teks berformat GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return 'Berkas teks berisi Tionghoa Sederhana';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Game dimulai tanpa lokal Jepang: sistem ini sudah memakai code page Jepang (CP932), tidak ada yang perlu diubah.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Game dimulai tanpa lokal Jepang: putusan otomatis menyatakan perlu, tetapi Locale Emulator hanya mendukung game 32-bit.';
+      case 'gal_card_lookup_independent_size':
+        return 'Ukuran terpisah untuk kartu dalam game';
+      case 'gal_card_lookup_independent_size_hint':
+        return 'Atur ukuran kartu pencarian dalam game terpisah dari jendela pencarian pop-out';
+      case 'gal_card_lookup_max_width':
+        return 'Lebar maks kartu dalam game';
+      case 'gal_card_lookup_max_height':
+        return 'Tinggi maks kartu dalam game';
       default:
         return null;
     }
@@ -214398,8 +216034,6 @@ extension on _StringsIt {
         return ({required Object file}) => 'Screenshot pronto: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Screenshot salvato: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Renderizzato dal player (non cercabile)';
       case 'video_secondary_subtitle_sources':
         return 'Sottotitolo secondario';
       case 'video_setting_auto_play_next':
@@ -218217,6 +219851,23 @@ extension on _StringsIt {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Font personalizzati';
       case 'onboarding_feature_fonts_hint':
@@ -218267,6 +219918,49 @@ extension on _StringsIt {
         return 'Apri la frase di esercizio e tocca una parola.';
       case 'onboarding_first_anki_action_desc':
         return 'Apre la frase di esercizio nella pagina di ricerca. Tocca una parola, tocca +, controlla i campi e salva.';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => 'Indizi: ${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return 'Impostazioni locali non applicate';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            'Il gioco è stato avviato senza impostazioni locali giapponesi (verdetto automatico: ${evidence}). Se il testo appare illeggibile, imposta le impostazioni locali giapponesi di questo gioco su «Sempre attivo».';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return 'indizi insufficienti';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return 'La lingua dei contenuti è il giapponese';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return 'La lingua dei contenuti non è il giapponese';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'Il manifest dichiara la code page UTF-8';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return 'La risorsa di versione è giapponese';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return 'La risorsa di versione è cinese';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return 'L\'eseguibile contiene stringhe Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return 'I nomi dei file contengono kana';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return 'I nomi dei file indicano una patch cinese';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return 'I file di testo sono Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return 'I file di testo sono GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return 'I file di testo contengono cinese semplificato';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Il gioco è stato avviato senza impostazioni locali giapponesi: questo sistema usa già la code page giapponese (CP932), non c\'è nulla da cambiare.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Il gioco è stato avviato senza impostazioni locali giapponesi: il verdetto automatico le ritiene necessarie, ma Locale Emulator supporta solo giochi a 32 bit.';
+      case 'gal_card_lookup_independent_size':
+        return 'Dimensione separata per la carta nel gioco';
+      case 'gal_card_lookup_independent_size_hint':
+        return 'Dimensiona la carta di ricerca nel gioco separatamente dalla finestra di ricerca pop-out';
+      case 'gal_card_lookup_max_width':
+        return 'Larghezza max carta nel gioco';
+      case 'gal_card_lookup_max_height':
+        return 'Altezza max carta nel gioco';
       default:
         return null;
     }
@@ -222843,8 +224537,6 @@ extension on _StringsJa {
         return ({required Object file}) => 'スクリーンショットの準備ができました：${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'スクリーンショットを保存しました：${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'プレーヤーで描画（辞書検索不可）';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
@@ -226641,6 +228333,23 @@ extension on _StringsJa {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'カスタムフォント';
       case 'onboarding_feature_fonts_hint':
@@ -226691,6 +228400,49 @@ extension on _StringsJa {
         return '練習用の文を開いて、単語をタップします。';
       case 'onboarding_first_anki_action_desc':
         return '練習用の文を辞書ページで開きます。単語をタップし、「＋」をタップして、項目を確認してから保存します。';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => '判定根拠：${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return 'ロケール未適用';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            'このセッションは日本語ロケールなしで起動しました（自動判定：${evidence}）。文字化けする場合は、このゲームの日本語ロケールを「常にオン」にしてください。';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return '根拠不足';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return 'コンテンツ言語が日本語';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return 'コンテンツ言語が日本語以外';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'マニフェストが UTF-8 コードページを宣言';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return 'バージョンリソースが日本語';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return 'バージョンリソースが中国語';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return '実行ファイルに Shift-JIS 文字列あり';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return 'ファイル名にかなを含む';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return 'ファイル名に中国語化パッチの印';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return 'テキストファイルが Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return 'テキストファイルが GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return 'テキストファイルに簡体字中国語あり';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return '日本語ロケールなしで起動しました：このシステムは既に日本語（CP932）コードページなので変更は不要です。';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return '日本語ロケールなしで起動しました：自動判定では必要ですが、Locale Emulator は 32 ビットのゲームのみ対応です。';
+      case 'gal_card_lookup_independent_size':
+        return 'ゲーム内辞書カードの個別サイズ';
+      case 'gal_card_lookup_independent_size_hint':
+        return 'ゲーム内辞書カードのサイズをポップアウト辞書ウィンドウとは別に設定します';
+      case 'gal_card_lookup_max_width':
+        return 'ゲーム内辞書カードの最大幅';
+      case 'gal_card_lookup_max_height':
+        return 'ゲーム内辞書カードの最大高さ';
       default:
         return null;
     }
@@ -231270,8 +233022,6 @@ extension on _StringsKo {
         return ({required Object file}) => '스크린샷 준비됨: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => '스크린샷이 저장됨: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return '플레이어가 렌더링 (사전 검색 불가)';
       case 'video_secondary_subtitle_sources':
         return '보조 자막';
       case 'video_setting_auto_play_next':
@@ -235068,6 +236818,23 @@ extension on _StringsKo {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return '사용자 지정 글꼴';
       case 'onboarding_feature_fonts_hint':
@@ -235118,6 +236885,49 @@ extension on _StringsKo {
         return '연습 문장을 열고 단어를 탭하세요.';
       case 'onboarding_first_anki_action_desc':
         return '단어 찾기 페이지에서 연습 문장을 엽니다. 단어를 탭하고 +를 탭한 뒤, 필드를 확인하고 저장하세요.';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => '판정 근거: ${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return '로케일 미적용';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            '이번 세션은 일본어 로케일 없이 시작되었습니다(자동 판정: ${evidence}). 글자가 깨지면 이 게임의 일본어 로케일을 「항상 켜기」로 바꾸세요.';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return '근거 부족';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return '콘텐츠 언어가 일본어';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return '콘텐츠 언어가 일본어가 아님';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return '매니페스트가 UTF-8 코드 페이지를 선언';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return '버전 리소스가 일본어';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return '버전 리소스가 중국어';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return '실행 파일에 Shift-JIS 문자열 있음';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return '파일 이름에 가나 포함';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return '파일 이름에 중국어 패치 표시';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return '텍스트 파일이 Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return '텍스트 파일이 GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return '텍스트 파일에 간체 중국어 포함';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return '일본어 로케일 없이 시작됨: 이 시스템은 이미 일본어(CP932) 코드 페이지를 사용하므로 변경할 것이 없습니다.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return '일본어 로케일 없이 시작됨: 자동 판정은 필요하다고 하지만 Locale Emulator는 32비트 게임만 지원합니다.';
+      case 'gal_card_lookup_independent_size':
+        return '인게임 사전 카드 별도 크기';
+      case 'gal_card_lookup_independent_size_hint':
+        return '인게임 사전 카드 크기를 팝아웃 검색 창과 별도로 지정합니다';
+      case 'gal_card_lookup_max_width':
+        return '인게임 사전 카드 최대 너비';
+      case 'gal_card_lookup_max_height':
+        return '인게임 사전 카드 최대 높이';
       default:
         return null;
     }
@@ -239737,8 +241547,6 @@ extension on _StringsNl {
       case 'video_screenshot_saved_to':
         return ({required Object path}) =>
             'Schermafbeelding opgeslagen: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Gerenderd door de speler (niet opzoekbaar)';
       case 'video_secondary_subtitle_sources':
         return 'Secundaire ondertitel';
       case 'video_setting_auto_play_next':
@@ -243557,6 +245365,23 @@ extension on _StringsNl {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Eigen lettertypen';
       case 'onboarding_feature_fonts_hint':
@@ -243607,6 +245432,49 @@ extension on _StringsNl {
         return 'Open de oefenzin en tik op een woord.';
       case 'onboarding_first_anki_action_desc':
         return 'Opent de oefenzin in de opzoekpagina. Tik op een woord, tik op +, controleer de velden en sla op.';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => 'Aanwijzingen: ${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return 'Landinstelling niet toegepast';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            'Het spel is gestart zonder Japanse landinstelling (automatisch oordeel: ${evidence}). Als de tekst onleesbaar is, zet dan de Japanse landinstelling van dit spel op ‘Altijd aan’.';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return 'onvoldoende aanwijzingen';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return 'Inhoudstaal is Japans';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return 'Inhoudstaal is niet Japans';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'Manifest declareert UTF-8-codepagina';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return 'Versiebron is Japans';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return 'Versiebron is Chinees';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return 'Uitvoerbaar bestand bevat Shift-JIS-tekenreeksen';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return 'Bestandsnamen bevatten kana';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return 'Bestandsnamen wijzen op een Chinese patch';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return 'Tekstbestanden zijn Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return 'Tekstbestanden zijn GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return 'Tekstbestanden bevatten vereenvoudigd Chinees';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Het spel is gestart zonder Japanse landinstelling: dit systeem gebruikt al de Japanse codepagina (CP932), er hoeft niets te veranderen.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Het spel is gestart zonder Japanse landinstelling: het automatische oordeel acht die nodig, maar Locale Emulator ondersteunt alleen 32-bits spellen.';
+      case 'gal_card_lookup_independent_size':
+        return 'Aparte grootte voor in-game zoekkaart';
+      case 'gal_card_lookup_independent_size_hint':
+        return 'Geef de in-game zoekkaart een eigen grootte, los van de uitklapopzoeker';
+      case 'gal_card_lookup_max_width':
+        return 'In-game zoekkaart max. breedte';
+      case 'gal_card_lookup_max_height':
+        return 'In-game zoekkaart max. hoogte';
       default:
         return null;
     }
@@ -248222,8 +250090,6 @@ extension on _StringsPtBr {
         return ({required Object file}) => 'Captura de tela pronta: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Captura de tela salva: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Renderizado pelo player (não consultável)';
       case 'video_secondary_subtitle_sources':
         return 'Legenda secundária';
       case 'video_setting_auto_play_next':
@@ -252041,6 +253907,23 @@ extension on _StringsPtBr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Fontes personalizadas';
       case 'onboarding_feature_fonts_hint':
@@ -252091,6 +253974,49 @@ extension on _StringsPtBr {
         return 'Abra a frase de prática e toque em uma palavra.';
       case 'onboarding_first_anki_action_desc':
         return 'Abre a frase de prática na página de consulta. Toque em uma palavra, toque em +, confira os campos e salve.';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => 'Indícios: ${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return 'Localidade não aplicada';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            'O jogo foi iniciado sem a localidade japonesa (veredito automático: ${evidence}). Se o texto aparecer ilegível, defina a localidade japonesa deste jogo como “Sempre ativada”.';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return 'indícios insuficientes';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return 'O idioma do conteúdo é japonês';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return 'O idioma do conteúdo não é japonês';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'O manifesto declara a página de código UTF-8';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return 'O recurso de versão é japonês';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return 'O recurso de versão é chinês';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return 'O executável contém strings Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return 'Os nomes de arquivo contêm kana';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return 'Os nomes de arquivo indicam um patch chinês';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return 'Os arquivos de texto são Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return 'Os arquivos de texto são GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return 'Os arquivos de texto contêm chinês simplificado';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'O jogo foi iniciado sem a localidade japonesa: este sistema já usa a página de código japonesa (CP932), nada precisa mudar.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'O jogo foi iniciado sem a localidade japonesa: o veredito automático diz que ela é necessária, mas o Locale Emulator só suporta jogos de 32 bits.';
+      case 'gal_card_lookup_independent_size':
+        return 'Tamanho separado para o cartão no jogo';
+      case 'gal_card_lookup_independent_size_hint':
+        return 'Dimensionar o cartão de consulta no jogo separadamente da janela de consulta pop-out';
+      case 'gal_card_lookup_max_width':
+        return 'Largura máxima do cartão no jogo';
+      case 'gal_card_lookup_max_height':
+        return 'Altura máxima do cartão no jogo';
       default:
         return null;
     }
@@ -256712,8 +258638,6 @@ extension on _StringsRu {
         return ({required Object file}) => 'Скриншот готов: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Скриншот сохранён: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Отображается плеером (недоступны для поиска слов)';
       case 'video_secondary_subtitle_sources':
         return 'Вторичные субтитры';
       case 'video_setting_auto_play_next':
@@ -260531,6 +262455,23 @@ extension on _StringsRu {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Свои шрифты';
       case 'onboarding_feature_fonts_hint':
@@ -260581,6 +262522,49 @@ extension on _StringsRu {
         return 'Откройте тренировочное предложение и нажмите на слово.';
       case 'onboarding_first_anki_action_desc':
         return 'Открывает тренировочное предложение на странице поиска. Нажмите на слово, затем на +, проверьте поля и сохраните.';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => 'Признаки: ${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return 'Локаль не применена';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            'Игра запущена без японской локали (автоматический вердикт: ${evidence}). Если текст отображается неверно, установите японскую локаль этой игры в «Всегда включена».';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return 'недостаточно признаков';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return 'Язык контента — японский';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return 'Язык контента — не японский';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'Манифест объявляет кодовую страницу UTF-8';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return 'Ресурс версии на японском';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return 'Ресурс версии на китайском';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return 'Исполняемый файл содержит строки Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return 'Имена файлов содержат кану';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return 'Имена файлов указывают на китайский патч';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return 'Текстовые файлы в Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return 'Текстовые файлы в GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return 'Текстовые файлы содержат упрощённый китайский';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Игра запущена без японской локали: система уже использует японскую кодовую страницу (CP932), менять ничего не нужно.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Игра запущена без японской локали: автоматический вердикт считает её нужной, но Locale Emulator поддерживает только 32-битные игры.';
+      case 'gal_card_lookup_independent_size':
+        return 'Отдельный размер для карточки в игре';
+      case 'gal_card_lookup_independent_size_hint':
+        return 'Задать размер карточки словаря в игре отдельно от всплывающего окна поиска';
+      case 'gal_card_lookup_max_width':
+        return 'Макс. ширина карточки в игре';
+      case 'gal_card_lookup_max_height':
+        return 'Макс. высота карточки в игре';
       default:
         return null;
     }
@@ -265183,8 +267167,6 @@ extension on _StringsTh {
         return ({required Object file}) => 'ภาพหน้าจอพร้อมแล้ว: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'บันทึกภาพหน้าจอแล้ว: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'เรนเดอร์โดยตัวเล่น (ค้นหาคำไม่ได้)';
       case 'video_secondary_subtitle_sources':
         return 'คำบรรยายรอง';
       case 'video_setting_auto_play_next':
@@ -268994,6 +270976,23 @@ extension on _StringsTh {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'ฟอนต์กำหนดเอง';
       case 'onboarding_feature_fonts_hint':
@@ -269044,6 +271043,49 @@ extension on _StringsTh {
         return 'เปิดประโยคฝึกแล้วแตะที่คำหนึ่งคำ';
       case 'onboarding_first_anki_action_desc':
         return 'เปิดประโยคฝึกในหน้าค้นคำ แตะที่คำหนึ่งคำ แตะ + ตรวจดูข้อมูลในช่องต่าง ๆ แล้วบันทึก';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => 'หลักฐาน: ${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return 'ไม่ได้ใช้โลแคล';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            'เกมเริ่มโดยไม่ใช้โลแคลภาษาญี่ปุ่น (การตัดสินอัตโนมัติ: ${evidence}) หากตัวอักษรเพี้ยน ให้ตั้งโลแคลภาษาญี่ปุ่นของเกมนี้เป็น “เปิดเสมอ”';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return 'หลักฐานไม่เพียงพอ';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return 'ภาษาของเนื้อหาเป็นภาษาญี่ปุ่น';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return 'ภาษาของเนื้อหาไม่ใช่ภาษาญี่ปุ่น';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'Manifest ประกาศ code page เป็น UTF-8';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return 'ทรัพยากรเวอร์ชันเป็นภาษาญี่ปุ่น';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return 'ทรัพยากรเวอร์ชันเป็นภาษาจีน';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return 'ไฟล์ปฏิบัติการมีสตริง Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return 'ชื่อไฟล์มีอักษรคานะ';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return 'ชื่อไฟล์บ่งชี้แพตช์ภาษาจีน';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return 'ไฟล์ข้อความเป็น Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return 'ไฟล์ข้อความเป็น GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return 'ไฟล์ข้อความมีภาษาจีนตัวย่อ';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'เกมเริ่มโดยไม่ใช้โลแคลภาษาญี่ปุ่น: ระบบนี้ใช้ code page ภาษาญี่ปุ่น (CP932) อยู่แล้ว ไม่ต้องเปลี่ยนอะไร';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'เกมเริ่มโดยไม่ใช้โลแคลภาษาญี่ปุ่น: การตัดสินอัตโนมัติบอกว่าจำเป็น แต่ Locale Emulator รองรับเฉพาะเกม 32 บิต';
+      case 'gal_card_lookup_independent_size':
+        return 'ขนาดแยกสำหรับการ์ดในเกม';
+      case 'gal_card_lookup_independent_size_hint':
+        return 'กำหนดขนาดการ์ดค้นหาในเกมแยกจากหน้าต่างค้นหาลอย';
+      case 'gal_card_lookup_max_width':
+        return 'ความกว้างสูงสุดของการ์ดในเกม';
+      case 'gal_card_lookup_max_height':
+        return 'ความสูงสูงสุดของการ์ดในเกม';
       default:
         return null;
     }
@@ -273656,8 +275698,6 @@ extension on _StringsTr {
       case 'video_screenshot_saved_to':
         return ({required Object path}) =>
             'Ekran görüntüsü kaydedildi: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Oynatıcı tarafından oluşturulur (sözcük aranamaz)';
       case 'video_secondary_subtitle_sources':
         return 'İkincil altyazı';
       case 'video_setting_auto_play_next':
@@ -277472,6 +279512,23 @@ extension on _StringsTr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Özel yazı tipleri';
       case 'onboarding_feature_fonts_hint':
@@ -277522,6 +279579,49 @@ extension on _StringsTr {
         return 'Alıştırma cümlesini açın ve bir kelimeye dokunun.';
       case 'onboarding_first_anki_action_desc':
         return 'Alıştırma cümlesini arama sayfasında açar. Bir kelimeye dokunun, + düğmesine dokunun, alanları kontrol edip kaydedin.';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => 'Kanıtlar: ${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return 'Yerel ayar uygulanmadı';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            'Oyun Japonca yerel ayar olmadan başlatıldı (otomatik karar: ${evidence}). Metin bozuk görünüyorsa bu oyunun Japonca yerel ayarını “Her zaman açık” yapın.';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return 'yetersiz kanıt';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return 'İçerik dili Japonca';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return 'İçerik dili Japonca değil';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'Manifest UTF-8 kod sayfası bildiriyor';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return 'Sürüm kaynağı Japonca';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return 'Sürüm kaynağı Çince';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return 'Çalıştırılabilir dosya Shift-JIS dizeleri içeriyor';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return 'Dosya adları kana içeriyor';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return 'Dosya adları Çince yama işareti taşıyor';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return 'Metin dosyaları Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return 'Metin dosyaları GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return 'Metin dosyaları Basitleştirilmiş Çince içeriyor';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Oyun Japonca yerel ayar olmadan başlatıldı: bu sistem zaten Japonca (CP932) kod sayfasını kullanıyor, değiştirilecek bir şey yok.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Oyun Japonca yerel ayar olmadan başlatıldı: otomatik karar gerekli diyor ama Locale Emulator yalnızca 32 bit oyunları destekliyor.';
+      case 'gal_card_lookup_independent_size':
+        return 'Oyun içi kart için ayrı boyut';
+      case 'gal_card_lookup_independent_size_hint':
+        return 'Oyun içi arama kartını açılır arama penceresinden ayrı boyutlandırın';
+      case 'gal_card_lookup_max_width':
+        return 'Oyun içi kart maks. genişlik';
+      case 'gal_card_lookup_max_height':
+        return 'Oyun içi kart maks. yükseklik';
       default:
         return null;
     }
@@ -282132,8 +284232,6 @@ extension on _StringsVi {
         return ({required Object file}) => 'Ảnh chụp đã sẵn sàng: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Đã lưu ảnh chụp: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Hiển thị bởi trình phát (không tra cứu được)';
       case 'video_secondary_subtitle_sources':
         return 'Phụ đề phụ';
       case 'video_setting_auto_play_next':
@@ -285944,6 +288042,23 @@ extension on _StringsVi {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Phông chữ tùy chỉnh';
       case 'onboarding_feature_fonts_hint':
@@ -285994,6 +288109,49 @@ extension on _StringsVi {
         return 'Mở câu luyện tập rồi chạm vào một từ.';
       case 'onboarding_first_anki_action_desc':
         return 'Mở câu luyện tập trong trang tra từ. Chạm vào một từ, chạm +, kiểm tra các trường rồi lưu.';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => 'Bằng chứng: ${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return 'Chưa áp dụng ngôn ngữ hệ thống';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            'Game được khởi động không dùng ngôn ngữ hệ thống tiếng Nhật (phán đoán tự động: ${evidence}). Nếu chữ bị lỗi, hãy đặt ngôn ngữ hệ thống tiếng Nhật của game này thành “Luôn bật”.';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return 'chưa đủ bằng chứng';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return 'Ngôn ngữ nội dung là tiếng Nhật';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return 'Ngôn ngữ nội dung không phải tiếng Nhật';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'Manifest khai báo code page UTF-8';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return 'Tài nguyên phiên bản là tiếng Nhật';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return 'Tài nguyên phiên bản là tiếng Trung';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return 'Tệp thực thi chứa chuỗi Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return 'Tên tệp chứa kana';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return 'Tên tệp cho thấy bản vá tiếng Trung';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return 'Tệp văn bản là Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return 'Tệp văn bản là GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return 'Tệp văn bản chứa tiếng Trung giản thể';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Game được khởi động không dùng ngôn ngữ hệ thống tiếng Nhật: hệ thống này đã dùng code page tiếng Nhật (CP932), không cần thay đổi.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Game được khởi động không dùng ngôn ngữ hệ thống tiếng Nhật: phán đoán tự động cho là cần, nhưng Locale Emulator chỉ hỗ trợ game 32-bit.';
+      case 'gal_card_lookup_independent_size':
+        return 'Kích thước riêng cho thẻ trong trò chơi';
+      case 'gal_card_lookup_independent_size_hint':
+        return 'Đặt kích thước thẻ tra cứu trong trò chơi tách khỏi cửa sổ tra cứu nổi';
+      case 'gal_card_lookup_max_width':
+        return 'Chiều rộng tối đa thẻ trong trò chơi';
+      case 'gal_card_lookup_max_height':
+        return 'Chiều cao tối đa thẻ trong trò chơi';
       default:
         return null;
     }
@@ -290559,8 +292717,6 @@ extension on _StringsZhCn {
         return ({required Object file}) => '截图已准备好：${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => '截图已保存：${path}';
-      case 'video_secondary_subtitle_hint':
-        return '由播放器渲染（不可查词）';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
@@ -294345,6 +296501,23 @@ extension on _StringsZhCn {
         return '走代理';
       case 'network_proxy_p2p_mode_mixed':
         return '混合';
+      case 'download_task_audiobook_needs_alignment':
+        return '只下到音频 - 还需要一个对齐文件（字幕）才能作为书打开。';
+      case 'download_task_audiobook_pair':
+        return '补对齐文件';
+      case 'audiobook_material_library':
+        return '有声书素材库';
+      case 'audiobook_material_library_hint':
+        return '存放按作品编号命名的字幕与正文文件的目录。下载完成后自动据此配对。';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} 个目录，认得 ${works} 部作品';
+      case 'audiobook_material_add_dir':
+        return '添加目录';
+      case 'audiobook_material_missing_dir':
+        return '目录不存在';
+      case 'audiobook_material_none':
+        return '还没有添加目录';
       case 'onboarding_feature_fonts':
         return '自定义字体';
       case 'onboarding_feature_fonts_hint':
@@ -294395,6 +296568,49 @@ extension on _StringsZhCn {
         return '打开练习句子，点一个词。';
       case 'onboarding_first_anki_action_desc':
         return '在查词页打开练习句子。点词、点加号、检查字段、保存。';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => '判据：${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return '未转区';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            '本局未转区（自动判定：${evidence}）。若游戏文字乱码，可把该游戏的日语区域改为「始终开启」。';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return '证据不足';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return '内容语言设为日语';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return '内容语言非日语';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return '程序清单声明 UTF-8 代码页';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return '版本资源为日语';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return '版本资源为中文';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return '程序内含 Shift-JIS 字符串';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return '目录文件名含假名';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return '目录文件名含汉化标记';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return '目录文本为 Shift-JIS 编码';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return '目录文本为 GBK 编码';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return '目录文本含简体中文';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return '本局未转区：系统本就是日文区域 (CP932)，无需转区。';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return '本局未转区：自动判定需要日文区域，但 Locale Emulator 只支持 32 位游戏。';
+      case 'gal_card_lookup_independent_size':
+        return '游戏内查词卡独立尺寸';
+      case 'gal_card_lookup_independent_size_hint':
+        return '让游戏内查词卡与桌面覆盖查词窗各自设置大小';
+      case 'gal_card_lookup_max_width':
+        return '游戏内查词卡最大宽度';
+      case 'gal_card_lookup_max_height':
+        return '游戏内查词卡最大高度';
       default:
         return null;
     }
@@ -298961,8 +301177,6 @@ extension on _StringsZhHk {
         return ({required Object file}) => '截圖已準備好：${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => '截圖已儲存：${path}';
-      case 'video_secondary_subtitle_hint':
-        return '由播放器渲染（不可查詞）';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
@@ -302747,6 +304961,23 @@ extension on _StringsZhHk {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return '自定義字體';
       case 'onboarding_feature_fonts_hint':
@@ -302797,6 +305028,49 @@ extension on _StringsZhHk {
         return '打開練習句子，點一個詞。';
       case 'onboarding_first_anki_action_desc':
         return '在查詞頁打開練習句子。點詞、點加號、檢查欄位、儲存。';
+      case 'game_session_japanese_locale_evidence':
+        return ({required Object evidence}) => '判據：${evidence}';
+      case 'game_session_japanese_locale_skipped':
+        return '未轉區';
+      case 'game_session_japanese_locale_skipped_hint':
+        return ({required Object evidence}) =>
+            '本局未轉區（自動判定：${evidence}）。若遊戲文字亂碼，可把該遊戲的日語區域改為「始終開啟」。';
+      case 'game_session_japanese_locale_evidence_insufficient':
+        return '證據不足';
+      case 'game_japanese_locale_evidence_user_language_japanese':
+        return '內容語言為日語';
+      case 'game_japanese_locale_evidence_user_language_other':
+        return '內容語言非日語';
+      case 'game_japanese_locale_evidence_manifest_utf8_code_page':
+        return 'Manifest 宣告 UTF-8 代碼頁';
+      case 'game_japanese_locale_evidence_version_info_japanese':
+        return '版本資源為日語';
+      case 'game_japanese_locale_evidence_version_info_chinese':
+        return '版本資源為中文';
+      case 'game_japanese_locale_evidence_exe_shift_jis_strings':
+        return '執行檔含 Shift-JIS 字串';
+      case 'game_japanese_locale_evidence_dir_file_name_japanese':
+        return '檔名含假名';
+      case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
+        return '檔名帶漢化標記';
+      case 'game_japanese_locale_evidence_dir_text_shift_jis':
+        return '文字檔為 Shift-JIS';
+      case 'game_japanese_locale_evidence_dir_text_gbk':
+        return '文字檔為 GBK';
+      case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
+        return '文字檔含簡體中文';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return '本局未轉區：系統本就是日文區域 (CP932)，無需轉區。';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return '本局未轉區：自動判定需要日文區域，但 Locale Emulator 只支援 32 位元遊戲。';
+      case 'gal_card_lookup_independent_size':
+        return '遊戲內查詞卡獨立尺寸';
+      case 'gal_card_lookup_independent_size_hint':
+        return '讓遊戲內查詞卡與彈出查詞窗各自設定大小';
+      case 'gal_card_lookup_max_width':
+        return '遊戲內查詞卡最大寬度';
+      case 'gal_card_lookup_max_height':
+        return '遊戲內查詞卡最大高度';
       default:
         return null;
     }
