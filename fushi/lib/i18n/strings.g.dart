@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69955 (4115 per locale)
+/// Strings: 69938 (4114 per locale)
 ///
-/// Built on 2026-09-01 at 16:45 UTC
+/// Built on 2026-09-02 at 15:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3016,8 +3016,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Screenshot ready: ${file}';
   String video_screenshot_saved_to({required Object path}) =>
       'Screenshot saved: ${path}';
-  String get video_secondary_subtitle_hint =>
-      'Rendered by player (not lookupable)';
   String get video_secondary_subtitle_sources => 'Secondary subtitle';
   String get video_setting_auto_play_next => 'Auto-play next episode';
   String get video_setting_auto_scrape => 'Auto-fetch series info';
@@ -10746,9 +10744,6 @@ class _StringsAr extends _StringsEn {
   @override
   String video_screenshot_saved_to({required Object path}) =>
       'تم حفظ لقطة الشاشة: ${path}';
-  @override
-  String get video_secondary_subtitle_hint =>
-      'يُعرض بواسطة المشغّل (لا يمكن البحث فيه)';
   @override
   String get video_secondary_subtitle_sources => 'ترجمة ثانوية';
   @override
@@ -20442,9 +20437,6 @@ class _StringsDe extends _StringsEn {
   @override
   String video_screenshot_saved_to({required Object path}) =>
       'Screenshot gespeichert: ${path}';
-  @override
-  String get video_secondary_subtitle_hint =>
-      'Vom Player gerendert (nicht nachschlagbar)';
   @override
   String get video_secondary_subtitle_sources => 'Sekundärer Untertitel';
   @override
@@ -30268,9 +30260,6 @@ class _StringsEs extends _StringsEn {
   @override
   String video_screenshot_saved_to({required Object path}) =>
       'Captura guardada: ${path}';
-  @override
-  String get video_secondary_subtitle_hint =>
-      'Renderizado por el reproductor (no se puede buscar)';
   @override
   String get video_secondary_subtitle_sources => 'Subtítulo secundario';
   @override
@@ -40134,9 +40123,6 @@ class _StringsFr extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Capture d\'écran enregistrée : ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Affiché par le lecteur (non consultable)';
-  @override
   String get video_secondary_subtitle_sources => 'Sous-titre secondaire';
   @override
   String get video_setting_auto_play_next =>
@@ -49935,9 +49921,6 @@ class _StringsId extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Tangkapan layar tersimpan: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Dirender oleh pemutar (tidak bisa dicari)';
-  @override
   String get video_secondary_subtitle_sources => 'Subtitle sekunder';
   @override
   String get video_setting_auto_play_next =>
@@ -59684,9 +59667,6 @@ class _StringsIt extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Screenshot salvato: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Renderizzato dal player (non cercabile)';
-  @override
   String get video_secondary_subtitle_sources => 'Sottotitolo secondario';
   @override
   String get video_setting_auto_play_next =>
@@ -69177,8 +69157,6 @@ class _StringsJa extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'スクリーンショットを保存しました：${path}';
   @override
-  String get video_secondary_subtitle_hint => 'プレーヤーで描画（辞書検索不可）';
-  @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
   String get video_setting_auto_play_next => '次のエピソードを自動再生';
@@ -78372,8 +78350,6 @@ class _StringsKo extends _StringsEn {
   @override
   String video_screenshot_saved_to({required Object path}) =>
       '스크린샷이 저장됨: ${path}';
-  @override
-  String get video_secondary_subtitle_hint => '플레이어가 렌더링 (사전 검색 불가)';
   @override
   String get video_secondary_subtitle_sources => '보조 자막';
   @override
@@ -87844,9 +87820,6 @@ class _StringsNl extends _StringsEn {
   @override
   String video_screenshot_saved_to({required Object path}) =>
       'Schermafbeelding opgeslagen: ${path}';
-  @override
-  String get video_secondary_subtitle_hint =>
-      'Gerenderd door de speler (niet opzoekbaar)';
   @override
   String get video_secondary_subtitle_sources => 'Secundaire ondertitel';
   @override
@@ -97609,9 +97582,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String video_screenshot_saved_to({required Object path}) =>
       'Captura de tela salva: ${path}';
-  @override
-  String get video_secondary_subtitle_hint =>
-      'Renderizado pelo player (não consultável)';
   @override
   String get video_secondary_subtitle_sources => 'Legenda secundária';
   @override
@@ -107398,9 +107368,6 @@ class _StringsRu extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Скриншот сохранён: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Отображается плеером (недоступны для поиска слов)';
-  @override
   String get video_secondary_subtitle_sources => 'Вторичные субтитры';
   @override
   String get video_setting_auto_play_next =>
@@ -117076,9 +117043,6 @@ class _StringsTh extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'บันทึกภาพหน้าจอแล้ว: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'เรนเดอร์โดยตัวเล่น (ค้นหาคำไม่ได้)';
-  @override
   String get video_secondary_subtitle_sources => 'คำบรรยายรอง';
   @override
   String get video_setting_auto_play_next => 'เล่นตอนถัดไปอัตโนมัติ';
@@ -126702,9 +126666,6 @@ class _StringsTr extends _StringsEn {
   @override
   String video_screenshot_saved_to({required Object path}) =>
       'Ekran görüntüsü kaydedildi: ${path}';
-  @override
-  String get video_secondary_subtitle_hint =>
-      'Oynatıcı tarafından oluşturulur (sözcük aranamaz)';
   @override
   String get video_secondary_subtitle_sources => 'İkincil altyazı';
   @override
@@ -136388,9 +136349,6 @@ class _StringsVi extends _StringsEn {
   String video_screenshot_saved_to({required Object path}) =>
       'Đã lưu ảnh chụp: ${path}';
   @override
-  String get video_secondary_subtitle_hint =>
-      'Hiển thị bởi trình phát (không tra cứu được)';
-  @override
   String get video_secondary_subtitle_sources => 'Phụ đề phụ';
   @override
   String get video_setting_auto_play_next => 'Tự phát tập tiếp theo';
@@ -145684,8 +145642,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String video_screenshot_saved_to({required Object path}) => '截图已保存：${path}';
   @override
-  String get video_secondary_subtitle_hint => '由播放器渲染（不可查词）';
-  @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
   String get video_setting_auto_play_next => '自动连播下一集';
@@ -154585,8 +154541,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String video_screenshot_saved_to({required Object path}) => '截圖已儲存：${path}';
   @override
-  String get video_secondary_subtitle_hint => '由播放器渲染（不可查詞）';
-  @override
   String get video_secondary_subtitle_sources => '副字幕';
   @override
   String get video_setting_auto_play_next => '自動連播下一集';
@@ -163317,8 +163271,6 @@ extension on _StringsEn {
         return ({required Object file}) => 'Screenshot ready: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Screenshot saved: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Rendered by player (not lookupable)';
       case 'video_secondary_subtitle_sources':
         return 'Secondary subtitle';
       case 'video_setting_auto_play_next':
@@ -171754,8 +171706,6 @@ extension on _StringsAr {
         return ({required Object file}) => 'لقطة الشاشة جاهزة: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'تم حفظ لقطة الشاشة: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'يُعرض بواسطة المشغّل (لا يمكن البحث فيه)';
       case 'video_secondary_subtitle_sources':
         return 'ترجمة ثانوية';
       case 'video_setting_auto_play_next':
@@ -180220,8 +180170,6 @@ extension on _StringsDe {
         return ({required Object file}) => 'Screenshot bereit: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Screenshot gespeichert: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Vom Player gerendert (nicht nachschlagbar)';
       case 'video_secondary_subtitle_sources':
         return 'Sekundärer Untertitel';
       case 'video_setting_auto_play_next':
@@ -188702,8 +188650,6 @@ extension on _StringsEs {
         return ({required Object file}) => 'Captura lista: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Captura guardada: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Renderizado por el reproductor (no se puede buscar)';
       case 'video_secondary_subtitle_sources':
         return 'Subtítulo secundario';
       case 'video_setting_auto_play_next':
@@ -197183,8 +197129,6 @@ extension on _StringsFr {
       case 'video_screenshot_saved_to':
         return ({required Object path}) =>
             'Capture d\'écran enregistrée : ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Affiché par le lecteur (non consultable)';
       case 'video_secondary_subtitle_sources':
         return 'Sous-titre secondaire';
       case 'video_setting_auto_play_next':
@@ -205644,8 +205588,6 @@ extension on _StringsId {
         return ({required Object file}) => 'Tangkapan layar siap: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Tangkapan layar tersimpan: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Dirender oleh pemutar (tidak bisa dicari)';
       case 'video_secondary_subtitle_sources':
         return 'Subtitle sekunder';
       case 'video_setting_auto_play_next':
@@ -214114,8 +214056,6 @@ extension on _StringsIt {
         return ({required Object file}) => 'Screenshot pronto: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Screenshot salvato: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Renderizzato dal player (non cercabile)';
       case 'video_secondary_subtitle_sources':
         return 'Sottotitolo secondario';
       case 'video_setting_auto_play_next':
@@ -222539,8 +222479,6 @@ extension on _StringsJa {
         return ({required Object file}) => 'スクリーンショットの準備ができました：${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'スクリーンショットを保存しました：${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'プレーヤーで描画（辞書検索不可）';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
@@ -230946,8 +230884,6 @@ extension on _StringsKo {
         return ({required Object file}) => '스크린샷 준비됨: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => '스크린샷이 저장됨: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return '플레이어가 렌더링 (사전 검색 불가)';
       case 'video_secondary_subtitle_sources':
         return '보조 자막';
       case 'video_setting_auto_play_next':
@@ -239393,8 +239329,6 @@ extension on _StringsNl {
       case 'video_screenshot_saved_to':
         return ({required Object path}) =>
             'Schermafbeelding opgeslagen: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Gerenderd door de speler (niet opzoekbaar)';
       case 'video_secondary_subtitle_sources':
         return 'Secundaire ondertitel';
       case 'video_setting_auto_play_next':
@@ -247858,8 +247792,6 @@ extension on _StringsPtBr {
         return ({required Object file}) => 'Captura de tela pronta: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Captura de tela salva: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Renderizado pelo player (não consultável)';
       case 'video_secondary_subtitle_sources':
         return 'Legenda secundária';
       case 'video_setting_auto_play_next':
@@ -256328,8 +256260,6 @@ extension on _StringsRu {
         return ({required Object file}) => 'Скриншот готов: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Скриншот сохранён: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Отображается плеером (недоступны для поиска слов)';
       case 'video_secondary_subtitle_sources':
         return 'Вторичные субтитры';
       case 'video_setting_auto_play_next':
@@ -264779,8 +264709,6 @@ extension on _StringsTh {
         return ({required Object file}) => 'ภาพหน้าจอพร้อมแล้ว: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'บันทึกภาพหน้าจอแล้ว: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'เรนเดอร์โดยตัวเล่น (ค้นหาคำไม่ได้)';
       case 'video_secondary_subtitle_sources':
         return 'คำบรรยายรอง';
       case 'video_setting_auto_play_next':
@@ -273232,8 +273160,6 @@ extension on _StringsTr {
       case 'video_screenshot_saved_to':
         return ({required Object path}) =>
             'Ekran görüntüsü kaydedildi: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Oynatıcı tarafından oluşturulur (sözcük aranamaz)';
       case 'video_secondary_subtitle_sources':
         return 'İkincil altyazı';
       case 'video_setting_auto_play_next':
@@ -281688,8 +281614,6 @@ extension on _StringsVi {
         return ({required Object file}) => 'Ảnh chụp đã sẵn sàng: ${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => 'Đã lưu ảnh chụp: ${path}';
-      case 'video_secondary_subtitle_hint':
-        return 'Hiển thị bởi trình phát (không tra cứu được)';
       case 'video_secondary_subtitle_sources':
         return 'Phụ đề phụ';
       case 'video_setting_auto_play_next':
@@ -290095,8 +290019,6 @@ extension on _StringsZhCn {
         return ({required Object file}) => '截图已准备好：${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => '截图已保存：${path}';
-      case 'video_secondary_subtitle_hint':
-        return '由播放器渲染（不可查词）';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
@@ -298477,8 +298399,6 @@ extension on _StringsZhHk {
         return ({required Object file}) => '截圖已準備好：${file}';
       case 'video_screenshot_saved_to':
         return ({required Object path}) => '截圖已儲存：${path}';
-      case 'video_secondary_subtitle_hint':
-        return '由播放器渲染（不可查詞）';
       case 'video_secondary_subtitle_sources':
         return '副字幕';
       case 'video_setting_auto_play_next':
