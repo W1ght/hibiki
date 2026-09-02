@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 70465 (4145 per locale)
+/// Strings: 70601 (4153 per locale)
 ///
-/// Built on 2026-09-02 at 21:27 UTC
+/// Built on 2026-09-02 at 21:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5604,6 +5604,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get network_proxy_p2p_mode_direct => 'Direct';
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  String get download_task_audiobook_pair => 'Add alignment file';
+  String get audiobook_material_library => 'Audiobook material library';
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  String get audiobook_material_add_dir => 'Add folder';
+  String get audiobook_material_missing_dir => 'Missing';
+  String get audiobook_material_none => 'No folders added yet';
   String get onboarding_feature_fonts => 'Custom fonts';
   String get onboarding_feature_fonts_hint =>
       'Use your own fonts for the interface, book text and dictionary';
@@ -15212,6 +15224,26 @@ class _StringsAr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
   @override
   String get onboarding_feature_fonts => 'خطوط مخصّصة';
   @override
@@ -25085,6 +25117,26 @@ class _StringsDe extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
   @override
   String get onboarding_feature_fonts => 'Eigene Schriften';
   @override
@@ -35010,6 +35062,26 @@ class _StringsEs extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
   @override
   String get onboarding_feature_fonts => 'Fuentes personalizadas';
   @override
@@ -44971,6 +45043,26 @@ class _StringsFr extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Polices personnalisées';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -54743,6 +54835,26 @@ class _StringsId extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
   @override
   String get onboarding_feature_fonts => 'Font kustom';
   @override
@@ -64601,6 +64713,26 @@ class _StringsIt extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Font personalizzati';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -73872,6 +74004,26 @@ class _StringsJa extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
   @override
   String get onboarding_feature_fonts => 'カスタムフォント';
   @override
@@ -83146,6 +83298,26 @@ class _StringsKo extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
   @override
   String get onboarding_feature_fonts => '사용자 지정 글꼴';
   @override
@@ -92950,6 +93122,26 @@ class _StringsNl extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
   @override
   String get onboarding_feature_fonts => 'Eigen lettertypen';
   @override
@@ -102818,6 +103010,26 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Fontes personalizadas';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -112659,6 +112871,26 @@ class _StringsRu extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Свои шрифты';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -122308,6 +122540,26 @@ class _StringsTh extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
   @override
   String get onboarding_feature_fonts => 'ฟอนต์กำหนดเอง';
   @override
@@ -132067,6 +132319,26 @@ class _StringsTr extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Özel yazı tipleri';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -141802,6 +142074,26 @@ class _StringsVi extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => 'Phông chữ tùy chỉnh';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -150766,6 +151058,26 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => '混合';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      '只下到音频 - 还需要一个对齐文件（字幕）才能作为书打开。';
+  @override
+  String get download_task_audiobook_pair => '补对齐文件';
+  @override
+  String get audiobook_material_library => '有声书素材库';
+  @override
+  String get audiobook_material_library_hint =>
+      '存放按作品编号命名的字幕与正文文件的目录。下载完成后自动据此配对。';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} 个目录，认得 ${works} 部作品';
+  @override
+  String get audiobook_material_add_dir => '添加目录';
+  @override
+  String get audiobook_material_missing_dir => '目录不存在';
+  @override
+  String get audiobook_material_none => '还没有添加目录';
+  @override
   String get onboarding_feature_fonts => '自定义字体';
   @override
   String get onboarding_feature_fonts_hint => '界面、正文、词典各用自己喜欢的字体';
@@ -159728,6 +160040,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get download_task_audiobook_needs_alignment =>
+      'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+  @override
+  String get download_task_audiobook_pair => 'Add alignment file';
+  @override
+  String get audiobook_material_library => 'Audiobook material library';
+  @override
+  String get audiobook_material_library_hint =>
+      'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+  @override
+  String audiobook_material_status(
+          {required Object dirs, required Object works}) =>
+      '${dirs} folder(s), ${works} work(s) recognized';
+  @override
+  String get audiobook_material_add_dir => 'Add folder';
+  @override
+  String get audiobook_material_missing_dir => 'Missing';
+  @override
+  String get audiobook_material_none => 'No folders added yet';
+  @override
   String get onboarding_feature_fonts => '自定義字體';
   @override
   String get onboarding_feature_fonts_hint => '界面、正文、詞典各用自己喜歡的字體';
@@ -168246,6 +168578,23 @@ extension on _StringsEn {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Custom fonts';
       case 'onboarding_feature_fonts_hint':
@@ -176745,6 +177094,23 @@ extension on _StringsAr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'خطوط مخصّصة';
       case 'onboarding_feature_fonts_hint':
@@ -185288,6 +185654,23 @@ extension on _StringsDe {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Eigene Schriften';
       case 'onboarding_feature_fonts_hint':
@@ -193823,6 +194206,23 @@ extension on _StringsEs {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Fuentes personalizadas';
       case 'onboarding_feature_fonts_hint':
@@ -202366,6 +202766,23 @@ extension on _StringsFr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Polices personnalisées';
       case 'onboarding_feature_fonts_hint':
@@ -210881,6 +211298,23 @@ extension on _StringsId {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Font kustom';
       case 'onboarding_feature_fonts_hint':
@@ -219417,6 +219851,23 @@ extension on _StringsIt {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Font personalizzati';
       case 'onboarding_feature_fonts_hint':
@@ -227882,6 +228333,23 @@ extension on _StringsJa {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'カスタムフォント';
       case 'onboarding_feature_fonts_hint':
@@ -236350,6 +236818,23 @@ extension on _StringsKo {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return '사용자 지정 글꼴';
       case 'onboarding_feature_fonts_hint':
@@ -244880,6 +245365,23 @@ extension on _StringsNl {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Eigen lettertypen';
       case 'onboarding_feature_fonts_hint':
@@ -253405,6 +253907,23 @@ extension on _StringsPtBr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Fontes personalizadas';
       case 'onboarding_feature_fonts_hint':
@@ -261936,6 +262455,23 @@ extension on _StringsRu {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Свои шрифты';
       case 'onboarding_feature_fonts_hint':
@@ -270440,6 +270976,23 @@ extension on _StringsTh {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'ฟอนต์กำหนดเอง';
       case 'onboarding_feature_fonts_hint':
@@ -278959,6 +279512,23 @@ extension on _StringsTr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Özel yazı tipleri';
       case 'onboarding_feature_fonts_hint':
@@ -287472,6 +288042,23 @@ extension on _StringsVi {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return 'Phông chữ tùy chỉnh';
       case 'onboarding_feature_fonts_hint':
@@ -295914,6 +296501,23 @@ extension on _StringsZhCn {
         return '走代理';
       case 'network_proxy_p2p_mode_mixed':
         return '混合';
+      case 'download_task_audiobook_needs_alignment':
+        return '只下到音频 - 还需要一个对齐文件（字幕）才能作为书打开。';
+      case 'download_task_audiobook_pair':
+        return '补对齐文件';
+      case 'audiobook_material_library':
+        return '有声书素材库';
+      case 'audiobook_material_library_hint':
+        return '存放按作品编号命名的字幕与正文文件的目录。下载完成后自动据此配对。';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} 个目录，认得 ${works} 部作品';
+      case 'audiobook_material_add_dir':
+        return '添加目录';
+      case 'audiobook_material_missing_dir':
+        return '目录不存在';
+      case 'audiobook_material_none':
+        return '还没有添加目录';
       case 'onboarding_feature_fonts':
         return '自定义字体';
       case 'onboarding_feature_fonts_hint':
@@ -304357,6 +304961,23 @@ extension on _StringsZhHk {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'download_task_audiobook_needs_alignment':
+        return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
+      case 'download_task_audiobook_pair':
+        return 'Add alignment file';
+      case 'audiobook_material_library':
+        return 'Audiobook material library';
+      case 'audiobook_material_library_hint':
+        return 'Folders of subtitle and text files named by work id. Downloads are paired against them automatically.';
+      case 'audiobook_material_status':
+        return ({required Object dirs, required Object works}) =>
+            '${dirs} folder(s), ${works} work(s) recognized';
+      case 'audiobook_material_add_dir':
+        return 'Add folder';
+      case 'audiobook_material_missing_dir':
+        return 'Missing';
+      case 'audiobook_material_none':
+        return 'No folders added yet';
       case 'onboarding_feature_fonts':
         return '自定義字體';
       case 'onboarding_feature_fonts_hint':
