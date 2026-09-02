@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 70210 (4130 per locale)
+/// Strings: 70244 (4132 per locale)
 ///
-/// Built on 2026-09-02 at 09:10 UTC
+/// Built on 2026-09-02 at 09:46 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5652,7 +5652,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_session_japanese_locale_skipped => 'Locale not applied';
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always on.';
   String get game_session_japanese_locale_evidence_insufficient =>
       'insufficient evidence';
   String get game_japanese_locale_evidence_user_language_japanese =>
@@ -5676,6 +5676,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
       'Text files contain Simplified Chinese';
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'The game was started without a Japanese locale: this system already uses the Japanese (CP932) code page, so nothing needs to change.';
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'The game was started without a Japanese locale: the auto verdict says it needs one, but Locale Emulator only supports 32-bit games.';
 }
 
 // Path: <root>
@@ -15259,48 +15263,56 @@ class _StringsAr extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      'الأدلة: ${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped =>
+      'لم تُطبَّق الإعدادات المحلية';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      'بدأت اللعبة بدون الإعدادات المحلية اليابانية (الحكم التلقائي: ${evidence}). إذا ظهر النص مشوّهًا، فاضبط الإعدادات المحلية اليابانية لهذه اللعبة على «تشغيل دائم».';
   @override
   String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+      'أدلة غير كافية';
   @override
   String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+      'لغة المحتوى هي اليابانية';
   @override
   String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+      'لغة المحتوى ليست اليابانية';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      'يعلن البيان صفحة الرموز UTF-8';
   @override
   String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+      'مورد الإصدار ياباني';
   @override
   String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+      'مورد الإصدار صيني';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      'يحتوي الملف التنفيذي على سلاسل Shift-JIS';
   @override
   String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+      'أسماء الملفات تحتوي على كانا';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      'أسماء الملفات تشير إلى رقعة صينية';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      'الملفات النصية بترميز Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'الملفات النصية بترميز GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      'الملفات النصية تحتوي على صينية مبسطة';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'بدأت اللعبة بدون الإعدادات المحلية اليابانية: يستخدم هذا النظام بالفعل صفحة الرموز اليابانية (CP932)، فلا حاجة لأي تغيير.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'بدأت اللعبة بدون الإعدادات المحلية اليابانية: يرى الحكم التلقائي أنها ضرورية، لكن Locale Emulator يدعم ألعاب 32 بت فقط.';
 }
 
 // Path: <root>
@@ -25106,48 +25118,55 @@ class _StringsDe extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      'Indizien: ${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped => 'Locale nicht angewendet';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      'Das Spiel wurde ohne japanische Locale gestartet (automatische Einschätzung: ${evidence}). Falls der Text verstümmelt ist, stelle die japanische Locale dieses Spiels auf „Immer an“.';
   @override
   String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+      'unzureichende Indizien';
   @override
   String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+      'Inhaltssprache ist Japanisch';
   @override
   String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+      'Inhaltssprache ist nicht Japanisch';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      'Manifest deklariert UTF-8-Codepage';
   @override
   String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+      'Versionsressource ist Japanisch';
   @override
   String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+      'Versionsressource ist Chinesisch';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      'Programmdatei enthält Shift-JIS-Zeichenketten';
   @override
   String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+      'Dateinamen enthalten Kana';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      'Dateinamen deuten auf einen chinesischen Patch';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      'Textdateien sind Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Textdateien sind GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      'Textdateien enthalten vereinfachtes Chinesisch';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Das Spiel wurde ohne japanische Locale gestartet: Dieses System nutzt bereits die japanische Codepage (CP932), es ist nichts zu ändern.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Das Spiel wurde ohne japanische Locale gestartet: Die automatische Einschätzung hält sie für nötig, aber Locale Emulator unterstützt nur 32-Bit-Spiele.';
 }
 
 // Path: <root>
@@ -35002,48 +35021,56 @@ class _StringsEs extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      'Indicios: ${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped =>
+      'Configuración regional no aplicada';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      'El juego se inició sin configuración regional japonesa (veredicto automático: ${evidence}). Si el texto se ve ilegible, pon la configuración regional japonesa de este juego en «Siempre activada».';
   @override
   String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+      'indicios insuficientes';
   @override
   String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+      'El idioma del contenido es japonés';
   @override
   String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+      'El idioma del contenido no es japonés';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      'El manifiesto declara la página de códigos UTF-8';
   @override
   String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+      'El recurso de versión es japonés';
   @override
   String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+      'El recurso de versión es chino';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      'El ejecutable contiene cadenas Shift-JIS';
   @override
   String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+      'Los nombres de archivo contienen kana';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      'Los nombres de archivo indican un parche chino';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      'Los archivos de texto son Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Los archivos de texto son GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      'Los archivos de texto contienen chino simplificado';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'El juego se inició sin configuración regional japonesa: este sistema ya usa la página de códigos japonesa (CP932), no hay nada que cambiar.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'El juego se inició sin configuración regional japonesa: el veredicto automático dice que la necesita, pero Locale Emulator solo admite juegos de 32 bits.';
 }
 
 // Path: <root>
@@ -44933,48 +44960,56 @@ class _StringsFr extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      'Indices : ${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped =>
+      'Paramètres régionaux non appliqués';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      'Le jeu a été lancé sans paramètres régionaux japonais (verdict automatique : ${evidence}). Si le texte est illisible, réglez les paramètres régionaux japonais de ce jeu sur « Toujours activé ».';
   @override
   String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+      'indices insuffisants';
   @override
   String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+      'La langue du contenu est le japonais';
   @override
   String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+      'La langue du contenu n\'est pas le japonais';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      'Le manifeste déclare la page de codes UTF-8';
   @override
   String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+      'La ressource de version est en japonais';
   @override
   String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+      'La ressource de version est en chinois';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      'L\'exécutable contient des chaînes Shift-JIS';
   @override
   String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+      'Les noms de fichiers contiennent des kana';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      'Les noms de fichiers signalent un patch chinois';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      'Les fichiers texte sont en Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Les fichiers texte sont en GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      'Les fichiers texte contiennent du chinois simplifié';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Le jeu a été lancé sans paramètres régionaux japonais : ce système utilise déjà la page de codes japonaise (CP932), rien à changer.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Le jeu a été lancé sans paramètres régionaux japonais : le verdict automatique les juge nécessaires, mais Locale Emulator ne prend en charge que les jeux 32 bits.';
 }
 
 // Path: <root>
@@ -54681,48 +54716,55 @@ class _StringsId extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      'Bukti: ${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped => 'Lokal tidak diterapkan';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      'Game dimulai tanpa lokal Jepang (putusan otomatis: ${evidence}). Jika teksnya rusak, atur lokal Jepang game ini ke “Selalu aktif”.';
   @override
   String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+      'bukti tidak cukup';
   @override
   String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+      'Bahasa konten adalah Jepang';
   @override
   String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+      'Bahasa konten bukan Jepang';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      'Manifest mendeklarasikan code page UTF-8';
   @override
   String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+      'Sumber daya versi berbahasa Jepang';
   @override
   String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+      'Sumber daya versi berbahasa Tionghoa';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      'Berkas executable berisi string Shift-JIS';
   @override
   String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+      'Nama berkas berisi kana';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      'Nama berkas menandai patch Tionghoa';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      'Berkas teks berformat Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Berkas teks berformat GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      'Berkas teks berisi Tionghoa Sederhana';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Game dimulai tanpa lokal Jepang: sistem ini sudah memakai code page Jepang (CP932), tidak ada yang perlu diubah.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Game dimulai tanpa lokal Jepang: putusan otomatis menyatakan perlu, tetapi Locale Emulator hanya mendukung game 32-bit.';
 }
 
 // Path: <root>
@@ -64513,48 +64555,56 @@ class _StringsIt extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      'Indizi: ${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped =>
+      'Impostazioni locali non applicate';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      'Il gioco è stato avviato senza impostazioni locali giapponesi (verdetto automatico: ${evidence}). Se il testo appare illeggibile, imposta le impostazioni locali giapponesi di questo gioco su «Sempre attivo».';
   @override
   String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+      'indizi insufficienti';
   @override
   String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+      'La lingua dei contenuti è il giapponese';
   @override
   String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+      'La lingua dei contenuti non è il giapponese';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      'Il manifest dichiara la code page UTF-8';
   @override
   String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+      'La risorsa di versione è giapponese';
   @override
   String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+      'La risorsa di versione è cinese';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      'L\'eseguibile contiene stringhe Shift-JIS';
   @override
   String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+      'I nomi dei file contengono kana';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      'I nomi dei file indicano una patch cinese';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      'I file di testo sono Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'I file di testo sono GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      'I file di testo contengono cinese semplificato';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Il gioco è stato avviato senza impostazioni locali giapponesi: questo sistema usa già la code page giapponese (CP932), non c\'è nulla da cambiare.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Il gioco è stato avviato senza impostazioni locali giapponesi: il verdetto automatico le ritiene necessarie, ma Locale Emulator supporta solo giochi a 32 bit.';
 }
 
 // Path: <root>
@@ -73751,48 +73801,53 @@ class _StringsJa extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      '判定根拠：${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped => 'ロケール未適用';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      'このセッションは日本語ロケールなしで起動しました（自動判定：${evidence}）。文字化けする場合は、このゲームの日本語ロケールを「常にオン」にしてください。';
   @override
-  String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+  String get game_session_japanese_locale_evidence_insufficient => '根拠不足';
   @override
   String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+      'コンテンツ言語が日本語';
   @override
   String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+      'コンテンツ言語が日本語以外';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      'マニフェストが UTF-8 コードページを宣言';
   @override
   String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+      'バージョンリソースが日本語';
   @override
   String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+      'バージョンリソースが中国語';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      '実行ファイルに Shift-JIS 文字列あり';
   @override
   String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+      'ファイル名にかなを含む';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      'ファイル名に中国語化パッチの印';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      'テキストファイルが Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk => 'テキストファイルが GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      'テキストファイルに簡体字中国語あり';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      '日本語ロケールなしで起動しました：このシステムは既に日本語（CP932）コードページなので変更は不要です。';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      '日本語ロケールなしで起動しました：自動判定では必要ですが、Locale Emulator は 32 ビットのゲームのみ対応です。';
 }
 
 // Path: <root>
@@ -83000,48 +83055,53 @@ class _StringsKo extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      '판정 근거: ${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped => '로케일 미적용';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      '이번 세션은 일본어 로케일 없이 시작되었습니다(자동 판정: ${evidence}). 글자가 깨지면 이 게임의 일본어 로케일을 「항상 켜기」로 바꾸세요.';
   @override
-  String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+  String get game_session_japanese_locale_evidence_insufficient => '근거 부족';
   @override
   String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+      '콘텐츠 언어가 일본어';
   @override
   String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+      '콘텐츠 언어가 일본어가 아님';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      '매니페스트가 UTF-8 코드 페이지를 선언';
   @override
   String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+      '버전 리소스가 일본어';
   @override
   String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+      '버전 리소스가 중국어';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      '실행 파일에 Shift-JIS 문자열 있음';
   @override
   String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+      '파일 이름에 가나 포함';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      '파일 이름에 중국어 패치 표시';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      '텍스트 파일이 Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk => '텍스트 파일이 GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      '텍스트 파일에 간체 중국어 포함';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      '일본어 로케일 없이 시작됨: 이 시스템은 이미 일본어(CP932) 코드 페이지를 사용하므로 변경할 것이 없습니다.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      '일본어 로케일 없이 시작됨: 자동 판정은 필요하다고 하지만 Locale Emulator는 32비트 게임만 지원합니다.';
 }
 
 // Path: <root>
@@ -92786,48 +92846,56 @@ class _StringsNl extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      'Aanwijzingen: ${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped =>
+      'Landinstelling niet toegepast';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      'Het spel is gestart zonder Japanse landinstelling (automatisch oordeel: ${evidence}). Als de tekst onleesbaar is, zet dan de Japanse landinstelling van dit spel op ‘Altijd aan’.';
   @override
   String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+      'onvoldoende aanwijzingen';
   @override
   String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+      'Inhoudstaal is Japans';
   @override
   String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+      'Inhoudstaal is niet Japans';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      'Manifest declareert UTF-8-codepagina';
   @override
   String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+      'Versiebron is Japans';
   @override
   String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+      'Versiebron is Chinees';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      'Uitvoerbaar bestand bevat Shift-JIS-tekenreeksen';
   @override
   String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+      'Bestandsnamen bevatten kana';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      'Bestandsnamen wijzen op een Chinese patch';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      'Tekstbestanden zijn Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Tekstbestanden zijn GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      'Tekstbestanden bevatten vereenvoudigd Chinees';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Het spel is gestart zonder Japanse landinstelling: dit systeem gebruikt al de Japanse codepagina (CP932), er hoeft niets te veranderen.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Het spel is gestart zonder Japanse landinstelling: het automatische oordeel acht die nodig, maar Locale Emulator ondersteunt alleen 32-bits spellen.';
 }
 
 // Path: <root>
@@ -102628,48 +102696,55 @@ class _StringsPtBr extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      'Indícios: ${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped => 'Localidade não aplicada';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      'O jogo foi iniciado sem a localidade japonesa (veredito automático: ${evidence}). Se o texto aparecer ilegível, defina a localidade japonesa deste jogo como “Sempre ativada”.';
   @override
   String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+      'indícios insuficientes';
   @override
   String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+      'O idioma do conteúdo é japonês';
   @override
   String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+      'O idioma do conteúdo não é japonês';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      'O manifesto declara a página de código UTF-8';
   @override
   String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+      'O recurso de versão é japonês';
   @override
   String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+      'O recurso de versão é chinês';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      'O executável contém strings Shift-JIS';
   @override
   String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+      'Os nomes de arquivo contêm kana';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      'Os nomes de arquivo indicam um patch chinês';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      'Os arquivos de texto são Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Os arquivos de texto são GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      'Os arquivos de texto contêm chinês simplificado';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'O jogo foi iniciado sem a localidade japonesa: este sistema já usa a página de código japonesa (CP932), nada precisa mudar.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'O jogo foi iniciado sem a localidade japonesa: o veredito automático diz que ela é necessária, mas o Locale Emulator só suporta jogos de 32 bits.';
 }
 
 // Path: <root>
@@ -112446,48 +112521,55 @@ class _StringsRu extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      'Признаки: ${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped => 'Локаль не применена';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      'Игра запущена без японской локали (автоматический вердикт: ${evidence}). Если текст отображается неверно, установите японскую локаль этой игры в «Всегда включена».';
   @override
   String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+      'недостаточно признаков';
   @override
   String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+      'Язык контента — японский';
   @override
   String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+      'Язык контента — не японский';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      'Манифест объявляет кодовую страницу UTF-8';
   @override
   String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+      'Ресурс версии на японском';
   @override
   String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+      'Ресурс версии на китайском';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      'Исполняемый файл содержит строки Shift-JIS';
   @override
   String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+      'Имена файлов содержат кану';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      'Имена файлов указывают на китайский патч';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      'Текстовые файлы в Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Текстовые файлы в GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      'Текстовые файлы содержат упрощённый китайский';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Игра запущена без японской локали: система уже использует японскую кодовую страницу (CP932), менять ничего не нужно.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Игра запущена без японской локали: автоматический вердикт считает её нужной, но Locale Emulator поддерживает только 32-битные игры.';
 }
 
 // Path: <root>
@@ -122065,48 +122147,55 @@ class _StringsTh extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      'หลักฐาน: ${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped => 'ไม่ได้ใช้โลแคล';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      'เกมเริ่มโดยไม่ใช้โลแคลภาษาญี่ปุ่น (การตัดสินอัตโนมัติ: ${evidence}) หากตัวอักษรเพี้ยน ให้ตั้งโลแคลภาษาญี่ปุ่นของเกมนี้เป็น “เปิดเสมอ”';
   @override
   String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+      'หลักฐานไม่เพียงพอ';
   @override
   String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+      'ภาษาของเนื้อหาเป็นภาษาญี่ปุ่น';
   @override
   String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+      'ภาษาของเนื้อหาไม่ใช่ภาษาญี่ปุ่น';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      'Manifest ประกาศ code page เป็น UTF-8';
   @override
   String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+      'ทรัพยากรเวอร์ชันเป็นภาษาญี่ปุ่น';
   @override
   String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+      'ทรัพยากรเวอร์ชันเป็นภาษาจีน';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      'ไฟล์ปฏิบัติการมีสตริง Shift-JIS';
   @override
   String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+      'ชื่อไฟล์มีอักษรคานะ';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      'ชื่อไฟล์บ่งชี้แพตช์ภาษาจีน';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      'ไฟล์ข้อความเป็น Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'ไฟล์ข้อความเป็น GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      'ไฟล์ข้อความมีภาษาจีนตัวย่อ';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'เกมเริ่มโดยไม่ใช้โลแคลภาษาญี่ปุ่น: ระบบนี้ใช้ code page ภาษาญี่ปุ่น (CP932) อยู่แล้ว ไม่ต้องเปลี่ยนอะไร';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'เกมเริ่มโดยไม่ใช้โลแคลภาษาญี่ปุ่น: การตัดสินอัตโนมัติบอกว่าจำเป็น แต่ Locale Emulator รองรับเฉพาะเกม 32 บิต';
 }
 
 // Path: <root>
@@ -131799,48 +131888,55 @@ class _StringsTr extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      'Kanıtlar: ${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped => 'Yerel ayar uygulanmadı';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      'Oyun Japonca yerel ayar olmadan başlatıldı (otomatik karar: ${evidence}). Metin bozuk görünüyorsa bu oyunun Japonca yerel ayarını “Her zaman açık” yapın.';
   @override
   String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+      'yetersiz kanıt';
   @override
   String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+      'İçerik dili Japonca';
   @override
   String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+      'İçerik dili Japonca değil';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      'Manifest UTF-8 kod sayfası bildiriyor';
   @override
   String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+      'Sürüm kaynağı Japonca';
   @override
   String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+      'Sürüm kaynağı Çince';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      'Çalıştırılabilir dosya Shift-JIS dizeleri içeriyor';
   @override
   String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+      'Dosya adları kana içeriyor';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      'Dosya adları Çince yama işareti taşıyor';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      'Metin dosyaları Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk =>
+      'Metin dosyaları GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      'Metin dosyaları Basitleştirilmiş Çince içeriyor';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Oyun Japonca yerel ayar olmadan başlatıldı: bu sistem zaten Japonca (CP932) kod sayfasını kullanıyor, değiştirilecek bir şey yok.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Oyun Japonca yerel ayar olmadan başlatıldı: otomatik karar gerekli diyor ama Locale Emulator yalnızca 32 bit oyunları destekliyor.';
 }
 
 // Path: <root>
@@ -141509,48 +141605,55 @@ class _StringsVi extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      'Bằng chứng: ${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped =>
+      'Chưa áp dụng ngôn ngữ hệ thống';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      'Game được khởi động không dùng ngôn ngữ hệ thống tiếng Nhật (phán đoán tự động: ${evidence}). Nếu chữ bị lỗi, hãy đặt ngôn ngữ hệ thống tiếng Nhật của game này thành “Luôn bật”.';
   @override
   String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+      'chưa đủ bằng chứng';
   @override
   String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+      'Ngôn ngữ nội dung là tiếng Nhật';
   @override
   String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+      'Ngôn ngữ nội dung không phải tiếng Nhật';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      'Manifest khai báo code page UTF-8';
   @override
   String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+      'Tài nguyên phiên bản là tiếng Nhật';
   @override
   String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+      'Tài nguyên phiên bản là tiếng Trung';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      'Tệp thực thi chứa chuỗi Shift-JIS';
   @override
   String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+      'Tên tệp chứa kana';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      'Tên tệp cho thấy bản vá tiếng Trung';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      'Tệp văn bản là Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk => 'Tệp văn bản là GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      'Tệp văn bản chứa tiếng Trung giản thể';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      'Game được khởi động không dùng ngôn ngữ hệ thống tiếng Nhật: hệ thống này đã dùng code page tiếng Nhật (CP932), không cần thay đổi.';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      'Game được khởi động không dùng ngôn ngữ hệ thống tiếng Nhật: phán đoán tự động cho là cần, nhưng Locale Emulator chỉ hỗ trợ game 32-bit.';
 }
 
 // Path: <root>
@@ -150486,6 +150589,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
       '目录文本含简体中文';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      '本局未转区：系统本就是日文区域 (CP932)，无需转区。';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      '本局未转区：自动判定需要日文区域，但 Locale Emulator 只支持 32 位游戏。';
 }
 
 // Path: <root>
@@ -159400,48 +159509,48 @@ class _StringsZhHk extends _StringsEn {
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
-      'Evidence: ${evidence}';
+      '判據：${evidence}';
   @override
-  String get game_session_japanese_locale_skipped => 'Locale not applied';
+  String get game_session_japanese_locale_skipped => '未轉區';
   @override
   String game_session_japanese_locale_skipped_hint(
           {required Object evidence}) =>
-      'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+      '本局未轉區（自動判定：${evidence}）。若遊戲文字亂碼，可把該遊戲的日語區域改為「始終開啟」。';
   @override
-  String get game_session_japanese_locale_evidence_insufficient =>
-      'insufficient evidence';
+  String get game_session_japanese_locale_evidence_insufficient => '證據不足';
   @override
-  String get game_japanese_locale_evidence_user_language_japanese =>
-      'Content language is Japanese';
+  String get game_japanese_locale_evidence_user_language_japanese => '內容語言為日語';
   @override
-  String get game_japanese_locale_evidence_user_language_other =>
-      'Content language is not Japanese';
+  String get game_japanese_locale_evidence_user_language_other => '內容語言非日語';
   @override
   String get game_japanese_locale_evidence_manifest_utf8_code_page =>
-      'Manifest declares a UTF-8 code page';
+      'Manifest 宣告 UTF-8 代碼頁';
   @override
-  String get game_japanese_locale_evidence_version_info_japanese =>
-      'Version resource is Japanese';
+  String get game_japanese_locale_evidence_version_info_japanese => '版本資源為日語';
   @override
-  String get game_japanese_locale_evidence_version_info_chinese =>
-      'Version resource is Chinese';
+  String get game_japanese_locale_evidence_version_info_chinese => '版本資源為中文';
   @override
   String get game_japanese_locale_evidence_exe_shift_jis_strings =>
-      'Executable contains Shift-JIS strings';
+      '執行檔含 Shift-JIS 字串';
   @override
-  String get game_japanese_locale_evidence_dir_file_name_japanese =>
-      'File names contain kana';
+  String get game_japanese_locale_evidence_dir_file_name_japanese => '檔名含假名';
   @override
   String get game_japanese_locale_evidence_dir_file_name_chinese_patch =>
-      'File names mark a Chinese patch';
+      '檔名帶漢化標記';
   @override
   String get game_japanese_locale_evidence_dir_text_shift_jis =>
-      'Text files are Shift-JIS';
+      '文字檔為 Shift-JIS';
   @override
-  String get game_japanese_locale_evidence_dir_text_gbk => 'Text files are GBK';
+  String get game_japanese_locale_evidence_dir_text_gbk => '文字檔為 GBK';
   @override
   String get game_japanese_locale_evidence_dir_text_simplified_hanzi =>
-      'Text files contain Simplified Chinese';
+      '文字檔含簡體中文';
+  @override
+  String get game_session_japanese_locale_skipped_hint_system_japanese =>
+      '本局未轉區：系統本就是日文區域 (CP932)，無需轉區。';
+  @override
+  String get game_session_japanese_locale_skipped_hint_not_32bit =>
+      '本局未轉區：自動判定需要日文區域，但 Locale Emulator 只支援 32 位元遊戲。';
 }
 
 /// Flat map(s) containing all translations.
@@ -167891,7 +168000,7 @@ extension on _StringsEn {
         return 'Locale not applied';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always on.';
       case 'game_session_japanese_locale_evidence_insufficient':
         return 'insufficient evidence';
       case 'game_japanese_locale_evidence_user_language_japanese':
@@ -167916,6 +168025,10 @@ extension on _StringsEn {
         return 'Text files are GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
         return 'Text files contain Simplified Chinese';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'The game was started without a Japanese locale: this system already uses the Japanese (CP932) code page, so nothing needs to change.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'The game was started without a Japanese locale: the auto verdict says it needs one, but Locale Emulator only supports 32-bit games.';
       default:
         return null;
     }
@@ -176355,36 +176468,40 @@ extension on _StringsAr {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => 'الأدلة: ${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return 'لم تُطبَّق الإعدادات المحلية';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            'بدأت اللعبة بدون الإعدادات المحلية اليابانية (الحكم التلقائي: ${evidence}). إذا ظهر النص مشوّهًا، فاضبط الإعدادات المحلية اليابانية لهذه اللعبة على «تشغيل دائم».';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return 'أدلة غير كافية';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return 'لغة المحتوى هي اليابانية';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return 'لغة المحتوى ليست اليابانية';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return 'يعلن البيان صفحة الرموز UTF-8';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return 'مورد الإصدار ياباني';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return 'مورد الإصدار صيني';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return 'يحتوي الملف التنفيذي على سلاسل Shift-JIS';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return 'أسماء الملفات تحتوي على كانا';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return 'أسماء الملفات تشير إلى رقعة صينية';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return 'الملفات النصية بترميز Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return 'الملفات النصية بترميز GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return 'الملفات النصية تحتوي على صينية مبسطة';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'بدأت اللعبة بدون الإعدادات المحلية اليابانية: يستخدم هذا النظام بالفعل صفحة الرموز اليابانية (CP932)، فلا حاجة لأي تغيير.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'بدأت اللعبة بدون الإعدادات المحلية اليابانية: يرى الحكم التلقائي أنها ضرورية، لكن Locale Emulator يدعم ألعاب 32 بت فقط.';
       default:
         return null;
     }
@@ -184868,36 +184985,40 @@ extension on _StringsDe {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => 'Indizien: ${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return 'Locale nicht angewendet';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            'Das Spiel wurde ohne japanische Locale gestartet (automatische Einschätzung: ${evidence}). Falls der Text verstümmelt ist, stelle die japanische Locale dieses Spiels auf „Immer an“.';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return 'unzureichende Indizien';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return 'Inhaltssprache ist Japanisch';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return 'Inhaltssprache ist nicht Japanisch';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return 'Manifest deklariert UTF-8-Codepage';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return 'Versionsressource ist Japanisch';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return 'Versionsressource ist Chinesisch';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return 'Programmdatei enthält Shift-JIS-Zeichenketten';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return 'Dateinamen enthalten Kana';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return 'Dateinamen deuten auf einen chinesischen Patch';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return 'Textdateien sind Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return 'Textdateien sind GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return 'Textdateien enthalten vereinfachtes Chinesisch';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Das Spiel wurde ohne japanische Locale gestartet: Dieses System nutzt bereits die japanische Codepage (CP932), es ist nichts zu ändern.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Das Spiel wurde ohne japanische Locale gestartet: Die automatische Einschätzung hält sie für nötig, aber Locale Emulator unterstützt nur 32-Bit-Spiele.';
       default:
         return null;
     }
@@ -193373,36 +193494,40 @@ extension on _StringsEs {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => 'Indicios: ${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return 'Configuración regional no aplicada';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            'El juego se inició sin configuración regional japonesa (veredicto automático: ${evidence}). Si el texto se ve ilegible, pon la configuración regional japonesa de este juego en «Siempre activada».';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return 'indicios insuficientes';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return 'El idioma del contenido es japonés';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return 'El idioma del contenido no es japonés';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return 'El manifiesto declara la página de códigos UTF-8';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return 'El recurso de versión es japonés';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return 'El recurso de versión es chino';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return 'El ejecutable contiene cadenas Shift-JIS';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return 'Los nombres de archivo contienen kana';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return 'Los nombres de archivo indican un parche chino';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return 'Los archivos de texto son Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return 'Los archivos de texto son GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return 'Los archivos de texto contienen chino simplificado';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'El juego se inició sin configuración regional japonesa: este sistema ya usa la página de códigos japonesa (CP932), no hay nada que cambiar.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'El juego se inició sin configuración regional japonesa: el veredicto automático dice que la necesita, pero Locale Emulator solo admite juegos de 32 bits.';
       default:
         return null;
     }
@@ -201886,36 +202011,40 @@ extension on _StringsFr {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => 'Indices : ${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return 'Paramètres régionaux non appliqués';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            'Le jeu a été lancé sans paramètres régionaux japonais (verdict automatique : ${evidence}). Si le texte est illisible, réglez les paramètres régionaux japonais de ce jeu sur « Toujours activé ».';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return 'indices insuffisants';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return 'La langue du contenu est le japonais';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return 'La langue du contenu n\'est pas le japonais';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return 'Le manifeste déclare la page de codes UTF-8';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return 'La ressource de version est en japonais';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return 'La ressource de version est en chinois';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return 'L\'exécutable contient des chaînes Shift-JIS';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return 'Les noms de fichiers contiennent des kana';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return 'Les noms de fichiers signalent un patch chinois';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return 'Les fichiers texte sont en Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return 'Les fichiers texte sont en GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return 'Les fichiers texte contiennent du chinois simplifié';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Le jeu a été lancé sans paramètres régionaux japonais : ce système utilise déjà la page de codes japonaise (CP932), rien à changer.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Le jeu a été lancé sans paramètres régionaux japonais : le verdict automatique les juge nécessaires, mais Locale Emulator ne prend en charge que les jeux 32 bits.';
       default:
         return null;
     }
@@ -210371,36 +210500,40 @@ extension on _StringsId {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => 'Bukti: ${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return 'Lokal tidak diterapkan';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            'Game dimulai tanpa lokal Jepang (putusan otomatis: ${evidence}). Jika teksnya rusak, atur lokal Jepang game ini ke “Selalu aktif”.';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return 'bukti tidak cukup';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return 'Bahasa konten adalah Jepang';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return 'Bahasa konten bukan Jepang';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return 'Manifest mendeklarasikan code page UTF-8';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return 'Sumber daya versi berbahasa Jepang';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return 'Sumber daya versi berbahasa Tionghoa';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return 'Berkas executable berisi string Shift-JIS';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return 'Nama berkas berisi kana';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return 'Nama berkas menandai patch Tionghoa';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return 'Berkas teks berformat Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return 'Berkas teks berformat GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return 'Berkas teks berisi Tionghoa Sederhana';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Game dimulai tanpa lokal Jepang: sistem ini sudah memakai code page Jepang (CP932), tidak ada yang perlu diubah.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Game dimulai tanpa lokal Jepang: putusan otomatis menyatakan perlu, tetapi Locale Emulator hanya mendukung game 32-bit.';
       default:
         return null;
     }
@@ -218877,36 +219010,40 @@ extension on _StringsIt {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => 'Indizi: ${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return 'Impostazioni locali non applicate';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            'Il gioco è stato avviato senza impostazioni locali giapponesi (verdetto automatico: ${evidence}). Se il testo appare illeggibile, imposta le impostazioni locali giapponesi di questo gioco su «Sempre attivo».';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return 'indizi insufficienti';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return 'La lingua dei contenuti è il giapponese';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return 'La lingua dei contenuti non è il giapponese';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return 'Il manifest dichiara la code page UTF-8';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return 'La risorsa di versione è giapponese';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return 'La risorsa di versione è cinese';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return 'L\'eseguibile contiene stringhe Shift-JIS';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return 'I nomi dei file contengono kana';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return 'I nomi dei file indicano una patch cinese';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return 'I file di testo sono Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return 'I file di testo sono GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return 'I file di testo contengono cinese semplificato';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Il gioco è stato avviato senza impostazioni locali giapponesi: questo sistema usa già la code page giapponese (CP932), non c\'è nulla da cambiare.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Il gioco è stato avviato senza impostazioni locali giapponesi: il verdetto automatico le ritiene necessarie, ma Locale Emulator supporta solo giochi a 32 bit.';
       default:
         return null;
     }
@@ -227312,36 +227449,40 @@ extension on _StringsJa {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => '判定根拠：${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return 'ロケール未適用';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            'このセッションは日本語ロケールなしで起動しました（自動判定：${evidence}）。文字化けする場合は、このゲームの日本語ロケールを「常にオン」にしてください。';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return '根拠不足';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return 'コンテンツ言語が日本語';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return 'コンテンツ言語が日本語以外';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return 'マニフェストが UTF-8 コードページを宣言';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return 'バージョンリソースが日本語';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return 'バージョンリソースが中国語';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return '実行ファイルに Shift-JIS 文字列あり';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return 'ファイル名にかなを含む';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return 'ファイル名に中国語化パッチの印';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return 'テキストファイルが Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return 'テキストファイルが GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return 'テキストファイルに簡体字中国語あり';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return '日本語ロケールなしで起動しました：このシステムは既に日本語（CP932）コードページなので変更は不要です。';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return '日本語ロケールなしで起動しました：自動判定では必要ですが、Locale Emulator は 32 ビットのゲームのみ対応です。';
       default:
         return null;
     }
@@ -235750,36 +235891,40 @@ extension on _StringsKo {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => '판정 근거: ${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return '로케일 미적용';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            '이번 세션은 일본어 로케일 없이 시작되었습니다(자동 판정: ${evidence}). 글자가 깨지면 이 게임의 일본어 로케일을 「항상 켜기」로 바꾸세요.';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return '근거 부족';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return '콘텐츠 언어가 일본어';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return '콘텐츠 언어가 일본어가 아님';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return '매니페스트가 UTF-8 코드 페이지를 선언';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return '버전 리소스가 일본어';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return '버전 리소스가 중국어';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return '실행 파일에 Shift-JIS 문자열 있음';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return '파일 이름에 가나 포함';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return '파일 이름에 중국어 패치 표시';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return '텍스트 파일이 Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return '텍스트 파일이 GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return '텍스트 파일에 간체 중국어 포함';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return '일본어 로케일 없이 시작됨: 이 시스템은 이미 일본어(CP932) 코드 페이지를 사용하므로 변경할 것이 없습니다.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return '일본어 로케일 없이 시작됨: 자동 판정은 필요하다고 하지만 Locale Emulator는 32비트 게임만 지원합니다.';
       default:
         return null;
     }
@@ -244250,36 +244395,40 @@ extension on _StringsNl {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => 'Aanwijzingen: ${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return 'Landinstelling niet toegepast';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            'Het spel is gestart zonder Japanse landinstelling (automatisch oordeel: ${evidence}). Als de tekst onleesbaar is, zet dan de Japanse landinstelling van dit spel op ‘Altijd aan’.';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return 'onvoldoende aanwijzingen';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return 'Inhoudstaal is Japans';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return 'Inhoudstaal is niet Japans';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return 'Manifest declareert UTF-8-codepagina';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return 'Versiebron is Japans';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return 'Versiebron is Chinees';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return 'Uitvoerbaar bestand bevat Shift-JIS-tekenreeksen';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return 'Bestandsnamen bevatten kana';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return 'Bestandsnamen wijzen op een Chinese patch';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return 'Tekstbestanden zijn Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return 'Tekstbestanden zijn GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return 'Tekstbestanden bevatten vereenvoudigd Chinees';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Het spel is gestart zonder Japanse landinstelling: dit systeem gebruikt al de Japanse codepagina (CP932), er hoeft niets te veranderen.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Het spel is gestart zonder Japanse landinstelling: het automatische oordeel acht die nodig, maar Locale Emulator ondersteunt alleen 32-bits spellen.';
       default:
         return null;
     }
@@ -252745,36 +252894,40 @@ extension on _StringsPtBr {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => 'Indícios: ${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return 'Localidade não aplicada';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            'O jogo foi iniciado sem a localidade japonesa (veredito automático: ${evidence}). Se o texto aparecer ilegível, defina a localidade japonesa deste jogo como “Sempre ativada”.';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return 'indícios insuficientes';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return 'O idioma do conteúdo é japonês';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return 'O idioma do conteúdo não é japonês';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return 'O manifesto declara a página de código UTF-8';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return 'O recurso de versão é japonês';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return 'O recurso de versão é chinês';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return 'O executável contém strings Shift-JIS';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return 'Os nomes de arquivo contêm kana';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return 'Os nomes de arquivo indicam um patch chinês';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return 'Os arquivos de texto são Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return 'Os arquivos de texto são GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return 'Os arquivos de texto contêm chinês simplificado';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'O jogo foi iniciado sem a localidade japonesa: este sistema já usa a página de código japonesa (CP932), nada precisa mudar.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'O jogo foi iniciado sem a localidade japonesa: o veredito automático diz que ela é necessária, mas o Locale Emulator só suporta jogos de 32 bits.';
       default:
         return null;
     }
@@ -261246,36 +261399,40 @@ extension on _StringsRu {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => 'Признаки: ${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return 'Локаль не применена';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            'Игра запущена без японской локали (автоматический вердикт: ${evidence}). Если текст отображается неверно, установите японскую локаль этой игры в «Всегда включена».';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return 'недостаточно признаков';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return 'Язык контента — японский';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return 'Язык контента — не японский';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return 'Манифест объявляет кодовую страницу UTF-8';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return 'Ресурс версии на японском';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return 'Ресурс версии на китайском';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return 'Исполняемый файл содержит строки Shift-JIS';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return 'Имена файлов содержат кану';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return 'Имена файлов указывают на китайский патч';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return 'Текстовые файлы в Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return 'Текстовые файлы в GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return 'Текстовые файлы содержат упрощённый китайский';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Игра запущена без японской локали: система уже использует японскую кодовую страницу (CP932), менять ничего не нужно.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Игра запущена без японской локали: автоматический вердикт считает её нужной, но Locale Emulator поддерживает только 32-битные игры.';
       default:
         return null;
     }
@@ -269720,36 +269877,40 @@ extension on _StringsTh {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => 'หลักฐาน: ${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return 'ไม่ได้ใช้โลแคล';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            'เกมเริ่มโดยไม่ใช้โลแคลภาษาญี่ปุ่น (การตัดสินอัตโนมัติ: ${evidence}) หากตัวอักษรเพี้ยน ให้ตั้งโลแคลภาษาญี่ปุ่นของเกมนี้เป็น “เปิดเสมอ”';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return 'หลักฐานไม่เพียงพอ';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return 'ภาษาของเนื้อหาเป็นภาษาญี่ปุ่น';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return 'ภาษาของเนื้อหาไม่ใช่ภาษาญี่ปุ่น';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return 'Manifest ประกาศ code page เป็น UTF-8';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return 'ทรัพยากรเวอร์ชันเป็นภาษาญี่ปุ่น';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return 'ทรัพยากรเวอร์ชันเป็นภาษาจีน';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return 'ไฟล์ปฏิบัติการมีสตริง Shift-JIS';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return 'ชื่อไฟล์มีอักษรคานะ';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return 'ชื่อไฟล์บ่งชี้แพตช์ภาษาจีน';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return 'ไฟล์ข้อความเป็น Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return 'ไฟล์ข้อความเป็น GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return 'ไฟล์ข้อความมีภาษาจีนตัวย่อ';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'เกมเริ่มโดยไม่ใช้โลแคลภาษาญี่ปุ่น: ระบบนี้ใช้ code page ภาษาญี่ปุ่น (CP932) อยู่แล้ว ไม่ต้องเปลี่ยนอะไร';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'เกมเริ่มโดยไม่ใช้โลแคลภาษาญี่ปุ่น: การตัดสินอัตโนมัติบอกว่าจำเป็น แต่ Locale Emulator รองรับเฉพาะเกม 32 บิต';
       default:
         return null;
     }
@@ -278209,36 +278370,40 @@ extension on _StringsTr {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => 'Kanıtlar: ${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return 'Yerel ayar uygulanmadı';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            'Oyun Japonca yerel ayar olmadan başlatıldı (otomatik karar: ${evidence}). Metin bozuk görünüyorsa bu oyunun Japonca yerel ayarını “Her zaman açık” yapın.';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return 'yetersiz kanıt';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return 'İçerik dili Japonca';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return 'İçerik dili Japonca değil';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return 'Manifest UTF-8 kod sayfası bildiriyor';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return 'Sürüm kaynağı Japonca';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return 'Sürüm kaynağı Çince';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return 'Çalıştırılabilir dosya Shift-JIS dizeleri içeriyor';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return 'Dosya adları kana içeriyor';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return 'Dosya adları Çince yama işareti taşıyor';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return 'Metin dosyaları Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return 'Metin dosyaları GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return 'Metin dosyaları Basitleştirilmiş Çince içeriyor';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Oyun Japonca yerel ayar olmadan başlatıldı: bu sistem zaten Japonca (CP932) kod sayfasını kullanıyor, değiştirilecek bir şey yok.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Oyun Japonca yerel ayar olmadan başlatıldı: otomatik karar gerekli diyor ama Locale Emulator yalnızca 32 bit oyunları destekliyor.';
       default:
         return null;
     }
@@ -286692,36 +286857,40 @@ extension on _StringsVi {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => 'Bằng chứng: ${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return 'Chưa áp dụng ngôn ngữ hệ thống';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            'Game được khởi động không dùng ngôn ngữ hệ thống tiếng Nhật (phán đoán tự động: ${evidence}). Nếu chữ bị lỗi, hãy đặt ngôn ngữ hệ thống tiếng Nhật của game này thành “Luôn bật”.';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return 'chưa đủ bằng chứng';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return 'Ngôn ngữ nội dung là tiếng Nhật';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return 'Ngôn ngữ nội dung không phải tiếng Nhật';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return 'Manifest khai báo code page UTF-8';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return 'Tài nguyên phiên bản là tiếng Nhật';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return 'Tài nguyên phiên bản là tiếng Trung';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return 'Tệp thực thi chứa chuỗi Shift-JIS';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return 'Tên tệp chứa kana';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return 'Tên tệp cho thấy bản vá tiếng Trung';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return 'Tệp văn bản là Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return 'Tệp văn bản là GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return 'Tệp văn bản chứa tiếng Trung giản thể';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return 'Game được khởi động không dùng ngôn ngữ hệ thống tiếng Nhật: hệ thống này đã dùng code page tiếng Nhật (CP932), không cần thay đổi.';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return 'Game được khởi động không dùng ngôn ngữ hệ thống tiếng Nhật: phán đoán tự động cho là cần, nhưng Locale Emulator chỉ hỗ trợ game 32-bit.';
       default:
         return null;
     }
@@ -295134,6 +295303,10 @@ extension on _StringsZhCn {
         return '目录文本为 GBK 编码';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
         return '目录文本含简体中文';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return '本局未转区：系统本就是日文区域 (CP932)，无需转区。';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return '本局未转区：自动判定需要日文区域，但 Locale Emulator 只支持 32 位游戏。';
       default:
         return null;
     }
@@ -303517,36 +303690,40 @@ extension on _StringsZhHk {
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
       case 'game_session_japanese_locale_evidence':
-        return ({required Object evidence}) => 'Evidence: ${evidence}';
+        return ({required Object evidence}) => '判據：${evidence}';
       case 'game_session_japanese_locale_skipped':
-        return 'Locale not applied';
+        return '未轉區';
       case 'game_session_japanese_locale_skipped_hint':
         return ({required Object evidence}) =>
-            'The game was started without a Japanese locale (auto verdict: ${evidence}). If its text looks garbled, set this game\'s Japanese locale to Always.';
+            '本局未轉區（自動判定：${evidence}）。若遊戲文字亂碼，可把該遊戲的日語區域改為「始終開啟」。';
       case 'game_session_japanese_locale_evidence_insufficient':
-        return 'insufficient evidence';
+        return '證據不足';
       case 'game_japanese_locale_evidence_user_language_japanese':
-        return 'Content language is Japanese';
+        return '內容語言為日語';
       case 'game_japanese_locale_evidence_user_language_other':
-        return 'Content language is not Japanese';
+        return '內容語言非日語';
       case 'game_japanese_locale_evidence_manifest_utf8_code_page':
-        return 'Manifest declares a UTF-8 code page';
+        return 'Manifest 宣告 UTF-8 代碼頁';
       case 'game_japanese_locale_evidence_version_info_japanese':
-        return 'Version resource is Japanese';
+        return '版本資源為日語';
       case 'game_japanese_locale_evidence_version_info_chinese':
-        return 'Version resource is Chinese';
+        return '版本資源為中文';
       case 'game_japanese_locale_evidence_exe_shift_jis_strings':
-        return 'Executable contains Shift-JIS strings';
+        return '執行檔含 Shift-JIS 字串';
       case 'game_japanese_locale_evidence_dir_file_name_japanese':
-        return 'File names contain kana';
+        return '檔名含假名';
       case 'game_japanese_locale_evidence_dir_file_name_chinese_patch':
-        return 'File names mark a Chinese patch';
+        return '檔名帶漢化標記';
       case 'game_japanese_locale_evidence_dir_text_shift_jis':
-        return 'Text files are Shift-JIS';
+        return '文字檔為 Shift-JIS';
       case 'game_japanese_locale_evidence_dir_text_gbk':
-        return 'Text files are GBK';
+        return '文字檔為 GBK';
       case 'game_japanese_locale_evidence_dir_text_simplified_hanzi':
-        return 'Text files contain Simplified Chinese';
+        return '文字檔含簡體中文';
+      case 'game_session_japanese_locale_skipped_hint_system_japanese':
+        return '本局未轉區：系統本就是日文區域 (CP932)，無需轉區。';
+      case 'game_session_japanese_locale_skipped_hint_not_32bit':
+        return '本局未轉區：自動判定需要日文區域，但 Locale Emulator 只支援 32 位元遊戲。';
       default:
         return null;
     }
