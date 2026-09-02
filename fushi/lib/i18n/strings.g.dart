@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69955 (4115 per locale)
+/// Strings: 69989 (4117 per locale)
 ///
-/// Built on 2026-09-01 at 16:45 UTC
+/// Built on 2026-09-02 at 18:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5647,6 +5647,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get network_proxy_p2p_mode_direct => 'Direct';
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -15228,6 +15231,11 @@ class _StringsAr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -25031,6 +25039,11 @@ class _StringsDe extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -34883,6 +34896,11 @@ class _StringsEs extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -44770,6 +44788,11 @@ class _StringsFr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -54474,6 +54497,11 @@ class _StringsId extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -64262,6 +64290,11 @@ class _StringsIt extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -73456,6 +73489,11 @@ class _StringsJa extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -82661,6 +82699,11 @@ class _StringsKo extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -92403,6 +92446,11 @@ class _StringsNl extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -102201,6 +102249,11 @@ class _StringsPtBr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -111975,6 +112028,11 @@ class _StringsRu extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -121550,6 +121608,11 @@ class _StringsTh extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -131240,6 +131303,11 @@ class _StringsTr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -140906,6 +140974,11 @@ class _StringsVi extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 // Path: <root>
@@ -149803,6 +149876,11 @@ class _StringsZhCn extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => '走代理';
   @override
   String get network_proxy_p2p_mode_mixed => '混合';
+  @override
+  String get gal_mining_image_mode_video_clip => '视频片段';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      '从台词出现到制卡这段时间的游戏画面，并混入句子音频。未开始录制或不足 2 帧时降级为动图/截图。';
 }
 
 // Path: <root>
@@ -158715,6 +158793,11 @@ class _StringsZhHk extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get gal_mining_image_mode_video_clip => 'Video clip';
+  @override
+  String get gal_mining_image_mode_video_clip_hint =>
+      'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
 }
 
 /// Flat map(s) containing all translations.
@@ -167158,6 +167241,10 @@ extension on _StringsEn {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -175596,6 +175683,10 @@ extension on _StringsAr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -184078,6 +184169,10 @@ extension on _StringsDe {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -192552,6 +192647,10 @@ extension on _StringsEs {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -201034,6 +201133,10 @@ extension on _StringsFr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -209488,6 +209591,10 @@ extension on _StringsId {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -217963,6 +218070,10 @@ extension on _StringsIt {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -226367,6 +226478,10 @@ extension on _StringsJa {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -234774,6 +234889,10 @@ extension on _StringsKo {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -243243,6 +243362,10 @@ extension on _StringsNl {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -251707,6 +251830,10 @@ extension on _StringsPtBr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -260177,6 +260304,10 @@ extension on _StringsRu {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -268620,6 +268751,10 @@ extension on _StringsTh {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -277078,6 +277213,10 @@ extension on _StringsTr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -285530,6 +285669,10 @@ extension on _StringsVi {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
@@ -293911,6 +294054,10 @@ extension on _StringsZhCn {
         return '走代理';
       case 'network_proxy_p2p_mode_mixed':
         return '混合';
+      case 'gal_mining_image_mode_video_clip':
+        return '视频片段';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return '从台词出现到制卡这段时间的游戏画面，并混入句子音频。未开始录制或不足 2 帧时降级为动图/截图。';
       default:
         return null;
     }
@@ -302293,6 +302440,10 @@ extension on _StringsZhHk {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'gal_mining_image_mode_video_clip':
+        return 'Video clip';
+      case 'gal_mining_image_mode_video_clip_hint':
+        return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       default:
         return null;
     }
