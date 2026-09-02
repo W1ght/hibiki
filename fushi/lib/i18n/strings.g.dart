@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69955 (4115 per locale)
+/// Strings: 69972 (4116 per locale)
 ///
-/// Built on 2026-09-01 at 16:45 UTC
+/// Built on 2026-09-02 at 12:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5647,6 +5647,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get network_proxy_p2p_mode_direct => 'Direct';
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get handlebar_clip_timestamp => 'Clip timestamp';
 }
 
 // Path: <root>
@@ -15228,6 +15229,8 @@ class _StringsAr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => 'الطابع الزمني للمقطع';
 }
 
 // Path: <root>
@@ -25031,6 +25034,8 @@ class _StringsDe extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => 'Clip-Zeitstempel';
 }
 
 // Path: <root>
@@ -34883,6 +34888,8 @@ class _StringsEs extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => 'Marca de tiempo del fragmento';
 }
 
 // Path: <root>
@@ -44770,6 +44777,8 @@ class _StringsFr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => 'Horodatage de l\'extrait';
 }
 
 // Path: <root>
@@ -54474,6 +54483,8 @@ class _StringsId extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => 'Stempel waktu klip';
 }
 
 // Path: <root>
@@ -64262,6 +64273,8 @@ class _StringsIt extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => 'Timestamp della clip';
 }
 
 // Path: <root>
@@ -73456,6 +73469,8 @@ class _StringsJa extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => 'クリップの時間';
 }
 
 // Path: <root>
@@ -82661,6 +82676,8 @@ class _StringsKo extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => '클립 타임스탬프';
 }
 
 // Path: <root>
@@ -92403,6 +92420,8 @@ class _StringsNl extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => 'Tijdstempel van fragment';
 }
 
 // Path: <root>
@@ -102201,6 +102220,8 @@ class _StringsPtBr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => 'Marca de tempo do trecho';
 }
 
 // Path: <root>
@@ -111975,6 +111996,8 @@ class _StringsRu extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => 'Метка времени фрагмента';
 }
 
 // Path: <root>
@@ -121550,6 +121573,8 @@ class _StringsTh extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => 'เวลาของคลิป';
 }
 
 // Path: <root>
@@ -131240,6 +131265,8 @@ class _StringsTr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => 'Klip zaman damgası';
 }
 
 // Path: <root>
@@ -140906,6 +140933,8 @@ class _StringsVi extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => 'Dấu thời gian đoạn cắt';
 }
 
 // Path: <root>
@@ -149803,6 +149832,8 @@ class _StringsZhCn extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => '走代理';
   @override
   String get network_proxy_p2p_mode_mixed => '混合';
+  @override
+  String get handlebar_clip_timestamp => '片段时间';
 }
 
 // Path: <root>
@@ -158715,6 +158746,8 @@ class _StringsZhHk extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get handlebar_clip_timestamp => '片段時間';
 }
 
 /// Flat map(s) containing all translations.
@@ -167158,6 +167191,8 @@ extension on _StringsEn {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return 'Clip timestamp';
       default:
         return null;
     }
@@ -175596,6 +175631,8 @@ extension on _StringsAr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return 'الطابع الزمني للمقطع';
       default:
         return null;
     }
@@ -184078,6 +184115,8 @@ extension on _StringsDe {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return 'Clip-Zeitstempel';
       default:
         return null;
     }
@@ -192552,6 +192591,8 @@ extension on _StringsEs {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return 'Marca de tiempo del fragmento';
       default:
         return null;
     }
@@ -201034,6 +201075,8 @@ extension on _StringsFr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return 'Horodatage de l\'extrait';
       default:
         return null;
     }
@@ -209488,6 +209531,8 @@ extension on _StringsId {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return 'Stempel waktu klip';
       default:
         return null;
     }
@@ -217963,6 +218008,8 @@ extension on _StringsIt {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return 'Timestamp della clip';
       default:
         return null;
     }
@@ -226367,6 +226414,8 @@ extension on _StringsJa {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return 'クリップの時間';
       default:
         return null;
     }
@@ -234774,6 +234823,8 @@ extension on _StringsKo {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return '클립 타임스탬프';
       default:
         return null;
     }
@@ -243243,6 +243294,8 @@ extension on _StringsNl {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return 'Tijdstempel van fragment';
       default:
         return null;
     }
@@ -251707,6 +251760,8 @@ extension on _StringsPtBr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return 'Marca de tempo do trecho';
       default:
         return null;
     }
@@ -260177,6 +260232,8 @@ extension on _StringsRu {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return 'Метка времени фрагмента';
       default:
         return null;
     }
@@ -268620,6 +268677,8 @@ extension on _StringsTh {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return 'เวลาของคลิป';
       default:
         return null;
     }
@@ -277078,6 +277137,8 @@ extension on _StringsTr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return 'Klip zaman damgası';
       default:
         return null;
     }
@@ -285530,6 +285591,8 @@ extension on _StringsVi {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return 'Dấu thời gian đoạn cắt';
       default:
         return null;
     }
@@ -293911,6 +293974,8 @@ extension on _StringsZhCn {
         return '走代理';
       case 'network_proxy_p2p_mode_mixed':
         return '混合';
+      case 'handlebar_clip_timestamp':
+        return '片段时间';
       default:
         return null;
     }
@@ -302293,6 +302358,8 @@ extension on _StringsZhHk {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'handlebar_clip_timestamp':
+        return '片段時間';
       default:
         return null;
     }
