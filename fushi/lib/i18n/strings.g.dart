@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 70142 (4126 per locale)
 ///
-/// Built on 2026-09-02 at 17:10 UTC
+/// Built on 2026-09-02 at 21:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -15245,7 +15245,7 @@ class _StringsAr extends _StringsEn {
       'يفتح جملة التدريب في صفحة البحث. انقر على كلمة، ثم على +، وراجع الحقول ثم احفظ.';
   @override
   String get video_subtitle_source_search_hint =>
-      'Tap “Find subtitles” above, then pick a source here.';
+      'اضغط على “البحث عن ترجمات” في الأعلى، ثم اختر مصدرًا من هنا.';
 }
 
 // Path: <root>
@@ -25063,7 +25063,7 @@ class _StringsDe extends _StringsEn {
       'Öffnet den Übungssatz auf der Nachschlageseite. Tippen Sie auf ein Wort, dann auf +, prüfen Sie die Felder und speichern Sie.';
   @override
   String get video_subtitle_source_search_hint =>
-      'Tap “Find subtitles” above, then pick a source here.';
+      'Tippe oben auf „Untertitel suchen“ und wähle dann hier eine Quelle aus.';
 }
 
 // Path: <root>
@@ -34931,7 +34931,7 @@ class _StringsEs extends _StringsEn {
       'Abre la frase de práctica en la página de consulta. Toque una palabra, toque +, revise los campos y guarde.';
   @override
   String get video_subtitle_source_search_hint =>
-      'Tap “Find subtitles” above, then pick a source here.';
+      'Toca «Buscar subtítulos» arriba y luego elige una fuente aquí.';
 }
 
 // Path: <root>
@@ -44834,7 +44834,7 @@ class _StringsFr extends _StringsEn {
       'Ouvre la phrase d\'entraînement dans la page de recherche. Touchez un mot, touchez +, vérifiez les champs et enregistrez.';
   @override
   String get video_subtitle_source_search_hint =>
-      'Tap “Find subtitles” above, then pick a source here.';
+      'Appuyez sur « Trouver des sous-titres » ci-dessus, puis choisissez une source ici.';
 }
 
 // Path: <root>
@@ -54550,7 +54550,7 @@ class _StringsId extends _StringsEn {
       'Membuka kalimat latihan di halaman pencarian. Ketuk sebuah kata, ketuk +, periksa kolomnya, lalu simpan.';
   @override
   String get video_subtitle_source_search_hint =>
-      'Tap “Find subtitles” above, then pick a source here.';
+      'Ketuk “Cari subtitle” di atas, lalu pilih sumber di sini.';
 }
 
 // Path: <root>
@@ -64352,7 +64352,7 @@ class _StringsIt extends _StringsEn {
       'Apre la frase di esercizio nella pagina di ricerca. Tocca una parola, tocca +, controlla i campi e salva.';
   @override
   String get video_subtitle_source_search_hint =>
-      'Tap “Find subtitles” above, then pick a source here.';
+      'Tocca “Trova sottotitoli” in alto, poi scegli una sorgente qui.';
 }
 
 // Path: <root>
@@ -73562,7 +73562,7 @@ class _StringsJa extends _StringsEn {
       '練習用の文を辞書ページで開きます。単語をタップし、「＋」をタップして、項目を確認してから保存します。';
   @override
   String get video_subtitle_source_search_hint =>
-      'Tap “Find subtitles” above, then pick a source here.';
+      '上の「字幕を検索」をタップしてから、ここでソースを選んでください。';
 }
 
 // Path: <root>
@@ -82783,7 +82783,7 @@ class _StringsKo extends _StringsEn {
       '단어 찾기 페이지에서 연습 문장을 엽니다. 단어를 탭하고 +를 탭한 뒤, 필드를 확인하고 저장하세요.';
   @override
   String get video_subtitle_source_search_hint =>
-      'Tap “Find subtitles” above, then pick a source here.';
+      '위의 “자막 찾기”를 누른 다음 여기에서 소스를 선택하세요.';
 }
 
 // Path: <root>
@@ -92540,7 +92540,7 @@ class _StringsNl extends _StringsEn {
       'Opent de oefenzin in de opzoekpagina. Tik op een woord, tik op +, controleer de velden en sla op.';
   @override
   String get video_subtitle_source_search_hint =>
-      'Tap “Find subtitles” above, then pick a source here.';
+      'Tik hierboven op “Ondertitels zoeken” en kies daarna hier een bron.';
 }
 
 // Path: <root>
@@ -102351,7 +102351,7 @@ class _StringsPtBr extends _StringsEn {
       'Abre a frase de prática na página de consulta. Toque em uma palavra, toque em +, confira os campos e salve.';
   @override
   String get video_subtitle_source_search_hint =>
-      'Tap “Find subtitles” above, then pick a source here.';
+      'Toque em “Buscar legendas” acima e depois escolha uma fonte aqui.';
 }
 
 // Path: <root>
@@ -112138,7 +112138,7 @@ class _StringsRu extends _StringsEn {
       'Открывает тренировочное предложение на странице поиска. Нажмите на слово, затем на +, проверьте поля и сохраните.';
   @override
   String get video_subtitle_source_search_hint =>
-      'Tap “Find subtitles” above, then pick a source here.';
+      'Нажмите «Найти субтитры» выше, затем выберите источник здесь.';
 }
 
 // Path: <root>
@@ -121730,7 +121730,7 @@ class _StringsTh extends _StringsEn {
       'เปิดประโยคฝึกในหน้าค้นคำ แตะที่คำหนึ่งคำ แตะ + ตรวจดูข้อมูลในช่องต่าง ๆ แล้วบันทึก';
   @override
   String get video_subtitle_source_search_hint =>
-      'Tap “Find subtitles” above, then pick a source here.';
+      'แตะ “ค้นหาคำบรรยาย” ด้านบน แล้วเลือกแหล่งข้อมูลที่นี่';
 }
 
 // Path: <root>
@@ -131436,7 +131436,7 @@ class _StringsTr extends _StringsEn {
       'Alıştırma cümlesini arama sayfasında açar. Bir kelimeye dokunun, + düğmesine dokunun, alanları kontrol edip kaydedin.';
   @override
   String get video_subtitle_source_search_hint =>
-      'Tap “Find subtitles” above, then pick a source here.';
+      'Yukarıdaki “Altyazı bul” düğmesine dokunun, ardından buradan bir kaynak seçin.';
 }
 
 // Path: <root>
@@ -141114,7 +141114,7 @@ class _StringsVi extends _StringsEn {
       'Mở câu luyện tập trong trang tra từ. Chạm vào một từ, chạm +, kiểm tra các trường rồi lưu.';
   @override
   String get video_subtitle_source_search_hint =>
-      'Tap “Find subtitles” above, then pick a source here.';
+      'Nhấn “Tìm phụ đề” ở trên, rồi chọn một nguồn tại đây.';
 }
 
 // Path: <root>
@@ -175851,7 +175851,7 @@ extension on _StringsAr {
       case 'onboarding_first_anki_action_desc':
         return 'يفتح جملة التدريب في صفحة البحث. انقر على كلمة، ثم على +، وراجع الحقول ثم احفظ.';
       case 'video_subtitle_source_search_hint':
-        return 'Tap “Find subtitles” above, then pick a source here.';
+        return 'اضغط على “البحث عن ترجمات” في الأعلى، ثم اختر مصدرًا من هنا.';
       default:
         return null;
     }
@@ -184355,7 +184355,7 @@ extension on _StringsDe {
       case 'onboarding_first_anki_action_desc':
         return 'Öffnet den Übungssatz auf der Nachschlageseite. Tippen Sie auf ein Wort, dann auf +, prüfen Sie die Felder und speichern Sie.';
       case 'video_subtitle_source_search_hint':
-        return 'Tap “Find subtitles” above, then pick a source here.';
+        return 'Tippe oben auf „Untertitel suchen“ und wähle dann hier eine Quelle aus.';
       default:
         return null;
     }
@@ -192851,7 +192851,7 @@ extension on _StringsEs {
       case 'onboarding_first_anki_action_desc':
         return 'Abre la frase de práctica en la página de consulta. Toque una palabra, toque +, revise los campos y guarde.';
       case 'video_subtitle_source_search_hint':
-        return 'Tap “Find subtitles” above, then pick a source here.';
+        return 'Toca «Buscar subtítulos» arriba y luego elige una fuente aquí.';
       default:
         return null;
     }
@@ -201355,7 +201355,7 @@ extension on _StringsFr {
       case 'onboarding_first_anki_action_desc':
         return 'Ouvre la phrase d\'entraînement dans la page de recherche. Touchez un mot, touchez +, vérifiez les champs et enregistrez.';
       case 'video_subtitle_source_search_hint':
-        return 'Tap “Find subtitles” above, then pick a source here.';
+        return 'Appuyez sur « Trouver des sous-titres » ci-dessus, puis choisissez une source ici.';
       default:
         return null;
     }
@@ -209831,7 +209831,7 @@ extension on _StringsId {
       case 'onboarding_first_anki_action_desc':
         return 'Membuka kalimat latihan di halaman pencarian. Ketuk sebuah kata, ketuk +, periksa kolomnya, lalu simpan.';
       case 'video_subtitle_source_search_hint':
-        return 'Tap “Find subtitles” above, then pick a source here.';
+        return 'Ketuk “Cari subtitle” di atas, lalu pilih sumber di sini.';
       default:
         return null;
     }
@@ -218328,7 +218328,7 @@ extension on _StringsIt {
       case 'onboarding_first_anki_action_desc':
         return 'Apre la frase di esercizio nella pagina di ricerca. Tocca una parola, tocca +, controlla i campi e salva.';
       case 'video_subtitle_source_search_hint':
-        return 'Tap “Find subtitles” above, then pick a source here.';
+        return 'Tocca “Trova sottotitoli” in alto, poi scegli una sorgente qui.';
       default:
         return null;
     }
@@ -226754,7 +226754,7 @@ extension on _StringsJa {
       case 'onboarding_first_anki_action_desc':
         return '練習用の文を辞書ページで開きます。単語をタップし、「＋」をタップして、項目を確認してから保存します。';
       case 'video_subtitle_source_search_hint':
-        return 'Tap “Find subtitles” above, then pick a source here.';
+        return '上の「字幕を検索」をタップしてから、ここでソースを選んでください。';
       default:
         return null;
     }
@@ -235183,7 +235183,7 @@ extension on _StringsKo {
       case 'onboarding_first_anki_action_desc':
         return '단어 찾기 페이지에서 연습 문장을 엽니다. 단어를 탭하고 +를 탭한 뒤, 필드를 확인하고 저장하세요.';
       case 'video_subtitle_source_search_hint':
-        return 'Tap “Find subtitles” above, then pick a source here.';
+        return '위의 “자막 찾기”를 누른 다음 여기에서 소스를 선택하세요.';
       default:
         return null;
     }
@@ -243674,7 +243674,7 @@ extension on _StringsNl {
       case 'onboarding_first_anki_action_desc':
         return 'Opent de oefenzin in de opzoekpagina. Tik op een woord, tik op +, controleer de velden en sla op.';
       case 'video_subtitle_source_search_hint':
-        return 'Tap “Find subtitles” above, then pick a source here.';
+        return 'Tik hierboven op “Ondertitels zoeken” en kies daarna hier een bron.';
       default:
         return null;
     }
@@ -252160,7 +252160,7 @@ extension on _StringsPtBr {
       case 'onboarding_first_anki_action_desc':
         return 'Abre a frase de prática na página de consulta. Toque em uma palavra, toque em +, confira os campos e salve.';
       case 'video_subtitle_source_search_hint':
-        return 'Tap “Find subtitles” above, then pick a source here.';
+        return 'Toque em “Buscar legendas” acima e depois escolha uma fonte aqui.';
       default:
         return null;
     }
@@ -260652,7 +260652,7 @@ extension on _StringsRu {
       case 'onboarding_first_anki_action_desc':
         return 'Открывает тренировочное предложение на странице поиска. Нажмите на слово, затем на +, проверьте поля и сохраните.';
       case 'video_subtitle_source_search_hint':
-        return 'Tap “Find subtitles” above, then pick a source here.';
+        return 'Нажмите «Найти субтитры» выше, затем выберите источник здесь.';
       default:
         return null;
     }
@@ -269117,7 +269117,7 @@ extension on _StringsTh {
       case 'onboarding_first_anki_action_desc':
         return 'เปิดประโยคฝึกในหน้าค้นคำ แตะที่คำหนึ่งคำ แตะ + ตรวจดูข้อมูลในช่องต่าง ๆ แล้วบันทึก';
       case 'video_subtitle_source_search_hint':
-        return 'Tap “Find subtitles” above, then pick a source here.';
+        return 'แตะ “ค้นหาคำบรรยาย” ด้านบน แล้วเลือกแหล่งข้อมูลที่นี่';
       default:
         return null;
     }
@@ -277597,7 +277597,7 @@ extension on _StringsTr {
       case 'onboarding_first_anki_action_desc':
         return 'Alıştırma cümlesini arama sayfasında açar. Bir kelimeye dokunun, + düğmesine dokunun, alanları kontrol edip kaydedin.';
       case 'video_subtitle_source_search_hint':
-        return 'Tap “Find subtitles” above, then pick a source here.';
+        return 'Yukarıdaki “Altyazı bul” düğmesine dokunun, ardından buradan bir kaynak seçin.';
       default:
         return null;
     }
@@ -286071,7 +286071,7 @@ extension on _StringsVi {
       case 'onboarding_first_anki_action_desc':
         return 'Mở câu luyện tập trong trang tra từ. Chạm vào một từ, chạm +, kiểm tra các trường rồi lưu.';
       case 'video_subtitle_source_search_hint':
-        return 'Tap “Find subtitles” above, then pick a source here.';
+        return 'Nhấn “Tìm phụ đề” ở trên, rồi chọn một nguồn tại đây.';
       default:
         return null;
     }
