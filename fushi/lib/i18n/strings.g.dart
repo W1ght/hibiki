@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69955 (4115 per locale)
+/// Strings: 69972 (4116 per locale)
 ///
-/// Built on 2026-09-01 at 16:45 UTC
+/// Built on 2026-09-02 at 16:46 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5647,6 +5647,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get network_proxy_p2p_mode_direct => 'Direct';
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -15228,6 +15230,9 @@ class _StringsAr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -25031,6 +25036,9 @@ class _StringsDe extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -34883,6 +34891,9 @@ class _StringsEs extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -44770,6 +44781,9 @@ class _StringsFr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -54474,6 +54488,9 @@ class _StringsId extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -64262,6 +64279,9 @@ class _StringsIt extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -73456,6 +73476,9 @@ class _StringsJa extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -82661,6 +82684,9 @@ class _StringsKo extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -92403,6 +92429,9 @@ class _StringsNl extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -102201,6 +102230,9 @@ class _StringsPtBr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -111975,6 +112007,9 @@ class _StringsRu extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -121550,6 +121585,9 @@ class _StringsTh extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -131240,6 +131278,9 @@ class _StringsTr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -140906,6 +140947,9 @@ class _StringsVi extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
 }
 
 // Path: <root>
@@ -149803,6 +149847,8 @@ class _StringsZhCn extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => '走代理';
   @override
   String get network_proxy_p2p_mode_mixed => '混合';
+  @override
+  String get video_subtitle_source_search_hint => '先点上方的「查找字幕」，再在这里挑一个来源。';
 }
 
 // Path: <root>
@@ -158715,6 +158761,8 @@ class _StringsZhHk extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_subtitle_source_search_hint => '先點上方的「查找字幕」，再在這裡挑一個來源。';
 }
 
 /// Flat map(s) containing all translations.
@@ -167158,6 +167206,8 @@ extension on _StringsEn {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -175596,6 +175646,8 @@ extension on _StringsAr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -184078,6 +184130,8 @@ extension on _StringsDe {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -192552,6 +192606,8 @@ extension on _StringsEs {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -201034,6 +201090,8 @@ extension on _StringsFr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -209488,6 +209546,8 @@ extension on _StringsId {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -217963,6 +218023,8 @@ extension on _StringsIt {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -226367,6 +226429,8 @@ extension on _StringsJa {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -234774,6 +234838,8 @@ extension on _StringsKo {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -243243,6 +243309,8 @@ extension on _StringsNl {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -251707,6 +251775,8 @@ extension on _StringsPtBr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -260177,6 +260247,8 @@ extension on _StringsRu {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -268620,6 +268692,8 @@ extension on _StringsTh {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -277078,6 +277152,8 @@ extension on _StringsTr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -285530,6 +285606,8 @@ extension on _StringsVi {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       default:
         return null;
     }
@@ -293911,6 +293989,8 @@ extension on _StringsZhCn {
         return '走代理';
       case 'network_proxy_p2p_mode_mixed':
         return '混合';
+      case 'video_subtitle_source_search_hint':
+        return '先点上方的「查找字幕」，再在这里挑一个来源。';
       default:
         return null;
     }
@@ -302293,6 +302373,8 @@ extension on _StringsZhHk {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_subtitle_source_search_hint':
+        return '先點上方的「查找字幕」，再在這裡挑一個來源。';
       default:
         return null;
     }
