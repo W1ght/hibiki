@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 70125 (4125 per locale)
 ///
-/// Built on 2026-09-02 at 14:56 UTC
+/// Built on 2026-09-02 at 18:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -14493,11 +14493,11 @@ class _StringsAr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
   @override
-  String get download_direct_queue_section => 'Direct downloads';
+  String get download_direct_queue_section => 'التنزيلات المباشرة';
   @override
-  String get download_task_kind_all => 'All types';
+  String get download_task_kind_all => 'كل الأنواع';
   @override
-  String get download_task_kind_filter => 'Filter by type';
+  String get download_task_kind_filter => 'تصفية حسب النوع';
   @override
   String get manga_online_series_empty => 'لا توجد مجلدات في هذه السلسلة.';
   @override
@@ -14610,11 +14610,11 @@ class _StringsAr extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       'أي زر فأرة يبحث عن الكلمة تحت المؤشر. مستقل عن المفتاح أعلاه: يمكنك إيقاف البحث بالنقر والبحث بزر جانبي.';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => 'النقر الأيسر';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => 'النقر الأوسط';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => 'الزر الجانبي';
   @override
   String get gal_hook_toolbar_auto_hide => 'إخفاء شريط الأدوات تلقائيًا';
   @override
@@ -14763,10 +14763,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get section_network => 'الشبكة';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'وكيل P2P (torrent)';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      'الاتصال مباشر افتراضيًا. عبر الوكيل: تمر كل حركة P2P عبر الوكيل العام — قد تنخفض السرعة، وكثير من مزوّدي الوكلاء يحظرون حركة BitTorrent (تقييد السرعة أو تحذيرات أو إنهاء الحساب). مختلط: تمر طلبات tracker عبر الوكيل بينما تبقى اتصالات DHT والأقران (peer) مباشرة — أوسع اكتشاف للأقران، لكن عنوان IP الحقيقي يكون مرئيًا لـ tracker وDHT والأقران (للاتصال فقط وليس للخصوصية). للمحرك المدمج فقط؛ يستخدم qBittorrent الخارجي إعدادات الوكيل الخاصة به.';
   @override
   String get video_ajatt_settings_hint =>
       'أرشيف مجاني للترجمات اليابانية (مرآة kitsunekko). لا يتطلب حسابًا؛ تُنزَّل ملفات الترجمة من GitHub.';
@@ -14950,132 +14950,132 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_first_anki_action => 'افتح البحث وأنشئ بطاقة';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => 'البحث داخل اللعبة';
   @override
   String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+      'بدون OCR · النص الأساسي الأفقي فقط';
   @override
-  String get game_lookup_attached_mode => 'Mode';
+  String get game_lookup_attached_mode => 'الوضع';
   @override
-  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_auto => 'تلقائي';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only => 'الأصلي فقط';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only => 'الطبقة المعايَرة فقط';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => 'إيقاف';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => 'الحالة';
   @override
-  String get game_lookup_attached_native_status => 'Native';
+  String get game_lookup_attached_native_status => 'الأصلي';
   @override
-  String get game_lookup_attached_provider => 'Provider';
+  String get game_lookup_attached_provider => 'المزوّد';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => 'غير مُبلَّغ';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => 'ملف التعريف';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => 'تمت المعايرة';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => 'لم تتم المعايرة';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => 'درع الإدخال';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => 'تم التحقق';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => 'غير معروف';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => 'جزئي';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered => 'غير مغطى (معروف)';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => 'معطّل';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => 'خطر النقر';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => 'غير مصرّح';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => 'يلزم التأكيد';
   @override
   String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+      'تم قبول الخطر · قد يُشغَّل مرتين';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => 'معايرة';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => 'قبول خطر النقر';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => 'مسح ملف التعريف';
   @override
   String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+      'اختر مسار نص أساسي واحدًا قبل المعايرة.';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title => 'تأكيد خطر النقر المباشر';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      'لم يتم التحقق من درع الإدخال لهذا الملف التنفيذي. قد يؤدي النقر على حرف إلى تقديم الحوار أو تشغيل خيار أيضًا. يُحفظ هذا التصريح فقط لتجزئة الملف التنفيذي الحالي ويُلغى بعد التحديث.';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title => 'معايرة النص الأساسي';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview => 'معاينة النص الأساسي الحالي';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => 'مستطيل النص';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => 'يسار';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => 'أعلى';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => 'العرض';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => 'الارتفاع';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => 'الخط';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size => 'حجم الخط / ارتفاع منطقة العميل';
   @override
   String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+      'تباعد الأحرف / ارتفاع منطقة العميل';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => 'ارتفاع السطر';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => 'المحاذاة الأفقية';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => 'المحاذاة الرأسية';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => 'يسار';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => 'وسط';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => 'يمين';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => 'أعلى';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => 'أسفل';
   @override
   String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      'انقر في اللعبة على الحرف الأول والأوسط والأخير المميّزة، ثم أكّد كل حرف أدناه.';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => 'الحرف الأول';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => 'الحرف الأوسط';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => 'الحرف الأخير';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit => 'حفظ المعايرة';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      'لم يتم تطبيق المعايرة. تحقق من النص الأساسي والنافذة الهدف والمجسّات الثلاثة.';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      'يلزم ثلاثة أحرف على الأقل لمجسّات المعايرة.';
   @override
   String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+      'هل تريد مسح ملف تعريف البحث؟';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      'ستتم إزالة المستطيل المحفوظ وتخطيط النص وتصريح النقر الخاص بهذا الملف التنفيذي.';
   @override
   String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+      'في انتظار نقرة مطابقة داخل اللعبة';
   @override
   String get delete_choices_remember => 'تذكّر هذه الخيارات';
   @override
@@ -15131,53 +15131,50 @@ class _StringsAr extends _StringsEn {
       'بيانات الاعتماد تُستخدم لطلبات HTTP فقط، ومحرك التورنت المدمج لا يمكنه استخدامها';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      'تعذّر إنشاء البطاقة لعدم إمكانية الوصول إلى أي جهاز مقترن. تأكد من تشغيل Fushi على الجهاز المقترن، أو أوقف «إرسال إلى الجهاز المقترن» في إعدادات Anki لإنشاء البطاقات محليًا.';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      'عند الإيقاف، يتم تخطي هذا المصدر في الجلب اليدوي وبعد الفحص وبعد التنزيل وفي الخلفية.';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      'لم يعد هذا العمل ضمن خطة المصدر الحالية (ربما أُعيدت تسمية ملفاته أو نُقلت أو حُذفت). أعد جلب المصدر لتحديث قائمة الانتظار.';
   @override
-  String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+  String get video_source_scrape_pending_works => 'أعمال بانتظار التحديد';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      'لا تملك هذه العناصر هوية مؤكدة بعد. ابحث واختر العمل الصحيح لجلب بياناته.';
   @override
-  String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+  String get video_source_scrape_enabled_toggle => 'تفعيل الجلب لهذا المصدر';
   @override
   String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+      'تعبئة معلومات المسلسل الناقصة تلقائيًا';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      'عند دخول مكتبة الفيديو، يتم جلب بيانات العناصر التي لا تملك هوية مؤكدة بعد. أوقفه لإيقاف جميع تنزيلات البيانات الوصفية في الخلفية.';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => 'غير مجمّع';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty => 'لا يوجد نشاط في هذه الفترة';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => 'مركز الإحصاءات';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => 'نظرة عامة';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => 'إغلاق القاموس';
   @override
-  String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+  String get video_discovery_anidb_identity_confirm_title => 'تأكيد هوية العمل';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'يوجد في AniDB أكثر من مطابقة محتملة. اختر العمل الصحيح ليتم جلب بيانات التنزيل المستورد بهذه الهوية مباشرة؛ أو تخطَّ ذلك لتعيينها لاحقًا من قائمة الانتظار.';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      'تعذّر تحديد هذا العمل على AniDB. سيتم تنزيله بشكل طبيعي وينتظر في قائمة الانتظار للتحديد اليدوي.';
   @override
-  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_direct => 'مباشر';
   @override
-  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  String get network_proxy_p2p_mode_proxy => 'عبر الوكيل';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => 'مختلط';
   @override
   String get onboarding_feature_fonts => 'خطوط مخصّصة';
   @override
@@ -24294,11 +24291,11 @@ class _StringsDe extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
   @override
-  String get download_direct_queue_section => 'Direct downloads';
+  String get download_direct_queue_section => 'Direkte Downloads';
   @override
-  String get download_task_kind_all => 'All types';
+  String get download_task_kind_all => 'Alle Typen';
   @override
-  String get download_task_kind_filter => 'Filter by type';
+  String get download_task_kind_filter => 'Nach Typ filtern';
   @override
   String get manga_online_series_empty => 'Diese Serie enthält keine Bände.';
   @override
@@ -24414,11 +24411,11 @@ class _StringsDe extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       'Welche Maustaste das Wort unter dem Zeiger nachschlägt. Unabhängig vom Schalter oben: Du kannst Tippen-zum-Nachschlagen ausschalten und trotzdem mit einer Seitentaste nachschlagen.';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => 'Linksklick';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => 'Mittelklick';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => 'Seitentaste';
   @override
   String get gal_hook_toolbar_auto_hide =>
       'Werkzeugleiste automatisch ausblenden';
@@ -24569,10 +24566,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get section_network => 'Netzwerk';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'P2P-(Torrent-)Proxy';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      'Standardmäßig direkt. Über Proxy: Der gesamte P2P-Verkehr läuft über den globalen Proxy – die Geschwindigkeit kann sinken, und viele Proxy-Anbieter verbieten BitTorrent-Verkehr (Drosselung, Verwarnungen oder Kontosperrung). Gemischt: Tracker-Anfragen laufen über den Proxy, während DHT- und Peer-Verbindungen direkt bleiben – größte Peer-Reichweite, aber Ihre echte IP ist für Tracker, DHT und Peers sichtbar (nur Konnektivität, keine Privatsphäre). Gilt nur für die integrierte Engine; ein externes qBittorrent verwendet seine eigenen Proxy-Einstellungen.';
   @override
   String get video_ajatt_settings_hint =>
       'Kostenloses Archiv japanischer Untertitel (kitsunekko-Spiegel). Kein Konto nötig; Untertiteldateien werden von GitHub geladen.';
@@ -24762,132 +24759,135 @@ class _StringsDe extends _StringsEn {
   String get onboarding_first_anki_action =>
       'Nachschlagen öffnen und Karte erstellen';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => 'Nachschlagen im Spiel';
   @override
   String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+      'Kein OCR · nur horizontaler Fließtext';
   @override
-  String get game_lookup_attached_mode => 'Mode';
+  String get game_lookup_attached_mode => 'Modus';
   @override
-  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_auto => 'Automatisch';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only => 'Nur nativ';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only => 'Nur kalibrierte Ebene';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => 'Aus';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => 'Zustand';
   @override
-  String get game_lookup_attached_native_status => 'Native';
+  String get game_lookup_attached_native_status => 'Nativ';
   @override
-  String get game_lookup_attached_provider => 'Provider';
+  String get game_lookup_attached_provider => 'Anbieter';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => 'Nicht gemeldet';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => 'Profil';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => 'Kalibriert';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => 'Nicht kalibriert';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => 'Eingabeschutz';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => 'Verifiziert';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => 'Unbekannt';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => 'Teilweise';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered =>
+      'Bekannt nicht abgedeckt';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => 'Fehlerhaft';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => 'Klickrisiko';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => 'Nicht autorisiert';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => 'Bestätigung erforderlich';
   @override
   String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+      'Risiko akzeptiert · kann doppelt auslösen';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => 'Kalibrieren';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => 'Klickrisiko akzeptieren';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => 'Profil löschen';
   @override
   String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+      'Wählen Sie vor der Kalibrierung einen Fließtext-Thread aus.';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title => 'Rohklick-Risiko bestätigen';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      'Der Eingabeschutz ist für diese ausführbare Datei nicht verifiziert. Ein Klick auf eine Glyphe kann auch den Dialog fortsetzen oder eine Auswahl auslösen. Diese Autorisierung wird nur für den aktuellen Hash der ausführbaren Datei gespeichert und nach einem Update widerrufen.';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title => 'Fließtext kalibrieren';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview =>
+      'Vorschau des aktuellen Fließtexts';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => 'Textrechteck';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => 'Links';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => 'Oben';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => 'Breite';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => 'Höhe';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => 'Schriftart';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size => 'Schriftgröße / Clienthöhe';
   @override
   String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+      'Zeichenabstand / Clienthöhe';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => 'Zeilenhöhe';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => 'Horizontale Ausrichtung';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => 'Vertikale Ausrichtung';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => 'Links';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => 'Zentriert';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => 'Rechts';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => 'Oben';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => 'Unten';
   @override
   String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      'Klicken Sie im Spiel auf die erste, mittlere und letzte hervorgehobene Glyphe und bestätigen Sie dann unten jedes Zeichen.';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => 'Erste Glyphe';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => 'Mittlere Glyphe';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => 'Letzte Glyphe';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit =>
+      'Kalibrierung speichern';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      'Die Kalibrierung wurde nicht übernommen. Prüfen Sie den Fließtext, das Zielfenster und alle drei Prüfpunkte.';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      'Für die Kalibrierungs-Prüfpunkte sind mindestens drei Zeichen erforderlich.';
   @override
   String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+      'Nachschlageprofil löschen?';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      'Das gespeicherte Rechteck, das Textlayout und die für diese ausführbare Datei erteilte Klick-Autorisierung werden entfernt.';
   @override
   String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+      'Warten auf passenden Klick im Spiel';
   @override
   String get delete_choices_remember => 'Diese Auswahl merken';
   @override
@@ -24944,53 +24944,53 @@ class _StringsDe extends _StringsEn {
       'Zugangsdaten gelten nur für HTTP-Anfragen; die integrierte Torrent-Engine kann sie nicht verwenden';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      'Die Karte konnte nicht erstellt werden, da kein gekoppeltes Gerät erreichbar war. Stellen Sie sicher, dass Fushi auf dem gekoppelten Gerät läuft, oder deaktivieren Sie „An gekoppeltes Gerät senden“ in den Anki-Einstellungen, um Karten lokal zu erstellen.';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      'Wenn deaktiviert, überspringen manueller Abruf sowie Abruf nach dem Scan, nach dem Download und im Hintergrund diese Quelle.';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      'Dieses Werk ist nicht mehr im aktuellen Quellenplan enthalten (seine Dateien wurden möglicherweise umbenannt, verschoben oder gelöscht). Rufen Sie die Quelle erneut ab, um die Liste der ausstehenden Werke zu aktualisieren.';
   @override
   String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+      'Werke mit ausstehender Identifizierung';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      'Diese Einträge haben noch keine bestätigte Identität. Suchen Sie das richtige Werk und wählen Sie es aus, um sie abzurufen.';
   @override
   String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+      'Abruf für diese Quelle aktivieren';
   @override
   String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+      'Fehlende Serieninfos automatisch ergänzen';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      'Beim Öffnen der Videobibliothek werden Einträge ohne bestätigte Identität abgerufen. Deaktivieren, um alle Metadaten-Downloads im Hintergrund zu stoppen.';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => 'Nicht gruppiert';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty => 'Keine Aktivität in diesem Zeitraum';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => 'Statistikzentrale';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => 'Übersicht';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => 'Wörterbuch schließen';
   @override
   String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+      'Identität des Werks bestätigen';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'AniDB hat mehr als einen möglichen Treffer. Wählen Sie das richtige Werk, dann wird der importierte Download direkt mit dieser Identität abgerufen; beim Überspringen können Sie es später aus der Liste der ausstehenden Werke zuweisen.';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      'Dieses Werk konnte auf AniDB nicht identifiziert werden. Es wird normal heruntergeladen und wartet in der Liste der ausstehenden Werke auf manuelle Identifizierung.';
   @override
-  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_direct => 'Direkt';
   @override
-  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  String get network_proxy_p2p_mode_proxy => 'Über Proxy';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => 'Gemischt';
   @override
   String get onboarding_feature_fonts => 'Eigene Schriften';
   @override
@@ -34154,11 +34154,11 @@ class _StringsEs extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
   @override
-  String get download_direct_queue_section => 'Direct downloads';
+  String get download_direct_queue_section => 'Descargas directas';
   @override
-  String get download_task_kind_all => 'All types';
+  String get download_task_kind_all => 'Todos los tipos';
   @override
-  String get download_task_kind_filter => 'Filter by type';
+  String get download_task_kind_filter => 'Filtrar por tipo';
   @override
   String get manga_online_series_empty => 'Esta serie no tiene volúmenes.';
   @override
@@ -34275,11 +34275,11 @@ class _StringsEs extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       'Qué botón del ratón busca la palabra bajo el puntero. Es independiente del interruptor de arriba: puedes desactivar la búsqueda por toque y seguir buscando con un botón lateral.';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => 'Clic izquierdo';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => 'Clic central';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => 'Botón lateral';
   @override
   String get gal_hook_toolbar_auto_hide => 'Ocultar la barra automáticamente';
   @override
@@ -34429,10 +34429,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get section_network => 'Red';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'Proxy P2P (torrent)';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      'Directo de forma predeterminada. A través del proxy: todo el tráfico P2P pasa por el proxy global — la velocidad puede bajar y muchos proveedores de proxy prohíben el tráfico BitTorrent (limitación de velocidad, advertencias o cierre de la cuenta). Mixto: las solicitudes al tracker pasan por el proxy mientras que DHT y las conexiones con peers siguen siendo directas — máxima detección de peers, pero su IP real es visible para trackers, DHT y peers (solo conectividad, no privacidad). Solo para el motor integrado; qBittorrent externo usa su propia configuración de proxy.';
   @override
   String get video_ajatt_settings_hint =>
       'Archivo gratuito de subtítulos en japonés (réplica de kitsunekko). No requiere cuenta; los archivos se descargan desde GitHub.';
@@ -34625,132 +34625,136 @@ class _StringsEs extends _StringsEn {
   String get onboarding_first_anki_action =>
       'Abrir la consulta y crear una tarjeta';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => 'Búsqueda dentro del juego';
   @override
   String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+      'Sin OCR · solo texto horizontal del diálogo';
   @override
-  String get game_lookup_attached_mode => 'Mode';
+  String get game_lookup_attached_mode => 'Modo';
   @override
-  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_auto => 'Automático';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only => 'Solo nativo';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only => 'Solo capa calibrada';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => 'Desactivado';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => 'Estado';
   @override
-  String get game_lookup_attached_native_status => 'Native';
+  String get game_lookup_attached_native_status => 'Nativo';
   @override
-  String get game_lookup_attached_provider => 'Provider';
+  String get game_lookup_attached_provider => 'Proveedor';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => 'No informado';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => 'Perfil';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => 'Calibrado';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => 'Sin calibrar';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => 'Escudo de entrada';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => 'Verificado';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => 'Desconocido';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => 'Parcial';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered =>
+      'Sin cobertura (conocido)';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => 'Con fallo';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => 'Riesgo de clic';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => 'No autorizado';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => 'Confirmación requerida';
   @override
   String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+      'Riesgo aceptado · puede activarse dos veces';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => 'Calibrar';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => 'Aceptar riesgo de clic';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => 'Borrar perfil';
   @override
   String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+      'Seleccione un hilo de texto del diálogo antes de calibrar.';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title =>
+      'Confirmar riesgo de clic directo';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      'El escudo de entrada no está verificado para este ejecutable. Hacer clic en un glifo también puede avanzar el diálogo o activar una opción. Esta autorización se guarda solo para el hash del ejecutable actual y se revoca tras una actualización.';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title =>
+      'Calibrar texto del diálogo';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview => 'Vista previa del texto actual';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => 'Rectángulo del texto';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => 'Izquierda';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => 'Arriba';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => 'Ancho';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => 'Alto';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => 'Familia de fuente';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size =>
+      'Tamaño de fuente / alto del área cliente';
   @override
   String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+      'Espaciado de letras / alto del área cliente';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => 'Altura de línea';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => 'Alineación horizontal';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => 'Alineación vertical';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => 'Izquierda';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => 'Centro';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => 'Derecha';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => 'Arriba';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => 'Abajo';
   @override
   String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      'Haga clic en el primer, el intermedio y el último glifo resaltados en el juego y luego confirme cada carácter abajo.';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => 'Primer glifo';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => 'Glifo intermedio';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => 'Último glifo';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit => 'Guardar calibración';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      'La calibración no se aplicó. Compruebe el texto del diálogo, la ventana de destino y las tres sondas.';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      'Se necesitan al menos tres caracteres para las sondas de calibración.';
   @override
   String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+      '¿Borrar el perfil de búsqueda?';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      'Se eliminarán el rectángulo guardado, la disposición del texto y la autorización de clic específica del ejecutable.';
   @override
   String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+      'Esperando el clic correspondiente en el juego';
   @override
   String get delete_choices_remember => 'Recordar estas opciones';
   @override
@@ -34809,53 +34813,53 @@ class _StringsEs extends _StringsEn {
       'Las credenciales solo se aplican a las solicitudes HTTP; el motor de torrents integrado no puede usarlas';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      'No se pudo crear la tarjeta porque no se pudo alcanzar ningún dispositivo emparejado. Asegúrese de que Fushi esté en ejecución en el dispositivo emparejado o desactive «Enviar al dispositivo emparejado» en Configuración de Anki para crear tarjetas localmente.';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      'Si está desactivado, la obtención de metadatos manual, tras el escaneo, tras la descarga y en segundo plano omitirá esta fuente.';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      'Esta obra ya no está en el plan actual de la fuente (sus archivos pueden haberse renombrado, movido o eliminado). Vuelva a obtener los metadatos de la fuente para actualizar la lista de pendientes.';
   @override
   String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+      'Obras pendientes de identificación';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      'Estas entradas aún no tienen una identidad confirmada. Busque y elija la obra correcta para obtener sus metadatos.';
   @override
   String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+      'Habilitar la obtención de metadatos para esta fuente';
   @override
   String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+      'Completar automáticamente la información de serie faltante';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      'Al entrar en la biblioteca de vídeo se obtienen los metadatos de las entradas que aún no tienen identidad confirmada. Desactívelo para detener todas las descargas de metadatos en segundo plano.';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => 'Sin agrupar';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty => 'Sin actividad en este periodo';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => 'Centro de estadísticas';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => 'Resumen';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => 'Cerrar diccionario';
   @override
   String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+      'Confirmar la identidad de la obra';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'AniDB tiene más de una coincidencia posible. Elija la obra correcta y la descarga importada obtendrá los metadatos con esa identidad directamente; si la omite, podrá asignarla más tarde desde la lista de pendientes.';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      'No se pudo identificar esta obra en AniDB. Se descargará normalmente y esperará en la lista de pendientes para su identificación manual.';
   @override
-  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_direct => 'Directo';
   @override
-  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  String get network_proxy_p2p_mode_proxy => 'A través del proxy';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => 'Mixto';
   @override
   String get onboarding_feature_fonts => 'Fuentes personalizadas';
   @override
@@ -44050,11 +44054,11 @@ class _StringsFr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
   @override
-  String get download_direct_queue_section => 'Direct downloads';
+  String get download_direct_queue_section => 'Téléchargements directs';
   @override
-  String get download_task_kind_all => 'All types';
+  String get download_task_kind_all => 'Tous les types';
   @override
-  String get download_task_kind_filter => 'Filter by type';
+  String get download_task_kind_filter => 'Filtrer par type';
   @override
   String get manga_online_series_empty => 'Aucun volume dans cette série.';
   @override
@@ -44171,11 +44175,11 @@ class _StringsFr extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       'Quel bouton de la souris cherche le mot sous le pointeur. Indépendant du réglage ci-dessus : vous pouvez désactiver la recherche au toucher et chercher quand même avec un bouton latéral.';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => 'Clic gauche';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => 'Clic molette';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => 'Bouton latéral';
   @override
   String get gal_hook_toolbar_auto_hide => 'Masquer la barre automatiquement';
   @override
@@ -44326,10 +44330,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get section_network => 'Réseau';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'Proxy P2P (torrent)';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      'Direct par défaut. Via proxy : tout le trafic P2P passe par le proxy global — la vitesse peut baisser, et de nombreux fournisseurs de proxy interdisent le trafic BitTorrent (bridage, avertissements ou résiliation du compte). Mixte : les requêtes tracker passent par le proxy tandis que les connexions DHT et pairs restent directes — découverte de pairs la plus large, mais votre vraie IP est visible des trackers, du DHT et des pairs (connectivité uniquement, pas de confidentialité). Moteur intégré uniquement ; un qBittorrent externe utilise ses propres paramètres de proxy.';
   @override
   String get video_ajatt_settings_hint =>
       'Archive gratuite de sous-titres japonais (miroir kitsunekko). Aucun compte requis ; les fichiers sont téléchargés depuis GitHub.';
@@ -44524,132 +44528,138 @@ class _StringsFr extends _StringsEn {
   String get onboarding_first_anki_action =>
       'Ouvrir la recherche et créer une carte';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => 'Recherche en jeu';
   @override
   String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+      'Sans OCR · corps de texte horizontal uniquement';
   @override
   String get game_lookup_attached_mode => 'Mode';
   @override
   String get game_lookup_attached_mode_auto => 'Auto';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only => 'Natif uniquement';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only =>
+      'Couche calibrée uniquement';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => 'Désactivé';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => 'État';
   @override
-  String get game_lookup_attached_native_status => 'Native';
+  String get game_lookup_attached_native_status => 'Natif';
   @override
-  String get game_lookup_attached_provider => 'Provider';
+  String get game_lookup_attached_provider => 'Fournisseur';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => 'Non signalé';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => 'Profil';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => 'Calibré';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => 'Non calibré';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => 'Bouclier de saisie';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => 'Vérifié';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => 'Inconnu';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => 'Partiel';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered =>
+      'Non couvert (connu)';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => 'En défaut';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => 'Risque de clic';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => 'Non autorisé';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => 'Confirmation requise';
   @override
   String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+      'Risque accepté · double déclenchement possible';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => 'Calibrer';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => 'Accepter le risque de clic';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => 'Effacer le profil';
   @override
   String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+      'Sélectionnez un fil de corps de texte avant le calibrage.';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title =>
+      'Confirmer le risque de clic brut';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      'Le bouclier de saisie n\'est pas vérifié pour cet exécutable. Cliquer sur un glyphe peut aussi faire avancer le dialogue ou déclencher un choix. Cette autorisation n\'est enregistrée que pour le hachage de l\'exécutable actuel et est révoquée après une mise à jour.';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title =>
+      'Calibrer le corps de texte';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview => 'Aperçu du corps de texte actuel';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => 'Rectangle du texte';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => 'Gauche';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => 'Haut';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => 'Largeur';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => 'Hauteur';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => 'Police';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size =>
+      'Taille de police / hauteur client';
   @override
   String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+      'Espacement des lettres / hauteur client';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => 'Hauteur de ligne';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => 'Alignement horizontal';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => 'Alignement vertical';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => 'Gauche';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => 'Centré';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => 'Droite';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => 'Haut';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => 'Bas';
   @override
   String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      'Cliquez dans le jeu sur le premier glyphe surligné, celui du milieu et le dernier, puis confirmez chaque caractère ci-dessous.';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => 'Premier glyphe';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => 'Glyphe du milieu';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => 'Dernier glyphe';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit =>
+      'Enregistrer le calibrage';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      'Le calibrage n\'a pas été appliqué. Vérifiez le corps de texte, la fenêtre cible et les trois sondes.';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      'Au moins trois caractères sont nécessaires pour les sondes de calibrage.';
   @override
   String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+      'Effacer le profil de recherche ?';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      'Le rectangle enregistré, la mise en page du texte et l\'autorisation de clic propre à cet exécutable seront supprimés.';
   @override
   String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+      'En attente du clic correspondant dans le jeu';
   @override
   String get delete_choices_remember => 'Mémoriser ces choix';
   @override
@@ -44708,53 +44718,53 @@ class _StringsFr extends _StringsEn {
       'Les identifiants ne s\'appliquent qu\'aux requêtes HTTP ; le moteur torrent intégré ne peut pas les utiliser';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      'Impossible de créer la carte, car aucun appareil apparié n\'a pu être joint. Assurez-vous que Fushi est lancé sur l\'appareil apparié, ou désactivez « Envoyer au périphérique apparié » dans les Paramètres Anki pour créer les cartes localement.';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      'Si désactivé, la récupération manuelle, après scan, après téléchargement et en arrière-plan ignore cette source.';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      'Cette œuvre ne figure plus dans le plan actuel de la source (ses fichiers ont peut-être été renommés, déplacés ou supprimés). Rerécupérez la source pour actualiser la liste des œuvres en attente.';
   @override
   String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+      'Œuvres en attente d\'identification';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      'Ces entrées n\'ont pas encore d\'identité confirmée. Recherchez et choisissez la bonne œuvre pour les récupérer.';
   @override
   String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+      'Activer la récupération pour cette source';
   @override
   String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+      'Compléter automatiquement les infos de série manquantes';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      'À l\'ouverture de la bibliothèque vidéo, les entrées sans identité confirmée sont récupérées. Désactivez pour arrêter tous les téléchargements de métadonnées en arrière-plan.';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => 'Non groupé';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty => 'Aucune activité sur cette période';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => 'Centre de statistiques';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => 'Vue d\'ensemble';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => 'Fermer le dictionnaire';
   @override
   String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+      'Confirmer l\'identité de l\'œuvre';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'AniDB propose plusieurs correspondances possibles. Choisissez la bonne œuvre et le téléchargement importé sera récupéré directement avec cette identité ; en passant, vous pourrez l\'attribuer plus tard depuis la liste des œuvres en attente.';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      'Impossible d\'identifier cette œuvre sur AniDB. Elle sera téléchargée normalement et attendra dans la liste des œuvres en attente une identification manuelle.';
   @override
   String get network_proxy_p2p_mode_direct => 'Direct';
   @override
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => 'Mixte';
   @override
   String get onboarding_feature_fonts => 'Polices personnalisées';
   @override
@@ -53780,11 +53790,11 @@ class _StringsId extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
   @override
-  String get download_direct_queue_section => 'Direct downloads';
+  String get download_direct_queue_section => 'Unduhan langsung';
   @override
-  String get download_task_kind_all => 'All types';
+  String get download_task_kind_all => 'Semua jenis';
   @override
-  String get download_task_kind_filter => 'Filter by type';
+  String get download_task_kind_filter => 'Filter menurut jenis';
   @override
   String get manga_online_series_empty => 'Seri ini tidak memiliki volume.';
   @override
@@ -53899,11 +53909,11 @@ class _StringsId extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       'Tombol tetikus mana yang mencari kata di bawah penunjuk. Terpisah dari sakelar di atas: kamu bisa mematikan ketuk-untuk-cari dan tetap mencari dengan tombol samping.';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => 'Klik kiri';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => 'Klik tengah';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => 'Tombol samping';
   @override
   String get gal_hook_toolbar_auto_hide => 'Sembunyikan bilah otomatis';
   @override
@@ -54053,10 +54063,10 @@ class _StringsId extends _StringsEn {
   @override
   String get section_network => 'Jaringan';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'Proksi P2P (torrent)';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      'Langsung secara default. Lewat proksi: semua lalu lintas P2P melewati proksi global — kecepatan bisa turun, dan banyak penyedia proksi melarang lalu lintas BitTorrent (pembatasan kecepatan, peringatan, atau penutupan akun). Campuran: permintaan tracker melewati proksi sedangkan koneksi DHT dan peer tetap langsung — penemuan peer paling luas, tetapi IP asli Anda terlihat oleh tracker, DHT, dan peer (hanya untuk konektivitas, bukan privasi). Hanya berlaku untuk mesin bawaan; qBittorrent eksternal memakai pengaturan proksinya sendiri.';
   @override
   String get video_ajatt_settings_hint =>
       'Arsip subtitle bahasa Jepang gratis (cermin kitsunekko). Tidak perlu akun; berkas subtitle diunduh dari GitHub.';
@@ -54240,132 +54250,134 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_first_anki_action => 'Buka pencarian dan buat kartu';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => 'Pencarian dalam game';
   @override
   String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+      'Tanpa OCR · hanya teks dialog horizontal';
   @override
   String get game_lookup_attached_mode => 'Mode';
   @override
-  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_auto => 'Otomatis';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only => 'Hanya native';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only =>
+      'Hanya lapisan terkalibrasi';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => 'Nonaktif';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => 'Status';
   @override
   String get game_lookup_attached_native_status => 'Native';
   @override
-  String get game_lookup_attached_provider => 'Provider';
+  String get game_lookup_attached_provider => 'Penyedia';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => 'Tidak dilaporkan';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => 'Profil';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => 'Terkalibrasi';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => 'Belum dikalibrasi';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => 'Perisai input';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => 'Terverifikasi';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => 'Tidak diketahui';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => 'Sebagian';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered =>
+      'Diketahui tidak tercakup';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => 'Bermasalah';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => 'Risiko klik';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => 'Belum diizinkan';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => 'Perlu konfirmasi';
   @override
   String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+      'Risiko diterima · bisa terpicu ganda';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => 'Kalibrasi';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => 'Terima risiko klik';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => 'Hapus profil';
   @override
   String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+      'Pilih satu thread teks dialog sebelum kalibrasi.';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title => 'Konfirmasi risiko klik mentah';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      'Perisai input belum terverifikasi untuk executable ini. Mengklik glif juga bisa memajukan dialog atau memicu pilihan. Izin ini hanya disimpan untuk hash executable saat ini dan dicabut setelah pembaruan.';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title => 'Kalibrasi teks dialog';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview => 'Pratinjau teks dialog saat ini';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => 'Kotak teks dialog';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => 'Kiri';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => 'Atas';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => 'Lebar';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => 'Tinggi';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => 'Jenis font';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size => 'Ukuran font / tinggi klien';
   @override
   String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+      'Jarak huruf / tinggi klien';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => 'Tinggi baris';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => 'Perataan horizontal';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => 'Perataan vertikal';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => 'Kiri';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => 'Tengah';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => 'Kanan';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => 'Atas';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => 'Bawah';
   @override
   String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      'Klik glif pertama, tengah, dan terakhir yang disorot di dalam game, lalu konfirmasi setiap karakter di bawah.';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => 'Glif pertama';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => 'Glif tengah';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => 'Glif terakhir';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit => 'Simpan kalibrasi';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      'Kalibrasi tidak diterapkan. Periksa teks dialog, jendela target, dan ketiga probe.';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      'Diperlukan minimal tiga karakter untuk probe kalibrasi.';
   @override
   String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+      'Hapus profil pencarian?';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      'Kotak yang tersimpan, tata letak teks, dan izin klik khusus executable ini akan dihapus.';
   @override
   String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+      'Menunggu klik yang cocok di dalam game';
   @override
   String get delete_choices_remember => 'Ingat pilihan ini';
   @override
@@ -54422,53 +54434,52 @@ class _StringsId extends _StringsEn {
       'Kredensial hanya berlaku untuk permintaan HTTP; mesin torrent bawaan tidak dapat menggunakannya';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      'Tidak dapat membuat kartu karena tidak ada perangkat berpasangan yang bisa dijangkau. Pastikan Fushi berjalan di perangkat berpasangan, atau nonaktifkan Kirim kartu ke perangkat berpasangan di Pengaturan Anki untuk membuat kartu secara lokal.';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      'Jika nonaktif, scraping manual, pasca-pemindaian, pasca-unduhan, dan latar belakang semuanya melewati sumber ini.';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      'Karya ini sudah tidak ada dalam rencana sumber saat ini (filenya mungkin telah diganti nama, dipindahkan, atau dihapus). Scrape ulang sumber ini untuk menyegarkan daftar tertunda.';
   @override
-  String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+  String get video_source_scrape_pending_works => 'Karya menunggu identifikasi';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      'Entri ini belum memiliki identitas yang dikonfirmasi. Cari dan pilih karya yang benar untuk men-scrape-nya.';
   @override
   String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+      'Aktifkan scraping untuk sumber ini';
   @override
   String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+      'Isi otomatis info seri yang hilang';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      'Saat masuk ke perpustakaan video, entri yang belum memiliki identitas terkonfirmasi akan di-scrape. Nonaktifkan untuk menghentikan semua unduhan metadata latar belakang.';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => 'Tidak dikelompokkan';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty => 'Tidak ada aktivitas pada periode ini';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => 'Pusat statistik';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => 'Ringkasan';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => 'Tutup kamus';
   @override
   String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+      'Konfirmasi identitas karya';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'AniDB memiliki lebih dari satu kemungkinan kecocokan. Pilih karya yang benar dan unduhan yang diimpor akan langsung di-scrape dengan identitas itu; lewati dan Anda dapat menetapkannya nanti dari daftar tertunda.';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      'Tidak dapat mengidentifikasi karya ini di AniDB. Karya akan diunduh seperti biasa dan menunggu di daftar tertunda untuk identifikasi manual.';
   @override
-  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_direct => 'Langsung';
   @override
-  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  String get network_proxy_p2p_mode_proxy => 'Lewat proksi';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => 'Campuran';
   @override
   String get onboarding_feature_fonts => 'Font kustom';
   @override
@@ -63570,11 +63581,11 @@ class _StringsIt extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
   @override
-  String get download_direct_queue_section => 'Direct downloads';
+  String get download_direct_queue_section => 'Download diretti';
   @override
-  String get download_task_kind_all => 'All types';
+  String get download_task_kind_all => 'Tutti i tipi';
   @override
-  String get download_task_kind_filter => 'Filter by type';
+  String get download_task_kind_filter => 'Filtra per tipo';
   @override
   String get manga_online_series_empty => 'Nessun volume in questa serie.';
   @override
@@ -63691,11 +63702,11 @@ class _StringsIt extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       'Quale tasto del mouse cerca la parola sotto il puntatore. Indipendente dall’interruttore qui sopra: puoi disattivare il tocco-per-cercare e cercare comunque con un tasto laterale.';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => 'Clic sinistro';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => 'Clic centrale';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => 'Pulsante laterale';
   @override
   String get gal_hook_toolbar_auto_hide => 'Nascondi la barra automaticamente';
   @override
@@ -63844,10 +63855,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get section_network => 'Rete';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'Proxy P2P (torrent)';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      'Diretto per impostazione predefinita. Via proxy: tutto il traffico P2P passa dal proxy globale — la velocità può calare e molti provider proxy vietano il traffico BitTorrent (limitazioni, avvisi o chiusura dell\'account). Misto: le richieste ai tracker passano dal proxy mentre DHT e connessioni ai peer restano dirette — massima scoperta dei peer, ma il tuo IP reale è visibile a tracker, DHT e peer (solo connettività, non privacy). Solo per il motore integrato; qBittorrent esterno usa le proprie impostazioni proxy.';
   @override
   String get video_ajatt_settings_hint =>
       'Archivio gratuito di sottotitoli giapponesi (mirror kitsunekko). Nessun account richiesto; i file vengono scaricati da GitHub.';
@@ -64039,132 +64050,136 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_first_anki_action => 'Apri la ricerca e crea una carta';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => 'Ricerca in-game';
   @override
   String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+      'Senza OCR · solo testo orizzontale dei dialoghi';
   @override
-  String get game_lookup_attached_mode => 'Mode';
+  String get game_lookup_attached_mode => 'Modalità';
   @override
-  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_auto => 'Automatica';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only => 'Solo nativo';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only =>
+      'Solo livello calibrato';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => 'Disattivata';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => 'Stato';
   @override
-  String get game_lookup_attached_native_status => 'Native';
+  String get game_lookup_attached_native_status => 'Nativo';
   @override
   String get game_lookup_attached_provider => 'Provider';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => 'Non segnalato';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => 'Profilo';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => 'Calibrato';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => 'Non calibrato';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => 'Scudo input';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => 'Verificato';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => 'Sconosciuto';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => 'Parziale';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered =>
+      'Non coperto (noto)';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => 'In errore';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => 'Rischio clic';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => 'Non autorizzato';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => 'Conferma richiesta';
   @override
   String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+      'Rischio accettato · possibile doppia attivazione';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => 'Calibra';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => 'Accetta rischio clic';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => 'Cancella profilo';
   @override
   String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+      'Seleziona un thread di testo dei dialoghi prima della calibrazione.';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title => 'Conferma rischio clic diretto';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      'Lo scudo input non è verificato per questo eseguibile. Cliccare su un glifo potrebbe anche far avanzare il dialogo o attivare una scelta. Questa autorizzazione è salvata solo per l\'hash dell\'eseguibile attuale e viene revocata dopo un aggiornamento.';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title =>
+      'Calibra testo dei dialoghi';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview => 'Anteprima del testo attuale';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => 'Rettangolo del testo';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => 'Sinistra';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => 'Alto';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => 'Larghezza';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => 'Altezza';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => 'Famiglia di font';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size =>
+      'Dimensione font / altezza area client';
   @override
   String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+      'Spaziatura lettere / altezza area client';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => 'Altezza riga';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => 'Allineamento orizzontale';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => 'Allineamento verticale';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => 'Sinistra';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => 'Centro';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => 'Destra';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => 'Alto';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => 'Basso';
   @override
   String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      'Clicca nel gioco sul primo, sul centrale e sull\'ultimo glifo evidenziati, poi conferma ogni carattere qui sotto.';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => 'Primo glifo';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => 'Glifo centrale';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => 'Ultimo glifo';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit => 'Salva calibrazione';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      'La calibrazione non è stata applicata. Controlla il testo dei dialoghi, la finestra di destinazione e tutte e tre le sonde.';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      'Servono almeno tre caratteri per le sonde di calibrazione.';
   @override
   String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+      'Cancellare il profilo di ricerca?';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      'Il rettangolo salvato, il layout del testo e l\'autorizzazione al clic specifica dell\'eseguibile verranno rimossi.';
   @override
   String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+      'In attesa del clic corrispondente nel gioco';
   @override
   String get delete_choices_remember => 'Ricorda queste scelte';
   @override
@@ -64221,53 +64236,53 @@ class _StringsIt extends _StringsEn {
       'Le credenziali valgono solo per le richieste HTTP; il motore torrent integrato non può usarle';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      'Impossibile creare la carta perché nessun dispositivo accoppiato è raggiungibile. Assicurati che Fushi sia in esecuzione sul dispositivo accoppiato, oppure disattiva "Invia al dispositivo accoppiato" in Impostazioni Anki per creare le carte in locale.';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      'Se disattivato, lo scrape manuale, dopo la scansione, dopo il download e in background salterà questa fonte.';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      'Quest\'opera non è più nel piano attuale della fonte (i suoi file potrebbero essere stati rinominati, spostati o eliminati). Ri-scrape la fonte per aggiornare l\'elenco in attesa.';
   @override
   String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+      'Opere in attesa di identificazione';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      'Queste voci non hanno ancora un\'identità confermata. Cerca e scegli l\'opera corretta per eseguirne lo scrape.';
   @override
   String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+      'Abilita lo scrape per questa fonte';
   @override
   String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+      'Completa automaticamente le info serie mancanti';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      'All\'apertura della libreria video viene eseguito lo scrape delle voci che non hanno ancora un\'identità confermata. Disattiva per interrompere tutti i download di metadati in background.';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => 'Non raggruppato';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty => 'Nessuna attività in questo periodo';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => 'Centro statistiche';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => 'Panoramica';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => 'Chiudi dizionario';
   @override
   String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+      'Conferma l\'identità dell\'opera';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'AniDB ha più di una corrispondenza possibile. Scegli l\'opera corretta e il download importato eseguirà lo scrape direttamente con quell\'identità; se salti, potrai assegnarla in seguito dall\'elenco in attesa.';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      'Impossibile identificare quest\'opera su AniDB. Verrà scaricata normalmente e resterà nell\'elenco in attesa per l\'identificazione manuale.';
   @override
-  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_direct => 'Diretto';
   @override
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => 'Misto';
   @override
   String get onboarding_feature_fonts => 'Font personalizzati';
   @override
@@ -72926,11 +72941,11 @@ class _StringsJa extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       'ポインタの下の単語を引くマウスボタン。上のスイッチとは独立です：タップで引くのをオフにしたまま、サイドボタンで引けます。';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => '左クリック';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => '中クリック';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => 'サイドボタン';
   @override
   String get gal_hook_toolbar_auto_hide => 'ツールバーを自動で隠す';
   @override
@@ -73074,10 +73089,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get section_network => 'ネットワーク';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'P2P（torrent）プロキシ';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      '既定では直接接続します。プロキシ経由：すべての P2P 通信がグローバルプロキシを経由します——速度が低下する場合があり、多くのプロキシ事業者は BitTorrent 通信を禁止しています（帯域制限、警告、アカウント停止など）。混合：tracker への要求のみプロキシを経由し、DHT と peer 接続は直接接続のままです——peer の発見範囲は最も広くなりますが、実際の IP が tracker・DHT・peer に見えます（接続性のみで、プライバシー保護にはなりません）。内蔵エンジンのみに適用されます。外部の qBittorrent は独自のプロキシ設定を使用します。';
   @override
   String get video_ajatt_settings_hint =>
       '無料の日本語字幕アーカイブ（kitsunekko ミラー）。アカウント不要。字幕ファイルは GitHub からダウンロードされます。';
@@ -73255,132 +73270,127 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_first_anki_action => '辞書ページを開いてカードを作る';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => 'ゲーム内辞書検索';
   @override
-  String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+  String get game_lookup_attached_no_ocr => 'OCR 不使用・横書き本文のみ';
   @override
-  String get game_lookup_attached_mode => 'Mode';
+  String get game_lookup_attached_mode => 'モード';
   @override
-  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_auto => '自動';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only => 'ネイティブのみ';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only => '校正レイヤーのみ';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => 'オフ';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => '状態';
   @override
-  String get game_lookup_attached_native_status => 'Native';
+  String get game_lookup_attached_native_status => 'ネイティブ';
   @override
-  String get game_lookup_attached_provider => 'Provider';
+  String get game_lookup_attached_provider => '提供元';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => '未報告';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => 'プロファイル';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => '校正済み';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => '未校正';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => '入力シールド';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => '検証済み';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => '不明';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => '一部';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered => '未対応（既知）';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => '障害';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => 'クリックリスク';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => '未承認';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => '確認が必要';
   @override
-  String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+  String get game_lookup_attached_risk_active => 'リスク承認済み・二重反応の可能性あり';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => '校正';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => 'クリックリスクを承認';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => 'プロファイルを消去';
   @override
   String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+      '校正の前に本文スレッドを 1 つ選択してください。';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title => '生クリックのリスクを確認';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      'この実行ファイルでは入力シールドが検証されていません。文字をクリックすると、会話が進んだり選択肢が選ばれたりする可能性があります。この承認は現在の実行ファイルのハッシュにのみ保存され、更新後は無効になります。';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title => '本文を校正';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview => '現在の本文プレビュー';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => '本文の矩形';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => '左';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => '上';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => '幅';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => '高さ';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => 'フォント';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size => 'フォントサイズ / クライアント高さ';
   @override
-  String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+  String get game_lookup_attached_letter_spacing => '文字間隔 / クライアント高さ';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => '行の高さ';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => '水平方向の配置';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => '垂直方向の配置';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => '左揃え';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => '中央揃え';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => '右揃え';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => '上揃え';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => '下揃え';
   @override
   String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      'ゲーム内でハイライトされた最初・中間・最後の文字を順にクリックし、下で各文字を確認してください。';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => '最初の文字';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => '中間の文字';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => '最後の文字';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit => '校正を保存';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      '校正を適用できませんでした。本文、対象ウィンドウ、3 つのプローブを確認してください。';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      '校正プローブには本文が 3 文字以上必要です。';
   @override
-  String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+  String get game_lookup_attached_profile_clear_title => '検索プロファイルを消去しますか？';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      '保存済みの矩形、テキストレイアウト、この実行ファイル固有のクリック承認が削除されます。';
   @override
-  String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+  String get game_lookup_attached_probe_waiting => 'ゲーム内で対応する文字のクリックを待っています';
   @override
   String get delete_choices_remember => 'この選択を記憶する';
   @override
@@ -73433,53 +73443,49 @@ class _StringsJa extends _StringsEn {
       '認証情報は HTTP 通信にのみ適用されます。内蔵 torrent エンジンでは使用できません';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      '接続できるペアリング済みデバイスがないため、カードを作成できませんでした。ペアリング済みデバイスで Fushi が実行中か確認するか、この端末でカードを作成するには Anki 設定で「ペアリングデバイスに制カード」をオフにしてください。';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      'オフにすると、手動、スキャン後、ダウンロード後、バックグラウンドのスクレイプはすべてこのソースをスキップします。';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      'この作品は現在のソース計画に含まれていません（ファイルが改名・移動・削除された可能性があります）。ソースを再スクレイプして識別待ちリストを更新してください。';
   @override
-  String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+  String get video_source_scrape_pending_works => '識別待ちの作品';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      'これらの項目はまだ作品が確定していません。検索して正しい作品を選ぶとスクレイプされます。';
   @override
-  String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+  String get video_source_scrape_enabled_toggle => 'このソースのスクレイプを有効化';
   @override
-  String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+  String get video_library_scrape_auto_backfill => '不足しているシリーズ情報を自動補完';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      '動画ライブラリを開くと、作品が未確定の項目を自動でスクレイプします。オフにするとバックグラウンドのメタデータダウンロードをすべて停止します。';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => 'グループなし';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty => 'この期間の記録はありません';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => '統計センター';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => '概要';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => '辞書を閉じる';
   @override
-  String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+  String get video_discovery_anidb_identity_confirm_title => '作品を確認';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'AniDB に複数の候補があります。正しい作品を選ぶと、インポートしたダウンロードはその作品として直接スクレイプされます。スキップした場合は、後で識別待ちリストから割り当てられます。';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      'AniDB でこの作品を特定できませんでした。通常どおりダウンロードし、手動で特定するまで識別待ちリストで待機します。';
   @override
-  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_direct => '直接接続';
   @override
-  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  String get network_proxy_p2p_mode_proxy => 'プロキシ経由';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => '混合';
   @override
   String get onboarding_feature_fonts => 'カスタムフォント';
   @override
@@ -82147,11 +82153,11 @@ class _StringsKo extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       '포인터 아래 단어를 찾을 마우스 버튼입니다. 위 스위치와는 별개예요: 눌러서 찾기를 꺼도 옆 버튼으로는 찾을 수 있습니다.';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => '왼쪽 클릭';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => '가운데 클릭';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => '사이드 버튼';
   @override
   String get gal_hook_toolbar_auto_hide => '도구 모음 자동 숨김';
   @override
@@ -82293,10 +82299,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get section_network => '네트워크';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'P2P(토렌트) 프록시';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      '기본은 직접 연결입니다. 프록시 경유: 모든 P2P 트래픽이 전역 프록시를 통과합니다 — 속도가 떨어질 수 있으며, 많은 프록시 제공업체가 BitTorrent 트래픽을 금지합니다(속도 제한, 경고, 계정 해지). 혼합: tracker 요청은 프록시를 거치고 DHT와 peer 연결은 직접 연결을 유지합니다 — peer 탐색 범위가 가장 넓지만 실제 IP가 tracker, DHT, peer에 노출됩니다(연결성만 해결하며 프라이버시 보호는 아닙니다). 내장 엔진에만 적용되며, 외부 qBittorrent는 자체 프록시 설정을 사용합니다.';
   @override
   String get video_ajatt_settings_hint =>
       '무료 일본어 자막 아카이브(kitsunekko 미러). 계정 불필요. 자막 파일은 GitHub에서 다운로드됩니다.';
@@ -82473,132 +82479,127 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_first_anki_action => '단어 찾기 열고 카드 만들기';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => '인게임 사전 조회';
   @override
-  String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+  String get game_lookup_attached_no_ocr => 'OCR 미사용 · 가로쓰기 본문만';
   @override
-  String get game_lookup_attached_mode => 'Mode';
+  String get game_lookup_attached_mode => '모드';
   @override
-  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_auto => '자동';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only => '네이티브만';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only => '보정 레이어만';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => '끄기';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => '상태';
   @override
-  String get game_lookup_attached_native_status => 'Native';
+  String get game_lookup_attached_native_status => '네이티브';
   @override
-  String get game_lookup_attached_provider => 'Provider';
+  String get game_lookup_attached_provider => '제공자';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => '보고되지 않음';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => '프로필';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => '보정됨';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => '보정되지 않음';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => '입력 실드';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => '검증됨';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => '알 수 없음';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => '부분';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered => '미지원(확인됨)';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => '오류';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => '클릭 위험';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => '승인되지 않음';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => '확인 필요';
   @override
-  String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+  String get game_lookup_attached_risk_active => '위험 수락됨 · 이중 트리거 가능';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => '보정';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => '클릭 위험 수락';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => '프로필 지우기';
   @override
   String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+      '보정 전에 본문 텍스트 스레드를 하나 선택하세요.';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title => '원시 클릭 위험 확인';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      '이 실행 파일에서는 입력 실드가 검증되지 않았습니다. 글자를 클릭하면 대화가 진행되거나 선택지가 눌릴 수 있습니다. 이 승인은 현재 실행 파일 해시에만 저장되며 업데이트 후에는 취소됩니다.';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title => '본문 텍스트 보정';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview => '현재 본문 미리보기';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => '본문 사각형';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => '왼쪽';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => '위';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => '너비';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => '높이';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => '글꼴';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size => '글꼴 크기 / 클라이언트 높이';
   @override
-  String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+  String get game_lookup_attached_letter_spacing => '자간 / 클라이언트 높이';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => '줄 높이';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => '가로 정렬';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => '세로 정렬';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => '왼쪽 정렬';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => '가운데 정렬';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => '오른쪽 정렬';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => '위쪽 정렬';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => '아래쪽 정렬';
   @override
   String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      '게임에서 강조 표시된 첫 번째, 중간, 마지막 글자를 차례로 클릭한 다음 아래에서 각 글자를 확인하세요.';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => '첫 글자';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => '중간 글자';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => '마지막 글자';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit => '보정 저장';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      '보정이 적용되지 않았습니다. 본문 텍스트, 대상 창, 세 개의 프로브를 확인하세요.';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      '보정 프로브에는 본문이 최소 세 글자 필요합니다.';
   @override
-  String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+  String get game_lookup_attached_profile_clear_title => '조회 프로필을 지울까요?';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      '저장된 사각형, 텍스트 레이아웃, 이 실행 파일 전용 클릭 승인이 삭제됩니다.';
   @override
-  String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+  String get game_lookup_attached_probe_waiting => '게임 내 해당 글자 클릭 대기 중';
   @override
   String get delete_choices_remember => '이 선택 기억하기';
   @override
@@ -82651,53 +82652,49 @@ class _StringsKo extends _StringsEn {
       '자격 증명은 HTTP 요청에만 적용되며, 내장 토렌트 엔진은 사용할 수 없습니다';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      '연결할 수 있는 페어링된 기기가 없어 카드를 만들지 못했습니다. 페어링된 기기에서 Fushi가 실행 중인지 확인하거나, 이 기기에서 카드를 만들려면 Anki 설정에서 「페어링된 기기로 채굴」을 끄세요.';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      '끄면 수동, 스캔 후, 다운로드 후, 백그라운드 스크래핑이 모두 이 소스를 건너뜁니다.';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      '이 작품은 더 이상 현재 소스 계획에 없습니다(파일이 이름 변경, 이동 또는 삭제되었을 수 있습니다). 소스를 재스크래핑하여 식별 대기 목록을 새로 고치세요.';
   @override
-  String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+  String get video_source_scrape_pending_works => '식별 대기 중인 작품';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      '이 항목들은 아직 확정된 작품 정보가 없습니다. 검색하여 올바른 작품을 선택하면 스크래핑됩니다.';
   @override
-  String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+  String get video_source_scrape_enabled_toggle => '이 소스의 스크래핑 사용';
   @override
-  String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+  String get video_library_scrape_auto_backfill => '누락된 시리즈 정보 자동 채우기';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      '비디오 라이브러리에 들어가면 아직 작품이 확정되지 않은 항목을 스크래핑합니다. 끄면 모든 백그라운드 메타데이터 다운로드를 중지합니다.';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => '그룹 없음';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty => '이 기간에는 활동이 없습니다';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => '통계 센터';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => '개요';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => '사전 닫기';
   @override
-  String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+  String get video_discovery_anidb_identity_confirm_title => '작품 확인';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'AniDB에 가능한 매칭이 여러 개 있습니다. 올바른 작품을 선택하면 가져온 다운로드가 그 작품 정보로 바로 스크래핑됩니다. 건너뛰면 나중에 식별 대기 목록에서 지정할 수 있습니다.';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      'AniDB에서 이 작품을 식별하지 못했습니다. 정상적으로 다운로드되며, 수동 식별을 위해 식별 대기 목록에서 기다립니다.';
   @override
-  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_direct => '직접 연결';
   @override
-  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  String get network_proxy_p2p_mode_proxy => '프록시 경유';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => '혼합';
   @override
   String get onboarding_feature_fonts => '사용자 지정 글꼴';
   @override
@@ -91749,11 +91746,11 @@ class _StringsNl extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
   @override
-  String get download_direct_queue_section => 'Direct downloads';
+  String get download_direct_queue_section => 'Directe downloads';
   @override
-  String get download_task_kind_all => 'All types';
+  String get download_task_kind_all => 'Alle typen';
   @override
-  String get download_task_kind_filter => 'Filter by type';
+  String get download_task_kind_filter => 'Filteren op type';
   @override
   String get manga_online_series_empty => 'Deze serie bevat geen delen.';
   @override
@@ -91869,11 +91866,11 @@ class _StringsNl extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       'Welke muisknop het woord onder de aanwijzer opzoekt. Los van de schakelaar hierboven: je kunt tikken-om-op-te-zoeken uitzetten en toch met een zijknop opzoeken.';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => 'Linkerklik';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => 'Middelklik';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => 'Zijknop';
   @override
   String get gal_hook_toolbar_auto_hide => 'Werkbalk automatisch verbergen';
   @override
@@ -92023,10 +92020,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get section_network => 'Netwerk';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'P2P-proxy (torrent)';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      'Standaard rechtstreeks. Via proxy: al het P2P-verkeer loopt via de globale proxy — de snelheid kan dalen en veel proxyaanbieders verbieden BitTorrent-verkeer (afknijpen, waarschuwingen of opzegging van je account). Gemengd: tracker-verzoeken lopen via de proxy, terwijl DHT- en peerverbindingen rechtstreeks blijven — de breedste peerontdekking, maar je echte IP is zichtbaar voor trackers, DHT en peers (alleen connectiviteit, geen privacy). Alleen voor de ingebouwde engine; een externe qBittorrent gebruikt zijn eigen proxy-instellingen.';
   @override
   String get video_ajatt_settings_hint =>
       'Gratis archief met Japanse ondertitels (kitsunekko-mirror). Geen account nodig; bestanden worden van GitHub gedownload.';
@@ -92217,132 +92214,135 @@ class _StringsNl extends _StringsEn {
   String get onboarding_first_anki_action =>
       'Opzoeken openen en een kaart maken';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => 'Opzoeken in het spel';
   @override
   String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+      'Geen OCR · alleen horizontale hoofdtekst';
   @override
-  String get game_lookup_attached_mode => 'Mode';
+  String get game_lookup_attached_mode => 'Modus';
   @override
-  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_auto => 'Automatisch';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only => 'Alleen native';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only =>
+      'Alleen gekalibreerde laag';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => 'Uit';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => 'Status';
   @override
   String get game_lookup_attached_native_status => 'Native';
   @override
   String get game_lookup_attached_provider => 'Provider';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => 'Niet gemeld';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => 'Profiel';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => 'Gekalibreerd';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => 'Niet gekalibreerd';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => 'Invoerschild';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => 'Geverifieerd';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => 'Onbekend';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => 'Gedeeltelijk';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered =>
+      'Bekend niet gedekt';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => 'Defect';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => 'Klikrisico';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => 'Niet geautoriseerd';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => 'Bevestiging vereist';
   @override
   String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+      'Risico geaccepteerd · kan dubbel activeren';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => 'Kalibreren';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => 'Klikrisico accepteren';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => 'Profiel wissen';
   @override
   String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+      'Selecteer één hoofdtekst-thread voordat je kalibreert.';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title =>
+      'Risico van ruwe klik bevestigen';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      'Het invoerschild is niet geverifieerd voor dit uitvoerbare bestand. Klikken op een glyph kan ook de dialoog voortzetten of een keuze activeren. Deze autorisatie wordt alleen opgeslagen voor de huidige hash van het uitvoerbare bestand en wordt na een update ingetrokken.';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title => 'Hoofdtekst kalibreren';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview => 'Voorbeeld van huidige hoofdtekst';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => 'Tekstrechthoek';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => 'Links';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => 'Boven';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => 'Breedte';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => 'Hoogte';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => 'Lettertype';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size => 'Lettergrootte / clienthoogte';
   @override
   String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+      'Letterafstand / clienthoogte';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => 'Regelhoogte';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => 'Horizontale uitlijning';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => 'Verticale uitlijning';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => 'Links';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => 'Gecentreerd';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => 'Rechts';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => 'Boven';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => 'Onder';
   @override
   String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      'Klik in het spel op de eerste, middelste en laatste gemarkeerde glyph en bevestig daarna hieronder elk teken.';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => 'Eerste glyph';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => 'Middelste glyph';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => 'Laatste glyph';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit => 'Kalibratie opslaan';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      'Kalibratie is niet toegepast. Controleer de hoofdtekst, het doelvenster en alle drie de meetpunten.';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      'Voor kalibratiemeetpunten zijn minstens drie tekens vereist.';
   @override
   String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+      'Opzoekprofiel wissen?';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      'De opgeslagen rechthoek, tekstindeling en de klikautorisatie voor dit uitvoerbare bestand worden verwijderd.';
   @override
   String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+      'Wachten op bijpassende klik in het spel';
   @override
   String get delete_choices_remember => 'Deze keuzes onthouden';
   @override
@@ -92400,53 +92400,53 @@ class _StringsNl extends _StringsEn {
       'Inloggegevens gelden alleen voor HTTP-verzoeken; de ingebouwde torrent-engine kan ze niet gebruiken';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      'Kon de kaart niet aanmaken omdat geen gekoppeld apparaat bereikbaar was. Zorg dat Fushi op het gekoppelde apparaat draait, of schakel \'Kaarten naar gekoppeld apparaat sturen\' uit in de Anki-instellingen om kaarten lokaal aan te maken.';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      'Indien uit, slaan handmatig scrapen, scrapen na scan, na download en op de achtergrond deze bron allemaal over.';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      'Dit werk staat niet meer in het huidige bronplan (de bestanden zijn mogelijk hernoemd, verplaatst of verwijderd). Scrape de bron opnieuw om de lijst met wachtende werken te vernieuwen.';
   @override
   String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+      'Werken die op identificatie wachten';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      'Deze items hebben nog geen bevestigde identiteit. Zoek en kies het juiste werk om ze te scrapen.';
   @override
   String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+      'Scrapen inschakelen voor deze bron';
   @override
   String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+      'Ontbrekende serie-info automatisch aanvullen';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      'Bij het openen van de videobibliotheek worden items zonder bevestigde identiteit gescraped. Schakel uit om alle metadata-downloads op de achtergrond te stoppen.';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => 'Niet gegroepeerd';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty => 'Geen activiteit in deze periode';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => 'Statistiekcentrum';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => 'Overzicht';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => 'Woordenboek sluiten';
   @override
   String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+      'Identiteit van het werk bevestigen';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'AniDB heeft meer dan één mogelijke match. Kies het juiste werk en de geïmporteerde download wordt direct met die identiteit gescraped; sla over en je kunt het later toewijzen vanuit de lijst met wachtende werken.';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      'Kon dit werk niet identificeren op AniDB. Het wordt normaal gedownload en wacht in de lijst met wachtende werken op handmatige identificatie.';
   @override
-  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_direct => 'Rechtstreeks';
   @override
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => 'Gemengd';
   @override
   String get onboarding_feature_fonts => 'Eigen lettertypen';
   @override
@@ -101561,11 +101561,11 @@ class _StringsPtBr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
   @override
-  String get download_direct_queue_section => 'Direct downloads';
+  String get download_direct_queue_section => 'Downloads diretos';
   @override
-  String get download_task_kind_all => 'All types';
+  String get download_task_kind_all => 'Todos os tipos';
   @override
-  String get download_task_kind_filter => 'Filter by type';
+  String get download_task_kind_filter => 'Filtrar por tipo';
   @override
   String get manga_online_series_empty => 'Esta série não tem volumes.';
   @override
@@ -101681,11 +101681,11 @@ class _StringsPtBr extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       'Qual botão do mouse consulta a palavra sob o ponteiro. Independente da chave acima: você pode desligar o toque-para-consultar e ainda consultar com um botão lateral.';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => 'Clique esquerdo';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => 'Clique do meio';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => 'Botão lateral';
   @override
   String get gal_hook_toolbar_auto_hide => 'Ocultar a barra automaticamente';
   @override
@@ -101835,10 +101835,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get section_network => 'Rede';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'Proxy P2P (torrent)';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      'Direto por padrão. Via proxy: todo o tráfego P2P passa pelo proxy global — a velocidade pode cair, e muitos provedores de proxy proíbem tráfego BitTorrent (limitação de velocidade, avisos ou encerramento da conta). Misto: as solicitações ao tracker passam pelo proxy enquanto DHT e conexões com peers continuam diretas — maior alcance na descoberta de peers, mas seu IP real fica visível para trackers, DHT e peers (apenas conectividade, não privacidade). Somente para o motor integrado; o qBittorrent externo usa suas próprias configurações de proxy.';
   @override
   String get video_ajatt_settings_hint =>
       'Arquivo gratuito de legendas em japonês (espelho do kitsunekko). Não precisa de conta; os arquivos são baixados do GitHub.';
@@ -102026,132 +102026,137 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_first_anki_action =>
       'Abrir a consulta e criar um cartão';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => 'Consulta no jogo';
   @override
   String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+      'Sem OCR · apenas texto horizontal do diálogo';
   @override
-  String get game_lookup_attached_mode => 'Mode';
+  String get game_lookup_attached_mode => 'Modo';
   @override
-  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_auto => 'Automático';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only => 'Somente nativo';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only =>
+      'Somente camada calibrada';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => 'Desativado';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => 'Estado';
   @override
-  String get game_lookup_attached_native_status => 'Native';
+  String get game_lookup_attached_native_status => 'Nativo';
   @override
-  String get game_lookup_attached_provider => 'Provider';
+  String get game_lookup_attached_provider => 'Provedor';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => 'Não informado';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => 'Perfil';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => 'Calibrado';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => 'Não calibrado';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => 'Escudo de entrada';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => 'Verificado';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => 'Desconhecido';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => 'Parcial';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered =>
+      'Sem cobertura (conhecido)';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => 'Com falha';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => 'Risco de clique';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => 'Não autorizado';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => 'Confirmação necessária';
   @override
   String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+      'Risco aceito · pode acionar duas vezes';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => 'Calibrar';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => 'Aceitar risco de clique';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => 'Limpar perfil';
   @override
   String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+      'Selecione um fluxo de texto do diálogo antes de calibrar.';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title =>
+      'Confirmar risco de clique direto';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      'O escudo de entrada não está verificado para este executável. Clicar em um glifo também pode avançar o diálogo ou acionar uma escolha. Esta autorização é armazenada apenas para o hash do executável atual e é revogada após uma atualização.';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title =>
+      'Calibrar texto do diálogo';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview => 'Prévia do texto atual';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => 'Retângulo do texto';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => 'Esquerda';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => 'Topo';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => 'Largura';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => 'Altura';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => 'Família da fonte';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size =>
+      'Tamanho da fonte / altura da área cliente';
   @override
   String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+      'Espaçamento entre letras / altura da área cliente';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => 'Altura da linha';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => 'Alinhamento horizontal';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => 'Alinhamento vertical';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => 'Esquerda';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => 'Centro';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => 'Direita';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => 'Topo';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => 'Base';
   @override
   String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      'Clique no primeiro, no do meio e no último glifo destacados no jogo e depois confirme cada caractere abaixo.';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => 'Primeiro glifo';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => 'Glifo do meio';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => 'Último glifo';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit => 'Salvar calibração';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      'A calibração não foi aplicada. Verifique o texto do diálogo, a janela de destino e as três sondas.';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      'São necessários pelo menos três caracteres para as sondas de calibração.';
   @override
   String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+      'Limpar perfil de consulta?';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      'O retângulo salvo, o layout do texto e a autorização de clique específica do executável serão removidos.';
   @override
   String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+      'Aguardando o clique correspondente no jogo';
   @override
   String get delete_choices_remember => 'Lembrar estas escolhas';
   @override
@@ -102208,53 +102213,53 @@ class _StringsPtBr extends _StringsEn {
       'As credenciais valem apenas para requisições HTTP; o motor de torrent integrado não consegue usá-las';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      'Não foi possível criar o cartão porque nenhum dispositivo pareado pôde ser alcançado. Verifique se o Fushi está aberto no dispositivo pareado ou desative "Minerar para dispositivo pareado" em Configurações do Anki para criar cartões localmente.';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      'Quando desativado, a busca de metadados manual, após a varredura, após o download e em segundo plano ignora esta fonte.';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      'Esta obra não está mais no plano atual da fonte (seus arquivos podem ter sido renomeados, movidos ou excluídos). Rebusque os metadados da fonte para atualizar a lista de pendentes.';
   @override
   String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+      'Obras aguardando identificação';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      'Estas entradas ainda não têm identidade confirmada. Pesquise e escolha a obra correta para buscar seus metadados.';
   @override
   String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+      'Ativar busca de metadados para esta fonte';
   @override
   String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+      'Preencher automaticamente info da série ausente';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      'Ao entrar na biblioteca de vídeo, os metadados das entradas que ainda não têm identidade confirmada são buscados. Desative para interromper todos os downloads de metadados em segundo plano.';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => 'Sem grupo';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty => 'Sem atividade neste período';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => 'Central de estatísticas';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => 'Visão geral';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => 'Fechar dicionário';
   @override
   String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+      'Confirmar a identidade da obra';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'O AniDB tem mais de uma correspondência possível. Escolha a obra correta e o download importado buscará os metadados diretamente com essa identidade; se pular, você poderá atribuí-la depois na lista de pendentes.';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      'Não foi possível identificar esta obra no AniDB. Ela será baixada normalmente e aguardará na lista de pendentes para identificação manual.';
   @override
-  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_direct => 'Direto';
   @override
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => 'Misto';
   @override
   String get onboarding_feature_fonts => 'Fontes personalizadas';
   @override
@@ -111342,11 +111347,11 @@ class _StringsRu extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
   @override
-  String get download_direct_queue_section => 'Direct downloads';
+  String get download_direct_queue_section => 'Прямые загрузки';
   @override
-  String get download_task_kind_all => 'All types';
+  String get download_task_kind_all => 'Все типы';
   @override
-  String get download_task_kind_filter => 'Filter by type';
+  String get download_task_kind_filter => 'Фильтр по типу';
   @override
   String get manga_online_series_empty => 'В этой серии нет томов.';
   @override
@@ -111460,11 +111465,11 @@ class _StringsRu extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       'Какая кнопка мыши ищет слово под указателем. Не зависит от переключателя выше: можно выключить поиск по нажатию и всё равно искать боковой кнопкой.';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => 'Левый клик';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => 'Средний клик';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => 'Боковая кнопка';
   @override
   String get gal_hook_toolbar_auto_hide => 'Автоматически скрывать панель';
   @override
@@ -111615,10 +111620,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get section_network => 'Сеть';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'Прокси для P2P (torrent)';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      'По умолчанию — напрямую. Через прокси: весь P2P-трафик идёт через глобальный прокси — скорость может упасть, а многие прокси-провайдеры запрещают BitTorrent-трафик (ограничение скорости, предупреждения или блокировка аккаунта). Смешанный: запросы к трекерам идут через прокси, а DHT и соединения с пирами остаются прямыми — максимальный охват пиров, но ваш реальный IP виден трекерам, DHT и пирам (только связность, не приватность). Только для встроенного движка; внешний qBittorrent использует собственные настройки прокси.';
   @override
   String get video_ajatt_settings_hint =>
       'Бесплатный архив японских субтитров (зеркало kitsunekko). Аккаунт не нужен; файлы скачиваются с GitHub.';
@@ -111807,132 +111812,139 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_first_anki_action => 'Открыть поиск и создать карточку';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => 'Поиск в игре';
   @override
   String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+      'Без OCR · только горизонтальный основной текст';
   @override
-  String get game_lookup_attached_mode => 'Mode';
+  String get game_lookup_attached_mode => 'Режим';
   @override
-  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_auto => 'Авто';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only =>
+      'Только нативная геометрия';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only =>
+      'Только калиброванный слой';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => 'Выкл.';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => 'Состояние';
   @override
-  String get game_lookup_attached_native_status => 'Native';
+  String get game_lookup_attached_native_status => 'Нативная геометрия';
   @override
-  String get game_lookup_attached_provider => 'Provider';
+  String get game_lookup_attached_provider => 'Провайдер';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => 'Не сообщён';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => 'Профиль';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => 'Откалибровано';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => 'Не откалибровано';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => 'Защита ввода';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => 'Проверено';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => 'Неизвестно';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => 'Частично';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered =>
+      'Заведомо не покрыто';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => 'Сбой';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => 'Риск клика';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => 'Не разрешено';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => 'Требуется подтверждение';
   @override
   String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+      'Риск принят · возможно двойное срабатывание';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => 'Калибровать';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => 'Принять риск клика';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => 'Очистить профиль';
   @override
   String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+      'Перед калибровкой выберите один поток основного текста.';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title =>
+      'Подтвердите риск прямого клика';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      'Защита ввода для этого исполняемого файла не проверена. Клик по глифу может также продвинуть диалог или выбрать вариант. Это разрешение хранится только для текущего хеша исполняемого файла и отзывается после обновления.';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title =>
+      'Калибровка основного текста';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview =>
+      'Предпросмотр текущего основного текста';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => 'Прямоугольник текста';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => 'Слева';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => 'Сверху';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => 'Ширина';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => 'Высота';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => 'Шрифт';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size =>
+      'Размер шрифта / высота клиентской области';
   @override
   String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+      'Межбуквенный интервал / высота клиентской области';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => 'Высота строки';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => 'Горизонтальное выравнивание';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => 'Вертикальное выравнивание';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => 'По левому краю';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => 'По центру';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => 'По правому краю';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => 'По верхнему краю';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => 'По нижнему краю';
   @override
   String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      'Кликните в игре по первому, среднему и последнему выделенным глифам, затем подтвердите каждый символ ниже.';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => 'Первый глиф';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => 'Средний глиф';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => 'Последний глиф';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit => 'Сохранить калибровку';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      'Калибровка не применена. Проверьте основной текст, целевое окно и все три пробы.';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      'Для калибровочных проб нужно не менее трёх символов.';
   @override
   String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+      'Очистить профиль поиска?';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      'Сохранённый прямоугольник, разметка текста и разрешение на клик для этого исполняемого файла будут удалены.';
   @override
   String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+      'Ожидание соответствующего клика в игре';
   @override
   String get delete_choices_remember => 'Запомнить этот выбор';
   @override
@@ -111991,53 +112003,53 @@ class _StringsRu extends _StringsEn {
       'Учётные данные применяются только к HTTP-запросам; встроенный torrent-движок не может их использовать';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      'Не удалось создать карточку: ни одно сопряжённое устройство недоступно. Убедитесь, что на сопряжённом устройстве запущено Fushi, или отключите «Добывать на сопряжённое устройство» в разделе «Настройки Anki», чтобы создавать карточки локально.';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      'Если выключено, получение метаданных вручную, после сканирования, после загрузки и в фоне пропускает этот источник.';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      'Этого произведения больше нет в текущем плане источника (его файлы могли быть переименованы, перемещены или удалены). Пересканируйте источник, чтобы обновить список ожидающих.';
   @override
   String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+      'Произведения, ожидающие идентификации';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      'У этих записей ещё нет подтверждённой идентичности. Найдите и выберите нужное произведение, чтобы получить метаданные.';
   @override
   String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+      'Включить получение метаданных для этого источника';
   @override
   String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+      'Автоматически дополнять недостающую информацию о сериале';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      'При входе в видеобиблиотеку получаются метаданные для записей без подтверждённой идентичности. Выключите, чтобы остановить все фоновые загрузки метаданных.';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => 'Без группы';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty => 'Нет активности за этот период';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => 'Центр статистики';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => 'Обзор';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => 'Закрыть словарь';
   @override
   String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+      'Подтвердите идентичность произведения';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'На AniDB найдено несколько возможных совпадений. Выберите нужное произведение — импортированная загрузка сразу получит метаданные с этой идентичностью; при пропуске её можно назначить позже из списка ожидающих.';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      'Не удалось определить это произведение на AniDB. Оно будет загружено как обычно и будет ждать ручной идентификации в списке ожидающих.';
   @override
-  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_direct => 'Напрямую';
   @override
-  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  String get network_proxy_p2p_mode_proxy => 'Через прокси';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => 'Смешанный';
   @override
   String get onboarding_feature_fonts => 'Свои шрифты';
   @override
@@ -120946,11 +120958,11 @@ class _StringsTh extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
   @override
-  String get download_direct_queue_section => 'Direct downloads';
+  String get download_direct_queue_section => 'ดาวน์โหลดโดยตรง';
   @override
-  String get download_task_kind_all => 'All types';
+  String get download_task_kind_all => 'ทุกประเภท';
   @override
-  String get download_task_kind_filter => 'Filter by type';
+  String get download_task_kind_filter => 'กรองตามประเภท';
   @override
   String get manga_online_series_empty => 'ซีรีส์นี้ไม่มีเล่ม';
   @override
@@ -121064,11 +121076,11 @@ class _StringsTh extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       'ปุ่มเมาส์ที่ใช้เปิดคำใต้ตัวชี้ แยกจากสวิตช์ด้านบน คุณปิดการแตะเพื่อเปิดได้ แล้วยังใช้ปุ่มข้างเปิดได้อยู่';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => 'คลิกซ้าย';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => 'คลิกกลาง';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => 'ปุ่มด้านข้าง';
   @override
   String get gal_hook_toolbar_auto_hide => 'ซ่อนแถบเครื่องมืออัตโนมัติ';
   @override
@@ -121215,10 +121227,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get section_network => 'เครือข่าย';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'พร็อกซี P2P (torrent)';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      'ค่าเริ่มต้นเชื่อมต่อโดยตรง ผ่านพร็อกซี: ทราฟฟิก P2P ทั้งหมดผ่านพร็อกซีส่วนกลาง — ความเร็วอาจลดลง และผู้ให้บริการพร็อกซีจำนวนมากห้ามทราฟฟิก BitTorrent (จำกัดความเร็ว เตือน หรือปิดบัญชี) ผสม: คำขอ tracker ผ่านพร็อกซี ส่วนการเชื่อมต่อ DHT และ peer ยังคงโดยตรง — ค้นหา peer ได้กว้างที่สุด แต่ IP จริงของคุณจะมองเห็นได้โดย tracker, DHT และ peer (แก้เรื่องการเชื่อมต่อเท่านั้น ไม่ใช่ความเป็นส่วนตัว) ใช้กับเอนจินในตัวเท่านั้น qBittorrent ภายนอกใช้การตั้งค่าพร็อกซีของตัวเอง';
   @override
   String get video_ajatt_settings_hint =>
       'คลังซับไตเติลภาษาญี่ปุ่นฟรี (มิเรอร์ kitsunekko) ไม่ต้องใช้บัญชี ไฟล์ซับไตเติลดาวน์โหลดจาก GitHub';
@@ -121402,132 +121414,135 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_first_anki_action => 'เปิดหน้าค้นคำแล้วสร้างการ์ด';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => 'ค้นหาคำในเกม';
   @override
   String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+      'ไม่ใช้ OCR · เฉพาะข้อความบทสนทนาแนวนอน';
   @override
-  String get game_lookup_attached_mode => 'Mode';
+  String get game_lookup_attached_mode => 'โหมด';
   @override
-  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_auto => 'อัตโนมัติ';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only => 'เฉพาะ native';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only =>
+      'เฉพาะเลเยอร์ที่ปรับเทียบ';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => 'ปิด';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => 'สถานะ';
   @override
   String get game_lookup_attached_native_status => 'Native';
   @override
-  String get game_lookup_attached_provider => 'Provider';
+  String get game_lookup_attached_provider => 'ผู้ให้ข้อมูล';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => 'ไม่ได้รายงาน';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => 'โปรไฟล์';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => 'ปรับเทียบแล้ว';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => 'ยังไม่ปรับเทียบ';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => 'เกราะป้องกันอินพุต';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => 'ยืนยันแล้ว';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => 'ไม่ทราบ';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => 'บางส่วน';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered =>
+      'ทราบว่ายังไม่ครอบคลุม';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => 'ขัดข้อง';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => 'ความเสี่ยงจากการคลิก';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => 'ยังไม่อนุญาต';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => 'ต้องยืนยัน';
   @override
   String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+      'ยอมรับความเสี่ยงแล้ว · อาจทริกเกอร์ซ้ำ';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => 'ปรับเทียบ';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => 'ยอมรับความเสี่ยงจากการคลิก';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => 'ล้างโปรไฟล์';
   @override
   String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+      'เลือกเธรดข้อความบทสนทนาหนึ่งรายการก่อนปรับเทียบ';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title => 'ยืนยันความเสี่ยงจากการคลิกดิบ';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      'เกราะป้องกันอินพุตยังไม่ได้รับการยืนยันสำหรับไฟล์ปฏิบัติการนี้ การคลิกตัวอักษรอาจทำให้บทสนทนาเลื่อนต่อหรือเลือกตัวเลือกไปด้วย การอนุญาตนี้จะบันทึกเฉพาะแฮชของไฟล์ปฏิบัติการปัจจุบัน และจะถูกเพิกถอนหลังการอัปเดต';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title =>
+      'ปรับเทียบข้อความบทสนทนา';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview => 'ตัวอย่างข้อความบทสนทนาปัจจุบัน';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => 'กรอบข้อความบทสนทนา';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => 'ซ้าย';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => 'บน';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => 'กว้าง';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => 'สูง';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => 'แบบอักษร';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size =>
+      'ขนาดตัวอักษร / ความสูงพื้นที่ไคลเอนต์';
   @override
   String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+      'ระยะห่างตัวอักษร / ความสูงพื้นที่ไคลเอนต์';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => 'ความสูงบรรทัด';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => 'การจัดแนวนอน';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => 'การจัดแนวตั้ง';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => 'ซ้าย';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => 'กึ่งกลาง';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => 'ขวา';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => 'บน';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => 'ล่าง';
   @override
   String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      'คลิกตัวอักษรที่ไฮไลต์ตัวแรก ตัวกลาง และตัวสุดท้ายในเกม จากนั้นยืนยันแต่ละอักขระด้านล่าง';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => 'ตัวอักษรแรก';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => 'ตัวอักษรกลาง';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => 'ตัวอักษรสุดท้าย';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit => 'บันทึกการปรับเทียบ';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      'การปรับเทียบไม่ถูกนำไปใช้ ตรวจสอบข้อความบทสนทนา หน้าต่างเป้าหมาย และจุดตรวจทั้งสามจุด';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      'ต้องมีอย่างน้อยสามอักขระสำหรับจุดตรวจปรับเทียบ';
   @override
-  String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+  String get game_lookup_attached_profile_clear_title => 'ล้างโปรไฟล์ค้นหาคำ?';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      'กรอบที่บันทึกไว้ เค้าโครงข้อความ และการอนุญาตคลิกเฉพาะไฟล์ปฏิบัติการนี้จะถูกลบ';
   @override
   String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+      'กำลังรอการคลิกที่ตรงกันในเกม';
   @override
   String get delete_choices_remember => 'จดจำตัวเลือกเหล่านี้';
   @override
@@ -121583,53 +121598,52 @@ class _StringsTh extends _StringsEn {
       'ข้อมูลรับรองใช้ได้กับคำขอ HTTP เท่านั้น เอนจิน torrent ในตัวไม่สามารถใช้ได้';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      'ไม่สามารถสร้างบัตรได้เนื่องจากเข้าถึงอุปกรณ์ที่จับคู่ไม่ได้ ตรวจสอบว่า Fushi กำลังทำงานบนอุปกรณ์ที่จับคู่ หรือปิด สร้างบัตรไปยังอุปกรณ์ที่จับคู่ ใน ตั้งค่า Anki เพื่อสร้างบัตรในเครื่องนี้';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      'เมื่อปิด การดึงข้อมูลแบบกำหนดเอง หลังสแกน หลังดาวน์โหลด และในพื้นหลังจะข้ามแหล่งนี้ทั้งหมด';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      'ผลงานนี้ไม่อยู่ในแผนแหล่งปัจจุบันแล้ว (ไฟล์อาจถูกเปลี่ยนชื่อ ย้าย หรือลบ) ดึงข้อมูลแหล่งนี้อีกครั้งเพื่อรีเฟรชรายการที่รอดำเนินการ';
   @override
-  String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+  String get video_source_scrape_pending_works => 'ผลงานที่รอการระบุตัวตน';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      'รายการเหล่านี้ยังไม่มีตัวตนที่ยืนยัน ค้นหาและเลือกผลงานที่ถูกต้องเพื่อดึงข้อมูล';
   @override
   String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+      'เปิดใช้การดึงข้อมูลสำหรับแหล่งนี้';
   @override
   String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+      'เติมข้อมูลซีรีส์ที่ขาดหายอัตโนมัติ';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      'เมื่อเข้าคลังวิดีโอจะดึงข้อมูลรายการที่ยังไม่มีตัวตนที่ยืนยัน ปิดเพื่อหยุดการดาวน์โหลดข้อมูลเมตาในพื้นหลังทั้งหมด';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => 'ไม่ได้จัดกลุ่ม';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty => 'ไม่มีกิจกรรมในช่วงเวลานี้';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => 'ศูนย์สถิติ';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => 'ภาพรวม';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => 'ปิดพจนานุกรม';
   @override
   String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+      'ยืนยันตัวตนของผลงาน';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'AniDB มีรายการที่อาจตรงกันมากกว่าหนึ่งรายการ เลือกผลงานที่ถูกต้องแล้วการดาวน์โหลดที่นำเข้าจะดึงข้อมูลด้วยตัวตนนั้นทันที หากข้าม คุณสามารถกำหนดภายหลังได้จากรายการที่รอดำเนินการ';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      'ไม่สามารถระบุผลงานนี้บน AniDB ได้ จะดาวน์โหลดตามปกติและรอในรายการที่รอดำเนินการเพื่อระบุตัวตนด้วยตนเอง';
   @override
-  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_direct => 'โดยตรง';
   @override
-  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  String get network_proxy_p2p_mode_proxy => 'ผ่านพร็อกซี';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => 'ผสม';
   @override
   String get onboarding_feature_fonts => 'ฟอนต์กำหนดเอง';
   @override
@@ -130639,11 +130653,11 @@ class _StringsTr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
   @override
-  String get download_direct_queue_section => 'Direct downloads';
+  String get download_direct_queue_section => 'Doğrudan indirmeler';
   @override
-  String get download_task_kind_all => 'All types';
+  String get download_task_kind_all => 'Tüm türler';
   @override
-  String get download_task_kind_filter => 'Filter by type';
+  String get download_task_kind_filter => 'Türe göre filtrele';
   @override
   String get manga_online_series_empty => 'Bu seride hiç cilt yok.';
   @override
@@ -130758,11 +130772,11 @@ class _StringsTr extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       'İmlecin altındaki kelimeyi hangi fare düğmesinin arayacağı. Yukarıdaki anahtardan bağımsızdır: dokunarak aramayı kapatıp yan düğmeyle arayabilirsin.';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => 'Sol tık';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => 'Orta tık';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => 'Yan düğme';
   @override
   String get gal_hook_toolbar_auto_hide => 'Araç çubuğunu otomatik gizle';
   @override
@@ -130912,10 +130926,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get section_network => 'Ağ';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'P2P (torrent) proxy\'si';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      'Varsayılan olarak doğrudan. Proxy üzerinden: tüm P2P trafiği genel proxy üzerinden geçer — hız düşebilir ve birçok proxy sağlayıcısı BitTorrent trafiğini yasaklar (hız kısıtlama, uyarı veya hesap kapatma). Karma: tracker istekleri proxy üzerinden geçerken DHT ve peer bağlantıları doğrudan kalır — en geniş peer keşfi, ancak gerçek IP adresiniz tracker\'lara, DHT\'ye ve peer\'lara görünür (yalnızca bağlanabilirlik, gizlilik değil). Yalnızca yerleşik motor için; harici qBittorrent kendi proxy ayarlarını kullanır.';
   @override
   String get video_ajatt_settings_hint =>
       'Ücretsiz Japonca altyazı arşivi (kitsunekko yansıması). Hesap gerekmez; altyazı dosyaları GitHub\'dan indirilir.';
@@ -131101,132 +131115,136 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_first_anki_action => 'Aramayı aç ve kart oluştur';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => 'Oyun içi arama';
   @override
   String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+      'OCR yok · yalnızca yatay gövde metni';
   @override
-  String get game_lookup_attached_mode => 'Mode';
+  String get game_lookup_attached_mode => 'Mod';
   @override
-  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_auto => 'Otomatik';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only => 'Yalnızca yerel geometri';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only =>
+      'Yalnızca kalibre edilmiş katman';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => 'Kapalı';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => 'Durum';
   @override
-  String get game_lookup_attached_native_status => 'Native';
+  String get game_lookup_attached_native_status => 'Yerel geometri';
   @override
-  String get game_lookup_attached_provider => 'Provider';
+  String get game_lookup_attached_provider => 'Sağlayıcı';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => 'Bildirilmedi';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => 'Profil';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => 'Kalibre edildi';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => 'Kalibre edilmedi';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => 'Giriş kalkanı';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => 'Doğrulandı';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => 'Bilinmiyor';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => 'Kısmi';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered =>
+      'Kapsanmadığı biliniyor';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => 'Hatalı';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => 'Tıklama riski';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => 'Yetkilendirilmedi';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => 'Onay gerekli';
   @override
   String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+      'Risk kabul edildi · çift tetiklenebilir';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => 'Kalibre et';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => 'Tıklama riskini kabul et';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => 'Profili temizle';
   @override
   String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+      'Kalibrasyondan önce bir gövde metni iş parçacığı seçin.';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title => 'Ham tıklama riskini onaylayın';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      'Bu çalıştırılabilir dosya için giriş kalkanı doğrulanmadı. Bir glife tıklamak diyaloğu da ilerletebilir veya bir seçimi tetikleyebilir. Bu yetki yalnızca geçerli çalıştırılabilir dosya karması için saklanır ve güncellemeden sonra iptal edilir.';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title =>
+      'Gövde metnini kalibre et';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview => 'Geçerli gövde metni önizlemesi';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => 'Gövde dikdörtgeni';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => 'Sol';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => 'Üst';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => 'Genişlik';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => 'Yükseklik';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => 'Yazı tipi';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size =>
+      'Yazı boyutu / istemci yüksekliği';
   @override
   String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+      'Harf aralığı / istemci yüksekliği';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => 'Satır yüksekliği';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => 'Yatay hizalama';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => 'Dikey hizalama';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => 'Sola';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => 'Ortaya';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => 'Sağa';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => 'Üste';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => 'Alta';
   @override
   String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      'Oyunda vurgulanan ilk, orta ve son glife tıklayın, ardından aşağıda her karakteri onaylayın.';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => 'İlk glif';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => 'Orta glif';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => 'Son glif';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit => 'Kalibrasyonu kaydet';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      'Kalibrasyon uygulanmadı. Gövde metnini, hedef pencereyi ve üç sondayı kontrol edin.';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      'Kalibrasyon sondaları için en az üç karakter gerekir.';
   @override
   String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+      'Arama profili temizlensin mi?';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      'Kaydedilen dikdörtgen, metin düzeni ve bu çalıştırılabilir dosyaya özel tıklama yetkisi kaldırılacak.';
   @override
   String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+      'Oyun içinde eşleşen tıklama bekleniyor';
   @override
   String get delete_choices_remember => 'Bu seçimleri hatırla';
   @override
@@ -131284,53 +131302,52 @@ class _StringsTr extends _StringsEn {
       'Kimlik bilgileri yalnızca HTTP istekleri için geçerlidir; yerleşik torrent motoru bunları kullanamaz';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      'Kart oluşturulamadı çünkü hiçbir eşleştirilmiş cihaza ulaşılamadı. Eşleştirilmiş cihazda Fushi\'nin çalıştığından emin olun veya kartları yerel olarak oluşturmak için Anki ayarları\'ndan Eşleştirilmiş cihaza çıkar seçeneğini kapatın.';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      'Kapalıyken manuel, tarama sonrası, indirme sonrası ve arka plan taramalarının tümü bu kaynağı atlar.';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      'Bu eser artık geçerli kaynak planında değil (dosyaları yeniden adlandırılmış, taşınmış veya silinmiş olabilir). Bekleyenler listesini yenilemek için kaynağı yeniden tarayın.';
   @override
-  String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+  String get video_source_scrape_pending_works => 'Tanımlama bekleyen eserler';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      'Bu öğelerin henüz onaylanmış bir kimliği yok. Taramak için arayıp doğru eseri seçin.';
   @override
   String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+      'Bu kaynak için taramayı etkinleştir';
   @override
   String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+      'Eksik dizi bilgisini otomatik doldur';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      'Video kütüphanesine girildiğinde henüz onaylanmış kimliği olmayan öğeler taranır. Tüm arka plan meta veri indirmelerini durdurmak için kapatın.';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => 'Gruplanmamış';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty => 'Bu dönemde etkinlik yok';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => 'İstatistik merkezi';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => 'Genel bakış';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => 'Sözlüğü kapat';
   @override
   String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+      'Eser kimliğini onaylayın';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'AniDB\'de birden fazla olası eşleşme var. Doğru eseri seçerseniz içe aktarılan indirme doğrudan bu kimlikle taranır; atlarsanız daha sonra bekleyenler listesinden atayabilirsiniz.';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      'Bu eser AniDB\'de tanımlanamadı. Normal şekilde indirilecek ve manuel tanımlama için bekleyenler listesinde bekleyecek.';
   @override
-  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_direct => 'Doğrudan';
   @override
-  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  String get network_proxy_p2p_mode_proxy => 'Proxy üzerinden';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => 'Karma';
   @override
   String get onboarding_feature_fonts => 'Özel yazı tipleri';
   @override
@@ -140320,11 +140337,11 @@ class _StringsVi extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
   @override
-  String get download_direct_queue_section => 'Direct downloads';
+  String get download_direct_queue_section => 'Tải xuống trực tiếp';
   @override
-  String get download_task_kind_all => 'All types';
+  String get download_task_kind_all => 'Tất cả loại';
   @override
-  String get download_task_kind_filter => 'Filter by type';
+  String get download_task_kind_filter => 'Lọc theo loại';
   @override
   String get manga_online_series_empty => 'Bộ truyện này không có tập nào.';
   @override
@@ -140438,11 +140455,11 @@ class _StringsVi extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       'Nút chuột nào sẽ tra từ dưới con trỏ. Độc lập với công tắc phía trên: bạn có thể tắt chạm-để-tra mà vẫn tra bằng nút bên hông.';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => 'Nhấp chuột trái';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => 'Nhấp chuột giữa';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => 'Nút bên';
   @override
   String get gal_hook_toolbar_auto_hide => 'Tự ẩn thanh công cụ';
   @override
@@ -140592,10 +140609,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get section_network => 'Mạng';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'Proxy P2P (torrent)';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      'Mặc định kết nối trực tiếp. Qua proxy: toàn bộ lưu lượng P2P đi qua proxy toàn cục — tốc độ có thể giảm, và nhiều nhà cung cấp proxy cấm lưu lượng BitTorrent (bóp băng thông, cảnh báo hoặc khóa tài khoản). Hỗn hợp: yêu cầu tracker đi qua proxy còn kết nối DHT và peer vẫn trực tiếp — tìm được nhiều peer nhất, nhưng IP thật của bạn hiển thị với tracker, DHT và peer (chỉ giải quyết kết nối, không bảo vệ riêng tư). Chỉ áp dụng cho công cụ tích hợp; qBittorrent bên ngoài dùng cài đặt proxy riêng.';
   @override
   String get video_ajatt_settings_hint =>
       'Kho phụ đề tiếng Nhật miễn phí (bản sao kitsunekko). Không cần tài khoản; tệp phụ đề tải từ GitHub.';
@@ -140779,132 +140796,134 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_first_anki_action => 'Mở tra từ và tạo thẻ';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => 'Tra từ trong trò chơi';
   @override
   String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+      'Không dùng OCR · chỉ văn bản thoại ngang';
   @override
-  String get game_lookup_attached_mode => 'Mode';
+  String get game_lookup_attached_mode => 'Chế độ';
   @override
-  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_auto => 'Tự động';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only => 'Chỉ native';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only => 'Chỉ lớp đã hiệu chỉnh';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => 'Tắt';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => 'Trạng thái';
   @override
   String get game_lookup_attached_native_status => 'Native';
   @override
-  String get game_lookup_attached_provider => 'Provider';
+  String get game_lookup_attached_provider => 'Nguồn cung cấp';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => 'Chưa báo cáo';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => 'Hồ sơ';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => 'Đã hiệu chỉnh';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => 'Chưa hiệu chỉnh';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => 'Lá chắn đầu vào';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => 'Đã xác minh';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => 'Không rõ';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => 'Một phần';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered =>
+      'Đã biết chưa bao phủ';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => 'Lỗi';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => 'Rủi ro nhấp chuột';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => 'Chưa cho phép';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => 'Cần xác nhận';
   @override
   String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+      'Đã chấp nhận rủi ro · có thể kích hoạt kép';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => 'Hiệu chỉnh';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => 'Chấp nhận rủi ro nhấp chuột';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => 'Xóa hồ sơ';
   @override
   String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+      'Chọn một luồng văn bản thoại trước khi hiệu chỉnh.';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title =>
+      'Xác nhận rủi ro nhấp chuột thô';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      'Lá chắn đầu vào chưa được xác minh cho tệp thực thi này. Nhấp vào một ký tự cũng có thể làm lời thoại tiếp tục hoặc kích hoạt lựa chọn. Quyền này chỉ được lưu cho hash của tệp thực thi hiện tại và bị thu hồi sau khi cập nhật.';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title =>
+      'Hiệu chỉnh văn bản thoại';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview => 'Xem trước văn bản thoại hiện tại';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => 'Khung văn bản thoại';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => 'Trái';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => 'Trên';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => 'Rộng';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => 'Cao';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => 'Phông chữ';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size => 'Cỡ chữ / chiều cao vùng client';
   @override
   String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+      'Khoảng cách chữ / chiều cao vùng client';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => 'Chiều cao dòng';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => 'Căn ngang';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => 'Căn dọc';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => 'Trái';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => 'Giữa';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => 'Phải';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => 'Trên';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => 'Dưới';
   @override
   String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      'Nhấp vào ký tự đầu, giữa và cuối được tô sáng trong trò chơi, rồi xác nhận từng ký tự bên dưới.';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => 'Ký tự đầu';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => 'Ký tự giữa';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => 'Ký tự cuối';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit => 'Lưu hiệu chỉnh';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      'Hiệu chỉnh chưa được áp dụng. Kiểm tra văn bản thoại, cửa sổ đích và cả ba điểm dò.';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      'Cần ít nhất ba ký tự để tạo điểm dò hiệu chỉnh.';
   @override
-  String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+  String get game_lookup_attached_profile_clear_title => 'Xóa hồ sơ tra từ?';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      'Khung đã lưu, bố cục văn bản và quyền nhấp chuột riêng cho tệp thực thi này sẽ bị xóa.';
   @override
   String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+      'Đang chờ nhấp chuột tương ứng trong trò chơi';
   @override
   String get delete_choices_remember => 'Ghi nhớ các lựa chọn này';
   @override
@@ -140961,53 +140980,52 @@ class _StringsVi extends _StringsEn {
       'Thông tin đăng nhập chỉ áp dụng cho yêu cầu HTTP; công cụ torrent tích hợp không dùng được';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      'Không thể tạo thẻ vì không kết nối được thiết bị đã ghép nối nào. Hãy đảm bảo Fushi đang chạy trên thiết bị đã ghép nối, hoặc tắt Gửi thẻ đến thiết bị đã ghép nối trong Cài đặt Anki để tạo thẻ cục bộ.';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      'Khi tắt, quét thủ công, sau khi duyệt, sau khi tải xuống và quét nền đều bỏ qua nguồn này.';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      'Tác phẩm này không còn trong kế hoạch nguồn hiện tại (tệp có thể đã bị đổi tên, di chuyển hoặc xóa). Quét lại nguồn để làm mới danh sách đang chờ.';
   @override
-  String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+  String get video_source_scrape_pending_works => 'Tác phẩm chờ nhận dạng';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      'Các mục này chưa có danh tính được xác nhận. Tìm và chọn đúng tác phẩm để quét chúng.';
   @override
-  String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+  String get video_source_scrape_enabled_toggle => 'Bật quét cho nguồn này';
   @override
   String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+      'Tự động bổ sung thông tin series còn thiếu';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      'Khi vào thư viện video sẽ quét các mục chưa có danh tính được xác nhận. Tắt để dừng mọi tải xuống metadata trong nền.';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => 'Chưa phân nhóm';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty =>
+      'Không có hoạt động trong khoảng thời gian này';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => 'Trung tâm thống kê';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => 'Tổng quan';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => 'Đóng từ điển';
   @override
   String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+      'Xác nhận danh tính tác phẩm';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'AniDB có nhiều kết quả khớp khả dĩ. Chọn đúng tác phẩm và bản tải xuống đã nhập sẽ được quét trực tiếp với danh tính đó; bỏ qua thì bạn có thể gán sau từ danh sách đang chờ.';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      'Không thể nhận dạng tác phẩm này trên AniDB. Tác phẩm sẽ tải xuống bình thường và chờ trong danh sách đang chờ để nhận dạng thủ công.';
   @override
-  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_direct => 'Trực tiếp';
   @override
-  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  String get network_proxy_p2p_mode_proxy => 'Qua proxy';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => 'Hỗn hợp';
   @override
   String get onboarding_feature_fonts => 'Phông chữ tùy chỉnh';
   @override
@@ -158293,11 +158311,11 @@ class _StringsZhHk extends _StringsEn {
   String get gal_hook_lookup_trigger_hint =>
       '用哪個滑鼠鍵查指標下的字。與上面那個開關互相獨立：可以關掉點字查詞，仍用側鍵查。';
   @override
-  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_left => '左鍵單擊';
   @override
-  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_middle => '滑鼠中鍵';
   @override
-  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_lookup_trigger_side => '滑鼠側鍵';
   @override
   String get gal_hook_toolbar_auto_hide => '自動隱藏功能欄';
   @override
@@ -158429,10 +158447,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get section_network => '網路';
   @override
-  String get network_proxy_p2p_label => 'P2P (torrent) proxy';
+  String get network_proxy_p2p_label => 'P2P（torrent）代理';
   @override
   String get network_proxy_p2p_warning =>
-      'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+      '預設直連。經代理：全部 P2P 流量經全域代理——可能降速，且不少代理服務商禁止 BitTorrent 流量（限速、警告甚至封號）。混合：tracker 請求經代理、DHT 與 peer 直連——節點取得範圍最大，但真實 IP 會暴露給 tracker/DHT/peer（只解決連通性，無隱私作用）。僅對內建引擎生效，外接 qBittorrent 請在其自身設定中設定。';
   @override
   String get video_ajatt_settings_hint =>
       '免費日語字幕庫（kitsunekko 鏡像）。無需帳號；字幕檔案從 GitHub 下載。';
@@ -158600,132 +158618,125 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_first_anki_action => '打開查詞頁製卡';
   @override
-  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_title => '遊戲內查詞';
   @override
-  String get game_lookup_attached_no_ocr =>
-      'No OCR · horizontal body text only';
+  String get game_lookup_attached_no_ocr => '不使用 OCR · 僅橫排正文';
   @override
-  String get game_lookup_attached_mode => 'Mode';
+  String get game_lookup_attached_mode => '模式';
   @override
-  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_auto => '自動';
   @override
-  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_native_only => '僅原生幾何';
   @override
-  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_attached_only => '僅校準層';
   @override
-  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_mode_off => '關閉';
   @override
-  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_status => '狀態';
   @override
-  String get game_lookup_attached_native_status => 'Native';
+  String get game_lookup_attached_native_status => '原生狀態';
   @override
-  String get game_lookup_attached_provider => 'Provider';
+  String get game_lookup_attached_provider => '幾何來源';
   @override
-  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_provider_unknown => '未回報';
   @override
-  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile => '校準檔案';
   @override
-  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_ready => '已校準';
   @override
-  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_profile_missing => '未校準';
   @override
-  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield => '輸入盾';
   @override
-  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_verified => '已驗證';
   @override
-  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_unknown => '未知';
   @override
-  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_partial => '部分覆蓋';
   @override
-  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_known_uncovered => '已知未覆蓋';
   @override
-  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_shield_faulted => '故障';
   @override
-  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk => '點擊風險';
   @override
-  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_safe => '未授權';
   @override
-  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_pending => '等待確認';
   @override
-  String get game_lookup_attached_risk_active =>
-      'Risk accepted · may double-trigger';
+  String get game_lookup_attached_risk_active => '已接受風險 · 可能雙重觸發';
   @override
-  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_calibrate => '校準';
   @override
-  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_risk_accept => '接受點擊風險';
   @override
-  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_profile_clear => '清除檔案';
   @override
-  String get game_lookup_attached_thread_required =>
-      'Select one body-text thread before calibration.';
+  String get game_lookup_attached_thread_required => '請先選擇一個正文執行緒，再開始校準。';
   @override
-  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_title => '確認原始點擊風險';
   @override
   String get game_lookup_attached_risk_body =>
-      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      '目前可執行檔的輸入盾尚未驗證。點擊字形可能同時推進對白或觸發選項。授權僅綁定目前 exe 雜湊，遊戲更新後會自動失效。';
   @override
-  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_calibration_title => '校準正文區域';
   @override
-  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_preview => '目前正文預覽';
   @override
-  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_body_rect => '正文框';
   @override
-  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_left => '左';
   @override
-  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_top => '上';
   @override
-  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_width => '寬';
   @override
-  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_height => '高';
   @override
-  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_family => '字體';
   @override
-  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_font_size => '字號 / 工作區高度';
   @override
-  String get game_lookup_attached_letter_spacing =>
-      'Letter spacing / client height';
+  String get game_lookup_attached_letter_spacing => '字距 / 工作區高度';
   @override
-  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_line_height => '行高';
   @override
-  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_text_align => '水平對齊';
   @override
-  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_vertical_align => '垂直對齊';
   @override
-  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_left => '靠左對齊';
   @override
-  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_center => '置中';
   @override
-  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_right => '靠右對齊';
   @override
-  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_top => '頂部';
   @override
-  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_align_bottom => '底部';
   @override
-  String get game_lookup_attached_probes_hint =>
-      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  String get game_lookup_attached_probes_hint => '請在遊戲中依次點擊高亮的首、中、尾字形，再確認下列字元。';
   @override
-  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_start => '首字形';
   @override
-  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_middle => '中字形';
   @override
-  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_probe_end => '尾字形';
   @override
-  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_commit => '儲存校準';
   @override
   String get game_lookup_attached_calibration_failed =>
-      'Calibration was not applied. Check the body text, target window, and all three probes.';
+      '校準未能套用。請檢查正文、目標視窗和三個點擊探針。';
   @override
   String get game_lookup_attached_calibration_short_text =>
-      'At least three characters are required for calibration probes.';
+      '正文至少需要三個字元才能完成校準探針。';
   @override
-  String get game_lookup_attached_profile_clear_title =>
-      'Clear lookup profile?';
+  String get game_lookup_attached_profile_clear_title => '清除查詞檔案？';
   @override
   String get game_lookup_attached_profile_clear_body =>
-      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      '將刪除已儲存的正文框、文字版面及該 exe 的點擊風險授權。';
   @override
-  String get game_lookup_attached_probe_waiting =>
-      'Waiting for matching in-game click';
+  String get game_lookup_attached_probe_waiting => '等待遊戲內對應字形點擊';
   @override
   String get delete_choices_remember => '記住這些選擇';
   @override
@@ -158776,53 +158787,49 @@ class _StringsZhHk extends _StringsEn {
       '憑證僅用於 HTTP 請求；內建 torrent 引擎無法使用';
   @override
   String get anki_error_paired_device_unreachable =>
-      'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+      '無法製卡：目前沒有可連接的已配對設備。請確認配對設備上的 Fushi 正在執行；如要在本機製卡，請在 Anki 設定中關閉「製卡到已配對設備」。';
   @override
   String get video_source_scrape_enabled_toggle_hint =>
-      'When off, manual, post-scan, post-download and background scraping all skip this source.';
+      '關閉後：手動、掃描後、下載匯入後與後台自動補刮都會跳過此來源。';
   @override
   String get video_source_scrape_work_missing =>
-      'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+      '該作品已不在目前來源計劃中（檔案可能已改名、移動或刪除）。請重新刮削此來源以重新整理待確認清單。';
   @override
-  String get video_source_scrape_pending_works =>
-      'Works awaiting identification';
+  String get video_source_scrape_pending_works => '待確認作品';
   @override
   String get video_source_scrape_pending_works_hint =>
-      'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+      '這些條目還沒有確認的作品身份。搜尋並選取正確的作品即可完成刮削。';
   @override
-  String get video_source_scrape_enabled_toggle =>
-      'Enable scraping for this source';
+  String get video_source_scrape_enabled_toggle => '啟用此來源的刮削';
   @override
-  String get video_library_scrape_auto_backfill =>
-      'Auto-fill missing series info';
+  String get video_library_scrape_auto_backfill => '自動補齊缺失的作品資料';
   @override
   String get video_library_scrape_auto_backfill_hint =>
-      'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+      '進入影片庫時，自動刮削仍未確認身份的條目。關閉後不再有任何後台中繼資料下載。';
   @override
-  String get stat_detail_ungrouped => 'Ungrouped';
+  String get stat_detail_ungrouped => '未分組';
   @override
-  String get stat_detail_empty => 'No activity in this period';
+  String get stat_detail_empty => '此時段暫無記錄';
   @override
-  String get stat_center_title => 'Statistics center';
+  String get stat_center_title => '統計中心';
   @override
-  String get stat_center_tab_overview => 'Overview';
+  String get stat_center_tab_overview => '總覽';
   @override
-  String get shortcut_action_video_dismiss_dict => 'Dismiss dictionary';
+  String get shortcut_action_video_dismiss_dict => '關閉詞典';
   @override
-  String get video_discovery_anidb_identity_confirm_title =>
-      'Confirm the work identity';
+  String get video_discovery_anidb_identity_confirm_title => '確認作品身份';
   @override
   String get video_discovery_anidb_identity_confirm_hint =>
-      'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+      'AniDB 上有多個可能的匹配。選取正確的作品後，下載匯入將直接按該身份刮削；跳過則可稍後在待確認清單手動指定。';
   @override
   String get video_discovery_anidb_identity_not_found =>
-      'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+      '未能在 AniDB 識別該作品：仍會正常下載，匯入後在待確認清單等待手動指定身份。';
   @override
-  String get network_proxy_p2p_mode_direct => 'Direct';
+  String get network_proxy_p2p_mode_direct => '直連';
   @override
-  String get network_proxy_p2p_mode_proxy => 'Via proxy';
+  String get network_proxy_p2p_mode_proxy => '經代理';
   @override
-  String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get network_proxy_p2p_mode_mixed => '混合';
   @override
   String get onboarding_feature_fonts => '自定義字體';
   @override
@@ -175175,11 +175182,11 @@ extension on _StringsAr {
         return ({required Object n}) =>
             'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
       case 'download_direct_queue_section':
-        return 'Direct downloads';
+        return 'التنزيلات المباشرة';
       case 'download_task_kind_all':
-        return 'All types';
+        return 'كل الأنواع';
       case 'download_task_kind_filter':
-        return 'Filter by type';
+        return 'تصفية حسب النوع';
       case 'manga_online_series_empty':
         return 'لا توجد مجلدات في هذه السلسلة.';
       case 'sync_peer_book_delete_confirm':
@@ -175279,11 +175286,11 @@ extension on _StringsAr {
       case 'gal_hook_lookup_trigger_hint':
         return 'أي زر فأرة يبحث عن الكلمة تحت المؤشر. مستقل عن المفتاح أعلاه: يمكنك إيقاف البحث بالنقر والبحث بزر جانبي.';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return 'النقر الأيسر';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return 'النقر الأوسط';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return 'الزر الجانبي';
       case 'gal_hook_toolbar_auto_hide':
         return 'إخفاء شريط الأدوات تلقائيًا';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -175398,9 +175405,9 @@ extension on _StringsAr {
       case 'section_network':
         return 'الشبكة';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'وكيل P2P (torrent)';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return 'الاتصال مباشر افتراضيًا. عبر الوكيل: تمر كل حركة P2P عبر الوكيل العام — قد تنخفض السرعة، وكثير من مزوّدي الوكلاء يحظرون حركة BitTorrent (تقييد السرعة أو تحذيرات أو إنهاء الحساب). مختلط: تمر طلبات tracker عبر الوكيل بينما تبقى اتصالات DHT والأقران (peer) مباشرة — أوسع اكتشاف للأقران، لكن عنوان IP الحقيقي يكون مرئيًا لـ tracker وDHT والأقران (للاتصال فقط وليس للخصوصية). للمحرك المدمج فقط؛ يستخدم qBittorrent الخارجي إعدادات الوكيل الخاصة به.';
       case 'video_ajatt_settings_hint':
         return 'أرشيف مجاني للترجمات اليابانية (مرآة kitsunekko). لا يتطلب حسابًا؛ تُنزَّل ملفات الترجمة من GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -175552,121 +175559,121 @@ extension on _StringsAr {
       case 'onboarding_first_anki_action':
         return 'افتح البحث وأنشئ بطاقة';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return 'البحث داخل اللعبة';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return 'بدون OCR · النص الأساسي الأفقي فقط';
       case 'game_lookup_attached_mode':
-        return 'Mode';
+        return 'الوضع';
       case 'game_lookup_attached_mode_auto':
-        return 'Auto';
+        return 'تلقائي';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return 'الأصلي فقط';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return 'الطبقة المعايَرة فقط';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return 'إيقاف';
       case 'game_lookup_attached_status':
-        return 'State';
+        return 'الحالة';
       case 'game_lookup_attached_native_status':
-        return 'Native';
+        return 'الأصلي';
       case 'game_lookup_attached_provider':
-        return 'Provider';
+        return 'المزوّد';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return 'غير مُبلَّغ';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return 'ملف التعريف';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return 'تمت المعايرة';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return 'لم تتم المعايرة';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return 'درع الإدخال';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return 'تم التحقق';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return 'غير معروف';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return 'جزئي';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return 'غير مغطى (معروف)';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return 'معطّل';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return 'خطر النقر';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return 'غير مصرّح';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return 'يلزم التأكيد';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return 'تم قبول الخطر · قد يُشغَّل مرتين';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return 'معايرة';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return 'قبول خطر النقر';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return 'مسح ملف التعريف';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return 'اختر مسار نص أساسي واحدًا قبل المعايرة.';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return 'تأكيد خطر النقر المباشر';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return 'لم يتم التحقق من درع الإدخال لهذا الملف التنفيذي. قد يؤدي النقر على حرف إلى تقديم الحوار أو تشغيل خيار أيضًا. يُحفظ هذا التصريح فقط لتجزئة الملف التنفيذي الحالي ويُلغى بعد التحديث.';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return 'معايرة النص الأساسي';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return 'معاينة النص الأساسي الحالي';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return 'مستطيل النص';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return 'يسار';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return 'أعلى';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return 'العرض';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return 'الارتفاع';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return 'الخط';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return 'حجم الخط / ارتفاع منطقة العميل';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return 'تباعد الأحرف / ارتفاع منطقة العميل';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return 'ارتفاع السطر';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return 'المحاذاة الأفقية';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return 'المحاذاة الرأسية';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return 'يسار';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return 'وسط';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return 'يمين';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return 'أعلى';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return 'أسفل';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return 'انقر في اللعبة على الحرف الأول والأوسط والأخير المميّزة، ثم أكّد كل حرف أدناه.';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return 'الحرف الأول';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return 'الحرف الأوسط';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return 'الحرف الأخير';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return 'حفظ المعايرة';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return 'لم يتم تطبيق المعايرة. تحقق من النص الأساسي والنافذة الهدف والمجسّات الثلاثة.';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return 'يلزم ثلاثة أحرف على الأقل لمجسّات المعايرة.';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return 'هل تريد مسح ملف تعريف البحث؟';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return 'ستتم إزالة المستطيل المحفوظ وتخطيط النص وتصريح النقر الخاص بهذا الملف التنفيذي.';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return 'في انتظار نقرة مطابقة داخل اللعبة';
       case 'delete_choices_remember':
         return 'تذكّر هذه الخيارات';
       case 'network_proxy_mode_label':
@@ -175713,43 +175720,43 @@ extension on _StringsAr {
       case 'network_proxy_credentials_scope_hint':
         return 'بيانات الاعتماد تُستخدم لطلبات HTTP فقط، ومحرك التورنت المدمج لا يمكنه استخدامها';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return 'تعذّر إنشاء البطاقة لعدم إمكانية الوصول إلى أي جهاز مقترن. تأكد من تشغيل Fushi على الجهاز المقترن، أو أوقف «إرسال إلى الجهاز المقترن» في إعدادات Anki لإنشاء البطاقات محليًا.';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return 'عند الإيقاف، يتم تخطي هذا المصدر في الجلب اليدوي وبعد الفحص وبعد التنزيل وفي الخلفية.';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return 'لم يعد هذا العمل ضمن خطة المصدر الحالية (ربما أُعيدت تسمية ملفاته أو نُقلت أو حُذفت). أعد جلب المصدر لتحديث قائمة الانتظار.';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return 'أعمال بانتظار التحديد';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return 'لا تملك هذه العناصر هوية مؤكدة بعد. ابحث واختر العمل الصحيح لجلب بياناته.';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return 'تفعيل الجلب لهذا المصدر';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return 'تعبئة معلومات المسلسل الناقصة تلقائيًا';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return 'عند دخول مكتبة الفيديو، يتم جلب بيانات العناصر التي لا تملك هوية مؤكدة بعد. أوقفه لإيقاف جميع تنزيلات البيانات الوصفية في الخلفية.';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return 'غير مجمّع';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return 'لا يوجد نشاط في هذه الفترة';
       case 'stat_center_title':
-        return 'Statistics center';
+        return 'مركز الإحصاءات';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return 'نظرة عامة';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return 'إغلاق القاموس';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return 'تأكيد هوية العمل';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'يوجد في AniDB أكثر من مطابقة محتملة. اختر العمل الصحيح ليتم جلب بيانات التنزيل المستورد بهذه الهوية مباشرة؛ أو تخطَّ ذلك لتعيينها لاحقًا من قائمة الانتظار.';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return 'تعذّر تحديد هذا العمل على AniDB. سيتم تنزيله بشكل طبيعي وينتظر في قائمة الانتظار للتحديد اليدوي.';
       case 'network_proxy_p2p_mode_direct':
-        return 'Direct';
+        return 'مباشر';
       case 'network_proxy_p2p_mode_proxy':
-        return 'Via proxy';
+        return 'عبر الوكيل';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return 'مختلط';
       case 'onboarding_feature_fonts':
         return 'خطوط مخصّصة';
       case 'onboarding_feature_fonts_hint':
@@ -183676,11 +183683,11 @@ extension on _StringsDe {
         return ({required Object n}) =>
             'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
       case 'download_direct_queue_section':
-        return 'Direct downloads';
+        return 'Direkte Downloads';
       case 'download_task_kind_all':
-        return 'All types';
+        return 'Alle Typen';
       case 'download_task_kind_filter':
-        return 'Filter by type';
+        return 'Nach Typ filtern';
       case 'manga_online_series_empty':
         return 'Diese Serie enthält keine Bände.';
       case 'sync_peer_book_delete_confirm':
@@ -183780,11 +183787,11 @@ extension on _StringsDe {
       case 'gal_hook_lookup_trigger_hint':
         return 'Welche Maustaste das Wort unter dem Zeiger nachschlägt. Unabhängig vom Schalter oben: Du kannst Tippen-zum-Nachschlagen ausschalten und trotzdem mit einer Seitentaste nachschlagen.';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return 'Linksklick';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return 'Mittelklick';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return 'Seitentaste';
       case 'gal_hook_toolbar_auto_hide':
         return 'Werkzeugleiste automatisch ausblenden';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -183899,9 +183906,9 @@ extension on _StringsDe {
       case 'section_network':
         return 'Netzwerk';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'P2P-(Torrent-)Proxy';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return 'Standardmäßig direkt. Über Proxy: Der gesamte P2P-Verkehr läuft über den globalen Proxy – die Geschwindigkeit kann sinken, und viele Proxy-Anbieter verbieten BitTorrent-Verkehr (Drosselung, Verwarnungen oder Kontosperrung). Gemischt: Tracker-Anfragen laufen über den Proxy, während DHT- und Peer-Verbindungen direkt bleiben – größte Peer-Reichweite, aber Ihre echte IP ist für Tracker, DHT und Peers sichtbar (nur Konnektivität, keine Privatsphäre). Gilt nur für die integrierte Engine; ein externes qBittorrent verwendet seine eigenen Proxy-Einstellungen.';
       case 'video_ajatt_settings_hint':
         return 'Kostenloses Archiv japanischer Untertitel (kitsunekko-Spiegel). Kein Konto nötig; Untertiteldateien werden von GitHub geladen.';
       case 'video_ajatt_enabled_hint':
@@ -184053,121 +184060,121 @@ extension on _StringsDe {
       case 'onboarding_first_anki_action':
         return 'Nachschlagen öffnen und Karte erstellen';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return 'Nachschlagen im Spiel';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return 'Kein OCR · nur horizontaler Fließtext';
       case 'game_lookup_attached_mode':
-        return 'Mode';
+        return 'Modus';
       case 'game_lookup_attached_mode_auto':
-        return 'Auto';
+        return 'Automatisch';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return 'Nur nativ';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return 'Nur kalibrierte Ebene';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return 'Aus';
       case 'game_lookup_attached_status':
-        return 'State';
+        return 'Zustand';
       case 'game_lookup_attached_native_status':
-        return 'Native';
+        return 'Nativ';
       case 'game_lookup_attached_provider':
-        return 'Provider';
+        return 'Anbieter';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return 'Nicht gemeldet';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return 'Profil';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return 'Kalibriert';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return 'Nicht kalibriert';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return 'Eingabeschutz';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return 'Verifiziert';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return 'Unbekannt';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return 'Teilweise';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return 'Bekannt nicht abgedeckt';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return 'Fehlerhaft';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return 'Klickrisiko';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return 'Nicht autorisiert';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return 'Bestätigung erforderlich';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return 'Risiko akzeptiert · kann doppelt auslösen';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return 'Kalibrieren';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return 'Klickrisiko akzeptieren';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return 'Profil löschen';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return 'Wählen Sie vor der Kalibrierung einen Fließtext-Thread aus.';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return 'Rohklick-Risiko bestätigen';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return 'Der Eingabeschutz ist für diese ausführbare Datei nicht verifiziert. Ein Klick auf eine Glyphe kann auch den Dialog fortsetzen oder eine Auswahl auslösen. Diese Autorisierung wird nur für den aktuellen Hash der ausführbaren Datei gespeichert und nach einem Update widerrufen.';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return 'Fließtext kalibrieren';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return 'Vorschau des aktuellen Fließtexts';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return 'Textrechteck';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return 'Links';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return 'Oben';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return 'Breite';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return 'Höhe';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return 'Schriftart';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return 'Schriftgröße / Clienthöhe';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return 'Zeichenabstand / Clienthöhe';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return 'Zeilenhöhe';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return 'Horizontale Ausrichtung';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return 'Vertikale Ausrichtung';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return 'Links';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return 'Zentriert';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return 'Rechts';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return 'Oben';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return 'Unten';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return 'Klicken Sie im Spiel auf die erste, mittlere und letzte hervorgehobene Glyphe und bestätigen Sie dann unten jedes Zeichen.';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return 'Erste Glyphe';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return 'Mittlere Glyphe';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return 'Letzte Glyphe';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return 'Kalibrierung speichern';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return 'Die Kalibrierung wurde nicht übernommen. Prüfen Sie den Fließtext, das Zielfenster und alle drei Prüfpunkte.';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return 'Für die Kalibrierungs-Prüfpunkte sind mindestens drei Zeichen erforderlich.';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return 'Nachschlageprofil löschen?';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return 'Das gespeicherte Rechteck, das Textlayout und die für diese ausführbare Datei erteilte Klick-Autorisierung werden entfernt.';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return 'Warten auf passenden Klick im Spiel';
       case 'delete_choices_remember':
         return 'Diese Auswahl merken';
       case 'network_proxy_mode_label':
@@ -184215,43 +184222,43 @@ extension on _StringsDe {
       case 'network_proxy_credentials_scope_hint':
         return 'Zugangsdaten gelten nur für HTTP-Anfragen; die integrierte Torrent-Engine kann sie nicht verwenden';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return 'Die Karte konnte nicht erstellt werden, da kein gekoppeltes Gerät erreichbar war. Stellen Sie sicher, dass Fushi auf dem gekoppelten Gerät läuft, oder deaktivieren Sie „An gekoppeltes Gerät senden“ in den Anki-Einstellungen, um Karten lokal zu erstellen.';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return 'Wenn deaktiviert, überspringen manueller Abruf sowie Abruf nach dem Scan, nach dem Download und im Hintergrund diese Quelle.';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return 'Dieses Werk ist nicht mehr im aktuellen Quellenplan enthalten (seine Dateien wurden möglicherweise umbenannt, verschoben oder gelöscht). Rufen Sie die Quelle erneut ab, um die Liste der ausstehenden Werke zu aktualisieren.';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return 'Werke mit ausstehender Identifizierung';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return 'Diese Einträge haben noch keine bestätigte Identität. Suchen Sie das richtige Werk und wählen Sie es aus, um sie abzurufen.';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return 'Abruf für diese Quelle aktivieren';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return 'Fehlende Serieninfos automatisch ergänzen';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return 'Beim Öffnen der Videobibliothek werden Einträge ohne bestätigte Identität abgerufen. Deaktivieren, um alle Metadaten-Downloads im Hintergrund zu stoppen.';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return 'Nicht gruppiert';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return 'Keine Aktivität in diesem Zeitraum';
       case 'stat_center_title':
-        return 'Statistics center';
+        return 'Statistikzentrale';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return 'Übersicht';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return 'Wörterbuch schließen';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return 'Identität des Werks bestätigen';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'AniDB hat mehr als einen möglichen Treffer. Wählen Sie das richtige Werk, dann wird der importierte Download direkt mit dieser Identität abgerufen; beim Überspringen können Sie es später aus der Liste der ausstehenden Werke zuweisen.';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return 'Dieses Werk konnte auf AniDB nicht identifiziert werden. Es wird normal heruntergeladen und wartet in der Liste der ausstehenden Werke auf manuelle Identifizierung.';
       case 'network_proxy_p2p_mode_direct':
-        return 'Direct';
+        return 'Direkt';
       case 'network_proxy_p2p_mode_proxy':
-        return 'Via proxy';
+        return 'Über Proxy';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return 'Gemischt';
       case 'onboarding_feature_fonts':
         return 'Eigene Schriften';
       case 'onboarding_feature_fonts_hint':
@@ -192170,11 +192177,11 @@ extension on _StringsEs {
         return ({required Object n}) =>
             'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
       case 'download_direct_queue_section':
-        return 'Direct downloads';
+        return 'Descargas directas';
       case 'download_task_kind_all':
-        return 'All types';
+        return 'Todos los tipos';
       case 'download_task_kind_filter':
-        return 'Filter by type';
+        return 'Filtrar por tipo';
       case 'manga_online_series_empty':
         return 'Esta serie no tiene volúmenes.';
       case 'sync_peer_book_delete_confirm':
@@ -192274,11 +192281,11 @@ extension on _StringsEs {
       case 'gal_hook_lookup_trigger_hint':
         return 'Qué botón del ratón busca la palabra bajo el puntero. Es independiente del interruptor de arriba: puedes desactivar la búsqueda por toque y seguir buscando con un botón lateral.';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return 'Clic izquierdo';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return 'Clic central';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return 'Botón lateral';
       case 'gal_hook_toolbar_auto_hide':
         return 'Ocultar la barra automáticamente';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -192393,9 +192400,9 @@ extension on _StringsEs {
       case 'section_network':
         return 'Red';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'Proxy P2P (torrent)';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return 'Directo de forma predeterminada. A través del proxy: todo el tráfico P2P pasa por el proxy global — la velocidad puede bajar y muchos proveedores de proxy prohíben el tráfico BitTorrent (limitación de velocidad, advertencias o cierre de la cuenta). Mixto: las solicitudes al tracker pasan por el proxy mientras que DHT y las conexiones con peers siguen siendo directas — máxima detección de peers, pero su IP real es visible para trackers, DHT y peers (solo conectividad, no privacidad). Solo para el motor integrado; qBittorrent externo usa su propia configuración de proxy.';
       case 'video_ajatt_settings_hint':
         return 'Archivo gratuito de subtítulos en japonés (réplica de kitsunekko). No requiere cuenta; los archivos se descargan desde GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -192547,121 +192554,121 @@ extension on _StringsEs {
       case 'onboarding_first_anki_action':
         return 'Abrir la consulta y crear una tarjeta';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return 'Búsqueda dentro del juego';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return 'Sin OCR · solo texto horizontal del diálogo';
       case 'game_lookup_attached_mode':
-        return 'Mode';
+        return 'Modo';
       case 'game_lookup_attached_mode_auto':
-        return 'Auto';
+        return 'Automático';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return 'Solo nativo';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return 'Solo capa calibrada';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return 'Desactivado';
       case 'game_lookup_attached_status':
-        return 'State';
+        return 'Estado';
       case 'game_lookup_attached_native_status':
-        return 'Native';
+        return 'Nativo';
       case 'game_lookup_attached_provider':
-        return 'Provider';
+        return 'Proveedor';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return 'No informado';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return 'Perfil';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return 'Calibrado';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return 'Sin calibrar';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return 'Escudo de entrada';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return 'Verificado';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return 'Desconocido';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return 'Parcial';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return 'Sin cobertura (conocido)';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return 'Con fallo';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return 'Riesgo de clic';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return 'No autorizado';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return 'Confirmación requerida';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return 'Riesgo aceptado · puede activarse dos veces';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return 'Calibrar';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return 'Aceptar riesgo de clic';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return 'Borrar perfil';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return 'Seleccione un hilo de texto del diálogo antes de calibrar.';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return 'Confirmar riesgo de clic directo';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return 'El escudo de entrada no está verificado para este ejecutable. Hacer clic en un glifo también puede avanzar el diálogo o activar una opción. Esta autorización se guarda solo para el hash del ejecutable actual y se revoca tras una actualización.';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return 'Calibrar texto del diálogo';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return 'Vista previa del texto actual';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return 'Rectángulo del texto';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return 'Izquierda';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return 'Arriba';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return 'Ancho';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return 'Alto';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return 'Familia de fuente';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return 'Tamaño de fuente / alto del área cliente';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return 'Espaciado de letras / alto del área cliente';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return 'Altura de línea';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return 'Alineación horizontal';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return 'Alineación vertical';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return 'Izquierda';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return 'Centro';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return 'Derecha';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return 'Arriba';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return 'Abajo';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return 'Haga clic en el primer, el intermedio y el último glifo resaltados en el juego y luego confirme cada carácter abajo.';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return 'Primer glifo';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return 'Glifo intermedio';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return 'Último glifo';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return 'Guardar calibración';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return 'La calibración no se aplicó. Compruebe el texto del diálogo, la ventana de destino y las tres sondas.';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return 'Se necesitan al menos tres caracteres para las sondas de calibración.';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return '¿Borrar el perfil de búsqueda?';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return 'Se eliminarán el rectángulo guardado, la disposición del texto y la autorización de clic específica del ejecutable.';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return 'Esperando el clic correspondiente en el juego';
       case 'delete_choices_remember':
         return 'Recordar estas opciones';
       case 'network_proxy_mode_label':
@@ -192709,43 +192716,43 @@ extension on _StringsEs {
       case 'network_proxy_credentials_scope_hint':
         return 'Las credenciales solo se aplican a las solicitudes HTTP; el motor de torrents integrado no puede usarlas';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return 'No se pudo crear la tarjeta porque no se pudo alcanzar ningún dispositivo emparejado. Asegúrese de que Fushi esté en ejecución en el dispositivo emparejado o desactive «Enviar al dispositivo emparejado» en Configuración de Anki para crear tarjetas localmente.';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return 'Si está desactivado, la obtención de metadatos manual, tras el escaneo, tras la descarga y en segundo plano omitirá esta fuente.';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return 'Esta obra ya no está en el plan actual de la fuente (sus archivos pueden haberse renombrado, movido o eliminado). Vuelva a obtener los metadatos de la fuente para actualizar la lista de pendientes.';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return 'Obras pendientes de identificación';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return 'Estas entradas aún no tienen una identidad confirmada. Busque y elija la obra correcta para obtener sus metadatos.';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return 'Habilitar la obtención de metadatos para esta fuente';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return 'Completar automáticamente la información de serie faltante';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return 'Al entrar en la biblioteca de vídeo se obtienen los metadatos de las entradas que aún no tienen identidad confirmada. Desactívelo para detener todas las descargas de metadatos en segundo plano.';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return 'Sin agrupar';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return 'Sin actividad en este periodo';
       case 'stat_center_title':
-        return 'Statistics center';
+        return 'Centro de estadísticas';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return 'Resumen';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return 'Cerrar diccionario';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return 'Confirmar la identidad de la obra';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'AniDB tiene más de una coincidencia posible. Elija la obra correcta y la descarga importada obtendrá los metadatos con esa identidad directamente; si la omite, podrá asignarla más tarde desde la lista de pendientes.';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return 'No se pudo identificar esta obra en AniDB. Se descargará normalmente y esperará en la lista de pendientes para su identificación manual.';
       case 'network_proxy_p2p_mode_direct':
-        return 'Direct';
+        return 'Directo';
       case 'network_proxy_p2p_mode_proxy':
-        return 'Via proxy';
+        return 'A través del proxy';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return 'Mixto';
       case 'onboarding_feature_fonts':
         return 'Fuentes personalizadas';
       case 'onboarding_feature_fonts_hint':
@@ -200672,11 +200679,11 @@ extension on _StringsFr {
         return ({required Object n}) =>
             '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
       case 'download_direct_queue_section':
-        return 'Direct downloads';
+        return 'Téléchargements directs';
       case 'download_task_kind_all':
-        return 'All types';
+        return 'Tous les types';
       case 'download_task_kind_filter':
-        return 'Filter by type';
+        return 'Filtrer par type';
       case 'manga_online_series_empty':
         return 'Aucun volume dans cette série.';
       case 'sync_peer_book_delete_confirm':
@@ -200776,11 +200783,11 @@ extension on _StringsFr {
       case 'gal_hook_lookup_trigger_hint':
         return 'Quel bouton de la souris cherche le mot sous le pointeur. Indépendant du réglage ci-dessus : vous pouvez désactiver la recherche au toucher et chercher quand même avec un bouton latéral.';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return 'Clic gauche';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return 'Clic molette';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return 'Bouton latéral';
       case 'gal_hook_toolbar_auto_hide':
         return 'Masquer la barre automatiquement';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -200895,9 +200902,9 @@ extension on _StringsFr {
       case 'section_network':
         return 'Réseau';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'Proxy P2P (torrent)';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return 'Direct par défaut. Via proxy : tout le trafic P2P passe par le proxy global — la vitesse peut baisser, et de nombreux fournisseurs de proxy interdisent le trafic BitTorrent (bridage, avertissements ou résiliation du compte). Mixte : les requêtes tracker passent par le proxy tandis que les connexions DHT et pairs restent directes — découverte de pairs la plus large, mais votre vraie IP est visible des trackers, du DHT et des pairs (connectivité uniquement, pas de confidentialité). Moteur intégré uniquement ; un qBittorrent externe utilise ses propres paramètres de proxy.';
       case 'video_ajatt_settings_hint':
         return 'Archive gratuite de sous-titres japonais (miroir kitsunekko). Aucun compte requis ; les fichiers sont téléchargés depuis GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -201049,121 +201056,121 @@ extension on _StringsFr {
       case 'onboarding_first_anki_action':
         return 'Ouvrir la recherche et créer une carte';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return 'Recherche en jeu';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return 'Sans OCR · corps de texte horizontal uniquement';
       case 'game_lookup_attached_mode':
         return 'Mode';
       case 'game_lookup_attached_mode_auto':
         return 'Auto';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return 'Natif uniquement';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return 'Couche calibrée uniquement';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return 'Désactivé';
       case 'game_lookup_attached_status':
-        return 'State';
+        return 'État';
       case 'game_lookup_attached_native_status':
-        return 'Native';
+        return 'Natif';
       case 'game_lookup_attached_provider':
-        return 'Provider';
+        return 'Fournisseur';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return 'Non signalé';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return 'Profil';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return 'Calibré';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return 'Non calibré';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return 'Bouclier de saisie';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return 'Vérifié';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return 'Inconnu';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return 'Partiel';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return 'Non couvert (connu)';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return 'En défaut';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return 'Risque de clic';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return 'Non autorisé';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return 'Confirmation requise';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return 'Risque accepté · double déclenchement possible';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return 'Calibrer';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return 'Accepter le risque de clic';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return 'Effacer le profil';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return 'Sélectionnez un fil de corps de texte avant le calibrage.';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return 'Confirmer le risque de clic brut';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return 'Le bouclier de saisie n\'est pas vérifié pour cet exécutable. Cliquer sur un glyphe peut aussi faire avancer le dialogue ou déclencher un choix. Cette autorisation n\'est enregistrée que pour le hachage de l\'exécutable actuel et est révoquée après une mise à jour.';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return 'Calibrer le corps de texte';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return 'Aperçu du corps de texte actuel';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return 'Rectangle du texte';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return 'Gauche';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return 'Haut';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return 'Largeur';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return 'Hauteur';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return 'Police';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return 'Taille de police / hauteur client';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return 'Espacement des lettres / hauteur client';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return 'Hauteur de ligne';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return 'Alignement horizontal';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return 'Alignement vertical';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return 'Gauche';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return 'Centré';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return 'Droite';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return 'Haut';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return 'Bas';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return 'Cliquez dans le jeu sur le premier glyphe surligné, celui du milieu et le dernier, puis confirmez chaque caractère ci-dessous.';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return 'Premier glyphe';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return 'Glyphe du milieu';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return 'Dernier glyphe';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return 'Enregistrer le calibrage';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return 'Le calibrage n\'a pas été appliqué. Vérifiez le corps de texte, la fenêtre cible et les trois sondes.';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return 'Au moins trois caractères sont nécessaires pour les sondes de calibrage.';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return 'Effacer le profil de recherche ?';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return 'Le rectangle enregistré, la mise en page du texte et l\'autorisation de clic propre à cet exécutable seront supprimés.';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return 'En attente du clic correspondant dans le jeu';
       case 'delete_choices_remember':
         return 'Mémoriser ces choix';
       case 'network_proxy_mode_label':
@@ -201211,43 +201218,43 @@ extension on _StringsFr {
       case 'network_proxy_credentials_scope_hint':
         return 'Les identifiants ne s\'appliquent qu\'aux requêtes HTTP ; le moteur torrent intégré ne peut pas les utiliser';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return 'Impossible de créer la carte, car aucun appareil apparié n\'a pu être joint. Assurez-vous que Fushi est lancé sur l\'appareil apparié, ou désactivez « Envoyer au périphérique apparié » dans les Paramètres Anki pour créer les cartes localement.';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return 'Si désactivé, la récupération manuelle, après scan, après téléchargement et en arrière-plan ignore cette source.';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return 'Cette œuvre ne figure plus dans le plan actuel de la source (ses fichiers ont peut-être été renommés, déplacés ou supprimés). Rerécupérez la source pour actualiser la liste des œuvres en attente.';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return 'Œuvres en attente d\'identification';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return 'Ces entrées n\'ont pas encore d\'identité confirmée. Recherchez et choisissez la bonne œuvre pour les récupérer.';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return 'Activer la récupération pour cette source';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return 'Compléter automatiquement les infos de série manquantes';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return 'À l\'ouverture de la bibliothèque vidéo, les entrées sans identité confirmée sont récupérées. Désactivez pour arrêter tous les téléchargements de métadonnées en arrière-plan.';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return 'Non groupé';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return 'Aucune activité sur cette période';
       case 'stat_center_title':
-        return 'Statistics center';
+        return 'Centre de statistiques';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return 'Vue d\'ensemble';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return 'Fermer le dictionnaire';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return 'Confirmer l\'identité de l\'œuvre';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'AniDB propose plusieurs correspondances possibles. Choisissez la bonne œuvre et le téléchargement importé sera récupéré directement avec cette identité ; en passant, vous pourrez l\'attribuer plus tard depuis la liste des œuvres en attente.';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return 'Impossible d\'identifier cette œuvre sur AniDB. Elle sera téléchargée normalement et attendra dans la liste des œuvres en attente une identification manuelle.';
       case 'network_proxy_p2p_mode_direct':
         return 'Direct';
       case 'network_proxy_p2p_mode_proxy':
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return 'Mixte';
       case 'onboarding_feature_fonts':
         return 'Polices personnalisées';
       case 'onboarding_feature_fonts_hint':
@@ -209146,11 +209153,11 @@ extension on _StringsId {
         return ({required Object n}) =>
             '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
       case 'download_direct_queue_section':
-        return 'Direct downloads';
+        return 'Unduhan langsung';
       case 'download_task_kind_all':
-        return 'All types';
+        return 'Semua jenis';
       case 'download_task_kind_filter':
-        return 'Filter by type';
+        return 'Filter menurut jenis';
       case 'manga_online_series_empty':
         return 'Seri ini tidak memiliki volume.';
       case 'sync_peer_book_delete_confirm':
@@ -209250,11 +209257,11 @@ extension on _StringsId {
       case 'gal_hook_lookup_trigger_hint':
         return 'Tombol tetikus mana yang mencari kata di bawah penunjuk. Terpisah dari sakelar di atas: kamu bisa mematikan ketuk-untuk-cari dan tetap mencari dengan tombol samping.';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return 'Klik kiri';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return 'Klik tengah';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return 'Tombol samping';
       case 'gal_hook_toolbar_auto_hide':
         return 'Sembunyikan bilah otomatis';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -209369,9 +209376,9 @@ extension on _StringsId {
       case 'section_network':
         return 'Jaringan';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'Proksi P2P (torrent)';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return 'Langsung secara default. Lewat proksi: semua lalu lintas P2P melewati proksi global — kecepatan bisa turun, dan banyak penyedia proksi melarang lalu lintas BitTorrent (pembatasan kecepatan, peringatan, atau penutupan akun). Campuran: permintaan tracker melewati proksi sedangkan koneksi DHT dan peer tetap langsung — penemuan peer paling luas, tetapi IP asli Anda terlihat oleh tracker, DHT, dan peer (hanya untuk konektivitas, bukan privasi). Hanya berlaku untuk mesin bawaan; qBittorrent eksternal memakai pengaturan proksinya sendiri.';
       case 'video_ajatt_settings_hint':
         return 'Arsip subtitle bahasa Jepang gratis (cermin kitsunekko). Tidak perlu akun; berkas subtitle diunduh dari GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -209523,121 +209530,121 @@ extension on _StringsId {
       case 'onboarding_first_anki_action':
         return 'Buka pencarian dan buat kartu';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return 'Pencarian dalam game';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return 'Tanpa OCR · hanya teks dialog horizontal';
       case 'game_lookup_attached_mode':
         return 'Mode';
       case 'game_lookup_attached_mode_auto':
-        return 'Auto';
+        return 'Otomatis';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return 'Hanya native';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return 'Hanya lapisan terkalibrasi';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return 'Nonaktif';
       case 'game_lookup_attached_status':
-        return 'State';
+        return 'Status';
       case 'game_lookup_attached_native_status':
         return 'Native';
       case 'game_lookup_attached_provider':
-        return 'Provider';
+        return 'Penyedia';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return 'Tidak dilaporkan';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return 'Profil';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return 'Terkalibrasi';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return 'Belum dikalibrasi';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return 'Perisai input';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return 'Terverifikasi';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return 'Tidak diketahui';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return 'Sebagian';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return 'Diketahui tidak tercakup';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return 'Bermasalah';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return 'Risiko klik';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return 'Belum diizinkan';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return 'Perlu konfirmasi';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return 'Risiko diterima · bisa terpicu ganda';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return 'Kalibrasi';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return 'Terima risiko klik';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return 'Hapus profil';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return 'Pilih satu thread teks dialog sebelum kalibrasi.';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return 'Konfirmasi risiko klik mentah';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return 'Perisai input belum terverifikasi untuk executable ini. Mengklik glif juga bisa memajukan dialog atau memicu pilihan. Izin ini hanya disimpan untuk hash executable saat ini dan dicabut setelah pembaruan.';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return 'Kalibrasi teks dialog';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return 'Pratinjau teks dialog saat ini';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return 'Kotak teks dialog';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return 'Kiri';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return 'Atas';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return 'Lebar';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return 'Tinggi';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return 'Jenis font';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return 'Ukuran font / tinggi klien';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return 'Jarak huruf / tinggi klien';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return 'Tinggi baris';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return 'Perataan horizontal';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return 'Perataan vertikal';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return 'Kiri';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return 'Tengah';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return 'Kanan';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return 'Atas';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return 'Bawah';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return 'Klik glif pertama, tengah, dan terakhir yang disorot di dalam game, lalu konfirmasi setiap karakter di bawah.';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return 'Glif pertama';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return 'Glif tengah';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return 'Glif terakhir';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return 'Simpan kalibrasi';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return 'Kalibrasi tidak diterapkan. Periksa teks dialog, jendela target, dan ketiga probe.';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return 'Diperlukan minimal tiga karakter untuk probe kalibrasi.';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return 'Hapus profil pencarian?';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return 'Kotak yang tersimpan, tata letak teks, dan izin klik khusus executable ini akan dihapus.';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return 'Menunggu klik yang cocok di dalam game';
       case 'delete_choices_remember':
         return 'Ingat pilihan ini';
       case 'network_proxy_mode_label':
@@ -209685,43 +209692,43 @@ extension on _StringsId {
       case 'network_proxy_credentials_scope_hint':
         return 'Kredensial hanya berlaku untuk permintaan HTTP; mesin torrent bawaan tidak dapat menggunakannya';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return 'Tidak dapat membuat kartu karena tidak ada perangkat berpasangan yang bisa dijangkau. Pastikan Fushi berjalan di perangkat berpasangan, atau nonaktifkan Kirim kartu ke perangkat berpasangan di Pengaturan Anki untuk membuat kartu secara lokal.';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return 'Jika nonaktif, scraping manual, pasca-pemindaian, pasca-unduhan, dan latar belakang semuanya melewati sumber ini.';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return 'Karya ini sudah tidak ada dalam rencana sumber saat ini (filenya mungkin telah diganti nama, dipindahkan, atau dihapus). Scrape ulang sumber ini untuk menyegarkan daftar tertunda.';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return 'Karya menunggu identifikasi';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return 'Entri ini belum memiliki identitas yang dikonfirmasi. Cari dan pilih karya yang benar untuk men-scrape-nya.';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return 'Aktifkan scraping untuk sumber ini';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return 'Isi otomatis info seri yang hilang';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return 'Saat masuk ke perpustakaan video, entri yang belum memiliki identitas terkonfirmasi akan di-scrape. Nonaktifkan untuk menghentikan semua unduhan metadata latar belakang.';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return 'Tidak dikelompokkan';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return 'Tidak ada aktivitas pada periode ini';
       case 'stat_center_title':
-        return 'Statistics center';
+        return 'Pusat statistik';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return 'Ringkasan';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return 'Tutup kamus';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return 'Konfirmasi identitas karya';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'AniDB memiliki lebih dari satu kemungkinan kecocokan. Pilih karya yang benar dan unduhan yang diimpor akan langsung di-scrape dengan identitas itu; lewati dan Anda dapat menetapkannya nanti dari daftar tertunda.';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return 'Tidak dapat mengidentifikasi karya ini di AniDB. Karya akan diunduh seperti biasa dan menunggu di daftar tertunda untuk identifikasi manual.';
       case 'network_proxy_p2p_mode_direct':
-        return 'Direct';
+        return 'Langsung';
       case 'network_proxy_p2p_mode_proxy':
-        return 'Via proxy';
+        return 'Lewat proksi';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return 'Campuran';
       case 'onboarding_feature_fonts':
         return 'Font kustom';
       case 'onboarding_feature_fonts_hint':
@@ -217641,11 +217648,11 @@ extension on _StringsIt {
         return ({required Object n}) =>
             'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
       case 'download_direct_queue_section':
-        return 'Direct downloads';
+        return 'Download diretti';
       case 'download_task_kind_all':
-        return 'All types';
+        return 'Tutti i tipi';
       case 'download_task_kind_filter':
-        return 'Filter by type';
+        return 'Filtra per tipo';
       case 'manga_online_series_empty':
         return 'Nessun volume in questa serie.';
       case 'sync_peer_book_delete_confirm':
@@ -217745,11 +217752,11 @@ extension on _StringsIt {
       case 'gal_hook_lookup_trigger_hint':
         return 'Quale tasto del mouse cerca la parola sotto il puntatore. Indipendente dall’interruttore qui sopra: puoi disattivare il tocco-per-cercare e cercare comunque con un tasto laterale.';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return 'Clic sinistro';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return 'Clic centrale';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return 'Pulsante laterale';
       case 'gal_hook_toolbar_auto_hide':
         return 'Nascondi la barra automaticamente';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -217864,9 +217871,9 @@ extension on _StringsIt {
       case 'section_network':
         return 'Rete';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'Proxy P2P (torrent)';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return 'Diretto per impostazione predefinita. Via proxy: tutto il traffico P2P passa dal proxy globale — la velocità può calare e molti provider proxy vietano il traffico BitTorrent (limitazioni, avvisi o chiusura dell\'account). Misto: le richieste ai tracker passano dal proxy mentre DHT e connessioni ai peer restano dirette — massima scoperta dei peer, ma il tuo IP reale è visibile a tracker, DHT e peer (solo connettività, non privacy). Solo per il motore integrato; qBittorrent esterno usa le proprie impostazioni proxy.';
       case 'video_ajatt_settings_hint':
         return 'Archivio gratuito di sottotitoli giapponesi (mirror kitsunekko). Nessun account richiesto; i file vengono scaricati da GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -218018,121 +218025,121 @@ extension on _StringsIt {
       case 'onboarding_first_anki_action':
         return 'Apri la ricerca e crea una carta';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return 'Ricerca in-game';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return 'Senza OCR · solo testo orizzontale dei dialoghi';
       case 'game_lookup_attached_mode':
-        return 'Mode';
+        return 'Modalità';
       case 'game_lookup_attached_mode_auto':
-        return 'Auto';
+        return 'Automatica';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return 'Solo nativo';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return 'Solo livello calibrato';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return 'Disattivata';
       case 'game_lookup_attached_status':
-        return 'State';
+        return 'Stato';
       case 'game_lookup_attached_native_status':
-        return 'Native';
+        return 'Nativo';
       case 'game_lookup_attached_provider':
         return 'Provider';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return 'Non segnalato';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return 'Profilo';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return 'Calibrato';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return 'Non calibrato';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return 'Scudo input';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return 'Verificato';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return 'Sconosciuto';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return 'Parziale';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return 'Non coperto (noto)';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return 'In errore';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return 'Rischio clic';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return 'Non autorizzato';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return 'Conferma richiesta';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return 'Rischio accettato · possibile doppia attivazione';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return 'Calibra';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return 'Accetta rischio clic';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return 'Cancella profilo';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return 'Seleziona un thread di testo dei dialoghi prima della calibrazione.';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return 'Conferma rischio clic diretto';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return 'Lo scudo input non è verificato per questo eseguibile. Cliccare su un glifo potrebbe anche far avanzare il dialogo o attivare una scelta. Questa autorizzazione è salvata solo per l\'hash dell\'eseguibile attuale e viene revocata dopo un aggiornamento.';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return 'Calibra testo dei dialoghi';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return 'Anteprima del testo attuale';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return 'Rettangolo del testo';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return 'Sinistra';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return 'Alto';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return 'Larghezza';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return 'Altezza';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return 'Famiglia di font';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return 'Dimensione font / altezza area client';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return 'Spaziatura lettere / altezza area client';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return 'Altezza riga';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return 'Allineamento orizzontale';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return 'Allineamento verticale';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return 'Sinistra';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return 'Centro';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return 'Destra';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return 'Alto';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return 'Basso';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return 'Clicca nel gioco sul primo, sul centrale e sull\'ultimo glifo evidenziati, poi conferma ogni carattere qui sotto.';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return 'Primo glifo';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return 'Glifo centrale';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return 'Ultimo glifo';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return 'Salva calibrazione';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return 'La calibrazione non è stata applicata. Controlla il testo dei dialoghi, la finestra di destinazione e tutte e tre le sonde.';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return 'Servono almeno tre caratteri per le sonde di calibrazione.';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return 'Cancellare il profilo di ricerca?';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return 'Il rettangolo salvato, il layout del testo e l\'autorizzazione al clic specifica dell\'eseguibile verranno rimossi.';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return 'In attesa del clic corrispondente nel gioco';
       case 'delete_choices_remember':
         return 'Ricorda queste scelte';
       case 'network_proxy_mode_label':
@@ -218180,43 +218187,43 @@ extension on _StringsIt {
       case 'network_proxy_credentials_scope_hint':
         return 'Le credenziali valgono solo per le richieste HTTP; il motore torrent integrato non può usarle';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return 'Impossibile creare la carta perché nessun dispositivo accoppiato è raggiungibile. Assicurati che Fushi sia in esecuzione sul dispositivo accoppiato, oppure disattiva "Invia al dispositivo accoppiato" in Impostazioni Anki per creare le carte in locale.';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return 'Se disattivato, lo scrape manuale, dopo la scansione, dopo il download e in background salterà questa fonte.';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return 'Quest\'opera non è più nel piano attuale della fonte (i suoi file potrebbero essere stati rinominati, spostati o eliminati). Ri-scrape la fonte per aggiornare l\'elenco in attesa.';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return 'Opere in attesa di identificazione';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return 'Queste voci non hanno ancora un\'identità confermata. Cerca e scegli l\'opera corretta per eseguirne lo scrape.';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return 'Abilita lo scrape per questa fonte';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return 'Completa automaticamente le info serie mancanti';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return 'All\'apertura della libreria video viene eseguito lo scrape delle voci che non hanno ancora un\'identità confermata. Disattiva per interrompere tutti i download di metadati in background.';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return 'Non raggruppato';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return 'Nessuna attività in questo periodo';
       case 'stat_center_title':
-        return 'Statistics center';
+        return 'Centro statistiche';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return 'Panoramica';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return 'Chiudi dizionario';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return 'Conferma l\'identità dell\'opera';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'AniDB ha più di una corrispondenza possibile. Scegli l\'opera corretta e il download importato eseguirà lo scrape direttamente con quell\'identità; se salti, potrai assegnarla in seguito dall\'elenco in attesa.';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return 'Impossibile identificare quest\'opera su AniDB. Verrà scaricata normalmente e resterà nell\'elenco in attesa per l\'identificazione manuale.';
       case 'network_proxy_p2p_mode_direct':
-        return 'Direct';
+        return 'Diretto';
       case 'network_proxy_p2p_mode_proxy':
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return 'Misto';
       case 'onboarding_feature_fonts':
         return 'Font personalizzati';
       case 'onboarding_feature_fonts_hint':
@@ -226173,11 +226180,11 @@ extension on _StringsJa {
       case 'gal_hook_lookup_trigger_hint':
         return 'ポインタの下の単語を引くマウスボタン。上のスイッチとは独立です：タップで引くのをオフにしたまま、サイドボタンで引けます。';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return '左クリック';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return '中クリック';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return 'サイドボタン';
       case 'gal_hook_toolbar_auto_hide':
         return 'ツールバーを自動で隠す';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -226291,9 +226298,9 @@ extension on _StringsJa {
       case 'section_network':
         return 'ネットワーク';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'P2P（torrent）プロキシ';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return '既定では直接接続します。プロキシ経由：すべての P2P 通信がグローバルプロキシを経由します——速度が低下する場合があり、多くのプロキシ事業者は BitTorrent 通信を禁止しています（帯域制限、警告、アカウント停止など）。混合：tracker への要求のみプロキシを経由し、DHT と peer 接続は直接接続のままです——peer の発見範囲は最も広くなりますが、実際の IP が tracker・DHT・peer に見えます（接続性のみで、プライバシー保護にはなりません）。内蔵エンジンのみに適用されます。外部の qBittorrent は独自のプロキシ設定を使用します。';
       case 'video_ajatt_settings_hint':
         return '無料の日本語字幕アーカイブ（kitsunekko ミラー）。アカウント不要。字幕ファイルは GitHub からダウンロードされます。';
       case 'video_ajatt_enabled_hint':
@@ -226443,121 +226450,121 @@ extension on _StringsJa {
       case 'onboarding_first_anki_action':
         return '辞書ページを開いてカードを作る';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return 'ゲーム内辞書検索';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return 'OCR 不使用・横書き本文のみ';
       case 'game_lookup_attached_mode':
-        return 'Mode';
+        return 'モード';
       case 'game_lookup_attached_mode_auto':
-        return 'Auto';
+        return '自動';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return 'ネイティブのみ';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return '校正レイヤーのみ';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return 'オフ';
       case 'game_lookup_attached_status':
-        return 'State';
+        return '状態';
       case 'game_lookup_attached_native_status':
-        return 'Native';
+        return 'ネイティブ';
       case 'game_lookup_attached_provider':
-        return 'Provider';
+        return '提供元';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return '未報告';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return 'プロファイル';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return '校正済み';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return '未校正';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return '入力シールド';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return '検証済み';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return '不明';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return '一部';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return '未対応（既知）';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return '障害';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return 'クリックリスク';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return '未承認';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return '確認が必要';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return 'リスク承認済み・二重反応の可能性あり';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return '校正';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return 'クリックリスクを承認';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return 'プロファイルを消去';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return '校正の前に本文スレッドを 1 つ選択してください。';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return '生クリックのリスクを確認';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return 'この実行ファイルでは入力シールドが検証されていません。文字をクリックすると、会話が進んだり選択肢が選ばれたりする可能性があります。この承認は現在の実行ファイルのハッシュにのみ保存され、更新後は無効になります。';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return '本文を校正';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return '現在の本文プレビュー';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return '本文の矩形';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return '左';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return '上';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return '幅';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return '高さ';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return 'フォント';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return 'フォントサイズ / クライアント高さ';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return '文字間隔 / クライアント高さ';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return '行の高さ';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return '水平方向の配置';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return '垂直方向の配置';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return '左揃え';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return '中央揃え';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return '右揃え';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return '上揃え';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return '下揃え';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return 'ゲーム内でハイライトされた最初・中間・最後の文字を順にクリックし、下で各文字を確認してください。';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return '最初の文字';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return '中間の文字';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return '最後の文字';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return '校正を保存';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return '校正を適用できませんでした。本文、対象ウィンドウ、3 つのプローブを確認してください。';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return '校正プローブには本文が 3 文字以上必要です。';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return '検索プロファイルを消去しますか？';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return '保存済みの矩形、テキストレイアウト、この実行ファイル固有のクリック承認が削除されます。';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return 'ゲーム内で対応する文字のクリックを待っています';
       case 'delete_choices_remember':
         return 'この選択を記憶する';
       case 'network_proxy_mode_label':
@@ -226604,43 +226611,43 @@ extension on _StringsJa {
       case 'network_proxy_credentials_scope_hint':
         return '認証情報は HTTP 通信にのみ適用されます。内蔵 torrent エンジンでは使用できません';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return '接続できるペアリング済みデバイスがないため、カードを作成できませんでした。ペアリング済みデバイスで Fushi が実行中か確認するか、この端末でカードを作成するには Anki 設定で「ペアリングデバイスに制カード」をオフにしてください。';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return 'オフにすると、手動、スキャン後、ダウンロード後、バックグラウンドのスクレイプはすべてこのソースをスキップします。';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return 'この作品は現在のソース計画に含まれていません（ファイルが改名・移動・削除された可能性があります）。ソースを再スクレイプして識別待ちリストを更新してください。';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return '識別待ちの作品';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return 'これらの項目はまだ作品が確定していません。検索して正しい作品を選ぶとスクレイプされます。';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return 'このソースのスクレイプを有効化';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return '不足しているシリーズ情報を自動補完';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return '動画ライブラリを開くと、作品が未確定の項目を自動でスクレイプします。オフにするとバックグラウンドのメタデータダウンロードをすべて停止します。';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return 'グループなし';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return 'この期間の記録はありません';
       case 'stat_center_title':
-        return 'Statistics center';
+        return '統計センター';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return '概要';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return '辞書を閉じる';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return '作品を確認';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'AniDB に複数の候補があります。正しい作品を選ぶと、インポートしたダウンロードはその作品として直接スクレイプされます。スキップした場合は、後で識別待ちリストから割り当てられます。';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return 'AniDB でこの作品を特定できませんでした。通常どおりダウンロードし、手動で特定するまで識別待ちリストで待機します。';
       case 'network_proxy_p2p_mode_direct':
-        return 'Direct';
+        return '直接接続';
       case 'network_proxy_p2p_mode_proxy':
-        return 'Via proxy';
+        return 'プロキシ経由';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return '混合';
       case 'onboarding_feature_fonts':
         return 'カスタムフォント';
       case 'onboarding_feature_fonts_hint':
@@ -234599,11 +234606,11 @@ extension on _StringsKo {
       case 'gal_hook_lookup_trigger_hint':
         return '포인터 아래 단어를 찾을 마우스 버튼입니다. 위 스위치와는 별개예요: 눌러서 찾기를 꺼도 옆 버튼으로는 찾을 수 있습니다.';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return '왼쪽 클릭';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return '가운데 클릭';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return '사이드 버튼';
       case 'gal_hook_toolbar_auto_hide':
         return '도구 모음 자동 숨김';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -234717,9 +234724,9 @@ extension on _StringsKo {
       case 'section_network':
         return '네트워크';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'P2P(토렌트) 프록시';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return '기본은 직접 연결입니다. 프록시 경유: 모든 P2P 트래픽이 전역 프록시를 통과합니다 — 속도가 떨어질 수 있으며, 많은 프록시 제공업체가 BitTorrent 트래픽을 금지합니다(속도 제한, 경고, 계정 해지). 혼합: tracker 요청은 프록시를 거치고 DHT와 peer 연결은 직접 연결을 유지합니다 — peer 탐색 범위가 가장 넓지만 실제 IP가 tracker, DHT, peer에 노출됩니다(연결성만 해결하며 프라이버시 보호는 아닙니다). 내장 엔진에만 적용되며, 외부 qBittorrent는 자체 프록시 설정을 사용합니다.';
       case 'video_ajatt_settings_hint':
         return '무료 일본어 자막 아카이브(kitsunekko 미러). 계정 불필요. 자막 파일은 GitHub에서 다운로드됩니다.';
       case 'video_ajatt_enabled_hint':
@@ -234870,121 +234877,121 @@ extension on _StringsKo {
       case 'onboarding_first_anki_action':
         return '단어 찾기 열고 카드 만들기';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return '인게임 사전 조회';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return 'OCR 미사용 · 가로쓰기 본문만';
       case 'game_lookup_attached_mode':
-        return 'Mode';
+        return '모드';
       case 'game_lookup_attached_mode_auto':
-        return 'Auto';
+        return '자동';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return '네이티브만';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return '보정 레이어만';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return '끄기';
       case 'game_lookup_attached_status':
-        return 'State';
+        return '상태';
       case 'game_lookup_attached_native_status':
-        return 'Native';
+        return '네이티브';
       case 'game_lookup_attached_provider':
-        return 'Provider';
+        return '제공자';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return '보고되지 않음';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return '프로필';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return '보정됨';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return '보정되지 않음';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return '입력 실드';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return '검증됨';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return '알 수 없음';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return '부분';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return '미지원(확인됨)';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return '오류';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return '클릭 위험';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return '승인되지 않음';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return '확인 필요';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return '위험 수락됨 · 이중 트리거 가능';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return '보정';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return '클릭 위험 수락';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return '프로필 지우기';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return '보정 전에 본문 텍스트 스레드를 하나 선택하세요.';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return '원시 클릭 위험 확인';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return '이 실행 파일에서는 입력 실드가 검증되지 않았습니다. 글자를 클릭하면 대화가 진행되거나 선택지가 눌릴 수 있습니다. 이 승인은 현재 실행 파일 해시에만 저장되며 업데이트 후에는 취소됩니다.';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return '본문 텍스트 보정';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return '현재 본문 미리보기';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return '본문 사각형';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return '왼쪽';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return '위';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return '너비';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return '높이';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return '글꼴';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return '글꼴 크기 / 클라이언트 높이';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return '자간 / 클라이언트 높이';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return '줄 높이';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return '가로 정렬';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return '세로 정렬';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return '왼쪽 정렬';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return '가운데 정렬';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return '오른쪽 정렬';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return '위쪽 정렬';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return '아래쪽 정렬';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return '게임에서 강조 표시된 첫 번째, 중간, 마지막 글자를 차례로 클릭한 다음 아래에서 각 글자를 확인하세요.';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return '첫 글자';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return '중간 글자';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return '마지막 글자';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return '보정 저장';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return '보정이 적용되지 않았습니다. 본문 텍스트, 대상 창, 세 개의 프로브를 확인하세요.';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return '보정 프로브에는 본문이 최소 세 글자 필요합니다.';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return '조회 프로필을 지울까요?';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return '저장된 사각형, 텍스트 레이아웃, 이 실행 파일 전용 클릭 승인이 삭제됩니다.';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return '게임 내 해당 글자 클릭 대기 중';
       case 'delete_choices_remember':
         return '이 선택 기억하기';
       case 'network_proxy_mode_label':
@@ -235031,43 +235038,43 @@ extension on _StringsKo {
       case 'network_proxy_credentials_scope_hint':
         return '자격 증명은 HTTP 요청에만 적용되며, 내장 토렌트 엔진은 사용할 수 없습니다';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return '연결할 수 있는 페어링된 기기가 없어 카드를 만들지 못했습니다. 페어링된 기기에서 Fushi가 실행 중인지 확인하거나, 이 기기에서 카드를 만들려면 Anki 설정에서 「페어링된 기기로 채굴」을 끄세요.';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return '끄면 수동, 스캔 후, 다운로드 후, 백그라운드 스크래핑이 모두 이 소스를 건너뜁니다.';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return '이 작품은 더 이상 현재 소스 계획에 없습니다(파일이 이름 변경, 이동 또는 삭제되었을 수 있습니다). 소스를 재스크래핑하여 식별 대기 목록을 새로 고치세요.';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return '식별 대기 중인 작품';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return '이 항목들은 아직 확정된 작품 정보가 없습니다. 검색하여 올바른 작품을 선택하면 스크래핑됩니다.';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return '이 소스의 스크래핑 사용';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return '누락된 시리즈 정보 자동 채우기';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return '비디오 라이브러리에 들어가면 아직 작품이 확정되지 않은 항목을 스크래핑합니다. 끄면 모든 백그라운드 메타데이터 다운로드를 중지합니다.';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return '그룹 없음';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return '이 기간에는 활동이 없습니다';
       case 'stat_center_title':
-        return 'Statistics center';
+        return '통계 센터';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return '개요';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return '사전 닫기';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return '작품 확인';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'AniDB에 가능한 매칭이 여러 개 있습니다. 올바른 작품을 선택하면 가져온 다운로드가 그 작품 정보로 바로 스크래핑됩니다. 건너뛰면 나중에 식별 대기 목록에서 지정할 수 있습니다.';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return 'AniDB에서 이 작품을 식별하지 못했습니다. 정상적으로 다운로드되며, 수동 식별을 위해 식별 대기 목록에서 기다립니다.';
       case 'network_proxy_p2p_mode_direct':
-        return 'Direct';
+        return '직접 연결';
       case 'network_proxy_p2p_mode_proxy':
-        return 'Via proxy';
+        return '프록시 경유';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return '혼합';
       case 'onboarding_feature_fonts':
         return '사용자 지정 글꼴';
       case 'onboarding_feature_fonts_hint':
@@ -242981,11 +242988,11 @@ extension on _StringsNl {
         return ({required Object n}) =>
             'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
       case 'download_direct_queue_section':
-        return 'Direct downloads';
+        return 'Directe downloads';
       case 'download_task_kind_all':
-        return 'All types';
+        return 'Alle typen';
       case 'download_task_kind_filter':
-        return 'Filter by type';
+        return 'Filteren op type';
       case 'manga_online_series_empty':
         return 'Deze serie bevat geen delen.';
       case 'sync_peer_book_delete_confirm':
@@ -243085,11 +243092,11 @@ extension on _StringsNl {
       case 'gal_hook_lookup_trigger_hint':
         return 'Welke muisknop het woord onder de aanwijzer opzoekt. Los van de schakelaar hierboven: je kunt tikken-om-op-te-zoeken uitzetten en toch met een zijknop opzoeken.';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return 'Linkerklik';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return 'Middelklik';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return 'Zijknop';
       case 'gal_hook_toolbar_auto_hide':
         return 'Werkbalk automatisch verbergen';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -243204,9 +243211,9 @@ extension on _StringsNl {
       case 'section_network':
         return 'Netwerk';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'P2P-proxy (torrent)';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return 'Standaard rechtstreeks. Via proxy: al het P2P-verkeer loopt via de globale proxy — de snelheid kan dalen en veel proxyaanbieders verbieden BitTorrent-verkeer (afknijpen, waarschuwingen of opzegging van je account). Gemengd: tracker-verzoeken lopen via de proxy, terwijl DHT- en peerverbindingen rechtstreeks blijven — de breedste peerontdekking, maar je echte IP is zichtbaar voor trackers, DHT en peers (alleen connectiviteit, geen privacy). Alleen voor de ingebouwde engine; een externe qBittorrent gebruikt zijn eigen proxy-instellingen.';
       case 'video_ajatt_settings_hint':
         return 'Gratis archief met Japanse ondertitels (kitsunekko-mirror). Geen account nodig; bestanden worden van GitHub gedownload.';
       case 'video_ajatt_enabled_hint':
@@ -243358,121 +243365,121 @@ extension on _StringsNl {
       case 'onboarding_first_anki_action':
         return 'Opzoeken openen en een kaart maken';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return 'Opzoeken in het spel';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return 'Geen OCR · alleen horizontale hoofdtekst';
       case 'game_lookup_attached_mode':
-        return 'Mode';
+        return 'Modus';
       case 'game_lookup_attached_mode_auto':
-        return 'Auto';
+        return 'Automatisch';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return 'Alleen native';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return 'Alleen gekalibreerde laag';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return 'Uit';
       case 'game_lookup_attached_status':
-        return 'State';
+        return 'Status';
       case 'game_lookup_attached_native_status':
         return 'Native';
       case 'game_lookup_attached_provider':
         return 'Provider';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return 'Niet gemeld';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return 'Profiel';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return 'Gekalibreerd';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return 'Niet gekalibreerd';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return 'Invoerschild';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return 'Geverifieerd';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return 'Onbekend';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return 'Gedeeltelijk';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return 'Bekend niet gedekt';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return 'Defect';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return 'Klikrisico';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return 'Niet geautoriseerd';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return 'Bevestiging vereist';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return 'Risico geaccepteerd · kan dubbel activeren';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return 'Kalibreren';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return 'Klikrisico accepteren';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return 'Profiel wissen';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return 'Selecteer één hoofdtekst-thread voordat je kalibreert.';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return 'Risico van ruwe klik bevestigen';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return 'Het invoerschild is niet geverifieerd voor dit uitvoerbare bestand. Klikken op een glyph kan ook de dialoog voortzetten of een keuze activeren. Deze autorisatie wordt alleen opgeslagen voor de huidige hash van het uitvoerbare bestand en wordt na een update ingetrokken.';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return 'Hoofdtekst kalibreren';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return 'Voorbeeld van huidige hoofdtekst';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return 'Tekstrechthoek';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return 'Links';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return 'Boven';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return 'Breedte';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return 'Hoogte';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return 'Lettertype';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return 'Lettergrootte / clienthoogte';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return 'Letterafstand / clienthoogte';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return 'Regelhoogte';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return 'Horizontale uitlijning';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return 'Verticale uitlijning';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return 'Links';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return 'Gecentreerd';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return 'Rechts';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return 'Boven';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return 'Onder';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return 'Klik in het spel op de eerste, middelste en laatste gemarkeerde glyph en bevestig daarna hieronder elk teken.';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return 'Eerste glyph';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return 'Middelste glyph';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return 'Laatste glyph';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return 'Kalibratie opslaan';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return 'Kalibratie is niet toegepast. Controleer de hoofdtekst, het doelvenster en alle drie de meetpunten.';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return 'Voor kalibratiemeetpunten zijn minstens drie tekens vereist.';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return 'Opzoekprofiel wissen?';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return 'De opgeslagen rechthoek, tekstindeling en de klikautorisatie voor dit uitvoerbare bestand worden verwijderd.';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return 'Wachten op bijpassende klik in het spel';
       case 'delete_choices_remember':
         return 'Deze keuzes onthouden';
       case 'network_proxy_mode_label':
@@ -243520,43 +243527,43 @@ extension on _StringsNl {
       case 'network_proxy_credentials_scope_hint':
         return 'Inloggegevens gelden alleen voor HTTP-verzoeken; de ingebouwde torrent-engine kan ze niet gebruiken';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return 'Kon de kaart niet aanmaken omdat geen gekoppeld apparaat bereikbaar was. Zorg dat Fushi op het gekoppelde apparaat draait, of schakel \'Kaarten naar gekoppeld apparaat sturen\' uit in de Anki-instellingen om kaarten lokaal aan te maken.';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return 'Indien uit, slaan handmatig scrapen, scrapen na scan, na download en op de achtergrond deze bron allemaal over.';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return 'Dit werk staat niet meer in het huidige bronplan (de bestanden zijn mogelijk hernoemd, verplaatst of verwijderd). Scrape de bron opnieuw om de lijst met wachtende werken te vernieuwen.';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return 'Werken die op identificatie wachten';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return 'Deze items hebben nog geen bevestigde identiteit. Zoek en kies het juiste werk om ze te scrapen.';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return 'Scrapen inschakelen voor deze bron';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return 'Ontbrekende serie-info automatisch aanvullen';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return 'Bij het openen van de videobibliotheek worden items zonder bevestigde identiteit gescraped. Schakel uit om alle metadata-downloads op de achtergrond te stoppen.';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return 'Niet gegroepeerd';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return 'Geen activiteit in deze periode';
       case 'stat_center_title':
-        return 'Statistics center';
+        return 'Statistiekcentrum';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return 'Overzicht';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return 'Woordenboek sluiten';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return 'Identiteit van het werk bevestigen';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'AniDB heeft meer dan één mogelijke match. Kies het juiste werk en de geïmporteerde download wordt direct met die identiteit gescraped; sla over en je kunt het later toewijzen vanuit de lijst met wachtende werken.';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return 'Kon dit werk niet identificeren op AniDB. Het wordt normaal gedownload en wacht in de lijst met wachtende werken op handmatige identificatie.';
       case 'network_proxy_p2p_mode_direct':
-        return 'Direct';
+        return 'Rechtstreeks';
       case 'network_proxy_p2p_mode_proxy':
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return 'Gemengd';
       case 'onboarding_feature_fonts':
         return 'Eigen lettertypen';
       case 'onboarding_feature_fonts_hint':
@@ -251465,11 +251472,11 @@ extension on _StringsPtBr {
         return ({required Object n}) =>
             'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
       case 'download_direct_queue_section':
-        return 'Direct downloads';
+        return 'Downloads diretos';
       case 'download_task_kind_all':
-        return 'All types';
+        return 'Todos os tipos';
       case 'download_task_kind_filter':
-        return 'Filter by type';
+        return 'Filtrar por tipo';
       case 'manga_online_series_empty':
         return 'Esta série não tem volumes.';
       case 'sync_peer_book_delete_confirm':
@@ -251569,11 +251576,11 @@ extension on _StringsPtBr {
       case 'gal_hook_lookup_trigger_hint':
         return 'Qual botão do mouse consulta a palavra sob o ponteiro. Independente da chave acima: você pode desligar o toque-para-consultar e ainda consultar com um botão lateral.';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return 'Clique esquerdo';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return 'Clique do meio';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return 'Botão lateral';
       case 'gal_hook_toolbar_auto_hide':
         return 'Ocultar a barra automaticamente';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -251688,9 +251695,9 @@ extension on _StringsPtBr {
       case 'section_network':
         return 'Rede';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'Proxy P2P (torrent)';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return 'Direto por padrão. Via proxy: todo o tráfego P2P passa pelo proxy global — a velocidade pode cair, e muitos provedores de proxy proíbem tráfego BitTorrent (limitação de velocidade, avisos ou encerramento da conta). Misto: as solicitações ao tracker passam pelo proxy enquanto DHT e conexões com peers continuam diretas — maior alcance na descoberta de peers, mas seu IP real fica visível para trackers, DHT e peers (apenas conectividade, não privacidade). Somente para o motor integrado; o qBittorrent externo usa suas próprias configurações de proxy.';
       case 'video_ajatt_settings_hint':
         return 'Arquivo gratuito de legendas em japonês (espelho do kitsunekko). Não precisa de conta; os arquivos são baixados do GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -251842,121 +251849,121 @@ extension on _StringsPtBr {
       case 'onboarding_first_anki_action':
         return 'Abrir a consulta e criar um cartão';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return 'Consulta no jogo';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return 'Sem OCR · apenas texto horizontal do diálogo';
       case 'game_lookup_attached_mode':
-        return 'Mode';
+        return 'Modo';
       case 'game_lookup_attached_mode_auto':
-        return 'Auto';
+        return 'Automático';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return 'Somente nativo';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return 'Somente camada calibrada';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return 'Desativado';
       case 'game_lookup_attached_status':
-        return 'State';
+        return 'Estado';
       case 'game_lookup_attached_native_status':
-        return 'Native';
+        return 'Nativo';
       case 'game_lookup_attached_provider':
-        return 'Provider';
+        return 'Provedor';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return 'Não informado';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return 'Perfil';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return 'Calibrado';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return 'Não calibrado';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return 'Escudo de entrada';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return 'Verificado';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return 'Desconhecido';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return 'Parcial';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return 'Sem cobertura (conhecido)';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return 'Com falha';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return 'Risco de clique';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return 'Não autorizado';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return 'Confirmação necessária';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return 'Risco aceito · pode acionar duas vezes';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return 'Calibrar';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return 'Aceitar risco de clique';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return 'Limpar perfil';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return 'Selecione um fluxo de texto do diálogo antes de calibrar.';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return 'Confirmar risco de clique direto';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return 'O escudo de entrada não está verificado para este executável. Clicar em um glifo também pode avançar o diálogo ou acionar uma escolha. Esta autorização é armazenada apenas para o hash do executável atual e é revogada após uma atualização.';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return 'Calibrar texto do diálogo';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return 'Prévia do texto atual';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return 'Retângulo do texto';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return 'Esquerda';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return 'Topo';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return 'Largura';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return 'Altura';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return 'Família da fonte';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return 'Tamanho da fonte / altura da área cliente';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return 'Espaçamento entre letras / altura da área cliente';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return 'Altura da linha';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return 'Alinhamento horizontal';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return 'Alinhamento vertical';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return 'Esquerda';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return 'Centro';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return 'Direita';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return 'Topo';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return 'Base';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return 'Clique no primeiro, no do meio e no último glifo destacados no jogo e depois confirme cada caractere abaixo.';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return 'Primeiro glifo';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return 'Glifo do meio';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return 'Último glifo';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return 'Salvar calibração';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return 'A calibração não foi aplicada. Verifique o texto do diálogo, a janela de destino e as três sondas.';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return 'São necessários pelo menos três caracteres para as sondas de calibração.';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return 'Limpar perfil de consulta?';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return 'O retângulo salvo, o layout do texto e a autorização de clique específica do executável serão removidos.';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return 'Aguardando o clique correspondente no jogo';
       case 'delete_choices_remember':
         return 'Lembrar estas escolhas';
       case 'network_proxy_mode_label':
@@ -252004,43 +252011,43 @@ extension on _StringsPtBr {
       case 'network_proxy_credentials_scope_hint':
         return 'As credenciais valem apenas para requisições HTTP; o motor de torrent integrado não consegue usá-las';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return 'Não foi possível criar o cartão porque nenhum dispositivo pareado pôde ser alcançado. Verifique se o Fushi está aberto no dispositivo pareado ou desative "Minerar para dispositivo pareado" em Configurações do Anki para criar cartões localmente.';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return 'Quando desativado, a busca de metadados manual, após a varredura, após o download e em segundo plano ignora esta fonte.';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return 'Esta obra não está mais no plano atual da fonte (seus arquivos podem ter sido renomeados, movidos ou excluídos). Rebusque os metadados da fonte para atualizar a lista de pendentes.';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return 'Obras aguardando identificação';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return 'Estas entradas ainda não têm identidade confirmada. Pesquise e escolha a obra correta para buscar seus metadados.';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return 'Ativar busca de metadados para esta fonte';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return 'Preencher automaticamente info da série ausente';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return 'Ao entrar na biblioteca de vídeo, os metadados das entradas que ainda não têm identidade confirmada são buscados. Desative para interromper todos os downloads de metadados em segundo plano.';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return 'Sem grupo';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return 'Sem atividade neste período';
       case 'stat_center_title':
-        return 'Statistics center';
+        return 'Central de estatísticas';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return 'Visão geral';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return 'Fechar dicionário';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return 'Confirmar a identidade da obra';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'O AniDB tem mais de uma correspondência possível. Escolha a obra correta e o download importado buscará os metadados diretamente com essa identidade; se pular, você poderá atribuí-la depois na lista de pendentes.';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return 'Não foi possível identificar esta obra no AniDB. Ela será baixada normalmente e aguardará na lista de pendentes para identificação manual.';
       case 'network_proxy_p2p_mode_direct':
-        return 'Direct';
+        return 'Direto';
       case 'network_proxy_p2p_mode_proxy':
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return 'Misto';
       case 'onboarding_feature_fonts':
         return 'Fontes personalizadas';
       case 'onboarding_feature_fonts_hint':
@@ -259955,11 +259962,11 @@ extension on _StringsRu {
         return ({required Object n}) =>
             'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
       case 'download_direct_queue_section':
-        return 'Direct downloads';
+        return 'Прямые загрузки';
       case 'download_task_kind_all':
-        return 'All types';
+        return 'Все типы';
       case 'download_task_kind_filter':
-        return 'Filter by type';
+        return 'Фильтр по типу';
       case 'manga_online_series_empty':
         return 'В этой серии нет томов.';
       case 'sync_peer_book_delete_confirm':
@@ -260059,11 +260066,11 @@ extension on _StringsRu {
       case 'gal_hook_lookup_trigger_hint':
         return 'Какая кнопка мыши ищет слово под указателем. Не зависит от переключателя выше: можно выключить поиск по нажатию и всё равно искать боковой кнопкой.';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return 'Левый клик';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return 'Средний клик';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return 'Боковая кнопка';
       case 'gal_hook_toolbar_auto_hide':
         return 'Автоматически скрывать панель';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -260178,9 +260185,9 @@ extension on _StringsRu {
       case 'section_network':
         return 'Сеть';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'Прокси для P2P (torrent)';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return 'По умолчанию — напрямую. Через прокси: весь P2P-трафик идёт через глобальный прокси — скорость может упасть, а многие прокси-провайдеры запрещают BitTorrent-трафик (ограничение скорости, предупреждения или блокировка аккаунта). Смешанный: запросы к трекерам идут через прокси, а DHT и соединения с пирами остаются прямыми — максимальный охват пиров, но ваш реальный IP виден трекерам, DHT и пирам (только связность, не приватность). Только для встроенного движка; внешний qBittorrent использует собственные настройки прокси.';
       case 'video_ajatt_settings_hint':
         return 'Бесплатный архив японских субтитров (зеркало kitsunekko). Аккаунт не нужен; файлы скачиваются с GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -260332,121 +260339,121 @@ extension on _StringsRu {
       case 'onboarding_first_anki_action':
         return 'Открыть поиск и создать карточку';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return 'Поиск в игре';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return 'Без OCR · только горизонтальный основной текст';
       case 'game_lookup_attached_mode':
-        return 'Mode';
+        return 'Режим';
       case 'game_lookup_attached_mode_auto':
-        return 'Auto';
+        return 'Авто';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return 'Только нативная геометрия';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return 'Только калиброванный слой';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return 'Выкл.';
       case 'game_lookup_attached_status':
-        return 'State';
+        return 'Состояние';
       case 'game_lookup_attached_native_status':
-        return 'Native';
+        return 'Нативная геометрия';
       case 'game_lookup_attached_provider':
-        return 'Provider';
+        return 'Провайдер';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return 'Не сообщён';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return 'Профиль';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return 'Откалибровано';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return 'Не откалибровано';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return 'Защита ввода';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return 'Проверено';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return 'Неизвестно';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return 'Частично';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return 'Заведомо не покрыто';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return 'Сбой';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return 'Риск клика';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return 'Не разрешено';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return 'Требуется подтверждение';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return 'Риск принят · возможно двойное срабатывание';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return 'Калибровать';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return 'Принять риск клика';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return 'Очистить профиль';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return 'Перед калибровкой выберите один поток основного текста.';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return 'Подтвердите риск прямого клика';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return 'Защита ввода для этого исполняемого файла не проверена. Клик по глифу может также продвинуть диалог или выбрать вариант. Это разрешение хранится только для текущего хеша исполняемого файла и отзывается после обновления.';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return 'Калибровка основного текста';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return 'Предпросмотр текущего основного текста';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return 'Прямоугольник текста';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return 'Слева';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return 'Сверху';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return 'Ширина';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return 'Высота';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return 'Шрифт';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return 'Размер шрифта / высота клиентской области';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return 'Межбуквенный интервал / высота клиентской области';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return 'Высота строки';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return 'Горизонтальное выравнивание';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return 'Вертикальное выравнивание';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return 'По левому краю';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return 'По центру';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return 'По правому краю';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return 'По верхнему краю';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return 'По нижнему краю';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return 'Кликните в игре по первому, среднему и последнему выделенным глифам, затем подтвердите каждый символ ниже.';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return 'Первый глиф';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return 'Средний глиф';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return 'Последний глиф';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return 'Сохранить калибровку';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return 'Калибровка не применена. Проверьте основной текст, целевое окно и все три пробы.';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return 'Для калибровочных проб нужно не менее трёх символов.';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return 'Очистить профиль поиска?';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return 'Сохранённый прямоугольник, разметка текста и разрешение на клик для этого исполняемого файла будут удалены.';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return 'Ожидание соответствующего клика в игре';
       case 'delete_choices_remember':
         return 'Запомнить этот выбор';
       case 'network_proxy_mode_label':
@@ -260494,43 +260501,43 @@ extension on _StringsRu {
       case 'network_proxy_credentials_scope_hint':
         return 'Учётные данные применяются только к HTTP-запросам; встроенный torrent-движок не может их использовать';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return 'Не удалось создать карточку: ни одно сопряжённое устройство недоступно. Убедитесь, что на сопряжённом устройстве запущено Fushi, или отключите «Добывать на сопряжённое устройство» в разделе «Настройки Anki», чтобы создавать карточки локально.';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return 'Если выключено, получение метаданных вручную, после сканирования, после загрузки и в фоне пропускает этот источник.';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return 'Этого произведения больше нет в текущем плане источника (его файлы могли быть переименованы, перемещены или удалены). Пересканируйте источник, чтобы обновить список ожидающих.';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return 'Произведения, ожидающие идентификации';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return 'У этих записей ещё нет подтверждённой идентичности. Найдите и выберите нужное произведение, чтобы получить метаданные.';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return 'Включить получение метаданных для этого источника';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return 'Автоматически дополнять недостающую информацию о сериале';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return 'При входе в видеобиблиотеку получаются метаданные для записей без подтверждённой идентичности. Выключите, чтобы остановить все фоновые загрузки метаданных.';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return 'Без группы';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return 'Нет активности за этот период';
       case 'stat_center_title':
-        return 'Statistics center';
+        return 'Центр статистики';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return 'Обзор';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return 'Закрыть словарь';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return 'Подтвердите идентичность произведения';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'На AniDB найдено несколько возможных совпадений. Выберите нужное произведение — импортированная загрузка сразу получит метаданные с этой идентичностью; при пропуске её можно назначить позже из списка ожидающих.';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return 'Не удалось определить это произведение на AniDB. Оно будет загружено как обычно и будет ждать ручной идентификации в списке ожидающих.';
       case 'network_proxy_p2p_mode_direct':
-        return 'Direct';
+        return 'Напрямую';
       case 'network_proxy_p2p_mode_proxy':
-        return 'Via proxy';
+        return 'Через прокси';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return 'Смешанный';
       case 'onboarding_feature_fonts':
         return 'Свои шрифты';
       case 'onboarding_feature_fonts_hint':
@@ -268417,11 +268424,11 @@ extension on _StringsTh {
         return ({required Object n}) =>
             'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
       case 'download_direct_queue_section':
-        return 'Direct downloads';
+        return 'ดาวน์โหลดโดยตรง';
       case 'download_task_kind_all':
-        return 'All types';
+        return 'ทุกประเภท';
       case 'download_task_kind_filter':
-        return 'Filter by type';
+        return 'กรองตามประเภท';
       case 'manga_online_series_empty':
         return 'ซีรีส์นี้ไม่มีเล่ม';
       case 'sync_peer_book_delete_confirm':
@@ -268521,11 +268528,11 @@ extension on _StringsTh {
       case 'gal_hook_lookup_trigger_hint':
         return 'ปุ่มเมาส์ที่ใช้เปิดคำใต้ตัวชี้ แยกจากสวิตช์ด้านบน คุณปิดการแตะเพื่อเปิดได้ แล้วยังใช้ปุ่มข้างเปิดได้อยู่';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return 'คลิกซ้าย';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return 'คลิกกลาง';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return 'ปุ่มด้านข้าง';
       case 'gal_hook_toolbar_auto_hide':
         return 'ซ่อนแถบเครื่องมืออัตโนมัติ';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -268641,9 +268648,9 @@ extension on _StringsTh {
       case 'section_network':
         return 'เครือข่าย';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'พร็อกซี P2P (torrent)';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return 'ค่าเริ่มต้นเชื่อมต่อโดยตรง ผ่านพร็อกซี: ทราฟฟิก P2P ทั้งหมดผ่านพร็อกซีส่วนกลาง — ความเร็วอาจลดลง และผู้ให้บริการพร็อกซีจำนวนมากห้ามทราฟฟิก BitTorrent (จำกัดความเร็ว เตือน หรือปิดบัญชี) ผสม: คำขอ tracker ผ่านพร็อกซี ส่วนการเชื่อมต่อ DHT และ peer ยังคงโดยตรง — ค้นหา peer ได้กว้างที่สุด แต่ IP จริงของคุณจะมองเห็นได้โดย tracker, DHT และ peer (แก้เรื่องการเชื่อมต่อเท่านั้น ไม่ใช่ความเป็นส่วนตัว) ใช้กับเอนจินในตัวเท่านั้น qBittorrent ภายนอกใช้การตั้งค่าพร็อกซีของตัวเอง';
       case 'video_ajatt_settings_hint':
         return 'คลังซับไตเติลภาษาญี่ปุ่นฟรี (มิเรอร์ kitsunekko) ไม่ต้องใช้บัญชี ไฟล์ซับไตเติลดาวน์โหลดจาก GitHub';
       case 'video_ajatt_enabled_hint':
@@ -268795,121 +268802,121 @@ extension on _StringsTh {
       case 'onboarding_first_anki_action':
         return 'เปิดหน้าค้นคำแล้วสร้างการ์ด';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return 'ค้นหาคำในเกม';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return 'ไม่ใช้ OCR · เฉพาะข้อความบทสนทนาแนวนอน';
       case 'game_lookup_attached_mode':
-        return 'Mode';
+        return 'โหมด';
       case 'game_lookup_attached_mode_auto':
-        return 'Auto';
+        return 'อัตโนมัติ';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return 'เฉพาะ native';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return 'เฉพาะเลเยอร์ที่ปรับเทียบ';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return 'ปิด';
       case 'game_lookup_attached_status':
-        return 'State';
+        return 'สถานะ';
       case 'game_lookup_attached_native_status':
         return 'Native';
       case 'game_lookup_attached_provider':
-        return 'Provider';
+        return 'ผู้ให้ข้อมูล';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return 'ไม่ได้รายงาน';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return 'โปรไฟล์';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return 'ปรับเทียบแล้ว';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return 'ยังไม่ปรับเทียบ';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return 'เกราะป้องกันอินพุต';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return 'ยืนยันแล้ว';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return 'ไม่ทราบ';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return 'บางส่วน';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return 'ทราบว่ายังไม่ครอบคลุม';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return 'ขัดข้อง';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return 'ความเสี่ยงจากการคลิก';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return 'ยังไม่อนุญาต';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return 'ต้องยืนยัน';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return 'ยอมรับความเสี่ยงแล้ว · อาจทริกเกอร์ซ้ำ';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return 'ปรับเทียบ';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return 'ยอมรับความเสี่ยงจากการคลิก';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return 'ล้างโปรไฟล์';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return 'เลือกเธรดข้อความบทสนทนาหนึ่งรายการก่อนปรับเทียบ';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return 'ยืนยันความเสี่ยงจากการคลิกดิบ';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return 'เกราะป้องกันอินพุตยังไม่ได้รับการยืนยันสำหรับไฟล์ปฏิบัติการนี้ การคลิกตัวอักษรอาจทำให้บทสนทนาเลื่อนต่อหรือเลือกตัวเลือกไปด้วย การอนุญาตนี้จะบันทึกเฉพาะแฮชของไฟล์ปฏิบัติการปัจจุบัน และจะถูกเพิกถอนหลังการอัปเดต';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return 'ปรับเทียบข้อความบทสนทนา';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return 'ตัวอย่างข้อความบทสนทนาปัจจุบัน';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return 'กรอบข้อความบทสนทนา';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return 'ซ้าย';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return 'บน';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return 'กว้าง';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return 'สูง';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return 'แบบอักษร';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return 'ขนาดตัวอักษร / ความสูงพื้นที่ไคลเอนต์';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return 'ระยะห่างตัวอักษร / ความสูงพื้นที่ไคลเอนต์';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return 'ความสูงบรรทัด';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return 'การจัดแนวนอน';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return 'การจัดแนวตั้ง';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return 'ซ้าย';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return 'กึ่งกลาง';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return 'ขวา';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return 'บน';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return 'ล่าง';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return 'คลิกตัวอักษรที่ไฮไลต์ตัวแรก ตัวกลาง และตัวสุดท้ายในเกม จากนั้นยืนยันแต่ละอักขระด้านล่าง';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return 'ตัวอักษรแรก';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return 'ตัวอักษรกลาง';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return 'ตัวอักษรสุดท้าย';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return 'บันทึกการปรับเทียบ';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return 'การปรับเทียบไม่ถูกนำไปใช้ ตรวจสอบข้อความบทสนทนา หน้าต่างเป้าหมาย และจุดตรวจทั้งสามจุด';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return 'ต้องมีอย่างน้อยสามอักขระสำหรับจุดตรวจปรับเทียบ';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return 'ล้างโปรไฟล์ค้นหาคำ?';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return 'กรอบที่บันทึกไว้ เค้าโครงข้อความ และการอนุญาตคลิกเฉพาะไฟล์ปฏิบัติการนี้จะถูกลบ';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return 'กำลังรอการคลิกที่ตรงกันในเกม';
       case 'delete_choices_remember':
         return 'จดจำตัวเลือกเหล่านี้';
       case 'network_proxy_mode_label':
@@ -268957,43 +268964,43 @@ extension on _StringsTh {
       case 'network_proxy_credentials_scope_hint':
         return 'ข้อมูลรับรองใช้ได้กับคำขอ HTTP เท่านั้น เอนจิน torrent ในตัวไม่สามารถใช้ได้';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return 'ไม่สามารถสร้างบัตรได้เนื่องจากเข้าถึงอุปกรณ์ที่จับคู่ไม่ได้ ตรวจสอบว่า Fushi กำลังทำงานบนอุปกรณ์ที่จับคู่ หรือปิด สร้างบัตรไปยังอุปกรณ์ที่จับคู่ ใน ตั้งค่า Anki เพื่อสร้างบัตรในเครื่องนี้';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return 'เมื่อปิด การดึงข้อมูลแบบกำหนดเอง หลังสแกน หลังดาวน์โหลด และในพื้นหลังจะข้ามแหล่งนี้ทั้งหมด';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return 'ผลงานนี้ไม่อยู่ในแผนแหล่งปัจจุบันแล้ว (ไฟล์อาจถูกเปลี่ยนชื่อ ย้าย หรือลบ) ดึงข้อมูลแหล่งนี้อีกครั้งเพื่อรีเฟรชรายการที่รอดำเนินการ';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return 'ผลงานที่รอการระบุตัวตน';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return 'รายการเหล่านี้ยังไม่มีตัวตนที่ยืนยัน ค้นหาและเลือกผลงานที่ถูกต้องเพื่อดึงข้อมูล';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return 'เปิดใช้การดึงข้อมูลสำหรับแหล่งนี้';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return 'เติมข้อมูลซีรีส์ที่ขาดหายอัตโนมัติ';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return 'เมื่อเข้าคลังวิดีโอจะดึงข้อมูลรายการที่ยังไม่มีตัวตนที่ยืนยัน ปิดเพื่อหยุดการดาวน์โหลดข้อมูลเมตาในพื้นหลังทั้งหมด';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return 'ไม่ได้จัดกลุ่ม';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return 'ไม่มีกิจกรรมในช่วงเวลานี้';
       case 'stat_center_title':
-        return 'Statistics center';
+        return 'ศูนย์สถิติ';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return 'ภาพรวม';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return 'ปิดพจนานุกรม';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return 'ยืนยันตัวตนของผลงาน';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'AniDB มีรายการที่อาจตรงกันมากกว่าหนึ่งรายการ เลือกผลงานที่ถูกต้องแล้วการดาวน์โหลดที่นำเข้าจะดึงข้อมูลด้วยตัวตนนั้นทันที หากข้าม คุณสามารถกำหนดภายหลังได้จากรายการที่รอดำเนินการ';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return 'ไม่สามารถระบุผลงานนี้บน AniDB ได้ จะดาวน์โหลดตามปกติและรอในรายการที่รอดำเนินการเพื่อระบุตัวตนด้วยตนเอง';
       case 'network_proxy_p2p_mode_direct':
-        return 'Direct';
+        return 'โดยตรง';
       case 'network_proxy_p2p_mode_proxy':
-        return 'Via proxy';
+        return 'ผ่านพร็อกซี';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return 'ผสม';
       case 'onboarding_feature_fonts':
         return 'ฟอนต์กำหนดเอง';
       case 'onboarding_feature_fonts_hint':
@@ -276897,11 +276904,11 @@ extension on _StringsTr {
         return ({required Object n}) =>
             'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
       case 'download_direct_queue_section':
-        return 'Direct downloads';
+        return 'Doğrudan indirmeler';
       case 'download_task_kind_all':
-        return 'All types';
+        return 'Tüm türler';
       case 'download_task_kind_filter':
-        return 'Filter by type';
+        return 'Türe göre filtrele';
       case 'manga_online_series_empty':
         return 'Bu seride hiç cilt yok.';
       case 'sync_peer_book_delete_confirm':
@@ -277001,11 +277008,11 @@ extension on _StringsTr {
       case 'gal_hook_lookup_trigger_hint':
         return 'İmlecin altındaki kelimeyi hangi fare düğmesinin arayacağı. Yukarıdaki anahtardan bağımsızdır: dokunarak aramayı kapatıp yan düğmeyle arayabilirsin.';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return 'Sol tık';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return 'Orta tık';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return 'Yan düğme';
       case 'gal_hook_toolbar_auto_hide':
         return 'Araç çubuğunu otomatik gizle';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -277120,9 +277127,9 @@ extension on _StringsTr {
       case 'section_network':
         return 'Ağ';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'P2P (torrent) proxy\'si';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return 'Varsayılan olarak doğrudan. Proxy üzerinden: tüm P2P trafiği genel proxy üzerinden geçer — hız düşebilir ve birçok proxy sağlayıcısı BitTorrent trafiğini yasaklar (hız kısıtlama, uyarı veya hesap kapatma). Karma: tracker istekleri proxy üzerinden geçerken DHT ve peer bağlantıları doğrudan kalır — en geniş peer keşfi, ancak gerçek IP adresiniz tracker\'lara, DHT\'ye ve peer\'lara görünür (yalnızca bağlanabilirlik, gizlilik değil). Yalnızca yerleşik motor için; harici qBittorrent kendi proxy ayarlarını kullanır.';
       case 'video_ajatt_settings_hint':
         return 'Ücretsiz Japonca altyazı arşivi (kitsunekko yansıması). Hesap gerekmez; altyazı dosyaları GitHub\'dan indirilir.';
       case 'video_ajatt_enabled_hint':
@@ -277274,121 +277281,121 @@ extension on _StringsTr {
       case 'onboarding_first_anki_action':
         return 'Aramayı aç ve kart oluştur';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return 'Oyun içi arama';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return 'OCR yok · yalnızca yatay gövde metni';
       case 'game_lookup_attached_mode':
-        return 'Mode';
+        return 'Mod';
       case 'game_lookup_attached_mode_auto':
-        return 'Auto';
+        return 'Otomatik';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return 'Yalnızca yerel geometri';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return 'Yalnızca kalibre edilmiş katman';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return 'Kapalı';
       case 'game_lookup_attached_status':
-        return 'State';
+        return 'Durum';
       case 'game_lookup_attached_native_status':
-        return 'Native';
+        return 'Yerel geometri';
       case 'game_lookup_attached_provider':
-        return 'Provider';
+        return 'Sağlayıcı';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return 'Bildirilmedi';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return 'Profil';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return 'Kalibre edildi';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return 'Kalibre edilmedi';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return 'Giriş kalkanı';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return 'Doğrulandı';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return 'Bilinmiyor';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return 'Kısmi';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return 'Kapsanmadığı biliniyor';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return 'Hatalı';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return 'Tıklama riski';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return 'Yetkilendirilmedi';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return 'Onay gerekli';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return 'Risk kabul edildi · çift tetiklenebilir';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return 'Kalibre et';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return 'Tıklama riskini kabul et';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return 'Profili temizle';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return 'Kalibrasyondan önce bir gövde metni iş parçacığı seçin.';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return 'Ham tıklama riskini onaylayın';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return 'Bu çalıştırılabilir dosya için giriş kalkanı doğrulanmadı. Bir glife tıklamak diyaloğu da ilerletebilir veya bir seçimi tetikleyebilir. Bu yetki yalnızca geçerli çalıştırılabilir dosya karması için saklanır ve güncellemeden sonra iptal edilir.';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return 'Gövde metnini kalibre et';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return 'Geçerli gövde metni önizlemesi';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return 'Gövde dikdörtgeni';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return 'Sol';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return 'Üst';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return 'Genişlik';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return 'Yükseklik';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return 'Yazı tipi';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return 'Yazı boyutu / istemci yüksekliği';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return 'Harf aralığı / istemci yüksekliği';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return 'Satır yüksekliği';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return 'Yatay hizalama';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return 'Dikey hizalama';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return 'Sola';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return 'Ortaya';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return 'Sağa';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return 'Üste';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return 'Alta';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return 'Oyunda vurgulanan ilk, orta ve son glife tıklayın, ardından aşağıda her karakteri onaylayın.';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return 'İlk glif';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return 'Orta glif';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return 'Son glif';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return 'Kalibrasyonu kaydet';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return 'Kalibrasyon uygulanmadı. Gövde metnini, hedef pencereyi ve üç sondayı kontrol edin.';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return 'Kalibrasyon sondaları için en az üç karakter gerekir.';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return 'Arama profili temizlensin mi?';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return 'Kaydedilen dikdörtgen, metin düzeni ve bu çalıştırılabilir dosyaya özel tıklama yetkisi kaldırılacak.';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return 'Oyun içinde eşleşen tıklama bekleniyor';
       case 'delete_choices_remember':
         return 'Bu seçimleri hatırla';
       case 'network_proxy_mode_label':
@@ -277435,43 +277442,43 @@ extension on _StringsTr {
       case 'network_proxy_credentials_scope_hint':
         return 'Kimlik bilgileri yalnızca HTTP istekleri için geçerlidir; yerleşik torrent motoru bunları kullanamaz';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return 'Kart oluşturulamadı çünkü hiçbir eşleştirilmiş cihaza ulaşılamadı. Eşleştirilmiş cihazda Fushi\'nin çalıştığından emin olun veya kartları yerel olarak oluşturmak için Anki ayarları\'ndan Eşleştirilmiş cihaza çıkar seçeneğini kapatın.';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return 'Kapalıyken manuel, tarama sonrası, indirme sonrası ve arka plan taramalarının tümü bu kaynağı atlar.';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return 'Bu eser artık geçerli kaynak planında değil (dosyaları yeniden adlandırılmış, taşınmış veya silinmiş olabilir). Bekleyenler listesini yenilemek için kaynağı yeniden tarayın.';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return 'Tanımlama bekleyen eserler';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return 'Bu öğelerin henüz onaylanmış bir kimliği yok. Taramak için arayıp doğru eseri seçin.';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return 'Bu kaynak için taramayı etkinleştir';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return 'Eksik dizi bilgisini otomatik doldur';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return 'Video kütüphanesine girildiğinde henüz onaylanmış kimliği olmayan öğeler taranır. Tüm arka plan meta veri indirmelerini durdurmak için kapatın.';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return 'Gruplanmamış';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return 'Bu dönemde etkinlik yok';
       case 'stat_center_title':
-        return 'Statistics center';
+        return 'İstatistik merkezi';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return 'Genel bakış';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return 'Sözlüğü kapat';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return 'Eser kimliğini onaylayın';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'AniDB\'de birden fazla olası eşleşme var. Doğru eseri seçerseniz içe aktarılan indirme doğrudan bu kimlikle taranır; atlarsanız daha sonra bekleyenler listesinden atayabilirsiniz.';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return 'Bu eser AniDB\'de tanımlanamadı. Normal şekilde indirilecek ve manuel tanımlama için bekleyenler listesinde bekleyecek.';
       case 'network_proxy_p2p_mode_direct':
-        return 'Direct';
+        return 'Doğrudan';
       case 'network_proxy_p2p_mode_proxy':
-        return 'Via proxy';
+        return 'Proxy üzerinden';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return 'Karma';
       case 'onboarding_feature_fonts':
         return 'Özel yazı tipleri';
       case 'onboarding_feature_fonts_hint':
@@ -285368,11 +285375,11 @@ extension on _StringsVi {
         return ({required Object n}) =>
             'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
       case 'download_direct_queue_section':
-        return 'Direct downloads';
+        return 'Tải xuống trực tiếp';
       case 'download_task_kind_all':
-        return 'All types';
+        return 'Tất cả loại';
       case 'download_task_kind_filter':
-        return 'Filter by type';
+        return 'Lọc theo loại';
       case 'manga_online_series_empty':
         return 'Bộ truyện này không có tập nào.';
       case 'sync_peer_book_delete_confirm':
@@ -285472,11 +285479,11 @@ extension on _StringsVi {
       case 'gal_hook_lookup_trigger_hint':
         return 'Nút chuột nào sẽ tra từ dưới con trỏ. Độc lập với công tắc phía trên: bạn có thể tắt chạm-để-tra mà vẫn tra bằng nút bên hông.';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return 'Nhấp chuột trái';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return 'Nhấp chuột giữa';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return 'Nút bên';
       case 'gal_hook_toolbar_auto_hide':
         return 'Tự ẩn thanh công cụ';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -285591,9 +285598,9 @@ extension on _StringsVi {
       case 'section_network':
         return 'Mạng';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'Proxy P2P (torrent)';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return 'Mặc định kết nối trực tiếp. Qua proxy: toàn bộ lưu lượng P2P đi qua proxy toàn cục — tốc độ có thể giảm, và nhiều nhà cung cấp proxy cấm lưu lượng BitTorrent (bóp băng thông, cảnh báo hoặc khóa tài khoản). Hỗn hợp: yêu cầu tracker đi qua proxy còn kết nối DHT và peer vẫn trực tiếp — tìm được nhiều peer nhất, nhưng IP thật của bạn hiển thị với tracker, DHT và peer (chỉ giải quyết kết nối, không bảo vệ riêng tư). Chỉ áp dụng cho công cụ tích hợp; qBittorrent bên ngoài dùng cài đặt proxy riêng.';
       case 'video_ajatt_settings_hint':
         return 'Kho phụ đề tiếng Nhật miễn phí (bản sao kitsunekko). Không cần tài khoản; tệp phụ đề tải từ GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -285745,121 +285752,121 @@ extension on _StringsVi {
       case 'onboarding_first_anki_action':
         return 'Mở tra từ và tạo thẻ';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return 'Tra từ trong trò chơi';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return 'Không dùng OCR · chỉ văn bản thoại ngang';
       case 'game_lookup_attached_mode':
-        return 'Mode';
+        return 'Chế độ';
       case 'game_lookup_attached_mode_auto':
-        return 'Auto';
+        return 'Tự động';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return 'Chỉ native';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return 'Chỉ lớp đã hiệu chỉnh';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return 'Tắt';
       case 'game_lookup_attached_status':
-        return 'State';
+        return 'Trạng thái';
       case 'game_lookup_attached_native_status':
         return 'Native';
       case 'game_lookup_attached_provider':
-        return 'Provider';
+        return 'Nguồn cung cấp';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return 'Chưa báo cáo';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return 'Hồ sơ';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return 'Đã hiệu chỉnh';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return 'Chưa hiệu chỉnh';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return 'Lá chắn đầu vào';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return 'Đã xác minh';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return 'Không rõ';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return 'Một phần';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return 'Đã biết chưa bao phủ';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return 'Lỗi';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return 'Rủi ro nhấp chuột';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return 'Chưa cho phép';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return 'Cần xác nhận';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return 'Đã chấp nhận rủi ro · có thể kích hoạt kép';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return 'Hiệu chỉnh';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return 'Chấp nhận rủi ro nhấp chuột';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return 'Xóa hồ sơ';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return 'Chọn một luồng văn bản thoại trước khi hiệu chỉnh.';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return 'Xác nhận rủi ro nhấp chuột thô';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return 'Lá chắn đầu vào chưa được xác minh cho tệp thực thi này. Nhấp vào một ký tự cũng có thể làm lời thoại tiếp tục hoặc kích hoạt lựa chọn. Quyền này chỉ được lưu cho hash của tệp thực thi hiện tại và bị thu hồi sau khi cập nhật.';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return 'Hiệu chỉnh văn bản thoại';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return 'Xem trước văn bản thoại hiện tại';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return 'Khung văn bản thoại';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return 'Trái';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return 'Trên';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return 'Rộng';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return 'Cao';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return 'Phông chữ';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return 'Cỡ chữ / chiều cao vùng client';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return 'Khoảng cách chữ / chiều cao vùng client';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return 'Chiều cao dòng';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return 'Căn ngang';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return 'Căn dọc';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return 'Trái';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return 'Giữa';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return 'Phải';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return 'Trên';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return 'Dưới';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return 'Nhấp vào ký tự đầu, giữa và cuối được tô sáng trong trò chơi, rồi xác nhận từng ký tự bên dưới.';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return 'Ký tự đầu';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return 'Ký tự giữa';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return 'Ký tự cuối';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return 'Lưu hiệu chỉnh';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return 'Hiệu chỉnh chưa được áp dụng. Kiểm tra văn bản thoại, cửa sổ đích và cả ba điểm dò.';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return 'Cần ít nhất ba ký tự để tạo điểm dò hiệu chỉnh.';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return 'Xóa hồ sơ tra từ?';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return 'Khung đã lưu, bố cục văn bản và quyền nhấp chuột riêng cho tệp thực thi này sẽ bị xóa.';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return 'Đang chờ nhấp chuột tương ứng trong trò chơi';
       case 'delete_choices_remember':
         return 'Ghi nhớ các lựa chọn này';
       case 'network_proxy_mode_label':
@@ -285907,43 +285914,43 @@ extension on _StringsVi {
       case 'network_proxy_credentials_scope_hint':
         return 'Thông tin đăng nhập chỉ áp dụng cho yêu cầu HTTP; công cụ torrent tích hợp không dùng được';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return 'Không thể tạo thẻ vì không kết nối được thiết bị đã ghép nối nào. Hãy đảm bảo Fushi đang chạy trên thiết bị đã ghép nối, hoặc tắt Gửi thẻ đến thiết bị đã ghép nối trong Cài đặt Anki để tạo thẻ cục bộ.';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return 'Khi tắt, quét thủ công, sau khi duyệt, sau khi tải xuống và quét nền đều bỏ qua nguồn này.';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return 'Tác phẩm này không còn trong kế hoạch nguồn hiện tại (tệp có thể đã bị đổi tên, di chuyển hoặc xóa). Quét lại nguồn để làm mới danh sách đang chờ.';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return 'Tác phẩm chờ nhận dạng';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return 'Các mục này chưa có danh tính được xác nhận. Tìm và chọn đúng tác phẩm để quét chúng.';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return 'Bật quét cho nguồn này';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return 'Tự động bổ sung thông tin series còn thiếu';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return 'Khi vào thư viện video sẽ quét các mục chưa có danh tính được xác nhận. Tắt để dừng mọi tải xuống metadata trong nền.';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return 'Chưa phân nhóm';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return 'Không có hoạt động trong khoảng thời gian này';
       case 'stat_center_title':
-        return 'Statistics center';
+        return 'Trung tâm thống kê';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return 'Tổng quan';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return 'Đóng từ điển';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return 'Xác nhận danh tính tác phẩm';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'AniDB có nhiều kết quả khớp khả dĩ. Chọn đúng tác phẩm và bản tải xuống đã nhập sẽ được quét trực tiếp với danh tính đó; bỏ qua thì bạn có thể gán sau từ danh sách đang chờ.';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return 'Không thể nhận dạng tác phẩm này trên AniDB. Tác phẩm sẽ tải xuống bình thường và chờ trong danh sách đang chờ để nhận dạng thủ công.';
       case 'network_proxy_p2p_mode_direct':
-        return 'Direct';
+        return 'Trực tiếp';
       case 'network_proxy_p2p_mode_proxy':
-        return 'Via proxy';
+        return 'Qua proxy';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return 'Hỗn hợp';
       case 'onboarding_feature_fonts':
         return 'Phông chữ tùy chỉnh';
       case 'onboarding_feature_fonts_hint':
@@ -302280,11 +302287,11 @@ extension on _StringsZhHk {
       case 'gal_hook_lookup_trigger_hint':
         return '用哪個滑鼠鍵查指標下的字。與上面那個開關互相獨立：可以關掉點字查詞，仍用側鍵查。';
       case 'gal_hook_lookup_trigger_left':
-        return 'Left click';
+        return '左鍵單擊';
       case 'gal_hook_lookup_trigger_middle':
-        return 'Middle click';
+        return '滑鼠中鍵';
       case 'gal_hook_lookup_trigger_side':
-        return 'Side button';
+        return '滑鼠側鍵';
       case 'gal_hook_toolbar_auto_hide':
         return '自動隱藏功能欄';
       case 'gal_hook_toolbar_auto_hide_hint':
@@ -302398,9 +302405,9 @@ extension on _StringsZhHk {
       case 'section_network':
         return '網路';
       case 'network_proxy_p2p_label':
-        return 'P2P (torrent) proxy';
+        return 'P2P（torrent）代理';
       case 'network_proxy_p2p_warning':
-        return 'Direct by default. Via proxy: all P2P traffic goes through the global proxy — speed may drop, and many proxy providers forbid BitTorrent traffic (throttling, warnings, or account termination). Mixed: tracker requests go through the proxy while DHT and peer connections stay direct — widest peer discovery, but your real IP is visible to trackers, DHT and peers (connectivity only, not privacy). Built-in engine only; external qBittorrent uses its own proxy settings.';
+        return '預設直連。經代理：全部 P2P 流量經全域代理——可能降速，且不少代理服務商禁止 BitTorrent 流量（限速、警告甚至封號）。混合：tracker 請求經代理、DHT 與 peer 直連——節點取得範圍最大，但真實 IP 會暴露給 tracker/DHT/peer（只解決連通性，無隱私作用）。僅對內建引擎生效，外接 qBittorrent 請在其自身設定中設定。';
       case 'video_ajatt_settings_hint':
         return '免費日語字幕庫（kitsunekko 鏡像）。無需帳號；字幕檔案從 GitHub 下載。';
       case 'video_ajatt_enabled_hint':
@@ -302550,121 +302557,121 @@ extension on _StringsZhHk {
       case 'onboarding_first_anki_action':
         return '打開查詞頁製卡';
       case 'game_lookup_attached_title':
-        return 'In-game lookup';
+        return '遊戲內查詞';
       case 'game_lookup_attached_no_ocr':
-        return 'No OCR · horizontal body text only';
+        return '不使用 OCR · 僅橫排正文';
       case 'game_lookup_attached_mode':
-        return 'Mode';
+        return '模式';
       case 'game_lookup_attached_mode_auto':
-        return 'Auto';
+        return '自動';
       case 'game_lookup_attached_mode_native_only':
-        return 'Native only';
+        return '僅原生幾何';
       case 'game_lookup_attached_mode_attached_only':
-        return 'Calibrated layer only';
+        return '僅校準層';
       case 'game_lookup_attached_mode_off':
-        return 'Off';
+        return '關閉';
       case 'game_lookup_attached_status':
-        return 'State';
+        return '狀態';
       case 'game_lookup_attached_native_status':
-        return 'Native';
+        return '原生狀態';
       case 'game_lookup_attached_provider':
-        return 'Provider';
+        return '幾何來源';
       case 'game_lookup_attached_provider_unknown':
-        return 'Not reported';
+        return '未回報';
       case 'game_lookup_attached_profile':
-        return 'Profile';
+        return '校準檔案';
       case 'game_lookup_attached_profile_ready':
-        return 'Calibrated';
+        return '已校準';
       case 'game_lookup_attached_profile_missing':
-        return 'Not calibrated';
+        return '未校準';
       case 'game_lookup_attached_shield':
-        return 'Input shield';
+        return '輸入盾';
       case 'game_lookup_attached_shield_verified':
-        return 'Verified';
+        return '已驗證';
       case 'game_lookup_attached_shield_unknown':
-        return 'Unknown';
+        return '未知';
       case 'game_lookup_attached_shield_partial':
-        return 'Partial';
+        return '部分覆蓋';
       case 'game_lookup_attached_shield_known_uncovered':
-        return 'Known uncovered';
+        return '已知未覆蓋';
       case 'game_lookup_attached_shield_faulted':
-        return 'Faulted';
+        return '故障';
       case 'game_lookup_attached_risk':
-        return 'Click risk';
+        return '點擊風險';
       case 'game_lookup_attached_risk_safe':
-        return 'Not authorized';
+        return '未授權';
       case 'game_lookup_attached_risk_pending':
-        return 'Confirmation required';
+        return '等待確認';
       case 'game_lookup_attached_risk_active':
-        return 'Risk accepted · may double-trigger';
+        return '已接受風險 · 可能雙重觸發';
       case 'game_lookup_attached_calibrate':
-        return 'Calibrate';
+        return '校準';
       case 'game_lookup_attached_risk_accept':
-        return 'Accept click risk';
+        return '接受點擊風險';
       case 'game_lookup_attached_profile_clear':
-        return 'Clear profile';
+        return '清除檔案';
       case 'game_lookup_attached_thread_required':
-        return 'Select one body-text thread before calibration.';
+        return '請先選擇一個正文執行緒，再開始校準。';
       case 'game_lookup_attached_risk_title':
-        return 'Confirm raw-click risk';
+        return '確認原始點擊風險';
       case 'game_lookup_attached_risk_body':
-        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+        return '目前可執行檔的輸入盾尚未驗證。點擊字形可能同時推進對白或觸發選項。授權僅綁定目前 exe 雜湊，遊戲更新後會自動失效。';
       case 'game_lookup_attached_calibration_title':
-        return 'Calibrate body text';
+        return '校準正文區域';
       case 'game_lookup_attached_preview':
-        return 'Current body text preview';
+        return '目前正文預覽';
       case 'game_lookup_attached_body_rect':
-        return 'Body rectangle';
+        return '正文框';
       case 'game_lookup_attached_left':
-        return 'Left';
+        return '左';
       case 'game_lookup_attached_top':
-        return 'Top';
+        return '上';
       case 'game_lookup_attached_width':
-        return 'Width';
+        return '寬';
       case 'game_lookup_attached_height':
-        return 'Height';
+        return '高';
       case 'game_lookup_attached_font_family':
-        return 'Font family';
+        return '字體';
       case 'game_lookup_attached_font_size':
-        return 'Font size / client height';
+        return '字號 / 工作區高度';
       case 'game_lookup_attached_letter_spacing':
-        return 'Letter spacing / client height';
+        return '字距 / 工作區高度';
       case 'game_lookup_attached_line_height':
-        return 'Line height';
+        return '行高';
       case 'game_lookup_attached_text_align':
-        return 'Horizontal alignment';
+        return '水平對齊';
       case 'game_lookup_attached_vertical_align':
-        return 'Vertical alignment';
+        return '垂直對齊';
       case 'game_lookup_attached_align_left':
-        return 'Left';
+        return '靠左對齊';
       case 'game_lookup_attached_align_center':
-        return 'Center';
+        return '置中';
       case 'game_lookup_attached_align_right':
-        return 'Right';
+        return '靠右對齊';
       case 'game_lookup_attached_align_top':
-        return 'Top';
+        return '頂部';
       case 'game_lookup_attached_align_bottom':
-        return 'Bottom';
+        return '底部';
       case 'game_lookup_attached_probes_hint':
-        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+        return '請在遊戲中依次點擊高亮的首、中、尾字形，再確認下列字元。';
       case 'game_lookup_attached_probe_start':
-        return 'First glyph';
+        return '首字形';
       case 'game_lookup_attached_probe_middle':
-        return 'Middle glyph';
+        return '中字形';
       case 'game_lookup_attached_probe_end':
-        return 'Last glyph';
+        return '尾字形';
       case 'game_lookup_attached_calibration_commit':
-        return 'Save calibration';
+        return '儲存校準';
       case 'game_lookup_attached_calibration_failed':
-        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+        return '校準未能套用。請檢查正文、目標視窗和三個點擊探針。';
       case 'game_lookup_attached_calibration_short_text':
-        return 'At least three characters are required for calibration probes.';
+        return '正文至少需要三個字元才能完成校準探針。';
       case 'game_lookup_attached_profile_clear_title':
-        return 'Clear lookup profile?';
+        return '清除查詞檔案？';
       case 'game_lookup_attached_profile_clear_body':
-        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+        return '將刪除已儲存的正文框、文字版面及該 exe 的點擊風險授權。';
       case 'game_lookup_attached_probe_waiting':
-        return 'Waiting for matching in-game click';
+        return '等待遊戲內對應字形點擊';
       case 'delete_choices_remember':
         return '記住這些選擇';
       case 'network_proxy_mode_label':
@@ -302710,43 +302717,43 @@ extension on _StringsZhHk {
       case 'network_proxy_credentials_scope_hint':
         return '憑證僅用於 HTTP 請求；內建 torrent 引擎無法使用';
       case 'anki_error_paired_device_unreachable':
-        return 'Couldn\'t create the card because no paired device could be reached. Make sure Fushi is running on the paired device, or turn off Mine to paired device in Anki settings to create cards locally.';
+        return '無法製卡：目前沒有可連接的已配對設備。請確認配對設備上的 Fushi 正在執行；如要在本機製卡，請在 Anki 設定中關閉「製卡到已配對設備」。';
       case 'video_source_scrape_enabled_toggle_hint':
-        return 'When off, manual, post-scan, post-download and background scraping all skip this source.';
+        return '關閉後：手動、掃描後、下載匯入後與後台自動補刮都會跳過此來源。';
       case 'video_source_scrape_work_missing':
-        return 'This work is no longer in the current source plan (its files may have been renamed, moved or deleted). Rescrape the source to refresh the pending list.';
+        return '該作品已不在目前來源計劃中（檔案可能已改名、移動或刪除）。請重新刮削此來源以重新整理待確認清單。';
       case 'video_source_scrape_pending_works':
-        return 'Works awaiting identification';
+        return '待確認作品';
       case 'video_source_scrape_pending_works_hint':
-        return 'These entries have no confirmed identity yet. Search and pick the right work to scrape them.';
+        return '這些條目還沒有確認的作品身份。搜尋並選取正確的作品即可完成刮削。';
       case 'video_source_scrape_enabled_toggle':
-        return 'Enable scraping for this source';
+        return '啟用此來源的刮削';
       case 'video_library_scrape_auto_backfill':
-        return 'Auto-fill missing series info';
+        return '自動補齊缺失的作品資料';
       case 'video_library_scrape_auto_backfill_hint':
-        return 'Entering the video library scrapes entries that still have no confirmed identity. Turn off to stop all background metadata downloads.';
+        return '進入影片庫時，自動刮削仍未確認身份的條目。關閉後不再有任何後台中繼資料下載。';
       case 'stat_detail_ungrouped':
-        return 'Ungrouped';
+        return '未分組';
       case 'stat_detail_empty':
-        return 'No activity in this period';
+        return '此時段暫無記錄';
       case 'stat_center_title':
-        return 'Statistics center';
+        return '統計中心';
       case 'stat_center_tab_overview':
-        return 'Overview';
+        return '總覽';
       case 'shortcut_action_video_dismiss_dict':
-        return 'Dismiss dictionary';
+        return '關閉詞典';
       case 'video_discovery_anidb_identity_confirm_title':
-        return 'Confirm the work identity';
+        return '確認作品身份';
       case 'video_discovery_anidb_identity_confirm_hint':
-        return 'AniDB has more than one possible match. Pick the right work and the imported download will scrape with that identity directly; skip and you can assign it later from the pending list.';
+        return 'AniDB 上有多個可能的匹配。選取正確的作品後，下載匯入將直接按該身份刮削；跳過則可稍後在待確認清單手動指定。';
       case 'video_discovery_anidb_identity_not_found':
-        return 'Could not identify this work on AniDB. It will download normally and wait in the pending list for manual identification.';
+        return '未能在 AniDB 識別該作品：仍會正常下載，匯入後在待確認清單等待手動指定身份。';
       case 'network_proxy_p2p_mode_direct':
-        return 'Direct';
+        return '直連';
       case 'network_proxy_p2p_mode_proxy':
-        return 'Via proxy';
+        return '經代理';
       case 'network_proxy_p2p_mode_mixed':
-        return 'Mixed';
+        return '混合';
       case 'onboarding_feature_fonts':
         return '自定義字體';
       case 'onboarding_feature_fonts_hint':
