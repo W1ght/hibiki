@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 70703 (4159 per locale)
+/// Strings: 70720 (4160 per locale)
 ///
-/// Built on 2026-09-02 at 23:06 UTC
+/// Built on 2026-09-02 at 23:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5666,6 +5666,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Open the practice sentence and tap a word.';
   String get onboarding_first_anki_action_desc =>
       'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Evidence: ${evidence}';
   String get game_session_japanese_locale_skipped => 'Locale not applied';
@@ -15335,6 +15337,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'يفتح جملة التدريب في صفحة البحث. انقر على كلمة، ثم على +، وراجع الحقول ثم احفظ.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'اضغط على “البحث عن ترجمات” في الأعلى، ثم اختر مصدرًا من هنا.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'الأدلة: ${evidence}';
@@ -25247,6 +25252,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Öffnet den Übungssatz auf der Nachschlageseite. Tippen Sie auf ein Wort, dann auf +, prüfen Sie die Felder und speichern Sie.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tippe oben auf „Untertitel suchen“ und wähle dann hier eine Quelle aus.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Indizien: ${evidence}';
@@ -35209,6 +35217,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Abre la frase de práctica en la página de consulta. Toque una palabra, toque +, revise los campos y guarde.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Toca «Buscar subtítulos» arriba y luego elige una fuente aquí.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Indicios: ${evidence}';
@@ -45208,6 +45219,9 @@ class _StringsFr extends _StringsEn {
   String get onboarding_first_anki_action_desc =>
       'Ouvre la phrase d\'entraînement dans la page de recherche. Touchez un mot, touchez +, vérifiez les champs et enregistrez.';
   @override
+  String get video_subtitle_source_search_hint =>
+      'Appuyez sur « Trouver des sous-titres » ci-dessus, puis choisissez une source ici.';
+  @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Indices : ${evidence}';
   @override
@@ -55016,6 +55030,9 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Membuka kalimat latihan di halaman pencarian. Ketuk sebuah kata, ketuk +, periksa kolomnya, lalu simpan.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Ketuk “Cari subtitle” di atas, lalu pilih sumber di sini.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Bukti: ${evidence}';
@@ -64911,6 +64928,9 @@ class _StringsIt extends _StringsEn {
   String get onboarding_first_anki_action_desc =>
       'Apre la frase di esercizio nella pagina di ricerca. Tocca una parola, tocca +, controlla i campi e salva.';
   @override
+  String get video_subtitle_source_search_hint =>
+      'Tocca “Trova sottotitoli” in alto, poi scegli una sorgente qui.';
+  @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Indizi: ${evidence}';
   @override
@@ -74213,6 +74233,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       '練習用の文を辞書ページで開きます。単語をタップし、「＋」をタップして、項目を確認してから保存します。';
+  @override
+  String get video_subtitle_source_search_hint =>
+      '上の「字幕を検索」をタップしてから、ここでソースを選んでください。';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       '判定根拠：${evidence}';
@@ -83523,6 +83546,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       '단어 찾기 페이지에서 연습 문장을 엽니다. 단어를 탭하고 +를 탭한 뒤, 필드를 확인하고 저장하세요.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      '위의 “자막 찾기”를 누른 다음 여기에서 소스를 선택하세요.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       '판정 근거: ${evidence}';
@@ -93369,6 +93395,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Opent de oefenzin in de opzoekpagina. Tik op een woord, tik op +, controleer de velden en sla op.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tik hierboven op “Ondertitels zoeken” en kies daarna hier een bron.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Aanwijzingen: ${evidence}';
@@ -103274,6 +103303,9 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_first_anki_action_desc =>
       'Abre a frase de prática na página de consulta. Toque em uma palavra, toque em +, confira os campos e salve.';
   @override
+  String get video_subtitle_source_search_hint =>
+      'Toque em “Buscar legendas” acima e depois escolha uma fonte aqui.';
+  @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Indícios: ${evidence}';
   @override
@@ -113153,6 +113185,9 @@ class _StringsRu extends _StringsEn {
   String get onboarding_first_anki_action_desc =>
       'Открывает тренировочное предложение на странице поиска. Нажмите на слово, затем на +, проверьте поля и сохраните.';
   @override
+  String get video_subtitle_source_search_hint =>
+      'Нажмите «Найти субтитры» выше, затем выберите источник здесь.';
+  @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Признаки: ${evidence}';
   @override
@@ -122836,6 +122871,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'เปิดประโยคฝึกในหน้าค้นคำ แตะที่คำหนึ่งคำ แตะ + ตรวจดูข้อมูลในช่องต่าง ๆ แล้วบันทึก';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'แตะ “ค้นหาคำบรรยาย” ด้านบน แล้วเลือกแหล่งข้อมูลที่นี่';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'หลักฐาน: ${evidence}';
@@ -132634,6 +132672,9 @@ class _StringsTr extends _StringsEn {
   String get onboarding_first_anki_action_desc =>
       'Alıştırma cümlesini arama sayfasında açar. Bir kelimeye dokunun, + düğmesine dokunun, alanları kontrol edip kaydedin.';
   @override
+  String get video_subtitle_source_search_hint =>
+      'Yukarıdaki “Altyazı bul” düğmesine dokunun, ardından buradan bir kaynak seçin.';
+  @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Kanıtlar: ${evidence}';
   @override
@@ -142404,6 +142445,9 @@ class _StringsVi extends _StringsEn {
   String get onboarding_first_anki_action_desc =>
       'Mở câu luyện tập trong trang tra từ. Chạm vào một từ, chạm +, kiểm tra các trường rồi lưu.';
   @override
+  String get video_subtitle_source_search_hint =>
+      'Nhấn “Tìm phụ đề” ở trên, rồi chọn một nguồn tại đây.';
+  @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Bằng chứng: ${evidence}';
   @override
@@ -151395,6 +151439,8 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_first_anki_lookup_desc => '打开练习句子，点一个词。';
   @override
   String get onboarding_first_anki_action_desc => '在查词页打开练习句子。点词、点加号、检查字段、保存。';
+  @override
+  String get video_subtitle_source_search_hint => '先点上方的「查找字幕」，再在这里挑一个来源。';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       '判据：${evidence}';
@@ -160393,6 +160439,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc => '在查詞頁打開練習句子。點詞、點加號、檢查欄位、儲存。';
   @override
+  String get video_subtitle_source_search_hint => '先點上方的「查找字幕」，再在這裡挑一個來源。';
+  @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       '判據：${evidence}';
   @override
@@ -168934,6 +168982,8 @@ extension on _StringsEn {
         return 'Open the practice sentence and tap a word.';
       case 'onboarding_first_anki_action_desc':
         return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Evidence: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -177462,6 +177512,8 @@ extension on _StringsAr {
         return 'افتح جملة التدريب وانقر على كلمة.';
       case 'onboarding_first_anki_action_desc':
         return 'يفتح جملة التدريب في صفحة البحث. انقر على كلمة، ثم على +، وراجع الحقول ثم احفظ.';
+      case 'video_subtitle_source_search_hint':
+        return 'اضغط على “البحث عن ترجمات” في الأعلى، ثم اختر مصدرًا من هنا.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'الأدلة: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -186034,6 +186086,8 @@ extension on _StringsDe {
         return 'Öffnen Sie den Übungssatz und tippen Sie auf ein Wort.';
       case 'onboarding_first_anki_action_desc':
         return 'Öffnet den Übungssatz auf der Nachschlageseite. Tippen Sie auf ein Wort, dann auf +, prüfen Sie die Felder und speichern Sie.';
+      case 'video_subtitle_source_search_hint':
+        return 'Tippe oben auf „Untertitel suchen“ und wähle dann hier eine Quelle aus.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Indizien: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -194598,6 +194652,8 @@ extension on _StringsEs {
         return 'Abra la frase de práctica y toque una palabra.';
       case 'onboarding_first_anki_action_desc':
         return 'Abre la frase de práctica en la página de consulta. Toque una palabra, toque +, revise los campos y guarde.';
+      case 'video_subtitle_source_search_hint':
+        return 'Toca «Buscar subtítulos» arriba y luego elige una fuente aquí.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Indicios: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -203170,6 +203226,8 @@ extension on _StringsFr {
         return 'Ouvrez la phrase d\'entraînement et touchez un mot.';
       case 'onboarding_first_anki_action_desc':
         return 'Ouvre la phrase d\'entraînement dans la page de recherche. Touchez un mot, touchez +, vérifiez les champs et enregistrez.';
+      case 'video_subtitle_source_search_hint':
+        return 'Appuyez sur « Trouver des sous-titres » ci-dessus, puis choisissez une source ici.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Indices : ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -211714,6 +211772,8 @@ extension on _StringsId {
         return 'Buka kalimat latihan lalu ketuk sebuah kata.';
       case 'onboarding_first_anki_action_desc':
         return 'Membuka kalimat latihan di halaman pencarian. Ketuk sebuah kata, ketuk +, periksa kolomnya, lalu simpan.';
+      case 'video_subtitle_source_search_hint':
+        return 'Ketuk “Cari subtitle” di atas, lalu pilih sumber di sini.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Bukti: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -220279,6 +220339,8 @@ extension on _StringsIt {
         return 'Apri la frase di esercizio e tocca una parola.';
       case 'onboarding_first_anki_action_desc':
         return 'Apre la frase di esercizio nella pagina di ricerca. Tocca una parola, tocca +, controlla i campi e salva.';
+      case 'video_subtitle_source_search_hint':
+        return 'Tocca “Trova sottotitoli” in alto, poi scegli una sorgente qui.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Indizi: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -228773,6 +228835,8 @@ extension on _StringsJa {
         return '練習用の文を開いて、単語をタップします。';
       case 'onboarding_first_anki_action_desc':
         return '練習用の文を辞書ページで開きます。単語をタップし、「＋」をタップして、項目を確認してから保存します。';
+      case 'video_subtitle_source_search_hint':
+        return '上の「字幕を検索」をタップしてから、ここでソースを選んでください。';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => '判定根拠：${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -237270,6 +237334,8 @@ extension on _StringsKo {
         return '연습 문장을 열고 단어를 탭하세요.';
       case 'onboarding_first_anki_action_desc':
         return '단어 찾기 페이지에서 연습 문장을 엽니다. 단어를 탭하고 +를 탭한 뒤, 필드를 확인하고 저장하세요.';
+      case 'video_subtitle_source_search_hint':
+        return '위의 “자막 찾기”를 누른 다음 여기에서 소스를 선택하세요.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => '판정 근거: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -245829,6 +245895,8 @@ extension on _StringsNl {
         return 'Open de oefenzin en tik op een woord.';
       case 'onboarding_first_anki_action_desc':
         return 'Opent de oefenzin in de opzoekpagina. Tik op een woord, tik op +, controleer de velden en sla op.';
+      case 'video_subtitle_source_search_hint':
+        return 'Tik hierboven op “Ondertitels zoeken” en kies daarna hier een bron.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Aanwijzingen: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -254383,6 +254451,8 @@ extension on _StringsPtBr {
         return 'Abra a frase de prática e toque em uma palavra.';
       case 'onboarding_first_anki_action_desc':
         return 'Abre a frase de prática na página de consulta. Toque em uma palavra, toque em +, confira os campos e salve.';
+      case 'video_subtitle_source_search_hint':
+        return 'Toque em “Buscar legendas” acima e depois escolha uma fonte aqui.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Indícios: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -262943,6 +263013,8 @@ extension on _StringsRu {
         return 'Откройте тренировочное предложение и нажмите на слово.';
       case 'onboarding_first_anki_action_desc':
         return 'Открывает тренировочное предложение на странице поиска. Нажмите на слово, затем на +, проверьте поля и сохраните.';
+      case 'video_subtitle_source_search_hint':
+        return 'Нажмите «Найти субтитры» выше, затем выберите источник здесь.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Признаки: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -271476,6 +271548,8 @@ extension on _StringsTh {
         return 'เปิดประโยคฝึกแล้วแตะที่คำหนึ่งคำ';
       case 'onboarding_first_anki_action_desc':
         return 'เปิดประโยคฝึกในหน้าค้นคำ แตะที่คำหนึ่งคำ แตะ + ตรวจดูข้อมูลในช่องต่าง ๆ แล้วบันทึก';
+      case 'video_subtitle_source_search_hint':
+        return 'แตะ “ค้นหาคำบรรยาย” ด้านบน แล้วเลือกแหล่งข้อมูลที่นี่';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'หลักฐาน: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -280024,6 +280098,8 @@ extension on _StringsTr {
         return 'Alıştırma cümlesini açın ve bir kelimeye dokunun.';
       case 'onboarding_first_anki_action_desc':
         return 'Alıştırma cümlesini arama sayfasında açar. Bir kelimeye dokunun, + düğmesine dokunun, alanları kontrol edip kaydedin.';
+      case 'video_subtitle_source_search_hint':
+        return 'Yukarıdaki “Altyazı bul” düğmesine dokunun, ardından buradan bir kaynak seçin.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Kanıtlar: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -288566,6 +288642,8 @@ extension on _StringsVi {
         return 'Mở câu luyện tập rồi chạm vào một từ.';
       case 'onboarding_first_anki_action_desc':
         return 'Mở câu luyện tập trong trang tra từ. Chạm vào một từ, chạm +, kiểm tra các trường rồi lưu.';
+      case 'video_subtitle_source_search_hint':
+        return 'Nhấn “Tìm phụ đề” ở trên, rồi chọn một nguồn tại đây.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Bằng chứng: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -297037,6 +297115,8 @@ extension on _StringsZhCn {
         return '打开练习句子，点一个词。';
       case 'onboarding_first_anki_action_desc':
         return '在查词页打开练习句子。点词、点加号、检查字段、保存。';
+      case 'video_subtitle_source_search_hint':
+        return '先点上方的「查找字幕」，再在这里挑一个来源。';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => '判据：${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -305509,6 +305589,8 @@ extension on _StringsZhHk {
         return '打開練習句子，點一個詞。';
       case 'onboarding_first_anki_action_desc':
         return '在查詞頁打開練習句子。點詞、點加號、檢查欄位、儲存。';
+      case 'video_subtitle_source_search_hint':
+        return '先點上方的「查找字幕」，再在這裡挑一個來源。';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => '判據：${evidence}';
       case 'game_session_japanese_locale_skipped':
