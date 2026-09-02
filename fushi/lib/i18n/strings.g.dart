@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69955 (4115 per locale)
+/// Strings: 70057 (4121 per locale)
 ///
-/// Built on 2026-09-01 at 16:45 UTC
+/// Built on 2026-09-02 at 05:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4801,7 +4801,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_mpv_lua_scripts_hint =>
       'Load all .lua files in the mpv_scripts folder into the player. Turning off takes effect the next time a video is opened.';
   String get video_setting_mpv_lua_scripts_import => 'Import Lua scripts';
-  String get video_setting_mpv_lua_scripts_imported => 'Scripts imported';
+  String get video_setting_mpv_lua_scripts_imported =>
+      'Scripts imported and enabled';
   String get video_setting_mpv_lua_scripts_dir_copy =>
       'Copy scripts folder path';
   String get video_setting_mpv_lua_scripts_dir_copied => 'Folder path copied';
@@ -5647,6 +5648,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get network_proxy_p2p_mode_direct => 'Direct';
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'The bundled libmpv on this platform was built without Lua (-Dlua=disabled), so scripts cannot run here.';
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Keyboard and mouse input stays in the app and never reaches mpv: scripts that rely on key bindings or the OSC cannot be triggered. Scripts driven by properties/events and OSD messages work.';
+  String get video_setting_mpv_lua_scripts_empty =>
+      'No scripts in the mpv_scripts folder yet';
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Loaded, no errors reported';
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Not loaded in this player yet (turn on the switch or reopen the video)';
+  String get video_setting_mpv_lua_scripts_status_error => 'Error';
 }
 
 // Path: <root>
@@ -13812,7 +13824,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_import => 'استيراد سكربتات Lua';
   @override
-  String get video_setting_mpv_lua_scripts_imported => 'تم استيراد السكربتات';
+  String get video_setting_mpv_lua_scripts_imported =>
+      'تم استيراد السكربتات وتفعيلها';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
       'نسخ مسار مجلد السكربتات';
@@ -15228,6 +15241,23 @@ class _StringsAr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'نسخة libmpv المضمّنة على هذه المنصة بُنيت بدون Lua (-Dlua=disabled)، لذا لا يمكن تشغيل السكربتات هنا.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'إدخال لوحة المفاتيح والفأرة يبقى داخل التطبيق ولا يصل إلى mpv: السكربتات التي تعتمد على اختصارات المفاتيح أو OSC لا يمكن تشغيلها. السكربتات المعتمدة على الخصائص/الأحداث ورسائل OSD تعمل.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'لا توجد سكربتات في مجلد mpv_scripts بعد';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'تم التحميل، لا أخطاء';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'لم يُحمَّل في هذا المشغّل بعد (فعّل المفتاح أو أعد فتح الفيديو)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'خطأ';
 }
 
 // Path: <root>
@@ -23584,7 +23614,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_import => 'Lua-Skripte importieren';
   @override
-  String get video_setting_mpv_lua_scripts_imported => 'Skripte importiert';
+  String get video_setting_mpv_lua_scripts_imported =>
+      'Skripte importiert und aktiviert';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
       'Skript-Ordnerpfad kopieren';
@@ -25031,6 +25062,23 @@ class _StringsDe extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'Das mitgelieferte libmpv auf dieser Plattform wurde ohne Lua gebaut (-Dlua=disabled), Skripte können hier nicht laufen.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Tastatur- und Mauseingaben bleiben in der App und erreichen mpv nie: Skripte, die auf Tastenbelegungen oder das OSC angewiesen sind, lassen sich nicht auslösen. Skripte, die auf Eigenschaften/Ereignisse reagieren, und OSD-Meldungen funktionieren.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Noch keine Skripte im Ordner mpv_scripts';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Geladen, keine Fehler gemeldet';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'In diesem Player noch nicht geladen (Schalter einschalten oder Video erneut öffnen)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Fehler';
 }
 
 // Path: <root>
@@ -33422,7 +33470,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_import => 'Importar scripts Lua';
   @override
-  String get video_setting_mpv_lua_scripts_imported => 'Scripts importados';
+  String get video_setting_mpv_lua_scripts_imported =>
+      'Scripts importados y activados';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
       'Copiar ruta de carpeta de scripts';
@@ -34883,6 +34932,23 @@ class _StringsEs extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'El libmpv incluido en esta plataforma se compiló sin Lua (-Dlua=disabled), por lo que los scripts no pueden ejecutarse aquí.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'La entrada de teclado y ratón se queda en la aplicación y nunca llega a mpv: los scripts que dependen de atajos de teclado o del OSC no se pueden activar. Los scripts basados en propiedades/eventos y los mensajes OSD sí funcionan.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Aún no hay scripts en la carpeta mpv_scripts';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Cargado, sin errores';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Aún no cargado en este reproductor (activa el interruptor o vuelve a abrir el vídeo)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Error';
 }
 
 // Path: <root>
@@ -43304,7 +43370,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_import => 'Importer des scripts Lua';
   @override
-  String get video_setting_mpv_lua_scripts_imported => 'Scripts importés';
+  String get video_setting_mpv_lua_scripts_imported =>
+      'Scripts importés et activés';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
       'Copier le chemin du dossier de scripts';
@@ -44770,6 +44837,23 @@ class _StringsFr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'Le libmpv fourni sur cette plateforme a été compilé sans Lua (-Dlua=disabled) : les scripts ne peuvent pas s\'exécuter ici.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Les entrées clavier et souris restent dans l\'application et n\'atteignent jamais mpv : les scripts qui reposent sur des raccourcis ou sur l\'OSC ne peuvent pas être déclenchés. Les scripts pilotés par propriétés/événements et les messages OSD fonctionnent.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Aucun script dans le dossier mpv_scripts pour l\'instant';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Chargé, aucune erreur signalée';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Pas encore chargé dans ce lecteur (activez l\'interrupteur ou rouvrez la vidéo)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Erreur';
 }
 
 // Path: <root>
@@ -53039,7 +53123,8 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_import => 'Impor skrip Lua';
   @override
-  String get video_setting_mpv_lua_scripts_imported => 'Skrip diimpor';
+  String get video_setting_mpv_lua_scripts_imported =>
+      'Skrip diimpor dan diaktifkan';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
       'Salin path folder skrip';
@@ -54474,6 +54559,23 @@ class _StringsId extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'libmpv bawaan di platform ini dibangun tanpa Lua (-Dlua=disabled), sehingga skrip tidak dapat berjalan di sini.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Input keyboard dan mouse tetap di aplikasi dan tidak pernah sampai ke mpv: skrip yang bergantung pada pintasan tombol atau OSC tidak dapat dipicu. Skrip berbasis properti/peristiwa dan pesan OSD tetap berfungsi.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Belum ada skrip di folder mpv_scripts';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Dimuat, tidak ada kesalahan';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Belum dimuat di pemutar ini (nyalakan sakelar atau buka ulang video)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Kesalahan';
 }
 
 // Path: <root>
@@ -62812,7 +62914,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_import => 'Importa script Lua';
   @override
-  String get video_setting_mpv_lua_scripts_imported => 'Script importati';
+  String get video_setting_mpv_lua_scripts_imported =>
+      'Script importati e attivati';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
       'Copia percorso cartella script';
@@ -64262,6 +64365,23 @@ class _StringsIt extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'Il libmpv incluso su questa piattaforma è stato compilato senza Lua (-Dlua=disabled), quindi gli script non possono essere eseguiti qui.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'L\'input di tastiera e mouse resta nell\'app e non raggiunge mai mpv: gli script che dipendono da scorciatoie o dall\'OSC non possono essere attivati. Gli script basati su proprietà/eventi e i messaggi OSD funzionano.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Nessuno script nella cartella mpv_scripts per ora';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Caricato, nessun errore segnalato';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Non ancora caricato in questo player (attiva l\'interruttore o riapri il video)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Errore';
 }
 
 // Path: <root>
@@ -72087,7 +72207,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_import => 'Luaスクリプトをインポート';
   @override
-  String get video_setting_mpv_lua_scripts_imported => 'スクリプトをインポートしました';
+  String get video_setting_mpv_lua_scripts_imported => 'スクリプトをインポートして有効にしました';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => 'スクリプトフォルダのパスをコピー';
   @override
@@ -73456,6 +73576,22 @@ class _StringsJa extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'このプラットフォームに同梱の libmpv は Lua なしでビルドされています（-Dlua=disabled）。ここではスクリプトを実行できません。';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'キーボードとマウスの入力はアプリ側で処理され mpv には届きません。キーバインドや OSC に依存するスクリプトは動作させられません。プロパティ/イベント駆動のスクリプトと OSD メッセージは動作します。';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'mpv_scripts フォルダーにスクリプトはまだありません';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded => '読み込み済み、エラーなし';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'このプレーヤーではまだ読み込まれていません（スイッチをオンにするか動画を開き直してください）';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'エラー';
 }
 
 // Path: <root>
@@ -81292,7 +81428,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_import => 'Lua 스크립트 가져오기';
   @override
-  String get video_setting_mpv_lua_scripts_imported => '스크립트 가져옴';
+  String get video_setting_mpv_lua_scripts_imported => '스크립트를 가져와 사용하도록 설정했습니다';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => '스크립트 폴더 경로 복사';
   @override
@@ -82661,6 +82797,22 @@ class _StringsKo extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      '이 플랫폼에 포함된 libmpv는 Lua 없이 빌드되어(-Dlua=disabled) 여기서는 스크립트를 실행할 수 없습니다.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      '키보드와 마우스 입력은 앱에서 처리되며 mpv에 전달되지 않습니다. 키 바인딩이나 OSC에 의존하는 스크립트는 실행할 수 없습니다. 속성/이벤트 기반 스크립트와 OSD 메시지는 동작합니다.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'mpv_scripts 폴더에 아직 스크립트가 없습니다';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded => '로드됨, 오류 없음';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      '이 플레이어에 아직 로드되지 않았습니다(스위치를 켜거나 동영상을 다시 여세요)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => '오류';
 }
 
 // Path: <root>
@@ -90959,7 +91111,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_import => 'Lua-scripts importeren';
   @override
-  String get video_setting_mpv_lua_scripts_imported => 'Scripts geïmporteerd';
+  String get video_setting_mpv_lua_scripts_imported =>
+      'Scripts geïmporteerd en ingeschakeld';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => 'Scriptmappad kopiëren';
   @override
@@ -92403,6 +92556,23 @@ class _StringsNl extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'De meegeleverde libmpv op dit platform is zonder Lua gebouwd (-Dlua=disabled), dus scripts kunnen hier niet draaien.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Toetsenbord- en muisinvoer blijft in de app en bereikt mpv nooit: scripts die op sneltoetsen of de OSC vertrouwen kunnen niet worden geactiveerd. Scripts op basis van eigenschappen/gebeurtenissen en OSD-berichten werken wel.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Nog geen scripts in de map mpv_scripts';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Geladen, geen fouten gemeld';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Nog niet geladen in deze speler (zet de schakelaar aan of open de video opnieuw)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Fout';
 }
 
 // Path: <root>
@@ -100748,7 +100918,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_import => 'Importar scripts Lua';
   @override
-  String get video_setting_mpv_lua_scripts_imported => 'Scripts importados';
+  String get video_setting_mpv_lua_scripts_imported =>
+      'Scripts importados e ativados';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
       'Copiar caminho da pasta de scripts';
@@ -102201,6 +102372,23 @@ class _StringsPtBr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'O libmpv incluído nesta plataforma foi compilado sem Lua (-Dlua=disabled), então os scripts não podem ser executados aqui.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'A entrada de teclado e mouse fica no aplicativo e nunca chega ao mpv: scripts que dependem de atalhos ou do OSC não podem ser acionados. Scripts baseados em propriedades/eventos e mensagens OSD funcionam.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Ainda não há scripts na pasta mpv_scripts';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Carregado, nenhum erro relatado';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Ainda não carregado neste player (ative a chave ou reabra o vídeo)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Erro';
 }
 
 // Path: <root>
@@ -110526,7 +110714,8 @@ class _StringsRu extends _StringsEn {
   String get video_setting_mpv_lua_scripts_import =>
       'Импортировать Lua-скрипты';
   @override
-  String get video_setting_mpv_lua_scripts_imported => 'Скрипты импортированы';
+  String get video_setting_mpv_lua_scripts_imported =>
+      'Скрипты импортированы и включены';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
       'Скопировать путь к папке скриптов';
@@ -111975,6 +112164,23 @@ class _StringsRu extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'Встроенный libmpv на этой платформе собран без Lua (-Dlua=disabled), поэтому скрипты здесь работать не могут.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Ввод с клавиатуры и мыши остаётся в приложении и не доходит до mpv: скрипты, зависящие от привязок клавиш или OSC, запустить нельзя. Скрипты на свойствах/событиях и сообщения OSD работают.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'В папке mpv_scripts пока нет скриптов';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Загружен, ошибок нет';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Ещё не загружен в этом плеере (включите переключатель или откройте видео заново)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Ошибка';
 }
 
 // Path: <root>
@@ -120129,7 +120335,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_import => 'นำเข้าสคริปต์ Lua';
   @override
-  String get video_setting_mpv_lua_scripts_imported => 'นำเข้าสคริปต์แล้ว';
+  String get video_setting_mpv_lua_scripts_imported =>
+      'นำเข้าและเปิดใช้สคริปต์แล้ว';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
       'คัดลอกเส้นทางโฟลเดอร์สคริปต์';
@@ -121550,6 +121757,23 @@ class _StringsTh extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'libmpv ที่มาพร้อมแอปบนแพลตฟอร์มนี้ถูกสร้างโดยไม่มี Lua (-Dlua=disabled) จึงรันสคริปต์ที่นี่ไม่ได้';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'อินพุตจากคีย์บอร์ดและเมาส์จะอยู่ในแอปและไม่ส่งถึง mpv: สคริปต์ที่พึ่งพาปุ่มลัดหรือ OSC จะเรียกใช้ไม่ได้ ส่วนสคริปต์ที่ทำงานตามพร็อพเพอร์ตี้/เหตุการณ์และข้อความ OSD ใช้งานได้';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'ยังไม่มีสคริปต์ในโฟลเดอร์ mpv_scripts';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'โหลดแล้ว ไม่มีข้อผิดพลาด';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'ยังไม่ได้โหลดในตัวเล่นนี้ (เปิดสวิตช์หรือเปิดวิดีโอใหม่)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'ข้อผิดพลาด';
 }
 
 // Path: <root>
@@ -129803,7 +130027,8 @@ class _StringsTr extends _StringsEn {
   String get video_setting_mpv_lua_scripts_import =>
       'Lua betiklerini içe aktar';
   @override
-  String get video_setting_mpv_lua_scripts_imported => 'Betikler içe aktarıldı';
+  String get video_setting_mpv_lua_scripts_imported =>
+      'Betikler içe aktarıldı ve etkinleştirildi';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
       'Betik klasör yolunu kopyala';
@@ -131240,6 +131465,23 @@ class _StringsTr extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'Bu platformdaki paketlenmiş libmpv, Lua olmadan derlenmiştir (-Dlua=disabled); betikler burada çalışamaz.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Klavye ve fare girdisi uygulamada kalır, mpv\'ye hiç ulaşmaz: tuş atamalarına veya OSC\'ye dayanan betikler tetiklenemez. Özellik/olay tabanlı betikler ve OSD mesajları çalışır.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'mpv_scripts klasöründe henüz betik yok';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Yüklendi, hata bildirilmedi';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Bu oynatıcıda henüz yüklenmedi (anahtarı açın veya videoyu yeniden açın)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Hata';
 }
 
 // Path: <root>
@@ -139471,7 +139713,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_import => 'Nhập tập lệnh Lua';
   @override
-  String get video_setting_mpv_lua_scripts_imported => 'Đã nhập tập lệnh';
+  String get video_setting_mpv_lua_scripts_imported =>
+      'Đã nhập và bật tập lệnh';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
       'Sao chép đường dẫn thư mục tập lệnh';
@@ -140906,6 +141149,23 @@ class _StringsVi extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'libmpv đi kèm trên nền tảng này được biên dịch không có Lua (-Dlua=disabled), nên tập lệnh không thể chạy ở đây.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Đầu vào bàn phím và chuột nằm trong ứng dụng và không bao giờ tới mpv: các tập lệnh dựa vào phím tắt hoặc OSC không thể kích hoạt. Tập lệnh theo thuộc tính/sự kiện và thông báo OSD vẫn hoạt động.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Chưa có tập lệnh trong thư mục mpv_scripts';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Đã tải, không có lỗi';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Chưa tải trong trình phát này (bật công tắc hoặc mở lại video)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Lỗi';
 }
 
 // Path: <root>
@@ -148488,7 +148748,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_import => '导入 Lua 脚本';
   @override
-  String get video_setting_mpv_lua_scripts_imported => '脚本已导入';
+  String get video_setting_mpv_lua_scripts_imported => '脚本已导入并启用';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => '复制脚本目录路径';
   @override
@@ -149803,6 +150063,21 @@ class _StringsZhCn extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => '走代理';
   @override
   String get network_proxy_p2p_mode_mixed => '混合';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      '本平台随包 libmpv 未编入 Lua（-Dlua=disabled），脚本在此无法运行。';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      '键盘/鼠标输入由应用层处理、不会到达 mpv：依赖按键绑定或 OSC 的脚本无法触发；监听属性/事件的脚本与 OSD 提示可用。';
+  @override
+  String get video_setting_mpv_lua_scripts_empty => 'mpv_scripts 目录里还没有脚本';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded => '已装载，无报错';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      '本次播放未装载（开启开关或重新打开视频）';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => '报错';
 }
 
 // Path: <root>
@@ -157391,7 +157666,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_import => '導入 Lua 腳本';
   @override
-  String get video_setting_mpv_lua_scripts_imported => '腳本已導入';
+  String get video_setting_mpv_lua_scripts_imported => '腳本已導入並啟用';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => '復製腳本目錄路徑';
   @override
@@ -158715,6 +158990,21 @@ class _StringsZhHk extends _StringsEn {
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      '本平台隨附的 libmpv 未編入 Lua（-Dlua=disabled），腳本在此無法運行。';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      '鍵盤/滑鼠輸入由應用程式處理、不會到達 mpv：依賴按鍵綁定或 OSC 的腳本無法觸發；監聽屬性/事件的腳本與 OSD 提示可用。';
+  @override
+  String get video_setting_mpv_lua_scripts_empty => 'mpv_scripts 目錄裡還沒有腳本';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded => '已載入，無報錯';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      '本次播放未載入（開啟開關或重新開啟影片）';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => '報錯';
 }
 
 /// Flat map(s) containing all translations.
@@ -165964,7 +166254,7 @@ extension on _StringsEn {
       case 'video_setting_mpv_lua_scripts_import':
         return 'Import Lua scripts';
       case 'video_setting_mpv_lua_scripts_imported':
-        return 'Scripts imported';
+        return 'Scripts imported and enabled';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copy scripts folder path';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -167158,6 +167448,18 @@ extension on _StringsEn {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'The bundled libmpv on this platform was built without Lua (-Dlua=disabled), so scripts cannot run here.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Keyboard and mouse input stays in the app and never reaches mpv: scripts that rely on key bindings or the OSC cannot be triggered. Scripts driven by properties/events and OSD messages work.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'No scripts in the mpv_scripts folder yet';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Loaded, no errors reported';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Not loaded in this player yet (turn on the switch or reopen the video)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Error';
       default:
         return null;
     }
@@ -174403,7 +174705,7 @@ extension on _StringsAr {
       case 'video_setting_mpv_lua_scripts_import':
         return 'استيراد سكربتات Lua';
       case 'video_setting_mpv_lua_scripts_imported':
-        return 'تم استيراد السكربتات';
+        return 'تم استيراد السكربتات وتفعيلها';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'نسخ مسار مجلد السكربتات';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -175596,6 +175898,18 @@ extension on _StringsAr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'نسخة libmpv المضمّنة على هذه المنصة بُنيت بدون Lua (-Dlua=disabled)، لذا لا يمكن تشغيل السكربتات هنا.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'إدخال لوحة المفاتيح والفأرة يبقى داخل التطبيق ولا يصل إلى mpv: السكربتات التي تعتمد على اختصارات المفاتيح أو OSC لا يمكن تشغيلها. السكربتات المعتمدة على الخصائص/الأحداث ورسائل OSD تعمل.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'لا توجد سكربتات في مجلد mpv_scripts بعد';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'تم التحميل، لا أخطاء';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'لم يُحمَّل في هذا المشغّل بعد (فعّل المفتاح أو أعد فتح الفيديو)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'خطأ';
       default:
         return null;
     }
@@ -182880,7 +183194,7 @@ extension on _StringsDe {
       case 'video_setting_mpv_lua_scripts_import':
         return 'Lua-Skripte importieren';
       case 'video_setting_mpv_lua_scripts_imported':
-        return 'Skripte importiert';
+        return 'Skripte importiert und aktiviert';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Skript-Ordnerpfad kopieren';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -184078,6 +184392,18 @@ extension on _StringsDe {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'Das mitgelieferte libmpv auf dieser Plattform wurde ohne Lua gebaut (-Dlua=disabled), Skripte können hier nicht laufen.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Tastatur- und Mauseingaben bleiben in der App und erreichen mpv nie: Skripte, die auf Tastenbelegungen oder das OSC angewiesen sind, lassen sich nicht auslösen. Skripte, die auf Eigenschaften/Ereignisse reagieren, und OSD-Meldungen funktionieren.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Noch keine Skripte im Ordner mpv_scripts';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Geladen, keine Fehler gemeldet';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'In diesem Player noch nicht geladen (Schalter einschalten oder Video erneut öffnen)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Fehler';
       default:
         return null;
     }
@@ -191354,7 +191680,7 @@ extension on _StringsEs {
       case 'video_setting_mpv_lua_scripts_import':
         return 'Importar scripts Lua';
       case 'video_setting_mpv_lua_scripts_imported':
-        return 'Scripts importados';
+        return 'Scripts importados y activados';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copiar ruta de carpeta de scripts';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -192552,6 +192878,18 @@ extension on _StringsEs {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'El libmpv incluido en esta plataforma se compiló sin Lua (-Dlua=disabled), por lo que los scripts no pueden ejecutarse aquí.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'La entrada de teclado y ratón se queda en la aplicación y nunca llega a mpv: los scripts que dependen de atajos de teclado o del OSC no se pueden activar. Los scripts basados en propiedades/eventos y los mensajes OSD sí funcionan.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Aún no hay scripts en la carpeta mpv_scripts';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Cargado, sin errores';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Aún no cargado en este reproductor (activa el interruptor o vuelve a abrir el vídeo)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Error';
       default:
         return null;
     }
@@ -199836,7 +200174,7 @@ extension on _StringsFr {
       case 'video_setting_mpv_lua_scripts_import':
         return 'Importer des scripts Lua';
       case 'video_setting_mpv_lua_scripts_imported':
-        return 'Scripts importés';
+        return 'Scripts importés et activés';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copier le chemin du dossier de scripts';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -201034,6 +201372,18 @@ extension on _StringsFr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'Le libmpv fourni sur cette plateforme a été compilé sans Lua (-Dlua=disabled) : les scripts ne peuvent pas s\'exécuter ici.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Les entrées clavier et souris restent dans l\'application et n\'atteignent jamais mpv : les scripts qui reposent sur des raccourcis ou sur l\'OSC ne peuvent pas être déclenchés. Les scripts pilotés par propriétés/événements et les messages OSD fonctionnent.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Aucun script dans le dossier mpv_scripts pour l\'instant';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Chargé, aucune erreur signalée';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Pas encore chargé dans ce lecteur (activez l\'interrupteur ou rouvrez la vidéo)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Erreur';
       default:
         return null;
     }
@@ -208294,7 +208644,7 @@ extension on _StringsId {
       case 'video_setting_mpv_lua_scripts_import':
         return 'Impor skrip Lua';
       case 'video_setting_mpv_lua_scripts_imported':
-        return 'Skrip diimpor';
+        return 'Skrip diimpor dan diaktifkan';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Salin path folder skrip';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -209488,6 +209838,18 @@ extension on _StringsId {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'libmpv bawaan di platform ini dibangun tanpa Lua (-Dlua=disabled), sehingga skrip tidak dapat berjalan di sini.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Input keyboard dan mouse tetap di aplikasi dan tidak pernah sampai ke mpv: skrip yang bergantung pada pintasan tombol atau OSC tidak dapat dipicu. Skrip berbasis properti/peristiwa dan pesan OSD tetap berfungsi.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Belum ada skrip di folder mpv_scripts';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Dimuat, tidak ada kesalahan';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Belum dimuat di pemutar ini (nyalakan sakelar atau buka ulang video)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Kesalahan';
       default:
         return null;
     }
@@ -216767,7 +217129,7 @@ extension on _StringsIt {
       case 'video_setting_mpv_lua_scripts_import':
         return 'Importa script Lua';
       case 'video_setting_mpv_lua_scripts_imported':
-        return 'Script importati';
+        return 'Script importati e attivati';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copia percorso cartella script';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -217963,6 +218325,18 @@ extension on _StringsIt {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'Il libmpv incluso su questa piattaforma è stato compilato senza Lua (-Dlua=disabled), quindi gli script non possono essere eseguiti qui.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'L\'input di tastiera e mouse resta nell\'app e non raggiunge mai mpv: gli script che dipendono da scorciatoie o dall\'OSC non possono essere attivati. Gli script basati su proprietà/eventi e i messaggi OSD funzionano.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Nessuno script nella cartella mpv_scripts per ora';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Caricato, nessun errore segnalato';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Non ancora caricato in questo player (attiva l\'interruttore o riapri il video)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Errore';
       default:
         return null;
     }
@@ -225179,7 +225553,7 @@ extension on _StringsJa {
       case 'video_setting_mpv_lua_scripts_import':
         return 'Luaスクリプトをインポート';
       case 'video_setting_mpv_lua_scripts_imported':
-        return 'スクリプトをインポートしました';
+        return 'スクリプトをインポートして有効にしました';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'スクリプトフォルダのパスをコピー';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -226367,6 +226741,18 @@ extension on _StringsJa {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'このプラットフォームに同梱の libmpv は Lua なしでビルドされています（-Dlua=disabled）。ここではスクリプトを実行できません。';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'キーボードとマウスの入力はアプリ側で処理され mpv には届きません。キーバインドや OSC に依存するスクリプトは動作させられません。プロパティ/イベント駆動のスクリプトと OSD メッセージは動作します。';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'mpv_scripts フォルダーにスクリプトはまだありません';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return '読み込み済み、エラーなし';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'このプレーヤーではまだ読み込まれていません（スイッチをオンにするか動画を開き直してください）';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'エラー';
       default:
         return null;
     }
@@ -233585,7 +233971,7 @@ extension on _StringsKo {
       case 'video_setting_mpv_lua_scripts_import':
         return 'Lua 스크립트 가져오기';
       case 'video_setting_mpv_lua_scripts_imported':
-        return '스크립트 가져옴';
+        return '스크립트를 가져와 사용하도록 설정했습니다';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return '스크립트 폴더 경로 복사';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -234774,6 +235160,18 @@ extension on _StringsKo {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return '이 플랫폼에 포함된 libmpv는 Lua 없이 빌드되어(-Dlua=disabled) 여기서는 스크립트를 실행할 수 없습니다.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return '키보드와 마우스 입력은 앱에서 처리되며 mpv에 전달되지 않습니다. 키 바인딩이나 OSC에 의존하는 스크립트는 실행할 수 없습니다. 속성/이벤트 기반 스크립트와 OSD 메시지는 동작합니다.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'mpv_scripts 폴더에 아직 스크립트가 없습니다';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return '로드됨, 오류 없음';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return '이 플레이어에 아직 로드되지 않았습니다(스위치를 켜거나 동영상을 다시 여세요)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return '오류';
       default:
         return null;
     }
@@ -242046,7 +242444,7 @@ extension on _StringsNl {
       case 'video_setting_mpv_lua_scripts_import':
         return 'Lua-scripts importeren';
       case 'video_setting_mpv_lua_scripts_imported':
-        return 'Scripts geïmporteerd';
+        return 'Scripts geïmporteerd en ingeschakeld';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Scriptmappad kopiëren';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -243243,6 +243641,18 @@ extension on _StringsNl {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'De meegeleverde libmpv op dit platform is zonder Lua gebouwd (-Dlua=disabled), dus scripts kunnen hier niet draaien.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Toetsenbord- en muisinvoer blijft in de app en bereikt mpv nooit: scripts die op sneltoetsen of de OSC vertrouwen kunnen niet worden geactiveerd. Scripts op basis van eigenschappen/gebeurtenissen en OSD-berichten werken wel.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Nog geen scripts in de map mpv_scripts';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Geladen, geen fouten gemeld';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Nog niet geladen in deze speler (zet de schakelaar aan of open de video opnieuw)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Fout';
       default:
         return null;
     }
@@ -250511,7 +250921,7 @@ extension on _StringsPtBr {
       case 'video_setting_mpv_lua_scripts_import':
         return 'Importar scripts Lua';
       case 'video_setting_mpv_lua_scripts_imported':
-        return 'Scripts importados';
+        return 'Scripts importados e ativados';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copiar caminho da pasta de scripts';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -251707,6 +252117,18 @@ extension on _StringsPtBr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'O libmpv incluído nesta plataforma foi compilado sem Lua (-Dlua=disabled), então os scripts não podem ser executados aqui.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'A entrada de teclado e mouse fica no aplicativo e nunca chega ao mpv: scripts que dependem de atalhos ou do OSC não podem ser acionados. Scripts baseados em propriedades/eventos e mensagens OSD funcionam.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Ainda não há scripts na pasta mpv_scripts';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Carregado, nenhum erro relatado';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Ainda não carregado neste player (ative a chave ou reabra o vídeo)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Erro';
       default:
         return null;
     }
@@ -258982,7 +259404,7 @@ extension on _StringsRu {
       case 'video_setting_mpv_lua_scripts_import':
         return 'Импортировать Lua-скрипты';
       case 'video_setting_mpv_lua_scripts_imported':
-        return 'Скрипты импортированы';
+        return 'Скрипты импортированы и включены';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Скопировать путь к папке скриптов';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -260177,6 +260599,18 @@ extension on _StringsRu {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'Встроенный libmpv на этой платформе собран без Lua (-Dlua=disabled), поэтому скрипты здесь работать не могут.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Ввод с клавиатуры и мыши остаётся в приложении и не доходит до mpv: скрипты, зависящие от привязок клавиш или OSC, запустить нельзя. Скрипты на свойствах/событиях и сообщения OSD работают.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'В папке mpv_scripts пока нет скриптов';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Загружен, ошибок нет';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Ещё не загружен в этом плеере (включите переключатель или откройте видео заново)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Ошибка';
       default:
         return null;
     }
@@ -267427,7 +267861,7 @@ extension on _StringsTh {
       case 'video_setting_mpv_lua_scripts_import':
         return 'นำเข้าสคริปต์ Lua';
       case 'video_setting_mpv_lua_scripts_imported':
-        return 'นำเข้าสคริปต์แล้ว';
+        return 'นำเข้าและเปิดใช้สคริปต์แล้ว';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'คัดลอกเส้นทางโฟลเดอร์สคริปต์';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -268620,6 +269054,18 @@ extension on _StringsTh {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'libmpv ที่มาพร้อมแอปบนแพลตฟอร์มนี้ถูกสร้างโดยไม่มี Lua (-Dlua=disabled) จึงรันสคริปต์ที่นี่ไม่ได้';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'อินพุตจากคีย์บอร์ดและเมาส์จะอยู่ในแอปและไม่ส่งถึง mpv: สคริปต์ที่พึ่งพาปุ่มลัดหรือ OSC จะเรียกใช้ไม่ได้ ส่วนสคริปต์ที่ทำงานตามพร็อพเพอร์ตี้/เหตุการณ์และข้อความ OSD ใช้งานได้';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'ยังไม่มีสคริปต์ในโฟลเดอร์ mpv_scripts';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'โหลดแล้ว ไม่มีข้อผิดพลาด';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'ยังไม่ได้โหลดในตัวเล่นนี้ (เปิดสวิตช์หรือเปิดวิดีโอใหม่)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'ข้อผิดพลาด';
       default:
         return null;
     }
@@ -275885,7 +276331,7 @@ extension on _StringsTr {
       case 'video_setting_mpv_lua_scripts_import':
         return 'Lua betiklerini içe aktar';
       case 'video_setting_mpv_lua_scripts_imported':
-        return 'Betikler içe aktarıldı';
+        return 'Betikler içe aktarıldı ve etkinleştirildi';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Betik klasör yolunu kopyala';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -277078,6 +277524,18 @@ extension on _StringsTr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'Bu platformdaki paketlenmiş libmpv, Lua olmadan derlenmiştir (-Dlua=disabled); betikler burada çalışamaz.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Klavye ve fare girdisi uygulamada kalır, mpv\'ye hiç ulaşmaz: tuş atamalarına veya OSC\'ye dayanan betikler tetiklenemez. Özellik/olay tabanlı betikler ve OSD mesajları çalışır.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'mpv_scripts klasöründe henüz betik yok';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Yüklendi, hata bildirilmedi';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Bu oynatıcıda henüz yüklenmedi (anahtarı açın veya videoyu yeniden açın)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Hata';
       default:
         return null;
     }
@@ -284336,7 +284794,7 @@ extension on _StringsVi {
       case 'video_setting_mpv_lua_scripts_import':
         return 'Nhập tập lệnh Lua';
       case 'video_setting_mpv_lua_scripts_imported':
-        return 'Đã nhập tập lệnh';
+        return 'Đã nhập và bật tập lệnh';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Sao chép đường dẫn thư mục tập lệnh';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -285530,6 +285988,18 @@ extension on _StringsVi {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'libmpv đi kèm trên nền tảng này được biên dịch không có Lua (-Dlua=disabled), nên tập lệnh không thể chạy ở đây.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Đầu vào bàn phím và chuột nằm trong ứng dụng và không bao giờ tới mpv: các tập lệnh dựa vào phím tắt hoặc OSC không thể kích hoạt. Tập lệnh theo thuộc tính/sự kiện và thông báo OSD vẫn hoạt động.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Chưa có tập lệnh trong thư mục mpv_scripts';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Đã tải, không có lỗi';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Chưa tải trong trình phát này (bật công tắc hoặc mở lại video)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Lỗi';
       default:
         return null;
     }
@@ -292727,7 +293197,7 @@ extension on _StringsZhCn {
       case 'video_setting_mpv_lua_scripts_import':
         return '导入 Lua 脚本';
       case 'video_setting_mpv_lua_scripts_imported':
-        return '脚本已导入';
+        return '脚本已导入并启用';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return '复制脚本目录路径';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -293911,6 +294381,18 @@ extension on _StringsZhCn {
         return '走代理';
       case 'network_proxy_p2p_mode_mixed':
         return '混合';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return '本平台随包 libmpv 未编入 Lua（-Dlua=disabled），脚本在此无法运行。';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return '键盘/鼠标输入由应用层处理、不会到达 mpv：依赖按键绑定或 OSC 的脚本无法触发；监听属性/事件的脚本与 OSD 提示可用。';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'mpv_scripts 目录里还没有脚本';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return '已装载，无报错';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return '本次播放未装载（开启开关或重新打开视频）';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return '报错';
       default:
         return null;
     }
@@ -301109,7 +301591,7 @@ extension on _StringsZhHk {
       case 'video_setting_mpv_lua_scripts_import':
         return '導入 Lua 腳本';
       case 'video_setting_mpv_lua_scripts_imported':
-        return '腳本已導入';
+        return '腳本已導入並啟用';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return '復製腳本目錄路徑';
       case 'video_setting_mpv_lua_scripts_dir_copied':
@@ -302293,6 +302775,18 @@ extension on _StringsZhHk {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return '本平台隨附的 libmpv 未編入 Lua（-Dlua=disabled），腳本在此無法運行。';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return '鍵盤/滑鼠輸入由應用程式處理、不會到達 mpv：依賴按鍵綁定或 OSC 的腳本無法觸發；監聽屬性/事件的腳本與 OSD 提示可用。';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'mpv_scripts 目錄裡還沒有腳本';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return '已載入，無報錯';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return '本次播放未載入（開啟開關或重新開啟影片）';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return '報錯';
       default:
         return null;
     }
