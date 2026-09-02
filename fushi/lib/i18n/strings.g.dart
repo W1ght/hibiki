@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 70091 (4123 per locale)
+/// Strings: 70125 (4125 per locale)
 ///
-/// Built on 2026-09-02 at 05:20 UTC
+/// Built on 2026-09-02 at 06:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5463,7 +5463,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Set up pronunciation audio';
   String get onboarding_manual_pronunciation_action_desc =>
       'Local or online sources for word pronunciation in dictionary entries. Separate from audiobook audio.';
-  String get onboarding_lookup_verify_action => 'Verify a word';
   String get onboarding_step_first_anki_card_title => 'Your first card';
   String get onboarding_first_anki_lookup_title => 'Look up a word';
   String get onboarding_first_anki_plus_title => 'Tap +';
@@ -5473,8 +5472,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_first_anki_save_body =>
       'Confirm the deck and note type, then save. Open Anki to see the card.';
   String get onboarding_first_anki_action => 'Open lookup and make a card';
-  String get onboarding_first_anki_action_desc =>
-      'Look up your word, tap +, check the fields and save.';
   String get onboarding_feature_manual_resources_hint =>
       'Dictionaries, audiobooks and pronunciation sources from your own files';
   String get onboarding_step_manual_resources_body =>
@@ -5620,28 +5617,34 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Only checked items get a step in this guide.';
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   String get onboarding_global_lookup_android_select_desc =>
       'Long-press a word in another app and adjust the handles to cover it.';
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   String get onboarding_action_start => 'Start using Fushi';
   String get onboarding_actions_more => 'Other ways';
   String get onboarding_finish_summary_modules => 'Library pages shown';
   String get onboarding_finish_summary_setup => 'Guided setup';
   String get onboarding_finish_summary_none => 'None';
   String get onboarding_anki_status_pending => 'Not tested yet';
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -14937,8 +14940,6 @@ class _StringsAr extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       'أضف مصادر النطق المحلية أو عبر الإنترنت التي تستخدمها مداخل القاموس. وهذا منفصل عن صوت الكتاب الصوتي المرفق بكتاب.';
   @override
-  String get onboarding_lookup_verify_action => 'تأكد من وجود الكلمة في قاموسك';
-  @override
   String get onboarding_step_first_anki_card_title => 'أنشئ أول بطاقة Anki';
   @override
   String get onboarding_first_anki_lookup_title => 'ابدأ من نتيجة قاموس حقيقية';
@@ -14954,9 +14955,6 @@ class _StringsAr extends _StringsEn {
       'أكّد المجموعة الهدف ونوع الملاحظة ومعاينة الحقول ثم احفظ. وافتح Anki للتأكد من وصول البطاقة الأولى.';
   @override
   String get onboarding_first_anki_action => 'فتح البحث وإنشاء بطاقة';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      'اختر كلمة يظهر تعريفها، وانقر على زر الجمع الخاص بها، وراجع الحقول، ثم احفظها في مجموعة Anki المتصلة.';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -15205,12 +15203,6 @@ class _StringsAr extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -15220,14 +15212,8 @@ class _StringsAr extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -15240,6 +15226,28 @@ class _StringsAr extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -24751,8 +24759,6 @@ class _StringsDe extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       'Fügen Sie lokale oder Online-Aussprachequellen hinzu, die Wörterbucheinträge verwenden. Das ist unabhängig vom Hörbuch-Audio eines Buchs.';
   @override
-  String get onboarding_lookup_verify_action => 'Ein Wort im Wörterbuch prüfen';
-  @override
   String get onboarding_step_first_anki_card_title =>
       'Ihre erste Anki-Karte erstellen';
   @override
@@ -24772,9 +24778,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_first_anki_action =>
       'Nachschlagen öffnen und eine Karte erstellen';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      'Nehmen Sie ein Wort mit sichtbarer Bedeutung, tippen Sie auf sein Plus-Symbol, prüfen Sie die Felder und speichern Sie es im verbundenen Anki-Stapel.';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -25024,12 +25027,6 @@ class _StringsDe extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -25039,14 +25036,8 @@ class _StringsDe extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -25059,6 +25050,28 @@ class _StringsDe extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -34617,9 +34630,6 @@ class _StringsEs extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       'Añada fuentes de pronunciación locales o en línea para las entradas del diccionario. Es independiente del audio de audiolibro asociado a un libro.';
   @override
-  String get onboarding_lookup_verify_action =>
-      'Compruebe una palabra en su diccionario';
-  @override
   String get onboarding_step_first_anki_card_title =>
       'Cree su primera tarjeta de Anki';
   @override
@@ -34639,9 +34649,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_first_anki_action =>
       'Abrir la búsqueda y crear una tarjeta';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      'Use una palabra con definición visible, toque su botón más, revise los campos y guárdela en el mazo de Anki conectado.';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -34893,12 +34900,6 @@ class _StringsEs extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -34908,14 +34909,8 @@ class _StringsEs extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -34928,6 +34923,28 @@ class _StringsEs extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -44521,9 +44538,6 @@ class _StringsFr extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       'Ajoutez les sources de prononciation locales ou en ligne utilisées par les entrées du dictionnaire. C\'est distinct de l\'audio d\'un livre audio rattaché à un livre.';
   @override
-  String get onboarding_lookup_verify_action =>
-      'Vérifier un mot dans votre dictionnaire';
-  @override
   String get onboarding_step_first_anki_card_title =>
       'Créez votre première carte Anki';
   @override
@@ -44543,9 +44557,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_first_anki_action =>
       'Ouvrir la recherche et créer une carte';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      'Prenez un mot dont la définition s\'affiche, touchez son bouton plus, vérifiez les champs et enregistrez-le dans le paquet Anki connecté.';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -44797,12 +44808,6 @@ class _StringsFr extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -44812,14 +44817,8 @@ class _StringsFr extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -44832,6 +44831,28 @@ class _StringsFr extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -54245,9 +54266,6 @@ class _StringsId extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       'Tambahkan sumber pelafalan lokal atau daring yang dipakai entri kamus. Ini berbeda dari audio buku audio yang menempel pada sebuah buku.';
   @override
-  String get onboarding_lookup_verify_action =>
-      'Pastikan kata itu ada di kamus Anda';
-  @override
   String get onboarding_step_first_anki_card_title =>
       'Buat kartu Anki pertama Anda';
   @override
@@ -54265,9 +54283,6 @@ class _StringsId extends _StringsEn {
       'Pastikan dek tujuan, tipe catatan, dan pratinjau bidangnya sudah benar, lalu simpan. Buka Anki untuk memeriksa kartu pertama sudah masuk.';
   @override
   String get onboarding_first_anki_action => 'Buka pencarian dan buat kartu';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      'Pakai kata yang definisinya sudah terlihat, ketuk tombol plusnya, periksa bidang-bidangnya, lalu simpan ke dek Anki yang terhubung.';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -54517,12 +54532,6 @@ class _StringsId extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -54532,14 +54541,8 @@ class _StringsId extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -54552,6 +54555,28 @@ class _StringsId extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -64049,9 +64074,6 @@ class _StringsIt extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       'Aggiungi le fonti di pronuncia locali o online usate dalle voci del dizionario. È una cosa distinta dall\'audio dell\'audiolibro collegato a un libro.';
   @override
-  String get onboarding_lookup_verify_action =>
-      'Verifica una parola nel tuo dizionario';
-  @override
   String get onboarding_step_first_anki_card_title =>
       'Crea la tua prima carta Anki';
   @override
@@ -64070,9 +64092,6 @@ class _StringsIt extends _StringsEn {
       'Conferma il mazzo di destinazione, il tipo di nota e l\'anteprima dei campi, poi salva. Apri Anki per verificare che la prima carta sia arrivata.';
   @override
   String get onboarding_first_anki_action => 'Apri la ricerca e crea una carta';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      'Usa una parola con una definizione visibile, tocca il suo pulsante più, controlla i campi e salvala nel mazzo Anki collegato.';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -64322,12 +64341,6 @@ class _StringsIt extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -64337,14 +64350,8 @@ class _StringsIt extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -64357,6 +64364,28 @@ class _StringsIt extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -73269,8 +73298,6 @@ class _StringsJa extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       '辞書の見出し語で使うローカルまたはオンラインの発音ソースを追加します。書籍に紐づくオーディオブック音声とは別のものです。';
   @override
-  String get onboarding_lookup_verify_action => '辞書にその単語があるか確認';
-  @override
   String get onboarding_step_first_anki_card_title => '最初のAnkiカードを作る';
   @override
   String get onboarding_first_anki_lookup_title => '実際の辞書結果から始める';
@@ -73286,9 +73313,6 @@ class _StringsJa extends _StringsEn {
       '保存先のデッキ、ノートタイプ、フィールドのプレビューを確認してから保存します。Ankiを開いて1枚目のカードが届いたか確かめてください。';
   @override
   String get onboarding_first_anki_action => '検索を開いてカードを作る';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      '語義が表示されている単語を選び、「＋」をタップしてフィールドを確認し、接続済みのAnkiデッキに保存します。';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -73534,12 +73558,6 @@ class _StringsJa extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -73549,14 +73567,8 @@ class _StringsJa extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -73569,6 +73581,28 @@ class _StringsJa extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -82491,8 +82525,6 @@ class _StringsKo extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       '사전 항목에서 쓰는 로컬 또는 온라인 발음 소스를 추가하세요. 책에 연결된 오디오북 음성과는 별개입니다.';
   @override
-  String get onboarding_lookup_verify_action => '사전에 그 단어가 있는지 확인하기';
-  @override
   String get onboarding_step_first_anki_card_title => '첫 Anki 카드 만들기';
   @override
   String get onboarding_first_anki_lookup_title => '실제 사전 결과에서 시작하기';
@@ -82508,9 +82540,6 @@ class _StringsKo extends _StringsEn {
       '대상 덱, 노트 유형, 필드 미리보기를 확인한 뒤 저장하세요. Anki를 열어 첫 카드가 들어왔는지 확인하면 됩니다.';
   @override
   String get onboarding_first_anki_action => '검색 열고 카드 만들기';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      '뜻이 보이는 단어를 골라 + 버튼을 탭하고, 필드를 확인한 뒤 연결된 Anki 덱에 저장하세요.';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -82756,12 +82785,6 @@ class _StringsKo extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -82771,14 +82794,8 @@ class _StringsKo extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -82791,6 +82808,28 @@ class _StringsKo extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -92240,9 +92279,6 @@ class _StringsNl extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       'Voeg lokale of online uitspraakbronnen toe die woordenboekitems gebruiken. Dit staat los van de luisterboekaudio bij een boek.';
   @override
-  String get onboarding_lookup_verify_action =>
-      'Een woord in je woordenboek controleren';
-  @override
   String get onboarding_step_first_anki_card_title =>
       'Maak je eerste Anki-kaart';
   @override
@@ -92262,9 +92298,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_first_anki_action =>
       'Opzoeken openen en een kaart maken';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      'Neem een woord met een zichtbare betekenis, tik op de plusknop, controleer de velden en sla het op in de gekoppelde Anki-stapel.';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -92515,12 +92548,6 @@ class _StringsNl extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -92530,14 +92557,8 @@ class _StringsNl extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -92550,6 +92571,28 @@ class _StringsNl extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -102056,9 +102099,6 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       'Adicione fontes de pronúncia locais ou on-line usadas pelos verbetes do dicionário. Isso é diferente do áudio de audiolivro anexado a um livro.';
   @override
-  String get onboarding_lookup_verify_action =>
-      'Confirme uma palavra no seu dicionário';
-  @override
   String get onboarding_step_first_anki_card_title =>
       'Crie seu primeiro cartão do Anki';
   @override
@@ -102078,9 +102118,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_first_anki_action =>
       'Abrir a consulta e criar um cartão';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      'Use uma palavra com definição visível, toque no botão de mais, revise os campos e salve no baralho do Anki conectado.';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -102330,12 +102367,6 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -102345,14 +102376,8 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -102365,6 +102390,28 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -111846,9 +111893,6 @@ class _StringsRu extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       'Добавьте локальные или онлайн-источники произношения для словарных статей. Это не то же самое, что аудиокнига, прикреплённая к книге.';
   @override
-  String get onboarding_lookup_verify_action =>
-      'Проверьте слово в своём словаре';
-  @override
   String get onboarding_step_first_anki_card_title =>
       'Создайте первую карточку Anki';
   @override
@@ -111867,9 +111911,6 @@ class _StringsRu extends _StringsEn {
       'Подтвердите колоду, тип заметки и предпросмотр полей, затем сохраните. Откройте Anki и убедитесь, что первая карточка дошла.';
   @override
   String get onboarding_first_anki_action => 'Открыть поиск и создать карточку';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      'Возьмите слово с видимым толкованием, нажмите плюс рядом с ним, проверьте поля и сохраните карточку в подключённую колоду Anki.';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -112121,12 +112162,6 @@ class _StringsRu extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -112136,14 +112171,8 @@ class _StringsRu extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -112156,6 +112185,28 @@ class _StringsRu extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -121444,8 +121495,6 @@ class _StringsTh extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       'เพิ่มแหล่งเสียงอ่านคำในเครื่องหรือออนไลน์ที่รายการในพจนานุกรมใช้ ซึ่งแยกจากเสียงหนังสือเสียงที่แนบกับหนังสือ';
   @override
-  String get onboarding_lookup_verify_action => 'ตรวจว่าพจนานุกรมมีคำนั้นจริง';
-  @override
   String get onboarding_step_first_anki_card_title => 'สร้างการ์ด Anki ใบแรก';
   @override
   String get onboarding_first_anki_lookup_title =>
@@ -121463,9 +121512,6 @@ class _StringsTh extends _StringsEn {
       'ยืนยันเด็คปลายทาง ชนิดโน้ต และตัวอย่างฟิลด์ แล้วกดบันทึก จากนั้นเปิด Anki เพื่อดูว่าการ์ดใบแรกเข้าไปแล้วจริง';
   @override
   String get onboarding_first_anki_action => 'เปิดหน้าค้นคำแล้วสร้างการ์ด';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      'เลือกคำที่แสดงความหมายอยู่ แตะปุ่มบวกของคำนั้น ตรวจฟิลด์ต่าง ๆ แล้วบันทึกลงเด็ค Anki ที่เชื่อมต่อไว้';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -121714,12 +121760,6 @@ class _StringsTh extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -121729,14 +121769,8 @@ class _StringsTh extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -121749,6 +121783,28 @@ class _StringsTh extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -131147,9 +131203,6 @@ class _StringsTr extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       'Sözlük maddelerinin kullandığı yerel veya çevrimiçi telaffuz kaynaklarını ekleyin. Bu, bir kitaba eklenen sesli kitap sesinden ayrıdır.';
   @override
-  String get onboarding_lookup_verify_action =>
-      'Sözlüğünüzde bir kelimeyi doğrulayın';
-  @override
   String get onboarding_step_first_anki_card_title =>
       'İlk Anki kartınızı oluşturun';
   @override
@@ -131168,9 +131221,6 @@ class _StringsTr extends _StringsEn {
       'Hedef desteyi, not türünü ve alan önizlemesini onaylayıp kaydedin. İlk kartın ulaştığını görmek için Anki\'yi açın.';
   @override
   String get onboarding_first_anki_action => 'Aramayı aç ve kart oluştur';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      'Anlamı görünen bir kelimeyi seçin, artı düğmesine dokunun, alanları gözden geçirin ve bağlı Anki destesine kaydedin.';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -131421,12 +131471,6 @@ class _StringsTr extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -131436,14 +131480,8 @@ class _StringsTr extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -131456,6 +131494,28 @@ class _StringsTr extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -140832,9 +140892,6 @@ class _StringsVi extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       'Thêm nguồn phát âm cục bộ hoặc trực tuyến dùng cho các mục từ điển. Việc này tách biệt với âm thanh sách nói gắn kèm một cuốn sách.';
   @override
-  String get onboarding_lookup_verify_action =>
-      'Kiểm tra một từ trong từ điển của bạn';
-  @override
   String get onboarding_step_first_anki_card_title => 'Tạo thẻ Anki đầu tiên';
   @override
   String get onboarding_first_anki_lookup_title =>
@@ -140852,9 +140909,6 @@ class _StringsVi extends _StringsEn {
       'Xác nhận bộ thẻ đích, loại ghi chú và bản xem trước các trường, rồi lưu. Mở Anki để kiểm tra thẻ đầu tiên đã vào chưa.';
   @override
   String get onboarding_first_anki_action => 'Mở tra từ và tạo thẻ';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      'Chọn một từ đang hiện nghĩa, chạm nút dấu cộng, kiểm tra các trường rồi lưu vào bộ thẻ Anki đã kết nối.';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -141104,12 +141158,6 @@ class _StringsVi extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -141119,14 +141167,8 @@ class _StringsVi extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -141139,6 +141181,28 @@ class _StringsVi extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 // Path: <root>
@@ -149747,8 +149811,6 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       '词条发音的本地或在线来源。与有声书音频是两回事。';
   @override
-  String get onboarding_lookup_verify_action => '先验证一个词';
-  @override
   String get onboarding_step_first_anki_card_title => '第一张卡片';
   @override
   String get onboarding_first_anki_lookup_title => '查一个词';
@@ -149762,8 +149824,6 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_first_anki_save_body => '确认牌组和笔记类型后保存，打开 Anki 就能看到这张卡。';
   @override
   String get onboarding_first_anki_action => '打开查词页制卡';
-  @override
-  String get onboarding_first_anki_action_desc => '查词、点加号、检查字段、保存。';
   @override
   String get onboarding_feature_manual_resources_hint => '从自己的文件导入词典、有声书和发音来源';
   @override
@@ -150000,12 +150060,6 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_pack_intro =>
       '一次下载装好日语词典、音调、词频和日/英发音音频。学其他语言可跳过，自行导入词典。';
   @override
-  String get onboarding_click_lookup_intro =>
-      '在书、漫画或字幕里点任意一个词就能看释义。先用一个词典里有的词试试。';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      '轻点（电脑上单击）一个字，Fushi 从这里向后匹配最长的词。';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       '在任意应用里拖选一个词，保持选中。';
   @override
@@ -150014,12 +150068,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_shortcut_press => '按下快捷键';
   @override
-  String get onboarding_lookup_verify_desc =>
-      '打开查词页，输入一个正在学的词。查到释义后，后面的教程都用这个词练。';
-  @override
   String get onboarding_first_anki_card_intro => 'Anki 已连上。现在做一张真卡，确认整条链路能走通。';
-  @override
-  String get onboarding_first_anki_lookup_desc => '查一下刚才验证过的那个词。';
   @override
   String get onboarding_action_start => '开始使用';
   @override
@@ -150032,6 +150081,24 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_finish_summary_none => '无';
   @override
   String get onboarding_anki_status_pending => '尚未测试连接';
+  @override
+  String get onboarding_click_lookup_intro => '在书、漫画或字幕里点任意一个词就能看释义。先用下面这句话练手。';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      '轻点（电脑上单击）一个字，Fushi 从这里向后匹配最长的词。句子会在查词页里打开。';
+  @override
+  String get onboarding_sample_sentence_label => '练习句子';
+  @override
+  String get onboarding_sample_sentence_hint => '点一下在查词页打开，再点其中任意一个词。';
+  @override
+  String get onboarding_lookup_practice_action => '用这句话练习查词';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      '在查词页里打开这句话，点其中的词看释义。查不到就是词典还没装好。';
+  @override
+  String get onboarding_first_anki_lookup_desc => '打开练习句子，点一个词。';
+  @override
+  String get onboarding_first_anki_action_desc => '在查词页打开练习句子。点词、点加号、检查字段、保存。';
 }
 
 // Path: <root>
@@ -158665,8 +158732,6 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_manual_pronunciation_action_desc =>
       '加入詞典詞條使用的本機或線上發音來源。它與附加到書籍的有聲書音頻是兩套獨立資源。';
   @override
-  String get onboarding_lookup_verify_action => '先確認詞典裡有這個詞';
-  @override
   String get onboarding_step_first_anki_card_title => '完成第一張 Anki 卡片';
   @override
   String get onboarding_first_anki_lookup_title => '從真實的詞典結果開始';
@@ -158682,9 +158747,6 @@ class _StringsZhHk extends _StringsEn {
       '確認目標牌組、筆記類型和欄位預覽後儲存，再打開 Anki 看看第一張卡是不是已經寫進去。';
   @override
   String get onboarding_first_anki_action => '打開查詞頁並製卡';
-  @override
-  String get onboarding_first_anki_action_desc =>
-      '挑一個已經顯示釋義的詞，點詞條上的加號，檢查欄位後儲存到剛才連上的 Anki 牌組。';
   @override
   String get game_lookup_attached_title => 'In-game lookup';
   @override
@@ -158928,12 +158990,6 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_pack_intro =>
       'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
   @override
-  String get onboarding_click_lookup_intro =>
-      'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-  @override
-  String get onboarding_click_lookup_tap_desc =>
-      'Tap (or left-click) a character; Fushi matches the longest word starting there.';
-  @override
   String get onboarding_global_lookup_windows_select_desc =>
       'Highlight a word in any app and keep it selected.';
   @override
@@ -158943,14 +158999,8 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_global_lookup_windows_shortcut_press =>
       'Press the shortcut';
   @override
-  String get onboarding_lookup_verify_desc =>
-      'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
-  @override
   String get onboarding_first_anki_card_intro =>
       'Anki is connected. Make one real card now so you know the whole path works.';
-  @override
-  String get onboarding_first_anki_lookup_desc =>
-      'Look up the word you verified earlier.';
   @override
   String get onboarding_action_start => 'Start using Fushi';
   @override
@@ -158963,6 +159013,28 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_finish_summary_none => 'None';
   @override
   String get onboarding_anki_status_pending => 'Not tested yet';
+  @override
+  String get onboarding_click_lookup_intro =>
+      'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+  @override
+  String get onboarding_click_lookup_tap_desc =>
+      'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+  @override
+  String get onboarding_sample_sentence_label => 'Practice sentence';
+  @override
+  String get onboarding_sample_sentence_hint =>
+      'Tap to open it in the lookup page, then tap any word.';
+  @override
+  String get onboarding_lookup_practice_action => 'Practise with this sentence';
+  @override
+  String get onboarding_lookup_practice_desc =>
+      'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+  @override
+  String get onboarding_first_anki_lookup_desc =>
+      'Open the practice sentence and tap a word.';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
 }
 
 /// Flat map(s) containing all translations.
@@ -167158,8 +167230,6 @@ extension on _StringsEn {
         return 'Set up pronunciation audio';
       case 'onboarding_manual_pronunciation_action_desc':
         return 'Local or online sources for word pronunciation in dictionary entries. Separate from audiobook audio.';
-      case 'onboarding_lookup_verify_action':
-        return 'Verify a word';
       case 'onboarding_step_first_anki_card_title':
         return 'Your first card';
       case 'onboarding_first_anki_lookup_title':
@@ -167174,8 +167244,6 @@ extension on _StringsEn {
         return 'Confirm the deck and note type, then save. Open Anki to see the card.';
       case 'onboarding_first_anki_action':
         return 'Open lookup and make a card';
-      case 'onboarding_first_anki_action_desc':
-        return 'Look up your word, tap +, check the fields and save.';
       case 'onboarding_feature_manual_resources_hint':
         return 'Dictionaries, audiobooks and pronunciation sources from your own files';
       case 'onboarding_step_manual_resources_body':
@@ -167394,22 +167462,14 @@ extension on _StringsEn {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -167422,6 +167482,22 @@ extension on _StringsEn {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -175617,8 +175693,6 @@ extension on _StringsAr {
         return 'إعداد صوت نطق الكلمات';
       case 'onboarding_manual_pronunciation_action_desc':
         return 'أضف مصادر النطق المحلية أو عبر الإنترنت التي تستخدمها مداخل القاموس. وهذا منفصل عن صوت الكتاب الصوتي المرفق بكتاب.';
-      case 'onboarding_lookup_verify_action':
-        return 'تأكد من وجود الكلمة في قاموسك';
       case 'onboarding_step_first_anki_card_title':
         return 'أنشئ أول بطاقة Anki';
       case 'onboarding_first_anki_lookup_title':
@@ -175633,8 +175707,6 @@ extension on _StringsAr {
         return 'أكّد المجموعة الهدف ونوع الملاحظة ومعاينة الحقول ثم احفظ. وافتح Anki للتأكد من وصول البطاقة الأولى.';
       case 'onboarding_first_anki_action':
         return 'فتح البحث وإنشاء بطاقة';
-      case 'onboarding_first_anki_action_desc':
-        return 'اختر كلمة يظهر تعريفها، وانقر على زر الجمع الخاص بها، وراجع الحقول، ثم احفظها في مجموعة Anki المتصلة.';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -175848,22 +175920,14 @@ extension on _StringsAr {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -175876,6 +175940,22 @@ extension on _StringsAr {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -184114,8 +184194,6 @@ extension on _StringsDe {
         return 'Aussprache-Audio für Wörter einrichten';
       case 'onboarding_manual_pronunciation_action_desc':
         return 'Fügen Sie lokale oder Online-Aussprachequellen hinzu, die Wörterbucheinträge verwenden. Das ist unabhängig vom Hörbuch-Audio eines Buchs.';
-      case 'onboarding_lookup_verify_action':
-        return 'Ein Wort im Wörterbuch prüfen';
       case 'onboarding_step_first_anki_card_title':
         return 'Ihre erste Anki-Karte erstellen';
       case 'onboarding_first_anki_lookup_title':
@@ -184130,8 +184208,6 @@ extension on _StringsDe {
         return 'Bestätigen Sie Zielstapel, Notiztyp und die Feldvorschau und speichern Sie dann. Öffnen Sie Anki, um zu prüfen, ob die erste Karte angekommen ist.';
       case 'onboarding_first_anki_action':
         return 'Nachschlagen öffnen und eine Karte erstellen';
-      case 'onboarding_first_anki_action_desc':
-        return 'Nehmen Sie ein Wort mit sichtbarer Bedeutung, tippen Sie auf sein Plus-Symbol, prüfen Sie die Felder und speichern Sie es im verbundenen Anki-Stapel.';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -184346,22 +184422,14 @@ extension on _StringsDe {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -184374,6 +184442,22 @@ extension on _StringsDe {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -192604,8 +192688,6 @@ extension on _StringsEs {
         return 'Configurar el audio de pronunciación de palabras';
       case 'onboarding_manual_pronunciation_action_desc':
         return 'Añada fuentes de pronunciación locales o en línea para las entradas del diccionario. Es independiente del audio de audiolibro asociado a un libro.';
-      case 'onboarding_lookup_verify_action':
-        return 'Compruebe una palabra en su diccionario';
       case 'onboarding_step_first_anki_card_title':
         return 'Cree su primera tarjeta de Anki';
       case 'onboarding_first_anki_lookup_title':
@@ -192620,8 +192702,6 @@ extension on _StringsEs {
         return 'Confirme el mazo de destino, el tipo de nota y la vista previa de los campos, y guarde. Abra Anki para comprobar que la primera tarjeta ha llegado.';
       case 'onboarding_first_anki_action':
         return 'Abrir la búsqueda y crear una tarjeta';
-      case 'onboarding_first_anki_action_desc':
-        return 'Use una palabra con definición visible, toque su botón más, revise los campos y guárdela en el mazo de Anki conectado.';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -192836,22 +192916,14 @@ extension on _StringsEs {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -192864,6 +192936,22 @@ extension on _StringsEs {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -201102,8 +201190,6 @@ extension on _StringsFr {
         return 'Configurer l\'audio de prononciation des mots';
       case 'onboarding_manual_pronunciation_action_desc':
         return 'Ajoutez les sources de prononciation locales ou en ligne utilisées par les entrées du dictionnaire. C\'est distinct de l\'audio d\'un livre audio rattaché à un livre.';
-      case 'onboarding_lookup_verify_action':
-        return 'Vérifier un mot dans votre dictionnaire';
       case 'onboarding_step_first_anki_card_title':
         return 'Créez votre première carte Anki';
       case 'onboarding_first_anki_lookup_title':
@@ -201118,8 +201204,6 @@ extension on _StringsFr {
         return 'Confirmez le paquet de destination, le type de note et l\'aperçu des champs, puis enregistrez. Ouvrez Anki pour vérifier que la première carte est bien arrivée.';
       case 'onboarding_first_anki_action':
         return 'Ouvrir la recherche et créer une carte';
-      case 'onboarding_first_anki_action_desc':
-        return 'Prenez un mot dont la définition s\'affiche, touchez son bouton plus, vérifiez les champs et enregistrez-le dans le paquet Anki connecté.';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -201334,22 +201418,14 @@ extension on _StringsFr {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -201362,6 +201438,22 @@ extension on _StringsFr {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -209572,8 +209664,6 @@ extension on _StringsId {
         return 'Atur audio pelafalan kata';
       case 'onboarding_manual_pronunciation_action_desc':
         return 'Tambahkan sumber pelafalan lokal atau daring yang dipakai entri kamus. Ini berbeda dari audio buku audio yang menempel pada sebuah buku.';
-      case 'onboarding_lookup_verify_action':
-        return 'Pastikan kata itu ada di kamus Anda';
       case 'onboarding_step_first_anki_card_title':
         return 'Buat kartu Anki pertama Anda';
       case 'onboarding_first_anki_lookup_title':
@@ -209588,8 +209678,6 @@ extension on _StringsId {
         return 'Pastikan dek tujuan, tipe catatan, dan pratinjau bidangnya sudah benar, lalu simpan. Buka Anki untuk memeriksa kartu pertama sudah masuk.';
       case 'onboarding_first_anki_action':
         return 'Buka pencarian dan buat kartu';
-      case 'onboarding_first_anki_action_desc':
-        return 'Pakai kata yang definisinya sudah terlihat, ketuk tombol plusnya, periksa bidang-bidangnya, lalu simpan ke dek Anki yang terhubung.';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -209804,22 +209892,14 @@ extension on _StringsId {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -209832,6 +209912,22 @@ extension on _StringsId {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -218063,8 +218159,6 @@ extension on _StringsIt {
         return 'Configura l\'audio di pronuncia delle parole';
       case 'onboarding_manual_pronunciation_action_desc':
         return 'Aggiungi le fonti di pronuncia locali o online usate dalle voci del dizionario. È una cosa distinta dall\'audio dell\'audiolibro collegato a un libro.';
-      case 'onboarding_lookup_verify_action':
-        return 'Verifica una parola nel tuo dizionario';
       case 'onboarding_step_first_anki_card_title':
         return 'Crea la tua prima carta Anki';
       case 'onboarding_first_anki_lookup_title':
@@ -218079,8 +218173,6 @@ extension on _StringsIt {
         return 'Conferma il mazzo di destinazione, il tipo di nota e l\'anteprima dei campi, poi salva. Apri Anki per verificare che la prima carta sia arrivata.';
       case 'onboarding_first_anki_action':
         return 'Apri la ricerca e crea una carta';
-      case 'onboarding_first_anki_action_desc':
-        return 'Usa una parola con una definizione visibile, tocca il suo pulsante più, controlla i campi e salvala nel mazzo Anki collegato.';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -218295,22 +218387,14 @@ extension on _StringsIt {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -218323,6 +218407,22 @@ extension on _StringsIt {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -226484,8 +226584,6 @@ extension on _StringsJa {
         return '単語の発音音声を設定';
       case 'onboarding_manual_pronunciation_action_desc':
         return '辞書の見出し語で使うローカルまたはオンラインの発音ソースを追加します。書籍に紐づくオーディオブック音声とは別のものです。';
-      case 'onboarding_lookup_verify_action':
-        return '辞書にその単語があるか確認';
       case 'onboarding_step_first_anki_card_title':
         return '最初のAnkiカードを作る';
       case 'onboarding_first_anki_lookup_title':
@@ -226500,8 +226598,6 @@ extension on _StringsJa {
         return '保存先のデッキ、ノートタイプ、フィールドのプレビューを確認してから保存します。Ankiを開いて1枚目のカードが届いたか確かめてください。';
       case 'onboarding_first_anki_action':
         return '検索を開いてカードを作る';
-      case 'onboarding_first_anki_action_desc':
-        return '語義が表示されている単語を選び、「＋」をタップしてフィールドを確認し、接続済みのAnkiデッキに保存します。';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -226715,22 +226811,14 @@ extension on _StringsJa {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -226743,6 +226831,22 @@ extension on _StringsJa {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -234907,8 +235011,6 @@ extension on _StringsKo {
         return '단어 발음 오디오 설정하기';
       case 'onboarding_manual_pronunciation_action_desc':
         return '사전 항목에서 쓰는 로컬 또는 온라인 발음 소스를 추가하세요. 책에 연결된 오디오북 음성과는 별개입니다.';
-      case 'onboarding_lookup_verify_action':
-        return '사전에 그 단어가 있는지 확인하기';
       case 'onboarding_step_first_anki_card_title':
         return '첫 Anki 카드 만들기';
       case 'onboarding_first_anki_lookup_title':
@@ -234923,8 +235025,6 @@ extension on _StringsKo {
         return '대상 덱, 노트 유형, 필드 미리보기를 확인한 뒤 저장하세요. Anki를 열어 첫 카드가 들어왔는지 확인하면 됩니다.';
       case 'onboarding_first_anki_action':
         return '검색 열고 카드 만들기';
-      case 'onboarding_first_anki_action_desc':
-        return '뜻이 보이는 단어를 골라 + 버튼을 탭하고, 필드를 확인한 뒤 연결된 Anki 덱에 저장하세요.';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -235138,22 +235238,14 @@ extension on _StringsKo {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -235166,6 +235258,22 @@ extension on _StringsKo {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -243391,8 +243499,6 @@ extension on _StringsNl {
         return 'Uitspraakaudio voor woorden instellen';
       case 'onboarding_manual_pronunciation_action_desc':
         return 'Voeg lokale of online uitspraakbronnen toe die woordenboekitems gebruiken. Dit staat los van de luisterboekaudio bij een boek.';
-      case 'onboarding_lookup_verify_action':
-        return 'Een woord in je woordenboek controleren';
       case 'onboarding_step_first_anki_card_title':
         return 'Maak je eerste Anki-kaart';
       case 'onboarding_first_anki_lookup_title':
@@ -243407,8 +243513,6 @@ extension on _StringsNl {
         return 'Bevestig de doelstapel, het notitietype en het veldvoorbeeld en sla dan op. Open Anki om te controleren of de eerste kaart is aangekomen.';
       case 'onboarding_first_anki_action':
         return 'Opzoeken openen en een kaart maken';
-      case 'onboarding_first_anki_action_desc':
-        return 'Neem een woord met een zichtbare betekenis, tik op de plusknop, controleer de velden en sla het op in de gekoppelde Anki-stapel.';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -243623,22 +243727,14 @@ extension on _StringsNl {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -243651,6 +243747,22 @@ extension on _StringsNl {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -251871,8 +251983,6 @@ extension on _StringsPtBr {
         return 'Configurar áudio de pronúncia das palavras';
       case 'onboarding_manual_pronunciation_action_desc':
         return 'Adicione fontes de pronúncia locais ou on-line usadas pelos verbetes do dicionário. Isso é diferente do áudio de audiolivro anexado a um livro.';
-      case 'onboarding_lookup_verify_action':
-        return 'Confirme uma palavra no seu dicionário';
       case 'onboarding_step_first_anki_card_title':
         return 'Crie seu primeiro cartão do Anki';
       case 'onboarding_first_anki_lookup_title':
@@ -251887,8 +251997,6 @@ extension on _StringsPtBr {
         return 'Confirme o baralho de destino, o tipo de nota e a prévia dos campos e salve. Abra o Anki para conferir se o primeiro cartão chegou.';
       case 'onboarding_first_anki_action':
         return 'Abrir a consulta e criar um cartão';
-      case 'onboarding_first_anki_action_desc':
-        return 'Use uma palavra com definição visível, toque no botão de mais, revise os campos e salve no baralho do Anki conectado.';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -252103,22 +252211,14 @@ extension on _StringsPtBr {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -252131,6 +252231,22 @@ extension on _StringsPtBr {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -260357,8 +260473,6 @@ extension on _StringsRu {
         return 'Настроить аудио произношения слов';
       case 'onboarding_manual_pronunciation_action_desc':
         return 'Добавьте локальные или онлайн-источники произношения для словарных статей. Это не то же самое, что аудиокнига, прикреплённая к книге.';
-      case 'onboarding_lookup_verify_action':
-        return 'Проверьте слово в своём словаре';
       case 'onboarding_step_first_anki_card_title':
         return 'Создайте первую карточку Anki';
       case 'onboarding_first_anki_lookup_title':
@@ -260373,8 +260487,6 @@ extension on _StringsRu {
         return 'Подтвердите колоду, тип заметки и предпросмотр полей, затем сохраните. Откройте Anki и убедитесь, что первая карточка дошла.';
       case 'onboarding_first_anki_action':
         return 'Открыть поиск и создать карточку';
-      case 'onboarding_first_anki_action_desc':
-        return 'Возьмите слово с видимым толкованием, нажмите плюс рядом с ним, проверьте поля и сохраните карточку в подключённую колоду Anki.';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -260589,22 +260701,14 @@ extension on _StringsRu {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -260617,6 +260721,22 @@ extension on _StringsRu {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -268816,8 +268936,6 @@ extension on _StringsTh {
         return 'ตั้งค่าเสียงอ่านคำศัพท์';
       case 'onboarding_manual_pronunciation_action_desc':
         return 'เพิ่มแหล่งเสียงอ่านคำในเครื่องหรือออนไลน์ที่รายการในพจนานุกรมใช้ ซึ่งแยกจากเสียงหนังสือเสียงที่แนบกับหนังสือ';
-      case 'onboarding_lookup_verify_action':
-        return 'ตรวจว่าพจนานุกรมมีคำนั้นจริง';
       case 'onboarding_step_first_anki_card_title':
         return 'สร้างการ์ด Anki ใบแรก';
       case 'onboarding_first_anki_lookup_title':
@@ -268832,8 +268950,6 @@ extension on _StringsTh {
         return 'ยืนยันเด็คปลายทาง ชนิดโน้ต และตัวอย่างฟิลด์ แล้วกดบันทึก จากนั้นเปิด Anki เพื่อดูว่าการ์ดใบแรกเข้าไปแล้วจริง';
       case 'onboarding_first_anki_action':
         return 'เปิดหน้าค้นคำแล้วสร้างการ์ด';
-      case 'onboarding_first_anki_action_desc':
-        return 'เลือกคำที่แสดงความหมายอยู่ แตะปุ่มบวกของคำนั้น ตรวจฟิลด์ต่าง ๆ แล้วบันทึกลงเด็ค Anki ที่เชื่อมต่อไว้';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -269048,22 +269164,14 @@ extension on _StringsTh {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -269076,6 +269184,22 @@ extension on _StringsTh {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -277291,8 +277415,6 @@ extension on _StringsTr {
         return 'Kelime telaffuz sesini yapılandır';
       case 'onboarding_manual_pronunciation_action_desc':
         return 'Sözlük maddelerinin kullandığı yerel veya çevrimiçi telaffuz kaynaklarını ekleyin. Bu, bir kitaba eklenen sesli kitap sesinden ayrıdır.';
-      case 'onboarding_lookup_verify_action':
-        return 'Sözlüğünüzde bir kelimeyi doğrulayın';
       case 'onboarding_step_first_anki_card_title':
         return 'İlk Anki kartınızı oluşturun';
       case 'onboarding_first_anki_lookup_title':
@@ -277307,8 +277429,6 @@ extension on _StringsTr {
         return 'Hedef desteyi, not türünü ve alan önizlemesini onaylayıp kaydedin. İlk kartın ulaştığını görmek için Anki\'yi açın.';
       case 'onboarding_first_anki_action':
         return 'Aramayı aç ve kart oluştur';
-      case 'onboarding_first_anki_action_desc':
-        return 'Anlamı görünen bir kelimeyi seçin, artı düğmesine dokunun, alanları gözden geçirin ve bağlı Anki destesine kaydedin.';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -277522,22 +277642,14 @@ extension on _StringsTr {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -277550,6 +277662,22 @@ extension on _StringsTr {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -285758,8 +285886,6 @@ extension on _StringsVi {
         return 'Thiết lập âm thanh phát âm của từ';
       case 'onboarding_manual_pronunciation_action_desc':
         return 'Thêm nguồn phát âm cục bộ hoặc trực tuyến dùng cho các mục từ điển. Việc này tách biệt với âm thanh sách nói gắn kèm một cuốn sách.';
-      case 'onboarding_lookup_verify_action':
-        return 'Kiểm tra một từ trong từ điển của bạn';
       case 'onboarding_step_first_anki_card_title':
         return 'Tạo thẻ Anki đầu tiên';
       case 'onboarding_first_anki_lookup_title':
@@ -285774,8 +285900,6 @@ extension on _StringsVi {
         return 'Xác nhận bộ thẻ đích, loại ghi chú và bản xem trước các trường, rồi lưu. Mở Anki để kiểm tra thẻ đầu tiên đã vào chưa.';
       case 'onboarding_first_anki_action':
         return 'Mở tra từ và tạo thẻ';
-      case 'onboarding_first_anki_action_desc':
-        return 'Chọn một từ đang hiện nghĩa, chạm nút dấu cộng, kiểm tra các trường rồi lưu vào bộ thẻ Anki đã kết nối.';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -285990,22 +286114,14 @@ extension on _StringsVi {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -286018,6 +286134,22 @@ extension on _StringsVi {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
@@ -294153,8 +294285,6 @@ extension on _StringsZhCn {
         return '配置单词发音';
       case 'onboarding_manual_pronunciation_action_desc':
         return '词条发音的本地或在线来源。与有声书音频是两回事。';
-      case 'onboarding_lookup_verify_action':
-        return '先验证一个词';
       case 'onboarding_step_first_anki_card_title':
         return '第一张卡片';
       case 'onboarding_first_anki_lookup_title':
@@ -294169,8 +294299,6 @@ extension on _StringsZhCn {
         return '确认牌组和笔记类型后保存，打开 Anki 就能看到这张卡。';
       case 'onboarding_first_anki_action':
         return '打开查词页制卡';
-      case 'onboarding_first_anki_action_desc':
-        return '查词、点加号、检查字段、保存。';
       case 'onboarding_feature_manual_resources_hint':
         return '从自己的文件导入词典、有声书和发音来源';
       case 'onboarding_step_manual_resources_body':
@@ -294387,22 +294515,14 @@ extension on _StringsZhCn {
         return '只有勾选的项目会出现在后面的步骤里。';
       case 'onboarding_pack_intro':
         return '一次下载装好日语词典、音调、词频和日/英发音音频。学其他语言可跳过，自行导入词典。';
-      case 'onboarding_click_lookup_intro':
-        return '在书、漫画或字幕里点任意一个词就能看释义。先用一个词典里有的词试试。';
-      case 'onboarding_click_lookup_tap_desc':
-        return '轻点（电脑上单击）一个字，Fushi 从这里向后匹配最长的词。';
       case 'onboarding_global_lookup_windows_select_desc':
         return '在任意应用里拖选一个词，保持选中。';
       case 'onboarding_global_lookup_android_select_desc':
         return '在其他应用里长按一个词，拖动手柄覆盖它。';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return '按下快捷键';
-      case 'onboarding_lookup_verify_desc':
-        return '打开查词页，输入一个正在学的词。查到释义后，后面的教程都用这个词练。';
       case 'onboarding_first_anki_card_intro':
         return 'Anki 已连上。现在做一张真卡，确认整条链路能走通。';
-      case 'onboarding_first_anki_lookup_desc':
-        return '查一下刚才验证过的那个词。';
       case 'onboarding_action_start':
         return '开始使用';
       case 'onboarding_actions_more':
@@ -294415,6 +294535,22 @@ extension on _StringsZhCn {
         return '无';
       case 'onboarding_anki_status_pending':
         return '尚未测试连接';
+      case 'onboarding_click_lookup_intro':
+        return '在书、漫画或字幕里点任意一个词就能看释义。先用下面这句话练手。';
+      case 'onboarding_click_lookup_tap_desc':
+        return '轻点（电脑上单击）一个字，Fushi 从这里向后匹配最长的词。句子会在查词页里打开。';
+      case 'onboarding_sample_sentence_label':
+        return '练习句子';
+      case 'onboarding_sample_sentence_hint':
+        return '点一下在查词页打开，再点其中任意一个词。';
+      case 'onboarding_lookup_practice_action':
+        return '用这句话练习查词';
+      case 'onboarding_lookup_practice_desc':
+        return '在查词页里打开这句话，点其中的词看释义。查不到就是词典还没装好。';
+      case 'onboarding_first_anki_lookup_desc':
+        return '打开练习句子，点一个词。';
+      case 'onboarding_first_anki_action_desc':
+        return '在查词页打开练习句子。点词、点加号、检查字段、保存。';
       default:
         return null;
     }
@@ -302555,8 +302691,6 @@ extension on _StringsZhHk {
         return '設定單詞發音音頻';
       case 'onboarding_manual_pronunciation_action_desc':
         return '加入詞典詞條使用的本機或線上發音來源。它與附加到書籍的有聲書音頻是兩套獨立資源。';
-      case 'onboarding_lookup_verify_action':
-        return '先確認詞典裡有這個詞';
       case 'onboarding_step_first_anki_card_title':
         return '完成第一張 Anki 卡片';
       case 'onboarding_first_anki_lookup_title':
@@ -302571,8 +302705,6 @@ extension on _StringsZhHk {
         return '確認目標牌組、筆記類型和欄位預覽後儲存，再打開 Anki 看看第一張卡是不是已經寫進去。';
       case 'onboarding_first_anki_action':
         return '打開查詞頁並製卡';
-      case 'onboarding_first_anki_action_desc':
-        return '挑一個已經顯示釋義的詞，點詞條上的加號，檢查欄位後儲存到剛才連上的 Anki 牌組。';
       case 'game_lookup_attached_title':
         return 'In-game lookup';
       case 'game_lookup_attached_no_ocr':
@@ -302785,22 +302917,14 @@ extension on _StringsZhHk {
         return 'Only checked items get a step in this guide.';
       case 'onboarding_pack_intro':
         return 'Japanese dictionaries, pitch accent, word frequency and JA/EN pronunciation audio in one download. Learning another language? Skip this and import your own dictionaries.';
-      case 'onboarding_click_lookup_intro':
-        return 'Tap any word in a book, manga or subtitle to see its definition. Try it with a word your dictionary knows.';
-      case 'onboarding_click_lookup_tap_desc':
-        return 'Tap (or left-click) a character; Fushi matches the longest word starting there.';
       case 'onboarding_global_lookup_windows_select_desc':
         return 'Highlight a word in any app and keep it selected.';
       case 'onboarding_global_lookup_android_select_desc':
         return 'Long-press a word in another app and adjust the handles to cover it.';
       case 'onboarding_global_lookup_windows_shortcut_press':
         return 'Press the shortcut';
-      case 'onboarding_lookup_verify_desc':
-        return 'Open lookup and type a word you are learning. Once it returns a definition, use the same word for the rest of this guide.';
       case 'onboarding_first_anki_card_intro':
         return 'Anki is connected. Make one real card now so you know the whole path works.';
-      case 'onboarding_first_anki_lookup_desc':
-        return 'Look up the word you verified earlier.';
       case 'onboarding_action_start':
         return 'Start using Fushi';
       case 'onboarding_actions_more':
@@ -302813,6 +302937,22 @@ extension on _StringsZhHk {
         return 'None';
       case 'onboarding_anki_status_pending':
         return 'Not tested yet';
+      case 'onboarding_click_lookup_intro':
+        return 'Tap any word in a book, manga or subtitle to see its definition. Try it on the practice sentence below.';
+      case 'onboarding_click_lookup_tap_desc':
+        return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
+      case 'onboarding_sample_sentence_label':
+        return 'Practice sentence';
+      case 'onboarding_sample_sentence_hint':
+        return 'Tap to open it in the lookup page, then tap any word.';
+      case 'onboarding_lookup_practice_action':
+        return 'Practise with this sentence';
+      case 'onboarding_lookup_practice_desc':
+        return 'Opens the lookup page with the sentence loaded. Tap a word there to see its definition; if nothing comes back, your dictionaries are not installed yet.';
+      case 'onboarding_first_anki_lookup_desc':
+        return 'Open the practice sentence and tap a word.';
+      case 'onboarding_first_anki_action_desc':
+        return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
       default:
         return null;
     }
