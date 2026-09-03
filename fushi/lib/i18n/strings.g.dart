@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 70601 (4153 per locale)
+/// Strings: 70720 (4160 per locale)
 ///
-/// Built on 2026-09-02 at 21:35 UTC
+/// Built on 2026-09-02 at 23:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5604,6 +5604,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get network_proxy_p2p_mode_direct => 'Direct';
   String get network_proxy_p2p_mode_proxy => 'Via proxy';
   String get network_proxy_p2p_mode_mixed => 'Mixed';
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'The bundled libmpv on this platform was built without Lua (-Dlua=disabled), so scripts cannot run here.';
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Keyboard and mouse input stays in the app and never reaches mpv: scripts that rely on key bindings or the OSC cannot be triggered. Scripts driven by properties/events and OSD messages work.';
+  String get video_setting_mpv_lua_scripts_empty =>
+      'No scripts in the mpv_scripts folder yet';
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Loaded, no errors reported';
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Not loaded in this player yet (turn on the switch or reopen the video)';
+  String get video_setting_mpv_lua_scripts_status_error => 'Error';
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   String get download_task_audiobook_pair => 'Add alignment file';
@@ -5655,6 +5666,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Open the practice sentence and tap a word.';
   String get onboarding_first_anki_action_desc =>
       'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
+  String get video_subtitle_source_search_hint =>
+      'Tap “Find subtitles” above, then pick a source here.';
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Evidence: ${evidence}';
   String get game_session_japanese_locale_skipped => 'Locale not applied';
@@ -15225,6 +15238,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'نسخة libmpv المضمّنة على هذه المنصة بُنيت بدون Lua (-Dlua=disabled)، لذا لا يمكن تشغيل السكربتات هنا.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'إدخال لوحة المفاتيح والفأرة يبقى داخل التطبيق ولا يصل إلى mpv: السكربتات التي تعتمد على اختصارات المفاتيح أو OSC لا يمكن تشغيلها. السكربتات المعتمدة على الخصائص/الأحداث ورسائل OSD تعمل.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'لا توجد سكربتات في مجلد mpv_scripts بعد';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'تم التحميل، لا أخطاء';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'لم يُحمَّل في هذا المشغّل بعد (فعّل المفتاح أو أعد فتح الفيديو)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'خطأ';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -15307,6 +15337,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'يفتح جملة التدريب في صفحة البحث. انقر على كلمة، ثم على +، وراجع الحقول ثم احفظ.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'اضغط على “البحث عن ترجمات” في الأعلى، ثم اختر مصدرًا من هنا.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'الأدلة: ${evidence}';
@@ -25118,6 +25151,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'Das mitgelieferte libmpv auf dieser Plattform wurde ohne Lua gebaut (-Dlua=disabled), Skripte können hier nicht laufen.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Tastatur- und Mauseingaben bleiben in der App und erreichen mpv nie: Skripte, die auf Tastenbelegungen oder das OSC angewiesen sind, lassen sich nicht auslösen. Skripte, die auf Eigenschaften/Ereignisse reagieren, und OSD-Meldungen funktionieren.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Noch keine Skripte im Ordner mpv_scripts';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Geladen, keine Fehler gemeldet';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'In diesem Player noch nicht geladen (Schalter einschalten oder Video erneut öffnen)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Fehler';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -25202,6 +25252,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Öffnet den Übungssatz auf der Nachschlageseite. Tippen Sie auf ein Wort, dann auf +, prüfen Sie die Felder und speichern Sie.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tippe oben auf „Untertitel suchen“ und wähle dann hier eine Quelle aus.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Indizien: ${evidence}';
@@ -35063,6 +35116,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'El libmpv incluido en esta plataforma se compiló sin Lua (-Dlua=disabled), por lo que los scripts no pueden ejecutarse aquí.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'La entrada de teclado y ratón se queda en la aplicación y nunca llega a mpv: los scripts que dependen de atajos de teclado o del OSC no se pueden activar. Los scripts basados en propiedades/eventos y los mensajes OSD sí funcionan.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Aún no hay scripts en la carpeta mpv_scripts';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Cargado, sin errores';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Aún no cargado en este reproductor (activa el interruptor o vuelve a abrir el vídeo)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Error';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -35147,6 +35217,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Abre la frase de práctica en la página de consulta. Toque una palabra, toque +, revise los campos y guarde.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Toca «Buscar subtítulos» arriba y luego elige una fuente aquí.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Indicios: ${evidence}';
@@ -45043,6 +45116,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'Le libmpv fourni sur cette plateforme a été compilé sans Lua (-Dlua=disabled) : les scripts ne peuvent pas s\'exécuter ici.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Les entrées clavier et souris restent dans l\'application et n\'atteignent jamais mpv : les scripts qui reposent sur des raccourcis ou sur l\'OSC ne peuvent pas être déclenchés. Les scripts pilotés par propriétés/événements et les messages OSD fonctionnent.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Aucun script dans le dossier mpv_scripts pour l\'instant';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Chargé, aucune erreur signalée';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Pas encore chargé dans ce lecteur (activez l\'interrupteur ou rouvrez la vidéo)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Erreur';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -45128,6 +45218,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Ouvre la phrase d\'entraînement dans la page de recherche. Touchez un mot, touchez +, vérifiez les champs et enregistrez.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Appuyez sur « Trouver des sous-titres » ci-dessus, puis choisissez une source ici.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Indices : ${evidence}';
@@ -54836,6 +54929,23 @@ class _StringsId extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'libmpv bawaan di platform ini dibangun tanpa Lua (-Dlua=disabled), sehingga skrip tidak dapat berjalan di sini.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Input keyboard dan mouse tetap di aplikasi dan tidak pernah sampai ke mpv: skrip yang bergantung pada pintasan tombol atau OSC tidak dapat dipicu. Skrip berbasis properti/peristiwa dan pesan OSD tetap berfungsi.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Belum ada skrip di folder mpv_scripts';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Dimuat, tidak ada kesalahan';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Belum dimuat di pemutar ini (nyalakan sakelar atau buka ulang video)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Kesalahan';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -54920,6 +55030,9 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Membuka kalimat latihan di halaman pencarian. Ketuk sebuah kata, ketuk +, periksa kolomnya, lalu simpan.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Ketuk “Cari subtitle” di atas, lalu pilih sumber di sini.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Bukti: ${evidence}';
@@ -64713,6 +64826,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'Il libmpv incluso su questa piattaforma è stato compilato senza Lua (-Dlua=disabled), quindi gli script non possono essere eseguiti qui.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'L\'input di tastiera e mouse resta nell\'app e non raggiunge mai mpv: gli script che dipendono da scorciatoie o dall\'OSC non possono essere attivati. Gli script basati su proprietà/eventi e i messaggi OSD funzionano.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Nessuno script nella cartella mpv_scripts per ora';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Caricato, nessun errore segnalato';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Non ancora caricato in questo player (attiva l\'interruttore o riapri il video)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Errore';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -64797,6 +64927,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Apre la frase di esercizio nella pagina di ricerca. Tocca una parola, tocca +, controlla i campi e salva.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tocca “Trova sottotitoli” in alto, poi scegli una sorgente qui.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Indizi: ${evidence}';
@@ -74005,6 +74138,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'このプラットフォームに同梱の libmpv は Lua なしでビルドされています（-Dlua=disabled）。ここではスクリプトを実行できません。';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'キーボードとマウスの入力はアプリ側で処理され mpv には届きません。キーバインドや OSC に依存するスクリプトは動作させられません。プロパティ/イベント駆動のスクリプトと OSD メッセージは動作します。';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'mpv_scripts フォルダーにスクリプトはまだありません';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded => '読み込み済み、エラーなし';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'このプレーヤーではまだ読み込まれていません（スイッチをオンにするか動画を開き直してください）';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'エラー';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -74084,6 +74233,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       '練習用の文を辞書ページで開きます。単語をタップし、「＋」をタップして、項目を確認してから保存します。';
+  @override
+  String get video_subtitle_source_search_hint =>
+      '上の「字幕を検索」をタップしてから、ここでソースを選んでください。';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       '判定根拠：${evidence}';
@@ -83299,6 +83451,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      '이 플랫폼에 포함된 libmpv는 Lua 없이 빌드되어(-Dlua=disabled) 여기서는 스크립트를 실행할 수 없습니다.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      '키보드와 마우스 입력은 앱에서 처리되며 mpv에 전달되지 않습니다. 키 바인딩이나 OSC에 의존하는 스크립트는 실행할 수 없습니다. 속성/이벤트 기반 스크립트와 OSD 메시지는 동작합니다.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'mpv_scripts 폴더에 아직 스크립트가 없습니다';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded => '로드됨, 오류 없음';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      '이 플레이어에 아직 로드되지 않았습니다(스위치를 켜거나 동영상을 다시 여세요)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => '오류';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -83378,6 +83546,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       '단어 찾기 페이지에서 연습 문장을 엽니다. 단어를 탭하고 +를 탭한 뒤, 필드를 확인하고 저장하세요.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      '위의 “자막 찾기”를 누른 다음 여기에서 소스를 선택하세요.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       '판정 근거: ${evidence}';
@@ -93123,6 +93294,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'De meegeleverde libmpv op dit platform is zonder Lua gebouwd (-Dlua=disabled), dus scripts kunnen hier niet draaien.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Toetsenbord- en muisinvoer blijft in de app en bereikt mpv nooit: scripts die op sneltoetsen of de OSC vertrouwen kunnen niet worden geactiveerd. Scripts op basis van eigenschappen/gebeurtenissen en OSD-berichten werken wel.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Nog geen scripts in de map mpv_scripts';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Geladen, geen fouten gemeld';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Nog niet geladen in deze speler (zet de schakelaar aan of open de video opnieuw)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Fout';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -93207,6 +93395,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Opent de oefenzin in de opzoekpagina. Tik op een woord, tik op +, controleer de velden en sla op.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Tik hierboven op “Ondertitels zoeken” en kies daarna hier een bron.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Aanwijzingen: ${evidence}';
@@ -103010,6 +103201,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'O libmpv incluído nesta plataforma foi compilado sem Lua (-Dlua=disabled), então os scripts não podem ser executados aqui.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'A entrada de teclado e mouse fica no aplicativo e nunca chega ao mpv: scripts que dependem de atalhos ou do OSC não podem ser acionados. Scripts baseados em propriedades/eventos e mensagens OSD funcionam.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Ainda não há scripts na pasta mpv_scripts';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Carregado, nenhum erro relatado';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Ainda não carregado neste player (ative a chave ou reabra o vídeo)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Erro';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -103094,6 +103302,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Abre a frase de prática na página de consulta. Toque em uma palavra, toque em +, confira os campos e salve.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Toque em “Buscar legendas” acima e depois escolha uma fonte aqui.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Indícios: ${evidence}';
@@ -112871,6 +113082,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'Встроенный libmpv на этой платформе собран без Lua (-Dlua=disabled), поэтому скрипты здесь работать не могут.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Ввод с клавиатуры и мыши остаётся в приложении и не доходит до mpv: скрипты, зависящие от привязок клавиш или OSC, запустить нельзя. Скрипты на свойствах/событиях и сообщения OSD работают.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'В папке mpv_scripts пока нет скриптов';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Загружен, ошибок нет';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Ещё не загружен в этом плеере (включите переключатель или откройте видео заново)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Ошибка';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -112956,6 +113184,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Открывает тренировочное предложение на странице поиска. Нажмите на слово, затем на +, проверьте поля и сохраните.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Нажмите «Найти субтитры» выше, затем выберите источник здесь.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Признаки: ${evidence}';
@@ -122541,6 +122772,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'libmpv ที่มาพร้อมแอปบนแพลตฟอร์มนี้ถูกสร้างโดยไม่มี Lua (-Dlua=disabled) จึงรันสคริปต์ที่นี่ไม่ได้';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'อินพุตจากคีย์บอร์ดและเมาส์จะอยู่ในแอปและไม่ส่งถึง mpv: สคริปต์ที่พึ่งพาปุ่มลัดหรือ OSC จะเรียกใช้ไม่ได้ ส่วนสคริปต์ที่ทำงานตามพร็อพเพอร์ตี้/เหตุการณ์และข้อความ OSD ใช้งานได้';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'ยังไม่มีสคริปต์ในโฟลเดอร์ mpv_scripts';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'โหลดแล้ว ไม่มีข้อผิดพลาด';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'ยังไม่ได้โหลดในตัวเล่นนี้ (เปิดสวิตช์หรือเปิดวิดีโอใหม่)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'ข้อผิดพลาด';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -122623,6 +122871,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'เปิดประโยคฝึกในหน้าค้นคำ แตะที่คำหนึ่งคำ แตะ + ตรวจดูข้อมูลในช่องต่าง ๆ แล้วบันทึก';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'แตะ “ค้นหาคำบรรยาย” ด้านบน แล้วเลือกแหล่งข้อมูลที่นี่';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'หลักฐาน: ${evidence}';
@@ -132319,6 +132570,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'Bu platformdaki paketlenmiş libmpv, Lua olmadan derlenmiştir (-Dlua=disabled); betikler burada çalışamaz.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Klavye ve fare girdisi uygulamada kalır, mpv\'ye hiç ulaşmaz: tuş atamalarına veya OSC\'ye dayanan betikler tetiklenemez. Özellik/olay tabanlı betikler ve OSD mesajları çalışır.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'mpv_scripts klasöründe henüz betik yok';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Yüklendi, hata bildirilmedi';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Bu oynatıcıda henüz yüklenmedi (anahtarı açın veya videoyu yeniden açın)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Hata';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -132403,6 +132671,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Alıştırma cümlesini arama sayfasında açar. Bir kelimeye dokunun, + düğmesine dokunun, alanları kontrol edip kaydedin.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Yukarıdaki “Altyazı bul” düğmesine dokunun, ardından buradan bir kaynak seçin.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Kanıtlar: ${evidence}';
@@ -142074,6 +142345,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      'libmpv đi kèm trên nền tảng này được biên dịch không có Lua (-Dlua=disabled), nên tập lệnh không thể chạy ở đây.';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      'Đầu vào bàn phím và chuột nằm trong ứng dụng và không bao giờ tới mpv: các tập lệnh dựa vào phím tắt hoặc OSC không thể kích hoạt. Tập lệnh theo thuộc tính/sự kiện và thông báo OSD vẫn hoạt động.';
+  @override
+  String get video_setting_mpv_lua_scripts_empty =>
+      'Chưa có tập lệnh trong thư mục mpv_scripts';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded =>
+      'Đã tải, không có lỗi';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      'Chưa tải trong trình phát này (bật công tắc hoặc mở lại video)';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => 'Lỗi';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -142156,6 +142444,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_first_anki_action_desc =>
       'Mở câu luyện tập trong trang tra từ. Chạm vào một từ, chạm +, kiểm tra các trường rồi lưu.';
+  @override
+  String get video_subtitle_source_search_hint =>
+      'Nhấn “Tìm phụ đề” ở trên, rồi chọn một nguồn tại đây.';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       'Bằng chứng: ${evidence}';
@@ -151058,6 +151349,21 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => '混合';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      '本平台随包 libmpv 未编入 Lua（-Dlua=disabled），脚本在此无法运行。';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      '键盘/鼠标输入由应用层处理、不会到达 mpv：依赖按键绑定或 OSC 的脚本无法触发；监听属性/事件的脚本与 OSD 提示可用。';
+  @override
+  String get video_setting_mpv_lua_scripts_empty => 'mpv_scripts 目录里还没有脚本';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded => '已装载，无报错';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      '本次播放未装载（开启开关或重新打开视频）';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => '报错';
+  @override
   String get download_task_audiobook_needs_alignment =>
       '只下到音频 - 还需要一个对齐文件（字幕）才能作为书打开。';
   @override
@@ -151133,6 +151439,8 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_first_anki_lookup_desc => '打开练习句子，点一个词。';
   @override
   String get onboarding_first_anki_action_desc => '在查词页打开练习句子。点词、点加号、检查字段、保存。';
+  @override
+  String get video_subtitle_source_search_hint => '先点上方的「查找字幕」，再在这里挑一个来源。';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       '判据：${evidence}';
@@ -160040,6 +160348,21 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get network_proxy_p2p_mode_mixed => 'Mixed';
   @override
+  String get video_setting_mpv_lua_scripts_unavailable =>
+      '本平台隨附的 libmpv 未編入 Lua（-Dlua=disabled），腳本在此無法運行。';
+  @override
+  String get video_setting_mpv_lua_scripts_input_note =>
+      '鍵盤/滑鼠輸入由應用程式處理、不會到達 mpv：依賴按鍵綁定或 OSC 的腳本無法觸發；監聽屬性/事件的腳本與 OSD 提示可用。';
+  @override
+  String get video_setting_mpv_lua_scripts_empty => 'mpv_scripts 目錄裡還沒有腳本';
+  @override
+  String get video_setting_mpv_lua_scripts_status_loaded => '已載入，無報錯';
+  @override
+  String get video_setting_mpv_lua_scripts_status_not_loaded =>
+      '本次播放未載入（開啟開關或重新開啟影片）';
+  @override
+  String get video_setting_mpv_lua_scripts_status_error => '報錯';
+  @override
   String get download_task_audiobook_needs_alignment =>
       'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
   @override
@@ -160115,6 +160438,8 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_first_anki_lookup_desc => '打開練習句子，點一個詞。';
   @override
   String get onboarding_first_anki_action_desc => '在查詞頁打開練習句子。點詞、點加號、檢查欄位、儲存。';
+  @override
+  String get video_subtitle_source_search_hint => '先點上方的「查找字幕」，再在這裡挑一個來源。';
   @override
   String game_session_japanese_locale_evidence({required Object evidence}) =>
       '判據：${evidence}';
@@ -168578,6 +168903,18 @@ extension on _StringsEn {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'The bundled libmpv on this platform was built without Lua (-Dlua=disabled), so scripts cannot run here.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Keyboard and mouse input stays in the app and never reaches mpv: scripts that rely on key bindings or the OSC cannot be triggered. Scripts driven by properties/events and OSD messages work.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'No scripts in the mpv_scripts folder yet';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Loaded, no errors reported';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Not loaded in this player yet (turn on the switch or reopen the video)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Error';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -168645,6 +168982,8 @@ extension on _StringsEn {
         return 'Open the practice sentence and tap a word.';
       case 'onboarding_first_anki_action_desc':
         return 'Opens the practice sentence in the lookup page. Tap a word, tap +, check the fields and save.';
+      case 'video_subtitle_source_search_hint':
+        return 'Tap “Find subtitles” above, then pick a source here.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Evidence: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -177094,6 +177433,18 @@ extension on _StringsAr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'نسخة libmpv المضمّنة على هذه المنصة بُنيت بدون Lua (-Dlua=disabled)، لذا لا يمكن تشغيل السكربتات هنا.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'إدخال لوحة المفاتيح والفأرة يبقى داخل التطبيق ولا يصل إلى mpv: السكربتات التي تعتمد على اختصارات المفاتيح أو OSC لا يمكن تشغيلها. السكربتات المعتمدة على الخصائص/الأحداث ورسائل OSD تعمل.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'لا توجد سكربتات في مجلد mpv_scripts بعد';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'تم التحميل، لا أخطاء';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'لم يُحمَّل في هذا المشغّل بعد (فعّل المفتاح أو أعد فتح الفيديو)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'خطأ';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -177161,6 +177512,8 @@ extension on _StringsAr {
         return 'افتح جملة التدريب وانقر على كلمة.';
       case 'onboarding_first_anki_action_desc':
         return 'يفتح جملة التدريب في صفحة البحث. انقر على كلمة، ثم على +، وراجع الحقول ثم احفظ.';
+      case 'video_subtitle_source_search_hint':
+        return 'اضغط على “البحث عن ترجمات” في الأعلى، ثم اختر مصدرًا من هنا.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'الأدلة: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -185654,6 +186007,18 @@ extension on _StringsDe {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'Das mitgelieferte libmpv auf dieser Plattform wurde ohne Lua gebaut (-Dlua=disabled), Skripte können hier nicht laufen.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Tastatur- und Mauseingaben bleiben in der App und erreichen mpv nie: Skripte, die auf Tastenbelegungen oder das OSC angewiesen sind, lassen sich nicht auslösen. Skripte, die auf Eigenschaften/Ereignisse reagieren, und OSD-Meldungen funktionieren.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Noch keine Skripte im Ordner mpv_scripts';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Geladen, keine Fehler gemeldet';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'In diesem Player noch nicht geladen (Schalter einschalten oder Video erneut öffnen)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Fehler';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -185721,6 +186086,8 @@ extension on _StringsDe {
         return 'Öffnen Sie den Übungssatz und tippen Sie auf ein Wort.';
       case 'onboarding_first_anki_action_desc':
         return 'Öffnet den Übungssatz auf der Nachschlageseite. Tippen Sie auf ein Wort, dann auf +, prüfen Sie die Felder und speichern Sie.';
+      case 'video_subtitle_source_search_hint':
+        return 'Tippe oben auf „Untertitel suchen“ und wähle dann hier eine Quelle aus.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Indizien: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -194206,6 +194573,18 @@ extension on _StringsEs {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'El libmpv incluido en esta plataforma se compiló sin Lua (-Dlua=disabled), por lo que los scripts no pueden ejecutarse aquí.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'La entrada de teclado y ratón se queda en la aplicación y nunca llega a mpv: los scripts que dependen de atajos de teclado o del OSC no se pueden activar. Los scripts basados en propiedades/eventos y los mensajes OSD sí funcionan.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Aún no hay scripts en la carpeta mpv_scripts';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Cargado, sin errores';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Aún no cargado en este reproductor (activa el interruptor o vuelve a abrir el vídeo)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Error';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -194273,6 +194652,8 @@ extension on _StringsEs {
         return 'Abra la frase de práctica y toque una palabra.';
       case 'onboarding_first_anki_action_desc':
         return 'Abre la frase de práctica en la página de consulta. Toque una palabra, toque +, revise los campos y guarde.';
+      case 'video_subtitle_source_search_hint':
+        return 'Toca «Buscar subtítulos» arriba y luego elige una fuente aquí.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Indicios: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -202766,6 +203147,18 @@ extension on _StringsFr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'Le libmpv fourni sur cette plateforme a été compilé sans Lua (-Dlua=disabled) : les scripts ne peuvent pas s\'exécuter ici.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Les entrées clavier et souris restent dans l\'application et n\'atteignent jamais mpv : les scripts qui reposent sur des raccourcis ou sur l\'OSC ne peuvent pas être déclenchés. Les scripts pilotés par propriétés/événements et les messages OSD fonctionnent.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Aucun script dans le dossier mpv_scripts pour l\'instant';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Chargé, aucune erreur signalée';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Pas encore chargé dans ce lecteur (activez l\'interrupteur ou rouvrez la vidéo)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Erreur';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -202833,6 +203226,8 @@ extension on _StringsFr {
         return 'Ouvrez la phrase d\'entraînement et touchez un mot.';
       case 'onboarding_first_anki_action_desc':
         return 'Ouvre la phrase d\'entraînement dans la page de recherche. Touchez un mot, touchez +, vérifiez les champs et enregistrez.';
+      case 'video_subtitle_source_search_hint':
+        return 'Appuyez sur « Trouver des sous-titres » ci-dessus, puis choisissez une source ici.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Indices : ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -211298,6 +211693,18 @@ extension on _StringsId {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'libmpv bawaan di platform ini dibangun tanpa Lua (-Dlua=disabled), sehingga skrip tidak dapat berjalan di sini.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Input keyboard dan mouse tetap di aplikasi dan tidak pernah sampai ke mpv: skrip yang bergantung pada pintasan tombol atau OSC tidak dapat dipicu. Skrip berbasis properti/peristiwa dan pesan OSD tetap berfungsi.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Belum ada skrip di folder mpv_scripts';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Dimuat, tidak ada kesalahan';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Belum dimuat di pemutar ini (nyalakan sakelar atau buka ulang video)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Kesalahan';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -211365,6 +211772,8 @@ extension on _StringsId {
         return 'Buka kalimat latihan lalu ketuk sebuah kata.';
       case 'onboarding_first_anki_action_desc':
         return 'Membuka kalimat latihan di halaman pencarian. Ketuk sebuah kata, ketuk +, periksa kolomnya, lalu simpan.';
+      case 'video_subtitle_source_search_hint':
+        return 'Ketuk “Cari subtitle” di atas, lalu pilih sumber di sini.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Bukti: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -219851,6 +220260,18 @@ extension on _StringsIt {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'Il libmpv incluso su questa piattaforma è stato compilato senza Lua (-Dlua=disabled), quindi gli script non possono essere eseguiti qui.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'L\'input di tastiera e mouse resta nell\'app e non raggiunge mai mpv: gli script che dipendono da scorciatoie o dall\'OSC non possono essere attivati. Gli script basati su proprietà/eventi e i messaggi OSD funzionano.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Nessuno script nella cartella mpv_scripts per ora';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Caricato, nessun errore segnalato';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Non ancora caricato in questo player (attiva l\'interruttore o riapri il video)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Errore';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -219918,6 +220339,8 @@ extension on _StringsIt {
         return 'Apri la frase di esercizio e tocca una parola.';
       case 'onboarding_first_anki_action_desc':
         return 'Apre la frase di esercizio nella pagina di ricerca. Tocca una parola, tocca +, controlla i campi e salva.';
+      case 'video_subtitle_source_search_hint':
+        return 'Tocca “Trova sottotitoli” in alto, poi scegli una sorgente qui.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Indizi: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -228333,6 +228756,18 @@ extension on _StringsJa {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'このプラットフォームに同梱の libmpv は Lua なしでビルドされています（-Dlua=disabled）。ここではスクリプトを実行できません。';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'キーボードとマウスの入力はアプリ側で処理され mpv には届きません。キーバインドや OSC に依存するスクリプトは動作させられません。プロパティ/イベント駆動のスクリプトと OSD メッセージは動作します。';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'mpv_scripts フォルダーにスクリプトはまだありません';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return '読み込み済み、エラーなし';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'このプレーヤーではまだ読み込まれていません（スイッチをオンにするか動画を開き直してください）';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'エラー';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -228400,6 +228835,8 @@ extension on _StringsJa {
         return '練習用の文を開いて、単語をタップします。';
       case 'onboarding_first_anki_action_desc':
         return '練習用の文を辞書ページで開きます。単語をタップし、「＋」をタップして、項目を確認してから保存します。';
+      case 'video_subtitle_source_search_hint':
+        return '上の「字幕を検索」をタップしてから、ここでソースを選んでください。';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => '判定根拠：${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -236818,6 +237255,18 @@ extension on _StringsKo {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return '이 플랫폼에 포함된 libmpv는 Lua 없이 빌드되어(-Dlua=disabled) 여기서는 스크립트를 실행할 수 없습니다.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return '키보드와 마우스 입력은 앱에서 처리되며 mpv에 전달되지 않습니다. 키 바인딩이나 OSC에 의존하는 스크립트는 실행할 수 없습니다. 속성/이벤트 기반 스크립트와 OSD 메시지는 동작합니다.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'mpv_scripts 폴더에 아직 스크립트가 없습니다';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return '로드됨, 오류 없음';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return '이 플레이어에 아직 로드되지 않았습니다(스위치를 켜거나 동영상을 다시 여세요)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return '오류';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -236885,6 +237334,8 @@ extension on _StringsKo {
         return '연습 문장을 열고 단어를 탭하세요.';
       case 'onboarding_first_anki_action_desc':
         return '단어 찾기 페이지에서 연습 문장을 엽니다. 단어를 탭하고 +를 탭한 뒤, 필드를 확인하고 저장하세요.';
+      case 'video_subtitle_source_search_hint':
+        return '위의 “자막 찾기”를 누른 다음 여기에서 소스를 선택하세요.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => '판정 근거: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -245365,6 +245816,18 @@ extension on _StringsNl {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'De meegeleverde libmpv op dit platform is zonder Lua gebouwd (-Dlua=disabled), dus scripts kunnen hier niet draaien.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Toetsenbord- en muisinvoer blijft in de app en bereikt mpv nooit: scripts die op sneltoetsen of de OSC vertrouwen kunnen niet worden geactiveerd. Scripts op basis van eigenschappen/gebeurtenissen en OSD-berichten werken wel.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Nog geen scripts in de map mpv_scripts';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Geladen, geen fouten gemeld';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Nog niet geladen in deze speler (zet de schakelaar aan of open de video opnieuw)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Fout';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -245432,6 +245895,8 @@ extension on _StringsNl {
         return 'Open de oefenzin en tik op een woord.';
       case 'onboarding_first_anki_action_desc':
         return 'Opent de oefenzin in de opzoekpagina. Tik op een woord, tik op +, controleer de velden en sla op.';
+      case 'video_subtitle_source_search_hint':
+        return 'Tik hierboven op “Ondertitels zoeken” en kies daarna hier een bron.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Aanwijzingen: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -253907,6 +254372,18 @@ extension on _StringsPtBr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'O libmpv incluído nesta plataforma foi compilado sem Lua (-Dlua=disabled), então os scripts não podem ser executados aqui.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'A entrada de teclado e mouse fica no aplicativo e nunca chega ao mpv: scripts que dependem de atalhos ou do OSC não podem ser acionados. Scripts baseados em propriedades/eventos e mensagens OSD funcionam.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Ainda não há scripts na pasta mpv_scripts';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Carregado, nenhum erro relatado';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Ainda não carregado neste player (ative a chave ou reabra o vídeo)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Erro';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -253974,6 +254451,8 @@ extension on _StringsPtBr {
         return 'Abra a frase de prática e toque em uma palavra.';
       case 'onboarding_first_anki_action_desc':
         return 'Abre a frase de prática na página de consulta. Toque em uma palavra, toque em +, confira os campos e salve.';
+      case 'video_subtitle_source_search_hint':
+        return 'Toque em “Buscar legendas” acima e depois escolha uma fonte aqui.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Indícios: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -262455,6 +262934,18 @@ extension on _StringsRu {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'Встроенный libmpv на этой платформе собран без Lua (-Dlua=disabled), поэтому скрипты здесь работать не могут.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Ввод с клавиатуры и мыши остаётся в приложении и не доходит до mpv: скрипты, зависящие от привязок клавиш или OSC, запустить нельзя. Скрипты на свойствах/событиях и сообщения OSD работают.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'В папке mpv_scripts пока нет скриптов';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Загружен, ошибок нет';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Ещё не загружен в этом плеере (включите переключатель или откройте видео заново)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Ошибка';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -262522,6 +263013,8 @@ extension on _StringsRu {
         return 'Откройте тренировочное предложение и нажмите на слово.';
       case 'onboarding_first_anki_action_desc':
         return 'Открывает тренировочное предложение на странице поиска. Нажмите на слово, затем на +, проверьте поля и сохраните.';
+      case 'video_subtitle_source_search_hint':
+        return 'Нажмите «Найти субтитры» выше, затем выберите источник здесь.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Признаки: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -270976,6 +271469,18 @@ extension on _StringsTh {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'libmpv ที่มาพร้อมแอปบนแพลตฟอร์มนี้ถูกสร้างโดยไม่มี Lua (-Dlua=disabled) จึงรันสคริปต์ที่นี่ไม่ได้';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'อินพุตจากคีย์บอร์ดและเมาส์จะอยู่ในแอปและไม่ส่งถึง mpv: สคริปต์ที่พึ่งพาปุ่มลัดหรือ OSC จะเรียกใช้ไม่ได้ ส่วนสคริปต์ที่ทำงานตามพร็อพเพอร์ตี้/เหตุการณ์และข้อความ OSD ใช้งานได้';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'ยังไม่มีสคริปต์ในโฟลเดอร์ mpv_scripts';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'โหลดแล้ว ไม่มีข้อผิดพลาด';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'ยังไม่ได้โหลดในตัวเล่นนี้ (เปิดสวิตช์หรือเปิดวิดีโอใหม่)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'ข้อผิดพลาด';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -271043,6 +271548,8 @@ extension on _StringsTh {
         return 'เปิดประโยคฝึกแล้วแตะที่คำหนึ่งคำ';
       case 'onboarding_first_anki_action_desc':
         return 'เปิดประโยคฝึกในหน้าค้นคำ แตะที่คำหนึ่งคำ แตะ + ตรวจดูข้อมูลในช่องต่าง ๆ แล้วบันทึก';
+      case 'video_subtitle_source_search_hint':
+        return 'แตะ “ค้นหาคำบรรยาย” ด้านบน แล้วเลือกแหล่งข้อมูลที่นี่';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'หลักฐาน: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -279512,6 +280019,18 @@ extension on _StringsTr {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'Bu platformdaki paketlenmiş libmpv, Lua olmadan derlenmiştir (-Dlua=disabled); betikler burada çalışamaz.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Klavye ve fare girdisi uygulamada kalır, mpv\'ye hiç ulaşmaz: tuş atamalarına veya OSC\'ye dayanan betikler tetiklenemez. Özellik/olay tabanlı betikler ve OSD mesajları çalışır.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'mpv_scripts klasöründe henüz betik yok';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Yüklendi, hata bildirilmedi';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Bu oynatıcıda henüz yüklenmedi (anahtarı açın veya videoyu yeniden açın)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Hata';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -279579,6 +280098,8 @@ extension on _StringsTr {
         return 'Alıştırma cümlesini açın ve bir kelimeye dokunun.';
       case 'onboarding_first_anki_action_desc':
         return 'Alıştırma cümlesini arama sayfasında açar. Bir kelimeye dokunun, + düğmesine dokunun, alanları kontrol edip kaydedin.';
+      case 'video_subtitle_source_search_hint':
+        return 'Yukarıdaki “Altyazı bul” düğmesine dokunun, ardından buradan bir kaynak seçin.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Kanıtlar: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -288042,6 +288563,18 @@ extension on _StringsVi {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return 'libmpv đi kèm trên nền tảng này được biên dịch không có Lua (-Dlua=disabled), nên tập lệnh không thể chạy ở đây.';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return 'Đầu vào bàn phím và chuột nằm trong ứng dụng và không bao giờ tới mpv: các tập lệnh dựa vào phím tắt hoặc OSC không thể kích hoạt. Tập lệnh theo thuộc tính/sự kiện và thông báo OSD vẫn hoạt động.';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'Chưa có tập lệnh trong thư mục mpv_scripts';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return 'Đã tải, không có lỗi';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return 'Chưa tải trong trình phát này (bật công tắc hoặc mở lại video)';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return 'Lỗi';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -288109,6 +288642,8 @@ extension on _StringsVi {
         return 'Mở câu luyện tập rồi chạm vào một từ.';
       case 'onboarding_first_anki_action_desc':
         return 'Mở câu luyện tập trong trang tra từ. Chạm vào một từ, chạm +, kiểm tra các trường rồi lưu.';
+      case 'video_subtitle_source_search_hint':
+        return 'Nhấn “Tìm phụ đề” ở trên, rồi chọn một nguồn tại đây.';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => 'Bằng chứng: ${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -296501,6 +297036,18 @@ extension on _StringsZhCn {
         return '走代理';
       case 'network_proxy_p2p_mode_mixed':
         return '混合';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return '本平台随包 libmpv 未编入 Lua（-Dlua=disabled），脚本在此无法运行。';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return '键盘/鼠标输入由应用层处理、不会到达 mpv：依赖按键绑定或 OSC 的脚本无法触发；监听属性/事件的脚本与 OSD 提示可用。';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'mpv_scripts 目录里还没有脚本';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return '已装载，无报错';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return '本次播放未装载（开启开关或重新打开视频）';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return '报错';
       case 'download_task_audiobook_needs_alignment':
         return '只下到音频 - 还需要一个对齐文件（字幕）才能作为书打开。';
       case 'download_task_audiobook_pair':
@@ -296568,6 +297115,8 @@ extension on _StringsZhCn {
         return '打开练习句子，点一个词。';
       case 'onboarding_first_anki_action_desc':
         return '在查词页打开练习句子。点词、点加号、检查字段、保存。';
+      case 'video_subtitle_source_search_hint':
+        return '先点上方的「查找字幕」，再在这里挑一个来源。';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => '判据：${evidence}';
       case 'game_session_japanese_locale_skipped':
@@ -304961,6 +305510,18 @@ extension on _StringsZhHk {
         return 'Via proxy';
       case 'network_proxy_p2p_mode_mixed':
         return 'Mixed';
+      case 'video_setting_mpv_lua_scripts_unavailable':
+        return '本平台隨附的 libmpv 未編入 Lua（-Dlua=disabled），腳本在此無法運行。';
+      case 'video_setting_mpv_lua_scripts_input_note':
+        return '鍵盤/滑鼠輸入由應用程式處理、不會到達 mpv：依賴按鍵綁定或 OSC 的腳本無法觸發；監聽屬性/事件的腳本與 OSD 提示可用。';
+      case 'video_setting_mpv_lua_scripts_empty':
+        return 'mpv_scripts 目錄裡還沒有腳本';
+      case 'video_setting_mpv_lua_scripts_status_loaded':
+        return '已載入，無報錯';
+      case 'video_setting_mpv_lua_scripts_status_not_loaded':
+        return '本次播放未載入（開啟開關或重新開啟影片）';
+      case 'video_setting_mpv_lua_scripts_status_error':
+        return '報錯';
       case 'download_task_audiobook_needs_alignment':
         return 'Audio only - an alignment file (subtitle) is still needed before this can open as a book.';
       case 'download_task_audiobook_pair':
@@ -305028,6 +305589,8 @@ extension on _StringsZhHk {
         return '打開練習句子，點一個詞。';
       case 'onboarding_first_anki_action_desc':
         return '在查詞頁打開練習句子。點詞、點加號、檢查欄位、儲存。';
+      case 'video_subtitle_source_search_hint':
+        return '先點上方的「查找字幕」，再在這裡挑一個來源。';
       case 'game_session_japanese_locale_evidence':
         return ({required Object evidence}) => '判據：${evidence}';
       case 'game_session_japanese_locale_skipped':
