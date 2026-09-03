@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 70754 (4162 per locale)
+/// Strings: 70771 (4163 per locale)
 ///
-/// Built on 2026-09-03 at 02:45 UTC
+/// Built on 2026-09-03 at 06:26 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5710,6 +5710,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get gal_mining_image_mode_video_clip => 'Video clip';
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -15411,6 +15413,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -25331,6 +25336,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -35302,6 +35310,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -45306,6 +45317,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -55122,6 +55136,9 @@ class _StringsId extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -65025,6 +65042,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -74332,6 +74352,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -83650,6 +83673,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -93508,6 +93534,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -103419,6 +103448,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -113306,6 +113338,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -122997,6 +123032,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -132803,6 +132841,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -142583,6 +142624,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 // Path: <root>
@@ -151571,6 +151615,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       '从台词出现到制卡这段时间的游戏画面，并混入句子音频。未开始录制或不足 2 帧时降级为动图/截图。';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      '音频采集策略未在超时内确认。文本采集不受影响；若缺少游戏内语音可重试一次。';
 }
 
 // Path: <root>
@@ -160575,6 +160622,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+  @override
+  String get game_hook_reason_native_loopback_ack_timeout =>
+      'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
 }
 
 /// Flat map(s) containing all translations.
@@ -169114,6 +169164,8 @@ extension on _StringsEn {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -177648,6 +177700,8 @@ extension on _StringsAr {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -186226,6 +186280,8 @@ extension on _StringsDe {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -194796,6 +194852,8 @@ extension on _StringsEs {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -203374,6 +203432,8 @@ extension on _StringsFr {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -211924,6 +211984,8 @@ extension on _StringsId {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -220495,6 +220557,8 @@ extension on _StringsIt {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -228995,6 +229059,8 @@ extension on _StringsJa {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -237498,6 +237564,8 @@ extension on _StringsKo {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -246063,6 +246131,8 @@ extension on _StringsNl {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -254623,6 +254693,8 @@ extension on _StringsPtBr {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -263189,6 +263261,8 @@ extension on _StringsRu {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -271728,6 +271802,8 @@ extension on _StringsTh {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -280282,6 +280358,8 @@ extension on _StringsTr {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -288830,6 +288908,8 @@ extension on _StringsVi {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
@@ -297307,6 +297387,8 @@ extension on _StringsZhCn {
         return '视频片段';
       case 'gal_mining_image_mode_video_clip_hint':
         return '从台词出现到制卡这段时间的游戏画面，并混入句子音频。未开始录制或不足 2 帧时降级为动图/截图。';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return '音频采集策略未在超时内确认。文本采集不受影响；若缺少游戏内语音可重试一次。';
       default:
         return null;
     }
@@ -305785,6 +305867,8 @@ extension on _StringsZhHk {
         return 'Video clip';
       case 'gal_mining_image_mode_video_clip_hint':
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
+      case 'game_hook_reason_native_loopback_ack_timeout':
+        return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       default:
         return null;
     }
