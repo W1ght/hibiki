@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 71111 (4183 per locale)
+/// Strings: 71417 (4201 per locale)
 ///
-/// Built on 2026-09-03 at 12:29 UTC
+/// Built on 2026-09-03 at 17:57 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5739,6 +5739,38 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   String get anki_action_open_settings => 'Open settings';
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  String get interconnect_profile_section => 'Configuration file';
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  String get onboarding_pack_import_now => 'Import now';
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -15487,6 +15519,56 @@ class _StringsAr extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -25462,6 +25544,56 @@ class _StringsDe extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -35489,6 +35621,56 @@ class _StringsEs extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -45551,6 +45733,56 @@ class _StringsFr extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -55418,6 +55650,56 @@ class _StringsId extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -65376,6 +65658,56 @@ class _StringsIt extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -74722,6 +75054,56 @@ class _StringsJa extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -84078,6 +84460,56 @@ class _StringsKo extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -93991,6 +94423,56 @@ class _StringsNl extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -103958,6 +104440,56 @@ class _StringsPtBr extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -113904,6 +114436,56 @@ class _StringsRu extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -123648,6 +124230,56 @@ class _StringsTh extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -133509,6 +134141,56 @@ class _StringsTr extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -143341,6 +144023,56 @@ class _StringsVi extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -152376,6 +153108,50 @@ class _StringsZhCn extends _StringsEn {
       '未安装 AnkiDroid（或其 API 被禁用），无法授予卡片访问权限。请安装 AnkiDroid 并启用其 API，或改用 AnkiConnect。';
   @override
   String get anki_action_open_settings => '去设置';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      '选择包文件失败：${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      '系统没有交出这个文件的路径。请把包放到手机存储里再选，或授予「所有文件访问」权限。';
+  @override
+  String get interconnect_profile_section => '配置文件';
+  @override
+  String get interconnect_profile_upload => '上传配置到对端';
+  @override
+  String get interconnect_profile_upload_desc => '把本机当前配置发给已配对的对端，在那边落成一份新配置。';
+  @override
+  String get interconnect_profile_download => '从对端下载配置';
+  @override
+  String get interconnect_profile_download_desc =>
+      '把对端当前配置作为一份新配置导入本机，不动你正在用的那份。';
+  @override
+  String get interconnect_profile_host_toggle => '允许已配对设备读写本机配置';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      '默认关闭。需要 HTTPS 与已配对设备令牌；收到的配置一律作为新配置追加，不覆盖现有配置。';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      '配置已上传：${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      '配置已导入：${name}';
+  @override
+  String get interconnect_profile_unsupported => '对端不提供配置传输（需要 HTTPS 且对端版本较新）。';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      '配置传输失败：${message}';
+  @override
+  String get onboarding_pack_status_downloading => '推荐包下载中';
+  @override
+  String get onboarding_pack_status_ready => '推荐包已下载完成';
+  @override
+  String get onboarding_pack_import_now => '现在导入';
+  @override
+  String get onboarding_pack_download_finished => '推荐包下载完成。可在「设置 → 系统」里导入。';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      '下载会在后台继续：可以直接走下一步，也可以关掉向导。进度、取消和导入都在「设置 → 系统」里。';
 }
 
 // Path: <root>
@@ -161416,6 +162192,56 @@ class _StringsZhHk extends _StringsEn {
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   @override
   String get anki_action_open_settings => 'Open settings';
+  @override
+  String onboarding_pack_pick_failed({required Object message}) =>
+      'Could not use the chosen file: ${message}';
+  @override
+  String get onboarding_pack_pick_no_path =>
+      'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 /// Flat map(s) containing all translations.
@@ -169998,6 +170824,44 @@ extension on _StringsEn {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -178575,6 +179439,44 @@ extension on _StringsAr {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -187197,6 +188099,44 @@ extension on _StringsDe {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -195810,6 +196750,44 @@ extension on _StringsEs {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -204432,6 +205410,44 @@ extension on _StringsFr {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -213025,6 +214041,44 @@ extension on _StringsId {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -221640,6 +222694,44 @@ extension on _StringsIt {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -230182,6 +231274,44 @@ extension on _StringsJa {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -238728,6 +239858,44 @@ extension on _StringsKo {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -247336,6 +248504,44 @@ extension on _StringsNl {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -255939,6 +257145,44 @@ extension on _StringsPtBr {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -264549,6 +265793,44 @@ extension on _StringsRu {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -273131,6 +274413,44 @@ extension on _StringsTh {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -281728,6 +283048,44 @@ extension on _StringsTr {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -290319,6 +291677,44 @@ extension on _StringsVi {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -298838,6 +300234,42 @@ extension on _StringsZhCn {
         return '未安装 AnkiDroid（或其 API 被禁用），无法授予卡片访问权限。请安装 AnkiDroid 并启用其 API，或改用 AnkiConnect。';
       case 'anki_action_open_settings':
         return '去设置';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) => '选择包文件失败：${message}';
+      case 'onboarding_pack_pick_no_path':
+        return '系统没有交出这个文件的路径。请把包放到手机存储里再选，或授予「所有文件访问」权限。';
+      case 'interconnect_profile_section':
+        return '配置文件';
+      case 'interconnect_profile_upload':
+        return '上传配置到对端';
+      case 'interconnect_profile_upload_desc':
+        return '把本机当前配置发给已配对的对端，在那边落成一份新配置。';
+      case 'interconnect_profile_download':
+        return '从对端下载配置';
+      case 'interconnect_profile_download_desc':
+        return '把对端当前配置作为一份新配置导入本机，不动你正在用的那份。';
+      case 'interconnect_profile_host_toggle':
+        return '允许已配对设备读写本机配置';
+      case 'interconnect_profile_host_toggle_desc':
+        return '默认关闭。需要 HTTPS 与已配对设备令牌；收到的配置一律作为新配置追加，不覆盖现有配置。';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => '配置已上传：${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => '配置已导入：${name}';
+      case 'interconnect_profile_unsupported':
+        return '对端不提供配置传输（需要 HTTPS 且对端版本较新）。';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) => '配置传输失败：${message}';
+      case 'onboarding_pack_status_downloading':
+        return '推荐包下载中';
+      case 'onboarding_pack_status_ready':
+        return '推荐包已下载完成';
+      case 'onboarding_pack_import_now':
+        return '现在导入';
+      case 'onboarding_pack_download_finished':
+        return '推荐包下载完成。可在「设置 → 系统」里导入。';
+      case 'onboarding_pack_download_background_hint':
+        return '下载会在后台继续：可以直接走下一步，也可以关掉向导。进度、取消和导入都在「设置 → 系统」里。';
       default:
         return null;
     }
@@ -307358,6 +308790,44 @@ extension on _StringsZhHk {
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_action_open_settings':
         return 'Open settings';
+      case 'onboarding_pack_pick_failed':
+        return ({required Object message}) =>
+            'Could not use the chosen file: ${message}';
+      case 'onboarding_pack_pick_no_path':
+        return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
