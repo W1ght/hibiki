@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 71094 (4182 per locale)
+/// Strings: 71281 (4193 per locale)
 ///
-/// Built on 2026-09-03 at 16:55 UTC
+/// Built on 2026-09-03 at 17:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5738,6 +5738,26 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not use the chosen file: ${message}';
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  String get interconnect_profile_section => 'Configuration file';
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -15484,6 +15504,37 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -25457,6 +25508,37 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -35482,6 +35564,37 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -45542,6 +45655,37 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -55407,6 +55551,37 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -65363,6 +65538,37 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -74707,6 +74913,37 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -84061,6 +84298,37 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -93972,6 +94240,37 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -103937,6 +104236,37 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -113881,6 +114211,37 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -123623,6 +123984,37 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -133482,6 +133874,37 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -143312,6 +143735,37 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 // Path: <root>
@@ -152345,6 +152799,33 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       '系统没有交出这个文件的路径。请把包放到手机存储里再选，或授予「所有文件访问」权限。';
+  @override
+  String get interconnect_profile_section => '配置文件';
+  @override
+  String get interconnect_profile_upload => '上传配置到对端';
+  @override
+  String get interconnect_profile_upload_desc => '把本机当前配置发给已配对的对端，在那边落成一份新配置。';
+  @override
+  String get interconnect_profile_download => '从对端下载配置';
+  @override
+  String get interconnect_profile_download_desc =>
+      '把对端当前配置作为一份新配置导入本机，不动你正在用的那份。';
+  @override
+  String get interconnect_profile_host_toggle => '允许已配对设备读写本机配置';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      '默认关闭。需要 HTTPS 与已配对设备令牌；收到的配置一律作为新配置追加，不覆盖现有配置。';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      '配置已上传：${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      '配置已导入：${name}';
+  @override
+  String get interconnect_profile_unsupported => '对端不提供配置传输（需要 HTTPS 且对端版本较新）。';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      '配置传输失败：${message}';
 }
 
 // Path: <root>
@@ -161383,6 +161864,37 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_pack_pick_no_path =>
       'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+  @override
+  String get interconnect_profile_section => 'Configuration file';
+  @override
+  String get interconnect_profile_upload => 'Upload configuration to host';
+  @override
+  String get interconnect_profile_upload_desc =>
+      'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+  @override
+  String get interconnect_profile_download =>
+      'Download configuration from host';
+  @override
+  String get interconnect_profile_download_desc =>
+      'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+  @override
+  String get interconnect_profile_host_toggle =>
+      'Allow paired devices to read/write configuration';
+  @override
+  String get interconnect_profile_host_toggle_desc =>
+      'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+  @override
+  String interconnect_profile_uploaded({required Object name}) =>
+      'Configuration uploaded: ${name}';
+  @override
+  String interconnect_profile_downloaded({required Object name}) =>
+      'Configuration imported: ${name}';
+  @override
+  String get interconnect_profile_unsupported =>
+      'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+  @override
+  String interconnect_profile_failed({required Object message}) =>
+      'Configuration transfer failed: ${message}';
 }
 
 /// Flat map(s) containing all translations.
@@ -169964,6 +170476,29 @@ extension on _StringsEn {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -178540,6 +179075,29 @@ extension on _StringsAr {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -187161,6 +187719,29 @@ extension on _StringsDe {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -195773,6 +196354,29 @@ extension on _StringsEs {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -204394,6 +204998,29 @@ extension on _StringsFr {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -212986,6 +213613,29 @@ extension on _StringsId {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -221600,6 +222250,29 @@ extension on _StringsIt {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -230141,6 +230814,29 @@ extension on _StringsJa {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -238686,6 +239382,29 @@ extension on _StringsKo {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -247293,6 +248012,29 @@ extension on _StringsNl {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -255895,6 +256637,29 @@ extension on _StringsPtBr {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -264504,6 +265269,29 @@ extension on _StringsRu {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -273085,6 +273873,29 @@ extension on _StringsTh {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -281681,6 +282492,29 @@ extension on _StringsTr {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -290271,6 +291105,29 @@ extension on _StringsVi {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
@@ -298788,6 +299645,28 @@ extension on _StringsZhCn {
         return ({required Object message}) => '选择包文件失败：${message}';
       case 'onboarding_pack_pick_no_path':
         return '系统没有交出这个文件的路径。请把包放到手机存储里再选，或授予「所有文件访问」权限。';
+      case 'interconnect_profile_section':
+        return '配置文件';
+      case 'interconnect_profile_upload':
+        return '上传配置到对端';
+      case 'interconnect_profile_upload_desc':
+        return '把本机当前配置发给已配对的对端，在那边落成一份新配置。';
+      case 'interconnect_profile_download':
+        return '从对端下载配置';
+      case 'interconnect_profile_download_desc':
+        return '把对端当前配置作为一份新配置导入本机，不动你正在用的那份。';
+      case 'interconnect_profile_host_toggle':
+        return '允许已配对设备读写本机配置';
+      case 'interconnect_profile_host_toggle_desc':
+        return '默认关闭。需要 HTTPS 与已配对设备令牌；收到的配置一律作为新配置追加，不覆盖现有配置。';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => '配置已上传：${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => '配置已导入：${name}';
+      case 'interconnect_profile_unsupported':
+        return '对端不提供配置传输（需要 HTTPS 且对端版本较新）。';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) => '配置传输失败：${message}';
       default:
         return null;
     }
@@ -307307,6 +308186,29 @@ extension on _StringsZhHk {
             'Could not use the chosen file: ${message}';
       case 'onboarding_pack_pick_no_path':
         return 'The system did not hand over a path for that file. Move the pack into device storage and pick it again, or grant all-files access.';
+      case 'interconnect_profile_section':
+        return 'Configuration file';
+      case 'interconnect_profile_upload':
+        return 'Upload configuration to host';
+      case 'interconnect_profile_upload_desc':
+        return 'Send this device\'s active configuration to the paired host, where it lands as a new configuration.';
+      case 'interconnect_profile_download':
+        return 'Download configuration from host';
+      case 'interconnect_profile_download_desc':
+        return 'Import the host\'s active configuration as a new configuration here. Your current one is untouched.';
+      case 'interconnect_profile_host_toggle':
+        return 'Allow paired devices to read/write configuration';
+      case 'interconnect_profile_host_toggle_desc':
+        return 'Off by default. Requires HTTPS and a paired-device token. Incoming configurations are always added as new ones.';
+      case 'interconnect_profile_uploaded':
+        return ({required Object name}) => 'Configuration uploaded: ${name}';
+      case 'interconnect_profile_downloaded':
+        return ({required Object name}) => 'Configuration imported: ${name}';
+      case 'interconnect_profile_unsupported':
+        return 'The paired host does not offer configuration transfer (needs HTTPS and a newer version).';
+      case 'interconnect_profile_failed':
+        return ({required Object message}) =>
+            'Configuration transfer failed: ${message}';
       default:
         return null;
     }
