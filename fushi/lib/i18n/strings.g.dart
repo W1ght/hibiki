@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 70737 (4161 per locale)
+/// Strings: 71060 (4180 per locale)
 ///
-/// Built on 2026-09-03 at 01:38 UTC
+/// Built on 2026-09-03 at 02:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5708,6 +5708,32 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get gal_card_lookup_max_width => 'In-game card max width';
   String get gal_card_lookup_max_height => 'In-game card max height';
   String get handlebar_clip_timestamp => 'Clip timestamp';
+  String get discovery_opds_settings_title => 'OPDS catalogs';
+  String get discovery_opds_settings_hint =>
+      'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+  String get discovery_opds_add => 'Add OPDS server';
+  String get discovery_opds_remove => 'Remove';
+  String get discovery_opds_enabled => 'Enabled';
+  String get discovery_opds_name => 'Display name';
+  String get discovery_opds_name_hint => 'Leave empty to use the host name';
+  String get discovery_opds_url => 'Catalog URL';
+  String get discovery_opds_url_hint =>
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+  String get discovery_opds_url_invalid =>
+      'Enter a valid HTTP or HTTPS catalog URL';
+  String get discovery_opds_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  String get discovery_opds_username => 'Username';
+  String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  String get discovery_opds_password => 'Password';
+  String get discovery_opds_allow_http => 'Allow plain HTTP';
+  String get discovery_opds_allow_http_hint =>
+      'Needed for a self-hosted server on your local network';
+  String get discovery_opds_test => 'Test connection';
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connected. Root catalog has ${count} entries';
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
 }
 
 // Path: <root>
@@ -15406,6 +15432,51 @@ class _StringsAr extends _StringsEn {
       'الارتفاع الأقصى للبطاقة داخل اللعبة';
   @override
   String get handlebar_clip_timestamp => 'الطابع الزمني للمقطع';
+  @override
+  String get discovery_opds_settings_title => 'فهارس OPDS';
+  @override
+  String get discovery_opds_settings_hint =>
+      'تصفّح وحمّل الكتب والقصص المصورة من خادم OPDS الخاص بك، مثل BookOrbit أو Calibre-Web أو Komga أو Kavita';
+  @override
+  String get discovery_opds_add => 'إضافة خادم OPDS';
+  @override
+  String get discovery_opds_remove => 'إزالة';
+  @override
+  String get discovery_opds_enabled => 'مُفعّل';
+  @override
+  String get discovery_opds_name => 'الاسم المعروض';
+  @override
+  String get discovery_opds_name_hint => 'اتركه فارغًا لاستخدام اسم المضيف';
+  @override
+  String get discovery_opds_url => 'رابط الفهرس';
+  @override
+  String get discovery_opds_url_hint =>
+      'نقطة نهاية OPDS، مثال https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'أدخل رابط فهرس HTTP أو HTTPS صالحًا';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'يتطلب HTTP غير المشفّر تفعيل المفتاح أدناه';
+  @override
+  String get discovery_opds_username => 'اسم المستخدم';
+  @override
+  String get discovery_opds_username_hint => 'اتركه فارغًا للفهرس العام';
+  @override
+  String get discovery_opds_password => 'كلمة المرور';
+  @override
+  String get discovery_opds_allow_http => 'السماح بـ HTTP غير المشفّر';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'مطلوب لخادم ذاتي الاستضافة على شبكتك المحلية';
+  @override
+  String get discovery_opds_test => 'اختبار الاتصال';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'تم الاتصال. يحتوي الفهرس الجذر على ${count} عنصرًا';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'فشل الاتصال: ${reason}';
 }
 
 // Path: <root>
@@ -25323,6 +25394,53 @@ class _StringsDe extends _StringsEn {
       'Max. Höhe der Nachschlagekarte im Spiel';
   @override
   String get handlebar_clip_timestamp => 'Clip-Zeitstempel';
+  @override
+  String get discovery_opds_settings_title => 'OPDS-Kataloge';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Bücher und Comics von deinem eigenen OPDS-Server durchsuchen und herunterladen, etwa BookOrbit, Calibre-Web, Komga oder Kavita';
+  @override
+  String get discovery_opds_add => 'OPDS-Server hinzufügen';
+  @override
+  String get discovery_opds_remove => 'Entfernen';
+  @override
+  String get discovery_opds_enabled => 'Aktiviert';
+  @override
+  String get discovery_opds_name => 'Anzeigename';
+  @override
+  String get discovery_opds_name_hint =>
+      'Leer lassen, um den Hostnamen zu verwenden';
+  @override
+  String get discovery_opds_url => 'Katalog-URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'Der OPDS-Endpunkt, zum Beispiel https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Gib eine gültige HTTP- oder HTTPS-Katalog-URL ein';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Unverschlüsseltes HTTP erfordert den Schalter unten';
+  @override
+  String get discovery_opds_username => 'Benutzername';
+  @override
+  String get discovery_opds_username_hint =>
+      'Für einen öffentlichen Katalog leer lassen';
+  @override
+  String get discovery_opds_password => 'Passwort';
+  @override
+  String get discovery_opds_allow_http => 'Unverschlüsseltes HTTP erlauben';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Nötig für einen selbst gehosteten Server im lokalen Netzwerk';
+  @override
+  String get discovery_opds_test => 'Verbindung testen';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Verbunden. Der Stammkatalog hat ${count} Einträge';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Verbindung fehlgeschlagen: ${reason}';
 }
 
 // Path: <root>
@@ -35291,6 +35409,53 @@ class _StringsEs extends _StringsEn {
       'Altura máxima de la tarjeta dentro del juego';
   @override
   String get handlebar_clip_timestamp => 'Marca de tiempo del fragmento';
+  @override
+  String get discovery_opds_settings_title => 'Catálogos OPDS';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Explora y descarga libros y cómics desde tu propio servidor OPDS, como BookOrbit, Calibre-Web, Komga o Kavita';
+  @override
+  String get discovery_opds_add => 'Añadir servidor OPDS';
+  @override
+  String get discovery_opds_remove => 'Quitar';
+  @override
+  String get discovery_opds_enabled => 'Activado';
+  @override
+  String get discovery_opds_name => 'Nombre visible';
+  @override
+  String get discovery_opds_name_hint =>
+      'Déjalo vacío para usar el nombre del host';
+  @override
+  String get discovery_opds_url => 'URL del catálogo';
+  @override
+  String get discovery_opds_url_hint =>
+      'El punto de acceso OPDS, por ejemplo https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Introduce una URL de catálogo HTTP o HTTPS válida';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'El HTTP sin cifrar necesita el interruptor de abajo';
+  @override
+  String get discovery_opds_username => 'Usuario';
+  @override
+  String get discovery_opds_username_hint =>
+      'Déjalo vacío para un catálogo público';
+  @override
+  String get discovery_opds_password => 'Contraseña';
+  @override
+  String get discovery_opds_allow_http => 'Permitir HTTP sin cifrar';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Necesario para un servidor autoalojado en tu red local';
+  @override
+  String get discovery_opds_test => 'Probar conexión';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Conectado. El catálogo raíz tiene ${count} entradas';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Error de conexión: ${reason}';
 }
 
 // Path: <root>
@@ -45292,6 +45457,53 @@ class _StringsFr extends _StringsEn {
   String get gal_card_lookup_max_height => 'Hauteur max de la carte en jeu';
   @override
   String get handlebar_clip_timestamp => 'Horodatage de l\'extrait';
+  @override
+  String get discovery_opds_settings_title => 'Catalogues OPDS';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Parcourez et téléchargez des livres et des BD depuis votre propre serveur OPDS, par exemple BookOrbit, Calibre-Web, Komga ou Kavita';
+  @override
+  String get discovery_opds_add => 'Ajouter un serveur OPDS';
+  @override
+  String get discovery_opds_remove => 'Retirer';
+  @override
+  String get discovery_opds_enabled => 'Activé';
+  @override
+  String get discovery_opds_name => 'Nom affiché';
+  @override
+  String get discovery_opds_name_hint =>
+      'Laissez vide pour utiliser le nom d\'hôte';
+  @override
+  String get discovery_opds_url => 'URL du catalogue';
+  @override
+  String get discovery_opds_url_hint =>
+      'Le point d\'accès OPDS, par exemple https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Saisissez une URL de catalogue HTTP ou HTTPS valide';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Le HTTP en clair nécessite l\'interrupteur ci-dessous';
+  @override
+  String get discovery_opds_username => 'Nom d\'utilisateur';
+  @override
+  String get discovery_opds_username_hint =>
+      'Laissez vide pour un catalogue public';
+  @override
+  String get discovery_opds_password => 'Mot de passe';
+  @override
+  String get discovery_opds_allow_http => 'Autoriser le HTTP en clair';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Nécessaire pour un serveur auto-hébergé sur votre réseau local';
+  @override
+  String get discovery_opds_test => 'Tester la connexion';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connecté. Le catalogue racine contient ${count} entrées';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Échec de la connexion : ${reason}';
 }
 
 // Path: <root>
@@ -55105,6 +55317,51 @@ class _StringsId extends _StringsEn {
   String get gal_card_lookup_max_height => 'Tinggi maks kartu dalam game';
   @override
   String get handlebar_clip_timestamp => 'Stempel waktu klip';
+  @override
+  String get discovery_opds_settings_title => 'Katalog OPDS';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Jelajahi dan unduh buku serta komik dari server OPDS milikmu sendiri, seperti BookOrbit, Calibre-Web, Komga, atau Kavita';
+  @override
+  String get discovery_opds_add => 'Tambah server OPDS';
+  @override
+  String get discovery_opds_remove => 'Hapus';
+  @override
+  String get discovery_opds_enabled => 'Aktif';
+  @override
+  String get discovery_opds_name => 'Nama tampilan';
+  @override
+  String get discovery_opds_name_hint => 'Kosongkan untuk memakai nama host';
+  @override
+  String get discovery_opds_url => 'URL katalog';
+  @override
+  String get discovery_opds_url_hint =>
+      'Endpoint OPDS, misalnya https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Masukkan URL katalog HTTP atau HTTPS yang valid';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'HTTP polos memerlukan sakelar di bawah';
+  @override
+  String get discovery_opds_username => 'Nama pengguna';
+  @override
+  String get discovery_opds_username_hint => 'Kosongkan untuk katalog publik';
+  @override
+  String get discovery_opds_password => 'Kata sandi';
+  @override
+  String get discovery_opds_allow_http => 'Izinkan HTTP polos';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Diperlukan untuk server milik sendiri di jaringan lokal';
+  @override
+  String get discovery_opds_test => 'Uji koneksi';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Terhubung. Katalog akar berisi ${count} entri';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Koneksi gagal: ${reason}';
 }
 
 // Path: <root>
@@ -65005,6 +65262,52 @@ class _StringsIt extends _StringsEn {
   String get gal_card_lookup_max_height => 'Altezza max carta nel gioco';
   @override
   String get handlebar_clip_timestamp => 'Timestamp della clip';
+  @override
+  String get discovery_opds_settings_title => 'Cataloghi OPDS';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Sfoglia e scarica libri e fumetti dal tuo server OPDS, ad esempio BookOrbit, Calibre-Web, Komga o Kavita';
+  @override
+  String get discovery_opds_add => 'Aggiungi server OPDS';
+  @override
+  String get discovery_opds_remove => 'Rimuovi';
+  @override
+  String get discovery_opds_enabled => 'Attivo';
+  @override
+  String get discovery_opds_name => 'Nome visualizzato';
+  @override
+  String get discovery_opds_name_hint => 'Lascia vuoto per usare il nome host';
+  @override
+  String get discovery_opds_url => 'URL del catalogo';
+  @override
+  String get discovery_opds_url_hint =>
+      'L\'endpoint OPDS, ad esempio https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Inserisci un URL di catalogo HTTP o HTTPS valido';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'L\'HTTP in chiaro richiede l\'interruttore qui sotto';
+  @override
+  String get discovery_opds_username => 'Nome utente';
+  @override
+  String get discovery_opds_username_hint =>
+      'Lascia vuoto per un catalogo pubblico';
+  @override
+  String get discovery_opds_password => 'Password';
+  @override
+  String get discovery_opds_allow_http => 'Consenti HTTP in chiaro';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Necessario per un server self-hosted sulla rete locale';
+  @override
+  String get discovery_opds_test => 'Prova connessione';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Connesso. Il catalogo radice ha ${count} voci';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Connessione non riuscita: ${reason}';
 }
 
 // Path: <root>
@@ -74309,6 +74612,49 @@ class _StringsJa extends _StringsEn {
   String get gal_card_lookup_max_height => 'ゲーム内辞書カードの最大高さ';
   @override
   String get handlebar_clip_timestamp => 'クリップの時間';
+  @override
+  String get discovery_opds_settings_title => 'OPDS カタログ';
+  @override
+  String get discovery_opds_settings_hint =>
+      'BookOrbit、Calibre-Web、Komga、Kavita など自分の OPDS サーバーから書籍やマンガを閲覧・ダウンロードします';
+  @override
+  String get discovery_opds_add => 'OPDS サーバーを追加';
+  @override
+  String get discovery_opds_remove => '削除';
+  @override
+  String get discovery_opds_enabled => '有効';
+  @override
+  String get discovery_opds_name => '表示名';
+  @override
+  String get discovery_opds_name_hint => '空欄にするとホスト名を使います';
+  @override
+  String get discovery_opds_url => 'カタログ URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'OPDS エンドポイント。例: https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      '有効な HTTP または HTTPS のカタログ URL を入力してください';
+  @override
+  String get discovery_opds_url_needs_http_optin => '平文 HTTP には下のスイッチが必要です';
+  @override
+  String get discovery_opds_username => 'ユーザー名';
+  @override
+  String get discovery_opds_username_hint => '公開カタログなら空欄のままで構いません';
+  @override
+  String get discovery_opds_password => 'パスワード';
+  @override
+  String get discovery_opds_allow_http => '平文 HTTP を許可';
+  @override
+  String get discovery_opds_allow_http_hint => 'ローカルネットワークの自前サーバーに必要です';
+  @override
+  String get discovery_opds_test => '接続をテスト';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      '接続しました。ルートカタログに ${count} 件あります';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      '接続に失敗しました: ${reason}';
 }
 
 // Path: <root>
@@ -83624,6 +83970,48 @@ class _StringsKo extends _StringsEn {
   String get gal_card_lookup_max_height => '인게임 사전 카드 최대 높이';
   @override
   String get handlebar_clip_timestamp => '클립 타임스탬프';
+  @override
+  String get discovery_opds_settings_title => 'OPDS 카탈로그';
+  @override
+  String get discovery_opds_settings_hint =>
+      'BookOrbit, Calibre-Web, Komga, Kavita 같은 내 OPDS 서버에서 책과 만화를 둘러보고 내려받습니다';
+  @override
+  String get discovery_opds_add => 'OPDS 서버 추가';
+  @override
+  String get discovery_opds_remove => '제거';
+  @override
+  String get discovery_opds_enabled => '사용';
+  @override
+  String get discovery_opds_name => '표시 이름';
+  @override
+  String get discovery_opds_name_hint => '비워 두면 호스트 이름을 사용합니다';
+  @override
+  String get discovery_opds_url => '카탈로그 URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'OPDS 엔드포인트. 예: https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid => '올바른 HTTP 또는 HTTPS 카탈로그 URL을 입력하세요';
+  @override
+  String get discovery_opds_url_needs_http_optin => '일반 HTTP는 아래 스위치를 켜야 합니다';
+  @override
+  String get discovery_opds_username => '사용자 이름';
+  @override
+  String get discovery_opds_username_hint => '공개 카탈로그라면 비워 두세요';
+  @override
+  String get discovery_opds_password => '비밀번호';
+  @override
+  String get discovery_opds_allow_http => '일반 HTTP 허용';
+  @override
+  String get discovery_opds_allow_http_hint => '로컬 네트워크의 자체 호스팅 서버에 필요합니다';
+  @override
+  String get discovery_opds_test => '연결 테스트';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      '연결되었습니다. 루트 카탈로그에 ${count}개 항목이 있습니다';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      '연결 실패: ${reason}';
 }
 
 // Path: <root>
@@ -93479,6 +93867,53 @@ class _StringsNl extends _StringsEn {
   String get gal_card_lookup_max_height => 'In-game zoekkaart max. hoogte';
   @override
   String get handlebar_clip_timestamp => 'Tijdstempel van fragment';
+  @override
+  String get discovery_opds_settings_title => 'OPDS-catalogi';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Blader door en download boeken en strips van je eigen OPDS-server, zoals BookOrbit, Calibre-Web, Komga of Kavita';
+  @override
+  String get discovery_opds_add => 'OPDS-server toevoegen';
+  @override
+  String get discovery_opds_remove => 'Verwijderen';
+  @override
+  String get discovery_opds_enabled => 'Ingeschakeld';
+  @override
+  String get discovery_opds_name => 'Weergavenaam';
+  @override
+  String get discovery_opds_name_hint =>
+      'Laat leeg om de hostnaam te gebruiken';
+  @override
+  String get discovery_opds_url => 'Catalogus-URL';
+  @override
+  String get discovery_opds_url_hint =>
+      'Het OPDS-eindpunt, bijvoorbeeld https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Voer een geldige HTTP- of HTTPS-catalogus-URL in';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Onversleutelde HTTP vereist de schakelaar hieronder';
+  @override
+  String get discovery_opds_username => 'Gebruikersnaam';
+  @override
+  String get discovery_opds_username_hint =>
+      'Laat leeg voor een openbare catalogus';
+  @override
+  String get discovery_opds_password => 'Wachtwoord';
+  @override
+  String get discovery_opds_allow_http => 'Onversleutelde HTTP toestaan';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Nodig voor een zelfgehoste server in je lokale netwerk';
+  @override
+  String get discovery_opds_test => 'Verbinding testen';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Verbonden. De hoofdcatalogus heeft ${count} items';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Verbinding mislukt: ${reason}';
 }
 
 // Path: <root>
@@ -103387,6 +103822,52 @@ class _StringsPtBr extends _StringsEn {
   String get gal_card_lookup_max_height => 'Altura máxima do cartão no jogo';
   @override
   String get handlebar_clip_timestamp => 'Marca de tempo do trecho';
+  @override
+  String get discovery_opds_settings_title => 'Catálogos OPDS';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Navegue e baixe livros e quadrinhos do seu próprio servidor OPDS, como BookOrbit, Calibre-Web, Komga ou Kavita';
+  @override
+  String get discovery_opds_add => 'Adicionar servidor OPDS';
+  @override
+  String get discovery_opds_remove => 'Remover';
+  @override
+  String get discovery_opds_enabled => 'Ativado';
+  @override
+  String get discovery_opds_name => 'Nome exibido';
+  @override
+  String get discovery_opds_name_hint => 'Deixe vazio para usar o nome do host';
+  @override
+  String get discovery_opds_url => 'URL do catálogo';
+  @override
+  String get discovery_opds_url_hint =>
+      'O endpoint OPDS, por exemplo https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Informe uma URL de catálogo HTTP ou HTTPS válida';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'HTTP sem criptografia exige a chave abaixo';
+  @override
+  String get discovery_opds_username => 'Usuário';
+  @override
+  String get discovery_opds_username_hint =>
+      'Deixe vazio para um catálogo público';
+  @override
+  String get discovery_opds_password => 'Senha';
+  @override
+  String get discovery_opds_allow_http => 'Permitir HTTP sem criptografia';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Necessário para um servidor auto-hospedado na sua rede local';
+  @override
+  String get discovery_opds_test => 'Testar conexão';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Conectado. O catálogo raiz tem ${count} itens';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Falha na conexão: ${reason}';
 }
 
 // Path: <root>
@@ -113271,6 +113752,53 @@ class _StringsRu extends _StringsEn {
   String get gal_card_lookup_max_height => 'Макс. высота карточки в игре';
   @override
   String get handlebar_clip_timestamp => 'Метка времени фрагмента';
+  @override
+  String get discovery_opds_settings_title => 'Каталоги OPDS';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Просматривайте и скачивайте книги и комиксы со своего сервера OPDS, например BookOrbit, Calibre-Web, Komga или Kavita';
+  @override
+  String get discovery_opds_add => 'Добавить сервер OPDS';
+  @override
+  String get discovery_opds_remove => 'Удалить';
+  @override
+  String get discovery_opds_enabled => 'Включено';
+  @override
+  String get discovery_opds_name => 'Отображаемое имя';
+  @override
+  String get discovery_opds_name_hint =>
+      'Оставьте пустым, чтобы использовать имя хоста';
+  @override
+  String get discovery_opds_url => 'URL каталога';
+  @override
+  String get discovery_opds_url_hint =>
+      'Точка доступа OPDS, например https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Введите корректный URL каталога по HTTP или HTTPS';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Для обычного HTTP нужно включить переключатель ниже';
+  @override
+  String get discovery_opds_username => 'Имя пользователя';
+  @override
+  String get discovery_opds_username_hint =>
+      'Для публичного каталога оставьте пустым';
+  @override
+  String get discovery_opds_password => 'Пароль';
+  @override
+  String get discovery_opds_allow_http => 'Разрешить обычный HTTP';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Нужно для сервера, размещённого в вашей локальной сети';
+  @override
+  String get discovery_opds_test => 'Проверить соединение';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Подключено. В корневом каталоге ${count} записей';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Не удалось подключиться: ${reason}';
 }
 
 // Path: <root>
@@ -122959,6 +123487,52 @@ class _StringsTh extends _StringsEn {
   String get gal_card_lookup_max_height => 'ความสูงสูงสุดของการ์ดในเกม';
   @override
   String get handlebar_clip_timestamp => 'เวลาของคลิป';
+  @override
+  String get discovery_opds_settings_title => 'แคตตาล็อก OPDS';
+  @override
+  String get discovery_opds_settings_hint =>
+      'เรียกดูและดาวน์โหลดหนังสือและการ์ตูนจากเซิร์ฟเวอร์ OPDS ของคุณเอง เช่น BookOrbit, Calibre-Web, Komga หรือ Kavita';
+  @override
+  String get discovery_opds_add => 'เพิ่มเซิร์ฟเวอร์ OPDS';
+  @override
+  String get discovery_opds_remove => 'นำออก';
+  @override
+  String get discovery_opds_enabled => 'เปิดใช้งาน';
+  @override
+  String get discovery_opds_name => 'ชื่อที่แสดง';
+  @override
+  String get discovery_opds_name_hint => 'เว้นว่างไว้เพื่อใช้ชื่อโฮสต์';
+  @override
+  String get discovery_opds_url => 'URL แคตตาล็อก';
+  @override
+  String get discovery_opds_url_hint =>
+      'ปลายทาง OPDS เช่น https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'กรอก URL แคตตาล็อกแบบ HTTP หรือ HTTPS ที่ถูกต้อง';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'HTTP แบบไม่เข้ารหัสต้องเปิดสวิตช์ด้านล่าง';
+  @override
+  String get discovery_opds_username => 'ชื่อผู้ใช้';
+  @override
+  String get discovery_opds_username_hint =>
+      'เว้นว่างไว้สำหรับแคตตาล็อกสาธารณะ';
+  @override
+  String get discovery_opds_password => 'รหัสผ่าน';
+  @override
+  String get discovery_opds_allow_http => 'อนุญาต HTTP แบบไม่เข้ารหัส';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'จำเป็นสำหรับเซิร์ฟเวอร์ที่โฮสต์เองในเครือข่ายภายใน';
+  @override
+  String get discovery_opds_test => 'ทดสอบการเชื่อมต่อ';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'เชื่อมต่อแล้ว แคตตาล็อกรากมี ${count} รายการ';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'เชื่อมต่อไม่สำเร็จ: ${reason}';
 }
 
 // Path: <root>
@@ -132762,6 +133336,53 @@ class _StringsTr extends _StringsEn {
   String get gal_card_lookup_max_height => 'Oyun içi kart maks. yükseklik';
   @override
   String get handlebar_clip_timestamp => 'Klip zaman damgası';
+  @override
+  String get discovery_opds_settings_title => 'OPDS katalogları';
+  @override
+  String get discovery_opds_settings_hint =>
+      'BookOrbit, Calibre-Web, Komga veya Kavita gibi kendi OPDS sunucundan kitap ve çizgi roman gözat ve indir';
+  @override
+  String get discovery_opds_add => 'OPDS sunucusu ekle';
+  @override
+  String get discovery_opds_remove => 'Kaldır';
+  @override
+  String get discovery_opds_enabled => 'Etkin';
+  @override
+  String get discovery_opds_name => 'Görünen ad';
+  @override
+  String get discovery_opds_name_hint =>
+      'Ana bilgisayar adını kullanmak için boş bırak';
+  @override
+  String get discovery_opds_url => 'Katalog URL\'si';
+  @override
+  String get discovery_opds_url_hint =>
+      'OPDS uç noktası, örneğin https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Geçerli bir HTTP veya HTTPS katalog URL\'si gir';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'Şifresiz HTTP için aşağıdaki anahtar gerekir';
+  @override
+  String get discovery_opds_username => 'Kullanıcı adı';
+  @override
+  String get discovery_opds_username_hint =>
+      'Herkese açık katalog için boş bırak';
+  @override
+  String get discovery_opds_password => 'Parola';
+  @override
+  String get discovery_opds_allow_http => 'Şifresiz HTTP\'ye izin ver';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Yerel ağdaki kendi sunucun için gerekli';
+  @override
+  String get discovery_opds_test => 'Bağlantıyı sına';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Bağlanıldı. Kök katalogda ${count} girdi var';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Bağlantı başarısız: ${reason}';
 }
 
 // Path: <root>
@@ -142539,6 +143160,52 @@ class _StringsVi extends _StringsEn {
       'Chiều cao tối đa thẻ trong trò chơi';
   @override
   String get handlebar_clip_timestamp => 'Dấu thời gian đoạn cắt';
+  @override
+  String get discovery_opds_settings_title => 'Danh mục OPDS';
+  @override
+  String get discovery_opds_settings_hint =>
+      'Duyệt và tải sách, truyện tranh từ máy chủ OPDS của riêng bạn, chẳng hạn BookOrbit, Calibre-Web, Komga hoặc Kavita';
+  @override
+  String get discovery_opds_add => 'Thêm máy chủ OPDS';
+  @override
+  String get discovery_opds_remove => 'Gỡ bỏ';
+  @override
+  String get discovery_opds_enabled => 'Đã bật';
+  @override
+  String get discovery_opds_name => 'Tên hiển thị';
+  @override
+  String get discovery_opds_name_hint => 'Để trống để dùng tên máy chủ';
+  @override
+  String get discovery_opds_url => 'URL danh mục';
+  @override
+  String get discovery_opds_url_hint =>
+      'Điểm cuối OPDS, ví dụ https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid =>
+      'Nhập URL danh mục HTTP hoặc HTTPS hợp lệ';
+  @override
+  String get discovery_opds_url_needs_http_optin =>
+      'HTTP không mã hóa cần bật công tắc bên dưới';
+  @override
+  String get discovery_opds_username => 'Tên đăng nhập';
+  @override
+  String get discovery_opds_username_hint =>
+      'Để trống nếu là danh mục công khai';
+  @override
+  String get discovery_opds_password => 'Mật khẩu';
+  @override
+  String get discovery_opds_allow_http => 'Cho phép HTTP không mã hóa';
+  @override
+  String get discovery_opds_allow_http_hint =>
+      'Cần thiết cho máy chủ tự dựng trong mạng nội bộ';
+  @override
+  String get discovery_opds_test => 'Kiểm tra kết nối';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      'Đã kết nối. Danh mục gốc có ${count} mục';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      'Kết nối thất bại: ${reason}';
 }
 
 // Path: <root>
@@ -151524,6 +152191,48 @@ class _StringsZhCn extends _StringsEn {
   String get gal_card_lookup_max_height => '游戏内查词卡最大高度';
   @override
   String get handlebar_clip_timestamp => '片段时间';
+  @override
+  String get discovery_opds_settings_title => 'OPDS 书目服务器';
+  @override
+  String get discovery_opds_settings_hint =>
+      '从你自己的 OPDS 服务器浏览并下载书籍与漫画，例如 BookOrbit、Calibre-Web、Komga、Kavita';
+  @override
+  String get discovery_opds_add => '添加 OPDS 服务器';
+  @override
+  String get discovery_opds_remove => '移除';
+  @override
+  String get discovery_opds_enabled => '启用';
+  @override
+  String get discovery_opds_name => '显示名';
+  @override
+  String get discovery_opds_name_hint => '留空则使用主机名';
+  @override
+  String get discovery_opds_url => '目录地址';
+  @override
+  String get discovery_opds_url_hint =>
+      'OPDS 端点，例如 https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid => '请填写有效的 HTTP 或 HTTPS 目录地址';
+  @override
+  String get discovery_opds_url_needs_http_optin => '明文 HTTP 需要打开下面的开关';
+  @override
+  String get discovery_opds_username => '用户名';
+  @override
+  String get discovery_opds_username_hint => '公开目录留空即可';
+  @override
+  String get discovery_opds_password => '密码';
+  @override
+  String get discovery_opds_allow_http => '允许明文 HTTP';
+  @override
+  String get discovery_opds_allow_http_hint => '局域网自建服务器需要打开';
+  @override
+  String get discovery_opds_test => '测试连接';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      '连接成功，根目录有 ${count} 个条目';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      '连接失败：${reason}';
 }
 
 // Path: <root>
@@ -160525,6 +161234,48 @@ class _StringsZhHk extends _StringsEn {
   String get gal_card_lookup_max_height => '遊戲內查詞卡最大高度';
   @override
   String get handlebar_clip_timestamp => '片段時間';
+  @override
+  String get discovery_opds_settings_title => 'OPDS 書目伺服器';
+  @override
+  String get discovery_opds_settings_hint =>
+      '從你自己的 OPDS 伺服器瀏覽並下載書籍與漫畫，例如 BookOrbit、Calibre-Web、Komga、Kavita';
+  @override
+  String get discovery_opds_add => '新增 OPDS 伺服器';
+  @override
+  String get discovery_opds_remove => '移除';
+  @override
+  String get discovery_opds_enabled => '啟用';
+  @override
+  String get discovery_opds_name => '顯示名稱';
+  @override
+  String get discovery_opds_name_hint => '留空則使用主機名稱';
+  @override
+  String get discovery_opds_url => '目錄地址';
+  @override
+  String get discovery_opds_url_hint =>
+      'OPDS 端點，例如 https://books.example.com/api/v1/opds';
+  @override
+  String get discovery_opds_url_invalid => '請填寫有效的 HTTP 或 HTTPS 目錄地址';
+  @override
+  String get discovery_opds_url_needs_http_optin => '明文 HTTP 需要開啟下面的開關';
+  @override
+  String get discovery_opds_username => '使用者名稱';
+  @override
+  String get discovery_opds_username_hint => '公開目錄留空即可';
+  @override
+  String get discovery_opds_password => '密碼';
+  @override
+  String get discovery_opds_allow_http => '允許明文 HTTP';
+  @override
+  String get discovery_opds_allow_http_hint => '區域網絡自建伺服器需要開啟';
+  @override
+  String get discovery_opds_test => '測試連線';
+  @override
+  String discovery_opds_test_ok({required Object count}) =>
+      '連線成功，根目錄有 ${count} 個項目';
+  @override
+  String discovery_opds_test_failed({required Object reason}) =>
+      '連線失敗：${reason}';
 }
 
 /// Flat map(s) containing all translations.
@@ -169062,6 +169813,45 @@ extension on _StringsEn {
         return 'In-game card max height';
       case 'handlebar_clip_timestamp':
         return 'Clip timestamp';
+      case 'discovery_opds_settings_title':
+        return 'OPDS catalogs';
+      case 'discovery_opds_settings_hint':
+        return 'Browse and download books and comics from your own OPDS server, such as BookOrbit, Calibre-Web, Komga or Kavita';
+      case 'discovery_opds_add':
+        return 'Add OPDS server';
+      case 'discovery_opds_remove':
+        return 'Remove';
+      case 'discovery_opds_enabled':
+        return 'Enabled';
+      case 'discovery_opds_name':
+        return 'Display name';
+      case 'discovery_opds_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_opds_url':
+        return 'Catalog URL';
+      case 'discovery_opds_url_hint':
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Enter a valid HTTP or HTTPS catalog URL';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_opds_username':
+        return 'Username';
+      case 'discovery_opds_username_hint':
+        return 'Leave empty for a public catalog';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_test':
+        return 'Test connection';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
       default:
         return null;
     }
@@ -177594,6 +178384,45 @@ extension on _StringsAr {
         return 'الارتفاع الأقصى للبطاقة داخل اللعبة';
       case 'handlebar_clip_timestamp':
         return 'الطابع الزمني للمقطع';
+      case 'discovery_opds_settings_title':
+        return 'فهارس OPDS';
+      case 'discovery_opds_settings_hint':
+        return 'تصفّح وحمّل الكتب والقصص المصورة من خادم OPDS الخاص بك، مثل BookOrbit أو Calibre-Web أو Komga أو Kavita';
+      case 'discovery_opds_add':
+        return 'إضافة خادم OPDS';
+      case 'discovery_opds_remove':
+        return 'إزالة';
+      case 'discovery_opds_enabled':
+        return 'مُفعّل';
+      case 'discovery_opds_name':
+        return 'الاسم المعروض';
+      case 'discovery_opds_name_hint':
+        return 'اتركه فارغًا لاستخدام اسم المضيف';
+      case 'discovery_opds_url':
+        return 'رابط الفهرس';
+      case 'discovery_opds_url_hint':
+        return 'نقطة نهاية OPDS، مثال https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'أدخل رابط فهرس HTTP أو HTTPS صالحًا';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'يتطلب HTTP غير المشفّر تفعيل المفتاح أدناه';
+      case 'discovery_opds_username':
+        return 'اسم المستخدم';
+      case 'discovery_opds_username_hint':
+        return 'اتركه فارغًا للفهرس العام';
+      case 'discovery_opds_password':
+        return 'كلمة المرور';
+      case 'discovery_opds_allow_http':
+        return 'السماح بـ HTTP غير المشفّر';
+      case 'discovery_opds_allow_http_hint':
+        return 'مطلوب لخادم ذاتي الاستضافة على شبكتك المحلية';
+      case 'discovery_opds_test':
+        return 'اختبار الاتصال';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'تم الاتصال. يحتوي الفهرس الجذر على ${count} عنصرًا';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'فشل الاتصال: ${reason}';
       default:
         return null;
     }
@@ -186170,6 +186999,46 @@ extension on _StringsDe {
         return 'Max. Höhe der Nachschlagekarte im Spiel';
       case 'handlebar_clip_timestamp':
         return 'Clip-Zeitstempel';
+      case 'discovery_opds_settings_title':
+        return 'OPDS-Kataloge';
+      case 'discovery_opds_settings_hint':
+        return 'Bücher und Comics von deinem eigenen OPDS-Server durchsuchen und herunterladen, etwa BookOrbit, Calibre-Web, Komga oder Kavita';
+      case 'discovery_opds_add':
+        return 'OPDS-Server hinzufügen';
+      case 'discovery_opds_remove':
+        return 'Entfernen';
+      case 'discovery_opds_enabled':
+        return 'Aktiviert';
+      case 'discovery_opds_name':
+        return 'Anzeigename';
+      case 'discovery_opds_name_hint':
+        return 'Leer lassen, um den Hostnamen zu verwenden';
+      case 'discovery_opds_url':
+        return 'Katalog-URL';
+      case 'discovery_opds_url_hint':
+        return 'Der OPDS-Endpunkt, zum Beispiel https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Gib eine gültige HTTP- oder HTTPS-Katalog-URL ein';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Unverschlüsseltes HTTP erfordert den Schalter unten';
+      case 'discovery_opds_username':
+        return 'Benutzername';
+      case 'discovery_opds_username_hint':
+        return 'Für einen öffentlichen Katalog leer lassen';
+      case 'discovery_opds_password':
+        return 'Passwort';
+      case 'discovery_opds_allow_http':
+        return 'Unverschlüsseltes HTTP erlauben';
+      case 'discovery_opds_allow_http_hint':
+        return 'Nötig für einen selbst gehosteten Server im lokalen Netzwerk';
+      case 'discovery_opds_test':
+        return 'Verbindung testen';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Verbunden. Der Stammkatalog hat ${count} Einträge';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) =>
+            'Verbindung fehlgeschlagen: ${reason}';
       default:
         return null;
     }
@@ -194738,6 +195607,45 @@ extension on _StringsEs {
         return 'Altura máxima de la tarjeta dentro del juego';
       case 'handlebar_clip_timestamp':
         return 'Marca de tiempo del fragmento';
+      case 'discovery_opds_settings_title':
+        return 'Catálogos OPDS';
+      case 'discovery_opds_settings_hint':
+        return 'Explora y descarga libros y cómics desde tu propio servidor OPDS, como BookOrbit, Calibre-Web, Komga o Kavita';
+      case 'discovery_opds_add':
+        return 'Añadir servidor OPDS';
+      case 'discovery_opds_remove':
+        return 'Quitar';
+      case 'discovery_opds_enabled':
+        return 'Activado';
+      case 'discovery_opds_name':
+        return 'Nombre visible';
+      case 'discovery_opds_name_hint':
+        return 'Déjalo vacío para usar el nombre del host';
+      case 'discovery_opds_url':
+        return 'URL del catálogo';
+      case 'discovery_opds_url_hint':
+        return 'El punto de acceso OPDS, por ejemplo https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Introduce una URL de catálogo HTTP o HTTPS válida';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'El HTTP sin cifrar necesita el interruptor de abajo';
+      case 'discovery_opds_username':
+        return 'Usuario';
+      case 'discovery_opds_username_hint':
+        return 'Déjalo vacío para un catálogo público';
+      case 'discovery_opds_password':
+        return 'Contraseña';
+      case 'discovery_opds_allow_http':
+        return 'Permitir HTTP sin cifrar';
+      case 'discovery_opds_allow_http_hint':
+        return 'Necesario para un servidor autoalojado en tu red local';
+      case 'discovery_opds_test':
+        return 'Probar conexión';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Conectado. El catálogo raíz tiene ${count} entradas';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Error de conexión: ${reason}';
       default:
         return null;
     }
@@ -203314,6 +204222,46 @@ extension on _StringsFr {
         return 'Hauteur max de la carte en jeu';
       case 'handlebar_clip_timestamp':
         return 'Horodatage de l\'extrait';
+      case 'discovery_opds_settings_title':
+        return 'Catalogues OPDS';
+      case 'discovery_opds_settings_hint':
+        return 'Parcourez et téléchargez des livres et des BD depuis votre propre serveur OPDS, par exemple BookOrbit, Calibre-Web, Komga ou Kavita';
+      case 'discovery_opds_add':
+        return 'Ajouter un serveur OPDS';
+      case 'discovery_opds_remove':
+        return 'Retirer';
+      case 'discovery_opds_enabled':
+        return 'Activé';
+      case 'discovery_opds_name':
+        return 'Nom affiché';
+      case 'discovery_opds_name_hint':
+        return 'Laissez vide pour utiliser le nom d\'hôte';
+      case 'discovery_opds_url':
+        return 'URL du catalogue';
+      case 'discovery_opds_url_hint':
+        return 'Le point d\'accès OPDS, par exemple https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Saisissez une URL de catalogue HTTP ou HTTPS valide';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Le HTTP en clair nécessite l\'interrupteur ci-dessous';
+      case 'discovery_opds_username':
+        return 'Nom d\'utilisateur';
+      case 'discovery_opds_username_hint':
+        return 'Laissez vide pour un catalogue public';
+      case 'discovery_opds_password':
+        return 'Mot de passe';
+      case 'discovery_opds_allow_http':
+        return 'Autoriser le HTTP en clair';
+      case 'discovery_opds_allow_http_hint':
+        return 'Nécessaire pour un serveur auto-hébergé sur votre réseau local';
+      case 'discovery_opds_test':
+        return 'Tester la connexion';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connecté. Le catalogue racine contient ${count} entrées';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) =>
+            'Échec de la connexion : ${reason}';
       default:
         return null;
     }
@@ -211862,6 +212810,45 @@ extension on _StringsId {
         return 'Tinggi maks kartu dalam game';
       case 'handlebar_clip_timestamp':
         return 'Stempel waktu klip';
+      case 'discovery_opds_settings_title':
+        return 'Katalog OPDS';
+      case 'discovery_opds_settings_hint':
+        return 'Jelajahi dan unduh buku serta komik dari server OPDS milikmu sendiri, seperti BookOrbit, Calibre-Web, Komga, atau Kavita';
+      case 'discovery_opds_add':
+        return 'Tambah server OPDS';
+      case 'discovery_opds_remove':
+        return 'Hapus';
+      case 'discovery_opds_enabled':
+        return 'Aktif';
+      case 'discovery_opds_name':
+        return 'Nama tampilan';
+      case 'discovery_opds_name_hint':
+        return 'Kosongkan untuk memakai nama host';
+      case 'discovery_opds_url':
+        return 'URL katalog';
+      case 'discovery_opds_url_hint':
+        return 'Endpoint OPDS, misalnya https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Masukkan URL katalog HTTP atau HTTPS yang valid';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'HTTP polos memerlukan sakelar di bawah';
+      case 'discovery_opds_username':
+        return 'Nama pengguna';
+      case 'discovery_opds_username_hint':
+        return 'Kosongkan untuk katalog publik';
+      case 'discovery_opds_password':
+        return 'Kata sandi';
+      case 'discovery_opds_allow_http':
+        return 'Izinkan HTTP polos';
+      case 'discovery_opds_allow_http_hint':
+        return 'Diperlukan untuk server milik sendiri di jaringan lokal';
+      case 'discovery_opds_test':
+        return 'Uji koneksi';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Terhubung. Katalog akar berisi ${count} entri';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Koneksi gagal: ${reason}';
       default:
         return null;
     }
@@ -220431,6 +221418,46 @@ extension on _StringsIt {
         return 'Altezza max carta nel gioco';
       case 'handlebar_clip_timestamp':
         return 'Timestamp della clip';
+      case 'discovery_opds_settings_title':
+        return 'Cataloghi OPDS';
+      case 'discovery_opds_settings_hint':
+        return 'Sfoglia e scarica libri e fumetti dal tuo server OPDS, ad esempio BookOrbit, Calibre-Web, Komga o Kavita';
+      case 'discovery_opds_add':
+        return 'Aggiungi server OPDS';
+      case 'discovery_opds_remove':
+        return 'Rimuovi';
+      case 'discovery_opds_enabled':
+        return 'Attivo';
+      case 'discovery_opds_name':
+        return 'Nome visualizzato';
+      case 'discovery_opds_name_hint':
+        return 'Lascia vuoto per usare il nome host';
+      case 'discovery_opds_url':
+        return 'URL del catalogo';
+      case 'discovery_opds_url_hint':
+        return 'L\'endpoint OPDS, ad esempio https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Inserisci un URL di catalogo HTTP o HTTPS valido';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'L\'HTTP in chiaro richiede l\'interruttore qui sotto';
+      case 'discovery_opds_username':
+        return 'Nome utente';
+      case 'discovery_opds_username_hint':
+        return 'Lascia vuoto per un catalogo pubblico';
+      case 'discovery_opds_password':
+        return 'Password';
+      case 'discovery_opds_allow_http':
+        return 'Consenti HTTP in chiaro';
+      case 'discovery_opds_allow_http_hint':
+        return 'Necessario per un server self-hosted sulla rete locale';
+      case 'discovery_opds_test':
+        return 'Prova connessione';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Connesso. Il catalogo radice ha ${count} voci';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) =>
+            'Connessione non riuscita: ${reason}';
       default:
         return null;
     }
@@ -228929,6 +229956,44 @@ extension on _StringsJa {
         return 'ゲーム内辞書カードの最大高さ';
       case 'handlebar_clip_timestamp':
         return 'クリップの時間';
+      case 'discovery_opds_settings_title':
+        return 'OPDS カタログ';
+      case 'discovery_opds_settings_hint':
+        return 'BookOrbit、Calibre-Web、Komga、Kavita など自分の OPDS サーバーから書籍やマンガを閲覧・ダウンロードします';
+      case 'discovery_opds_add':
+        return 'OPDS サーバーを追加';
+      case 'discovery_opds_remove':
+        return '削除';
+      case 'discovery_opds_enabled':
+        return '有効';
+      case 'discovery_opds_name':
+        return '表示名';
+      case 'discovery_opds_name_hint':
+        return '空欄にするとホスト名を使います';
+      case 'discovery_opds_url':
+        return 'カタログ URL';
+      case 'discovery_opds_url_hint':
+        return 'OPDS エンドポイント。例: https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return '有効な HTTP または HTTPS のカタログ URL を入力してください';
+      case 'discovery_opds_url_needs_http_optin':
+        return '平文 HTTP には下のスイッチが必要です';
+      case 'discovery_opds_username':
+        return 'ユーザー名';
+      case 'discovery_opds_username_hint':
+        return '公開カタログなら空欄のままで構いません';
+      case 'discovery_opds_password':
+        return 'パスワード';
+      case 'discovery_opds_allow_http':
+        return '平文 HTTP を許可';
+      case 'discovery_opds_allow_http_hint':
+        return 'ローカルネットワークの自前サーバーに必要です';
+      case 'discovery_opds_test':
+        return '接続をテスト';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) => '接続しました。ルートカタログに ${count} 件あります';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => '接続に失敗しました: ${reason}';
       default:
         return null;
     }
@@ -237430,6 +238495,45 @@ extension on _StringsKo {
         return '인게임 사전 카드 최대 높이';
       case 'handlebar_clip_timestamp':
         return '클립 타임스탬프';
+      case 'discovery_opds_settings_title':
+        return 'OPDS 카탈로그';
+      case 'discovery_opds_settings_hint':
+        return 'BookOrbit, Calibre-Web, Komga, Kavita 같은 내 OPDS 서버에서 책과 만화를 둘러보고 내려받습니다';
+      case 'discovery_opds_add':
+        return 'OPDS 서버 추가';
+      case 'discovery_opds_remove':
+        return '제거';
+      case 'discovery_opds_enabled':
+        return '사용';
+      case 'discovery_opds_name':
+        return '표시 이름';
+      case 'discovery_opds_name_hint':
+        return '비워 두면 호스트 이름을 사용합니다';
+      case 'discovery_opds_url':
+        return '카탈로그 URL';
+      case 'discovery_opds_url_hint':
+        return 'OPDS 엔드포인트. 예: https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return '올바른 HTTP 또는 HTTPS 카탈로그 URL을 입력하세요';
+      case 'discovery_opds_url_needs_http_optin':
+        return '일반 HTTP는 아래 스위치를 켜야 합니다';
+      case 'discovery_opds_username':
+        return '사용자 이름';
+      case 'discovery_opds_username_hint':
+        return '공개 카탈로그라면 비워 두세요';
+      case 'discovery_opds_password':
+        return '비밀번호';
+      case 'discovery_opds_allow_http':
+        return '일반 HTTP 허용';
+      case 'discovery_opds_allow_http_hint':
+        return '로컬 네트워크의 자체 호스팅 서버에 필요합니다';
+      case 'discovery_opds_test':
+        return '연결 테스트';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            '연결되었습니다. 루트 카탈로그에 ${count}개 항목이 있습니다';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => '연결 실패: ${reason}';
       default:
         return null;
     }
@@ -245993,6 +247097,45 @@ extension on _StringsNl {
         return 'In-game zoekkaart max. hoogte';
       case 'handlebar_clip_timestamp':
         return 'Tijdstempel van fragment';
+      case 'discovery_opds_settings_title':
+        return 'OPDS-catalogi';
+      case 'discovery_opds_settings_hint':
+        return 'Blader door en download boeken en strips van je eigen OPDS-server, zoals BookOrbit, Calibre-Web, Komga of Kavita';
+      case 'discovery_opds_add':
+        return 'OPDS-server toevoegen';
+      case 'discovery_opds_remove':
+        return 'Verwijderen';
+      case 'discovery_opds_enabled':
+        return 'Ingeschakeld';
+      case 'discovery_opds_name':
+        return 'Weergavenaam';
+      case 'discovery_opds_name_hint':
+        return 'Laat leeg om de hostnaam te gebruiken';
+      case 'discovery_opds_url':
+        return 'Catalogus-URL';
+      case 'discovery_opds_url_hint':
+        return 'Het OPDS-eindpunt, bijvoorbeeld https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Voer een geldige HTTP- of HTTPS-catalogus-URL in';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Onversleutelde HTTP vereist de schakelaar hieronder';
+      case 'discovery_opds_username':
+        return 'Gebruikersnaam';
+      case 'discovery_opds_username_hint':
+        return 'Laat leeg voor een openbare catalogus';
+      case 'discovery_opds_password':
+        return 'Wachtwoord';
+      case 'discovery_opds_allow_http':
+        return 'Onversleutelde HTTP toestaan';
+      case 'discovery_opds_allow_http_hint':
+        return 'Nodig voor een zelfgehoste server in je lokale netwerk';
+      case 'discovery_opds_test':
+        return 'Verbinding testen';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Verbonden. De hoofdcatalogus heeft ${count} items';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Verbinding mislukt: ${reason}';
       default:
         return null;
     }
@@ -254551,6 +255694,45 @@ extension on _StringsPtBr {
         return 'Altura máxima do cartão no jogo';
       case 'handlebar_clip_timestamp':
         return 'Marca de tempo do trecho';
+      case 'discovery_opds_settings_title':
+        return 'Catálogos OPDS';
+      case 'discovery_opds_settings_hint':
+        return 'Navegue e baixe livros e quadrinhos do seu próprio servidor OPDS, como BookOrbit, Calibre-Web, Komga ou Kavita';
+      case 'discovery_opds_add':
+        return 'Adicionar servidor OPDS';
+      case 'discovery_opds_remove':
+        return 'Remover';
+      case 'discovery_opds_enabled':
+        return 'Ativado';
+      case 'discovery_opds_name':
+        return 'Nome exibido';
+      case 'discovery_opds_name_hint':
+        return 'Deixe vazio para usar o nome do host';
+      case 'discovery_opds_url':
+        return 'URL do catálogo';
+      case 'discovery_opds_url_hint':
+        return 'O endpoint OPDS, por exemplo https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Informe uma URL de catálogo HTTP ou HTTPS válida';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'HTTP sem criptografia exige a chave abaixo';
+      case 'discovery_opds_username':
+        return 'Usuário';
+      case 'discovery_opds_username_hint':
+        return 'Deixe vazio para um catálogo público';
+      case 'discovery_opds_password':
+        return 'Senha';
+      case 'discovery_opds_allow_http':
+        return 'Permitir HTTP sem criptografia';
+      case 'discovery_opds_allow_http_hint':
+        return 'Necessário para um servidor auto-hospedado na sua rede local';
+      case 'discovery_opds_test':
+        return 'Testar conexão';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Conectado. O catálogo raiz tem ${count} itens';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Falha na conexão: ${reason}';
       default:
         return null;
     }
@@ -263115,6 +264297,46 @@ extension on _StringsRu {
         return 'Макс. высота карточки в игре';
       case 'handlebar_clip_timestamp':
         return 'Метка времени фрагмента';
+      case 'discovery_opds_settings_title':
+        return 'Каталоги OPDS';
+      case 'discovery_opds_settings_hint':
+        return 'Просматривайте и скачивайте книги и комиксы со своего сервера OPDS, например BookOrbit, Calibre-Web, Komga или Kavita';
+      case 'discovery_opds_add':
+        return 'Добавить сервер OPDS';
+      case 'discovery_opds_remove':
+        return 'Удалить';
+      case 'discovery_opds_enabled':
+        return 'Включено';
+      case 'discovery_opds_name':
+        return 'Отображаемое имя';
+      case 'discovery_opds_name_hint':
+        return 'Оставьте пустым, чтобы использовать имя хоста';
+      case 'discovery_opds_url':
+        return 'URL каталога';
+      case 'discovery_opds_url_hint':
+        return 'Точка доступа OPDS, например https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Введите корректный URL каталога по HTTP или HTTPS';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Для обычного HTTP нужно включить переключатель ниже';
+      case 'discovery_opds_username':
+        return 'Имя пользователя';
+      case 'discovery_opds_username_hint':
+        return 'Для публичного каталога оставьте пустым';
+      case 'discovery_opds_password':
+        return 'Пароль';
+      case 'discovery_opds_allow_http':
+        return 'Разрешить обычный HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return 'Нужно для сервера, размещённого в вашей локальной сети';
+      case 'discovery_opds_test':
+        return 'Проверить соединение';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Подключено. В корневом каталоге ${count} записей';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) =>
+            'Не удалось подключиться: ${reason}';
       default:
         return null;
     }
@@ -271652,6 +272874,45 @@ extension on _StringsTh {
         return 'ความสูงสูงสุดของการ์ดในเกม';
       case 'handlebar_clip_timestamp':
         return 'เวลาของคลิป';
+      case 'discovery_opds_settings_title':
+        return 'แคตตาล็อก OPDS';
+      case 'discovery_opds_settings_hint':
+        return 'เรียกดูและดาวน์โหลดหนังสือและการ์ตูนจากเซิร์ฟเวอร์ OPDS ของคุณเอง เช่น BookOrbit, Calibre-Web, Komga หรือ Kavita';
+      case 'discovery_opds_add':
+        return 'เพิ่มเซิร์ฟเวอร์ OPDS';
+      case 'discovery_opds_remove':
+        return 'นำออก';
+      case 'discovery_opds_enabled':
+        return 'เปิดใช้งาน';
+      case 'discovery_opds_name':
+        return 'ชื่อที่แสดง';
+      case 'discovery_opds_name_hint':
+        return 'เว้นว่างไว้เพื่อใช้ชื่อโฮสต์';
+      case 'discovery_opds_url':
+        return 'URL แคตตาล็อก';
+      case 'discovery_opds_url_hint':
+        return 'ปลายทาง OPDS เช่น https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'กรอก URL แคตตาล็อกแบบ HTTP หรือ HTTPS ที่ถูกต้อง';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'HTTP แบบไม่เข้ารหัสต้องเปิดสวิตช์ด้านล่าง';
+      case 'discovery_opds_username':
+        return 'ชื่อผู้ใช้';
+      case 'discovery_opds_username_hint':
+        return 'เว้นว่างไว้สำหรับแคตตาล็อกสาธารณะ';
+      case 'discovery_opds_password':
+        return 'รหัสผ่าน';
+      case 'discovery_opds_allow_http':
+        return 'อนุญาต HTTP แบบไม่เข้ารหัส';
+      case 'discovery_opds_allow_http_hint':
+        return 'จำเป็นสำหรับเซิร์ฟเวอร์ที่โฮสต์เองในเครือข่ายภายใน';
+      case 'discovery_opds_test':
+        return 'ทดสอบการเชื่อมต่อ';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'เชื่อมต่อแล้ว แคตตาล็อกรากมี ${count} รายการ';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'เชื่อมต่อไม่สำเร็จ: ${reason}';
       default:
         return null;
     }
@@ -280204,6 +281465,45 @@ extension on _StringsTr {
         return 'Oyun içi kart maks. yükseklik';
       case 'handlebar_clip_timestamp':
         return 'Klip zaman damgası';
+      case 'discovery_opds_settings_title':
+        return 'OPDS katalogları';
+      case 'discovery_opds_settings_hint':
+        return 'BookOrbit, Calibre-Web, Komga veya Kavita gibi kendi OPDS sunucundan kitap ve çizgi roman gözat ve indir';
+      case 'discovery_opds_add':
+        return 'OPDS sunucusu ekle';
+      case 'discovery_opds_remove':
+        return 'Kaldır';
+      case 'discovery_opds_enabled':
+        return 'Etkin';
+      case 'discovery_opds_name':
+        return 'Görünen ad';
+      case 'discovery_opds_name_hint':
+        return 'Ana bilgisayar adını kullanmak için boş bırak';
+      case 'discovery_opds_url':
+        return 'Katalog URL\'si';
+      case 'discovery_opds_url_hint':
+        return 'OPDS uç noktası, örneğin https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Geçerli bir HTTP veya HTTPS katalog URL\'si gir';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'Şifresiz HTTP için aşağıdaki anahtar gerekir';
+      case 'discovery_opds_username':
+        return 'Kullanıcı adı';
+      case 'discovery_opds_username_hint':
+        return 'Herkese açık katalog için boş bırak';
+      case 'discovery_opds_password':
+        return 'Parola';
+      case 'discovery_opds_allow_http':
+        return 'Şifresiz HTTP\'ye izin ver';
+      case 'discovery_opds_allow_http_hint':
+        return 'Yerel ağdaki kendi sunucun için gerekli';
+      case 'discovery_opds_test':
+        return 'Bağlantıyı sına';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Bağlanıldı. Kök katalogda ${count} girdi var';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Bağlantı başarısız: ${reason}';
       default:
         return null;
     }
@@ -288750,6 +290050,45 @@ extension on _StringsVi {
         return 'Chiều cao tối đa thẻ trong trò chơi';
       case 'handlebar_clip_timestamp':
         return 'Dấu thời gian đoạn cắt';
+      case 'discovery_opds_settings_title':
+        return 'Danh mục OPDS';
+      case 'discovery_opds_settings_hint':
+        return 'Duyệt và tải sách, truyện tranh từ máy chủ OPDS của riêng bạn, chẳng hạn BookOrbit, Calibre-Web, Komga hoặc Kavita';
+      case 'discovery_opds_add':
+        return 'Thêm máy chủ OPDS';
+      case 'discovery_opds_remove':
+        return 'Gỡ bỏ';
+      case 'discovery_opds_enabled':
+        return 'Đã bật';
+      case 'discovery_opds_name':
+        return 'Tên hiển thị';
+      case 'discovery_opds_name_hint':
+        return 'Để trống để dùng tên máy chủ';
+      case 'discovery_opds_url':
+        return 'URL danh mục';
+      case 'discovery_opds_url_hint':
+        return 'Điểm cuối OPDS, ví dụ https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return 'Nhập URL danh mục HTTP hoặc HTTPS hợp lệ';
+      case 'discovery_opds_url_needs_http_optin':
+        return 'HTTP không mã hóa cần bật công tắc bên dưới';
+      case 'discovery_opds_username':
+        return 'Tên đăng nhập';
+      case 'discovery_opds_username_hint':
+        return 'Để trống nếu là danh mục công khai';
+      case 'discovery_opds_password':
+        return 'Mật khẩu';
+      case 'discovery_opds_allow_http':
+        return 'Cho phép HTTP không mã hóa';
+      case 'discovery_opds_allow_http_hint':
+        return 'Cần thiết cho máy chủ tự dựng trong mạng nội bộ';
+      case 'discovery_opds_test':
+        return 'Kiểm tra kết nối';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) =>
+            'Đã kết nối. Danh mục gốc có ${count} mục';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => 'Kết nối thất bại: ${reason}';
       default:
         return null;
     }
@@ -297225,6 +298564,44 @@ extension on _StringsZhCn {
         return '游戏内查词卡最大高度';
       case 'handlebar_clip_timestamp':
         return '片段时间';
+      case 'discovery_opds_settings_title':
+        return 'OPDS 书目服务器';
+      case 'discovery_opds_settings_hint':
+        return '从你自己的 OPDS 服务器浏览并下载书籍与漫画，例如 BookOrbit、Calibre-Web、Komga、Kavita';
+      case 'discovery_opds_add':
+        return '添加 OPDS 服务器';
+      case 'discovery_opds_remove':
+        return '移除';
+      case 'discovery_opds_enabled':
+        return '启用';
+      case 'discovery_opds_name':
+        return '显示名';
+      case 'discovery_opds_name_hint':
+        return '留空则使用主机名';
+      case 'discovery_opds_url':
+        return '目录地址';
+      case 'discovery_opds_url_hint':
+        return 'OPDS 端点，例如 https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return '请填写有效的 HTTP 或 HTTPS 目录地址';
+      case 'discovery_opds_url_needs_http_optin':
+        return '明文 HTTP 需要打开下面的开关';
+      case 'discovery_opds_username':
+        return '用户名';
+      case 'discovery_opds_username_hint':
+        return '公开目录留空即可';
+      case 'discovery_opds_password':
+        return '密码';
+      case 'discovery_opds_allow_http':
+        return '允许明文 HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return '局域网自建服务器需要打开';
+      case 'discovery_opds_test':
+        return '测试连接';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) => '连接成功，根目录有 ${count} 个条目';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => '连接失败：${reason}';
       default:
         return null;
     }
@@ -305701,6 +307078,44 @@ extension on _StringsZhHk {
         return '遊戲內查詞卡最大高度';
       case 'handlebar_clip_timestamp':
         return '片段時間';
+      case 'discovery_opds_settings_title':
+        return 'OPDS 書目伺服器';
+      case 'discovery_opds_settings_hint':
+        return '從你自己的 OPDS 伺服器瀏覽並下載書籍與漫畫，例如 BookOrbit、Calibre-Web、Komga、Kavita';
+      case 'discovery_opds_add':
+        return '新增 OPDS 伺服器';
+      case 'discovery_opds_remove':
+        return '移除';
+      case 'discovery_opds_enabled':
+        return '啟用';
+      case 'discovery_opds_name':
+        return '顯示名稱';
+      case 'discovery_opds_name_hint':
+        return '留空則使用主機名稱';
+      case 'discovery_opds_url':
+        return '目錄地址';
+      case 'discovery_opds_url_hint':
+        return 'OPDS 端點，例如 https://books.example.com/api/v1/opds';
+      case 'discovery_opds_url_invalid':
+        return '請填寫有效的 HTTP 或 HTTPS 目錄地址';
+      case 'discovery_opds_url_needs_http_optin':
+        return '明文 HTTP 需要開啟下面的開關';
+      case 'discovery_opds_username':
+        return '使用者名稱';
+      case 'discovery_opds_username_hint':
+        return '公開目錄留空即可';
+      case 'discovery_opds_password':
+        return '密碼';
+      case 'discovery_opds_allow_http':
+        return '允許明文 HTTP';
+      case 'discovery_opds_allow_http_hint':
+        return '區域網絡自建伺服器需要開啟';
+      case 'discovery_opds_test':
+        return '測試連線';
+      case 'discovery_opds_test_ok':
+        return ({required Object count}) => '連線成功，根目錄有 ${count} 個項目';
+      case 'discovery_opds_test_failed':
+        return ({required Object reason}) => '連線失敗：${reason}';
       default:
         return null;
     }
