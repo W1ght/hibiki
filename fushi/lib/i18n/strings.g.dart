@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 70720 (4160 per locale)
+/// Strings: 70737 (4161 per locale)
 ///
-/// Built on 2026-09-02 at 23:37 UTC
+/// Built on 2026-09-03 at 01:38 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5707,6 +5707,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Size the in-game lookup card separately from the desktop overlay card';
   String get gal_card_lookup_max_width => 'In-game card max width';
   String get gal_card_lookup_max_height => 'In-game card max height';
+  String get handlebar_clip_timestamp => 'Clip timestamp';
 }
 
 // Path: <root>
@@ -15403,6 +15404,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get gal_card_lookup_max_height =>
       'الارتفاع الأقصى للبطاقة داخل اللعبة';
+  @override
+  String get handlebar_clip_timestamp => 'الطابع الزمني للمقطع';
 }
 
 // Path: <root>
@@ -25318,6 +25321,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get gal_card_lookup_max_height =>
       'Max. Höhe der Nachschlagekarte im Spiel';
+  @override
+  String get handlebar_clip_timestamp => 'Clip-Zeitstempel';
 }
 
 // Path: <root>
@@ -35284,6 +35289,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get gal_card_lookup_max_height =>
       'Altura máxima de la tarjeta dentro del juego';
+  @override
+  String get handlebar_clip_timestamp => 'Marca de tiempo del fragmento';
 }
 
 // Path: <root>
@@ -45283,6 +45290,8 @@ class _StringsFr extends _StringsEn {
   String get gal_card_lookup_max_width => 'Largeur max de la carte en jeu';
   @override
   String get gal_card_lookup_max_height => 'Hauteur max de la carte en jeu';
+  @override
+  String get handlebar_clip_timestamp => 'Horodatage de l\'extrait';
 }
 
 // Path: <root>
@@ -55094,6 +55103,8 @@ class _StringsId extends _StringsEn {
   String get gal_card_lookup_max_width => 'Lebar maks kartu dalam game';
   @override
   String get gal_card_lookup_max_height => 'Tinggi maks kartu dalam game';
+  @override
+  String get handlebar_clip_timestamp => 'Stempel waktu klip';
 }
 
 // Path: <root>
@@ -64992,6 +65003,8 @@ class _StringsIt extends _StringsEn {
   String get gal_card_lookup_max_width => 'Larghezza max carta nel gioco';
   @override
   String get gal_card_lookup_max_height => 'Altezza max carta nel gioco';
+  @override
+  String get handlebar_clip_timestamp => 'Timestamp della clip';
 }
 
 // Path: <root>
@@ -74294,6 +74307,8 @@ class _StringsJa extends _StringsEn {
   String get gal_card_lookup_max_width => 'ゲーム内辞書カードの最大幅';
   @override
   String get gal_card_lookup_max_height => 'ゲーム内辞書カードの最大高さ';
+  @override
+  String get handlebar_clip_timestamp => 'クリップの時間';
 }
 
 // Path: <root>
@@ -83607,6 +83622,8 @@ class _StringsKo extends _StringsEn {
   String get gal_card_lookup_max_width => '인게임 사전 카드 최대 너비';
   @override
   String get gal_card_lookup_max_height => '인게임 사전 카드 최대 높이';
+  @override
+  String get handlebar_clip_timestamp => '클립 타임스탬프';
 }
 
 // Path: <root>
@@ -93460,6 +93477,8 @@ class _StringsNl extends _StringsEn {
   String get gal_card_lookup_max_width => 'In-game zoekkaart max. breedte';
   @override
   String get gal_card_lookup_max_height => 'In-game zoekkaart max. hoogte';
+  @override
+  String get handlebar_clip_timestamp => 'Tijdstempel van fragment';
 }
 
 // Path: <root>
@@ -103366,6 +103385,8 @@ class _StringsPtBr extends _StringsEn {
   String get gal_card_lookup_max_width => 'Largura máxima do cartão no jogo';
   @override
   String get gal_card_lookup_max_height => 'Altura máxima do cartão no jogo';
+  @override
+  String get handlebar_clip_timestamp => 'Marca de tempo do trecho';
 }
 
 // Path: <root>
@@ -113248,6 +113269,8 @@ class _StringsRu extends _StringsEn {
   String get gal_card_lookup_max_width => 'Макс. ширина карточки в игре';
   @override
   String get gal_card_lookup_max_height => 'Макс. высота карточки в игре';
+  @override
+  String get handlebar_clip_timestamp => 'Метка времени фрагмента';
 }
 
 // Path: <root>
@@ -122934,6 +122957,8 @@ class _StringsTh extends _StringsEn {
   String get gal_card_lookup_max_width => 'ความกว้างสูงสุดของการ์ดในเกม';
   @override
   String get gal_card_lookup_max_height => 'ความสูงสูงสุดของการ์ดในเกม';
+  @override
+  String get handlebar_clip_timestamp => 'เวลาของคลิป';
 }
 
 // Path: <root>
@@ -132735,6 +132760,8 @@ class _StringsTr extends _StringsEn {
   String get gal_card_lookup_max_width => 'Oyun içi kart maks. genişlik';
   @override
   String get gal_card_lookup_max_height => 'Oyun içi kart maks. yükseklik';
+  @override
+  String get handlebar_clip_timestamp => 'Klip zaman damgası';
 }
 
 // Path: <root>
@@ -142510,6 +142537,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get gal_card_lookup_max_height =>
       'Chiều cao tối đa thẻ trong trò chơi';
+  @override
+  String get handlebar_clip_timestamp => 'Dấu thời gian đoạn cắt';
 }
 
 // Path: <root>
@@ -151493,6 +151522,8 @@ class _StringsZhCn extends _StringsEn {
   String get gal_card_lookup_max_width => '游戏内查词卡最大宽度';
   @override
   String get gal_card_lookup_max_height => '游戏内查词卡最大高度';
+  @override
+  String get handlebar_clip_timestamp => '片段时间';
 }
 
 // Path: <root>
@@ -160492,6 +160523,8 @@ class _StringsZhHk extends _StringsEn {
   String get gal_card_lookup_max_width => '遊戲內查詞卡最大寬度';
   @override
   String get gal_card_lookup_max_height => '遊戲內查詞卡最大高度';
+  @override
+  String get handlebar_clip_timestamp => '片段時間';
 }
 
 /// Flat map(s) containing all translations.
@@ -169027,6 +169060,8 @@ extension on _StringsEn {
         return 'In-game card max width';
       case 'gal_card_lookup_max_height':
         return 'In-game card max height';
+      case 'handlebar_clip_timestamp':
+        return 'Clip timestamp';
       default:
         return null;
     }
@@ -177557,6 +177592,8 @@ extension on _StringsAr {
         return 'العرض الأقصى للبطاقة داخل اللعبة';
       case 'gal_card_lookup_max_height':
         return 'الارتفاع الأقصى للبطاقة داخل اللعبة';
+      case 'handlebar_clip_timestamp':
+        return 'الطابع الزمني للمقطع';
       default:
         return null;
     }
@@ -186131,6 +186168,8 @@ extension on _StringsDe {
         return 'Max. Breite der Nachschlagekarte im Spiel';
       case 'gal_card_lookup_max_height':
         return 'Max. Höhe der Nachschlagekarte im Spiel';
+      case 'handlebar_clip_timestamp':
+        return 'Clip-Zeitstempel';
       default:
         return null;
     }
@@ -194697,6 +194736,8 @@ extension on _StringsEs {
         return 'Ancho máximo de la tarjeta dentro del juego';
       case 'gal_card_lookup_max_height':
         return 'Altura máxima de la tarjeta dentro del juego';
+      case 'handlebar_clip_timestamp':
+        return 'Marca de tiempo del fragmento';
       default:
         return null;
     }
@@ -203271,6 +203312,8 @@ extension on _StringsFr {
         return 'Largeur max de la carte en jeu';
       case 'gal_card_lookup_max_height':
         return 'Hauteur max de la carte en jeu';
+      case 'handlebar_clip_timestamp':
+        return 'Horodatage de l\'extrait';
       default:
         return null;
     }
@@ -211817,6 +211860,8 @@ extension on _StringsId {
         return 'Lebar maks kartu dalam game';
       case 'gal_card_lookup_max_height':
         return 'Tinggi maks kartu dalam game';
+      case 'handlebar_clip_timestamp':
+        return 'Stempel waktu klip';
       default:
         return null;
     }
@@ -220384,6 +220429,8 @@ extension on _StringsIt {
         return 'Larghezza max carta nel gioco';
       case 'gal_card_lookup_max_height':
         return 'Altezza max carta nel gioco';
+      case 'handlebar_clip_timestamp':
+        return 'Timestamp della clip';
       default:
         return null;
     }
@@ -228880,6 +228927,8 @@ extension on _StringsJa {
         return 'ゲーム内辞書カードの最大幅';
       case 'gal_card_lookup_max_height':
         return 'ゲーム内辞書カードの最大高さ';
+      case 'handlebar_clip_timestamp':
+        return 'クリップの時間';
       default:
         return null;
     }
@@ -237379,6 +237428,8 @@ extension on _StringsKo {
         return '인게임 사전 카드 최대 너비';
       case 'gal_card_lookup_max_height':
         return '인게임 사전 카드 최대 높이';
+      case 'handlebar_clip_timestamp':
+        return '클립 타임스탬프';
       default:
         return null;
     }
@@ -245940,6 +245991,8 @@ extension on _StringsNl {
         return 'In-game zoekkaart max. breedte';
       case 'gal_card_lookup_max_height':
         return 'In-game zoekkaart max. hoogte';
+      case 'handlebar_clip_timestamp':
+        return 'Tijdstempel van fragment';
       default:
         return null;
     }
@@ -254496,6 +254549,8 @@ extension on _StringsPtBr {
         return 'Largura máxima do cartão no jogo';
       case 'gal_card_lookup_max_height':
         return 'Altura máxima do cartão no jogo';
+      case 'handlebar_clip_timestamp':
+        return 'Marca de tempo do trecho';
       default:
         return null;
     }
@@ -263058,6 +263113,8 @@ extension on _StringsRu {
         return 'Макс. ширина карточки в игре';
       case 'gal_card_lookup_max_height':
         return 'Макс. высота карточки в игре';
+      case 'handlebar_clip_timestamp':
+        return 'Метка времени фрагмента';
       default:
         return null;
     }
@@ -271593,6 +271650,8 @@ extension on _StringsTh {
         return 'ความกว้างสูงสุดของการ์ดในเกม';
       case 'gal_card_lookup_max_height':
         return 'ความสูงสูงสุดของการ์ดในเกม';
+      case 'handlebar_clip_timestamp':
+        return 'เวลาของคลิป';
       default:
         return null;
     }
@@ -280143,6 +280202,8 @@ extension on _StringsTr {
         return 'Oyun içi kart maks. genişlik';
       case 'gal_card_lookup_max_height':
         return 'Oyun içi kart maks. yükseklik';
+      case 'handlebar_clip_timestamp':
+        return 'Klip zaman damgası';
       default:
         return null;
     }
@@ -288687,6 +288748,8 @@ extension on _StringsVi {
         return 'Chiều rộng tối đa thẻ trong trò chơi';
       case 'gal_card_lookup_max_height':
         return 'Chiều cao tối đa thẻ trong trò chơi';
+      case 'handlebar_clip_timestamp':
+        return 'Dấu thời gian đoạn cắt';
       default:
         return null;
     }
@@ -297160,6 +297223,8 @@ extension on _StringsZhCn {
         return '游戏内查词卡最大宽度';
       case 'gal_card_lookup_max_height':
         return '游戏内查词卡最大高度';
+      case 'handlebar_clip_timestamp':
+        return '片段时间';
       default:
         return null;
     }
@@ -305634,6 +305699,8 @@ extension on _StringsZhHk {
         return '遊戲內查詞卡最大寬度';
       case 'gal_card_lookup_max_height':
         return '遊戲內查詞卡最大高度';
+      case 'handlebar_clip_timestamp':
+        return '片段時間';
       default:
         return null;
     }
