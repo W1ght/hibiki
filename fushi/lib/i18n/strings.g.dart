@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 71060 (4180 per locale)
+/// Strings: 71264 (4192 per locale)
 ///
-/// Built on 2026-09-03 at 03:52 UTC
+/// Built on 2026-09-03 at 08:48 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5734,6 +5734,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Connected. Root catalog has ${count} entries';
   String discovery_opds_test_failed({required Object reason}) =>
       'Connection failed: ${reason}';
+  String get video_specs_title => 'Media info';
+  String get video_specs_resolution => 'Resolution';
+  String get video_specs_dynamic_range => 'Dynamic range';
+  String get video_specs_video_codec => 'Video codec';
+  String get video_specs_bit_depth => 'Bit depth';
+  String get video_specs_frame_rate => 'Frame rate';
+  String get video_specs_bitrate => 'Bitrate';
+  String get video_specs_audio_tracks => 'Audio tracks';
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  String get video_specs_track_commentary => 'Commentary';
+  String get video_specs_track_forced => 'Forced';
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -15474,6 +15486,30 @@ class _StringsAr extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'فشل الاتصال: ${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -25441,6 +25477,30 @@ class _StringsDe extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Verbindung fehlgeschlagen: ${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -35460,6 +35520,30 @@ class _StringsEs extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Error de conexión: ${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -45514,6 +45598,30 @@ class _StringsFr extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Échec de la connexion : ${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -55373,6 +55481,30 @@ class _StringsId extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Koneksi gagal: ${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -65323,6 +65455,30 @@ class _StringsIt extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Connessione non riuscita: ${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -74661,6 +74817,30 @@ class _StringsJa extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       '接続に失敗しました: ${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -84009,6 +84189,30 @@ class _StringsKo extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       '연결 실패: ${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -93914,6 +94118,30 @@ class _StringsNl extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Verbinding mislukt: ${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -103873,6 +104101,30 @@ class _StringsPtBr extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Falha na conexão: ${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -113811,6 +114063,30 @@ class _StringsRu extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Не удалось подключиться: ${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -123547,6 +123823,30 @@ class _StringsTh extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'เชื่อมต่อไม่สำเร็จ: ${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -133400,6 +133700,30 @@ class _StringsTr extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Bağlantı başarısız: ${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -143224,6 +143548,30 @@ class _StringsVi extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Kết nối thất bại: ${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -152251,6 +152599,30 @@ class _StringsZhCn extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       '连接失败：${reason}';
+  @override
+  String get video_specs_title => '媒体信息';
+  @override
+  String get video_specs_resolution => '清晰度';
+  @override
+  String get video_specs_dynamic_range => '动态范围';
+  @override
+  String get video_specs_video_codec => '视频编码';
+  @override
+  String get video_specs_bit_depth => '色深';
+  @override
+  String get video_specs_frame_rate => '帧率';
+  @override
+  String get video_specs_bitrate => '码率';
+  @override
+  String get video_specs_audio_tracks => '音轨';
+  @override
+  String get video_specs_subtitle_tracks => '字幕轨';
+  @override
+  String get video_specs_track_commentary => '评论音轨';
+  @override
+  String get video_specs_track_forced => '强制';
+  @override
+  String get video_specs_track_default => '默认';
 }
 
 // Path: <root>
@@ -161283,6 +161655,30 @@ class _StringsZhHk extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       '連線失敗：${reason}';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 /// Flat map(s) containing all translations.
@@ -169859,6 +170255,30 @@ extension on _StringsEn {
             'Connected. Root catalog has ${count} entries';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -178430,6 +178850,30 @@ extension on _StringsAr {
             'تم الاتصال. يحتوي الفهرس الجذر على ${count} عنصرًا';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'فشل الاتصال: ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -187046,6 +187490,30 @@ extension on _StringsDe {
       case 'discovery_opds_test_failed':
         return ({required Object reason}) =>
             'Verbindung fehlgeschlagen: ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -195653,6 +196121,30 @@ extension on _StringsEs {
             'Conectado. El catálogo raíz tiene ${count} entradas';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Error de conexión: ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -204269,6 +204761,30 @@ extension on _StringsFr {
       case 'discovery_opds_test_failed':
         return ({required Object reason}) =>
             'Échec de la connexion : ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -212856,6 +213372,30 @@ extension on _StringsId {
             'Terhubung. Katalog akar berisi ${count} entri';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Koneksi gagal: ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -221465,6 +222005,30 @@ extension on _StringsIt {
       case 'discovery_opds_test_failed':
         return ({required Object reason}) =>
             'Connessione non riuscita: ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -230001,6 +230565,30 @@ extension on _StringsJa {
         return ({required Object count}) => '接続しました。ルートカタログに ${count} 件あります';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => '接続に失敗しました: ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -238541,6 +239129,30 @@ extension on _StringsKo {
             '연결되었습니다. 루트 카탈로그에 ${count}개 항목이 있습니다';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => '연결 실패: ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -247143,6 +247755,30 @@ extension on _StringsNl {
             'Verbonden. De hoofdcatalogus heeft ${count} items';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Verbinding mislukt: ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -255740,6 +256376,30 @@ extension on _StringsPtBr {
             'Conectado. O catálogo raiz tem ${count} itens';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Falha na conexão: ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -264344,6 +265004,30 @@ extension on _StringsRu {
       case 'discovery_opds_test_failed':
         return ({required Object reason}) =>
             'Не удалось подключиться: ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -272920,6 +273604,30 @@ extension on _StringsTh {
             'เชื่อมต่อแล้ว แคตตาล็อกรากมี ${count} รายการ';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'เชื่อมต่อไม่สำเร็จ: ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -281511,6 +282219,30 @@ extension on _StringsTr {
             'Bağlanıldı. Kök katalogda ${count} girdi var';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Bağlantı başarısız: ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -290096,6 +290828,30 @@ extension on _StringsVi {
             'Đã kết nối. Danh mục gốc có ${count} mục';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Kết nối thất bại: ${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -298609,6 +299365,30 @@ extension on _StringsZhCn {
         return ({required Object count}) => '连接成功，根目录有 ${count} 个条目';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => '连接失败：${reason}';
+      case 'video_specs_title':
+        return '媒体信息';
+      case 'video_specs_resolution':
+        return '清晰度';
+      case 'video_specs_dynamic_range':
+        return '动态范围';
+      case 'video_specs_video_codec':
+        return '视频编码';
+      case 'video_specs_bit_depth':
+        return '色深';
+      case 'video_specs_frame_rate':
+        return '帧率';
+      case 'video_specs_bitrate':
+        return '码率';
+      case 'video_specs_audio_tracks':
+        return '音轨';
+      case 'video_specs_subtitle_tracks':
+        return '字幕轨';
+      case 'video_specs_track_commentary':
+        return '评论音轨';
+      case 'video_specs_track_forced':
+        return '强制';
+      case 'video_specs_track_default':
+        return '默认';
       default:
         return null;
     }
@@ -307123,6 +307903,30 @@ extension on _StringsZhHk {
         return ({required Object count}) => '連線成功，根目錄有 ${count} 個項目';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => '連線失敗：${reason}';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
