@@ -9,6 +9,7 @@
 //   launch <exe路径>            拉起游戏并开始捕获（走与游戏页同一条 launchGame 路径，转区 auto）
 //   launchoff <exe路径>         同上但转区档位 off（库里多数游戏的设置）
 //   attach <hwnd> <pid> [title]  对已运行的游戏附着捕获
+//   threads                     列出文本线程候选（key/原生线程号/hook code/行数/预览）
 //   thread <id>                 选择文本线程
 //   state                       会话状态 + 最近台词 + attached 状态
 //   events [n]                  最近 n 条会话事件
@@ -288,9 +289,35 @@ void main() {
               final bool accepted =
                   await attached.acceptUnsafeRiskAndRetry(request);
               out('#$seq accept=$accepted ${describeState()}');
+            case 'threads':
+              final StringBuffer sb = StringBuffer('#$seq threads:');
+              for (final TexthookerTextThread t in session.textThreads) {
+                sb.write('\n    key=${t.key} native=${t.nativeThreadId} '
+                    'code=${t.hookCode} label=${t.label} lines=${t.lineCount} '
+                    'observed=${t.observedLineCount} '
+                    'artifacts=${t.observedArtifactCount} '
+                    'preview=${(t.previewText ?? '').replaceAll('\n', '⏎')}');
+              }
+              out(sb.toString());
             case 'thread':
-              await session.selectTextThread(int.parse(parts[1]));
-              out('#$seq thread ok ${describeState()}');
+              // 工作台选线程时同时下发 native thread id **和** string key，后者是
+              // _sessionScopedLines 的过滤依据；只给 native id 会让 Dart 侧
+              // selectedTextThreadKey 为空、把所有 keyed 行过滤光（制卡拿到空列表）。
+              // 这里按 native id 查回整条 thread，复刻真实 UI 的两参选择。
+              final int wantNative = int.parse(parts[1]);
+              TexthookerTextThread? match;
+              for (final TexthookerTextThread t in session.textThreads) {
+                if (t.nativeThreadId == wantNative) {
+                  match = t;
+                  break;
+                }
+              }
+              await session.selectTextThread(
+                wantNative,
+                threadKey: match?.key,
+                remember: true,
+              );
+              out('#$seq thread ok key=${match?.key} ${describeState()}');
             case 'state':
               out('#$seq ${describeState()}');
             case 'lines':
