@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 71060 (4180 per locale)
+/// Strings: 71111 (4183 per locale)
 ///
-/// Built on 2026-09-03 at 03:52 UTC
+/// Built on 2026-09-03 at 12:29 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5734,6 +5734,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Connected. Root catalog has ${count} entries';
   String discovery_opds_test_failed({required Object reason}) =>
       'Connection failed: ${reason}';
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -15474,6 +15479,14 @@ class _StringsAr extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'فشل الاتصال: ${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -25441,6 +25454,14 @@ class _StringsDe extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Verbindung fehlgeschlagen: ${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -35460,6 +35481,14 @@ class _StringsEs extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Error de conexión: ${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -45514,6 +45543,14 @@ class _StringsFr extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Échec de la connexion : ${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -55373,6 +55410,14 @@ class _StringsId extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Koneksi gagal: ${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -65323,6 +65368,14 @@ class _StringsIt extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Connessione non riuscita: ${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -74661,6 +74714,14 @@ class _StringsJa extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       '接続に失敗しました: ${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -84009,6 +84070,14 @@ class _StringsKo extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       '연결 실패: ${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -93914,6 +93983,14 @@ class _StringsNl extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Verbinding mislukt: ${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -103873,6 +103950,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Falha na conexão: ${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -113811,6 +113896,14 @@ class _StringsRu extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Не удалось подключиться: ${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -123547,6 +123640,14 @@ class _StringsTh extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'เชื่อมต่อไม่สำเร็จ: ${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -133400,6 +133501,14 @@ class _StringsTr extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Bağlantı başarısız: ${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -143224,6 +143333,14 @@ class _StringsVi extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Kết nối thất bại: ${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 // Path: <root>
@@ -152251,6 +152368,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       '连接失败：${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid 卡片访问权限已被永久拒绝，系统不再弹出授权对话框。请到应用设置里授予该权限后重试。';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      '未安装 AnkiDroid（或其 API 被禁用），无法授予卡片访问权限。请安装 AnkiDroid 并启用其 API，或改用 AnkiConnect。';
+  @override
+  String get anki_action_open_settings => '去设置';
 }
 
 // Path: <root>
@@ -161283,6 +161408,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       '連線失敗：${reason}';
+  @override
+  String get anki_error_permission_permanently_denied =>
+      'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+  @override
+  String get anki_error_ankidroid_unavailable =>
+      'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+  @override
+  String get anki_action_open_settings => 'Open settings';
 }
 
 /// Flat map(s) containing all translations.
@@ -169859,6 +169992,12 @@ extension on _StringsEn {
             'Connected. Root catalog has ${count} entries';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -178430,6 +178569,12 @@ extension on _StringsAr {
             'تم الاتصال. يحتوي الفهرس الجذر على ${count} عنصرًا';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'فشل الاتصال: ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -187046,6 +187191,12 @@ extension on _StringsDe {
       case 'discovery_opds_test_failed':
         return ({required Object reason}) =>
             'Verbindung fehlgeschlagen: ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -195653,6 +195804,12 @@ extension on _StringsEs {
             'Conectado. El catálogo raíz tiene ${count} entradas';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Error de conexión: ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -204269,6 +204426,12 @@ extension on _StringsFr {
       case 'discovery_opds_test_failed':
         return ({required Object reason}) =>
             'Échec de la connexion : ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -212856,6 +213019,12 @@ extension on _StringsId {
             'Terhubung. Katalog akar berisi ${count} entri';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Koneksi gagal: ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -221465,6 +221634,12 @@ extension on _StringsIt {
       case 'discovery_opds_test_failed':
         return ({required Object reason}) =>
             'Connessione non riuscita: ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -230001,6 +230176,12 @@ extension on _StringsJa {
         return ({required Object count}) => '接続しました。ルートカタログに ${count} 件あります';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => '接続に失敗しました: ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -238541,6 +238722,12 @@ extension on _StringsKo {
             '연결되었습니다. 루트 카탈로그에 ${count}개 항목이 있습니다';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => '연결 실패: ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -247143,6 +247330,12 @@ extension on _StringsNl {
             'Verbonden. De hoofdcatalogus heeft ${count} items';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Verbinding mislukt: ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -255740,6 +255933,12 @@ extension on _StringsPtBr {
             'Conectado. O catálogo raiz tem ${count} itens';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Falha na conexão: ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -264344,6 +264543,12 @@ extension on _StringsRu {
       case 'discovery_opds_test_failed':
         return ({required Object reason}) =>
             'Не удалось подключиться: ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -272920,6 +273125,12 @@ extension on _StringsTh {
             'เชื่อมต่อแล้ว แคตตาล็อกรากมี ${count} รายการ';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'เชื่อมต่อไม่สำเร็จ: ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -281511,6 +281722,12 @@ extension on _StringsTr {
             'Bağlanıldı. Kök katalogda ${count} girdi var';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Bağlantı başarısız: ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -290096,6 +290313,12 @@ extension on _StringsVi {
             'Đã kết nối. Danh mục gốc có ${count} mục';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Kết nối thất bại: ${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
@@ -298609,6 +298832,12 @@ extension on _StringsZhCn {
         return ({required Object count}) => '连接成功，根目录有 ${count} 个条目';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => '连接失败：${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid 卡片访问权限已被永久拒绝，系统不再弹出授权对话框。请到应用设置里授予该权限后重试。';
+      case 'anki_error_ankidroid_unavailable':
+        return '未安装 AnkiDroid（或其 API 被禁用），无法授予卡片访问权限。请安装 AnkiDroid 并启用其 API，或改用 AnkiConnect。';
+      case 'anki_action_open_settings':
+        return '去设置';
       default:
         return null;
     }
@@ -307123,6 +307352,12 @@ extension on _StringsZhHk {
         return ({required Object count}) => '連線成功，根目錄有 ${count} 個項目';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => '連線失敗：${reason}';
+      case 'anki_error_permission_permanently_denied':
+        return 'AnkiDroid card access was permanently denied, so the system no longer shows the permission dialog. Open app settings and grant the AnkiDroid permission, then try again.';
+      case 'anki_error_ankidroid_unavailable':
+        return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
+      case 'anki_action_open_settings':
+        return 'Open settings';
       default:
         return null;
     }
