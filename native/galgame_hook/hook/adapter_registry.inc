@@ -579,6 +579,7 @@ class AdapterRegistry {
     sgre_.ProcessPendingEvents();
     leaf_aquaplus_.ProcessPendingEvents();
     hunex_gge_.ProcessPendingEvents();
+    smash_fzmedia_.ProcessPendingEvents();
     // These retry budgets and ordering intentionally match the old HookWorker. onModuleLoaded is
     // the stable seam; P3 can replace this bounded poll with real module events without changing
     // individual adapter contracts.
@@ -692,6 +693,11 @@ class AdapterRegistry {
       return 16;
     }
     if (hunex_gge_.lookup_sensor_available() && g_header != nullptr &&
+        fushi_voice_hook::HasLookupRegion(g_header) &&
+        g_header->lookup_enabled != 0) {
+      return 16;
+    }
+    if (smash_fzmedia_.lookup_sensor_available() && g_header != nullptr &&
         fushi_voice_hook::HasLookupRegion(g_header) &&
         g_header->lookup_enabled != 0) {
       return 16;

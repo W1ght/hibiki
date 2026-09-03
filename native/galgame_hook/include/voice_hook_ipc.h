@@ -195,6 +195,22 @@ inline constexpr wchar_t kHunexGgeSampledInputShieldTailAckProperty[] =
     L"Fushi.HunexGge.SampledInputShield.TailAck";
 inline constexpr uintptr_t kHunexGgeSampledInputShieldReadyValue = 1u;
 inline constexpr uintptr_t kHunexGgeSampledInputShieldRequiredValue = 1u;
+
+// smash/fzmedia (TYPE-MOON smash framework, GLFW30 window) consumes clicks in
+// a GWLP_WNDPROC subclass of the game window rather than in a sampled-state
+// detour, but it declares the same Required/Ready/Window contract so the host
+// keeps one publication lifetime: Required = the runtime is installed and
+// expects the host to wait for Ready; Ready = the subclass is live and
+// swallowing client-area left down/up while a card is published in Window.
+// No tail handshake: message consumption has no sampled low bit to drain.
+inline constexpr wchar_t kSmashFzmediaSampledInputShieldReadyProperty[] =
+    L"Fushi.SmashFzmedia.SampledInputShield.Ready";
+inline constexpr wchar_t kSmashFzmediaSampledInputShieldRequiredProperty[] =
+    L"Fushi.SmashFzmedia.SampledInputShield.Required";
+inline constexpr wchar_t kSmashFzmediaSampledInputShieldWindowProperty[] =
+    L"Fushi.SmashFzmedia.SampledInputShield.Window";
+inline constexpr uintptr_t kSmashFzmediaSampledInputShieldReadyValue = 1u;
+inline constexpr uintptr_t kSmashFzmediaSampledInputShieldRequiredValue = 1u;
 inline constexpr uint32_t kLeafAquaplusSampledInputLeftButton = 0x1u;
 inline constexpr uint32_t kLeafAquaplusSampledInputRightButton = 0x2u;
 inline constexpr uint32_t kLeafAquaplusSampledInputMiddleButton = 0x4u;
@@ -269,6 +285,9 @@ constexpr uint32_t kTextSourceLuna = 2;
 constexpr uint32_t kTextSourceUnityTmp = 3;
 constexpr uint32_t kTextSourceSiglus = 4;
 constexpr uint32_t kTextSourceSgre = 5;
+// smash/fzmedia (TYPE-MOON "smash" framework: Fate/stay night REMASTERED family)
+// exact text published by the native KAG text-layer layout hook.
+constexpr uint32_t kTextSourceSmashFzmedia = 6;
 constexpr uint32_t kTextEventLine = 0;
 constexpr uint32_t kTextEventThreadDiscovered = 1;
 // Some Luna engine hooks expose scenario text and system controls from the
@@ -470,6 +489,33 @@ constexpr uint32_t kXAudioDiag2LeafReturnSitesRejected = 0x00008000u;
 // 中途失败），后者是确定结论。旧实现两者共用一条永久 -1 缓存路径，于是一次瞬时
 // 失败就让本会话的 Leaf adapter 永久出局，表现为整场音频降级到系统 Loopback。
 constexpr uint32_t kXAudioDiag2LeafExecutableUnmeasurable = 0x00010000u;
+
+// smash/fzmedia（TYPE-MOON smash 框架，Fate/stay night REMASTERED 系）的分型位，
+// 同样落在 **xaudio_diagnostics2**（0x00020000 起的空闲段）。只记录事实、不参与判定；
+// 每一位对应能力台账里一个独立阶段，不得用前一位推断后一位：
+//   FamilyMatched     ：结构准入通过（exe 导入 null-ge-* 的 IGameEngine@fw@smash@@ +
+//                       fzmedia-* 导出表齐全 + x64）。
+//   FzmediaHooksReady ：SoundManager::create / SoundObject::play 两处 detour 全装上。
+//   TextAnchorsResolved / TextAnchorsUnresolved：exe 内 layoutChar 锚点链推导成功 / 某次
+//                       扫描失败（SteamStub 解包前会失败，worker 每 500ms 重扫，二者可同时亮）。
+//   TextHookReady     ：layoutChar detour 装上。
+//   VoiceObserved     ：类别 5 的 play 被观测且 convertToRawFile 给出合法 Ogg。
+//   VoiceQueueFull    ：8 槽 × 1 MiB 环满，事件被丢。
+//   VoicePublished    ：Ogg 已落盘（同时置 kXAudioDiagGameResourcePublished）。
+//   ParagraphPublished：段落（引号平衡合并）已写入文本道。
+//   VoiceBufferLeaked ：fzmedia 返回的 vector 缓冲释放形状不符，故意泄漏而非破坏堆。
+//   AnchorRetryExhausted：锚点重扫超过 120s 预算仍未解出。
+constexpr uint32_t kXAudioDiag2SmashFamilyMatched = 0x00020000u;
+constexpr uint32_t kXAudioDiag2SmashFzmediaHooksReady = 0x00040000u;
+constexpr uint32_t kXAudioDiag2SmashTextAnchorsResolved = 0x00080000u;
+constexpr uint32_t kXAudioDiag2SmashTextAnchorsUnresolved = 0x00100000u;
+constexpr uint32_t kXAudioDiag2SmashTextHookReady = 0x00200000u;
+constexpr uint32_t kXAudioDiag2SmashVoiceObserved = 0x00400000u;
+constexpr uint32_t kXAudioDiag2SmashVoiceQueueFull = 0x00800000u;
+constexpr uint32_t kXAudioDiag2SmashVoicePublished = 0x01000000u;
+constexpr uint32_t kXAudioDiag2SmashParagraphPublished = 0x02000000u;
+constexpr uint32_t kXAudioDiag2SmashVoiceBufferLeaked = 0x04000000u;
+constexpr uint32_t kXAudioDiag2SmashAnchorRetryExhausted = 0x08000000u;
 
 // reserved_luna 的资源音频诊断位。KiriKiriZ 的 TVPCreateStream hook 直接导出当前播放的
 // 已解密 Ogg；Siglus 从 OVK 索引导出逐句 Ogg。它们只代表“资源捕获链已安装”，不要求 PCM
@@ -746,6 +792,8 @@ constexpr uint32_t kLookupGeometryProviderIdTypewriterDiffExperimental = 13u;
 // runtime trace remains observation-only; assigning a stable wire id does not
 // promote it to a production publisher or change engine-support evidence.
 constexpr uint32_t kLookupGeometryProviderIdHunexGge = 14u;
+// smash/fzmedia KAG text-layer exact layout provider (append-only id).
+constexpr uint32_t kLookupGeometryProviderIdSmashFzmedia = 15u;
 
 constexpr uint32_t kLookupGeometryStatusUnavailable = 0u;
 constexpr uint32_t kLookupGeometryStatusReady = 1u;

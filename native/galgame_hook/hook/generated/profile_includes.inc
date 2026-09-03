@@ -8,3 +8,4 @@
 #include "../adapters/sgre_profile.h"
 #include "../adapters/leaf_aquaplus_profile.h"
 #include "../adapters/hunex_gge_profile.h"
+#include "../adapters/smash_fzmedia_profile.h"

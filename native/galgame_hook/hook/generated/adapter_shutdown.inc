@@ -9,3 +9,4 @@
     sgre_.shutdown();
     leaf_aquaplus_.shutdown();
     hunex_gge_.shutdown();
+    smash_fzmedia_.shutdown();
