@@ -129,4 +129,52 @@ void main() {
       expect(restored.fieldMappings, {'A': 'B'});
     });
   });
+
+  group('AnkiMiningPayload.fromJson glossarySelectionHighlighted (BUG-2083)',
+      () {
+    // 覆盖窗查词浮窗（桌面 global lookup / galgame 游戏内）经 _handleMineBridge
+    // 把整份 payload 收敛成 Map<String,String>，bool 被 toString 成字符串才到 fromJson。
+    // 旧实现 `as bool?` 对字符串抛 type cast，让每一次覆盖窗制卡停在 payload parse failed。
+    test('stringified "false" from the overlay bridge does not throw', () {
+      final Map<String, dynamic> json = <String, dynamic>{
+        'expression': '微細',
+        'glossarySelectionHighlighted': 'false',
+      };
+      // jsonEncode/decode 复刻 rawPayloadJson 往返，值类型保持字符串。
+      final decoded =
+          Map<String, dynamic>.from(jsonDecode(jsonEncode(json)) as Map);
+      final payload = AnkiMiningPayload.fromJson(decoded);
+      expect(payload.expression, '微細');
+      expect(payload.glossarySelectionHighlighted, isFalse);
+    });
+
+    test('stringified "true"/"1" parse as true', () {
+      expect(
+        AnkiMiningPayload.fromJson(<String, dynamic>{
+          'glossarySelectionHighlighted': 'true',
+        }).glossarySelectionHighlighted,
+        isTrue,
+      );
+      expect(
+        AnkiMiningPayload.fromJson(<String, dynamic>{
+          'glossarySelectionHighlighted': '1',
+        }).glossarySelectionHighlighted,
+        isTrue,
+      );
+    });
+
+    test('native bool and missing key still work', () {
+      expect(
+        AnkiMiningPayload.fromJson(<String, dynamic>{
+          'glossarySelectionHighlighted': true,
+        }).glossarySelectionHighlighted,
+        isTrue,
+      );
+      expect(
+        AnkiMiningPayload.fromJson(<String, dynamic>{})
+            .glossarySelectionHighlighted,
+        isFalse,
+      );
+    });
+  });
 }

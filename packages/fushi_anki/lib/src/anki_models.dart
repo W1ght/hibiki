@@ -514,6 +514,22 @@ class AnkiMiningPayload {
     this.dictionaryMedia = const [],
   });
 
+  /// 宽容布尔解析：覆盖窗查词浮窗（桌面 global lookup / galgame 游戏内）经
+  /// `_handleMineBridge` 把整份 payload 收敛成 `Map<String, String>`，于是 popup.js
+  /// 送出的 bool 会被 `toString()` 成字符串 `"true"`/`"false"` 才到这里；旧实现
+  /// 直接 `as bool?` 对字符串抛 `type 'String' is not a subtype of type 'bool?'`，
+  /// 让**每一次覆盖窗制卡**都停在「导出卡片失败：payload parse failed」（BUG-2083）。
+  /// 保留原生 bool、把 `"true"`/`"1"` 视为真，其余（含缺失/空串）为假。
+  static bool _asFlexibleBool(Object? value) {
+    if (value is bool) return value;
+    if (value is num) return value != 0;
+    if (value is String) {
+      final String normalized = value.trim().toLowerCase();
+      return normalized == 'true' || normalized == '1';
+    }
+    return false;
+  }
+
   factory AnkiMiningPayload.fromJson(Map<String, dynamic> json) {
     var singleGlossaries = <String, String>{};
     final sgRaw = json['singleGlossaries'];
@@ -558,7 +574,7 @@ class AnkiMiningPayload {
       phoneticTranscriptions: json['phoneticTranscriptions'] as String? ?? '',
       popupSelectionText: json['popupSelectionText'] as String? ?? '',
       glossarySelectionHighlighted:
-          json['glossarySelectionHighlighted'] as bool? ?? false,
+          _asFlexibleBool(json['glossarySelectionHighlighted']),
       audio: json['audio'] as String? ?? '',
       selectedDictionary: json['selectedDictionary'] as String? ?? '',
       dictionaryMedia: dictionaryMedia,

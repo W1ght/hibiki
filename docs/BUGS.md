@@ -29,10 +29,12 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 1944 条。点号进各自文件。
+> 共 1946 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2083](bugs/BUG-2083-gal-overlay-mine-payload-bool-parse.md) | ✅ | ✅ | 覆盖窗制卡 payload 把 bool 字符串化后 fromJson 用 as bool? 直接抛，制卡全灭 |
+| [BUG-2081](bugs/BUG-2081-gal-ingame-mining-seq-space-mismatch.md) | ✅ | ✅ | 内嵌查词制卡用几何命中序精配文本行序，跨 provider 必落空致静默失败 |
 | [BUG-2080](bugs/BUG-2080-gal-mining-audio-before-utterance-settles.md) | ✅ | ✅ | 台词一出就制卡只拿到句子音频的开头（引擎 PCM 收敛 / loopback 冻结未收口） |
 | [BUG-2079](bugs/BUG-2079-nyaa-search-missing-timeout.md) | 🚧 | 🚧 | NyaaClient.search 无超时，订阅检查可被单个慢响应挂住 |
 | [BUG-2076](bugs/BUG-2076-leaf-structure-gate-reads-hooked-memory.md) | ✅ | ✅ | 白2 身份结构门扫的是被 LunaHook 改写过的进程内存，导致点击穿透+语音降级 |
