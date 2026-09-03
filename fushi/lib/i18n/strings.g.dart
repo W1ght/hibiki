@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 71060 (4180 per locale)
+/// Strings: 71145 (4185 per locale)
 ///
-/// Built on 2026-09-03 at 03:52 UTC
+/// Built on 2026-09-03 at 15:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5734,6 +5734,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Connected. Root catalog has ${count} entries';
   String discovery_opds_test_failed({required Object reason}) =>
       'Connection failed: ${reason}';
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  String get onboarding_pack_import_now => 'Import now';
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -15474,6 +15482,19 @@ class _StringsAr extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'فشل الاتصال: ${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -25441,6 +25462,19 @@ class _StringsDe extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Verbindung fehlgeschlagen: ${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -35460,6 +35494,19 @@ class _StringsEs extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Error de conexión: ${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -45514,6 +45561,19 @@ class _StringsFr extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Échec de la connexion : ${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -55373,6 +55433,19 @@ class _StringsId extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Koneksi gagal: ${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -65323,6 +65396,19 @@ class _StringsIt extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Connessione non riuscita: ${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -74661,6 +74747,19 @@ class _StringsJa extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       '接続に失敗しました: ${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -84009,6 +84108,19 @@ class _StringsKo extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       '연결 실패: ${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -93914,6 +94026,19 @@ class _StringsNl extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Verbinding mislukt: ${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -103873,6 +103998,19 @@ class _StringsPtBr extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Falha na conexão: ${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -113811,6 +113949,19 @@ class _StringsRu extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Не удалось подключиться: ${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -123547,6 +123698,19 @@ class _StringsTh extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'เชื่อมต่อไม่สำเร็จ: ${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -133400,6 +133564,19 @@ class _StringsTr extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Bağlantı başarısız: ${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -143224,6 +143401,19 @@ class _StringsVi extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       'Kết nối thất bại: ${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 // Path: <root>
@@ -152251,6 +152441,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       '连接失败：${reason}';
+  @override
+  String get onboarding_pack_status_downloading => '推荐包下载中';
+  @override
+  String get onboarding_pack_status_ready => '推荐包已下载完成';
+  @override
+  String get onboarding_pack_import_now => '现在导入';
+  @override
+  String get onboarding_pack_download_finished => '推荐包下载完成。可在「设置 → 系统」里导入。';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      '下载会在后台继续：可以直接走下一步，也可以关掉向导。进度、取消和导入都在「设置 → 系统」里。';
 }
 
 // Path: <root>
@@ -161283,6 +161484,19 @@ class _StringsZhHk extends _StringsEn {
   @override
   String discovery_opds_test_failed({required Object reason}) =>
       '連線失敗：${reason}';
+  @override
+  String get onboarding_pack_status_downloading =>
+      'Downloading recommended pack';
+  @override
+  String get onboarding_pack_status_ready => 'Recommended pack downloaded';
+  @override
+  String get onboarding_pack_import_now => 'Import now';
+  @override
+  String get onboarding_pack_download_finished =>
+      'Recommended pack finished downloading. Import it from Settings → System.';
+  @override
+  String get onboarding_pack_download_background_hint =>
+      'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
 }
 
 /// Flat map(s) containing all translations.
@@ -169859,6 +170073,16 @@ extension on _StringsEn {
             'Connected. Root catalog has ${count} entries';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -178430,6 +178654,16 @@ extension on _StringsAr {
             'تم الاتصال. يحتوي الفهرس الجذر على ${count} عنصرًا';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'فشل الاتصال: ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -187046,6 +187280,16 @@ extension on _StringsDe {
       case 'discovery_opds_test_failed':
         return ({required Object reason}) =>
             'Verbindung fehlgeschlagen: ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -195653,6 +195897,16 @@ extension on _StringsEs {
             'Conectado. El catálogo raíz tiene ${count} entradas';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Error de conexión: ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -204269,6 +204523,16 @@ extension on _StringsFr {
       case 'discovery_opds_test_failed':
         return ({required Object reason}) =>
             'Échec de la connexion : ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -212856,6 +213120,16 @@ extension on _StringsId {
             'Terhubung. Katalog akar berisi ${count} entri';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Koneksi gagal: ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -221465,6 +221739,16 @@ extension on _StringsIt {
       case 'discovery_opds_test_failed':
         return ({required Object reason}) =>
             'Connessione non riuscita: ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -230001,6 +230285,16 @@ extension on _StringsJa {
         return ({required Object count}) => '接続しました。ルートカタログに ${count} 件あります';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => '接続に失敗しました: ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -238541,6 +238835,16 @@ extension on _StringsKo {
             '연결되었습니다. 루트 카탈로그에 ${count}개 항목이 있습니다';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => '연결 실패: ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -247143,6 +247447,16 @@ extension on _StringsNl {
             'Verbonden. De hoofdcatalogus heeft ${count} items';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Verbinding mislukt: ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -255740,6 +256054,16 @@ extension on _StringsPtBr {
             'Conectado. O catálogo raiz tem ${count} itens';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Falha na conexão: ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -264344,6 +264668,16 @@ extension on _StringsRu {
       case 'discovery_opds_test_failed':
         return ({required Object reason}) =>
             'Не удалось подключиться: ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -272920,6 +273254,16 @@ extension on _StringsTh {
             'เชื่อมต่อแล้ว แคตตาล็อกรากมี ${count} รายการ';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'เชื่อมต่อไม่สำเร็จ: ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -281511,6 +281855,16 @@ extension on _StringsTr {
             'Bağlanıldı. Kök katalogda ${count} girdi var';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Bağlantı başarısız: ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -290096,6 +290450,16 @@ extension on _StringsVi {
             'Đã kết nối. Danh mục gốc có ${count} mục';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => 'Kết nối thất bại: ${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
@@ -298609,6 +298973,16 @@ extension on _StringsZhCn {
         return ({required Object count}) => '连接成功，根目录有 ${count} 个条目';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => '连接失败：${reason}';
+      case 'onboarding_pack_status_downloading':
+        return '推荐包下载中';
+      case 'onboarding_pack_status_ready':
+        return '推荐包已下载完成';
+      case 'onboarding_pack_import_now':
+        return '现在导入';
+      case 'onboarding_pack_download_finished':
+        return '推荐包下载完成。可在「设置 → 系统」里导入。';
+      case 'onboarding_pack_download_background_hint':
+        return '下载会在后台继续：可以直接走下一步，也可以关掉向导。进度、取消和导入都在「设置 → 系统」里。';
       default:
         return null;
     }
@@ -307123,6 +307497,16 @@ extension on _StringsZhHk {
         return ({required Object count}) => '連線成功，根目錄有 ${count} 個項目';
       case 'discovery_opds_test_failed':
         return ({required Object reason}) => '連線失敗：${reason}';
+      case 'onboarding_pack_status_downloading':
+        return 'Downloading recommended pack';
+      case 'onboarding_pack_status_ready':
+        return 'Recommended pack downloaded';
+      case 'onboarding_pack_import_now':
+        return 'Import now';
+      case 'onboarding_pack_download_finished':
+        return 'Recommended pack finished downloading. Import it from Settings → System.';
+      case 'onboarding_pack_download_background_hint':
+        return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
       default:
         return null;
     }
