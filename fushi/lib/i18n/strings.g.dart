@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 72029 (4237 per locale)
+/// Strings: 72046 (4238 per locale)
 ///
-/// Built on 2026-09-04 at 16:39 UTC
+/// Built on 2026-09-04 at 17:14 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5820,7 +5820,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -15704,7 +15706,10 @@ class _StringsAr extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -25815,7 +25820,10 @@ class _StringsDe extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -35979,7 +35987,10 @@ class _StringsEs extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -46177,7 +46188,10 @@ class _StringsFr extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -56179,7 +56193,10 @@ class _StringsId extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -66273,7 +66290,10 @@ class _StringsIt extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -75754,7 +75774,10 @@ class _StringsJa extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -85245,7 +85268,10 @@ class _StringsKo extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -95294,7 +95320,10 @@ class _StringsNl extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -105397,7 +105426,10 @@ class _StringsPtBr extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -115478,7 +115510,10 @@ class _StringsRu extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -125358,7 +125393,10 @@ class _StringsTh extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -135355,7 +135393,10 @@ class _StringsTr extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -145323,7 +145364,10 @@ class _StringsVi extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 // Path: <root>
@@ -154485,7 +154529,9 @@ class _StringsZhCn extends _StringsEn {
       '音频采集策略未在超时内确认。文本采集不受影响；若缺少游戏内语音可重试一次。';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      '鼠标触发仅支持侧键（后退/前进）；其他键在别的程序里有固定含义，这里不接受。';
+      '鼠标触发只接受侧键（后退/前进）。其它按钮在别的程序里有各自的固有含义，这里会拒绝录入。';
+  @override
+  String get shortcut_mouse_button_not_supported => '该动作只接受鼠标侧键（后退/前进）。';
 }
 
 // Path: <root>
@@ -163659,7 +163705,10 @@ class _StringsZhHk extends _StringsEn {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   @override
   String get shortcut_scope_global_external_desktop_note =>
-      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+      '鼠标触发只接受侧键（后退/前进）。其它按钮在别的程序里有各自的固有含义，这里会拒绝录入。';
+  @override
+  String get shortcut_mouse_button_not_supported =>
+      'This action only accepts mouse side buttons (back/forward).';
 }
 
 /// Flat map(s) containing all translations.
@@ -172351,7 +172400,9 @@ extension on _StringsEn {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -181038,7 +181089,9 @@ extension on _StringsAr {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -189770,7 +189823,9 @@ extension on _StringsDe {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -198493,7 +198548,9 @@ extension on _StringsEs {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -207225,7 +207282,9 @@ extension on _StringsFr {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -215928,7 +215987,9 @@ extension on _StringsId {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -224653,7 +224714,9 @@ extension on _StringsIt {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -233305,7 +233368,9 @@ extension on _StringsJa {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -241961,7 +242026,9 @@ extension on _StringsKo {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -250679,7 +250746,9 @@ extension on _StringsNl {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -259392,7 +259461,9 @@ extension on _StringsPtBr {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -268112,7 +268183,9 @@ extension on _StringsRu {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -276804,7 +276877,9 @@ extension on _StringsTh {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -285511,7 +285586,9 @@ extension on _StringsTr {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -294212,7 +294289,9 @@ extension on _StringsVi {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
@@ -302839,7 +302918,9 @@ extension on _StringsZhCn {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return '音频采集策略未在超时内确认。文本采集不受影响；若缺少游戏内语音可重试一次。';
       case 'shortcut_scope_global_external_desktop_note':
-        return '鼠标触发仅支持侧键（后退/前进）；其他键在别的程序里有固定含义，这里不接受。';
+        return '鼠标触发只接受侧键（后退/前进）。其它按钮在别的程序里有各自的固有含义，这里会拒绝录入。';
+      case 'shortcut_mouse_button_not_supported':
+        return '该动作只接受鼠标侧键（后退/前进）。';
       default:
         return null;
     }
@@ -311469,7 +311550,9 @@ extension on _StringsZhHk {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
       case 'shortcut_scope_global_external_desktop_note':
-        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
+        return '鼠标触发只接受侧键（后退/前进）。其它按钮在别的程序里有各自的固有含义，这里会拒绝录入。';
+      case 'shortcut_mouse_button_not_supported':
+        return 'This action only accepts mouse side buttons (back/forward).';
       default:
         return null;
     }
