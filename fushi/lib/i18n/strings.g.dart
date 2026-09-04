@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 72012 (4236 per locale)
+/// Strings: 72029 (4237 per locale)
 ///
-/// Built on 2026-09-04 at 16:37 UTC
+/// Built on 2026-09-04 at 16:39 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5819,6 +5819,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -15700,6 +15702,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -25808,6 +25813,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -35969,6 +35977,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -46164,6 +46175,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -56163,6 +56177,9 @@ class _StringsId extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -66254,6 +66271,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -75732,6 +75752,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -85220,6 +85243,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -95266,6 +95292,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -105366,6 +105395,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -115444,6 +115476,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -125321,6 +125356,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -135315,6 +135353,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -145280,6 +145321,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 // Path: <root>
@@ -154439,6 +154483,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       '音频采集策略未在超时内确认。文本采集不受影响；若缺少游戏内语音可重试一次。';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      '鼠标触发仅支持侧键（后退/前进）；其他键在别的程序里有固定含义，这里不接受。';
 }
 
 // Path: <root>
@@ -163610,6 +163657,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_hook_reason_native_loopback_ack_timeout =>
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+  @override
+  String get shortcut_scope_global_external_desktop_note =>
+      'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
 }
 
 /// Flat map(s) containing all translations.
@@ -172300,6 +172350,8 @@ extension on _StringsEn {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -180985,6 +181037,8 @@ extension on _StringsAr {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -189715,6 +189769,8 @@ extension on _StringsDe {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -198436,6 +198492,8 @@ extension on _StringsEs {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -207166,6 +207224,8 @@ extension on _StringsFr {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -215867,6 +215927,8 @@ extension on _StringsId {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -224590,6 +224652,8 @@ extension on _StringsIt {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -233240,6 +233304,8 @@ extension on _StringsJa {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -241894,6 +241960,8 @@ extension on _StringsKo {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -250610,6 +250678,8 @@ extension on _StringsNl {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -259321,6 +259391,8 @@ extension on _StringsPtBr {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -268039,6 +268111,8 @@ extension on _StringsRu {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -276729,6 +276803,8 @@ extension on _StringsTh {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -285434,6 +285510,8 @@ extension on _StringsTr {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -294133,6 +294211,8 @@ extension on _StringsVi {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
@@ -302758,6 +302838,8 @@ extension on _StringsZhCn {
         return '从台词出现到制卡这段时间的游戏画面，并混入句子音频。未开始录制或不足 2 帧时降级为动图/截图。';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return '音频采集策略未在超时内确认。文本采集不受影响；若缺少游戏内语音可重试一次。';
+      case 'shortcut_scope_global_external_desktop_note':
+        return '鼠标触发仅支持侧键（后退/前进）；其他键在别的程序里有固定含义，这里不接受。';
       default:
         return null;
     }
@@ -311386,6 +311468,8 @@ extension on _StringsZhHk {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'game_hook_reason_native_loopback_ack_timeout':
         return 'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
+      case 'shortcut_scope_global_external_desktop_note':
+        return 'Mouse triggers support side buttons only (back/forward); other buttons keep their normal meaning in other apps and are not accepted here.';
       default:
         return null;
     }
