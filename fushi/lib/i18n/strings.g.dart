@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 71417 (4201 per locale)
+/// Strings: 71451 (4203 per locale)
 ///
-/// Built on 2026-09-03 at 17:57 UTC
+/// Built on 2026-09-04 at 10:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5771,6 +5771,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Recommended pack finished downloading. Import it from Settings → System.';
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -15569,6 +15572,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -25594,6 +25602,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -35671,6 +35684,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -45783,6 +45801,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -55700,6 +55723,11 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -65708,6 +65736,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -75104,6 +75137,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -84510,6 +84548,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -94473,6 +94516,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -104490,6 +104538,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -114486,6 +114539,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -124280,6 +124338,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -134191,6 +134254,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -144073,6 +144141,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
 }
 
 // Path: <root>
@@ -153152,6 +153225,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       '下载会在后台继续：可以直接走下一步，也可以关掉向导。进度、取消和导入都在「设置 → 系统」里。';
+  @override
+  String get onboarding_anki_fsrs_action => '在 Anki 里开启 FSRS';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki 默认仍用三十多年前的 SM-2 算法排程。FSRS 已内置但默认关闭：进入牌组选项，打开 FSRS 开关，再点「优化」。点这里看图文指引。';
 }
 
 // Path: <root>
@@ -162242,6 +162320,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_action => '在 Anki 裡開啟 FSRS';
+  @override
+  String get onboarding_anki_action_fsrs_desc =>
+      'Anki 預設仍用三十多年前的 SM-2 演算法排程。FSRS 已內建但預設關閉：進入牌組選項，打開 FSRS 開關，再點「最佳化」。點這裡看圖文指引。';
 }
 
 /// Flat map(s) containing all translations.
@@ -170862,6 +170945,10 @@ extension on _StringsEn {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -179477,6 +179564,10 @@ extension on _StringsAr {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -188137,6 +188228,10 @@ extension on _StringsDe {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -196788,6 +196883,10 @@ extension on _StringsEs {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -205448,6 +205547,10 @@ extension on _StringsFr {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -214079,6 +214182,10 @@ extension on _StringsId {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -222732,6 +222839,10 @@ extension on _StringsIt {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -231312,6 +231423,10 @@ extension on _StringsJa {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -239896,6 +240011,10 @@ extension on _StringsKo {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -248542,6 +248661,10 @@ extension on _StringsNl {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -257183,6 +257306,10 @@ extension on _StringsPtBr {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -265831,6 +265958,10 @@ extension on _StringsRu {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -274451,6 +274582,10 @@ extension on _StringsTh {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -283086,6 +283221,10 @@ extension on _StringsTr {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -291715,6 +291854,10 @@ extension on _StringsVi {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki still schedules with SM-2, an algorithm from the 1980s. FSRS is built in but off by default: open Deck Options, switch FSRS on, then press Optimize. Opens a guide.';
       default:
         return null;
     }
@@ -300270,6 +300413,10 @@ extension on _StringsZhCn {
         return '推荐包下载完成。可在「设置 → 系统」里导入。';
       case 'onboarding_pack_download_background_hint':
         return '下载会在后台继续：可以直接走下一步，也可以关掉向导。进度、取消和导入都在「设置 → 系统」里。';
+      case 'onboarding_anki_fsrs_action':
+        return '在 Anki 里开启 FSRS';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki 默认仍用三十多年前的 SM-2 算法排程。FSRS 已内置但默认关闭：进入牌组选项，打开 FSRS 开关，再点「优化」。点这里看图文指引。';
       default:
         return null;
     }
@@ -308828,6 +308975,10 @@ extension on _StringsZhHk {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_action':
+        return '在 Anki 裡開啟 FSRS';
+      case 'onboarding_anki_action_fsrs_desc':
+        return 'Anki 預設仍用三十多年前的 SM-2 演算法排程。FSRS 已內建但預設關閉：進入牌組選項，打開 FSRS 開關，再點「最佳化」。點這裡看圖文指引。';
       default:
         return null;
     }
