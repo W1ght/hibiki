@@ -120,7 +120,10 @@ public:
     uint32_t char_index = 0;
     uint32_t source_length = 0;
     RECT screen_rect_px{};
-    int dpi = 96;
+    // 刻意**不带** dpi：物理→逻辑的除数必须与 Dart 侧乘回去的
+    // `MediaQuery.devicePixelRatio` 同源（宿主窗口），由消费方
+    // flutter_window.cpp 的 SetLookupCallback 现取，不能由本事件携带目标
+    // 窗口的 DPI —— DPI-unaware 的游戏恒报 96，会让锚点净多乘一个 dpr。
     // True when emitted by the Shift+hover timer instead of a completed
     // shielded click transaction. Hover never consumes any input.
     bool hover = false;

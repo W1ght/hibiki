@@ -1493,7 +1493,21 @@ void FlutterWindow::RegisterGalHookTextChannel() {
   attached_text_surface_window_->SetLookupCallback(
       [this](const AttachedTextSurfaceWindow::LookupEvent& event) {
         if (!gal_hook_text_channel_) return;
-        const double logical_scale = 96.0 / std::max(96, event.dpi);
+        // `screen_rect_px` 是真实的屏幕**物理**像素，而 wire 契约（见
+        // GlobalLookupController.lookupText 的 anchorScreenRect）要的是屏幕**逻辑**
+        // 像素；Dart 收到后会在 global_lookup_controller.dart 里乘回
+        // `MediaQuery.devicePixelRatio`（**本宿主窗口**的缩放）交给 showAt。
+        //
+        // 所以这里的除数必须与那次乘法**同源**，整条往返才是恒等变换。此前除的是
+        // `event.dpi`＝`GetDpiForWindow(游戏窗口)`：galgame 引擎（KiriKiri 等）绝大
+        // 多数是 DPI-unaware 进程，`GetDpiForWindow` 对它们恒返回 96，除法退化成
+        // no-op，物理坐标原样交给 Dart 再乘一次缩放 —— 净多乘一个 dpr，偏移量正比于
+        // 坐标本身（200% 屏上锚点直接翻倍，离原点越远偏得越多）。本进程是
+        // PerMonitorV2，`GetDpiForWindow(GetHandle())` 就是 Flutter view 那份 dpr 的
+        // 来源，两端因此严格互逆，游戏窗口是否 DPI-aware 不再影响锚点。
+        const UINT host_dpi = GetDpiForWindow(GetHandle());
+        const double logical_scale =
+            96.0 / static_cast<double>((std::max)(96u, host_dpi));
         const double left = event.screen_rect_px.left * logical_scale;
         const double top = event.screen_rect_px.top * logical_scale;
         const double width =

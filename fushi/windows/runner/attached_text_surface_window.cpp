@@ -2717,7 +2717,6 @@ void AttachedTextSurfaceWindow::EmitLookupEvent(int cluster_index,
   event.screen_rect_px = cluster.client_rect;
   OffsetRect(&event.screen_rect_px, surface_screen_rect_.left,
              surface_screen_rect_.top);
-  event.dpi = std::max(96, live_reference_client_.dpi);
   event.hover = hover;
   on_lookup_(event);
 }
