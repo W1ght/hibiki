@@ -129,10 +129,13 @@ class DictionaryImportManager {
     VoidCallback? onMemoryError,
   }) async {
     final entities = directory.listSync();
+    // 逐个导入的次序是用户可见的（进度 i/N + failedNames 汇总），listSync
+    // 的平台顺序不能当稳定输入——同文件 _importArchivedDictionaries 已经这么做。
     final zipFiles = entities.whereType<File>().where((f) {
       final ext = path.extension(f.path).toLowerCase();
       return ext == '.zip' || ext == '.dsl' || ext == '.mdx';
-    }).toList();
+    }).toList()
+      ..sort((File a, File b) => a.path.compareTo(b.path));
 
     if (zipFiles.isNotEmpty) {
       final cssFiles = entities
@@ -302,6 +305,9 @@ class DictionaryImportManager {
           metadata: <String, String>{
             ...readSourceMetadataFromIndex(finalDir),
             if (result.kanjiCount > 0) 'hasKanji': 'true',
+            // 导入时 native 已经数过 term/kanji 记录，等于类型探测刚做完：直接落
+            // 标记，启动期的自愈循环就不会再对这本做一次全表扫描。
+            kDictTypeProbeKey: kDictTypeProbeVersion,
           },
           hiddenLanguages: preservedSettings?.hiddenLanguages ?? const [],
           collapsedLanguages: preservedSettings?.collapsedLanguages ?? const [],
@@ -563,6 +569,8 @@ class DictionaryImportManager {
         metadata: <String, String>{
           ...metadata,
           if (result.kanjiCount > 0) 'hasKanji': 'true',
+          // 同目录导入路径：native 刚数完记录，探测标记直接落库（见另一处注释）。
+          kDictTypeProbeKey: kDictTypeProbeVersion,
         },
         hiddenLanguages: preservedSettings?.hiddenLanguages ?? const [],
         collapsedLanguages: preservedSettings?.collapsedLanguages ?? const [],

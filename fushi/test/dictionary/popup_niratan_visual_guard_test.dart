@@ -20,12 +20,10 @@ void main() {
   // flutter test 的 cwd 是 hibiki 包根。
   late final String css;
   late final String js;
-  late final String html;
 
   setUpAll(() {
     css = File('assets/popup/popup.css').readAsStringSync();
     js = File('assets/popup/popup.js').readAsStringSync();
-    html = File('assets/popup/popup.html').readAsStringSync();
   });
 
   group('#1 音高来源彩色药丸', () {
@@ -51,17 +49,23 @@ void main() {
       expect(body.contains('#94a6eb'), isFalse, reason: '禁止照抄 Niratan 的硬编码颜色');
     });
 
-    test('Dart 侧两个注入点都注入了 --md-on-primary（药丸文字色的真值来源）', () {
-      for (final String path in <String>[
+    test('Dart 侧唯一注入点注入了 --md-on-primary（药丸文字色的真值来源）', () {
+      // BUG-2039 ③：主题变量段只剩 popup_settings_injection 一处；in-app 弹窗
+      // WebView 的主题热切换重注同一段产物（themeVarsJs），不再自拼第二份。
+      final String injection = File(
         'lib/src/pages/implementations/popup_settings_injection.dart',
+      ).readAsStringSync();
+      expect(injection, contains("'--md-on-primary'"),
+          reason: 'popup_settings_injection 应注入 --md-on-primary');
+      final String webview = File(
         'lib/src/pages/implementations/dictionary_popup_webview.dart',
-      ]) {
-        final String src = File(path).readAsStringSync();
-        expect(src, contains("'--md-on-primary'"),
-            reason: '$path 应注入 --md-on-primary');
-      }
+      ).readAsStringSync();
+      expect(webview, isNot(contains("setProperty('--md-on-primary'")),
+          reason: '弹窗 WebView 不得再维护第二份主题变量注入（会与真源漂移）');
+      expect(webview, contains('.themeVarsJs'),
+          reason: '弹窗 WebView 主题热切换必须消费静态段产物里的同一段');
       // 取值已收敛到共享真源 popup_theme_css.dart：on-primary 仍取自
-      // ColorScheme.onPrimary，两个注入点经 buildPopupThemeCssVars 消费。
+      // ColorScheme.onPrimary，注入点经 buildPopupThemeCssVars 消费。
       final String shared =
           File('lib/src/utils/popup_theme_css.dart').readAsStringSync();
       expect(shared, contains('scheme.onPrimary'),
@@ -124,11 +128,27 @@ void main() {
       expect(svgBody, contains('height: 1em'));
     });
 
-    test('标签说明遮罩的关闭按钮也换成内联 SVG（关闭图标一并统一）', () {
-      expect(html, contains('class="overlay-close"'),
-          reason: 'overlay-close 结构保留');
-      expect(RegExp(r'overlay-close"[^>]*>\s*<svg').hasMatch(html), isTrue,
-          reason: 'overlay-close 用内联 SVG 而非 × 文字字形');
+    test('标签说明浮层的关闭按钮也换成内联 SVG（关闭图标一并统一）', () {
+      // 浮层已不再是 popup.html 里的静态 `.overlay`，改由 popup.js 现建，
+      // 关闭按钮相应从 `.overlay-close` 变成 `.grammar-tooltip-close`。
+      // 判据不变：必须是内联 SVG，不能退回 × 文字字形（字形冒充图标会因
+      // 视觉重心偏移而无法真正居中，根治只能是几何绘制）。
+      final String js = File('assets/popup/popup.js').readAsStringSync();
+      expect(
+        js,
+        contains("className: 'grammar-tooltip-close'"),
+        reason: 'grammar-tooltip-close 结构保留',
+      );
+      expect(
+        js,
+        contains("close.innerHTML = iconSvg('close');"),
+        reason: '关闭按钮用内联 SVG（复用 ICON_PATHS.close）而非 × 文字字形',
+      );
+      expect(
+        js,
+        isNot(contains("textContent = '×'")),
+        reason: '不得退回 × 文字字形',
+      );
     });
   });
 

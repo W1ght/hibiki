@@ -88,6 +88,7 @@ jobs:
         INPUT_RELEASE_NAME: ${{ github.event.inputs.release_name }}
         RELEASE_TAG_NAME: ${{ github.event.release.tag_name }}
         RELEASE_IS_PRERELEASE: ${{ github.event.release.prerelease }}
+        RELEASE_BODY: ${{ github.event.release.body }}
       run: |
         set -euo pipefail
         PUBSPEC_VERSION=$(grep '^version:' fushi/pubspec.yaml | sed 's/version: *//')
@@ -119,6 +120,14 @@ jobs:
         CHANNEL="${INPUT_CHANNEL:-}"
         TAG="${INPUT_TAG_NAME:-}"
         NAME="${INPUT_RELEASE_NAME:-}"
+        # BUG-2088：正式版/测试版**真实更新公告**的来源。此前 BODY 只有一行模板，
+        # 而 NOTES 就是它——实测 v2.1.1 的 latest-stable.json 里 notes 是
+        # 「Manual formal release from bridge/auto-migrate-download @ 4d1c8f4.」，
+        # 而 GitHub 上那份正文有 3613 字：**应用内更新弹窗给用户看的一直是占位符**。
+        # 约定：公告写在 docs/release-notes/<语义版本>.md，正式/测试通道自动取用；
+        # 手动发 GitHub Release 时优先用 Release 正文（那才是当场写的那份）。
+        # debug 通道不取——滚动开发构建挂完整 changelog 会误导。
+        NOTES_FILE="docs/release-notes/${VERSION}.md"
         BODY=""
         PRERELEASE=true
         MAKE_LATEST=false
@@ -162,6 +171,7 @@ jobs:
                 TAG="${TAG:-v${VERSION}-beta.${RELEASE_SEQUENCE}}"
                 NAME="${NAME:-Fushi ${VERSION} beta ${RELEASE_SEQUENCE}}"
                 BODY="Manual beta/test build from ${GITHUB_REF_NAME} @ ${SHORT_SHA}. Beta/test releases are prerelease and never Latest."
+                if [ -f "$NOTES_FILE" ]; then BODY="$(cat "$NOTES_FILE")"; fi
                 FILES="fushi/build/release-artifacts/fushi-*.apk"
                 BUILD_DEBUG_APK=false
                 BUILD_SPLIT_RELEASE_APK=true
@@ -171,6 +181,7 @@ jobs:
                 TAG="${TAG:-v${VERSION}}"
                 NAME="${NAME:-Fushi ${VERSION}}"
                 BODY="Manual formal release from ${GITHUB_REF_NAME} @ ${SHORT_SHA}."
+                if [ -f "$NOTES_FILE" ]; then BODY="$(cat "$NOTES_FILE")"; fi
                 PRERELEASE=false
                 MAKE_LATEST=true
                 FILES="fushi/build/release-artifacts/fushi-*.apk"
@@ -187,6 +198,21 @@ jobs:
             ;;
           release)
             CHANNEL=github-release
+            # BUG-2104：本分支曾是**唯一**没显式关掉 debug APK 的分支。
+            # `BUILD_DEBUG_APK` 的初值是 true（见本步骤开头），push / dispatch 的
+            # debug|beta|formal 四条分支各自设了 false，只有这里漏了 ⇒ 留在默认 true；
+            # 而下面的上传 glob 是 `fushi-*.apk`，顺手把 `fushi-<ver>-<sha>-debug.apk`
+            # 扫进正式 release 的资产表和已发布的 latest-stable-fushi.json。
+            # 后果不致命（两批已出货客户端都按名字把 `-debug.apk` 排除在 stable/beta 之外，
+            # 见 fushi/test/utils/misc/formal_asset_naming_legacy_contract_test.dart 与
+            # platform_updater.dart 的 _isDebugApkAsset），但正式版页面上多一个 debug 构建
+            # 可供手动下载、白烧一次构建、清单里多一条无用条目。
+            # **手动发 GitHub Release 正是本仓文档里正式版的一等路径**，所以这条必然复发。
+            BUILD_DEBUG_APK=false
+            # 手动发 GitHub Release：正文就是当场写的公告，优先用它；留空（先建空
+            # Release 再补正文）时回落到仓库里的公告文件。
+            BODY="${RELEASE_BODY:-}"
+            if [ -z "$BODY" ] && [ -f "$NOTES_FILE" ]; then BODY="$(cat "$NOTES_FILE")"; fi
             TAG="${RELEASE_TAG_NAME:-${GITHUB_REF_NAME}}"
             FILES="fushi/build/release-artifacts/fushi-*.apk"
             BUILD_SPLIT_RELEASE_APK=true

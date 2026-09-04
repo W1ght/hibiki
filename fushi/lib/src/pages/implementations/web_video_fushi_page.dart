@@ -53,6 +53,8 @@ import 'package:fushi/src/pages/implementations/video_fushi_page.dart'
     show resolveVideoLookupAnchorCue, subtitleLookupTerm;
 import 'package:fushi/src/shortcuts/input_binding.dart';
 import 'package:fushi/src/shortcuts/shortcut_action.dart';
+import 'package:fushi/src/shortcuts/window_fullscreen_hosts.dart'
+    show WindowFullscreenHost;
 import 'package:fushi/src/sync/fushi_library_host_service.dart'
     show videoRemotePositionEpisodeAtPrefKey, videoRemotePositionEpisodePrefKey;
 import 'package:fushi/src/utils/adaptive/adaptive_widgets.dart'
@@ -386,14 +388,15 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
   };
 
   @override
-  void onDictionaryPopupInputToken(String token) {
+  bool onDictionaryPopupInputToken(String token) {
     final ShortcutAction? action = resolveDictionaryPopupInputToken(
       registry: _appModel.shortcutRegistry,
       token: token,
       scope: ShortcutScope.video,
     );
-    if (action == null) return;
+    if (action == null) return false;
     _popNestedPopupAt(_popup.lastVisibleIndex);
+    return true;
   }
 
   @override
@@ -775,9 +778,13 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
           mediaKind: kActivityMediaVideo,
           mediaKey: widget.bookUid,
           title: row.title,
+          accrual: StudyAccrual.explicit,
           onWriteError: (Object e, StackTrace st) =>
               ErrorLogService.instance.log('StudyClock.write(web-video)', e, st),
         ),
+        loadCoverage: () => db.getPref(videoWatchCoveragePrefKey(widget.bookUid)),
+        saveCoverage: (String json) =>
+            db.setPref(videoWatchCoveragePrefKey(widget.bookUid), json),
         markCompleted: (String uid) =>
             db.markVideoCompleted(uid, DateTime.now()),
       )..attach(_controller);
@@ -1076,10 +1083,16 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
     await _toggleFavoriteCue(cue);
   }
 
-  void _copyCue(AudioCue cue) {
+  /// 字幕列表行内复制。走 [AppModel.copyToClipboard]：写剪贴板 + 按平台决定要不要
+  /// 弹「已复制」toast（Android 13+ 系统自带提示，不重复）。网页视频页没有视频页那套
+  /// OSD，此前这里复制完毫无反馈。
+  /// 返回是否真的写了剪贴板（[VideoSubtitleJumpPanel.onCopyCue] 的契约）：空句不算
+  /// 成功，面板据此决定要不要把行内按钮切成 ✓。
+  bool _copyCue(AudioCue cue) {
     final String text = cue.text.trim();
-    if (text.isEmpty) return;
-    Clipboard.setData(ClipboardData(text: text));
+    if (text.isEmpty) return false;
+    _appModel.copyToClipboard(text);
+    return true;
   }
 
   // ── 查词（与视频页 `_lookupAt` 同步骤）──────────────────────────────────
@@ -1398,6 +1411,9 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
                           ReaderFushiSource.instance.enableSwipeToClose,
                       sensitivity:
                           ReaderFushiSource.instance.dismissSwipeSensitivity,
+                      // 弹窗可见时 barrier 吃掉全部指针，页面根收不到——「浮窗矩形
+                      // 之外」按鼠标非主键这半边只能在这里接（见钩子文档）。
+                      onNonPrimaryButtonDown: onDismissBarrierNonPrimaryButton,
                     ),
                   ),
                 if (_popup.isSearchingUi && _popup.pendingRect != null)
@@ -1418,6 +1434,7 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
                     ),
                     onPop: _popNestedPopupAt,
                   ),
+                ...buildParkedRealmLayers(screen: screen, controller: _popup),
               ],
             );
           },
@@ -1561,7 +1578,10 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
     if (row == null || scripts == null) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
-    return CallbackShortcuts(
+    // 网页流媒体页属于视频模块，同样是**窗口全屏的合法宿主**（见
+    // [WindowFullscreenHosts]）。上面两条早退分支（加载失败 / 尚未就绪）故意不声明：
+    // 那两种状态下页面还没有内容，没有可全屏的东西。
+    final Widget page = CallbackShortcuts(
       bindings: _keyboardShortcuts(),
       child: Focus(
         focusNode: _focusNode,
@@ -1604,6 +1624,7 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
         ),
       ),
     );
+    return WindowFullscreenHost(child: page);
   }
 
   PreferredSizeWidget _buildAppBar(VideoBookRow row, ColorScheme cs) {

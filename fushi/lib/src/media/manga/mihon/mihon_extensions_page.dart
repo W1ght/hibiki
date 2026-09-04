@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -15,6 +14,7 @@ import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/utils/misc/error_details_dialog.dart';
 import 'package:fushi/src/utils/net/url_input_normalizer.dart';
 import 'package:fushi/utils.dart';
+import 'package:fushi/src/media/import/real_path_directory_picker.dart';
 
 /// Mihon 扩展仓库与安装管理。
 ///
@@ -217,13 +217,10 @@ class _MihonExtensionsPageState extends ConsumerState<MihonExtensionsPage> {
       false;
 
   Future<void> _importApk() async {
-    final FilePickerResult? result = await FilePicker.platform.pickFiles(
-      type: FileType.custom,
-      allowedExtensions: const <String>['apk'],
-      allowMultiple: false,
-      withData: false,
+    final String? path = await pickSystemFilePath(
+      context: context,
+      allowedExtensions: const <String>{'apk'},
     );
-    final String? path = result?.files.single.path;
     if (!mounted || path == null) return;
     try {
       final MihonInstallProposal proposal =
@@ -1035,8 +1032,14 @@ class _AvailableExtensionTileState extends State<_AvailableExtensionTile> {
   Widget build(BuildContext context) {
     final MihonAvailableExtension extension = widget.extension;
     final MangaExtensionRow? installed = widget.installed;
-    final bool update =
-        installed != null && extension.versionCode > installed.versionCode;
+    // 两侧同量（DB 列存的就是 APK 的 android:versionCode，索引给的是同一个数），
+    // 比大小自洽。BUG-1996 一度改成 `versionName !=`，理由是「跨尺度比大小、角标
+    // 永不亮」——前提已被实测证伪（见 [MihonExtensionInspection.apkVersionCode]），
+    // 且 `!=` 会在**已装版本比仓库新**时（本地侧载 / 同包多仓库）误报「有更新」并
+    // 顶掉下面的「卸载」按钮，点下去必得 DOWNGRADE_REJECTED。`>` 结构上不可能有
+    // 这个假阳性，保留。
+    final bool update = installed != null &&
+        extension.extensionVersionCode > installed.versionCode;
     final ThemeData theme = Theme.of(context);
     final int hiddenSources = _showAllSources
         ? 0

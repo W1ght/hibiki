@@ -108,11 +108,22 @@ constexpr uint32_t kSharedMagic = 0x31485648;  // 'H''V''H''1'
 //     两边的新引擎位同时要走（HUNEX HFA 5 位 + SGRE 家族/锚点 3 位，而低 27 位早已
 //     占满）。按本结构体既有先例（reserved_luna 满了之后另立 reserved_hook_diagnostics）
 //     另立一个字，而不是拓宽——拓宽要改 InterlockedOr 的原子写路径与每个读侧。
-// v21：lookup geometry admission 新增 native-input-ready 位。lookup_enabled 只负责让
-//     文本/几何传感器继续工作；native provider 即使已经被 registry 选成 Ready owner，
-//     也只有在 host 通过风险准入并显式发布这一位后才可吞掉游戏点击。这个变化不改布局，
-//     但改变同一 flags 字的解释方式，按 v18 的纪律必须升版本，拒绝新旧 host/helper 混用。
-constexpr uint32_t kSharedVersion = 21;
+// v21：`lookup_geometry_admission_flags` 的 0x2 位从 v20 的保留位变成
+//     NativeInputAllowed。lookup_enabled 只负责让文本/几何传感器继续工作；
+//     native provider 即使已经被 registry 选成 Ready owner，也只有在 host
+//     通过风险准入并显式发布这一位后才可吞掉游戏点击。
+//     布局和偏移完全不变，但解释方式已经改变：v20 hook 只认识
+//     AttachedReady，v21 host 则依赖 0x2 对语义输入消费与 native hit 发布做
+//     fail-closed 门控。同布局、异语义仍必须升版（与 v18 的
+//     LookupInputSlot::keys 完全同理），否则旧 helper 会被版本门误判兼容，
+//     host 以为已撤销输入而驻留 DLL 仍继续消费。
+//  v22 — BUG-2136 引擎层原点双向面。SharedHeader 尾部在 v19 摘要之后**纯追加**了
+//     12 个 32 位字（hook→host 的行包围盒 + 设计分辨率 + 字形数，host→hook 的
+//     解出原点 + seq）。**布局变了就必须升版**：`hook/dll_main.cpp` 与
+//     `injector/injector_main.cpp` 都用 `sizeof(SharedHeader)` 现算 ring / region
+//     基址，新旧混装会整体差 48 字节，而版本门本会放行——症状是跨进程读到完全
+//     错位的数据，不报错。
+constexpr uint32_t kSharedVersion = 22;
 constexpr uint32_t kStableIpcVersion = 1;
 
 // BUG-1882 — SGRE 的鼠标输入走 DirectInput immediate state，不经过普通
@@ -171,6 +182,25 @@ inline constexpr wchar_t kLeafAquaplusSampledInputShieldTailAckProperty[] =
     L"Fushi.LeafAquaplus.SampledInputShield.TailAck";
 inline constexpr uintptr_t kLeafAquaplusSampledInputShieldReadyValue = 1u;
 inline constexpr uintptr_t kLeafAquaplusSampledInputShieldRequiredValue = 1u;
+
+// Exact HUNEX/GGE profiles also sample GetAsyncKeyState directly. Keep a
+// distinct namespace from Leaf/AQUAPLUS: both adapters own the same USER32
+// export, but their executable admission and detour callsites are unrelated.
+// The tail request/ack pair keeps the sampled low bit hidden until the engine
+// has observed a later neutral poll, so a lookup click cannot advance the
+// game after the popup has already been dismissed.
+inline constexpr wchar_t kHunexGgeSampledInputShieldReadyProperty[] =
+    L"Fushi.HunexGge.SampledInputShield.Ready";
+inline constexpr wchar_t kHunexGgeSampledInputShieldRequiredProperty[] =
+    L"Fushi.HunexGge.SampledInputShield.Required";
+inline constexpr wchar_t kHunexGgeSampledInputShieldWindowProperty[] =
+    L"Fushi.HunexGge.SampledInputShield.Window";
+inline constexpr wchar_t kHunexGgeSampledInputShieldTailRequestProperty[] =
+    L"Fushi.HunexGge.SampledInputShield.TailRequest";
+inline constexpr wchar_t kHunexGgeSampledInputShieldTailAckProperty[] =
+    L"Fushi.HunexGge.SampledInputShield.TailAck";
+inline constexpr uintptr_t kHunexGgeSampledInputShieldReadyValue = 1u;
+inline constexpr uintptr_t kHunexGgeSampledInputShieldRequiredValue = 1u;
 inline constexpr uint32_t kLeafAquaplusSampledInputLeftButton = 0x1u;
 inline constexpr uint32_t kLeafAquaplusSampledInputRightButton = 0x2u;
 inline constexpr uint32_t kLeafAquaplusSampledInputMiddleButton = 0x4u;
@@ -216,6 +246,10 @@ constexpr uint32_t kLoopbackDiagInitializeAttempted = 0x00000020u;
 constexpr uint32_t kLoopbackDiagUnknownFormat = 0x00000040u;
 constexpr uint32_t kLoopbackDiagFailed = 0x00000080u;
 constexpr uint32_t kLoopbackDiagPolicyStopObserved = 0x00000100u;
+// allow 请求的策略确认没在注入预算内到达：injector 已按「能力未就绪」降级继续
+// （文本 hook 照常安装），worker 仍可能稍后自行 ack 成 running。置位只说明
+// 「这次注入没等到确认」，不代表 loopback 永远起不来（BUG-2131）。
+constexpr uint32_t kLoopbackDiagPolicyAckTimeout = 0x00000200u;
 
 // 环形缓冲保留时长（秒）。C 阶段语音轨常见 48k 立体声 float32；60s 上界 ≈ 23MB。
 // 32 位游戏地址空间有限，共享内存映射进游戏进程也吃它的地址空间——故设硬上界。
@@ -398,6 +432,50 @@ constexpr uint32_t kXAudioDiagHunexHfaTaskRejected = 0x80000000u;
 constexpr uint32_t kXAudioDiag2SgreFamilyMatched = 0x00000001u;
 constexpr uint32_t kXAudioDiag2SgreAnchorsResolved = 0x00000002u;   // all three
 constexpr uint32_t kXAudioDiag2SgreAnchorsUnresolved = 0x00000004u; // any missing
+
+// Leaf/AQUAPLUS（WHITE ALBUM2）资源音频三段门的**分型**位。
+//
+// TryHookLeafAquaplusResourceAudio 的三个前置（exact profile 匹配 / 共享文件 hook /
+// VOICE.PAK 归档加载）此前任一失败都只是静默 `return false`，诊断上完全同形：真机上
+// 只看得到「音频降级成系统 Loopback」，分不出是身份没匹配、hook 没装上，还是归档没读到，
+// 而这三者的处置完全不同。这三位只记录事实，不参与任何判定。
+//
+// kDiagSiglusOvkHooksReady 不能拿来替代：它只在 siglus 家族为真时才置位，Leaf 复用同一套
+// 共享文件 hook 却永远不会点亮它，据此推断会得到相反的结论。
+constexpr uint32_t kXAudioDiag2LeafProfileUnmatched = 0x00000008u;
+constexpr uint32_t kXAudioDiag2LeafFileHooksUnavailable = 0x00000010u;
+constexpr uint32_t kXAudioDiag2LeafVoiceArchivesMissing = 0x00000020u;
+
+// Leaf/AQUAPLUS 身份门（IsLeafAquaplusProfileMatched）的**分型**位。
+//
+// 上面三位挂在 TryHookLeafAquaplusResourceAudio 里，而那个函数只有在 adapter 已经
+// claim 本进程之后才会被调用；adapter 的 probe() 就是身份门本身。真机上观察到
+// lookup_admission=EngineUnsupported（Leaf 的 lookupAdmission 只可能返回
+// SensorInstalled / IdentityAccepted，绝不会返回 EngineUnsupported）意味着根本没有
+// adapter claim，也就是身份门没过——此时上面三位必然全灭，无法分型。
+//
+// 身份门是两层：先按 exe SHA-256 + machine 选中 profile，再做二进制结构校验（唯一
+// 掩码模式扫描 + 重定位操作数复核 + section 角色复核）。哈希逐字节相同却仍不匹配时，
+// 失败一定在第二层，而那是一条约 25 项的 && 链，不分型就只能逐项猜。
+//
+// kXAudioDiag2LeafIdentityHashMatched 在哈希 + machine 匹配后立刻置位（结构门之前），
+// 其余各位只在结构校验失败时按组记录事实。全部只记录，不参与任何判定；判定链一字未改。
+constexpr uint32_t kXAudioDiag2LeafIdentityHashMatched = 0x00000040u;
+constexpr uint32_t kXAudioDiag2LeafStructureRejected = 0x00000080u;
+constexpr uint32_t kXAudioDiag2LeafImageUnopened = 0x00000100u;
+constexpr uint32_t kXAudioDiag2LeafSectionRolesRejected = 0x00000200u;
+constexpr uint32_t kXAudioDiag2LeafTraversalAnchorMissed = 0x00000400u;
+constexpr uint32_t kXAudioDiag2LeafRasterAnchorMissed = 0x00000800u;
+constexpr uint32_t kXAudioDiag2LeafInputAnchorMissed = 0x00001000u;
+constexpr uint32_t kXAudioDiag2LeafEmbedAnchorMissed = 0x00002000u;
+constexpr uint32_t kXAudioDiag2LeafDeviceAnchorMissed = 0x00004000u;
+constexpr uint32_t kXAudioDiag2LeafReturnSitesRejected = 0x00008000u;
+
+// 「exe 摘要量不到」与「摘要量到了但不是这个发行版」必须分开：前者是瞬时条件
+// （首次 probe 可能落在注入窗口内，BCrypt / 文件映射在 loader lock 或 hook 安装
+// 中途失败），后者是确定结论。旧实现两者共用一条永久 -1 缓存路径，于是一次瞬时
+// 失败就让本会话的 Leaf adapter 永久出局，表现为整场音频降级到系统 Loopback。
+constexpr uint32_t kXAudioDiag2LeafExecutableUnmeasurable = 0x00010000u;
 
 // reserved_luna 的资源音频诊断位。KiriKiriZ 的 TVPCreateStream hook 直接导出当前播放的
 // 已解密 Ogg；Siglus 从 OVK 索引导出逐句 Ogg。它们只代表“资源捕获链已安装”，不要求 PCM
@@ -681,20 +759,26 @@ constexpr uint32_t kLookupGeometryStatusActive = 2u;
 constexpr uint32_t kLookupGeometryStatusSuspended = 3u;
 constexpr uint32_t kLookupGeometryStatusFaulted = 4u;
 
-// v19 host -> injected registry geometry admission.  This is deliberately
+// v20 host -> injected registry geometry admission.  This is deliberately
 // independent from lookup_enabled: attached calibrated lookup still needs the
 // injected generic input shield while native geometry publishers are retired.
 // Auto keeps observing native offers and uses the host-owned attached offer
-// only as the lowest-priority production fallback.
+// only as the lowest-priority production fallback.  v21 assigns flags bit 0x2
+// the NativeInputAllowed semantic gate; that semantic change is versioned even
+// though SharedHeader layout remains byte-for-byte identical to v20.
 constexpr uint32_t kLookupGeometryAdmissionDisabled = 0u;
 constexpr uint32_t kLookupGeometryAdmissionAuto = 1u;
 constexpr uint32_t kLookupGeometryAdmissionNativeOnly = 2u;
 constexpr uint32_t kLookupGeometryAdmissionAttachedOnly = 3u;
 constexpr uint32_t kLookupGeometryAdmissionFlagAttachedReady = 0x00000001u;
-constexpr uint32_t kLookupGeometryAdmissionFlagNativeInputReady = 0x00000002u;
+// Host-owned semantic input gate.  Provider discovery/readiness intentionally
+// ignores this bit: it only authorizes an already-applied exact native owner to
+// consume input and publish the resulting lookup hit.
+constexpr uint32_t kLookupGeometryAdmissionFlagNativeInputAllowed =
+    0x00000002u;
 constexpr uint32_t kLookupGeometryAdmissionFlagMask =
     kLookupGeometryAdmissionFlagAttachedReady |
-    kLookupGeometryAdmissionFlagNativeInputReady;
+    kLookupGeometryAdmissionFlagNativeInputAllowed;
 constexpr uint32_t kLookupGeometryAdmissionWriteInProgress = 0x80000000u;
 constexpr uint32_t kLookupGeometryAdmissionSequenceMask = 0x7fffffffu;
 
@@ -1106,8 +1190,41 @@ struct SharedHeader {
   // 时保证有值：那是唯一需要用户把自己的版本身份报回来的情形（hash-pinned 白名单不中）。
   // 有界读——上界就是 kHookModuleDigestChars，绝不假设写侧给了 NUL。
   char lookup_executable_sha256[kHookModuleDigestChars];
+  // ── BUG-2136 引擎层原点（双向；纯追加）────────────────────────────────────
+  // 背景：HUNEX/GGE 的正文字形位置是**文本层局部坐标**（1920x1080 逻辑单位），
+  // client = (render + origin) * client/(design_w, design_h) 已在两种窗口尺寸 × 三条行
+  // 上实测成立。origin 是每作一个常量，但**游戏内存里读不到现成的**——item 前 0x70 字节、
+  // render_item 另三个参数、body_submit 调用帧 0x000..0x180、viewport/scale 全局邻域
+  // 四处都排除过。所以由**宿主**抓一帧画面自动解出来，再回传给注入侧。
+  //
+  // hook→host：当前行在层空间的包围盒 + 设计分辨率。宿主据此预测「墨迹应该在哪」，
+  // 与实拍的墨迹框做二维平移求解。line_seq 单调，0=尚无。
+  volatile uint32_t lookup_layer_line_seq;
+  volatile uint32_t lookup_layer_design_w;
+  volatile uint32_t lookup_layer_design_h;
+  volatile uint32_t lookup_layer_glyph_count;
+  volatile int32_t lookup_layer_line_left;
+  volatile int32_t lookup_layer_line_top;
+  volatile int32_t lookup_layer_line_right;
+  volatile int32_t lookup_layer_line_bottom;
+  // host→hook：解出来的层原点。origin_seq 最后写；0=宿主尚未给出，注入侧此时**不得**
+  // 假装几何可用（fail-closed，照常退回贴合层）。
+  volatile int32_t lookup_layer_origin_x;
+  volatile int32_t lookup_layer_origin_y;
+  volatile uint32_t lookup_layer_origin_seq;
+  uint32_t lookup_layer_reserved;
 };
 #pragma pack(pop)
+
+// ── BUG-2136 层原点：两侧读写器 ─────────────────────────────────────────────
+struct LookupLayerLineSnapshot {
+  uint32_t seq = 0;
+  uint32_t design_w = 0;
+  uint32_t design_h = 0;
+  uint32_t glyph_count = 0;
+  int32_t left = 0, top = 0, right = 0, bottom = 0;
+  bool valid = false;
+};
 
 struct LookupGeometryAdmissionSnapshot {
   uint32_t seq = 0;
@@ -1119,8 +1236,8 @@ struct LookupGeometryAdmissionSnapshot {
     return (flags & kLookupGeometryAdmissionFlagAttachedReady) != 0;
   }
 
-  bool native_input_ready() const {
-    return (flags & kLookupGeometryAdmissionFlagNativeInputReady) != 0;
+  bool native_input_allowed() const {
+    return (flags & kLookupGeometryAdmissionFlagNativeInputAllowed) != 0;
   }
 };
 
@@ -1247,15 +1364,13 @@ inline LookupGeometryAdmissionSnapshot ReadLookupGeometryAdmission(
 // generic shield.  The helper is idempotent across repeated Flutter syncs.
 inline uint32_t PublishLookupGeometryAdmission(
     SharedHeader* header, uint32_t mode, bool attached_ready,
-    bool native_input_ready) {
+    bool native_input_allowed = false) {
   if (header == nullptr || !IsLookupGeometryAdmissionMode(mode)) return 0;
-  uint32_t flags = 0;
-  if (attached_ready) {
-    flags |= kLookupGeometryAdmissionFlagAttachedReady;
-  }
-  if (native_input_ready) {
-    flags |= kLookupGeometryAdmissionFlagNativeInputReady;
-  }
+  const uint32_t flags =
+      (attached_ready ? kLookupGeometryAdmissionFlagAttachedReady : 0u) |
+      (native_input_allowed
+           ? kLookupGeometryAdmissionFlagNativeInputAllowed
+           : 0u);
   const LookupGeometryAdmissionSnapshot stable =
       ReadLookupGeometryAdmission(header);
   if (stable.valid && stable.mode == mode && stable.flags == flags) {
@@ -1295,6 +1410,12 @@ inline uint32_t PublishLookupGeometryAdmission(
                       published);
   return published;
 }
+
+// Update only the semantic-input bit while preserving the current geometry
+// owner policy and attached-ready offer.  ReaderState serialises host writers;
+// this helper still uses the same request seqlock so injected readers never
+// accept a half-updated flag set.  A mapping without a stable geometry request
+// is fail-closed and must be initialised by PublishLookupGeometryAdmission.
 
 inline LookupShieldRequestSnapshot ReadLookupShieldRequest(
     const SharedHeader* header) {
@@ -1467,6 +1588,128 @@ inline bool PublishLookupShieldStatus(
 //
 // 只在**内容真的变了**时推进 seq：registry 每 16~200ms 就 Poll 一次，稳态下无脑推 seq
 // 会让 host 每轮都当成新事件去刷 UI。返回值告诉调用方这轮有没有发生变化。
+// hook 侧发布：payload 先写，seq 最后写。内容没变就不推进 seq——宿主每轮都在轮询，
+// 无脑推序号会让它把同一行当成新行反复重解原点。
+inline bool PublishLookupLayerLine(SharedHeader* header, uint32_t design_w,
+                                   uint32_t design_h, uint32_t glyph_count,
+                                   int32_t left, int32_t top, int32_t right,
+                                   int32_t bottom) {
+  if (header == nullptr || design_w == 0u || design_h == 0u ||
+      glyph_count == 0u || right <= left || bottom <= top) {
+    return false;
+  }
+  const bool same =
+      AtomicLoadShared32(&header->lookup_layer_design_w) == design_w &&
+      AtomicLoadShared32(&header->lookup_layer_design_h) == design_h &&
+      AtomicLoadShared32(&header->lookup_layer_glyph_count) == glyph_count &&
+      static_cast<int32_t>(AtomicLoadShared32(
+          reinterpret_cast<volatile uint32_t*>(
+              &header->lookup_layer_line_left))) == left &&
+      static_cast<int32_t>(AtomicLoadShared32(
+          reinterpret_cast<volatile uint32_t*>(
+              &header->lookup_layer_line_top))) == top &&
+      static_cast<int32_t>(AtomicLoadShared32(
+          reinterpret_cast<volatile uint32_t*>(
+              &header->lookup_layer_line_right))) == right &&
+      static_cast<int32_t>(AtomicLoadShared32(
+          reinterpret_cast<volatile uint32_t*>(
+              &header->lookup_layer_line_bottom))) == bottom;
+  if (same && AtomicLoadShared32(&header->lookup_layer_line_seq) != 0u) {
+    return false;
+  }
+  AtomicStoreShared32(&header->lookup_layer_design_w, design_w);
+  AtomicStoreShared32(&header->lookup_layer_design_h, design_h);
+  AtomicStoreShared32(&header->lookup_layer_glyph_count, glyph_count);
+  AtomicStoreShared32(
+      reinterpret_cast<volatile uint32_t*>(&header->lookup_layer_line_left),
+      static_cast<uint32_t>(left));
+  AtomicStoreShared32(
+      reinterpret_cast<volatile uint32_t*>(&header->lookup_layer_line_top),
+      static_cast<uint32_t>(top));
+  AtomicStoreShared32(
+      reinterpret_cast<volatile uint32_t*>(&header->lookup_layer_line_right),
+      static_cast<uint32_t>(right));
+  AtomicStoreShared32(
+      reinterpret_cast<volatile uint32_t*>(&header->lookup_layer_line_bottom),
+      static_cast<uint32_t>(bottom));
+  AtomicStoreShared32(&header->lookup_layer_line_seq,
+                      AtomicLoadShared32(&header->lookup_layer_line_seq) + 1u);
+  return true;
+}
+
+// host 侧读取。seq==0 表示注入侧还没发布过任何一行，宿主此时无从求解。
+inline LookupLayerLineSnapshot ReadLookupLayerLine(const SharedHeader* header) {
+  LookupLayerLineSnapshot out;
+  if (header == nullptr) return out;
+  auto* mutable_header = const_cast<SharedHeader*>(header);
+  const uint32_t seq =
+      AtomicLoadShared32(&mutable_header->lookup_layer_line_seq);
+  if (seq == 0u) return out;
+  out.seq = seq;
+  out.design_w = AtomicLoadShared32(&mutable_header->lookup_layer_design_w);
+  out.design_h = AtomicLoadShared32(&mutable_header->lookup_layer_design_h);
+  out.glyph_count =
+      AtomicLoadShared32(&mutable_header->lookup_layer_glyph_count);
+  out.left = static_cast<int32_t>(AtomicLoadShared32(
+      reinterpret_cast<volatile uint32_t*>(
+          &mutable_header->lookup_layer_line_left)));
+  out.top = static_cast<int32_t>(AtomicLoadShared32(
+      reinterpret_cast<volatile uint32_t*>(
+          &mutable_header->lookup_layer_line_top)));
+  out.right = static_cast<int32_t>(AtomicLoadShared32(
+      reinterpret_cast<volatile uint32_t*>(
+          &mutable_header->lookup_layer_line_right)));
+  out.bottom = static_cast<int32_t>(AtomicLoadShared32(
+      reinterpret_cast<volatile uint32_t*>(
+          &mutable_header->lookup_layer_line_bottom)));
+  // 再读一次 seq：中途被改过就当这份快照没读到（与其它槽同一套纪律）。
+  if (AtomicLoadShared32(&mutable_header->lookup_layer_line_seq) != seq) {
+    return LookupLayerLineSnapshot{};
+  }
+  out.valid = out.design_w != 0u && out.design_h != 0u &&
+              out.glyph_count != 0u && out.right > out.left &&
+              out.bottom > out.top;
+  return out;
+}
+
+// host 侧发布原点：payload 先写，seq 最后写。
+inline bool PublishLookupLayerOrigin(SharedHeader* header, int32_t origin_x,
+                                     int32_t origin_y) {
+  if (header == nullptr) return false;
+  AtomicStoreShared32(
+      reinterpret_cast<volatile uint32_t*>(&header->lookup_layer_origin_x),
+      static_cast<uint32_t>(origin_x));
+  AtomicStoreShared32(
+      reinterpret_cast<volatile uint32_t*>(&header->lookup_layer_origin_y),
+      static_cast<uint32_t>(origin_y));
+  AtomicStoreShared32(
+      &header->lookup_layer_origin_seq,
+      AtomicLoadShared32(&header->lookup_layer_origin_seq) + 1u);
+  return true;
+}
+
+// hook 侧读取原点。返回 false = 宿主还没给，注入侧必须 fail-closed。
+inline bool ReadLookupLayerOrigin(const SharedHeader* header, int32_t* out_x,
+                                  int32_t* out_y) {
+  if (header == nullptr || out_x == nullptr || out_y == nullptr) return false;
+  auto* mutable_header = const_cast<SharedHeader*>(header);
+  const uint32_t seq =
+      AtomicLoadShared32(&mutable_header->lookup_layer_origin_seq);
+  if (seq == 0u) return false;
+  const int32_t x = static_cast<int32_t>(AtomicLoadShared32(
+      reinterpret_cast<volatile uint32_t*>(
+          &mutable_header->lookup_layer_origin_x)));
+  const int32_t y = static_cast<int32_t>(AtomicLoadShared32(
+      reinterpret_cast<volatile uint32_t*>(
+          &mutable_header->lookup_layer_origin_y)));
+  if (AtomicLoadShared32(&mutable_header->lookup_layer_origin_seq) != seq) {
+    return false;
+  }
+  *out_x = x;
+  *out_y = y;
+  return true;
+}
+
 inline bool PublishLookupAdmission(SharedHeader* header,
                                    const LookupAdmissionReport& report) {
   if (header == nullptr) return false;
@@ -1538,6 +1781,21 @@ inline NativeLoopbackRequestSnapshot ReadNativeLoopbackRequest(
     }
   }
   return result;
+}
+
+// 当前发布的 native loopback 请求是否已被 hook 侧确认（applied_seq 追平 request seq）。
+//
+// 供 hook 侧在重量级引擎探测**之前**有界追平 ack 用（见 dll_main 的追平循环）：
+// allow 的 applied/running 只能在 worker 起流后的下一轮 PollPolicy 发布，若把那一轮
+// 留到引擎探测之后，早注入 5s 的确认预算基本必然超时（BUG-2131）。
+// injector 侧另有带 requested 值校验的版本，那里要区分 deny/allow 的语义边界。
+inline bool NativeLoopbackRequestAcknowledged(const SharedHeader* header) {
+  if (header == nullptr) return false;
+  const NativeLoopbackRequestSnapshot request =
+      ReadNativeLoopbackRequest(header);
+  if (!request.valid) return false;
+  return AtomicLoadShared32(&header->native_loopback_applied_seq) ==
+         request.seq;
 }
 
 inline bool NativeLoopbackRequestMatches(

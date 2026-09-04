@@ -141,6 +141,13 @@ class GlobalLookupWindow {
   void RevealStack(int dx, int dy, int width, int height,
                    double bbox_left, double bbox_top,
                    int64_t geometry_epoch);
+  // attached 校准字形表面（通用回退）打开的**普通桌面 route** 弹窗：点卡外关闭
+  // 那一记 down/up 必须成对吞掉，不得穿透到 |owner| 游戏窗口推进台词（与
+  // direct galCard 的 consume_outside_owner 同一条 WH_MOUSE_LL 消费策略）。
+  // Dart 在 hide(notify:false) 之后、showAt 之前设置；随后 Reveal(参数为空时)
+  // 与 RevealStack 都改走 ArmLowLevelMouseHookAndWait(hwnd_, owner)。nullptr =
+  // 清空。Hide() 自清，普通桌面查词从不设置，行为零变化。
+  void SetOutsideClickConsumeOwner(HWND owner);
   // TODO-1233 -- [notify]=true (default) fires the HiddenCallback on a genuine
   // dismissal; the programmatic reset before a fresh lookup passes false so the
   // between-lookups reset does not look like a user dismissal.
@@ -237,13 +244,20 @@ class GlobalLookupWindow {
 
   // BUG-1833 — 把已渲染的 composition WebView 直接贴到目标进程的游戏客户区。
   // [anchor_*]/[view_*] 属于游戏 primaryLayer 像素域。目前仅在它与实际
-  // 客户区逐像素一致（容忍 1 px 整数取整）时直接呈现；非 1:1 尺寸
-  // 需要 DComp scale transform + 输入逆变换，不得用 SetWindowPos 缩放
-  // WebView viewport 并触发重排。
+  // 画布(view)按引擎的等比缩放+居中映射到客户区后直接呈现，放大运行的游戏也走这条路。
+  // 卡片**不随画布缩放**：它保持自身物理像素，既不经画布重采样（这是它清晰的原因），
+  // 也与台词浮窗同尺度；缩放 WebView viewport 才会触发重排，这里不做。
+  //
+  // 正因为卡片不再是画布单位，[anchor_x]/[anchor_y]（Dart 按画布尺寸排出来的卡片左上角）
+  // 不能直接乘 scale 当屏幕位置用——那会让卡片离字形 (scale-1)×卡片高。所以贴附以
+  // **字形矩形**为基准在屏幕空间重排，anchor 仅用于回退。
   bool RevealOverProcessClient(uint32_t pid, int32_t anchor_x,
                                int32_t anchor_y, uint32_t card_width,
                                uint32_t card_height, uint32_t view_width,
-                               uint32_t view_height);
+                               uint32_t view_height, int32_t glyph_x,
+                               int32_t glyph_y, uint32_t glyph_w,
+                               uint32_t glyph_h, uint32_t* out_client_width,
+                               uint32_t* out_client_height);
 
   // 把游戏侧转发来的一条 LookupInputSlot 喂给已有的 composition controller。
   // [kind] 取 voice_hook_ipc.h 的 kLookupInput*（0=move 1=leftDown 2=leftUp
@@ -381,6 +395,9 @@ class GlobalLookupWindow {
 
   HWND hwnd_ = nullptr;
   HWINEVENTHOOK foreground_hook_ = nullptr;
+  // SetOutsideClickConsumeOwner 记下的游戏 HWND；Reveal/RevealStack 据此选择
+  // 同步吞点击 Arm，Hide() 清空。只对本实例（普通桌面 route）生效。
+  HWND pending_outside_click_owner_ = nullptr;
   // BUG-1048 — 本实例是否已让钩子线程装上 WH_MOUSE_LL（钩子本身不再由本线程持有）。
   // 仍是**每实例**标志：常驻剪贴板面板从不 arm，它的 Hide() 也就不会卸掉瞬态查词
   // 覆盖窗的点击外关闭。
@@ -410,6 +427,14 @@ class GlobalLookupWindow {
   int32_t direct_bbox_dy_ = 0;
   uint32_t direct_view_width_ = 0;
   uint32_t direct_view_height_ = 0;
+  // 上一次 present 时字形在**游戏客户区局部**坐标系下的屏幕矩形。嵌套 resize 要维持
+  // 同一贴附基准，否则卡片会在同一次查词里跳位。有效性由 direct_glyph_valid_ 表达，
+  // 不用 0 兼作「没有」——字形完全可能落在客户区原点。
+  bool direct_glyph_valid_ = false;
+  double direct_glyph_left_ = 0.0;
+  double direct_glyph_top_ = 0.0;
+  double direct_glyph_width_ = 0.0;
+  double direct_glyph_height_ = 0.0;
   bool webview_ready_ = false;
   // TODO-1268 (BUG-693): a dead-surface rebuild is in flight; renders
   // cache into pending_json_ until NavigationCompleted re-arms

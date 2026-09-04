@@ -361,16 +361,9 @@ class AnkiMobileRepository extends BaseAnkiRepository {
     final Map<String, String> dictionaryMediaTags =
         mediaResults[3] as Map<String, String>;
 
-    final mediaContext = AnkiMiningContext(
-      sentence: context.sentence,
-      cueSentence: context.cueSentence,
-      documentTitle: context.documentTitle,
-      coverPath: coverUrl,
-      sentenceAudioPath: sentenceAudioUrl,
-      sentenceOffset: context.sentenceOffset,
-      source: context.source,
-      bookTitleTag: context.bookTitleTag,
-      collectionTag: context.collectionTag,
+    final AnkiMiningContext mediaContext = context.withMediaRefs(
+      coverRef: coverUrl,
+      sentenceAudioRef: sentenceAudioUrl,
     );
 
     final mediaPayload = AnkiMiningPayload(
@@ -387,6 +380,7 @@ class AnkiMobileRepository extends BaseAnkiRepository {
       pitchCategories: payload.pitchCategories,
       phoneticTranscriptions: payload.phoneticTranscriptions,
       popupSelectionText: payload.popupSelectionText,
+      glossarySelectionHighlighted: payload.glossarySelectionHighlighted,
       audio: audio.fieldValue,
       selectedDictionary: payload.selectedDictionary,
       dictionaryMedia: payload.dictionaryMedia,
@@ -398,6 +392,7 @@ class AnkiMobileRepository extends BaseAnkiRepository {
         payload: mediaPayload,
         context: mediaContext,
         dictionaryMediaTags: dictionaryMediaTags,
+        noteTypeName: settings.selectedNoteTypeName,
       ),
     );
   }

@@ -18,6 +18,15 @@ int? _positiveWireInt(Object? value) {
   return parsed != null && parsed > 0 ? parsed : null;
 }
 
+/// 非负整数 wire 值；缺失、非数、负数一律归 0。
+///
+/// 用于「0 有确切含义（= 量不到）」的可选字段：把脏值折成 0 与把它折成 null 再
+/// 作废整条消息是两种语义，这里要的是前者。
+int _nonNegativeWireInt(Object? value) {
+  final int? parsed = _finiteWireInt(value);
+  return parsed != null && parsed > 0 ? parsed : 0;
+}
+
 bool _hasValidUtf16SourceSpan(String text, int start, int length) {
   if (text.isEmpty ||
       start < 0 ||
@@ -139,6 +148,8 @@ class GalLookupHit {
     required this.viewW,
     required this.viewH,
     required this.submit,
+    this.clientW = 0,
+    this.clientH = 0,
   });
 
   /// hook 侧单调递增的命中序号：host 据此判新、hook 据此丢弃过期帧。
@@ -172,6 +183,21 @@ class GalLookupHit {
   /// 与 [coordinateSpace] 同域的 view 尺寸：卡片定位/钳制的「屏幕」。
   final int viewW;
   final int viewH;
+
+  /// 本次命中这一刻**游戏窗口客户区**的物理尺寸；`0` = runner 量不到。
+  ///
+  /// 与 [viewW]/[viewH] 的区别是**域**，不是精度：[coordinateSpace] == 1
+  /// （ClientPhysicalPixels）时两者相等；KiriKiri（== 2，PrimaryLayer）放大运行
+  /// 时 view 是引擎画布，可以远小于客户区（真机 1280x720 画布 / 1902x1069 客户区）。
+  ///
+  /// 卡片**尺寸**的上界只能按这一对算：卡片是屏幕空间的真实窗口，尺寸是屏幕物理
+  /// 像素。拿画布像素去夹屏幕像素会把卡片系统性压小，用户把「最大高度」调多大都
+  /// 不生效（BUG-2066）。**位置**则相反，仍在 view 域（见 [glyphRect]）。
+  ///
+  /// 随每条 hit 现量现报，所以没有会话级缓存，也就没有「本局第一次查词还不知道」
+  /// 和「玩家中途全屏↔窗口化后读到旧值」这两个失效面。
+  final int clientW;
+  final int clientH;
 
   /// true = 真查词（点击 / hook 侧判定的悬停即查词）；false = 纯悬停，只更新高亮。
   final bool submit;
@@ -269,6 +295,10 @@ class GalLookupHit {
       viewW: numbers[14]!,
       viewH: numbers[15]!,
       submit: map['submit']! as bool,
+      // 缺失/脏值一律归 0 = 「量不到」，而不是让整条 hit 作废：客户区只影响卡片
+      // 尺寸上界，拿不到时退回画布口径仍是一次可用的查词。
+      clientW: _nonNegativeWireInt(map['clientW']),
+      clientH: _nonNegativeWireInt(map['clientH']),
     );
   }
 }
@@ -606,6 +636,7 @@ class GalAttachedLookupHitV19 {
     required this.charIndex,
     required this.sourceLength,
     this.wordRect,
+    this.hover = false,
   });
 
   static const String surface = 'attached';
@@ -616,6 +647,11 @@ class GalAttachedLookupHitV19 {
   final int charIndex;
   final int sourceLength;
   final Rect? wordRect;
+
+  /// True when the runner's Shift+hover timer emitted the hit instead of a
+  /// completed shielded click. Both take the same lookup chain; the flag is
+  /// diagnostic only. Missing on the wire (older runner) = click.
+  final bool hover;
 
   bool get isAddressable =>
       sourceText.isNotEmpty &&
@@ -650,6 +686,7 @@ class GalAttachedLookupHitV19 {
       charIndex: charIndex,
       sourceLength: sourceLength,
       wordRect: GalHookTextOverlayChannel._wordRect(map),
+      hover: map['hover'] == true,
     );
     return hit.isAddressable && hit.hasConsistentSourceLength ? hit : null;
   }
@@ -977,7 +1014,7 @@ class GalLookupCallResult {
   }
 }
 
-/// v19 host→hook geometry ownership policy. This is intentionally separate
+/// v20+ host→hook geometry ownership policy. This is intentionally separate
 /// from the lookup runtime switch because attached lookup still depends on
 /// the injected generic input shield.
 enum GalLookupGeometryAdmissionMode {
@@ -1027,6 +1064,9 @@ class GalHookTextOverlayChannel extends FloatingOverlayChannel {
   static GalHookTextEventHandler? _onToggleTransparency;
   static GalHookTextEventHandler? _onOpenWorkbench;
   static GalHookTextEventHandler? _onClose;
+  // native 的 HWND 生命周期终点（WM_NCDESTROY）。消费端的可见性镜像靠它被动
+  // 复位，而不是每行台词打一次 isShowing() 往返去轮询同一件事。
+  static GalHookTextEventHandler? _onOverlayDestroyed;
   static GalHookTextEventHandler? _onReplayVoice;
   static GalHookTextEventHandler? _onRecaptureVoice;
   static GalHookTextLockHandler? _onLockChanged;
@@ -1048,6 +1088,7 @@ class GalHookTextOverlayChannel extends FloatingOverlayChannel {
     GalHookTextEventHandler? onToggleTransparency,
     GalHookTextEventHandler? onOpenWorkbench,
     GalHookTextEventHandler? onClose,
+    GalHookTextEventHandler? onOverlayDestroyed,
     GalHookTextEventHandler? onReplayVoice,
     GalHookTextEventHandler? onRecaptureVoice,
     GalHookTextLockHandler? onLockChanged,
@@ -1067,6 +1108,7 @@ class GalHookTextOverlayChannel extends FloatingOverlayChannel {
     _onToggleTransparency = onToggleTransparency;
     _onOpenWorkbench = onOpenWorkbench;
     _onClose = onClose;
+    _onOverlayDestroyed = onOverlayDestroyed;
     _onReplayVoice = onReplayVoice;
     _onRecaptureVoice = onRecaptureVoice;
     _onLockChanged = onLockChanged;
@@ -1089,6 +1131,7 @@ class GalHookTextOverlayChannel extends FloatingOverlayChannel {
     _onToggleTransparency = null;
     _onOpenWorkbench = null;
     _onClose = null;
+    _onOverlayDestroyed = null;
     _onReplayVoice = null;
     _onRecaptureVoice = null;
     _onLockChanged = null;
@@ -1145,6 +1188,12 @@ class GalHookTextOverlayChannel extends FloatingOverlayChannel {
         break;
       case 'close':
         await _onClose?.call();
+        break;
+      // 用户按关闭 ('close') 与窗口句柄消失 ('overlayDestroyed') 是两件事：
+      // 前者表达意图（本会话别再自动弹），后者只是陈述事实（窗口没了，镜像该
+      // 复位）。合成一条就会让「窗口被外部销毁」被当成用户不想要它。
+      case 'overlayDestroyed':
+        await _onOverlayDestroyed?.call();
         break;
       case 'lockChanged':
         await _onLockChanged?.call(args['locked'] == true);
@@ -1579,13 +1628,18 @@ class GalHookTextOverlayChannel extends FloatingOverlayChannel {
 
   /// Updates the injected GeometryProviderRegistry admission without stopping
   /// the lookup runtime or generic shield. [attachedReady] is the host-owned
-  /// calibrated fallback offer. [nativeInputReady] is a separate, risk-gated
+  /// calibrated fallback offer. [nativeInputAllowed] is a separate, risk-gated
   /// permission for the active native owner to consume a game click; it does
   /// not control provider discovery.
+  ///
+  /// 这是发布 admission 字的**唯一**通道。曾经并存的
+  /// `galLookupSetNativeInputAllowed` 已删除：同一个 flags 字有两个发布入口就有
+  /// 两份台账，谁后写谁赢。允许位现在由 GalIngameLookupController 单独拥有，
+  /// 随 mode/attachedReady 一起在这里发布。
   static Future<GalLookupCallResult> galLookupSetGeometryAdmission({
     required GalLookupGeometryAdmissionMode mode,
     required bool attachedReady,
-    required bool nativeInputReady,
+    required bool nativeInputAllowed,
   }) async {
     if (!_instance.isSupported) return GalLookupCallResult.unsupported;
     return GalLookupCallResult.fromReply(
@@ -1594,7 +1648,7 @@ class GalHookTextOverlayChannel extends FloatingOverlayChannel {
         <String, Object?>{
           'mode': mode.wireValue,
           'attachedReady': attachedReady,
-          'nativeInputReady': nativeInputReady,
+          'nativeInputAllowed': nativeInputAllowed,
         },
       ),
     );
@@ -1615,20 +1669,32 @@ class GalHookTextOverlayChannel extends FloatingOverlayChannel {
     required int cardHeight,
     required int viewWidth,
     required int viewHeight,
+    required int glyphX,
+    required int glyphY,
+    required int glyphW,
+    required int glyphH,
   }) async {
     if (!_instance.isSupported) return GalLookupCallResult.unsupported;
-    final Object? reply = await _instance.channel
-        .invokeMethod<Object?>('galLookupPresent', <String, Object?>{
-          'seq': seq,
-          'anchorX': anchorX,
-          'anchorY': anchorY,
-          'highlightStart': highlightStart,
-          'highlightLen': highlightLen,
-          'cardWidth': cardWidth,
-          'cardHeight': cardHeight,
-          'viewWidth': viewWidth,
-          'viewHeight': viewHeight,
-        });
+    final Object? reply = await _instance.channel.invokeMethod<Object?>(
+      'galLookupPresent',
+      <String, Object?>{
+        'seq': seq,
+        'anchorX': anchorX,
+        'anchorY': anchorY,
+        'highlightStart': highlightStart,
+        'highlightLen': highlightLen,
+        'cardWidth': cardWidth,
+        'cardHeight': cardHeight,
+        'viewWidth': viewWidth,
+        'viewHeight': viewHeight,
+        // 直连覆盖窗按字形在屏幕上的矩形重排卡片：卡片保持自身物理像素、不随画布
+        // 缩放，anchor 是按画布尺寸排出来的，放大运行时不能直接当屏幕位置用。
+        'glyphX': glyphX,
+        'glyphY': glyphY,
+        'glyphW': glyphW,
+        'glyphH': glyphH,
+      },
+    );
     return GalLookupCallResult.fromReply(reply);
   }
 

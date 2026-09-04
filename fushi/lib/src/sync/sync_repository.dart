@@ -232,6 +232,11 @@ class SyncRepository {
   static const _keyInterconnectSyncAudioBookFiles =
       'interconnect_sync_audiobook_files';
   static const _keyInterconnectSyncVideoFiles = 'interconnect_sync_video_files';
+  // 互联「配置文件」（Profile）双向搬运的 **host 侧**开关：允许已配对设备读取 /
+  // 写入本机配置。默认 false —— 入站写没有显式开关就是「无 UI 的隐形通道」
+  // （BUG-988 立过的规矩），出站也一样：整份 Profile 比四个内容上传开关更敏感。
+  static const _keyInterconnectProfileTransfer =
+      'interconnect_profile_transfer';
   // 互联通道专属的「共享统计 / 共享收藏夹」开关。此前互联的聚合同步（统计 + 收藏
   // 词句）无条件复用云备份的 sync_stats_enabled，用户在互联页既看不到这两类数据
   // 正在跨设备流动，也没法只对互联单独关掉——与 BUG-988 拆四个上传开关时修掉的
@@ -653,6 +658,14 @@ class SyncRepository {
       _db.getPrefTyped<bool>(_keyInterconnectSyncVideoFiles, false);
   Future<void> setInterconnectSyncVideoFilesEnabled(bool v) =>
       _db.setPrefTyped<bool>(_keyInterconnectSyncVideoFiles, v);
+
+  /// host 侧：是否允许已配对设备读取 / 写入本机「配置文件」（Profile）。
+  ///
+  /// 端点还要求 TLS + 已配对 peer token；本开关是**用户意图**那一道，默认关。
+  Future<bool> isInterconnectProfileTransferEnabled() =>
+      _db.getPrefTyped<bool>(_keyInterconnectProfileTransfer, false);
+  Future<void> setInterconnectProfileTransferEnabled(bool v) =>
+      _db.setPrefTyped<bool>(_keyInterconnectProfileTransfer, v);
 
   /// 互联通道「共享统计」：阅读/观看时长、字数、逐时桶、查词与制卡计数。关掉后本设备
   /// 既不把统计推给对端，也不把对端统计折进本地——两个方向一起停，否则「关了还在收」
@@ -1285,6 +1298,10 @@ class SyncRepository {
     // 都描述本机能力。跨设备恢复会携带明文凭据、无效绝对路径或错误 source id。
     'video_resource_torznab_config',
     'video_subtitle_opensubtitles_config',
+    // 用户自配的 OPDS 书目服务器：条目里带 base64 密码，且服务器地址多是
+    // 局域网 IP（`http://192.168.x.x:8080`），跨设备恢复既泄凭据又指向一台
+    // 新机根本连不到的主机。
+    'discovery_opds_servers',
     'video_download_backend_path_mappings',
     'video_download_target_source_id',
     'video_download_embedded_installation_id',

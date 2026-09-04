@@ -23,9 +23,11 @@ import 'package:fushi/src/mining/galgame_audio_source.dart';
 import 'package:fushi/src/mining/galgame_helper_installer.dart';
 import 'package:fushi/src/mining/galgame_hook_code_profile.dart';
 import 'package:fushi/src/mining/galgame_japanese_locale.dart';
+import 'package:fushi/src/mining/galgame_japanese_locale_text.dart';
 import 'package:fushi/src/mining/galgame_library.dart';
 import 'package:fushi/src/mining/window_capture_channel.dart';
 import 'package:fushi/src/pages/implementations/dictionary_page_mixin.dart';
+import 'package:fushi/src/lookup/gal_attached_text_controller.dart';
 import 'package:fushi/src/pages/implementations/gal_capture_setup_dialog.dart';
 import 'package:fushi/src/pages/implementations/gal_attached_lookup_workbench.dart';
 import 'package:fushi/src/pages/implementations/game_shared.dart';
@@ -36,6 +38,7 @@ import 'package:fushi/src/pages/implementations/dictionary_popup_webview.dart'
 import 'package:fushi/src/shortcuts/input_binding.dart' show InputBinding;
 import 'package:fushi/src/shortcuts/shortcut_action.dart' show ShortcutAction;
 import 'package:fushi/src/sync/texthooker_service.dart';
+import 'package:fushi/src/sync/texthooker_word_cache.dart';
 import 'package:fushi/src/sync/texthooker_ws_client.dart';
 import 'package:fushi/src/utils/misc/desktop_audio_playback.dart';
 import 'package:fushi/media.dart';
@@ -186,6 +189,56 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
   /// [GalHookSessionController.setLineVoiceTrack] 独立取音。列表复用会话已有的音轨
   /// 快照，并保留逐轨试听，让用户先听再定。
   Future<void> _pickLineTrack(TexthookerLineEntry line) async {
+    if (line.audioBackend == 'game_resource') {
+      // 资源模式的行：这句语音是按句从游戏资源直提的，PCM 轨与它无关（能量恒
+      // -1.0、"这句时刻没有声音"）。列 PCM 轨只会被读成「音频没抓到」，所以这里
+      // 只展示本句真正的资源音频并给试听；文案与右侧面板
+      // GalTrackEmptyHint.resourceMode 同一句。
+      final int durationMs = line.audioDurationMs ?? 0;
+      await showAppDialog<void>(
+        context: context,
+        builder: (BuildContext dialogContext) => StatefulBuilder(
+          builder: (BuildContext context, StateSetter setDialogState) =>
+              SimpleDialog(
+                title: Text(t.game_line_track_dialog_title),
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(24, 0, 24, 12),
+                    child: Text(
+                      t.game_tracks_resource_mode_hint,
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                  ),
+                  FushiListItem(
+                    leading: const Icon(Icons.audiotrack_outlined),
+                    title: Text(line.audioBackend ?? t.game_track_voice),
+                    subtitle: Text(
+                      <String>[
+                        if (line.audioResourceId != null)
+                          line.audioResourceId!,
+                        if (durationMs > 0)
+                          '${(durationMs / 1000).toStringAsFixed(2)}s',
+                      ].join(' · '),
+                    ),
+                    trailing: FushiIconButton(
+                      icon: _previewingLineId == line.id
+                          ? Icons.stop_circle_outlined
+                          : Icons.play_circle_outline,
+                      tooltip: _previewingLineId == line.id
+                          ? t.game_track_preview_stop
+                          : t.game_line_preview_tooltip,
+                      onTap: () async {
+                        await _toggleLinePreview(line);
+                        if (context.mounted) setDialogState(() {});
+                      },
+                    ),
+                  ),
+                ],
+              ),
+        ),
+      );
+      return;
+    }
     final List<GalAudioTrack> tracks = _session.state.audioTracks;
     if (tracks.isEmpty) {
       FushiToast.show(msg: t.game_no_tracks, severity: ToastSeverity.error);
@@ -424,7 +477,9 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
   /// 分词结果缓存：行文本按 id 不可变，缓存 textToWords 避免每次 rebuild 重复分词
   /// （每来一行整页 setState）。行对象随音频/制卡/收藏态 copyWith 换新但 id/text 不变，
   /// 按 id 缓存恒安全。上限略高于行 buffer 上限，越界淘汰最旧插入项。
-  final _TexthookerWordCache _wordCache = _TexthookerWordCache();
+  final TexthookerWordCache _wordCache = TexthookerWordCache(
+    tokenize: JapaneseLanguage.instance.textToWords,
+  );
 
   /// 缓存的 [AppModel] 引用（`appProvider` 为单例，实例不变）。在 [initState] 一次性
   /// 读取：浮层层在 `LayoutBuilder` 回调里访问 `mixinAppModel`，widget 失活后再
@@ -929,6 +984,8 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
         japaneseLocaleMode: galJapaneseLocaleModeFromKey(
           known?.japaneseLocaleMode,
         ),
+        // BUG-2047：内容语言是转区 auto 判定的人工真值；库里没有 → null = 只靠自动证据。
+        contentLanguage: known?.language,
       );
       if (!mounted) return;
       // 与游戏库页共用同一条结果播报（BUG-1089）。旧实现在这里自己判 `boundWindow`
@@ -1267,7 +1324,8 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
         _captureSetupDialogScheduled) {
       return;
     }
-    final attachedText = GalHookTextOverlayController.instance.attachedText;
+    final GalAttachedTextController attachedText =
+        GalHookTextOverlayController.instance.attachedText;
     final GalHookSessionState state = _session.state;
     final DateTime? sessionStartedAt = state.sessionStartedAt;
     if (!shouldPromptGalCaptureSetup(
@@ -1300,7 +1358,8 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
       }
       _captureSetupShownForSession = sessionStartedAt;
       _captureSetupDialogOpen = true;
-      await showAppDialog<void>(
+      final GalCaptureSetupOutcome? outcome =
+          await showAppDialog<GalCaptureSetupOutcome>(
         context: context,
         builder: (BuildContext dialogContext) => GalCaptureSetupDialog(
           session: _session,
@@ -1314,6 +1373,15 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
         ),
       );
       _captureSetupDialogOpen = false;
+      // 「本会话已提示过」这个标记的唯一用途，是让**用户主动关掉**弹窗后不再被每来
+      // 一行台词就弹一次（选中线程有自己的判据 selectedTextThreadKey == null，不靠
+      // 它）。给点击风险确认让位不是用户的意思：标记落在 showAppDialog 之前，让位
+      // 又把弹窗关掉，于是确认完风险之后本会话再也拿不到捕获设置——右栏独有的采集源
+      // 判读 / 语音轨试听 / BGM 排除全都没了，而且全仓只有这一个构造点，没有手动重开
+      // 入口。所以只回滚这一条出口，用户自己关掉的照旧不再提示。
+      if (outcome == GalCaptureSetupOutcome.yieldedToRiskConsent) {
+        _captureSetupShownForSession = null;
+      }
     });
   }
 
@@ -1997,6 +2065,10 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
                           audioLabel: t.game_text_thread_audio_count(
                             count: thread.audioLineCount,
                           ),
+                          // BUG-2112：预览折叠后伪影线程看着像干净整句，必须明示。
+                          artifactLabel: thread.isArtifactDominated
+                              ? t.game_text_thread_artifact_hint
+                              : null,
                         );
                       }
                     }
@@ -2212,6 +2284,9 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
             onSwipeDismiss: _dismissTopNestedPopup,
             swipeEnabled: ReaderFushiSource.instance.enableSwipeToClose,
             sensitivity: ReaderFushiSource.instance.dismissSwipeSensitivity,
+            // 弹窗可见时 barrier 吃掉全部指针，页面根收不到——「浮窗矩形之外」
+            // 按鼠标非主键这半边只能在这里接（见钩子文档）。
+            onNonPrimaryButtonDown: onDismissBarrierNonPrimaryButton,
           ),
         ),
       // 搜索期加载占位卡（搜索→就绪才显示，与首页查词同观感）。
@@ -2229,6 +2304,7 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
           ),
           onPop: (int index) => popNestedPopupAt(index, _popup),
         ),
+      ...buildParkedRealmLayers(screen: screen, controller: _popup),
     ];
   }
 
@@ -2297,11 +2373,35 @@ class _SessionOverviewCard extends StatelessWidget {
     final String audio = galHookAudioBackendLabel(state.audioBackend);
     final String phase = galHookSessionPhaseLabel(state.phase);
     // 转区标记**窄屏也留着**：它和降级原因同属「不显示就没有第二处能看到」的事实。
-    // `auto` 档在设置页只显示「自动」，真正转没转是启动时按系统 ACP + 目标位数现算的，
-    // 判错时用户看到的只有游戏文字乱码，没有任何线索指向 Hibiki 改了区域。
+    // `auto` 档在设置页只显示「自动」，真正转没转是启动时按证据判定 + 系统 ACP + 目标
+    // 位数现算的，判错时用户看到的只有游戏文字乱码，没有任何线索指向 Hibiki 改了区域。
+    // BUG-2047：`auto` 判为「不需要 / 证据不足」而未转区时同样要亮短标记——证据空白的
+    // 日文原版会先乱码，用户得知道是「没转」而不是「转坏了」，才会去改「始终开启」。
+    final GalJapaneseLocaleVerdict? verdict = state.japaneseLocaleVerdict;
+    final GalJapaneseLocaleSkipReason? skipReason =
+        state.japaneseLocaleSkipReason;
+    // 原因分两类说话：语义门（证据不足 / 判为不需要）提示改「始终开启」；工程门
+    // （64 位 / 系统本就日文区）改档位也没用，得直说，否则用户会白改一轮。
+    final String? localeSkippedHint = state.japaneseLocaleApplied ||
+            verdict == null ||
+            skipReason == null
+        ? null
+        : switch (skipReason) {
+            GalJapaneseLocaleSkipReason.notNeeded ||
+            GalJapaneseLocaleSkipReason.unknown =>
+              t.game_session_japanese_locale_skipped_hint(
+                evidence: galJapaneseLocaleEvidenceListLabel(verdict.evidence),
+              ),
+            GalJapaneseLocaleSkipReason.systemAlreadyJapanese =>
+              t.game_session_japanese_locale_skipped_hint_system_japanese,
+            GalJapaneseLocaleSkipReason.targetNot32Bit =>
+              t.game_session_japanese_locale_skipped_hint_not_32bit,
+          };
     final String localeSuffix = state.japaneseLocaleApplied
         ? ' · ${t.game_session_japanese_locale}'
-        : '';
+        : localeSkippedHint != null
+            ? ' · ${t.game_session_japanese_locale_skipped}'
+            : '';
     final String? format = state.audioFormat == null
         ? null
         : '${state.audioFormat!.sampleRate} Hz · '
@@ -2355,7 +2455,27 @@ class _SessionOverviewCard extends StatelessWidget {
                 // 一行。compact 下省掉：窄屏留短标记即可，长句会把整张卡挤爆。
                 if (state.japaneseLocaleApplied && !compact)
                   Text(
-                    t.game_session_japanese_locale_hint,
+                    // `auto` 判定转区时把判据列在处置后面：用户看到「版本资源为日语」
+                    // 才知道 Hibiki 凭什么转、判错了该怀疑哪条。`on` 档没有判定，只有处置。
+                    verdict == null || verdict.evidence.isEmpty
+                        ? t.game_session_japanese_locale_hint
+                        : '${t.game_session_japanese_locale_hint}\n'
+                            '${t.game_session_japanese_locale_evidence(
+                            evidence: galJapaneseLocaleEvidenceListLabel(
+                              verdict.evidence,
+                            ),
+                          )}',
+                    maxLines: 4,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: Theme.of(context).colorScheme.outline,
+                    ),
+                  ),
+                // BUG-2047：`auto` 未转区的处置——说清是「判为不需要（列判据）」还是
+                // 「证据不足」，并指向另一头的兜底档「始终开启」。
+                if (localeSkippedHint != null && !compact)
+                  Text(
+                    localeSkippedHint,
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
@@ -2928,7 +3048,7 @@ class _StatusPill extends StatelessWidget {
 }
 
 /// 一行文本：日语分词成可点 span（引擎未初始化时按字符降级，widget 测试不崩）。
-/// [words] 由页级 [_TexthookerWordCache] 按行 id 预分词后注入（本 widget 不再自行
+/// [words] 由页级 [TexthookerWordCache] 按行 id + 文本预分词后注入（本 widget 不再自行
 /// textToWords），避免每来一行整页 rebuild 时重复分词。
 class _TexthookerLine extends ConsumerWidget {
   const _TexthookerLine({
@@ -3384,25 +3504,5 @@ class _CharSpan extends StatelessWidget {
       },
       child: Text(grapheme, style: style),
     );
-  }
-}
-
-/// 行分词结果缓存：行文本按 id 不可变（copyWith 只改音频/制卡/收藏态，不动 id/text），
-/// 故按 id 缓存 [JapaneseLanguage.textToWords] 恒安全。每来一行整页 setState，无缓存时
-/// 每行每帧都重新分词——本缓存把它降为「每行只分一次」。默认 Map 保持插入序，越界时
-/// 淘汰最旧插入项（上限略高于行 buffer 上限 [TexthookerService.maxLines]，可见行不会被淘汰）。
-class _TexthookerWordCache {
-  static const int _maxEntries = 800;
-  final Map<String, List<String>> _cache = <String, List<String>>{};
-
-  List<String> wordsFor(String id, String text) {
-    final List<String>? cached = _cache[id];
-    if (cached != null) return cached;
-    final List<String> words = JapaneseLanguage.instance.textToWords(text);
-    _cache[id] = words;
-    if (_cache.length > _maxEntries) {
-      _cache.remove(_cache.keys.first);
-    }
-    return words;
   }
 }

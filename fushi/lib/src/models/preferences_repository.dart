@@ -4,6 +4,7 @@ import 'package:fushi_audio/fushi_audio.dart'
     show kDefaultReadingIdleTimeout, kStudyIdleTimeoutPrefKey;
 import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi/src/dictionary/dict_style_rules.dart';
+import 'package:fushi/src/media/discovery/opds_server_config.dart';
 import 'package:fushi/src/media/manga/ocr/manga_ocr_engine.dart';
 import 'package:fushi/src/media/torrent/anime_download_config.dart';
 import 'package:fushi/src/media/torrent/torznab_client.dart';
@@ -17,12 +18,21 @@ import 'package:fushi/src/media/video/video_hdr_output.dart'
 import 'package:fushi/src/media/video/video_control_customization.dart';
 import 'package:fushi/src/media/video/video_custom_action_bindings.dart';
 import 'package:fushi/src/media/video/video_immersive_mode.dart';
+import 'package:fushi/src/media/video/video_lua_capability.dart';
 import 'package:fushi/src/media/video/video_subtitle_obscure_mode.dart';
 import 'package:fushi/src/mining/galgame_library.dart';
 // 迁移判据要用「这个存量代理地址归一得出来吗」，与 applyAppProxy 同一份实现，
 // 不在这里重写一遍（重写就会漂移，而漂移的后果是存量用户升级即断网）。
 import 'package:fushi/src/utils/net/app_proxy.dart'
-    show normalizeUserProxyHostPort;
+    show
+        appUserProxyModeReader,
+        appUserProxyPasswordReader,
+        appUserProxyReader,
+        appUserProxyUsernameReader,
+        kProxyModeAuto,
+        kProxyModeDirect,
+        kProxyModeManual,
+        normalizeUserProxyHostPort;
 import 'package:fushi/src/mining/immersion_mining_request.dart'
     show MiningAnimatedFormat, MiningStillFormat, VideoMiningImageMode;
 import 'package:fushi/src/models/audio_source_config.dart';
@@ -100,6 +110,22 @@ class PreferencesRepository extends ChangeNotifier {
     DandanplayConfig.current = DandanplayConfig.decode(
       getPref('video_danmaku_config', defaultValue: '') as String,
     );
+    _installAppProxyReaders();
+  }
+
+  /// 把进程级代理读取器接到本仓库上。**绑定点必须是「偏好变得可读的那一刻」**，不是
+  /// 某一个调用点：以前只有 `AppModel.initialise()` 绑，而弹窗词典进程
+  /// （`AppModel.initialiseForDictionaryPopup`）同样建了本仓库、同样读了偏好，却没绑，
+  /// 于是那个进程整段生命周期都落在 [kProxyModeUnresolved] 兜底上——选了「直连」的用户
+  /// 在弹窗里照样走系统代理（哨兵表达不了 direct）。绑在这里，任何读得到偏好的入口都
+  /// 自动拿到用户的真实选择，不必各自记得补一行。
+  ///
+  /// 读取器是闭包而非快照：设置页改完立刻生效，`findProxy` 请求时才求值。
+  void _installAppProxyReaders() {
+    appUserProxyReader = () => updateCustomProxy;
+    appUserProxyModeReader = () => networkProxyMode;
+    appUserProxyUsernameReader = () => networkProxyUsername;
+    appUserProxyPasswordReader = () => networkProxyPassword;
   }
 
   Map<String, String> get prefsSnapshot =>
@@ -556,6 +582,37 @@ class PreferencesRepository extends ChangeNotifier {
     notifyListeners();
   }
 
+  // 游戏内查词卡（galgame hook 直接贴进游戏画面的那张）是**第三个形态**。它与 app 外
+  // 覆盖窗曾共用 overlay 那组键，于是「游戏里合适」和「桌面上合适」只能二选一——真机上
+  // 表现为一个过小、另一个过大。合适尺寸本就不同：覆盖窗浮在整块桌面上，游戏内卡片要
+  // 挤在游戏客户区里且不能遮住正文，所以给它自己的键。默认同样 independent=false，
+  // 跟随 app 内共享值，解锁后才用自己的宽高（解锁瞬间不跳尺寸）。
+  bool get galCardLookupIndependentSize =>
+      getPref('gal_card_lookup_independent_size', defaultValue: false) as bool;
+
+  Future<void> setGalCardLookupIndependentSize(bool value) async {
+    await setPref('gal_card_lookup_independent_size', value);
+    notifyListeners();
+  }
+
+  double get galCardLookupMaxWidth =>
+      getPref('gal_card_lookup_max_width', defaultValue: defaultPopupMaxWidth)
+          as double;
+
+  void setGalCardLookupMaxWidth(double width) async {
+    await setPref('gal_card_lookup_max_width', width);
+    notifyListeners();
+  }
+
+  double get galCardLookupMaxHeight =>
+      getPref('gal_card_lookup_max_height', defaultValue: defaultPopupMaxHeight)
+          as double;
+
+  void setGalCardLookupMaxHeight(double height) async {
+    await setPref('gal_card_lookup_max_height', height);
+    notifyListeners();
+  }
+
   bool get extensionPopupIndependentSize =>
       getPref('extension_popup_independent_size', defaultValue: false) as bool;
 
@@ -809,6 +866,19 @@ class PreferencesRepository extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// BUG-2032：随包 libmpv 是否编入 Lua（视频页建 Player 后读 `mpv-configuration`
+  /// 探到的结果缓存，存 [MpvLuaCapability.name]）。全局设置页没有播放器，靠这份
+  /// 缓存如实说明脚本开关在本平台是否可用。默认 unknown = 从未播过视频。
+  MpvLuaCapability get videoMpvLuaCapability => MpvLuaCapability.fromName(
+        getPref('video_mpv_lua_capability', defaultValue: 'unknown') as String,
+      );
+
+  Future<void> setVideoMpvLuaCapability(MpvLuaCapability value) async {
+    if (videoMpvLuaCapability == value) return;
+    await setPref('video_mpv_lua_capability', value.name);
+    notifyListeners();
+  }
+
   /// 用户手动指定的本机 mpv 配置/着色器目录（「从本机 mpv 导入」自动找不到时指定后
   /// 记住，下次优先扫它）。空串=未指定，走自动候选目录。
   String get videoMpvShaderDir =>
@@ -950,6 +1020,20 @@ class PreferencesRepository extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// 库内自动补刮总闸（默认开）。
+  ///
+  /// 与上面的 [videoAutoScrape] **不是**一件事，也不能复用它：那个键的契约明写
+  /// 「不会发起元数据网络请求」，且早已从设置页撤下、用户无从更改。库内自动补刮
+  /// 会下载 AniDB 每日标题包、并在配了客户端身份时打 AniDB/TMDB，是一项会联网的
+  /// 后台行为，必须有自己的、用户可见可关的开关。
+  bool get videoLibraryAutoBackfillScrape =>
+      getPref('video_library_auto_backfill_scrape', defaultValue: true) as bool;
+
+  Future<void> setVideoLibraryAutoBackfillScrape(bool value) async {
+    await setPref('video_library_auto_backfill_scrape', value);
+    notifyListeners();
+  }
+
   /// TODO-1119 / BUG-545：用户是否已在「Windows 黑屏闪烁」运行时提示里点了「不再提示」。
   /// 默认 false = 允许提示。置 true 后播放器不再弹该运行时提示条（静态「已知问题」说明行
   /// 仍在画质设置里）。getPref 仅在该 key 从未写过时返回默认 false。
@@ -1053,6 +1137,33 @@ class PreferencesRepository extends ChangeNotifier {
       'video_resource_torznab_config',
       jsonEncode(encodeTorznabIndexerConfigs(configs)),
     );
+    notifyListeners();
+  }
+
+  /// 用户自配的 OPDS 书目服务器清单（设备本地；含 base64 密码）。
+  ///
+  /// 逐条容错在 [decodeOpdsServerConfigs] 里：一条记录坏掉只丢那一条，不让
+  /// 整份服务器列表消失（否则用户会看到「我的书库全没了」）。
+  List<OpdsServerConfig> get discoveryOpdsServers {
+    final String raw =
+        getPref('discovery_opds_servers', defaultValue: '') as String;
+    if (raw.trim().isEmpty) return const <OpdsServerConfig>[];
+    try {
+      return decodeOpdsServerConfigs(raw);
+    } on Object catch (error, stack) {
+      ErrorLogService.instance.log(
+        'PreferencesRepository.discoveryOpdsServers.decode',
+        error,
+        stack,
+      );
+      return const <OpdsServerConfig>[];
+    }
+  }
+
+  Future<void> setDiscoveryOpdsServers(
+    Iterable<OpdsServerConfig> servers,
+  ) async {
+    await setPref('discovery_opds_servers', encodeOpdsServerConfigs(servers));
     notifyListeners();
   }
 
@@ -2310,14 +2421,28 @@ class PreferencesRepository extends ChangeNotifier {
 
   // ── update preferences ───────────────────────────────────────────────
 
-  /// P2P（torrent）传输是否也走全局代理。**默认 false = 直连**：走代理可能
-  /// 降速，且不少代理服务商禁止 BT 流量（限速/警告/封号），只有用户明确
-  /// 开了才下发给内置引擎（外接 qBittorrent 自管）。
-  bool get p2pProxyEnabled =>
-      getPref('network_proxy_p2p_enabled', defaultValue: false) as bool;
+  /// P2P（torrent）传输的代理档位：`direct`（**默认**，直连）/ `proxy`
+  /// （peer/tracker/DNS 全代理，可能降速，且不少代理服务商禁止 BT 流量：
+  /// 限速/警告/封号）/ `mixed`（tracker 经代理、DHT 与 peer 直连——节点获取
+  /// 范围最大，但真实 IP 暴露给 DHT/peer/tracker，只是连通性工具）。
+  /// 只对内置引擎生效（外接 qBittorrent 自管）。
+  ///
+  /// 三态键未写过时沿用旧布尔开关 `network_proxy_p2p_enabled`（冻结，
+  /// PR#1051 引入）的语义：true → 全代理。
+  String get p2pProxyMode {
+    final String raw =
+        getPref('network_proxy_p2p_mode', defaultValue: '') as String;
+    if (raw == 'direct' || raw == 'proxy' || raw == 'mixed') return raw;
+    final bool legacyEnabled =
+        getPref('network_proxy_p2p_enabled', defaultValue: false) as bool;
+    return legacyEnabled ? 'proxy' : 'direct';
+  }
 
-  Future<void> setP2pProxyEnabled(bool value) async {
-    await setPref('network_proxy_p2p_enabled', value);
+  Future<void> setP2pProxyMode(String mode) async {
+    assert(mode == 'direct' || mode == 'proxy' || mode == 'mixed');
+    await setPref('network_proxy_p2p_mode', mode);
+    // 写穿旧布尔键：降级回老版本后语义一致（mixed 按「开」处理）。
+    await setPref('network_proxy_p2p_enabled', mode != 'direct');
     notifyListeners();
   }
 
@@ -2327,20 +2452,24 @@ class PreferencesRepository extends ChangeNotifier {
   String get networkProxyMode {
     final String? stored =
         getPref('network_proxy_mode', defaultValue: null) as String?;
-    if (stored == 'auto' || stored == 'direct' || stored == 'manual') {
+    if (stored == kProxyModeAuto ||
+        stored == kProxyModeDirect ||
+        stored == kProxyModeManual) {
       return stored!;
     }
     // 迁移判据是「这个存量地址归一得出来吗」，不是「非空吗」。设置页对非法地址只
     // 弹 SnackBar 但仍存原串，非空判据会把这类值推成 manual，而 manual 归一失败
     // 时硬走 DIRECT —— 存量用户升级即断网。只有「显式选了 manual」才该 fail-closed。
     return normalizeUserProxyHostPort(updateCustomProxy) == null
-        ? 'auto'
-        : 'manual';
+        ? kProxyModeAuto
+        : kProxyModeManual;
   }
 
   Future<void> setNetworkProxyMode(String value) async {
     final String normalized =
-        value == 'direct' || value == 'manual' ? value : 'auto';
+        value == kProxyModeDirect || value == kProxyModeManual
+            ? value
+            : kProxyModeAuto;
     await setPref('network_proxy_mode', normalized);
     notifyListeners();
   }
@@ -2620,6 +2749,17 @@ class PreferencesRepository extends ChangeNotifier {
 
   Future<void> setDownloadSaveRoot(String value) async {
     await setPref('download_save_root', value);
+    notifyListeners();
+  }
+
+  /// 有声书素材库目录（JSON 字符串数组）。库里放按作品身份命名的字幕/正文，
+  /// 下载完成后据此自动配齐「正文 + 字幕 + 音频」；解码见
+  /// `decodeAudiobookMaterialDirs`。
+  String get audiobookMaterialDirs =>
+      getPref('audiobook_material_dirs', defaultValue: '') as String;
+
+  Future<void> setAudiobookMaterialDirs(String value) async {
+    await setPref('audiobook_material_dirs', value);
     notifyListeners();
   }
 

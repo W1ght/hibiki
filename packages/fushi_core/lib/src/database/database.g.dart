@@ -39896,6 +39896,17 @@ class $VideoDownloadJobsTable extends VideoDownloadJobs
     type: DriftSqlType.string,
     requiredDuringInsert: false,
   );
+  static const VerificationMeta _identityJsonMeta = const VerificationMeta(
+    'identityJson',
+  );
+  @override
+  late final GeneratedColumn<String> identityJson = GeneratedColumn<String>(
+    'identity_json',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
   static const VerificationMeta _backendKindMeta = const VerificationMeta(
     'backendKind',
   );
@@ -40188,6 +40199,7 @@ class $VideoDownloadJobsTable extends VideoDownloadJobs
     year,
     season,
     coverUrl,
+    identityJson,
     backendKind,
     backendTaskId,
     backendProfileId,
@@ -40335,6 +40347,15 @@ class $VideoDownloadJobsTable extends VideoDownloadJobs
       context.handle(
         _coverUrlMeta,
         coverUrl.isAcceptableOrUnknown(data['cover_url']!, _coverUrlMeta),
+      );
+    }
+    if (data.containsKey('identity_json')) {
+      context.handle(
+        _identityJsonMeta,
+        identityJson.isAcceptableOrUnknown(
+          data['identity_json']!,
+          _identityJsonMeta,
+        ),
       );
     }
     if (data.containsKey('backend_kind')) {
@@ -40602,6 +40623,10 @@ class $VideoDownloadJobsTable extends VideoDownloadJobs
         DriftSqlType.string,
         data['${effectivePrefix}cover_url'],
       ),
+      identityJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}identity_json'],
+      ),
       backendKind: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}backend_kind'],
@@ -40734,6 +40759,11 @@ class VideoDownloadJobRow extends DataClass
   final int? season;
   final String? coverUrl;
 
+  /// v94：发现页完整身份快照（`VideoMediaReference` 的 JSON：原名/别名/全部
+  /// 外部 id）。修 BUG-2003——修前入队只留显示名 + 单 provider id，刮削与字幕
+  /// 在下游各自从残渣重新猜身份。NULL = 旧任务/手动任务，走旧行为。
+  final String? identityJson;
+
   /// 后端连接身份与去重身份。敏感凭据不进数据库；backendProfileId 是下载配置档
   /// 的字符串身份，不是 Hibiki 用户 Profile，故没有 FK 到 Profiles。
   final String backendKind;
@@ -40781,6 +40811,7 @@ class VideoDownloadJobRow extends DataClass
     this.year,
     this.season,
     this.coverUrl,
+    this.identityJson,
     required this.backendKind,
     this.backendTaskId,
     this.backendProfileId,
@@ -40840,6 +40871,9 @@ class VideoDownloadJobRow extends DataClass
     }
     if (!nullToAbsent || coverUrl != null) {
       map['cover_url'] = Variable<String>(coverUrl);
+    }
+    if (!nullToAbsent || identityJson != null) {
+      map['identity_json'] = Variable<String>(identityJson);
     }
     map['backend_kind'] = Variable<String>(backendKind);
     if (!nullToAbsent || backendTaskId != null) {
@@ -40924,6 +40958,9 @@ class VideoDownloadJobRow extends DataClass
       coverUrl: coverUrl == null && nullToAbsent
           ? const Value.absent()
           : Value(coverUrl),
+      identityJson: identityJson == null && nullToAbsent
+          ? const Value.absent()
+          : Value(identityJson),
       backendKind: Value(backendKind),
       backendTaskId: backendTaskId == null && nullToAbsent
           ? const Value.absent()
@@ -40999,6 +41036,7 @@ class VideoDownloadJobRow extends DataClass
       year: serializer.fromJson<int?>(json['year']),
       season: serializer.fromJson<int?>(json['season']),
       coverUrl: serializer.fromJson<String?>(json['coverUrl']),
+      identityJson: serializer.fromJson<String?>(json['identityJson']),
       backendKind: serializer.fromJson<String>(json['backendKind']),
       backendTaskId: serializer.fromJson<String?>(json['backendTaskId']),
       backendProfileId: serializer.fromJson<String?>(json['backendProfileId']),
@@ -41047,6 +41085,7 @@ class VideoDownloadJobRow extends DataClass
       'year': serializer.toJson<int?>(year),
       'season': serializer.toJson<int?>(season),
       'coverUrl': serializer.toJson<String?>(coverUrl),
+      'identityJson': serializer.toJson<String?>(identityJson),
       'backendKind': serializer.toJson<String>(backendKind),
       'backendTaskId': serializer.toJson<String?>(backendTaskId),
       'backendProfileId': serializer.toJson<String?>(backendProfileId),
@@ -41089,6 +41128,7 @@ class VideoDownloadJobRow extends DataClass
     Value<int?> year = const Value.absent(),
     Value<int?> season = const Value.absent(),
     Value<String?> coverUrl = const Value.absent(),
+    Value<String?> identityJson = const Value.absent(),
     String? backendKind,
     Value<String?> backendTaskId = const Value.absent(),
     Value<String?> backendProfileId = const Value.absent(),
@@ -41134,6 +41174,7 @@ class VideoDownloadJobRow extends DataClass
     year: year.present ? year.value : this.year,
     season: season.present ? season.value : this.season,
     coverUrl: coverUrl.present ? coverUrl.value : this.coverUrl,
+    identityJson: identityJson.present ? identityJson.value : this.identityJson,
     backendKind: backendKind ?? this.backendKind,
     backendTaskId: backendTaskId.present
         ? backendTaskId.value
@@ -41203,6 +41244,9 @@ class VideoDownloadJobRow extends DataClass
       year: data.year.present ? data.year.value : this.year,
       season: data.season.present ? data.season.value : this.season,
       coverUrl: data.coverUrl.present ? data.coverUrl.value : this.coverUrl,
+      identityJson: data.identityJson.present
+          ? data.identityJson.value
+          : this.identityJson,
       backendKind: data.backendKind.present
           ? data.backendKind.value
           : this.backendKind,
@@ -41279,6 +41323,7 @@ class VideoDownloadJobRow extends DataClass
           ..write('year: $year, ')
           ..write('season: $season, ')
           ..write('coverUrl: $coverUrl, ')
+          ..write('identityJson: $identityJson, ')
           ..write('backendKind: $backendKind, ')
           ..write('backendTaskId: $backendTaskId, ')
           ..write('backendProfileId: $backendProfileId, ')
@@ -41323,6 +41368,7 @@ class VideoDownloadJobRow extends DataClass
     year,
     season,
     coverUrl,
+    identityJson,
     backendKind,
     backendTaskId,
     backendProfileId,
@@ -41366,6 +41412,7 @@ class VideoDownloadJobRow extends DataClass
           other.year == this.year &&
           other.season == this.season &&
           other.coverUrl == this.coverUrl &&
+          other.identityJson == this.identityJson &&
           other.backendKind == this.backendKind &&
           other.backendTaskId == this.backendTaskId &&
           other.backendProfileId == this.backendProfileId &&
@@ -41407,6 +41454,7 @@ class VideoDownloadJobsCompanion extends UpdateCompanion<VideoDownloadJobRow> {
   final Value<int?> year;
   final Value<int?> season;
   final Value<String?> coverUrl;
+  final Value<String?> identityJson;
   final Value<String> backendKind;
   final Value<String?> backendTaskId;
   final Value<String?> backendProfileId;
@@ -41447,6 +41495,7 @@ class VideoDownloadJobsCompanion extends UpdateCompanion<VideoDownloadJobRow> {
     this.year = const Value.absent(),
     this.season = const Value.absent(),
     this.coverUrl = const Value.absent(),
+    this.identityJson = const Value.absent(),
     this.backendKind = const Value.absent(),
     this.backendTaskId = const Value.absent(),
     this.backendProfileId = const Value.absent(),
@@ -41488,6 +41537,7 @@ class VideoDownloadJobsCompanion extends UpdateCompanion<VideoDownloadJobRow> {
     this.year = const Value.absent(),
     this.season = const Value.absent(),
     this.coverUrl = const Value.absent(),
+    this.identityJson = const Value.absent(),
     required String backendKind,
     this.backendTaskId = const Value.absent(),
     this.backendProfileId = const Value.absent(),
@@ -41537,6 +41587,7 @@ class VideoDownloadJobsCompanion extends UpdateCompanion<VideoDownloadJobRow> {
     Expression<int>? year,
     Expression<int>? season,
     Expression<String>? coverUrl,
+    Expression<String>? identityJson,
     Expression<String>? backendKind,
     Expression<String>? backendTaskId,
     Expression<String>? backendProfileId,
@@ -41579,6 +41630,7 @@ class VideoDownloadJobsCompanion extends UpdateCompanion<VideoDownloadJobRow> {
       if (year != null) 'year': year,
       if (season != null) 'season': season,
       if (coverUrl != null) 'cover_url': coverUrl,
+      if (identityJson != null) 'identity_json': identityJson,
       if (backendKind != null) 'backend_kind': backendKind,
       if (backendTaskId != null) 'backend_task_id': backendTaskId,
       if (backendProfileId != null) 'backend_profile_id': backendProfileId,
@@ -41623,6 +41675,7 @@ class VideoDownloadJobsCompanion extends UpdateCompanion<VideoDownloadJobRow> {
     Value<int?>? year,
     Value<int?>? season,
     Value<String?>? coverUrl,
+    Value<String?>? identityJson,
     Value<String>? backendKind,
     Value<String?>? backendTaskId,
     Value<String?>? backendProfileId,
@@ -41664,6 +41717,7 @@ class VideoDownloadJobsCompanion extends UpdateCompanion<VideoDownloadJobRow> {
       year: year ?? this.year,
       season: season ?? this.season,
       coverUrl: coverUrl ?? this.coverUrl,
+      identityJson: identityJson ?? this.identityJson,
       backendKind: backendKind ?? this.backendKind,
       backendTaskId: backendTaskId ?? this.backendTaskId,
       backendProfileId: backendProfileId ?? this.backendProfileId,
@@ -41736,6 +41790,9 @@ class VideoDownloadJobsCompanion extends UpdateCompanion<VideoDownloadJobRow> {
     }
     if (coverUrl.present) {
       map['cover_url'] = Variable<String>(coverUrl.value);
+    }
+    if (identityJson.present) {
+      map['identity_json'] = Variable<String>(identityJson.value);
     }
     if (backendKind.present) {
       map['backend_kind'] = Variable<String>(backendKind.value);
@@ -41832,6 +41889,7 @@ class VideoDownloadJobsCompanion extends UpdateCompanion<VideoDownloadJobRow> {
           ..write('year: $year, ')
           ..write('season: $season, ')
           ..write('coverUrl: $coverUrl, ')
+          ..write('identityJson: $identityJson, ')
           ..write('backendKind: $backendKind, ')
           ..write('backendTaskId: $backendTaskId, ')
           ..write('backendProfileId: $backendProfileId, ')
@@ -43809,6 +43867,17 @@ class $VideoDownloadSubscriptionsTable extends VideoDownloadSubscriptions
     type: DriftSqlType.string,
     requiredDuringInsert: false,
   );
+  static const VerificationMeta _identityJsonMeta = const VerificationMeta(
+    'identityJson',
+  );
+  @override
+  late final GeneratedColumn<String> identityJson = GeneratedColumn<String>(
+    'identity_json',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
   static const VerificationMeta _searchQueryMeta = const VerificationMeta(
     'searchQuery',
   );
@@ -44087,6 +44156,7 @@ class $VideoDownloadSubscriptionsTable extends VideoDownloadSubscriptions
     year,
     season,
     coverUrl,
+    identityJson,
     searchQuery,
     filterJson,
     mode,
@@ -44201,6 +44271,15 @@ class $VideoDownloadSubscriptionsTable extends VideoDownloadSubscriptions
       context.handle(
         _coverUrlMeta,
         coverUrl.isAcceptableOrUnknown(data['cover_url']!, _coverUrlMeta),
+      );
+    }
+    if (data.containsKey('identity_json')) {
+      context.handle(
+        _identityJsonMeta,
+        identityJson.isAcceptableOrUnknown(
+          data['identity_json']!,
+          _identityJsonMeta,
+        ),
       );
     }
     if (data.containsKey('search_query')) {
@@ -44445,6 +44524,10 @@ class $VideoDownloadSubscriptionsTable extends VideoDownloadSubscriptions
         DriftSqlType.string,
         data['${effectivePrefix}cover_url'],
       ),
+      identityJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}identity_json'],
+      ),
       searchQuery: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}search_query'],
@@ -44559,6 +44642,10 @@ class VideoDownloadSubscriptionRow extends DataClass
   final int? season;
   final String? coverUrl;
 
+  /// v94：发现页完整身份快照（同 `video_download_jobs.identity_json`）。订阅
+  /// 轮询用它恢复原名/别名做多名字资源搜索兜底。NULL = 旧订阅，走旧行为。
+  final String? identityJson;
+
   /// searchQuery + filterJson 是来源无关的订阅选择快照；filterJson 禁止放凭据。
   final String searchQuery;
   final String filterJson;
@@ -44594,6 +44681,7 @@ class VideoDownloadSubscriptionRow extends DataClass
     this.year,
     this.season,
     this.coverUrl,
+    this.identityJson,
     required this.searchQuery,
     required this.filterJson,
     required this.mode,
@@ -44642,6 +44730,9 @@ class VideoDownloadSubscriptionRow extends DataClass
     }
     if (!nullToAbsent || coverUrl != null) {
       map['cover_url'] = Variable<String>(coverUrl);
+    }
+    if (!nullToAbsent || identityJson != null) {
+      map['identity_json'] = Variable<String>(identityJson);
     }
     map['search_query'] = Variable<String>(searchQuery);
     map['filter_json'] = Variable<String>(filterJson);
@@ -44715,6 +44806,9 @@ class VideoDownloadSubscriptionRow extends DataClass
       coverUrl: coverUrl == null && nullToAbsent
           ? const Value.absent()
           : Value(coverUrl),
+      identityJson: identityJson == null && nullToAbsent
+          ? const Value.absent()
+          : Value(identityJson),
       searchQuery: Value(searchQuery),
       filterJson: Value(filterJson),
       mode: Value(mode),
@@ -44783,6 +44877,7 @@ class VideoDownloadSubscriptionRow extends DataClass
       year: serializer.fromJson<int?>(json['year']),
       season: serializer.fromJson<int?>(json['season']),
       coverUrl: serializer.fromJson<String?>(json['coverUrl']),
+      identityJson: serializer.fromJson<String?>(json['identityJson']),
       searchQuery: serializer.fromJson<String>(json['searchQuery']),
       filterJson: serializer.fromJson<String>(json['filterJson']),
       mode: serializer.fromJson<String>(json['mode']),
@@ -44824,6 +44919,7 @@ class VideoDownloadSubscriptionRow extends DataClass
       'year': serializer.toJson<int?>(year),
       'season': serializer.toJson<int?>(season),
       'coverUrl': serializer.toJson<String?>(coverUrl),
+      'identityJson': serializer.toJson<String?>(identityJson),
       'searchQuery': serializer.toJson<String>(searchQuery),
       'filterJson': serializer.toJson<String>(filterJson),
       'mode': serializer.toJson<String>(mode),
@@ -44861,6 +44957,7 @@ class VideoDownloadSubscriptionRow extends DataClass
     Value<int?> year = const Value.absent(),
     Value<int?> season = const Value.absent(),
     Value<String?> coverUrl = const Value.absent(),
+    Value<String?> identityJson = const Value.absent(),
     String? searchQuery,
     String? filterJson,
     String? mode,
@@ -44899,6 +44996,7 @@ class VideoDownloadSubscriptionRow extends DataClass
     year: year.present ? year.value : this.year,
     season: season.present ? season.value : this.season,
     coverUrl: coverUrl.present ? coverUrl.value : this.coverUrl,
+    identityJson: identityJson.present ? identityJson.value : this.identityJson,
     searchQuery: searchQuery ?? this.searchQuery,
     filterJson: filterJson ?? this.filterJson,
     mode: mode ?? this.mode,
@@ -44959,6 +45057,9 @@ class VideoDownloadSubscriptionRow extends DataClass
       year: data.year.present ? data.year.value : this.year,
       season: data.season.present ? data.season.value : this.season,
       coverUrl: data.coverUrl.present ? data.coverUrl.value : this.coverUrl,
+      identityJson: data.identityJson.present
+          ? data.identityJson.value
+          : this.identityJson,
       searchQuery: data.searchQuery.present
           ? data.searchQuery.value
           : this.searchQuery,
@@ -45030,6 +45131,7 @@ class VideoDownloadSubscriptionRow extends DataClass
           ..write('year: $year, ')
           ..write('season: $season, ')
           ..write('coverUrl: $coverUrl, ')
+          ..write('identityJson: $identityJson, ')
           ..write('searchQuery: $searchQuery, ')
           ..write('filterJson: $filterJson, ')
           ..write('mode: $mode, ')
@@ -45069,6 +45171,7 @@ class VideoDownloadSubscriptionRow extends DataClass
     year,
     season,
     coverUrl,
+    identityJson,
     searchQuery,
     filterJson,
     mode,
@@ -45107,6 +45210,7 @@ class VideoDownloadSubscriptionRow extends DataClass
           other.year == this.year &&
           other.season == this.season &&
           other.coverUrl == this.coverUrl &&
+          other.identityJson == this.identityJson &&
           other.searchQuery == this.searchQuery &&
           other.filterJson == this.filterJson &&
           other.mode == this.mode &&
@@ -45144,6 +45248,7 @@ class VideoDownloadSubscriptionsCompanion
   final Value<int?> year;
   final Value<int?> season;
   final Value<String?> coverUrl;
+  final Value<String?> identityJson;
   final Value<String> searchQuery;
   final Value<String> filterJson;
   final Value<String> mode;
@@ -45179,6 +45284,7 @@ class VideoDownloadSubscriptionsCompanion
     this.year = const Value.absent(),
     this.season = const Value.absent(),
     this.coverUrl = const Value.absent(),
+    this.identityJson = const Value.absent(),
     this.searchQuery = const Value.absent(),
     this.filterJson = const Value.absent(),
     this.mode = const Value.absent(),
@@ -45215,6 +45321,7 @@ class VideoDownloadSubscriptionsCompanion
     this.year = const Value.absent(),
     this.season = const Value.absent(),
     this.coverUrl = const Value.absent(),
+    this.identityJson = const Value.absent(),
     required String searchQuery,
     this.filterJson = const Value.absent(),
     this.mode = const Value.absent(),
@@ -45259,6 +45366,7 @@ class VideoDownloadSubscriptionsCompanion
     Expression<int>? year,
     Expression<int>? season,
     Expression<String>? coverUrl,
+    Expression<String>? identityJson,
     Expression<String>? searchQuery,
     Expression<String>? filterJson,
     Expression<String>? mode,
@@ -45295,6 +45403,7 @@ class VideoDownloadSubscriptionsCompanion
       if (year != null) 'year': year,
       if (season != null) 'season': season,
       if (coverUrl != null) 'cover_url': coverUrl,
+      if (identityJson != null) 'identity_json': identityJson,
       if (searchQuery != null) 'search_query': searchQuery,
       if (filterJson != null) 'filter_json': filterJson,
       if (mode != null) 'mode': mode,
@@ -45333,6 +45442,7 @@ class VideoDownloadSubscriptionsCompanion
     Value<int?>? year,
     Value<int?>? season,
     Value<String?>? coverUrl,
+    Value<String?>? identityJson,
     Value<String>? searchQuery,
     Value<String>? filterJson,
     Value<String>? mode,
@@ -45369,6 +45479,7 @@ class VideoDownloadSubscriptionsCompanion
       year: year ?? this.year,
       season: season ?? this.season,
       coverUrl: coverUrl ?? this.coverUrl,
+      identityJson: identityJson ?? this.identityJson,
       searchQuery: searchQuery ?? this.searchQuery,
       filterJson: filterJson ?? this.filterJson,
       mode: mode ?? this.mode,
@@ -45428,6 +45539,9 @@ class VideoDownloadSubscriptionsCompanion
     }
     if (coverUrl.present) {
       map['cover_url'] = Variable<String>(coverUrl.value);
+    }
+    if (identityJson.present) {
+      map['identity_json'] = Variable<String>(identityJson.value);
     }
     if (searchQuery.present) {
       map['search_query'] = Variable<String>(searchQuery.value);
@@ -45517,6 +45631,7 @@ class VideoDownloadSubscriptionsCompanion
           ..write('year: $year, ')
           ..write('season: $season, ')
           ..write('coverUrl: $coverUrl, ')
+          ..write('identityJson: $identityJson, ')
           ..write('searchQuery: $searchQuery, ')
           ..write('filterJson: $filterJson, ')
           ..write('mode: $mode, ')
@@ -48820,6 +48935,1160 @@ class WebMineQueueCompanion extends UpdateCompanion<WebMineQueueRow> {
   }
 }
 
+class $VideoFileSpecsTable extends VideoFileSpecs
+    with TableInfo<$VideoFileSpecsTable, VideoFileSpecRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $VideoFileSpecsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _filePathMeta = const VerificationMeta(
+    'filePath',
+  );
+  @override
+  late final GeneratedColumn<String> filePath = GeneratedColumn<String>(
+    'file_path',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _fileSizeBytesMeta = const VerificationMeta(
+    'fileSizeBytes',
+  );
+  @override
+  late final GeneratedColumn<int> fileSizeBytes = GeneratedColumn<int>(
+    'file_size_bytes',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _fileModifiedAtMeta = const VerificationMeta(
+    'fileModifiedAt',
+  );
+  @override
+  late final GeneratedColumn<int> fileModifiedAt = GeneratedColumn<int>(
+    'file_modified_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _probedAtMeta = const VerificationMeta(
+    'probedAt',
+  );
+  @override
+  late final GeneratedColumn<int> probedAt = GeneratedColumn<int>(
+    'probed_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _probeVersionMeta = const VerificationMeta(
+    'probeVersion',
+  );
+  @override
+  late final GeneratedColumn<int> probeVersion = GeneratedColumn<int>(
+    'probe_version',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _durationMsMeta = const VerificationMeta(
+    'durationMs',
+  );
+  @override
+  late final GeneratedColumn<int> durationMs = GeneratedColumn<int>(
+    'duration_ms',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _containerBitrateMeta = const VerificationMeta(
+    'containerBitrate',
+  );
+  @override
+  late final GeneratedColumn<int> containerBitrate = GeneratedColumn<int>(
+    'container_bitrate',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _videoCodecMeta = const VerificationMeta(
+    'videoCodec',
+  );
+  @override
+  late final GeneratedColumn<String> videoCodec = GeneratedColumn<String>(
+    'video_codec',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _widthMeta = const VerificationMeta('width');
+  @override
+  late final GeneratedColumn<int> width = GeneratedColumn<int>(
+    'width',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _heightMeta = const VerificationMeta('height');
+  @override
+  late final GeneratedColumn<int> height = GeneratedColumn<int>(
+    'height',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _pixelFormatMeta = const VerificationMeta(
+    'pixelFormat',
+  );
+  @override
+  late final GeneratedColumn<String> pixelFormat = GeneratedColumn<String>(
+    'pixel_format',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _bitDepthMeta = const VerificationMeta(
+    'bitDepth',
+  );
+  @override
+  late final GeneratedColumn<int> bitDepth = GeneratedColumn<int>(
+    'bit_depth',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _frameRateMilliMeta = const VerificationMeta(
+    'frameRateMilli',
+  );
+  @override
+  late final GeneratedColumn<int> frameRateMilli = GeneratedColumn<int>(
+    'frame_rate_milli',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _videoBitrateMeta = const VerificationMeta(
+    'videoBitrate',
+  );
+  @override
+  late final GeneratedColumn<int> videoBitrate = GeneratedColumn<int>(
+    'video_bitrate',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _colorPrimariesMeta = const VerificationMeta(
+    'colorPrimaries',
+  );
+  @override
+  late final GeneratedColumn<String> colorPrimaries = GeneratedColumn<String>(
+    'color_primaries',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _colorTransferMeta = const VerificationMeta(
+    'colorTransfer',
+  );
+  @override
+  late final GeneratedColumn<String> colorTransfer = GeneratedColumn<String>(
+    'color_transfer',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _colorSpaceMeta = const VerificationMeta(
+    'colorSpace',
+  );
+  @override
+  late final GeneratedColumn<String> colorSpace = GeneratedColumn<String>(
+    'color_space',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _audioTracksJsonMeta = const VerificationMeta(
+    'audioTracksJson',
+  );
+  @override
+  late final GeneratedColumn<String> audioTracksJson = GeneratedColumn<String>(
+    'audio_tracks_json',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('[]'),
+  );
+  static const VerificationMeta _subtitleTracksJsonMeta =
+      const VerificationMeta('subtitleTracksJson');
+  @override
+  late final GeneratedColumn<String> subtitleTracksJson =
+      GeneratedColumn<String>(
+        'subtitle_tracks_json',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+        defaultValue: const Constant('[]'),
+      );
+  @override
+  List<GeneratedColumn> get $columns => [
+    filePath,
+    fileSizeBytes,
+    fileModifiedAt,
+    probedAt,
+    probeVersion,
+    durationMs,
+    containerBitrate,
+    videoCodec,
+    width,
+    height,
+    pixelFormat,
+    bitDepth,
+    frameRateMilli,
+    videoBitrate,
+    colorPrimaries,
+    colorTransfer,
+    colorSpace,
+    audioTracksJson,
+    subtitleTracksJson,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'video_file_specs';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<VideoFileSpecRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('file_path')) {
+      context.handle(
+        _filePathMeta,
+        filePath.isAcceptableOrUnknown(data['file_path']!, _filePathMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_filePathMeta);
+    }
+    if (data.containsKey('file_size_bytes')) {
+      context.handle(
+        _fileSizeBytesMeta,
+        fileSizeBytes.isAcceptableOrUnknown(
+          data['file_size_bytes']!,
+          _fileSizeBytesMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_fileSizeBytesMeta);
+    }
+    if (data.containsKey('file_modified_at')) {
+      context.handle(
+        _fileModifiedAtMeta,
+        fileModifiedAt.isAcceptableOrUnknown(
+          data['file_modified_at']!,
+          _fileModifiedAtMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_fileModifiedAtMeta);
+    }
+    if (data.containsKey('probed_at')) {
+      context.handle(
+        _probedAtMeta,
+        probedAt.isAcceptableOrUnknown(data['probed_at']!, _probedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_probedAtMeta);
+    }
+    if (data.containsKey('probe_version')) {
+      context.handle(
+        _probeVersionMeta,
+        probeVersion.isAcceptableOrUnknown(
+          data['probe_version']!,
+          _probeVersionMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_probeVersionMeta);
+    }
+    if (data.containsKey('duration_ms')) {
+      context.handle(
+        _durationMsMeta,
+        durationMs.isAcceptableOrUnknown(data['duration_ms']!, _durationMsMeta),
+      );
+    }
+    if (data.containsKey('container_bitrate')) {
+      context.handle(
+        _containerBitrateMeta,
+        containerBitrate.isAcceptableOrUnknown(
+          data['container_bitrate']!,
+          _containerBitrateMeta,
+        ),
+      );
+    }
+    if (data.containsKey('video_codec')) {
+      context.handle(
+        _videoCodecMeta,
+        videoCodec.isAcceptableOrUnknown(data['video_codec']!, _videoCodecMeta),
+      );
+    }
+    if (data.containsKey('width')) {
+      context.handle(
+        _widthMeta,
+        width.isAcceptableOrUnknown(data['width']!, _widthMeta),
+      );
+    }
+    if (data.containsKey('height')) {
+      context.handle(
+        _heightMeta,
+        height.isAcceptableOrUnknown(data['height']!, _heightMeta),
+      );
+    }
+    if (data.containsKey('pixel_format')) {
+      context.handle(
+        _pixelFormatMeta,
+        pixelFormat.isAcceptableOrUnknown(
+          data['pixel_format']!,
+          _pixelFormatMeta,
+        ),
+      );
+    }
+    if (data.containsKey('bit_depth')) {
+      context.handle(
+        _bitDepthMeta,
+        bitDepth.isAcceptableOrUnknown(data['bit_depth']!, _bitDepthMeta),
+      );
+    }
+    if (data.containsKey('frame_rate_milli')) {
+      context.handle(
+        _frameRateMilliMeta,
+        frameRateMilli.isAcceptableOrUnknown(
+          data['frame_rate_milli']!,
+          _frameRateMilliMeta,
+        ),
+      );
+    }
+    if (data.containsKey('video_bitrate')) {
+      context.handle(
+        _videoBitrateMeta,
+        videoBitrate.isAcceptableOrUnknown(
+          data['video_bitrate']!,
+          _videoBitrateMeta,
+        ),
+      );
+    }
+    if (data.containsKey('color_primaries')) {
+      context.handle(
+        _colorPrimariesMeta,
+        colorPrimaries.isAcceptableOrUnknown(
+          data['color_primaries']!,
+          _colorPrimariesMeta,
+        ),
+      );
+    }
+    if (data.containsKey('color_transfer')) {
+      context.handle(
+        _colorTransferMeta,
+        colorTransfer.isAcceptableOrUnknown(
+          data['color_transfer']!,
+          _colorTransferMeta,
+        ),
+      );
+    }
+    if (data.containsKey('color_space')) {
+      context.handle(
+        _colorSpaceMeta,
+        colorSpace.isAcceptableOrUnknown(data['color_space']!, _colorSpaceMeta),
+      );
+    }
+    if (data.containsKey('audio_tracks_json')) {
+      context.handle(
+        _audioTracksJsonMeta,
+        audioTracksJson.isAcceptableOrUnknown(
+          data['audio_tracks_json']!,
+          _audioTracksJsonMeta,
+        ),
+      );
+    }
+    if (data.containsKey('subtitle_tracks_json')) {
+      context.handle(
+        _subtitleTracksJsonMeta,
+        subtitleTracksJson.isAcceptableOrUnknown(
+          data['subtitle_tracks_json']!,
+          _subtitleTracksJsonMeta,
+        ),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {filePath};
+  @override
+  VideoFileSpecRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return VideoFileSpecRow(
+      filePath: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}file_path'],
+      )!,
+      fileSizeBytes: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}file_size_bytes'],
+      )!,
+      fileModifiedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}file_modified_at'],
+      )!,
+      probedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}probed_at'],
+      )!,
+      probeVersion: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}probe_version'],
+      )!,
+      durationMs: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}duration_ms'],
+      ),
+      containerBitrate: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}container_bitrate'],
+      ),
+      videoCodec: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}video_codec'],
+      ),
+      width: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}width'],
+      ),
+      height: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}height'],
+      ),
+      pixelFormat: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}pixel_format'],
+      ),
+      bitDepth: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}bit_depth'],
+      ),
+      frameRateMilli: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}frame_rate_milli'],
+      ),
+      videoBitrate: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}video_bitrate'],
+      ),
+      colorPrimaries: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}color_primaries'],
+      ),
+      colorTransfer: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}color_transfer'],
+      ),
+      colorSpace: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}color_space'],
+      ),
+      audioTracksJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}audio_tracks_json'],
+      )!,
+      subtitleTracksJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}subtitle_tracks_json'],
+      )!,
+    );
+  }
+
+  @override
+  $VideoFileSpecsTable createAlias(String alias) {
+    return $VideoFileSpecsTable(attachedDatabase, alias);
+  }
+}
+
+class VideoFileSpecRow extends DataClass
+    implements Insertable<VideoFileSpecRow> {
+  /// 视频文件绝对路径 = 身份。与 `VideoBooks.videoPath` 同语义（数据根内副本 / 用户
+  /// 原位外部文件两态；流 URL 不入本表——探的是本地文件）。
+  final String filePath;
+
+  /// 探测当时的文件大小（字节）。失效判据之一。
+  final int fileSizeBytes;
+
+  /// 探测当时的文件修改时刻（毫秒）。失效判据之一。
+  final int fileModifiedAt;
+
+  /// 本行写入时刻（毫秒）。
+  final int probedAt;
+
+  /// 探测器字段集版本（`kVideoProbeFieldSetVersion`）。失效判据之一。
+  final int probeVersion;
+
+  /// 容器时长（毫秒）。探不到为 NULL。
+  final int? durationMs;
+
+  /// 容器平均码率（bit/s）。展示码率通常只能用它——mkv 不给流级码率。
+  final int? containerBitrate;
+
+  /// ffprobe `codec_name`，如 `h264` / `hevc` / `av1`。
+  final String? videoCodec;
+  final int? width;
+  final int? height;
+
+  /// 如 `yuv420p10le`。色深主要由它推出（10-bit HEVC 不给 bits_per_raw_sample）。
+  final String? pixelFormat;
+
+  /// 每分量位深（8 / 10 / 12）。
+  final int? bitDepth;
+
+  /// 帧率 ×1000（23.976fps → 23976）。整数存储避免浮点比较误差。
+  final int? frameRateMilli;
+
+  /// 视频流码率（bit/s）。mkv 通常没有，见 [containerBitrate]。
+  final int? videoBitrate;
+
+  /// ffprobe 原样的色彩标签。**不存归一后的「是不是 HDR」**：那是派生值，
+  /// 判据收口在 `video_dynamic_range.dart`，存派生值等于把同一事实放两处，
+  /// 判据一改这里就成了过期副本。
+  final String? colorPrimaries;
+  final String? colorTransfer;
+  final String? colorSpace;
+
+  /// 音轨数组 JSON（编码/声道/语言/标题/default·forced·comment 标志）。
+  final String audioTracksJson;
+
+  /// 内封字幕轨数组 JSON。
+  final String subtitleTracksJson;
+  const VideoFileSpecRow({
+    required this.filePath,
+    required this.fileSizeBytes,
+    required this.fileModifiedAt,
+    required this.probedAt,
+    required this.probeVersion,
+    this.durationMs,
+    this.containerBitrate,
+    this.videoCodec,
+    this.width,
+    this.height,
+    this.pixelFormat,
+    this.bitDepth,
+    this.frameRateMilli,
+    this.videoBitrate,
+    this.colorPrimaries,
+    this.colorTransfer,
+    this.colorSpace,
+    required this.audioTracksJson,
+    required this.subtitleTracksJson,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['file_path'] = Variable<String>(filePath);
+    map['file_size_bytes'] = Variable<int>(fileSizeBytes);
+    map['file_modified_at'] = Variable<int>(fileModifiedAt);
+    map['probed_at'] = Variable<int>(probedAt);
+    map['probe_version'] = Variable<int>(probeVersion);
+    if (!nullToAbsent || durationMs != null) {
+      map['duration_ms'] = Variable<int>(durationMs);
+    }
+    if (!nullToAbsent || containerBitrate != null) {
+      map['container_bitrate'] = Variable<int>(containerBitrate);
+    }
+    if (!nullToAbsent || videoCodec != null) {
+      map['video_codec'] = Variable<String>(videoCodec);
+    }
+    if (!nullToAbsent || width != null) {
+      map['width'] = Variable<int>(width);
+    }
+    if (!nullToAbsent || height != null) {
+      map['height'] = Variable<int>(height);
+    }
+    if (!nullToAbsent || pixelFormat != null) {
+      map['pixel_format'] = Variable<String>(pixelFormat);
+    }
+    if (!nullToAbsent || bitDepth != null) {
+      map['bit_depth'] = Variable<int>(bitDepth);
+    }
+    if (!nullToAbsent || frameRateMilli != null) {
+      map['frame_rate_milli'] = Variable<int>(frameRateMilli);
+    }
+    if (!nullToAbsent || videoBitrate != null) {
+      map['video_bitrate'] = Variable<int>(videoBitrate);
+    }
+    if (!nullToAbsent || colorPrimaries != null) {
+      map['color_primaries'] = Variable<String>(colorPrimaries);
+    }
+    if (!nullToAbsent || colorTransfer != null) {
+      map['color_transfer'] = Variable<String>(colorTransfer);
+    }
+    if (!nullToAbsent || colorSpace != null) {
+      map['color_space'] = Variable<String>(colorSpace);
+    }
+    map['audio_tracks_json'] = Variable<String>(audioTracksJson);
+    map['subtitle_tracks_json'] = Variable<String>(subtitleTracksJson);
+    return map;
+  }
+
+  VideoFileSpecsCompanion toCompanion(bool nullToAbsent) {
+    return VideoFileSpecsCompanion(
+      filePath: Value(filePath),
+      fileSizeBytes: Value(fileSizeBytes),
+      fileModifiedAt: Value(fileModifiedAt),
+      probedAt: Value(probedAt),
+      probeVersion: Value(probeVersion),
+      durationMs: durationMs == null && nullToAbsent
+          ? const Value.absent()
+          : Value(durationMs),
+      containerBitrate: containerBitrate == null && nullToAbsent
+          ? const Value.absent()
+          : Value(containerBitrate),
+      videoCodec: videoCodec == null && nullToAbsent
+          ? const Value.absent()
+          : Value(videoCodec),
+      width: width == null && nullToAbsent
+          ? const Value.absent()
+          : Value(width),
+      height: height == null && nullToAbsent
+          ? const Value.absent()
+          : Value(height),
+      pixelFormat: pixelFormat == null && nullToAbsent
+          ? const Value.absent()
+          : Value(pixelFormat),
+      bitDepth: bitDepth == null && nullToAbsent
+          ? const Value.absent()
+          : Value(bitDepth),
+      frameRateMilli: frameRateMilli == null && nullToAbsent
+          ? const Value.absent()
+          : Value(frameRateMilli),
+      videoBitrate: videoBitrate == null && nullToAbsent
+          ? const Value.absent()
+          : Value(videoBitrate),
+      colorPrimaries: colorPrimaries == null && nullToAbsent
+          ? const Value.absent()
+          : Value(colorPrimaries),
+      colorTransfer: colorTransfer == null && nullToAbsent
+          ? const Value.absent()
+          : Value(colorTransfer),
+      colorSpace: colorSpace == null && nullToAbsent
+          ? const Value.absent()
+          : Value(colorSpace),
+      audioTracksJson: Value(audioTracksJson),
+      subtitleTracksJson: Value(subtitleTracksJson),
+    );
+  }
+
+  factory VideoFileSpecRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return VideoFileSpecRow(
+      filePath: serializer.fromJson<String>(json['filePath']),
+      fileSizeBytes: serializer.fromJson<int>(json['fileSizeBytes']),
+      fileModifiedAt: serializer.fromJson<int>(json['fileModifiedAt']),
+      probedAt: serializer.fromJson<int>(json['probedAt']),
+      probeVersion: serializer.fromJson<int>(json['probeVersion']),
+      durationMs: serializer.fromJson<int?>(json['durationMs']),
+      containerBitrate: serializer.fromJson<int?>(json['containerBitrate']),
+      videoCodec: serializer.fromJson<String?>(json['videoCodec']),
+      width: serializer.fromJson<int?>(json['width']),
+      height: serializer.fromJson<int?>(json['height']),
+      pixelFormat: serializer.fromJson<String?>(json['pixelFormat']),
+      bitDepth: serializer.fromJson<int?>(json['bitDepth']),
+      frameRateMilli: serializer.fromJson<int?>(json['frameRateMilli']),
+      videoBitrate: serializer.fromJson<int?>(json['videoBitrate']),
+      colorPrimaries: serializer.fromJson<String?>(json['colorPrimaries']),
+      colorTransfer: serializer.fromJson<String?>(json['colorTransfer']),
+      colorSpace: serializer.fromJson<String?>(json['colorSpace']),
+      audioTracksJson: serializer.fromJson<String>(json['audioTracksJson']),
+      subtitleTracksJson: serializer.fromJson<String>(
+        json['subtitleTracksJson'],
+      ),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'filePath': serializer.toJson<String>(filePath),
+      'fileSizeBytes': serializer.toJson<int>(fileSizeBytes),
+      'fileModifiedAt': serializer.toJson<int>(fileModifiedAt),
+      'probedAt': serializer.toJson<int>(probedAt),
+      'probeVersion': serializer.toJson<int>(probeVersion),
+      'durationMs': serializer.toJson<int?>(durationMs),
+      'containerBitrate': serializer.toJson<int?>(containerBitrate),
+      'videoCodec': serializer.toJson<String?>(videoCodec),
+      'width': serializer.toJson<int?>(width),
+      'height': serializer.toJson<int?>(height),
+      'pixelFormat': serializer.toJson<String?>(pixelFormat),
+      'bitDepth': serializer.toJson<int?>(bitDepth),
+      'frameRateMilli': serializer.toJson<int?>(frameRateMilli),
+      'videoBitrate': serializer.toJson<int?>(videoBitrate),
+      'colorPrimaries': serializer.toJson<String?>(colorPrimaries),
+      'colorTransfer': serializer.toJson<String?>(colorTransfer),
+      'colorSpace': serializer.toJson<String?>(colorSpace),
+      'audioTracksJson': serializer.toJson<String>(audioTracksJson),
+      'subtitleTracksJson': serializer.toJson<String>(subtitleTracksJson),
+    };
+  }
+
+  VideoFileSpecRow copyWith({
+    String? filePath,
+    int? fileSizeBytes,
+    int? fileModifiedAt,
+    int? probedAt,
+    int? probeVersion,
+    Value<int?> durationMs = const Value.absent(),
+    Value<int?> containerBitrate = const Value.absent(),
+    Value<String?> videoCodec = const Value.absent(),
+    Value<int?> width = const Value.absent(),
+    Value<int?> height = const Value.absent(),
+    Value<String?> pixelFormat = const Value.absent(),
+    Value<int?> bitDepth = const Value.absent(),
+    Value<int?> frameRateMilli = const Value.absent(),
+    Value<int?> videoBitrate = const Value.absent(),
+    Value<String?> colorPrimaries = const Value.absent(),
+    Value<String?> colorTransfer = const Value.absent(),
+    Value<String?> colorSpace = const Value.absent(),
+    String? audioTracksJson,
+    String? subtitleTracksJson,
+  }) => VideoFileSpecRow(
+    filePath: filePath ?? this.filePath,
+    fileSizeBytes: fileSizeBytes ?? this.fileSizeBytes,
+    fileModifiedAt: fileModifiedAt ?? this.fileModifiedAt,
+    probedAt: probedAt ?? this.probedAt,
+    probeVersion: probeVersion ?? this.probeVersion,
+    durationMs: durationMs.present ? durationMs.value : this.durationMs,
+    containerBitrate: containerBitrate.present
+        ? containerBitrate.value
+        : this.containerBitrate,
+    videoCodec: videoCodec.present ? videoCodec.value : this.videoCodec,
+    width: width.present ? width.value : this.width,
+    height: height.present ? height.value : this.height,
+    pixelFormat: pixelFormat.present ? pixelFormat.value : this.pixelFormat,
+    bitDepth: bitDepth.present ? bitDepth.value : this.bitDepth,
+    frameRateMilli: frameRateMilli.present
+        ? frameRateMilli.value
+        : this.frameRateMilli,
+    videoBitrate: videoBitrate.present ? videoBitrate.value : this.videoBitrate,
+    colorPrimaries: colorPrimaries.present
+        ? colorPrimaries.value
+        : this.colorPrimaries,
+    colorTransfer: colorTransfer.present
+        ? colorTransfer.value
+        : this.colorTransfer,
+    colorSpace: colorSpace.present ? colorSpace.value : this.colorSpace,
+    audioTracksJson: audioTracksJson ?? this.audioTracksJson,
+    subtitleTracksJson: subtitleTracksJson ?? this.subtitleTracksJson,
+  );
+  VideoFileSpecRow copyWithCompanion(VideoFileSpecsCompanion data) {
+    return VideoFileSpecRow(
+      filePath: data.filePath.present ? data.filePath.value : this.filePath,
+      fileSizeBytes: data.fileSizeBytes.present
+          ? data.fileSizeBytes.value
+          : this.fileSizeBytes,
+      fileModifiedAt: data.fileModifiedAt.present
+          ? data.fileModifiedAt.value
+          : this.fileModifiedAt,
+      probedAt: data.probedAt.present ? data.probedAt.value : this.probedAt,
+      probeVersion: data.probeVersion.present
+          ? data.probeVersion.value
+          : this.probeVersion,
+      durationMs: data.durationMs.present
+          ? data.durationMs.value
+          : this.durationMs,
+      containerBitrate: data.containerBitrate.present
+          ? data.containerBitrate.value
+          : this.containerBitrate,
+      videoCodec: data.videoCodec.present
+          ? data.videoCodec.value
+          : this.videoCodec,
+      width: data.width.present ? data.width.value : this.width,
+      height: data.height.present ? data.height.value : this.height,
+      pixelFormat: data.pixelFormat.present
+          ? data.pixelFormat.value
+          : this.pixelFormat,
+      bitDepth: data.bitDepth.present ? data.bitDepth.value : this.bitDepth,
+      frameRateMilli: data.frameRateMilli.present
+          ? data.frameRateMilli.value
+          : this.frameRateMilli,
+      videoBitrate: data.videoBitrate.present
+          ? data.videoBitrate.value
+          : this.videoBitrate,
+      colorPrimaries: data.colorPrimaries.present
+          ? data.colorPrimaries.value
+          : this.colorPrimaries,
+      colorTransfer: data.colorTransfer.present
+          ? data.colorTransfer.value
+          : this.colorTransfer,
+      colorSpace: data.colorSpace.present
+          ? data.colorSpace.value
+          : this.colorSpace,
+      audioTracksJson: data.audioTracksJson.present
+          ? data.audioTracksJson.value
+          : this.audioTracksJson,
+      subtitleTracksJson: data.subtitleTracksJson.present
+          ? data.subtitleTracksJson.value
+          : this.subtitleTracksJson,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VideoFileSpecRow(')
+          ..write('filePath: $filePath, ')
+          ..write('fileSizeBytes: $fileSizeBytes, ')
+          ..write('fileModifiedAt: $fileModifiedAt, ')
+          ..write('probedAt: $probedAt, ')
+          ..write('probeVersion: $probeVersion, ')
+          ..write('durationMs: $durationMs, ')
+          ..write('containerBitrate: $containerBitrate, ')
+          ..write('videoCodec: $videoCodec, ')
+          ..write('width: $width, ')
+          ..write('height: $height, ')
+          ..write('pixelFormat: $pixelFormat, ')
+          ..write('bitDepth: $bitDepth, ')
+          ..write('frameRateMilli: $frameRateMilli, ')
+          ..write('videoBitrate: $videoBitrate, ')
+          ..write('colorPrimaries: $colorPrimaries, ')
+          ..write('colorTransfer: $colorTransfer, ')
+          ..write('colorSpace: $colorSpace, ')
+          ..write('audioTracksJson: $audioTracksJson, ')
+          ..write('subtitleTracksJson: $subtitleTracksJson')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    filePath,
+    fileSizeBytes,
+    fileModifiedAt,
+    probedAt,
+    probeVersion,
+    durationMs,
+    containerBitrate,
+    videoCodec,
+    width,
+    height,
+    pixelFormat,
+    bitDepth,
+    frameRateMilli,
+    videoBitrate,
+    colorPrimaries,
+    colorTransfer,
+    colorSpace,
+    audioTracksJson,
+    subtitleTracksJson,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is VideoFileSpecRow &&
+          other.filePath == this.filePath &&
+          other.fileSizeBytes == this.fileSizeBytes &&
+          other.fileModifiedAt == this.fileModifiedAt &&
+          other.probedAt == this.probedAt &&
+          other.probeVersion == this.probeVersion &&
+          other.durationMs == this.durationMs &&
+          other.containerBitrate == this.containerBitrate &&
+          other.videoCodec == this.videoCodec &&
+          other.width == this.width &&
+          other.height == this.height &&
+          other.pixelFormat == this.pixelFormat &&
+          other.bitDepth == this.bitDepth &&
+          other.frameRateMilli == this.frameRateMilli &&
+          other.videoBitrate == this.videoBitrate &&
+          other.colorPrimaries == this.colorPrimaries &&
+          other.colorTransfer == this.colorTransfer &&
+          other.colorSpace == this.colorSpace &&
+          other.audioTracksJson == this.audioTracksJson &&
+          other.subtitleTracksJson == this.subtitleTracksJson);
+}
+
+class VideoFileSpecsCompanion extends UpdateCompanion<VideoFileSpecRow> {
+  final Value<String> filePath;
+  final Value<int> fileSizeBytes;
+  final Value<int> fileModifiedAt;
+  final Value<int> probedAt;
+  final Value<int> probeVersion;
+  final Value<int?> durationMs;
+  final Value<int?> containerBitrate;
+  final Value<String?> videoCodec;
+  final Value<int?> width;
+  final Value<int?> height;
+  final Value<String?> pixelFormat;
+  final Value<int?> bitDepth;
+  final Value<int?> frameRateMilli;
+  final Value<int?> videoBitrate;
+  final Value<String?> colorPrimaries;
+  final Value<String?> colorTransfer;
+  final Value<String?> colorSpace;
+  final Value<String> audioTracksJson;
+  final Value<String> subtitleTracksJson;
+  final Value<int> rowid;
+  const VideoFileSpecsCompanion({
+    this.filePath = const Value.absent(),
+    this.fileSizeBytes = const Value.absent(),
+    this.fileModifiedAt = const Value.absent(),
+    this.probedAt = const Value.absent(),
+    this.probeVersion = const Value.absent(),
+    this.durationMs = const Value.absent(),
+    this.containerBitrate = const Value.absent(),
+    this.videoCodec = const Value.absent(),
+    this.width = const Value.absent(),
+    this.height = const Value.absent(),
+    this.pixelFormat = const Value.absent(),
+    this.bitDepth = const Value.absent(),
+    this.frameRateMilli = const Value.absent(),
+    this.videoBitrate = const Value.absent(),
+    this.colorPrimaries = const Value.absent(),
+    this.colorTransfer = const Value.absent(),
+    this.colorSpace = const Value.absent(),
+    this.audioTracksJson = const Value.absent(),
+    this.subtitleTracksJson = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  VideoFileSpecsCompanion.insert({
+    required String filePath,
+    required int fileSizeBytes,
+    required int fileModifiedAt,
+    required int probedAt,
+    required int probeVersion,
+    this.durationMs = const Value.absent(),
+    this.containerBitrate = const Value.absent(),
+    this.videoCodec = const Value.absent(),
+    this.width = const Value.absent(),
+    this.height = const Value.absent(),
+    this.pixelFormat = const Value.absent(),
+    this.bitDepth = const Value.absent(),
+    this.frameRateMilli = const Value.absent(),
+    this.videoBitrate = const Value.absent(),
+    this.colorPrimaries = const Value.absent(),
+    this.colorTransfer = const Value.absent(),
+    this.colorSpace = const Value.absent(),
+    this.audioTracksJson = const Value.absent(),
+    this.subtitleTracksJson = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : filePath = Value(filePath),
+       fileSizeBytes = Value(fileSizeBytes),
+       fileModifiedAt = Value(fileModifiedAt),
+       probedAt = Value(probedAt),
+       probeVersion = Value(probeVersion);
+  static Insertable<VideoFileSpecRow> custom({
+    Expression<String>? filePath,
+    Expression<int>? fileSizeBytes,
+    Expression<int>? fileModifiedAt,
+    Expression<int>? probedAt,
+    Expression<int>? probeVersion,
+    Expression<int>? durationMs,
+    Expression<int>? containerBitrate,
+    Expression<String>? videoCodec,
+    Expression<int>? width,
+    Expression<int>? height,
+    Expression<String>? pixelFormat,
+    Expression<int>? bitDepth,
+    Expression<int>? frameRateMilli,
+    Expression<int>? videoBitrate,
+    Expression<String>? colorPrimaries,
+    Expression<String>? colorTransfer,
+    Expression<String>? colorSpace,
+    Expression<String>? audioTracksJson,
+    Expression<String>? subtitleTracksJson,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (filePath != null) 'file_path': filePath,
+      if (fileSizeBytes != null) 'file_size_bytes': fileSizeBytes,
+      if (fileModifiedAt != null) 'file_modified_at': fileModifiedAt,
+      if (probedAt != null) 'probed_at': probedAt,
+      if (probeVersion != null) 'probe_version': probeVersion,
+      if (durationMs != null) 'duration_ms': durationMs,
+      if (containerBitrate != null) 'container_bitrate': containerBitrate,
+      if (videoCodec != null) 'video_codec': videoCodec,
+      if (width != null) 'width': width,
+      if (height != null) 'height': height,
+      if (pixelFormat != null) 'pixel_format': pixelFormat,
+      if (bitDepth != null) 'bit_depth': bitDepth,
+      if (frameRateMilli != null) 'frame_rate_milli': frameRateMilli,
+      if (videoBitrate != null) 'video_bitrate': videoBitrate,
+      if (colorPrimaries != null) 'color_primaries': colorPrimaries,
+      if (colorTransfer != null) 'color_transfer': colorTransfer,
+      if (colorSpace != null) 'color_space': colorSpace,
+      if (audioTracksJson != null) 'audio_tracks_json': audioTracksJson,
+      if (subtitleTracksJson != null)
+        'subtitle_tracks_json': subtitleTracksJson,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  VideoFileSpecsCompanion copyWith({
+    Value<String>? filePath,
+    Value<int>? fileSizeBytes,
+    Value<int>? fileModifiedAt,
+    Value<int>? probedAt,
+    Value<int>? probeVersion,
+    Value<int?>? durationMs,
+    Value<int?>? containerBitrate,
+    Value<String?>? videoCodec,
+    Value<int?>? width,
+    Value<int?>? height,
+    Value<String?>? pixelFormat,
+    Value<int?>? bitDepth,
+    Value<int?>? frameRateMilli,
+    Value<int?>? videoBitrate,
+    Value<String?>? colorPrimaries,
+    Value<String?>? colorTransfer,
+    Value<String?>? colorSpace,
+    Value<String>? audioTracksJson,
+    Value<String>? subtitleTracksJson,
+    Value<int>? rowid,
+  }) {
+    return VideoFileSpecsCompanion(
+      filePath: filePath ?? this.filePath,
+      fileSizeBytes: fileSizeBytes ?? this.fileSizeBytes,
+      fileModifiedAt: fileModifiedAt ?? this.fileModifiedAt,
+      probedAt: probedAt ?? this.probedAt,
+      probeVersion: probeVersion ?? this.probeVersion,
+      durationMs: durationMs ?? this.durationMs,
+      containerBitrate: containerBitrate ?? this.containerBitrate,
+      videoCodec: videoCodec ?? this.videoCodec,
+      width: width ?? this.width,
+      height: height ?? this.height,
+      pixelFormat: pixelFormat ?? this.pixelFormat,
+      bitDepth: bitDepth ?? this.bitDepth,
+      frameRateMilli: frameRateMilli ?? this.frameRateMilli,
+      videoBitrate: videoBitrate ?? this.videoBitrate,
+      colorPrimaries: colorPrimaries ?? this.colorPrimaries,
+      colorTransfer: colorTransfer ?? this.colorTransfer,
+      colorSpace: colorSpace ?? this.colorSpace,
+      audioTracksJson: audioTracksJson ?? this.audioTracksJson,
+      subtitleTracksJson: subtitleTracksJson ?? this.subtitleTracksJson,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (filePath.present) {
+      map['file_path'] = Variable<String>(filePath.value);
+    }
+    if (fileSizeBytes.present) {
+      map['file_size_bytes'] = Variable<int>(fileSizeBytes.value);
+    }
+    if (fileModifiedAt.present) {
+      map['file_modified_at'] = Variable<int>(fileModifiedAt.value);
+    }
+    if (probedAt.present) {
+      map['probed_at'] = Variable<int>(probedAt.value);
+    }
+    if (probeVersion.present) {
+      map['probe_version'] = Variable<int>(probeVersion.value);
+    }
+    if (durationMs.present) {
+      map['duration_ms'] = Variable<int>(durationMs.value);
+    }
+    if (containerBitrate.present) {
+      map['container_bitrate'] = Variable<int>(containerBitrate.value);
+    }
+    if (videoCodec.present) {
+      map['video_codec'] = Variable<String>(videoCodec.value);
+    }
+    if (width.present) {
+      map['width'] = Variable<int>(width.value);
+    }
+    if (height.present) {
+      map['height'] = Variable<int>(height.value);
+    }
+    if (pixelFormat.present) {
+      map['pixel_format'] = Variable<String>(pixelFormat.value);
+    }
+    if (bitDepth.present) {
+      map['bit_depth'] = Variable<int>(bitDepth.value);
+    }
+    if (frameRateMilli.present) {
+      map['frame_rate_milli'] = Variable<int>(frameRateMilli.value);
+    }
+    if (videoBitrate.present) {
+      map['video_bitrate'] = Variable<int>(videoBitrate.value);
+    }
+    if (colorPrimaries.present) {
+      map['color_primaries'] = Variable<String>(colorPrimaries.value);
+    }
+    if (colorTransfer.present) {
+      map['color_transfer'] = Variable<String>(colorTransfer.value);
+    }
+    if (colorSpace.present) {
+      map['color_space'] = Variable<String>(colorSpace.value);
+    }
+    if (audioTracksJson.present) {
+      map['audio_tracks_json'] = Variable<String>(audioTracksJson.value);
+    }
+    if (subtitleTracksJson.present) {
+      map['subtitle_tracks_json'] = Variable<String>(subtitleTracksJson.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VideoFileSpecsCompanion(')
+          ..write('filePath: $filePath, ')
+          ..write('fileSizeBytes: $fileSizeBytes, ')
+          ..write('fileModifiedAt: $fileModifiedAt, ')
+          ..write('probedAt: $probedAt, ')
+          ..write('probeVersion: $probeVersion, ')
+          ..write('durationMs: $durationMs, ')
+          ..write('containerBitrate: $containerBitrate, ')
+          ..write('videoCodec: $videoCodec, ')
+          ..write('width: $width, ')
+          ..write('height: $height, ')
+          ..write('pixelFormat: $pixelFormat, ')
+          ..write('bitDepth: $bitDepth, ')
+          ..write('frameRateMilli: $frameRateMilli, ')
+          ..write('videoBitrate: $videoBitrate, ')
+          ..write('colorPrimaries: $colorPrimaries, ')
+          ..write('colorTransfer: $colorTransfer, ')
+          ..write('colorSpace: $colorSpace, ')
+          ..write('audioTracksJson: $audioTracksJson, ')
+          ..write('subtitleTracksJson: $subtitleTracksJson, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$FushiDatabase extends GeneratedDatabase {
   _$FushiDatabase(QueryExecutor e) : super(e);
   $FushiDatabaseManager get managers => $FushiDatabaseManager(this);
@@ -48969,6 +50238,7 @@ abstract class _$FushiDatabase extends GeneratedDatabase {
       $StudySegmentTombstonesTable(this);
   late final $StudySegmentsTable studySegments = $StudySegmentsTable(this);
   late final $WebMineQueueTable webMineQueue = $WebMineQueueTable(this);
+  late final $VideoFileSpecsTable videoFileSpecs = $VideoFileSpecsTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -49055,6 +50325,7 @@ abstract class _$FushiDatabase extends GeneratedDatabase {
     studySegmentTombstones,
     studySegments,
     webMineQueue,
+    videoFileSpecs,
   ];
   @override
   StreamQueryUpdateRules get streamUpdateRules => const StreamQueryUpdateRules([
@@ -80289,6 +81560,7 @@ typedef $$VideoDownloadJobsTableCreateCompanionBuilder =
       Value<int?> year,
       Value<int?> season,
       Value<String?> coverUrl,
+      Value<String?> identityJson,
       required String backendKind,
       Value<String?> backendTaskId,
       Value<String?> backendProfileId,
@@ -80331,6 +81603,7 @@ typedef $$VideoDownloadJobsTableUpdateCompanionBuilder =
       Value<int?> year,
       Value<int?> season,
       Value<String?> coverUrl,
+      Value<String?> identityJson,
       Value<String> backendKind,
       Value<String?> backendTaskId,
       Value<String?> backendProfileId,
@@ -80563,6 +81836,11 @@ class $$VideoDownloadJobsTableFilterComposer
 
   ColumnFilters<String> get coverUrl => $composableBuilder(
     column: $table.coverUrl,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get identityJson => $composableBuilder(
+    column: $table.identityJson,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -80884,6 +82162,11 @@ class $$VideoDownloadJobsTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get identityJson => $composableBuilder(
+    column: $table.identityJson,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get backendKind => $composableBuilder(
     column: $table.backendKind,
     builder: (column) => ColumnOrderings(column),
@@ -81105,6 +82388,11 @@ class $$VideoDownloadJobsTableAnnotationComposer
 
   GeneratedColumn<String> get coverUrl =>
       $composableBuilder(column: $table.coverUrl, builder: (column) => column);
+
+  GeneratedColumn<String> get identityJson => $composableBuilder(
+    column: $table.identityJson,
+    builder: (column) => column,
+  );
 
   GeneratedColumn<String> get backendKind => $composableBuilder(
     column: $table.backendKind,
@@ -81382,6 +82670,7 @@ class $$VideoDownloadJobsTableTableManager
                 Value<int?> year = const Value.absent(),
                 Value<int?> season = const Value.absent(),
                 Value<String?> coverUrl = const Value.absent(),
+                Value<String?> identityJson = const Value.absent(),
                 Value<String> backendKind = const Value.absent(),
                 Value<String?> backendTaskId = const Value.absent(),
                 Value<String?> backendProfileId = const Value.absent(),
@@ -81422,6 +82711,7 @@ class $$VideoDownloadJobsTableTableManager
                 year: year,
                 season: season,
                 coverUrl: coverUrl,
+                identityJson: identityJson,
                 backendKind: backendKind,
                 backendTaskId: backendTaskId,
                 backendProfileId: backendProfileId,
@@ -81464,6 +82754,7 @@ class $$VideoDownloadJobsTableTableManager
                 Value<int?> year = const Value.absent(),
                 Value<int?> season = const Value.absent(),
                 Value<String?> coverUrl = const Value.absent(),
+                Value<String?> identityJson = const Value.absent(),
                 required String backendKind,
                 Value<String?> backendTaskId = const Value.absent(),
                 Value<String?> backendProfileId = const Value.absent(),
@@ -81504,6 +82795,7 @@ class $$VideoDownloadJobsTableTableManager
                 year: year,
                 season: season,
                 coverUrl: coverUrl,
+                identityJson: identityJson,
                 backendKind: backendKind,
                 backendTaskId: backendTaskId,
                 backendProfileId: backendProfileId,
@@ -83012,6 +84304,7 @@ typedef $$VideoDownloadSubscriptionsTableCreateCompanionBuilder =
       Value<int?> year,
       Value<int?> season,
       Value<String?> coverUrl,
+      Value<String?> identityJson,
       required String searchQuery,
       Value<String> filterJson,
       Value<String> mode,
@@ -83049,6 +84342,7 @@ typedef $$VideoDownloadSubscriptionsTableUpdateCompanionBuilder =
       Value<int?> year,
       Value<int?> season,
       Value<String?> coverUrl,
+      Value<String?> identityJson,
       Value<String> searchQuery,
       Value<String> filterJson,
       Value<String> mode,
@@ -83215,6 +84509,11 @@ class $$VideoDownloadSubscriptionsTableFilterComposer
 
   ColumnFilters<String> get coverUrl => $composableBuilder(
     column: $table.coverUrl,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get identityJson => $composableBuilder(
+    column: $table.identityJson,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -83458,6 +84757,11 @@ class $$VideoDownloadSubscriptionsTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get identityJson => $composableBuilder(
+    column: $table.identityJson,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get searchQuery => $composableBuilder(
     column: $table.searchQuery,
     builder: (column) => ColumnOrderings(column),
@@ -83658,6 +84962,11 @@ class $$VideoDownloadSubscriptionsTableAnnotationComposer
 
   GeneratedColumn<String> get coverUrl =>
       $composableBuilder(column: $table.coverUrl, builder: (column) => column);
+
+  GeneratedColumn<String> get identityJson => $composableBuilder(
+    column: $table.identityJson,
+    builder: (column) => column,
+  );
 
   GeneratedColumn<String> get searchQuery => $composableBuilder(
     column: $table.searchQuery,
@@ -83882,6 +85191,7 @@ class $$VideoDownloadSubscriptionsTableTableManager
                 Value<int?> year = const Value.absent(),
                 Value<int?> season = const Value.absent(),
                 Value<String?> coverUrl = const Value.absent(),
+                Value<String?> identityJson = const Value.absent(),
                 Value<String> searchQuery = const Value.absent(),
                 Value<String> filterJson = const Value.absent(),
                 Value<String> mode = const Value.absent(),
@@ -83917,6 +85227,7 @@ class $$VideoDownloadSubscriptionsTableTableManager
                 year: year,
                 season: season,
                 coverUrl: coverUrl,
+                identityJson: identityJson,
                 searchQuery: searchQuery,
                 filterJson: filterJson,
                 mode: mode,
@@ -83954,6 +85265,7 @@ class $$VideoDownloadSubscriptionsTableTableManager
                 Value<int?> year = const Value.absent(),
                 Value<int?> season = const Value.absent(),
                 Value<String?> coverUrl = const Value.absent(),
+                Value<String?> identityJson = const Value.absent(),
                 required String searchQuery,
                 Value<String> filterJson = const Value.absent(),
                 Value<String> mode = const Value.absent(),
@@ -83989,6 +85301,7 @@ class $$VideoDownloadSubscriptionsTableTableManager
                 year: year,
                 season: season,
                 coverUrl: coverUrl,
+                identityJson: identityJson,
                 searchQuery: searchQuery,
                 filterJson: filterJson,
                 mode: mode,
@@ -85965,6 +87278,506 @@ typedef $$WebMineQueueTableProcessedTableManager =
       WebMineQueueRow,
       PrefetchHooks Function()
     >;
+typedef $$VideoFileSpecsTableCreateCompanionBuilder =
+    VideoFileSpecsCompanion Function({
+      required String filePath,
+      required int fileSizeBytes,
+      required int fileModifiedAt,
+      required int probedAt,
+      required int probeVersion,
+      Value<int?> durationMs,
+      Value<int?> containerBitrate,
+      Value<String?> videoCodec,
+      Value<int?> width,
+      Value<int?> height,
+      Value<String?> pixelFormat,
+      Value<int?> bitDepth,
+      Value<int?> frameRateMilli,
+      Value<int?> videoBitrate,
+      Value<String?> colorPrimaries,
+      Value<String?> colorTransfer,
+      Value<String?> colorSpace,
+      Value<String> audioTracksJson,
+      Value<String> subtitleTracksJson,
+      Value<int> rowid,
+    });
+typedef $$VideoFileSpecsTableUpdateCompanionBuilder =
+    VideoFileSpecsCompanion Function({
+      Value<String> filePath,
+      Value<int> fileSizeBytes,
+      Value<int> fileModifiedAt,
+      Value<int> probedAt,
+      Value<int> probeVersion,
+      Value<int?> durationMs,
+      Value<int?> containerBitrate,
+      Value<String?> videoCodec,
+      Value<int?> width,
+      Value<int?> height,
+      Value<String?> pixelFormat,
+      Value<int?> bitDepth,
+      Value<int?> frameRateMilli,
+      Value<int?> videoBitrate,
+      Value<String?> colorPrimaries,
+      Value<String?> colorTransfer,
+      Value<String?> colorSpace,
+      Value<String> audioTracksJson,
+      Value<String> subtitleTracksJson,
+      Value<int> rowid,
+    });
+
+class $$VideoFileSpecsTableFilterComposer
+    extends Composer<_$FushiDatabase, $VideoFileSpecsTable> {
+  $$VideoFileSpecsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get filePath => $composableBuilder(
+    column: $table.filePath,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get fileSizeBytes => $composableBuilder(
+    column: $table.fileSizeBytes,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get fileModifiedAt => $composableBuilder(
+    column: $table.fileModifiedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get probedAt => $composableBuilder(
+    column: $table.probedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get probeVersion => $composableBuilder(
+    column: $table.probeVersion,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get durationMs => $composableBuilder(
+    column: $table.durationMs,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get containerBitrate => $composableBuilder(
+    column: $table.containerBitrate,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get videoCodec => $composableBuilder(
+    column: $table.videoCodec,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get width => $composableBuilder(
+    column: $table.width,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get height => $composableBuilder(
+    column: $table.height,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get pixelFormat => $composableBuilder(
+    column: $table.pixelFormat,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get bitDepth => $composableBuilder(
+    column: $table.bitDepth,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get frameRateMilli => $composableBuilder(
+    column: $table.frameRateMilli,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get videoBitrate => $composableBuilder(
+    column: $table.videoBitrate,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get colorPrimaries => $composableBuilder(
+    column: $table.colorPrimaries,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get colorTransfer => $composableBuilder(
+    column: $table.colorTransfer,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get colorSpace => $composableBuilder(
+    column: $table.colorSpace,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get audioTracksJson => $composableBuilder(
+    column: $table.audioTracksJson,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get subtitleTracksJson => $composableBuilder(
+    column: $table.subtitleTracksJson,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$VideoFileSpecsTableOrderingComposer
+    extends Composer<_$FushiDatabase, $VideoFileSpecsTable> {
+  $$VideoFileSpecsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get filePath => $composableBuilder(
+    column: $table.filePath,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get fileSizeBytes => $composableBuilder(
+    column: $table.fileSizeBytes,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get fileModifiedAt => $composableBuilder(
+    column: $table.fileModifiedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get probedAt => $composableBuilder(
+    column: $table.probedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get probeVersion => $composableBuilder(
+    column: $table.probeVersion,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get durationMs => $composableBuilder(
+    column: $table.durationMs,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get containerBitrate => $composableBuilder(
+    column: $table.containerBitrate,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get videoCodec => $composableBuilder(
+    column: $table.videoCodec,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get width => $composableBuilder(
+    column: $table.width,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get height => $composableBuilder(
+    column: $table.height,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get pixelFormat => $composableBuilder(
+    column: $table.pixelFormat,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get bitDepth => $composableBuilder(
+    column: $table.bitDepth,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get frameRateMilli => $composableBuilder(
+    column: $table.frameRateMilli,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get videoBitrate => $composableBuilder(
+    column: $table.videoBitrate,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get colorPrimaries => $composableBuilder(
+    column: $table.colorPrimaries,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get colorTransfer => $composableBuilder(
+    column: $table.colorTransfer,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get colorSpace => $composableBuilder(
+    column: $table.colorSpace,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get audioTracksJson => $composableBuilder(
+    column: $table.audioTracksJson,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get subtitleTracksJson => $composableBuilder(
+    column: $table.subtitleTracksJson,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$VideoFileSpecsTableAnnotationComposer
+    extends Composer<_$FushiDatabase, $VideoFileSpecsTable> {
+  $$VideoFileSpecsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get filePath =>
+      $composableBuilder(column: $table.filePath, builder: (column) => column);
+
+  GeneratedColumn<int> get fileSizeBytes => $composableBuilder(
+    column: $table.fileSizeBytes,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get fileModifiedAt => $composableBuilder(
+    column: $table.fileModifiedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get probedAt =>
+      $composableBuilder(column: $table.probedAt, builder: (column) => column);
+
+  GeneratedColumn<int> get probeVersion => $composableBuilder(
+    column: $table.probeVersion,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get durationMs => $composableBuilder(
+    column: $table.durationMs,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get containerBitrate => $composableBuilder(
+    column: $table.containerBitrate,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get videoCodec => $composableBuilder(
+    column: $table.videoCodec,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get width =>
+      $composableBuilder(column: $table.width, builder: (column) => column);
+
+  GeneratedColumn<int> get height =>
+      $composableBuilder(column: $table.height, builder: (column) => column);
+
+  GeneratedColumn<String> get pixelFormat => $composableBuilder(
+    column: $table.pixelFormat,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get bitDepth =>
+      $composableBuilder(column: $table.bitDepth, builder: (column) => column);
+
+  GeneratedColumn<int> get frameRateMilli => $composableBuilder(
+    column: $table.frameRateMilli,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get videoBitrate => $composableBuilder(
+    column: $table.videoBitrate,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get colorPrimaries => $composableBuilder(
+    column: $table.colorPrimaries,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get colorTransfer => $composableBuilder(
+    column: $table.colorTransfer,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get colorSpace => $composableBuilder(
+    column: $table.colorSpace,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get audioTracksJson => $composableBuilder(
+    column: $table.audioTracksJson,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get subtitleTracksJson => $composableBuilder(
+    column: $table.subtitleTracksJson,
+    builder: (column) => column,
+  );
+}
+
+class $$VideoFileSpecsTableTableManager
+    extends
+        RootTableManager<
+          _$FushiDatabase,
+          $VideoFileSpecsTable,
+          VideoFileSpecRow,
+          $$VideoFileSpecsTableFilterComposer,
+          $$VideoFileSpecsTableOrderingComposer,
+          $$VideoFileSpecsTableAnnotationComposer,
+          $$VideoFileSpecsTableCreateCompanionBuilder,
+          $$VideoFileSpecsTableUpdateCompanionBuilder,
+          (
+            VideoFileSpecRow,
+            BaseReferences<
+              _$FushiDatabase,
+              $VideoFileSpecsTable,
+              VideoFileSpecRow
+            >,
+          ),
+          VideoFileSpecRow,
+          PrefetchHooks Function()
+        > {
+  $$VideoFileSpecsTableTableManager(
+    _$FushiDatabase db,
+    $VideoFileSpecsTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$VideoFileSpecsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$VideoFileSpecsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$VideoFileSpecsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> filePath = const Value.absent(),
+                Value<int> fileSizeBytes = const Value.absent(),
+                Value<int> fileModifiedAt = const Value.absent(),
+                Value<int> probedAt = const Value.absent(),
+                Value<int> probeVersion = const Value.absent(),
+                Value<int?> durationMs = const Value.absent(),
+                Value<int?> containerBitrate = const Value.absent(),
+                Value<String?> videoCodec = const Value.absent(),
+                Value<int?> width = const Value.absent(),
+                Value<int?> height = const Value.absent(),
+                Value<String?> pixelFormat = const Value.absent(),
+                Value<int?> bitDepth = const Value.absent(),
+                Value<int?> frameRateMilli = const Value.absent(),
+                Value<int?> videoBitrate = const Value.absent(),
+                Value<String?> colorPrimaries = const Value.absent(),
+                Value<String?> colorTransfer = const Value.absent(),
+                Value<String?> colorSpace = const Value.absent(),
+                Value<String> audioTracksJson = const Value.absent(),
+                Value<String> subtitleTracksJson = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => VideoFileSpecsCompanion(
+                filePath: filePath,
+                fileSizeBytes: fileSizeBytes,
+                fileModifiedAt: fileModifiedAt,
+                probedAt: probedAt,
+                probeVersion: probeVersion,
+                durationMs: durationMs,
+                containerBitrate: containerBitrate,
+                videoCodec: videoCodec,
+                width: width,
+                height: height,
+                pixelFormat: pixelFormat,
+                bitDepth: bitDepth,
+                frameRateMilli: frameRateMilli,
+                videoBitrate: videoBitrate,
+                colorPrimaries: colorPrimaries,
+                colorTransfer: colorTransfer,
+                colorSpace: colorSpace,
+                audioTracksJson: audioTracksJson,
+                subtitleTracksJson: subtitleTracksJson,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String filePath,
+                required int fileSizeBytes,
+                required int fileModifiedAt,
+                required int probedAt,
+                required int probeVersion,
+                Value<int?> durationMs = const Value.absent(),
+                Value<int?> containerBitrate = const Value.absent(),
+                Value<String?> videoCodec = const Value.absent(),
+                Value<int?> width = const Value.absent(),
+                Value<int?> height = const Value.absent(),
+                Value<String?> pixelFormat = const Value.absent(),
+                Value<int?> bitDepth = const Value.absent(),
+                Value<int?> frameRateMilli = const Value.absent(),
+                Value<int?> videoBitrate = const Value.absent(),
+                Value<String?> colorPrimaries = const Value.absent(),
+                Value<String?> colorTransfer = const Value.absent(),
+                Value<String?> colorSpace = const Value.absent(),
+                Value<String> audioTracksJson = const Value.absent(),
+                Value<String> subtitleTracksJson = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => VideoFileSpecsCompanion.insert(
+                filePath: filePath,
+                fileSizeBytes: fileSizeBytes,
+                fileModifiedAt: fileModifiedAt,
+                probedAt: probedAt,
+                probeVersion: probeVersion,
+                durationMs: durationMs,
+                containerBitrate: containerBitrate,
+                videoCodec: videoCodec,
+                width: width,
+                height: height,
+                pixelFormat: pixelFormat,
+                bitDepth: bitDepth,
+                frameRateMilli: frameRateMilli,
+                videoBitrate: videoBitrate,
+                colorPrimaries: colorPrimaries,
+                colorTransfer: colorTransfer,
+                colorSpace: colorSpace,
+                audioTracksJson: audioTracksJson,
+                subtitleTracksJson: subtitleTracksJson,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$VideoFileSpecsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$FushiDatabase,
+      $VideoFileSpecsTable,
+      VideoFileSpecRow,
+      $$VideoFileSpecsTableFilterComposer,
+      $$VideoFileSpecsTableOrderingComposer,
+      $$VideoFileSpecsTableAnnotationComposer,
+      $$VideoFileSpecsTableCreateCompanionBuilder,
+      $$VideoFileSpecsTableUpdateCompanionBuilder,
+      (
+        VideoFileSpecRow,
+        BaseReferences<_$FushiDatabase, $VideoFileSpecsTable, VideoFileSpecRow>,
+      ),
+      VideoFileSpecRow,
+      PrefetchHooks Function()
+    >;
 
 class $FushiDatabaseManager {
   final _$FushiDatabase _db;
@@ -86175,4 +87988,6 @@ class $FushiDatabaseManager {
       $$StudySegmentsTableTableManager(_db, _db.studySegments);
   $$WebMineQueueTableTableManager get webMineQueue =>
       $$WebMineQueueTableTableManager(_db, _db.webMineQueue);
+  $$VideoFileSpecsTableTableManager get videoFileSpecs =>
+      $$VideoFileSpecsTableTableManager(_db, _db.videoFileSpecs);
 }

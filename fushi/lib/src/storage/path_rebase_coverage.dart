@@ -258,6 +258,28 @@ const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
       'TODO-1157 流媒体加载凭据 {subtitleUrl,subtitleFileName,referer,userAgent}，'
           '全是远端 URL / HTTP header，无本机路径。'),
 
+  // ── video_file_specs（v95 规格探测缓存）────────────────────────────
+  PathRebaseColumn(
+      'VideoFileSpecs',
+      'filePath',
+      PathRebaseKind.documentsRooted,
+      '本表的**主键**，与 video_books.video_path 同语义（数据根内下载副本 / 用户原位'
+          '外部文件）。不改写 = 数据根搬家后整张规格缓存的键全部指向旧路径，永远命不中，'
+          '每个条目都要重探一遍（几百个文件的 ffprobe）。虽是可重建的缓存，但改写成本'
+          '只是一条 UPDATE，没有理由让用户白等。'),
+  PathRebaseColumn(
+      'VideoFileSpecs',
+      'audioTracksJson',
+      PathRebaseKind.notAPath,
+      'ffprobe 音轨事实数组 [{index,codec,channels,language,title,标志位}]，'
+          '全是流属性与语言 tag，无任何文件系统路径。'),
+  PathRebaseColumn(
+      'VideoFileSpecs',
+      'subtitleTracksJson',
+      PathRebaseKind.notAPath,
+      '内封字幕轨事实数组，与 audioTracksJson 同型——内封轨没有外部文件，'
+          '外挂字幕路径存在 video_books.subtitle_source，不在本表。'),
+
   // ── 统计 / 收藏 ────────────────────────────────────────────────────
   PathRebaseColumn('FavoriteWords', 'sourceType', PathRebaseKind.notAPath,
       '统计桶枚举值（book/video/...），不是路径。'),
@@ -417,6 +439,9 @@ const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
       PathRebaseKind.notAPath, '发布标题文本，不是路径。'),
   PathRebaseColumn('VideoDownloadJobs', 'coverUrl', PathRebaseKind.notAPath,
       '发现来源的远端封面 URL，不是本机路径。'),
+  PathRebaseColumn('VideoDownloadJobs', 'identityJson',
+      PathRebaseKind.notAPath,
+      'v94 发现页身份快照 JSON（VideoMediaReference：providerId/mediaId/标题/原名/别名/年份/季集号 + tmdb/imdb/tvdb/anidb/anilist/bangumi 等外部 id），全是标识与文本，不承载任何路径。'),
   PathRebaseColumn('VideoDownloadJobs', 'backendProfileId',
       PathRebaseKind.notAPath, '下载后端配置身份，不是文件路径。'),
   PathRebaseColumn(
@@ -455,6 +480,9 @@ const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
       PathRebaseKind.notAPath, '发现来源的远端封面 URL，不是本机路径。'),
   PathRebaseColumn('VideoDownloadSubscriptions', 'filterJson',
       PathRebaseKind.notAPath, '严格版本规则 JSON（组、分辨率、编码、语言），不承载路径或凭据。'),
+  PathRebaseColumn('VideoDownloadSubscriptions', 'identityJson',
+      PathRebaseKind.notAPath,
+      'v94 发现页身份快照 JSON（VideoMediaReference：providerId/mediaId/标题/原名/别名/年份/季集号 + tmdb/imdb/tvdb/anidb/anilist/bangumi 等外部 id），全是标识与文本，不承载任何路径。'),
   PathRebaseColumn('VideoDownloadSubscriptions', 'backendProfileId',
       PathRebaseKind.notAPath, '下载后端配置身份，不是文件路径。'),
   PathRebaseColumn('VideoDownloadSubscriptionItems', 'resourceProvider',
@@ -613,6 +641,14 @@ final List<PathRebasePref> kPathRebasePrefs = <PathRebasePref>[
           '与 MediaSources.rootPath 同语义，不能随 Hibiki 应用数据根改写。'),
   PathRebasePref('video_mpv_shader_dir', PathRebaseKind.externalUserPath,
       PathValueShape.none, '用户本机 mpv 着色器目录，外部路径，不随数据根走。'),
+  PathRebasePref(
+      'audiobook_material_dirs',
+      PathRebaseKind.externalUserPath,
+      PathValueShape.none,
+      '有声书素材库目录（JSON 字符串数组）。用户自己挑的字幕/正文库位置——通常是外接盘'
+          '或下载目录，不在 Hibiki 数据根下，跟着数据根改写只会把有效路径改坏。'
+          '目录没了不影响已入库的书（素材在导入时已复制进书的存储），设置页按'
+          'missingDirs 如实提示。'),
   PathRebasePref('manga_external_mokuro_path', PathRebaseKind.externalUserPath,
       PathValueShape.none, '系统安装的 mokuro 可执行文件路径，外部路径。'),
   PathRebasePref(

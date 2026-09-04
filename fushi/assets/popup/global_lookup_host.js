@@ -2770,6 +2770,13 @@
     var maxBottom = -Infinity;
     var shellRects = [];
     var routedFrameCount = 0;
+    // BUG-2082 — the ROOT card's own measured height (CSS px), reported next to
+    // the union bbox. The gal in-game presenter anchors the root card by the
+    // edge that touches the clicked glyph (bottom edge when the card flips
+    // above the line); the union bbox alone cannot tell the root's height once
+    // nested children extend the union, so the host reports it explicitly.
+    var rootHeight = 0;
+    var firstShellHeight = 0;
     frames.forEach(function (record) {
       if (!sameRoute(record.route, route)) {
         return;
@@ -2804,6 +2811,12 @@
       // BUG-749 — collect every placed shell (same left/top/height the bbox
       // uses) for the native hit/paint region below.
       shellRects.push([left, top, width, height]);
+      if (firstShellHeight <= 0 && height > 0) {
+        firstShellHeight = height;
+      }
+      if (record.parentIndex < 0 && rootHeight <= 0 && height > 0) {
+        rootHeight = height;
+      }
       // MAX-corner (window size) + the bootstrap origin fallback see EVERY placed
       // shell, so the window pre-grows to cover a not-yet-ready child (no clip).
       if (left < minLeftAll) minLeftAll = left;
@@ -2893,15 +2906,22 @@
     var rectsKey = routePrefix + rectsCsv;
     var dpr = (typeof window.devicePixelRatio === 'number' &&
                window.devicePixelRatio > 0) ? window.devicePixelRatio : 1;
+    if (rootHeight <= 0) {
+      rootHeight = firstShellHeight;
+    }
     var box = {
       left: minLeft,
       top: minTop,
       width: maxRight - minLeft,
       height: maxBottom - minTop,
+      rootHeight: rootHeight,
       dpr: dpr,
     };
+    // rootHeight is part of the de-dup key: a root that shrinks under a child
+    // still spanning the old bottom leaves the union unchanged, yet the in-game
+    // root placement must follow the new root edge.
     var key = routePrefix + box.left + ',' + box.top + ',' + box.width + ',' +
-        box.height + ',' + dpr;
+        box.height + ',' + box.rootHeight + ',' + dpr;
     var geometryKey = key + '|' + rectsCsv;
     var rectsChanged = rectsKey !== lastShellRectsKey;
     var bboxChanged = key !== lastBBoxKey;
@@ -3536,7 +3556,7 @@
   // window.fushiSelection.highlightSelection(count) inside its iframe realm (the
   // popup.js selection already spans the just-clicked word). No-op on a bad index
   // / count / missing frame so a failed highlight never breaks the lookup.
-  function highlightFrame(frameIndex, count) {
+  function highlightFrame(frameIndex, count, token) {
     if (typeof frameIndex !== 'number' || frameIndex < 0) {
       return false;
     }
@@ -3563,15 +3583,42 @@
     if (!win || typeof win.eval !== 'function') {
       return false;
     }
+    // BUG-2054 — everything that can throw stays INSIDE this try (the function's
+    // contract, stated above, is that a failed highlight never breaks the
+    // lookup): win.eval, the shell-geometry read inside anchorRectToScreen and
+    // postToHost alike. Dart AWAITS this report before it places the child card,
+    // so a throw here would also strand that wait until its timeout.
     try {
-      win.eval(
+      var bounds = win.eval(
           'window.fushiSelection && ' +
-          'window.fushiSelection.highlightSelection && ' +
-          'window.fushiSelection.highlightSelection(' + count + ');');
-      return true;
+          'window.fushiSelection.highlightSelection ? ' +
+          'window.fushiSelection.highlightSelection(' + count + ') : null;');
+      // highlightSelection also RETURNS the matched word's bbox in the parent
+      // iframe's own viewport: it unions every getClientRects() fragment, so on
+      // a WRAPPED selection its bottom is the LAST line. The child card would
+      // otherwise be anchored on selection.js's getSelectionRect() — the FIRST
+      // CHARACTER's rect (textSelected fires before the dictionary runs, so the
+      // matched length is unknown then) — which on a wrapped selection covers
+      // only the tapped line, leaving the child card on top of the second one.
+      // Reported through the SAME iframe-local -> window-local transform the
+      // original anchor took (in-app cards do it via reanchorNestedPopupToWord).
+      var anchor = anchorRectToScreen(target, bounds);
+      var usable = !!anchor && anchor.width > 0 && anchor.height > 0;
+      // Always answer a TOKENED request — Dart is waiting on it before placing
+      // the child card, and a silent drop would cost it the full timeout. An
+      // unusable bbox reports null: Dart then keeps the first-character anchor.
+      if (typeof token === 'number') {
+        postToHost('nestedWordAnchor', [frameIndex, usable ? anchor : null, token],
+            cloneRoute((target && target.route) || activeRoute));
+      }
     } catch (e) {
+      if (typeof token === 'number') {
+        postToHost('nestedWordAnchor', [frameIndex, null, token],
+            cloneRoute((target && target.route) || activeRoute));
+      }
       return false;
     }
+    return true;
   }
 
   // BUG-1127 — drive the overlay AUTO-READ through popup.js's own HTML5

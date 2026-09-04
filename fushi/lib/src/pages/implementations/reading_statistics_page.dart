@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:fushi/src/shortcuts/context_menu_trigger.dart';
 import 'package:fushi/media.dart';
 import 'package:fushi/pages.dart';
 import 'package:fushi/src/pages/implementations/stat_activity.dart';
@@ -6,6 +9,7 @@ import 'package:fushi/src/pages/implementations/stat_charts.dart';
 import 'package:fushi/src/pages/implementations/stat_hourly_breakdown.dart';
 import 'package:fushi/src/pages/implementations/stat_delete_confirm_dialog.dart';
 import 'package:fushi/src/pages/implementations/stat_kpi_strip.dart';
+import 'package:fushi/src/pages/implementations/stat_period_detail_sheet.dart';
 import 'package:fushi/src/pages/implementations/stat_ring.dart';
 import 'package:fushi/src/pages/implementations/stat_shared.dart';
 import 'package:fushi/src/pages/implementations/stat_source_totals.dart';
@@ -29,7 +33,10 @@ const double _kWideBreakpoint = 720;
 const double _kMaxContentWidth = 1040;
 
 class ReadingStatisticsPage extends BasePage {
-  const ReadingStatisticsPage({super.key});
+  const ReadingStatisticsPage({super.key, this.embedded = false});
+
+  /// true = 作为统计中心的一个 tab 嵌入（不套 FushiPageScaffold，动作行内联）。
+  final bool embedded;
 
   @override
   BasePageState<ReadingStatisticsPage> createState() =>
@@ -72,6 +79,14 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
   int _todayMs = 0;
   int _weekChars = 0;
   int _weekMs = 0;
+  // 学习域目标分子（今日 / 本周，书 + 视频字幕 + 游戏 hook 文本）：目标卡与
+  // 「今天」环形卡的目标环用它，与首页「今日目标」同函数同口径
+  // （[studyGoalCharsForDay]，BUG-1993）。本页其余 KPI / 趋势 / CPH 仍是
+  // 阅读域（[_todayChars] 等），两组数并存不混用。
+  int _todayStudyChars = 0;
+  int _weekStudyChars = 0;
+  // 完整日面（全部来源），学习域目标分子的数据源。
+  List<StatFact> _dailyFacts = <StatFact>[];
   // 上周字数（第 8–14 天窗口）：仅用于顶部 KPI 的本周字数环比，[8,14) 与本周 [0,7) 不重叠。
   int _prevWeekChars = 0;
   int _monthChars = 0;
@@ -126,7 +141,12 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
     WidgetsBinding.instance.addPostFrameCallback((_) => _syncAndLoad());
   }
 
+  /// 统计中心把三页塞进 TabBarView（无 keepAlive，离屏即 unmount），
+  /// 「点开 tab → DB 还在查 → 切走」是一秒可复现的常规操作：首帧 postFrameCallback
+  /// 与多次 await 之后的两处 setState 都必须过 mounted 门，否则 debug 断言
+  /// `setState() called after dispose()`、release 打在已置空的 _element 上。
   Future<void> _syncAndLoad() async {
+    if (!mounted) return;
     setState(() {
       _loading = true;
       _error = null;
@@ -143,6 +163,7 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
       // 活动行，activityLimit 传 0。
       final StatFacts facts = await loadStatFacts(db, activityLimit: 0);
       _bookFacts = facts.dailyBooks.toList();
+      _dailyFacts = facts.daily;
       _sourceDaily = aggregateStatSourceDaily(_bookFacts);
       _computeAggregates();
       // 加载事实时顺带取的书表：下面的 title→bookKey（合集归属 / legacy 行回退）
@@ -205,7 +226,7 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
       ErrorLogService.instance.log('ReadingStatisticsPage.load', e, stack);
       _error = e.toString();
     }
-    setState(() => _loading = false);
+    if (mounted) setState(() => _loading = false);
   }
 
   /// 今日时段图：从事实面的**小时面**取今日阅读域行（legacy `reading_hourly_logs`
@@ -235,6 +256,8 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
     _todayMs = 0;
     _weekChars = 0;
     _weekMs = 0;
+    _todayStudyChars = 0;
+    _weekStudyChars = 0;
     _prevWeekChars = 0;
     _monthChars = 0;
     _monthMs = 0;
@@ -245,7 +268,8 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
     final bookMap = <String, _BookData>{};
 
     // 阅读统计只合并阅读域的普通书与漫画。视频 / 游戏有各自统计页，不进入本页
-    // KPI、趋势、目标进度或活跃天数。
+    // KPI、趋势或活跃天数；唯一例外是目标进度——目标是学习域概念（BUG-1993），
+    // 分子在下方单独按完整日面求和。
     for (final StatBreakdownSource source in const <StatBreakdownSource>[
       StatBreakdownSource.book,
       StatBreakdownSource.manga,
@@ -273,8 +297,13 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
       });
     }
 
-    // 今日字数与首页「今日目标」同源同函数（阅读域当日字数），两处永远对得上。
-    _todayChars = readingGoalCharsForDay(_bookFacts, w.todayKey);
+    // 今日阅读字数（阅读域切片，喂概览「今日」与 CPH）；目标分子另算学习域
+    // （完整日面，与首页「今日目标」同源同函数，BUG-1993）。
+    _todayChars = studyGoalCharsForDay(_bookFacts, w.todayKey);
+    _todayStudyChars = studyGoalCharsForDay(_dailyFacts, w.todayKey);
+    for (final StatFact f in _dailyFacts) {
+      if (w.inWeek(f.dateKey)) _weekStudyChars += f.chars;
+    }
 
     // 按书：按身份分组（有 bookKey 用 bookKey，legacy 无身份行回退 title），
     // 同一本书的 legacy 日行与 v92 段合成一个 tile；title 取首见快照作展示 / 计数键。
@@ -416,41 +445,44 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
 
   @override
   Widget build(BuildContext context) {
+    final List<Widget> actions = <Widget>[
+      // BUG-970：目标设置入口恒驻顶栏——目标卡在两目标皆 0 时整块隐藏
+      // (_buildGoalPanel -> SizedBox.shrink)，卡内 edit 图标随之消失，
+      // 否则从未设过目标的用户没有任何 UI 能首次设置目标。
+      FushiIconButton(
+        icon: Icons.flag_outlined,
+        tooltip: t.stat_goal_set,
+        enabled: !_loading,
+        onTap: _editGoals,
+      ),
+      FushiIconButton(
+        icon: Icons.refresh,
+        tooltip: t.stat_refresh,
+        enabled: !_loading,
+        onTap: _syncAndLoad,
+      ),
+      FushiIconButton(
+        icon: Icons.delete_sweep_outlined,
+        tooltip: t.stat_clear_all,
+        enabled: !_loading,
+        onTap: _confirmAndClearAll,
+      ),
+    ];
+    final Widget body = buildStatPageBody(
+      loading: _loading,
+      error: _error,
+      isEmpty: _bookFacts.isEmpty,
+      loadingBuilder: () =>
+          buildLoading(size: 25, color: theme.colorScheme.primary),
+      errorBuilder: (String error) => buildError(error: error),
+      emptyMessage: t.stat_no_data,
+      contentBuilder: _buildContent,
+    );
+    if (widget.embedded) return buildEmbeddedStatTab(context, actions, body);
     return FushiPageScaffold(
       title: t.reading_statistics,
-      actions: <Widget>[
-        // BUG-970：目标设置入口恒驻顶栏——目标卡在两目标皆 0 时整块隐藏
-        // (_buildGoalPanel -> SizedBox.shrink)，卡内 edit 图标随之消失，
-        // 否则从未设过目标的用户没有任何 UI 能首次设置目标。
-        FushiIconButton(
-          icon: Icons.flag_outlined,
-          tooltip: t.stat_goal_set,
-          enabled: !_loading,
-          onTap: _editGoals,
-        ),
-        FushiIconButton(
-          icon: Icons.refresh,
-          tooltip: t.stat_refresh,
-          enabled: !_loading,
-          onTap: _syncAndLoad,
-        ),
-        FushiIconButton(
-          icon: Icons.delete_sweep_outlined,
-          tooltip: t.stat_clear_all,
-          enabled: !_loading,
-          onTap: _confirmAndClearAll,
-        ),
-      ],
-      body: buildStatPageBody(
-        loading: _loading,
-        error: _error,
-        isEmpty: _bookFacts.isEmpty,
-        loadingBuilder: () =>
-            buildLoading(size: 25, color: theme.colorScheme.primary),
-        errorBuilder: (String error) => buildError(error: error),
-        emptyMessage: t.stat_no_data,
-        contentBuilder: _buildContent,
-      ),
+      actions: actions,
+      body: body,
     );
   }
 
@@ -717,17 +749,23 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
   }
 
   Widget _buildSummaryCards() {
+    // 时段谓词在点击时现算（跨日打开页面后点卡，明细按点击时刻的窗口取数）。
+    final StatWindow w = StatWindow(DateTime.now());
     return buildStatPeriodSummaryGrid(
       context,
       <StatPeriodSummary>[
         _periodSummary(t.stat_today, _todayChars, _todayMs, _lookup.today,
-            _mined.today, _favorited.today, _favoritedSentences.today),
+            _mined.today, _favorited.today, _favoritedSentences.today,
+            contains: w.isToday),
         _periodSummary(t.stat_this_week, _weekChars, _weekMs, _lookup.week,
-            _mined.week, _favorited.week, _favoritedSentences.week),
+            _mined.week, _favorited.week, _favoritedSentences.week,
+            contains: w.inWeek),
         _periodSummary(t.stat_this_month, _monthChars, _monthMs, _lookup.month,
-            _mined.month, _favorited.month, _favoritedSentences.month),
+            _mined.month, _favorited.month, _favoritedSentences.month,
+            contains: w.inMonth),
         _periodSummary(t.stat_all_time, _allChars, _allMs, _lookup.all,
-            _mined.all, _favorited.all, _favoritedSentences.all),
+            _mined.all, _favorited.all, _favoritedSentences.all,
+            contains: (String _) => true),
       ],
     );
   }
@@ -739,11 +777,13 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
     int lookup,
     int mined,
     int favorited,
-    int favoritedSentences,
-  ) {
+    int favoritedSentences, {
+    required bool Function(String dateKey) contains,
+  }) {
     return StatPeriodSummary(
       label: label,
       primaryValue: _formatChars(chars),
+      onTap: () => unawaited(_showPeriodDetail(label, contains)),
       lines: <StatSummaryLine>[
         StatSummaryLine(value: formatStatTime(ms)),
         StatSummaryLine(label: t.stat_lookup, value: '$lookup'),
@@ -757,10 +797,54 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
     );
   }
 
-  /// TODO-1046: daily/weekly reading goal card. Both goals 0 => no card at all
+  /// 时段卡 → 时段明细 sheet（阶段 1 统一组件；本页是阅读统计，明细只吃阅读域
+  /// 切片 [_bookFacts]——域=行集，与 [studyGoalCharsForDay] 同原则）。
+  Future<void> _showPeriodDetail(
+    String label,
+    bool Function(String dateKey) contains,
+  ) async {
+    final FushiDatabase db = appModelNoUpdate.database;
+    final bool deleted = await showStatPeriodDetailSheet(
+      context,
+      periodLabel: label,
+      contains: contains,
+      facts: _bookFacts,
+      resolvers: StatPeriodDetailResolvers(
+        titleOf: _statFactDisplayTitle,
+        collectionOf: _statFactCollectionName,
+        onEntryDelete: (StatPeriodEntryTarget t) => deleteStatPeriodEntry(db, t),
+      ),
+    );
+    if (deleted && mounted) await _loadFromDatabase();
+  }
+
+  /// 事实行 → 显示名（[_bookDisplayTitle] 的事实行版：override 书名上屏生效，
+  /// 合集名走 sheet 组头不拼前缀）。
+  String _statFactDisplayTitle(StatFact f) {
+    final String? bookKey =
+        f.mediaKey.isNotEmpty ? f.mediaKey : _bookKeyByTitle[f.title];
+    if (bookKey == null) return f.title;
+    return ReaderFushiSource.instance.overrideTitleForBookKey(bookKey) ??
+        f.title;
+  }
+
+  /// 事实行 → 所属合集名（[_collectionNameForBook] 的事实行版，同一 v83 键契约）。
+  String? _statFactCollectionName(StatFact f) {
+    final String? bookKey =
+        f.mediaKey.isNotEmpty ? f.mediaKey : _bookKeyByTitle[f.title];
+    if (bookKey == null) return null;
+    return statCollectionName(
+      MediaKind.epub.compositeKey(_epubUidByBookKey[bookKey] ?? bookKey),
+      _primaryCollectionByEntry,
+      _collectionNamesById,
+    );
+  }
+
+  /// TODO-1046: daily/weekly study goal card. Both goals 0 => no card at all
   /// (SizedBox.shrink), so an install that never set a goal sees zero visual
-  /// change on the statistics page. Reuses the already-computed [_todayChars] /
-  /// [_weekChars] aggregates (no extra DB query).
+  /// change on the statistics page. Reuses the already-computed
+  /// [_todayStudyChars] / [_weekStudyChars] aggregates (no extra DB query;
+  /// study-domain numerators, BUG-1993).
   Widget _buildGoalPanel() {
     final int dailyGoal = appModelNoUpdate.readingGoalDailyChars;
     final int weeklyGoal = appModelNoUpdate.readingGoalWeeklyChars;
@@ -772,13 +856,13 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
     final ColorScheme colorScheme = Theme.of(context).colorScheme;
     final List<Widget> rows = <Widget>[];
     if (dailyGoal > 0) {
-      rows.add(_buildGoalRow(t.stat_goal_daily, _todayChars, dailyGoal));
+      rows.add(_buildGoalRow(t.stat_goal_daily, _todayStudyChars, dailyGoal));
     }
     if (dailyGoal > 0 && weeklyGoal > 0) {
       rows.add(SizedBox(height: tokens.spacing.gap + tokens.spacing.gap / 2));
     }
     if (weeklyGoal > 0) {
-      rows.add(_buildGoalRow(t.stat_goal_weekly, _weekChars, weeklyGoal));
+      rows.add(_buildGoalRow(t.stat_goal_weekly, _weekStudyChars, weeklyGoal));
     }
 
     return Padding(
@@ -957,7 +1041,9 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
 
     final int dailyGoal = appModelNoUpdate.readingGoalDailyChars;
     final int charGoal = dailyGoal > 0 ? dailyGoal : _kDailyCharGoalFallback;
-    final double charFrac = goalFraction(_todayChars, charGoal);
+    // 目标环用学习域分子（BUG-1993，与目标卡 / 首页同口径）；下方 CPH 仍是
+    // 阅读域字数 ÷ 阅读时长，量纲不混。
+    final double charFrac = goalFraction(_todayStudyChars, charGoal);
     final int todayMinutes = _todayMs ~/ 60000;
     final double timeFrac = goalFraction(todayMinutes, _kDailyTimeGoalMinutes);
     // BUG-1107：今日速度同样过最小样本门槛（[computeCph] 内建，不足 1 分钟返回
@@ -983,7 +1069,7 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
                 color: scheme.primary,
                 trackColor: scheme.surfaceContainerHighest,
                 value: '${(charFrac * 100).round()}%',
-                detail: '$_todayChars/$charGoal',
+                detail: '$_todayStudyChars/$charGoal',
                 caption: t.stat_goal,
               ),
               StatRing(
@@ -1330,61 +1416,63 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
     final colorScheme = Theme.of(context).colorScheme;
     final tokens = FushiDesignTokens.of(context);
 
-    return Material(
-      type: MaterialType.transparency,
-      child: InkWell(
-        // 移动端长按、桌面端右键（onSecondaryTap）都弹删除确认（书架同款交互）。
-        onLongPress: () => _confirmAndDeleteBook(book),
-        onSecondaryTap: () => _confirmAndDeleteBook(book),
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-            vertical: tokens.spacing.gap / 2,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                _bookDisplayTitle(book),
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.bodyMedium,
-              ),
-              if (collectionName != null) ...[
-                SizedBox(height: tokens.spacing.gap / 4),
-                buildStatCollectionLabel(context, collectionName),
-              ],
-              SizedBox(height: tokens.spacing.gap / 2),
-              Row(
-                children: [
-                  Expanded(
-                    child: ClipRRect(
-                      borderRadius: tokens.radii.chipRadius,
-                      child: LinearProgressIndicator(
-                        value: fraction,
-                        minHeight: 8,
-                        backgroundColor: colorScheme.surfaceContainerHighest,
-                        color: colorScheme.primary,
+    return ContextMenuTrigger(
+      // 移动端长按、桌面端右键都弹删除确认（书架同款交互）；右键那一半现在走绑定表。
+      onInvoke: (Offset _) => _confirmAndDeleteBook(book),
+      child: Material(
+        type: MaterialType.transparency,
+        child: InkWell(
+          onLongPress: () => _confirmAndDeleteBook(book),
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              vertical: tokens.spacing.gap / 2,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  _bookDisplayTitle(book),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+                if (collectionName != null) ...[
+                  SizedBox(height: tokens.spacing.gap / 4),
+                  buildStatCollectionLabel(context, collectionName),
+                ],
+                SizedBox(height: tokens.spacing.gap / 2),
+                Row(
+                  children: [
+                    Expanded(
+                      child: ClipRRect(
+                        borderRadius: tokens.radii.chipRadius,
+                        child: LinearProgressIndicator(
+                          value: fraction,
+                          minHeight: 8,
+                          backgroundColor: colorScheme.surfaceContainerHighest,
+                          color: colorScheme.primary,
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(width: tokens.spacing.gap + tokens.spacing.gap / 2),
-                  Text(
-                    '${_formatChars(book.chars)} · ${formatStatTime(book.ms)}',
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: colorScheme.onSurfaceVariant,
-                        ),
-                  ),
-                ],
-              ),
-              SizedBox(height: tokens.spacing.gap / 2),
-              Text(
-                '${t.stat_lookup}: ${counter.lookups} · ${t.stat_mined}: ${counter.mines} · ${t.stat_favorited}: $favorites',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: colorScheme.onSurfaceVariant,
+                    SizedBox(width: tokens.spacing.gap + tokens.spacing.gap / 2),
+                    Text(
+                      '${_formatChars(book.chars)} · ${formatStatTime(book.ms)}',
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            color: colorScheme.onSurfaceVariant,
+                          ),
                     ),
-              ),
-              SizedBox(height: tokens.spacing.gap / 2),
-            ],
+                  ],
+                ),
+                SizedBox(height: tokens.spacing.gap / 2),
+                Text(
+                  '${t.stat_lookup}: ${counter.lookups} · ${t.stat_mined}: ${counter.mines} · ${t.stat_favorited}: $favorites',
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: colorScheme.onSurfaceVariant,
+                      ),
+                ),
+                SizedBox(height: tokens.spacing.gap / 2),
+              ],
+            ),
           ),
         ),
       ),

@@ -11,6 +11,7 @@
 | `siglus` | SiglusEngine | `verified` | engine_exact_utf16_hook (implemented_unverified)；luna_hook (implemented_unverified)；ingame_lookup_geometry (implemented_unverified) | resource_audio (verified)；directsound_pcm (verified)；process_loopback (verified) | 1 |
 | `elf_ai6` | elf AI6 | `implemented_unverified` | luna_textouta_hook (implemented_unverified) | ai6_voice_arc_resource (implemented_unverified)；directsound_pcm (implemented_unverified)；process_loopback (implemented_unverified) | 0 |
 | `reallive` | RealLive / old VisualArt's | `implemented_unverified` | luna_hook (implemented_unverified) | visual_arts_ovk_resource (implemented_unverified)；xaudio2_or_directsound_pcm (implemented_unverified)；process_loopback (implemented_unverified) | 0 |
+| `cmvs` | CMVS (Purple Software) | `implemented_unverified` | luna_hook (implemented_unverified) | xaudio2_or_directsound_pcm (implemented_unverified)；process_loopback (implemented_unverified) | 0 |
 | `kirikiri_z` | KiriKiri2 / KiriKiriZ | `partial` | luna_auto_or_pc_hooks (implemented_unverified)；ingame_lookup_geometry (implemented_unverified) | kirikiri_resource_stream (implemented_unverified)；kirikiri_decoder_pcm (implemented_unverified)；directsound_pcm (verified)；process_loopback (verified) | 2 |
 | `xaudio2_directsound` | XAudio2 / DirectSound generic capture | `verified` | — | xaudio2_source_voice_pcm (verified)；directsound_buffer_pcm (verified)；xwma_compressed_resource (implemented_unverified) | 1 |
 | `renpy_ffmpeg` | Ren'Py / FFmpeg | `implemented_unverified` | luna_auto_or_pc_hooks (implemented_unverified) | ffmpeg_resource_event (implemented_unverified)；ffmpeg54_decoder_pcm (implemented_unverified)；process_loopback (verified) | 1 |
@@ -44,7 +45,7 @@
 | `artemis_pfs` | attached_calibrated | `implemented_unverified` | `implemented_unverified` | `implemented_unverified` |
 | `siglus` | engine_exact_layout、attached_calibrated | `implemented_unverified` | `implemented_unverified` | `implemented_unverified` |
 | `leaf_aquaplus` | engine_exact_layout、attached_calibrated | `implemented_unverified` | `implemented_unverified` | `implemented_unverified` |
-| `hunex_gge` | attached_calibrated | `implemented_unverified` | `implemented_unverified` | `implemented_unverified` |
+| `hunex_gge` | engine_exact_layout、attached_calibrated | `implemented_unverified` | `implemented_unverified` | `implemented_unverified` |
 | `sgre` | engine_exact_layout、attached_calibrated | `implemented_unverified` | `implemented_unverified` | `implemented_unverified` |
 
 证据边界：
@@ -88,12 +89,12 @@
 - `leaf_aquaplus` geometry：The portable exact SHA-256 identity is followed by hydrated-image, all-executable-section unique masked signatures, module-relative relocated-operand checks, callgraph gates and a D3D9 ABI gate. Zero/multiple candidates and unknown hashes fail closed; lookup/card E2E is not recorded.
   - verified shield：Exact and generic shield code exists, but the 1,000-transaction real-build gate has not run.
   - risky left click：Per-executable risk gating is implemented; no measured real-build click-leak rate is recorded.
-- `hunex_gge` geometry：The calibrated fallback is implemented. The HUNEX hydrated-image scanner requires unique executable-section renderer/input anchors plus callgraph/import validation, but remains observation-only and publishes no production provider or hit.
-  - verified shield：Generic shielding is present while the engine-private trace is observation-only; the real-build transaction gate has not run.
-  - risky left click：Per-executable risk gating is implemented; no measured real-build click-leak rate is recorded.
-- `sgre` geometry：The measured SHA-256 row is a consistency check only. Known and unknown hashes traverse populated, mutually corroborated draw/vtable/DirectInput signatures across all executable sections, PE exception-directory function bounds, decoded module-relative targets and live vtable/COM ABI gates. Zero/multiple intersections, layout/codegen mismatches and structure faults fail closed; a second executable build and lookup/card E2E are not recorded.
+- `hunex_gge` geometry：The calibrated fallback and a fail-closed exact provider are implemented. The HUNEX hydrated-image scanner requires unique executable-section renderer/input/projection anchors plus callgraph, unwind and imported-API validation before it can publish geometry. The original WoH session has not yet produced a complete glyph-to-client projection or lookup/card E2E. The engine_exact_layout entry above is a deliberate 2026-08-31 graduation from observation-only; only the geometry provider layer graduated, and the resource-capture and pairing gates stay not_verified.
+  - verified shield：Generic shielding plus HUNEX semantic-submit ownership are implemented, but the real-build click, Shift and popup transaction gates have not run.
+  - risky left click：Per-executable risk gating and fail-closed native-input admission are implemented; no measured real-build click-leak rate is recorded.
+- `sgre` geometry：The measured SHA-256 row is a consistency check only. Known and unknown hashes traverse populated, mutually corroborated draw/vtable/DirectInput signatures across all executable sections, PE exception-directory function bounds, decoded module-relative targets and live vtable/COM ABI gates. Zero/multiple intersections, layout/codegen mismatches and structure faults fail closed. 2026-09-03 original-path E2E on the measured Steam x64 build (SHA-256 75A83A0E…C404B9D8, Fushi 2.2.4-debug.13075 launching sgre_steam.exe, injected helper, IPC v21): hover+Shift lookups (いて/サイ) and a bare left click on 話 each published a hit, presented the direct galCard inside the game and the game line did not advance; one word card was written (Sentence エル・プ<b>サイ</b>・コングルゥ, 3.19 s paired xWMA voice re-encoded to AAC, 480×270 AVIF animation). Evidence grade for the audio stops at captured: neither a byte-hash comparison against the source voice_body.bin entry nor a pure-voice classification was recorded, so hash_verified and voice_classified are NOT claimed and the run does not satisfy the per-sentence original-resource claim in full. Only this one build is covered.
   - verified shield：Exact DirectInput and generic shield code exists, but the 1,000-transaction real-build gate has not run.
-  - risky left click：Per-executable risk gating is implemented; no measured real-build click-leak rate is recorded.
+  - risky left click：Per-executable risk gating is implemented. 2026-09-03 measurement on the measured build: 8 popup-outside quick clicks (60 ms down/up) after Shift or click lookups, 7 were swallowed by the WH_MOUSE_LL + DirectInput shield pair with no line advance; the first click right after the mid-session risk acceptance (needsRiskAcceptance → activeNative) leaked and advanced the line once, and the leak did not reproduce on a fresh session whose acceptance was restored from memory. Too few transactions for a rate; the 1,000-transaction gate has not run.
 
 ## 识别与能力明细
 
@@ -216,6 +217,48 @@ Tests：`tests/elf_ai6_adapter_test.cpp`、`tests/resource_audio_ready_test.cpp`
 Fixtures：`tests/fixtures/reallive_replay.json`
 
 Tests：`tests/reallive_adapter_test.cpp`
+
+### CMVS (Purple Software) (`cmvs`)
+
+- 状态：`implemented_unverified`
+- 别名：CMVS、Purple Software、パープルソフトウェア
+- 家族：`cmvs`（Purple Software in-house engine; no verified sibling）
+- 当前 adapter：`hook/adapters/cmvs_adapter.inc`
+- 进程策略：launch=`generic_launch_available`，attach=`generic_attach_available`，follow-child=`false`
+
+识别签名（所有非空项均带真实样本或运行时观察证据）：
+
+- `executable_names`：cmvs32.exe、cmvs64.exe；证据：real_sample — Purple Software クロノクロック 体験版v2 (2015-03-20) ships both cmvs32.exe (x86) and cmvs64.exe (x64); static probe 2026-09-04. Retail builds may rename the exe, so names are catalogue only and the adapter matches on cmvs.cfg + CPZ archives instead
+- `pe_architectures`：x86、x64；证据：real_sample — cmvs32.exe machine 0x14c, cmvs64.exe machine 0x8664 (same trial package)
+- `directory_files_all`：cmvs.cfg、data/pack/start.ps3；证据：real_sample — cmvs.cfg opens with [CMVS_SYSTEM_MAIN] and SCRIPT_INIT_PATH=data\pack\; data/pack/start.ps3 (PS2A) is the script entry; trial package 2015-03-20
+- `pe_imports`：DSOUND.dll、WINMM.dll、d3d9.dll、mog2x32.dll、mog2x64.dll；证据：real_sample — PE import tables of cmvs32.exe / cmvs64.exe (static probe 2026-09-04); DirectSound is the only audio API imported
+- `runtime_modules`：mog2x32.dll、mog2x64.dll；证据：real_sample — Purple MOG2 image library shipped next to the exe (sha256 6b8dc960… / c51ba0c3…); static import only, runtime load not yet observed
+- `resource_extensions`：.cpz、.ps3、.cmv；证据：real_sample — data/pack/*.cpz (CPZ6 magic; voice.cpz + voice2.cpz hold voice), data/pack/start.ps3, data/video/*.cmv, data/music/*.ogg in the trial package
+- `hashes`：c5e715d98b56468df0a3d6bd8ec263b72bab736e0ad004de4e443a54c470ddad、aa89205a61c7078a167f9e6668eea2e4328bdd5c9cbcdd6f45b238cf475acea2；证据：real_sample — cmvs32.exe / cmvs64.exe of クロノクロック 体験版v2, catalogue only; the adapter does not hash-pin because the structural cfg + CPZ check is the identity
+
+文本能力：
+
+- `luna_hook`：`implemented_unverified` — Vendored LunaHook32/64 both carry the EmbedCMVS engine hook; no real-session dialogue thread has been observed yet.
+- codepage：932
+- 线程提示：Prefer the LunaHook EmbedCMVS thread once observed; the adapter installs no text hook of its own.
+
+音频优先级：
+
+1. `xaudio2_or_directsound_pcm` — `implemented_unverified`；格式：DirectSound source PCM via the generic Windows audio adapter；clean voice：engine_dependent
+2. `process_loopback` — `implemented_unverified`；格式：host PCM fallback；clean voice：否
+
+真实样本证据：
+
+
+已知限制：
+
+- Per-line voice resources live inside CPZ6-encrypted voice.cpz / voice2.cpz; no resource layer is implemented and none is claimed until a runtime decrypt-read seam is measured on a real session.
+- Identity is structural (cmvs.cfg section + CPZ archive magic); executable hashes are catalogued but not pinned.
+- In-game lookup sensor is not implemented; lookupAdmission stays EngineUnsupported.
+
+Fixtures：`tests/fixtures/cmvs_replay.json`
+
+Tests：`tests/cmvs_adapter_test.cpp`、`../../fushi/test/mining/cmvs_pairing_test.dart`
 
 ### KiriKiri2 / KiriKiriZ (`kirikiri_z`)
 
@@ -726,15 +769,17 @@ Tests：`tests/leaf_aquaplus_adapter_test.cpp`、`tests/exact_lookup_signature_t
 已知限制：
 
 - The first failed boundary in the observed WoH v1.0 session is resource_observed: text and thread selection passed, while the UI still reported line_has_no_voice and zero voiced lines.
-- No HFA/HW resource event, source-byte capture, clean-voice classification, text/audio pair, screenshot-card E2E or source-entry hash equality has passed on the original path.
+- No HFA/HW resource event, source-byte capture, clean-voice classification, text/audio pair, screenshot-card E2E or source-entry hash equality has passed on the original path. A 2026-08-31 user report claims live text and voice now work, but it is backed by no session ledger, resource event id or source-entry hash and does not raise the recorded evidence grade; see BUG-1977.
+- The exact lookup provider currently fails closed while correlating the captured glyph/source descriptor with the final client-space sprite quad; single-click and Shift lookup remain implemented_unverified.
 - The data04000.hfa voice role is proved only by the local WoH v1.0 archive layout and is not a HUNEX-family invariant; other titles stay disabled until their archive role is independently mapped and evidenced.
 - Mono versus stereo is not a voice classifier. HW admission is structural and both channel layouts remain valid candidates until the title-scoped archive role is established.
 - The profile intentionally has no executable or module hash allowlist so patched WoH executables can remain eligible for structural probing; WoH.exe and data04000.hfa names alone must never bypass HFA/HW validation.
-- The signature-based x64 renderer/input trace remains observation-only even when every unique-anchor, callgraph, unwind and imported-API gate passes. It must not be advertised as engine_exact_layout or verified shielding until a versioned admission identity and same-session lookup/card E2E are recorded; production lookup uses attached_calibrated fallback.
+- Deliberate 2026-08-31 graduation, recorded because it removed a guard: the x64 hydrated-image renderer/input scanner was promoted from observation-only to a production lookup provider, and the generator assertion 'HUNEX exact geometry is observation-only and must not OfferReady/PublishHit' was deleted to permit it. Only the geometry provider layer graduated. geometry.status stays implemented_unverified and the HFA/HW resource-capture and text/audio pairing gates stay not_verified; promoting the provider is not evidence for resource capture, pairing or any card E2E.
+- The signature-based x64 exact provider is production-wired but remains implemented_unverified. Every ambiguous or missing renderer/input/projection anchor fails closed to attached_calibrated fallback; it must not be advertised as verified until same-session lookup/card and transaction E2E are recorded.
 
 Fixtures：尚无（P5 补齐）
 
-Tests：`tests/hunex_gge_adapter_test.cpp`、`tests/hunex_gge_lookup_test.cpp`、`tests/resource_audio_ready_test.cpp`、`tests/adapter_structure_test.py`、`tests/engine_support_manifest_test.py`
+Tests：`tests/hunex_gge_adapter_test.cpp`、`tests/hunex_gge_capture_bridge_test.cpp`、`tests/hunex_gge_lookup_test.cpp`、`tests/hunex_gge_selected_text_test.cpp`、`tests/resource_audio_ready_test.cpp`、`tests/adapter_structure_test.py`、`tests/engine_support_manifest_test.py`
 
 ### M2 wind3d11 runtime (STEINS;GATE RE:BOOT) (`sgre`)
 
@@ -752,7 +797,7 @@ Tests：`tests/hunex_gge_adapter_test.cpp`、`tests/hunex_gge_lookup_test.cpp`�
 
 文本能力：
 
-- `ingame_lookup_geometry`：`implemented_unverified` — The SGRE draw adapter publishes renderer-native UTF-16 text and glyph geometry only after all-executable-section primary/corroborating signatures, decoded RIP targets, PE exception-directory bounds, scenario vtable slot 4 and object-layout gates agree. The mechanism is SHA/path/ASLR independent but has only one measured executable sample; no second-build or original-path lookup/card E2E is recorded.
+- `ingame_lookup_geometry`：`implemented_unverified` — The SGRE draw adapter publishes renderer-native UTF-16 text and glyph geometry only after all-executable-section primary/corroborating signatures, decoded RIP targets, PE exception-directory bounds, scenario vtable slot 4 and object-layout gates agree. The mechanism is SHA/path/ASLR independent. 2026-09-03: original-path lookup + card E2E recorded on the measured executable (see verified_games); a second build is still not recorded.
 - `ingame_lookup_directinput_shield`：`implemented_unverified` — The exact mouse-device global must be resolved independently by unique CreateDevice and immediate-poller signatures, and the live DirectInput COM vtable is validated before slot 9 is hooked. The 1,000-transaction real-build shield gate has not run.
 - codepage：not_applicable
 - 线程提示：The SGRE exact lane publishes game-parsed text with a stable ENGINE:SGRE:wind3d11 identity that excludes SHA, path, ASLR and resolved RVAs. The same resolved TextRender draw anchor supplies per-glyph lookup geometry; incompatible layouts publish neither lane nor provider.

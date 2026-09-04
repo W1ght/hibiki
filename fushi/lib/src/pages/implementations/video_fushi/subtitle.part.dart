@@ -357,7 +357,6 @@ extension _VideoSubtitle on _VideoFushiPageState {
         // 保持零：展开项本身是带默认 contentPadding 的 ListTile，各自缩进已对齐。
         leading: const Icon(Icons.subtitles_outlined),
         title: Text(t.video_secondary_subtitle_sources),
-        subtitle: Text(t.video_secondary_subtitle_hint),
         childrenPadding: EdgeInsets.zero,
         shape: const Border(),
         collapsedShape: const Border(),
@@ -531,7 +530,7 @@ extension _VideoSubtitle on _VideoFushiPageState {
   /// 只有磁盘上真有档案的外挂源（[SubtitleSource.external]：视频同目录 sidecar /
   /// 导入副本 / Jimaku 下载）才挂手势；内嵌轨（`embedded:<n>`）没有任何可删除的
   /// 东西，原样返回——「不给菜单」比「给一个禁用的删除项」少一个特殊状态。
-  /// 桌面右键 [GestureDetector.onSecondaryTapDown]、触屏长按
+  /// 桌面右键（[ContextMenuTrigger]，按绑定表决定唤出键，默认右键）、触屏长按
   /// [GestureDetector.onLongPressStart] 都落到 [_showSubtitleFileMenu]；
   /// [ListTile.onTap] 的单击选轨路径不动。
   Widget _withSubtitleFileMenu(
@@ -541,15 +540,19 @@ extension _VideoSubtitle on _VideoFushiPageState {
     Widget row,
   ) {
     if (source.isEmbedded) return row;
-    return GestureDetector(
-      behavior: HitTestBehavior.translucent,
-      onLongPressStart: (LongPressStartDetails d) => unawaited(
-        _showSubtitleFileMenu(context, controller, source, d.globalPosition),
+    return ContextMenuTrigger(
+      // 右键菜单改由绑定表决定唤出键（默认仍是右键）；右键被别的动作占用时自动让位。
+      onInvoke: (Offset position) => unawaited(
+        _showSubtitleFileMenu(context, controller, source, position),
       ),
-      onSecondaryTapDown: (TapDownDetails d) => unawaited(
-        _showSubtitleFileMenu(context, controller, source, d.globalPosition),
+      ladder: _VideoFushiPageState.kVideoMouseLadder,
+      child: GestureDetector(
+        behavior: HitTestBehavior.translucent,
+        onLongPressStart: (LongPressStartDetails d) => unawaited(
+          _showSubtitleFileMenu(context, controller, source, d.globalPosition),
+        ),
+        child: row,
       ),
-      child: row,
     );
   }
 
@@ -788,6 +791,8 @@ extension _VideoSubtitle on _VideoFushiPageState {
         videoPath: videoPath,
         currentSubtitleSource: _currentSubtitleSource,
         currentCues: controller.cues,
+        currentSecondarySubtitleSource: _currentSecondarySubtitleSource,
+        currentSecondaryCues: controller.secondaryCues,
       );
     } catch (_) {
       enumerated = null;
@@ -1185,13 +1190,11 @@ extension _VideoSubtitle on _VideoFushiPageState {
   /// 弹系统文件选择器挑一个字幕文件（srt/ass/ssa/vtt）→ 经 [_importExternalSubtitle]
   /// 落盘并应用。FilePicker 会夺走视频键盘焦点，关闭后 [_focusOwnership] 归还。
   Future<void> _pickAndImportSubtitle(VideoPlayerController controller) async {
-    final FilePickerResult? result = await FilePicker.platform.pickFiles(
-      type: FileType.custom,
-      allowedExtensions: const <String>['srt', 'vtt', 'ass', 'ssa'],
-      allowMultiple: false,
+    final String? path = await pickSystemFilePath(
+      context: context,
+      allowedExtensions: const <String>{'srt', 'vtt', 'ass', 'ssa'},
     );
     _focusOwnership.reclaim(FocusReclaimCause.overlayClosed);
-    final String? path = result?.files.single.path;
     if (path == null) return;
     await _importExternalSubtitle(controller, path);
   }
@@ -1200,13 +1203,11 @@ extension _VideoSubtitle on _VideoFushiPageState {
   Future<void> _pickAndImportRemoteSubtitle(
     VideoPlayerController controller,
   ) async {
-    final FilePickerResult? result = await FilePicker.platform.pickFiles(
-      type: FileType.custom,
-      allowedExtensions: const <String>['srt', 'vtt', 'ass', 'ssa'],
-      allowMultiple: false,
+    final String? path = await pickSystemFilePath(
+      context: context,
+      allowedExtensions: const <String>{'srt', 'vtt', 'ass', 'ssa'},
     );
     _focusOwnership.reclaim(FocusReclaimCause.overlayClosed);
-    final String? path = result?.files.single.path;
     if (path == null) return;
     if (subtitleFormatForPath(path) == null) {
       _showOsd(
@@ -1447,13 +1448,11 @@ extension _VideoSubtitle on _VideoFushiPageState {
   Future<void> _pickAndImportRemoteSecondarySubtitle(
     VideoPlayerController controller,
   ) async {
-    final FilePickerResult? result = await FilePicker.platform.pickFiles(
-      type: FileType.custom,
-      allowedExtensions: const <String>['srt', 'vtt', 'ass', 'ssa'],
-      allowMultiple: false,
+    final String? path = await pickSystemFilePath(
+      context: context,
+      allowedExtensions: const <String>{'srt', 'vtt', 'ass', 'ssa'},
     );
     _focusOwnership.reclaim(FocusReclaimCause.overlayClosed);
-    final String? path = result?.files.single.path;
     if (path == null) return;
     if (subtitleFormatForPath(path) == null) {
       _showOsd(
@@ -1870,87 +1869,88 @@ extension _VideoSubtitle on _VideoFushiPageState {
                     // 在字幕列表上可见。`opaque:false` 不阻断指针下探（cue 行点击 / 查词 /
                     // 滚动照常）；仅桌面有 OS 光标语义才挂（移动端透传，零开销）。
                     child: _withSubtitleListCursorReveal(
-                      // 手柄重设计 P3：列表随打开挂载，挂载即领焦点进面板、卸载
-                      // 还给页面焦点——D-pad 才能在 cue 行间移动。
-                      PanelFocusScope(
-                        visible: true,
-                        restoreFocus: () => _focusOwnership
-                            .reclaim(FocusReclaimCause.overlayClosed),
-                        child: SafeArea(
-                          left: false,
-                          // BUG-877：面板叠一层左边缘拖拽把手（[_subtitleListResizeHandle]）
-                          // 改宽度并持久化；Stack 让把手浮在面板左边缘、不占面板内容宽度。
-                          child: Stack(
-                            children: <Widget>[
-                              VideoSubtitleJumpPanel(
-                                key: const ValueKey<String>(
-                                    'video-subtitle-jump-panel'),
-                                controller: controller,
-                                onTapCue: _handleSubtitleJumpTap,
-                                onLookupCue: _handleSubtitleListLookup,
-                                // BUG-874：把命中句柄绑给面板，查词浮层 dismiss barrier 据此把
-                                // 「点列表下一个词」切换查词而非吞成关闭浮层。
-                                hitTester: _subtitleListHitTester,
-                                onCopyCue: _copyCueText,
-                                onFavoriteCue: _toggleFavoriteCueForVideo,
-                                isCueFavorited: _isCueFavorited,
-                                // 列表行跟用户设的字幕字体（FontTarget.videoSubtitle），
-                                // 与画面上的字幕同一套，不再各用各的。
-                                fontFamily: appModel.subtitleFontFamily,
-                                // TODO-613：自动滚动开关初值从 Drift preferences 读，切换时落盘。
-                                initialAutoScroll:
-                                    appModel.videoSubtitleListAutoScroll,
-                                onAutoScrollChanged: (bool value) => unawaited(
-                                  appModel
-                                      .setVideoSubtitleListAutoScroll(value),
-                                ),
-                                // BUG-878：行字号档位初值从 Drift preferences 读，A+/A- 或
-                                // Ctrl+滚轮调节时落盘，跨开关 / 跨重启记住。
-                                initialFontScaleIndex:
-                                    appModel.videoSubtitleListFontScaleIndex,
-                                onFontScaleIndexChanged: (int value) =>
-                                    unawaited(
-                                  appModel.setVideoSubtitleListFontScaleIndex(
-                                      value),
-                                ),
-                                // BUG-879：列表行文本 Shift-悬停查词门控，与画面字幕同源。
-                                hoverAutoLookupEnabled:
-                                    ReaderFushiSource.instance.hoverAutoLookup,
-                                onClose: _closeSubtitleJumpList,
+                      // BUG-2040：字幕列表**不领焦点**（与剧集轨 / 侧栏刻意不同，那两个
+                      // 仍走 PanelFocusScope）。它是 push-aside 侧栏、画面全程可见可点，
+                      // 焦点留在画面节点上，←/→/↑/↓ seek / 音量、Enter 等视频快捷键在
+                      // 列表开着时照常生效；列表本身只由指针 / 触屏操作。此前把焦点领进
+                      // 列表 + 列入 [_videoNavigablePanelOpen]，裸方向键就被让位给焦点
+                      // 遍历、页面还拒绝把焦点收回画面——用户看到的就是「一开字幕列表
+                      // 快捷键全没了」。搜索框点开时自己拿焦点（整条视频通道按 BUG-962
+                      // 让位），关掉时 Flutter 把焦点还给上一个持焦者（画面）。
+                      SafeArea(
+                        left: false,
+                        // BUG-877：面板叠一层左边缘拖拽把手（[_subtitleListResizeHandle]）
+                        // 改宽度并持久化；Stack 让把手浮在面板左边缘、不占面板内容宽度。
+                        child: Stack(
+                          children: <Widget>[
+                            VideoSubtitleJumpPanel(
+                              key: const ValueKey<String>(
+                                  'video-subtitle-jump-panel'),
+                              controller: controller,
+                              onTapCue: _handleSubtitleJumpTap,
+                              onLookupCue: _handleSubtitleListLookup,
+                              // BUG-874：把命中句柄绑给面板，查词浮层 dismiss barrier 据此把
+                              // 「点列表下一个词」切换查词而非吞成关闭浮层。
+                              hitTester: _subtitleListHitTester,
+                              onCopyCue: _copyCueText,
+                              onFavoriteCue: _toggleFavoriteCueForVideo,
+                              isCueFavorited: _isCueFavorited,
+                              // 列表行跟用户设的字幕字体（FontTarget.videoSubtitle），
+                              // 与画面上的字幕同一套，不再各用各的。
+                              fontFamily: appModel.subtitleFontFamily,
+                              // TODO-613：自动滚动开关初值从 Drift preferences 读，切换时落盘。
+                              initialAutoScroll:
+                                  appModel.videoSubtitleListAutoScroll,
+                              onAutoScrollChanged: (bool value) => unawaited(
+                                appModel
+                                    .setVideoSubtitleListAutoScroll(value),
+                              ),
+                              // BUG-878：行字号档位初值从 Drift preferences 读，A+/A- 或
+                              // Ctrl+滚轮调节时落盘，跨开关 / 跨重启记住。
+                              initialFontScaleIndex:
+                                  appModel.videoSubtitleListFontScaleIndex,
+                              onFontScaleIndexChanged: (int value) =>
+                                  unawaited(
+                                appModel.setVideoSubtitleListFontScaleIndex(
+                                    value),
+                              ),
+                              // BUG-879：列表行文本 Shift-悬停查词门控，与画面字幕同源。
+                              hoverAutoLookupEnabled:
+                                  ReaderFushiSource.instance.hoverAutoLookup,
+                              onClose: _closeSubtitleJumpList,
+                              colorScheme: cs,
+                              title: t.video_subtitle_list,
+                              emptyHint: t.video_subtitle_list_empty,
+                              loadingHint: t.video_subtitle_list_loading,
+                              fontSize: 14 * _videoUiScale,
+                              width: panelWidth,
+                              // BUG-1907：Ctrl+F 的 activator 从快捷键注册表取
+                              // （唯一真相源，用户改绑后面板跟着变）。面板必须自带
+                              // 一份：整表快捷键只包 media_kit controls 子树，焦点
+                              // 一进面板就收不到按键了。
+                              searchActivators: <ShortcutActivator>[
+                                for (final InputBinding b in appModel
+                                    .shortcutRegistry
+                                    .bindingsFor(ShortcutAction
+                                        .videoSearchSubtitleList)
+                                    .keyboardBindings)
+                                  b.toActivator(includeRepeats: false),
+                              ],
+                              searchRequests: _subtitleSearchRequests,
+                              onExportFavorites: _exportFavoriteCues,
+                            ),
+                            Positioned(
+                              left: 0,
+                              top: 0,
+                              bottom: 0,
+                              child: _subtitleListResizeHandle(
+                                currentWidth: panelWidth,
+                                minWidth: minPanelWidth,
+                                maxWidth: maxPanelWidth,
                                 colorScheme: cs,
-                                title: t.video_subtitle_list,
-                                emptyHint: t.video_subtitle_list_empty,
-                                loadingHint: t.video_subtitle_list_loading,
-                                fontSize: 14 * _videoUiScale,
-                                width: panelWidth,
-                                // BUG-1907：Ctrl+F 的 activator 从快捷键注册表取
-                                // （唯一真相源，用户改绑后面板跟着变）。面板必须自带
-                                // 一份：整表快捷键只包 media_kit controls 子树，焦点
-                                // 一进面板就收不到按键了。
-                                searchActivators: <ShortcutActivator>[
-                                  for (final InputBinding b in appModel
-                                      .shortcutRegistry
-                                      .bindingsFor(ShortcutAction
-                                          .videoSearchSubtitleList)
-                                      .keyboardBindings)
-                                    b.toActivator(includeRepeats: false),
-                                ],
-                                searchRequests: _subtitleSearchRequests,
-                                onExportFavorites: _exportFavoriteCues,
                               ),
-                              Positioned(
-                                left: 0,
-                                top: 0,
-                                bottom: 0,
-                                child: _subtitleListResizeHandle(
-                                  currentWidth: panelWidth,
-                                  minWidth: minPanelWidth,
-                                  maxWidth: maxPanelWidth,
-                                  colorScheme: cs,
-                                ),
-                              ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
                     ),

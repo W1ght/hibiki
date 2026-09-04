@@ -232,7 +232,9 @@ void main() {
         if (gate != null) await gate.future;
         final Object? error = preferenceWriteError;
         preferences[key] = value;
-        if (error != null) throw error;
+        if (error != null) {
+          Error.throwWithStackTrace(error, StackTrace.current);
+        }
       },
       surfacePort: port,
       onBeforeAttachedActivation:
@@ -295,6 +297,172 @@ void main() {
       ]);
       expect(port.texts.single.text, 'これは本文テストです');
       expect(port.texts.single.generation, 1);
+    },
+  );
+
+  test(
+    'BUG-2137 一字未推时的 noGlyphClusters 回到等正文而不是终态 fallback',
+    () async {
+      preferences[key()] = jsonEncode(
+        _profile(mode: GalLookupSurfaceMode.auto).toJson(),
+      );
+      // 子面还没拿到任何正文就回 noGlyphClusters：这是必然，不是失败。
+      await sync(text: '');
+      controller.handleSurfaceStateChanged(
+        GalAttachedSurfaceStateEvent(
+          target: controller.target!,
+          state: 'ready',
+          status: 'noGlyphClusters',
+        ),
+      );
+      await pumpEventQueue();
+
+      expect(
+        controller.status,
+        GalAttachedTextStatus.waitingForBodyThread,
+        reason: '降级成 fallback 就再也回不来：syncSession 只在 waitingForBodyThread 上'
+            '因新正文重新评估，后面每一行都会停在 fallback/noGlyphClusters',
+      );
+      expect(
+        controller.statusReason,
+        'state_event_no_glyph_clusters_before_text',
+      );
+      expect(controller.surfaceVisible, isFalse);
+
+      // 正文到了就能正常继续，不需要重启会话。
+      await sync();
+      expect(controller.status, GalAttachedTextStatus.activeAttached);
+    },
+  );
+
+  test(
+    'BUG-2139 已在等正文且正文一直都在时，同一句也要能把状态救回来',
+    () async {
+      preferences[key()] = jsonEncode(_profile().toJson());
+      await sync();
+      expect(controller.status, GalAttachedTextStatus.activeAttached);
+
+      // 子面回 emptyText，把状态推回「等正文」——此时 `_latestSourceText` 早已非空。
+      controller.handleSurfaceStateChanged(
+        GalAttachedSurfaceStateEvent(
+          target: controller.target!,
+          state: 'ready',
+          status: 'emptyText',
+        ),
+      );
+      await pumpEventQueue();
+      expect(controller.status, GalAttachedTextStatus.waitingForBodyThread);
+
+      // 同一句再同步一轮：「正文从无到有」的边沿不会再出现，旧判据在这里永远不
+      // 重新评估，状态就永久停在等正文（真机 WoH 上正是如此）。
+      await sync();
+      expect(
+        controller.status,
+        GalAttachedTextStatus.activeAttached,
+        reason: 'BUG-2139：恢复不能只挂在 bodyArrived 这个一次性边沿上',
+      );
+    },
+  );
+
+  test(
+    'BUG-2137 registry 交接期间的 noGlyphClusters 不降级成 fallback',
+    () async {
+      preferences[key()] = jsonEncode(_profile().toJson());
+      port.configureResult = const GalAttachedCallResult(
+        status: 'geometryProviderPending',
+        providerKind: 2,
+        providerId: 3,
+        providerStatus: 2,
+      );
+      await sync();
+      expect(controller.status, GalAttachedTextStatus.suspended);
+      expect(controller.statusReason, 'geometryProviderPending');
+      expect(controller.attachedProviderClaimed, isTrue);
+
+      // 交接未完成时正文只是被 staged，子面还没渲染，这条是预期而非失败。
+      controller.handleSurfaceStateChanged(
+        GalAttachedSurfaceStateEvent(
+          target: controller.target!,
+          state: 'ready',
+          status: 'noGlyphClusters',
+        ),
+      );
+      await pumpEventQueue();
+
+      expect(
+        controller.status,
+        GalAttachedTextStatus.suspended,
+        reason: '降级成 fallback 会把子面藏掉，registry 交接从此完不成',
+      );
+      expect(controller.statusReason, 'geometryProviderPending');
+      expect(controller.attachedProviderClaimed, isTrue);
+
+      // 交接完成后照常收敛。
+      controller.handleSurfaceStateChanged(
+        GalAttachedSurfaceStateEvent(
+          target: controller.target!,
+          state: 'visible',
+          status: 'visible',
+          surfaceVisible: true,
+          providerKind: 4,
+          providerId: 11,
+          providerStatus: 1,
+        ),
+      );
+      await pumpEventQueue();
+      expect(controller.status, GalAttachedTextStatus.activeAttached);
+    },
+  );
+
+  test(
+    'BUG-2137 正文推送前的 noGlyphClusters 不得撤回共享认领',
+    () async {
+      preferences[key()] = jsonEncode(_profile().toJson());
+      port.configureResult = const GalAttachedCallResult(
+        status: 'geometryProviderPending',
+        providerKind: 2,
+        providerId: 3,
+        providerStatus: 2,
+      );
+
+      await sync();
+      expect(controller.attachedProviderClaimed, isTrue);
+      expect(port.texts, isNotEmpty);
+
+      // 子面回一条 noGlyphClusters：本轮渲染不出内容，但 attached 通路没坏。
+      controller.handleSurfaceStateChanged(
+        GalAttachedSurfaceStateEvent(
+          target: controller.target!,
+          state: 'ready',
+          status: 'noGlyphClusters',
+        ),
+      );
+      await pumpEventQueue();
+
+      expect(
+        controller.attachedProviderClaimed,
+        isTrue,
+        reason: 'BUG-2137：撤回共享认领会让注入侧 registry 永远不给 kind=4/id=11，'
+            '与 BUG-2142 是同一个活锁',
+      );
+      // fail-closed 的部分保持不变：面藏起来、状态降级。
+      expect(controller.surfaceVisible, isFalse);
+      expect(controller.status, GalAttachedTextStatus.suspended);
+
+      // 认领还在，注入侧一旦把 attached 判成 ready 就能正常收敛。
+      controller.handleSurfaceStateChanged(
+        GalAttachedSurfaceStateEvent(
+          target: controller.target!,
+          state: 'visible',
+          status: 'visible',
+          surfaceVisible: true,
+          providerKind: 4,
+          providerId: 11,
+          providerStatus: 1,
+        ),
+      );
+      await pumpEventQueue();
+      expect(controller.status, GalAttachedTextStatus.activeAttached);
     },
   );
 
@@ -668,7 +836,12 @@ void main() {
           ),
         ),
       );
-      expect(controller.status, GalAttachedTextStatus.needsRiskAcceptance);
+      expect(
+        controller.status,
+        GalAttachedTextStatus.needsRiskAcceptance,
+        reason: 'provider ${provider.kind}/${provider.id}',
+      );
+      expect(controller.needsUnsafeRiskAcceptance, isTrue);
       expect(controller.unsafeRiskAcceptanceRequest?.token, request.token);
 
       controller.handleSurfaceStateChanged(
@@ -1145,7 +1318,61 @@ void main() {
     expect(controller.status, GalAttachedTextStatus.suspended);
     expect(controller.surfaceVisible, isFalse);
     expect(port.calls, <String>['inspect']);
+    expect(
+      controller.needsUnsafeRiskAcceptance,
+      isFalse,
+      reason:
+          'suspended 是注入 registry 起来前的常态：没铸过风险 token 就不能报「需要'
+          '确认」。这一位恒真会让 shouldPromptGalCaptureSetup 的 '
+          'lookupRiskAcceptancePending 常驻，每局一开局捕获设置弹窗就被压制。',
+    );
+    expect(controller.unsafeRiskAcceptanceRequest, isNull);
   });
+
+  test(
+    'pending neutral without a minted token never claims risk acceptance',
+    () async {
+      // needsUnsafeRiskAcceptance 的收口点是 `_unsafeRiskAcceptanceRequestToken
+      // != null`。这个用例把**其余每一个合取项都摆成真**，只留 token 为空：
+      //   status  = suspended（nativeProviderPendingNeutral，注入 registry 起来
+      //             前的常态，_setStatus 对 suspended 刻意不清 token）
+      //   target / exePath / exeSha256 = 已 attach，全非空
+      //   profile = auto（≠off）且 unsafeLeftClickAccepted = false
+      //   shield  = statusFlags 0x02 → partial（≠verified、≠faulted）
+      // 所以这条断言只会被 token 判据救下来。它退化 = 这一位在每局开局恒真 →
+      // shouldPromptGalCaptureSetup 的 lookupRiskAcceptancePending 常驻 →
+      // 捕获设置弹窗每局都被压制。
+      preferences[key()] = jsonEncode(
+        _profile(
+          mode: GalLookupSurfaceMode.nativeOnly,
+          accepted: false,
+        ).toJson(),
+      );
+      port.configureResult = const GalAttachedCallResult(
+        status: 'nativeProviderPendingNeutral',
+        shield: GalAttachedShieldStatus(available: true, statusFlags: 0x02),
+      );
+
+      await sync();
+
+      expect(controller.status, GalAttachedTextStatus.suspended);
+      expect(controller.target, isNotNull);
+      expect(
+        controller.shieldStatus.conclusion,
+        isNot(GalAttachedShieldConclusion.verified),
+      );
+      expect(
+        controller.shieldStatus.conclusion,
+        isNot(GalAttachedShieldConclusion.faulted),
+      );
+      expect(
+        controller.needsUnsafeRiskAcceptance,
+        isFalse,
+        reason: 'pendingNeutral 只是等注入侧就绪，不是「需要用户确认点击风险」',
+      );
+      expect(controller.unsafeRiskAcceptanceRequest, isNull);
+    },
+  );
 
   test(
     'auto configure native win and pending neutral never push text',
@@ -1178,6 +1405,18 @@ void main() {
       expect(controller.surfaceVisible, isFalse);
       expect(port.calls, <String>['inspect', 'configure:auto:true']);
       expect(port.texts, isEmpty);
+      // 这是 attach 成功之后落到 suspended：target/exePath/sha256 都在、profile
+      // 未接受、shield 未定论——needsUnsafeRiskAcceptance 的每一个合取项都成立，
+      // 唯独没铸过风险 token。这就是 token 判据唯一的收口点。它一旦退化，
+      // 「注入 registry 起来前的常态」会让这一位恒真，shouldPromptGalCaptureSetup
+      // 的 lookupRiskAcceptancePending 常驻，每局一开局捕获设置弹窗就被压制。
+      expect(controller.target, isNotNull);
+      expect(
+        controller.needsUnsafeRiskAcceptance,
+        isFalse,
+        reason: 'pendingNeutral 只是等注入侧就绪，不是「需要用户确认点击风险」',
+      );
+      expect(controller.unsafeRiskAcceptanceRequest, isNull);
     },
   );
 
@@ -1243,6 +1482,33 @@ void main() {
       expect(lookups, hasLength(1));
     },
   );
+
+  test('Shift+hover hits pass the same gate and keep the hover flag', () async {
+    preferences[key()] = jsonEncode(_profile().toJson());
+    await sync();
+    final GalAttachedSurfaceTarget target = controller.target!;
+    GalAttachedLookupHitV19 hit({required bool hover, int? generation}) =>
+        GalAttachedLookupHitV19(
+          target: target,
+          sourceText: 'これは本文テストです',
+          textGeneration: generation ?? controller.textGeneration,
+          charIndex: 4,
+          sourceLength: 1,
+          hover: hover,
+        );
+
+    await controller.handleLookupText(hit(hover: true));
+    expect(lookups, hasLength(1));
+    expect(lookups.single.hover, isTrue);
+    expect(lookups.single.target.targetHwnd, target.targetHwnd);
+
+    await controller.handleLookupText(hit(hover: true, generation: 0));
+    expect(lookups, hasLength(1), reason: '悬浮命中同样受 generation 门控，旧句子的悬浮不得触发查词');
+
+    await controller.handleLookupText(hit(hover: false));
+    expect(lookups, hasLength(2));
+    expect(lookups.last.hover, isFalse);
+  });
 
   test(
     'lifecycle state adopts late HWND rebind and retires old hits',
@@ -1593,6 +1859,11 @@ void main() {
     expect(controller.status, GalAttachedTextStatus.suspended);
     expect(controller.statusReason, 'capture_fail_closed_detach_unconfirmed');
     expect(controller.surfaceVisible, isFalse);
+    expect(
+      controller.needsUnsafeRiskAcceptance,
+      isFalse,
+      reason: 'fail-closed 的 suspended 同样没有铸过风险 token',
+    );
     expect(
       await controller.acquireMiningCaptureLease(),
       isNull,

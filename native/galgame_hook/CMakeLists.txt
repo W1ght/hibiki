@@ -43,6 +43,7 @@ add_library(fushi_voice_hook SHARED
   "hook/adapter.h"
   "hook/ffmpeg_runtime.h"
   "hook/hook_original_registry.h"
+  "hook/tracked_handle_table.h"
   "hook/geometry_provider_registry.h"
   "hook/lookup_v19_runtime.h"
   "hook/generic_input_shield.inc"
@@ -110,6 +111,19 @@ target_compile_definitions(fushi_exact_lookup_signature_test PRIVATE
 add_test(NAME fushi_exact_lookup_signature_test
   COMMAND fushi_exact_lookup_signature_test)
 
+# Leaf/AQUAPLUS 锚点自推导：合成 PE 夹具（含导入表与 load config），要求推导把五处签名、
+# 两个 IAT 槽与栈 cookie 全部找回来，并在不一致/不唯一/跨引擎场景下拒绝认领。
+# 游戏二进制不入库，跨构建正确性只能靠这种结构夹具 + 真机自检来钉。
+add_executable(fushi_leaf_autoprofile_test
+  "tests/leaf_autoprofile_test.cpp"
+)
+target_include_directories(fushi_leaf_autoprofile_test PRIVATE
+  "hook/adapters")
+target_compile_definitions(fushi_leaf_autoprofile_test PRIVATE
+  UNICODE _UNICODE NOMINMAX WIN32_LEAN_AND_MEAN)
+add_test(NAME fushi_leaf_autoprofile_test
+  COMMAND fushi_leaf_autoprofile_test)
+
 # Siglus OVK 索引/Ogg 完整性解析是纯函数，独立小测试不需启动或注入游戏。
 enable_testing()
 add_executable(fushi_siglus_ovk_test
@@ -117,6 +131,16 @@ add_executable(fushi_siglus_ovk_test
 )
 target_include_directories(fushi_siglus_ovk_test PRIVATE "hook")
 add_test(NAME fushi_siglus_ovk_test COMMAND fushi_siglus_ovk_test)
+
+# HUNEX story renderer callback-to-worker hand-off. The focused test exercises
+# only synthetic glyph/index/rectangle values and contains no game payload.
+add_executable(fushi_hunex_gge_capture_bridge_test
+  "tests/hunex_gge_capture_bridge_test.cpp"
+)
+target_include_directories(fushi_hunex_gge_capture_bridge_test PRIVATE
+  "hook/adapters")
+add_test(NAME fushi_hunex_gge_capture_bridge_test
+  COMMAND fushi_hunex_gge_capture_bridge_test)
 
 # HUNEX HFA/HW directory, wrapper and Ogg validation are worker-side pure
 # functions. The focused test uses only synthetic bytes and never game data.
@@ -197,6 +221,15 @@ target_include_directories(fushi_hook_original_registry_test PRIVATE "hook")
 add_test(NAME fushi_hook_original_registry_test
   COMMAND fushi_hook_original_registry_test)
 
+add_executable(fushi_tracked_handle_table_test
+  "tests/tracked_handle_table_test.cpp"
+)
+target_include_directories(fushi_tracked_handle_table_test PRIVATE "hook")
+target_compile_definitions(fushi_tracked_handle_table_test
+  PRIVATE UNICODE _UNICODE NOMINMAX WIN32_LEAN_AND_MEAN)
+add_test(NAME fushi_tracked_handle_table_test
+  COMMAND fushi_tracked_handle_table_test)
+
 add_executable(fushi_xaudio_trace_export_test
   "tests/xaudio_trace_export_test.cpp"
 )
@@ -222,6 +255,22 @@ add_executable(fushi_voice_resource_filename_test
 )
 target_include_directories(fushi_voice_resource_filename_test PRIVATE "hook")
 add_test(NAME fushi_voice_resource_filename_test COMMAND fushi_voice_resource_filename_test)
+
+# KiriKiri 资源流「是不是语音」判据（tenshi_sz 真机：SE/BGM/脚本误当语音）。纯函数头，双架构同跑。
+add_executable(fushi_kirikiri_voice_storage_name_test
+  "tests/kirikiri_voice_storage_name_test.cpp"
+)
+target_include_directories(fushi_kirikiri_voice_storage_name_test PRIVATE "hook")
+add_test(NAME fushi_kirikiri_voice_storage_name_test
+  COMMAND fushi_kirikiri_voice_storage_name_test)
+
+# 查词整句 ↔ 文本道行的同句判据（点击载荷 text_generation 反查，BUG-2130 家族）。
+add_executable(fushi_lookup_line_text_match_test
+  "tests/lookup_line_text_match_test.cpp"
+)
+target_include_directories(fushi_lookup_line_text_match_test PRIVATE "hook")
+add_test(NAME fushi_lookup_line_text_match_test
+  COMMAND fushi_lookup_line_text_match_test)
 
 add_executable(fushi_qlie_pack_test
   "tests/qlie_pack_test.cpp"
@@ -384,6 +433,15 @@ target_compile_definitions(fushi_text_lane_ipc_test
   PRIVATE UNICODE _UNICODE NOMINMAX WIN32_LEAN_AND_MEAN)
 add_test(NAME fushi_text_lane_ipc_test
   COMMAND fushi_text_lane_ipc_test)
+
+add_executable(fushi_hunex_gge_selected_text_test
+  tests/hunex_gge_selected_text_test.cpp)
+target_include_directories(fushi_hunex_gge_selected_text_test
+  PRIVATE "hook/adapters" "include")
+target_compile_definitions(fushi_hunex_gge_selected_text_test
+  PRIVATE UNICODE _UNICODE NOMINMAX WIN32_LEAN_AND_MEAN)
+add_test(NAME fushi_hunex_gge_selected_text_test
+  COMMAND fushi_hunex_gge_selected_text_test)
 
 # v14 游戏内查词区的契约级测试：各子区不重叠/不越界/8 对齐、IsLookupFrameSane 的每条
 # 拒绝理由、旧会话给 nullptr 而非野指针、以及"v14 是纯追加"这条不变量。
@@ -571,3 +629,14 @@ target_compile_definitions(fushi_sgre_adapter_test PRIVATE
   UNICODE _UNICODE NOMINMAX WIN32_LEAN_AND_MEAN)
 target_link_libraries(fushi_sgre_adapter_test PRIVATE bcrypt)
 add_test(NAME fushi_sgre_adapter_test COMMAND fushi_sgre_adapter_test)
+# BUG-2136 层原点：纯像素求解（host 侧算法，与 host_executable_digest 同一范式——
+# 需要被测的 host 逻辑放 include/，runner 用相对路径 include 真相源）。
+add_executable(fushi_layer_origin_pixels_test
+  "tests/layer_origin_pixels_test.cpp")
+target_include_directories(fushi_layer_origin_pixels_test PRIVATE include)
+add_test(NAME fushi_layer_origin_pixels_test
+  COMMAND fushi_layer_origin_pixels_test)
+
+add_executable(fushi_cmvs_adapter_test "tests/cmvs_adapter_test.cpp")
+target_include_directories(fushi_cmvs_adapter_test PRIVATE "hook")
+add_test(NAME fushi_cmvs_adapter_test COMMAND fushi_cmvs_adapter_test)

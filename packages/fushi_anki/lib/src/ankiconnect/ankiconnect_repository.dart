@@ -839,7 +839,7 @@ class AnkiConnectRepository extends BaseAnkiRepository {
     ];
     try {
       final List<dynamic> mediaResults = await Future.wait(mediaFutures);
-      final String? coverMediaRef = mediaResults[0] as String?;
+      final String? coverMediaName = mediaResults[0] as String?;
       final String? sentenceAudioMediaRef = mediaResults[1] as String?;
       final AudioFetchOutcome remoteAudio =
           mediaResults[2] as AudioFetchOutcome;
@@ -851,7 +851,8 @@ class AnkiConnectRepository extends BaseAnkiRepository {
         settings: settings,
         payload: payload,
         context: context,
-        coverRef: coverMediaRef != null ? '<img src="$coverMediaRef">' : null,
+        // 图片 `<img>` / 视频片段 `[sound:]` 的分流与 AnkiDroid 共用一处（coverMediaRef）。
+        coverRef: coverMediaName != null ? coverMediaRef(coverMediaName) : null,
         sentenceAudioRef: sentenceAudioMediaRef != null
             ? '[sound:$sentenceAudioMediaRef]'
             : null,
@@ -1225,6 +1226,74 @@ class AnkiConnectRepository extends BaseAnkiRepository {
       debugPrint('AnkiConnectRepository.openNoteInAnki: $e');
       debugPrint('$stack');
       return false;
+    }
+  }
+
+  /// BUG-2051：↗「在 Anki 中打开这个词的卡」。判据与画 ✓ 的 [isDuplicate] 同源
+  /// （Anki 内建第一字段 checksum，见 [ankiDuplicateSearchQuery]），所以 ✓ 亮着
+  /// 时这里在物理上不可能查不到——包括那张笔记类型不同、字段名叫 `Word` 的旧卡。
+  ///
+  /// 两步、两个查询串，但**只有一条判据**：
+  /// 1. 用同源的 `dupe:` 串 `findNotes` → 这个词**全部同名笔记**的 id（跨笔记类型）；
+  /// 2. 把它们变成 `nid:a,b,c` 交给 `guiBrowse` 打开。
+  ///
+  /// 第 2 步不是第二条判据——它按第 1 步的**结果 id** 定位，不重新匹配任何东西。
+  /// 反过来说也别把 `guiBrowse` 的返回值当命中数：见 [AnkiConnectService.guiBrowseQuery]。
+  ///
+  /// 为什么要多这一次往返：查询串里从此不出现卡组名，浏览器地址栏里也不出现词。
+  /// Anki 搜索的 `deck:` 是通配匹配（`_`/`*`），而查重侧是精确名——把名字留在串里
+  /// 就等于给判据留了第二个漂移入口（见 [ankiDuplicateDeckIds] 的实测）。
+  ///
+  /// 卡组解析失败（配置过期）不早退：[ankiDuplicateDeckIds] 对空的/已不存在的卡组名
+  /// 退化成不限卡组（fail-open），宁可多列几张也好过对着一张确实存在的卡说没有。
+  @override
+  Future<AnkiOpenWordOutcome> openWordInAnki(
+    String expression,
+    String reading,
+  ) async {
+    if (expression.isEmpty) return AnkiOpenWordOutcome.failed;
+    try {
+      final settings = await loadSettings();
+      final deck = settings.availableDecks.firstWhereOrNull(
+            (d) => d.id == settings.selectedDeckId,
+          ) ??
+          (settings.selectedDeckName != null
+              ? settings.availableDecks.firstWhereOrNull(
+                  (d) => d.name == settings.selectedDeckName,
+                )
+              : null);
+      final service = _serviceForSettings(settings);
+      final Map<String, int> models = await service.getModelNamesAndIds();
+      final Map<String, int> decks = await service.getDeckNamesAndIds();
+      final String query = ankiDuplicateSearchQuery(
+        value: expression,
+        modelIds: models.values,
+        deckIds: ankiDuplicateDeckIds(
+          deckName: deck?.name ?? '',
+          scope: settings.duplicateScope,
+          deckNamesAndIds: decks,
+        ),
+      );
+      // 一个笔记类型都没有 = 这台 Anki 还没建过卡，不该发一条空搜索把整库摊开。
+      if (query.isEmpty) return AnkiOpenWordOutcome.noMatch;
+      final List<int> noteIds = await service.findNotesByQuery(query);
+      final String browseQuery = ankiNoteIdBrowseQuery(noteIds);
+      if (browseQuery.isEmpty) return AnkiOpenWordOutcome.noMatch;
+      final int? ankiPid = ankiConnectHostIsLoopback(service.host)
+          ? AnkiDesktopForeground.grantForegroundToAnki(
+              ankiConnectPort: service.port)
+          : null;
+      // 返回值**一概不读**：命中与否已经由上一步的 `findNotes` 定死，这里只是
+      // 「打开」。旧版 AnkiConnect 的 `guiBrowse` 只回 null、新版回 card id 列表，
+      // 两种机器在这条路径上从此没有行为差异——那条「浏览器明明开着却说没有卡」
+      // 的错话，成因被结构性地拿掉了，而不是靠 null/[] 分流去躲开。
+      await service.guiBrowseQuery(browseQuery);
+      await AnkiDesktopForeground.raiseAnkiWindow(ankiPid);
+      return AnkiOpenWordOutcome.opened;
+    } catch (e, stack) {
+      debugPrint('AnkiConnectRepository.openWordInAnki: $e');
+      debugPrint('$stack');
+      return AnkiOpenWordOutcome.failed;
     }
   }
 

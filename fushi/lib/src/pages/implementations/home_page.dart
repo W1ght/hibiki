@@ -35,8 +35,13 @@ import 'package:drift/drift.dart' show Value;
 import 'package:fushi/src/media/collections/collection_continue.dart';
 import 'package:fushi/src/media/torrent/nyaa_resource_provider.dart';
 import 'package:fushi/src/media/torrent/video_resource_provider.dart';
+import 'package:fushi/src/media/video/discovery/discovery_anidb_identity.dart';
 import 'package:fushi/src/media/video/discovery/video_discovery_provider.dart';
 import 'package:fushi/src/media/video/discovery/video_discovery_service.dart';
+import 'package:fushi/src/media/video/download/video_media_reference_codec.dart';
+import 'package:fushi/src/media/video/metadata/anidb_video_metadata_provider.dart';
+import 'package:fushi/src/media/video/metadata/video_metadata_provider.dart';
+import 'package:fushi/src/media/video/metadata/video_metadata_resolver.dart';
 import 'package:fushi/src/media/video/download/video_download_backend_identity.dart';
 import 'package:fushi/src/media/drag_drop/drop_surface_scope.dart';
 import 'package:fushi/src/media/video/download/video_download_pipeline_service.dart';
@@ -46,6 +51,7 @@ import 'package:fushi/src/media/video/subtitle/video_subtitle_provider.dart'
 import 'package:fushi/src/media/video/video_subtitle_attach.dart';
 import 'package:fushi/src/media/video/video_subtitle_attach_messages.dart';
 import 'package:fushi/src/media/video/metadata/video_country_display.dart';
+import 'package:fushi/src/media/video/metadata/video_library_scrape_sweep.dart';
 import 'package:fushi/src/media/video/metadata/video_metadata_models.dart';
 import 'package:fushi/src/media/video/metadata/video_source_scrape_config.dart';
 import 'package:fushi/src/media/video/metadata/video_source_scrape_coordinator.dart';
@@ -76,6 +82,8 @@ import 'package:fushi/src/shortcuts/gamepad_service.dart'
         dispatchNativeGamepadButtonIntent,
         focusedEditableText,
         gamepadMoveFocusInDirection;
+import 'package:fushi/src/shortcuts/mouse_binding_dispatch.dart'
+    show dispatchClaimedMouseAction, resolveMouseBindingAction;
 import 'package:fushi/src/shortcuts/shortcut_action.dart';
 import 'package:fushi_core/fushi_core.dart'
     show
@@ -367,6 +375,7 @@ class _HomePageState extends BasePageState<HomePage>
   VideoSourceScrapeCoordinator? _videoSourceScrapeCoordinator;
   VideoSourceScrapeTaskController? _videoSourceScrapeTaskController;
   String? _videoSourceScrapeConfigFingerprint;
+  VideoLibraryScrapeSweep? _videoScrapeSweep;
   bool _videoSourceScrapePanelOpen = false;
   VideoDiscoveryService? _videoDiscoveryService;
   VideoDiscoveryController? _videoDiscoveryController;
@@ -420,6 +429,11 @@ class _HomePageState extends BasePageState<HomePage>
         .addListener(_onHomeDictionaryTabRequested);
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
+      // 启动即落在视频 tab（用户配置的初始 tab）时也要触发一次自动补刮，
+      // 与 _selectTab 的进页触发同一入口、同样幂等。
+      if (mounted && _currentTab == HomeTab.video) {
+        unawaited(_videoLibraryScrapeSweep.sweepOnce());
+      }
       if (appModel.isFirstTimeSetup) {
         appModel.setLastSelectedDictionaryFormat(
             JapaneseLanguage.instance.standardFormat);
@@ -895,6 +909,12 @@ class _HomePageState extends BasePageState<HomePage>
       }
       _currentTab = tab;
     });
+    // 进视频页触发一次库内自动补刮（每进程一次；sweepOnce 自身幂等且受
+    // videoLibraryAutoBackfillScrape 总闸与刮削互斥门约束，见
+    // VideoLibraryScrapeSweep）。
+    if (tab == HomeTab.video) {
+      unawaited(_videoLibraryScrapeSweep.sweepOnce());
+    }
     // Reflect the selection into the shared notifier so the macOS root sidebar
     // (built outside HomePage) stays in sync. Guarded by value-equality inside
     // ValueNotifier, so this never re-enters _onShellTabRequested pointlessly.
@@ -918,6 +938,43 @@ class _HomePageState extends BasePageState<HomePage>
     final int current = tabs.indexOf(_visibleTab);
     final int next = (current + delta) % tabs.length;
     _selectTab(tabs[(next + tabs.length) % tabs.length]);
+  }
+
+  /// 首页鼠标通道的解析阶梯：**只有 home 自己的 scope**。
+  ///
+  /// 键盘在页内解析 home → global → universal，但 global / universal 那两段的执行体
+  /// 其实并不在本页——`_executeShortcutAction` 对它们（除 globalBack 外）返回 ignored，
+  /// 让事件冒泡到 [wrapWithGlobalNavigation] 去执行。鼠标没有冒泡，那一层改由 app 根的
+  /// `onPointerDown` 兜底（互斥见 [MouseBindingDispatch]），**执行体仍只有那一份**。
+  /// BUG-2031：阶梯必须与本页**键盘阶梯逐字相同**。第一版只放了本页 scope，于是
+  /// `globalBack`（universal）在页内解析不到，只能落到 app 根那份平铺的
+  /// `Navigator.maybePop()`——而键盘 / 手柄的 `globalBack` 走的是本页的**逐级退出**
+  /// （先关面板 / 退全屏，最后才退页）。同一个动作两条通道两种行为，正是要禁的形态。
+  static const List<ShortcutScope> _kHomeMouseLadder = <ShortcutScope>[
+    ShortcutScope.home,
+    ShortcutScope.global,
+    ShortcutScope.universal,
+  ];
+
+  /// 首页的**鼠标绑定通道**：与 [_handleKeyEvent] 挂在同一层、同一份注册表、同一个
+  /// 执行体 [_executeShortcutAction]，只是触发器换成了鼠标非主键。
+  ///
+  /// ⚠️ 与视频页同一条几何限制：查词浮层可见时，根 Overlay 的 `LookupDismissBarrier`
+  /// （`Positioned.fill` + 叶子 `ColoredBox`，命中行为 opaque）会吃光指针，本入口收不到
+  /// 任何按下。那半边由 barrier 自己的 `onNonPrimaryButtonDown` 承接。
+  void _handleHomePointerDown(PointerDownEvent event) {
+    final ShortcutAction? action = resolveMouseBindingAction(
+      registry: appModel.shortcutRegistry,
+      buttons: event.buttons,
+      ladder: _kHomeMouseLadder,
+    );
+    if (action == null) return;
+    // 执行体返回 ignored 说明本页没接（等价于键盘的 ignored 冒泡），此时**不认领**，
+    // 让 app 根兜底照常有机会解析同一个按钮上的 universal / global 绑定。
+    dispatchClaimedMouseAction(
+      event,
+      () => _executeShortcutAction(action) == KeyEventResult.handled,
+    );
   }
 
   KeyEventResult _executeShortcutAction(ShortcutAction action) {
@@ -1011,58 +1068,69 @@ class _HomePageState extends BasePageState<HomePage>
               ),
             },
             child: Focus(
-              // Autofocus on every platform: on mobile no field on the home tabs
-              // grabs focus at mount, so without this the FocusManager has no
-              // primary focus and hardware-keyboard / gamepad shortcuts never
-              // reach _handleKeyEvent until the user taps something. The home
-              // search field focuses on demand, so this never fights an editable.
-              autofocus: true,
-              // But this wrapper spans the whole page, so it must NOT be a
-              // traversal target: otherwise directional (keyboard arrow /
-              // gamepad) navigation lands on it and the focus ring covers the
-              // entire window. skipTraversal keeps it as a key-event sink only;
-              // Tab/arrow/D-pad traversal moves between the real controls and
-              // the ring follows them. Shortcut keys still bubble up here.
-              skipTraversal: true,
-              focusNode: _keyboardFocusNode,
-              onKeyEvent: _handleKeyEvent,
-              child: GestureDetector(
-                onTap: () {
-                  final FocusNode? current = FocusManager.instance.primaryFocus;
-                  if (current != null && current != _keyboardFocusNode) {
-                    current.unfocus();
-                  }
-                },
-                child: LayoutBuilder(
-                  builder: (context, constraints) {
-                    // BUG-401: classify on the real physical width
-                    // (logical × appUiScale). This LayoutBuilder sits INSIDE
-                    // FushiAppUiScale, so `constraints.maxWidth` is the
-                    // inflated logical canvas width; reading it directly kept
-                    // desktop locked to the nav-rail layout and the phone
-                    // (bottom-bar) layout was unreachable however narrow the
-                    // real window got dragged.
-                    // macOS-native shell: a real root MacosWindow + Sidebar
-                    // (built in main.dart, Approach B) replaces the self-drawn
-                    // rail/bottom-bar. MacosWindow manages its own breakpoints, so
-                    // HomePage only renders the tab body here — checked before the
-                    // size-class switch.
-                    if (isMacosPlatform(context)) {
-                      return _buildMacosLayout();
-                    }
-                    final sizeClass = windowSizeClassReal(
-                      constraints.maxWidth,
-                      FushiAppUiScale.of(context),
-                    );
-                    // compact(<600) → 底栏；medium/expanded(≥600，含竖屏平板) → 侧边布局。
-                    if (sizeClass == WindowSizeClass.compact) {
-                      return _buildMobileLayout();
-                    }
-                    return _buildDesktopLayout(sizeClass);
-                  },
-                ),
-              ),
-            )));
+                // Autofocus on every platform: on mobile no field on the home tabs
+                // grabs focus at mount, so without this the FocusManager has no
+                // primary focus and hardware-keyboard / gamepad shortcuts never
+                // reach _handleKeyEvent until the user taps something. The home
+                // search field focuses on demand, so this never fights an editable.
+                autofocus: true,
+                // But this wrapper spans the whole page, so it must NOT be a
+                // traversal target: otherwise directional (keyboard arrow /
+                // gamepad) navigation lands on it and the focus ring covers the
+                // entire window. skipTraversal keeps it as a key-event sink only;
+                // Tab/arrow/D-pad traversal moves between the real controls and
+                // the ring follows them. Shortcut keys still bubble up here.
+                skipTraversal: true,
+                focusNode: _keyboardFocusNode,
+                onKeyEvent: _handleKeyEvent,
+                // 鼠标通道与键盘挂在同一层：作用域（整页）与解析阶梯都必须与
+                // [_handleKeyEvent] 对齐，挂低了就会重演 BUG-1864 那种「注册表声明整页、
+                // 挂载点只在子树，焦点一进面板整张表就够不着」。
+                //
+                // `translucent`：本层不画东西，默认 deferToChild 会让空白区收不到按下。
+                // [Listener] 不进手势竞技场、不消费事件，下面那个 GestureDetector 的
+                // onTap（只认主键）与所有子控件照常工作。
+                child: Listener(
+                  behavior: HitTestBehavior.translucent,
+                  onPointerDown: _handleHomePointerDown,
+                  child: GestureDetector(
+                    onTap: () {
+                      final FocusNode? current =
+                          FocusManager.instance.primaryFocus;
+                      if (current != null && current != _keyboardFocusNode) {
+                        current.unfocus();
+                      }
+                    },
+                    child: LayoutBuilder(
+                      builder: (context, constraints) {
+                        // BUG-401: classify on the real physical width
+                        // (logical × appUiScale). This LayoutBuilder sits INSIDE
+                        // FushiAppUiScale, so `constraints.maxWidth` is the
+                        // inflated logical canvas width; reading it directly kept
+                        // desktop locked to the nav-rail layout and the phone
+                        // (bottom-bar) layout was unreachable however narrow the
+                        // real window got dragged.
+                        // macOS-native shell: a real root MacosWindow + Sidebar
+                        // (built in main.dart, Approach B) replaces the self-drawn
+                        // rail/bottom-bar. MacosWindow manages its own breakpoints, so
+                        // HomePage only renders the tab body here — checked before the
+                        // size-class switch.
+                        if (isMacosPlatform(context)) {
+                          return _buildMacosLayout();
+                        }
+                        final sizeClass = windowSizeClassReal(
+                          constraints.maxWidth,
+                          FushiAppUiScale.of(context),
+                        );
+                        // compact(<600) → 底栏；medium/expanded(≥600，含竖屏平板) → 侧边布局。
+                        if (sizeClass == WindowSizeClass.compact) {
+                          return _buildMobileLayout();
+                        }
+                        return _buildDesktopLayout(sizeClass);
+                      },
+                    ),
+                  ),
+                ))));
     // 桌面剪贴板/热键查词不再叠加独立 overlay 页；监听生命周期收窄到查词 tab。
     return home;
   }
@@ -1528,6 +1596,41 @@ class _HomePageState extends BasePageState<HomePage>
     return retried;
   }
 
+  /// 下载/订阅确认时的 AniDB 身份就地解析（刮削重设计 P1）。provider 一次性
+  /// 构建、用完即关；AniDB 搜索走本地标题目录，无网络代价。永不阻断确认流程。
+  Future<VideoMediaReference> _confirmDiscoveryAniDbIdentity(
+    BuildContext context,
+    VideoMediaReference reference,
+  ) async {
+    final String configuredTmdbKey = appModelNoUpdate.prefsRepo
+        .getPref(kVideoScraperTmdbApiKeyPref, defaultValue: '') as String;
+    final VideoSourceScrapeGlobalConfig config =
+        VideoSourceScrapeGlobalConfig.fromPreferences(
+      appModelNoUpdate.prefsRepo,
+      resolvedTmdbApiKey: resolveTmdbApiKey(configuredTmdbKey),
+    );
+    final VideoMetadataProviderRegistry registry =
+        VideoMetadataProviderRegistry(<VideoMetadataProvider>[
+      AniDbVideoMetadataProvider(
+        clientName: config.anidbClientName,
+        clientVersion: config.anidbClientVersion,
+        language: config.locale,
+      ),
+    ]);
+    try {
+      return await confirmAniDbDiscoveryIdentity(
+        context: context,
+        reference: reference,
+        registry: registry,
+      );
+    } catch (_) {
+      // 身份解析是下载的增值，不是前置条件：任何失败都放行原 reference。
+      return reference;
+    } finally {
+      registry.close();
+    }
+  }
+
   Future<void> _openVideoDiscoveryResourceSearch(
     BuildContext context,
     VideoDiscoveryItem item,
@@ -1562,9 +1665,15 @@ class _HomePageState extends BasePageState<HomePage>
           onSubmit: (VideoDiscoveryDownloadSelection selection) async {
             final VideoDownloadBackendTarget target =
                 await appModelNoUpdate.currentVideoDownloadBackendTarget();
+            // 刮削重设计 P1：确认下载的这一刻就地解析 AniDB 规范身份——
+            // 唯一命中静默补上、歧义当场弹一次候选、查无明示后照常下载。
+            // 之后管线不再有任何模糊匹配。
+            final VideoMediaReference media = context.mounted
+                ? await _confirmDiscoveryAniDbIdentity(context, selection.media)
+                : selection.media;
             await pipeline.enqueue(
               VideoDownloadEnqueueRequest(
-                media: selection.media,
+                media: media,
                 resource: selection.resource,
                 backendTarget: target,
                 targetSourceId: selection.source.id,
@@ -1630,20 +1739,27 @@ class _HomePageState extends BasePageState<HomePage>
                 await appModelNoUpdate.database
                     .getVideoDownloadSubscription(subscriptionId);
             final VideoResourceCandidate resource = selection.download.resource;
+            // 刮削重设计 P1：建订阅的这一刻就地解析 AniDB 规范身份，之后每一集
+            // 派生任务都直接携带确认身份，导入后零模糊匹配。
+            final VideoMediaReference reference = context.mounted
+                ? await _confirmDiscoveryAniDbIdentity(context, item.reference)
+                : item.reference;
             await appModelNoUpdate.database.upsertVideoDownloadSubscription(
               VideoDownloadSubscriptionsCompanion.insert(
                 subscriptionId: subscriptionId,
                 resourceProvider: persistedVideoResourceProviderId(resource),
-                metadataProvider: Value<String?>(item.reference.providerId),
-                externalId: Value<String?>(item.reference.mediaId),
-                mediaKind: item.reference.mediaKind.name,
+                metadataProvider: Value<String?>(reference.providerId),
+                externalId: Value<String?>(reference.mediaId),
+                mediaKind: reference.mediaKind.name,
                 discoveryCategory:
-                    Value<String?>(item.reference.discoveryCategory.name),
-                title: item.reference.title,
-                year: Value<int?>(item.reference.year),
-                season: Value<int?>(item.reference.season),
+                    Value<String?>(reference.discoveryCategory.name),
+                title: reference.title,
+                year: Value<int?>(reference.year),
+                season: Value<int?>(reference.season),
                 coverUrl: Value<String?>(item.posterUrl),
-                searchQuery: _videoResourceSearchQuery(item.reference),
+                identityJson:
+                    Value<String?>(encodeVideoMediaReference(reference)),
+                searchQuery: _videoResourceSearchQuery(reference),
                 filterJson: Value<String>(selection.filter.json),
                 mode: Value<String>(
                   item.reference.mediaKind == VideoMetadataMediaKind.movie
@@ -2106,7 +2222,20 @@ class _HomePageState extends BasePageState<HomePage>
     final VideoSourceScrapeTaskController controller =
         VideoSourceScrapeTaskController(coordinator)
           ..addListener(_onVideoSourceScrapeTaskChanged);
-    return _videoSourceScrapeTaskController = controller;
+    _videoSourceScrapeTaskController = controller;
+    // 补刮调度器跟随 controller 重建，绝不持有已 dispose 的旧 controller。
+    _videoScrapeSweep = VideoLibraryScrapeSweep(
+      database: appModel.database,
+      controller: controller,
+      isEnabled: () => appModelNoUpdate.videoLibraryAutoBackfillScrape,
+    );
+    return controller;
+  }
+
+  VideoLibraryScrapeSweep get _videoLibraryScrapeSweep {
+    // 确保 controller/sweep 已按当前配置构建。
+    final VideoSourceScrapeTaskController _ = _videoSourceScrapeController;
+    return _videoScrapeSweep!;
   }
 
   void _onVideoSourceScrapeTaskChanged() {
@@ -2123,6 +2252,7 @@ class _HomePageState extends BasePageState<HomePage>
         loadRuns: () => appModel.database.getVideoSourceScrapeRuns(limit: 20),
         loadSource: (int sourceId) =>
             appModel.database.getMediaSourceById(sourceId),
+        loadPendingWorks: () => _videoLibraryScrapeSweep.pendingWorks(),
         onRetry: (VideoSourceScrapeRunRow run) async {
           final int? sourceId = run.sourceId;
           if (sourceId == null) return;
@@ -2260,6 +2390,7 @@ class _HomePageState extends BasePageState<HomePage>
     _videoSourceScrapeTaskController = null;
     _videoSourceScrapeCoordinator = null;
     _videoSourceScrapeConfigFingerprint = null;
+    _videoScrapeSweep = null;
     if (controller == null) {
       coordinator?.close();
       return;
@@ -2375,16 +2506,16 @@ class _HomePageState extends BasePageState<HomePage>
           onLibraryChanged: _notifyVideoLibraryChanged,
           discoveryController: _productionVideoDiscoveryController,
           discoveryActions: _productionVideoDiscoveryActions,
-          ),
+        ),
       HomeTab.downloads => DownloadsPage(
           key: ValueKey<String>('downloads-$_downloadsGeneration'),
           initialTabIndex: _downloadsInitialTabIndex,
           videoDiscoveryController: _productionVideoDiscoveryController,
           videoDiscoveryActions: _productionVideoDiscoveryActions,
-          ),
+        ),
       HomeTab.dictionaries => HomeDictionaryPage(
           focusSignal: _dictFocusSignal,
-          ),
+        ),
       HomeTab.games => const HomeGamePage(),
       HomeTab.browserExtension => const BrowserExtensionPage(),
       HomeTab.settings =>

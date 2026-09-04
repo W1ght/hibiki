@@ -8,6 +8,7 @@ import 'dart:ui' show ImageFilter;
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:fushi/src/shortcuts/context_menu_trigger.dart';
 import 'package:fushi/i18n/strings.g.dart';
 import 'package:fushi/src/utils/misc/fushi_toast.dart';
 import 'package:path/path.dart' as p;
@@ -103,7 +104,14 @@ import 'package:fushi/src/utils/components/fushi_icon_button.dart';
 import 'package:fushi/src/utils/components/fushi_material_components.dart';
 import 'package:fushi/src/utils/misc/show_app_dialog.dart';
 import 'package:fushi/src/shortcuts/input_binding.dart'
-    show GamepadButton, InputBinding, ModifierKey, activeModifierKeys;
+    show
+        GamepadButton,
+        InputBinding,
+        ModifierKey,
+        activeModifierKeys,
+        domMouseButtonFromPointerButtons;
+import 'package:fushi/src/shortcuts/mouse_binding_dispatch.dart'
+    show dispatchClaimedMouseAction, resolveMouseBindingActionForButton;
 import 'package:fushi/src/shortcuts/shortcut_registry.dart'
     show FushiShortcutRegistry;
 import 'package:fushi/src/shortcuts/gamepad_service.dart'
@@ -123,6 +131,14 @@ import 'package:fushi/src/shortcuts/dictionary_caret_controller.dart';
 export 'package:fushi/src/shortcuts/dictionary_caret_controller.dart'
     show CaretSurface;
 import 'package:fushi/src/shortcuts/reader_space_override.dart';
+import 'package:fushi/src/shortcuts/window_fullscreen_hosts.dart'
+    show WindowFullscreenHost;
+import 'package:fushi/src/shortcuts/global_navigation.dart'
+    show
+        desktopWindowFullscreenSupported,
+        exitWindowFullscreenIfActive,
+        readDesktopWindowFullscreen,
+        setDesktopWindowFullscreen;
 
 part 'reader_fushi/lyrics.part.dart';
 part 'reader_fushi/mining.part.dart';
@@ -1125,7 +1141,7 @@ List<int>? charCountsFromChaptersJson(
 /// TODO-1192: [EpubBooks.chaptersJson] 里每章 `characters` 计数是否已是当前口径
 /// （[kChapterCharCountCaliber]）。仅当**每一章**条目都带 `charCaliber` == 当前
 /// 版本、且条目数与 [expectedChapters] 一致时返回 true；任一缺标记（旧书 / v1 导入）
-/// 或版本不符返回 false，开书据此触发后台按新口径 [japaneseCharCount] 重算并回写。
+/// 或版本不符返回 false，开书据此触发后台按新口径 `countStudyChars` 重算并回写。
 /// 与 [charCountsFromChaptersJson] 拆开：后者只管「计数是否可用」（口径无关，旧书也
 /// 先用旧计数别闪 0），本函数只管「口径是否最新」。纯函数，供单测锁定判定。
 bool chaptersJsonCharCaliberIsCurrent(
@@ -1453,6 +1469,10 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
 
   int _currentChapter = 0;
   bool _readerContentReady = false;
+  // BUG-2015：连续模式跨章前捕获旧视口，加载期间继续展示，目标章就绪后淡出。
+  // 这张图只跨一次章节导航存活；不用于分页/手动跳转，也不落盘。
+  MemoryImage? _chapterTransitionSnapshot;
+  bool _chapterTransitionCaptureInFlight = false;
   bool _hasEverLoaded = false;
   bool _readerTextContextMenuActive = false;
   // BUG-1236：移动端长按拖选后的非模态选区操作条。旧 showMenu 的全屏
@@ -1786,6 +1806,16 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   // TODO-291 阶段2：audioHandler 控制流（play/seek/skip/悬浮字幕翻转）订阅已上移到
   // [AudiobookSession]（进程级），reader 不再持有这些订阅。
 
+  /// 底栏全屏按钮的图标状态（进/出全屏两个图标）。
+  ///
+  /// 只是**显示用的镜像**，不是真相源：真相在 native 窗口那边，每次切换都先读它再取反
+  /// （见 `_changeReaderWindowFullscreen`）。用户改用快捷键（默认 F11）切换时这份镜像
+  /// 会短暂落后一帧图标——不影响任何行为，下一次按按钮仍按真值走。
+  bool _isWindowFullscreen = false;
+
+  /// 全屏切换的串行闸：native 往返期间再点按钮不重入。
+  bool _windowFullscreenTransitioning = false;
+
   bool _showChrome = true;
   // TODO-975: floating chrome (顶部进度 / 底栏) 的「被点击唤出、临时可见」态。挤压
   // 模式恒忽略此旗；悬浮模式下唤出置 true + 武装 _chromeAutoHideTimer，计时到 / 再点
@@ -1973,6 +2003,12 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
       return true;
     }());
     WidgetsBinding.instance.addObserver(this);
+    // 底栏全屏按钮的图标镜像：进页时问一次 native 真值。不问的话，「在已经全屏的窗口里
+    // 打开这本书」从第一帧起图标就是错的（镜像默认 false）。与漫画页的
+    // `_readInitialFullscreenState` 同款；桌面才有窗口可全屏。
+    if (desktopWindowFullscreenSupported) {
+      unawaited(_readInitialWindowFullscreenState());
+    }
     _exitFlushCallback =
         ExitFlushRegistry.instance.register(_flushAllForProcessExit);
     // BUG-1744：macOS 全屏进出必须重算顶部让位并把新 inset 回喂给 WebView。
@@ -2453,7 +2489,7 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     );
   }
 
-  /// TODO-1192: 把后台按新口径（[japaneseCharCount]）重算出的每章字数回写进
+  /// TODO-1192: 把后台按新口径（`countStudyChars`）重算出的每章字数回写进
   /// [EpubBooks.chaptersJson]，并打上当前口径版本 [kChapterCharCountCaliber]，使书架
   /// 总字数（[ReaderFushiSource] 直接读 chaptersJson 的 characters）与下次开书都用
   /// 新口径，不必每次开书重算。只覆写 `characters` / `charCaliber` 两个字段、保留原有
@@ -2523,6 +2559,11 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     _scrollProgressThrottleTimer?.cancel();
     _contentReadyTimer?.cancel();
     _contentReadyDeadline = null;
+    final MemoryImage? chapterTransitionSnapshot = _chapterTransitionSnapshot;
+    _chapterTransitionSnapshot = null;
+    if (chapterTransitionSnapshot != null) {
+      unawaited(chapterTransitionSnapshot.evict());
+    }
     _resizeRepaginateDebounce?.cancel();
     _chromeAutoHideTimer?.cancel();
     _clearGamepadAHold();
@@ -2852,7 +2893,10 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     // reader 子树。constraints.biggest 与 _syncPageSize 读的 MediaQuery.size 同处反缩放
     // 还原后的坐标空间，数值等价，故两条 resize 通道靠 _lastSyncedWidth/Height 基线去重。
     // 约束由布局系统每帧驱动，比 didChangeMetrics 更早更可靠（Windows 拖边框时后者滞后）。
-    return LayoutBuilder(
+    // 小说页是**窗口全屏的合法宿主**之一：全屏键（默认 F11）只在小说 / 漫画 / 视频里
+    // 能进入全屏，靠的就是下面那层 [WindowFullscreenHost] 声明。用局部变量而不是把整棵
+    // 树往里缩一级，纯粹是为了不给这个文件制造一次全量重缩进的 diff。
+    final Widget page = LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         _onReaderConstraintsChanged(constraints);
         return Actions(
@@ -2874,7 +2918,18 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
             autofocus: true,
             focusNode: _focusNode,
             onKeyEvent: _handleKeyEvent,
-            child: PopScope(
+            // 鼠标通道与键盘/手柄挂在同一层（正文 WebView + chrome + 词典弹层的共同
+            // 祖先）。`translucent` 让本层自己占住命中；[Listener] 不进手势竞技场也不
+            // 消费事件，下层照常收到同一次按下。
+            //
+            // ⚠️ 本层只覆盖**指针归 Flutter** 的区域。原生 WebView 在非 Windows 上把
+            // 指针整个吃掉，正文区那半边由页内 JS 的 `onPointerSeek` 回传（那条路还
+            // 承担**位置型**动作「seek 到点击句」，它需要点击坐标，Flutter 侧拿不到）。
+            // 两条路的分工判据是 [hostOwnsWebViewPointerInput]，不重复派发。
+            child: Listener(
+              behavior: HitTestBehavior.translucent,
+              onPointerDown: _handleReaderPointerDown,
+              child: PopScope(
               canPop: false,
               onPopInvokedWithResult: (didPop, dynamic result) async {
                 if (didPop) return;
@@ -2903,9 +2958,10 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
                     Positioned.fill(
                       child: _buildBody(),
                     ),
-                    if (!_readerContentReady)
+                    if (!_readerContentReady ||
+                        _chapterTransitionSnapshot != null)
                       Positioned.fill(
-                        child: ColoredBox(color: bgColor),
+                        child: _buildChapterTransitionOverlay(bgColor),
                       ),
                     if (_readerContentReady)
                       const SizedBox.shrink(
@@ -3010,10 +3066,12 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
                 ),
               ),
             ),
+            ),
           ),
         );
       },
     );
+    return WindowFullscreenHost(child: page);
   }
 
   Widget _buildBody() {
@@ -3040,6 +3098,39 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     );
     if (independentDocumentPadding == EdgeInsets.zero) return webView;
     return Padding(padding: independentDocumentPadding, child: webView);
+  }
+
+  Widget _buildChapterTransitionOverlay(Color backgroundColor) {
+    final MemoryImage? snapshot = _chapterTransitionSnapshot;
+    if (snapshot == null) return ColoredBox(color: backgroundColor);
+    final Duration fadeDuration = appModel.einkMode
+        ? Duration.zero
+        : const Duration(milliseconds: 140);
+    return IgnorePointer(
+      child: ColoredBox(
+        color: backgroundColor,
+        child: AnimatedOpacity(
+          key: const ValueKey<String>('fushi_chapter_transition_snapshot'),
+          opacity: _readerContentReady ? 0 : 1,
+          duration: fadeDuration,
+          curve: Curves.easeOut,
+          onEnd: () {
+            if (!_readerContentReady ||
+                !identical(_chapterTransitionSnapshot, snapshot)) {
+              return;
+            }
+            _rebuild(() => _chapterTransitionSnapshot = null);
+            unawaited(snapshot.evict());
+          },
+          child: Image(
+            image: snapshot,
+            fit: BoxFit.fill,
+            gaplessPlayback: true,
+            filterQuality: FilterQuality.low,
+          ),
+        ),
+      ),
+    );
   }
 
   String _buildStyleTag() {

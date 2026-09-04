@@ -97,15 +97,14 @@ class StatFacts {
   /// **活动流的唯一数据源**：legacy 活动行 ∪ 段合成行 ∪ 游玩会话合成行，按精确
   /// 时刻倒序、截到 [activityLimit]。首页时间轴与游戏首页时间线都只吃它。
   List<ActivityEventRow> get activityRows {
-    final List<ActivityEventRow> all =
-        <ActivityEventRow>[
-          ...legacyActivity,
-          ...segmentsAsActivityRows(segments),
-          ...galgameSessionsAsActivityRows(recentGameSessions, gameNamesById),
-        ]..sort(
-          (ActivityEventRow a, ActivityEventRow b) =>
-              b.timestampMs.compareTo(a.timestampMs),
-        );
+    final List<ActivityEventRow> all = <ActivityEventRow>[
+      ...legacyActivity,
+      ...segmentsAsActivityRows(segments),
+      ...galgameSessionsAsActivityRows(recentGameSessions, gameNamesById),
+    ]..sort(
+        (ActivityEventRow a, ActivityEventRow b) =>
+            b.timestampMs.compareTo(a.timestampMs),
+      );
     return all.length <= activityLimit ? all : all.sublist(0, activityLimit);
   }
 
@@ -259,6 +258,18 @@ Future<StatFacts> loadStatFacts(
   // v92 段：两面各一份。
   final List<StudySegmentRow> segments = await db.getStudySegments();
   for (final StudySegmentRow s in segments) {
+    // **写零的段不进事实面**。`zeroStudySegmentsOnDays`（时段明细里长按删除走的那条）
+    // 只把行写成零而不删行——必须删的是同步语义：真删行会被对端的旧数据按 LWW 复活，
+    // 写零才能跨端传播「这段不算了」。
+    //
+    // 于是过滤责任落在读侧。不过滤的话，被删掉的那条会以「0 字」原地复活：sheet 聚合
+    // 侧对任何命中该 dateKey 的 fact 都建 entry，渲染侧 ms==0 就走 formatStatChars(0)。
+    // 用户看到的就是「删了、刷新、它又回来了」。零行同样会污染排行、热力图等所有吃
+    // StatFacts.daily 的消费方。
+    //
+    // 判据与 [segmentsAsActivityRows] 逐字一致——**同一件事只能有一条判据**，
+    // 两处分别写就是给「活动流干净、统计页脏」这种半修好状态留门。
+    if (s.durationMs <= 0 && s.chars <= 0 && s.pages <= 0) continue;
     final StatFact fact = StatFact(
       mediaKind: s.mediaKind,
       mediaKey: s.mediaKey,
@@ -343,13 +354,17 @@ List<ActivityEventRow> segmentsAsActivityRows(List<StudySegmentRow> segments) {
   ];
 }
 
-/// 首页「今日目标」与阅读统计页共用的**同一条**口径：阅读域（普通书 + 漫画）当日
-/// 字数。首页此前把书字 + 字幕字 + hook 字三种「字」相加当分子、统计页只算阅读域，
-/// 两处共用一个目标偏好却永远对不上——现在只有这一个函数。
-int readingGoalCharsForDay(Iterable<StatFact> daily, String dateKey) {
+/// 首页「今日目标」与阅读统计页目标卡共用的**同一条**口径：给定日面行的当日字数
+/// 合计。目标概念是「每日学习目标」——传整张日面（[StatFacts.daily]）时覆盖阅读 +
+/// 视频字幕 + 游戏 hook 三个来源，与热力图「全部」档同覆盖面；只算某一域时传对应
+/// 切片（如 [StatFacts.dailyBooks]）。v92 曾把分子硬编码成只算阅读域，纯视频 /
+/// 游戏日目标恒 0、与上方热力图对不上（BUG-1993）——现在函数只按 dateKey 求和，
+/// 域由调用方传的行集决定，没有特殊情况。目标偏好键沿用 `readingGoalDailyChars`
+/// （存量持久化名冻结，语义已是学习目标）。
+int studyGoalCharsForDay(Iterable<StatFact> daily, String dateKey) {
   int total = 0;
   for (final StatFact f in daily) {
-    if (f.isBook && f.dateKey == dateKey) total += f.chars;
+    if (f.dateKey == dateKey) total += f.chars;
   }
   return total;
 }

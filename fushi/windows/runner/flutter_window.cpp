@@ -30,6 +30,7 @@
 #include "foreground_selection.h"
 #include "ime_space_dispatch.h"
 #include "window_capture.h"
+#include "window_recorder.h"
 #include "../../../native/galgame_hook/include/voice_hook_ipc.h"
 
 #pragma comment(lib, "windowscodecs.lib")
@@ -1534,6 +1535,10 @@ void FlutterWindow::RegisterGalHookTextChannel() {
             {flutter::EncodableValue("sourceLength"),
              flutter::EncodableValue(
                  static_cast<int32_t>(event.source_length))},
+            // Shift+悬浮（attached_text_surface_window.cpp 的 hover timer）与
+            // 点击共用这一条 lookupText 事件；Dart 据此只做诊断区分，查词链相同。
+            {flutter::EncodableValue("hover"),
+             flutter::EncodableValue(event.hover)},
             {flutter::EncodableValue("textGeneration"),
              flutter::EncodableValue(event.text_generation)},
             {flutter::EncodableValue("wordLeft"),
@@ -1650,6 +1655,13 @@ void FlutterWindow::RegisterGalHookTextChannel() {
         "passThroughChanged",
         std::make_unique<flutter::EncodableValue>(std::move(map)));
   });
+  // HWND 没了就立刻告诉 Dart。Dart 的 `_visible` 是派生镜像，靠这条事件被动
+  // 复位；没有它，消费端只能每行台词打一次 isShowing() 往返来轮询同一件事。
+  gal_hook_text_window_->SetDestroyedCallback([this]() {
+    if (!gal_hook_text_channel_) return;
+    gal_hook_text_channel_->InvokeMethod(
+        "overlayDestroyed", std::make_unique<flutter::EncodableValue>());
+  });
   gal_hook_text_window_->SetBoundsCallback(
       [this](int left, int top, int width, int height) {
         flutter::EncodableMap map{
@@ -1675,8 +1687,10 @@ void FlutterWindow::RegisterGalHookTextChannel() {
   // IsWindowVisible=true 都不能证明一个桌面 HWND 真能盖住 exclusive scan-out。
   fushi::VoiceHookReader::Instance().SetLookupDirectPresenter(
       [this](int32_t anchor_x, int32_t anchor_y, uint32_t card_width,
-             uint32_t card_height, uint32_t view_width,
-             uint32_t view_height) {
+             uint32_t card_height, uint32_t view_width, uint32_t view_height,
+             int32_t glyph_x, int32_t glyph_y, uint32_t glyph_w,
+             uint32_t glyph_h, uint32_t* out_client_width,
+             uint32_t* out_client_height) {
         const uint32_t pid = fushi::VoiceHookReader::Instance().CurrentPid();
         if (attached_text_surface_window_ == nullptr ||
             !attached_text_surface_window_->DesktopOverlayAvailableForTarget(
@@ -1687,7 +1701,8 @@ void FlutterWindow::RegisterGalHookTextChannel() {
         if (card == nullptr) return false;
         return card->RevealOverProcessClient(
             pid, anchor_x, anchor_y, card_width, card_height, view_width,
-            view_height);
+            view_height, glyph_x, glyph_y, glyph_w, glyph_h,
+            out_client_width, out_client_height);
       });
   fushi::VoiceHookReader::Instance().SetLookupCaptureRequest(
       [this](uint32_t max_width, uint32_t max_height,
@@ -2327,6 +2342,13 @@ void FlutterWindow::RegisterGlobalLookupChannel() {
         } else if (method == "isShowing") {
           result->Success(
               flutter::EncodableValue(win->IsShowing()));
+        } else if (method == "setOutsideClickOwner") {
+          // attached 校准字形表面打开的桌面 route 弹窗：记下游戏 HWND，随后的
+          // Reveal/RevealStack 走同步吞点击 Arm，点卡外关闭不再推进游戏台词。
+          // 0 = 清空。Hide() 自清；普通桌面查词从不调用这条方法。
+          win->SetOutsideClickConsumeOwner(reinterpret_cast<HWND>(
+              static_cast<uintptr_t>(Int64FromValue(args, "hwnd", 0))));
+          result->Success();
         } else if (method == "setBlockCapture") {
           // 防截屏（WDA_EXCLUDEFROMCAPTURE）：瞬态查词窗对用户可见但不进截图 /
           // 录屏 / 屏幕共享。GlobalLookupWindow 记住该值，窗口重建后由
@@ -2429,6 +2451,87 @@ void FlutterWindow::RegisterWindowCaptureChannel() {
             }));
           }
           result->Success(flutter::EncodableValue(std::move(list)));
+          return;
+        }
+        // galgame 视频卡片：持续滚动录制游戏窗口（WindowRecorder 单例，见
+        // window_recorder.cpp）。start 同步等 WGC 会话建立（毫秒级）；export 在
+        // UI 线程同步落盘区间内的 JPEG 帧（几 MB）。全部 fail-open：失败以 false /
+        // error map 回 Dart，绝不抛。
+        auto read_long = [&call](const char* key, int64_t fallback) -> int64_t {
+          const auto* map =
+              std::get_if<flutter::EncodableMap>(call.arguments());
+          if (map == nullptr) {
+            return fallback;
+          }
+          const auto it = map->find(flutter::EncodableValue(key));
+          if (it == map->end()) {
+            return fallback;
+          }
+          return it->second.TryGetLongValue().value_or(fallback);
+        };
+        auto read_string = [&call](const char* key) -> std::string {
+          const auto* map =
+              std::get_if<flutter::EncodableMap>(call.arguments());
+          if (map == nullptr) {
+            return std::string();
+          }
+          const auto it = map->find(flutter::EncodableValue(key));
+          if (it == map->end()) {
+            return std::string();
+          }
+          const auto* s = std::get_if<std::string>(&it->second);
+          return s == nullptr ? std::string() : *s;
+        };
+        if (method == "startWindowRecording") {
+          const int64_t rec_hwnd = read_long("hwnd", 0);
+          if (rec_hwnd == 0) {
+            result->Success(flutter::EncodableValue(false));
+            return;
+          }
+          const bool started = fushi::WindowRecorder::Instance().Start(
+              reinterpret_cast<HWND>(static_cast<intptr_t>(rec_hwnd)),
+              static_cast<int>(read_long("fps", 5)),
+              static_cast<int>(read_long("maxSeconds", 20)),
+              static_cast<int>(read_long("maxWidth", 640)));
+          result->Success(flutter::EncodableValue(started));
+          return;
+        }
+        if (method == "stopWindowRecording") {
+          fushi::WindowRecorder::Instance().Stop();
+          result->Success();
+          return;
+        }
+        if (method == "isWindowRecording") {
+          result->Success(flutter::EncodableValue(
+              fushi::WindowRecorder::Instance().IsRecording()));
+          return;
+        }
+        if (method == "exportWindowRecording") {
+          const fushi::WindowRecordingExport exported =
+              fushi::WindowRecorder::Instance().Export(
+                  read_long("fromTickMs", 0), read_long("toTickMs", 0),
+                  read_string("directory"));
+          flutter::EncodableList frames;
+          for (const fushi::WindowRecordingFrame& f : exported.frames) {
+            frames.push_back(flutter::EncodableValue(flutter::EncodableMap{
+                {flutter::EncodableValue("path"),
+                 flutter::EncodableValue(f.path)},
+                {flutter::EncodableValue("tickMs"),
+                 flutter::EncodableValue(static_cast<int64_t>(f.tick_ms))},
+            }));
+          }
+          flutter::EncodableMap reply{
+              {flutter::EncodableValue("frames"),
+               flutter::EncodableValue(std::move(frames))},
+              {flutter::EncodableValue("nowTickMs"),
+               flutter::EncodableValue(
+                   static_cast<int64_t>(exported.now_tick_ms))},
+          };
+          if (!exported.error.empty()) {
+            reply[flutter::EncodableValue("error")] =
+                flutter::EncodableValue(exported.error);
+          }
+          result->Success(flutter::EncodableValue(std::move(reply)));
           return;
         }
         if (method != "captureWindow") {
@@ -2602,6 +2705,12 @@ void FlutterWindow::RegisterVoiceHookChannel() {
               {flutter::EncodableValue("nativeLoopbackAppliedSeq"),
                flutter::EncodableValue(
                    static_cast<int64_t>(s.native_loopback_applied_seq))},
+              {flutter::EncodableValue("xaudioDiagnostics"),
+               flutter::EncodableValue(
+                   static_cast<int64_t>(s.xaudio_diagnostics))},
+              {flutter::EncodableValue("xaudioDiagnostics2"),
+               flutter::EncodableValue(
+                   static_cast<int64_t>(s.xaudio_diagnostics2))},
               {flutter::EncodableValue("ready"),
                flutter::EncodableValue(s.ok || s.raw_voice_ready)},
           };

@@ -20,6 +20,7 @@ class DiscoveryDomainImporters {
     required this.importText,
     required this.importPdf,
     required this.importAudiobook,
+    required this.importMangaArchive,
     required this.registerGameExes,
   });
 
@@ -27,6 +28,10 @@ class DiscoveryDomainImporters {
   final Future<String?> Function(String filePath) importText;
   final Future<String?> Function(String filePath) importPdf;
   final Future<String?> Function(AlignAudiobookPlan plan) importAudiobook;
+
+  /// 漫画图包整包导入（cbz/cbr/cb7/rar/zip）。解包与 `.mokuro` sidecar 识别
+  /// 都在域导入器内部完成，执行层只递一个路径进去。
+  final Future<String?> Function(String archivePath) importMangaArchive;
 
   /// 返回真正新登记的条目数（查重后可能为 0）。
   final Future<int> Function(List<String> exePaths) registerGameExes;
@@ -72,9 +77,11 @@ class DiscoveryImportExecutor {
       final List<String> archives = <String>[
         for (final String path in filePaths)
           if (isDiscoveryArchivePath(path)) path,
-      ]..sort(
-          (String a, String b) => (sizes[b] ?? 0).compareTo(sizes[a] ?? 0),
-        );
+      ]..sort((String a, String b) {
+          // 同大小时按路径定二，不把「解哪个包」交给调用方清单的偶然顺序。
+          final int bySize = (sizes[b] ?? 0).compareTo(sizes[a] ?? 0);
+          return bySize != 0 ? bySize : a.compareTo(b);
+        });
       if (archives.isNotEmpty) {
         final File archive = File(archives.first);
         final Directory extracted = await _extractor.extract(
@@ -131,6 +138,8 @@ class DiscoveryImportExecutor {
         return _single(await _importers.importPdf(plan.filePath));
       case AlignAudiobookPlan():
         return _single(await _importers.importAudiobook(plan));
+      case ImportMangaArchivePlan():
+        return _single(await _importers.importMangaArchive(plan.archivePath));
       case RegisterGameExesPlan():
         final int registered = await _importers.registerGameExes(plan.exePaths);
         return DiscoveryImportOutcome(

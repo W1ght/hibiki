@@ -3,6 +3,7 @@ export 'i18n/strings.g.dart';
 export 'src/utils/fushi_localisations.dart';
 
 export 'src/utils/components/cache_image_provider.dart';
+export 'src/utils/components/copy_feedback.dart';
 export 'src/utils/components/fushi_gamepad_keyboard.dart';
 export 'src/utils/components/fushi_icon_button.dart';
 export 'src/utils/components/fushi_reorderable_column.dart';
@@ -27,6 +28,7 @@ export 'src/utils/components/fushi_design_tokens.dart';
 export 'src/utils/components/fushi_motion_tokens.dart';
 export 'src/utils/components/fushi_material_components.dart';
 export 'src/utils/components/library_section_tabs.dart';
+export 'src/utils/components/section_swipe_navigator.dart';
 export 'src/utils/components/settings_shared.dart';
 export 'src/utils/app_ui_scale.dart';
 export 'src/utils/popup_theme_css.dart';

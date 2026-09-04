@@ -701,22 +701,23 @@ void TryInstallGenericKeyAndRawInputShield() {
   // before HookFn has tracked them; taking the target here would make the later
   // exact install receive no trampoline and silently destroy its build-pinned
   // shield/gesture logic.
-  static const bool reserve_get_key_state = IsSiglusLookupProfileMatched();
-  static const bool hunex_observation_only = IsHunexGgeProfileMatched();
-  static const bool reserve_get_async_key_state =
-      IsLeafAquaplusProfileMatched() || hunex_observation_only;
-  if (hunex_observation_only) {
-    // HUNEX/GGE's build-pinned GetAsyncKeyState detour is telemetry only and
-    // returns the original state byte-for-byte. Reserve the shared export for
-    // that trace, but advertise the KeyState surface as known-uncovered—not
-    // ready/partial—until a real filter contract exists.
-    g_generic_shield_ready_mask.fetch_and(
-        ~fushi_voice_hook::kLookupShieldSurfaceKeyState,
-        std::memory_order_relaxed);
-    g_generic_shield_uncovered_mask.fetch_or(
-        fushi_voice_hook::kLookupShieldSurfaceKeyState,
-        std::memory_order_relaxed);
-  }
+  //
+  // 这三个判断**不能是函数内 static**。static 局部只求值一次，而本函数的第一次调用
+  // 就在 dll_main 里 MH_Initialize() 成功的那一刻——注入窗口最深处，正是 exact 身份
+  // 最可能还没量出来的时候。那一次若返回 false，预留就永久为 false：通用护盾把
+  // GetAsyncKeyState 抢走，之后身份重试成功、exact 侧再来装也拿不到 trampoline
+  // （HookFn 已被占），BUG-2074 场景下「点击穿透」这一半根本没修好。
+  // 身份判定自带 O(1) 缓存，逐拍重问不贵。
+  //
+  // 而且「未定」必须按**预留**处置，不能按「不是这个引擎」处置：抢占共享 USER32 导出
+  // 是不可逆的，而不预留最多只是晚一拍装上通用护盾（本函数每个 Poll 拍都会重来）。
+  // 代价不对称时，站在可逆的那一边。
+  const bool reserve_get_key_state =
+      IsSiglusLookupProfileMatched() || IsSiglusLookupIdentityUndecided();
+  const bool hunex_exact_owner = IsHunexGgeProfileMatched();
+  const bool reserve_get_async_key_state =
+      IsLeafAquaplusProfileMatched() || IsLeafAquaplusIdentityUndecided() ||
+      hunex_exact_owner;
   uint32_t coverage = g_generic_key_coverage.load(std::memory_order_relaxed);
 
   void *get_key_state =
@@ -741,8 +742,9 @@ void TryInstallGenericKeyAndRawInputShield() {
       reinterpret_cast<void *>(GetProcAddress(user32, "GetAsyncKeyState"));
   if ((coverage & kGenericKeyCoverageGetAsyncKeyState) == 0) {
     if (IsHookTargetTrackedByThisDll(get_async_key_state)) {
-      if (!hunex_observation_only)
-        coverage |= kGenericKeyCoverageGetAsyncKeyState;
+      // Leaf and HUNEX exact adapters own this target. Their distinct sampled
+      // Window-property contracts are folded into EnginePrivate below.
+      coverage |= kGenericKeyCoverageGetAsyncKeyState;
     } else if (!reserve_get_async_key_state &&
                HookGenericExport(
                    get_async_key_state,
@@ -766,7 +768,7 @@ void TryInstallGenericKeyAndRawInputShield() {
   }
   g_generic_key_coverage.store(coverage, std::memory_order_relaxed);
   if (fushi_voice_hook::IsCompleteGenericKeyStateCoverage(
-          coverage, kGenericKeyCoverageAll, hunex_observation_only)) {
+          coverage, kGenericKeyCoverageAll, false)) {
     g_generic_shield_ready_mask.fetch_or(
         fushi_voice_hook::kLookupShieldSurfaceKeyState,
         std::memory_order_relaxed);
@@ -927,6 +929,33 @@ uint32_t GenericShieldPendingMask() {
   return pending;
 }
 
+// BUG-2140：宿主发布中性请求后，放弃所有**从未被真实采样坐实**的推测 latch。
+// 它们等的那条「释放 + 中性尾」可能永远不会到（该输入面这一局不再被游戏采样），
+// 而 release_waiting 会因此把 applied_seq 永久扣在 request_seq-1，宿主的
+// IsNeutralForRehandshake 恒假、attached 表面首次查词后再也武装不起来。
+// 只放弃推测的；被真实按下坐实过的 latch 一律保留，不变式不放宽。
+void AbandonSpeculativeGenericShieldLatches(bool request_active) {
+  if (request_active) return;
+  AcquireSRWLockExclusive(&g_generic_shield_state_lock);
+  fushi_voice_hook::AbandonSpeculativeLeftButtonLatch(
+      request_active, &g_generic_get_key_state_latch);
+  fushi_voice_hook::AbandonSpeculativeLeftButtonLatch(
+      request_active, &g_generic_get_async_key_state_latch);
+  fushi_voice_hook::AbandonSpeculativeLeftButtonLatch(
+      request_active, &g_generic_get_keyboard_state_latch);
+  fushi_voice_hook::AbandonSpeculativeLeftButtonLatch(
+      request_active, &g_generic_raw_input_data_latch);
+  fushi_voice_hook::AbandonSpeculativeLeftButtonLatch(
+      request_active, &g_generic_raw_input_buffer_latch);
+  for (auto &record : g_generic_direct_input_devices) {
+    fushi_voice_hook::AbandonSpeculativeLeftButtonLatch(
+        request_active, &record.immediate_latch);
+    fushi_voice_hook::AbandonSpeculativeLeftButtonLatch(
+        request_active, &record.buffered_latch);
+  }
+  ReleaseSRWLockExclusive(&g_generic_shield_state_lock);
+}
+
 void AbandonGenericShieldLatchesForInvalidTarget() {
   AcquireSRWLockExclusive(&g_generic_shield_state_lock);
   g_generic_get_key_state_latch = {};
@@ -974,6 +1003,11 @@ ExactSampledShieldState ReadExactSampledShieldState(HWND game) {
        fushi_voice_hook::kLeafAquaplusSampledInputShieldReadyProperty,
        fushi_voice_hook::kLeafAquaplusSampledInputShieldReadyValue,
        fushi_voice_hook::kLeafAquaplusSampledInputShieldWindowProperty},
+      {fushi_voice_hook::kHunexGgeSampledInputShieldRequiredProperty,
+       fushi_voice_hook::kHunexGgeSampledInputShieldRequiredValue,
+       fushi_voice_hook::kHunexGgeSampledInputShieldReadyProperty,
+       fushi_voice_hook::kHunexGgeSampledInputShieldReadyValue,
+       fushi_voice_hook::kHunexGgeSampledInputShieldWindowProperty},
   };
   for (const auto &contract : contracts) {
     if (reinterpret_cast<uintptr_t>(GetPropW(game, contract.required)) !=
@@ -1109,6 +1143,9 @@ void ProcessGenericLookupInputShield() {
             status.required_mask, status.ready_mask, status.observed_mask));
   }
 
+  // BUG-2140：先把「推测上锁、从未被真实采样坐实」的 latch 放掉，再算 pending。
+  // 否则一次预武装就能把 applied_seq 永久扣住。
+  AbandonSpeculativeGenericShieldLatches(request.active_buttons != 0);
   const uint32_t pending = GenericShieldPendingMask();
   const bool release_waiting = request.active_buttons == 0 &&
                                (pending != 0 || exact.pending_publication);

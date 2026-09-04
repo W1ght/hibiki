@@ -8,8 +8,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:fushi_anki/fushi_anki.dart' show MineOutcome, MineResult;
+import 'package:fushi_anki/fushi_anki.dart'
+    show AnkiOpenWordOutcome, MineOutcome, MineResult;
 import 'package:fushi_dictionary/fushi_dictionary.dart';
+import 'package:fushi/src/shortcuts/context_menu_trigger.dart';
 import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/pages/implementations/dictionary_popup_input_bridge.dart';
 import 'package:fushi/src/pages/implementations/dictionary_webview_media.dart';
@@ -20,6 +22,7 @@ import 'package:fushi/src/platform/selection_external_actions.dart';
 import 'package:fushi/src/reader/dictionary_font_css.dart';
 import 'package:fushi/src/reader/popup_swipe_close_script.dart';
 import 'package:fushi/src/reader/reader_caret_scripts.dart';
+import 'package:fushi/src/reader/reader_selection_scripts.dart';
 import 'package:fushi/src/reader/reader_settings.dart';
 import 'package:fushi/src/shortcuts/input_binding.dart' show activeModifierKeys;
 import 'package:fushi/src/shortcuts/reader_space_override.dart'
@@ -247,11 +250,15 @@ class DictionaryPopupWebView extends ConsumerStatefulWidget {
   final Future<MinePopupResult> Function(Map<String, String> fields)?
       onMinedCardAction;
 
-  /// TODO-1360：已制卡的词旁「在 Anki 中打开卡片」按钮回调。宿主据 [expression]/[reading]
-  /// 反查 Anki 全部命中卡并直接跳转打开（单卡直开 / 多卡弹选择 / 无卡 toast）。与
-  /// [onMinedCardAction]（点 ✓ 弹覆写·新增·查看操作单）解耦：本回调只做「查找并在 Anki
-  /// 中打开」，不改卡片。null 时 popup 端点击是 no-op（按钮仅在已制卡时显示）。
-  final Future<void> Function(String expression, String reading)? onOpenInAnki;
+  /// TODO-1360 / BUG-2051：已制卡的词旁 ↗「在 Anki 中打开卡片」按钮回调。宿主把 Anki
+  /// 浏览器过滤到「Anki 认为 [expression] 已有的卡」（判据与画 ✓ 的查重同源，见
+  /// [BaseAnkiRepository.openWordInAnki]），并回传三态结局——弹窗按钮据此就地提示
+  /// 「没有找到已制的卡片」/「无法在 Anki 中打开」，不再由宿主 toast：app 外表面
+  /// 根本没有 Flutter toast 可用，提示只能画在按钮旁边，两条车道共用同一份文案。
+  /// 与 [onMinedCardAction]（点 ✓ 弹覆写·新增·查看操作单）解耦：本回调不改卡片。
+  /// null 时 popup 端点击是 no-op（按钮仅在已制卡时显示）。
+  final Future<AnkiOpenWordOutcome> Function(String expression, String reading)?
+      onOpenInAnki;
 
   /// 切换收藏：返回切换后的新状态（true=已收藏）。供弹窗「☆/★」按钮回调。
   final Future<bool> Function(Map<String, String> fields)? onFavoriteEntry;
@@ -425,15 +432,15 @@ class DictionaryPopupWebViewState
     }
   }
 
-  Future<void> _completePopupLoad(
-      InAppWebViewController controller) async {
+  Future<void> _completePopupLoad(InAppWebViewController controller) async {
     try {
       await controller.evaluateJavascript(source: ReaderCaretScripts.source());
       if (!mounted) return;
       await _applyPopupViewportSize();
     } catch (e, stack) {
       if (mounted) {
-        ErrorLogService.instance.log('DictPopupWebview.loadBootstrap', e, stack);
+        ErrorLogService.instance
+            .log('DictPopupWebview.loadBootstrap', e, stack);
       }
     }
     if (!mounted) return;
@@ -760,11 +767,35 @@ JSON.stringify((function(){
     _controller?.evaluateJavascript(source: _surfaceRepaintNudgeJs);
   }
 
-  void highlightSelection(int charCount) {
-    _controller?.evaluateJavascript(
-      source:
-          'window.fushiSelection?.highlightSelection && window.fushiSelection.highlightSelection($charCount)',
-    );
+  /// BUG-2054：高亮被查词，并返回它在**本 WebView 视口内**的整词 bbox（CSS px），
+  /// 供调用方把刚打开的子弹窗从「点击的首字符」重锚到整词矩形。
+  ///
+  /// selection.js 的 `highlightSelection` 早就把跨行的多段 `getClientRects()` 聚合
+  /// 成一个 bbox 并 `return`（跨行选区时它的 bottom 落在**最后一行**），此前这里裸
+  /// eval 把返回值丢了：子弹窗只能锚在 `getSelectionRect` 给的首字符矩形上，于是
+  /// 跨行选区的子弹窗贴在第一行下方，正好盖住选区所在的第二行。与阅读器正文车道
+  /// （BUG-717②/BUG-767，`reader_fushi/lookup.part.dart`）同一范式，共用
+  /// [ReaderSelectionScripts] 的调用串与解析器，不另造第二份。
+  ///
+  /// 返回 null = 没拿到可用 bbox（无匹配 / WebView 已半销毁 / 解析失败）：调用方
+  /// 保持原锚点，重锚失败绝不打断查词。
+  Future<Rect?> highlightSelection(int charCount) async {
+    final InAppWebViewController? controller = _controller;
+    if (controller == null) return null;
+    try {
+      final Object? raw = await controller.evaluateJavascript(
+        source: 'window.fushiSelection?.highlightSelection ? '
+            '${ReaderSelectionScripts.highlightInvocation(charCount)} : null',
+      );
+      return ReaderSelectionScripts.highlightRectFromResult(raw);
+    } catch (e, stack) {
+      // BUG-005 同根因（TODO-678）：WebView 半销毁时其 per-instance method channel
+      // 已摘除，evaluateJavascript 抛 MissingPluginException。`controller != null`
+      // 防不了通道已废 —— 必须 try/catch；重锚是锦上添花，绝不冒泡打断查词。
+      ErrorLogService.instance
+          .log('DictPopupWebview.highlightSelection', e, stack);
+      return null;
+    }
   }
 
   void clearSelection() {
@@ -1090,10 +1121,31 @@ JSON.stringify((function(){
     // unrelated dependency changes (MediaQuery, locale, …).
     if (!_ready || _controller == null) return;
     unawaited(_pushInstantScrollPreference());
-    final String themeVarsJs = _themeVariablesJs();
+    // 主题变量段与静态段同源（builder 按输入 memo，无关的依赖变化命中缓存、零
+    // 拼串）。只重注这一段；静态段版本基线不动，下一次查词若真变了会整体重发。
+    final String themeVarsJs = _buildStaticSettings().themeVarsJs;
     if (themeVarsJs == _lastThemeVarsJs) return;
     _lastThemeVarsJs = themeVarsJs;
     _controller!.evaluateJavascript(source: themeVarsJs);
+  }
+
+  /// in-app 弹窗的静态段（主题变量 + 字体 + 全部 window.* 设置）。与
+  /// [_pushResults] 共用同一组实参，保证主题热切换与查词注入拿到的是同一份产物。
+  PopupStaticSettingsJs _buildStaticSettings() {
+    return buildPopupStaticSettingsJs(
+      appModel: ref.read(appProvider),
+      theme: Theme.of(context),
+      // 导入字体以 URL 引用下发，字节由本 WebView 的 shouldInterceptRequest 供
+      // （见 dictionaryFontWebResourceResponse）。仅在宿主真有能带 CORS 头的拦截器
+      // 时启用——否则字体会被静默拒绝，那比慢更糟。见 kInAppPopupFontUrlSupported。
+      fontUrlBuilder: kInAppPopupFontUrlSupported ? dictionaryFontUrl : null,
+      options: PopupSettingsOptions(
+        // TODO-1065：app 外 / 悬浮字幕独立查词窗令 <html> 透明消除泛白（见字段 doc）。
+        mobileExternal: widget.transparentDocumentBackground,
+        sentenceDraftEnabled: kSentenceContextPickerEnabled &&
+            widget.onSetSentenceContext != null,
+      ),
+    );
   }
 
   Future<void> _pushInstantScrollPreference() async {
@@ -1102,47 +1154,6 @@ JSON.stringify((function(){
     await _controller!.evaluateJavascript(
       source: ReaderCaretScripts.instantScrollInvocation(enabled),
     );
-  }
-
-  /// JS that pushes the theme-derived CSS custom properties + `data-theme`
-  /// onto the popup document. Kept separate from entry rendering so it can be
-  /// re-evaluated on a theme switch without rebuilding the result list.
-  String _themeVariablesJs() {
-    final ThemeData theme = Theme.of(context);
-    final bool isDark = theme.brightness == Brightness.dark;
-    final ColorScheme scheme = theme.colorScheme;
-    final appModel = ref.read(appProvider);
-    // 变量取值统一来自 buildPopupThemeCssVars（与扩展/另一注入器同一真源）；
-    // TODO-776: --dict-columns 随主题变量一起重注（live theme switch 也重应用），
-    // popup CSS 在属性缺席时回退 1（经典单列不受影响）。
-    final Map<String, String> vars = buildPopupThemeCssVars(
-      scheme: scheme,
-      // 卡面底色跟随主题 scheme.surface，override 优先级不变。
-      backgroundColor: popupCardSurface(
-          scheme: scheme, override: appModel.overrideDictionaryColor),
-      surfaceContainerHigh: scheme.surfaceContainerHigh,
-      dictionaryColumns: appModel.popupDictionaryColumns,
-    );
-    // TODO-1065：app 外 / 悬浮字幕独立查词窗给 <html> 打透明标记（见 popup.css
-    // html.mobile-external），消除 documentElement 不透明填充铺满视口的泛白。in-app
-    // （transparentDocumentBackground=false）不加，桌面 global-lookup 走独立路径。
-    final String docClassLine = widget.transparentDocumentBackground
-        ? "document.documentElement.classList.add('mobile-external');\n"
-        : '';
-    return '''
-      $docClassLine      document.documentElement.setAttribute('data-theme', '${isDark ? 'dark' : 'light'}');
-      document.documentElement.style.setProperty('--fushi-primary-highlight', '${vars['--fushi-primary-highlight']}');
-      document.documentElement.style.setProperty('--text-color', '${vars['--text-color']}');
-      document.documentElement.style.setProperty('--background-color', '${vars['--background-color']}');
-      document.documentElement.style.setProperty('--md-surface-container', '${vars['--md-surface-container']}');
-      document.documentElement.style.setProperty('--md-surface-container-high', '${vars['--md-surface-container-high']}');
-      document.documentElement.style.setProperty('--md-outline-variant', '${vars['--md-outline-variant']}');
-      document.documentElement.style.setProperty('--md-on-surface-variant', '${vars['--md-on-surface-variant']}');
-      document.documentElement.style.setProperty('--md-primary', '${vars['--md-primary']}');
-      document.documentElement.style.setProperty('--md-on-primary', '${vars['--md-on-primary']}');
-      document.documentElement.style.setProperty('--fushi-radius-card', '${vars['--fushi-radius-card']}');
-      document.documentElement.style.setProperty('--dict-columns', '${vars['--dict-columns']}');
-''';
   }
 
   void _pushResults() {
@@ -1179,20 +1190,7 @@ JSON.stringify((function(){
     // entries + renderPopup。任何主题/设置/词典集变化都会换 revision → 自动随
     // 下一次推送重发。BUG-717 ③：比较从 MB 级全串换成 revision 整数（builder 按
     // 输入 memo，同内容 ⇒ 同实例同 revision），combined 只在真要发时才拼一次。
-    final PopupStaticSettingsJs staticSettings = buildPopupStaticSettingsJs(
-      appModel: appModel,
-      theme: Theme.of(context),
-      // 导入字体以 URL 引用下发，字节由本 WebView 的 shouldInterceptRequest 供
-      // （见 dictionaryFontWebResourceResponse）。仅在宿主真有能带 CORS 头的拦截器
-      // 时启用——否则字体会被静默拒绝，那比慢更糟。见 kInAppPopupFontUrlSupported。
-      fontUrlBuilder: kInAppPopupFontUrlSupported ? dictionaryFontUrl : null,
-      options: PopupSettingsOptions(
-        // TODO-1065：app 外 / 悬浮字幕独立查词窗令 <html> 透明消除泛白（见字段 doc）。
-        mobileExternal: widget.transparentDocumentBackground,
-        sentenceDraftEnabled: kSentenceContextPickerEnabled &&
-            widget.onSetSentenceContext != null,
-      ),
-    );
+    final PopupStaticSettingsJs staticSettings = _buildStaticSettings();
     final bool staticChanged =
         staticSettings.revision != _lastSentStaticRevision;
     if (staticChanged) {
@@ -1215,7 +1213,9 @@ JSON.stringify((function(){
         ? _inAppStaticExtrasJs(sentencePreviewEnabled: sentencePreviewEnabled)
         : '';
     final String entriesJs = buildPopupEntriesJs(widget.result);
-    _lastThemeVarsJs = _themeVariablesJs();
+    // 主题变量段随静态段一起（或已经）在 WebView 里生效；记下它供
+    // didChangeDependencies 的主题热切换去重，不再另拼一份删减版拷贝。
+    _lastThemeVarsJs = staticSettings.themeVarsJs;
     final bool popupInstantScroll = appModel.popupInstantScroll;
 
     final bool needsScrollCheck = widget.onScrolledToBottom != null;
@@ -1746,6 +1746,37 @@ JSON.stringify((function(){
         // 全局 window.onerror / unhandledrejection + 渲染 catch，经此桥把 {source,message,stack}
         // 回传，落 ErrorLogService（错误日志页可见）。四查词表面（书内 / 视频 / 首页 / app 外悬浮）
         // 共用本 WebView，一处接通全覆盖。
+        // 词典自带脚本的源码通道（dict-media.js 的 fetchDictAsset）。MDX 条目
+        // HTML 里的 <script src> 指向 .mdd 内的文件或 .mdx 旁的散文件，native
+        // 导入时已把两者收进同一个媒体库，这里按名取回文本。
+        //
+        // 只放行 .js：这个桥的用途就是取脚本，其余媒体（图片/音频/字体）各有自己
+        // 的 image:// / dictmedia:// 通道，没有理由从这里以文本形式倒出来。
+        controller.addJavaScriptHandler(
+          handlerName: 'getDictAsset',
+          callback: (args) {
+            return _guardJsBridge<Object?>(
+              'DictPopupWebview.getDictAsset',
+              null,
+              ErrorLogService.instance,
+              () {
+                final Object? raw = args.isNotEmpty ? args.first : null;
+                if (raw is! Map) return null;
+                final String dictionary = raw['dictionary'] as String? ?? '';
+                final String path = raw['path'] as String? ?? '';
+                if (dictionary.isEmpty || path.isEmpty) return null;
+                if (!path.toLowerCase().endsWith('.js')) return null;
+                final Uint8List? bytes = FushiDicts.instance.getMediaFile(
+                  dictionary,
+                  path,
+                );
+                if (bytes == null || bytes.isEmpty) return null;
+                return utf8.decode(bytes, allowMalformed: true);
+              },
+            );
+          },
+        );
+
         controller.addJavaScriptHandler(
           handlerName: 'reportJsError',
           callback: (args) {
@@ -2000,9 +2031,12 @@ JSON.stringify((function(){
           },
         );
 
-        // TODO-1360：已制卡的词旁「在 Anki 中打开卡片」按钮 → popup.js 调本处理器（带
-        // expression/reading）。宿主反查 Anki 命中卡并直接跳转打开。自带 try/catch 永不
-        // 让异常穿过原生桥（BUG-293）；无回传（打开是副作用），返回 null。
+        // TODO-1360 / BUG-2051：已制卡的词旁 ↗「在 Anki 中打开卡片」按钮 → popup.js 调
+        // 本处理器（带 expression/reading）。宿主把 Anki 浏览器过滤到这个词已有的卡，
+        // 并回传三态结局名（'opened' / 'noMatch' / 'failed'），popup.js 据此就地提示。
+        // 自带 try/catch 永不让异常穿过原生桥（BUG-293）；异常与未接线一律回
+        // 'failed'——**绝不回 null**：null 是「这个宿主根本没接这根桥」的专用信号，
+        // popup.js 靠它区分「打不开」与「没人管」，两者混一起就又变回点了没反应。
         controller.addJavaScriptHandler(
           handlerName: 'openInAnki',
           callback: (args) async {
@@ -2013,13 +2047,15 @@ JSON.stringify((function(){
                 final data = args[0] as Map;
                 final expression = (data['expression'] ?? '').toString();
                 final reading = (data['reading'] ?? '').toString();
-                await widget.onOpenInAnki!(expression, reading);
+                final AnkiOpenWordOutcome outcome =
+                    await widget.onOpenInAnki!(expression, reading);
+                return outcome.name;
               }
             } catch (e, stack) {
               ErrorLogService.instance
                   .log('DictPopupWebview.openInAnki', e, stack);
             }
-            return null;
+            return AnkiOpenWordOutcome.failed.name;
           },
         );
 
@@ -2470,10 +2506,10 @@ JSON.stringify((function(){
           canRequestFocus: false,
           skipTraversal: true,
           onKeyEvent: _handleDesktopCopyKey,
-          child: GestureDetector(
-            behavior: HitTestBehavior.translucent,
-            onSecondaryTapDown: (TapDownDetails details) =>
-                _showWindowsContextMenu(context, details.globalPosition),
+          child: ContextMenuTrigger(
+            // 右键菜单改由绑定表决定唤出键（默认仍是右键）；右键被别的动作占用时自动让位。
+            onInvoke: (Offset position) =>
+                _showWindowsContextMenu(context, position),
             child: webView,
           ),
         ),

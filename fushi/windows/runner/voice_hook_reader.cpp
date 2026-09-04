@@ -1,5 +1,9 @@
 #include "voice_hook_reader.h"
 
+#include "layer_origin_solver.h"
+
+#include "game_client_extent.h"
+
 #include <windows.h>
 
 // v19 准入兜底：注入侧算不出游戏 exe 摘要时由 host 自己算（见 [ExeDigestCache]）。
@@ -49,16 +53,39 @@ struct ReaderState {
   // ── v14 查词通道游标（与上面同一把锁）───────────────────────────────────────
   // 三个游标都在 Open 时对齐到「现在」而不是 0：会话重开时把注入侧遗留的旧 hit
   // 当成新命中重放，用户会看到一张莫名其妙的卡片弹出来。
-  uint64_t lookup_hit_count = 0;  // 上次见到的 header->lookup_hit_count
-  uint64_t lookup_hit_seq = 0;    // 上次消费掉的 hit seq（计数变了但 seq 没前进=重复）
-  uint64_t lookup_input_seq = 0;  // 上次消费到的输入环序号
+  //
+  // ── 段级状态：换段必须**整体归零** ─────────────────────────────────────────
+  // 这些字段的寿命恰好等于一个共享内存段。收成一个子结构、由 [CloseLocked] 整体
+  // 重置，而**不是**在 CloseLocked 里逐字段枚举——枚举漏一个就是静默 bug，而且
+  // 已经漏过：`layer_origin_solved_*` 没被清，于是退出一局再开一局后窗口尺寸没变，
+  // 「这个尺寸解过了」的早退恒真 ⇒ 新段永远不再求解层原点、永远不再 publish ⇒
+  // 注入侧 fail-closed 退回贴合层，「免手动校准」静默失效且毫无报错。
+  // 新增段级字段只要写进这个结构，就自动被覆盖，不依赖有人记得去改 CloseLocked。
+  struct SegmentScoped {
+    uint64_t lookup_hit_count = 0;  // 上次见到的 header->lookup_hit_count
+    uint64_t lookup_hit_seq = 0;  // 上次消费掉的 hit seq（计数变了但 seq 没前进=重复）
+    uint64_t lookup_input_seq = 0;  // 上次消费到的输入环序号
+    // Validated outside WH_MOUSE_LL. The callback compares this exact handle and
+    // never calls IsWindow/GetWindowThreadProcessId while the system waits.
+    HWND lookup_shield_prevalidated_target = nullptr;
+    // BUG-2136：已经解出过原点的客户区尺寸（0 = 本段还没解过）。origin 是常量，
+    // 但缩放随客户区变，所以按尺寸记一次。
+    int32_t layer_origin_solved_client_w = 0;
+    int32_t layer_origin_solved_client_h = 0;
+    // ── v19 查词准入游标 ────────────────────────────────────────────────────
+    // 上次向 Dart 报过的 lookup_admission_seq。[primed] 单独存在，是因为「新段刚开
+    // 出来、hook 还没上报」时共享 seq 就是 0，与游标 0 相等——只比 seq 会让新会话一
+    // 条准入事件都不发，Dart 侧就会继续挂着**上一局**的状态（上一局 SensorInstalled、
+    // 这一局引擎根本不支持，设置页照样说"能用"）。primed=false 保证换段后必发一条
+    // 如实的 Unknown。
+    uint32_t lookup_admission_seq = 0;
+    bool lookup_admission_primed = false;
+  };
+  SegmentScoped seg;
   // 帧**发布序**：每投一帧（present 或 dismiss）+1。与 hit seq 分开是硬要求——两者
   // 合一时收卡帧会复用刚 present 过的 seq，被注入侧的"这帧我处理过了"过滤当场丢掉，
   // 卡片永远挂在屏幕上。见 voice_hook_ipc.h 的 LookupFrame 注释。
   uint64_t lookup_publish_seq = 0;
-  // Validated outside WH_MOUSE_LL. The callback compares this exact handle and
-  // never calls IsWindow/GetWindowThreadProcessId while the system waits.
-  HWND lookup_shield_prevalidated_target = nullptr;
   // 用户的开关**意图**，与共享内存段的身份无关。
   //
   // 🔴 段会被换掉：退出一局再开一局 = 注入器建一段全新的共享内存，`lookup_enabled`
@@ -70,14 +97,11 @@ struct ReaderState {
   uint32_t lookup_geometry_admission_mode_desired =
       fushi_voice_hook::kLookupGeometryAdmissionDisabled;
   bool lookup_geometry_attached_ready_desired = false;
-  bool lookup_geometry_native_input_ready_desired = false;
-  // ── v19 查词准入游标（与上面同一把锁）───────────────────────────────────────
-  // 上次向 Dart 报过的 lookup_admission_seq。[primed] 单独存在，是因为「新段刚开出来、
-  // hook 还没上报」时共享 seq 就是 0，与游标 0 相等——只比 seq 会让新会话一条准入事件
-  // 都不发，Dart 侧就会继续挂着**上一局**的状态（上一局 SensorInstalled、这一局引擎
-  // 根本不支持，设置页照样说"能用"）。primed=false 保证换段后必发一条如实的 Unknown。
-  uint32_t lookup_admission_seq = 0;
-  bool lookup_admission_primed = false;
+  // Host risk/provider admission for semantic native input.  It shares the
+  // v21 geometry-admission request generation and is replayed into every new
+  // mapping before lookup runtime is enabled.  正边沿只有在发布到活映射之后
+  // 才写这里（见 SetLookupGeometryAdmission）：not_open 不得武装替换映射。
+  bool lookup_native_input_allowed_desired = false;
 };
 
 ReaderState& State() {
@@ -182,6 +206,11 @@ VoiceHookStatus StatusFromHeaderLocked(const SharedHeader* h) {
   s.raw_voice_ready = fushi_voice_hook::HasReadyGameResourceAudio(
       h->reserved_luna, h->hook_diagnostics,
       h->reserved_hook_diagnostics, h->xaudio_diagnostics);
+  // 两个诊断字原样带出。第二个字不参与 raw_voice_ready 的判定（它装的是身份/锚点
+  // 分型位，不是"资源音频已就绪"），但必须能被读到：否则 hook 侧 SetXAudioDiagnostic2
+  // 置的每一位在 Fushi 这一侧都不存在。
+  s.xaudio_diagnostics = h->xaudio_diagnostics;
+  s.xaudio_diagnostics2 = h->xaudio_diagnostics2;
   s.text_lane_recycles = static_cast<int64_t>(h->text_lane_recycle_count);
   s.text_lane_overflows = static_cast<int64_t>(h->text_lane_overflow_count);
   s.native_loopback_requested =
@@ -288,25 +317,25 @@ uint32_t TryPublishLookupShieldRequestOnce(
 
 // 把三个游标对齐到当前计数（"从现在开始"）。调用方持锁。
 void ResetLookupCursorsLocked(ReaderState& st, const SharedHeader* h) {
-  st.lookup_hit_count = 0;
-  st.lookup_hit_seq = 0;
-  st.lookup_input_seq = 0;
+  st.seg.lookup_hit_count = 0;
+  st.seg.lookup_hit_seq = 0;
+  st.seg.lookup_input_seq = 0;
   st.lookup_publish_seq = 0;
   // 准入游标**在查词区那道早退之前**复位：准入活在 SharedHeader 里，没有查词区的
   // 会话照样要报（"本引擎没做查词传感器"正是必须报得出来的那一类）。
-  st.lookup_admission_seq = 0;
-  st.lookup_admission_primed = false;
+  st.seg.lookup_admission_seq = 0;
+  st.seg.lookup_admission_primed = false;
   if (!fushi_voice_hook::HasLookupRegion(h)) {
     return;
   }
-  st.lookup_hit_count =
+  st.seg.lookup_hit_count =
       fushi_voice_hook::AtomicLoadPreview64(&h->lookup_hit_count);
   const fushi_voice_hook::LookupHitSlot* slot =
       fushi_voice_hook::LookupHitOf(h);
   if (slot != nullptr) {
-    st.lookup_hit_seq = fushi_voice_hook::AtomicLoadPreview64(&slot->seq);
+    st.seg.lookup_hit_seq = fushi_voice_hook::AtomicLoadPreview64(&slot->seq);
   }
-  st.lookup_input_seq =
+  st.seg.lookup_input_seq =
       fushi_voice_hook::AtomicLoadPreview64(&h->lookup_input_count);
   // Fushi 可在游戏进程不退出时重启/重连。hook 端的 presented cursor 仍保留在 DLL，
   // 所以新 host 必须从现有双槽最大发布序继续，而不是从 1 重新开始并被全判为陈旧帧。
@@ -331,12 +360,9 @@ void CloseLocked(ReaderState& st) {
     st.mapping = nullptr;
   }
   st.pid = 0;
-  st.lookup_hit_count = 0;
-  st.lookup_hit_seq = 0;
-  st.lookup_input_seq = 0;
-  st.lookup_shield_prevalidated_target = nullptr;
-  st.lookup_admission_seq = 0;
-  st.lookup_admission_primed = false;
+  // 段级状态整体重置——见 [ReaderState::SegmentScoped] 的注释：逐字段枚举漏过一次，
+  // 代价是「免手动校准」在第二局静默失效。
+  st.seg = ReaderState::SegmentScoped{};
 }
 
 // 把一条 clip 的 PCM 从环形读出**追加**到 [out]（多段拼接用）；clip 已被环形覆盖返回 false。
@@ -737,6 +763,10 @@ flutter::EncodableValue LookupHitMap(const VoiceHookLookupHit& hit) {
       {flutter::EncodableValue("glyphH"), flutter::EncodableValue(hit.glyph_h)},
       {flutter::EncodableValue("viewW"), flutter::EncodableValue(hit.view_w)},
       {flutter::EncodableValue("viewH"), flutter::EncodableValue(hit.view_h)},
+      {flutter::EncodableValue("clientW"),
+       flutter::EncodableValue(hit.client_w)},
+      {flutter::EncodableValue("clientH"),
+       flutter::EncodableValue(hit.client_h)},
       {flutter::EncodableValue("submit"), flutter::EncodableValue(hit.submit)},
   });
 }
@@ -836,6 +866,10 @@ void PumpLookupOnce() {
   }
   VoiceHookLookupHit hit;
   if (reader.PollLookupHit(&hit) && pump.channel != nullptr) {
+    // 客户区**现量现报**：host 的卡片尺寸上界要按屏幕物理像素算，而它必须在
+    // 查词开始之前就知道。量不到就留 0，host 退回画布口径（保守但不越界）。
+    fushi::game_client_extent::QueryGameClientExtent(
+        reader.CurrentPid(), &hit.client_w, &hit.client_h);
     pump.channel->InvokeMethod(
         "onGalLookupHit",
         std::make_unique<flutter::EncodableValue>(LookupHitMap(hit)));
@@ -987,10 +1021,18 @@ void HandleLookupPresent(
   const uint32_t card_height = ReadLookupDimension(call, "cardHeight");
   const uint32_t view_width = ReadLookupDimension(call, "viewWidth");
   const uint32_t view_height = ReadLookupDimension(call, "viewHeight");
+  const int32_t glyph_x = static_cast<int32_t>(ReadLookupInt(call, "glyphX"));
+  const int32_t glyph_y = static_cast<int32_t>(ReadLookupInt(call, "glyphY"));
+  const uint32_t glyph_w = ReadLookupDimension(call, "glyphW");
+  const uint32_t glyph_h = ReadLookupDimension(call, "glyphH");
+  uint32_t client_width = 0;
+  uint32_t client_height = 0;
   if (pump.direct_presenter && card_width > 0 && card_height > 0 &&
       view_width > 0 && view_height > 0) {
     if (pump.direct_presenter(meta.anchor_x, meta.anchor_y, card_width,
-                              card_height, view_width, view_height)) {
+                              card_height, view_width, view_height, glyph_x,
+                              glyph_y, glyph_w, glyph_h, &client_width,
+                              &client_height)) {
       // Only retire the old bitmap AFTER the live composition surface is in
       // place. Dismissing first created a guaranteed blank interval whenever
       // direct presentation failed and CapturePreview had to recover.
@@ -1007,6 +1049,15 @@ void HandleLookupPresent(
            flutter::EncodableValue(static_cast<int64_t>(card_width))},
           {flutter::EncodableValue("height"),
            flutter::EncodableValue(static_cast<int64_t>(card_height))},
+          // 游戏客户区尺寸。Dart 手上只有画布(view)尺寸，用画布像素去夹屏幕像素会把
+          // 卡片系统性压小，所以把真实上界回报过去。
+          // 诊断用。**不是**卡片尺寸上界的来源：那个来源是每条 hit 上的
+          // clientW/clientH（现量现报）。从 present 回执反推 cap 会晚一次查词，
+          // 正是 BUG-2066 的原始症状，别再走回去。
+          {flutter::EncodableValue("clientWidth"),
+           flutter::EncodableValue(static_cast<int64_t>(client_width))},
+          {flutter::EncodableValue("clientHeight"),
+           flutter::EncodableValue(static_cast<int64_t>(client_height))},
       }));
       return;
     }
@@ -1115,12 +1166,12 @@ bool HandleLookupCall(const flutter::MethodCall<flutter::EncodableValue>& call,
     const uint32_t mode =
         static_cast<uint32_t>(ReadLookupInt(call, "mode"));
     const bool attached_ready = ReadLookupBool(call, "attachedReady");
-    const bool native_input_ready =
-        ReadLookupBool(call, "nativeInputReady");
+    const bool native_input_allowed =
+        ReadLookupBool(call, "nativeInputAllowed");
     uint32_t request_seq = 0;
     uint32_t applied_seq = 0;
     const VoiceHookLookupError error = reader.SetLookupGeometryAdmission(
-        mode, attached_ready, native_input_ready, &request_seq, &applied_seq);
+        mode, attached_ready, native_input_allowed, &request_seq, &applied_seq);
     if (error != VoiceHookLookupError::kNone) {
       result->Success(LookupErrorMap(error));
       return true;
@@ -1323,7 +1374,7 @@ VoiceHookOpenResult VoiceHookReader::Open(uint32_t pid) {
     (void)fushi_voice_hook::PublishLookupGeometryAdmission(
         header, st.lookup_geometry_admission_mode_desired,
         st.lookup_geometry_attached_ready_desired,
-        st.lookup_geometry_native_input_ready_desired);
+        st.lookup_native_input_allowed_desired);
     if (st.lookup_enabled_desired) {
       InterlockedExchange(
           reinterpret_cast<volatile LONG*>(&header->lookup_enabled), 1);
@@ -2035,11 +2086,11 @@ bool VoiceHookReader::PollLookupAdmission(VoiceHookLookupAdmission* out) {
       fushi_voice_hook::ReadLookupAdmission(h, &seq);
   // primed 而且 seq 没动 = 这份快照 Dart 已经有了。**不**拿 state 做比较：hook 侧
   // 只在内容真变时推进 seq，seq 才是"变没变"的唯一真值。
-  if (st.lookup_admission_primed && seq == st.lookup_admission_seq) {
+  if (st.seg.lookup_admission_primed && seq == st.seg.lookup_admission_seq) {
     return false;
   }
-  st.lookup_admission_primed = true;
-  st.lookup_admission_seq = seq;
+  st.seg.lookup_admission_primed = true;
+  st.seg.lookup_admission_seq = seq;
   // seq==0 时 ReadLookupAdmission 返回的就是 kLookupAdmissionUnknown + 空摘要，
   // 原样往上报——"还不知道"是一个必须能表达的状态，绝不在这里替它猜一个。
   out->state = report.state;
@@ -2086,7 +2137,7 @@ VoiceHookLookupError VoiceHookReader::SetLookupEnabled(bool enabled) {
 }
 
 VoiceHookLookupError VoiceHookReader::SetLookupGeometryAdmission(
-    uint32_t mode, bool attached_ready, bool native_input_ready,
+    uint32_t mode, bool attached_ready, bool native_input_allowed,
     uint32_t* request_seq, uint32_t* applied_seq) {
   if (request_seq != nullptr) *request_seq = 0;
   if (applied_seq != nullptr) *applied_seq = 0;
@@ -2103,21 +2154,64 @@ VoiceHookLookupError VoiceHookReader::SetLookupGeometryAdmission(
   // live mapping. A not_open request must not arm the replacement mapping
   // before Dart has reopened its local route. Negative edges always revoke any
   // prior replayable permission immediately.
-  st.lookup_geometry_native_input_ready_desired = false;
+  st.lookup_native_input_allowed_desired = false;
   SharedHeader* h = st.header;
   const VoiceHookLookupError gate = LookupGateLocked(h, false);
   if (gate != VoiceHookLookupError::kNone) return gate;
   const uint32_t published =
       fushi_voice_hook::PublishLookupGeometryAdmission(
-          h, mode, attached_ready, native_input_ready);
+          h, mode, attached_ready, native_input_allowed);
   if (published == 0) return VoiceHookLookupError::kControlRejected;
-  st.lookup_geometry_native_input_ready_desired = native_input_ready;
+  st.lookup_native_input_allowed_desired = native_input_allowed;
   if (request_seq != nullptr) *request_seq = published;
   if (applied_seq != nullptr) {
     *applied_seq = fushi_voice_hook::AtomicLoadShared32(
         &h->lookup_geometry_admission_applied_seq);
   }
   return VoiceHookLookupError::kNone;
+}
+
+bool VoiceHookReader::TrySolveAndPublishLookupLayerOrigin(HWND game) {
+  if (game == nullptr || !IsWindow(game)) return false;
+  RECT client{};
+  if (!GetClientRect(game, &client)) return false;
+  const int32_t client_w = client.right - client.left;
+  const int32_t client_h = client.bottom - client.top;
+  if (client_w <= 0 || client_h <= 0) return false;
+
+  fushi_voice_hook::LookupLayerLineSnapshot line;
+  {
+    ReaderState& st = State();
+    std::lock_guard<std::mutex> lock(st.mutex);
+    if (st.header == nullptr) return false;
+    if (st.seg.layer_origin_solved_client_w == client_w &&
+        st.seg.layer_origin_solved_client_h == client_h) {
+      return false;  // 这个尺寸已经解过，origin 是常量，不必重解
+    }
+    line = fushi_voice_hook::ReadLookupLayerLine(st.header);
+  }
+  if (!line.valid) return false;
+
+  // 抓帧与像素分析在锁外做：它要几十毫秒，不能占着共享内存的锁。
+  const LayerOriginSolveResult solved = SolveLookupLayerOrigin(
+      game, line.left, line.top, line.right, line.bottom, line.design_w,
+      line.design_h, line.glyph_count);
+  if (!solved.ok) return false;
+
+  ReaderState& st = State();
+  std::lock_guard<std::mutex> lock(st.mutex);
+  if (st.header == nullptr) return false;
+  // 抓帧期间注入侧可能换了行；换了就这轮作废，下一拍用新行重解。
+  const fushi_voice_hook::LookupLayerLineSnapshot now =
+      fushi_voice_hook::ReadLookupLayerLine(st.header);
+  if (!now.valid || now.seq != line.seq) return false;
+  if (!fushi_voice_hook::PublishLookupLayerOrigin(st.header, solved.origin_x,
+                                                  solved.origin_y)) {
+    return false;
+  }
+  st.seg.layer_origin_solved_client_w = client_w;
+  st.seg.layer_origin_solved_client_h = client_h;
+  return true;
 }
 
 bool VoiceHookReader::PrepareLookupShieldTarget(HWND target) {
@@ -2130,12 +2224,12 @@ bool VoiceHookReader::PrepareLookupShieldTarget(HWND target) {
   std::lock_guard<std::mutex> lock(st.mutex);
   if (LookupGateLocked(st.header, false) != VoiceHookLookupError::kNone ||
       target_pid != st.pid) {
-    if (st.lookup_shield_prevalidated_target == target) {
-      st.lookup_shield_prevalidated_target = nullptr;
+    if (st.seg.lookup_shield_prevalidated_target == target) {
+      st.seg.lookup_shield_prevalidated_target = nullptr;
     }
     return false;
   }
-  st.lookup_shield_prevalidated_target = target;
+  st.seg.lookup_shield_prevalidated_target = target;
   return true;
 }
 
@@ -2149,7 +2243,7 @@ uint32_t VoiceHookReader::TryPublishLookupShieldTransaction(
   }
   ReaderState& st = State();
   std::unique_lock<std::mutex> lock(st.mutex, std::try_to_lock);
-  if (!lock.owns_lock() || st.lookup_shield_prevalidated_target != target ||
+  if (!lock.owns_lock() || st.seg.lookup_shield_prevalidated_target != target ||
       LookupGateLocked(st.header, false) != VoiceHookLookupError::kNone ||
       !AttachedGeometryProviderOwns(st.header)) {
     return 0;
@@ -2335,10 +2429,10 @@ bool VoiceHookReader::PollLookupHit(VoiceHookLookupHit* out) {
   }
   const uint64_t count =
       fushi_voice_hook::AtomicLoadPreview64(&h->lookup_hit_count);
-  if (count == st.lookup_hit_count) {
+  if (count == st.seg.lookup_hit_count) {
     return false;  // 计数没动 = 没有新命中，连槽都不必读
   }
-  // 注意：**读成功之前绝不推进 st.lookup_hit_count**。在这里先推进，一旦下面的
+  // 注意：**读成功之前绝不推进 st.seg.lookup_hit_count**。在这里先推进，一旦下面的
   // 撕裂重试用尽就等于把这条 hit 永久吞掉——下一拍会因为"计数没动"直接返回，
   // 用户点了字幕却什么都没发生，且没有任何痕迹。
   const fushi_voice_hook::LookupHitSlot* slot =
@@ -2354,10 +2448,10 @@ bool VoiceHookReader::PollLookupHit(VoiceHookLookupHit* out) {
         fushi_voice_hook::AtomicLoadPreview64(
             &h->lookup_geometry_generation);
     const uint64_t seq = fushi_voice_hook::AtomicLoadPreview64(&slot->seq);
-    if (seq == 0 || seq <= st.lookup_hit_seq) {
+    if (seq == 0 || seq <= st.seg.lookup_hit_seq) {
       // 计数动了但 seq 没前进：注入侧的重复发布，不是新命中。这条路径上推进计数
       // 是安全的（没有待读的东西），省掉后面每一拍的无效重扫。
-      st.lookup_hit_count = count;
+      st.seg.lookup_hit_count = count;
       return false;
     }
     VoiceHookLookupHit hit;
@@ -2416,8 +2510,8 @@ bool VoiceHookReader::PollLookupHit(VoiceHookLookupHit* out) {
         hit.text_generation == 0 || hit.geometry_generation == 0) {
       continue;
     }
-    st.lookup_hit_count = count;
-    st.lookup_hit_seq = seq;
+    st.seg.lookup_hit_count = count;
+    st.seg.lookup_hit_seq = seq;
     *out = std::move(hit);
     return true;
   }
@@ -2435,7 +2529,7 @@ void VoiceHookReader::PollLookupInputs(
   }
   const uint64_t count =
       fushi_voice_hook::AtomicLoadPreview64(&h->lookup_input_count);
-  if (count <= st.lookup_input_seq) {
+  if (count <= st.seg.lookup_input_seq) {
     return;
   }
   const uint32_t slots = h->lookup_input_slot_count;
@@ -2444,7 +2538,7 @@ void VoiceHookReader::PollLookupInputs(
   if (slots == 0 || base == nullptr) {
     return;
   }
-  uint64_t from = st.lookup_input_seq;
+  uint64_t from = st.seg.lookup_input_seq;
   if (count - from > slots) {
     // 落后超过一整圈：中间那段已被覆盖。**不补**——补出来的是别的事件的残骸，
     // 把它当成鼠标轨迹喂进 WebView2 只会让卡片乱跳。直接跳到还活着的最旧一条。
@@ -2469,7 +2563,7 @@ void VoiceHookReader::PollLookupInputs(
     }
     out.push_back(input);
   }
-  st.lookup_input_seq = count;
+  st.seg.lookup_input_seq = count;
 }
 
 VoiceHookLookupWriteResult VoiceHookReader::WriteLookupFrame(

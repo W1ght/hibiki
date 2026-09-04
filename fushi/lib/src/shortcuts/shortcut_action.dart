@@ -1,6 +1,8 @@
+/// 声明顺序**就是**快捷键设置页的卡片顺序（页面直接遍历 `values`，不另存一份
+/// 显示顺序表）：跨页面通用（global / universal / globalExternal）→ 各页面
+/// （home / reader / audiobook / manga / video）→ 输入设备（gamepad）→ 查词弹窗。
+/// 没有任何地方按 index 持久化或解析 scope，调整顺序只影响显示。
 enum ShortcutScope {
-  reader,
-  home,
   global,
 
   // 「返回上一级」这一件事的唯一归属地（用户拍板：Esc 一键从任何界面退一层，
@@ -21,22 +23,25 @@ enum ShortcutScope {
   // 组是唯一登记在案的有意例外。
   universal,
 
-  audiobook,
-  video,
-  // 漫画阅读器（mokuro 页图 + OCR 文本层）。与 reader 分开是因为动作集不同：漫画
-  // 没有章节/振假名/有声书，翻页是整页跨页步进而非文字流分页，且左右键要按跨页
-  // 方向（日漫默认 rtl）校正。
-  manga,
-  // TODO-700 T6：摇杆与 dpad 解耦后，dpad 四向成为「可绑触发键」，落在独立的
-  // gamepad 作用域（自成 co-active 组，不与 reader/home 等任何组冲突）。摇杆固定
-  // 做方向焦点移动、永不经注册表，故没有对应 action——只有 dpad 进这个 scope。
-  gamepad,
   // TODO-1066：桌面「app 外全局查词」的系统级触发热键作用域。此 scope 的动作
   // **不经 resolveKeyboard / 页面派发**，而是由 GlobalLookupController 直接读其
   // 绑定注册到操作系统级 hotkey_manager（默认 Ctrl+Alt+D）。它跨页面常驻、不与
   // 任何应用内页面的键盘绑定竞争，故自成独立 co-active 组，冲突检测只扫自己，
   // 绝不与 global/home 等页面 scope 互相牵连。仅桌面（Windows）有意义。
   globalExternal,
+
+  home,
+  reader,
+  audiobook,
+  // 漫画阅读器（mokuro 页图 + OCR 文本层）。与 reader 分开是因为动作集不同：漫画
+  // 没有章节/振假名/有声书，翻页是整页跨页步进而非文字流分页，且左右键要按跨页
+  // 方向（日漫默认 rtl）校正。
+  manga,
+  video,
+  // TODO-700 T6：摇杆与 dpad 解耦后，dpad 四向成为「可绑触发键」，落在独立的
+  // gamepad 作用域（自成 co-active 组，不与 reader/home 等任何组冲突）。摇杆固定
+  // 做方向焦点移动、永不经注册表，故没有对应 action——只有 dpad 进这个 scope。
+  gamepad,
 
   // 查词弹窗内部的导航动作（Yomitan 式「上/下一个词条」）。这些动作**不经
   // resolveKeyboard / 页面派发**：弹窗内容是 WebView，输入事件先到 WebView 的
@@ -113,10 +118,16 @@ enum ShortcutScope {
   /// 每个 scope 只列**真的存在解析入口**的通道，没有「多数 scope 三通道全通」这种
   /// 省事写法——那正是 7 条死通道的来源（见各 case 注释）。
   ///
-  /// 尤其注意 **mouse 通道在本 app 的唯一运行时输入源是 WebView 的 DOM `mousedown`**
-  /// （阅读器 `onPointerSeek` / 歌词 `onLyricsPointerSeek` → `resolveMouse`）。Flutter
-  /// 侧至今没有任何「PointerDownEvent → MouseBinding → 派发」的管线，故非 WebView
-  /// 宿主的 scope 一律不开 mouse。
+  /// mouse 通道现在有**两条**运行时输入源，开通道前先认准自己属于哪一条：
+  ///   · **Flutter 侧**（BUG-1995 建起、本轮推广）：`Listener.onPointerDown` →
+  ///     `resolveMouseBindingAction` → 与键盘同一个执行体。页面各挂一层只解析自己的
+  ///     scope，`universal` / `global` 由 app 根的 `wrapWithGlobalNavigation` 统一兜底
+  ///     （指针没有冒泡，两层互斥靠 `MouseBindingDispatch` 的认领，见该文件）。
+  ///   · **WebView 的 DOM `mousedown`**：阅读器 `onPointerSeek` / 歌词
+  ///     `onLyricsPointerSeek` → `resolveMouse`。原生 WebView 会吃掉指针，Flutter 的
+  ///     [Listener] 在那片区域收不到事件，故 WebView 宿主必须走这条。
+  ///
+  /// 两条都不通的 scope 才不开 mouse（dpad 四向、OS 级全局热键，见各自 case）。
   Set<ShortcutChannel> get channels {
     switch (this) {
       // 阅读器与有声书是 WebView 宿主：键盘/手柄走页面派发，鼠标侧键经 WebView 的
@@ -128,30 +139,57 @@ enum ShortcutScope {
           ShortcutChannel.gamepad,
           ShortcutChannel.mouse,
         };
-      // 首页 / 全局 / 视频页：键盘与手柄都有解析入口（home_page 的 resolveKeyboard、
-      // global_navigation、video_player_shortcuts 的 keyboardBindings、各页
-      // GamepadButtonIntent），但**鼠标没有**——这三个页面都是纯 Flutter 表面，没有
-      // WebView 接管 mousedown，也没有任何 Flutter 侧鼠标绑定派发管线。曾经开着
-      // mouse 通道纯属与 reader/audiobook 共用一个 case 分支的连带产物：设置页给出
-      // 「添加鼠标按键」入口，绑上去永不触发。要重开必须先真的建一条
-      // PointerDownEvent → MouseBinding → 派发的链路并验证。
+      // 首页 / 全局：三通道齐全。
+      //   · 键盘/手柄：home_page 的 resolveKeyboard/resolveGamepad + global_navigation
+      //     + 各页 GamepadButtonIntent；
+      //   · 鼠标：home 由 home_page 的 `_handleHomePointerDown` 解析（只解析 home
+      //     自己的 scope），global 由 app 根 `_handleGlobalPointerDown` 兜底解析并执行
+      //     （全屏切换 / 整页滚动，与手柄 LB/RB 同一条 PageScrollRegistry 路径）。
+      //
+      // 这两个通道此前是关着的，注释写「纯 Flutter 表面没有 PointerDownEvent →
+      // MouseBinding 的管线」——那条管线现在真的建起来了（先 BUG-1995 在视频页，本轮
+      // 推广到首页与 app 根），故销账重开。开着而没有派发点正是本文件反复警告的
+      // 「设置里能配、按了没反应」，守卫 `shortcut_channel_wiring_guard_test` 盯着。
       case home:
       case global:
+        return const <ShortcutChannel>{
+          ShortcutChannel.keyboard,
+          ShortcutChannel.gamepad,
+          ShortcutChannel.mouse,
+        };
+      // 视频页：BUG-1995。用户报「关闭词典快捷键小说鼠标侧键可以，视频不行」——根因是
+      // 这里没开 mouse 通道，导致**设置页不给「添加鼠标按键」入口，用户压根绑不上**。
+      //
+      // ⚠️ 注意通道开关的真实作用域：它只管**设置页的录入入口**。已经存在的鼠标绑定
+      // 一直是可派发的——词典弹窗表面那条路（`dictionaryPopupInputSpecFor` →
+      // `resolveDictionaryPopupInputToken`）读 `bindingsFor` / `resolveMouse`，
+      // **不查本 getter**。所以「通道关着」≠「该 scope 的鼠标绑定不生效」，别再据此
+      // 推出「这些绑定是死的、可以清掉」（那条 v10→v11 迁移正是这么错的，已撤销）。
+      //
+      // 配套建出的 Flutter 侧派发管线（`video_fushi_page.dart` 的
+      // `_handleVideoPointerDown`）只覆盖**浮层不可见**的表面：浮层可见时根 Overlay 的
+      // barrier 会吃掉指针事件，那半边由弹窗表面自己回传，见该方法的文档。
       case video:
         return const <ShortcutChannel>{
           ShortcutChannel.keyboard,
           ShortcutChannel.gamepad,
+          ShortcutChannel.mouse,
         };
-      // universal（「返回上一级」）：键盘与手柄都有解析入口——每个表面在自身 scope
-      // 未命中后按 `resolveKeyboard/resolveGamepad(scope: universal)` 兜底
-      // （reader caret.part / manga page / video page / global_navigation 四处）。
-      // 鼠标不开：Flutter 侧至今没有 PointerDownEvent → MouseBinding 的派发管线，
-      // 而弹窗桥那条鼠标路只在**词典弹窗表面**成立、不是全表面能力（开了就是
-      // 「设置里能配、在正文上按了没反应」）。
+      // universal（「返回上一级」）：三通道齐全。
+      //   · 键盘/手柄：每个表面在自身 scope 未命中后按
+      //     `resolveKeyboard/resolveGamepad(scope: universal)` 兜底（reader caret.part /
+      //     manga page / video page / global_navigation 四处）；
+      //   · 鼠标：app 根 `_handleGlobalPointerDown` 的兜底阶梯首段就是 universal，落地
+      //     到与键盘同一个 `Navigator.maybePop()`。页面层刻意**不**各自解析它——鼠标
+      //     没有冒泡，各页再解析一遍就会与根兜底对同一次按下各派发一次（一键退两级）。
+      //
+      // 「返回上一级」绑鼠标侧键是本通道最常见的用法（用户复诉的正是它），此前只有
+      // 词典弹窗表面那条路能用，正文上按无反应。现在全表面统一。
       case universal:
         return const <ShortcutChannel>{
           ShortcutChannel.keyboard,
           ShortcutChannel.gamepad,
+          ShortcutChannel.mouse,
         };
       // dpad 四向：唯一消费者是 GamepadService._dispatchButton，按 `GamepadButton`
       // 做 `resolveGamepad(scope: gamepad)`，且结果只被映射成 TraversalDirection。
@@ -170,12 +208,18 @@ enum ShortcutScope {
       // 漫画页：键盘走 `_resolveMangaKeyAction`（resolveKeyboard），手柄走
       // `_handleGamepadButton`（resolveGamepad manga → universal，桌面轮询的
       // GamepadButtonIntent 与 Android gameButton* 键事件汇合到同一入口，与
-      // reader 同构）。滚轮翻页是硬编码的 `wheelInputAction`（不查注册表），
-      // 鼠标依旧没有解析入口，不开。
+      // reader 同构）。滚轮翻页是硬编码的 `wheelInputAction`（不查注册表）。
+      //
+      // 鼠标本轮接上，**两条腿**——因为本页正文是原生 WebView，指针归谁按平台不同
+      // （见 `hostOwnsWebViewPointerInput`）：指针归宿主时走页面根 [Listener] 的
+      // `_handleMangaPointerDown`；归 WebView 时走页内 JS 鼠标桥
+      // （`onMangaMouseButton`）回传 `_handleNativeNavigationKey`。两条互斥安装，
+      // 且都汇进与键盘/手柄同一个 `_executeReaderInputAction`。
       case manga:
         return const <ShortcutChannel>{
           ShortcutChannel.keyboard,
           ShortcutChannel.gamepad,
+          ShortcutChannel.mouse,
         };
       // 查词弹窗：滚轮（上/下一个词条）+ 键盘（制卡）+ 手柄。滚轮/键盘不经
       // resolveKeyboard —— 绑定由 popup_settings_injection 序列化后注入给 popup.js，
@@ -280,6 +324,21 @@ enum ShortcutAction {
   // （无桌面窗）。默认键盘 F11。
   globalToggleFullscreen(ShortcutScope.global, 'global_toggle_fullscreen'),
 
+  // 「唤出上下文菜单（右键菜单）」的**按钮归属声明**。它不进任何执行回调表——菜单的
+  // 执行体分散在各卡片 / 各媒体表面自己的 `showMenu`，本动作只回答一件事：这次按下的
+  // 鼠标键，在当前表面该不该弹菜单（判据收在 `context_menu_trigger.dart`）。
+  //
+  // 为什么它必须进注册表：在此之前「右键」是二十余处 `GestureDetector.onSecondaryTap*`
+  // **硬绑死**的，与鼠标绑定通道是两条互不知情的路——用户把任何动作绑到右键，一次按下
+  // 会同时触发该动作**和**右键菜单。进注册表以后，右键这个物理按钮才第一次有唯一的归属
+  // 仲裁者：解析阶梯里页面 scope 先命中，命中别的动作就说明右键被派了别的活，菜单自动
+  // 让位——用户**不必**先去解绑菜单（"快捷键可以共用，不强制取消另一个"）。
+  //
+  // scope 选 global 而不是 universal：universal 有「只装 globalBack 一个配置项」的产品
+  // 守卫（`universal_back_test`）。global 同样落在每条鼠标解析阶梯的末尾兜底，语义等价。
+  // 默认绑鼠标右键（DOM button 2）= 与改造前逐字一致的行为。
+  globalContextMenu(ShortcutScope.global, 'global_context_menu'),
+
   // Audiobook（上一句在前，与视频组「上/下一句字幕」顺序一致）
   audiobookPlayPause(ShortcutScope.audiobook, 'audiobook_play_pause'),
   audiobookPrevSentence(ShortcutScope.audiobook, 'audiobook_prev_sentence'),
@@ -299,6 +358,13 @@ enum ShortcutAction {
   // 播放控制 → 字幕/章节跳转 → 字幕显示 → 字幕对轴 → 音量 → 画面/杂项
   // 分簇排列，重要动作靠前；重排只影响展示，持久化走字符串 key、与声明序无关。
   // 「逐级退出」不在本组——它是全 app 共用的 [globalBack]（universal scope）。
+
+  // 「只关词典、绝不做别的」的可选专用动作（**默认无绑定**，与 [readerDismissDict] /
+  // [mangaDismissDict] 同形）。BUG-1995：没有它的话，想用鼠标侧键关词典就只能把侧键
+  // 绑到某个**真实**的视频动作（「下一句」之类），浮层不可见时那个动作会照常执行——
+  // reader 之所以干净，正是因为它有这个专用空绑定动作。
+  // 退出视频仍走 universal 的 [globalBack] 阶梯（浮层可见先关浮层，否则退出）。
+  videoDismissDict(ShortcutScope.video, 'video_dismiss_dict'),
 
   // 播放控制
   videoTogglePlayPause(ShortcutScope.video, 'video_toggle_play_pause'),
@@ -473,6 +539,25 @@ enum ShortcutAction {
 
   final ShortcutScope scope;
   final String key;
+
+  /// 这个动作**真正有派发点**的通道。
+  ///
+  /// 默认等于 `scope.channels`——绝大多数动作的通道能力就是它所在 scope 的能力。
+  /// 但通道能力是按 scope 声明的，个别动作会因此继承到自己根本没有消费者的通道，
+  /// 于是出现本文件反复警告的那种状态：**设置里能配、按下去什么都不发生**。
+  /// 那比压根没有这个选项更糟——用户会以为是自己配错了。
+  ///
+  /// 这里是**唯一**的收窄处：设置页读它而不是 `scope.channels`，别在对话框里写特例。
+  Set<ShortcutChannel> get channels => switch (this) {
+        // 右键菜单只有鼠标一条路：`ContextMenuTrigger` 只读鼠标通道，键盘兜底
+        // （`global_navigation.dart` 的 `_handleGlobalKey`）只认 globalToggleFullscreen、
+        // 其余一律 ignored，手柄同理。它继承 global 的 keyboard+gamepad 就是两条死通道，
+        // 而 Windows 键盘上有 Menu 键，用户几乎必然会去试着绑一下。
+        ShortcutAction.globalContextMenu => const <ShortcutChannel>{
+            ShortcutChannel.mouse,
+          },
+        _ => scope.channels,
+      };
 
   static ShortcutAction? fromKey(String key) {
     for (final action in values) {

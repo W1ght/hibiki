@@ -7,8 +7,11 @@ import 'package:flutter/services.dart' show LogicalKeyboardKey;
 import 'package:fushi_core/fushi_core.dart' show FushiDatabase;
 import 'package:path/path.dart' as p;
 import 'package:share_plus/share_plus.dart';
+import 'package:fushi/src/shortcuts/context_menu_trigger.dart';
 import 'package:fushi/src/utils/misc/fushi_share.dart';
 import 'package:fushi/src/epub/epub_book.dart' show fallbackMimeType;
+import 'package:fushi/src/media/collections/shelf_sort.dart'
+    show naturalCompare;
 import 'package:fushi/src/media/media_extensions.dart';
 import 'package:fushi/src/media/sources/reader_fushi_source.dart'
     show ReaderFushiSource;
@@ -138,11 +141,14 @@ class _IllustrationsViewerPageState extends State<IllustrationsViewerPage> {
         return;
       }
 
+      // listSync 不保证顺序（NTFS 按名字、ext4 是目录哈希序），而这份清单就是
+      // 插图网格的展示顺序。自然序才能把 2.jpg 排在 10.jpg 前面。
       final List<File> imageFiles =
           dir.listSync(recursive: true).whereType<File>().where((f) {
         final String ext = p.extension(f.path).toLowerCase();
         return _imageExtensions.contains(ext);
-      }).toList();
+      }).toList()
+            ..sort((File a, File b) => naturalCompare(a.path, b.path));
 
       for (final File file in imageFiles) {
         if (!mounted) {
@@ -582,14 +588,16 @@ class _FullScreenGalleryState extends State<_FullScreenGallery> {
                   child: Center(child: image),
                 );
                 // Windows 右键复制 / 移动端长按分享：仅当前页可操作。
-                return GestureDetector(
-                  behavior: HitTestBehavior.translucent,
-                  onSecondaryTapDown: isWindowsPlatform
-                      ? (TapDownDetails details) =>
-                          _showImageContextMenu(details.globalPosition)
+                return ContextMenuTrigger(
+                  // 右键菜单改由绑定表决定唤出键（默认仍是右键）；右键被别的动作占用时自动让位。
+                  onInvoke: isWindowsPlatform
+                      ? (Offset position) => _showImageContextMenu(position)
                       : null,
-                  onLongPress: isWindowsPlatform ? null : _shareCurrentImage,
-                  child: viewer,
+                  child: GestureDetector(
+                    behavior: HitTestBehavior.translucent,
+                    onLongPress: isWindowsPlatform ? null : _shareCurrentImage,
+                    child: viewer,
+                  ),
                 );
               },
             ),

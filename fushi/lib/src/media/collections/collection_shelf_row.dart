@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fushi_core/fushi_core.dart';
 
+import 'package:fushi/src/shortcuts/context_menu_trigger.dart';
 import 'package:fushi/src/focus/fushi_focus_controller.dart';
 import 'package:fushi/src/focus/fushi_focus_target.dart';
 import 'package:fushi/src/media/collections/collection_drag.dart';
@@ -153,17 +154,22 @@ class _CollectionShelfRowState extends State<CollectionShelfRow> {
             // 桌面默认 MaterialScrollBehavior 的 dragDevices 不含鼠标——横排行用
             // 鼠标左右拖会毫无反应（用户实报）。共享件统一放开 mouse/trackpad/
             // stylus 拖动；触屏行为不变。
-            child: HorizontalDragScrollable(
-              child: ListView.separated(
+            // [SectionSwipeCascade]：行滚到边缘后继续拖，交给库页壳的
+            // [SectionSwipeNavigator] 级联切分区；壳外（独立 push 的页面）无壳
+            // 层接收，标记自然无效。
+            child: SectionSwipeCascade(
+              child: HorizontalDragScrollable(
+                child: ListView.separated(
                 controller: _controller,
                 scrollDirection: Axis.horizontal,
                 physics: desktopAwareScrollPhysics(),
                 itemCount: widget.itemCount,
                 separatorBuilder: (BuildContext _, int __) =>
                     SizedBox(width: widget.itemGap),
-                itemBuilder: (BuildContext context, int i) => SizedBox(
-                  width: widget.itemWidth,
-                  child: widget.itemBuilder(context, i),
+                  itemBuilder: (BuildContext context, int i) => SizedBox(
+                    width: widget.itemWidth,
+                    child: widget.itemBuilder(context, i),
+                  ),
                 ),
               ),
             ),
@@ -208,80 +214,82 @@ class _CollectionShelfRowState extends State<CollectionShelfRow> {
     // 行头长按/右键 = 合集上下文菜单（多选态压制，行头点击专注整选）。
     final VoidCallback? contextMenu =
         selectionMode ? null : widget.onContextMenu;
-    final Widget header = InkWell(
-      canRequestFocus: false,
-      borderRadius: tokens.radii.controlRadius,
-      onTap: headerTap,
-      onLongPress: contextMenu,
-      onSecondaryTap: contextMenu,
-      child: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: tokens.spacing.gap / 2,
-          vertical: tokens.spacing.gap / 2,
-        ),
-        child: Row(
-          children: <Widget>[
-            // 多选态：行头最左挂整选勾选框（选=选中整个合集），替代折叠 chevron。
-            if (selectionCheckbox != null)
-              Padding(
-                padding: EdgeInsets.only(right: tokens.spacing.gap / 2),
-                child: selectionCheckbox,
-              )
-            // 折叠开关：标题左侧旋转 chevron（展开朝下、折叠朝右）。紧凑尺寸不
-            // 抬高行头；ExcludeFocus——手柄/键盘焦点仍落整行头（Enter=进详情），
-            // 折叠是鼠标/触屏轻交互，不进焦点遍历序。
-            else if (widget.onToggleCollapsed != null)
-              ExcludeFocus(
-                child: IconButton(
-                  onPressed: widget.onToggleCollapsed,
-                  tooltip: widget.collapsed
-                      ? t.collection_expand
-                      : t.collection_collapse,
-                  padding: EdgeInsets.zero,
-                  constraints:
-                      const BoxConstraints.tightFor(width: 32, height: 32),
-                  icon: AnimatedRotation(
-                    turns: widget.collapsed ? -0.25 : 0,
-                    duration: const Duration(milliseconds: 150),
-                    child: Icon(
-                      Icons.expand_more,
-                      size: 20,
-                      color: tokens.surfaces.onVariant,
-                    ),
-                  ),
-                ),
-              ),
-            // Expanded（tight）吃满剩余宽，尾随「查看全部+chevron」才真正贴最右
-            //（旧写法 Flexible(loose)+Spacer 按 flex 份额均分，标题短时尾随件
-            // 停在行中间——用户实报）。
-            Expanded(
-              child: Row(
-                children: <Widget>[
-                  Flexible(
-                    child: Text(
-                      widget.title,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: tokens.type.listTitle.copyWith(
-                        fontWeight: FontWeight.w600,
+    final Widget header = ContextMenuTrigger(
+      onInvoke: contextMenuInvoker(contextMenu),
+      child: InkWell(
+        canRequestFocus: false,
+        borderRadius: tokens.radii.controlRadius,
+        onTap: headerTap,
+        onLongPress: contextMenu,
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: tokens.spacing.gap / 2,
+            vertical: tokens.spacing.gap / 2,
+          ),
+          child: Row(
+            children: <Widget>[
+              // 多选态：行头最左挂整选勾选框（选=选中整个合集），替代折叠 chevron。
+              if (selectionCheckbox != null)
+                Padding(
+                  padding: EdgeInsets.only(right: tokens.spacing.gap / 2),
+                  child: selectionCheckbox,
+                )
+              // 折叠开关：标题左侧旋转 chevron（展开朝下、折叠朝右）。紧凑尺寸不
+              // 抬高行头；ExcludeFocus——手柄/键盘焦点仍落整行头（Enter=进详情），
+              // 折叠是鼠标/触屏轻交互，不进焦点遍历序。
+              else if (widget.onToggleCollapsed != null)
+                ExcludeFocus(
+                  child: IconButton(
+                    onPressed: widget.onToggleCollapsed,
+                    tooltip: widget.collapsed
+                        ? t.collection_expand
+                        : t.collection_collapse,
+                    padding: EdgeInsets.zero,
+                    constraints:
+                        const BoxConstraints.tightFor(width: 32, height: 32),
+                    icon: AnimatedRotation(
+                      turns: widget.collapsed ? -0.25 : 0,
+                      duration: const Duration(milliseconds: 150),
+                      child: Icon(
+                        Icons.expand_more,
+                        size: 20,
+                        color: tokens.surfaces.onVariant,
                       ),
                     ),
                   ),
-                  SizedBox(width: tokens.spacing.gap),
-                  Text(widget.countLabel, style: tokens.type.metadata),
-                ],
+                ),
+              // Expanded（tight）吃满剩余宽，尾随「查看全部+chevron」才真正贴最右
+              //（旧写法 Flexible(loose)+Spacer 按 flex 份额均分，标题短时尾随件
+              // 停在行中间——用户实报）。
+              Expanded(
+                child: Row(
+                  children: <Widget>[
+                    Flexible(
+                      child: Text(
+                        widget.title,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: tokens.type.listTitle.copyWith(
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: tokens.spacing.gap),
+                    Text(widget.countLabel, style: tokens.type.metadata),
+                  ],
+                ),
               ),
-            ),
-            // 多选态隐藏「查看全部」尾随件（行头点击整选而非导航）。
-            if (!selectionMode) ...<Widget>[
-              Text(t.collection_view_all, style: tokens.type.metadata),
-              Icon(
-                Icons.chevron_right,
-                size: 18,
-                color: tokens.surfaces.onVariant,
-              ),
+              // 多选态隐藏「查看全部」尾随件（行头点击整选而非导航）。
+              if (!selectionMode) ...<Widget>[
+                Text(t.collection_view_all, style: tokens.type.metadata),
+                Icon(
+                  Icons.chevron_right,
+                  size: 18,
+                  color: tokens.surfaces.onVariant,
+                ),
+              ],
             ],
-          ],
+          ),
         ),
       ),
     );

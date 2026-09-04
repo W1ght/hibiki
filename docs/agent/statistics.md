@@ -11,15 +11,18 @@
 - 只有一个时钟 `StudyClock`（`packages/fushi_audio/lib/src/audiobook/study_clock.dart`）：断档（120s）/ 活跃态（视频 = isPlaying）/ 空闲门（阅读面，默认 10 分钟，设置项 `reading.stats_idle_timeout_minutes`）三道守卫，段不跨小时边界，`stop()` 结构性幂等（清引用在首个 await 之前）。
 - 页面**不许**持有 `_sessionReadingMs` / `_sessionCharsRead` 之类会话累计器；字数 / 页数经 `clock.addChars` / `addPages` 记到当前段；用户输入经 `clock.touch()` 喂空闲门（EPUB `_refreshProgressFromScroll` / PDF `_onPageChanged` / 漫画 `_armPageDwellCount`）。
 - 阅读面切屏（`paused` / `inactive`）必须 `stop()`、`resumed` 必须 `start()`；视频面 `inactive` **不**停（用户拍板：切走仍在播照常计时）。
+- **视频面口径 = 只计首次覆盖（BUG-2108，用户拍板「重听不要记录在内」）**：视频面时钟走 `StudyAccrual.explicit`（tick 不按墙钟计，只裁决段生命周期），时长由 `VideoWatchTracker` 推入——每秒 + 每次播放源通知采样位置，连续播放推进（`isContinuousPlaybackAdvance`）才把片内区间并入该视频的 `WatchCoverage`（`fushi/lib/src/media/video/watch_coverage.dart`，已看过的区间并集），只有**新增**部分按比例折成墙钟时间经 `clock.addActiveMs` 记账；回放上一句 / 拖回 / 向前 seek 跳过 / 次日重看一律不计，单部视频累计 ≤ 片长。并集按 `video_watch_coverage_<bookUid>` 偏好持久化（`videoWatchCoveragePrefKey`），删该视频统计 / 清空全部视频统计时连带清（= 当没看过）。本次会话前已整段看过的 cue 字幕字数同律不计。不要再给视频面传 `isActive`（构造期断言）。
 - `upsertStudySegment` 只有两个写入方：`StudyClock` 与 galgame hook 的 chars-only 段（`gal_hook_session_controller.dart`）。游玩时长只写 `galgame_sessions`。
 - legacy 表的 `set*` OVERWRITE 写入口只许 `lib/src/sync/**` 调（旧端 wire 家族落地）。`add*` 累加 DAO 已删，不得复活。
 
 ## 读取面
 
 - 统计展示只经 `loadStatFacts`（`fushi/lib/src/stats/stat_facts.dart`）→ 统一事实面 `StatFact`（日面 / 小时面分列，legacy 行与段同形，**不许**把两面并进同一列表求和）。不许直读 legacy 表 / `activity_events` 做统计（豁免：`stat_facts.dart`、`lib/src/sync/**`、`home_video_page.dart` 的最近观看时刻）。
-- 窗口阈值只在 `StatWindow`（`stat_window.dart`）：近 7 天恰 7 天、近 30 天恰 30 天、上周窗口同长不重叠。页面不许自己 `now - 7d`。
+- 窗口阈值只在 `StatWindow`（`stat_window.dart`）：近 7 天恰 7 天、近 30 天恰 30 天、上周窗口同长不重叠。页面不许自己 `now - 7d`。守卫 ④ 是本域唯一按**命名清单** `kStatPages` 扫描的（其余全树枚举），所以新增统计页漏登记时目录枚举守卫和定向测试都挑不到——④a 自校验兜底：**用了 `StatWindow` 就必须在 `kStatPages` 里**，漏登记直接红。
 - 活动流唯一数据源 `StatFacts.activityRows` = legacy 活动行 ∪ `segmentsAsActivityRows` ∪ `galgameSessionsAsActivityRows`；首页、游戏首页、互联 host 的远端活动端点都吃它。
-- 首页每日目标分子与阅读统计页共用 `readingGoalCharsForDay`（只算 book+manga）。
+- 首页每日目标分子与阅读统计页目标卡共用 `studyGoalCharsForDay`（BUG-1993）：函数只按 `dateKey` 求和，**域由调用方传的行集决定**。目标是「每日学习目标」——两处都传完整日面（`StatFacts.daily`，阅读 + 视频字幕 + 游戏 hook），与热力图「全部」档同覆盖面；只算某一域时传对应切片（如 `dailyBooks`，统计页概览「今日字数」与 CPH 仍是阅读域）。v92 曾把分子硬编码 `isBook`，纯视频/游戏日目标恒 0、与同一张卡上方的热力图对不上。偏好键 `readingGoalDailyChars` / `readingGoalWeeklyChars` 冻结不动，语义已是学习目标。守卫 ⑧ 同时钉函数名与这两处实参。
+- 统计上屏入口收敛到首页 dashboard 的统计中心（`statistics_center_page.dart`，总览 + 阅读/视频/游戏三 tab）。三个统计页保留独立页形态，另经 `embedded: true` 走 `buildEmbeddedStatTab`（`stat_shared.dart`）嵌进 tab——**页头动作必须同时喂给两条渲染路径**，只改独立页会让 tab 里的入口静默丢失。书架/视频/游戏页头不再各挂统计入口。
+- 时段明细统一走 `showStatPeriodDetailSheet`（`stat_period_detail_sheet.dart`），它只吃调用方传进来的 `StatFact`、不碰 DB。**只许传日面切片**（`facts.daily` 系）：日面与小时面共享同一批 `StatFact` 实例，`hour` 不能当判别位，sheet 自己无法拒绝小时面，传错即双计。
 
 ## 同步（wire v2）
 

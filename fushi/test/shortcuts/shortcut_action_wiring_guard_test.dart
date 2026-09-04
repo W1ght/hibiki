@@ -44,6 +44,12 @@ void main() {
       'lib/src/pages/implementations/reader_fushi/caret.part.dart',
       'lib/src/pages/implementations/home_page.dart',
       'lib/src/media/video/video_player_shortcuts.dart',
+      // BUG-1995：视频页的**鼠标绑定通道**执行体（`_handleVideoPointerDown`）。
+      // 它不在 video_player_shortcuts.dart 里——那份是键盘/手柄的纯函数判决表，
+      // 而鼠标是位置型输入，收在页面根 Listener 上（与 reader 把鼠标收在
+      // webview.part.dart 而非 caret.part.dart 同因）。videoDismissDict 的唯一
+      // 派发点就在这里。
+      'lib/src/pages/implementations/video_fushi_page.dart',
       'lib/src/media/audiobook/pointer_seek.dart',
       'lib/src/shortcuts/gamepad_service.dart',
       'lib/src/shortcuts/reader_space_override.dart',
@@ -67,6 +73,11 @@ void main() {
       // fushiFocusDictionaryEntryMove。它与 globalExternalLookup 同类——不经页面
       // _executeShortcutAction 派发，但绝不是死项。
       'lib/src/pages/implementations/popup_settings_injection.dart',
+      // globalContextMenu（「唤出右键菜单」）的判据与触发口。它同样不经页面
+      // _executeShortcutAction 派发——菜单的执行体分散在各卡片 / 各媒体表面自己的
+      // showMenu，本文件回答的是「这次按下的鼠标键该不该弹菜单」，是那二十余处
+      // 入口共用的唯一消费者。与 globalExternalLookup / popupNextEntry 同类。
+      'lib/src/shortcuts/context_menu_trigger.dart',
     ];
 
     final StringBuffer corpus = StringBuffer();

@@ -310,7 +310,8 @@ class ImmersionMiningEngine {
     //
     // 抽字幕区间动图（GIF）到临时文件；无 src / 无区间 → null。
     Future<String?> tryGif() async {
-      if (src == null || !req.hasRange) return null;
+      // `src != null` 已经把「有可裁的源」判掉了，这里只需再问窗几何。
+      if (src == null || !req.hasClipWindow) return null;
       // 首选用户所选格式、失败降级 GIF 的那条链（含每次尝试重新夹取 fps/宽度/扩展名）
       // 收在 [extractAnimatedClipWithFallback] 里，与 Netflix 录制片段共用同一份实现。
       // GIF 也失败才轮到下面既有的单帧降级阶梯。
@@ -398,6 +399,10 @@ class ImmersionMiningEngine {
     if (coverPath == null) {
       switch (req.imageMode) {
         case VideoMiningImageMode.gif:
+        // videoClip 只对 galgame 场景卡有意义（协调器在进引擎前已把 mp4 放进
+        // providedCoverBytes，不会落到这里）；视频源若带着它进来，cue 动图就是
+        // 「一段画面」的既有答案，按 GIF 阶梯走。
+        case VideoMiningImageMode.videoClip:
           // 现状阶梯：GIF 主 → 起点单帧降级 → 当前帧兜底（逐字等价于旧三段 if）。
           coverPath = await tryGif();
           if (coverPath == null) {
@@ -463,6 +468,14 @@ class ImmersionMiningEngine {
       source: req.source,
       bookTitleTag: req.bookTitleTag,
       collectionTag: req.collectionTag,
+      // 片段时间窗（渲染 `{clip-timestamp}`）：原样透传，有效性不在这里判——
+      // 唯一判据在 [AnkiHandlebarRenderer.formatClipTimestamp]（`end > start`，
+      // 与 [ImmersionMiningRequest.hasClipWindow] 同语义——**不是** [hasRange]：后者还
+      // 要求有可裁的源，Netflix 前台正是「有窗、无源」）。走本引擎但没有时间轴的来源
+      // （galgame）两端恒是 0，
+      // 到那里自然渲染成空串；书籍根本不进本引擎，见 AnkiMiningContext 的字段注释。
+      clipStartMs: req.clipStartMs,
+      clipEndMs: req.clipEndMs,
     );
 
     final MineOutcome outcome = req.updateNoteId == null
@@ -497,7 +510,8 @@ class ImmersionMiningEngine {
               'immersion_audio.${immersionMiningAudioExtension()}',
           req.providedAudioBytes!);
     }
-    if (audioSrc == null || !req.hasRange) return null;
+    // 同 tryGif：`audioSrc != null` 已判源，这里只问窗几何。
+    if (audioSrc == null || !req.hasClipWindow) return null;
 
     // BUG-1004：互联 host（LAN Hibiki 库）远端流优先走 **host 端裁**——host 用本地文件裁好
     // 句子音频再经已鉴权/钉扎的下载通道回传，client 全程不用 ffmpeg 抓远端流，从根上绕开
@@ -525,7 +539,11 @@ class ImmersionMiningEngine {
     // 只下小段、效率更高）不走物化、保持不变。物化失败回退直接对 URL 裁（best-effort，不劣于旧）。
     String cutInput = audioSrc;
     String? materialized;
-    if (req.audioSource != null && _isRemoteHttp(req.audioSource!)) {
+    // 判据是「这个源需不需要物化」而不是「有没有分离音轨」——见
+    // [audioSourceNeedsRangeMaterialization]：`range=` 查询参数分片是 googlevideo 专属绕行，
+    // 别的站点的分离音轨（bilibili 的 audio-only m4s 等）走进来会把同一个流反复下满
+    // maxBytes；它们直接对 URL `-ss` 裁即可（实测 3 秒片段约 1 秒出）。
+    if (audioSourceNeedsRangeMaterialization(req.audioSource)) {
       materialized = await _materialize(
         audioUrl: req.audioSource!,
         outputPath: '$tempDir/immersion_audio_src',

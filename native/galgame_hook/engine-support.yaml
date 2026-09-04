@@ -234,16 +234,16 @@
         "engine_id": "hunex_gge",
         "geometry": {
           "status": "implemented_unverified",
-          "providers": ["attached_calibrated"],
-          "evidence": "The calibrated fallback is implemented. The HUNEX hydrated-image scanner requires unique executable-section renderer/input anchors plus callgraph/import validation, but remains observation-only and publishes no production provider or hit."
+          "providers": ["engine_exact_layout", "attached_calibrated"],
+          "evidence": "The calibrated fallback and a fail-closed exact provider are implemented. The HUNEX hydrated-image scanner requires unique executable-section renderer/input/projection anchors plus callgraph, unwind and imported-API validation before it can publish geometry. The original WoH session has not yet produced a complete glyph-to-client projection or lookup/card E2E. The engine_exact_layout entry above is a deliberate 2026-08-31 graduation from observation-only; only the geometry provider layer graduated, and the resource-capture and pairing gates stay not_verified."
         },
         "verified_shield": {
           "status": "implemented_unverified",
-          "evidence": "Generic shielding is present while the engine-private trace is observation-only; the real-build transaction gate has not run."
+          "evidence": "Generic shielding plus HUNEX semantic-submit ownership are implemented, but the real-build click, Shift and popup transaction gates have not run."
         },
         "risky_left_click": {
           "status": "implemented_unverified",
-          "evidence": "Per-executable risk gating is implemented; no measured real-build click-leak rate is recorded."
+          "evidence": "Per-executable risk gating and fail-closed native-input admission are implemented; no measured real-build click-leak rate is recorded."
         }
       },
       {
@@ -251,7 +251,7 @@
         "geometry": {
           "status": "implemented_unverified",
           "providers": ["engine_exact_layout", "attached_calibrated"],
-          "evidence": "The measured SHA-256 row is a consistency check only. Known and unknown hashes traverse populated, mutually corroborated draw/vtable/DirectInput signatures across all executable sections, PE exception-directory function bounds, decoded module-relative targets and live vtable/COM ABI gates. Zero/multiple intersections, layout/codegen mismatches and structure faults fail closed; a second executable build and lookup/card E2E are not recorded."
+          "evidence": "The measured SHA-256 row is a consistency check only. Known and unknown hashes traverse populated, mutually corroborated draw/vtable/DirectInput signatures across all executable sections, PE exception-directory function bounds, decoded module-relative targets and live vtable/COM ABI gates. Zero/multiple intersections, layout/codegen mismatches and structure faults fail closed. 2026-09-03 original-path E2E on the measured Steam x64 build (SHA-256 75A83A0E…C404B9D8, Fushi 2.2.4-debug.13075 launching sgre_steam.exe, injected helper, IPC v21): hover+Shift lookups (いて/サイ) and a bare left click on 話 each published a hit, presented the direct galCard inside the game and the game line did not advance; one word card was written (Sentence エル・プ<b>サイ</b>・コングルゥ, 3.19 s paired xWMA voice re-encoded to AAC, 480×270 AVIF animation). Evidence grade for the audio stops at captured: neither a byte-hash comparison against the source voice_body.bin entry nor a pure-voice classification was recorded, so hash_verified and voice_classified are NOT claimed and the run does not satisfy the per-sentence original-resource claim in full. Only this one build is covered."
         },
         "verified_shield": {
           "status": "implemented_unverified",
@@ -259,7 +259,7 @@
         },
         "risky_left_click": {
           "status": "implemented_unverified",
-          "evidence": "Per-executable risk gating is implemented; no measured real-build click-leak rate is recorded."
+          "evidence": "Per-executable risk gating is implemented. 2026-09-03 measurement on the measured build: 8 popup-outside quick clicks (60 ms down/up) after Shift or click lookups, 7 were swallowed by the WH_MOUSE_LL + DirectInput shield pair with no line advance; the first click right after the mid-session risk acceptance (needsRiskAcceptance → activeNative) leaked and advanced the line once, and the leak did not reproduce on a fresh session whose acceptance was restored from memory. Too few transactions for a rate; the 1,000-transaction gate has not run."
         }
       }
     ]
@@ -630,6 +630,146 @@
       ],
       "test_paths": [
         "tests/reallive_adapter_test.cpp"
+      ]
+    },
+    {
+      "id": "cmvs",
+      "display_name": "CMVS (Purple Software)",
+      "aliases": [
+        "CMVS",
+        "Purple Software",
+        "パープルソフトウェア"
+      ],
+      "family": {
+        "id": "cmvs",
+        "relation": "Purple Software in-house engine; no verified sibling"
+      },
+      "detection": {
+        "executable_names": {
+          "values": [
+            "cmvs32.exe",
+            "cmvs64.exe"
+          ],
+          "evidence": {
+            "kind": "real_sample",
+            "reference": "Purple Software クロノクロック 体験版v2 (2015-03-20) ships both cmvs32.exe (x86) and cmvs64.exe (x64); static probe 2026-09-04. Retail builds may rename the exe, so names are catalogue only and the adapter matches on cmvs.cfg + CPZ archives instead"
+          }
+        },
+        "pe_architectures": {
+          "values": [
+            "x86",
+            "x64"
+          ],
+          "evidence": {
+            "kind": "real_sample",
+            "reference": "cmvs32.exe machine 0x14c, cmvs64.exe machine 0x8664 (same trial package)"
+          }
+        },
+        "directory_files_all": {
+          "values": [
+            "cmvs.cfg",
+            "data/pack/start.ps3"
+          ],
+          "evidence": {
+            "kind": "real_sample",
+            "reference": "cmvs.cfg opens with [CMVS_SYSTEM_MAIN] and SCRIPT_INIT_PATH=data\\pack\\; data/pack/start.ps3 (PS2A) is the script entry; trial package 2015-03-20"
+          }
+        },
+        "pe_imports": {
+          "values": [
+            "DSOUND.dll",
+            "WINMM.dll",
+            "d3d9.dll",
+            "mog2x32.dll",
+            "mog2x64.dll"
+          ],
+          "evidence": {
+            "kind": "real_sample",
+            "reference": "PE import tables of cmvs32.exe / cmvs64.exe (static probe 2026-09-04); DirectSound is the only audio API imported"
+          }
+        },
+        "runtime_modules": {
+          "values": [
+            "mog2x32.dll",
+            "mog2x64.dll"
+          ],
+          "evidence": {
+            "kind": "real_sample",
+            "reference": "Purple MOG2 image library shipped next to the exe (sha256 6b8dc960… / c51ba0c3…); static import only, runtime load not yet observed"
+          }
+        },
+        "resource_extensions": {
+          "values": [
+            ".cpz",
+            ".ps3",
+            ".cmv"
+          ],
+          "evidence": {
+            "kind": "real_sample",
+            "reference": "data/pack/*.cpz (CPZ6 magic; voice.cpz + voice2.cpz hold voice), data/pack/start.ps3, data/video/*.cmv, data/music/*.ogg in the trial package"
+          }
+        },
+        "hashes": {
+          "values": [
+            "c5e715d98b56468df0a3d6bd8ec263b72bab736e0ad004de4e443a54c470ddad",
+            "aa89205a61c7078a167f9e6668eea2e4328bdd5c9cbcdd6f45b238cf475acea2"
+          ],
+          "evidence": {
+            "kind": "real_sample",
+            "reference": "cmvs32.exe / cmvs64.exe of クロノクロック 体験版v2, catalogue only; the adapter does not hash-pin because the structural cfg + CPZ check is the identity"
+          }
+        }
+      },
+      "process_strategy": {
+        "launch": "generic_launch_available",
+        "attach": "generic_attach_available",
+        "follow_child_processes": false,
+        "notes": [
+          "The trial ships a plain x86 and a plain x64 executable without a launcher; the original path is the user double-clicking either one.",
+          "No runtime session has been recorded yet, so early-inject versus attach ordering is unmeasured."
+        ]
+      },
+      "text": {
+        "capabilities": [
+          {
+            "kind": "luna_hook",
+            "status": "implemented_unverified",
+            "verification": "Vendored LunaHook32/64 both carry the EmbedCMVS engine hook; no real-session dialogue thread has been observed yet."
+          }
+        ],
+        "codepage": "932",
+        "thread_selection_hint": "Prefer the LunaHook EmbedCMVS thread once observed; the adapter installs no text hook of its own."
+      },
+      "audio": {
+        "priority": [
+          {
+            "kind": "xaudio2_or_directsound_pcm",
+            "format": "DirectSound source PCM via the generic Windows audio adapter",
+            "status": "implemented_unverified",
+            "clean_voice": "engine_dependent"
+          },
+          {
+            "kind": "process_loopback",
+            "format": "host PCM fallback",
+            "status": "implemented_unverified",
+            "clean_voice": false
+          }
+        ]
+      },
+      "verified_games": [],
+      "current_status": "implemented_unverified",
+      "known_limitations": [
+        "Per-line voice resources live inside CPZ6-encrypted voice.cpz / voice2.cpz; no resource layer is implemented and none is claimed until a runtime decrypt-read seam is measured on a real session.",
+        "Identity is structural (cmvs.cfg section + CPZ archive magic); executable hashes are catalogued but not pinned.",
+        "In-game lookup sensor is not implemented; lookupAdmission stays EngineUnsupported."
+      ],
+      "adapter_path": "hook/adapters/cmvs_adapter.inc",
+      "fixture_paths": [
+        "tests/fixtures/cmvs_replay.json"
+      ],
+      "test_paths": [
+        "tests/cmvs_adapter_test.cpp",
+        "../../fushi/test/mining/cmvs_pairing_test.dart"
       ]
     },
     {
@@ -2266,17 +2406,21 @@
       "current_status": "implemented_unverified",
       "known_limitations": [
         "The first failed boundary in the observed WoH v1.0 session is resource_observed: text and thread selection passed, while the UI still reported line_has_no_voice and zero voiced lines.",
-        "No HFA/HW resource event, source-byte capture, clean-voice classification, text/audio pair, screenshot-card E2E or source-entry hash equality has passed on the original path.",
+        "No HFA/HW resource event, source-byte capture, clean-voice classification, text/audio pair, screenshot-card E2E or source-entry hash equality has passed on the original path. A 2026-08-31 user report claims live text and voice now work, but it is backed by no session ledger, resource event id or source-entry hash and does not raise the recorded evidence grade; see BUG-1977.",
+        "The exact lookup provider currently fails closed while correlating the captured glyph/source descriptor with the final client-space sprite quad; single-click and Shift lookup remain implemented_unverified.",
         "The data04000.hfa voice role is proved only by the local WoH v1.0 archive layout and is not a HUNEX-family invariant; other titles stay disabled until their archive role is independently mapped and evidenced.",
         "Mono versus stereo is not a voice classifier. HW admission is structural and both channel layouts remain valid candidates until the title-scoped archive role is established.",
         "The profile intentionally has no executable or module hash allowlist so patched WoH executables can remain eligible for structural probing; WoH.exe and data04000.hfa names alone must never bypass HFA/HW validation.",
-        "The signature-based x64 renderer/input trace remains observation-only even when every unique-anchor, callgraph, unwind and imported-API gate passes. It must not be advertised as engine_exact_layout or verified shielding until a versioned admission identity and same-session lookup/card E2E are recorded; production lookup uses attached_calibrated fallback."
+        "Deliberate 2026-08-31 graduation, recorded because it removed a guard: the x64 hydrated-image renderer/input scanner was promoted from observation-only to a production lookup provider, and the generator assertion 'HUNEX exact geometry is observation-only and must not OfferReady/PublishHit' was deleted to permit it. Only the geometry provider layer graduated. geometry.status stays implemented_unverified and the HFA/HW resource-capture and text/audio pairing gates stay not_verified; promoting the provider is not evidence for resource capture, pairing or any card E2E.",
+        "The signature-based x64 exact provider is production-wired but remains implemented_unverified. Every ambiguous or missing renderer/input/projection anchor fails closed to attached_calibrated fallback; it must not be advertised as verified until same-session lookup/card and transaction E2E are recorded."
       ],
       "adapter_path": "hook/adapters/hunex_gge_adapter.inc",
       "fixture_paths": [],
       "test_paths": [
         "tests/hunex_gge_adapter_test.cpp",
+        "tests/hunex_gge_capture_bridge_test.cpp",
         "tests/hunex_gge_lookup_test.cpp",
+        "tests/hunex_gge_selected_text_test.cpp",
         "tests/resource_audio_ready_test.cpp",
         "tests/adapter_structure_test.py",
         "tests/engine_support_manifest_test.py"
@@ -2345,7 +2489,8 @@
         "follow_child_processes": false,
         "notes": [
           "The adapter registers a compressed-resource handler on the shared XAudio worker seam; the generic middleware holds no engine-specific knowledge.",
-          "Identity is capability-scoped: voice_body.bin proves archive audio, while text/lookup requires independent primary and corroborating signatures to intersect on one draw/vtable/DirectInput anchor set. TextDraw is recovered through the PE exception directory and must equal scenario vtable slot 4; the mouse slot must be aligned writable storage and its live DirectInput slot 9 must be executable before interception. Known and unknown hashes take the same path, and every unresolved or structurally inconsistent site stays inert; kXAudioDiag2SgreFamilyMatched / kXAudioDiag2SgreAnchorsResolved / kXAudioDiag2SgreAnchorsUnresolved report where resolution ended."
+          "Identity is capability-scoped: voice_body.bin proves archive audio, while text/lookup requires independent primary and corroborating signatures to intersect on one draw/vtable/DirectInput anchor set. TextDraw is recovered through the PE exception directory and must equal scenario vtable slot 4; the mouse slot must be aligned writable storage and its live DirectInput slot 9 must be executable before interception. Known and unknown hashes take the same path, and every unresolved or structurally inconsistent site stays inert; kXAudioDiag2SgreFamilyMatched / kXAudioDiag2SgreAnchorsResolved / kXAudioDiag2SgreAnchorsUnresolved report where resolution ended.",
+          "2026-09-03 original-path E2E evidence (measured Steam x64 build, SHA-256 75A83A0E…C404B9D8, Fushi 2.2.4-debug.13075, IPC v21): library launch with early injection reached sensor_installed + luna_known_hook_ready; the ENGINE:SGRE:wind3d11 exact lane delivered the visible line; the voiced line エル・プサイ・コングルゥ paired to a voice_body.bin xWMA entry (backend game_resource, 3.19 s after AAC re-encode); hover+Shift and bare-left-click lookups presented the in-game card and a Lapis note was written with sentence, sentence audio and a 480×270 AVIF animation; 7 of 8 popup-outside clicks were swallowed without advancing the line (the one leak followed a mid-session risk acceptance and did not reproduce). Two evidence items required for an original per-sentence resource claim are MISSING and were not measured in this run: (a) byte-hash consistency between the delivered AAC/xWMA payload and the source voice_body.bin entry, and (b) a pure-voice classification for those 3.19 s (backend game_resource only proves the bytes came from the resource stream, not that they exclude BGM/SE). The audio therefore stands at evidence grade captured, not hash_verified and not voice_classified. Status stays implemented_unverified until those two items, the structured proof record and the 1,000-transaction shield gate are produced. 2026-09-03 follow-up (BUG-2083): that E2E ran fullscreen at 3840×2160; in a 1920×1080 window the same build produced no exact lane and geometry=0/0 because the scenario-surface metrics gate pinned the cell height to the 4K value 80. The gate now expects design 40 × the live render scale (same min(client/1920, client/1080) formula as the glyph→client conversion), so windowed and fullscreen sessions take the same path; windowed-mode E2E is pending."
         ]
       },
       "text": {
@@ -2353,7 +2498,7 @@
           {
             "kind": "ingame_lookup_geometry",
             "status": "implemented_unverified",
-            "verification": "The SGRE draw adapter publishes renderer-native UTF-16 text and glyph geometry only after all-executable-section primary/corroborating signatures, decoded RIP targets, PE exception-directory bounds, scenario vtable slot 4 and object-layout gates agree. The mechanism is SHA/path/ASLR independent but has only one measured executable sample; no second-build or original-path lookup/card E2E is recorded."
+            "verification": "The SGRE draw adapter publishes renderer-native UTF-16 text and glyph geometry only after all-executable-section primary/corroborating signatures, decoded RIP targets, PE exception-directory bounds, scenario vtable slot 4 and object-layout gates agree. The mechanism is SHA/path/ASLR independent. 2026-09-03: original-path lookup + card E2E recorded on the measured executable (see verified_games); a second build is still not recorded."
           },
           {
             "kind": "ingame_lookup_directinput_shield",

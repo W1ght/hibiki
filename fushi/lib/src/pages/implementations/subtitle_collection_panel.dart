@@ -22,6 +22,7 @@ import 'package:fushi/src/media/video/jimaku_client.dart'
     show jimakuLanguageLabel;
 import 'package:fushi/src/media/video/metadata/video_metadata_models.dart';
 import 'package:fushi/src/media/video/stream_video_launch.dart';
+import 'package:fushi/src/media/video/subtitle/scraped_subtitle_targets.dart';
 import 'package:fushi/src/media/video/subtitle/subtitle_batch.dart';
 import 'package:fushi/src/media/video/subtitle/subtitle_episode_matching.dart';
 import 'package:fushi/src/media/video/subtitle/subtitle_language_preference.dart';
@@ -194,9 +195,20 @@ class _SubtitleCollectionPanelState extends State<SubtitleCollectionPanel> {
   List<SubtitleCollectionSource> _sources = const <SubtitleCollectionSource>[];
   String? _selectedSourceKey;
 
+  /// 是否已经真正跑过一次来源检索。空来源列表有两种含义——「还没搜过」和「搜过
+  /// 但一条都没有」——只看 `_sources.isEmpty` 分不开，空态提示会给错话。
+  bool _searched = false;
+
   /// 面板内的提示（搜索失败 / 批量结果）；全屏页里 SnackBar 会被盖住（BUG-1844）。
   String? _notice;
   bool _noticeIsError = false;
+
+  /// 已刮削合集的规范身份（BUG-2008）：查询词优先日文原名、请求带已知外部
+  /// id——不再拿合集显示名裸猜。null = 该合集还没刮出规范作品，走旧路径。
+  VideoMetadataWorkRow? _canonicalWork;
+  Map<String, String> _canonicalIds = const <String, String>{};
+
+  int? get _canonicalAnilistId => int.tryParse(_canonicalIds['anilist'] ?? '');
 
   /// 用户显式选的字幕语言；null = 「全部」= 不限（回退视频自身语言链）。
   String? _language;
@@ -220,10 +232,104 @@ class _SubtitleCollectionPanelState extends State<SubtitleCollectionPanel> {
         widget.collection.subtitleLanguage ?? widget.initialPreferredLanguage;
     _releaseGroup = widget.collection.subtitleReleaseGroup;
     _selectedSeriesId = widget.collection.anilistId;
-    // 合集已绑定 AniList 系列 → 直接搜来源，免去用户再点一次。
-    if (widget.collection.anilistId != null) {
-      unawaited(_searchSources(anilistId: widget.collection.anilistId));
+    // 首搜由 [_loadCanonicalIdentity] 在读回规范身份**之后**发起（BUG-2008）：
+    // `_searchSources` 在第一个 await 之前就把请求身份同步构造好了，先发后读
+    // 等于「已绑定 AniList 的合集」——也就是绝大多数刮削过的合集——首搜永远
+    // 还是裸显示名 + 裸 anilistId，而这个面板绝大多数场景只搜这一次。
+    unawaited(_loadCanonicalIdentity());
+  }
+
+  /// 读回该合集刮削出的规范作品与身份（BUG-2008），再发起首搜。
+  ///
+  /// 用户没改过查询词时把它换成日文原名；合集绑了 AniList 就按它搜，没绑而刮削
+  /// 身份里有 anilist id 就按后者搜。读库失败或压根没刮过一律**降级为旧路径**
+  /// （裸显示名 + 合集 anilistId），绝不因此挡住首搜。
+  Future<void> _loadCanonicalIdentity() async {
+    try {
+      final VideoMetadataWorkRow? work = await widget.database
+          .getVideoMetadataWorkByCollection(widget.collection.id);
+      if (!mounted) return;
+      if (work != null) {
+        final List<VideoMetadataProviderIdentityRow> identities = await widget
+            .database
+            .getVideoMetadataProviderIdentities(workId: work.id);
+        if (!mounted) return;
+        final bool queryUntouched =
+            _queryCtrl.text.trim() == _initialQuery().trim();
+        setState(() {
+          _canonicalWork = work;
+          _canonicalIds = <String, String>{
+            for (final VideoMetadataProviderIdentityRow row in identities)
+              row.provider.trim().toLowerCase(): row.externalId,
+          };
+          final String? original = work.originalTitle?.trim();
+          if (queryUntouched && original != null && original.isNotEmpty) {
+            _queryCtrl.text = original;
+          }
+        });
+      }
+    } on Object catch (error) {
+      ErrorLogService.instance.logDiagnostic(
+        'SubtitleCollectionPanel.loadCanonicalIdentity',
+        error,
+      );
     }
+    if (!mounted) return;
+    final int? seedId = widget.collection.anilistId ?? _canonicalAnilistId;
+    if (seedId != null && !_searching) {
+      unawaited(_searchSources(anilistId: seedId));
+      return;
+    }
+    // 没绑系列的合集过去**根本不发首搜**——「绑了的自动搜、没绑的不搜」是这里唯一
+    // 的特殊情况，代价是用户打开面板只看到一排 `Icons.remove` 占位和灰掉的「下载
+    // 全部」，得自己猜出要先点「查找字幕」。补上等价首搜（先解析系列再搜来源，与
+    // 点那个按钮同一条路径）。一个字幕来源都没配时不自动发：那条路径只会立刻弹
+    // 红色的「缺 API key」，留给用户显式点。
+    // 这条首搜**只搜不绑**（[_resolveSeries] → [_applySeries]）：这里的前提正是
+    // 合集没绑 AniList，若把模糊命中的首条写回库，用户只是打开一次面板就会被
+    // 粘性绑定——真人剧合集会被永久绑到一部最像的动画上。
+    if (!_searching && !_resolving && _hasConfiguredSubtitleSource) {
+      unawaited(_resolveSeries());
+    }
+  }
+
+  /// 本次检索交给 provider 的身份。
+  ///
+  /// 刮出规范作品时走仓库唯一的身份原语 [identityMediaReference]：外部 id
+  /// （anilist / tmdb / **imdb** —— OpenSubtitles 的强键）、日文原名、年份、以及
+  /// 由 id 推出的 [VideoDiscoveryCategory] 一起带上。写死 anime 会让真人剧合集
+  /// 踩回 Jimaku 的 anime 硬过滤（BUG-1694）。
+  ///
+  /// 还没刮过的合集保持旧路径逐字节不变：裸 anilistId + 显示名 + anime 档。
+  VideoMediaReference _searchIdentity({
+    required String query,
+    required int? anilistId,
+  }) {
+    final VideoMetadataWorkRow? work = _canonicalWork;
+    if (work == null) {
+      return VideoMediaReference(
+        providerId: 'anilist',
+        mediaId: anilistId?.toString() ?? query,
+        mediaKind: VideoMetadataMediaKind.tv,
+        discoveryCategory: VideoDiscoveryCategory.anime,
+        title: query,
+        anilistId: anilistId,
+      );
+    }
+    return identityMediaReference(
+      providerId: 'anilist',
+      kind: work.mediaType == 'movie'
+          ? VideoMetadataMediaKind.movie
+          : VideoMetadataMediaKind.tv,
+      // 用户当场选定的系列压过刮削快照里的 anilist id。
+      externalIds: <String, String>{
+        ..._canonicalIds,
+        if (anilistId != null) 'anilist': '$anilistId',
+      },
+      title: query,
+      originalTitle: work.originalTitle,
+      year: work.year,
+    );
   }
 
   @override
@@ -292,7 +398,10 @@ class _SubtitleCollectionPanelState extends State<SubtitleCollectionPanel> {
         : factory();
   }
 
-  /// 解析 AniList 系列候选：命中后默认选首条并搜其来源；无命中回退文本搜。
+  /// 解析 AniList 系列候选：命中后默认按首条搜其来源；无命中回退文本搜。
+  ///
+  /// **这条路径从不写库**——它同时服务自动首搜（[_loadCanonicalIdentity]）和
+  /// 「查找字幕」按钮，两者都只是「按这个词找找看」，不是「这个合集就是这部作品」。
   Future<void> _resolveSeries() async {
     final String apiKey = _apiKeyCtrl.text.trim();
     final String query = _queryCtrl.text.trim();
@@ -328,7 +437,8 @@ class _SubtitleCollectionPanelState extends State<SubtitleCollectionPanel> {
         _seriesLookupFailed = outcome.degraded;
       });
       if (outcome.media.isNotEmpty) {
-        await _selectSeries(outcome.media.first, generation: generation);
+        // **只搜不绑**：模糊搜索的首条命中是猜测，不是用户的选择。
+        await _applySeries(outcome.media.first, generation: generation);
       } else {
         setState(() => _selectedSeriesId = null);
         await _searchSources(anilistId: null, generation: generation);
@@ -341,9 +451,27 @@ class _SubtitleCollectionPanelState extends State<SubtitleCollectionPanel> {
     }
   }
 
-  /// 用户点某系列：绑定该系列、快照 anilist_id 到合集、按它搜来源。
-  Future<void> _selectSeries(AniListMedia media, {int? generation}) async {
+  /// 「搜」这一半：把某个 AniList 候选当作**本次检索的身份**，不碰数据库。
+  ///
+  /// 与 [_selectSeries] 拆开是因为两条调用路径的意图根本不同，而不是同一件事的
+  /// 两个开关：自动首搜（[_loadCanonicalIdentity]）与「查找字幕」按钮拿到的是
+  /// 模糊搜索的第一条命中——真人剧合集在 AniList 上压根没有条目，模糊搜索照样
+  /// 返回一部最像的动画。把这个猜测写进 `media_collections.anilistId` 会**永久**
+  /// 改写合集身份：下次开面板走 `seedId` 分支再也不重搜，合集详情页的下载对话框
+  /// 也跟着按它去找番剧种子（`media_collection_detail_page.dart` TODO-2485）。
+  /// 所以这一半在类型上就够不着写库那一半，不靠调用方记得传对一个 bool。
+  Future<void> _applySeries(AniListMedia media, {int? generation}) async {
     final int requestGeneration = generation ?? ++_generation;
+    setState(() => _selectedSeriesId = media.id);
+    await _searchSources(anilistId: media.id, generation: requestGeneration);
+  }
+
+  /// 「绑」这一半：用户显式点某系列 → 快照 anilist_id 到合集，再按它搜来源。
+  ///
+  /// `setMediaCollectionAnilistId` **只在这里**被调用，唯一调用方是系列
+  /// ChoiceChip 的 `onSelected`——也就是用户的明确意图。
+  Future<void> _selectSeries(AniListMedia media) async {
+    final int requestGeneration = ++_generation;
     setState(() => _selectedSeriesId = media.id);
     if (widget.collection.anilistId != media.id) {
       await widget.database.setMediaCollectionAnilistId(
@@ -363,7 +491,7 @@ class _SubtitleCollectionPanelState extends State<SubtitleCollectionPanel> {
         return;
       }
     }
-    await _searchSources(anilistId: media.id, generation: requestGeneration);
+    await _applySeries(media, generation: requestGeneration);
   }
 
   /// 经 registry 一次列出全部候选（不带 episode：要看到「字幕侧到底有哪些集号」才能
@@ -379,6 +507,7 @@ class _SubtitleCollectionPanelState extends State<SubtitleCollectionPanel> {
       setState(() {
         _sources = const <SubtitleCollectionSource>[];
         _selectedSourceKey = null;
+        _searched = true;
       });
       _setNotice(t.video_jimaku_no_key, error: true);
       return;
@@ -388,16 +517,13 @@ class _SubtitleCollectionPanelState extends State<SubtitleCollectionPanel> {
       _notice = null;
     });
     try {
+      // 规范身份优先（BUG-2008），构造见 [_searchIdentity]。
       final ProviderBatchResult<VideoSubtitleCandidate> result = await registry
           .search(
             VideoSubtitleSearchRequest(
-              media: VideoMediaReference(
-                providerId: 'anilist',
-                mediaId: anilistId?.toString() ?? query,
-                mediaKind: VideoMetadataMediaKind.tv,
-                discoveryCategory: VideoDiscoveryCategory.anime,
-                title: query,
-                anilistId: anilistId,
+              media: _searchIdentity(
+                query: query,
+                anilistId: anilistId ?? _canonicalAnilistId,
               ),
               query: query,
             ),
@@ -412,6 +538,7 @@ class _SubtitleCollectionPanelState extends State<SubtitleCollectionPanel> {
           ? primarySubtitleFailure(result.failures)
           : null;
       setState(() {
+        _searched = true;
         _sources = sources;
         _selectedSourceKey =
             sources.any(
@@ -429,6 +556,7 @@ class _SubtitleCollectionPanelState extends State<SubtitleCollectionPanel> {
       }
     } on Object catch (error) {
       if (!mounted || requestGeneration != _generation) return;
+      setState(() => _searched = true);
       _setNotice(
         describeSubtitleFailure(t.video_jimaku_search_failed, error),
         error: true,
@@ -648,8 +776,27 @@ class _SubtitleCollectionPanelState extends State<SubtitleCollectionPanel> {
   }
 
   /// 来源选择：每个来源一行（provider + 条目名 + 文件数/集数/语言），单选。
+  ///
+  /// 空列表**不再整块隐藏**：合集没绑 AniList id 时首搜根本不发（见 [initState]），
+  /// 用户面对的就是一排 `Icons.remove` 占位 + 灰掉的「下载全部」+ 零解释，无从知道
+  /// 还要先点「查找字幕」。三种空态各说一句话。
   Widget _buildSourcePicker(ThemeData theme) {
-    if (_sources.isEmpty) return const SizedBox.shrink();
+    if (_sources.isEmpty) {
+      final String message = _searching || _resolving
+          ? t.video_jimaku_source_loading
+          : (_searched
+                ? t.video_jimaku_no_results
+                : t.video_subtitle_source_search_hint);
+      return _chipSection(t.video_subtitle_source_label, <Widget>[
+        Text(
+          message,
+          key: const ValueKey<String>('subtitle-source-empty'),
+          style: theme.textTheme.bodySmall?.copyWith(
+            color: theme.colorScheme.onSurfaceVariant,
+          ),
+        ),
+      ]);
+    }
     return _chipSection(t.video_subtitle_source_label, <Widget>[
       for (final SubtitleCollectionSource source in _sources)
         ConstrainedBox(
@@ -791,8 +938,11 @@ class _SubtitleCollectionPanelState extends State<SubtitleCollectionPanel> {
         ) &&
         _batchCandidates.isNotEmpty;
     final Widget? notice = _buildNotice(theme);
+    // 表单区与成员列表同属**一个**滚动区，外层 Column 撑满宿主高度：原来是两个
+    // `Flexible`(loose) 各分一份 flex，谁没用完谁的份额就落成死白，底部操作条永远
+    // 浮在内容尾巴上而不贴底。
     return Column(
-      mainAxisSize: MainAxisSize.min,
+      mainAxisSize: MainAxisSize.max,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         if (widget.showTitle) ...<Widget>[
@@ -800,80 +950,84 @@ class _SubtitleCollectionPanelState extends State<SubtitleCollectionPanel> {
           const SizedBox(height: 12),
         ],
         if (notice != null) notice,
-        Flexible(
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                JimakuApiKeyField(controller: _apiKeyCtrl, dense: true),
-                const SizedBox(height: 8),
-                Row(
+        Expanded(
+          child: CustomScrollView(
+            slivers: <Widget>[
+              SliverToBoxAdapter(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
-                    Expanded(
-                      child: TextField(
-                        controller: _queryCtrl,
-                        decoration: InputDecoration(
-                          labelText: t.video_jimaku_query,
-                          isDense: true,
+                    JimakuApiKeyField(controller: _apiKeyCtrl, dense: true),
+                    const SizedBox(height: 8),
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: TextField(
+                            controller: _queryCtrl,
+                            decoration: InputDecoration(
+                              labelText: t.video_jimaku_query,
+                              isDense: true,
+                            ),
+                            onSubmitted: (_) => _resolveSeries(),
+                          ),
                         ),
-                        onSubmitted: (_) => _resolveSeries(),
-                      ),
+                        const SizedBox(width: 8),
+                        FilledButton.tonalIcon(
+                          key: const ValueKey<String>(
+                            'subtitle-collection-find',
+                          ),
+                          onPressed: _resolving || _searching || _running
+                              ? null
+                              : _resolveSeries,
+                          icon: const Icon(Icons.search, size: 18),
+                          label: Text(t.video_jimaku_find_sources),
+                        ),
+                      ],
                     ),
-                    const SizedBox(width: 8),
-                    FilledButton.tonalIcon(
-                      key: const ValueKey<String>('subtitle-collection-find'),
-                      onPressed: _resolving || _searching || _running
-                          ? null
-                          : _resolveSeries,
-                      icon: const Icon(Icons.search, size: 18),
-                      label: Text(t.video_jimaku_find_sources),
-                    ),
+                    if (_seriesMatches.length >= 2)
+                      _chipSection(t.video_jimaku_anime_match, <Widget>[
+                        for (final AniListMedia media in _seriesMatches)
+                          ConstrainedBox(
+                            constraints: const BoxConstraints(maxWidth: 260),
+                            child: ChoiceChip(
+                              label: Text(
+                                media.displayTitle,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              tooltip: media.displayTitle,
+                              selected: _selectedSeriesId == media.id,
+                              onSelected: _resolving || _running
+                                  ? null
+                                  : (_) => unawaited(_selectSeries(media)),
+                            ),
+                          ),
+                      ]),
+                    _buildSourcePicker(theme),
+                    _buildCollectionSettings(theme),
+                    const Divider(height: 20),
                   ],
                 ),
-                if (_seriesMatches.length >= 2)
-                  _chipSection(t.video_jimaku_anime_match, <Widget>[
-                    for (final AniListMedia media in _seriesMatches)
-                      ConstrainedBox(
-                        constraints: const BoxConstraints(maxWidth: 260),
-                        child: ChoiceChip(
-                          label: Text(
-                            media.displayTitle,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          tooltip: media.displayTitle,
-                          selected: _selectedSeriesId == media.id,
-                          onSelected: _resolving || _running
-                              ? null
-                              : (_) => unawaited(_selectSeries(media)),
-                        ),
-                      ),
-                  ]),
-                _buildSourcePicker(theme),
-                _buildCollectionSettings(theme),
-              ],
-            ),
-          ),
-        ),
-        const Divider(height: 20),
-        Flexible(
-          child: ListView.builder(
-            itemCount: widget.members.length,
-            itemBuilder: (BuildContext context, int i) {
-              final VideoBookRow m = widget.members[i];
-              return ListTile(
-                dense: true,
-                contentPadding: EdgeInsets.zero,
-                leading: _statusIcon(m.bookUid, i),
-                title: Text(
-                  m.title,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                subtitle: _episodeSubtitle(m, i),
-              );
-            },
+              ),
+              SliverList.builder(
+                itemCount: widget.members.length,
+                itemBuilder: (BuildContext context, int i) {
+                  final VideoBookRow m = widget.members[i];
+                  return ListTile(
+                    dense: true,
+                    contentPadding: EdgeInsets.zero,
+                    leading: _statusIcon(m.bookUid, i),
+                    title: Text(
+                      m.title,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    subtitle: _episodeSubtitle(m, i),
+                  );
+                },
+              ),
+            ],
           ),
         ),
         const SizedBox(height: 8),

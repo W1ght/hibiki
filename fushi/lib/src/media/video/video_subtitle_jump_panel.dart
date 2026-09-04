@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui' show BoxHeightStyle;
 
 import 'package:flutter/foundation.dart' show ValueListenable;
@@ -203,9 +204,20 @@ double subtitleTimestampColumnWidth(double effectiveFontSize, bool hasHours) {
 /// 「ら 只露半个」）。所以文本列宽必须由**同一组常量**同时喂给测量与渲染，不能各算各的。
 ///
 /// 行内水平结构（见 `_buildRow`）：
-/// `padding.left(8) | 时间戳列 | 间隙 8 | 文本(Expanded) | 动作列 | padding.right(4)`
+/// `padding.left(8) | 时间戳列 | 间隙 8 | 文本(Expanded) | 动作列 | padding.right(4+gutter)`
 const double kSubtitleRowPaddingLeft = 8;
 const double kSubtitleRowPaddingRight = 4;
+
+/// 行右侧再让出的滚动条通道（BUG-1997）。
+///
+/// 桌面端 `MaterialScrollBehavior` 给这个 ListView 自动包了一层常驻 `Scrollbar`，
+/// 它是**覆盖式**的（不占布局），而本行右内缩被压到 4px 以把宽度还给文本列——星标
+/// 按钮的图标盒右缘离面板右缘只有 6px，滚动条盖住它并吞掉点击。
+///
+/// 这里让出通道，而不是靠「滚动条恰好够细」：宽度取自 [kFushiScrollbarGutter]，跟着
+/// 主题的粗细走。用行 padding 而不是 `ListView(padding:)`——后者会让行背景/选中高亮
+/// 不铺满、右侧露一条底色，还会改变 `itemExtentBuilder` 拿到的 crossAxisExtent。
+const double kSubtitleRowScrollbarGutter = kFushiScrollbarGutter;
 
 /// 行垂直内缩（上 8 + 下 8）。
 const double kSubtitleRowPaddingVertical = 16;
@@ -229,6 +241,7 @@ double subtitleRowTextWidth({
   final double width = rowWidth -
       kSubtitleRowPaddingLeft -
       kSubtitleRowPaddingRight -
+      kSubtitleRowScrollbarGutter -
       timestampColumnWidth -
       kSubtitleRowTimestampGap -
       subtitleRowActionsWidth(effectiveFontSize);
@@ -458,7 +471,11 @@ class VideoSubtitleJumpPanel extends StatefulWidget {
 
   final VideoPlayerController controller;
   final void Function(AudioCue cue) onTapCue;
-  final void Function(AudioCue cue) onCopyCue;
+
+  /// 行内复制。**返回是否真的写了剪贴板**——面板据此决定要不要把该行按钮切成 ✓
+  /// （[_VideoSubtitleJumpPanelState._markCueCopied]）。判据归实现方（只有它知道自己
+  /// 复制了什么），面板不再自己重算 `cue.text.trim().isNotEmpty`。
+  final bool Function(AudioCue cue) onCopyCue;
   final Future<void> Function(AudioCue cue) onFavoriteCue;
   final bool Function(AudioCue cue) isCueFavorited;
   final VoidCallback onClose;
@@ -605,6 +622,17 @@ class _VideoSubtitleJumpPanelState extends State<VideoSubtitleJumpPanel> {
   /// 同构）。
   static const double _kRowHoverThresholdPx = 8;
 
+  /// 行内复制刚成功的那一行（raw 下标），[kCopyFeedbackDuration] 后回落 null。
+  ///
+  /// BUG-2093：状态**必须归面板**，不能归行内的 [StatefulWidget]。行的 Element 身份由
+  /// 列表控制——[trackKey]（`selected || rawIndex == _scrollTargetRawIndex`）会随播放头
+  /// 移动在 [GlobalKey] 与 [ValueKey] 之间翻转，key 一翻 Element 就重建、行内 State 连同
+  /// 「已复制」瞬态一起清零。于是「复制正在播的那句」——最常用的那条路径——上，✓ 会在
+  /// 播放头离开该行的那一帧提前消失（短台词几百毫秒即走）。面板知道 rawIndex，是这份
+  /// 状态的真正拥有者；顺带白送「同一时刻只有一行是 ✓」（点 B 时 A 立刻复位）。
+  int? _copiedRawIndex;
+  Timer? _copyFeedbackTimer;
+
   /// 只给当前/待滚动目标行保留 [GlobalKey]，供自适应行高下精确
   /// [FushiFocusScroll.ensureVisible]。普通可见行走 [ValueKey]，避免长列表滚动后
   /// [GlobalKey] map 按历史 visibleIndex 无限制增长。
@@ -640,10 +668,6 @@ class _VideoSubtitleJumpPanelState extends State<VideoSubtitleJumpPanel> {
   /// [mergePerCharacterCueGroups]）。与 [_cachedDedupCues] 同生命周期、同一次遍历刷新。
   /// 非逐字行不在表内，[_rowCue] 回落原 cue（既有行为逐像素不变）。
   Map<int, AudioCue> _cachedMergedByRep = const <int, AudioCue>{};
-
-  /// 行高保底下界（TODO-340 的历史视觉密度）：内容比它矮的行仍占这么高，内容更高的行
-  /// 按 [_measureRowExtent] 的真实测量值走。
-  double get _minRowExtent => 56 * _fontScaleSteps;
 
   /// 行高测量缓存（BUG-1034），key = `加粗位 + 文本`。宽度 / 字号 / textScaler 变化时整体
   /// 作废，见 [_rowExtentForCue]。
@@ -747,9 +771,13 @@ class _VideoSubtitleJumpPanelState extends State<VideoSubtitleJumpPanel> {
     if (content < timestampHeight) content = timestampHeight;
     final double actionHeight = _effectiveFontSize + 6;
     if (content < actionHeight) content = actionHeight;
-    final double extent = kSubtitleRowPaddingVertical + content;
-    // 保底最小行高（历史视觉密度，TODO-340）：只抬高内容矮于它的行，绝不压低内容。
-    return extent < _minRowExtent ? _minRowExtent : extent;
+    // BUG-2057：行高**只由内容决定**，不再另设保底下界。行内可点内容（时间戳单行、
+    // 3 个动作图标）已经进了上面的取最大值，保底那一档纯粹是 asbplayer 版列表
+    // `static const double _itemExtent = 56` 的遗留：改自适应行高时把它留成了
+    // `56 * 字号档` 的下界，于是默认字号下 1 行（16+17.5=33.5）和 2 行（16+35=51）
+    // 双双被抬到 56——两种行一样高，单行行里 65% 是空白。英文译文最常只占 1 行，
+    // 用户看到的就是「英语的上下间距特别高」。
+    return kSubtitleRowPaddingVertical + content;
   }
 
   double _measureTextHeight({
@@ -922,6 +950,8 @@ class _VideoSubtitleJumpPanelState extends State<VideoSubtitleJumpPanel> {
   void dispose() {
     // BUG-874：面板卸载（侧栏隐藏）时解绑命中句柄，避免 barrier 调到已失效的实现。
     widget.hitTester?.unbind();
+    // BUG-2093：回落定时器随面板一起死，否则到点 setState 打到已 dispose 的 State。
+    _copyFeedbackTimer?.cancel();
     HardwareKeyboard.instance.removeHandler(_handleHardwareKey);
     widget.controller.removeListener(_onControllerChanged);
     widget.searchRequests?.removeListener(_onSearchRequested);
@@ -929,6 +959,19 @@ class _VideoSubtitleJumpPanelState extends State<VideoSubtitleJumpPanel> {
     _searchController.dispose();
     _searchFocusNode.dispose();
     super.dispose();
+  }
+
+  /// 记下「第 [rawIndex] 行刚复制成功」，[kCopyFeedbackDuration] 后自动回落。维持期内
+  /// 再复制（同行或换行）重新计时。BUG-2093：见 [_copiedRawIndex]。
+  void _markCueCopied(int rawIndex) {
+    _copyFeedbackTimer?.cancel();
+    _copyFeedbackTimer = Timer(
+      kCopyFeedbackDuration,
+      () => setState(() => _copiedRawIndex = null),
+    );
+    if (_copiedRawIndex != rawIndex) {
+      setState(() => _copiedRawIndex = rawIndex);
+    }
   }
 
   /// BUG-874：按全局坐标反查当前可见行里命中的字符，返回 `(cue, grapheme, charRect)`。
@@ -1492,6 +1535,7 @@ class _VideoSubtitleJumpPanelState extends State<VideoSubtitleJumpPanel> {
                                   cs,
                                   cue,
                                   i,
+                                  rawIndex,
                                   selected,
                                 ),
                               );
@@ -1759,7 +1803,13 @@ class _VideoSubtitleJumpPanelState extends State<VideoSubtitleJumpPanel> {
     );
   }
 
-  Widget _buildRow(ColorScheme cs, AudioCue cue, int index, bool selected) {
+  Widget _buildRow(
+    ColorScheme cs,
+    AudioCue cue,
+    int index,
+    int rawIndex,
+    bool selected,
+  ) {
     // BUG-874：可查词时给本行文本一个稳定 [GlobalKey]（按 builder 下标）并登记所属 cue，供
     // [_hitTestRows] 反查。不可查词（onLookupCue==null）时不登记，行为与历史一致。
     final GlobalKey? textKey = widget.onLookupCue == null
@@ -1802,7 +1852,9 @@ class _VideoSubtitleJumpPanelState extends State<VideoSubtitleJumpPanel> {
             left: favorited
                 ? kSubtitleRowPaddingLeft - kSubtitleRowFavoriteBarWidth
                 : kSubtitleRowPaddingLeft,
-            right: kSubtitleRowPaddingRight,
+            // BUG-1997：+gutter 给常驻滚动条让出通道，与 [subtitleRowTextWidth]
+            // 扣的是同一个常量（测量与渲染同源，别单改一边）。
+            right: kSubtitleRowPaddingRight + kSubtitleRowScrollbarGutter,
             top: kSubtitleRowPaddingVertical / 2,
             bottom: kSubtitleRowPaddingVertical / 2,
           ),
@@ -1843,7 +1895,7 @@ class _VideoSubtitleJumpPanelState extends State<VideoSubtitleJumpPanel> {
               Expanded(child: _buildRowText(cue, textColor, selected, textKey)),
               // 操作按钮（跳转 / 复制 / 收藏）常驻，不再仅 hover / 选中可见（BUG-265）：
               // 长文本由上面单行省略让出空间，按钮不会挤坏布局。
-              _buildRowActions(cs, cue, selected, favorited),
+              _buildRowActions(cs, cue, rawIndex, selected, favorited),
             ],
           ),
         ),
@@ -1970,12 +2022,14 @@ class _VideoSubtitleJumpPanelState extends State<VideoSubtitleJumpPanel> {
   Widget _buildRowActions(
     ColorScheme cs,
     AudioCue cue,
+    int rawIndex,
     bool selected,
     bool favorited,
   ) {
     final Color iconColor =
         selected ? cs.onPrimaryContainer : cs.onSurfaceVariant;
     final double iconSize = _effectiveFontSize + 2;
+    final bool copied = rawIndex == _copiedRawIndex;
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
@@ -1986,12 +2040,16 @@ class _VideoSubtitleJumpPanelState extends State<VideoSubtitleJumpPanel> {
           size: iconSize,
           onPressed: () => widget.onTapCue(cue),
         ),
+        // 复制后按钮就地切成 ✓ / 「已复制」（OSD 在视频区，视线之外）。成功与否由
+        // [VideoSubtitleJumpPanel.onCopyCue] 的返回值说了算，面板不重算判据。
         _RowActionButton(
-          icon: Icons.content_copy_outlined,
-          tooltip: t.copy,
-          color: iconColor,
+          icon: copied ? Icons.check : Icons.content_copy_outlined,
+          tooltip: copied ? t.copied : t.copy,
+          color: copied ? cs.primary : iconColor,
           size: iconSize,
-          onPressed: () => widget.onCopyCue(cue),
+          onPressed: () {
+            if (widget.onCopyCue(cue)) _markCueCopied(rawIndex);
+          },
         ),
         _RowActionButton(
           icon: favorited ? Icons.star : Icons.star_border,

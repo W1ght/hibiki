@@ -34,6 +34,7 @@
 
 #include <algorithm>
 #include <atomic>
+#include <cmath>
 #include <cstdint>
 #include <cstdio>
 #include <cstdlib>
@@ -58,11 +59,15 @@
 #include "ffmpeg_runtime.h"
 #include "lookup_v19_runtime.h"
 #include "hook_original_registry.h"
+#include "tracked_handle_table.h"
 #include "hunex_hfa.h"
 #include "siglus_ovk.h"
 #include "siglus_launch.h"
 #include "adapters/siglus_lookup.h"
 #include "adapters/hunex_gge_lookup.h"
+#include "adapters/hunex_gge_capture_bridge.h"
+#include "adapters/hunex_gge_lookup_core.h"
+#include "adapters/hunex_gge_selected_text.h"
 #include "adapters/leaf_aquaplus_voice_archive.h"
 #include "siglus_text.h"
 #include "text_thread_identity.h"
@@ -73,6 +78,8 @@
 #include "voice_hook_ipc.h"
 #include "voice_resource_filename.h"
 #include "voice_resource_pairing.h"
+#include "kirikiri_voice_storage_name.h"
+#include "lookup_line_text_match.h"
 #include "xaudio_resource_dispatch.h"
 #include "xaudio_source_format.h"
 #include "xaudio_trace.h"
@@ -112,7 +119,7 @@ extern "C" __declspec(dllexport) alignas(8)
 // trace this is resolved by the diagnostic probe from the live DLL export and
 // is intentionally outside SharedHeader ABI.
 extern "C" __declspec(dllexport) alignas(8)
-    fushi_voice_hook::HunexGgeTraceBuffer FushiHunexGgeTraceV1 = {};
+    fushi_voice_hook::HunexGgeTraceBuffer FushiHunexGgeTraceV3 = {};
 
 namespace {
 
@@ -149,6 +156,7 @@ using fushi_voice_hook::UnityVoiceEvent;
 
 HANDLE g_mapping = nullptr;
 SharedHeader* g_header = nullptr;
+uint64_t g_mapped_view_bytes = 0u;
 volatile bool g_stop = false;
 
 // 本 DLL 自己的模块句柄，DllMain 一进来就记下。通用位图呈现器建窗口类/窗口时要用它做
@@ -190,11 +198,24 @@ fushi_voice_hook::HookOriginalRegistry<16> g_submit_source_buffer_originals;
 fushi_voice_hook::HookOriginalRegistry<16> g_flush_source_buffers_originals;
 
 // 原始语音流落盘的共用出口（KiriKiri 与 Siglus 都写同一目录，供 Dart 按 tick 配对）。
-std::wstring VoiceBaseName(const wchar_t* storagename) {
+//
+// `>` 也是路径分隔符：KiriKiri 归档放置路径形如 `voice.xp3>坒`，条目名被哈希且无扩展名。
+// 旧实现只切 `/`、`\`，于是 base 成了 `voice.xp3>坒`——含 `.xp3` 的点骗过「无点补 .ogg」，
+// 落盘名 `voice.xp3_坒` 没有音频扩展名，host 的资源索引按扩展名扫就看不见它（tenshi_sz
+// 真机：源资源 6.86 s 已落盘，卡里却是 5 s loopback）。扩展名按载荷魔数补（Ogg/RIFF），
+// 不按名字猜。
+std::wstring VoiceBaseName(const wchar_t* storagename, const uint8_t* data,
+                           uint32_t len) {
   std::wstring s(storagename);
-  const size_t pos = s.find_last_of(L"/\\");
-  std::wstring base =
-      (pos == std::wstring::npos) ? s : s.substr(pos + 1);
+  // 分隔符判据的唯一真相源是 `kirikiri_voice_storage_name.h`——这里从尾往前扫并
+  // **调用**它，而不是把字符集再抄一遍。抄一遍的代价已经付过：BUG-2115 的根因就是
+  // 这个集合里少了 `>`；而 `fushi_kirikiri_voice_storage_name_test` 里那 4 条分隔符
+  // 断言压的是那个函数，只要生产代码自己硬写字符集，把它改窄测试照样全绿。
+  size_t cut = s.size();
+  while (cut > 0 && !fushi_voice_hook::IsKirikiriPathSeparator(s[cut - 1])) {
+    --cut;
+  }
+  std::wstring base = s.substr(cut);
   for (wchar_t& c : base) {
     if (c == L':' || c == L'*' || c == L'?' || c == L'"' || c == L'<' ||
         c == L'>' || c == L'|') {
@@ -202,7 +223,11 @@ std::wstring VoiceBaseName(const wchar_t* storagename) {
     }
   }
   if (base.empty()) base = L"voice";
-  if (base.find(L'.') == std::wstring::npos) base += L".ogg";
+  if (base.find(L'.') == std::wstring::npos) {
+    const wchar_t* sniffed =
+        fushi_voice_hook::KirikiriVoicePayloadExtension(data, len);
+    base += sniffed != nullptr ? sniffed : L".ogg";
+  }
   return base;
 }
 
@@ -220,7 +245,8 @@ bool WriteVoiceOggAt(const uint8_t* data, uint32_t len,
   }
   std::wstring file =
       dir + L"\\" + fushi_voice_hook::BuildVoiceResourceFileName(
-                          tick_ms, VoiceBaseName(storagename), text_event_id);
+                          tick_ms, VoiceBaseName(storagename, data, len),
+                          text_event_id);
   HANDLE f = CreateFileW(file.c_str(), GENERIC_WRITE, 0, nullptr,
                          CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, nullptr);
   if (f == INVALID_HANDLE_VALUE) return false;
@@ -594,6 +620,14 @@ DWORD WINAPI HookWorker(LPVOID module_context) {
   if (g_mapping != nullptr) {
     g_header = static_cast<SharedHeader*>(
         MapViewOfFile(g_mapping, FILE_MAP_ALL_ACCESS, 0, 0, 0));
+    if (g_header != nullptr) {
+      MEMORY_BASIC_INFORMATION memory = {};
+      if (VirtualQuery(g_header, &memory, sizeof(memory)) == sizeof(memory) &&
+          memory.AllocationBase == g_header && memory.BaseAddress == g_header &&
+          memory.RegionSize >= sizeof(SharedHeader)) {
+        g_mapped_view_bytes = static_cast<uint64_t>(memory.RegionSize);
+      }
+    }
   }
   // Fail closed before any adapter can observe the mapping. Polling an unknown
   // contract is unsafe even when today's baseline adapters happen not to read
@@ -605,6 +639,7 @@ DWORD WINAPI HookWorker(LPVOID module_context) {
       UnmapViewOfFile(g_header);
       g_header = nullptr;
     }
+    g_mapped_view_bytes = 0u;
     if (g_mapping != nullptr) {
       CloseHandle(g_mapping);
       g_mapping = nullptr;
@@ -636,6 +671,19 @@ DWORD WINAPI HookWorker(LPVOID module_context) {
   // still never creates the loopback worker; explicit allow remains
   // independent of MinHook just as the historical fallback was.
   registry.InstallFallbackAdapters();
+  // install() 只起 worker 并发布 starting；allow 的 applied/running 确认要等 worker
+  // 真正 Start() 成功后的下一轮 PollPolicy。若把那一轮留到 MH_Initialize() +
+  // InstallStartupAdapters() 之后，早注入 5s 的确认预算基本必然超时（BUG-2131）。
+  // 这里用一个短的有界追平循环，只推进策略状态机、不碰引擎适配器：worker 起流通常
+  // 在几百毫秒内完成，追平后立即继续引擎探测；追不平也照常往下走，绝不无界等待。
+  {
+    const ULONGLONG ack_deadline = GetTickCount64() + 1500ull;
+    while (!g_stop && GetTickCount64() < ack_deadline) {
+      registry.PollLoopbackPolicyOnly();
+      if (fushi_voice_hook::NativeLoopbackRequestAcknowledged(g_header)) break;
+      Sleep(20);
+    }
+  }
   InitializeCriticalSection(&g_cs);
   g_cs_ready = true;
   InitializeCriticalSection(&g_text_cs);
@@ -709,6 +757,7 @@ BOOL APIENTRY DllMain(HMODULE module, DWORD reason, LPVOID reserved) {
         UnmapViewOfFile(g_header);
         g_header = nullptr;
       }
+      g_mapped_view_bytes = 0u;
       if (g_mapping != nullptr) {
         CloseHandle(g_mapping);
         g_mapping = nullptr;

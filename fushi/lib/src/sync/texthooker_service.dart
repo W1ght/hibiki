@@ -22,6 +22,12 @@ String? texthookerThreadSubtitle({
   /// native 线程预览区每线程恒一条，一句话根本不够用户判断"这条是不是正文流"。
   /// 缺省 const [] ⇒ 与旧行为逐字等价（既有调用点/测试不受影响）。
   List<String> recentTexts = const <String>[],
+
+  /// BUG-2112：该线程以伪影为主时（[TexthookerTextThread.isArtifactDominated]）要
+  /// 显示的提示，放在副标题**最前**。预览文本经 [collapseTexthookerPreview] 折叠后
+  /// 看起来就是干净整句，不加这行字用户根本分不出「这条选了不会有台词」。
+  /// null ⇒ 不是伪影线程，与旧行为逐字等价。
+  String? artifactLabel,
 }) {
   final List<String> previews = <String>[
     for (final String text in recentTexts)
@@ -32,6 +38,7 @@ String? texthookerThreadSubtitle({
       ? previews.join('\n')
       : (latestText == null ? '' : collapseTexthookerPreview(latestText));
   final List<String> parts = <String>[
+    if (artifactLabel != null && artifactLabel.isNotEmpty) artifactLabel,
     if (audioLineCount > 0) audioLabel,
     if (preview.isNotEmpty) preview,
   ];
@@ -170,6 +177,18 @@ const String kGalCleanSourceSuppressedReason = 'clean_source_suppressed';
 /// 先按线程取行，再按本枚举过滤。
 enum TexthookerLineFilter { all, withAudio, mined, favorited }
 
+/// 引擎适配器自产的**精确文本线程**：hook code 以 `ENGINE:` 为前缀，与 Luna 启发式
+/// hook 的 `HQFN-24@...` 一类码区分。
+///
+/// **目前只有 SGRE 一家**用这个前缀（`ENGINE:SGRE:wind3d11`，见
+/// `native/galgame_hook/hook/adapters/sgre_lookup.inc` 的 `kSgreTextHookCode`）。
+/// Siglus 的 TextRender 发的是 `EXBWX0@%llX:SiglusEngine.exe`、Unity 发的是
+/// `UnityEngine.TextMesh.set_text(glyphs)`，两者都**不**带该前缀，因此不走这条
+/// 自动选中路径——别把它们写成同样受益，那会让人以为覆盖面比实际大。
+/// native 侧命名契约见各 adapter 的 `k*TextHookCode`。
+bool isEngineExactTextThread(TexthookerTextThread thread) =>
+    (thread.hookCode ?? '').startsWith('ENGINE:');
+
 /// 一条可由用户选择的文本 Hook 线程。
 ///
 /// [key] 在一次捕获会话内稳定；LunaHook 使用 ThreadParam + hookcode 的哈希，
@@ -204,21 +223,23 @@ class TexthookerTextThread {
     int? observedArtifactCount,
     bool? previewIsArtifact,
     List<String>? recentPreviewTexts,
-  }) => TexthookerTextThread(
-    key: key,
-    label: label ?? this.label,
-    hookCode: hookCode,
-    nativeThreadId: nativeThreadId,
-    lineCount: lineCount,
-    latestAt: latestAt,
-    latestText: latestText,
-    audioLineCount: audioLineCount,
-    previewText: previewText ?? this.previewText,
-    observedLineCount: observedLineCount ?? this.observedLineCount,
-    observedArtifactCount: observedArtifactCount ?? this.observedArtifactCount,
-    previewIsArtifact: previewIsArtifact ?? this.previewIsArtifact,
-    recentPreviewTexts: recentPreviewTexts ?? this.recentPreviewTexts,
-  );
+  }) =>
+      TexthookerTextThread(
+        key: key,
+        label: label ?? this.label,
+        hookCode: hookCode,
+        nativeThreadId: nativeThreadId,
+        lineCount: lineCount,
+        latestAt: latestAt,
+        latestText: latestText,
+        audioLineCount: audioLineCount,
+        previewText: previewText ?? this.previewText,
+        observedLineCount: observedLineCount ?? this.observedLineCount,
+        observedArtifactCount:
+            observedArtifactCount ?? this.observedArtifactCount,
+        previewIsArtifact: previewIsArtifact ?? this.previewIsArtifact,
+        recentPreviewTexts: recentPreviewTexts ?? this.recentPreviewTexts,
+      );
 
   final String key;
   final String label;
@@ -267,6 +288,16 @@ class TexthookerTextThread {
 
   /// 该线程是否出过内容（发布与否无关）。
   bool get hasObservedLines => observedLineCount > 0 || lineCount > 0;
+
+  /// 该线程的观测行是否**以伪影为主**（逐字 ×2/×3 重绘等被 native `LunaTextIsArtifact`
+  /// 判掉的行超过一半）。
+  ///
+  /// BUG-2112：native 采集期会把伪影行丢在文本道之外，只在预览槽计数；而预览文本经
+  /// [collapseTexthookerPreview] 折叠后**看起来是干净整句**。若不把这个判据显式摆出来，
+  /// 用户会照着预览选中一条永远 0 行的线程，且没有任何提示说明为什么。排序、记忆恢复、
+  /// 自动选择、选中后的告警都必须读同一个判据，不能各写一份阈值。
+  bool get isArtifactDominated =>
+      observedLineCount > 0 && observedArtifactCount * 2 > observedLineCount;
 }
 
 /// native 线程预览区的一条快照（v12）。按 native thread id 对齐到线程目录。
@@ -361,13 +392,15 @@ class TexthookerLineEntry {
   /// 本行是否已有可用句音：matched（配到游戏资源）/ encoded（音频已提取进卡）/
   /// fallback（回退环回声）三态即有音频；pending/missing/unavailable 视作无。
   bool get hasAudio => switch (audioStatus) {
-    TexthookerLineAudioStatus.matched ||
-    TexthookerLineAudioStatus.encoded ||
-    TexthookerLineAudioStatus.fallback => true,
-    TexthookerLineAudioStatus.pending ||
-    TexthookerLineAudioStatus.missing ||
-    TexthookerLineAudioStatus.unavailable => false,
-  };
+        TexthookerLineAudioStatus.matched ||
+        TexthookerLineAudioStatus.encoded ||
+        TexthookerLineAudioStatus.fallback =>
+          true,
+        TexthookerLineAudioStatus.pending ||
+        TexthookerLineAudioStatus.missing ||
+        TexthookerLineAudioStatus.unavailable =>
+          false,
+      };
 
   TexthookerLineEntry copyWith({
     String? text,
@@ -400,13 +433,11 @@ class TexthookerLineEntry {
       receivedAt: receivedAt,
       audioStatus: audioStatus ?? this.audioStatus,
       audioBackend: audioBackend ?? this.audioBackend,
-      audioResourceId: clearAudioResourceId
-          ? null
-          : audioResourceId ?? this.audioResourceId,
+      audioResourceId:
+          clearAudioResourceId ? null : audioResourceId ?? this.audioResourceId,
       audioDurationMs: audioDurationMs ?? this.audioDurationMs,
-      fallbackReason: clearFallbackReason
-          ? null
-          : fallbackReason ?? this.fallbackReason,
+      fallbackReason:
+          clearFallbackReason ? null : fallbackReason ?? this.fallbackReason,
       mined: mined ?? this.mined,
       minedNoteId: clearMinedNoteId ? null : minedNoteId ?? this.minedNoteId,
       favorited: favorited ?? this.favorited,
@@ -434,7 +465,8 @@ class TexthookerService extends ChangeNotifier {
   ///
   /// [entries] 每次都要复制整张表；折叠判定是**每条 hook 行**都要做一次的热路径，
   /// 走这个 O(1) 的入口。
-  TexthookerLineEntry? get lastEntry => _entries.isEmpty ? null : _entries.last;
+  TexthookerLineEntry? get lastEntry =>
+      _entries.isEmpty ? null : _entries.last;
 
   /// 折叠「同一句台词的多次快照」（见 [isProgressiveTextUpdate]）。
   ///
@@ -490,11 +522,11 @@ class TexthookerService extends ChangeNotifier {
   List<TexthookerTextThread> textThreadsSince(DateTime? startedAt) {
     final Map<String, TexthookerTextThread> byKey =
         <String, TexthookerTextThread>{
-          for (final MapEntry<String, TexthookerTextThread> entry
-              in _discoveredTextThreads.entries)
-            if (startedAt == null || !entry.value.latestAt.isBefore(startedAt))
-              entry.key: entry.value,
-        };
+      for (final MapEntry<String, TexthookerTextThread> entry
+          in _discoveredTextThreads.entries)
+        if (startedAt == null || !entry.value.latestAt.isBefore(startedAt))
+          entry.key: entry.value,
+    };
     for (final TexthookerLineEntry entry in _entries) {
       if (startedAt != null && entry.receivedAt.isBefore(startedAt)) continue;
       final String? key = entry.textThreadKey;
@@ -597,13 +629,9 @@ class TexthookerService extends ChangeNotifier {
       return b.audioLineCount.compareTo(a.audioLineCount);
     }
     // 干净线程排在脏线程之前：伪影占比低者优先。脏线程仍然可见可选（对齐 Luna），
-    // 只是不该挡在真台词前面。
-    final bool aDirty =
-        a.observedArtifactCount * 2 > a.observedLineCount &&
-        a.observedLineCount > 0;
-    final bool bDirty =
-        b.observedArtifactCount * 2 > b.observedLineCount &&
-        b.observedLineCount > 0;
+    // 只是不该挡在真台词前面。判据与 UI 标记/记忆恢复同一份（BUG-2112）。
+    final bool aDirty = a.isArtifactDominated;
+    final bool bDirty = b.isArtifactDominated;
     if (aDirty != bDirty) return aDirty ? 1 : -1;
     if (a.observedLineCount != b.observedLineCount) {
       return b.observedLineCount.compareTo(a.observedLineCount);
@@ -764,6 +792,29 @@ class TexthookerService extends ChangeNotifier {
     );
   }
 
+  /// 折叠回看窗口：同端点上一条最多隔多少条其它端点的行。SGRE 实测两次重绘之间
+  /// 插进来的系统串是个位数；给 32 既盖住并行 hook 的喷发，又不让判定退化成扫全表。
+  static const int _foldLookback = 32;
+
+  /// 从尾巴往前找同一生产端点（source / sourceLabel / textThreadKey 三段全等）的
+  /// 最近一条，最多回看 [_foldLookback] 条；找不到返回 -1。
+  int _lastIndexOfEndpoint(
+    TexthookerLineSource source,
+    String? sourceLabel,
+    String? textThreadKey,
+  ) {
+    final int floor = _entries.length - _foldLookback;
+    for (int i = _entries.length - 1; i >= 0 && i >= floor; i--) {
+      final TexthookerLineEntry entry = _entries[i];
+      if (entry.source == source &&
+          entry.sourceLabel == sourceLabel &&
+          entry.textThreadKey == textThreadKey) {
+        return i;
+      }
+    }
+    return -1;
+  }
+
   TexthookerLineEntry? appendLine(
     String line, {
     TexthookerLineSource source = TexthookerLineSource.unknown,
@@ -811,8 +862,7 @@ class TexthookerService extends ChangeNotifier {
       // 回吞深度上限：一句台词的快照数是个位数，给个上限免得畸形输入把每行的
       // 折叠判定拖成 O(buffer)。
       const int maxAbsorb = 8;
-      while (absorbed.length < maxAbsorb && _entries.isNotEmpty) {
-        final TexthookerLineEntry tail = _entries[_entries.length - 1];
+      while (absorbed.length < maxAbsorb) {
         // 折叠只在**同一个生产端点**内成立，三段判据缺一不可：
         //   source        —— 通道种类（WS / 引擎 hook）；
         //   sourceLabel   —— 端点身份。WS 路径下 textThreadKey 恒 null、source 恒
@@ -820,27 +870,31 @@ class TexthookerService extends ChangeNotifier {
         //                    并发连接的**只有**它（ws client 传的是 url）；漏了它
         //                    就是把两个工具的输出折成一条。
         //   textThreadKey —— 引擎 hook 的并行线程。
-        if (tail.source != source ||
-            tail.sourceLabel != sourceLabel ||
-            tail.textThreadKey != textThreadKey) {
-          break;
-        }
-        final bool layoutRefresh = isWhitespaceOnlyLayoutRefresh(
-          tail.text,
-          mergedText,
+        // 同端点的上一条不一定就在尾巴上：SGRE 一句台词的两次重绘之间，
+        // WideCharToMultiByte 这类系统串线程会插进来好几条，只看紧邻尾巴就断链，
+        // 工作台里「ねぇね」和整句各留一条。所以向前找同端点的最近一条（有界），
+        // 其它端点的行原地保留、不参与折叠。
+        final int tailIndex = _lastIndexOfEndpoint(
+          source,
+          sourceLabel,
+          textThreadKey,
         );
+        if (tailIndex < 0) break;
+        final TexthookerLineEntry tail = _entries[tailIndex];
+        final bool layoutRefresh =
+            isWhitespaceOnlyLayoutRefresh(tail.text, mergedText);
         if (!layoutRefresh && !isProgressiveTextUpdate(tail.text, mergedText)) {
           break;
         }
-        // 纯换行/空白刷新时，字符信息量相等但**后到快照**才是当前游戏排版；不要
-        // 因为长度相等又退回旧文本。真正的前/后缀折叠仍保留信息量更大的那份。
-        if (!layoutRefresh &&
-            normalizeForFold(tail.text).length >
-                normalizeForFold(mergedText).length) {
+        // 前/后缀折叠保留信息量更大的那一份。排版刷新不需要在这里额外分支：
+        // 它的两侧去空白后逐字符相同、长度必然相等，`>` 是严格比较，天然不会
+        // 回退，**后到的那份排版**因此自动胜出。
+        if (normalizeForFold(tail.text).length >
+            normalizeForFold(mergedText).length) {
           mergedText = tail.text;
           mergedSpans = tail.rubySpans;
         }
-        absorbed.add(_entries.removeLast());
+        absorbed.add(_entries.removeAt(tailIndex));
       }
     }
 
@@ -866,15 +920,13 @@ class TexthookerService extends ChangeNotifier {
       // 制卡 / 收藏位取并集：被吞的那几条里只要有一条已制卡（或已收藏），合并
       // 结果就该带着那个徽章 —— 只从 base 继承的话，用户刚给第 ② 拍制的卡会在
       // 第 ③ 拍折叠后从工作台上「消失」。
-      final bool anyMined = absorbed.any((TexthookerLineEntry e) => e.mined);
-      final bool anyFavorited = absorbed.any(
-        (TexthookerLineEntry e) => e.favorited,
-      );
+      final bool anyMined =
+          absorbed.any((TexthookerLineEntry e) => e.mined);
+      final bool anyFavorited =
+          absorbed.any((TexthookerLineEntry e) => e.favorited);
       final int? mergedNoteId = absorbed
-          .firstWhere(
-            (TexthookerLineEntry e) => e.minedNoteId != null,
-            orElse: () => base,
-          )
+          .firstWhere((TexthookerLineEntry e) => e.minedNoteId != null,
+              orElse: () => base)
           .minedNoteId;
       final TexthookerLineEntry merged = base.copyWith(
         text: mergedText,
@@ -1051,14 +1103,13 @@ class TexthookerService extends ChangeNotifier {
 /// 实时台词筛选的唯一 predicate：枚举驱动、无特殊分支。页面/服务共用，
 /// 保证「有音频 / 已制卡 / 已收藏」的判据单一真相源。
 bool lineMatchesFilter(
-  TexthookerLineEntry entry,
-  TexthookerLineFilter filter,
-) => switch (filter) {
-  TexthookerLineFilter.all => true,
-  TexthookerLineFilter.withAudio => entry.hasAudio,
-  TexthookerLineFilter.mined => entry.mined,
-  TexthookerLineFilter.favorited => entry.favorited,
-};
+        TexthookerLineEntry entry, TexthookerLineFilter filter) =>
+    switch (filter) {
+      TexthookerLineFilter.all => true,
+      TexthookerLineFilter.withAudio => entry.hasAudio,
+      TexthookerLineFilter.mined => entry.mined,
+      TexthookerLineFilter.favorited => entry.favorited,
+    };
 
 /// 「全部文本线程」的展示投影：折叠同一渲染瞬间被不同 Luna 线程各回传一次的同文行。
 ///
@@ -1081,8 +1132,8 @@ List<TexthookerLineEntry> collapseParallelTextThreadDuplicates(
     final int? currentHookAt = entry.hookTimestampMs;
     final String? previousThread = previous.textThreadKey;
     final String? currentThread = entry.textThreadKey;
-    final bool parallelDuplicate =
-        previous.source == TexthookerLineSource.engineHook &&
+    final bool parallelDuplicate = previous.source ==
+            TexthookerLineSource.engineHook &&
         entry.source == TexthookerLineSource.engineHook &&
         previousThread != null &&
         currentThread != null &&

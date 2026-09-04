@@ -136,6 +136,11 @@ void main() {
     expect(repo.minedContext!.sentenceAudioPath,
         endsWith('immersion_audio.${immersionMiningAudioExtension()}'));
     expect(repo.minedContext!.source, AnkiMiningSource.video);
+    // 片段时间窗必须原样接进落卡 context（渲染 `{clip-timestamp}` 的唯一来源）。
+    // 引擎是「制卡请求 → 落卡 context」的唯一收口：这里漏传，视频页真实制卡就没有
+    // 时间窗，而直调渲染器 / 直造 context 的测试结构上照不到这根线。
+    expect(repo.minedContext!.clipStartMs, 1000);
+    expect(repo.minedContext!.clipEndMs, 3000);
   });
 
   test('BUG-1004 remoteAudioClipper 命中远端流 → 用 host 端裁产物、不调 ffmpeg 音频抽取',
@@ -355,6 +360,9 @@ void main() {
     expect(repo.minedContext!.coverPath, endsWith('.jpg'));
   });
 
+  // TODO-1314(B5) / PR#1172: 物化判据是「谁在限速」而不是「有没有分离音轨」——`range=` 查询参数
+  // 分片是 googlevideo 专属绕行，所以 fixture 必须用真的 googlevideo 主机名（旧 fixture
+  // `audio-only.example` 只满足旧的形状判据，与用例名里的 youtube split 不一致）。
   test(
       'audioSource (youtube split) is materialized locally then cut (TODO-1314 B5)',
       () async {
@@ -411,7 +419,8 @@ void main() {
                 source: AnkiMiningSource.video,
                 fields: {'expression': 'x'},
                 mediaSource: 'https://video-only.example/v',
-                audioSource: 'https://audio-only.example/a',
+                audioSource:
+                    'https://rr1---sn-4g5e6nez.googlevideo.com/videoplayback?id=x',
                 clipStartMs: 0,
                 clipEndMs: 2000,
                 sentence: 's'),
@@ -420,8 +429,64 @@ void main() {
             repo: repo);
     expect(gifInput, 'https://video-only.example/v'); // GIF 仍从视频流
     // 分离 audio-only 流先经 range 分片下载物化到本地，再对本地文件裁（不再对 URL 直接 HTTP seek）。
-    expect(materializedUrl, 'https://audio-only.example/a');
+    expect(materializedUrl,
+        'https://rr1---sn-4g5e6nez.googlevideo.com/videoplayback?id=x');
     expect(audioInput, localAudio);
+  });
+
+  // PR#1172 反向守卫：非 googlevideo 的分离音轨（bilibili DASH audio-only m4s 等）
+  // **不得**走 range 分片物化——`range=` 是它们不认识的查询参数，被忽略后每一片
+  // 都返回整个文件，会把同一个流反复下满 maxBytes（比直接 seek 慢几十倍）。
+  // 它们直接对 URL `-ss` 裁即可。这一条钉住判据是「谁在限速」而非「有没有分离音轨」。
+  test('non-googlevideo split audio is cut from the URL, not materialized',
+      () async {
+    final repo = _FakeRepo();
+    String? audioInput;
+    String? materializedUrl;
+    const String biliAudio =
+        'https://upos-hz-mirrorakam.akamaized.net/upgcxcode/x-1-30280.m4s';
+    Future<String?> capAudio(
+        {required String inputPath,
+        required int startMs,
+        required int endMs,
+        required String outputPath,
+        int? audioStreamIndex,
+        int? audioStreamCount,
+        FfmpegFailureReporter? onFailure,
+        int audioChannels = 1,
+        String audioBitrate = '64k',
+        String? tlsPinSha256}) async {
+      audioInput = inputPath;
+      return outputPath;
+    }
+
+    Future<String?> capMaterialize(
+        {required String audioUrl,
+        required String outputPath,
+        FfmpegFailureReporter? onFailure}) async {
+      materializedUrl = audioUrl;
+      return '${tmp.path}/should_not_be_used';
+    }
+
+    await build(
+            gif: okGif,
+            audio: capAudio,
+            frame: okFrame,
+            materializer: capMaterialize)
+        .mine(
+            const ImmersionMiningRequest(
+                source: AnkiMiningSource.video,
+                fields: {'expression': 'x'},
+                mediaSource: 'https://video-only.example/v',
+                audioSource: biliAudio,
+                clipStartMs: 0,
+                clipEndMs: 2000,
+                sentence: 's'),
+            compression: MiningMediaCompression.compressed,
+            tempDir: tmp.path,
+            repo: repo);
+    expect(materializedUrl, isNull);
+    expect(audioInput, biliAudio);
   });
 
   test('updateNoteId routes to updateMinedNote', () async {
@@ -461,6 +526,35 @@ void main() {
             compression: MiningMediaCompression.compressed,
             tempDir: tmp.path,
             repo: repo);
+    expect(res.aborted, true);
+    expect(res.abortReason, contains('audio'));
+    expect(repo.minedContext, isNull);
+  });
+
+  // ── BUG-2127：Netflix 现在带真实卡面时间窗，抽取路径必须一个字节都不变 ──────
+  //
+  // 修复前 `buildImmersionRequest` 把窗硬编码成 0，唯一目的就是让当时「窗非空 = 要裁」
+  // 的 `hasRange` 保持 false。窗改成透传真值后，抽取意图改由 [hasRange]（窗非空 **且**
+  // 有可裁的源）承载 —— 下面两条把「Netflix 形状 + 非零窗」这个此前不存在的组合钉住。
+  test('BUG-2127：Netflix 形状（无源 + provided 字节 + 非零窗）音频丢失仍中止', () async {
+    final repo = _FakeRepo();
+    final res = await build(gif: nullGif, audio: nullAudio, frame: nullFrame)
+        .mine(
+            ImmersionMiningRequest(
+                source: AnkiMiningSource.video,
+                fields: const {'expression': 'x'},
+                // 非零窗：修复前这里只可能是 0/0。
+                clipStartMs: 1000,
+                clipEndMs: 3000,
+                sentence: 's',
+                providedCoverBytes: Uint8List.fromList(<int>[1, 2, 3]),
+                providedCoverName: 'netflix_clip.gif',
+                requireAudio: true),
+            compression: MiningMediaCompression.compressed,
+            tempDir: tmp.path,
+            repo: repo);
+    // 中止判据走的仍是 provided-bytes 那条腿（`providedCoverBytes != null && !hasRange`），
+    // 没有因为窗变非零而改走 range 腿。
     expect(res.aborted, true);
     expect(res.abortReason, contains('audio'));
     expect(repo.minedContext, isNull);
@@ -735,5 +829,10 @@ void main() {
     expect(VideoMiningImageMode.gif.isStill, false);
     expect(VideoMiningImageMode.currentFrame.isStill, true);
     expect(VideoMiningImageMode.subtitleStart.isStill, true);
+    // 视频片段既不是静图也不是动图；wireName 稳定为 video_clip（偏好持久化契约）。
+    expect(VideoMiningImageMode.videoClip.isStill, false);
+    expect(VideoMiningImageMode.videoClip.isVideoClip, true);
+    expect(VideoMiningImageMode.videoClip.wireName, 'video_clip');
+    expect(VideoMiningImageMode.gif.isVideoClip, false);
   });
 }
