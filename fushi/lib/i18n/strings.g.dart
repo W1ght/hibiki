@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 71757 (4221 per locale)
+/// Strings: 71961 (4233 per locale)
 ///
-/// Built on 2026-09-04 at 12:47 UTC
+/// Built on 2026-09-04 at 12:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5802,6 +5802,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_conflict_keep_both => 'Keep both';
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  String get video_specs_title => 'Media info';
+  String get video_specs_resolution => 'Resolution';
+  String get video_specs_dynamic_range => 'Dynamic range';
+  String get video_specs_video_codec => 'Video codec';
+  String get video_specs_bit_depth => 'Bit depth';
+  String get video_specs_frame_rate => 'Frame rate';
+  String get video_specs_bitrate => 'Bitrate';
+  String get video_specs_audio_tracks => 'Audio tracks';
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  String get video_specs_track_commentary => 'Commentary';
+  String get video_specs_track_forced => 'Forced';
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -15651,6 +15663,30 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -25727,6 +25763,30 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -35856,6 +35916,30 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -46019,6 +46103,30 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -55986,6 +56094,30 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -66045,6 +66177,30 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -75491,6 +75647,30 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -84947,6 +85127,30 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -94961,6 +95165,30 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -105029,6 +105257,30 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -115075,6 +115327,30 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -124920,6 +125196,30 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -134882,6 +135182,30 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -144815,6 +145139,30 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 // Path: <root>
@@ -153942,6 +154290,30 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       '两个动作都保留这个绑定，按下时由作用域先后仲裁，先命中的那个生效。';
+  @override
+  String get video_specs_title => '媒体信息';
+  @override
+  String get video_specs_resolution => '清晰度';
+  @override
+  String get video_specs_dynamic_range => '动态范围';
+  @override
+  String get video_specs_video_codec => '视频编码';
+  @override
+  String get video_specs_bit_depth => '色深';
+  @override
+  String get video_specs_frame_rate => '帧率';
+  @override
+  String get video_specs_bitrate => '码率';
+  @override
+  String get video_specs_audio_tracks => '音轨';
+  @override
+  String get video_specs_subtitle_tracks => '字幕轨';
+  @override
+  String get video_specs_track_commentary => '评论音轨';
+  @override
+  String get video_specs_track_forced => '强制';
+  @override
+  String get video_specs_track_default => '默认';
 }
 
 // Path: <root>
@@ -163081,6 +163453,30 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_conflict_keep_both_hint =>
       'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+  @override
+  String get video_specs_title => 'Media info';
+  @override
+  String get video_specs_resolution => 'Resolution';
+  @override
+  String get video_specs_dynamic_range => 'Dynamic range';
+  @override
+  String get video_specs_video_codec => 'Video codec';
+  @override
+  String get video_specs_bit_depth => 'Bit depth';
+  @override
+  String get video_specs_frame_rate => 'Frame rate';
+  @override
+  String get video_specs_bitrate => 'Bitrate';
+  @override
+  String get video_specs_audio_tracks => 'Audio tracks';
+  @override
+  String get video_specs_subtitle_tracks => 'Subtitle tracks';
+  @override
+  String get video_specs_track_commentary => 'Commentary';
+  @override
+  String get video_specs_track_forced => 'Forced';
+  @override
+  String get video_specs_track_default => 'Default';
 }
 
 /// Flat map(s) containing all translations.
@@ -171741,6 +172137,30 @@ extension on _StringsEn {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -180396,6 +180816,30 @@ extension on _StringsAr {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -189096,6 +189540,30 @@ extension on _StringsDe {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -197787,6 +198255,30 @@ extension on _StringsEs {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -206487,6 +206979,30 @@ extension on _StringsFr {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -215158,6 +215674,30 @@ extension on _StringsId {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -223851,6 +224391,30 @@ extension on _StringsIt {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -232471,6 +233035,30 @@ extension on _StringsJa {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -241095,6 +241683,30 @@ extension on _StringsKo {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -249781,6 +250393,30 @@ extension on _StringsNl {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -258462,6 +259098,30 @@ extension on _StringsPtBr {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -267150,6 +267810,30 @@ extension on _StringsRu {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -275810,6 +276494,30 @@ extension on _StringsTh {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -284485,6 +285193,30 @@ extension on _StringsTr {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -293154,6 +293886,30 @@ extension on _StringsVi {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
@@ -301749,6 +302505,30 @@ extension on _StringsZhCn {
         return '两者都保留';
       case 'shortcut_conflict_keep_both_hint':
         return '两个动作都保留这个绑定，按下时由作用域先后仲裁，先命中的那个生效。';
+      case 'video_specs_title':
+        return '媒体信息';
+      case 'video_specs_resolution':
+        return '清晰度';
+      case 'video_specs_dynamic_range':
+        return '动态范围';
+      case 'video_specs_video_codec':
+        return '视频编码';
+      case 'video_specs_bit_depth':
+        return '色深';
+      case 'video_specs_frame_rate':
+        return '帧率';
+      case 'video_specs_bitrate':
+        return '码率';
+      case 'video_specs_audio_tracks':
+        return '音轨';
+      case 'video_specs_subtitle_tracks':
+        return '字幕轨';
+      case 'video_specs_track_commentary':
+        return '评论音轨';
+      case 'video_specs_track_forced':
+        return '强制';
+      case 'video_specs_track_default':
+        return '默认';
       default:
         return null;
     }
@@ -310347,6 +311127,30 @@ extension on _StringsZhHk {
         return 'Keep both';
       case 'shortcut_conflict_keep_both_hint':
         return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
+      case 'video_specs_title':
+        return 'Media info';
+      case 'video_specs_resolution':
+        return 'Resolution';
+      case 'video_specs_dynamic_range':
+        return 'Dynamic range';
+      case 'video_specs_video_codec':
+        return 'Video codec';
+      case 'video_specs_bit_depth':
+        return 'Bit depth';
+      case 'video_specs_frame_rate':
+        return 'Frame rate';
+      case 'video_specs_bitrate':
+        return 'Bitrate';
+      case 'video_specs_audio_tracks':
+        return 'Audio tracks';
+      case 'video_specs_subtitle_tracks':
+        return 'Subtitle tracks';
+      case 'video_specs_track_commentary':
+        return 'Commentary';
+      case 'video_specs_track_forced':
+        return 'Forced';
+      case 'video_specs_track_default':
+        return 'Default';
       default:
         return null;
     }
