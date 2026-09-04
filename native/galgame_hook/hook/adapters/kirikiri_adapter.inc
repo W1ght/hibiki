@@ -931,6 +931,7 @@ if(typeof global.fushiLookupBootstrap == "undefined")
 			global.fushiLookupSlots = [];
 			global.fushiLookupClock = 0;
 			global.fushiLookupHoverKey = "";
+			global.fushiLookupShiftSubmitKey = "";
 			global.fushiLookupHitEntry = void;
 			// 当前**卡片**依附的 entry（BUG-1606）。与 fushiLookupHitEntry 分开：后者是最后
 			// 一次命中（含纯悬停），前者只在卡片真正显示那一刻定下，是收卡的唯一归属判据。
@@ -3503,13 +3504,32 @@ if(typeof global.fushiLookupBootstrap == "undefined")
 					return false;
 				}
 			};
+			// Shift+悬浮查词：按住 Shift 移动光标时，每换到一个新字形就提交一次。
+			// 键盘 hook 只在 Shift 按下那一瞬间采样一次；用户「先按住再移过去」或
+			// 「按着 Shift 从一个词滑到下一个词」都落不到 keyDown 上，必须由 mouseMove
+			// 自己看键态。fushiLookupShiftSubmitKey 记住已提交的 line#index，同一字形
+			// 内的抖动不重复提交；松开 Shift 即清零，下次再按住重新开始。
 			global.fushiLookupMouseMoveHook = function(x, y)
 			{
 				try
 				{
 					global.fushiLookupAuditWrappers(false);
 					if(global.fushiLookupOverCard()) return false;
-					global.fushiLookupProbe(false);
+					if(System.getKeyState(0x10))
+					{
+						global.fushiLookupProbe(false);
+						var hoverKey = global.fushiLookupHoverKey;
+						if(hoverKey != "" && hoverKey != global.fushiLookupShiftSubmitKey)
+						{
+							global.fushiLookupShiftSubmitKey = hoverKey;
+							global.fushiLookupProbe(true);
+						}
+					}
+					else
+					{
+						global.fushiLookupShiftSubmitKey = "";
+						global.fushiLookupProbe(false);
+					}
 				}
 				catch(e) { global.fushiLookupFault(); }
 				return false;
@@ -3545,7 +3565,12 @@ if(typeof global.fushiLookupBootstrap == "undefined")
 					{
 						if(global.fushiLookupCancelCurrent()) return true;
 					}
-					if(key == 0x10) return global.fushiLookupProbe(true);
+					if(key == 0x10)
+					{
+						var submitted = global.fushiLookupProbe(true);
+						if(submitted) global.fushiLookupShiftSubmitKey = global.fushiLookupHoverKey;
+						return submitted;
+					}
 				}
 				catch(e) { global.fushiLookupFault(); }
 				return false;

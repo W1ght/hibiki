@@ -924,11 +924,14 @@ void LunaOutput(const wchar_t* hookcode, const char* hookname,
     const std::wstring normalized_storage =
         fushi_voice_hook::LunaNormalizeMagesControls(
             text, raw_len, g_luna.normalize_mages_controls);
-    const wchar_t* normalized_text = normalized_storage.c_str();
     const int escaped_len = static_cast<int>(normalized_storage.size());
-    const int normalized_len =
-        fushi_voice_hook::LunaNormalizedTextLengthForHook(
-            hookname, normalized_text, escaped_len);
+    // EmbedKrkrZ 的成对块折叠取末块（姓名+正文合写时只留正文，见
+    // luna_text_selector.h LunaLastPairedBlock），所以视图带 offset。
+    const fushi_voice_hook::LunaFoldedView folded =
+        fushi_voice_hook::LunaFoldedViewForHook(
+            hookname, normalized_storage.c_str(), escaped_len);
+    const wchar_t* normalized_text = normalized_storage.c_str() + folded.offset;
+    const int normalized_len = folded.length;
     if (LunaDiagEnabled()) {
       char u8[1024];
       LunaWideToUtf8(text, raw_len, u8, sizeof(u8));
