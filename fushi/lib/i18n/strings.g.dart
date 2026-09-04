@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 71417 (4201 per locale)
+/// Strings: 71570 (4210 per locale)
 ///
-/// Built on 2026-09-03 at 17:57 UTC
+/// Built on 2026-09-04 at 10:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5771,6 +5771,20 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Recommended pack finished downloading. Import it from Settings → System.';
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -15569,6 +15583,29 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -25594,6 +25631,29 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -35671,6 +35731,29 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -45783,6 +45866,29 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -55700,6 +55806,29 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -65708,6 +65837,29 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -75104,6 +75256,29 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -84510,6 +84685,29 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -94473,6 +94671,29 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -104490,6 +104711,29 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -114486,6 +114730,29 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -124280,6 +124547,29 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -134191,6 +134481,29 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -144073,6 +144386,29 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => 'Turn on FSRS in Anki';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => 'Open deck options';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      'In Anki, click the gear next to a deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => 'Switch FSRS on';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
 }
 
 // Path: <root>
@@ -153152,6 +153488,29 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       '下载会在后台继续：可以直接走下一步，也可以关掉向导。进度、取消和导入都在「设置 → 系统」里。';
+  @override
+  String get onboarding_anki_fsrs_title => '在 Anki 里开启 FSRS';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki 内置了 FSRS —— 目前最好的间隔重复算法之一，但你不打开它，排程就一直走三十多年前的 SM-2。FSRS 拿你的真实复习记录预测遗忘时点，同样的记忆效果复习量更少。这个开关只在 Anki 里开一次，Fushi 这边不用改任何设置。';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => '打开牌组选项';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      '在 Anki 主界面点牌组右侧的齿轮，选「选项」。';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      '在 AnkiDroid（2.17 及以上）或 AnkiMobile 里长按牌组，选「选项」。';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => '打开 FSRS 开关';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      '滚到选项页最底部的「FSRS」区块（旧版藏在「高级」里），把开关打开。它对整个收藏生效，开一次就够。';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => '点「优化」再保存';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      '在开关下方点「优化」，让参数贴合你自己的复习记录，然后保存。复习记录不足约 1000 条时默认参数已经比 SM-2 准，攒够以后再优化一次即可。';
 }
 
 // Path: <root>
@@ -162242,6 +162601,29 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get onboarding_anki_fsrs_title => '在 Anki 裡開啟 FSRS';
+  @override
+  String get onboarding_anki_fsrs_body =>
+      'Anki 內建了 FSRS —— 目前最好的間隔重複演算法之一，但你不打開它，排程就一直走三十多年前的 SM-2。FSRS 拿你的真實複習記錄預測遺忘時點，同樣的記憶效果複習量更少。這個開關只在 Anki 裡開一次，Fushi 這邊不用改任何設定。';
+  @override
+  String get onboarding_anki_fsrs_step_options_title => '打開牌組選項';
+  @override
+  String get onboarding_anki_fsrs_step_options_desktop_desc =>
+      '在 Anki 主介面點牌組右側的齒輪，選「選項」。';
+  @override
+  String get onboarding_anki_fsrs_step_options_mobile_desc =>
+      '在 AnkiDroid（2.17 及以上）或 AnkiMobile 裡長按牌組，選「選項」。';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_title => '打開 FSRS 開關';
+  @override
+  String get onboarding_anki_fsrs_step_toggle_desc =>
+      '捲到選項頁最底部的「FSRS」區塊（舊版藏在「進階」裡），把開關打開。它對整個收藏生效，開一次就夠。';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_title => '點「最佳化」再儲存';
+  @override
+  String get onboarding_anki_fsrs_step_optimize_desc =>
+      '在開關下方點「最佳化」，讓參數貼合你自己的複習記錄，然後儲存。複習記錄不足約 1000 條時預設參數已經比 SM-2 準，攢夠以後再最佳化一次即可。';
 }
 
 /// Flat map(s) containing all translations.
@@ -170862,6 +171244,24 @@ extension on _StringsEn {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -179477,6 +179877,24 @@ extension on _StringsAr {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -188137,6 +188555,24 @@ extension on _StringsDe {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -196788,6 +197224,24 @@ extension on _StringsEs {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -205448,6 +205902,24 @@ extension on _StringsFr {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -214079,6 +214551,24 @@ extension on _StringsId {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -222732,6 +223222,24 @@ extension on _StringsIt {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -231312,6 +231820,24 @@ extension on _StringsJa {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -239896,6 +240422,24 @@ extension on _StringsKo {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -248542,6 +249086,24 @@ extension on _StringsNl {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -257183,6 +257745,24 @@ extension on _StringsPtBr {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -265831,6 +266411,24 @@ extension on _StringsRu {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -274451,6 +275049,24 @@ extension on _StringsTh {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -283086,6 +283702,24 @@ extension on _StringsTr {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -291715,6 +292349,24 @@ extension on _StringsVi {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return 'Turn on FSRS in Anki';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki has FSRS built in — one of the best spaced-repetition algorithms around — but it keeps scheduling with SM-2 from the 1980s until you turn FSRS on. FSRS reads your real review history and predicts when you are about to forget, so you keep the same retention with fewer reviews. You flip this switch once, inside Anki; nothing changes on the Fushi side.';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return 'Open deck options';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return 'In Anki, click the gear next to a deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return 'In AnkiDroid (2.17 or newer) or AnkiMobile, long-press the deck and choose Options.';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return 'Switch FSRS on';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return 'Scroll to the FSRS section at the bottom of the options page (older builds hide it under Advanced) and turn the switch on. It applies to your whole collection, so once is enough.';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return 'Optimize, then save';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
       default:
         return null;
     }
@@ -300270,6 +300922,24 @@ extension on _StringsZhCn {
         return '推荐包下载完成。可在「设置 → 系统」里导入。';
       case 'onboarding_pack_download_background_hint':
         return '下载会在后台继续：可以直接走下一步，也可以关掉向导。进度、取消和导入都在「设置 → 系统」里。';
+      case 'onboarding_anki_fsrs_title':
+        return '在 Anki 里开启 FSRS';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki 内置了 FSRS —— 目前最好的间隔重复算法之一，但你不打开它，排程就一直走三十多年前的 SM-2。FSRS 拿你的真实复习记录预测遗忘时点，同样的记忆效果复习量更少。这个开关只在 Anki 里开一次，Fushi 这边不用改任何设置。';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return '打开牌组选项';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return '在 Anki 主界面点牌组右侧的齿轮，选「选项」。';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return '在 AnkiDroid（2.17 及以上）或 AnkiMobile 里长按牌组，选「选项」。';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return '打开 FSRS 开关';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return '滚到选项页最底部的「FSRS」区块（旧版藏在「高级」里），把开关打开。它对整个收藏生效，开一次就够。';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return '点「优化」再保存';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return '在开关下方点「优化」，让参数贴合你自己的复习记录，然后保存。复习记录不足约 1000 条时默认参数已经比 SM-2 准，攒够以后再优化一次即可。';
       default:
         return null;
     }
@@ -308828,6 +309498,24 @@ extension on _StringsZhHk {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'onboarding_anki_fsrs_title':
+        return '在 Anki 裡開啟 FSRS';
+      case 'onboarding_anki_fsrs_body':
+        return 'Anki 內建了 FSRS —— 目前最好的間隔重複演算法之一，但你不打開它，排程就一直走三十多年前的 SM-2。FSRS 拿你的真實複習記錄預測遺忘時點，同樣的記憶效果複習量更少。這個開關只在 Anki 裡開一次，Fushi 這邊不用改任何設定。';
+      case 'onboarding_anki_fsrs_step_options_title':
+        return '打開牌組選項';
+      case 'onboarding_anki_fsrs_step_options_desktop_desc':
+        return '在 Anki 主介面點牌組右側的齒輪，選「選項」。';
+      case 'onboarding_anki_fsrs_step_options_mobile_desc':
+        return '在 AnkiDroid（2.17 及以上）或 AnkiMobile 裡長按牌組，選「選項」。';
+      case 'onboarding_anki_fsrs_step_toggle_title':
+        return '打開 FSRS 開關';
+      case 'onboarding_anki_fsrs_step_toggle_desc':
+        return '捲到選項頁最底部的「FSRS」區塊（舊版藏在「進階」裡），把開關打開。它對整個收藏生效，開一次就夠。';
+      case 'onboarding_anki_fsrs_step_optimize_title':
+        return '點「最佳化」再儲存';
+      case 'onboarding_anki_fsrs_step_optimize_desc':
+        return '在開關下方點「最佳化」，讓參數貼合你自己的複習記錄，然後儲存。複習記錄不足約 1000 條時預設參數已經比 SM-2 準，攢夠以後再最佳化一次即可。';
       default:
         return null;
     }
