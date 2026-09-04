@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 71689 (4217 per locale)
+/// Strings: 71706 (4218 per locale)
 ///
-/// Built on 2026-09-04 at 12:42 UTC
+/// Built on 2026-09-04 at 12:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5796,6 +5796,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not open the browser. Copy the link and open it in a browser yourself.';
   String get sync_desktop_oauth_link_copy_failed =>
       'Could not copy the link. Select the link text and copy it manually.';
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -15635,6 +15637,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_desktop_oauth_link_copy_failed =>
       'تعذّر نسخ الرابط. حدّد نص الرابط وانسخه يدويًا.';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -25701,6 +25706,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_desktop_oauth_link_copy_failed =>
       'Der Link konnte nicht kopiert werden. Markiere den Linktext und kopiere ihn manuell.';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -35820,6 +35828,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_desktop_oauth_link_copy_failed =>
       'No se pudo copiar el enlace. Selecciona el texto del enlace y cópialo manualmente.';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -45973,6 +45984,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_desktop_oauth_link_copy_failed =>
       'Impossible de copier le lien. Sélectionnez le texte du lien et copiez-le manuellement.';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -55930,6 +55944,9 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_desktop_oauth_link_copy_failed =>
       'Tautan tidak dapat disalin. Pilih teks tautan dan salin secara manual.';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -65979,6 +65996,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_desktop_oauth_link_copy_failed =>
       'Impossibile copiare il link. Seleziona il testo del link e copialo manualmente.';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -75415,6 +75435,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_desktop_oauth_link_copy_failed =>
       'リンクをコピーできませんでした。リンクのテキストを選択して手動でコピーしてください。';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -84861,6 +84884,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_desktop_oauth_link_copy_failed =>
       '링크를 복사할 수 없습니다. 링크 텍스트를 선택해 직접 복사하세요.';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -94865,6 +94891,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_desktop_oauth_link_copy_failed =>
       'De link kon niet worden gekopieerd. Selecteer de linktekst en kopieer die handmatig.';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -104923,6 +104952,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_desktop_oauth_link_copy_failed =>
       'Não foi possível copiar o link. Selecione o texto do link e copie manualmente.';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -114959,6 +114991,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_desktop_oauth_link_copy_failed =>
       'Не удалось скопировать ссылку. Выделите текст ссылки и скопируйте его вручную.';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -124794,6 +124829,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_desktop_oauth_link_copy_failed =>
       'ไม่สามารถคัดลอกลิงก์ได้ ให้เลือกข้อความลิงก์แล้วคัดลอกด้วยตนเอง';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -134746,6 +134784,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_desktop_oauth_link_copy_failed =>
       'Bağlantı kopyalanamadı. Bağlantı metnini seçip elle kopyalayın.';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -144669,6 +144710,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_desktop_oauth_link_copy_failed =>
       'Không thể sao chép liên kết. Hãy chọn văn bản liên kết và sao chép thủ công.';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 // Path: <root>
@@ -153787,6 +153831,8 @@ class _StringsZhCn extends _StringsEn {
       '无法打开浏览器。请复制链接，自行在浏览器中打开。';
   @override
   String get sync_desktop_oauth_link_copy_failed => '复制失败。请手动选中链接文本后复制。';
+  @override
+  String get game_text_thread_artifact_hint => '逐字重复伪影线程，不会有可用台词';
 }
 
 // Path: <root>
@@ -162916,6 +162962,9 @@ class _StringsZhHk extends _StringsEn {
       '無法開啟瀏覽器。請複製連結，自行在瀏覽器中開啟。';
   @override
   String get sync_desktop_oauth_link_copy_failed => '複製失敗。請手動選取連結文字後複製。';
+  @override
+  String get game_text_thread_artifact_hint =>
+      'Repeated-character artifact thread, no usable lines';
 }
 
 /// Flat map(s) containing all translations.
@@ -171568,6 +171617,8 @@ extension on _StringsEn {
         return 'Could not open the browser. Copy the link and open it in a browser yourself.';
       case 'sync_desktop_oauth_link_copy_failed':
         return 'Could not copy the link. Select the link text and copy it manually.';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -180215,6 +180266,8 @@ extension on _StringsAr {
         return 'تعذّر فتح المتصفح. انسخ الرابط وافتحه بنفسك في متصفح.';
       case 'sync_desktop_oauth_link_copy_failed':
         return 'تعذّر نسخ الرابط. حدّد نص الرابط وانسخه يدويًا.';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -188907,6 +188960,8 @@ extension on _StringsDe {
         return 'Der Browser konnte nicht geöffnet werden. Kopiere den Link und öffne ihn selbst in einem Browser.';
       case 'sync_desktop_oauth_link_copy_failed':
         return 'Der Link konnte nicht kopiert werden. Markiere den Linktext und kopiere ihn manuell.';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -197590,6 +197645,8 @@ extension on _StringsEs {
         return 'No se pudo abrir el navegador. Copia el enlace y ábrelo tú mismo en un navegador.';
       case 'sync_desktop_oauth_link_copy_failed':
         return 'No se pudo copiar el enlace. Selecciona el texto del enlace y cópialo manualmente.';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -206282,6 +206339,8 @@ extension on _StringsFr {
         return 'Impossible d\'ouvrir le navigateur. Copiez le lien et ouvrez-le vous-même dans un navigateur.';
       case 'sync_desktop_oauth_link_copy_failed':
         return 'Impossible de copier le lien. Sélectionnez le texte du lien et copiez-le manuellement.';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -214945,6 +215004,8 @@ extension on _StringsId {
         return 'Browser tidak dapat dibuka. Salin tautannya dan buka sendiri di browser.';
       case 'sync_desktop_oauth_link_copy_failed':
         return 'Tautan tidak dapat disalin. Pilih teks tautan dan salin secara manual.';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -223630,6 +223691,8 @@ extension on _StringsIt {
         return 'Impossibile aprire il browser. Copia il link e aprilo tu stesso in un browser.';
       case 'sync_desktop_oauth_link_copy_failed':
         return 'Impossibile copiare il link. Seleziona il testo del link e copialo manualmente.';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -232242,6 +232305,8 @@ extension on _StringsJa {
         return 'ブラウザを開けませんでした。リンクをコピーして、ブラウザで自分で開いてください。';
       case 'sync_desktop_oauth_link_copy_failed':
         return 'リンクをコピーできませんでした。リンクのテキストを選択して手動でコピーしてください。';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -240858,6 +240923,8 @@ extension on _StringsKo {
         return '브라우저를 열 수 없습니다. 링크를 복사해 직접 브라우저에서 여세요.';
       case 'sync_desktop_oauth_link_copy_failed':
         return '링크를 복사할 수 없습니다. 링크 텍스트를 선택해 직접 복사하세요.';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -249536,6 +249603,8 @@ extension on _StringsNl {
         return 'De browser kon niet worden geopend. Kopieer de link en open die zelf in een browser.';
       case 'sync_desktop_oauth_link_copy_failed':
         return 'De link kon niet worden gekopieerd. Selecteer de linktekst en kopieer die handmatig.';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -258209,6 +258278,8 @@ extension on _StringsPtBr {
         return 'Não foi possível abrir o navegador. Copie o link e abra você mesmo em um navegador.';
       case 'sync_desktop_oauth_link_copy_failed':
         return 'Não foi possível copiar o link. Selecione o texto do link e copie manualmente.';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -266889,6 +266960,8 @@ extension on _StringsRu {
         return 'Не удалось открыть браузер. Скопируйте ссылку и откройте её в браузере вручную.';
       case 'sync_desktop_oauth_link_copy_failed':
         return 'Не удалось скопировать ссылку. Выделите текст ссылки и скопируйте его вручную.';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -275541,6 +275614,8 @@ extension on _StringsTh {
         return 'ไม่สามารถเปิดเบราว์เซอร์ได้ ให้คัดลอกลิงก์แล้วเปิดในเบราว์เซอร์ด้วยตนเอง';
       case 'sync_desktop_oauth_link_copy_failed':
         return 'ไม่สามารถคัดลอกลิงก์ได้ ให้เลือกข้อความลิงก์แล้วคัดลอกด้วยตนเอง';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -284208,6 +284283,8 @@ extension on _StringsTr {
         return 'Tarayıcı açılamadı. Bağlantıyı kopyalayıp bir tarayıcıda kendiniz açın.';
       case 'sync_desktop_oauth_link_copy_failed':
         return 'Bağlantı kopyalanamadı. Bağlantı metnini seçip elle kopyalayın.';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -292869,6 +292946,8 @@ extension on _StringsVi {
         return 'Không thể mở trình duyệt. Hãy sao chép liên kết và tự mở trong trình duyệt.';
       case 'sync_desktop_oauth_link_copy_failed':
         return 'Không thể sao chép liên kết. Hãy chọn văn bản liên kết và sao chép thủ công.';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
@@ -301456,6 +301535,8 @@ extension on _StringsZhCn {
         return '无法打开浏览器。请复制链接，自行在浏览器中打开。';
       case 'sync_desktop_oauth_link_copy_failed':
         return '复制失败。请手动选中链接文本后复制。';
+      case 'game_text_thread_artifact_hint':
+        return '逐字重复伪影线程，不会有可用台词';
       default:
         return null;
     }
@@ -310046,6 +310127,8 @@ extension on _StringsZhHk {
         return '無法開啟瀏覽器。請複製連結，自行在瀏覽器中開啟。';
       case 'sync_desktop_oauth_link_copy_failed':
         return '複製失敗。請手動選取連結文字後複製。';
+      case 'game_text_thread_artifact_hint':
+        return 'Repeated-character artifact thread, no usable lines';
       default:
         return null;
     }
