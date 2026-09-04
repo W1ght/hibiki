@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 71417 (4201 per locale)
+/// Strings: 71502 (4206 per locale)
 ///
-/// Built on 2026-09-03 at 17:57 UTC
+/// Built on 2026-09-04 at 08:55 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5771,6 +5771,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Recommended pack finished downloading. Import it from Settings → System.';
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -15569,6 +15576,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -25594,6 +25613,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -35671,6 +35702,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -45783,6 +45826,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -55700,6 +55755,18 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -65708,6 +65775,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -75104,6 +75183,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -84510,6 +84601,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -94473,6 +94576,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -104490,6 +104605,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -114486,6 +114613,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -124280,6 +124419,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -134191,6 +134342,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -144073,6 +144236,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 // Path: <root>
@@ -153152,6 +153327,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       '下载会在后台继续：可以直接走下一步，也可以关掉向导。进度、取消和导入都在「设置 → 系统」里。';
+  @override
+  String get sync_desktop_oauth_waiting_title => '正在等待浏览器完成登录';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      '已在默认浏览器打开登录页。如果没有打开，或页面显示错误，可复制链接到其他浏览器或无痕窗口打开。';
+  @override
+  String get sync_desktop_oauth_link_copy => '复制登录链接';
+  @override
+  String get sync_desktop_oauth_browser_reopen => '重新打开浏览器';
+  @override
+  String get sync_err_sign_in_cancelled => '已取消登录。';
 }
 
 // Path: <root>
@@ -162242,6 +162428,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_pack_download_background_hint =>
       'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  @override
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
 }
 
 /// Flat map(s) containing all translations.
@@ -170862,6 +171060,16 @@ extension on _StringsEn {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -179477,6 +179685,16 @@ extension on _StringsAr {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -188137,6 +188355,16 @@ extension on _StringsDe {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -196788,6 +197016,16 @@ extension on _StringsEs {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -205448,6 +205686,16 @@ extension on _StringsFr {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -214079,6 +214327,16 @@ extension on _StringsId {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -222732,6 +222990,16 @@ extension on _StringsIt {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -231312,6 +231580,16 @@ extension on _StringsJa {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -239896,6 +240174,16 @@ extension on _StringsKo {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -248542,6 +248830,16 @@ extension on _StringsNl {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -257183,6 +257481,16 @@ extension on _StringsPtBr {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -265831,6 +266139,16 @@ extension on _StringsRu {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -274451,6 +274769,16 @@ extension on _StringsTh {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -283086,6 +283414,16 @@ extension on _StringsTr {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -291715,6 +292053,16 @@ extension on _StringsVi {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
@@ -300270,6 +300618,16 @@ extension on _StringsZhCn {
         return '推荐包下载完成。可在「设置 → 系统」里导入。';
       case 'onboarding_pack_download_background_hint':
         return '下载会在后台继续：可以直接走下一步，也可以关掉向导。进度、取消和导入都在「设置 → 系统」里。';
+      case 'sync_desktop_oauth_waiting_title':
+        return '正在等待浏览器完成登录';
+      case 'sync_desktop_oauth_waiting_body':
+        return '已在默认浏览器打开登录页。如果没有打开，或页面显示错误，可复制链接到其他浏览器或无痕窗口打开。';
+      case 'sync_desktop_oauth_link_copy':
+        return '复制登录链接';
+      case 'sync_desktop_oauth_browser_reopen':
+        return '重新打开浏览器';
+      case 'sync_err_sign_in_cancelled':
+        return '已取消登录。';
       default:
         return null;
     }
@@ -308828,6 +309186,16 @@ extension on _StringsZhHk {
         return 'Recommended pack finished downloading. Import it from Settings → System.';
       case 'onboarding_pack_download_background_hint':
         return 'The download keeps running in the background — you can move to the next step or close this guide. Progress, cancel and import live in Settings → System.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
       default:
         return null;
     }
