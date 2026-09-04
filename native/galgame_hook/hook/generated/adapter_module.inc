@@ -10,3 +10,4 @@
         leaf_aquaplus_.onModuleLoaded(entry.szModule);
         hunex_gge_.onModuleLoaded(entry.szModule);
         cmvs_.onModuleLoaded(entry.szModule);
+        smash_fzmedia_.onModuleLoaded(entry.szModule);
