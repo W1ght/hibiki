@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 71706 (4218 per locale)
+/// Strings: 71757 (4221 per locale)
 ///
-/// Built on 2026-09-04 at 12:43 UTC
+/// Built on 2026-09-04 at 12:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5798,6 +5798,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not copy the link. Select the link text and copy it manually.';
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  String get shortcut_conflict_keep_both => 'Keep both';
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -15640,6 +15644,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -25709,6 +25720,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -35831,6 +35849,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -45987,6 +46012,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -55947,6 +55979,13 @@ class _StringsId extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -65999,6 +66038,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -75438,6 +75484,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -84887,6 +84940,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -94894,6 +94954,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -104955,6 +105022,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -114994,6 +115068,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -124832,6 +124913,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -134787,6 +134875,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -144713,6 +144808,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 // Path: <root>
@@ -153833,6 +153935,13 @@ class _StringsZhCn extends _StringsEn {
   String get sync_desktop_oauth_link_copy_failed => '复制失败。请手动选中链接文本后复制。';
   @override
   String get game_text_thread_artifact_hint => '逐字重复伪影线程，不会有可用台词';
+  @override
+  String get shortcut_action_global_context_menu => '打开右键菜单';
+  @override
+  String get shortcut_conflict_keep_both => '两者都保留';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      '两个动作都保留这个绑定，按下时由作用域先后仲裁，先命中的那个生效。';
 }
 
 // Path: <root>
@@ -162965,6 +163074,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_text_thread_artifact_hint =>
       'Repeated-character artifact thread, no usable lines';
+  @override
+  String get shortcut_action_global_context_menu => 'Open context menu';
+  @override
+  String get shortcut_conflict_keep_both => 'Keep both';
+  @override
+  String get shortcut_conflict_keep_both_hint =>
+      'Both actions keep this binding. Whichever scope resolves first wins at press time.';
 }
 
 /// Flat map(s) containing all translations.
@@ -171619,6 +171735,12 @@ extension on _StringsEn {
         return 'Could not copy the link. Select the link text and copy it manually.';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -180268,6 +180390,12 @@ extension on _StringsAr {
         return 'تعذّر نسخ الرابط. حدّد نص الرابط وانسخه يدويًا.';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -188962,6 +189090,12 @@ extension on _StringsDe {
         return 'Der Link konnte nicht kopiert werden. Markiere den Linktext und kopiere ihn manuell.';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -197647,6 +197781,12 @@ extension on _StringsEs {
         return 'No se pudo copiar el enlace. Selecciona el texto del enlace y cópialo manualmente.';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -206341,6 +206481,12 @@ extension on _StringsFr {
         return 'Impossible de copier le lien. Sélectionnez le texte du lien et copiez-le manuellement.';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -215006,6 +215152,12 @@ extension on _StringsId {
         return 'Tautan tidak dapat disalin. Pilih teks tautan dan salin secara manual.';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -223693,6 +223845,12 @@ extension on _StringsIt {
         return 'Impossibile copiare il link. Seleziona il testo del link e copialo manualmente.';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -232307,6 +232465,12 @@ extension on _StringsJa {
         return 'リンクをコピーできませんでした。リンクのテキストを選択して手動でコピーしてください。';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -240925,6 +241089,12 @@ extension on _StringsKo {
         return '링크를 복사할 수 없습니다. 링크 텍스트를 선택해 직접 복사하세요.';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -249605,6 +249775,12 @@ extension on _StringsNl {
         return 'De link kon niet worden gekopieerd. Selecteer de linktekst en kopieer die handmatig.';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -258280,6 +258456,12 @@ extension on _StringsPtBr {
         return 'Não foi possível copiar o link. Selecione o texto do link e copie manualmente.';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -266962,6 +267144,12 @@ extension on _StringsRu {
         return 'Не удалось скопировать ссылку. Выделите текст ссылки и скопируйте его вручную.';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -275616,6 +275804,12 @@ extension on _StringsTh {
         return 'ไม่สามารถคัดลอกลิงก์ได้ ให้เลือกข้อความลิงก์แล้วคัดลอกด้วยตนเอง';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -284285,6 +284479,12 @@ extension on _StringsTr {
         return 'Bağlantı kopyalanamadı. Bağlantı metnini seçip elle kopyalayın.';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -292948,6 +293148,12 @@ extension on _StringsVi {
         return 'Không thể sao chép liên kết. Hãy chọn văn bản liên kết và sao chép thủ công.';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
@@ -301537,6 +301743,12 @@ extension on _StringsZhCn {
         return '复制失败。请手动选中链接文本后复制。';
       case 'game_text_thread_artifact_hint':
         return '逐字重复伪影线程，不会有可用台词';
+      case 'shortcut_action_global_context_menu':
+        return '打开右键菜单';
+      case 'shortcut_conflict_keep_both':
+        return '两者都保留';
+      case 'shortcut_conflict_keep_both_hint':
+        return '两个动作都保留这个绑定，按下时由作用域先后仲裁，先命中的那个生效。';
       default:
         return null;
     }
@@ -310129,6 +310341,12 @@ extension on _StringsZhHk {
         return '複製失敗。請手動選取連結文字後複製。';
       case 'game_text_thread_artifact_hint':
         return 'Repeated-character artifact thread, no usable lines';
+      case 'shortcut_action_global_context_menu':
+        return 'Open context menu';
+      case 'shortcut_conflict_keep_both':
+        return 'Keep both';
+      case 'shortcut_conflict_keep_both_hint':
+        return 'Both actions keep this binding. Whichever scope resolves first wins at press time.';
       default:
         return null;
     }
