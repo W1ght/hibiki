@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 71570 (4210 per locale)
+/// Strings: 71689 (4217 per locale)
 ///
-/// Built on 2026-09-04 at 10:31 UTC
+/// Built on 2026-09-04 at 12:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5785,6 +5785,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_anki_fsrs_step_optimize_title => 'Optimize, then save';
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  String get sync_desktop_oauth_waiting_title =>
+      'Waiting for the browser sign-in';
+  String get sync_desktop_oauth_waiting_body =>
+      'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+  String get sync_desktop_oauth_link_copy => 'Copy sign-in link';
+  String get sync_desktop_oauth_browser_reopen => 'Open browser again';
+  String get sync_err_sign_in_cancelled => 'Sign-in cancelled.';
+  String get sync_desktop_oauth_browser_open_failed =>
+      'Could not open the browser. Copy the link and open it in a browser yourself.';
+  String get sync_desktop_oauth_link_copy_failed =>
+      'Could not copy the link. Select the link text and copy it manually.';
 }
 
 // Path: <root>
@@ -15606,6 +15617,24 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'في انتظار تسجيل الدخول في المتصفح';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'تم فتح صفحة تسجيل الدخول في المتصفح الافتراضي. إذا لم يُفتح شيء أو ظهر خطأ في الصفحة، فانسخ الرابط وافتحه في متصفح آخر أو في نافذة خاصة.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'نسخ رابط تسجيل الدخول';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'فتح المتصفح مرة أخرى';
+  @override
+  String get sync_err_sign_in_cancelled => 'تم إلغاء تسجيل الدخول.';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      'تعذّر فتح المتصفح. انسخ الرابط وافتحه بنفسك في متصفح.';
+  @override
+  String get sync_desktop_oauth_link_copy_failed =>
+      'تعذّر نسخ الرابط. حدّد نص الرابط وانسخه يدويًا.';
 }
 
 // Path: <root>
@@ -25654,6 +25683,24 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Warten auf die Anmeldung im Browser';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'Die Anmeldeseite wurde im Standardbrowser geöffnet. Falls nichts geöffnet wurde oder die Seite einen Fehler zeigt, kopiere den Link und öffne ihn in einem anderen Browser oder einem privaten Fenster.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Anmeldelink kopieren';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Browser erneut öffnen';
+  @override
+  String get sync_err_sign_in_cancelled => 'Anmeldung abgebrochen.';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      'Der Browser konnte nicht geöffnet werden. Kopiere den Link und öffne ihn selbst in einem Browser.';
+  @override
+  String get sync_desktop_oauth_link_copy_failed =>
+      'Der Link konnte nicht kopiert werden. Markiere den Linktext und kopiere ihn manuell.';
 }
 
 // Path: <root>
@@ -35754,6 +35801,25 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Esperando el inicio de sesión en el navegador';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'La página de inicio de sesión se abrió en tu navegador predeterminado. Si no se abrió nada o la página muestra un error, copia el enlace y ábrelo en otro navegador o en una ventana privada.';
+  @override
+  String get sync_desktop_oauth_link_copy =>
+      'Copiar enlace de inicio de sesión';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Abrir el navegador de nuevo';
+  @override
+  String get sync_err_sign_in_cancelled => 'Inicio de sesión cancelado.';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      'No se pudo abrir el navegador. Copia el enlace y ábrelo tú mismo en un navegador.';
+  @override
+  String get sync_desktop_oauth_link_copy_failed =>
+      'No se pudo copiar el enlace. Selecciona el texto del enlace y cópialo manualmente.';
 }
 
 // Path: <root>
@@ -45889,6 +45955,24 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'En attente de la connexion dans le navigateur';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'La page de connexion a été ouverte dans votre navigateur par défaut. Si rien ne s\'est ouvert ou si la page affiche une erreur, copiez le lien et ouvrez-le dans un autre navigateur ou une fenêtre privée.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copier le lien de connexion';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Rouvrir le navigateur';
+  @override
+  String get sync_err_sign_in_cancelled => 'Connexion annulée.';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      'Impossible d\'ouvrir le navigateur. Copiez le lien et ouvrez-le vous-même dans un navigateur.';
+  @override
+  String get sync_desktop_oauth_link_copy_failed =>
+      'Impossible de copier le lien. Sélectionnez le texte du lien et copiez-le manuellement.';
 }
 
 // Path: <root>
@@ -55829,6 +55913,23 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  @override
+  String get sync_desktop_oauth_waiting_title => 'Menunggu masuk di browser';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'Halaman masuk telah dibuka di browser bawaan. Jika tidak ada yang terbuka atau halaman menampilkan kesalahan, salin tautannya dan buka di browser lain atau jendela privat.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Salin tautan masuk';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Buka browser lagi';
+  @override
+  String get sync_err_sign_in_cancelled => 'Masuk dibatalkan.';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      'Browser tidak dapat dibuka. Salin tautannya dan buka sendiri di browser.';
+  @override
+  String get sync_desktop_oauth_link_copy_failed =>
+      'Tautan tidak dapat disalin. Pilih teks tautan dan salin secara manual.';
 }
 
 // Path: <root>
@@ -65860,6 +65961,24 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'In attesa dell\'accesso nel browser';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'La pagina di accesso è stata aperta nel browser predefinito. Se non si è aperto nulla o la pagina mostra un errore, copia il link e aprilo in un altro browser o in una finestra privata.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copia link di accesso';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Riapri il browser';
+  @override
+  String get sync_err_sign_in_cancelled => 'Accesso annullato.';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      'Impossibile aprire il browser. Copia il link e aprilo tu stesso in un browser.';
+  @override
+  String get sync_desktop_oauth_link_copy_failed =>
+      'Impossibile copiare il link. Seleziona il testo del link e copialo manualmente.';
 }
 
 // Path: <root>
@@ -75279,6 +75398,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  @override
+  String get sync_desktop_oauth_waiting_title => 'ブラウザでのログイン完了を待っています';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      '既定のブラウザでログインページを開きました。開かない場合やエラーが表示される場合は、リンクをコピーして別のブラウザまたはプライベートウィンドウで開いてください。';
+  @override
+  String get sync_desktop_oauth_link_copy => 'ログインリンクをコピー';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'ブラウザをもう一度開く';
+  @override
+  String get sync_err_sign_in_cancelled => 'ログインをキャンセルしました。';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      'ブラウザを開けませんでした。リンクをコピーして、ブラウザで自分で開いてください。';
+  @override
+  String get sync_desktop_oauth_link_copy_failed =>
+      'リンクをコピーできませんでした。リンクのテキストを選択して手動でコピーしてください。';
 }
 
 // Path: <root>
@@ -84708,6 +84844,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  @override
+  String get sync_desktop_oauth_waiting_title => '브라우저 로그인 완료를 기다리는 중';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      '기본 브라우저에서 로그인 페이지를 열었습니다. 열리지 않거나 오류가 표시되면 링크를 복사해 다른 브라우저나 시크릿 창에서 여세요.';
+  @override
+  String get sync_desktop_oauth_link_copy => '로그인 링크 복사';
+  @override
+  String get sync_desktop_oauth_browser_reopen => '브라우저 다시 열기';
+  @override
+  String get sync_err_sign_in_cancelled => '로그인을 취소했습니다.';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      '브라우저를 열 수 없습니다. 링크를 복사해 직접 브라우저에서 여세요.';
+  @override
+  String get sync_desktop_oauth_link_copy_failed =>
+      '링크를 복사할 수 없습니다. 링크 텍스트를 선택해 직접 복사하세요.';
 }
 
 // Path: <root>
@@ -94694,6 +94847,24 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Wachten op aanmelding in de browser';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'De aanmeldpagina is geopend in je standaardbrowser. Als er niets is geopend of de pagina een fout toont, kopieer dan de link en open die in een andere browser of een privévenster.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Aanmeldlink kopiëren';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Browser opnieuw openen';
+  @override
+  String get sync_err_sign_in_cancelled => 'Aanmelden geannuleerd.';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      'De browser kon niet worden geopend. Kopieer de link en open die zelf in een browser.';
+  @override
+  String get sync_desktop_oauth_link_copy_failed =>
+      'De link kon niet worden gekopieerd. Selecteer de linktekst en kopieer die handmatig.';
 }
 
 // Path: <root>
@@ -104734,6 +104905,24 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Aguardando o login no navegador';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'A página de login foi aberta no seu navegador padrão. Se nada abriu ou a página mostra um erro, copie o link e abra em outro navegador ou em uma janela anônima.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Copiar link de login';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Abrir o navegador novamente';
+  @override
+  String get sync_err_sign_in_cancelled => 'Login cancelado.';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      'Não foi possível abrir o navegador. Copie o link e abra você mesmo em um navegador.';
+  @override
+  String get sync_desktop_oauth_link_copy_failed =>
+      'Não foi possível copiar o link. Selecione o texto do link e copie manualmente.';
 }
 
 // Path: <root>
@@ -114753,6 +114942,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  @override
+  String get sync_desktop_oauth_waiting_title => 'Ожидание входа в браузере';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'Страница входа открыта в браузере по умолчанию. Если ничего не открылось или страница показывает ошибку, скопируйте ссылку и откройте её в другом браузере или в приватном окне.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Скопировать ссылку для входа';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Открыть браузер снова';
+  @override
+  String get sync_err_sign_in_cancelled => 'Вход отменён.';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      'Не удалось открыть браузер. Скопируйте ссылку и откройте её в браузере вручную.';
+  @override
+  String get sync_desktop_oauth_link_copy_failed =>
+      'Не удалось скопировать ссылку. Выделите текст ссылки и скопируйте его вручную.';
 }
 
 // Path: <root>
@@ -124570,6 +124776,24 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'กำลังรอการเข้าสู่ระบบในเบราว์เซอร์';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'เปิดหน้าเข้าสู่ระบบในเบราว์เซอร์เริ่มต้นแล้ว หากไม่มีอะไรเปิดขึ้นมาหรือหน้าแสดงข้อผิดพลาด ให้คัดลอกลิงก์แล้วเปิดในเบราว์เซอร์อื่นหรือหน้าต่างส่วนตัว';
+  @override
+  String get sync_desktop_oauth_link_copy => 'คัดลอกลิงก์เข้าสู่ระบบ';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'เปิดเบราว์เซอร์อีกครั้ง';
+  @override
+  String get sync_err_sign_in_cancelled => 'ยกเลิกการเข้าสู่ระบบแล้ว';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      'ไม่สามารถเปิดเบราว์เซอร์ได้ ให้คัดลอกลิงก์แล้วเปิดในเบราว์เซอร์ด้วยตนเอง';
+  @override
+  String get sync_desktop_oauth_link_copy_failed =>
+      'ไม่สามารถคัดลอกลิงก์ได้ ให้เลือกข้อความลิงก์แล้วคัดลอกด้วยตนเอง';
 }
 
 // Path: <root>
@@ -134504,6 +134728,24 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Tarayıcıda oturum açılması bekleniyor';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'Oturum açma sayfası varsayılan tarayıcınızda açıldı. Hiçbir şey açılmadıysa veya sayfa hata gösteriyorsa bağlantıyı kopyalayıp başka bir tarayıcıda ya da gizli pencerede açın.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Oturum açma bağlantısını kopyala';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Tarayıcıyı yeniden aç';
+  @override
+  String get sync_err_sign_in_cancelled => 'Oturum açma iptal edildi.';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      'Tarayıcı açılamadı. Bağlantıyı kopyalayıp bir tarayıcıda kendiniz açın.';
+  @override
+  String get sync_desktop_oauth_link_copy_failed =>
+      'Bağlantı kopyalanamadı. Bağlantı metnini seçip elle kopyalayın.';
 }
 
 // Path: <root>
@@ -144409,6 +144651,24 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+  @override
+  String get sync_desktop_oauth_waiting_title =>
+      'Đang chờ đăng nhập trong trình duyệt';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      'Trang đăng nhập đã được mở trong trình duyệt mặc định. Nếu không có gì mở ra hoặc trang báo lỗi, hãy sao chép liên kết và mở trong trình duyệt khác hoặc cửa sổ riêng tư.';
+  @override
+  String get sync_desktop_oauth_link_copy => 'Sao chép liên kết đăng nhập';
+  @override
+  String get sync_desktop_oauth_browser_reopen => 'Mở lại trình duyệt';
+  @override
+  String get sync_err_sign_in_cancelled => 'Đã hủy đăng nhập.';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      'Không thể mở trình duyệt. Hãy sao chép liên kết và tự mở trong trình duyệt.';
+  @override
+  String get sync_desktop_oauth_link_copy_failed =>
+      'Không thể sao chép liên kết. Hãy chọn văn bản liên kết và sao chép thủ công.';
 }
 
 // Path: <root>
@@ -153511,6 +153771,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       '在开关下方点「优化」，让参数贴合你自己的复习记录，然后保存。复习记录不足约 1000 条时默认参数已经比 SM-2 准，攒够以后再优化一次即可。';
+  @override
+  String get sync_desktop_oauth_waiting_title => '正在等待浏览器完成登录';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      '已在默认浏览器打开登录页。如果没有打开，或页面显示错误，可复制链接到其他浏览器或无痕窗口打开。';
+  @override
+  String get sync_desktop_oauth_link_copy => '复制登录链接';
+  @override
+  String get sync_desktop_oauth_browser_reopen => '重新打开浏览器';
+  @override
+  String get sync_err_sign_in_cancelled => '已取消登录。';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      '无法打开浏览器。请复制链接，自行在浏览器中打开。';
+  @override
+  String get sync_desktop_oauth_link_copy_failed => '复制失败。请手动选中链接文本后复制。';
 }
 
 // Path: <root>
@@ -162624,6 +162900,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_step_optimize_desc =>
       '在開關下方點「最佳化」，讓參數貼合你自己的複習記錄，然後儲存。複習記錄不足約 1000 條時預設參數已經比 SM-2 準，攢夠以後再最佳化一次即可。';
+  @override
+  String get sync_desktop_oauth_waiting_title => '正在等待瀏覽器完成登入';
+  @override
+  String get sync_desktop_oauth_waiting_body =>
+      '已在預設瀏覽器開啟登入頁面。如果沒有開啟，或頁面顯示錯誤，可複製連結到其他瀏覽器或無痕視窗開啟。';
+  @override
+  String get sync_desktop_oauth_link_copy => '複製登入連結';
+  @override
+  String get sync_desktop_oauth_browser_reopen => '重新開啟瀏覽器';
+  @override
+  String get sync_err_sign_in_cancelled => '已取消登入。';
+  @override
+  String get sync_desktop_oauth_browser_open_failed =>
+      '無法開啟瀏覽器。請複製連結，自行在瀏覽器中開啟。';
+  @override
+  String get sync_desktop_oauth_link_copy_failed => '複製失敗。請手動選取連結文字後複製。';
 }
 
 /// Flat map(s) containing all translations.
@@ -171262,6 +171554,20 @@ extension on _StringsEn {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Waiting for the browser sign-in';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'The sign-in page was opened in your default browser. If nothing opened, or the page shows an error, copy the link and open it in another browser or a private window.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copy sign-in link';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Open browser again';
+      case 'sync_err_sign_in_cancelled':
+        return 'Sign-in cancelled.';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return 'Could not open the browser. Copy the link and open it in a browser yourself.';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return 'Could not copy the link. Select the link text and copy it manually.';
       default:
         return null;
     }
@@ -179895,6 +180201,20 @@ extension on _StringsAr {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'في انتظار تسجيل الدخول في المتصفح';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'تم فتح صفحة تسجيل الدخول في المتصفح الافتراضي. إذا لم يُفتح شيء أو ظهر خطأ في الصفحة، فانسخ الرابط وافتحه في متصفح آخر أو في نافذة خاصة.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'نسخ رابط تسجيل الدخول';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'فتح المتصفح مرة أخرى';
+      case 'sync_err_sign_in_cancelled':
+        return 'تم إلغاء تسجيل الدخول.';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return 'تعذّر فتح المتصفح. انسخ الرابط وافتحه بنفسك في متصفح.';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return 'تعذّر نسخ الرابط. حدّد نص الرابط وانسخه يدويًا.';
       default:
         return null;
     }
@@ -188573,6 +188893,20 @@ extension on _StringsDe {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Warten auf die Anmeldung im Browser';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'Die Anmeldeseite wurde im Standardbrowser geöffnet. Falls nichts geöffnet wurde oder die Seite einen Fehler zeigt, kopiere den Link und öffne ihn in einem anderen Browser oder einem privaten Fenster.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Anmeldelink kopieren';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Browser erneut öffnen';
+      case 'sync_err_sign_in_cancelled':
+        return 'Anmeldung abgebrochen.';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return 'Der Browser konnte nicht geöffnet werden. Kopiere den Link und öffne ihn selbst in einem Browser.';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return 'Der Link konnte nicht kopiert werden. Markiere den Linktext und kopiere ihn manuell.';
       default:
         return null;
     }
@@ -197242,6 +197576,20 @@ extension on _StringsEs {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Esperando el inicio de sesión en el navegador';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'La página de inicio de sesión se abrió en tu navegador predeterminado. Si no se abrió nada o la página muestra un error, copia el enlace y ábrelo en otro navegador o en una ventana privada.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copiar enlace de inicio de sesión';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Abrir el navegador de nuevo';
+      case 'sync_err_sign_in_cancelled':
+        return 'Inicio de sesión cancelado.';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return 'No se pudo abrir el navegador. Copia el enlace y ábrelo tú mismo en un navegador.';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return 'No se pudo copiar el enlace. Selecciona el texto del enlace y cópialo manualmente.';
       default:
         return null;
     }
@@ -205920,6 +206268,20 @@ extension on _StringsFr {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'En attente de la connexion dans le navigateur';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'La page de connexion a été ouverte dans votre navigateur par défaut. Si rien ne s\'est ouvert ou si la page affiche une erreur, copiez le lien et ouvrez-le dans un autre navigateur ou une fenêtre privée.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copier le lien de connexion';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Rouvrir le navigateur';
+      case 'sync_err_sign_in_cancelled':
+        return 'Connexion annulée.';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return 'Impossible d\'ouvrir le navigateur. Copiez le lien et ouvrez-le vous-même dans un navigateur.';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return 'Impossible de copier le lien. Sélectionnez le texte du lien et copiez-le manuellement.';
       default:
         return null;
     }
@@ -214569,6 +214931,20 @@ extension on _StringsId {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Menunggu masuk di browser';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'Halaman masuk telah dibuka di browser bawaan. Jika tidak ada yang terbuka atau halaman menampilkan kesalahan, salin tautannya dan buka di browser lain atau jendela privat.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Salin tautan masuk';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Buka browser lagi';
+      case 'sync_err_sign_in_cancelled':
+        return 'Masuk dibatalkan.';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return 'Browser tidak dapat dibuka. Salin tautannya dan buka sendiri di browser.';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return 'Tautan tidak dapat disalin. Pilih teks tautan dan salin secara manual.';
       default:
         return null;
     }
@@ -223240,6 +223616,20 @@ extension on _StringsIt {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'In attesa dell\'accesso nel browser';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'La pagina di accesso è stata aperta nel browser predefinito. Se non si è aperto nulla o la pagina mostra un errore, copia il link e aprilo in un altro browser o in una finestra privata.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copia link di accesso';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Riapri il browser';
+      case 'sync_err_sign_in_cancelled':
+        return 'Accesso annullato.';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return 'Impossibile aprire il browser. Copia il link e aprilo tu stesso in un browser.';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return 'Impossibile copiare il link. Seleziona il testo del link e copialo manualmente.';
       default:
         return null;
     }
@@ -231838,6 +232228,20 @@ extension on _StringsJa {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'ブラウザでのログイン完了を待っています';
+      case 'sync_desktop_oauth_waiting_body':
+        return '既定のブラウザでログインページを開きました。開かない場合やエラーが表示される場合は、リンクをコピーして別のブラウザまたはプライベートウィンドウで開いてください。';
+      case 'sync_desktop_oauth_link_copy':
+        return 'ログインリンクをコピー';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'ブラウザをもう一度開く';
+      case 'sync_err_sign_in_cancelled':
+        return 'ログインをキャンセルしました。';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return 'ブラウザを開けませんでした。リンクをコピーして、ブラウザで自分で開いてください。';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return 'リンクをコピーできませんでした。リンクのテキストを選択して手動でコピーしてください。';
       default:
         return null;
     }
@@ -240440,6 +240844,20 @@ extension on _StringsKo {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return '브라우저 로그인 완료를 기다리는 중';
+      case 'sync_desktop_oauth_waiting_body':
+        return '기본 브라우저에서 로그인 페이지를 열었습니다. 열리지 않거나 오류가 표시되면 링크를 복사해 다른 브라우저나 시크릿 창에서 여세요.';
+      case 'sync_desktop_oauth_link_copy':
+        return '로그인 링크 복사';
+      case 'sync_desktop_oauth_browser_reopen':
+        return '브라우저 다시 열기';
+      case 'sync_err_sign_in_cancelled':
+        return '로그인을 취소했습니다.';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return '브라우저를 열 수 없습니다. 링크를 복사해 직접 브라우저에서 여세요.';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return '링크를 복사할 수 없습니다. 링크 텍스트를 선택해 직접 복사하세요.';
       default:
         return null;
     }
@@ -249104,6 +249522,20 @@ extension on _StringsNl {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Wachten op aanmelding in de browser';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'De aanmeldpagina is geopend in je standaardbrowser. Als er niets is geopend of de pagina een fout toont, kopieer dan de link en open die in een andere browser of een privévenster.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Aanmeldlink kopiëren';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Browser opnieuw openen';
+      case 'sync_err_sign_in_cancelled':
+        return 'Aanmelden geannuleerd.';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return 'De browser kon niet worden geopend. Kopieer de link en open die zelf in een browser.';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return 'De link kon niet worden gekopieerd. Selecteer de linktekst en kopieer die handmatig.';
       default:
         return null;
     }
@@ -257763,6 +258195,20 @@ extension on _StringsPtBr {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Aguardando o login no navegador';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'A página de login foi aberta no seu navegador padrão. Se nada abriu ou a página mostra um erro, copie o link e abra em outro navegador ou em uma janela anônima.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Copiar link de login';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Abrir o navegador novamente';
+      case 'sync_err_sign_in_cancelled':
+        return 'Login cancelado.';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return 'Não foi possível abrir o navegador. Copie o link e abra você mesmo em um navegador.';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return 'Não foi possível copiar o link. Selecione o texto do link e copie manualmente.';
       default:
         return null;
     }
@@ -266429,6 +266875,20 @@ extension on _StringsRu {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Ожидание входа в браузере';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'Страница входа открыта в браузере по умолчанию. Если ничего не открылось или страница показывает ошибку, скопируйте ссылку и откройте её в другом браузере или в приватном окне.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Скопировать ссылку для входа';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Открыть браузер снова';
+      case 'sync_err_sign_in_cancelled':
+        return 'Вход отменён.';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return 'Не удалось открыть браузер. Скопируйте ссылку и откройте её в браузере вручную.';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return 'Не удалось скопировать ссылку. Выделите текст ссылки и скопируйте его вручную.';
       default:
         return null;
     }
@@ -275067,6 +275527,20 @@ extension on _StringsTh {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'กำลังรอการเข้าสู่ระบบในเบราว์เซอร์';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'เปิดหน้าเข้าสู่ระบบในเบราว์เซอร์เริ่มต้นแล้ว หากไม่มีอะไรเปิดขึ้นมาหรือหน้าแสดงข้อผิดพลาด ให้คัดลอกลิงก์แล้วเปิดในเบราว์เซอร์อื่นหรือหน้าต่างส่วนตัว';
+      case 'sync_desktop_oauth_link_copy':
+        return 'คัดลอกลิงก์เข้าสู่ระบบ';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'เปิดเบราว์เซอร์อีกครั้ง';
+      case 'sync_err_sign_in_cancelled':
+        return 'ยกเลิกการเข้าสู่ระบบแล้ว';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return 'ไม่สามารถเปิดเบราว์เซอร์ได้ ให้คัดลอกลิงก์แล้วเปิดในเบราว์เซอร์ด้วยตนเอง';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return 'ไม่สามารถคัดลอกลิงก์ได้ ให้เลือกข้อความลิงก์แล้วคัดลอกด้วยตนเอง';
       default:
         return null;
     }
@@ -283720,6 +284194,20 @@ extension on _StringsTr {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Tarayıcıda oturum açılması bekleniyor';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'Oturum açma sayfası varsayılan tarayıcınızda açıldı. Hiçbir şey açılmadıysa veya sayfa hata gösteriyorsa bağlantıyı kopyalayıp başka bir tarayıcıda ya da gizli pencerede açın.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Oturum açma bağlantısını kopyala';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Tarayıcıyı yeniden aç';
+      case 'sync_err_sign_in_cancelled':
+        return 'Oturum açma iptal edildi.';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return 'Tarayıcı açılamadı. Bağlantıyı kopyalayıp bir tarayıcıda kendiniz açın.';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return 'Bağlantı kopyalanamadı. Bağlantı metnini seçip elle kopyalayın.';
       default:
         return null;
     }
@@ -292367,6 +292855,20 @@ extension on _StringsVi {
         return 'Optimize, then save';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return 'Press Optimize under the switch to fit the parameters to your own review history, then save. Below roughly 1000 reviews the defaults already beat SM-2, so just optimize again once you have studied for a while.';
+      case 'sync_desktop_oauth_waiting_title':
+        return 'Đang chờ đăng nhập trong trình duyệt';
+      case 'sync_desktop_oauth_waiting_body':
+        return 'Trang đăng nhập đã được mở trong trình duyệt mặc định. Nếu không có gì mở ra hoặc trang báo lỗi, hãy sao chép liên kết và mở trong trình duyệt khác hoặc cửa sổ riêng tư.';
+      case 'sync_desktop_oauth_link_copy':
+        return 'Sao chép liên kết đăng nhập';
+      case 'sync_desktop_oauth_browser_reopen':
+        return 'Mở lại trình duyệt';
+      case 'sync_err_sign_in_cancelled':
+        return 'Đã hủy đăng nhập.';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return 'Không thể mở trình duyệt. Hãy sao chép liên kết và tự mở trong trình duyệt.';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return 'Không thể sao chép liên kết. Hãy chọn văn bản liên kết và sao chép thủ công.';
       default:
         return null;
     }
@@ -300940,6 +301442,20 @@ extension on _StringsZhCn {
         return '点「优化」再保存';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return '在开关下方点「优化」，让参数贴合你自己的复习记录，然后保存。复习记录不足约 1000 条时默认参数已经比 SM-2 准，攒够以后再优化一次即可。';
+      case 'sync_desktop_oauth_waiting_title':
+        return '正在等待浏览器完成登录';
+      case 'sync_desktop_oauth_waiting_body':
+        return '已在默认浏览器打开登录页。如果没有打开，或页面显示错误，可复制链接到其他浏览器或无痕窗口打开。';
+      case 'sync_desktop_oauth_link_copy':
+        return '复制登录链接';
+      case 'sync_desktop_oauth_browser_reopen':
+        return '重新打开浏览器';
+      case 'sync_err_sign_in_cancelled':
+        return '已取消登录。';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return '无法打开浏览器。请复制链接，自行在浏览器中打开。';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return '复制失败。请手动选中链接文本后复制。';
       default:
         return null;
     }
@@ -309516,6 +310032,20 @@ extension on _StringsZhHk {
         return '點「最佳化」再儲存';
       case 'onboarding_anki_fsrs_step_optimize_desc':
         return '在開關下方點「最佳化」，讓參數貼合你自己的複習記錄，然後儲存。複習記錄不足約 1000 條時預設參數已經比 SM-2 準，攢夠以後再最佳化一次即可。';
+      case 'sync_desktop_oauth_waiting_title':
+        return '正在等待瀏覽器完成登入';
+      case 'sync_desktop_oauth_waiting_body':
+        return '已在預設瀏覽器開啟登入頁面。如果沒有開啟，或頁面顯示錯誤，可複製連結到其他瀏覽器或無痕視窗開啟。';
+      case 'sync_desktop_oauth_link_copy':
+        return '複製登入連結';
+      case 'sync_desktop_oauth_browser_reopen':
+        return '重新開啟瀏覽器';
+      case 'sync_err_sign_in_cancelled':
+        return '已取消登入。';
+      case 'sync_desktop_oauth_browser_open_failed':
+        return '無法開啟瀏覽器。請複製連結，自行在瀏覽器中開啟。';
+      case 'sync_desktop_oauth_link_copy_failed':
+        return '複製失敗。請手動選取連結文字後複製。';
       default:
         return null;
     }
