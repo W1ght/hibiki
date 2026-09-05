@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 72046 (4238 per locale)
+/// Strings: 72063 (4239 per locale)
 ///
-/// Built on 2026-09-04 at 17:14 UTC
+/// Built on 2026-09-05 at 11:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5823,6 +5823,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -15710,6 +15711,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -25824,6 +25827,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -35991,6 +35996,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -46192,6 +46199,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -56197,6 +56206,8 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -66294,6 +66305,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -75778,6 +75791,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -85272,6 +85287,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -95324,6 +95341,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -105430,6 +105449,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -115514,6 +115535,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -125397,6 +125420,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -135397,6 +135422,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -145368,6 +145395,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -154532,6 +154561,8 @@ class _StringsZhCn extends _StringsEn {
       '鼠标触发只接受侧键（后退/前进）。其它按钮在别的程序里有各自的固有含义，这里会拒绝录入。';
   @override
   String get shortcut_mouse_button_not_supported => '该动作只接受鼠标侧键（后退/前进）。';
+  @override
+  String get dictionary_collapse_follow_global => '跟随全局设置';
 }
 
 // Path: <root>
@@ -163709,6 +163740,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 /// Flat map(s) containing all translations.
@@ -172403,6 +172436,8 @@ extension on _StringsEn {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -181092,6 +181127,8 @@ extension on _StringsAr {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -189826,6 +189863,8 @@ extension on _StringsDe {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -198551,6 +198590,8 @@ extension on _StringsEs {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -207285,6 +207326,8 @@ extension on _StringsFr {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -215990,6 +216033,8 @@ extension on _StringsId {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -224717,6 +224762,8 @@ extension on _StringsIt {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -233371,6 +233418,8 @@ extension on _StringsJa {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -242029,6 +242078,8 @@ extension on _StringsKo {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -250749,6 +250800,8 @@ extension on _StringsNl {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -259464,6 +259517,8 @@ extension on _StringsPtBr {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -268186,6 +268241,8 @@ extension on _StringsRu {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -276880,6 +276937,8 @@ extension on _StringsTh {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -285589,6 +285648,8 @@ extension on _StringsTr {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -294292,6 +294353,8 @@ extension on _StringsVi {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -302921,6 +302984,8 @@ extension on _StringsZhCn {
         return '鼠标触发只接受侧键（后退/前进）。其它按钮在别的程序里有各自的固有含义，这里会拒绝录入。';
       case 'shortcut_mouse_button_not_supported':
         return '该动作只接受鼠标侧键（后退/前进）。';
+      case 'dictionary_collapse_follow_global':
+        return '跟随全局设置';
       default:
         return null;
     }
@@ -311553,6 +311618,8 @@ extension on _StringsZhHk {
         return '鼠标触发只接受侧键（后退/前进）。其它按钮在别的程序里有各自的固有含义，这里会拒绝录入。';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
