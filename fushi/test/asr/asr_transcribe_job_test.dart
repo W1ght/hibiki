@@ -5,6 +5,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/asr/asr_transcribe_job.dart';
 import 'package:fushi/src/asr/asr_types.dart';
 
+/// 测试用模型包 id（任务状态只把它当不透明字符串比较）。
+const String _kModelId = 'test-pack';
+
 /// 合成 PCM 源：每个文件 [durationsMs] 毫秒的静音，按 chunkSeconds 切块。
 class _FakePcm implements AsrPcmSource {
   _FakePcm(this.durationsMs, {this.probeFails = const <int>{}});
@@ -120,6 +123,7 @@ void main() {
     final AsrTranscribeJob job = AsrTranscribeJob(
       jobDir: tmp,
       audioPaths: <String>['a.mp3', 'b.mp3'],
+      modelId: _kModelId,
       pcm: pcm,
       segmenter: _FakeSegmenter(),
       decoder: decoder,
@@ -147,12 +151,16 @@ void main() {
         last = e.progress.processedMs;
       }
     }
-    // 批次大小 ≤ batchSize。
-    expect(decoder.batchSizes.every((int n) => n <= 2), isTrue);
-    final AsrJobState state = await AsrTranscribeJob.loadState(tmp, <String>[
-      'a.mp3',
-      'b.mp3',
-    ]);
+    // 批次大小 ≤ maxBatchSegments（batchSize 是 20 s 段的参考值，短段按音频预算
+    // 可以多装，上限 4 倍）。
+    expect(
+        decoder.batchSizes.every((int n) => n <= job.maxBatchSegments), isTrue);
+    expect(decoder.batchSizes.every((int n) => n >= 1), isTrue);
+    final AsrJobState state = await AsrTranscribeJob.loadState(
+      tmp,
+      <String>['a.mp3', 'b.mp3'],
+      modelId: _kModelId,
+    );
     expect(state.finished, isTrue);
     expect(state.isFileDone(0), isTrue);
     expect(state.isFileDone(1), isTrue);
@@ -168,6 +176,7 @@ void main() {
     final AsrTranscribeJob first = AsrTranscribeJob(
       jobDir: tmp,
       audioPaths: paths,
+      modelId: _kModelId,
       pcm: pcm,
       segmenter: seg,
       decoder: _FakeDecoder(),
@@ -182,7 +191,8 @@ void main() {
       if (e is AsrTranscribeProgressEvent) first.requestPause();
     }
     expect(firstEvents.last, isA<AsrTranscribePausedEvent>());
-    final AsrJobState paused = await AsrTranscribeJob.loadState(tmp, paths);
+    final AsrJobState paused =
+        await AsrTranscribeJob.loadState(tmp, paths, modelId: _kModelId);
     // 第一块 5 s = 80000 样本，进行中语音起点 = 80000 - 16000。
     expect(paused.resumeSamples.single, 5 * kAsrSampleRate - kAsrSampleRate);
     final int segmentsAfterPause = (await AsrTranscribeJob.loadSegments(
@@ -196,6 +206,7 @@ void main() {
     final AsrTranscribeJob second = AsrTranscribeJob(
       jobDir: tmp,
       audioPaths: paths,
+      modelId: _kModelId,
       pcm: pcm2,
       segmenter: _FakeSegmenter(),
       decoder: _FakeDecoder(),
@@ -229,6 +240,7 @@ void main() {
     final AsrTranscribeJob job = AsrTranscribeJob(
       jobDir: tmp,
       audioPaths: <String>['a.mp3'],
+      modelId: _kModelId,
       pcm: _FakePcm(<String, int>{'a.mp3': 3000}),
       segmenter: _FakeSegmenter(segmentsPerChunk: 1),
       decoder: _FakeDecoder(),
@@ -252,11 +264,13 @@ void main() {
       '"resumeSamples":[-1],"finished":true}',
     );
     final ({AsrJobState state, bool fresh}) loaded =
-        await AsrTranscribeJob.loadStateDetailed(tmp, <String>['a.mp3']);
+        await AsrTranscribeJob.loadStateDetailed(tmp, <String>['a.mp3'],
+            modelId: _kModelId);
     expect(loaded.fresh, isTrue);
     final AsrTranscribeJob job = AsrTranscribeJob(
       jobDir: tmp,
       audioPaths: <String>['a.mp3'],
+      modelId: _kModelId,
       pcm: _FakePcm(<String, int>{'a.mp3': 3000}),
       segmenter: _FakeSegmenter(segmentsPerChunk: 1),
       decoder: _FakeDecoder(),
@@ -286,6 +300,7 @@ void main() {
     final AsrTranscribeJob job = AsrTranscribeJob(
       jobDir: tmp,
       audioPaths: <String>['a.mp3', 'b.mp3'],
+      modelId: _kModelId,
       pcm: pcm,
       segmenter: _FakeSegmenter(segmentsPerChunk: 1),
       decoder: _FakeDecoder(),
@@ -299,10 +314,107 @@ void main() {
     expect(r.totalMs, 10000);
   });
 
+  test('state.json 的 modelId 与传入不符视为新任务（不同词表的段落不能混续）', () async {
+    File(
+      '${tmp.path}/${AsrJobFiles.segments}',
+    ).writeAsStringSync('{"f":0,"s":0,"e":900,"t":["旧"],"m":[100]}\n');
+    File('${tmp.path}/${AsrJobFiles.state}').writeAsStringSync(
+      '{"version":${AsrJobState.currentVersion},"audioPaths":["a.mp3"],'
+      '"modelId":"other-pack","fileDurationsMs":[3000],'
+      '"resumeSamples":[-1],"finished":true}',
+    );
+    final ({AsrJobState state, bool fresh}) loaded =
+        await AsrTranscribeJob.loadStateDetailed(
+      tmp,
+      <String>['a.mp3'],
+      modelId: _kModelId,
+    );
+    expect(loaded.fresh, isTrue);
+    expect(loaded.state.modelId, _kModelId);
+    expect(loaded.state.finished, isFalse);
+
+    // 同一份文件按它自己的 modelId 读则原样复用。
+    final ({AsrJobState state, bool fresh}) same =
+        await AsrTranscribeJob.loadStateDetailed(
+      tmp,
+      <String>['a.mp3'],
+      modelId: 'other-pack',
+    );
+    expect(same.fresh, isFalse);
+    expect(same.state.finished, isTrue);
+
+    // 真跑一遍：旧段落被清掉，state 写回传入的 modelId。
+    final AsrTranscribeJob job = AsrTranscribeJob(
+      jobDir: tmp,
+      audioPaths: <String>['a.mp3'],
+      modelId: _kModelId,
+      pcm: _FakePcm(<String, int>{'a.mp3': 3000}),
+      segmenter: _FakeSegmenter(segmentsPerChunk: 1),
+      decoder: _FakeDecoder(),
+      chunkSeconds: 5,
+      progressInterval: Duration.zero,
+    );
+    final List<AsrTranscribeEvent> events = await job.run().toList();
+    final AsrTranscribeResult r =
+        (events.last as AsrTranscribeFinishedEvent).result;
+    expect(r.segmentCount, 1);
+    expect(
+      File('${tmp.path}/${AsrJobFiles.segments}').readAsStringSync(),
+      isNot(contains('"旧"')),
+    );
+    final AsrJobState written = await AsrTranscribeJob.loadState(
+      tmp,
+      <String>['a.mp3'],
+      modelId: _kModelId,
+    );
+    expect(written.modelId, _kModelId);
+    expect(written.finished, isTrue);
+  });
+
+  test('旧 version 2（无 modelId 时代）的 state.json 视为新任务', () async {
+    File('${tmp.path}/${AsrJobFiles.state}').writeAsStringSync(
+      '{"version":2,"audioPaths":["a.mp3"],"fileDurationsMs":[3000],'
+      '"resumeSamples":[-1],"finished":true}',
+    );
+    final ({AsrJobState state, bool fresh}) loaded =
+        await AsrTranscribeJob.loadStateDetailed(
+      tmp,
+      <String>['a.mp3'],
+      modelId: _kModelId,
+    );
+    expect(loaded.fresh, isTrue);
+    expect(loaded.state.finished, isFalse);
+    expect(loaded.state.resumeSamples, <int>[0]);
+  });
+
+  test('toJson 带 modelId 与当前版本 3，fromJson 往返', () {
+    final AsrJobState state = AsrJobState.fresh(
+      const <String>['a.mp3', 'b.mp3'],
+      modelId: _kModelId,
+    );
+    final Map<String, Object?> json = state.toJson();
+    expect(json['version'], 3);
+    expect(AsrJobState.currentVersion, 3);
+    expect(json['modelId'], _kModelId);
+    expect(json['audioPaths'], <String>['a.mp3', 'b.mp3']);
+    expect(json['resumeSamples'], <int>[0, 0]);
+    expect(json['fileDurationsMs'], <int?>[null, null]);
+    expect(json['finished'], isFalse);
+
+    final AsrJobState back = AsrJobState.fromJson(json);
+    expect(back.modelId, _kModelId);
+    expect(back.audioPaths, state.audioPaths);
+    expect(back.resumeSamples, state.resumeSamples);
+    expect(back.finished, isFalse);
+    // copyWith 不丢 modelId。
+    expect(state.copyWith(finished: true).modelId, _kModelId);
+  });
+
   test('run 只能调用一次', () async {
     final AsrTranscribeJob job = AsrTranscribeJob(
       jobDir: tmp,
       audioPaths: <String>['a.mp3'],
+      modelId: _kModelId,
       pcm: _FakePcm(<String, int>{'a.mp3': 1000}),
       segmenter: _FakeSegmenter(segmentsPerChunk: 1),
       decoder: _FakeDecoder(),
@@ -310,5 +422,80 @@ void main() {
     );
     await job.run().toList();
     expect(() => job.run().toList(), throwsStateError);
+  });
+
+  group('pickBatchSize（按音频预算成批）', () {
+    AsrSpeechSegment seg(int seconds) => AsrSpeechSegment(
+          startSample: 0,
+          samples: Float32List(seconds * kAsrSampleRate),
+        );
+    const int budget = 32 * 20 * kAsrSampleRate;
+
+    test('全是 20 s 长段：恰好 batchSize 段', () {
+      final List<AsrSpeechSegment> sorted = List<AsrSpeechSegment>.filled(
+        40,
+        seg(20),
+      );
+      expect(
+        AsrTranscribeJob.pickBatchSize(
+          sorted,
+          budgetSamples: budget,
+          maxSegments: 128,
+        ),
+        32,
+      );
+    });
+
+    test('短段可以装更多，但不超过 maxSegments', () {
+      final List<AsrSpeechSegment> sorted = List<AsrSpeechSegment>.filled(
+        300,
+        seg(2),
+      );
+      expect(
+        AsrTranscribeJob.pickBatchSize(
+          sorted,
+          budgetSamples: budget,
+          maxSegments: 128,
+        ),
+        128,
+      );
+    });
+
+    test('比批内最长段短一半以上的段留给下一批（padding 不翻倍）', () {
+      final List<AsrSpeechSegment> sorted = <AsrSpeechSegment>[
+        seg(20),
+        seg(18),
+        seg(11),
+        seg(9),
+        seg(3),
+      ];
+      expect(
+        AsrTranscribeJob.pickBatchSize(
+          sorted,
+          budgetSamples: budget,
+          maxSegments: 128,
+        ),
+        3,
+      );
+    });
+
+    test('单段超预算也至少取 1；空列表取 0', () {
+      expect(
+        AsrTranscribeJob.pickBatchSize(
+          <AsrSpeechSegment>[seg(30)],
+          budgetSamples: 10 * kAsrSampleRate,
+          maxSegments: 4,
+        ),
+        1,
+      );
+      expect(
+        AsrTranscribeJob.pickBatchSize(
+          const <AsrSpeechSegment>[],
+          budgetSamples: budget,
+          maxSegments: 4,
+        ),
+        0,
+      );
+    });
   });
 }

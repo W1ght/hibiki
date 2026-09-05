@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 72539 (4267 per locale)
+/// Strings: 72777 (4281 per locale)
 ///
-/// Built on 2026-09-05 at 12:38 UTC
+/// Built on 2026-09-05 at 15:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5821,8 +5821,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The audio capture policy was not confirmed in time. Text capture still works; try again if game audio is missing.';
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   String get audiobook_transcribe_title => 'On-device transcription';
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   String get audiobook_transcribe_model_download => 'Download model';
@@ -5875,6 +5873,30 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_subtitle_source_title => 'Subtitle source';
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  String get audiobook_transcribe_language_label => 'Speech language';
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  String get audiobook_transcribe_language_en => 'English';
+  String get asr_models_section => 'Speech recognition models';
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  String get asr_models_download => 'Download';
+  String get asr_models_delete => 'Delete';
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -15761,9 +15783,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -15843,6 +15862,45 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -25956,9 +26014,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -26038,6 +26093,45 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -36204,9 +36298,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -36286,6 +36377,45 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -46486,9 +46616,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -46568,6 +46695,45 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -56572,9 +56738,6 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -56654,6 +56817,45 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -66750,9 +66952,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -66832,6 +67031,45 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -76315,9 +76553,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -76397,6 +76632,45 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -85890,9 +86164,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -85972,6 +86243,45 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -96023,9 +96333,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -96105,6 +96412,45 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -106210,9 +106556,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -106292,6 +106635,45 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -116375,9 +116757,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -116457,6 +116836,45 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -126339,9 +126757,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -126421,6 +126836,45 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -136420,9 +136874,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -136502,6 +136953,45 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -146472,9 +146962,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -146554,6 +147041,45 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 // Path: <root>
@@ -155718,8 +156244,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_transcribe_title => '设备端语音转录';
   @override
-  String get audiobook_transcribe_intro => '用本地日语语音模型转录音频并生成字幕用于对齐，不上传任何数据。';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       '需要下载模型：${size}';
   @override
@@ -155795,6 +156319,41 @@ class _StringsZhCn extends _StringsEn {
   String get audiobook_subtitle_source_title => '字幕来源';
   @override
   String get audiobook_subtitle_source_transcribe_hint => '用设备端语音模型从已选音频生成';
+  @override
+  String get audiobook_transcribe_intro =>
+      '在本机用所选语言的语音模型转录音频并生成用于对齐的字幕，不会上传任何内容。';
+  @override
+  String get audiobook_transcribe_language_label => '语音语言';
+  @override
+  String get audiobook_transcribe_language_ja => '日语';
+  @override
+  String get audiobook_transcribe_language_en => '英语';
+  @override
+  String get asr_models_section => '语音识别模型';
+  @override
+  String get asr_models_section_summary => '有声书设备端转录用的模型，只下载你需要的语言。';
+  @override
+  String asr_models_status_ready({required Object size}) => '已下载 · 占用 ${size}';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      '已下载一部分 · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      '未下载 · 需要 ${size}';
+  @override
+  String get asr_models_download => '下载';
+  @override
+  String get asr_models_delete => '删除';
+  @override
+  String get asr_models_delete_confirm_title => '删除这个模型？';
+  @override
+  String get asr_models_delete_confirm_message => '再转录这种语言时需要重新下载模型。';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      '已删除，释放 ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) => '下载失败：${error}';
 }
 
 // Path: <root>
@@ -164971,9 +165530,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
   @override
-  String get audiobook_transcribe_intro =>
-      'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
-  @override
   String audiobook_transcribe_model_download_needed({required Object size}) =>
       'Model download required: ${size}';
   @override
@@ -165053,6 +165609,45 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_subtitle_source_transcribe_hint =>
       'Generate from the selected audio with the on-device speech model';
+  @override
+  String get audiobook_transcribe_intro =>
+      'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+  @override
+  String get audiobook_transcribe_language_label => 'Speech language';
+  @override
+  String get audiobook_transcribe_language_ja => 'Japanese';
+  @override
+  String get audiobook_transcribe_language_en => 'English';
+  @override
+  String get asr_models_section => 'Speech recognition models';
+  @override
+  String get asr_models_section_summary =>
+      'Models for on-device audiobook transcription. Download only the languages you need.';
+  @override
+  String asr_models_status_ready({required Object size}) =>
+      'Downloaded · ${size} on disk';
+  @override
+  String asr_models_status_partial(
+          {required Object obtained, required Object total}) =>
+      'Partially downloaded · ${obtained} / ${total}';
+  @override
+  String asr_models_status_missing({required Object size}) =>
+      'Not downloaded · ${size}';
+  @override
+  String get asr_models_download => 'Download';
+  @override
+  String get asr_models_delete => 'Delete';
+  @override
+  String get asr_models_delete_confirm_title => 'Delete this model?';
+  @override
+  String get asr_models_delete_confirm_message =>
+      'Transcription in this language will need the model downloaded again.';
+  @override
+  String asr_models_delete_done_freed({required Object size}) =>
+      'Deleted, freed ${size}';
+  @override
+  String asr_models_download_failed({required Object error}) =>
+      'Download failed: ${error}';
 }
 
 /// Flat map(s) containing all translations.
@@ -173747,8 +174342,6 @@ extension on _StringsEn {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -173820,6 +174413,37 @@ extension on _StringsEn {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -182509,8 +183133,6 @@ extension on _StringsAr {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -182582,6 +183204,37 @@ extension on _StringsAr {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -191316,8 +191969,6 @@ extension on _StringsDe {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -191389,6 +192040,37 @@ extension on _StringsDe {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -200114,8 +200796,6 @@ extension on _StringsEs {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -200187,6 +200867,37 @@ extension on _StringsEs {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -208921,8 +209632,6 @@ extension on _StringsFr {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -208994,6 +209703,37 @@ extension on _StringsFr {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -217699,8 +218439,6 @@ extension on _StringsId {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -217772,6 +218510,37 @@ extension on _StringsId {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -226499,8 +227268,6 @@ extension on _StringsIt {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -226572,6 +227339,37 @@ extension on _StringsIt {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -235226,8 +236024,6 @@ extension on _StringsJa {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -235299,6 +236095,37 @@ extension on _StringsJa {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -243957,8 +244784,6 @@ extension on _StringsKo {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -244030,6 +244855,37 @@ extension on _StringsKo {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -252750,8 +253606,6 @@ extension on _StringsNl {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -252823,6 +253677,37 @@ extension on _StringsNl {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -261538,8 +262423,6 @@ extension on _StringsPtBr {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -261611,6 +262494,37 @@ extension on _StringsPtBr {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -270333,8 +271247,6 @@ extension on _StringsRu {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -270406,6 +271318,37 @@ extension on _StringsRu {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -279100,8 +280043,6 @@ extension on _StringsTh {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -279173,6 +280114,37 @@ extension on _StringsTh {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -287882,8 +288854,6 @@ extension on _StringsTr {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -287955,6 +288925,37 @@ extension on _StringsTr {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -296658,8 +297659,6 @@ extension on _StringsVi {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -296731,6 +297730,37 @@ extension on _StringsVi {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }
@@ -305360,8 +306390,6 @@ extension on _StringsZhCn {
         return '设备端转录生成字幕';
       case 'audiobook_transcribe_title':
         return '设备端语音转录';
-      case 'audiobook_transcribe_intro':
-        return '用本地日语语音模型转录音频并生成字幕用于对齐，不上传任何数据。';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => '需要下载模型：${size}';
       case 'audiobook_transcribe_model_download':
@@ -305432,6 +306460,37 @@ extension on _StringsZhCn {
         return '字幕来源';
       case 'audiobook_subtitle_source_transcribe_hint':
         return '用设备端语音模型从已选音频生成';
+      case 'audiobook_transcribe_intro':
+        return '在本机用所选语言的语音模型转录音频并生成用于对齐的字幕，不会上传任何内容。';
+      case 'audiobook_transcribe_language_label':
+        return '语音语言';
+      case 'audiobook_transcribe_language_ja':
+        return '日语';
+      case 'audiobook_transcribe_language_en':
+        return '英语';
+      case 'asr_models_section':
+        return '语音识别模型';
+      case 'asr_models_section_summary':
+        return '有声书设备端转录用的模型，只下载你需要的语言。';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => '已下载 · 占用 ${size}';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            '已下载一部分 · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => '未下载 · 需要 ${size}';
+      case 'asr_models_download':
+        return '下载';
+      case 'asr_models_delete':
+        return '删除';
+      case 'asr_models_delete_confirm_title':
+        return '删除这个模型？';
+      case 'asr_models_delete_confirm_message':
+        return '再转录这种语言时需要重新下载模型。';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => '已删除，释放 ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => '下载失败：${error}';
       default:
         return null;
     }
@@ -314064,8 +315123,6 @@ extension on _StringsZhHk {
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
         return 'On-device transcription';
-      case 'audiobook_transcribe_intro':
-        return 'Transcribes the audio locally with a Japanese speech model and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_model_download_needed':
         return ({required Object size}) => 'Model download required: ${size}';
       case 'audiobook_transcribe_model_download':
@@ -314137,6 +315194,37 @@ extension on _StringsZhHk {
         return 'Subtitle source';
       case 'audiobook_subtitle_source_transcribe_hint':
         return 'Generate from the selected audio with the on-device speech model';
+      case 'audiobook_transcribe_intro':
+        return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
+      case 'audiobook_transcribe_language_label':
+        return 'Speech language';
+      case 'audiobook_transcribe_language_ja':
+        return 'Japanese';
+      case 'audiobook_transcribe_language_en':
+        return 'English';
+      case 'asr_models_section':
+        return 'Speech recognition models';
+      case 'asr_models_section_summary':
+        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+      case 'asr_models_status_ready':
+        return ({required Object size}) => 'Downloaded · ${size} on disk';
+      case 'asr_models_status_partial':
+        return ({required Object obtained, required Object total}) =>
+            'Partially downloaded · ${obtained} / ${total}';
+      case 'asr_models_status_missing':
+        return ({required Object size}) => 'Not downloaded · ${size}';
+      case 'asr_models_download':
+        return 'Download';
+      case 'asr_models_delete':
+        return 'Delete';
+      case 'asr_models_delete_confirm_title':
+        return 'Delete this model?';
+      case 'asr_models_delete_confirm_message':
+        return 'Transcription in this language will need the model downloaded again.';
+      case 'asr_models_delete_done_freed':
+        return ({required Object size}) => 'Deleted, freed ${size}';
+      case 'asr_models_download_failed':
+        return ({required Object error}) => 'Download failed: ${error}';
       default:
         return null;
     }

@@ -137,13 +137,19 @@ class AsrTranscribeFinishedEvent extends AsrTranscribeEvent {
 class AsrJobState {
   const AsrJobState({
     required this.audioPaths,
+    required this.modelId,
     required this.fileDurationsMs,
     required this.resumeSamples,
     required this.finished,
   });
 
-  factory AsrJobState.fresh(List<String> audioPaths) => AsrJobState(
+  factory AsrJobState.fresh(
+    List<String> audioPaths, {
+    required String modelId,
+  }) =>
+      AsrJobState(
         audioPaths: List<String>.unmodifiable(audioPaths),
+        modelId: modelId,
         fileDurationsMs: List<int?>.filled(audioPaths.length, null),
         resumeSamples: List<int>.filled(audioPaths.length, 0),
         finished: false,
@@ -158,6 +164,7 @@ class AsrJobState {
         (json['resumeSamples'] as List<Object?>?) ?? const <Object?>[];
     return AsrJobState(
       audioPaths: List<String>.unmodifiable(paths),
+      modelId: (json['modelId'] as String?) ?? '',
       fileDurationsMs: List<int?>.generate(
         paths.length,
         (int i) =>
@@ -172,6 +179,10 @@ class AsrJobState {
   }
 
   final List<String> audioPaths;
+
+  /// 产出这些段落的模型包 id（`AsrModelPack.id`）：不同词表的段落不能混在一个
+  /// `segments.jsonl` 里续跑，不符即整个任务重来。
+  final String modelId;
   final List<int?> fileDurationsMs;
 
   /// 每个文件的恢复点（样本）。等于文件总样本数（或 -1）表示该文件已完成。
@@ -185,11 +196,15 @@ class AsrJobState {
   /// text 轨交错进 mdat（BUG-2148），带章节的有声书转出来的 transcript.srt 整章是
   /// 噪声识别出的「あ」，而任务已标 finished、UI 会直接进完成态复用它。升版让
   /// [AsrTranscribeJob.loadStateDetailed] 把旧目录当新任务重跑。
-  static const int currentVersion = 2;
+  ///
+  /// v3：加 `modelId`（多语言模型包）。任务目录哈希同时也含包 id，故 v2 目录本就
+  /// 找不到，升版只是让格式自描述。
+  static const int currentVersion = 3;
 
   Map<String, Object?> toJson() => <String, Object?>{
         'version': currentVersion,
         'audioPaths': audioPaths,
+        'modelId': modelId,
         'fileDurationsMs': fileDurationsMs,
         'resumeSamples': resumeSamples,
         'finished': finished,
@@ -202,6 +217,7 @@ class AsrJobState {
   }) {
     return AsrJobState(
       audioPaths: audioPaths,
+      modelId: modelId,
       fileDurationsMs: fileDurationsMs ?? this.fileDurationsMs,
       resumeSamples: resumeSamples ?? this.resumeSamples,
       finished: finished ?? this.finished,
@@ -221,6 +237,7 @@ class AsrTranscribeJob {
   AsrTranscribeJob({
     required this.jobDir,
     required this.audioPaths,
+    required this.modelId,
     required this.pcm,
     required this.segmenter,
     required this.decoder,
@@ -234,12 +251,23 @@ class AsrTranscribeJob {
 
   final Directory jobDir;
   final List<String> audioPaths;
+
+  /// 见 [AsrJobState.modelId]。
+  final String modelId;
   final AsrPcmSource pcm;
   final AsrSegmenter segmenter;
   final AsrBatchDecoder decoder;
 
-  /// 一次 encoder 前向的段数。GPU 上越大越省往返；CPU 上受内存约束。
+  /// 成批的**参考**段数：一批的音频预算 = [batchSize] × [kAsrBatchReferenceSeconds]
+  /// 秒。段短时一批可以装比它多得多的段（上限 [maxBatchSegments]），段都顶到
+  /// 20 s 时恰好是 [batchSize] 段。GPU 上越大越省往返；CPU 上受内存约束。
   final int batchSize;
+
+  /// 一批最多装多少段（防止全是 1 s 短句时把一批撑到几百行）。
+  int get maxBatchSegments => batchSize * 4;
+
+  /// [batchSize] 对应的每段参考时长（= VAD 的 maxSegment 上限）。
+  static const int kAsrBatchReferenceSeconds = 20;
 
   /// 每块 PCM 的时长（秒）。也是检查点粒度上限。
   final int chunkSeconds;
@@ -260,41 +288,44 @@ class AsrTranscribeJob {
   File get _segmentsFile => File(p.join(jobDir.path, AsrJobFiles.segments));
   File get _srtFile => File(p.join(jobDir.path, AsrJobFiles.srt));
 
-  /// 读取（或初始化）任务状态。路径列表与磁盘状态不一致、文件缺失或损坏时视为
-  /// 新任务（`fresh == true`，调用方据此清空旧产物）。
+  /// 读取（或初始化）任务状态。路径列表 / 模型包与磁盘状态不一致、文件缺失或
+  /// 损坏时视为新任务（`fresh == true`，调用方据此清空旧产物）。
   static Future<({AsrJobState state, bool fresh})> loadStateDetailed(
     Directory jobDir,
-    List<String> audioPaths,
-  ) async {
+    List<String> audioPaths, {
+    required String modelId,
+  }) async {
+    final ({AsrJobState state, bool fresh}) fresh = (
+      state: AsrJobState.fresh(audioPaths, modelId: modelId),
+      fresh: true,
+    );
     final File f = File(p.join(jobDir.path, AsrJobFiles.state));
-    if (!f.existsSync()) {
-      return (state: AsrJobState.fresh(audioPaths), fresh: true);
-    }
+    if (!f.existsSync()) return fresh;
     try {
       final Map<String, Object?> json =
           jsonDecode(await f.readAsString()) as Map<String, Object?>;
       // 版本不符（含缺失）= 旧格式或已知会产出坏产物的旧链路，整个任务重来。
       if ((json['version'] as num?)?.toInt() != AsrJobState.currentVersion) {
-        return (state: AsrJobState.fresh(audioPaths), fresh: true);
+        return fresh;
       }
       final AsrJobState state = AsrJobState.fromJson(json);
-      if (!listEquals(state.audioPaths, audioPaths)) {
-        return (state: AsrJobState.fresh(audioPaths), fresh: true);
-      }
+      if (!listEquals(state.audioPaths, audioPaths)) return fresh;
+      if (state.modelId != modelId) return fresh;
       return (state: state, fresh: false);
     } on FormatException {
-      return (state: AsrJobState.fresh(audioPaths), fresh: true);
+      return fresh;
     } on TypeError {
-      return (state: AsrJobState.fresh(audioPaths), fresh: true);
+      return fresh;
     }
   }
 
   /// [loadStateDetailed] 的简写。
   static Future<AsrJobState> loadState(
     Directory jobDir,
-    List<String> audioPaths,
-  ) async =>
-      (await loadStateDetailed(jobDir, audioPaths)).state;
+    List<String> audioPaths, {
+    required String modelId,
+  }) async =>
+      (await loadStateDetailed(jobDir, audioPaths, modelId: modelId)).state;
 
   /// 已落盘的段落（顺序即写入顺序）。
   static Future<List<AsrTranscribedSegment>> loadSegments(
@@ -332,6 +363,7 @@ class AsrTranscribeJob {
     final ({AsrJobState state, bool fresh}) loaded = await loadStateDetailed(
       jobDir,
       audioPaths,
+      modelId: modelId,
     );
     AsrJobState state = loaded.state;
     if (loaded.fresh) {
@@ -395,10 +427,32 @@ class AsrTranscribeJob {
       segmenter.reset();
       final List<AsrSpeechSegment> pending = <AsrSpeechSegment>[];
 
+      final int budgetSamples =
+          batchSize * kAsrBatchReferenceSeconds * kAsrSampleRate;
+      int pendingSamples() => pending.fold<int>(
+            0,
+            (int acc, AsrSpeechSegment s) => acc + s.samples.length,
+          );
+      bool enoughPending() =>
+          pending.length >= maxBatchSegments ||
+          pendingSamples() >= budgetSamples;
+
       Future<void> drain({required bool all}) async {
-        while (pending.length >= batchSize || (all && pending.isNotEmpty)) {
-          final int take =
-              pending.length >= batchSize ? batchSize : pending.length;
+        // 按段长降序、按音频预算成批：encoder 按批内最长 pad、Loop 图每一步都
+        // 带着整批算，长短混批的 padding 全是白付（2026-09-06 实测：英语朗读段
+        // 普遍顶到 20 s 上限、日语对话段几秒一段，固定 32 段一批时 padding
+        // 2.7x / 2.2x，encoder 占 ASR 阶段九成）。段落顺序本身无意义：落盘按
+        // startMs 恢复、cue 构造前会重排。
+        pending.sort(
+          (AsrSpeechSegment a, AsrSpeechSegment b) =>
+              b.samples.length.compareTo(a.samples.length),
+        );
+        while (pending.isNotEmpty && (all || enoughPending())) {
+          final int take = pickBatchSize(
+            pending,
+            budgetSamples: budgetSamples,
+            maxSegments: maxBatchSegments,
+          );
           final List<AsrSpeechSegment> batch = pending.sublist(0, take);
           pending.removeRange(0, take);
           final List<AsrDecodedSegment> decoded = await decoder.decodeBatch(
@@ -435,7 +489,7 @@ class AsrTranscribeJob {
           pending.addAll(await segmenter.feed(chunk));
           lastEndSample = chunk.endSample;
           // 块内按批解码并节流发进度。
-          while (pending.length >= batchSize) {
+          while (enoughPending()) {
             await drain(all: false);
             final DateTime now = DateTime.now();
             if (now.difference(lastProgressAt) >= progressInterval) {
@@ -504,6 +558,30 @@ class AsrTranscribeJob {
   }
 
   static int _samplesToMs(int samples) => samples * 1000 ~/ kAsrSampleRate;
+
+  /// 从**按段长降序**的 [sorted] 头部取一批的段数（纯函数）：
+  /// - 段数 × 最长段 ≤ [budgetSamples]（encoder 真正要算的就是这个 pad 后面积）；
+  /// - 不超过 [maxSegments]；
+  /// - 遇到比批内最长段短一半以上的段就停（它和后面更短的段自成一批更划算，
+  ///   否则整批的 padding 直接翻倍）；
+  /// - 至少 1 段（超预算的单段也得解）。
+  @visibleForTesting
+  static int pickBatchSize(
+    List<AsrSpeechSegment> sorted, {
+    required int budgetSamples,
+    required int maxSegments,
+  }) {
+    if (sorted.isEmpty) return 0;
+    final int longest = sorted.first.samples.length;
+    if (longest <= 0) return 1;
+    int n = 1;
+    while (n < sorted.length && n < maxSegments) {
+      if ((n + 1) * longest > budgetSamples) break;
+      if (sorted[n].samples.length * 2 < longest) break;
+      n++;
+    }
+    return n;
+  }
 
   static int _maxEndMs(List<AsrTranscribedSegment> all, int fileIndex) {
     int m = 0;
