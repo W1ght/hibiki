@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 72505 (4265 per locale)
+/// Strings: 72573 (4269 per locale)
 ///
-/// Built on 2026-09-05 at 14:51 UTC
+/// Built on 2026-09-05 at 14:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5874,6 +5874,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_transcribe_unavailable =>
       'On-device transcription is not available on this platform';
   String get audiobook_transcribe_preparing => 'Loading model…';
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -15839,6 +15844,15 @@ class _StringsAr extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -26031,6 +26045,15 @@ class _StringsDe extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -36276,6 +36299,15 @@ class _StringsEs extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -46555,6 +46587,15 @@ class _StringsFr extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -56638,6 +56679,15 @@ class _StringsId extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -66813,6 +66863,15 @@ class _StringsIt extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -76375,6 +76434,15 @@ class _StringsJa extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -85947,6 +86015,15 @@ class _StringsKo extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -96077,6 +96154,15 @@ class _StringsNl extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -106261,6 +106347,15 @@ class _StringsPtBr extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -116423,6 +116518,15 @@ class _StringsRu extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -126384,6 +126488,15 @@ class _StringsTh extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -136462,6 +136575,15 @@ class _StringsTr extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -146511,6 +146633,15 @@ class _StringsVi extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 // Path: <root>
@@ -155731,7 +155862,7 @@ class _StringsZhCn extends _StringsEn {
           {required Object elapsed,
           required Object eta,
           required Object speed}) =>
-      '已用 ${elapsed} · 剩余 ${eta} · ${speed}× 实时';
+      '已用 ${elapsed} · 剩余 ${eta} · ${speed} 倍速';
   @override
   String audiobook_transcribe_done(
           {required Object segments, required Object cues}) =>
@@ -155749,6 +155880,14 @@ class _StringsZhCn extends _StringsEn {
   String get audiobook_transcribe_unavailable => '此平台不支持设备端转录';
   @override
   String get audiobook_transcribe_preparing => '正在加载模型…';
+  @override
+  String get audiobook_transcribe_export => '导出字幕文件';
+  @override
+  String get audiobook_transcribe_export_saved => '字幕文件已导出';
+  @override
+  String get audiobook_subtitle_source_title => '字幕来源';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint => '用设备端语音模型从已选音频生成';
 }
 
 // Path: <root>
@@ -165004,6 +165143,15 @@ class _StringsZhHk extends _StringsEn {
       'On-device transcription is not available on this platform';
   @override
   String get audiobook_transcribe_preparing => 'Loading model…';
+  @override
+  String get audiobook_transcribe_export => 'Export subtitle file';
+  @override
+  String get audiobook_transcribe_export_saved => 'Subtitle file saved';
+  @override
+  String get audiobook_subtitle_source_title => 'Subtitle source';
+  @override
+  String get audiobook_subtitle_source_transcribe_hint =>
+      'Generate from the selected audio with the on-device speech model';
 }
 
 /// Flat map(s) containing all translations.
@@ -173767,6 +173915,14 @@ extension on _StringsEn {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -182525,6 +182681,14 @@ extension on _StringsAr {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -191328,6 +191492,14 @@ extension on _StringsDe {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -200122,6 +200294,14 @@ extension on _StringsEs {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -208925,6 +209105,14 @@ extension on _StringsFr {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -217699,6 +217887,14 @@ extension on _StringsId {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -226495,6 +226691,14 @@ extension on _StringsIt {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -235218,6 +235422,14 @@ extension on _StringsJa {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -243945,6 +244157,14 @@ extension on _StringsKo {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -252734,6 +252954,14 @@ extension on _StringsNl {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -261518,6 +261746,14 @@ extension on _StringsPtBr {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -270309,6 +270545,14 @@ extension on _StringsRu {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -279072,6 +279316,14 @@ extension on _StringsTh {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -287850,6 +288102,14 @@ extension on _StringsTr {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -296622,6 +296882,14 @@ extension on _StringsVi {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
@@ -305303,7 +305571,7 @@ extension on _StringsZhCn {
                 {required Object elapsed,
                 required Object eta,
                 required Object speed}) =>
-            '已用 ${elapsed} · 剩余 ${eta} · ${speed}× 实时';
+            '已用 ${elapsed} · 剩余 ${eta} · ${speed} 倍速';
       case 'audiobook_transcribe_done':
         return ({required Object segments, required Object cues}) =>
             '完成：${segments} 段语音生成 ${cues} 条字幕';
@@ -305319,6 +305587,14 @@ extension on _StringsZhCn {
         return '此平台不支持设备端转录';
       case 'audiobook_transcribe_preparing':
         return '正在加载模型…';
+      case 'audiobook_transcribe_export':
+        return '导出字幕文件';
+      case 'audiobook_transcribe_export_saved':
+        return '字幕文件已导出';
+      case 'audiobook_subtitle_source_title':
+        return '字幕来源';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return '用设备端语音模型从已选音频生成';
       default:
         return null;
     }
@@ -314020,6 +314296,14 @@ extension on _StringsZhHk {
         return 'On-device transcription is not available on this platform';
       case 'audiobook_transcribe_preparing':
         return 'Loading model…';
+      case 'audiobook_transcribe_export':
+        return 'Export subtitle file';
+      case 'audiobook_transcribe_export_saved':
+        return 'Subtitle file saved';
+      case 'audiobook_subtitle_source_title':
+        return 'Subtitle source';
+      case 'audiobook_subtitle_source_transcribe_hint':
+        return 'Generate from the selected audio with the on-device speech model';
       default:
         return null;
     }
