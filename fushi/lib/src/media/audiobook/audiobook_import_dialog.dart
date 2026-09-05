@@ -1,6 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fushi/src/asr/asr_cue_builder.dart'
+    show kAsrSuggestedSimilarityThreshold;
+import 'package:fushi/src/asr/asr_transcription_service.dart';
+import 'package:fushi/src/media/audiobook/asr_transcribe_sheet.dart';
 import 'package:fushi/src/media/audiobook/audiobook_alignment_service.dart'
     show epubSectionsFromExtractDir, parseCuesForFormat;
 import 'package:fushi/src/media/import/audiobook_health_summary.dart';
@@ -466,8 +470,41 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
           isWideTapArea: true,
           onTap: _pickAlignment,
         ),
+        if (AsrTranscriptionService.isSupported)
+          FushiIconButton(
+            icon: Icons.record_voice_over_outlined,
+            tooltip: t.audiobook_transcribe_action,
+            isWideTapArea: true,
+            onTap: importing ? null : _transcribeAlignmentFromAudio,
+          ),
       ],
     );
+  }
+
+  /// 没有对齐文件时用设备端语音模型从已选音频生成一份 SRT 回填；后续导入路径
+  /// 与用户自带 SRT 相同（持久化 → 解析 → 匹配 → 落库）。
+  Future<void> _transcribeAlignmentFromAudio() async {
+    final List<String>? audio = _audioPaths;
+    if (audio == null || audio.isEmpty) {
+      FushiToast.show(
+        msg: t.audiobook_transcribe_needs_audio,
+        severity: ToastSeverity.warning,
+      );
+      return;
+    }
+    final String? srtPath = await showAsrTranscribeSheet(
+      context: context,
+      audioPaths: List<String>.of(audio),
+    );
+    if (srtPath == null || !mounted) return;
+    setState(() {
+      _alignmentPath = srtPath;
+      _alignmentName = t.audiobook_transcribe_result_name;
+      _probedCues = null;
+      _probedCuesSourcePath = null;
+      // ASR 文本有听写差，匹配阈值按实测放宽（用户仍可在滑条上改）。
+      _similarityThreshold = kAsrSuggestedSimilarityThreshold;
+    });
   }
 
   // ── 文件/目录选择 ────────────────────────────────────────────────────────────
@@ -886,6 +923,17 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
         searchWindow: _searchWindow,
         similarityThreshold: _similarityThreshold,
       );
+      final String? alignment = _alignmentPath;
+      if (alignment != null &&
+          AsrTranscriptionService.isAsrGeneratedSubtitlePath(alignment)) {
+        // 设备端转录产物：命中 cue 的听写文本换成正文（与 alignAndPersistAudiobook
+        // 同一规则），阅读器 DOM 重定位才精确。
+        replaceMatchedCueTextWithBookText(
+          sections: sections,
+          cues: cues,
+          result: result,
+        );
+      }
       SubtitleRematchCodec.applyToCues(cues: cues, result: result);
       final int pct = (result.matchRate * 100).round();
       return AudiobookHealth.fromRatePct(
@@ -1017,7 +1065,8 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
         target: DeletionDisclosureTarget.attachedAudiobook,
       ),
       db: widget.repo.database,
-      localFilesSubtitle: hasLocalFiles ? t.delete_local_files_audio_desc : null,
+      localFilesSubtitle:
+          hasLocalFiles ? t.delete_local_files_audio_desc : null,
     );
     debugPrint('AudiobookImportDialog: decision=$decision');
     if (decision == null) return;
