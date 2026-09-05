@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 72131 (4243 per locale)
+/// Strings: 72148 (4244 per locale)
 ///
-/// Built on 2026-09-05 at 05:39 UTC
+/// Built on 2026-09-05 at 15:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5833,6 +5833,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'AnkiMobile returned no decks or note types.';
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -15735,6 +15736,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -25864,6 +25867,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -36046,6 +36051,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -46262,6 +46269,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -56282,6 +56291,8 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -66394,6 +66405,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -75893,6 +75906,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -85402,6 +85417,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -95469,6 +95486,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -105590,6 +105609,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -115689,6 +115710,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -125587,6 +125610,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -135602,6 +135627,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -145588,6 +145615,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 // Path: <root>
@@ -154765,6 +154794,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       '无法打开 AnkiMobile。请先安装 AnkiMobile 再试。';
+  @override
+  String get dictionary_collapse_follow_global => '跟随全局设置';
 }
 
 // Path: <root>
@@ -163957,6 +163988,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
+  String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
 /// Flat map(s) containing all translations.
@@ -172661,6 +172694,8 @@ extension on _StringsEn {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -181360,6 +181395,8 @@ extension on _StringsAr {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -190104,6 +190141,8 @@ extension on _StringsDe {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -198839,6 +198878,8 @@ extension on _StringsEs {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -207583,6 +207624,8 @@ extension on _StringsFr {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -216298,6 +216341,8 @@ extension on _StringsId {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -225035,6 +225080,8 @@ extension on _StringsIt {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -233699,6 +233746,8 @@ extension on _StringsJa {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -242367,6 +242416,8 @@ extension on _StringsKo {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -251097,6 +251148,8 @@ extension on _StringsNl {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -259822,6 +259875,8 @@ extension on _StringsPtBr {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -268554,6 +268609,8 @@ extension on _StringsRu {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -277258,6 +277315,8 @@ extension on _StringsTh {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -285977,6 +286036,8 @@ extension on _StringsTr {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -294690,6 +294751,8 @@ extension on _StringsVi {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
@@ -303329,6 +303392,8 @@ extension on _StringsZhCn {
         return 'AnkiMobile 没有回传任何牌组或笔记类型。';
       case 'anki_error_ankimobile_unavailable':
         return '无法打开 AnkiMobile。请先安装 AnkiMobile 再试。';
+      case 'dictionary_collapse_follow_global':
+        return '跟随全局设置';
       default:
         return null;
     }
@@ -311971,6 +312036,8 @@ extension on _StringsZhHk {
         return 'AnkiMobile returned no decks or note types.';
       case 'anki_error_ankimobile_unavailable':
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
+      case 'dictionary_collapse_follow_global':
+        return 'Follow global setting';
       default:
         return null;
     }
