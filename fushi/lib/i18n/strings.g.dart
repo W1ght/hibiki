@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 72063 (4239 per locale)
+/// Strings: 72148 (4244 per locale)
 ///
-/// Built on 2026-09-05 at 11:16 UTC
+/// Built on 2026-09-05 at 15:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5823,6 +5823,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
@@ -15711,6 +15721,21 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
@@ -25827,6 +25852,21 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
@@ -35996,6 +36036,21 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
@@ -46200,6 +46255,21 @@ class _StringsFr extends _StringsEn {
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
   @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
@@ -56206,6 +56276,21 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
@@ -66306,6 +66391,21 @@ class _StringsIt extends _StringsEn {
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
   @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
@@ -75791,6 +75891,21 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
@@ -85287,6 +85402,21 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
@@ -95341,6 +95471,21 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
@@ -105450,6 +105595,21 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
   @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
@@ -115536,6 +115696,21 @@ class _StringsRu extends _StringsEn {
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
   @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
@@ -125420,6 +125595,21 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
+  @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
@@ -135423,6 +135613,21 @@ class _StringsTr extends _StringsEn {
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
   @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
@@ -145396,6 +145601,21 @@ class _StringsVi extends _StringsEn {
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
   @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
@@ -154561,6 +154781,19 @@ class _StringsZhCn extends _StringsEn {
       '鼠标触发只接受侧键（后退/前进）。其它按钮在别的程序里有各自的固有含义，这里会拒绝录入。';
   @override
   String get shortcut_mouse_button_not_supported => '该动作只接受鼠标侧键（后退/前进）。';
+  @override
+  String get anki_ankimobile_opened => '已打开 AnkiMobile。请在其中同意该请求，然后返回 Fushi。';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile 没有回传配置。请在 AnkiMobile 中同意该请求后再返回 Fushi。';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS 阻止了读取剪贴板。返回 Fushi 时请在系统提示里选「允许粘贴」，然后重试。';
+  @override
+  String get anki_error_ankimobile_no_decks => 'AnkiMobile 没有回传任何牌组或笔记类型。';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      '无法打开 AnkiMobile。请先安装 AnkiMobile 再试。';
   @override
   String get dictionary_collapse_follow_global => '跟随全局设置';
 }
@@ -163741,6 +163974,21 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_mouse_button_not_supported =>
       'This action only accepts mouse side buttons (back/forward).';
   @override
+  String get anki_ankimobile_opened =>
+      'AnkiMobile opened. Approve the request there, then return to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_empty =>
+      'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+  @override
+  String get anki_error_ankimobile_pasteboard_denied =>
+      'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+  @override
+  String get anki_error_ankimobile_no_decks =>
+      'AnkiMobile returned no decks or note types.';
+  @override
+  String get anki_error_ankimobile_unavailable =>
+      'Could not open AnkiMobile. Install AnkiMobile and try again.';
+  @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
 }
 
@@ -172436,6 +172684,16 @@ extension on _StringsEn {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -181127,6 +181385,16 @@ extension on _StringsAr {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -189863,6 +190131,16 @@ extension on _StringsDe {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -198590,6 +198868,16 @@ extension on _StringsEs {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -207326,6 +207614,16 @@ extension on _StringsFr {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -216033,6 +216331,16 @@ extension on _StringsId {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -224762,6 +225070,16 @@ extension on _StringsIt {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -233418,6 +233736,16 @@ extension on _StringsJa {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -242078,6 +242406,16 @@ extension on _StringsKo {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -250800,6 +251138,16 @@ extension on _StringsNl {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -259517,6 +259865,16 @@ extension on _StringsPtBr {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -268241,6 +268599,16 @@ extension on _StringsRu {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -276937,6 +277305,16 @@ extension on _StringsTh {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -285648,6 +286026,16 @@ extension on _StringsTr {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -294353,6 +294741,16 @@ extension on _StringsVi {
         return 'Mouse triggers accept side buttons only (back/forward). Other buttons keep their normal meaning in other apps, so they are rejected here.';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
@@ -302984,6 +303382,16 @@ extension on _StringsZhCn {
         return '鼠标触发只接受侧键（后退/前进）。其它按钮在别的程序里有各自的固有含义，这里会拒绝录入。';
       case 'shortcut_mouse_button_not_supported':
         return '该动作只接受鼠标侧键（后退/前进）。';
+      case 'anki_ankimobile_opened':
+        return '已打开 AnkiMobile。请在其中同意该请求，然后返回 Fushi。';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile 没有回传配置。请在 AnkiMobile 中同意该请求后再返回 Fushi。';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS 阻止了读取剪贴板。返回 Fushi 时请在系统提示里选「允许粘贴」，然后重试。';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile 没有回传任何牌组或笔记类型。';
+      case 'anki_error_ankimobile_unavailable':
+        return '无法打开 AnkiMobile。请先安装 AnkiMobile 再试。';
       case 'dictionary_collapse_follow_global':
         return '跟随全局设置';
       default:
@@ -311618,6 +312026,16 @@ extension on _StringsZhHk {
         return '鼠标触发只接受侧键（后退/前进）。其它按钮在别的程序里有各自的固有含义，这里会拒绝录入。';
       case 'shortcut_mouse_button_not_supported':
         return 'This action only accepts mouse side buttons (back/forward).';
+      case 'anki_ankimobile_opened':
+        return 'AnkiMobile opened. Approve the request there, then return to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_empty':
+        return 'AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.';
+      case 'anki_error_ankimobile_pasteboard_denied':
+        return 'iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.';
+      case 'anki_error_ankimobile_no_decks':
+        return 'AnkiMobile returned no decks or note types.';
+      case 'anki_error_ankimobile_unavailable':
+        return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
       default:
