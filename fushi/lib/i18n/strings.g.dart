@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 72913 (4289 per locale)
+/// Strings: 72930 (4290 per locale)
 ///
-/// Built on 2026-09-05 at 17:55 UTC
+/// Built on 2026-09-05 at 18:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5912,6 +5912,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Deleted, freed ${size}';
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -15939,6 +15941,9 @@ class _StringsAr extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -26193,6 +26198,9 @@ class _StringsDe extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -36500,6 +36508,9 @@ class _StringsEs extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -46841,6 +46852,9 @@ class _StringsFr extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -56986,6 +57000,9 @@ class _StringsId extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -67223,6 +67240,9 @@ class _StringsIt extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -76847,6 +76867,9 @@ class _StringsJa extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -86481,6 +86504,9 @@ class _StringsKo extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -96673,6 +96699,9 @@ class _StringsNl extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -106919,6 +106948,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -117143,6 +117175,9 @@ class _StringsRu extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -127166,6 +127201,9 @@ class _StringsTh extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -137306,6 +137344,9 @@ class _StringsTr extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -147417,6 +147458,9 @@ class _StringsVi extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 // Path: <root>
@@ -156711,6 +156755,9 @@ class _StringsZhCn extends _StringsEn {
       '已删除，释放 ${size}';
   @override
   String asr_models_download_failed({required Object error}) => '下载失败：${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU 探测失败，按 CPU 规划：${reason}';
 }
 
 // Path: <root>
@@ -166028,6 +166075,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String asr_models_download_failed({required Object error}) =>
       'Download failed: ${error}';
+  @override
+  String audiobook_transcribe_probe_failed({required Object reason}) =>
+      'GPU detection failed, planning for CPU: ${reason}';
 }
 
 /// Flat map(s) containing all translations.
@@ -174840,6 +174890,9 @@ extension on _StringsEn {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -183647,6 +183700,9 @@ extension on _StringsAr {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -192499,6 +192555,9 @@ extension on _StringsDe {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -201342,6 +201401,9 @@ extension on _StringsEs {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -210194,6 +210256,9 @@ extension on _StringsFr {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -219017,6 +219082,9 @@ extension on _StringsId {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -227862,6 +227930,9 @@ extension on _StringsIt {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -236634,6 +236705,9 @@ extension on _StringsJa {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -245410,6 +245484,9 @@ extension on _StringsKo {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -254248,6 +254325,9 @@ extension on _StringsNl {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -263081,6 +263161,9 @@ extension on _StringsPtBr {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -271921,6 +272004,9 @@ extension on _StringsRu {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -280733,6 +280819,9 @@ extension on _StringsTh {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -289560,6 +289649,9 @@ extension on _StringsTr {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -298381,6 +298473,9 @@ extension on _StringsVi {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
@@ -307127,6 +307222,8 @@ extension on _StringsZhCn {
         return ({required Object size}) => '已删除，释放 ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => '下载失败：${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) => 'GPU 探测失败，按 CPU 规划：${reason}';
       default:
         return null;
     }
@@ -315877,6 +315974,9 @@ extension on _StringsZhHk {
         return ({required Object size}) => 'Deleted, freed ${size}';
       case 'asr_models_download_failed':
         return ({required Object error}) => 'Download failed: ${error}';
+      case 'audiobook_transcribe_probe_failed':
+        return ({required Object reason}) =>
+            'GPU detection failed, planning for CPU: ${reason}';
       default:
         return null;
     }
