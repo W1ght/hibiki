@@ -4292,5 +4292,7 @@
   "audiobook_transcribe_running_on_static": "Running on $provider · fused static graph",
   "shortcut_action_reader_open_gallery": "Open illustrations gallery",
   "shortcut_action_reader_open_statistics": "Open reading statistics",
-  "shortcut_action_reader_open_audiobook": "Open audiobook panel"
+  "shortcut_action_reader_open_audiobook": "Open audiobook panel",
+  "video_home_subscription_updates": "Updated, not watched",
+  "video_home_subscription_unwatched_episode": "Episode $n · $count unwatched"
 }
