@@ -5899,6 +5899,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Download failed: ${error}';
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -15914,6 +15917,9 @@ class _StringsAr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -26156,6 +26162,9 @@ class _StringsDe extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -36451,6 +36460,9 @@ class _StringsEs extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -46780,6 +46792,9 @@ class _StringsFr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -56913,6 +56928,9 @@ class _StringsId extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -67138,6 +67156,9 @@ class _StringsIt extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -76750,6 +76771,9 @@ class _StringsJa extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -86372,6 +86396,9 @@ class _StringsKo extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -96552,6 +96579,9 @@ class _StringsNl extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -106786,6 +106816,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -116998,6 +117031,9 @@ class _StringsRu extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -127009,6 +127045,9 @@ class _StringsTh extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -137137,6 +137176,9 @@ class _StringsTr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -147236,6 +147278,9 @@ class _StringsVi extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -156521,6 +156566,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU 探测失败，按 CPU 规划：${reason}';
+  String get shortcut_action_reader_open_gallery => '打开插图画廊';
+  String get shortcut_action_reader_open_statistics => '打开阅读统计';
+  String get shortcut_action_reader_open_audiobook => '打开有声书面板';
   String get reader_stats_this_book => '本书';
   String get reader_stats_session => '本次会话';
   String get reader_stats_time_to_finish => '预计读完';
@@ -165826,6 +165874,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get shortcut_action_reader_open_gallery => 'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics => 'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -174633,6 +174684,12 @@ extension on _StringsEn {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -183443,6 +183500,12 @@ extension on _StringsAr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -192298,6 +192361,12 @@ extension on _StringsDe {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -201144,6 +201213,12 @@ extension on _StringsEs {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -209999,6 +210074,12 @@ extension on _StringsFr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -218825,6 +218906,12 @@ extension on _StringsId {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -227673,6 +227760,12 @@ extension on _StringsIt {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -236448,6 +236541,12 @@ extension on _StringsJa {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -245227,6 +245326,12 @@ extension on _StringsKo {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -254068,6 +254173,12 @@ extension on _StringsNl {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -262904,6 +263015,12 @@ extension on _StringsPtBr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -271747,6 +271864,12 @@ extension on _StringsRu {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -280562,6 +280685,12 @@ extension on _StringsTh {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -289392,6 +289521,12 @@ extension on _StringsTr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -298216,6 +298351,12 @@ extension on _StringsVi {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
@@ -306964,6 +307105,12 @@ extension on _StringsZhCn {
         return ({required Object error}) => '下载失败：${error}';
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) => 'GPU 探测失败，按 CPU 规划：${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return '打开插图画廊';
+      case 'shortcut_action_reader_open_statistics':
+        return '打开阅读统计';
+      case 'shortcut_action_reader_open_audiobook':
+        return '打开有声书面板';
       case 'reader_stats_this_book':
         return '本书';
       case 'reader_stats_session':
@@ -315717,6 +315864,12 @@ extension on _StringsZhHk {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       case 'reader_stats_this_book':
         return 'This book';
       case 'reader_stats_session':
