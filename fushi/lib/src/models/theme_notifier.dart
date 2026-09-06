@@ -70,6 +70,7 @@ typedef _FushiSchemeKey = (
   int? tertiary,
   int? primaryContainer,
   int? surface,
+  bool neutralDerived,
 );
 final Map<_FushiSchemeKey, ColorScheme> _hibikiSchemeCache =
     <_FushiSchemeKey, ColorScheme>{};
@@ -88,6 +89,7 @@ ColorScheme buildFushiColorScheme({
   Color? tertiary,
   Color? primaryContainer,
   Color? surface,
+  bool neutralDerived = false,
 }) {
   final _FushiSchemeKey key = (
     seedColor.toARGB32(),
@@ -98,14 +100,40 @@ ColorScheme buildFushiColorScheme({
     tertiary?.toARGB32(),
     primaryContainer?.toARGB32(),
     surface?.toARGB32(),
+    neutralDerived,
   );
   final ColorScheme? cached = _hibikiSchemeCache[key];
   if (cached != null) return cached;
+  // 中性派生：标签 / 选中项 / 菜单 / 表面这些「派生色」一律灰阶，只留主题色本身
+  // 作强调（Windows 亮色主题那种观感）。两种情况走这条路：用户显式开了
+  // [neutralDerived]；或 seed 本身无彩度（白 / 灰 / 黑，HCT chroma 极小）——这种
+  // seed 在 HCT 里仍有一个随机色相（纯白 ≈ 209°，偏蓝），tonalSpot 又强制给中性色
+  // 6 的彩度，结果「选了白色，界面却发蓝」。无彩度的 seed 没有任何色相可言，派生
+  // 出带色相的界面只能算 bug。
+  final bool neutral = neutralDerived || isAchromaticSeed(seedColor);
   final ColorScheme base = ColorScheme.fromSeed(
     seedColor: seedColor,
     brightness: brightness,
-    dynamicSchemeVariant: variant,
+    dynamicSchemeVariant: neutral ? DynamicSchemeVariant.monochrome : variant,
   );
+  // 中性派生下主色相关角色仍要来自 seed 自己的色调板（monochrome 会把 primary
+  // 也压成灰）：没钉死主色时取 tonalSpot 的 primary / primaryContainer；钉死了主色
+  // 但没钉控件底色时，控件底色从钉死的主色推。
+  final ColorScheme? accentBase =
+      neutral && (primary == null || primaryContainer == null)
+      ? ColorScheme.fromSeed(
+          seedColor: seedColor,
+          brightness: brightness,
+          dynamicSchemeVariant: variant,
+        )
+      : null;
+  final Color? accent = neutral ? (primary ?? accentBase!.primary) : primary;
+  final Color? accentContainer = neutral
+      ? (primaryContainer ??
+            (primary != null
+                ? _deriveContainer(primary, brightness)
+                : accentBase!.primaryContainer))
+      : primaryContainer;
   final Color? secContainer = secondary != null
       ? _deriveContainer(secondary, brightness)
       : null;
@@ -119,15 +147,16 @@ ColorScheme buildFushiColorScheme({
       ? deriveSurfaceRolesFrom(surface)
       : null;
   final ColorScheme withRoles = base.copyWith(
-    primary: primary ?? base.primary,
-    onPrimary: primary != null ? _readableOnColor(primary) : base.onPrimary,
+    primary: accent ?? base.primary,
+    onPrimary: accent != null ? _readableOnColor(accent) : base.onPrimary,
     // 钉死主色后，从主色派生的两个角色也必须跟着走：inversePrimary 是视频播放器
     // 浅色主题的控件强调色（video_chrome_colors.dart），surfaceTint 决定 M3 表面
     // 上叠的主题色——否则用户改了主题色，播放器仍是 seed 派生的旧色。
-    inversePrimary: primary != null
-        ? _inversePrimaryFor(primary, brightness)
+    inversePrimary: accent != null
+        ? _inversePrimaryFor(accent, brightness)
         : base.inversePrimary,
-    surfaceTint: primary ?? base.surfaceTint,
+    // 中性派生下表面不再被主题色叠层染回。
+    surfaceTint: neutral ? Colors.transparent : (accent ?? base.surfaceTint),
     secondary: secondary ?? base.secondary,
     onSecondary: secondary != null
         ? _readableOnColor(secondary)
@@ -142,9 +171,9 @@ ColorScheme buildFushiColorScheme({
     onTertiaryContainer: terContainer != null
         ? _readableOnColor(terContainer)
         : base.onTertiaryContainer,
-    primaryContainer: primaryContainer ?? base.primaryContainer,
-    onPrimaryContainer: primaryContainer != null
-        ? _readableOnColor(primaryContainer)
+    primaryContainer: accentContainer ?? base.primaryContainer,
+    onPrimaryContainer: accentContainer != null
+        ? _readableOnColor(accentContainer)
         : base.onPrimaryContainer,
   );
   if (surfaceRoles == null) return _hibikiSchemeCache[key] = withRoles;
@@ -167,6 +196,10 @@ ColorScheme buildFushiColorScheme({
     surfaceTint: Colors.transparent,
   );
 }
+
+/// seed 是否无彩度（白 / 灰 / 黑）：HCT chroma < 4。这种 seed 的「色相」只是浮点
+/// 噪声，派生界面必须走中性灰阶。
+bool isAchromaticSeed(Color seed) => Hct.fromInt(seed.toARGB32()).chroma < 4;
 
 /// 钉死主色的反色主色：同色相/彩度，色调换到另一明暗档（M3 primary 亮 40 / 暗 80）。
 Color _inversePrimaryFor(Color primary, Brightness brightness) {
@@ -312,6 +345,7 @@ class CustomThemeEntry {
     this.linkColor,
     this.surfaceColor,
     this.followSystemAccent = false,
+    this.neutralDerived = false,
   });
 
   final String id;
@@ -335,6 +369,9 @@ class CustomThemeEntry {
   /// [primaryColor] 只作系统不提供时的兜底。
   final bool followSystemAccent;
 
+  /// 派生色中性灰：标签 / 选中项 / 菜单 / 表面不带主题色相，只留主题色作强调。
+  final bool neutralDerived;
+
   CustomThemeEntry copyWith({String? id, String? name, int? seed}) {
     return CustomThemeEntry(
       id: id ?? this.id,
@@ -351,6 +388,7 @@ class CustomThemeEntry {
       linkColor: linkColor,
       surfaceColor: surfaceColor,
       followSystemAccent: followSystemAccent,
+      neutralDerived: neutralDerived,
     );
   }
 
@@ -372,6 +410,7 @@ class CustomThemeEntry {
     if (linkColor != null) 'linkColor': linkColor,
     if (surfaceColor != null) 'surfaceColor': surfaceColor,
     if (followSystemAccent) 'followSystemAccent': true,
+    if (neutralDerived) 'neutralDerived': true,
   };
 
   factory CustomThemeEntry.fromJson(Map<String, dynamic> json) {
@@ -391,6 +430,7 @@ class CustomThemeEntry {
       linkColor: asInt(json['linkColor']),
       surfaceColor: asInt(json['surfaceColor']),
       followSystemAccent: json['followSystemAccent'] == true,
+      neutralDerived: json['neutralDerived'] == true,
     );
   }
 }
@@ -1066,7 +1106,14 @@ class ThemeNotifier extends ChangeNotifier {
         () => customThemeContainerColor,
       ),
       surface: activeCustomThemeSurfaceColor,
+      neutralDerived: activeCustomThemeNeutralDerived,
     );
+  }
+
+  /// 当前生效自定义主题是否要求派生色中性灰。
+  bool get activeCustomThemeNeutralDerived {
+    if (!isCustomThemeKey(appThemeKey)) return false;
+    return activeCustomThemeEntry?.neutralDerived ?? false;
   }
 
   /// [entry] 开了「跟随系统取色」且系统真有色时返回系统色，否则 null。

@@ -217,6 +217,19 @@ void main() {
       expect(saved.seed, kCustomThemeDefaultSeed);
     });
 
+    testWidgets('「派生色用中性灰」开关 → 应用写 neutralDerived', (
+      WidgetTester tester,
+    ) async {
+      final _RecordingAppModel appModel = _RecordingAppModel();
+      await tester.pumpWidget(_host(appModel, const CustomThemePage()));
+      await tester.pumpAndSettle();
+
+      // 第 2 只开关：跟随系统 / 自动调色调 / 派生色中性灰。
+      await _tapSettingsSwitch(tester, 2);
+      await _tapApply(tester);
+      expect(appModel.upserts.single.neutralDerived, isTrue);
+    });
+
     testWidgets('「界面背景」选纯白 → 应用写 surfaceColor', (WidgetTester tester) async {
       final _RecordingAppModel appModel = _RecordingAppModel();
       await tester.pumpWidget(_host(appModel, const CustomThemePage()));
@@ -396,12 +409,13 @@ void main() {
       expect(find.byType(ColorPickerArea), findsOneWidget);
       expect(find.text(t.theme_role_accent), findsNWidgets(2));
 
-      await tester.tap(find.text(t.theme_role_link).first);
+      // 界面背景行在第一板块、不用滚动就可见（链接行在 800 高下已在视口外）。
+      await tester.tap(find.text(t.theme_role_surface).first);
       await tester.pumpAndSettle();
-      // 没弹窗：仍然只有一个选色器；右栏标题换成链接。
+      // 没弹窗：仍然只有一个选色器；右栏标题换成界面背景。
       expect(find.byType(ColorPickerArea), findsOneWidget);
       expect(find.text(t.dialog_done), findsNothing);
-      expect(find.text(t.theme_role_link), findsNWidgets(2));
+      expect(find.text(t.theme_role_surface), findsNWidgets(2));
       expect(find.text(t.theme_role_accent), findsOneWidget);
     });
   });

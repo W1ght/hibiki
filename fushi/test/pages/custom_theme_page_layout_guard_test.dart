@@ -114,6 +114,8 @@ void main() {
         source.contains('followSystemAccent: _followSystemAccent'),
         isTrue,
       );
+      expect(source.contains('t.theme_neutral_derived'), isTrue);
+      expect(source.contains('neutralDerived: _neutralDerived'), isTrue);
     });
 
     test('界面背景角色钉死 surface，与真机同一派生链', () {

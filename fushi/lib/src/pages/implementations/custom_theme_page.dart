@@ -71,6 +71,9 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
   /// 系统不提供时的兜底，真正用的是 [_resolvedAccent]。
   bool _followSystemAccent = false;
 
+  /// 派生色中性灰（标签 / 选中项 / 菜单不带主题色相）。
+  bool _neutralDerived = false;
+
   /// 可选角色的显式覆盖；null = 跟随主题。`audioHighlight` 是全局偏好，
   /// 改动立即写穿 AppModel（TODO-977），其余随「应用」一起落进条目。
   final Map<_ThemeRole, Color?> _overrides = <_ThemeRole, Color?>{};
@@ -134,6 +137,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
     _accent = Color(entry.primaryColor ?? entry.seed);
     _accentAutoTone = entry.primaryColor == null;
     _followSystemAccent = entry.followSystemAccent;
+    _neutralDerived = entry.neutralDerived;
     _overrides
       ..[_ThemeRole.surface] = roleColor(entry.surfaceColor)
       ..[_ThemeRole.readerText] = roleColor(entry.fontColor)
@@ -175,6 +179,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
       tertiary: _overrides[_ThemeRole.tertiary],
       primaryContainer: _overrides[_ThemeRole.container],
       surface: _overrides[_ThemeRole.surface],
+      neutralDerived: _neutralDerived,
     );
   }
 
@@ -338,8 +343,8 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
     Color(0xFFFFFFFF),
     Color(0xFF000000),
     Color(0xFFFAF6EF),
-    Color(0xFFF2F4F7),
-    Color(0xFF121212),
+    Color(0xFFF3F3F3),
+    Color(0xFF202020),
   ];
 
   static const List<Color> _accentPresets = <Color>[
@@ -387,6 +392,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
       primaryColor: _accentAutoTone ? null : _accent.toARGB32(),
       surfaceColor: argb(_overrides[_ThemeRole.surface]),
       followSystemAccent: _followSystemAccent,
+      neutralDerived: _neutralDerived,
       fontColor: argb(_overrides[_ThemeRole.readerText]),
       bgColor: argb(_overrides[_ThemeRole.readerBackground]),
       selectionColor: argb(_overrides[_ThemeRole.selection]),
@@ -430,6 +436,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
     segment('lk', entry.linkColor);
     segment('sf', entry.surfaceColor);
     if (entry.followSystemAccent) code += ':sa1';
+    if (entry.neutralDerived) code += ':nd1';
     return code;
   }
 
@@ -463,6 +470,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
       linkColor: segments['lk'],
       surfaceColor: segments['sf'],
       followSystemAccent: segments['sa'] == 1,
+      neutralDerived: segments['nd'] == 1,
     );
   }
 
@@ -665,6 +673,12 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
             onChanged: (bool value) => setState(() => _accentAutoTone = value),
           ),
           _buildRoleRow(_ThemeRole.surface),
+          AdaptiveSettingsSwitchRow(
+            title: t.theme_neutral_derived,
+            subtitle: t.theme_neutral_derived_desc,
+            value: _neutralDerived,
+            onChanged: (bool value) => setState(() => _neutralDerived = value),
+          ),
           if (_accentLowContrast(Brightness.light))
             _buildHintRow(t.theme_accent_low_contrast_light),
           if (_accentLowContrast(Brightness.dark))

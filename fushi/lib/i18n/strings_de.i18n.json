@@ -4307,5 +4307,7 @@
   "theme_accent_auto_tone": "Adjust tone for light and dark mode",
   "theme_accent_auto_tone_desc": "Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.",
   "theme_role_actual_color": "Shown as",
-  "theme_preview_card": "Card"
+  "theme_preview_card": "Card",
+  "theme_neutral_derived": "Neutral derived colors",
+  "theme_neutral_derived_desc": "Tags, selected items, menus and surfaces stay gray instead of taking on the accent's hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically."
 }

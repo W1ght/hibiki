@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 73253 (4309 per locale)
+/// Strings: 73287 (4311 per locale)
 ///
-/// Built on 2026-09-06 at 11:37 UTC
+/// Built on 2026-09-06 at 11:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6006,6 +6006,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
   String get theme_role_actual_color => 'Shown as';
   String get theme_preview_card => 'Card';
+  String get theme_neutral_derived => 'Neutral derived colors';
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -16142,6 +16145,11 @@ class _StringsAr extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -26511,6 +26519,11 @@ class _StringsDe extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -36930,6 +36943,11 @@ class _StringsEs extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -47381,6 +47399,11 @@ class _StringsFr extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -57637,6 +57660,11 @@ class _StringsId extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -67986,6 +68014,11 @@ class _StringsIt extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -77714,6 +77747,11 @@ class _StringsJa extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -87452,6 +87490,11 @@ class _StringsKo extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -97755,6 +97798,11 @@ class _StringsNl extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -108112,6 +108160,11 @@ class _StringsPtBr extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -118447,6 +118500,11 @@ class _StringsRu extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -128580,6 +128638,11 @@ class _StringsTh extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -138831,6 +138894,11 @@ class _StringsTr extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -149052,6 +149120,11 @@ class _StringsVi extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 // Path: <root>
@@ -158435,6 +158508,11 @@ class _StringsZhCn extends _StringsEn {
   String get theme_role_actual_color => '实际显示';
   @override
   String get theme_preview_card => '卡片';
+  @override
+  String get theme_neutral_derived => '派生色用中性灰';
+  @override
+  String get theme_neutral_derived_desc =>
+      '标签、选中项、菜单与表面不带主题色相，只留主题色本身作强调（类似 Windows 亮色主题）。主题色选白/灰/黑时自动生效';
 }
 
 // Path: <root>
@@ -167853,6 +167931,11 @@ class _StringsZhHk extends _StringsEn {
   String get theme_role_actual_color => 'Shown as';
   @override
   String get theme_preview_card => 'Card';
+  @override
+  String get theme_neutral_derived => 'Neutral derived colors';
+  @override
+  String get theme_neutral_derived_desc =>
+      'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
 }
 
 /// Flat map(s) containing all translations.
@@ -176711,6 +176794,10 @@ extension on _StringsEn {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -185564,6 +185651,10 @@ extension on _StringsAr {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -194466,6 +194557,10 @@ extension on _StringsDe {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -203358,6 +203453,10 @@ extension on _StringsEs {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -212258,6 +212357,10 @@ extension on _StringsFr {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -221128,6 +221231,10 @@ extension on _StringsId {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -230021,6 +230128,10 @@ extension on _StringsIt {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -238838,6 +238949,10 @@ extension on _StringsJa {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -247660,6 +247775,10 @@ extension on _StringsKo {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -256548,6 +256667,10 @@ extension on _StringsNl {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -265431,6 +265554,10 @@ extension on _StringsPtBr {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -274320,6 +274447,10 @@ extension on _StringsRu {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -283178,6 +283309,10 @@ extension on _StringsTh {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -292052,6 +292187,10 @@ extension on _StringsTr {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -300920,6 +301059,10 @@ extension on _StringsVi {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }
@@ -309709,6 +309852,10 @@ extension on _StringsZhCn {
         return '实际显示';
       case 'theme_preview_card':
         return '卡片';
+      case 'theme_neutral_derived':
+        return '派生色用中性灰';
+      case 'theme_neutral_derived_desc':
+        return '标签、选中项、菜单与表面不带主题色相，只留主题色本身作强调（类似 Windows 亮色主题）。主题色选白/灰/黑时自动生效';
       default:
         return null;
     }
@@ -318504,6 +318651,10 @@ extension on _StringsZhHk {
         return 'Shown as';
       case 'theme_preview_card':
         return 'Card';
+      case 'theme_neutral_derived':
+        return 'Neutral derived colors';
+      case 'theme_neutral_derived_desc':
+        return 'Tags, selected items, menus and surfaces stay gray instead of taking on the accent\'s hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.';
       default:
         return null;
     }

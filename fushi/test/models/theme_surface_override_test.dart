@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/models/theme_notifier.dart';
+import 'package:material_color_utilities/material_color_utilities.dart';
 
 /// 自定义主题「界面背景」钉死 + 钉死主色带动 inversePrimary / surfaceTint。
 ///
@@ -133,6 +134,72 @@ void main() {
     });
   });
 
+  group('buildFushiColorScheme · 中性派生', () {
+    // sRGB 灰阶经 HCT 量化后 chroma 并不严格为 0（≈2.5～2.8），门槛与
+    // isAchromaticSeed 同为 4；带主题色相的派生色 chroma ≥ 16。
+    Hct hct(Color c) => Hct.fromInt(c.toARGB32());
+
+    test('无彩度 seed（纯白）：表面 / 选中项 / 标签不再带蓝色相', () {
+      expect(isAchromaticSeed(Colors.white), isTrue);
+      expect(isAchromaticSeed(const Color(0xFF808080)), isTrue);
+      expect(isAchromaticSeed(seed), isFalse);
+      final ColorScheme cs = buildFushiColorScheme(
+        seedColor: Colors.white,
+        brightness: Brightness.light,
+        primary: Colors.white,
+      );
+      // 以前：白 seed 在 HCT 里色相 ≈ 209°，tonalSpot 强制 chroma 6/16 → 淡蓝灰。
+      expect(hct(cs.surface).chroma, lessThan(4));
+      expect(hct(cs.surfaceContainer).chroma, lessThan(4));
+      expect(hct(cs.secondaryContainer).chroma, lessThan(4));
+      expect(hct(cs.outlineVariant).chroma, lessThan(4));
+      expect(cs.primary, Colors.white);
+      expect(cs.surfaceTint, Colors.transparent);
+    });
+
+    test('neutralDerived：彩色主题色保留，其余派生色灰阶', () {
+      const Color blue = Color(0xFF0B57D0);
+      final ColorScheme cs = buildFushiColorScheme(
+        seedColor: blue,
+        brightness: Brightness.light,
+        primary: blue,
+        neutralDerived: true,
+      );
+      expect(cs.primary, blue);
+      // 控件底色从钉死的主色推（浅蓝），不是灰。
+      expect(hct(cs.primaryContainer).chroma, greaterThan(5));
+      expect(hct(cs.secondaryContainer).chroma, lessThan(4));
+      expect(hct(cs.tertiary).chroma, lessThan(4));
+      expect(hct(cs.surface).chroma, lessThan(4));
+      expect(hct(cs.onSurfaceVariant).chroma, lessThan(4));
+      expect(cs.surfaceTint, Colors.transparent);
+      // 与不开中性派生的结果不同、且 memo key 区分。
+      final ColorScheme tinted = buildFushiColorScheme(
+        seedColor: blue,
+        brightness: Brightness.light,
+        primary: blue,
+      );
+      expect(identical(cs, tinted), isFalse);
+      expect(hct(tinted.secondaryContainer).chroma, greaterThan(5));
+    });
+
+    test('neutralDerived + 自动调色调：主色仍来自 seed 的色调板，不被压成灰', () {
+      const Color blue = Color(0xFF0B57D0);
+      final ColorScheme cs = buildFushiColorScheme(
+        seedColor: blue,
+        brightness: Brightness.dark,
+        neutralDerived: true,
+      );
+      final ColorScheme tonal = ColorScheme.fromSeed(
+        seedColor: blue,
+        brightness: Brightness.dark,
+      );
+      expect(cs.primary, tonal.primary);
+      expect(cs.primaryContainer, tonal.primaryContainer);
+      expect(hct(cs.secondary).chroma, lessThan(4));
+    });
+  });
+
   group('CustomThemeEntry · 新字段序列化', () {
     test('surfaceColor / followSystemAccent 往返 JSON', () {
       const CustomThemeEntry e = CustomThemeEntry(
@@ -141,10 +208,13 @@ void main() {
         seed: 0xFF112233,
         surfaceColor: 0xFFFFFFFF,
         followSystemAccent: true,
+        neutralDerived: true,
       );
       final CustomThemeEntry back = CustomThemeEntry.fromJson(e.toJson());
       expect(back.surfaceColor, 0xFFFFFFFF);
       expect(back.followSystemAccent, isTrue);
+      expect(back.neutralDerived, isTrue);
+      expect(back.copyWith(name: 'Y').neutralDerived, isTrue);
       expect(back.copyWith(name: 'Y').surfaceColor, 0xFFFFFFFF);
       expect(back.copyWith(name: 'Y').followSystemAccent, isTrue);
     });
@@ -157,7 +227,9 @@ void main() {
       });
       expect(old.surfaceColor, isNull);
       expect(old.followSystemAccent, isFalse);
+      expect(old.neutralDerived, isFalse);
       expect(old.toJson().containsKey('followSystemAccent'), isFalse);
+      expect(old.toJson().containsKey('neutralDerived'), isFalse);
     });
   });
 }

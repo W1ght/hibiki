@@ -4307,5 +4307,7 @@
   "theme_accent_auto_tone": "按明暗模式自动调整色调",
   "theme_accent_auto_tone_desc": "关闭：直接使用所选原色。开启：为浅色/深色模式各自生成色调，实际显示会与所选不同",
   "theme_role_actual_color": "实际显示",
-  "theme_preview_card": "卡片"
+  "theme_preview_card": "卡片",
+  "theme_neutral_derived": "派生色用中性灰",
+  "theme_neutral_derived_desc": "标签、选中项、菜单与表面不带主题色相，只留主题色本身作强调（类似 Windows 亮色主题）。主题色选白/灰/黑时自动生效"
 }
