@@ -29,10 +29,11 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2041 条。点号进各自文件。
+> 共 2042 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2192](bugs/BUG-2192-srt-cue-tail-overlap-jumps-to-later-sentence.md) | ✅ | ✅ | 听书 ASR 字幕前句多吃下一句首字，后句跳到远处同前缀句、中间十几句全未匹配 |
 | [BUG-2191](bugs/BUG-2191-reader-ledger-audiobook-reveal-turn-uncounted.md) | 🚧 | 🚧 | 听书自动翻页未计入读过字数（未复现） |
 | [BUG-2190](bugs/BUG-2190-reader-ledger-close-settles-stale-unit.md) | ✅ | ✅ | 关书结算的是上次采样单元而非此刻可见页 |
 | [BUG-2189](bugs/BUG-2189-reader-ledger-fail-navigation-discards-read-page.md) | ✅ | ✅ | 导航失败/兜底超时 discard 丢掉用户真读过的上一页 |
