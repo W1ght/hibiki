@@ -1509,8 +1509,6 @@ extension _ReaderChrome on _ReaderFushiPageState {
           bar: AudiobookPlayBar(
             controller: ctrl,
             skipActionSeconds: ReaderFushiSource.instance.skipActionSeconds,
-            onOpenSettings: () =>
-                unawaited(_showAppearanceSheet(initialSubPage: 'audiobook')),
             backgroundColor: _themeBackgroundColor(),
             foregroundColor: _themeTextColor(),
             reversed: appModel.reverseReaderBottomBar,
@@ -1521,6 +1519,14 @@ extension _ReaderChrome on _ReaderFushiPageState {
             showCue: ReaderFushiSource.instance.showBottomBarCue,
             // 桌面端：播放条唤出时覆盖状态行，阅读追踪 / 进度并进条右端；传输键与
             // 有声书面板同一套（-10s / 上一句 / 播放 / 下一句 / +10s）。
+            // 桌面端不画条尾的设置齿轮：它与顶部工具栏右端的「阅读设置」重复，且
+            // 点开的是有声书面板而非阅读设置（tooltip 撒谎）。移动端播放条**取代**
+            // 底部设置栏，齿轮是那里唯一的面板入口，保留。
+            onOpenSettings: _desktopChromeEnabled
+                ? null
+                : () => unawaited(
+                    _showAppearanceSheet(initialSubPage: 'audiobook'),
+                  ),
             trailing: _desktopChromeEnabled ? _buildBarStatusText() : null,
             showSeekButtons: _desktopChromeEnabled,
           ),
@@ -2385,6 +2391,38 @@ extension _ReaderChrome on _ReaderFushiPageState {
           // 左侧计时器 = 手动暂停 / 继续；右侧进度数字 = 打开统计浮层。
           onTapTracker: _toggleStudyClockManualPause,
           onTapProgress: _openReadingStatistics,
+        ),
+      ),
+    );
+  }
+
+  /// 桌面端顶部细进度线（ッツ 形态）：贴正文顶边整宽，按整书已读比例填充，颜色从
+  /// 阅读器纸张主题取（reader_progress_line.dart 文件头）。挤压态工具栏占位时贴在
+  /// 工具栏下沿，悬浮态贴窗口顶边。与状态行右侧进度数字共用「阅读进度指示」开关。
+  Widget _buildProgressLine() {
+    final double? ratio = readerProgressLineRatio(
+      current: _progressCurrentChars,
+      total: _progressTotalChars,
+    );
+    if (!readerProgressLineVisible(
+      desktopChromeEnabled: _desktopChromeEnabled,
+      hasEverLoaded: _hasEverLoaded,
+      lyricsMode: _lyricsMode,
+      showProgress: ReaderFushiSource.instance.showTopProgressBar,
+      ratio: ratio,
+    )) {
+      return const SizedBox.shrink();
+    }
+    return Positioned(
+      top: _stableTopInset + _macosWindowTitlebarInset + _desktopHeaderReserve,
+      left: 0,
+      right: 0,
+      // BUG-1692：排在 WebView 之后绘制的内容都自带 RepaintBoundary（见状态行）。
+      child: RepaintBoundary(
+        child: ReaderProgressLine(
+          key: const ValueKey<String>('fushi_progress_line'),
+          ratio: ratio!,
+          color: _themeTextColor(),
         ),
       ),
     );

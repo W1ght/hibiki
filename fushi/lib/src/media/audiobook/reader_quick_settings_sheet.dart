@@ -741,8 +741,17 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     // 由本面板外层 padding 统一提供，schema 正文不再自带横向缩进；主题卡也裸放（无额
     // 外 Padding）即可与配置行、以及同面板 bespoke 的「导航 / 有声书」子页左右等宽、
     // 同为宽版（BUG-545/546 的等宽仍成立，只是统一到更宽的外层 padding 宽度，TODO-1321）。
+    // 明暗模式（日间 / 跟随系统 / 夜间）分段选择器与主题卡同一 section：系统主题
+    // 与自定义主题的纸张色跟随全局明暗（_customReaderThemeColors / resolveReaderThemeColors
+    // 的 scheme 分支），只给主题卡不给明暗开关，用户在书里切不了昼夜。与设置页
+    // 「外观」的是同一行（buildBrightnessSelector），同一 SettingsContext 让换挡后也走
+    // `_syncThemeSelection`（词典 / 歌词联动）。
+    final SettingsContext themeContext = _themeSettingsContext();
     return AdaptiveSettingsSection(
-      children: <Widget>[buildThemeSelector(_themeSettingsContext())],
+      children: <Widget>[
+        buildBrightnessSelector(themeContext),
+        buildThemeSelector(themeContext),
+      ],
     );
   }
 
