@@ -6,6 +6,8 @@ import 'package:fushi_core/fushi_core.dart';
 
 // v92 统计域重构：study_segments 是学习统计的唯一事实表。本测试锁定 DAO 契约：
 // 按 uid 幂等 upsert（绝对值覆盖，永不 +=）、窗口查询、按身份删除 + 墓碑、按种类清空。
+// BUG-2176 / BUG-2182 / BUG-2177：墓碑语义 = 「删除 startAt < deletedAt 的段」，碑戳只增
+// 不减、永不因后来的段退场；清空也逐身份立碑。
 Future<FushiDatabase> _openDb() async {
   final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
   addTearDown(db.close);
@@ -22,6 +24,7 @@ StudySegmentsCompanion _seg(
   int chars = 0,
   int pages = 0,
   int updatedAt = 1000,
+  int startAt = 1000,
   int endAt = 2000,
 }) => StudySegmentsCompanion.insert(
   uid: uid,
@@ -29,7 +32,7 @@ StudySegmentsCompanion _seg(
   mediaKind: kind,
   mediaKey: key,
   title: 'T',
-  startAt: 1000,
+  startAt: startAt,
   endAt: endAt,
   dateKey: dateKey,
   hour: hour,
@@ -243,13 +246,226 @@ void main() {
     expect(tombs.single.mediaKind, kActivityMediaBook);
   });
 
-  test('clearStudySegments 只清该种类，不立碑', () async {
+  test('clearStudySegments 只清该种类，并对该种类每个身份立碑（BUG-2177）', () async {
     final FushiDatabase db = await _openDb();
-    await db.upsertStudySegment(_seg('a', kind: kActivityMediaBook));
+    await db.upsertStudySegment(_seg('a', kind: kActivityMediaBook, key: 'b1'));
+    await db.upsertStudySegment(
+      _seg('a2', kind: kActivityMediaBook, key: 'b1'),
+    );
+    await db.upsertStudySegment(_seg('c', kind: kActivityMediaBook, key: 'b2'));
     await db.upsertStudySegment(_seg('b', kind: kActivityMediaVideo, key: 'v'));
+    final int before = DateTime.now().millisecondsSinceEpoch;
     await db.clearStudySegments(kActivityMediaBook);
     expect((await db.getStudySegments()).single.uid, 'b');
-    expect(await db.getStudySegmentTombstones(), isEmpty);
+    final List<StudySegmentTombstoneRow> tombs = await db
+        .getStudySegmentTombstones();
+    expect(
+      tombs.map((t) => '${t.mediaKind}|${t.mediaKey}').toSet(),
+      <String>{'book|b1', 'book|b2'},
+      reason: '每个被清的身份一块碑；视频域不连坐',
+    );
+    for (final StudySegmentTombstoneRow t in tombs) {
+      expect(t.deletedAt, greaterThanOrEqualTo(before));
+    }
+    // 清空之前开始的段回写被拒；清空之后开始的新段照常（身份不被「毒化」）。
+    await db.upsertStudySegment(_seg('a', key: 'b1', startAt: before - 1));
+    expect((await db.getStudySegments()).length, 1);
+    final int later = DateTime.now().millisecondsSinceEpoch + 1;
+    await db.upsertStudySegment(_seg('fresh', key: 'b1', startAt: later));
+    expect((await db.getStudySegments()).map((r) => r.uid).toSet(), <String>{
+      'b',
+      'fresh',
+    });
+    expect((await db.getStudySegmentTombstones()).length, 2, reason: '碑仍在');
+  });
+
+  group('墓碑语义：删除 startAt < deletedAt 的段（BUG-2176 / BUG-2182）', () {
+    test('删该媒体统计后，仍在跑的时钟对开放段（startAt 在删除前）的回写被静默丢弃', () async {
+      final FushiDatabase db = await _openDb();
+      // 时钟在 t=1000 开段并 tick 到 5000。
+      await db.upsertStudySegment(
+        _seg('open', key: 'b1', startAt: 1000, updatedAt: 5000, ms: 4000),
+      );
+      await db.deleteStudySegmentsForMedia(
+        mediaKind: kActivityMediaBook,
+        mediaKey: 'b1',
+      );
+      expect(await db.getStudySegments(), isEmpty);
+      final int deletedAt =
+          (await db.getStudySegmentTombstones()).single.deletedAt;
+      // 下一 tick：同 uid、updatedAt 已在 deletedAt 之后，但 startAt 在删除之前。
+      await db.upsertStudySegment(
+        _seg(
+          'open',
+          key: 'b1',
+          startAt: 1000,
+          updatedAt: deletedAt + 60000,
+          ms: 64000,
+        ),
+      );
+      expect(await db.getStudySegments(), isEmpty, reason: '开放段不得复活');
+      expect(
+        (await db.getStudySegmentTombstones()).single.deletedAt,
+        deletedAt,
+        reason: '碑不动',
+      );
+    });
+
+    test('删除之后开的新段（startAt >= deletedAt）存活，碑仍在、不退场', () async {
+      final FushiDatabase db = await _openDb();
+      await db.upsertStudySegment(_seg('old', key: 'b1', startAt: 1000));
+      await db.deleteStudySegmentsForMedia(
+        mediaKind: kActivityMediaBook,
+        mediaKey: 'b1',
+      );
+      final int deletedAt =
+          (await db.getStudySegmentTombstones()).single.deletedAt;
+      await db.upsertStudySegment(
+        _seg('new', key: 'b1', startAt: deletedAt, updatedAt: deletedAt + 1),
+      );
+      await db.upsertStudySegment(
+        _seg(
+          'new',
+          key: 'b1',
+          startAt: deletedAt,
+          updatedAt: deletedAt + 2,
+          ms: 9,
+        ),
+      );
+      final List<StudySegmentRow> rows = await db.getStudySegments();
+      expect(rows.single.uid, 'new');
+      expect(rows.single.durationMs, 9, reason: '同 uid 继续 tick 照常覆盖');
+      expect(
+        (await db.getStudySegmentTombstones()).single.deletedAt,
+        deletedAt,
+      );
+    });
+
+    test('applyStudySegmentTombstone 按 startAt 删、碑戳只增不减', () async {
+      final FushiDatabase db = await _openDb();
+      // updatedAt 早已越过 deletedAt 的开放段照样删（旧口径按 updatedAt 会放过它）。
+      await db.upsertStudySegment(
+        _seg('before', key: 'b1', startAt: 100, updatedAt: 9000),
+      );
+      await db.upsertStudySegment(
+        _seg('after', key: 'b1', startAt: 5000, updatedAt: 5001),
+      );
+      await db.upsertStudySegment(_seg('other', key: 'b2', startAt: 100));
+      await db.applyStudySegmentTombstone(
+        mediaKind: kActivityMediaBook,
+        mediaKey: 'b1',
+        deletedAt: 5000,
+      );
+      expect((await db.getStudySegments()).map((r) => r.uid).toSet(), <String>{
+        'after',
+        'other',
+      });
+      // 更旧的碑到达：不降级、不删 after。
+      await db.applyStudySegmentTombstone(
+        mediaKind: kActivityMediaBook,
+        mediaKey: 'b1',
+        deletedAt: 3000,
+      );
+      expect((await db.getStudySegmentTombstones()).single.deletedAt, 5000);
+      expect((await db.getStudySegments()).length, 2);
+      // 更新的碑到达：抬高并把 after 也删掉。
+      await db.applyStudySegmentTombstone(
+        mediaKind: kActivityMediaBook,
+        mediaKey: 'b1',
+        deletedAt: 6000,
+      );
+      expect((await db.getStudySegmentTombstones()).single.deletedAt, 6000);
+      expect((await db.getStudySegments()).single.uid, 'other');
+    });
+
+    test(
+      'upsertStudySegmentTombstone / deleteStudySegmentsForMedia 不把碑戳倒退',
+      () async {
+        final FushiDatabase db = await _openDb();
+        await db.upsertStudySegment(_seg('a', key: 'b1'));
+        await db.deleteStudySegmentsForMedia(
+          mediaKind: kActivityMediaBook,
+          mediaKey: 'b1',
+        );
+        final int first =
+            (await db.getStudySegmentTombstones()).single.deletedAt;
+        await db.upsertStudySegmentTombstone(
+          mediaKind: kActivityMediaBook,
+          mediaKey: 'b1',
+          deletedAt: first - 100000,
+        );
+        expect((await db.getStudySegmentTombstones()).single.deletedAt, first);
+        await db.deleteStudySegmentsForMedia(
+          mediaKind: kActivityMediaBook,
+          mediaKey: 'b1',
+        );
+        expect(
+          (await db.getStudySegmentTombstones()).single.deletedAt,
+          greaterThanOrEqualTo(first),
+        );
+      },
+    );
+
+    test('upsertStudySegmentsIfNewer（同步落地）跳过被本地碑压制的行', () async {
+      final FushiDatabase db = await _openDb();
+      await db.applyStudySegmentTombstone(
+        mediaKind: kActivityMediaBook,
+        mediaKey: 'b1',
+        deletedAt: 5000,
+      );
+      await db.upsertStudySegmentsIfNewer(<StudySegmentsCompanion>[
+        _seg('dead', key: 'b1', startAt: 100, updatedAt: 9999),
+        _seg('alive', key: 'b1', startAt: 5000, updatedAt: 5001),
+        _seg('other', key: 'b2', startAt: 100),
+      ]);
+      expect((await db.getStudySegments()).map((r) => r.uid).toSet(), <String>{
+        'alive',
+        'other',
+      });
+    });
+  });
+
+  group('legacy 阅读行反查库表身份（BUG-2178）', () {
+    EpubBooksCompanion book(String key, String title) =>
+        EpubBooksCompanion.insert(
+          bookKey: key,
+          title: title,
+          epubPath: '/tmp/$key.epub',
+          extractDir: '/tmp/$key',
+          chapterCount: 1,
+          chaptersJson: '["c"]',
+          importedAt: 1,
+        );
+
+    Future<void> legacyRow(FushiDatabase db, String title) =>
+        db.setReadingStatistic(
+          ReadingStatisticsCompanion.insert(
+            title: title,
+            dateKey: '2026-08-29',
+            charactersRead: 100,
+            readingTimeMs: 60000,
+            lastStatisticModified: 1,
+          ),
+        );
+
+    test('库里恰好一本同名 → 补 bookKey；同名两本 → 身份留空，不错贴给任意一本', () async {
+      final FushiDatabase db = await _openDb();
+      await db.insertEpubBook(book('k-solo', 'Solo'));
+      await db.insertEpubBook(book('k-dup-1', 'Dup'));
+      await db.insertEpubBook(book('k-dup-2', 'Dup'));
+      await legacyRow(db, 'Solo');
+      await legacyRow(db, 'Dup');
+      final StatFacts facts = await loadStatFacts(db, activityLimit: 0);
+      final Map<String, String> keyByTitle = <String, String>{
+        for (final StatFact f in facts.dailyBooks) f.title: f.mediaKey,
+      };
+      expect(keyByTitle['Solo'], 'k-solo');
+      expect(keyByTitle['Dup'], '', reason: '同名歧义宁可分裂不要错贴');
+      expect(uniqueBookKeyByTitle(facts.epubRows), <String, String>{
+        'Solo': 'k-solo',
+      });
+      expect(ambiguousBookTitles(facts.epubRows), <String>{'Dup'});
+    });
   });
 
   test('getLatestStudyEndAtByMedia 每身份取最大 end_at', () async {

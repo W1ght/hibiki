@@ -95,6 +95,86 @@ void main() {
     expect(watchY, lessThan(gameY));
   });
 
+  testWidgets('BUG-2178：legacy 无身份行 unique-title 吸收进唯一身份组；同名双身份不合并', (
+    WidgetTester tester,
+  ) async {
+    await _open(
+      tester,
+      facts: <StatFact>[
+        // 「已删又重导」的书：段带 bookKey，legacy 日行只有 title。
+        _fact(
+          kActivityMediaBook,
+          '2026-06-06',
+          key: 'k1',
+          title: 'Solo',
+          ms: 60000,
+        ),
+        _fact(kActivityMediaBook, '2026-06-05', title: 'Solo', ms: 30000),
+        // 同名两本各有身份：两条，不合并。
+        _fact(
+          kActivityMediaBook,
+          '2026-06-06',
+          key: 'd1',
+          title: 'Dup',
+          ms: 1000,
+        ),
+        _fact(
+          kActivityMediaBook,
+          '2026-06-06',
+          key: 'd2',
+          title: 'Dup',
+          ms: 2000,
+        ),
+        // 同名歧义的 legacy 行：不贴给任何一本，独立成无身份条目。
+        _fact(kActivityMediaBook, '2026-06-06', title: 'Dup', ms: 3000),
+      ],
+      contains: (String _) => true,
+    );
+    expect(find.text('Solo'), findsOneWidget, reason: 'legacy 行并入唯一身份组');
+    expect(find.text('Dup'), findsNWidgets(3), reason: '两个身份 + 一个无身份组');
+  });
+
+  testWidgets('BUG-2178：库表判同名歧义时，unique-title 也不许吸收', (
+    WidgetTester tester,
+  ) async {
+    late BuildContext hostContext;
+    await tester.pumpWidget(
+      TranslationProvider(
+        child: MaterialApp(
+          home: Scaffold(
+            body: Builder(
+              builder: (BuildContext context) {
+                hostContext = context;
+                return const SizedBox.shrink();
+              },
+            ),
+          ),
+        ),
+      ),
+    );
+    showStatPeriodDetailSheet(
+      hostContext,
+      periodLabel: 'PERIOD',
+      contains: (String _) => true,
+      facts: <StatFact>[
+        _fact(
+          kActivityMediaBook,
+          '2026-06-06',
+          key: 'k1',
+          title: 'A',
+          ms: 60000,
+        ),
+        _fact(kActivityMediaBook, '2026-06-05', title: 'A', ms: 30000),
+      ],
+      resolvers: StatPeriodDetailResolvers(
+        titleOf: (StatFact f) => f.title,
+        ambiguousTitlesOf: (String kind) => <String>{'A'},
+      ),
+    );
+    await tester.pumpAndSettle();
+    expect(find.text('A'), findsNWidgets(2), reason: '行宇宙唯一但库表判同名 → 不吸收');
+  });
+
   testWidgets('同一媒体的时长段与字数段按 identityKey 并组成一条', (WidgetTester tester) async {
     await _open(
       tester,

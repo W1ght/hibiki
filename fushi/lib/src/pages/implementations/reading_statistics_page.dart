@@ -74,6 +74,16 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
   Map<String, String> _bookKeyByTitle = <String, String>{};
   Map<String, String> _epubUidByBookKey = <String, String>{};
 
+  /// 库里同名 ≥2 本的 title（BUG-2178：按书分组的吸收否决，legacy 无身份行不许
+  /// 吸进任何一本）。
+  Set<String> _ambiguousBookTitles = <String>{};
+
+  /// **本轮加载时**的统计窗口：聚合、「各来源」谓词、时段卡谓词全部用这一个
+  /// （BUG-2181：此前聚合用加载时刻、卡片谓词点击时现算，跨午夜后「今日」卡的数
+  /// 与明细对不上）。跨午夜由 [_midnightReload] 触发整页重聚合。
+  StatWindow _window = StatWindow(DateTime.now());
+  Timer? _midnightReload;
+
   // 聚合数据
   int _todayChars = 0;
   int _todayMs = 0;
@@ -141,6 +151,20 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
     WidgetsBinding.instance.addPostFrameCallback((_) => _syncAndLoad());
   }
 
+  @override
+  void dispose() {
+    _midnightReload?.cancel();
+    super.dispose();
+  }
+
+  /// 到下一个本地午夜整页重聚合（每次加载重新排一次；页面已卸载则不动）。
+  void _armMidnightReload(DateTime now) {
+    _midnightReload?.cancel();
+    _midnightReload = Timer(StatWindow.untilNextLocalMidnight(now), () {
+      if (mounted) unawaited(_loadFromDatabase());
+    });
+  }
+
   /// 统计中心把三页塞进 TabBarView（无 keepAlive，离屏即 unmount），
   /// 「点开 tab → DB 还在查 → 切走」是一秒可复现的常规操作：首帧 postFrameCallback
   /// 与多次 await 之后的两处 setState 都必须过 mounted 门，否则 debug 断言
@@ -155,6 +179,9 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
   }
 
   Future<void> _loadFromDatabase() async {
+    final DateTime now = DateTime.now();
+    _window = StatWindow(now);
+    _armMidnightReload(now);
     try {
       final db = appModelNoUpdate.database;
       // v92：统一事实面是**唯一**读取入口——legacy 日行的身份 / format（漫画从
@@ -165,11 +192,11 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
       _bookFacts = facts.dailyBooks.toList();
       _dailyFacts = facts.daily;
       _sourceDaily = aggregateStatSourceDaily(_bookFacts);
-      _computeAggregates();
       // 加载事实时顺带取的书表：下面的 title→bookKey（合集归属 / legacy 行回退）
       // 与 bookKey→uid 换算复用同一批行，不再单独查。
       final List<EpubBookRow> epubRows = facts.epubRows;
-      final DateTime now = DateTime.now();
+      _ambiguousBookTitles = ambiguousBookTitles(epubRows);
+      _computeAggregates();
       final List<FavoriteWordRow> favs = await db.getFavoriteWordsBySource(
         kStatSourceBook,
       );
@@ -199,9 +226,8 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
           c.id: c.name,
       };
       _primaryCollectionByEntry = await db.getPrimaryCollectionIdByEntry();
-      _bookKeyByTitle = <String, String>{
-        for (final EpubBookRow r in epubRows) r.title: r.bookKey,
-      };
+      // BUG-2178：同名 ≥2 本的 title 不进反查表（贴给任意一本都是错贴）。
+      _bookKeyByTitle = uniqueBookKeyByTitle(epubRows);
       // v83：成员表 epub entryKey = uid，同批行顺带建换算表（空 uid 异常行不进
       // 表，查归属时按 bookKey 原样回退）。
       _epubUidByBookKey = <String, String>{
@@ -237,7 +263,7 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
   /// 行 + 今日的段），不再单独查表。同一 (band, hour) 多行按带累加：图表分色堆叠，
   /// `''`（v67 前写入 / 旧端同步差额）如实归 unattributed 带。
   void _loadHourlyData(StatFacts facts) {
-    final String todayKey = StatWindow(DateTime.now()).todayKey;
+    final String todayKey = _window.todayKey;
     final StatHourlyBreakdown breakdown = StatHourlyBreakdown();
     for (final StatFact f in facts.hourly) {
       if (!f.isBook || f.dateKey != todayKey) continue;
@@ -251,10 +277,11 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
   }
 
   void _computeAggregates() {
-    final DateTime now = DateTime.now();
     // 窗口阈值只从 StatWindow 取（近 7 天恰 7 天、上周 [now-13d, now-6d) 恰 7 天
-    // 且与本周不重叠、近 30 天恰 30 天），本页不再自己算日期。
-    final StatWindow w = StatWindow(now);
+    // 且与本周不重叠、近 30 天恰 30 天），本页不再自己算日期；且只用本轮加载时的
+    // 那一个窗口（BUG-2181）。
+    final StatWindow w = _window;
+    final DateTime now = w.now;
 
     _todayChars = 0;
     _todayMs = 0;
@@ -311,18 +338,22 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
       if (w.inWeek(f.dateKey)) _weekStudyChars += f.chars;
     }
 
-    // 按书：按身份分组（有 bookKey 用 bookKey，legacy 无身份行回退 title），
-    // 同一本书的 legacy 日行与 v92 段合成一个 tile；title 取首见快照作展示 / 计数键。
-    for (final StatFact f in _bookFacts) {
+    // 按书：与视频域同一套身份分组（BUG-2178，[groupStatFactsByIdentity]）——有
+    // bookKey 按身份；legacy 无身份行（书已删 / 同名歧义反查失败）unique-title 吸收
+    // 进唯一身份组，同一本书的 legacy 日行与 v92 段合成一个 tile；歧义独立成无身份
+    // tile。title 取组首见快照作展示 / 计数键。
+    for (final StatIdentityGroup<StatFact> g in groupStatFactsByIdentity(
+      _bookFacts,
+      ambiguousTitles: _ambiguousBookTitles,
+    )) {
       final _BookData book = bookMap.putIfAbsent(
-        f.identityKey,
-        () => _BookData(
-          title: f.title,
-          bookKey: f.mediaKey.isNotEmpty ? f.mediaKey : null,
-        ),
+        '${g.identity ?? ''}|${g.title}',
+        () => _BookData(title: g.title, bookKey: g.identity),
       );
-      book.chars += f.chars;
-      book.ms += f.ms;
+      for (final StatFact f in g.rows) {
+        book.chars += f.chars;
+        book.ms += f.ms;
+      }
     }
 
     // 最近 30 天（含今日），升序补齐空日期。
@@ -363,7 +394,7 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
   /// 「各来源」卡当前窗口的日期谓词（0=今日 1=近 7 天 2=近 30 天 3=全部）。
   /// 阈值只从 [StatWindow] 取，与顶部 KPI 同一套窗口。
   bool Function(String dateKey) _breakdownPredicate() {
-    final StatWindow w = StatWindow(DateTime.now());
+    final StatWindow w = _window;
     switch (_breakdownWindow) {
       case 0:
         return w.isToday;
@@ -608,9 +639,11 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
       _weekChars,
       _prevWeekChars,
     );
-    final String? weekDelta = weekPct == null
-        ? null
-        : '${weekPct >= 0 ? '↑' : '↓'}${weekPct.abs().round()}%';
+    // BUG-2186：环比封顶（≥ 999% 显示 `↑>999%`，无基线显示 `—`）。
+    final String weekDelta = formatWeekOverWeekDelta(
+      _weekChars,
+      _prevWeekChars,
+    );
     return StatKpiStrip(
       items: <StatKpiItem>[
         StatKpiItem(
@@ -768,8 +801,9 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
   }
 
   Widget _buildSummaryCards() {
-    // 时段谓词在点击时现算（跨日打开页面后点卡，明细按点击时刻的窗口取数）。
-    final StatWindow w = StatWindow(DateTime.now());
+    // 时段谓词与聚合同一个窗口（BUG-2181）：跨午夜后由 [_midnightReload] 整页重聚合，
+    // 卡上的数和点开的明细永远出自同一窗口。
+    final StatWindow w = _window;
     return buildStatPeriodSummaryGrid(context, <StatPeriodSummary>[
       _periodSummary(
         t.stat_today,
@@ -858,6 +892,9 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
         collectionOf: _statFactCollectionName,
         onEntryDelete: (StatPeriodEntryTarget t) =>
             deleteStatPeriodEntry(db, t),
+        ambiguousTitlesOf: (String kind) => kind == kActivityMediaBook
+            ? _ambiguousBookTitles
+            : const <String>{},
       ),
     );
     if (deleted && mounted) await _loadFromDatabase();

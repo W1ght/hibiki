@@ -140,8 +140,15 @@ void main() {
       final int resumed = src.indexOf('AppLifecycleState.resumed', i);
       // paused/inactive 分支（resumed 之前）里停时钟。
       final String pausedBranch = src.substring(i, resumed);
+      // BUG-2171：不再直接 `_studyClock?.stop()`，改置生命周期旗 + 统一判据同步
+      // （_ensureStudyClock 在后台到达时看到旗子不会把时钟重新起起来）。
       expect(
-        pausedBranch.contains('_studyClock?.stop()'),
+        pausedBranch.contains('_studyClockLifecycleStopped = true;'),
+        isTrue,
+        reason: 'BUG-892 / BUG-2171 回归：后台不置停表旗 → 挂起时长被计入 / 后台听书重启时钟',
+      );
+      expect(
+        pausedBranch.contains('_syncStudyClockRunState();'),
         isTrue,
         reason: 'BUG-892 回归：后台不停计时 → 挂起时长被计入',
       );
@@ -151,7 +158,12 @@ void main() {
       final int resumed = src.indexOf('AppLifecycleState.resumed');
       final String resumedBranch = src.substring(resumed, resumed + 900);
       expect(
-        resumedBranch.contains('_studyClock?.start()'),
+        resumedBranch.contains('_studyClockLifecycleStopped = false;'),
+        isTrue,
+        reason: 'BUG-892 / BUG-2171：不清停表旗 → 回前台后时钟永远起不来',
+      );
+      expect(
+        resumedBranch.contains('_syncStudyClockRunState();'),
         isTrue,
         reason: 'BUG-892：不重启时钟 → 回前台后阅读时长不再记账',
       );
