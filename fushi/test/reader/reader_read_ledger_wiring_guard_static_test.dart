@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 
 import '../helpers/source_guard.dart';
@@ -208,16 +210,45 @@ void main() {
       );
     });
 
-    test('onSourcePagePop：leave 在 await _flushReadingStats 之前', () {
-      final String body = methodBody(
-        corpus,
-        'Future<void> onSourcePagePop() async',
-      );
-      final int leave = body.indexOf('_readLedger.leave();');
-      final int flush = body.indexOf('await _flushReadingStats();');
-      expect(leave, isNonNegative);
-      expect(leave, lessThan(flush));
-    });
+    test(
+      'onSourcePagePop：leave 夹在 _syncAndFlushPosition 与 _flushReadingStats 之间',
+      () {
+        final String body = methodBody(
+          corpus,
+          'Future<void> onSourcePagePop() async',
+        );
+        final int sync = body.indexOf('await _syncAndFlushPosition();');
+        final int leave = body.indexOf('_readLedger.leave();');
+        final int flush = body.indexOf('await _flushReadingStats();');
+        expect(sync, isNonNegative);
+        expect(leave, isNonNegative);
+        expect(
+          leave,
+          greaterThan(sync),
+          reason:
+              '退出探针（_syncPositionFromWebViewProgress）读的是实时 WebView 位置，'
+              '结算必须在它之后，最后一页的 charOffset 才是真的',
+        );
+        expect(leave, lessThan(flush));
+      },
+    );
+
+    test(
+      '退出探针 _syncPositionFromWebViewProgress 不碰账本（唯一 arrive 点仍是 _refreshProgress）',
+      () {
+        final String body = methodBody(
+          corpus,
+          'Future<void> _syncPositionFromWebViewProgress() async',
+        );
+        expect(
+          containsIdentifier(body, '_readLedger'),
+          isFalse,
+          reason:
+              '若探针也 arrive，「拖有声书进度条 → 250ms 内关书」会把拖后那页也记上——'
+              '而那一页只是跟随滚动的落点，用户没读',
+        );
+      },
+    );
 
     test('进程退出 flush：leave 在 await _flushReadingStats 之前', () {
       final String body = methodBody(
@@ -299,6 +330,72 @@ void main() {
       );
       expect(containsCodeLine(body, 'unawaited(_refreshProgress());'), isTrue);
       expect(containsCodeLine(body, 'if (!mounted) return;'), isTrue);
+    });
+  });
+
+  group('拖音频进度条（seekMs）不算显式跳句', () {
+    // 「拖进度条 → 立刻关书」结算的是拖前那页，前提是 seekMs 全程不触发
+    // `onExplicitCueJump`（否则会提前 `_handleExplicitCueJump` → `_readLedger.leave()`，
+    // 把结算时刻挪到拖动那一刻）。时序推演与断言见
+    // `reader_read_ledger_boundaries_test.dart` 的 `拖音频进度条后关书` 组。
+    final String controllerSource = File(
+      '../packages/fushi_audio/lib/src/audiobook/audiobook_controller.dart',
+    ).readAsStringSync().replaceAll('\r\n', '\n');
+    final String controllerMasked = maskComments(controllerSource);
+
+    test('seekMs 体内不触发 onExplicitCueJump', () {
+      final String body = methodBody(
+        controllerSource,
+        'Future<void> seekMs(int positionMs) async',
+      );
+      expect(
+        containsIdentifier(body, 'onExplicitCueJump'),
+        isFalse,
+        reason:
+            '拖进度条 / 快进快退是「换听的位置」，不是「跳到某一句」：视口要不要跟过去由 '
+            'shouldRevealCurrentCue 决定，账本一律不动',
+      );
+      expect(
+        containsCodeLine(body, '_clearExplicitSeekSuppression();'),
+        isTrue,
+        reason: 'BUG-903：手动 seek 先复位 in-flight 显式 seek 抑制窗',
+      );
+    });
+
+    test('seekRelative（快进快退）复用 seekMs，不另开跳句通道', () {
+      final String body = methodBody(
+        controllerSource,
+        'Future<void> seekRelative(int deltaSeconds) async',
+      );
+      expect(containsCodeLine(body, 'await seekMs(newMs);'), isTrue);
+      expect(containsIdentifier(body, 'onExplicitCueJump'), isFalse);
+    });
+
+    test('onExplicitCueJump 全文件只在 skipToCue 漏斗里触发一次', () {
+      expect(
+        'onExplicitCueJump?.call('.allMatches(controllerMasked),
+        hasLength(1),
+      );
+      final String body = methodBody(
+        controllerSource,
+        'Future<void> skipToCue(AudioCue cue) async',
+      );
+      expect(containsCodeLine(body, 'onExplicitCueJump?.call(cue);'), isTrue);
+    });
+
+    test('reveal 判据是 shouldRevealCurrentCue（播放态 + 跟随音频），暂停态不动视口', () {
+      final String body = methodBody(
+        controllerSource,
+        'bool get shouldRevealCurrentCue =>',
+      );
+      for (final String term in <String>[
+        'followAudio.value',
+        '_hasPlayedOnce',
+        '_player.playing',
+        '_stopAtPositionMs == null',
+      ]) {
+        expect(containsCodeLine(body, term), isTrue, reason: term);
+      }
     });
   });
 

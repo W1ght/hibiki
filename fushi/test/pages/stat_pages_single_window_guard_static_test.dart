@@ -45,7 +45,7 @@ void main() {
       );
       expect(
         src,
-        contains('StatWindow.untilNextLocalMidnight('),
+        contains('StatWindow.untilNextStatDayBoundary('),
         reason: 'BUG-2181：午夜时长只从 StatWindow 取',
       );
       final RegExp anyNow = RegExp(r'StatWindow\(DateTime\.now\(\)\)');
@@ -57,6 +57,41 @@ void main() {
       );
     });
   }
+
+  test('读取面不得合成午夜当「今日」（重置时刻 = 4 时凌晨 2 点仍属昨日）', () {
+    const List<String> readSide = <String>[
+      'lib/src/stats/stat_window.dart',
+      'lib/src/pages/implementations/stat_summary.dart',
+      'lib/src/utils/components/stat_contribution_heatmap.dart',
+    ];
+    final RegExp midnight = RegExp(
+      r'DateTime\(\s*now\.year,\s*now\.month,\s*now\.day\b',
+    );
+    for (final String rel in readSide) {
+      final String src = File(rel).readAsStringSync();
+      expect(
+        midnight.hasMatch(src),
+        isFalse,
+        reason: '$rel：「今日」只能从 statDateKeyOf 派生再做 key 算术',
+      );
+    }
+    final String heat = File(readSide[2]).readAsStringSync();
+    expect(
+      heat,
+      contains('FushiDatabase.statCalendarDayKeyOf(day)'),
+      reason: '热力图格子是日历日，key 不得过 statDateKey（会按重置时刻前移一天）',
+    );
+    expect(heat, isNot(contains('statDateKey(day)')));
+    for (final String page in <String>[
+      ...pages.keys,
+      'home_dashboard_page.dart',
+    ]) {
+      final String src = File(
+        'lib/src/pages/implementations/$page',
+      ).readAsStringSync();
+      expect(src, isNot(contains('untilNextLocalMidnight')));
+    }
+  });
 
   test('home_dashboard_page.dart：目标卡 / 近 7 日日均吃 _statWindow，跨午夜重拉', () {
     final String src = File(

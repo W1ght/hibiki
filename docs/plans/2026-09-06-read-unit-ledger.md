@@ -55,7 +55,7 @@
 | 跨书聚合 | iOS 无统计页；Android 逐书读 JSON 聚合 | `loadStatFacts` 统一事实面（日面 / 小时面） |
 | 同步 | Drive ttu 文件：Merge = 按 dateKey `lastStatisticModified` 大者整条覆盖；Replace = 远端全覆盖（同书同天两端各读必丢一端） | uid LWW 并集 + 按身份墓碑（压制 `startAt < deletedAt` 的段，碑永不退场） |
 | 清空 / 删除 | 覆盖文件 | 逐身份立碑（BUG-2177）；删单本立碑 |
-| 「今日」边界 | Android 可配重置时刻（`statisticsResetMinutes`），写入时定 dateKey | 本地 0 点固定，跨午夜整页重聚合（BUG-2181）。**可配重置时刻：未做，候选** |
+| 「今日」边界 | Android 可配重置时刻（`statisticsResetMinutes`），写入时定 dateKey | 可配重置时刻（设置项 `reading.stats_day_reset_hour`，整点 0..23，默认 0），写入时定 dateKey，与 Android 同语义；跨边界整页重聚合（BUG-2181 的 Timer 改吃 `untilNextStatDayBoundary`）。历史段不重分桶 |
 
 ### 1.4 展示
 
