@@ -52,8 +52,9 @@ class TmdbVideoMetadataProvider
     // 决定是否自动应用；这不是跨 provider fallback，也不放宽成模糊匹配。
     final List<String> languages = <String>[language, 'en-US', 'ja-JP', 'zh-CN']
         .fold<List<String>>(<String>[], (List<String> values, String value) {
-          if (value.trim().isNotEmpty && !values.contains(value))
+          if (value.trim().isNotEmpty && !values.contains(value)) {
             values.add(value);
+          }
           return values;
         });
     final Map<String, VideoMetadataWork> merged = <String, VideoMetadataWork>{};

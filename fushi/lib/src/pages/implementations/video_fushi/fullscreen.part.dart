@@ -259,8 +259,9 @@ extension _VideoFullscreen on _VideoFushiPageState {
                             // [VideoControlsFocusGate] 只在窗口侧（`!inFullscreenRoute`）
                             // 卸载 controls、全屏侧返回 child 照常渲染。故全屏 HUD 由共享
                             // controls 提供，勿在此重复挂一层（TODO-563 复核：重挂会双叠）。
-                            if (playerController == null)
+                            if (playerController == null) {
                               return fullscreenVideo;
+                            }
                             return _videoWithSubtitlePanel(
                               playerController,
                               // HDR 直通：全屏路由的 Video 同样上报矩形（与窗口侧
