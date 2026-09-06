@@ -163,38 +163,22 @@ extension _ReaderNavigation on _ReaderFushiPageState {
     // 抹掉。[_ensureStudyClock] 的 start() 对已在跑的时钟是 no-op，重排版
     // 不打断计时。
     _ensureStudyClock();
-    // TODO-1192：session 水位只升不降。旧代码在此把水位无条件重置成恢复目标位置，
-    // 跨章回读（往回翻章 → 恢复完成）会把水位下调到更靠前那章章首，导致重读那章
-    // 正文被再次计入统计（字数虚高）。改用 [sessionWatermarkAfterRestore] 取
-    // max：前进/首次进入抬高水位（新内容照常计入），回读已读章不下调（不重复计）。
-    // BUG-1107（断点 B·幻象字数）：水位必须与**真实恢复锚**同源。精确字符锚恢复
-    // （收藏句 charAnchor 跳转 / 带 charOffset 的存档恢复）会把 `_initialProgress`
-    // 强制 0.0（锚优先、分数只作兜底），旧代码只看分数 → 水位落在章首，首个
-    // `_refreshProgress` 把章内恢复点之前的整段前缀误计成新读字数。改经
-    // [computeCharWatermark]：有效 `_initialCharOffset`（>=0）用「章首累计 + 锚」
-    // 推导绝对水位，无锚才退回分数口径（行为同旧）。
-    final int seededWatermark = computeCharWatermark(
-      chapterCumulativeChars: _chapterCumulativeChars,
-      chapterCharCounts: _chapterCharCounts,
-      chapter: _currentChapter,
-      progress: _initialProgress,
-      charOffset: _initialCharOffset,
-    );
-    // BUG-2168：只有播种值真正前跳（首次进入 / 前进跨章 / 跳转）才是新 session，
-    // 令牌桶从这里重新起算并清零额度（带着满桶开局会让掠过被计入）。播种值 ≤ 水位
-    // 的原位恢复（改字号 / 换主题重排、宽变、分页↔连续切换、回读）保留额度——旧实现
-    // 无条件清零，一次重排就把攒下的额度砍光，紧随其后的正常翻页整页被漏计。
-    if (restoreSeedResetsReadCharge(
-      currentWatermark: _sessionMaxAbsoluteChars,
-      seeded: seededWatermark,
+    // 字数账本（ReadUnitLedger）在恢复完成时**不播种**：只计翻走的单元，跳过的从未
+    // 成为当前单元（旧标量水位要在这里播种，漏一处就是幻象字数，BUG-1107 / 2168）。
+    // 唯一要区分的是**原位恢复**（改字号 / 主题 / 行距重排、旋屏 / 拖窗宽变、分页↔
+    // 连续、竖横排整章重载）：同一页换了坐标不是翻页，下一次 arrive 只替换当前单元
+    // 边界、不结算。判据 [restoreIsInPlace] 拿真实恢复锚对最近一次实时采样
+    // （`_readLedgerLiveAnchor`，不是被导航镜像过的 `_lastProgress*`）。跨章 / 无锚
+    // 的恢复不进这条：旧单元在下一次 arrive 照常结算（跳走前那页计，跳过的不计）。
+    final (int, int)? liveAnchor = _readLedgerLiveAnchor;
+    if (restoreIsInPlace(
+      restoredChapter: _currentChapter,
+      restoredCharOffset: _initialCharOffset,
+      lastChapter: liveAnchor?.$1,
+      lastCharOffset: liveAnchor?.$2,
     )) {
-      _lastWatermarkAdvanceAt = DateTime.now();
-      _readChargeCreditMilliChars = 0;
+      _readLedger.rebaseOnNextArrive();
     }
-    _sessionMaxAbsoluteChars = sessionWatermarkAfterRestore(
-      _sessionMaxAbsoluteChars,
-      seededWatermark,
-    );
 
     // TODO-718: 连续模式恢复完成后，进入 WebView 的 settle reflow 会把裸 window.scrollY
     // 瞬时归 0（无分页 snap/lock 保护），归零 scroll 经 _handleReaderScroll 落库 progress≈0
@@ -485,6 +469,9 @@ extension _ReaderNavigation on _ReaderFushiPageState {
   /// 幂等（装载失败路径 `_isNavigatingToChapter` 已在 rethrow 前清过，再清无副作用）。
   void _failNavigation() {
     ReaderChapterPerfTrace.abort();
+    // 导航中止 / 内容就绪兜底超时：WebView 里现在是什么不可知，当前单元丢弃不结算
+    // （宁可不计）。dispose 在调本方法之前已 `leave()` 结算过关书那页。
+    _readLedger.discard();
     _isNavigatingToChapter = false;
     _restoreInFlight = false;
     _preciseLocateQueue.clear();
@@ -1142,30 +1129,28 @@ extension _ReaderNavigation on _ReaderFushiPageState {
     // TODO-2603：实时进度既是「落库位置」也是「新建 WebView 的恢复目标」，两者必须
     // 同源。放在 _lastProgress* 之后、落库之前，顺序即契约。
     _adoptLiveProgressAsRestoreAnchor(progress, charOffset);
+    // 分数口径的绝对位置只给进度 UI（_progressCurrentChars）；统计不再用它。
     final int absoluteChars = _absoluteCharPosition(progress);
-    // TODO-147 / BUG-211：按 high-water mark 增量计数，避免往返翻页重复累计。
-    // BUG-1762：叠加阅读速度封顶——到达≠读过。封顶是**令牌桶**：额度按流逝时间累积、
-    // 跨次结转，计入时扣减。持续速率仍被 kMaxReadCharsPerSecond 卡死，但不惩罚上报
-    // 碎片化（连续模式一次甩动会被 50ms 节流拆成 5~8 次推进，按「距上次推进的时间」
-    // 收费会让后面几次各自只分到几毫秒的额度，正常阅读被砍掉八成）。
-    // 计时基准每次采样都推进；桶容量按 kMaxReadingGap 折算——挂机不攒无限额度。
-    final DateTime nowForChars = DateTime.now();
-    final int sinceSampleMs = nowForChars
-        .difference(_lastWatermarkAdvanceAt)
-        .inMilliseconds;
-    final int gapCapMs = kMaxReadingGap.inMilliseconds;
-    final ReadChargeResult delta = accumulateSessionCharsCapped(
-      absoluteChars: absoluteChars,
-      highWaterMark: _sessionMaxAbsoluteChars,
-      elapsedMs: sinceSampleMs > gapCapMs ? gapCapMs : sinceSampleMs,
-      creditMilliChars: _readChargeCreditMilliChars,
-      maxCreditMilliChars: gapCapMs * kMaxReadCharsPerSecond,
+    // 「读过」判据：当前可见区间 `[start, end)`（全书绝对学习单位偏移）交给账本，
+    // 翻走即计 + 会话并集去重（ReadUnitLedger，裁定见 docs/plans/2026-09-06）。起 / 止
+    // 任一拿不到（旧 shell 三段协议 / caret 探测失败 / 章计数未就绪）或 end <= start
+    // 都不 arrive——宁可不计。同一单元重复采样在账本里是 no-op。
+    _readLedgerLiveAnchor = (_currentChapter, charOffset);
+    final int unitStart = absoluteCharOffsetOf(
+      chapterCumulativeChars: _chapterCumulativeChars,
+      chapterCharCounts: _chapterCharCounts,
+      chapter: _currentChapter,
+      charOffset: charOffset,
     );
-    _lastWatermarkAdvanceAt = nowForChars;
-    _readChargeCreditMilliChars = delta.creditMilliChars;
-    // v92：新读字数直接记进当前打开段（与时长同一 uid 同一行），页面不再攒会话计数。
-    if (delta.charsAdded > 0) _ensureStudyClock().addChars(delta.charsAdded);
-    _sessionMaxAbsoluteChars = delta.highWaterMark;
+    final int unitEnd = absoluteCharOffsetOf(
+      chapterCumulativeChars: _chapterCumulativeChars,
+      chapterCharCounts: _chapterCharCounts,
+      chapter: _currentChapter,
+      charOffset: snapshot.charOffsetEnd,
+    );
+    if (unitStart >= 0 && unitEnd > unitStart) {
+      _readLedger.arrive(unitStart, unitEnd);
+    }
     // TODO-736（复核 b）：进度刷新无条件落库。曾经的 B-4 突降伪归零守卫已删——它想防的
     // reflow 自发归零已被两墙完整覆盖（begin 换 CSS 触发的归零落在 _reanchorPending 期，由
     // JS stableProgressInvocation 返 null 拦在落库前；commit 清旗后的 settle 尾沿由 B-3 的
@@ -1510,6 +1495,7 @@ extension _ReaderNavigation on _ReaderFushiPageState {
       _syncPositionFromCurrentCue();
     }
     await _flushPosition();
+    _readLedger.leave();
     await _flushReadingStats();
     await _audiobookController?.flushPosition();
   }
@@ -1538,18 +1524,8 @@ extension _ReaderNavigation on _ReaderFushiPageState {
   Future<void> _jumpToGlobalCharOffset(int globalOffset) async {
     if (_chapterCumulativeChars.isEmpty || _controller == null) return;
 
-    // BUG-1762：进度条拖动是跳转不是阅读——先把统计水位抬到落点（不计数），否则
-    // 同章分支落点后的首个 _refreshProgress 会把「旧位置 → 落点」整段前缀计成本次
-    // 读到的新字数（跨章分支经导航链播种，同章分支此前完全裸奔）。往回拖低于水位
-    // 天然 no-op（只升不降）。语义同 _handleExplicitCueJump。
-    _sessionMaxAbsoluteChars = sessionWatermarkAfterRestore(
-      _sessionMaxAbsoluteChars,
-      globalOffset,
-    );
-    _lastWatermarkAdvanceAt = DateTime.now();
-    // 起新 session / 跳转播种：额度一并清零，否则带着满桶开局会让掠过被计入。
-    _readChargeCreditMilliChars = 0;
-
+    // 进度条拖动是跳转不是阅读：账本不需要任何动作——跳走前那页在落点的首个
+    // arrive 时结算，跳过的区间从未成为当前单元、不计（旧标量水位要在此播种）。
     final ChapterProgressTarget target = resolveChapterProgressForGlobalOffset(
       _chapterCumulativeChars,
       _chapterCharCounts,

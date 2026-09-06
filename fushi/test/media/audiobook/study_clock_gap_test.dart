@@ -223,14 +223,21 @@ void main() {
     });
 
     test('EPUB 字数直接记进唯一时钟的当前段', () {
-      final String nav = readMasked(
-        'lib/src/pages/implementations/reader_fushi/navigation.part.dart',
+      // 2026-09-06 起字数经 ReadUnitLedger（翻走即计）结算：账本在主壳构造，
+      // onCredit 直接 addChars 进唯一时钟；navigation.part 的 _refreshProgress 只
+      // arrive 当前可见区间。两处合起来仍是「字数与时长同一段」，没有第二本账。
+      final String shell = readMasked(
+        'lib/src/pages/implementations/reader_fushi_page.dart',
       );
       expect(
-        nav.contains('_ensureStudyClock().addChars('),
+        shell.contains('_ensureStudyClock().addChars(readUnitsLength(fresh))'),
         isTrue,
         reason: '字数与时长必须进同一段（同 uid 一行），不得另起累计器',
       );
+      final String nav = readMasked(
+        'lib/src/pages/implementations/reader_fushi/navigation.part.dart',
+      );
+      expect(nav.contains('_readLedger.arrive('), isTrue);
     });
 
     test('恢复完成（每次重排版都会跑）不得重锚会话时钟', () {

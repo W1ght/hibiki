@@ -81,6 +81,7 @@ import 'package:fushi/src/reader/reader_open_trace.dart';
 import 'package:fushi/src/reader/reader_progress_state.dart';
 import 'package:fushi/src/reader/reader_statistics_dialog.dart';
 import 'package:fushi/src/reader/reader_status_footer.dart';
+import 'package:fushi/src/stats/read_unit_ledger.dart';
 import 'package:fushi/src/stats/stat_facts.dart';
 import 'package:fushi/src/reader/reader_top_progress.dart';
 import 'package:fushi/src/reader/ttu_toc_flatten.dart';
@@ -385,125 +386,49 @@ ReaderThemeColors _resolveBaseReaderThemeColors({
   );
 }
 
-/// 本 session 阅读字数推进结果：[charsAdded] 本次新计入的字数（>=0），
-/// [highWaterMark] 更新后的「本 session 历史最高已读绝对字符位置」（只升不降）。
-typedef ReadProgressResult = ({int charsAdded, int highWaterMark});
-
-/// TODO-147 / BUG-211：把「本 session 阅读字数推进」算成相对历史最高已读位置
-/// （high-water mark）的增量，而不是相邻两次采样的正向差。
+/// EPUB 学习单位（`countStudyChars` 口径）的**全书绝对**偏移：`章首累计 + 章内偏移`。
 ///
-/// 旧逻辑（错）：每次进度回调 `charDiff = absolute - last; if(charDiff>0) chars+=charDiff;
-/// last = absolute;`——`last` 无条件下移。日语精读常见的「读一句→往回看→再往前」
-/// 往返翻页会把重叠区间反复计入，统计字数随往返次数倍增，呈现「字数明显非常高」。
-///
-/// 新逻辑（对）：只有当前绝对位置 [absoluteChars] **超过本 session 历史最高位置**
-/// [highWaterMark] 时，才把超出部分计入，并抬高水位；回退、以及再前进经过旧区间都
-/// 不重复计数。水位「只升不降」消除了往返重复这个特殊情况（导航/flush 时由调用方把
-/// 水位重置到新 session 起点）。
-///
-/// 纯函数，无副作用，供单测锁定 high-water mark 语义（撤销修复 → 测试转红）。
-ReadProgressResult accumulateSessionChars({
-  required int absoluteChars,
-  required int highWaterMark,
+/// `ReadUnitLedger` 的坐标系（`docs/plans/2026-09-06-read-unit-ledger.md`）：一个可见
+/// 区间的起 / 止都经此换算成全书绝对偏移，章边界对账本透明（章末页 `[start, 章总字数)`
+/// 与下一章首页 `[cumulative[N+1], …)` 在同一根数轴上相邻）。[charOffset] clamp 到
+/// `[0, 本章字数]`：JS 偏移与 Dart 章字数是同一口径，但零计数占位期 / 口径漂移时不能
+/// 越章。[chapter] 越界 / 计数未就绪 / [charOffset] < 0（JS 拿不到 caret）→ -1，调用方
+/// 据此不 `arrive`——宁可不计，也不把「拿不到起点」当章首（那会把整段前缀计成新读）。
+int absoluteCharOffsetOf({
+  required List<int> chapterCumulativeChars,
+  required List<int> chapterCharCounts,
+  required int chapter,
+  required int charOffset,
 }) {
-  if (absoluteChars > highWaterMark) {
-    return (
-      charsAdded: absoluteChars - highWaterMark,
-      highWaterMark: absoluteChars,
-    );
+  if (charOffset < 0 ||
+      chapter < 0 ||
+      chapter >= chapterCumulativeChars.length ||
+      chapter >= chapterCharCounts.length) {
+    return -1;
   }
-  return (charsAdded: 0, highWaterMark: highWaterMark);
+  final int chapterChars = chapterCharCounts[chapter];
+  final int clamped = charOffset > chapterChars ? chapterChars : charOffset;
+  return chapterCumulativeChars[chapter] + clamped;
 }
 
-/// BUG-1762：一秒真实阅读允许计入的最大字数（速度封顶）。
-///
-/// 2400 字/分是极快的日语阅读节奏，正常精读远够不到；按住翻页键连翻时相邻两次
-/// 水位推进只隔几百毫秒，每步就只计几十字——「到达即计」的虚增被物理上限杀掉。
-const int kMaxReadCharsPerSecond = 40;
-
-/// 速度封顶的结算结果：在 [ReadProgressResult] 之上带回剩余额度（千分之一字为单位）。
-typedef ReadChargeResult = ({
-  int charsAdded,
-  int highWaterMark,
-  int creditMilliChars,
-});
-
-/// BUG-1762：带阅读速度封顶的 session 字数推进（纯函数，**令牌桶**）。
-///
-/// [accumulateSessionChars] 的 high-water 语义只挡「重复计入」（往返回读），完全
-/// 不挡「首次快速掠过」：按住翻页键扫过的每一页都在到达瞬间全额入账（产品裁定：
-/// 到达≠读过，与漫画 BUG-1761 的停留门、视频 BUG-1763 的播放停留门同一条规则）。
-///
-/// 为什么是令牌桶而不是「本次可计入 ≤ 距上次推进的时间 × 速率」：那种写法按**上报
-/// 节奏**收费。连续模式的进度上报是 50ms 节流 + coalesce 的边滑边回传，一次甩动滚过
-/// 一屏会被拆成 5~8 次推进；第一次把攒下的额度一次吃光（且余量不回补），后面几次各自
-/// 只隔几十毫秒 ⇒ 每次只准计几个字。实测一屏 400 字读 60 秒、再甩过下一屏，只能计约
-/// 80 字，正常阅读被砍掉八成。整数除法还让 <25ms 的窗口 cap 直接为 0。
-///
-/// 令牌桶把「物理上限」和「上报粒度」解耦：额度按 [elapsedMs] × 速率累积、**跨次结转**，
-/// 计入时扣减。持续速率仍被 [kMaxReadCharsPerSecond] 卡死，但上报被拆成几份不再有惩罚。
-/// 桶容量由调用方经 [maxCreditMilliChars] 给出（按 `kMaxReadingGap` 折算——挂机不攒
-/// 无限额度）。超出额度的部分仍随水位**静默抬走**、不回补，回来重读也不再计。
-ReadChargeResult accumulateSessionCharsCapped({
-  required int absoluteChars,
-  required int highWaterMark,
-  required int elapsedMs,
-  required int creditMilliChars,
-  required int maxCreditMilliChars,
+/// 恢复完成是否是**原位恢复**（改字号 / 主题 / 行距重排、旋屏 / 拖窗宽变、分页↔连续、
+/// 竖横排整章重载）：恢复锚有效（[restoredCharOffset] >= 0）、与上一次实时采样
+/// （`_refreshProgress`）同章、章内偏移相差 ≤ 1（重排后 caret 仍在同一个字附近）。
+/// 原位恢复不是翻页：`ReadUnitLedger.rebaseOnNextArrive` 让新坐标只替换当前单元边界、
+/// 不结算。跨章 / 无锚 / 偏移不同的恢复照常在下一次 `arrive` 结算旧单元。没有过实时
+/// 采样（[lastChapter] == null）时不算原位。
+bool restoreIsInPlace({
+  required int restoredChapter,
+  required int restoredCharOffset,
+  required int? lastChapter,
+  required int? lastCharOffset,
 }) {
-  final int clampedElapsedMs = elapsedMs < 0 ? 0 : elapsedMs;
-  int credit = creditMilliChars < 0 ? 0 : creditMilliChars;
-  credit += clampedElapsedMs * kMaxReadCharsPerSecond;
-  if (credit > maxCreditMilliChars) credit = maxCreditMilliChars;
-  final ReadProgressResult raw = accumulateSessionChars(
-    absoluteChars: absoluteChars,
-    highWaterMark: highWaterMark,
-  );
-  if (raw.charsAdded <= 0) {
-    return (
-      charsAdded: 0,
-      highWaterMark: raw.highWaterMark,
-      creditMilliChars: credit,
-    );
+  if (restoredCharOffset < 0 || lastChapter == null || lastCharOffset == null) {
+    return false;
   }
-  final int affordable = credit ~/ 1000;
-  final int charsAdded = raw.charsAdded < affordable
-      ? raw.charsAdded
-      : affordable;
-  return (
-    charsAdded: charsAdded,
-    highWaterMark: raw.highWaterMark,
-    creditMilliChars: credit - charsAdded * 1000,
-  );
+  if (lastCharOffset < 0 || restoredChapter != lastChapter) return false;
+  return (restoredCharOffset - lastCharOffset).abs() <= 1;
 }
-
-/// TODO-1192: 章节位置恢复完成后，本 session「历史最高已读绝对字符位置」水位应取
-/// 的值——只升不降：`max(currentWatermark, restoreAbsolute)`。
-///
-/// 旧实现（[_ReaderNavigation._onRestoreComplete]）每次恢复完成都把水位无条件重置成
-/// 恢复目标位置。章内往返由 [accumulateSessionChars] 的 high-water 语义挡住，但**跨
-/// 章回读**会触发一次 `_navigateToChapter` → 恢复完成 → 水位被下调到更靠前那章的章
-/// 首，往回翻的那章正文于是被再次计入统计（字数虚高）。改「只升不降」后：前进 / 首次
-/// 进入把水位抬到新章起点（新内容照常计入），回读已读过的章不下调水位（重读不重复
-/// 计）。纯函数，供单测锁定「回读不下调水位」语义。
-int sessionWatermarkAfterRestore(int currentWatermark, int restoreAbsolute) {
-  return restoreAbsolute > currentWatermark
-      ? restoreAbsolute
-      : currentWatermark;
-}
-
-/// BUG-2168：恢复完成时是否要重置速度封顶令牌桶（`_lastWatermarkAdvanceAt` 归
-/// 现在、`_readChargeCreditMilliChars` 清零）。
-///
-/// 只有播种值**真正前跳**（`seeded > currentWatermark`）才是「起新 session / 跳转
-/// 播种」，带着满桶开局会让掠过被计入，必须清零。播种值 ≤ 水位的恢复（改字号 /
-/// 换主题重排、窗口宽变、分页↔连续切换、听书跨章回读）是**原位恢复**，用户没换
-/// 位置、也没停止阅读；旧实现在此无条件清零，一次重排就把攒下的额度砍光，紧随
-/// 其后的正常翻页只分到几毫秒的额度，整页被漏计。纯函数，供单测锁定判据。
-bool restoreSeedResetsReadCharge({
-  required int currentWatermark,
-  required int seeded,
-}) => seeded > currentWatermark;
 
 /// 阅读时钟「此刻可跑」的统一判据（BUG-2171 / BUG-2170）。
 ///
@@ -517,44 +442,6 @@ bool studyClockMayRun({
   required bool lifecycleStopped,
   required int modalDepth,
 }) => !manualPause && !lifecycleStopped && modalDepth == 0;
-
-/// BUG-1107（断点 B·幻象字数）：恢复完成 / cue 跳转时，统计水位应落到的
-/// **绝对**字符位置（全书累计口径，与 `_absoluteCharPosition` 同基准）。
-///
-/// 旧实现只用 `_absoluteCharPosition(_initialProgress)` 播种水位，但精确字符锚
-/// 恢复（收藏句 charAnchor 跳转、带 charOffset 的存档恢复）会把 `_initialProgress`
-/// 强制 0.0（「精确锚优先；分数仅作兜底」）——水位于是落在**章首**，首个
-/// `_refreshProgress` 把章内恢复点之前的整段前缀误计成本次读到的新字数
-/// （用户截图「今日 2213 字 / 0 分钟 / 1619597 字·时⁻¹」的字数一半来源）。
-///
-/// 本函数让水位与**真实恢复锚同源**：
-/// - [charOffset] >= 0（charAnchor / 带精确锚的恢复 / cue 的 normCharStart）→
-///   `章首累计 + min(charOffset, 本章字数)`（clamp 防越章，零计数占位期安全）。
-/// - 否则退回分数口径 `章首累计 + round(progress × 本章字数)`（旧行为）。
-/// - [chapter] 越界 / 计数未就绪 → 0（水位取 max，0 恒为 no-op）。
-///
-/// 纯函数，供单测锁定四类恢复路径（正常分数恢复 / charAnchor 恢复 / cue 兜底 /
-/// 章内跳转）的水位语义。
-int computeCharWatermark({
-  required List<int> chapterCumulativeChars,
-  required List<int> chapterCharCounts,
-  required int chapter,
-  required double progress,
-  required int charOffset,
-}) {
-  if (chapterCumulativeChars.isEmpty ||
-      chapter < 0 ||
-      chapter >= chapterCumulativeChars.length ||
-      chapter >= chapterCharCounts.length) {
-    return 0;
-  }
-  final int chapterChars = chapterCharCounts[chapter];
-  if (charOffset >= 0) {
-    final int clamped = charOffset > chapterChars ? chapterChars : charOffset;
-    return chapterCumulativeChars[chapter] + clamped;
-  }
-  return chapterCumulativeChars[chapter] + (progress * chapterChars).round();
-}
 
 /// TODO-1229 / BUG-1829：跨章去抖判据（纯函数，供单测锁定「一次连续手势=一次跨章」语义）。
 ///
@@ -978,6 +865,11 @@ bool readerStyleReanchorAllowed({
   return controllerAvailable && readerContentReady && !lyricsMode;
 }
 
+/// B-3 settle 窗（毫秒）：重锚 commit / 听书跟随滚动打点 `_reanchorClearedAt` 后，这么久
+/// 之内的 scroll 回传一律不落库（[readerScrollWithinReanchorSettle]）。听书 reveal 的补刷
+/// （`_scheduleRevealProgressRefresh`）也按它排在窗关之后。
+const int kReaderReanchorSettleMs = 250;
+
 /// TODO-736 B-3: 样式重锚 settle 尾沿去抖纯函数。
 ///
 /// 样式变更（字号/字体/主题）的两阶段重锚在 commit 清旗那一刻打 [reanchorClearedAt]。
@@ -992,7 +884,7 @@ bool readerStyleReanchorAllowed({
 bool readerScrollWithinReanchorSettle({
   required DateTime? reanchorClearedAt,
   required DateTime now,
-  int settleMs = 250,
+  int settleMs = kReaderReanchorSettleMs,
 }) {
   if (reanchorClearedAt == null) return false;
   final int sinceMs = now.difference(reanchorClearedAt).inMilliseconds;
@@ -1082,6 +974,7 @@ typedef ReaderStableProgressDetails = ({
   int total,
   double progress,
   int charOffset,
+  int charOffsetEnd,
 });
 
 /// Parses `window.fushiProgressDetails()` after the JS-side settled gate.
@@ -1089,6 +982,11 @@ typedef ReaderStableProgressDetails = ({
 /// A stable `0,total,0` is a valid chapter-start position (manual chapter
 /// jumps must still persist it). `null`/empty/invalid/zero-total results mean
 /// the reader has not settled enough to make a durable position decision.
+///
+/// 协议 `current,total,start,end`：第三段 = 当前可见区间起点的章内学习单位偏移
+/// （视口首字符，落库恢复锚），第四段 = 当前可见区间**终点**的章内偏移（只喂
+/// `ReadUnitLedger`，不落库）。三段输入（旧 shell / 未实现终点探测）向后兼容，
+/// 第四段缺省 -1 → 调用方不 arrive（宁可不计）。
 ReaderStableProgressDetails? parseReaderStableProgressDetails(dynamic result) {
   if (result == null) return null;
   final String str = result.toString().replaceAll('"', '').trim();
@@ -1103,11 +1001,15 @@ ReaderStableProgressDetails? parseReaderStableProgressDetails(dynamic result) {
   final int charOffset = parts.length >= 3
       ? (int.tryParse(parts[2]) ?? -1)
       : -1;
+  final int charOffsetEnd = parts.length >= 4
+      ? (int.tryParse(parts[3]) ?? -1)
+      : -1;
   return (
     current: current,
     total: total,
     progress: (current / total).clamp(0.0, 1.0).toDouble(),
     charOffset: charOffset,
+    charOffsetEnd: charOffsetEnd,
   );
 }
 
@@ -1589,20 +1491,29 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   int? get _progressTotalChars => _progress.totalChars;
   set _progressTotalChars(int? v) => _progress.totalChars = v;
 
-  // TODO-147 / BUG-211：本 session 历史最高已读绝对字符位置（high-water mark，
-  // 只升不降）。统计字数只在越过它时增量计入，往返翻页不重复累计。导航/后台
-  // flush 起新 session 时由调用方重置到当前位置。
-  int _sessionMaxAbsoluteChars = 0;
+  /// 「读过」判据的唯一账本（翻走即计 + 会话覆盖并集，用户 2026-09-06 裁定，见
+  /// `docs/plans/2026-09-06-read-unit-ledger.md`）：单元 = 当前可见区间的全书绝对字符
+  /// 偏移 `[start, end)`，由 [_refreshProgress] 每次采样 `arrive`；离开单元时把并集里此前
+  /// 未覆盖的部分按学习单位数记进当前打开段。替代旧的标量水位 + 速度封顶令牌桶
+  /// （`_sessionMaxAbsoluteChars` / `accumulateSessionCharsCapped`）——那套要在恢复完成 /
+  /// 进度条拖动 / 搜索跳转 / cue 跳转 / 字数补算五处播种，漏一处就是幻象字数
+  /// （BUG-1107 / BUG-2168）；账本只计翻走的单元，跳过的从未成为当前单元，结构上
+  /// 不需要播种。
+  late final ReadUnitLedger _readLedger = ReadUnitLedger(
+    onCredit: (List<(int, int)> fresh) =>
+        _ensureStudyClock().addChars(readUnitsLength(fresh)),
+  );
 
-  /// BUG-1762：速度封顶令牌桶的计时基准 —— 上一次**采样**的时刻（不是上一次水位
-  /// 推进）。每次采样都推进它并按流逝时间给桶充值，所以额度是连续累积的，与进度
-  /// 上报被拆成几份无关（连续模式一次甩动会拆成 5~8 次上报，按「上次推进」计时会
-  /// 让后面几次各自只隔几十毫秒、几乎分不到额度）。
-  DateTime _lastWatermarkAdvanceAt = DateTime.now();
+  /// [_refreshProgress] 最近一次实时采样的 (章, 章内偏移)，只给 [_onRestoreComplete]
+  /// 判原位恢复（[restoreIsInPlace]）。不能拿 `_lastProgressSection` /
+  /// `_lastProgressCharOffset` 当「上一次实时进度」：那两个字段被 [_beginNavigation] /
+  /// [_navigateToChapter] / [_reloadWithCurrentSettings] 镜像成**恢复锚**，恢复完成时与
+  /// `_initialCharOffset` 恒等，带字符锚的跨章跳转（收藏句）会被误判成原位而漏结算
+  /// 跳走前那页。
+  (int chapter, int charOffset)? _readLedgerLiveAnchor;
 
-  /// BUG-1762：速度封顶的剩余额度（千分之一字）。跨次结转，容量按 `kMaxReadingGap`
-  /// 折算 —— 挂机不攒无限额度，但正常阅读攒下的额度不会被第一个碎片一次吃光。
-  int _readChargeCreditMilliChars = 0;
+  /// 听书跟随 reveal 落定后的进度补刷（见 `_scheduleRevealProgressRefresh`）。
+  Timer? _revealProgressRefreshTimer;
 
   List<int> get _chapterCharCounts => _progress.chapterCharCounts;
   set _chapterCharCounts(List<int> v) => _progress.chapterCharCounts = v;
@@ -2535,9 +2446,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
 
   /// TODO-131: DB 计数缺失（旧书 / chaptersJson 无 characters 字段）时，把整本
   /// html_parser 逐章计数放后台 isolate 补算，**不阻塞首屏**。落定后用
-  /// [_applyCharCounts] 补齐总字数，并把统计水位 `_sessionMaxAbsoluteChars` 重置到
-  /// 当前位置——否则零计数期间它停在 0，计数落定后首个进度回调会把整段前缀误当本次
-  /// 读到的新字数（幻象 spike）。重置后增量相对正确基准，统计字数等价。
+  /// [_applyCharCounts] 补齐总字数，并 `_readLedger.reset()`：全书绝对偏移的坐标系
+  /// 整体变了（章首累计 / 章字数都换口径），零计数期间记下的并集与当前单元不再有
+  /// 意义——清并集 + 丢当前，从下一次采样重新起单元。
   void _recomputeCharCountsInBackground() {
     final EpubBook? book = _book;
     if (book == null || book.chapters.isEmpty) return;
@@ -2554,12 +2465,7 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
             // 新口径计数落定：补注 isImageOnlyChapter 的免解析短路提示（开书时旧口径
             // 未注入的书由此补齐，后续 spread 重建/预取不再逐章解析）。
             book.setChapterCharCountHints(counts);
-            _sessionMaxAbsoluteChars = _absoluteCharPosition(
-              _lastProgressValue,
-            );
-            _lastWatermarkAdvanceAt = DateTime.now();
-            // 起新 session / 跳转播种：额度一并清零，否则带着满桶开局会让掠过被计入。
-            _readChargeCreditMilliChars = 0;
+            _readLedger.reset();
             // TODO-1192: 把新口径计数回写 chaptersJson（含 charCaliber 标记），使书架总
             // 字数与下次开书都用新口径，避免每次开书都重算（旧书 / v1 书一次性升级）。
             unawaited(_persistRecomputedCharCounts(counts));
@@ -2731,6 +2637,10 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
 
   @override
   void dispose() {
+    // 关书 = 离开当前单元：先把它结算进时钟（翻走即计），再走下面的 flush。必须在
+    // [_failNavigation] 之前——那里会 `_readLedger.discard()`（导航中止路径不计），
+    // 而关书那页是用户真读到的。
+    _readLedger.leave();
     // Search navigation can still be awaiting restore while the route closes.
     // Complete it as failed now (and clear its precise-locate request) instead
     // of leaving the callback alive until the 10-second timeout.
@@ -2766,6 +2676,7 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     WidgetsBinding.instance.removeObserver(this);
     _removeSelectionActionBar();
     _progressPollTimer?.cancel();
+    _revealProgressRefreshTimer?.cancel();
     _saveDebounce?.cancel();
     _scrollProgressThrottleTimer?.cancel();
     _contentReadyTimer?.cancel();
@@ -2846,6 +2757,8 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   @override
   Future<void> onSourcePagePop() async {
     await _syncAndFlushPosition();
+    // 离开当前单元（翻走即计）后再结算时钟，让最后一页的字数进同一段。
+    _readLedger.leave();
     await _flushReadingStats();
     // TODO-831：「退出后续播」关闭（audiobookBackgroundPlay=false）时，把真正
     // 停会话从 dispose 提前到这里——此刻页面仍 mounted、pop 动画尚未开始，

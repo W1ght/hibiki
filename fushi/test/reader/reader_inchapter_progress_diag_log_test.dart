@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
+import '../helpers/source_guard.dart';
 import '../pages/reader_fushi_page_source_corpus.dart';
 
 /// TODO-151 / TODO-164 / BUG-225：章内滚动进度链路三点诊断日志。
@@ -69,20 +70,18 @@ void main() {
     });
 
     test('② Dart _handleReaderScroll 受门控记四门控真值 + 是否刷新', () {
-      // TODO-718：签名加了 bool userDriven 参数（JS 传入的用户输入驱动标志）。
-      final int idx = src.indexOf('void _handleReaderScroll()');
-      expect(idx, greaterThan(0));
-      // TODO-736 B-3 在该函数顶部插入 settle 去抖块，函数体加长，窗口放宽到 1900。
-      final String body = src.substring(idx, idx + 2700);
+      // 窗口由花括号配对给出（methodBody），不再是定长字符窗口：2026-09-06 tall 格式
+      // 迁移把 `debugPrint('[ReaderDiag] …'` 拆成两行、函数体也随 B-3 / ReadUnitLedger
+      // 改动伸缩，定长窗口 + 单行字面量两条假设同时塌掉（本组曾因此在 develop 上
+      // 静默转红）。字面量只钉诊断串本身，与 formatter 断行无关。
+      final String body = methodBody(src, 'void _handleReaderScroll()');
       expect(
         body.contains('if (DebugLogService.instance.enabled)'),
         isTrue,
         reason: 'Dart 诊断须由 DebugLogService.instance.enabled 门控（默认 off）',
       );
-      expect(
-        body.contains("debugPrint('[ReaderDiag] _handleReaderScroll"),
-        isTrue,
-      );
+      expect(body.contains('debugPrint('), isTrue);
+      expect(body.contains("'[ReaderDiag] _handleReaderScroll"), isTrue);
       // 四个门控条件各自真值都要落进诊断。
       expect(body.contains(r'readerContentReady=$_readerContentReady'), isTrue);
       expect(body.contains(r'restoreInFlight=$_restoreInFlight'), isTrue);
@@ -94,21 +93,19 @@ void main() {
     });
 
     test('③ Dart _refreshProgress 受门控记 progressCurrentChars / Total', () {
-      final int idx = src.indexOf('Future<void> _refreshProgress() async');
-      expect(idx, greaterThan(0));
-      // _refreshProgress 较长，取足够窗口覆盖到尾部诊断块。TODO-798 在中段插入非自愿
-      // reflow 归零判据块（含自带诊断 + 复位），续修边界又加因果门解武装块；
-      // BUG-1762 再插入速度封顶推进块，函数体再加长，窗口放宽到 6000。
-      final String body = src.substring(idx, idx + 6000);
+      // 同 ②：花括号配对窗口 + 只钉诊断串本身（原定长 6000 窗口在函数体伸缩后
+      // 尾部诊断块漂出窗外，转红与实现无关）。
+      final String body = methodBody(
+        src,
+        'Future<void> _refreshProgress() async',
+      );
       expect(
         body.contains('if (DebugLogService.instance.enabled)'),
         isTrue,
         reason: 'Dart 诊断须由 DebugLogService.instance.enabled 门控（默认 off）',
       );
-      expect(
-        body.contains("debugPrint('[ReaderDiag] _refreshProgress"),
-        isTrue,
-      );
+      expect(body.contains('debugPrint('), isTrue);
+      expect(body.contains("'[ReaderDiag] _refreshProgress"), isTrue);
       expect(
         body.contains(r'progressCurrentChars=$_progressCurrentChars'),
         isTrue,

@@ -61,22 +61,19 @@ void main() {
     );
   });
 
-  test('DB 计数缺失时后台补算并重置统计基准（避免 charDiff 幻象 spike）', () {
+  test('DB 计数缺失时后台补算并重置字数账本（坐标系整体变更）', () {
     expect(containsCodeLine(src, '_recomputeCharCountsInBackground'), isTrue);
-    // 后台补算落定后必须重置统计水位 _sessionMaxAbsoluteChars（TODO-147 改名前
-    // 为 _lastAbsoluteCount），否则零计数期间它停在 0，计数落定后首个进度回调会把
-    // 整段前缀误当本次新读字数累进统计。
+    // 后台补算落定后必须 _readLedger.reset()：全书绝对偏移的坐标系换了口径，零计数
+    // 期间记下的并集与当前单元不再有意义（旧标量水位时代这里是把水位校到当前位置，
+    // 否则计数落定后首个进度回调会把整段前缀误当本次新读字数）。
     final String body = methodBody(
       src,
       'void _recomputeCharCountsInBackground()',
     );
     expect(
-      containsCodeLine(
-        body,
-        '_sessionMaxAbsoluteChars = _absoluteCharPosition(',
-      ),
+      containsCodeLine(body, '_readLedger.reset()'),
       isTrue,
-      reason: '补算落定后必须把统计水位校到当前位置，杜绝统计 spike',
+      reason: '补算落定后必须清账本（并集 + 当前单元），杜绝统计 spike / 旧坐标残留',
     );
     expect(
       containsCodeLine(body, 'identical(_book, book)'),
