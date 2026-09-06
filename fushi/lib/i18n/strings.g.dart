@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 72930 (4290 per locale)
+/// Strings: 72964 (4292 per locale)
 ///
-/// Built on 2026-09-05 at 18:41 UTC
+/// Built on 2026-09-06 at 00:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5834,6 +5834,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   String get audiobook_transcribe_title => 'On-device transcription';
   String audiobook_transcribe_model_download_needed({required Object size}) =>
@@ -15818,6 +15821,11 @@ class _StringsAr extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
@@ -26075,6 +26083,11 @@ class _StringsDe extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
@@ -36385,6 +36398,11 @@ class _StringsEs extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
@@ -46730,6 +46748,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
   @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
+  @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
@@ -56877,6 +56900,11 @@ class _StringsId extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
@@ -67118,6 +67146,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
   @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
+  @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
@@ -76744,6 +76777,11 @@ class _StringsJa extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
@@ -86381,6 +86419,11 @@ class _StringsKo extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
@@ -96576,6 +96619,11 @@ class _StringsNl extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
@@ -106826,6 +106874,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
   @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
+  @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
@@ -117053,6 +117106,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
   @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
+  @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
@@ -127078,6 +127136,11 @@ class _StringsTh extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
@@ -137222,6 +137285,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
   @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
+  @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
@@ -147336,6 +147404,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
   @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
+  @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
@@ -156640,6 +156713,11 @@ class _StringsZhCn extends _StringsEn {
       '无法打开 AnkiMobile。请先安装 AnkiMobile 再试。';
   @override
   String get dictionary_collapse_follow_global => '跟随全局设置';
+  @override
+  String get anki_ankimobile_imported => '已导入 AnkiMobile 配置。';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi 没能及时回到前台，剪贴板还没被读取。回到 Fushi 后重试即可。';
   @override
   String get audiobook_transcribe_action => '设备端转录生成字幕';
   @override
@@ -165953,6 +166031,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
   @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
+  @override
   String get audiobook_transcribe_action => 'Generate subtitles on device';
   @override
   String get audiobook_transcribe_title => 'On-device transcription';
@@ -174784,6 +174867,10 @@ extension on _StringsEn {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -183594,6 +183681,10 @@ extension on _StringsAr {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -192449,6 +192540,10 @@ extension on _StringsDe {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -201295,6 +201390,10 @@ extension on _StringsEs {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -210150,6 +210249,10 @@ extension on _StringsFr {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -218976,6 +219079,10 @@ extension on _StringsId {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -227824,6 +227931,10 @@ extension on _StringsIt {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -236599,6 +236710,10 @@ extension on _StringsJa {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -245378,6 +245493,10 @@ extension on _StringsKo {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -254219,6 +254338,10 @@ extension on _StringsNl {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -263055,6 +263178,10 @@ extension on _StringsPtBr {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -271898,6 +272025,10 @@ extension on _StringsRu {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -280713,6 +280844,10 @@ extension on _StringsTh {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -289543,6 +289678,10 @@ extension on _StringsTr {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -298367,6 +298506,10 @@ extension on _StringsVi {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
@@ -307117,6 +307260,10 @@ extension on _StringsZhCn {
         return '无法打开 AnkiMobile。请先安装 AnkiMobile 再试。';
       case 'dictionary_collapse_follow_global':
         return '跟随全局设置';
+      case 'anki_ankimobile_imported':
+        return '已导入 AnkiMobile 配置。';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi 没能及时回到前台，剪贴板还没被读取。回到 Fushi 后重试即可。';
       case 'audiobook_transcribe_action':
         return '设备端转录生成字幕';
       case 'audiobook_transcribe_title':
@@ -315868,6 +316015,10 @@ extension on _StringsZhHk {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'audiobook_transcribe_action':
         return 'Generate subtitles on device';
       case 'audiobook_transcribe_title':
