@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 73168 (4304 per locale)
+/// Strings: 73219 (4307 per locale)
 ///
-/// Built on 2026-09-06 at 14:43 UTC
+/// Built on 2026-09-06 at 15:59 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5943,6 +5943,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  String get popup_ctx_preview_audio => 'Preview audio';
+  String get popup_ctx_preview_stop => 'Stop';
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -16016,6 +16019,12 @@ class _StringsAr extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -26316,6 +26325,12 @@ class _StringsDe extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -36669,6 +36684,12 @@ class _StringsEs extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -47056,6 +47077,12 @@ class _StringsFr extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -57247,6 +57274,12 @@ class _StringsId extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -67530,6 +67563,12 @@ class _StringsIt extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -77200,6 +77239,12 @@ class _StringsJa extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -86880,6 +86925,12 @@ class _StringsKo extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -97118,6 +97169,12 @@ class _StringsNl extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -107410,6 +107467,12 @@ class _StringsPtBr extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -117680,6 +117743,12 @@ class _StringsRu extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -127749,6 +127818,12 @@ class _StringsTh extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -137935,6 +138010,12 @@ class _StringsTr extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -148092,6 +148173,12 @@ class _StringsVi extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 // Path: <root>
@@ -157428,6 +157515,12 @@ class _StringsZhCn extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       '导出完成，但有 ${n} 本词典被跳过：这台设备上找不到它们的文件（${names}）';
+  @override
+  String get popup_ctx_preview_audio => '试听';
+  @override
+  String get popup_ctx_preview_stop => '停止';
+  @override
+  String get popup_ctx_preview_unavailable => '这句没有可试听的音频';
 }
 
 // Path: <root>
@@ -166791,6 +166884,12 @@ class _StringsZhHk extends _StringsEn {
   String backup_export_dictionaries_skipped(
           {required Object n, required Object names}) =>
       'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+  @override
+  String get popup_ctx_preview_audio => 'Preview audio';
+  @override
+  String get popup_ctx_preview_stop => 'Stop';
+  @override
+  String get popup_ctx_preview_unavailable => 'No audio for this sentence';
 }
 
 /// Flat map(s) containing all translations.
@@ -175639,6 +175738,12 @@ extension on _StringsEn {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -184482,6 +184587,12 @@ extension on _StringsAr {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -193370,6 +193481,12 @@ extension on _StringsDe {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -202249,6 +202366,12 @@ extension on _StringsEs {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -211137,6 +211260,12 @@ extension on _StringsFr {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -219996,6 +220125,12 @@ extension on _StringsId {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -228877,6 +229012,12 @@ extension on _StringsIt {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -237685,6 +237826,12 @@ extension on _StringsJa {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -246497,6 +246644,12 @@ extension on _StringsKo {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -255371,6 +255524,12 @@ extension on _StringsNl {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -264240,6 +264399,12 @@ extension on _StringsPtBr {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -273116,6 +273281,12 @@ extension on _StringsRu {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -281964,6 +282135,12 @@ extension on _StringsTh {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -290827,6 +291004,12 @@ extension on _StringsTr {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -299684,6 +299867,12 @@ extension on _StringsVi {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
@@ -308464,6 +308653,12 @@ extension on _StringsZhCn {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             '导出完成，但有 ${n} 本词典被跳过：这台设备上找不到它们的文件（${names}）';
+      case 'popup_ctx_preview_audio':
+        return '试听';
+      case 'popup_ctx_preview_stop':
+        return '停止';
+      case 'popup_ctx_preview_unavailable':
+        return '这句没有可试听的音频';
       default:
         return null;
     }
@@ -317250,6 +317445,12 @@ extension on _StringsZhHk {
       case 'backup_export_dictionaries_skipped':
         return ({required Object n, required Object names}) =>
             'Exported, but ${n} dictionary(s) were skipped: their files are missing on this device (${names})';
+      case 'popup_ctx_preview_audio':
+        return 'Preview audio';
+      case 'popup_ctx_preview_stop':
+        return 'Stop';
+      case 'popup_ctx_preview_unavailable':
+        return 'No audio for this sentence';
       default:
         return null;
     }
