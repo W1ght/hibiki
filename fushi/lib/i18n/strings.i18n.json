@@ -4288,5 +4288,6 @@
   "reader_audiobook_tab_files": "Audio files",
   "reader_audiobook_tab_chapters": "Chapters",
   "reader_audiobook_current_chapter": "Current chapter",
-  "reader_stats_this_book": "This book"
+  "reader_stats_this_book": "This book",
+  "audiobook_transcribe_running_on_static": "Running on $provider · fused static graph"
 }

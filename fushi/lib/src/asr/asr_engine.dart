@@ -297,16 +297,29 @@ class AsrEngineLoader {
       // 静态 shape 桶只给 GPU EP：CPU 上动态 shape 没有 DML 那种每次 run 的
       // 固定开销，而静态桶要多占一份权重内存。桶按需惰性建，这里只装池子。
       final OnnxExecutionProvider effective = encoderResolution.effective;
-      final AsrStaticEncoderPool? staticEncoders =
-          useStaticEncoderBuckets && effective != OnnxExecutionProvider.cpu
-          ? AsrStaticEncoderPool(
-              factory: _factory,
-              modelPath: store.fileFor(encoderRole).path,
-              providers: <OnnxExecutionProvider>[effective],
-              logName: kAsrLogName,
-            )
-          : null;
-      staticEncoders?.prewarm();
+      AsrStaticEncoderPool? staticEncoders;
+      if (useStaticEncoderBuckets && effective != OnnxExecutionProvider.cpu) {
+        final int? budget = await _factory.deviceMemoryBudgetBytes();
+        final List<AsrEncoderBucket> buckets = asrEncoderBucketsForBudget(
+          budget,
+        );
+        developer.log(
+          'ASR static encoder buckets for GPU budget '
+          '${budget == null ? 'unknown' : '${budget ~/ (1024 * 1024)} MiB'}: '
+          '$buckets',
+          name: kAsrLogName,
+        );
+        if (buckets.isNotEmpty) {
+          staticEncoders = AsrStaticEncoderPool(
+            factory: _factory,
+            modelPath: store.fileFor(encoderRole).path,
+            providers: <OnnxExecutionProvider>[effective],
+            buckets: buckets,
+            logName: kAsrLogName,
+          );
+          await staticEncoders.prewarm();
+        }
+      }
       developer.log(
         'ASR engine loaded (${variant.name} encoder): $encoderResolution '
         'greedyGraph=${greedy != null} staticBuckets=${staticEncoders != null}',

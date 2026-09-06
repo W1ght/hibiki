@@ -73,6 +73,27 @@ const List<AsrEncoderBucket> kAsrGpuEncoderBuckets = <AsrEncoderBucket>[
   AsrEncoderBucket(frames: 1120, batch: 16),
 ];
 
+/// 显存吃紧时的半桶（行数减半，融合图常驻的中间张量随之减半）。
+const List<AsrEncoderBucket> kAsrGpuEncoderBucketsSmall = <AsrEncoderBucket>[
+  AsrEncoderBucket(frames: 560, batch: 16),
+  AsrEncoderBucket(frames: 1120, batch: 8),
+];
+
+const int _kGiB = 1024 * 1024 * 1024;
+
+/// 按显存预算（字节，DXGI 本进程可分配上限；null = 查不到）选桶表：
+/// - ≥ 10 GiB：[kAsrGpuEncoderBuckets]（12 GB 卡上 E2E 峰值 6.6~7.6 GB，含动态
+///   会话与贪心图）；
+/// - 6~10 GiB：[kAsrGpuEncoderBucketsSmall]；
+/// - < 6 GiB：空表——静态图溢出到系统内存后比动态会话还慢，不如不建；
+/// - null：按默认表试，建失败自会回退（非 Windows 走不到 GPU 桶）。
+List<AsrEncoderBucket> asrEncoderBucketsForBudget(int? budgetBytes) {
+  if (budgetBytes == null) return kAsrGpuEncoderBuckets;
+  if (budgetBytes >= 10 * _kGiB) return kAsrGpuEncoderBuckets;
+  if (budgetBytes >= 6 * _kGiB) return kAsrGpuEncoderBucketsSmall;
+  return const <AsrEncoderBucket>[];
+}
+
 /// 一个已建好的静态桶会话。
 class AsrStaticEncoderSession {
   const AsrStaticEncoderSession({required this.bucket, required this.session});
@@ -180,12 +201,15 @@ class AsrStaticEncoderPool {
     }
   }
 
-  /// 后台把全部桶建起来（不等待）：每个桶建会话 3~8 s，放到第一批需要时再建
-  /// 会让转录卡在那里；装载完就开始建，第一批到时通常已经好了或正在建。
-  void prewarm() {
-    for (final AsrEncoderBucket b in buckets) {
-      unawaited(sessionFor(b.frames));
-    }
+  /// 把全部桶建起来。每个桶建会话 3~8 s；装载阶段等它建完再开跑，进度与 ETA
+  /// 才不会把建桶的停顿算成转录速度（2026-09-06 A/B：不等的话 30 分钟样本的
+  /// wall 多出 ~4 s，全是第一批在等桶）。建失败的桶各自记原因、不抛。
+  Future<void> prewarm() async {
+    await Future.wait<AsrStaticEncoderSession?>(
+      <Future<AsrStaticEncoderSession?>>[
+        for (final AsrEncoderBucket b in buckets) sessionFor(b.frames),
+      ],
+    );
   }
 
   /// 运行期发现该桶不可用（建得起来、`run` 抛错）：关掉会话、记原因，之后

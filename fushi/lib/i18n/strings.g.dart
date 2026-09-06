@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 72794 (4282 per locale)
+/// Strings: 72947 (4291 per locale)
 ///
-/// Built on 2026-09-05 at 19:15 UTC
+/// Built on 2026-09-06 at 04:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5899,7 +5899,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Download failed: ${error}';
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
   String get reader_stats_finish_chapter => 'Chapter';
@@ -5907,6 +5906,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_audiobook_tab_files => 'Audio files';
   String get reader_audiobook_tab_chapters => 'Chapters';
   String get reader_audiobook_current_chapter => 'Current chapter';
+  String get reader_stats_this_book => 'This book';
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -15914,14 +15916,25 @@ class _StringsAr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -26156,14 +26169,25 @@ class _StringsDe extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -36451,14 +36475,25 @@ class _StringsEs extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -46780,14 +46815,25 @@ class _StringsFr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -56913,14 +56959,25 @@ class _StringsId extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -67138,14 +67195,25 @@ class _StringsIt extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -76750,14 +76818,25 @@ class _StringsJa extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -86372,14 +86451,25 @@ class _StringsKo extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -96552,14 +96642,25 @@ class _StringsNl extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -106786,14 +106887,25 @@ class _StringsPtBr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -116998,14 +117110,25 @@ class _StringsRu extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -127009,14 +127132,25 @@ class _StringsTh extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -137137,14 +137271,25 @@ class _StringsTr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -147236,14 +147381,25 @@ class _StringsVi extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 // Path: <root>
@@ -156521,14 +156677,25 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU 探测失败，按 CPU 规划：${reason}';
-  String get reader_stats_this_book => '本书';
+  @override
   String get reader_stats_session => '本次会话';
+  @override
   String get reader_stats_time_to_finish => '预计读完';
+  @override
   String get reader_stats_finish_chapter => '本章';
+  @override
   String get reader_stats_finish_book => '全书';
+  @override
   String get reader_audiobook_tab_files => '资源';
+  @override
   String get reader_audiobook_tab_chapters => '章节';
+  @override
   String get reader_audiobook_current_chapter => '当前章节';
+  @override
+  String get reader_stats_this_book => '本书';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      '运行于 ${provider} · 静态融合图';
 }
 
 // Path: <root>
@@ -165826,14 +165993,25 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-  String get reader_stats_this_book => 'This book';
+  @override
   String get reader_stats_session => 'This session';
+  @override
   String get reader_stats_time_to_finish => 'Time to finish';
+  @override
   String get reader_stats_finish_chapter => 'Chapter';
+  @override
   String get reader_stats_finish_book => 'Book';
+  @override
   String get reader_audiobook_tab_files => 'Audio files';
+  @override
   String get reader_audiobook_tab_chapters => 'Chapters';
+  @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String audiobook_transcribe_running_on_static({required Object provider}) =>
+      'Running on ${provider} · fused static graph';
 }
 
 /// Flat map(s) containing all translations.
@@ -174633,8 +174811,6 @@ extension on _StringsEn {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -174649,6 +174825,11 @@ extension on _StringsEn {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -183443,8 +183624,6 @@ extension on _StringsAr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -183459,6 +183638,11 @@ extension on _StringsAr {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -192298,8 +192482,6 @@ extension on _StringsDe {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -192314,6 +192496,11 @@ extension on _StringsDe {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -201144,8 +201331,6 @@ extension on _StringsEs {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -201160,6 +201345,11 @@ extension on _StringsEs {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -209999,8 +210189,6 @@ extension on _StringsFr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -210015,6 +210203,11 @@ extension on _StringsFr {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -218825,8 +219018,6 @@ extension on _StringsId {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -218841,6 +219032,11 @@ extension on _StringsId {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -227673,8 +227869,6 @@ extension on _StringsIt {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -227689,6 +227883,11 @@ extension on _StringsIt {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -236448,8 +236647,6 @@ extension on _StringsJa {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -236464,6 +236661,11 @@ extension on _StringsJa {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -245227,8 +245429,6 @@ extension on _StringsKo {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -245243,6 +245443,11 @@ extension on _StringsKo {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -254068,8 +254273,6 @@ extension on _StringsNl {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -254084,6 +254287,11 @@ extension on _StringsNl {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -262904,8 +263112,6 @@ extension on _StringsPtBr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -262920,6 +263126,11 @@ extension on _StringsPtBr {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -271747,8 +271958,6 @@ extension on _StringsRu {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -271763,6 +271972,11 @@ extension on _StringsRu {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -280562,8 +280776,6 @@ extension on _StringsTh {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -280578,6 +280790,11 @@ extension on _StringsTh {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -289392,8 +289609,6 @@ extension on _StringsTr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -289408,6 +289623,11 @@ extension on _StringsTr {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -298216,8 +298436,6 @@ extension on _StringsVi {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -298232,6 +298450,11 @@ extension on _StringsVi {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
@@ -306964,8 +307187,6 @@ extension on _StringsZhCn {
         return ({required Object error}) => '下载失败：${error}';
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) => 'GPU 探测失败，按 CPU 规划：${reason}';
-      case 'reader_stats_this_book':
-        return '本书';
       case 'reader_stats_session':
         return '本次会话';
       case 'reader_stats_time_to_finish':
@@ -306980,6 +307201,10 @@ extension on _StringsZhCn {
         return '章节';
       case 'reader_audiobook_current_chapter':
         return '当前章节';
+      case 'reader_stats_this_book':
+        return '本书';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) => '运行于 ${provider} · 静态融合图';
       default:
         return null;
     }
@@ -315717,8 +315942,6 @@ extension on _StringsZhHk {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-      case 'reader_stats_this_book':
-        return 'This book';
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -315733,6 +315956,11 @@ extension on _StringsZhHk {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'audiobook_transcribe_running_on_static':
+        return ({required Object provider}) =>
+            'Running on ${provider} · fused static graph';
       default:
         return null;
     }
