@@ -1,14 +1,13 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/pages/implementations/reader_fushi_page.dart'
-    show absoluteCharOffsetOf, restoreIsInPlace;
+    show absoluteCharOffsetOf;
 import 'package:fushi/src/stats/read_unit_ledger.dart';
 
 /// EPUB 侧「读过」判据的边界表（`docs/plans/2026-09-06-read-unit-ledger.md` 第 2 节）：
 ///
 ///  * [absoluteCharOffsetOf]：JS 回传的章内学习单位偏移 → 全书绝对偏移（账本坐标）；
-///  * [restoreIsInPlace]：恢复完成是否原位（只换坐标不结算）；
-///  * 用 [ReadUnitLedger] 按页面接线（`_refreshProgress` 每次采样 arrive、跳句 leave、
-///    原位恢复 rebase、字数补算 reset、导航失败 discard）模拟每一行边界场景，断言
+///  * 用 [ReadUnitLedger] 按页面接线（`_refreshProgress` 每次采样 arrive、跳句 / 导航 /
+///    同章跳转 leave、字数补算 reset、导航失败 discard）模拟每一行边界场景，断言
 ///    交给 `StudyClock.addChars` 的字数。
 void main() {
   // 三章书：字数 [1000, 2000, 3000]，章首累计 [0, 1000, 3000]。
@@ -62,95 +61,6 @@ void main() {
         ),
         -1,
         reason: '两表长度不齐（计数尚在补算）时按未就绪处理',
-      );
-    });
-  });
-
-  group('restoreIsInPlace：原位恢复判据', () {
-    test('同章、偏移相差 ≤ 1 → 原位（重排 / 宽变 / 模式切换）', () {
-      expect(
-        restoreIsInPlace(
-          restoredChapter: 2,
-          restoredCharOffset: 500,
-          lastChapter: 2,
-          lastCharOffset: 500,
-        ),
-        isTrue,
-      );
-      expect(
-        restoreIsInPlace(
-          restoredChapter: 2,
-          restoredCharOffset: 501,
-          lastChapter: 2,
-          lastCharOffset: 500,
-        ),
-        isTrue,
-      );
-      expect(
-        restoreIsInPlace(
-          restoredChapter: 2,
-          restoredCharOffset: 499,
-          lastChapter: 2,
-          lastCharOffset: 500,
-        ),
-        isTrue,
-      );
-    });
-
-    test('偏移相差 ≥ 2 → 不是原位（同章跳转）', () {
-      expect(
-        restoreIsInPlace(
-          restoredChapter: 2,
-          restoredCharOffset: 502,
-          lastChapter: 2,
-          lastCharOffset: 500,
-        ),
-        isFalse,
-      );
-    });
-
-    test('跨章 → 不是原位（跨章跳转 / 翻章）', () {
-      expect(
-        restoreIsInPlace(
-          restoredChapter: 3,
-          restoredCharOffset: 0,
-          lastChapter: 2,
-          lastCharOffset: 0,
-        ),
-        isFalse,
-      );
-    });
-
-    test('恢复锚无效（-1）→ 不是原位（分数口径导航）', () {
-      expect(
-        restoreIsInPlace(
-          restoredChapter: 2,
-          restoredCharOffset: -1,
-          lastChapter: 2,
-          lastCharOffset: -1,
-        ),
-        isFalse,
-      );
-    });
-
-    test('没有过实时采样（null）/ 上次采样无锚 → 不是原位', () {
-      expect(
-        restoreIsInPlace(
-          restoredChapter: 0,
-          restoredCharOffset: 0,
-          lastChapter: null,
-          lastCharOffset: null,
-        ),
-        isFalse,
-      );
-      expect(
-        restoreIsInPlace(
-          restoredChapter: 0,
-          restoredCharOffset: 0,
-          lastChapter: 0,
-          lastCharOffset: -1,
-        ),
-        isFalse,
       );
     });
   });
@@ -238,23 +148,58 @@ void main() {
       expect(credited, 800);
     });
 
-    test('改字号 / 旋屏 / 分页↔连续（原位恢复）：rebase 后同页换边界不结算', () {
+    test(
+      '宽变 / 分页↔连续（同章重恢复经 _beginNavigation）：leave 提前结算同页，新边界只补多露出的行，总额不变',
+      () {
+        sample(0, 0, 400);
+        ledger.leave(); // _beginNavigation
+        expect(credited, 400, reason: '同页提前结算（用户确实在这页）');
+        sample(0, 0, 520); // 缩字号后同页多露出的行
+        expect(ledger.current, (0, 520));
+        sample(0, 520, 1000);
+        expect(credited, 520, reason: '并集去重：只补 [400,520)，与旧 rebase 口径总额一致');
+      },
+    );
+
+    test('改字号 CSS 热换（不经导航）：同页新边界 arrive 结算旧边界，总额同上', () {
       sample(0, 0, 400);
-      ledger.rebaseOnNextArrive(); // _onRestoreComplete 判原位
-      sample(0, 0, 520); // 缩字号后同页多露出的行
-      expect(credited, 0, reason: '同页换坐标不是翻页');
-      expect(ledger.current, (0, 520));
+      sample(0, 0, 520);
+      expect(credited, 400);
       sample(0, 520, 1000);
-      expect(credited, 520, reason: '多露出的行属新单元，翻走时计');
+      expect(credited, 520);
     });
 
-    test('rebase 后落到的不是同一页（判据误判兜底）：单元换成新坐标、旧单元不结算', () {
+    test('BUG-2188 同章进度条跳转：JS notifyRestoreComplete 抢先也不丢跳走前那页', () {
+      // 旧实现：_onRestoreComplete 判原位 → rebaseOnNextArrive → 落点 arrive 不结算
+      // [0,400)。新实现：跳转入口先 leave。
       sample(0, 0, 400);
-      ledger.rebaseOnNextArrive();
+      ledger.leave(); // _jumpToGlobalCharOffset 同章分支
+      expect(credited, 400);
+      sample(0, 800, 1000); // 落点页（restoreComplete / scroll 回传顺序无关）
+      expect(credited, 400, reason: '跳过的 [400,800) 不计');
       sample(1, 0, 400);
-      expect(credited, 0);
-      expect(ledger.current, (1000, 1400));
+      expect(credited, 600);
     });
+
+    test('BUG-2188 VN 同章拖动（无 scroll 事件）：同上，旧屏不再被 rebase 掉', () {
+      sample(0, 0, 100);
+      ledger.leave();
+      sample(0, 500, 600);
+      expect(credited, 100);
+    });
+
+    test(
+      'BUG-2189 跨章导航装载失败 / 兜底超时：_beginNavigation 已 leave，discard 不再丢上一页',
+      () {
+        sample(0, 600, 1000);
+        ledger.leave(); // _beginNavigation
+        ledger.discard(); // _failNavigation
+        expect(credited, 400, reason: '旧实现在此 discard 掉的正是用户真读过的这页');
+        sample(1, 0, 400);
+        sample(1, 400, 800);
+        expect(credited, 800);
+      },
+    );
 
     test('首次开书 / 恢复到存档页：存档页是当前单元，翻走时计一次，不预置', () {
       sample(1, 600, 1000); // 存档页
@@ -271,7 +216,7 @@ void main() {
       expect(credited, 200);
     });
 
-    test('内容就绪兜底超时 / 导航失败：discard() 当前单元不结算', () {
+    test('导航发起后新页曾短暂 arrive 再失败：discard() 只丢那个未读的新单元', () {
       sample(0, 0, 400);
       ledger.discard();
       expect(credited, 0);
@@ -351,7 +296,7 @@ void main() {
     ///     _player.playing && _stopAtPositionMs == null`）：
     ///     * **reveal=true**（播放中 + 跟随音频开）：先打点 `_reanchorClearedAt`
     ///       （:680）武装 B-3 窗，再 `AudiobookBridge.highlight(reveal: true)`（:682）
-    ///       把视口滚到目标 cue，最后 `_scheduleRevealProgressRefresh()`（:689）排一个
+    ///       把视口滚到目标 cue，最后 `_scheduleReanchorSettleProgressRefresh()`（:689）排一个
     ///       `kReaderReanchorSettleMs`=250ms 的 Timer 补刷 `_refreshProgress`。
     ///       这 250ms 内跟随滚动的 scroll 回传被 `readerScrollWithinReanchorSettle`
     ///       （reader_fushi_page.dart:884）在 `_handleReaderScroll` 里直接丢掉，
@@ -395,7 +340,7 @@ void main() {
         sample(0, 400, 800);
         expect(credited, 400);
 
-        // 250ms 到期 → _scheduleRevealProgressRefresh 的 Timer 触发 _refreshProgress
+        // 250ms 到期 → _scheduleReanchorSettleProgressRefresh 的 Timer 触发 _refreshProgress
         // → arrive(拖后那页)：切换单元的同时结算拖前那页。
         sample(2, 1200, 1600);
         expect(credited, 800, reason: '拖前那页 [400,800) 在补刷 arrive 时结算');
