@@ -4313,5 +4313,17 @@
   "theme_neutral_derived": "Neutral derived colors",
   "theme_neutral_derived_desc": "Tags, selected items, menus and surfaces stay gray instead of taking on the accent's hue; only the accent color itself stands out (like the Windows light theme). White, gray or black accents do this automatically.",
   "video_home_subscription_updates": "已更新未看",
-  "video_home_subscription_unwatched_episode": "第 $n 集 · $count 集未看"
+  "video_home_subscription_unwatched_episode": "第 $n 集 · $count 集未看",
+  "shortcut_scope_global_external_desktop_note": "鼠标触发只接受侧键（后退/前进）。其它按钮在别的程序里有各自的固有含义，这里会拒绝录入。",
+  "shortcut_mouse_button_not_supported": "This action only accepts mouse side buttons (back/forward).",
+  "anki_ankimobile_opened": "AnkiMobile opened. Approve the request there, then return to Fushi.",
+  "anki_error_ankimobile_pasteboard_empty": "AnkiMobile did not return any configuration. Approve the request in AnkiMobile, then come back to Fushi.",
+  "anki_error_ankimobile_pasteboard_denied": "iOS blocked reading the clipboard. Choose Allow Paste when returning to Fushi, then try again.",
+  "anki_error_ankimobile_no_decks": "AnkiMobile returned no decks or note types.",
+  "anki_error_ankimobile_unavailable": "Could not open AnkiMobile. Install AnkiMobile and try again.",
+  "dictionary_collapse_follow_global": "Follow global setting",
+  "onboarding_pack_status_paused": "Recommended pack download paused",
+  "onboarding_pack_download_resume": "Resume download",
+  "onboarding_pack_paused_desc": "Progress is kept on disk — resuming picks up where it stopped.",
+  "onboarding_pack_mini_bar_hide": "Hide"
 }
