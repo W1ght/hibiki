@@ -4273,12 +4273,6 @@
   "theme_section_audiobook": "Audiobook",
   "theme_section_fine_tune": "Fine-tune derived colors",
   "theme_role_accent": "Accent color",
-  "theme_role_accent_desc": "Buttons, switches, icons and progress bars. Every other color is derived from it.",
-  "theme_accent_auto_tone": "Adjust tone for light and dark mode",
-  "theme_accent_auto_tone_desc": "Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.",
-  "theme_role_actual_color": "Shown as",
-  "theme_accent_low_contrast_dark": "Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.",
-  "theme_accent_low_contrast_light": "Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.",
   "theme_role_reader_text": "Body text",
   "theme_role_reader_text_desc": "Reader text, toolbar icons and dictionary popup text",
   "theme_role_reader_background": "Page background",
@@ -4301,5 +4295,8 @@
   "theme_preview_dark": "Dark",
   "theme_preview_button": "Button",
   "theme_preview_tag": "Tag",
-  "theme_preview_hint": "Pick a color to see where it is used outlined in the preview."
+  "theme_preview_hint": "Pick a color to see where it is used outlined in the preview.",
+  "theme_role_accent_desc": "Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.",
+  "theme_accent_low_contrast_dark": "Hard to see on the dark-mode background. Pick a lighter color.",
+  "theme_accent_low_contrast_light": "Hard to see on the light-mode background. Pick a darker color."
 }

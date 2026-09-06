@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 73151 (4303 per locale)
+/// Strings: 73100 (4300 per locale)
 ///
-/// Built on 2026-09-06 at 07:22 UTC
+/// Built on 2026-09-06 at 11:01 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5956,16 +5956,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get theme_section_audiobook => 'Audiobook';
   String get theme_section_fine_tune => 'Fine-tune derived colors';
   String get theme_role_accent => 'Accent color';
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  String get theme_role_actual_color => 'Shown as';
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
   String get theme_role_reader_text => 'Body text';
   String get theme_role_reader_text_desc =>
       'Reader text, toolbar icons and dictionary popup text';
@@ -5997,6 +5987,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get theme_preview_tag => 'Tag';
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -16049,22 +16045,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -16118,6 +16098,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -26403,22 +26392,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -26472,6 +26445,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -36807,22 +36789,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -36876,6 +36842,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -47243,22 +47218,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -47312,6 +47271,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -57484,22 +57452,6 @@ class _StringsId extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -57553,6 +57505,15 @@ class _StringsId extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -67818,22 +67779,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -67887,6 +67832,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -77531,22 +77485,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -77600,6 +77538,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -87254,22 +87201,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -87323,6 +87254,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -97542,22 +97482,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -97611,6 +97535,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -107884,22 +107817,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -107953,6 +107870,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -118204,22 +118130,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -118273,6 +118183,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -128322,22 +128241,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -128391,6 +128294,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -138558,22 +138470,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -138627,6 +138523,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -148764,22 +148669,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -148833,6 +148722,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 // Path: <root>
@@ -158145,20 +158043,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get theme_role_accent => '主题色';
   @override
-  String get theme_role_accent_desc => '按钮、开关、图标、进度条；其余颜色都由它自动生成';
-  @override
-  String get theme_accent_auto_tone => '按明暗模式自动调整色调';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      '关闭：处处使用所选原色。开启：为浅色/深色模式各自生成色调，实际显示会与所选不同';
-  @override
-  String get theme_role_actual_color => '实际显示';
-  @override
-  String get theme_accent_low_contrast_dark => '在深色模式背景上不易辨认，可开启自动调整色调或换个更亮的颜色';
-  @override
-  String get theme_accent_low_contrast_light =>
-      '在浅色模式背景上不易辨认，可开启自动调整色调或换个更深的颜色';
-  @override
   String get theme_role_reader_text => '正文文字';
   @override
   String get theme_role_reader_text_desc => '阅读器正文、工具栏图标与词典弹窗文字';
@@ -158204,6 +158088,12 @@ class _StringsZhCn extends _StringsEn {
   String get theme_preview_tag => '标签';
   @override
   String get theme_preview_hint => '点任一颜色，预览里会框出它影响的位置';
+  @override
+  String get theme_role_accent_desc => '按钮、开关、图标、进度条直接使用所选原色；其余颜色都由它自动生成';
+  @override
+  String get theme_accent_low_contrast_dark => '在深色模式背景上不易辨认，建议换个更亮的颜色';
+  @override
+  String get theme_accent_low_contrast_light => '在浅色模式背景上不易辨认，建议换个更深的颜色';
 }
 
 // Path: <root>
@@ -167538,22 +167428,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get theme_role_accent => 'Accent color';
   @override
-  String get theme_role_accent_desc =>
-      'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-  @override
-  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
-  @override
-  String get theme_accent_auto_tone_desc =>
-      'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-  @override
-  String get theme_role_actual_color => 'Shown as';
-  @override
-  String get theme_accent_low_contrast_dark =>
-      'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-  @override
-  String get theme_accent_low_contrast_light =>
-      'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
-  @override
   String get theme_role_reader_text => 'Body text';
   @override
   String get theme_role_reader_text_desc =>
@@ -167607,6 +167481,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get theme_preview_hint =>
       'Pick a color to see where it is used outlined in the preview.';
+  @override
+  String get theme_role_accent_desc =>
+      'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+  @override
+  String get theme_accent_low_contrast_dark =>
+      'Hard to see on the dark-mode background. Pick a lighter color.';
+  @override
+  String get theme_accent_low_contrast_light =>
+      'Hard to see on the light-mode background. Pick a darker color.';
 }
 
 /// Flat map(s) containing all translations.
@@ -176395,18 +176278,6 @@ extension on _StringsEn {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -176453,6 +176324,12 @@ extension on _StringsEn {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -185236,18 +185113,6 @@ extension on _StringsAr {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -185294,6 +185159,12 @@ extension on _StringsAr {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -194126,18 +193997,6 @@ extension on _StringsDe {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -194184,6 +194043,12 @@ extension on _StringsDe {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -203006,18 +202871,6 @@ extension on _StringsEs {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -203064,6 +202917,12 @@ extension on _StringsEs {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -211894,18 +211753,6 @@ extension on _StringsFr {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -211952,6 +211799,12 @@ extension on _StringsFr {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -220752,18 +220605,6 @@ extension on _StringsId {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -220810,6 +220651,12 @@ extension on _StringsId {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -229633,18 +229480,6 @@ extension on _StringsIt {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -229691,6 +229526,12 @@ extension on _StringsIt {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -238438,18 +238279,6 @@ extension on _StringsJa {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -238496,6 +238325,12 @@ extension on _StringsJa {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -247248,18 +247083,6 @@ extension on _StringsKo {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -247306,6 +247129,12 @@ extension on _StringsKo {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -256124,18 +255953,6 @@ extension on _StringsNl {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -256182,6 +255999,12 @@ extension on _StringsNl {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -264995,18 +264818,6 @@ extension on _StringsPtBr {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -265053,6 +264864,12 @@ extension on _StringsPtBr {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -273872,18 +273689,6 @@ extension on _StringsRu {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -273930,6 +273735,12 @@ extension on _StringsRu {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -282718,18 +282529,6 @@ extension on _StringsTh {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -282776,6 +282575,12 @@ extension on _StringsTh {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -291580,18 +291385,6 @@ extension on _StringsTr {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -291638,6 +291431,12 @@ extension on _StringsTr {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -300436,18 +300235,6 @@ extension on _StringsVi {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -300494,6 +300281,12 @@ extension on _StringsVi {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }
@@ -309213,18 +309006,6 @@ extension on _StringsZhCn {
         return '微调派生色';
       case 'theme_role_accent':
         return '主题色';
-      case 'theme_role_accent_desc':
-        return '按钮、开关、图标、进度条；其余颜色都由它自动生成';
-      case 'theme_accent_auto_tone':
-        return '按明暗模式自动调整色调';
-      case 'theme_accent_auto_tone_desc':
-        return '关闭：处处使用所选原色。开启：为浅色/深色模式各自生成色调，实际显示会与所选不同';
-      case 'theme_role_actual_color':
-        return '实际显示';
-      case 'theme_accent_low_contrast_dark':
-        return '在深色模式背景上不易辨认，可开启自动调整色调或换个更亮的颜色';
-      case 'theme_accent_low_contrast_light':
-        return '在浅色模式背景上不易辨认，可开启自动调整色调或换个更深的颜色';
       case 'theme_role_reader_text':
         return '正文文字';
       case 'theme_role_reader_text_desc':
@@ -309271,6 +309052,12 @@ extension on _StringsZhCn {
         return '标签';
       case 'theme_preview_hint':
         return '点任一颜色，预览里会框出它影响的位置';
+      case 'theme_role_accent_desc':
+        return '按钮、开关、图标、进度条直接使用所选原色；其余颜色都由它自动生成';
+      case 'theme_accent_low_contrast_dark':
+        return '在深色模式背景上不易辨认，建议换个更亮的颜色';
+      case 'theme_accent_low_contrast_light':
+        return '在浅色模式背景上不易辨认，建议换个更深的颜色';
       default:
         return null;
     }
@@ -317996,18 +317783,6 @@ extension on _StringsZhHk {
         return 'Fine-tune derived colors';
       case 'theme_role_accent':
         return 'Accent color';
-      case 'theme_role_accent_desc':
-        return 'Buttons, switches, icons and progress bars. Every other color is derived from it.';
-      case 'theme_accent_auto_tone':
-        return 'Adjust tone for light and dark mode';
-      case 'theme_accent_auto_tone_desc':
-        return 'Off: the exact color you picked is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
-      case 'theme_role_actual_color':
-        return 'Shown as';
-      case 'theme_accent_low_contrast_dark':
-        return 'Hard to see on the dark-mode background. Turn on tone adjustment or pick a lighter color.';
-      case 'theme_accent_low_contrast_light':
-        return 'Hard to see on the light-mode background. Turn on tone adjustment or pick a darker color.';
       case 'theme_role_reader_text':
         return 'Body text';
       case 'theme_role_reader_text_desc':
@@ -318054,6 +317829,12 @@ extension on _StringsZhHk {
         return 'Tag';
       case 'theme_preview_hint':
         return 'Pick a color to see where it is used outlined in the preview.';
+      case 'theme_role_accent_desc':
+        return 'Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.';
+      case 'theme_accent_low_contrast_dark':
+        return 'Hard to see on the dark-mode background. Pick a lighter color.';
+      case 'theme_accent_low_contrast_light':
+        return 'Hard to see on the light-mode background. Pick a darker color.';
       default:
         return null;
     }

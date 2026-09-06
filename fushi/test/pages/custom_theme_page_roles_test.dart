@@ -12,7 +12,7 @@ import '../helpers/test_platform_services.dart';
 
 /// 自定义主题编辑页重设计（2026-09）的行为测试：
 /// - 主题色默认所见即所得（保存时 primaryColor == seed == 所选色）；
-/// - 「按明暗自动调整色调」开关关掉钉死，回到只存 seed 的派生语义；
+/// - 没有任何「自动调色调」开关：只有 seed 的旧条目取它实际显示的 primary 钉死；
 /// - 角色行默认「跟随主题」（条目字段 null），在选色弹窗里改色后落进条目；
 /// - 「恢复跟随主题」把字段清回 null；
 /// - 宽屏（≥ 900）点角色行不弹窗，右栏选色器直接切到该角色。
@@ -132,12 +132,6 @@ Future<void> _tapRow(WidgetTester tester, String title) async {
   await tester.pumpAndSettle();
 }
 
-/// 「按明暗自动调整色调」开关（预览卡里还有一只只读的示意开关，不能按类型取 first）。
-Finder _autoToneSwitch() => find.descendant(
-  of: find.byType(AdaptiveSettingsSwitchRow),
-  matching: find.byType(Switch),
-);
-
 /// 在选色面板上点一下（HSV 面板右上角 = 高饱和高亮度），产生一个非默认颜色。
 Future<void> _pickInArea(WidgetTester tester) async {
   final Finder area = find.byType(ColorPickerArea).last;
@@ -170,32 +164,7 @@ void main() {
       expect(saved.containerColor, isNull);
     });
 
-    testWidgets('开启「按明暗自动调整色调」→ 只存 seed，不钉 primary', (
-      WidgetTester tester,
-    ) async {
-      final _RecordingAppModel appModel = _RecordingAppModel();
-      await tester.pumpWidget(_host(appModel, const CustomThemePage()));
-      await tester.pumpAndSettle();
-
-      final Finder toggle = _autoToneSwitch();
-      await tester.scrollUntilVisible(
-        toggle,
-        120,
-        scrollable: _verticalScrollable,
-      );
-      await tester.pumpAndSettle();
-      await tester.tap(toggle);
-      await tester.pumpAndSettle();
-      // 派生 primary ≠ 所选 → 行尾出现「实际显示」色点。
-      expect(find.byTooltip(t.theme_role_actual_color), findsOneWidget);
-
-      await _tapApply(tester);
-      final CustomThemeEntry saved = appModel.upserts.single;
-      expect(saved.seed, kCustomThemeDefaultSeed);
-      expect(saved.primaryColor, isNull);
-    });
-
-    testWidgets('已钉主色的旧条目：主题色显示钉的那个，自动调色调关', (WidgetTester tester) async {
+    testWidgets('已钉主色的旧条目：主题色就是钉的那个，重存后 seed 对齐', (WidgetTester tester) async {
       const CustomThemeEntry existing = CustomThemeEntry(
         id: 'ct-1',
         name: 'Mine',
@@ -210,15 +179,39 @@ void main() {
         _host(appModel, const CustomThemePage(themeId: 'ct-1')),
       );
       await tester.pumpAndSettle();
-      expect(find.byTooltip(t.theme_role_actual_color), findsNothing);
-      final Switch autoTone = tester.widget<Switch>(_autoToneSwitch());
-      expect(autoTone.value, isFalse);
 
       await _tapApply(tester);
       final CustomThemeEntry saved = appModel.upserts.single;
       // 重存后 seed 与钉死的主色对齐：派生色都从主题色出发。
       expect(saved.primaryColor, 0xFF112233);
       expect(saved.seed, 0xFF112233);
+    });
+
+    testWidgets('只有 seed 的旧条目：主题色取它当时实际显示的 primary 并钉死', (
+      WidgetTester tester,
+    ) async {
+      const CustomThemeEntry legacy = CustomThemeEntry(
+        id: 'ct-2',
+        name: 'Old',
+        seed: 0xFF336699,
+      );
+      final _RecordingAppModel appModel = _RecordingAppModel(
+        themes: <CustomThemeEntry>[legacy],
+        themeKey: 'custom-theme:ct-2',
+      );
+      await tester.pumpWidget(
+        _host(appModel, const CustomThemePage(themeId: 'ct-2')),
+      );
+      await tester.pumpAndSettle();
+
+      await _tapApply(tester);
+      final CustomThemeEntry saved = appModel.upserts.single;
+      final int shownBefore = ColorScheme.fromSeed(
+        seedColor: const Color(0xFF336699),
+        brightness: Brightness.light,
+      ).primary.toARGB32();
+      expect(saved.primaryColor, shownBefore);
+      expect(saved.seed, shownBefore);
     });
   });
 

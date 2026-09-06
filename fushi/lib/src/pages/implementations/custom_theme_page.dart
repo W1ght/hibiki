@@ -59,10 +59,9 @@ class CustomThemePage extends BasePage {
 }
 
 class _CustomThemePageState extends BasePageState<CustomThemePage> {
-  /// 用户选的主题色。`_accentAutoTone` 关闭时它就是最终 primary（所见即所得）；
-  /// 开启时只作 seed，由 Material 按明暗各自派生色调（与旧「种子色」语义相同）。
+  /// 用户选的主题色 = 最终 ColorScheme.primary，永远所见即所得；同时作 seed 派生
+  /// 其余颜色。不再有「按明暗自动调色调」这类会让实际颜色偏离所选的开关。
   late Color _accent;
-  bool _accentAutoTone = false;
 
   /// 可选角色的显式覆盖；null = 跟随主题。`audioHighlight` 是全局偏好，
   /// 改动立即写穿 AppModel（TODO-977），其余随「应用」一起落进条目。
@@ -107,6 +106,8 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
           id: widget.themeId ?? 'ct-${DateTime.now().microsecondsSinceEpoch}',
           name: '',
           seed: kCustomThemeDefaultSeed,
+          // 新草稿的主题色就是品牌默认色本身（钉死），不走旧条目「取实际显示色」。
+          primaryColor: kCustomThemeDefaultSeed,
         );
     _entryId = entry.id;
     _nameController = TextEditingController(text: entry.name);
@@ -114,18 +115,20 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
         ? Brightness.dark
         : Brightness.light;
     _loadEntry(entry, audioHighlight: appModelNoUpdate.audioHighlightColor);
-    // 新草稿默认所见即所得（钉死主题色）；只有旧条目/分享码才按「有没有钉主色」
-    // 还原它原来的派生语义。
-    if (_isDraft) _accentAutoTone = false;
   }
 
-  /// 把一条条目装进编辑状态。已钉主色的条目主题色 = 钉的那个（所见即所得）；
-  /// 只有 seed 的旧条目主题色 = seed 且开启「自动调色调」——正好还原它当初的观感。
+  /// 把一条条目装进编辑状态。已钉主色的条目主题色 = 钉的那个；只有 seed 的旧条目
+  /// （TODO-930 之前的派生语义）取它在当前明暗下**实际显示**的 primary 钉死——
+  /// 用户看到的就是原来那个颜色，保存后也不会再被 Material 重算。
   void _loadEntry(CustomThemeEntry entry, {required Color? audioHighlight}) {
     Color? roleColor(int? fromEntry) =>
         fromEntry != null ? Color(fromEntry) : null;
-    _accent = Color(entry.primaryColor ?? entry.seed);
-    _accentAutoTone = entry.primaryColor == null;
+    _accent = entry.primaryColor != null
+        ? Color(entry.primaryColor!)
+        : ColorScheme.fromSeed(
+            seedColor: Color(entry.seed),
+            brightness: _previewBrightness,
+          ).primary;
     _overrides
       ..[_ThemeRole.readerText] = roleColor(entry.fontColor)
       ..[_ThemeRole.readerBackground] = roleColor(entry.bgColor)
@@ -154,7 +157,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
     return buildFushiColorScheme(
       seedColor: _accent,
       brightness: brightness,
-      primary: _accentAutoTone ? null : _accent,
+      primary: _accent,
       secondary: _overrides[_ThemeRole.secondary],
       tertiary: _overrides[_ThemeRole.tertiary],
       primaryContainer: _overrides[_ThemeRole.container],
@@ -349,7 +352,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
       // seed 与钉死的主色同值：派生色（次要强调/点缀/底色）都从主题色出发，
       // 用户只需要理解一个「主题色」。
       seed: _accent.toARGB32(),
-      primaryColor: _accentAutoTone ? null : _accent.toARGB32(),
+      primaryColor: _accent.toARGB32(),
       fontColor: argb(_overrides[_ThemeRole.readerText]),
       bgColor: argb(_overrides[_ThemeRole.readerBackground]),
       selectionColor: argb(_overrides[_ThemeRole.selection]),
@@ -607,12 +610,6 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
           // TODO-930: 主题名称（可选，留空显示「自定义 N」默认名）。
           _buildNameField(),
           _buildAccentRow(),
-          AdaptiveSettingsSwitchRow(
-            title: t.theme_accent_auto_tone,
-            subtitle: t.theme_accent_auto_tone_desc,
-            value: _accentAutoTone,
-            onChanged: (bool value) => setState(() => _accentAutoTone = value),
-          ),
           if (_accentLowContrast(Brightness.light))
             _buildHintRow(t.theme_accent_low_contrast_light),
           if (_accentLowContrast(Brightness.dark))
@@ -795,8 +792,6 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
 
   Widget _buildAccentRow() {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final Color shown = _effectiveColor(_ThemeRole.accent);
-    final bool differs = shown.toARGB32() != _accent.toARGB32();
     return _highlightIfSelected(
       _ThemeRole.accent,
       AdaptiveSettingsRow(
@@ -809,21 +804,6 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             _swatchDot(_accent),
-            // 开了自动调色调且派生结果 ≠ 所选：把「实际显示」直接摆在旁边，
-            // 用户不用猜为什么按钮不是自己选的那个颜色。
-            if (differs) ...<Widget>[
-              SizedBox(width: tokens.spacing.gap / 2),
-              Icon(
-                Icons.arrow_forward,
-                size: 14,
-                color: Theme.of(context).colorScheme.onSurfaceVariant,
-              ),
-              SizedBox(width: tokens.spacing.gap / 2),
-              Tooltip(
-                message: t.theme_role_actual_color,
-                child: _swatchDot(shown),
-              ),
-            ],
             SizedBox(width: tokens.spacing.gap),
             Icon(
               Icons.chevron_right,

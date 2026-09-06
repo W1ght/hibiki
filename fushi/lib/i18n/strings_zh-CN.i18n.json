@@ -4273,12 +4273,6 @@
   "theme_section_audiobook": "有声书",
   "theme_section_fine_tune": "微调派生色",
   "theme_role_accent": "主题色",
-  "theme_role_accent_desc": "按钮、开关、图标、进度条；其余颜色都由它自动生成",
-  "theme_accent_auto_tone": "按明暗模式自动调整色调",
-  "theme_accent_auto_tone_desc": "关闭：处处使用所选原色。开启：为浅色/深色模式各自生成色调，实际显示会与所选不同",
-  "theme_role_actual_color": "实际显示",
-  "theme_accent_low_contrast_dark": "在深色模式背景上不易辨认，可开启自动调整色调或换个更亮的颜色",
-  "theme_accent_low_contrast_light": "在浅色模式背景上不易辨认，可开启自动调整色调或换个更深的颜色",
   "theme_role_reader_text": "正文文字",
   "theme_role_reader_text_desc": "阅读器正文、工具栏图标与词典弹窗文字",
   "theme_role_reader_background": "页面背景",
@@ -4301,5 +4295,8 @@
   "theme_preview_dark": "深色",
   "theme_preview_button": "按钮",
   "theme_preview_tag": "标签",
-  "theme_preview_hint": "点任一颜色，预览里会框出它影响的位置"
+  "theme_preview_hint": "点任一颜色，预览里会框出它影响的位置",
+  "theme_role_accent_desc": "按钮、开关、图标、进度条直接使用所选原色；其余颜色都由它自动生成",
+  "theme_accent_low_contrast_dark": "在深色模式背景上不易辨认，建议换个更亮的颜色",
+  "theme_accent_low_contrast_light": "在浅色模式背景上不易辨认，建议换个更深的颜色"
 }

@@ -12,7 +12,7 @@ import 'package:flutter_test/flutter_test.dart';
 /// - 角色按用途命名（theme_role_*），四个板块按「主题色 / 阅读器 / 有声书 /
 ///   微调派生色」组织；
 /// - 预览走真机同一条阅读器解析链（resolveReaderThemeColors）；
-/// - 主题色默认钉死为 primary（所见即所得），自动调色调是显式开关。
+/// - 主题色永远就是所选色（钉死为 primary），没有会让实际颜色偏离所选的开关。
 void main() {
   final String source = File(
     'lib/src/pages/implementations/custom_theme_page.dart',
@@ -99,13 +99,12 @@ void main() {
       expect(source.contains('customOverrides:'), isTrue);
     });
 
-    test('主题色默认钉死为 primary，自动调色调是显式开关', () {
-      expect(
-        source.contains('primaryColor: _accentAutoTone ? null : _accent'),
-        isTrue,
-      );
-      expect(source.contains('t.theme_accent_auto_tone'), isTrue);
-      expect(source.contains('t.theme_role_actual_color'), isTrue);
+    test('主题色永远钉死为所选色，没有任何自动调色调开关', () {
+      expect(source.contains('primaryColor: _accent.toARGB32()'), isTrue);
+      expect(source.contains('primary: _accent,'), isTrue);
+      expect(source.contains('_accentAutoTone'), isFalse);
+      expect(source.contains('theme_accent_auto_tone'), isFalse);
+      expect(source.contains('theme_role_actual_color'), isFalse);
     });
 
     test('预览按角色框出影响位置', () {
