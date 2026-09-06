@@ -34,6 +34,28 @@ void main() {
     expect(w.lastDayKeys(30).first, '2026-07-31');
   });
 
+  test('untilNextLocalMidnight：到次日 0 点，恒 > 0；now 读口回构造时刻（BUG-2181）', () {
+    expect(w.now, DateTime(2026, 8, 29, 15, 30));
+    expect(
+      StatWindow.untilNextLocalMidnight(DateTime(2026, 8, 29, 15, 30)),
+      const Duration(hours: 8, minutes: 30),
+    );
+    expect(
+      StatWindow.untilNextLocalMidnight(DateTime(2026, 8, 29, 23, 59, 59, 999)),
+      const Duration(milliseconds: 1),
+    );
+    expect(
+      StatWindow.untilNextLocalMidnight(DateTime(2026, 8, 29)),
+      const Duration(days: 1),
+      reason: '恰在 0 点：下一次午夜是次日，不是 0',
+    );
+    expect(
+      StatWindow.untilNextLocalMidnight(DateTime(2026, 12, 31, 23)),
+      const Duration(hours: 1),
+      reason: '跨年',
+    );
+  });
+
   test('跨月 / 跨年边界按日历减天', () {
     final StatWindow ny = StatWindow(DateTime(2026, 1, 3));
     expect(ny.weekFromKey, '2025-12-28');

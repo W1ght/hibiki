@@ -546,6 +546,15 @@ class _HomeDashboardPageState
   StreamSubscription<void>? _dataChangeSub;
   Timer? _reloadDebounce;
 
+  /// **本轮加载时**的统计窗口（今日目标 / 近 7 日日均都用它，BUG-2181：此前目标
+  /// 卡在 build 时现算 todayKey，跨午夜后分子对着新的一天、热力图等仍是旧聚合）。
+  /// 跨午夜由 [_midnightReload] 触发一次 [_scheduleReload] 整页重拉。
+  StatWindow _statWindow = StatWindow(DateTime.now());
+  Timer? _midnightReload;
+
+  /// 库里同名 ≥2 本的 title（BUG-2178：日明细 sheet 身份分组的吸收否决）。
+  Set<String> _ambiguousBookTitles = const <String>{};
+
   @override
   void initState() {
     super.initState();
@@ -608,6 +617,7 @@ class _HomeDashboardPageState
   @override
   void dispose() {
     _reloadDebounce?.cancel();
+    _midnightReload?.cancel();
     unawaited(_dataChangeSub?.cancel());
     _galgameRepo?.removeListener(_scheduleReload);
     _trackingRevision?.removeListener(_scheduleReload);
@@ -629,9 +639,20 @@ class _HomeDashboardPageState
     }
   }
 
+  /// 到下一个本地午夜整页重拉（每次加载重新排一次；页面已卸载则不动）。
+  void _armMidnightReload(DateTime now) {
+    _midnightReload?.cancel();
+    _midnightReload = Timer(StatWindow.untilNextLocalMidnight(now), () {
+      if (mounted) _scheduleReload();
+    });
+  }
+
   Future<void> _loadDashboardDataUnsafe() async {
     final AppModel appModel = ref.read(appProvider);
     final FushiDatabase db = appModel.database;
+    final DateTime loadedAt = DateTime.now();
+    final StatWindow statWindow = StatWindow(loadedAt);
+    _armMidnightReload(loadedAt);
     final List<VideoBookRow> videos = await widget.videoRepo.listForShelf();
     // v92：学习统计只经统一事实面读取（study_segments + 冻结的 legacy 投影表，
     // 游戏时长来自 galgame_sessions、游戏 hook 字数来自 legacy game 行 + 段），
@@ -684,9 +705,9 @@ class _HomeDashboardPageState
     // 页 _collectionNameForBook 同范式）。书表由事实面加载时顺带取回，同批再取
     // importedAt 喂「最近添加」行（一次查询两用）。
     final List<EpubBookRow> epubRows = facts.epubRows;
-    final Map<String, String> bookKeyByTitle = <String, String>{
-      for (final EpubBookRow r in epubRows) r.title: r.bookKey,
-    };
+    // BUG-2178：同名 ≥2 本的 title 不进反查表（贴给任意一本都是错贴）。
+    final Map<String, String> bookKeyByTitle = uniqueBookKeyByTitle(epubRows);
+    final Set<String> ambiguousTitles = ambiguousBookTitles(epubRows);
     final Map<String, int> epubImportedAtByKey = <String, int>{
       for (final EpubBookRow r in epubRows) r.bookKey: r.importedAt,
     };
@@ -751,6 +772,8 @@ class _HomeDashboardPageState
 
     if (!mounted) return;
     setState(() {
+      _statWindow = statWindow;
+      _ambiguousBookTitles = ambiguousTitles;
       _videos = videos;
       _games = games;
       _tracking = tracking;
@@ -1991,7 +2014,8 @@ class _HomeDashboardPageState
         ),
       );
     }
-    final String todayKey = StatWindow(DateTime.now()).todayKey;
+    // BUG-2181：与本轮加载的聚合同一个窗口（跨午夜由 [_midnightReload] 重拉）。
+    final String todayKey = _statWindow.todayKey;
     final int todayChars = studyGoalCharsForDay(_dailyRows, todayKey);
     final double fraction = (todayChars / goal).clamp(0.0, 1.0);
     return InkWell(
@@ -2047,7 +2071,7 @@ class _HomeDashboardPageState
   /// 无数据日按 0 计入分母（真实反映日均，不是活跃日均）。
   int _recentDailyAverageChars({int days = 7}) {
     if (days <= 0) return 0;
-    final StatWindow w = StatWindow(DateTime.now());
+    final StatWindow w = _statWindow;
     int total = 0;
     for (final String key in w.lastDayKeys(days)) {
       total += studyGoalCharsForDay(_dailyRows, key);
@@ -2082,6 +2106,9 @@ class _HomeDashboardPageState
         onEntryTap: _openStatEntry,
         onEntryDelete: (StatPeriodEntryTarget t) =>
             deleteStatPeriodEntry(db, t),
+        ambiguousTitlesOf: (String kind) => kind == kActivityMediaBook
+            ? _ambiguousBookTitles
+            : const <String>{},
       ),
     );
     // 删过就重拉首页数据：热力图 / 今日目标 / 时间轴都吃同一份事实面。

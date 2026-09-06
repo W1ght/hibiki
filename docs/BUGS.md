@@ -29,10 +29,30 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2015 条。点号进各自文件。
+> 共 2035 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2186](bugs/BUG-2186-stat-summary-ratio-unbounded.md) | ✅ | ✅ | 统计环比无上限显示 ↑9999900% |
+| [BUG-2185](bugs/BUG-2185-stat-heatmap-absolute-levels.md) | ✅ | ✅ | 热力图档位按窗口最大值线性分级，单日爆量后其余全落最浅档 |
+| [BUG-2184](bugs/BUG-2184-pdf-reader-never-add-pages.md) | ✅ | ✅ | PDF 阅读器从不 addPages，页数统计恒 0 |
+| [BUG-2183](bugs/BUG-2183-aggregate-sync-leaks-game-segments.md) | ✅ | ✅ | 聚合同步/备份不按 mediaKind 过滤，游戏段跨端外流 |
+| [BUG-2182](bugs/BUG-2182-study-tombstone-clock-skew.md) | ✅ | ✅ | 统计墓碑用本机墙钟直比对端 updatedAt 且本机碑只进不出 |
+| [BUG-2181](bugs/BUG-2181-stat-pages-stale-window-across-midnight.md) | ✅ | ✅ | 统计页跨午夜后聚合窗口与卡片谓词不一致 |
+| [BUG-2180](bugs/BUG-2180-reader-stats-dialog-cph-threshold.md) | ✅ | ✅ | 阅读器统计浮层今日/累计速度不套最小样本门槛 |
+| [BUG-2179](bugs/BUG-2179-study-clock-cross-hour-addchars-zero-segment.md) | ✅ | ✅ | 跨小时瞬间 addChars 产出 0 时长字数段 |
+| [BUG-2178](bugs/BUG-2178-reading-stats-book-identity-split.md) | ✅ | ✅ | 删书/同名书时按书统计分裂成两条同名条目 |
+| [BUG-2177](bugs/BUG-2177-clear-study-segments-no-tombstone.md) | ✅ | ✅ | 清空全部统计不立墓碑，多端同步整批复活 |
+| [BUG-2176](bugs/BUG-2176-study-segment-upsert-ignores-tombstone.md) | ✅ | ✅ | 删该媒体统计时仍在跑的时钟回写段使整块墓碑出局 |
+| [BUG-2175](bugs/BUG-2175-reader-idle-timeout-snapshot.md) | ✅ | ✅ | 阅读空闲门分钟数在建时钟时快照，阅读中改设置不生效 |
+| [BUG-2174](bugs/BUG-2174-reader-lyrics-mode-no-touch.md) | ✅ | ✅ | 歌词模式听书播放态不喂空闲门，听一小时只计 10 分钟 |
+| [BUG-2173](bugs/BUG-2173-study-clock-start-stale-idle.md) | ✅ | ✅ | StudyClock.start 不重置空闲基准，回前台后首页阅读被空闲门拒绝 |
+| [BUG-2172](bugs/BUG-2172-reader-paused-clock-still-counts-chars.md) | ✅ | ✅ | 手动暂停计时期间翻页仍 addChars 产出 0 时长字数段 |
+| [BUG-2171](bugs/BUG-2171-reader-ensure-clock-restarts-after-lifecycle-stop.md) | ✅ | ✅ | 后台听书跟随经 _ensureStudyClock 重启已停表时钟 |
+| [BUG-2170](bugs/BUG-2170-reader-modal-open-keeps-clock.md) | ✅ | ✅ | 阅读器外观/目录/搜索等面板打开期间阅读时钟照跑 |
+| [BUG-2169](bugs/BUG-2169-reader-reload-poll-unguarded.md) | ✅ | ✅ | 重载在飞时 10s 进度轮询不门控，瞬态 atEnd 可把本章剩余计入 |
+| [BUG-2168](bugs/BUG-2168-reader-restore-clears-read-credit.md) | ✅ | ✅ | 重排/宽变/模式切换恢复完成无条件清零令牌桶额度致漏计 |
+| [BUG-2167](bugs/BUG-2167-reader-paged-style-reanchor-page-drift.md) | ✅ | ✅ | 分页模式缩字号/减边距后 ±1 页 hint 保原页，位置前漂一页并被计入字数 |
 | [BUG-2164](bugs/BUG-2164-asr-pcm-mov-chapter-track-noise.md) | ✅ | ✅ | ASR PCM 抽取 mov 容器混入章节 text 轨，奇数字节标题的整章解成白噪声 |
 | [BUG-2163](bugs/BUG-2163-asr-match-start-anchor-colophon.md) | ✅ | ✅ | ASR 字幕匹配起点被片头出版社名钉到书尾版权页，整本匹配率 0% |
 | [BUG-2162](bugs/BUG-2162-schema-drift-v95-missing-columns.md) | ✅ | ✅ | 用户库 user_version=95 却缺 v52/v57/v87/v88 台阶产物，导入书撞 epub_books 无 language 列 |

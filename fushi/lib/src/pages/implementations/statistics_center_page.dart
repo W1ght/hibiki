@@ -91,6 +91,7 @@ class _StatsOverviewTabState extends ConsumerState<_StatsOverviewTab> {
   String? _error;
   List<StatFact> _daily = <StatFact>[];
   Map<String, String> _bookKeyByTitle = <String, String>{};
+  Set<String> _ambiguousBookTitles = <String>{};
   Map<String, String> _epubUidByBookKey = <String, String>{};
   Map<String, int> _primaryCollectionByEntry = <String, int>{};
   Map<int, String> _collectionNamesById = <int, String>{};
@@ -108,9 +109,9 @@ class _StatsOverviewTabState extends ConsumerState<_StatsOverviewTab> {
       final FushiDatabase db = appModel.database;
       final StatFacts facts = await loadStatFacts(db, activityLimit: 0);
       _daily = facts.daily;
-      _bookKeyByTitle = <String, String>{
-        for (final EpubBookRow r in facts.epubRows) r.title: r.bookKey,
-      };
+      // BUG-2178：同名 ≥2 本的 title 不进反查表（贴给任意一本都是错贴）。
+      _bookKeyByTitle = uniqueBookKeyByTitle(facts.epubRows);
+      _ambiguousBookTitles = ambiguousBookTitles(facts.epubRows);
       _epubUidByBookKey = <String, String>{
         for (final EpubBookRow r in facts.epubRows)
           if (r.uid.isNotEmpty) r.bookKey: r.uid,
@@ -236,6 +237,9 @@ class _StatsOverviewTabState extends ConsumerState<_StatsOverviewTab> {
         onEntryTap: _openEntry,
         onEntryDelete: (StatPeriodEntryTarget t) =>
             deleteStatPeriodEntry(db, t),
+        ambiguousTitlesOf: (String kind) => kind == kActivityMediaBook
+            ? _ambiguousBookTitles
+            : const <String>{},
       ),
     );
     if (deleted && mounted) await _load();

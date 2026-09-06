@@ -18,6 +18,10 @@ class StatWindow {
 
   final DateTime _now;
 
+  /// 构造时刻（页面把加载时的窗口存成字段后，streak 等按「现在」算的函数要吃
+  /// 同一时刻，不能再各自 `DateTime.now()`）。
+  DateTime get now => _now;
+
   /// 今日。
   final String todayKey;
 
@@ -46,6 +50,13 @@ class StatWindow {
   List<String> lastDayKeys(int n) => <String>[
     for (int i = n - 1; i >= 0; i--) _keyDaysAgo(_now, i),
   ];
+
+  /// 到下一个本地午夜的时长（恒 > 0）。统计页 / 首页用它排一次性 Timer：跨午夜后
+  /// 整页重聚合，让加载时的窗口与卡片谓词永远是同一个 [StatWindow]（BUG-2181：
+  /// 此前聚合用加载时刻、卡片谓词在点击时现算，跨午夜后「今日」卡的数和明细对不上）。
+  /// 按日历取次日 0 点（DST 切换日不是恰 24h）。
+  static Duration untilNextLocalMidnight(DateTime now) =>
+      DateTime(now.year, now.month, now.day + 1).difference(now);
 
   static String _keyDaysAgo(DateTime now, int days) =>
       FushiDatabase.statDateKeyOf(
