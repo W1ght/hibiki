@@ -4292,5 +4292,7 @@
   "audiobook_transcribe_running_on_static": "运行于 $provider · 静态融合图",
   "shortcut_action_reader_open_gallery": "打开插图画廊",
   "shortcut_action_reader_open_statistics": "打开阅读统计",
-  "shortcut_action_reader_open_audiobook": "打开有声书面板"
+  "shortcut_action_reader_open_audiobook": "打开有声书面板",
+  "reading_stats_day_reset_hour": "「今日」从几点开始",
+  "reading_stats_day_reset_hour_hint": "这个整点之前的阅读算作前一天。影响统计里的「今日」与近 N 天；只有改设置之后写入的记录按新边界归日。"
 }

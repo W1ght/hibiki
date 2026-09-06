@@ -80,7 +80,7 @@ class _VideoStatisticsPageState extends BasePageState<VideoStatisticsPage> {
   /// 到下一个本地午夜整页重聚合（每次加载重新排一次；页面已卸载则不动）。
   void _armMidnightReload(DateTime now) {
     _midnightReload?.cancel();
-    _midnightReload = Timer(StatWindow.untilNextLocalMidnight(now), () {
+    _midnightReload = Timer(StatWindow.untilNextStatDayBoundary(now), () {
       if (mounted) unawaited(_loadFromDatabase());
     });
   }

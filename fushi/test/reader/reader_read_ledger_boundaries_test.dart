@@ -330,5 +330,134 @@ void main() {
       expect(credited, 800);
       expect(ledger.current, isNull);
     });
+
+    /// 「拖有声书进度条 → 立刻关书」的字数结算时序（沿真实代码路径核对，2026-09-06）。
+    ///
+    /// 生产调用链（`packages/fushi_audio/lib/src/audiobook/audiobook_controller.dart`
+    /// + `fushi/lib/src/pages/implementations/reader_fushi/*.part.dart`）：
+    ///
+    ///  1. 拖进度条 → `AudiobookPlayerController.seekMs`（audiobook_controller.dart:1060）
+    ///     → `_clearExplicitSeekSuppression()` → `_player.seek(...)` → `notifyListeners()`。
+    ///     **seekMs 全程不调 `onExplicitCueJump`**——那是 `skipToCue` 漏斗独有的
+    ///     （audiobook_controller.dart:1134），所以拖进度条**不会**触发
+    ///     `_handleExplicitCueJump`（reader_fushi/audiobook.part.dart:858）的
+    ///     `_readLedger.leave()`。快进快退 `seekRelative`（:1077）复用 seekMs，同理。
+    ///  2. 125ms positionStream tick → `_updateCurrentCue`（:1326）解析出新 cue →
+    ///     `notifyListeners()` → `AudiobookSession._onControllerChanged`
+    ///     （media/audiobook/audiobook_session.dart:224）→ reader `_onCueChanged`
+    ///     （reader_fushi/audiobook.part.dart:554）。
+    ///  3. `_onCueChanged` 的分叉点是 `controller.shouldRevealCurrentCue`
+    ///     （audiobook_controller.dart:1430 = `followAudio && _hasPlayedOnce &&
+    ///     _player.playing && _stopAtPositionMs == null`）：
+    ///     * **reveal=true**（播放中 + 跟随音频开）：先打点 `_reanchorClearedAt`
+    ///       （:680）武装 B-3 窗，再 `AudiobookBridge.highlight(reveal: true)`（:682）
+    ///       把视口滚到目标 cue，最后 `_scheduleRevealProgressRefresh()`（:689）排一个
+    ///       `kReaderReanchorSettleMs`=250ms 的 Timer 补刷 `_refreshProgress`。
+    ///       这 250ms 内跟随滚动的 scroll 回传被 `readerScrollWithinReanchorSettle`
+    ///       （reader_fushi_page.dart:884）在 `_handleReaderScroll` 里直接丢掉，
+    ///       **不会 arrive**。
+    ///     * **reveal=false**（暂停态 / 跟随音频关 / 还没按过播放）：只加高亮 class、
+    ///       不动视口、不打点、不排补刷 → 可见区间没变，本来就不该 arrive。
+    ///  4. 关书 `onSourcePagePop`（reader_fushi_page.dart:2758）：
+    ///     `await _syncAndFlushPosition()` → `_readLedger.leave()` → `_flushReadingStats()`。
+    ///     退出探针 `_syncPositionFromWebViewProgress`（navigation.part.dart:1231）
+    ///     **只写 `_lastProgress*` / 恢复锚，不碰账本**——全语料唯一的 `arrive` 点是
+    ///     `_refreshProgress`（navigation.part.dart:1066，arrive 在 :1152）。`dispose()`（:2639）随后
+    ///     `_readLedger.leave()`（对已清空的账本是 no-op）并 cancel
+    ///     `_revealProgressRefreshTimer`（:2679），未到期的补刷永不执行。
+    ///
+    /// 结论：**250ms 内关书结算的是「拖前那页」**（拖后那页从未 arrive、不计）；
+    /// **250ms 后关书两页都计**（拖前页在补刷 arrive 时结算、拖后页在 leave 时结算）。
+    group('拖音频进度条后关书', () {
+      test('播放跟随 + 250ms 内关书：只结算拖前那页，拖后那页不计', () {
+        sample(0, 0, 400);
+        sample(0, 400, 800); // 拖前停在这一页（当前单元 [400,800)）
+        expect(credited, 400);
+
+        // 拖进度条：seekMs 不走 onExplicitCueJump → 账本零动作，当前单元不变。
+        expect(ledger.current, (400, 800));
+
+        // reveal=true 的跟随滚动落到第 3 章某处；这 250ms 内 scroll 回传被 B-3 窗
+        // 丢掉，补刷 Timer 尚未到期 → 没有任何 arrive。
+        //
+        // 关书：onSourcePagePop 的 leave() 结算「拖前那页」。
+        ledger.leave();
+        expect(credited, 800, reason: '拖前那页 [400,800) 计入；拖后那页从未成为当前单元');
+        expect(ledger.current, isNull);
+
+        // dispose() 的兜底 leave() 对已清空账本是 no-op，不会重复计。
+        ledger.leave();
+        expect(credited, 800);
+      });
+
+      test('播放跟随 + 250ms 后关书：补刷 arrive 结算拖前页，关书 leave 结算拖后页', () {
+        sample(0, 0, 400);
+        sample(0, 400, 800);
+        expect(credited, 400);
+
+        // 250ms 到期 → _scheduleRevealProgressRefresh 的 Timer 触发 _refreshProgress
+        // → arrive(拖后那页)：切换单元的同时结算拖前那页。
+        sample(2, 1200, 1600);
+        expect(credited, 800, reason: '拖前那页 [400,800) 在补刷 arrive 时结算');
+
+        ledger.leave();
+        expect(credited, 1200, reason: '拖后那页 [4200,4600) 翻走（关书）时全额计');
+      });
+
+      test('暂停态 / 跟随音频关（reveal=false）：视口不动，关书仍只结算当前那页', () {
+        sample(1, 0, 500);
+        expect(credited, 0);
+
+        // reveal=false → 只换高亮 class，不滚视口、不打点、不排补刷 → 无 arrive。
+        ledger.leave();
+        expect(credited, 500, reason: '可见区间没变，结算的就是拖前 = 拖后的同一页');
+      });
+
+      test('拖到同一页内（视口未动）：补刷 arrive 同区间是 no-op，关书只计一次', () {
+        sample(1, 0, 500);
+        sample(1, 0, 500); // 250ms 后的补刷读回同一个可见区间
+        expect(ledger.current, (1000, 1500));
+        ledger.leave();
+        expect(credited, 500);
+      });
+
+      test('拖回本会话已读过的位置：补刷 arrive 落在并集内 → 翻走时 0', () {
+        sample(0, 0, 400);
+        sample(0, 400, 800);
+        sample(0, 800, 1000);
+        expect(credited, 800);
+
+        // 拖回开头，250ms 后补刷 arrive 到已读页；关书 leave 结算 → 并集已覆盖。
+        sample(0, 0, 400);
+        expect(credited, 1000, reason: '[800,1000) 在 arrive 切换时结算');
+        ledger.leave();
+        expect(credited, 1000, reason: '重听重读不重复计');
+      });
+
+      test('与显式跳句（skipToCue）总额等价：leave 提前只改结算时刻，不改总额', () {
+        // A：拖进度条（无 onExplicitCueJump）。
+        sample(0, 0, 400);
+        sample(2, 1200, 1600); // 250ms 后补刷
+        ledger.leave();
+        final int viaSeek = credited;
+
+        credited = 0;
+        ledger = ReadUnitLedger(
+          onCredit: (List<(int, int)> fresh) =>
+              credited += readUnitsLength(fresh),
+        );
+
+        // B：点句跳转（skipToCue → onExplicitCueJump → leave）。
+        sample(0, 0, 400);
+        ledger.leave(); // _handleExplicitCueJump
+        sample(2, 1200, 1600);
+        ledger.leave();
+        expect(
+          credited,
+          viaSeek,
+          reason: 'arrive 自带「切换即结算」，提前 leave 只是把同一笔挪到跳转那一刻',
+        );
+      });
+    });
   });
 }
