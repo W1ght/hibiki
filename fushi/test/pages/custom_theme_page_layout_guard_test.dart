@@ -12,7 +12,8 @@ import 'package:flutter_test/flutter_test.dart';
 /// - 角色按用途命名（theme_role_*），四个板块按「主题色 / 阅读器 / 有声书 /
 ///   微调派生色」组织；
 /// - 预览走真机同一条阅读器解析链（resolveReaderThemeColors）；
-/// - 主题色永远就是所选色（钉死为 primary），没有会让实际颜色偏离所选的开关。
+/// - 主题色默认就是所选色（钉死为 primary）；「自动调色调」「跟随系统取色」是显式开关；
+///   「界面背景」可钉死 surface（纯白等）。
 void main() {
   final String source = File(
     'lib/src/pages/implementations/custom_theme_page.dart',
@@ -55,9 +56,10 @@ void main() {
       expect(fineTune, greaterThan(audiobook));
     });
 
-    test('九个角色全部用 theme_role_* 文案，不再出现 Material 术语 key', () {
+    test('十个角色全部用 theme_role_* 文案，不再出现 Material 术语 key', () {
       for (final String key in <String>[
         'theme_role_accent',
+        'theme_role_surface',
         'theme_role_reader_text',
         'theme_role_reader_background',
         'theme_role_link',
@@ -99,12 +101,28 @@ void main() {
       expect(source.contains('customOverrides:'), isTrue);
     });
 
-    test('主题色永远钉死为所选色，没有任何自动调色调开关', () {
-      expect(source.contains('primaryColor: _accent.toARGB32()'), isTrue);
-      expect(source.contains('primary: _accent,'), isTrue);
-      expect(source.contains('_accentAutoTone'), isFalse);
-      expect(source.contains('theme_accent_auto_tone'), isFalse);
-      expect(source.contains('theme_role_actual_color'), isFalse);
+    test('主题色默认钉死为所选色；自动调色调 / 跟随系统取色是显式开关', () {
+      expect(
+        source.contains('primaryColor: _accentAutoTone ? null : _accent'),
+        isTrue,
+      );
+      expect(source.contains('bool _accentAutoTone = false'), isTrue);
+      expect(source.contains('t.theme_accent_auto_tone'), isTrue);
+      expect(source.contains('t.theme_role_actual_color'), isTrue);
+      expect(source.contains('t.theme_accent_follow_system'), isTrue);
+      expect(
+        source.contains('followSystemAccent: _followSystemAccent'),
+        isTrue,
+      );
+    });
+
+    test('界面背景角色钉死 surface，与真机同一派生链', () {
+      expect(source.contains('_ThemeRole.surface'), isTrue);
+      expect(
+        source.contains('surface: _overrides[_ThemeRole.surface]'),
+        isTrue,
+      );
+      expect(source.contains('t.theme_role_surface'), isTrue);
     });
 
     test('预览按角色框出影响位置', () {

@@ -12,7 +12,9 @@ import '../helpers/test_platform_services.dart';
 
 /// 自定义主题编辑页重设计（2026-09）的行为测试：
 /// - 主题色默认所见即所得（保存时 primaryColor == seed == 所选色）；
-/// - 没有任何「自动调色调」开关：只有 seed 的旧条目取它实际显示的 primary 钉死；
+/// - 「按明暗自动调整色调」默认关；开了只存 seed（primaryColor null）；只有 seed 的
+///   旧条目打开时该开关自动为开（还原其派生语义）；
+/// - 「界面背景」选纯白 → 写 surfaceColor；「跟随系统取色」→ 写 followSystemAccent；
 /// - 角色行默认「跟随主题」（条目字段 null），在选色弹窗里改色后落进条目；
 /// - 「恢复跟随主题」把字段清回 null；
 /// - 宽屏（≥ 900）点角色行不弹窗，右栏选色器直接切到该角色。
@@ -132,6 +134,22 @@ Future<void> _tapRow(WidgetTester tester, String title) async {
   await tester.pumpAndSettle();
 }
 
+/// 设置分组里第 N 只开关（预览卡里还有一只只读的示意开关，不能按类型取 first）。
+Finder _settingsSwitch(int index) => find
+    .descendant(
+      of: find.byType(AdaptiveSettingsSwitchRow),
+      matching: find.byType(Switch),
+    )
+    .at(index);
+
+Future<void> _tapSettingsSwitch(WidgetTester tester, int index) async {
+  final Finder toggle = _settingsSwitch(index);
+  await tester.scrollUntilVisible(toggle, 120, scrollable: _verticalScrollable);
+  await tester.pumpAndSettle();
+  await tester.tap(toggle);
+  await tester.pumpAndSettle();
+}
+
 /// 在选色面板上点一下（HSV 面板右上角 = 高饱和高亮度），产生一个非默认颜色。
 Future<void> _pickInArea(WidgetTester tester) async {
   final Finder area = find.byType(ColorPickerArea).last;
@@ -164,6 +182,64 @@ void main() {
       expect(saved.containerColor, isNull);
     });
 
+    testWidgets('开启「按明暗自动调整色调」→ 只存 seed，不钉 primary，行尾出现实际显示色点', (
+      WidgetTester tester,
+    ) async {
+      final _RecordingAppModel appModel = _RecordingAppModel();
+      await tester.pumpWidget(_host(appModel, const CustomThemePage()));
+      await tester.pumpAndSettle();
+      expect(find.byTooltip(t.theme_role_actual_color), findsNothing);
+
+      // 第 0 只是「跟随系统取色」，第 1 只是「自动调整色调」。
+      await _tapSettingsSwitch(tester, 1);
+      expect(find.byTooltip(t.theme_role_actual_color), findsOneWidget);
+
+      await _tapApply(tester);
+      final CustomThemeEntry saved = appModel.upserts.single;
+      expect(saved.seed, kCustomThemeDefaultSeed);
+      expect(saved.primaryColor, isNull);
+    });
+
+    testWidgets('「跟随系统取色」→ 主题色行显示系统色并上锁，应用写 followSystemAccent', (
+      WidgetTester tester,
+    ) async {
+      final _RecordingAppModel appModel = _RecordingAppModel();
+      await tester.pumpWidget(_host(appModel, const CustomThemePage()));
+      await tester.pumpAndSettle();
+
+      await _tapSettingsSwitch(tester, 0);
+      expect(find.byIcon(Icons.lock_outline), findsWidgets);
+
+      await _tapApply(tester);
+      final CustomThemeEntry saved = appModel.upserts.single;
+      expect(saved.followSystemAccent, isTrue);
+      // 所选色仍作兜底存着（系统不提供取色时用）。
+      expect(saved.seed, kCustomThemeDefaultSeed);
+    });
+
+    testWidgets('「界面背景」选纯白 → 应用写 surfaceColor', (WidgetTester tester) async {
+      final _RecordingAppModel appModel = _RecordingAppModel();
+      await tester.pumpWidget(_host(appModel, const CustomThemePage()));
+      await tester.pumpAndSettle();
+
+      await _tapRow(tester, t.theme_role_surface);
+      expect(find.byType(ColorPickerArea), findsOneWidget);
+      // 预设第一格是纯白。
+      final Finder white = find.byWidgetPredicate(
+        (Widget w) =>
+            w is FushiColorSwatch &&
+            w.onTap != null &&
+            w.color.toARGB32() == 0xFFFFFFFF,
+      );
+      await tester.tap(white.first);
+      await tester.pumpAndSettle();
+      await tester.tap(find.text(t.dialog_done));
+      await tester.pumpAndSettle();
+
+      await _tapApply(tester);
+      expect(appModel.upserts.single.surfaceColor, 0xFFFFFFFF);
+    });
+
     testWidgets('已钉主色的旧条目：主题色就是钉的那个，重存后 seed 对齐', (WidgetTester tester) async {
       const CustomThemeEntry existing = CustomThemeEntry(
         id: 'ct-1',
@@ -187,7 +263,7 @@ void main() {
       expect(saved.seed, 0xFF112233);
     });
 
-    testWidgets('只有 seed 的旧条目：主题色取它当时实际显示的 primary 并钉死', (
+    testWidgets('只有 seed 的旧条目：自动调色调开关自动为开，重存仍只存 seed', (
       WidgetTester tester,
     ) async {
       const CustomThemeEntry legacy = CustomThemeEntry(
@@ -203,15 +279,13 @@ void main() {
         _host(appModel, const CustomThemePage(themeId: 'ct-2')),
       );
       await tester.pumpAndSettle();
+      final Switch autoTone = tester.widget<Switch>(_settingsSwitch(1));
+      expect(autoTone.value, isTrue);
 
       await _tapApply(tester);
       final CustomThemeEntry saved = appModel.upserts.single;
-      final int shownBefore = ColorScheme.fromSeed(
-        seedColor: const Color(0xFF336699),
-        brightness: Brightness.light,
-      ).primary.toARGB32();
-      expect(saved.primaryColor, shownBefore);
-      expect(saved.seed, shownBefore);
+      expect(saved.primaryColor, isNull);
+      expect(saved.seed, 0xFF336699);
     });
   });
 

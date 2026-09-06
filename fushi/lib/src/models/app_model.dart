@@ -271,6 +271,7 @@ ColorScheme buildFushiColorScheme({
   Color? secondary,
   Color? tertiary,
   Color? primaryContainer,
+  Color? surface,
 }) => theme_notifier.buildFushiColorScheme(
   seedColor: seedColor,
   brightness: brightness,
@@ -279,6 +280,7 @@ ColorScheme buildFushiColorScheme({
   secondary: secondary,
   tertiary: tertiary,
   primaryContainer: primaryContainer,
+  surface: surface,
 );
 
 /// 书架长按「悬浮字幕」启动后台听书的结果（供 UI 决定提示）。
@@ -3342,6 +3344,8 @@ class AppModel with ChangeNotifier {
       themeNotifier.activeCustomThemeSelectionColor;
   Color? get activeCustomThemeLinkColor =>
       themeNotifier.activeCustomThemeLinkColor;
+  Color? get activeCustomThemeSurfaceColor =>
+      themeNotifier.activeCustomThemeSurfaceColor;
 
   Color? get customThemeFontColor => themeNotifier.customThemeFontColor;
   Future<void> setCustomThemeFontColor(Color? c) =>

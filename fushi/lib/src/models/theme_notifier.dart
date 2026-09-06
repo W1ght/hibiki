@@ -69,11 +69,16 @@ typedef _FushiSchemeKey = (
   int? secondary,
   int? tertiary,
   int? primaryContainer,
+  int? surface,
 );
 final Map<_FushiSchemeKey, ColorScheme> _hibikiSchemeCache =
     <_FushiSchemeKey, ColorScheme>{};
 const int _hibikiSchemeCacheLimit = 64;
 
+/// [surface]：用户钉死的界面底色（页面 / 卡片 / 菜单）。给了就用
+/// [deriveSurfaceRolesFrom] 从它推出整套中性角色（容器梯度、文字、描边、反色），
+/// 不再从 seed 的中性调色板取——那套永远带主题色相（tonalSpot neutral chroma 6），
+/// 用户想要纯白 / 纯黑底色时没有别的路。
 ColorScheme buildFushiColorScheme({
   required Color seedColor,
   required Brightness brightness,
@@ -82,6 +87,7 @@ ColorScheme buildFushiColorScheme({
   Color? secondary,
   Color? tertiary,
   Color? primaryContainer,
+  Color? surface,
 }) {
   final _FushiSchemeKey key = (
     seedColor.toARGB32(),
@@ -91,6 +97,7 @@ ColorScheme buildFushiColorScheme({
     secondary?.toARGB32(),
     tertiary?.toARGB32(),
     primaryContainer?.toARGB32(),
+    surface?.toARGB32(),
   );
   final ColorScheme? cached = _hibikiSchemeCache[key];
   if (cached != null) return cached;
@@ -108,9 +115,19 @@ ColorScheme buildFushiColorScheme({
   if (_hibikiSchemeCache.length >= _hibikiSchemeCacheLimit) {
     _hibikiSchemeCache.remove(_hibikiSchemeCache.keys.first);
   }
-  return _hibikiSchemeCache[key] = base.copyWith(
+  final SurfaceRoles? surfaceRoles = surface != null
+      ? deriveSurfaceRolesFrom(surface)
+      : null;
+  final ColorScheme withRoles = base.copyWith(
     primary: primary ?? base.primary,
     onPrimary: primary != null ? _readableOnColor(primary) : base.onPrimary,
+    // 钉死主色后，从主色派生的两个角色也必须跟着走：inversePrimary 是视频播放器
+    // 浅色主题的控件强调色（video_chrome_colors.dart），surfaceTint 决定 M3 表面
+    // 上叠的主题色——否则用户改了主题色，播放器仍是 seed 派生的旧色。
+    inversePrimary: primary != null
+        ? _inversePrimaryFor(primary, brightness)
+        : base.inversePrimary,
+    surfaceTint: primary ?? base.surfaceTint,
     secondary: secondary ?? base.secondary,
     onSecondary: secondary != null
         ? _readableOnColor(secondary)
@@ -129,6 +146,77 @@ ColorScheme buildFushiColorScheme({
     onPrimaryContainer: primaryContainer != null
         ? _readableOnColor(primaryContainer)
         : base.onPrimaryContainer,
+  );
+  if (surfaceRoles == null) return _hibikiSchemeCache[key] = withRoles;
+  return _hibikiSchemeCache[key] = withRoles.copyWith(
+    surface: surfaceRoles.surface,
+    surfaceDim: surfaceRoles.surfaceDim,
+    surfaceBright: surfaceRoles.surfaceBright,
+    surfaceContainerLowest: surfaceRoles.surfaceContainerLowest,
+    surfaceContainerLow: surfaceRoles.surfaceContainerLow,
+    surfaceContainer: surfaceRoles.surfaceContainer,
+    surfaceContainerHigh: surfaceRoles.surfaceContainerHigh,
+    surfaceContainerHighest: surfaceRoles.surfaceContainerHighest,
+    onSurface: surfaceRoles.onSurface,
+    onSurfaceVariant: surfaceRoles.onSurfaceVariant,
+    outline: surfaceRoles.outline,
+    outlineVariant: surfaceRoles.outlineVariant,
+    inverseSurface: surfaceRoles.inverseSurface,
+    onInverseSurface: surfaceRoles.onInverseSurface,
+    // 用户钉了底色就不该再被 M3 的主题色叠层染回去。
+    surfaceTint: Colors.transparent,
+  );
+}
+
+/// 钉死主色的反色主色：同色相/彩度，色调换到另一明暗档（M3 primary 亮 40 / 暗 80）。
+Color _inversePrimaryFor(Color primary, Brightness brightness) {
+  final Hct hct = Hct.fromInt(primary.toARGB32());
+  final double tone = brightness == Brightness.dark ? 40 : 80;
+  return Color(Hct.from(hct.hue, hct.chroma, tone).toInt());
+}
+
+/// 从一个用户指定的底色推出的整套中性角色（界面背景可钉死）。
+typedef SurfaceRoles = ({
+  Color surface,
+  Color surfaceDim,
+  Color surfaceBright,
+  Color surfaceContainerLowest,
+  Color surfaceContainerLow,
+  Color surfaceContainer,
+  Color surfaceContainerHigh,
+  Color surfaceContainerHighest,
+  Color onSurface,
+  Color onSurfaceVariant,
+  Color outline,
+  Color outlineVariant,
+  Color inverseSurface,
+  Color onInverseSurface,
+});
+
+/// 以 [surface] 为页面底色，按 M3 容器层级向对比端（底色偏亮 → 黑，偏暗 → 白）
+/// 各混入少量灰推出分组 / 卡片 / 搜索框 / 菜单四级底色与文字、描边、反色。
+/// 层级比例参照 M3 亮色 tone 100/96/94/92/90 的间距；纯白底下卡片是极浅灰、
+/// 层次仍在。编辑页预览与词典弹窗都复用它，保证所见即所得。
+SurfaceRoles deriveSurfaceRolesFrom(Color surface) {
+  final bool dark =
+      ThemeData.estimateBrightnessForColor(surface) == Brightness.dark;
+  final Color contrast = dark ? Colors.white : Colors.black;
+  Color step(double t) => Color.lerp(surface, contrast, t)!;
+  return (
+    surface: surface,
+    surfaceDim: step(0.13),
+    surfaceBright: surface,
+    surfaceContainerLowest: surface,
+    surfaceContainerLow: step(0.03),
+    surfaceContainer: step(0.05),
+    surfaceContainerHigh: step(0.08),
+    surfaceContainerHighest: step(0.11),
+    onSurface: dark ? const Color(0xDEFFFFFF) : const Color(0xDE000000),
+    onSurfaceVariant: dark ? const Color(0x99FFFFFF) : const Color(0x99000000),
+    outline: step(0.5),
+    outlineVariant: step(0.2),
+    inverseSurface: step(0.85),
+    onInverseSurface: surface,
   );
 }
 
@@ -222,6 +310,8 @@ class CustomThemeEntry {
     this.containerColor,
     this.sentenceAudioHighlightColor,
     this.linkColor,
+    this.surfaceColor,
+    this.followSystemAccent = false,
   });
 
   final String id;
@@ -237,6 +327,14 @@ class CustomThemeEntry {
   final int? sentenceAudioHighlightColor;
   final int? linkColor;
 
+  /// 界面底色（页面 / 卡片 / 菜单），null = 由 seed 派生。见 [deriveSurfaceRolesFrom]。
+  final int? surfaceColor;
+
+  /// 主题色跟随系统取色（Android 壁纸 Material You / 桌面 OS 强调色）：为 true 时
+  /// seed 与钉死的主色都取 [ThemeNotifier.systemPrimaryColor]，[seed] /
+  /// [primaryColor] 只作系统不提供时的兜底。
+  final bool followSystemAccent;
+
   CustomThemeEntry copyWith({String? id, String? name, int? seed}) {
     return CustomThemeEntry(
       id: id ?? this.id,
@@ -251,6 +349,8 @@ class CustomThemeEntry {
       containerColor: containerColor,
       sentenceAudioHighlightColor: sentenceAudioHighlightColor,
       linkColor: linkColor,
+      surfaceColor: surfaceColor,
+      followSystemAccent: followSystemAccent,
     );
   }
 
@@ -270,6 +370,8 @@ class CustomThemeEntry {
     if (sentenceAudioHighlightColor != null)
       'sentenceAudioHighlightColor': sentenceAudioHighlightColor,
     if (linkColor != null) 'linkColor': linkColor,
+    if (surfaceColor != null) 'surfaceColor': surfaceColor,
+    if (followSystemAccent) 'followSystemAccent': true,
   };
 
   factory CustomThemeEntry.fromJson(Map<String, dynamic> json) {
@@ -287,6 +389,8 @@ class CustomThemeEntry {
       containerColor: asInt(json['containerColor']),
       sentenceAudioHighlightColor: asInt(json['sentenceAudioHighlightColor']),
       linkColor: asInt(json['linkColor']),
+      surfaceColor: asInt(json['surfaceColor']),
+      followSystemAccent: json['followSystemAccent'] == true,
     );
   }
 }
@@ -908,7 +1012,9 @@ class ThemeNotifier extends ChangeNotifier {
   Color get _seedColor {
     if (isCustomThemeKey(appThemeKey)) {
       final CustomThemeEntry? entry = activeCustomThemeEntry;
-      if (entry != null) return Color(entry.seed);
+      if (entry != null) {
+        return _followedSystemAccent(entry) ?? Color(entry.seed);
+      }
       // No list entry yet (pre-migration race): fall back to the legacy flat
       // pref so behavior is identical to before TODO-930.
       return customThemeSeed;
@@ -959,7 +1065,14 @@ class ThemeNotifier extends ChangeNotifier {
         (CustomThemeEntry e) => e.containerColor,
         () => customThemeContainerColor,
       ),
+      surface: activeCustomThemeSurfaceColor,
     );
+  }
+
+  /// [entry] 开了「跟随系统取色」且系统真有色时返回系统色，否则 null。
+  Color? _followedSystemAccent(CustomThemeEntry entry) {
+    if (!entry.followSystemAccent) return null;
+    return systemPrimaryColor;
   }
 
   /// BUG-2187：「当前生效的自定义主题」里某个角色色的**唯一**解析链——
@@ -983,11 +1096,22 @@ class ThemeNotifier extends ChangeNotifier {
     return legacy();
   }
 
-  /// 当前生效自定义主题钉死的主色（null = 由 seed 派生）。
-  Color? get activeCustomThemePrimaryColor => _activeCustomRole(
-    (CustomThemeEntry e) => e.primaryColor,
-    () => customThemePrimaryColor,
-  );
+  /// 当前生效自定义主题钉死的主色（null = 由 seed 派生，即「按明暗自动调整色调」）。
+  /// 跟随系统取色时，钉死的值换成系统色；是否钉死仍由 `primaryColor != null` 决定。
+  Color? get activeCustomThemePrimaryColor {
+    final Color? pinned = _activeCustomRole(
+      (CustomThemeEntry e) => e.primaryColor,
+      () => customThemePrimaryColor,
+    );
+    if (pinned == null) return null;
+    final CustomThemeEntry? entry = activeCustomThemeEntry;
+    if (entry == null) return pinned;
+    return _followedSystemAccent(entry) ?? pinned;
+  }
+
+  /// 当前生效自定义主题钉死的界面底色（null = 由 seed 派生）。
+  Color? get activeCustomThemeSurfaceColor =>
+      _activeCustomRole((CustomThemeEntry e) => e.surfaceColor, () => null);
 
   /// 当前生效自定义主题的阅读器正文字色（null = 跟随主题）。
   Color? get activeCustomThemeFontColor => _activeCustomRole(

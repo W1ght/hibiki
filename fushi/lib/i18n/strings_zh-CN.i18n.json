@@ -4268,7 +4268,6 @@
   "shortcut_action_reader_open_gallery": "打开插图画廊",
   "shortcut_action_reader_open_statistics": "打开阅读统计",
   "shortcut_action_reader_open_audiobook": "打开有声书面板",
-  "theme_section_accent": "主题色",
   "theme_section_reader": "阅读器",
   "theme_section_audiobook": "有声书",
   "theme_section_fine_tune": "微调派生色",
@@ -4298,5 +4297,15 @@
   "theme_preview_hint": "点任一颜色，预览里会框出它影响的位置",
   "theme_role_accent_desc": "按钮、开关、图标、进度条直接使用所选原色；其余颜色都由它自动生成",
   "theme_accent_low_contrast_dark": "在深色模式背景上不易辨认，建议换个更亮的颜色",
-  "theme_accent_low_contrast_light": "在浅色模式背景上不易辨认，建议换个更深的颜色"
+  "theme_accent_low_contrast_light": "在浅色模式背景上不易辨认，建议换个更深的颜色",
+  "theme_section_accent": "界面配色",
+  "theme_role_surface": "界面背景",
+  "theme_role_surface_desc": "页面、卡片、菜单的底色；其余层级由它推出微弱深浅",
+  "theme_accent_follow_system": "主题色跟随系统取色",
+  "theme_accent_follow_system_desc": "Android 用壁纸取色（Material You），桌面用系统强调色，代替手动选的主题色",
+  "theme_accent_follow_system_unavailable": "当前设备没有提供系统取色",
+  "theme_accent_auto_tone": "按明暗模式自动调整色调",
+  "theme_accent_auto_tone_desc": "关闭：直接使用所选原色。开启：为浅色/深色模式各自生成色调，实际显示会与所选不同",
+  "theme_role_actual_color": "实际显示",
+  "theme_preview_card": "卡片"
 }

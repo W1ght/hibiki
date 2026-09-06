@@ -2655,20 +2655,41 @@ extension _ReaderChrome on _ReaderFushiPageState {
     if (mounted) _rebuild(() {});
   }
 
+  /// 词典弹窗配色 = app 真实 ColorScheme（主题色 / 高亮 / 描边跟用户主题）+ 纸色
+  /// 与字色盖上去的中性角色。以前是拿纸色当 seed 重造整套 ColorScheme，弹窗里的
+  /// 按钮、查到词高亮全由纸色派生，与用户设的主题色完全脱钩（改了主题色最高频的
+  /// 查词面不变色）。中性梯度与编辑页预览 / ColorScheme 用同一个
+  /// [deriveSurfaceRolesFrom]，所见即所得。
   void _syncDictionaryTheme() {
     final Color bg = _themeBackgroundColor();
     final Color textColor = _themeTextColor();
     final Brightness brightness = _isReaderThemeDark
         ? Brightness.dark
         : Brightness.light;
+    final SurfaceRoles paper = deriveSurfaceRolesFrom(bg);
     appModel.setOverrideDictionaryColor(bg);
     appModel.setOverrideDictionaryTheme(
       ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: bg,
-          brightness: brightness,
-        ).copyWith(onSurface: textColor),
+        colorScheme: appModel
+            .buildColorScheme(brightness)
+            .copyWith(
+              surface: paper.surface,
+              surfaceDim: paper.surfaceDim,
+              surfaceBright: paper.surfaceBright,
+              surfaceContainerLowest: paper.surfaceContainerLowest,
+              surfaceContainerLow: paper.surfaceContainerLow,
+              surfaceContainer: paper.surfaceContainer,
+              surfaceContainerHigh: paper.surfaceContainerHigh,
+              surfaceContainerHighest: paper.surfaceContainerHighest,
+              onSurface: textColor,
+              onSurfaceVariant: paper.onSurfaceVariant,
+              outline: paper.outline,
+              outlineVariant: paper.outlineVariant,
+              inverseSurface: paper.inverseSurface,
+              onInverseSurface: paper.onInverseSurface,
+              surfaceTint: Colors.transparent,
+            ),
       ),
     );
   }

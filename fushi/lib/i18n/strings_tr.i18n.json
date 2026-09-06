@@ -4268,7 +4268,6 @@
   "shortcut_action_reader_open_gallery": "Open illustrations gallery",
   "shortcut_action_reader_open_statistics": "Open reading statistics",
   "shortcut_action_reader_open_audiobook": "Open audiobook panel",
-  "theme_section_accent": "Theme color",
   "theme_section_reader": "Reader",
   "theme_section_audiobook": "Audiobook",
   "theme_section_fine_tune": "Fine-tune derived colors",
@@ -4298,5 +4297,15 @@
   "theme_preview_hint": "Pick a color to see where it is used outlined in the preview.",
   "theme_role_accent_desc": "Used exactly as picked for buttons, switches, icons and progress bars. Every other color is derived from it.",
   "theme_accent_low_contrast_dark": "Hard to see on the dark-mode background. Pick a lighter color.",
-  "theme_accent_low_contrast_light": "Hard to see on the light-mode background. Pick a darker color."
+  "theme_accent_low_contrast_light": "Hard to see on the light-mode background. Pick a darker color.",
+  "theme_section_accent": "Interface colors",
+  "theme_role_surface": "Interface background",
+  "theme_role_surface_desc": "Base color of pages, cards and menus; the other layers get a faint tint of gray from it.",
+  "theme_accent_follow_system": "Follow the system accent color",
+  "theme_accent_follow_system_desc": "Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.",
+  "theme_accent_follow_system_unavailable": "The system does not expose an accent color on this device.",
+  "theme_accent_auto_tone": "Adjust tone for light and dark mode",
+  "theme_accent_auto_tone_desc": "Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.",
+  "theme_role_actual_color": "Shown as",
+  "theme_preview_card": "Card"
 }

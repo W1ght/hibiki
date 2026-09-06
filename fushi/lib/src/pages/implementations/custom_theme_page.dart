@@ -14,6 +14,9 @@ enum _ThemeRole {
   /// 主题色：钉死为 ColorScheme.primary（或按明暗自动调色调时作 seed）。
   accent,
 
+  /// 界面底色：页面 / 卡片 / 菜单，其余中性层级由它推出（[deriveSurfaceRolesFrom]）。
+  surface,
+
   /// 阅读器正文字色（含阅读器 chrome 图标/文字、词典弹窗 onSurface）。
   readerText,
 
@@ -59,9 +62,14 @@ class CustomThemePage extends BasePage {
 }
 
 class _CustomThemePageState extends BasePageState<CustomThemePage> {
-  /// 用户选的主题色 = 最终 ColorScheme.primary，永远所见即所得；同时作 seed 派生
-  /// 其余颜色。不再有「按明暗自动调色调」这类会让实际颜色偏离所选的开关。
+  /// 用户选的主题色。`_accentAutoTone` 关闭（默认）时它就是最终 primary，所见即
+  /// 所得；开启时只作 seed，由 Material 按明暗各自派生色调。
   late Color _accent;
+  bool _accentAutoTone = false;
+
+  /// 主题色跟随系统取色（Android 壁纸 / 桌面 OS 强调色）。开启时 [_accent] 只是
+  /// 系统不提供时的兜底，真正用的是 [_resolvedAccent]。
+  bool _followSystemAccent = false;
 
   /// 可选角色的显式覆盖；null = 跟随主题。`audioHighlight` 是全局偏好，
   /// 改动立即写穿 AppModel（TODO-977），其余随「应用」一起落进条目。
@@ -117,19 +125,17 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
     _loadEntry(entry, audioHighlight: appModelNoUpdate.audioHighlightColor);
   }
 
-  /// 把一条条目装进编辑状态。已钉主色的条目主题色 = 钉的那个；只有 seed 的旧条目
-  /// （TODO-930 之前的派生语义）取它在当前明暗下**实际显示**的 primary 钉死——
-  /// 用户看到的就是原来那个颜色，保存后也不会再被 Material 重算。
+  /// 把一条条目装进编辑状态。已钉主色的条目主题色 = 钉的那个（自动调色调关）；
+  /// 只有 seed 的条目（旧数据 / 分享码）主题色 = seed 且自动调色调开——正好还原
+  /// 它原来的观感。
   void _loadEntry(CustomThemeEntry entry, {required Color? audioHighlight}) {
     Color? roleColor(int? fromEntry) =>
         fromEntry != null ? Color(fromEntry) : null;
-    _accent = entry.primaryColor != null
-        ? Color(entry.primaryColor!)
-        : ColorScheme.fromSeed(
-            seedColor: Color(entry.seed),
-            brightness: _previewBrightness,
-          ).primary;
+    _accent = Color(entry.primaryColor ?? entry.seed);
+    _accentAutoTone = entry.primaryColor == null;
+    _followSystemAccent = entry.followSystemAccent;
     _overrides
+      ..[_ThemeRole.surface] = roleColor(entry.surfaceColor)
       ..[_ThemeRole.readerText] = roleColor(entry.fontColor)
       ..[_ThemeRole.readerBackground] = roleColor(entry.bgColor)
       ..[_ThemeRole.link] = roleColor(entry.linkColor)
@@ -150,17 +156,25 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
 
   // ── 派生：ColorScheme / 阅读器色 / 各角色实际显示色 ──
 
+  /// 系统是否提供取色（Android 壁纸 / 桌面强调色）。
+  Color? get _systemAccent => appModelNoUpdate.systemPrimaryColor;
+
+  /// 实际参与派生的主题色：跟随系统时是系统色（系统没有则回落所选色）。
+  Color get _resolvedAccent =>
+      _followSystemAccent ? (_systemAccent ?? _accent) : _accent;
+
   ColorScheme _schemeFor(Brightness brightness) {
     // 墨水屏模式下真机整套 ColorScheme 会被黑白顶掉，预览必须同样如此，
     // 否则编辑页彩色、书里黑白。
     if (appModelNoUpdate.einkMode) return buildEinkColorScheme(brightness);
     return buildFushiColorScheme(
-      seedColor: _accent,
+      seedColor: _resolvedAccent,
       brightness: brightness,
-      primary: _accent,
+      primary: _accentAutoTone ? null : _resolvedAccent,
       secondary: _overrides[_ThemeRole.secondary],
       tertiary: _overrides[_ThemeRole.tertiary],
       primaryContainer: _overrides[_ThemeRole.container],
+      surface: _overrides[_ThemeRole.surface],
     );
   }
 
@@ -190,6 +204,8 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
     switch (role) {
       case _ThemeRole.accent:
         return cs.primary;
+      case _ThemeRole.surface:
+        return cs.surface;
       case _ThemeRole.readerText:
         return reader.fg;
       case _ThemeRole.readerBackground:
@@ -228,6 +244,8 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
     switch (role) {
       case _ThemeRole.accent:
         return t.theme_role_accent;
+      case _ThemeRole.surface:
+        return t.theme_role_surface;
       case _ThemeRole.readerText:
         return t.theme_role_reader_text;
       case _ThemeRole.readerBackground:
@@ -251,6 +269,8 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
     switch (role) {
       case _ThemeRole.accent:
         return t.theme_role_accent_desc;
+      case _ThemeRole.surface:
+        return t.theme_role_surface_desc;
       case _ThemeRole.readerText:
         return t.theme_role_reader_text_desc;
       case _ThemeRole.readerBackground:
@@ -274,6 +294,8 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
     switch (role) {
       case _ThemeRole.accent:
         return Icons.palette_outlined;
+      case _ThemeRole.surface:
+        return Icons.web_asset_outlined;
       case _ThemeRole.readerText:
         return Icons.text_fields;
       case _ThemeRole.readerBackground:
@@ -301,6 +323,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
       case _ThemeRole.audioHighlight:
         return true;
       case _ThemeRole.accent:
+      case _ThemeRole.surface:
       case _ThemeRole.readerBackground:
       case _ThemeRole.link:
       case _ThemeRole.secondary:
@@ -309,6 +332,15 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
         return false;
     }
   }
+
+  /// 界面背景 / 页面背景的常用预设：纯白、纯黑、暖纸、冷灰、深灰。
+  static const List<Color> _surfacePresets = <Color>[
+    Color(0xFFFFFFFF),
+    Color(0xFF000000),
+    Color(0xFFFAF6EF),
+    Color(0xFFF2F4F7),
+    Color(0xFF121212),
+  ];
 
   static const List<Color> _accentPresets = <Color>[
     Color(kCustomThemeDefaultSeed),
@@ -352,7 +384,9 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
       // seed 与钉死的主色同值：派生色（次要强调/点缀/底色）都从主题色出发，
       // 用户只需要理解一个「主题色」。
       seed: _accent.toARGB32(),
-      primaryColor: _accent.toARGB32(),
+      primaryColor: _accentAutoTone ? null : _accent.toARGB32(),
+      surfaceColor: argb(_overrides[_ThemeRole.surface]),
+      followSystemAccent: _followSystemAccent,
       fontColor: argb(_overrides[_ThemeRole.readerText]),
       bgColor: argb(_overrides[_ThemeRole.readerBackground]),
       selectionColor: argb(_overrides[_ThemeRole.selection]),
@@ -394,6 +428,8 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
     segment('cr', entry.containerColor);
     segment('sk', entry.sentenceAudioHighlightColor);
     segment('lk', entry.linkColor);
+    segment('sf', entry.surfaceColor);
+    if (entry.followSystemAccent) code += ':sa1';
     return code;
   }
 
@@ -408,7 +444,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
     }
     final Map<String, int> segments = <String, int>{};
     for (int i = 3; i < parts.length; i++) {
-      if (parts[i].length < 2) continue;
+      if (parts[i].length < 3) continue;
       final int? v = int.tryParse(parts[i].substring(2), radix: 16);
       if (v != null) segments[parts[i].substring(0, 2)] = v;
     }
@@ -425,6 +461,8 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
       containerColor: segments['cr'],
       sentenceAudioHighlightColor: segments['sk'],
       linkColor: segments['lk'],
+      surfaceColor: segments['sf'],
+      followSystemAccent: segments['sa'] == 1,
     );
   }
 
@@ -610,6 +648,23 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
           // TODO-930: 主题名称（可选，留空显示「自定义 N」默认名）。
           _buildNameField(),
           _buildAccentRow(),
+          AdaptiveSettingsSwitchRow(
+            title: t.theme_accent_follow_system,
+            subtitle: _systemAccent == null
+                ? t.theme_accent_follow_system_unavailable
+                : t.theme_accent_follow_system_desc,
+            value: _followSystemAccent && _systemAccent != null,
+            onChanged: _systemAccent == null
+                ? null
+                : (bool value) => setState(() => _followSystemAccent = value),
+          ),
+          AdaptiveSettingsSwitchRow(
+            title: t.theme_accent_auto_tone,
+            subtitle: t.theme_accent_auto_tone_desc,
+            value: _accentAutoTone,
+            onChanged: (bool value) => setState(() => _accentAutoTone = value),
+          ),
+          _buildRoleRow(_ThemeRole.surface),
           if (_accentLowContrast(Brightness.light))
             _buildHintRow(t.theme_accent_low_contrast_light),
           if (_accentLowContrast(Brightness.dark))
@@ -792,22 +847,45 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
 
   Widget _buildAccentRow() {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
+    final ColorScheme appCs = Theme.of(context).colorScheme;
+    final Color picked = _resolvedAccent;
+    final Color shown = _effectiveColor(_ThemeRole.accent);
+    final bool differs = shown.toARGB32() != picked.toARGB32();
+    final bool locked = _followSystemAccent && _systemAccent != null;
     return _highlightIfSelected(
       _ThemeRole.accent,
       AdaptiveSettingsRow(
         title: t.theme_role_accent,
-        subtitle: t.theme_role_accent_desc,
+        subtitle: locked
+            ? t.theme_accent_follow_system
+            : t.theme_role_accent_desc,
         icon: _roleIcon(_ThemeRole.accent),
         showIcon: true,
-        onTap: () => _openRole(_ThemeRole.accent),
+        // 跟随系统取色时主题色不可手选。
+        onTap: locked ? null : () => _openRole(_ThemeRole.accent),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            _swatchDot(_accent),
+            _swatchDot(picked),
+            // 开了自动调色调且派生结果 ≠ 所选：把「实际显示」直接摆在旁边，
+            // 用户不用猜为什么按钮不是自己选的那个颜色。
+            if (differs) ...<Widget>[
+              SizedBox(width: tokens.spacing.gap / 2),
+              Icon(
+                Icons.arrow_forward,
+                size: 14,
+                color: appCs.onSurfaceVariant,
+              ),
+              SizedBox(width: tokens.spacing.gap / 2),
+              Tooltip(
+                message: t.theme_role_actual_color,
+                child: _swatchDot(shown),
+              ),
+            ],
             SizedBox(width: tokens.spacing.gap),
             Icon(
-              Icons.chevron_right,
-              color: Theme.of(context).colorScheme.onSurfaceVariant,
+              locked ? Icons.lock_outline : Icons.chevron_right,
+              color: appCs.onSurfaceVariant,
             ),
           ],
         ),
@@ -886,7 +964,11 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
       key: ValueKey<_ThemeRole>(role),
       color: current,
       enableAlpha: _roleAllowsAlpha(role),
-      presets: role == _ThemeRole.accent ? _accentPresets : const <Color>[],
+      presets: switch (role) {
+        _ThemeRole.accent => _accentPresets,
+        _ThemeRole.surface || _ThemeRole.readerBackground => _surfacePresets,
+        _ => const <Color>[],
+      },
       onChanged: (Color c) => _setRoleColor(role, c),
       onReset: optional && _overrides[role] != null
           ? () => _resetRole(role)
@@ -918,7 +1000,23 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
             style: tokens.type.metadata.copyWith(color: cs.onSurfaceVariant),
           ),
           SizedBox(height: tokens.spacing.gap + tokens.spacing.gap / 2),
-          _buildPickerFor(role),
+          if (role == _ThemeRole.accent &&
+              _followSystemAccent &&
+              _systemAccent != null)
+            Row(
+              children: <Widget>[
+                Icon(Icons.lock_outline, size: 18, color: cs.onSurfaceVariant),
+                SizedBox(width: tokens.spacing.gap),
+                Expanded(
+                  child: Text(
+                    t.theme_accent_follow_system_desc,
+                    style: tokens.type.listSubtitle,
+                  ),
+                ),
+              ],
+            )
+          else
+            _buildPickerFor(role),
         ],
       ),
     );
@@ -1075,6 +1173,24 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
                     style: tokens.type.metadata.copyWith(
                       color: cs.onSecondaryContainer,
                     ),
+                  ),
+                ),
+              ),
+              _spot(
+                _ThemeRole.surface,
+                Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: tokens.spacing.gap,
+                    vertical: tokens.spacing.gap * 0.375,
+                  ),
+                  decoration: BoxDecoration(
+                    color: cs.surfaceContainer,
+                    borderRadius: tokens.radii.chipRadius,
+                    border: Border.all(color: cs.outlineVariant),
+                  ),
+                  child: Text(
+                    t.theme_preview_card,
+                    style: tokens.type.metadata.copyWith(color: cs.onSurface),
                   ),
                 ),
               ),

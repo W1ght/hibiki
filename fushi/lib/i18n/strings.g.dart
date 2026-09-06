@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 73100 (4300 per locale)
+/// Strings: 73253 (4309 per locale)
 ///
-/// Built on 2026-09-06 at 11:01 UTC
+/// Built on 2026-09-06 at 11:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5951,7 +5951,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_reader_open_statistics =>
       'Open reading statistics';
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
-  String get theme_section_accent => 'Theme color';
   String get theme_section_reader => 'Reader';
   String get theme_section_audiobook => 'Audiobook';
   String get theme_section_fine_tune => 'Fine-tune derived colors';
@@ -5993,6 +5992,20 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Hard to see on the dark-mode background. Pick a lighter color.';
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  String get theme_section_accent => 'Interface colors';
+  String get theme_role_surface => 'Interface background';
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  String get theme_role_actual_color => 'Shown as';
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -16035,8 +16048,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -16107,6 +16118,30 @@ class _StringsAr extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -26382,8 +26417,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -26454,6 +26487,30 @@ class _StringsDe extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -36779,8 +36836,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -36851,6 +36906,30 @@ class _StringsEs extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -47208,8 +47287,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -47280,6 +47357,30 @@ class _StringsFr extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -57442,8 +57543,6 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -57514,6 +57613,30 @@ class _StringsId extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -67769,8 +67892,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -67841,6 +67962,30 @@ class _StringsIt extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -77475,8 +77620,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -77547,6 +77690,30 @@ class _StringsJa extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -87191,8 +87358,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -87263,6 +87428,30 @@ class _StringsKo extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -97472,8 +97661,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -97544,6 +97731,30 @@ class _StringsNl extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -107807,8 +108018,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -107879,6 +108088,30 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -118120,8 +118353,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -118192,6 +118423,30 @@ class _StringsRu extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -128231,8 +128486,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -128303,6 +128556,30 @@ class _StringsTh extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -138460,8 +138737,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -138532,6 +138807,30 @@ class _StringsTr extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -148659,8 +148958,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -148731,6 +149028,30 @@ class _StringsVi extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 // Path: <root>
@@ -158033,8 +158354,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => '打开有声书面板';
   @override
-  String get theme_section_accent => '主题色';
-  @override
   String get theme_section_reader => '阅读器';
   @override
   String get theme_section_audiobook => '有声书';
@@ -158094,6 +158413,28 @@ class _StringsZhCn extends _StringsEn {
   String get theme_accent_low_contrast_dark => '在深色模式背景上不易辨认，建议换个更亮的颜色';
   @override
   String get theme_accent_low_contrast_light => '在浅色模式背景上不易辨认，建议换个更深的颜色';
+  @override
+  String get theme_section_accent => '界面配色';
+  @override
+  String get theme_role_surface => '界面背景';
+  @override
+  String get theme_role_surface_desc => '页面、卡片、菜单的底色；其余层级由它推出微弱深浅';
+  @override
+  String get theme_accent_follow_system => '主题色跟随系统取色';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Android 用壁纸取色（Material You），桌面用系统强调色，代替手动选的主题色';
+  @override
+  String get theme_accent_follow_system_unavailable => '当前设备没有提供系统取色';
+  @override
+  String get theme_accent_auto_tone => '按明暗模式自动调整色调';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      '关闭：直接使用所选原色。开启：为浅色/深色模式各自生成色调，实际显示会与所选不同';
+  @override
+  String get theme_role_actual_color => '实际显示';
+  @override
+  String get theme_preview_card => '卡片';
 }
 
 // Path: <root>
@@ -167418,8 +167759,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   @override
-  String get theme_section_accent => 'Theme color';
-  @override
   String get theme_section_reader => 'Reader';
   @override
   String get theme_section_audiobook => 'Audiobook';
@@ -167490,6 +167829,30 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get theme_accent_low_contrast_light =>
       'Hard to see on the light-mode background. Pick a darker color.';
+  @override
+  String get theme_section_accent => 'Interface colors';
+  @override
+  String get theme_role_surface => 'Interface background';
+  @override
+  String get theme_role_surface_desc =>
+      'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+  @override
+  String get theme_accent_follow_system => 'Follow the system accent color';
+  @override
+  String get theme_accent_follow_system_desc =>
+      'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+  @override
+  String get theme_accent_follow_system_unavailable =>
+      'The system does not expose an accent color on this device.';
+  @override
+  String get theme_accent_auto_tone => 'Adjust tone for light and dark mode';
+  @override
+  String get theme_accent_auto_tone_desc =>
+      'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+  @override
+  String get theme_role_actual_color => 'Shown as';
+  @override
+  String get theme_preview_card => 'Card';
 }
 
 /// Flat map(s) containing all translations.
@@ -176268,8 +176631,6 @@ extension on _StringsEn {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -176330,6 +176691,26 @@ extension on _StringsEn {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -185103,8 +185484,6 @@ extension on _StringsAr {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -185165,6 +185544,26 @@ extension on _StringsAr {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -193987,8 +194386,6 @@ extension on _StringsDe {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -194049,6 +194446,26 @@ extension on _StringsDe {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -202861,8 +203278,6 @@ extension on _StringsEs {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -202923,6 +203338,26 @@ extension on _StringsEs {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -211743,8 +212178,6 @@ extension on _StringsFr {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -211805,6 +212238,26 @@ extension on _StringsFr {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -220595,8 +221048,6 @@ extension on _StringsId {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -220657,6 +221108,26 @@ extension on _StringsId {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -229470,8 +229941,6 @@ extension on _StringsIt {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -229532,6 +230001,26 @@ extension on _StringsIt {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -238269,8 +238758,6 @@ extension on _StringsJa {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -238331,6 +238818,26 @@ extension on _StringsJa {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -247073,8 +247580,6 @@ extension on _StringsKo {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -247135,6 +247640,26 @@ extension on _StringsKo {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -255943,8 +256468,6 @@ extension on _StringsNl {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -256005,6 +256528,26 @@ extension on _StringsNl {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -264808,8 +265351,6 @@ extension on _StringsPtBr {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -264870,6 +265411,26 @@ extension on _StringsPtBr {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -273679,8 +274240,6 @@ extension on _StringsRu {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -273741,6 +274300,26 @@ extension on _StringsRu {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -282519,8 +283098,6 @@ extension on _StringsTh {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -282581,6 +283158,26 @@ extension on _StringsTh {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -291375,8 +291972,6 @@ extension on _StringsTr {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -291437,6 +292032,26 @@ extension on _StringsTr {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -300225,8 +300840,6 @@ extension on _StringsVi {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -300287,6 +300900,26 @@ extension on _StringsVi {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
@@ -308996,8 +309629,6 @@ extension on _StringsZhCn {
         return '打开阅读统计';
       case 'shortcut_action_reader_open_audiobook':
         return '打开有声书面板';
-      case 'theme_section_accent':
-        return '主题色';
       case 'theme_section_reader':
         return '阅读器';
       case 'theme_section_audiobook':
@@ -309058,6 +309689,26 @@ extension on _StringsZhCn {
         return '在深色模式背景上不易辨认，建议换个更亮的颜色';
       case 'theme_accent_low_contrast_light':
         return '在浅色模式背景上不易辨认，建议换个更深的颜色';
+      case 'theme_section_accent':
+        return '界面配色';
+      case 'theme_role_surface':
+        return '界面背景';
+      case 'theme_role_surface_desc':
+        return '页面、卡片、菜单的底色；其余层级由它推出微弱深浅';
+      case 'theme_accent_follow_system':
+        return '主题色跟随系统取色';
+      case 'theme_accent_follow_system_desc':
+        return 'Android 用壁纸取色（Material You），桌面用系统强调色，代替手动选的主题色';
+      case 'theme_accent_follow_system_unavailable':
+        return '当前设备没有提供系统取色';
+      case 'theme_accent_auto_tone':
+        return '按明暗模式自动调整色调';
+      case 'theme_accent_auto_tone_desc':
+        return '关闭：直接使用所选原色。开启：为浅色/深色模式各自生成色调，实际显示会与所选不同';
+      case 'theme_role_actual_color':
+        return '实际显示';
+      case 'theme_preview_card':
+        return '卡片';
       default:
         return null;
     }
@@ -317773,8 +318424,6 @@ extension on _StringsZhHk {
         return 'Open reading statistics';
       case 'shortcut_action_reader_open_audiobook':
         return 'Open audiobook panel';
-      case 'theme_section_accent':
-        return 'Theme color';
       case 'theme_section_reader':
         return 'Reader';
       case 'theme_section_audiobook':
@@ -317835,6 +318484,26 @@ extension on _StringsZhHk {
         return 'Hard to see on the dark-mode background. Pick a lighter color.';
       case 'theme_accent_low_contrast_light':
         return 'Hard to see on the light-mode background. Pick a darker color.';
+      case 'theme_section_accent':
+        return 'Interface colors';
+      case 'theme_role_surface':
+        return 'Interface background';
+      case 'theme_role_surface_desc':
+        return 'Base color of pages, cards and menus; the other layers get a faint tint of gray from it.';
+      case 'theme_accent_follow_system':
+        return 'Follow the system accent color';
+      case 'theme_accent_follow_system_desc':
+        return 'Use the wallpaper color on Android (Material You) or the OS accent color on desktop instead of a picked color.';
+      case 'theme_accent_follow_system_unavailable':
+        return 'The system does not expose an accent color on this device.';
+      case 'theme_accent_auto_tone':
+        return 'Adjust tone for light and dark mode';
+      case 'theme_accent_auto_tone_desc':
+        return 'Off: the exact color is used. On: a lighter or darker tone is generated for each mode, so what you see differs from what you picked.';
+      case 'theme_role_actual_color':
+        return 'Shown as';
+      case 'theme_preview_card':
+        return 'Card';
       default:
         return null;
     }
