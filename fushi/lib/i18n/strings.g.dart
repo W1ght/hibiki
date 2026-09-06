@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 73066 (4298 per locale)
+/// Strings: 73032 (4296 per locale)
 ///
-/// Built on 2026-09-06 at 15:45 UTC
+/// Built on 2026-09-06 at 17:38 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1556,12 +1556,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get icon_custom_hint =>
       'Tap an icon to switch, or pick a custom image below.';
   String get icon_default => 'Default';
-  String get icon_full => 'Full';
   String get icon_shortcut_created => 'Home screen shortcut created.';
   String get icon_shortcut_unsupported =>
       'Shortcuts are not supported on this device.';
   String get icon_switch_success => 'App icon changed successfully.';
-  String get icon_transparent => 'Transparent';
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
   String get image_pause => 'Pause on image';
@@ -8382,16 +8380,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get icon_default => 'افتراضي';
   @override
-  String get icon_full => 'كامل';
-  @override
   String get icon_shortcut_created => 'تم إنشاء اختصار على الشاشة الرئيسية.';
   @override
   String get icon_shortcut_unsupported =>
       'الاختصارات غير مدعومة على هذا الجهاز.';
   @override
   String get icon_switch_success => 'تم تغيير أيقونة التطبيق بنجاح.';
-  @override
-  String get icon_transparent => 'شفاف';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -18493,16 +18487,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get icon_default => 'Standard';
   @override
-  String get icon_full => 'Vollständig';
-  @override
   String get icon_shortcut_created => 'Startbildschirm-Verknüpfung erstellt.';
   @override
   String get icon_shortcut_unsupported =>
       'Verknüpfungen werden auf diesem Gerät nicht unterstützt.';
   @override
   String get icon_switch_success => 'App-Symbol erfolgreich geändert.';
-  @override
-  String get icon_transparent => 'Transparent';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -28772,8 +28762,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get icon_default => 'Predeterminado';
   @override
-  String get icon_full => 'Completo';
-  @override
   String get icon_shortcut_created =>
       'Acceso directo creado en la pantalla de inicio.';
   @override
@@ -28781,8 +28769,6 @@ class _StringsEs extends _StringsEn {
       'Los accesos directos no son compatibles con este dispositivo.';
   @override
   String get icon_switch_success => 'Icono de la app cambiado correctamente.';
-  @override
-  String get icon_transparent => 'Transparente';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -39112,8 +39098,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get icon_default => 'Par défaut';
   @override
-  String get icon_full => 'Complet';
-  @override
   String get icon_shortcut_created => 'Raccourci de l\'écran d\'accueil créé.';
   @override
   String get icon_shortcut_unsupported =>
@@ -39121,8 +39105,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get icon_switch_success =>
       'Icône de l\'application modifiée avec succès.';
-  @override
-  String get icon_transparent => 'Transparent';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -49427,16 +49409,12 @@ class _StringsId extends _StringsEn {
   @override
   String get icon_default => 'Default';
   @override
-  String get icon_full => 'Penuh';
-  @override
   String get icon_shortcut_created => 'Pintasan layar beranda dibuat.';
   @override
   String get icon_shortcut_unsupported =>
       'Pintasan tidak didukung di perangkat ini.';
   @override
   String get icon_switch_success => 'Ikon aplikasi berhasil diubah.';
-  @override
-  String get icon_transparent => 'Transparan';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -59620,8 +59598,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get icon_default => 'Predefinita';
   @override
-  String get icon_full => 'Completa';
-  @override
   String get icon_shortcut_created =>
       'Collegamento sulla schermata iniziale creato.';
   @override
@@ -59629,8 +59605,6 @@ class _StringsIt extends _StringsEn {
       'I collegamenti non sono supportati su questo dispositivo.';
   @override
   String get icon_switch_success => 'Icona dell\'app cambiata con successo.';
-  @override
-  String get icon_transparent => 'Trasparente';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -69745,15 +69719,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get icon_default => 'デフォルト';
   @override
-  String get icon_full => 'フル';
-  @override
   String get icon_shortcut_created => 'ホーム画面にショートカットを作成しました。';
   @override
   String get icon_shortcut_unsupported => 'このデバイスではショートカットがサポートされていません。';
   @override
   String get icon_switch_success => 'アプリアイコンを変更しました。';
-  @override
-  String get icon_transparent => '透明';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -79388,15 +79358,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get icon_default => '기본';
   @override
-  String get icon_full => '전체';
-  @override
   String get icon_shortcut_created => '홈 화면 바로가기가 생성되었습니다.';
   @override
   String get icon_shortcut_unsupported => '이 기기에서는 바로가기가 지원되지 않습니다.';
   @override
   String get icon_switch_success => '앱 아이콘이 변경되었습니다.';
-  @override
-  String get icon_transparent => '투명';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -89171,8 +89137,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get icon_default => 'Standaard';
   @override
-  String get icon_full => 'Volledig';
-  @override
   String get icon_shortcut_created =>
       'Snelkoppeling op startscherm aangemaakt.';
   @override
@@ -89180,8 +89144,6 @@ class _StringsNl extends _StringsEn {
       'Snelkoppelingen worden niet ondersteund op dit apparaat.';
   @override
   String get icon_switch_success => 'App-icoon succesvol gewijzigd.';
-  @override
-  String get icon_transparent => 'Transparant';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -99402,16 +99364,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get icon_default => 'Padrão';
   @override
-  String get icon_full => 'Completo';
-  @override
   String get icon_shortcut_created => 'Atalho criado na tela inicial.';
   @override
   String get icon_shortcut_unsupported =>
       'Atalhos não são suportados neste dispositivo.';
   @override
   String get icon_switch_success => 'Ícone do app alterado com sucesso.';
-  @override
-  String get icon_transparent => 'Transparente';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -109661,16 +109619,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get icon_default => 'По умолчанию';
   @override
-  String get icon_full => 'Полная';
-  @override
   String get icon_shortcut_created => 'Ярлык на главном экране создан.';
   @override
   String get icon_shortcut_unsupported =>
       'Ярлыки не поддерживаются на этом устройстве.';
   @override
   String get icon_switch_success => 'Иконка приложения успешно изменена.';
-  @override
-  String get icon_transparent => 'Прозрачный';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -119861,15 +119815,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get icon_default => 'ค่าเริ่มต้น';
   @override
-  String get icon_full => 'เต็ม';
-  @override
   String get icon_shortcut_created => 'สร้างทางลัดบนหน้าจอหลักแล้ว';
   @override
   String get icon_shortcut_unsupported => 'อุปกรณ์นี้ไม่รองรับทางลัด';
   @override
   String get icon_switch_success => 'เปลี่ยนไอคอนแอปสำเร็จ';
-  @override
-  String get icon_transparent => 'โปร่งใส';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -129939,16 +129889,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get icon_default => 'Varsayılan';
   @override
-  String get icon_full => 'Tam';
-  @override
   String get icon_shortcut_created => 'Ana ekran kısayolu oluşturuldu.';
   @override
   String get icon_shortcut_unsupported =>
       'Bu cihazda kısayollar desteklenmiyor.';
   @override
   String get icon_switch_success => 'Uygulama simgesi başarıyla değiştirildi.';
-  @override
-  String get icon_transparent => 'Saydam';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -140100,15 +140046,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get icon_default => 'Mặc định';
   @override
-  String get icon_full => 'Đầy đủ';
-  @override
   String get icon_shortcut_created => 'Đã tạo lối tắt trên màn hình chính.';
   @override
   String get icon_shortcut_unsupported => 'Thiết bị không hỗ trợ lối tắt.';
   @override
   String get icon_switch_success => 'Đã đổi biểu tượng ứng dụng.';
-  @override
-  String get icon_transparent => 'Trong suốt';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -150052,15 +149994,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get icon_default => '默认';
   @override
-  String get icon_full => '完整';
-  @override
   String get icon_shortcut_created => '已创建主屏幕快捷方式。';
   @override
   String get icon_shortcut_unsupported => '此设备不支持快捷方式。';
   @override
   String get icon_switch_success => '应用图标已更改。';
-  @override
-  String get icon_transparent => '透明';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -159367,15 +159305,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get icon_default => '預設';
   @override
-  String get icon_full => '完整';
-  @override
   String get icon_shortcut_created => '已建立主畫面捷徑。';
   @override
   String get icon_shortcut_unsupported => '此裝置不支援捷徑。';
   @override
   String get icon_switch_success => '應用程式圖示已變更。';
-  @override
-  String get icon_transparent => '透明';
   @override
   String image_page_counter({required Object current, required Object total}) =>
       '${current} / ${total}';
@@ -168589,16 +168523,12 @@ extension on _StringsEn {
         return 'Tap an icon to switch, or pick a custom image below.';
       case 'icon_default':
         return 'Default';
-      case 'icon_full':
-        return 'Full';
       case 'icon_shortcut_created':
         return 'Home screen shortcut created.';
       case 'icon_shortcut_unsupported':
         return 'Shortcuts are not supported on this device.';
       case 'icon_switch_success':
         return 'App icon changed successfully.';
-      case 'icon_transparent':
-        return 'Transparent';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -177418,16 +177348,12 @@ extension on _StringsAr {
         return 'انقر على أيقونة للتبديل، أو اختر صورة مخصصة أدناه.';
       case 'icon_default':
         return 'افتراضي';
-      case 'icon_full':
-        return 'كامل';
       case 'icon_shortcut_created':
         return 'تم إنشاء اختصار على الشاشة الرئيسية.';
       case 'icon_shortcut_unsupported':
         return 'الاختصارات غير مدعومة على هذا الجهاز.';
       case 'icon_switch_success':
         return 'تم تغيير أيقونة التطبيق بنجاح.';
-      case 'icon_transparent':
-        return 'شفاف';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -186254,16 +186180,12 @@ extension on _StringsDe {
         return 'Tippen Sie auf ein Symbol zum Wechseln oder wählen Sie unten ein eigenes Bild.';
       case 'icon_default':
         return 'Standard';
-      case 'icon_full':
-        return 'Vollständig';
       case 'icon_shortcut_created':
         return 'Startbildschirm-Verknüpfung erstellt.';
       case 'icon_shortcut_unsupported':
         return 'Verknüpfungen werden auf diesem Gerät nicht unterstützt.';
       case 'icon_switch_success':
         return 'App-Symbol erfolgreich geändert.';
-      case 'icon_transparent':
-        return 'Transparent';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -195125,16 +195047,12 @@ extension on _StringsEs {
         return 'Toca un icono para cambiar, o elige una imagen personalizada abajo.';
       case 'icon_default':
         return 'Predeterminado';
-      case 'icon_full':
-        return 'Completo';
       case 'icon_shortcut_created':
         return 'Acceso directo creado en la pantalla de inicio.';
       case 'icon_shortcut_unsupported':
         return 'Los accesos directos no son compatibles con este dispositivo.';
       case 'icon_switch_success':
         return 'Icono de la app cambiado correctamente.';
-      case 'icon_transparent':
-        return 'Transparente';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -203991,16 +203909,12 @@ extension on _StringsFr {
         return 'Appuyez sur une icône pour changer, ou choisissez une image personnalisée ci-dessous.';
       case 'icon_default':
         return 'Par défaut';
-      case 'icon_full':
-        return 'Complet';
       case 'icon_shortcut_created':
         return 'Raccourci de l\'écran d\'accueil créé.';
       case 'icon_shortcut_unsupported':
         return 'Les raccourcis ne sont pas pris en charge sur cet appareil.';
       case 'icon_switch_success':
         return 'Icône de l\'application modifiée avec succès.';
-      case 'icon_transparent':
-        return 'Transparent';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -212855,16 +212769,12 @@ extension on _StringsId {
         return 'Ketuk ikon untuk mengganti, atau pilih gambar kustom di bawah.';
       case 'icon_default':
         return 'Default';
-      case 'icon_full':
-        return 'Penuh';
       case 'icon_shortcut_created':
         return 'Pintasan layar beranda dibuat.';
       case 'icon_shortcut_unsupported':
         return 'Pintasan tidak didukung di perangkat ini.';
       case 'icon_switch_success':
         return 'Ikon aplikasi berhasil diubah.';
-      case 'icon_transparent':
-        return 'Transparan';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -221700,16 +221610,12 @@ extension on _StringsIt {
         return 'Tocca un\'icona per cambiarla, oppure scegli un\'immagine personalizzata qui sotto.';
       case 'icon_default':
         return 'Predefinita';
-      case 'icon_full':
-        return 'Completa';
       case 'icon_shortcut_created':
         return 'Collegamento sulla schermata iniziale creato.';
       case 'icon_shortcut_unsupported':
         return 'I collegamenti non sono supportati su questo dispositivo.';
       case 'icon_switch_success':
         return 'Icona dell\'app cambiata con successo.';
-      case 'icon_transparent':
-        return 'Trasparente';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -230547,16 +230453,12 @@ extension on _StringsJa {
         return 'アイコンをタップして切り替えるか、下からカスタム画像を選択してください。';
       case 'icon_default':
         return 'デフォルト';
-      case 'icon_full':
-        return 'フル';
       case 'icon_shortcut_created':
         return 'ホーム画面にショートカットを作成しました。';
       case 'icon_shortcut_unsupported':
         return 'このデバイスではショートカットがサポートされていません。';
       case 'icon_switch_success':
         return 'アプリアイコンを変更しました。';
-      case 'icon_transparent':
-        return '透明';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -239338,16 +239240,12 @@ extension on _StringsKo {
         return '아이콘을 탭하여 전환하거나, 아래에서 사용자 정의 이미지를 선택하세요.';
       case 'icon_default':
         return '기본';
-      case 'icon_full':
-        return '전체';
       case 'icon_shortcut_created':
         return '홈 화면 바로가기가 생성되었습니다.';
       case 'icon_shortcut_unsupported':
         return '이 기기에서는 바로가기가 지원되지 않습니다.';
       case 'icon_switch_success':
         return '앱 아이콘이 변경되었습니다.';
-      case 'icon_transparent':
-        return '투명';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -248149,16 +248047,12 @@ extension on _StringsNl {
         return 'Tik op een icoon om te wisselen, of kies hieronder een aangepaste afbeelding.';
       case 'icon_default':
         return 'Standaard';
-      case 'icon_full':
-        return 'Volledig';
       case 'icon_shortcut_created':
         return 'Snelkoppeling op startscherm aangemaakt.';
       case 'icon_shortcut_unsupported':
         return 'Snelkoppelingen worden niet ondersteund op dit apparaat.';
       case 'icon_switch_success':
         return 'App-icoon succesvol gewijzigd.';
-      case 'icon_transparent':
-        return 'Transparant';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -257005,16 +256899,12 @@ extension on _StringsPtBr {
         return 'Toque em um ícone para trocar, ou escolha uma imagem personalizada abaixo.';
       case 'icon_default':
         return 'Padrão';
-      case 'icon_full':
-        return 'Completo';
       case 'icon_shortcut_created':
         return 'Atalho criado na tela inicial.';
       case 'icon_shortcut_unsupported':
         return 'Atalhos não são suportados neste dispositivo.';
       case 'icon_switch_success':
         return 'Ícone do app alterado com sucesso.';
-      case 'icon_transparent':
-        return 'Transparente';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -265861,16 +265751,12 @@ extension on _StringsRu {
         return 'Нажмите на иконку, чтобы сменить, или выберите своё изображение ниже.';
       case 'icon_default':
         return 'По умолчанию';
-      case 'icon_full':
-        return 'Полная';
       case 'icon_shortcut_created':
         return 'Ярлык на главном экране создан.';
       case 'icon_shortcut_unsupported':
         return 'Ярлыки не поддерживаются на этом устройстве.';
       case 'icon_switch_success':
         return 'Иконка приложения успешно изменена.';
-      case 'icon_transparent':
-        return 'Прозрачный';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -274709,16 +274595,12 @@ extension on _StringsTh {
         return 'แตะไอคอนเพื่อเปลี่ยน หรือเลือกรูปกำหนดเองด้านล่าง';
       case 'icon_default':
         return 'ค่าเริ่มต้น';
-      case 'icon_full':
-        return 'เต็ม';
       case 'icon_shortcut_created':
         return 'สร้างทางลัดบนหน้าจอหลักแล้ว';
       case 'icon_shortcut_unsupported':
         return 'อุปกรณ์นี้ไม่รองรับทางลัด';
       case 'icon_switch_success':
         return 'เปลี่ยนไอคอนแอปสำเร็จ';
-      case 'icon_transparent':
-        return 'โปร่งใส';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -283545,16 +283427,12 @@ extension on _StringsTr {
         return 'Değiştirmek için bir simgeye dokunun veya aşağıdan özel bir görsel seçin.';
       case 'icon_default':
         return 'Varsayılan';
-      case 'icon_full':
-        return 'Tam';
       case 'icon_shortcut_created':
         return 'Ana ekran kısayolu oluşturuldu.';
       case 'icon_shortcut_unsupported':
         return 'Bu cihazda kısayollar desteklenmiyor.';
       case 'icon_switch_success':
         return 'Uygulama simgesi başarıyla değiştirildi.';
-      case 'icon_transparent':
-        return 'Saydam';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -292392,16 +292270,12 @@ extension on _StringsVi {
         return 'Chạm vào biểu tượng để chuyển đổi, hoặc chọn hình ảnh tùy chỉnh bên dưới.';
       case 'icon_default':
         return 'Mặc định';
-      case 'icon_full':
-        return 'Đầy đủ';
       case 'icon_shortcut_created':
         return 'Đã tạo lối tắt trên màn hình chính.';
       case 'icon_shortcut_unsupported':
         return 'Thiết bị không hỗ trợ lối tắt.';
       case 'icon_switch_success':
         return 'Đã đổi biểu tượng ứng dụng.';
-      case 'icon_transparent':
-        return 'Trong suốt';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -301211,16 +301085,12 @@ extension on _StringsZhCn {
         return '点击图标切换，或在下方选择自定义图片。';
       case 'icon_default':
         return '默认';
-      case 'icon_full':
-        return '完整';
       case 'icon_shortcut_created':
         return '已创建主屏幕快捷方式。';
       case 'icon_shortcut_unsupported':
         return '此设备不支持快捷方式。';
       case 'icon_switch_success':
         return '应用图标已更改。';
-      case 'icon_transparent':
-        return '透明';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
@@ -309975,16 +309845,12 @@ extension on _StringsZhHk {
         return '點擊圖示切換，或在下方選擇自訂圖片。';
       case 'icon_default':
         return '預設';
-      case 'icon_full':
-        return '完整';
       case 'icon_shortcut_created':
         return '已建立主畫面捷徑。';
       case 'icon_shortcut_unsupported':
         return '此裝置不支援捷徑。';
       case 'icon_switch_success':
         return '應用程式圖示已變更。';
-      case 'icon_transparent':
-        return '透明';
       case 'image_page_counter':
         return ({required Object current, required Object total}) =>
             '${current} / ${total}';
