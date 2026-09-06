@@ -13,7 +13,7 @@ import 'package:fushi/utils.dart';
 class AudiobookPlayBar extends StatelessWidget {
   const AudiobookPlayBar({
     required this.controller,
-    required this.onOpenSettings,
+    this.onOpenSettings,
     this.skipActionSeconds = 0,
     this.backgroundColor,
     this.foregroundColor,
@@ -61,7 +61,10 @@ class AudiobookPlayBar extends StatelessWidget {
 
   /// 用户点 ⚙ 设置按钮后触发。由 reader 页面侧注入，因为设置面板要
   /// 访问 WebView controller 才能 probe ttu 当前章节 / TOC、触发书签。
-  final VoidCallback onOpenSettings;
+  /// 为 null 时**不渲染**齿轮：桌面端顶部工具栏已有「阅读设置」入口，条尾再放一颗
+  /// 只是重复（且它开的是有声书面板，与 tooltip 不符）；移动端播放条取代了底部
+  /// 设置栏，齿轮是唯一入口，必须传。
+  final VoidCallback? onOpenSettings;
 
   /// 跟随键之前的可选尾部内容（桌面端把状态行文字并进播放条右端）。
   final Widget? trailing;
@@ -214,16 +217,17 @@ class AudiobookPlayBar extends StatelessWidget {
         SizedBox(width: tokens.spacing.gap),
       ],
       AudiobookFollowAudioButton(controller: controller, foregroundColor: fg),
-      _FocusableBarButton(
-        id: const FushiFocusId('audiobook_settings'),
-        key: const ValueKey<String>('fushi_reader_audiobook_settings_button'),
-        semanticsIdentifier: 'hibiki.reader.audiobook.settings',
-        icon: const Icon(Icons.tune_outlined),
-        iconSize: 20,
-        style: flatStyle,
-        onPressed: onOpenSettings,
-        tooltip: t.reader_settings_section,
-      ),
+      if (onOpenSettings case final VoidCallback openSettings)
+        _FocusableBarButton(
+          id: const FushiFocusId('audiobook_settings'),
+          key: const ValueKey<String>('fushi_reader_audiobook_settings_button'),
+          semanticsIdentifier: 'hibiki.reader.audiobook.settings',
+          icon: const Icon(Icons.tune_outlined),
+          iconSize: 20,
+          style: flatStyle,
+          onPressed: openSettings,
+          tooltip: t.reader_settings_section,
+        ),
     ];
     return ColoredBox(
       color: backgroundColor ?? Theme.of(context).colorScheme.surface,

@@ -78,6 +78,7 @@ import 'package:fushi/src/reader/reader_chrome_floating.dart';
 import 'package:fushi/src/reader/reader_settings.dart';
 import 'package:fushi/src/reader/reader_chrome_controller.dart';
 import 'package:fushi/src/reader/reader_desktop_chrome.dart';
+import 'package:fushi/src/reader/reader_progress_line.dart';
 import 'package:fushi/src/reader/reader_gallery_page.dart';
 import 'package:fushi/src/reader/reader_open_trace.dart';
 import 'package:fushi/src/reader/reader_progress_state.dart';
@@ -3242,6 +3243,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
                           ),
                         ),
                       _buildTopProgressBar(),
+                      // 桌面端顶部细进度线（ッツ 形态）：纯装饰、穿透指针，排在热区 /
+                      // 工具栏之前，工具栏唤出时盖在它上面。
+                      _buildProgressLine(),
                       // 桌面端顶边悬停热区（收起时才存在）+ 顶部工具栏（ッツ 形态）：与底栏
                       // 同一显隐状态机，排在词典弹层之前。
                       _buildHoverRevealLayer(),
