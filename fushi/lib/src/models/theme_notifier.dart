@@ -942,32 +942,76 @@ class ThemeNotifier extends ChangeNotifier {
         fallbackSeed: _seedColor,
       );
     }
-    final bool useCustomRoles = isCustomThemeKey(appThemeKey);
-    // Prefer the selected entry's roles; fall back to the legacy flat getters
-    // when no entry is resolvable (pre-migration), keeping output identical.
-    final CustomThemeEntry? entry = activeCustomThemeEntry;
-    Color? roleColor(int? entryValue, Color? Function() legacy) {
-      if (!useCustomRoles) return null;
-      if (entry != null) return entryValue == null ? null : Color(entryValue);
-      return legacy();
-    }
-
     return buildFushiColorScheme(
       seedColor: _seedColor,
       brightness: brightness,
       variant: _variant,
-      primary: roleColor(entry?.primaryColor, () => customThemePrimaryColor),
-      secondary: roleColor(
-        entry?.secondaryColor,
+      primary: activeCustomThemePrimaryColor,
+      secondary: _activeCustomRole(
+        (CustomThemeEntry e) => e.secondaryColor,
         () => customThemeSecondaryColor,
       ),
-      tertiary: roleColor(entry?.tertiaryColor, () => customThemeTertiaryColor),
-      primaryContainer: roleColor(
-        entry?.containerColor,
+      tertiary: _activeCustomRole(
+        (CustomThemeEntry e) => e.tertiaryColor,
+        () => customThemeTertiaryColor,
+      ),
+      primaryContainer: _activeCustomRole(
+        (CustomThemeEntry e) => e.containerColor,
         () => customThemeContainerColor,
       ),
     );
   }
+
+  /// BUG-2187：「当前生效的自定义主题」里某个角色色的**唯一**解析链——
+  /// 非自定义 key → null；自定义 key 且能解析到条目 → 条目字段（null = 跟随主题）；
+  /// 自定义 key 但列表还没条目（迁移前竞态）→ 旧扁平偏好。
+  ///
+  /// 以前只有 [buildColorScheme] 走这条链，阅读器 chrome 直接读
+  /// `customThemeFontColor` 等旧扁平 getter 并用 `== 'custom-theme'` 严格比较 key：
+  /// TODO-930 之后编辑页写的是 `custom-theme:<id>`、且再也没人写扁平偏好，于是
+  /// 正文/背景/选区/链接四色在阅读器里永远不生效。现在所有消费者都走这一个函数。
+  Color? _activeCustomRole(
+    int? Function(CustomThemeEntry entry) pick,
+    Color? Function() legacy,
+  ) {
+    if (!isCustomThemeKey(appThemeKey)) return null;
+    final CustomThemeEntry? entry = activeCustomThemeEntry;
+    if (entry != null) {
+      final int? value = pick(entry);
+      return value == null ? null : Color(value);
+    }
+    return legacy();
+  }
+
+  /// 当前生效自定义主题钉死的主色（null = 由 seed 派生）。
+  Color? get activeCustomThemePrimaryColor => _activeCustomRole(
+    (CustomThemeEntry e) => e.primaryColor,
+    () => customThemePrimaryColor,
+  );
+
+  /// 当前生效自定义主题的阅读器正文字色（null = 跟随主题）。
+  Color? get activeCustomThemeFontColor => _activeCustomRole(
+    (CustomThemeEntry e) => e.fontColor,
+    () => customThemeFontColor,
+  );
+
+  /// 当前生效自定义主题的阅读器页面背景色（null = 跟随主题）。
+  Color? get activeCustomThemeBackgroundColor => _activeCustomRole(
+    (CustomThemeEntry e) => e.bgColor,
+    () => customThemeBackgroundColor,
+  );
+
+  /// 当前生效自定义主题的查词选区高亮色（null = 跟随主题）。
+  Color? get activeCustomThemeSelectionColor => _activeCustomRole(
+    (CustomThemeEntry e) => e.selectionColor,
+    () => customThemeSelectionColor,
+  );
+
+  /// 当前生效自定义主题的书内链接色（null = 跟随主题）。
+  Color? get activeCustomThemeLinkColor => _activeCustomRole(
+    (CustomThemeEntry e) => e.linkColor,
+    () => customThemeLinkColor,
+  );
 
   ThemeData _buildThemeData(Brightness brightness) {
     final cs = buildColorScheme(brightness);

@@ -3331,6 +3331,18 @@ class AppModel with ChangeNotifier {
   Future<void> setCustomThemeDark(bool v) =>
       themeNotifier.setCustomThemeDark(v);
 
+  // BUG-2187：阅读器等 ColorScheme 之外的消费者读「当前生效自定义主题」的角色色
+  // 必须走这四个 getter（条目优先、扁平偏好兜底、非自定义 key 恒 null），
+  // 不得再直接读下面的 legacy 扁平 getter。
+  Color? get activeCustomThemeFontColor =>
+      themeNotifier.activeCustomThemeFontColor;
+  Color? get activeCustomThemeBackgroundColor =>
+      themeNotifier.activeCustomThemeBackgroundColor;
+  Color? get activeCustomThemeSelectionColor =>
+      themeNotifier.activeCustomThemeSelectionColor;
+  Color? get activeCustomThemeLinkColor =>
+      themeNotifier.activeCustomThemeLinkColor;
+
   Color? get customThemeFontColor => themeNotifier.customThemeFontColor;
   Future<void> setCustomThemeFontColor(Color? c) =>
       themeNotifier.setCustomThemeFontColor(c);

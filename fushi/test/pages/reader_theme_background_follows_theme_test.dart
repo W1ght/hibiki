@@ -97,22 +97,30 @@ void main() {
       expect(colors.dark, isTrue);
     });
 
-    test('custom-theme：用传入的 customColors（与旧 custom 分支一致）', () {
-      const ReaderThemeColors custom = (
+    test('custom-theme：显式覆盖的角色盖到 scheme 基底上，其余跟随主题', () {
+      const ReaderThemeOverrides custom = (
         bg: Color(0xFF102030),
         fg: Color(0xFFEEEEEE),
-        sentenceAudioHighlight: Color(0x66335577),
         selection: Color(0x66445566),
         link: Color(0xFF778899),
-        dark: true,
       );
       final ReaderThemeColors colors = resolveReaderThemeColors(
         themeKey: 'custom-theme',
         presetMap: presetMap,
         scheme: lightScheme(),
-        customColors: custom,
+        customOverrides: custom,
       );
-      expect(colors, custom);
+      expect(colors.bg, custom.bg);
+      expect(colors.fg, custom.fg);
+      expect(colors.selection, custom.selection);
+      expect(colors.link, custom.link);
+      // 深色纸底 → dark 跟随最终背景亮度，而不是 scheme 的 light。
+      expect(colors.dark, isTrue);
+      // 当前句高亮不在覆盖集合里：跟随 scheme（primary@alpha）。
+      expect(
+        colors.sentenceAudioHighlight,
+        lightScheme().primary.withValues(alpha: 0.40),
+      );
     });
   });
 
@@ -216,28 +224,23 @@ void main() {
       expect(c.selection, const Color(0x59C2B280));
     });
 
-    test(
-      'custom-theme：override 也写穿，压过 customColors.sentenceAudioHighlight',
-      () {
-        const ReaderThemeColors custom = (
-          bg: Color(0xFF102030),
-          fg: Color(0xFFEEEEEE),
-          sentenceAudioHighlight: Color(0x66335577),
-          selection: Color(0x66445566),
-          link: Color(0xFF778899),
-          dark: true,
-        );
-        final ReaderThemeColors c = resolveReaderThemeColors(
-          themeKey: 'custom-theme',
-          presetMap: presetMap,
-          scheme: lightScheme(),
-          customColors: custom,
-          audioHighlightOverride: kOverride,
-        );
-        expect(c.sentenceAudioHighlight, kOverride);
-        expect(c.selection, custom.selection);
-      },
-    );
+    test('custom-theme：override 也写穿 sentenceAudioHighlight', () {
+      const ReaderThemeOverrides custom = (
+        bg: Color(0xFF102030),
+        fg: Color(0xFFEEEEEE),
+        selection: Color(0x66445566),
+        link: Color(0xFF778899),
+      );
+      final ReaderThemeColors c = resolveReaderThemeColors(
+        themeKey: 'custom-theme',
+        presetMap: presetMap,
+        scheme: lightScheme(),
+        customOverrides: custom,
+        audioHighlightOverride: kOverride,
+      );
+      expect(c.sentenceAudioHighlight, kOverride);
+      expect(c.selection, custom.selection);
+    });
 
     test('override=null：回退随主题取色（向后兼容，旧行为）', () {
       final ColorScheme scheme = lightScheme();

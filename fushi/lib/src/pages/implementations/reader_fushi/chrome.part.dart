@@ -2593,36 +2593,27 @@ extension _ReaderChrome on _ReaderFushiPageState {
     ),
   };
 
-  /// custom-theme 的角色色（用户自定义；任一项缺省回落到合理默认）。
-  ReaderThemeColors get _customReaderThemeColors {
-    // TODO-928: 自定义主题跟随当前全局明暗，不再读已停写的 `custom_theme_dark`。
-    final bool dark = appModel.isDarkMode;
-    return (
-      bg: appModel.customThemeBackgroundColor ?? const Color(0xFFFFFFFF),
-      fg:
-          appModel.customThemeFontColor ??
-          (dark ? const Color(0xDEFFFFFF) : const Color(0xDE000000)),
-      sentenceAudioHighlight:
-          appModel.customThemeSentenceAudioHighlightColor ??
-          FushiColor.defaultSentenceAudioHighlightColor,
-      // 回退值与 ReaderContentStyles `_ThemeColors` 默认一致（灰选区 / 蓝链接）。
-      selection: appModel.customThemeSelectionColor ?? const Color(0x66A0A0A0),
-      link: appModel.customThemeLinkColor ?? const Color(0xFF426CF5),
-      dark: dark,
-    );
-  }
+  /// 自定义主题在阅读器四角色上的显式覆盖（BUG-2187）：全部经 AppModel 的
+  /// `activeCustomTheme*` getter 解析——条目优先、旧扁平偏好兜底、非自定义 key
+  /// 恒 null；null 的角色由 [resolveReaderThemeColors] 按真实 ColorScheme 派生。
+  ReaderThemeOverrides get _customReaderThemeOverrides => (
+    bg: appModel.activeCustomThemeBackgroundColor,
+    fg: appModel.activeCustomThemeFontColor,
+    selection: appModel.activeCustomThemeSelectionColor,
+    link: appModel.activeCustomThemeLinkColor,
+  );
 
-  /// 当前主题 key 解析出的四个阅读器角色色，统一经 [resolveReaderThemeColors]：
-  /// preset 命中用手调底色，未命中（light/system/未来 key）跟随真实 ColorScheme。
+  /// 当前主题 key 解析出的阅读器角色色，统一经 [resolveReaderThemeColors]：
+  /// preset 命中用手调底色，未命中（light/system/自定义/未来 key）跟随真实
+  /// ColorScheme，自定义主题再盖上用户显式指定的角色。
   ReaderThemeColors get _readerThemeColors {
-    final String key = appModel.appThemeKey;
     return resolveReaderThemeColors(
-      themeKey: key,
+      themeKey: appModel.appThemeKey,
       presetMap: _themeMap,
       scheme: appModel.buildColorScheme(
         appModel.isDarkMode ? Brightness.dark : Brightness.light,
       ),
-      customColors: key == 'custom-theme' ? _customReaderThemeColors : null,
+      customOverrides: _customReaderThemeOverrides,
       // TODO-977：全局音频高亮色覆盖（与主题解耦），对所有主题生效。
       audioHighlightOverride: appModel.audioHighlightColor,
     );
@@ -2645,13 +2636,6 @@ extension _ReaderChrome on _ReaderFushiPageState {
   String? get _customThemeTextCss {
     final Color c = _themeTextColor();
     return _ReaderFushiPageState._colorToCssRgba(c);
-  }
-
-  String? get _customHighlightCss {
-    if (appModel.appThemeKey != 'custom-theme') return null;
-    final Color? c = appModel.customThemePrimaryColor;
-    if (c == null) return null;
-    return readerColorToCssRgba(c, alphaOverride: 0.34);
   }
 
   Future<void> _onThemeChanged() async {
@@ -2712,7 +2696,6 @@ extension _ReaderChrome on _ReaderFushiPageState {
       _controller!,
       chapterFavs,
       backgroundHex: _readerBackgroundHex,
-      customHighlightCss: _customHighlightCss,
     );
     await _controller!.evaluateJavascript(
       source:

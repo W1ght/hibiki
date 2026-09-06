@@ -16,6 +16,7 @@ import 'package:flutter/services.dart' hide ModifierKey;
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:fushi/pages.dart';
 import 'package:fushi/src/models/app_model.dart';
+import 'package:fushi/src/models/theme_notifier.dart' show ThemeNotifier;
 import 'package:fushi/src/models/content_font_chain.dart';
 import 'package:fushi/src/utils/adaptive/adaptive_widgets.dart';
 import 'package:fushi/src/utils/adaptive/adaptive_platform.dart';
@@ -323,7 +324,9 @@ typedef ReaderThemeColors = ({
 /// 页面统一用本结果，不再各自回落硬编码。
 ///
 /// 现在：
-/// - `custom-theme`：用用户自定义色（与旧行为一致）。
+/// - 自定义主题（`custom-theme` / `custom-theme:<id>`，BUG-2187）：先按 [scheme]
+///   派生一套基底，再把用户在 [customOverrides] 里**显式指定**的角色逐个盖上去；
+///   没指定的角色跟随主题（编辑页里显示为「跟随主题」）。
 /// - presetMap 命中（ecru/water/gray/dark/black）：用手调底色（向后兼容，零变化）。
 /// - 其余（light-theme / system-theme / 未来新增 key）：从真实 [scheme] 派生，
 ///   让阅读器背景/高亮/选区/链接真正跟随当前主题（强调色）。
@@ -331,14 +334,14 @@ ReaderThemeColors resolveReaderThemeColors({
   required String themeKey,
   required Map<String, ReaderThemeColors> presetMap,
   required ColorScheme scheme,
-  ReaderThemeColors? customColors,
+  ReaderThemeOverrides? customOverrides,
   Color? audioHighlightOverride,
 }) {
   final ReaderThemeColors base = _resolveBaseReaderThemeColors(
     themeKey: themeKey,
     presetMap: presetMap,
     scheme: scheme,
-    customColors: customColors,
+    customOverrides: customOverrides,
   );
   // TODO-977 根因修复：音频高亮（sasayaki 跟随高亮）颜色过去**只在 custom-theme**
   // 时可被用户改（其余主题恒用 primary/preset），所以非自定义主题下「一直用主色」。
@@ -361,18 +364,15 @@ ReaderThemeColors _resolveBaseReaderThemeColors({
   required String themeKey,
   required Map<String, ReaderThemeColors> presetMap,
   required ColorScheme scheme,
-  ReaderThemeColors? customColors,
+  ReaderThemeOverrides? customOverrides,
 }) {
-  if (themeKey == 'custom-theme' && customColors != null) {
-    return customColors;
-  }
   final ReaderThemeColors? preset = presetMap[themeKey];
   if (preset != null) {
     return preset;
   }
-  // light-theme / system-theme / 未覆盖的 key：跟随真实 ColorScheme。
+  // light-theme / system-theme / 自定义 / 未覆盖的 key：跟随真实 ColorScheme。
   final bool dark = scheme.brightness == Brightness.dark;
-  return (
+  final ReaderThemeColors fromScheme = (
     bg: scheme.surface,
     fg: scheme.onSurface,
     sentenceAudioHighlight: scheme.primary.withValues(
@@ -381,6 +381,50 @@ ReaderThemeColors _resolveBaseReaderThemeColors({
     // selection 用 tertiary：与 sasayaki(primary) 错开色相，查词高亮 ≠ 跟读高亮。
     selection: scheme.tertiary.withValues(alpha: dark ? 0.35 : 0.40),
     link: scheme.primary,
+    dark: dark,
+  );
+  if (customOverrides == null || !ThemeNotifier.isCustomThemeKey(themeKey)) {
+    return fromScheme;
+  }
+  return applyReaderThemeOverrides(fromScheme, customOverrides);
+}
+
+/// 自定义主题在阅读器四个角色上的**可选**覆盖：null = 跟随主题（BUG-2187）。
+///
+/// 旧的 `customColors: ReaderThemeColors` 要求五色齐全，于是 chrome 侧只能给没设
+/// 的角色硬编码白底/黑字兜底——深色模式下开自定义主题、只改了链接色，正文就变成
+/// 白底。现在未指定的角色与 system/light 主题走同一条 scheme 派生链。
+typedef ReaderThemeOverrides = ({
+  Color? bg,
+  Color? fg,
+  Color? selection,
+  Color? link,
+});
+
+/// 把 [overrides] 里非空的角色盖到 [base] 上。
+///
+/// 只指定了背景没指定字色时，字色按背景亮度取黑/白（而不是沿用 scheme.onSurface：
+/// 深色主题 + 用户选浅色纸底 → 白字白纸）；`dark` 同样跟随**最终**背景的亮度，
+/// 这样进度胶囊/词典弹窗等按 `dark` 分档的 chrome 与实际纸色一致。
+ReaderThemeColors applyReaderThemeOverrides(
+  ReaderThemeColors base,
+  ReaderThemeOverrides overrides,
+) {
+  final Color bg = overrides.bg ?? base.bg;
+  final bool dark = overrides.bg == null
+      ? base.dark
+      : ThemeData.estimateBrightnessForColor(bg) == Brightness.dark;
+  final Color fg =
+      overrides.fg ??
+      (overrides.bg == null
+          ? base.fg
+          : (dark ? const Color(0xDEFFFFFF) : const Color(0xDE000000)));
+  return (
+    bg: bg,
+    fg: fg,
+    sentenceAudioHighlight: base.sentenceAudioHighlight,
+    selection: overrides.selection ?? base.selection,
+    link: overrides.link ?? base.link,
     dark: dark,
   );
 }
@@ -3536,7 +3580,6 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
         _controller!,
         chapterFavs,
         backgroundHex: _readerBackgroundHex,
-        customHighlightCss: _customHighlightCss,
       );
       if (!mounted || _controller == null) return;
       await _controller!.evaluateJavascript(
