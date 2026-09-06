@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 72964 (4292 per locale)
+/// Strings: 73032 (4296 per locale)
 ///
-/// Built on 2026-09-06 at 00:08 UTC
+/// Built on 2026-09-06 at 04:15 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5917,6 +5917,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Download failed: ${error}';
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  String get onboarding_pack_download_resume => 'Resume download';
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -15952,6 +15958,16 @@ class _StringsAr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -26214,6 +26230,16 @@ class _StringsDe extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -36529,6 +36555,16 @@ class _StringsEs extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -46878,6 +46914,16 @@ class _StringsFr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -57031,6 +57077,16 @@ class _StringsId extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -67276,6 +67332,16 @@ class _StringsIt extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -76908,6 +76974,16 @@ class _StringsJa extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -86550,6 +86626,16 @@ class _StringsKo extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -96750,6 +96836,16 @@ class _StringsNl extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -107004,6 +107100,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -117236,6 +117342,16 @@ class _StringsRu extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -127267,6 +127383,16 @@ class _StringsTh extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -137415,6 +137541,16 @@ class _StringsTr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -147534,6 +147670,16 @@ class _StringsVi extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 // Path: <root>
@@ -156836,6 +156982,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU 探测失败，按 CPU 规划：${reason}';
+  @override
+  String get onboarding_pack_status_paused => '推荐包下载已暂停';
+  @override
+  String get onboarding_pack_download_resume => '继续下载';
+  @override
+  String get onboarding_pack_paused_desc => '进度留在磁盘上，继续下载会从中断处接着下。';
+  @override
+  String get onboarding_pack_mini_bar_hide => '收起';
 }
 
 // Path: <root>
@@ -166161,6 +166315,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
+  @override
+  String get onboarding_pack_status_paused =>
+      'Recommended pack download paused';
+  @override
+  String get onboarding_pack_download_resume => 'Resume download';
+  @override
+  String get onboarding_pack_paused_desc =>
+      'Progress is kept on disk — resuming picks up where it stopped.';
+  @override
+  String get onboarding_pack_mini_bar_hide => 'Hide';
 }
 
 /// Flat map(s) containing all translations.
@@ -174980,6 +175144,14 @@ extension on _StringsEn {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -183794,6 +183966,14 @@ extension on _StringsAr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -192653,6 +192833,14 @@ extension on _StringsDe {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -201503,6 +201691,14 @@ extension on _StringsEs {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -210362,6 +210558,14 @@ extension on _StringsFr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -219192,6 +219396,14 @@ extension on _StringsId {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -228044,6 +228256,14 @@ extension on _StringsIt {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -236823,6 +237043,14 @@ extension on _StringsJa {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -245606,6 +245834,14 @@ extension on _StringsKo {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -254451,6 +254687,14 @@ extension on _StringsNl {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -263291,6 +263535,14 @@ extension on _StringsPtBr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -272138,6 +272390,14 @@ extension on _StringsRu {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -280957,6 +281217,14 @@ extension on _StringsTh {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -289791,6 +290059,14 @@ extension on _StringsTr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -298619,6 +298895,14 @@ extension on _StringsVi {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
@@ -307371,6 +307655,14 @@ extension on _StringsZhCn {
         return ({required Object error}) => '下载失败：${error}';
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) => 'GPU 探测失败，按 CPU 规划：${reason}';
+      case 'onboarding_pack_status_paused':
+        return '推荐包下载已暂停';
+      case 'onboarding_pack_download_resume':
+        return '继续下载';
+      case 'onboarding_pack_paused_desc':
+        return '进度留在磁盘上，继续下载会从中断处接着下。';
+      case 'onboarding_pack_mini_bar_hide':
+        return '收起';
       default:
         return null;
     }
@@ -316128,6 +316420,14 @@ extension on _StringsZhHk {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
+      case 'onboarding_pack_status_paused':
+        return 'Recommended pack download paused';
+      case 'onboarding_pack_download_resume':
+        return 'Resume download';
+      case 'onboarding_pack_paused_desc':
+        return 'Progress is kept on disk — resuming picks up where it stopped.';
+      case 'onboarding_pack_mini_bar_hide':
+        return 'Hide';
       default:
         return null;
     }
