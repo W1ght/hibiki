@@ -24,6 +24,16 @@ List<int> _resolve(
   window: window,
 );
 
+List<(int, int)> _resolveSpans(
+  String fullNorm,
+  List<SentenceAudioCueHint> cues, {
+  int window = 256,
+}) => ReaderPaginationScripts.resolveCueNormSpansForTesting(
+  fullNorm: fullNorm,
+  cues: cues,
+  window: window,
+);
+
 void main() {
   group('resolveCueNormStarts (BUG-060)', () {
     test('无漂移：解析起点等于命中位置', () {
@@ -108,6 +118,48 @@ void main() {
         SentenceAudioCueHint(needle: 'かきくけこ', hint: 5, length: 5),
       ]);
       expect(out[1], 5, reason: '可命中 cue 必须自愈到 5，不被前一条回落 cue 的游标污染');
+    });
+
+    // BUG-2192：ASR 前句多带下一句首字，前句命中后游标越过后句真实起点。
+    // full: エリスだけは好きそうだけどな高い所(0..17) とはいえ今は(17..) ... とはいえ冒険者区(远处)
+    test('BUG-2192 前句多吃下一句首字：后句回吃 1 字在真实位置命中，前句 span 被裁短', () {
+      final String full =
+          'エリスだけは好きそうだけどな高い所とはいえ今はそれを考慮している暇はない'
+          '${'を' * 150}とはいえ冒険者区も広い';
+      final int second = full.indexOf('とはいえ', 20);
+      final List<(int, int)> out = _resolveSpans(full, <SentenceAudioCueHint>[
+        const SentenceAudioCueHint(
+          needle: 'エリスだけは好きそうだけどな高い所と',
+          hint: 0,
+          length: 18,
+        ),
+        // 旧数据的 hint 指着远处第二个「とはいえ」（matcher 当年就撞错了）。
+        SentenceAudioCueHint(needle: 'とはいえ', hint: second, length: 4),
+        const SentenceAudioCueHint(
+          needle: '今はそれを考慮している暇はない',
+          hint: 21,
+          length: 15,
+        ),
+      ]);
+      expect(out[0], (0, 17), reason: '前句被裁到「と」之前');
+      expect(out[1], (17, 4), reason: '「とはいえ」紧接前句：延续优先，不跳远处');
+      expect(out[2].$1, 21, reason: '后续句子继续单调命中');
+    });
+
+    test('BUG-2192 回吃有上限：不退到前一句中段；无延续时仍按 hint 就近', () {
+      const String full = 'かきくけこさしすせそたちつてと';
+      final List<(int, int)> out = _resolveSpans(
+        full,
+        const <SentenceAudioCueHint>[
+          SentenceAudioCueHint(needle: 'かきくけこさし', hint: 0, length: 7),
+          // 「くけこ」在前句中段（起点 2，比游标 7 早 5 字 > OVERLAP 4）：不许回退。
+          SentenceAudioCueHint(needle: 'くけこ', hint: 2, length: 3),
+          SentenceAudioCueHint(needle: 'すせそ', hint: 7, length: 3),
+        ],
+      );
+      expect(out[0], (0, 7), reason: '前句不被裁');
+      expect(out[1].$1, 7, reason: '未命中回落到裁剪后的 hint（不小于游标）');
+      expect(out[2], (7, 3));
     });
 
     test('回落不污染游标：连续两条不可命中后，真实可命中句仍命中', () {
@@ -201,6 +253,52 @@ void main() {
         fnBody.contains('cursor = spanStart + len'),
         isFalse,
         reason: '回落不得推进游标，否则越过后续可命中句重新引入累积漂移（BUG-282）',
+      );
+    });
+
+    test('JS 延续优先 + 回吃前句尾巴（BUG-2192），常量与 Dart 影子同值', () {
+      final String src = File(
+        'lib/src/reader/reader_pagination_scripts.dart',
+      ).readAsStringSync();
+      final int fnStart = src.indexOf(
+        'collectSentenceAudioCueRanges: function',
+      );
+      final int fnEnd = src.indexOf(
+        'applySentenceAudioCues: function',
+        fnStart,
+      );
+      final String fnBody = src.substring(fnStart, fnEnd);
+      expect(
+        fnBody,
+        contains(
+          'var OVERLAP = ${ReaderPaginationScripts.kSentenceAudioTailOverlap};',
+        ),
+      );
+      expect(
+        fnBody,
+        contains(
+          'var ADJACENT = ${ReaderPaginationScripts.kSentenceAudioAdjacent};',
+        ),
+      );
+      expect(
+        fnBody,
+        contains('Math.max(lastHitStart + 1, cursor - OVERLAP)'),
+        reason: '回吃只到前一条命中起点之后',
+      );
+      expect(
+        fnBody,
+        contains('if (adjacent >= 0) best = adjacent;'),
+        reason: '紧接前一条命中处的延续优先于离 hint 最近者',
+      );
+      expect(
+        fnBody,
+        contains('spans[lastHit].len = best - spans[lastHit].start;'),
+        reason: '回吃后前一条 span 裁短，range 不重叠',
+      );
+      expect(
+        fnBody.contains('this.rangesForNormSpan(map, spanStart, spanLen)'),
+        isFalse,
+        reason: 'range 必须在全部 span 定稿（含裁短）之后统一生成',
       );
     });
   });

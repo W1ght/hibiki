@@ -111,6 +111,14 @@ class EpubSrtMatcher {
   static const int shortCueMaxLen = 2;
   static const int shortCueMaxAdvance = 16;
 
+  /// 前一条 cue 的尾巴允许被下一条「吃回去」的最大字数（BUG-2192）。ASR 字幕的
+  /// 切句边界会漂：前句文本多带了下一句的首字（无職転生 21：「…高い所。と」+
+  /// 「とはいえ、」），命中后游标已越过下一句的真实起点，下一句在游标后找不到就
+  /// 撞上远处的同前缀句（155 字外的第二个「とはいえ、」），夹在中间的十几句全部
+  /// miss、播放时视口跳到下一页。搜索起点因此允许回退到 `cursor - 本值`（但不越过
+  /// 前一条命中的起点），命中在游标之前时把前一条的终点裁到本条起点。
+  static const int cueTailOverlap = 4;
+
   static Future<MatchResult> matchInIsolate({
     required List<EpubSection> sections,
     required List<AudioCue> cues,
@@ -262,6 +270,26 @@ class EpubSrtMatcher {
     int cursor = start;
     int matched = 0;
     int consecutiveMisses = 0;
+    // 最近一次命中：results 下标与全书绝对起点（尾巴回吃 / 裁剪用，BUG-2192）。
+    int lastHitResult = -1;
+    int lastHitAbsStart = -1;
+
+    /// 本条在游标之前 [found] 处命中：把前一条的终点裁到 [found]（它多吃的尾巴
+    /// 还给本条），高亮 range 才不重叠。
+    void trimPreviousTo(int found) {
+      if (lastHitResult < 0 || found >= cursor) return;
+      final CueMatch prev = results[lastHitResult];
+      final int prevSectionStart = idx.sectionNormStarts[prev.sectionIndex];
+      final int newEnd = found - prevSectionStart;
+      if (newEnd <= prev.normCharStart) return;
+      results[lastHitResult] = CueMatch(
+        cueSentenceIndex: prev.cueSentenceIndex,
+        sectionIndex: prev.sectionIndex,
+        normCharStart: prev.normCharStart,
+        normCharEnd: newEnd,
+        score: prev.score,
+      );
+    }
 
     for (int ci = 0; ci < cues.length; ci++) {
       final AudioCue cue = cues[ci];
@@ -289,8 +317,15 @@ class EpubSrtMatcher {
 
       // --- 快速通道：精确 indexOf ---
       final int windowEnd = (cursor + searchWindow).clamp(0, totalLen);
+      // BUG-2192：搜索起点允许回到游标前 [cueTailOverlap] 字（不越过前一条命中的
+      // 起点），让被前一条多吃掉首字的本句仍能在真实位置命中。
+      final int searchFrom = lastHitResult >= 0
+          ? (cursor - cueTailOverlap > lastHitAbsStart + 1
+                ? cursor - cueTailOverlap
+                : lastHitAbsStart + 1)
+          : cursor;
       if (windowEnd - cursor >= nc.length) {
-        final int found = big.indexOf(nc, cursor);
+        final int found = big.indexOf(nc, searchFrom);
         // 超短 cue（≤ [shortCueMaxLen] 字）的精确命中只认紧邻游标的位置：一两个
         // 字在 200 字窗口里几乎必然能撞上（「一」「え」「ああ」），撞上就把游标
         // 拽走，后面整段正文全 miss。2026-09-05 无職転生 01 真机对照：ASR 字幕的
@@ -303,6 +338,9 @@ class EpubSrtMatcher {
             !tooFarForShortCue) {
           final int matchEnd = found + nc.length;
           final int secIdx = _sectionForOffset(idx.sectionNormStarts, found);
+          trimPreviousTo(found);
+          lastHitResult = results.length;
+          lastHitAbsStart = found;
           results.add(
             CueMatch(
               cueSentenceIndex: cue.sentenceIndex,
@@ -346,7 +384,7 @@ class EpubSrtMatcher {
         final _SlidingDiceResult r = _slidingDice(
           needle: nc,
           haystack: big,
-          start: cursor,
+          start: searchFrom,
           end: windowEnd,
         );
         if (r.score > bestSim) {
@@ -359,6 +397,9 @@ class EpubSrtMatcher {
       if (bestSim >= similarityThreshold && bestPos >= 0) {
         final int matchEnd = bestPos + bestLen;
         final int secIdx = _sectionForOffset(idx.sectionNormStarts, bestPos);
+        trimPreviousTo(bestPos);
+        lastHitResult = results.length;
+        lastHitAbsStart = bestPos;
         results.add(
           CueMatch(
             cueSentenceIndex: cue.sentenceIndex,
