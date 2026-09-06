@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 73032 (4296 per locale)
+/// Strings: 73066 (4298 per locale)
 ///
-/// Built on 2026-09-06 at 17:12 UTC
+/// Built on 2026-09-06 at 19:15 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5921,6 +5921,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_pack_paused_desc =>
       'Progress is kept on disk — resuming picks up where it stopped.';
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
   String get video_library_scrape_pending_banner_action => 'Confirm';
@@ -15965,6 +15968,11 @@ class _StringsAr extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
   @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
@@ -26238,6 +26246,11 @@ class _StringsDe extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
   @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
@@ -36564,6 +36577,11 @@ class _StringsEs extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
   @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
@@ -46925,6 +46943,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
+  @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
   @override
@@ -57088,6 +57111,11 @@ class _StringsId extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
   @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
@@ -67345,6 +67373,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
+  @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
   @override
@@ -76987,6 +77020,11 @@ class _StringsJa extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
   @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
@@ -86640,6 +86678,11 @@ class _StringsKo extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
   @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
@@ -96851,6 +96894,11 @@ class _StringsNl extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
   @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
@@ -107117,6 +107165,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
+  @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
   @override
@@ -117360,6 +117413,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
+  @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
   @override
@@ -127401,6 +127459,11 @@ class _StringsTh extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
   @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
@@ -137561,6 +137624,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
+  @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
   @override
@@ -147691,6 +147759,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
+  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
+  @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
   @override
@@ -157001,6 +157074,11 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_pack_paused_desc => '进度留在磁盘上，继续下载会从中断处接着下。';
   @override
   String get onboarding_pack_mini_bar_hide => '收起';
+  @override
+  String get video_setting_subtitle_obscure_reveal => '悬停或点击显形';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      '字幕处于模糊或隐藏时，桌面悬停、移动端点击可临时显形；关掉后遮蔽始终保持，不会被误触揭开。';
   @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} 部作品还没确认身份，资料和封面都没刮出来';
@@ -166338,6 +166416,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
+  String get video_setting_subtitle_obscure_reveal => '懸停或點擊顯形';
+  @override
+  String get video_setting_subtitle_obscure_reveal_hint =>
+      '字幕處於模糊或隱藏時，桌面懸停、流動裝置點擊可臨時顯形；關掉後遮蔽始終保持，不會被誤觸揭開。';
+  @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
   @override
@@ -175165,6 +175248,10 @@ extension on _StringsEn {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -183988,6 +184075,10 @@ extension on _StringsAr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -192856,6 +192947,10 @@ extension on _StringsDe {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -201715,6 +201810,10 @@ extension on _StringsEs {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -210583,6 +210682,10 @@ extension on _StringsFr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -219422,6 +219525,10 @@ extension on _StringsId {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -228283,6 +228390,10 @@ extension on _StringsIt {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -237071,6 +237182,10 @@ extension on _StringsJa {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -245863,6 +245978,10 @@ extension on _StringsKo {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -254717,6 +254836,10 @@ extension on _StringsNl {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -263566,6 +263689,10 @@ extension on _StringsPtBr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -272422,6 +272549,10 @@ extension on _StringsRu {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -281250,6 +281381,10 @@ extension on _StringsTh {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -290093,6 +290228,10 @@ extension on _StringsTr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -298930,6 +299069,10 @@ extension on _StringsVi {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return 'Reveal on hover or tap';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -307691,6 +307834,10 @@ extension on _StringsZhCn {
         return '进度留在磁盘上，继续下载会从中断处接着下。';
       case 'onboarding_pack_mini_bar_hide':
         return '收起';
+      case 'video_setting_subtitle_obscure_reveal':
+        return '悬停或点击显形';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return '字幕处于模糊或隐藏时，桌面悬停、移动端点击可临时显形；关掉后遮蔽始终保持，不会被误触揭开。';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) => '${count} 部作品还没确认身份，资料和封面都没刮出来';
       case 'video_library_scrape_pending_banner_action':
@@ -316456,6 +316603,10 @@ extension on _StringsZhHk {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'video_setting_subtitle_obscure_reveal':
+        return '懸停或點擊顯形';
+      case 'video_setting_subtitle_obscure_reveal_hint':
+        return '字幕處於模糊或隱藏時，桌面懸停、流動裝置點擊可臨時顯形；關掉後遮蔽始終保持，不會被誤觸揭開。';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
