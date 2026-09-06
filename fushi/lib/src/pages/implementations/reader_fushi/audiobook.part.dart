@@ -685,6 +685,8 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
       reveal: reveal,
       pauseEnabled: pauseEnabled,
     );
+    // reveal 落定后的进度补刷（B-3 窗吃掉了跟随滚动的 scroll 回传，见方法注释）。
+    if (reveal) _scheduleRevealProgressRefresh();
     // TODO-718（真机铁证·2026-06-25）：只有 cue 权威驱动视图时（reveal=播放跟随 / 显式
     // reveal / forceReveal）才用 cue 位置覆盖落库的阅读位置。**被动高亮**——重开 / 暂停态把
     // 当前 cue 高亮上去（reveal=false）——绝不覆盖用户的滚动阅读位置：否则恢复后的位置被
@@ -847,63 +849,35 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
 
   /// BUG-1107（断点 B·幻象字数）：显式跳句（[AudiobookPlayerController.skipToCue]
   /// 漏斗——音量键句子导航 / 快捷键 / 底栏「上一句·下一句」/ 媒体通知按钮全部汇聚
-  /// 到那里）落定目标后，把本 session 统计字数水位抬到目标 cue 的绝对字符位置。
+  /// 到那里）在物理 seek 之前回调到此。
   ///
-  /// 语义：**音频跳过的段落不算已读**。不抬水位时，跳句后的 WebView 跟随滚动会让
-  /// `_refreshProgress` 把「旧位置 → 目标 cue」之间整段正文误计成本次读到的新字数。
-  /// 后跳（上一句）目标位置低于水位，[sessionWatermarkAfterRestore] 的只升不降
-  /// 语义天然 no-op（重听不重复计也不回退）。
+  /// 语义：**音频跳过的段落不算已读**。账本 `leave()`：结算当前页（用户在这页，翻走
+  /// 即计），并清空当前单元——跟随滚动落到目标 cue 后的首个 `_refreshProgress` 只是
+  /// 「到达」新单元，旧位置 → 目标 cue 之间被跳过的正文从未成为当前单元、不计。
+  /// 后跳（上一句）同理：目标页若已在会话并集里，翻走时结算为 0（重听不重复计）。
   void _handleExplicitCueJump(AudioCue cue) {
-    final int target = _absoluteCharPositionForCue(cue);
-    _sessionMaxAbsoluteChars = sessionWatermarkAfterRestore(
-      _sessionMaxAbsoluteChars,
-      target,
-    );
+    _readLedger.leave();
   }
 
-  /// 目标 cue 的绝对字符位置（全书累计口径）。解析不出时返回 0（水位取 max，
-  /// 0 恒为 no-op，fail-open 不影响统计）。
+  /// 听书跟随 reveal（`AudiobookBridge.highlight(reveal: true)`）落定后补刷一次进度。
   ///
-  /// - sasayaki cue：`textFragmentId` 解码出章号 + 章内 normCharStart（与章字数
-  ///   同一归一化口径），走 [computeCharWatermark] 的精确锚分支。
-  /// - SRT cue：无字符锚，按句号在本章 cue 区间内的比例（与跨章恢复共用的
-  ///   [audiobookSrtCrossChapterProgress] 公式）折算成分数口径。
-  int _absoluteCharPositionForCue(AudioCue cue) {
-    if (_book == null || _chapterCumulativeChars.isEmpty) return 0;
-    final SubtitleRematchFragment? frag = SubtitleRematchCodec.tryDecode(
-      cue.textFragmentId,
-    );
-    if (frag != null) {
-      return computeCharWatermark(
-        chapterCumulativeChars: _chapterCumulativeChars,
-        chapterCharCounts: _chapterCharCounts,
-        chapter: frag.sectionIndex,
-        progress: 0.0,
-        charOffset: frag.normCharStart,
-      );
-    }
-    final int? srtChapter = _srtCueChapterMap?[cue.sentenceIndex];
-    final List<(int, int)>? ranges = _srtChapterRanges;
-    if (srtChapter == null ||
-        ranges == null ||
-        srtChapter < 0 ||
-        srtChapter >= ranges.length) {
-      return 0;
-    }
-    final (int first, int last) = ranges[srtChapter];
-    final double progress =
-        audiobookSrtCrossChapterProgress(
-          sentenceIndex: cue.sentenceIndex,
-          first: first,
-          last: last,
-        ) ??
-        0.0;
-    return computeCharWatermark(
-      chapterCumulativeChars: _chapterCumulativeChars,
-      chapterCharCounts: _chapterCharCounts,
-      chapter: srtChapter,
-      progress: progress,
-      charOffset: -1,
+  /// reveal 前打点 `_reanchorClearedAt` 武装了 B-3 settle 窗（TODO-825 治闪屏）：分页 /
+  /// VN 的 reveal 是瞬时翻页（JS 调用内落定），连续模式是 smooth 动画（多帧）——两者
+  /// 落定那几帧的 scroll 回传都落在窗内被 `_handleReaderScroll` 直接 return，新页不会
+  /// 经 scroll 通道 arrive，只能等 10s 轮询；`ReadUnitLedger` 是翻走即计，晚 arrive 就
+  /// 晚结算上一页（且期间若关书 / 跳句，新页整页漏计）。这里按同一个窗常量
+  /// [kReaderReanchorSettleMs] 排在窗关之后补刷一次：瞬时 reveal 此刻早已落定；smooth
+  /// 动画若还没停，窗关后的尾沿 scroll 回传本就会照常再刷（同单元重复采样是 no-op）。
+  /// 单 Timer 复位：连续 cue 推进只保留最后一次。
+  void _scheduleRevealProgressRefresh() {
+    _revealProgressRefreshTimer?.cancel();
+    _revealProgressRefreshTimer = Timer(
+      const Duration(milliseconds: kReaderReanchorSettleMs),
+      () {
+        _revealProgressRefreshTimer = null;
+        if (!mounted) return;
+        unawaited(_refreshProgress());
+      },
     );
   }
 

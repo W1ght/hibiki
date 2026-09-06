@@ -77,6 +77,7 @@ import 'package:fushi/src/pages/implementations/dictionary_popup_webview.dart';
 import 'package:fushi/src/reader/reader_selection_data.dart';
 import 'package:fushi/src/reader/reader_selection_scripts.dart';
 import 'package:fushi/src/startup/exit_flush_registry.dart';
+import 'package:fushi/src/stats/read_unit_ledger.dart';
 import 'package:fushi/src/webview/webview_death_guard.dart';
 import 'package:fushi/utils.dart';
 
@@ -339,8 +340,8 @@ Future<int?> showMangaPageJumpDialog(
 /// 页图 + 透明 OCR 覆盖层在 WebView 里渲染（文档由 [mangaWindowDocument] 生成），
 /// 汇入同一批共享设施：[BaseSourcePageState.searchDictionaryResult]（查词弹窗）、
 /// [ReaderPositionRepository]（阅读位置，sectionIndex=0-based 页码）、
-/// [StudyClock]（时长 / OCR 字数 / 页数统计，见
-/// [mangaAccumulateReadingStats]）、[AnkiMiningContext]（制卡，
+/// [StudyClock]（时长 / OCR 字数 / 页数统计，「读过」判据见 [ReadUnitLedger]、
+/// 换算见 [mangaStatsForPages]）、[AnkiMiningContext]（制卡，
 /// 卡图=当前页图文件路径）。
 ///
 /// 身份统一 `hoshi://book/<bookKey>`（无漫画专属 scheme 特例），关书自动同步天然工作。
@@ -926,57 +927,36 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
 
   /// v92：本页唯一的阅读时钟兼累计器（时长 / OCR 字数 / 页数同一段同一 uid），同
   /// EPUB / PDF 侧。页面不再持有任何会话时长 / 字数 / 页数字段。（守卫
-  /// manga_stats_dwell_guard_test 钉死旧的会话累计器形态不得回潮。）
+  /// manga_stats_dwell_guard_test 钉死旧的会话累计器 / 停留门形态不得回潮。）
   StudyClock? _studyClock;
 
-  /// 已记账过的页（同一页只计一次，来回翻页刷不出数；恢复存档时把恢复位置之前的
-  /// 页也预置进来，见 [_seedCountedPagesFromRestore]）。字数口径与 EPUB 同源，见
-  /// [mangaAccumulateReadingStats]。
-  final Set<int> _sessionCountedPages = <int>{};
-
-  /// BUG-1761 停留门：页面成为当前页并停留 ≥ [_kPageDwellThreshold] 才入账。
-  /// 「到达即计」会把快速翻过/扫过的页全部记成已读——来回翻一圈就是整卷虚增；
-  /// 停留是「真的在读」的最低判据。
-  Timer? _pageDwellTimer;
-  int _pageDwellKey = -1;
-
-  /// 取自跨域共享的 [kArrivalDwellMs]：与视频的 cue 停留门是同一条产品判据
-  /// （到达 ≠ 看过），只应有一个数。
-  static const Duration _kPageDwellThreshold = Duration(
-    milliseconds: kArrivalDwellMs,
+  /// 「读过」判据的唯一账本（2026-09-06 裁定，三域共用，见
+  /// `docs/plans/2026-09-06-read-unit-ledger.md`）：**翻走即计 + 会话覆盖并集**。
+  /// 单元 = 页号半开区间——webtoon `[page, page+1)`、spread 模式按当前 entry 覆盖的
+  /// 页（单页 `[p, p+1)`、双页 `[p, p+2)`）。离开单元那一刻把其中本会话未覆盖的页
+  /// 交给 [_creditPages]；没有停留门（BUG-1761 的 1.5s 到达停留裁定已推翻）、
+  /// 没有存档预置（重开这卷续读，存档页是当前单元，翻走时计一次）。
+  late final ReadUnitLedger _readLedger = ReadUnitLedger(
+    onCredit: _creditPages,
   );
 
-  /// 当前页（spread 模式按跨页、webtoon 按页）起一个 [_kPageDwellThreshold] 定时，
-  /// 到期才真正入账；到期前位置变了就换目标重计时（旧目标从未入账）。
-  /// webtoon 页内滚动会连续触发 [_recordProgress]：同一页**不重置**计时，否则
-  /// 慢速连续滚读永远攒不满停留门。
-  void _armPageDwellCount() {
-    // v92 阅读空闲门：翻页 / 页内滚动 = 用户输入。
+  /// 位置落定：喂空闲门（翻页 / 页内滚动 = 用户输入）并把当前可见页交给账本。
+  /// 与当前单元相同的重复落定（webtoon 页内滚动）在账本里是 no-op。
+  void _noteVisiblePages() {
     _studyClock?.touch();
-    final bool isWebtoon = _mode == MangaReadingMode.webtoon;
-    final int key = isWebtoon ? _currentPage : _currentSpread;
-    if (_pageDwellTimer != null && key == _pageDwellKey) return;
-    _pageDwellKey = key;
-    _pageDwellTimer?.cancel();
-    _pageDwellTimer = Timer(_kPageDwellThreshold, () {
-      _pageDwellTimer = null;
-      if (!mounted) return;
-      _countVisiblePages();
-    });
+    final (int start, int end) = _visiblePageRange();
+    _readLedger.arrive(start, end);
   }
 
-  /// BUG-1761：恢复存档时把 0..[restoredPage]（含）预置为「已计过」。
-  ///
-  /// [_sessionCountedPages] 只活在一次页面 State 里：每次重开这卷都是空集，恢复
-  /// 位置附近以及本次会话回翻经过的旧页全部重算一遍，而 DB 侧按 (title, dateKey)
-  /// 纯累加、没有上限——170 页的卷被记成读了 400 页。与 EPUB 的
-  /// `sessionWatermarkAfterRestore`（TODO-147/BUG-211）同款语义：续读只计新推进的
-  /// 页；全新打开（无存档）不预置，首页正常入账；故意从头重读不再计页/字——
-  /// 「每页只在第一次读到时计一次」正是页数统计的本意。
-  void _seedCountedPagesFromRestore(int restoredPage) {
-    for (int index = 0; index <= restoredPage; index++) {
-      _sessionCountedPages.add(index);
+  /// 当前可见页的页号半开区间：spread 模式取当前 entry 的页（升序、连续），
+  /// webtoon 只有真正成为「当前页」的那页。
+  (int, int) _visiblePageRange() {
+    final bool isWebtoon = _mode == MangaReadingMode.webtoon;
+    if (!isWebtoon && _currentSpread >= 0 && _currentSpread < _spreads.length) {
+      final List<int> pages = _spreads[_currentSpread].pageIndices;
+      return (pages.first, pages.last + 1);
     }
+    return (_currentPage, _currentPage + 1);
   }
 
   // 密集 OCR 命中层只保留当前 spread；图片页本身全部留在稳定的 lazy strip。
@@ -1077,7 +1057,6 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     // 再从 unawaited 调用点抛出未捕获异步异常（BUG-1171）。
     _windowGate.abandon();
     _progressDebounce?.cancel();
-    _pageDwellTimer?.cancel();
     _onlineGeometryPersistDebounce?.cancel();
     final MangaZoomPreferenceDebouncer? zoomDebouncer =
         _zoomPreferenceDebouncer;
@@ -1091,6 +1070,8 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     if (pageSession != null) {
       unawaited(_closePageSession(pageSession));
     }
+    // 离开当前页：账本结算最后一个单元（翻走即计），必须早于 flush / 时钟 dispose。
+    _readLedger.leave();
     // dispose 里只能 fire-and-forget；正常退出走 onSourcePagePop 的 await 路径，
     // 这里是崩溃/异常拆栈时的兜底。
     unawaited(_flushPosition());
@@ -1208,6 +1189,8 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     if (_ownsWindowFullscreen) {
       await _setMangaFullscreen(false);
     }
+    // 离开当前页：账本结算最后一个单元（翻走即计），再落盘。
+    _readLedger.leave();
     // 返回书架的正常路径：await 落盘，保证书架 recency/进度立刻正确。
     await _flushPosition();
     await _studyClock?.stop();
@@ -1240,6 +1223,8 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
       _currentSpread,
     );
     final List<MangaSpreadEntry> spreads = _buildSpreadsFor(payload, _mode);
+    // 同一页换单元边界（单页↔双页）不是翻页：下一次 arrive 只替换边界、不结算。
+    _readLedger.rebaseOnNextArrive();
     setState(() {
       _spreads = spreads;
       _currentSpread = MangaFushiPage.spreadIndexForPage(spreads, currentPage);
@@ -1368,10 +1353,6 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     }
 
     _ensureStudyClock(db);
-    // BUG-1761：续读不重复计——恢复位置之前（含恢复页）的页上个会话已入账。
-    if (saved != null) {
-      _seedCountedPagesFromRestore(restoredPage);
-    }
 
     final int restoredSpread = MangaFushiPage.restoreSpreadFromProgress(
       spreads,
@@ -1399,9 +1380,9 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
       _lastSavedFraction = saved != null ? restoredFraction : -1;
     });
     _pageNotifier.value = _currentPage;
-    // 首屏页也要走停留门：开书直接停在恢复位置时不会再有 _recordProgress，但
-    // 停够 [_kPageDwellThreshold] 同样应入账（存档续读时该页已被预置，计 0）。
-    _armPageDwellCount();
+    // 首屏页成为当前单元：开书直接停在恢复位置时不会再有 _recordProgress，
+    // 翻走时才入账（存档页不预置，续读也计一次）。
+    _noteVisiblePages();
     // A cancelled/background task intentionally does not replace manga.json,
     // but every atomic page cache is already safe to use. Restore those pages
     // after the first paint so opening a large book stays fast and both local
@@ -1647,11 +1628,11 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     );
 
     _ensureStudyClock(appModel.database);
-    // BUG-1761：只有存档续读预置已计页；initialPage 显式跳页不预置（是否读过未知，
-    // 宁可少算——反正跳过去的页没有 1.5s 停留也不会入账）。
-    if (saved != null) {
-      _seedCountedPagesFromRestore(restoredPage);
-    }
+    // 同一 State 内换章 = 页号坐标系重用（新章页号从 0 起）：先结算离开的旧章
+    // 末页（翻走即计），再清并集；首次打开两步都是 no-op。
+    _readLedger
+      ..leave()
+      ..reset();
     final MangaReaderSession? previousSession = _pageSession;
     _pageSession = pageSession;
     _localPageIndices = <String, int>{
@@ -1679,7 +1660,7 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
       _lastSavedFraction = saved != null ? restoredFraction : -1;
     });
     _pageNotifier.value = _currentPage;
-    _armPageDwellCount();
+    _noteVisiblePages();
     unawaited(_primeOnlinePages(restoredPage));
     unawaited(_recoverIncrementalOcrCache(directory.path, payload));
   }
@@ -3769,6 +3750,8 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     }
     if (!mounted) return;
     final List<MangaSpreadEntry> spreads = _buildSpreadsFor(payload, next);
+    // 同一页换单元边界（spread↔webtoon）不是翻页：只替换当前单元边界、不结算。
+    _readLedger.rebaseOnNextArrive();
     setState(() {
       _mode = next;
       _spreads = spreads;
@@ -3777,6 +3760,7 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
       _currentFraction = 0;
     });
     _pageNotifier.value = _currentPage;
+    _noteVisiblePages();
     await _loadInitialWindow();
     // 布局变化会换掉当前 spread 背后的页（ERRATA C2）。
     _updateCurrentPageImagePath();
@@ -3803,7 +3787,7 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     );
     _currentPage = page;
     _pageNotifier.value = page;
-    _armPageDwellCount();
+    _noteVisiblePages();
     // 600ms debounce：连续翻页/滚动只落最后一次。
     _progressDebounce?.cancel();
     _progressDebounce = Timer(const Duration(milliseconds: 600), () {
@@ -3811,24 +3795,18 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     });
   }
 
-  /// 把当前可见页记进本会话的字数/页数账（每页只记一次）。
-  ///
-  /// 唯一调用方是 [_armPageDwellCount] 的停留定时器：页面停留 ≥
-  /// [_kPageDwellThreshold] 才走到这里，「到达即计」被停留门挡在外面（BUG-1761）。
-  /// spread 模式当前 entry 的两页都算看过；webtoon 整本单文档竖滚，只有真正成为
-  /// 「当前页」的那页算读过（快速滚过没停留的页不计，宁可少算不虚高）。
-  void _countVisiblePages() {
+  /// [_readLedger] 的结算回调：[fresh] 是刚离开的单元里本会话首次覆盖的页号子区间
+  /// （并集去重后），展开成页号按 OCR 文本计字数、按页计页数，记进时钟当前段。
+  void _creditPages(List<(int, int)> fresh) {
     final MokuroPayload? payload = _payload;
     if (payload == null) return;
-    final bool isWebtoon = _mode == MangaReadingMode.webtoon;
-    final List<int> pages =
-        !isWebtoon && _currentSpread >= 0 && _currentSpread < _spreads.length
-        ? _spreads[_currentSpread].pageIndices
-        : <int>[_currentPage];
-    final ({int chars, int pages}) added = mangaAccumulateReadingStats(
-      payload: payload,
-      pageIndices: pages,
-      counted: _sessionCountedPages,
+    final List<int> pageIndices = <int>[
+      for (final (int start, int end) in fresh)
+        for (int page = start; page < end; page++) page,
+    ];
+    final ({int chars, int pages}) added = mangaStatsForPages(
+      payload,
+      pageIndices,
     );
     // v92：字数 / 页数直接记进当前打开段（与时长同一 uid 同一行）。
     _studyClock?.addChars(added.chars);
