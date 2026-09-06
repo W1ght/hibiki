@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 73049 (4297 per locale)
+/// Strings: 73015 (4295 per locale)
 ///
-/// Built on 2026-09-06 at 06:59 UTC
+/// Built on 2026-09-06 at 13:51 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5894,8 +5894,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_transcribe_intro =>
       'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
   String get audiobook_transcribe_language_label => 'Speech language';
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  String get audiobook_transcribe_language_en => 'English';
   String get asr_models_section => 'Speech recognition models';
   String get asr_models_section_summary =>
       'Models for on-device audiobook transcription. Download only the languages you need.';
@@ -15923,10 +15921,6 @@ class _StringsAr extends _StringsEn {
       'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
-  @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
   @override
   String get asr_models_section => 'Speech recognition models';
   @override
@@ -26198,10 +26192,6 @@ class _StringsDe extends _StringsEn {
       'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
-  @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
   @override
   String get asr_models_section => 'Speech recognition models';
   @override
@@ -36526,10 +36516,6 @@ class _StringsEs extends _StringsEn {
       'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
-  @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
   @override
   String get asr_models_section => 'Speech recognition models';
   @override
@@ -46889,10 +46875,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
   @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
-  @override
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
@@ -57054,10 +57036,6 @@ class _StringsId extends _StringsEn {
       'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
-  @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
   @override
   String get asr_models_section => 'Speech recognition models';
   @override
@@ -67313,10 +67291,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
   @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
-  @override
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
@@ -76957,10 +76931,6 @@ class _StringsJa extends _StringsEn {
       'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
-  @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
   @override
   String get asr_models_section => 'Speech recognition models';
   @override
@@ -86612,10 +86582,6 @@ class _StringsKo extends _StringsEn {
       'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
-  @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
   @override
   String get asr_models_section => 'Speech recognition models';
   @override
@@ -96825,10 +96791,6 @@ class _StringsNl extends _StringsEn {
       'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
-  @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
   @override
   String get asr_models_section => 'Speech recognition models';
   @override
@@ -107093,10 +107055,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
   @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
-  @override
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
@@ -117338,10 +117296,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
   @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
-  @override
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
@@ -127381,10 +127335,6 @@ class _StringsTh extends _StringsEn {
       'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
-  @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
   @override
   String get asr_models_section => 'Speech recognition models';
   @override
@@ -137543,10 +137493,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
   @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
-  @override
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
@@ -147675,10 +147621,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
   @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
-  @override
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
@@ -156993,10 +156935,6 @@ class _StringsZhCn extends _StringsEn {
       '在本机用所选语言的语音模型转录音频并生成用于对齐的字幕，不会上传任何内容。';
   @override
   String get audiobook_transcribe_language_label => '语音语言';
-  @override
-  String get audiobook_transcribe_language_ja => '日语';
-  @override
-  String get audiobook_transcribe_language_en => '英语';
   @override
   String get asr_models_section => '语音识别模型';
   @override
@@ -166326,10 +166264,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_transcribe_language_label => 'Speech language';
   @override
-  String get audiobook_transcribe_language_ja => 'Japanese';
-  @override
-  String get audiobook_transcribe_language_en => 'English';
-  @override
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
@@ -175164,10 +175098,6 @@ extension on _StringsEn {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -183989,10 +183919,6 @@ extension on _StringsAr {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -192859,10 +192785,6 @@ extension on _StringsDe {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -201720,10 +201642,6 @@ extension on _StringsEs {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -210590,10 +210508,6 @@ extension on _StringsFr {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -219431,10 +219345,6 @@ extension on _StringsId {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -228294,10 +228204,6 @@ extension on _StringsIt {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -237084,10 +236990,6 @@ extension on _StringsJa {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -245878,10 +245780,6 @@ extension on _StringsKo {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -254734,10 +254632,6 @@ extension on _StringsNl {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -263585,10 +263479,6 @@ extension on _StringsPtBr {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -272443,10 +272333,6 @@ extension on _StringsRu {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -281273,10 +281159,6 @@ extension on _StringsTh {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -290118,10 +290000,6 @@ extension on _StringsTr {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -298957,10 +298835,6 @@ extension on _StringsVi {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
@@ -307721,10 +307595,6 @@ extension on _StringsZhCn {
         return '在本机用所选语言的语音模型转录音频并生成用于对齐的字幕，不会上传任何内容。';
       case 'audiobook_transcribe_language_label':
         return '语音语言';
-      case 'audiobook_transcribe_language_ja':
-        return '日语';
-      case 'audiobook_transcribe_language_en':
-        return '英语';
       case 'asr_models_section':
         return '语音识别模型';
       case 'asr_models_section_summary':
@@ -316487,10 +316357,6 @@ extension on _StringsZhHk {
         return 'Transcribes the audio locally with an on-device speech model for the selected language and generates subtitles for alignment. Nothing is uploaded.';
       case 'audiobook_transcribe_language_label':
         return 'Speech language';
-      case 'audiobook_transcribe_language_ja':
-        return 'Japanese';
-      case 'audiobook_transcribe_language_en':
-        return 'English';
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
