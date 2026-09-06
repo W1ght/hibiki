@@ -9,7 +9,7 @@ import 'package:integration_test/integration_test.dart';
 
 import 'package:fushi/main.dart' as app;
 import 'package:fushi/src/media/video/video_book_repository.dart';
-import 'package:fushi/src/media/video/watch_coverage.dart';
+import 'package:fushi/src/stats/interval_coverage.dart';
 import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/pages/implementations/video_fushi_page.dart';
 import 'package:fushi_core/fushi_core.dart';
@@ -147,7 +147,7 @@ void main() {
     final String? coverageJson = await db.getPref(
       videoWatchCoveragePrefKey(_kBookUid),
     );
-    final WatchCoverage coverage = WatchCoverage.fromJson(coverageJson);
+    final IntervalCoverage coverage = IntervalCoverage.fromJson(coverageJson);
     debugPrint(
       '[watch-coverage] wallPlayed=${wallPlayedMs}ms '
       'credited=${credited}ms segments=${segments.length} '
@@ -172,7 +172,7 @@ void main() {
     );
     expect(coverageJson, isNotNull, reason: '覆盖并集须落偏好表');
     expect(coverage.ranges, hasLength(1), reason: '0..9s 连续一段');
-    expect(coverage.totalMs, greaterThanOrEqualTo(_kSecondPassMs - 1500));
-    expect(coverage.totalMs, lessThanOrEqualTo(_kSecondPassMs + 2000));
+    expect(coverage.total, greaterThanOrEqualTo(_kSecondPassMs - 1500));
+    expect(coverage.total, lessThanOrEqualTo(_kSecondPassMs + 2000));
   });
 }
