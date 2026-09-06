@@ -29,10 +29,14 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2037 条。点号进各自文件。
+> 共 2041 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2191](bugs/BUG-2191-reader-ledger-audiobook-reveal-turn-uncounted.md) | 🚧 | 🚧 | 听书自动翻页未计入读过字数（未复现） |
+| [BUG-2190](bugs/BUG-2190-reader-ledger-close-settles-stale-unit.md) | ✅ | ✅ | 关书结算的是上次采样单元而非此刻可见页 |
+| [BUG-2189](bugs/BUG-2189-reader-ledger-fail-navigation-discards-read-page.md) | ✅ | ✅ | 导航失败/兜底超时 discard 丢掉用户真读过的上一页 |
+| [BUG-2188](bugs/BUG-2188-reader-ledger-same-chapter-jump-rebase.md) | ✅ | ✅ | 同章跳转被误判原位恢复，跳走前那页不结算 |
 | [BUG-2187](bugs/BUG-2187-custom-theme-reader-colors-dead.md) | ✅ | ✅ | 自定义主题的正文/背景/选区/链接色在阅读器里永远不生效（key 严格等值 + 读已停写的旧扁平偏好） |
 | [BUG-2186](bugs/BUG-2186-stat-summary-ratio-unbounded.md) | ✅ | ✅ | 统计环比无上限显示 ↑9999900% |
 | [BUG-2185](bugs/BUG-2185-stat-heatmap-absolute-levels.md) | ✅ | ✅ | 热力图档位按窗口最大值线性分级，单日爆量后其余全落最浅档 |
