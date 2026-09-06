@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 73151 (4303 per locale)
+/// Strings: 73219 (4307 per locale)
 ///
-/// Built on 2026-09-06 at 06:28 UTC
+/// Built on 2026-09-06 at 06:29 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5917,16 +5917,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Download failed: ${error}';
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
   String get onboarding_pack_download_resume => 'Resume download';
   String get onboarding_pack_paused_desc =>
       'Progress is kept on disk — resuming picks up where it stopped.';
   String get onboarding_pack_mini_bar_hide => 'Hide';
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   String get reader_stats_time_to_finish => 'Time to finish';
   String get reader_stats_finish_chapter => 'Chapter';
@@ -5934,6 +5930,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_audiobook_tab_files => 'Audio files';
   String get reader_audiobook_tab_chapters => 'Chapters';
   String get reader_audiobook_current_chapter => 'Current chapter';
+  String get reader_stats_this_book => 'This book';
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -15969,7 +15971,6 @@ class _StringsAr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -15981,9 +15982,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -15997,6 +15995,16 @@ class _StringsAr extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -26259,7 +26267,6 @@ class _StringsDe extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -26271,9 +26278,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -26287,6 +26291,16 @@ class _StringsDe extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -36602,7 +36616,6 @@ class _StringsEs extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -36614,9 +36627,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -36630,6 +36640,16 @@ class _StringsEs extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -46979,7 +46999,6 @@ class _StringsFr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -46991,9 +47010,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -47007,6 +47023,16 @@ class _StringsFr extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -57160,7 +57186,6 @@ class _StringsId extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -57172,9 +57197,6 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -57188,6 +57210,16 @@ class _StringsId extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -67433,7 +67465,6 @@ class _StringsIt extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -67445,9 +67476,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -67461,6 +67489,16 @@ class _StringsIt extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -77093,7 +77131,6 @@ class _StringsJa extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -77105,9 +77142,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -77121,6 +77155,16 @@ class _StringsJa extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -86763,7 +86807,6 @@ class _StringsKo extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -86775,9 +86818,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -86791,6 +86831,16 @@ class _StringsKo extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -96991,7 +97041,6 @@ class _StringsNl extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -97003,9 +97052,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -97019,6 +97065,16 @@ class _StringsNl extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -107273,7 +107329,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -107285,9 +107340,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -107301,6 +107353,16 @@ class _StringsPtBr extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -117533,7 +117595,6 @@ class _StringsRu extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -117545,9 +117606,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -117561,6 +117619,16 @@ class _StringsRu extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -127592,7 +127660,6 @@ class _StringsTh extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -127604,9 +127671,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -127620,6 +127684,16 @@ class _StringsTh extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -137768,7 +137842,6 @@ class _StringsTr extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -137780,9 +137853,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -137796,6 +137866,16 @@ class _StringsTr extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -147915,7 +147995,6 @@ class _StringsVi extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -147927,9 +148006,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -147943,6 +148019,16 @@ class _StringsVi extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 // Path: <root>
@@ -157245,7 +157331,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU 探测失败，按 CPU 规划：${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused => '推荐包下载已暂停';
   @override
@@ -157255,9 +157340,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => '收起';
   @override
-=======
-  String get reader_stats_this_book => '本书';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => '本次会话';
   @override
   String get reader_stats_time_to_finish => '预计读完';
@@ -157271,6 +157353,14 @@ class _StringsZhCn extends _StringsEn {
   String get reader_audiobook_tab_chapters => '章节';
   @override
   String get reader_audiobook_current_chapter => '当前章节';
+  @override
+  String get reader_stats_this_book => '本书';
+  @override
+  String get shortcut_action_reader_open_gallery => '打开插图画廊';
+  @override
+  String get shortcut_action_reader_open_statistics => '打开阅读统计';
+  @override
+  String get shortcut_action_reader_open_audiobook => '打开有声书面板';
 }
 
 // Path: <root>
@@ -166596,7 +166686,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audiobook_transcribe_probe_failed({required Object reason}) =>
       'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -166608,9 +166697,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
   @override
-=======
-  String get reader_stats_this_book => 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
   String get reader_stats_session => 'This session';
   @override
   String get reader_stats_time_to_finish => 'Time to finish';
@@ -166624,6 +166710,16 @@ class _StringsZhHk extends _StringsEn {
   String get reader_audiobook_tab_chapters => 'Chapters';
   @override
   String get reader_audiobook_current_chapter => 'Current chapter';
+  @override
+  String get reader_stats_this_book => 'This book';
+  @override
+  String get shortcut_action_reader_open_gallery =>
+      'Open illustrations gallery';
+  @override
+  String get shortcut_action_reader_open_statistics =>
+      'Open reading statistics';
+  @override
+  String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
 }
 
 /// Flat map(s) containing all translations.
@@ -175443,7 +175539,6 @@ extension on _StringsEn {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -175452,10 +175547,6 @@ extension on _StringsEn {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -175470,6 +175561,14 @@ extension on _StringsEn {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -184284,7 +184383,6 @@ extension on _StringsAr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -184293,10 +184391,6 @@ extension on _StringsAr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -184311,6 +184405,14 @@ extension on _StringsAr {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -193170,7 +193272,6 @@ extension on _StringsDe {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -193179,10 +193280,6 @@ extension on _StringsDe {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -193197,6 +193294,14 @@ extension on _StringsDe {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -202047,7 +202152,6 @@ extension on _StringsEs {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -202056,10 +202160,6 @@ extension on _StringsEs {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -202074,6 +202174,14 @@ extension on _StringsEs {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -210933,7 +211041,6 @@ extension on _StringsFr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -210942,10 +211049,6 @@ extension on _StringsFr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -210960,6 +211063,14 @@ extension on _StringsFr {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -219790,7 +219901,6 @@ extension on _StringsId {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -219799,10 +219909,6 @@ extension on _StringsId {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -219817,6 +219923,14 @@ extension on _StringsId {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -228669,7 +228783,6 @@ extension on _StringsIt {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -228678,10 +228791,6 @@ extension on _StringsIt {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -228696,6 +228805,14 @@ extension on _StringsIt {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -237475,7 +237592,6 @@ extension on _StringsJa {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -237484,10 +237600,6 @@ extension on _StringsJa {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -237502,6 +237614,14 @@ extension on _StringsJa {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -246285,7 +246405,6 @@ extension on _StringsKo {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -246294,10 +246413,6 @@ extension on _StringsKo {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -246312,6 +246427,14 @@ extension on _StringsKo {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -255157,7 +255280,6 @@ extension on _StringsNl {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -255166,10 +255288,6 @@ extension on _StringsNl {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -255184,6 +255302,14 @@ extension on _StringsNl {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -264024,7 +264150,6 @@ extension on _StringsPtBr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -264033,10 +264158,6 @@ extension on _StringsPtBr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -264051,6 +264172,14 @@ extension on _StringsPtBr {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -272898,7 +273027,6 @@ extension on _StringsRu {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -272907,10 +273035,6 @@ extension on _StringsRu {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -272925,6 +273049,14 @@ extension on _StringsRu {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -281744,7 +281876,6 @@ extension on _StringsTh {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -281753,10 +281884,6 @@ extension on _StringsTh {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -281771,6 +281898,14 @@ extension on _StringsTh {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -290605,7 +290740,6 @@ extension on _StringsTr {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -290614,10 +290748,6 @@ extension on _StringsTr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -290632,6 +290762,14 @@ extension on _StringsTr {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -299460,7 +299598,6 @@ extension on _StringsVi {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -299469,10 +299606,6 @@ extension on _StringsVi {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -299487,6 +299620,14 @@ extension on _StringsVi {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
@@ -308239,7 +308380,6 @@ extension on _StringsZhCn {
         return ({required Object error}) => '下载失败：${error}';
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) => 'GPU 探测失败，按 CPU 规划：${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return '推荐包下载已暂停';
       case 'onboarding_pack_download_resume':
@@ -308248,10 +308388,6 @@ extension on _StringsZhCn {
         return '进度留在磁盘上，继续下载会从中断处接着下。';
       case 'onboarding_pack_mini_bar_hide':
         return '收起';
-=======
-      case 'reader_stats_this_book':
-        return '本书';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return '本次会话';
       case 'reader_stats_time_to_finish':
@@ -308266,6 +308402,14 @@ extension on _StringsZhCn {
         return '章节';
       case 'reader_audiobook_current_chapter':
         return '当前章节';
+      case 'reader_stats_this_book':
+        return '本书';
+      case 'shortcut_action_reader_open_gallery':
+        return '打开插图画廊';
+      case 'shortcut_action_reader_open_statistics':
+        return '打开阅读统计';
+      case 'shortcut_action_reader_open_audiobook':
+        return '打开有声书面板';
       default:
         return null;
     }
@@ -317023,7 +317167,6 @@ extension on _StringsZhHk {
       case 'audiobook_transcribe_probe_failed':
         return ({required Object reason}) =>
             'GPU detection failed, planning for CPU: ${reason}';
-<<<<<<< HEAD
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -317032,10 +317175,6 @@ extension on _StringsZhHk {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
-=======
-      case 'reader_stats_this_book':
-        return 'This book';
->>>>>>> 54706a1d9d (refactor(reader): 桌面端阅读器优化八条——chrome 状态机抽控制器、面板/画廊拆文件、整书进度条、章节时间戳缓存、底栏让位状态行、工具栏溢出菜单、统计标注本书、补 widget 测试)
       case 'reader_stats_session':
         return 'This session';
       case 'reader_stats_time_to_finish':
@@ -317050,6 +317189,14 @@ extension on _StringsZhHk {
         return 'Chapters';
       case 'reader_audiobook_current_chapter':
         return 'Current chapter';
+      case 'reader_stats_this_book':
+        return 'This book';
+      case 'shortcut_action_reader_open_gallery':
+        return 'Open illustrations gallery';
+      case 'shortcut_action_reader_open_statistics':
+        return 'Open reading statistics';
+      case 'shortcut_action_reader_open_audiobook':
+        return 'Open audiobook panel';
       default:
         return null;
     }
