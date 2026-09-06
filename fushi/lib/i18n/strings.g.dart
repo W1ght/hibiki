@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 73032 (4296 per locale)
+/// Strings: 73151 (4303 per locale)
 ///
-/// Built on 2026-09-06 at 04:15 UTC
+/// Built on 2026-09-06 at 13:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5923,6 +5923,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_pack_paused_desc =>
       'Progress is kept on disk — resuming picks up where it stopped.';
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -15968,6 +15985,30 @@ class _StringsAr extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -26240,6 +26281,30 @@ class _StringsDe extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -36565,6 +36630,30 @@ class _StringsEs extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -46924,6 +47013,30 @@ class _StringsFr extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -57087,6 +57200,30 @@ class _StringsId extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -67342,6 +67479,30 @@ class _StringsIt extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -76984,6 +77145,30 @@ class _StringsJa extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -86636,6 +86821,30 @@ class _StringsKo extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -96846,6 +97055,30 @@ class _StringsNl extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -107110,6 +107343,30 @@ class _StringsPtBr extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -117352,6 +117609,30 @@ class _StringsRu extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -127393,6 +127674,30 @@ class _StringsTh extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -137551,6 +137856,30 @@ class _StringsTr extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -147680,6 +148009,30 @@ class _StringsVi extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 // Path: <root>
@@ -156990,6 +157343,28 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_pack_paused_desc => '进度留在磁盘上，继续下载会从中断处接着下。';
   @override
   String get onboarding_pack_mini_bar_hide => '收起';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      '连接 ${host} 超时，当前网络可能访问不了这个站点';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} 传输中断，长时间没有收到数据';
+  @override
+  String dict_error_connection({required Object host}) => '无法连接 ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} 返回 HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      '下载失败：${name}（${reason}）';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      '导入失败：${name}（${reason}）';
+  @override
+  String dict_task_failed_summary({required Object n}) => '${n} 本词典处理失败';
 }
 
 // Path: <root>
@@ -166325,6 +166700,30 @@ class _StringsZhHk extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String dict_error_connect_timeout({required Object host}) =>
+      'Could not reach ${host} (connection timed out)';
+  @override
+  String dict_error_stall_timeout({required Object host}) =>
+      '${host} stopped sending data';
+  @override
+  String dict_error_connection({required Object host}) =>
+      'Could not connect to ${host}';
+  @override
+  String dict_error_http_status(
+          {required Object host, required Object status}) =>
+      '${host} returned HTTP ${status}';
+  @override
+  String dict_task_failed_download(
+          {required Object name, required Object reason}) =>
+      'Download failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_import(
+          {required Object name, required Object reason}) =>
+      'Import failed: ${name} (${reason})';
+  @override
+  String dict_task_failed_summary({required Object n}) =>
+      '${n} dictionary(s) failed';
 }
 
 /// Flat map(s) containing all translations.
@@ -175152,6 +175551,24 @@ extension on _StringsEn {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -183974,6 +184391,24 @@ extension on _StringsAr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -192841,6 +193276,24 @@ extension on _StringsDe {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -201699,6 +202152,24 @@ extension on _StringsEs {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -210566,6 +211037,24 @@ extension on _StringsFr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -219404,6 +219893,24 @@ extension on _StringsId {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -228264,6 +228771,24 @@ extension on _StringsIt {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -237051,6 +237576,24 @@ extension on _StringsJa {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -245842,6 +246385,24 @@ extension on _StringsKo {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -254695,6 +255256,24 @@ extension on _StringsNl {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -263543,6 +264122,24 @@ extension on _StringsPtBr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -272398,6 +272995,24 @@ extension on _StringsRu {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -281225,6 +281840,24 @@ extension on _StringsTh {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -290067,6 +290700,24 @@ extension on _StringsTr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -298903,6 +299554,24 @@ extension on _StringsVi {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
@@ -307663,6 +308332,23 @@ extension on _StringsZhCn {
         return '进度留在磁盘上，继续下载会从中断处接着下。';
       case 'onboarding_pack_mini_bar_hide':
         return '收起';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) => '连接 ${host} 超时，当前网络可能访问不了这个站点';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} 传输中断，长时间没有收到数据';
+      case 'dict_error_connection':
+        return ({required Object host}) => '无法连接 ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} 返回 HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            '下载失败：${name}（${reason}）';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            '导入失败：${name}（${reason}）';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} 本词典处理失败';
       default:
         return null;
     }
@@ -316428,6 +317114,24 @@ extension on _StringsZhHk {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'dict_error_connect_timeout':
+        return ({required Object host}) =>
+            'Could not reach ${host} (connection timed out)';
+      case 'dict_error_stall_timeout':
+        return ({required Object host}) => '${host} stopped sending data';
+      case 'dict_error_connection':
+        return ({required Object host}) => 'Could not connect to ${host}';
+      case 'dict_error_http_status':
+        return ({required Object host, required Object status}) =>
+            '${host} returned HTTP ${status}';
+      case 'dict_task_failed_download':
+        return ({required Object name, required Object reason}) =>
+            'Download failed: ${name} (${reason})';
+      case 'dict_task_failed_import':
+        return ({required Object name, required Object reason}) =>
+            'Import failed: ${name} (${reason})';
+      case 'dict_task_failed_summary':
+        return ({required Object n}) => '${n} dictionary(s) failed';
       default:
         return null;
     }
