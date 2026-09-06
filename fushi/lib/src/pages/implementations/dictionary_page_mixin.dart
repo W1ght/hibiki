@@ -15,6 +15,7 @@ import 'package:fushi/src/pages/base_source_page.dart'
     show lookupHighlightCharCount;
 import 'package:fushi/src/pages/implementations/dictionary_popup_controller.dart';
 import 'package:fushi/src/pages/implementations/dictionary_popup_input_bridge.dart';
+import 'package:fushi/src/lookup/global_lookup_log.dart' show glog;
 import 'package:fushi/src/pages/implementations/dictionary_popup_layer.dart';
 import 'package:fushi/src/pages/implementations/dictionary_popup_webview.dart'
     show MinePopupResult, DictionaryPopupWebViewState;
@@ -806,6 +807,10 @@ mixin DictionaryPageMixin {
                   localRect: localRect,
                   fallback: entry.selectionRect,
                 );
+          glog('inapp-mixin/text: localRect=${dbgRect(localRect)} '
+              'zero=${localRect == Rect.zero} '
+              'entrySel=${dbgRect(entry.selectionRect)} '
+              '-> childRect=${dbgRect(childRect)}');
           setState(() => controller.truncateTo(index + 1));
           // TODO-1190: after the child search, mark the clicked word in THIS
           // (parent) card's WebView (parity with base_source_page reader family
@@ -842,6 +847,10 @@ mixin DictionaryPageMixin {
                   localRect: localRect,
                   fallback: entry.selectionRect,
                 );
+          glog('inapp-mixin/link: localRect=${dbgRect(localRect)} '
+              'zero=${localRect == Rect.zero} '
+              'entrySel=${dbgRect(entry.selectionRect)} '
+              '-> childRect=${dbgRect(childRect)}');
           setState(() => controller.truncateTo(index + 1));
           // TODO-1190: symmetric with onTextSelected — highlight the clicked
           // headword/link target in this parent card after the child search.

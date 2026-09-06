@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:fushi/src/lookup/global_lookup_log.dart' show glog;
 import 'dart:convert';
 import 'dart:io';
 
@@ -2330,6 +2331,11 @@ JSON.stringify((function(){
                         (r['height'] as num?)?.toDouble() ?? 1,
                       );
                     }
+                    glog('inapp-js/textSelected: raw=${args.length > 1 ? args[1] : null} '
+                        '-> local=L${localRect.left.toStringAsFixed(1)} '
+                        'T${localRect.top.toStringAsFixed(1)} '
+                        'W${localRect.width.toStringAsFixed(1)} '
+                        'H${localRect.height.toStringAsFixed(1)}');
                     widget.onTextSelected?.call(text, localRect);
                   }
                 }

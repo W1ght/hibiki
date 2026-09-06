@@ -2,6 +2,8 @@ import 'dart:ui' show PointerDeviceKind;
 
 import 'package:flutter/material.dart';
 import 'package:fushi_anki/fushi_anki.dart' show AnkiOpenWordOutcome;
+import 'package:fushi/src/lookup/global_lookup_log.dart' show glog;
+
 import 'package:flutter/services.dart' show KeyDownEvent, KeyEvent;
 import 'package:fushi_dictionary/fushi_dictionary.dart';
 import 'package:fushi/src/media/sources/reader_fushi_source.dart';
@@ -18,6 +20,12 @@ import 'package:fushi/utils.dart';
 // 内部 seed/复位也用它，必须同一对象）；此处 re-export 维持既有宿主 import 不变。
 export 'package:fushi/src/pages/implementations/dictionary_popup_controller.dart'
     show kPopupSearchingPlaceholderResult;
+
+/// 临时诊断：release 构建里 Rect.toString() 被裁成 "Instance of 'Rect'"，逐字段打。
+String dbgRect(Rect? r) => r == null
+    ? 'null'
+    : 'L${r.left.toStringAsFixed(1)} T${r.top.toStringAsFixed(1)} '
+        'W${r.width.toStringAsFixed(1)} H${r.height.toStringAsFixed(1)}';
 
 Rect calcPopupPosition({
   required Rect selectionRect,
@@ -100,7 +108,15 @@ Rect calcPopupPosition({
     double left = selectionRect.left;
     left = left.clamp(minLeft, maxLeft);
 
-    return Rect.fromLTWH(left, top, width, height);
+    final Rect placed = Rect.fromLTWH(left, top, width, height);
+    glog('inapp-place: sel=${dbgRect(selectionRect)} '
+        'screen=${screen.width.toStringAsFixed(1)}x'
+        '${screen.height.toStringAsFixed(1)} below=$below '
+        'roomBelow=${roomBelow.toStringAsFixed(1)} '
+        'roomAbove=${roomAbove.toStringAsFixed(1)} gap=$gap '
+        'minTop=${safeMinTop.toStringAsFixed(1)} '
+        'maxBottom=${maxBottom.toStringAsFixed(1)} -> ${dbgRect(placed)}');
+    return placed;
   }
 
   if (verticalWriting) {
@@ -509,8 +525,16 @@ Rect popupWordScreenRect({
   if (obj is RenderBox && obj.attached && obj.hasSize) {
     final Offset topLeft = obj.localToGlobal(localRect.topLeft);
     final Offset bottomRight = obj.localToGlobal(localRect.bottomRight);
-    return Rect.fromPoints(topLeft, bottomRight);
+    final Rect mapped = Rect.fromPoints(topLeft, bottomRight);
+    final Offset wvOrigin = obj.localToGlobal(Offset.zero);
+    glog('inapp-anchor: local=${dbgRect(localRect)} '
+        'wv=${obj.size.width.toStringAsFixed(1)}x'
+        '${obj.size.height.toStringAsFixed(1)} '
+        'wvOrigin=${wvOrigin.dx.toStringAsFixed(1)},'
+        '${wvOrigin.dy.toStringAsFixed(1)} -> screen=${dbgRect(mapped)}');
+    return mapped;
   }
+  glog('inapp-anchor: RENDERBOX UNAVAILABLE -> fallback=${dbgRect(fallback)}');
   return fallback;
 }
 
@@ -547,6 +571,8 @@ bool reanchorNestedPopupToWord({
   required Rect? wordLocalRect,
   required Rect fallback,
 }) {
+  glog('inapp-reanchor: term="$expectedTerm" '
+      'wordLocal=${dbgRect(wordLocalRect)} fallback=${dbgRect(fallback)}');
   if (wordLocalRect == null || wordLocalRect.isEmpty) return false;
   final int childIndex = parentIndex + 1;
   if (childIndex <= 0 || childIndex >= controller.entries.length) return false;
@@ -557,6 +583,8 @@ bool reanchorNestedPopupToWord({
     localRect: wordLocalRect,
     fallback: fallback,
   );
+  glog('inapp-reanchor: -> screenRect=${dbgRect(screenRect)} '
+      'prevAnchor=${dbgRect(child.selectionRect)}');
   if (screenRect == fallback || screenRect == child.selectionRect) return false;
   controller.reanchorEntry(child, screenRect);
   return true;

@@ -18,6 +18,7 @@
 library;
 
 import 'dart:async';
+import 'dart:collection';
 import 'dart:developer' as developer;
 
 import 'package:flutter/foundation.dart';
@@ -68,6 +69,15 @@ const int kAsrStaticMaxSegmentMs = 10000;
 /// 的 8 成，而融合图会把全部中间张量一次分配、各桶池子常驻——桶越大、桶越多，
 /// VRAM 就越容易溢出到系统内存（三桶 64/32/16 × 550/1100/2100 曾把测试进程撑到
 /// 8 GB 被系统杀掉）。
+/// 哪些执行后端真的实现了 free-dimension override —— 也就是静态桶**唯一**能带来
+/// 收益的那批。白名单不是黑名单：`freeDimensionOverrides` 只有 vendored
+/// flutter_onnxruntime 的 Windows 插件读（`third_party/flutter_onnxruntime/
+/// PATCHES.md` delta #8），其它平台插件收到这个 key 直接忽略。写成「不是 CPU」
+/// 会让以后新开的任何 EP（BUG-1613 的 CoreML 就在路上）自动拿到一个
+/// 「桶建得成、run 也不失败、零收益、且永远不触发回退」的池子。
+const Set<OnnxExecutionProvider> kAsrStaticBucketProviders =
+    <OnnxExecutionProvider>{OnnxExecutionProvider.directml};
+
 const List<AsrEncoderBucket> kAsrGpuEncoderBuckets = <AsrEncoderBucket>[
   AsrEncoderBucket(frames: 560, batch: 32),
   AsrEncoderBucket(frames: 1120, batch: 16),
@@ -135,8 +145,12 @@ class AsrStaticEncoderPool {
       <AsrEncoderBucket, AsrStaticEncoderSession>{};
   final Map<AsrEncoderBucket, Future<AsrStaticEncoderSession?>> _pending =
       <AsrEncoderBucket, Future<AsrStaticEncoderSession?>>{};
-  final Map<AsrEncoderBucket, String> unavailableReasons =
+  final Map<AsrEncoderBucket, String> _unavailableReasons =
       <AsrEncoderBucket, String>{};
+
+  /// 建失败 / 运行期失败的桶及原因（只读；诊断与 UI 用）。
+  late final Map<AsrEncoderBucket, String> unavailableReasons =
+      UnmodifiableMapView<AsrEncoderBucket, String>(_unavailableReasons);
   bool _closed = false;
 
   /// 能装下 [frames] 帧的最小桶；超过最大桶返回 null（走动态会话）。
@@ -157,7 +171,7 @@ class AsrStaticEncoderPool {
     if (bucket == null) return null;
     final AsrStaticEncoderSession? ready = _sessions[bucket];
     if (ready != null) return ready;
-    if (unavailableReasons.containsKey(bucket)) return null;
+    if (_unavailableReasons.containsKey(bucket)) return null;
     return _pending.putIfAbsent(bucket, () => _create(bucket));
   }
 
@@ -187,7 +201,7 @@ class AsrStaticEncoderPool {
       );
       return created;
     } catch (error, stack) {
-      unavailableReasons[bucket] = '$error';
+      _unavailableReasons[bucket] = '$error';
       developer.log(
         'ASR static encoder $bucket unavailable; falling back to dynamic '
         'session for this bucket',
@@ -201,15 +215,19 @@ class AsrStaticEncoderPool {
     }
   }
 
-  /// 把全部桶建起来。每个桶建会话 3~8 s；装载阶段等它建完再开跑，进度与 ETA
-  /// 才不会把建桶的停顿算成转录速度（2026-09-06 A/B：不等的话 30 分钟样本的
-  /// wall 多出 ~4 s，全是第一批在等桶）。建失败的桶各自记原因、不抛。
-  Future<void> prewarm() async {
-    await Future.wait<AsrStaticEncoderSession?>(
-      <Future<AsrStaticEncoderSession?>>[
-        for (final AsrEncoderBucket b in buckets) sessionFor(b.frames),
-      ],
-    );
+  /// 把**最小**桶建起来并等它建完。建一个会话 3~8 s：放到第一批需要时再建会让
+  /// 转录卡在那里，而不等它建完就开跑，进度与 ETA 会把建桶的停顿算成转录速度
+  /// （2026-09-06 A/B：30 分钟样本 wall 多出 ~4 s，全是第一批在等桶）。
+  ///
+  /// 只预热最小的那个是有意的。每个桶常驻一份编码器权重 + 融合图一次性分配的
+  /// 全部中间张量（实测 E2E 峰值 6.6~7.6 GB），而显存不足时 DirectML **不抛
+  /// 异常**——它溢出到主机内存，表现是 RSS 暴涨直到进程被系统杀掉，
+  /// [markUnavailable] 这条回退路径根本照不到。全预热等于在任何机器上都先把
+  /// 两份都占上；按需建则是「真出现长段才多占一份」。
+  /// 短素材（段都不超过最小桶）因此只会建一个会话。建失败记原因、不抛。
+  Future<void> prewarmSmallest() async {
+    if (buckets.isEmpty) return;
+    await sessionFor(buckets.first.frames);
   }
 
   /// 运行期发现该桶不可用（建得起来、`run` 抛错）：关掉会话、记原因，之后
@@ -219,7 +237,7 @@ class AsrStaticEncoderPool {
     Object error,
     StackTrace stack,
   ) {
-    unavailableReasons[bucket] = '$error';
+    _unavailableReasons[bucket] = '$error';
     final AsrStaticEncoderSession? s = _sessions.remove(bucket);
     developer.log(
       'ASR static encoder $bucket failed at run time; disabled, falling back '
