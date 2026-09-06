@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 72216 (4248 per locale)
+/// Strings: 72250 (4250 per locale)
 ///
-/// Built on 2026-09-05 at 19:19 UTC
+/// Built on 2026-09-06 at 01:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5834,6 +5834,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_error_ankimobile_unavailable =>
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
   String get onboarding_pack_download_resume => 'Resume download';
@@ -15744,6 +15747,11 @@ class _StringsAr extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -25885,6 +25893,11 @@ class _StringsDe extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -36079,6 +36092,11 @@ class _StringsEs extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -46308,6 +46326,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
   @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
+  @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
   @override
@@ -56339,6 +56362,11 @@ class _StringsId extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -66464,6 +66492,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
   @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
+  @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
   @override
@@ -75974,6 +76007,11 @@ class _StringsJa extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -85495,6 +85533,11 @@ class _StringsKo extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -95574,6 +95617,11 @@ class _StringsNl extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -105708,6 +105756,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
   @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
+  @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
   @override
@@ -115819,6 +115872,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
   @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
+  @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
   @override
@@ -125728,6 +125786,11 @@ class _StringsTh extends _StringsEn {
       'Could not open AnkiMobile. Install AnkiMobile and try again.';
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
+  @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
   @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
@@ -135756,6 +135819,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
   @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
+  @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
   @override
@@ -145754,6 +145822,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
   @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
+  @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
   @override
@@ -154942,6 +155015,11 @@ class _StringsZhCn extends _StringsEn {
       '无法打开 AnkiMobile。请先安装 AnkiMobile 再试。';
   @override
   String get dictionary_collapse_follow_global => '跟随全局设置';
+  @override
+  String get anki_ankimobile_imported => '已导入 AnkiMobile 配置。';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi 没能及时回到前台，剪贴板还没被读取。回到 Fushi 后重试即可。';
   @override
   String get onboarding_pack_status_paused => '推荐包下载已暂停';
   @override
@@ -164145,6 +164223,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get dictionary_collapse_follow_global => 'Follow global setting';
   @override
+  String get anki_ankimobile_imported => 'AnkiMobile configuration imported.';
+  @override
+  String get anki_error_ankimobile_not_active =>
+      'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
+  @override
   String get onboarding_pack_status_paused =>
       'Recommended pack download paused';
   @override
@@ -172860,6 +172943,10 @@ extension on _StringsEn {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -181569,6 +181656,10 @@ extension on _StringsAr {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -190323,6 +190414,10 @@ extension on _StringsDe {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -199068,6 +199163,10 @@ extension on _StringsEs {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -207822,6 +207921,10 @@ extension on _StringsFr {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -216547,6 +216650,10 @@ extension on _StringsId {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -225294,6 +225401,10 @@ extension on _StringsIt {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -233968,6 +234079,10 @@ extension on _StringsJa {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -242646,6 +242761,10 @@ extension on _StringsKo {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -251386,6 +251505,10 @@ extension on _StringsNl {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -260121,6 +260244,10 @@ extension on _StringsPtBr {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -268863,6 +268990,10 @@ extension on _StringsRu {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -277577,6 +277708,10 @@ extension on _StringsTh {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -286306,6 +286441,10 @@ extension on _StringsTr {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -295029,6 +295168,10 @@ extension on _StringsVi {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
@@ -303678,6 +303821,10 @@ extension on _StringsZhCn {
         return '无法打开 AnkiMobile。请先安装 AnkiMobile 再试。';
       case 'dictionary_collapse_follow_global':
         return '跟随全局设置';
+      case 'anki_ankimobile_imported':
+        return '已导入 AnkiMobile 配置。';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi 没能及时回到前台，剪贴板还没被读取。回到 Fushi 后重试即可。';
       case 'onboarding_pack_status_paused':
         return '推荐包下载已暂停';
       case 'onboarding_pack_download_resume':
@@ -312330,6 +312477,10 @@ extension on _StringsZhHk {
         return 'Could not open AnkiMobile. Install AnkiMobile and try again.';
       case 'dictionary_collapse_follow_global':
         return 'Follow global setting';
+      case 'anki_ankimobile_imported':
+        return 'AnkiMobile configuration imported.';
+      case 'anki_error_ankimobile_not_active':
+        return 'Fushi did not come back to the foreground in time, so the clipboard could not be read. Return to Fushi and try again.';
       case 'onboarding_pack_status_paused':
         return 'Recommended pack download paused';
       case 'onboarding_pack_download_resume':
