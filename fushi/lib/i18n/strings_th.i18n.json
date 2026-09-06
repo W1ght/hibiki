@@ -4280,5 +4280,12 @@
   "asr_models_delete_confirm_message": "Transcription in this language will need the model downloaded again.",
   "asr_models_delete_done_freed": "Deleted, freed $size",
   "asr_models_download_failed": "Download failed: $error",
-  "audiobook_transcribe_probe_failed": "GPU detection failed, planning for CPU: $reason"
+  "audiobook_transcribe_probe_failed": "GPU detection failed, planning for CPU: $reason",
+  "reader_stats_session": "This session",
+  "reader_stats_time_to_finish": "Time to finish",
+  "reader_stats_finish_chapter": "Chapter",
+  "reader_stats_finish_book": "Book",
+  "reader_audiobook_tab_files": "Audio files",
+  "reader_audiobook_tab_chapters": "Chapters",
+  "reader_audiobook_current_chapter": "Current chapter"
 }

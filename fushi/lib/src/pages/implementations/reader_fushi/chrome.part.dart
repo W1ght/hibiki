@@ -1454,6 +1454,11 @@ extension _ReaderChrome on _ReaderFushiPageState {
     if (_audiobookController != null) {
       return _buildAudiobookBar();
     }
+    // 桌面端（ッツ 形态）：设置栏的全部职能搬到顶部工具栏 [_buildDesktopHeader]，
+    // 不再画底部设置栏；有声书播放条是媒体传输面，仍留在底部。
+    if (_desktopChromeEnabled) {
+      return const SizedBox.shrink();
+    }
     return _buildSettingsBar();
   }
 
@@ -1467,7 +1472,8 @@ extension _ReaderChrome on _ReaderFushiPageState {
           bar: AudiobookPlayBar(
             controller: ctrl,
             skipActionSeconds: ReaderFushiSource.instance.skipActionSeconds,
-            onOpenSettings: _showAppearanceSheet,
+            onOpenSettings: () =>
+                unawaited(_showAppearanceSheet(initialSubPage: 'audiobook')),
             backgroundColor: _themeBackgroundColor(),
             foregroundColor: _themeTextColor(),
             reversed: appModel.reverseReaderBottomBar,
@@ -1638,7 +1644,6 @@ extension _ReaderChrome on _ReaderFushiPageState {
       // 面板控件经 ReaderFushiSource.instance.ttu* 实时读写同一对象，开面板前后都
       // 无需设置同步——旧 TTU 双存储时代的 _syncSettings*Hive 已是写回自身的死桥，
       // 且 _syncSettingsToHive 会触发 17× onSettingsChangedLive 的 DB/WebView 风暴。
-      final List<TtuTocEntry> toc = _buildTtuToc();
       final FavoriteSentenceRepository favRepo =
           FavoriteSentenceRepository(appModel.database);
 
@@ -1647,174 +1652,49 @@ extension _ReaderChrome on _ReaderFushiPageState {
 
       if (!mounted) return;
 
-      final Widget sheetContent = ReaderQuickSettingsSheet(
-        controller: _audiobookController,
-        toc: toc,
-        readerProgress: (_currentChapter, _book!.chapters.length),
-        onJumpSection: (index) async {
-          _navigateToChapter(index, manual: true);
-        },
-        // BUG-782：退出必须走 maybePop() 而非直接 pop()。直接 Navigator.pop()
-        // 会绕过阅读器 PopScope(canPop:false) 的 onPopInvokedWithResult，使
-        // onWillPop 整条链全部跳过——onSourcePagePop 的最终位置 flush（BUG-203）、
-        // appModel.closeMedia 里对 fushiBooksProvider/bookLastReadAtProvider 的
-        // invalidate（BUG-777 依赖它刷新书架「继续阅读」hero 与进度）、以及
-        // triggerAutoSyncAfterClose 关书自动同步都不会触发。maybePop() 触发
-        // PopScope 回调 → onWillPop() → nav.pop()，与「退出书籍」快捷键分支
-        // （caret.part.dart 的 readerExitBook，schema v6 从 readerDismissDict
-        // 拆出）走的是同一条退出路径。
-        onExitReader: () {
-          unawaited(Navigator.of(context).maybePop());
-        },
-        webViewController: _controller!,
-        appModel: appModel,
-        ref: ref,
-        isFushiReader: true,
+      // 桌面端 ッツ 形态：「导航」→ 左抽屉；「有声书」→ 居中面板；其余 → 右侧设置抽屉。
+      final bool useSideSheet = isDesktopPlatform && _desktopChromeEnabled;
+      final ReaderQuickSettingsPresentation presentation = !useSideSheet
+          ? ReaderQuickSettingsPresentation.sheet
+          : switch (initialSubPage) {
+              'location' => ReaderQuickSettingsPresentation.sideSheetNavigation,
+              'audiobook' => ReaderQuickSettingsPresentation.audiobookPanel,
+              _ => ReaderQuickSettingsPresentation.sideSheetAppearance,
+            };
+      final Widget sheetContent = _buildQuickSettingsSheet(
+        favorites: favorites,
+        favRepo: favRepo,
+        presentation: presentation,
         initialSubPage: initialSubPage,
-        onStyleChanged: _applyStylesLive,
-        onThemeChanged: _onThemeChanged,
-        extractDir: _extractDir,
-        onReloadChapter: _reloadWithCurrentSettings,
-        onLyricsReload: _loadLyricsPage,
-        onAudioImport: _srtBookUid != null ? _openAudioImportDialog : null,
-        lyricsMode: _lyricsMode,
-        onToggleLyricsMode: _toggleLyricsMode,
-        showFloatingLyric: appModel.showFloatingLyric,
-        onToggleFloatingLyric: _toggleFloatingLyric,
-        floatingLyricFontSize: appModel.floatingLyricFontSize,
-        onFloatingLyricFontSizeChanged: (v) async {
-          await appModel.setFloatingLyricFontSize(v);
-          final FloatingLyricStyle style =
-              _readerFloatingLyricStyle(fontSize: v);
-          await FloatingLyricChannel.updateStyle(
-            fontSize: style.fontSize,
-            textColor: style.textColor,
-            bgColor: style.bgColor,
-            buttonTextColor: style.buttonTextColor,
-            buttonBgColor: style.buttonBgColor,
-            highlightColor: style.highlightColor,
-            activeColor: style.activeColor,
-          );
-        },
-        floatingLyricClickLookup: appModel.floatingLyricClickLookup,
-        onFloatingLyricClickLookupChanged: (bool value) async {
-          await appModel.setFloatingLyricClickLookup(value);
-          await FloatingLyricChannel.setClickLookupEnabled(value);
-        },
-        showMediaNotification: appModel.showMediaNotification,
-        onToggleMediaNotification: _toggleMediaNotification,
-        charProgress:
-            _progressCurrentChars != null && _progressTotalChars != null
-                ? (_progressCurrentChars!, _progressTotalChars!)
-                : null,
-        onJumpToCharOffset: (globalOffset) async {
-          _jumpToGlobalCharOffset(globalOffset);
-        },
-        epubBook: _book,
-        chapterLabel: _currentChapterLabel(),
-        onSearchJump: (BookSearchResult result, String query) async {
-          if (!mounted || _book == null || _controller == null) return;
-          // BUG-1762：搜索跳转是跳转不是阅读——先按命中位置抬统计水位（不计数）。
-          // 三个分支落点后的首个 _refreshProgress 都不再把「旧位置 → 命中处」的
-          // 前缀计成新读字数；跨章导航旧行为只把水位播到章首，章首到命中处的整段
-          // 前缀一样会被误计。往回搜低于水位天然 no-op（只升不降）。
-          _sessionMaxAbsoluteChars = sessionWatermarkAfterRestore(
-            _sessionMaxAbsoluteChars,
-            computeCharWatermark(
-              chapterCumulativeChars: _chapterCumulativeChars,
-              chapterCharCounts: _chapterCharCounts,
-              chapter: result.sectionIndex,
-              progress: 0,
-              charOffset: result.charOffset,
-            ),
-          );
-          _lastWatermarkAdvanceAt = DateTime.now();
-          // 起新 session / 跳转播种：额度一并清零，否则带着满桶开局会让掠过被计入。
-          _readChargeCreditMilliChars = 0;
-          final String preciseLocateJs =
-              ReaderPaginationScripts.scrollToSearchMatchInvocation(
-            query,
-            result.charOffset,
-          );
-          final ReaderSearchJumpAction action = decideReaderSearchJump(
-            targetChapter: result.sectionIndex,
-            currentChapter: _currentChapter,
-            restoreInFlight: _restoreInFlight,
-            readerContentReady: _readerContentReady,
-          );
-          switch (action) {
-            case ReaderSearchJumpAction.navigate:
-              // TODO-1309：跨章搜索跳转把「章内定位」排进导航的原子恢复链（settle 之后应用），
-              // 不再在 restore 完成微任务里抢发被 settle-reflow / 连续重锚采样冲回章首（双跳，
-              // 首跳只到章节）。去掉旧的首跳失败早退分支——旧代码首跳超时/代际 stale 时会停在
-              // 章首、要点第二次才走「同章直接 restore」才生效；现在定位随恢复落定 settle
-              // 之后由 _applyPendingPreciseLocate 确定性应用。文本命中无法用分数烘进 shell，故走
-              // preciseLocateJs 队列（书签/收藏用 progress 烘进导航）。
-              await _navigateToChapterAndWait(
-                result.sectionIndex,
-                manual: true,
-                preciseLocateJs: preciseLocateJs,
-              );
-              return;
-            case ReaderSearchJumpAction.replacePending:
-              // _currentChapter 在 loadUrl 前就切到逻辑目标章。DOM 尚未 ready 时再次选择
-              // 同章结果，必须更新本导航代际的 pending；直接 evaluate 会命中旧 DOM，
-              // 且首条 pending 会在 restore settle 后反过来覆盖用户最后一次选择。
-              _preciseLocateQueue.replace(
-                generation: _navigateGeneration,
-                js: preciseLocateJs,
-              );
-              return;
-            case ReaderSearchJumpAction.evaluateNow:
-              // 同章且 DOM 已 settle：直接定位（既有正常路径）。
-              await _controller!.evaluateJavascript(source: preciseLocateJs);
-              return;
-          }
-        },
-        favoriteSentences: favorites,
-        favoritePositionLabel: _favoritePositionLabel,
-        onDeleteFavorite: (fav) async {
-          await favRepo.removeById(fav.id);
-          _invalidateFavoriteSentenceCache();
-          if (fav.sectionIndex == _currentChapter || _lyricsMode) {
-            await _refreshSectionHighlights(
-                fav.sectionIndex ?? _currentChapter);
-          }
-        },
-        onJumpToFavorite: _jumpToFavoriteSentence,
-        onPlayFavorite: _audiobookController == null
-            ? null
-            : (fav) async {
-                if (fav.normCharOffset == null || fav.sectionIndex == null) {
-                  return;
-                }
-                final int section = fav.sectionIndex!;
-                final List<AudioCue> cues =
-                    _audiobookController!.sentenceAudioCuesForSection(section);
-                AudioCue? target;
-                for (final AudioCue cue in cues) {
-                  final SubtitleRematchFragment? frag =
-                      SubtitleRematchCodec.tryDecode(cue.textFragmentId);
-                  if (frag == null) continue;
-                  if (frag.normCharStart <= fav.normCharOffset! &&
-                      frag.normCharEnd > fav.normCharOffset!) {
-                    target = cue;
-                    break;
-                  }
-                }
-                if (target != null) {
-                  await _audiobookController!.playRange(
-                    AudioPlaybackRange(
-                      audioFileIndex: target.audioFileIndex,
-                      startMs: target.startMs,
-                      endMs: target.endMs,
-                    ),
-                  );
-                }
-              },
       );
 
-      if (isDesktopPlatform) {
+      if (presentation == ReaderQuickSettingsPresentation.audiobookPanel) {
+        await showAppDialog<void>(
+          context: context,
+          builder: (_) => FushiDialogFrame(
+            maxWidth: 680,
+            maxHeightFactor: 0.88,
+            scrollable: false,
+            child: sheetContent,
+          ),
+        );
+      } else if (useSideSheet) {
+        // 抽屉开着期间顶部工具栏不自动收起（否则用户改设置时工具栏在背后消失，
+        // 关抽屉后点空白又要再唤一次）；关掉后若仍是悬浮可见态，重新武装计时。
+        _cancelChromeAutoHide();
+        await showReaderSideSheet<void>(
+          context: context,
+          // ッツ 形态：导航 / 章节贴左，外观设置贴右。
+          side: presentation ==
+                  ReaderQuickSettingsPresentation.sideSheetNavigation
+              ? ReaderSideSheetSide.left
+              : ReaderSideSheetSide.right,
+          builder: (_) => sheetContent,
+        );
+        if (mounted && _anyChromeFloating && _chromeTransientVisible) {
+          _armChromeAutoHide();
+        }
+      } else if (isDesktopPlatform) {
         await showAppDialog(
           context: context,
           builder: (_) => FushiDialogFrame(
@@ -1839,6 +1719,201 @@ extension _ReaderChrome on _ReaderFushiPageState {
       // 复位后重建把 blur 挂回 pill（dispose 后不能 setState，纯赋值已够）。
       if (mounted) _rebuild(() {});
     }
+  }
+
+  /// 组装书内快捷设置面板（居中对话框 / 移动端 sheet / 桌面端右侧抽屉共用同一份
+  /// 回调接线，只有 [presentation] 不同）。
+  Widget _buildQuickSettingsSheet({
+    required List<FavoriteSentence> favorites,
+    required FavoriteSentenceRepository favRepo,
+    required ReaderQuickSettingsPresentation presentation,
+    String? initialSubPage,
+  }) {
+    final List<TtuTocEntry> toc = _buildTtuToc();
+    final String? extractDir = _extractDir;
+    return ReaderQuickSettingsSheet(
+      controller: _audiobookController,
+      toc: toc,
+      coverPath: extractDir == null
+          ? null
+          : ReaderFushiSource.resolveCoverFilePath(
+              extractDir: extractDir,
+              coverPath: _book?.coverHref,
+            ),
+      readerProgress: (_currentChapter, _book!.chapters.length),
+      onJumpSection: (index) async {
+        _navigateToChapter(index, manual: true);
+      },
+      // BUG-782：退出必须走 maybePop() 而非直接 pop()。直接 Navigator.pop()
+      // 会绕过阅读器 PopScope(canPop:false) 的 onPopInvokedWithResult，使
+      // onWillPop 整条链全部跳过——onSourcePagePop 的最终位置 flush（BUG-203）、
+      // appModel.closeMedia 里对 fushiBooksProvider/bookLastReadAtProvider 的
+      // invalidate（BUG-777 依赖它刷新书架「继续阅读」hero 与进度）、以及
+      // triggerAutoSyncAfterClose 关书自动同步都不会触发。maybePop() 触发
+      // PopScope 回调 → onWillPop() → nav.pop()，与「退出书籍」快捷键分支
+      // （caret.part.dart 的 readerExitBook，schema v6 从 readerDismissDict
+      // 拆出）走的是同一条退出路径。
+      onExitReader: () {
+        unawaited(Navigator.of(context).maybePop());
+      },
+      webViewController: _controller!,
+      appModel: appModel,
+      ref: ref,
+      isFushiReader: true,
+      initialSubPage: initialSubPage,
+      onStyleChanged: _applyStylesLive,
+      onThemeChanged: _onThemeChanged,
+      extractDir: _extractDir,
+      onReloadChapter: _reloadWithCurrentSettings,
+      onLyricsReload: _loadLyricsPage,
+      onAudioImport: _srtBookUid != null ? _openAudioImportDialog : null,
+      // 有声书面板「资源」页：对齐文件 / 转录只对 EPUB 有声书开放（standalone
+      // SRT 书走 _openSrtBookReimport 一条路）。
+      onPickAlignment: _srtBookUid == null && _audiobookController != null
+          ? () => unawaited(_openAlignmentImportDialog())
+          : null,
+      onTranscribe: _srtBookUid == null &&
+              _audiobookController != null &&
+              AsrTranscriptionService.isSupported
+          ? () => unawaited(_transcribeFromAudiobookPanel())
+          : null,
+      lyricsMode: _lyricsMode,
+      onToggleLyricsMode: _toggleLyricsMode,
+      showFloatingLyric: appModel.showFloatingLyric,
+      onToggleFloatingLyric: _toggleFloatingLyric,
+      floatingLyricFontSize: appModel.floatingLyricFontSize,
+      onFloatingLyricFontSizeChanged: (v) async {
+        await appModel.setFloatingLyricFontSize(v);
+        final FloatingLyricStyle style =
+            _readerFloatingLyricStyle(fontSize: v);
+        await FloatingLyricChannel.updateStyle(
+          fontSize: style.fontSize,
+          textColor: style.textColor,
+          bgColor: style.bgColor,
+          buttonTextColor: style.buttonTextColor,
+          buttonBgColor: style.buttonBgColor,
+          highlightColor: style.highlightColor,
+          activeColor: style.activeColor,
+        );
+      },
+      floatingLyricClickLookup: appModel.floatingLyricClickLookup,
+      onFloatingLyricClickLookupChanged: (bool value) async {
+        await appModel.setFloatingLyricClickLookup(value);
+        await FloatingLyricChannel.setClickLookupEnabled(value);
+      },
+      showMediaNotification: appModel.showMediaNotification,
+      onToggleMediaNotification: _toggleMediaNotification,
+      charProgress:
+          _progressCurrentChars != null && _progressTotalChars != null
+              ? (_progressCurrentChars!, _progressTotalChars!)
+              : null,
+      onJumpToCharOffset: (globalOffset) async {
+        _jumpToGlobalCharOffset(globalOffset);
+      },
+      epubBook: _book,
+      chapterLabel: _currentChapterLabel(),
+      onSearchJump: (BookSearchResult result, String query) async {
+        if (!mounted || _book == null || _controller == null) return;
+        // BUG-1762：搜索跳转是跳转不是阅读——先按命中位置抬统计水位（不计数）。
+        // 三个分支落点后的首个 _refreshProgress 都不再把「旧位置 → 命中处」的
+        // 前缀计成新读字数；跨章导航旧行为只把水位播到章首，章首到命中处的整段
+        // 前缀一样会被误计。往回搜低于水位天然 no-op（只升不降）。
+        _sessionMaxAbsoluteChars = sessionWatermarkAfterRestore(
+          _sessionMaxAbsoluteChars,
+          computeCharWatermark(
+            chapterCumulativeChars: _chapterCumulativeChars,
+            chapterCharCounts: _chapterCharCounts,
+            chapter: result.sectionIndex,
+            progress: 0,
+            charOffset: result.charOffset,
+          ),
+        );
+        _lastWatermarkAdvanceAt = DateTime.now();
+        // 起新 session / 跳转播种：额度一并清零，否则带着满桶开局会让掠过被计入。
+        _readChargeCreditMilliChars = 0;
+        final String preciseLocateJs =
+            ReaderPaginationScripts.scrollToSearchMatchInvocation(
+          query,
+          result.charOffset,
+        );
+        final ReaderSearchJumpAction action = decideReaderSearchJump(
+          targetChapter: result.sectionIndex,
+          currentChapter: _currentChapter,
+          restoreInFlight: _restoreInFlight,
+          readerContentReady: _readerContentReady,
+        );
+        switch (action) {
+          case ReaderSearchJumpAction.navigate:
+            // TODO-1309：跨章搜索跳转把「章内定位」排进导航的原子恢复链（settle 之后应用），
+            // 不再在 restore 完成微任务里抢发被 settle-reflow / 连续重锚采样冲回章首（双跳，
+            // 首跳只到章节）。去掉旧的首跳失败早退分支——旧代码首跳超时/代际 stale 时会停在
+            // 章首、要点第二次才走「同章直接 restore」才生效；现在定位随恢复落定 settle
+            // 之后由 _applyPendingPreciseLocate 确定性应用。文本命中无法用分数烘进 shell，故走
+            // preciseLocateJs 队列（书签/收藏用 progress 烘进导航）。
+            await _navigateToChapterAndWait(
+              result.sectionIndex,
+              manual: true,
+              preciseLocateJs: preciseLocateJs,
+            );
+            return;
+          case ReaderSearchJumpAction.replacePending:
+            // _currentChapter 在 loadUrl 前就切到逻辑目标章。DOM 尚未 ready 时再次选择
+            // 同章结果，必须更新本导航代际的 pending；直接 evaluate 会命中旧 DOM，
+            // 且首条 pending 会在 restore settle 后反过来覆盖用户最后一次选择。
+            _preciseLocateQueue.replace(
+              generation: _navigateGeneration,
+              js: preciseLocateJs,
+            );
+            return;
+          case ReaderSearchJumpAction.evaluateNow:
+            // 同章且 DOM 已 settle：直接定位（既有正常路径）。
+            await _controller!.evaluateJavascript(source: preciseLocateJs);
+            return;
+        }
+      },
+      favoriteSentences: favorites,
+      favoritePositionLabel: _favoritePositionLabel,
+      onDeleteFavorite: (fav) async {
+        await favRepo.removeById(fav.id);
+        _invalidateFavoriteSentenceCache();
+        if (fav.sectionIndex == _currentChapter || _lyricsMode) {
+          await _refreshSectionHighlights(
+              fav.sectionIndex ?? _currentChapter);
+        }
+      },
+      onJumpToFavorite: _jumpToFavoriteSentence,
+      onPlayFavorite: _audiobookController == null
+          ? null
+          : (fav) async {
+              if (fav.normCharOffset == null || fav.sectionIndex == null) {
+                return;
+              }
+              final int section = fav.sectionIndex!;
+              final List<AudioCue> cues =
+                  _audiobookController!.sentenceAudioCuesForSection(section);
+              AudioCue? target;
+              for (final AudioCue cue in cues) {
+                final SubtitleRematchFragment? frag =
+                    SubtitleRematchCodec.tryDecode(cue.textFragmentId);
+                if (frag == null) continue;
+                if (frag.normCharStart <= fav.normCharOffset! &&
+                    frag.normCharEnd > fav.normCharOffset!) {
+                  target = cue;
+                  break;
+                }
+              }
+              if (target != null) {
+                await _audiobookController!.playRange(
+                  AudioPlaybackRange(
+                    audioFileIndex: target.audioFileIndex,
+                    startMs: target.startMs,
+                    endMs: target.endMs,
+                  ),
+                );
+              }
+            },
+      presentation: presentation,
+    );
   }
 
   String _currentChapterLabel() {
@@ -1948,6 +2023,266 @@ extension _ReaderChrome on _ReaderFushiPageState {
       _restoreCompleter = null;
     }
   }
+
+  // ── Desktop header (ッツ / Hoshi Reader 形态) ──────────────────────
+
+  /// 桌面端顶部工具栏：左「← 返回 / 导航 / 插图 / 统计」，居中书名，右「有声书导入 /
+  /// 全屏 / 外观设置」。取代桌面端的底部设置栏，与底栏同一台显隐状态机
+  /// （[_bottomBarShouldPaint]：悬浮态点空白唤出 + 自动收起；挤压态常驻并占
+  /// [_desktopHeaderReserve]）。歌词模式 / 移动端不启用（[_desktopChromeEnabled]）。
+  ///
+  /// 纯指针面：包 ExcludeFocus，不进焦点遍历池（与 [_wrapBottomChromeBar] 同一规则，
+  /// TODO-700 不变式）。BUG-1692：排在 WebView 之后绘制，必须自带 RepaintBoundary。
+  Widget _buildDesktopHeader() {
+    if (!_desktopChromeEnabled || !_bottomBarShouldPaint) {
+      return const SizedBox.shrink();
+    }
+    final Color fg = _themeTextColor();
+    return Positioned(
+      top: _stableTopInset + _macosWindowTitlebarInset,
+      left: 0,
+      right: 0,
+      child: RepaintBoundary(
+        child: ExcludeFocus(
+          child: ReaderDesktopHeader(
+            key: const ValueKey<String>('fushi_desktop_header'),
+            title: _book?.title ?? '',
+            textColor: fg,
+            backgroundColor: _themeBackgroundColor(),
+            leading: <Widget>[
+              ReaderDesktopHeaderButton(
+                icon: Icons.arrow_back,
+                tooltip: t.back,
+                color: fg,
+                semanticsId: 'hibiki.reader.header.back',
+                // 与面板「退出」同一条路：maybePop 触发 PopScope → onWillPop
+                // （落位置 flush / closeMedia / 关书同步，BUG-782）。
+                onPressed: () => unawaited(Navigator.of(context).maybePop()),
+              ),
+              ReaderDesktopHeaderButton(
+                icon: Icons.format_list_bulleted,
+                tooltip: t.section_navigation,
+                color: fg,
+                semanticsId: 'hibiki.reader.header.navigation',
+                onPressed: () =>
+                    unawaited(_showAppearanceSheet(initialSubPage: 'location')),
+              ),
+              ReaderDesktopHeaderButton(
+                icon: Icons.collections_outlined,
+                tooltip: t.reader_gallery_tooltip,
+                color: fg,
+                onPressed: _openGallery,
+              ),
+              ReaderDesktopHeaderButton(
+                icon: Icons.insights_outlined,
+                tooltip: t.reading_statistics,
+                color: fg,
+                semanticsId: 'hibiki.reader.header.statistics',
+                onPressed: _openReadingStatistics,
+              ),
+            ],
+            trailing: <Widget>[
+              ReaderDesktopHeaderButton(
+                icon: Icons.headphones_outlined,
+                tooltip: t.section_audiobook,
+                color: fg,
+                semanticsId: 'hibiki.reader.header.audiobook',
+                // 已挂有声书 → 居中面板；没有 → 直接进导入。
+                onPressed: _audiobookController != null
+                    ? () =>
+                        unawaited(_showAppearanceSheet(initialSubPage: 'audiobook'))
+                    : _openAudioImportDialog,
+              ),
+              if (desktopWindowFullscreenSupported)
+                ReaderDesktopHeaderButton(
+                  key: const ValueKey<String>('fushi_reader_fullscreen_button'),
+                  icon: _isWindowFullscreen
+                      ? Icons.fullscreen_exit_rounded
+                      : Icons.fullscreen_rounded,
+                  tooltip: t.shortcut_action_global_toggle_fullscreen,
+                  color: fg,
+                  semanticsId: 'hibiki.reader.bottom.fullscreen',
+                  onPressed: () => unawaited(_changeReaderWindowFullscreen()),
+                ),
+              ReaderDesktopHeaderButton(
+                key: const ValueKey<String>('fushi_reader_settings_button'),
+                icon: Icons.tune_outlined,
+                tooltip: t.reader_settings_section,
+                color: fg,
+                semanticsId: 'hibiki.reader.bottom.settings',
+                onPressed: () => unawaited(_showAppearanceSheet()),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  /// 顶部工具栏「统计」：阅读器内浮层（ッツ Statistics 形态）——本次会话实时秒表 /
+  /// 今日 / 累计（本书，统一事实面切片）/ 预计读完本章 · 全书。不跳统计中心。
+  void _openReadingStatistics() {
+    final int? chapterTotal = _footerChapterTotalChars;
+    final int? chapterCurrent = _footerChapterCurrentChars;
+    final int? bookTotal = _progressTotalChars;
+    final int? bookCurrent = _progressCurrentChars;
+    unawaited(
+      showAppDialog<void>(
+        context: context,
+        builder: (_) => FushiDialogFrame(
+          maxWidth: 640,
+          child: ReaderStatisticsDialog(
+            sessionTotals: _readingSessionTotals,
+            loadBookTotals: _loadReaderBookStatTotals,
+            trackingPaused: () => _studyClockManualPause,
+            onToggleTracking: _toggleStudyClockManualPause,
+            remainingChapterChars: chapterTotal != null && chapterCurrent != null
+                ? chapterTotal - chapterCurrent
+                : null,
+            remainingBookChars: bookTotal != null && bookCurrent != null
+                ? bookTotal - bookCurrent
+                : null,
+          ),
+        ),
+      ),
+    );
+  }
+
+  /// 统计浮层「本次会话」旁的手动开关：暂停 → `stop()` 结算并封段；继续 →
+  /// `start()` 重锚 tick 起点开新段。旗标同时门住 [_ensureStudyClock] 与生命周期
+  /// resumed 的自动起表。
+  void _toggleStudyClockManualPause() {
+    final StudyClock clock = _ensureStudyClock();
+    final bool pause = !_studyClockManualPause;
+    _rebuild(() => _studyClockManualPause = pause);
+    if (pause) {
+      unawaited(clock.stop());
+    } else {
+      clock.start();
+    }
+  }
+
+  /// 有声书面板「对齐文件」：打开导入对话框并预填当前音频（对话框内可选文件 /
+  /// 转录），关掉后按导入后的同一条路重载音频槽。
+  Future<void> _openAlignmentImportDialog({String? initialAlignmentPath}) async {
+    final Audiobook? audiobook = _audiobookController?.audiobook;
+    final AudiobookRepository repo = AudiobookRepository(appModel.database);
+    await showAppDialog<void>(
+      context: context,
+      builder: (ctx) => AudiobookImportDialog(
+        bookKey: widget.bookKey,
+        repo: repo,
+        extractDir: _extractDir,
+        initialAudioPaths: audiobook?.audioPaths,
+        initialAlignmentPath: initialAlignmentPath,
+      ),
+    );
+    try {
+      await _resolveAudioSlot(forceReload: true);
+    } catch (e, stack) {
+      ErrorLogService.instance.log('ReaderFushi.openAlignmentImport', e, stack);
+    }
+    if (mounted) _rebuild(() {});
+  }
+
+  /// 有声书面板「转录生成字幕」：对当前音频跑设备端 ASR，产物 SRT 作为对齐文件
+  /// 预填进导入对话框由用户确认导入（与导入对话框里的转录入口同一条链路）。
+  Future<void> _transcribeFromAudiobookPanel() async {
+    final List<String>? audio = _audiobookController?.audiobook?.audioPaths;
+    if (audio == null || audio.isEmpty) {
+      FushiToast.show(
+        msg: t.audiobook_transcribe_needs_audio,
+        severity: ToastSeverity.warning,
+      );
+      return;
+    }
+    final EpubBookRow? book = await appModel.database.getEpubBook(widget.bookKey);
+    if (!mounted) return;
+    final String? srtPath = await showAsrTranscribeSheet(
+      context: context,
+      audioPaths: List<String>.of(audio),
+      languageHint: asrLanguageHintFromBookLanguage(book?.language),
+    );
+    if (srtPath == null || !mounted) return;
+    await _openAlignmentImportDialog(initialAlignmentPath: srtPath);
+  }
+
+  /// 本书今日 / 累计：只经统一事实面 `loadStatFacts`（统计域 v92 读取纪律）。
+  Future<ReaderBookStatTotals> _loadReaderBookStatTotals() async {
+    final StatFacts facts =
+        await loadStatFacts(appModel.database, activityLimit: 0);
+    return summarizeReaderBookStats(
+      facts.dailyBooks,
+      bookKey: widget.bookKey,
+      title: _book?.title,
+      now: DateTime.now(),
+    );
+  }
+
+  // ── Desktop status footer ─────────────────────────────────────────
+
+  /// 桌面端底部状态行（ッツ Reader 风格）。左：计时器图标 + `<字/时> / h <本次时长>`；
+  /// 右：`<已读> / <总字数>  <百分比>%`。常驻、挤压式（预留高见 [_statusFooterReserve]）。
+  ///
+  /// 绘制门控与底栏同源用 set-once `_hasEverLoaded`（不用每切章翻转的
+  /// `_readerContentReady`，否则切章闪烁）；预留高**不**随它翻转，见 getter 注释。
+  /// 悬浮底栏（默认形态）唤出时 `Positioned(bottom: 0)` 盖在状态行之上，与顶部进度
+  /// pill 被底栏盖住是同一形态；底栏挤压模式下状态行坐在底栏之上
+  /// （`bottom: _bottomChromeReserve + _stableBottomInset`）。
+  ///
+  /// 点状态行 = 点顶部进度 pill 的同义动作（悬浮态唤出 / 收起，挤压态切底栏）。
+  /// 纯指针面，不进焦点遍历池（TODO-700 不变式）。
+  Widget _buildStatusFooter() {
+    if (!_statusFooterEnabled || !_hasEverLoaded) {
+      return const SizedBox.shrink();
+    }
+    return Positioned(
+      left: 0,
+      right: 0,
+      bottom: _bottomChromeReserve + _stableBottomInset,
+      // BUG-1692：状态行排在 WebView **之后**绘制，必须自带 RepaintBoundary，否则并进
+      // 页面级 PictureLayer 的整窗 cull rect，macOS 上整块 WebView 收不到鼠标事件。
+      child: RepaintBoundary(
+        child: ReaderStatusFooter(
+          key: const ValueKey<String>('fushi_status_footer'),
+          sessionTotals: _readingSessionTotals,
+          currentChars: _progressCurrentChars,
+          totalChars: _progressTotalChars,
+          chapterCurrentChars: _footerChapterCurrentChars,
+          chapterTotalChars: _footerChapterTotalChars,
+          showProgress: ReaderFushiSource.instance.showTopProgressBar,
+          textColor: _themeTextColor(),
+          backgroundColor: _themeBackgroundColor(),
+          onTap: _anyChromeFloating
+              ? () => _handleFloatingChromeReveal()
+              : _toggleChrome,
+        ),
+      ),
+    );
+  }
+
+  /// 本章总字数（状态行括号段 / 预计读完）；字数尚未落定时 null。
+  int? get _footerChapterTotalChars =>
+      _currentChapter >= 0 && _currentChapter < _chapterCharCounts.length
+          ? _chapterCharCounts[_currentChapter]
+          : null;
+
+  /// 本章已读字数 = 全书已读 − 本章前累计（TODO-131 前缀表）；未知时 null。
+  int? get _footerChapterCurrentChars {
+    final int? current = _progressCurrentChars;
+    final int? total = _footerChapterTotalChars;
+    if (current == null ||
+        total == null ||
+        _currentChapter >= _chapterCumulativeChars.length) {
+      return null;
+    }
+    return (current - _chapterCumulativeChars[_currentChapter]).clamp(0, total);
+  }
+
+  /// 状态行左侧的会话累计读口：账只在 [StudyClock] 一本（v92 纪律），时钟未建
+  /// （首屏未就绪）时给零值 + 未计时。
+  StudySessionTotals _readingSessionTotals() =>
+      _studyClock?.sessionTotals() ?? (durationMs: 0, chars: 0, active: false);
 
   // ── Top Progress Bar ──────────────────────────────────────────────
 
@@ -2406,92 +2741,256 @@ class _ReaderGalleryPage extends StatefulWidget {
   State<_ReaderGalleryPage> createState() => _ReaderGalleryPageState();
 }
 
+/// 插图画廊（ッツ / Hoshi Reader Gallery 形态）：顶栏「Gallery + 关闭」，中央一张大图，
+/// 左右圆形箭头切图，底部一条横向缩略图带（选中项描边）。左右方向键切图、Esc 关闭；
+/// 点大图进既有的缩放查看器（[onOpenImage]），顶栏「跳到此插图」回正文对应章
+/// （[onJumpTo]）。初始定位到当前章的第一张插图。
 class _ReaderGalleryPageState extends State<_ReaderGalleryPage> {
-  final ScrollController _scrollController = ScrollController();
+  static const double _kThumbWidth = 56;
+  static const double _kThumbHeight = 72;
+  static const double _kThumbGap = 8;
+  static const double _kStripPadding = 12;
+
+  final ScrollController _thumbController = ScrollController();
+  final FocusNode _focusNode = FocusNode(debugLabel: 'reader-gallery');
+  late int _index = _initialIndex();
+
+  int _initialIndex() {
+    final int first = widget.images.indexWhere(
+        (EpubImageRef r) => r.chapterIndex == widget.currentChapter);
+    return first < 0 ? 0 : first;
+  }
 
   @override
   void initState() {
     super.initState();
-    // Auto-scroll to the first image of the current chapter once laid out.
-    WidgetsBinding.instance.addPostFrameCallback((_) => _scrollToCurrent());
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => _scrollThumbsTo(_index, animate: false),
+    );
   }
 
   @override
   void dispose() {
-    _scrollController.dispose();
+    _thumbController.dispose();
+    _focusNode.dispose();
     super.dispose();
   }
 
-  int _columnCount(double width) {
-    const double target = 150.0;
-    final int count = (width / target).floor();
-    return count < 2 ? 2 : count;
+  bool get _hasImages => widget.images.isNotEmpty;
+  EpubImageRef? get _current => _hasImages ? widget.images[_index] : null;
+
+  void _select(int index) {
+    if (!_hasImages) return;
+    final int next = index.clamp(0, widget.images.length - 1);
+    if (next == _index) return;
+    setState(() => _index = next);
+    _scrollThumbsTo(next, animate: true);
   }
 
-  // Grid layout constants — single source of truth shared by [build] and
-  // [_scrollToCurrent] so the auto-scroll estimate matches the real layout.
-  static const double _kGridPadding = 8.0;
-  static const double _kGridSpacing = 8.0;
-  static const double _kTileAspect = 0.78;
+  /// 把选中缩略图滚到缩略图带正中（两端夹到滚动范围内）。
+  void _scrollThumbsTo(int index, {required bool animate}) {
+    if (!_thumbController.hasClients) return;
+    final double viewport = _thumbController.position.viewportDimension;
+    final double target = (_kStripPadding +
+            index * (_kThumbWidth + _kThumbGap) -
+            (viewport - _kThumbWidth) / 2)
+        .clamp(0.0, _thumbController.position.maxScrollExtent);
+    if (animate) {
+      _thumbController.animateTo(
+        target,
+        duration: const Duration(milliseconds: 180),
+        curve: Curves.easeOutCubic,
+      );
+    } else {
+      _thumbController.jumpTo(target);
+    }
+  }
 
-  void _scrollToCurrent() {
-    if (!_scrollController.hasClients) return;
-    final int firstCurrent = widget.images.indexWhere(
-        (EpubImageRef r) => r.chapterIndex == widget.currentChapter);
-    if (firstCurrent < 0) return;
-    final double width = MediaQuery.of(context).size.width;
-    final int columns = _columnCount(width);
-    final int row = firstCurrent ~/ columns;
-    // Reproduce the grid's row pitch: subtract the horizontal padding, split the
-    // remaining width across columns (minus inter-column spacing), divide tile
-    // width by the aspect ratio for the tile height, then add the main-axis
-    // spacing between rows. Clamped to the scroll extent so an over-estimate
-    // never throws.
-    final double availWidth =
-        (width - _kGridPadding * 2 - _kGridSpacing * (columns - 1))
-            .clamp(0.0, double.infinity);
-    final double tileWidth = availWidth / columns;
-    final double rowPitch = tileWidth / _kTileAspect + _kGridSpacing;
-    final double target =
-        (row * rowPitch).clamp(0.0, _scrollController.position.maxScrollExtent);
-    _scrollController.jumpTo(target);
+  KeyEventResult _onKey(FocusNode node, KeyEvent event) {
+    if (event is! KeyDownEvent && event is! KeyRepeatEvent) {
+      return KeyEventResult.ignored;
+    }
+    if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
+      _select(_index - 1);
+      return KeyEventResult.handled;
+    }
+    if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
+      _select(_index + 1);
+      return KeyEventResult.handled;
+    }
+    if (event.logicalKey == LogicalKeyboardKey.escape) {
+      Navigator.of(context).maybePop();
+      return KeyEventResult.handled;
+    }
+    return KeyEventResult.ignored;
   }
 
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(title: Text(t.reader_gallery)),
-      body: widget.images.isEmpty
-          ? Center(
-              child: Text(
-                t.reader_gallery_empty,
-                style: theme.textTheme.bodyLarge,
-              ),
-            )
-          : LayoutBuilder(
-              builder: (BuildContext context, BoxConstraints constraints) {
-                final int columns = _columnCount(constraints.maxWidth);
-                return GridView.builder(
-                  controller: _scrollController,
-                  padding: const EdgeInsets.all(_kGridPadding),
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: columns,
-                    crossAxisSpacing: _kGridSpacing,
-                    mainAxisSpacing: _kGridSpacing,
-                    childAspectRatio: _kTileAspect,
-                  ),
-                  itemCount: widget.images.length,
-                  itemBuilder: (BuildContext context, int index) =>
-                      _buildTile(theme, widget.images[index]),
-                );
-              },
+      backgroundColor: theme.colorScheme.surface,
+      body: Focus(
+        focusNode: _focusNode,
+        autofocus: true,
+        onKeyEvent: _onKey,
+        child: Column(
+          children: <Widget>[
+            _buildHeader(theme),
+            Expanded(
+              child: _hasImages
+                  ? _buildStage(theme)
+                  : Center(
+                      child: Text(
+                        t.reader_gallery_empty,
+                        style: theme.textTheme.bodyLarge,
+                      ),
+                    ),
             ),
+            if (_hasImages) _buildThumbStrip(theme),
+          ],
+        ),
+      ),
     );
   }
 
-  Widget _buildTile(ThemeData theme, EpubImageRef ref) {
-    final bool isCurrent = ref.chapterIndex == widget.currentChapter;
+  Widget _buildHeader(ThemeData theme) {
+    final EpubImageRef? current = _current;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 8, 8, 4),
+      child: Row(
+        children: <Widget>[
+          Text(
+            t.reader_gallery,
+            style: theme.textTheme.titleMedium,
+          ),
+          if (current != null) ...<Widget>[
+            const SizedBox(width: 12),
+            Text(
+              '${_index + 1} / ${widget.images.length}',
+              style: theme.textTheme.labelMedium
+                  ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+            ),
+            if (current.chapterIndex == widget.currentChapter) ...<Widget>[
+              const SizedBox(width: 12),
+              Text(
+                t.reader_gallery_current,
+                style: theme.textTheme.labelSmall
+                    ?.copyWith(color: theme.colorScheme.primary),
+              ),
+            ],
+          ],
+          const Spacer(),
+          if (current != null)
+            IconButton(
+              key: const ValueKey<String>('fushi_gallery_jump'),
+              tooltip: t.reader_gallery_jump,
+              icon: const Icon(Icons.my_location_outlined),
+              onPressed: () => widget.onJumpTo(current),
+            ),
+          IconButton(
+            key: const ValueKey<String>('fushi_gallery_close'),
+            tooltip: MaterialLocalizations.of(context).closeButtonTooltip,
+            icon: const Icon(Icons.close),
+            onPressed: () => Navigator.of(context).maybePop(),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildStage(ThemeData theme) {
+    final EpubImageRef current = _current!;
+    final File? file = widget.fileForRef(current);
+    final Widget image = file == null
+        ? Icon(
+            Icons.broken_image_outlined,
+            size: 64,
+            color: theme.colorScheme.onSurfaceVariant,
+          )
+        : Image.file(
+            file,
+            key: ValueKey<String>('fushi_gallery_stage_${current.src}'),
+            fit: BoxFit.contain,
+            gaplessPlayback: true,
+          );
+    return Stack(
+      children: <Widget>[
+        Positioned.fill(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 72, vertical: 8),
+            child: GestureDetector(
+              onTap: () => widget.onOpenImage(current),
+              child: Center(child: image),
+            ),
+          ),
+        ),
+        Positioned(
+          left: 16,
+          top: 0,
+          bottom: 0,
+          child: Center(
+            child: _arrowButton(
+              theme,
+              icon: Icons.chevron_left,
+              enabled: _index > 0,
+              onPressed: () => _select(_index - 1),
+            ),
+          ),
+        ),
+        Positioned(
+          right: 16,
+          top: 0,
+          bottom: 0,
+          child: Center(
+            child: _arrowButton(
+              theme,
+              icon: Icons.chevron_right,
+              enabled: _index < widget.images.length - 1,
+              onPressed: () => _select(_index + 1),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _arrowButton(
+    ThemeData theme, {
+    required IconData icon,
+    required bool enabled,
+    required VoidCallback onPressed,
+  }) {
+    return Material(
+      color: theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.8),
+      shape: const CircleBorder(),
+      child: IconButton(
+        icon: Icon(icon),
+        iconSize: 24,
+        color: theme.colorScheme.onSurface,
+        onPressed: enabled ? onPressed : null,
+      ),
+    );
+  }
+
+  Widget _buildThumbStrip(ThemeData theme) {
+    return SizedBox(
+      height: _kThumbHeight + _kStripPadding * 2,
+      child: ListView.separated(
+        controller: _thumbController,
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.all(_kStripPadding),
+        itemCount: widget.images.length,
+        separatorBuilder: (_, __) => const SizedBox(width: _kThumbGap),
+        itemBuilder: (BuildContext context, int index) =>
+            _buildThumb(theme, index),
+      ),
+    );
+  }
+
+  Widget _buildThumb(ThemeData theme, int index) {
+    final EpubImageRef ref = widget.images[index];
+    final bool selected = index == _index;
     final File? file = widget.fileForRef(ref);
     final Widget thumbnail = file == null
         ? ColoredBox(
@@ -2499,74 +2998,35 @@ class _ReaderGalleryPageState extends State<_ReaderGalleryPage> {
             child: Center(
               child: Icon(
                 Icons.broken_image_outlined,
+                size: 18,
                 color: theme.colorScheme.onSurfaceVariant,
               ),
             ),
           )
         : Image.file(file, fit: BoxFit.cover);
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: <Widget>[
-        Expanded(
-          child: GestureDetector(
-            onTap: () => widget.onOpenImage(ref),
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                border: isCurrent
-                    ? Border.all(color: theme.colorScheme.primary, width: 2)
-                    : null,
-                borderRadius: BorderRadius.circular(6),
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(6),
-                child: thumbnail,
-              ),
-            ),
+    return GestureDetector(
+      onTap: () => _select(index),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 120),
+        width: _kThumbWidth,
+        height: _kThumbHeight,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(4),
+          border: Border.all(
+            color: selected
+                ? theme.colorScheme.primary
+                : theme.colorScheme.outlineVariant,
+            width: selected ? 2 : 1,
           ),
         ),
-        if (isCurrent)
-          Padding(
-            padding: const EdgeInsets.only(top: 4),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Flexible(
-                  child: Text(
-                    t.reader_gallery_current,
-                    style: theme.textTheme.labelSmall
-                        ?.copyWith(color: theme.colorScheme.primary),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-                IconButton(
-                  visualDensity: VisualDensity.compact,
-                  padding: EdgeInsets.zero,
-                  constraints: const BoxConstraints(),
-                  iconSize: 18,
-                  tooltip: t.reader_gallery_jump,
-                  icon: const Icon(Icons.my_location_outlined),
-                  onPressed: () => widget.onJumpTo(ref),
-                ),
-              ],
-            ),
-          )
-        else
-          Padding(
-            padding: const EdgeInsets.only(top: 4),
-            child: Align(
-              alignment: AlignmentDirectional.centerEnd,
-              child: IconButton(
-                visualDensity: VisualDensity.compact,
-                padding: EdgeInsets.zero,
-                constraints: const BoxConstraints(),
-                iconSize: 18,
-                tooltip: t.reader_gallery_jump,
-                icon: const Icon(Icons.my_location_outlined),
-                onPressed: () => widget.onJumpTo(ref),
-              ),
-            ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(3),
+          child: Opacity(
+            opacity: selected ? 1 : 0.7,
+            child: thumbnail,
           ),
-      ],
+        ),
+      ),
     );
   }
 }
