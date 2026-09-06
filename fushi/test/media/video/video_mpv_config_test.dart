@@ -32,8 +32,11 @@ keep-open=yes
     test('defaults enable conservative built-in image enhancement', () {
       // isAndroid/isWindows:false 钉非 Android 非 Windows：hwdec 透传 auto-safe
       // （Android 改写见 resolvePlatformHwdec 组；Windows 改写见 BUG-1639 守卫）。
-      final Map<String, String> m = buildMpvProperties(VideoMpvConfig.defaults,
-          isAndroid: false, isWindows: false);
+      final Map<String, String> m = buildMpvProperties(
+        VideoMpvConfig.defaults,
+        isAndroid: false,
+        isWindows: false,
+      );
       expect(m['hwdec'], 'auto-safe');
       expect(VideoMpvConfig.defaults.highQuality, isTrue);
       expect(VideoMpvConfig.decode('').highQuality, isTrue);
@@ -65,13 +68,14 @@ keep-open=yes
     });
 
     test('audio group passes through', () {
-      final Map<String, String> m =
-          buildMpvProperties(VideoMpvConfig.defaults.copyWith(
-        audioDelayMs: 250,
-        audioPitchCorrection: false,
-        audioChannels: 'stereo',
-        normalizeDownmix: true,
-      ));
+      final Map<String, String> m = buildMpvProperties(
+        VideoMpvConfig.defaults.copyWith(
+          audioDelayMs: 250,
+          audioPitchCorrection: false,
+          audioChannels: 'stereo',
+          normalizeDownmix: true,
+        ),
+      );
       expect(m['audio-delay'], '0.25'); // 250ms = 0.25s
       expect(m['audio-pitch-correction'], 'no');
       expect(m['audio-channels'], 'stereo');
@@ -99,57 +103,67 @@ keep-open=yes
         expect(resolveAudioChannels('mono'), 'mono');
       });
 
-      test('buildMpvProperties keeps explicit stereo (user forced downmix)',
-          () {
-        final Map<String, String> m = buildMpvProperties(
+      test(
+        'buildMpvProperties keeps explicit stereo (user forced downmix)',
+        () {
+          final Map<String, String> m = buildMpvProperties(
             VideoMpvConfig.defaults.copyWith(audioChannels: 'stereo'),
-            isAndroid: false);
-        expect(m['audio-channels'], 'stereo');
-      });
+            isAndroid: false,
+          );
+          expect(m['audio-channels'], 'stereo');
+        },
+      );
     });
 
     test('hwdec value passes through (non-Android, non-Windows)', () {
       final Map<String, String> m = buildMpvProperties(
-          VideoMpvConfig.defaults.copyWith(hwdec: 'auto-safe'),
-          isAndroid: false,
-          isWindows: false);
+        VideoMpvConfig.defaults.copyWith(hwdec: 'auto-safe'),
+        isAndroid: false,
+        isWindows: false,
+      );
       expect(m['hwdec'], 'auto-safe');
     });
 
     test('highQuality on -> high-quality scale chain', () {
       final Map<String, String> m = buildMpvProperties(
-          VideoMpvConfig.defaults.copyWith(highQuality: true));
+        VideoMpvConfig.defaults.copyWith(highQuality: true),
+      );
       expect(m['scale'], 'ewa_lanczossharp');
       expect(m['cscale'], 'ewa_lanczossharp');
       expect(m['dscale'], 'mitchell');
     });
 
-    test('toggles off -> explicit mpv defaults (so runtime switch-off resets)',
-        () {
-      final Map<String, String> m = buildMpvProperties(
-          VideoMpvConfig.defaults.copyWith(highQuality: false, deband: false));
-      expect(m['scale'], 'bilinear');
-      expect(m['deband'], 'no');
-    });
+    test(
+      'toggles off -> explicit mpv defaults (so runtime switch-off resets)',
+      () {
+        final Map<String, String> m = buildMpvProperties(
+          VideoMpvConfig.defaults.copyWith(highQuality: false, deband: false),
+        );
+        expect(m['scale'], 'bilinear');
+        expect(m['deband'], 'no');
+      },
+    );
 
     test('interpolation on -> interpolation+video-sync+tscale', () {
       final Map<String, String> m = buildMpvProperties(
-          VideoMpvConfig.defaults.copyWith(interpolation: true));
+        VideoMpvConfig.defaults.copyWith(interpolation: true),
+      );
       expect(m['interpolation'], 'yes');
       expect(m['video-sync'], 'display-resample');
       expect(m['tscale'], 'oversample');
     });
 
     test('color equalizer + geometry pass through', () {
-      final Map<String, String> m =
-          buildMpvProperties(VideoMpvConfig.defaults.copyWith(
-        brightness: 10,
-        contrast: -5,
-        saturation: 20,
-        videoRotate: 90,
-        videoZoom: 0.5,
-        aspectOverride: '16:9',
-      ));
+      final Map<String, String> m = buildMpvProperties(
+        VideoMpvConfig.defaults.copyWith(
+          brightness: 10,
+          contrast: -5,
+          saturation: 20,
+          videoRotate: 90,
+          videoZoom: 0.5,
+          aspectOverride: '16:9',
+        ),
+      );
       expect(m['brightness'], '10');
       expect(m['contrast'], '-5');
       expect(m['saturation'], '20');
@@ -159,8 +173,12 @@ keep-open=yes
     });
 
     test('raw overrides toggle-derived', () {
-      final Map<String, String> m = buildMpvProperties(VideoMpvConfig.defaults
-          .copyWith(hwdec: 'auto-safe', rawConf: 'hwdec=no'));
+      final Map<String, String> m = buildMpvProperties(
+        VideoMpvConfig.defaults.copyWith(
+          hwdec: 'auto-safe',
+          rawConf: 'hwdec=no',
+        ),
+      );
       expect(m['hwdec'], 'no'); // raw 优先
     });
   });
@@ -183,15 +201,21 @@ keep-open=yes
     });
     test('non-Android: every value passes through unchanged', () {
       expect(
-          resolvePlatformHwdec('auto-safe', isAndroid: false, isWindows: false),
-          'auto-safe');
-      expect(resolvePlatformHwdec('auto', isAndroid: false, isWindows: false),
-          'auto');
+        resolvePlatformHwdec('auto-safe', isAndroid: false, isWindows: false),
+        'auto-safe',
+      );
       expect(
-          resolvePlatformHwdec('no', isAndroid: false, isWindows: false), 'no');
+        resolvePlatformHwdec('auto', isAndroid: false, isWindows: false),
+        'auto',
+      );
       expect(
-          resolvePlatformHwdec('auto-copy', isAndroid: false, isWindows: false),
-          'auto-copy');
+        resolvePlatformHwdec('no', isAndroid: false, isWindows: false),
+        'no',
+      );
+      expect(
+        resolvePlatformHwdec('auto-copy', isAndroid: false, isWindows: false),
+        'auto-copy',
+      );
     });
     test('buildMpvProperties on Android downs auto-safe to copy variant', () {
       // 守卫：下发到 libmpv 的 hwdec 在 Android 必为 copy 变体，不被回退成 surface-直渲。
@@ -215,8 +239,10 @@ keep-open=yes
     // 移动中端 GPU + media_kit 纹理管线扛不住 → 掉帧/GL 表面重建 → 闪烁（用户 BUG-465 亲测）。
     // 修复=移动端即便 highQuality 开也回落轻量可分离 spline36，桌面保持 ewa 不降级。
     test('mobile highQuality: 回落轻量 spline36，绝不下发 ewa_lanczossharp', () {
-      final Map<String, String> m =
-          resolveScaleProperties(true, isMobile: true);
+      final Map<String, String> m = resolveScaleProperties(
+        true,
+        isMobile: true,
+      );
       expect(m['scale'], 'spline36');
       expect(m['cscale'], 'spline36');
       // 关键守卫：移动端绝不下发重 EWA polar 缩放（闪烁根因）。
@@ -227,8 +253,10 @@ keep-open=yes
       expect(m['cscale-antiring'], '0');
     });
     test('desktop highQuality: 保持高画质 ewa_lanczossharp（桌面画质不降级）', () {
-      final Map<String, String> m =
-          resolveScaleProperties(true, isMobile: false);
+      final Map<String, String> m = resolveScaleProperties(
+        true,
+        isMobile: false,
+      );
       expect(m['scale'], 'ewa_lanczossharp');
       expect(m['cscale'], 'ewa_lanczossharp');
       expect(m['dscale'], 'mitchell');
@@ -237,8 +265,10 @@ keep-open=yes
     });
     test('highQuality off: 两端一致回落 mpv 默认 bilinear（运行时可复位）', () {
       for (final bool mobile in <bool>[true, false]) {
-        final Map<String, String> m =
-            resolveScaleProperties(false, isMobile: mobile);
+        final Map<String, String> m = resolveScaleProperties(
+          false,
+          isMobile: mobile,
+        );
         expect(m['scale'], 'bilinear', reason: 'mobile=$mobile');
         expect(m['cscale'], 'bilinear', reason: 'mobile=$mobile');
         expect(m['dscale'], 'bilinear', reason: 'mobile=$mobile');
@@ -246,46 +276,54 @@ keep-open=yes
     });
     test('buildMpvProperties(isMobile:true) 默认高画质下不下发 ewa_lanczossharp', () {
       // 端到端守卫：移动端默认配置（highQuality=true）下发到 libmpv 的 scale 必为轻量链。
-      final Map<String, String> m =
-          buildMpvProperties(VideoMpvConfig.defaults, isMobile: true);
+      final Map<String, String> m = buildMpvProperties(
+        VideoMpvConfig.defaults,
+        isMobile: true,
+      );
       expect(m['scale'], 'spline36');
       expect(m['cscale'], 'spline36');
       expect(m['scale'], isNot('ewa_lanczossharp'));
     });
     test('buildMpvProperties(isMobile:false) 桌面默认高画质仍下发 ewa_lanczossharp', () {
-      final Map<String, String> m =
-          buildMpvProperties(VideoMpvConfig.defaults, isMobile: false);
+      final Map<String, String> m = buildMpvProperties(
+        VideoMpvConfig.defaults,
+        isMobile: false,
+      );
       expect(m['scale'], 'ewa_lanczossharp');
       expect(m['cscale'], 'ewa_lanczossharp');
     });
     test('用户仍可手动开高画质：开关语义不变（只改移动端实际下发的滤镜）', () {
       // 移动端只改实际下发滤镜，不删/不翻转 highQuality 开关；语义保留 true。
       expect(VideoMpvConfig.defaults.highQuality, isTrue);
-      final VideoMpvConfig on =
-          VideoMpvConfig.defaults.copyWith(highQuality: true);
+      final VideoMpvConfig on = VideoMpvConfig.defaults.copyWith(
+        highQuality: true,
+      );
       expect(on.highQuality, isTrue);
-      expect(resolveScaleProperties(on.highQuality, isMobile: true)['scale'],
-          'spline36');
+      expect(
+        resolveScaleProperties(on.highQuality, isMobile: true)['scale'],
+        'spline36',
+      );
     });
   });
 
-  group(
-      'resolveAndroidPixelFormatProperties '
+  group('resolveAndroidPixelFormatProperties '
       '(TODO-1196 / BUG-465 Mali-G76 10-bit GL 纹理 OOM)', () {
     // 根因：media_kit Android 纹理渲染（vo=gpu/opengl-es）下，10-bit 帧需 16-bit 纹理格式，
     // Mali-G76 GL ES 驱动分配时 OUT_OF_MEMORY → 帧上不了屏（blank）/ 偶发成功交替（闪烁）。
     // 软解与 copy 硬解的公共下游都是这段 10-bit GL 上屏 → hwdec 改写救不了，必须 VO 前降位。
     // 修复=Android 无条件下发 vf=format=yuv420p，让 GL 路径只见 8-bit。
     test('Android: 下发 vf=format=yuv420p（VO 前把 10-bit 降 8-bit）', () {
-      final Map<String, String> m =
-          resolveAndroidPixelFormatProperties(isAndroid: true);
+      final Map<String, String> m = resolveAndroidPixelFormatProperties(
+        isAndroid: true,
+      );
       expect(m['vf'], 'format=yuv420p');
       // 只发 vf 这一个 key，不碰画质/解码/几何等属性。
       expect(m.keys.toSet(), <String>{'vf'});
     });
     test('non-Android: 不下发 vf（桌面/iOS 零行为变化）', () {
-      final Map<String, String> m =
-          resolveAndroidPixelFormatProperties(isAndroid: false);
+      final Map<String, String> m = resolveAndroidPixelFormatProperties(
+        isAndroid: false,
+      );
       expect(m.containsKey('vf'), isFalse);
       expect(m.isEmpty, isTrue);
     });
@@ -341,8 +379,9 @@ keep-open=yes
         loopFile: true,
         rawConf: 'vo=gpu-next',
       );
-      final VideoMpvConfig back =
-          VideoMpvConfig.decode(VideoMpvConfig.encode(c));
+      final VideoMpvConfig back = VideoMpvConfig.decode(
+        VideoMpvConfig.encode(c),
+      );
       expect(back.hwdec, 'auto-copy');
       expect(back.highQuality, isTrue);
       expect(back.deinterlace, isTrue);
@@ -383,9 +422,11 @@ keep-open=yes
 
     test('explicit sigmoid on round-trips + emits yes (BUG-538)', () {
       // 用户手动开 sigmoid：显式 true 必须存得住、下发 yes（默认关不影响可选开启）。
-      final VideoMpvConfig c = VideoMpvConfig.decode(VideoMpvConfig.encode(
-        VideoMpvConfig.defaults.copyWith(sigmoidUpscaling: true),
-      ));
+      final VideoMpvConfig c = VideoMpvConfig.decode(
+        VideoMpvConfig.encode(
+          VideoMpvConfig.defaults.copyWith(sigmoidUpscaling: true),
+        ),
+      );
       expect(c.sigmoidUpscaling, isTrue);
       expect(buildMpvProperties(c)['sigmoid-upscaling'], 'yes');
     });
@@ -401,23 +442,26 @@ keep-open=yes
     });
 
     test('encoded explicit hwdec off remains off', () {
-      final VideoMpvConfig c = VideoMpvConfig.decode(VideoMpvConfig.encode(
-        VideoMpvConfig.defaults.copyWith(hwdec: 'no'),
-      ));
+      final VideoMpvConfig c = VideoMpvConfig.decode(
+        VideoMpvConfig.encode(VideoMpvConfig.defaults.copyWith(hwdec: 'no')),
+      );
       expect(c.hwdec, 'no');
     });
 
     test('encoded explicit image enhancement off remains off', () {
-      final VideoMpvConfig c = VideoMpvConfig.decode(VideoMpvConfig.encode(
-        VideoMpvConfig.defaults.copyWith(highQuality: false),
-      ));
+      final VideoMpvConfig c = VideoMpvConfig.decode(
+        VideoMpvConfig.encode(
+          VideoMpvConfig.defaults.copyWith(highQuality: false),
+        ),
+      );
       expect(c.highQuality, isFalse);
       expect(buildMpvProperties(c)['scale'], 'bilinear');
     });
 
     test('decode clamps out-of-range color/rotate', () {
       final VideoMpvConfig c = VideoMpvConfig.decode(
-          '{"brightness":999,"contrast":-999,"videoRotate":45,"videoZoom":99}');
+        '{"brightness":999,"contrast":-999,"videoRotate":45,"videoZoom":99}',
+      );
       expect(c.brightness, lessThanOrEqualTo(100));
       expect(c.contrast, greaterThanOrEqualTo(-100));
       expect(<int>[0, 90, 180, 270].contains(c.videoRotate), isTrue);
@@ -428,8 +472,10 @@ keep-open=yes
   group('isNetworkStreamUri (TODO-033 #1)', () {
     test('http(s) stream URIs are network streams', () {
       expect(
-        isNetworkStreamUri('http://192.168.1.34:19632/api/library/videos/'
-            'video%2Ffilm/stream?token=abc'),
+        isNetworkStreamUri(
+          'http://192.168.1.34:19632/api/library/videos/'
+          'video%2Ffilm/stream?token=abc',
+        ),
         isTrue,
       );
       expect(isNetworkStreamUri('https://host/clip.mkv'), isTrue);
@@ -532,16 +578,13 @@ keep-open=yes
       expect(m.containsKey('hwdec'), isFalse);
       expect(m.containsKey('video-rotate'), isFalse);
       // 全是网络缓存族属性。
-      expect(
-        m.keys.toSet(),
-        <String>{
-          'cache',
-          'cache-secs',
-          'demuxer-max-bytes',
-          'demuxer-max-back-bytes',
-          'network-timeout',
-        },
-      );
+      expect(m.keys.toSet(), <String>{
+        'cache',
+        'cache-secs',
+        'demuxer-max-bytes',
+        'demuxer-max-back-bytes',
+        'network-timeout',
+      });
     });
   });
 }

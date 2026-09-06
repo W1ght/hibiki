@@ -80,8 +80,11 @@ void main() {
 
     expect(services.offersMobileAnkiConnectChoice, isFalse);
     services.setUseAnkiConnectOnMobile(true, apiKey: 'secret');
-    expect(services.useAnkiConnectOnMobile, isFalse,
-        reason: '桌面本来就走 AnkiConnect，没有这条支路');
+    expect(
+      services.useAnkiConnectOnMobile,
+      isFalse,
+      reason: '桌面本来就走 AnkiConnect，没有这条支路',
+    );
   });
 
   test('mobile restores the persisted AnkiConnect choice on init', () async {
@@ -109,40 +112,43 @@ void main() {
     // Dart 侧字段已改名 useAnkiConnectOnMobile，磁盘上必须原样还是老键——改键名
     // 会让所有老装置的选择在升级后静默变回默认后端。
     expect(
-      const AnkiSettings(useAnkiConnectOnMobile: true)
-          .toJson()['useAnkiConnectOnAndroid'],
+      const AnkiSettings(
+        useAnkiConnectOnMobile: true,
+      ).toJson()['useAnkiConnectOnAndroid'],
       isTrue,
     );
     expect(
-      AnkiSettings.fromJson(
-        <String, dynamic>{'useAnkiConnectOnAndroid': true},
-      ).useAnkiConnectOnMobile,
+      AnkiSettings.fromJson(<String, dynamic>{
+        'useAnkiConnectOnAndroid': true,
+      }).useAnkiConnectOnMobile,
       isTrue,
     );
   });
 
-  test('mobile fails closed when persisted remote backend has no API key',
-      () async {
-    SharedPreferences.setMockInitialValues(<String, Object>{
-      'fushi_anki_settings': jsonEncode(
-        const AnkiSettings(useAnkiConnectOnMobile: true).toJson(),
-      ),
-    });
-    final services = fakePlatformServices(
-      isMobile: true,
-      createAnkiRepository: AnkiRepository.new,
-      createMobileAnkiConnectRepository: AnkiConnectRepository.new,
-    );
+  test(
+    'mobile fails closed when persisted remote backend has no API key',
+    () async {
+      SharedPreferences.setMockInitialValues(<String, Object>{
+        'fushi_anki_settings': jsonEncode(
+          const AnkiSettings(useAnkiConnectOnMobile: true).toJson(),
+        ),
+      });
+      final services = fakePlatformServices(
+        isMobile: true,
+        createAnkiRepository: AnkiRepository.new,
+        createMobileAnkiConnectRepository: AnkiConnectRepository.new,
+      );
 
-    await services.init();
+      await services.init();
 
-    expect(services.useAnkiConnectOnMobile, isFalse);
-    expect(services.createAnkiRepository(), isA<AnkiRepository>());
-    expect(
-      (await AnkiRepository().loadSettings()).useAnkiConnectOnMobile,
-      isFalse,
-    );
-  });
+      expect(services.useAnkiConnectOnMobile, isFalse);
+      expect(services.createAnkiRepository(), isA<AnkiRepository>());
+      expect(
+        (await AnkiRepository().loadSettings()).useAnkiConnectOnMobile,
+        isFalse,
+      );
+    },
+  );
 
   group('BUG-1608 ankiConnectUsableOnMobile 是唯一判据', () {
     test('开关开 + key 非空 → 可用', () {
@@ -168,8 +174,9 @@ void main() {
 
     test('开关关 → 不可用（即便填了 key）', () {
       expect(
-        const AnkiSettings(ankiConnectApiKey: 'secret')
-            .ankiConnectUsableOnMobile,
+        const AnkiSettings(
+          ankiConnectApiKey: 'secret',
+        ).ankiConnectUsableOnMobile,
         isFalse,
       );
     });

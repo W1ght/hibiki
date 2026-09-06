@@ -101,7 +101,8 @@ GlobalLookupFrameSettingsJs buildFrameSettingsJsParts({
   // 同一帧同一结果下这段 renderJs 跨渲染字节稳定（host 以 settingsJs 变更为
   // 重渲判据）：这里不得再掺任何每次查词都会变的上下文（曾经的句子横幅文本
   // 注入已随桌面剪贴板查词一并移除）。
-  const String renderJs = '''
+  const String renderJs =
+      '''
     $kPopupTopPullReleaseJs
     if (window.resetSentenceContextMirror) window.resetSentenceContextMirror();
     if (window.resetSelectedDictionaries) window.resetSelectedDictionaries();
@@ -120,12 +121,11 @@ String buildFrameSettingsJs({
   required BuildContext context,
   required AppModel appModel,
   required DictionarySearchResult result,
-}) =>
-    buildFrameSettingsJsParts(
-      context: context,
-      appModel: appModel,
-      result: result,
-    ).combined;
+}) => buildFrameSettingsJsParts(
+  context: context,
+  appModel: appModel,
+  result: result,
+).combined;
 
 /// One stacked lookup card as the host script expects it (TODO-867 P3b/P3c).
 /// [frame] supplies the stack identity/linkage (id, parentIndex); [result]
@@ -361,16 +361,18 @@ StackRenderScript buildStackRenderScript({
 }) {
   // 本次渲染开始时宿主已装载的版本（副本）；下面每发出一个新版本就往里加，
   // 同一次调用内的后续帧据此不再重复携带同一份静态段。
-  final Set<int> availableStaticRevisions =
-      staticRevisions.snapshotFor(hostKey);
+  final Set<int> availableStaticRevisions = staticRevisions.snapshotFor(
+    hostKey,
+  );
   final Set<int> emittedStaticRevisions = <int>{};
   // TODO-867 P3c F2 — the host shell (.global-lookup-frame-shell) is built in the
   // TOP-LEVEL host document, which carries no data-theme of its own (the theme
   // vars live INSIDE each iframe). So the shell's dark/light border variant can't
   // read a CSS var; stamp the resolved brightness onto each popup descriptor and
   // host.js sets data-theme on the shell.
-  final String shellTheme =
-      Theme.of(context).brightness == Brightness.dark ? 'dark' : 'light';
+  final String shellTheme = Theme.of(context).brightness == Brightness.dark
+      ? 'dark'
+      : 'light';
   // TODO-1231（BUG-583/670 续）——根卡（anchorless 分支）的工作区钳位偏移。根卡是
   // 级联里唯一不经 computeFrameRect clamp 的卡；reserve-to-edge 地板把 C++ 的窗口
   // 右/下 clamp 变成 no-op 后，光标靠屏右/下时根卡越出工作区被窗口边裁掉（「弹窗
@@ -423,9 +425,7 @@ StackRenderScript buildStackRenderScript({
     }
     popups.add(map);
   }
-  final Map<String, Object?> payloadObj = <String, Object?>{
-    'popups': popups,
-  };
+  final Map<String, Object?> payloadObj = <String, Object?>{'popups': popups};
   // TODO-1345 (BUG-583 深层根因续) — reserve cascade headroom toward the screen
   // interior so an up/left child lands INSIDE the window origin committed at the
   // first reveal; the host's measureAndReport then never moves the origin when the
@@ -441,7 +441,8 @@ StackRenderScript buildStackRenderScript({
   }
   final String payloadJson = jsonEncode(payloadObj);
   return (
-    script: 'window.__globalLookupHost && '
+    script:
+        'window.__globalLookupHost && '
         'window.__globalLookupHost.renderStack($payloadJson);',
     pendingRevisions: emittedStaticRevisions,
   );

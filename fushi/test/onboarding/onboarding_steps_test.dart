@@ -6,13 +6,12 @@ List<OnboardingStepId> _steps(
   bool browserExtensionAvailable = false,
   bool globalLookupAvailable = false,
   bool ankiReady = false,
-}) =>
-    onboardingStepSequence(
-      selected: selected,
-      browserExtensionAvailable: browserExtensionAvailable,
-      globalLookupAvailable: globalLookupAvailable,
-      ankiReady: ankiReady,
-    );
+}) => onboardingStepSequence(
+  selected: selected,
+  browserExtensionAvailable: browserExtensionAvailable,
+  globalLookupAvailable: globalLookupAvailable,
+  ankiReady: ankiReady,
+);
 
 void main() {
   group('onboardingStepSequence', () {
@@ -50,14 +49,11 @@ void main() {
     });
 
     test('empty selection yields fixed skeleton without lookup tutorials', () {
-      expect(
-        _steps(<OnboardingFeature>{}),
-        <OnboardingStepId>[
-          OnboardingStepId.welcome,
-          OnboardingStepId.features,
-          OnboardingStepId.finish,
-        ],
-      );
+      expect(_steps(<OnboardingFeature>{}), <OnboardingStepId>[
+        OnboardingStepId.welcome,
+        OnboardingStepId.features,
+        OnboardingStepId.finish,
+      ]);
     });
 
     test('fonts step follows its own selection like any capability', () {
@@ -100,10 +96,9 @@ void main() {
     });
 
     test('recommended pack unlocks lookup tutorials', () {
-      final List<OnboardingStepId> result = _steps(
-        <OnboardingFeature>{OnboardingFeature.recommendedPack},
-        globalLookupAvailable: true,
-      );
+      final List<OnboardingStepId> result = _steps(<OnboardingFeature>{
+        OnboardingFeature.recommendedPack,
+      }, globalLookupAvailable: true);
       expect(
         result,
         containsAllInOrder(<OnboardingStepId>[
@@ -115,10 +110,9 @@ void main() {
     });
 
     test('manual resources independently unlock lookup tutorials', () {
-      final List<OnboardingStepId> result = _steps(
-        <OnboardingFeature>{OnboardingFeature.manualResources},
-        globalLookupAvailable: true,
-      );
+      final List<OnboardingStepId> result = _steps(<OnboardingFeature>{
+        OnboardingFeature.manualResources,
+      }, globalLookupAvailable: true);
       expect(result, contains(OnboardingStepId.manualResources));
       expect(result, isNot(contains(OnboardingStepId.recommendedPack)));
       expect(result, contains(OnboardingStepId.clickLookup));
@@ -126,12 +120,10 @@ void main() {
     });
 
     test('recommended pack and manual resources can both be selected', () {
-      final List<OnboardingStepId> result = _steps(
-        <OnboardingFeature>{
-          OnboardingFeature.recommendedPack,
-          OnboardingFeature.manualResources,
-        },
-      );
+      final List<OnboardingStepId> result = _steps(<OnboardingFeature>{
+        OnboardingFeature.recommendedPack,
+        OnboardingFeature.manualResources,
+      });
       expect(
         result,
         containsAllInOrder(<OnboardingStepId>[
@@ -147,45 +139,40 @@ void main() {
         OnboardingFeature.manualResources,
       };
       expect(_steps(selected), contains(OnboardingStepId.clickLookup));
-      expect(
-        _steps(selected),
-        isNot(contains(OnboardingStepId.globalLookup)),
-      );
+      expect(_steps(selected), isNot(contains(OnboardingStepId.globalLookup)));
     });
 
-    test('first Anki card needs resources, Anki selection, and live readiness',
-        () {
-      final Set<OnboardingFeature> complete = <OnboardingFeature>{
-        OnboardingFeature.manualResources,
-        OnboardingFeature.anki,
-      };
-      expect(
-        _steps(complete),
-        isNot(contains(OnboardingStepId.firstAnkiCard)),
-      );
-      expect(
-        _steps(complete, ankiReady: true),
-        containsAllInOrder(<OnboardingStepId>[
-          OnboardingStepId.anki,
-          OnboardingStepId.clickLookup,
-          OnboardingStepId.firstAnkiCard,
-        ]),
-      );
-      expect(
-        _steps(
-          <OnboardingFeature>{OnboardingFeature.anki},
-          ankiReady: true,
-        ),
-        isNot(contains(OnboardingStepId.firstAnkiCard)),
-      );
-      expect(
-        _steps(
-          <OnboardingFeature>{OnboardingFeature.manualResources},
-          ankiReady: true,
-        ),
-        isNot(contains(OnboardingStepId.firstAnkiCard)),
-      );
-    });
+    test(
+      'first Anki card needs resources, Anki selection, and live readiness',
+      () {
+        final Set<OnboardingFeature> complete = <OnboardingFeature>{
+          OnboardingFeature.manualResources,
+          OnboardingFeature.anki,
+        };
+        expect(
+          _steps(complete),
+          isNot(contains(OnboardingStepId.firstAnkiCard)),
+        );
+        expect(
+          _steps(complete, ankiReady: true),
+          containsAllInOrder(<OnboardingStepId>[
+            OnboardingStepId.anki,
+            OnboardingStepId.clickLookup,
+            OnboardingStepId.firstAnkiCard,
+          ]),
+        );
+        expect(
+          _steps(<OnboardingFeature>{OnboardingFeature.anki}, ankiReady: true),
+          isNot(contains(OnboardingStepId.firstAnkiCard)),
+        );
+        expect(
+          _steps(<OnboardingFeature>{
+            OnboardingFeature.manualResources,
+          }, ankiReady: true),
+          isNot(contains(OnboardingStepId.firstAnkiCard)),
+        );
+      },
+    );
 
     test('full selection yields all steps in stable order', () {
       expect(
@@ -214,29 +201,30 @@ void main() {
     });
 
     test('tab-only module features never add steps', () {
-      final List<OnboardingStepId> withModules = _steps(
-        <OnboardingFeature>{
-          OnboardingFeature.books,
-          OnboardingFeature.manga,
-          OnboardingFeature.video,
-          OnboardingFeature.games,
-        },
-      );
+      final List<OnboardingStepId> withModules = _steps(<OnboardingFeature>{
+        OnboardingFeature.books,
+        OnboardingFeature.manga,
+        OnboardingFeature.video,
+        OnboardingFeature.games,
+      });
       expect(withModules, _steps(<OnboardingFeature>{}));
     });
 
     test('non-resource capabilities map to their own steps', () {
       const Map<OnboardingFeature, OnboardingStepId> capabilitySteps =
           <OnboardingFeature, OnboardingStepId>{
-        OnboardingFeature.anki: OnboardingStepId.anki,
-        OnboardingFeature.fonts: OnboardingStepId.fonts,
-        OnboardingFeature.backup: OnboardingStepId.backup,
-        OnboardingFeature.interconnect: OnboardingStepId.interconnect,
-      };
-      capabilitySteps
-          .forEach((OnboardingFeature feature, OnboardingStepId step) {
-        final List<OnboardingStepId> result =
-            _steps(<OnboardingFeature>{feature});
+            OnboardingFeature.anki: OnboardingStepId.anki,
+            OnboardingFeature.fonts: OnboardingStepId.fonts,
+            OnboardingFeature.backup: OnboardingStepId.backup,
+            OnboardingFeature.interconnect: OnboardingStepId.interconnect,
+          };
+      capabilitySteps.forEach((
+        OnboardingFeature feature,
+        OnboardingStepId step,
+      ) {
+        final List<OnboardingStepId> result = _steps(<OnboardingFeature>{
+          feature,
+        });
         expect(result, contains(step), reason: '$feature 应产生 $step');
         expect(result, hasLength(4), reason: '$feature 应只追加一个配置步骤');
       });

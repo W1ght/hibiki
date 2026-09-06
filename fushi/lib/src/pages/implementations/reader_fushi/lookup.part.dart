@@ -58,12 +58,14 @@ extension _ReaderLookup on _ReaderFushiPageState {
     try {
       controller
           .evaluateJavascript(
-              source: 'window.__fushiTapGate = '
-                  '{ chrome: $_showChrome, lookup: $lookup, maxLen: 400 };')
+            source:
+                'window.__fushiTapGate = '
+                '{ chrome: $_showChrome, lookup: $lookup, maxLen: 400 };',
+          )
           .catchError((Object e, StackTrace s) {
-        ErrorLogService.instance.log('ReaderFushi.syncTapGate', e, s);
-        return null;
-      });
+            ErrorLogService.instance.log('ReaderFushi.syncTapGate', e, s);
+            return null;
+          });
     } catch (e, stack) {
       ErrorLogService.instance.log('ReaderFushi.syncTapGate', e, stack);
     }
@@ -88,8 +90,11 @@ extension _ReaderLookup on _ReaderFushiPageState {
         source: ReaderSelectionScripts.clearInvocation(),
       );
     } catch (e, stack) {
-      ErrorLogService.instance
-          .log('ReaderFushi.clearLookupState.eval', e, stack);
+      ErrorLogService.instance.log(
+        'ReaderFushi.clearLookupState.eval',
+        e,
+        stack,
+      );
     }
   }
 
@@ -126,8 +131,11 @@ extension _ReaderLookup on _ReaderFushiPageState {
       // evaluateJavascript 抛 MissingPluginException。`_controller != null` 守卫只防
       // null，防不了通道已废 —— 必须 try/catch 兜底。弹窗已显示，重锚失败仅停在选区
       // rect（查词弹窗不中断）。
-      ErrorLogService.instance
-          .log('ReaderFushi.highlightAndShowPopup.eval', e, stack);
+      ErrorLogService.instance.log(
+        'ReaderFushi.highlightAndShowPopup.eval',
+        e,
+        stack,
+      );
     }
   }
 
@@ -171,9 +179,9 @@ extension _ReaderLookup on _ReaderFushiPageState {
     // 时退回选中的词，杜绝收藏读点（chrome.part.dart）误报「未选择句子」。
     final String sentenceText =
         ReaderSelectionScripts.resolveCurrentSentenceText(
-      data.sentence,
-      data.text,
-    );
+          data.sentence,
+          data.text,
+        );
     appModel.currentMediaSource?.setCurrentSentence(
       selection: FushiTextSelection(text: sentenceText),
     );
@@ -267,21 +275,22 @@ extension _ReaderLookup on _ReaderFushiPageState {
       }
       return;
     }
-    final sentenceRange = _cachedSentenceRange ??
+    final sentenceRange =
+        _cachedSentenceRange ??
         (_cachedSelectionRange != null
             ? (
                 offset: _cachedSelectionRange!.offset,
-                length: _cachedSelectionRange!.length
+                length: _cachedSelectionRange!.length,
               )
             : null);
     // BUG-494：拿匹配条目的精确 id（未收藏 → null），供 toggle 用 removeById 精确删单条。
     final String? matchedId =
         await FavoriteSentenceRepository(appModel.database).matchedFavoriteId(
-      text: sentence,
-      bookKey: widget.bookKey,
-      sectionIndex: _favoriteSectionIndex,
-      normCharOffset: sentenceRange?.offset,
-    );
+          text: sentence,
+          bookKey: widget.bookKey,
+          sectionIndex: _favoriteSectionIndex,
+          normCharOffset: sentenceRange?.offset,
+        );
     _currentFavoriteId = matchedId;
     final bool favorited = matchedId != null;
     if (mounted && favorited != _currentSentenceIsFavorited) {

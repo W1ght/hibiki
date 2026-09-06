@@ -162,22 +162,17 @@ void main() {
       );
 
       final Map<int, Uint8List> root = readLengthDelimitedFields(request);
-      expect(
-        root.keys.toList(),
-        <int>[externallySourced['LensOverlayServerRequest.objects_request']!],
-        reason: 'root must contain exactly objects_request',
-      );
+      expect(root.keys.toList(), <int>[
+        externallySourced['LensOverlayServerRequest.objects_request']!,
+      ], reason: 'root must contain exactly objects_request');
 
       final Map<int, Uint8List> objects = readLengthDelimitedFields(
         root[externallySourced['LensOverlayServerRequest.objects_request']!]!,
       );
-      expect(
-        objects.keys.toSet(),
-        <int>{
-          externallySourced['LensOverlayObjectsRequest.request_context']!,
-          externallySourced['LensOverlayObjectsRequest.image_data']!,
-        },
-      );
+      expect(objects.keys.toSet(), <int>{
+        externallySourced['LensOverlayObjectsRequest.request_context']!,
+        externallySourced['LensOverlayObjectsRequest.image_data']!,
+      });
 
       final Map<int, Uint8List> imageData = readLengthDelimitedFields(
         objects[externallySourced['LensOverlayObjectsRequest.image_data']!]!,

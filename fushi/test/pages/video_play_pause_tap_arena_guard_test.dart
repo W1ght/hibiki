@@ -21,42 +21,71 @@ void main() {
 
   late String src;
   setUpAll(() {
-    expect(desktop.existsSync(), isTrue,
-        reason: 'vendored media_kit material_desktop.dart 必须存在');
+    expect(
+      desktop.existsSync(),
+      isTrue,
+      reason: 'vendored media_kit material_desktop.dart 必须存在',
+    );
     src = desktop.readAsStringSync().replaceAll('\r\n', '\n');
   });
 
   test('playOrPause 执行在 onTap（竞技场裁决后），不在 onTapDown 抢跑', () {
     // 锚到那个带 playAndPauseOnTap 的 GestureDetector（onTapUp 处理全屏双击紧随其后）。
-    final int tapDownIdx =
-        src.indexOf('onTapDown: !_theme(context).playAndPauseOnTap');
-    expect(tapDownIdx, greaterThanOrEqualTo(0),
-        reason: '需有 playAndPauseOnTap 的 onTapDown');
-    final int onTapIdx =
-        src.indexOf('onTap: !_theme(context).playAndPauseOnTap', tapDownIdx);
-    expect(onTapIdx, greaterThan(tapDownIdx),
-        reason: 'BUG-374：必须新增 onTap 分支承载竞技场裁决后的播放/暂停');
+    final int tapDownIdx = src.indexOf(
+      'onTapDown: !_theme(context).playAndPauseOnTap',
+    );
+    expect(
+      tapDownIdx,
+      greaterThanOrEqualTo(0),
+      reason: '需有 playAndPauseOnTap 的 onTapDown',
+    );
+    final int onTapIdx = src.indexOf(
+      'onTap: !_theme(context).playAndPauseOnTap',
+      tapDownIdx,
+    );
+    expect(
+      onTapIdx,
+      greaterThan(tapDownIdx),
+      reason: 'BUG-374：必须新增 onTap 分支承载竞技场裁决后的播放/暂停',
+    );
     final int tapUpIdx = src.indexOf(
-        'onTapUp: !_theme(context).toggleFullscreenOnDoublePress', onTapIdx);
+      'onTapUp: !_theme(context).toggleFullscreenOnDoublePress',
+      onTapIdx,
+    );
     expect(tapUpIdx, greaterThan(onTapIdx), reason: '需有全屏双击 onTapUp 作为段终点');
 
     // onTapDown 块（onTapDown..onTap）内**不得**执行 playOrPause（抢跑根因），只记录资格。
     final String tapDownBlock = src.substring(tapDownIdx, onTapIdx);
-    expect(tapDownBlock.contains('playOrPause()'), isFalse,
-        reason: 'BUG-374：onTapDown 不得执行 playOrPause（抢跑穿透）');
-    expect(tapDownBlock.contains('_playPauseTapEligible ='), isTrue,
-        reason: 'onTapDown 应只记录 _playPauseTapEligible 资格，不执行播放/暂停');
+    expect(
+      tapDownBlock.contains('playOrPause()'),
+      isFalse,
+      reason: 'BUG-374：onTapDown 不得执行 playOrPause（抢跑穿透）',
+    );
+    expect(
+      tapDownBlock.contains('_playPauseTapEligible ='),
+      isTrue,
+      reason: 'onTapDown 应只记录 _playPauseTapEligible 资格，不执行播放/暂停',
+    );
 
     // onTap 块（onTap..onTapUp）才是裁决后执行 playOrPause 的地方。
     final String onTapBlock = src.substring(onTapIdx, tapUpIdx);
-    expect(onTapBlock.contains('player.playOrPause()'), isTrue,
-        reason: 'playOrPause 必须在 onTap（竞技场裁决后）执行');
-    expect(onTapBlock.contains('_playPauseTapEligible'), isTrue,
-        reason: 'onTap 应读 _playPauseTapEligible 决定是否播放/暂停');
+    expect(
+      onTapBlock.contains('player.playOrPause()'),
+      isTrue,
+      reason: 'playOrPause 必须在 onTap（竞技场裁决后）执行',
+    );
+    expect(
+      onTapBlock.contains('_playPauseTapEligible'),
+      isTrue,
+      reason: 'onTap 应读 _playPauseTapEligible 决定是否播放/暂停',
+    );
   });
 
   test('State 类持有 _playPauseTapEligible 字段', () {
-    expect(src.contains('bool _playPauseTapEligible = false;'), isTrue,
-        reason: '需有 onTapDown→onTap 之间传递资格的实例字段');
+    expect(
+      src.contains('bool _playPauseTapEligible = false;'),
+      isTrue,
+      reason: '需有 onTapDown→onTap 之间传递资格的实例字段',
+    );
   });
 }

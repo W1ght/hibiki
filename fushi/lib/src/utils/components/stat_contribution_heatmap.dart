@@ -31,8 +31,7 @@ double statHeatmapMaxGridWidth({
   int maxWeeks = kStatHeatmapMaxWeeks,
   double maxCell = kStatHeatmapMaxCell,
   double spacing = kStatHeatmapSpacing,
-}) =>
-    maxWeeks * maxCell + (maxWeeks - 1) * spacing;
+}) => maxWeeks * maxCell + (maxWeeks - 1) * spacing;
 
 /// GitHub 式「贡献热力图」的一天格子：日期键 + 当日活动值 + 强度等级。
 ///
@@ -100,11 +99,11 @@ class StatHeatmapModel {
 
   @override
   int get hashCode => Object.hash(
-        maxValue,
-        weeks.length,
-        weeks.isEmpty ? null : Object.hashAll(weeks.first),
-        weeks.isEmpty ? null : Object.hashAll(weeks.last),
-      );
+    maxValue,
+    weeks.length,
+    weeks.isEmpty ? null : Object.hashAll(weeks.first),
+    weeks.isEmpty ? null : Object.hashAll(weeks.last),
+  );
 }
 
 /// 纯函数：把「日期键→活动值」映射构造成一段 [weeks] 周的贡献热力图模型。
@@ -125,13 +124,16 @@ StatHeatmapModel buildStatHeatmap({
 }) {
   final DateTime today = DateTime(now.year, now.month, now.day);
   // 本周周一（DateTime.weekday: 周一=1..周日=7）。
-  final DateTime thisMonday =
-      today.subtract(Duration(days: today.weekday - DateTime.monday));
+  final DateTime thisMonday = today.subtract(
+    Duration(days: today.weekday - DateTime.monday),
+  );
   // 窗口末列的周一：翻页时整体向前平移 weekOffset 周。
-  final DateTime anchorMonday =
-      thisMonday.subtract(Duration(days: weekOffset * 7));
-  final DateTime firstMonday =
-      anchorMonday.subtract(Duration(days: (weeks - 1) * 7));
+  final DateTime anchorMonday = thisMonday.subtract(
+    Duration(days: weekOffset * 7),
+  );
+  final DateTime firstMonday = anchorMonday.subtract(
+    Duration(days: (weeks - 1) * 7),
+  );
 
   int maxValue = 0;
   final List<List<({String? dateKey, int value, DateTime day})>> raw =
@@ -192,13 +194,18 @@ int maxHeatmapPageOffset({
   }
   final DateTime? earliest = DateTime.tryParse(minKey!);
   if (earliest == null) return 0;
-  final DateTime earliestDay =
-      DateTime(earliest.year, earliest.month, earliest.day);
+  final DateTime earliestDay = DateTime(
+    earliest.year,
+    earliest.month,
+    earliest.day,
+  );
   final DateTime today = DateTime(now.year, now.month, now.day);
-  final DateTime thisMonday =
-      today.subtract(Duration(days: today.weekday - DateTime.monday));
-  final DateTime earliestMonday = earliestDay
-      .subtract(Duration(days: earliestDay.weekday - DateTime.monday));
+  final DateTime thisMonday = today.subtract(
+    Duration(days: today.weekday - DateTime.monday),
+  );
+  final DateTime earliestMonday = earliestDay.subtract(
+    Duration(days: earliestDay.weekday - DateTime.monday),
+  );
   if (!earliestMonday.isBefore(thisMonday)) return 0;
   // 用小时/168 四舍五入求周数，规避 DST 让 inDays 少算 1 天。
   final int weeksBack =
@@ -315,8 +322,9 @@ class _StatContributionHeatmapState extends State<StatContributionHeatmap> {
   /// 翻页：[dir] > 0 看更早、< 0 回更近；步长 = 当前屏列数（周），clamp 到
   /// [0, maxOffset]。翻页后清除选中（原选中日已不在视野）。
   void _page(int dir, int maxOffset, int stepWeeks) {
-    final int next =
-        (_pageOffset + dir * stepWeeks).clamp(0, maxOffset).toInt();
+    final int next = (_pageOffset + dir * stepWeeks)
+        .clamp(0, maxOffset)
+        .toInt();
     if (next == _pageOffset) return;
     setState(() {
       _pageOffset = next;
@@ -448,8 +456,9 @@ class _StatContributionHeatmapState extends State<StatContributionHeatmap> {
             : widget.weeks;
         // 列数下限 = weeks（窄屏靠 FittedBox 缩），上限 = maxWeeks（配置反过来时
         // 以 weeks 为准，不出现空窗口）。
-        final int hardMaxWeeks =
-            widget.maxWeeks < widget.weeks ? widget.weeks : widget.maxWeeks;
+        final int hardMaxWeeks = widget.maxWeeks < widget.weeks
+            ? widget.weeks
+            : widget.maxWeeks;
         int effWeeks = fitWeeks < widget.weeks ? widget.weeks : fitWeeks;
         if (effWeeks > hardMaxWeeks) effWeeks = hardMaxWeeks;
         // 列数封顶后剩下的宽度分摊给格子边长（上限 maxCell），否则 4K 宽窗下右侧
@@ -458,7 +467,7 @@ class _StatContributionHeatmapState extends State<StatContributionHeatmap> {
         if (constraints.maxWidth.isFinite && effWeeks == hardMaxWeeks) {
           final double grown =
               (constraints.maxWidth - (effWeeks - 1) * widget.spacing) /
-                  effWeeks;
+              effWeeks;
           if (grown > effCell) {
             effCell = grown > widget.maxCell ? widget.maxCell : grown;
           }

@@ -333,8 +333,9 @@ Map<ShortcutActivator, VoidCallback> buildVideoPlayerShortcutsFromRegistry(
   VideoPlayerShortcutActions actions, {
   Set<ShortcutAction> exclude = const <ShortcutAction>{},
 }) {
-  final Map<ShortcutAction, VoidCallback> callbacks =
-      videoActionCallbacks(actions);
+  final Map<ShortcutAction, VoidCallback> callbacks = videoActionCallbacks(
+    actions,
+  );
   final Map<ShortcutActivator, VoidCallback> result =
       <ShortcutActivator, VoidCallback>{};
   for (final MapEntry<ShortcutAction, VoidCallback> entry
@@ -379,7 +380,7 @@ Map<ShortcutActivator, VoidCallback> buildVideoPlayerShortcutsFromRegistry(
 /// 「进入时是否已暂停」成为类型契约的一部分，这个特殊情况就不存在了。
 class SubtitleCaretPauseTracker {
   SubtitleCaretPauseTracker({required bool playingAtEntry})
-      : _sawPaused = !playingAtEntry;
+    : _sawPaused = !playingAtEntry;
 
   bool _sawPaused;
 
@@ -496,8 +497,9 @@ bool keyDownMatchesHoldSpeed(
   KeyDownEvent event, {
   required bool hasEditableFocus,
 }) {
-  final Set<ModifierKey> modifiers =
-      currentKeyboardModifiers(HardwareKeyboard.instance);
+  final Set<ModifierKey> modifiers = currentKeyboardModifiers(
+    HardwareKeyboard.instance,
+  );
   if (hasEditableFocus &&
       editableFocusClaimsKey(
         logicalKey: event.logicalKey,
@@ -587,10 +589,12 @@ class VideoKeyboardResolution {
   /// 仅 [VideoKeyboardDispatch.run] 时非空。
   final ShortcutAction? action;
 
-  static const VideoKeyboardResolution ignored =
-      VideoKeyboardResolution(VideoKeyboardDispatch.ignore);
-  static const VideoKeyboardResolution dismissPopup =
-      VideoKeyboardResolution(VideoKeyboardDispatch.dismissPopup);
+  static const VideoKeyboardResolution ignored = VideoKeyboardResolution(
+    VideoKeyboardDispatch.ignore,
+  );
+  static const VideoKeyboardResolution dismissPopup = VideoKeyboardResolution(
+    VideoKeyboardDispatch.dismissPopup,
+  );
   static const VideoKeyboardResolution swallowedRepeat =
       VideoKeyboardResolution(VideoKeyboardDispatch.swallowRepeat);
 
@@ -723,16 +727,14 @@ Map<ShortcutActivator, VoidCallback> guardVideoShortcutsWithPopupDismiss(
   required VoidCallback dismissPopup,
 }) {
   return base.map(
-    (ShortcutActivator activator, VoidCallback callback) => MapEntry(
-      activator,
-      () {
-        if (isPopupVisible()) {
-          dismissPopup();
-          return;
-        }
-        callback();
-      },
-    ),
+    (ShortcutActivator activator, VoidCallback callback) =>
+        MapEntry(activator, () {
+          if (isPopupVisible()) {
+            dismissPopup();
+            return;
+          }
+          callback();
+        }),
   );
 }
 

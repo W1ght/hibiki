@@ -130,8 +130,9 @@ class Woff2Decoder {
       final int flags = r.u8();
       final int tagIndex = flags & 0x3F;
       final int transform = (flags >> 6) & 0x03;
-      final int tag =
-          tagIndex == 63 ? r.u32() : _tag(_knownTagStrings[tagIndex]);
+      final int tag = tagIndex == 63
+          ? r.u32()
+          : _tag(_knownTagStrings[tagIndex]);
       final int origLength = r.base128();
       final bool transformed;
       if (tag == _glyfTag || tag == _locaTag) {
@@ -196,11 +197,16 @@ class Woff2Decoder {
     if (hmtx != null) {
       final Uint8List? hhea = out[_hheaTag];
       if (hhea == null || hhea.length < 36) return null;
-      final int numberOfHMetrics =
-          ByteData.view(hhea.buffer, hhea.offsetInBytes, hhea.lengthInBytes)
-              .getUint16(34);
-      final Uint8List? rebuilt =
-          _reconstructHmtx(hmtx.data!, numberOfHMetrics, xMins);
+      final int numberOfHMetrics = ByteData.view(
+        hhea.buffer,
+        hhea.offsetInBytes,
+        hhea.lengthInBytes,
+      ).getUint16(34);
+      final Uint8List? rebuilt = _reconstructHmtx(
+        hmtx.data!,
+        numberOfHMetrics,
+        xMins,
+      );
       if (rebuilt == null) return null;
       out[_hmtxTag] = rebuilt;
     }
@@ -263,13 +269,25 @@ class Woff2Decoder {
         glyph = Uint8List(0);
         xMin = 0;
       } else if (nc > 0) {
-        final (Uint8List, int) g = _simpleGlyph(nc, hasBbox, nPoints,
-            flagStream, glyphStream, instructionStream, bboxStream);
+        final (Uint8List, int) g = _simpleGlyph(
+          nc,
+          hasBbox,
+          nPoints,
+          flagStream,
+          glyphStream,
+          instructionStream,
+          bboxStream,
+        );
         glyph = g.$1;
         xMin = g.$2;
       } else {
-        final (Uint8List, int) g = _compositeGlyph(hasBbox, compositeStream,
-            glyphStream, instructionStream, bboxStream);
+        final (Uint8List, int) g = _compositeGlyph(
+          hasBbox,
+          compositeStream,
+          glyphStream,
+          instructionStream,
+          bboxStream,
+        );
         glyph = g.$1;
         xMin = g.$2;
       }
@@ -393,8 +411,9 @@ class Woff2Decoder {
     while (true) {
       final int flags = compositeStream.u16();
       compositeStream.u16(); // glyphIndex
-      compositeStream
-          .skip((flags & 0x0001) != 0 ? 4 : 2); // ARG_1_AND_2_ARE_WORDS
+      compositeStream.skip(
+        (flags & 0x0001) != 0 ? 4 : 2,
+      ); // ARG_1_AND_2_ARE_WORDS
       if ((flags & 0x0008) != 0) {
         compositeStream.skip(2); // WE_HAVE_A_SCALE
       } else if ((flags & 0x0040) != 0) {
@@ -405,8 +424,10 @@ class Woff2Decoder {
       if ((flags & 0x0100) != 0) haveInstr = true; // WE_HAVE_INSTRUCTIONS
       if ((flags & 0x0020) == 0) break; // MORE_COMPONENTS
     }
-    final Uint8List compBytes =
-        compositeStream.range(start, compositeStream.pos);
+    final Uint8List compBytes = compositeStream.range(
+      start,
+      compositeStream.pos,
+    );
 
     int instrLen = 0;
     Uint8List instr = Uint8List(0);
@@ -517,8 +538,7 @@ class Woff2Decoder {
     Uint8List data,
     int numberOfHMetrics,
     List<int> xMins,
-  ) =>
-      _reconstructHmtx(data, numberOfHMetrics, xMins);
+  ) => _reconstructHmtx(data, numberOfHMetrics, xMins);
 
   static Uint8List? _reconstructHmtx(
     Uint8List data,
@@ -561,8 +581,11 @@ class Woff2Decoder {
   }
 
   static int _checksum(Uint8List data) {
-    final ByteData bd =
-        ByteData.view(data.buffer, data.offsetInBytes, data.lengthInBytes);
+    final ByteData bd = ByteData.view(
+      data.buffer,
+      data.offsetInBytes,
+      data.lengthInBytes,
+    );
     int sum = 0;
     final int full = data.length & ~3;
     int i = 0;
@@ -619,13 +642,15 @@ class _Pt {
 /// Sequential big-endian reader over a byte range (no copying).
 class _Reader {
   _Reader(Uint8List data)
-      : _u = data,
-        _bd =
-            ByteData.view(data.buffer, data.offsetInBytes, data.lengthInBytes);
+    : _u = data,
+      _bd = ByteData.view(data.buffer, data.offsetInBytes, data.lengthInBytes);
 
   factory _Reader.view(Uint8List data, int offset, int length) {
-    final Uint8List slice =
-        Uint8List.sublistView(data, offset, offset + length);
+    final Uint8List slice = Uint8List.sublistView(
+      data,
+      offset,
+      offset + length,
+    );
     return _Reader(slice);
   }
 

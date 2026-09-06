@@ -69,10 +69,10 @@ case "\$1" in
     ;;
 esac
 ''');
-    final ProcessResult chmod = await Process.run(
-      'chmod',
-      <String>['+x', executable.path],
-    );
+    final ProcessResult chmod = await Process.run('chmod', <String>[
+      '+x',
+      executable.path,
+    ]);
     expect(chmod.exitCode, 0);
   });
 
@@ -83,8 +83,9 @@ esac
   });
 
   test('parses package inspection and runtime capabilities', () async {
-    final DesktopAidokuRuntime runtime =
-        DesktopAidokuRuntime(executable: executable);
+    final DesktopAidokuRuntime runtime = DesktopAidokuRuntime(
+      executable: executable,
+    );
 
     final AidokuPackageInspection result = await runtime.inspect('source.aix');
 
@@ -95,8 +96,9 @@ esac
   });
 
   test('returns search, details, and page payloads', () async {
-    final DesktopAidokuRuntime runtime =
-        DesktopAidokuRuntime(executable: executable);
+    final DesktopAidokuRuntime runtime = DesktopAidokuRuntime(
+      executable: executable,
+    );
 
     final Map<String, Object?> search = await runtime.search(
       'source.aix',
@@ -123,24 +125,26 @@ esac
   });
 
   test('parses manifest listings', () {
-    final AidokuPackageInspection inspection =
-        AidokuPackageInspection.fromJson(<String, Object?>{
-      'manifest': <String, Object?>{
-        'info': <String, Object?>{'id': 'ja.test'},
-        'listings': <Object?>[
-          <String, Object?>{'id': '/latest/', 'name': 'Latest'},
-        ],
+    final AidokuPackageInspection inspection = AidokuPackageInspection.fromJson(
+      <String, Object?>{
+        'manifest': <String, Object?>{
+          'info': <String, Object?>{'id': 'ja.test'},
+          'listings': <Object?>[
+            <String, Object?>{'id': '/latest/', 'name': 'Latest'},
+          ],
+        },
+        'runtime': <String, Object?>{},
       },
-      'runtime': <String, Object?>{},
-    });
+    );
 
     expect(inspection.listings, hasLength(1));
     expect(inspection.listings.single.id, '/latest/');
   });
 
   test('rejects an invalid search page before spawning', () async {
-    final DesktopAidokuRuntime runtime =
-        DesktopAidokuRuntime(executable: executable);
+    final DesktopAidokuRuntime runtime = DesktopAidokuRuntime(
+      executable: executable,
+    );
 
     await expectLater(
       runtime.search('source.aix', page: 0),
@@ -171,66 +175,70 @@ esac
     );
   });
 
-  test('iOS runtime sends the shared command contract over its channel',
-      () async {
-    final List<MethodCall> calls = <MethodCall>[];
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-        .setMockMethodCallHandler(FushiChannels.aidokuRuntime,
-            (MethodCall call) async {
-      calls.add(call);
-      final Map<Object?, Object?> arguments =
-          call.arguments! as Map<Object?, Object?>;
-      return switch (arguments['command']) {
-        'inspect' => <String, Object?>{
-            'manifest': <String, Object?>{
-              'info': <String, Object?>{'id': 'ja.test'},
-            },
-            'runtime': <String, Object?>{
-              'imports': <String>['net.send'],
-              'exports': <String>['get_search_manga_list'],
-              'requiresWebView': false,
-            },
-          },
-        'search' => <String, Object?>{
-            'result': <String, Object?>{
-              'entries': <Object?>[],
-              'has_next_page': false,
-            },
-          },
-        _ => throw PlatformException(code: 'UNEXPECTED_COMMAND'),
-      };
-    });
-    final IosAidokuRuntime runtime = IosAidokuRuntime();
+  test(
+    'iOS runtime sends the shared command contract over its channel',
+    () async {
+      final List<MethodCall> calls = <MethodCall>[];
+      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(FushiChannels.aidokuRuntime, (
+            MethodCall call,
+          ) async {
+            calls.add(call);
+            final Map<Object?, Object?> arguments =
+                call.arguments! as Map<Object?, Object?>;
+            return switch (arguments['command']) {
+              'inspect' => <String, Object?>{
+                'manifest': <String, Object?>{
+                  'info': <String, Object?>{'id': 'ja.test'},
+                },
+                'runtime': <String, Object?>{
+                  'imports': <String>['net.send'],
+                  'exports': <String>['get_search_manga_list'],
+                  'requiresWebView': false,
+                },
+              },
+              'search' => <String, Object?>{
+                'result': <String, Object?>{
+                  'entries': <Object?>[],
+                  'has_next_page': false,
+                },
+              },
+              _ => throw PlatformException(code: 'UNEXPECTED_COMMAND'),
+            };
+          });
+      final IosAidokuRuntime runtime = IosAidokuRuntime();
 
-    final AidokuPackageInspection inspection =
-        await runtime.inspect('/documents/source.aix');
-    final Map<String, Object?> search = await runtime.search(
-      '/documents/source.aix',
-      query: '東京',
-      page: 2,
-    );
+      final AidokuPackageInspection inspection = await runtime.inspect(
+        '/documents/source.aix',
+      );
+      final Map<String, Object?> search = await runtime.search(
+        '/documents/source.aix',
+        query: '東京',
+        page: 2,
+      );
 
-    expect(inspection.sourceInfo['id'], 'ja.test');
-    expect(search['has_next_page'], isFalse);
-    expect(calls, hasLength(2));
-    expect(calls.first.method, 'invoke');
-    expect(calls.last.arguments, <String, Object?>{
-      'command': 'search',
-      'packagePath': '/documents/source.aix',
-      'query': '東京',
-      'page': 2,
-    });
-  });
+      expect(inspection.sourceInfo['id'], 'ja.test');
+      expect(search['has_next_page'], isFalse);
+      expect(calls, hasLength(2));
+      expect(calls.first.method, 'invoke');
+      expect(calls.last.arguments, <String, Object?>{
+        'command': 'search',
+        'packagePath': '/documents/source.aix',
+        'query': '東京',
+        'page': 2,
+      });
+    },
+  );
 
   test('iOS runtime preserves native error codes', () async {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(
-      FushiChannels.aidokuRuntime,
-      (MethodCall call) async => throw PlatformException(
-        code: 'UNSUPPORTED_IMPORT',
-        message: 'js.webview_create is not available',
-      ),
-    );
+          FushiChannels.aidokuRuntime,
+          (MethodCall call) async => throw PlatformException(
+            code: 'UNSUPPORTED_IMPORT',
+            message: 'js.webview_create is not available',
+          ),
+        );
 
     await expectLater(
       IosAidokuRuntime().inspect('/documents/source.aix'),

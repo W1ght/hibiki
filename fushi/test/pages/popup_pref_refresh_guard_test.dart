@@ -19,8 +19,7 @@ import 'package:flutter_test/flutter_test.dart';
 /// 配套行为测试见 test/models/preferences_repository_test.dart（prefsVersion 单调 +
 /// 跨进程可读）与 test/profile/profile_repository_test.dart（profile 切换 bump 版本）。
 void main() {
-  test(
-      'popup_main onNewProcessText must NOT unconditionally refreshPrefCache '
+  test('popup_main onNewProcessText must NOT unconditionally refreshPrefCache '
       'on every external lookup (TODO-855 warm-reuse perf regression)', () {
     final String src = File('lib/popup_main.dart').readAsStringSync();
 
@@ -29,7 +28,8 @@ void main() {
     expect(
       src.contains('await appModel.refreshPrefCache()'),
       isFalse,
-      reason: 'TODO-855 回归：popup_main 又在每次查词无条件 await '
+      reason:
+          'TODO-855 回归：popup_main 又在每次查词无条件 await '
           'refreshPrefCache() —— 该路径必须走 refreshPrefCacheIfChanged() 先做廉价 '
           'prefs_version 检查，仅在 profile/偏好真正变化时才全量刷新。',
     );
@@ -39,7 +39,8 @@ void main() {
     expect(
       src.contains('refreshPrefCacheIfChanged()'),
       isTrue,
-      reason: 'popup_main 必须调用 refreshPrefCacheIfChanged() —— 否则 warm-reuse '
+      reason:
+          'popup_main 必须调用 refreshPrefCacheIfChanged() —— 否则 warm-reuse '
           '弹窗看不到主 app 的 profile 切换 / 偏好变化（功能回归）。',
     );
   });

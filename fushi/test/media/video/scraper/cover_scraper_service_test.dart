@@ -44,7 +44,7 @@ class _StaleFirstReadCoverMetaStore extends CoverMetaStore {
 /// 模拟批处理读完合集快照后，条目才被加入多成员合集。
 class _StaleFirstMembershipRepository extends VideoBookRepository {
   _StaleFirstMembershipRepository(FushiDatabase database, this.bookUid)
-      : super(database);
+    : super(database);
 
   final String bookUid;
   int _reads = 0;
@@ -86,13 +86,12 @@ void main() {
     SidecarGeneratedArtifactChecker? generatedArtifactChecker,
     CoverMetaStore? coverMetaStore,
     VideoBookRepository? repository,
-  }) =>
-      CoverScraperService(
-        repository: repository ?? repo,
-        coverMetaStore: coverMetaStore ?? coverMeta,
-        generatedSidecarArtifactChecker: generatedArtifactChecker,
-        coversDirectory: covers,
-      );
+  }) => CoverScraperService(
+    repository: repository ?? repo,
+    coverMetaStore: coverMetaStore ?? coverMeta,
+    generatedSidecarArtifactChecker: generatedArtifactChecker,
+    coversDirectory: covers,
+  );
 
   Future<VideoBookRow> seed({
     required String bookUid,
@@ -123,10 +122,7 @@ void main() {
     );
     final VideoBookRow book = (await repo.getByBookUid('video/remote'))!;
 
-    expect(
-      await build().applySidecarCover(book),
-      isA<ScrapeNotEligible>(),
-    );
+    expect(await build().applySidecarCover(book), isA<ScrapeNotEligible>());
   });
 
   test('没有 sidecar 时不写封面或来源记录', () async {
@@ -151,12 +147,13 @@ void main() {
         await build().applySidecarCover(book) as ScrapeApplied;
     expect(await File(outcome.coverPath).readAsBytes(), kTransparentImage);
     expect(
-        (await repo.getByBookUid(book.bookUid))!.coverPath, outcome.coverPath);
+      (await repo.getByBookUid(book.bookUid))!.coverPath,
+      outcome.coverPath,
+    );
     expect((await coverMeta.get(book.bookUid))!.origin, CoverOrigin.sidecar);
   });
 
-  test('全局清理 maintenance 已入场时 sidecar 不触碰文件、DB 或 provenance',
-      () async {
+  test('全局清理 maintenance 已入场时 sidecar 不触碰文件、DB 或 provenance', () async {
     final VideoBookRow book = await seed(
       bookUid: 'video/blocked-sidecar',
       fileName: 'blocked.mkv',
@@ -198,8 +195,9 @@ void main() {
       const CoverMeta(origin: CoverOrigin.manual),
     );
 
-    final List<BatchScrapeProgress> progress =
-        await build().scrapeLibrary(<VideoBookRow>[book]).toList();
+    final List<BatchScrapeProgress> progress = await build().scrapeLibrary(
+      <VideoBookRow>[book],
+    ).toList();
     expect(progress.single.outcome, isA<ScrapeSkippedProtected>());
     expect((await repo.getByBookUid(book.bookUid))!.coverPath, isNull);
   });
@@ -222,7 +220,10 @@ void main() {
     ).scrapeLibrary(<VideoBookRow>[book]).toList();
 
     expect(progress.single.outcome, isA<ScrapeSkippedProtected>());
-    expect((await staleStore.getFresh(book.bookUid))?.origin, CoverOrigin.manual);
+    expect(
+      (await staleStore.getFresh(book.bookUid))?.origin,
+      CoverOrigin.manual,
+    );
     expect((await repo.getByBookUid(book.bookUid))!.coverPath, isNull);
     expect(
       (await covers.list().toList()).map(
@@ -264,8 +265,9 @@ void main() {
     await db.addToCollection(collectionId, MediaKind.video, first.bookUid);
     await db.addToCollection(collectionId, MediaKind.video, second.bookUid);
 
-    final List<BatchScrapeProgress> progress =
-        await build().scrapeLibrary(<VideoBookRow>[first, second]).toList();
+    final List<BatchScrapeProgress> progress = await build().scrapeLibrary(
+      <VideoBookRow>[first, second],
+    ).toList();
     expect(
       progress.map((BatchScrapeProgress item) => item.outcome),
       everyElement(isA<ScrapeSkippedProtected>()),

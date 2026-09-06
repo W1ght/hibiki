@@ -73,8 +73,11 @@ CREATE TABLE galgame_sessions (
 
     final version = await db.customSelect('PRAGMA user_version').getSingle();
     expect(version.read<int>('user_version'), db.schemaVersion);
-    expect(db.schemaVersion, 96,
-        reason: 'v56 给 galgames 加 launch_args（可配置游戏启动参数）');
+    expect(
+      db.schemaVersion,
+      96,
+      reason: 'v56 给 galgames 加 launch_args（可配置游戏启动参数）',
+    );
 
     final GalgameRow? legacy = await db.getGalgame('legacy_game');
     expect(legacy, isNotNull, reason: '旧游戏行原样保留');
@@ -83,55 +86,66 @@ CREATE TABLE galgame_sessions (
     expect(legacy.workdir, r'Z:\vn', reason: 'workdir 不受新列影响');
     expect(legacy.playStatus, 3);
     // 关键的向后兼容断言：老游戏升级后不带任何参数，启动命令行与旧版逐字节相同。
-    expect(legacy.launchArgs, '',
-        reason: '既有行回填空串 = 不发 --arg = Never break userspace');
+    expect(
+      legacy.launchArgs,
+      '',
+      reason: '既有行回填空串 = 不发 --arg = Never break userspace',
+    );
   });
 
   test('v56：整行参数原样往返，含空格与引号不被 DB 层改写', () async {
     final FushiDatabase db = await openV55Db();
 
     const String raw = r'-windowed --save="Z:\My Saves\slot 1" -lang ja';
-    await db.upsertGalgame(GalgamesCompanion.insert(
-      id: 'legacy_game',
-      name: '旧游戏',
-      exePath: r'Z:\vn\game.exe',
-      workdir: r'Z:\vn',
-      launchArgs: const Value<String>(raw),
-      addedAt: 1700000000000,
-    ));
+    await db.upsertGalgame(
+      GalgamesCompanion.insert(
+        id: 'legacy_game',
+        name: '旧游戏',
+        exePath: r'Z:\vn\game.exe',
+        workdir: r'Z:\vn',
+        launchArgs: const Value<String>(raw),
+        addedAt: 1700000000000,
+      ),
+    );
 
     expect((await db.getGalgame('legacy_game'))!.launchArgs, raw);
 
     // 清空 = 显式写空串（列非空，空串就是「没配置」），不是写 null。真实写路径
     // `galgamesCompanionFromEntry` 永远显式带上这一列，所以用户删光输入框能真清掉。
-    await db.upsertGalgame(GalgamesCompanion.insert(
-      id: 'legacy_game',
-      name: '旧游戏',
-      exePath: r'Z:\vn\game.exe',
-      workdir: r'Z:\vn',
-      launchArgs: const Value<String>(''),
-      addedAt: 1700000000000,
-    ));
+    await db.upsertGalgame(
+      GalgamesCompanion.insert(
+        id: 'legacy_game',
+        name: '旧游戏',
+        exePath: r'Z:\vn\game.exe',
+        workdir: r'Z:\vn',
+        launchArgs: const Value<String>(''),
+        addedAt: 1700000000000,
+      ),
+    );
     expect((await db.getGalgame('legacy_game'))!.launchArgs, '');
 
     // 反面：companion 省略该列时是 `Value.absent()`，upsert 的 UPDATE 分支**不碰**
     // 这一列（drift 语义）。钉住它，免得有人以为「不传 = 清空」而写出静默保留旧值的
     // 局部更新路径。
-    await db.upsertGalgame(GalgamesCompanion.insert(
-      id: 'legacy_game',
-      name: '旧游戏',
-      exePath: r'Z:\vn\game.exe',
-      workdir: r'Z:\vn',
-      launchArgs: const Value<String>('-kept'),
-      addedAt: 1700000000000,
-    ));
-    await db.upsertGalgame(GalgamesCompanion.insert(
-      id: 'legacy_game',
-      name: '旧游戏',
-      exePath: r'Z:\vn\game.exe',
-      workdir: r'Z:\vn',
-      addedAt: 1700000000000,
-    ));
+    await db.upsertGalgame(
+      GalgamesCompanion.insert(
+        id: 'legacy_game',
+        name: '旧游戏',
+        exePath: r'Z:\vn\game.exe',
+        workdir: r'Z:\vn',
+        launchArgs: const Value<String>('-kept'),
+        addedAt: 1700000000000,
+      ),
+    );
+    await db.upsertGalgame(
+      GalgamesCompanion.insert(
+        id: 'legacy_game',
+        name: '旧游戏',
+        exePath: r'Z:\vn\game.exe',
+        workdir: r'Z:\vn',
+        addedAt: 1700000000000,
+      ),
+    );
     expect((await db.getGalgame('legacy_game'))!.launchArgs, '-kept');
   });
 
@@ -139,13 +153,15 @@ CREATE TABLE galgame_sessions (
     final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
 
-    await db.upsertGalgame(GalgamesCompanion.insert(
-      id: 'fresh',
-      name: 'fresh',
-      exePath: r'Z:\f\f.exe',
-      workdir: r'Z:\f',
-      addedAt: 1700000000000,
-    ));
+    await db.upsertGalgame(
+      GalgamesCompanion.insert(
+        id: 'fresh',
+        name: 'fresh',
+        exePath: r'Z:\f\f.exe',
+        workdir: r'Z:\f',
+        addedAt: 1700000000000,
+      ),
+    );
     expect((await db.getGalgame('fresh'))!.launchArgs, '');
     expect(await db.getAllGalgames(), hasLength(1));
   });

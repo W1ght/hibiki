@@ -109,8 +109,8 @@ class AudiobookPlayerController extends ChangeNotifier {
   AudioCue? cueAtCurrentPositionInBook() {
     if (_allBookCues.isEmpty) return _currentCue;
     final int audioFileIndex = _player.currentIndex ?? 0;
-    final int effectiveMs =
-        (_player.position.inMilliseconds - delayMs.value).clamp(0, 1 << 30);
+    final int effectiveMs = (_player.position.inMilliseconds - delayMs.value)
+        .clamp(0, 1 << 30);
     AudioCue? best;
     int bestStart = -1;
     for (final AudioCue cue in _allBookCues) {
@@ -149,8 +149,8 @@ class AudiobookPlayerController extends ChangeNotifier {
     final int audioFileIndex = _player.currentIndex ?? 0;
     final List<AudioCue> fileCues = _chapterCuesForAudioFile(audioFileIndex);
     if (fileCues.isEmpty) return _currentCue;
-    final int effectiveMs =
-        (_player.position.inMilliseconds - delayMs.value).clamp(0, 1 << 30);
+    final int effectiveMs = (_player.position.inMilliseconds - delayMs.value)
+        .clamp(0, 1 << 30);
     return _displayCueFor(cues: fileCues, effectiveMs: effectiveMs);
   }
 
@@ -429,8 +429,7 @@ class AudiobookPlayerController extends ChangeNotifier {
   @visibleForTesting
   static bool shouldSnapAfterImagePauseResume({
     required bool readerMovedDuringPause,
-  }) =>
-      !readerMovedDuringPause;
+  }) => !readerMovedDuringPause;
 
   void setImagePauseSec(int sec) {
     final int clamped = sec.clamp(0, 15);
@@ -650,7 +649,11 @@ class AudiobookPlayerController extends ChangeNotifier {
   /// 同一套累加口径。
   int globalMsOfCue(AudioCue cue) {
     int base = 0;
-    for (int i = 0; i < cue.audioFileIndex && i < _fileDurationsMs.length; i++) {
+    for (
+      int i = 0;
+      i < cue.audioFileIndex && i < _fileDurationsMs.length;
+      i++
+    ) {
       base += _fileDurationsMs[i];
     }
     return base + cue.startMs;
@@ -1307,12 +1310,12 @@ class AudiobookPlayerController extends ChangeNotifier {
     // 状态变化时 just_audio 自发降频到 maxPeriod）。
     _positionSub = _player
         .createPositionStream(
-      minPeriod: const Duration(milliseconds: 125),
-      maxPeriod: const Duration(milliseconds: 125),
-    )
+          minPeriod: const Duration(milliseconds: 125),
+          maxPeriod: const Duration(milliseconds: 125),
+        )
         .listen((pos) {
-      _updateCurrentCue(pos.inMilliseconds);
-    });
+          _updateCurrentCue(pos.inMilliseconds);
+        });
     // 订阅播放状态流：just_audio 内部状态翻转（包括焦点丢失、播完自动暂停）
     // 都会在这里得到通知，UI 即时刷新播放/暂停图标。
     _playingSub = _player.playingStream.listen((_) {
@@ -1858,8 +1861,9 @@ class AudiobookPlayerController extends ChangeNotifier {
     // 「同步采样 → 发出落库写 → 先止声 → 再 await 落库」：stop 反过来成为解开在途
     // play 的那一方，且音频停得更快（不被一次数据库写入挡在前面）。
     final String? uid = _audiobook?.bookKey;
-    final int? sampledPosMs =
-        uid == null ? null : _player.position.inMilliseconds;
+    final int? sampledPosMs = uid == null
+        ? null
+        : _player.position.inMilliseconds;
 
     // 位置写必须在 `_player.stop()` **之前发出**（这里只建链，不 await），真正的
     // await 放到 stop 之后 —— 两个位置都不能挪：

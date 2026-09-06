@@ -10,7 +10,8 @@ import 'package:fushi_audio/fushi_audio.dart';
 /// 默认 skip；手动跑：
 /// `flutter test test/matching/anchor_gap_filler_bench_test.dart --run-skipped`
 /// （JIT，绝对值比审查者的 AOT 数字高，看相对比例。）
-const String _pool = 'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほ'
+const String _pool =
+    'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほ'
     'まみむめもやゆよらりるれろわをんがぎぐげござじずぜぞだぢづでど'
     '俺は三十四歳住所不定無職人生を後悔している真最中だ着のみまま家から叩き出された'
     '五人兄弟四番目として生まれ小学校成績も良かった周囲神童呼ばれていた';
@@ -67,7 +68,8 @@ String _needle(String region, int n, math.Random rng) {
     }
     for (int len = minLen; len <= limit; len++) {
       final double sim = 1 - prev[len] / math.max(n, len);
-      final bool better = best == null ||
+      final bool better =
+          best == null ||
           sim > best.similarity + 1e-9 ||
           (sim > best.similarity - 1e-9 &&
               _tieRank(n, len) < _tieRank(n, best.end - best.start));
@@ -117,7 +119,8 @@ void main() {
           expect(oldR, isNotNull);
           // 植入的 needle 就在正文中段：两者都应找到它（相似度 ≥ 0.75）。
           expect(newR!.similarity, greaterThanOrEqualTo(0.75));
-          final bool same = oldR!.start == newR!.start &&
+          final bool same =
+              oldR!.start == newR!.start &&
               oldR!.end == newR!.end &&
               (oldR!.similarity - newR!.similarity).abs() < 1e-9;
           out.writeln('| $region | $n | $oldMs | $newMs | $same |');

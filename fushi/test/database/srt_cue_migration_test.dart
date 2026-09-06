@@ -138,15 +138,16 @@ Future<int> _cueCount(FushiDatabase db, String bookKey) async {
   // these literals are unchanged. bookKey is a test-controlled literal; safe to
   // interpolate.
   final row = await db
-      .customSelect('SELECT COUNT(*) AS c FROM audio_cues '
-          "WHERE book_key = '$bookKey'")
+      .customSelect(
+        'SELECT COUNT(*) AS c FROM audio_cues '
+        "WHERE book_key = '$bookKey'",
+      )
       .getSingle();
   return row.read<int>('c');
 }
 
 void main() {
-  test(
-      'v11->latest migration preserves SRT-owned and audiobook-owned cues, '
+  test('v11->latest migration preserves SRT-owned and audiobook-owned cues, '
       'deletes only doubly-orphaned cues', () async {
     final db = await _openV11DbWithSrtCues();
 

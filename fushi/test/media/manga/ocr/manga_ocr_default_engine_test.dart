@@ -19,9 +19,7 @@ import 'package:fushi/src/models/preferences_repository.dart';
 import 'package:fushi_core/fushi_core.dart';
 
 FushiDatabase _testDb() {
-  return FushiDatabase.forTesting(
-    DatabaseConnection(NativeDatabase.memory()),
-  );
+  return FushiDatabase.forTesting(DatabaseConnection(NativeDatabase.memory()));
 }
 
 void main() {
@@ -51,9 +49,7 @@ void main() {
     });
 
     test('用户改回 auto 后跨 reload 持久化（离线用户能彻底退出 Lens）', () async {
-      await repo.setMangaOcrEnginePreference(
-        MangaOcrEnginePreference.auto.key,
-      );
+      await repo.setMangaOcrEnginePreference(MangaOcrEnginePreference.auto.key);
       final PreferencesRepository reloaded = PreferencesRepository(db);
       await reloaded.loadFromDb();
       expect(reloaded.mangaOcrEnginePreference, 'auto');

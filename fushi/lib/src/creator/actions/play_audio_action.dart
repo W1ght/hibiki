@@ -14,14 +14,14 @@ import 'package:fushi/utils.dart';
 class PlayAudioAction extends QuickAction {
   /// Initialise this enhancement with the hardset parameters.
   PlayAudioAction()
-      : super(
-          uniqueKey: key,
-          label: 'Play Audio',
-          description:
-              'Attempts to play audio based on the Audio enhancements. The auto'
-              ' is the top priority.',
-          icon: Icons.play_circle_outline,
-        );
+    : super(
+        uniqueKey: key,
+        label: 'Play Audio',
+        description:
+            'Attempts to play audio based on the Audio enhancements. The auto'
+            ' is the top priority.',
+        icon: Icons.play_circle_outline,
+      );
 
   final AudioPlayer _audioPlayer = AudioPlayer();
   StreamSubscription<void>? _noisySub;
@@ -49,8 +49,9 @@ class PlayAudioAction extends QuickAction {
     // and iterated `Enhancement?` null-checking each element (a non-nullable
     // list cannot contain null). Collapsed to the single audio enhancement
     // this action actually previews.
-    final AudioEnhancement enhancement =
-        LocalAudioEnhancement(field: AudioField.instance);
+    final AudioEnhancement enhancement = LocalAudioEnhancement(
+      field: AudioField.instance,
+    );
 
     final File? file = await enhancement.fetchAudio(
       appModel: appModel,

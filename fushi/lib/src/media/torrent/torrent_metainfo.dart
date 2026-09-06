@@ -18,7 +18,7 @@ enum TorrentMetainfoErrorCode {
 
 class TorrentMetainfoException extends FormatException {
   TorrentMetainfoException(this.code, String detail)
-      : super('torrent metainfo ${code.name}: $detail');
+    : super('torrent metainfo ${code.name}: $detail');
 
   final TorrentMetainfoErrorCode code;
 }
@@ -31,8 +31,8 @@ class InspectedTorrentMetainfo {
     required this.v2InfoHash,
     Iterable<InspectedTorrentFile> files = const <InspectedTorrentFile>[],
     this.suggestedName,
-  })  : bytes = Uint8List.fromList(bytes),
-        files = List<InspectedTorrentFile>.unmodifiable(files);
+  }) : bytes = Uint8List.fromList(bytes),
+       files = List<InspectedTorrentFile>.unmodifiable(files);
 
   final Uint8List bytes;
 
@@ -114,10 +114,12 @@ InspectedTorrentMetainfo inspectTorrentMetainfo(
     root.infoStart,
     root.infoEnd,
   );
-  final String? v1InfoHash =
-      hasV1Pieces ? crypto.sha1.convert(rawInfo).toString() : null;
-  final String? v2InfoHash =
-      hasV2 ? crypto.sha256.convert(rawInfo).toString() : null;
+  final String? v1InfoHash = hasV1Pieces
+      ? crypto.sha1.convert(rawInfo).toString()
+      : null;
+  final String? v2InfoHash = hasV2
+      ? crypto.sha256.convert(rawInfo).toString()
+      : null;
   final String torrentId = v1InfoHash ?? v2InfoHash!.substring(0, 40);
 
   final String? expected = _normalizeExpectedHash(expectedInfoHash);

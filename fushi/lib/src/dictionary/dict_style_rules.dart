@@ -144,14 +144,14 @@ class DictStyleProps {
       cornerRadius == null;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        if (textColor != null) 'textColor': textColor,
-        if (backgroundColor != null) 'backgroundColor': backgroundColor,
-        if (bold != null) 'bold': bold,
-        if (italic != null) 'italic': italic,
-        if (underline != null) 'underline': underline,
-        if (fontScale != null) 'fontScale': fontScale,
-        if (cornerRadius != null) 'cornerRadius': cornerRadius,
-      };
+    if (textColor != null) 'textColor': textColor,
+    if (backgroundColor != null) 'backgroundColor': backgroundColor,
+    if (bold != null) 'bold': bold,
+    if (italic != null) 'italic': italic,
+    if (underline != null) 'underline': underline,
+    if (fontScale != null) 'fontScale': fontScale,
+    if (cornerRadius != null) 'cornerRadius': cornerRadius,
+  };
 
   /// 逐属性覆写。**省略 = 保持原值，显式传 null = 清除该属性**。
   ///
@@ -167,17 +167,20 @@ class DictStyleProps {
     Object? cornerRadius = unset,
   }) {
     return DictStyleProps(
-      textColor:
-          identical(textColor, unset) ? this.textColor : textColor as int?,
+      textColor: identical(textColor, unset)
+          ? this.textColor
+          : textColor as int?,
       backgroundColor: identical(backgroundColor, unset)
           ? this.backgroundColor
           : backgroundColor as int?,
       bold: identical(bold, unset) ? this.bold : bold as bool?,
       italic: identical(italic, unset) ? this.italic : italic as bool?,
-      underline:
-          identical(underline, unset) ? this.underline : underline as bool?,
-      fontScale:
-          identical(fontScale, unset) ? this.fontScale : fontScale as double?,
+      underline: identical(underline, unset)
+          ? this.underline
+          : underline as bool?,
+      fontScale: identical(fontScale, unset)
+          ? this.fontScale
+          : fontScale as double?,
       cornerRadius: identical(cornerRadius, unset)
           ? this.cornerRadius
           : cornerRadius as double?,
@@ -213,16 +216,15 @@ List<DictStyleRule> dictStyleRulesWith(
   String? dictionaryName,
   DictStyleProps props,
 ) {
-  final String? scope =
-      dictStylePartSupportsPerDictionary(part) ? dictionaryName : null;
+  final String? scope = dictStylePartSupportsPerDictionary(part)
+      ? dictionaryName
+      : null;
   final List<DictStyleRule> out = <DictStyleRule>[
     for (final DictStyleRule rule in rules)
       if (!(rule.part == part && rule.dictionaryName == scope)) rule,
   ];
   if (!props.isEmpty) {
-    out.add(
-      DictStyleRule(part: part, dictionaryName: scope, props: props),
-    );
+    out.add(DictStyleRule(part: part, dictionaryName: scope, props: props));
   }
   return out;
 }
@@ -242,7 +244,8 @@ class DictStyleRule {
       part: part,
       // 非法组合在解码期就抹平：坏数据不该在渲染期变成一条打不中任何东西
       // （或者更糟：打中所有词典）的规则。
-      dictionaryName: (rawDict == null || rawDict.isEmpty) ||
+      dictionaryName:
+          (rawDict == null || rawDict.isEmpty) ||
               !dictStylePartSupportsPerDictionary(part)
           ? null
           : rawDict,
@@ -261,10 +264,10 @@ class DictStyleRule {
   final DictStyleProps props;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'part': part.name,
-        if (dictionaryName != null) 'dictionaryName': dictionaryName,
-        'props': props.toJson(),
-      };
+    'part': part.name,
+    if (dictionaryName != null) 'dictionaryName': dictionaryName,
+    'props': props.toJson(),
+  };
 }
 
 /// 从偏好原始串解码规则表。
@@ -292,8 +295,9 @@ List<DictStyleRule> decodeDictStyleRules(String raw) {
 /// 空表编码为空串（保持「从未用过」与「清空了」在偏好层同形，不留空数组残骸）。
 /// 空属性的规则被丢弃——它不产出 CSS，留着只会在下次解码时再被过滤一遍。
 String encodeDictStyleRules(List<DictStyleRule> rules) {
-  final List<DictStyleRule> kept =
-      rules.where((DictStyleRule r) => !r.props.isEmpty).toList();
+  final List<DictStyleRule> kept = rules
+      .where((DictStyleRule r) => !r.props.isEmpty)
+      .toList();
   if (kept.isEmpty) return '';
   return jsonEncode(kept.map((DictStyleRule r) => r.toJson()).toList());
 }
@@ -303,9 +307,9 @@ bool _isKnownPart(String? name) =>
     DictStylePart.values.any((DictStylePart p) => p.name == name);
 
 DictStylePart _partFromName(String name) => DictStylePart.values.firstWhere(
-      (DictStylePart p) => p.name == name,
-      orElse: () => DictStylePart.entryCard,
-    );
+  (DictStylePart p) => p.name == name,
+  orElse: () => DictStylePart.entryCard,
+);
 
 int? _asInt(Object? v) => v is int ? v : (v is num ? v.toInt() : null);
 bool? _asBool(Object? v) => v is bool ? v : null;

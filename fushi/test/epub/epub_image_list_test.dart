@@ -39,20 +39,30 @@ void main() {
         '<html><body><img src="c.jpg"/></body></html>',
       ]);
       final List<EpubImageRef> imgs = book.images;
-      expect(imgs.map((EpubImageRef r) => r.src).toList(),
-          <String>['a.png', 'b.png', 'c.jpg']);
-      expect(
-          imgs.map((EpubImageRef r) => r.orderInBook).toList(), <int>[0, 1, 2]);
-      expect(imgs.map((EpubImageRef r) => r.chapterIndex).toList(),
-          <int>[0, 0, 2]);
+      expect(imgs.map((EpubImageRef r) => r.src).toList(), <String>[
+        'a.png',
+        'b.png',
+        'c.jpg',
+      ]);
+      expect(imgs.map((EpubImageRef r) => r.orderInBook).toList(), <int>[
+        0,
+        1,
+        2,
+      ]);
+      expect(imgs.map((EpubImageRef r) => r.chapterIndex).toList(), <int>[
+        0,
+        0,
+        2,
+      ]);
     });
 
     test('skips empty / whitespace-only src', () {
       final EpubBook book = _bookWithChapterHtml(<String>[
         '<html><body><img src=""/><img src="   "/><img src="ok.png"/></body></html>',
       ]);
-      expect(book.images.map((EpubImageRef r) => r.src).toList(),
-          <String>['ok.png']);
+      expect(book.images.map((EpubImageRef r) => r.src).toList(), <String>[
+        'ok.png',
+      ]);
       expect(book.images.single.orderInBook, 0);
     });
 
@@ -84,18 +94,24 @@ void main() {
 
   group('resolveImageHref', () {
     test('nested chapter + ../images sibling -> root-relative', () {
-      expect(resolveImageHref('OEBPS/text/ch1.xhtml', '../images/p1.png'),
-          'OEBPS/images/p1.png');
+      expect(
+        resolveImageHref('OEBPS/text/ch1.xhtml', '../images/p1.png'),
+        'OEBPS/images/p1.png',
+      );
     });
 
     test('nested chapter + ./ same dir -> chapter dir', () {
-      expect(resolveImageHref('OEBPS/text/ch1.xhtml', './img.png'),
-          'OEBPS/text/img.png');
+      expect(
+        resolveImageHref('OEBPS/text/ch1.xhtml', './img.png'),
+        'OEBPS/text/img.png',
+      );
     });
 
     test('nested chapter + bare name -> chapter dir', () {
-      expect(resolveImageHref('OEBPS/text/ch1.xhtml', 'img.png'),
-          'OEBPS/text/img.png');
+      expect(
+        resolveImageHref('OEBPS/text/ch1.xhtml', 'img.png'),
+        'OEBPS/text/img.png',
+      );
     });
 
     test('root-level chapter + subdir src -> subdir from root', () {
@@ -107,8 +123,10 @@ void main() {
     });
 
     test('strips a leading slash on the chapter href', () {
-      expect(resolveImageHref('/OEBPS/text/ch1.xhtml', '../images/p1.png'),
-          'OEBPS/images/p1.png');
+      expect(
+        resolveImageHref('/OEBPS/text/ch1.xhtml', '../images/p1.png'),
+        'OEBPS/images/p1.png',
+      );
     });
 
     test('book.images holds the resolved root-relative href', () {

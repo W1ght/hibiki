@@ -55,11 +55,11 @@ abstract final class WindowCaptureChannel {
   /// 的结果（fail-open，绝不抛给调用方）。
   static Future<WindowCaptureResult> captureWindow(int hwnd) async {
     try {
-      final Map<Object?, Object?>? r =
-          await _channel.invokeMethod<Map<Object?, Object?>>(
-        'captureWindow',
-        <String, Object?>{'hwnd': hwnd},
-      );
+      final Map<Object?, Object?>? r = await _channel
+          .invokeMethod<Map<Object?, Object?>>(
+            'captureWindow',
+            <String, Object?>{'hwnd': hwnd},
+          );
       return WindowCaptureResult.fromMap(r ?? const <Object?, Object?>{});
     } on PlatformException catch (e) {
       return WindowCaptureResult(error: e.message ?? 'capture failed');
@@ -156,15 +156,15 @@ abstract final class WindowCaptureChannel {
       );
     }
     try {
-      final Map<Object?, Object?>? r =
-          await _channel.invokeMethod<Map<Object?, Object?>>(
-        'exportWindowRecording',
-        <String, Object?>{
-          'fromTickMs': fromTickMs,
-          'toTickMs': toTickMs,
-          'directory': directory,
-        },
-      );
+      final Map<Object?, Object?>? r = await _channel
+          .invokeMethod<Map<Object?, Object?>>(
+            'exportWindowRecording',
+            <String, Object?>{
+              'fromTickMs': fromTickMs,
+              'toTickMs': toTickMs,
+              'directory': directory,
+            },
+          );
       return WindowRecordingExport.fromMap(r ?? const <Object?, Object?>{});
     } on PlatformException catch (e) {
       return WindowRecordingExport(

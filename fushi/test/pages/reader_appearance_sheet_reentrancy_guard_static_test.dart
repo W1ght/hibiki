@@ -23,21 +23,23 @@ void main() {
     '  String _currentChapterLabel() {',
   );
 
-  test('_showAppearanceSheet bails on re-entry (no double sheet on fast taps)',
-      () {
-    expect(
-      sheet.contains('if (_appearanceSheetOpen) return;'),
-      isTrue,
-      reason: '入口必须在已打开时直接 return，挡住快速连点的二次进入',
-    );
-    expect(
-      // BUG-969：置位改经 _rebuild(() => ...)，让顶部进度 pill 在抽屉打开期间摘掉
-      // BackdropFilter blur（见 topProgressPillShowsBlur）；仍是同步置位，重入窗口不变。
-      sheet.contains('_rebuild(() => _appearanceSheetOpen = true)'),
-      isTrue,
-      reason: '必须置重入标志（经 _rebuild 同步置位以联动 pill blur，BUG-969）',
-    );
-  });
+  test(
+    '_showAppearanceSheet bails on re-entry (no double sheet on fast taps)',
+    () {
+      expect(
+        sheet.contains('if (_appearanceSheetOpen) return;'),
+        isTrue,
+        reason: '入口必须在已打开时直接 return，挡住快速连点的二次进入',
+      );
+      expect(
+        // BUG-969：置位改经 _rebuild(() => ...)，让顶部进度 pill 在抽屉打开期间摘掉
+        // BackdropFilter blur（见 topProgressPillShowsBlur）；仍是同步置位，重入窗口不变。
+        sheet.contains('_rebuild(() => _appearanceSheetOpen = true)'),
+        isTrue,
+        reason: '必须置重入标志（经 _rebuild 同步置位以联动 pill blur，BUG-969）',
+      );
+    },
+  );
 
   test('the re-entry guard is set before the first await', () {
     final int guardIndex = sheet.indexOf('_appearanceSheetOpen = true');
@@ -54,8 +56,11 @@ void main() {
   test('the re-entry guard is reset in a finally block', () {
     final int finallyIndex = sheet.indexOf('finally');
     final int resetIndex = sheet.indexOf('_appearanceSheetOpen = false;');
-    expect(finallyIndex, isNonNegative,
-        reason: '必须用 finally 复位，确保异常路径也复位、标志不卡死');
+    expect(
+      finallyIndex,
+      isNonNegative,
+      reason: '必须用 finally 复位，确保异常路径也复位、标志不卡死',
+    );
     expect(resetIndex, isNonNegative, reason: '必须复位重入标志');
     expect(
       finallyIndex,

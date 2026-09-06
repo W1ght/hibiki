@@ -95,8 +95,9 @@ void main() {
       ],
     );
 
-    final VideoMetadataWorkCredits result =
-        (await repository.forCollection(collectionId))!;
+    final VideoMetadataWorkCredits result = (await repository.forCollection(
+      collectionId,
+    ))!;
 
     expect(result.workId, workId);
     expect(result.identities.single.provider, 'tmdb');
@@ -153,8 +154,9 @@ void main() {
       ],
     );
 
-    final VideoMetadataWorkCredits result =
-        (await repository.forBook('movie-1'))!;
+    final VideoMetadataWorkCredits result = (await repository.forBook(
+      'movie-1',
+    ))!;
     expect(result.credits.single.person.name, 'Director');
     expect(await repository.forBook('missing'), isNull);
     expect(await repository.forCollection(9999), isNull);
@@ -183,11 +185,11 @@ Future<void> _insertPeopleAndCharacters(FushiDatabase database) async {
   ]);
   await database
       .upsertVideoMetadataCharacters(<VideoMetadataCharactersCompanion>[
-    VideoMetadataCharactersCompanion.insert(
-      characterKey: 'character:hero',
-      name: 'Hero',
-      imageUrl: const Value<String?>('https://image.example/hero.jpg'),
-      updatedAt: 1,
-    ),
-  ]);
+        VideoMetadataCharactersCompanion.insert(
+          characterKey: 'character:hero',
+          name: 'Hero',
+          imageUrl: const Value<String?>('https://image.example/hero.jpg'),
+          updatedAt: 1,
+        ),
+      ]);
 }

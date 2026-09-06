@@ -13,18 +13,20 @@ class _FakeRepo implements BaseAnkiRepository {
   int? updatedNoteId;
 
   @override
-  Future<MineOutcome> mineEntry(
-      {required String rawPayloadJson,
-      required AnkiMiningContext context}) async {
+  Future<MineOutcome> mineEntry({
+    required String rawPayloadJson,
+    required AnkiMiningContext context,
+  }) async {
     minedContext = context;
     return const MineOutcome.success(noteId: 42);
   }
 
   @override
-  Future<MineOutcome> updateMinedNote(
-      {required int noteId,
-      required String rawPayloadJson,
-      required AnkiMiningContext context}) async {
+  Future<MineOutcome> updateMinedNote({
+    required int noteId,
+    required String rawPayloadJson,
+    required AnkiMiningContext context,
+  }) async {
     updatedNoteId = noteId;
     minedContext = context;
     return const MineOutcome.success(noteId: 99);
@@ -43,98 +45,103 @@ void main() {
     if (tmp.existsSync()) await tmp.delete(recursive: true);
   });
 
-  ImmersionMiningEngine build(
-          {required GifExtractor gif,
-          required AudioExtractor audio,
-          required FrameExtractor frame,
-          RemoteAudioMaterializer? materializer}) =>
-      ImmersionMiningEngine(
-          gifExtractor: gif,
-          audioExtractor: audio,
-          frameExtractor: frame,
-          audioMaterializer: materializer);
+  ImmersionMiningEngine build({
+    required GifExtractor gif,
+    required AudioExtractor audio,
+    required FrameExtractor frame,
+    RemoteAudioMaterializer? materializer,
+  }) => ImmersionMiningEngine(
+    gifExtractor: gif,
+    audioExtractor: audio,
+    frameExtractor: frame,
+    audioMaterializer: materializer,
+  );
 
-  Future<String?> okGif(
-          {required String inputPath,
-          required int startMs,
-          required int endMs,
-          required String outputPath,
-          int fps = 8,
-          int width = 320,
-          MiningAnimatedFormat format = MiningAnimatedFormat.gif,
-          bool diagnosticOnly = false,
-          FfmpegFailureReporter? onFailure,
-          String? tlsPinSha256}) async =>
-      outputPath;
-  Future<String?> nullGif(
-          {required String inputPath,
-          required int startMs,
-          required int endMs,
-          required String outputPath,
-          int fps = 8,
-          int width = 320,
-          MiningAnimatedFormat format = MiningAnimatedFormat.gif,
-          bool diagnosticOnly = false,
-          FfmpegFailureReporter? onFailure,
-          String? tlsPinSha256}) async =>
-      null;
-  Future<String?> okAudio(
-          {required String inputPath,
-          required int startMs,
-          required int endMs,
-          required String outputPath,
-          int? audioStreamIndex,
-          int? audioStreamCount,
-          FfmpegFailureReporter? onFailure,
-          int audioChannels = 1,
-          String audioBitrate = '64k',
-          String? tlsPinSha256}) async =>
-      outputPath;
-  Future<String?> nullAudio(
-          {required String inputPath,
-          required int startMs,
-          required int endMs,
-          required String outputPath,
-          int? audioStreamIndex,
-          int? audioStreamCount,
-          FfmpegFailureReporter? onFailure,
-          int audioChannels = 1,
-          String audioBitrate = '64k',
-          String? tlsPinSha256}) async =>
-      null;
-  Future<String?> okFrame(
-          {required String inputPath,
-          required String outputPath,
-          double atSeconds = 10.0,
-          FfmpegFailureReporter? onFailure,
-          String? tlsPinSha256}) async =>
-      outputPath;
-  Future<String?> nullFrame(
-          {required String inputPath,
-          required String outputPath,
-          double atSeconds = 10.0,
-          FfmpegFailureReporter? onFailure,
-          String? tlsPinSha256}) async =>
-      null;
+  Future<String?> okGif({
+    required String inputPath,
+    required int startMs,
+    required int endMs,
+    required String outputPath,
+    int fps = 8,
+    int width = 320,
+    MiningAnimatedFormat format = MiningAnimatedFormat.gif,
+    bool diagnosticOnly = false,
+    FfmpegFailureReporter? onFailure,
+    String? tlsPinSha256,
+  }) async => outputPath;
+  Future<String?> nullGif({
+    required String inputPath,
+    required int startMs,
+    required int endMs,
+    required String outputPath,
+    int fps = 8,
+    int width = 320,
+    MiningAnimatedFormat format = MiningAnimatedFormat.gif,
+    bool diagnosticOnly = false,
+    FfmpegFailureReporter? onFailure,
+    String? tlsPinSha256,
+  }) async => null;
+  Future<String?> okAudio({
+    required String inputPath,
+    required int startMs,
+    required int endMs,
+    required String outputPath,
+    int? audioStreamIndex,
+    int? audioStreamCount,
+    FfmpegFailureReporter? onFailure,
+    int audioChannels = 1,
+    String audioBitrate = '64k',
+    String? tlsPinSha256,
+  }) async => outputPath;
+  Future<String?> nullAudio({
+    required String inputPath,
+    required int startMs,
+    required int endMs,
+    required String outputPath,
+    int? audioStreamIndex,
+    int? audioStreamCount,
+    FfmpegFailureReporter? onFailure,
+    int audioChannels = 1,
+    String audioBitrate = '64k',
+    String? tlsPinSha256,
+  }) async => null;
+  Future<String?> okFrame({
+    required String inputPath,
+    required String outputPath,
+    double atSeconds = 10.0,
+    FfmpegFailureReporter? onFailure,
+    String? tlsPinSha256,
+  }) async => outputPath;
+  Future<String?> nullFrame({
+    required String inputPath,
+    required String outputPath,
+    double atSeconds = 10.0,
+    FfmpegFailureReporter? onFailure,
+    String? tlsPinSha256,
+  }) async => null;
 
   test('gif+audio success builds context and calls mineEntry', () async {
     final repo = _FakeRepo();
     final res = await build(gif: okGif, audio: okAudio, frame: okFrame).mine(
-        const ImmersionMiningRequest(
-            source: AnkiMiningSource.video,
-            fields: {'expression': '走る'},
-            mediaSource: '/fake/video.mp4',
-            clipStartMs: 1000,
-            clipEndMs: 3000,
-            sentence: '走り出した。'),
-        compression: MiningMediaCompression.compressed,
-        tempDir: tmp.path,
-        repo: repo);
+      const ImmersionMiningRequest(
+        source: AnkiMiningSource.video,
+        fields: {'expression': '走る'},
+        mediaSource: '/fake/video.mp4',
+        clipStartMs: 1000,
+        clipEndMs: 3000,
+        sentence: '走り出した。',
+      ),
+      compression: MiningMediaCompression.compressed,
+      tempDir: tmp.path,
+      repo: repo,
+    );
     expect(res.aborted, false);
     expect(repo.minedContext!.sentence, '走り出した。');
     expect(repo.minedContext!.coverPath, endsWith('.gif'));
-    expect(repo.minedContext!.sentenceAudioPath,
-        endsWith('immersion_audio.${immersionMiningAudioExtension()}'));
+    expect(
+      repo.minedContext!.sentenceAudioPath,
+      endsWith('immersion_audio.${immersionMiningAudioExtension()}'),
+    );
     expect(repo.minedContext!.source, AnkiMiningSource.video);
     // 片段时间窗必须原样接进落卡 context（渲染 `{clip-timestamp}` 的唯一来源）。
     // 引擎是「制卡请求 → 落卡 context」的唯一收口：这里漏传，视频页真实制卡就没有
@@ -143,13 +150,14 @@ void main() {
     expect(repo.minedContext!.clipEndMs, 3000);
   });
 
-  test('BUG-1004 remoteAudioClipper 命中远端流 → 用 host 端裁产物、不调 ffmpeg 音频抽取',
-      () async {
-    final repo = _FakeRepo();
-    bool audioCalled = false;
-    bool clipperCalled = false;
-    Future<String?> trackingAudio(
-        {required String inputPath,
+  test(
+    'BUG-1004 remoteAudioClipper 命中远端流 → 用 host 端裁产物、不调 ffmpeg 音频抽取',
+    () async {
+      final repo = _FakeRepo();
+      bool audioCalled = false;
+      bool clipperCalled = false;
+      Future<String?> trackingAudio({
+        required String inputPath,
         required int startMs,
         required int endMs,
         required String outputPath,
@@ -158,13 +166,14 @@ void main() {
         FfmpegFailureReporter? onFailure,
         int audioChannels = 1,
         String audioBitrate = '64k',
-        String? tlsPinSha256}) async {
-      audioCalled = true;
-      return outputPath;
-    }
+        String? tlsPinSha256,
+      }) async {
+        audioCalled = true;
+        return outputPath;
+      }
 
-    final res =
-        await build(gif: okGif, audio: trackingAudio, frame: okFrame).mine(
+      final res = await build(gif: okGif, audio: trackingAudio, frame: okFrame)
+          .mine(
             ImmersionMiningRequest(
               source: AnkiMiningSource.video,
               fields: const {'expression': '走る'},
@@ -174,168 +183,193 @@ void main() {
               clipStartMs: 1000,
               clipEndMs: 3000,
               sentence: '走り出した。',
-              remoteAudioClipper: ({
-                required int startMs,
-                required int endMs,
-                required String outputPath,
-              }) async {
-                clipperCalled = true;
-                expect(startMs, 1000);
-                expect(endMs, 3000);
-                return outputPath;
-              },
+              remoteAudioClipper:
+                  ({
+                    required int startMs,
+                    required int endMs,
+                    required String outputPath,
+                  }) async {
+                    clipperCalled = true;
+                    expect(startMs, 1000);
+                    expect(endMs, 3000);
+                    return outputPath;
+                  },
             ),
             compression: MiningMediaCompression.compressed,
             tempDir: tmp.path,
-            repo: repo);
-    expect(res.aborted, false);
-    expect(clipperCalled, true, reason: 'host 端裁切器应被调用');
-    expect(audioCalled, false, reason: 'host 端裁命中后不得再对远端 URL 跑 ffmpeg 抽取');
-    expect(repo.minedContext!.sentenceAudioPath,
-        endsWith('immersion_audio_host.aac'));
-  });
+            repo: repo,
+          );
+      expect(res.aborted, false);
+      expect(clipperCalled, true, reason: 'host 端裁切器应被调用');
+      expect(audioCalled, false, reason: 'host 端裁命中后不得再对远端 URL 跑 ffmpeg 抽取');
+      expect(
+        repo.minedContext!.sentenceAudioPath,
+        endsWith('immersion_audio_host.aac'),
+      );
+    },
+  );
 
   test('BUG-1004 remoteAudioClipper 返回 null → 回退 ffmpeg-over-URL 抽取', () async {
     final repo = _FakeRepo();
     bool audioCalled = false;
-    Future<String?> trackingAudio(
-        {required String inputPath,
-        required int startMs,
-        required int endMs,
-        required String outputPath,
-        int? audioStreamIndex,
-        int? audioStreamCount,
-        FfmpegFailureReporter? onFailure,
-        int audioChannels = 1,
-        String audioBitrate = '64k',
-        String? tlsPinSha256}) async {
-      audioCalled = true;
-      return outputPath;
-    }
-
-    final res =
-        await build(gif: okGif, audio: trackingAudio, frame: okFrame).mine(
-            ImmersionMiningRequest(
-              source: AnkiMiningSource.video,
-              fields: const {'expression': '走る'},
-              mediaSource:
-                  'https://host.example:38765/api/library/videos/v/stream?token=x',
-              clipStartMs: 1000,
-              clipEndMs: 3000,
-              sentence: '走り出した。',
-              // 老 host 无 clipaudio 端点 / 网络失败：裁切器返 null。
-              remoteAudioClipper: ({
-                required int startMs,
-                required int endMs,
-                required String outputPath,
-              }) async =>
-                  null,
-            ),
-            compression: MiningMediaCompression.compressed,
-            tempDir: tmp.path,
-            repo: repo);
-    expect(res.aborted, false);
-    expect(audioCalled, true,
-        reason: 'host 端裁返 null 后必须回退直连 ffmpeg 抽取（Never break userspace）');
-    expect(repo.minedContext!.sentenceAudioPath,
-        endsWith('immersion_audio.${immersionMiningAudioExtension()}'));
-  });
-
-  test('provided audio bytes use the platform-aware immersion audio filename',
-      () async {
-    final repo = _FakeRepo();
-    await build(gif: nullGif, audio: nullAudio, frame: nullFrame).mine(
-        ImmersionMiningRequest(
-            source: AnkiMiningSource.video,
-            fields: const {'expression': 'x'},
-            clipStartMs: 0,
-            clipEndMs: 0,
-            sentence: 's',
-            providedAudioBytes: Uint8List.fromList(<int>[1, 2, 3])),
-        compression: MiningMediaCompression.compressed,
-        tempDir: tmp.path,
-        repo: repo);
-    expect(repo.minedContext!.sentenceAudioPath,
-        endsWith('immersion_audio.${immersionMiningAudioExtension()}'));
-  });
-
-  test('gif fails -> frame fallback yields still cover', () async {
-    final repo = _FakeRepo();
-    final res = await build(gif: nullGif, audio: okAudio, frame: okFrame).mine(
-        const ImmersionMiningRequest(
-            source: AnkiMiningSource.video,
-            fields: {'expression': 'x'},
-            mediaSource: '/v.mp4',
-            clipStartMs: 0,
-            clipEndMs: 2000,
-            sentence: 's'),
-        compression: MiningMediaCompression.compressed,
-        tempDir: tmp.path,
-        repo: repo);
-    expect(res.degradedToStill, true);
-    expect(repo.minedContext!.coverPath, endsWith('.jpg'));
-  });
-
-  test('large GIF keeps the selected quality and is not size-downgraded',
-      () async {
-    final repo = _FakeRepo();
-    final List<({int fps, int width})> calls = <({int fps, int width})>[];
-    Future<String?> largeGif({
+    Future<String?> trackingAudio({
       required String inputPath,
       required int startMs,
       required int endMs,
       required String outputPath,
-      int fps = 8,
-      int width = 320,
-      MiningAnimatedFormat format = MiningAnimatedFormat.gif,
-      bool diagnosticOnly = false,
+      int? audioStreamIndex,
+      int? audioStreamCount,
       FfmpegFailureReporter? onFailure,
+      int audioChannels = 1,
+      String audioBitrate = '64k',
       String? tlsPinSha256,
     }) async {
-      calls.add((fps: fps, width: width));
-      await File(outputPath).writeAsBytes(List<int>.filled(5 * 1024 * 1024, 0));
+      audioCalled = true;
       return outputPath;
     }
 
-    final res = await build(
-      gif: largeGif,
-      audio: okAudio,
-      frame: okFrame,
-    ).mine(
+    final res = await build(gif: okGif, audio: trackingAudio, frame: okFrame)
+        .mine(
+          ImmersionMiningRequest(
+            source: AnkiMiningSource.video,
+            fields: const {'expression': '走る'},
+            mediaSource:
+                'https://host.example:38765/api/library/videos/v/stream?token=x',
+            clipStartMs: 1000,
+            clipEndMs: 3000,
+            sentence: '走り出した。',
+            // 老 host 无 clipaudio 端点 / 网络失败：裁切器返 null。
+            remoteAudioClipper:
+                ({
+                  required int startMs,
+                  required int endMs,
+                  required String outputPath,
+                }) async => null,
+          ),
+          compression: MiningMediaCompression.compressed,
+          tempDir: tmp.path,
+          repo: repo,
+        );
+    expect(res.aborted, false);
+    expect(
+      audioCalled,
+      true,
+      reason: 'host 端裁返 null 后必须回退直连 ffmpeg 抽取（Never break userspace）',
+    );
+    expect(
+      repo.minedContext!.sentenceAudioPath,
+      endsWith('immersion_audio.${immersionMiningAudioExtension()}'),
+    );
+  });
+
+  test(
+    'provided audio bytes use the platform-aware immersion audio filename',
+    () async {
+      final repo = _FakeRepo();
+      await build(gif: nullGif, audio: nullAudio, frame: nullFrame).mine(
+        ImmersionMiningRequest(
+          source: AnkiMiningSource.video,
+          fields: const {'expression': 'x'},
+          clipStartMs: 0,
+          clipEndMs: 0,
+          sentence: 's',
+          providedAudioBytes: Uint8List.fromList(<int>[1, 2, 3]),
+        ),
+        compression: MiningMediaCompression.compressed,
+        tempDir: tmp.path,
+        repo: repo,
+      );
+      expect(
+        repo.minedContext!.sentenceAudioPath,
+        endsWith('immersion_audio.${immersionMiningAudioExtension()}'),
+      );
+    },
+  );
+
+  test('gif fails -> frame fallback yields still cover', () async {
+    final repo = _FakeRepo();
+    final res = await build(gif: nullGif, audio: okAudio, frame: okFrame).mine(
       const ImmersionMiningRequest(
         source: AnkiMiningSource.video,
         fields: {'expression': 'x'},
         mediaSource: '/v.mp4',
         clipStartMs: 0,
-        clipEndMs: 4000,
+        clipEndMs: 2000,
         sentence: 's',
       ),
-      compression: MiningMediaCompression.highFidelity,
+      compression: MiningMediaCompression.compressed,
       tempDir: tmp.path,
       repo: repo,
     );
-
-    expect(calls, <({int fps, int width})>[(fps: 12, width: 720)]);
-    expect(res.degradedToStill, isFalse);
-    expect(repo.minedContext!.coverPath, endsWith('immersion_clip.gif'));
-    expect(File(repo.minedContext!.coverPath!).lengthSync(),
-        greaterThan(4 * 1024 * 1024));
+    expect(res.degradedToStill, true);
+    expect(repo.minedContext!.coverPath, endsWith('.jpg'));
   });
+
+  test(
+    'large GIF keeps the selected quality and is not size-downgraded',
+    () async {
+      final repo = _FakeRepo();
+      final List<({int fps, int width})> calls = <({int fps, int width})>[];
+      Future<String?> largeGif({
+        required String inputPath,
+        required int startMs,
+        required int endMs,
+        required String outputPath,
+        int fps = 8,
+        int width = 320,
+        MiningAnimatedFormat format = MiningAnimatedFormat.gif,
+        bool diagnosticOnly = false,
+        FfmpegFailureReporter? onFailure,
+        String? tlsPinSha256,
+      }) async {
+        calls.add((fps: fps, width: width));
+        await File(
+          outputPath,
+        ).writeAsBytes(List<int>.filled(5 * 1024 * 1024, 0));
+        return outputPath;
+      }
+
+      final res = await build(gif: largeGif, audio: okAudio, frame: okFrame)
+          .mine(
+            const ImmersionMiningRequest(
+              source: AnkiMiningSource.video,
+              fields: {'expression': 'x'},
+              mediaSource: '/v.mp4',
+              clipStartMs: 0,
+              clipEndMs: 4000,
+              sentence: 's',
+            ),
+            compression: MiningMediaCompression.highFidelity,
+            tempDir: tmp.path,
+            repo: repo,
+          );
+
+      expect(calls, <({int fps, int width})>[(fps: 12, width: 720)]);
+      expect(res.degradedToStill, isFalse);
+      expect(repo.minedContext!.coverPath, endsWith('immersion_clip.gif'));
+      expect(
+        File(repo.minedContext!.coverPath!).lengthSync(),
+        greaterThan(4 * 1024 * 1024),
+      );
+    },
+  );
 
   test('requireAudio && audio missing -> abort, no mine', () async {
     final repo = _FakeRepo();
     final res = await build(gif: okGif, audio: nullAudio, frame: nullFrame)
         .mine(
-            const ImmersionMiningRequest(
-                source: AnkiMiningSource.video,
-                fields: {'expression': 'x'},
-                mediaSource: '/v.mp4',
-                clipStartMs: 0,
-                clipEndMs: 2000,
-                sentence: 's'),
-            compression: MiningMediaCompression.compressed,
-            tempDir: tmp.path,
-            repo: repo);
+          const ImmersionMiningRequest(
+            source: AnkiMiningSource.video,
+            fields: {'expression': 'x'},
+            mediaSource: '/v.mp4',
+            clipStartMs: 0,
+            clipEndMs: 2000,
+            sentence: 's',
+          ),
+          compression: MiningMediaCompression.compressed,
+          tempDir: tmp.path,
+          repo: repo,
+        );
     expect(res.aborted, true);
     expect(repo.minedContext, isNull);
   });
@@ -344,17 +378,19 @@ void main() {
     final repo = _FakeRepo();
     final res = await build(gif: nullGif, audio: nullAudio, frame: okFrame)
         .mine(
-            const ImmersionMiningRequest(
-                source: AnkiMiningSource.video,
-                fields: {'expression': 'x'},
-                mediaSource: '/v.mp4',
-                clipStartMs: 0,
-                clipEndMs: 2000,
-                sentence: 's',
-                requireAudio: false),
-            compression: MiningMediaCompression.compressed,
-            tempDir: tmp.path,
-            repo: repo);
+          const ImmersionMiningRequest(
+            source: AnkiMiningSource.video,
+            fields: {'expression': 'x'},
+            mediaSource: '/v.mp4',
+            clipStartMs: 0,
+            clipEndMs: 2000,
+            sentence: 's',
+            requireAudio: false,
+          ),
+          compression: MiningMediaCompression.compressed,
+          tempDir: tmp.path,
+          repo: repo,
+        );
     expect(res.aborted, false);
     expect(repo.minedContext!.sentenceAudioPath, isNull);
     expect(repo.minedContext!.coverPath, endsWith('.jpg'));
@@ -364,15 +400,15 @@ void main() {
   // 分片是 googlevideo 专属绕行，所以 fixture 必须用真的 googlevideo 主机名（旧 fixture
   // `audio-only.example` 只满足旧的形状判据，与用例名里的 youtube split 不一致）。
   test(
-      'audioSource (youtube split) is materialized locally then cut (TODO-1314 B5)',
-      () async {
-    final repo = _FakeRepo();
-    String? gifInput;
-    String? audioInput;
-    String? materializedUrl;
-    final String localAudio = '${tmp.path}/materialized_audio_src';
-    Future<String?> capGif(
-        {required String inputPath,
+    'audioSource (youtube split) is materialized locally then cut (TODO-1314 B5)',
+    () async {
+      final repo = _FakeRepo();
+      String? gifInput;
+      String? audioInput;
+      String? materializedUrl;
+      final String localAudio = '${tmp.path}/materialized_audio_src';
+      Future<String?> capGif({
+        required String inputPath,
         required int startMs,
         required int endMs,
         required String outputPath,
@@ -381,13 +417,14 @@ void main() {
         MiningAnimatedFormat format = MiningAnimatedFormat.gif,
         bool diagnosticOnly = false,
         FfmpegFailureReporter? onFailure,
-        String? tlsPinSha256}) async {
-      gifInput = inputPath;
-      return outputPath;
-    }
+        String? tlsPinSha256,
+      }) async {
+        gifInput = inputPath;
+        return outputPath;
+      }
 
-    Future<String?> capAudio(
-        {required String inputPath,
+      Future<String?> capAudio({
+        required String inputPath,
         required int startMs,
         required int endMs,
         required String outputPath,
@@ -396,57 +433,65 @@ void main() {
         FfmpegFailureReporter? onFailure,
         int audioChannels = 1,
         String audioBitrate = '64k',
-        String? tlsPinSha256}) async {
-      audioInput = inputPath;
-      return outputPath;
-    }
+        String? tlsPinSha256,
+      }) async {
+        audioInput = inputPath;
+        return outputPath;
+      }
 
-    Future<String?> capMaterialize(
-        {required String audioUrl,
+      Future<String?> capMaterialize({
+        required String audioUrl,
         required String outputPath,
-        FfmpegFailureReporter? onFailure}) async {
-      materializedUrl = audioUrl;
-      return localAudio;
-    }
+        FfmpegFailureReporter? onFailure,
+      }) async {
+        materializedUrl = audioUrl;
+        return localAudio;
+      }
 
-    await build(
-            gif: capGif,
-            audio: capAudio,
-            frame: okFrame,
-            materializer: capMaterialize)
-        .mine(
-            const ImmersionMiningRequest(
-                source: AnkiMiningSource.video,
-                fields: {'expression': 'x'},
-                mediaSource: 'https://video-only.example/v',
-                audioSource:
-                    'https://rr1---sn-4g5e6nez.googlevideo.com/videoplayback?id=x',
-                clipStartMs: 0,
-                clipEndMs: 2000,
-                sentence: 's'),
-            compression: MiningMediaCompression.compressed,
-            tempDir: tmp.path,
-            repo: repo);
-    expect(gifInput, 'https://video-only.example/v'); // GIF 仍从视频流
-    // 分离 audio-only 流先经 range 分片下载物化到本地，再对本地文件裁（不再对 URL 直接 HTTP seek）。
-    expect(materializedUrl,
-        'https://rr1---sn-4g5e6nez.googlevideo.com/videoplayback?id=x');
-    expect(audioInput, localAudio);
-  });
+      await build(
+        gif: capGif,
+        audio: capAudio,
+        frame: okFrame,
+        materializer: capMaterialize,
+      ).mine(
+        const ImmersionMiningRequest(
+          source: AnkiMiningSource.video,
+          fields: {'expression': 'x'},
+          mediaSource: 'https://video-only.example/v',
+          audioSource:
+              'https://rr1---sn-4g5e6nez.googlevideo.com/videoplayback?id=x',
+          clipStartMs: 0,
+          clipEndMs: 2000,
+          sentence: 's',
+        ),
+        compression: MiningMediaCompression.compressed,
+        tempDir: tmp.path,
+        repo: repo,
+      );
+      expect(gifInput, 'https://video-only.example/v'); // GIF 仍从视频流
+      // 分离 audio-only 流先经 range 分片下载物化到本地，再对本地文件裁（不再对 URL 直接 HTTP seek）。
+      expect(
+        materializedUrl,
+        'https://rr1---sn-4g5e6nez.googlevideo.com/videoplayback?id=x',
+      );
+      expect(audioInput, localAudio);
+    },
+  );
 
   // PR#1172 反向守卫：非 googlevideo 的分离音轨（bilibili DASH audio-only m4s 等）
   // **不得**走 range 分片物化——`range=` 是它们不认识的查询参数，被忽略后每一片
   // 都返回整个文件，会把同一个流反复下满 maxBytes（比直接 seek 慢几十倍）。
   // 它们直接对 URL `-ss` 裁即可。这一条钉住判据是「谁在限速」而非「有没有分离音轨」。
-  test('non-googlevideo split audio is cut from the URL, not materialized',
-      () async {
-    final repo = _FakeRepo();
-    String? audioInput;
-    String? materializedUrl;
-    const String biliAudio =
-        'https://upos-hz-mirrorakam.akamaized.net/upgcxcode/x-1-30280.m4s';
-    Future<String?> capAudio(
-        {required String inputPath,
+  test(
+    'non-googlevideo split audio is cut from the URL, not materialized',
+    () async {
+      final repo = _FakeRepo();
+      String? audioInput;
+      String? materializedUrl;
+      const String biliAudio =
+          'https://upos-hz-mirrorakam.akamaized.net/upgcxcode/x-1-30280.m4s';
+      Future<String?> capAudio({
+        required String inputPath,
         required int startMs,
         required int endMs,
         required String outputPath,
@@ -455,81 +500,92 @@ void main() {
         FfmpegFailureReporter? onFailure,
         int audioChannels = 1,
         String audioBitrate = '64k',
-        String? tlsPinSha256}) async {
-      audioInput = inputPath;
-      return outputPath;
-    }
+        String? tlsPinSha256,
+      }) async {
+        audioInput = inputPath;
+        return outputPath;
+      }
 
-    Future<String?> capMaterialize(
-        {required String audioUrl,
+      Future<String?> capMaterialize({
+        required String audioUrl,
         required String outputPath,
-        FfmpegFailureReporter? onFailure}) async {
-      materializedUrl = audioUrl;
-      return '${tmp.path}/should_not_be_used';
-    }
+        FfmpegFailureReporter? onFailure,
+      }) async {
+        materializedUrl = audioUrl;
+        return '${tmp.path}/should_not_be_used';
+      }
 
-    await build(
-            gif: okGif,
-            audio: capAudio,
-            frame: okFrame,
-            materializer: capMaterialize)
-        .mine(
-            const ImmersionMiningRequest(
-                source: AnkiMiningSource.video,
-                fields: {'expression': 'x'},
-                mediaSource: 'https://video-only.example/v',
-                audioSource: biliAudio,
-                clipStartMs: 0,
-                clipEndMs: 2000,
-                sentence: 's'),
-            compression: MiningMediaCompression.compressed,
-            tempDir: tmp.path,
-            repo: repo);
-    expect(materializedUrl, isNull);
-    expect(audioInput, biliAudio);
-  });
+      await build(
+        gif: okGif,
+        audio: capAudio,
+        frame: okFrame,
+        materializer: capMaterialize,
+      ).mine(
+        const ImmersionMiningRequest(
+          source: AnkiMiningSource.video,
+          fields: {'expression': 'x'},
+          mediaSource: 'https://video-only.example/v',
+          audioSource: biliAudio,
+          clipStartMs: 0,
+          clipEndMs: 2000,
+          sentence: 's',
+        ),
+        compression: MiningMediaCompression.compressed,
+        tempDir: tmp.path,
+        repo: repo,
+      );
+      expect(materializedUrl, isNull);
+      expect(audioInput, biliAudio);
+    },
+  );
 
   test('updateNoteId routes to updateMinedNote', () async {
     final repo = _FakeRepo();
     await build(gif: okGif, audio: okAudio, frame: okFrame).mine(
-        const ImmersionMiningRequest(
-            source: AnkiMiningSource.video,
-            fields: {'expression': 'x'},
-            mediaSource: '/v.mp4',
-            clipStartMs: 0,
-            clipEndMs: 2000,
-            sentence: 's',
-            updateNoteId: 7),
-        compression: MiningMediaCompression.compressed,
-        tempDir: tmp.path,
-        repo: repo);
+      const ImmersionMiningRequest(
+        source: AnkiMiningSource.video,
+        fields: {'expression': 'x'},
+        mediaSource: '/v.mp4',
+        clipStartMs: 0,
+        clipEndMs: 2000,
+        sentence: 's',
+        updateNoteId: 7,
+      ),
+      compression: MiningMediaCompression.compressed,
+      tempDir: tmp.path,
+      repo: repo,
+    );
     expect(repo.updatedNoteId, 7);
   });
 
   // TODO-1303：Netflix provided-bytes 路径（无 range）本应带音频却丢音轨 → 中止而非静默出
   // 无声卡。此前 requireAudio 被 `&& hasRange` 门控架空（Netflix clip 恒 hasRange=false），
   // 音频丢时永不中止 → 「制卡失败报成功」的无声/空壳卡。带回 abortReason 供远端写日志 + 回传。
-  test('audio expected via provided cover but audio missing -> abort',
-      () async {
-    final repo = _FakeRepo();
-    final res = await build(gif: nullGif, audio: nullAudio, frame: nullFrame)
-        .mine(
+  test(
+    'audio expected via provided cover but audio missing -> abort',
+    () async {
+      final repo = _FakeRepo();
+      final res = await build(gif: nullGif, audio: nullAudio, frame: nullFrame)
+          .mine(
             ImmersionMiningRequest(
-                source: AnkiMiningSource.video,
-                fields: const {'expression': 'x'},
-                clipStartMs: 0,
-                clipEndMs: 0,
-                sentence: 's',
-                providedCoverBytes: Uint8List.fromList(<int>[1, 2, 3]),
-                providedCoverName: 'netflix_clip.gif',
-                requireAudio: true),
+              source: AnkiMiningSource.video,
+              fields: const {'expression': 'x'},
+              clipStartMs: 0,
+              clipEndMs: 0,
+              sentence: 's',
+              providedCoverBytes: Uint8List.fromList(<int>[1, 2, 3]),
+              providedCoverName: 'netflix_clip.gif',
+              requireAudio: true,
+            ),
             compression: MiningMediaCompression.compressed,
             tempDir: tmp.path,
-            repo: repo);
-    expect(res.aborted, true);
-    expect(res.abortReason, contains('audio'));
-    expect(repo.minedContext, isNull);
-  });
+            repo: repo,
+          );
+      expect(res.aborted, true);
+      expect(res.abortReason, contains('audio'));
+      expect(repo.minedContext, isNull);
+    },
+  );
 
   // ── BUG-2127：Netflix 现在带真实卡面时间窗，抽取路径必须一个字节都不变 ──────
   //
@@ -540,19 +596,21 @@ void main() {
     final repo = _FakeRepo();
     final res = await build(gif: nullGif, audio: nullAudio, frame: nullFrame)
         .mine(
-            ImmersionMiningRequest(
-                source: AnkiMiningSource.video,
-                fields: const {'expression': 'x'},
-                // 非零窗：修复前这里只可能是 0/0。
-                clipStartMs: 1000,
-                clipEndMs: 3000,
-                sentence: 's',
-                providedCoverBytes: Uint8List.fromList(<int>[1, 2, 3]),
-                providedCoverName: 'netflix_clip.gif',
-                requireAudio: true),
-            compression: MiningMediaCompression.compressed,
-            tempDir: tmp.path,
-            repo: repo);
+          ImmersionMiningRequest(
+            source: AnkiMiningSource.video,
+            fields: const {'expression': 'x'},
+            // 非零窗：修复前这里只可能是 0/0。
+            clipStartMs: 1000,
+            clipEndMs: 3000,
+            sentence: 's',
+            providedCoverBytes: Uint8List.fromList(<int>[1, 2, 3]),
+            providedCoverName: 'netflix_clip.gif',
+            requireAudio: true,
+          ),
+          compression: MiningMediaCompression.compressed,
+          tempDir: tmp.path,
+          repo: repo,
+        );
     // 中止判据走的仍是 provided-bytes 那条腿（`providedCoverBytes != null && !hasRange`），
     // 没有因为窗变非零而改走 range 腿。
     expect(res.aborted, true);
@@ -566,16 +624,18 @@ void main() {
     final repo = _FakeRepo();
     final res = await build(gif: nullGif, audio: nullAudio, frame: nullFrame)
         .mine(
-            const ImmersionMiningRequest(
-                source: AnkiMiningSource.video,
-                fields: {'expression': 'x'},
-                clipStartMs: 0,
-                clipEndMs: 0,
-                sentence: 's',
-                requireAudio: false),
-            compression: MiningMediaCompression.compressed,
-            tempDir: tmp.path,
-            repo: repo);
+          const ImmersionMiningRequest(
+            source: AnkiMiningSource.video,
+            fields: {'expression': 'x'},
+            clipStartMs: 0,
+            clipEndMs: 0,
+            sentence: 's',
+            requireAudio: false,
+          ),
+          compression: MiningMediaCompression.compressed,
+          tempDir: tmp.path,
+          repo: repo,
+        );
     expect(res.aborted, true);
     expect(res.abortReason, contains('no cover'));
     expect(repo.minedContext, isNull);
@@ -590,8 +650,91 @@ void main() {
   // 沙盒容器里的 error_log.txt 才知道是缺 ffmpeg。这三条锁住「根因一路走到 abortReason」。
 
   /// 抽取失败并**如实上报根因**（模拟 ffmpeg 可执行不存在），再返回 null。
-  Future<String?> reportingNullAudio(
-      {required String inputPath,
+  Future<String?> reportingNullAudio({
+    required String inputPath,
+    required int startMs,
+    required int endMs,
+    required String outputPath,
+    int? audioStreamIndex,
+    int? audioStreamCount,
+    FfmpegFailureReporter? onFailure,
+    int audioChannels = 1,
+    String audioBitrate = '64k',
+    String? tlsPinSha256,
+  }) async {
+    onFailure?.call(
+      'ffmpeg launch failed: executable=ffmpeg; '
+      'errorCode=2; message=No such file or directory',
+    );
+    return null;
+  }
+
+  test(
+    'BUG-1664 abort carries the real root cause, not just the symptom',
+    () async {
+      final repo = _FakeRepo();
+      final res =
+          await build(
+            gif: okGif,
+            audio: reportingNullAudio,
+            frame: nullFrame,
+          ).mine(
+            const ImmersionMiningRequest(
+              source: AnkiMiningSource.video,
+              fields: {'expression': 'x'},
+              mediaSource: '/tmp/in.mp4',
+              clipStartMs: 0,
+              clipEndMs: 1000,
+              sentence: 's',
+              requireAudio: true,
+            ),
+            compression: MiningMediaCompression.compressed,
+            tempDir: tmp.path,
+            repo: repo,
+          );
+      expect(res.aborted, true);
+      // 症状前缀保持不变（既有调用方/测试按它断言）……
+      expect(res.abortReason, startsWith('required audio missing'));
+      // ……根因必须跟在后面，且点名 ffmpeg 与「找不到」。
+      expect(res.abortReason, contains('ffmpeg launch failed'));
+      expect(res.abortReason, contains('No such file or directory'));
+      expect(repo.minedContext, isNull);
+    },
+  );
+
+  // 没有任何抽取上报根因时（provided-bytes 路径真没跑过抽取）逐字保持旧文案，
+  // 不给用户凭空拼一个空括号。
+  test(
+    'BUG-1664 abort reason unchanged when no root cause was reported',
+    () async {
+      final repo = _FakeRepo();
+      final res = await build(gif: nullGif, audio: nullAudio, frame: nullFrame)
+          .mine(
+            ImmersionMiningRequest(
+              source: AnkiMiningSource.video,
+              fields: const {'expression': 'x'},
+              clipStartMs: 0,
+              clipEndMs: 0,
+              sentence: 's',
+              providedCoverBytes: Uint8List.fromList(<int>[1, 2, 3]),
+              providedCoverName: 'netflix_clip.gif',
+              requireAudio: true,
+            ),
+            compression: MiningMediaCompression.compressed,
+            tempDir: tmp.path,
+            repo: repo,
+          );
+      expect(res.aborted, true);
+      expect(res.abortReason, 'required audio missing');
+    },
+  );
+
+  // 超长根因（ffmpeg 的 stderr 可以很长）要截断——这串会一路走到扩展 toast。
+  test('BUG-1664 long root cause is clipped', () async {
+    final repo = _FakeRepo();
+    final String longCause = 'x' * 900;
+    Future<String?> longReportingAudio({
+      required String inputPath,
       required int startMs,
       required int endMs,
       required String outputPath,
@@ -600,94 +743,31 @@ void main() {
       FfmpegFailureReporter? onFailure,
       int audioChannels = 1,
       String audioBitrate = '64k',
-      String? tlsPinSha256}) async {
-    onFailure?.call('ffmpeg launch failed: executable=ffmpeg; '
-        'errorCode=2; message=No such file or directory');
-    return null;
-  }
-
-  test('BUG-1664 abort carries the real root cause, not just the symptom',
-      () async {
-    final repo = _FakeRepo();
-    final res =
-        await build(gif: okGif, audio: reportingNullAudio, frame: nullFrame)
-            .mine(
-                const ImmersionMiningRequest(
-                    source: AnkiMiningSource.video,
-                    fields: {'expression': 'x'},
-                    mediaSource: '/tmp/in.mp4',
-                    clipStartMs: 0,
-                    clipEndMs: 1000,
-                    sentence: 's',
-                    requireAudio: true),
-                compression: MiningMediaCompression.compressed,
-                tempDir: tmp.path,
-                repo: repo);
-    expect(res.aborted, true);
-    // 症状前缀保持不变（既有调用方/测试按它断言）……
-    expect(res.abortReason, startsWith('required audio missing'));
-    // ……根因必须跟在后面，且点名 ffmpeg 与「找不到」。
-    expect(res.abortReason, contains('ffmpeg launch failed'));
-    expect(res.abortReason, contains('No such file or directory'));
-    expect(repo.minedContext, isNull);
-  });
-
-  // 没有任何抽取上报根因时（provided-bytes 路径真没跑过抽取）逐字保持旧文案，
-  // 不给用户凭空拼一个空括号。
-  test('BUG-1664 abort reason unchanged when no root cause was reported',
-      () async {
-    final repo = _FakeRepo();
-    final res = await build(gif: nullGif, audio: nullAudio, frame: nullFrame)
-        .mine(
-            ImmersionMiningRequest(
-                source: AnkiMiningSource.video,
-                fields: const {'expression': 'x'},
-                clipStartMs: 0,
-                clipEndMs: 0,
-                sentence: 's',
-                providedCoverBytes: Uint8List.fromList(<int>[1, 2, 3]),
-                providedCoverName: 'netflix_clip.gif',
-                requireAudio: true),
-            compression: MiningMediaCompression.compressed,
-            tempDir: tmp.path,
-            repo: repo);
-    expect(res.aborted, true);
-    expect(res.abortReason, 'required audio missing');
-  });
-
-  // 超长根因（ffmpeg 的 stderr 可以很长）要截断——这串会一路走到扩展 toast。
-  test('BUG-1664 long root cause is clipped', () async {
-    final repo = _FakeRepo();
-    final String longCause = 'x' * 900;
-    Future<String?> longReportingAudio(
-        {required String inputPath,
-        required int startMs,
-        required int endMs,
-        required String outputPath,
-        int? audioStreamIndex,
-        int? audioStreamCount,
-        FfmpegFailureReporter? onFailure,
-        int audioChannels = 1,
-        String audioBitrate = '64k',
-        String? tlsPinSha256}) async {
+      String? tlsPinSha256,
+    }) async {
       onFailure?.call(longCause);
       return null;
     }
 
     final res =
-        await build(gif: okGif, audio: longReportingAudio, frame: nullFrame)
-            .mine(
-                const ImmersionMiningRequest(
-                    source: AnkiMiningSource.video,
-                    fields: {'expression': 'x'},
-                    mediaSource: '/tmp/in.mp4',
-                    clipStartMs: 0,
-                    clipEndMs: 1000,
-                    sentence: 's',
-                    requireAudio: true),
-                compression: MiningMediaCompression.compressed,
-                tempDir: tmp.path,
-                repo: repo);
+        await build(
+          gif: okGif,
+          audio: longReportingAudio,
+          frame: nullFrame,
+        ).mine(
+          const ImmersionMiningRequest(
+            source: AnkiMiningSource.video,
+            fields: {'expression': 'x'},
+            mediaSource: '/tmp/in.mp4',
+            clipStartMs: 0,
+            clipEndMs: 1000,
+            sentence: 's',
+            requireAudio: true,
+          ),
+          compression: MiningMediaCompression.compressed,
+          tempDir: tmp.path,
+          repo: repo,
+        );
     expect(res.aborted, true);
     expect(res.abortReason!.length, lessThan(longCause.length));
     expect(res.abortReason, contains('…'));
@@ -699,12 +779,13 @@ void main() {
   // 走对的来源、且不调 GIF。
 
   // 制卡时截图：当前解码帧（stillFallback → immersion_shot.jpg）优先，不抽 GIF、非降级。
-  test('imageMode=currentFrame uses screenshot, no gif, not degraded',
-      () async {
-    final repo = _FakeRepo();
-    bool gifCalled = false;
-    Future<String?> flagGif(
-        {required String inputPath,
+  test(
+    'imageMode=currentFrame uses screenshot, no gif, not degraded',
+    () async {
+      final repo = _FakeRepo();
+      bool gifCalled = false;
+      Future<String?> flagGif({
+        required String inputPath,
         required int startMs,
         required int endMs,
         required String outputPath,
@@ -713,37 +794,43 @@ void main() {
         MiningAnimatedFormat format = MiningAnimatedFormat.gif,
         bool diagnosticOnly = false,
         FfmpegFailureReporter? onFailure,
-        String? tlsPinSha256}) async {
-      gifCalled = true;
-      return outputPath;
-    }
+        String? tlsPinSha256,
+      }) async {
+        gifCalled = true;
+        return outputPath;
+      }
 
-    final res = await build(gif: flagGif, audio: okAudio, frame: okFrame).mine(
-        ImmersionMiningRequest(
-            source: AnkiMiningSource.video,
-            fields: const {'expression': 'x'},
-            mediaSource: '/v.mp4',
-            clipStartMs: 1000,
-            clipEndMs: 3000,
-            sentence: 's',
-            imageMode: VideoMiningImageMode.currentFrame,
-            stillFallback: () async => Uint8List.fromList(<int>[9, 9, 9])),
-        compression: MiningMediaCompression.compressed,
-        tempDir: tmp.path,
-        repo: repo);
-    expect(res.aborted, false);
-    expect(gifCalled, false, reason: '静态模式不该抽 GIF');
-    expect(res.degradedToStill, false, reason: '用户主动选静态图，非降级');
-    expect(repo.minedContext!.coverPath, endsWith('immersion_shot.jpg'));
-  });
+      final res = await build(gif: flagGif, audio: okAudio, frame: okFrame)
+          .mine(
+            ImmersionMiningRequest(
+              source: AnkiMiningSource.video,
+              fields: const {'expression': 'x'},
+              mediaSource: '/v.mp4',
+              clipStartMs: 1000,
+              clipEndMs: 3000,
+              sentence: 's',
+              imageMode: VideoMiningImageMode.currentFrame,
+              stillFallback: () async => Uint8List.fromList(<int>[9, 9, 9]),
+            ),
+            compression: MiningMediaCompression.compressed,
+            tempDir: tmp.path,
+            repo: repo,
+          );
+      expect(res.aborted, false);
+      expect(gifCalled, false, reason: '静态模式不该抽 GIF');
+      expect(res.degradedToStill, false, reason: '用户主动选静态图，非降级');
+      expect(repo.minedContext!.coverPath, endsWith('immersion_shot.jpg'));
+    },
+  );
 
   // 字幕开头截图：字幕起点单帧（immersion_frame.jpg）优先，不抽 GIF、非降级。
-  test('imageMode=subtitleStart uses start frame, no gif, not degraded',
-      () async {
-    final repo = _FakeRepo();
-    bool gifCalled = false;
-    Future<String?> flagGif(
-        {required String inputPath,
+  test(
+    'imageMode=subtitleStart uses start frame, no gif, not degraded',
+    () async {
+      final repo = _FakeRepo();
+      bool gifCalled = false;
+      Future<String?> flagGif({
+        required String inputPath,
         required int startMs,
         required int endMs,
         required String outputPath,
@@ -752,71 +839,86 @@ void main() {
         MiningAnimatedFormat format = MiningAnimatedFormat.gif,
         bool diagnosticOnly = false,
         FfmpegFailureReporter? onFailure,
-        String? tlsPinSha256}) async {
-      gifCalled = true;
-      return outputPath;
-    }
+        String? tlsPinSha256,
+      }) async {
+        gifCalled = true;
+        return outputPath;
+      }
 
-    final res = await build(gif: flagGif, audio: okAudio, frame: okFrame).mine(
-        const ImmersionMiningRequest(
-            source: AnkiMiningSource.video,
-            fields: {'expression': 'x'},
-            mediaSource: '/v.mp4',
-            clipStartMs: 1000,
-            clipEndMs: 3000,
-            sentence: 's',
-            imageMode: VideoMiningImageMode.subtitleStart),
-        compression: MiningMediaCompression.compressed,
-        tempDir: tmp.path,
-        repo: repo);
-    expect(res.aborted, false);
-    expect(gifCalled, false, reason: '静态模式不该抽 GIF');
-    expect(res.degradedToStill, false, reason: '用户主动选静态图，非降级');
-    expect(repo.minedContext!.coverPath, endsWith('immersion_frame.jpg'));
-  });
+      final res = await build(gif: flagGif, audio: okAudio, frame: okFrame)
+          .mine(
+            const ImmersionMiningRequest(
+              source: AnkiMiningSource.video,
+              fields: {'expression': 'x'},
+              mediaSource: '/v.mp4',
+              clipStartMs: 1000,
+              clipEndMs: 3000,
+              sentence: 's',
+              imageMode: VideoMiningImageMode.subtitleStart,
+            ),
+            compression: MiningMediaCompression.compressed,
+            tempDir: tmp.path,
+            repo: repo,
+          );
+      expect(res.aborted, false);
+      expect(gifCalled, false, reason: '静态模式不该抽 GIF');
+      expect(res.degradedToStill, false, reason: '用户主动选静态图，非降级');
+      expect(repo.minedContext!.coverPath, endsWith('immersion_frame.jpg'));
+    },
+  );
 
   // currentFrame 无 stillFallback（如无当前帧）→ 退字幕起点单帧，仍非降级。
-  test('imageMode=currentFrame without screenshot falls back to start frame',
-      () async {
-    final repo = _FakeRepo();
-    final res = await build(gif: nullGif, audio: okAudio, frame: okFrame).mine(
-        const ImmersionMiningRequest(
-            source: AnkiMiningSource.video,
-            fields: {'expression': 'x'},
-            mediaSource: '/v.mp4',
-            clipStartMs: 1000,
-            clipEndMs: 3000,
-            sentence: 's',
-            imageMode: VideoMiningImageMode.currentFrame),
-        compression: MiningMediaCompression.compressed,
-        tempDir: tmp.path,
-        repo: repo);
-    expect(res.aborted, false);
-    expect(res.degradedToStill, false);
-    expect(repo.minedContext!.coverPath, endsWith('immersion_frame.jpg'));
-  });
+  test(
+    'imageMode=currentFrame without screenshot falls back to start frame',
+    () async {
+      final repo = _FakeRepo();
+      final res = await build(gif: nullGif, audio: okAudio, frame: okFrame)
+          .mine(
+            const ImmersionMiningRequest(
+              source: AnkiMiningSource.video,
+              fields: {'expression': 'x'},
+              mediaSource: '/v.mp4',
+              clipStartMs: 1000,
+              clipEndMs: 3000,
+              sentence: 's',
+              imageMode: VideoMiningImageMode.currentFrame,
+            ),
+            compression: MiningMediaCompression.compressed,
+            tempDir: tmp.path,
+            repo: repo,
+          );
+      expect(res.aborted, false);
+      expect(res.degradedToStill, false);
+      expect(repo.minedContext!.coverPath, endsWith('immersion_frame.jpg'));
+    },
+  );
 
   // subtitleStart 起点帧失败 → 退当前解码帧（immersion_shot.jpg），仍非降级。
-  test('imageMode=subtitleStart with frame failure falls back to screenshot',
-      () async {
-    final repo = _FakeRepo();
-    final res = await build(gif: okGif, audio: okAudio, frame: nullFrame).mine(
-        ImmersionMiningRequest(
-            source: AnkiMiningSource.video,
-            fields: const {'expression': 'x'},
-            mediaSource: '/v.mp4',
-            clipStartMs: 1000,
-            clipEndMs: 3000,
-            sentence: 's',
-            imageMode: VideoMiningImageMode.subtitleStart,
-            stillFallback: () async => Uint8List.fromList(<int>[7, 7, 7])),
-        compression: MiningMediaCompression.compressed,
-        tempDir: tmp.path,
-        repo: repo);
-    expect(res.aborted, false);
-    expect(res.degradedToStill, false);
-    expect(repo.minedContext!.coverPath, endsWith('immersion_shot.jpg'));
-  });
+  test(
+    'imageMode=subtitleStart with frame failure falls back to screenshot',
+    () async {
+      final repo = _FakeRepo();
+      final res = await build(gif: okGif, audio: okAudio, frame: nullFrame)
+          .mine(
+            ImmersionMiningRequest(
+              source: AnkiMiningSource.video,
+              fields: const {'expression': 'x'},
+              mediaSource: '/v.mp4',
+              clipStartMs: 1000,
+              clipEndMs: 3000,
+              sentence: 's',
+              imageMode: VideoMiningImageMode.subtitleStart,
+              stillFallback: () async => Uint8List.fromList(<int>[7, 7, 7]),
+            ),
+            compression: MiningMediaCompression.compressed,
+            tempDir: tmp.path,
+            repo: repo,
+          );
+      expect(res.aborted, false);
+      expect(res.degradedToStill, false);
+      expect(repo.minedContext!.coverPath, endsWith('immersion_shot.jpg'));
+    },
+  );
 
   // wireName 往返 + 未知值回退 gif（持久化契约，向后兼容）。
   test('VideoMiningImageMode.fromWireName round-trips and defaults to gif', () {
@@ -824,8 +926,10 @@ void main() {
       expect(VideoMiningImageMode.fromWireName(mode.wireName), mode);
     }
     expect(VideoMiningImageMode.fromWireName(null), VideoMiningImageMode.gif);
-    expect(VideoMiningImageMode.fromWireName('nonsense'),
-        VideoMiningImageMode.gif);
+    expect(
+      VideoMiningImageMode.fromWireName('nonsense'),
+      VideoMiningImageMode.gif,
+    );
     expect(VideoMiningImageMode.gif.isStill, false);
     expect(VideoMiningImageMode.currentFrame.isStill, true);
     expect(VideoMiningImageMode.subtitleStart.isStill, true);

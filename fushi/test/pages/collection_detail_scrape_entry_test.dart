@@ -56,27 +56,27 @@ void main() {
   }
 
   Widget buildApp() => TranslationProvider(
-        child: MaterialApp(
-          home: MediaCollectionDetailPage(
-            database: db,
-            collection: MediaCollectionRow(
-              id: collectionId,
-              name: 'Show',
-              collectionType: 'playlist',
-              coverSource: null,
-              sortOrder: 0,
-              createdAt: 0,
-              orderUpdatedAt: 0,
-            ),
-            loadEpisodes: () async => <CollectionEpisodeSlot>[
-              for (final VideoBookRow row in await loadMembers())
-                CollectionEpisodeSlot.local(row),
-            ],
-            onOpenEpisode: (VideoBookRow _) {},
-            onChanged: () {},
-          ),
+    child: MaterialApp(
+      home: MediaCollectionDetailPage(
+        database: db,
+        collection: MediaCollectionRow(
+          id: collectionId,
+          name: 'Show',
+          collectionType: 'playlist',
+          coverSource: null,
+          sortOrder: 0,
+          createdAt: 0,
+          orderUpdatedAt: 0,
         ),
-      );
+        loadEpisodes: () async => <CollectionEpisodeSlot>[
+          for (final VideoBookRow row in await loadMembers())
+            CollectionEpisodeSlot.local(row),
+        ],
+        onOpenEpisode: (VideoBookRow _) {},
+        onChanged: () {},
+      ),
+    ),
+  );
 
   void useSurface(WidgetTester tester) {
     tester.view.physicalSize = const Size(1280, 1600);

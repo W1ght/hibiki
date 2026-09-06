@@ -75,22 +75,24 @@ CREATE TABLE video_books (
   test('v54：条目资料可写可读，可空列与 JSON 列往返', () async {
     final FushiDatabase db = await openV53Db();
 
-    await db.upsertVideoScrapeMeta(VideoScrapeMetaCompanion.insert(
-      bookUid: 'legacy_video',
-      source: 'bangumi',
-      subjectId: '253',
-      title: '星际牛仔',
-      originalTitle: const Value<String?>('カウボーイビバップ'),
-      summary: const Value<String?>('2071 年，人类离开了荒废的地球。'),
-      airDate: const Value<String?>('1998-04-03'),
-      rating: const Value<double?>(8.4),
-      ratingCount: const Value<int?>(1234),
-      episodeCount: const Value<int?>(26),
-      tagsJson: const Value<String?>('[{"name":"科幻","count":900}]'),
-      infoboxJson: const Value<String?>('[{"key":"导演","value":"渡辺信一郎"}]'),
-      detailUrl: const Value<String?>('https://bgm.tv/subject/253'),
-      scrapedAt: DateTime.fromMillisecondsSinceEpoch(1700000000000),
-    ));
+    await db.upsertVideoScrapeMeta(
+      VideoScrapeMetaCompanion.insert(
+        bookUid: 'legacy_video',
+        source: 'bangumi',
+        subjectId: '253',
+        title: '星际牛仔',
+        originalTitle: const Value<String?>('カウボーイビバップ'),
+        summary: const Value<String?>('2071 年，人类离开了荒废的地球。'),
+        airDate: const Value<String?>('1998-04-03'),
+        rating: const Value<double?>(8.4),
+        ratingCount: const Value<int?>(1234),
+        episodeCount: const Value<int?>(26),
+        tagsJson: const Value<String?>('[{"name":"科幻","count":900}]'),
+        infoboxJson: const Value<String?>('[{"key":"导演","value":"渡辺信一郎"}]'),
+        detailUrl: const Value<String?>('https://bgm.tv/subject/253'),
+        scrapedAt: DateTime.fromMillisecondsSinceEpoch(1700000000000),
+      ),
+    );
 
     final VideoScrapeMetaRow? row = await db.getVideoScrapeMeta('legacy_video');
     expect(row, isNotNull);
@@ -107,13 +109,15 @@ CREATE TABLE video_books (
     expect(await db.scrapedVideoBookUids(), <String>{'legacy_video'});
 
     // 主键是 bookUid：重刮同一本 = 覆盖而非新增一行。
-    await db.upsertVideoScrapeMeta(VideoScrapeMetaCompanion.insert(
-      bookUid: 'legacy_video',
-      source: 'bangumi',
-      subjectId: '999',
-      title: '改过的条目',
-      scrapedAt: DateTime.fromMillisecondsSinceEpoch(1700000001000),
-    ));
+    await db.upsertVideoScrapeMeta(
+      VideoScrapeMetaCompanion.insert(
+        bookUid: 'legacy_video',
+        source: 'bangumi',
+        subjectId: '999',
+        title: '改过的条目',
+        scrapedAt: DateTime.fromMillisecondsSinceEpoch(1700000001000),
+      ),
+    );
     expect((await db.getVideoScrapeMeta('legacy_video'))!.subjectId, '999');
     expect(await db.scrapedVideoBookUids(), hasLength(1));
 
@@ -124,23 +128,29 @@ CREATE TABLE video_books (
   test('v54：删视频经 FK cascade 连带清资料行（fresh DB，FK 打开）', () async {
     // 用完整 schema 的 fresh 库 + 真实的 foreign_keys=ON（forTesting 吃裸
     // NativeDatabase，不走 _openDb 的 PRAGMA，默认 FK 是关的）。
-    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory(
-      setup: (rawDb) => rawDb.execute('PRAGMA foreign_keys = ON'),
-    ));
+    final FushiDatabase db = FushiDatabase.forTesting(
+      NativeDatabase.memory(
+        setup: (rawDb) => rawDb.execute('PRAGMA foreign_keys = ON'),
+      ),
+    );
     addTearDown(db.close);
 
-    await db.upsertVideoBook(VideoBooksCompanion(
-      bookUid: const Value<String>('v1'),
-      title: const Value<String>('片'),
-      videoPath: const Value<String>('D:/anime/v1.mkv'),
-    ));
-    await db.upsertVideoScrapeMeta(VideoScrapeMetaCompanion.insert(
-      bookUid: 'v1',
-      source: 'bangumi',
-      subjectId: '1',
-      title: 't',
-      scrapedAt: DateTime.fromMillisecondsSinceEpoch(1700000000000),
-    ));
+    await db.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: const Value<String>('v1'),
+        title: const Value<String>('片'),
+        videoPath: const Value<String>('D:/anime/v1.mkv'),
+      ),
+    );
+    await db.upsertVideoScrapeMeta(
+      VideoScrapeMetaCompanion.insert(
+        bookUid: 'v1',
+        source: 'bangumi',
+        subjectId: '1',
+        title: 't',
+        scrapedAt: DateTime.fromMillisecondsSinceEpoch(1700000000000),
+      ),
+    );
     expect(await db.getVideoScrapeMeta('v1'), isNotNull);
 
     await db.deleteVideoBook('v1');
@@ -151,8 +161,9 @@ CREATE TABLE video_books (
   test('v54：user_version 升到当前 schemaVersion', () async {
     final FushiDatabase db = await openV53Db();
     await db.getVideoBookByBookUid('legacy_video'); // 触发 open/migrate。
-    final QueryRow version =
-        await db.customSelect('PRAGMA user_version').getSingle();
+    final QueryRow version = await db
+        .customSelect('PRAGMA user_version')
+        .getSingle();
     expect(version.read<int>('user_version'), db.schemaVersion);
     expect(db.schemaVersion, 96);
   });

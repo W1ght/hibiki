@@ -33,13 +33,13 @@ void main() {
   });
 
   Future<(AppModel, FushiDatabase)> buildModel() async {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final PreferencesRepository prefsRepo = PreferencesRepository(db);
     await prefsRepo.loadFromDb();
-    final Directory tmpDir =
-        Directory.systemTemp.createTempSync('hibiki_games_user_tags_');
+    final Directory tmpDir = Directory.systemTemp.createTempSync(
+      'hibiki_games_user_tags_',
+    );
     addTearDown(() {
       try {
         tmpDir.deleteSync(recursive: true);
@@ -47,7 +47,9 @@ void main() {
     });
     final AppModel appModel = AppModel(testPlatformServices())
       ..wireLocalAudioForTesting(
-          prefsRepo: prefsRepo, databaseDirectory: tmpDir)
+        prefsRepo: prefsRepo,
+        databaseDirectory: tmpDir,
+      )
       ..wireDatabaseForTesting(db);
 
     await appModel.setGalgames(<GalgameEntry>[
@@ -70,9 +72,9 @@ void main() {
   }
 
   Finder cardTitle(String title) => find.descendant(
-        of: find.byType(CustomScrollView),
-        matching: find.text(title),
-      );
+    of: find.byType(CustomScrollView),
+    matching: find.text(title),
+  );
 
   Future<void> pumpPage(WidgetTester tester, AppModel appModel) async {
     navKey = GlobalKey<NavigatorState>();
@@ -96,8 +98,11 @@ void main() {
     await db.createTag('神作', 0xFFEF5350);
     await pumpPage(tester, appModel);
 
-    expect(find.byType(FushiTagFilterBar), findsOneWidget,
-        reason: '必须复用书架/视频页同一组件，而不是游戏页自己手搓一条');
+    expect(
+      find.byType(FushiTagFilterBar),
+      findsOneWidget,
+      reason: '必须复用书架/视频页同一组件，而不是游戏页自己手搓一条',
+    );
     expect(
       find.descendant(
         of: find.byType(FushiTagFilterBar),
@@ -116,19 +121,23 @@ void main() {
     expect(cardTitle('alpha'), findsOneWidget);
     expect(cardTitle('beta'), findsOneWidget);
 
-    await tester.tap(find.descendant(
-      of: find.byType(FushiTagFilterBar),
-      matching: find.text('神作'),
-    ));
+    await tester.tap(
+      find.descendant(
+        of: find.byType(FushiTagFilterBar),
+        matching: find.text('神作'),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(cardTitle('alpha'), findsOneWidget, reason: 'g1 挂了该标签');
     expect(cardTitle('beta'), findsNothing, reason: 'g2 没挂，必须被筛掉');
 
-    await tester.tap(find.descendant(
-      of: find.byType(FushiTagFilterBar),
-      matching: find.text('神作'),
-    ));
+    await tester.tap(
+      find.descendant(
+        of: find.byType(FushiTagFilterBar),
+        matching: find.text('神作'),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(cardTitle('alpha'), findsOneWidget);
@@ -140,10 +149,12 @@ void main() {
     await db.createTag('神作', 0xFFEF5350);
     await pumpPage(tester, appModel);
 
-    await tester.tap(find.descendant(
-      of: find.byType(FushiTagFilterBar),
-      matching: find.text('神作'),
-    ));
+    await tester.tap(
+      find.descendant(
+        of: find.byType(FushiTagFilterBar),
+        matching: find.text('神作'),
+      ),
+    );
     await tester.pumpAndSettle();
 
     // i18n key 是 game_*（命名术语表禁用 games_ 前缀），生产代码用的也是
@@ -152,8 +163,9 @@ void main() {
     expect(find.text(t.game_empty), findsNothing);
   });
 
-  testWidgets('卡片菜单有「标签」项，点开进共享 TagPickerPage 并真写穿 DB',
-      (WidgetTester tester) async {
+  testWidgets('卡片菜单有「标签」项，点开进共享 TagPickerPage 并真写穿 DB', (
+    WidgetTester tester,
+  ) async {
     final (AppModel appModel, FushiDatabase db) = await buildModel();
     final int tagId = await db.createTag('神作', 0xFFEF5350);
     await pumpPage(tester, appModel);
@@ -164,8 +176,11 @@ void main() {
 
     await tester.tap(find.text(t.tag_label));
     await tester.pumpAndSettle();
-    expect(find.byType(TagPickerPage), findsOneWidget,
-        reason: '复用书/视频/合集那张选择器，不另做一套游戏专用的');
+    expect(
+      find.byType(TagPickerPage),
+      findsOneWidget,
+      reason: '复用书/视频/合集那张选择器，不另做一套游戏专用的',
+    );
 
     // 勾上标签：必须真落 galgame_tag_mappings（不是只改本地 state）。
     await tester.tap(find.text('神作'));

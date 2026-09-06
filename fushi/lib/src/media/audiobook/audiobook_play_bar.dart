@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fushi_audio/fushi_audio.dart';
-import 'package:fushi/src/focus/fushi_focus_controller.dart'
-    show FushiFocusId;
+import 'package:fushi/src/focus/fushi_focus_controller.dart' show FushiFocusId;
 import 'package:fushi/src/focus/fushi_focus_target.dart';
 import 'package:fushi/utils.dart';
 
@@ -22,6 +21,7 @@ class AudiobookPlayBar extends StatelessWidget {
     this.invertSkip = false,
     this.showCue = true,
     this.trailing,
+    this.showSeekButtons = false,
     super.key,
   });
 
@@ -66,6 +66,10 @@ class AudiobookPlayBar extends StatelessWidget {
   /// 跟随键之前的可选尾部内容（桌面端把状态行文字并进播放条右端）。
   final Widget? trailing;
 
+  /// 在「上一句 / 播放 / 下一句」两侧再给 -10s / +10s（与有声书面板同一套传输键）。
+  /// 只在 [skipActionSeconds] == 0（按句跳）时有意义；按秒跳时左右键已是快退快进。
+  final bool showSeekButtons;
+
   @override
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
@@ -83,8 +87,9 @@ class AudiobookPlayBar extends StatelessWidget {
         : null;
     // 上一句/下一句、设置齿轮按旧版是无框原生 [IconButton]（仅图标），纸张主题
     // 前景色经 [IconButton.styleFrom] 的 foregroundColor 注入。
-    final ButtonStyle? flatStyle =
-        fg != null ? IconButton.styleFrom(foregroundColor: fg) : null;
+    final ButtonStyle? flatStyle = fg != null
+        ? IconButton.styleFrom(foregroundColor: fg)
+        : null;
     final TextStyle? cueStyle = fg != null
         ? Theme.of(context).textTheme.bodySmall?.copyWith(color: fg)
         : Theme.of(context).textTheme.bodySmall;
@@ -98,16 +103,14 @@ class AudiobookPlayBar extends StatelessWidget {
     //
     // 把「后退」与「前进」两组语义抽成局部记录，再按 invertSkip 决定哪组喂左键、
     // 哪组喂右键，消除内部的 if 分支特例。
-    final ({
-      IconData icon,
-      String tooltip,
-      VoidCallback onPressed
-    }) backwardKey = (
+    final ({IconData icon, String tooltip, VoidCallback onPressed})
+    backwardKey = (
       icon: skipActionSeconds == 0
           ? Icons.skip_previous_outlined
           : Icons.fast_rewind_outlined,
-      tooltip:
-          skipActionSeconds == 0 ? t.prev_sentence : '-${skipActionSeconds}s',
+      tooltip: skipActionSeconds == 0
+          ? t.prev_sentence
+          : '-${skipActionSeconds}s',
       onPressed: () {
         if (skipActionSeconds == 0) {
           controller.skipToPrevCue();
@@ -118,28 +121,39 @@ class AudiobookPlayBar extends StatelessWidget {
     );
     final ({IconData icon, String tooltip, VoidCallback onPressed}) forwardKey =
         (
-      icon: skipActionSeconds == 0
-          ? Icons.skip_next_outlined
-          : Icons.fast_forward_outlined,
-      tooltip:
-          skipActionSeconds == 0 ? t.next_sentence : '+${skipActionSeconds}s',
-      onPressed: () {
-        if (skipActionSeconds == 0) {
-          controller.skipToNextCue();
-        } else {
-          controller.seekRelative(skipActionSeconds);
-        }
-      },
-    );
+          icon: skipActionSeconds == 0
+              ? Icons.skip_next_outlined
+              : Icons.fast_forward_outlined,
+          tooltip: skipActionSeconds == 0
+              ? t.next_sentence
+              : '+${skipActionSeconds}s',
+          onPressed: () {
+            if (skipActionSeconds == 0) {
+              controller.skipToNextCue();
+            } else {
+              controller.seekRelative(skipActionSeconds);
+            }
+          },
+        );
     // 左键（屏幕左侧，id=audiobook_prev）：invertSkip 开时变前进键。
     final ({IconData icon, String tooltip, VoidCallback onPressed}) leftKey =
         invertSkip ? forwardKey : backwardKey;
     // 右键（屏幕右侧，id=audiobook_next）：invertSkip 开时变后退键。
     final ({IconData icon, String tooltip, VoidCallback onPressed}) rightKey =
         invertSkip ? backwardKey : forwardKey;
+    final bool seekButtons = showSeekButtons && skipActionSeconds == 0;
     final Widget playbackControls = Row(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
+        if (seekButtons)
+          _FocusableBarButton(
+            id: const FushiFocusId('audiobook_back10'),
+            icon: const Icon(Icons.replay_10_outlined),
+            iconSize: 20,
+            style: flatStyle,
+            tooltip: '-10s',
+            onPressed: () => controller.seekRelative(-10),
+          ),
         _FocusableBarButton(
           id: const FushiFocusId('audiobook_prev'),
           icon: Icon(leftKey.icon),
@@ -169,6 +183,15 @@ class AudiobookPlayBar extends StatelessWidget {
           tooltip: rightKey.tooltip,
           onPressed: rightKey.onPressed,
         ),
+        if (seekButtons)
+          _FocusableBarButton(
+            id: const FushiFocusId('audiobook_fwd10'),
+            icon: const Icon(Icons.forward_10_outlined),
+            iconSize: 20,
+            style: flatStyle,
+            tooltip: '+10s',
+            onPressed: () => controller.seekRelative(10),
+          ),
       ],
     );
     final List<Widget> barItems = <Widget>[
@@ -190,10 +213,7 @@ class AudiobookPlayBar extends StatelessWidget {
         trailing!,
         SizedBox(width: tokens.spacing.gap),
       ],
-      AudiobookFollowAudioButton(
-        controller: controller,
-        foregroundColor: fg,
-      ),
+      AudiobookFollowAudioButton(controller: controller, foregroundColor: fg),
       _FocusableBarButton(
         id: const FushiFocusId('audiobook_settings'),
         key: const ValueKey<String>('fushi_reader_audiobook_settings_button'),
@@ -335,10 +355,7 @@ class _FocusableBarButton extends StatelessWidget {
             onPressed: onPressed,
           );
     if (semanticsIdentifier != null) {
-      button = Semantics(
-        identifier: semanticsIdentifier,
-        child: button,
-      );
+      button = Semantics(identifier: semanticsIdentifier, child: button);
     }
     return Actions(
       actions: <Type, Action<Intent>>{

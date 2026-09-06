@@ -39,11 +39,11 @@ class _FakeOcrService implements MangaOcrService {
 
   @override
   Future<MangaOcrModelStatus> modelStatus() async => MangaOcrModelStatus(
-        detectorReady: ready,
-        recognizerReady: ready,
-        diskBytes: ready ? 1 : 0,
-        totalBytes: 1,
-      );
+    detectorReady: ready,
+    recognizerReady: ready,
+    diskBytes: ready ? 1 : 0,
+    totalBytes: 1,
+  );
 
   @override
   Stream<MangaOcrDownloadEvent> downloadModels() =>
@@ -73,25 +73,29 @@ class _FakeOcrService implements MangaOcrService {
         final Completer<void>? g = gate;
         if (g != null) await g.future;
         if (controller.isClosed) return;
-        final Directory outDir =
-            Directory(p.join(imageDirPath, kMangaOcrOutDirName))
-              ..createSync(recursive: true);
+        final Directory outDir = Directory(
+          p.join(imageDirPath, kMangaOcrOutDirName),
+        )..createSync(recursive: true);
         final File out = File(p.join(outDir.path, kMangaOcrOutputFileName));
-        out.writeAsStringSync(jsonEncode(<String, Object?>{
-          'pages': <Object?>[
-            for (final String url in pages)
-              <String, Object?>{
-                'url': url,
-                'width': 10,
-                'height': 20,
-                'blocks': <Object?>[],
-              },
-          ],
-        }));
-        controller.add(MangaOcrVolumeEvent.finished(
-          pagesTotal: pages.length,
-          mangaJsonPath: out.path,
-        ));
+        out.writeAsStringSync(
+          jsonEncode(<String, Object?>{
+            'pages': <Object?>[
+              for (final String url in pages)
+                <String, Object?>{
+                  'url': url,
+                  'width': 10,
+                  'height': 20,
+                  'blocks': <Object?>[],
+                },
+            ],
+          }),
+        );
+        controller.add(
+          MangaOcrVolumeEvent.finished(
+            pagesTotal: pages.length,
+            mangaJsonPath: out.path,
+          ),
+        );
         await controller.close();
       }());
     };
@@ -115,8 +119,11 @@ void main() {
     if (tmpRoot.existsSync()) tmpRoot.deleteSync(recursive: true);
   });
 
-  Future<FushiSyncServer> startHost(_FakeOcrService service,
-      {bool wireManager = true, MangaOcrHostJobManager? manager}) async {
+  Future<FushiSyncServer> startHost(
+    _FakeOcrService service, {
+    bool wireManager = true,
+    MangaOcrHostJobManager? manager,
+  }) async {
     final FushiSyncServer server = FushiSyncServer(
       syncDataDir: Directory(p.join(tmpRoot.path, 'sync')).path,
       port: 0,
@@ -124,10 +131,10 @@ void main() {
       mangaOcrJobs: !wireManager
           ? null
           : manager ??
-              MangaOcrHostJobManager(
-                service: service,
-                jobRoot: Directory(p.join(tmpRoot.path, 'jobs')),
-              ),
+                MangaOcrHostJobManager(
+                  service: service,
+                  jobRoot: Directory(p.join(tmpRoot.path, 'jobs')),
+                ),
     );
     await server.start();
     addTearDown(server.stop);
@@ -139,9 +146,9 @@ void main() {
   }
 
   InterconnectMangaOcrClient buildClient() => InterconnectMangaOcrClient(
-        repo: repo,
-        pollDelay: (int attempt) => const Duration(milliseconds: 10),
-      );
+    repo: repo,
+    pollDelay: (int attempt) => const Duration(milliseconds: 10),
+  );
 
   Directory writeVolume() {
     final Directory dir = Directory(p.join(tmpRoot.path, 'vol'))
@@ -155,8 +162,7 @@ void main() {
     return dir;
   }
 
-  test(
-      'probe: capable host → target; old host (no field) → null; '
+  test('probe: capable host → target; old host (no field) → null; '
       'no token → null', () async {
     final _FakeOcrService service = _FakeOcrService(ready: false);
     await startHost(service);
@@ -179,31 +185,39 @@ void main() {
   // `false` 压成同一态——那会让这类对端上本可用的主机凭空消失。
   test('capability tri-state: true / false / absent are distinguishable', () {
     MangaOcrRemoteCapability? parse(Object? mangaOcr) =>
-        MangaOcrRemoteCapability.fromCapabilitiesJson(
-            <String, dynamic>{'mangaOcr': mangaOcr});
+        MangaOcrRemoteCapability.fromCapabilitiesJson(<String, dynamic>{
+          'mangaOcr': mangaOcr,
+        });
 
-    final MangaOcrRemoteCapability ready =
-        parse(<String, Object?>{'supported': true, 'modelsReady': true})!;
+    final MangaOcrRemoteCapability ready = parse(<String, Object?>{
+      'supported': true,
+      'modelsReady': true,
+    })!;
     expect(ready.modelsReady, isTrue);
     expect(ready.usable, isTrue);
     expect(ready.modelsMissing, isFalse);
 
-    final MangaOcrRemoteCapability missing =
-        parse(<String, Object?>{'supported': true, 'modelsReady': false})!;
+    final MangaOcrRemoteCapability missing = parse(<String, Object?>{
+      'supported': true,
+      'modelsReady': false,
+    })!;
     expect(missing.modelsReady, isFalse);
     expect(missing.usable, isFalse);
     expect(missing.modelsMissing, isTrue);
 
     // 字段缺失 = 未知 → 按可用处理（保持修复前行为，start 阶段兜底）。
-    final MangaOcrRemoteCapability unknown =
-        parse(<String, Object?>{'supported': true})!;
+    final MangaOcrRemoteCapability unknown = parse(<String, Object?>{
+      'supported': true,
+    })!;
     expect(unknown.modelsReady, isNull);
     expect(unknown.usable, isTrue);
     expect(unknown.modelsMissing, isFalse);
 
     // 不支持：无论 modelsReady 怎么报都既不可用也不该显示「模型没下载」。
-    final MangaOcrRemoteCapability unsupported =
-        parse(<String, Object?>{'supported': false, 'modelsReady': false})!;
+    final MangaOcrRemoteCapability unsupported = parse(<String, Object?>{
+      'supported': false,
+      'modelsReady': false,
+    })!;
     expect(unsupported.usable, isFalse);
     expect(unsupported.modelsMissing, isFalse);
 
@@ -211,81 +225,93 @@ void main() {
     expect(parse(null), isNull);
   });
 
-  test('probe prefers a models-ready host over an earlier not-ready one',
-      () async {
-    Future<FushiSyncServer> spawn(bool ready) async {
-      final FushiSyncServer server = FushiSyncServer(
-        syncDataDir: Directory(p.join(tmpRoot.path, 'sync_$ready')).path,
-        port: 0,
-        token: 'tok',
-        mangaOcrJobs: MangaOcrHostJobManager(
-          service: _FakeOcrService(ready: ready),
-          jobRoot: Directory(p.join(tmpRoot.path, 'jobs_$ready')),
-        ),
+  test(
+    'probe prefers a models-ready host over an earlier not-ready one',
+    () async {
+      Future<FushiSyncServer> spawn(bool ready) async {
+        final FushiSyncServer server = FushiSyncServer(
+          syncDataDir: Directory(p.join(tmpRoot.path, 'sync_$ready')).path,
+          port: 0,
+          token: 'tok',
+          mangaOcrJobs: MangaOcrHostJobManager(
+            service: _FakeOcrService(ready: ready),
+            jobRoot: Directory(p.join(tmpRoot.path, 'jobs_$ready')),
+          ),
+        );
+        await server.start();
+        addTearDown(server.stop);
+        return server;
+      }
+
+      final FushiSyncServer notReady = await spawn(false);
+      final FushiSyncServer isReady = await spawn(true);
+      // 未就绪的排在前面：修复前会被第一个命中并返回，就绪的那台永远选不上。
+      await repo.setFushiClientUrls(<FushiClientUrl>[
+        FushiClientUrl(url: 'http://127.0.0.1:${notReady.port}'),
+        FushiClientUrl(url: 'http://127.0.0.1:${isReady.port}'),
+      ]);
+      await repo.setFushiClientToken('tok');
+
+      final MangaOcrRemoteTarget? target = await buildClient().probe();
+      expect(target, isNotNull);
+      expect(target!.baseUrl, 'http://127.0.0.1:${isReady.port}');
+      expect(target.capability.usable, isTrue);
+    },
+  );
+
+  test(
+    'probe returns null against a host without manga OCR wiring (skew)',
+    () async {
+      await startHost(_FakeOcrService(), wireManager: false);
+      expect(await buildClient().probe(), isNull);
+    },
+  );
+
+  test(
+    'full run: upload events → running → finished writes local manga.json',
+    () async {
+      final _FakeOcrService service = _FakeOcrService();
+      await startHost(service);
+      final InterconnectMangaOcrClient client = buildClient();
+      final Directory volume = writeVolume();
+
+      final MangaOcrRemoteTarget target = (await client.probe())!;
+      final List<MangaOcrRemoteEvent> events = <MangaOcrRemoteEvent>[];
+      await client
+          .run(target: target, imageDirPath: volume.path, volumeTitle: '卷二')
+          .forEach(events.add);
+
+      // 上传阶段：3 页逐一回报。
+      final List<MangaOcrRemoteEvent> uploads = events
+          .where((MangaOcrRemoteEvent e) => e.uploading)
+          .toList();
+      expect(uploads, hasLength(3));
+      expect(uploads.last.done, 3);
+      expect(uploads.last.total, 3);
+
+      // finished：manga.json 已写到 <所选文件夹>/manga_ocr_out/manga.json。
+      final MangaOcrRemoteEvent finished = events.last;
+      expect(finished.finished, isTrue);
+      final String expectedPath = p.join(
+        volume.path,
+        kMangaOcrOutDirName,
+        kMangaOcrOutputFileName,
       );
-      await server.start();
-      addTearDown(server.stop);
-      return server;
-    }
-
-    final FushiSyncServer notReady = await spawn(false);
-    final FushiSyncServer isReady = await spawn(true);
-    // 未就绪的排在前面：修复前会被第一个命中并返回，就绪的那台永远选不上。
-    await repo.setFushiClientUrls(<FushiClientUrl>[
-      FushiClientUrl(url: 'http://127.0.0.1:${notReady.port}'),
-      FushiClientUrl(url: 'http://127.0.0.1:${isReady.port}'),
-    ]);
-    await repo.setFushiClientToken('tok');
-
-    final MangaOcrRemoteTarget? target = await buildClient().probe();
-    expect(target, isNotNull);
-    expect(target!.baseUrl, 'http://127.0.0.1:${isReady.port}');
-    expect(target.capability.usable, isTrue);
-  });
-
-  test('probe returns null against a host without manga OCR wiring (skew)',
-      () async {
-    await startHost(_FakeOcrService(), wireManager: false);
-    expect(await buildClient().probe(), isNull);
-  });
-
-  test('full run: upload events → running → finished writes local manga.json',
-      () async {
-    final _FakeOcrService service = _FakeOcrService();
-    await startHost(service);
-    final InterconnectMangaOcrClient client = buildClient();
-    final Directory volume = writeVolume();
-
-    final MangaOcrRemoteTarget target = (await client.probe())!;
-    final List<MangaOcrRemoteEvent> events = <MangaOcrRemoteEvent>[];
-    await client
-        .run(target: target, imageDirPath: volume.path, volumeTitle: '卷二')
-        .forEach(events.add);
-
-    // 上传阶段：3 页逐一回报。
-    final List<MangaOcrRemoteEvent> uploads =
-        events.where((MangaOcrRemoteEvent e) => e.uploading).toList();
-    expect(uploads, hasLength(3));
-    expect(uploads.last.done, 3);
-    expect(uploads.last.total, 3);
-
-    // finished：manga.json 已写到 <所选文件夹>/manga_ocr_out/manga.json。
-    final MangaOcrRemoteEvent finished = events.last;
-    expect(finished.finished, isTrue);
-    final String expectedPath =
-        p.join(volume.path, kMangaOcrOutDirName, kMangaOcrOutputFileName);
-    expect(
-        p.canonicalize(finished.mangaJsonPath!), p.canonicalize(expectedPath));
-    final Map<String, dynamic> manga =
-        jsonDecode(File(expectedPath).readAsStringSync())
-            as Map<String, dynamic>;
-    final List<String> urls = <String>[
-      for (final dynamic page in manga['pages'] as List<dynamic>)
-        (page as Map<String, dynamic>)['url'] as String,
-    ];
-    // 自然序（p2 < p010）+ 子目录相对路径保留。
-    expect(urls, <String>['extra/p001.png', 'p2.jpg', 'p010.jpg']);
-  });
+      expect(
+        p.canonicalize(finished.mangaJsonPath!),
+        p.canonicalize(expectedPath),
+      );
+      final Map<String, dynamic> manga =
+          jsonDecode(File(expectedPath).readAsStringSync())
+              as Map<String, dynamic>;
+      final List<String> urls = <String>[
+        for (final dynamic page in manga['pages'] as List<dynamic>)
+          (page as Map<String, dynamic>)['url'] as String,
+      ];
+      // 自然序（p2 < p010）+ 子目录相对路径保留。
+      expect(urls, <String>['extra/p001.png', 'p2.jpg', 'p010.jpg']);
+    },
+  );
 
   test('models not ready on host maps to models_not_ready', () async {
     final _FakeOcrService service = _FakeOcrService(ready: false);
@@ -296,8 +322,13 @@ void main() {
 
     await expectLater(
       client.run(target: target, imageDirPath: volume.path).drain<void>(),
-      throwsA(isA<MangaOcrRemoteException>().having(
-          (MangaOcrRemoteException e) => e.code, 'code', 'models_not_ready')),
+      throwsA(
+        isA<MangaOcrRemoteException>().having(
+          (MangaOcrRemoteException e) => e.code,
+          'code',
+          'models_not_ready',
+        ),
+      ),
     );
   });
 
@@ -310,8 +341,13 @@ void main() {
     final MangaOcrRemoteTarget target = (await client.probe())!;
     await expectLater(
       client.run(target: target, imageDirPath: empty.path).drain<void>(),
-      throwsA(isA<MangaOcrRemoteException>()
-          .having((MangaOcrRemoteException e) => e.code, 'code', 'no_pages')),
+      throwsA(
+        isA<MangaOcrRemoteException>().having(
+          (MangaOcrRemoteException e) => e.code,
+          'code',
+          'no_pages',
+        ),
+      ),
     );
   });
 
@@ -330,10 +366,10 @@ void main() {
     final StreamSubscription<MangaOcrRemoteEvent> sub = client
         .run(target: target, imageDirPath: volume.path)
         .listen((MangaOcrRemoteEvent event) {
-      if (!event.uploading && !event.finished && !sawRemote.isCompleted) {
-        sawRemote.complete();
-      }
-    });
+          if (!event.uploading && !event.finished && !sawRemote.isCompleted) {
+            sawRemote.complete();
+          }
+        });
     await sawRemote.future.timeout(const Duration(seconds: 10));
     expect(manager.jobCount, 1);
     await sub.cancel();
@@ -345,8 +381,9 @@ void main() {
     expect(service.cancelled, isTrue);
     // 本地不落 manga.json（任务没跑完）。
     expect(
-      File(p.join(volume.path, kMangaOcrOutDirName, kMangaOcrOutputFileName))
-          .existsSync(),
+      File(
+        p.join(volume.path, kMangaOcrOutDirName, kMangaOcrOutputFileName),
+      ).existsSync(),
       isFalse,
     );
     service.gate?.complete();

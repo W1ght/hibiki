@@ -78,29 +78,35 @@ CREATE TABLE statistics_tombstones (
     final FushiDatabase db = await openV59Db();
 
     // 漫画：字数与页数一起落，两个量纲各存各的。
-    await db.setReadingStatistic(ReadingStatisticsCompanion.insert(
-      title: '漫画',
-      dateKey: '2026-07-28',
-      charactersRead: 290,
-      readingTimeMs: 90000,
-      pagesRead: const Value(12),
-      lastStatisticModified: 1,
-    ));
+    await db.setReadingStatistic(
+      ReadingStatisticsCompanion.insert(
+        title: '漫画',
+        dateKey: '2026-07-28',
+        charactersRead: 290,
+        readingTimeMs: 90000,
+        pagesRead: const Value(12),
+        lastStatisticModified: 1,
+      ),
+    );
     // EPUB（迁移来的旧行）：只覆盖字数/时长，页数保持迁移回填的 0——
     // setReadingStatistic 冲突更新刻意不碰 pages_read（wire 契约不带它）。
-    await db.setReadingStatistic(ReadingStatisticsCompanion.insert(
-      title: '旧書',
-      dateKey: '2026-07-01',
-      charactersRead: 5321,
-      readingTimeMs: 660000,
-      lastStatisticModified: 2,
-    ));
+    await db.setReadingStatistic(
+      ReadingStatisticsCompanion.insert(
+        title: '旧書',
+        dateKey: '2026-07-01',
+        charactersRead: 5321,
+        readingTimeMs: 660000,
+        lastStatisticModified: 2,
+      ),
+    );
 
     final List<ReadingStatisticRow> rows = await db.getAllReadingStatistics();
-    final ReadingStatisticRow manga =
-        rows.firstWhere((ReadingStatisticRow r) => r.title == '漫画');
-    final ReadingStatisticRow book =
-        rows.firstWhere((ReadingStatisticRow r) => r.title == '旧書');
+    final ReadingStatisticRow manga = rows.firstWhere(
+      (ReadingStatisticRow r) => r.title == '漫画',
+    );
+    final ReadingStatisticRow book = rows.firstWhere(
+      (ReadingStatisticRow r) => r.title == '旧書',
+    );
     expect(manga.charactersRead, 290);
     expect(manga.pagesRead, 12);
     expect(book.charactersRead, 5321);
@@ -111,14 +117,16 @@ CREATE TABLE statistics_tombstones (
     final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
 
-    await db.setReadingStatistic(ReadingStatisticsCompanion.insert(
-      title: '漫画',
-      dateKey: '2026-07-28',
-      charactersRead: 10,
-      readingTimeMs: 1000,
-      pagesRead: const Value(3),
-      lastStatisticModified: 1,
-    ));
+    await db.setReadingStatistic(
+      ReadingStatisticsCompanion.insert(
+        title: '漫画',
+        dateKey: '2026-07-28',
+        charactersRead: 10,
+        readingTimeMs: 1000,
+        pagesRead: const Value(3),
+        lastStatisticModified: 1,
+      ),
+    );
     expect((await db.getAllReadingStatistics()).single.pagesRead, 3);
   });
 }

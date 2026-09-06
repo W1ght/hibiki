@@ -159,14 +159,17 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
         // AccessDeniedException, which googleDriveErrorIsUnauthorized would
         // otherwise route into the pointless refresh+retry path.
         throw GoogleDriveError(
-            'insufficient_scope: re-consent required (scope upgraded to '
-            'drive.appdata)',
-            statusCode: 403);
+          'insufficient_scope: re-consent required (scope upgraded to '
+          'drive.appdata)',
+          statusCode: 403,
+        );
       }
       if (!googleDriveErrorIsUnauthorized(e)) {
         if (e is drive.DetailedApiRequestError) {
-          throw GoogleDriveError(e.message ?? 'API error',
-              statusCode: e.status);
+          throw GoogleDriveError(
+            e.message ?? 'API error',
+            statusCode: e.status,
+          );
         }
         rethrow;
       }
@@ -191,13 +194,16 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
           // gain a scope, so surface the stable 403 marker rather than a
           // generic retry failure. Kept symmetric with the pre-retry check.
           throw GoogleDriveError(
-              'insufficient_scope: re-consent required (scope upgraded to '
-              'drive.appdata)',
-              statusCode: 403);
+            'insufficient_scope: re-consent required (scope upgraded to '
+            'drive.appdata)',
+            statusCode: 403,
+          );
         }
         if (retry is drive.DetailedApiRequestError) {
-          throw GoogleDriveError(retry.message ?? 'Retry failed',
-              statusCode: retry.status);
+          throw GoogleDriveError(
+            retry.message ?? 'Retry failed',
+            statusCode: retry.status,
+          );
         }
         if (googleDriveErrorIsUnauthorized(retry)) {
           throw GoogleDriveError(retry.toString(), statusCode: 401);
@@ -217,7 +223,8 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
         final list = await api.files.list(
           // 隐藏 appDataFolder 空间下必须显式带 spaces（TODO-836）。
           spaces: _space.spaces,
-          q: "trashed=false and mimeType='application/vnd.google-apps.folder' "
+          q:
+              "trashed=false and mimeType='application/vnd.google-apps.folder' "
               "and name='$name'",
           $fields: 'files(id,name)',
         );
@@ -238,15 +245,20 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
       final String? legacy = await findByName(kLegacySyncRootFolderName);
       if (legacy != null) {
         try {
-          await api.files
-              .update(drive.File()..name = _space.rootFolderName, legacy);
+          await api.files.update(
+            drive.File()..name = _space.rootFolderName,
+            legacy,
+          );
           rootFolderIdCache = legacy;
           return legacy;
         } catch (e, st) {
           // 改名失败（权限/瞬时错误）按无旧根处理，本次新建新根、下次同步重试
           // 改名——但必须留痕，不吞异常。
-          ErrorLogService.instance
-              .log('GoogleDriveHandler.migrateLegacyRoot', e, st);
+          ErrorLogService.instance.log(
+            'GoogleDriveHandler.migrateLegacyRoot',
+            e,
+            st,
+          );
         }
       }
 
@@ -274,7 +286,8 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
           // `in parents` 子查询默认落可见 Drive 空间，在 appDataFolder 里必须显式
           // 带 spaces 否则返回空（[GoogleDriveSyncSpace]，TODO-836）。
           spaces: _space.spaces,
-          q: "trashed=false and '$q' in parents "
+          q:
+              "trashed=false and '$q' in parents "
               "and mimeType='application/vnd.google-apps.folder'",
           $fields: 'nextPageToken,files(id,name)',
           pageSize: 1000,
@@ -314,7 +327,8 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
     return _call((api) async {
       final list = await api.files.list(
         spaces: _space.spaces, // [GoogleDriveSyncSpace]: 当前空间（appdata/drive）。
-        q: "trashed=false and '$qRoot' in parents "
+        q:
+            "trashed=false and '$qRoot' in parents "
             "and mimeType='application/vnd.google-apps.folder' "
             "and name='$qName'",
         $fields: 'files(id,name)',
@@ -363,7 +377,8 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
     return _call((api) async {
       final list = await api.files.list(
         spaces: _space.spaces, // [GoogleDriveSyncSpace]: 当前空间（appdata/drive）。
-        q: "trashed=false and '$qParent' in parents "
+        q:
+            "trashed=false and '$qParent' in parents "
             "and mimeType='$_folderMimeType' "
             "and name='$qName'",
         $fields: 'files(id,name)',
@@ -403,12 +418,14 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
         );
         if (list.files != null) {
           for (final f in list.files!) {
-            results.add(AssetEntry(
-              id: f.id!,
-              name: f.name!,
-              isFolder: f.mimeType == _folderMimeType,
-              sizeBytes: f.size != null ? int.tryParse(f.size!) : null,
-            ));
+            results.add(
+              AssetEntry(
+                id: f.id!,
+                name: f.name!,
+                isFolder: f.mimeType == _folderMimeType,
+                sizeBytes: f.size != null ? int.tryParse(f.size!) : null,
+              ),
+            );
           }
         }
         pageToken = list.nextPageToken;
@@ -463,8 +480,9 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
       return await _call((api) async {
         final Map<String, String> folderNameById = <String, String>{};
         final List<
-                ({String id, String name, List<String> parents, bool isFolder})>
-            all =
+          ({String id, String name, List<String> parents, bool isFolder})
+        >
+        all =
             <({String id, String name, List<String> parents, bool isFolder})>[];
 
         String? pageToken;
@@ -525,7 +543,8 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
     return _call((api) async {
       final list = await api.files.list(
         spaces: _space.spaces, // [GoogleDriveSyncSpace]: 当前空间（appdata/drive）。
-        q: "trashed=false and '$q' in parents "
+        q:
+            "trashed=false and '$q' in parents "
             "and mimeType!='application/vnd.google-apps.folder'",
         $fields: 'files(id,name)',
       );
@@ -549,8 +568,10 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
     required String? fileId,
     required TtuProgress progress,
   }) async {
-    final fileName =
-        progressFileName(progress.lastBookmarkModified, progress.progress);
+    final fileName = progressFileName(
+      progress.lastBookmarkModified,
+      progress.progress,
+    );
     await _uploadJson(
       folderId: folderId,
       fileId: fileId,
@@ -579,7 +600,9 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
     required TtuAudioBook audioBook,
   }) async {
     final fileName = audioBookFileName(
-        audioBook.lastAudioBookModified, audioBook.playbackPositionSec);
+      audioBook.lastAudioBookModified,
+      audioBook.playbackPositionSec,
+    );
     await _uploadJson(
       folderId: folderId,
       fileId: fileId,
@@ -594,10 +617,12 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
 
   Future<dynamic> _downloadJson(String fileId) async {
     return _call((api) async {
-      final media = await api.files.get(
-        fileId,
-        downloadOptions: drive.DownloadOptions.fullMedia,
-      ) as drive.Media;
+      final media =
+          await api.files.get(
+                fileId,
+                downloadOptions: drive.DownloadOptions.fullMedia,
+              )
+              as drive.Media;
 
       final builder = BytesBuilder(copy: false);
       await for (final chunk in media.stream) {
@@ -696,9 +721,9 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
       // chunks, so progress is never lost to a single hiccup (BUG-087).
       final drive.ResumableUploadOptions uploadOptions =
           drive.ResumableUploadOptions(
-        numberOfAttempts: 5,
-        chunkSize: 8 * 1024 * 1024,
-      );
+            numberOfAttempts: 5,
+            chunkSize: 8 * 1024 * 1024,
+          );
 
       if (existingId != null) {
         await api.files.update(
@@ -725,17 +750,18 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
     void Function(double progress)? onProgress,
   }) async {
     await _call((api) async {
-      final metadata = await api.files.get(
-        fileId,
-        $fields: 'size',
-      ) as drive.File;
-      final totalSize =
-          metadata.size != null ? int.tryParse(metadata.size!) : null;
+      final metadata =
+          await api.files.get(fileId, $fields: 'size') as drive.File;
+      final totalSize = metadata.size != null
+          ? int.tryParse(metadata.size!)
+          : null;
 
-      final media = await api.files.get(
-        fileId,
-        downloadOptions: drive.DownloadOptions.fullMedia,
-      ) as drive.Media;
+      final media =
+          await api.files.get(
+                fileId,
+                downloadOptions: drive.DownloadOptions.fullMedia,
+              )
+              as drive.Media;
 
       await writeSyncStreamToFile(
         source: media.stream,
@@ -748,10 +774,7 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
     });
   }
 
-  Future<SyncFileRef?> findContentFile(
-    String folderId,
-    String fileName,
-  ) async {
+  Future<SyncFileRef?> findContentFile(String folderId, String fileName) async {
     return _findFile(folderId, fileName);
   }
 
@@ -768,10 +791,8 @@ class GoogleDriveHandler with SyncFolderCache, SyncBackendFileTrioMixin {
   Future<bool> _isFolderUsable(String folderId) async {
     try {
       return await _call((api) async {
-        final file = await api.files.get(
-          folderId,
-          $fields: 'id,trashed',
-        ) as drive.File;
+        final file =
+            await api.files.get(folderId, $fields: 'id,trashed') as drive.File;
         return file.trashed != true;
       });
     } on GoogleDriveError catch (e) {

@@ -17,8 +17,9 @@ Stream<List<int>> _chunked(List<int> data, List<int> chunkSizes) async* {
   var offset = 0;
   var i = 0;
   while (offset < data.length) {
-    final size =
-        chunkSizes.isEmpty ? data.length : chunkSizes[i % chunkSizes.length];
+    final size = chunkSizes.isEmpty
+        ? data.length
+        : chunkSizes[i % chunkSizes.length];
     final end = (offset + size).clamp(0, data.length);
     yield Uint8List.fromList(data.sublist(offset, end));
     offset = end;
@@ -59,8 +60,9 @@ void main() {
 
     test('boundary lengths around 32-byte keystream period round-trip', () {
       for (final n in [1, 31, 32, 33, 63, 64, 65]) {
-        final data =
-            Uint8List.fromList(List<int>.generate(n, (i) => (i * 13) & 0xFF));
+        final data = Uint8List.fromList(
+          List<int>.generate(n, (i) => (i * 13) & 0xFF),
+        );
         final ob = SyncObfuscator.obfuscateBytes(data);
         expect(SyncObfuscator.deobfuscateBytes(ob), data, reason: 'n=$n');
       }
@@ -68,22 +70,27 @@ void main() {
   });
 
   group('SyncObfuscator stream round-trip (global offset preserved)', () {
-    test('round-trips regardless of obfuscate vs deobfuscate chunk boundaries',
-        () async {
-      final data = List<int>.generate(50000, (i) => (i * 17 + 3) & 0xFF);
-      // 混淆用一组分块边界，反混淆用另一组——验证全局 offset 与分块无关。
-      final ob = await _collect(
-        SyncObfuscator.obfuscateStream(_chunked(data, [1, 7, 4096, 33, 65535])),
-      );
-      final back = await _collect(
-        SyncObfuscator.deobfuscateStream(_chunked(ob, [3, 5000, 1, 99])),
-      );
-      expect(back, Uint8List.fromList(data));
-    });
+    test(
+      'round-trips regardless of obfuscate vs deobfuscate chunk boundaries',
+      () async {
+        final data = List<int>.generate(50000, (i) => (i * 17 + 3) & 0xFF);
+        // 混淆用一组分块边界，反混淆用另一组——验证全局 offset 与分块无关。
+        final ob = await _collect(
+          SyncObfuscator.obfuscateStream(
+            _chunked(data, [1, 7, 4096, 33, 65535]),
+          ),
+        );
+        final back = await _collect(
+          SyncObfuscator.deobfuscateStream(_chunked(ob, [3, 5000, 1, 99])),
+        );
+        expect(back, Uint8List.fromList(data));
+      },
+    );
 
     test('stream output equals bytes output for same payload', () async {
-      final data =
-          Uint8List.fromList(List<int>.generate(1000, (i) => (i * 7) & 0xFF));
+      final data = Uint8List.fromList(
+        List<int>.generate(1000, (i) => (i * 7) & 0xFF),
+      );
       final viaBytes = SyncObfuscator.obfuscateBytes(data);
       final viaStream = await _collect(
         SyncObfuscator.obfuscateStream(Stream<List<int>>.value(data)),
@@ -131,13 +138,15 @@ void main() {
       expect(back, Uint8List.fromList(legacy));
     });
 
-    test('deobfuscateStream handles legacy plaintext shorter than header',
-        () async {
-      final tiny = [9, 8, 7];
-      final back = await _collect(
-        SyncObfuscator.deobfuscateStream(Stream<List<int>>.value(tiny)),
-      );
-      expect(back, Uint8List.fromList(tiny));
-    });
+    test(
+      'deobfuscateStream handles legacy plaintext shorter than header',
+      () async {
+        final tiny = [9, 8, 7];
+        final back = await _collect(
+          SyncObfuscator.deobfuscateStream(Stream<List<int>>.value(tiny)),
+        );
+        expect(back, Uint8List.fromList(tiny));
+      },
+    );
   });
 }

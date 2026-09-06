@@ -53,9 +53,9 @@ List<T> sortNewCollectionMembersNaturally<T>(
 }) {
   final List<({T item, String title, int index})> decorated =
       <({T item, String title, int index})>[
-    for (int i = 0; i < items.length; i++)
-      (item: items[i], title: titleOf(items[i]), index: i),
-  ];
+        for (int i = 0; i < items.length; i++)
+          (item: items[i], title: titleOf(items[i]), index: i),
+      ];
   decorated.sort((
     ({T item, String title, int index}) a,
     ({T item, String title, int index}) b,
@@ -64,7 +64,7 @@ List<T> sortNewCollectionMembersNaturally<T>(
     return byName != 0 ? byName : a.index.compareTo(b.index);
   });
   return <T>[
-    for (final ({T item, String title, int index}) d in decorated) d.item
+    for (final ({T item, String title, int index}) d in decorated) d.item,
   ];
 }
 
@@ -88,31 +88,31 @@ Future<List<MediaCollectionItemRow>> sortedCollectionRows({
   final List<VideoBookRow> videos = await db.allVideoBooks();
   final Map<String, ({String title, int importedAt})> meta =
       <String, ({String title, int importedAt})>{
-    // v83：成员表 epub entryKey = `epub_books.uid`，meta 直接按行内 uid 建键
-    // （uid 为空的异常行回退 bookKey）。透传成员行（远端-only 书，entryKey =
-    // 对端 bookKey）本地无行可查，落 metaOf 的 `(entryKey, 0)` 兜底——刻意如此。
-    for (final EpubBookRow r in epubs)
-      MediaKind.epub.compositeKey(r.uid.isNotEmpty ? r.uid : r.bookKey): (
-        title: r.title,
-        importedAt: r.importedAt,
-      ),
-    for (final SrtBookRow r in srts)
-      MediaKind.srt.compositeKey(r.uid): (
-        title: r.title,
-        importedAt: r.importedAt,
-      ),
-    for (final GalgameRow r in games)
-      MediaKind.game.compositeKey(r.id): (
-        title: GalgameCustomData.decode(r.customDataJson).name ?? r.name,
-        importedAt: r.addedAt,
-      ),
-    for (final VideoBookRow r in videos)
-      MediaKind.video.compositeKey(r.bookUid): (
-        title: r.title,
-        // v57 起 importedAt 才有真值；旧数据 null 按 0（最旧）兜底。
-        importedAt: r.importedAt ?? 0,
-      ),
-  };
+        // v83：成员表 epub entryKey = `epub_books.uid`，meta 直接按行内 uid 建键
+        // （uid 为空的异常行回退 bookKey）。透传成员行（远端-only 书，entryKey =
+        // 对端 bookKey）本地无行可查，落 metaOf 的 `(entryKey, 0)` 兜底——刻意如此。
+        for (final EpubBookRow r in epubs)
+          MediaKind.epub.compositeKey(r.uid.isNotEmpty ? r.uid : r.bookKey): (
+            title: r.title,
+            importedAt: r.importedAt,
+          ),
+        for (final SrtBookRow r in srts)
+          MediaKind.srt.compositeKey(r.uid): (
+            title: r.title,
+            importedAt: r.importedAt,
+          ),
+        for (final GalgameRow r in games)
+          MediaKind.game.compositeKey(r.id): (
+            title: GalgameCustomData.decode(r.customDataJson).name ?? r.name,
+            importedAt: r.addedAt,
+          ),
+        for (final VideoBookRow r in videos)
+          MediaKind.video.compositeKey(r.bookUid): (
+            title: r.title,
+            // v57 起 importedAt 才有真值；旧数据 null 按 0（最旧）兜底。
+            importedAt: r.importedAt ?? 0,
+          ),
+      };
   ({String title, int importedAt}) metaOf(MediaCollectionItemRow r) =>
       meta['${r.mediaType}|${r.entryKey}'] ??
       (title: r.entryKey, importedAt: 0);
@@ -125,15 +125,14 @@ Future<List<MediaCollectionItemRow>> sortedCollectionRows({
     );
   }
 
-  return List<MediaCollectionItemRow>.of(rows)
-    ..sort(
-      (MediaCollectionItemRow a, MediaCollectionItemRow b) =>
-          compareCollectionMembers(
-        sortMetaOf(a),
-        sortMetaOf(b),
-        byTitle: byTitle,
-      ),
-    );
+  return List<MediaCollectionItemRow>.of(rows)..sort(
+    (MediaCollectionItemRow a, MediaCollectionItemRow b) =>
+        compareCollectionMembers(
+          sortMetaOf(a),
+          sortMetaOf(b),
+          byTitle: byTitle,
+        ),
+  );
 }
 
 /// 从库页合集右键菜单触发的一键整理：取成员 → [sortedCollectionRows] →
@@ -143,16 +142,17 @@ Future<void> applyCollectionOneKeySort({
   required int collectionId,
   required bool byTitle,
 }) async {
-  final List<MediaCollectionItemRow> rows =
-      await db.getCollectionItems(collectionId);
-  if (rows.length < 2) return;
-  final List<MediaCollectionItemRow> next =
-      await sortedCollectionRows(db: db, rows: rows, byTitle: byTitle);
-  await db.reorderCollectionItems(
+  final List<MediaCollectionItemRow> rows = await db.getCollectionItems(
     collectionId,
-    <CollectionMemberKey>[
-      for (final MediaCollectionItemRow r in next)
-        (mediaType: r.mediaType, entryKey: r.entryKey),
-    ],
   );
+  if (rows.length < 2) return;
+  final List<MediaCollectionItemRow> next = await sortedCollectionRows(
+    db: db,
+    rows: rows,
+    byTitle: byTitle,
+  );
+  await db.reorderCollectionItems(collectionId, <CollectionMemberKey>[
+    for (final MediaCollectionItemRow r in next)
+      (mediaType: r.mediaType, entryKey: r.entryKey),
+  ]);
 }

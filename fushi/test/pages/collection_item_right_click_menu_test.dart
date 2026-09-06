@@ -26,8 +26,9 @@ void main() {
 
   late Directory pathProviderDir;
   setUpAll(() {
-    pathProviderDir =
-        Directory.systemTemp.createTempSync('hibiki_collection_rclick');
+    pathProviderDir = Directory.systemTemp.createTempSync(
+      'hibiki_collection_rclick',
+    );
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
       (MethodCall call) async => pathProviderDir.path,
@@ -78,16 +79,15 @@ void main() {
   }
 
   Widget buildPage() => ProviderScope(
-        overrides: <Override>[
-          appProvider.overrideWith((ref) => appModel),
-        ],
-        child: TranslationProvider(
-          child: const MaterialApp(home: CollectionsPage()),
-        ),
-      );
+    overrides: <Override>[appProvider.overrideWith((ref) => appModel)],
+    child: TranslationProvider(
+      child: const MaterialApp(home: CollectionsPage()),
+    ),
+  );
 
-  testWidgets('right-click opens the item menu (same as long-press)',
-      (WidgetTester tester) async {
+  testWidgets('right-click opens the item menu (same as long-press)', (
+    WidgetTester tester,
+  ) async {
     tester.view.devicePixelRatio = 1;
     tester.view.physicalSize = const Size(1000, 800);
     addTearDown(tester.view.reset);
@@ -115,8 +115,9 @@ void main() {
     );
   });
 
-  testWidgets('right-click and long-press open the same menu (item parity)',
-      (WidgetTester tester) async {
+  testWidgets('right-click and long-press open the same menu (item parity)', (
+    WidgetTester tester,
+  ) async {
     tester.view.devicePixelRatio = 1;
     tester.view.physicalSize = const Size(1000, 800);
     addTearDown(tester.view.reset);
@@ -130,10 +131,12 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(CollectionItemDialogFrame), findsOneWidget);
     final Set<String> longPressButtons = tester
-        .widgetList<TextButton>(find.descendant(
-          of: find.byType(CollectionItemDialogFrame),
-          matching: find.byType(TextButton),
-        ))
+        .widgetList<TextButton>(
+          find.descendant(
+            of: find.byType(CollectionItemDialogFrame),
+            matching: find.byType(TextButton),
+          ),
+        )
         .map((TextButton b) => _labelOf(tester, b))
         .whereType<String>()
         .toSet();
@@ -149,10 +152,12 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(CollectionItemDialogFrame), findsOneWidget);
     final Set<String> rightClickButtons = tester
-        .widgetList<TextButton>(find.descendant(
-          of: find.byType(CollectionItemDialogFrame),
-          matching: find.byType(TextButton),
-        ))
+        .widgetList<TextButton>(
+          find.descendant(
+            of: find.byType(CollectionItemDialogFrame),
+            matching: find.byType(TextButton),
+          ),
+        )
         .map((TextButton b) => _labelOf(tester, b))
         .whereType<String>()
         .toSet();

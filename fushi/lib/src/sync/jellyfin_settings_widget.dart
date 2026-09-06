@@ -77,18 +77,22 @@ class _JellyfinConfigWidgetState extends State<JellyfinConfigWidget> {
     setState(() => _busy = true);
     final JellyfinApi api = JellyfinApi(serverUrl: serverUrl);
     try {
-      final JellyfinAuthResult auth =
-          await api.authenticateByName(username, password);
+      final JellyfinAuthResult auth = await api.authenticateByName(
+        username,
+        password,
+      );
       if (auth.accessToken.isEmpty || auth.userId.isEmpty) {
         throw JellyfinApiException(0, '/Users/AuthenticateByName');
       }
-      await _syncRepo.setJellyfinServer(JellyfinServerConfig(
-        serverUrl: serverUrl,
-        username: username,
-        userId: auth.userId,
-        accessToken: auth.accessToken,
-        serverName: auth.serverName,
-      ));
+      await _syncRepo.setJellyfinServer(
+        JellyfinServerConfig(
+          serverUrl: serverUrl,
+          username: username,
+          userId: auth.userId,
+          accessToken: auth.accessToken,
+          serverName: auth.serverName,
+        ),
+      );
       if (!mounted) return;
       _passwordController.clear();
       setState(() {
@@ -114,8 +118,9 @@ class _JellyfinConfigWidgetState extends State<JellyfinConfigWidget> {
   /// 「进入视频页时自动列出条目」（全局偏好，非每服务器——它是用户对枚举行为的
   /// 取舍，换服务器重登也该保持）。
   Future<void> _setAutoList(bool value) async {
-    await widget.settingsContext.appModel.prefsRepo
-        .setJellyfinAutoListVideos(value);
+    await widget.settingsContext.appModel.prefsRepo.setJellyfinAutoListVideos(
+      value,
+    );
     if (mounted) setState(() {});
   }
 
@@ -132,10 +137,12 @@ class _JellyfinConfigWidgetState extends State<JellyfinConfigWidget> {
     await _syncRepo.setJellyfinServer(config.copyWithLibraryIds(sorted));
     widget.settingsContext.ref
         .read(remoteLibraryCacheProvider)
-        .invalidateSource(JellyfinVideoClient.sourceIdFor(
-          serverUrl: config.serverUrl,
-          userId: config.userId,
-        ));
+        .invalidateSource(
+          JellyfinVideoClient.sourceIdFor(
+            serverUrl: config.serverUrl,
+            userId: config.userId,
+          ),
+        );
     if (!mounted) return;
     setState(() {
       _selectedLibraryIds = ids;
@@ -152,10 +159,12 @@ class _JellyfinConfigWidgetState extends State<JellyfinConfigWidget> {
       // 槽身份必须与 [JellyfinVideoClient.remoteLibrarySourceId] 逐字一致。
       widget.settingsContext.ref
           .read(remoteLibraryCacheProvider)
-          .invalidateSource(JellyfinVideoClient.sourceIdFor(
-            serverUrl: config.serverUrl,
-            userId: config.userId,
-          ));
+          .invalidateSource(
+            JellyfinVideoClient.sourceIdFor(
+              serverUrl: config.serverUrl,
+              userId: config.userId,
+            ),
+          );
       if (mounted) {
         setState(() {
           _configFuture = _syncRepo.getJellyfinServer();
@@ -172,20 +181,25 @@ class _JellyfinConfigWidgetState extends State<JellyfinConfigWidget> {
   Widget build(BuildContext context) {
     return FutureBuilder<JellyfinServerConfig?>(
       future: _configFuture,
-      builder: (BuildContext context,
-          AsyncSnapshot<JellyfinServerConfig?> snapshot) {
-        if (snapshot.connectionState != ConnectionState.done) {
-          return const Padding(
-            padding: EdgeInsets.all(16),
-            child: Center(child: CircularProgressIndicator(strokeWidth: 2)),
-          );
-        }
-        final JellyfinServerConfig? config = snapshot.data;
-        return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-          child: config == null ? _buildSignInForm() : _buildSignedIn(config),
-        );
-      },
+      builder:
+          (
+            BuildContext context,
+            AsyncSnapshot<JellyfinServerConfig?> snapshot,
+          ) {
+            if (snapshot.connectionState != ConnectionState.done) {
+              return const Padding(
+                padding: EdgeInsets.all(16),
+                child: Center(child: CircularProgressIndicator(strokeWidth: 2)),
+              );
+            }
+            final JellyfinServerConfig? config = snapshot.data;
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: config == null
+                  ? _buildSignInForm()
+                  : _buildSignedIn(config),
+            );
+          },
     );
   }
 
@@ -208,10 +222,7 @@ class _JellyfinConfigWidgetState extends State<JellyfinConfigWidget> {
           keyboardType: TextInputType.url,
         ),
         const SizedBox(height: 12),
-        FushiTextField(
-          controller: _userController,
-          labelText: t.sync_username,
-        ),
+        FushiTextField(controller: _userController, labelText: t.sync_username),
         const SizedBox(height: 12),
         FushiTextField(
           controller: _passwordController,
@@ -254,8 +265,8 @@ class _JellyfinConfigWidgetState extends State<JellyfinConfigWidget> {
           title: t.jellyfin_auto_list_title,
           subtitle: t.jellyfin_auto_list_hint,
           horizontalPadding: 0,
-          value: widget
-              .settingsContext.appModel.prefsRepo.jellyfinAutoListVideos,
+          value:
+              widget.settingsContext.appModel.prefsRepo.jellyfinAutoListVideos,
           onChanged: _busy ? null : _setAutoList,
         ),
         const SizedBox(height: 8),
@@ -294,45 +305,48 @@ class _JellyfinConfigWidgetState extends State<JellyfinConfigWidget> {
     _viewsFuture ??= _loadViews(config);
     return FutureBuilder<List<JellyfinLibraryView>>(
       future: _viewsFuture,
-      builder: (BuildContext context,
-          AsyncSnapshot<List<JellyfinLibraryView>> snapshot) {
-        if (snapshot.connectionState != ConnectionState.done) {
-          return const Padding(
-            padding: EdgeInsets.all(12),
-            child: Center(child: CircularProgressIndicator(strokeWidth: 2)),
-          );
-        }
-        if (snapshot.hasError) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8),
-            child: Text(
-              t.jellyfin_libraries_load_failed,
-              style: Theme.of(context).textTheme.bodySmall,
-            ),
-          );
-        }
-        final List<JellyfinLibraryView> views =
-            snapshot.data ?? const <JellyfinLibraryView>[];
-        final Set<String> selected =
-            _selectedLibraryIds ?? const <String>{};
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            for (final JellyfinLibraryView view in views)
-              FushiListItem(
-                title: Text(view.name),
-                trailing: Checkbox(
-                  value: selected.contains(view.id),
-                  onChanged: _busy
-                      ? null
-                      : (bool? _) => _toggleLibrary(config, view.id),
+      builder:
+          (
+            BuildContext context,
+            AsyncSnapshot<List<JellyfinLibraryView>> snapshot,
+          ) {
+            if (snapshot.connectionState != ConnectionState.done) {
+              return const Padding(
+                padding: EdgeInsets.all(12),
+                child: Center(child: CircularProgressIndicator(strokeWidth: 2)),
+              );
+            }
+            if (snapshot.hasError) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Text(
+                  t.jellyfin_libraries_load_failed,
+                  style: Theme.of(context).textTheme.bodySmall,
                 ),
-                onTap: _busy ? null : () => _toggleLibrary(config, view.id),
-              ),
-          ],
-        );
-      },
+              );
+            }
+            final List<JellyfinLibraryView> views =
+                snapshot.data ?? const <JellyfinLibraryView>[];
+            final Set<String> selected =
+                _selectedLibraryIds ?? const <String>{};
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                for (final JellyfinLibraryView view in views)
+                  FushiListItem(
+                    title: Text(view.name),
+                    trailing: Checkbox(
+                      value: selected.contains(view.id),
+                      onChanged: _busy
+                          ? null
+                          : (bool? _) => _toggleLibrary(config, view.id),
+                    ),
+                    onTap: _busy ? null : () => _toggleLibrary(config, view.id),
+                  ),
+              ],
+            );
+          },
     );
   }
 

@@ -47,9 +47,10 @@ const List<String> _overlayNewFiles = <String>[
 String _read(String path) => File(path).readAsStringSync();
 
 /// 补丁里出现的文件数（`+++ b/<path>` 的条数）——用来反空转，不硬编码。
-int _patchedFileCount() => RegExp(r'^\+\+\+ b/', multiLine: true)
-    .allMatches(_read('$_vendorRoot/server-build.gradle.patch'))
-    .length;
+int _patchedFileCount() => RegExp(
+  r'^\+\+\+ b/',
+  multiLine: true,
+).allMatches(_read('$_vendorRoot/server-build.gradle.patch')).length;
 
 /// 掩掉 `#` 行注释（sh 与 ps1 同一种注释符），走共享的等长掩码原语。
 ///
@@ -74,7 +75,8 @@ void main() {
       expect(
         File('$_upstreamSource/$marker').existsSync(),
         isTrue,
-        reason: '缺 $_upstreamSource/$marker —— vendored 上游树不完整，'
+        reason:
+            '缺 $_upstreamSource/$marker —— vendored 上游树不完整，'
             'gradle 构建会在 CI 上挂',
       );
     }
@@ -87,7 +89,8 @@ void main() {
     expect(
       vendored,
       _licenseSha256,
-      reason: 'upstream_src/LICENSE 的 sha256 变了 —— 说明 vendored 源码换了来源，'
+      reason:
+          'upstream_src/LICENSE 的 sha256 变了 —— 说明 vendored 源码换了来源，'
           '必须重新做同源性取证并更新 UPSTREAM',
     );
     final String notice = sha256
@@ -96,7 +99,8 @@ void main() {
     expect(
       notice,
       _licenseSha256,
-      reason: 'third_party/m_extension_server/LICENSE 与 vendored 源码里的 LICENSE '
+      reason:
+          'third_party/m_extension_server/LICENSE 与 vendored 源码里的 LICENSE '
           '必须逐字节相同（MPL-2.0 许可正文）',
     );
   });
@@ -105,19 +109,27 @@ void main() {
     final String upstream = _read('$_vendorRoot/UPSTREAM');
     expect(upstream, contains(_pinnedCommit));
     expect(upstream, contains('Mozilla Public License 2.0'));
-    expect(upstream, contains('upstream_src/'),
-        reason: 'UPSTREAM 必须说明源码 vendored 在哪、排除了什么');
+    expect(
+      upstream,
+      contains('upstream_src/'),
+      reason: 'UPSTREAM 必须说明源码 vendored 在哪、排除了什么',
+    );
     final String notice = _read('$_vendorRoot/NOTICE');
-    expect(notice, contains('upstream_src/'),
-        reason: 'MPL Corresponding Source 声明必须指向真正入库的源码目录');
+    expect(
+      notice,
+      contains('upstream_src/'),
+      reason: 'MPL Corresponding Source 声明必须指向真正入库的源码目录',
+    );
   });
 
   group('构建脚本', () {
     final Map<String, String> scripts = <String, String>{
-      'tool/mihon/build_desktop_runtime.sh':
-          _read('$_repositoryRoot/tool/mihon/build_desktop_runtime.sh'),
-      'tool/mihon/build_desktop_runtime.ps1':
-          _read('$_repositoryRoot/tool/mihon/build_desktop_runtime.ps1'),
+      'tool/mihon/build_desktop_runtime.sh': _read(
+        '$_repositoryRoot/tool/mihon/build_desktop_runtime.sh',
+      ),
+      'tool/mihon/build_desktop_runtime.ps1': _read(
+        '$_repositoryRoot/tool/mihon/build_desktop_runtime.ps1',
+      ),
     };
 
     // 上游仓库已 404：任何形态的远端取源都会让 job 重新以 exit 128 挂掉。
@@ -128,24 +140,35 @@ void main() {
 
     scripts.forEach((String name, String body) {
       test('$name 不从远端取 M-Extension-Server 源码', () {
-        final Iterable<RegExpMatch> hits =
-            remoteFetch.allMatches(_maskedCode(body));
+        final Iterable<RegExpMatch> hits = remoteFetch.allMatches(
+          _maskedCode(body),
+        );
         expect(
           hits.map((RegExpMatch m) => m.group(0)).toList(),
           isEmpty,
-          reason: '$name 又出现了远端取源 —— 上游仓库已删除，clone/fetch 会转去'
+          reason:
+              '$name 又出现了远端取源 —— 上游仓库已删除，clone/fetch 会转去'
               '交互取凭据并以 exit 128 挂掉整个 job（BUG-1415）',
         );
       });
 
       test('$name 从 vendored 树取源并钉定 commit', () {
         final String code = _maskedCode(body);
-        expect(code, contains('upstream_src'),
-            reason: '$name 必须从 third_party/m_extension_server/upstream_src 取源');
-        expect(code, contains(_pinnedCommit),
-            reason: '$name 必须保留被 vendor 的 commit 作为产物溯源');
-        expect(code, contains('server-build.gradle.patch'),
-            reason: '$name 必须仍然应用 server-build.gradle.patch');
+        expect(
+          code,
+          contains('upstream_src'),
+          reason: '$name 必须从 third_party/m_extension_server/upstream_src 取源',
+        );
+        expect(
+          code,
+          contains(_pinnedCommit),
+          reason: '$name 必须保留被 vendor 的 commit 作为产物溯源',
+        );
+        expect(
+          code,
+          contains('server-build.gradle.patch'),
+          reason: '$name 必须仍然应用 server-build.gradle.patch',
+        );
       });
 
       test('$name 应用补丁时不带 --unidiff-zero（零上下文=漂移无声）', () {
@@ -154,7 +177,8 @@ void main() {
         expect(
           _maskedCode(body),
           isNot(contains('--unidiff-zero')),
-          reason: '$name 又给 git apply 加回了 --unidiff-zero —— 零上下文补丁的'
+          reason:
+              '$name 又给 git apply 加回了 --unidiff-zero —— 零上下文补丁的'
               '纯插入 hunk 无内容可校验，`git apply --check` 对上游漂移 exit 0，'
               '真 apply 时按行号盲插到错误位置（BUG-1428）',
         );
@@ -169,12 +193,16 @@ void main() {
         // / `$overlayRoot` 这类变量名不会（后面跟的是 `_root` / `Root`）。
         final RegExp overlayCopy = RegExp(r'overlay(/\.|")');
         final Iterable<RegExpMatch> copies = overlayCopy.allMatches(code);
-        expect(copies, isNotEmpty,
-            reason: '$name 里找不到把 Hibiki 安全 overlay 覆盖上去的那一步');
+        expect(
+          copies,
+          isNotEmpty,
+          reason: '$name 里找不到把 Hibiki 安全 overlay 覆盖上去的那一步',
+        );
         expect(
           copies.first.start,
           greaterThan(patchAt),
-          reason: '$name 必须先打补丁再拷 overlay；顺序反了，Hibiki 的安全'
+          reason:
+              '$name 必须先打补丁再拷 overlay；顺序反了，Hibiki 的安全'
               ' overlay 会被上游文件盖回去',
         );
       });
@@ -195,14 +223,14 @@ void main() {
           caseSensitive: false,
         );
         final Iterable<RegExpMatch> hits = pinned.allMatches(_maskedCode(body));
-        expect(hits, isNotEmpty,
-            reason: '$name 里找不到任何钉定的 sha256 —— 校验被整段拿掉了？');
+        expect(hits, isNotEmpty, reason: '$name 里找不到任何钉定的 sha256 —— 校验被整段拿掉了？');
         for (final RegExpMatch hit in hits) {
           final String value = hit.group(1)!;
           expect(
             value.length,
             64,
-            reason: '$name 里 ${hit.group(0)} 不是 64 位 sha256（实际 '
+            reason:
+                '$name 里 ${hit.group(0)} 不是 64 位 sha256（实际 '
                 '${value.length} 位）。多一位/少一位都会让 shasum --check 恒红，'
                 '而现象会伪装成「下载失败」。',
           );
@@ -249,7 +277,8 @@ void main() {
     expect(
       log,
       isNot(contains('Skipped patch')),
-      reason: 'git apply 跳过了补丁条目 —— 这条守卫在空转，改坏 upstream_src 也会绿；'
+      reason:
+          'git apply 跳过了补丁条目 —— 这条守卫在空转，改坏 upstream_src 也会绿；'
           '路径解释方式又错了：\n$log',
     );
     final int checkedFiles = 'Checking patch'.allMatches(log).length;
@@ -257,14 +286,16 @@ void main() {
     expect(
       checkedFiles,
       expectedFiles,
-      reason: 'git apply 只检查了 $checkedFiles 个文件，补丁里有 $expectedFiles 个'
+      reason:
+          'git apply 只检查了 $checkedFiles 个文件，补丁里有 $expectedFiles 个'
           ' —— 守卫覆盖不全：\n$log',
     );
 
     expect(
       result.exitCode,
       0,
-      reason: 'git apply --check 失败，upstream_src 与 server-build.gradle.patch '
+      reason:
+          'git apply --check 失败，upstream_src 与 server-build.gradle.patch '
           '已经漂开，CI 上构建会挂：\n$log',
     );
   });
@@ -282,31 +313,39 @@ void main() {
   // `git diff -U0`；应用它的地方（两份构建脚本 + 上面那条守卫）都不能带
   // `--unidiff-zero`。
   test('server-build.gradle.patch 必须带上下文（零上下文=漂移无声）', () {
-    final List<String> patch =
-        File('$_vendorRoot/server-build.gradle.patch').readAsLinesSync();
+    final List<String> patch = File(
+      '$_vendorRoot/server-build.gradle.patch',
+    ).readAsLinesSync();
     final RegExp hunkHeader = RegExp(r'^@@ -\S+ \+\S+ @@');
-    final List<String> headers =
-        patch.where(hunkHeader.hasMatch).toList(growable: false);
+    final List<String> headers = patch
+        .where(hunkHeader.hasMatch)
+        .toList(growable: false);
     expect(headers, isNotEmpty, reason: '补丁里一个 hunk 都没有 —— 解析失效');
 
     // 零上下文 hunk 的形态：单行 `@@ -N +M @@`，或 `,0`（纯插入的旧侧长度 0）。
     final RegExp zeroContext = RegExp(r'^@@ -\d+(?: |,0 )\+|\+\d+(?: |,0) @@');
-    final List<String> offenders =
-        headers.where(zeroContext.hasMatch).toList(growable: false);
+    final List<String> offenders = headers
+        .where(zeroContext.hasMatch)
+        .toList(growable: false);
     expect(
       offenders,
       isEmpty,
-      reason: '这些 hunk 是零上下文形态，补丁又被 `git diff -U0` 重新生成了：\n'
+      reason:
+          '这些 hunk 是零上下文形态，补丁又被 `git diff -U0` 重新生成了：\n'
           '${offenders.join('\n')}\n'
           '零上下文的纯插入 hunk 无内容可校验，`git apply --check` 对上游漂移'
           ' exit 0，然后按行号盲插到错误位置（BUG-1428）',
     );
 
     // 正向证据：确实存在 ` ` 开头的上下文行（只看 hunk 头会被空补丁骗过）。
-    final int contextLines =
-        patch.where((String l) => l.startsWith(' ')).length;
-    expect(contextLines, greaterThan(20),
-        reason: '只有 $contextLines 行上下文 —— 补丁实际上仍是零上下文的');
+    final int contextLines = patch
+        .where((String l) => l.startsWith(' '))
+        .length;
+    expect(
+      contextLines,
+      greaterThan(20),
+      reason: '只有 $contextLines 行上下文 —— 补丁实际上仍是零上下文的',
+    );
   });
 
   // `git apply` 允许 hunk 带 offset 重定位：上游整体位移时它 exit 0 并打在正确
@@ -314,11 +353,13 @@ void main() {
   // 本身不再被 `--check` 保证。vendored 树是钉死的，补丁与它必须逐行对齐，所以
   // 这里自解析补丁，把 `-` 行**和** ` ` 上下文行都核到 upstream_src 的实际行上。
   test('server-build.gradle.patch 的删除行与上下文行都对得上 vendored 树的实际内容', () {
-    final List<String> patch =
-        File('$_vendorRoot/server-build.gradle.patch').readAsLinesSync();
+    final List<String> patch = File(
+      '$_vendorRoot/server-build.gradle.patch',
+    ).readAsLinesSync();
     final RegExp fileHeader = RegExp(r'^\+\+\+ b/(.+)$');
-    final RegExp hunkHeader =
-        RegExp(r'^@@ -(\d+)(?:,(\d+))? \+\d+(?:,\d+)? @@');
+    final RegExp hunkHeader = RegExp(
+      r'^@@ -(\d+)(?:,(\d+))? \+\d+(?:,\d+)? @@',
+    );
 
     String? currentPath;
     List<String>? currentLines;
@@ -333,7 +374,8 @@ void main() {
       expect(
         sourceLine <= lines.length ? lines[sourceLine - 1] : null,
         expected,
-        reason: 'upstream_src/$currentPath 第 $sourceLine 行与补丁的$kind不一致 —— '
+        reason:
+            'upstream_src/$currentPath 第 $sourceLine 行与补丁的$kind不一致 —— '
             'upstream_src 与 server-build.gradle.patch 必须同步更新'
             '（补丁重新生成用 `git diff`，不要用 `-U0`）',
       );
@@ -344,8 +386,11 @@ void main() {
       if (header != null) {
         currentPath = header.group(1)!;
         final File target = File('$_upstreamSource/$currentPath');
-        expect(target.existsSync(), isTrue,
-            reason: '补丁指向的 upstream_src/$currentPath 不存在');
+        expect(
+          target.existsSync(),
+          isTrue,
+          reason: '补丁指向的 upstream_src/$currentPath 不存在',
+        );
         currentLines = target.readAsLinesSync();
         continue;
       }
@@ -373,11 +418,18 @@ void main() {
     }
 
     // 自校验：解析器失效（补丁格式变了 / 路径错了）必须红，不能静默扫空。
-    expect(deletionsChecked, greaterThan(10),
-        reason: '只核对到 $deletionsChecked 条删除行 —— 补丁解析很可能已经失效');
-    expect(contextChecked, greaterThan(50),
-        reason: '只核对到 $contextChecked 条上下文行 —— 补丁很可能又变回零上下文，'
-            '或补丁解析已经失效');
+    expect(
+      deletionsChecked,
+      greaterThan(10),
+      reason: '只核对到 $deletionsChecked 条删除行 —— 补丁解析很可能已经失效',
+    );
+    expect(
+      contextChecked,
+      greaterThan(50),
+      reason:
+          '只核对到 $contextChecked 条上下文行 —— 补丁很可能又变回零上下文，'
+          '或补丁解析已经失效',
+    );
   });
 
   test('overlay 覆盖的上游文件路径仍然存在（覆盖没有打空）', () {
@@ -390,13 +442,17 @@ void main() {
       expect(
         File('$_upstreamSource/$relative').existsSync(),
         isTrue,
-        reason: 'upstream_src/$relative 不存在，overlay 的同名覆盖打空了：'
+        reason:
+            'upstream_src/$relative 不存在，overlay 的同名覆盖打空了：'
             '上游文件被改名/移动时编译照样过，但 Hibiki 的安全边界会无声消失',
       );
     }
     for (final String relative in _overlayNewFiles) {
-      expect(File('$_vendorRoot/overlay/$relative').existsSync(), isTrue,
-          reason: 'overlay/$relative 不见了');
+      expect(
+        File('$_vendorRoot/overlay/$relative').existsSync(),
+        isTrue,
+        reason: 'overlay/$relative 不见了',
+      );
     }
   });
 
@@ -434,7 +490,8 @@ void main() {
     expect(
       authGate,
       lessThan(dispatch),
-      reason: '鉴权必须早于 when(session.uri) 分发；一旦挪到分发之后，'
+      reason:
+          '鉴权必须早于 when(session.uri) 分发；一旦挪到分发之后，'
           '就会出现不过鉴权的 route',
     );
 
@@ -455,7 +512,8 @@ void main() {
   // "MExtensionServerLoader" / "Class.forName" 来解释为什么不那么做。
   // ==========================================================================
   test('/inspect 不加载扩展代码（元数据闭包里没有任何执行原语）', () {
-    const String inspectPath = '$_vendorRoot/overlay/server/src/main/kotlin/'
+    const String inspectPath =
+        '$_vendorRoot/overlay/server/src/main/kotlin/'
         'mextensionserver/controller/InspectHandler.kt';
     final String inspectCode = maskComments(_read(inspectPath));
 
@@ -464,21 +522,24 @@ void main() {
       expect(
         inspectCode,
         isNot(contains(primitive)),
-        reason: 'InspectHandler 里出现了 $primitive —— /inspect 在信任对话框弹出'
+        reason:
+            'InspectHandler 里出现了 $primitive —— /inspect 在信任对话框弹出'
             '之前就会执行扩展的静态初始化 / 构造器 / createSources()',
       );
     }
     expect(
       inspectCode,
       contains('PackageTools.getPackageInfo('),
-      reason: '/inspect 必须只走 apk-parser 的元数据读取；换成别的读法就得重新'
+      reason:
+          '/inspect 必须只走 apk-parser 的元数据读取；换成别的读法就得重新'
           '证明那条路径不构造类',
     );
 
     // ② 闭包的另一端：getPackageInfo 的函数体本身也不能含执行原语。
     //    这两步合起来才是「从 /inspect 可达的代码里没有执行原语」的完整证据，
     //    而不是「我读了 InspectHandler 觉得没问题」。
-    const String packageToolsPath = '$_upstreamSource/server/src/main/kotlin/'
+    const String packageToolsPath =
+        '$_upstreamSource/server/src/main/kotlin/'
         'mextensionserver/util/PackageTools.kt';
     expect(
       File(packageToolsPath).existsSync(),
@@ -494,7 +555,8 @@ void main() {
     expect(
       body.length,
       greaterThan(200),
-      reason: 'getPackageInfo 函数体只解析到 ${body.length} 字符 —— 花括号匹配'
+      reason:
+          'getPackageInfo 函数体只解析到 ${body.length} 字符 —— 花括号匹配'
           '很可能已经失效，下面的断言会在空串上假绿',
     );
     expect(
@@ -506,21 +568,26 @@ void main() {
       expect(
         body,
         isNot(contains(primitive)),
-        reason: 'PackageTools.getPackageInfo 里出现了 $primitive —— /inspect 的'
+        reason:
+            'PackageTools.getPackageInfo 里出现了 $primitive —— /inspect 的'
             '“只读元数据”闭包被击穿，上游漂移把执行路径带回来了',
       );
     }
   });
 
   test('sidecar 端口由子进程自报（token 不会发给陌生进程）', () {
-    final String controller = maskComments(_read(
-      '$_vendorRoot/overlay/server/src/main/kotlin/mextensionserver/'
-      'controller/MExtensionServerController.kt',
-    ));
-    final String runtime = maskComments(_read(
-      '$_repositoryRoot/fushi/lib/src/media/manga/mihon/'
-      'desktop_mihon_runtime.dart',
-    ));
+    final String controller = maskComments(
+      _read(
+        '$_vendorRoot/overlay/server/src/main/kotlin/mextensionserver/'
+        'controller/MExtensionServerController.kt',
+      ),
+    );
+    final String runtime = maskComments(
+      _read(
+        '$_repositoryRoot/fushi/lib/src/media/manga/mihon/'
+        'desktop_mihon_runtime.dart',
+      ),
+    );
 
     // 契约两端必须是同一个字面量，否则宿主永远等不到就绪行。
     expect(controller, contains(_readyLinePrefix));
@@ -538,7 +605,8 @@ void main() {
     expect(
       bind,
       lessThan(announce),
-      reason: '端口必须在 NanoHTTPD 已经 bind 之后才播报；提前播报等于又回到'
+      reason:
+          '端口必须在 NanoHTTPD 已经 bind 之后才播报；提前播报等于又回到'
           '「报出来的端口未必归自己」',
     );
 
@@ -565,26 +633,32 @@ void main() {
     );
 
     // 就绪循环：先查子进程死没死，再发认证请求。
-    final int loopExited =
-        runtime.indexOf('await _hasExited(process)', awaitPort);
+    final int loopExited = runtime.indexOf(
+      'await _hasExited(process)',
+      awaitPort,
+    );
     expect(loopExited, greaterThan(-1), reason: '就绪循环里的存活检查不见了');
     expect(
       loopExited,
       lessThan(firstRequest),
-      reason: '存活检查必须在请求之前；放在 catch 里等于每轮都先朝一个可能已经'
+      reason:
+          '存活检查必须在请求之前；放在 catch 里等于每轮都先朝一个可能已经'
           '不是自家子进程的端口发一次带 token 的请求',
     );
   });
 
   test('/source-image 的响应缓冲有硬上限（敌意源不能 OOM 掉 sidecar）', () {
-    final String handler = maskComments(_read(
-      '$_vendorRoot/overlay/server/src/main/kotlin/mextensionserver/'
-      'controller/SourceImageHandler.kt',
-    ));
+    final String handler = maskComments(
+      _read(
+        '$_vendorRoot/overlay/server/src/main/kotlin/mextensionserver/'
+        'controller/SourceImageHandler.kt',
+      ),
+    );
     expect(
       handler,
       isNot(contains('body.bytes()')),
-      reason: 'body.bytes() 是无上限全量缓冲，sidecar 只有 -Xmx512m；'
+      reason:
+          'body.bytes() 是无上限全量缓冲，sidecar 只有 -Xmx512m；'
           '源站点控制的 URL 返回超大响应就能把整个 JVM 打死',
     );
     expect(handler, contains('MAX_IMAGE_BYTES'));

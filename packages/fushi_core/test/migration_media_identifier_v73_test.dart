@@ -105,8 +105,9 @@ void main() {
     final FushiDatabase db = _openMigratedFromV72();
     addTearDown(db.close);
 
-    final QueryRow ver =
-        await db.customSelect('PRAGMA user_version').getSingle();
+    final QueryRow ver = await db
+        .customSelect('PRAGMA user_version')
+        .getSingle();
     expect(ver.read<int>('user_version'), db.schemaVersion);
 
     // v80 把 media_items 搬进 media_open_history（unique_key 的信息拆成
@@ -117,7 +118,8 @@ void main() {
         .get();
     final Set<(String, String)> pairs = mi
         .map(
-            (r) => (r.read<String>('media_source'), r.read<String>('media_id')))
+          (r) => (r.read<String>('media_source'), r.read<String>('media_id')),
+        )
         .toSet();
     expect(pairs, <(String, String)>{
       ('reader_fushi', 'fushi://book/我的书'),
@@ -130,25 +132,35 @@ void main() {
     final prefs = await db
         .customSelect('SELECT key, value FROM preferences')
         .get()
-        .then((rows) => <String, String>{
-              for (final QueryRow r in rows)
-                r.read<String>('key'): r.read<String>('value'),
-            });
-    expect(prefs['src:reader_fushi:override_title://fushi://book/我的书'], 's:新名',
-        reason: '④ 规范 override 键 URI 段改写');
+        .then(
+          (rows) => <String, String>{
+            for (final QueryRow r in rows)
+              r.read<String>('key'): r.read<String>('value'),
+          },
+        );
     expect(
-        prefs[
-            'src:reader_fushi:override_title://reader_fushi/reader_fushi/fushi://book/我的书'],
-        's:旧名',
-        reason: '⑤ legacy override 键 URI 段改写、双源键段不动');
-    expect(prefs['some_other_key_hoshi://book/x'], 's:keep',
-        reason: '非 override 键不动（WHERE 收敛面）');
+      prefs['src:reader_fushi:override_title://fushi://book/我的书'],
+      's:新名',
+      reason: '④ 规范 override 键 URI 段改写',
+    );
+    expect(
+      prefs['src:reader_fushi:override_title://reader_fushi/reader_fushi/fushi://book/我的书'],
+      's:旧名',
+      reason: '⑤ legacy override 键 URI 段改写、双源键段不动',
+    );
+    expect(
+      prefs['some_other_key_hoshi://book/x'],
+      's:keep',
+      reason: '非 override 键不动（WHERE 收敛面）',
+    );
 
     final ps = await db
         .customSelect('SELECT key FROM profile_settings ORDER BY id')
         .get();
-    expect(ps[0].read<String>('key'),
-        'src:reader_fushi:override_title://fushi://srtbook/uid-1');
+    expect(
+      ps[0].read<String>('key'),
+      'src:reader_fushi:override_title://fushi://srtbook/uid-1',
+    );
     expect(ps[1].read<String>('key'), 'audiobook_pos_X');
   });
 }

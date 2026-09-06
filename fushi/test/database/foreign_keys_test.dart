@@ -17,8 +17,9 @@ Future<FushiDatabase> _openRealDb() async {
 }
 
 Future<int> _count(FushiDatabase db, String table) async {
-  final row =
-      await db.customSelect('SELECT COUNT(*) AS c FROM $table').getSingle();
+  final row = await db
+      .customSelect('SELECT COUNT(*) AS c FROM $table')
+      .getSingle();
   return row.read<int>('c');
 }
 
@@ -122,24 +123,22 @@ CREATE TABLE reader_positions (
 }
 
 void main() {
-  test('real database connection enables sqlite foreign key enforcement',
-      () async {
-    final db = await _openRealDb();
+  test(
+    'real database connection enables sqlite foreign key enforcement',
+    () async {
+      final db = await _openRealDb();
 
-    final row = await db.customSelect('PRAGMA foreign_keys').getSingle();
+      final row = await db.customSelect('PRAGMA foreign_keys').getSingle();
 
-    expect(row.read<int>('foreign_keys'), 1);
-  });
+      expect(row.read<int>('foreign_keys'), 1);
+    },
+  );
 
   test('deleting a profile cascades profile-owned rows', () async {
     final db = await _openRealDb();
     final now = DateTime.now().millisecondsSinceEpoch;
     final profileId = await db.insertProfile(
-      ProfilesCompanion.insert(
-        name: 'Temp',
-        createdAt: now,
-        updatedAt: now,
-      ),
+      ProfilesCompanion.insert(name: 'Temp', createdAt: now, updatedAt: now),
     );
     await db.upsertProfileSetting(
       ProfileSettingsCompanion.insert(
@@ -159,13 +158,14 @@ void main() {
     expect(await _count(db, 'book_profiles'), 0);
   });
 
-  test(
-      'deleting an epub book clears its tag assignments (v77 逻辑外键：'
+  test('deleting an epub book clears its tag assignments (v77 逻辑外键：'
       '删除路径显式清理，不再依赖 DB cascade)', () async {
     final db = await _openRealDb();
     final now = DateTime.now().millisecondsSinceEpoch;
     const String bookKey = 'Book';
-    await db.into(db.epubBooks).insert(
+    await db
+        .into(db.epubBooks)
+        .insert(
           EpubBooksCompanion.insert(
             bookKey: bookKey,
             title: 'Book',
@@ -176,12 +176,9 @@ void main() {
             importedAt: now,
           ),
         );
-    final tagId = await db.into(db.bookTags).insert(
-          BookTagsCompanion.insert(
-            name: 'Tag',
-            createdAt: now,
-          ),
-        );
+    final tagId = await db
+        .into(db.bookTags)
+        .insert(BookTagsCompanion.insert(name: 'Tag', createdAt: now));
     await db.addTagToBook(bookKey, tagId);
     expect(await _count(db, 'tag_assignments'), 1);
 
@@ -193,9 +190,9 @@ void main() {
   test('deleting a tag cascades its assignments (tag_id 真 FK 保留)', () async {
     final db = await _openRealDb();
     final now = DateTime.now().millisecondsSinceEpoch;
-    final tagId = await db.into(db.bookTags).insert(
-          BookTagsCompanion.insert(name: 'T', createdAt: now),
-        );
+    final tagId = await db
+        .into(db.bookTags)
+        .insert(BookTagsCompanion.insert(name: 'T', createdAt: now));
     await db.addTagToGame('game-1', tagId);
     expect(await _count(db, 'tag_assignments'), 1);
 
@@ -204,8 +201,7 @@ void main() {
     expect(await _count(db, 'tag_assignments'), 0);
   });
 
-  test(
-      'deleting a media source sets source_id NULL on its books (setNull, '
+  test('deleting a media source sets source_id NULL on its books (setNull, '
       'not cascade)', () async {
     // TODO-817 M0: this is the repo's FIRST onDelete:setNull FK. _openRealDb is
     // mandatory because only the on-disk DB has PRAGMA foreign_keys=ON enforced
@@ -224,7 +220,9 @@ void main() {
     );
 
     const String bookKey = 'SourcedBook';
-    await db.into(db.epubBooks).insert(
+    await db
+        .into(db.epubBooks)
+        .insert(
           EpubBooksCompanion.insert(
             bookKey: bookKey,
             title: 'SourcedBook',
@@ -247,9 +245,9 @@ void main() {
     );
 
     // Precondition: both rows point at the source.
-    final epubBefore = await (db.select(db.epubBooks)
-          ..where((t) => t.bookKey.equals(bookKey)))
-        .getSingle();
+    final epubBefore = await (db.select(
+      db.epubBooks,
+    )..where((t) => t.bookKey.equals(bookKey))).getSingle();
     expect(epubBefore.sourceId, sourceId);
     final videoBefore = await db.getVideoBookByBookUid(bookUid);
     expect(videoBefore!.sourceId, sourceId);
@@ -260,42 +258,47 @@ void main() {
     // setNull: the media rows SURVIVE; only source_id is nulled.
     expect(await _count(db, 'epub_books'), 1);
     expect(await _count(db, 'video_books'), 1);
-    final epubAfter = await (db.select(db.epubBooks)
-          ..where((t) => t.bookKey.equals(bookKey)))
-        .getSingle();
+    final epubAfter = await (db.select(
+      db.epubBooks,
+    )..where((t) => t.bookKey.equals(bookKey))).getSingle();
     expect(epubAfter.sourceId, isNull);
     final videoAfter = await db.getVideoBookByBookUid(bookUid);
     expect(videoAfter!.sourceId, isNull);
   });
 
-  test('migration tolerates legacy database with existing sort order column',
-      () async {
-    final db = await _openLegacyDbWithExistingSortOrder();
+  test(
+    'migration tolerates legacy database with existing sort order column',
+    () async {
+      final db = await _openLegacyDbWithExistingSortOrder();
 
-    await db.customSelect('SELECT sort_order FROM book_tags').get();
-    final row = await db.customSelect('PRAGMA user_version').getSingle();
+      await db.customSelect('SELECT sort_order FROM book_tags').get();
+      final row = await db.customSelect('PRAGMA user_version').getSingle();
 
-    expect(row.read<int>('user_version'), db.schemaVersion);
-  });
-
-  test('migration tolerates legacy database with existing reader offset column',
-      () async {
-    final db = await _openLegacyDbWithExistingReaderPositionOffset();
-
-    await db.customSelect('SELECT char_offset FROM reader_positions').get();
-    final row = await db.customSelect('PRAGMA user_version').getSingle();
-
-    expect(row.read<int>('user_version'), db.schemaVersion);
-  });
+      expect(row.read<int>('user_version'), db.schemaVersion);
+    },
+  );
 
   test(
-      'migration tolerates legacy database with existing dictionary type column',
-      () async {
-    final db = await _openLegacyDbWithExistingDictionaryType();
+    'migration tolerates legacy database with existing reader offset column',
+    () async {
+      final db = await _openLegacyDbWithExistingReaderPositionOffset();
 
-    await db.customSelect('SELECT type FROM dictionary_metadata').get();
-    final row = await db.customSelect('PRAGMA user_version').getSingle();
+      await db.customSelect('SELECT char_offset FROM reader_positions').get();
+      final row = await db.customSelect('PRAGMA user_version').getSingle();
 
-    expect(row.read<int>('user_version'), db.schemaVersion);
-  });
+      expect(row.read<int>('user_version'), db.schemaVersion);
+    },
+  );
+
+  test(
+    'migration tolerates legacy database with existing dictionary type column',
+    () async {
+      final db = await _openLegacyDbWithExistingDictionaryType();
+
+      await db.customSelect('SELECT type FROM dictionary_metadata').get();
+      final row = await db.customSelect('PRAGMA user_version').getSingle();
+
+      expect(row.read<int>('user_version'), db.schemaVersion);
+    },
+  );
 }

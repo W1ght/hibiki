@@ -88,7 +88,7 @@ abstract interface class SystemOcrPlatform {
 /// 生产实现：走平台通道。
 class MethodChannelSystemOcr implements SystemOcrPlatform {
   const MethodChannelSystemOcr({MethodChannel? channel})
-      : _channel = channel ?? kSystemOcrChannel;
+    : _channel = channel ?? kSystemOcrChannel;
 
   final MethodChannel _channel;
 
@@ -114,10 +114,7 @@ class MethodChannelSystemOcr implements SystemOcrPlatform {
     try {
       raw = await _channel.invokeMapMethod<Object?, Object?>(
         'recognize',
-        <String, Object?>{
-          'bytes': imageBytes,
-          'language': language,
-        },
+        <String, Object?>{'bytes': imageBytes, 'language': language},
       );
     } on PlatformException catch (error) {
       // 模型没就绪（unbundled ML Kit 的模型由 Google Play 服务保管，可能还在下、
@@ -136,8 +133,9 @@ class MethodChannelSystemOcr implements SystemOcrPlatform {
 }
 
 /// 平台通道。原生侧实现同名方法。
-const MethodChannel kSystemOcrChannel =
-    MethodChannel('app.fushi.reader/system_ocr');
+const MethodChannel kSystemOcrChannel = MethodChannel(
+  'app.fushi.reader/system_ocr',
+);
 
 /// 把平台回传的 Map 解析成 [SystemOcrPageResult]。
 ///
@@ -164,13 +162,17 @@ SystemOcrPageResult parseSystemOcrPayload(Map<Object?, Object?> raw) {
       if (right <= left || bottom <= top) continue;
       final Rect rect = Rect.fromLTRB(left, top, right, bottom);
       final Object? vertical = entry['vertical'];
-      lines.add(SystemOcrTextLine(
-        text: text,
-        rect: rect,
-        // 平台不表态时按包围盒推断：高远大于宽的行就是竖排。漫画气泡里这条
-        // 启发式足够准，而且错了也只影响 writing-mode，不影响能不能查词。
-        isVertical: vertical is bool ? vertical : rect.height > rect.width * 1.6,
-      ));
+      lines.add(
+        SystemOcrTextLine(
+          text: text,
+          rect: rect,
+          // 平台不表态时按包围盒推断：高远大于宽的行就是竖排。漫画气泡里这条
+          // 启发式足够准，而且错了也只影响 writing-mode，不影响能不能查词。
+          isVertical: vertical is bool
+              ? vertical
+              : rect.height > rect.width * 1.6,
+        ),
+      );
     }
   }
   return SystemOcrPageResult(

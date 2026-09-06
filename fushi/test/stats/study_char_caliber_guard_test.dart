@@ -44,23 +44,35 @@ void main() {
     studyCharWritePaths.forEach((String domain, String path) {
       test('[$domain] 走 countStudyChars，且自己不再裸数码点', () {
         final File f = File(path);
-        expect(f.existsSync(), isTrue,
-            reason: '$path 不在了。学习字数写入路径重命名/删除必须同步改这张表，'
-                '否则守卫会静默退化成零断言。');
+        expect(
+          f.existsSync(),
+          isTrue,
+          reason:
+              '$path 不在了。学习字数写入路径重命名/删除必须同步改这张表，'
+              '否则守卫会静默退化成零断言。',
+        );
         // 剥注释：video_watch_tracker.dart 的注释里就写着「此前是裸 runes.length」，
         // 不剥的话反向断言会被自己的迁移说明命中。
         final String src = maskComments(f.readAsStringSync());
-        expect(src.contains('countStudyChars('), isTrue,
-            reason: '$path 不再调 countStudyChars —— $domain 这一条又自己算了一套口径。\n'
-                '四个域的字数进的是同一列（study_segments.chars），口径不同源时'
-                '跨媒体的每日目标与热力图本身就不成立。');
+        expect(
+          src.contains('countStudyChars('),
+          isTrue,
+          reason:
+              '$path 不再调 countStudyChars —— $domain 这一条又自己算了一套口径。\n'
+              '四个域的字数进的是同一列（study_segments.chars），口径不同源时'
+              '跨媒体的每日目标与热力图本身就不成立。',
+        );
         for (final String naked in const <String>[
           '.runes.length',
           '.characters.length',
         ]) {
-          expect(src.contains(naked), isFalse,
-              reason: '$path 里出现了 $naked —— 学习字数写入路径不许裸数码点/字素，'
-                  '一律走 countStudyChars（lib/src/stats/study_char_count.dart）。');
+          expect(
+            src.contains(naked),
+            isFalse,
+            reason:
+                '$path 里出现了 $naked —— 学习字数写入路径不许裸数码点/字素，'
+                '一律走 countStudyChars（lib/src/stats/study_char_count.dart）。',
+          );
         }
       });
     });
@@ -110,17 +122,22 @@ void main() {
 
       scan(Directory('lib'), '');
       final Directory pkgs = Directory('../packages');
-      expect(pkgs.existsSync(), isTrue,
-          reason: '../packages 不存在——测试的工作目录不是 fushi/，扫描面塌了');
+      expect(
+        pkgs.existsSync(),
+        isTrue,
+        reason: '../packages 不存在——测试的工作目录不是 fushi/，扫描面塌了',
+      );
       for (final FileSystemEntity pkg in pkgs.listSync()) {
         if (pkg is! Directory) continue;
         final String name = pkg.path.replaceAll(r'\', '/').split('/').last;
         scan(Directory('${pkg.path}/lib'), 'packages/$name/');
       }
-      expectScanScale(scanned,
-          what: 'fushi/lib + packages/*/lib 下的 .dart',
-          atLeast: 900,
-          measured: 1210);
+      expectScanScale(
+        scanned,
+        what: 'fushi/lib + packages/*/lib 下的 .dart',
+        atLeast: 900,
+        measured: 1210,
+      );
 
       final List<String> offenders = <String>[];
       found.forEach((String path, int n) {
@@ -138,13 +155,17 @@ void main() {
           offenders.add('$path: 白名单登记了但一处都没扫到（白名单该清了）');
         }
       }
-      expect(offenders, isEmpty,
-          reason: '`.runes.length` / `.characters.length` 的白名单对不上：\n'
-              '${offenders.join('\n')}\n\n'
-              '如果它是**学习字数**，改用 countStudyChars'
-              '（lib/src/stats/study_char_count.dart）；\n'
-              '如果它是普通字符串长度（日志/排版/校验/索引），把它登记进本测试的白名单'
-              '并写清用途。');
+      expect(
+        offenders,
+        isEmpty,
+        reason:
+            '`.runes.length` / `.characters.length` 的白名单对不上：\n'
+            '${offenders.join('\n')}\n\n'
+            '如果它是**学习字数**，改用 countStudyChars'
+            '（lib/src/stats/study_char_count.dart）；\n'
+            '如果它是普通字符串长度（日志/排版/校验/索引），把它登记进本测试的白名单'
+            '并写清用途。',
+      );
     });
   });
 
@@ -171,31 +192,31 @@ void main() {
   const Map<String, List<String>> countingFns = <String, List<String>>{
     '$paginationPath|countChars: function(text) {': <String>['fushiStudyUnits'],
     '$paginationPath|countCharsBeforeViewport: function(': <String>[
-      'fushiStudyUnits'
+      'fushiStudyUnits',
     ],
     '$paginationPath|countCharsBeforeViewportPaged: function(': <String>[
-      'fushiStudyUnits'
+      'fushiStudyUnits',
     ],
     // 分页 shell（2512）与连续 shell（3080）各一份，两份都自己数。
     '$paginationPath|getFirstVisibleCharOffset: function() {': <String>[
       'fushiStudyUnits',
-      'fushiStudyUnits'
+      'fushiStudyUnits',
     ],
     // 分页版自己数；连续版转发给 collapsedRangeAtCharOffset（下一条已钉）。
     '$paginationPath|scrollToCharOffset: function(': <String>[
       'fushiStudyUnits',
-      'collapsedRangeAtCharOffset'
+      'collapsedRangeAtCharOffset',
     ],
     '$paginationPath|collapsedRangeAtCharOffset: function(': <String>[
-      'fushiStudyUnits'
+      'fushiStudyUnits',
     ],
     '$selectionPath|getNormalizedOffset: function(': <String>[
-      'fushiStudyUnits'
+      'fushiStudyUnits',
     ],
     // 87 行是真实现；143 行是 ReaderVnContentStream 里的转发。
     '$vnPath|countChars(text) {': <String>[
       'fushiStudyUnits',
-      'textSemantics().countChars'
+      'textSemantics().countChars',
     ],
     '$vnPath|textItems: function() {': <String>['fushiStudyUnits'],
   };
@@ -242,9 +263,13 @@ void main() {
         }
         body.writeln(lines[j]);
       }
-      expect(closed, isTrue,
-          reason: '取不到 `$header` 的函数体收口行（缩进 ${indent.length} 空格）。'
-              '缩进变了就换锚点，别把守卫留在恒不匹配的状态上——那等于零断言。');
+      expect(
+        closed,
+        isTrue,
+        reason:
+            '取不到 `$header` 的函数体收口行（缩进 ${indent.length} 空格）。'
+            '缩进变了就换锚点，别把守卫留在恒不匹配的状态上——那等于零断言。',
+      );
       bodies.add(body.toString());
     }
     return bodies;
@@ -260,25 +285,39 @@ void main() {
         expect(f.existsSync(), isTrue, reason: '$path 不在了');
         // Dart 注释 + 三引号串内的 JS 注释一起掩（等长掩码，下标不漂移）。
         final List<String> bodies = jsFunctionBodies(
-            maskCommentsAndScriptLines(f.readAsStringSync()), header);
-        expect(bodies.length, evidence.length,
-            reason: '$path 里 `$header` 有 ${bodies.length} 份实现，本表登记了 '
-                '${evidence.length} 份。\n'
-                '多出来的那份没被任何断言盯着 —— 这正是「调用点漏改一个」的形状；'
-                '少了则是函数改名/删除，同步改表。');
+          maskCommentsAndScriptLines(f.readAsStringSync()),
+          header,
+        );
+        expect(
+          bodies.length,
+          evidence.length,
+          reason:
+              '$path 里 `$header` 有 ${bodies.length} 份实现，本表登记了 '
+              '${evidence.length} 份。\n'
+              '多出来的那份没被任何断言盯着 —— 这正是「调用点漏改一个」的形状；'
+              '少了则是函数改名/删除，同步改表。',
+        );
         for (int i = 0; i < bodies.length; i++) {
           final String body = bodies[i];
-          expect(body.contains(evidence[i]), isTrue,
-              reason: '$path 的 `$header`（第 ${i + 1} 处）里找不到 '
-                  '`${evidence[i]}`。\n'
-                  '这是**计数/偏移**函数，口径必须与 Dart countStudyChars 同源'
-                  '（自己数就走 window.fushiStudyUnits，转发就转给本表里的另一条）；'
-                  '换回逐码点判据会让 charOffset 用错口径写进 DB —— '
-                  '续读位置静默偏移，不崩不报错。');
-          expect(body.contains('isMatchableChar'), isFalse,
-              reason: '$path 的 `$header`（第 ${i + 1} 处）里出现了 isMatchableChar。\n'
-                  'isMatchableChar 是**有声书 cue 匹配/归一化**的白名单判据，'
-                  '不是学习单位判据；拿它做计数就是「调用点漏改一个」的形状。');
+          expect(
+            body.contains(evidence[i]),
+            isTrue,
+            reason:
+                '$path 的 `$header`（第 ${i + 1} 处）里找不到 '
+                '`${evidence[i]}`。\n'
+                '这是**计数/偏移**函数，口径必须与 Dart countStudyChars 同源'
+                '（自己数就走 window.fushiStudyUnits，转发就转给本表里的另一条）；'
+                '换回逐码点判据会让 charOffset 用错口径写进 DB —— '
+                '续读位置静默偏移，不崩不报错。',
+          );
+          expect(
+            body.contains('isMatchableChar'),
+            isFalse,
+            reason:
+                '$path 的 `$header`（第 ${i + 1} 处）里出现了 isMatchableChar。\n'
+                'isMatchableChar 是**有声书 cue 匹配/归一化**的白名单判据，'
+                '不是学习单位判据；拿它做计数就是「调用点漏改一个」的形状。',
+          );
         }
       });
     });
@@ -290,31 +329,47 @@ void main() {
         final File f = File(path);
         expect(f.existsSync(), isTrue, reason: '$path 不在了');
         final List<String> bodies = jsFunctionBodies(
-            maskCommentsAndScriptLines(f.readAsStringSync()), header);
+          maskCommentsAndScriptLines(f.readAsStringSync()),
+          header,
+        );
         expect(bodies, isNotEmpty, reason: '$path 里找不到 `$header`');
         for (final String body in bodies) {
-          expect(body.contains('isMatchableChar'), isTrue,
-              reason: '$path 的 `$header` 丢了 isMatchableChar。\n'
-                  '这是有声书 cue 与 DOM 文本的**归一化匹配**，口径必须与音频侧的'
-                  'AudioTextNormalizer 一致，不是学习单位口径。');
-          expect(body.contains('fushiStudyUnits'), isFalse,
-              reason: '$path 的 `$header` 改用了 fushiStudyUnits。\n'
-                  '把 cue 匹配也一刀切换成学习单位判据，会让有声书高亮与音频对不上。');
+          expect(
+            body.contains('isMatchableChar'),
+            isTrue,
+            reason:
+                '$path 的 `$header` 丢了 isMatchableChar。\n'
+                '这是有声书 cue 与 DOM 文本的**归一化匹配**，口径必须与音频侧的'
+                'AudioTextNormalizer 一致，不是学习单位口径。',
+          );
+          expect(
+            body.contains('fushiStudyUnits'),
+            isFalse,
+            reason:
+                '$path 的 `$header` 改用了 fushiStudyUnits。\n'
+                '把 cue 匹配也一刀切换成学习单位判据，会让有声书高亮与音频对不上。',
+          );
         }
       });
     }
 
     test('取函数体的锚点自身可信（不会把相邻函数一起吞进来）', () {
-      final String src =
-          maskCommentsAndScriptLines(File(selectionPath).readAsStringSync());
-      final List<String> bodies =
-          jsFunctionBodies(src, 'getNormalizedOffset: function(');
+      final String src = maskCommentsAndScriptLines(
+        File(selectionPath).readAsStringSync(),
+      );
+      final List<String> bodies = jsFunctionBodies(
+        src,
+        'getNormalizedOffset: function(',
+      );
       expect(bodies.length, 1);
       final String body = bodies.single;
       expect(body.contains('fushiStudyUnits.isUnitEnd'), isTrue);
       // 紧邻的下一个函数不得被吞进来——否则「这个函数里有没有 X」的断言就没意义了。
-      expect(body.contains('clearHighlightWrappers: function'), isFalse,
-          reason: '函数体收口失败，把下一个方法也吞进来了');
+      expect(
+        body.contains('clearHighlightWrappers: function'),
+        isFalse,
+        reason: '函数体收口失败，把下一个方法也吞进来了',
+      );
     });
   });
 }

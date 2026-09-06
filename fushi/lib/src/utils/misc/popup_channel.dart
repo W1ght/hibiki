@@ -11,21 +11,17 @@ class PopupChannel {
   static const _channel = FushiChannels.popup;
 
   void Function(String text, int charIndex, Rect? anchor, Rect? subtitle)?
-      _onNewProcessText;
+  _onNewProcessText;
 
   void init({
     void Function(String text, int charIndex, Rect? anchor, Rect? subtitle)?
-        onNewProcessText,
+    onNewProcessText,
   }) {
     _onNewProcessText = onNewProcessText;
     _channel.setMethodCallHandler((call) async {
       if (call.method == 'onNewProcessText' && _onNewProcessText != null) {
-        final ({
-          String text,
-          int charIndex,
-          Rect? anchor,
-          Rect? subtitle
-        }) parsed = _parseProcessTextArgs(call.arguments);
+        final ({String text, int charIndex, Rect? anchor, Rect? subtitle})
+        parsed = _parseProcessTextArgs(call.arguments);
         if (parsed.text.trim().isNotEmpty) {
           _onNewProcessText!(
             parsed.text,
@@ -51,14 +47,16 @@ class PopupChannel {
   }
 
   Future<({String? text, int charIndex, Rect? anchor, Rect? subtitle})>
-      getInitialProcessText() async {
+  getInitialProcessText() async {
     try {
-      final Object? result =
-          await _channel.invokeMethod<Object>('getInitialProcessText');
+      final Object? result = await _channel.invokeMethod<Object>(
+        'getInitialProcessText',
+      );
       if (result is Map) {
         final String? text = result['text']?.toString();
-        final int charIndex =
-            result['charIndex'] is int ? result['charIndex'] as int : -1;
+        final int charIndex = result['charIndex'] is int
+            ? result['charIndex'] as int
+            : -1;
         return (
           text: text,
           charIndex: charIndex,
@@ -71,21 +69,23 @@ class PopupChannel {
       }
       return (text: null, charIndex: -1, anchor: null, subtitle: null);
     } catch (e, stack) {
-      ErrorLogService.instance
-          .log('PopupChannel.getInitialProcessText', e, stack);
+      ErrorLogService.instance.log(
+        'PopupChannel.getInitialProcessText',
+        e,
+        stack,
+      );
       debugPrint('[Fushi-popup] getInitialProcessText failed: $e');
       return (text: null, charIndex: -1, anchor: null, subtitle: null);
     }
   }
 
   static ({String text, int charIndex, Rect? anchor, Rect? subtitle})
-      _parseProcessTextArgs(
-    Object? args,
-  ) {
+  _parseProcessTextArgs(Object? args) {
     if (args is Map) {
       final String text = args['text']?.toString() ?? '';
-      final int charIndex =
-          args['charIndex'] is int ? args['charIndex'] as int : -1;
+      final int charIndex = args['charIndex'] is int
+          ? args['charIndex'] as int
+          : -1;
       return (
         text: text,
         charIndex: charIndex,

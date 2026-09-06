@@ -257,7 +257,8 @@ final class OpdsPublicationEntry extends OpdsEntry {
       if (type == null || type.kind != kind) continue;
       // 分数越大越优先：importable 是硬门（+100），其余按枚举声明序倒排，
       // 让 epub(0) 得分高于 pdf(1) 高于 txt(2)。
-      final int score = (type.importable ? 100 : 0) +
+      final int score =
+          (type.importable ? 100 : 0) +
           (OpdsFileType.values.length - type.index);
       if (score > bestScore) {
         bestScore = score;
@@ -269,10 +270,10 @@ final class OpdsPublicationEntry extends OpdsEntry {
 
   /// 本条目覆盖到的所有媒体域（一条 OPDS 条目可能同时供 epub 与 cbz）。
   Set<DiscoveryMediaKind> get kinds => <DiscoveryMediaKind>{
-        for (final OpdsAcquisitionLink link in links)
-          if (link.rel.isDirectDownload && link.fileType != null)
-            link.fileType!.kind,
-      };
+    for (final OpdsAcquisitionLink link in links)
+      if (link.rel.isDirectDownload && link.fileType != null)
+        link.fileType!.kind,
+  };
 }
 
 /// 一页 OPDS 目录。

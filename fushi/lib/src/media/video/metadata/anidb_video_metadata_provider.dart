@@ -41,31 +41,29 @@ class AniDbVideoMetadataProvider implements VideoMetadataProvider {
     AniDbProviderSleep? sleep,
     Duration apiRequestInterval = const Duration(seconds: 3),
     bool? shareRequestGate,
-  })  : assert(client == null || transport == null),
-        _clientName = clientName.trim().toLowerCase(),
-        _clientVersion = clientVersion,
-        // AniDB forbids rapid retries. Every real retry must re-enter this
-        // provider's 2s+ queue instead of happening inside the transport.
-        _transport = transport ??
-            VideoMetadataHttpClient(client: client, maxAttempts: 1),
-        _ownsTransport = transport == null,
-        _titleCatalog = titleCatalog ?? _sharedTitleCatalog,
-        _now = now ?? DateTime.now,
-        _sleep = sleep ?? Future<void>.delayed,
-        _requestGate = (shareRequestGate ??
-                (client == null &&
-                    transport == null &&
-                    titleCatalog == null &&
-                    now == null &&
-                    sleep == null))
-            ? _sharedRequestGates.putIfAbsent(
-                apiUrl,
-                _AniDbRequestGate.new,
-              )
-            : _AniDbRequestGate(),
-        apiRequestInterval = apiRequestInterval < _minimumRequestInterval
-            ? _minimumRequestInterval
-            : apiRequestInterval;
+  }) : assert(client == null || transport == null),
+       _clientName = clientName.trim().toLowerCase(),
+       _clientVersion = clientVersion,
+       // AniDB forbids rapid retries. Every real retry must re-enter this
+       // provider's 2s+ queue instead of happening inside the transport.
+       _transport =
+           transport ?? VideoMetadataHttpClient(client: client, maxAttempts: 1),
+       _ownsTransport = transport == null,
+       _titleCatalog = titleCatalog ?? _sharedTitleCatalog,
+       _now = now ?? DateTime.now,
+       _sleep = sleep ?? Future<void>.delayed,
+       _requestGate =
+           (shareRequestGate ??
+               (client == null &&
+                   transport == null &&
+                   titleCatalog == null &&
+                   now == null &&
+                   sleep == null))
+           ? _sharedRequestGates.putIfAbsent(apiUrl, _AniDbRequestGate.new)
+           : _AniDbRequestGate(),
+       apiRequestInterval = apiRequestInterval < _minimumRequestInterval
+           ? _minimumRequestInterval
+           : apiRequestInterval;
 
   static const Set<String> _reservedShokoClientNames = <String>{
     'animeplugin',
@@ -385,8 +383,9 @@ class AniDbVideoMetadataProvider implements VideoMetadataProvider {
               const <XmlElement>[])
         if (_text(tag.getElement('name')) case final String name) name,
     ];
-    final String restricted =
-        (root.getAttribute('restricted') ?? '').trim().toLowerCase();
+    final String restricted = (root.getAttribute('restricted') ?? '')
+        .trim()
+        .toLowerCase();
     return _AniDbAnime(
       animeId: animeId,
       animeType: type.trim(),
@@ -442,8 +441,8 @@ class AniDbVideoMetadataProvider implements VideoMetadataProvider {
       ratingVotes: anime.ratingVotes,
       runtimeMinutes:
           kind == VideoMetadataMediaKind.movie && anime.episodes.isNotEmpty
-              ? anime.episodes.first.runtimeMinutes
-              : null,
+          ? anime.episodes.first.runtimeMinutes
+          : null,
       contentRating: anime.restricted ? 'R18+' : null,
       originalLanguage: 'ja',
       homepage: anime.homepage ?? 'https://anidb.net/anime/${anime.animeId}',
@@ -538,18 +537,19 @@ class AniDbVideoMetadataProvider implements VideoMetadataProvider {
     bool allowMissingType = false,
   }) =>
       <AniDbTitle>[
-        for (final XmlElement element
-            in parent?.findElements('title') ?? const <XmlElement>[])
-          if (_text(element) case final String value)
-            AniDbTitle(
-              value: value,
-              type: (element.getAttribute('type') ??
-                      (allowMissingType ? 'none' : ''))
-                  .trim()
-                  .toLowerCase(),
-              language: _xmlLanguage(element),
-            ),
-      ]
+            for (final XmlElement element
+                in parent?.findElements('title') ?? const <XmlElement>[])
+              if (_text(element) case final String value)
+                AniDbTitle(
+                  value: value,
+                  type:
+                      (element.getAttribute('type') ??
+                              (allowMissingType ? 'none' : ''))
+                          .trim()
+                          .toLowerCase(),
+                  language: _xmlLanguage(element),
+                ),
+          ]
           .where(
             (AniDbTitle title) =>
                 title.type.isNotEmpty && title.language.isNotEmpty,
@@ -578,10 +578,7 @@ class AniDbVideoMetadataProvider implements VideoMetadataProvider {
       // compatibility fallback for cached/test fixtures.
       final List<AniDbTitle> titles = directTitles.isNotEmpty
           ? directTitles
-          : _parseTitles(
-              element.getElement('titles'),
-              allowMissingType: true,
-            );
+          : _parseTitles(element.getElement('titles'), allowMissingType: true);
       final AniDbTitleRecord record = AniDbTitleRecord(
         animeId: episodeId ?? episodeNumber,
         titles: titles.isEmpty
@@ -629,15 +626,15 @@ class AniDbVideoMetadataProvider implements VideoMetadataProvider {
   }
 
   List<_AniDbCreator> _parseCreators(XmlElement? parent) => <_AniDbCreator>[
-        for (final XmlElement element
-            in parent?.findElements('name') ?? const <XmlElement>[])
-          if (_text(element) case final String name)
-            _AniDbCreator(
-              id: int.tryParse(element.getAttribute('id') ?? ''),
-              name: name,
-              type: (element.getAttribute('type') ?? '').trim(),
-            ),
-      ];
+    for (final XmlElement element
+        in parent?.findElements('name') ?? const <XmlElement>[])
+      if (_text(element) case final String name)
+        _AniDbCreator(
+          id: int.tryParse(element.getAttribute('id') ?? ''),
+          name: name,
+          type: (element.getAttribute('type') ?? '').trim(),
+        ),
+  ];
 
   List<VideoMetadataCredit> _mapStaffCredits(List<_AniDbCreator> creators) {
     final List<VideoMetadataCredit> credits = <VideoMetadataCredit>[];
@@ -762,11 +759,13 @@ class AniDbVideoMetadataProvider implements VideoMetadataProvider {
       throw StateError('AniDB title record contains no usable titles');
     }
     final String title = selected.value;
-    final AniDbTitle? japanese = _findTitle(record.titles, 'ja', 'main') ??
+    final AniDbTitle? japanese =
+        _findTitle(record.titles, 'ja', 'main') ??
         _findTitle(record.titles, 'ja', 'official') ??
         _findTitle(record.titles, 'ja', null);
-    final String? originalTitle =
-        japanese == null || japanese.value == title ? null : japanese.value;
+    final String? originalTitle = japanese == null || japanese.value == title
+        ? null
+        : japanese.value;
     return _SelectedTitles(
       title: title,
       originalTitle: originalTitle,
@@ -925,13 +924,14 @@ String? _text(XmlElement? element) {
   return value.isEmpty ? null : value;
 }
 
-String _xmlLanguage(XmlElement element) => (element.getAttribute('xml:lang') ??
-        element.getAttribute(
-          'lang',
-          namespace: 'http://www.w3.org/XML/1998/namespace',
-        ) ??
-        '')
-    .trim();
+String _xmlLanguage(XmlElement element) =>
+    (element.getAttribute('xml:lang') ??
+            element.getAttribute(
+              'lang',
+              namespace: 'http://www.w3.org/XML/1998/namespace',
+            ) ??
+            '')
+        .trim();
 
 String? _date(String? value) {
   final String text = value?.trim() ?? '';

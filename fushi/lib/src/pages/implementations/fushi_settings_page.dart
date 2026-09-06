@@ -66,8 +66,10 @@ class _FushiSettingsDialogPageState extends BasePageState
   }
 
   Widget _buildContent() {
-    final SettingsContext settingsContext =
-        createSettingsContext(appModel: appModel, ref: ref);
+    final SettingsContext settingsContext = createSettingsContext(
+      appModel: appModel,
+      ref: ref,
+    );
     final SettingsDestination destination = buildReaderQuickSettingsDestination(
       settingsContext,
     );

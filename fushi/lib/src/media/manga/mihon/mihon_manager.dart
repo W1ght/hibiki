@@ -40,8 +40,9 @@ class MihonManager extends ChangeNotifier {
       Directory(p.join(rootDirectory.path, 'cache', 'covers')),
     );
     if (Platform.isWindows || Platform.isMacOS) {
-      _exitShutdown =
-          ExitFlushRegistry.instance.register(shutdownRuntimeForExit);
+      _exitShutdown = ExitFlushRegistry.instance.register(
+        shutdownRuntimeForExit,
+      );
     }
   }
 
@@ -108,10 +109,12 @@ class MihonManager extends ChangeNotifier {
     _notify();
     try {
       await rootDirectory.create(recursive: true);
-      await Directory(p.join(rootDirectory.path, 'extensions'))
-          .create(recursive: true);
-      await Directory(p.join(rootDirectory.path, 'tmp'))
-          .create(recursive: true);
+      await Directory(
+        p.join(rootDirectory.path, 'extensions'),
+      ).create(recursive: true);
+      await Directory(
+        p.join(rootDirectory.path, 'tmp'),
+      ).create(recursive: true);
       await reload();
       // 必须在 reload 之后：判断孤儿要拿 installed 跟标记里的包名比对。
       await _recoverAbandonedPreview();
@@ -148,8 +151,10 @@ class MihonManager extends ChangeNotifier {
     );
     if (seeded) return;
     // 用户自己先加过同一个地址：认下它，别用种子行覆盖掉他的排序/启用状态。
-    if (!stores.any((MangaExtensionStoreRow row) =>
-        row.indexUrl == kMihonDefaultStoreIndexUrl)) {
+    if (!stores.any(
+      (MangaExtensionStoreRow row) =>
+          row.indexUrl == kMihonDefaultStoreIndexUrl,
+    )) {
       await database.upsertMangaExtensionStore(
         MangaExtensionStoresCompanion.insert(
           indexUrl: kMihonDefaultStoreIndexUrl,
@@ -168,9 +173,9 @@ class MihonManager extends ChangeNotifier {
   int _nextStoreSortOrder() => stores.isEmpty
       ? 0
       : stores
-              .map((MangaExtensionStoreRow row) => row.sortOrder)
-              .reduce((int a, int b) => a > b ? a : b) +
-          1;
+                .map((MangaExtensionStoreRow row) => row.sortOrder)
+                .reduce((int a, int b) => a > b ? a : b) +
+            1;
 
   Future<void> reload() async {
     stores = await database.getMangaExtensionStores();
@@ -179,21 +184,15 @@ class MihonManager extends ChangeNotifier {
     _notify();
   }
 
-  Future<void> addStore(
-    String url, {
-    bool allowInsecure = false,
-  }) async {
+  Future<void> addStore(String url, {bool allowInsecure = false}) async {
     await _guarded(() async {
       final MihonStoreFetchResult fetched = await _storeClient.fetchStore(
         url,
         allowInsecure: allowInsecure,
       );
       final MihonStore store = fetched.store!;
-      final List<MihonAvailableExtension> extensions =
-          await _storeClient.fetchExtensions(
-        store,
-        allowInsecure: allowInsecure,
-      );
+      final List<MihonAvailableExtension> extensions = await _storeClient
+          .fetchExtensions(store, allowInsecure: allowInsecure);
       final int sortOrder = _nextStoreSortOrder();
       await database.upsertMangaExtensionStore(
         MangaExtensionStoresCompanion.insert(
@@ -212,7 +211,8 @@ class MihonManager extends ChangeNotifier {
       );
       available = <MihonAvailableExtension>[
         ...available.where(
-            (MihonAvailableExtension item) => item.storeUrl != store.indexUrl),
+          (MihonAvailableExtension item) => item.storeUrl != store.indexUrl,
+        ),
         ...extensions,
       ];
       await reload();
@@ -247,8 +247,9 @@ class MihonManager extends ChangeNotifier {
           lastModified: hasReusableCatalogue ? row.lastModified : null,
           allowInsecure: insecure,
         );
-        final MihonStore store =
-            fetched.notModified ? _storeFromRow(row) : fetched.store!;
+        final MihonStore store = fetched.notModified
+            ? _storeFromRow(row)
+            : fetched.store!;
         // A current protobuf/JSON store can embed its complete extension
         // list. A 304 response intentionally has no body, so reconstructing
         // the store from the DB cannot reconstruct that list. Retain the
@@ -256,11 +257,11 @@ class MihonManager extends ChangeNotifier {
         // still be fetched independently from extensionListUrl.
         final List<MihonAvailableExtension> extensions =
             fetched.notModified && store.extensionListUrl == null
-                ? cachedExtensions
-                : await _storeClient.fetchExtensions(
-                    store,
-                    allowInsecure: insecure,
-                  );
+            ? cachedExtensions
+            : await _storeClient.fetchExtensions(
+                store,
+                allowInsecure: insecure,
+              );
         next.addAll(extensions);
         await database.upsertMangaExtensionStore(
           MangaExtensionStoresCompanion.insert(
@@ -341,17 +342,15 @@ class MihonManager extends ChangeNotifier {
       // 落库的身份必须是解析后的那个，不是用户输入的那个。
       if (store.indexUrl != oldIndexUrl &&
           stores.any(
-              (MangaExtensionStoreRow row) => row.indexUrl == store.indexUrl)) {
+            (MangaExtensionStoreRow row) => row.indexUrl == store.indexUrl,
+          )) {
         throw const MihonRuntimeException(
           'STORE_DUPLICATE',
           'Another extension store already uses this URL',
         );
       }
-      final List<MihonAvailableExtension> extensions =
-          await _storeClient.fetchExtensions(
-        store,
-        allowInsecure: allowInsecure,
-      );
+      final List<MihonAvailableExtension> extensions = await _storeClient
+          .fetchExtensions(store, allowInsecure: allowInsecure);
       // 删旧行 + 插新行必须原子。两个独立 await 之间只要出事（第二步抛异常、
       // 进程被杀、设备断电），用户的仓库行就**彻底消失**——比改地址失败严重得多，
       // 而且正是 BUG-1806 那个死局的成因（仓库没了又加不回来）。
@@ -377,8 +376,10 @@ class MihonManager extends ChangeNotifier {
         );
       });
       available = <MihonAvailableExtension>[
-        ...available.where((MihonAvailableExtension item) =>
-            item.storeUrl != oldIndexUrl && item.storeUrl != store.indexUrl),
+        ...available.where(
+          (MihonAvailableExtension item) =>
+              item.storeUrl != oldIndexUrl && item.storeUrl != store.indexUrl,
+        ),
         ...extensions,
       ];
       await reload();
@@ -398,7 +399,8 @@ class MihonManager extends ChangeNotifier {
   ) async {
     final MangaExtensionStoreRow? store = stores
         .where(
-            (MangaExtensionStoreRow row) => row.indexUrl == extension.storeUrl)
+          (MangaExtensionStoreRow row) => row.indexUrl == extension.storeUrl,
+        )
         .firstOrNull;
     if (store == null) {
       throw const MihonRuntimeException(
@@ -454,23 +456,24 @@ class MihonManager extends ChangeNotifier {
       allowInsecure: allowInsecure,
     );
     final MihonStore resolved = fetched.store!;
-    final List<MihonAvailableExtension> extensions =
-        await _storeClient.fetchExtensions(
-      resolved,
-      allowInsecure: allowInsecure,
-    );
+    final List<MihonAvailableExtension> extensions = await _storeClient
+        .fetchExtensions(resolved, allowInsecure: allowInsecure);
     // 索引都重新拉了，顺手让目录跟上：卡片上的版本号不该跟马上要装的东西对不上。
     // `index_v2` 会让最终 indexUrl 与库里那行不同，两个地址的旧条目都要清。
     available = <MihonAvailableExtension>[
-      ...available.where((MihonAvailableExtension item) =>
-          item.storeUrl != store.indexUrl &&
-          item.storeUrl != resolved.indexUrl),
+      ...available.where(
+        (MihonAvailableExtension item) =>
+            item.storeUrl != store.indexUrl &&
+            item.storeUrl != resolved.indexUrl,
+      ),
       ...extensions,
     ];
     _notify();
     final MihonAvailableExtension? target = extensions
-        .where((MihonAvailableExtension item) =>
-            item.packageName == snapshot.packageName)
+        .where(
+          (MihonAvailableExtension item) =>
+              item.packageName == snapshot.packageName,
+        )
         .firstOrNull;
     if (target == null) {
       throw const MihonRuntimeException(
@@ -499,15 +502,13 @@ class MihonManager extends ChangeNotifier {
     String? expectedSigningKey,
   }) async {
     final String sha = sha256.convert(bytes).toString();
-    final File temp = File(p.join(
-      rootDirectory.path,
-      'tmp',
-      'extension-$sha.apk.part',
-    ));
+    final File temp = File(
+      p.join(rootDirectory.path, 'tmp', 'extension-$sha.apk.part'),
+    );
     await temp.writeAsBytes(bytes, flush: true);
     try {
-      final MihonExtensionInspection inspection =
-          await runtime.inspectExtension(temp.path);
+      final MihonExtensionInspection inspection = await runtime
+          .inspectExtension(temp.path);
       if (inspection.libVersion != '1.4' && inspection.libVersion != '1.6') {
         throw MihonRuntimeException(
           'UNSUPPORTED_LIB',
@@ -542,18 +543,21 @@ class MihonManager extends ChangeNotifier {
           );
         }
       }
-      final String expectedSigner =
-          _normalizeFingerprint(expectedSigningKey ?? '');
-      final String actualSigner =
-          _normalizeFingerprint(inspection.signerSha256);
+      final String expectedSigner = _normalizeFingerprint(
+        expectedSigningKey ?? '',
+      );
+      final String actualSigner = _normalizeFingerprint(
+        inspection.signerSha256,
+      );
       if (expectedSigner.isNotEmpty && expectedSigner != actualSigner) {
         throw const MihonRuntimeException(
           'SIGNATURE_MISMATCH',
           'APK signer does not match the extension store signing key',
         );
       }
-      final MangaExtensionRow? current =
-          await database.getMangaExtension(inspection.packageName);
+      final MangaExtensionRow? current = await database.getMangaExtension(
+        inspection.packageName,
+      );
       if (current != null) {
         // 两侧同为 APK 尺度（DB 列存的就是 `apkVersionCode`），自洽，BUG-1996 不动它。
         if (inspection.apkVersionCode < current.versionCode) {
@@ -588,8 +592,9 @@ class MihonManager extends ChangeNotifier {
     MihonInstallProposal proposal, {
     required bool trustSigner,
   }) async {
-    final String signer =
-        _normalizeFingerprint(proposal.inspection.signerSha256);
+    final String signer = _normalizeFingerprint(
+      proposal.inspection.signerSha256,
+    );
     if (!proposal.signerTrusted && !trustSigner) {
       throw const MihonRuntimeException(
         'SIGNER_NOT_TRUSTED',
@@ -608,11 +613,9 @@ class MihonManager extends ChangeNotifier {
         );
       }
       final String packageName = proposal.inspection.packageName;
-      final File target = File(p.join(
-        rootDirectory.path,
-        'extensions',
-        '$packageName.apk',
-      ));
+      final File target = File(
+        p.join(rootDirectory.path, 'extensions', '$packageName.apk'),
+      );
       final File backup = File('${target.path}.previous');
       final bool desktop = Platform.isWindows || Platform.isMacOS;
       if (desktop) {
@@ -640,8 +643,10 @@ class MihonManager extends ChangeNotifier {
             'Extension did not expose any manga sources',
           );
         }
-        final String storedPath =
-            p.join('extensions', '$packageName.${desktop ? 'apk' : 'ext'}');
+        final String storedPath = p.join(
+          'extensions',
+          '$packageName.${desktop ? 'apk' : 'ext'}',
+        );
         await database.upsertMangaExtension(
           MangaExtensionsCompanion.insert(
             packageName: packageName,
@@ -651,7 +656,8 @@ class MihonManager extends ChangeNotifier {
             versionCode: proposal.inspection.apkVersionCode,
             versionName: proposal.inspection.versionName,
             libVersion: proposal.inspection.libVersion,
-            language: proposal.expected?.language ??
+            language:
+                proposal.expected?.language ??
                 loaded
                     .map((MihonSource item) => item.language)
                     .toSet()
@@ -792,10 +798,7 @@ class MihonManager extends ChangeNotifier {
         return;
       }
       await _guarded(
-        () => _discardPreview(
-          packageName,
-          tempPath: session.proposal.tempPath,
-        ),
+        () => _discardPreview(packageName, tempPath: session.proposal.tempPath),
       );
     } finally {
       if (_activePreviewPackage == packageName) {
@@ -928,8 +931,9 @@ class MihonManager extends ChangeNotifier {
     final MangaExtensionRow extension = installed.firstWhere(
       (MangaExtensionRow row) => row.packageName == source.extensionPackage,
     );
-    final List<MihonPreference> persisted =
-        await _readPersistedPreferences(source);
+    final List<MihonPreference> persisted = await _readPersistedPreferences(
+      source,
+    );
     return runtime.getPreferences(
       extensionRef(extension),
       sourceModel(source),
@@ -944,8 +948,9 @@ class MihonManager extends ChangeNotifier {
     final MangaExtensionRow extension = installed.firstWhere(
       (MangaExtensionRow row) => row.packageName == source.extensionPackage,
     );
-    final List<MihonPreference> persisted =
-        await _readPersistedPreferences(source);
+    final List<MihonPreference> persisted = await _readPersistedPreferences(
+      source,
+    );
     final List<MihonPreference> updated = await runtime.setPreference(
       extensionRef(extension),
       sourceModel(source),
@@ -971,10 +976,7 @@ class MihonManager extends ChangeNotifier {
     final MangaExtensionRow extension = installed.firstWhere(
       (MangaExtensionRow row) => row.packageName == source.extensionPackage,
     );
-    await runtime.clearSourceData(
-      extensionRef(extension),
-      sourceModel(source),
-    );
+    await runtime.clearSourceData(extensionRef(extension), sourceModel(source));
     await database.clearMangaSourcePreferences(
       source.extensionPackage,
       source.sourceId,
@@ -1006,12 +1008,12 @@ class MihonManager extends ChangeNotifier {
       );
 
   MihonSource sourceModel(MangaOnlineSourceRow source) => MihonSource(
-        extensionPackage: source.extensionPackage,
-        id: source.sourceId,
-        name: source.name,
-        language: source.language,
-        baseUrl: source.baseUrl,
-      );
+    extensionPackage: source.extensionPackage,
+    id: source.sourceId,
+    name: source.name,
+    language: source.language,
+    baseUrl: source.baseUrl,
+  );
 
   String resolveApkPath(MangaExtensionRow extension) {
     if (Platform.isAndroid) return extension.apkPath;
@@ -1021,43 +1023,45 @@ class MihonManager extends ChangeNotifier {
   Future<List<MihonPreference>> _readPersistedPreferences(
     MangaOnlineSourceRow source,
   ) async {
-    final List<MangaSourcePreferenceRow> rows =
-        await database.getMangaSourcePreferences(
-      source.extensionPackage,
-      source.sourceId,
-    );
-    return rows.map((MangaSourcePreferenceRow row) {
-      final MihonPreferenceKind kind = MihonPreferenceKind.values.firstWhere(
-        (MihonPreferenceKind value) => value.name == row.preferenceType,
-        orElse: () => MihonPreferenceKind.unsupported,
-      );
-      return MihonPreference(
-        key: row.preferenceKey,
-        kind: kind,
-        title: row.preferenceKey,
-        value: jsonDecode(row.valueJson),
-      );
-    }).toList(growable: false);
+    final List<MangaSourcePreferenceRow> rows = await database
+        .getMangaSourcePreferences(source.extensionPackage, source.sourceId);
+    return rows
+        .map((MangaSourcePreferenceRow row) {
+          final MihonPreferenceKind kind = MihonPreferenceKind.values
+              .firstWhere(
+                (MihonPreferenceKind value) => value.name == row.preferenceType,
+                orElse: () => MihonPreferenceKind.unsupported,
+              );
+          return MihonPreference(
+            key: row.preferenceKey,
+            kind: kind,
+            title: row.preferenceKey,
+            value: jsonDecode(row.valueJson),
+          );
+        })
+        .toList(growable: false);
   }
 
   MihonStore _storeFromRow(MangaExtensionStoreRow row) => MihonStore(
-        indexUrl: row.indexUrl,
-        name: row.name,
-        badgeLabel: row.badgeLabel ?? row.name,
-        signingKey: row.signingKey ?? '',
-        contact: row.contactJson == null
-            ? const <String, String?>{}
-            : (jsonDecode(row.contactJson!) as Map<Object?, Object?>)
-                .map<String, String?>(
+    indexUrl: row.indexUrl,
+    name: row.name,
+    badgeLabel: row.badgeLabel ?? row.name,
+    signingKey: row.signingKey ?? '',
+    contact: row.contactJson == null
+        ? const <String, String?>{}
+        : (jsonDecode(row.contactJson!) as Map<Object?, Object?>)
+              .map<String, String?>(
                 (Object? key, Object? value) => MapEntry<String, String?>(
-                    key.toString(), value?.toString()),
+                  key.toString(),
+                  value?.toString(),
+                ),
               ),
-        format: MihonStoreFormat.values.firstWhere(
-          (MihonStoreFormat value) => value.name == row.format,
-          orElse: () => MihonStoreFormat.currentJson,
-        ),
-        extensionListUrl: row.extensionListUrl,
-      );
+    format: MihonStoreFormat.values.firstWhere(
+      (MihonStoreFormat value) => value.name == row.format,
+      orElse: () => MihonStoreFormat.currentJson,
+    ),
+    extensionListUrl: row.extensionListUrl,
+  );
 
   Future<void> _guarded(Future<void> Function() action) async {
     loading = true;
@@ -1139,10 +1143,10 @@ class MihonPreviewSession {
   /// `(extensionPackage, sourceId)` 为键，而预览的扩展根本没进库——读它只会拿到
   /// 空表，写它则会留下指向不存在扩展的孤儿行。预览就用扩展的内置默认值。
   MihonSourceContext contextFor(MihonSource source) => MihonSourceContext(
-        extension: extension,
-        source: source,
-        preferences: const <MihonPreference>[],
-      );
+    extension: extension,
+    source: source,
+    preferences: const <MihonPreference>[],
+  );
 }
 
 @immutable

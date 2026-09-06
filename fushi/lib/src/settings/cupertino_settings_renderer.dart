@@ -45,30 +45,35 @@ class CupertinoSettingsRenderer implements SettingsRenderer {
     required ValueChanged<SettingsDestinationId> onDestinationSelected,
     bool pushRoutes = true,
   }) {
-    final Color primaryColor =
-        CupertinoTheme.of(settingsContext.context).primaryColor;
+    final Color primaryColor = CupertinoTheme.of(
+      settingsContext.context,
+    ).primaryColor;
     return CupertinoListSection.insetGrouped(
       backgroundColor: CupertinoColors.systemGroupedBackground.resolveFrom(
         settingsContext.context,
       ),
-      children: destinations.map((SettingsDestination destination) {
-        return CupertinoListTile(
-          leading: Icon(destination.icon, color: primaryColor),
-          title: Text(destination.title),
-          subtitle:
-              destination.summary != null ? Text(destination.summary!) : null,
-          trailing: const CupertinoListTileChevron(),
-          onTap: () {
-            onDestinationSelected(destination.id);
-            if (!pushRoutes) return;
-            Navigator.of(settingsContext.context).push(
-              CupertinoPageRoute<void>(
-                builder: (_) => SettingsDetailPage(destination: destination),
-              ),
+      children: destinations
+          .map((SettingsDestination destination) {
+            return CupertinoListTile(
+              leading: Icon(destination.icon, color: primaryColor),
+              title: Text(destination.title),
+              subtitle: destination.summary != null
+                  ? Text(destination.summary!)
+                  : null,
+              trailing: const CupertinoListTileChevron(),
+              onTap: () {
+                onDestinationSelected(destination.id);
+                if (!pushRoutes) return;
+                Navigator.of(settingsContext.context).push(
+                  CupertinoPageRoute<void>(
+                    builder: (_) =>
+                        SettingsDetailPage(destination: destination),
+                  ),
+                );
+              },
             );
-          },
-        );
-      }).toList(growable: false),
+          })
+          .toList(growable: false),
     );
   }
 
@@ -83,9 +88,7 @@ class CupertinoSettingsRenderer implements SettingsRenderer {
       ),
       child: CustomScrollView(
         slivers: <Widget>[
-          CupertinoSliverNavigationBar(
-            largeTitle: Text(destination.title),
-          ),
+          CupertinoSliverNavigationBar(largeTitle: Text(destination.title)),
           SliverToBoxAdapter(
             child: buildDetailContent(
               settingsContext: settingsContext,
@@ -110,25 +113,27 @@ class CupertinoSettingsRenderer implements SettingsRenderer {
     // 外层容器提供留白），故 [insetHorizontally] 对其无影响，仅为满足接口签名。
     bool insetHorizontally = true,
   }) {
-    final List<SettingsSection> sections =
-        destination.visibleSections(settingsContext);
-    final EdgeInsets mediaPadding =
-        MediaQuery.of(settingsContext.context).padding;
+    final List<SettingsSection> sections = destination.visibleSections(
+      settingsContext,
+    );
+    final EdgeInsets mediaPadding = MediaQuery.of(
+      settingsContext.context,
+    ).padding;
     // 底部留安全区，自滚到底时最后一项不贴边（对齐 Material 渲染器）。
     final EdgeInsets padding = EdgeInsets.only(bottom: mediaPadding.bottom);
 
     Widget section(int index) => SettingsSchemaSection(
-          section: sections[index],
-          settingsContext: settingsContext,
-          showIcons: false,
-          routeBuilder: (BuildContext context, WidgetBuilder builder) {
-            return CupertinoPageRoute<void>(builder: builder);
-          },
-          footerStyle: (BuildContext context) =>
-              FushiDesignTokens.of(context).type.metadata.copyWith(
-                    color: CupertinoColors.secondaryLabel.resolveFrom(context),
-                  ),
-        );
+      section: sections[index],
+      settingsContext: settingsContext,
+      showIcons: false,
+      routeBuilder: (BuildContext context, WidgetBuilder builder) {
+        return CupertinoPageRoute<void>(builder: builder);
+      },
+      footerStyle: (BuildContext context) => FushiDesignTokens.of(context)
+          .type
+          .metadata
+          .copyWith(color: CupertinoColors.secondaryLabel.resolveFrom(context)),
+    );
 
     // 整页正文逃生口（见 SettingsDestination.body）：接在所有 schema section 之后，
     // 与它们共享同一个滚动容器与内边距。

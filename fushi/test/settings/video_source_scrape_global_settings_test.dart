@@ -10,16 +10,15 @@ void main() {
   // AniDB 身份 / TMDB key 是第三方凭据，住「在线服务」分区；刮削语言是刮削行为
   // 偏好，留在视频·媒体库。两处合起来才是完整的刮削运行期偏好面。
   List<SettingsItem> allScrapeSettings() => <SettingsItem>[
-        for (final SettingsSection section in buildVideoDestination().sections)
-          ...section.items,
-        for (final SettingsSection section
-            in buildServicesDestination().sections)
-          ...section.items,
-      ];
+    for (final SettingsSection section in buildVideoDestination().sections)
+      ...section.items,
+    for (final SettingsSection section in buildServicesDestination().sections)
+      ...section.items,
+  ];
 
   SettingsItem item(String id) => allScrapeSettings().singleWhere(
-        (SettingsItem candidate) => candidate.id == id,
-      );
+    (SettingsItem candidate) => candidate.id == id,
+  );
 
   test('AniDB is fixed as the metadata identity source', () {
     expect(
@@ -46,38 +45,43 @@ void main() {
     }
   });
 
-  test('metadata runtime preferences rebuild the download scraper snapshot',
-      () {
-    final String videoSource =
-        File('lib/src/settings/settings_schema_video.dart').readAsStringSync();
-    final String servicesSource =
-        File('lib/src/settings/settings_schema_services.dart')
-            .readAsStringSync();
-    final String actionsSource =
-        File('lib/src/media/video/video_settings_actions.dart')
-            .readAsStringSync();
-    final RegExp call = RegExp(r'commitVideoMetadataRuntimePreference\(');
-    expect(
-      call.allMatches(videoSource).length,
-      1,
-      reason: 'the locale preference must use the shared helper',
-    );
-    expect(
-      call.allMatches(servicesSource).length,
-      3,
-      reason: 'AniDB client/version + TMDB key must use the shared helper',
-    );
-    expect(
-      call.allMatches(actionsSource).length,
-      1,
-      reason: 'the helper is defined once, in video_settings_actions.dart',
-    );
-    expect(
-      actionsSource,
-      contains('await settingsContext.appModel.'
-          'reloadVideoDownloadPipelineRuntime();'),
-    );
-  });
+  test(
+    'metadata runtime preferences rebuild the download scraper snapshot',
+    () {
+      final String videoSource = File(
+        'lib/src/settings/settings_schema_video.dart',
+      ).readAsStringSync();
+      final String servicesSource = File(
+        'lib/src/settings/settings_schema_services.dart',
+      ).readAsStringSync();
+      final String actionsSource = File(
+        'lib/src/media/video/video_settings_actions.dart',
+      ).readAsStringSync();
+      final RegExp call = RegExp(r'commitVideoMetadataRuntimePreference\(');
+      expect(
+        call.allMatches(videoSource).length,
+        1,
+        reason: 'the locale preference must use the shared helper',
+      );
+      expect(
+        call.allMatches(servicesSource).length,
+        3,
+        reason: 'AniDB client/version + TMDB key must use the shared helper',
+      );
+      expect(
+        call.allMatches(actionsSource).length,
+        1,
+        reason: 'the helper is defined once, in video_settings_actions.dart',
+      );
+      expect(
+        actionsSource,
+        contains(
+          'await settingsContext.appModel.'
+          'reloadVideoDownloadPipelineRuntime();',
+        ),
+      );
+    },
+  );
 
   test('invalid AniDB versions disable the HTTP API safely', () {
     expect(parseAniDbClientVersion('1'), 1);
@@ -97,7 +101,7 @@ void main() {
       'video.library.metadata_bangumi_token',
       'video.library.metadata_douban_endpoint',
       'video.library.metadata_douban_token',
-      'video.library.metadata_primary_provider'
+      'video.library.metadata_primary_provider',
     }) {
       expect(ids, isNot(contains(obsolete)));
     }

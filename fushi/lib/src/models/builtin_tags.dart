@@ -30,8 +30,9 @@ const List<int> kBuiltInStarTagColors = <int>[
 /// （空池时一次性种入全部 5 个），也用于老用户在标签管理页「一键补齐星级标签」。
 Future<int> seedStarRatingTags(FushiDatabase db) async {
   final List<BookTagRow> existing = await db.getAllTags();
-  final Set<String> existingNames =
-      existing.map((BookTagRow row) => row.name).toSet();
+  final Set<String> existingNames = existing
+      .map((BookTagRow row) => row.name)
+      .toSet();
   int added = 0;
   for (int i = 0; i < kBuiltInStarTagNames.length; i++) {
     final String name = kBuiltInStarTagNames[i];

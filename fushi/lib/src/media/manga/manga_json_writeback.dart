@@ -156,29 +156,33 @@ Future<MangaRegionReplaceResult> replaceMangaBlocksInRegion({
       StackTrace.current,
     );
   }
-  return runExclusiveOnMangaJson<MangaRegionReplaceResult>(mangaJsonPath,
-      () async {
-    final File file = File(mangaJsonPath);
-    if (!file.existsSync()) {
-      throw StateError('manga.json not found: $mangaJsonPath');
-    }
-    final MokuroPayload payload = parseMangaJson(await file.readAsString());
-    if (pageIndex < 0 || pageIndex >= payload.images.length) {
-      throw StateError(
-        'page $pageIndex out of range (${payload.images.length} pages)',
+  return runExclusiveOnMangaJson<MangaRegionReplaceResult>(
+    mangaJsonPath,
+    () async {
+      final File file = File(mangaJsonPath);
+      if (!file.existsSync()) {
+        throw StateError('manga.json not found: $mangaJsonPath');
+      }
+      final MokuroPayload payload = parseMangaJson(await file.readAsString());
+      if (pageIndex < 0 || pageIndex >= payload.images.length) {
+        throw StateError(
+          'page $pageIndex out of range (${payload.images.length} pages)',
+        );
+      }
+      final MokuroImage previousPage = payload.images[pageIndex];
+      final List<MokuroImage> images = List<MokuroImage>.of(payload.images);
+      images[pageIndex] = replaceMangaPageRegion(previousPage, region, blocks);
+      final MokuroPayload updated = MokuroPayload(
+        images: images,
+        ocr: payload.ocr,
       );
-    }
-    final MokuroImage previousPage = payload.images[pageIndex];
-    final List<MokuroImage> images = List<MokuroImage>.of(payload.images);
-    images[pageIndex] = replaceMangaPageRegion(previousPage, region, blocks);
-    final MokuroPayload updated =
-        MokuroPayload(images: images, ocr: payload.ocr);
-    await writeMangaJsonAtomically(mangaJsonPath, updated);
-    return MangaRegionReplaceResult(
-      payload: updated,
-      previousPage: previousPage,
-    );
-  });
+      await writeMangaJsonAtomically(mangaJsonPath, updated);
+      return MangaRegionReplaceResult(
+        payload: updated,
+        previousPage: previousPage,
+      );
+    },
+  );
 }
 
 /// 撤销区域替换：把第 [pageIndex] 页整页还原成 [page] 并原子落盘，返回落盘后的
@@ -206,8 +210,10 @@ Future<MokuroPayload> restoreMangaPage({
     }
     final List<MokuroImage> images = List<MokuroImage>.of(payload.images);
     images[pageIndex] = page;
-    final MokuroPayload restored =
-        MokuroPayload(images: images, ocr: payload.ocr);
+    final MokuroPayload restored = MokuroPayload(
+      images: images,
+      ocr: payload.ocr,
+    );
     await writeMangaJsonAtomically(mangaJsonPath, restored);
     return restored;
   });

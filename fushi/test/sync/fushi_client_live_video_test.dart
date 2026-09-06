@@ -20,20 +20,21 @@ class _FakeLibraryService
     implements FushiLibraryHostService, VideoPlaybackSyncHost {
   // BUG-1004：host 端裁 mining 句子音频（本测试不涉及，返 null 即可）。
   @override
-  Future<File?> clipVideoAudio(String id,
-          {required int startMs,
-          required int endMs,
-          int episodeIndex = 0,
-          int? audioStreamIndex,
-          int? audioStreamCount,
-          int audioChannels = 1,
-          String audioBitrate = '64k'}) async =>
-      null;
+  Future<File?> clipVideoAudio(
+    String id, {
+    required int startMs,
+    required int endMs,
+    int episodeIndex = 0,
+    int? audioStreamIndex,
+    int? audioStreamCount,
+    int audioChannels = 1,
+    String audioBitrate = '64k',
+  }) async => null;
 
   @override
-  Future<List<RemoteActivityEvent>> listActivityEvents(
-          {int limit = 100}) async =>
-      const <RemoteActivityEvent>[];
+  Future<List<RemoteActivityEvent>> listActivityEvents({
+    int limit = 100,
+  }) async => const <RemoteActivityEvent>[];
 
   @override
   Future<String?> videoCoverPath(String id) async {
@@ -64,8 +65,8 @@ class _FakeLibraryService
 
   @override
   Future<CollectionManifest> mergeCollectionManifest(
-          CollectionManifest incoming) async =>
-      incoming;
+    CollectionManifest incoming,
+  ) async => incoming;
 
   _FakeLibraryService() {
     final Directory tmp = Directory.systemTemp.createTempSync('hbk_client_vid');
@@ -88,8 +89,9 @@ class _FakeLibraryService
 
   @override
   Future<List<RemoteVideoInfo>> listVideos() async {
-    final ({int positionMs, int updatedAtMs}) p =
-        await getVideoPosition(videoId);
+    final ({int positionMs, int updatedAtMs}) p = await getVideoPosition(
+      videoId,
+    );
     final VideoPlaybackSyncState d = await getVideoPlayback(videoId);
     return <RemoteVideoInfo>[
       RemoteVideoInfo(
@@ -111,28 +113,34 @@ class _FakeLibraryService
       id == videoId ? videoFile : null;
 
   @override
-  Future<File?> resolveVideoSubtitle(String id,
-          {String langCode = 'ja', int episodeIndex = 0}) async =>
-      id == videoId ? subtitleFile : null;
+  Future<File?> resolveVideoSubtitle(
+    String id, {
+    String langCode = 'ja',
+    int episodeIndex = 0,
+  }) async => id == videoId ? subtitleFile : null;
 
   /// 记录 client→host 上传（供上传端点 e2e 断言）。
   final List<({String id, String title, String? fileName, List<int> bytes})>
-      uploaded =
-      <({String id, String title, String? fileName, List<int> bytes})>[];
+  uploaded = <({String id, String title, String? fileName, List<int> bytes})>[];
 
   @override
   Future<bool> videoExists(String id) async =>
       id == videoId || uploaded.any((u) => u.id == id);
 
   @override
-  Future<void> importVideoSubtitle(File subtitleFile,
-      {required String id, required String suffix}) async {}
+  Future<void> importVideoSubtitle(
+    File subtitleFile, {
+    required String id,
+    required String suffix,
+  }) async {}
 
   @override
-  Future<void> importVideo(File videoFile,
-      {required String id,
-      required String title,
-      String? originalFileName}) async {
+  Future<void> importVideo(
+    File videoFile, {
+    required String id,
+    required String title,
+    String? originalFileName,
+  }) async {
     uploaded.add((
       id: id,
       title: title,
@@ -163,8 +171,11 @@ class _FakeLibraryService
       throw UnimplementedError('not used in video test');
 
   @override
-  Future<void> importBook(File epubFile,
-      {String? displayTitle, int displayTitleAt = 0}) async {}
+  Future<void> importBook(
+    File epubFile, {
+    String? displayTitle,
+    int displayTitleAt = 0,
+  }) async {}
 
   @override
   Future<void> deleteBook(String title) async {}
@@ -183,8 +194,10 @@ class _FakeLibraryService
   ) async {
     final RemoteBookProgress current =
         bookProgress[bookKey] ?? RemoteBookProgress.empty;
-    bookProgress[bookKey] =
-        resolveBookProgressSync(local: current, remote: progress);
+    bookProgress[bookKey] = resolveBookProgressSync(
+      local: current,
+      remote: progress,
+    );
   }
 
   @override
@@ -213,8 +226,10 @@ class _FakeLibraryService
   Future<bool> audiobookExists(String bookKey) async => false;
 
   @override
-  Future<void> importAudiobook(File packageFile,
-      {String? bookKeyOverride}) async {}
+  Future<void> importAudiobook(
+    File packageFile, {
+    String? bookKeyOverride,
+  }) async {}
 
   @override
   Future<void> deleteAudiobook(String bookKey) async {}
@@ -233,16 +248,19 @@ class _FakeLibraryService
 
   @override
   Future<void> putVideoPlayback(
-      String id, VideoPlaybackSyncState incoming) async {
+    String id,
+    VideoPlaybackSyncState incoming,
+  ) async {
     videoPlayback[id] = VideoPlaybackSyncState.merge(
-        videoPlayback[id] ?? const VideoPlaybackSyncState(), incoming);
+      videoPlayback[id] ?? const VideoPlaybackSyncState(),
+      incoming,
+    );
   }
 
   @override
   Future<({int positionMs, int updatedAtMs})> getAudiobookPosition(
     String bookKey,
-  ) async =>
-      (positionMs: 0, updatedAtMs: 0);
+  ) async => (positionMs: 0, updatedAtMs: 0);
 
   @override
   Future<void> putAudiobookPosition(
@@ -255,8 +273,7 @@ class _FakeLibraryService
   Future<({int positionMs, int updatedAtMs})> getVideoPosition(
     String id, {
     int episodeIndex = 0,
-  }) async =>
-      videoPositions[id] ?? (positionMs: 0, updatedAtMs: 0);
+  }) async => videoPositions[id] ?? (positionMs: 0, updatedAtMs: 0);
 
   @override
   Future<void> putVideoPosition(
@@ -296,8 +313,9 @@ Future<InterconnectSyncBackend> _buildBackend({
   ]);
   await repo.setFushiClientToken(token);
 
-  final InterconnectSyncBackend backend =
-      InterconnectSyncBackend.withProbe((String url, String tok) async => true);
+  final InterconnectSyncBackend backend = InterconnectSyncBackend.withProbe(
+    (String url, String tok) async => true,
+  );
   await backend.restoreAuth(repo);
   await backend.authenticate(repo: repo);
   return backend;
@@ -315,8 +333,9 @@ void main() {
     setFfmpegBackendForTesting(ffmpeg);
     library = _FakeLibraryService();
     server = FushiSyncServer(
-      syncDataDir:
-          Directory.systemTemp.createTempSync('hbk_live_video_srv').path,
+      syncDataDir: Directory.systemTemp
+          .createTempSync('hbk_live_video_srv')
+          .path,
       port: 0,
       token: token,
       allowLan: false,
@@ -332,8 +351,10 @@ void main() {
   });
 
   test('listRemoteVideos returns host video entries', () async {
-    final InterconnectSyncBackend backend =
-        await _buildBackend(base: base, token: token);
+    final InterconnectSyncBackend backend = await _buildBackend(
+      base: base,
+      token: token,
+    );
 
     final List<RemoteVideoInfo> result = await backend.listRemoteVideos();
 
@@ -344,100 +365,123 @@ void main() {
     expect(result.single.hasSubtitle, isTrue);
   });
 
-  test('putRemoteVideo uploads local video file to host (client→host)',
-      () async {
-    final InterconnectSyncBackend backend =
-        await _buildBackend(base: base, token: token);
-    final Directory tmp = Directory.systemTemp.createTempSync('hbk_vid_up');
-    addTearDown(() => tmp.deleteSync(recursive: true));
-    // 非 ASCII 文件名 + 标题：验证 header URL-encode 往返（HTTP header 只收 ASCII）。
-    final File local = File('${tmp.path}/映画.mp4')
-      ..writeAsBytesSync(<int>[10, 20, 30, 40, 50]);
+  test(
+    'putRemoteVideo uploads local video file to host (client→host)',
+    () async {
+      final InterconnectSyncBackend backend = await _buildBackend(
+        base: base,
+        token: token,
+      );
+      final Directory tmp = Directory.systemTemp.createTempSync('hbk_vid_up');
+      addTearDown(() => tmp.deleteSync(recursive: true));
+      // 非 ASCII 文件名 + 标题：验证 header URL-encode 往返（HTTP header 只收 ASCII）。
+      final File local = File('${tmp.path}/映画.mp4')
+        ..writeAsBytesSync(<int>[10, 20, 30, 40, 50]);
 
-    await backend.putRemoteVideo('video/uploaded', local, title: '映画タイトル');
+      await backend.putRemoteVideo('video/uploaded', local, title: '映画タイトル');
 
-    expect(library.uploaded, hasLength(1));
-    final ({String id, String title, String? fileName, List<int> bytes}) rec =
-        library.uploaded.single;
-    expect(rec.id, 'video/uploaded'); // 含 `/` 的 bookUid 经 _encodeVideoId 往返
-    expect(rec.title, '映画タイトル'); // 非 ASCII 标题经 header 往返正确
-    expect(rec.fileName, '映画.mp4'); // 原始文件名保留（供 host 保扩展名）
-    expect(rec.bytes, <int>[10, 20, 30, 40, 50]); // 字节流完整送达
-  });
-
-  test('remoteVideoStreamUrls returns directly playable token stream URL',
-      () async {
-    final InterconnectSyncBackend backend =
-        await _buildBackend(base: base, token: token);
-
-    final RemoteVideoStreamUrls urls =
-        await backend.remoteVideoStreamUrls(_FakeLibraryService.videoId);
-
-    expect(urls.streamUrl, startsWith('$base/api/library/videos/'));
-    expect(urls.streamUrl, contains('/stream?token='));
-    expect(urls.subtitleUrl, startsWith('$base/api/library/videos/'));
-    expect(urls.subtitleUrl, contains('/subtitle'));
-    expect(urls.subtitleFileName, 'sample.ja.vtt');
-    expect(urls.embeddedSubtitleTracks, hasLength(3));
-    expect(urls.embeddedSubtitleTracks[0].streamIndex, 0);
-    expect(
-      urls.embeddedSubtitleTracks[0].url,
-      contains('embeddedStreamIndex=0'),
-    );
-    expect(urls.embeddedSubtitleTracks[1].codec, 'mov_text');
-    expect(urls.embeddedSubtitleTracks[2].isText, isFalse);
-    expect(backend.remoteVideoAuthHeaders(), isEmpty);
-
-    final HttpClient c = HttpClient();
-    final HttpClientRequest req = await c.getUrl(Uri.parse(urls.streamUrl));
-    req.headers.set('range', 'bytes=0-3');
-    final HttpClientResponse res = await req.close();
-    expect(res.statusCode, 206);
-    expect(res.headers.value('content-range'), 'bytes 0-3/16');
-    final List<int> body = await res.fold(<int>[], (List<int> a, List<int> b) {
-      return a..addAll(b);
-    });
-    expect(body, <int>[0, 1, 2, 3]);
-    c.close();
-  });
-
-  test('getRemoteVideoSubtitle downloads sidecar subtitle with Basic auth',
-      () async {
-    final InterconnectSyncBackend backend =
-        await _buildBackend(base: base, token: token);
-    final Directory tmp = Directory.systemTemp.createTempSync('hbk_vid_sub');
-    final File dest = File('${tmp.path}/sample.ja.vtt');
-    addTearDown(() => tmp.deleteSync(recursive: true));
-
-    await backend.getRemoteVideoSubtitle(_FakeLibraryService.videoId, dest);
-
-    expect(dest.existsSync(), isTrue);
-    expect(dest.readAsStringSync(), contains('テスト'));
-  });
+      expect(library.uploaded, hasLength(1));
+      final ({String id, String title, String? fileName, List<int> bytes}) rec =
+          library.uploaded.single;
+      expect(rec.id, 'video/uploaded'); // 含 `/` 的 bookUid 经 _encodeVideoId 往返
+      expect(rec.title, '映画タイトル'); // 非 ASCII 标题经 header 往返正确
+      expect(rec.fileName, '映画.mp4'); // 原始文件名保留（供 host 保扩展名）
+      expect(rec.bytes, <int>[10, 20, 30, 40, 50]); // 字节流完整送达
+    },
+  );
 
   test(
-      'getRemoteVideoSubtitle downloads embedded text subtitle with Basic auth',
-      () async {
-    final InterconnectSyncBackend backend =
-        await _buildBackend(base: base, token: token);
-    final Directory tmp = Directory.systemTemp.createTempSync('hbk_vid_embsub');
-    final File dest = File('${tmp.path}/sample.embedded.srt');
-    addTearDown(() => tmp.deleteSync(recursive: true));
+    'remoteVideoStreamUrls returns directly playable token stream URL',
+    () async {
+      final InterconnectSyncBackend backend = await _buildBackend(
+        base: base,
+        token: token,
+      );
 
-    await backend.getRemoteVideoSubtitle(
-      _FakeLibraryService.videoId,
-      dest,
-      embeddedStreamIndex: 0,
-    );
+      final RemoteVideoStreamUrls urls = await backend.remoteVideoStreamUrls(
+        _FakeLibraryService.videoId,
+      );
 
-    expect(dest.existsSync(), isTrue);
-    expect(dest.readAsStringSync(), contains('Remote embedded subtitle'));
-    expect(ffmpeg.extractedSubtitleIndices, contains(0));
-  });
+      expect(urls.streamUrl, startsWith('$base/api/library/videos/'));
+      expect(urls.streamUrl, contains('/stream?token='));
+      expect(urls.subtitleUrl, startsWith('$base/api/library/videos/'));
+      expect(urls.subtitleUrl, contains('/subtitle'));
+      expect(urls.subtitleFileName, 'sample.ja.vtt');
+      expect(urls.embeddedSubtitleTracks, hasLength(3));
+      expect(urls.embeddedSubtitleTracks[0].streamIndex, 0);
+      expect(
+        urls.embeddedSubtitleTracks[0].url,
+        contains('embeddedStreamIndex=0'),
+      );
+      expect(urls.embeddedSubtitleTracks[1].codec, 'mov_text');
+      expect(urls.embeddedSubtitleTracks[2].isText, isFalse);
+      expect(backend.remoteVideoAuthHeaders(), isEmpty);
+
+      final HttpClient c = HttpClient();
+      final HttpClientRequest req = await c.getUrl(Uri.parse(urls.streamUrl));
+      req.headers.set('range', 'bytes=0-3');
+      final HttpClientResponse res = await req.close();
+      expect(res.statusCode, 206);
+      expect(res.headers.value('content-range'), 'bytes 0-3/16');
+      final List<int> body = await res.fold(<int>[], (
+        List<int> a,
+        List<int> b,
+      ) {
+        return a..addAll(b);
+      });
+      expect(body, <int>[0, 1, 2, 3]);
+      c.close();
+    },
+  );
+
+  test(
+    'getRemoteVideoSubtitle downloads sidecar subtitle with Basic auth',
+    () async {
+      final InterconnectSyncBackend backend = await _buildBackend(
+        base: base,
+        token: token,
+      );
+      final Directory tmp = Directory.systemTemp.createTempSync('hbk_vid_sub');
+      final File dest = File('${tmp.path}/sample.ja.vtt');
+      addTearDown(() => tmp.deleteSync(recursive: true));
+
+      await backend.getRemoteVideoSubtitle(_FakeLibraryService.videoId, dest);
+
+      expect(dest.existsSync(), isTrue);
+      expect(dest.readAsStringSync(), contains('テスト'));
+    },
+  );
+
+  test(
+    'getRemoteVideoSubtitle downloads embedded text subtitle with Basic auth',
+    () async {
+      final InterconnectSyncBackend backend = await _buildBackend(
+        base: base,
+        token: token,
+      );
+      final Directory tmp = Directory.systemTemp.createTempSync(
+        'hbk_vid_embsub',
+      );
+      final File dest = File('${tmp.path}/sample.embedded.srt');
+      addTearDown(() => tmp.deleteSync(recursive: true));
+
+      await backend.getRemoteVideoSubtitle(
+        _FakeLibraryService.videoId,
+        dest,
+        embeddedStreamIndex: 0,
+      );
+
+      expect(dest.existsSync(), isTrue);
+      expect(dest.readAsStringSync(), contains('Remote embedded subtitle'));
+      expect(ffmpeg.extractedSubtitleIndices, contains(0));
+    },
+  );
 
   test('downloadRemoteVideo streams video bytes to destination file', () async {
-    final InterconnectSyncBackend backend =
-        await _buildBackend(base: base, token: token);
+    final InterconnectSyncBackend backend = await _buildBackend(
+      base: base,
+      token: token,
+    );
     final Directory tmp = Directory.systemTemp.createTempSync('hbk_vid_dl');
     final File dest = File('${tmp.path}/sample.mp4');
     addTearDown(() => tmp.deleteSync(recursive: true));
@@ -457,8 +501,9 @@ void main() {
     ]);
     await repo.setFushiClientToken('wrong-token');
 
-    final InterconnectSyncBackend backend =
-        InterconnectSyncBackend.withProbe((String u, String t) async => true);
+    final InterconnectSyncBackend backend = InterconnectSyncBackend.withProbe(
+      (String u, String t) async => true,
+    );
     await backend.restoreAuth(repo);
 
     await expectLater(
@@ -467,59 +512,72 @@ void main() {
     );
   });
 
-  test('putRemoteVideoPosition uploads then remoteVideoPosition reads it back',
-      () async {
-    final InterconnectSyncBackend backend =
-        await _buildBackend(base: base, token: token);
+  test(
+    'putRemoteVideoPosition uploads then remoteVideoPosition reads it back',
+    () async {
+      final InterconnectSyncBackend backend = await _buildBackend(
+        base: base,
+        token: token,
+      );
 
-    await backend.putRemoteVideoPosition(
-      _FakeLibraryService.videoId,
-      600000,
-      1700000000000,
-    );
+      await backend.putRemoteVideoPosition(
+        _FakeLibraryService.videoId,
+        600000,
+        1700000000000,
+      );
 
-    final ({int positionMs, int updatedAtMs}) read =
-        await backend.remoteVideoPosition(_FakeLibraryService.videoId);
-    expect(read.positionMs, 600000);
-    expect(read.updatedAtMs, 1700000000000);
+      final ({int positionMs, int updatedAtMs}) read = await backend
+          .remoteVideoPosition(_FakeLibraryService.videoId);
+      expect(read.positionMs, 600000);
+      expect(read.updatedAtMs, 1700000000000);
 
-    // 进度也随清单条目带回（client 据此跨设备恢复）。
-    final List<RemoteVideoInfo> list = await backend.listRemoteVideos();
-    expect(list.single.positionMs, 600000);
-    expect(list.single.positionUpdatedAtMs, 1700000000000);
-  });
+      // 进度也随清单条目带回（client 据此跨设备恢复）。
+      final List<RemoteVideoInfo> list = await backend.listRemoteVideos();
+      expect(list.single.positionMs, 600000);
+      expect(list.single.positionUpdatedAtMs, 1700000000000);
+    },
+  );
 
-  test('remoteVideoPosition for unknown id returns 0/0 (host 404, no throw)',
-      () async {
-    final InterconnectSyncBackend backend =
-        await _buildBackend(base: base, token: token);
+  test(
+    'remoteVideoPosition for unknown id returns 0/0 (host 404, no throw)',
+    () async {
+      final InterconnectSyncBackend backend = await _buildBackend(
+        base: base,
+        token: token,
+      );
 
-    final ({int positionMs, int updatedAtMs}) read =
-        await backend.remoteVideoPosition('video/does-not-exist');
-    expect(read.positionMs, 0);
-    expect(read.updatedAtMs, 0);
-  });
+      final ({int positionMs, int updatedAtMs}) read = await backend
+          .remoteVideoPosition('video/does-not-exist');
+      expect(read.positionMs, 0);
+      expect(read.updatedAtMs, 0);
+    },
+  );
 
   // ── 播放偏好跨设备同步 client↔host 往返（BUG-1620 起步，泛化为 /playback）────
 
   test('playback: put 全字段 → get 读回；清单带戳字段一并下发', () async {
-    final InterconnectSyncBackend backend =
-        await _buildBackend(base: base, token: token);
+    final InterconnectSyncBackend backend = await _buildBackend(
+      base: base,
+      token: token,
+    );
 
     await backend.putRemoteVideoPlayback(
-        _FakeLibraryService.videoId,
-        const VideoPlaybackSyncState(
-            delayMs: -1500,
-            delayAt: 1700000000000,
-            audioTrackId: '3',
-            audioTrackAt: 1700000000000,
-            secondarySubtitleSource: 'embedded:4',
-            secondarySubtitleAt: 1700000000000,
-            secondaryDelayMs: 250,
-            secondaryDelayAt: 1700000000000));
+      _FakeLibraryService.videoId,
+      const VideoPlaybackSyncState(
+        delayMs: -1500,
+        delayAt: 1700000000000,
+        audioTrackId: '3',
+        audioTrackAt: 1700000000000,
+        secondarySubtitleSource: 'embedded:4',
+        secondarySubtitleAt: 1700000000000,
+        secondaryDelayMs: 250,
+        secondaryDelayAt: 1700000000000,
+      ),
+    );
 
-    final VideoPlaybackSyncState read =
-        await backend.remoteVideoPlayback(_FakeLibraryService.videoId);
+    final VideoPlaybackSyncState read = await backend.remoteVideoPlayback(
+      _FakeLibraryService.videoId,
+    );
     expect(read.delayMs, -1500, reason: '负调轴必须保真往返');
     expect(read.audioTrackId, '3');
     expect(read.secondarySubtitleSource, 'embedded:4');
@@ -532,16 +590,21 @@ void main() {
   });
 
   test('playback: 未知 id GET 返回空状态（host 404 降级不抛）；PUT 抛由调用方捕获', () async {
-    final InterconnectSyncBackend backend =
-        await _buildBackend(base: base, token: token);
+    final InterconnectSyncBackend backend = await _buildBackend(
+      base: base,
+      token: token,
+    );
 
-    final VideoPlaybackSyncState read =
-        await backend.remoteVideoPlayback('video/does-not-exist');
+    final VideoPlaybackSyncState read = await backend.remoteVideoPlayback(
+      'video/does-not-exist',
+    );
     expect(read.isEmpty, isTrue);
 
     await expectLater(
-      backend.putRemoteVideoPlayback('video/does-not-exist',
-          const VideoPlaybackSyncState(delayMs: 100, delayAt: 1700000000000)),
+      backend.putRemoteVideoPlayback(
+        'video/does-not-exist',
+        const VideoPlaybackSyncState(delayMs: 100, delayAt: 1700000000000),
+      ),
       throwsA(anything),
       reason: '存在性闸门 404 应上抛，由播放页 best-effort 捕获（本地 prefs 已写）',
     );
@@ -558,9 +621,9 @@ void main() {
     setUp(() async {
       final ({String certificatePem, String privateKeyPem}) cert =
           FushiSelfSignedCertGenerator.generate(
-        commonName: 'hibiki-test',
-        sanIpAddresses: <String>['127.0.0.1'],
-      );
+            commonName: 'hibiki-test',
+            sanIpAddresses: <String>['127.0.0.1'],
+          );
       fingerprint = FushiTlsIdentityStore.fingerprintOf(cert.certificatePem);
       final SecurityContext ctx = SecurityContext()
         ..useCertificateChainBytes(cert.certificatePem.codeUnits)
@@ -588,21 +651,26 @@ void main() {
         FushiClientUrl(url: tlsBase, enabled: true, fingerprintSha256: fp),
       ]);
       await repo.setFushiClientToken(token);
-      final InterconnectSyncBackend backend =
-          InterconnectSyncBackend.withProbe((String u, String t) async => true);
+      final InterconnectSyncBackend backend = InterconnectSyncBackend.withProbe(
+        (String u, String t) async => true,
+      );
       await backend.restoreAuth(repo);
       await backend.authenticate(repo: repo);
       return backend;
     }
 
     test('fetchRemoteCover pulls cover bytes over pinned https', () async {
-      final InterconnectSyncBackend backend =
-          await buildPinnedBackend(fingerprint);
+      final InterconnectSyncBackend backend = await buildPinnedBackend(
+        fingerprint,
+      );
       final List<RemoteVideoInfo> videos = await backend.listRemoteVideos();
       final String? coverUrl = videos.single.coverUrl;
       expect(coverUrl, isNotNull, reason: 'host 应回填 https coverUrl');
-      expect(coverUrl, startsWith('https://'),
-          reason: 'TLS 开启时封面 URL 必须是 https');
+      expect(
+        coverUrl,
+        startsWith('https://'),
+        reason: 'TLS 开启时封面 URL 必须是 https',
+      );
 
       final Uint8List bytes = await backend.fetchRemoteCover(coverUrl!);
       expect(bytes, _coverBytes, reason: '钉扎客户端应握手成功并拉回真封面字节');
@@ -616,21 +684,27 @@ void main() {
       // 步在 fetchRemoteCover 握手时拒绝——两处都是钉扎生效，故把整条链一起断言抛出，
       // 证明「绝不放行任意自签证书」。
       Future<Uint8List> attempt() async {
-        final InterconnectSyncBackend backend =
-            await buildPinnedBackend(wrongFp);
+        final InterconnectSyncBackend backend = await buildPinnedBackend(
+          wrongFp,
+        );
         return backend.fetchRemoteCover(
           '$tlsBase/api/library/videos/video%2Fsample/cover',
         );
       }
 
-      await expectLater(attempt(), throwsA(anything),
-          reason: '指纹不符必须被钉扎拒绝，绝不放行任意自签证书');
+      await expectLater(
+        attempt(),
+        throwsA(anything),
+        reason: '指纹不符必须被钉扎拒绝，绝不放行任意自签证书',
+      );
     });
   });
 
   test('fetchRemoteCover still works over plaintext http (老路径零破坏)', () async {
-    final InterconnectSyncBackend backend =
-        await _buildBackend(base: base, token: token);
+    final InterconnectSyncBackend backend = await _buildBackend(
+      base: base,
+      token: token,
+    );
     final List<RemoteVideoInfo> videos = await backend.listRemoteVideos();
     final String? coverUrl = videos.single.coverUrl;
     expect(coverUrl, isNotNull);
@@ -650,12 +724,15 @@ class _EmbeddedSubtitleFfmpegBackend implements FfmpegBackend {
   @override
   Future<FfmpegRunResult> run(List<String> args, Duration timeout) async {
     if (args.contains('-hide_banner')) {
-      return const FfmpegRunResult(returnCode: 1, output: '''
+      return const FfmpegRunResult(
+        returnCode: 1,
+        output: '''
   Stream #0:0: Video: h264
   Stream #0:1(jpn): Subtitle: subrip (srt) (default)
   Stream #0:2(eng): Subtitle: mov_text (tx3g)
   Stream #0:3(jpn): Subtitle: hdmv_pgs_subtitle
-''');
+''',
+      );
     }
 
     for (int i = 0; i < args.length - 2; i++) {

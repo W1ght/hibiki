@@ -171,7 +171,9 @@ class _SentenceContextDialogState extends State<SentenceContextDialog>
         children: <TextSpan>[
           TextSpan(text: text.substring(0, start)),
           TextSpan(
-              text: text.substring(start, start + matched.length), style: hl),
+            text: text.substring(start, start + matched.length),
+            style: hl,
+          ),
           TextSpan(text: text.substring(start + matched.length)),
         ],
       ),
@@ -192,8 +194,10 @@ class _SentenceContextDialogState extends State<SentenceContextDialog>
     // （等价旧的透明 Border.all，避免仅当前句多 1px 内缩）。对齐 Niratan 原设计：
     // 当前句留白更足（12）、上下文句收一档（10）。
     final Widget card = FushiCard(
-      padding:
-          EdgeInsets.symmetric(horizontal: 12, vertical: current ? 12 : 10),
+      padding: EdgeInsets.symmetric(
+        horizontal: 12,
+        vertical: current ? 12 : 10,
+      ),
       color: current ? tokens.surfaces.search : tokens.surfaces.card,
       borderColor: current ? tokens.surfaces.primary : Colors.transparent,
       child: Column(
@@ -201,8 +205,9 @@ class _SentenceContextDialogState extends State<SentenceContextDialog>
         children: <Widget>[
           Text(
             label,
-            style: theme.textTheme.labelSmall
-                ?.copyWith(color: scheme.onSurfaceVariant),
+            style: theme.textTheme.labelSmall?.copyWith(
+              color: scheme.onSurfaceVariant,
+            ),
           ),
           const SizedBox(height: 4),
           child,
@@ -221,12 +226,12 @@ class _SentenceContextDialogState extends State<SentenceContextDialog>
       Text(sentence, style: theme.textTheme.bodyMedium);
 
   Widget _emptyText(ThemeData theme) => Text(
-        t.popup_ctx_box_empty,
-        style: theme.textTheme.bodyMedium?.copyWith(
-          fontStyle: FontStyle.italic,
-          color: theme.colorScheme.onSurfaceVariant,
-        ),
-      );
+    t.popup_ctx_box_empty,
+    style: theme.textTheme.bodyMedium?.copyWith(
+      fontStyle: FontStyle.italic,
+      color: theme.colorScheme.onSurfaceVariant,
+    ),
+  );
 
   /// 把某个方向的句子列表铺成「一句一张卡」——不再 `join('\n')` 把整方向挤进一个框
   /// （旧写法在前文有重复/多句时糊成一坨、看不出边界）。空列表退化成一张「(无)」卡，
@@ -252,18 +257,17 @@ class _SentenceContextDialogState extends State<SentenceContextDialog>
     required IconData icon,
     required String label,
     required VoidCallback? onPressed,
-  }) =>
-      OutlinedButton.icon(
-        onPressed: onPressed,
-        style: OutlinedButton.styleFrom(
-          visualDensity: VisualDensity.compact,
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-          minimumSize: const Size(0, 36),
-          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        ),
-        icon: Icon(icon, size: 18),
-        label: Text(label),
-      );
+  }) => OutlinedButton.icon(
+    onPressed: onPressed,
+    style: OutlinedButton.styleFrom(
+      visualDensity: VisualDensity.compact,
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+      minimumSize: const Size(0, 36),
+      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+    ),
+    icon: Icon(icon, size: 18),
+    label: Text(label),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -308,8 +312,9 @@ class _SentenceContextDialogState extends State<SentenceContextDialog>
               children: <Widget>[
                 Text(
                   t.popup_ctx_modal_eyebrow,
-                  style: theme.textTheme.bodySmall
-                      ?.copyWith(color: scheme.onSurfaceVariant),
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: scheme.onSurfaceVariant,
+                  ),
                 ),
                 const SizedBox(height: 3),
                 Text(t.popup_ctx_modal_title),
@@ -335,8 +340,9 @@ class _SentenceContextDialogState extends State<SentenceContextDialog>
                     padding: const EdgeInsets.only(bottom: 10),
                     child: Text(
                       t.popup_ctx_modal_count.replaceAll('%d', '$_total'),
-                      style: theme.textTheme.labelLarge
-                          ?.copyWith(color: scheme.onSurfaceVariant),
+                      style: theme.textTheme.labelLarge?.copyWith(
+                        color: scheme.onSurfaceVariant,
+                      ),
                     ),
                   ),
                   // 正文已由 AlertDialog(scrollable: true) 统一滚动，这里直接铺卡，

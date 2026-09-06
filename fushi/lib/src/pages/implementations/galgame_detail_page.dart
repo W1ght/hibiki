@@ -105,7 +105,8 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
   }
 
   Future<void> _load() async {
-    final GalgameEntry? game = _repo.byId(widget.gameId) ??
+    final GalgameEntry? game =
+        _repo.byId(widget.gameId) ??
         (await _repo.load())
             .where((GalgameEntry g) => g.id == widget.gameId)
             .firstOrNull;
@@ -119,8 +120,9 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
     }
     final List<GalgameSessionRow> sessions = await _repo.sessions(game.id);
     final List<GalgameSourceRow> sources = await _repo.sourcesOf(game.id);
-    final List<BookTagRow> userTags =
-        await _appModel.database.getTagsForGame(game.id);
+    final List<BookTagRow> userTags = await _appModel.database.getTagsForGame(
+      game.id,
+    );
     final Map<String, int> daily = await _loadRange(game.id, _rangeDays);
     final String todayKey = formatGalgameDate(DateTime.now());
     final Map<String, int> today = await _repo.dailySeconds(
@@ -143,8 +145,11 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
   /// 查最近 [days] 天（含当天）的每日秒数。
   Future<Map<String, int>> _loadRange(String gameId, int days) {
     final DateTime today = DateTime.now();
-    final DateTime start = DateTime(today.year, today.month, today.day)
-        .subtract(Duration(days: days - 1));
+    final DateTime start = DateTime(
+      today.year,
+      today.month,
+      today.day,
+    ).subtract(Duration(days: days - 1));
     return _repo.dailySeconds(
       gameId,
       fromDateKey: formatGalgameDate(start),
@@ -192,10 +197,7 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
   Widget build(BuildContext context) {
     final GalgameEntry? game = _game;
     if (_loading) {
-      return Scaffold(
-        appBar: AppBar(),
-        body: buildLoading(),
-      );
+      return Scaffold(appBar: AppBar(), body: buildLoading());
     }
     if (game == null) {
       return Scaffold(
@@ -237,11 +239,7 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
               children: <Widget>[
                 _buildStatsTab(context, game),
                 _buildSummaryTab(context, game),
-                _GalgameEditTab(
-                  game: game,
-                  repo: _repo,
-                  onSaved: _load,
-                ),
+                _GalgameEditTab(game: game, repo: _repo, onSaved: _load),
               ],
             ),
           ),
@@ -303,10 +301,7 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
           ),
         ],
       ),
-      child: AspectRatio(
-        aspectRatio: 3 / 4,
-        child: _buildCover(context, game),
-      ),
+      child: AspectRatio(aspectRatio: 3 / 4, child: _buildCover(context, game)),
     );
   }
 
@@ -383,8 +378,9 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
       ),
     );
     if (!mounted) return;
-    final List<BookTagRow> tags =
-        await _appModel.database.getTagsForGame(game.id);
+    final List<BookTagRow> tags = await _appModel.database.getTagsForGame(
+      game.id,
+    );
     if (!mounted) return;
     setState(() => _userTags = tags);
     ref.invalidate(allTagsProvider);
@@ -406,12 +402,21 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
         ),
       if (game.effectiveReleaseDate != null)
         _metaTextCell(
-            context, t.game_summary_release_date, game.effectiveReleaseDate!),
+          context,
+          t.game_summary_release_date,
+          game.effectiveReleaseDate!,
+        ),
       _metaTextCell(
-          context, t.game_meta_added, formatGalgameDate(game.addedAt)),
+        context,
+        t.game_meta_added,
+        formatGalgameDate(game.addedAt),
+      ),
       if (meta.averageHours != null)
-        _metaTextCell(context, t.game_summary_average_hours,
-            '${meta.averageHours!.toStringAsFixed(1)} h'),
+        _metaTextCell(
+          context,
+          t.game_summary_average_hours,
+          '${meta.averageHours!.toStringAsFixed(1)} h',
+        ),
       if (meta.rank != null)
         _metaTextCell(context, t.game_meta_ranking, '#${meta.rank}'),
       _userTagsCell(context, game),
@@ -498,8 +503,9 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
     if (tags.isEmpty) return const SizedBox.shrink();
     final ThemeData theme = Theme.of(context);
     final bool overflowing = tags.length > _kTagLimit;
-    final List<String> shown =
-        (overflowing && !_tagsExpanded) ? tags.sublist(0, _kTagLimit) : tags;
+    final List<String> shown = (overflowing && !_tagsExpanded)
+        ? tags.sublist(0, _kTagLimit)
+        : tags;
     return Padding(
       padding: const EdgeInsets.only(top: 16),
       child: Column(
@@ -541,11 +547,14 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
               alignment: Alignment.centerLeft,
               child: TextButton.icon(
                 onPressed: () => setState(() => _tagsExpanded = !_tagsExpanded),
-                icon:
-                    Icon(_tagsExpanded ? Icons.expand_less : Icons.expand_more),
-                label: Text(_tagsExpanded
-                    ? t.collection_collapse
-                    : '${t.collection_expand} +${tags.length - _kTagLimit}'),
+                icon: Icon(
+                  _tagsExpanded ? Icons.expand_less : Icons.expand_more,
+                ),
+                label: Text(
+                  _tagsExpanded
+                      ? t.collection_collapse
+                      : '${t.collection_expand} +${tags.length - _kTagLimit}',
+                ),
               ),
             ),
         ],
@@ -554,8 +563,9 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
   }
 
   String? _externalUrl(GalgameSourceRow row) {
-    final GalgameMetadataSource? source =
-        GalgameMetadataSource.fromKey(row.source);
+    final GalgameMetadataSource? source = GalgameMetadataSource.fromKey(
+      row.source,
+    );
     final String? id = row.externalId;
     if (source == null || id == null || id.isEmpty) return null;
     return GalgameScrapeController.instance.externalUrl(source, id);
@@ -593,18 +603,25 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
       children: <Widget>[
         Row(
           children: <Widget>[
-            _kpi(theme, t.game_stat_total_time,
-                formatStatTime(game.totalPlaySeconds * 1000)),
+            _kpi(
+              theme,
+              t.game_stat_total_time,
+              formatStatTime(game.totalPlaySeconds * 1000),
+            ),
             _kpi(theme, t.game_stat_sessions, '${game.sessionCount}'),
             _kpi(
-                theme, t.game_stat_today, formatStatTime(_todaySeconds * 1000)),
+              theme,
+              t.game_stat_today,
+              formatStatTime(_todaySeconds * 1000),
+            ),
             _kpi(
               theme,
               t.game_stat_last_played,
               game.lastPlayedMs <= 0
                   ? t.game_never_played
                   : formatGalgameDate(
-                      DateTime.fromMillisecondsSinceEpoch(game.lastPlayedMs)),
+                      DateTime.fromMillisecondsSinceEpoch(game.lastPlayedMs),
+                    ),
             ),
           ],
         ),
@@ -636,8 +653,9 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
         if (_sessions.isEmpty)
           Text(
             t.game_stat_no_sessions,
-            style: theme.textTheme.bodyMedium
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
           )
         else
           for (final GalgameSessionRow row in _sessions)
@@ -661,8 +679,11 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
   Widget _buildDailyLineChart(BuildContext context, ThemeData theme) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final ColorScheme colors = theme.colorScheme;
-    final List<StatDayData> points =
-        buildGalgameRangeChartData(DateTime.now(), _rangeDays, _dailyRange);
+    final List<StatDayData> points = buildGalgameRangeChartData(
+      DateTime.now(),
+      _rangeDays,
+      _dailyRange,
+    );
     final List<double> values = <double>[
       for (final StatDayData d in points) d.ms.toDouble(),
     ];
@@ -700,8 +721,9 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
         children: <Widget>[
           Text(
             label,
-            style: theme.textTheme.bodySmall
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+            style: theme.textTheme.bodySmall?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
@@ -726,25 +748,37 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
       children: <Widget>[
-        Text(
-          summary ?? t.game_summary_none,
-          style: theme.textTheme.bodyMedium,
-        ),
+        Text(summary ?? t.game_summary_none, style: theme.textTheme.bodyMedium),
         if (meta.aliases.isNotEmpty)
           _summarySection(
-              theme, t.game_summary_aliases, meta.aliases.join('、')),
+            theme,
+            t.game_summary_aliases,
+            meta.aliases.join('、'),
+          ),
         if (meta.allTitles.isNotEmpty)
           _summarySection(
-              theme, t.game_summary_all_titles, meta.allTitles.join('\n')),
+            theme,
+            t.game_summary_all_titles,
+            meta.allTitles.join('\n'),
+          ),
         if (game.effectiveReleaseDate != null)
           _summarySection(
-              theme, t.game_summary_release_date, game.effectiveReleaseDate!),
+            theme,
+            t.game_summary_release_date,
+            game.effectiveReleaseDate!,
+          ),
         if (meta.averageHours != null)
-          _summarySection(theme, t.game_summary_average_hours,
-              '${meta.averageHours!.toStringAsFixed(1)} h'),
+          _summarySection(
+            theme,
+            t.game_summary_average_hours,
+            '${meta.averageHours!.toStringAsFixed(1)} h',
+          ),
         if (game.customData.userReview != null)
           _summarySection(
-              theme, t.game_edit_user_review, game.customData.userReview!),
+            theme,
+            t.game_edit_user_review,
+            game.customData.userReview!,
+          ),
       ],
     );
   }
@@ -757,8 +791,9 @@ class _GalgameDetailPageState extends ConsumerState<GalgameDetailPage>
         children: <Widget>[
           Text(
             label,
-            style: theme.textTheme.labelLarge
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+            style: theme.textTheme.labelLarge?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
           ),
           const SizedBox(height: 4),
           Text(value, style: theme.textTheme.bodyMedium),
@@ -780,8 +815,9 @@ List<StatDayData> buildGalgameRangeChartData(
   return <StatDayData>[
     for (int i = days - 1; i >= 0; i--)
       () {
-        final String key =
-            formatGalgameDate(endDay.subtract(Duration(days: i)));
+        final String key = formatGalgameDate(
+          endDay.subtract(Duration(days: i)),
+        );
         return StatDayData(dateKey: key)..ms = (secondsByDay[key] ?? 0) * 1000;
       }(),
   ];
@@ -822,26 +858,36 @@ class _GalgameEditTab extends StatefulWidget {
 }
 
 class _GalgameEditTabState extends State<_GalgameEditTab> {
-  late final TextEditingController _name =
-      TextEditingController(text: widget.game.customData.name ?? '');
-  late final TextEditingController _summary =
-      TextEditingController(text: widget.game.customData.summary ?? '');
-  late final TextEditingController _tags =
-      TextEditingController(text: widget.game.customData.tags.join(', '));
-  late final TextEditingController _developer =
-      TextEditingController(text: widget.game.customData.developer ?? '');
-  late final TextEditingController _releaseDate =
-      TextEditingController(text: widget.game.releaseDate ?? '');
+  late final TextEditingController _name = TextEditingController(
+    text: widget.game.customData.name ?? '',
+  );
+  late final TextEditingController _summary = TextEditingController(
+    text: widget.game.customData.summary ?? '',
+  );
+  late final TextEditingController _tags = TextEditingController(
+    text: widget.game.customData.tags.join(', '),
+  );
+  late final TextEditingController _developer = TextEditingController(
+    text: widget.game.customData.developer ?? '',
+  );
+  late final TextEditingController _releaseDate = TextEditingController(
+    text: widget.game.releaseDate ?? '',
+  );
   late final TextEditingController _rating = TextEditingController(
-      text: widget.game.customData.userRating?.toString() ?? '');
-  late final TextEditingController _review =
-      TextEditingController(text: widget.game.customData.userReview ?? '');
-  late final TextEditingController _exePath =
-      TextEditingController(text: widget.game.exePath);
-  late final TextEditingController _workdir =
-      TextEditingController(text: widget.game.workdir);
-  late final TextEditingController _launchArgs =
-      TextEditingController(text: widget.game.launchArgs);
+    text: widget.game.customData.userRating?.toString() ?? '',
+  );
+  late final TextEditingController _review = TextEditingController(
+    text: widget.game.customData.userReview ?? '',
+  );
+  late final TextEditingController _exePath = TextEditingController(
+    text: widget.game.exePath,
+  );
+  late final TextEditingController _workdir = TextEditingController(
+    text: widget.game.workdir,
+  );
+  late final TextEditingController _launchArgs = TextEditingController(
+    text: widget.game.launchArgs,
+  );
   late bool _nsfw = widget.game.customData.nsfw ?? false;
 
   @override

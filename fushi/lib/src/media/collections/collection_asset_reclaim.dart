@@ -53,8 +53,9 @@ Future<List<String>> collectionOwnedImagePaths(
   int collectionId,
 ) async {
   return <String>[
-    for (final MediaImageRow row
-        in await db.getMediaImagesForCollection(collectionId))
+    for (final MediaImageRow row in await db.getMediaImagesForCollection(
+      collectionId,
+    ))
       row.path,
   ];
 }
@@ -72,10 +73,13 @@ Future<int> deleteMediaCollectionWithAssets(
   Directory? collectionCoversDirectory,
 }) async {
   // 快照必须在删行**之前**取：行一删，coverPath / 附加图行就再也推导不出来。
-  final MediaCollectionRow? snapshot =
-      await db.getMediaCollectionById(collectionId);
-  final List<String> imagePaths =
-      await collectionOwnedImagePaths(db, collectionId);
+  final MediaCollectionRow? snapshot = await db.getMediaCollectionById(
+    collectionId,
+  );
+  final List<String> imagePaths = await collectionOwnedImagePaths(
+    db,
+    collectionId,
+  );
   final int removed = await db.deleteMediaCollection(collectionId);
   await reclaimDeletedCollectionAssets(
     db,
@@ -112,8 +116,8 @@ Future<int> reclaimDeletedCollectionAssets(
   if (candidates.isEmpty) return 0;
   int reclaimed = 0;
   try {
-    final List<MediaCollectionRow> survivors =
-        await db.getAllMediaCollections();
+    final List<MediaCollectionRow> survivors = await db
+        .getAllMediaCollections();
     final List<String> stillReferenced = <String>[
       for (final MediaCollectionRow collection in survivors)
         for (final String? path in collectionOwnedAssetPaths(collection))

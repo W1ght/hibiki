@@ -27,11 +27,11 @@ class AListDiscoverySource extends MediaDiscoverySource {
     this.username,
     this.password,
     http.Client? client,
-  })  : _baseUrl = baseUrl.endsWith('/')
-            ? baseUrl.substring(0, baseUrl.length - 1)
-            : baseUrl,
-        _kinds = Set<DiscoveryMediaKind>.unmodifiable(kinds),
-        _client = client ?? createAppHttpIoClient();
+  }) : _baseUrl = baseUrl.endsWith('/')
+           ? baseUrl.substring(0, baseUrl.length - 1)
+           : baseUrl,
+       _kinds = Set<DiscoveryMediaKind>.unmodifiable(kinds),
+       _client = client ?? createAppHttpIoClient();
 
   @override
   final String id;
@@ -70,10 +70,10 @@ class AListDiscoverySource extends MediaDiscoverySource {
 
   @override
   DiscoveryCapabilities get capabilities => DiscoveryCapabilities(
-        kinds: _kinds,
-        supportsBrowse: true,
-        supportsPaging: true,
-      );
+    kinds: _kinds,
+    supportsBrowse: true,
+    supportsPaging: true,
+  );
 
   @override
   Future<ProviderBatchResult<DiscoveryResultPage>> browse(
@@ -82,12 +82,12 @@ class AListDiscoverySource extends MediaDiscoverySource {
     final String path = request.path ?? '/';
     final Map<String, dynamic> data =
         await _post('/api/fs/list', <String, dynamic>{
-      'path': path,
-      'password': '',
-      'page': request.page,
-      'per_page': request.pageSize,
-      'refresh': false,
-    });
+          'path': path,
+          'password': '',
+          'page': request.page,
+          'per_page': request.pageSize,
+          'refresh': false,
+        });
     final List<dynamic> content =
         (data['content'] as List<dynamic>?) ?? <dynamic>[];
     final int total = (data['total'] as num?)?.toInt() ?? content.length;
@@ -112,13 +112,13 @@ class AListDiscoverySource extends MediaDiscoverySource {
   ) async {
     final Map<String, dynamic> data =
         await _post('/api/fs/search', <String, dynamic>{
-      'parent': '/',
-      'keywords': request.query!.trim(),
-      'scope': 0,
-      'page': request.page,
-      'per_page': request.pageSize,
-      'password': '',
-    });
+          'parent': '/',
+          'keywords': request.query!.trim(),
+          'scope': 0,
+          'page': request.page,
+          'per_page': request.pageSize,
+          'password': '',
+        });
     final List<dynamic> content =
         (data['content'] as List<dynamic>?) ?? <dynamic>[];
     final int total = (data['total'] as num?)?.toInt() ?? content.length;
@@ -151,11 +151,10 @@ class AListDiscoverySource extends MediaDiscoverySource {
   /// 下载时经 `/api/fs/get` 取带签名的 `raw_url`。
   @override
   Future<DiscoveryPayload> resolvePayload(DiscoveryResourceItem item) async {
-    final Map<String, dynamic> data =
-        await _post('/api/fs/get', <String, dynamic>{
-      'path': item.id,
-      'password': '',
-    });
+    final Map<String, dynamic> data = await _post(
+      '/api/fs/get',
+      <String, dynamic>{'path': item.id, 'password': ''},
+    );
     final String? rawUrl = data['raw_url'] as String?;
     if (rawUrl == null || rawUrl.trim().isEmpty) {
       throw ExternalProviderFailure(
@@ -267,14 +266,16 @@ class AListDiscoverySource extends MediaDiscoverySource {
     // 样本一个都对不上、网络异常）都必须让 _basePath 保持 null，否则本会话再也
     // 不会重推，而搜索结果的目录会一直打不开。只有两个 return 才算有结论。
     try {
-      final Map<String, dynamic> data =
-          await _post('/api/fs/list', <String, dynamic>{
-        'path': '/',
-        'password': '',
-        'page': 1,
-        'per_page': 200,
-        'refresh': false,
-      });
+      final Map<String, dynamic> data = await _post(
+        '/api/fs/list',
+        <String, dynamic>{
+          'path': '/',
+          'password': '',
+          'page': 1,
+          'per_page': 200,
+          'refresh': false,
+        },
+      );
       final Set<String> rootNames = <String>{
         for (final Map<String, dynamic> raw
             in ((data['content'] as List<dynamic>?) ?? <dynamic>[])

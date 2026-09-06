@@ -47,8 +47,10 @@ Future<bool> _neverThrows(
   try {
     return await run(path);
   } catch (error, stackTrace) {
-    debugPrint('[fushi-drop] image archive probe failed for $path: $error\n'
-        '$stackTrace');
+    debugPrint(
+      '[fushi-drop] image archive probe failed for $path: $error\n'
+      '$stackTrace',
+    );
     return false;
   }
 }
@@ -57,8 +59,9 @@ Future<bool> _neverThrows(
 bool _needsProbe(String path) {
   final String extension = p.extension(path);
   if (extension.isEmpty) return false;
-  return kDragImageArchiveProbeExtensions
-      .contains(extension.substring(1).toLowerCase());
+  return kDragImageArchiveProbeExtensions.contains(
+    extension.substring(1).toLowerCase(),
+  );
 }
 
 /// 单个包的真读包判定，跑在后台 isolate 上。容错在 [_neverThrows]。

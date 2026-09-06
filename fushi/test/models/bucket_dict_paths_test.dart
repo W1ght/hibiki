@@ -7,15 +7,19 @@ import 'package:fushi_dictionary/fushi_dictionary.dart';
 /// （依赖真词典 + 真目录 + FFI）。本测试钉死分桶规则：term 隐藏仍进桶（渲染期再过滤）；
 /// freq/pitch/kanji 隐藏不进桶（BUG-177/TODO-094）；不存在的目录跳过。
 void main() {
-  DictPathEntry e(DictionaryType type, String path,
-          {bool exists = true, bool hidden = false, bool hasKanji = false}) =>
-      (
-        type: type,
-        path: path,
-        exists: exists,
-        hidden: hidden,
-        hasKanji: hasKanji,
-      );
+  DictPathEntry e(
+    DictionaryType type,
+    String path, {
+    bool exists = true,
+    bool hidden = false,
+    bool hasKanji = false,
+  }) => (
+    type: type,
+    path: path,
+    exists: exists,
+    hidden: hidden,
+    hasKanji: hasKanji,
+  );
 
   group('bucketDictPaths 词典分桶单一真相', () {
     test('按类型分四桶', () {
@@ -73,10 +77,12 @@ void main() {
       final b = bucketDictPaths(<DictPathEntry>[
         e(DictionaryType.term, '/mixed', hasKanji: true),
       ]);
-      expect(b.term, <String>['/mixed'],
-          reason: '混合词典首先是词条词典,必须进 term 桶让划词查词命中');
-      expect(b.kanji, <String>['/mixed'],
-          reason: '混合词典内含 kanji,也要进 kanji 桶让单字查汉字命中');
+      expect(b.term, <String>[
+        '/mixed',
+      ], reason: '混合词典首先是词条词典,必须进 term 桶让划词查词命中');
+      expect(b.kanji, <String>[
+        '/mixed',
+      ], reason: '混合词典内含 kanji,也要进 kanji 桶让单字查汉字命中');
     });
 
     test('纯 term 词典(hasKanji=false)不进 kanji 桶', () {

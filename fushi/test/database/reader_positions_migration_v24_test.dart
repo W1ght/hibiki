@@ -85,92 +85,111 @@ Future<Set<String>> _columnNames(FushiDatabase db, String table) async {
 }
 
 void main() {
-  group('reader_positions v23->v24 (drop ttu_char_offset, add char_offset)',
-      () {
+  group('reader_positions v23->v24 (drop ttu_char_offset, add char_offset)', () {
     test(
-        'drops ttu_char_offset, adds char_offset, keeps PK, preserves every row',
-        () async {
-      final db = await _openV23ReaderPositions(<String, int>{
-        // A row whose legacy ttu_char_offset was the -1 sentinel.
-        'こころ': -1,
-        // A row whose legacy ttu_char_offset held a precise offset (888) — it is
-        // intentionally dropped; v24 resets to the -1 fallback.
-        '吾輩は猫である': 888,
-        // A third book to prove multi-row preservation.
-        '坊っちゃん': 42,
-      });
+      'drops ttu_char_offset, adds char_offset, keeps PK, preserves every row',
+      () async {
+        final db = await _openV23ReaderPositions(<String, int>{
+          // A row whose legacy ttu_char_offset was the -1 sentinel.
+          'こころ': -1,
+          // A row whose legacy ttu_char_offset held a precise offset (888) — it is
+          // intentionally dropped; v24 resets to the -1 fallback.
+          '吾輩は猫である': 888,
+          // A third book to prove multi-row preservation.
+          '坊っちゃん': 42,
+        });
 
-      // Ladder ran to the live schema version.
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
+        // Ladder ran to the live schema version.
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
 
-      // (a) Column shape: char_offset present, ttu_char_offset gone, PK on id
-      //     unchanged.
-      final cols =
-          await db.customSelect("PRAGMA table_info('reader_positions')").get();
-      final colNames = cols.map((r) => r.data['name'] as String).toSet();
-      expect(colNames, contains('char_offset'));
-      expect(colNames, isNot(contains('ttu_char_offset')),
-          reason: 'v24 must DROP the legacy ttu_char_offset column');
-      final pkCols = cols
-          .where((r) => (r.data['pk'] as int) > 0)
-          .map((r) => r.data['name'] as String)
-          .toList();
-      expect(pkCols, equals(<String>['id']),
-          reason: 'primary key is still the autoincrement id, unchanged');
+        // (a) Column shape: char_offset present, ttu_char_offset gone, PK on id
+        //     unchanged.
+        final cols = await db
+            .customSelect("PRAGMA table_info('reader_positions')")
+            .get();
+        final colNames = cols.map((r) => r.data['name'] as String).toSet();
+        expect(colNames, contains('char_offset'));
+        expect(
+          colNames,
+          isNot(contains('ttu_char_offset')),
+          reason: 'v24 must DROP the legacy ttu_char_offset column',
+        );
+        final pkCols = cols
+            .where((r) => (r.data['pk'] as int) > 0)
+            .map((r) => r.data['name'] as String)
+            .toList();
+        expect(
+          pkCols,
+          equals(<String>['id']),
+          reason: 'primary key is still the autoincrement id, unchanged',
+        );
 
-      // (b) Every row preserved: 3 rows, all other columns byte-for-byte.
-      //     梯子继续走到 v82：book_key 列被重建成 book_uid；这些行 JOIN 不上
-      //     epub_books（空表），按 v82 语义照抄原键值。
-      final rows = await db
-          .customSelect('SELECT book_uid, section_index, norm_char_offset, '
-              'updated_at, char_offset FROM reader_positions ORDER BY id')
-          .get();
-      expect(rows, hasLength(3), reason: 'DROP COLUMN must not drop rows');
-      expect(rows[0].read<String>('book_uid'), 'こころ');
-      expect(rows[0].read<int>('section_index'), 1);
-      expect(rows[0].read<int>('norm_char_offset'), 100);
-      expect(rows[0].read<int>('updated_at'), 1000);
-      expect(rows[1].read<String>('book_uid'), '吾輩は猫である');
-      expect(rows[1].read<int>('norm_char_offset'), 200);
-      expect(rows[2].read<String>('book_uid'), '坊っちゃん');
-      expect(rows[2].read<int>('norm_char_offset'), 300);
+        // (b) Every row preserved: 3 rows, all other columns byte-for-byte.
+        //     梯子继续走到 v82：book_key 列被重建成 book_uid；这些行 JOIN 不上
+        //     epub_books（空表），按 v82 语义照抄原键值。
+        final rows = await db
+            .customSelect(
+              'SELECT book_uid, section_index, norm_char_offset, '
+              'updated_at, char_offset FROM reader_positions ORDER BY id',
+            )
+            .get();
+        expect(rows, hasLength(3), reason: 'DROP COLUMN must not drop rows');
+        expect(rows[0].read<String>('book_uid'), 'こころ');
+        expect(rows[0].read<int>('section_index'), 1);
+        expect(rows[0].read<int>('norm_char_offset'), 100);
+        expect(rows[0].read<int>('updated_at'), 1000);
+        expect(rows[1].read<String>('book_uid'), '吾輩は猫である');
+        expect(rows[1].read<int>('norm_char_offset'), 200);
+        expect(rows[2].read<String>('book_uid'), '坊っちゃん');
+        expect(rows[2].read<int>('norm_char_offset'), 300);
 
-      // (c) char_offset default: every pre-existing row gets the -1 sentinel
-      //     (DROP COLUMN deletes the precise ttu offsets; recovery falls back to
-      //     the normCharOffset score until the next page re-save — matches the
-      //     database.dart `if (from < 24)` comment).
-      for (final row in rows) {
-        expect(row.read<int>('char_offset'), -1,
-            reason: 'pre-v24 rows default to -1 (precise offset dropped)');
-      }
+        // (c) char_offset default: every pre-existing row gets the -1 sentinel
+        //     (DROP COLUMN deletes the precise ttu offsets; recovery falls back to
+        //     the normCharOffset score until the next page re-save — matches the
+        //     database.dart `if (from < 24)` comment).
+        for (final row in rows) {
+          expect(
+            row.read<int>('char_offset'),
+            -1,
+            reason: 'pre-v24 rows default to -1 (precise offset dropped)',
+          );
+        }
 
-      // (d) The new column is usable: upsert a precise char_offset and read it
-      //     back through the typed API.
-      await db.upsertReaderPosition(const ReaderPositionsCompanion(
-        bookUid: Value('こころ'),
-        sectionIndex: Value(1),
-        normCharOffset: Value(100),
-        charOffset: Value(1234),
-        updatedAt: Value(2000),
-      ));
-      final restored = await db.getReaderPosition('こころ');
-      expect(restored, isNotNull);
-      expect(restored!.charOffset, 1234,
-          reason: 'char_offset round-trips after migration');
-    });
+        // (d) The new column is usable: upsert a precise char_offset and read it
+        //     back through the typed API.
+        await db.upsertReaderPosition(
+          const ReaderPositionsCompanion(
+            bookUid: Value('こころ'),
+            sectionIndex: Value(1),
+            normCharOffset: Value(100),
+            charOffset: Value(1234),
+            updatedAt: Value(2000),
+          ),
+        );
+        final restored = await db.getReaderPosition('こころ');
+        expect(restored, isNotNull);
+        expect(
+          restored!.charOffset,
+          1234,
+          reason: 'char_offset round-trips after migration',
+        );
+      },
+    );
 
     test(
-        'idempotent when a v23 DB already has char_offset (guard skips the ADD)',
-        () async {
-      // Anomalous but defensible: a DB that already carries char_offset AND
-      // ttu_char_offset. The from<24 step guards the ADD with
-      // !_columnExists('reader_positions','char_offset'), so it must not error,
-      // and must still DROP the stale ttu_char_offset.
-      final db = FushiDatabase.forTesting(
-        NativeDatabase.memory(
-          setup: (rawDb) {
-            rawDb.execute('''
+      'idempotent when a v23 DB already has char_offset (guard skips the ADD)',
+      () async {
+        // Anomalous but defensible: a DB that already carries char_offset AND
+        // ttu_char_offset. The from<24 step guards the ADD with
+        // !_columnExists('reader_positions','char_offset'), so it must not error,
+        // and must still DROP the stale ttu_char_offset.
+        final db = FushiDatabase.forTesting(
+          NativeDatabase.memory(
+            setup: (rawDb) {
+              rawDb.execute('''
 CREATE TABLE reader_positions (
   id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
   book_key TEXT NOT NULL UNIQUE,
@@ -181,34 +200,40 @@ CREATE TABLE reader_positions (
   updated_at INTEGER NOT NULL
 )
 ''');
-            rawDb.execute(_epubBooksV23Ddl);
-            rawDb.execute(
-              'INSERT INTO reader_positions '
-              '(book_key, section_index, norm_char_offset, ttu_char_offset, '
-              'char_offset, updated_at) '
-              "VALUES ('こころ', 3, 555, 777, 999, 12345)",
-            );
-            rawDb.execute('PRAGMA user_version = 23');
-          },
-        ),
-      );
-      addTearDown(db.close);
+              rawDb.execute(_epubBooksV23Ddl);
+              rawDb.execute(
+                'INSERT INTO reader_positions '
+                '(book_key, section_index, norm_char_offset, ttu_char_offset, '
+                'char_offset, updated_at) '
+                "VALUES ('こころ', 3, 555, 777, 999, 12345)",
+              );
+              rawDb.execute('PRAGMA user_version = 23');
+            },
+          ),
+        );
+        addTearDown(db.close);
 
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
 
-      final colNames = await _columnNames(db, 'reader_positions');
-      expect(colNames, contains('char_offset'));
-      expect(colNames, isNot(contains('ttu_char_offset')));
+        final colNames = await _columnNames(db, 'reader_positions');
+        expect(colNames, contains('char_offset'));
+        expect(colNames, isNot(contains('ttu_char_offset')));
 
-      // The pre-existing char_offset value is NOT clobbered (guard skipped ADD).
-      final restored = await db.getReaderPosition('こころ');
-      expect(restored, isNotNull);
-      expect(restored!.charOffset, 999,
-          reason: 'existing char_offset preserved (no re-ADD with default)');
-      expect(restored.sectionIndex, 3);
-      expect(restored.normCharOffset, 555);
-    });
+        // The pre-existing char_offset value is NOT clobbered (guard skipped ADD).
+        final restored = await db.getReaderPosition('こころ');
+        expect(restored, isNotNull);
+        expect(
+          restored!.charOffset,
+          999,
+          reason: 'existing char_offset preserved (no re-ADD with default)',
+        );
+        expect(restored.sectionIndex, 3);
+        expect(restored.normCharOffset, 555);
+      },
+    );
 
     test('tolerates a partial DB with no reader_positions table', () async {
       // A synthetic/partial seed missing reader_positions entirely: at v23 only
@@ -232,11 +257,15 @@ CREATE TABLE reader_positions (
       // The guard skipped the ALTER; reader_positions was never created.
       final exists = await db
           .customSelect(
-              "SELECT COUNT(*) AS c FROM sqlite_master WHERE type='table' "
-              "AND name='reader_positions'")
+            "SELECT COUNT(*) AS c FROM sqlite_master WHERE type='table' "
+            "AND name='reader_positions'",
+          )
           .getSingle();
-      expect(exists.read<int>('c'), 0,
-          reason: '_tableExists guard skipped the ADD/DROP on a partial DB');
+      expect(
+        exists.read<int>('c'),
+        0,
+        reason: '_tableExists guard skipped the ADD/DROP on a partial DB',
+      );
     });
   });
 }

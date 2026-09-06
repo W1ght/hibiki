@@ -15,16 +15,8 @@ import 'package:fushi/src/media/manga/manga_reading_mode.dart';
 import 'package:fushi/src/media/manga/mokuro_payload.dart';
 
 const List<MokuroImage> _pages = <MokuroImage>[
-  MokuroImage(
-    url: 'p001.jpg',
-    size: Size(1000, 1600),
-    blocks: <MokuroBlock>[],
-  ),
-  MokuroImage(
-    url: 'p002.jpg',
-    size: Size(1000, 1600),
-    blocks: <MokuroBlock>[],
-  ),
+  MokuroImage(url: 'p001.jpg', size: Size(1000, 1600), blocks: <MokuroBlock>[]),
+  MokuroImage(url: 'p002.jpg', size: Size(1000, 1600), blocks: <MokuroBlock>[]),
 ];
 
 String _document({
@@ -96,8 +88,10 @@ void main() {
     final String document = _document();
     expect(
       document,
-      contains('if (RESCAN) { rescanStart = {x: e.clientX, y: e.clientY}; '
-          'return; }'),
+      contains(
+        'if (RESCAN) { rescanStart = {x: e.clientX, y: e.clientY}; '
+        'return; }',
+      ),
     );
     expect(
       document,

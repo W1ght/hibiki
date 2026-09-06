@@ -171,10 +171,9 @@ void main() {
       ),
     );
 
-    expect(
-      source.capabilities.kinds,
-      const <DiscoveryMediaKind>{DiscoveryMediaKind.novel},
-    );
+    expect(source.capabilities.kinds, const <DiscoveryMediaKind>{
+      DiscoveryMediaKind.novel,
+    });
     final ProviderBatchResult<DiscoveryResultPage> result = await source.search(
       const DiscoveryRequest(kind: DiscoveryMediaKind.game, query: 'x'),
     );

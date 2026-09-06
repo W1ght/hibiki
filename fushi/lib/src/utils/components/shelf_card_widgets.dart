@@ -175,11 +175,7 @@ class ShelfCoverPlaceholder extends StatelessWidget {
         borderRadius: tokens.radii.cardRadius,
       ),
       child: Center(
-        child: Icon(
-          icon,
-          size: iconSize,
-          color: tokens.surfaces.onVariant,
-        ),
+        child: Icon(icon, size: iconSize, color: tokens.surfaces.onVariant),
       ),
     );
   }
@@ -255,8 +251,9 @@ class ShelfTitleOverflowTooltip extends StatelessWidget {
       builder: (BuildContext context, BoxConstraints constraints) {
         if (!constraints.hasBoundedWidth) return child;
         // 与 [Text] 相同的样式合成路径（inherit 时并入 DefaultTextStyle）。
-        final TextStyle effective =
-            DefaultTextStyle.of(context).style.merge(style);
+        final TextStyle effective = DefaultTextStyle.of(
+          context,
+        ).style.merge(style);
         final TextPainter painter = TextPainter(
           text: TextSpan(text: title, style: effective),
           maxLines: maxLines,

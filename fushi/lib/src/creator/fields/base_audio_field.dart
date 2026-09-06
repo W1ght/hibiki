@@ -24,10 +24,12 @@ abstract class BaseAudioField extends AudioExportField {
 
   AudioPlayer _audioPlayer = AudioPlayer();
 
-  final ValueNotifier<Duration> _positionNotifier =
-      ValueNotifier<Duration>(Duration.zero);
-  final ValueNotifier<Duration?> _durationNotifier =
-      ValueNotifier<Duration>(Duration.zero);
+  final ValueNotifier<Duration> _positionNotifier = ValueNotifier<Duration>(
+    Duration.zero,
+  );
+  final ValueNotifier<Duration?> _durationNotifier = ValueNotifier<Duration>(
+    Duration.zero,
+  );
   final ValueNotifier<PlayerState?> _playerStateNotifier =
       ValueNotifier<PlayerState?>(null);
 
@@ -68,9 +70,7 @@ abstract class BaseAudioField extends AudioExportField {
                   color: Theme.of(context).colorScheme.onSurfaceVariant,
                 ),
               ),
-              const Text(
-                '--:-- / --:--',
-              ),
+              const Text('--:-- / --:--'),
               Expanded(
                 child: adaptiveSlider(
                   context: context,
@@ -104,9 +104,11 @@ abstract class BaseAudioField extends AudioExportField {
   /// Set up audio for new file.
   Future<void> initialiseAudio(File file) {
     final int generation = ++_audioLoadGeneration;
-    _audioLoadQueue = _audioLoadQueue.catchError((Object e) {
-      debugPrint('[creator-audio] previous load failed: $e');
-    }).then((_) => _replaceAudioPlayer(file, generation));
+    _audioLoadQueue = _audioLoadQueue
+        .catchError((Object e) {
+          debugPrint('[creator-audio] previous load failed: $e');
+        })
+        .then((_) => _replaceAudioPlayer(file, generation));
     return _audioLoadQueue;
   }
 
@@ -169,9 +171,7 @@ abstract class BaseAudioField extends AudioExportField {
   /// Clears this field's data. The state refresh afterwards is not performed
   /// here and should be performed by the invocation of the clear field button.
   @override
-  void clearFieldState({
-    required CreatorModel creatorModel,
-  }) {
+  void clearFieldState({required CreatorModel creatorModel}) {
     unawaited(_audioPlayer.stop());
     super.clearFieldState(creatorModel: creatorModel);
   }
@@ -179,9 +179,7 @@ abstract class BaseAudioField extends AudioExportField {
   /// Build the play/pause button.
   Widget buildPlayButton() {
     return MultiValueListenableBuilder(
-      valueListenables: [
-        _playerStateNotifier,
-      ],
+      valueListenables: [_playerStateNotifier],
       builder: (context, values, _) {
         PlayerState? playerState = values.elementAt(0);
 
@@ -224,8 +222,9 @@ abstract class BaseAudioField extends AudioExportField {
               );
 
               _noisySub?.cancel();
-              _noisySub =
-                  session.becomingNoisyEventStream.listen((event) async {
+              _noisySub = session.becomingNoisyEventStream.listen((
+                event,
+              ) async {
                 await _audioPlayer.pause();
                 session?.setActive(false);
               });
@@ -282,9 +281,7 @@ abstract class BaseAudioField extends AudioExportField {
           return FushiTimeFormat.getVideoDurationText(duration).trim();
         }
 
-        return Text(
-          '${getPositionText()} / ${getDurationText()}',
-        );
+        return Text('${getPositionText()} / ${getDurationText()}');
       },
     );
   }
@@ -312,12 +309,13 @@ abstract class BaseAudioField extends AudioExportField {
 
         return Expanded(
           child: gamepadSeekableSlider(
-              value: sliderValue <= max ? sliderValue : 0.0,
-              max: max,
-              step: 5000, // gamepad D-pad Left/Right = seek ±5s
-              onChanged: (progress) {
-                _audioPlayer.seek(Duration(milliseconds: progress.floor()));
-              }),
+            value: sliderValue <= max ? sliderValue : 0.0,
+            max: max,
+            step: 5000, // gamepad D-pad Left/Right = seek ±5s
+            onChanged: (progress) {
+              _audioPlayer.seek(Duration(milliseconds: progress.floor()));
+            },
+          ),
         );
       },
     );
@@ -350,9 +348,11 @@ abstract class BaseAudioField extends AudioExportField {
   @override
   void onCreatorClose() {
     _audioLoadGeneration++;
-    _audioLoadQueue = _audioLoadQueue.catchError((Object e) {
-      debugPrint('[creator-audio] pending load failed on close: $e');
-    }).then((_) => _disposeAudioPlayer());
+    _audioLoadQueue = _audioLoadQueue
+        .catchError((Object e) {
+          debugPrint('[creator-audio] pending load failed on close: $e');
+        })
+        .then((_) => _disposeAudioPlayer());
     unawaited(_audioLoadQueue);
   }
 }

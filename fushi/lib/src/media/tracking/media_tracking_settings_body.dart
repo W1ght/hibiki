@@ -11,10 +11,7 @@ import 'package:fushi_core/fushi_core.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MediaTrackingSettingsBody extends StatefulWidget {
-  const MediaTrackingSettingsBody({
-    required this.appModel,
-    super.key,
-  });
+  const MediaTrackingSettingsBody({required this.appModel, super.key});
 
   final AppModel appModel;
 
@@ -24,8 +21,9 @@ class MediaTrackingSettingsBody extends StatefulWidget {
 }
 
 class _MediaTrackingSettingsBodyState extends State<MediaTrackingSettingsBody> {
-  late final MediaTrackingRepository _repository =
-      MediaTrackingRepository(widget.appModel.database);
+  late final MediaTrackingRepository _repository = MediaTrackingRepository(
+    widget.appModel.database,
+  );
   late final TextEditingController _tokenController = TextEditingController(
     text: widget.appModel.mediaTrackingService.accessToken,
   );
@@ -58,8 +56,10 @@ class _MediaTrackingSettingsBodyState extends State<MediaTrackingSettingsBody> {
   Future<void> _reload() async {
     // 映射列表 / 待办数 / 上次同步结果 / 失败原因统一走服务层快照，与首页卡片同源
     // （含「隐藏 bookChapter 伴随映射」这条口径），不再各查一遍各滤一遍。
-    final MediaTrackingStatus status =
-        await widget.appModel.mediaTrackingService.loadStatus();
+    final MediaTrackingStatus status = await widget
+        .appModel
+        .mediaTrackingService
+        .loadStatus();
     if (!mounted) return;
     setState(() {
       _status = status;
@@ -78,11 +78,14 @@ class _MediaTrackingSettingsBodyState extends State<MediaTrackingSettingsBody> {
     try {
       // 校验 + 落令牌 + 记账号名是一次原子的「连接」，交给服务层，避免设置页与
       // 首页各写一份半状态。
-      final BangumiUser user =
-          await widget.appModel.mediaTrackingService.connect(token);
+      final BangumiUser user = await widget.appModel.mediaTrackingService
+          .connect(token);
       if (!mounted) return;
-      setState(() => _connectedAccount =
-          user.nickname.isEmpty ? user.username : user.nickname);
+      setState(
+        () => _connectedAccount = user.nickname.isEmpty
+            ? user.username
+            : user.nickname,
+      );
       _message(t.media_tracking_sync_success);
       await _sync();
     } catch (_) {
@@ -98,12 +101,16 @@ class _MediaTrackingSettingsBodyState extends State<MediaTrackingSettingsBody> {
       return;
     }
     setState(() => _busy = true);
-    final MediaTrackingSyncResult result =
-        await widget.appModel.mediaTrackingService.syncNow(force: true);
+    final MediaTrackingSyncResult result = await widget
+        .appModel
+        .mediaTrackingService
+        .syncNow(force: true);
     if (!mounted) return;
-    _message(result.isSuccess
-        ? t.media_tracking_sync_success
-        : t.media_tracking_sync_failed);
+    _message(
+      result.isSuccess
+          ? t.media_tracking_sync_success
+          : t.media_tracking_sync_failed,
+    );
     await _reload();
     if (mounted) setState(() => _busy = false);
   }
@@ -253,7 +260,8 @@ class _MediaTrackingSettingsBodyState extends State<MediaTrackingSettingsBody> {
               for (final MediaTrackingUnlinkedItem item in status.unlinked)
                 AdaptiveSettingsRow(
                   title: item.mediaTitle,
-                  subtitle: '${trackingKindLabel(item.kind.value)} · '
+                  subtitle:
+                      '${trackingKindLabel(item.kind.value)} · '
                       '${t.media_tracking_manual_required}',
                   titleMaxLines: 3,
                   subtitleMaxLines: 2,
@@ -336,8 +344,9 @@ class _AddMappingDialog extends StatefulWidget {
 
 class _AddMappingDialogState extends State<_AddMappingDialog> {
   final TextEditingController _searchController = TextEditingController();
-  final TextEditingController _offsetController =
-      TextEditingController(text: '1');
+  final TextEditingController _offsetController = TextEditingController(
+    text: '1',
+  );
 
   List<_LocalTrackingTarget> _targets = const <_LocalTrackingTarget>[];
   List<BangumiSubject> _results = const <BangumiSubject>[];
@@ -364,10 +373,10 @@ class _AddMappingDialogState extends State<_AddMappingDialog> {
     final List<EpubBookRow> books = await widget.database.getAllEpubBooks();
     final List<VideoBookRow> videos = await widget.database.allVideoBooks();
     final List<GalgameRow> games = await widget.database.getAllGalgames();
-    final List<MediaCollectionRow> collections =
-        await widget.database.getAllMediaCollections();
-    final List<MediaCollectionItemRow> members =
-        await widget.database.getAllCollectionItems();
+    final List<MediaCollectionRow> collections = await widget.database
+        .getAllMediaCollections();
+    final List<MediaCollectionItemRow> members = await widget.database
+        .getAllCollectionItems();
     final Set<int> videoPlaylists = members
         .where((MediaCollectionItemRow row) => row.mediaType == 'video')
         .map((MediaCollectionItemRow row) => row.collectionId)
@@ -393,7 +402,8 @@ class _AddMappingDialogState extends State<_AddMappingDialog> {
         if (collection.collectionType == 'playlist' &&
             videoPlaylists.contains(collection.id) &&
             !isMultiSeasonGrouped(
-                groupKeysByCollection[collection.id] ?? const <String>[]))
+              groupKeysByCollection[collection.id] ?? const <String>[],
+            ))
           _LocalTrackingTarget(
             type: TrackingMediaType.videoCollection,
             key: collection.id.toString(),
@@ -482,18 +492,18 @@ class _AddMappingDialogState extends State<_AddMappingDialog> {
     final int offset = _mode == TrackingProgressMode.status
         ? 0
         : (int.tryParse(_offsetController.text) ??
-            (_mode == TrackingProgressMode.chapter ? 0 : 1));
-    final MediaTrackingSyncResult result =
-        await widget.service.saveManualMappingAndSync(
-      mediaType: target.type,
-      mediaKey: target.key,
-      mediaTitle: target.title,
-      kind: _kind,
-      subjectId: subject.id,
-      subjectName: subject.displayName,
-      progressMode: _mode,
-      progressOffset: offset.clamp(0, 100000),
-    );
+              (_mode == TrackingProgressMode.chapter ? 0 : 1));
+    final MediaTrackingSyncResult result = await widget.service
+        .saveManualMappingAndSync(
+          mediaType: target.type,
+          mediaKey: target.key,
+          mediaTitle: target.title,
+          kind: _kind,
+          subjectId: subject.id,
+          subjectName: subject.displayName,
+          progressMode: _mode,
+          progressOffset: offset.clamp(0, 100000),
+        );
     if (mounted) Navigator.of(context).pop(result.isSuccess);
   }
 
@@ -509,8 +519,9 @@ class _AddMappingDialogState extends State<_AddMappingDialog> {
             children: <Widget>[
               DropdownButtonFormField<_LocalTrackingTarget>(
                 initialValue: _target,
-                decoration:
-                    InputDecoration(labelText: t.media_tracking_local_item),
+                decoration: InputDecoration(
+                  labelText: t.media_tracking_local_item,
+                ),
                 items: <DropdownMenuItem<_LocalTrackingTarget>>[
                   for (final _LocalTrackingTarget target in _targets)
                     DropdownMenuItem<_LocalTrackingTarget>(
@@ -593,9 +604,9 @@ class _AddMappingDialogState extends State<_AddMappingDialog> {
                     _mode = value;
                     _offsetController.text =
                         value == TrackingProgressMode.chapter ||
-                                value == TrackingProgressMode.status
-                            ? '0'
-                            : '1';
+                            value == TrackingProgressMode.status
+                        ? '0'
+                        : '1';
                   });
                 },
               ),

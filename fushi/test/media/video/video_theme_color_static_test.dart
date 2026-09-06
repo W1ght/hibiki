@@ -20,24 +20,39 @@ void main() {
       final int accentCount = 'buttonBarButtonColor: _videoChromeAccent(cs)'
           .allMatches(page)
           .length;
-      expect(accentCount, 2,
-          reason: '桌面与移动两套控制条主题都必须用 _videoChromeAccent（恒亮 tone 强调色）');
+      expect(
+        accentCount,
+        2,
+        reason: '桌面与移动两套控制条主题都必须用 _videoChromeAccent（恒亮 tone 强调色）',
+      );
     });
 
     test('控制条按钮不再用 cs.primary / onSurface / 硬编码白色', () {
-      expect(page.contains('buttonBarButtonColor: cs.primary'), isFalse,
-          reason: 'cs.primary 在浅色 / eink 主题下是深色，压深色 scrim 不可读（PR-4）');
-      expect(page.contains('buttonBarButtonColor: cs.onSurface'), isFalse,
-          reason: 'onSurface 在浅色主题下叠在深色 scrim 上对比差，应换 chrome 强调色');
-      expect(page.contains('buttonBarButtonColor: Colors.white'), isFalse,
-          reason: '硬编码白色丢主题色相，应走 _videoChromeAccent（亮 tone primary）');
+      expect(
+        page.contains('buttonBarButtonColor: cs.primary'),
+        isFalse,
+        reason: 'cs.primary 在浅色 / eink 主题下是深色，压深色 scrim 不可读（PR-4）',
+      );
+      expect(
+        page.contains('buttonBarButtonColor: cs.onSurface'),
+        isFalse,
+        reason: 'onSurface 在浅色主题下叠在深色 scrim 上对比差，应换 chrome 强调色',
+      );
+      expect(
+        page.contains('buttonBarButtonColor: Colors.white'),
+        isFalse,
+        reason: '硬编码白色丢主题色相，应走 _videoChromeAccent（亮 tone primary）',
+      );
     });
   });
 
   group('视频弹出 sheet 吃主题表面色', () {
     test('sheet 不再硬编码 Colors.black87 背景', () {
-      expect(page.contains('backgroundColor: Colors.black87'), isFalse,
-          reason: '音轨/字幕/倍速/剧集 sheet 必须跟随主题表面色，不能死黑');
+      expect(
+        page.contains('backgroundColor: Colors.black87'),
+        isFalse,
+        reason: '音轨/字幕/倍速/剧集 sheet 必须跟随主题表面色，不能死黑',
+      );
     });
   });
 }

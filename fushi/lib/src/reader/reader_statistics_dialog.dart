@@ -30,8 +30,12 @@ typedef ReaderBookStatTotals = ({
   int allMs,
 });
 
-const ReaderBookStatTotals kEmptyReaderBookStatTotals =
-    (todayChars: 0, todayMs: 0, allChars: 0, allMs: 0);
+const ReaderBookStatTotals kEmptyReaderBookStatTotals = (
+  todayChars: 0,
+  todayMs: 0,
+  allChars: 0,
+  allMs: 0,
+);
 
 /// 从阅读域日面事实里切出**本书**的今日 / 累计。身份优先 `mediaKey == bookKey`；
 /// legacy 无身份行按 title 回退（与阅读统计页的按书分组同一规则）。
@@ -76,8 +80,9 @@ double? readerFinishCph({
   required StudySessionTotals session,
   required ReaderBookStatTotals book,
 }) {
-  final double? sessionCph =
-      session.chars > 0 ? computeCph(session.chars, session.durationMs) : null;
+  final double? sessionCph = session.chars > 0
+      ? computeCph(session.chars, session.durationMs)
+      : null;
   if (sessionCph != null && sessionCph > 0) return sessionCph;
   final double? allCph = computeCph(book.allChars, book.allMs);
   return (allCph != null && allCph > 0) ? allCph : null;
@@ -145,9 +150,11 @@ class _ReaderStatisticsDialogState extends State<ReaderStatisticsDialog> {
       if (snap == _lastSnapshot) return;
       setState(() => _lastSnapshot = snap);
     });
-    unawaited(widget.loadBookTotals().then((ReaderBookStatTotals totals) {
-      if (mounted) setState(() => _book = totals);
-    }));
+    unawaited(
+      widget.loadBookTotals().then((ReaderBookStatTotals totals) {
+        if (mounted) setState(() => _book = totals);
+      }),
+    );
   }
 
   @override
@@ -218,7 +225,9 @@ class _ReaderStatisticsDialogState extends State<ReaderStatisticsDialog> {
                         iconSize: 18,
                         tooltip: paused ? t.play : t.pause,
                         icon: Icon(
-                          paused ? Icons.play_arrow_rounded : Icons.pause_rounded,
+                          paused
+                              ? Icons.play_arrow_rounded
+                              : Icons.pause_rounded,
                           color: paused
                               ? theme.colorScheme.primary
                               : theme.colorScheme.onSurfaceVariant,
@@ -231,7 +240,9 @@ class _ReaderStatisticsDialogState extends State<ReaderStatisticsDialog> {
                     ),
                   ],
                 ),
-                _StatCard(cells: _metricCells(session.chars, session.durationMs)),
+                _StatCard(
+                  cells: _metricCells(session.chars, session.durationMs),
+                ),
                 ReaderSideSheetSectionLabel(
                   '${t.stat_today} · ${t.reader_stats_this_book}',
                 ),
@@ -245,7 +256,9 @@ class _ReaderStatisticsDialogState extends State<ReaderStatisticsDialog> {
                   cells: <_StatCell>[
                     _StatCell(
                       label: t.reader_stats_finish_chapter,
-                      value: chapterMs == null ? '—' : formatStatClock(chapterMs),
+                      value: chapterMs == null
+                          ? '—'
+                          : formatStatClock(chapterMs),
                     ),
                     _StatCell(
                       label: t.reader_stats_finish_book,

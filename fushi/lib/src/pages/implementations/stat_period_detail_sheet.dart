@@ -99,11 +99,11 @@ class _PeriodEntry {
   int ms = 0;
 
   StatPeriodEntryTarget get deleteTarget => StatPeriodEntryTarget(
-        mediaKind: mediaKind,
-        mediaKey: mediaKey,
-        title: rawTitle,
-        dateKeys: Set<String>.unmodifiable(dateKeys),
-      );
+    mediaKind: mediaKind,
+    mediaKey: mediaKey,
+    title: rawTitle,
+    dateKeys: Set<String>.unmodifiable(dateKeys),
+  );
 }
 
 /// 弹出时段明细 sheet。[facts] 传什么域就展示什么域：域统计页传本域切片、
@@ -173,8 +173,9 @@ class _PeriodDetailSheetBody extends StatefulWidget {
 }
 
 class _PeriodDetailSheetBodyState extends State<_PeriodDetailSheetBody> {
-  late final List<_PeriodEntry> _entries =
-      List<_PeriodEntry>.of(widget.entries);
+  late final List<_PeriodEntry> _entries = List<_PeriodEntry>.of(
+    widget.entries,
+  );
 
   StatPeriodDetailResolvers get _resolvers => widget.resolvers;
 
@@ -240,8 +241,9 @@ class _PeriodDetailSheetBodyState extends State<_PeriodDetailSheetBody> {
     IconData icon,
     String mediaKind,
   ) {
-    final List<_PeriodEntry> rows =
-        _entries.where((_PeriodEntry e) => e.mediaKind == mediaKind).toList();
+    final List<_PeriodEntry> rows = _entries
+        .where((_PeriodEntry e) => e.mediaKind == mediaKind)
+        .toList();
     if (rows.isEmpty) return const <Widget>[];
     final Map<String, List<_PeriodEntry>> byCollection =
         <String, List<_PeriodEntry>>{};
@@ -295,9 +297,7 @@ class _PeriodDetailSheetBodyState extends State<_PeriodDetailSheetBody> {
               name,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: tokens.type.metadata.copyWith(
-                fontWeight: FontWeight.w600,
-              ),
+              style: tokens.type.metadata.copyWith(fontWeight: FontWeight.w600),
             ),
           ),
           if (ms > 0) Text(formatStatTime(ms), style: tokens.type.metadata),
@@ -314,8 +314,8 @@ class _PeriodDetailSheetBodyState extends State<_PeriodDetailSheetBody> {
     final bool hasCollections = e.collection != null || _sectionHasGroups(e);
     final String meta = e.ms > 0
         ? (e.chars > 0
-            ? '${formatStatChars(e.chars)} · ${formatStatTime(e.ms)}'
-            : formatStatTime(e.ms))
+              ? '${formatStatChars(e.chars)} · ${formatStatTime(e.ms)}'
+              : formatStatTime(e.ms))
         : formatStatChars(e.chars);
     final Widget row = Padding(
       padding: EdgeInsets.symmetric(vertical: tokens.spacing.gap / 4),
@@ -377,9 +377,9 @@ class _PeriodDetailSheetBodyState extends State<_PeriodDetailSheetBody> {
 
   /// 该条目所在的来源节里有没有任何合集组（决定条目是否缩进对齐）。
   bool _sectionHasGroups(_PeriodEntry e) => _entries.any(
-        (_PeriodEntry other) =>
-            other.mediaKind == e.mediaKind &&
-            other.collection != null &&
-            other.collection!.isNotEmpty,
-      );
+    (_PeriodEntry other) =>
+        other.mediaKind == e.mediaKind &&
+        other.collection != null &&
+        other.collection!.isNotEmpty,
+  );
 }

@@ -36,11 +36,13 @@ void main() {
     for (int i = 0; i < count; i++) {
       final String uid = 'video/ep$i';
       uids.add(uid);
-      await db.upsertVideoBook(VideoBooksCompanion(
-        bookUid: Value<String>(uid),
-        title: Value<String>('第 ${i + 1} 集'),
-        videoPath: Value<String>('/abs/ep$i.mkv'),
-      ));
+      await db.upsertVideoBook(
+        VideoBooksCompanion(
+          bookUid: Value<String>(uid),
+          title: Value<String>('第 ${i + 1} 集'),
+          videoPath: Value<String>('/abs/ep$i.mkv'),
+        ),
+      );
       await db.upsertCollectionItemAt(
         collectionId,
         MediaKind.video.dbValue,
@@ -57,11 +59,13 @@ void main() {
     for (final String uid in uids) {
       final VideoBookRow? row = await db.getVideoBookByBookUid(uid);
       expect(row, isNotNull, reason: '成员 $uid 应在库里');
-      members.add(CollectionMemberProgress(
-        positionMs: row!.lastPositionMs,
-        completed: row.completedAt != null,
-        lastPlayedAt: row.lastPlayedAt,
-      ));
+      members.add(
+        CollectionMemberProgress(
+          positionMs: row!.lastPositionMs,
+          completed: row.completedAt != null,
+          lastPlayedAt: row.lastPlayedAt,
+        ),
+      );
     }
     return continueMemberIndex(members);
   }

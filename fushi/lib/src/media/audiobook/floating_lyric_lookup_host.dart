@@ -92,7 +92,8 @@ class FloatingLyricLookupHost extends ConsumerStatefulWidget {
 }
 
 class _FloatingLyricLookupHostState
-    extends ConsumerState<FloatingLyricLookupHost> with DictionaryPageMixin {
+    extends ConsumerState<FloatingLyricLookupHost>
+    with DictionaryPageMixin {
   final DictionaryPopupController _popup = DictionaryPopupController(
     lowMemory: false,
     onLookupStackDepthChanged: recordLookupStackDepth,

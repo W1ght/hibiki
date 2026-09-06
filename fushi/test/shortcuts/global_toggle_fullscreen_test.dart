@@ -17,10 +17,7 @@ void main() {
         ShortcutAction.values.map((ShortcutAction a) => a.name),
         contains('globalToggleFullscreen'),
       );
-      expect(
-        ShortcutAction.globalToggleFullscreen.scope,
-        ShortcutScope.global,
-      );
+      expect(ShortcutAction.globalToggleFullscreen.scope, ShortcutScope.global);
       expect(
         ShortcutAction.globalToggleFullscreen.key,
         'global_toggle_fullscreen',
@@ -32,17 +29,16 @@ void main() {
       );
     });
 
-    test('it is a separate action from the video-surface fullscreen toggle',
-        () {
-      expect(
-        ShortcutAction.globalToggleFullscreen,
-        isNot(ShortcutAction.videoToggleFullscreen),
-      );
-      expect(
-        ShortcutAction.videoToggleFullscreen.scope,
-        ShortcutScope.video,
-      );
-    });
+    test(
+      'it is a separate action from the video-surface fullscreen toggle',
+      () {
+        expect(
+          ShortcutAction.globalToggleFullscreen,
+          isNot(ShortcutAction.videoToggleFullscreen),
+        );
+        expect(ShortcutAction.videoToggleFullscreen.scope, ShortcutScope.video);
+      },
+    );
   });
 
   group('defaults', () {
@@ -53,7 +49,8 @@ void main() {
         TargetPlatform.macOS,
       ]) {
         final ShortcutBindingSet set = ShortcutDefaults.forPlatform(
-            platform)[ShortcutAction.globalToggleFullscreen]!;
+          platform,
+        )[ShortcutAction.globalToggleFullscreen]!;
         expect(set.keyboardBindings, hasLength(1));
         final InputBinding binding = set.keyboardBindings.first;
         expect(binding.key, LogicalKeyboardKey.f11);
@@ -68,25 +65,29 @@ void main() {
         TargetPlatform.android,
       ]) {
         expect(
-          ShortcutDefaults.forPlatform(platform)
-              .containsKey(ShortcutAction.globalToggleFullscreen),
+          ShortcutDefaults.forPlatform(
+            platform,
+          ).containsKey(ShortcutAction.globalToggleFullscreen),
           isTrue,
         );
       }
     });
 
-    test('mobile drops the F11 keyboard binding (window-level, no-op there)',
-        () {
-      for (final TargetPlatform platform in <TargetPlatform>[
-        TargetPlatform.android,
-        TargetPlatform.iOS,
-      ]) {
-        final ShortcutBindingSet set = ShortcutDefaults.forPlatform(
-            platform)[ShortcutAction.globalToggleFullscreen]!;
-        expect(set.keyboardBindings, isEmpty);
-        expect(set.gamepadBindings, isEmpty);
-      }
-    });
+    test(
+      'mobile drops the F11 keyboard binding (window-level, no-op there)',
+      () {
+        for (final TargetPlatform platform in <TargetPlatform>[
+          TargetPlatform.android,
+          TargetPlatform.iOS,
+        ]) {
+          final ShortcutBindingSet set = ShortcutDefaults.forPlatform(
+            platform,
+          )[ShortcutAction.globalToggleFullscreen]!;
+          expect(set.keyboardBindings, isEmpty);
+          expect(set.gamepadBindings, isEmpty);
+        }
+      },
+    );
   });
 
   group('executor wiring source guard', () {
@@ -95,18 +96,12 @@ void main() {
     ).readAsStringSync();
 
     test('global_navigation dispatches globalToggleFullscreen', () {
-      expect(
-        navSrc.contains('ShortcutAction.globalToggleFullscreen'),
-        isTrue,
-      );
+      expect(navSrc.contains('ShortcutAction.globalToggleFullscreen'), isTrue);
     });
 
     test('executor toggles through the shared desktop fullscreen owner', () {
       expect(navSrc.contains('readDesktopWindowFullscreen()'), isTrue);
-      expect(
-        navSrc.contains('setDesktopWindowFullscreen(!current)'),
-        isTrue,
-      );
+      expect(navSrc.contains('setDesktopWindowFullscreen(!current)'), isTrue);
     });
 
     test('the toggle is fired from the global-navigation key handler', () {

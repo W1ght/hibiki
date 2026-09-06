@@ -104,12 +104,12 @@ class _MangaImportDialogState extends State<MangaImportDialog>
   }
 
   ImportCarrier _classify(String path) => classifyImportCarrier(
-        path,
-        isDirectory: (String pth) => Directory(pth).existsSync(),
-        isImageArchive: MangaModule.isImageArchive,
-        directoryHasPageImages: MangaModule.directoryHasPageImages,
-        directoryCarrierFileCount: MangaModule.directoryCarrierFileCount,
-      );
+    path,
+    isDirectory: (String pth) => Directory(pth).existsSync(),
+    isImageArchive: MangaModule.isImageArchive,
+    directoryHasPageImages: MangaModule.directoryHasPageImages,
+    directoryCarrierFileCount: MangaModule.directoryCarrierFileCount,
+  );
 
   /// 目录取目录名，文件取去扩展名的文件名。
   String _deriveTitle(String path) {
@@ -206,15 +206,18 @@ class _MangaImportDialogState extends State<MangaImportDialog>
   /// `.zip` / `.epub` 在此列是因为图片型压缩包与词典包/普通电子书同形，选中后由
   /// [classifyImportCarrier] 真读包定性；不是漫画的会被 [_adoptPath] 挡回。
   /// `.pdf` 在此列是因为一卷扫描版漫画常常就是一份 PDF（逐页栅格化即页图）。
-  static final Set<String> _mangaFileExtensions =
-      kMangaCarrierFileExtensions.map((String ext) => ext.substring(1)).toSet();
+  static final Set<String> _mangaFileExtensions = kMangaCarrierFileExtensions
+      .map((String ext) => ext.substring(1))
+      .toSet();
 
   Future<void> _pickFile() async {
     if (_pickerActive) return;
     _pickerActive = true;
     try {
-      final AppModel appModel =
-          ProviderScope.containerOf(context, listen: false).read(appProvider);
+      final AppModel appModel = ProviderScope.containerOf(
+        context,
+        listen: false,
+      ).read(appProvider);
       final String? path = await pickRealFilePath(
         context: context,
         appModel: appModel,
@@ -231,8 +234,10 @@ class _MangaImportDialogState extends State<MangaImportDialog>
     if (_pickerActive) return;
     _pickerActive = true;
     try {
-      final AppModel appModel =
-          ProviderScope.containerOf(context, listen: false).read(appProvider);
+      final AppModel appModel = ProviderScope.containerOf(
+        context,
+        listen: false,
+      ).read(appProvider);
       final String? path = await pickRealDirectoryPath(
         context: context,
         appModel: appModel,
@@ -307,9 +312,7 @@ class _MangaImportDialogState extends State<MangaImportDialog>
   // ── 导入 ────────────────────────────────────────────────────────────────
 
   /// 同名书弹窗回调。是→加后缀，否/关闭→取消这本书。与书籍框逐字同语义。
-  Future<DuplicateChoice> _askOnDuplicate(
-    String proposedTitle,
-  ) async {
+  Future<DuplicateChoice> _askOnDuplicate(String proposedTitle) async {
     if (!mounted) return DuplicateChoice.cancel;
     final bool? keep = await showAppDialog<bool>(
       context: context,
@@ -342,9 +345,11 @@ class _MangaImportDialogState extends State<MangaImportDialog>
       onVolumeProgress: _reportVolumeProgress,
     );
     for (final MangaBatchVolumeResult volume in report.volumes) {
-      debugPrint('[fushi-import] manga batch volume: '
-          '${volume.status.name} ${volume.name}'
-          '${volume.error == null ? '' : ' error=${volume.error}'}');
+      debugPrint(
+        '[fushi-import] manga batch volume: '
+        '${volume.status.name} ${volume.name}'
+        '${volume.error == null ? '' : ' error=${volume.error}'}',
+      );
     }
     final String summary = t.manga_import_batch_done(
       imported: report.importedCount,
@@ -466,7 +471,8 @@ class _MangaImportDialogState extends State<MangaImportDialog>
           case ImportCarrier.text:
             // 不可达：[_adoptPath] / [initState] 只收下 isMangaCapable 的载体。
             throw StateError(
-                'non-manga carrier in MangaImportDialog: $carrier');
+              'non-manga carrier in MangaImportDialog: $carrier',
+            );
         }
 
         reportProgress(1, t.import_step_done);

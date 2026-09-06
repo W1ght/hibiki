@@ -11,10 +11,7 @@ import 'package:fushi/utils.dart';
 /// [MediaItemDialogPage].
 class MediaItemEditDialogPage extends BasePage {
   /// Create an instance of this page.
-  const MediaItemEditDialogPage({
-    required this.item,
-    super.key,
-  });
+  const MediaItemEditDialogPage({required this.item, super.key});
 
   /// The [MediaItem] pertaining to the page.
   final MediaItem item;
@@ -48,8 +45,9 @@ class _MediaItemEditDialogPageState
   @override
   Widget build(BuildContext context) {
     if (_defaultImageProvider == null) {
-      String? overrideTitle =
-          mediaSource.getOverrideTitleFromMediaItem(widget.item);
+      String? overrideTitle = mediaSource.getOverrideTitleFromMediaItem(
+        widget.item,
+      );
       String title = overrideTitle ?? widget.item.title;
       _nameOverrideController.text = title;
       _authorController.text = widget.item.author ?? '';
@@ -65,10 +63,7 @@ class _MediaItemEditDialogPageState
       );
     }
 
-    return MediaItemEditDialogFrame(
-      content: buildContent(),
-      actions: actions,
-    );
+    return MediaItemEditDialogFrame(content: buildContent(), actions: actions);
   }
 
   Widget buildTitle() {
@@ -119,8 +114,8 @@ class _MediaItemEditDialogPageState
               // 走与手动选图完全相同的 override 通道（保存时 setOverrideThumbnail）。
               final String query =
                   _nameOverrideController.text.trim().isNotEmpty
-                      ? _nameOverrideController.text.trim()
-                      : widget.item.title;
+                  ? _nameOverrideController.text.trim()
+                  : widget.item.title;
               final File? scraped = await showBookCoverScrapeDialog(
                 context: context,
                 initialQuery: query,
@@ -159,10 +154,7 @@ class _MediaItemEditDialogPageState
     );
   }
 
-  List<Widget> get actions => [
-        buildCancelButton(),
-        buildSaveButton(),
-      ];
+  List<Widget> get actions => [buildCancelButton(), buildSaveButton()];
 
   Widget buildCancelButton() {
     return adaptiveDialogAction(

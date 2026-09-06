@@ -88,8 +88,9 @@ Widget buildStatPeriodSummaryGrid(
   final FushiDesignTokens tokens = FushiDesignTokens.of(context);
   final double gap = tokens.spacing.gap + tokens.spacing.gap / 2;
   final List<Widget> panels = summaries
-      .map((StatPeriodSummary summary) =>
-          _StatPeriodSummaryCard(summary: summary))
+      .map(
+        (StatPeriodSummary summary) => _StatPeriodSummaryCard(summary: summary),
+      )
       .toList();
 
   return Padding(
@@ -113,10 +114,7 @@ Widget buildStatPeriodSummaryGrid(
           runSpacing: gap,
           children: <Widget>[
             for (final Widget panel in panels)
-              SizedBox(
-                width: (constraints.maxWidth - gap) / 2,
-                child: panel,
-              ),
+              SizedBox(width: (constraints.maxWidth - gap) / 2, child: panel),
           ],
         );
       },
@@ -133,9 +131,9 @@ class _StatPeriodSummaryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final ColorScheme colorScheme = Theme.of(context).colorScheme;
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final TextStyle? subStyle = Theme.of(context).textTheme.bodySmall?.copyWith(
-          color: colorScheme.onSurfaceVariant,
-        );
+    final TextStyle? subStyle = Theme.of(
+      context,
+    ).textTheme.bodySmall?.copyWith(color: colorScheme.onSurfaceVariant);
     final Widget card = FushiCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -143,8 +141,8 @@ class _StatPeriodSummaryCard extends StatelessWidget {
           Text(
             summary.label,
             style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                  color: colorScheme.onSurfaceVariant,
-                ),
+              color: colorScheme.onSurfaceVariant,
+            ),
           ),
           SizedBox(height: tokens.spacing.gap),
           FittedBox(
@@ -154,9 +152,9 @@ class _StatPeriodSummaryCard extends StatelessWidget {
               summary.primaryValue,
               maxLines: 1,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: colorScheme.onSurface,
-                    fontWeight: FontWeight.bold,
-                  ),
+                color: colorScheme.onSurface,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           for (final StatSummaryLine line in summary.lines) ...<Widget>[
@@ -259,8 +257,10 @@ List<StatIdentityGroup<T>> groupStatRowsByIdentity<T>(
       continue;
     }
     byIdentity
-        .putIfAbsent(identity,
-            () => StatIdentityGroup<T>(identity: identity, title: titleOf(row)))
+        .putIfAbsent(
+          identity,
+          () => StatIdentityGroup<T>(identity: identity, title: titleOf(row)),
+        )
         .rows
         .add(row);
   }
@@ -296,15 +296,14 @@ List<StatIdentityGroup<T>> groupStatRowsByIdentity<T>(
     } else {
       orphanGroups
           .putIfAbsent(
-              title, () => StatIdentityGroup<T>(identity: null, title: title))
+            title,
+            () => StatIdentityGroup<T>(identity: null, title: title),
+          )
           .rows
           .add(row);
     }
   }
-  return <StatIdentityGroup<T>>[
-    ...byIdentity.values,
-    ...orphanGroups.values,
-  ];
+  return <StatIdentityGroup<T>>[...byIdentity.values, ...orphanGroups.values];
 }
 
 /// TODO-1204：把查词/制卡计数行按 [LookupMiningCounterRow.title] 聚合成
@@ -315,7 +314,8 @@ List<StatIdentityGroup<T>> groupStatRowsByIdentity<T>(
 /// 聚合。视频域标题可重复，必须走 [groupStatRowsByIdentity]，且观看/计数/收藏三个
 /// 行宇宙必须**同一次**分组（见 video_stat_aggregates 的 computeVideoStats）。
 Map<String, ({int lookups, int mines})> aggregateStatCountersByTitle(
-    List<LookupMiningCounterRow> rows) {
+  List<LookupMiningCounterRow> rows,
+) {
   final Map<String, ({int lookups, int mines})> out =
       <String, ({int lookups, int mines})>{};
   for (final LookupMiningCounterRow r in rows) {
@@ -357,8 +357,11 @@ String? statCollectionName(
   required Map<int, String> collectionNamesById,
 }) {
   return (
-    collectionName:
-        statCollectionName(entryKey, primaryByEntry, collectionNamesById),
+    collectionName: statCollectionName(
+      entryKey,
+      primaryByEntry,
+      collectionNamesById,
+    ),
     title: rawTitle,
   );
 }
@@ -372,18 +375,18 @@ String collectionQualifiedTitle({
   required Map<String, int> primaryByEntry,
   required Map<int, String> collectionNamesById,
 }) {
-  final String? name =
-      statCollectionName(entryKey, primaryByEntry, collectionNamesById);
+  final String? name = statCollectionName(
+    entryKey,
+    primaryByEntry,
+    collectionNamesById,
+  );
   if (name == null || name.isEmpty) return rawTitle;
   return '$name - $rawTitle';
 }
 
 /// 统计页 per-book / per-video tile 的「所属合集」小标签（文件夹图标 + 合集名），
 /// 阅读统计与视频统计共用（同一视觉）。合集名为 null 时调用方不渲染本 widget。
-Widget buildStatCollectionLabel(
-  BuildContext context,
-  String collectionName,
-) {
+Widget buildStatCollectionLabel(BuildContext context, String collectionName) {
   final ColorScheme colorScheme = Theme.of(context).colorScheme;
   return Row(
     mainAxisSize: MainAxisSize.min,
@@ -399,9 +402,9 @@ Widget buildStatCollectionLabel(
           collectionName,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                color: colorScheme.onSurfaceVariant,
-              ),
+          style: Theme.of(
+            context,
+          ).textTheme.bodySmall?.copyWith(color: colorScheme.onSurfaceVariant),
         ),
       ),
     ],
@@ -522,11 +525,11 @@ Color statHourlyBandColor(StatHourlyFormatBand band, ColorScheme scheme) =>
 
 /// 分带图例文案。
 String statHourlyBandLabel(StatHourlyFormatBand band) => switch (band) {
-      StatHourlyFormatBand.epub => t.stat_hourly_band_epub,
-      StatHourlyFormatBand.pdf => t.stat_hourly_band_pdf,
-      StatHourlyFormatBand.manga => t.stat_hourly_band_manga,
-      StatHourlyFormatBand.unattributed => t.stat_hourly_band_unattributed,
-    };
+  StatHourlyFormatBand.epub => t.stat_hourly_band_epub,
+  StatHourlyFormatBand.pdf => t.stat_hourly_band_pdf,
+  StatHourlyFormatBand.manga => t.stat_hourly_band_manga,
+  StatHourlyFormatBand.unattributed => t.stat_hourly_band_unattributed,
+};
 
 /// 该画哪些图例项。
 ///
@@ -534,7 +537,8 @@ String statHourlyBandLabel(StatHourlyFormatBand band) => switch (band) {
 /// 只是噪音。但只要含未区分历史就必须画，哪怕它是唯一一带：没有图例的中性柱子会被
 /// 当成某一类的读书时长，那正是这次要消除的误读。
 List<StatHourlyFormatBand> statHourlyLegendBands(
-    List<StatHourlyFormatBand> activeBands) {
+  List<StatHourlyFormatBand> activeBands,
+) {
   if (activeBands.length <= 1 &&
       !activeBands.contains(StatHourlyFormatBand.unattributed)) {
     return const <StatHourlyFormatBand>[];
@@ -555,8 +559,10 @@ Widget _buildStatHourlyChartSection(
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(t.stat_today_hourly,
-            style: Theme.of(context).textTheme.titleMedium),
+        Text(
+          t.stat_today_hourly,
+          style: Theme.of(context).textTheme.titleMedium,
+        ),
         SizedBox(height: tokens.spacing.gap + tokens.spacing.gap / 2),
         SizedBox(
           height: 140,

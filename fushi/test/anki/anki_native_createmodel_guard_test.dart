@@ -19,8 +19,11 @@ void main() {
 
     test('legacy hardcoded Lapis model is gone', () {
       expect(java.contains('case "addDefaultModel"'), isFalse);
-      expect(java.contains('"Cloze Before"'), isFalse,
-          reason: 'old Term/Meaning hardcoded schema must be removed');
+      expect(
+        java.contains('"Cloze Before"'),
+        isFalse,
+        reason: 'old Term/Meaning hardcoded schema must be removed',
+      );
       expect(java.contains('"Expanded Meaning"'), isFalse);
     });
 

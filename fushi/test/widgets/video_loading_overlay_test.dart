@@ -14,8 +14,9 @@ Widget _harness(Widget child) {
 }
 
 void main() {
-  testWidgets('TODO-1213: shows title + phase text + back button',
-      (WidgetTester tester) async {
+  testWidgets('TODO-1213: shows title + phase text + back button', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(
       _harness(
         VideoLoadingOverlay(
@@ -31,15 +32,12 @@ void main() {
     expect(find.byIcon(Icons.arrow_back), findsOneWidget);
   });
 
-  testWidgets('TODO-1213: empty title hides the title row',
-      (WidgetTester tester) async {
+  testWidgets('TODO-1213: empty title hides the title row', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(
       _harness(
-        VideoLoadingOverlay(
-          title: '',
-          phaseText: 'Preparing…',
-          onBack: () {},
-        ),
+        VideoLoadingOverlay(title: '', phaseText: 'Preparing…', onBack: () {}),
       ),
     );
 
@@ -48,15 +46,12 @@ void main() {
     expect(find.byType(Text), findsOneWidget);
   });
 
-  testWidgets('TODO-1213: null progress renders indeterminate spinner, no %',
-      (WidgetTester tester) async {
+  testWidgets('TODO-1213: null progress renders indeterminate spinner, no %', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(
       _harness(
-        VideoLoadingOverlay(
-          title: 'X',
-          phaseText: 'Buffering…',
-          onBack: () {},
-        ),
+        VideoLoadingOverlay(title: 'X', phaseText: 'Buffering…', onBack: () {}),
       ),
     );
 
@@ -70,29 +65,31 @@ void main() {
   });
 
   testWidgets(
-      'TODO-1213: subtitle download progress drives determinate bar + percent',
-      (WidgetTester tester) async {
-    await tester.pumpWidget(
-      _harness(
-        VideoLoadingOverlay(
-          title: 'X',
-          phaseText: 'Downloading subtitles…',
-          progress: 0.42,
-          onBack: () {},
+    'TODO-1213: subtitle download progress drives determinate bar + percent',
+    (WidgetTester tester) async {
+      await tester.pumpWidget(
+        _harness(
+          VideoLoadingOverlay(
+            title: 'X',
+            phaseText: 'Downloading subtitles…',
+            progress: 0.42,
+            onBack: () {},
+          ),
         ),
-      ),
-    );
+      );
 
-    final CircularProgressIndicator indicator = tester.widget(
-      find.byType(CircularProgressIndicator),
-    );
-    expect(indicator.value, 0.42);
-    expect(find.textContaining('Downloading subtitles…'), findsOneWidget);
-    expect(find.textContaining('42%'), findsOneWidget);
-  });
+      final CircularProgressIndicator indicator = tester.widget(
+        find.byType(CircularProgressIndicator),
+      );
+      expect(indicator.value, 0.42);
+      expect(find.textContaining('Downloading subtitles…'), findsOneWidget);
+      expect(find.textContaining('42%'), findsOneWidget);
+    },
+  );
 
-  testWidgets('TODO-1213: tapping back invokes onBack (exit not stuck)',
-      (WidgetTester tester) async {
+  testWidgets('TODO-1213: tapping back invokes onBack (exit not stuck)', (
+    WidgetTester tester,
+  ) async {
     int taps = 0;
     await tester.pumpWidget(
       _harness(

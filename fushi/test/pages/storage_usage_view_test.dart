@@ -38,10 +38,10 @@ void main() {
 
   /// FakeAsync 区里真 isolate 永不完成：注同步执行版 runner。
   StorageUsageService service() => StorageUsageService(
-        documentsRoot: () async => docs,
-        supportRoot: () async => support,
-        isolateRunner: <R>(R Function() computation) async => computation(),
-      );
+    documentsRoot: () async => docs,
+    supportRoot: () async => support,
+    isolateRunner: <R>(R Function() computation) async => computation(),
+  );
 
   Widget wrap(Widget child) {
     return ProviderScope(
@@ -70,11 +70,12 @@ void main() {
       deleteBook: deleteBook ?? (String _) async => null,
       deleteSrtBook: deleteSrtBook ?? (String _) async => null,
       deleteDictionary: (String _) async => null,
-      deleteDatabaseSnapshots: deleteDatabaseSnapshots ??
+      deleteDatabaseSnapshots:
+          deleteDatabaseSnapshots ??
           () async => const DatabaseSnapshotDeletionResult(
-                deleted: <String>[],
-                failures: <String, String>{},
-              ),
+            deleted: <String>[],
+            failures: <String, String>{},
+          ),
       deleteFiles: deleteFiles ?? (List<String> _) async => null,
       anime4kBytesProvider: anime4kBytes ?? () async => 0,
       anime4kDelete: anime4kDelete ?? () async => const <String>[],
@@ -84,16 +85,20 @@ void main() {
   testWidgets('扫描完成后展示类目行与总量', (WidgetTester tester) async {
     writeFile(p.join(docs.path, 'fushi_books', 'keyA', 'ch1.html'), 2048);
 
-    await tester.pumpWidget(wrap(view(
-      service: service(),
-      books: () async => <StorageBookRef>[
-        StorageBookRef(
-          id: 'keyA',
-          title: '吾輩は猫である',
-          extractDir: p.join(docs.path, 'fushi_books', 'keyA'),
+    await tester.pumpWidget(
+      wrap(
+        view(
+          service: service(),
+          books: () async => <StorageBookRef>[
+            StorageBookRef(
+              id: 'keyA',
+              title: '吾輩は猫である',
+              extractDir: p.join(docs.path, 'fushi_books', 'keyA'),
+            ),
+          ],
         ),
-      ],
-    )));
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(find.text(t.storage_category_books), findsOneWidget);
@@ -108,21 +113,21 @@ void main() {
     writeFile(p.join(bookDir, 'ch1.html'), 1024);
     final List<String> deleted = <String>[];
 
-    await tester.pumpWidget(wrap(view(
-      service: service(),
-      books: () async => <StorageBookRef>[
-        StorageBookRef(
-          id: 'keyA',
-          title: '吾輩は猫である',
-          extractDir: bookDir,
+    await tester.pumpWidget(
+      wrap(
+        view(
+          service: service(),
+          books: () async => <StorageBookRef>[
+            StorageBookRef(id: 'keyA', title: '吾輩は猫である', extractDir: bookDir),
+          ],
+          deleteBook: (String bookKey) async {
+            deleted.add(bookKey);
+            Directory(bookDir).deleteSync(recursive: true);
+            return null;
+          },
         ),
-      ],
-      deleteBook: (String bookKey) async {
-        deleted.add(bookKey);
-        Directory(bookDir).deleteSync(recursive: true);
-        return null;
-      },
-    )));
+      ),
+    );
     await tester.pumpAndSettle();
 
     // 展开书籍类目 → 出现书条目。
@@ -144,7 +149,8 @@ void main() {
     // 是测试 harness 调度怪癖，产品运行时是真实事件循环不受影响。
     for (int i = 0; i < 20; i++) {
       await tester.runAsync(
-          () => Future<void>.delayed(const Duration(milliseconds: 20)));
+        () => Future<void>.delayed(const Duration(milliseconds: 20)),
+      );
       await tester.pump();
       if (deleted.isNotEmpty &&
           find.byType(CircularProgressIndicator).evaluate().isEmpty) {
@@ -157,35 +163,40 @@ void main() {
     expect(find.byType(CircularProgressIndicator), findsNothing);
   });
 
-  testWidgets('BUG-1893：standalone 字幕书条目的删除走 deleteSrtBook，不走 deleteBook',
-      (WidgetTester tester) async {
+  testWidgets('BUG-1893：standalone 字幕书条目的删除走 deleteSrtBook，不走 deleteBook', (
+    WidgetTester tester,
+  ) async {
     // 这类书 bookKey 恒空、没有 EpubBooks 行：走 deleteBook 必然找不到行。
     final String audioDir = p.join(docs.path, 'audiobooks', 'srt-uid-1');
     writeFile(p.join(audioDir, 'ch1.mp3'), 4096);
     final List<String> deletedBooks = <String>[];
     final List<String> deletedSrt = <String>[];
 
-    await tester.pumpWidget(wrap(view(
-      service: service(),
-      books: () async => <StorageBookRef>[
-        StorageBookRef(
-          id: 'srt-uid-1',
-          title: 'ひとりぼっち',
-          extractDir: '',
-          audioPaths: <String>[audioDir],
-          kind: StorageEntryKind.srtBook,
+    await tester.pumpWidget(
+      wrap(
+        view(
+          service: service(),
+          books: () async => <StorageBookRef>[
+            StorageBookRef(
+              id: 'srt-uid-1',
+              title: 'ひとりぼっち',
+              extractDir: '',
+              audioPaths: <String>[audioDir],
+              kind: StorageEntryKind.srtBook,
+            ),
+          ],
+          deleteBook: (String bookKey) async {
+            deletedBooks.add(bookKey);
+            return null;
+          },
+          deleteSrtBook: (String uid) async {
+            deletedSrt.add(uid);
+            Directory(audioDir).deleteSync(recursive: true);
+            return null;
+          },
         ),
-      ],
-      deleteBook: (String bookKey) async {
-        deletedBooks.add(bookKey);
-        return null;
-      },
-      deleteSrtBook: (String uid) async {
-        deletedSrt.add(uid);
-        Directory(audioDir).deleteSync(recursive: true);
-        return null;
-      },
-    )));
+      ),
+    );
     await tester.pumpAndSettle();
 
     await tester.tap(find.text(t.storage_category_books));
@@ -199,7 +210,8 @@ void main() {
     await tester.tap(find.widgetWithText(FilledButton, t.dialog_delete));
     for (int i = 0; i < 20; i++) {
       await tester.runAsync(
-          () => Future<void>.delayed(const Duration(milliseconds: 20)));
+        () => Future<void>.delayed(const Duration(milliseconds: 20)),
+      );
       await tester.pump();
       if (deletedSrt.isNotEmpty &&
           find.byType(CircularProgressIndicator).evaluate().isEmpty) {
@@ -212,21 +224,26 @@ void main() {
     expect(find.byType(CircularProgressIndicator), findsNothing);
   });
 
-  testWidgets('BUG-1870：数据库快照残留聚成一条带文件数的可删条目，确认后走注入原语并重扫',
-      (WidgetTester tester) async {
+  testWidgets('BUG-1870：数据库快照残留聚成一条带文件数的可删条目，确认后走注入原语并重扫', (
+    WidgetTester tester,
+  ) async {
     writeFile(p.join(support.path, 'fushi.db'), 1000);
     writeFile(p.join(support.path, 'fushi.db.corrupt-bak-1.db'), 7);
     writeFile(p.join(support.path, 'hibiki.db.bak.v16.1780592923530'), 3);
     writeFile(p.join(support.path, 'hibiki.db-wal.bak.v20.1'), 1);
     int deleteCalls = 0;
 
-    await tester.pumpWidget(wrap(view(
-      service: service(),
-      deleteDatabaseSnapshots: () async {
-        deleteCalls++;
-        return deleteDatabaseSnapshotFiles(support);
-      },
-    )));
+    await tester.pumpWidget(
+      wrap(
+        view(
+          service: service(),
+          deleteDatabaseSnapshots: () async {
+            deleteCalls++;
+            return deleteDatabaseSnapshotFiles(support);
+          },
+        ),
+      ),
+    );
     await tester.pumpAndSettle();
 
     await tester.ensureVisible(find.text(t.storage_category_database));
@@ -250,14 +267,19 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.byTooltip(t.dialog_delete));
     await tester.pumpAndSettle();
-    expect(find.text(t.storage_entry_delete_confirm_title(name: title)),
-        findsOneWidget);
-    expect(find.text(t.storage_entry_delete_database_snapshots_confirm_body),
-        findsOneWidget);
+    expect(
+      find.text(t.storage_entry_delete_confirm_title(name: title)),
+      findsOneWidget,
+    );
+    expect(
+      find.text(t.storage_entry_delete_database_snapshots_confirm_body),
+      findsOneWidget,
+    );
     await tester.tap(find.widgetWithText(FilledButton, t.dialog_delete));
     for (int i = 0; i < 20; i++) {
       await tester.runAsync(
-          () => Future<void>.delayed(const Duration(milliseconds: 20)));
+        () => Future<void>.delayed(const Duration(milliseconds: 20)),
+      );
       await tester.pump();
       if (deleteCalls > 0 &&
           find.byType(CircularProgressIndicator).evaluate().isEmpty) {
@@ -267,8 +289,10 @@ void main() {
 
     expect(deleteCalls, 1);
     // 真删了快照、活库一字节没动。
-    expect(File(p.join(support.path, 'fushi.db.corrupt-bak-1.db')).existsSync(),
-        isFalse);
+    expect(
+      File(p.join(support.path, 'fushi.db.corrupt-bak-1.db')).existsSync(),
+      isFalse,
+    );
     expect(File(p.join(support.path, 'fushi.db')).lengthSync(), 1000);
     // 重扫后聚合条目消失（已无快照），活库条目仍在。
     expect(find.text(title), findsNothing);
@@ -276,24 +300,33 @@ void main() {
     expect(find.byType(CircularProgressIndicator), findsNothing);
   });
 
-  testWidgets('BUG-1870 审查：部分快照删不掉时报出失败原因，但成功的那些照样重扫掉',
-      (WidgetTester tester) async {
+  testWidgets('BUG-1870 审查：部分快照删不掉时报出失败原因，但成功的那些照样重扫掉', (
+    WidgetTester tester,
+  ) async {
     writeFile(p.join(support.path, 'fushi.db'), 1000);
     writeFile(p.join(support.path, 'fushi.db.corrupt-bak-1.db'), 7);
     writeFile(p.join(support.path, 'fushi.db.corrupt-bak-2.db'), 3);
     final String stuckPath = p.join(support.path, 'fushi.db.corrupt-bak-2.db');
 
-    await tester.pumpWidget(wrap(view(
-      service: service(),
-      // 真原语删掉能删的，再手工塞一条失败——模拟 Windows 上被占用的那一个。
-      deleteDatabaseSnapshots: () async {
-        File(p.join(support.path, 'fushi.db.corrupt-bak-1.db')).deleteSync();
-        return DatabaseSnapshotDeletionResult(
-          deleted: <String>[p.join(support.path, 'fushi.db.corrupt-bak-1.db')],
-          failures: <String, String>{stuckPath: '另一个程序正在使用此文件'},
-        );
-      },
-    )));
+    await tester.pumpWidget(
+      wrap(
+        view(
+          service: service(),
+          // 真原语删掉能删的，再手工塞一条失败——模拟 Windows 上被占用的那一个。
+          deleteDatabaseSnapshots: () async {
+            File(
+              p.join(support.path, 'fushi.db.corrupt-bak-1.db'),
+            ).deleteSync();
+            return DatabaseSnapshotDeletionResult(
+              deleted: <String>[
+                p.join(support.path, 'fushi.db.corrupt-bak-1.db'),
+              ],
+              failures: <String, String>{stuckPath: '另一个程序正在使用此文件'},
+            );
+          },
+        ),
+      ),
+    );
     await tester.pumpAndSettle();
 
     await tester.ensureVisible(find.text(t.storage_category_database));
@@ -308,10 +341,12 @@ void main() {
     await tester.tap(find.widgetWithText(FilledButton, t.dialog_delete));
     for (int i = 0; i < 20; i++) {
       await tester.runAsync(
-          () => Future<void>.delayed(const Duration(milliseconds: 20)));
+        () => Future<void>.delayed(const Duration(milliseconds: 20)),
+      );
       await tester.pump();
-      if (!File(p.join(support.path, 'fushi.db.corrupt-bak-1.db'))
-              .existsSync() &&
+      if (!File(
+            p.join(support.path, 'fushi.db.corrupt-bak-1.db'),
+          ).existsSync() &&
           find.byType(CircularProgressIndicator).evaluate().isEmpty) {
         break;
       }
@@ -319,11 +354,15 @@ void main() {
 
     // 关键：删得掉的真删了，且页面重扫回到「还剩 1 个」——旧实现在失败分支
     // 直接跳过重扫，数字会停在删除前的 2 个。
-    expect(File(p.join(support.path, 'fushi.db.corrupt-bak-1.db')).existsSync(),
-        isFalse);
+    expect(
+      File(p.join(support.path, 'fushi.db.corrupt-bak-1.db')).existsSync(),
+      isFalse,
+    );
     expect(File(stuckPath).existsSync(), isTrue);
-    expect(find.text(t.storage_entry_database_snapshots_label(n: 1)),
-        findsOneWidget);
+    expect(
+      find.text(t.storage_entry_database_snapshots_label(n: 1)),
+      findsOneWidget,
+    );
     expect(find.byType(CircularProgressIndicator), findsNothing);
   });
 
@@ -348,7 +387,9 @@ void main() {
 
   testWidgets('可选模块区已移除：OCR 模型只剩占用行，没有下载/删除按钮', (WidgetTester tester) async {
     writeFile(
-        p.join(support.path, kOcrModelsSupportChild, 'manga', 'a.onnx'), 300);
+      p.join(support.path, kOcrModelsSupportChild, 'manga', 'a.onnx'),
+      300,
+    );
 
     await tester.pumpWidget(wrap(view(service: service())));
     await tester.pumpAndSettle();
@@ -363,20 +404,26 @@ void main() {
     writeFile(p.join(docs.path, 'mpv_shaders', 'Anime4K_Clamp.glsl'), 512);
     int deleteCalls = 0;
 
-    await tester.pumpWidget(wrap(view(
-      service: service(),
-      anime4kBytes: () async => deleteCalls == 0 ? 512 : 0,
-      anime4kDelete: () async {
-        deleteCalls++;
-        File(p.join(docs.path, 'mpv_shaders', 'Anime4K_Clamp.glsl'))
-            .deleteSync();
-        return const <String>['Anime4K_Clamp.glsl'];
-      },
-    )));
+    await tester.pumpWidget(
+      wrap(
+        view(
+          service: service(),
+          anime4kBytes: () async => deleteCalls == 0 ? 512 : 0,
+          anime4kDelete: () async {
+            deleteCalls++;
+            File(
+              p.join(docs.path, 'mpv_shaders', 'Anime4K_Clamp.glsl'),
+            ).deleteSync();
+            return const <String>['Anime4K_Clamp.glsl'];
+          },
+        ),
+      ),
+    );
     await tester.pumpAndSettle();
 
-    final Finder deleteButton =
-        find.byTooltip(t.storage_shaders_delete_anime4k);
+    final Finder deleteButton = find.byTooltip(
+      t.storage_shaders_delete_anime4k,
+    );
     await tester.ensureVisible(deleteButton);
     await tester.pumpAndSettle();
     await tester.tap(deleteButton);
@@ -384,7 +431,8 @@ void main() {
     await tester.tap(find.widgetWithText(FilledButton, t.dialog_delete));
     for (int i = 0; i < 20; i++) {
       await tester.runAsync(
-          () => Future<void>.delayed(const Duration(milliseconds: 20)));
+        () => Future<void>.delayed(const Duration(milliseconds: 20)),
+      );
       await tester.pump();
       if (deleteCalls > 0 &&
           find.byType(CircularProgressIndicator).evaluate().isEmpty) {
@@ -407,24 +455,29 @@ void main() {
     expect(find.byTooltip(t.storage_shaders_delete_anime4k), findsNothing);
   });
 
-  testWidgets('派生类目（封面与缩略图）的明细可直接删，走注入的 deleteFiles 原语',
-      (WidgetTester tester) async {
+  testWidgets('派生类目（封面与缩略图）的明细可直接删，走注入的 deleteFiles 原语', (
+    WidgetTester tester,
+  ) async {
     // 用户报「导出的备份包在存储里没办法删」：这些纯派生 / 缓存 / 可重新获取的
     // 类目此前每条明细都是 readOnly，UI 的删除按钮门控直接把它们全挡掉了。
     final String cover = p.join(docs.path, 'video_covers', 'a.jpg');
     writeFile(cover, 2048);
     final List<List<String>> deleted = <List<String>>[];
 
-    await tester.pumpWidget(wrap(view(
-      service: service(),
-      deleteFiles: (List<String> paths) async {
-        deleted.add(paths);
-        for (final String path in paths) {
-          File(path).deleteSync();
-        }
-        return null;
-      },
-    )));
+    await tester.pumpWidget(
+      wrap(
+        view(
+          service: service(),
+          deleteFiles: (List<String> paths) async {
+            deleted.add(paths);
+            for (final String path in paths) {
+              File(path).deleteSync();
+            }
+            return null;
+          },
+        ),
+      ),
+    );
     await tester.pumpAndSettle();
 
     await tester.tap(find.text(t.storage_category_covers));
@@ -437,7 +490,8 @@ void main() {
     // 与书籍删除用例同款重扫驱动（FakeAsync 区里 async* 不启动）。
     for (int i = 0; i < 20; i++) {
       await tester.runAsync(
-          () => Future<void>.delayed(const Duration(milliseconds: 20)));
+        () => Future<void>.delayed(const Duration(milliseconds: 20)),
+      );
       await tester.pump();
       if (deleted.isNotEmpty &&
           find.byType(CircularProgressIndicator).evaluate().isEmpty) {
@@ -446,12 +500,11 @@ void main() {
     }
 
     expect(deleted, <List<String>>[
-      <String>[cover]
+      <String>[cover],
     ]);
   });
 
-  testWidgets('有引用的类目（自定义字体）仍然不给明细删除按钮',
-      (WidgetTester tester) async {
+  testWidgets('有引用的类目（自定义字体）仍然不给明细删除按钮', (WidgetTester tester) async {
     // 负向控制：字体有配置指着（BUG-183 那条链），裸删会留下指向空文件的配置。
     // 「能加的加按钮」不等于全都加——这条防的是以后有人顺手把它塞进可删清单。
     writeFile(p.join(docs.path, 'custom_fonts', 'mine.ttf'), 512);

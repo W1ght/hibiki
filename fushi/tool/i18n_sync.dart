@@ -152,11 +152,13 @@ I18nCommand parseI18nCommand(List<String> args) {
         i += 1;
       case '--add':
         final List<String> operands = _takeOperands(args, i + 1, 3, token);
-        ops.add(AddKeyOp(
-          key: operands[0],
-          enValue: operands[1],
-          zhValue: operands[2],
-        ));
+        ops.add(
+          AddKeyOp(
+            key: operands[0],
+            enValue: operands[1],
+            zhValue: operands[2],
+          ),
+        );
         i += 1 + operands.length;
       case '--remove':
         final List<String> operands = _takeOperands(args, i + 1, 1, token);
@@ -242,10 +244,10 @@ I18nApplyResult applyI18nOps({
     final I18nOp op = ops[i];
     switch (op) {
       case AddKeyOp(
-          :final String key,
-          :final String enValue,
-          :final String zhValue
-        ):
+        :final String key,
+        :final String enValue,
+        :final String zhValue,
+      ):
         if (current.containsKey(key)) {
           log.add('  skip $label (key "$key" already exists)');
           continue;
@@ -361,8 +363,9 @@ void _runOps(I18nCommand command) {
   for (final File file in files) {
     final I18nApplyResult result = results[file.path]!;
     for (final String line in result.log) {
-      stdout
-          .writeln(command.dryRun ? line.replaceFirst('  ', '  would ') : line);
+      stdout.writeln(
+        command.dryRun ? line.replaceFirst('  ', '  would ') : line,
+      );
     }
     if (!result.changed) continue;
     changed++;
@@ -376,7 +379,8 @@ void _runOps(I18nCommand command) {
     return;
   }
   stdout.writeln(
-      '\n${command.dryRun ? "Would change" : "Changed"} $changed files.');
+    '\n${command.dryRun ? "Would change" : "Changed"} $changed files.',
+  );
 }
 
 /// Fill missing keys in translation files using zh-CN value, falling back to base EN.
@@ -393,8 +397,9 @@ void _syncMissing(bool dryRun) {
     if (_isBase(file)) continue;
 
     final Map<String, dynamic> json = _readJson(file);
-    final List<String> missing =
-        baseJson.keys.where((k) => !json.containsKey(k)).toList();
+    final List<String> missing = baseJson.keys
+        .where((k) => !json.containsKey(k))
+        .toList();
     if (missing.isEmpty) continue;
 
     for (final String key in missing) {

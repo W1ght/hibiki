@@ -72,8 +72,11 @@ void main() {
     final int emptyIndex = document.indexOf("callHandler('onTapEmpty'");
     expect(turnIndex, greaterThan(0));
     expect(emptyIndex, greaterThan(0));
-    expect(turnIndex, lessThan(emptyIndex),
-        reason: '翻页区判定必须排在空白回传之前，否则边缘点会触发识别而不是翻页');
+    expect(
+      turnIndex,
+      lessThan(emptyIndex),
+      reason: '翻页区判定必须排在空白回传之前，否则边缘点会触发识别而不是翻页',
+    );
   });
 
   test('webtoon 同样带 payload（长条漫才是最需要按需识别的形态）', () {

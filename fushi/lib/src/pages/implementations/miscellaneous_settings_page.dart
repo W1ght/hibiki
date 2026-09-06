@@ -89,13 +89,12 @@ class _MiscellaneousSettingsBodyState
     if (Platform.isAndroid) {
       final results = await Future.wait([
         FushiChannels.iconSwitch.invokeMethod<String>('getCurrentIcon'),
-        FushiChannels.iconSwitch
-            .invokeMethod<bool>('isCustomShortcutSupported'),
+        FushiChannels.iconSwitch.invokeMethod<bool>(
+          'isCustomShortcutSupported',
+        ),
       ]);
       await publishAppIconSelection(
-        AppIconSelection(
-          presetKey: (results[0] as String?) ?? 'default',
-        ),
+        AppIconSelection(presetKey: (results[0] as String?) ?? 'default'),
       );
       if (!mounted) return;
       setState(() {
@@ -130,7 +129,8 @@ class _MiscellaneousSettingsBodyState
     try {
       bool ok = false;
       if (Platform.isAndroid) {
-        ok = (await FushiChannels.iconSwitch.invokeMethod<bool>(
+        ok =
+            (await FushiChannels.iconSwitch.invokeMethod<bool>(
               'switchPresetIcon',
               {'alias': key},
             )) ==
@@ -149,9 +149,9 @@ class _MiscellaneousSettingsBodyState
         if (!mounted) return;
         // 选中态由 _currentIcon getter 从已发布的真值读；这里只需触发重建。
         setState(() {});
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(t.icon_switch_success)),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(t.icon_switch_success)));
       }
     } finally {
       if (mounted) setState(() => _switching = false);
@@ -234,7 +234,8 @@ class _MiscellaneousSettingsBodyState
     bool ok = false;
     if (Platform.isAndroid) {
       final bytes = await File(iconPath).readAsBytes();
-      ok = (await FushiChannels.iconSwitch.invokeMethod<bool>(
+      ok =
+          (await FushiChannels.iconSwitch.invokeMethod<bool>(
             'createCustomShortcut',
             {'imageBytes': bytes},
           )) ==
@@ -244,10 +245,7 @@ class _MiscellaneousSettingsBodyState
       ok = await WindowCaptionChannel.setWindowIcon(persisted);
       if (ok) {
         await _persistAppliedIcon(
-          AppIconSelection(
-            presetKey: customIconKey,
-            customPath: persisted,
-          ),
+          AppIconSelection(presetKey: customIconKey, customPath: persisted),
         );
         // TODO-901：同步桌面 / 开始菜单 .lnk 图标到用户自定义图。
         await syncWindowsShortcutIcons(await File(persisted).readAsBytes());
@@ -258,9 +256,11 @@ class _MiscellaneousSettingsBodyState
     if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(Platform.isAndroid
-            ? (ok ? t.icon_shortcut_created : t.icon_shortcut_unsupported)
-            : (ok ? t.icon_switch_success : t.icon_shortcut_unsupported)),
+        content: Text(
+          Platform.isAndroid
+              ? (ok ? t.icon_shortcut_created : t.icon_shortcut_unsupported)
+              : (ok ? t.icon_switch_success : t.icon_shortcut_unsupported),
+        ),
       ),
     );
   }
@@ -270,10 +270,10 @@ class _MiscellaneousSettingsBodyState
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     // 静态提示不再伪装成设置行（行标题会被 titleMaxLines 截断、还带行高/分隔线
     // 语义），改用与 schema section footer 同款的说明文字样式。
-    TextStyle? footerStyle(BuildContext context) =>
-        Theme.of(context).textTheme.bodySmall?.copyWith(
-              color: FushiDesignTokens.of(context).surfaces.onVariant,
-            );
+    TextStyle? footerStyle(BuildContext context) => Theme.of(context)
+        .textTheme
+        .bodySmall
+        ?.copyWith(color: FushiDesignTokens.of(context).surfaces.onVariant);
     if (!Platform.isAndroid && !Platform.isWindows) {
       // 本平台不支持换图标：占位说明，不渲染空设置卡。
       return FushiPlaceholderMessage(

@@ -100,15 +100,16 @@ class _MangaDiscoveryDetailPageState
         _aidokuPackages = packages
             .where((AidokuInstalledPackage package) => package.enabled)
             .toList(growable: false);
-        final AidokuRuntime runtime =
-            _aidokuRuntime ??= AidokuRuntimeFactory.create();
+        final AidokuRuntime runtime = _aidokuRuntime ??=
+            AidokuRuntimeFactory.create();
         for (final AidokuInstalledPackage package in _aidokuPackages) {
           sources.add(
             MangaMatchSource(
               id: 'aidoku:${package.id}',
               name: package.name,
-              language:
-                  package.languages.isEmpty ? '' : package.languages.first,
+              language: package.languages.isEmpty
+                  ? ''
+                  : package.languages.first,
               search: (String query) => _searchAidoku(runtime, package, query),
             ),
           );
@@ -140,8 +141,9 @@ class _MangaDiscoveryDetailPageState
     MangaOnlineSourceRow row,
     String query,
   ) async {
-    final MihonSourceContext sourceContext =
-        await manager.contextForSource(row);
+    final MihonSourceContext sourceContext = await manager.contextForSource(
+      row,
+    );
     final MihonMangaPage page = await manager.runtime.search(
       sourceContext.extension,
       sourceContext.source,
@@ -354,13 +356,13 @@ class _MangaDiscoveryDetailPageState
   }
 
   String? _statusLabel(String? status) => switch (status) {
-        'RELEASING' => t.manga_discovery_status_releasing,
-        'FINISHED' => t.manga_discovery_status_finished,
-        'HIATUS' => t.manga_discovery_status_hiatus,
-        'CANCELLED' => t.manga_discovery_status_cancelled,
-        'NOT_YET_RELEASED' => t.manga_discovery_status_not_yet_released,
-        _ => null,
-      };
+    'RELEASING' => t.manga_discovery_status_releasing,
+    'FINISHED' => t.manga_discovery_status_finished,
+    'HIATUS' => t.manga_discovery_status_hiatus,
+    'CANCELLED' => t.manga_discovery_status_cancelled,
+    'NOT_YET_RELEASED' => t.manga_discovery_status_not_yet_released,
+    _ => null,
+  };
 
   Widget _buildMatchesSection() {
     final ThemeData theme = Theme.of(context);

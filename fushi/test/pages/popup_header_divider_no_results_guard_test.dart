@@ -76,8 +76,11 @@ void main() {
       );
       // 门控为真时确实画出一条 Divider（有结果态分隔线保留，不回归）。
       final int gateIdx = src.indexOf('final bool showHeaderDivider =');
-      expect(gateIdx, greaterThanOrEqualTo(0),
-          reason: 'showHeaderDivider 门控变量缺失');
+      expect(
+        gateIdx,
+        greaterThanOrEqualTo(0),
+        reason: 'showHeaderDivider 门控变量缺失',
+      );
       final String afterGate = src.substring(gateIdx);
       expect(
         afterGate.contains('if (showHeaderDivider)') &&
@@ -88,26 +91,31 @@ void main() {
     },
   );
 
-  test('reader/video popup headers no longer carry an unconditional border',
-      () {
-    for (final String path in <String>[
-      'lib/src/pages/implementations/reader_fushi_page.dart',
-      'lib/src/pages/implementations/video_fushi_page.dart',
-    ]) {
-      final String src = File(path).readAsStringSync();
-      final int headerIdx = path.contains('reader_fushi_page')
-          ? src.indexOf('Widget? buildPopupAudioControls()')
-          : src.indexOf('Widget? buildPopupHeaderFor(');
-      expect(headerIdx, greaterThanOrEqualTo(0),
-          reason: '$path: popup header 方法未找到');
-      // 截取到方法体的一段（足够覆盖 Container 装饰），断言不再有底边框。用精确的
-      // `border: Border(` 标记，避免误配按钮的 StadiumBorder/CircleBorder。
-      final String header = src.substring(headerIdx, headerIdx + 1600);
-      expect(
-        header.contains('border: Border('),
-        isFalse,
-        reason: '$path: header 不得再画无条件底边框（分隔线已移交 popup 层按结果条件画）',
-      );
-    }
-  });
+  test(
+    'reader/video popup headers no longer carry an unconditional border',
+    () {
+      for (final String path in <String>[
+        'lib/src/pages/implementations/reader_fushi_page.dart',
+        'lib/src/pages/implementations/video_fushi_page.dart',
+      ]) {
+        final String src = File(path).readAsStringSync();
+        final int headerIdx = path.contains('reader_fushi_page')
+            ? src.indexOf('Widget? buildPopupAudioControls()')
+            : src.indexOf('Widget? buildPopupHeaderFor(');
+        expect(
+          headerIdx,
+          greaterThanOrEqualTo(0),
+          reason: '$path: popup header 方法未找到',
+        );
+        // 截取到方法体的一段（足够覆盖 Container 装饰），断言不再有底边框。用精确的
+        // `border: Border(` 标记，避免误配按钮的 StadiumBorder/CircleBorder。
+        final String header = src.substring(headerIdx, headerIdx + 1600);
+        expect(
+          header.contains('border: Border('),
+          isFalse,
+          reason: '$path: header 不得再画无条件底边框（分隔线已移交 popup 层按结果条件画）',
+        );
+      }
+    },
+  );
 }

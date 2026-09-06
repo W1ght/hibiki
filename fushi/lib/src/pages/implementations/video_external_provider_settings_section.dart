@@ -106,8 +106,8 @@ class AppVideoExternalSettingsStore implements VideoExternalSettingsStore {
 
   @override
   Future<VideoExternalSettingsSnapshot> load() async {
-    final List<MediaSourceRow> rows =
-        await appModel.database.getMediaSourcesByKind('video');
+    final List<MediaSourceRow> rows = await appModel.database
+        .getMediaSourcesByKind('video');
     final List<ManagedVideoSourceOption> sources = <ManagedVideoSourceOption>[];
     for (final MediaSourceRow row in rows) {
       if (row.transport != 'local' || !p.isAbsolute(row.rootPath)) continue;
@@ -121,13 +121,15 @@ class AppVideoExternalSettingsStore implements VideoExternalSettingsStore {
       );
     }
     final int? storedTarget = appModel.prefsRepo.videoDownloadTargetSourceId;
-    final int? target = sources.any(
-      (ManagedVideoSourceOption source) => source.id == storedTarget,
-    )
+    final int? target =
+        sources.any(
+          (ManagedVideoSourceOption source) => source.id == storedTarget,
+        )
         ? storedTarget
         : null;
-    final QbConnectionConfig torrentConfig =
-        effectiveTorrentConfig(appModel.qbConnectionConfig);
+    final QbConnectionConfig torrentConfig = effectiveTorrentConfig(
+      appModel.qbConnectionConfig,
+    );
     String suggestedBackendProfileId = '';
     try {
       suggestedBackendProfileId = buildVideoDownloadBackendIdentity(
@@ -188,8 +190,7 @@ class AppVideoExternalSettingsStore implements VideoExternalSettingsStore {
   @override
   Future<void> savePathMappings(
     List<VideoDownloadBackendPathMappingConfig> mappings,
-  ) =>
-      appModel.prefsRepo.setVideoDownloadBackendPathMappings(mappings);
+  ) => appModel.prefsRepo.setVideoDownloadBackendPathMappings(mappings);
 
   @override
   Future<void> saveTargetSourceId(int? sourceId) =>
@@ -296,7 +297,8 @@ class _VideoExternalProviderSettingsSectionState
   Future<void> _load() async {
     final VideoExternalSettingsStore? injected = widget.store;
     final AppModel? appModel = injected == null ? ref.read(appProvider) : null;
-    final VideoExternalSettingsStore? store = injected ??
+    final VideoExternalSettingsStore? store =
+        injected ??
         (appModel!.isPreferencesReady && appModel.isDatabaseReady
             ? AppVideoExternalSettingsStore(appModel)
             : null);
@@ -338,9 +340,7 @@ class _VideoExternalProviderSettingsSectionState
     }
   }
 
-  Future<void> _save(
-    Future<void> Function(VideoExternalSettingsStore) task,
-  ) {
+  Future<void> _save(Future<void> Function(VideoExternalSettingsStore) task) {
     final VideoExternalSettingsStore? store = _store;
     if (store == null) return Future<void>.value();
     _saveTail = _saveTail.then((_) async {
@@ -444,8 +444,7 @@ class _VideoExternalProviderSettingsSectionState
     String title,
     String hint, {
     IconData? icon,
-  }) =>
-      SourceSectionHeading(title: title, hint: hint, icon: icon);
+  }) => SourceSectionHeading(title: title, hint: hint, icon: icon);
 
   Widget _field({
     required Key key,
@@ -513,8 +512,9 @@ class _VideoExternalProviderSettingsSectionState
             key: ValueKey<String>('video-torznab-$index-name'),
             label: t.video_torznab_name,
             initialValue: draft.name,
-            errorText:
-                draft.name.trim().isEmpty ? t.video_external_save_error : null,
+            errorText: draft.name.trim().isEmpty
+                ? t.video_external_save_error
+                : null,
             onChanged: (String value) =>
                 _updateTorznab(index, draft.copyWith(name: value)),
           ),
@@ -565,10 +565,8 @@ class _VideoExternalProviderSettingsSectionState
                   errorText: draft.categoriesValid
                       ? null
                       : t.video_external_categories_invalid,
-                  onChanged: (String value) => _updateTorznab(
-                    index,
-                    draft.copyWith(categories: value),
-                  ),
+                  onChanged: (String value) =>
+                      _updateTorznab(index, draft.copyWith(categories: value)),
                 ),
               ),
             ],
@@ -580,10 +578,8 @@ class _VideoExternalProviderSettingsSectionState
             title: Text(t.video_external_insecure_http),
             subtitle: Text(t.video_external_insecure_http_hint),
             value: draft.allowInsecureHttp,
-            onChanged: (bool value) => _updateTorznab(
-              index,
-              draft.copyWith(allowInsecureHttp: value),
-            ),
+            onChanged: (bool value) =>
+                _updateTorznab(index, draft.copyWith(allowInsecureHttp: value)),
           ),
         ],
       ),
@@ -610,8 +606,9 @@ class _VideoExternalProviderSettingsSectionState
           initialValue: draft.endpoint,
           helper: t.video_torznab_endpoint_hint,
           keyboardType: TextInputType.url,
-          errorText:
-              draft.hasValidEndpoint ? null : t.video_external_endpoint_invalid,
+          errorText: draft.hasValidEndpoint
+              ? null
+              : t.video_external_endpoint_invalid,
           onChanged: (String value) =>
               _updateOpenSubtitles(draft.copyWith(endpoint: value)),
         ),
@@ -665,9 +662,8 @@ class _VideoExternalProviderSettingsSectionState
           title: Text(t.video_external_insecure_http),
           subtitle: Text(t.video_external_insecure_http_hint),
           value: draft.allowInsecureHttp,
-          onChanged: (bool value) => _updateOpenSubtitles(
-            draft.copyWith(allowInsecureHttp: value),
-          ),
+          onChanged: (bool value) =>
+              _updateOpenSubtitles(draft.copyWith(allowInsecureHttp: value)),
         ),
       ],
     );
@@ -898,10 +894,8 @@ class _VideoExternalProviderSettingsSectionState
             errorText: draft.backendProfileId.trim().isEmpty
                 ? t.video_download_path_mapping_invalid
                 : null,
-            onChanged: (String value) => _updateMapping(
-              index,
-              draft.copyWith(backendProfileId: value),
-            ),
+            onChanged: (String value) =>
+                _updateMapping(index, draft.copyWith(backendProfileId: value)),
           ),
           _field(
             key: ValueKey<String>('video-path-mapping-$index-remote'),
@@ -910,10 +904,8 @@ class _VideoExternalProviderSettingsSectionState
             errorText: draft.remoteRoot.trim().isEmpty
                 ? t.video_download_path_mapping_invalid
                 : null,
-            onChanged: (String value) => _updateMapping(
-              index,
-              draft.copyWith(remoteRoot: value),
-            ),
+            onChanged: (String value) =>
+                _updateMapping(index, draft.copyWith(remoteRoot: value)),
           ),
           _field(
             key: ValueKey<String>('video-path-mapping-$index-local'),
@@ -922,10 +914,8 @@ class _VideoExternalProviderSettingsSectionState
             errorText: p.isAbsolute(draft.localRoot.trim())
                 ? null
                 : t.video_download_path_mapping_invalid,
-            onChanged: (String value) => _updateMapping(
-              index,
-              draft.copyWith(localRoot: value),
-            ),
+            onChanged: (String value) =>
+                _updateMapping(index, draft.copyWith(localRoot: value)),
           ),
         ],
       ),
@@ -959,14 +949,14 @@ class _VideoExternalProviderSettingsSectionState
   }
 
   Widget _saveFailedBanner(ThemeData theme) => Padding(
-        padding: const EdgeInsets.only(top: 8),
-        child: Text(
-          t.video_external_save_error,
-          style: theme.textTheme.bodySmall?.copyWith(
-            color: theme.colorScheme.error,
-          ),
-        ),
-      );
+    padding: const EdgeInsets.only(top: 8),
+    child: Text(
+      t.video_external_save_error,
+      style: theme.textTheme.bodySmall?.copyWith(
+        color: theme.colorScheme.error,
+      ),
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -979,12 +969,15 @@ class _VideoExternalProviderSettingsSectionState
     if (_store == null) return const SizedBox.shrink();
     final ThemeData theme = Theme.of(context);
     final List<Widget> blocks = switch (widget.scope) {
-      VideoExternalProviderScope.subtitleSources =>
-        _subtitleSourceBlocks(theme),
-      VideoExternalProviderScope.resourceSources =>
-        _resourceSourceBlocks(theme),
-      VideoExternalProviderScope.downloadRouting =>
-        _downloadRoutingBlocks(theme),
+      VideoExternalProviderScope.subtitleSources => _subtitleSourceBlocks(
+        theme,
+      ),
+      VideoExternalProviderScope.resourceSources => _resourceSourceBlocks(
+        theme,
+      ),
+      VideoExternalProviderScope.downloadRouting => _downloadRoutingBlocks(
+        theme,
+      ),
     };
     return _alignSectionBaseline(
       context,
@@ -1043,10 +1036,12 @@ class _VideoExternalProviderSettingsSectionState
         child: OutlinedButton.icon(
           key: const ValueKey<String>('video-path-mapping-add'),
           onPressed: () => setState(
-            () => _mappings.add(_PathMappingDraft.empty(
-              _newDraftId('mapping'),
-              suggestedBackendProfileId: _suggestedBackendProfileId,
-            )),
+            () => _mappings.add(
+              _PathMappingDraft.empty(
+                _newDraftId('mapping'),
+                suggestedBackendProfileId: _suggestedBackendProfileId,
+              ),
+            ),
           ),
           icon: const Icon(Icons.add),
           label: Text(t.video_download_path_mapping_add),
@@ -1073,9 +1068,7 @@ class _VideoExternalProviderSettingsSectionState
       );
     }
     return DropdownButtonFormField<int>(
-      key: ValueKey<String>(
-        'video-target-source-${_targetSourceId ?? 'none'}',
-      ),
+      key: ValueKey<String>('video-target-source-${_targetSourceId ?? 'none'}'),
       initialValue: _targetSourceId ?? 0,
       decoration: InputDecoration(
         labelText: t.video_download_target_source_none,
@@ -1126,15 +1119,15 @@ class _TorznabDraft {
   });
 
   factory _TorznabDraft.empty(String id) => _TorznabDraft(
-        id: id,
-        name: '',
-        endpoint: '',
-        apiKey: '',
-        enabled: true,
-        priority: '100',
-        categories: '',
-        allowInsecureHttp: false,
-      );
+    id: id,
+    name: '',
+    endpoint: '',
+    apiKey: '',
+    enabled: true,
+    priority: '100',
+    categories: '',
+    allowInsecureHttp: false,
+  );
 
   factory _TorznabDraft.fromConfig(TorznabIndexerConfig config) =>
       _TorznabDraft(
@@ -1229,17 +1222,16 @@ class _TorznabDraft {
     String? priority,
     String? categories,
     bool? allowInsecureHttp,
-  }) =>
-      _TorznabDraft(
-        id: id,
-        name: name ?? this.name,
-        endpoint: endpoint ?? this.endpoint,
-        apiKey: apiKey ?? this.apiKey,
-        enabled: enabled ?? this.enabled,
-        priority: priority ?? this.priority,
-        categories: categories ?? this.categories,
-        allowInsecureHttp: allowInsecureHttp ?? this.allowInsecureHttp,
-      );
+  }) => _TorznabDraft(
+    id: id,
+    name: name ?? this.name,
+    endpoint: endpoint ?? this.endpoint,
+    apiKey: apiKey ?? this.apiKey,
+    enabled: enabled ?? this.enabled,
+    priority: priority ?? this.priority,
+    categories: categories ?? this.categories,
+    allowInsecureHttp: allowInsecureHttp ?? this.allowInsecureHttp,
+  );
 }
 
 @immutable
@@ -1255,27 +1247,27 @@ class _OpenSubtitlesDraft {
   });
 
   factory _OpenSubtitlesDraft.empty() => _OpenSubtitlesDraft(
-        endpoint: 'https://api.opensubtitles.com/api/v1',
-        apiKey: '',
-        username: '',
-        password: '',
-        userAgent: fushiUserAgent('opensubtitles'),
-        enabled: false,
-        allowInsecureHttp: false,
-      );
+    endpoint: 'https://api.opensubtitles.com/api/v1',
+    apiKey: '',
+    username: '',
+    password: '',
+    userAgent: fushiUserAgent('opensubtitles'),
+    enabled: false,
+    allowInsecureHttp: false,
+  );
 
   factory _OpenSubtitlesDraft.fromConfig(OpenSubtitlesConfig? config) =>
       config == null
-          ? _OpenSubtitlesDraft.empty()
-          : _OpenSubtitlesDraft(
-              endpoint: config.baseUrl.toString(),
-              apiKey: config.apiKey,
-              username: config.username ?? '',
-              password: config.password ?? '',
-              userAgent: config.userAgent,
-              enabled: config.enabled,
-              allowInsecureHttp: config.allowInsecureHttp,
-            );
+      ? _OpenSubtitlesDraft.empty()
+      : _OpenSubtitlesDraft(
+          endpoint: config.baseUrl.toString(),
+          apiKey: config.apiKey,
+          username: config.username ?? '',
+          password: config.password ?? '',
+          userAgent: config.userAgent,
+          enabled: config.enabled,
+          allowInsecureHttp: config.allowInsecureHttp,
+        );
 
   final String endpoint;
   final String apiKey;
@@ -1313,16 +1305,15 @@ class _OpenSubtitlesDraft {
     String? userAgent,
     bool? enabled,
     bool? allowInsecureHttp,
-  }) =>
-      _OpenSubtitlesDraft(
-        endpoint: endpoint ?? this.endpoint,
-        apiKey: apiKey ?? this.apiKey,
-        username: username ?? this.username,
-        password: password ?? this.password,
-        userAgent: userAgent ?? this.userAgent,
-        enabled: enabled ?? this.enabled,
-        allowInsecureHttp: allowInsecureHttp ?? this.allowInsecureHttp,
-      );
+  }) => _OpenSubtitlesDraft(
+    endpoint: endpoint ?? this.endpoint,
+    apiKey: apiKey ?? this.apiKey,
+    username: username ?? this.username,
+    password: password ?? this.password,
+    userAgent: userAgent ?? this.userAgent,
+    enabled: enabled ?? this.enabled,
+    allowInsecureHttp: allowInsecureHttp ?? this.allowInsecureHttp,
+  );
 }
 
 @immutable
@@ -1337,23 +1328,21 @@ class _PathMappingDraft {
   factory _PathMappingDraft.empty(
     String id, {
     String suggestedBackendProfileId = '',
-  }) =>
-      _PathMappingDraft(
-        id: id,
-        backendProfileId: suggestedBackendProfileId,
-        remoteRoot: '',
-        localRoot: '',
-      );
+  }) => _PathMappingDraft(
+    id: id,
+    backendProfileId: suggestedBackendProfileId,
+    remoteRoot: '',
+    localRoot: '',
+  );
 
   factory _PathMappingDraft.fromConfig(
     VideoDownloadBackendPathMappingConfig config,
-  ) =>
-      _PathMappingDraft(
-        id: '${config.backendProfileId}:${config.remoteRoot}',
-        backendProfileId: config.backendProfileId,
-        remoteRoot: config.remoteRoot,
-        localRoot: config.localRoot,
-      );
+  ) => _PathMappingDraft(
+    id: '${config.backendProfileId}:${config.remoteRoot}',
+    backendProfileId: config.backendProfileId,
+    remoteRoot: config.remoteRoot,
+    localRoot: config.localRoot,
+  );
 
   final String id;
   final String backendProfileId;
@@ -1363,10 +1352,10 @@ class _PathMappingDraft {
   VideoDownloadBackendPathMappingConfig? toConfig() {
     final VideoDownloadBackendPathMappingConfig value =
         VideoDownloadBackendPathMappingConfig(
-      backendProfileId: backendProfileId.trim(),
-      remoteRoot: remoteRoot.trim(),
-      localRoot: localRoot.trim(),
-    );
+          backendProfileId: backendProfileId.trim(),
+          remoteRoot: remoteRoot.trim(),
+          localRoot: localRoot.trim(),
+        );
     return value.isValid && p.isAbsolute(value.localRoot) ? value : null;
   }
 
@@ -1374,11 +1363,10 @@ class _PathMappingDraft {
     String? backendProfileId,
     String? remoteRoot,
     String? localRoot,
-  }) =>
-      _PathMappingDraft(
-        id: id,
-        backendProfileId: backendProfileId ?? this.backendProfileId,
-        remoteRoot: remoteRoot ?? this.remoteRoot,
-        localRoot: localRoot ?? this.localRoot,
-      );
+  }) => _PathMappingDraft(
+    id: id,
+    backendProfileId: backendProfileId ?? this.backendProfileId,
+    remoteRoot: remoteRoot ?? this.remoteRoot,
+    localRoot: localRoot ?? this.localRoot,
+  );
 }

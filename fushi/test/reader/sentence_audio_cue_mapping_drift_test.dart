@@ -14,13 +14,15 @@ import 'package:fushi_audio/fushi_audio.dart';
 /// ① 上游 N 字漂移自愈（用 cue 原文在 DOM 就近重定位，不用死的偏移）；
 /// ② 漂移不传播（每条 cue 独立锚定）；
 /// ③ 窗口受限 + 单调 ⇒ 不跳到远处重复句；④ 未命中回落提示偏移。
-List<int> _resolve(String fullNorm, List<SentenceAudioCueHint> cues,
-        {int window = 256}) =>
-    ReaderPaginationScripts.resolveCueNormStartsForTesting(
-      fullNorm: fullNorm,
-      cues: cues,
-      window: window,
-    );
+List<int> _resolve(
+  String fullNorm,
+  List<SentenceAudioCueHint> cues, {
+  int window = 256,
+}) => ReaderPaginationScripts.resolveCueNormStartsForTesting(
+  fullNorm: fullNorm,
+  cues: cues,
+  window: window,
+);
 
 void main() {
   group('resolveCueNormStarts (BUG-060)', () {
@@ -67,7 +69,10 @@ void main() {
       final out = _resolve(full, const <SentenceAudioCueHint>[
         SentenceAudioCueHint(needle: 'かきくけこ', hint: 0, length: 5), // → 0
         SentenceAudioCueHint(
-            needle: 'かきくけこ', hint: 10, length: 5), // → 10（不回退到 0）
+          needle: 'かきくけこ',
+          hint: 10,
+          length: 5,
+        ), // → 10（不回退到 0）
       ]);
       expect(out, <int>[0, 10]);
     });
@@ -127,24 +132,39 @@ void main() {
       ).readAsStringSync();
 
       // 运行时按 DOM 文本建归一化反查表。
-      expect(src.contains('buildSentenceAudioNormIndex:'), isTrue,
-          reason: '需一次性构建实时 DOM 的归一化全文 + 反查表');
+      expect(
+        src.contains('buildSentenceAudioNormIndex:'),
+        isTrue,
+        reason: '需一次性构建实时 DOM 的归一化全文 + 反查表',
+      );
       // 反查表必须按 UTF-16 码元粒度（代理对 push 两条），与 full.indexOf 的
       // 码元偏移对齐，否则 CJK 扩展 B+ 汉字后高亮错位（W-1）。
-      expect(src.contains('for (var u = 0; u < ch.length'), isTrue,
-          reason: 'map 必须按码元粒度建，与 full(码元串) 同空间');
+      expect(
+        src.contains('for (var u = 0; u < ch.length'),
+        isTrue,
+        reason: 'map 必须按码元粒度建，与 full(码元串) 同空间',
+      );
       // 用 cue 原文 needle 在全文里搜索（而非按 start 死偏移数 cursor）。
       // TODO-630/BUG-366：needle 现经 foldNormalize（剥+值折叠），仍来自 cue 原文。
-      expect(src.contains('this.foldNormalize(cue.text'), isTrue,
-          reason: 'needle 必须来自 cue 原文（经 foldNormalize），靠 DOM 文本自校正');
-      expect(src.contains('full.indexOf(needle'), isTrue,
-          reason: '在 DOM 归一化全文里搜索 cue 原文');
+      expect(
+        src.contains('this.foldNormalize(cue.text'),
+        isTrue,
+        reason: 'needle 必须来自 cue 原文（经 foldNormalize），靠 DOM 文本自校正',
+      );
+      expect(
+        src.contains('full.indexOf(needle'),
+        isTrue,
+        reason: '在 DOM 归一化全文里搜索 cue 原文',
+      );
       // 提示仅作 hint（就近 + 有界窗口），不再是权威坐标。
       expect(src.contains('cue.start'), isTrue, reason: 'start 降级为提示位置');
       expect(RegExp(r'WINDOW').hasMatch(src), isTrue, reason: '搜索半径有界，防跳远处重复句');
       // 回落仍走 rangesForNormSpan（绝不空高亮整章）。
-      expect(src.contains('rangesForNormSpan('), isTrue,
-          reason: '命中/回落都经统一的 span→DOM range 映射');
+      expect(
+        src.contains('rangesForNormSpan('),
+        isTrue,
+        reason: '命中/回落都经统一的 span→DOM range 映射',
+      );
     });
 
     // BUG-282 源码守卫：JS collectSasayakiCueRanges 的回落分支**不得**再推进
@@ -156,18 +176,23 @@ void main() {
       ).readAsStringSync();
 
       // 锁定 collectSasayakiCueRanges 函数体。
-      final int fnStart =
-          src.indexOf('collectSentenceAudioCueRanges: function');
+      final int fnStart = src.indexOf(
+        'collectSentenceAudioCueRanges: function',
+      );
       expect(fnStart, greaterThanOrEqualTo(0));
-      final int fnEnd =
-          src.indexOf('applySentenceAudioCues: function', fnStart);
+      final int fnEnd = src.indexOf(
+        'applySentenceAudioCues: function',
+        fnStart,
+      );
       expect(fnEnd, greaterThan(fnStart));
       final String fnBody = src.substring(fnStart, fnEnd);
 
       // 命中分支必须推进游标（best>=0 时 cursor = best + normLen）。
       expect(
-        RegExp(r'best\s*>=\s*0.*cursor\s*=\s*best\s*\+\s*normLen', dotAll: true)
-            .hasMatch(fnBody),
+        RegExp(
+          r'best\s*>=\s*0.*cursor\s*=\s*best\s*\+\s*normLen',
+          dotAll: true,
+        ).hasMatch(fnBody),
         isTrue,
         reason: '命中分支仍应推进游标',
       );
@@ -198,10 +223,7 @@ void main() {
     }
 
     test('片假名折叠成平假名（与平假名书同形）', () {
-      expect(
-        ReaderPaginationScripts.foldNormalizeForTesting('カタカナ'),
-        'かたかな',
-      );
+      expect(ReaderPaginationScripts.foldNormalizeForTesting('カタカナ'), 'かたかな');
       expectParity('カタカナ');
     });
 
@@ -234,85 +256,118 @@ void main() {
   // 修复前 JS needle 只剥不折 = 「カタカナ」，在平假名 full 里 indexOf 落空 → 回落 hint。
   // 修复后 needle 折叠成「かたかな」→ 命中真实位置。
   group(
-      'folding-class cue relocation hits via folded needle (TODO-630/BUG-366)',
-      () {
-    test('片假名 cue 在平假名 DOM 全文里命中（折叠后 indexOf 不落空）', () {
-      // full 由 DOM 折叠产生（平假名）：あ0 い1 う2 え3 お4 か5 た6 か7 な8 ...
-      const String full = 'あいうえおかたかなさしすせそ';
-      // cue 原文是片假名「カタカナ」，先折叠成 needle「かたかな」（运行期 foldNormalize）。
-      final String needle =
-          ReaderPaginationScripts.foldNormalizeForTesting('カタカナ');
-      final out = _resolve(full, <SentenceAudioCueHint>[
-        // hint 故意给 0（不准），靠 DOM 文本就近重定位到真实位置 5。
-        SentenceAudioCueHint(needle: needle, hint: 0, length: 4),
-      ]);
-      expect(out.single, 5, reason: '折叠后 needle 必须命中真实位置 5，而非回落 hint=0');
-    });
+    'folding-class cue relocation hits via folded needle (TODO-630/BUG-366)',
+    () {
+      test('片假名 cue 在平假名 DOM 全文里命中（折叠后 indexOf 不落空）', () {
+        // full 由 DOM 折叠产生（平假名）：あ0 い1 う2 え3 お4 か5 た6 か7 な8 ...
+        const String full = 'あいうえおかたかなさしすせそ';
+        // cue 原文是片假名「カタカナ」，先折叠成 needle「かたかな」（运行期 foldNormalize）。
+        final String needle = ReaderPaginationScripts.foldNormalizeForTesting(
+          'カタカナ',
+        );
+        final out = _resolve(full, <SentenceAudioCueHint>[
+          // hint 故意给 0（不准），靠 DOM 文本就近重定位到真实位置 5。
+          SentenceAudioCueHint(needle: needle, hint: 0, length: 4),
+        ]);
+        expect(out.single, 5, reason: '折叠后 needle 必须命中真实位置 5，而非回落 hint=0');
+      });
 
-    test('未折叠的片假名 needle 在平假名全文里落空（证伪：这正是修复前症状）', () {
-      const String full = 'あいうえおかたかなさしすせそ';
-      // 不经折叠（模拟旧 JS：normalizeText 只剥），片假名 needle 在平假名全文里搜不到。
-      final out = _resolve(full, const <SentenceAudioCueHint>[
-        SentenceAudioCueHint(needle: 'カタカナ', hint: 0, length: 4),
-      ]);
-      expect(out.single, 0, reason: '未折叠时 indexOf 落空 → 回落 hint=0（这是被修复的错误行为）');
-    });
-  });
+      test('未折叠的片假名 needle 在平假名全文里落空（证伪：这正是修复前症状）', () {
+        const String full = 'あいうえおかたかなさしすせそ';
+        // 不经折叠（模拟旧 JS：normalizeText 只剥），片假名 needle 在平假名全文里搜不到。
+        final out = _resolve(full, const <SentenceAudioCueHint>[
+          SentenceAudioCueHint(needle: 'カタカナ', hint: 0, length: 4),
+        ]);
+        expect(
+          out.single,
+          0,
+          reason: '未折叠时 indexOf 落空 → 回落 hint=0（这是被修复的错误行为）',
+        );
+      });
+    },
+  );
 
   // 源码守卫：JS 运行期归一化必须做值折叠并用于 needle + full（防回归删回「只剥不折」）。
   group(
-      'JS sentenceAudioHighlight value-folding wiring guard (TODO-630/BUG-366)',
-      () {
-    final String src = File(
-      'lib/src/reader/reader_pagination_scripts.dart',
-    ).readAsStringSync();
+    'JS sentenceAudioHighlight value-folding wiring guard (TODO-630/BUG-366)',
+    () {
+      final String src = File(
+        'lib/src/reader/reader_pagination_scripts.dart',
+      ).readAsStringSync();
 
-    test('JS 定义 foldCodePoint / foldNormalize 值折叠函数', () {
-      expect(src.contains('foldCodePoint: function'), isTrue,
-          reason: '需 JS 值折叠码点函数（片假名→平假名/大小写/全角→ASCII）');
-      expect(src.contains('foldNormalize: function'), isTrue,
-          reason: '需 JS 剥+折叠组合函数供 needle 用');
-    });
+      test('JS 定义 foldCodePoint / foldNormalize 值折叠函数', () {
+        expect(
+          src.contains('foldCodePoint: function'),
+          isTrue,
+          reason: '需 JS 值折叠码点函数（片假名→平假名/大小写/全角→ASCII）',
+        );
+        expect(
+          src.contains('foldNormalize: function'),
+          isTrue,
+          reason: '需 JS 剥+折叠组合函数供 needle 用',
+        );
+      });
 
-    test('needle 经 foldNormalize（而非只剥的 normalizeText）', () {
-      expect(src.contains('this.foldNormalize(cue.text'), isTrue,
-          reason: 'needle 必须折叠，否则折叠类书 indexOf 落空');
-    });
+      test('needle 经 foldNormalize（而非只剥的 normalizeText）', () {
+        expect(
+          src.contains('this.foldNormalize(cue.text'),
+          isTrue,
+          reason: 'needle 必须折叠，否则折叠类书 indexOf 落空',
+        );
+      });
 
-    test('full 索引也折叠（与 needle 同坐标系）', () {
-      expect(src.contains('this.foldCodePoint(text.codePointAt(i))'), isTrue,
+      test('full 索引也折叠（与 needle 同坐标系）', () {
+        expect(
+          src.contains('this.foldCodePoint(text.codePointAt(i))'),
+          isTrue,
           reason:
-              'buildSentenceAudioNormIndex 的 full 也须折叠，否则 needle/full 坐标系分叉');
-    });
-  });
+              'buildSentenceAudioNormIndex 的 full 也须折叠，否则 needle/full 坐标系分叉',
+        );
+      });
+    },
+  );
 
   // 源码守卫：观测日志（解定位僵局）必须存在于关键节点（防回归删）。
-  group('JS sentenceAudioHighlight highlight observability guard (TODO-630)',
-      () {
-    final String src = File(
-      'lib/src/reader/reader_pagination_scripts.dart',
-    ).readAsStringSync();
+  group(
+    'JS sentenceAudioHighlight highlight observability guard (TODO-630)',
+    () {
+      final String src = File(
+        'lib/src/reader/reader_pagination_scripts.dart',
+      ).readAsStringSync();
 
-    test('applySentenceAudioCues 打 payload cue 数 + 一次性诊断（cssHighlights/背景色）',
+      test(
+        'applySentenceAudioCues 打 payload cue 数 + 一次性诊断（cssHighlights/背景色）',
         () {
-      expect(
-          src.contains(
-              '[sentence-audio-hl] applySentenceAudioCues payloadCues='),
-          isTrue);
-      expect(src.contains('[sentence-audio-hl] diag cssHighlightsSupported='),
-          isTrue);
-      expect(src.contains('--fushi-sentence-audio-background-color'), isTrue,
-          reason: '一次性诊断须读 sentenceAudioHighlight 背景色变量（透明/缺失也是「看不见」原因）');
-    });
+          expect(
+            src.contains(
+              '[sentence-audio-hl] applySentenceAudioCues payloadCues=',
+            ),
+            isTrue,
+          );
+          expect(
+            src.contains('[sentence-audio-hl] diag cssHighlightsSupported='),
+            isTrue,
+          );
+          expect(
+            src.contains('--fushi-sentence-audio-background-color'),
+            isTrue,
+            reason: '一次性诊断须读 sentenceAudioHighlight 背景色变量（透明/缺失也是「看不见」原因）',
+          );
+        },
+      );
 
-    test('collectSentenceAudioCueRanges 打 cue 数 + 空 range 计数', () {
-      expect(src.contains('[sentence-audio-hl] collectRanges cues='), isTrue);
-      expect(src.contains('emptyRanges'), isTrue);
-    });
+      test('collectSentenceAudioCueRanges 打 cue 数 + 空 range 计数', () {
+        expect(src.contains('[sentence-audio-hl] collectRanges cues='), isTrue);
+        expect(src.contains('emptyRanges'), isTrue);
+      });
 
-    test('highlightSentenceAudioCue 打 range/ruby 数（或为何 return null）', () {
-      expect(src.contains('[sentence-audio-hl] highlightCue ranges='), isTrue);
-      expect(src.contains('RETURN_NULL_no_segments'), isTrue);
-    });
-  });
+      test('highlightSentenceAudioCue 打 range/ruby 数（或为何 return null）', () {
+        expect(
+          src.contains('[sentence-audio-hl] highlightCue ranges='),
+          isTrue,
+        );
+        expect(src.contains('RETURN_NULL_no_segments'), isTrue);
+      });
+    },
+  );
 }

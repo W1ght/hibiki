@@ -126,7 +126,8 @@ class _PopupDictionaryPageState extends ConsumerState<PopupDictionaryPage>
     // TODO-951 症状C：宿主常驻本页、每次新 ProcessText 改 searchTerm/searchGeneration。
     // 复用常驻热槽原地查新词（reuseWarmSlot:true），不重建整页 → 不闪。term 与
     // generation 任一变化都重查（同词连续查词靠 generation 触发）。
-    final bool changed = oldWidget.searchTerm != widget.searchTerm ||
+    final bool changed =
+        oldWidget.searchTerm != widget.searchTerm ||
         oldWidget.searchGeneration != widget.searchGeneration ||
         oldWidget.anchorRect != widget.anchorRect ||
         oldWidget.subtitleWindowRect != widget.subtitleWindowRect;
@@ -234,9 +235,7 @@ class _PopupDictionaryPageState extends ConsumerState<PopupDictionaryPage>
         // 其 DictionaryPopupLayer→DictionaryPopupWebView 会被 FittedBox 拉糊。整页在
         // 中和器下渲染（净缩放=1），WebView 走原生密度、其上的关闭遮罩/嵌套层共用
         // 同一真实坐标系。
-        body: FushiAppUiScaleNeutralizer(
-          child: _buildOuterContainer(),
-        ),
+        body: FushiAppUiScaleNeutralizer(child: _buildOuterContainer()),
       ),
     );
   }
@@ -284,8 +283,9 @@ class _PopupDictionaryPageState extends ConsumerState<PopupDictionaryPage>
             // 与书内 / 首页查词弹窗同一真值。窄屏仍由下方 available 兜底取全宽。
             final double maxCardWidth = _externalPopupMaxWidth;
             final double available = constraints.maxWidth - gap * 2;
-            final double width =
-                available < maxCardWidth ? available : maxCardWidth;
+            final double width = available < maxCardWidth
+                ? available
+                : maxCardWidth;
             final double height = (constraints.maxHeight - gap * 2) * 0.72;
             return Padding(
               padding: EdgeInsets.all(gap),
@@ -417,10 +417,12 @@ class _PopupDictionaryPageState extends ConsumerState<PopupDictionaryPage>
     // 继续预热。
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        final double cardWidth =
-            constraints.maxWidth.isFinite ? constraints.maxWidth : 0;
-        final double cardHeight =
-            constraints.maxHeight.isFinite ? constraints.maxHeight : 0;
+        final double cardWidth = constraints.maxWidth.isFinite
+            ? constraints.maxWidth
+            : 0;
+        final double cardHeight = constraints.maxHeight.isFinite
+            ? constraints.maxHeight
+            : 0;
         return Stack(
           key: _resultStackKey,
           clipBehavior: Clip.none,
@@ -435,7 +437,8 @@ class _PopupDictionaryPageState extends ConsumerState<PopupDictionaryPage>
             ...parkedRealmPopupLayers(
               parkedRealms: _popup.parkedRealms,
               screen: Size(cardWidth, cardHeight),
-              isDark: (appModel.overrideDictionaryTheme ?? Theme.of(context))
+              isDark:
+                  (appModel.overrideDictionaryTheme ?? Theme.of(context))
                       .brightness ==
                   Brightness.dark,
               overrideFillColor: appModel.overrideDictionaryColor,
@@ -460,7 +463,7 @@ class _PopupDictionaryPageState extends ConsumerState<PopupDictionaryPage>
     final bool isBase = index == 0;
     final bool isDark =
         (appModel.overrideDictionaryTheme ?? Theme.of(context)).brightness ==
-            Brightness.dark;
+        Brightness.dark;
     final Widget layer = DictionaryPopupLayer(
       // TODO-1065：独立查词窗（popup_main 宿主 / 悬浮字幕外部弹窗）跑在透明浮动窗里，
       // 圆角卡由 Flutter FushiPopupSurface 画；令弹窗 WebView `<html>` 透明，消除
@@ -589,10 +592,7 @@ class PopupDictionarySearchBar extends StatelessWidget {
 /// 头部 Row 里关闭按钮与搜索栏并排，之前裸盒 36 高、搜索卡 44 高，居中对齐后产生 8px
 /// 高差且背景不一致；命中区改为 36 宽 × 44 高与搜索卡等高（图标仍 20），消除高差。
 class _CompactPopupCloseButton extends StatelessWidget {
-  const _CompactPopupCloseButton({
-    required this.onClose,
-    super.key,
-  });
+  const _CompactPopupCloseButton({required this.onClose, super.key});
 
   final VoidCallback onClose;
 

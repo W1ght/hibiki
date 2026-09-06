@@ -92,18 +92,9 @@ class _CupertinoProfileSelector extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Flexible(
-            child: Text(
-              active.name,
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
+          Flexible(child: Text(active.name, overflow: TextOverflow.ellipsis)),
           const SizedBox(width: 4),
-          Icon(
-            CupertinoIcons.chevron_down,
-            size: 14,
-            color: secondaryLabel,
-          ),
+          Icon(CupertinoIcons.chevron_down, size: 14, color: secondaryLabel),
         ],
       ),
     );

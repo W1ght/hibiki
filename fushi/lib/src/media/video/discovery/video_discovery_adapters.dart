@@ -20,11 +20,11 @@ class TmdbVideoDiscoveryProvider implements VideoDiscoveryProvider {
     this.baseUrl = 'https://api.themoviedb.org/3',
     this.imageBaseUrl = 'https://image.tmdb.org/t/p/original',
     this.language = 'zh-CN',
-  })  : assert(client == null || transport == null),
-        _apiKey = apiKey.trim(),
-        _accessToken = accessToken.trim(),
-        _transport = transport ?? VideoMetadataHttpClient(client: client),
-        _ownsTransport = transport == null;
+  }) : assert(client == null || transport == null),
+       _apiKey = apiKey.trim(),
+       _accessToken = accessToken.trim(),
+       _transport = transport ?? VideoMetadataHttpClient(client: client),
+       _ownsTransport = transport == null;
 
   final String _apiKey;
   final String _accessToken;
@@ -42,34 +42,32 @@ class TmdbVideoDiscoveryProvider implements VideoDiscoveryProvider {
 
   @override
   VideoDiscoveryCapabilities get capabilities => VideoDiscoveryCapabilities(
-        categories: const <VideoDiscoveryCategory>{
-          VideoDiscoveryCategory.movie,
-          VideoDiscoveryCategory.tv,
-        },
-        feeds: const <VideoDiscoveryFeed>{
-          VideoDiscoveryFeed.popular,
-          VideoDiscoveryFeed.trending,
-          VideoDiscoveryFeed.nowPlaying,
-          VideoDiscoveryFeed.upcoming,
-          VideoDiscoveryFeed.airing,
-        },
-        supportsSearch: true,
-        supportsPaging: true,
-      );
+    categories: const <VideoDiscoveryCategory>{
+      VideoDiscoveryCategory.movie,
+      VideoDiscoveryCategory.tv,
+    },
+    feeds: const <VideoDiscoveryFeed>{
+      VideoDiscoveryFeed.popular,
+      VideoDiscoveryFeed.trending,
+      VideoDiscoveryFeed.nowPlaying,
+      VideoDiscoveryFeed.upcoming,
+      VideoDiscoveryFeed.airing,
+    },
+    supportsSearch: true,
+    supportsPaging: true,
+  );
 
   bool get isAvailable => _apiKey.isNotEmpty || _accessToken.isNotEmpty;
 
   @override
   Future<ProviderBatchResult<VideoDiscoveryPage>> discover(
     VideoDiscoveryRequest request,
-  ) =>
-      _load(request, search: false);
+  ) => _load(request, search: false);
 
   @override
   Future<ProviderBatchResult<VideoDiscoveryPage>> search(
     VideoDiscoveryRequest request,
-  ) =>
-      _load(request, search: true);
+  ) => _load(request, search: true);
 
   Future<ProviderBatchResult<VideoDiscoveryPage>> _load(
     VideoDiscoveryRequest request, {
@@ -131,12 +129,11 @@ class TmdbVideoDiscoveryProvider implements VideoDiscoveryProvider {
       );
     }
 
-    final List<_DiscoveryCallResult> calls = await Future.wait(
-      <Future<_DiscoveryCallResult>>[
-        for (final VideoMetadataMediaKind kind in kinds)
-          _loadKind(request, kind: kind, search: search),
-      ],
-    );
+    final List<_DiscoveryCallResult> calls =
+        await Future.wait(<Future<_DiscoveryCallResult>>[
+          for (final VideoMetadataMediaKind kind in kinds)
+            _loadKind(request, kind: kind, search: search),
+        ]);
     final List<List<VideoDiscoveryItem>> successfulItems =
         <List<VideoDiscoveryItem>>[];
     final List<ExternalProviderFailure> failures = <ExternalProviderFailure>[];
@@ -187,7 +184,8 @@ class TmdbVideoDiscoveryProvider implements VideoDiscoveryProvider {
           if (_accessToken.isNotEmpty) 'Authorization': 'Bearer $_accessToken',
         },
         operation: 'TMDB discover $type',
-        cacheKey: 'tmdb:discover:$type:'
+        cacheKey:
+            'tmdb:discover:$type:'
             '${request.category?.name}:${request.feed.name}:'
             '${request.query}:${request.page}:${request.pageSize}:'
             '${request.sort.name}:${request.year}:${request.genre}:'
@@ -197,15 +195,12 @@ class TmdbVideoDiscoveryProvider implements VideoDiscoveryProvider {
         operation: 'TMDB discover $type',
       );
       final int totalPages = metadataInt(payload['total_pages']) ?? 1;
-      return _DiscoveryCallResult.success(
-        <VideoDiscoveryItem>[
-          for (final Object? node in metadataList(payload['results']))
-            if (metadataObject(node) case final Map<String, Object?> item)
-              if (_mapItem(item, kind) case final VideoDiscoveryItem mapped)
-                mapped,
-        ],
-        hasMore: request.page < totalPages,
-      );
+      return _DiscoveryCallResult.success(<VideoDiscoveryItem>[
+        for (final Object? node in metadataList(payload['results']))
+          if (metadataObject(node) case final Map<String, Object?> item)
+            if (_mapItem(item, kind) case final VideoDiscoveryItem mapped)
+              mapped,
+      ], hasMore: request.page < totalPages);
     } on Object catch (error) {
       return _DiscoveryCallResult.failure(
         _providerFailure(
@@ -249,7 +244,8 @@ class TmdbVideoDiscoveryProvider implements VideoDiscoveryProvider {
               'Authorization': 'Bearer $_accessToken',
           },
           operation: 'TMDB search $type',
-          cacheKey: 'tmdb:search:$type:${request.category?.name}:'
+          cacheKey:
+              'tmdb:search:$type:${request.category?.name}:'
               '${request.query}:$remotePage:${request.pageSize}:'
               '${request.sort.name}:${request.year}:${request.genre}:'
               '${request.region}:$language',
@@ -292,7 +288,8 @@ class TmdbVideoDiscoveryProvider implements VideoDiscoveryProvider {
           remotePage > maximumRemotePages && remotePage <= totalPages;
       return _DiscoveryCallResult.success(
         items,
-        hasMore: matches.length > offset + request.pageSize ||
+        hasMore:
+            matches.length > offset + request.pageSize ||
             (!reachedSafetyLimit && remotePage <= totalPages),
       );
     } on Object catch (error) {
@@ -311,7 +308,8 @@ class TmdbVideoDiscoveryProvider implements VideoDiscoveryProvider {
     VideoMetadataMediaKind kind,
     VideoDiscoveryRequest request,
   ) {
-    final String date = metadataString(
+    final String date =
+        metadataString(
           kind == VideoMetadataMediaKind.movie
               ? item['release_date']
               : item['first_air_date'],
@@ -322,9 +320,9 @@ class TmdbVideoDiscoveryProvider implements VideoDiscoveryProvider {
     }
     final int? genreId = int.tryParse(_tmdbGenreId(request.genre) ?? '');
     if (genreId != null &&
-        !metadataList(item['genre_ids'])
-            .map<int?>(metadataInt)
-            .contains(genreId)) {
+        !metadataList(
+          item['genre_ids'],
+        ).map<int?>(metadataInt).contains(genreId)) {
       return false;
     }
     final String region = request.region?.trim().toUpperCase() ?? '';
@@ -340,22 +338,21 @@ class TmdbVideoDiscoveryProvider implements VideoDiscoveryProvider {
     return true;
   }
 
-  List<VideoMetadataMediaKind> _requestedKinds(
-    VideoDiscoveryRequest request,
-  ) =>
+  List<VideoMetadataMediaKind> _requestedKinds(VideoDiscoveryRequest request) =>
       switch (request.category) {
         VideoDiscoveryCategory.movie => const <VideoMetadataMediaKind>[
-            VideoMetadataMediaKind.movie,
-          ],
+          VideoMetadataMediaKind.movie,
+        ],
         VideoDiscoveryCategory.tv => const <VideoMetadataMediaKind>[
-            VideoMetadataMediaKind.tv,
-          ],
+          VideoMetadataMediaKind.tv,
+        ],
         VideoDiscoveryCategory.anime => const <VideoMetadataMediaKind>[],
         null => VideoMetadataMediaKind.values,
       };
 
   String _discoverPath(VideoDiscoveryRequest request, String type) {
-    final bool filtered = request.year != null ||
+    final bool filtered =
+        request.year != null ||
         request.genre?.trim().isNotEmpty == true ||
         request.region?.trim().isNotEmpty == true ||
         request.sort != VideoDiscoverySort.popularity;
@@ -402,18 +399,15 @@ class TmdbVideoDiscoveryProvider implements VideoDiscoveryProvider {
     };
   }
 
-  String _tmdbSort(
-    VideoDiscoverySort sort,
-    VideoMetadataMediaKind kind,
-  ) =>
+  String _tmdbSort(VideoDiscoverySort sort, VideoMetadataMediaKind kind) =>
       switch (sort) {
         VideoDiscoverySort.rating => 'vote_average.desc',
-        VideoDiscoverySort.releaseDate => kind == VideoMetadataMediaKind.movie
-            ? 'primary_release_date.desc'
-            : 'first_air_date.desc',
+        VideoDiscoverySort.releaseDate =>
+          kind == VideoMetadataMediaKind.movie
+              ? 'primary_release_date.desc'
+              : 'first_air_date.desc',
         VideoDiscoverySort.relevance ||
-        VideoDiscoverySort.popularity =>
-          'popularity.desc',
+        VideoDiscoverySort.popularity => 'popularity.desc',
       };
 
   VideoDiscoveryItem? _mapItem(
@@ -508,10 +502,10 @@ class AniListVideoDiscoveryProvider implements VideoDiscoveryProvider {
     VideoMetadataHttpClient? transport,
     this.endpoint = 'https://graphql.anilist.co',
     DateTime Function()? now,
-  })  : assert(client == null || transport == null),
-        _transport = transport ?? VideoMetadataHttpClient(client: client),
-        _ownsTransport = transport == null,
-        _now = now ?? DateTime.now;
+  }) : assert(client == null || transport == null),
+       _transport = transport ?? VideoMetadataHttpClient(client: client),
+       _ownsTransport = transport == null,
+       _now = now ?? DateTime.now;
 
   static const String _query = r'''
 query Discovery(
@@ -574,31 +568,27 @@ query Discovery(
 
   @override
   VideoDiscoveryCapabilities get capabilities => VideoDiscoveryCapabilities(
-        categories: const <VideoDiscoveryCategory>{
-          VideoDiscoveryCategory.anime,
-        },
-        feeds: const <VideoDiscoveryFeed>{
-          VideoDiscoveryFeed.popular,
-          VideoDiscoveryFeed.trending,
-          VideoDiscoveryFeed.nowPlaying,
-          VideoDiscoveryFeed.upcoming,
-          VideoDiscoveryFeed.airing,
-        },
-        supportsSearch: true,
-        supportsPaging: true,
-      );
+    categories: const <VideoDiscoveryCategory>{VideoDiscoveryCategory.anime},
+    feeds: const <VideoDiscoveryFeed>{
+      VideoDiscoveryFeed.popular,
+      VideoDiscoveryFeed.trending,
+      VideoDiscoveryFeed.nowPlaying,
+      VideoDiscoveryFeed.upcoming,
+      VideoDiscoveryFeed.airing,
+    },
+    supportsSearch: true,
+    supportsPaging: true,
+  );
 
   @override
   Future<ProviderBatchResult<VideoDiscoveryPage>> discover(
     VideoDiscoveryRequest request,
-  ) =>
-      _load(request, search: false);
+  ) => _load(request, search: false);
 
   @override
   Future<ProviderBatchResult<VideoDiscoveryPage>> search(
     VideoDiscoveryRequest request,
-  ) =>
-      _load(request, search: true);
+  ) => _load(request, search: true);
 
   Future<ProviderBatchResult<VideoDiscoveryPage>> _load(
     VideoDiscoveryRequest request, {
@@ -641,8 +631,10 @@ query Discovery(
     }
 
     final DateTime now = _now();
-    final ({String? season, int? year, String? status}) feed =
-        _feedFilters(request, now);
+    final ({String? season, int? year, String? status}) feed = _feedFilters(
+      request,
+      now,
+    );
     final Map<String, Object?> variables = <String, Object?>{
       'page': request.page,
       'perPage': request.pageSize.clamp(1, 50),
@@ -664,7 +656,8 @@ query Discovery(
         headers: const <String, String>{'Accept': 'application/json'},
         body: <String, Object?>{'query': _query, 'variables': variables},
         operation: 'AniList ${search ? 'search' : 'discover'}',
-        cacheKey: 'anilist:${search ? 'search' : 'discover'}:'
+        cacheKey:
+            'anilist:${search ? 'search' : 'discover'}:'
             '${request.category?.name}:${request.feed.name}:${request.query}:'
             '${request.page}:${request.pageSize}:${request.sort.name}:'
             '${request.year}:${request.genre}:${request.region}:'
@@ -676,9 +669,8 @@ query Discovery(
       if (metadataList(payload['errors']).isNotEmpty) {
         throw const FormatException('AniList returned a GraphQL error');
       }
-      final Map<String, Object?> page = metadataObject(
-            metadataObject(payload['data'])?['Page'],
-          ) ??
+      final Map<String, Object?> page =
+          metadataObject(metadataObject(payload['data'])?['Page']) ??
           const <String, Object?>{};
       final bool hasMore =
           metadataObject(page['pageInfo'])?['hasNextPage'] == true;
@@ -744,11 +736,11 @@ query Discovery(
   }
 
   String _season(int month) => switch (month) {
-        >= 1 && <= 3 => 'WINTER',
-        >= 4 && <= 6 => 'SPRING',
-        >= 7 && <= 9 => 'SUMMER',
-        _ => 'FALL',
-      };
+    >= 1 && <= 3 => 'WINTER',
+    >= 4 && <= 6 => 'SPRING',
+    >= 7 && <= 9 => 'SUMMER',
+    _ => 'FALL',
+  };
 
   VideoDiscoveryItem? _mapItem(Map<String, Object?> item) {
     final int? idValue = metadataInt(item['id']);
@@ -762,8 +754,8 @@ query Discovery(
     final String id = '$idValue';
     final VideoMetadataMediaKind kind =
         metadataString(item['format']) == 'MOVIE'
-            ? VideoMetadataMediaKind.movie
-            : VideoMetadataMediaKind.tv;
+        ? VideoMetadataMediaKind.movie
+        : VideoMetadataMediaKind.tv;
     final String? premiered = _date(item['startDate']);
     final Map<String, Object?> cover =
         metadataObject(item['coverImage']) ?? const <String, Object?>{};
@@ -889,12 +881,15 @@ void _sortTmdbSearchEntries(
 ) {
   entries.sort((_TmdbSearchEntry left, _TmdbSearchEntry right) {
     final int primary = switch (sort) {
-      VideoDiscoverySort.relevance =>
-        left.sourceOrder.compareTo(right.sourceOrder),
-      VideoDiscoverySort.popularity =>
-        (right.popularity ?? -1).compareTo(left.popularity ?? -1),
-      VideoDiscoverySort.rating =>
-        (right.item.score ?? -1).compareTo(left.item.score ?? -1),
+      VideoDiscoverySort.relevance => left.sourceOrder.compareTo(
+        right.sourceOrder,
+      ),
+      VideoDiscoverySort.popularity => (right.popularity ?? -1).compareTo(
+        left.popularity ?? -1,
+      ),
+      VideoDiscoverySort.rating => (right.item.score ?? -1).compareTo(
+        left.item.score ?? -1,
+      ),
       VideoDiscoverySort.releaseDate =>
         (right.item.releaseDate ?? '').compareTo(left.item.releaseDate ?? ''),
     };
@@ -917,8 +912,7 @@ class _DiscoveryCallResult {
   factory _DiscoveryCallResult.success(
     List<VideoDiscoveryItem> items, {
     required bool hasMore,
-  }) =>
-      _DiscoveryCallResult._(items: items, hasMore: hasMore);
+  }) => _DiscoveryCallResult._(items: items, hasMore: hasMore);
 
   factory _DiscoveryCallResult.failure(ExternalProviderFailure failure) =>
       _DiscoveryCallResult._(
@@ -1025,28 +1019,29 @@ String? _tmdbGenreId(String? genre) {
 }
 
 String? _anilistGenre(String? genre) => const <String, String>{
-      'action': 'Action',
-      'adventure': 'Adventure',
-      'comedy': 'Comedy',
-      'drama': 'Drama',
-      'ecchi': 'Ecchi',
-      'fantasy': 'Fantasy',
-      'horror': 'Horror',
-      'mahou shoujo': 'Mahou Shoujo',
-      'mecha': 'Mecha',
-      'music': 'Music',
-      'mystery': 'Mystery',
-      'psychological': 'Psychological',
-      'romance': 'Romance',
-      'science fiction': 'Sci-Fi',
-      'slice of life': 'Slice of Life',
-      'sports': 'Sports',
-      'supernatural': 'Supernatural',
-      'thriller': 'Thriller',
-    }[_canonicalGenre(genre)];
+  'action': 'Action',
+  'adventure': 'Adventure',
+  'comedy': 'Comedy',
+  'drama': 'Drama',
+  'ecchi': 'Ecchi',
+  'fantasy': 'Fantasy',
+  'horror': 'Horror',
+  'mahou shoujo': 'Mahou Shoujo',
+  'mecha': 'Mecha',
+  'music': 'Music',
+  'mystery': 'Mystery',
+  'psychological': 'Psychological',
+  'romance': 'Romance',
+  'science fiction': 'Sci-Fi',
+  'slice of life': 'Slice of Life',
+  'sports': 'Sports',
+  'supernatural': 'Supernatural',
+  'thriller': 'Thriller',
+}[_canonicalGenre(genre)];
 
 String _canonicalGenre(String? genre) {
-  final String normalized = genre
+  final String normalized =
+      genre
           ?.trim()
           .toLowerCase()
           .replaceAll(RegExp(r'[_-]+'), ' ')

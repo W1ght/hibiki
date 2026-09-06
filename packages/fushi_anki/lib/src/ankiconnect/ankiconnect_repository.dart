@@ -111,21 +111,21 @@ const int _isolateMediaThresholdBytes = 64 * 1024;
 /// AnkiConnect 上传路径：计算 sha256 文件名 + base64 数据。大媒体在后台 isolate 完成，
 /// 小媒体同步完成。返回记录 `(filename, base64Data)` 供 `storeMediaFile`。
 Future<({String filename, String base64Data})>
-    fushiAnkiMediaEncodeForUploadAsync({
+fushiAnkiMediaEncodeForUploadAsync({
   required String prefix,
   required List<int> bytes,
   required String sourceName,
   String fallbackExtension = 'bin',
 }) {
   ({String filename, String base64Data}) encode() => (
-        filename: fushiAnkiMediaFilenameForBytes(
-          prefix: prefix,
-          bytes: bytes,
-          sourceName: sourceName,
-          fallbackExtension: fallbackExtension,
-        ),
-        base64Data: base64Encode(bytes),
-      );
+    filename: fushiAnkiMediaFilenameForBytes(
+      prefix: prefix,
+      bytes: bytes,
+      sourceName: sourceName,
+      fallbackExtension: fallbackExtension,
+    ),
+    base64Data: base64Encode(bytes),
+  );
   if (bytes.length < _isolateMediaThresholdBytes) {
     return Future<({String filename, String base64Data})>.value(encode());
   }
@@ -141,11 +141,11 @@ Future<String> fushiAnkiMediaFilenameForBytesAsync({
   String fallbackExtension = 'bin',
 }) {
   String compute() => fushiAnkiMediaFilenameForBytes(
-        prefix: prefix,
-        bytes: bytes,
-        sourceName: sourceName,
-        fallbackExtension: fallbackExtension,
-      );
+    prefix: prefix,
+    bytes: bytes,
+    sourceName: sourceName,
+    fallbackExtension: fallbackExtension,
+  );
   if (bytes.length < _isolateMediaThresholdBytes) {
     return Future<String>.value(compute());
   }
@@ -186,9 +186,9 @@ String _mediaExtensionFromSource(
 
 String _safeMediaExtension(String extension, {required String fallback}) {
   final String safe = extension.toLowerCase().replaceAll(
-        RegExp(r'[^a-z0-9]'),
-        '',
-      );
+    RegExp(r'[^a-z0-9]'),
+    '',
+  );
   if (safe.isEmpty || safe.length > 12) return fallback;
   return safe;
 }
@@ -221,7 +221,8 @@ String _sha256Hex(List<int> bytes) {
   for (int chunk = 0; chunk < padded.length; chunk += 64) {
     for (int i = 0; i < 16; i++) {
       final int j = chunk + i * 4;
-      w[i] = ((padded[j] << 24) |
+      w[i] =
+          ((padded[j] << 24) |
               (padded[j + 1] << 16) |
               (padded[j + 2] << 8) |
               padded[j + 3]) &
@@ -391,8 +392,8 @@ class _MediaUploadCoordinator {
 /// peer. Files that existed before this attempt are never deletion candidates.
 class _MediaUploadTransaction {
   _MediaUploadTransaction(this.service)
-      : coordinator = _mediaUploadCoordinators[service] ??=
-            _MediaUploadCoordinator(service);
+    : coordinator = _mediaUploadCoordinators[service] ??=
+          _MediaUploadCoordinator(service);
 
   final AnkiConnectService service;
   final _MediaUploadCoordinator coordinator;
@@ -404,15 +405,14 @@ class _MediaUploadTransaction {
   Future<void> upload({
     required String filename,
     required Future<void> Function() write,
-  }) =>
-      _uploads[filename] ??= _upload(filename: filename, write: write);
+  }) => _uploads[filename] ??= _upload(filename: filename, write: write);
 
   Future<void> _upload({
     required String filename,
     required Future<void> Function() write,
   }) async {
-    final bool existedBefore = await (_existenceChecks[filename] ??=
-        service.mediaFileExists(filename));
+    final bool existedBefore = await (_existenceChecks[filename] ??= service
+        .mediaFileExists(filename));
     if (!existedBefore) {
       // Register before the write: a lost storeMediaFile response may still
       // mean Anki committed the file, so the failure path must try to remove it.
@@ -505,7 +505,7 @@ class _DedupPlan {
 
 class AnkiConnectRepository extends BaseAnkiRepository {
   AnkiConnectRepository({AnkiConnectService? service})
-      : _fixedService = service;
+    : _fixedService = service;
 
   final AnkiConnectService? _fixedService;
   AnkiConnectService? _cachedService;
@@ -662,7 +662,8 @@ class AnkiConnectRepository extends BaseAnkiRepository {
     final AnkiDeck? deck = resolveSelectedDeck(settings);
     if (deck == null) return const MineOutcome.notConfigured();
 
-    final noteType = settings.availableNoteTypes.firstWhereOrNull(
+    final noteType =
+        settings.availableNoteTypes.firstWhereOrNull(
           (t) => t.id == settings.selectedNoteTypeId,
         ) ??
         (settings.selectedNoteTypeName != null
@@ -727,8 +728,11 @@ class AnkiConnectRepository extends BaseAnkiRepository {
       // `noteType.fields` 的位置取值（`ankidroid/anki_repository.dart` 的 fieldArray），
       // 天然免疫；AnkiConnect 这条路把 map 原样丢给服务端，名字不认识就被静默丢弃。
       final Map<String, String> outgoing = fieldsForNoteType(noteType, fields);
-      final MineOutcome? rejected =
-          preflightNoteFields(noteType, fields, outgoing);
+      final MineOutcome? rejected = preflightNoteFields(
+        noteType,
+        fields,
+        outgoing,
+      );
       if (rejected != null) {
         await mediaTransaction.rollback();
         return rejected;
@@ -1004,7 +1008,8 @@ class AnkiConnectRepository extends BaseAnkiRepository {
       _duplicateCheckUnreachableUntil = null;
     }
     final settings = await loadSettings();
-    final deck = settings.availableDecks.firstWhereOrNull(
+    final deck =
+        settings.availableDecks.firstWhereOrNull(
           (d) => d.id == settings.selectedDeckId,
         ) ??
         (settings.selectedDeckName != null
@@ -1046,8 +1051,7 @@ class AnkiConnectRepository extends BaseAnkiRepository {
           fieldName: noteType.fields.first,
           fieldValue: expression,
           scope: settings.duplicateScope,
-        ))
-            .isNotEmpty;
+        )).isNotEmpty;
       }
       // 拿到应答即证明主机活着，立刻解除冷却（不必等窗口自然到期）。
       _duplicateCheckUnreachableUntil = null;
@@ -1078,7 +1082,8 @@ class AnkiConnectRepository extends BaseAnkiRepository {
     final settings = await loadSettings();
     if (settings.overwriteScope != AnkiOverwriteScope.all) return null;
     if (expression.isEmpty) return null;
-    final deck = settings.availableDecks.firstWhereOrNull(
+    final deck =
+        settings.availableDecks.firstWhereOrNull(
           (d) => d.id == settings.selectedDeckId,
         ) ??
         (settings.selectedDeckName != null
@@ -1119,7 +1124,8 @@ class AnkiConnectRepository extends BaseAnkiRepository {
   ) async {
     if (expression.isEmpty) return const <MinedNoteRef>[];
     final settings = await loadSettings();
-    final deck = settings.availableDecks.firstWhereOrNull(
+    final deck =
+        settings.availableDecks.firstWhereOrNull(
           (d) => d.id == settings.selectedDeckId,
         ) ??
         (settings.selectedDeckName != null
@@ -1188,8 +1194,9 @@ class AnkiConnectRepository extends BaseAnkiRepository {
     if (noteIds.isEmpty) return const <int>{};
     try {
       final service = await _getService();
-      final Map<int, Map<String, String>> infos =
-          await service.notesInfoMany(noteIds.toList()..sort());
+      final Map<int, Map<String, String>> infos = await service.notesInfoMany(
+        noteIds.toList()..sort(),
+      );
       return noteIds.where((int id) => !infos.containsKey(id)).toSet();
     } catch (e, stack) {
       debugPrint('AnkiConnectRepository.findDeletedNotes: $e');
@@ -1217,7 +1224,8 @@ class AnkiConnectRepository extends BaseAnkiRepository {
       final service = await _getService();
       final int? ankiPid = ankiConnectHostIsLoopback(service.host)
           ? AnkiDesktopForeground.grantForegroundToAnki(
-              ankiConnectPort: service.port)
+              ankiConnectPort: service.port,
+            )
           : null;
       await service.guiBrowse(noteId);
       await AnkiDesktopForeground.raiseAnkiWindow(ankiPid);
@@ -1254,7 +1262,8 @@ class AnkiConnectRepository extends BaseAnkiRepository {
     if (expression.isEmpty) return AnkiOpenWordOutcome.failed;
     try {
       final settings = await loadSettings();
-      final deck = settings.availableDecks.firstWhereOrNull(
+      final deck =
+          settings.availableDecks.firstWhereOrNull(
             (d) => d.id == settings.selectedDeckId,
           ) ??
           (settings.selectedDeckName != null
@@ -1281,7 +1290,8 @@ class AnkiConnectRepository extends BaseAnkiRepository {
       if (browseQuery.isEmpty) return AnkiOpenWordOutcome.noMatch;
       final int? ankiPid = ankiConnectHostIsLoopback(service.host)
           ? AnkiDesktopForeground.grantForegroundToAnki(
-              ankiConnectPort: service.port)
+              ankiConnectPort: service.port,
+            )
           : null;
       // 返回值**一概不读**：命中与否已经由上一步的 `findNotes` 定死，这里只是
       // 「打开」。旧版 AnkiConnect 的 `guiBrowse` 只回 null、新版回 card id 列表，
@@ -1597,9 +1607,9 @@ class AnkiConnectRepository extends BaseAnkiRepository {
     required Map<String, String> referencingMedia,
     required void Function() onSkipped,
   }) async {
-    final List<List<int>?> hits = await service.findNotesByQueries(
-      <String>[for (final _DedupCandidate c in chunk) '"${c.dupe}"'],
-    );
+    final List<List<int>?> hits = await service.findNotesByQueries(<String>[
+      for (final _DedupCandidate c in chunk) '"${c.dupe}"',
+    ]);
     // 整批涉及的全部笔记一次拉齐（同一条笔记被多个副本命中也只拉一次）。
     final Set<int> noteIds = <int>{for (final List<int>? ids in hits) ...?ids};
     final Map<int, Map<String, String>> noteFields = noteIds.isEmpty
@@ -1715,8 +1725,8 @@ class AnkiConnectRepository extends BaseAnkiRepository {
     }
 
     if (updates.isEmpty) return <int>{};
-    final List<AnkiConnectBatchResult> results =
-        await service.updateNoteFieldsMany(updates);
+    final List<AnkiConnectBatchResult> results = await service
+        .updateNoteFieldsMany(updates);
     final Set<int> written = <int>{};
     for (int i = 0; i < updates.length; i++) {
       // 写失败的笔记不算「已改写」。副本到底能不能删由随后的复核检索说了算
@@ -1900,9 +1910,11 @@ class AnkiConnectRepository extends BaseAnkiRepository {
     int processedDupes = 0;
     int bytesFreed = 0;
 
-    for (int start = 0;
-        start < candidates.length;
-        start += kAnkiMediaDedupBatchSize) {
+    for (
+      int start = 0;
+      start < candidates.length;
+      start += kAnkiMediaDedupBatchSize
+    ) {
       // 取消在**批边界**生效：一批要么完整处理、要么完全没动，绝不半截。
       // （旧实现是副本边界；批量化把粒度换成了速度，见
       // [kAnkiMediaDedupBatchSize] 的取舍说明。）
@@ -1999,10 +2011,10 @@ class AnkiConnectRepository extends BaseAnkiRepository {
           'bytes': plan.deletion.bytes,
         });
       }
-      final List<AnkiConnectBatchResult> deleteResults =
-          await service.deleteMediaFiles(
-        <String>[for (final _DedupPlan p in clean) p.candidate.dupe],
-      );
+      final List<AnkiConnectBatchResult> deleteResults = await service
+          .deleteMediaFiles(<String>[
+            for (final _DedupPlan p in clean) p.candidate.dupe,
+          ]);
       for (int i = 0; i < clean.length; i++) {
         // 批内单条失败只影响它自己：引用已经改指保留份，文件没删掉不会产生
         // 悬空引用，按「跳过」如实计数即可。

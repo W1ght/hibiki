@@ -166,8 +166,9 @@ void main() {
     });
 
     test('单字母 X 不被误认为罗马数字', () {
-      final ParsedMediaName p =
-          FilenameParser.parse('Hunter X Hunter - 01.mkv');
+      final ParsedMediaName p = FilenameParser.parse(
+        'Hunter X Hunter - 01.mkv',
+      );
       expect(p.title, 'Hunter X Hunter');
       expect(p.season, isNull);
       expect(p.episode, 1);
@@ -194,8 +195,9 @@ void main() {
     });
 
     test('第 3 季同理', () {
-      final ParsedMediaName p =
-          FilenameParser.parse('Hibike! Euphonium 3 - 05.mkv');
+      final ParsedMediaName p = FilenameParser.parse(
+        'Hibike! Euphonium 3 - 05.mkv',
+      );
       expect(p.title, 'Hibike! Euphonium');
       expect(p.season, 3);
       expect(p.episode, 5);
@@ -216,8 +218,9 @@ void main() {
     });
 
     test('标题自带 00（Gundam 00）不被当季号', () {
-      final ParsedMediaName p =
-          FilenameParser.parse('Mobile Suit Gundam 00 - 12.mkv');
+      final ParsedMediaName p = FilenameParser.parse(
+        'Mobile Suit Gundam 00 - 12.mkv',
+      );
       expect(p.title, 'Mobile Suit Gundam 00');
       expect(p.season, isNull);
       expect(p.episode, 12);
@@ -387,8 +390,9 @@ void main() {
 
   group('杂项边界', () {
     test('括号集数带 END 尾巴', () {
-      final ParsedMediaName p =
-          FilenameParser.parse('[组名] 石纪元 [24 END][1080p].mkv');
+      final ParsedMediaName p = FilenameParser.parse(
+        '[组名] 石纪元 [24 END][1080p].mkv',
+      );
       expect(p.title, '石纪元');
       expect(p.episode, 24);
     });
@@ -404,8 +408,9 @@ void main() {
     });
 
     test('Part 2 季度', () {
-      final ParsedMediaName p =
-          FilenameParser.parse('Spice and Wolf Part.2 - 01.mkv');
+      final ParsedMediaName p = FilenameParser.parse(
+        'Spice and Wolf Part.2 - 01.mkv',
+      );
       expect(p.title, 'Spice and Wolf');
       expect(p.season, 2);
       expect(p.episode, 1);

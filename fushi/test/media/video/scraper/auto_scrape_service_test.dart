@@ -45,12 +45,14 @@ void main() {
     required String videoPath,
     int? sourceId,
   }) async {
-    await db.upsertVideoBook(VideoBooksCompanion(
-      bookUid: Value<String>(bookUid),
-      title: Value<String>(bookUid),
-      videoPath: Value<String>(videoPath),
-      sourceId: Value<int?>(sourceId),
-    ));
+    await db.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: Value<String>(bookUid),
+        title: Value<String>(bookUid),
+        videoPath: Value<String>(videoPath),
+        sourceId: Value<int?>(sourceId),
+      ),
+    );
     return (await repo.getByBookUid(bookUid))!;
   }
 

@@ -35,17 +35,20 @@ void main() {
       expect(
         openNote.contains('Note.CONTENT_URI'),
         isFalse,
-        reason: 'the note content URI has no activity to VIEW it — '
+        reason:
+            'the note content URI has no activity to VIEW it — '
             'resolveActivity would always return null',
       );
     });
 
-    test('still guards with resolveActivity so old AnkiDroid degrades to false',
-        () {
-      expect(openNote.contains('resolveActivity'), isTrue);
-      expect(openNote.contains('return false'), isTrue);
-      expect(openNote.contains('startActivity'), isTrue);
-    });
+    test(
+      'still guards with resolveActivity so old AnkiDroid degrades to false',
+      () {
+        expect(openNote.contains('resolveActivity'), isTrue);
+        expect(openNote.contains('return false'), isTrue);
+        expect(openNote.contains('startActivity'), isTrue);
+      },
+    );
   });
 }
 

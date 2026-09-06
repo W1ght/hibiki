@@ -60,12 +60,12 @@ bool didCompleteDictionaryAutoUpdateBatch({
 /// [succeeded] 只在拿到非空 revision 时为 true。
 final class DictionaryRemoteIndexResult {
   const DictionaryRemoteIndexResult.success(String value)
-      : succeeded = true,
-        revision = value;
+    : succeeded = true,
+      revision = value;
 
   const DictionaryRemoteIndexResult.failure()
-      : succeeded = false,
-        revision = null;
+    : succeeded = false,
+      revision = null;
 
   final bool succeeded;
   final String? revision;
@@ -192,12 +192,11 @@ class DictionaryUpdateService {
 
   /// 兼容手动更新调用点的 nullable revision API。自动更新必须使用
   /// [fetchRemoteIndexResult]，否则无法区分“已是最新版”和“检查失败”。
-  static Future<String?> fetchRemoteIndex(
-    String indexUrl, {
-    Dio? dio,
-  }) async {
-    final DictionaryRemoteIndexResult result =
-        await fetchRemoteIndexResult(indexUrl, dio: dio);
+  static Future<String?> fetchRemoteIndex(String indexUrl, {Dio? dio}) async {
+    final DictionaryRemoteIndexResult result = await fetchRemoteIndexResult(
+      indexUrl,
+      dio: dio,
+    );
     return result.revision;
   }
 }

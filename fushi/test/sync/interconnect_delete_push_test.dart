@@ -52,8 +52,9 @@ Future<InterconnectSyncBackend> _buildClientBackend({
     FushiClientUrl(url: base, enabled: true),
   ]);
   await repo.setFushiClientToken(token);
-  final InterconnectSyncBackend backend =
-      InterconnectSyncBackend.withProbe((String u, String t) async => true);
+  final InterconnectSyncBackend backend = InterconnectSyncBackend.withProbe(
+    (String u, String t) async => true,
+  );
   await backend.restoreAuth(repo);
   await backend.authenticate(repo: repo);
   return backend;
@@ -63,20 +64,19 @@ SyncOrchestrator _orchestrator({
   required FushiDatabase db,
   required SyncBackend backend,
   required Directory tmp,
-}) =>
-    SyncOrchestrator(
-      db: db,
-      backend: backend,
-      dictionaryResourceRoot: tmp,
-      audioDatabaseRoot: tmp,
-      tempDir: tmp,
-      syncStats: false,
-      syncAudioBookPosition: false,
-      syncContent: false,
-      syncAudioBookFiles: false,
-      syncVideoFiles: false,
-      syncDictionary: false,
-    );
+}) => SyncOrchestrator(
+  db: db,
+  backend: backend,
+  dictionaryResourceRoot: tmp,
+  audioDatabaseRoot: tmp,
+  tempDir: tmp,
+  syncStats: false,
+  syncAudioBookPosition: false,
+  syncContent: false,
+  syncAudioBookFiles: false,
+  syncVideoFiles: false,
+  syncDictionary: false,
+);
 
 void main() {
   late Directory work;
@@ -123,11 +123,13 @@ void main() {
 
   test('client 删视频（syncEverywhere）推送到 host：库里没了，原始视频文件保留', () async {
     // host 库里有这个视频，videoPath 指向 host 用户自己的原片。
-    await hostDb.upsertVideoBook(VideoBooksCompanion.insert(
-      bookUid: 'video/mine',
-      title: 'Mine',
-      videoPath: hostOwnVideo.path,
-    ));
+    await hostDb.upsertVideoBook(
+      VideoBooksCompanion.insert(
+        bookUid: 'video/mine',
+        title: 'Mine',
+        videoPath: hostOwnVideo.path,
+      ),
+    );
 
     final FushiDatabase localDb = _memDb();
     addTearDown(localDb.close);
@@ -139,26 +141,36 @@ void main() {
       deletedAt,
     );
 
-    final InterconnectSyncBackend backend =
-        await _buildClientBackend(base: base, token: token);
+    final InterconnectSyncBackend backend = await _buildClientBackend(
+      base: base,
+      token: token,
+    );
     final SyncRunReport report = SyncRunReport();
-    await _orchestrator(db: localDb, backend: backend, tmp: work)
-        .syncDeletionTombstonesLiveForTest(report, backend);
+    await _orchestrator(
+      db: localDb,
+      backend: backend,
+      tmp: work,
+    ).syncDeletionTombstonesLiveForTest(report, backend);
 
     // host 库里这条真的没了。
     expect(await hostDb.allVideoBooks(), isEmpty);
     // 不变量 ①：host 用户自己的原片一个字节都没动。删的是库条目，不是用户的媒体文件。
-    expect(hostOwnVideo.existsSync(), isTrue,
-        reason: '远端删除绝不能删掉 host 用户自己导入的原始视频文件');
+    expect(
+      hostOwnVideo.existsSync(),
+      isTrue,
+      reason: '远端删除绝不能删掉 host 用户自己导入的原始视频文件',
+    );
     expect(hostOwnVideo.readAsBytesSync(), <int>[9, 9, 9, 9]);
     // 不变量 ③：host 写了自己的墓碑，第三台设备下轮同步照常收到确认提示。
-    final List<SyncDeletionTombstoneRow> hostTombs =
-        await hostDb.getSyncDeletionTombstones();
+    final List<SyncDeletionTombstoneRow> hostTombs = await hostDb
+        .getSyncDeletionTombstones();
     expect(
       hostTombs
-          .where((SyncDeletionTombstoneRow r) =>
-              r.mediaType == SyncTombstoneKind.video.dbValue &&
-              r.itemKey == 'video/mine')
+          .where(
+            (SyncDeletionTombstoneRow r) =>
+                r.mediaType == SyncTombstoneKind.video.dbValue &&
+                r.itemKey == 'video/mine',
+          )
           .length,
       1,
       reason: 'host 删除后必须记墓碑，否则删除传播在 host 这里断链',
@@ -166,11 +178,13 @@ void main() {
   });
 
   test('推送不碰 remotePublishedAt：云通道的账不被互联污染', () async {
-    await hostDb.upsertVideoBook(VideoBooksCompanion.insert(
-      bookUid: 'video/mine',
-      title: 'Mine',
-      videoPath: hostOwnVideo.path,
-    ));
+    await hostDb.upsertVideoBook(
+      VideoBooksCompanion.insert(
+        bookUid: 'video/mine',
+        title: 'Mine',
+        videoPath: hostOwnVideo.path,
+      ),
+    );
 
     final FushiDatabase localDb = _memDb();
     addTearDown(localDb.close);
@@ -180,18 +194,26 @@ void main() {
       DateTime.now().millisecondsSinceEpoch - 1000,
     );
 
-    final InterconnectSyncBackend backend =
-        await _buildClientBackend(base: base, token: token);
-    await _orchestrator(db: localDb, backend: backend, tmp: work)
-        .syncDeletionTombstonesLiveForTest(SyncRunReport(), backend);
+    final InterconnectSyncBackend backend = await _buildClientBackend(
+      base: base,
+      token: token,
+    );
+    await _orchestrator(
+      db: localDb,
+      backend: backend,
+      tmp: work,
+    ).syncDeletionTombstonesLiveForTest(SyncRunReport(), backend);
 
     // 不变量 ②：互联推送成功后，墓碑行的 remotePublishedAt 必须仍是 0。
     // 它一旦被标非 0，云通道 syncDeletionTombstones 的 `remotePublishedAt == 0` 过滤
     // 就会永远跳过这条 —— 只连云备份的第三台设备再也收不到这次删除。
-    final List<SyncDeletionTombstoneRow> local =
-        await localDb.getSyncDeletionTombstones();
-    expect(local.single.remotePublishedAt, 0,
-        reason: '互联推送与云发布必须各记各的账（推送基线走 preferences）');
+    final List<SyncDeletionTombstoneRow> local = await localDb
+        .getSyncDeletionTombstones();
+    expect(
+      local.single.remotePublishedAt,
+      0,
+      reason: '互联推送与云发布必须各记各的账（推送基线走 preferences）',
+    );
     // 互联自己的账：推送基线已推进（下轮不再重推这条）。
     expect(
       await SyncRepository(localDb).getDeletionTombstonesPushBaselineMs(),
@@ -200,11 +222,13 @@ void main() {
   });
 
   test('推送后基线推进：第二轮不再重复删（host 已空也不报错）', () async {
-    await hostDb.upsertVideoBook(VideoBooksCompanion.insert(
-      bookUid: 'video/mine',
-      title: 'Mine',
-      videoPath: hostOwnVideo.path,
-    ));
+    await hostDb.upsertVideoBook(
+      VideoBooksCompanion.insert(
+        bookUid: 'video/mine',
+        title: 'Mine',
+        videoPath: hostOwnVideo.path,
+      ),
+    );
     final FushiDatabase localDb = _memDb();
     addTearDown(localDb.close);
     await localDb.writeSyncDeletionTombstone(
@@ -212,27 +236,38 @@ void main() {
       'video/mine',
       DateTime.now().millisecondsSinceEpoch - 1000,
     );
-    final InterconnectSyncBackend backend =
-        await _buildClientBackend(base: base, token: token);
-    final SyncOrchestrator orch =
-        _orchestrator(db: localDb, backend: backend, tmp: work);
+    final InterconnectSyncBackend backend = await _buildClientBackend(
+      base: base,
+      token: token,
+    );
+    final SyncOrchestrator orch = _orchestrator(
+      db: localDb,
+      backend: backend,
+      tmp: work,
+    );
 
     await orch.syncDeletionTombstonesLiveForTest(SyncRunReport(), backend);
-    final int firstBaseline =
-        await SyncRepository(localDb).getDeletionTombstonesPushBaselineMs();
+    final int firstBaseline = await SyncRepository(
+      localDb,
+    ).getDeletionTombstonesPushBaselineMs();
     expect(firstBaseline, greaterThan(0));
 
     // host 这时又自己导入了同 uid 的视频（模拟「删后重加」）。第二轮推送必须**不**再删它
     // ——那条墓碑的 deletedAt 已在基线之下，不再是新闻。
-    await hostDb.upsertVideoBook(VideoBooksCompanion.insert(
-      bookUid: 'video/mine',
-      title: 'Mine Again',
-      videoPath: hostOwnVideo.path,
-    ));
+    await hostDb.upsertVideoBook(
+      VideoBooksCompanion.insert(
+        bookUid: 'video/mine',
+        title: 'Mine Again',
+        videoPath: hostOwnVideo.path,
+      ),
+    );
     final SyncRunReport second = SyncRunReport();
     await orch.syncDeletionTombstonesLiveForTest(second, backend);
-    expect((await hostDb.allVideoBooks()).length, 1,
-        reason: '基线之下的旧墓碑不该反复删掉 host 上重新加回来的条目');
+    expect(
+      (await hostDb.allVideoBooks()).length,
+      1,
+      reason: '基线之下的旧墓碑不该反复删掉 host 上重新加回来的条目',
+    );
   });
 
   test('收藏词/收藏句墓碑无互联删除通道：跳过且不阻塞基线推进', () async {
@@ -244,11 +279,16 @@ void main() {
       DateTime.now().millisecondsSinceEpoch - 1000,
     );
 
-    final InterconnectSyncBackend backend =
-        await _buildClientBackend(base: base, token: token);
+    final InterconnectSyncBackend backend = await _buildClientBackend(
+      base: base,
+      token: token,
+    );
     final SyncRunReport report = SyncRunReport();
-    await _orchestrator(db: localDb, backend: backend, tmp: work)
-        .syncDeletionTombstonesLiveForTest(report, backend);
+    await _orchestrator(
+      db: localDb,
+      backend: backend,
+      tmp: work,
+    ).syncDeletionTombstonesLiveForTest(report, backend);
 
     // 聚合通道按设计不传播删除，这里如实跳过：不报错，也不为一件永远做不成的事
     // 把基线永久卡住（那会让书/视频的删除每轮无谓重推）。
@@ -272,8 +312,10 @@ void main() {
     addTearDown(legacy.stop);
     final String legacyBase = 'http://127.0.0.1:${legacy.port}';
 
-    final InterconnectSyncBackend backend =
-        await _buildClientBackend(base: legacyBase, token: token);
+    final InterconnectSyncBackend backend = await _buildClientBackend(
+      base: legacyBase,
+      token: token,
+    );
 
     // client 侧能力探测：404 → false（而不是抛异常）。
     expect(await backend.deleteRemoteVideo('video/whatever'), isFalse);
@@ -286,13 +328,19 @@ void main() {
       DateTime.now().millisecondsSinceEpoch - 1000,
     );
     final SyncRunReport report = SyncRunReport();
-    await _orchestrator(db: localDb, backend: backend, tmp: work)
-        .syncDeletionTombstonesLiveForTest(report, backend);
+    await _orchestrator(
+      db: localDb,
+      backend: backend,
+      tmp: work,
+    ).syncDeletionTombstonesLiveForTest(report, backend);
 
     // 能力缺失如实记进 report（用户/日志可见），但不是暂时性故障，故不阻塞基线：
     // 否则书/有声书的删除会被一条永远推不成的视频删除拖着每轮重推。
-    expect(report.errors.any((String e) => e.contains('too old')), isTrue,
-        reason: '对端不支持必须留下可见记录，不能静默吞掉');
+    expect(
+      report.errors.any((String e) => e.contains('too old')),
+      isTrue,
+      reason: '对端不支持必须留下可见记录，不能静默吞掉',
+    );
     expect(
       await SyncRepository(localDb).getDeletionTombstonesPushBaselineMs(),
       greaterThan(0),

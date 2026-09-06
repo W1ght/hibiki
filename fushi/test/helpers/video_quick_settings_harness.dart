@@ -34,16 +34,18 @@ class VideoSheetHarness {
   final Directory _tmpDir;
 
   static Future<VideoSheetHarness> create() async {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     final PreferencesRepository prefsRepo = PreferencesRepository(db);
     await prefsRepo.loadFromDb();
-    final Directory tmpDir =
-        Directory.systemTemp.createTempSync('hibiki_video_sheet_');
+    final Directory tmpDir = Directory.systemTemp.createTempSync(
+      'hibiki_video_sheet_',
+    );
     final AppModel appModel = AppModel(testPlatformServices())
       ..wireDatabaseForTesting(db)
       ..wireLocalAudioForTesting(
-          prefsRepo: prefsRepo, databaseDirectory: tmpDir);
+        prefsRepo: prefsRepo,
+        databaseDirectory: tmpDir,
+      );
     return VideoSheetHarness._(db, appModel, tmpDir);
   }
 
@@ -65,9 +67,9 @@ class TestVideoHostState {
     VideoSubtitleStyle? subtitleStyle,
     VideoDanmakuStyle? danmakuStyle,
     VideoControlLayout? controlLayout,
-  })  : subtitleStyle = subtitleStyle ?? VideoSubtitleStyle.defaults,
-        danmakuStyle = danmakuStyle ?? VideoDanmakuStyle.defaults,
-        controlLayout = controlLayout ?? VideoControlLayout.currentChrome;
+  }) : subtitleStyle = subtitleStyle ?? VideoSubtitleStyle.defaults,
+       danmakuStyle = danmakuStyle ?? VideoDanmakuStyle.defaults,
+       controlLayout = controlLayout ?? VideoControlLayout.currentChrome;
 
   int delayMs;
   double speed;
@@ -89,7 +91,7 @@ VideoQuickSettingsHost buildTestVideoHost({
   void Function(double speed)? onSetSpeed,
   void Function(VideoSubtitleObscureMode mode)? onSetSubtitleObscureMode,
   void Function(VideoSubtitleObscureMode mode)?
-      onSetSecondarySubtitleObscureMode,
+  onSetSecondarySubtitleObscureMode,
   void Function(VideoSubtitleStyle style)? onSubtitleStylePreview,
   void Function(VideoSubtitleStyle style)? onSubtitleStyleCommit,
   void Function(bool value)? onRespectAssStyleChanged,
@@ -166,13 +168,14 @@ VideoQuickSettingsHost buildTestVideoHost({
     onApplyShaders: (List<String> enabledNames) async {
       await onApplyShaders?.call(enabledNames);
     },
-    onSelectShaderTier: (
-      VideoShaderTier tier,
-      bool highQuality,
-      List<String> enabledNames,
-    ) async {
-      onSelectShaderTier?.call(tier, highQuality);
-    },
+    onSelectShaderTier:
+        (
+          VideoShaderTier tier,
+          bool highQuality,
+          List<String> enabledNames,
+        ) async {
+          onSelectShaderTier?.call(tier, highQuality);
+        },
     onMpvShaderDirChanged: (String dir) async {
       onMpvShaderDirChanged?.call(dir);
     },

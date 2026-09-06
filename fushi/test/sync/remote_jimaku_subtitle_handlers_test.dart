@@ -51,17 +51,15 @@ void main() {
         <String, String>{'query': 'x'},
       );
       expect(
-        JimakuClient.buildEntrySearchParams(
-          <String, String>{'query': 'x'},
-          anime: false,
-        ),
+        JimakuClient.buildEntrySearchParams(<String, String>{
+          'query': 'x',
+        }, anime: false),
         <String, String>{'query': 'x', 'anime': 'false'},
       );
       expect(
-        JimakuClient.buildEntrySearchParams(
-          <String, String>{'anilist_id': '1'},
-          anime: true,
-        ),
+        JimakuClient.buildEntrySearchParams(<String, String>{
+          'anilist_id': '1',
+        }, anime: true),
         <String, String>{'anilist_id': '1', 'anime': 'true'},
       );
     });
@@ -82,7 +80,9 @@ void main() {
       final Map<String, dynamic> res = await buildJimakuSearchResponse(
         <String, dynamic>{},
         clientProvider: () => JimakuClient(
-            apiKey: 'k', client: jimakuMock(entriesByAnimeParam: {})),
+          apiKey: 'k',
+          client: jimakuMock(entriesByAnimeParam: {}),
+        ),
         rememberCandidate: (_, __) {},
       );
       expect(res['error'], 'missing-query');
@@ -176,18 +176,20 @@ void main() {
 
   group('buildJimakuFetchResponse', () {
     RemoteJimakuCandidate candidate() => RemoteJimakuCandidate(
-          entryId: 7,
-          entryName: '日剧タイトル',
-          fileName: 'ep01.ja.srt',
-          fileUrl: 'https://jimaku.cc/dl/download.srt',
-          language: 'ja',
-        );
+      entryId: 7,
+      entryName: '日剧タイトル',
+      fileName: 'ep01.ja.srt',
+      fileUrl: 'https://jimaku.cc/dl/download.srt',
+      language: 'ja',
+    );
 
     test('未知 handle → unknown-handle（缓存过期/app 重启后扩展重搜即可恢复）', () async {
       final Map<String, dynamic> res = await buildJimakuFetchResponse(
         <String, dynamic>{'handle': 'jimaku:1:gone.srt'},
         clientProvider: () => JimakuClient(
-            apiKey: 'k', client: jimakuMock(entriesByAnimeParam: {})),
+          apiKey: 'k',
+          client: jimakuMock(entriesByAnimeParam: {}),
+        ),
         resolveCandidate: (_) => null,
       );
       expect(res['ok'], isFalse);
@@ -198,7 +200,9 @@ void main() {
       final Map<String, dynamic> res = await buildJimakuFetchResponse(
         <String, dynamic>{'handle': 'jimaku:7:ep01.ja.srt'},
         clientProvider: () => JimakuClient(
-            apiKey: 'k', client: jimakuMock(entriesByAnimeParam: {})),
+          apiKey: 'k',
+          client: jimakuMock(entriesByAnimeParam: {}),
+        ),
         resolveCandidate: (_) => candidate(),
       );
       expect(res['ok'], isTrue);

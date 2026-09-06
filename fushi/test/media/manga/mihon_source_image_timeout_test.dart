@@ -35,17 +35,19 @@ void main() {
     expect(await reading, Uint8List.fromList(<int>[1, 2, 3]));
   });
 
-  test('source image still fails after a real interval without progress',
-      () async {
-    final StreamController<List<int>> controller =
-        StreamController<List<int>>();
-    addTearDown(controller.close);
-    final Future<Uint8List> reading = readMihonSourceImageBytes(
-      controller.stream,
-      idleTimeout: const Duration(milliseconds: 80),
-    );
-    controller.add(<int>[1]);
+  test(
+    'source image still fails after a real interval without progress',
+    () async {
+      final StreamController<List<int>> controller =
+          StreamController<List<int>>();
+      addTearDown(controller.close);
+      final Future<Uint8List> reading = readMihonSourceImageBytes(
+        controller.stream,
+        idleTimeout: const Duration(milliseconds: 80),
+      );
+      controller.add(<int>[1]);
 
-    await expectLater(reading, throwsA(isA<TimeoutException>()));
-  });
+      await expectLater(reading, throwsA(isA<TimeoutException>()));
+    },
+  );
 }

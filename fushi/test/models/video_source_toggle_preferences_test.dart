@@ -53,21 +53,23 @@ void main() {
     expect(kKnownPreferenceKeys, contains('video_resource_disabled_sources'));
   });
 
-  test('the Jimaku switch travels with the key across interconnected devices',
-      () {
-    // 只搬 key 不搬开关，子设备会拿到一把配好却处于关闭状态的 key。
-    expect(
-      InterconnectServiceConfigSnapshot.sharedPreferenceKeys,
-      containsAll(<String>['jimaku_api_key', 'jimaku_enabled']),
-    );
-    // 停用清单是设备本地口味，不跨设备携带。
-    expect(
-      InterconnectServiceConfigSnapshot.sharedPreferenceKeys,
-      isNot(contains('video_resource_disabled_sources')),
-    );
-    expect(
-      InterconnectServiceConfigSnapshot.sharedPreferenceKeys,
-      isNot(contains('discovery_disabled_sources')),
-    );
-  });
+  test(
+    'the Jimaku switch travels with the key across interconnected devices',
+    () {
+      // 只搬 key 不搬开关，子设备会拿到一把配好却处于关闭状态的 key。
+      expect(
+        InterconnectServiceConfigSnapshot.sharedPreferenceKeys,
+        containsAll(<String>['jimaku_api_key', 'jimaku_enabled']),
+      );
+      // 停用清单是设备本地口味，不跨设备携带。
+      expect(
+        InterconnectServiceConfigSnapshot.sharedPreferenceKeys,
+        isNot(contains('video_resource_disabled_sources')),
+      );
+      expect(
+        InterconnectServiceConfigSnapshot.sharedPreferenceKeys,
+        isNot(contains('discovery_disabled_sources')),
+      );
+    },
+  );
 }

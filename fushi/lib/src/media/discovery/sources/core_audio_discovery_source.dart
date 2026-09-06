@@ -365,9 +365,7 @@ class CoreAudioDiscoverySource extends MediaDiscoverySource {
     final CoreAudioCatalog catalog = await _catalog();
     if (request.path == null || request.path!.isEmpty) {
       return ProviderBatchResult<DiscoveryResultPage>.success(
-        <DiscoveryResultPage>[
-          _seriesPage(catalog.series, request),
-        ],
+        <DiscoveryResultPage>[_seriesPage(catalog.series, request)],
       );
     }
     final CoreAudioSeries? value = catalog.seriesByKey(request.path!);

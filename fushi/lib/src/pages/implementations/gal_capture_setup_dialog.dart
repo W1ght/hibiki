@@ -11,9 +11,8 @@ import 'package:fushi/src/sync/texthooker_service.dart';
 import 'package:fushi/src/utils/misc/desktop_audio_playback.dart';
 import 'package:fushi/utils.dart';
 
-typedef GalTextThreadSelector = Future<bool> Function(
-  TexthookerTextThread thread,
-);
+typedef GalTextThreadSelector =
+    Future<bool> Function(TexthookerTextThread thread);
 
 /// 本弹窗**被系统自动关闭**时的原因，作为路由返回值交给调用方。
 ///
@@ -95,8 +94,9 @@ class _GalCaptureSetupDialogState extends State<GalCaptureSetupDialog> {
       await DesktopAudioPlayback.stop();
       return;
     }
-    final GalTrackPreview? preview =
-        await widget.session.exportTrackPreview(track.sourcePtr);
+    final GalTrackPreview? preview = await widget.session.exportTrackPreview(
+      track.sourcePtr,
+    );
     if (!mounted || generation != _previewGeneration) return;
     if (preview == null) {
       FushiToast.show(msg: t.game_track_preview_failed);
@@ -301,8 +301,8 @@ class _GalCaptureSetupDialogState extends State<GalCaptureSetupDialog> {
     final String? format = state.audioFormat == null
         ? null
         : '${state.audioFormat!.sampleRate} Hz · '
-            '${state.audioFormat!.channels} ch · '
-            '${state.audioFormat!.bitsPerSample} bit';
+              '${state.audioFormat!.channels} ch · '
+              '${state.audioFormat!.bitsPerSample} bit';
     return FushiCard(
       padding: EdgeInsets.zero,
       child: Column(
@@ -327,8 +327,8 @@ class _GalCaptureSetupDialogState extends State<GalCaptureSetupDialog> {
                   Text(
                     t.game_audio_requires_thread,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: Theme.of(context).colorScheme.onSurfaceVariant,
-                        ),
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
+                    ),
                   ),
                   const SizedBox(height: 8),
                   GalAudioTracksPanel(

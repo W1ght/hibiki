@@ -62,10 +62,9 @@ class _CrashDumpPageState extends State<CrashDumpPage> {
   /// 分享单个 `.dmp`（系统分享面板）。
   Future<void> _shareDump(File dump) async {
     try {
-      await FushiShare.shareFiles(
-        <XFile>[XFile(dump.path, mimeType: 'application/octet-stream')],
-        subject: t.crash_dump_share_subject,
-      );
+      await FushiShare.shareFiles(<XFile>[
+        XFile(dump.path, mimeType: 'application/octet-stream'),
+      ], subject: t.crash_dump_share_subject);
     } catch (e) {
       debugPrint('[CrashDumpPage] share dump failed: $e');
     }
@@ -101,8 +100,11 @@ class _CrashDumpPageState extends State<CrashDumpPage> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Icon(Icons.privacy_tip_outlined,
-                      size: 20, color: cs.onSurfaceVariant),
+                  Icon(
+                    Icons.privacy_tip_outlined,
+                    size: 20,
+                    color: cs.onSurfaceVariant,
+                  ),
                   const Gap(4),
                   Expanded(
                     child: Text(

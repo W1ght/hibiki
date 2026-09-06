@@ -22,8 +22,8 @@ class VideoFolderGroupCoordinator {
   const VideoFolderGroupCoordinator({
     required FushiDatabase database,
     required VideoBookRepository repository,
-  })  : _database = database,
-        _repository = repository;
+  }) : _database = database,
+       _repository = repository;
 
   final FushiDatabase _database;
   final VideoBookRepository _repository;
@@ -47,12 +47,15 @@ class VideoFolderGroupCoordinator {
       uniquePaths.putIfAbsent(normalizeVideoPath(path), () => path);
     }
     final List<String> paths = uniquePaths.values.toList()
-      ..sort((String a, String b) =>
-          normalizeVideoPath(a).compareTo(normalizeVideoPath(b)));
+      ..sort(
+        (String a, String b) =>
+            normalizeVideoPath(a).compareTo(normalizeVideoPath(b)),
+      );
     if (paths.isEmpty) return _emptySummary;
 
-    final Set<String> createdPathKeys =
-        createdVideoPaths.map(normalizeVideoPath).toSet();
+    final Set<String> createdPathKeys = createdVideoPaths
+        .map(normalizeVideoPath)
+        .toSet();
     List<VideoBookRow> books = await _repository.listAll();
     Map<String, VideoBookRow> booksByPath = <String, VideoBookRow>{
       for (final VideoBookRow row in books)
@@ -83,8 +86,8 @@ class VideoFolderGroupCoordinator {
       for (final VideoBookRow row in books) row.bookUid: row,
     };
 
-    final List<MediaCollectionRow> collections =
-        await _database.getAllMediaCollections();
+    final List<MediaCollectionRow> collections = await _database
+        .getAllMediaCollections();
     final Map<int, List<MediaCollectionItemRow>> itemsByCollection =
         <int, List<MediaCollectionItemRow>>{};
     for (final MediaCollectionItemRow item
@@ -105,8 +108,9 @@ class VideoFolderGroupCoordinator {
       if (groupRows.isEmpty) continue;
 
       final String seriesKey = _seriesKey(group.series);
-      final Set<String> groupUids =
-          groupRows.map((VideoBookRow row) => row.bookUid).toSet();
+      final Set<String> groupUids = groupRows
+          .map((VideoBookRow row) => row.bookUid)
+          .toSet();
       final List<_CollectionCandidate> candidates = <_CollectionCandidate>[];
       for (final MediaCollectionRow collection in collections) {
         if (collection.collectionType != 'playlist') continue;
@@ -128,31 +132,32 @@ class VideoFolderGroupCoordinator {
           }
         }
         final bool exactName = _seriesKey(collection.name) == seriesKey;
-        final bool eligible = overlap > 0 ||
+        final bool eligible =
+            overlap > 0 ||
             sameSeriesMembers > 0 ||
             (exactName && (group.isPlaylist || sourceId != null));
         if (eligible) {
-          candidates.add(_CollectionCandidate(
-            collection: collection,
-            overlap: overlap,
-            sameSourceSeriesMembers: sameSourceSeriesMembers,
-            sameSeriesMembers: sameSeriesMembers,
-            exactName: exactName,
-          ));
+          candidates.add(
+            _CollectionCandidate(
+              collection: collection,
+              overlap: overlap,
+              sameSourceSeriesMembers: sameSourceSeriesMembers,
+              sameSeriesMembers: sameSeriesMembers,
+              exactName: exactName,
+            ),
+          );
         }
       }
       candidates.sort(_compareCandidates);
 
-      MediaCollectionRow? collection =
-          candidates.isEmpty ? null : candidates.first.collection;
+      MediaCollectionRow? collection = candidates.isEmpty
+          ? null
+          : candidates.first.collection;
       if (collection == null && !group.isPlaylist) continue;
       bool createdCollection = false;
       if (collection == null) {
-        final MediaCollectionRow? natural =
-            await _database.getMediaCollectionByNaturalKey(
-          group.series,
-          'playlist',
-        );
+        final MediaCollectionRow? natural = await _database
+            .getMediaCollectionByNaturalKey(group.series, 'playlist');
         if (natural != null) {
           collection = natural;
         } else {
@@ -185,8 +190,10 @@ class VideoFolderGroupCoordinator {
       List<MediaCollectionItemRow> current =
           itemsByCollection[collection.id] ?? <MediaCollectionItemRow>[];
       final Set<String> currentVideoUids = current
-          .where((MediaCollectionItemRow item) =>
-              item.mediaType == MediaKind.video.dbValue)
+          .where(
+            (MediaCollectionItemRow item) =>
+                item.mediaType == MediaKind.video.dbValue,
+          )
           .map((MediaCollectionItemRow item) => item.entryKey)
           .toSet();
       for (final VideoBookRow row in groupRows) {
@@ -202,17 +209,17 @@ class VideoFolderGroupCoordinator {
 
       current = await _database.getCollectionItems(collection.id);
       final List<MediaCollectionItemRow> currentVideos = current
-          .where((MediaCollectionItemRow item) =>
-              item.mediaType == MediaKind.video.dbValue)
+          .where(
+            (MediaCollectionItemRow item) =>
+                item.mediaType == MediaKind.video.dbValue,
+          )
           .toList();
       final List<MediaCollectionItemRow> orderedVideos =
-          List<MediaCollectionItemRow>.of(currentVideos)
-            ..sort((MediaCollectionItemRow a, MediaCollectionItemRow b) =>
-                _compareVideoMembers(a, b, booksByUid));
-      final bool orderChanged = !_sameMemberOrder(
-        currentVideos,
-        orderedVideos,
-      );
+          List<MediaCollectionItemRow>.of(currentVideos)..sort(
+            (MediaCollectionItemRow a, MediaCollectionItemRow b) =>
+                _compareVideoMembers(a, b, booksByUid),
+          );
+      final bool orderChanged = !_sameMemberOrder(currentVideos, orderedVideos);
       if (orderChanged) {
         await _database.reorderCollectionItemsAutomatically(
           collection.id,
@@ -223,8 +230,9 @@ class VideoFolderGroupCoordinator {
         );
         changed = true;
       }
-      itemsByCollection[collection.id] =
-          await _database.getCollectionItems(collection.id);
+      itemsByCollection[collection.id] = await _database.getCollectionItems(
+        collection.id,
+      );
       if (!createdCollection && changed) {
         updatedCollectionIds.add(collection.id);
       }
@@ -293,8 +301,9 @@ int _compareVideoMembers(
   if (result != 0) return result;
   result = aRow.title.toLowerCase().compareTo(bRow.title.toLowerCase());
   if (result != 0) return result;
-  result = normalizeVideoPath(aRow.videoPath)
-      .compareTo(normalizeVideoPath(bRow.videoPath));
+  result = normalizeVideoPath(
+    aRow.videoPath,
+  ).compareTo(normalizeVideoPath(bRow.videoPath));
   if (result != 0) return result;
   return a.entryKey.compareTo(b.entryKey);
 }

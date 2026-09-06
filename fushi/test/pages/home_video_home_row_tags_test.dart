@@ -37,8 +37,9 @@ void main() {
 
   late Directory pathProviderDir;
   setUpAll(() {
-    pathProviderDir =
-        Directory.systemTemp.createTempSync('fushi_home_row_tags_pp');
+    pathProviderDir = Directory.systemTemp.createTempSync(
+      'fushi_home_row_tags_pp',
+    );
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
       (MethodCall call) async => pathProviderDir.path,
@@ -87,27 +88,26 @@ void main() {
   Widget buildApp({
     VideoLibrarySection section = VideoLibrarySection.home,
     List<RemoteVideoInfo> remote = const <RemoteVideoInfo>[],
-  }) =>
-      ProviderScope(
-        overrides: <Override>[
-          platformServicesProvider.overrideWithValue(platformServices),
-          ankiRepositoryProvider.overrideWithValue(ankiRepository),
-          appProvider.overrideWith((ref) => appModel),
-        ],
-        child: TranslationProvider(
-          child: MaterialApp(
-            home: Scaffold(
-              body: HomeVideoPage(
-                repo: VideoBookRepository(db),
-                section: section,
-                remoteVideoClientLoader: remote.isEmpty
-                    ? null
-                    : () async => _ListFakeRemoteVideoClient(remote),
-              ),
-            ),
+  }) => ProviderScope(
+    overrides: <Override>[
+      platformServicesProvider.overrideWithValue(platformServices),
+      ankiRepositoryProvider.overrideWithValue(ankiRepository),
+      appProvider.overrideWith((ref) => appModel),
+    ],
+    child: TranslationProvider(
+      child: MaterialApp(
+        home: Scaffold(
+          body: HomeVideoPage(
+            repo: VideoBookRepository(db),
+            section: section,
+            remoteVideoClientLoader: remote.isEmpty
+                ? null
+                : () async => _ListFakeRemoteVideoClient(remote),
           ),
         ),
-      );
+      ),
+    ),
+  );
 
   Future<void> pumpHome(
     WidgetTester tester, {
@@ -123,18 +123,19 @@ void main() {
   }
 
   /// 有播放痕迹（未看完）→ 进「继续观看」行。
-  Future<void> seedInProgress(String uid, String title) =>
-      db.upsertVideoBook(VideoBooksCompanion(
-        bookUid: Value<String>(uid),
-        title: Value<String>(title),
-        videoPath: Value<String>('/abs/$title.mp4'),
-        lastPositionMs: const Value<int>(60000),
-      ));
+  Future<void> seedInProgress(String uid, String title) => db.upsertVideoBook(
+    VideoBooksCompanion(
+      bookUid: Value<String>(uid),
+      title: Value<String>(title),
+      videoPath: Value<String>('/abs/$title.mp4'),
+      lastPositionMs: const Value<int>(60000),
+    ),
+  );
 
   Finder tagTextIn(String cardKey, String tagName) => find.descendant(
-        of: find.byKey(ValueKey<String>(cardKey)),
-        matching: find.text(tagName),
-      );
+    of: find.byKey(ValueKey<String>(cardKey)),
+    matching: find.text(tagName),
+  );
 
   testWidgets('继续观看行的散卡显示该视频的标签', (WidgetTester tester) async {
     await seedInProgress('video/tagged', 'Tagged Show');
@@ -158,12 +159,14 @@ void main() {
 
   testWidgets('最近添加行的卡显示该视频的标签', (WidgetTester tester) async {
     final int nowMs = DateTime.now().millisecondsSinceEpoch;
-    await db.upsertVideoBook(VideoBooksCompanion(
-      bookUid: const Value<String>('video/fresh'),
-      title: const Value<String>('Fresh Show'),
-      videoPath: const Value<String>('/abs/fresh.mp4'),
-      importedAt: Value<int>(nowMs),
-    ));
+    await db.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: const Value<String>('video/fresh'),
+        title: const Value<String>('Fresh Show'),
+        videoPath: const Value<String>('/abs/fresh.mp4'),
+        importedAt: Value<int>(nowMs),
+      ),
+    );
     final int tagId = await db.createTag('Backlog', 0xFF4CAF50);
     await db.addTagToVideoBook('video/fresh', tagId);
 
@@ -177,8 +180,10 @@ void main() {
   });
 
   testWidgets('继续观看行的合集卡显示合集自己的标签', (WidgetTester tester) async {
-    final int cid =
-        await db.createMediaCollection('MyShow', collectionType: 'playlist');
+    final int cid = await db.createMediaCollection(
+      'MyShow',
+      collectionType: 'playlist',
+    );
     await seedInProgress('video/ep1', 'Ep1');
     await db.addToCollection(cid, MediaKind.video, 'video/ep1');
     final int tagId = await db.createTag('Airing', 0xFFFF9800);
@@ -197,21 +202,27 @@ void main() {
   // 出合集卡。上面三条只覆盖了继续观看的散卡/合集卡与最近添加的散卡，剩下两处
   // 合集卡当初就是这么漏掉的——补画时同样漏了一遍。按行 × 卡型逐格补齐。
   testWidgets('「下一集」行的合集卡显示合集自己的标签', (WidgetTester tester) async {
-    final int cid =
-        await db.createMediaCollection('NextShow', collectionType: 'playlist');
+    final int cid = await db.createMediaCollection(
+      'NextShow',
+      collectionType: 'playlist',
+    );
     // 「下一集」的判据是「最后实际播放的那集已看完，且序列里还有下一集」。
-    await db.upsertVideoBook(VideoBooksCompanion(
-      bookUid: const Value<String>('video/next-ep1'),
-      title: const Value<String>('NextShow Ep1'),
-      videoPath: const Value<String>('/abs/next-ep1.mp4'),
-      lastPositionMs: const Value<int>(60000),
-      completedAt: Value<DateTime>(DateTime.now()),
-    ));
-    await db.upsertVideoBook(VideoBooksCompanion(
-      bookUid: const Value<String>('video/next-ep2'),
-      title: const Value<String>('NextShow Ep2'),
-      videoPath: const Value<String>('/abs/next-ep2.mp4'),
-    ));
+    await db.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: const Value<String>('video/next-ep1'),
+        title: const Value<String>('NextShow Ep1'),
+        videoPath: const Value<String>('/abs/next-ep1.mp4'),
+        lastPositionMs: const Value<int>(60000),
+        completedAt: Value<DateTime>(DateTime.now()),
+      ),
+    );
+    await db.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: const Value<String>('video/next-ep2'),
+        title: const Value<String>('NextShow Ep2'),
+        videoPath: const Value<String>('/abs/next-ep2.mp4'),
+      ),
+    );
     await db.addToCollection(cid, MediaKind.video, 'video/next-ep1');
     await db.addToCollection(cid, MediaKind.video, 'video/next-ep2');
     final int tagId = await db.createTag('NextUp', 0xFF9C27B0);
@@ -228,14 +239,18 @@ void main() {
 
   testWidgets('「最近添加」行的合集卡显示合集自己的标签', (WidgetTester tester) async {
     final int nowMs = DateTime.now().millisecondsSinceEpoch;
-    final int cid = await db.createMediaCollection('FreshShow',
-        collectionType: 'playlist');
-    await db.upsertVideoBook(VideoBooksCompanion(
-      bookUid: const Value<String>('video/fresh-ep1'),
-      title: const Value<String>('FreshShow Ep1'),
-      videoPath: const Value<String>('/abs/fresh-ep1.mp4'),
-      importedAt: Value<int>(nowMs),
-    ));
+    final int cid = await db.createMediaCollection(
+      'FreshShow',
+      collectionType: 'playlist',
+    );
+    await db.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: const Value<String>('video/fresh-ep1'),
+        title: const Value<String>('FreshShow Ep1'),
+        videoPath: const Value<String>('/abs/fresh-ep1.mp4'),
+        importedAt: Value<int>(nowMs),
+      ),
+    );
     await db.addToCollection(cid, MediaKind.video, 'video/fresh-ep1');
     final int tagId = await db.createTag('JustAdded', 0xFF00BCD4);
     await db.addTagToCollection(cid, tagId);
@@ -271,8 +286,7 @@ void main() {
     );
   });
 
-  testWidgets('远端标签借本机同名标签的颜色，本机没有则走 chip 默认色',
-      (WidgetTester tester) async {
+  testWidgets('远端标签借本机同名标签的颜色，本机没有则走 chip 默认色', (WidgetTester tester) async {
     const int knownColor = 0xFF9C27B0;
     await db.createTag('Known', knownColor);
 
@@ -289,23 +303,28 @@ void main() {
       ],
     );
 
-    final FushiTagChip known = tester.widget<FushiTagChip>(find.ancestor(
-      of: find.text('Known'),
-      matching: find.byType(FushiTagChip),
-    ));
-    final FushiTagChip unknown = tester.widget<FushiTagChip>(find.ancestor(
-      of: find.text('Unknown'),
-      matching: find.byType(FushiTagChip),
-    ));
+    final FushiTagChip known = tester.widget<FushiTagChip>(
+      find.ancestor(
+        of: find.text('Known'),
+        matching: find.byType(FushiTagChip),
+      ),
+    );
+    final FushiTagChip unknown = tester.widget<FushiTagChip>(
+      find.ancestor(
+        of: find.text('Unknown'),
+        matching: find.byType(FushiTagChip),
+      ),
+    );
 
-    expect(known.color, const Color(knownColor),
-        reason: '本机有同名标签就借它的颜色，两端看同一条标签颜色才一致');
-    expect(unknown.color, isNull,
-        reason: 'host 只下发名字，本机没这条标签时不得凭空造颜色');
+    expect(
+      known.color,
+      const Color(knownColor),
+      reason: '本机有同名标签就借它的颜色，两端看同一条标签颜色才一致',
+    );
+    expect(unknown.color, isNull, reason: 'host 只下发名字，本机没这条标签时不得凭空造颜色');
   });
 
-  testWidgets('「全部视频」墙格里的远端占位卡也显示标签（与字幕角标并成一列）',
-      (WidgetTester tester) async {
+  testWidgets('「全部视频」墙格里的远端占位卡也显示标签（与字幕角标并成一列）', (WidgetTester tester) async {
     await pumpHome(
       tester,
       section: VideoLibrarySection.allVideos,
@@ -327,7 +346,8 @@ void main() {
     expect(
       find.descendant(
         of: find.byKey(
-            const ValueKey<String>('remote_video_card_video_remote-wall')),
+          const ValueKey<String>('remote_video_card_video_remote-wall'),
+        ),
         matching: find.byIcon(Icons.subtitles_outlined),
       ),
       findsOneWidget,
@@ -347,9 +367,10 @@ class _ListFakeRemoteVideoClient implements RemoteVideoClient {
   Future<List<RemoteVideoInfo>> listRemoteVideos() async => _videos;
 
   @override
-  Future<RemoteVideoStreamUrls> remoteVideoStreamUrls(String id,
-          {int episodeIndex = 0}) async =>
-      const RemoteVideoStreamUrls(streamUrl: 'http://x/stream');
+  Future<RemoteVideoStreamUrls> remoteVideoStreamUrls(
+    String id, {
+    int episodeIndex = 0,
+  }) async => const RemoteVideoStreamUrls(streamUrl: 'http://x/stream');
 
   @override
   Future<void> getRemoteVideoSubtitle(
@@ -371,8 +392,7 @@ class _ListFakeRemoteVideoClient implements RemoteVideoClient {
   Future<({int positionMs, int updatedAtMs})> remoteVideoPosition(
     String id, {
     int episodeIndex = 0,
-  }) async =>
-      (positionMs: 0, updatedAtMs: 0);
+  }) async => (positionMs: 0, updatedAtMs: 0);
 
   @override
   Future<void> putRemoteVideoPosition(

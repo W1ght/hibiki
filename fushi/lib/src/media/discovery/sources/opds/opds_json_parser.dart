@@ -77,23 +77,23 @@ OpdsFeed parseOpdsJsonFeed(String body, {required Uri baseUri}) {
 }
 
 List<OpdsEntry> _navigation(Object? raw, Uri baseUri) => <OpdsEntry>[
-      for (final Map<String, Object?> item in _mapList(raw))
-        if (_string(item['href']) case final String href)
-          if (_title(item['title']) ?? _title(_map(item['metadata'])?['title'])
-              case final String title)
-            OpdsNavigationEntry(
-              title: title,
-              href: _resolve(baseUri, href),
-              summary: _title(_map(item['metadata'])?['description']),
-              itemCount: _int(_map(item['metadata'])?['numberOfItems']),
-            ),
-    ];
+  for (final Map<String, Object?> item in _mapList(raw))
+    if (_string(item['href']) case final String href)
+      if (_title(item['title']) ?? _title(_map(item['metadata'])?['title'])
+          case final String title)
+        OpdsNavigationEntry(
+          title: title,
+          href: _resolve(baseUri, href),
+          summary: _title(_map(item['metadata'])?['description']),
+          itemCount: _int(_map(item['metadata'])?['numberOfItems']),
+        ),
+];
 
 List<OpdsEntry> _publications(Object? raw, Uri baseUri) => <OpdsEntry>[
-      for (final Map<String, Object?> item in _mapList(raw))
-        if (_publication(item, baseUri) case final OpdsPublicationEntry entry)
-          entry,
-    ];
+  for (final Map<String, Object?> item in _mapList(raw))
+    if (_publication(item, baseUri) case final OpdsPublicationEntry entry)
+      entry,
+];
 
 OpdsPublicationEntry? _publication(Map<String, Object?> raw, Uri baseUri) {
   final Map<String, Object?>? metadata = _map(raw['metadata']);
@@ -124,7 +124,8 @@ OpdsPublicationEntry? _publication(Map<String, Object?> raw, Uri baseUri) {
       OpdsAcquisitionLink(
         href: resolved,
         rel: rel,
-        fileType: OpdsFileType.fromMediaType(type) ??
+        fileType:
+            OpdsFileType.fromMediaType(type) ??
             OpdsFileType.fromPath(Uri.tryParse(resolved)?.path),
         // 2.0 的体积字段是 properties.encrypted 之外的 `length`（少见）
         // 或 metadata 里的 `numberOfPages`——后者不是字节数，别拿来冒充。
@@ -168,8 +169,9 @@ String _normalizeSearchTemplate(Uri baseUri, String href) {
   } else if (masked.contains('{&query}')) {
     masked = masked.replaceAll('{&query}', '&query=$token');
   } else {
-    masked =
-        masked.replaceAll('{searchTerms}', token).replaceAll('{query}', token);
+    masked = masked
+        .replaceAll('{searchTerms}', token)
+        .replaceAll('{query}', token);
   }
   final String resolved = _resolve(baseUri, masked);
   return resolved.replaceAll(token, '{searchTerms}');
@@ -194,10 +196,10 @@ String _resolve(Uri baseUri, String href) {
 // ── 防御性取值：真实服务端的字段形态比规范宽 ─────────────────────────────
 
 List<Map<String, Object?>> _mapList(Object? raw) => <Map<String, Object?>>[
-      if (raw is List)
-        for (final Object? item in raw)
-          if (item is Map<String, Object?>) item,
-    ];
+  if (raw is List)
+    for (final Object? item in raw)
+      if (item is Map<String, Object?>) item,
+];
 
 Map<String, Object?>? _map(Object? raw) =>
     raw is Map<String, Object?> ? raw : null;

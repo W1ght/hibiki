@@ -33,34 +33,43 @@ void main() {
       }
     }
     for (final List<SettingsItem> items in grouped.values) {
-      items.sort((SettingsItem a, SettingsItem b) =>
-          a.reader!.order.compareTo(b.reader!.order));
+      items.sort(
+        (SettingsItem a, SettingsItem b) =>
+            a.reader!.order.compareTo(b.reader!.order),
+      );
     }
     return grouped;
   }
 
-  Map<ReaderGroup, List<SettingsItem>> collected() => collectFrom(
-        <SettingsDestination>[
-          buildReadingDestination(),
-          buildListeningDestination(),
-        ],
-      );
+  Map<ReaderGroup, List<SettingsItem>> collected() =>
+      collectFrom(<SettingsDestination>[
+        buildReadingDestination(),
+        buildListeningDestination(),
+      ]);
 
   test('view_mode（翻页/滚动）归 layout 组且为该组首项（TODO-725）', () {
     final Map<ReaderGroup, List<SettingsItem>> grouped = collected();
     final List<SettingsItem> layout = grouped[ReaderGroup.layout]!;
-    final List<String> layoutIds =
-        layout.map((SettingsItem i) => i.id).toList();
-    expect(layoutIds, contains('reading_display.view_mode'),
-        reason: '翻页/滚动必须出现在「布局与显示」组');
-    expect(layoutIds.first, 'reading_display.view_mode',
-        reason: 'view_mode 是 layout 组排序后的首项（order 0）');
+    final List<String> layoutIds = layout
+        .map((SettingsItem i) => i.id)
+        .toList();
+    expect(
+      layoutIds,
+      contains('reading_display.view_mode'),
+      reason: '翻页/滚动必须出现在「布局与显示」组',
+    );
+    expect(
+      layoutIds.first,
+      'reading_display.view_mode',
+      reason: 'view_mode 是 layout 组排序后的首项（order 0）',
+    );
   });
 
   test('字号/行高/缩进归 layout 组、appearance 组无 schema 项（TODO-774）', () {
     final Map<ReaderGroup, List<SettingsItem>> grouped = collected();
-    final List<String> layoutIds =
-        grouped[ReaderGroup.layout]!.map((SettingsItem i) => i.id).toList();
+    final List<String> layoutIds = grouped[ReaderGroup.layout]!
+        .map((SettingsItem i) => i.id)
+        .toList();
     for (final String id in <String>[
       'reading_display.font_size',
       'reading_display.line_height',
@@ -83,17 +92,19 @@ void main() {
     final List<int> orders = grouped[ReaderGroup.layout]!
         .map((SettingsItem i) => i.reader!.order)
         .toList();
-    final Set<int> expected = <int>{
-      for (int i = 0; i < orders.length; i++) i,
-    };
-    expect(orders.toSet(), expected,
-        reason: 'layout 组 order 必须是连续无洞的 {0..${orders.length - 1}}：$orders');
+    final Set<int> expected = <int>{for (int i = 0; i < orders.length; i++) i};
+    expect(
+      orders.toSet(),
+      expected,
+      reason: 'layout 组 order 必须是连续无洞的 {0..${orders.length - 1}}：$orders',
+    );
   });
 
   test('手势类设置仍留在 behavior（阅读操作）组（TODO-725）', () {
     final Map<ReaderGroup, List<SettingsItem>> grouped = collected();
-    final Set<String> behaviorIds =
-        grouped[ReaderGroup.behavior]!.map((SettingsItem i) => i.id).toSet();
+    final Set<String> behaviorIds = grouped[ReaderGroup.behavior]!
+        .map((SettingsItem i) => i.id)
+        .toSet();
     for (final String id in <String>[
       'reading_controls.wheel_page_turn_interval',
       'reading_controls.swipe_page_turn_sensitivity',
@@ -101,8 +112,11 @@ void main() {
       'reading_controls.invert_swipe_direction',
       'reading_controls.volume_page_turning',
     ]) {
-      expect(behaviorIds, contains(id),
-          reason: '$id 是阅读操作（behavior），不应被移到 layout');
+      expect(
+        behaviorIds,
+        contains(id),
+        reason: '$id 是阅读操作（behavior），不应被移到 layout',
+      );
     }
   });
 
@@ -113,11 +127,15 @@ void main() {
       ReaderGroup.behavior,
     ]) {
       final List<SettingsItem> items = grouped[group]!;
-      final List<int> orders =
-          items.map((SettingsItem i) => i.reader!.order).toList();
+      final List<int> orders = items
+          .map((SettingsItem i) => i.reader!.order)
+          .toList();
       final Set<int> unique = orders.toSet();
-      expect(unique.length, orders.length,
-          reason: '$group 组 order 不得撞号：$orders');
+      expect(
+        unique.length,
+        orders.length,
+        reason: '$group 组 order 不得撞号：$orders',
+      );
       final List<int> sorted = List<int>.of(orders)..sort();
       expect(orders, sorted, reason: '$group 组应已按 order 升序');
     }

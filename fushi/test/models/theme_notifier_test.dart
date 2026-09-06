@@ -15,14 +15,12 @@ import 'package:fushi/src/utils/components/fushi_design_tokens.dart';
 import 'package:fushi/src/utils/adaptive/adaptive_platform.dart';
 
 FushiDatabase _testDb() {
-  return FushiDatabase.forTesting(
-    DatabaseConnection(NativeDatabase.memory()),
-  );
+  return FushiDatabase.forTesting(DatabaseConnection(NativeDatabase.memory()));
 }
 
 class _DesignSystemMigrationRaceDatabase extends FushiDatabase {
   _DesignSystemMigrationRaceDatabase()
-      : super.forTesting(DatabaseConnection(NativeDatabase.memory()));
+    : super.forTesting(DatabaseConnection(NativeDatabase.memory()));
 
   final Completer<void> migrationReloadReadCaptured = Completer<void>();
   final Completer<void> releaseMigrationReloadRead = Completer<void>();
@@ -79,32 +77,42 @@ void main() {
       expect(ThemeNotifier.themePresets.containsKey('dark-theme'), true);
     });
 
-    test('TODO-1347: eyecare-theme is a built-in light preset with a label',
-        () {
-      // 护眼主题必须存在于默认主题列表、是浅色（低蓝光暖色调），且有本地化名字
-      // （themeLabel 命中而非回退成裸 key）。删掉 preset 或漏配 label 本用例即红。
-      final preset = ThemeNotifier.themePresets['eyecare-theme'];
-      expect(preset, isNotNull, reason: '护眼主题不在默认主题列表里');
-      expect(preset!.brightness, Brightness.light, reason: '护眼主题应是浅色（豆沙绿柔和底）');
-      final String label = ThemeNotifier.themeLabel('eyecare-theme');
-      expect(label, isNotEmpty);
-      expect(label, isNot('eyecare-theme'),
-          reason: 'themeLabel 未命中 = 漏配 _themeLabelKeys / i18n key');
-    });
+    test(
+      'TODO-1347: eyecare-theme is a built-in light preset with a label',
+      () {
+        // 护眼主题必须存在于默认主题列表、是浅色（低蓝光暖色调），且有本地化名字
+        // （themeLabel 命中而非回退成裸 key）。删掉 preset 或漏配 label 本用例即红。
+        final preset = ThemeNotifier.themePresets['eyecare-theme'];
+        expect(preset, isNotNull, reason: '护眼主题不在默认主题列表里');
+        expect(
+          preset!.brightness,
+          Brightness.light,
+          reason: '护眼主题应是浅色（豆沙绿柔和底）',
+        );
+        final String label = ThemeNotifier.themeLabel('eyecare-theme');
+        expect(label, isNotEmpty);
+        expect(
+          label,
+          isNot('eyecare-theme'),
+          reason: 'themeLabel 未命中 = 漏配 _themeLabelKeys / i18n key',
+        );
+      },
+    );
 
     test(
-        'TODO-1347: reader availableThemes stays in sync with app themePresets',
-        () {
-      // 阅读器主题选择器（TtuReaderSettings.availableThemes）与应用主题预设
-      // （themePresets）是同一 app_theme_key 的两个并行列表；两者必须逐一对齐，
-      // 否则新增/删除主题时其一漂移（护眼主题只在一个列表出现）。
-      expect(
-        TtuReaderSettings.availableThemes.toSet(),
-        ThemeNotifier.themePresets.keys.toSet(),
-        reason: '阅读器主题列表与应用主题预设集合不一致',
-      );
-      expect(TtuReaderSettings.availableThemes, contains('eyecare-theme'));
-    });
+      'TODO-1347: reader availableThemes stays in sync with app themePresets',
+      () {
+        // 阅读器主题选择器（TtuReaderSettings.availableThemes）与应用主题预设
+        // （themePresets）是同一 app_theme_key 的两个并行列表；两者必须逐一对齐，
+        // 否则新增/删除主题时其一漂移（护眼主题只在一个列表出现）。
+        expect(
+          TtuReaderSettings.availableThemes.toSet(),
+          ThemeNotifier.themePresets.keys.toSet(),
+          reason: '阅读器主题列表与应用主题预设集合不一致',
+        );
+        expect(TtuReaderSettings.availableThemes, contains('eyecare-theme'));
+      },
+    );
 
     test('themeLabel returns localized labels for known keys', () {
       final label = ThemeNotifier.themeLabel('light-theme');
@@ -151,19 +159,21 @@ void main() {
       return notifier.buildColorScheme(Brightness.dark);
     }
 
-    test('gray / dark / black applied schemes have distinct primary + surface',
-        () async {
-      final ColorScheme gray = await appliedScheme('gray-theme');
-      final ColorScheme dark = await appliedScheme('dark-theme');
-      final ColorScheme black = await appliedScheme('black-theme');
+    test(
+      'gray / dark / black applied schemes have distinct primary + surface',
+      () async {
+        final ColorScheme gray = await appliedScheme('gray-theme');
+        final ColorScheme dark = await appliedScheme('dark-theme');
+        final ColorScheme black = await appliedScheme('black-theme');
 
-      expect(gray.primary, isNot(dark.primary));
-      expect(dark.primary, isNot(black.primary));
-      expect(gray.primary, isNot(black.primary));
+        expect(gray.primary, isNot(dark.primary));
+        expect(dark.primary, isNot(black.primary));
+        expect(gray.primary, isNot(black.primary));
 
-      expect(gray.surface, isNot(black.surface));
-      expect(dark.surface, isNot(black.surface));
-    });
+        expect(gray.surface, isNot(black.surface));
+        expect(dark.surface, isNot(black.surface));
+      },
+    );
   });
 
   group('ThemeNotifier defaults', () {
@@ -201,17 +211,16 @@ void main() {
     // **吞掉**最右一列操作按钮的点击（字幕面板的星标）。两个亮度必须同粗细。
     test('GUARD: scrollbar thickness is pinned and identical in both '
         'brightnesses (BUG-1997)', () {
-      final double? light =
-          notifier.theme.scrollbarTheme.thickness?.resolve(<WidgetState>{});
-      final double? dark =
-          notifier.darkTheme.scrollbarTheme.thickness?.resolve(<WidgetState>{});
+      final double? light = notifier.theme.scrollbarTheme.thickness?.resolve(
+        <WidgetState>{},
+      );
+      final double? dark = notifier.darkTheme.scrollbarTheme.thickness?.resolve(
+        <WidgetState>{},
+      );
 
-      expect(light, isNotNull,
-          reason: 'null 会退回 Material 默认 8px 的覆盖式滚动条');
-      expect(dark, isNotNull,
-          reason: 'null 会退回 Material 默认 8px 的覆盖式滚动条');
-      expect(dark, light,
-          reason: '深浅两套主题的滚动条粗细必须一致，否则布局 gutter 只在一种主题下够用');
+      expect(light, isNotNull, reason: 'null 会退回 Material 默认 8px 的覆盖式滚动条');
+      expect(dark, isNotNull, reason: 'null 会退回 Material 默认 8px 的覆盖式滚动条');
+      expect(dark, light, reason: '深浅两套主题的滚动条粗细必须一致，否则布局 gutter 只在一种主题下够用');
       expect(light, kFushiScrollbarThickness);
     });
 
@@ -271,8 +280,7 @@ void main() {
       expect(notifyCount, 1);
     });
 
-    test(
-        'setAppUiScale persists a concrete value, clamps to 30-300 percent, '
+    test('setAppUiScale persists a concrete value, clamps to 30-300 percent, '
         'and notifies', () async {
       int notifyCount = 0;
       notifier.addListener(() => notifyCount++);
@@ -291,44 +299,47 @@ void main() {
     });
 
     test(
-        'TODO-374: first launch seeds a suitable concrete scale and persists it',
-        () async {
-      // 首启：无任何持久值。第一次按真实视口解析时把合适值落盘成具体百分比。
-      final double seeded = notifier.resolveAppUiScaleForViewport(
-        viewport: const Size(1920, 1080),
-        platform: TargetPlatform.windows,
-      );
-      expect(seeded, greaterThan(1.0), reason: '大屏的合适值应放大');
-      // 同帧 appUiScale 立刻返回种子值（内存已写）。
-      expect(notifier.appUiScale, seeded);
+      'TODO-374: first launch seeds a suitable concrete scale and persists it',
+      () async {
+        // 首启：无任何持久值。第一次按真实视口解析时把合适值落盘成具体百分比。
+        final double seeded = notifier.resolveAppUiScaleForViewport(
+          viewport: const Size(1920, 1080),
+          platform: TargetPlatform.windows,
+        );
+        expect(seeded, greaterThan(1.0), reason: '大屏的合适值应放大');
+        // 同帧 appUiScale 立刻返回种子值（内存已写）。
+        expect(notifier.appUiScale, seeded);
 
-      // 落盘后重载也是同一具体值，不再随视口变化（已是用户可调的具体数值）。
-      await Future<void>.delayed(Duration.zero);
-      final ThemeNotifier reloaded = ThemeNotifier(db, textThemeBuilder);
-      addTearDown(reloaded.dispose);
-      await reloaded.refreshFromDb();
-      expect(reloaded.customAppUiScale, seeded);
+        // 落盘后重载也是同一具体值，不再随视口变化（已是用户可调的具体数值）。
+        await Future<void>.delayed(Duration.zero);
+        final ThemeNotifier reloaded = ThemeNotifier(db, textThemeBuilder);
+        addTearDown(reloaded.dispose);
+        await reloaded.refreshFromDb();
+        expect(reloaded.customAppUiScale, seeded);
 
-      final double afterResize = reloaded.resolveAppUiScaleForViewport(
-        viewport: const Size(800, 600),
-        platform: TargetPlatform.windows,
-      );
-      expect(afterResize, seeded, reason: '种子后界面大小是固定具体值，不随窗口大小自动改变');
-    });
+        final double afterResize = reloaded.resolveAppUiScaleForViewport(
+          viewport: const Size(800, 600),
+          platform: TargetPlatform.windows,
+        );
+        expect(afterResize, seeded, reason: '种子后界面大小是固定具体值，不随窗口大小自动改变');
+      },
+    );
 
-    test('TODO-374: an explicit user value is never overwritten by reseed',
-        () async {
-      await notifier.setAppUiScale(1.7);
-      expect(notifier.appUiScale, 1.7);
+    test(
+      'TODO-374: an explicit user value is never overwritten by reseed',
+      () async {
+        await notifier.setAppUiScale(1.7);
+        expect(notifier.appUiScale, 1.7);
 
-      final double resolved = notifier.resolveAppUiScaleForViewport(
-        viewport: const Size(800, 600),
-        platform: TargetPlatform.windows,
-      );
-      expect(resolved, 1.7, reason: '已有具体值的用户不被重新种子覆盖');
-      expect(notifier.autoAppUiScale, lessThan(1.0));
-      expect(notifier.customAppUiScale, 1.7);
-    });
+        final double resolved = notifier.resolveAppUiScaleForViewport(
+          viewport: const Size(800, 600),
+          platform: TargetPlatform.windows,
+        );
+        expect(resolved, 1.7, reason: '已有具体值的用户不被重新种子覆盖');
+        expect(notifier.autoAppUiScale, lessThan(1.0));
+        expect(notifier.customAppUiScale, 1.7);
+      },
+    );
 
     test('setCustomThemeSeed persists color', () async {
       await notifier.setCustomThemeSeed(const Color(0xFFFF0000));
@@ -476,18 +487,20 @@ void main() {
 
   group('ThemeNotifier.designSystemTheme reflects design_system pref', () {
     for (final String value in <String>['cupertino', 'macos', 'fluent']) {
-      test('hidden design_system=$value snapshot is immediately auto',
-          () async {
-        await db.setPref('design_system', PrefCodec.encode(value));
-        notifier.loadFromPrefsSnapshot(<String, String>{
-          'design_system': PrefCodec.encode(value),
-        });
+      test(
+        'hidden design_system=$value snapshot is immediately auto',
+        () async {
+          await db.setPref('design_system', PrefCodec.encode(value));
+          notifier.loadFromPrefsSnapshot(<String, String>{
+            'design_system': PrefCodec.encode(value),
+          });
 
-        expect(notifier.designSystem, 'auto');
-        expect(notifier.designSystemTheme, FushiDesignSystem.auto);
-        final Map<String, String> prefs = await db.getAllPrefs();
-        expect(PrefCodec.decode(prefs['design_system']!, ''), 'auto');
-      });
+          expect(notifier.designSystem, 'auto');
+          expect(notifier.designSystemTheme, FushiDesignSystem.auto);
+          final Map<String, String> prefs = await db.getAllPrefs();
+          expect(PrefCodec.decode(prefs['design_system']!, ''), 'auto');
+        },
+      );
 
       test('hidden design_system=$value refresh persists auto', () async {
         await db.setPref('design_system', PrefCodec.encode(value));
@@ -535,17 +548,18 @@ void main() {
       expect(notifier.designSystemTheme, FushiDesignSystem.auto);
     });
 
-    test('setDesignSystem rejects hidden values by normalizing to auto',
-        () async {
-      await notifier.setDesignSystem('macos');
-
-      expect(notifier.designSystem, 'auto');
-      final Map<String, String> prefs = await db.getAllPrefs();
-      expect(PrefCodec.decode(prefs['design_system']!, ''), 'auto');
-    });
-
     test(
-        'stale hidden snapshot does not overwrite a newer material write and '
+      'setDesignSystem rejects hidden values by normalizing to auto',
+      () async {
+        await notifier.setDesignSystem('macos');
+
+        expect(notifier.designSystem, 'auto');
+        final Map<String, String> prefs = await db.getAllPrefs();
+        expect(PrefCodec.decode(prefs['design_system']!, ''), 'auto');
+      },
+    );
+
+    test('stale hidden snapshot does not overwrite a newer material write and '
         'reloads notifier memory', () async {
       final String hiddenRaw = PrefCodec.encode('macos');
       final String materialRaw = PrefCodec.encode('material');
@@ -554,8 +568,9 @@ void main() {
 
       // 模拟另一进程在本进程拿到旧 snapshot 后已选择 material。
       await db.setPref('design_system', materialRaw);
-      final String versionBeforeMigration =
-          (await db.getPref(FushiDatabase.prefsVersionKey))!;
+      final String versionBeforeMigration = (await db.getPref(
+        FushiDatabase.prefsVersionKey,
+      ))!;
       int notifyCount = 0;
       notifier.addListener(() => notifyCount++);
 
@@ -572,13 +587,14 @@ void main() {
       expect(notifyCount, 1, reason: '异步重读 material 后必须驱动已挂载界面重建');
     });
 
-    test(
-        'migration reload cannot overwrite a design system setter that starts '
+    test('migration reload cannot overwrite a design system setter that starts '
         'while its database read is suspended', () async {
       final _DesignSystemMigrationRaceDatabase raceDb =
           _DesignSystemMigrationRaceDatabase();
-      final ThemeNotifier raceNotifier =
-          ThemeNotifier(raceDb, textThemeBuilder);
+      final ThemeNotifier raceNotifier = ThemeNotifier(
+        raceDb,
+        textThemeBuilder,
+      );
       Future<void>? setterFuture;
 
       try {
@@ -606,8 +622,10 @@ void main() {
         await setterFuture;
         await pumpEventQueue(times: 10);
 
-        expect(await raceDb.getPref('design_system'),
-            PrefCodec.encode('material'));
+        expect(
+          await raceDb.getPref('design_system'),
+          PrefCodec.encode('material'),
+        );
         expect(
           raceNotifier.designSystem,
           'material',
@@ -629,14 +647,14 @@ void main() {
       }
     });
 
-    test(
-        'two database connections keep a newer material write after the stale '
+    test('two database connections keep a newer material write after the stale '
         'snapshot barrier is released', () async {
       final bool previousWarningSetting =
           driftRuntimeOptions.dontWarnAboutMultipleDatabases;
       driftRuntimeOptions.dontWarnAboutMultipleDatabases = true;
-      final Directory tempDirectory =
-          await Directory.systemTemp.createTemp('hibiki-design-cas-');
+      final Directory tempDirectory = await Directory.systemTemp.createTemp(
+        'hibiki-design-cas-',
+      );
       final File databaseFile = File(
         '${tempDirectory.path}${Platform.pathSeparator}preferences.sqlite',
       );
@@ -646,8 +664,10 @@ void main() {
       final FushiDatabase processBDb = FushiDatabase.forTesting(
         DatabaseConnection(NativeDatabase(databaseFile)),
       );
-      final ThemeNotifier processANotifier =
-          ThemeNotifier(processADb, textThemeBuilder);
+      final ThemeNotifier processANotifier = ThemeNotifier(
+        processADb,
+        textThemeBuilder,
+      );
       final Completer<void> releaseStaleSnapshot = Completer<void>();
 
       try {
@@ -655,20 +675,18 @@ void main() {
           'design_system',
           PrefCodec.encode('cupertino'),
         );
-        final Map<String, String> staleSnapshot =
-            await processADb.getAllPrefs();
+        final Map<String, String> staleSnapshot = await processADb
+            .getAllPrefs();
         final Future<void> delayedMigration = () async {
           await releaseStaleSnapshot.future;
           processANotifier.loadFromPrefsSnapshot(staleSnapshot);
           await pumpEventQueue(times: 10);
         }();
 
-        await processBDb.setPref(
-          'design_system',
-          PrefCodec.encode('material'),
-        );
-        final String versionBeforeMigration =
-            (await processBDb.getPref(FushiDatabase.prefsVersionKey))!;
+        await processBDb.setPref('design_system', PrefCodec.encode('material'));
+        final String versionBeforeMigration = (await processBDb.getPref(
+          FushiDatabase.prefsVersionKey,
+        ))!;
         releaseStaleSnapshot.complete();
         await delayedMigration;
 
@@ -694,76 +712,78 @@ void main() {
       }
     });
 
-    test('replaying the same stale hidden snapshot migrates and bumps once',
-        () async {
-      final String hiddenRaw = PrefCodec.encode('cupertino');
-      await db.setPref('design_system', hiddenRaw);
-      final Map<String, String> staleSnapshot = await db.getAllPrefs();
+    test(
+      'replaying the same stale hidden snapshot migrates and bumps once',
+      () async {
+        final String hiddenRaw = PrefCodec.encode('cupertino');
+        await db.setPref('design_system', hiddenRaw);
+        final Map<String, String> staleSnapshot = await db.getAllPrefs();
 
-      notifier.loadFromPrefsSnapshot(staleSnapshot);
-      await pumpEventQueue(times: 10);
-      final String versionAfterFirstMigration =
-          (await db.getPref(FushiDatabase.prefsVersionKey))!;
-      expect(
-        PrefCodec.decode<int>(versionAfterFirstMigration, 0),
-        2,
-        reason: '旧值写入一次、CAS 迁移一次',
-      );
-
-      notifier.loadFromPrefsSnapshot(staleSnapshot);
-      await pumpEventQueue(times: 10);
-
-      expect(
-        PrefCodec.decode(
-          (await db.getPref('design_system'))!,
-          '',
-        ),
-        'auto',
-      );
-      expect(
-        await db.getPref(FushiDatabase.prefsVersionKey),
-        versionAfterFirstMigration,
-        reason: '重复旧 snapshot 的 CAS 失败不能再次 bump',
-      );
-    });
-
-    test('snapshot migration write failure never escapes as an uncaught Future',
-        () async {
-      await db.getAllPrefs();
-      await db.close();
-      final List<Object> uncaughtErrors = <Object>[];
-      final List<String?> migrationLogs = <String?>[];
-      final DebugPrintCallback previousDebugPrint = debugPrint;
-      debugPrint = (String? message, {int? wrapWidth}) {
-        migrationLogs.add(message);
-      };
-
-      try {
-        await runZonedGuarded<Future<void>>(
-          () async {
-            notifier.loadFromPrefsSnapshot(<String, String>{
-              'design_system': PrefCodec.encode('macos'),
-            });
-            await pumpEventQueue(times: 10);
-          },
-          (Object error, StackTrace stackTrace) {
-            uncaughtErrors.add(error);
-          },
+        notifier.loadFromPrefsSnapshot(staleSnapshot);
+        await pumpEventQueue(times: 10);
+        final String versionAfterFirstMigration = (await db.getPref(
+          FushiDatabase.prefsVersionKey,
+        ))!;
+        expect(
+          PrefCodec.decode<int>(versionAfterFirstMigration, 0),
+          2,
+          reason: '旧值写入一次、CAS 迁移一次',
         );
-      } finally {
-        debugPrint = previousDebugPrint;
-      }
 
-      expect(notifier.designSystem, 'auto');
-      expect(uncaughtErrors, isEmpty);
-      expect(
-        migrationLogs.join('\n'),
-        allOf(
-          contains('design_system migration write failed'),
-          contains('design_system migration reload failed'),
-        ),
-      );
-    });
+        notifier.loadFromPrefsSnapshot(staleSnapshot);
+        await pumpEventQueue(times: 10);
+
+        expect(
+          PrefCodec.decode((await db.getPref('design_system'))!, ''),
+          'auto',
+        );
+        expect(
+          await db.getPref(FushiDatabase.prefsVersionKey),
+          versionAfterFirstMigration,
+          reason: '重复旧 snapshot 的 CAS 失败不能再次 bump',
+        );
+      },
+    );
+
+    test(
+      'snapshot migration write failure never escapes as an uncaught Future',
+      () async {
+        await db.getAllPrefs();
+        await db.close();
+        final List<Object> uncaughtErrors = <Object>[];
+        final List<String?> migrationLogs = <String?>[];
+        final DebugPrintCallback previousDebugPrint = debugPrint;
+        debugPrint = (String? message, {int? wrapWidth}) {
+          migrationLogs.add(message);
+        };
+
+        try {
+          await runZonedGuarded<Future<void>>(
+            () async {
+              notifier.loadFromPrefsSnapshot(<String, String>{
+                'design_system': PrefCodec.encode('macos'),
+              });
+              await pumpEventQueue(times: 10);
+            },
+            (Object error, StackTrace stackTrace) {
+              uncaughtErrors.add(error);
+            },
+          );
+        } finally {
+          debugPrint = previousDebugPrint;
+        }
+
+        expect(notifier.designSystem, 'auto');
+        expect(uncaughtErrors, isEmpty);
+        expect(
+          migrationLogs.join('\n'),
+          allOf(
+            contains('design_system migration write failed'),
+            contains('design_system migration reload failed'),
+          ),
+        );
+      },
+    );
   });
 
   group('ThemeNotifier.appUiScale reflects app_ui_scale pref', () {
@@ -796,33 +816,41 @@ void main() {
       expect(notifier.appUiScale, 0.3);
     });
 
-    test('absent app_ui_scale → defaults to defaultScale (1.0) before seeding',
-        () {
-      notifier.loadFromPrefsSnapshot(<String, String>{});
+    test(
+      'absent app_ui_scale → defaults to defaultScale (1.0) before seeding',
+      () {
+        notifier.loadFromPrefsSnapshot(<String, String>{});
 
-      expect(FushiAppUiScale.defaultScale, 1.0);
-      // 种子前（无视口解析）退回当前自动值，默认 1.0。
-      expect(notifier.appUiScale, FushiAppUiScale.defaultScale);
-      expect(notifier.appUiScale, 1.0);
-    });
+        expect(FushiAppUiScale.defaultScale, 1.0);
+        // 种子前（无视口解析）退回当前自动值，默认 1.0。
+        expect(notifier.appUiScale, FushiAppUiScale.defaultScale);
+        expect(notifier.appUiScale, 1.0);
+      },
+    );
 
-    test('legacy app_ui_scale without mode is a concrete value (no reseed)',
-        () {
-      // 旧 custom 用户（只存过 app_ui_scale，无模式键）：视为已种子，值保留不变。
-      notifier.loadFromPrefsSnapshot(<String, String>{
-        'app_ui_scale': PrefCodec.encode(1.5),
-      });
+    test(
+      'legacy app_ui_scale without mode is a concrete value (no reseed)',
+      () {
+        // 旧 custom 用户（只存过 app_ui_scale，无模式键）：视为已种子，值保留不变。
+        notifier.loadFromPrefsSnapshot(<String, String>{
+          'app_ui_scale': PrefCodec.encode(1.5),
+        });
 
-      expect(notifier.customAppUiScale, 1.5);
-      expect(notifier.appUiScale, 1.5);
+        expect(notifier.customAppUiScale, 1.5);
+        expect(notifier.appUiScale, 1.5);
 
-      final double resolved = notifier.resolveAppUiScaleForViewport(
-        viewport: const Size(800, 600),
-        platform: TargetPlatform.windows,
-      );
-      expect(resolved, 1.5, reason: 'legacy custom scale must stay effective');
-      expect(notifier.autoAppUiScale, lessThan(1.0));
-    });
+        final double resolved = notifier.resolveAppUiScaleForViewport(
+          viewport: const Size(800, 600),
+          platform: TargetPlatform.windows,
+        );
+        expect(
+          resolved,
+          1.5,
+          reason: 'legacy custom scale must stay effective',
+        );
+        expect(notifier.autoAppUiScale, lessThan(1.0));
+      },
+    );
 
     test('app_ui_scale stored as int → still normalized as double', () {
       notifier.loadFromPrefsSnapshot(<String, String>{
@@ -833,30 +861,39 @@ void main() {
     });
 
     test(
-        'TODO-374: legacy auto mode is reseeded from viewport on first resolve',
-        () async {
-      // 旧 auto 用户：模式键为 auto，存的 app_ui_scale 是被忽略的陈旧值。
-      // 种子前视为未种子，appUiScale 退回自动值，不用那个陈旧值。
-      notifier.loadFromPrefsSnapshot(<String, String>{
-        'app_ui_scale_mode': PrefCodec.encode(ThemeNotifier.appUiScaleModeAuto),
-        'app_ui_scale': PrefCodec.encode(2),
-      });
-      expect(notifier.appUiScale, FushiAppUiScale.defaultScale,
-          reason: '种子前旧 auto 用户不使用陈旧的 app_ui_scale 值');
+      'TODO-374: legacy auto mode is reseeded from viewport on first resolve',
+      () async {
+        // 旧 auto 用户：模式键为 auto，存的 app_ui_scale 是被忽略的陈旧值。
+        // 种子前视为未种子，appUiScale 退回自动值，不用那个陈旧值。
+        notifier.loadFromPrefsSnapshot(<String, String>{
+          'app_ui_scale_mode': PrefCodec.encode(
+            ThemeNotifier.appUiScaleModeAuto,
+          ),
+          'app_ui_scale': PrefCodec.encode(2),
+        });
+        expect(
+          notifier.appUiScale,
+          FushiAppUiScale.defaultScale,
+          reason: '种子前旧 auto 用户不使用陈旧的 app_ui_scale 值',
+        );
 
-      // 首次按真实视口解析：算出合适值并落盘成具体数值，覆盖陈旧值。
-      final double seeded = notifier.resolveAppUiScaleForViewport(
-        viewport: const Size(1920, 1080),
-        platform: TargetPlatform.windows,
-      );
-      expect(seeded, greaterThan(1.0));
-      expect(notifier.appUiScale, seeded);
-      expect(notifier.appUiScale, isNot(2.0),
-          reason: '旧 auto 用户被重新种子成当时屏幕的合适值，等价其原本看到的 auto 效果');
+        // 首次按真实视口解析：算出合适值并落盘成具体数值，覆盖陈旧值。
+        final double seeded = notifier.resolveAppUiScaleForViewport(
+          viewport: const Size(1920, 1080),
+          platform: TargetPlatform.windows,
+        );
+        expect(seeded, greaterThan(1.0));
+        expect(notifier.appUiScale, seeded);
+        expect(
+          notifier.appUiScale,
+          isNot(2.0),
+          reason: '旧 auto 用户被重新种子成当时屏幕的合适值，等价其原本看到的 auto 效果',
+        );
 
-      // 让 fire-and-forget 的种子落盘完成，避免其在 tearDown 关库后才命中（测试侧时序）。
-      await Future<void>.delayed(Duration.zero);
-    });
+        // 让 fire-and-forget 的种子落盘完成，避免其在 tearDown 关库后才命中（测试侧时序）。
+        await Future<void>.delayed(Duration.zero);
+      },
+    );
   });
 
   group('TODO-930 multi custom theme model + idempotent migration', () {
@@ -868,7 +905,9 @@ void main() {
       await db.setPref('custom_theme_seed', PrefCodec.encode(seed));
       if (primary != null) {
         await db.setPref(
-            'custom_theme_primary_color', PrefCodec.encode(primary));
+          'custom_theme_primary_color',
+          PrefCodec.encode(primary),
+        );
       }
       if (font != null) {
         await db.setPref('custom_theme_font_color', PrefCodec.encode(font));
@@ -935,10 +974,12 @@ void main() {
     test('migration is idempotent', () async {
       await seedLegacyFlat(seed: 0xFFFF5500);
       int idCalls = 0;
-      final ThemeNotifier n = freshNotifier(idGen: () {
-        idCalls++;
-        return 'ct-$idCalls';
-      });
+      final ThemeNotifier n = freshNotifier(
+        idGen: () {
+          idCalls++;
+          return 'ct-$idCalls';
+        },
+      );
       await n.refreshFromDb();
       final List<CustomThemeEntry> first = n.customThemes;
       final List<CustomThemeEntry> second = n.customThemes;
@@ -946,8 +987,9 @@ void main() {
       expect(second, hasLength(1));
       expect(first.first.id, second.first.id);
 
-      final ThemeNotifier reloaded =
-          freshNotifier(idGen: () => 'ct-should-not-be-used');
+      final ThemeNotifier reloaded = freshNotifier(
+        idGen: () => 'ct-should-not-be-used',
+      );
       await reloaded.refreshFromDb();
       expect(reloaded.customThemes, hasLength(1));
       expect(reloaded.customThemes.first.id, first.first.id);
@@ -955,35 +997,48 @@ void main() {
       await Future<void>.delayed(Duration.zero);
     });
 
-    test('upsert adds + selects new, replaces by id keeping selection',
-        () async {
-      final ThemeNotifier n = freshNotifier();
-      await n.refreshFromDb();
-      const CustomThemeEntry a =
-          CustomThemeEntry(id: 'a', name: 'A', seed: 0xFF111111);
-      const CustomThemeEntry b =
-          CustomThemeEntry(id: 'b', name: 'B', seed: 0xFF222222);
-      await n.upsertCustomTheme(a);
-      await n.upsertCustomTheme(b);
-      expect(n.customThemes.map((e) => e.id), <String>['a', 'b']);
-      expect(n.selectedCustomThemeId, 'b');
+    test(
+      'upsert adds + selects new, replaces by id keeping selection',
+      () async {
+        final ThemeNotifier n = freshNotifier();
+        await n.refreshFromDb();
+        const CustomThemeEntry a = CustomThemeEntry(
+          id: 'a',
+          name: 'A',
+          seed: 0xFF111111,
+        );
+        const CustomThemeEntry b = CustomThemeEntry(
+          id: 'b',
+          name: 'B',
+          seed: 0xFF222222,
+        );
+        await n.upsertCustomTheme(a);
+        await n.upsertCustomTheme(b);
+        expect(n.customThemes.map((e) => e.id), <String>['a', 'b']);
+        expect(n.selectedCustomThemeId, 'b');
 
-      const CustomThemeEntry b2 =
-          CustomThemeEntry(id: 'b', name: 'B2', seed: 0xFF333333);
-      await n.upsertCustomTheme(b2);
-      expect(n.customThemes, hasLength(2));
-      expect(n.customThemeById('b')!.name, 'B2');
-      expect(n.customThemeById('b')!.seed, 0xFF333333);
-      expect(n.selectedCustomThemeId, 'b');
-    });
+        const CustomThemeEntry b2 = CustomThemeEntry(
+          id: 'b',
+          name: 'B2',
+          seed: 0xFF333333,
+        );
+        await n.upsertCustomTheme(b2);
+        expect(n.customThemes, hasLength(2));
+        expect(n.customThemeById('b')!.name, 'B2');
+        expect(n.customThemeById('b')!.seed, 0xFF333333);
+        expect(n.selectedCustomThemeId, 'b');
+      },
+    );
 
     test('select + delete round-trip with selection fallback', () async {
       final ThemeNotifier n = freshNotifier();
       await n.refreshFromDb();
       await n.upsertCustomTheme(
-          const CustomThemeEntry(id: 'a', name: 'A', seed: 0xFF111111));
+        const CustomThemeEntry(id: 'a', name: 'A', seed: 0xFF111111),
+      );
       await n.upsertCustomTheme(
-          const CustomThemeEntry(id: 'b', name: 'B', seed: 0xFF222222));
+        const CustomThemeEntry(id: 'b', name: 'B', seed: 0xFF222222),
+      );
       await n.selectCustomTheme('a');
       expect(n.selectedCustomThemeId, 'a');
 
@@ -996,76 +1051,89 @@ void main() {
       expect(n.selectedCustomThemeId, isNull);
     });
 
-    test('app_theme_key custom-theme colon id resolves to that entry',
-        () async {
-      final ThemeNotifier n = freshNotifier();
-      await n.refreshFromDb();
-      await n.upsertCustomTheme(
-          const CustomThemeEntry(id: 'a', name: 'A', seed: 0xFF111111));
-      await n.upsertCustomTheme(
-          const CustomThemeEntry(id: 'b', name: 'B', seed: 0xFF222222));
-      await db.setPref('app_theme_key', PrefCodec.encode('custom-theme:a'));
-      await n.refreshFromDb();
-      expect(n.appThemeKey, 'custom-theme:a');
-      expect(n.activeCustomThemeEntry!.id, 'a');
-    });
+    test(
+      'app_theme_key custom-theme colon id resolves to that entry',
+      () async {
+        final ThemeNotifier n = freshNotifier();
+        await n.refreshFromDb();
+        await n.upsertCustomTheme(
+          const CustomThemeEntry(id: 'a', name: 'A', seed: 0xFF111111),
+        );
+        await n.upsertCustomTheme(
+          const CustomThemeEntry(id: 'b', name: 'B', seed: 0xFF222222),
+        );
+        await db.setPref('app_theme_key', PrefCodec.encode('custom-theme:a'));
+        await n.refreshFromDb();
+        expect(n.appThemeKey, 'custom-theme:a');
+        expect(n.activeCustomThemeEntry!.id, 'a');
+      },
+    );
 
-    test('app_theme_key custom-theme colon missing falls back to selected',
-        () async {
-      final ThemeNotifier n = freshNotifier();
-      await n.refreshFromDb();
-      await n.upsertCustomTheme(
-          const CustomThemeEntry(id: 'a', name: 'A', seed: 0xFF111111));
-      await n.upsertCustomTheme(
-          const CustomThemeEntry(id: 'b', name: 'B', seed: 0xFF222222));
-      await n.selectCustomTheme('a');
-      await db.setPref('app_theme_key', PrefCodec.encode('custom-theme:zzz'));
-      await n.refreshFromDb();
-      expect(n.appThemeKey, 'custom-theme:zzz');
-      expect(n.activeCustomThemeEntry!.id, 'a');
-    });
+    test(
+      'app_theme_key custom-theme colon missing falls back to selected',
+      () async {
+        final ThemeNotifier n = freshNotifier();
+        await n.refreshFromDb();
+        await n.upsertCustomTheme(
+          const CustomThemeEntry(id: 'a', name: 'A', seed: 0xFF111111),
+        );
+        await n.upsertCustomTheme(
+          const CustomThemeEntry(id: 'b', name: 'B', seed: 0xFF222222),
+        );
+        await n.selectCustomTheme('a');
+        await db.setPref('app_theme_key', PrefCodec.encode('custom-theme:zzz'));
+        await n.refreshFromDb();
+        expect(n.appThemeKey, 'custom-theme:zzz');
+        expect(n.activeCustomThemeEntry!.id, 'a');
+      },
+    );
 
-    test('backward-compat: legacy custom user keeps identical colors',
-        () async {
-      await seedLegacyFlat(seed: 0xFFFF0000, primary: 0xFF00FF00);
+    test(
+      'backward-compat: legacy custom user keeps identical colors',
+      () async {
+        await seedLegacyFlat(seed: 0xFFFF0000, primary: 0xFF00FF00);
 
-      final ColorScheme legacyScheme =
-          notifier.buildColorScheme(Brightness.light);
-      expect(legacyScheme.primary, const Color(0xFF00FF00));
+        final ColorScheme legacyScheme = notifier.buildColorScheme(
+          Brightness.light,
+        );
+        expect(legacyScheme.primary, const Color(0xFF00FF00));
 
-      final ThemeNotifier n = freshNotifier(idGen: () => 'ct-fixed');
-      await n.refreshFromDb();
-      final ColorScheme migratedScheme = n.buildColorScheme(Brightness.light);
-      expect(migratedScheme.primary, const Color(0xFF00FF00));
-      expect(migratedScheme.primary, legacyScheme.primary);
-      // 让迁移的 fire-and-forget 落盘完成，避免其在 tearDown 关库后命中。
-      await Future<void>.delayed(Duration.zero);
-    });
+        final ThemeNotifier n = freshNotifier(idGen: () => 'ct-fixed');
+        await n.refreshFromDb();
+        final ColorScheme migratedScheme = n.buildColorScheme(Brightness.light);
+        expect(migratedScheme.primary, const Color(0xFF00FF00));
+        expect(migratedScheme.primary, legacyScheme.primary);
+        // 让迁移的 fire-and-forget 落盘完成，避免其在 tearDown 关库后命中。
+        await Future<void>.delayed(Duration.zero);
+      },
+    );
 
-    test('migrateLegacyCustomTheme pure: configured legacy gives one entry',
-        () {
-      final LegacyCustomThemeMigration r = migrateLegacyCustomTheme(
-        existing: const <String>[],
-        legacySeed: 0xFFABCDEF,
-        legacyFontColor: 0,
-        legacyBgColor: 0,
-        legacySelectionColor: 0,
-        legacyPrimaryColor: 0xFF112233,
-        legacySecondaryColor: 0,
-        legacyTertiaryColor: 0,
-        legacyContainerColor: 0,
-        legacySentenceAudioHighlightColor: 0,
-        legacyLinkColor: 0,
-        idGenerator: () => 'ct-x',
-      );
-      expect(r.shouldWrite, isTrue);
-      expect(r.entries, hasLength(1));
-      expect(r.entries.first.id, 'ct-x');
-      expect(r.entries.first.seed, 0xFFABCDEF);
-      expect(r.entries.first.primaryColor, 0xFF112233);
-      expect(r.entries.first.fontColor, isNull);
-      expect(r.selectedId, 'ct-x');
-    });
+    test(
+      'migrateLegacyCustomTheme pure: configured legacy gives one entry',
+      () {
+        final LegacyCustomThemeMigration r = migrateLegacyCustomTheme(
+          existing: const <String>[],
+          legacySeed: 0xFFABCDEF,
+          legacyFontColor: 0,
+          legacyBgColor: 0,
+          legacySelectionColor: 0,
+          legacyPrimaryColor: 0xFF112233,
+          legacySecondaryColor: 0,
+          legacyTertiaryColor: 0,
+          legacyContainerColor: 0,
+          legacySentenceAudioHighlightColor: 0,
+          legacyLinkColor: 0,
+          idGenerator: () => 'ct-x',
+        );
+        expect(r.shouldWrite, isTrue);
+        expect(r.entries, hasLength(1));
+        expect(r.entries.first.id, 'ct-x');
+        expect(r.entries.first.seed, 0xFFABCDEF);
+        expect(r.entries.first.primaryColor, 0xFF112233);
+        expect(r.entries.first.fontColor, isNull);
+        expect(r.selectedId, 'ct-x');
+      },
+    );
 
     test('migrateLegacyCustomTheme pure: default-only legacy is no-write', () {
       final LegacyCustomThemeMigration r = migrateLegacyCustomTheme(
@@ -1087,28 +1155,33 @@ void main() {
       expect(r.selectedId, isNull);
     });
 
-    test('migrateLegacyCustomTheme pure: existing list is idempotent no-write',
-        () {
-      const CustomThemeEntry e =
-          CustomThemeEntry(id: 'keep', name: 'Keep', seed: 0xFF010203);
-      final LegacyCustomThemeMigration r = migrateLegacyCustomTheme(
-        existing: <String>[jsonEncode(e.toJson())],
-        legacySeed: 0xFFFF0000,
-        legacyFontColor: 0,
-        legacyBgColor: 0,
-        legacySelectionColor: 0,
-        legacyPrimaryColor: 0,
-        legacySecondaryColor: 0,
-        legacyTertiaryColor: 0,
-        legacyContainerColor: 0,
-        legacySentenceAudioHighlightColor: 0,
-        legacyLinkColor: 0,
-        idGenerator: () => 'ct-should-not-be-used',
-      );
-      expect(r.shouldWrite, isFalse);
-      expect(r.entries, hasLength(1));
-      expect(r.entries.first.id, 'keep');
-      expect(r.selectedId, 'keep');
-    });
+    test(
+      'migrateLegacyCustomTheme pure: existing list is idempotent no-write',
+      () {
+        const CustomThemeEntry e = CustomThemeEntry(
+          id: 'keep',
+          name: 'Keep',
+          seed: 0xFF010203,
+        );
+        final LegacyCustomThemeMigration r = migrateLegacyCustomTheme(
+          existing: <String>[jsonEncode(e.toJson())],
+          legacySeed: 0xFFFF0000,
+          legacyFontColor: 0,
+          legacyBgColor: 0,
+          legacySelectionColor: 0,
+          legacyPrimaryColor: 0,
+          legacySecondaryColor: 0,
+          legacyTertiaryColor: 0,
+          legacyContainerColor: 0,
+          legacySentenceAudioHighlightColor: 0,
+          legacyLinkColor: 0,
+          idGenerator: () => 'ct-should-not-be-used',
+        );
+        expect(r.shouldWrite, isFalse);
+        expect(r.entries, hasLength(1));
+        expect(r.entries.first.id, 'keep');
+        expect(r.selectedId, 'keep');
+      },
+    );
   });
 }

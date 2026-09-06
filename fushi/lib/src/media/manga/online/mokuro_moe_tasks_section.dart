@@ -34,10 +34,12 @@ class MokuroMoeTasksSection extends ConsumerWidget {
         final List<MokuroMoeDownloadTask> tasks = queue.tasks;
         if (tasks.isEmpty) return const SizedBox.shrink();
         final ThemeData theme = Theme.of(context);
-        final bool hasFinished =
-            tasks.any((MokuroMoeDownloadTask t) => t.isFinished);
-        final bool hasRetryable =
-            tasks.any((MokuroMoeDownloadTask t) => _canRetry(t));
+        final bool hasFinished = tasks.any(
+          (MokuroMoeDownloadTask t) => t.isFinished,
+        );
+        final bool hasRetryable = tasks.any(
+          (MokuroMoeDownloadTask t) => _canRetry(t),
+        );
         return Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
@@ -103,30 +105,46 @@ class MokuroMoeTasksSection extends ConsumerWidget {
     final ColorScheme scheme = theme.colorScheme;
     final bool eink = isEinkTheme(context);
     final Widget statusIcon = switch (task.status) {
-      MokuroMoeTaskStatus.queued =>
-        Icon(Icons.schedule_outlined, size: 20, color: scheme.outline),
-      MokuroMoeTaskStatus.done =>
-        Icon(Icons.check_circle_outline, size: 20, color: scheme.primary),
-      MokuroMoeTaskStatus.failed =>
-        Icon(Icons.error_outline, size: 20, color: scheme.error),
+      MokuroMoeTaskStatus.queued => Icon(
+        Icons.schedule_outlined,
+        size: 20,
+        color: scheme.outline,
+      ),
+      MokuroMoeTaskStatus.done => Icon(
+        Icons.check_circle_outline,
+        size: 20,
+        color: scheme.primary,
+      ),
+      MokuroMoeTaskStatus.failed => Icon(
+        Icons.error_outline,
+        size: 20,
+        color: scheme.error,
+      ),
       // 退避等待中：失败了但队列会自己回来重来（区别于终态 failed 的红叉）。
-      MokuroMoeTaskStatus.waitingRetry =>
-        Icon(Icons.autorenew, size: 20, color: scheme.error),
-      MokuroMoeTaskStatus.cancelled =>
-        Icon(Icons.block_outlined, size: 20, color: scheme.outline),
-      MokuroMoeTaskStatus.running => eink
-          ? const Icon(Icons.downloading_outlined, size: 20)
-          : SizedBox(
-              width: 20,
-              height: 20,
-              child: Padding(
-                padding: const EdgeInsets.all(2),
-                child: CircularProgressIndicator(
-                  strokeWidth: 2,
-                  value: mokuroMoeProgressValue(task.lastEvent),
+      MokuroMoeTaskStatus.waitingRetry => Icon(
+        Icons.autorenew,
+        size: 20,
+        color: scheme.error,
+      ),
+      MokuroMoeTaskStatus.cancelled => Icon(
+        Icons.block_outlined,
+        size: 20,
+        color: scheme.outline,
+      ),
+      MokuroMoeTaskStatus.running =>
+        eink
+            ? const Icon(Icons.downloading_outlined, size: 20)
+            : SizedBox(
+                width: 20,
+                height: 20,
+                child: Padding(
+                  padding: const EdgeInsets.all(2),
+                  child: CircularProgressIndicator(
+                    strokeWidth: 2,
+                    value: mokuroMoeProgressValue(task.lastEvent),
+                  ),
                 ),
               ),
-            ),
     };
     final String subtitle = switch (task.status) {
       MokuroMoeTaskStatus.queued => t.download_status_queued,
@@ -135,12 +153,11 @@ class MokuroMoeTasksSection extends ConsumerWidget {
       MokuroMoeTaskStatus.cancelled => t.download_status_cancelled,
       MokuroMoeTaskStatus.failed =>
         '${t.manga_online_failed}: ${task.error ?? ''}',
-      MokuroMoeTaskStatus.waitingRetry => '${t.manga_online_retry_waiting(
-          attempt: task.autoRetries,
-          total: queue.maxAutoRetries,
-        )}: ${task.error ?? ''}',
+      MokuroMoeTaskStatus.waitingRetry =>
+        '${t.manga_online_retry_waiting(attempt: task.autoRetries, total: queue.maxAutoRetries)}: ${task.error ?? ''}',
     };
-    final bool errorTone = task.status == MokuroMoeTaskStatus.failed ||
+    final bool errorTone =
+        task.status == MokuroMoeTaskStatus.failed ||
         task.status == MokuroMoeTaskStatus.waitingRetry;
     return FushiListItem(
       density: FushiListDensity.compact,
@@ -164,23 +181,21 @@ class MokuroMoeTasksSection extends ConsumerWidget {
       // 重新入队还会多出一条同名任务、失败那条僵在列表里。
       trailing: switch (task.status) {
         MokuroMoeTaskStatus.failed ||
-        MokuroMoeTaskStatus.cancelled =>
-          FushiIconButton(
-            tooltip: t.retry,
-            icon: Icons.refresh,
-            size: 20,
-            onTap: () => queue.retry(task),
-          ),
+        MokuroMoeTaskStatus.cancelled => FushiIconButton(
+          tooltip: t.retry,
+          icon: Icons.refresh,
+          size: 20,
+          onTap: () => queue.retry(task),
+        ),
         MokuroMoeTaskStatus.done => null,
         MokuroMoeTaskStatus.queued ||
         MokuroMoeTaskStatus.running ||
-        MokuroMoeTaskStatus.waitingRetry =>
-          FushiIconButton(
-            tooltip: t.dialog_cancel,
-            icon: Icons.close,
-            size: 20,
-            onTap: () => queue.cancel(task),
-          ),
+        MokuroMoeTaskStatus.waitingRetry => FushiIconButton(
+          tooltip: t.dialog_cancel,
+          icon: Icons.close,
+          size: 20,
+          onTap: () => queue.cancel(task),
+        ),
       },
     );
   }

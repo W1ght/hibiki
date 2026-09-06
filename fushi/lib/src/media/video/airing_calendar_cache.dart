@@ -86,19 +86,21 @@ AiringScheduleCache? decodeAiringScheduleCache(
       final dynamic episode = e['episode'];
       final dynamic airingAt = e['airingAt'];
       if (mediaId is! int || episode is! int || airingAt is! int) continue;
-      out.add(AniListAiringEpisode(
-        mediaId: mediaId,
-        episode: episode,
-        airingAtSeconds: airingAt,
-        media: AniListMedia(
-          id: mediaId,
-          romaji: e['romaji'] as String?,
-          english: e['english'] as String?,
-          native: e['native'] as String?,
-          coverUrl: e['cover'] as String?,
-          format: e['format'] as String?,
+      out.add(
+        AniListAiringEpisode(
+          mediaId: mediaId,
+          episode: episode,
+          airingAtSeconds: airingAt,
+          media: AniListMedia(
+            id: mediaId,
+            romaji: e['romaji'] as String?,
+            english: e['english'] as String?,
+            native: e['native'] as String?,
+            coverUrl: e['cover'] as String?,
+            format: e['format'] as String?,
+          ),
         ),
-      ));
+      );
     }
     return AiringScheduleCache(
       fetchedAtMs: fetchedAtMs,

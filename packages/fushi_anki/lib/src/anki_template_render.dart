@@ -27,8 +27,8 @@ Set<String> ankiTemplateReferencedFields(String template) {
     if (raw.isEmpty) continue;
     final String body =
         raw.startsWith('#') || raw.startsWith('^') || raw.startsWith('/')
-            ? raw.substring(1).trim()
-            : raw;
+        ? raw.substring(1).trim()
+        : raw;
     final String field = _stripFilters(body);
     if (field.isNotEmpty && field != 'FrontSide') names.add(field);
   }

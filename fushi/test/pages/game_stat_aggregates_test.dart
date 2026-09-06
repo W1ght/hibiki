@@ -52,9 +52,7 @@ void main() {
         _game('never', seconds: 0, sessions: 0, lastPlayedMs: 0),
         _game('long', seconds: 3600, sessions: 2, lastPlayedMs: 10),
       ],
-      dailyTotals: <String, (int, int)>{
-        '2026-07-29': (90, 1),
-      },
+      dailyTotals: <String, (int, int)>{'2026-07-29': (90, 1)},
       now: now,
     );
 
@@ -62,9 +60,9 @@ void main() {
     expect(aggregate.daily.first.dateKey, '2026-06-30');
     expect(aggregate.daily.last.dateKey, '2026-07-29');
     expect(aggregate.daily.last.ms, 90000);
-    expect(
-      aggregate.byGame.map((GalgameEntry game) => game.id),
-      <String>['long', 'short'],
-    );
+    expect(aggregate.byGame.map((GalgameEntry game) => game.id), <String>[
+      'long',
+      'short',
+    ]);
   });
 }

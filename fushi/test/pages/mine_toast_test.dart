@@ -19,8 +19,9 @@ Future<void> _pumpToastHost(WidgetTester tester) async {
 
 /// 找到 mine toast 那张着色卡片的 BoxDecoration 背景色。
 Color _toastBg(WidgetTester tester) {
-  final Iterable<Container> containers =
-      tester.widgetList<Container>(find.byType(Container));
+  final Iterable<Container> containers = tester.widgetList<Container>(
+    find.byType(Container),
+  );
   for (final Container c in containers) {
     final Decoration? d = c.decoration;
     if (d is BoxDecoration && d.color != null && d.borderRadius != null) {
@@ -33,23 +34,39 @@ Color _toastBg(WidgetTester tester) {
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  testWidgets('mineToastPalette 四态颜色/图标符合 added绿/duplicate橙/failed红/pending蓝',
-      (WidgetTester tester) async {
-    expect(mineToastPalette(MineToastStatus.added).background,
-        const Color(0xFF2E7D32));
-    expect(mineToastPalette(MineToastStatus.added).icon,
-        Icons.check_circle_rounded);
-    expect(mineToastPalette(MineToastStatus.duplicate).background,
-        const Color(0xFFEF6C00));
-    expect(mineToastPalette(MineToastStatus.failed).background,
-        const Color(0xFFC62828));
+  testWidgets('mineToastPalette 四态颜色/图标符合 added绿/duplicate橙/failed红/pending蓝', (
+    WidgetTester tester,
+  ) async {
+    expect(
+      mineToastPalette(MineToastStatus.added).background,
+      const Color(0xFF2E7D32),
+    );
+    expect(
+      mineToastPalette(MineToastStatus.added).icon,
+      Icons.check_circle_rounded,
+    );
+    expect(
+      mineToastPalette(MineToastStatus.duplicate).background,
+      const Color(0xFFEF6C00),
+    );
+    expect(
+      mineToastPalette(MineToastStatus.failed).background,
+      const Color(0xFFC62828),
+    );
     expect(mineToastPalette(MineToastStatus.failed).icon, Icons.error_rounded);
-    expect(mineToastPalette(MineToastStatus.pending).background,
-        const Color(0xFF1565C0));
+    expect(
+      mineToastPalette(MineToastStatus.pending).background,
+      const Color(0xFF1565C0),
+    );
     // orange 800 配白字只有 3.08:1；duplicate/warning 用黑字达到 6.81:1。
-    expect(mineToastPalette(MineToastStatus.duplicate).foreground, Colors.black);
-    expect(toastSeverityPalette(ToastSeverity.warning)?.foreground,
-        Colors.black);
+    expect(
+      mineToastPalette(MineToastStatus.duplicate).foreground,
+      Colors.black,
+    );
+    expect(
+      toastSeverityPalette(ToastSeverity.warning)?.foreground,
+      Colors.black,
+    );
     for (final MineToastStatus s in <MineToastStatus>[
       MineToastStatus.added,
       MineToastStatus.failed,
@@ -59,8 +76,9 @@ void main() {
     }
   });
 
-  testWidgets('added：toast 渲染绿色卡片 + check 图标 + 文案',
-      (WidgetTester tester) async {
+  testWidgets('added：toast 渲染绿色卡片 + check 图标 + 文案', (
+    WidgetTester tester,
+  ) async {
     await _pumpToastHost(tester);
     FushiToast.showMine(msg: '已添加到牌组', status: MineToastStatus.added);
     await tester.pump();
@@ -95,8 +113,9 @@ void main() {
     await tester.pump(const Duration(seconds: 3));
   });
 
-  testWidgets('pending：蓝色卡片 + 同步图标，随后被结果 toast 顶替',
-      (WidgetTester tester) async {
+  testWidgets('pending：蓝色卡片 + 同步图标，随后被结果 toast 顶替', (
+    WidgetTester tester,
+  ) async {
     await _pumpToastHost(tester);
     FushiToast.showMine(msg: '制卡中…', status: MineToastStatus.pending);
     await tester.pump();
@@ -109,8 +128,11 @@ void main() {
     FushiToast.showMine(msg: '已添加', status: MineToastStatus.added);
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 250));
-    expect(find.byIcon(Icons.sync_rounded), findsNothing,
-        reason: 'pending 应被结果 toast 顶替');
+    expect(
+      find.byIcon(Icons.sync_rounded),
+      findsNothing,
+      reason: 'pending 应被结果 toast 顶替',
+    );
     expect(find.byIcon(Icons.check_circle_rounded), findsOneWidget);
     expect(_toastBg(tester), const Color(0xFF2E7D32));
 

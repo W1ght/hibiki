@@ -124,30 +124,31 @@ void main() {
   /// 书侧 drift `.watch()` provider 打桩（同 home_dashboard_page_test.dart 的
   /// 隔离清单，BUG-1495：不打桩测试卸载期必留 pending timer）。
   List<Override> bookStreamOverrides() => <Override>[
-        fushiBooksProvider
-            .overrideWith((ref, language) async => const <MediaItem>[]),
-        bookLastReadAtProvider
-            .overrideWith((ref) async => const <String, int>{}),
-        epubBookUidByKeyProvider
-            .overrideWith((ref) async => const <String, String>{}),
-      ];
+    fushiBooksProvider.overrideWith(
+      (ref, language) async => const <MediaItem>[],
+    ),
+    bookLastReadAtProvider.overrideWith((ref) async => const <String, int>{}),
+    epubBookUidByKeyProvider.overrideWith(
+      (ref) async => const <String, String>{},
+    ),
+  ];
 
   Widget buildApp() => ProviderScope(
-        overrides: <Override>[
-          platformServicesProvider.overrideWithValue(platformServices),
-          ankiRepositoryProvider.overrideWithValue(ankiRepository),
-          appProvider.overrideWith((ref) => appModel),
-          remoteLibraryCacheProvider.overrideWithValue(remoteCache),
-          ...bookStreamOverrides(),
-        ],
-        child: TranslationProvider(
-          child: MaterialApp(
-            home: Scaffold(
-              body: HomeDashboardPage(videoRepo: VideoBookRepository(db)),
-            ),
-          ),
+    overrides: <Override>[
+      platformServicesProvider.overrideWithValue(platformServices),
+      ankiRepositoryProvider.overrideWithValue(ankiRepository),
+      appProvider.overrideWith((ref) => appModel),
+      remoteLibraryCacheProvider.overrideWithValue(remoteCache),
+      ...bookStreamOverrides(),
+    ],
+    child: TranslationProvider(
+      child: MaterialApp(
+        home: Scaffold(
+          body: HomeDashboardPage(videoRepo: VideoBookRepository(db)),
         ),
-      );
+      ),
+    ),
+  );
 
   // 有界 pump（真实 DB + FutureProvider 在 fakeAsync 下 pumpAndSettle 会挂）。
   Future<void> pumpDashboard(WidgetTester tester) async {
@@ -165,13 +166,18 @@ void main() {
     await tester.pump(const Duration(seconds: 1));
 
     expect(tester.takeException(), isNull);
-    expect(remoteCache.readKeys, isEmpty,
-        reason: '关掉「显示远端条目」后 dashboard 必须零远端取数——门控前移到取数'
-            '之前（BUG-1182），不是取回来再丢弃');
+    expect(
+      remoteCache.readKeys,
+      isEmpty,
+      reason:
+          '关掉「显示远端条目」后 dashboard 必须零远端取数——门控前移到取数'
+          '之前（BUG-1182），不是取回来再丢弃',
+    );
   });
 
-  testWidgets('开关开启（阳性对照）：三个域各取数，证明 harness 真能到达取数处',
-      (WidgetTester tester) async {
+  testWidgets('开关开启（阳性对照）：三个域各取数，证明 harness 真能到达取数处', (
+    WidgetTester tester,
+  ) async {
     // 默认即 true，显式写出以固定前提。
     await prefs.setShowRemoteEntries(true);
 
@@ -186,13 +192,15 @@ void main() {
         RemoteLibraryCacheKeys.videos,
         RemoteLibraryCacheKeys.activity(200),
       ]),
-      reason: '开关开着时三个远端域都必须取数；此对照保证上一条用例的 0 次不是'
+      reason:
+          '开关开着时三个远端域都必须取数；此对照保证上一条用例的 0 次不是'
           '「互联配置/鉴权没过」造成的假绿',
     );
   });
 
-  testWidgets('页面存活期间翻开开关：prefsRepo 监听触发补拉，无需重进页面',
-      (WidgetTester tester) async {
+  testWidgets('页面存活期间翻开开关：prefsRepo 监听触发补拉，无需重进页面', (
+    WidgetTester tester,
+  ) async {
     await prefs.setShowRemoteEntries(false);
 
     await tester.pumpWidget(buildApp());
@@ -210,7 +218,8 @@ void main() {
         RemoteLibraryCacheKeys.videos,
         RemoteLibraryCacheKeys.activity(200),
       ]),
-      reason: '开关翻开必须立即补拉远端（对齐 BUG-1182 的 prefsRepo 监听模式），'
+      reason:
+          '开关翻开必须立即补拉远端（对齐 BUG-1182 的 prefsRepo 监听模式），'
           '不能要求用户重进首页',
     );
   });

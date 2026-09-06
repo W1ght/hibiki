@@ -38,7 +38,7 @@ Future<void> showCollectionContextDialog({
   required VoidCallback onOpenDetail,
   required VoidCallback onChanged,
   Future<void> Function(List<MediaCollectionItemRow> members)?
-      onDeleteMembersMedia,
+  onDeleteMembersMedia,
   String? deleteMembersCheckboxLabel,
   DeletionDisclosure? deleteMembersDisclosure,
   List<DialogListAction> extraListActions = const <DialogListAction>[],
@@ -197,26 +197,27 @@ Future<void> _deleteCollection({
   required MediaCollectionRow collection,
   required VoidCallback onChanged,
   required Future<void> Function(List<MediaCollectionItemRow> members)?
-      onDeleteMembersMedia,
+  onDeleteMembersMedia,
   required String? deleteMembersCheckboxLabel,
   required DeletionDisclosure? deleteMembersDisclosure,
 }) async {
-  final List<MediaCollectionItemRow> members =
-      await db.getCollectionItems(collection.id);
+  final List<MediaCollectionItemRow> members = await db.getCollectionItems(
+    collection.id,
+  );
   if (!context.mounted) return;
   final bool canDeleteMembers =
       onDeleteMembersMedia != null && members.isNotEmpty;
   final FushiDestructiveConfirmResult? result =
       await showAppDialog<FushiDestructiveConfirmResult>(
-    context: context,
-    builder: (_) => FushiDestructiveConfirmDialog(
-      title: t.delete_collection,
-      message: t.delete_collection_confirm,
-      confirmLabel: t.delete_collection,
-      checkboxLabel: canDeleteMembers ? deleteMembersCheckboxLabel : null,
-      checkedDisclosure: canDeleteMembers ? deleteMembersDisclosure : null,
-    ),
-  );
+        context: context,
+        builder: (_) => FushiDestructiveConfirmDialog(
+          title: t.delete_collection,
+          message: t.delete_collection_confirm,
+          confirmLabel: t.delete_collection,
+          checkboxLabel: canDeleteMembers ? deleteMembersCheckboxLabel : null,
+          checkedDisclosure: canDeleteMembers ? deleteMembersDisclosure : null,
+        ),
+      );
   if (result == null || !context.mounted) return;
   if (result.checked && onDeleteMembersMedia != null) {
     await onDeleteMembersMedia(List<MediaCollectionItemRow>.of(members));

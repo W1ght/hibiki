@@ -45,8 +45,10 @@ void main() {
       expect(p1.durationSec, 258);
       expect(p1.displayTitle, '从零开始的异世界生活 第四季 - 第13话');
 
-      final BilibiliVideoIdentity? p2 =
-          parseBilibiliViewResponse(viewBody, page: 2);
+      final BilibiliVideoIdentity? p2 = parseBilibiliViewResponse(
+        viewBody,
+        page: 2,
+      );
       expect(p2!.cid, 41473934960, reason: '分 P 必须取对应那一 P 的 cid');
       expect(p2.partTitle, '第14话');
     });
@@ -57,8 +59,7 @@ void main() {
     });
 
     test('无 pages 的旧响应体回落到稿件级 cid', () {
-      const String legacy =
-          '{"code":0,"data":{"cid":123,"title":"单P稿件"}}';
+      const String legacy = '{"code":0,"data":{"cid":123,"title":"单P稿件"}}';
       final BilibiliVideoIdentity? id = parseBilibiliViewResponse(legacy);
       expect(id!.cid, 123);
       expect(id.displayTitle, '单P稿件', reason: '没有分 P 名就不该拼出一个空后缀');
@@ -74,42 +75,54 @@ void main() {
     test('失败响应 / 畸形 JSON / 缺 cid 一律 null，不抛', () {
       expect(parseBilibiliViewResponse('{"code":-404,"data":null}'), isNull);
       expect(parseBilibiliViewResponse('not json'), isNull);
-      expect(parseBilibiliViewResponse('{"code":0,"data":{"title":"x"}}'),
-          isNull);
-      expect(parseBilibiliViewResponse('{"code":0,"data":{"cid":0}}'), isNull,
-          reason: 'cid=0 不是合法分片身份');
+      expect(
+        parseBilibiliViewResponse('{"code":0,"data":{"title":"x"}}'),
+        isNull,
+      );
+      expect(
+        parseBilibiliViewResponse('{"code":0,"data":{"cid":0}}'),
+        isNull,
+        reason: 'cid=0 不是合法分片身份',
+      );
     });
   });
 
   group('parseBilibiliPlayurlResponse', () {
     test('取最高码率音轨（不是列表里的第一条）', () {
-      final BilibiliPlayStreams? s =
-          parseBilibiliPlayurlResponse(playurlBody);
-      expect(s!.audioUrl, 'https://cdn/audio-30280.m4s',
-          reason: '30280 的 bandwidth 最高；列表顺序不代表码率顺序');
+      final BilibiliPlayStreams? s = parseBilibiliPlayurlResponse(playurlBody);
+      expect(
+        s!.audioUrl,
+        'https://cdn/audio-30280.m4s',
+        reason: '30280 的 bandwidth 最高；列表顺序不代表码率顺序',
+      );
       expect(s.durationSec, 258);
     });
 
     test('没有 DASH 音轨时返回 null —— 宁可失败也不出无声卡', () {
       expect(
-          parseBilibiliPlayurlResponse(
-              '{"code":0,"data":{"dash":{"audio":[]}}}'),
-          isNull);
+        parseBilibiliPlayurlResponse('{"code":0,"data":{"dash":{"audio":[]}}}'),
+        isNull,
+      );
       expect(
-          parseBilibiliPlayurlResponse(
-              '{"code":0,"data":{"durl":[{"url":"https://cdn/x.flv"}]}}'),
-          isNull,
-          reason: 'durl 是混流，不当作可裁音轨静默降级');
+        parseBilibiliPlayurlResponse(
+          '{"code":0,"data":{"durl":[{"url":"https://cdn/x.flv"}]}}',
+        ),
+        isNull,
+        reason: 'durl 是混流，不当作可裁音轨静默降级',
+      );
       expect(parseBilibiliPlayurlResponse('{"code":-403,"data":null}'), isNull);
       expect(parseBilibiliPlayurlResponse('garbage'), isNull);
     });
 
     test('容忍 base_url 蛇形键与缺 bandwidth 的条目', () {
-      const String mixed = '{"code":0,"data":{"dash":{"audio":['
+      const String mixed =
+          '{"code":0,"data":{"dash":{"audio":['
           '{"base_url":"https://cdn/a.m4s"},'
           '{"baseUrl":"https://cdn/b.m4s","bandwidth":100}]}}}';
-      expect(parseBilibiliPlayurlResponse(mixed)!.audioUrl,
-          'https://cdn/b.m4s');
+      expect(
+        parseBilibiliPlayurlResponse(mixed)!.audioUrl,
+        'https://cdn/b.m4s',
+      );
     });
   });
 
@@ -137,8 +150,11 @@ void main() {
       expect(req.clipEndMs, 64500);
       expect(req.documentTitle, '从零开始的异世界生活 第四季 - 第14话');
       expect(calls.length, 2);
-      expect(calls[1].queryParameters['cid'], '41473934960',
-          reason: 'playurl 必须用第 2 P 的 cid');
+      expect(
+        calls[1].queryParameters['cid'],
+        '41473934960',
+        reason: 'playurl 必须用第 2 P 的 cid',
+      );
       expect(calls[1].queryParameters['fnval'], '4048');
     });
 
@@ -187,11 +203,21 @@ void main() {
         },
       );
       await miner.buildRequest(
-          bvid: 'BV1x', page: 1, startMs: 0, endMs: 1,
-          fields: const <String, String>{}, sentence: 's');
+        bvid: 'BV1x',
+        page: 1,
+        startMs: 0,
+        endMs: 1,
+        fields: const <String, String>{},
+        sentence: 's',
+      );
       await miner.buildRequest(
-          bvid: 'BV1x', page: 2, startMs: 0, endMs: 1,
-          fields: const <String, String>{}, sentence: 's');
+        bvid: 'BV1x',
+        page: 2,
+        startMs: 0,
+        endMs: 1,
+        fields: const <String, String>{},
+        sentence: 's',
+      );
       expect(rounds, 4, reason: '分 P 是不同的 cid，缓存键必须含它');
     });
 
@@ -207,14 +233,22 @@ void main() {
       );
       await expectLater(
         miner.buildRequest(
-            bvid: 'BV1x', startMs: 0, endMs: 1,
-            fields: const <String, String>{}, sentence: 's'),
+          bvid: 'BV1x',
+          startMs: 0,
+          endMs: 1,
+          fields: const <String, String>{},
+          sentence: 's',
+        ),
         throwsA(isA<StateError>()),
       );
       // 立刻重试（仍在 TTL 内）必须真的重新请求，而不是拿到同一个 rejected future。
       final BilibiliClipRequest ok = await miner.buildRequest(
-          bvid: 'BV1x', startMs: 0, endMs: 1,
-          fields: const <String, String>{}, sentence: 's');
+        bvid: 'BV1x',
+        startMs: 0,
+        endMs: 1,
+        fields: const <String, String>{},
+        sentence: 's',
+      );
       expect(ok.audioSource, 'https://cdn/audio-30280.m4s');
     });
 
@@ -226,8 +260,12 @@ void main() {
       );
       await expectLater(
         miner.buildRequest(
-            bvid: 'BV1x', startMs: 0, endMs: 1,
-            fields: const <String, String>{}, sentence: 's'),
+          bvid: 'BV1x',
+          startMs: 0,
+          endMs: 1,
+          fields: const <String, String>{},
+          sentence: 's',
+        ),
         throwsA(isA<StateError>()),
       );
     });
@@ -239,38 +277,53 @@ void main() {
   group('audioSourceNeedsRangeMaterialization', () {
     test('googlevideo 及其子域要物化', () {
       expect(
-          audioSourceNeedsRangeMaterialization(
-              'https://rr3---sn-i3belne7.googlevideo.com/videoplayback?x=1'),
-          isTrue);
-      expect(audioSourceNeedsRangeMaterialization('https://googlevideo.com/a'),
-          isTrue);
+        audioSourceNeedsRangeMaterialization(
+          'https://rr3---sn-i3belne7.googlevideo.com/videoplayback?x=1',
+        ),
+        isTrue,
+      );
+      expect(
+        audioSourceNeedsRangeMaterialization('https://googlevideo.com/a'),
+        isTrue,
+      );
     });
 
     test('bilibili 的 audio-only m4s 不物化（实测可直接 seek）', () {
       expect(
-          audioSourceNeedsRangeMaterialization(
-              'https://xy1x2x3x4xy.mcdn.bilivideo.cn:8082/v1/resource/x.m4s?e=1'),
-          isFalse);
+        audioSourceNeedsRangeMaterialization(
+          'https://xy1x2x3x4xy.mcdn.bilivideo.cn:8082/v1/resource/x.m4s?e=1',
+        ),
+        isFalse,
+      );
       expect(
-          audioSourceNeedsRangeMaterialization(
-              'https://upos-sz-mirror08c.bilivideo.com/upgcxcode/x.m4s'),
-          isFalse);
+        audioSourceNeedsRangeMaterialization(
+          'https://upos-sz-mirror08c.bilivideo.com/upgcxcode/x.m4s',
+        ),
+        isFalse,
+      );
     });
 
     test('近似域名不得误命中（后缀匹配必须带点）', () {
       expect(
-          audioSourceNeedsRangeMaterialization('https://notgooglevideo.com/a'),
-          isFalse);
+        audioSourceNeedsRangeMaterialization('https://notgooglevideo.com/a'),
+        isFalse,
+      );
       expect(
-          audioSourceNeedsRangeMaterialization('https://googlevideo.com.evil.test/a'),
-          isFalse);
+        audioSourceNeedsRangeMaterialization(
+          'https://googlevideo.com.evil.test/a',
+        ),
+        isFalse,
+      );
     });
 
     test('null / 空串 / 非 http / 本地路径一律 false', () {
       expect(audioSourceNeedsRangeMaterialization(null), isFalse);
       expect(audioSourceNeedsRangeMaterialization(''), isFalse);
       expect(audioSourceNeedsRangeMaterialization('C:/tmp/a.m4a'), isFalse);
-      expect(audioSourceNeedsRangeMaterialization('file:///tmp/a.m4a'), isFalse);
+      expect(
+        audioSourceNeedsRangeMaterialization('file:///tmp/a.m4a'),
+        isFalse,
+      );
     });
   });
 }

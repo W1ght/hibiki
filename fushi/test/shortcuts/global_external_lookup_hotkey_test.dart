@@ -23,10 +23,9 @@ void main() {
     });
 
     test('globalExternal is its own co-active group', () {
-      expect(
-        ShortcutScope.globalExternal.coactiveScopes,
-        const <ShortcutScope>[ShortcutScope.globalExternal],
-      );
+      expect(ShortcutScope.globalExternal.coactiveScopes, const <ShortcutScope>[
+        ShortcutScope.globalExternal,
+      ]);
       for (final ShortcutScope other in ShortcutScope.values) {
         if (other == ShortcutScope.globalExternal) continue;
         expect(
@@ -44,28 +43,30 @@ void main() {
         TargetPlatform.linux,
       ]) {
         final ShortcutBindingSet set = ShortcutDefaults.forPlatform(
-            platform)[ShortcutAction.globalExternalLookup]!;
+          platform,
+        )[ShortcutAction.globalExternalLookup]!;
         expect(set.keyboardBindings, hasLength(1));
         final InputBinding binding = set.keyboardBindings.first;
         expect(binding.key, LogicalKeyboardKey.keyD);
-        expect(
-          binding.modifiers,
-          <ModifierKey>{ModifierKey.ctrl, ModifierKey.alt},
-        );
+        expect(binding.modifiers, <ModifierKey>{
+          ModifierKey.ctrl,
+          ModifierKey.alt,
+        });
         expect(binding.physicalKey, PhysicalKeyboardKey.keyD);
       }
     });
 
     test('macOS default swaps Ctrl for Meta', () {
       final ShortcutBindingSet set = ShortcutDefaults.forPlatform(
-          TargetPlatform.macOS)[ShortcutAction.globalExternalLookup]!;
+        TargetPlatform.macOS,
+      )[ShortcutAction.globalExternalLookup]!;
       expect(set.keyboardBindings, hasLength(1));
       final InputBinding binding = set.keyboardBindings.first;
       expect(binding.key, LogicalKeyboardKey.keyD);
-      expect(
-        binding.modifiers,
-        <ModifierKey>{ModifierKey.meta, ModifierKey.alt},
-      );
+      expect(binding.modifiers, <ModifierKey>{
+        ModifierKey.meta,
+        ModifierKey.alt,
+      });
     });
 
     test('mobile has no binding for this scope', () {
@@ -74,7 +75,8 @@ void main() {
         TargetPlatform.iOS,
       ]) {
         final ShortcutBindingSet set = ShortcutDefaults.forPlatform(
-            platform)[ShortcutAction.globalExternalLookup]!;
+          platform,
+        )[ShortcutAction.globalExternalLookup]!;
         expect(set.keyboardBindings, isEmpty);
         expect(set.gamepadBindings, isEmpty);
       }
@@ -87,8 +89,9 @@ void main() {
         TargetPlatform.android,
       ]) {
         expect(
-          ShortcutDefaults.forPlatform(platform)
-              .containsKey(ShortcutAction.globalExternalLookup),
+          ShortcutDefaults.forPlatform(
+            platform,
+          ).containsKey(ShortcutAction.globalExternalLookup),
           isTrue,
         );
       }
@@ -102,30 +105,34 @@ void main() {
 
     test('legacy snapshot without the key upgrades to default Ctrl+Alt+D', () {
       final FushiShortcutRegistry registry = FushiShortcutRegistry();
-      const String legacyJson = '{'
+      const String legacyJson =
+          '{'
           '"__schema_version__": 3,'
           '"reader_page_forward": {"keyboard": ["KeyN"], "gamepad": [], "mouse": []}'
           '}';
       registry.loadFromJsonString(legacyJson, TargetPlatform.windows);
 
-      final ShortcutBindingSet set =
-          registry.bindingsFor(ShortcutAction.globalExternalLookup);
+      final ShortcutBindingSet set = registry.bindingsFor(
+        ShortcutAction.globalExternalLookup,
+      );
       expect(set.keyboardBindings, hasLength(1));
       expect(set.keyboardBindings.first.key, LogicalKeyboardKey.keyD);
-      expect(
-        set.keyboardBindings.first.modifiers,
-        <ModifierKey>{ModifierKey.ctrl, ModifierKey.alt},
-      );
+      expect(set.keyboardBindings.first.modifiers, <ModifierKey>{
+        ModifierKey.ctrl,
+        ModifierKey.alt,
+      });
 
-      final ShortcutBindingSet fwd =
-          registry.bindingsFor(ShortcutAction.readerPageForward);
+      final ShortcutBindingSet fwd = registry.bindingsFor(
+        ShortcutAction.readerPageForward,
+      );
       expect(fwd.keyboardBindings, hasLength(1));
       expect(fwd.keyboardBindings.first.key, LogicalKeyboardKey.keyN);
     });
 
     test('user-cleared hotkey is not refilled on upgrade', () {
       final FushiShortcutRegistry registry = FushiShortcutRegistry();
-      const String json = '{'
+      const String json =
+          '{'
           '"__schema_version__": 4,'
           '"global_external_lookup": {"keyboard": [], "gamepad": [], "mouse": []}'
           '}';
@@ -152,25 +159,21 @@ void main() {
       // 不能写成单行字面量：实参一旦换行（dart format 在参数变长时必然这么做）
       // 就匹配不上，而「从 registry 读绑定」这条语义一点没变。允许中间有空白。
       expect(
-        RegExp(r'bindingsFor\(\s*ShortcutAction\.globalExternalLookup\s*[,)]')
-            .hasMatch(controllerSrc),
+        RegExp(
+          r'bindingsFor\(\s*ShortcutAction\.globalExternalLookup\s*[,)]',
+        ).hasMatch(controllerSrc),
         isTrue,
         reason: 'controller 必须从 registry 取绑定，不得写死按键',
       );
-      expect(
-        controllerSrc.contains('addListener(_onRegistryChanged)'),
-        isTrue,
-      );
+      expect(controllerSrc.contains('addListener(_onRegistryChanged)'), isTrue);
     });
 
     test('controller no longer hard-codes the Ctrl+Alt+D constant', () {
-      expect(
-        controllerSrc.contains('key: PhysicalKeyboardKey.keyD'),
-        isFalse,
-      );
+      expect(controllerSrc.contains('key: PhysicalKeyboardKey.keyD'), isFalse);
       expect(
         controllerSrc.contains(
-            'modifiers: <HotKeyModifier>[HotKeyModifier.control, HotKeyModifier.alt]'),
+          'modifiers: <HotKeyModifier>[HotKeyModifier.control, HotKeyModifier.alt]',
+        ),
         isFalse,
       );
     });
@@ -194,18 +197,16 @@ void main() {
     });
 
     test('ShortcutScopeLabel covers globalExternal', () {
-      expect(
-        labelsSrc.contains('case ShortcutScope.globalExternal:'),
-        isTrue,
-      );
+      expect(labelsSrc.contains('case ShortcutScope.globalExternal:'), isTrue);
     });
 
     test('settings page still iterates ShortcutScope.values', () {
       expect(
-        RegExp('for'
-                r'\s*\(\s*final\s+ShortcutScope\s+scope\s+in\s+'
-                r'ShortcutScope\.values')
-            .hasMatch(pageSrc),
+        RegExp(
+          'for'
+          r'\s*\(\s*final\s+ShortcutScope\s+scope\s+in\s+'
+          r'ShortcutScope\.values',
+        ).hasMatch(pageSrc),
         isTrue,
       );
     });

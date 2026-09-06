@@ -48,7 +48,8 @@ void main() {
       expect(
         item.title,
         navItem.label,
-        reason: '${item.id} 的标题与底栏「${navItem.label}」对不上——'
+        reason:
+            '${item.id} 的标题与底栏「${navItem.label}」对不上——'
             '别在设置里手写第二份标签，取 homeNavItemFor(tab).label',
       );
       expect(

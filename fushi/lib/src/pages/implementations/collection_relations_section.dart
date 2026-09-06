@@ -80,8 +80,9 @@ class _CollectionRelationsSectionState
     CollectionRelationRow relation,
     Offset globalPosition,
   ) async {
-    final RenderObject? overlay =
-        Overlay.of(context).context.findRenderObject();
+    final RenderObject? overlay = Overlay.of(
+      context,
+    ).context.findRenderObject();
     if (overlay is! RenderBox) return;
     final Offset anchor = overlay.globalToLocal(globalPosition);
     final _RelationMenuAction? action = await showMenu<_RelationMenuAction>(
@@ -127,8 +128,8 @@ class _CollectionRelationsSectionState
   /// 「绑定到已有合集」：列全部本地合集（排除本合集自身）→ 选中即写
   /// bindCollectionRelationTarget 并刷新区块。
   Future<void> _bindToExisting(CollectionRelationRow relation) async {
-    final List<MediaCollectionRow> all =
-        await widget.database.getAllMediaCollections();
+    final List<MediaCollectionRow> all = await widget.database
+        .getAllMediaCollections();
     final List<MediaCollectionRow> candidates = <MediaCollectionRow>[
       for (final MediaCollectionRow c in all)
         if (c.id != widget.collectionId) c,
@@ -157,10 +158,7 @@ class _CollectionRelationsSectionState
     setState(() => _refresh++);
   }
 
-  Widget _buildCard(
-    BuildContext context,
-    CollectionRelationRow relation,
-  ) {
+  Widget _buildCard(BuildContext context, CollectionRelationRow relation) {
     // 封面三级回落：coverPath 本地文件 → coverUrl 网络（Image.network 是刮削
     // 候选封面的既有口径，见 scrape_cover_preview.dart）→ 占位图标。
     final ImageProvider? localCover = resolveMediaCoverImage(
@@ -240,9 +238,9 @@ class _CollectionRelationsSectionState
                 relation.title,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      fontWeight: FontWeight.w600,
-                    ),
+                style: Theme.of(
+                  context,
+                ).textTheme.bodySmall?.copyWith(fontWeight: FontWeight.w600),
               ),
             ),
           ],
@@ -254,10 +252,10 @@ class _CollectionRelationsSectionState
   /// 无封面占位走三库页共用的 [ShelfCoverPlaceholder]（底色/描边/图标色全部
   /// 取自设计令牌，`tokens.surfaces.overlay` 即原先直读的最高阶容器面色）。
   Widget _coverPlaceholder(BuildContext context) => ShelfCoverPlaceholder(
-        icon: Icons.movie_outlined,
-        iconSize: 28,
-        backgroundColor: FushiDesignTokens.of(context).surfaces.overlay,
-      );
+    icon: Icons.movie_outlined,
+    iconSize: 28,
+    backgroundColor: FushiDesignTokens.of(context).surfaces.overlay,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -265,55 +263,59 @@ class _CollectionRelationsSectionState
     return FutureBuilder<List<CollectionRelationRow>>(
       key: ValueKey<int>(_refresh),
       future: widget.database.getCollectionRelations(widget.collectionId),
-      builder: (
-        BuildContext context,
-        AsyncSnapshot<List<CollectionRelationRow>> snap,
-      ) {
-        final List<CollectionRelationRow> relations =
-            snap.data ?? const <CollectionRelationRow>[];
-        // 无关系边（未刮削/源无关联）整块不渲染，不占位。
-        if (relations.isEmpty) return const SizedBox.shrink();
-        return Padding(
-          key: const ValueKey<String>('collection-relations-section'),
-          padding: EdgeInsets.only(top: tokens.spacing.section),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: tokens.spacing.page),
-                child: Text(
-                  t.collection_related_title,
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        fontWeight: FontWeight.w700,
-                      ),
-                ),
-              ),
-              SizedBox(height: tokens.spacing.rowVertical),
-              SizedBox(
-                height: _coverHeight + _textHeight,
-                // 鼠标拖动横滚（home_video 横滚行同款）。**裸滚轮刻意不横滚**：
-                // 本区嵌在合集详情页的纵向滚动里，投轴会把整页滚动吃掉
-                // （BUG-1536）；Shift + 滚轮的横滚由 Flutter 内建翻轴提供，
-                // 行为守卫见 test/pages/collection_relations_section_test.dart。
-                child: HorizontalDragScrollable(
-                  child: ListView.separated(
-                    controller: _controller,
-                    scrollDirection: Axis.horizontal,
-                    physics: desktopAwareScrollPhysics(),
+      builder:
+          (
+            BuildContext context,
+            AsyncSnapshot<List<CollectionRelationRow>> snap,
+          ) {
+            final List<CollectionRelationRow> relations =
+                snap.data ?? const <CollectionRelationRow>[];
+            // 无关系边（未刮削/源无关联）整块不渲染，不占位。
+            if (relations.isEmpty) return const SizedBox.shrink();
+            return Padding(
+              key: const ValueKey<String>('collection-relations-section'),
+              padding: EdgeInsets.only(top: tokens.spacing.section),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Padding(
                     padding: EdgeInsets.symmetric(
                       horizontal: tokens.spacing.page,
                     ),
-                    itemCount: relations.length,
-                    separatorBuilder: (_, __) => const SizedBox(width: _gap),
-                    itemBuilder: (BuildContext context, int index) =>
-                        _buildCard(context, relations[index]),
+                    child: Text(
+                      t.collection_related_title,
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                   ),
-                ),
+                  SizedBox(height: tokens.spacing.rowVertical),
+                  SizedBox(
+                    height: _coverHeight + _textHeight,
+                    // 鼠标拖动横滚（home_video 横滚行同款）。**裸滚轮刻意不横滚**：
+                    // 本区嵌在合集详情页的纵向滚动里，投轴会把整页滚动吃掉
+                    // （BUG-1536）；Shift + 滚轮的横滚由 Flutter 内建翻轴提供，
+                    // 行为守卫见 test/pages/collection_relations_section_test.dart。
+                    child: HorizontalDragScrollable(
+                      child: ListView.separated(
+                        controller: _controller,
+                        scrollDirection: Axis.horizontal,
+                        physics: desktopAwareScrollPhysics(),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: tokens.spacing.page,
+                        ),
+                        itemCount: relations.length,
+                        separatorBuilder: (_, __) =>
+                            const SizedBox(width: _gap),
+                        itemBuilder: (BuildContext context, int index) =>
+                            _buildCard(context, relations[index]),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
-        );
-      },
+            );
+          },
     );
   }
 }

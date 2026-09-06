@@ -30,7 +30,9 @@ String? _scanForWoff2(Directory dir) {
     for (final FileSystemEntity e in dir.listSync(recursive: true)) {
       if (e is File && e.path.toLowerCase().endsWith('.woff2')) return e.path;
     }
-  } catch (_) {/* ignore unreadable dirs */}
+  } catch (_) {
+    /* ignore unreadable dirs */
+  }
   return null;
 }
 
@@ -63,8 +65,10 @@ String? _findWoff2() {
 
   for (final Directory cache in caches) {
     // The SDK ships Roboto .woff2 under DevTools' bundled perfetto assets.
-    final String? hit = _scanForWoff2(
-            Directory('${cache.path}/dart-sdk/bin/resources/devtools')) ??
+    final String? hit =
+        _scanForWoff2(
+          Directory('${cache.path}/dart-sdk/bin/resources/devtools'),
+        ) ??
         _scanForWoff2(cache);
     if (hit != null) return hit;
   }
@@ -75,17 +79,23 @@ String? _findWoff2() {
 String _requireWoff2() {
   final String? fixture = _findWoff2();
   if (fixture != null) return fixture;
-  fail('no .woff2 fixture found. The committed one is $kVendoredWoff2Fixture — '
-      'restore it (git checkout) rather than skipping this test. An explicit '
-      'FUSHI_WOFF2_FIXTURE override is honoured when running outside the repo '
-      'tree. TODO-2715: this used to markTestSkipped, which turned "the '
-      'fixture is gone" into a silently green run.');
+  fail(
+    'no .woff2 fixture found. The committed one is $kVendoredWoff2Fixture — '
+    'restore it (git checkout) rather than skipping this test. An explicit '
+    'FUSHI_WOFF2_FIXTURE override is honoured when running outside the repo '
+    'tree. TODO-2715: this used to markTestSkipped, which turned "the '
+    'fixture is gone" into a silently green run.',
+  );
 }
 
 ({int flavor, int numTables, Map<String, (int, int)> tables}) _parse(
-    Uint8List sfnt) {
-  final ByteData bd =
-      ByteData.view(sfnt.buffer, sfnt.offsetInBytes, sfnt.lengthInBytes);
+  Uint8List sfnt,
+) {
+  final ByteData bd = ByteData.view(
+    sfnt.buffer,
+    sfnt.offsetInBytes,
+    sfnt.lengthInBytes,
+  );
   final int flavor = bd.getUint32(0);
   final int n = bd.getUint16(4);
   final Map<String, (int, int)> tables = <String, (int, int)>{};
@@ -110,69 +120,92 @@ void main() {
   // legible failure instead of a decode error further down.
   test('the committed .woff2 fixture is present and non-trivial', () {
     final File vendored = File(kVendoredWoff2Fixture);
-    expect(vendored.existsSync(), isTrue,
-        reason: '$kVendoredWoff2Fixture is tracked in git; a missing file is a '
-            'broken checkout, not a reason to skip the decoder test');
+    expect(
+      vendored.existsSync(),
+      isTrue,
+      reason:
+          '$kVendoredWoff2Fixture is tracked in git; a missing file is a '
+          'broken checkout, not a reason to skip the decoder test',
+    );
     // A git-lfs pointer / truncated download is ~130 bytes of ASCII; a real
     // woff2 starts with the `wOF2` signature and is kilobytes long.
     final Uint8List bytes = vendored.readAsBytesSync();
-    expect(bytes.length, greaterThan(4096),
-        reason: 'fixture is ${bytes.length} bytes — looks truncated');
-    expect(String.fromCharCodes(bytes.sublist(0, 4)), 'wOF2',
-        reason: 'fixture does not carry the woff2 signature');
+    expect(
+      bytes.length,
+      greaterThan(4096),
+      reason: 'fixture is ${bytes.length} bytes — looks truncated',
+    );
+    expect(
+      String.fromCharCodes(bytes.sublist(0, 4)),
+      'wOF2',
+      reason: 'fixture does not carry the woff2 signature',
+    );
   });
 
-  test('decodes a real Roboto .woff2 into a loadable, structurally valid sfnt',
-      () async {
-    final String fixture = _requireWoff2();
+  test(
+    'decodes a real Roboto .woff2 into a loadable, structurally valid sfnt',
+    () async {
+      final String fixture = _requireWoff2();
 
-    final Uint8List woff2 = File(fixture).readAsBytesSync();
-    final Uint8List? sfnt = Woff2Decoder.toSfnt(woff2);
-    expect(sfnt, isNotNull, reason: 'decode returned null for $fixture');
+      final Uint8List woff2 = File(fixture).readAsBytesSync();
+      final Uint8List? sfnt = Woff2Decoder.toSfnt(woff2);
+      expect(sfnt, isNotNull, reason: 'decode returned null for $fixture');
 
-    final parsed = _parse(sfnt!);
-    expect(parsed.flavor == 0x00010000 || parsed.flavor == 0x4F54544F, isTrue,
-        reason: 'unexpected sfnt flavor 0x${parsed.flavor.toRadixString(16)}');
-    expect(parsed.tables.keys.toSet().containsAll(<String>{'head', 'maxp'}),
+      final parsed = _parse(sfnt!);
+      expect(
+        parsed.flavor == 0x00010000 || parsed.flavor == 0x4F54544F,
         isTrue,
-        reason: 'missing core tables: ${parsed.tables.keys}');
+        reason: 'unexpected sfnt flavor 0x${parsed.flavor.toRadixString(16)}',
+      );
+      expect(
+        parsed.tables.keys.toSet().containsAll(<String>{'head', 'maxp'}),
+        isTrue,
+        reason: 'missing core tables: ${parsed.tables.keys}',
+      );
 
-    final ByteData bd =
-        ByteData.view(sfnt.buffer, sfnt.offsetInBytes, sfnt.lengthInBytes);
+      final ByteData bd = ByteData.view(
+        sfnt.buffer,
+        sfnt.offsetInBytes,
+        sfnt.lengthInBytes,
+      );
 
-    // If glyf-based, loca must have numGlyphs+1 long entries, monotonic, and
-    // every glyph must begin with a sane contour count.
-    final (int, int)? maxp = parsed.tables['maxp'];
-    final (int, int)? head = parsed.tables['head'];
-    final (int, int)? loca = parsed.tables['loca'];
-    final (int, int)? glyf = parsed.tables['glyf'];
-    if (glyf != null && loca != null && maxp != null && head != null) {
-      final int numGlyphs = bd.getUint16(maxp.$1 + 4);
-      // We always emit the long loca format.
-      expect(bd.getInt16(head.$1 + 50), 1, reason: 'head.indexToLocFormat');
-      expect(loca.$2, (numGlyphs + 1) * 4, reason: 'loca length');
-      int prev = -1;
-      for (int i = 0; i <= numGlyphs; i++) {
-        final int off = bd.getUint32(loca.$1 + i * 4);
-        expect(off >= prev, isTrue, reason: 'loca not monotonic at $i');
-        prev = off;
+      // If glyf-based, loca must have numGlyphs+1 long entries, monotonic, and
+      // every glyph must begin with a sane contour count.
+      final (int, int)? maxp = parsed.tables['maxp'];
+      final (int, int)? head = parsed.tables['head'];
+      final (int, int)? loca = parsed.tables['loca'];
+      final (int, int)? glyf = parsed.tables['glyf'];
+      if (glyf != null && loca != null && maxp != null && head != null) {
+        final int numGlyphs = bd.getUint16(maxp.$1 + 4);
+        // We always emit the long loca format.
+        expect(bd.getInt16(head.$1 + 50), 1, reason: 'head.indexToLocFormat');
+        expect(loca.$2, (numGlyphs + 1) * 4, reason: 'loca length');
+        int prev = -1;
+        for (int i = 0; i <= numGlyphs; i++) {
+          final int off = bd.getUint32(loca.$1 + i * 4);
+          expect(off >= prev, isTrue, reason: 'loca not monotonic at $i');
+          prev = off;
+        }
+        expect(prev, glyf.$2, reason: 'final loca offset != glyf length');
+        for (int i = 0; i < numGlyphs; i++) {
+          final int s = bd.getUint32(loca.$1 + i * 4);
+          final int e = bd.getUint32(loca.$1 + (i + 1) * 4);
+          if (e == s) continue; // empty glyph
+          final int nc = bd.getInt16(glyf.$1 + s);
+          expect(nc >= -1, isTrue, reason: 'glyph $i bad contour count $nc');
+        }
       }
-      expect(prev, glyf.$2, reason: 'final loca offset != glyf length');
-      for (int i = 0; i < numGlyphs; i++) {
-        final int s = bd.getUint32(loca.$1 + i * 4);
-        final int e = bd.getUint32(loca.$1 + (i + 1) * 4);
-        if (e == s) continue; // empty glyph
-        final int nc = bd.getInt16(glyf.$1 + s);
-        expect(nc >= -1, isTrue, reason: 'glyph $i bad contour count $nc');
-      }
-    }
 
-    // The engine must accept the reconstructed font.
-    final FontLoader loader = FontLoader('Woff2 Decoder Test')
-      ..addFont(Future<ByteData>.value(
-          ByteData.view(sfnt.buffer, sfnt.offsetInBytes, sfnt.lengthInBytes)));
-    await loader.load();
-  });
+      // The engine must accept the reconstructed font.
+      final FontLoader loader = FontLoader('Woff2 Decoder Test')
+        ..addFont(
+          Future<ByteData>.value(
+            ByteData.view(sfnt.buffer, sfnt.offsetInBytes, sfnt.lengthInBytes),
+          ),
+        );
+      await loader.load();
+    },
+  );
 
   // The Roboto fixture does not exercise the hmtx transform, so verify that
   // reconstruction directly (both the from-xMin and from-stream paths).
@@ -185,8 +218,11 @@ void main() {
     test('omitted lsb arrays are derived from glyf xMin', () {
       // flags=0x03 (both lsb arrays omitted); advanceWidth[2] = 500, 600.
       final Uint8List tx = bytesOf(<int>[0x03, 0x01, 0xF4, 0x02, 0x58]);
-      final Uint8List? hmtx =
-          Woff2Decoder.reconstructHmtxForTest(tx, 2, <int>[10, 20, 30]);
+      final Uint8List? hmtx = Woff2Decoder.reconstructHmtxForTest(tx, 2, <int>[
+        10,
+        20,
+        30,
+      ]);
       expect(hmtx, isNotNull);
       final ByteData bd = viewOf(hmtx!);
       expect(hmtx.length, 2 * 4 + 1 * 2);
@@ -205,8 +241,11 @@ void main() {
         0x00, 0x05, 0xFF, 0xFB, // lsb 5, -5
         0x00, 0x09, // mono lsb 9
       ]);
-      final Uint8List? hmtx =
-          Woff2Decoder.reconstructHmtxForTest(tx, 2, <int>[0, 0, 0]);
+      final Uint8List? hmtx = Woff2Decoder.reconstructHmtxForTest(tx, 2, <int>[
+        0,
+        0,
+        0,
+      ]);
       expect(hmtx, isNotNull);
       final ByteData bd = viewOf(hmtx!);
       expect(bd.getUint16(0), 500);
@@ -219,7 +258,10 @@ void main() {
     test('rejects numberOfHMetrics greater than numGlyphs', () {
       expect(
         Woff2Decoder.reconstructHmtxForTest(
-            bytesOf(<int>[0x03, 0x00, 0x00]), 5, <int>[0, 0]),
+          bytesOf(<int>[0x03, 0x00, 0x00]),
+          5,
+          <int>[0, 0],
+        ),
         isNull,
       );
     });

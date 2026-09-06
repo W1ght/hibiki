@@ -54,7 +54,7 @@ String? resolveContentLanguage({
   for (final String? candidate in <String?>[
     explicit,
     metadata,
-    globalDefault
+    globalDefault,
   ]) {
     final String trimmed = candidate?.trim() ?? '';
     if (trimmed.isNotEmpty) return trimmed;
@@ -136,8 +136,9 @@ String contentFontFamilyCss({
   if (families.isEmpty) return '';
 
   final String generic = style == CjkFontStyle.serif ? 'serif' : 'sans-serif';
-  final String quoted =
-      families.map((String f) => '"${_escapeCssFamily(f)}"').join(', ');
+  final String quoted = families
+      .map((String f) => '"${_escapeCssFamily(f)}"')
+      .join(', ');
   return '$quoted, $generic';
 }
 

@@ -107,8 +107,11 @@ void main() {
 
           controller.requestCancel();
 
-          expect(job.cancelToken.isCancelled, isTrue,
-              reason: '当前这次 dio.download 必须立刻断流');
+          expect(
+            job.cancelToken.isCancelled,
+            isTrue,
+            reason: '当前这次 dio.download 必须立刻断流',
+          );
           expect(job.isCancelled, isTrue, reason: '批量循环靠它在下一本开始前停下');
           expect(controller.canCancel, isFalse, reason: '取消过一次后按钮要变灰');
           return null;
@@ -126,15 +129,19 @@ void main() {
         body: (DictionaryDownloadJob job) async {
           job.markImportPhase();
 
-          expect(controller.canCancel, isFalse,
-              reason: 'native 导入是一次不可分割的 FFI 调用，C++ 侧零 abort flag');
+          expect(
+            controller.canCancel,
+            isFalse,
+            reason: 'native 导入是一次不可分割的 FFI 调用，C++ 侧零 abort flag',
+          );
 
           controller.requestCancel();
 
           expect(
             job.cancelToken.isCancelled,
             isFalse,
-            reason: '导入内部是「导新到 temp → 删旧 → publish」，'
+            reason:
+                '导入内部是「导新到 temp → 删旧 → publish」，'
                 '中途硬中断能落在「删旧之后」，把用户已有的词典毁掉',
           );
           expect(job.isCancelled, isFalse, reason: '导入期的误点不该连带停掉后面几本');
@@ -200,7 +207,9 @@ void main() {
       expect(
         DictionaryDownloadController.isCancellation(
           DioError(
-              requestOptions: options, type: DioErrorType.connectionTimeout),
+            requestOptions: options,
+            type: DioErrorType.connectionTimeout,
+          ),
         ),
         isFalse,
       );
@@ -221,9 +230,9 @@ void main() {
         initialMessage: 'x',
         body: (DictionaryDownloadJob job) async =>
             const DictionaryDownloadOutcome(
-          message: 'done',
-          severity: ToastSeverity.success,
-        ),
+              message: 'done',
+              severity: ToastSeverity.success,
+            ),
       );
 
       expect(outcomes, hasLength(1));

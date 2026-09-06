@@ -24,8 +24,9 @@ void main() {
     });
 
     test('间隔超过 idleGapMs 的挂机段不计入活跃时长', () {
-      final GalHookActivityAccumulator acc =
-          GalHookActivityAccumulator(idleGapMs: 30000);
+      final GalHookActivityAccumulator acc = GalHookActivityAccumulator(
+        idleGapMs: 30000,
+      );
       acc.recordLine(1, 0);
       acc.recordLine(1, 20000); // 20s 在阈值内 → +20000
       acc.recordLine(1, 100000); // 80s 挂机 → 不计
@@ -42,8 +43,10 @@ void main() {
     });
 
     test('shouldFlush：满字符阈值', () {
-      final GalHookActivityAccumulator acc =
-          GalHookActivityAccumulator(flushChars: 500, flushDurationMs: 60000);
+      final GalHookActivityAccumulator acc = GalHookActivityAccumulator(
+        flushChars: 500,
+        flushDurationMs: 60000,
+      );
       acc.recordLine(499, 0);
       expect(acc.shouldFlush, isFalse);
       acc.recordLine(1, 100);
@@ -53,7 +56,10 @@ void main() {
 
     test('shouldFlush：满活跃时长阈值', () {
       final GalHookActivityAccumulator acc = GalHookActivityAccumulator(
-          flushChars: 500, flushDurationMs: 60000, idleGapMs: 30000);
+        flushChars: 500,
+        flushDurationMs: 60000,
+        idleGapMs: 30000,
+      );
       // 每段间隔 <= idleGapMs 才计入；用两段 30s 累到 60s（59s 单跳会被挂机封顶剔除）。
       acc.recordLine(1, 0);
       acc.recordLine(1, 30000); // +30000 = 30s < 60s
@@ -65,8 +71,10 @@ void main() {
     });
 
     test('无字符累计时不 flush（duration 单独不触发）', () {
-      final GalHookActivityAccumulator acc =
-          GalHookActivityAccumulator(flushChars: 500, flushDurationMs: 60000);
+      final GalHookActivityAccumulator acc = GalHookActivityAccumulator(
+        flushChars: 500,
+        flushDurationMs: 60000,
+      );
       // chars 全为 0 → shouldFlush 恒 false（防空 flush）。
       acc.recordLine(0, 0);
       acc.recordLine(0, 70000);

@@ -75,8 +75,9 @@ class _VideoTranslucentBottomDrawerState
             height: _collapsed ? null : height,
             child: Material(
               key: const ValueKey<String>('video-subtitle-drawer'),
-              color: colorScheme.surface
-                  .withValues(alpha: kVideoOverlayTranslucentAlpha),
+              color: colorScheme.surface.withValues(
+                alpha: kVideoOverlayTranslucentAlpha,
+              ),
               elevation: 8,
               clipBehavior: Clip.antiAlias,
               borderRadius: borderRadius,
@@ -173,12 +174,15 @@ class VideoTranslucentSidePanel extends StatelessWidget {
     final ColorScheme colorScheme = Theme.of(context).colorScheme;
     final Size screen = MediaQuery.sizeOf(context);
     const double horizontalMargin = 10.0;
-    final double availableWidth =
-        (screen.width - horizontalMargin * 2).clamp(0.0, double.infinity);
+    final double availableWidth = (screen.width - horizontalMargin * 2).clamp(
+      0.0,
+      double.infinity,
+    );
     final double maxPanelWidth = availableWidth * 0.94;
     final double minPanelWidth = maxPanelWidth < 280.0 ? maxPanelWidth : 280.0;
-    final double panelWidth =
-        width.clamp(minPanelWidth, maxPanelWidth).toDouble();
+    final double panelWidth = width
+        .clamp(minPanelWidth, maxPanelWidth)
+        .toDouble();
     // 侧栏与窗口四边都留有安全间距，因此外侧两个角也应完整露出；旧实现只给
     // 靠画面一侧加圆角，右侧栏的右上 / 右下仍是直角，看起来像贴边抽屉。
     const BorderRadius borderRadius = BorderRadius.all(Radius.circular(12));
@@ -195,8 +199,9 @@ class VideoTranslucentSidePanel extends StatelessWidget {
             width: panelWidth,
             child: Material(
               // 浮层 alpha 两档制的半透明档（UI 巡检 PR-4）。
-              color: colorScheme.surface
-                  .withValues(alpha: kVideoOverlayTranslucentAlpha),
+              color: colorScheme.surface.withValues(
+                alpha: kVideoOverlayTranslucentAlpha,
+              ),
               elevation: 8,
               clipBehavior: Clip.antiAlias,
               borderRadius: borderRadius,

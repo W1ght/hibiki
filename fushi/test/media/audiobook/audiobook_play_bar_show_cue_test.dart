@@ -59,16 +59,19 @@ void main() {
     expect(find.text('現在の文'), findsOneWidget);
   });
 
-  testWidgets('showCue:false hides the cue text but keeps controls in place',
-      (tester) async {
+  testWidgets('showCue:false hides the cue text but keeps controls in place', (
+    tester,
+  ) async {
     // 同一控制器、同一布局：先量 showCue:true 的控件位置，再量 showCue:false。
     final _CueController shown = _CueController('現在の文');
     addTearDown(shown.dispose);
     await _pumpBar(tester, showCue: true, controller: shown);
-    final double playShown =
-        tester.getCenter(find.byIcon(Icons.play_arrow_outlined)).dx;
-    final double tuneShown =
-        tester.getCenter(find.byIcon(Icons.tune_outlined)).dx;
+    final double playShown = tester
+        .getCenter(find.byIcon(Icons.play_arrow_outlined))
+        .dx;
+    final double tuneShown = tester
+        .getCenter(find.byIcon(Icons.tune_outlined))
+        .dx;
 
     final _CueController hidden = _CueController('現在の文');
     addTearDown(hidden.dispose);
@@ -77,10 +80,12 @@ void main() {
     // 文本不再渲染。
     expect(find.text('現在の文'), findsNothing);
     // 但播放键 / 设置齿轮位置不变（Expanded 占位保留，布局不跳）。
-    final double playHidden =
-        tester.getCenter(find.byIcon(Icons.play_arrow_outlined)).dx;
-    final double tuneHidden =
-        tester.getCenter(find.byIcon(Icons.tune_outlined)).dx;
+    final double playHidden = tester
+        .getCenter(find.byIcon(Icons.play_arrow_outlined))
+        .dx;
+    final double tuneHidden = tester
+        .getCenter(find.byIcon(Icons.tune_outlined))
+        .dx;
     expect(playHidden, playShown);
     expect(tuneHidden, tuneShown);
   });

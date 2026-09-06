@@ -143,8 +143,9 @@ class _HomeDictionaryPageState extends BaseTabPageState<HomeDictionaryPage>
     appModelNoUpdate.dictionarySearchAgainNotifier.addListener(_searchAgain);
     // TODO-1204：接线查词计数（每次查词 +1 → lookup_mining_counters）。
     attachLookupCounter(_popup);
-    appModelNoUpdate.dictionaryEntriesNotifier
-        .addListener(_onDictionaryEntriesChanged);
+    appModelNoUpdate.dictionaryEntriesNotifier.addListener(
+      _onDictionaryEntriesChanged,
+    );
     _searchFocusNode.addListener(_onFocusChanged);
     widget.focusSignal?.addListener(_onFocusSignal);
     DesktopLookupService.instance.addListener(_onDesktopLookupPending);
@@ -252,8 +253,9 @@ class _HomeDictionaryPageState extends BaseTabPageState<HomeDictionaryPage>
     DesktopLookupService.instance.removeListener(_onDesktopLookupPending);
     _searchFocusNode.removeListener(_onFocusChanged);
     appModelNoUpdate.dictionarySearchAgainNotifier.removeListener(_searchAgain);
-    appModelNoUpdate.dictionaryEntriesNotifier
-        .removeListener(_onDictionaryEntriesChanged);
+    appModelNoUpdate.dictionaryEntriesNotifier.removeListener(
+      _onDictionaryEntriesChanged,
+    );
     _commitHistory();
     _debounceTimer?.cancel();
     _searchFocusNode.dispose();
@@ -422,8 +424,9 @@ class _HomeDictionaryPageState extends BaseTabPageState<HomeDictionaryPage>
 
   Widget _buildSearchHeader() {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final double horizontalPadding =
-        isCupertinoPlatform(context) ? tokens.spacing.gap : tokens.spacing.page;
+    final double horizontalPadding = isCupertinoPlatform(context)
+        ? tokens.spacing.gap
+        : tokens.spacing.page;
     return Padding(
       padding: EdgeInsets.fromLTRB(
         horizontalPadding,
@@ -517,12 +520,12 @@ class _HomeDictionaryPageState extends BaseTabPageState<HomeDictionaryPage>
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) =>
           SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
-        child: ConstrainedBox(
-          constraints: BoxConstraints(minHeight: constraints.maxHeight),
-          child: Center(child: content),
-        ),
-      ),
+            physics: const AlwaysScrollableScrollPhysics(),
+            child: ConstrainedBox(
+              constraints: BoxConstraints(minHeight: constraints.maxHeight),
+              child: Center(child: content),
+            ),
+          ),
     );
   }
 
@@ -555,8 +558,10 @@ class _HomeDictionaryPageState extends BaseTabPageState<HomeDictionaryPage>
         final hasWordInfo = word.isNotEmpty && word != searchTerm;
         final hasReading =
             reading.isNotEmpty && reading != word && reading != searchTerm;
-        final dictCount =
-            result.entries.map((e) => e.dictionaryName).toSet().length;
+        final dictCount = result.entries
+            .map((e) => e.dictionaryName)
+            .toSet()
+            .length;
         return FushiCard(
           margin: EdgeInsets.symmetric(
             horizontal: tokens.spacing.page,
@@ -564,18 +569,18 @@ class _HomeDictionaryPageState extends BaseTabPageState<HomeDictionaryPage>
           ),
           onTap: () {
             _controller.text = searchTerm;
-            _controller.selection =
-                TextSelection.collapsed(offset: searchTerm.length);
+            _controller.selection = TextSelection.collapsed(
+              offset: searchTerm.length,
+            );
             _showCachedResult(result);
           },
           padding: EdgeInsets.zero,
           child: FushiListItem(
             title: Text(searchTerm.replaceAll('\n', ' ')),
             subtitle: hasWordInfo || hasReading
-                ? Text([
-                    if (hasWordInfo) word,
-                    if (hasReading) reading,
-                  ].join('  '))
+                ? Text(
+                    [if (hasWordInfo) word, if (hasReading) reading].join('  '),
+                  )
                 : null,
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
@@ -731,8 +736,11 @@ class _HomeDictionaryPageState extends BaseTabPageState<HomeDictionaryPage>
           if (shouldAutoRead) {
             final entry = result.entries.first;
             if (entry.word.isNotEmpty) {
-              autoReadWord(entry.word, entry.reading,
-                  popupState: _resultWebViewKey.currentState);
+              autoReadWord(
+                entry.word,
+                entry.reading,
+                popupState: _resultWebViewKey.currentState,
+              );
             }
           }
         }
@@ -779,17 +787,17 @@ class _HomeDictionaryPageState extends BaseTabPageState<HomeDictionaryPage>
 
   @override
   Future<int> debugOpenPopup(String term) => _pushNestedPopup(
-        term,
-        const Rect.fromLTWH(180, 180, 24, 24),
-        reuseWarmSlot: true,
-      );
+    term,
+    const Rect.fromLTWH(180, 180, 24, 24),
+    reuseWarmSlot: true,
+  );
 
   @override
   Future<int> debugOpenNestedPopup(String term) => _pushNestedPopup(
-        term,
-        const Rect.fromLTWH(220, 220, 24, 24),
-        reuseWarmSlot: false,
-      );
+    term,
+    const Rect.fromLTWH(220, 220, 24, 24),
+    reuseWarmSlot: false,
+  );
 
   @override
   Object? get debugTopPopupWebViewState {
@@ -799,9 +807,9 @@ class _HomeDictionaryPageState extends BaseTabPageState<HomeDictionaryPage>
 
   @override
   ({int depth, int parkedRealms}) get debugPopupStackShape => (
-        depth: _popup.lastVisibleIndex + 1,
-        parkedRealms: _popup.parkedRealms.length,
-      );
+    depth: _popup.lastVisibleIndex + 1,
+    parkedRealms: _popup.parkedRealms.length,
+  );
 
   @override
   double? get debugTopPopupAutoFitHeight {
@@ -836,7 +844,8 @@ class _HomeDictionaryPageState extends BaseTabPageState<HomeDictionaryPage>
             // TODO-617：弹窗已提到根 Overlay（全窗、净缩放=1），源文本条点字必须回报屏幕
             // （global）坐标与之同系；不再用结果子区域 [_resultStackKey] 局部坐标。
             globalCoordinates: true,
-            dictionaryHeadwordScale: appModel.dictionaryFontSize /
+            dictionaryHeadwordScale:
+                appModel.dictionaryFontSize /
                 appModel.defaultDictionaryFontSize,
             onLookup: (String query, Rect screenRect) {
               _pushNestedPopup(query, screenRect, reuseWarmSlot: true);
@@ -947,8 +956,10 @@ class _HomeDictionaryPageState extends BaseTabPageState<HomeDictionaryPage>
         child: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {
             if (!mounted || _overlayInert) return const SizedBox.shrink();
-            final Size screen =
-                Size(constraints.maxWidth, constraints.maxHeight);
+            final Size screen = Size(
+              constraints.maxWidth,
+              constraints.maxHeight,
+            );
             return Stack(
               // BUG-135：隐藏热槽停到屏幕右外侧（buildNestedPopupLayer），Clip.none 让它在
               // 屏外照常预热又不被裁；飘出窗的弹窗同理不裁。
@@ -1052,10 +1063,7 @@ class _HomeDictionaryPageState extends BaseTabPageState<HomeDictionaryPage>
 
 @visibleForTesting
 class HomeDictionaryClearHistoryDialog extends StatelessWidget {
-  const HomeDictionaryClearHistoryDialog({
-    required this.onConfirm,
-    super.key,
-  });
+  const HomeDictionaryClearHistoryDialog({required this.onConfirm, super.key});
 
   final VoidCallback onConfirm;
 

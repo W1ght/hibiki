@@ -43,8 +43,10 @@ void main() {
     LocaleSettings.setLocale(AppLocale.zhCn);
     db = FushiDatabase.forTesting(NativeDatabase.memory());
     repo = VideoBookRepository(db);
-    collectionId =
-        await db.createMediaCollection('Show', collectionType: 'playlist');
+    collectionId = await db.createMediaCollection(
+      'Show',
+      collectionType: 'playlist',
+    );
   });
 
   tearDown(() => db.close());
@@ -59,47 +61,49 @@ void main() {
   }
 
   MediaCollectionRow collectionRow() => MediaCollectionRow(
-        id: collectionId,
-        name: 'Show',
-        collectionType: 'playlist',
-        coverSource: null,
-        sortOrder: 0,
-        createdAt: 0,
-        orderUpdatedAt: 0,
-      );
+    id: collectionId,
+    name: 'Show',
+    collectionType: 'playlist',
+    coverSource: null,
+    sortOrder: 0,
+    createdAt: 0,
+    orderUpdatedAt: 0,
+  );
 
   Widget detailPage({
     required List<RemoteVideoInfo> remoteVideos,
     void Function(RemoteVideoInfo, List<RemoteVideoInfo>, int)? onOpenRemote,
-  }) =>
-      TranslationProvider(
-        child: MaterialApp(
-          home: MediaCollectionDetailPage(
-            database: db,
-            collection: collectionRow(),
-            loadEpisodes: () => loadCollectionEpisodeSlots(
-              repository: repo,
-              collectionId: collectionId,
-              loadRemoteVideos: () async => remoteVideos,
-            ),
-            onOpenEpisode: (VideoBookRow _) {},
-            remote: CollectionRemoteContext(
-              loadRemoteVideos: () async => remoteVideos,
-              openEpisode: onOpenRemote ??
-                  (RemoteVideoInfo _, List<RemoteVideoInfo> __, int ___) {},
-            ),
-            onChanged: () {},
-          ),
+  }) => TranslationProvider(
+    child: MaterialApp(
+      home: MediaCollectionDetailPage(
+        database: db,
+        collection: collectionRow(),
+        loadEpisodes: () => loadCollectionEpisodeSlots(
+          repository: repo,
+          collectionId: collectionId,
+          loadRemoteVideos: () async => remoteVideos,
         ),
-      );
+        onOpenEpisode: (VideoBookRow _) {},
+        remote: CollectionRemoteContext(
+          loadRemoteVideos: () async => remoteVideos,
+          openEpisode:
+              onOpenRemote ??
+              (RemoteVideoInfo _, List<RemoteVideoInfo> __, int ___) {},
+        ),
+        onChanged: () {},
+      ),
+    ),
+  );
 
   test('只在对端的成员不被丢弃，且保持落盘序', () async {
     // 本地只有第 2 集；第 1、3 集只在 host 上（成员行照样在本地 items 表里）。
-    await db.upsertVideoBook(VideoBooksCompanion(
-      bookUid: const Value('video/e2'),
-      title: const Value('Show 02'),
-      videoPath: const Value('/v/Show 02.mkv'),
-    ));
+    await db.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: const Value('video/e2'),
+        title: const Value('Show 02'),
+        videoPath: const Value('/v/Show 02.mkv'),
+      ),
+    );
     for (final String uid in <String>['video/e1', 'video/e2', 'video/e3']) {
       await db.addToCollection(collectionId, MediaKind.video, uid);
     }
@@ -117,10 +121,11 @@ void main() {
       slots.map((CollectionEpisodeSlot s) => s.entryKey).toList(),
       <String>['video/e1', 'video/e2', 'video/e3'],
     );
-    expect(
-      slots.map((CollectionEpisodeSlot s) => s.isRemote).toList(),
-      <bool>[true, false, true],
-    );
+    expect(slots.map((CollectionEpisodeSlot s) => s.isRemote).toList(), <bool>[
+      true,
+      false,
+      true,
+    ]);
   });
 
   test('没有远端上下文时行为不变：解析不到本地行的成员照旧丢弃', () async {
@@ -135,11 +140,13 @@ void main() {
   });
 
   test('远端清单拉取失败时退化成纯本地视图，不抛', () async {
-    await db.upsertVideoBook(VideoBooksCompanion(
-      bookUid: const Value('video/e2'),
-      title: const Value('Show 02'),
-      videoPath: const Value('/v/Show 02.mkv'),
-    ));
+    await db.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: const Value('video/e2'),
+        title: const Value('Show 02'),
+        videoPath: const Value('/v/Show 02.mkv'),
+      ),
+    );
     await db.addToCollection(collectionId, MediaKind.video, 'video/e1');
     await db.addToCollection(collectionId, MediaKind.video, 'video/e2');
 
@@ -149,8 +156,10 @@ void main() {
       loadRemoteVideos: () async => throw Exception('offline'),
     );
 
-    expect(slots.map((CollectionEpisodeSlot s) => s.entryKey).toList(),
-        <String>['video/e2']);
+    expect(
+      slots.map((CollectionEpisodeSlot s) => s.entryKey).toList(),
+      <String>['video/e2'],
+    );
   });
 
   testWidgets('全员只在对端：详情页不显示「合集为空」，而是列出各集', (WidgetTester tester) async {
@@ -159,19 +168,25 @@ void main() {
     }
 
     useTallSurface(tester);
-    await tester.pumpWidget(detailPage(remoteVideos: <RemoteVideoInfo>[
-      remoteEpisode('video/e1', 'Show 01', 0),
-      remoteEpisode('video/e2', 'Show 02', 1),
-    ]));
+    await tester.pumpWidget(
+      detailPage(
+        remoteVideos: <RemoteVideoInfo>[
+          remoteEpisode('video/e1', 'Show 01', 0),
+          remoteEpisode('video/e2', 'Show 02', 1),
+        ],
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(find.text(t.collection_empty), findsNothing);
     expect(
-        find.byKey(const ValueKey<String>('collection-episode-row-video/e1')),
-        findsOneWidget);
+      find.byKey(const ValueKey<String>('collection-episode-row-video/e1')),
+      findsOneWidget,
+    );
     expect(
-        find.byKey(const ValueKey<String>('collection-episode-row-video/e2')),
-        findsOneWidget);
+      find.byKey(const ValueKey<String>('collection-episode-row-video/e2')),
+      findsOneWidget,
+    );
   });
 
   testWidgets('点远端集卡：走远端流播入口，带全部远端成员与起播下标', (WidgetTester tester) async {
@@ -183,21 +198,24 @@ void main() {
     int? passedIndex;
 
     useTallSurface(tester);
-    await tester.pumpWidget(detailPage(
-      remoteVideos: <RemoteVideoInfo>[
-        remoteEpisode('video/e1', 'Show 01', 0),
-        remoteEpisode('video/e2', 'Show 02', 1),
-      ],
-      onOpenRemote: (
-        RemoteVideoInfo episode,
-        List<RemoteVideoInfo> members,
-        int index,
-      ) {
-        opened = episode;
-        passedMembers = members;
-        passedIndex = index;
-      },
-    ));
+    await tester.pumpWidget(
+      detailPage(
+        remoteVideos: <RemoteVideoInfo>[
+          remoteEpisode('video/e1', 'Show 01', 0),
+          remoteEpisode('video/e2', 'Show 02', 1),
+        ],
+        onOpenRemote:
+            (
+              RemoteVideoInfo episode,
+              List<RemoteVideoInfo> members,
+              int index,
+            ) {
+              opened = episode;
+              passedMembers = members;
+              passedIndex = index;
+            },
+      ),
+    );
     await tester.pumpAndSettle();
 
     await tester.tap(
@@ -206,8 +224,10 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(opened?.id, 'video/e2');
-    expect(passedMembers?.map((RemoteVideoInfo v) => v.id).toList(),
-        <String>['video/e1', 'video/e2']);
+    expect(passedMembers?.map((RemoteVideoInfo v) => v.id).toList(), <String>[
+      'video/e1',
+      'video/e2',
+    ]);
     expect(passedIndex, 1);
   });
 }

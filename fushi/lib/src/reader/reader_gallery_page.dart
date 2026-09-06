@@ -47,7 +47,8 @@ class _ReaderGalleryPageState extends State<ReaderGalleryPage> {
 
   int _initialIndex() {
     final int first = widget.images.indexWhere(
-        (EpubImageRef r) => r.chapterIndex == widget.currentChapter);
+      (EpubImageRef r) => r.chapterIndex == widget.currentChapter,
+    );
     return first < 0 ? 0 : first;
   }
 
@@ -81,10 +82,11 @@ class _ReaderGalleryPageState extends State<ReaderGalleryPage> {
   void _scrollThumbsTo(int index, {required bool animate}) {
     if (!_thumbController.hasClients) return;
     final double viewport = _thumbController.position.viewportDimension;
-    final double target = (_kStripPadding +
-            index * (_kThumbWidth + _kThumbGap) -
-            (viewport - _kThumbWidth) / 2)
-        .clamp(0.0, _thumbController.position.maxScrollExtent);
+    final double target =
+        (_kStripPadding +
+                index * (_kThumbWidth + _kThumbGap) -
+                (viewport - _kThumbWidth) / 2)
+            .clamp(0.0, _thumbController.position.maxScrollExtent);
     if (animate) {
       _thumbController.animateTo(
         target,
@@ -174,23 +176,22 @@ class _ReaderGalleryPageState extends State<ReaderGalleryPage> {
       padding: const EdgeInsets.fromLTRB(20, 8, 8, 4),
       child: Row(
         children: <Widget>[
-          Text(
-            t.reader_gallery,
-            style: theme.textTheme.titleMedium,
-          ),
+          Text(t.reader_gallery, style: theme.textTheme.titleMedium),
           if (current != null) ...<Widget>[
             const SizedBox(width: 12),
             Text(
               '${_index + 1} / ${widget.images.length}',
-              style: theme.textTheme.labelMedium
-                  ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+              style: theme.textTheme.labelMedium?.copyWith(
+                color: theme.colorScheme.onSurfaceVariant,
+              ),
             ),
             if (current.chapterIndex == widget.currentChapter) ...<Widget>[
               const SizedBox(width: 12),
               Text(
                 t.reader_gallery_current,
-                style: theme.textTheme.labelSmall
-                    ?.copyWith(color: theme.colorScheme.primary),
+                style: theme.textTheme.labelSmall?.copyWith(
+                  color: theme.colorScheme.primary,
+                ),
               ),
             ],
           ],
@@ -345,10 +346,7 @@ class _ReaderGalleryPageState extends State<ReaderGalleryPage> {
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(3),
-          child: Opacity(
-            opacity: selected ? 1 : 0.7,
-            child: thumbnail,
-          ),
+          child: Opacity(opacity: selected ? 1 : 0.7, child: thumbnail),
         ),
       ),
     );

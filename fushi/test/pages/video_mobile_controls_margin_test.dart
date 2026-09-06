@@ -22,9 +22,7 @@ import 'video_fushi_page_source_corpus.dart';
 /// 用静态扫描守卫，因为真实 [MaterialVideoControls] 渲染依赖 host 平台分流 +
 /// VideoController，widget 测试里难稳定复现移动控制条几何。
 void main() {
-  final File page = File(
-    'lib/src/pages/implementations/video_fushi_page.dart',
-  );
+  final File page = File('lib/src/pages/implementations/video_fushi_page.dart');
 
   late String src;
   late String mobileThemeBody;
@@ -40,8 +38,11 @@ void main() {
     final int start = src.indexOf(
       'MaterialVideoControlsThemeData _mobileControlsTheme(',
     );
-    expect(start, greaterThanOrEqualTo(0),
-        reason: '应能定位 _mobileControlsTheme 方法');
+    expect(
+      start,
+      greaterThanOrEqualTo(0),
+      reason: '应能定位 _mobileControlsTheme 方法',
+    );
     final int end = src.indexOf('\n}', start);
     expect(end, greaterThan(start), reason: '应能界定 _mobileControlsTheme 方法体范围');
     mobileThemeBody = src.substring(start, end);
@@ -166,7 +167,8 @@ void main() {
     expect(
       mobileThemeBody,
       contains('seekBarBottom'),
-      reason: 'seekBarMargin.bottom 应用单独抬高后的 seekBarBottom，'
+      reason:
+          'seekBarMargin.bottom 应用单独抬高后的 seekBarBottom，'
           '而非与按钮条同基线的 bottomChromeInset',
     );
     final RegExpMatch? m = RegExp(
@@ -193,8 +195,9 @@ void main() {
 
   test('seekBarMargin.bottom 取 seekBarBottom（不再与按钮条同基线）', () {
     // 精确断言 seekBarMargin 块用 seekBarBottom。
-    final int seekIdx =
-        mobileThemeBody.indexOf('seekBarMargin: EdgeInsets.only(');
+    final int seekIdx = mobileThemeBody.indexOf(
+      'seekBarMargin: EdgeInsets.only(',
+    );
     final int seekEnd = mobileThemeBody.indexOf('),', seekIdx);
     final String seekBlock = mobileThemeBody.substring(seekIdx, seekEnd);
     expect(
@@ -227,18 +230,28 @@ void main() {
   test('触摸热区 / 滑块 / 轨道基线抬高于 media_kit 默认（36 / 12.8 / 2.4）', () {
     double baseOf(String name) {
       final RegExpMatch? m = RegExp(
-        'static const double $name = ' r'(\d+(?:\.\d+)?);',
+        'static const double $name = '
+        r'(\d+(?:\.\d+)?);',
       ).firstMatch(src);
       expect(m, isNotNull, reason: '应定义常量 $name');
       return double.parse(m!.group(1)!);
     }
 
-    expect(baseOf('_videoSeekBarContainerHeightBase'), greaterThan(36.0),
-        reason: '触摸热区基线必须高于 media_kit 默认 36（否则更难命中）');
-    expect(baseOf('_videoSeekBarThumbSizeBase'), greaterThan(12.8),
-        reason: '滑块基线必须高于 media_kit 默认 12.8');
-    expect(baseOf('_videoSeekBarTrackHeightBase'), greaterThan(2.4),
-        reason: '轨道基线必须高于 media_kit 默认 2.4');
+    expect(
+      baseOf('_videoSeekBarContainerHeightBase'),
+      greaterThan(36.0),
+      reason: '触摸热区基线必须高于 media_kit 默认 36（否则更难命中）',
+    );
+    expect(
+      baseOf('_videoSeekBarThumbSizeBase'),
+      greaterThan(12.8),
+      reason: '滑块基线必须高于 media_kit 默认 12.8',
+    );
+    expect(
+      baseOf('_videoSeekBarTrackHeightBase'),
+      greaterThan(2.4),
+      reason: '轨道基线必须高于 media_kit 默认 2.4',
+    );
   });
 
   test('触摸热区基线收窄（TODO-971：透明命中带不过大 ≤ 40）', () {
@@ -247,7 +260,8 @@ void main() {
     // 命中），缩短透明命中带。
     double baseOf(String name) {
       final RegExpMatch? m = RegExp(
-        'static const double $name = ' r'(\d+(?:\.\d+)?);',
+        'static const double $name = '
+        r'(\d+(?:\.\d+)?);',
       ).firstMatch(src);
       expect(m, isNotNull, reason: '应定义常量 $name');
       return double.parse(m!.group(1)!);
@@ -268,7 +282,8 @@ void main() {
       '_videoSeekBarButtonGap',
     ]) {
       final RegExpMatch? m = RegExp(
-        'double get $getter =>' r'\s*([^;]+);',
+        'double get $getter =>'
+        r'\s*([^;]+);',
       ).firstMatch(src);
       expect(m, isNotNull, reason: '应定义 getter $getter');
       expect(

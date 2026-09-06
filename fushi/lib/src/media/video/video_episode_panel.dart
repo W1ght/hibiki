@@ -59,8 +59,9 @@ class _VideoEpisodePanelState extends State<VideoEpisodePanel> {
   Widget build(BuildContext context) {
     final ColorScheme cs = widget.colorScheme;
     final double minimumHeight = 150 + widget.fontSize * 3;
-    final double panelHeight =
-        widget.height < minimumHeight ? minimumHeight : widget.height;
+    final double panelHeight = widget.height < minimumHeight
+        ? minimumHeight
+        : widget.height;
     return Material(
       color: Colors.transparent,
       child: SizedBox(
@@ -83,8 +84,9 @@ class _VideoEpisodePanelState extends State<VideoEpisodePanel> {
             children: <Widget>[
               _buildHeader(cs),
               Expanded(
-                child:
-                    widget.episodes.isEmpty ? _buildEmpty(cs) : _buildRail(cs),
+                child: widget.episodes.isEmpty
+                    ? _buildEmpty(cs)
+                    : _buildRail(cs),
               ),
               const SizedBox(height: 12),
             ],

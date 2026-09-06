@@ -88,6 +88,7 @@ class ReaderQuickSettingsSheet extends StatefulWidget {
     this.onOpenStatistics,
     this.initialSideSheetTab = 'layout',
     this.onSideSheetTabChanged,
+    this.expandedTocParents,
     this.initialSubPage,
     this.presentation = ReaderQuickSettingsPresentation.sheet,
     this.onClose,
@@ -127,7 +128,7 @@ class ReaderQuickSettingsSheet extends StatefulWidget {
   final bool floatingLyricClickLookup;
   final ValueChanged<bool>? onFloatingLyricClickLookupChanged;
   final Future<void> Function(BookSearchResult result, String query)?
-      onSearchJump;
+  onSearchJump;
   final Future<void> Function(int globalCharOffset)? onJumpToCharOffset;
   final (int current, int total)? charProgress;
   final VoidCallback? onPageMarginChanged;
@@ -167,6 +168,9 @@ class ReaderQuickSettingsSheet extends StatefulWidget {
   /// 桌面端右侧设置抽屉初始分组（页面记忆上次打开的 tab）。
   final String initialSideSheetTab;
   final ValueChanged<String>? onSideSheetTabChanged;
+
+  /// 目录折叠状态的会话记忆（页面持有的可变集合；null 则本面板自持）。
+  final Set<String>? expandedTocParents;
 
   /// TODO-1309①：打开面板时直达的子页 id（如 'location' 导航子页）。null =
   /// 默认落主菜单（窄窗）/ 默认分类（宽窗）。仅用于初始化 [_subPage]，
@@ -210,15 +214,17 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
 
   /// 目录里手动展开的父节（按父节 label）；深度 >= 2 的子节默认折叠，当前章所在的
   /// 父节自动展开。
-  final Set<String> _expandedTocParents = <String>{};
+  late final Set<String> _expandedTocParents =
+      widget.expandedTocParents ?? <String>{};
 
   /// 最近一次 LayoutBuilder 是否判定为宽窗。供 PopScope.canPop 读取：宽窗
   /// master-detail 下选中态非 null 也允许直接关闭（不会卡在「返回上一级」）。
   /// 纯按窗口宽高确定性判定（>= 共享常量阈值），与视频设置同条件。
   bool _isWide = false;
 
-  late List<FavoriteSentence> _favorites =
-      List<FavoriteSentence>.of(widget.favoriteSentences);
+  late List<FavoriteSentence> _favorites = List<FavoriteSentence>.of(
+    widget.favoriteSentences,
+  );
 
   // Local mirror of the audiobook overlay toggles. These are NOT schema items:
   // flipping them needs reader-page side effects (overlay show/hide, permission
@@ -297,7 +303,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
         'pageColumns',
         'spreadMode',
         'spreadDirection',
-        'prioritizeReaderStyles'
+        'prioritizeReaderStyles',
       };
       if (layoutKeys.contains(key)) {
         await _reloadLayoutLive();
@@ -358,67 +364,19 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
             ? _buildSubPage(context, theme)
             : _buildMainPage(context, theme);
       },
-      // 宽窗左右 master-detail（左父菜单 + 右详情）——视频走顶部分类条，两边发散，
-      // 故 MaterialSupportingPaneLayout / SupportingPaneSide 等符号留在此回调里。
+      // 宽窗不再有 master-detail：平板宽窗在到达本面板之前就被路由到左右抽屉
+      // （readerUsesSideSheets），这里只保留外壳要求的回调，兜底铺同一份窄窗内容。
       wideBuilder: (BuildContext context, BoxConstraints constraints) {
-        // TODO-725：导航置首后宽窗默认选中改 'location'（不再默认 appearance）。
-        final String selectedId = _subPage ?? 'location';
-        final Color dividerColor = isCupertinoPlatform(context)
-            ? CupertinoColors.separator.resolveFrom(context)
-            : FushiDesignTokens.of(context).surfaces.outline;
-        // 左父菜单与右详情两个 pane 同一份 padding（此前两份逐字相同的
-        // EdgeInsets.fromLTRB，收敛为共享公式 paneInsets 的一次调用）。
-        final EdgeInsets widePanePadding =
-            FushiMasterDetailSettingsSheet.paneInsets(
-          context,
-          horizontal: tokens.spacing.page + tokens.spacing.gap / 2,
-          top: tokens.spacing.gap / 2,
-        );
-        // 用可用的有界高度撑满整张 master-detail（等价于主页设置把
-        // MaterialSupportingPaneLayout 放进 Expanded）：Row(stretch) 才能给
-        // 两个 pane 紧约束 → 各自的 SingleChildScrollView 独立滚动、左父菜
-        // 单固定不跟随右详情滚动。maxHeightFactor 保证 maxHeight 有界。
-        return SizedBox(
-          height: constraints.maxHeight,
-          child: MaterialSupportingPaneLayout(
-            minSplitWidth: kFushiSettingsWideThreshold,
-            supportingWidth: kFushiSettingsSupportingPaneWidth,
-            supportingSide: SupportingPaneSide.start,
-            dividerColor: dividerColor,
-            // 左父菜单项不多时垂直居中（progress/分类/动作整体居中），
-            // 不再让「阅读进度」死贴顶端；内容超过 pane 高度时
-            // ConstrainedBox 的 minHeight 被内容满足，照常滚动。
-            supporting: LayoutBuilder(
-              builder: (
-                BuildContext context,
-                BoxConstraints paneConstraints,
-              ) {
-                final double minContentHeight =
-                    paneConstraints.maxHeight > widePanePadding.vertical
-                        ? paneConstraints.maxHeight - widePanePadding.vertical
-                        : 0;
-                return SingleChildScrollView(
-                  padding: widePanePadding,
-                  child: ConstrainedBox(
-                    constraints: BoxConstraints(
-                      minHeight: minContentHeight,
-                    ),
-                    child: _buildWidePane(context, theme, selectedId),
-                  ),
-                );
-              },
-            ),
-            // KeyedSubtree：按选中 id 编码，切换时整棵右 pane 子树作废重
-            // 建，避免 Flutter 复用上一详情同位置 Element 触发 Switch 圆点
-            // / Segmented 滑动等复用副作用（同 settings_home_page）。
-            primary: KeyedSubtree(
-              key: ValueKey<String>(selectedId),
-              child: SingleChildScrollView(
-                padding: widePanePadding,
-                child: _buildWidePrimary(context, theme, selectedId),
-              ),
-            ),
+        return SingleChildScrollView(
+          key: ValueKey<String>(_subPage ?? 'main'),
+          padding: FushiMasterDetailSettingsSheet.paneInsets(
+            context,
+            horizontal: tokens.spacing.page + tokens.spacing.gap / 2,
+            top: tokens.spacing.gap / 2,
           ),
+          child: _subPage != null
+              ? _buildSubPage(context, theme)
+              : _buildMainPage(context, theme),
         );
       },
     );
@@ -436,11 +394,13 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final BuildContext? rowContext = _currentTocRowKey.currentContext;
       if (rowContext == null || !mounted) return;
-      unawaited(Scrollable.ensureVisible(
-        rowContext,
-        alignment: 0.3,
-        duration: const Duration(milliseconds: 160),
-      ));
+      unawaited(
+        Scrollable.ensureVisible(
+          rowContext,
+          alignment: 0.3,
+          duration: const Duration(milliseconds: 160),
+        ),
+      );
     });
     return ReaderSideSheet(
       title: t.section_navigation,
@@ -496,19 +456,23 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     if (tab == 'layout' && widget.onToggleLyricsMode != null) {
       children
         ..add(ReaderSideSheetSectionLabel(t.lyrics_mode))
-        ..add(AdaptiveSettingsSection(children: <Widget>[
-          AdaptiveSettingsNavigationRow(
-            key: const ValueKey<String>('fushi_lyrics_mode_toggle'),
-            title: widget.lyricsMode ? t.book_mode : t.lyrics_mode,
-            icon: widget.lyricsMode
-                ? Icons.auto_stories_outlined
-                : Icons.lyrics_outlined,
-            onTap: () {
-              Navigator.of(context).pop();
-              widget.onToggleLyricsMode!();
-            },
+        ..add(
+          AdaptiveSettingsSection(
+            children: <Widget>[
+              AdaptiveSettingsNavigationRow(
+                key: const ValueKey<String>('fushi_lyrics_mode_toggle'),
+                title: widget.lyricsMode ? t.book_mode : t.lyrics_mode,
+                icon: widget.lyricsMode
+                    ? Icons.auto_stories_outlined
+                    : Icons.lyrics_outlined,
+                onTap: () {
+                  Navigator.of(context).pop();
+                  widget.onToggleLyricsMode!();
+                },
+              ),
+            ],
           ),
-        ]));
+        );
     }
     return ReaderSideSheet(
       title: t.reader_settings_section,
@@ -540,64 +504,8 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     );
   }
 
-  Widget _buildWidePane(
-    BuildContext context,
-    ThemeData theme,
-    String selectedId,
-  ) {
-    final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final double sectionGap = tokens.spacing.gap + tokens.spacing.gap / 2;
-    // 左父菜单只留「分类导航 + 动作」，做矮以让更多窗口进宽窗（阅读进度已移到右侧
-    // 外观详情顶部，见 [_buildWidePrimary]）。项少时整体垂直居中、不贴顶。
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        for (final cat in _wideCategories())
-          FushiListItem(
-            selected: cat.id == selectedId,
-            selectedShape: FushiListItemSelectedShape.pill,
-            leading: Icon(cat.icon),
-            title: Text(cat.label),
-            // 左父菜单固定 208px，长标签（如「布局与显示」选中加粗后 ~80px）
-            // 会触发 ellipsis 截断成「布局与…」；允许换成两行而非省略。
-            titleMaxLines: 2,
-            onTap: () => setState(() => _subPage = cat.id),
-          ),
-        SizedBox(height: sectionGap),
-        _buildActionRow(context),
-      ],
-    );
-  }
-
-  /// 宽窗右详情：默认分类（导航置首后为 'location'）顶部并入阅读进度（左父菜单不
-  /// 再单列进度，借此把左栏做矮、更多窗口能进宽窗）。其余分类只渲染各自详情。
-  Widget _buildWidePrimary(
-    BuildContext context,
-    ThemeData theme,
-    String selectedId,
-  ) {
-    if (selectedId != 'location') {
-      return _subPageContent(selectedId);
-    }
-    final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final double sectionGap = tokens.spacing.gap + tokens.spacing.gap / 2;
-    final Widget progress = _buildProgressSection(theme);
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        if (progress is! SizedBox) ...[
-          progress,
-          SizedBox(height: sectionGap),
-        ],
-        _subPageContent(selectedId),
-      ],
-    );
-  }
-
-  /// 宽窗 master-detail 左 pane 的分类项（id 与 [_subPageContent] 的 case 对齐）。
+  /// 面板分类项（id 与 [_subPageContent] 的 case 对齐）：设置抽屉分段条、有声书
+  /// 面板与窄窗主页共用同一份顺序。
   /// audiobook 仅在有 controller 时出现。
   List<({String id, IconData icon, String label})> _wideCategories() {
     // TODO-725 / TODO-802：导航置首（location → layout → behavior → lookup →
@@ -612,7 +520,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
       (
         id: 'layout',
         icon: Icons.auto_stories_outlined,
-        label: t.section_layout
+        label: t.section_layout,
       ),
       (
         id: 'behavior',
@@ -875,8 +783,10 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
   /// 可选「编辑书籍 CSS」行。窄窗 push 子页与宽窗右 pane 共用（经
   /// [_subPageContent] 的 'layout' 分支）。
   Widget _buildLayoutDetail() {
-    final Widget layoutContent =
-        _buildReaderGroupContent(ReaderGroup.layout, t.section_layout);
+    final Widget layoutContent = _buildReaderGroupContent(
+      ReaderGroup.layout,
+      t.section_layout,
+    );
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -931,12 +841,14 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     if (rp != null && rp.$2 > 0) {
       final int displayIdx = rp.$1 + 1;
       final double pct = (displayIdx / rp.$2) * 100;
-      lines.add(t.chapter_progress(
-        idx: displayIdx,
-        total: rp.$2,
-        suffix: '',
-        pct: pct.toStringAsFixed(1),
-      ));
+      lines.add(
+        t.chapter_progress(
+          idx: displayIdx,
+          total: rp.$2,
+          suffix: '',
+          pct: pct.toStringAsFixed(1),
+        ),
+      );
     }
 
     final (int, int)? pp = widget.pageProgress;
@@ -960,11 +872,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
           t.reading_progress,
           padding: EdgeInsets.only(bottom: tokens.spacing.gap),
         ),
-        if (hasTitle)
-          Text(
-            rawTitle,
-            style: theme.textTheme.titleSmall,
-          ),
+        if (hasTitle) Text(rawTitle, style: theme.textTheme.titleSmall),
         if (hasChapter)
           Text(
             rawChapter,
@@ -1007,10 +915,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
               SizedBox(height: tokens.spacing.gap / 2),
               ClipRRect(
                 borderRadius: tokens.radii.chipRadius,
-                child: LinearProgressIndicator(
-                  value: fraction,
-                  minHeight: 3,
-                ),
+                child: LinearProgressIndicator(value: fraction, minHeight: 3),
               ),
             ],
           ),
@@ -1079,8 +984,10 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
                     ? SizedBox(
                         width: 18,
                         height: 18,
-                        child:
-                            adaptiveIndicator(context: context, strokeWidth: 2),
+                        child: adaptiveIndicator(
+                          context: context,
+                          strokeWidth: 2,
+                        ),
                       )
                     : FushiIconButton(
                         icon: Icons.search,
@@ -1112,19 +1019,21 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
                 final String query = _searchResultsQuery;
                 final int rawIdx = r.sectionIndex;
                 final List<TtuTocEntry> toc = widget.toc;
-                final TtuTocEntry? tocEntry =
-                    toc.cast<TtuTocEntry?>().firstWhere(
-                          (e) => e!.index == rawIdx,
-                          orElse: () => null,
-                        );
+                final TtuTocEntry? tocEntry = toc
+                    .cast<TtuTocEntry?>()
+                    .firstWhere((e) => e!.index == rawIdx, orElse: () => null);
                 final String chapterLabel =
                     tocEntry?.label ?? t.go_to_chapter(n: rawIdx + 1);
 
                 final String before = r.context.substring(0, r.matchStart);
-                final int matchEnd =
-                    (r.matchStart + query.length).clamp(0, r.context.length);
-                final String match =
-                    r.context.substring(r.matchStart, matchEnd);
+                final int matchEnd = (r.matchStart + query.length).clamp(
+                  0,
+                  r.context.length,
+                );
+                final String match = r.context.substring(
+                  r.matchStart,
+                  matchEnd,
+                );
                 final String after = r.context.substring(matchEnd);
 
                 return _InBookSearchResultRow(
@@ -1144,10 +1053,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
         ] else if (!_isSearching &&
             _searchController.text.trim().isNotEmpty) ...[
           SizedBox(height: tokens.spacing.gap),
-          Text(
-            t.book_search_no_results,
-            style: theme.textTheme.bodySmall,
-          ),
+          Text(t.book_search_no_results, style: theme.textTheme.bodySmall),
         ],
       ],
     );
@@ -1232,7 +1138,9 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
       }
     }
     bool hasFoldableChildren(int i) =>
-        i + 1 < toc.length && toc[i + 1].depth > toc[i].depth && toc[i + 1].depth >= 2;
+        i + 1 < toc.length &&
+        toc[i + 1].depth > toc[i].depth &&
+        toc[i + 1].depth >= 2;
     bool isExpanded(TtuTocEntry parent) =>
         _expandedTocParents.contains(parent.label) ||
         autoExpanded.contains(parent.label);
@@ -1254,11 +1162,11 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
               expanded: hasFoldableChildren(i) && isExpanded(toc[i]),
               onToggleExpanded: hasFoldableChildren(i)
                   ? () => setState(() {
-                        final String label = toc[i].label;
-                        if (!_expandedTocParents.remove(label)) {
-                          _expandedTocParents.add(label);
-                        }
-                      })
+                      final String label = toc[i].label;
+                      if (!_expandedTocParents.remove(label)) {
+                        _expandedTocParents.add(label);
+                      }
+                    })
                   : null,
               onTap: toc[i].isHeader
                   ? null
@@ -1390,12 +1298,14 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
       title: t.skip_action,
       icon: Icons.skip_next_outlined,
       options: _skipActionOptions
-          .map((s) => AdaptiveSettingsPickerOption<int>(
-                value: s,
-                label: s == 0
-                    ? t.skip_action_sentence
-                    : t.skip_action_seconds(n: s),
-              ))
+          .map(
+            (s) => AdaptiveSettingsPickerOption<int>(
+              value: s,
+              label: s == 0
+                  ? t.skip_action_sentence
+                  : t.skip_action_seconds(n: s),
+            ),
+          )
           .toList(),
       selected: current,
       onChanged: (int value) {
@@ -1415,11 +1325,13 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
           icon: Icons.image_outlined,
           controlBelow: true,
           segments: _imagePauseOptions
-              .map((s) => ButtonSegment<int>(
-                    value: s,
-                    label: Text(s == 0 ? t.image_pause_off : '${s}s'),
-                    tooltip: s == 0 ? t.image_pause_off : '${s}s',
-                  ))
+              .map(
+                (s) => ButtonSegment<int>(
+                  value: s,
+                  label: Text(s == 0 ? t.image_pause_off : '${s}s'),
+                  tooltip: s == 0 ? t.image_pause_off : '${s}s',
+                ),
+              )
               .toList(),
           selected: sec,
           onChanged: ctrl.setImagePauseSec,
@@ -1554,9 +1466,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
   Widget _buildLyricsMarginSection() {
     return AdaptiveSettingsSection(
       children: [
-        AdaptiveSettingsRow(
-          title: t.lyrics_font_size_hint,
-        ),
+        AdaptiveSettingsRow(title: t.lyrics_font_size_hint),
         // TODO-907: 歌词竖排开关（独立于正文 writing-mode）。切换走整页重建。
         AdaptiveSettingsSwitchRow(
           title: t.lyrics_vertical_writing,
@@ -1666,8 +1576,9 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
       onChanged: (bool enabled) {
         if (enabled) {
           // 开启自定义：种一个不透明的初始色（用当前主题文字色），避免落哨兵 0。
-          final Color seed =
-              Color(0xFF000000 | (themeFallback.value & 0xFFFFFF));
+          final Color seed = Color(
+            0xFF000000 | (themeFallback.value & 0xFFFFFF),
+          );
           _src.setLyricsTextColor(seed.value);
         } else {
           _src.clearLyricsTextColor();
@@ -1689,29 +1600,30 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
           ? LayoutBuilder(
               builder:
                   (BuildContext layoutContext, BoxConstraints constraints) {
-                final double pickerWidth = constraints.maxWidth.clamp(
-                  0.0,
-                  MediaQuery.of(layoutContext).size.width - 64,
-                );
-                return ColorPicker(
-                  pickerColor: current,
-                  onColorChanged: (Color c) {
-                    // 强制不透明（文字色透明无意义；也保证非哨兵 0）。
-                    final Color opaque =
-                        Color(0xFF000000 | (c.value & 0xFFFFFF));
-                    _src.setLyricsTextColor(opaque.value);
-                    setState(() {});
-                    widget.onStyleChanged?.call();
+                    final double pickerWidth = constraints.maxWidth.clamp(
+                      0.0,
+                      MediaQuery.of(layoutContext).size.width - 64,
+                    );
+                    return ColorPicker(
+                      pickerColor: current,
+                      onColorChanged: (Color c) {
+                        // 强制不透明（文字色透明无意义；也保证非哨兵 0）。
+                        final Color opaque = Color(
+                          0xFF000000 | (c.value & 0xFFFFFF),
+                        );
+                        _src.setLyricsTextColor(opaque.value);
+                        setState(() {});
+                        widget.onStyleChanged?.call();
+                      },
+                      portraitOnly: true,
+                      colorPickerWidth: pickerWidth,
+                      pickerAreaHeightPercent: 0.5,
+                      enableAlpha: false,
+                      displayThumbColor: true,
+                      hexInputBar: true,
+                      labelTypes: const <ColorLabelType>[],
+                    );
                   },
-                  portraitOnly: true,
-                  colorPickerWidth: pickerWidth,
-                  pickerAreaHeightPercent: 0.5,
-                  enableAlpha: false,
-                  displayThumbColor: true,
-                  hexInputBar: true,
-                  labelTypes: const <ColorLabelType>[],
-                );
-              },
             )
           : null,
     );
@@ -1763,11 +1675,11 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
                 : () async => widget.onPlayFavorite?.call(favorite),
             onJump:
                 favorite.sectionIndex == null || widget.onJumpToFavorite == null
-                    ? null
-                    : () async {
-                        Navigator.of(context).pop();
-                        await widget.onJumpToFavorite?.call(favorite);
-                      },
+                ? null
+                : () async {
+                    Navigator.of(context).pop();
+                    await widget.onJumpToFavorite?.call(favorite);
+                  },
             onCopy: () {
               Clipboard.setData(ClipboardData(text: favorite.text));
               FushiToast.show(msg: t.copy, severity: ToastSeverity.success);
@@ -1928,7 +1840,8 @@ class _InBookTocRow extends StatelessWidget {
       final ThemeData theme = Theme.of(context);
       return Padding(
         padding: EdgeInsetsDirectional.only(
-          start: (cupertino
+          start:
+              (cupertino
                   ? tokens.spacing.rowHorizontal
                   : tokens.spacing.gap + tokens.spacing.gap / 2) +
               indent,
@@ -2177,11 +2090,11 @@ class _InBookIconButton extends StatelessWidget {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final Color color = destructive
         ? (cupertino
-            ? CupertinoColors.destructiveRed.resolveFrom(context)
-            : Theme.of(context).colorScheme.error)
+              ? CupertinoColors.destructiveRed.resolveFrom(context)
+              : Theme.of(context).colorScheme.error)
         : (cupertino
-            ? CupertinoTheme.of(context).primaryColor
-            : Theme.of(context).colorScheme.onSurfaceVariant);
+              ? CupertinoTheme.of(context).primaryColor
+              : Theme.of(context).colorScheme.onSurfaceVariant);
 
     if (cupertino) {
       return CupertinoButton(

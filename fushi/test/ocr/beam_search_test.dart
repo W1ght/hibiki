@@ -28,8 +28,9 @@ BeamStepLogits scriptedLogits(
 void main() {
   group('logSoftmax', () {
     test('输出为合法 log 概率（exp 和为 1，保序）', () {
-      final Float64List logProbs =
-          logSoftmax(Float32List.fromList(<double>[1, 2, 3]));
+      final Float64List logProbs = logSoftmax(
+        Float32List.fromList(<double>[1, 2, 3]),
+      );
       double sum = 0;
       for (final double p in logProbs) {
         sum += math.exp(p);
@@ -131,15 +132,15 @@ void main() {
       // 首步 EOS 略优于 token 2；走 2 之后 EOS 概率 ~1。
       // lp=2：长路径 sum/-len^2 摊薄 → 长路径赢；lp=0：短路径赢。
       BeamStepLogits logits() => scriptedLogits((List<int> seq, int token) {
-            final int last = seq.last;
-            if (last == kStart) {
-              if (token == kEos) return 1.0;
-              if (token == 2) return 0.9;
-              return null;
-            }
-            if (last == 2 && token == kEos) return 10;
-            return null;
-          });
+        final int last = seq.last;
+        if (last == kStart) {
+          if (token == kEos) return 1.0;
+          if (token == 2) return 0.9;
+          return null;
+        }
+        if (last == 2 && token == kEos) return 10;
+        return null;
+      });
 
       final BeamSearchResult long = await beamSearchDecode(
         config: const BeamSearchConfig(
@@ -219,7 +220,8 @@ void main() {
           maxLength: 5,
         ),
         stepLogits: scriptedLogits(
-            (List<int> seq, int token) => token == 2 ? 10 : null),
+          (List<int> seq, int token) => token == 2 ? 10 : null,
+        ),
       );
       // 序列长度（含 start）到 5 截断 → 4 个生成 token。
       expect(result.tokens, <int>[2, 2, 2, 2]);
@@ -237,13 +239,15 @@ void main() {
         ),
         stepLogits: (List<List<int>> sequences) async {
           observedCounts.add(sequences.length);
-          final Set<int> lengths =
-              sequences.map((List<int> s) => s.length).toSet();
+          final Set<int> lengths = sequences
+              .map((List<int> s) => s.length)
+              .toSet();
           expect(lengths, hasLength(1));
           return <Float32List>[
             for (int b = 0; b < sequences.length; b++)
               Float32List.fromList(
-                  List<double>.generate(kVocab, (int v) => v == 2 ? 5 : 0)),
+                List<double>.generate(kVocab, (int v) => v == 2 ? 5 : 0),
+              ),
           ];
         },
       );

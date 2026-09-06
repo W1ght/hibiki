@@ -33,8 +33,11 @@ void main() {
     final int at = src.indexOf(sig);
     expect(at, greaterThanOrEqualTo(0), reason: 'handleTap 入口必须存在');
     final int end = src.indexOf('startLookupActivity(intent);', at);
-    expect(end, greaterThan(at),
-        reason: 'handleTap 必须以 startLookupActivity(intent) 收尾');
+    expect(
+      end,
+      greaterThan(at),
+      reason: 'handleTap 必须以 startLookupActivity(intent) 收尾',
+    );
     return src.substring(at, end);
   }
 
@@ -52,48 +55,80 @@ void main() {
   group('TODO-1268 Android 悬浮字幕点词后台启动', () {
     test('handleTap 经弹性 helper 启动，不再裸 startActivity', () {
       final String body = handleTapBody(read());
-      expect(body.contains('startActivity('), isFalse,
-          reason: 'handleTap 内不得直接 startActivity——后台点词会被 BAL 拦掉，'
-              '必须走 startLookupActivity 的 opt-in + 回退');
+      expect(
+        body.contains('startActivity('),
+        isFalse,
+        reason:
+            'handleTap 内不得直接 startActivity——后台点词会被 BAL 拦掉，'
+            '必须走 startLookupActivity 的 opt-in + 回退',
+      );
     });
 
     test('handleTap 仍保留点词契约（PopupDictFlutterActivity + 文本 + charIndex）', () {
       final String body = handleTapBody(read());
-      expect(body.contains('new Intent(this, PopupDictFlutterActivity.class)'),
-          isTrue,
-          reason: '路由目标必须仍是 Flutter 弹窗 Activity');
-      expect(body.contains('Intent.EXTRA_PROCESS_TEXT'), isTrue,
-          reason: '必须仍携带当前字幕文本');
-      expect(body.contains('PopupDictFlutterActivity.EXTRA_CHAR_INDEX'), isTrue,
-          reason: '必须仍携带命中字 charIndex（去键盘分词，BUG-214）');
+      expect(
+        body.contains('new Intent(this, PopupDictFlutterActivity.class)'),
+        isTrue,
+        reason: '路由目标必须仍是 Flutter 弹窗 Activity',
+      );
+      expect(
+        body.contains('Intent.EXTRA_PROCESS_TEXT'),
+        isTrue,
+        reason: '必须仍携带当前字幕文本',
+      );
+      expect(
+        body.contains('PopupDictFlutterActivity.EXTRA_CHAR_INDEX'),
+        isTrue,
+        reason: '必须仍携带命中字 charIndex（去键盘分词，BUG-214）',
+      );
     });
 
     test('启动 helper 在 API 34+ 显式 opt-in 后台 activity 启动', () {
       final String body = launchBody(read());
-      expect(body.contains('Build.VERSION_CODES.UPSIDE_DOWN_CAKE'), isTrue,
-          reason: '后台启动 opt-in 门控在 API 34（Android 14）+');
-      expect(body.contains('PendingIntent.getActivity('), isTrue,
-          reason: '走自发 PendingIntent 以携带后台启动授权');
       expect(
-          body.contains('setPendingIntentBackgroundActivityStartMode'), isTrue,
-          reason: 'BUG：必须用官方 opt-in 显式授予后台启动特权');
+        body.contains('Build.VERSION_CODES.UPSIDE_DOWN_CAKE'),
+        isTrue,
+        reason: '后台启动 opt-in 门控在 API 34（Android 14）+',
+      );
       expect(
-          body.contains(
-              'ActivityOptions.MODE_BACKGROUND_ACTIVITY_START_ALLOWED'),
-          isTrue,
-          reason: '必须选 ALLOWED 模式，否则 Android 14+ 默认拦截');
-      expect(body.contains('FLAG_ACTIVITY_NEW_TASK'), isTrue,
-          reason: '从非 Activity 上下文启动 Activity 必须带 NEW_TASK');
+        body.contains('PendingIntent.getActivity('),
+        isTrue,
+        reason: '走自发 PendingIntent 以携带后台启动授权',
+      );
+      expect(
+        body.contains('setPendingIntentBackgroundActivityStartMode'),
+        isTrue,
+        reason: 'BUG：必须用官方 opt-in 显式授予后台启动特权',
+      );
+      expect(
+        body.contains('ActivityOptions.MODE_BACKGROUND_ACTIVITY_START_ALLOWED'),
+        isTrue,
+        reason: '必须选 ALLOWED 模式，否则 Android 14+ 默认拦截',
+      );
+      expect(
+        body.contains('FLAG_ACTIVITY_NEW_TASK'),
+        isTrue,
+        reason: '从非 Activity 上下文启动 Activity 必须带 NEW_TASK',
+      );
     });
 
     test('启动失败绝不静默吞：回退直接 startActivity + 前台化', () {
       final String body = launchBody(read());
-      expect(body.contains('startActivity(intent)'), isTrue,
-          reason: '<34 及 PendingIntent 失败时回退直接 startActivity');
-      expect(body.contains('bringAppToFront()'), isTrue,
-          reason: '两条启动都失败时把 Hibiki 拉到前台——一次点词绝不被静默丢弃');
-      expect(body.contains('Log.w(TAG'), isTrue,
-          reason: '每条回退都记 log，真机复现可看到命中了哪条分支');
+      expect(
+        body.contains('startActivity(intent)'),
+        isTrue,
+        reason: '<34 及 PendingIntent 失败时回退直接 startActivity',
+      );
+      expect(
+        body.contains('bringAppToFront()'),
+        isTrue,
+        reason: '两条启动都失败时把 Hibiki 拉到前台——一次点词绝不被静默丢弃',
+      );
+      expect(
+        body.contains('Log.w(TAG'),
+        isTrue,
+        reason: '每条回退都记 log，真机复现可看到命中了哪条分支',
+      );
     });
   });
 }

@@ -49,12 +49,14 @@ void main() {
         expect(
           block.contains('Platform.isAndroid || Platform.isWindows'),
           isTrue,
-          reason: '$id must be visible on Android and Windows '
+          reason:
+              '$id must be visible on Android and Windows '
               '(the desktop strip is supported).',
         );
         expect(
-          RegExp(r'visible:\s*\(_\)\s*=>\s*Platform\.isAndroid,')
-              .hasMatch(block),
+          RegExp(
+            r'visible:\s*\(_\)\s*=>\s*Platform\.isAndroid,',
+          ).hasMatch(block),
           isFalse,
           reason: '$id must not be gated to Android only.',
         );
@@ -66,7 +68,8 @@ void main() {
       expect(
         block.contains('Platform.isAndroid || Platform.isWindows'),
         isTrue,
-        reason: 'app_icon picker now supports Windows runtime icon switching '
+        reason:
+            'app_icon picker now supports Windows runtime icon switching '
             '(preset + custom image), so its gate widened from Android-only.',
       );
       // Must not be regated to Android-only.

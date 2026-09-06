@@ -125,9 +125,11 @@ class FocusDriver {
     }
     // 步数耗尽：把当前焦点落点打出来，避免「不可达」失败只剩一个 false。
     final FocusNode? f = focused;
-    debugPrint('[FocusDriver] focusUntil exhausted $maxSteps steps; '
-        'primaryFocus=${f?.debugLabel ?? f?.context?.widget.runtimeType} '
-        'scope=${f?.nearestScope?.debugLabel}');
+    debugPrint(
+      '[FocusDriver] focusUntil exhausted $maxSteps steps; '
+      'primaryFocus=${f?.debugLabel ?? f?.context?.widget.runtimeType} '
+      'scope=${f?.nearestScope?.debugLabel}',
+    );
     return false;
   }
 
@@ -274,8 +276,10 @@ class FocusDriver {
     final BuildContext? ctx = focused?.context;
     if (ctx == null) return false;
     const ActivateIntent intent = ActivateIntent();
-    final Action<ActivateIntent>? action =
-        Actions.maybeFind<ActivateIntent>(ctx, intent: intent);
+    final Action<ActivateIntent>? action = Actions.maybeFind<ActivateIntent>(
+      ctx,
+      intent: intent,
+    );
     if (action == null || !action.isEnabled(intent)) return false;
     Actions.invoke<ActivateIntent>(ctx, intent);
     await tester.pump(_settle);

@@ -107,37 +107,39 @@ class AggregateSnapshot {
       favoriteSentenceTombstones.isEmpty;
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'version': currentVersion,
-        'readingStats':
-            readingStats.map((ReadingStatRecord r) => r.toJson()).toList(),
-        'videoStats':
-            videoStats.map((VideoStatRecord r) => r.toJson()).toList(),
-        'readingHourly':
-            readingHourly.map((HourlyRecord r) => r.toJson()).toList(),
-        'readingHourlyByFormat': readingHourlyByFormat
-            .map((HourlyFormatRecord r) => r.toJson())
-            .toList(),
-        'videoHourly': videoHourly.map((HourlyRecord r) => r.toJson()).toList(),
-        'miningStats': miningStats.map((MiningRecord r) => r.toJson()).toList(),
-        'lookupMiningCounters': lookupMiningCounters
-            .map((LookupMiningRecord r) => r.toJson())
-            .toList(),
-        'favoriteWords':
-            favoriteWords.map((FavoriteWordRecord r) => r.toJson()).toList(),
-        'favoriteSentences':
-            favoriteSentences.map((FavoriteSentence s) => s.toJson()).toList(),
-        'favoriteWordTombstones': favoriteWordTombstones
-            .map((AggregateTombstoneRecord r) => r.toJson())
-            .toList(),
-        'favoriteSentenceTombstones': favoriteSentenceTombstones
-            .map((AggregateTombstoneRecord r) => r.toJson())
-            .toList(),
-        'studySegments':
-            studySegments.map((StudySegmentRecord r) => r.toJson()).toList(),
-        'studySegmentTombstones': studySegmentTombstones
-            .map((StudyTombstoneRecord r) => r.toJson())
-            .toList(),
-      };
+    'version': currentVersion,
+    'readingStats': readingStats
+        .map((ReadingStatRecord r) => r.toJson())
+        .toList(),
+    'videoStats': videoStats.map((VideoStatRecord r) => r.toJson()).toList(),
+    'readingHourly': readingHourly.map((HourlyRecord r) => r.toJson()).toList(),
+    'readingHourlyByFormat': readingHourlyByFormat
+        .map((HourlyFormatRecord r) => r.toJson())
+        .toList(),
+    'videoHourly': videoHourly.map((HourlyRecord r) => r.toJson()).toList(),
+    'miningStats': miningStats.map((MiningRecord r) => r.toJson()).toList(),
+    'lookupMiningCounters': lookupMiningCounters
+        .map((LookupMiningRecord r) => r.toJson())
+        .toList(),
+    'favoriteWords': favoriteWords
+        .map((FavoriteWordRecord r) => r.toJson())
+        .toList(),
+    'favoriteSentences': favoriteSentences
+        .map((FavoriteSentence s) => s.toJson())
+        .toList(),
+    'favoriteWordTombstones': favoriteWordTombstones
+        .map((AggregateTombstoneRecord r) => r.toJson())
+        .toList(),
+    'favoriteSentenceTombstones': favoriteSentenceTombstones
+        .map((AggregateTombstoneRecord r) => r.toJson())
+        .toList(),
+    'studySegments': studySegments
+        .map((StudySegmentRecord r) => r.toJson())
+        .toList(),
+    'studySegmentTombstones': studySegmentTombstones
+        .map((StudyTombstoneRecord r) => r.toJson())
+        .toList(),
+  };
 
   /// Decodes a snapshot from a backend JSON asset. A null / non-map payload, or
   /// one whose version is strictly HIGHER than [currentVersion] (a future
@@ -155,28 +157,43 @@ class AggregateSnapshot {
       return const AggregateSnapshot();
     }
     return AggregateSnapshot(
-      readingStats:
-          _decodeList(json['readingStats'], ReadingStatRecord.fromJson),
+      readingStats: _decodeList(
+        json['readingStats'],
+        ReadingStatRecord.fromJson,
+      ),
       videoStats: _decodeList(json['videoStats'], VideoStatRecord.fromJson),
       readingHourly: _decodeList(json['readingHourly'], HourlyRecord.fromJson),
       readingHourlyByFormat: _decodeList(
-          json['readingHourlyByFormat'], HourlyFormatRecord.fromJson),
+        json['readingHourlyByFormat'],
+        HourlyFormatRecord.fromJson,
+      ),
       videoHourly: _decodeList(json['videoHourly'], HourlyRecord.fromJson),
       miningStats: _decodeList(json['miningStats'], MiningRecord.fromJson),
       lookupMiningCounters: _decodeList(
-          json['lookupMiningCounters'], LookupMiningRecord.fromJson),
-      favoriteWords:
-          _decodeList(json['favoriteWords'], FavoriteWordRecord.fromJson),
+        json['lookupMiningCounters'],
+        LookupMiningRecord.fromJson,
+      ),
+      favoriteWords: _decodeList(
+        json['favoriteWords'],
+        FavoriteWordRecord.fromJson,
+      ),
       favoriteSentences: _decodeFavoriteSentences(json['favoriteSentences']),
       favoriteWordTombstones: _decodeList(
-          json['favoriteWordTombstones'], AggregateTombstoneRecord.fromJson),
+        json['favoriteWordTombstones'],
+        AggregateTombstoneRecord.fromJson,
+      ),
       favoriteSentenceTombstones: _decodeList(
-          json['favoriteSentenceTombstones'],
-          AggregateTombstoneRecord.fromJson),
-      studySegments:
-          _decodeList(json['studySegments'], StudySegmentRecord.fromJson),
+        json['favoriteSentenceTombstones'],
+        AggregateTombstoneRecord.fromJson,
+      ),
+      studySegments: _decodeList(
+        json['studySegments'],
+        StudySegmentRecord.fromJson,
+      ),
       studySegmentTombstones: _decodeList(
-          json['studySegmentTombstones'], StudyTombstoneRecord.fromJson),
+        json['studySegmentTombstones'],
+        StudyTombstoneRecord.fromJson,
+      ),
     );
   }
 
@@ -193,24 +210,24 @@ class AggregateSnapshot {
   ///
   /// 两个许可都为真时返回入参本身（零拷贝，`identical` 仍成立，与
   /// [AggregateSyncService.filterTombstoned] 同纪律）。
-  AggregateSnapshot select({
-    required bool stats,
-    required bool favorites,
-  }) {
+  AggregateSnapshot select({required bool stats, required bool favorites}) {
     if (stats && favorites) return this;
     return AggregateSnapshot(
       readingStats: stats ? readingStats : const <ReadingStatRecord>[],
       videoStats: stats ? videoStats : const <VideoStatRecord>[],
       readingHourly: stats ? readingHourly : const <HourlyRecord>[],
-      readingHourlyByFormat:
-          stats ? readingHourlyByFormat : const <HourlyFormatRecord>[],
+      readingHourlyByFormat: stats
+          ? readingHourlyByFormat
+          : const <HourlyFormatRecord>[],
       videoHourly: stats ? videoHourly : const <HourlyRecord>[],
       miningStats: stats ? miningStats : const <MiningRecord>[],
-      lookupMiningCounters:
-          stats ? lookupMiningCounters : const <LookupMiningRecord>[],
+      lookupMiningCounters: stats
+          ? lookupMiningCounters
+          : const <LookupMiningRecord>[],
       favoriteWords: favorites ? favoriteWords : const <FavoriteWordRecord>[],
-      favoriteSentences:
-          favorites ? favoriteSentences : const <FavoriteSentence>[],
+      favoriteSentences: favorites
+          ? favoriteSentences
+          : const <FavoriteSentence>[],
       favoriteWordTombstones: favorites
           ? favoriteWordTombstones
           : const <AggregateTombstoneRecord>[],
@@ -219,8 +236,9 @@ class AggregateSnapshot {
           : const <AggregateTombstoneRecord>[],
       // 段与其墓碑属统计族：「共享统计」关掉时一起置空（墓碑跟着它保护的族走）。
       studySegments: stats ? studySegments : const <StudySegmentRecord>[],
-      studySegmentTombstones:
-          stats ? studySegmentTombstones : const <StudyTombstoneRecord>[],
+      studySegmentTombstones: stats
+          ? studySegmentTombstones
+          : const <StudyTombstoneRecord>[],
     );
   }
 
@@ -276,12 +294,12 @@ class ReadingStatRecord {
   String get key => '${title.length}:$title|$dateKey';
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'title': title,
-        'dateKey': dateKey,
-        'charactersRead': charactersRead,
-        'readingTimeMs': readingTimeMs,
-        'lastStatisticModified': lastStatisticModified,
-      };
+    'title': title,
+    'dateKey': dateKey,
+    'charactersRead': charactersRead,
+    'readingTimeMs': readingTimeMs,
+    'lastStatisticModified': lastStatisticModified,
+  };
 
   static ReadingStatRecord? fromJson(Map<String, Object?> json) {
     final Object? title = json['title'];
@@ -316,12 +334,12 @@ class VideoStatRecord {
   String get key => '${title.length}:$title|$dateKey';
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'title': title,
-        'dateKey': dateKey,
-        'subtitleChars': subtitleChars,
-        'watchTimeMs': watchTimeMs,
-        'lastModified': lastModified,
-      };
+    'title': title,
+    'dateKey': dateKey,
+    'subtitleChars': subtitleChars,
+    'watchTimeMs': watchTimeMs,
+    'lastModified': lastModified,
+  };
 
   static VideoStatRecord? fromJson(Map<String, Object?> json) {
     final Object? title = json['title'];
@@ -353,10 +371,10 @@ class HourlyRecord {
   String get key => '$dateKey|$hour';
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'dateKey': dateKey,
-        'hour': hour,
-        'durationMs': durationMs,
-      };
+    'dateKey': dateKey,
+    'hour': hour,
+    'durationMs': durationMs,
+  };
 
   static HourlyRecord? fromJson(Map<String, Object?> json) {
     final Object? dateKey = json['dateKey'];
@@ -389,11 +407,11 @@ class HourlyFormatRecord {
   String get key => '${format.length}:$format|$dateKey|$hour';
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'dateKey': dateKey,
-        'hour': hour,
-        'format': format,
-        'durationMs': durationMs,
-      };
+    'dateKey': dateKey,
+    'hour': hour,
+    'format': format,
+    'durationMs': durationMs,
+  };
 
   static HourlyFormatRecord? fromJson(Map<String, Object?> json) {
     final Object? dateKey = json['dateKey'];
@@ -423,10 +441,10 @@ class MiningRecord {
   String get key => '${sourceType.length}:$sourceType|$dateKey';
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'sourceType': sourceType,
-        'dateKey': dateKey,
-        'count': count,
-      };
+    'sourceType': sourceType,
+    'dateKey': dateKey,
+    'count': count,
+  };
 
   static MiningRecord? fromJson(Map<String, Object?> json) {
     final Object? sourceType = json['sourceType'];
@@ -471,13 +489,13 @@ class LookupMiningRecord {
       '${title.length}:$title|${sourceType.length}:$sourceType|$dateKey';
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'bookKey': bookKey,
-        'title': title,
-        'sourceType': sourceType,
-        'dateKey': dateKey,
-        'lookupCount': lookupCount,
-        'mineCount': mineCount,
-      };
+    'bookKey': bookKey,
+    'title': title,
+    'sourceType': sourceType,
+    'dateKey': dateKey,
+    'lookupCount': lookupCount,
+    'mineCount': mineCount,
+  };
 
   static LookupMiningRecord? fromJson(Map<String, Object?> json) {
     final Object? title = json['title'];
@@ -525,13 +543,13 @@ class FavoriteWordRecord {
       '${expression.length}:$expression|${reading.length}:$reading|$sourceType';
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'expression': expression,
-        'reading': reading,
-        'glossary': glossary,
-        'sourceType': sourceType,
-        'dateKey': dateKey,
-        'createdAt': createdAt,
-      };
+    'expression': expression,
+    'reading': reading,
+    'glossary': glossary,
+    'sourceType': sourceType,
+    'dateKey': dateKey,
+    'createdAt': createdAt,
+  };
 
   static FavoriteWordRecord? fromJson(Map<String, Object?> json) {
     final Object? expression = json['expression'];
@@ -604,21 +622,21 @@ class StudySegmentRecord {
   String get mediaIdentity => '$mediaKind|$mediaKey';
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'uid': uid,
-        'deviceId': deviceId,
-        'mediaKind': mediaKind,
-        'mediaKey': mediaKey,
-        'format': format,
-        'title': title,
-        'startAt': startAt,
-        'endAt': endAt,
-        'dateKey': dateKey,
-        'hour': hour,
-        'durationMs': durationMs,
-        'chars': chars,
-        'pages': pages,
-        'updatedAt': updatedAt,
-      };
+    'uid': uid,
+    'deviceId': deviceId,
+    'mediaKind': mediaKind,
+    'mediaKey': mediaKey,
+    'format': format,
+    'title': title,
+    'startAt': startAt,
+    'endAt': endAt,
+    'dateKey': dateKey,
+    'hour': hour,
+    'durationMs': durationMs,
+    'chars': chars,
+    'pages': pages,
+    'updatedAt': updatedAt,
+  };
 
   static StudySegmentRecord? fromJson(Map<String, Object?> json) {
     final Object? uid = json['uid'];
@@ -666,10 +684,10 @@ class StudyTombstoneRecord {
   String get key => '$mediaKind|$mediaKey';
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'mediaKind': mediaKind,
-        'mediaKey': mediaKey,
-        'deletedAt': deletedAt,
-      };
+    'mediaKind': mediaKind,
+    'mediaKey': mediaKey,
+    'deletedAt': deletedAt,
+  };
 
   static StudyTombstoneRecord? fromJson(Map<String, Object?> json) {
     final Object? mediaKind = json['mediaKind'];
@@ -695,9 +713,9 @@ class AggregateTombstoneRecord {
   final int deletedAt;
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'itemKey': itemKey,
-        'deletedAt': deletedAt,
-      };
+    'itemKey': itemKey,
+    'deletedAt': deletedAt,
+  };
 
   static AggregateTombstoneRecord? fromJson(Map<String, Object?> json) {
     final Object? itemKey = json['itemKey'];

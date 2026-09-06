@@ -85,8 +85,11 @@ CREATE TABLE galgame_sessions (
 
     final version = await db.customSelect('PRAGMA user_version').getSingle();
     expect(version.read<int>('user_version'), db.schemaVersion);
-    expect(db.schemaVersion, 96,
-        reason: 'v59 新建 galgame_tag_mappings（BUG-1113 游戏接入共享标签池）');
+    expect(
+      db.schemaVersion,
+      96,
+      reason: 'v59 新建 galgame_tag_mappings（BUG-1113 游戏接入共享标签池）',
+    );
 
     final GalgameRow? legacy = await db.getGalgame('legacy_game');
     expect(legacy, isNotNull, reason: '旧游戏行原样保留');
@@ -107,15 +110,19 @@ CREATE TABLE galgame_sessions (
     final List<BookTagRow> tags = await db.getTagsForGame('legacy_game');
     expect(tags, hasLength(1));
     expect(tags.single.name, '通关');
-    expect(
-        await db.getGameIdsForAllTags(<int>{tagId}), <String>{'legacy_game'});
+    expect(await db.getGameIdsForAllTags(<int>{tagId}), <String>{
+      'legacy_game',
+    });
   });
 
   test('v59：fresh 库由 onCreate 直接建出该表（不依赖迁移梯子）', () async {
     final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
 
-    expect(await db.getAllTagAssignments(), isEmpty,
-        reason: 'onCreate 的 createAll 必须包含 galgame_tag_mappings');
+    expect(
+      await db.getAllTagAssignments(),
+      isEmpty,
+      reason: 'onCreate 的 createAll 必须包含 galgame_tag_mappings',
+    );
   });
 }

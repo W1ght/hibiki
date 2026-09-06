@@ -26,7 +26,7 @@ import '../helpers/test_platform_services.dart';
 /// libmpv；故能在 widget 环境跑通真实 `_init → _loadSingle → _applyLoad` 链。
 class _MissingTestAppModel extends AppModel {
   _MissingTestAppModel(PlatformServices platformServices, this._db)
-      : super(platformServices);
+    : super(platformServices);
 
   final FushiDatabase _db;
 
@@ -83,28 +83,27 @@ void main() {
     required String videoPath,
     String title = 'Missing Movie',
   }) async {
-    await db.upsertVideoBook(VideoBooksCompanion(
-      bookUid: Value(bookUid),
-      title: Value(title),
-      videoPath: Value(videoPath),
-    ));
+    await db.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: Value(bookUid),
+        title: Value(title),
+        videoPath: Value(videoPath),
+      ),
+    );
   }
 
   Widget wrap(String bookUid) => ProviderScope(
-        overrides: <Override>[
-          platformServicesProvider.overrideWithValue(platformServices),
-          ankiRepositoryProvider.overrideWithValue(ankiRepository),
-          appProvider.overrideWith((ref) => appModel),
-        ],
-        child: TranslationProvider(
-          child: MaterialApp(
-            home: VideoFushiPage(
-              bookUid: bookUid,
-              repo: VideoBookRepository(db),
-            ),
-          ),
-        ),
-      );
+    overrides: <Override>[
+      platformServicesProvider.overrideWithValue(platformServices),
+      ankiRepositoryProvider.overrideWithValue(ankiRepository),
+      appProvider.overrideWith((ref) => appModel),
+    ],
+    child: TranslationProvider(
+      child: MaterialApp(
+        home: VideoFushiPage(bookUid: bookUid, repo: VideoBookRepository(db)),
+      ),
+    ),
+  );
 
   // 用 runAsync 驱动真实异步 IO（File.exists / getTemporaryDirectory / 目录扫描）——
   // `tester.pump` 只推假时钟、不推真 Future。视频页有控制条自动隐藏等周期定时器，
@@ -129,25 +128,27 @@ void main() {
     }
   }
 
-  testWidgets('single video with non-existent path → missing state, no spinner',
-      (WidgetTester tester) async {
-    const String missing = r'D:\does\not\exist\gone.mp4';
-    await insertVideoBook(bookUid: 'video/missing', videoPath: missing);
+  testWidgets(
+    'single video with non-existent path → missing state, no spinner',
+    (WidgetTester tester) async {
+      const String missing = r'D:\does\not\exist\gone.mp4';
+      await insertVideoBook(bookUid: 'video/missing', videoPath: missing);
 
-    await tester.pumpWidget(wrap('video/missing'));
-    await drive(tester);
+      await tester.pumpWidget(wrap('video/missing'));
+      await drive(tester);
 
-    // 关键：不停留在转圈。
-    expect(find.byType(CircularProgressIndicator), findsNothing);
-    // 缺失态正文图标（中性，非 generic error_outline）。
-    expect(find.byIcon(Icons.video_file_outlined), findsWidgets);
-    // BUG-805：缺失态收敛成两个真按钮 [重新导入] [删除]（缺失正文 + 对话框都含此文案）。
-    expect(find.text(t.video_resource_missing_reimport), findsWidgets);
-    // 单视频（canDelete）提供「删除」。
-    expect(find.text(t.dialog_delete), findsWidgets);
+      // 关键：不停留在转圈。
+      expect(find.byType(CircularProgressIndicator), findsNothing);
+      // 缺失态正文图标（中性，非 generic error_outline）。
+      expect(find.byIcon(Icons.video_file_outlined), findsWidgets);
+      // BUG-805：缺失态收敛成两个真按钮 [重新导入] [删除]（缺失正文 + 对话框都含此文案）。
+      expect(find.text(t.video_resource_missing_reimport), findsWidgets);
+      // 单视频（canDelete）提供「删除」。
+      expect(find.text(t.dialog_delete), findsWidgets);
 
-    // 卸载页面让其 dispose 干净跑完（appModel / prefs 由 GC 回收，不显式 dispose——
-    // 页面生命周期已 dispose 关联监听，显式再 dispose 会触发 used-after-dispose）。
-    await tester.pumpWidget(const SizedBox.shrink());
-  });
+      // 卸载页面让其 dispose 干净跑完（appModel / prefs 由 GC 回收，不显式 dispose——
+      // 页面生命周期已 dispose 关联监听，显式再 dispose 会触发 used-after-dispose）。
+      await tester.pumpWidget(const SizedBox.shrink());
+    },
+  );
 }

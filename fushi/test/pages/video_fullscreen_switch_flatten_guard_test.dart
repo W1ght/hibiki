@@ -129,8 +129,9 @@ void main() {
     // 确实消费了它、两个输入都接在真字段上、分支条件没被额外析取项撑成恒真」——
     // 语义正确性由真值表负责，可达性由「条件必须逐字等于 plan 查询」负责。
     expect(
-      switchBody
-          .contains('final EpisodeSwitchPlan plan = resolveEpisodeSwitchPlan('),
+      switchBody.contains(
+        'final EpisodeSwitchPlan plan = resolveEpisodeSwitchPlan(',
+      ),
       isTrue,
       reason: '换集的路由决策必须走纯函数 resolveEpisodeSwitchPlan，不得手写布尔表达式',
     );
@@ -296,8 +297,11 @@ void main() {
     final int pushDefIdx = fullscreenSrc.indexOf(
       'Future<void> _pushNeutralizedVideoFullscreen(BuildContext context) async {',
     );
-    expect(pushDefIdx, isNonNegative,
-        reason: '找不到 _pushNeutralizedVideoFullscreen');
+    expect(
+      pushDefIdx,
+      isNonNegative,
+      reason: '找不到 _pushNeutralizedVideoFullscreen',
+    );
     final int routeAssignIdx = fullscreenSrc.indexOf(
       '_videoFullscreenRoute = fullscreenRoute;',
       pushDefIdx,
@@ -307,11 +311,7 @@ void main() {
       '_ownsHandedOverNativeFullscreen = false;',
       pushDefIdx,
     );
-    expect(
-      handIdx,
-      isNonNegative,
-      reason: '建出全屏路由时必须把接管来的所有权移交路由',
-    );
+    expect(handIdx, isNonNegative, reason: '建出全屏路由时必须把接管来的所有权移交路由');
     expect(
       handIdx,
       lessThan(routeAssignIdx),
@@ -328,8 +328,10 @@ void main() {
       'void _scheduleInitialFullscreenIfNeeded()',
     );
     expect(scheduleIdx, isNonNegative);
-    final String scheduleBody =
-        fullscreenSrc.substring(scheduleIdx, pushDefIdx);
+    final String scheduleBody = fullscreenSrc.substring(
+      scheduleIdx,
+      pushDefIdx,
+    );
     expect(
       'unawaited(_pushNeutralizedVideoFullscreen(ctx))'
           .allMatches(scheduleBody)
@@ -342,11 +344,7 @@ void main() {
     );
     expect(schedHandIdx, isNonNegative, reason: '已全屏分支仍要把所有权还给路由');
     final int schedGateIdx = scheduleBody.indexOf('if (isFullscreen(ctx)) {');
-    expect(
-      schedGateIdx,
-      isNonNegative,
-      reason: '调用点放手必须被「栈上已有全屏路由」这道门框住',
-    );
+    expect(schedGateIdx, isNonNegative, reason: '调用点放手必须被「栈上已有全屏路由」这道门框住');
     expect(
       schedHandIdx,
       greaterThan(schedGateIdx),

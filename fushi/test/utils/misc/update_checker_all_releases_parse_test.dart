@@ -24,8 +24,9 @@ void main() {
         },
       ]);
 
-      final List<Map<String, dynamic>> releases =
-          parseGitHubReleasesResponse(body);
+      final List<Map<String, dynamic>> releases = parseGitHubReleasesResponse(
+        body,
+      );
 
       expect(releases, hasLength(2));
       expect(releases[0]['tag_name'], 'v1.2.0');
@@ -39,16 +40,20 @@ void main() {
         <String, dynamic>{'tag_name': 'v1.8.0'},
       ]);
 
-      final List<Map<String, dynamic>> releases =
-          parseGitHubReleasesResponse(body);
+      final List<Map<String, dynamic>> releases = parseGitHubReleasesResponse(
+        body,
+      );
 
-      expect(releases.map((Map<String, dynamic> r) => r['tag_name']),
-          <String>['v1.9.0', 'v1.8.0']);
+      expect(releases.map((Map<String, dynamic> r) => r['tag_name']), <String>[
+        'v1.9.0',
+        'v1.8.0',
+      ]);
     });
 
     test('顶层非数组（如错误对象）返回空列表', () {
-      final String body =
-          jsonEncode(<String, dynamic>{'message': 'API rate limit exceeded'});
+      final String body = jsonEncode(<String, dynamic>{
+        'message': 'API rate limit exceeded',
+      });
 
       expect(parseGitHubReleasesResponse(body), isEmpty);
     });
@@ -60,8 +65,9 @@ void main() {
         <String, dynamic>{'tag_name': 'v1.0.0', 'draft': false},
       ]);
 
-      final List<Map<String, dynamic>> releases =
-          parseGitHubReleasesResponse(body);
+      final List<Map<String, dynamic>> releases = parseGitHubReleasesResponse(
+        body,
+      );
 
       expect(releases, hasLength(1));
       expect(releases.single['tag_name'], 'v1.0.0');

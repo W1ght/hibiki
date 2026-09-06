@@ -16,8 +16,9 @@ void main() {
     );
   });
 
-  testWidgets('floating dictionary page uses shared overlay popup shell',
-      (WidgetTester tester) async {
+  testWidgets('floating dictionary page uses shared overlay popup shell', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [

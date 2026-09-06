@@ -16,9 +16,9 @@ String _between(String source, String start, String end) {
 String _withoutLineComments(String source) => maskComments(source);
 
 void main() {
-  final String chrome =
-      File('lib/src/pages/implementations/reader_fushi/chrome.part.dart')
-          .readAsStringSync();
+  final String chrome = File(
+    'lib/src/pages/implementations/reader_fushi/chrome.part.dart',
+  ).readAsStringSync();
   final String bar = _between(
     chrome,
     'Future<void> _handleSelectionMenu(',
@@ -55,22 +55,26 @@ void main() {
       expect(bar, contains('t.selection_web_search'));
       expect(bar, contains("case 'share':"));
       expect(bar, contains("case 'webSearch':"));
-      expect(bar,
-          contains('SelectionExternalActions.instance.shareText(data.text)'));
-      expect(bar,
-          contains('SelectionExternalActions.instance.searchWeb(data.text)'));
+      expect(
+        bar,
+        contains('SelectionExternalActions.instance.shareText(data.text)'),
+      );
+      expect(
+        bar,
+        contains('SelectionExternalActions.instance.searchWeb(data.text)'),
+      );
       expect(bar, contains('t.selection_web_search_unavailable'));
       expect(bar, contains('await _clearReaderAppSelection()'));
     });
   });
 
   test('all selection convergence/lifecycle paths remove the bar', () {
-    final String lookup =
-        File('lib/src/pages/implementations/reader_fushi/lookup.part.dart')
-            .readAsStringSync();
-    final String page =
-        File('lib/src/pages/implementations/reader_fushi_page.dart')
-            .readAsStringSync();
+    final String lookup = File(
+      'lib/src/pages/implementations/reader_fushi/lookup.part.dart',
+    ).readAsStringSync();
+    final String page = File(
+      'lib/src/pages/implementations/reader_fushi_page.dart',
+    ).readAsStringSync();
     expect(
       _between(
         chrome,
@@ -95,23 +99,30 @@ void main() {
       ),
       contains('_removeSelectionActionBar()'),
     );
-    expect(page.substring(page.indexOf('void dispose()')),
-        contains('_removeSelectionActionBar()'));
+    expect(
+      page.substring(page.indexOf('void dispose()')),
+      contains('_removeSelectionActionBar()'),
+    );
   });
 
-  test('ordinary Android native selection menu has all four requested actions',
-      () {
-    final String webview =
-        File('lib/src/pages/implementations/reader_fushi/webview.part.dart')
-            .readAsStringSync();
-    final String menu = _between(
-        webview, 'contextMenu: isWindowsPlatform', 'initialUserScripts:');
-    expect(menu, contains('title: t.search'));
-    expect(menu, contains('title: t.copy'));
-    expect(menu, contains('title: t.share'));
-    expect(menu, contains('title: t.selection_web_search'));
-    expect(menu, contains('SelectionExternalActions'));
-    expect(menu, isNot(contains('multiSelect')));
-    expect(menu, isNot(contains('selectionMode')));
-  });
+  test(
+    'ordinary Android native selection menu has all four requested actions',
+    () {
+      final String webview = File(
+        'lib/src/pages/implementations/reader_fushi/webview.part.dart',
+      ).readAsStringSync();
+      final String menu = _between(
+        webview,
+        'contextMenu: isWindowsPlatform',
+        'initialUserScripts:',
+      );
+      expect(menu, contains('title: t.search'));
+      expect(menu, contains('title: t.copy'));
+      expect(menu, contains('title: t.share'));
+      expect(menu, contains('title: t.selection_web_search'));
+      expect(menu, contains('SelectionExternalActions'));
+      expect(menu, isNot(contains('multiSelect')));
+      expect(menu, isNot(contains('selectionMode')));
+    },
+  );
 }

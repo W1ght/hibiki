@@ -173,10 +173,7 @@ class _ProfileManagementBodyState extends ConsumerState<ProfileManagementBody> {
   // Profile tiles
   // ---------------------------------------------------------------------------
 
-  List<Widget> _buildProfileRows(
-    ProfileUiState uiState,
-    ProfileViewModel vm,
-  ) {
+  List<Widget> _buildProfileRows(ProfileUiState uiState, ProfileViewModel vm) {
     final isOnly = uiState.profiles.length <= 1;
     final bool cupertino = isCupertinoPlatform(context);
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
@@ -185,8 +182,8 @@ class _ProfileManagementBodyState extends ConsumerState<ProfileManagementBody> {
         AdaptiveSettingsRow(
           icon: profile.id == uiState.activeProfileId
               ? (cupertino
-                  ? CupertinoIcons.check_mark_circled_solid
-                  : Icons.check_circle)
+                    ? CupertinoIcons.check_mark_circled_solid
+                    : Icons.check_circle)
               : (cupertino ? CupertinoIcons.circle : Icons.circle_outlined),
           title: profile.name,
           onTap: () {
@@ -256,10 +253,7 @@ class _ProfileManagementBodyState extends ConsumerState<ProfileManagementBody> {
           label: t.profile_media_none,
         ),
         for (final p in uiState.profiles)
-          AdaptiveSettingsPickerOption<int?>(
-            value: p.id,
-            label: p.name,
-          ),
+          AdaptiveSettingsPickerOption<int?>(value: p.id, label: p.name),
       ],
       onChanged: (id) => vm.setMediaTypeBinding(mediaType, id),
     );
@@ -342,8 +336,9 @@ class _ProfileManagementBodyState extends ConsumerState<ProfileManagementBody> {
 
   void _notify(String message) {
     if (!mounted) return;
-    ScaffoldMessenger.of(context)
-        .showSnackBar(SnackBar(content: Text(message)));
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(message)));
   }
 
   /// 文件名安全化：去掉路径分隔符与控制字符，保证可落盘。
@@ -428,11 +423,11 @@ class _ProfileActionButton extends StatelessWidget {
     final bool cupertino = isCupertinoPlatform(context);
     final Color color = destructive
         ? (cupertino
-            ? CupertinoColors.destructiveRed.resolveFrom(context)
-            : Theme.of(context).colorScheme.error)
+              ? CupertinoColors.destructiveRed.resolveFrom(context)
+              : Theme.of(context).colorScheme.error)
         : (cupertino
-            ? CupertinoTheme.of(context).primaryColor
-            : Theme.of(context).colorScheme.onSurfaceVariant);
+              ? CupertinoTheme.of(context).primaryColor
+              : Theme.of(context).colorScheme.onSurfaceVariant);
 
     if (cupertino) {
       return CupertinoButton(

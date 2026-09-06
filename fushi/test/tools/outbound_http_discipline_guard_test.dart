@@ -73,9 +73,9 @@ const Map<String, String> kOutboundAssemblyPoints = <String, String>{
       '制卡远程媒体的包内工厂钩子（BUG-1498）：未接线时回退裸 HttpClient，行为与接线前等价',
   'packages/fushi_anki/lib/src/ankiconnect/ankiconnect_installer.dart':
       '代装 AnkiConnect 时从 ankiweb.net 下插件包的包内工厂钩子（同 BUG-1498 范式）：'
-          'app 侧经 installAnkiAddonDownloadHttpClientFactory 接线，未接线时回退裸 '
-          'http.Client()。注意与同包 ankiconnect_service.dart 方向相反——那条打 '
-          'localhost 必须直连，这条打公网必须能走代理。',
+      'app 侧经 installAnkiAddonDownloadHttpClientFactory 接线，未接线时回退裸 '
+      'http.Client()。注意与同包 ankiconnect_service.dart 方向相反——那条打 '
+      'localhost 必须直连，这条打公网必须能走代理。',
   'packages/fushi_dictionary/lib/src/formats/dictionary_downloader.dart':
       '词典链路的包内工厂钩子（BUG-1493）：createDictionaryDio 里 `?? Dio()` 的未接线回退',
 };
@@ -88,7 +88,7 @@ const Map<String, String> kBareOutboundRegistry = <String, String>{
   // --- 本机回环 ---
   'packages/fushi_anki/lib/src/ankiconnect/ankiconnect_service.dart':
       'AnkiConnect JSON-RPC，默认 localhost:8765（用户可改成局域网另一台机）。'
-          '它自带 connectionFactory 做连接期超时；走 HTTP 代理会让制卡整条链路当场失效。',
+      '它自带 connectionFactory 做连接期超时；走 HTTP 代理会让制卡整条链路当场失效。',
   'fushi/lib/src/media/manga/mihon/desktop_mihon_runtime.dart':
       'Mihon 桌面 sidecar：控制面与封面图都打本进程拉起的 127.0.0.1:<port> 认证代理端点。',
   'fushi/lib/src/media/torrent/qbittorrent_client.dart':
@@ -162,10 +162,8 @@ String _relativeToRepo(String absolutePath) {
 /// `http.Client()` 就是这样从枚举结果里凭空消失的。守卫扫不到 ≠ 干净。
 Map<String, Set<String>> findBareOutboundFiles() {
   final Map<String, RegExp> patterns = kBareOutboundPatterns.map(
-    (String name, String source) => MapEntry<String, RegExp>(
-      name,
-      RegExp(source, multiLine: true),
-    ),
+    (String name, String source) =>
+        MapEntry<String, RegExp>(name, RegExp(source, multiLine: true)),
   );
   final Map<String, Set<String>> hits = <String, Set<String>>{};
   for (final File f in scannedDartFiles()) {
@@ -192,8 +190,12 @@ Set<String> _matchedPatternsIn(String source) {
 
 void main() {
   test('扫描规模哨兵：7 个源码根确实被枚举到了', () {
-    expectScanScale(scannedDartFiles().length,
-        what: '本仓自有 lib/ 下的 .dart', atLeast: 900, measured: 1136);
+    expectScanScale(
+      scannedDartFiles().length,
+      what: '本仓自有 lib/ 下的 .dart',
+      atLeast: 900,
+      measured: 1136,
+    );
   });
 
   test('裸出站构造必须已登记（装配点 or 豁免清单）', () {
@@ -209,7 +211,8 @@ void main() {
     expect(
       unexpected,
       isEmpty,
-      reason: '新增了绕过统一装配点的裸出站构造。\n'
+      reason:
+          '新增了绕过统一装配点的裸出站构造。\n'
           '如果目标是**公网**（刮削 / 字幕 / 弹幕 / 封面 / 字体 / 模型 / 日志…），请改用\n'
           '  `createAppHttpIoClient()` / `createAppHttpClient()` / `createAppDio()`\n'
           '（`lib/src/utils/net/app_http.dart`，同步、可直接写在构造函数初始化列表里）。\n'
@@ -229,7 +232,8 @@ void main() {
       expect(
         hits.keys,
         contains(path),
-        reason: '$path 已不再裸构造出站 client，请把它从清单里删掉并把 '
+        reason:
+            '$path 已不再裸构造出站 client，请把它从清单里删掉并把 '
             'kRegisteredOutboundFileCount -1——清单只减不增，虚挂条目会让下一个人'
             '以为这里还有一条不走代理的暗路。',
       );
@@ -251,9 +255,13 @@ void main() {
       ...kOutboundAssemblyPoints.keys,
       ...kBareOutboundRegistry.keys,
     };
-    expect(all.length, kRegisteredOutboundFileCount,
-        reason: '改了登记清单就要同步改这个数——光靠「新增未登记即红」挡不住'
-            '「悄悄多登记一条」。');
+    expect(
+      all.length,
+      kRegisteredOutboundFileCount,
+      reason:
+          '改了登记清单就要同步改这个数——光靠「新增未登记即红」挡不住'
+          '「悄悄多登记一条」。',
+    );
   });
 
   test('每条登记都写了理由（空理由等于没登记）', () {
@@ -267,14 +275,22 @@ void main() {
 
   group('判据自校验（合成语料，逐分支存活性）', () {
     test('四种裸构造写法都能被抓到', () {
-      expect(_matchedPatternsIn('final c = HttpClient();'),
-          contains('HttpClient('));
-      expect(_matchedPatternsIn('final c = http.Client();'),
-          contains('http.Client('));
-      expect(_matchedPatternsIn('final c = IOClient(inner);'),
-          contains('IOClient('));
-      expect(_matchedPatternsIn('final d = Dio(BaseOptions());'),
-          contains('Dio('));
+      expect(
+        _matchedPatternsIn('final c = HttpClient();'),
+        contains('HttpClient('),
+      );
+      expect(
+        _matchedPatternsIn('final c = http.Client();'),
+        contains('http.Client('),
+      );
+      expect(
+        _matchedPatternsIn('final c = IOClient(inner);'),
+        contains('IOClient('),
+      );
+      expect(
+        _matchedPatternsIn('final d = Dio(BaseOptions());'),
+        contains('Dio('),
+      );
     });
 
     test('dart format 折出来的换行写法也能被抓到', () {
@@ -312,7 +328,8 @@ void main() {
       // 静态方法调用，不是构造。
       expect(
         _matchedPatternsIn(
-            'HttpClient.findProxyFromEnvironment(uri, environment: env);'),
+          'HttpClient.findProxyFromEnvironment(uri, environment: env);',
+        ),
         isEmpty,
       );
       // 成员访问链上的同名 getter。
@@ -321,7 +338,9 @@ void main() {
 
     test('注释里的裸构造不算命中（本文件与被扫文件的注释都写着这些名字）', () {
       expect(
-          _matchedPatternsIn('// 以前是裸 HttpClient() 出站\nfinal x = 1;'), isEmpty);
+        _matchedPatternsIn('// 以前是裸 HttpClient() 出站\nfinal x = 1;'),
+        isEmpty,
+      );
       expect(_matchedPatternsIn('/// 回退裸 Dio()\nfinal y = 2;'), isEmpty);
       expect(_matchedPatternsIn('/* http.Client() */\nfinal z = 3;'), isEmpty);
       // 但同一行注释后面的真代码仍要抓到。

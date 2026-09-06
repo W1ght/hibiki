@@ -27,7 +27,8 @@ void main() {
     test('文件 import 了 DebugLogService', () {
       expect(
         src.contains(
-            "import 'package:fushi/src/utils/misc/debug_log_service.dart'"),
+          "import 'package:fushi/src/utils/misc/debug_log_service.dart'",
+        ),
         isTrue,
         reason: '三点诊断都经 DebugLogService.instance.enabled 门控，须 import',
       );
@@ -44,15 +45,27 @@ void main() {
         isTrue,
         reason: 'JS 诊断 console.log 须由 DebugLogService.enabled 门控（默认 off）',
       );
-      expect(body.contains('console.log'), isTrue,
-          reason: 'JS 端诊断走 console.log（经 onConsoleMessage 转 debugPrint）');
-      expect(body.contains('reanchorPending='), isTrue,
-          reason: '须输出 reanchorPending（true 时早返回不回传）');
-      expect(body.contains('hasBridge='), isTrue,
-          reason: '须输出 hasBridge（false 时 callHandler 不可用）');
+      expect(
+        body.contains('console.log'),
+        isTrue,
+        reason: 'JS 端诊断走 console.log（经 onConsoleMessage 转 debugPrint）',
+      );
+      expect(
+        body.contains('reanchorPending='),
+        isTrue,
+        reason: '须输出 reanchorPending（true 时早返回不回传）',
+      );
+      expect(
+        body.contains('hasBridge='),
+        isTrue,
+        reason: '须输出 hasBridge（false 时 callHandler 不可用）',
+      );
       // 不破坏 151 现有早返回逻辑。
-      expect(body.contains('r._reanchorPending === true) return'), isTrue,
-          reason: '诊断不得移除原 _reanchorPending 早返回');
+      expect(
+        body.contains('r._reanchorPending === true) return'),
+        isTrue,
+        reason: '诊断不得移除原 _reanchorPending 早返回',
+      );
     });
 
     test('② Dart _handleReaderScroll 受门控记四门控真值 + 是否刷新', () {
@@ -61,10 +74,15 @@ void main() {
       expect(idx, greaterThan(0));
       // TODO-736 B-3 在该函数顶部插入 settle 去抖块，函数体加长，窗口放宽到 1900。
       final String body = src.substring(idx, idx + 2700);
-      expect(body.contains('if (DebugLogService.instance.enabled)'), isTrue,
-          reason: 'Dart 诊断须由 DebugLogService.instance.enabled 门控（默认 off）');
-      expect(body.contains("debugPrint('[ReaderDiag] _handleReaderScroll"),
-          isTrue);
+      expect(
+        body.contains('if (DebugLogService.instance.enabled)'),
+        isTrue,
+        reason: 'Dart 诊断须由 DebugLogService.instance.enabled 门控（默认 off）',
+      );
+      expect(
+        body.contains("debugPrint('[ReaderDiag] _handleReaderScroll"),
+        isTrue,
+      );
       // 四个门控条件各自真值都要落进诊断。
       expect(body.contains(r'readerContentReady=$_readerContentReady'), isTrue);
       expect(body.contains(r'restoreInFlight=$_restoreInFlight'), isTrue);
@@ -82,15 +100,25 @@ void main() {
       // reflow 归零判据块（含自带诊断 + 复位），续修边界又加因果门解武装块；
       // BUG-1762 再插入速度封顶推进块，函数体再加长，窗口放宽到 6000。
       final String body = src.substring(idx, idx + 6000);
-      expect(body.contains('if (DebugLogService.instance.enabled)'), isTrue,
-          reason: 'Dart 诊断须由 DebugLogService.instance.enabled 门控（默认 off）');
       expect(
-          body.contains("debugPrint('[ReaderDiag] _refreshProgress"), isTrue);
+        body.contains('if (DebugLogService.instance.enabled)'),
+        isTrue,
+        reason: 'Dart 诊断须由 DebugLogService.instance.enabled 门控（默认 off）',
+      );
       expect(
-          body.contains(r'progressCurrentChars=$_progressCurrentChars'), isTrue,
-          reason: '须记重算后 _progressCurrentChars');
-      expect(body.contains(r'progressTotalChars=$_progressTotalChars'), isTrue,
-          reason: '须记重算后 _progressTotalChars');
+        body.contains("debugPrint('[ReaderDiag] _refreshProgress"),
+        isTrue,
+      );
+      expect(
+        body.contains(r'progressCurrentChars=$_progressCurrentChars'),
+        isTrue,
+        reason: '须记重算后 _progressCurrentChars',
+      );
+      expect(
+        body.contains(r'progressTotalChars=$_progressTotalChars'),
+        isTrue,
+        reason: '须记重算后 _progressTotalChars',
+      );
     });
   });
 }

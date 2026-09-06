@@ -17,36 +17,35 @@ void main() {
     String? english,
     int? score,
     String? description,
-  }) =>
-      <String, Object?>{
-        'id': id,
-        'title': <String, Object?>{
-          'native': native,
-          'romaji': romaji,
-          'english': english,
-        },
-        'synonyms': <Object?>['别名A', null],
-        'coverImage': <String, Object?>{
-          'extraLarge': 'https://img.example/$id-xl.jpg',
-          'large': 'https://img.example/$id.jpg',
-        },
-        'averageScore': score,
-        'description': description,
-        'genres': <Object?>['Fantasy', 'Adventure'],
-        'status': 'RELEASING',
-        'chapters': null,
-        'countryOfOrigin': 'JP',
-      };
+  }) => <String, Object?>{
+    'id': id,
+    'title': <String, Object?>{
+      'native': native,
+      'romaji': romaji,
+      'english': english,
+    },
+    'synonyms': <Object?>['别名A', null],
+    'coverImage': <String, Object?>{
+      'extraLarge': 'https://img.example/$id-xl.jpg',
+      'large': 'https://img.example/$id.jpg',
+    },
+    'averageScore': score,
+    'description': description,
+    'genres': <Object?>['Fantasy', 'Adventure'],
+    'status': 'RELEASING',
+    'chapters': null,
+    'countryOfOrigin': 'JP',
+  };
 
   AniListMangaDiscoveryProvider providerWith(
     Future<http.Response> Function(http.Request request) handler,
-  ) =>
-      AniListMangaDiscoveryProvider(client: MockClient(handler));
+  ) => AniListMangaDiscoveryProvider(client: MockClient(handler));
 
   test('combined query 解析四条 feed，评分除以 10，HTML 剥离', () async {
     late Map<String, Object?> sentBody;
-    final AniListMangaDiscoveryProvider provider =
-        providerWith((http.Request request) async {
+    final AniListMangaDiscoveryProvider provider = providerWith((
+      http.Request request,
+    ) async {
       sentBody = jsonDecode(request.body) as Map<String, Object?>;
       return http.Response(
         jsonEncode(<String, Object?>{
@@ -81,10 +80,7 @@ void main() {
     provider.close();
 
     expect((sentBody['query']! as String), contains('type: MANGA'));
-    expect(
-      (sentBody['variables']! as Map<String, Object?>)['perPage'],
-      20,
-    );
+    expect((sentBody['variables']! as Map<String, Object?>)['perPage'], 20);
 
     final List<MangaDiscoveryEntry> trending =
         snapshot[MangaDiscoveryFeed.trending];
@@ -98,16 +94,19 @@ void main() {
     expect(entry.allTitles, contains('别名A'));
     expect(entry.status, 'RELEASING');
 
-    expect(snapshot[MangaDiscoveryFeed.popular].single.preferredTitle,
-        'One Piece');
+    expect(
+      snapshot[MangaDiscoveryFeed.popular].single.preferredTitle,
+      'One Piece',
+    );
     expect(snapshot[MangaDiscoveryFeed.topRated], isEmpty);
     expect(snapshot[MangaDiscoveryFeed.latestFinished].single.anilistId, 30);
     expect(snapshot.isEmpty, isFalse);
   });
 
   test('GraphQL errors 转成网络异常', () async {
-    final AniListMangaDiscoveryProvider provider =
-        providerWith((http.Request request) async {
+    final AniListMangaDiscoveryProvider provider = providerWith((
+      http.Request request,
+    ) async {
       return http.Response(
         jsonEncode(<String, Object?>{
           'errors': <Object?>[

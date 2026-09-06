@@ -50,8 +50,7 @@ void main() {
       expect(windowSizeClassReal(840, 1.0), WindowSizeClass.expanded);
     });
 
-    test(
-        'a logical 960 canvas at scale 0.88 is no longer expanded once it '
+    test('a logical 960 canvas at scale 0.88 is no longer expanded once it '
         'shrinks (real width drives the class)', () {
       // The desktop auto-scale floor is 0.88. With the window minimum width
       // relaxed, dragging the real window narrow lowers the LOGICAL canvas
@@ -141,17 +140,11 @@ void main() {
 
     test('sizes reader shelf cards from constrained content width', () {
       expect(
-        readerShelfGridExtentForLayout(
-          mediaWidth: 1600,
-          contentWidth: 760,
-        ),
+        readerShelfGridExtentForLayout(mediaWidth: 1600, contentWidth: 760),
         180,
       );
       expect(
-        readerShelfGridExtentForLayout(
-          mediaWidth: 1600,
-          contentWidth: 1100,
-        ),
+        readerShelfGridExtentForLayout(mediaWidth: 1600, contentWidth: 1100),
         190,
       );
     });
@@ -199,17 +192,18 @@ void main() {
       // 横向内边距同源，标题与正文左缘对齐）。注释先剥掉，防止说明文字假绿。
       for (final ({String path, String label}) page
           in const <({String path, String label})>[
-        (
-          path: 'lib/src/pages/implementations/media_sources_page.dart',
-          label: '来源页',
-        ),
-        (
-          path: 'lib/src/media/manga/online/mokuro_moe_catalog_page.dart',
-          label: 'mokuro 在线目录页',
-        ),
-      ]) {
-        final String code =
-            stripDartComments(File(page.path).readAsStringSync());
+            (
+              path: 'lib/src/pages/implementations/media_sources_page.dart',
+              label: '来源页',
+            ),
+            (
+              path: 'lib/src/media/manga/online/mokuro_moe_catalog_page.dart',
+              label: 'mokuro 在线目录页',
+            ),
+          ]) {
+        final String code = stripDartComments(
+          File(page.path).readAsStringSync(),
+        );
         expect(
           code.contains('DesktopContentKind.readerShelf'),
           isTrue,
@@ -263,32 +257,31 @@ void main() {
     });
 
     testWidgets(
-        'full-bleed dictionary keeps side padding on wide desktop (TODO-1352)',
-        (
-      WidgetTester tester,
-    ) async {
-      tester.view.devicePixelRatio = 1;
-      tester.view.physicalSize = const Size(1600, 200);
-      addTearDown(tester.view.reset);
+      'full-bleed dictionary keeps side padding on wide desktop (TODO-1352)',
+      (WidgetTester tester) async {
+        tester.view.devicePixelRatio = 1;
+        tester.view.physicalSize = const Size(1600, 200);
+        addTearDown(tester.view.reset);
 
-      await tester.pumpWidget(
-        const Directionality(
-          textDirection: TextDirection.ltr,
-          child: SizedBox(
-            width: double.infinity,
-            height: double.infinity,
-            child: DesktopContentLayout(
-              kind: DesktopContentKind.dictionary,
-              child: SizedBox.expand(key: childKey),
+        await tester.pumpWidget(
+          const Directionality(
+            textDirection: TextDirection.ltr,
+            child: SizedBox(
+              width: double.infinity,
+              height: double.infinity,
+              child: DesktopContentLayout(
+                kind: DesktopContentKind.dictionary,
+                child: SizedBox.expand(key: childKey),
+              ),
             ),
           ),
-        ),
-      );
+        );
 
-      // TODO-1352：dictionary 宽屏改为 full-bleed（null 上限），子内容宽度
-      // = 屏幕 1600 - 2×24 侧向留白 = 1552（不再锁 1040→992）。
-      expect(tester.getSize(find.byKey(childKey)).width, 1552);
-    });
+        // TODO-1352：dictionary 宽屏改为 full-bleed（null 上限），子内容宽度
+        // = 屏幕 1600 - 2×24 侧向留白 = 1552（不再锁 1040→992）。
+        expect(tester.getSize(find.byKey(childKey)).width, 1552);
+      },
+    );
 
     testWidgets('reader shelf spans edge-to-edge on wide desktop', (
       WidgetTester tester,
@@ -495,7 +488,8 @@ void main() {
         expect(
           layout.columns,
           greaterThanOrEqualTo(2),
-          reason: '手机宽 $w 应出至少 2 列（targetWidth='
+          reason:
+              '手机宽 $w 应出至少 2 列（targetWidth='
               '${readerShelfGridExtentForWidth(w)}）',
         );
       }

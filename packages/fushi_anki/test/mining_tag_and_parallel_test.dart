@@ -402,27 +402,24 @@ void main() {
         );
       });
 
-      test(
-        'category switch off -> category tag dropped, fushi kept',
-        () async {
-          expect(
-            await tagsForConnect(
-              'jp',
-              source: AnkiMiningSource.book,
-              includeCategory: false,
-            ),
-            <String>['jp', 'fushi'],
-          );
-          expect(
-            await tagsForDroid(
-              'jp',
-              source: AnkiMiningSource.video,
-              includeCategory: false,
-            ),
-            <String>['jp', 'fushi'],
-          );
-        },
-      );
+      test('category switch off -> category tag dropped, fushi kept', () async {
+        expect(
+          await tagsForConnect(
+            'jp',
+            source: AnkiMiningSource.book,
+            includeCategory: false,
+          ),
+          <String>['jp', 'fushi'],
+        );
+        expect(
+          await tagsForDroid(
+            'jp',
+            source: AnkiMiningSource.video,
+            includeCategory: false,
+          ),
+          <String>['jp', 'fushi'],
+        );
+      });
 
       test('both switches off -> only the user custom tags remain', () async {
         expect(

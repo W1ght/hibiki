@@ -31,29 +31,42 @@ void main() {
 
   group('global lookup hotkey register failure is visible', () {
     late String controller;
-    setUpAll(() =>
-        controller = read('lib/src/lookup/global_lookup_controller.dart'));
+    setUpAll(
+      () => controller = read('lib/src/lookup/global_lookup_controller.dart'),
+    );
 
-    test('a failed register() is logged to ErrorLogService (not glog-only)',
-        () {
-      // Locate the registration helper and confirm its catch reaches the
-      // user-visible / uploadable ErrorLogService channel.
-      final int at =
-          controller.indexOf('Future<void> _registerHotKeyFromRegistry(');
-      expect(at, greaterThan(-1),
-          reason: '_registerHotKeyFromRegistry must exist');
-      final String fn = controller.substring(at);
-      expect(fn.contains('ErrorLogService.instance.log('), isTrue,
-          reason: 'a failed hotkey register must surface through the visible '
-              'ErrorLogService, not be swallowed into the temp-file glog only');
-    });
+    test(
+      'a failed register() is logged to ErrorLogService (not glog-only)',
+      () {
+        // Locate the registration helper and confirm its catch reaches the
+        // user-visible / uploadable ErrorLogService channel.
+        final int at = controller.indexOf(
+          'Future<void> _registerHotKeyFromRegistry(',
+        );
+        expect(
+          at,
+          greaterThan(-1),
+          reason: '_registerHotKeyFromRegistry must exist',
+        );
+        final String fn = controller.substring(at);
+        expect(
+          fn.contains('ErrorLogService.instance.log('),
+          isTrue,
+          reason:
+              'a failed hotkey register must surface through the visible '
+              'ErrorLogService, not be swallowed into the temp-file glog only',
+        );
+      },
+    );
 
     test('controller imports ErrorLogService', () {
       expect(
-          controller.contains(
-              "import 'package:fushi/src/utils/misc/error_log_service.dart';"),
-          isTrue,
-          reason: 'the visibility fix depends on the ErrorLogService import');
+        controller.contains(
+          "import 'package:fushi/src/utils/misc/error_log_service.dart';",
+        ),
+        isTrue,
+        reason: 'the visibility fix depends on the ErrorLogService import',
+      );
     });
   });
 
@@ -62,22 +75,26 @@ void main() {
     setUpAll(() => main = read('lib/main.dart'));
 
     test('main.dart calls hotKeyManager.unregisterAll() on startup', () {
-      expect(main.contains('hotKeyManager.unregisterAll('), isTrue,
-          reason:
-              'the plugin init contract needs one unregisterAll() on start');
+      expect(
+        main.contains('hotKeyManager.unregisterAll('),
+        isTrue,
+        reason: 'the plugin init contract needs one unregisterAll() on start',
+      );
     });
 
-    test(
-        'the init unregisterAll() is NOT nested in the restartMarkerArg branch',
-        () {
+    test('the init unregisterAll() is NOT nested in the restartMarkerArg branch', () {
       // Extract the restartMarkerArg `if` block and assert the init call lives
       // AFTER it (unconditional desktop path), not inside it. If it were inside,
       // a normal cold start would skip the plugin init and register() could fail
       // silently.
       final int ifAt = main.indexOf(
-          'if (args.contains(DesktopLifecycleService.restartMarkerArg))');
-      expect(ifAt, greaterThan(-1),
-          reason: 'the restart-marker branch must exist');
+        'if (args.contains(DesktopLifecycleService.restartMarkerArg))',
+      );
+      expect(
+        ifAt,
+        greaterThan(-1),
+        reason: 'the restart-marker branch must exist',
+      );
       // Walk braces from the first `{` after the if to find the branch end.
       final int openBrace = main.indexOf('{', ifAt);
       expect(openBrace, greaterThan(-1));
@@ -94,21 +111,34 @@ void main() {
           }
         }
       }
-      expect(closeBrace, greaterThan(openBrace),
-          reason: 'restart-marker branch must be brace-balanced');
+      expect(
+        closeBrace,
+        greaterThan(openBrace),
+        reason: 'restart-marker branch must be brace-balanced',
+      );
       final String branchBody = main.substring(openBrace, closeBrace + 1);
-      expect(branchBody.contains('hotKeyManager.unregisterAll('), isFalse,
-          reason: 'the hotkey_manager init unregisterAll() must NOT be nested '
-              'inside the restartMarkerArg branch — a normal cold start would '
-              'then skip plugin init and the overlay hotkey register could fail');
+      expect(
+        branchBody.contains('hotKeyManager.unregisterAll('),
+        isFalse,
+        reason:
+            'the hotkey_manager init unregisterAll() must NOT be nested '
+            'inside the restartMarkerArg branch — a normal cold start would '
+            'then skip plugin init and the overlay hotkey register could fail',
+      );
 
       // And it must appear somewhere AFTER the branch closes (unconditional
       // desktop path), still on desktop.
-      final int initAt =
-          main.indexOf('hotKeyManager.unregisterAll(', closeBrace);
-      expect(initAt, greaterThan(closeBrace),
-          reason: 'the init unregisterAll() must run on the unconditional '
-              'desktop path after the restart-marker branch');
+      final int initAt = main.indexOf(
+        'hotKeyManager.unregisterAll(',
+        closeBrace,
+      );
+      expect(
+        initAt,
+        greaterThan(closeBrace),
+        reason:
+            'the init unregisterAll() must run on the unconditional '
+            'desktop path after the restart-marker branch',
+      );
     });
   });
 
@@ -124,16 +154,23 @@ void main() {
       controllerSrc = read('lib/src/lookup/global_lookup_controller.dart');
       renderSrc = read('lib/src/lookup/global_lookup_render.dart');
       popupJs = read('assets/popup/popup.js');
-      galOverlaySrc =
-          read('lib/src/lookup/gal_hook_text_overlay_controller.dart');
+      galOverlaySrc = read(
+        'lib/src/lookup/gal_hook_text_overlay_controller.dart',
+      );
     });
 
     test('showSentenceBanner 开关不再存在（controller / 渲染链 / popup.js）', () {
-      expect(controllerSrc.contains('showSentenceBanner'), isFalse,
-          reason: '横幅已删，controller 不得再保留 showSentenceBanner 参数');
+      expect(
+        controllerSrc.contains('showSentenceBanner'),
+        isFalse,
+        reason: '横幅已删，controller 不得再保留 showSentenceBanner 参数',
+      );
       expect(controllerSrc.contains('_showSentenceBanner'), isFalse);
-      expect(renderSrc.contains('__globalLookupSentence'), isFalse,
-          reason: '渲染脚本不得再向 popup.js 注入句子横幅文本');
+      expect(
+        renderSrc.contains('__globalLookupSentence'),
+        isFalse,
+        reason: '渲染脚本不得再向 popup.js 注入句子横幅文本',
+      );
       expect(popupJs.contains('buildGlobalLookupSentenceBanner'), isFalse);
       expect(popupJs.contains('prependSentenceBanner'), isFalse);
       expect(popupJs.contains('__globalLookupSentence'), isFalse);
@@ -141,13 +178,16 @@ void main() {
 
     test('制卡 sentenceContext 仍用完整 _currentSentence（横幅删掉也不空）', () {
       expect(
-          controllerSrc.contains('sentenceContext: _currentSentence'), isTrue,
-          reason: 'BUG-730：热键窗整句仍进制卡 {sentence}，与横幅无关');
+        controllerSrc.contains('sentenceContext: _currentSentence'),
+        isTrue,
+        reason: 'BUG-730：热键窗整句仍进制卡 {sentence}，与横幅无关',
+      );
     });
 
     test('游戏台词浮窗点词保留完整句子供制卡', () {
-      final int handlerAt =
-          galOverlaySrc.indexOf('Future<void> _onLookupText(');
+      final int handlerAt = galOverlaySrc.indexOf(
+        'Future<void> _onLookupText(',
+      );
       expect(handlerAt, greaterThan(-1), reason: '游戏台词浮窗查词入口必须存在');
       final int callAt = galOverlaySrc.indexOf(
         'GlobalLookupController.instance.lookupText(',
@@ -157,10 +197,16 @@ void main() {
       final int callEnd = galOverlaySrc.indexOf(');', callAt);
       expect(callEnd, greaterThan(callAt));
       final String call = galOverlaySrc.substring(callAt, callEnd + 2);
-      expect(call.contains('showSentenceBanner'), isFalse,
-          reason: '横幅开关已删，调用点不得再传 showSentenceBanner');
-      expect(call.contains('sentence: entry.text'), isTrue,
-          reason: '制卡需要的完整句子上下文必须继续传入');
+      expect(
+        call.contains('showSentenceBanner'),
+        isFalse,
+        reason: '横幅开关已删，调用点不得再传 showSentenceBanner',
+      );
+      expect(
+        call.contains('sentence: entry.text'),
+        isTrue,
+        reason: '制卡需要的完整句子上下文必须继续传入',
+      );
     });
   });
 }

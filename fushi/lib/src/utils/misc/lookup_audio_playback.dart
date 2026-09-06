@@ -36,8 +36,11 @@ Future<void> playLookupAudio(
   String expression,
   String reading,
 ) async {
-  final String? url =
-      await resolveLookupAudioUrl(appModel, expression, reading);
+  final String? url = await resolveLookupAudioUrl(
+    appModel,
+    expression,
+    reading,
+  );
   if (url == null || url.isEmpty) return;
 
   // Plays remote URLs and local file paths uniformly, including Windows
@@ -81,10 +84,8 @@ Future<String?> resolveLookupAudioUrl(
       }
     },
     extractLocalAudio: TtsChannel.instance.extractLocalAudio,
-    queryRemoteAudio: (expression, reading) => appModel.lookupRemoteAudio(
-      expression,
-      reading,
-    ),
+    queryRemoteAudio: (expression, reading) =>
+        appModel.lookupRemoteAudio(expression, reading),
   );
   return resolver.resolveConfigured(
     expression: expression,
@@ -119,8 +120,11 @@ Future<bool> autoReadWordUnified(
   String reading, {
   required Future<bool> Function(String url)? playInWebView,
 }) async {
-  final String? ref =
-      await resolveLookupAudioUrl(appModel, expression, reading);
+  final String? ref = await resolveLookupAudioUrl(
+    appModel,
+    expression,
+    reading,
+  );
   if (ref == null || ref.isEmpty) return false;
 
   if (playInWebView != null) {
@@ -158,9 +162,9 @@ Future<String?> resolveWordAudioWebViewUrl(
   AppModel appModel,
   String expression,
   String reading,
-) async =>
-    audioRefToWebViewUrl(
-        await resolveLookupAudioUrl(appModel, expression, reading));
+) async => audioRefToWebViewUrl(
+  await resolveLookupAudioUrl(appModel, expression, reading),
+);
 
 /// Converts a resolved audio ref (from [resolveLookupAudioUrl] /
 /// [WordAudioResolver], i.e. a remote `http(s)://` URL **or** a local file path)
@@ -179,8 +183,9 @@ Future<String?> resolveWordAudioWebViewUrl(
 Future<String?> audioRefToWebViewUrl(String? ref) async {
   if (ref == null || ref.isEmpty) return null;
   if (ref.startsWith('http')) return ref;
-  final String path =
-      ref.startsWith('file://') ? Uri.parse(ref).toFilePath() : ref;
+  final String path = ref.startsWith('file://')
+      ? Uri.parse(ref).toFilePath()
+      : ref;
   final File file = File(path);
   if (!await file.exists()) return null;
   final Uint8List bytes = await file.readAsBytes();

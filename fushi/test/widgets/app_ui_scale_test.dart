@@ -67,14 +67,14 @@ void main() {
     });
   });
 
-  testWidgets('整体缩放：固定尺寸子节点视觉尺寸按 scale 放大', (
-    WidgetTester tester,
-  ) async {
+  testWidgets('整体缩放：固定尺寸子节点视觉尺寸按 scale 放大', (WidgetTester tester) async {
     const Key boxKey = Key('scaled-box');
     await tester.pumpWidget(
       MaterialApp(
         builder: (BuildContext context, Widget? child) => FushiAppUiScale(
-            scale: 2.0, child: child ?? const SizedBox.shrink()),
+          scale: 2.0,
+          child: child ?? const SizedBox.shrink(),
+        ),
         home: const Align(
           alignment: Alignment.topLeft,
           child: SizedBox(
@@ -94,17 +94,18 @@ void main() {
     expect(visual.height, 200);
   });
 
-  testWidgets('整体缩放：不再改写 textScaler（系统字号缩放原样透传）', (
-    WidgetTester tester,
-  ) async {
+  testWidgets('整体缩放：不再改写 textScaler（系统字号缩放原样透传）', (WidgetTester tester) async {
     late double textScale;
     await tester.pumpWidget(
       MaterialApp(
         builder: (BuildContext context, Widget? child) => MediaQuery(
-          data: MediaQuery.of(context)
-              .copyWith(textScaler: const TextScaler.linear(1.2)),
+          data: MediaQuery.of(
+            context,
+          ).copyWith(textScaler: const TextScaler.linear(1.2)),
           child: FushiAppUiScale(
-              scale: 2.0, child: child ?? const SizedBox.shrink()),
+            scale: 2.0,
+            child: child ?? const SizedBox.shrink(),
+          ),
         ),
         home: Builder(
           builder: (BuildContext context) {
@@ -125,7 +126,9 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         builder: (BuildContext context, Widget? child) => FushiAppUiScale(
-            scale: 0.5, child: child ?? const SizedBox.shrink()),
+          scale: 0.5,
+          child: child ?? const SizedBox.shrink(),
+        ),
         home: Scaffold(
           body: Stack(
             children: <Widget>[
@@ -172,7 +175,9 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         builder: (BuildContext context, Widget? child) => FushiAppUiScale(
-            scale: 1.0, child: child ?? const SizedBox.shrink()),
+          scale: 1.0,
+          child: child ?? const SizedBox.shrink(),
+        ),
         home: const Align(
           alignment: Alignment.topLeft,
           child: SizedBox(

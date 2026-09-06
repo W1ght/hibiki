@@ -74,10 +74,10 @@ class FushiAudioHandler extends ag.BaseAudioHandler {
   /// 「悬浮字幕」通知 custom action。仅当 [onToggleFloatingLyric] 非 null 时加入
   /// controls，触发回 [customAction] 路由 `toggleFloatingLyric`。
   ag.MediaControl get _floatingLyricControl => ag.MediaControl.custom(
-        androidIcon: 'drawable/ic_notif_floating_lyric',
-        label: 'Floating subtitle',
-        name: _toggleFloatingLyricAction,
-      );
+    androidIcon: 'drawable/ic_notif_floating_lyric',
+    label: 'Floating subtitle',
+    name: _toggleFloatingLyricAction,
+  );
 
   void updatePlaybackState({
     required bool playing,
@@ -86,24 +86,26 @@ class FushiAudioHandler extends ag.BaseAudioHandler {
     required Duration duration,
   }) {
     final bool withFloatingLyric = onToggleFloatingLyric != null;
-    playbackState.add(ag.PlaybackState(
-      controls: [
-        ag.MediaControl.skipToPrevious,
-        if (playing) ag.MediaControl.pause else ag.MediaControl.play,
-        ag.MediaControl.skipToNext,
-        if (withFloatingLyric) _floatingLyricControl,
-      ],
-      systemActions: const {
-        ag.MediaAction.seek,
-        ag.MediaAction.seekForward,
-        ag.MediaAction.seekBackward,
-      },
-      androidCompactActionIndices: const [0, 1, 2],
-      processingState: ag.AudioProcessingState.ready,
-      playing: playing,
-      updatePosition: position,
-      speed: speed,
-    ));
+    playbackState.add(
+      ag.PlaybackState(
+        controls: [
+          ag.MediaControl.skipToPrevious,
+          if (playing) ag.MediaControl.pause else ag.MediaControl.play,
+          ag.MediaControl.skipToNext,
+          if (withFloatingLyric) _floatingLyricControl,
+        ],
+        systemActions: const {
+          ag.MediaAction.seek,
+          ag.MediaAction.seekForward,
+          ag.MediaAction.seekBackward,
+        },
+        androidCompactActionIndices: const [0, 1, 2],
+        processingState: ag.AudioProcessingState.ready,
+        playing: playing,
+        updatePosition: position,
+        speed: speed,
+      ),
+    );
   }
 
   void setMediaItemInfo({
@@ -112,13 +114,15 @@ class FushiAudioHandler extends ag.BaseAudioHandler {
     Duration? duration,
     Uri? artUri,
   }) {
-    mediaItem.add(ag.MediaItem(
-      id: 'hibiki_audiobook',
-      title: title,
-      artist: artist,
-      duration: duration,
-      artUri: artUri,
-    ));
+    mediaItem.add(
+      ag.MediaItem(
+        id: 'hibiki_audiobook',
+        title: title,
+        artist: artist,
+        duration: duration,
+        artUri: artUri,
+      ),
+    );
   }
 
   void updateNotificationSubtitle({
@@ -129,12 +133,14 @@ class FushiAudioHandler extends ag.BaseAudioHandler {
     final ag.MediaItem? current = mediaItem.value;
     if (current == null) return;
     final String? cleanedSubtitle = _cleanNotificationSubtitle(subtitle);
-    mediaItem.add(current.copyWith(
-      title: title,
-      artist: cleanedSubtitle ?? fallbackArtist,
-      displaySubtitle: cleanedSubtitle,
-      displayDescription: cleanedSubtitle,
-    ));
+    mediaItem.add(
+      current.copyWith(
+        title: title,
+        artist: cleanedSubtitle ?? fallbackArtist,
+        displaySubtitle: cleanedSubtitle,
+        displayDescription: cleanedSubtitle,
+      ),
+    );
   }
 
   String? _cleanNotificationSubtitle(String? subtitle) {

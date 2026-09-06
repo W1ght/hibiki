@@ -16,8 +16,8 @@ import 'package:fushi/src/media/video/metadata/video_metadata_models.dart'
 /// 出现的本来就以连载剧集为主。
 VideoMetadataMediaKind mediaKindFromAniListFormat(String? format) =>
     format?.trim().toUpperCase() == 'MOVIE'
-        ? VideoMetadataMediaKind.movie
-        : VideoMetadataMediaKind.tv;
+    ? VideoMetadataMediaKind.movie
+    : VideoMetadataMediaKind.tv;
 
 /// 合成发现条目。identity 与发现页 AniList 适配器同口径（providerId
 /// `anilist` + mediaId = AniList id），因此详情页的 loadDetails 补全、订阅 /

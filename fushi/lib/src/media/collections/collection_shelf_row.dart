@@ -125,8 +125,9 @@ class _CollectionShelfRowState extends State<CollectionShelfRow> {
     final int idx = widget.initialIndex.clamp(0, widget.itemCount - 1);
     // offset 计算与 separator 必须同源（widget.itemGap）。
     _controller = ScrollController(
-      initialScrollOffset:
-          idx <= 0 ? 0 : idx * (widget.itemWidth + widget.itemGap),
+      initialScrollOffset: idx <= 0
+          ? 0
+          : idx * (widget.itemWidth + widget.itemGap),
     );
   }
 
@@ -160,12 +161,12 @@ class _CollectionShelfRowState extends State<CollectionShelfRow> {
             child: SectionSwipeCascade(
               child: HorizontalDragScrollable(
                 child: ListView.separated(
-                controller: _controller,
-                scrollDirection: Axis.horizontal,
-                physics: desktopAwareScrollPhysics(),
-                itemCount: widget.itemCount,
-                separatorBuilder: (BuildContext _, int __) =>
-                    SizedBox(width: widget.itemGap),
+                  controller: _controller,
+                  scrollDirection: Axis.horizontal,
+                  physics: desktopAwareScrollPhysics(),
+                  itemCount: widget.itemCount,
+                  separatorBuilder: (BuildContext _, int __) =>
+                      SizedBox(width: widget.itemGap),
                   itemBuilder: (BuildContext context, int i) => SizedBox(
                     width: widget.itemWidth,
                     child: widget.itemBuilder(context, i),
@@ -212,8 +213,9 @@ class _CollectionShelfRowState extends State<CollectionShelfRow> {
     final VoidCallback headerTap =
         widget.onToggleSelected ?? widget.onOpenDetail;
     // 行头长按/右键 = 合集上下文菜单（多选态压制，行头点击专注整选）。
-    final VoidCallback? contextMenu =
-        selectionMode ? null : widget.onContextMenu;
+    final VoidCallback? contextMenu = selectionMode
+        ? null
+        : widget.onContextMenu;
     final Widget header = ContextMenuTrigger(
       onInvoke: contextMenuInvoker(contextMenu),
       child: InkWell(
@@ -245,8 +247,10 @@ class _CollectionShelfRowState extends State<CollectionShelfRow> {
                         ? t.collection_expand
                         : t.collection_collapse,
                     padding: EdgeInsets.zero,
-                    constraints:
-                        const BoxConstraints.tightFor(width: 32, height: 32),
+                    constraints: const BoxConstraints.tightFor(
+                      width: 32,
+                      height: 32,
+                    ),
                     icon: AnimatedRotation(
                       turns: widget.collapsed ? -0.25 : 0,
                       duration: const Duration(milliseconds: 150),
@@ -353,45 +357,48 @@ class _CollectionShelfRowState extends State<CollectionShelfRow> {
       onLeave: (_) {
         if (_tagHovering) setState(() => _tagHovering = false);
       },
-      builder: (
-        BuildContext context,
-        List<BookTagRow?> candidateData,
-        List<dynamic> rejectedData,
-      ) {
-        return Stack(
-          children: <Widget>[
-            child,
-            if (_tagHovering)
-              Positioned.fill(
-                child: IgnorePointer(
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      color: eink ? null : hoverColor.withValues(alpha: 0.18),
-                      borderRadius: tokens.radii.controlRadius,
-                      border: Border.all(
-                        color: hoverColor,
-                        width: tokens.spacing.gap / 4,
-                      ),
-                    ),
-                    child: Align(
-                      alignment: AlignmentDirectional.centerEnd,
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: tokens.spacing.gap,
+      builder:
+          (
+            BuildContext context,
+            List<BookTagRow?> candidateData,
+            List<dynamic> rejectedData,
+          ) {
+            return Stack(
+              children: <Widget>[
+                child,
+                if (_tagHovering)
+                  Positioned.fill(
+                    child: IgnorePointer(
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          color: eink
+                              ? null
+                              : hoverColor.withValues(alpha: 0.18),
+                          borderRadius: tokens.radii.controlRadius,
+                          border: Border.all(
+                            color: hoverColor,
+                            width: tokens.spacing.gap / 4,
+                          ),
                         ),
-                        child: Icon(
-                          Icons.new_label_outlined,
-                          color: hoverColor,
-                          size: 20,
+                        child: Align(
+                          alignment: AlignmentDirectional.centerEnd,
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: tokens.spacing.gap,
+                            ),
+                            child: Icon(
+                              Icons.new_label_outlined,
+                              color: hoverColor,
+                              size: 20,
+                            ),
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-              ),
-          ],
-        );
-      },
+              ],
+            );
+          },
     );
   }
 }

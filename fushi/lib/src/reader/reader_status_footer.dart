@@ -32,15 +32,13 @@ const double kReaderStatusFooterFontSize = kTopProgressFontSize;
 bool readerStatusFooterEnabled({
   required bool desktop,
   required bool lyricsMode,
-}) =>
-    desktop && !lyricsMode;
+}) => desktop && !lyricsMode;
 
 /// 状态行的底部预留高：启用时占 [footerHeight]，否则 0。
 double readerStatusFooterReserve({
   required bool enabled,
   required double footerHeight,
-}) =>
-    enabled ? footerHeight : 0;
+}) => enabled ? footerHeight : 0;
 
 /// 每小时字数（四舍五入到整数）。时长或字数为 0 时返回 0，不做「不足 1 分钟无值」的
 /// 统计口径门槛（那是统计页 `computeCph` 的事）：状态行开局就要显示 `0 / h`。

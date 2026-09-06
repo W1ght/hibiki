@@ -108,14 +108,15 @@ class StatFacts {
   /// **活动流的唯一数据源**：legacy 活动行 ∪ 段合成行 ∪ 游玩会话合成行，按精确
   /// 时刻倒序、截到 [activityLimit]。首页时间轴与游戏首页时间线都只吃它。
   List<ActivityEventRow> get activityRows {
-    final List<ActivityEventRow> all = <ActivityEventRow>[
-      ...legacyActivity,
-      ...segmentsAsActivityRows(segments),
-      ...galgameSessionsAsActivityRows(recentGameSessions, gameNamesById),
-    ]..sort(
-        (ActivityEventRow a, ActivityEventRow b) =>
-            b.timestampMs.compareTo(a.timestampMs),
-      );
+    final List<ActivityEventRow> all =
+        <ActivityEventRow>[
+          ...legacyActivity,
+          ...segmentsAsActivityRows(segments),
+          ...galgameSessionsAsActivityRows(recentGameSessions, gameNamesById),
+        ]..sort(
+          (ActivityEventRow a, ActivityEventRow b) =>
+              b.timestampMs.compareTo(a.timestampMs),
+        );
     return all.length <= activityLimit ? all : all.sublist(0, activityLimit);
   }
 
@@ -138,7 +139,8 @@ class StatFacts {
   /// `mediaKey == bookKey`，legacy 无身份行按 title 回退——判据见 [statFactBelongsToBook]。
   Iterable<StatFact> dailyBooksFor({required String bookKey, String? title}) =>
       dailyBooks.where(
-        (StatFact f) => statFactBelongsToBook(f, bookKey: bookKey, title: title),
+        (StatFact f) =>
+            statFactBelongsToBook(f, bookKey: bookKey, title: title),
       );
   Iterable<StatFact> get dailyVideos => daily.where((StatFact f) => f.isVideo);
   Iterable<StatFact> get dailyGames => daily.where((StatFact f) => f.isGame);

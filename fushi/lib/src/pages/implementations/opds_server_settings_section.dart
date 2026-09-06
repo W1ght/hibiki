@@ -280,8 +280,9 @@ class _OpdsServerSettingsSectionState
       final ProviderBatchResult<DiscoveryResultPage> page = await source.browse(
         const DiscoveryRequest(kind: DiscoveryMediaKind.novel),
       );
-      final int count =
-          page.items.isEmpty ? 0 : page.items.single.entries.length;
+      final int count = page.items.isEmpty
+          ? 0
+          : page.items.single.entries.length;
       result = _ProbeState.done(
         ok: true,
         message: t.discovery_opds_test_ok(count: count),
@@ -319,24 +320,24 @@ class _OpdsDraft {
   });
 
   factory _OpdsDraft.empty(String id) => _OpdsDraft(
-        id: id,
-        name: '',
-        url: '',
-        username: '',
-        password: '',
-        enabled: true,
-        allowInsecureHttp: false,
-      );
+    id: id,
+    name: '',
+    url: '',
+    username: '',
+    password: '',
+    enabled: true,
+    allowInsecureHttp: false,
+  );
 
   factory _OpdsDraft.fromConfig(OpdsServerConfig config) => _OpdsDraft(
-        id: config.id,
-        name: config.name,
-        url: config.catalogUrl.toString(),
-        username: config.username,
-        password: config.password,
-        enabled: config.enabled,
-        allowInsecureHttp: config.allowInsecureHttp,
-      );
+    id: config.id,
+    name: config.name,
+    url: config.catalogUrl.toString(),
+    username: config.username,
+    password: config.password,
+    enabled: config.enabled,
+    allowInsecureHttp: config.allowInsecureHttp,
+  );
 
   final String id;
   final String name;
@@ -353,16 +354,15 @@ class _OpdsDraft {
     String? password,
     bool? enabled,
     bool? allowInsecureHttp,
-  }) =>
-      _OpdsDraft(
-        id: id,
-        name: name ?? this.name,
-        url: url ?? this.url,
-        username: username ?? this.username,
-        password: password ?? this.password,
-        enabled: enabled ?? this.enabled,
-        allowInsecureHttp: allowInsecureHttp ?? this.allowInsecureHttp,
-      );
+  }) => _OpdsDraft(
+    id: id,
+    name: name ?? this.name,
+    url: url ?? this.url,
+    username: username ?? this.username,
+    password: password ?? this.password,
+    enabled: enabled ?? this.enabled,
+    allowInsecureHttp: allowInsecureHttp ?? this.allowInsecureHttp,
+  );
 
   /// 有效即返回配置，否则 null。
   ///
@@ -392,7 +392,8 @@ class _OpdsDraft {
     if (url.trim().isEmpty) return null;
     if (toConfig() != null) return null;
     final Uri? parsed = Uri.tryParse(url.trim());
-    final bool plainHttpBlocked = parsed != null &&
+    final bool plainHttpBlocked =
+        parsed != null &&
         parsed.scheme == 'http' &&
         !allowInsecureHttp &&
         parsed.host.isNotEmpty;
@@ -406,13 +407,10 @@ class _OpdsDraft {
 
 /// 自检状态：进行中 / 有结论。
 class _ProbeState {
-  const _ProbeState.running()
-      : running = true,
-        ok = false,
-        message = '';
+  const _ProbeState.running() : running = true, ok = false, message = '';
 
   const _ProbeState.done({required this.ok, required this.message})
-      : running = false;
+    : running = false;
 
   final bool running;
   final bool ok;

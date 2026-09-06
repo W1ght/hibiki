@@ -45,7 +45,8 @@ void main() {
       expect(
         styles.contains('@drawable/ic_launcher_minimal_foreground'),
         isFalse,
-        reason: '$rel 不应再用 ic_launcher_minimal_foreground 作 splash 前景'
+        reason:
+            '$rel 不应再用 ic_launcher_minimal_foreground 作 splash 前景'
             '（内容过宽，会被圆遮罩裁切——即 TODO-886 的剪切症状）',
       );
     }
@@ -85,7 +86,8 @@ void main() {
       expect(
         widthRatio <= 0.60,
         isTrue,
-        reason: '${splashPng(d)} 内容宽占比 $widthRatio 超过 0.60，'
+        reason:
+            '${splashPng(d)} 内容宽占比 $widthRatio 超过 0.60，'
             '会被 Android 12+ splash 圆形遮罩裁切',
       );
     }

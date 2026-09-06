@@ -100,26 +100,27 @@ class AppModelLibraryHostService
     Future<String?> Function({
       required String videoPath,
       required String bookUid,
-    })? extractVideoCover,
-  })  : _db = db,
-        _dictionaryResourceRoot = dictionaryResourceRoot,
-        _packages = packages,
-        _refreshDictionaryCache = refreshDictionaryCache,
-        _runExclusive = runExclusive,
-        _importBookFromFile = importBookFromFile,
-        _cleanupBookOnDisk = cleanupBookOnDisk,
-        _localAudioEntries = localAudioEntries,
-        _localAudioStagingDir = localAudioStagingDir,
-        _onLocalAudioImported = onLocalAudioImported,
-        _audioDatabaseRoot = audioDatabaseRoot,
-        _removeLocalAudioEntry = removeLocalAudioEntry,
-        _isProfileTransferEnabled = isProfileTransferEnabled,
-        _exportActiveProfileJson = exportActiveProfileJson,
-        _importProfileJson = importProfileJson,
-        _videoSubtitleLangCode = videoSubtitleLangCode,
-        _uploadedVideoRoot = uploadedVideoRoot,
-        _videoCoversDirectory = videoCoversDirectory,
-        _extractVideoCover = extractVideoCover;
+    })?
+    extractVideoCover,
+  }) : _db = db,
+       _dictionaryResourceRoot = dictionaryResourceRoot,
+       _packages = packages,
+       _refreshDictionaryCache = refreshDictionaryCache,
+       _runExclusive = runExclusive,
+       _importBookFromFile = importBookFromFile,
+       _cleanupBookOnDisk = cleanupBookOnDisk,
+       _localAudioEntries = localAudioEntries,
+       _localAudioStagingDir = localAudioStagingDir,
+       _onLocalAudioImported = onLocalAudioImported,
+       _audioDatabaseRoot = audioDatabaseRoot,
+       _removeLocalAudioEntry = removeLocalAudioEntry,
+       _isProfileTransferEnabled = isProfileTransferEnabled,
+       _exportActiveProfileJson = exportActiveProfileJson,
+       _importProfileJson = importProfileJson,
+       _videoSubtitleLangCode = videoSubtitleLangCode,
+       _uploadedVideoRoot = uploadedVideoRoot,
+       _videoCoversDirectory = videoCoversDirectory,
+       _extractVideoCover = extractVideoCover;
 
   final FushiDatabase _db;
   final Directory _dictionaryResourceRoot;
@@ -180,7 +181,7 @@ class AppModelLibraryHostService
 
   @override
   Future<InterconnectServiceConfigSnapshot>
-      getInterconnectServiceConfig() async {
+  getInterconnectServiceConfig() async {
     return InterconnectServiceConfigSnapshot.fromPreferences(
       await _db.getAllPrefs(),
     );
@@ -232,8 +233,11 @@ class AppModelLibraryHostService
 
   /// 上传视频后的封面抽取回调（可选、best-effort；null 时上传的视频无封面占位）。
   /// 生产传 `extractVideoCover`（桌面 ffmpeg 抽帧；移动端无 ffmpeg 返 null 留空占位）。
-  final Future<String?> Function(
-      {required String videoPath, required String bookUid})? _extractVideoCover;
+  final Future<String?> Function({
+    required String videoPath,
+    required String bookUid,
+  })?
+  _extractVideoCover;
 
   static const String _dictionaryAssetSuffix = '.fushidict';
 
@@ -253,12 +257,11 @@ class AppModelLibraryHostService
   static EpubBookRow? _findBookByTitleOrKey(
     List<EpubBookRow> rows,
     String titleOrBookKey,
-  ) =>
-      rows.cast<EpubBookRow?>().firstWhere(
-            (EpubBookRow? r) =>
-                r!.bookKey == titleOrBookKey || r.title == titleOrBookKey,
-            orElse: () => null,
-          );
+  ) => rows.cast<EpubBookRow?>().firstWhere(
+    (EpubBookRow? r) =>
+        r!.bookKey == titleOrBookKey || r.title == titleOrBookKey,
+    orElse: () => null,
+  );
 
   static String? _existingFilePath(String? path) {
     if (path == null || path.isEmpty) return null;
@@ -285,8 +288,9 @@ class AppModelLibraryHostService
     final bool exists = rows.any((DictionaryMetaRow r) => r.name == name);
     if (!exists) throw StateError('dictionary not found: $name');
 
-    final Directory tmpDir =
-        Directory.systemTemp.createTempSync('fushi_dict_export');
+    final Directory tmpDir = Directory.systemTemp.createTempSync(
+      'fushi_dict_export',
+    );
     final File out = File(p.join(tmpDir.path, '$name$_dictionaryAssetSuffix'));
     await _packages.exportDictionaryPackage(
       dictionaryName: name,
@@ -348,8 +352,9 @@ class AppModelLibraryHostService
   /// 别再全表拉 assignments 手工 join）。
   Future<Map<String, List<String>>> _tagNamesByBookKey() async =>
       (await _db.allBookTagAddedAtByName()).map(
-          (String key, Map<String, int> byName) =>
-              MapEntry(key, byName.keys.toList()));
+        (String key, Map<String, int> byName) =>
+            MapEntry(key, byName.keys.toList()),
+      );
 
   /// `'<mediaType>|<entryKey>'` → 该条目的**主合集归属**（多端库联合视图 §2.3
   /// 任务5.1）的一趟映射。归属跟随 [FushiDatabase.getPrimaryCollectionIdByEntry] 的
@@ -357,8 +362,8 @@ class AppModelLibraryHostService
   /// 折叠 / UI 占位卡归行一致。孤儿引用（合集已删）跳过 = 无归属（散卡）。每个被引用
   /// 合集只 [getCollectionItems] 一次，避免逐条目 N+1。
   Future<Map<String, RemoteCollectionMembership>>
-      _primaryCollectionMembership() async =>
-          (await _primaryCollectionData()).membership;
+  _primaryCollectionMembership() async =>
+      (await _primaryCollectionData()).membership;
 
   /// [_primaryCollectionMembership] 的富版本：同一趟查询顺带产出
   /// `'<mediaType>|<entryKey>'` → 主归属合集**行**（[MediaCollectionRow]）的映射，
@@ -366,12 +371,14 @@ class AppModelLibraryHostService
   /// v52「同系列共享」——此前清单只读 row 级值，host 在合集里调的轴/选的音轨
   /// 远端永远看不到）。
   Future<
-      ({
-        Map<String, RemoteCollectionMembership> membership,
-        Map<String, MediaCollectionRow> collectionByEntry,
-      })> _primaryCollectionData() async {
-    final Map<String, int> primaryByEntry =
-        await _db.getPrimaryCollectionIdByEntry();
+    ({
+      Map<String, RemoteCollectionMembership> membership,
+      Map<String, MediaCollectionRow> collectionByEntry,
+    })
+  >
+  _primaryCollectionData() async {
+    final Map<String, int> primaryByEntry = await _db
+        .getPrimaryCollectionIdByEntry();
     if (primaryByEntry.isEmpty) {
       return (
         membership: const <String, RemoteCollectionMembership>{},
@@ -380,9 +387,9 @@ class AppModelLibraryHostService
     }
     final Map<int, MediaCollectionRow> collectionsById =
         <int, MediaCollectionRow>{
-      for (final MediaCollectionRow c in await _db.getAllMediaCollections())
-        c.id: c,
-    };
+          for (final MediaCollectionRow c in await _db.getAllMediaCollections())
+            c.id: c,
+        };
     final Map<String, RemoteCollectionMembership> out =
         <String, RemoteCollectionMembership>{};
     final Map<String, MediaCollectionRow> rowByEntry =
@@ -391,8 +398,9 @@ class AppModelLibraryHostService
     for (final int cid in primaryByEntry.values.toSet()) {
       final MediaCollectionRow? col = collectionsById[cid];
       if (col == null) continue; // 孤儿引用：归属合集已删 → 该条目退化散卡。
-      for (final MediaCollectionItemRow item
-          in await _db.getCollectionItems(cid)) {
+      for (final MediaCollectionItemRow item in await _db.getCollectionItems(
+        cid,
+      )) {
         // v83：epub 成员行 entryKey = 本机 epub_books.uid（透传行 = 对端 bookKey），
         // 本 map 键随成员表面貌走——bookKey 侧消费方（listBooks）负责先换到 uid。
         final String key = '${item.mediaType}|${item.entryKey}';
@@ -412,8 +420,9 @@ class AppModelLibraryHostService
   /// videoBookUid → 标签名列表 的一趟映射（TODO-1165）。
   Future<Map<String, List<String>>> _tagNamesByVideoUid() async =>
       (await _db.allVideoTagAddedAtByName()).map(
-          (String key, Map<String, int> byName) =>
-              MapEntry(key, byName.keys.toList()));
+        (String key, Map<String, int> byName) =>
+            MapEntry(key, byName.keys.toList()),
+      );
 
   /// host 当前书库清单（从 EpubBooks 表读）。
   /// [RemoteBookInfo.hasContent] 为 true 当且仅当该书存在可导出的 EPUB 根目录。
@@ -431,10 +440,10 @@ class AppModelLibraryHostService
     // mergeRemoteBookTags 传播 host 侧的删除/改名、防复活（旧 client 忽略这些键、按
     // tags 名单只增，向后兼容）。批量一趟查（旧实现逐书 2 次查询，大库清单端点 O(N)
     // 次 DB 往返）。
-    final Map<String, Map<String, int>> tagAddedAtByKey =
-        await _db.allBookTagAddedAtByName();
-    final Map<String, Map<String, int>> tagTombByKey =
-        await _db.allTagTombstonesByName(MediaKind.epub);
+    final Map<String, Map<String, int>> tagAddedAtByKey = await _db
+        .allBookTagAddedAtByName();
+    final Map<String, Map<String, int>> tagTombByKey = await _db
+        .allTagTombstonesByName(MediaKind.epub);
     final Map<String, RemoteCollectionMembership> membership =
         await _primaryCollectionMembership();
     // BUG-1488：host 上用户改过的书名（`preferences` 的 override 覆盖层）随清单
@@ -476,10 +485,12 @@ class AppModelLibraryHostService
         // 下载 EPUB 打包——把整套页图 + manga.json 塞进 zip，client 落地成一本
         // 夹带全部页图的「文字书」、漫画身份静默丢失（坏包）。漫画内容走
         // hasMangaContent + 漫画包通道。
-        hasContent: format == BookFormat.epub &&
+        hasContent:
+            format == BookFormat.epub &&
             resolveExtractedEpubRoot(r.extractDir) != null,
         format: format.dbValue,
-        hasMangaContent: format == BookFormat.manga &&
+        hasMangaContent:
+            format == BookFormat.manga &&
             File(p.join(r.extractDir, kMangaPackageMarker)).existsSync(),
         mangaReadingMode: r.mangaReadingMode,
         hasEmbeddedCover: coverPath != null,
@@ -494,11 +505,13 @@ class AppModelLibraryHostService
         // 收敛前仍以对端 bookKey 为键，窗口期内按 bookKey 也查一把，归属不闪断。
         // srt-backed 有声书兜底：该书以 srt|uid 入合集时，epub 两键都 miss，
         // 回退查 srt|uid（BUG-812）。散卡（三键都无）= null。
-        collection: membership[MediaKind.epub.compositeKey(r.uid)] ??
+        collection:
+            membership[MediaKind.epub.compositeKey(r.uid)] ??
             membership[MediaKind.epub.compositeKey(r.bookKey)] ??
             (srtUidByBookKey[r.bookKey] != null
-                ? membership[
-                    MediaKind.srt.compositeKey(srtUidByBookKey[r.bookKey]!)]
+                ? membership[MediaKind.srt.compositeKey(
+                    srtUidByBookKey[r.bookKey]!,
+                  )]
                 : null),
         progressPercent: progressByKey[r.bookKey]?.percent ?? 0,
         progressUpdatedAtMs: progressByKey[r.bookKey]?.updatedAtMs ?? 0,
@@ -540,7 +553,7 @@ class AppModelLibraryHostService
   /// （书的 MediaItem.mediaIdentifier = `hoshi://book/<bookKey>`）；时刻取
   /// `reader_positions.updatedAt`。两趟全表读，无逐书查询。
   Future<Map<String, ({int percent, int updatedAtMs})>>
-      _bookProgressByKey() async {
+  _bookProgressByKey() async {
     // v82：reader_positions 键 = 书 uid，wire/mediaId 面貌仍是 bookKey——
     // 经 epub_books 反查（uid → bookKey）后出 wire。
     final Map<String, String> bookKeyByUid = <String, String>{
@@ -568,12 +581,15 @@ class AppModelLibraryHostService
 
   /// host 最近 [limit] 条活动事件（新首页 Activity 面板互联数据源）。
   @override
-  Future<List<RemoteActivityEvent>> listActivityEvents(
-      {int limit = 100}) async {
+  Future<List<RemoteActivityEvent>> listActivityEvents({
+    int limit = 100,
+  }) async {
     // v92：活动流唯一数据源是统一事实面（legacy 活动行 ∪ 段 ∪ 游玩会话合成行），
     // 与本机首页同一份；否则 client 看不到 host 在 v92 之后的任何阅读 / 观看。
-    final List<ActivityEventRow> rows =
-        (await loadStatFacts(_db, activityLimit: limit)).activityRows;
+    final List<ActivityEventRow> rows = (await loadStatFacts(
+      _db,
+      activityLimit: limit,
+    )).activityRows;
     return <RemoteActivityEvent>[
       for (final ActivityEventRow r in rows)
         RemoteActivityEvent(
@@ -606,8 +622,9 @@ class AppModelLibraryHostService
     // 与 EPUB 包同端点、导入侧内容嗅探分流。扩展名仍 .epub（端点/tmp 命名契约
     // 不变，内容即真相）。
     if (format == BookFormat.manga) {
-      final Directory tmpDir =
-          Directory.systemTemp.createTempSync('hibiki_book_export');
+      final Directory tmpDir = Directory.systemTemp.createTempSync(
+        'hibiki_book_export',
+      );
       final File out = File(p.join(tmpDir.path, '${row.bookKey}.epub'));
       final bool ok = await repackageMangaBook(row.extractDir, out.path);
       if (!ok) {
@@ -621,8 +638,9 @@ class AppModelLibraryHostService
       throw StateError('book has no exportable EPUB root: $title');
     }
 
-    final Directory tmpDir =
-        Directory.systemTemp.createTempSync('hibiki_book_export');
+    final Directory tmpDir = Directory.systemTemp.createTempSync(
+      'hibiki_book_export',
+    );
     // 文件名用 title 但扩展名用 .epub，保证重导入时 fileName 是合法 epub 名。
     final String safeBasename = '${row.bookKey}.epub';
     final File out = File(p.join(tmpDir.path, safeBasename));
@@ -695,8 +713,11 @@ class AppModelLibraryHostService
       );
     } catch (e, stack) {
       // 书已经入库了——显示名没落上不该把整个 PUT 变成 HTTP 500。
-      ErrorLogService.instance
-          .log('AppModelLibraryHostService.adoptPushedDisplayTitle', e, stack);
+      ErrorLogService.instance.log(
+        'AppModelLibraryHostService.adoptPushedDisplayTitle',
+        e,
+        stack,
+      );
     }
   }
 
@@ -771,8 +792,10 @@ class AppModelLibraryHostService
       charOffset: progress.charOffset,
       updatedAtMs: progress.updatedAtMs,
     );
-    final RemoteBookProgress winner =
-        resolveBookProgressSync(local: current, remote: incoming);
+    final RemoteBookProgress winner = resolveBookProgressSync(
+      local: current,
+      remote: incoming,
+    );
     if (winner.sectionIndex == current.sectionIndex &&
         winner.normCharOffset == current.normCharOffset &&
         winner.charOffset == current.charOffset &&
@@ -780,13 +803,15 @@ class AppModelLibraryHostService
       return; // host 已存更新或相等，no-op。
     }
     await _runExclusive(() async {
-      await _db.upsertReaderPosition(ReaderPositionsCompanion(
-        bookUid: Value(hostBook.uid),
-        sectionIndex: Value(winner.sectionIndex),
-        normCharOffset: Value(winner.normCharOffset),
-        charOffset: Value(winner.charOffset),
-        updatedAt: Value(winner.updatedAtMs),
-      ));
+      await _db.upsertReaderPosition(
+        ReaderPositionsCompanion(
+          bookUid: Value(hostBook.uid),
+          sectionIndex: Value(winner.sectionIndex),
+          normCharOffset: Value(winner.normCharOffset),
+          charOffset: Value(winner.charOffset),
+          updatedAt: Value(winner.updatedAtMs),
+        ),
+      );
     });
   }
 
@@ -808,11 +833,12 @@ class AppModelLibraryHostService
   @override
   Future<File> exportLocalAudio(String displayName) async {
     _assertSafeName(displayName);
-    final LocalAudioDbEntry? entry =
-        _localAudioEntries.cast<LocalAudioDbEntry?>().firstWhere(
-              (LocalAudioDbEntry? e) => e!.displayName == displayName,
-              orElse: () => null,
-            );
+    final LocalAudioDbEntry? entry = _localAudioEntries
+        .cast<LocalAudioDbEntry?>()
+        .firstWhere(
+          (LocalAudioDbEntry? e) => e!.displayName == displayName,
+          orElse: () => null,
+        );
     if (entry == null) {
       throw StateError('local audio not found: $displayName');
     }
@@ -821,8 +847,9 @@ class AppModelLibraryHostService
       throw StateError('local audio DB file not found: ${entry.path}');
     }
 
-    final Directory tmpDir =
-        Directory.systemTemp.createTempSync('hibiki_local_audio_export');
+    final Directory tmpDir = Directory.systemTemp.createTempSync(
+      'hibiki_local_audio_export',
+    );
     final File out = File(p.join(tmpDir.path, '$displayName.fushiaudiolib'));
     await _packages.exportLocalAudioPackage(
       displayName: entry.displayName,
@@ -848,11 +875,11 @@ class AppModelLibraryHostService
     await _runExclusive(() async {
       final Directory stagingDir =
           _localAudioStagingDir ?? Directory.systemTemp;
-      final LocalAudioPackageContents contents =
-          await _packages.importLocalAudioPackage(
-        packageFile: packageFile,
-        stagingDir: stagingDir,
-      );
+      final LocalAudioPackageContents contents = await _packages
+          .importLocalAudioPackage(
+            packageFile: packageFile,
+            stagingDir: stagingDir,
+          );
       await callback(contents);
     });
   }
@@ -910,13 +937,21 @@ class AppModelLibraryHostService
         uid: uid,
         title: title,
         positionMs: PrefCodec.decode<int>(
-            allPrefs[audiobookPositionPrefKey(identity)] ?? '', 0),
+          allPrefs[audiobookPositionPrefKey(identity)] ?? '',
+          0,
+        ),
         positionUpdatedAtMs: PrefCodec.decode<int>(
-            allPrefs[audiobookPositionAtPrefKey(identity)] ?? '', 0),
+          allPrefs[audiobookPositionAtPrefKey(identity)] ?? '',
+          0,
+        ),
         delayMs: PrefCodec.decode<int>(
-            allPrefs[audiobookDelayPrefKey(identity)] ?? '', 0),
+          allPrefs[audiobookDelayPrefKey(identity)] ?? '',
+          0,
+        ),
         delayUpdatedAtMs: PrefCodec.decode<int>(
-            allPrefs[audiobookDelayAtPrefKey(identity)] ?? '', 0),
+          allPrefs[audiobookDelayAtPrefKey(identity)] ?? '',
+          0,
+        ),
       );
     }
 
@@ -940,11 +975,16 @@ class AppModelLibraryHostService
   /// `audiobook_delay_` pref（旧数据无戳记 0，被任何带戳对端值盖过）。
   @override
   Future<({int delayMs, int updatedAtMs})> getAudiobookDelay(
-      String identity) async {
-    final int delay =
-        await _db.getPrefTyped<int>(audiobookDelayPrefKey(identity), 0);
-    final int at =
-        await _db.getPrefTyped<int>(audiobookDelayAtPrefKey(identity), 0);
+    String identity,
+  ) async {
+    final int delay = await _db.getPrefTyped<int>(
+      audiobookDelayPrefKey(identity),
+      0,
+    );
+    final int at = await _db.getPrefTyped<int>(
+      audiobookDelayAtPrefKey(identity),
+      0,
+    );
     return (delayMs: delay, updatedAtMs: at);
   }
 
@@ -953,14 +993,20 @@ class AppModelLibraryHostService
   /// 有声书调轴本地读取就是这对 prefs，写入即对 host 本机播放生效（无行写穿）。
   @override
   Future<void> putAudiobookDelay(
-      String identity, int delayMs, int updatedAtMs) async {
+    String identity,
+    int delayMs,
+    int updatedAtMs,
+  ) async {
     if (!await audiobookExists(identity)) return;
-    final int clamped =
-        delayMs.clamp(-kVideoSubtitleDelayLimitMs, kVideoSubtitleDelayLimitMs);
+    final int clamped = delayMs.clamp(
+      -kVideoSubtitleDelayLimitMs,
+      kVideoSubtitleDelayLimitMs,
+    );
     final int nowCapMs = DateTime.now().millisecondsSinceEpoch + 5 * 60 * 1000;
     final int cappedAt = updatedAtMs > nowCapMs ? nowCapMs : updatedAtMs;
-    final ({int delayMs, int updatedAtMs}) current =
-        await getAudiobookDelay(identity);
+    final ({int delayMs, int updatedAtMs}) current = await getAudiobookDelay(
+      identity,
+    );
     final ({int delayMs, int updatedAtMs}) winner = resolveDelayLww(
       aDelayMs: current.delayMs,
       aUpdatedAtMs: current.updatedAtMs,
@@ -972,9 +1018,13 @@ class AppModelLibraryHostService
       return; // host 已存更新或相等，no-op。
     }
     await _db.setPrefTyped<int>(
-        audiobookDelayPrefKey(identity), winner.delayMs);
+      audiobookDelayPrefKey(identity),
+      winner.delayMs,
+    );
     await _db.setPrefTyped<int>(
-        audiobookDelayAtPrefKey(identity), winner.updatedAtMs);
+      audiobookDelayAtPrefKey(identity),
+      winner.updatedAtMs,
+    );
   }
 
   /// 即时把身份键为 [identity] 的有声书打包成临时文件，返回该文件。
@@ -1021,8 +1071,9 @@ class AppModelLibraryHostService
     required String srtBookUid,
     required String? bookKey,
   }) async {
-    final Directory tmpDir =
-        Directory.systemTemp.createTempSync('hibiki_audiobook_export');
+    final Directory tmpDir = Directory.systemTemp.createTempSync(
+      'hibiki_audiobook_export',
+    );
     final File out = File(p.join(tmpDir.path, '$identity.fushiaudio'));
     await _packages.exportAudioDatabasePackage(
       srtBookUid: srtBookUid,
@@ -1046,8 +1097,10 @@ class AppModelLibraryHostService
   /// 把有声书包文件导入 host（解包写 DB + 音频文件）。
   /// 需要在构造器传入 [audioDatabaseRoot]；为 null 时抛 [UnsupportedError]。
   @override
-  Future<void> importAudiobook(File packageFile,
-      {String? bookKeyOverride}) async {
+  Future<void> importAudiobook(
+    File packageFile, {
+    String? bookKeyOverride,
+  }) async {
     final Directory? root = _audioDatabaseRoot;
     if (root == null) {
       throw UnsupportedError(
@@ -1125,10 +1178,14 @@ class AppModelLibraryHostService
   Future<({int positionMs, int updatedAtMs})> getAudiobookPosition(
     String bookKey,
   ) async {
-    final int pos =
-        await _db.getPrefTyped<int>(audiobookPositionPrefKey(bookKey), 0);
-    final int at =
-        await _db.getPrefTyped<int>(audiobookPositionAtPrefKey(bookKey), 0);
+    final int pos = await _db.getPrefTyped<int>(
+      audiobookPositionPrefKey(bookKey),
+      0,
+    );
+    final int at = await _db.getPrefTyped<int>(
+      audiobookPositionAtPrefKey(bookKey),
+      0,
+    );
     return (positionMs: pos, updatedAtMs: at);
   }
 
@@ -1167,9 +1224,13 @@ class AppModelLibraryHostService
       return; // host 已存更新或相等，no-op。
     }
     await _db.setPrefTyped<int>(
-        audiobookPositionPrefKey(bookKey), winner.positionMs);
+      audiobookPositionPrefKey(bookKey),
+      winner.positionMs,
+    );
     await _db.setPrefTyped<int>(
-        audiobookPositionAtPrefKey(bookKey), winner.updatedAtMs);
+      audiobookPositionAtPrefKey(bookKey),
+      winner.updatedAtMs,
+    );
   }
 
   // ── 视频（P4-1，只读）────────────────────────────────────────────────────────
@@ -1197,7 +1258,8 @@ class AppModelLibraryHostService
     final ({
       Map<String, RemoteCollectionMembership> membership,
       Map<String, MediaCollectionRow> collectionByEntry,
-    }) collections = await _primaryCollectionData();
+    })
+    collections = await _primaryCollectionData();
     final Map<String, RemoteCollectionMembership> membership =
         collections.membership;
     // 批量预取：位置 prefs / 标签 LWW 时钟 / 移除墓碑各一趟查询，sidecar 同目录只扫
@@ -1205,26 +1267,28 @@ class AppModelLibraryHostService
     // listSync——500 行清单一次 ≈ 2500 次 DB 往返 + 500 次目录扫描，且封面端点每张
     // 封面重跑整份清单时按 N² 放大（见 [videoCoverPath]）。
     final Map<String, String> allPrefs = await _db.getAllPrefs();
-    final Map<String, Map<String, int>> tagAddedAtByUid =
-        await _db.allVideoTagAddedAtByName();
-    final Map<String, Map<String, int>> tagTombByUid =
-        await _db.allTagTombstonesByName(MediaKind.video);
+    final Map<String, Map<String, int>> tagAddedAtByUid = await _db
+        .allVideoTagAddedAtByName();
+    final Map<String, Map<String, int>> tagTombByUid = await _db
+        .allTagTombstonesByName(MediaKind.video);
     final Map<String, List<String>?> sidecarDirCache =
         <String, List<String>?>{};
     final List<RemoteVideoInfo> videos = <RemoteVideoInfo>[];
     for (final VideoBookRow row in rows) {
-      videos.add(_videoInfoFromRow(
-        row,
-        tags: tagsByVideoUid[row.bookUid] ?? const <String>[],
-        // 合集成员键：video 条目 mediaType='video'、entryKey=bookUid（§2.3 任务5.1）。
-        collection: membership[MediaKind.video.compositeKey(row.bookUid)],
-        collectionRow: collections
-            .collectionByEntry[MediaKind.video.compositeKey(row.bookUid)],
-        prefs: allPrefs,
-        tagsAddedAt: tagAddedAtByUid[row.bookUid] ?? const <String, int>{},
-        tagTombstones: tagTombByUid[row.bookUid] ?? const <String, int>{},
-        sidecarDirCache: sidecarDirCache,
-      ));
+      videos.add(
+        _videoInfoFromRow(
+          row,
+          tags: tagsByVideoUid[row.bookUid] ?? const <String>[],
+          // 合集成员键：video 条目 mediaType='video'、entryKey=bookUid（§2.3 任务5.1）。
+          collection: membership[MediaKind.video.compositeKey(row.bookUid)],
+          collectionRow: collections
+              .collectionByEntry[MediaKind.video.compositeKey(row.bookUid)],
+          prefs: allPrefs,
+          tagsAddedAt: tagAddedAtByUid[row.bookUid] ?? const <String, int>{},
+          tagTombstones: tagTombByUid[row.bookUid] ?? const <String, int>{},
+          sidecarDirCache: sidecarDirCache,
+        ),
+      );
     }
     return videos;
   }
@@ -1296,8 +1360,10 @@ class AppModelLibraryHostService
         }
         // 检查外挂字幕 sidecar（廉价：目录 listing 每目录只扫一次 + 纯字符串匹配）。
         final String dir = p.dirname(videoPath);
-        final List<String>? dirFiles =
-            sidecarDirCache.putIfAbsent(dir, () => _listDirFileNames(dir));
+        final List<String>? dirFiles = sidecarDirCache.putIfAbsent(
+          dir,
+          () => _listDirFileNames(dir),
+        );
         final String? picked = dirFiles == null
             ? null
             : pickSidecar(
@@ -1340,39 +1406,62 @@ class AppModelLibraryHostService
 
     final VideoPlaybackSyncState playback = VideoPlaybackSyncState.merge(
       VideoPlaybackSyncState(
-        delayMs:
-            effectiveSeriesDelayMs(collectionRow?.subtitleDelayMs, row.delayMs),
+        delayMs: effectiveSeriesDelayMs(
+          collectionRow?.subtitleDelayMs,
+          row.delayMs,
+        ),
         audioTrackId: effectiveSeriesAudioTrackId(
-            collectionRow?.audioTrackId, row.audioTrackId),
+          collectionRow?.audioTrackId,
+          row.audioTrackId,
+        ),
         secondarySubtitleSource: row.secondarySubtitleSource,
         secondaryDelayMs: effectiveSeriesSecondaryDelayMs(
-            collectionRow?.secondarySubtitleDelayMs, row.secondaryDelayMs),
+          collectionRow?.secondarySubtitleDelayMs,
+          row.secondaryDelayMs,
+        ),
       ),
       VideoPlaybackSyncState(
         delayMs: PrefCodec.decode<int>(
-            prefs[videoRemoteDelayPrefKey(row.bookUid)] ?? '', 0),
+          prefs[videoRemoteDelayPrefKey(row.bookUid)] ?? '',
+          0,
+        ),
         delayAt: PrefCodec.decode<int>(
-            prefs[videoRemoteDelayAtPrefKey(row.bookUid)] ?? '', 0),
-        audioTrackId:
-            nullableStr(prefs[videoRemoteAudioTrackPrefKey(row.bookUid)]),
+          prefs[videoRemoteDelayAtPrefKey(row.bookUid)] ?? '',
+          0,
+        ),
+        audioTrackId: nullableStr(
+          prefs[videoRemoteAudioTrackPrefKey(row.bookUid)],
+        ),
         audioTrackAt: PrefCodec.decode<int>(
-            prefs[videoRemoteAudioTrackAtPrefKey(row.bookUid)] ?? '', 0),
+          prefs[videoRemoteAudioTrackAtPrefKey(row.bookUid)] ?? '',
+          0,
+        ),
         secondarySubtitleSource: nullableStr(
-            prefs[videoRemoteSecondarySubtitlePrefKey(row.bookUid)]),
+          prefs[videoRemoteSecondarySubtitlePrefKey(row.bookUid)],
+        ),
         secondarySubtitleAt: PrefCodec.decode<int>(
-            prefs[videoRemoteSecondarySubtitleAtPrefKey(row.bookUid)] ?? '', 0),
+          prefs[videoRemoteSecondarySubtitleAtPrefKey(row.bookUid)] ?? '',
+          0,
+        ),
         secondaryDelayMs: int.tryParse(
-            nullableStr(prefs[videoRemoteSecondaryDelayPrefKey(row.bookUid)]) ??
-                ''),
+          nullableStr(prefs[videoRemoteSecondaryDelayPrefKey(row.bookUid)]) ??
+              '',
+        ),
         secondaryDelayAt: PrefCodec.decode<int>(
-            prefs[videoRemoteSecondaryDelayAtPrefKey(row.bookUid)] ?? '', 0),
+          prefs[videoRemoteSecondaryDelayAtPrefKey(row.bookUid)] ?? '',
+          0,
+        ),
       ),
     );
     final ({int positionMs, int updatedAtMs}) progress = resolvePositionLww(
       localPositionMs: PrefCodec.decode<int>(
-          prefs[videoRemotePositionPrefKey(row.bookUid)] ?? '', 0),
+        prefs[videoRemotePositionPrefKey(row.bookUid)] ?? '',
+        0,
+      ),
       localUpdatedAtMs: PrefCodec.decode<int>(
-          prefs[videoRemotePositionAtPrefKey(row.bookUid)] ?? '', 0),
+        prefs[videoRemotePositionAtPrefKey(row.bookUid)] ?? '',
+        0,
+      ),
       remotePositionMs: row.lastPositionMs,
       remoteUpdatedAtMs: 0,
     );
@@ -1492,10 +1581,13 @@ class AppModelLibraryHostService
   }) async {
     final String? videoPath = await _resolveEpisodeVideoPath(id, episodeIndex);
     if (videoPath == null || videoPath.isEmpty) return null;
-    final String effectiveLangCode =
-        langCode.isEmpty ? _videoSubtitleLangCode : langCode;
-    final String? subPath =
-        findSidecarSubtitle(videoPath, langCode: effectiveLangCode);
+    final String effectiveLangCode = langCode.isEmpty
+        ? _videoSubtitleLangCode
+        : langCode;
+    final String? subPath = findSidecarSubtitle(
+      videoPath,
+      langCode: effectiveLangCode,
+    );
     if (subPath == null) return null;
     final File f = File(subPath);
     return f.existsSync() ? f : null;
@@ -1519,8 +1611,9 @@ class AppModelLibraryHostService
     if (endMs <= startMs) return null;
     final File? file = await resolveVideoFile(id, episodeIndex: episodeIndex);
     if (file == null) return null;
-    final Directory tmp =
-        Directory.systemTemp.createTempSync('hibiki_clip_audio');
+    final Directory tmp = Directory.systemTemp.createTempSync(
+      'hibiki_clip_audio',
+    );
     final String out = p.join(tmp.path, 'clip.aac');
     final String? result = await extractAudioSegmentViaFfmpeg(
       inputPath: file.path,
@@ -1559,13 +1652,18 @@ class AppModelLibraryHostService
     int episodeIndex = 0,
   }) async {
     final int prefsPos = await _db.getPrefTyped<int>(
-        videoRemotePositionEpisodePrefKey(id, episodeIndex), 0);
+      videoRemotePositionEpisodePrefKey(id, episodeIndex),
+      0,
+    );
     final int prefsAt = await _db.getPrefTyped<int>(
-        videoRemotePositionEpisodeAtPrefKey(id, episodeIndex), 0);
+      videoRemotePositionEpisodeAtPrefKey(id, episodeIndex),
+      0,
+    );
     // 旧 host 本机播放只写 VideoBooks.lastPositionMs（整书一个值，无按集语义）；只在
     // episodeIndex<=0（当前集 / 单视频）回退它，避免给某集错配整书的旧进度。
-    final VideoBookRow? row =
-        episodeIndex <= 0 ? await _db.getVideoBookByBookUid(id) : null;
+    final VideoBookRow? row = episodeIndex <= 0
+        ? await _db.getVideoBookByBookUid(id)
+        : null;
     final int rowPos = row?.lastPositionMs ?? 0;
     // BUG-996：lastPositionMs 列无时间戳，此前硬编码 remoteUpdatedAtMs:0，使 host 的真
     // 进度在跨设备 LWW 里恒输给任何带 now 戳的本地断点（client 一旦碰过就再也拉不回
@@ -1591,8 +1689,10 @@ class AppModelLibraryHostService
     int updatedAtMs, {
     int episodeIndex = 0,
   }) async {
-    final ({int positionMs, int updatedAtMs}) current =
-        await getVideoPosition(id, episodeIndex: episodeIndex);
+    final ({int positionMs, int updatedAtMs}) current = await getVideoPosition(
+      id,
+      episodeIndex: episodeIndex,
+    );
     final ({int positionMs, int updatedAtMs}) winner = resolvePositionLww(
       localPositionMs: current.positionMs,
       localUpdatedAtMs: current.updatedAtMs,
@@ -1604,10 +1704,13 @@ class AppModelLibraryHostService
       return; // host 已存更新或相等，no-op。
     }
     await _db.setPrefTyped<int>(
-        videoRemotePositionEpisodePrefKey(id, episodeIndex), winner.positionMs);
+      videoRemotePositionEpisodePrefKey(id, episodeIndex),
+      winner.positionMs,
+    );
     await _db.setPrefTyped<int>(
-        videoRemotePositionEpisodeAtPrefKey(id, episodeIndex),
-        winner.updatedAtMs);
+      videoRemotePositionEpisodeAtPrefKey(id, episodeIndex),
+      winner.updatedAtMs,
+    );
     // BUG-1731：prefs 键空间只被「下发清单给子端」消费，host 自己的 UI（继续观看
     // / 下一集 / 合集续播锚点）读的是 VideoBooks.lastPositionMs / lastPlayedAt。
     // 子端上报只写 prefs 会让 host 端 UI 永远看不到对端进度——胜者来自对端时镜像
@@ -1617,8 +1720,11 @@ class AppModelLibraryHostService
     // 视频）镜像；episodeIndex>0 是 host-playlist 单行多集形态，行级
     // lastPositionMs 无按集语义，写它会把某一集的进度错配成整行进度。
     if (episodeIndex <= 0 && await _db.getVideoBookByBookUid(id) != null) {
-      await _db.updateVideoBookPosition(id, winner.positionMs,
-          playedAt: winner.updatedAtMs);
+      await _db.updateVideoBookPosition(
+        id,
+        winner.positionMs,
+        playedAt: winner.updatedAtMs,
+      );
     }
   }
 
@@ -1626,8 +1732,8 @@ class AppModelLibraryHostService
   /// （`subtitleDelayMs`）解析用，与清单侧 [_primaryCollectionData] 同折叠语义
   /// （最小 collectionId 主归属）。两次轻查询（主归属映射 + 单行取合集）。
   Future<MediaCollectionRow?> _primaryVideoCollectionRow(String id) async {
-    final Map<String, int> primaryByEntry =
-        await _db.getPrimaryCollectionIdByEntry();
+    final Map<String, int> primaryByEntry = await _db
+        .getPrimaryCollectionIdByEntry();
     final int? cid = primaryByEntry[MediaKind.video.compositeKey(id)];
     if (cid == null) return null;
     return _db.getMediaCollectionById(cid);
@@ -1648,31 +1754,48 @@ class AppModelLibraryHostService
   @override
   Future<VideoPlaybackSyncState> getVideoPlayback(String id) async {
     final VideoBookRow? row = await _db.getVideoBookByBookUid(id);
-    final MediaCollectionRow? col =
-        row == null ? null : await _primaryVideoCollectionRow(id);
+    final MediaCollectionRow? col = row == null
+        ? null
+        : await _primaryVideoCollectionRow(id);
     final VideoPlaybackSyncState base = VideoPlaybackSyncState(
       delayMs: effectiveSeriesDelayMs(col?.subtitleDelayMs, row?.delayMs ?? 0),
-      audioTrackId:
-          effectiveSeriesAudioTrackId(col?.audioTrackId, row?.audioTrackId),
+      audioTrackId: effectiveSeriesAudioTrackId(
+        col?.audioTrackId,
+        row?.audioTrackId,
+      ),
       secondarySubtitleSource: row?.secondarySubtitleSource,
       secondaryDelayMs: effectiveSeriesSecondaryDelayMs(
-          col?.secondarySubtitleDelayMs, row?.secondaryDelayMs),
+        col?.secondarySubtitleDelayMs,
+        row?.secondaryDelayMs,
+      ),
     );
     final VideoPlaybackSyncState stamped = VideoPlaybackSyncState(
       delayMs: await _db.getPrefTyped<int>(videoRemoteDelayPrefKey(id), 0),
       delayAt: await _db.getPrefTyped<int>(videoRemoteDelayAtPrefKey(id), 0),
-      audioTrackId:
-          await _readNullableStringPref(videoRemoteAudioTrackPrefKey(id)),
-      audioTrackAt:
-          await _db.getPrefTyped<int>(videoRemoteAudioTrackAtPrefKey(id), 0),
+      audioTrackId: await _readNullableStringPref(
+        videoRemoteAudioTrackPrefKey(id),
+      ),
+      audioTrackAt: await _db.getPrefTyped<int>(
+        videoRemoteAudioTrackAtPrefKey(id),
+        0,
+      ),
       secondarySubtitleSource: await _readNullableStringPref(
-          videoRemoteSecondarySubtitlePrefKey(id)),
+        videoRemoteSecondarySubtitlePrefKey(id),
+      ),
       secondarySubtitleAt: await _db.getPrefTyped<int>(
-          videoRemoteSecondarySubtitleAtPrefKey(id), 0),
-      secondaryDelayMs: int.tryParse(await _db.getPrefTyped<String>(
-          videoRemoteSecondaryDelayPrefKey(id), '')),
+        videoRemoteSecondarySubtitleAtPrefKey(id),
+        0,
+      ),
+      secondaryDelayMs: int.tryParse(
+        await _db.getPrefTyped<String>(
+          videoRemoteSecondaryDelayPrefKey(id),
+          '',
+        ),
+      ),
       secondaryDelayAt: await _db.getPrefTyped<int>(
-          videoRemoteSecondaryDelayAtPrefKey(id), 0),
+        videoRemoteSecondaryDelayAtPrefKey(id),
+        0,
+      ),
     );
     return VideoPlaybackSyncState.merge(base, stamped);
   }
@@ -1686,33 +1809,43 @@ class AppModelLibraryHostService
   /// row/系列级列，使 host 本机播放立即跟随（只写 row 会被非 null 系列级值遮蔽）。
   @override
   Future<void> putVideoPlayback(
-      String id, VideoPlaybackSyncState incoming) async {
+    String id,
+    VideoPlaybackSyncState incoming,
+  ) async {
     if (incoming.isEmpty) return;
     if (await _db.getVideoBookByBookUid(id) == null) return;
     final int nowCapMs = DateTime.now().millisecondsSinceEpoch + 5 * 60 * 1000;
     int capAt(int at) => at > nowCapMs ? nowCapMs : at;
     final VideoPlaybackSyncState capped = VideoPlaybackSyncState(
-      delayMs: incoming.delayMs
-          .clamp(-kVideoSubtitleDelayLimitMs, kVideoSubtitleDelayLimitMs),
+      delayMs: incoming.delayMs.clamp(
+        -kVideoSubtitleDelayLimitMs,
+        kVideoSubtitleDelayLimitMs,
+      ),
       delayAt: capAt(incoming.delayAt),
       audioTrackId: incoming.audioTrackId,
       audioTrackAt: capAt(incoming.audioTrackAt),
       secondarySubtitleSource: incoming.secondarySubtitleSource,
       secondarySubtitleAt: capAt(incoming.secondarySubtitleAt),
-      secondaryDelayMs: incoming.secondaryDelayMs
-          ?.clamp(-kVideoSubtitleDelayLimitMs, kVideoSubtitleDelayLimitMs),
+      secondaryDelayMs: incoming.secondaryDelayMs?.clamp(
+        -kVideoSubtitleDelayLimitMs,
+        kVideoSubtitleDelayLimitMs,
+      ),
       secondaryDelayAt: capAt(incoming.secondaryDelayAt),
     );
     final VideoPlaybackSyncState held = await getVideoPlayback(id);
-    final VideoPlaybackSyncState merged =
-        VideoPlaybackSyncState.merge(held, capped);
+    final VideoPlaybackSyncState merged = VideoPlaybackSyncState.merge(
+      held,
+      capped,
+    );
     if (merged == held) return; // host 已存更新或相等，no-op。
     final MediaCollectionRow? col = await _primaryVideoCollectionRow(id);
 
     if (merged.delayAt > 0 && merged.delayAt != held.delayAt) {
       await _db.setPrefTyped<int>(videoRemoteDelayPrefKey(id), merged.delayMs);
       await _db.setPrefTyped<int>(
-          videoRemoteDelayAtPrefKey(id), merged.delayAt);
+        videoRemoteDelayAtPrefKey(id),
+        merged.delayAt,
+      );
       await _db.updateVideoBookDelayMs(id, merged.delayMs);
       if (col != null) {
         await _db.updateMediaCollectionSubtitleDelayMs(col.id, merged.delayMs);
@@ -1720,34 +1853,52 @@ class AppModelLibraryHostService
     }
     if (merged.audioTrackAt > 0 && merged.audioTrackAt != held.audioTrackAt) {
       await _db.setPrefTyped<String>(
-          videoRemoteAudioTrackPrefKey(id), merged.audioTrackId ?? '');
+        videoRemoteAudioTrackPrefKey(id),
+        merged.audioTrackId ?? '',
+      );
       await _db.setPrefTyped<int>(
-          videoRemoteAudioTrackAtPrefKey(id), merged.audioTrackAt);
+        videoRemoteAudioTrackAtPrefKey(id),
+        merged.audioTrackAt,
+      );
       await _db.updateVideoBookAudioTrackId(id, merged.audioTrackId);
       if (col != null) {
         await _db.updateMediaCollectionAudioTrackId(
-            col.id, merged.audioTrackId);
+          col.id,
+          merged.audioTrackId,
+        );
       }
     }
     if (merged.secondarySubtitleAt > 0 &&
         merged.secondarySubtitleAt != held.secondarySubtitleAt) {
-      await _db.setPrefTyped<String>(videoRemoteSecondarySubtitlePrefKey(id),
-          merged.secondarySubtitleSource ?? '');
-      await _db.setPrefTyped<int>(videoRemoteSecondarySubtitleAtPrefKey(id),
-          merged.secondarySubtitleAt);
+      await _db.setPrefTyped<String>(
+        videoRemoteSecondarySubtitlePrefKey(id),
+        merged.secondarySubtitleSource ?? '',
+      );
+      await _db.setPrefTyped<int>(
+        videoRemoteSecondarySubtitleAtPrefKey(id),
+        merged.secondarySubtitleAt,
+      );
       await _db.updateVideoBookSecondarySubtitleSource(
-          id, merged.secondarySubtitleSource);
+        id,
+        merged.secondarySubtitleSource,
+      );
     }
     if (merged.secondaryDelayAt > 0 &&
         merged.secondaryDelayAt != held.secondaryDelayAt) {
-      await _db.setPrefTyped<String>(videoRemoteSecondaryDelayPrefKey(id),
-          merged.secondaryDelayMs?.toString() ?? '');
+      await _db.setPrefTyped<String>(
+        videoRemoteSecondaryDelayPrefKey(id),
+        merged.secondaryDelayMs?.toString() ?? '',
+      );
       await _db.setPrefTyped<int>(
-          videoRemoteSecondaryDelayAtPrefKey(id), merged.secondaryDelayAt);
+        videoRemoteSecondaryDelayAtPrefKey(id),
+        merged.secondaryDelayAt,
+      );
       await _db.updateVideoBookSecondaryDelayMs(id, merged.secondaryDelayMs);
       if (col != null) {
         await _db.updateMediaCollectionSecondarySubtitleDelayMs(
-            col.id, merged.secondaryDelayMs);
+          col.id,
+          merged.secondaryDelayMs,
+        );
       }
     }
   }
@@ -1775,12 +1926,12 @@ class AppModelLibraryHostService
         () => VideoCoverMutationGate.runExclusive(() async {
           final VideoBookRow? row = await _db.getVideoBookByBookUid(id);
           if (row == null) return; // 幂等：不存在则静默跳过
-          final bool deleted =
-              await VideoBookRepository(_db).deleteVideoBookAndReclaimAssets(
-            id,
-            scope: DeleteScope.syncEverywhere,
-            compactDatabase: false,
-          );
+          final bool deleted = await VideoBookRepository(_db)
+              .deleteVideoBookAndReclaimAssets(
+                id,
+                scope: DeleteScope.syncEverywhere,
+                compactDatabase: false,
+              );
           if (!deleted) return;
           await _deleteUploadedVideoCopy(row);
         }),
@@ -1798,8 +1949,9 @@ class AppModelLibraryHostService
   Future<void> _deleteUploadedVideoCopy(VideoBookRow row) async {
     final Directory? root = _uploadedVideoRoot;
     if (root == null) return;
-    final Directory owned =
-        Directory(p.join(root.path, _sanitizeVideoIdForPath(row.bookUid)));
+    final Directory owned = Directory(
+      p.join(root.path, _sanitizeVideoIdForPath(row.bookUid)),
+    );
     if (!owned.existsSync()) return;
     if (!p.isWithin(owned.path, row.videoPath)) return;
     try {
@@ -1833,22 +1985,27 @@ class AppModelLibraryHostService
       final Directory destDir = Directory(p.join(root.path, safeUid));
       destDir.createSync(recursive: true);
       final File dest = File(
-          p.join(destDir.path, _uploadedVideoFileName(originalFileName, id)));
+        p.join(destDir.path, _uploadedVideoFileName(originalFileName, id)),
+      );
       await _moveFileInto(videoFile, dest);
-      await _db.upsertVideoBook(VideoBooksCompanion(
-        bookUid: Value(id),
-        title: Value(title),
-        videoPath: Value(dest.path),
-        // 无外挂字幕上传：回退内嵌默认轨（与 client 下载无字幕分支一致）。
-        embeddedSubtitleTrack: const Value<int?>(0),
-        importedAt: Value(DateTime.now().millisecondsSinceEpoch),
-      ));
+      await _db.upsertVideoBook(
+        VideoBooksCompanion(
+          bookUid: Value(id),
+          title: Value(title),
+          videoPath: Value(dest.path),
+          // 无外挂字幕上传：回退内嵌默认轨（与 client 下载无字幕分支一致）。
+          embeddedSubtitleTrack: const Value<int?>(0),
+          importedAt: Value(DateTime.now().millisecondsSinceEpoch),
+        ),
+      );
     });
     // 封面 best-effort，与建行解耦：抽帧走 ffmpeg 慢，失败留空占位（移动端无 ffmpeg
     // 返 null），绝不让封面失败使整个上传报错。
-    final Future<String?> Function(
-        {required String videoPath,
-        required String bookUid})? extractor = _extractVideoCover;
+    final Future<String?> Function({
+      required String videoPath,
+      required String bookUid,
+    })?
+    extractor = _extractVideoCover;
     if (extractor != null) {
       final VideoScrapeOperationLease? lease =
           VideoScrapeOperationGate.tryEnterOperation();
@@ -1920,14 +2077,22 @@ class AppModelLibraryHostService
           lower.startsWith('https://')) {
         throw StateError('video has no local file: $id');
       }
-      final File dest = File(p.join(p.dirname(videoPath),
-          '${p.basenameWithoutExtension(videoPath)}$suffix'));
+      final File dest = File(
+        p.join(
+          p.dirname(videoPath),
+          '${p.basenameWithoutExtension(videoPath)}$suffix',
+        ),
+      );
       await _moveFileInto(subtitleFile, dest);
-      final String? preferred =
-          findSidecarSubtitle(videoPath, langCode: _videoSubtitleLangCode);
+      final String? preferred = findSidecarSubtitle(
+        videoPath,
+        langCode: _videoSubtitleLangCode,
+      );
       if (preferred == null) return; // 防御：刚落位的 dest 本身就是候选。
-      final String ext =
-          p.extension(preferred).replaceFirst('.', '').toLowerCase();
+      final String ext = p
+          .extension(preferred)
+          .replaceFirst('.', '')
+          .toLowerCase();
       List<AudioCue> cues = const <AudioCue>[];
       try {
         cues = parseSubtitleCues(
@@ -1938,17 +2103,21 @@ class AppModelLibraryHostService
       } catch (_) {
         // best-effort：解析失败不挡字幕文件落位。
       }
-      await _db.upsertVideoBook(VideoBooksCompanion(
-        bookUid: Value(id),
-        title: Value(row.title),
-        videoPath: Value(row.videoPath),
-        subtitleSource: Value<String?>(preferred),
-        subtitleFormat: Value<String?>(ext),
-        embeddedSubtitleTrack: const Value<int?>(null),
-      ));
+      await _db.upsertVideoBook(
+        VideoBooksCompanion(
+          bookUid: Value(id),
+          title: Value(row.title),
+          videoPath: Value(row.videoPath),
+          subtitleSource: Value<String?>(preferred),
+          subtitleFormat: Value<String?>(ext),
+          embeddedSubtitleTrack: const Value<int?>(null),
+        ),
+      );
       if (cues.isNotEmpty) {
         await _db.replaceCuesForBook(
-            id, cues.map(AudioCue.toCompanion).toList());
+          id,
+          cues.map(AudioCue.toCompanion).toList(),
+        );
       }
     });
   }
@@ -2051,8 +2220,9 @@ class AppModelLibraryHostService
       // 本机作为 client 跑的云/互联通道是三条独立的因果轴：共用一个键时，client
       // 通道刚推进的基线会把对端 POST 来的移出墓碑判成旧闻 → 引擎按「活胜」撤销
       // → 再回传给对端，用户的移出被自己另一条通道悄悄撤销。
-      final int baseline =
-          await repo.getCollectionsSyncBaselineMs(SyncChannelScope.host);
+      final int baseline = await repo.getCollectionsSyncBaselineMs(
+        SyncChannelScope.host,
+      );
       final CollectionSyncOutcome outcome = CollectionSyncEngine.merge(
         local: local,
         remote: incoming,
@@ -2060,7 +2230,9 @@ class AppModelLibraryHostService
       );
       await applyCollectionLocalChanges(_db, outcome.changes);
       await repo.setCollectionsSyncBaselineMs(
-          SyncChannelScope.host, DateTime.now().millisecondsSinceEpoch);
+        SyncChannelScope.host,
+        DateTime.now().millisecondsSinceEpoch,
+      );
       merged = outcome.merged;
     });
     return merged;
@@ -2068,9 +2240,9 @@ class AppModelLibraryHostService
 
   @override
   Future<List<({String mediaType, String itemKey, int deletedAt})>>
-      listDeletionTombstones() async {
-    final List<SyncDeletionTombstoneRow> rows =
-        await _db.getSyncDeletionTombstones();
+  listDeletionTombstones() async {
+    final List<SyncDeletionTombstoneRow> rows = await _db
+        .getSyncDeletionTombstones();
     return <({String mediaType, String itemKey, int deletedAt})>[
       for (final SyncDeletionTombstoneRow r in rows)
         (mediaType: r.mediaType, itemKey: r.itemKey, deletedAt: r.deletedAt),

@@ -25,11 +25,9 @@ List<TtuTocEntry> flattenTtuTocEntries(
     for (final EpubTocItem item in nodes) {
       final int index = hrefToChapterIndex(item.href);
       if (index >= 0) {
-        result.add(TtuTocEntry(
-          index: index,
-          label: item.label,
-          parent: parentLabel,
-        ));
+        result.add(
+          TtuTocEntry(index: index, label: item.label, parent: parentLabel),
+        );
       }
       walk(item.children, item.label);
     }

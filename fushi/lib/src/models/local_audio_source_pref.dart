@@ -21,8 +21,10 @@ class LocalAudioSourcePref {
   LocalAudioSourcePref copyWith({bool? enabled}) =>
       LocalAudioSourcePref(name: name, enabled: enabled ?? this.enabled);
 
-  Map<String, dynamic> toJson() =>
-      <String, dynamic>{'name': name, 'enabled': enabled};
+  Map<String, dynamic> toJson() => <String, dynamic>{
+    'name': name,
+    'enabled': enabled,
+  };
 
   @override
   bool operator ==(Object other) =>

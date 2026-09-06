@@ -271,13 +271,12 @@ class SandboxRelocationOutcome {
     required SandboxRelocationSource source,
     required String oldDocumentsRoot,
     required String newDocumentsRoot,
-  }) =>
-      SandboxRelocationOutcome._(
-        rebased: true,
-        source: source,
-        oldDocumentsRoot: oldDocumentsRoot,
-        newDocumentsRoot: newDocumentsRoot,
-      );
+  }) => SandboxRelocationOutcome._(
+    rebased: true,
+    source: source,
+    oldDocumentsRoot: oldDocumentsRoot,
+    newDocumentsRoot: newDocumentsRoot,
+  );
 
   factory SandboxRelocationOutcome.failed(Object error) =>
       SandboxRelocationOutcome._(
@@ -299,6 +298,6 @@ class SandboxRelocationOutcome {
   @override
   String toString() => rebased
       ? 'SandboxRelocation(rebased ${source.name}: '
-          '$oldDocumentsRoot -> $newDocumentsRoot)'
+            '$oldDocumentsRoot -> $newDocumentsRoot)'
       : 'SandboxRelocation(unchanged${error == null ? '' : ', error: $error'})';
 }

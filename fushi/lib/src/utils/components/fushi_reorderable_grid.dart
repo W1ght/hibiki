@@ -6,8 +6,8 @@ import 'package:fushi/src/shortcuts/context_menu_trigger.dart';
 /// 网格单元内容构造器：返回**纯视觉**卡片内容（自身手势由本组件统一接管，
 /// 调用方应把卡片包在 [IgnorePointer] 里避免内部 InkWell 的 long-press 与本组件的
 /// 触摸长按拖拽争用手势竞技场——详见类注释）。
-typedef FushiReorderGridItemBuilder = Widget Function(
-    BuildContext context, int index);
+typedef FushiReorderGridItemBuilder =
+    Widget Function(BuildContext context, int index);
 
 /// 为某个 index 返回稳定 Key（单元身份，拖拽中 display 重排时保留同一
 /// RawGestureDetector 元素与其活跃识别器，拖拽不中断）。
@@ -21,8 +21,8 @@ typedef FushiReorderGridActivate = void Function(int index);
 
 /// 单元请求上下文菜单：桌面鼠标右键（secondary tap）/ 触摸长按后原地松手（未拖动）。
 /// [globalPosition] 为触发点全局坐标，供调用方 `showMenu` 定位。
-typedef FushiReorderGridContextMenu = void Function(
-    int index, Offset globalPosition);
+typedef FushiReorderGridContextMenu =
+    void Function(int index, Offset globalPosition);
 
 /// 自实现的**二维**「拖拽重排」网格，专为运行在祖先 [Transform.scale]
 /// （`FushiAppUiScale` 的浏览器式整体缩放）之下而设计。是
@@ -222,8 +222,10 @@ class _FushiReorderableGridState extends State<FushiReorderableGrid> {
     if (_dragOriginal == null) return;
     final Offset local = _localOffset(globalPosition);
     final double maxX =
-        (_cols * _cellW + widget.crossAxisSpacing * (_cols - 1) - _cellW)
-            .clamp(0.0, double.infinity);
+        (_cols * _cellW + widget.crossAxisSpacing * (_cols - 1) - _cellW).clamp(
+          0.0,
+          double.infinity,
+        );
     final double maxY = (_totalHeight - _cellH).clamp(0.0, double.infinity);
     final Offset topLeft = Offset(
       (local.dx - _grab.dx).clamp(0.0, maxX),
@@ -291,7 +293,9 @@ class _FushiReorderableGridState extends State<FushiReorderableGrid> {
     // 尺寸混拼——scale<1 时底边高估、边缘带够不到（自动滚动失效），scale>1
     // 时边缘带侵入视口中部（误触发）。transformRect 连尺寸一起过变换。
     final Rect viewport = MatrixUtils.transformRect(
-        ro.getTransformTo(null), Offset.zero & ro.size);
+      ro.getTransformTo(null),
+      Offset.zero & ro.size,
+    );
     double step = 0;
     if (globalPosition.dy < viewport.top + _autoScrollEdge &&
         pos.pixels > pos.minScrollExtent) {
@@ -315,8 +319,10 @@ class _FushiReorderableGridState extends State<FushiReorderableGrid> {
     final ScrollableState? sc = _scrollable;
     if (sc == null || !sc.mounted) return;
     final ScrollPosition pos = sc.position;
-    final double next = (pos.pixels + _autoScrollStepSigned)
-        .clamp(pos.minScrollExtent, pos.maxScrollExtent);
+    final double next = (pos.pixels + _autoScrollStepSigned).clamp(
+      pos.minScrollExtent,
+      pos.maxScrollExtent,
+    );
     if (next != pos.pixels) pos.jumpTo(next);
     _applyDragAt(_lastPointerGlobal);
     _maybeAutoScroll(_lastPointerGlobal);
@@ -380,12 +386,12 @@ class _FushiReorderableGridState extends State<FushiReorderableGrid> {
 
   static const Set<PointerDeviceKind> _immediateDragDevices =
       <PointerDeviceKind>{
-    PointerDeviceKind.mouse,
-    PointerDeviceKind.trackpad,
-    PointerDeviceKind.stylus,
-    PointerDeviceKind.invertedStylus,
-    PointerDeviceKind.unknown,
-  };
+        PointerDeviceKind.mouse,
+        PointerDeviceKind.trackpad,
+        PointerDeviceKind.stylus,
+        PointerDeviceKind.invertedStylus,
+        PointerDeviceKind.unknown,
+      };
 
   static const Set<PointerDeviceKind> _touchDragDevices = <PointerDeviceKind>{
     PointerDeviceKind.touch,
@@ -454,8 +460,9 @@ class _FushiReorderableGridState extends State<FushiReorderableGrid> {
     // RawGestureDetector 与其活跃识别器；此处不再重复挂 key。
     return ContextMenuTrigger(
       // 右键菜单改由绑定表决定唤出键（默认仍是右键）；右键被别的动作占用时自动让位。
-      onInvoke:
-          menu == null ? null : (Offset position) => menu(original, position),
+      onInvoke: menu == null
+          ? null
+          : (Offset position) => menu(original, position),
       child: RawGestureDetector(
         behavior: HitTestBehavior.opaque,
         gestures: <Type, GestureRecognizerFactory>{
@@ -464,50 +471,56 @@ class _FushiReorderableGridState extends State<FushiReorderableGrid> {
           // 唤出，故整体交给外层 [ContextMenuTrigger]。
           TapGestureRecognizer:
               GestureRecognizerFactoryWithHandlers<TapGestureRecognizer>(
-            () => TapGestureRecognizer(),
-            (TapGestureRecognizer instance) {
-              final FushiReorderGridActivate? activate = widget.onActivateItem;
-              instance.onTap =
-                  activate == null ? null : () => activate(original);
-            },
-          ),
+                () => TapGestureRecognizer(),
+                (TapGestureRecognizer instance) {
+                  final FushiReorderGridActivate? activate =
+                      widget.onActivateItem;
+                  instance.onTap = activate == null
+                      ? null
+                      : () => activate(original);
+                },
+              ),
           // 鼠标等精确指针：按下即拖。
           ImmediateMultiDragGestureRecognizer:
               GestureRecognizerFactoryWithHandlers<
-                  ImmediateMultiDragGestureRecognizer>(
-            // **必须限主键**：`ContextMenuTrigger` 是 `Listener`，不进手势竞技场、
-            // 按下即弹菜单；而 `MultiDragGestureRecognizer` 没有覆写 `isPointerAllowed`，
-            // 基类默认的 `allowedButtonsFilter` 恒真、任意按钮都接。于是右键按住拖一下
-            // = 菜单弹出 + 背后同时起拖实时重排 + 松手提交一次顺序变更——正是本次改造
-            // 要消灭的双触发形态。改造前右键走 `onSecondaryTapUp`，与 immediate-drag
-            // 在竞技场里互斥，天然不会同时发生。
-            () => ImmediateMultiDragGestureRecognizer(
-              supportedDevices: _immediateDragDevices,
-              allowedButtonsFilter: (int buttons) => buttons == kPrimaryButton,
-            ),
-            (ImmediateMultiDragGestureRecognizer instance) {
-              instance.onStart =
-                  (Offset position) => _onMouseDragStart(original, position);
-            },
-          ),
+                ImmediateMultiDragGestureRecognizer
+              >(
+                // **必须限主键**：`ContextMenuTrigger` 是 `Listener`，不进手势竞技场、
+                // 按下即弹菜单；而 `MultiDragGestureRecognizer` 没有覆写 `isPointerAllowed`，
+                // 基类默认的 `allowedButtonsFilter` 恒真、任意按钮都接。于是右键按住拖一下
+                // = 菜单弹出 + 背后同时起拖实时重排 + 松手提交一次顺序变更——正是本次改造
+                // 要消灭的双触发形态。改造前右键走 `onSecondaryTapUp`，与 immediate-drag
+                // 在竞技场里互斥，天然不会同时发生。
+                () => ImmediateMultiDragGestureRecognizer(
+                  supportedDevices: _immediateDragDevices,
+                  allowedButtonsFilter: (int buttons) =>
+                      buttons == kPrimaryButton,
+                ),
+                (ImmediateMultiDragGestureRecognizer instance) {
+                  instance.onStart = (Offset position) =>
+                      _onMouseDragStart(original, position);
+                },
+              ),
           // 触摸屏：长按待命，移动过 slop 起拖，原地松手弹菜单。
           LongPressGestureRecognizer:
               GestureRecognizerFactoryWithHandlers<LongPressGestureRecognizer>(
-            () =>
-                LongPressGestureRecognizer(supportedDevices: _touchDragDevices),
-            (LongPressGestureRecognizer instance) {
-              instance.onLongPressStart = (LongPressStartDetails d) =>
-                  _touchLongPressStart(original, d);
-              instance.onLongPressMoveUpdate = (LongPressMoveUpdateDetails d) =>
-                  _touchLongPressMove(original, d);
-              instance.onLongPressEnd =
-                  (LongPressEndDetails d) => _touchLongPressEnd(original, d);
-              // 系统取消指针（通知栏下拉/来电/切后台）→ 清待命 + 复位拖拽（防幽灵浮层
-              // 与下次错序提交）。
-              instance.onLongPressCancel =
-                  () => _touchLongPressCancel(original);
-            },
-          ),
+                () => LongPressGestureRecognizer(
+                  supportedDevices: _touchDragDevices,
+                ),
+                (LongPressGestureRecognizer instance) {
+                  instance.onLongPressStart = (LongPressStartDetails d) =>
+                      _touchLongPressStart(original, d);
+                  instance.onLongPressMoveUpdate =
+                      (LongPressMoveUpdateDetails d) =>
+                          _touchLongPressMove(original, d);
+                  instance.onLongPressEnd = (LongPressEndDetails d) =>
+                      _touchLongPressEnd(original, d);
+                  // 系统取消指针（通知栏下拉/来电/切后台）→ 清待命 + 复位拖拽（防幽灵浮层
+                  // 与下次错序提交）。
+                  instance.onLongPressCancel = () =>
+                      _touchLongPressCancel(original);
+                },
+              ),
         },
         child: slot,
       ),

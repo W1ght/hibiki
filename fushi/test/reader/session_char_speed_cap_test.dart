@@ -26,8 +26,11 @@ void main() {
     );
     expect(r.charsAdded, 800);
     expect(r.highWaterMark, 1800);
-    expect(r.creditMilliChars, 60000 * kMaxReadCharsPerSecond - 800 * 1000,
-        reason: '没花掉的额度必须留在桶里');
+    expect(
+      r.creditMilliChars,
+      60000 * kMaxReadCharsPerSecond - 800 * 1000,
+      reason: '没花掉的额度必须留在桶里',
+    );
   });
 
   test('快速连翻被封顶：只计额度内的字数，水位仍推进到位', () {
@@ -118,8 +121,11 @@ void main() {
     );
     expect(r.charsAdded, 0);
     expect(r.highWaterMark, 1000);
-    expect(r.creditMilliChars, 60000 * kMaxReadCharsPerSecond,
-        reason: '原地停留也在攒额度，否则长停留页翻过去时计不满');
+    expect(
+      r.creditMilliChars,
+      60000 * kMaxReadCharsPerSecond,
+      reason: '原地停留也在攒额度，否则长停留页翻过去时计不满',
+    );
   });
 
   test('异常时间窗（负值/零）：不计入但水位仍推进，额度不为负', () {
@@ -133,8 +139,11 @@ void main() {
       );
       expect(r.charsAdded, 0, reason: 'elapsed=$elapsed');
       expect(r.highWaterMark, 1800, reason: 'elapsed=$elapsed');
-      expect(r.creditMilliChars, greaterThanOrEqualTo(0),
-          reason: 'elapsed=$elapsed');
+      expect(
+        r.creditMilliChars,
+        greaterThanOrEqualTo(0),
+        reason: 'elapsed=$elapsed',
+      );
     }
   });
 }

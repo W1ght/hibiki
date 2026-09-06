@@ -63,7 +63,8 @@ class SubtitleAutoAlignResult {
   int get hashCode => Object.hash(offsetMs, confidence, status);
 
   @override
-  String toString() => 'SubtitleAutoAlignResult(offsetMs: $offsetMs, '
+  String toString() =>
+      'SubtitleAutoAlignResult(offsetMs: $offsetMs, '
       'confidence: ${confidence.toStringAsFixed(3)}, status: $status)';
 }
 
@@ -202,8 +203,9 @@ SubtitleAutoAlignResult bestOffsetMsByCrossCorrelation(
     }
   }
 
-  final double confidence =
-      maxOverlap > 0 ? (bestOverlap / maxOverlap).clamp(0.0, 1.0) : 0.0;
+  final double confidence = maxOverlap > 0
+      ? (bestOverlap / maxOverlap).clamp(0.0, 1.0)
+      : 0.0;
   final int offsetMs = bestShiftBins * binMs;
   final SubtitleAutoAlignStatus status = confidence >= minConfidence
       ? SubtitleAutoAlignStatus.aligned

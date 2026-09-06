@@ -22,30 +22,33 @@ String _extractWord(AppModel appModel, String text, int charIndex) {
 
 @pragma('vm:entry-point')
 void popupMain() {
-  runZonedGuarded<Future<void>>(() async {
-    WidgetsFlutterBinding.ensureInitialized();
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+  runZonedGuarded<Future<void>>(
+    () async {
+      WidgetsFlutterBinding.ensureInitialized();
+      SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
 
-    final platformServices = PlatformServices.forCurrentPlatform();
-    final container = ProviderContainer(
-      overrides: [
-        platformServicesProvider.overrideWithValue(platformServices),
-      ],
-    );
+      final platformServices = PlatformServices.forCurrentPlatform();
+      final container = ProviderContainer(
+        overrides: [
+          platformServicesProvider.overrideWithValue(platformServices),
+        ],
+      );
 
-    runApp(
-      UncontrolledProviderScope(
-        container: container,
-        child: const PopupDictApp(),
-      ),
-    );
+      runApp(
+        UncontrolledProviderScope(
+          container: container,
+          child: const PopupDictApp(),
+        ),
+      );
 
-    await FushiDicts.preloadTransforms();
-    final appModel = container.read(appProvider);
-    unawaited(appModel.initialiseForDictionaryPopup());
-  }, (exception, stack) {
-    debugPrint('[Fushi-popup] uncaught: $exception\n$stack');
-  });
+      await FushiDicts.preloadTransforms();
+      final appModel = container.read(appProvider);
+      unawaited(appModel.initialiseForDictionaryPopup());
+    },
+    (exception, stack) {
+      debugPrint('[Fushi-popup] uncaught: $exception\n$stack');
+    },
+  );
 }
 
 class PopupDictApp extends ConsumerStatefulWidget {
@@ -76,8 +79,7 @@ class _PopupDictAppState extends ConsumerState<PopupDictApp> {
     super.initState();
 
     PopupChannel.instance.init(
-      onNewProcessText:
-          (String text, int charIndex, Rect? anchor, Rect? subtitle) async {
+      onNewProcessText: (String text, int charIndex, Rect? anchor, Rect? subtitle) async {
         final appModel = ref.read(appProvider);
         // TODO-855: warm-reuse hot path. Don't unconditionally re-scan the whole
         // preferences table on every external ProcessText (the v0.4.1 path was a
@@ -93,8 +95,11 @@ class _PopupDictAppState extends ConsumerState<PopupDictApp> {
           try {
             await appModel.refreshPrefCacheIfChanged();
           } on Object catch (e, stack) {
-            ErrorLogService.instance
-                .log('popupMain.refreshPrefCacheIfChanged', e, stack);
+            ErrorLogService.instance.log(
+              'popupMain.refreshPrefCacheIfChanged',
+              e,
+              stack,
+            );
           }
         }
         if (!mounted) return;
@@ -129,8 +134,9 @@ class _PopupDictAppState extends ConsumerState<PopupDictApp> {
     final double ratio = dpr <= 0 ? 1.0 : dpr;
     // 状态栏物理高度（逻辑像素）。glyph/subtitle 屏幕矩形含状态栏，本查词窗内容原点在
     // 状态栏下沿，故平移掉这段，弹窗锚点才与用户看到的字对齐。
-    final double statusBarPhysical =
-        views.isNotEmpty ? views.first.viewPadding.top : 0.0;
+    final double statusBarPhysical = views.isNotEmpty
+        ? views.first.viewPadding.top
+        : 0.0;
     final double top = (physical.top - statusBarPhysical) / ratio;
     final double bottom = (physical.bottom - statusBarPhysical) / ratio;
     return Rect.fromLTRB(
@@ -175,9 +181,7 @@ class _PopupDictAppState extends ConsumerState<PopupDictApp> {
           builder: _buildWithSpacing,
           home: Scaffold(
             backgroundColor: Colors.transparent,
-            body: Center(
-              child: CircularProgressIndicator(color: cs.primary),
-            ),
+            body: Center(child: CircularProgressIndicator(color: cs.primary)),
           ),
         ),
       );
@@ -185,8 +189,11 @@ class _PopupDictAppState extends ConsumerState<PopupDictApp> {
 
     if (_pendingWordExtraction) {
       _pendingWordExtraction = false;
-      final String resolved =
-          _extractWord(appModel, _searchTerm, _pendingCharIndex);
+      final String resolved = _extractWord(
+        appModel,
+        _searchTerm,
+        _pendingCharIndex,
+      );
       if (resolved != _searchTerm) {
         WidgetsBinding.instance.addPostFrameCallback((_) {
           if (!mounted) return;

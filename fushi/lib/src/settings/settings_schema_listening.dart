@@ -29,8 +29,9 @@ SettingsDestination buildListeningDestination() {
             value: (SettingsContext settingsContext) =>
                 settingsContext.appModel.audiobookBackgroundPlay,
             onChanged: (SettingsContext settingsContext, bool value) async {
-              await settingsContext.appModel
-                  .setAudiobookBackgroundPlay(value: value);
+              await settingsContext.appModel.setAudiobookBackgroundPlay(
+                value: value,
+              );
               settingsContext.refresh();
             },
           ),
@@ -160,8 +161,9 @@ SettingsDestination buildListeningDestination() {
                 settingsContext.appModel.floatingLyricTextOpacity.toDouble(),
             format: (double value) => '${value.round()}%',
             onChanged: (SettingsContext settingsContext, double value) async {
-              await settingsContext.appModel
-                  .setFloatingLyricTextOpacity(value.round());
+              await settingsContext.appModel.setFloatingLyricTextOpacity(
+                value.round(),
+              );
               await settingsContext.appModel.audiobookSession
                   .applyFloatingLyricStyle();
               settingsContext.refresh();
@@ -176,12 +178,14 @@ SettingsDestination buildListeningDestination() {
             max: 100,
             step: 5,
             value: (SettingsContext settingsContext) => settingsContext
-                .appModel.floatingLyricButtonBgOpacity
+                .appModel
+                .floatingLyricButtonBgOpacity
                 .toDouble(),
             format: (double value) => '${value.round()}%',
             onChanged: (SettingsContext settingsContext, double value) async {
-              await settingsContext.appModel
-                  .setFloatingLyricButtonBgOpacity(value.round());
+              await settingsContext.appModel.setFloatingLyricButtonBgOpacity(
+                value.round(),
+              );
               await settingsContext.appModel.audiobookSession
                   .applyFloatingLyricStyle();
               settingsContext.refresh();
@@ -201,8 +205,9 @@ SettingsDestination buildListeningDestination() {
                 settingsContext.appModel.floatingLyricBgOpacity.toDouble(),
             format: (double value) => '${value.round()}%',
             onChanged: (SettingsContext settingsContext, double value) async {
-              await settingsContext.appModel
-                  .setFloatingLyricBgOpacity(value.round());
+              await settingsContext.appModel.setFloatingLyricBgOpacity(
+                value.round(),
+              );
               await settingsContext.appModel.audiobookSession
                   .applyFloatingLyricStyle();
               settingsContext.refresh();
@@ -224,8 +229,9 @@ SettingsDestination buildListeningDestination() {
             format: (double value) =>
                 value.round() == 0 ? t.audio_panel_auto : '${value.round()}',
             onChanged: (SettingsContext settingsContext, double value) async {
-              await settingsContext.appModel
-                  .setFloatingLyricCornerRadius(value.round());
+              await settingsContext.appModel.setFloatingLyricCornerRadius(
+                value.round(),
+              );
               await settingsContext.appModel.audiobookSession
                   .applyFloatingLyricStyle();
               settingsContext.refresh();
@@ -249,8 +255,9 @@ SettingsDestination buildListeningDestination() {
             onChanged: (SettingsContext settingsContext, double value) async {
               // 0=自动；其余夹到 [200,1200]（<200 的步进值向上取到 200，保持哨兵语义只在 0）。
               final int rounded = value.round();
-              final int width =
-                  rounded <= 0 ? 0 : (rounded < 200 ? 200 : rounded);
+              final int width = rounded <= 0
+                  ? 0
+                  : (rounded < 200 ? 200 : rounded);
               await settingsContext.appModel.setFloatingLyricWidth(width);
               await settingsContext.appModel.audiobookSession
                   .applyFloatingLyricStyle();
@@ -273,8 +280,9 @@ SettingsDestination buildListeningDestination() {
                 settingsContext.appModel.floatingLyricContextLines.toDouble(),
             format: (double value) => value.round().toString(),
             onChanged: (SettingsContext settingsContext, double value) async {
-              await settingsContext.appModel
-                  .setFloatingLyricContextLines(value.round());
+              await settingsContext.appModel.setFloatingLyricContextLines(
+                value.round(),
+              );
               await settingsContext.appModel.audiobookSession
                   .resyncFloatingLyricText();
               settingsContext.refresh();

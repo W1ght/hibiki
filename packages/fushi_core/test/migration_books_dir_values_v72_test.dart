@@ -92,41 +92,59 @@ void main() {
     final FushiDatabase db = _openMigratedFromV71();
     addTearDown(db.close);
 
-    final QueryRow ver =
-        await db.customSelect('PRAGMA user_version').getSingle();
+    final QueryRow ver = await db
+        .customSelect('PRAGMA user_version')
+        .getSingle();
     expect(ver.read<int>('user_version'), db.schemaVersion);
 
     final rows = await db
         .customSelect(
-            'SELECT book_key, extract_dir FROM epub_books ORDER BY id')
+          'SELECT book_key, extract_dir FROM epub_books ORDER BY id',
+        )
         .get();
-    expect(rows[0].read<String>('extract_dir'), r'D:\Docs\fushi_books\A',
-        reason: '① 反斜杠形态改写');
     expect(
-        rows[1].read<String>('extract_dir'), '/home/u/Documents/fushi_books/B',
-        reason: '② 正斜杠形态改写');
-    expect(rows[2].read<String>('extract_dir'), '/data/other_dir/C',
-        reason: '无关行不动');
+      rows[0].read<String>('extract_dir'),
+      r'D:\Docs\fushi_books\A',
+      reason: '① 反斜杠形态改写',
+    );
+    expect(
+      rows[1].read<String>('extract_dir'),
+      '/home/u/Documents/fushi_books/B',
+      reason: '② 正斜杠形态改写',
+    );
+    expect(
+      rows[2].read<String>('extract_dir'),
+      '/data/other_dir/C',
+      reason: '无关行不动',
+    );
 
     // v80 后 image_url 活在 media_open_history.snapshot_json（无值不落键）。
     final mi = await db
         .customSelect(
-            'SELECT snapshot_json FROM media_open_history ORDER BY media_id')
+          'SELECT snapshot_json FROM media_open_history ORDER BY media_id',
+        )
         .get();
-    final List<String> snaps =
-        mi.map((r) => r.read<String>('snapshot_json')).toList();
+    final List<String> snaps = mi
+        .map((r) => r.read<String>('snapshot_json'))
+        .toList();
     expect(
-        snaps.where(
-            (j) => j.contains('file:///D:/Docs/fushi_books/A/cover.jpg')),
-        hasLength(1),
-        reason: '③ file:// URI 改写（阶梯终值随 v80 搬进 snapshot）');
-    expect(snaps.where((j) => j.contains('imageUrl')), hasLength(1),
-        reason: '无 image_url 的行不落 imageUrl 键');
+      snaps.where((j) => j.contains('file:///D:/Docs/fushi_books/A/cover.jpg')),
+      hasLength(1),
+      reason: '③ file:// URI 改写（阶梯终值随 v80 搬进 snapshot）',
+    );
+    expect(
+      snaps.where((j) => j.contains('imageUrl')),
+      hasLength(1),
+      reason: '无 image_url 的行不落 imageUrl 键',
+    );
 
-    final prefs =
-        await db.customSelect('SELECT key FROM preferences ORDER BY key').get();
-    expect(prefs.map((r) => r.read<String>('key')).toList(),
-        <String>['sync_backend_type'],
-        reason: '④ google_drive_hoshi_compat 清行，无关键保留');
+    final prefs = await db
+        .customSelect('SELECT key FROM preferences ORDER BY key')
+        .get();
+    expect(
+      prefs.map((r) => r.read<String>('key')).toList(),
+      <String>['sync_backend_type'],
+      reason: '④ google_drive_hoshi_compat 清行，无关键保留',
+    );
   });
 }

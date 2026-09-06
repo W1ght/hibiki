@@ -75,8 +75,7 @@ class _FakeSyncBackend implements SyncBackend {
     required String bookTitle,
     required String rootFolderId,
     SyncCoverDataProvider? readCoverData,
-  }) async =>
-      remoteBooks[bookTitle]?.folderId ?? 'folder-$bookTitle';
+  }) async => remoteBooks[bookTitle]?.folderId ?? 'folder-$bookTitle';
 
   @override
   Future<String> ensureNamespace(String name) async => name;
@@ -100,8 +99,10 @@ class _FakeSyncBackend implements SyncBackend {
   }
 
   @override
-  void restoreCache(
-      {String? rootFolderId, Map<String, String>? titleToFolderId}) {
+  void restoreCache({
+    String? rootFolderId,
+    Map<String, String>? titleToFolderId,
+  }) {
     _cachedRoot = rootFolderId;
     if (titleToFolderId != null) _cachedFolders.addAll(titleToFolderId);
   }
@@ -137,34 +138,31 @@ class _FakeSyncBackend implements SyncBackend {
     required String folderId,
     required String? fileId,
     required List<TtuStatistics> stats,
-  }) async =>
-      throw UnimplementedError();
+  }) async => throw UnimplementedError();
   @override
   Future<void> updateAudioBookFile({
     required String folderId,
     required String? fileId,
     required TtuAudioBook audioBook,
-  }) async =>
-      throw UnimplementedError();
+  }) async => throw UnimplementedError();
   @override
   Future<void> uploadContentFile({
     required String folderId,
     required String fileName,
     required File file,
     void Function(double progress)? onProgress,
-  }) async =>
-      throw UnimplementedError();
+  }) async => throw UnimplementedError();
   @override
   Future<void> downloadContentFile({
     required String fileId,
     required File destination,
     void Function(double progress)? onProgress,
-  }) async =>
-      throw UnimplementedError();
+  }) async => throw UnimplementedError();
   @override
   Future<SyncFileRef?> findContentFile(
-          String folderId, String fileName) async =>
-      throw UnimplementedError();
+    String folderId,
+    String fileName,
+  ) async => throw UnimplementedError();
   @override
   Future<void> deleteAsset(String id, {bool isFolder = false}) async =>
       throw UnimplementedError();
@@ -175,13 +173,18 @@ class _FakeSyncBackend implements SyncBackend {
   Future<String> ensureFolder(String parentId, String name) async =>
       throw UnimplementedError();
   @override
-  Future<void> putAsset(String namespaceId, String name, File file,
-          {void Function(double progress)? onProgress}) async =>
-      throw UnimplementedError();
+  Future<void> putAsset(
+    String namespaceId,
+    String name,
+    File file, {
+    void Function(double progress)? onProgress,
+  }) async => throw UnimplementedError();
   @override
-  Future<void> getAsset(String assetId, File destination,
-          {void Function(double progress)? onProgress}) async =>
-      throw UnimplementedError();
+  Future<void> getAsset(
+    String assetId,
+    File destination, {
+    void Function(double progress)? onProgress,
+  }) async => throw UnimplementedError();
   @override
   Future<Object?> getJsonAsset(String assetId) async =>
       throw UnimplementedError();
@@ -220,15 +223,17 @@ class _RemoteBook {
 }
 
 Future<EpubBookRow> _seedBook(FushiDatabase db, String title) async {
-  await db.insertEpubBook(EpubBooksCompanion.insert(
-    bookKey: title,
-    title: title,
-    epubPath: '/fake/$title.epub',
-    extractDir: '/fake/$title',
-    chapterCount: 1,
-    chaptersJson: _chaptersJson,
-    importedAt: DateTime.now().millisecondsSinceEpoch,
-  ));
+  await db.insertEpubBook(
+    EpubBooksCompanion.insert(
+      bookKey: title,
+      title: title,
+      epubPath: '/fake/$title.epub',
+      extractDir: '/fake/$title',
+      chapterCount: 1,
+      chaptersJson: _chaptersJson,
+      importedAt: DateTime.now().millisecondsSinceEpoch,
+    ),
+  );
   return (await db.getAllEpubBooks()).firstWhere((b) => b.title == title);
 }
 
@@ -239,25 +244,27 @@ Future<void> _seedPosition(
   required double fraction,
 }) async {
   final int normOffset = (fraction * 10000).round();
-  await db.upsertReaderPosition(ReaderPositionsCompanion(
-    bookUid: Value(bookUid),
-    sectionIndex: const Value(0),
-    normCharOffset: Value(normOffset),
-    updatedAt: Value(updatedAt),
-  ));
+  await db.upsertReaderPosition(
+    ReaderPositionsCompanion(
+      bookUid: Value(bookUid),
+      sectionIndex: const Value(0),
+      normCharOffset: Value(normOffset),
+      updatedAt: Value(updatedAt),
+    ),
+  );
 }
 
 /// One genuine fork (both sides off baseline) → SyncCompareDialog renders it as
 /// a conflict.
 List<SyncConflict> _oneConflict() => <SyncConflict>[
-      SyncConflict(
-        assetKey: sanitizeTtuFilename('BookA'),
-        dimension: 'progress',
-        title: 'BookA',
-        localVersion: 120,
-        remoteVersion: 100,
-      ),
-    ];
+  SyncConflict(
+    assetKey: sanitizeTtuFilename('BookA'),
+    dimension: 'progress',
+    title: 'BookA',
+    localVersion: 120,
+    remoteVersion: 100,
+  ),
+];
 
 void main() {
   setUp(() {
@@ -329,8 +336,9 @@ void main() {
     await tester.pumpAndSettle();
   }
 
-  testWidgets('manual source presents the conflict resolution dialog',
-      (WidgetTester tester) async {
+  testWidgets('manual source presents the conflict resolution dialog', (
+    WidgetTester tester,
+  ) async {
     final (FushiDatabase db, _FakeSyncBackend fake) = await seedForkedLibrary();
     addTearDown(db.close);
     final SyncConflictPrompter prompter = SyncConflictPrompter();
@@ -357,8 +365,9 @@ void main() {
     await dismissDialog(tester, navKey);
   });
 
-  testWidgets('auto source while in-book does NOT present',
-      (WidgetTester tester) async {
+  testWidgets('auto source while in-book does NOT present', (
+    WidgetTester tester,
+  ) async {
     final (FushiDatabase db, _FakeSyncBackend fake) = await seedForkedLibrary();
     addTearDown(db.close);
     final SyncConflictPrompter prompter = SyncConflictPrompter();
@@ -404,8 +413,9 @@ void main() {
     expect(find.byType(SyncCompareDialog), findsNothing);
   });
 
-  testWidgets('auto source out-of-book presents the dialog',
-      (WidgetTester tester) async {
+  testWidgets('auto source out-of-book presents the dialog', (
+    WidgetTester tester,
+  ) async {
     final (FushiDatabase db, _FakeSyncBackend fake) = await seedForkedLibrary();
     addTearDown(db.close);
     final SyncConflictPrompter prompter = SyncConflictPrompter();

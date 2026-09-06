@@ -890,6 +890,16 @@ jobs:
         chmod +x ci/apply-patches.sh
         bash ci/apply-patches.sh
 
+    - name: Check dart format
+      # 仓库统一 Dart tall 格式风格（2026-09-06 style commit）；没 format 的改动在这里红。
+      # 范围与 CLAUDE.md「验证」一致：主 app 四目录 + 六个内部包 + 根 tool/，vendored fork 不查。
+      run: >-
+        dart format --output=none --set-exit-if-changed
+        fushi/lib fushi/test fushi/integration_test fushi/tool
+        packages/fushi_core packages/fushi_dictionary packages/fushi_anki
+        packages/fushi_audio packages/fushi_platform packages/fushi_torrent
+        tool
+
     - name: Run dart analyze
       working-directory: fushi
       run: flutter analyze

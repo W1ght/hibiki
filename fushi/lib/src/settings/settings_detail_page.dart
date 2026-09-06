@@ -35,10 +35,7 @@ Widget buildSettingsDetailShell({
 }
 
 class SettingsDetailPage extends BasePage {
-  const SettingsDetailPage({
-    required this.destination,
-    super.key,
-  });
+  const SettingsDetailPage({required this.destination, super.key});
 
   final SettingsDestination destination;
 
@@ -81,8 +78,10 @@ class _SettingsDetailPageState extends BasePageState<SettingsDetailPage>
 
   @override
   Widget build(BuildContext context) {
-    final SettingsContext settingsContext =
-        createSettingsContext(appModel: appModel, ref: ref);
+    final SettingsContext settingsContext = createSettingsContext(
+      appModel: appModel,
+      ref: ref,
+    );
     final SettingsDestination destination = _freshDestination(settingsContext);
     if (isCupertinoPlatform(context)) {
       return const CupertinoSettingsRenderer().buildDetailPage(
@@ -97,8 +96,9 @@ class _SettingsDetailPageState extends BasePageState<SettingsDetailPage>
   }
 
   SettingsDestination _freshDestination(SettingsContext settingsContext) {
-    for (final SettingsDestination destination
-        in buildSettingsSchema(settingsContext)) {
+    for (final SettingsDestination destination in buildSettingsSchema(
+      settingsContext,
+    )) {
       if (destination.id == widget.destination.id) return destination;
     }
     return widget.destination;

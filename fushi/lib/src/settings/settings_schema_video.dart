@@ -84,12 +84,13 @@ SettingsDestination buildVideoDestination() {
             ],
             selected: (SettingsContext settingsContext) =>
                 settingsContext.appModel.videoImmersiveMode,
-            onChanged: (
-              SettingsContext settingsContext,
-              VideoImmersiveMode mode,
-            ) async {
-              await setVideoImmersiveModeDual(settingsContext, mode);
-            },
+            onChanged:
+                (
+                  SettingsContext settingsContext,
+                  VideoImmersiveMode mode,
+                ) async {
+                  await setVideoImmersiveModeDual(settingsContext, mode);
+                },
           ),
           SettingsSegmentedItem<VideoFitMode>(
             id: 'video.playback.picture_fit',
@@ -114,12 +115,10 @@ SettingsDestination buildVideoDestination() {
             ],
             selected: (SettingsContext settingsContext) =>
                 settingsContext.appModel.videoFitMode,
-            onChanged: (
-              SettingsContext settingsContext,
-              VideoFitMode mode,
-            ) async {
-              await setVideoFitModeDual(settingsContext, mode);
-            },
+            onChanged:
+                (SettingsContext settingsContext, VideoFitMode mode) async {
+                  await setVideoFitModeDual(settingsContext, mode);
+                },
           ),
           // Windows HDR 直通 / 10-bit 输出（docs/plans/2026-08-30-video-hdr-passthrough.md）：
           // auto = 显示器 HDR 开着且片源 HDR 才走宿主窗直通；always = 只要在 Windows
@@ -148,12 +147,13 @@ SettingsDestination buildVideoDestination() {
             ],
             selected: (SettingsContext settingsContext) =>
                 settingsContext.appModel.videoHdrOutputMode,
-            onChanged: (
-              SettingsContext settingsContext,
-              VideoHdrOutputMode mode,
-            ) async {
-              await setVideoHdrOutputModeDual(settingsContext, mode);
-            },
+            onChanged:
+                (
+                  SettingsContext settingsContext,
+                  VideoHdrOutputMode mode,
+                ) async {
+                  await setVideoHdrOutputModeDual(settingsContext, mode);
+                },
           ),
           // YouTube 显式画质目标（0=自动=默认策略：编码优先、≤1080p）。非 0 起播即选
           // ≤目标 的最高档（画质菜单同语义），4K 档在 YouTube 侧只有 vp9/av01——无硬解
@@ -166,21 +166,16 @@ SettingsDestination buildVideoDestination() {
             dropdown: true,
             video: VideoPlacement(group: VideoGroup.playback, order: 15),
             options: <SettingsSegmentOption<int>>[
-              SettingsSegmentOption<int>(
-                value: 0,
-                label: t.video_quality_auto,
-              ),
+              SettingsSegmentOption<int>(value: 0, label: t.video_quality_auto),
               for (final int height in <int>[480, 720, 1080, 1440, 2160])
-                SettingsSegmentOption<int>(
-                  value: height,
-                  label: '${height}p',
-                ),
+                SettingsSegmentOption<int>(value: height, label: '${height}p'),
             ],
             selected: (SettingsContext settingsContext) =>
                 settingsContext.appModel.youtubeQualityTargetHeight,
             onChanged: (SettingsContext settingsContext, int height) async {
-              await settingsContext.appModel
-                  .setYoutubeQualityTargetHeight(height);
+              await settingsContext.appModel.setYoutubeQualityTargetHeight(
+                height,
+              );
             },
           ),
           SettingsSegmentedItem<int>(
@@ -256,16 +251,17 @@ SettingsDestination buildVideoDestination() {
             ],
             selected: (SettingsContext settingsContext) =>
                 currentVideoAsbConfig(settingsContext).dragSeekSensitivity,
-            onChanged: (
-              SettingsContext settingsContext,
-              VideoSeekSensitivity value,
-            ) async {
-              await commitVideoAsbConfig(
-                settingsContext,
-                (VideoAsbplayerConfig c) =>
-                    c.copyWith(dragSeekSensitivity: value),
-              );
-            },
+            onChanged:
+                (
+                  SettingsContext settingsContext,
+                  VideoSeekSensitivity value,
+                ) async {
+                  await commitVideoAsbConfig(
+                    settingsContext,
+                    (VideoAsbplayerConfig c) =>
+                        c.copyWith(dragSeekSensitivity: value),
+                  );
+                },
           ),
           SettingsSwitchItem(
             id: 'video.playback.lock_window_aspect',
@@ -356,8 +352,9 @@ SettingsDestination buildVideoDestination() {
             value: (SettingsContext settingsContext) =>
                 settingsContext.appModel.videoLibraryAutoBackfillScrape,
             onChanged: (SettingsContext settingsContext, bool value) async {
-              await settingsContext.appModel
-                  .setVideoLibraryAutoBackfillScrape(value);
+              await settingsContext.appModel.setVideoLibraryAutoBackfillScrape(
+                value,
+              );
             },
           ),
           SettingsTextItem(
@@ -366,10 +363,12 @@ SettingsDestination buildVideoDestination() {
             subtitle: t.video_source_scrape_locale_hint,
             icon: Icons.language_outlined,
             placeholder: 'zh-CN',
-            value: (SettingsContext settingsContext) => settingsContext
-                    .appModel.prefsRepo
-                    .getPref(kVideoMetadataLocalePref, defaultValue: 'zh-CN')
-                as String,
+            value: (SettingsContext settingsContext) =>
+                settingsContext.appModel.prefsRepo.getPref(
+                      kVideoMetadataLocalePref,
+                      defaultValue: 'zh-CN',
+                    )
+                    as String,
             onChanged: (SettingsContext settingsContext, String value) async {
               await commitVideoMetadataRuntimePreference(
                 settingsContext,
@@ -430,8 +429,9 @@ SettingsDestination buildVideoDestination() {
               // 一条、decode 白名单没有」这种分叉随时可能发生，而那条分叉是静默的
               // （选了就被 decode 打回默认值，用户只看到「选了没保存」）。
               // `Set` 字面量在 Dart 里是插入序，所以显示顺序仍由白名单那份决定。
-              for (final String curve
-                  in kHdrToneMappingValues.where((String c) => c != 'auto'))
+              for (final String curve in kHdrToneMappingValues.where(
+                (String c) => c != 'auto',
+              ))
                 SettingsSegmentOption<String>(value: curve, label: curve),
             ],
             selected: (SettingsContext settingsContext) =>
@@ -898,12 +898,13 @@ SettingsDestination buildVideoDestination() {
             ],
             selected: (SettingsContext settingsContext) =>
                 settingsContext.appModel.videoSubtitleObscureMode,
-            onChanged: (
-              SettingsContext settingsContext,
-              VideoSubtitleObscureMode mode,
-            ) async {
-              await setVideoSubtitleObscureModeDual(settingsContext, mode);
-            },
+            onChanged:
+                (
+                  SettingsContext settingsContext,
+                  VideoSubtitleObscureMode mode,
+                ) async {
+                  await setVideoSubtitleObscureModeDual(settingsContext, mode);
+                },
           ),
           // TODO-1382：副字幕遮蔽三态（镜像主字幕，独立开关）。快捷键 Shift+G 循环、
           // Shift+H 隐藏。
@@ -923,15 +924,16 @@ SettingsDestination buildVideoDestination() {
             ],
             selected: (SettingsContext settingsContext) =>
                 settingsContext.appModel.videoSecondarySubtitleObscureMode,
-            onChanged: (
-              SettingsContext settingsContext,
-              VideoSubtitleObscureMode mode,
-            ) async {
-              await setVideoSecondarySubtitleObscureModeDual(
-                settingsContext,
-                mode,
-              );
-            },
+            onChanged:
+                (
+                  SettingsContext settingsContext,
+                  VideoSubtitleObscureMode mode,
+                ) async {
+                  await setVideoSecondarySubtitleObscureModeDual(
+                    settingsContext,
+                    mode,
+                  );
+                },
           ),
           // TODO-1105：尊重 .ass 自带样式开关。开时字幕优先用 .ass 的字体/主色/描边/
           // 阴影，缺失回退统一外观；关时全走统一外观。默认开。
@@ -970,9 +972,9 @@ SettingsDestination buildVideoDestination() {
             divisions: 36,
             label: (double v) => v.round().toString(),
             value: (SettingsContext settingsContext) =>
-                currentVideoSubtitleStyle(settingsContext)
-                    .fontSize
-                    .clamp(12, 48),
+                currentVideoSubtitleStyle(
+                  settingsContext,
+                ).fontSize.clamp(12, 48),
             onChanged: (SettingsContext settingsContext, double v) {
               previewVideoSubtitleStyle(
                 settingsContext,
@@ -1053,9 +1055,9 @@ SettingsDestination buildVideoDestination() {
             ),
             divisions: 20,
             value: (SettingsContext settingsContext) =>
-                currentVideoSubtitleStyle(settingsContext)
-                    .backgroundOpacity
-                    .clamp(0, 1),
+                currentVideoSubtitleStyle(
+                  settingsContext,
+                ).backgroundOpacity.clamp(0, 1),
             onChanged: (SettingsContext settingsContext, double v) {
               previewVideoSubtitleStyle(
                 settingsContext,
@@ -1121,9 +1123,9 @@ SettingsDestination buildVideoDestination() {
             max: kVideoSubtitleMaxPadding,
             divisions: 40,
             value: (SettingsContext settingsContext) =>
-                currentVideoSubtitleStyle(settingsContext)
-                    .bottomPadding
-                    .clamp(0, kVideoSubtitleMaxPadding),
+                currentVideoSubtitleStyle(
+                  settingsContext,
+                ).bottomPadding.clamp(0, kVideoSubtitleMaxPadding),
             onChanged: (SettingsContext settingsContext, double v) {
               previewVideoSubtitleStyle(
                 settingsContext,
@@ -1155,10 +1157,13 @@ SettingsDestination buildVideoDestination() {
             max: kVideoSubtitleMaxPadding,
             divisions: 40,
             value: (SettingsContext settingsContext) {
-              final VideoSubtitleStyle s =
-                  currentVideoSubtitleStyle(settingsContext);
-              return (s.secondaryBottomPadding ?? s.bottomPadding)
-                  .clamp(0, kVideoSubtitleMaxPadding);
+              final VideoSubtitleStyle s = currentVideoSubtitleStyle(
+                settingsContext,
+              );
+              return (s.secondaryBottomPadding ?? s.bottomPadding).clamp(
+                0,
+                kVideoSubtitleMaxPadding,
+              );
             },
             onChanged: (SettingsContext settingsContext, double v) {
               previewVideoSubtitleStyle(
@@ -1191,9 +1196,9 @@ SettingsDestination buildVideoDestination() {
             visible: (SettingsContext c) =>
                 videoQuickSettingsHostOf(c)?.onEnterSubtitleDragAdjust != null,
             onTap: (SettingsContext settingsContext) async {
-              videoQuickSettingsHostOf(settingsContext)
-                  ?.onEnterSubtitleDragAdjust
-                  ?.call();
+              videoQuickSettingsHostOf(
+                settingsContext,
+              )?.onEnterSubtitleDragAdjust?.call();
             },
           ),
           // ── 自动获取字幕 ─────────────────────────────────────────────────
@@ -1321,8 +1326,9 @@ SettingsDestination buildVideoDestination() {
             value: (SettingsContext c) =>
                 snapVideoSpeed(videoQuickSettingsHostOf(c)!.speed()),
             onChanged: (SettingsContext c, double v) async {
-              await videoQuickSettingsHostOf(c)!
-                  .onPreviewSpeed(snapVideoSpeed(v));
+              await videoQuickSettingsHostOf(
+                c,
+              )!.onPreviewSpeed(snapVideoSpeed(v));
             },
             onChangeEnd: (SettingsContext c, double v) async {
               await videoQuickSettingsHostOf(c)!.onSetSpeed(snapVideoSpeed(v));
@@ -1343,9 +1349,8 @@ SettingsDestination buildVideoDestination() {
             onChanged: (SettingsContext c, double v) async {
               await commitVideoAsbConfig(
                 c,
-                (VideoAsbplayerConfig a) => a.copyWith(
-                  speedStep: double.parse(v.toStringAsFixed(2)),
-                ),
+                (VideoAsbplayerConfig a) =>
+                    a.copyWith(speedStep: double.parse(v.toStringAsFixed(2))),
               );
             },
           ),
@@ -1468,10 +1473,10 @@ SettingsDestination buildVideoDestination() {
             subtitle: t.video_setting_mpv_lua_scripts_hint,
             subtitleBuilder: (SettingsContext settingsContext) =>
                 settingsContext.appModel.videoMpvLuaCapability ==
-                        MpvLuaCapability.unavailable
-                    ? '${t.video_setting_mpv_lua_scripts_unavailable}\n'
-                        '${t.video_setting_mpv_lua_scripts_hint}'
-                    : t.video_setting_mpv_lua_scripts_hint,
+                    MpvLuaCapability.unavailable
+                ? '${t.video_setting_mpv_lua_scripts_unavailable}\n'
+                      '${t.video_setting_mpv_lua_scripts_hint}'
+                : t.video_setting_mpv_lua_scripts_hint,
             icon: Icons.data_object_outlined,
             video: VideoPlacement(
               group: VideoGroup.mpv,
@@ -1660,7 +1665,9 @@ SettingsDestination buildVideoDestination() {
 
 /// 轻量提示条（与 settings_schema_lookup.dart 的 `_showSettingsSnackBar` 同款）。
 void _showVideoSettingsSnackBar(
-    SettingsContext settingsContext, String message) {
+  SettingsContext settingsContext,
+  String message,
+) {
   final BuildContext ctx = settingsContext.context;
   if (!ctx.mounted) return;
   ScaffoldMessenger.of(ctx).showSnackBar(SnackBar(content: Text(message)));
@@ -1670,9 +1677,12 @@ void _showVideoSettingsSnackBar(
 /// 页面回调（落 pref + 开启时把脚本目录即时装载进活播放器，幂等），否则直接落 pref
 /// 下次进入视频页生效。两条入口各写一份就会再次分叉成"导入了但没启用"。
 Future<void> _setVideoLuaScriptsEnabled(
-    SettingsContext settingsContext, bool value) async {
-  final Future<void> Function(bool)? live =
-      videoQuickSettingsHostOf(settingsContext)?.onLuaScriptsEnabledChanged;
+  SettingsContext settingsContext,
+  bool value,
+) async {
+  final Future<void> Function(bool)? live = videoQuickSettingsHostOf(
+    settingsContext,
+  )?.onLuaScriptsEnabledChanged;
   if (live != null) {
     await live(value);
   } else {
@@ -1731,10 +1741,9 @@ SettingsSliderItem _videoMpvColorSliderItem({
     max: 100,
     divisions: 200,
     label: (double v) => v.round().toString(),
-    value: (SettingsContext settingsContext) =>
-        read(currentVideoMpvConfig(settingsContext))
-            .toDouble()
-            .clamp(-100, 100),
+    value: (SettingsContext settingsContext) => read(
+      currentVideoMpvConfig(settingsContext),
+    ).toDouble().clamp(-100, 100),
     onChanged: (SettingsContext settingsContext, double v) async {
       if (!videoHostVisible(settingsContext)) return;
       await commitVideoMpvConfig(
@@ -1766,7 +1775,7 @@ SettingsSliderItem _videoDanmakuStyleSliderItem({
   required String Function(double value) label,
   required double Function(VideoDanmakuStyle style) read,
   required VideoDanmakuStyle Function(VideoDanmakuStyle style, double value)
-      write,
+  write,
 }) {
   return SettingsSliderItem(
     id: id,

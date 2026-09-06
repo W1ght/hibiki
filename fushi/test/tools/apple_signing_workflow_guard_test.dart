@@ -19,8 +19,9 @@ import 'package:flutter_test/flutter_test.dart';
 Directory _repoRoot() {
   var dir = Directory.current;
   for (var i = 0; i < 6; i++) {
-    if (File('${dir.path}/.github/workflows/release-desktop.yml')
-        .existsSync()) {
+    if (File(
+      '${dir.path}/.github/workflows/release-desktop.yml',
+    ).existsSync()) {
       return dir;
     }
     final parent = dir.parent;
@@ -62,8 +63,9 @@ void main() {
       reason: '上传步骤必须由 signing 步骤的 testflight 输出把关',
     );
     expect(
-      RegExp(r'- name: Upload to TestFlight\n\s+if: always\(\)')
-          .hasMatch(content),
+      RegExp(
+        r'- name: Upload to TestFlight\n\s+if: always\(\)',
+      ).hasMatch(content),
       isFalse,
       reason: 'TestFlight 上传绝不能是 always()',
     );
@@ -112,12 +114,14 @@ void main() {
   test('导入证书后必须放开钥匙串分区列表', () {
     // 少了这步，无人值守 runner 上 codesign 会等一个永远不来的 UI 授权。
     // iOS 和 macOS 两个 job 各要一次。
-    final occurrences =
-        'security set-key-partition-list'.allMatches(content).length;
+    final occurrences = 'security set-key-partition-list'
+        .allMatches(content)
+        .length;
     expect(
       occurrences,
       greaterThanOrEqualTo(2),
-      reason: 'iOS 与 macOS 两条导入路径都必须调用 set-key-partition-list，'
+      reason:
+          'iOS 与 macOS 两条导入路径都必须调用 set-key-partition-list，'
           '实际出现 $occurrences 次',
     );
   });
@@ -151,12 +155,14 @@ void main() {
   });
 
   test('ITSAppUsesNonExemptEncryption 已声明，TestFlight 不卡出口合规', () {
-    final plist =
-        File('${root.path}/fushi/ios/Runner/Info.plist').readAsStringSync();
+    final plist = File(
+      '${root.path}/fushi/ios/Runner/Info.plist',
+    ).readAsStringSync();
     expect(
       plist.contains('ITSAppUsesNonExemptEncryption'),
       isTrue,
-      reason: '不声明的话每个 TestFlight 构建都要网页上手动答出口合规问卷，'
+      reason:
+          '不声明的话每个 TestFlight 构建都要网页上手动答出口合规问卷，'
           'CI 自动发布失去意义',
     );
   });

@@ -63,8 +63,11 @@ void main() {
       expect(result, outputPath);
       expect(File(outputPath).existsSync(), isTrue);
       expect(File(outputPath).readAsBytesSync(), bytes);
-      expect(File('$outputPath.tmp').existsSync(), isFalse,
-          reason: '收口的原子写不该留 .tmp');
+      expect(
+        File('$outputPath.tmp').existsSync(),
+        isFalse,
+        reason: '收口的原子写不该留 .tmp',
+      );
     });
 
     test('content-type image/* 即便字节非图片魔数也放行（服务端权威）', () async {
@@ -110,8 +113,13 @@ void main() {
     test('覆盖写同名文件：内容真被换掉、不留 .tmp（BUG-1118 形状）', () async {
       final String outputPath = p.join(tmp.path, 'cover.jpg');
       await File(outputPath).writeAsBytes(<int>[0x89, 0x50, 0x4E, 0x47, 0xAA]);
-      final Uint8List fresh =
-          Uint8List.fromList(<int>[0xFF, 0xD8, 0xFF, 0xBE, 0xEF]);
+      final Uint8List fresh = Uint8List.fromList(<int>[
+        0xFF,
+        0xD8,
+        0xFF,
+        0xBE,
+        0xEF,
+      ]);
       final MockClient client = MockClient(
         (http.Request req) async => http.Response.bytes(fresh, 200),
       );
@@ -128,8 +136,9 @@ void main() {
     });
 
     test('non-2xx returns null and writes nothing', () async {
-      final MockClient client =
-          MockClient((http.Request req) async => http.Response('nope', 404));
+      final MockClient client = MockClient(
+        (http.Request req) async => http.Response('nope', 404),
+      );
       final String outputPath = p.join(tmp.path, 'cover.jpg');
       final String? result = await downloadVideoCoverToPath(
         coverUrl: 'https://i.ytimg.com/vi/x/hqdefault.jpg',
@@ -142,7 +151,8 @@ void main() {
 
     test('empty 2xx body returns null (no zero-byte cover)', () async {
       final MockClient client = MockClient(
-          (http.Request req) async => http.Response.bytes(<int>[], 200));
+        (http.Request req) async => http.Response.bytes(<int>[], 200),
+      );
       final String outputPath = p.join(tmp.path, 'cover.jpg');
       final String? result = await downloadVideoCoverToPath(
         coverUrl: 'https://i.ytimg.com/vi/x/hqdefault.jpg',

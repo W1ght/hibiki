@@ -28,33 +28,47 @@ void main() {
     expect(
       src.contains('Theme.of(context)'),
       isFalse,
-      reason: '悬浮歌词样式在进程级 session 求值，State.context 可能为 null；'
+      reason:
+          '悬浮歌词样式在进程级 session 求值，State.context 可能为 null；'
           '强调色必须走 context-free 的 _readerLyricAccentColor()',
     );
   });
 
   test('存在 context-free 强调色 helper _readerLyricAccentColor', () {
-    expect(src.contains('Color _readerLyricAccentColor()'), isTrue,
-        reason: '应抽出 context-free accent helper 统一三处用色');
+    expect(
+      src.contains('Color _readerLyricAccentColor()'),
+      isTrue,
+      reason: '应抽出 context-free accent helper 统一三处用色',
+    );
     final int idx = src.indexOf('Color _readerLyricAccentColor()');
     expect(idx, greaterThan(0));
     final int end = src.indexOf('\n  }', idx);
     final String body = src.substring(idx, end);
-    expect(body.contains('appModel.buildColorScheme('), isTrue,
-        reason:
-            'accent 浅色支必须取自 appModel.buildColorScheme（与 ThemeData 同源、context-free）');
-    expect(body.contains('context'), isFalse,
-        reason: 'accent helper 体内绝不可触碰 State.context');
+    expect(
+      body.contains('appModel.buildColorScheme('),
+      isTrue,
+      reason:
+          'accent 浅色支必须取自 appModel.buildColorScheme（与 ThemeData 同源、context-free）',
+    );
+    expect(
+      body.contains('context'),
+      isFalse,
+      reason: 'accent helper 体内绝不可触碰 State.context',
+    );
   });
 
   test('悬浮窗样式 getter 用 _readerLyricAccentColor 取强调色', () {
-    final int idx =
-        src.indexOf('FloatingLyricStyle _readerFloatingLyricStyle(');
+    final int idx = src.indexOf(
+      'FloatingLyricStyle _readerFloatingLyricStyle(',
+    );
     expect(idx, greaterThan(0));
     final int end = src.indexOf('\n  }', idx);
     final String body = src.substring(idx, end);
-    expect(body.contains('_readerLyricAccentColor()'), isTrue,
-        reason: '悬浮窗样式 accent 必须经 context-free helper');
+    expect(
+      body.contains('_readerLyricAccentColor()'),
+      isTrue,
+      reason: '悬浮窗样式 accent 必须经 context-free helper',
+    );
     expect(body.contains('Theme.of('), isFalse);
   });
 }

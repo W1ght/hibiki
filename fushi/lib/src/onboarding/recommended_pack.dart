@@ -163,18 +163,20 @@ class RecommendedPackManifest {
     final List<DownloadPart> planParts = <DownloadPart>[];
     for (int i = 0; i < parts.length; i++) {
       final RecommendedPackPart part = parts[i];
-      planParts.add(DownloadPart(
-        index: i,
-        offset: part.offset,
-        length: part.length,
-        sha256: part.sha256,
-        sources: <DownloadSource>[
-          for (final String base in partBaseUrls)
-            DownloadSource(url: _joinUrl(base, part.name)),
-          for (final String whole in wholeFileUrls)
-            DownloadSource(url: whole, remoteOffset: part.offset),
-        ],
-      ));
+      planParts.add(
+        DownloadPart(
+          index: i,
+          offset: part.offset,
+          length: part.length,
+          sha256: part.sha256,
+          sources: <DownloadSource>[
+            for (final String base in partBaseUrls)
+              DownloadSource(url: _joinUrl(base, part.name)),
+            for (final String whole in wholeFileUrls)
+              DownloadSource(url: whole, remoteOffset: part.offset),
+          ],
+        ),
+      );
     }
     try {
       return DownloadPlan(
@@ -258,12 +260,14 @@ List<RecommendedPackPart> _parseParts(Object? raw) {
       // 一条坏记录就整表作废：半张切片表比没有更危险。
       return const <RecommendedPackPart>[];
     }
-    parsed.add(RecommendedPackPart(
-      name: name,
-      offset: offset,
-      length: length,
-      sha256: _parseSha256(item['sha256']),
-    ));
+    parsed.add(
+      RecommendedPackPart(
+        name: name,
+        offset: offset,
+        length: length,
+        sha256: _parseSha256(item['sha256']),
+      ),
+    );
   }
   return parsed;
 }
@@ -283,8 +287,9 @@ Future<RecommendedPackManifest?> fetchRecommendedPackManifest() async {
         final Response<String> response = await dio.get<String>(url);
         final String? body = response.data;
         if (body == null) continue;
-        final RecommendedPackManifest? parsed =
-            parseRecommendedPackManifest(body);
+        final RecommendedPackManifest? parsed = parseRecommendedPackManifest(
+          body,
+        );
         if (parsed != null) return parsed;
         // 拿到了却解析不出来（半截响应 / 被网关塞了门户页）：换下一个候选，
         // 而不是当成「没有清单」直接退回整包直链。
@@ -328,14 +333,13 @@ class RecommendedPackDownloader {
     required Directory packDir,
     required RecommendedPackManifest manifest,
     int concurrency = SegmentedDownloader.kDefaultDownloadConcurrency,
-  }) =>
-      RecommendedPackDownloader(
-        packDir: packDir,
-        url: manifest.url,
-        sha256Hex: manifest.sha256,
-        manifest: manifest,
-        concurrency: concurrency,
-      );
+  }) => RecommendedPackDownloader(
+    packDir: packDir,
+    url: manifest.url,
+    sha256Hex: manifest.sha256,
+    manifest: manifest,
+    concurrency: concurrency,
+  );
 
   final Directory _packDir;
 
@@ -436,8 +440,9 @@ class RecommendedPackDownloader {
 
   int _receivedFromProgressFile() {
     try {
-      final Object? decoded =
-          json.decode(_multiPartProgressFile.readAsStringSync());
+      final Object? decoded = json.decode(
+        _multiPartProgressFile.readAsStringSync(),
+      );
       if (decoded is! Map<String, dynamic>) return 0;
       final Object? parts = decoded['parts'];
       if (parts is! Map<String, dynamic>) return 0;
@@ -471,8 +476,11 @@ class RecommendedPackDownloader {
     } on FileSystemException catch (e, s) {
       // 占用/权限问题不阻断启动；下次启动再试。但**要留痕**：删不掉的
       // 9.5 GB 是用户直接感知的（存储页数字不降），静默吞掉等于没修。
-      ErrorLogService.instance
-          .log('RecommendedPackDownloader.cleanupIfImported', e, s);
+      ErrorLogService.instance.log(
+        'RecommendedPackDownloader.cleanupIfImported',
+        e,
+        s,
+      );
     }
   }
 
@@ -626,8 +634,9 @@ class RecommendedPackDownloader {
       if (response.statusCode != 206) return null;
       final String? contentRange = response.headers.value('content-range');
       if (contentRange == null) return null;
-      final RegExpMatch? match =
-          RegExp(r'^bytes\s+\d+-\d+/(\d+)$').firstMatch(contentRange.trim());
+      final RegExpMatch? match = RegExp(
+        r'^bytes\s+\d+-\d+/(\d+)$',
+      ).firstMatch(contentRange.trim());
       if (match == null) return null;
       return int.tryParse(match.group(1)!);
     } catch (_) {
@@ -689,8 +698,9 @@ class RecommendedPackDownloader {
     // 续传必须带 If-Range：这条路会在「探针因网络抖动失败」时接手一台其实支持
     // Range 的服务器，没有校验子就会把旧断点续到**换过的新包**上，只能靠末尾
     // sha256 事后打回——代价是白下一整个 9.5 GB。
-    final String? validator =
-        existing > 0 ? _readSingleStreamValidator() : null;
+    final String? validator = existing > 0
+        ? _readSingleStreamValidator()
+        : null;
     final Response<ResponseBody> response = await dio.get<ResponseBody>(
       url,
       cancelToken: cancelToken,
@@ -708,7 +718,8 @@ class RecommendedPackDownloader {
     final String contentType = response.headers.value('content-type') ?? '';
     if (contentType.contains('text/html')) {
       throw Exception(
-          'server returned an HTML page instead of the pack file ($url)');
+        'server returned an HTML page instead of the pack file ($url)',
+      );
     }
     if (existing > 0 && response.statusCode == 200) {
       // 服务器忽略 Range 或校验子过期（服务端换包）：append 会拼出坏包，只能丢
@@ -719,8 +730,9 @@ class RecommendedPackDownloader {
     _writeSingleStreamValidator(
       response.headers.value('etag') ?? response.headers.value('last-modified'),
     );
-    final int? remaining =
-        int.tryParse(response.headers.value('content-length') ?? '');
+    final int? remaining = int.tryParse(
+      response.headers.value('content-length') ?? '',
+    );
     final int? total = remaining == null ? null : existing + remaining;
 
     final IOSink sink = _partFile.openWrite(
@@ -741,8 +753,10 @@ class RecommendedPackDownloader {
       await sink.close();
     }
     if (total != null && received != total) {
-      throw Exception('recommended pack download truncated: '
-          '$received / $total bytes');
+      throw Exception(
+        'recommended pack download truncated: '
+        '$received / $total bytes',
+      );
     }
     if (sha256Hex != null) {
       final Digest digest = await sha256.bind(_partFile.openRead()).first;
@@ -750,8 +764,10 @@ class RecommendedPackDownloader {
         // 坏包不留：删掉半截，下次从头下（续传一个已知坏的文件没有意义）。
         _partFile.deleteSync();
         _writeSingleStreamValidator(null);
-        throw Exception('recommended pack sha256 mismatch: '
-            'got $digest, expected $sha256Hex');
+        throw Exception(
+          'recommended pack sha256 mismatch: '
+          'got $digest, expected $sha256Hex',
+        );
       }
     }
     _partFile.renameSync(packFile.path);

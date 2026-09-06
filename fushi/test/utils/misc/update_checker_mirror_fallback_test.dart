@@ -38,8 +38,7 @@ void main() {
       );
     });
 
-    test(
-        '已 DNS 失效的死域名 ghproxy.homeboyc.cn 不得再出现在镜像清单里'
+    test('已 DNS 失效的死域名 ghproxy.homeboyc.cn 不得再出现在镜像清单里'
         '（TODO-666：用户真机 Failed host lookup errno=7）', () {
       // 守卫：该公共 gh 代理域名已不再解析（用户日志 errno=7），留着只会在
       // 下载全失败时贡献误导性 host-lookup 报错。任何复活它的改动都应红。
@@ -52,15 +51,15 @@ void main() {
       );
     });
 
-    test(
-        '直连 URL 恒为首候选（BUG-292：检查命中 api.github.com，'
+    test('直连 URL 恒为首候选（BUG-292：检查命中 api.github.com，'
         '公共 gh 代理一律 403/限流，唯一可成功路径是直连）', () {
       const String api = 'https://api.github.com/repos/x/y/releases/latest';
       final List<String> urls = updateCheckUrls(api);
       expect(
         urls.first,
         api,
-        reason: 'api.github.com 经任何镜像都被 GitHub 限流 403，'
+        reason:
+            'api.github.com 经任何镜像都被 GitHub 限流 403，'
             '检查阶段只有直连能成功，故直连必须排第一',
       );
       // 镜像候选仍保留多个（对「下载」阶段有用：实测 ghfast.top/ghproxy.net 返回 206）。
@@ -171,14 +170,18 @@ void main() {
         updateDownloadSourceForProxy(updateCheckProxyPrefixes[1]):
             '${updateCheckProxyPrefixes[1]}$official',
       }.entries) {
-        final UpdateDownloadPlan plan =
-            resolveUpdateDownloadPlan(official, preference: pair.key);
+        final UpdateDownloadPlan plan = resolveUpdateDownloadPlan(
+          official,
+          preference: pair.key,
+        );
         expect(plan.pinnedUrl, pair.value, reason: pair.key);
         expect(plan.candidates.first, pair.value, reason: pair.key);
         expect(plan.preferenceUnavailable, isFalse, reason: pair.key);
-        expect(plan.candidates.toSet(),
-            resolveUpdateDownloadPlan(official).candidates.toSet(),
-            reason: '选源只重排、不删候选');
+        expect(
+          plan.candidates.toSet(),
+          resolveUpdateDownloadPlan(official).candidates.toSet(),
+          reason: '选源只重排、不删候选',
+        );
       }
     });
 
@@ -192,10 +195,16 @@ void main() {
       expect(plan.pinnedUrl, isNull);
       expect(plan.hasExplicitSource, isTrue);
       expect(plan.preferenceUnavailable, isTrue);
-      expect(plan.candidates, updateCheckUrls(legacyRepo),
-          reason: '不适用时候选序与自动完全一致（回退行为零变化）');
-      expect(plan.requestedSource, updateDownloadSourceCloudflare,
-          reason: '要告诉用户「没用上的是哪一个」，请求值必须留住');
+      expect(
+        plan.candidates,
+        updateCheckUrls(legacyRepo),
+        reason: '不适用时候选序与自动完全一致（回退行为零变化）',
+      );
+      expect(
+        plan.requestedSource,
+        updateDownloadSourceCloudflare,
+        reason: '要告诉用户「没用上的是哪一个」，请求值必须留住',
+      );
     });
 
     test('已下线的镜像前缀同样算「没用上所选来源」', () {
@@ -221,8 +230,11 @@ void main() {
       // TODO-821：胜出条件=合法响应；直连('a',首项)成功 → 直连优先 tie-break 胜出。
       expect(body, 'BODY(a)', reason: '直连合法成功 → 直连优先胜出');
       // 并发语义：全部候选都被并发发起（不再串行「首个成功后跳过 b/c」）。
-      expect(attempted, unorderedEquals(<String>['a', 'b', 'c']),
-          reason: '并发竞速：所有候选都并发发起');
+      expect(
+        attempted,
+        unorderedEquals(<String>['a', 'b', 'c']),
+        reason: '并发竞速：所有候选都并发发起',
+      );
     });
 
     test('直连+部分镜像失败时，唯一合法成功的候选胜出（并发全发起）', () async {
@@ -237,8 +249,11 @@ void main() {
       );
       // 'c' 是唯一合法成功者 → 它胜出（直连 'a' 失败，不触发 tie-break）。
       expect(body, 'BODY(c)');
-      expect(attempted, unorderedEquals(<String>['a', 'b', 'c']),
-          reason: '全失败/落败前每个候选都并发发起过');
+      expect(
+        attempted,
+        unorderedEquals(<String>['a', 'b', 'c']),
+        reason: '全失败/落败前每个候选都并发发起过',
+      );
     });
 
     test('直连抛异常不终止竞速：唯一合法成功的镜像胜出（异常不冒泡）', () async {
@@ -266,8 +281,11 @@ void main() {
         },
       );
       expect(body, isNull);
-      expect(attempted, unorderedEquals(<String>['a', 'b', 'c']),
-          reason: '全失败前每个候选都并发发起过');
+      expect(
+        attempted,
+        unorderedEquals(<String>['a', 'b', 'c']),
+        reason: '全失败前每个候选都并发发起过',
+      );
     });
 
     test('每个失败的候选都通过 onFailure 回调记录其主机标签', () async {
@@ -283,7 +301,8 @@ void main() {
       expect(
         failedHosts,
         unorderedEquals(<String>['api.github.com', 'ghfast.top']),
-        reason: '日志要能看出连不上哪个源（hostLabelForUpdateUrl）；'
+        reason:
+            '日志要能看出连不上哪个源（hostLabelForUpdateUrl）；'
             '并发竞速下记录顺序不定，但每个失败源都要记一条',
       );
     });
@@ -317,11 +336,11 @@ void main() {
       );
       final List<UpdateDownloadAttemptFailure> failures =
           <UpdateDownloadAttemptFailure>[
-        failure(direct, directError),
-        failure('https://ghfast.top/$direct', Exception('mirror timeout')),
-        // 列表末尾恰是已失效死镜像：原实现会把它当整轮失败原因展示（误导）。
-        failure('https://ghproxy.homeboyc.cn/$direct', deadMirrorError),
-      ];
+            failure(direct, directError),
+            failure('https://ghfast.top/$direct', Exception('mirror timeout')),
+            // 列表末尾恰是已失效死镜像：原实现会把它当整轮失败原因展示（误导）。
+            failure('https://ghproxy.homeboyc.cn/$direct', deadMirrorError),
+          ];
       final UpdateDownloadAttemptFailure? chosen =
           selectRepresentativeDownloadFailure(failures, directUrl: direct);
       expect(chosen, isNotNull);
@@ -338,12 +357,14 @@ void main() {
       final Object firstMirrorError = Exception('first mirror failed');
       final List<UpdateDownloadAttemptFailure> failures =
           <UpdateDownloadAttemptFailure>[
-        failure('https://ghfast.top/$direct', firstMirrorError),
-        failure(
-          'https://ghproxy.homeboyc.cn/$direct',
-          const SocketException("Failed host lookup: 'ghproxy.homeboyc.cn'"),
-        ),
-      ];
+            failure('https://ghfast.top/$direct', firstMirrorError),
+            failure(
+              'https://ghproxy.homeboyc.cn/$direct',
+              const SocketException(
+                "Failed host lookup: 'ghproxy.homeboyc.cn'",
+              ),
+            ),
+          ];
       final UpdateDownloadAttemptFailure? chosen =
           selectRepresentativeDownloadFailure(failures, directUrl: direct);
       expect(chosen, isNotNull);
@@ -353,9 +374,9 @@ void main() {
     test('无任何失败记录返回 null（调用方用通用兜底文案）', () {
       final UpdateDownloadAttemptFailure? chosen =
           selectRepresentativeDownloadFailure(
-        const <UpdateDownloadAttemptFailure>[],
-        directUrl: 'https://github.com/x/y/z',
-      );
+            const <UpdateDownloadAttemptFailure>[],
+            directUrl: 'https://github.com/x/y/z',
+          );
       expect(chosen, isNull);
     });
   });

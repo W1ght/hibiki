@@ -29,8 +29,7 @@ void main() {
 
   /// 构造一个接好 in-memory DB + 偏好的 [AppModel]。
   Future<AppModel> buildAppModel(WidgetTester tester) async {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final PreferencesRepository prefsRepo = PreferencesRepository(db);
     await prefsRepo.loadFromDb();
@@ -42,7 +41,9 @@ void main() {
     });
     return AppModel(testPlatformServices())
       ..wireLocalAudioForTesting(
-          prefsRepo: prefsRepo, databaseDirectory: tmpDir)
+        prefsRepo: prefsRepo,
+        databaseDirectory: tmpDir,
+      )
       ..wireDatabaseForTesting(db);
   }
 
@@ -66,8 +67,9 @@ void main() {
     await tester.pumpAndSettle();
   }
 
-  testWidgets('empty library shows the empty state',
-      (WidgetTester tester) async {
+  testWidgets('empty library shows the empty state', (
+    WidgetTester tester,
+  ) async {
     await tester.binding.setSurfaceSize(const Size(1200, 900));
     addTearDown(() => tester.binding.setSurfaceSize(null));
     final AppModel appModel = await buildAppModel(tester);
@@ -78,8 +80,9 @@ void main() {
     expect(find.text(t.game_empty), findsOneWidget);
   });
 
-  testWidgets('KPI strip renders total games and labels',
-      (WidgetTester tester) async {
+  testWidgets('KPI strip renders total games and labels', (
+    WidgetTester tester,
+  ) async {
     await tester.binding.setSurfaceSize(const Size(1200, 900));
     addTearDown(() => tester.binding.setSurfaceSize(null));
     final AppModel appModel = await buildAppModel(tester);
@@ -112,8 +115,9 @@ void main() {
     expect(find.text('2'), findsWidgets);
   });
 
-  testWidgets('Focus card renders for the most recently played game',
-      (WidgetTester tester) async {
+  testWidgets('Focus card renders for the most recently played game', (
+    WidgetTester tester,
+  ) async {
     await tester.binding.setSurfaceSize(const Size(1200, 900));
     addTearDown(() => tester.binding.setSurfaceSize(null));
     final AppModel appModel = await buildAppModel(tester);

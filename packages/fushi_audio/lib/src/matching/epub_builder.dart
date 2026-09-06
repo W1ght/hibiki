@@ -32,12 +32,14 @@ class EpubBuilder {
     zip.addDeflated('META-INF/container.xml', utf8.encode(containerXml()));
     zip.addDeflated(
       'OEBPS/content.opf',
-      utf8.encode(contentOpf(
-        title: title,
-        author: author,
-        chapterCount: chapterCount,
-        uidPrefix: uidPrefix,
-      )),
+      utf8.encode(
+        contentOpf(
+          title: title,
+          author: author,
+          chapterCount: chapterCount,
+          uidPrefix: uidPrefix,
+        ),
+      ),
     );
     zip.addDeflated(
       'OEBPS/toc.ncx',
@@ -60,7 +62,8 @@ class EpubBuilder {
 
   // ── XML / XHTML generators ────────────────────────────────────────────────
 
-  static String containerXml() => '<?xml version="1.0" encoding="UTF-8"?>\n'
+  static String containerXml() =>
+      '<?xml version="1.0" encoding="UTF-8"?>\n'
       '<container version="1.0"'
       ' xmlns="urn:oasis:names:tc:opendocument:xmlns:container">\n'
       '  <rootfiles>\n'
@@ -78,16 +81,18 @@ class EpubBuilder {
     final String authorTag = (author != null && author.isNotEmpty)
         ? '\n    <dc:creator>${escXml(author)}</dc:creator>'
         : '';
-    final String now = DateTime.now()
-        .toUtc()
-        .toIso8601String()
-        .replaceFirst(RegExp(r'\.\d+Z$'), 'Z');
+    final String now = DateTime.now().toUtc().toIso8601String().replaceFirst(
+      RegExp(r'\.\d+Z$'),
+      'Z',
+    );
 
     final StringBuffer manifest = StringBuffer();
     final StringBuffer spine = StringBuffer();
     for (int i = 1; i <= chapterCount; i++) {
-      manifest.write('    <item id="chapter-$i" href="chapter-$i.xhtml"'
-          ' media-type="application/xhtml+xml"/>\n');
+      manifest.write(
+        '    <item id="chapter-$i" href="chapter-$i.xhtml"'
+        ' media-type="application/xhtml+xml"/>\n',
+      );
       spine.write('    <itemref idref="chapter-$i"/>\n');
     }
 
@@ -114,10 +119,7 @@ class EpubBuilder {
         '</package>\n';
   }
 
-  static String tocNcx({
-    required String title,
-    required int chapterCount,
-  }) {
+  static String tocNcx({required String title, required int chapterCount}) {
     final StringBuffer navPoints = StringBuffer();
     for (int i = 1; i <= chapterCount; i++) {
       navPoints.write(
@@ -143,10 +145,7 @@ class EpubBuilder {
         '</ncx>\n';
   }
 
-  static String navXhtml({
-    required String title,
-    required int chapterCount,
-  }) {
+  static String navXhtml({required String title, required int chapterCount}) {
     final StringBuffer items = StringBuffer();
     for (int i = 1; i <= chapterCount; i++) {
       items.write('      <li><a href="chapter-$i.xhtml">Chapter $i</a></li>\n');
@@ -187,11 +186,13 @@ class EpubBuilder {
 class EpubZip {
   final List<_ZipEntry> _entries = [];
 
-  void addStored(String name, List<int> data) => _entries
-      .add(_ZipEntry(name: name, data: Uint8List.fromList(data), store: true));
+  void addStored(String name, List<int> data) => _entries.add(
+    _ZipEntry(name: name, data: Uint8List.fromList(data), store: true),
+  );
 
-  void addDeflated(String name, List<int> data) => _entries
-      .add(_ZipEntry(name: name, data: Uint8List.fromList(data), store: false));
+  void addDeflated(String name, List<int> data) => _entries.add(
+    _ZipEntry(name: name, data: Uint8List.fromList(data), store: false),
+  );
 
   Uint8List build() {
     final buf = BytesBuilder(copy: false);
@@ -231,14 +232,16 @@ class EpubZip {
       buf.add(nameBytes);
       buf.add(compressed);
 
-      locals.add(_LocalRecord(
-        nameBytes: nameBytes,
-        method: method,
-        crc: crc,
-        compressedSize: compressed.length,
-        uncompressedSize: entry.data.length,
-        localOffset: localOffset,
-      ));
+      locals.add(
+        _LocalRecord(
+          nameBytes: nameBytes,
+          method: method,
+          crc: crc,
+          compressedSize: compressed.length,
+          uncompressedSize: entry.data.length,
+          localOffset: localOffset,
+        ),
+      );
     }
 
     // Central directory

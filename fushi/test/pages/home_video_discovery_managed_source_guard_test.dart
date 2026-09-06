@@ -36,12 +36,15 @@ void main() {
       expect(
         containsIdentifierCall(body, '_managedVideoDownloadSourcesOrPrompt'),
         isTrue,
-        reason: '$signature 必须经统一出口拿来源清单（缺来源时弹引导），'
+        reason:
+            '$signature 必须经统一出口拿来源清单（缺来源时弹引导），'
             '不能自己裸调 getManagedVideoDownloadSources 后甩一句提示',
       );
       expect(
-        containsIdentifier(maskCommentsAndStrings(body),
-            'getManagedVideoDownloadSources'),
+        containsIdentifier(
+          maskCommentsAndStrings(body),
+          'getManagedVideoDownloadSources',
+        ),
         isFalse,
         reason: '$signature 不得绕过统一出口直接读来源清单',
       );
@@ -62,7 +65,8 @@ void main() {
           'media_source_no_sources',
         ),
         isFalse,
-        reason: '$signature 缺的是下载落地用的本地视频文件夹，不是「暂无来源」——'
+        reason:
+            '$signature 缺的是下载落地用的本地视频文件夹，不是「暂无来源」——'
             '用错 key 正是用户猜成「没配下载后端」的原因',
       );
     }
@@ -73,17 +77,23 @@ void main() {
       src,
       'Future<List<MediaSourceRow>> _managedVideoDownloadSourcesOrPrompt(',
     );
-    expect(containsIdentifierCall(body, 'promptManagedVideoSourceSetup'), isTrue,
-        reason: '为空时必须弹引导');
+    expect(
+      containsIdentifierCall(body, 'promptManagedVideoSourceSetup'),
+      isTrue,
+      reason: '为空时必须弹引导',
+    );
     expect(
       containsIdentifierCall(body, '_showVideoDiscoveryMessage'),
       isTrue,
-      reason: '重读仍为空时必须说清缺什么；这条路径上没有可停留的空态门，'
+      reason:
+          '重读仍为空时必须说清缺什么；这条路径上没有可停留的空态门，'
           '静默返回 = 界面上什么都不发生',
     );
     expect(
       containsIdentifier(
-          maskCommentsAndStrings(body), 'download_no_managed_video_source'),
+        maskCommentsAndStrings(body),
+        'download_no_managed_video_source',
+      ),
       isTrue,
       reason: '补的提示必须是「缺落地用的本地视频文件夹」这句，不是通用「暂无来源」',
     );

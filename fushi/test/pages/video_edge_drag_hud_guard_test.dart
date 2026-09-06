@@ -50,16 +50,25 @@ void main() {
     });
 
     test('edge-drag 纯函数 / 灵敏度常量已删', () {
-      expect(page.contains('edgeDragValueDeltaFor'), isFalse,
-          reason: '纯函数无调用方应删除');
-      expect(page.contains('edgeDragVerticalSensitivity'), isFalse,
-          reason: '灵敏度常量无引用应删除');
+      expect(
+        page.contains('edgeDragValueDeltaFor'),
+        isFalse,
+        reason: '纯函数无调用方应删除',
+      );
+      expect(
+        page.contains('edgeDragVerticalSensitivity'),
+        isFalse,
+        reason: '灵敏度常量无引用应删除',
+      );
     });
 
     test('保留勿删的共享逻辑仍在（删手势没误伤其它入口）', () {
       // 音量统一入口（方向键 / 音量条 / 移动端回调都走它）。
-      expect(page.contains('_applyUserVideoVolume('), isTrue,
-          reason: '音量统一入口是共享逻辑，不属本手势私有');
+      expect(
+        page.contains('_applyUserVideoVolume('),
+        isTrue,
+        reason: '音量统一入口是共享逻辑，不属本手势私有',
+      );
       // 页面级 HUD（移动端 media_kit 竖滑 + 音量条仍在用）。
       expect(page.contains('_showVolumeOsd('), isTrue);
       expect(page.contains('_showBrightnessOsd('), isTrue);
@@ -71,10 +80,16 @@ void main() {
 
     test('移动控制条仍启用 media_kit volumeGesture / brightnessGesture', () {
       // 移动端竖滑是独立路径，与被删的桌面手势零共享，必须保留。
-      expect(page.contains('volumeGesture: true'), isTrue,
-          reason: '移动端 media_kit 音量竖滑不应被误删');
-      expect(page.contains('brightnessGesture:'), isTrue,
-          reason: '移动端 media_kit 亮度竖滑不应被误删');
+      expect(
+        page.contains('volumeGesture: true'),
+        isTrue,
+        reason: '移动端 media_kit 音量竖滑不应被误删',
+      );
+      expect(
+        page.contains('brightnessGesture:'),
+        isTrue,
+        reason: '移动端 media_kit 亮度竖滑不应被误删',
+      );
     });
   });
 }

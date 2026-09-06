@@ -39,16 +39,20 @@ void main() {
     await repo.setSyncVideoFilesEnabled(true);
 
     // 云通道：读共享开关 → 全 true（词典除外，见上）。
-    final ChannelSyncFlags cloud =
-        await resolveChannelSyncFlags(repo, isInterconnect: false);
+    final ChannelSyncFlags cloud = await resolveChannelSyncFlags(
+      repo,
+      isInterconnect: false,
+    );
     expect(cloud.syncContent, isTrue);
     expect(cloud.syncDictionary, isFalse, reason: '云通道不再自动同步词典（改成显式上传 / 下载）');
     expect(cloud.syncAudioBookFiles, isTrue);
     expect(cloud.syncVideoFiles, isTrue);
 
     // 互联通道：读互联专属开关（默认全关）→ 云开着也不会上传给互联对端。核心修复。
-    final ChannelSyncFlags ic =
-        await resolveChannelSyncFlags(repo, isInterconnect: true);
+    final ChannelSyncFlags ic = await resolveChannelSyncFlags(
+      repo,
+      isInterconnect: true,
+    );
     expect(ic.syncContent, isFalse, reason: '云开着也不该自动上传书给互联对端');
     expect(ic.syncDictionary, isFalse);
     expect(ic.syncAudioBookFiles, isFalse);
@@ -60,23 +64,31 @@ void main() {
     await repo.setInterconnectSyncDictionaryEnabled(true);
     // 云备份内容开关保持默认关。
 
-    final ChannelSyncFlags ic =
-        await resolveChannelSyncFlags(repo, isInterconnect: true);
+    final ChannelSyncFlags ic = await resolveChannelSyncFlags(
+      repo,
+      isInterconnect: true,
+    );
     expect(ic.syncContent, isTrue);
     expect(ic.syncDictionary, isTrue);
     expect(ic.syncVideoFiles, isFalse, reason: '未开的类仍不传');
 
-    final ChannelSyncFlags cloud =
-        await resolveChannelSyncFlags(repo, isInterconnect: false);
+    final ChannelSyncFlags cloud = await resolveChannelSyncFlags(
+      repo,
+      isInterconnect: false,
+    );
     expect(cloud.syncContent, isFalse, reason: '云通道不受互联专属开关影响');
     expect(cloud.syncDictionary, isFalse);
   });
 
   test('位置不区分通道（轻量进度共享，跨设备续读是互联本意）', () async {
-    final ChannelSyncFlags ic =
-        await resolveChannelSyncFlags(repo, isInterconnect: true);
-    final ChannelSyncFlags cloud =
-        await resolveChannelSyncFlags(repo, isInterconnect: false);
+    final ChannelSyncFlags ic = await resolveChannelSyncFlags(
+      repo,
+      isInterconnect: true,
+    );
+    final ChannelSyncFlags cloud = await resolveChannelSyncFlags(
+      repo,
+      isInterconnect: false,
+    );
 
     // 有声书播放位置恒同步（isSyncAudioBookEnabled 恒 true）——两通道一致。
     expect(ic.syncAudioBookPosition, isTrue);
@@ -89,27 +101,39 @@ void main() {
   // 它连互联侧的开关都没有，多 GB 的 .db 会直接塞给 host。这正是 BUG-988 立的规矩
   // 「互联的事互联自己决定」，手动路径不能自己开后门。
   test('手动资产传输只跑云备份通道，不碰互联对端', () {
-    final String src =
-        File('lib/src/sync/sync_auto_trigger.dart').readAsStringSync();
-    final int i =
-        src.indexOf('Future<ManualSyncResult> runManualAssetTransfer(');
+    final String src = File(
+      'lib/src/sync/sync_auto_trigger.dart',
+    ).readAsStringSync();
+    final int i = src.indexOf(
+      'Future<ManualSyncResult> runManualAssetTransfer(',
+    );
     expect(i, greaterThan(0), reason: '入口函数改名了就要同步改这条守卫');
     // 只在这个函数体内找，别被别处同形的 token 抢走窗口。
     final String body = src.substring(i, i + 3000);
-    expect(body.contains('if (channel.isInterconnect) continue;'), isTrue,
-        reason: '手动传输必须显式跳过互联通道，否则绕过互联页的 opt-in');
+    expect(
+      body.contains('if (channel.isInterconnect) continue;'),
+      isTrue,
+      reason: '手动传输必须显式跳过互联通道，否则绕过互联页的 opt-in',
+    );
   });
 
   // 本地音频源数据库曾经也在 ChannelSyncFlags 里（不分通道的一个开关）。它现在**根本
   // 不在自动同步里**：既没有开关，也不在任何一条通道的 flags 上，只能由设置页的显式
   // 上传 / 下载动作搬。这条守卫钉住「它没被悄悄塞回自动 sweep」。
   test('本地音频源数据库不再是任何通道的自动同步维度', () {
-    final String src =
-        File('lib/src/sync/sync_auto_trigger.dart').readAsStringSync();
-    expect(src.contains('syncLocalAudio:'), isFalse,
-        reason: 'ChannelSyncFlags 不得再带本地音频维度');
-    expect(src.contains('isSyncLocalAudioEnabled'), isFalse,
-        reason: '本地音频同步开关已删除，不得再有读取方');
+    final String src = File(
+      'lib/src/sync/sync_auto_trigger.dart',
+    ).readAsStringSync();
+    expect(
+      src.contains('syncLocalAudio:'),
+      isFalse,
+      reason: 'ChannelSyncFlags 不得再带本地音频维度',
+    );
+    expect(
+      src.contains('isSyncLocalAudioEnabled'),
+      isFalse,
+      reason: '本地音频同步开关已删除，不得再有读取方',
+    );
   });
 
   // 统计/收藏此前跟着云备份的 sync_stats_enabled 一刀切（上面那条测试的原始形态就
@@ -123,10 +147,14 @@ void main() {
     await repo.setInterconnectSyncStatsEnabled(true);
     await repo.setInterconnectSyncFavoritesEnabled(true);
 
-    final ChannelSyncFlags ic =
-        await resolveChannelSyncFlags(repo, isInterconnect: true);
-    final ChannelSyncFlags cloud =
-        await resolveChannelSyncFlags(repo, isInterconnect: false);
+    final ChannelSyncFlags ic = await resolveChannelSyncFlags(
+      repo,
+      isInterconnect: true,
+    );
+    final ChannelSyncFlags cloud = await resolveChannelSyncFlags(
+      repo,
+      isInterconnect: false,
+    );
 
     expect(cloud.syncStats, isFalse);
     expect(cloud.syncFavorites, isFalse, reason: '云侧两族仍同源，行为逐字节不变');
@@ -137,21 +165,30 @@ void main() {
   test('存量不变式：云的「同步统计」关着且互联新键从没写过 → 互联侧也是关的', () async {
     await repo.setSyncStatsEnabled(false);
 
-    final ChannelSyncFlags ic =
-        await resolveChannelSyncFlags(repo, isInterconnect: true);
+    final ChannelSyncFlags ic = await resolveChannelSyncFlags(
+      repo,
+      isInterconnect: true,
+    );
 
-    expect(ic.syncStats, isFalse,
-        reason: '新键硬编码默认 true 会让关过统计的存量用户升级后被静默复位（PR#914 ①）');
+    expect(
+      ic.syncStats,
+      isFalse,
+      reason: '新键硬编码默认 true 会让关过统计的存量用户升级后被静默复位（PR#914 ①）',
+    );
     expect(ic.syncFavorites, isFalse);
   });
 
   test('关互联的共享统计不牵连共享收藏，也不牵连云通道', () async {
     await repo.setInterconnectSyncStatsEnabled(false);
 
-    final ChannelSyncFlags ic =
-        await resolveChannelSyncFlags(repo, isInterconnect: true);
-    final ChannelSyncFlags cloud =
-        await resolveChannelSyncFlags(repo, isInterconnect: false);
+    final ChannelSyncFlags ic = await resolveChannelSyncFlags(
+      repo,
+      isInterconnect: true,
+    );
+    final ChannelSyncFlags cloud = await resolveChannelSyncFlags(
+      repo,
+      isInterconnect: false,
+    );
 
     expect(ic.syncStats, isFalse);
     expect(ic.syncFavorites, isTrue, reason: '两个开关互相独立');

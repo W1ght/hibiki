@@ -46,9 +46,10 @@ const List<String> _requiredMobileFlags = <String>[
 Directory _repoRoot() {
   Directory dir = Directory.current;
   for (int i = 0; i < 6; i++) {
-    if (File('${dir.path}/third_party/ffmpeg_kit_flutter/android/libs/'
-            'ffmpeg-kit.aar')
-        .existsSync()) {
+    if (File(
+      '${dir.path}/third_party/ffmpeg_kit_flutter/android/libs/'
+      'ffmpeg-kit.aar',
+    ).existsSync()) {
       return dir;
     }
     final Directory parent = dir.parent;
@@ -100,49 +101,72 @@ void main() {
     // 两个 ABI 都必须带 x264：只验 arm64 会漏掉「armeabi-v7a 那次没编上」。
     for (final String abi in <String>['arm64-v8a', 'armeabi-v7a']) {
       test('$abi: configure 含 gpl/libx264/openssl，且 x264 真链进 libavcodec', () {
-        final String configuration =
-            _embeddedConfiguration(soBytes(abi, 'libavutil.so'), '$abi libavutil.so');
+        final String configuration = _embeddedConfiguration(
+          soBytes(abi, 'libavutil.so'),
+          '$abi libavutil.so',
+        );
         for (final String flag in _requiredMobileFlags) {
           expect(
             configuration.contains(flag),
             isTrue,
-            reason: '$abi 的 configure 串里没有 $flag —— 入库 AAR 比 Dart 侧契约旧，'
+            reason:
+                '$abi 的 configure 串里没有 $flag —— 入库 AAR 比 Dart 侧契约旧，'
                 '需在构建机重跑 android.sh 并重新 vendor',
           );
         }
 
         // configure 声明了 ≠ 真链进去了。libavcodec 里必须同时有 ffmpeg 的编码器封装名
         // 与 x264 自身的版本串，两者都在才算数。
-        final String codec =
-            _asSearchableText(soBytes(abi, 'libavcodec.so'));
-        expect(codec.contains('libx264'), isTrue,
-            reason: '$abi libavcodec.so 里没有 libx264 —— configure 写了但没链上');
-        expect(codec.contains('x264 - core'), isTrue,
-            reason: '$abi 缺 x264 自身的版本串，说明链接的不是真正的 x264 库');
+        final String codec = _asSearchableText(soBytes(abi, 'libavcodec.so'));
+        expect(
+          codec.contains('libx264'),
+          isTrue,
+          reason: '$abi libavcodec.so 里没有 libx264 —— configure 写了但没链上',
+        );
+        expect(
+          codec.contains('x264 - core'),
+          isTrue,
+          reason: '$abi 缺 x264 自身的版本串，说明链接的不是真正的 x264 库',
+        );
       });
     }
 
     test('BUG-891 未回退：TLS 后端与证书指纹钉扎补丁仍在', () {
-      final String format =
-          _asSearchableText(soBytes('arm64-v8a', 'libavformat.so'));
-      expect(format.contains('tls_pin_sha256'), isTrue,
-          reason: 'cert-pin 补丁（third_party/ffmpeg_kit_flutter/patches/）没打进去。'
-              '重编 ffmpeg-kit 时必须先在 src/ffmpeg 应用该补丁，'
-              '否则远端制卡的自签主机回到「接受任意证书」');
+      final String format = _asSearchableText(
+        soBytes('arm64-v8a', 'libavformat.so'),
+      );
+      expect(
+        format.contains('tls_pin_sha256'),
+        isTrue,
+        reason:
+            'cert-pin 补丁（third_party/ffmpeg_kit_flutter/patches/）没打进去。'
+            '重编 ffmpeg-kit 时必须先在 src/ffmpeg 应用该补丁，'
+            '否则远端制卡的自签主机回到「接受任意证书」',
+      );
     });
 
     test('许可随 GPL 切换（--enable-gpl 的合规义务）', () {
       final ArchiveFile? license = aar.findFile('res/raw/license.txt');
       expect(license, isNotNull, reason: 'AAR 内缺 license.txt');
       final String text = _asSearchableText(license!.content as List<int>);
-      expect(text.contains('GNU GENERAL PUBLIC LICENSE'), isTrue,
-          reason: '加了 --enable-gpl 后产物许可从 LGPLv3 变为 GPLv3，'
-              'AAR 内的 license.txt 必须同步（android.sh 会自动写入）。'
-              'Hibiki 自身即 GPL-3.0，两者一致');
-      expect(aar.findFile('res/raw/license_x264.txt'), isNotNull,
-          reason: 'x264 的许可文件必须随产物分发');
-      expect(aar.findFile('res/raw/source.txt'), isNotNull,
-          reason: 'GPL/LGPL 要求的「源码获取途径」声明不得丢失');
+      expect(
+        text.contains('GNU GENERAL PUBLIC LICENSE'),
+        isTrue,
+        reason:
+            '加了 --enable-gpl 后产物许可从 LGPLv3 变为 GPLv3，'
+            'AAR 内的 license.txt 必须同步（android.sh 会自动写入）。'
+            'Hibiki 自身即 GPL-3.0，两者一致',
+      );
+      expect(
+        aar.findFile('res/raw/license_x264.txt'),
+        isNotNull,
+        reason: 'x264 的许可文件必须随产物分发',
+      );
+      expect(
+        aar.findFile('res/raw/source.txt'),
+        isNotNull,
+        reason: 'GPL/LGPL 要求的「源码获取途径」声明不得丢失',
+      );
     });
   });
 
@@ -164,13 +188,16 @@ void main() {
         );
         expect(util.existsSync(), isTrue, reason: '切片缺失：${util.path}');
 
-        final String configuration =
-            _embeddedConfiguration(util.readAsBytesSync(), '$label libavutil');
+        final String configuration = _embeddedConfiguration(
+          util.readAsBytesSync(),
+          '$label libavutil',
+        );
         for (final String flag in _requiredMobileFlags) {
           expect(
             configuration.contains(flag),
             isTrue,
-            reason: '$label 的 configure 串里没有 $flag —— 入库 framework 比 Dart 侧'
+            reason:
+                '$label 的 configure 串里没有 $flag —— 入库 framework 比 Dart 侧'
                 '契约旧，需在构建机重跑 ios.sh --xcframework 并重新 vendor',
           );
         }
@@ -180,10 +207,16 @@ void main() {
         );
         expect(codecFile.existsSync(), isTrue);
         final String codec = _asSearchableText(codecFile.readAsBytesSync());
-        expect(codec.contains('libx264'), isTrue,
-            reason: '$label libavcodec 里没有 libx264');
-        expect(codec.contains('x264 - core'), isTrue,
-            reason: '$label 缺 x264 自身的版本串');
+        expect(
+          codec.contains('libx264'),
+          isTrue,
+          reason: '$label libavcodec 里没有 libx264',
+        );
+        expect(
+          codec.contains('x264 - core'),
+          isTrue,
+          reason: '$label 缺 x264 自身的版本串',
+        );
       });
     });
   });
@@ -205,11 +238,17 @@ void main() {
       );
       // Android 配方明写 --disable-mediacodec：若哪天它变成 enable，Dart 侧就多了
       // 一条可选路径，本守卫应当被一并重审，而不是继续假设"只有 libx264"。
-      expect(configuration.contains('--disable-mediacodec'), isTrue,
-          reason: '配方对 mediacodec 的态度变了——Dart 侧编码器选择需要重审');
+      expect(
+        configuration.contains('--disable-mediacodec'),
+        isTrue,
+        reason: '配方对 mediacodec 的态度变了——Dart 侧编码器选择需要重审',
+      );
       // 反证：一个必定不存在的开关必须扫不到。扫得到就说明匹配逻辑失真了。
-      expect(configuration.contains('--enable-libx265'), isFalse,
-          reason: '扫到了本不该存在的开关，说明判据失真（匹配到了别处的字节）');
+      expect(
+        configuration.contains('--enable-libx265'),
+        isFalse,
+        reason: '扫到了本不该存在的开关，说明判据失真（匹配到了别处的字节）',
+      );
     });
   });
 }

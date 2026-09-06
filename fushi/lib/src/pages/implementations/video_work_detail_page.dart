@@ -62,51 +62,52 @@ class VideoWorkDetailPage extends StatelessWidget {
     if (collectionId != null) {
       return FutureBuilder<MediaCollectionRow?>(
         future: database.getMediaCollectionById(collectionId),
-        builder: (BuildContext context,
-            AsyncSnapshot<MediaCollectionRow?> snapshot) {
-          final MediaCollectionRow? collection = snapshot.data;
-          if (snapshot.connectionState != ConnectionState.done) {
-            return Scaffold(
-              body: Center(child: adaptiveIndicator(context: context)),
-            );
-          }
-          if (collection == null) {
-            return Scaffold(
-              appBar: AppBar(),
-              body: Center(
-                child: Text(t.video_load_failed_not_found),
-              ),
-            );
-          }
-          return MediaCollectionDetailPage(
-            database: database,
-            videoSpecs: videoSpecs,
-            collection: collection,
-            // 成员解析走共享的 [loadCollectionEpisodeSlots]：合集清单是跨端 union，
-            // 「本机没有这一行」不等于「这一集不存在」（BUG-1704）。
-            loadEpisodes: () => loadCollectionEpisodeSlots(
-              repository: repository,
-              collectionId: collection.id,
-              loadRemoteVideos: remote?.loadRemoteVideos,
-            ),
-            remote: remote,
-            onOpenEpisode: (VideoBookRow episode) {
-              Navigator.push<void>(
-                context,
-                adaptivePageRoute<void>(
-                  context: context,
-                  builder: (_) => VideoFushiPage.neutralized(
-                    bookUid: episode.bookUid,
-                    repo: repository,
-                    playlistCollectionId: collection.id,
-                  ),
+        builder:
+            (
+              BuildContext context,
+              AsyncSnapshot<MediaCollectionRow?> snapshot,
+            ) {
+              final MediaCollectionRow? collection = snapshot.data;
+              if (snapshot.connectionState != ConnectionState.done) {
+                return Scaffold(
+                  body: Center(child: adaptiveIndicator(context: context)),
+                );
+              }
+              if (collection == null) {
+                return Scaffold(
+                  appBar: AppBar(),
+                  body: Center(child: Text(t.video_load_failed_not_found)),
+                );
+              }
+              return MediaCollectionDetailPage(
+                database: database,
+                videoSpecs: videoSpecs,
+                collection: collection,
+                // 成员解析走共享的 [loadCollectionEpisodeSlots]：合集清单是跨端 union，
+                // 「本机没有这一行」不等于「这一集不存在」（BUG-1704）。
+                loadEpisodes: () => loadCollectionEpisodeSlots(
+                  repository: repository,
+                  collectionId: collection.id,
+                  loadRemoteVideos: remote?.loadRemoteVideos,
                 ),
+                remote: remote,
+                onOpenEpisode: (VideoBookRow episode) {
+                  Navigator.push<void>(
+                    context,
+                    adaptivePageRoute<void>(
+                      context: context,
+                      builder: (_) => VideoFushiPage.neutralized(
+                        bookUid: episode.bookUid,
+                        repo: repository,
+                        playlistCollectionId: collection.id,
+                      ),
+                    ),
+                  );
+                },
+                onChanged: onChanged,
+                onDeleteMembersMedia: onDeleteMembersMedia,
               );
             },
-            onChanged: onChanged,
-            onDeleteMembersMedia: onDeleteMembersMedia,
-          );
-        },
       );
     }
     return _StandaloneVideoWorkDetail(
@@ -156,13 +157,15 @@ class _StandaloneVideoWorkDetailState
   }
 
   Future<void> _load() async {
-    final VideoBookRow? book =
-        await widget.repository.getByBookUid(widget.bookUid);
-    final VideoMetadataWorkRow? work =
-        await widget.database.getVideoMetadataWorkByBook(widget.bookUid);
+    final VideoBookRow? book = await widget.repository.getByBookUid(
+      widget.bookUid,
+    );
+    final VideoMetadataWorkRow? work = await widget.database
+        .getVideoMetadataWorkByBook(widget.bookUid);
     final VideoMetadataWorkCredits? credits =
-        await VideoMetadataCreditRepository(widget.database)
-            .forBook(widget.bookUid);
+        await VideoMetadataCreditRepository(
+          widget.database,
+        ).forBook(widget.bookUid);
     final List<VideoMetadataTermRow> terms = work == null
         ? const <VideoMetadataTermRow>[]
         : await widget.database.getVideoMetadataTermsForWork(work.id);
@@ -212,9 +215,12 @@ class _StandaloneVideoWorkDetailState
     }
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final VideoMetadataWorkRow? work = _work;
-    final ImageProvider? poster = _image('poster') ??
+    final ImageProvider? poster =
+        _image('poster') ??
         resolveMediaCoverImage(
-            kind: MediaKind.video, localPath: book.coverPath);
+          kind: MediaKind.video,
+          localPath: book.coverPath,
+        );
     final ImageProvider? backdrop = _image('backdrop') ?? poster;
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -223,8 +229,10 @@ class _StandaloneVideoWorkDetailState
         padding: EdgeInsets.zero,
         children: <Widget>[
           SizedBox(
-            height:
-                (MediaQuery.sizeOf(context).height * 0.62).clamp(400.0, 620.0),
+            height: (MediaQuery.sizeOf(context).height * 0.62).clamp(
+              400.0,
+              620.0,
+            ),
             child: Stack(
               fit: StackFit.expand,
               children: <Widget>[
@@ -278,9 +286,7 @@ class _StandaloneVideoWorkDetailState
                               work?.title ?? book.title,
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .displaySmall
+                              style: Theme.of(context).textTheme.displaySmall
                                   ?.copyWith(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w800,
@@ -308,9 +314,11 @@ class _StandaloneVideoWorkDetailState
                             FilledButton.icon(
                               onPressed: () => _playBook(book),
                               icon: const Icon(Icons.play_arrow_rounded),
-                              label: Text(book.lastPositionMs > 0
-                                  ? t.video_continue_watching
-                                  : t.collection_play),
+                              label: Text(
+                                book.lastPositionMs > 0
+                                    ? t.video_continue_watching
+                                    : t.collection_play,
+                              ),
                             ),
                           ],
                         ),
@@ -326,9 +334,9 @@ class _StandaloneVideoWorkDetailState
               padding: EdgeInsets.all(tokens.spacing.page),
               child: SelectableText(
                 work!.overview!,
-                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      height: 1.55,
-                    ),
+                style: Theme.of(
+                  context,
+                ).textTheme.bodyLarge?.copyWith(height: 1.55),
               ),
             ),
           // v95：技术规格。这一页是「一个文件 = 一部作品」，规格无歧义，摊开显示。
@@ -387,8 +395,10 @@ class _StandaloneVideoWorkDetailState
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text(t.video_work_cast_crew,
-              style: Theme.of(context).textTheme.titleLarge),
+          Text(
+            t.video_work_cast_crew,
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
           SizedBox(height: tokens.spacing.card),
           Wrap(
             spacing: 8,
@@ -423,8 +433,10 @@ class _StandaloneVideoWorkDetailState
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text(t.video_work_trailers,
-              style: Theme.of(context).textTheme.titleLarge),
+          Text(
+            t.video_work_trailers,
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
           SizedBox(height: tokens.spacing.card),
           for (final VideoMetadataExtraRow extra in _extras)
             FushiListItem(
@@ -454,8 +466,9 @@ class _StandaloneVideoWorkDetailState
 
   Future<void> _playExtra(VideoMetadataExtraRow extra) async {
     if (extra.bookUid != null) {
-      final VideoBookRow? local =
-          await widget.repository.getByBookUid(extra.bookUid!);
+      final VideoBookRow? local = await widget.repository.getByBookUid(
+        extra.bookUid!,
+      );
       if (local != null && mounted) _playBook(local);
       return;
     }

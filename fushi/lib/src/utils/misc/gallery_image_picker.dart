@@ -64,8 +64,9 @@ GalleryImagePickerBackend galleryImagePickerBackendFor(
 Future<File?> pickGalleryImageFile() async {
   switch (galleryImagePickerBackendFor(defaultTargetPlatform)) {
     case GalleryImagePickerBackend.imagePicker:
-      final XFile? pickedFile =
-          await ImagePicker().pickImage(source: ImageSource.gallery);
+      final XFile? pickedFile = await ImagePicker().pickImage(
+        source: ImageSource.gallery,
+      );
       final String? mobilePath = pickedFile?.path;
       if (mobilePath == null || mobilePath.isEmpty) return null;
       return File(mobilePath);

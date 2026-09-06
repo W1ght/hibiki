@@ -65,32 +65,46 @@ CREATE TABLE profile_settings (
 }
 
 void main() {
-  test('v73->v74 rewrites sync_backend_type hibikiServer -> fushiServer',
-      () async {
-    final FushiDatabase db = _openMigratedFromV73();
-    addTearDown(db.close);
+  test(
+    'v73->v74 rewrites sync_backend_type hibikiServer -> fushiServer',
+    () async {
+      final FushiDatabase db = _openMigratedFromV73();
+      addTearDown(db.close);
 
-    final QueryRow ver =
-        await db.customSelect('PRAGMA user_version').getSingle();
-    expect(ver.read<int>('user_version'), db.schemaVersion);
+      final QueryRow ver = await db
+          .customSelect('PRAGMA user_version')
+          .getSingle();
+      expect(ver.read<int>('user_version'), db.schemaVersion);
 
-    final prefs = await db
-        .customSelect('SELECT key, value FROM preferences ORDER BY key')
-        .get();
-    final Map<String, String> prefMap = <String, String>{
-      for (final QueryRow r in prefs)
-        r.read<String>('key'): r.read<String>('value'),
-    };
-    expect(prefMap['sync_backend_type'], 's:fushiServer',
-        reason: '① 存量枚举值改写；漏掉=用户的互联选择读不出来，静默落回默认后端');
-    expect(prefMap['other_backend_key'], 's:hibikiServer',
-        reason: '② 只按 key 精确匹配，同值的无关键不动');
+      final prefs = await db
+          .customSelect('SELECT key, value FROM preferences ORDER BY key')
+          .get();
+      final Map<String, String> prefMap = <String, String>{
+        for (final QueryRow r in prefs)
+          r.read<String>('key'): r.read<String>('value'),
+      };
+      expect(
+        prefMap['sync_backend_type'],
+        's:fushiServer',
+        reason: '① 存量枚举值改写；漏掉=用户的互联选择读不出来，静默落回默认后端',
+      );
+      expect(
+        prefMap['other_backend_key'],
+        's:hibikiServer',
+        reason: '② 只按 key 精确匹配，同值的无关键不动',
+      );
 
-    final ps = await db
-        .customSelect('SELECT value FROM profile_settings WHERE '
-            "key = 'sync_backend_type'")
-        .getSingle();
-    expect(ps.read<String>('value'), 's:fushiServer',
-        reason: '③ profile_settings 的每 Profile 快照同样改写');
-  });
+      final ps = await db
+          .customSelect(
+            'SELECT value FROM profile_settings WHERE '
+            "key = 'sync_backend_type'",
+          )
+          .getSingle();
+      expect(
+        ps.read<String>('value'),
+        's:fushiServer',
+        reason: '③ profile_settings 的每 Profile 快照同样改写',
+      );
+    },
+  );
 }

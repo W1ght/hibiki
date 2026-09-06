@@ -45,7 +45,8 @@ void main() {
       expect(
         src,
         contains('sectionIndex: _favoriteSectionIndex'),
-        reason: '收藏 sectionIndex 走 _favoriteSectionIndex（本地每集独立行=null；'
+        reason:
+            '收藏 sectionIndex 走 _favoriteSectionIndex（本地每集独立行=null；'
             '远端多集=当前集），统一合集 Phase 3',
       );
       expect(
@@ -58,8 +59,10 @@ void main() {
     test('只在顶层(index==0)显示，嵌套递归层不显示', () {
       // 窗口=该覆写方法体（花括号配对），不再是 `idx + 200` 定长窗口：早退语句前
       // 多插一行局部变量、或 header 结构改动，都不该让守卫塌掉。
-      final String body =
-          methodBody(src, 'Widget? buildPopupHeaderFor(int index)');
+      final String body = methodBody(
+        src,
+        'Widget? buildPopupHeaderFor(int index)',
+      );
       expect(
         body.contains('if (index != 0) return null'),
         isTrue,
@@ -113,28 +116,41 @@ void main() {
       );
       // C 的核心：视频页头收藏夹入口可达。
       expect(
-          containsCodeLine(videoHeader, 'Icons.collections_bookmark_outlined'),
-          isTrue);
+        containsCodeLine(videoHeader, 'Icons.collections_bookmark_outlined'),
+        isTrue,
+      );
       expect(containsCodeLine(videoHeader, 'onTap: _openCollections'), isTrue);
       expect(containsCodeLine(videoHeader, 'tooltip: t.collections'), isTrue);
       // 「与书架一致」：书架页头同样有收藏夹。
       expect(
-          containsCodeLine(shelfHeader, 'Icons.collections_bookmark_outlined'),
-          isTrue);
+        containsCodeLine(shelfHeader, 'Icons.collections_bookmark_outlined'),
+        isTrue,
+      );
       expect(containsCodeLine(shelfHeader, 'onTap: _openCollections'), isTrue);
       // 两页头都不得再各挂一个统计入口。
-      expect(containsCodeLine(videoHeader, 'Icons.bar_chart_outlined'), isFalse,
-          reason: '统计入口已收敛到首页 dashboard，视频页头不再挂');
-      expect(containsCodeLine(shelfHeader, 'Icons.bar_chart_outlined'), isFalse,
-          reason: '统计入口已收敛到首页 dashboard，书架页头不再挂');
-      // 参照物没有凭空消失：统计中心入口必须真的落在首页 dashboard 页头。
-      final String dashboard =
-          read('lib/src/pages/implementations/home_dashboard_page.dart');
       expect(
-          containsCodeLine(dashboard, 'onTap: _openStatisticsCenter'), isTrue,
-          reason: '统计中心入口必须在首页 dashboard 可达');
-      expect(containsCodeLine(dashboard, 'icon: Icons.bar_chart_outlined'),
-          isTrue);
+        containsCodeLine(videoHeader, 'Icons.bar_chart_outlined'),
+        isFalse,
+        reason: '统计入口已收敛到首页 dashboard，视频页头不再挂',
+      );
+      expect(
+        containsCodeLine(shelfHeader, 'Icons.bar_chart_outlined'),
+        isFalse,
+        reason: '统计入口已收敛到首页 dashboard，书架页头不再挂',
+      );
+      // 参照物没有凭空消失：统计中心入口必须真的落在首页 dashboard 页头。
+      final String dashboard = read(
+        'lib/src/pages/implementations/home_dashboard_page.dart',
+      );
+      expect(
+        containsCodeLine(dashboard, 'onTap: _openStatisticsCenter'),
+        isTrue,
+        reason: '统计中心入口必须在首页 dashboard 可达',
+      );
+      expect(
+        containsCodeLine(dashboard, 'icon: Icons.bar_chart_outlined'),
+        isTrue,
+      );
     });
   });
 
@@ -273,7 +289,8 @@ void main() {
       expect(
         src,
         contains('s.dateKey ?? statDateKey(s.createdAt)'),
-        reason: 'BUG-893：书内旧收藏无 dateKey 按 createdAt 回退归桶'
+        reason:
+            'BUG-893：书内旧收藏无 dateKey 按 createdAt 回退归桶'
             '（旧的 `dateKey != null` 过滤把所有书内收藏滤光 → 统计恒 0，已根治）',
       );
     });

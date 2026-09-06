@@ -7,7 +7,8 @@ const String _kCharTokens =
 
 /// SentencePiece BPE 词表（LibriHeavy 形态：空格分隔 `<token> <id>`，词首带
 /// `▁`，byte-fallback token `<0xNN>`）。
-const String _kSpTokens = '<blk> 0\n'
+const String _kSpTokens =
+    '<blk> 0\n'
     '<sos/eos> 1\n'
     '<unk> 2\n'
     '<0x50> 3\n'

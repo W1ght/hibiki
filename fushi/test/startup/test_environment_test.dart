@@ -21,10 +21,12 @@ void main() {
   });
 
   test('dart-define root wins over process environment', () {
-    final Directory envRoot =
-        Directory.systemTemp.createTempSync('hibiki-env-');
-    final Directory defineRoot =
-        Directory.systemTemp.createTempSync('hibiki-define-');
+    final Directory envRoot = Directory.systemTemp.createTempSync(
+      'hibiki-env-',
+    );
+    final Directory defineRoot = Directory.systemTemp.createTempSync(
+      'hibiki-define-',
+    );
     addTearDown(() => envRoot.deleteSync(recursive: true));
     addTearDown(() => defineRoot.deleteSync(recursive: true));
 

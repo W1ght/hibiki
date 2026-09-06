@@ -23,33 +23,39 @@ void main() {
     );
     expect(
       loadLyrics,
-      isNot(contains('ctrl.allBookCuesSnapshot.isNotEmpty\n'
+      isNot(
+        contains(
+          'ctrl.allBookCuesSnapshot.isNotEmpty\n'
           '        ? ctrl.allBookCuesSnapshot\n'
-          '        : ctrl.chapterCuesSnapshot')),
+          '        : ctrl.chapterCuesSnapshot',
+        ),
+      ),
       reason: '直接选择整本 allBookCuesSnapshot 会让大书 iOS WebView loadData 超时/白屏。',
     );
   });
 
-  test('lyrics cue updates translate global all-book index into window index',
-      () {
-    final String source = readReaderPageSource();
-    final String cueChanged = _functionSource(
-      source,
-      '  void _onCueChanged() {',
-      '    final AudioCue? cue = controller.currentCue;',
-    );
+  test(
+    'lyrics cue updates translate global all-book index into window index',
+    () {
+      final String source = readReaderPageSource();
+      final String cueChanged = _functionSource(
+        source,
+        '  void _onCueChanged() {',
+        '    final AudioCue? cue = controller.currentCue;',
+      );
 
-    expect(
-      cueChanged,
-      contains('_lyricsCueIndexOffset'),
-      reason: '歌词页只渲染窗口时，cue 更新必须扣除窗口起点。',
-    );
-    expect(
-      cueChanged,
-      contains('_loadLyricsPage()'),
-      reason: '播放位置走出当前歌词窗口时必须重载邻近窗口，不能静默停住。',
-    );
-  });
+      expect(
+        cueChanged,
+        contains('_lyricsCueIndexOffset'),
+        reason: '歌词页只渲染窗口时，cue 更新必须扣除窗口起点。',
+      );
+      expect(
+        cueChanged,
+        contains('_loadLyricsPage()'),
+        reason: '播放位置走出当前歌词窗口时必须重载邻近窗口，不能静默停住。',
+      );
+    },
+  );
 }
 
 String _functionSource(String source, String start, String end) {

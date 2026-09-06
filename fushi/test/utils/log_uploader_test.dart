@@ -9,10 +9,7 @@ void main() {
   const String endpoint = 'https://logs.example.com/api/logs';
   const String token = 'test-token';
 
-  Future<LogUploadOutcome> run(
-    MockClient client, {
-    String log = 'hello log',
-  }) {
+  Future<LogUploadOutcome> run(MockClient client, {String log = 'hello log'}) {
     return performLogUpload(
       log: log,
       kind: 'error',
@@ -83,29 +80,38 @@ void main() {
       final Map<String, dynamic> body =
           jsonDecode(seen.body) as Map<String, dynamic>;
       final String sentLog = body['log'] as String;
-      expect(utf8.encode(sentLog).length, lessThanOrEqualTo(512 * 1024),
-          reason: 'pad=$pad 时截断结果超限');
-      expect(sentLog.contains('�'), isFalse,
-          reason: 'pad=$pad 时出现替换符，说明切点没对齐字符边界');
+      expect(
+        utf8.encode(sentLog).length,
+        lessThanOrEqualTo(512 * 1024),
+        reason: 'pad=$pad 时截断结果超限',
+      );
+      expect(
+        sentLog.contains('�'),
+        isFalse,
+        reason: 'pad=$pad 时出现替换符，说明切点没对齐字符边界',
+      );
       expect(sentLog, contains('[truncated]'));
     }
   });
 
   test('401 → unauthorized', () async {
-    final MockClient client =
-        MockClient((http.Request req) async => http.Response('no', 401));
+    final MockClient client = MockClient(
+      (http.Request req) async => http.Response('no', 401),
+    );
     expect((await run(client)).kind, LogUploadStatus.unauthorized);
   });
 
   test('413 → tooLarge', () async {
-    final MockClient client =
-        MockClient((http.Request req) async => http.Response('too big', 413));
+    final MockClient client = MockClient(
+      (http.Request req) async => http.Response('too big', 413),
+    );
     expect((await run(client)).kind, LogUploadStatus.tooLarge);
   });
 
   test('网络异常 → networkError', () async {
-    final MockClient client =
-        MockClient((http.Request req) async => throw Exception('boom'));
+    final MockClient client = MockClient(
+      (http.Request req) async => throw Exception('boom'),
+    );
     expect((await run(client)).kind, LogUploadStatus.networkError);
   });
 }

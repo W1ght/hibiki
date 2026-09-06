@@ -6,8 +6,10 @@ part of '../sync_settings_schema.dart';
 
 @visibleForTesting
 Set<BackupCategory> defaultBackupExportCategories() => BackupCategory.values
-    .where((BackupCategory c) =>
-        c != BackupCategory.videos && c != BackupCategory.localAudio)
+    .where(
+      (BackupCategory c) =>
+          c != BackupCategory.videos && c != BackupCategory.localAudio,
+    )
     .toSet();
 
 /// Localised display name for a backup [category] (TODO-1358). Shared by the
@@ -167,8 +169,9 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
     if (!mounted) return;
     // Ask which sidecar trees to include (default all). Null = the user
     // cancelled the dialog -> abort the export entirely (TODO-106).
-    final Set<BackupCategory>? categories =
-        await _pickExportCategories(summary);
+    final Set<BackupCategory>? categories = await _pickExportCategories(
+      summary,
+    );
     if (categories == null || !mounted) return;
     // 交棒点：此后一律由 AppModel 驱动，不再看本 State 的 mounted / context。
     await runBackupExportFlow(
@@ -177,8 +180,9 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
       categories: categories,
       // Per-book selection (TODO-1195 part A) only applies when the Books
       // category is packed; excluding Books strips every book regardless.
-      bookKeys:
-          categories.contains(BackupCategory.books) ? _selectedBookKeys : null,
+      bookKeys: categories.contains(BackupCategory.books)
+          ? _selectedBookKeys
+          : null,
       videoKeys: categories.contains(BackupCategory.videos)
           ? _selectedVideoKeys
           : null,
@@ -190,7 +194,8 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
   /// so confirming without touching anything reproduces the legacy all-in
   /// export. Returns the chosen set, or null if the user cancelled.
   Future<Set<BackupCategory>?> _pickExportCategories(
-      BackupContentSummary summary) async {
+    BackupContentSummary summary,
+  ) async {
     final Set<BackupCategory> selected = defaultBackupExportCategories();
     assert(!selected.contains(BackupCategory.videos));
     assert(!selected.contains(BackupCategory.localAudio));
@@ -271,7 +276,7 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
                       title: labelFor(c),
                       subtitle: summary.counts.containsKey(c)
                           ? '${backupCategoryDescription(c)} '
-                              '(${summary.countFor(c)})'
+                                '(${summary.countFor(c)})'
                           : backupCategoryDescription(c),
                       value: selected.contains(c),
                       onChanged: (bool v) => setLocal(() {
@@ -291,11 +296,13 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
                         subtitle: chosenBooks == null
                             ? t.backup_export_books_all
                             : t.backup_export_books_selected(
-                                count: chosenBooks!.length.toString()),
+                                count: chosenBooks!.length.toString(),
+                              ),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () async {
-                          final Set<String>? picked =
-                              await _pickBooks(chosenBooks);
+                          final Set<String>? picked = await _pickBooks(
+                            chosenBooks,
+                          );
                           setLocal(() => chosenBooks = picked);
                         },
                       ),
@@ -308,11 +315,13 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
                         subtitle: chosenVideos == null
                             ? t.backup_export_videos_all
                             : t.backup_export_videos_selected(
-                                count: chosenVideos!.length.toString()),
+                                count: chosenVideos!.length.toString(),
+                              ),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () async {
-                          final Set<String>? picked =
-                              await _pickVideos(chosenVideos);
+                          final Set<String>? picked = await _pickVideos(
+                            chosenVideos,
+                          );
                           setLocal(() => chosenVideos = picked);
                         },
                       ),
@@ -354,8 +363,11 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
   /// (null = every book). Returns the chosen set, collapsing "all ticked" back
   /// to null (the legacy full-export path), or [current] unchanged on cancel.
   Future<Set<String>?> _pickBooks(Set<String>? current) async {
-    final List<EpubBookRow> books =
-        await widget.settingsContext.appModel.database.getAllEpubBooks();
+    final List<EpubBookRow> books = await widget
+        .settingsContext
+        .appModel
+        .database
+        .getAllEpubBooks();
     // State.context guarded by State.mounted (coherent for the lint): the
     // settings page may have unmounted while the library loaded.
     if (!mounted) return current;
@@ -363,8 +375,9 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
       _showSnackBar(context, t.backup_export_no_books);
       return current;
     }
-    final List<String> keys =
-        books.map((EpubBookRow b) => b.bookKey).toList(growable: false);
+    final List<String> keys = books
+        .map((EpubBookRow b) => b.bookKey)
+        .toList(growable: false);
     // Seed: null (all) → every book ticked; otherwise the given subset.
     final Set<String> sel = current == null
         ? keys.toSet()
@@ -410,17 +423,21 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
                     spacing: 8,
                     runSpacing: 4,
                     children: <Widget>[
-                      Text('${sel.length} / ${keys.length}',
-                          style: Theme.of(ctx).textTheme.bodySmall),
+                      Text(
+                        '${sel.length} / ${keys.length}',
+                        style: Theme.of(ctx).textTheme.bodySmall,
+                      ),
                       Wrap(
                         spacing: 4,
                         runSpacing: 4,
                         children: <Widget>[
                           adaptiveDialogAction(
                             context: ctx,
-                            onPressed: () => setLocal(() => sel
-                              ..clear()
-                              ..addAll(keys)),
+                            onPressed: () => setLocal(
+                              () => sel
+                                ..clear()
+                                ..addAll(keys),
+                            ),
                             child: Text(t.backup_export_select_all),
                           ),
                           adaptiveDialogAction(
@@ -481,8 +498,11 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
   /// "all ticked" back to null (the legacy full-export path), or [current]
   /// unchanged on cancel.
   Future<Set<String>?> _pickVideos(Set<String>? current) async {
-    final List<VideoBookRow> videos =
-        await widget.settingsContext.appModel.database.allVideoBooks();
+    final List<VideoBookRow> videos = await widget
+        .settingsContext
+        .appModel
+        .database
+        .allVideoBooks();
     // State.context guarded by State.mounted (coherent for the lint): the
     // settings page may have unmounted while the library loaded.
     if (!mounted) return current;
@@ -490,8 +510,9 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
       _showSnackBar(context, t.backup_export_no_videos);
       return current;
     }
-    final List<String> keys =
-        videos.map((VideoBookRow v) => v.bookUid).toList(growable: false);
+    final List<String> keys = videos
+        .map((VideoBookRow v) => v.bookUid)
+        .toList(growable: false);
     // Seed: null (all) → every video ticked; otherwise the given subset.
     final Set<String> sel = current == null
         ? keys.toSet()
@@ -537,17 +558,21 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
                     spacing: 8,
                     runSpacing: 4,
                     children: <Widget>[
-                      Text('${sel.length} / ${keys.length}',
-                          style: Theme.of(ctx).textTheme.bodySmall),
+                      Text(
+                        '${sel.length} / ${keys.length}',
+                        style: Theme.of(ctx).textTheme.bodySmall,
+                      ),
                       Wrap(
                         spacing: 4,
                         runSpacing: 4,
                         children: <Widget>[
                           adaptiveDialogAction(
                             context: ctx,
-                            onPressed: () => setLocal(() => sel
-                              ..clear()
-                              ..addAll(keys)),
+                            onPressed: () => setLocal(
+                              () => sel
+                                ..clear()
+                                ..addAll(keys),
+                            ),
                             child: Text(t.backup_export_select_all),
                           ),
                           adaptiveDialogAction(
@@ -622,33 +647,32 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
           trailing: exporting
               ? ValueListenableBuilder<double?>(
                   valueListenable: appModel.backupExportProgress,
-                  builder: (
-                    BuildContext context,
-                    double? progress,
-                    Widget? _,
-                  ) =>
-                      Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      SizedBox(
-                        width: 20,
-                        height: 20,
-                        child: adaptiveIndicator(
-                          context: context,
-                          strokeWidth: 2,
-                          // null = 还在准备阶段（VACUUM INTO / 按分类裁剪 /
-                          // 枚举待打包文件），没有可分的量，走不确定动画；
-                          // 进了打包阶段就按已写字节走确定进度。
-                          value: progress,
-                        ),
-                      ),
-                      const SizedBox(width: 8),
-                      Text(progress == null
-                          ? t.backup_exporting
-                          : '${t.backup_exporting} '
-                              '${(progress * 100).floor()}%'),
-                    ],
-                  ),
+                  builder:
+                      (BuildContext context, double? progress, Widget? _) =>
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              SizedBox(
+                                width: 20,
+                                height: 20,
+                                child: adaptiveIndicator(
+                                  context: context,
+                                  strokeWidth: 2,
+                                  // null = 还在准备阶段（VACUUM INTO / 按分类裁剪 /
+                                  // 枚举待打包文件），没有可分的量，走不确定动画；
+                                  // 进了打包阶段就按已写字节走确定进度。
+                                  value: progress,
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              Text(
+                                progress == null
+                                    ? t.backup_exporting
+                                    : '${t.backup_exporting} '
+                                          '${(progress * 100).floor()}%',
+                              ),
+                            ],
+                          ),
                 )
               : FilledButton.tonal(
                   onPressed: _export,
@@ -665,7 +689,6 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
       },
     );
   }
-
 }
 
 /// 清掉临时目录里**上一次导出遗留的**备份包（识别口径见
@@ -683,8 +706,9 @@ class _BackupExportWidgetState extends State<_BackupExportWidget> {
 /// 周期一致——否则用户会以为那 200MB 是自己的存档，点一次导出却发现它没了。
 Future<void> _sweepStaleBackupArchives(Directory tmpDir) async {
   try {
-    await for (final FileSystemEntity entity
-        in tmpDir.list(followLinks: false)) {
+    await for (final FileSystemEntity entity in tmpDir.list(
+      followLinks: false,
+    )) {
       if (entity is! File) continue;
       if (!isBackupArchiveName(p.basename(entity.path))) continue;
       try {
@@ -731,10 +755,9 @@ Future<void> runBackupExportFlow({
       onProgress: appModel.reportBackupExportProgress,
     );
     if (Platform.isAndroid || Platform.isIOS) {
-      await FushiShare.shareFiles(
-        <XFile>[XFile(tmpPath, mimeType: 'application/zip')],
-        subject: filename,
-      );
+      await FushiShare.shareFiles(<XFile>[
+        XFile(tmpPath, mimeType: 'application/zip'),
+      ], subject: filename);
     } else {
       final String? savePath = await FilePicker.platform.saveFile(
         dialogTitle: t.backup_export,
@@ -931,8 +954,8 @@ Future<void> runBackupImportFlowForFile({
     // TODO-1358: read the archive "what is inside" manifest for the confirm
     // dialog (per-category counts + the restore toggles). Cheap central-dir
     // read; an empty summary just hides the manifest.
-    final BackupContentSummary contentSummary =
-        await service.summarizeBackupFile(filePath);
+    final BackupContentSummary contentSummary = await service
+        .summarizeBackupFile(filePath);
     if (!appModel.isBackupValidatingCurrent(validatingToken)) return;
     meta = validated;
     mergePreview = preview;
@@ -971,7 +994,11 @@ Future<void> runBackupImportFlowForFile({
   }
 
   final _BackupImportChoice? choice = await _showBackupImportConfirmDialog(
-      rootCtx, meta, mergePreview, summary);
+    rootCtx,
+    meta,
+    mergePreview,
+    summary,
+  );
   if (choice == null) {
     // 用户取消确认 → 彻底退出遮罩态，回到调用方页面（validating 遮罩已退出）。
     return;
@@ -979,8 +1006,10 @@ Future<void> runBackupImportFlowForFile({
   await onImportConfirmed?.call();
 
   final String booksRoot = p.join(appModel.appDirectory.path, 'fushi_books');
-  final String audiobooksRoot =
-      p.join(appModel.appDirectory.path, 'audiobooks');
+  final String audiobooksRoot = p.join(
+    appModel.appDirectory.path,
+    'audiobooks',
+  );
   final String fontsRoot = p.join(appModel.appDirectory.path, 'custom_fonts');
   final String videosRoot = p.join(appModel.appDirectory.path, 'videos');
 
@@ -1157,10 +1186,12 @@ Future<_BackupImportChoice?> _showBackupImportConfirmDialog(
       BackupCategory.values
           .where((BackupCategory c) => selectable.contains(c) && summary.has(c))
           .toList();
-  final List<BackupCategory> overwriteSelectablePresent =
-      presentFor(importSelectableCategories);
-  final List<BackupCategory> mergeSelectablePresent =
-      presentFor(importMergeSelectableCategories);
+  final List<BackupCategory> overwriteSelectablePresent = presentFor(
+    importSelectableCategories,
+  );
+  final List<BackupCategory> mergeSelectablePresent = presentFor(
+    importMergeSelectableCategories,
+  );
   final Set<BackupCategory> selectedRestore = <BackupCategory>{
     ...overwriteSelectablePresent,
     ...mergeSelectablePresent,
@@ -1226,8 +1257,8 @@ Future<_BackupImportChoice?> _showBackupImportConfirmDialog(
                       : Text(
                           t.backup_import_merge_preview(
                             bookCount: preview.newBooks.toString(),
-                            progressCount:
-                                preview.updatedReaderPositions.toString(),
+                            progressCount: preview.updatedReaderPositions
+                                .toString(),
                           ),
                           style: Theme.of(ctx).textTheme.bodySmall,
                         ),
@@ -1258,7 +1289,8 @@ Future<_BackupImportChoice?> _showBackupImportConfirmDialog(
                             ? overwriteSelectablePresent
                             : mergeSelectablePresent)
                       AdaptiveSettingsSwitchRow(
-                        title: '${backupCategoryLabel(c)} '
+                        title:
+                            '${backupCategoryLabel(c)} '
                             '(${summary.countFor(c)})',
                         subtitle: backupCategoryDescription(c),
                         value: selectedRestore.contains(c),
@@ -1325,8 +1357,10 @@ Future<_BackupImportChoice?> _showBackupImportConfirmDialog(
       ? importSelectableCategories
       : importMergeSelectableCategories;
   final Set<BackupCategory> categories = BackupCategory.values
-      .where((BackupCategory c) =>
-          !modeSelectable.contains(c) || selectedRestore.contains(c))
+      .where(
+        (BackupCategory c) =>
+            !modeSelectable.contains(c) || selectedRestore.contains(c),
+      )
       .toSet();
   return _BackupImportChoice(
     mode: mode,

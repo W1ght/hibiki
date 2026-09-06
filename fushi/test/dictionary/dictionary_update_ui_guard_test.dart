@@ -18,38 +18,62 @@ void main() {
   late String src;
 
   setUpAll(() {
-    expect(page.existsSync(), isTrue,
-        reason: 'dictionary_dialog_page.dart 应存在');
+    expect(
+      page.existsSync(),
+      isTrue,
+      reason: 'dictionary_dialog_page.dart 应存在',
+    );
     src = page.readAsStringSync();
   });
 
   test('TODO-839：行尾更新按钮对所有词典恢显示，按 isUpdatable 分流', () {
     // 不再 gate 在 `if (dictionary.isUpdatable)`，而是恒渲染一个按钮、点击时按 isUpdatable 三元分流：
     // 在线走 _updateSingleDictionary、本地走 _updateDictionaryFromFile。
-    expect(src.contains('dictionary.isUpdatable'), isTrue,
-        reason: '行尾更新按钮 onTap 应按 dictionary.isUpdatable 三元分流');
-    expect(src.contains('? _updateSingleDictionary(dictionary)'), isTrue,
-        reason: 'isUpdatable 词典应走在线更新 _updateSingleDictionary');
-    expect(src.contains(': _updateDictionaryFromFile(dictionary)'), isTrue,
-        reason: '非 isUpdatable 词典应走从文件覆盖 _updateDictionaryFromFile');
+    expect(
+      src.contains('dictionary.isUpdatable'),
+      isTrue,
+      reason: '行尾更新按钮 onTap 应按 dictionary.isUpdatable 三元分流',
+    );
+    expect(
+      src.contains('? _updateSingleDictionary(dictionary)'),
+      isTrue,
+      reason: 'isUpdatable 词典应走在线更新 _updateSingleDictionary',
+    );
+    expect(
+      src.contains(': _updateDictionaryFromFile(dictionary)'),
+      isTrue,
+      reason: '非 isUpdatable 词典应走从文件覆盖 _updateDictionaryFromFile',
+    );
   });
 
   test('TODO-839：从文件覆盖更新走显式替换 + 异名确认接线', () {
-    expect(src.contains('DictionaryImportManager.peekDictionaryTitle(file)'),
-        isTrue,
-        reason: '从文件更新前应帩价探出新包 title 判断异名');
-    expect(src.contains('_confirmNameMismatch('), isTrue,
-        reason: '异名时应弹亮确认对话框');
-    expect(src.contains('t.dict_update_name_mismatch_body('), isTrue,
-        reason: '异名确认对话框应引用 dict_update_name_mismatch_body 文案');
-    expect(src.contains('DictionaryConfirmationDialog('), isTrue,
-        reason: '异名确认应复用 DictionaryConfirmationDialog');
+    expect(
+      src.contains('DictionaryImportManager.peekDictionaryTitle(file)'),
+      isTrue,
+      reason: '从文件更新前应帩价探出新包 title 判断异名',
+    );
+    expect(
+      src.contains('_confirmNameMismatch('),
+      isTrue,
+      reason: '异名时应弹亮确认对话框',
+    );
+    expect(
+      src.contains('t.dict_update_name_mismatch_body('),
+      isTrue,
+      reason: '异名确认对话框应引用 dict_update_name_mismatch_body 文案',
+    );
+    expect(
+      src.contains('DictionaryConfirmationDialog('),
+      isTrue,
+      reason: '异名确认应复用 DictionaryConfirmationDialog',
+    );
   });
 
   test('action bar「检查更新」按 isUpdatable 存在性门控', () {
     expect(
       src.contains(
-          'appModel.dictionaries.any((Dictionary d) => d.isUpdatable)'),
+        'appModel.dictionaries.any((Dictionary d) => d.isUpdatable)',
+      ),
       isTrue,
       reason: '检查更新按钮应仅在存在可更新词典时显示',
     );
@@ -62,10 +86,16 @@ void main() {
     // 的 hasReplaceTarget 恒 replaceExact），替换语义不再依赖 title 匹配。
     // 两处调用点：_redownloadAndReimport（在线单本/批量更新共用漏斗）与
     // _updateDictionaryFromFile（本地从文件覆盖更新）。
-    expect('replaceTarget: dictionary,'.allMatches(src).length, 2,
-        reason: '在线更新漏斗与从文件覆盖更新都必须以被点击词典为显式替换目标');
-    expect(src.contains('forceReplaceExisting'), isFalse,
-        reason: '更新链路不得回退到按 title 判重的 force 重导（BUG-1595 旧陷阱）');
+    expect(
+      'replaceTarget: dictionary,'.allMatches(src).length,
+      2,
+      reason: '在线更新漏斗与从文件覆盖更新都必须以被点击词典为显式替换目标',
+    );
+    expect(
+      src.contains('forceReplaceExisting'),
+      isFalse,
+      reason: '更新链路不得回退到按 title 判重的 force 重导（BUG-1595 旧陷阱）',
+    );
   });
 
   test('比对走 DictionaryUpdateService（fetchRemoteIndex + needsUpdate）', () {
@@ -76,15 +106,27 @@ void main() {
   test('在线下载落来源（catalog 回填 downloadUrl，可更新源再补 isUpdatable+indexUrl）', () {
     // TODO-1075：初装即把可更新性锚定在 catalog 来源真值。
     // - 恒回填 downloadUrl（供更新时重下载）。
-    expect(src.contains("'downloadUrl': rec.url"), isTrue,
-        reason: '下载在线词典必须把 catalog url 当 downloadUrl 回填来源');
+    expect(
+      src.contains("'downloadUrl': rec.url"),
+      isTrue,
+      reason: '下载在线词典必须把 catalog url 当 downloadUrl 回填来源',
+    );
     // - 对存在分离 index 端点的来源，据 rec.indexUrl 回填 isUpdatable:'true' + indexUrl，
     //   让 catalog 导入的词典初装即 isUpdatable==true（修初装 gate 空档）。
-    expect(src.contains('final String? recIndexUrl = rec.indexUrl;'), isTrue,
-        reason: 'catalog 导入应读 rec.indexUrl 判定该来源是否可在线更新');
-    expect(src.contains("'isUpdatable': 'true',"), isTrue,
-        reason: '可更新源导入必须回填 isUpdatable:true');
-    expect(src.contains("'indexUrl': recIndexUrl,"), isTrue,
-        reason: '可更新源导入必须回填分离 index 端点 URL');
+    expect(
+      src.contains('final String? recIndexUrl = rec.indexUrl;'),
+      isTrue,
+      reason: 'catalog 导入应读 rec.indexUrl 判定该来源是否可在线更新',
+    );
+    expect(
+      src.contains("'isUpdatable': 'true',"),
+      isTrue,
+      reason: '可更新源导入必须回填 isUpdatable:true',
+    );
+    expect(
+      src.contains("'indexUrl': recIndexUrl,"),
+      isTrue,
+      reason: '可更新源导入必须回填分离 index 端点 URL',
+    );
   });
 }

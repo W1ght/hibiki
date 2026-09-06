@@ -62,10 +62,13 @@ CREATE TABLE media_collection_items (
     expect(cols.single.name, '旧合集');
     expect(cols.single.orderUpdatedAt, 0, reason: '补列默认 0 = 从未手动排序');
 
-    final List<MediaCollectionItemRow> items =
-        await db.getCollectionItems(cols.single.id);
-    expect(items.map((m) => m.entryKey).toList(), <String>['v1', 'v2'],
-        reason: '成员行原样保留');
+    final List<MediaCollectionItemRow> items = await db.getCollectionItems(
+      cols.single.id,
+    );
+    expect(items.map((m) => m.entryKey).toList(), <String>[
+      'v1',
+      'v2',
+    ], reason: '成员行原样保留');
   });
 
   test('v40：collection_member_tombstones 新表可写可读（成员 + 哨兵）', () async {
@@ -84,15 +87,17 @@ CREATE TABLE media_collection_items (
       entryKey: FushiDatabase.collectionTombstoneSentinel,
       deletedAt: 5678,
     );
-    final List<CollectionMemberTombstoneRow> rows =
-        await db.getAllCollectionMemberTombstones();
+    final List<CollectionMemberTombstoneRow> rows = await db
+        .getAllCollectionMemberTombstones();
     expect(rows, hasLength(2));
-    final CollectionMemberTombstoneRow member =
-        rows.firstWhere((r) => r.entryKey == 'v9');
+    final CollectionMemberTombstoneRow member = rows.firstWhere(
+      (r) => r.entryKey == 'v9',
+    );
     expect(member.collectionName, '旧合集');
     expect(member.deletedAt, 1234);
     final CollectionMemberTombstoneRow sentinel = rows.firstWhere(
-        (r) => r.entryKey == FushiDatabase.collectionTombstoneSentinel);
+      (r) => r.entryKey == FushiDatabase.collectionTombstoneSentinel,
+    );
     expect(sentinel.collectionName, '已删合集');
     expect(sentinel.deletedAt, 5678);
 
@@ -104,8 +109,8 @@ CREATE TABLE media_collection_items (
       entryKey: 'v9',
       deletedAt: 9999,
     );
-    final List<CollectionMemberTombstoneRow> after =
-        await db.getAllCollectionMemberTombstones();
+    final List<CollectionMemberTombstoneRow> after = await db
+        .getAllCollectionMemberTombstones();
     expect(after, hasLength(2));
     expect(after.firstWhere((r) => r.entryKey == 'v9').deletedAt, 9999);
   });
@@ -113,8 +118,9 @@ CREATE TABLE media_collection_items (
   test('user_version 升到当前 schemaVersion', () async {
     final FushiDatabase db = await openV39Db();
     await db.getAllMediaCollections(); // 触发 open/migrate。
-    final QueryRow version =
-        await db.customSelect('PRAGMA user_version').getSingle();
+    final QueryRow version = await db
+        .customSelect('PRAGMA user_version')
+        .getSingle();
     expect(version.read<int>('user_version'), db.schemaVersion);
     expect(db.schemaVersion, 96);
   });

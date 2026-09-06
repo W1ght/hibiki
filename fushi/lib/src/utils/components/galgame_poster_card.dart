@@ -120,8 +120,9 @@ class _GalgamePosterCardState extends State<GalgamePosterCard> {
     // 缩放由外层 [FushiHoverLift] 负责；这里只留光标与手势。阴影仍随 hovering
     // 在 [_buildCover] 里插值（那是卡片自己的视觉，壳不该知道）。
     final Widget interactive = MouseRegion(
-      cursor:
-          widget.onTap == null ? MouseCursor.defer : SystemMouseCursors.click,
+      cursor: widget.onTap == null
+          ? MouseCursor.defer
+          : SystemMouseCursors.click,
       child: ContextMenuTrigger(
         onInvoke: contextMenuInvoker(widget.onSecondaryTap),
         behavior: HitTestBehavior.opaque,
@@ -168,8 +169,9 @@ class _GalgamePosterCardState extends State<GalgamePosterCard> {
     );
   }
 
-  late final FushiFocusId _fallbackFocusId =
-      FushiFocusId('galgame-poster-${identityHashCode(this)}');
+  late final FushiFocusId _fallbackFocusId = FushiFocusId(
+    'galgame-poster-${identityHashCode(this)}',
+  );
 
   Widget _buildCover(BuildContext context, ColorScheme colors, bool hovering) {
     const BorderRadius radius = FushiBorderRadius.poster;

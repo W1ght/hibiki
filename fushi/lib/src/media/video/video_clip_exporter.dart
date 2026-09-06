@@ -34,10 +34,10 @@ class VideoClipExportResult {
     String outputPath, {
     int subtitleTrackCount = 0,
   }) : this._(
-          outputPath: outputPath,
-          failure: null,
-          subtitleTrackCount: subtitleTrackCount,
-        );
+         outputPath: outputPath,
+         failure: null,
+         subtitleTrackCount: subtitleTrackCount,
+       );
 
   const VideoClipExportResult.failure(
     VideoClipExportFailure failure, {
@@ -205,8 +205,10 @@ class ClipCodecPlan {
 
   /// 中性计划：与加这层门控之前的行为**逐参数等价**（`-c copy`、不改 tag）。
   /// 探测不可用、解析不出、或源本来就通用可播时用它。
-  static const ClipCodecPlan fullCopy =
-      ClipCodecPlan(copyVideo: true, copyAudio: true);
+  static const ClipCodecPlan fullCopy = ClipCodecPlan(
+    copyVideo: true,
+    copyAudio: true,
+  );
 
   final bool copyVideo;
   final bool copyAudio;
@@ -230,13 +232,15 @@ ClipCodecPlan resolveClipCodecPlan(ClipSourceCodecs codecs) {
   if (codecs.isEmpty) return ClipCodecPlan.fullCopy;
 
   final String? video = codecs.videoCodec;
-  final bool copyVideo = video == null ||
+  final bool copyVideo =
+      video == null ||
       (_kClipCopyableVideoCodecs.contains(video) &&
           _isCopyableVideoPixFmt(codecs.videoPixFmt));
 
   // 空列表 = 没探到音频流信息，保持原 copy 行为；探到了就要求**每一条**都可播，
   // 因为 `-map 0:a?` 会把它们全部带进输出。
-  final bool copyAudio = codecs.audioCodecs.isEmpty ||
+  final bool copyAudio =
+      codecs.audioCodecs.isEmpty ||
       codecs.audioCodecs.every(_kClipCopyableAudioCodecs.contains);
 
   return ClipCodecPlan(
@@ -288,10 +292,11 @@ Future<ClipCodecPlan> _probeClipCodecPlan(
   Duration timeout,
 ) async {
   try {
-    final FfmpegRunResult probe = await backend.run(
-      <String>['-hide_banner', '-i', inputPath],
-      timeout,
-    );
+    final FfmpegRunResult probe = await backend.run(<String>[
+      '-hide_banner',
+      '-i',
+      inputPath,
+    ], timeout);
     return resolveClipCodecPlan(parseClipSourceCodecs(probe.output));
   } catch (e, stack) {
     ErrorLogService.instance.log('VideoClipExport', e, stack);
@@ -653,12 +658,16 @@ Future<VideoClipExportResult> exportVideoClipViaFfmpeg({
     // C 修（BUG-345）：把两轮 ffmpeg 的真实失败原因（退出码 + stderr）写进错误日志，
     // 与 desktop_audio_clipper 的 _reportFfmpegFailure 对齐——否则失败是黑盒，真机只
     // 看到一句固定文案，看不到「Stream map matches no streams」/「Invalid argument」。
-    ErrorLogService.instance
-        .log('VideoClipExport', 'stream-copy: ${result.copy.failureSummary}');
+    ErrorLogService.instance.log(
+      'VideoClipExport',
+      'stream-copy: ${result.copy.failureSummary}',
+    );
     final FfmpegRunResult? reencode = result.reencode;
     if (reencode != null) {
-      ErrorLogService.instance
-          .log('VideoClipExport', 'reencode: ${reencode.failureSummary}');
+      ErrorLogService.instance.log(
+        'VideoClipExport',
+        'reencode: ${reencode.failureSummary}',
+      );
     }
     // TODO-910：detail 回传 stderr **尾段**抽出的真因行（最后实际跑的那轮），而非
     // 全量 stderr。ffmpeg stderr 开头恒是 `Input #0, ...: Metadata: encoder :...`
@@ -707,8 +716,9 @@ Future<Directory?> _writeTempSubtitleFiles(List<String> contents) async {
     for (int i = 0; i < contents.length; i++) {
       // flush: true——ffmpeg 进程随后立刻读这些文件，不能停在 OS 写缓冲里。
       // encoding: utf8 且不写 BOM：ffmpeg 的 srt demuxer 默认按 UTF-8 解析。
-      await File(_tempSubtitlePath(dir, i))
-          .writeAsString(contents[i], encoding: utf8, flush: true);
+      await File(
+        _tempSubtitlePath(dir, i),
+      ).writeAsString(contents[i], encoding: utf8, flush: true);
     }
     return dir;
   } catch (e, stack) {

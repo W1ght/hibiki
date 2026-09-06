@@ -99,8 +99,7 @@ extension _VideoLookupFavorite on _VideoFushiPageState {
     final bool favorited = (await _matchingVideoFavorites(
       sentence,
       cue,
-    ))
-        .isNotEmpty;
+    )).isNotEmpty;
     if (mounted && favorited != _currentVideoSentenceIsFavorited) {
       _rebuild(() => _currentVideoSentenceIsFavorited = favorited);
     }
@@ -131,11 +130,13 @@ extension _VideoLookupFavorite on _VideoFushiPageState {
         _rebuild(() {
           _currentVideoSentenceIsFavorited = false;
           if (cue != null) {
-            _favoritedVideoSentences.remove(_videoFavoriteCacheKey(
-              sentence,
-              cue.startMs,
-              _favoriteSectionIndex,
-            ));
+            _favoritedVideoSentences.remove(
+              _videoFavoriteCacheKey(
+                sentence,
+                cue.startMs,
+                _favoriteSectionIndex,
+              ),
+            );
           }
           _favoritedVideoSentences.remove(
             _videoFavoriteCacheKey(sentence, null, null),
@@ -171,11 +172,9 @@ extension _VideoLookupFavorite on _VideoFushiPageState {
     if (mounted) {
       _rebuild(() {
         _currentVideoSentenceIsFavorited = true;
-        _favoritedVideoSentences.add(_videoFavoriteCacheKey(
-          sentence,
-          cue?.startMs,
-          _favoriteSectionIndex,
-        ));
+        _favoritedVideoSentences.add(
+          _videoFavoriteCacheKey(sentence, cue?.startMs, _favoriteSectionIndex),
+        );
       });
     }
     _showOsd(
@@ -257,13 +256,12 @@ extension _VideoLookupFavorite on _VideoFushiPageState {
   /// 字幕跳转列表面板某句是否已收藏（同步，读缓存 [_favoritedVideoSentences]）。
   bool _isCueFavorited(AudioCue cue) {
     final String text = cue.text.trim();
-    return _favoritedVideoSentences.contains(_videoFavoriteCacheKey(
-          text,
-          cue.startMs,
-          _favoriteSectionIndex,
-        )) ||
-        _favoritedVideoSentences
-            .contains(_videoFavoriteCacheKey(text, null, null));
+    return _favoritedVideoSentences.contains(
+          _videoFavoriteCacheKey(text, cue.startMs, _favoriteSectionIndex),
+        ) ||
+        _favoritedVideoSentences.contains(
+          _videoFavoriteCacheKey(text, null, null),
+        );
   }
 
   /// 从字幕跳转列表面板行内 toggle 某句收藏（TODO-152 子A）。与查词浮层收藏走同一
@@ -303,18 +301,18 @@ extension _VideoLookupFavorite on _VideoFushiPageState {
     _rebuild(() {
       if (wasFavorited) {
         _favoritedVideoSentences
-          ..remove(_videoFavoriteCacheKey(
-            sentence,
-            cue.startMs,
-            _favoriteSectionIndex,
-          ))
+          ..remove(
+            _videoFavoriteCacheKey(
+              sentence,
+              cue.startMs,
+              _favoriteSectionIndex,
+            ),
+          )
           ..remove(_videoFavoriteCacheKey(sentence, null, null));
       } else {
-        _favoritedVideoSentences.add(_videoFavoriteCacheKey(
-          sentence,
-          cue.startMs,
-          _favoriteSectionIndex,
-        ));
+        _favoritedVideoSentences.add(
+          _videoFavoriteCacheKey(sentence, cue.startMs, _favoriteSectionIndex),
+        );
       }
       // 列表 toggle 的若是当前查词那句，同步浮层星标态（两处共用同一收藏记录）。
       if (sentence == _lastLookupSentence.trim()) {
@@ -384,9 +382,9 @@ extension _VideoLookupFavorite on _VideoFushiPageState {
               (cue == null
                   ? s.normCharOffset == null
                   : (s.normCharOffset == cue.startMs &&
-                          (!_favoriteIsPlaylist ||
-                              s.sectionIndex == episodeIndex)) ||
-                      (s.normCharOffset == null && s.sectionIndex == null)),
+                            (!_favoriteIsPlaylist ||
+                                s.sectionIndex == episodeIndex)) ||
+                        (s.normCharOffset == null && s.sectionIndex == null)),
         )
         .toList();
   }

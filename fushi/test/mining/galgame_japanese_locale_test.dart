@@ -14,11 +14,7 @@ void main() {
     test('attach 模式（非 launch）永远不转区——进程早就建好了', () {
       for (final GalJapaneseLocaleMode mode in GalJapaneseLocaleMode.values) {
         expect(
-          resolveJapaneseLocale(
-            mode: mode,
-            launchMode: false,
-            is32Bit: true,
-          ),
+          resolveJapaneseLocale(mode: mode, launchMode: false, is32Bit: true),
           isFalse,
           reason: '$mode 下 attach 也必须短路——这是用户当前唯一的临时绕法',
         );
@@ -75,8 +71,7 @@ void main() {
         );
       });
 
-      test('判为需要 + 32 位 + 非日文系统 ⇒ 转区（BUG-1038 的日文原版样本走这格）',
-          () {
+      test('判为需要 + 32 位 + 非日文系统 ⇒ 转区（BUG-1038 的日文原版样本走这格）', () {
         expect(
           resolveJapaneseLocale(
             mode: GalJapaneseLocaleMode.auto,
@@ -243,10 +238,10 @@ void main() {
             );
             final GalJapaneseLocaleSkipReason? reason =
                 resolveJapaneseLocaleSkipReason(
-              need: need,
-              is32Bit: is32Bit,
-              systemAnsiCodePage: acp,
-            );
+                  need: need,
+                  is32Bit: is32Bit,
+                  systemAnsiCodePage: acp,
+                );
             expect(reason == null, applied, reason: '$need $is32Bit $acp');
           }
         }
@@ -265,7 +260,10 @@ void main() {
 
   group('need / evidence key 编码', () {
     test('是稳定字面量，不是 enum.name/index', () {
-      expect(galJapaneseLocaleNeedToKey(GalJapaneseLocaleNeed.needed), 'needed');
+      expect(
+        galJapaneseLocaleNeedToKey(GalJapaneseLocaleNeed.needed),
+        'needed',
+      );
       expect(
         galJapaneseLocaleNeedToKey(GalJapaneseLocaleNeed.notNeeded),
         'not_needed',
@@ -313,10 +311,7 @@ void main() {
       // 等于把一个用户一直在用的功能（BUG-1038）静默关掉 = 破坏用户空间。
       expect(galJapaneseLocaleModeFromKey(''), GalJapaneseLocaleMode.auto);
       expect(galJapaneseLocaleModeFromKey(null), GalJapaneseLocaleMode.auto);
-      expect(
-        galJapaneseLocaleModeFromKey('未来新档位'),
-        GalJapaneseLocaleMode.auto,
-      );
+      expect(galJapaneseLocaleModeFromKey('未来新档位'), GalJapaneseLocaleMode.auto);
       expect(kGalDefaultJapaneseLocaleMode, GalJapaneseLocaleMode.auto);
     });
   });

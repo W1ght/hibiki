@@ -44,11 +44,9 @@ class _FakeSegmenter implements AsrSegmenter {
   @override
   Future<List<AsrSpeechSegment>> feed(
     AsrPcmChunk chunk,
-  ) async =>
-      <AsrSpeechSegment>[
-        AsrSpeechSegment(
-            startSample: 0, samples: Float32List(2 * kAsrSampleRate)),
-      ];
+  ) async => <AsrSpeechSegment>[
+    AsrSpeechSegment(startSample: 0, samples: Float32List(2 * kAsrSampleRate)),
+  ];
 
   @override
   Future<List<AsrSpeechSegment>> flush() async => <AsrSpeechSegment>[];
@@ -64,15 +62,14 @@ class _FakeDecoder implements AsrBatchDecoder {
   @override
   Future<List<AsrDecodedSegment>> decodeBatch(
     List<AsrSpeechSegment> segments,
-  ) async =>
-      segments
-          .map(
-            (AsrSpeechSegment _) => AsrDecodedSegment(
-              tokens: const <String>['今', '日', '。'],
-              tokenOffsetsMs: const <int>[100, 300, 600],
-            ),
-          )
-          .toList();
+  ) async => segments
+      .map(
+        (AsrSpeechSegment _) => AsrDecodedSegment(
+          tokens: const <String>['今', '日', '。'],
+          tokenOffsetsMs: const <int>[100, 300, 600],
+        ),
+      )
+      .toList();
 }
 
 /// 假服务：模型就绪与否、已完成产物可编程；`start` 装配真任务 + 假会话。
@@ -85,11 +82,11 @@ class _FakeService extends AsrTranscriptionService {
     this.existingSrt,
     this.probeError,
   }) : super(
-          pcm: _FakePcm(),
-          openStore: (AsrLanguage l) async =>
-              AsrModelStore(jobsDir, asrModelPackFor(l)),
-          jobsRoot: () async => jobsDir,
-        );
+         pcm: _FakePcm(),
+         openStore: (AsrLanguage l) async =>
+             AsrModelStore(jobsDir, asrModelPackFor(l)),
+         jobsRoot: () async => jobsDir,
+       );
 
   bool ready;
   final Directory jobsDir;
@@ -148,15 +145,13 @@ class _FakeService extends AsrTranscriptionService {
   Future<String?> finishedSrtPath(
     List<String> audioPaths,
     AsrLanguage language,
-  ) async =>
-      existingSrt;
+  ) async => existingSrt;
 
   @override
   Future<AsrJobState?> existingState(
     List<String> audioPaths,
     AsrLanguage language,
-  ) async =>
-      null;
+  ) async => null;
 
   @override
   Future<void> discard(List<String> audioPaths, AsrLanguage language) async {
@@ -216,7 +211,8 @@ void main() {
     Future<String?> Function({
       required String fileName,
       required String? initialDirectory,
-    })? saveFilePicker,
+    })?
+    saveFilePicker,
     AsrLanguage? languageHint,
   }) {
     return ProviderScope(
@@ -290,10 +286,7 @@ void main() {
     await tester.pumpAndSettle();
     expect(service.lastDownloadLanguage, AsrLanguage.english);
     // 下载完成后的就绪行带英语包名。
-    expect(
-      find.textContaining(kAsrEnglishPack.displayName),
-      findsOneWidget,
-    );
+    expect(find.textContaining(kAsrEnglishPack.displayName), findsOneWidget);
   });
 
   testWidgets('偏好里存的是 en：弹层初值就是英语，start 也带英语', (WidgetTester tester) async {
@@ -377,14 +370,15 @@ void main() {
       wrap(
         service,
         (String? _) {},
-        saveFilePicker: ({
-          required String fileName,
-          required String? initialDirectory,
-        }) async {
-          askedName = fileName;
-          askedDir = initialDirectory;
-          return target;
-        },
+        saveFilePicker:
+            ({
+              required String fileName,
+              required String? initialDirectory,
+            }) async {
+              askedName = fileName;
+              askedDir = initialDirectory;
+              return target;
+            },
       ),
     );
     await tester.tap(find.byKey(const ValueKey<String>('open')));
@@ -466,8 +460,9 @@ void main() {
     expect(asrLanguageHintFromBookLanguage('   '), isNull);
   });
 
-  testWidgets('languageHint=english 且偏好存 ja：初值英语、plan 收到英语、偏好不被改写',
-      (WidgetTester tester) async {
+  testWidgets('languageHint=english 且偏好存 ja：初值英语、plan 收到英语、偏好不被改写', (
+    WidgetTester tester,
+  ) async {
     savedLanguage = 'ja';
     final _FakeService service = _FakeService(ready: true, jobsDir: tmp);
     await tester.pumpWidget(
@@ -490,8 +485,9 @@ void main() {
     expect(savedLanguage, 'ja');
   });
 
-  testWidgets('plan 带 probeError：就绪行追加「GPU 探测失败，按 CPU 规划」提示',
-      (WidgetTester tester) async {
+  testWidgets('plan 带 probeError：就绪行追加「GPU 探测失败，按 CPU 规划」提示', (
+    WidgetTester tester,
+  ) async {
     final _FakeService service = _FakeService(
       ready: true,
       jobsDir: tmp,
@@ -525,11 +521,11 @@ void main() {
       srtPath: src.path,
       audioPaths: <String>[p.join(tmp.path, 'x.m4b')],
       desktop: true,
-      saveFilePicker: ({
-        required String fileName,
-        required String? initialDirectory,
-      }) async =>
-          null,
+      saveFilePicker:
+          ({
+            required String fileName,
+            required String? initialDirectory,
+          }) async => null,
     );
     expect(r, isFalse);
   });

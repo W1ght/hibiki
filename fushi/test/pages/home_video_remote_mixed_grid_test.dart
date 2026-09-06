@@ -35,8 +35,9 @@ void main() {
 
   late Directory pathProviderDir;
   setUpAll(() {
-    pathProviderDir =
-        Directory.systemTemp.createTempSync('hibiki_mixed_grid_video_pp');
+    pathProviderDir = Directory.systemTemp.createTempSync(
+      'hibiki_mixed_grid_video_pp',
+    );
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
       (MethodCall call) async => pathProviderDir.path,
@@ -87,43 +88,46 @@ void main() {
   Widget buildApp(
     RemoteVideoClient client, {
     VideoLibrarySection section = VideoLibrarySection.allVideos,
-  }) =>
-      ProviderScope(
-        overrides: <Override>[
-          platformServicesProvider.overrideWithValue(platformServices),
-          ankiRepositoryProvider.overrideWithValue(ankiRepository),
-          appProvider.overrideWith((ref) => appModel),
-        ],
-        child: TranslationProvider(
-          child: MaterialApp(
-            home: Scaffold(
-              body: HomeVideoPage(
-                repo: VideoBookRepository(db),
-                section: section,
-                remoteVideoClientLoader: () async => client,
-                remoteVideoDownloadDestination: (RemoteVideoInfo v) async =>
-                    File('${pathProviderDir.path}/${v.id.hashCode}.mp4'),
-              ),
-            ),
+  }) => ProviderScope(
+    overrides: <Override>[
+      platformServicesProvider.overrideWithValue(platformServices),
+      ankiRepositoryProvider.overrideWithValue(ankiRepository),
+      appProvider.overrideWith((ref) => appModel),
+    ],
+    child: TranslationProvider(
+      child: MaterialApp(
+        home: Scaffold(
+          body: HomeVideoPage(
+            repo: VideoBookRepository(db),
+            section: section,
+            remoteVideoClientLoader: () async => client,
+            remoteVideoDownloadDestination: (RemoteVideoInfo v) async =>
+                File('${pathProviderDir.path}/${v.id.hashCode}.mp4'),
           ),
         ),
-      );
+      ),
+    ),
+  );
 
   testWidgets('全部视频切换列表后本地行保持可见', (WidgetTester tester) async {
     tester.view.physicalSize = const Size(1280, 800);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/list-1'),
-      title: Value('List One'),
-      videoPath: Value('/abs/list-1.mp4'),
-    ));
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/list-1'),
+        title: Value('List One'),
+        videoPath: Value('/abs/list-1.mp4'),
+      ),
+    );
 
-    await tester.pumpWidget(buildApp(
-      _ListFakeRemoteVideoClient(const <RemoteVideoInfo>[]),
-      section: VideoLibrarySection.allVideos,
-    ));
+    await tester.pumpWidget(
+      buildApp(
+        _ListFakeRemoteVideoClient(const <RemoteVideoInfo>[]),
+        section: VideoLibrarySection.allVideos,
+      ),
+    );
     await tester.pumpAndSettle();
     await tester.tap(
       find.byKey(const ValueKey<String>('video-all-videos-layout-toggle')),
@@ -144,17 +148,21 @@ void main() {
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
     // 一本本地视频 + 一条远端占位，验证两者同网格混排。
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/local-1'),
-      title: Value('Local One'),
-      videoPath: Value('/abs/local-1.mp4'),
-    ));
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/local-1'),
+        title: Value('Local One'),
+        videoPath: Value('/abs/local-1.mp4'),
+      ),
+    );
 
-    await tester.pumpWidget(buildApp(_ListFakeRemoteVideoClient(
-      <RemoteVideoInfo>[
-        RemoteVideoInfo(id: 'remote/only', title: 'Remote Only')
-      ],
-    )));
+    await tester.pumpWidget(
+      buildApp(
+        _ListFakeRemoteVideoClient(<RemoteVideoInfo>[
+          RemoteVideoInfo(id: 'remote/only', title: 'Remote Only'),
+        ]),
+      ),
+    );
     await tester.pumpAndSettle();
 
     // 本地卡在，远端占位卡在（同一 16:9 等宽网格），远端占位带云角标。
@@ -162,12 +170,14 @@ void main() {
       find.byKey(const ValueKey<String>('home_video_video/local-1')),
       findsOneWidget,
     );
-    final Finder remoteCard =
-        find.byKey(const ValueKey<String>('remote_video_card_remote_only'));
+    final Finder remoteCard = find.byKey(
+      const ValueKey<String>('remote_video_card_remote_only'),
+    );
     expect(remoteCard, findsOneWidget);
     expect(
       find.byKey(
-          const ValueKey<String>('remote_video_cloud_badge_remote_only')),
+        const ValueKey<String>('remote_video_cloud_badge_remote_only'),
+      ),
       findsOneWidget,
     );
     expect(
@@ -175,10 +185,14 @@ void main() {
       findsOneWidget,
       reason: '远端占位卡必须是“全部视频”主 SliverGrid 的一个 cell（非独立分区）',
     );
-    final Finder localCard =
-        find.byKey(const ValueKey<String>('home_video_video/local-1'));
-    expect(tester.getSize(localCard), tester.getSize(remoteCard),
-        reason: '本地与远端视频卡必须使用同一个等宽网格尺寸');
+    final Finder localCard = find.byKey(
+      const ValueKey<String>('home_video_video/local-1'),
+    );
+    expect(
+      tester.getSize(localCard),
+      tester.getSize(remoteCard),
+      reason: '本地与远端视频卡必须使用同一个等宽网格尺寸',
+    );
     final AspectRatio localCover = tester.widget<AspectRatio>(
       find.descendant(of: localCard, matching: find.byType(AspectRatio)).first,
     );
@@ -194,18 +208,22 @@ void main() {
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/dup'),
-      title: Value('Local Dup'),
-      videoPath: Value('/abs/dup.mp4'),
-    ));
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/dup'),
+        title: Value('Local Dup'),
+        videoPath: Value('/abs/dup.mp4'),
+      ),
+    );
 
-    await tester.pumpWidget(buildApp(_ListFakeRemoteVideoClient(
-      <RemoteVideoInfo>[
-        RemoteVideoInfo(id: 'video/dup', title: 'Dup On Remote'),
-        RemoteVideoInfo(id: 'video/only-remote', title: 'Only Remote'),
-      ],
-    )));
+    await tester.pumpWidget(
+      buildApp(
+        _ListFakeRemoteVideoClient(<RemoteVideoInfo>[
+          RemoteVideoInfo(id: 'video/dup', title: 'Dup On Remote'),
+          RemoteVideoInfo(id: 'video/only-remote', title: 'Only Remote'),
+        ]),
+      ),
+    );
     await tester.pumpAndSettle();
 
     // 本地卡在；远端 dup 占位被去重隐藏；只剩纯远端 only-remote 的占位卡。
@@ -229,17 +247,21 @@ void main() {
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
     await prefs.setShowRemoteEntries(false);
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/local-1'),
-      title: Value('Local One'),
-      videoPath: Value('/abs/local-1.mp4'),
-    ));
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/local-1'),
+        title: Value('Local One'),
+        videoPath: Value('/abs/local-1.mp4'),
+      ),
+    );
 
-    await tester.pumpWidget(buildApp(_ListFakeRemoteVideoClient(
-      <RemoteVideoInfo>[
-        RemoteVideoInfo(id: 'remote/only', title: 'Remote Only')
-      ],
-    )));
+    await tester.pumpWidget(
+      buildApp(
+        _ListFakeRemoteVideoClient(<RemoteVideoInfo>[
+          RemoteVideoInfo(id: 'remote/only', title: 'Remote Only'),
+        ]),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(
@@ -258,11 +280,13 @@ void main() {
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/local-1'),
-      title: Value('Local One'),
-      videoPath: Value('/abs/local-1.mp4'),
-    ));
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/local-1'),
+        title: Value('Local One'),
+        videoPath: Value('/abs/local-1.mp4'),
+      ),
+    );
 
     await tester.pumpWidget(buildApp(_ThrowingRemoteVideoClient()));
     await tester.pumpAndSettle();
@@ -291,9 +315,10 @@ class _ListFakeRemoteVideoClient implements RemoteVideoClient {
   Future<List<RemoteVideoInfo>> listRemoteVideos() async => _videos;
 
   @override
-  Future<RemoteVideoStreamUrls> remoteVideoStreamUrls(String id,
-          {int episodeIndex = 0}) async =>
-      const RemoteVideoStreamUrls(streamUrl: 'http://x/stream');
+  Future<RemoteVideoStreamUrls> remoteVideoStreamUrls(
+    String id, {
+    int episodeIndex = 0,
+  }) async => const RemoteVideoStreamUrls(streamUrl: 'http://x/stream');
 
   @override
   Future<void> getRemoteVideoSubtitle(
@@ -315,8 +340,7 @@ class _ListFakeRemoteVideoClient implements RemoteVideoClient {
   Future<({int positionMs, int updatedAtMs})> remoteVideoPosition(
     String id, {
     int episodeIndex = 0,
-  }) async =>
-      (positionMs: 0, updatedAtMs: 0);
+  }) async => (positionMs: 0, updatedAtMs: 0);
 
   @override
   Future<void> putRemoteVideoPosition(
@@ -337,9 +361,10 @@ class _ThrowingRemoteVideoClient implements RemoteVideoClient {
       throw const SocketException('offline');
 
   @override
-  Future<RemoteVideoStreamUrls> remoteVideoStreamUrls(String id,
-          {int episodeIndex = 0}) async =>
-      const RemoteVideoStreamUrls(streamUrl: 'http://x/stream');
+  Future<RemoteVideoStreamUrls> remoteVideoStreamUrls(
+    String id, {
+    int episodeIndex = 0,
+  }) async => const RemoteVideoStreamUrls(streamUrl: 'http://x/stream');
 
   @override
   Future<void> getRemoteVideoSubtitle(
@@ -361,8 +386,7 @@ class _ThrowingRemoteVideoClient implements RemoteVideoClient {
   Future<({int positionMs, int updatedAtMs})> remoteVideoPosition(
     String id, {
     int episodeIndex = 0,
-  }) async =>
-      (positionMs: 0, updatedAtMs: 0);
+  }) async => (positionMs: 0, updatedAtMs: 0);
 
   @override
   Future<void> putRemoteVideoPosition(

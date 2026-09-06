@@ -63,7 +63,8 @@ class MediaSourcesPage extends ConsumerStatefulWidget {
   final Future<void> Function(
     SourceLibraryRow source,
     SourceScanSummary summary,
-  )? onVideoScanCompleted;
+  )?
+  onVideoScanCompleted;
 
   /// 应用生命周期级刮削任务，来源行用它显示进度并防止重入。
   final VideoSourceScrapeTaskController? scrapeTaskController;
@@ -110,7 +111,8 @@ class _MediaSourcesPageState extends ConsumerState<MediaSourcesPage> {
     if (mounted) setState(() {});
   }
 
-  bool get _busy => _clearingScrapeRecords ||
+  bool get _busy =>
+      _clearingScrapeRecords ||
       widget.scrapeTaskController?.isBusy == true ||
       _viewKey.currentState?.isBusy == true;
 
@@ -177,29 +179,29 @@ class _MediaSourcesPageState extends ConsumerState<MediaSourcesPage> {
   List<QuickImportAction> _quickImportActions() {
     return switch (widget.mediaKind) {
       'book' => <QuickImportAction>[
-          QuickImportAction(
-            icon: Icons.upload_file_outlined,
-            label: t.srt_import,
-            onTap: _importBookFile,
-          ),
-          QuickImportAction(
-            icon: Icons.drive_folder_upload_outlined,
-            label: t.media_import_folder,
-            onTap: _importFolder,
-          ),
-        ],
+        QuickImportAction(
+          icon: Icons.upload_file_outlined,
+          label: t.srt_import,
+          onTap: _importBookFile,
+        ),
+        QuickImportAction(
+          icon: Icons.drive_folder_upload_outlined,
+          label: t.media_import_folder,
+          onTap: _importFolder,
+        ),
+      ],
       'video' => <QuickImportAction>[
-          QuickImportAction(
-            icon: Icons.movie_outlined,
-            label: t.video_import_action,
-            onTap: _importVideo,
-          ),
-          QuickImportAction(
-            icon: Icons.drive_folder_upload_outlined,
-            label: t.media_import_folder,
-            onTap: _importFolder,
-          ),
-        ],
+        QuickImportAction(
+          icon: Icons.movie_outlined,
+          label: t.video_import_action,
+          onTap: _importVideo,
+        ),
+        QuickImportAction(
+          icon: Icons.drive_folder_upload_outlined,
+          label: t.media_import_folder,
+          onTap: _importFolder,
+        ),
+      ],
       _ => const <QuickImportAction>[],
     };
   }
@@ -236,9 +238,8 @@ class _MediaSourcesPageState extends ConsumerState<MediaSourcesPage> {
   Future<void> _importVideo() async {
     final String? bookUid = await showAppDialog<String>(
       context: context,
-      builder: (_) => VideoImportDialog(
-        repo: VideoBookRepository(_appModel.database),
-      ),
+      builder: (_) =>
+          VideoImportDialog(repo: VideoBookRepository(_appModel.database)),
     );
     if (bookUid != null && mounted) widget.onLibraryChanged?.call();
   }
@@ -291,8 +292,7 @@ class _MediaSourcesPageState extends ConsumerState<MediaSourcesPage> {
             if (!busy) unawaited(widget.onScrapeAll!());
           },
         ),
-      if (widget.mediaKind == 'video' &&
-          widget.onClearAllScrapeRecords != null)
+      if (widget.mediaKind == 'video' && widget.onClearAllScrapeRecords != null)
         FushiIconButton(
           tooltip: t.video_source_scrape_clear_all,
           label: t.video_source_scrape_clear_all,
@@ -313,10 +313,7 @@ class _MediaSourcesPageState extends ConsumerState<MediaSourcesPage> {
     ];
     final Widget? navigation = widget.navigation;
     if (navigation != null) {
-      return FushiPageHeader.customTitle(
-        title: navigation,
-        actions: actions,
-      );
+      return FushiPageHeader.customTitle(title: navigation, actions: actions);
     }
     return FushiPageHeader(
       title: t.media_source_manage_title,

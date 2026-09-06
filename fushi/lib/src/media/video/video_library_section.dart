@@ -4,5 +4,5 @@ enum VideoLibrarySection {
   series,
   allVideos,
   sources,
-  settings
+  settings,
 }

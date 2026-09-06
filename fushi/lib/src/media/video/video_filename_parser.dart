@@ -18,11 +18,7 @@ export 'package:fushi/src/media/media_extensions.dart' show kVideoExtensions;
 /// [series] 永不为空（识别不出集号时整名作系列，按单片处理）。[season] / [episode]
 /// 识别不出为 null。纯数据，便于单测。
 class VideoNameInfo {
-  const VideoNameInfo({
-    required this.series,
-    this.season,
-    this.episode,
-  });
+  const VideoNameInfo({required this.series, this.season, this.episode});
 
   /// 系列/番剧名（去字幕组 tag / 画质 / 集号后的可读主干）。
   final String series;
@@ -93,8 +89,9 @@ VideoNameInfo parseVideoPath(String path) {
   if (info.season != null || info.episode == null || segments.length < 2) {
     return info;
   }
-  final ParsedMediaName dir =
-      FilenameParser.parse(segments[segments.length - 2]);
+  final ParsedMediaName dir = FilenameParser.parse(
+    segments[segments.length - 2],
+  );
   final int? dirSeason =
       dir.season ?? FilenameParser.takeTrailingNumericSeason(dir.title)?.season;
   if (dirSeason == null) return info;
@@ -174,12 +171,16 @@ List<VideoGroup> groupVideosIntoPlaylists(List<String> paths) {
     final VideoNameInfo info = parseVideoFilename(name);
     final String key = info.series.toLowerCase();
     displaySeries.putIfAbsent(key, () => info.series);
-    byKey.putIfAbsent(key, () => <VideoEpisode>[]).add(VideoEpisode(
-          path: path,
-          title: p.basenameWithoutExtension(name),
-          season: info.season,
-          episode: info.episode,
-        ));
+    byKey
+        .putIfAbsent(key, () => <VideoEpisode>[])
+        .add(
+          VideoEpisode(
+            path: path,
+            title: p.basenameWithoutExtension(name),
+            season: info.season,
+            episode: info.episode,
+          ),
+        );
   }
 
   final List<VideoGroup> groups = <VideoGroup>[];
@@ -187,8 +188,10 @@ List<VideoGroup> groupVideosIntoPlaylists(List<String> paths) {
     final List<VideoEpisode> eps = e.value..sort(_compareEpisodes);
     groups.add(VideoGroup(series: displaySeries[e.key]!, episodes: eps));
   }
-  groups.sort((VideoGroup a, VideoGroup b) =>
-      a.series.toLowerCase().compareTo(b.series.toLowerCase()));
+  groups.sort(
+    (VideoGroup a, VideoGroup b) =>
+        a.series.toLowerCase().compareTo(b.series.toLowerCase()),
+  );
   return groups;
 }
 
@@ -217,8 +220,10 @@ List<String> listVideoFilesInDirectory(String directory) {
   final Directory dir = Directory(directory);
   if (!dir.existsSync()) return const <String>[];
   final List<String> out = <String>[];
-  for (final FileSystemEntity entity
-      in dir.listSync(recursive: true, followLinks: false)) {
+  for (final FileSystemEntity entity in dir.listSync(
+    recursive: true,
+    followLinks: false,
+  )) {
     if (entity is! File) continue;
     final String ext = p.extension(entity.path).toLowerCase();
     if (kVideoExtensions.contains(ext)) out.add(entity.path);

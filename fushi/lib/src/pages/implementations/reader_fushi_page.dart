@@ -185,7 +185,9 @@ enum ReaderCaretMoveOutcome {
 /// same path as the logical `forward` reading advance — caret-active and plain
 /// reading Down stay consistent and neither strands focus on an unfocusable bar.
 ReaderCaretMoveOutcome readerCaretMoveOutcome(
-    String physicalDir, String status) {
+  String physicalDir,
+  String status,
+) {
   // A physical Down off the bottom of the content reports either `pageForward`
   // (paged) or `blocked` (continuous, at the document end). Both turn the page.
   if (physicalDir == 'down' && status == 'blocked') {
@@ -208,8 +210,7 @@ ReaderCaretMoveOutcome readerCaretMoveOutcome(
 bool shouldReclaimReaderFocusAfterGesture({
   required bool popupVisible,
   required bool chromeHasFocus,
-}) =>
-    !popupVisible && !chromeHasFocus;
+}) => !popupVisible && !chromeHasFocus;
 
 /// 视口尺寸变化是否大到需要重排分页（BUG-210 / TODO-146）。
 ///
@@ -374,8 +375,9 @@ ReaderThemeColors _resolveBaseReaderThemeColors({
   return (
     bg: scheme.surface,
     fg: scheme.onSurface,
-    sentenceAudioHighlight:
-        scheme.primary.withValues(alpha: dark ? 0.34 : 0.40),
+    sentenceAudioHighlight: scheme.primary.withValues(
+      alpha: dark ? 0.34 : 0.40,
+    ),
     // selection 用 tertiary：与 sasayaki(primary) 错开色相，查词高亮 ≠ 跟读高亮。
     selection: scheme.tertiary.withValues(alpha: dark ? 0.35 : 0.40),
     link: scheme.primary,
@@ -465,8 +467,9 @@ ReadChargeResult accumulateSessionCharsCapped({
     );
   }
   final int affordable = credit ~/ 1000;
-  final int charsAdded =
-      raw.charsAdded < affordable ? raw.charsAdded : affordable;
+  final int charsAdded = raw.charsAdded < affordable
+      ? raw.charsAdded
+      : affordable;
   return (
     charsAdded: charsAdded,
     highWaterMark: raw.highWaterMark,
@@ -1071,8 +1074,9 @@ ReaderStableProgressDetails? parseReaderStableProgressDetails(dynamic result) {
   final int? total = int.tryParse(parts[1]);
   if (current == null || total == null || total <= 0) return null;
 
-  final int charOffset =
-      parts.length >= 3 ? (int.tryParse(parts[2]) ?? -1) : -1;
+  final int charOffset = parts.length >= 3
+      ? (int.tryParse(parts[2]) ?? -1)
+      : -1;
   return (
     current: current,
     total: total,
@@ -1248,8 +1252,9 @@ ChapterProgressTarget resolveChapterProgressForGlobalOffset(
   }
   final int chapterStart = cumulativeChars[targetChapter];
   final int chapterLen = charCounts[targetChapter];
-  final double progress =
-      chapterLen > 0 ? (globalOffset - chapterStart) / chapterLen : 0;
+  final double progress = chapterLen > 0
+      ? (globalOffset - chapterStart) / chapterLen
+      : 0;
   return ChapterProgressTarget(
     chapter: targetChapter,
     progress: progress.clamp(0.0, 1.0),
@@ -1545,7 +1550,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   /// 缩放后底栏在屏高度。所有把底栏高度喂给 WebView/光标/焦点环/正文预留的地方都
   /// 走这个 getter，保证视觉高度与预留高度恒等。
   double get _readerChromeHeight => ReaderChromeScaler.scaledHeight(
-      _readerChromeBaseHeight, _readerChromeScale);
+    _readerChromeBaseHeight,
+    _readerChromeScale,
+  );
   static const double _infoFontSize = kTopProgressFontSize;
 
   /// 字数进度状态（[ReaderProgressState]）；下面四个同名 getter/setter 只是转发，
@@ -1784,23 +1791,24 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   // setState」→ 一次拖动上百趟 WebView 往返叠加、本页 build 每 tick 全量重建。
   // 合并语义：在飞期间的触发只置脏标记、收尾补跑一趟；动作跑时读最新设置，
   // last-write-wins 最终状态不丢；单次设置变更仍立即执行。
-  late final CoalescedAsyncRunner _liveSettingsRunner =
-      CoalescedAsyncRunner(() async {
-    if (!mounted) return;
-    // 必须就地 catch：await 边界之后的异步异常（如 WebView 半销毁时
-    // evaluateJavascript 抛 PlatformException）会逃进当前 zone，绕过
-    // FlutterError.onError/takeException/platformDispatcher，生产里成未捕获
-    // 异步错误、测试里让 binding 断言。
-    try {
-      await _applyStylesLive();
-    } catch (e, s) {
-      ErrorLogService.instance.log('ReaderFushi.onSettingsChangedLive', e, s);
-    }
-    if (!mounted) return;
-    // BUG-712 ①：highlightOnTap 是 JS 侧点词门控镜像的另一半，设置热更新时同步。
-    _syncTapGateJs();
-    setState(() {});
-  });
+  late final CoalescedAsyncRunner _liveSettingsRunner = CoalescedAsyncRunner(
+    () async {
+      if (!mounted) return;
+      // 必须就地 catch：await 边界之后的异步异常（如 WebView 半销毁时
+      // evaluateJavascript 抛 PlatformException）会逃进当前 zone，绕过
+      // FlutterError.onError/takeException/platformDispatcher，生产里成未捕获
+      // 异步错误、测试里让 binding 断言。
+      try {
+        await _applyStylesLive();
+      } catch (e, s) {
+        ErrorLogService.instance.log('ReaderFushi.onSettingsChangedLive', e, s);
+      }
+      if (!mounted) return;
+      // BUG-712 ①：highlightOnTap 是 JS 侧点词门控镜像的另一半，设置热更新时同步。
+      _syncTapGateJs();
+      setState(() {});
+    },
+  );
 
   bool _lyricsPageReady = false;
   int _lyricsLoadGeneration = 0;
@@ -1858,8 +1866,7 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   // 一下立即收起置 false。顶部与底栏共用同一旗与同一计时器（决策#1 时长共用、决策#2
   // 两栏唤出/收起联动）。改 _chromeTransientVisible 不改预留高 → 不需重锚。
   bool get _chromeTransientVisible => _chrome.transientVisible;
-  set _chromeTransientVisible(bool value) =>
-      _chrome.transientVisible = value;
+  set _chromeTransientVisible(bool value) => _chrome.transientVisible = value;
   Timer? get _chromeAutoHideTimer => _chrome.autoHideTimer;
   double _lastSyncedWidth = 0;
   double _lastSyncedHeight = 0;
@@ -1887,15 +1894,17 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   // turning the page — gated in [_handleKeyEvent] via this scope's [hasFocus].
   // This intentionally keys off chrome focus (not root focus) so page-turn keys
   // keep working after a tap lands focus inside the WebView (HBK #1).
-  final FocusScopeNode _chromeFocusScope =
-      FocusScopeNode(debugLabel: 'readerChrome');
+  final FocusScopeNode _chromeFocusScope = FocusScopeNode(
+    debugLabel: 'readerChrome',
+  );
 
   // The dictionary popup's Flutter header toolbar (favourite / replay / play /
   // play-from-cue) is a sibling layer of the popup WebView content, reached by
   // Up at the top of the content — exactly like the reader bottom bar relative
   // to the reading content. Its own scope so focus can move into it and back.
-  final FocusScopeNode _popupHeaderScope =
-      FocusScopeNode(debugLabel: 'popupHeader');
+  final FocusScopeNode _popupHeaderScope = FocusScopeNode(
+    debugLabel: 'popupHeader',
+  );
 
   // The char-level dictionary reading-cursor state machine, owned by the shared
   // [DictionaryCaretController] (TODO-387) so video / home / standalone-window
@@ -1947,33 +1956,33 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   /// 桌面端底部状态行（ッツ Reader 风格：左阅读追踪 / 右字数进度）是否启用。
   /// 单一真相源 [readerStatusFooterEnabled]：桌面且非歌词模式。
   bool get _statusFooterEnabled => readerStatusFooterEnabled(
-        desktop: isDesktopPlatform,
-        lyricsMode: _lyricsMode,
-      );
+    desktop: isDesktopPlatform,
+    lyricsMode: _lyricsMode,
+  );
 
   /// 状态行的底部预留高（挤压式：视觉高度 == 预留高度，正文永不压到它下面）。
   /// 不随 `_hasEverLoaded` 翻转——预留从初始 HTML 起就含它，首屏就绪后不必再补发
   /// insets 触发一次 reflow；只有**绘制**才等首次冷加载完成（[_buildStatusFooter]）。
   double get _statusFooterReserve => readerStatusFooterReserve(
-        enabled: _statusFooterEnabled,
-        footerHeight: kReaderStatusFooterHeight,
-      );
+    enabled: _statusFooterEnabled,
+    footerHeight: kReaderStatusFooterHeight,
+  );
 
   /// 桌面端 ッツ 形态 chrome（顶部工具栏 + 右侧抽屉）是否启用：与状态行同判据
   /// （桌面且非歌词模式），单一真相源 [readerDesktopChromeEnabled]。
   bool get _desktopChromeEnabled => readerDesktopChromeEnabled(
-        desktop: isDesktopPlatform,
-        lyricsMode: _lyricsMode,
-      );
+    desktop: isDesktopPlatform,
+    lyricsMode: _lyricsMode,
+  );
 
   /// 顶部工具栏的顶部预留高：悬浮态（默认）恒 0；挤压态且底栏占位时占工具栏高
   /// （与 [_bottomChromeReserve] 同一台状态机的上端），并入 [_readerTopOffset]。
   double get _desktopHeaderReserve => readerDesktopHeaderReserve(
-        enabled: _desktopChromeEnabled,
-        barOccupiesLayout: _hasEverLoaded && _showChrome,
-        floating: _bottomBarFloating,
-        headerHeight: kReaderDesktopHeaderHeight,
-      );
+    enabled: _desktopChromeEnabled,
+    barOccupiesLayout: _hasEverLoaded && _showChrome,
+    floating: _bottomBarFloating,
+    headerHeight: kReaderDesktopHeaderHeight,
+  );
 
   /// 顶部进度信息条的预留高（单一真相源 [kTopProgressStripHeight]）。历史值为裸
   /// `_infoFontSize * 1.5`，未计入 BUG-547 毛玻璃 pill 后加的上下内边距，导致挤压模式
@@ -1993,36 +2002,36 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   /// TODO-975：顶部进度的预留高（单一真相源）。关进度 / 悬浮态恒 0（需求 A：关进度
   /// 回收 18px），挤压且显示时占 [_infoStripHeight]。
   double get _topProgressReserve => topProgressReserve(
-        showTopProgress: _showTopProgress,
-        floating: _topProgressFloating,
-        infoStripHeight: _infoStripHeight,
-      );
+    showTopProgress: _showTopProgress,
+    floating: _topProgressFloating,
+    infoStripHeight: _infoStripHeight,
+  );
 
   /// TODO-975：底栏内容行的预留高（不含系统底 inset，单一真相源）。底栏不占位 /
   /// 悬浮态恒 0，挤压且占位时占 [_readerChromeHeight]。占位判据与
   /// [_buildBottomChrome] 的可见条件（_hasEverLoaded && _showChrome）一致。
   double get _bottomChromeReserve => bottomChromeReserve(
-        barOccupiesLayout: _hasEverLoaded && _showChrome,
-        floating: _bottomBarFloating,
-        chromeHeight: _readerChromeHeight,
-      );
+    barOccupiesLayout: _hasEverLoaded && _showChrome,
+    floating: _bottomBarFloating,
+    chromeHeight: _readerChromeHeight,
+  );
 
   /// TODO-975：顶部进度此刻是否绘制。悬浮态额外受 [_chromeTransientVisible]（点击
   /// 唤出、计时自动收起）门控；挤压态恒随 [_showTopProgress]。
   bool get _topProgressShouldPaint => topProgressVisible(
-        showTopProgress: _showTopProgress,
-        floating: _topProgressFloating,
-        transientVisible: _chromeTransientVisible,
-      );
+    showTopProgress: _showTopProgress,
+    floating: _topProgressFloating,
+    transientVisible: _chromeTransientVisible,
+  );
 
   /// TODO-975：底栏此刻是否绘制。挤压态随 [_showChrome]；悬浮态额外受
   /// [_chromeTransientVisible] 门控（与顶部共用同一唤出/收起状态）。
   bool get _bottomBarShouldPaint => bottomBarVisible(
-        hasEverLoaded: _hasEverLoaded,
-        chromeExpanded: _showChrome,
-        floating: _bottomBarFloating,
-        transientVisible: _chromeTransientVisible,
-      );
+    hasEverLoaded: _hasEverLoaded,
+    chromeExpanded: _showChrome,
+    floating: _bottomBarFloating,
+    transientVisible: _chromeTransientVisible,
+  );
 
   /// TODO-975：是否有任一 chrome 处于悬浮模式（决定是否启用「点击唤出 + 自动收起」
   /// 状态机；都不悬浮时走纯挤压旧路径，无 timer）。
@@ -2048,7 +2057,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   bool _macosFullscreen = false;
 
   double get _readerTopOffset =>
-      _stableTopInset + _macosWindowTitlebarInset + _topProgressReserve +
+      _stableTopInset +
+      _macosWindowTitlebarInset +
+      _topProgressReserve +
       _desktopHeaderReserve;
 
   double get _readerBottomReserve =>
@@ -2078,8 +2089,8 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
         await Future<void>.delayed(Duration.zero);
       };
       ReaderFushiPage.debugToggleLyricsMode = _toggleLyricsMode;
-      ReaderFushiPage.debugLyricsModeReady =
-          () => mounted && _lyricsMode && _lyricsPageReady;
+      ReaderFushiPage.debugLyricsModeReady = () =>
+          mounted && _lyricsMode && _lyricsPageReady;
       ReaderFushiPage.debugJumpToFavorite = _jumpToFavoriteSentence;
       return true;
     }());
@@ -2090,14 +2101,16 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     if (desktopWindowFullscreenSupported) {
       unawaited(_readInitialWindowFullscreenState());
     }
-    _exitFlushCallback =
-        ExitFlushRegistry.instance.register(_flushAllForProcessExit);
+    _exitFlushCallback = ExitFlushRegistry.instance.register(
+      _flushAllForProcessExit,
+    );
     // BUG-1744：macOS 全屏进出必须重算顶部让位并把新 inset 回喂给 WebView。
     // didChangeDependencies 只比较 viewPadding，而桌面全屏切换通常不改
     // viewPadding（两边都是 0），所以那条路径永远不会触发。
     _macosFullscreen = MacosFullscreenState.instance.isFullscreen.value;
-    MacosFullscreenState.instance.isFullscreen
-        .addListener(_onMacosFullscreenChanged);
+    MacosFullscreenState.instance.isFullscreen.addListener(
+      _onMacosFullscreenChanged,
+    );
     unawaited(MacosFullscreenState.instance.ensureRegistered());
     // The inset reading-content focus ring only paints in traditional
     // (keyboard/gamepad) highlight mode; rebuild it when the mode flips so it
@@ -2112,9 +2125,10 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     ReaderFushiSource.onLayoutReloadLive = () {
       if (!mounted) return;
       unawaited(
-          _reloadWithCurrentSettings().catchError((Object e, StackTrace s) {
-        ErrorLogService.instance.log('ReaderFushi.onLayoutReloadLive', e, s);
-      }));
+        _reloadWithCurrentSettings().catchError((Object e, StackTrace s) {
+          ErrorLogService.instance.log('ReaderFushi.onLayoutReloadLive', e, s);
+        }),
+      );
     };
     // 纯 Flutter chrome 布局变化（如反转底栏）只需重建一次重读偏好，
     // 不动 WebView 内容、不重锚、不重排分页。
@@ -2132,12 +2146,15 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
       setState(() {
         _chromeTransientVisible = false;
       });
-      unawaited(_applyChromeInsetsAndReanchor().catchError(
-        (Object e, StackTrace s) {
-          ErrorLogService.instance
-              .log('ReaderFushi.onChromeReanchorLive', e, s);
-        },
-      ));
+      unawaited(
+        _applyChromeInsetsAndReanchor().catchError((Object e, StackTrace s) {
+          ErrorLogService.instance.log(
+            'ReaderFushi.onChromeReanchorLive',
+            e,
+            s,
+          );
+        }),
+      );
     };
     _initBook();
   }
@@ -2200,14 +2217,14 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     // 正常路径 await 时错误照常抛给 _initBook 的兜底。
     final Future<ReaderPosition?> savedPositionFuture =
         widget.initialBookmarkJump != null
-            ? Future<ReaderPosition?>.value(null)
-            : bookLocateFuture.then((_BookLocateResult located) {
-                final String? uid = located.bookRow?.uid;
-                if (uid == null || uid.isEmpty) {
-                  return Future<ReaderPosition?>.value(null);
-                }
-                return ReaderPositionRepository(db).findByBookUid(uid);
-              });
+        ? Future<ReaderPosition?>.value(null)
+        : bookLocateFuture.then((_BookLocateResult located) {
+            final String? uid = located.bookRow?.uid;
+            if (uid == null || uid.isEmpty) {
+              return Future<ReaderPosition?>.value(null);
+            }
+            return ReaderPositionRepository(db).findByBookUid(uid);
+          });
     savedPositionFuture.ignore();
 
     await profileSettingsFuture;
@@ -2221,7 +2238,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     if (!located.exists) {
       debugPrint('[ReaderFushi] book ${widget.bookKey} not found on disk');
       FushiToast.show(
-          msg: t.book_file_not_found, severity: ToastSeverity.error);
+        msg: t.book_file_not_found,
+        severity: ToastSeverity.error,
+      );
       // 与 _initBook catch 同款 _popInProgress 合流（防与用户手动退出竞发连退两级）。
       if (_popInProgress) return;
       _popInProgress = true;
@@ -2252,10 +2271,13 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     try {
       _book = await compute(parseBookOnly, extractDir);
       debugPrint(
-          '[ReaderFushi] parsed EPUB: ${_book!.chapters.length} chapters');
+        '[ReaderFushi] parsed EPUB: ${_book!.chapters.length} chapters',
+      );
       if (bookRow != null) {
         charsFromDb = charCountsFromChaptersJson(
-            bookRow.chaptersJson, _book!.chapters.length);
+          bookRow.chaptersJson,
+          _book!.chapters.length,
+        );
       }
     } on FormatException catch (e) {
       debugPrint('[ReaderFushi] EPUB parse failed ($e), trying DB metadata');
@@ -2264,11 +2286,15 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
       _book ??= _buildLegacyBook(extractDir, coverHref: bookRow?.coverPath);
       if (bookRow != null) {
         charsFromDb = charCountsFromChaptersJson(
-            bookRow.chaptersJson, _book!.chapters.length);
+          bookRow.chaptersJson,
+          _book!.chapters.length,
+        );
       }
       if (!mounted) return;
       FushiToast.show(
-          msg: t.epub_parse_fallback, severity: ToastSeverity.warning);
+        msg: t.epub_parse_fallback,
+        severity: ToastSeverity.warning,
+      );
     }
 
     final List<String> hrefs = _book!.chapters.map((ch) => ch.href).toList();
@@ -2282,7 +2308,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
       _applyCharCounts(charsFromDb);
       if (bookRow != null &&
           chaptersJsonCharCaliberIsCurrent(
-              bookRow.chaptersJson, _book!.chapters.length)) {
+            bookRow.chaptersJson,
+            _book!.chapters.length,
+          )) {
         // 当前口径计数兼作 isImageOnlyChapter 的免解析短路提示（方向安全性见
         // [EpubBook.setChapterCharCountHints]）；旧口径方向无保证，不注入，
         // 等后台重算落定后由 _recomputeCharCountsInBackground 补上。
@@ -2295,7 +2323,8 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
       // total、统计暂累 0），同时后台 isolate 重算整本，落定后 _applyCharCounts
       // 补齐 totalChars 并重置统计基准，保证最终进度/统计字数等价、不丢字数。
       _applyCharCounts(
-          List<int>.filled(_book!.chapters.length, 0, growable: false));
+        List<int>.filled(_book!.chapters.length, 0, growable: false),
+      );
       _recomputeCharCountsInBackground();
     }
 
@@ -2337,8 +2366,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
         // BUG-461: 句长可用时算句尾绝对偏移（连续模式横排整句对齐进可见区，句尾不被
         // 底栏切）。无句长（制卡行 / 老收藏）→ -1 退回单点句首锚（旧行为）。
         final int? len = bm.charAnchorLength;
-        _initialCharOffsetEnd =
-            (len != null && len > 0) ? charAnchor + len : -1;
+        _initialCharOffsetEnd = (len != null && len > 0)
+            ? charAnchor + len
+            : -1;
       } else {
         _initialProgress = bm.normCharOffset / 10000.0;
         _initialCharOffset = -1; // BUG-162: 书签按 normCharOffset 分数跳转，非 char 锚。
@@ -2350,16 +2380,20 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
       _lastProgressSection = _currentChapter;
       _lastProgressValue = _initialProgress;
       _lastProgressCharOffset = _initialCharOffset;
-      debugPrint('[ReaderFushi] restore from bookmark: '
-          'chapter=$_currentChapter progress=$_initialProgress '
-          'charAnchor=$_initialCharOffset '
-          'preserveSavedPosition=$_suppressPositionPersist');
+      debugPrint(
+        '[ReaderFushi] restore from bookmark: '
+        'chapter=$_currentChapter progress=$_initialProgress '
+        'charAnchor=$_initialCharOffset '
+        'preserveSavedPosition=$_suppressPositionPersist',
+      );
     } else {
       final ReaderPosition? saved = await savedPositionFuture;
       if (!mounted) return;
-      debugPrint('[ReaderFushi] restore lookup: bookKey=${widget.bookKey} '
-          'saved=$saved section=${saved?.sectionIndex} '
-          'offset=${saved?.normCharOffset}');
+      debugPrint(
+        '[ReaderFushi] restore lookup: bookKey=${widget.bookKey} '
+        'saved=$saved section=${saved?.sectionIndex} '
+        'offset=${saved?.normCharOffset}',
+      );
       if (saved != null &&
           saved.sectionIndex >= 0 &&
           saved.sectionIndex < _book!.chapters.length) {
@@ -2410,13 +2444,21 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
 
     // 有声书槽迟到落定：底栏 / 状态行接线要重建，且底栏预留可能从 0 变非 0，补发一次
     // chrome insets（与 BUG-467 首屏补发同一条路）。附着失败只记日志，不影响正文。
-    unawaited(audioSlotFuture.then((_) {
-      if (!mounted) return;
-      _rebuild(() {});
-      if (_hasEverLoaded) _reapplyChromeInsetsAfterFirstLoad();
-    }).catchError((Object e, StackTrace s) {
-      ErrorLogService.instance.log('ReaderFushi.resolveAudioSlot(deferred)', e, s);
-    }));
+    unawaited(
+      audioSlotFuture
+          .then((_) {
+            if (!mounted) return;
+            _rebuild(() {});
+            if (_hasEverLoaded) _reapplyChromeInsetsAfterFirstLoad();
+          })
+          .catchError((Object e, StackTrace s) {
+            ErrorLogService.instance.log(
+              'ReaderFushi.resolveAudioSlot(deferred)',
+              e,
+              s,
+            );
+          }),
+    );
   }
 
   /// TODO-131: 按 bookKey 查 EpubBooks 行 + 校验磁盘目录存在。与 profile/settings
@@ -2464,28 +2506,37 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   void _recomputeCharCountsInBackground() {
     final EpubBook? book = _book;
     if (book == null || book.chapters.isEmpty) return;
-    unawaited(compute(countChapterChars, book).then((List<int> counts) {
-      // 书可能在重算期间被换（重载 / 退出）；仅当仍是同一本、长度一致才采用。
-      if (!mounted ||
-          !identical(_book, book) ||
-          counts.length != book.chapters.length) {
-        return;
-      }
-      _applyCharCounts(counts);
-      // 新口径计数落定：补注 isImageOnlyChapter 的免解析短路提示（开书时旧口径
-      // 未注入的书由此补齐，后续 spread 重建/预取不再逐章解析）。
-      book.setChapterCharCountHints(counts);
-      _sessionMaxAbsoluteChars = _absoluteCharPosition(_lastProgressValue);
-      _lastWatermarkAdvanceAt = DateTime.now();
-      // 起新 session / 跳转播种：额度一并清零，否则带着满桶开局会让掠过被计入。
-      _readChargeCreditMilliChars = 0;
-      // TODO-1192: 把新口径计数回写 chaptersJson（含 charCaliber 标记），使书架总
-      // 字数与下次开书都用新口径，避免每次开书都重算（旧书 / v1 书一次性升级）。
-      unawaited(_persistRecomputedCharCounts(counts));
-    }).catchError((Object e, StackTrace s) {
-      ErrorLogService.instance
-          .log('ReaderFushi._recomputeCharCountsInBackground', e, s);
-    }));
+    unawaited(
+      compute(countChapterChars, book)
+          .then((List<int> counts) {
+            // 书可能在重算期间被换（重载 / 退出）；仅当仍是同一本、长度一致才采用。
+            if (!mounted ||
+                !identical(_book, book) ||
+                counts.length != book.chapters.length) {
+              return;
+            }
+            _applyCharCounts(counts);
+            // 新口径计数落定：补注 isImageOnlyChapter 的免解析短路提示（开书时旧口径
+            // 未注入的书由此补齐，后续 spread 重建/预取不再逐章解析）。
+            book.setChapterCharCountHints(counts);
+            _sessionMaxAbsoluteChars = _absoluteCharPosition(
+              _lastProgressValue,
+            );
+            _lastWatermarkAdvanceAt = DateTime.now();
+            // 起新 session / 跳转播种：额度一并清零，否则带着满桶开局会让掠过被计入。
+            _readChargeCreditMilliChars = 0;
+            // TODO-1192: 把新口径计数回写 chaptersJson（含 charCaliber 标记），使书架总
+            // 字数与下次开书都用新口径，避免每次开书都重算（旧书 / v1 书一次性升级）。
+            unawaited(_persistRecomputedCharCounts(counts));
+          })
+          .catchError((Object e, StackTrace s) {
+            ErrorLogService.instance.log(
+              'ReaderFushi._recomputeCharCountsInBackground',
+              e,
+              s,
+            );
+          }),
+    );
   }
 
   Future<EpubBook?> _buildBookFromDb(
@@ -2514,13 +2565,15 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
       final File file = File(p.join(extractDir, href));
       final String html = file.existsSync() ? file.readAsStringSync() : '';
       final String mediaType = ch['mediaType'] as String? ?? 'text/html';
-      chapters.add(EpubChapter(
-        id: ch['id'] as String? ?? 'section-$i',
-        href: href,
-        mediaType: mediaType,
-        html: html,
-        spineIndex: i,
-      ));
+      chapters.add(
+        EpubChapter(
+          id: ch['id'] as String? ?? 'section-$i',
+          href: href,
+          mediaType: mediaType,
+          html: html,
+          spineIndex: i,
+        ),
+      );
       // BUG-1218：key 与 filePath 必须与 [EpubParser._resolveWithinExtract] /
       // [EpubParser._relHref] **同构造**——越界判据用 canonicalize（大小写折叠，
       // `../` 逃逸不被绕过），真实路径与键用 normalize（**保留大小写**）。此前这里
@@ -2533,10 +2586,13 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
         continue;
       }
       final String absPath = p.normalize(joined);
-      final String relPath =
-          p.relative(absPath, from: normExtractDir).replaceAll('\\', '/');
-      resources[normalizeHref(relPath)] =
-          EpubResource(mediaType: mediaType, filePath: absPath);
+      final String relPath = p
+          .relative(absPath, from: normExtractDir)
+          .replaceAll('\\', '/');
+      resources[normalizeHref(relPath)] = EpubResource(
+        mediaType: mediaType,
+        filePath: absPath,
+      );
     }
 
     List<EpubTocItem> toc = const <EpubTocItem>[];
@@ -2551,8 +2607,10 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
       }).toList();
     }
 
-    debugPrint('[ReaderFushi] built from DB: ${chapters.length} chapters, '
-        '${toc.length} toc entries');
+    debugPrint(
+      '[ReaderFushi] built from DB: ${chapters.length} chapters, '
+      '${toc.length} toc entries',
+    );
 
     return EpubBook(
       title: row.title,
@@ -2572,22 +2630,23 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   EpubBook _buildLegacyBook(String extractDir, {String? coverHref}) {
     final List<FileSystemEntity> htmlFiles =
         Directory(extractDir).listSync(recursive: true).where((e) {
-      if (e is! File) return false;
-      final String ext = p.extension(e.path).toLowerCase();
-      return ext == '.html' || ext == '.xhtml' || ext == '.htm';
-    }).toList()
-          ..sort((a, b) => compareAudioFilePath(a.path, b.path));
+          if (e is! File) return false;
+          final String ext = p.extension(e.path).toLowerCase();
+          return ext == '.html' || ext == '.xhtml' || ext == '.htm';
+        }).toList()..sort((a, b) => compareAudioFilePath(a.path, b.path));
 
     final List<EpubChapter> chapters = <EpubChapter>[];
     for (int i = 0; i < htmlFiles.length; i++) {
       final File f = htmlFiles[i] as File;
-      chapters.add(EpubChapter(
-        id: 'section-$i',
-        href: p.relative(f.path, from: extractDir).replaceAll('\\', '/'),
-        mediaType: 'text/html',
-        html: f.readAsStringSync(),
-        spineIndex: i,
-      ));
+      chapters.add(
+        EpubChapter(
+          id: 'section-$i',
+          href: p.relative(f.path, from: extractDir).replaceAll('\\', '/'),
+          mediaType: 'text/html',
+          html: f.readAsStringSync(),
+          spineIndex: i,
+        ),
+      );
     }
 
     return EpubBook(
@@ -2622,11 +2681,16 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
         next['charCaliber'] = kChapterCharCountCaliber;
         updated.add(next);
       }
-      await appModel.database
-          .updateEpubBookChaptersJson(bookKey, jsonEncode(updated));
+      await appModel.database.updateEpubBookChaptersJson(
+        bookKey,
+        jsonEncode(updated),
+      );
     } catch (e, stack) {
-      ErrorLogService.instance
-          .log('ReaderFushi._persistRecomputedCharCounts', e, stack);
+      ErrorLogService.instance.log(
+        'ReaderFushi._persistRecomputedCharCounts',
+        e,
+        stack,
+      );
     }
   }
 
@@ -2636,8 +2700,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     // Complete it as failed now (and clear its precise-locate request) instead
     // of leaving the callback alive until the 10-second timeout.
     _failNavigation();
-    MacosFullscreenState.instance.isFullscreen
-        .removeListener(_onMacosFullscreenChanged);
+    MacosFullscreenState.instance.isFullscreen.removeListener(
+      _onMacosFullscreenChanged,
+    );
     assert(() {
       // TODO-2603：页面走了就释放钩子所有权，下一个阅读器才能装（无条件清，与旧行为
       // 逐字一致——钩子本来就是无条件清的，这里只多清一个所有者字段）。
@@ -2707,9 +2772,14 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
       // stopPlayback 在 await 边界后若抛平台异常（native 解码器半销毁），会逃进
       // 当前 zone 成未捕获异步错误。与本文件其它 unawaited future 惯例对齐。
       unawaited(
-          appModel.audiobookSession.stop().catchError((Object e, StackTrace s) {
-        ErrorLogService.instance.log('ReaderFushi.disposeStopAudiobook', e, s);
-      }));
+        appModel.audiobookSession.stop().catchError((Object e, StackTrace s) {
+          ErrorLogService.instance.log(
+            'ReaderFushi.disposeStopAudiobook',
+            e,
+            s,
+          );
+        }),
+      );
     }
     _studyClock?.dispose();
     _focusNode.dispose();
@@ -2764,9 +2834,10 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     // 平台异常，语义与 dispose 路径一致）。
     if (!appModel.audiobookBackgroundPlay) {
       unawaited(
-          appModel.audiobookSession.stop().catchError((Object e, StackTrace s) {
-        ErrorLogService.instance.log('ReaderFushi.popStopAudiobook', e, s);
-      }));
+        appModel.audiobookSession.stop().catchError((Object e, StackTrace s) {
+          ErrorLogService.instance.log('ReaderFushi.popStopAudiobook', e, s);
+        }),
+      );
     }
   }
 
@@ -2834,12 +2905,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   /// [_syncPageSize]；timer 在 dispose 取消（_resizeRepaginateDebounce?.cancel()）。
   void _armResizeRepaginateDebounce() {
     _resizeRepaginateDebounce?.cancel();
-    _resizeRepaginateDebounce = Timer(
-      const Duration(milliseconds: 50),
-      () {
-        if (mounted) _syncPageSize();
-      },
-    );
+    _resizeRepaginateDebounce = Timer(const Duration(milliseconds: 50), () {
+      if (mounted) _syncPageSize();
+    });
   }
 
   @override
@@ -2877,19 +2945,21 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     // progress 恢复，把用户从当前页弹到更靠前的页/章节开头（「翻页跳回章节开头」）。
     final ({bool width, bool height}) repaginate =
         readerViewportNeedsRepaginate(
-      width: w,
-      height: h,
-      lastWidth: _lastSyncedWidth,
-      lastHeight: _lastSyncedHeight,
-    );
+          width: w,
+          height: h,
+          lastWidth: _lastSyncedWidth,
+          lastHeight: _lastSyncedHeight,
+        );
     final bool widthChanged = repaginate.width;
     final bool heightChanged = repaginate.height;
     if (!widthChanged && !heightChanged) return;
     // BUG-111: 诊断——窗口/缩放 settle 或 resize 后，把真实视口与已分页基线比对。
     // 若 content-ready 后这里报 widthChanged，说明初始分页宽度偏窄、正在自动重排铺满。
-    debugPrint('[ReaderFushi] _syncPageSize w=$w h=$h '
-        'paginated=$_paginatedWidth x $_paginatedHeight '
-        'widthChanged=$widthChanged heightChanged=$heightChanged');
+    debugPrint(
+      '[ReaderFushi] _syncPageSize w=$w h=$h '
+      'paginated=$_paginatedWidth x $_paginatedHeight '
+      'widthChanged=$widthChanged heightChanged=$heightChanged',
+    );
     _lastSyncedWidth = w;
     _lastSyncedHeight = h;
 
@@ -2901,9 +2971,11 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
       final ReaderStableProgressDetails? snapshot =
           parseReaderStableProgressDetails(result);
       final bool hasSameChapterCache = _lastProgressSection == _currentChapter;
-      final double progress = snapshot?.progress ??
+      final double progress =
+          snapshot?.progress ??
           (hasSameChapterCache ? _lastProgressValue : 0.0);
-      final int? charOffset = snapshot?.charOffset ??
+      final int? charOffset =
+          snapshot?.charOffset ??
           (hasSameChapterCache ? _lastProgressCharOffset : null);
       await _navigateToChapter(
         _currentChapter,
@@ -2991,13 +3063,13 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     // 章首（裸 window.scrollY 无分页模式的 snap/lock 保护）。在缩放变化那一帧采锚 + 置旗，
     // 过渡帧 settle 后重锚回原字符。门控/序列见 [_reanchorContinuousForUiScale]。
     // 用 select 只监听 appUiScale 标量，避免 AppModel 任意字段变更都触发重锚。
-    ref.listen<double>(
-      appProvider.select((AppModel m) => m.appUiScale),
-      (double? previous, double next) {
-        if (previous == null || previous == next) return;
-        _reanchorContinuousForUiScale();
-      },
-    );
+    ref.listen<double>(appProvider.select((AppModel m) => m.appUiScale), (
+      double? previous,
+      double next,
+    ) {
+      if (previous == null || previous == next) return;
+      _reanchorContinuousForUiScale();
+    });
 
     // TODO-690 / BUG-399：透明 LayoutBuilder 作为桌面窗口 resize → 重排的通道。
     // 位于 FushiAppUiScaleNeutralizer 之下（路由层 ReaderFushiSource.buildLaunchPage
@@ -3043,148 +3115,153 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
               behavior: HitTestBehavior.translucent,
               onPointerDown: _handleReaderPointerDown,
               child: PopScope(
-              canPop: false,
-              onPopInvokedWithResult: (didPop, dynamic result) async {
-                if (didPop) return;
-                // BUG-782 加固：onWillPop 是异步长操作（落位置 flush + closeMedia
-                // 约百毫秒），窗口期内第二次退出触发（ESC/手柄 B 连按、退出按钮后
-                // 再 ESC）会并发再跑一条 onWillPop——首条完成 pop 掉阅读器后，第二
-                // 条的 nav.pop() 会把下面的书架也弹掉（连退两级 + closeMedia/自动
-                // 同步重复执行）。并发退出触发合并为一次。
-                if (_popInProgress) return;
-                _popInProgress = true;
-                try {
-                  final nav = Navigator.of(context);
-                  final bool allow = await onWillPop();
-                  if (allow && mounted) nav.pop();
-                } finally {
-                  // onWillPop 异常逃逸时复位，用户可重试退出而非永久困死。
-                  _popInProgress = false;
-                }
-              },
-              child: Scaffold(
-                backgroundColor: bgColor,
-                resizeToAvoidBottomInset: false,
-                body: Stack(
-                  fit: StackFit.expand,
-                  children: <Widget>[
-                    Positioned.fill(
-                      child: _buildBody(),
-                    ),
-                    if (!_readerContentReady ||
-                        _chapterTransitionSnapshot != null)
-                      Positioned.fill(
-                        child: _buildChapterTransitionOverlay(bgColor),
-                      ),
-                    if (_readerContentReady)
-                      const SizedBox.shrink(
-                          key: ValueKey<String>('fushi_content_ready')),
-                    if (!kReleaseMode && _lyricsMode && _lyricsPageReady)
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        width: 1,
-                        height: 1,
-                        child: IgnorePointer(
-                          child: Semantics(
-                            container: true,
-                            identifier: 'hibiki.reader.lyrics.ready',
-                            label: 'lyrics ready',
-                            child: const SizedBox(
-                              key: ValueKey<String>('fushi_lyrics_ready'),
-                              width: 1,
-                              height: 1,
+                canPop: false,
+                onPopInvokedWithResult: (didPop, dynamic result) async {
+                  if (didPop) return;
+                  // BUG-782 加固：onWillPop 是异步长操作（落位置 flush + closeMedia
+                  // 约百毫秒），窗口期内第二次退出触发（ESC/手柄 B 连按、退出按钮后
+                  // 再 ESC）会并发再跑一条 onWillPop——首条完成 pop 掉阅读器后，第二
+                  // 条的 nav.pop() 会把下面的书架也弹掉（连退两级 + closeMedia/自动
+                  // 同步重复执行）。并发退出触发合并为一次。
+                  if (_popInProgress) return;
+                  _popInProgress = true;
+                  try {
+                    final nav = Navigator.of(context);
+                    final bool allow = await onWillPop();
+                    if (allow && mounted) nav.pop();
+                  } finally {
+                    // onWillPop 异常逃逸时复位，用户可重试退出而非永久困死。
+                    _popInProgress = false;
+                  }
+                },
+                child: Scaffold(
+                  backgroundColor: bgColor,
+                  resizeToAvoidBottomInset: false,
+                  body: Stack(
+                    fit: StackFit.expand,
+                    children: <Widget>[
+                      Positioned.fill(child: _buildBody()),
+                      if (!_readerContentReady ||
+                          _chapterTransitionSnapshot != null)
+                        Positioned.fill(
+                          child: _buildChapterTransitionOverlay(bgColor),
+                        ),
+                      if (_readerContentReady)
+                        const SizedBox.shrink(
+                          key: ValueKey<String>('fushi_content_ready'),
+                        ),
+                      if (!kReleaseMode && _lyricsMode && _lyricsPageReady)
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          width: 1,
+                          height: 1,
+                          child: IgnorePointer(
+                            child: Semantics(
+                              container: true,
+                              identifier: 'hibiki.reader.lyrics.ready',
+                              label: 'lyrics ready',
+                              child: const SizedBox(
+                                key: ValueKey<String>('fushi_lyrics_ready'),
+                                width: 1,
+                                height: 1,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    // On-screen focus indicator for the "reading content" layer,
-                    // matching the app's standard focus ring (FushiFocusRing:
-                    // colorScheme.primary, 2.5px, 8px radius). Shown while the reader
-                    // content holds primary focus and no char cursor is active (the
-                    // cursor draws its own ring). Inset by the chrome insets so the
-                    // ring sits inside the reading viewport and the bottom bar never
-                    // occludes it — and so it is always on-screen (unlike the native
-                    // WebView focus outline, which drew off-screen at the scroll pos).
-                    if (_readerContentReady && !_lyricsMode)
-                      Positioned.fill(
-                        child: IgnorePointer(
-                          child: AnimatedBuilder(
-                            animation: _focusNode,
-                            builder: (context, _) {
-                              // Only in keyboard/gamepad highlight mode — matches the
-                              // app-wide FushiFocusRing convention (no focus ring in
-                              // touch mode). Rebuilt on highlight change via
-                              // _onHighlightModeChanged.
-                              final bool show = _focusNavEnabled &&
-                                  _focusNode.hasPrimaryFocus &&
-                                  _caretSurface == CaretSurface.none &&
-                                  FocusManager.instance.highlightMode ==
-                                      FocusHighlightMode.traditional;
-                              if (!show) return const SizedBox.shrink();
-                              // TODO-975：焦点环预留与喂 WebView 同源 _readerBottomReserve
-                              // （悬浮 0 / 挤压含底栏），保证环始终落在正文视口内。
-                              final double bottomInset = _readerBottomReserve;
-                              return Padding(
-                                padding: EdgeInsets.fromLTRB(
-                                    1.5, _readerTopOffset, 1.5, bottomInset),
-                                child: DecoratedBox(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    border: Border.all(
-                                      color:
-                                          Theme.of(context).colorScheme.primary,
-                                      width: 2.5,
+                      // On-screen focus indicator for the "reading content" layer,
+                      // matching the app's standard focus ring (FushiFocusRing:
+                      // colorScheme.primary, 2.5px, 8px radius). Shown while the reader
+                      // content holds primary focus and no char cursor is active (the
+                      // cursor draws its own ring). Inset by the chrome insets so the
+                      // ring sits inside the reading viewport and the bottom bar never
+                      // occludes it — and so it is always on-screen (unlike the native
+                      // WebView focus outline, which drew off-screen at the scroll pos).
+                      if (_readerContentReady && !_lyricsMode)
+                        Positioned.fill(
+                          child: IgnorePointer(
+                            child: AnimatedBuilder(
+                              animation: _focusNode,
+                              builder: (context, _) {
+                                // Only in keyboard/gamepad highlight mode — matches the
+                                // app-wide FushiFocusRing convention (no focus ring in
+                                // touch mode). Rebuilt on highlight change via
+                                // _onHighlightModeChanged.
+                                final bool show =
+                                    _focusNavEnabled &&
+                                    _focusNode.hasPrimaryFocus &&
+                                    _caretSurface == CaretSurface.none &&
+                                    FocusManager.instance.highlightMode ==
+                                        FocusHighlightMode.traditional;
+                                if (!show) return const SizedBox.shrink();
+                                // TODO-975：焦点环预留与喂 WebView 同源 _readerBottomReserve
+                                // （悬浮 0 / 挤压含底栏），保证环始终落在正文视口内。
+                                final double bottomInset = _readerBottomReserve;
+                                return Padding(
+                                  padding: EdgeInsets.fromLTRB(
+                                    1.5,
+                                    _readerTopOffset,
+                                    1.5,
+                                    bottomInset,
+                                  ),
+                                  child: DecoratedBox(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      border: Border.all(
+                                        color: Theme.of(
+                                          context,
+                                        ).colorScheme.primary,
+                                        width: 2.5,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              );
-                            },
-                          ),
-                        ),
-                      ),
-                    // BUG-1744：全屏时窗口不可拖动、也没有交通灯要让位——这条
-                    // 不透明带在全屏下纯粹是一条顶部横带，必须整体不挂。
-                    if (Platform.isMacOS && !_macosFullscreen)
-                      Positioned(
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        height: kMacTitleBarHeight,
-                        // BUG-1692：本 Stack 里排在 WebView **之后**的每一块 Flutter
-                        // 内容都必须自带 RepaintBoundary，否则它们会合并进页面级
-                        // RepaintBoundary 那一张 cull rect = 整窗的 PictureLayer，
-                        // macOS engine 据此把整窗加进 FlutterMutatorView 的
-                        // _hitTestIgnoreRegion，WebView 整块收不到任何鼠标事件。
-                        child: RepaintBoundary(
-                          child: DragToMoveArea(
-                            child: ColoredBox(
-                              key: const ValueKey<String>(
-                                'fushi_reader_window_drag_area',
-                              ),
-                              color: bgColor,
+                                );
+                              },
                             ),
                           ),
                         ),
-                      ),
-                    _buildTopProgressBar(),
-                    // 桌面端顶边悬停热区（收起时才存在）+ 顶部工具栏（ッツ 形态）：与底栏
-                    // 同一显隐状态机，排在词典弹层之前。
-                    _buildHoverRevealLayer(),
-                    _buildDesktopHeader(),
-                    // 桌面端底部状态行：排在词典弹层 / 底栏之前，让它们盖在其上。
-                    _buildStatusFooter(),
-                    buildDictionary(),
-                    // The bottom chrome returns a Positioned; it MUST stay a direct
-                    // child of this Stack. The chrome FocusScope is mounted INSIDE
-                    // the Positioned (see _buildAudiobookBar / _buildSettingsBar) so
-                    // it never detaches the Positioned's StackParentData (which would
-                    // drop the bar to the Stack's top-start alignment).
-                    _buildBottomChrome(),
-                  ],
+                      // BUG-1744：全屏时窗口不可拖动、也没有交通灯要让位——这条
+                      // 不透明带在全屏下纯粹是一条顶部横带，必须整体不挂。
+                      if (Platform.isMacOS && !_macosFullscreen)
+                        Positioned(
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                          height: kMacTitleBarHeight,
+                          // BUG-1692：本 Stack 里排在 WebView **之后**的每一块 Flutter
+                          // 内容都必须自带 RepaintBoundary，否则它们会合并进页面级
+                          // RepaintBoundary 那一张 cull rect = 整窗的 PictureLayer，
+                          // macOS engine 据此把整窗加进 FlutterMutatorView 的
+                          // _hitTestIgnoreRegion，WebView 整块收不到任何鼠标事件。
+                          child: RepaintBoundary(
+                            child: DragToMoveArea(
+                              child: ColoredBox(
+                                key: const ValueKey<String>(
+                                  'fushi_reader_window_drag_area',
+                                ),
+                                color: bgColor,
+                              ),
+                            ),
+                          ),
+                        ),
+                      _buildTopProgressBar(),
+                      // 桌面端顶边悬停热区（收起时才存在）+ 顶部工具栏（ッツ 形态）：与底栏
+                      // 同一显隐状态机，排在词典弹层之前。
+                      _buildHoverRevealLayer(),
+                      _buildDesktopHeader(),
+                      // 桌面端底部状态行：排在词典弹层 / 底栏之前，让它们盖在其上。
+                      _buildStatusFooter(),
+                      buildDictionary(),
+                      // The bottom chrome returns a Positioned; it MUST stay a direct
+                      // child of this Stack. The chrome FocusScope is mounted INSIDE
+                      // the Positioned (see _buildAudiobookBar / _buildSettingsBar) so
+                      // it never detaches the Positioned's StackParentData (which would
+                      // drop the bar to the Stack's top-start alignment).
+                      _buildBottomChrome(),
+                    ],
+                  ),
                 ),
               ),
-            ),
             ),
           ),
         );
@@ -3310,8 +3387,11 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
         source: 'window.__hoverAutoLookup = $enabled;',
       );
     } catch (e, stack) {
-      ErrorLogService.instance
-          .log('ReaderFushi.applyHoverAutoLookupLive', e, stack);
+      ErrorLogService.instance.log(
+        'ReaderFushi.applyHoverAutoLookupLive',
+        e,
+        stack,
+      );
     }
   }
 
@@ -3354,7 +3434,8 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     );
     try {
       await _controller!.evaluateJavascript(
-        source: '''
+        source:
+            '''
 (function(){
   var el = document.getElementById('fushi-reader-style');
   if (!el) {
@@ -3377,8 +3458,11 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     } catch (e, stack) {
       // controller 非 null 但底层 WebView 平台视图已销毁时 evaluateJavascript
       // 抛 PlatformException。无活动 WebView 时套样式本就无意义 → 安全 no-op。
-      ErrorLogService.instance
-          .log('ReaderFushi.applyStylesLive.eval', e, stack);
+      ErrorLogService.instance.log(
+        'ReaderFushi.applyStylesLive.eval',
+        e,
+        stack,
+      );
       return;
     }
     if (!mounted || _controller == null) return;
@@ -3398,8 +3482,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   }
 
   Future<List<FavoriteSentence>> _loadFavoriteSentencesForBook() async {
-    final FavoriteSentenceRepository repo =
-        FavoriteSentenceRepository(appModel.database);
+    final FavoriteSentenceRepository repo = FavoriteSentenceRepository(
+      appModel.database,
+    );
     try {
       final List<FavoriteSentence> favorites = (await repo.getAll())
           .where((FavoriteSentence s) => s.bookKey == widget.bookKey)
@@ -3420,11 +3505,14 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   }
 
   Future<List<FavoriteSentence>> _favoriteSentencesForSection(
-      int section) async {
+    int section,
+  ) async {
     final List<FavoriteSentence> favorites = await _favoriteSentencesForBook();
     return favorites
-        .where((FavoriteSentence s) =>
-            s.bookKey == widget.bookKey && s.sectionIndex == section)
+        .where(
+          (FavoriteSentence s) =>
+              s.bookKey == widget.bookKey && s.sectionIndex == section,
+        )
         .toList(growable: false);
   }
 
@@ -3433,17 +3521,23 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     final List<FavoriteSentence> chapterFavs =
         await _favoriteSentencesForSection(_currentChapter);
     if (!mounted || _controller == null) return;
-    final int withOffsets =
-        chapterFavs.where((s) => s.normCharOffset != null).length;
+    final int withOffsets = chapterFavs
+        .where((s) => s.normCharOffset != null)
+        .length;
     final int total =
         _favoriteSentencesForBookCache?.length ?? chapterFavs.length;
-    debugPrint('[fushi-hl] chapter=$_currentChapter '
-        'total=$total chapterFavs=${chapterFavs.length} '
-        'withOffsets=$withOffsets');
+    debugPrint(
+      '[fushi-hl] chapter=$_currentChapter '
+      'total=$total chapterFavs=${chapterFavs.length} '
+      'withOffsets=$withOffsets',
+    );
     if (chapterFavs.isNotEmpty) {
-      await HighlightBridge.applyHighlights(_controller!, chapterFavs,
-          backgroundHex: _readerBackgroundHex,
-          customHighlightCss: _customHighlightCss);
+      await HighlightBridge.applyHighlights(
+        _controller!,
+        chapterFavs,
+        backgroundHex: _readerBackgroundHex,
+        customHighlightCss: _customHighlightCss,
+      );
       if (!mounted || _controller == null) return;
       await _controller!.evaluateJavascript(
         source:
@@ -3458,8 +3552,10 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     if (_controller == null) return;
     final List<FavoriteSentence> all = await _favoriteSentencesForBook();
     if (_controller == null || !mounted) return;
-    final List<String> texts =
-        all.map((s) => s.text).where((t) => t.isNotEmpty).toList();
+    final List<String> texts = all
+        .map((s) => s.text)
+        .where((t) => t.isNotEmpty)
+        .toList();
     final String json = jsonEncode(texts);
     await _controller!.evaluateJavascript(
       source:
@@ -3593,13 +3689,13 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     }
     final parsed = ReaderSelectionScripts.surroundingSentencesFromResult(raw);
     MiningDraftSentence toEntry(SurroundingSentence s) => MiningDraftSentence(
-          sentence: s.sentence,
-          audioRange: _sentenceAudioRangeFor(
-            sentence: s.sentence,
-            normOffset: s.normOffset,
-            normLength: s.normLength,
-          ),
-        );
+      sentence: s.sentence,
+      audioRange: _sentenceAudioRangeFor(
+        sentence: s.sentence,
+        normOffset: s.normOffset,
+        normLength: s.normLength,
+      ),
+    );
     _miningDraft.setContext(
       prev: <MiningDraftSentence>[for (final s in parsed.prev) toEntry(s)],
       next: <MiningDraftSentence>[for (final s in parsed.next) toEntry(s)],
@@ -3726,9 +3822,7 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     _miningDraft.clear();
     _clearLookupState();
     final int dismissedGeneration = activeLookupGeneration;
-    unawaited(
-      _finishLookupSessionAfterPopupsDismissed(dismissedGeneration),
-    );
+    unawaited(_finishLookupSessionAfterPopupsDismissed(dismissedGeneration));
   }
 
   /// BUG-1344：macOS WKWebView 的 evaluateJavascript 通过异步 method-channel completion
@@ -3781,7 +3875,8 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     final AudiobookPlayerController? controller = _audiobookController;
     if (controller == null) return;
     final Object? raw = await _controller?.evaluateJavascript(
-      source: 'window.fushiReader && window.fushiReader.cueIdAtPoint'
+      source:
+          'window.fushiReader && window.fushiReader.cueIdAtPoint'
           ' ? window.fushiReader.cueIdAtPoint($x, $y) : null',
     );
     // await 期间用户可能退出有声书（_audiobookController 被置空并 dispose）。
@@ -3876,7 +3971,8 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   @override
   void caretExitPrimaryRing() {
     _controller?.evaluateJavascript(
-        source: ReaderCaretScripts.exitInvocation());
+      source: ReaderCaretScripts.exitInvocation(),
+    );
   }
 
   // ── Shift+Hover over dismiss barrier ──────────────────────────────
@@ -4088,10 +4184,7 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
 
 @visibleForTesting
 class ReaderLyricsModeHintDialog extends StatelessWidget {
-  const ReaderLyricsModeHintDialog({
-    required this.onClose,
-    super.key,
-  });
+  const ReaderLyricsModeHintDialog({required this.onClose, super.key});
 
   final VoidCallback onClose;
 
@@ -4117,10 +4210,7 @@ class ReaderLyricsModeHintDialog extends StatelessWidget {
           tokens.spacing.card,
           tokens.spacing.card,
         ),
-        body: Text(
-          t.lyrics_mode_hint_body,
-          style: tokens.type.listSubtitle,
-        ),
+        body: Text(t.lyrics_mode_hint_body, style: tokens.type.listSubtitle),
         footer: Align(
           alignment: Alignment.centerRight,
           child: adaptiveDialogAction(

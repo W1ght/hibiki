@@ -52,9 +52,9 @@ extension _VideoFullscreen on _VideoFushiPageState {
   /// 控制条兄弟层与 media_kit 控制条**同源**的外层 padding（BUG-1783）。
   /// 几何收敛进纯函数 [videoControlsChromeInsets]，页面与测试同源调用。
   EdgeInsets _videoControlsChromeInsets() => videoControlsChromeInsets(
-        isFullscreenRoute: _isVideoFullscreenRoute,
-        systemPadding: MediaQuery.of(context).padding,
-      );
+    isFullscreenRoute: _isVideoFullscreenRoute,
+    systemPadding: MediaQuery.of(context).padding,
+  );
 
   Future<void> _toggleVideoFullscreen(BuildContext context) {
     // BUG-221: 移动端永不进 media_kit 全屏路由（横屏沉浸态即唯一形态）。统一在此单一收口
@@ -183,88 +183,96 @@ extension _VideoFullscreen on _VideoFushiPageState {
           ValueListenableBuilder<bool>(
             valueListenable:
                 playerController?.hdrHostActive ?? _kHdrHostInactive,
-            builder: (BuildContext _, bool hdrHost, Widget? child) =>
-                Material(
+            builder: (BuildContext _, bool hdrHost, Widget? child) => Material(
               color: hdrHost ? Colors.transparent : null,
               child: child,
             ),
             child: FushiAppUiScaleNeutralizer(
-            child: MaterialVideoControlsTheme(
-              normal:
-                  mobileTheme?.normal ?? kDefaultMaterialVideoControlsThemeData,
-              fullscreen: mobileTheme?.fullscreen ??
-                  kDefaultMaterialVideoControlsThemeDataFullscreen,
-              child: MaterialDesktopVideoControlsTheme(
-                normal: desktopTheme?.normal ??
-                    kDefaultMaterialDesktopVideoControlsThemeData,
-                fullscreen: desktopTheme?.fullscreen ??
-                    kDefaultMaterialDesktopVideoControlsThemeDataFullscreen,
-                child: VideoStateInheritedWidget(
-                  state: stateValue,
-                  contextNotifier: contextNotifierValue,
-                  videoViewParametersNotifier: videoViewParametersNotifierValue,
-                  disposeNotifiers: false,
-                  child: FullscreenInheritedWidget(
-                    parent: stateValue,
-                    child: VideoStateInheritedWidget(
-                      state: stateValue,
-                      contextNotifier: contextNotifierValue,
-                      videoViewParametersNotifier:
-                          videoViewParametersNotifierValue,
-                      disposeNotifiers: false,
-                      child: ValueListenableBuilder<VideoViewParameters>(
-                        valueListenable: videoViewParametersNotifierValue,
-                        builder:
-                            (BuildContext _, VideoViewParameters params, __) {
-                          final Widget fullscreenVideo = Video(
-                            controller: controllerValue,
-                            width: null,
-                            height: null,
-                            // 全屏 fit 跟随窗口同一 [_videoFitMode] 偏好（TODO-152 子B），
-                            // 不再用 notifier 默认 `params.fit`（contain）——保证用户选的
-                            // 画面比例在窗口与全屏一致。其余 params 字段（fill/alignment
-                            // /aspectRatio 等）照旧走 notifier。
-                            fit: videoFitModeToBoxFit(_videoFitMode),
-                            fill: params.fill,
-                            alignment: params.alignment,
-                            aspectRatio: params.aspectRatio,
-                            filterQuality: params.filterQuality,
-                            controls: params.controls,
-                            wakelock: false,
-                            // 全屏路由也显式禁用内置 SubtitleView（TODO-080/092，
-                            // BUG-190）。虽然与窗口侧共享同一
-                            // videoViewParametersNotifier（窗口侧已设 visible:false 会
-                            // 传播过来），但这里不依赖隐式传播，直接覆盖成 visible:false
-                            // 消除「全屏路由快照时窗口侧 didUpdate 尚未把配置写进
-                            // notifier」的时机竞态——字幕在全屏也只由可点 overlay 承载。
-                            subtitleViewConfiguration:
-                                const SubtitleViewConfiguration(visible: false),
-                            focusNode: params.focusNode,
-                            onEnterFullscreen: enterNativeFullscreen,
-                            onExitFullscreen: exitNativeFullscreen,
-                          );
-                          // 字幕跳转列表「真 push-aside」（TODO-121）：全屏路由自建的
-                          // Video 同样包进 Row[Expanded(Video), 面板列]，面板可见时全屏
-                          // 画面真挤窄、不被遮（与窗口侧 [_buildVideoBody] 同一 helper）。
-                          //
-                          // 音量/亮度 HUD 与 mpv 式 OSD 不在这里重挂：全屏 Video 设
-                          // `controls: params.controls`（共享窗口侧同一 controls builder
-                          // [_buildVideoControls]），其内 [_buildVideoControlsInner] 已
-                          // 无门控挂载 [_buildLevelHudOverlay] / [_buildOsdOverlay]，且
-                          // [VideoControlsFocusGate] 只在窗口侧（`!inFullscreenRoute`）
-                          // 卸载 controls、全屏侧返回 child 照常渲染。故全屏 HUD 由共享
-                          // controls 提供，勿在此重复挂一层（TODO-563 复核：重挂会双叠）。
-                          if (playerController == null) return fullscreenVideo;
-                          return _videoWithSubtitlePanel(
-                            playerController,
-                            // HDR 直通：全屏路由的 Video 同样上报矩形（与窗口侧
-                            // [_buildVideoBody] 一致，宿主窗跟着全屏画面走）。
-                            HdrHostRectReporter(
-                              onRect: playerController.reportHdrHostRect,
-                              child: fullscreenVideo,
-                            ),
-                          );
-                        },
+              child: MaterialVideoControlsTheme(
+                normal:
+                    mobileTheme?.normal ??
+                    kDefaultMaterialVideoControlsThemeData,
+                fullscreen:
+                    mobileTheme?.fullscreen ??
+                    kDefaultMaterialVideoControlsThemeDataFullscreen,
+                child: MaterialDesktopVideoControlsTheme(
+                  normal:
+                      desktopTheme?.normal ??
+                      kDefaultMaterialDesktopVideoControlsThemeData,
+                  fullscreen:
+                      desktopTheme?.fullscreen ??
+                      kDefaultMaterialDesktopVideoControlsThemeDataFullscreen,
+                  child: VideoStateInheritedWidget(
+                    state: stateValue,
+                    contextNotifier: contextNotifierValue,
+                    videoViewParametersNotifier:
+                        videoViewParametersNotifierValue,
+                    disposeNotifiers: false,
+                    child: FullscreenInheritedWidget(
+                      parent: stateValue,
+                      child: VideoStateInheritedWidget(
+                        state: stateValue,
+                        contextNotifier: contextNotifierValue,
+                        videoViewParametersNotifier:
+                            videoViewParametersNotifierValue,
+                        disposeNotifiers: false,
+                        child: ValueListenableBuilder<VideoViewParameters>(
+                          valueListenable: videoViewParametersNotifierValue,
+                          builder: (BuildContext _, VideoViewParameters params, __) {
+                            final Widget fullscreenVideo = Video(
+                              controller: controllerValue,
+                              width: null,
+                              height: null,
+                              // 全屏 fit 跟随窗口同一 [_videoFitMode] 偏好（TODO-152 子B），
+                              // 不再用 notifier 默认 `params.fit`（contain）——保证用户选的
+                              // 画面比例在窗口与全屏一致。其余 params 字段（fill/alignment
+                              // /aspectRatio 等）照旧走 notifier。
+                              fit: videoFitModeToBoxFit(_videoFitMode),
+                              fill: params.fill,
+                              alignment: params.alignment,
+                              aspectRatio: params.aspectRatio,
+                              filterQuality: params.filterQuality,
+                              controls: params.controls,
+                              wakelock: false,
+                              // 全屏路由也显式禁用内置 SubtitleView（TODO-080/092，
+                              // BUG-190）。虽然与窗口侧共享同一
+                              // videoViewParametersNotifier（窗口侧已设 visible:false 会
+                              // 传播过来），但这里不依赖隐式传播，直接覆盖成 visible:false
+                              // 消除「全屏路由快照时窗口侧 didUpdate 尚未把配置写进
+                              // notifier」的时机竞态——字幕在全屏也只由可点 overlay 承载。
+                              subtitleViewConfiguration:
+                                  const SubtitleViewConfiguration(
+                                    visible: false,
+                                  ),
+                              focusNode: params.focusNode,
+                              onEnterFullscreen: enterNativeFullscreen,
+                              onExitFullscreen: exitNativeFullscreen,
+                            );
+                            // 字幕跳转列表「真 push-aside」（TODO-121）：全屏路由自建的
+                            // Video 同样包进 Row[Expanded(Video), 面板列]，面板可见时全屏
+                            // 画面真挤窄、不被遮（与窗口侧 [_buildVideoBody] 同一 helper）。
+                            //
+                            // 音量/亮度 HUD 与 mpv 式 OSD 不在这里重挂：全屏 Video 设
+                            // `controls: params.controls`（共享窗口侧同一 controls builder
+                            // [_buildVideoControls]），其内 [_buildVideoControlsInner] 已
+                            // 无门控挂载 [_buildLevelHudOverlay] / [_buildOsdOverlay]，且
+                            // [VideoControlsFocusGate] 只在窗口侧（`!inFullscreenRoute`）
+                            // 卸载 controls、全屏侧返回 child 照常渲染。故全屏 HUD 由共享
+                            // controls 提供，勿在此重复挂一层（TODO-563 复核：重挂会双叠）。
+                            if (playerController == null) {
+                              return fullscreenVideo;
+                            }
+                            return _videoWithSubtitlePanel(
+                              playerController,
+                              // HDR 直通：全屏路由的 Video 同样上报矩形（与窗口侧
+                              // [_buildVideoBody] 一致，宿主窗跟着全屏画面走）。
+                              HdrHostRectReporter(
+                                onRect: playerController.reportHdrHostRect,
+                                child: fullscreenVideo,
+                              ),
+                            );
+                          },
+                        ),
                       ),
                     ),
                   ),
@@ -272,7 +280,7 @@ extension _VideoFullscreen on _VideoFushiPageState {
               ),
             ),
           ),
-        )),
+        ),
         transitionDuration: Duration.zero,
         reverseTransitionDuration: Duration.zero,
       );
@@ -379,10 +387,7 @@ extension _VideoFullscreen on _VideoFushiPageState {
       if (Platform.isWindows) {
         // Hide the app frame before the native transition so no title-bar
         // frame remains above the fullscreen surface.
-        FushiWindowsTitleBar.setContentFullscreen(
-          owner: this,
-          enabled: true,
-        );
+        FushiWindowsTitleBar.setContentFullscreen(owner: this, enabled: true);
         // BUG-1933：Windows 不再走 media_kit 的 `Utils.EnterNativeFullscreen`
         // ——它与 window_manager 同技法（剥 WS_CAPTION|WS_THICKFRAME），DWM
         // 重建窗口 visual 时 Flutter 子窗图层缺席一帧，露出表面色（浅色主题
@@ -423,10 +428,7 @@ extension _VideoFullscreen on _VideoFushiPageState {
         // 时 runner 已同步还原窗口矩形，再亮出 app frame——早亮会在退出过程上
         // 闪一下标题栏。
         await WindowCaptionChannel.setFullscreen(false);
-        FushiWindowsTitleBar.setContentFullscreen(
-          owner: this,
-          enabled: false,
-        );
+        FushiWindowsTitleBar.setContentFullscreen(owner: this, enabled: false);
         return;
       }
       await defaultExitNativeFullscreen();

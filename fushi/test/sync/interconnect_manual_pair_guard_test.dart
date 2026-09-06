@@ -91,8 +91,10 @@ void main() {
     final int orchestrateEnd = source.indexOf('Future<String> _onPairSuccess(');
     expect(orchestrateStart, greaterThanOrEqualTo(0));
     expect(orchestrateEnd, greaterThan(orchestrateStart));
-    final String orchestrate =
-        source.substring(orchestrateStart, orchestrateEnd);
+    final String orchestrate = source.substring(
+      orchestrateStart,
+      orchestrateEnd,
+    );
     expect(
       orchestrate.contains('FushiDevice'),
       isFalse,

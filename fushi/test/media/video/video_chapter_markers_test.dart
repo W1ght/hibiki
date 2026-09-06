@@ -32,9 +32,13 @@ void main() {
     test('durationMs <= 0（时长未知）=> 空（无刻度，待播放器就绪）', () {
       final List<VideoChapter> chapters = mk(<int>[0, 300000]);
       expect(
-          chapterMarkerFractions(chapters: chapters, durationMs: 0), isEmpty);
+        chapterMarkerFractions(chapters: chapters, durationMs: 0),
+        isEmpty,
+      );
       expect(
-          chapterMarkerFractions(chapters: chapters, durationMs: -5), isEmpty);
+        chapterMarkerFractions(chapters: chapters, durationMs: -5),
+        isEmpty,
+      );
     });
 
     test('start >= duration 的章节被丢弃（轨道最右端不画）', () {
@@ -57,7 +61,9 @@ void main() {
     test('空章节列表 => 空比例', () {
       expect(
         chapterMarkerFractions(
-            chapters: const <VideoChapter>[], durationMs: 1000000),
+          chapters: const <VideoChapter>[],
+          durationMs: 1000000,
+        ),
         isEmpty,
       );
     });
@@ -115,8 +121,9 @@ void main() {
   });
 
   group('VideoChapterMarkers widget (TODO-432)', () {
-    testWidgets('有章节 + 已知时长 => 画刻度（CustomPaint 上墙）',
-        (WidgetTester tester) async {
+    testWidgets('有章节 + 已知时长 => 画刻度（CustomPaint 上墙）', (
+      WidgetTester tester,
+    ) async {
       final VideoPlayerController controller = VideoPlayerController();
       addTearDown(controller.dispose);
       controller.debugSetChaptersForTesting(<VideoChapter>[
@@ -151,8 +158,9 @@ void main() {
       expect(widget.painter, isNotNull);
     });
 
-    testWidgets('时长未知（duration=0）=> 不画（SizedBox.shrink）',
-        (WidgetTester tester) async {
+    testWidgets('时长未知（duration=0）=> 不画（SizedBox.shrink）', (
+      WidgetTester tester,
+    ) async {
       final VideoPlayerController controller = VideoPlayerController();
       addTearDown(controller.dispose);
       controller.debugSetChaptersForTesting(<VideoChapter>[
@@ -244,7 +252,8 @@ void main() {
           systemPadding: cutout,
         ),
         EdgeInsets.zero,
-        reason: 'fork 窗口态走 EdgeInsets.zero 分支；移动端因 BUG-221 永远落在这一支，'
+        reason:
+            'fork 窗口态走 EdgeInsets.zero 分支；移动端因 BUG-221 永远落在这一支，'
             '刻度层多缩一段就会与轨道分叉',
       );
     });
@@ -289,7 +298,8 @@ void main() {
         expect(
           markerX(f),
           closeTo(trackX(f), 0.001),
-          reason: 'f=$f 处刻度与轨道错位——修前的 SafeArea 让误差 '
+          reason:
+              'f=$f 处刻度与轨道错位——修前的 SafeArea 让误差 '
               'Δ(f)=padding.left−f·padding.horizontal 随比例斜切：'
               '首章右偏、末章左偏、中间某点恰好蒙对',
         );
@@ -305,10 +315,16 @@ void main() {
     final String src = readVideoFushiSource();
 
     test('controls Stack 挂了 _buildChapterMarkersOverlay 层', () {
-      expect(src.contains('_buildChapterMarkersOverlay(controller)'), isTrue,
-          reason: 'controls Stack 必须挂章节刻度层，否则进度条上不显示刻度');
-      expect(src.contains('Widget _buildChapterMarkersOverlay('), isTrue,
-          reason: '刻度层 builder 缺失');
+      expect(
+        src.contains('_buildChapterMarkersOverlay(controller)'),
+        isTrue,
+        reason: 'controls Stack 必须挂章节刻度层，否则进度条上不显示刻度',
+      );
+      expect(
+        src.contains('Widget _buildChapterMarkersOverlay('),
+        isTrue,
+        reason: '刻度层 builder 缺失',
+      );
     });
 
     test('刻度层仅有章节时挂、几何对齐 seek bar、随控制条显隐', () {
@@ -318,21 +334,35 @@ void main() {
       expect(end, greaterThan(start));
       final String body = src.substring(start, end);
       // 仅有章节时挂（无章节折叠成 SizedBox.shrink）。
-      expect(body.contains('if (!_hasChapters) return const SizedBox.shrink()'),
-          isTrue,
-          reason: '无章节时不该画刻度');
+      expect(
+        body.contains('if (!_hasChapters) return const SizedBox.shrink()'),
+        isTrue,
+        reason: '无章节时不该画刻度',
+      );
       // 竖直锚定走纯函数 videoSeekBarTrackBand（与 seek bar 同源几何）。
-      expect(body.contains('videoSeekBarTrackBand('), isTrue,
-          reason: '刻度竖直位置必须用 videoSeekBarTrackBand 对齐 seek bar 轨道');
+      expect(
+        body.contains('videoSeekBarTrackBand('),
+        isTrue,
+        reason: '刻度竖直位置必须用 videoSeekBarTrackBand 对齐 seek bar 轨道',
+      );
       // 水平内缩 16 对齐 seekBarMargin。
-      expect(body.contains('left: 16') && body.contains('right: 16'), isTrue,
-          reason: '刻度水平范围必须左右各内缩 16 对齐 seekBarMargin');
+      expect(
+        body.contains('left: 16') && body.contains('right: 16'),
+        isTrue,
+        reason: '刻度水平范围必须左右各内缩 16 对齐 seekBarMargin',
+      );
       // 随控制条可见性显隐，与 seek bar 同步。
-      expect(body.contains('_videoControlsVisible'), isTrue,
-          reason: '刻度必须随控制条显隐，与 seek bar 同步');
+      expect(
+        body.contains('_videoControlsVisible'),
+        isTrue,
+        reason: '刻度必须随控制条显隐，与 seek bar 同步',
+      );
       // 纯视觉层不拦指针，不破坏 seek bar 拖动。
-      expect(body.contains('IgnorePointer'), isTrue,
-          reason: '刻度层必须 IgnorePointer，否则会拦掉 seek bar 拖动');
+      expect(
+        body.contains('IgnorePointer'),
+        isTrue,
+        reason: '刻度层必须 IgnorePointer，否则会拦掉 seek bar 拖动',
+      );
     });
 
     // BUG-1783：两个叠在 controls Stack 上的兄弟层都不许自己吃系统安全区。
@@ -350,13 +380,15 @@ void main() {
         expect(
           body.contains('SafeArea'),
           isFalse,
-          reason: '$name 不得套 SafeArea：它恒吃 MediaQuery.padding，而 media_kit 轨道在'
+          reason:
+              '$name 不得套 SafeArea：它恒吃 MediaQuery.padding，而 media_kit 轨道在'
               '非全屏路由下恒零内缩（移动端因 BUG-221 永远是非全屏），两者基准会分叉',
         );
         expect(
           body.contains('_videoControlsChromeInsets()'),
           isTrue,
-          reason: '$name 的外层 padding 必须走 _videoControlsChromeInsets()，'
+          reason:
+              '$name 的外层 padding 必须走 _videoControlsChromeInsets()，'
               '与 media_kit 控制条同一条真相',
         );
       }

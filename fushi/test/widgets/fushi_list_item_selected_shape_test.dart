@@ -5,16 +5,19 @@ import 'package:fushi/src/utils/components/fushi_material_components.dart';
 Widget _host(Widget child) => MaterialApp(home: Scaffold(body: child));
 
 void main() {
-  testWidgets('pill selected shape renders a rounded inset highlight',
-      (WidgetTester tester) async {
-    await tester.pumpWidget(_host(
-      FushiListItem(
-        title: const Text('基础'),
-        selected: true,
-        selectedShape: FushiListItemSelectedShape.pill,
-        onTap: () {},
+  testWidgets('pill selected shape renders a rounded inset highlight', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(
+      _host(
+        FushiListItem(
+          title: const Text('基础'),
+          selected: true,
+          selectedShape: FushiListItemSelectedShape.pill,
+          onTap: () {},
+        ),
       ),
-    ));
+    );
     await tester.pumpAndSettle();
 
     final AnimatedContainer container = tester.widget<AnimatedContainer>(
@@ -29,15 +32,14 @@ void main() {
     expect(ink.borderRadius, isNotNull);
   });
 
-  testWidgets('default fill shape keeps square full-bleed highlight',
-      (WidgetTester tester) async {
-    await tester.pumpWidget(_host(
-      FushiListItem(
-        title: const Text('基础'),
-        selected: true,
-        onTap: () {},
+  testWidgets('default fill shape keeps square full-bleed highlight', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(
+      _host(
+        FushiListItem(title: const Text('基础'), selected: true, onTap: () {}),
       ),
-    ));
+    );
     await tester.pumpAndSettle();
 
     final AnimatedContainer container = tester.widget<AnimatedContainer>(

@@ -23,8 +23,8 @@ void main() {
   // Verbose labels so the strip is intrinsically wide (~700-800px): wide enough
   // that a ≈50/50 inline split must scroll it, yet narrower than the panes used
   // below — the exact regime where the inline split clipped segments.
-  const List<ButtonSegment<String>> designSystemSegments =
-      <ButtonSegment<String>>[
+  const List<ButtonSegment<String>>
+  designSystemSegments = <ButtonSegment<String>>[
     ButtonSegment<String>(value: 'auto', label: Text('Automatic')),
     ButtonSegment<String>(value: 'material', label: Text('Material Design 3')),
     ButtonSegment<String>(value: 'cupertino', label: Text('iOS (Cupertino)')),
@@ -65,18 +65,25 @@ void main() {
   testWidgets(
     'inline segmented row shrink-and-scrolls in a narrow pane without overflow',
     (WidgetTester tester) async {
-      await tester
-          .pumpWidget(buildTestApp(row(width: 240, controlBelow: false)));
+      await tester.pumpWidget(
+        buildTestApp(row(width: 240, controlBelow: false)),
+      );
       await tester.pump();
 
-      expect(tester.takeException(), isNull,
-          reason: 'no RenderFlex overflow on a narrow pane');
+      expect(
+        tester.takeException(),
+        isNull,
+        reason: 'no RenderFlex overflow on a narrow pane',
+      );
 
       // The strip is genuinely scrollable now (bounded width → it scrolls
       // instead of clipping/overflowing).
       expect(find.byType(SingleChildScrollView), findsOneWidget);
-      expect(maxScrollOf(tester), greaterThan(0.0),
-          reason: 'the segmented strip exceeds the bounded width and scrolls');
+      expect(
+        maxScrollOf(tester),
+        greaterThan(0.0),
+        reason: 'the segmented strip exceeds the bounded width and scrolls',
+      );
     },
   );
 
@@ -91,42 +98,59 @@ void main() {
 
       // Inline at this pane: the ≈50/50 split caps the strip at ~half (well
       // under its intrinsic width), so it must scroll — segments are clipped.
-      await tester
-          .pumpWidget(buildTestApp(row(width: pane, controlBelow: false)));
+      await tester.pumpWidget(
+        buildTestApp(row(width: pane, controlBelow: false)),
+      );
       await tester.pump();
       expect(tester.takeException(), isNull);
       final double inlineScroll = maxScrollOf(tester);
-      expect(inlineScroll, greaterThan(0.0),
-          reason: 'inline split squeezes the strip below its width → scrolls');
+      expect(
+        inlineScroll,
+        greaterThan(0.0),
+        reason: 'inline split squeezes the strip below its width → scrolls',
+      );
 
       // Default (controlBelow:true): same pane, but the strip owns a full-width
       // row below the label, so it fits and STRETCHES to fill the row (no
       // scroll). The strip fitting means it is no longer wrapped in a scroll
       // view at all (TODO-647 full-width-when-it-fits).
-      await tester
-          .pumpWidget(buildTestApp(row(width: pane, controlBelow: null)));
+      await tester.pumpWidget(
+        buildTestApp(row(width: pane, controlBelow: null)),
+      );
       await tester.pump();
-      expect(tester.takeException(), isNull,
-          reason: 'no overflow when the strip owns its own row');
+      expect(
+        tester.takeException(),
+        isNull,
+        reason: 'no overflow when the strip owns its own row',
+      );
 
       final Rect label = tester.getRect(find.text('Design system'));
       final Rect strip = tester.getRect(find.byType(SegmentedButton<String>));
 
       // Structural proof: the strip is on its own row BELOW the label, not
       // squeezed beside it.
-      expect(strip.top, greaterThanOrEqualTo(label.bottom - 0.5),
-          reason: 'the segmented strip sits below the label (controlBelow)');
+      expect(
+        strip.top,
+        greaterThanOrEqualTo(label.bottom - 0.5),
+        reason: 'the segmented strip sits below the label (controlBelow)',
+      );
 
       // TODO-647: a fitting strip is laid out full-width, so it is NOT wrapped
       // in a horizontal scroll view (no Scrollable at all here).
-      expect(find.byType(SingleChildScrollView), findsNothing,
-          reason: 'a fitting strip stretches full-width, not scroll-hosted');
+      expect(
+        find.byType(SingleChildScrollView),
+        findsNothing,
+        reason: 'a fitting strip stretches full-width, not scroll-hosted',
+      );
 
       // Symptom guard: the full strip — including the last "iOS" segment — fits
       // and nothing is clipped.
       final Rect lastSegment = tester.getRect(find.text('iOS (Cupertino)'));
-      expect(lastSegment.right, lessThanOrEqualTo(strip.right + 0.5),
-          reason: 'the last segment is within the strip bounds');
+      expect(
+        lastSegment.right,
+        lessThanOrEqualTo(strip.right + 0.5),
+        reason: 'the last segment is within the strip bounds',
+      );
     },
   );
 
@@ -141,9 +165,9 @@ void main() {
           Builder(
             builder: (BuildContext context) {
               return MediaQuery(
-                data: MediaQuery.of(context).copyWith(
-                  textScaler: const TextScaler.linear(2),
-                ),
+                data: MediaQuery.of(
+                  context,
+                ).copyWith(textScaler: const TextScaler.linear(2)),
                 child: Align(
                   alignment: Alignment.topCenter,
                   child: SizedBox(
@@ -221,20 +245,29 @@ void main() {
       expect(tester.takeException(), isNull);
 
       // Fits → no scroll host at all.
-      expect(find.byType(SingleChildScrollView), findsNothing,
-          reason: 'a fitting strip is laid out full-width, not scroll-hosted');
+      expect(
+        find.byType(SingleChildScrollView),
+        findsNothing,
+        reason: 'a fitting strip is laid out full-width, not scroll-hosted',
+      );
 
       // The strip stretches to (almost) the full row width — well beyond the
       // natural width of three short labels (~200px). Allow for row padding.
       final Rect strip = tester.getRect(find.byType(SegmentedButton<String>));
-      expect(strip.width, greaterThan(pane - 40),
-          reason: 'a fitting strip stretches to fill its full-width row');
+      expect(
+        strip.width,
+        greaterThan(pane - 40),
+        reason: 'a fitting strip stretches to fill its full-width row',
+      );
 
       // Equal-width segments: the three labels are roughly evenly spaced across
       // the stretched strip, so the centre label sits near the strip centre.
       final double onCentre = tester.getCenter(find.text('On')).dx;
-      expect((onCentre - strip.center.dx).abs(), lessThan(strip.width / 6),
-          reason: 'segments share the stretched width equally');
+      expect(
+        (onCentre - strip.center.dx).abs(),
+        lessThan(strip.width / 6),
+        reason: 'segments share the stretched width equally',
+      );
     },
   );
 
@@ -274,14 +307,20 @@ void main() {
         ),
       );
       await tester.pump();
-      expect(tester.takeException(), isNull,
-          reason: 'a too-wide strip must scroll, not overflow');
+      expect(
+        tester.takeException(),
+        isNull,
+        reason: 'a too-wide strip must scroll, not overflow',
+      );
 
       // Fell back to the scroll view, and it genuinely scrolls (the strip is
       // wider than the pane), so trailing segments are reachable.
       expect(find.byType(SingleChildScrollView), findsOneWidget);
-      expect(maxScrollOf(tester), greaterThan(0.0),
-          reason: 'narrow pane → strip scrolls, last segment reachable');
+      expect(
+        maxScrollOf(tester),
+        greaterThan(0.0),
+        reason: 'narrow pane → strip scrolls, last segment reachable',
+      );
     },
   );
 }

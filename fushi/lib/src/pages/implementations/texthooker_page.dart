@@ -214,8 +214,7 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
                     title: Text(line.audioBackend ?? t.game_track_voice),
                     subtitle: Text(
                       <String>[
-                        if (line.audioResourceId != null)
-                          line.audioResourceId!,
+                        if (line.audioResourceId != null) line.audioResourceId!,
                         if (durationMs > 0)
                           '${(durationMs / 1000).toStringAsFixed(2)}s',
                       ].join(' · '),
@@ -1360,18 +1359,18 @@ class _TexthookerPageState extends ConsumerState<TexthookerPage>
       _captureSetupDialogOpen = true;
       final GalCaptureSetupOutcome? outcome =
           await showAppDialog<GalCaptureSetupOutcome>(
-        context: context,
-        builder: (BuildContext dialogContext) => GalCaptureSetupDialog(
-          session: _session,
-          attachedText: attachedText,
-          onSelectThread: (TexthookerTextThread thread) =>
-              _session.selectTextThread(
-                thread.nativeThreadId,
-                threadKey: thread.key,
-                remember: true,
-              ),
-        ),
-      );
+            context: context,
+            builder: (BuildContext dialogContext) => GalCaptureSetupDialog(
+              session: _session,
+              attachedText: attachedText,
+              onSelectThread: (TexthookerTextThread thread) =>
+                  _session.selectTextThread(
+                    thread.nativeThreadId,
+                    threadKey: thread.key,
+                    remember: true,
+                  ),
+            ),
+          );
       _captureSetupDialogOpen = false;
       // 「本会话已提示过」这个标记的唯一用途，是让**用户主动关掉**弹窗后不再被每来
       // 一行台词就弹一次（选中线程有自己的判据 selectedTextThreadKey == null，不靠
@@ -2382,9 +2381,8 @@ class _SessionOverviewCard extends StatelessWidget {
         state.japaneseLocaleSkipReason;
     // 原因分两类说话：语义门（证据不足 / 判为不需要）提示改「始终开启」；工程门
     // （64 位 / 系统本就日文区）改档位也没用，得直说，否则用户会白改一轮。
-    final String? localeSkippedHint = state.japaneseLocaleApplied ||
-            verdict == null ||
-            skipReason == null
+    final String? localeSkippedHint =
+        state.japaneseLocaleApplied || verdict == null || skipReason == null
         ? null
         : switch (skipReason) {
             GalJapaneseLocaleSkipReason.notNeeded ||
@@ -2400,8 +2398,8 @@ class _SessionOverviewCard extends StatelessWidget {
     final String localeSuffix = state.japaneseLocaleApplied
         ? ' · ${t.game_session_japanese_locale}'
         : localeSkippedHint != null
-            ? ' · ${t.game_session_japanese_locale_skipped}'
-            : '';
+        ? ' · ${t.game_session_japanese_locale_skipped}'
+        : '';
     final String? format = state.audioFormat == null
         ? null
         : '${state.audioFormat!.sampleRate} Hz · '
@@ -2460,11 +2458,7 @@ class _SessionOverviewCard extends StatelessWidget {
                     verdict == null || verdict.evidence.isEmpty
                         ? t.game_session_japanese_locale_hint
                         : '${t.game_session_japanese_locale_hint}\n'
-                            '${t.game_session_japanese_locale_evidence(
-                            evidence: galJapaneseLocaleEvidenceListLabel(
-                              verdict.evidence,
-                            ),
-                          )}',
+                              '${t.game_session_japanese_locale_evidence(evidence: galJapaneseLocaleEvidenceListLabel(verdict.evidence))}',
                     maxLines: 4,
                     overflow: TextOverflow.ellipsis,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(

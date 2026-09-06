@@ -160,8 +160,9 @@ class _EpisodeRailCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const BorderRadius radius = FushiBorderRadius.card;
-    final Color borderColor =
-        selected ? colorScheme.primary : Colors.white.withValues(alpha: 0.14);
+    final Color borderColor = selected
+        ? colorScheme.primary
+        : Colors.white.withValues(alpha: 0.14);
     return Semantics(
       button: true,
       selected: selected,
@@ -172,10 +173,7 @@ class _EpisodeRailCard extends StatelessWidget {
         width: width,
         decoration: BoxDecoration(
           borderRadius: radius,
-          border: Border.all(
-            color: borderColor,
-            width: selected ? 2 : 1,
-          ),
+          border: Border.all(color: borderColor, width: selected ? 2 : 1),
           boxShadow: selected
               ? <BoxShadow>[
                   BoxShadow(
@@ -248,8 +246,9 @@ class _EpisodeRailCard extends StatelessWidget {
                             color: Colors.white,
                             fontSize: fontSize,
                             height: 1.15,
-                            fontWeight:
-                                selected ? FontWeight.w700 : FontWeight.w600,
+                            fontWeight: selected
+                                ? FontWeight.w700
+                                : FontWeight.w600,
                           ),
                         ),
                       ),
@@ -305,13 +304,13 @@ class _EpisodeCover extends StatelessWidget {
   }
 
   Widget _placeholder() => ColoredBox(
-        color: colorScheme.surfaceContainerHighest,
-        child: Center(
-          child: Icon(
-            Icons.movie_outlined,
-            size: 30,
-            color: colorScheme.onSurfaceVariant,
-          ),
-        ),
-      );
+    color: colorScheme.surfaceContainerHighest,
+    child: Center(
+      child: Icon(
+        Icons.movie_outlined,
+        size: 30,
+        color: colorScheme.onSurfaceVariant,
+      ),
+    ),
+  );
 }

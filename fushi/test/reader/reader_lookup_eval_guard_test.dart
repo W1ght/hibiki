@@ -35,7 +35,8 @@ void main() {
       expect(
         src,
         contains("'$tag'"),
-        reason: '$tag 守卫缺失：半销毁 WebView 上查词 evaluateJavascript 抛 '
+        reason:
+            '$tag 守卫缺失：半销毁 WebView 上查词 evaluateJavascript 抛 '
             'MissingPluginException 会逃 zone / 打断查词弹窗（TODO-678，BUG-005 '
             '同根因漏网 callsite）。勿退回裸 eval。',
       );
@@ -43,42 +44,47 @@ void main() {
   });
 
   test(
-      '_highlightAndShowPopup shows popup up-front, decoupled from highlight eval',
-      () {
-    // BUG-717 (2): the popup show is decoupled from the reader-WebView highlight
-    // eval. The old impl put showDeferredPopup inside the highlight eval's finally
-    // (await eval, then show), so the popup was serialized behind the busy large
-    // reader WebView -- the main multiplier making in-app lookup several times
-    // slower than the out-of-app overlay. Now the popup is shown UP FRONT with
-    // fallbackRect; the highlight eval only reanchors afterwards. Under this
-    // structure a failing/half-torn WebView eval (MissingPluginException) still
-    // cannot block OR delay the popup -- a stronger guarantee than the old
-    // finally. If anyone recouples the show back onto the eval (moving it into a
-    // try/finally, or showing only after awaiting the eval), this test goes red.
-    final int showIdx =
-        src.indexOf('showDeferredPopup(selectionRect: fallbackRect);');
-    final int evalIdx =
-        src.indexOf("'ReaderFushi.highlightAndShowPopup.eval'");
-    expect(
-      showIdx,
-      greaterThanOrEqualTo(0),
-      reason: '_highlightAndShowPopup must show the popup up front with '
-          'fallbackRect (decoupled from the highlight eval); do not recouple it '
-          "onto the eval's finally/continuation.",
-    );
-    expect(
-      evalIdx,
-      greaterThanOrEqualTo(0),
-      reason: 'ReaderFushi.highlightAndShowPopup.eval guard tag missing.',
-    );
-    expect(
-      showIdx,
-      lessThan(evalIdx),
-      reason: 'The popup show (showDeferredPopup(fallbackRect)) must appear '
-          'before the highlight eval: show and eval are decoupled so an eval '
-          'failure or slowdown neither blocks nor delays the popup (BUG-717 2).',
-    );
-  });
+    '_highlightAndShowPopup shows popup up-front, decoupled from highlight eval',
+    () {
+      // BUG-717 (2): the popup show is decoupled from the reader-WebView highlight
+      // eval. The old impl put showDeferredPopup inside the highlight eval's finally
+      // (await eval, then show), so the popup was serialized behind the busy large
+      // reader WebView -- the main multiplier making in-app lookup several times
+      // slower than the out-of-app overlay. Now the popup is shown UP FRONT with
+      // fallbackRect; the highlight eval only reanchors afterwards. Under this
+      // structure a failing/half-torn WebView eval (MissingPluginException) still
+      // cannot block OR delay the popup -- a stronger guarantee than the old
+      // finally. If anyone recouples the show back onto the eval (moving it into a
+      // try/finally, or showing only after awaiting the eval), this test goes red.
+      final int showIdx = src.indexOf(
+        'showDeferredPopup(selectionRect: fallbackRect);',
+      );
+      final int evalIdx = src.indexOf(
+        "'ReaderFushi.highlightAndShowPopup.eval'",
+      );
+      expect(
+        showIdx,
+        greaterThanOrEqualTo(0),
+        reason:
+            '_highlightAndShowPopup must show the popup up front with '
+            'fallbackRect (decoupled from the highlight eval); do not recouple it '
+            "onto the eval's finally/continuation.",
+      );
+      expect(
+        evalIdx,
+        greaterThanOrEqualTo(0),
+        reason: 'ReaderFushi.highlightAndShowPopup.eval guard tag missing.',
+      );
+      expect(
+        showIdx,
+        lessThan(evalIdx),
+        reason:
+            'The popup show (showDeferredPopup(fallbackRect)) must appear '
+            'before the highlight eval: show and eval are decoupled so an eval '
+            'failure or slowdown neither blocks nor delays the popup (BUG-717 2).',
+      );
+    },
+  );
 
   test('_highlightAndShowPopup reanchors via reanchorTopPopup after eval', () {
     // After decoupling, the highlight eval's only job is to fetch the refined
@@ -90,7 +96,8 @@ void main() {
     expect(
       src,
       contains('reanchorTopPopup(rect, generation)'),
-      reason: 'The highlight eval result must reanchor via '
+      reason:
+          'The highlight eval result must reanchor via '
           'reanchorTopPopup(rect, generation) to the refined word bbox '
           '(generation-guarded); do not remove the reanchor.',
     );
@@ -111,11 +118,20 @@ void main() {
     );
     expect(clear, isNonNegative);
     expect(mounted, greaterThan(clear), reason: '异步清理回来必须重新检查页面/会话是否仍有效');
-    expect(reclaim, greaterThan(mounted),
-        reason: 'WKWebView 清选区必须完成后才能抢回焦点，避免灰色选区残帧');
-    expect(body, contains('isDictionaryShown'),
-        reason: '等待期间若新查词弹窗已打开，不得由旧会话抢回焦点');
-    expect(body, contains('activeLookupGeneration != dismissedGeneration'),
-        reason: '新查词尚在加载、弹窗未 visible 时也必须由 lookup generation 挡住旧收尾');
+    expect(
+      reclaim,
+      greaterThan(mounted),
+      reason: 'WKWebView 清选区必须完成后才能抢回焦点，避免灰色选区残帧',
+    );
+    expect(
+      body,
+      contains('isDictionaryShown'),
+      reason: '等待期间若新查词弹窗已打开，不得由旧会话抢回焦点',
+    );
+    expect(
+      body,
+      contains('activeLookupGeneration != dismissedGeneration'),
+      reason: '新查词尚在加载、弹窗未 visible 时也必须由 lookup generation 挡住旧收尾',
+    );
   });
 }

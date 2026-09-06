@@ -49,15 +49,19 @@ void main() {
       'android/app/src/main/java/app/fushi/reader/'
       'FloatingDictPluginRegistrant.java',
     ).readAsStringSync();
-    expect(main,
-        contains('SelectionActionChannel.registerWith(flutterEngine, this)'));
+    expect(
+      main,
+      contains('SelectionActionChannel.registerWith(flutterEngine, this)'),
+    );
     expect(
       popup,
       contains(
         'SelectionActionChannel.registerWith(engine, context.applicationContext)',
       ),
     );
-    expect(registrant,
-        contains('new dev.fluttercommunity.plus.share.SharePlusPlugin()'));
+    expect(
+      registrant,
+      contains('new dev.fluttercommunity.plus.share.SharePlusPlugin()'),
+    );
   });
 }

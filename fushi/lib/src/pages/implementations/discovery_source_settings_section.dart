@@ -34,7 +34,8 @@ class _DiscoverySourceSettingsSectionState
     // 由各自的配置区管。两套开关同时作用在一个源上会两头对不上，见
     // [MediaDiscoverySource.isUserConfigured]。
     final List<MediaDiscoverySource> sources = appModel
-        .mediaDiscoveryService.sources
+        .mediaDiscoveryService
+        .sources
         .where((MediaDiscoverySource s) => !s.isUserConfigured)
         .toList(growable: false);
     final Set<String> disabled = appModel.discoveryDisabledSourceIds;

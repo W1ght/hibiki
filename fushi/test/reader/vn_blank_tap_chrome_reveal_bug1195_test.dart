@@ -96,29 +96,35 @@ void main() {
       );
     });
 
-    test('BUG-1245 production dispatcher: first tap reveals, second advances',
-        () {
-      final List<String> actions = <String>[];
-      void dispatch(bool visible) {
-        dispatchReaderVnBlankTapAction(
-          readerVnBlankTapAction(
-            chromeExpanded: true,
-            bottomBarFloating: true,
-            transientVisible: visible,
-          ),
-          expandChrome: () => actions.add('expand'),
-          revealChrome: () => actions.add('reveal'),
-          advance: () => actions.add('advance'),
-        );
-      }
+    test(
+      'BUG-1245 production dispatcher: first tap reveals, second advances',
+      () {
+        final List<String> actions = <String>[];
+        void dispatch(bool visible) {
+          dispatchReaderVnBlankTapAction(
+            readerVnBlankTapAction(
+              chromeExpanded: true,
+              bottomBarFloating: true,
+              transientVisible: visible,
+            ),
+            expandChrome: () => actions.add('expand'),
+            revealChrome: () => actions.add('reveal'),
+            advance: () => actions.add('advance'),
+          );
+        }
 
-      dispatch(false);
-      expect(actions, <String>['reveal'],
-          reason: 'the first hidden-chrome tap only reveals controls');
-      dispatch(true);
-      expect(actions, <String>['reveal', 'reveal', 'advance'],
-          reason: 'only the second, already-visible tap advances');
-    });
+        dispatch(false);
+        expect(actions, <String>[
+          'reveal',
+        ], reason: 'the first hidden-chrome tap only reveals controls');
+        dispatch(true);
+        expect(actions, <String>[
+          'reveal',
+          'reveal',
+          'advance',
+        ], reason: 'only the second, already-visible tap advances');
+      },
+    );
   });
 
   group('BUG-1195 dispatch structure guard', () {
@@ -146,10 +152,12 @@ void main() {
       );
       // 注释里会引用旧写法（说明为什么不能那么写），只看真代码。
       expect(
-        _stripLineComments(webview)
-            .contains("window.fushiReader.paginate('forward')"),
+        _stripLineComments(
+          webview,
+        ).contains("window.fushiReader.paginate('forward')"),
         isFalse,
-        reason: 'BUG-1195：JS 直接 paginate 会吞掉唯一能唤出控制栏的手势；'
+        reason:
+            'BUG-1195：JS 直接 paginate 会吞掉唯一能唤出控制栏的手势；'
             '翻页必须走 Dart 的 _paginate（同时才有跨章 / 节流 / caret 重锚）',
       );
     });
@@ -186,11 +194,14 @@ void main() {
     });
 
     test('🔴 唤栏助手每次都重新武装自动收起，且绝不 toggle 关掉底栏', () {
-      final int start =
-          chrome.indexOf('void _revealFloatingChromeForVnAdvance()');
+      final int start = chrome.indexOf(
+        'void _revealFloatingChromeForVnAdvance()',
+      );
       expect(start, greaterThanOrEqualTo(0), reason: 'VN 推进专用的唤栏助手必须存在');
-      final int end =
-          chrome.indexOf('bool _handleFloatingChromeReveal()', start);
+      final int end = chrome.indexOf(
+        'bool _handleFloatingChromeReveal()',
+        start,
+      );
       expect(end, greaterThan(start));
       final String body = chrome.substring(start, end);
 
@@ -210,7 +221,8 @@ void main() {
       expect(
         body.contains('_chromeTransientVisible = false'),
         isFalse,
-        reason: 'VN 推进的唤栏绝不能 toggle 关掉底栏——'
+        reason:
+            'VN 推进的唤栏绝不能 toggle 关掉底栏——'
             '连点两下就把刚叫出来的菜单关掉是最难查的那类交互 bug；'
             '开关语义留给 _handleFloatingChromeReveal（点空白/点进度条）',
       );
@@ -220,7 +232,8 @@ void main() {
       expect(
         page.contains('bool get _bottomBarShouldPaint => bottomBarVisible('),
         isTrue,
-        reason: 'BUG-1195：_bottomBarShouldPaint 必须读唯一那套可见性规则，'
+        reason:
+            'BUG-1195：_bottomBarShouldPaint 必须读唯一那套可见性规则，'
             '否则两边漂开又会出现「判为可见却没画出来」',
       );
     });
@@ -250,8 +263,11 @@ void main() {
       // 回传点之前最近的分支条件必须同时门控 fushiVnMode 与 fushiVnClickAdvance。
       final String before = code.substring(0, callAt);
       final int branchAt = before.lastIndexOf('fushiVnMode');
-      expect(branchAt, greaterThan(0),
-          reason: 'onVnBlankTap 必须落在 fushiVnMode 门控之内');
+      expect(
+        branchAt,
+        greaterThan(0),
+        reason: 'onVnBlankTap 必须落在 fushiVnMode 门控之内',
+      );
       final String guard = before.substring(branchAt);
       expect(
         guard.contains('fushiVnClickAdvance'),
@@ -286,12 +302,14 @@ void main() {
       );
       final int start = chrome.indexOf('bool _handleFloatingChromeReveal()');
       final int end = chrome.indexOf('\n  ///', start + 10);
-      final String body =
-          end > start ? chrome.substring(start, end) : chrome.substring(start);
+      final String body = end > start
+          ? chrome.substring(start, end)
+          : chrome.substring(start);
       expect(
         body.contains('_chromeTransientVisible = false'),
         isTrue,
-        reason: '非 VN 的「唤出期间再点一下立即收起」（决策#4）必须保留——'
+        reason:
+            '非 VN 的「唤出期间再点一下立即收起」（决策#4）必须保留——'
             'VN 的修复不得把这个开关语义改成只开不关',
       );
     });
@@ -303,7 +321,8 @@ void main() {
       expect(
         body.contains('fushiContinuousMode') || body.contains('paginatedMode'),
         isFalse,
-        reason: 'VN 决策点不得感知其它 view-mode——它本来就只由 VN 分支触发，'
+        reason:
+            'VN 决策点不得感知其它 view-mode——它本来就只由 VN 分支触发，'
             '出现别的模式判断就说明信号源被放宽了',
       );
     });
@@ -313,10 +332,15 @@ void main() {
 /// 取 `_handleVnBlankTap` 的函数体源码（到下一个成员为止）。
 String _vnBlankTapBody(String chrome) {
   final int start = chrome.indexOf('void _handleVnBlankTap()');
-  expect(start, greaterThanOrEqualTo(0),
-      reason: '_handleVnBlankTap must exist in chrome.part.dart');
-  final int end =
-      chrome.indexOf('Future<void> _reanchorContinuousForUiScale', start);
+  expect(
+    start,
+    greaterThanOrEqualTo(0),
+    reason: '_handleVnBlankTap must exist in chrome.part.dart',
+  );
+  final int end = chrome.indexOf(
+    'Future<void> _reanchorContinuousForUiScale',
+    start,
+  );
   expect(end, greaterThan(start));
   return chrome.substring(start, end);
 }

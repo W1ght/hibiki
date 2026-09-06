@@ -45,12 +45,12 @@ class _HomeReaderPageState extends BaseTabPageState<HomeReaderPage> {
           label: t.library_view_browse,
           builder: (BuildContext context, Widget navigation) =>
               MediaDiscoveryPage(
-            kinds: const <DiscoveryMediaKind>[
-              DiscoveryMediaKind.novel,
-              DiscoveryMediaKind.audiobook,
-            ],
-            navigation: navigation,
-          ),
+                kinds: const <DiscoveryMediaKind>[
+                  DiscoveryMediaKind.novel,
+                  DiscoveryMediaKind.audiobook,
+                ],
+                navigation: navigation,
+              ),
         ),
         MediaLibraryViewSpec(
           kind: MediaLibraryViewKind.sources,
@@ -63,9 +63,9 @@ class _HomeReaderPageState extends BaseTabPageState<HomeReaderPage> {
           label: t.settings,
           builder: (BuildContext context, Widget navigation) =>
               ModuleSettingsView(
-            destinationId: SettingsDestinationId.reading,
-            navigation: navigation,
-          ),
+                destinationId: SettingsDestinationId.reading,
+                navigation: navigation,
+              ),
         ),
       ],
     );

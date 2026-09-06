@@ -245,21 +245,15 @@ void main() {
       expect(descriptor.videoSource, AnimeVideoSource.webDl);
       expect(descriptor.videoCodec, AnimeVideoCodec.hevc);
       expect(descriptor.bitDepth, 10);
-      expect(
-        descriptor.dynamicRanges,
-        <AnimeDynamicRange>{
-          AnimeDynamicRange.hdr10Plus,
-          AnimeDynamicRange.dolbyVision,
-        },
-      );
-      expect(
-        descriptor.audioCodecs,
-        <AnimeAudioCodec>{AnimeAudioCodec.eac3, AnimeAudioCodec.aac},
-      );
-      expect(
-        descriptor.subtitlePresentation,
-        AnimeSubtitlePresentation.soft,
-      );
+      expect(descriptor.dynamicRanges, <AnimeDynamicRange>{
+        AnimeDynamicRange.hdr10Plus,
+        AnimeDynamicRange.dolbyVision,
+      });
+      expect(descriptor.audioCodecs, <AnimeAudioCodec>{
+        AnimeAudioCodec.eac3,
+        AnimeAudioCodec.aac,
+      });
+      expect(descriptor.subtitlePresentation, AnimeSubtitlePresentation.soft);
       expect(descriptor.isHdr, isTrue);
     });
 
@@ -272,20 +266,18 @@ void main() {
       expect(descriptor.videoSource, AnimeVideoSource.bluRay);
       expect(descriptor.videoCodec, AnimeVideoCodec.avc);
       expect(descriptor.bitDepth, 10);
-      expect(
-        descriptor.audioCodecs,
-        <AnimeAudioCodec>{AnimeAudioCodec.flac, AnimeAudioCodec.dtsHd},
-      );
-      expect(
-        descriptor.subtitlePresentation,
-        AnimeSubtitlePresentation.hard,
-      );
+      expect(descriptor.audioCodecs, <AnimeAudioCodec>{
+        AnimeAudioCodec.flac,
+        AnimeAudioCodec.dtsHd,
+      });
+      expect(descriptor.subtitlePresentation, AnimeSubtitlePresentation.hard);
       expect(descriptor.isHdr, isFalse);
     });
 
     test('没有明确标签时不猜资源规格', () {
-      final AnimeReleaseDescriptor descriptor =
-          makeTorrent('Show - 05 [ABCD1234]').releaseDescriptor;
+      final AnimeReleaseDescriptor descriptor = makeTorrent(
+        'Show - 05 [ABCD1234]',
+      ).releaseDescriptor;
 
       expect(descriptor.releaseGroup, isNull);
       expect(descriptor.resolution, isNull);
@@ -477,8 +469,7 @@ void main() {
     // 代理半开时 TCP 连接能挂到操作系统重传耗尽；discovery source 与 resource
     // provider 这两条注册表路径的调用点也没有外层超时，于是一次挂死的 Nyaa
     // 请求会把整次扇出一起拖住。
-    test('永不完成的响应在 requestTimeout 后抛 TimeoutException，不是无限等待',
-        () async {
+    test('永不完成的响应在 requestTimeout 后抛 TimeoutException，不是无限等待', () async {
       // 永不完成：这个 Completer 从不 complete、也不 throw。若 search 不设超时，
       // 下面的 await 就永远不返回，只能被 flutter_test 自己的超时打死。
       final Completer<http.Response> never = Completer<http.Response>();
@@ -513,8 +504,9 @@ void main() {
       // anime_download_subscription / anime_download_dialog 的调用点外层就是
       // kDownloadDiscoveryTimeout，内层更紧等于替它们偷偷回退 BUG-1141。
       // 注入 MockClient 只为避免建真 IO client；被测的是默认参数值本身。
-      final NyaaClient client =
-          NyaaClient(client: MockClient((_) async => http.Response('', 200)));
+      final NyaaClient client = NyaaClient(
+        client: MockClient((_) async => http.Response('', 200)),
+      );
       expect(client.requestTimeout, kDownloadDiscoveryTimeout);
       client.close();
     });
@@ -586,7 +578,8 @@ void main() {
       // 旧实现走 res.body(latin1) 会把「ソ・ラ・ノ・ヲ・ト」变成「Soã»...」。
       const String jpTitle =
           '[ReinForce] ソ・ラ・ノ・ヲ・ト (BDRip 1920x1080 x264 FLAC)';
-      const String rss = '''
+      const String rss =
+          '''
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:nyaa="https://nyaa.si/xmlns/nyaa">
   <channel><item>

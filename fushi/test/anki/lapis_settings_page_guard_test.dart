@@ -45,8 +45,9 @@ String _methodBody(String source, String name) {
 }
 
 void main() {
-  final File file =
-      File('lib/src/pages/implementations/anki_settings_page.dart');
+  final File file = File(
+    'lib/src/pages/implementations/anki_settings_page.dart',
+  );
   final File editorFile = File('lib/src/anki/lapis_style_editor_page.dart');
   late String source;
   late String editorSource;
@@ -64,10 +65,16 @@ void main() {
     final int awaitAt = body.indexOf('await ');
     expect(busyAt, greaterThanOrEqualTo(0), reason: '在途标记没了？');
     expect(awaitAt, greaterThanOrEqualTo(0));
-    expect(busyAt, lessThan(awaitAt),
-        reason: '_lapisBusy 必须先于任何 await 置位，否则连点两下能开两条恢复流程');
-    expect(body, contains('finally'),
-        reason: '置位后必须在 finally 里复位，异常路径不能把按钮永久卡死');
+    expect(
+      busyAt,
+      lessThan(awaitAt),
+      reason: '_lapisBusy 必须先于任何 await 置位，否则连点两下能开两条恢复流程',
+    );
+    expect(
+      body,
+      contains('finally'),
+      reason: '置位后必须在 finally 里复位，异常路径不能把按钮永久卡死',
+    );
   });
 
   test('_runRestoreLapisBackup 的刷新失败仍会呈现给用户（不落 finally）', () {
@@ -75,12 +82,18 @@ void main() {
     // 抛出即成为没人接的异步异常——页面继续显示恢复前的值，用户什么也看不到。
     // 那正是本 PR 要修的「谎报」同一类问题，不能在修它的过程中引入。
     final String body = _methodBody(source, '_runRestoreLapisBackup');
-    expect(body.contains('finally'), isFalse,
-        reason: 'finally 里的 await 抛出会绕过 catch，变成未捕获异步异常');
+    expect(
+      body.contains('finally'),
+      isFalse,
+      reason: 'finally 里的 await 抛出会绕过 catch，变成未捕获异步异常',
+    );
     final int refreshAt = body.indexOf('refreshSettingsFromStore');
     expect(refreshAt, greaterThanOrEqualTo(0), reason: '刷新调用没了？');
-    expect(body.indexOf('catch', refreshAt), greaterThan(refreshAt),
-        reason: '刷新必须被 catch 包住，失败要走 restore_failed 提示');
+    expect(
+      body.indexOf('catch', refreshAt),
+      greaterThan(refreshAt),
+      reason: '刷新必须被 catch 包住，失败要走 restore_failed 提示',
+    );
     expect(body, contains('anki_lapis_restore_failed'));
   });
 
@@ -97,15 +110,12 @@ void main() {
     expect(childrenAt, greaterThan(titleAt));
     final String section = source.substring(titleAt, childrenAt);
     expect(section, contains('collapsible: true'));
-    expect(
-      section,
-      contains('initiallyExpanded: false'),
-      reason: '默认展开就等于没折叠',
-    );
+    expect(section, contains('initiallyExpanded: false'), reason: '默认展开就等于没折叠');
     expect(
       section,
       contains('SettingsSectionTitlePlacement.inside'),
-      reason: 'AdaptiveSettingsSection 只在标题内嵌时才认 collapsible，'
+      reason:
+          'AdaptiveSettingsSection 只在标题内嵌时才认 collapsible，'
           '标题在外面的话折叠参数被静默忽略、看不出任何区别',
     );
   });
@@ -114,7 +124,10 @@ void main() {
     final String body = _methodBody(editorSource, 'dispose');
     expect(body, contains('_advancedCssController'));
     expect(body, contains('removeListener(_handleAdvancedCssChanged)'));
-    expect(body, contains('dispose()'),
-        reason: '独立编辑页退出时必须释放 TextEditingController');
+    expect(
+      body,
+      contains('dispose()'),
+      reason: '独立编辑页退出时必须释放 TextEditingController',
+    );
   });
 }

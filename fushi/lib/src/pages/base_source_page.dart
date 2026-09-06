@@ -60,10 +60,7 @@ int lookupHighlightCharCount({
 /// conveniently share base functionality.f
 abstract class BaseSourcePage extends BasePage {
   /// Create an instance of this tab page.
-  const BaseSourcePage({
-    required this.item,
-    super.key,
-  });
+  const BaseSourcePage({required this.item, super.key});
 
   /// The media item pertaining to this usage instance of the source.
   final MediaItem? item;
@@ -171,11 +168,11 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
   @protected
   DictionaryPopupInputSpec get dictionaryPopupInputSpec =>
       dictionaryPopupInputScope == null
-          ? const DictionaryPopupInputSpec()
-          : dictionaryPopupInputSpecFor(
-              registry: appModel.shortcutRegistry,
-              actions: dictionaryPopupForwardedActions,
-            );
+      ? const DictionaryPopupInputSpec()
+      : dictionaryPopupInputSpecFor(
+          registry: appModel.shortcutRegistry,
+          actions: dictionaryPopupForwardedActions,
+        );
 
   /// 弹窗回传 token 的落地点。默认行为：解析出的动作只要属于
   /// [dictionaryPopupForwardedActions] 就关掉整条弹窗栈——「关闭词典」是这条桥的
@@ -253,11 +250,7 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
     await onSourcePagePop();
 
     if (mediaSource != null) {
-      await appModel.closeMedia(
-        ref: ref,
-        mediaSource: mediaSource,
-        item: item,
-      );
+      await appModel.closeMedia(ref: ref, mediaSource: mediaSource, item: item);
     }
 
     if (item != null && messenger != null) {
@@ -314,7 +307,8 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
 
       // 复用条件与旧 _reusableHiddenTopPopup 等价：栈恰为 [单个隐藏热槽] 时原地复用，
       // 否则（嵌套等）追加新层。reuse=false 时 beginTop 直接 append。
-      final bool reuse = _popup.entries.length == 1 &&
+      final bool reuse =
+          _popup.entries.length == 1 &&
           _popup.entries.first.isWarmSlot &&
           !_popup.entries.first.visible;
       final DictionaryPopupEntry item = _popup.beginTop(
@@ -408,11 +402,7 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
       );
       // 续查期间该层可能被裁掉/换词（嵌套查词、关栈）；用身份核对确保只更新原层。
       if (!mounted || !_popup.entries.contains(entry)) return;
-      _popup.fillResult(
-        entry,
-        result: result,
-        allLoaded: !result.truncated,
-      );
+      _popup.fillResult(entry, result: result, allLoaded: !result.truncated);
     } finally {
       // fillResult 成功路径已把 isSearching 清 false；失败/提前 return 在此兜底复位。
       if (_popup.entries.contains(entry) && entry.isSearching) {
@@ -467,10 +457,7 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
     return result.entries.isNotEmpty || result.kanjiResults.isNotEmpty;
   }
 
-  void _showPopupWaitingForRender(
-    DictionaryPopupEntry item,
-    int generation,
-  ) {
+  void _showPopupWaitingForRender(DictionaryPopupEntry item, int generation) {
     _visibleRenderFailsafeTimer?.cancel();
     _visibleRenderPendingItem = item;
     _visibleRenderPendingGeneration = generation;
@@ -562,8 +549,10 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
   /// 竖排表面（reader vertical-rl）查词时让弹窗放当前列左/右侧而非上/下。
   /// 默认 false（视频/有声书横排字幕、首页等非竖排表面不变）。
   bool get popupVerticalWriting => false;
-  late final Listenable _popupListenable =
-      Listenable.merge([_popup, _isSearchingNotifier]);
+  late final Listenable _popupListenable = Listenable.merge([
+    _popup,
+    _isSearchingNotifier,
+  ]);
 
   /// Phase B 尺寸拖拽的预览态（基准逻辑像素，未缩放）。非空 = 正在拖把手，[popupMaxWidth]
   /// / [popupMaxHeight] 用它临时覆盖偏好实时预览；null = 未拖，用已落库真值。松手清空。
@@ -582,8 +571,10 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
   /// 拖把手起手：把当前偏好基准尺寸存入预览态（后续增量累积其上），并冻结顶层卡当前左上角。
   void _onPopupResizeStart() {
     setState(() {
-      _popupResizePreview =
-          LookupSize(appModel.popupMaxWidth, appModel.popupMaxHeight);
+      _popupResizePreview = LookupSize(
+        appModel.popupMaxWidth,
+        appModel.popupMaxHeight,
+      );
       _popupResizeAnchorTopLeft = _topPopupAnchoredRect?.topLeft;
       _popupResizeAnchorSelection = _topPopupSelectionRect;
     });
@@ -592,7 +583,8 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
   /// 拖把手进行：把盒坐标系增量位移 [deltaPx] 经 [resolveDraggedLookupSize] 折算回基准
   /// （除 appUiScale）并 clamp，实时驱动重建。
   void _onPopupResizeUpdate(Offset deltaPx) {
-    final LookupSize base = _popupResizePreview ??
+    final LookupSize base =
+        _popupResizePreview ??
         LookupSize(appModel.popupMaxWidth, appModel.popupMaxHeight);
     setState(() {
       _popupResizePreview = resolveDraggedLookupSize(
@@ -689,7 +681,8 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
                   ...parkedRealmPopupLayers(
                     parkedRealms: _popup.parkedRealms,
                     screen: screen,
-                    isDark: (appModel.overrideDictionaryTheme ?? theme)
+                    isDark:
+                        (appModel.overrideDictionaryTheme ?? theme)
                             .brightness ==
                         Brightness.dark,
                     overrideFillColor: appModel.overrideDictionaryColor,
@@ -755,7 +748,8 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
       _topPopupSelectionRect = item.selectionRect;
       _topPopupAnchoredRect = pos;
     }
-    final isDark = (appModel.overrideDictionaryTheme ?? theme).brightness ==
+    final isDark =
+        (appModel.overrideDictionaryTheme ?? theme).brightness ==
         Brightness.dark;
 
     // BUG-135 parking + Visibility 几何收口在 [parkedPopupLayer]。
@@ -823,8 +817,8 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
           );
           if (count > 0) {
             final int generation = activeLookupGeneration;
-            final Rect? wordRect =
-                await item.webViewKey.currentState?.highlightSelection(count);
+            final Rect? wordRect = await item.webViewKey.currentState
+                ?.highlightSelection(count);
             // BUG-2054：同一次高亮顺带取回整词 bbox，把刚 push 的子层从「点击的首
             // 字符」重锚到整词矩形（跨行选区时首字符矩形只覆盖第一行，子弹窗会盖住
             // 选区的第二行）。eval 往返期间可能已有更新的查词占住同一下标，故叠
@@ -862,8 +856,8 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
           if (count > 0) {
             // BUG-2054：与 onTextSelected 对称（含两道身份门）。
             final int generation = activeLookupGeneration;
-            final Rect? wordRect =
-                await item.webViewKey.currentState?.highlightSelection(count);
+            final Rect? wordRect = await item.webViewKey.currentState
+                ?.highlightSelection(count);
             if (mounted && generation == activeLookupGeneration) {
               reanchorNestedPopupToWord(
                 controller: _popup,
@@ -880,8 +874,9 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
         // （与 dictionary_page_mixin / home_dictionary_page 同构），webview 的
         // _pushResults 据 searchTerm 不变 + entries 增多自动判 isLoadMore → 走
         // window.updatePopupIncremental() 增量追加，不重渲染整页、保滚动位/热槽。
-        onScrolledToBottom:
-            item.allLoaded ? null : () => loadMoreForLayer(index),
+        onScrolledToBottom: item.allLoaded
+            ? null
+            : () => loadMoreForLayer(index),
         onMineEntry: onMineFromPopup,
         onUpdateEntry: onUpdateFromPopup,
         // TODO-948②：阅读器/有声书弹窗收藏按钮接线（视频走 mixin，不经此处）。
@@ -905,24 +900,28 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
         onOpenInAnki: onOpenInAnkiFromPopup,
         // TODO-270 F/G「查词窗口多句合一制卡」(乙方案)：仅支持草稿的表面（reader 覆写
         // [supportsSentenceDraft]=true）传入回调；其余表面传 null，弹窗不渲染「+句」。
-        onAppendSentence:
-            supportsSentenceDraft ? onAppendSentenceToDraft : null,
-        onSetSentenceContext:
-            supportsSentenceDraft ? onSetSentenceContextToDraft : null,
-        onClearSentenceDraft:
-            supportsSentenceDraft ? onClearSentenceDraftToDraft : null,
+        onAppendSentence: supportsSentenceDraft
+            ? onAppendSentenceToDraft
+            : null,
+        onSetSentenceContext: supportsSentenceDraft
+            ? onSetSentenceContextToDraft
+            : null,
+        onClearSentenceDraft: supportsSentenceDraft
+            ? onClearSentenceDraftToDraft
+            : null,
         // Niratan「制卡前调整·选择句子上下文」模态：弹窗按需拉取当前草稿的真实上下
         // 文句（前/当前/后）+ 词偏移做预览。只在支持草稿的表面接线，其余传 null。
-        onSentenceContextPreview:
-            supportsSentenceDraft ? onSentenceContextPreviewFromDraft : null,
+        onSentenceContextPreview: supportsSentenceDraft
+            ? onSentenceContextPreviewFromDraft
+            : null,
         // BUG-763/766：点某词条「调整上下文」→ 弹 app 原生顶层对话框（不再画在弹窗
         // WebView 内）；确认制卡回该层 WebView（item.webViewKey）精确点中该词条制卡。
         onOpenSentenceContextModal: supportsSentenceDraft
             ? (int entryIndex, String matched) => _openSentenceContextDialog(
-                  webViewKey: item.webViewKey,
-                  entryIndex: entryIndex,
-                  matched: matched,
-                )
+                webViewKey: item.webViewKey,
+                entryIndex: entryIndex,
+                matched: matched,
+              )
             : null,
       ),
     );
@@ -949,8 +948,11 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
       return await body();
     } finally {
       if (mounted) {
-        setState(() => _popupHidingDialogDepth =
-            _popupHidingDialogDepth > 0 ? _popupHidingDialogDepth - 1 : 0);
+        setState(
+          () => _popupHidingDialogDepth = _popupHidingDialogDepth > 0
+              ? _popupHidingDialogDepth - 1
+              : 0,
+        );
       }
     }
   }
@@ -1147,24 +1149,28 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
   /// the unit-test harness.
   @visibleForTesting
   List<
-      ({
-        bool isWarmSlot,
-        bool visible,
-        bool revealOnRender,
-        // TODO-962：暴露 allLoaded + entryCount，让 widget 测试断言「弹窗结果被截断时
-        // 不再硬编码 allLoaded:true、load-more 后词头数增加」。按名访问，不破坏既有解构。
-        bool allLoaded,
-        int entryCount,
-        GlobalKey<DictionaryPopupWebViewState> webViewKey
-      })> get debugPopupStack => _popup.entries
-      .map((e) => (
-            isWarmSlot: e.isWarmSlot,
-            visible: e.visible,
-            revealOnRender: e.revealOnRender,
-            allLoaded: e.allLoaded,
-            entryCount: e.result?.entries.length ?? 0,
-            webViewKey: e.webViewKey,
-          ))
+    ({
+      bool isWarmSlot,
+      bool visible,
+      bool revealOnRender,
+      // TODO-962：暴露 allLoaded + entryCount，让 widget 测试断言「弹窗结果被截断时
+      // 不再硬编码 allLoaded:true、load-more 后词头数增加」。按名访问，不破坏既有解构。
+      bool allLoaded,
+      int entryCount,
+      GlobalKey<DictionaryPopupWebViewState> webViewKey,
+    })
+  >
+  get debugPopupStack => _popup.entries
+      .map(
+        (e) => (
+          isWarmSlot: e.isWarmSlot,
+          visible: e.visible,
+          revealOnRender: e.revealOnRender,
+          allLoaded: e.allLoaded,
+          entryCount: e.result?.entries.length ?? 0,
+          webViewKey: e.webViewKey,
+        ),
+      )
       .toList();
 
   /// TODO-058 test hook: simulate the WebView at [index] firing `popupRendered`
@@ -1213,7 +1219,7 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
                     color: theme.colorScheme.primary,
                     minHeight: 2.75,
                   ),
-                  Expanded(child: Container())
+                  Expanded(child: Container()),
                 ],
               ),
             ),
@@ -1241,7 +1247,8 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
   /// 新增重复卡 / 查看·在 Anki 中打开），复用可被 reader 覆写的 [onMineFromPopup] /
   /// [onUpdateFromPopup] 执行。
   Future<MinePopupResult> onMinedCardActionFromPopup(
-      Map<String, String> fields) async {
+    Map<String, String> fields,
+  ) async {
     final repo = ref.read(ankiRepositoryProvider);
     final expression = fields['expression'] ?? '';
     final reading = fields['reading'] ?? '';
@@ -1295,16 +1302,18 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
     // 打断弹窗查词流程（否则 [DictionaryPopupController.beginTop] 会随查词一起崩）。
     try {
       final ({String? bookKey, String? title})? identity = lookupBookIdentity;
-      unawaited(appModel.database
-          .addLookupCount(
-        bookKey: identity?.bookKey,
-        title: identity?.title ?? '',
-        sourceType: dictionarySourceType,
-        dateKey: statTodayKey(),
-      )
-          .catchError((Object e, StackTrace st) {
-        debugPrint('[fushi-stats] addLookupCount failed: $e\n$st');
-      }));
+      unawaited(
+        appModel.database
+            .addLookupCount(
+              bookKey: identity?.bookKey,
+              title: identity?.title ?? '',
+              sourceType: dictionarySourceType,
+              dateKey: statTodayKey(),
+            )
+            .catchError((Object e, StackTrace st) {
+              debugPrint('[fushi-stats] addLookupCount failed: $e\n$st');
+            }),
+      );
     } catch (e, st) {
       debugPrint('[fushi-stats] addLookupCount failed (sync): $e\n$st');
     }
@@ -1362,7 +1371,9 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
 
   /// TODO-948②：查询某词条当前是否已收藏（供弹窗按钮初始 ☆/★ 状态）。
   Future<bool> onFavoriteCheckFromPopup(
-      String expression, String reading) async {
+    String expression,
+    String reading,
+  ) async {
     if (expression.isEmpty) return false;
     return appModel.database.isFavoriteWord(
       expression: expression,

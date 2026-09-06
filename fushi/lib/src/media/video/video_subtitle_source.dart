@@ -134,12 +134,14 @@ List<EmbeddedSubtitleTrack> parseSubtitleStreamsFromFfmpegLog(
     final String? language = m.group(1);
     final String codec = m.group(2)!;
     final String? title = _extractTrackTitle(lines, i + 1);
-    tracks.add(EmbeddedSubtitleTrack(
-      streamIndex: relativeIndex,
-      codec: codec,
-      language: language,
-      title: title,
-    ));
+    tracks.add(
+      EmbeddedSubtitleTrack(
+        streamIndex: relativeIndex,
+        codec: codec,
+        language: language,
+        title: title,
+      ),
+    );
     relativeIndex++;
   }
   return tracks;
@@ -161,8 +163,9 @@ String? _extractTrackTitle(List<String> lines, int start) {
       final String value = titleMatch.group(1)!.trim();
       if (value.isNotEmpty) return value;
     }
-    final RegExpMatch? handlerMatch =
-        _metadataHandlerNamePattern.firstMatch(line);
+    final RegExpMatch? handlerMatch = _metadataHandlerNamePattern.firstMatch(
+      line,
+    );
     if (handlerMatch != null && handlerFallback == null) {
       final String value = handlerMatch.group(1)!.trim();
       if (value.isNotEmpty &&
@@ -327,8 +330,11 @@ Map<String, dynamic> buildParsedSubtitleResponse({
   if (format == null) {
     return <String, dynamic>{'error': 'unsupported', 'cues': <dynamic>[]};
   }
-  final List<AudioCue> cues =
-      parseSubtitleContent(format, content: content, bookUid: 'ext');
+  final List<AudioCue> cues = parseSubtitleContent(
+    format,
+    content: content,
+    bookUid: 'ext',
+  );
   return <String, dynamic>{
     'format': format.name,
     'cues': <Map<String, dynamic>>[
@@ -369,16 +375,16 @@ class SubtitleSource {
     required this.label,
     this.language,
     this.codec,
-  })  : isEmbedded = true,
-        externalPath = null;
+  }) : isEmbedded = true,
+       externalPath = null;
 
   const SubtitleSource.external({
     required String this.externalPath,
     required this.label,
-  })  : isEmbedded = false,
-        streamIndex = null,
-        language = null,
-        codec = null;
+  }) : isEmbedded = false,
+       streamIndex = null,
+       language = null,
+       codec = null;
 
   /// 是否内嵌轨（true=内嵌，false=外挂文件）。
   final bool isEmbedded;
@@ -530,7 +536,7 @@ bool isTransientDefaultEmbeddedSubtitleLoad(
 /// retry. Returns the final [DefaultEmbeddedSubtitleLoadResult]; the caller
 /// decides whether to apply cues / notify, also gated on [isStillCurrent].
 Future<DefaultEmbeddedSubtitleLoadResult>
-    loadDefaultTextEmbeddedSubtitleCuesWithReadinessRetry({
+loadDefaultTextEmbeddedSubtitleCuesWithReadinessRetry({
   required String videoPath,
   required String bookUid,
   required Future<void> Function() waitForReady,
@@ -540,13 +546,15 @@ Future<DefaultEmbeddedSubtitleLoadResult>
     required String videoPath,
     required String bookUid,
     String langCode,
-  })? loadOnce,
+  })?
+  loadOnce,
 }) async {
   final Future<DefaultEmbeddedSubtitleLoadResult> Function({
     required String videoPath,
     required String bookUid,
     String langCode,
-  }) load = loadOnce ?? loadDefaultTextEmbeddedSubtitleCues;
+  })
+  load = loadOnce ?? loadDefaultTextEmbeddedSubtitleCues;
 
   DefaultEmbeddedSubtitleLoadResult result = await load(
     videoPath: videoPath,
@@ -599,10 +607,11 @@ Future<EmbeddedSubtitleTrackProbeResult> probeEmbeddedSubtitleTracks(
     // 经统一 FfmpegBackend 跑 `-i`（CLI 后端 = 旧 Process 路径；捆绑后端可在移动端
     // 工作），解析合并的 stderr 输出。`-i` 无输出文件时退出码非 0，但 stderr 仍含
     // 完整流信息，故只看 output 不看退出码。超时按容器字节数放大（见上）。
-    final FfmpegRunResult result = await resolveFfmpegBackend().run(
-      <String>['-hide_banner', '-i', videoPath],
-      timeout,
-    );
+    final FfmpegRunResult result = await resolveFfmpegBackend().run(<String>[
+      '-hide_banner',
+      '-i',
+      videoPath,
+    ], timeout);
     final List<EmbeddedSubtitleTrack> tracks =
         parseSubtitleStreamsFromFfmpegLog(result.output);
     // 真正失败（超时 SIGKILL → returnCode:null）必须留痕，否则「0 条字幕」与
@@ -727,10 +736,12 @@ SubtitleSource? pickEpisodeSubtitleSource(
   if (lastPersisted == null || lastPersisted.isEmpty) return null;
   if (sources.isEmpty) return null;
 
-  final List<SubtitleSource> embedded =
-      sources.where((SubtitleSource s) => s.isEmbedded).toList();
-  final List<SubtitleSource> external =
-      sources.where((SubtitleSource s) => !s.isEmbedded).toList();
+  final List<SubtitleSource> embedded = sources
+      .where((SubtitleSource s) => s.isEmbedded)
+      .toList();
+  final List<SubtitleSource> external = sources
+      .where((SubtitleSource s) => !s.isEmbedded)
+      .toList();
 
   if (lastPersisted.startsWith(SubtitleSource.embeddedPrefix)) {
     final int? wantIndex = int.tryParse(
@@ -777,12 +788,14 @@ Future<SubtitleSourceListing> listAllSubtitleSourcesWithDiagnostics(
   final EmbeddedSubtitleTrackProbeResult embeddedProbe =
       await probeEmbeddedSubtitleTracks(videoPath);
   for (final EmbeddedSubtitleTrack track in embeddedProbe.tracks) {
-    sources.add(SubtitleSource.embedded(
-      streamIndex: track.streamIndex,
-      language: track.language,
-      codec: track.codec,
-      label: embeddedSubtitleTrackLabel(track),
-    ));
+    sources.add(
+      SubtitleSource.embedded(
+        streamIndex: track.streamIndex,
+        language: track.language,
+        codec: track.codec,
+        label: embeddedSubtitleTrackLabel(track),
+      ),
+    );
   }
 
   // ② 同目录、与当前视频同名前缀的外挂字幕文件。
@@ -796,22 +809,24 @@ Future<SubtitleSourceListing> listAllSubtitleSourcesWithDiagnostics(
           .whereType<File>()
           .map((File f) => p.basename(f.path))
           .toList();
-      for (final String name
-          in pickSameNameSubs(videoBaseNoExt, dirFiles, langCode: langCode)) {
-        sources.add(SubtitleSource.external(
-          externalPath: p.normalize(p.join(dir, name)),
-          label: name,
-        ));
+      for (final String name in pickSameNameSubs(
+        videoBaseNoExt,
+        dirFiles,
+        langCode: langCode,
+      )) {
+        sources.add(
+          SubtitleSource.external(
+            externalPath: p.normalize(p.join(dir, name)),
+            label: name,
+          ),
+        );
       }
     } on FileSystemException {
       // 目录读取失败：只保留内嵌部分。
     }
   }
 
-  return SubtitleSourceListing(
-    sources: sources,
-    embeddedProbe: embeddedProbe,
-  );
+  return SubtitleSourceListing(sources: sources, embeddedProbe: embeddedProbe);
 }
 
 Future<List<SubtitleSource>> listAllSubtitleSources(
@@ -821,15 +836,15 @@ Future<List<SubtitleSource>> listAllSubtitleSources(
   return (await listAllSubtitleSourcesWithDiagnostics(
     videoPath,
     langCode: langCode,
-  ))
-      .sources;
+  )).sources;
 }
 
-typedef SubtitleCueLoader = Future<List<AudioCue>> Function(
-  SubtitleSource source,
-  String videoPath,
-  String bookUid,
-);
+typedef SubtitleCueLoader =
+    Future<List<AudioCue>> Function(
+      SubtitleSource source,
+      String videoPath,
+      String bookUid,
+    );
 
 /// Adds the currently persisted imported subtitles to a menu source list.
 ///
@@ -865,9 +880,9 @@ Future<List<SubtitleSource>> includeCurrentPersistedSubtitleForMenu(
   final List<SubtitleSource> extras = <SubtitleSource>[];
   final List<(String?, List<AudioCue>)> persistedSelections =
       <(String?, List<AudioCue>)>[
-    (currentSubtitleSource, currentCues),
-    (currentSecondarySubtitleSource, currentSecondaryCues),
-  ];
+        (currentSubtitleSource, currentCues),
+        (currentSecondarySubtitleSource, currentSecondaryCues),
+      ];
 
   for (final (String? persisted, List<AudioCue> cues) in persistedSelections) {
     if (persisted == null ||
@@ -877,19 +892,27 @@ Future<List<SubtitleSource>> includeCurrentPersistedSubtitleForMenu(
     }
     // 已被枚举列出（视频同目录 sidecar）或已被另一条指针补进来（主副选同一档）
     // 都不重复列出——去重判据与列表高亮同一个（大小写 / 分隔符归一）。
-    if (result.any((SubtitleSource source) =>
-            sameExternalSubtitlePathForMenu(source, persisted)) ||
-        extras.any((SubtitleSource source) =>
-            sameExternalSubtitlePathForMenu(source, persisted))) {
+    if (result.any(
+          (SubtitleSource source) =>
+              sameExternalSubtitlePathForMenu(source, persisted),
+        ) ||
+        extras.any(
+          (SubtitleSource source) =>
+              sameExternalSubtitlePathForMenu(source, persisted),
+        )) {
       continue;
     }
     final SubtitleSource source = SubtitleSource.external(
       externalPath: persisted,
       label: p.basename(persisted),
     );
-    final bool hasUsableCues = cues.isNotEmpty ||
-        (await (loadCues ?? loadCuesForSource)(source, videoPath, bookUid))
-            .isNotEmpty;
+    final bool hasUsableCues =
+        cues.isNotEmpty ||
+        (await (loadCues ?? loadCuesForSource)(
+          source,
+          videoPath,
+          bookUid,
+        )).isNotEmpty;
     if (!hasUsableCues) continue;
     extras.add(source);
   }
@@ -970,10 +993,12 @@ List<SubtitleSource> mergeImportedSubtitleSourcesForMenu(
     final String? path = source.externalPath;
     if (path == null) continue;
     final bool listed =
-        enumerated.any((SubtitleSource s) =>
-                sameExternalSubtitlePathForMenu(s, path)) ||
-            extras.any((SubtitleSource s) =>
-                sameExternalSubtitlePathForMenu(s, path));
+        enumerated.any(
+          (SubtitleSource s) => sameExternalSubtitlePathForMenu(s, path),
+        ) ||
+        extras.any(
+          (SubtitleSource s) => sameExternalSubtitlePathForMenu(s, path),
+        );
     if (listed) continue;
     extras.add(source);
   }
@@ -1041,7 +1066,7 @@ class SubtitleCueLoadResult {
   const SubtitleCueLoadResult.loaded(this.cues) : failure = null;
 
   const SubtitleCueLoadResult.failed(SubtitleCueLoadFailure this.failure)
-      : cues = const <AudioCue>[];
+    : cues = const <AudioCue>[];
 
   final List<AudioCue> cues;
   final SubtitleCueLoadFailure? failure;
@@ -1063,8 +1088,11 @@ Future<List<AudioCue>> loadCuesForSource(
   String videoPath,
   String bookUid,
 ) async {
-  final SubtitleCueLoadResult result =
-      await loadSubtitleCueResult(source, videoPath, bookUid);
+  final SubtitleCueLoadResult result = await loadSubtitleCueResult(
+    source,
+    videoPath,
+    bookUid,
+  );
   return result.cues;
 }
 
@@ -1087,9 +1115,9 @@ Future<DefaultEmbeddedSubtitleLoadResult> loadDefaultTextEmbeddedSubtitleCues({
 }) async {
   final SubtitleSourceListing listing =
       await listAllSubtitleSourcesWithDiagnostics(
-    videoPath,
-    langCode: langCode,
-  );
+        videoPath,
+        langCode: langCode,
+      );
   final EmbeddedSubtitleTrackProbeResult probe = listing.embeddedProbe;
   if (probe.status == EmbeddedSubtitleTrackProbeStatus.missingFile) {
     return DefaultEmbeddedSubtitleLoadResult(
@@ -1116,8 +1144,9 @@ Future<DefaultEmbeddedSubtitleLoadResult> loadDefaultTextEmbeddedSubtitleCues({
     );
   }
 
-  final bool hasEmbedded =
-      listing.sources.any((SubtitleSource source) => source.isEmbedded);
+  final bool hasEmbedded = listing.sources.any(
+    (SubtitleSource source) => source.isEmbedded,
+  );
   if (!hasEmbedded) {
     return DefaultEmbeddedSubtitleLoadResult(
       status: DefaultEmbeddedSubtitleLoadStatus.noEmbeddedTracks,
@@ -1126,8 +1155,9 @@ Future<DefaultEmbeddedSubtitleLoadResult> loadDefaultTextEmbeddedSubtitleCues({
     );
   }
 
-  final SubtitleSource? chosen =
-      firstTextEmbeddedSubtitleSource(listing.sources);
+  final SubtitleSource? chosen = firstTextEmbeddedSubtitleSource(
+    listing.sources,
+  );
   if (chosen == null) {
     return DefaultEmbeddedSubtitleLoadResult(
       status: DefaultEmbeddedSubtitleLoadStatus.noTextTrack,
@@ -1250,8 +1280,10 @@ Future<void> prewarmEmbeddedSubtitleCache(String videoPath) async {
       embeddedSubtitleCacheDir(videoPath),
     );
   } catch (e, stack) {
-    debugPrint('[VideoSubtitleSource] embedded subtitle prewarm failed: '
-        '$e\n$stack');
+    debugPrint(
+      '[VideoSubtitleSource] embedded subtitle prewarm failed: '
+      '$e\n$stack',
+    );
   }
 }
 
@@ -1291,10 +1323,10 @@ Future<void> _ensureAllEmbeddedSubtitlesExtracted(
   final String key = cacheDir.path;
   final Future<void>? existing = _embeddedExtractInFlight[key];
   if (existing != null) return existing;
-  final Future<void> fut =
-      _extractAllEmbeddedSubtitles(videoPath, cacheDir).whenComplete(() {
-    _embeddedExtractInFlight.remove(key);
-  });
+  final Future<void> fut = _extractAllEmbeddedSubtitles(videoPath, cacheDir)
+      .whenComplete(() {
+        _embeddedExtractInFlight.remove(key);
+      });
   _embeddedExtractInFlight[key] = fut;
   return fut;
 }
@@ -1303,16 +1335,19 @@ Future<void> _extractAllEmbeddedSubtitles(
   String videoPath,
   Directory cacheDir,
 ) async {
-  final List<EmbeddedSubtitleTrack> tracks =
-      await listEmbeddedSubtitleTracks(videoPath);
+  final List<EmbeddedSubtitleTrack> tracks = await listEmbeddedSubtitleTracks(
+    videoPath,
+  );
   // Only text tracks (graphic pgs/dvd → null format) get extracted; cache file
   // name carries the parser-deciding extension.
   final Map<int, String> outputs = <int, String>{};
   for (final EmbeddedSubtitleTrack track in tracks) {
     final SubtitleFormat? fmt = subtitleFormatForCodec(track.codec);
     if (fmt == null) continue;
-    final String outputPath =
-        p.join(cacheDir.path, 'sub_${track.streamIndex}${_ext(fmt)}');
+    final String outputPath = p.join(
+      cacheDir.path,
+      'sub_${track.streamIndex}${_ext(fmt)}',
+    );
     final File cached = File(outputPath);
     if (cached.existsSync() && cached.lengthSync() > 0) continue;
     // BUG-863 negative cache: a track already rejected as undecodable by the
@@ -1321,8 +1356,9 @@ Future<void> _extractAllEmbeddedSubtitles(
     // the whole (possibly multi-GB) container and re-log the same failure on
     // every prewarm. The sentinel lives in the cache dir, keyed by video
     // size+mtime, so replacing the file in place still re-attempts extraction.
-    if (File('$outputPath$kUnsupportedEmbeddedSubtitleSentinelSuffix')
-        .existsSync()) {
+    if (File(
+      '$outputPath$kUnsupportedEmbeddedSubtitleSentinelSuffix',
+    ).existsSync()) {
       continue;
     }
     outputs[track.streamIndex] = outputPath;
@@ -1359,8 +1395,10 @@ String embeddedSubtitleCacheKey(
   int sizeBytes,
   int mtimeMs,
 ) {
-  final String safe =
-      videoBaseNoExt.replaceAll(RegExp(r'[^A-Za-z0-9_.-]'), '_');
+  final String safe = videoBaseNoExt.replaceAll(
+    RegExp(r'[^A-Za-z0-9_.-]'),
+    '_',
+  );
   return '${safe}_${sizeBytes}_$mtimeMs';
 }
 
@@ -1380,9 +1418,7 @@ Directory embeddedSubtitleCacheDir(String videoPath) {
     mtimeMs = videoPath.hashCode;
   }
   final String key = embeddedSubtitleCacheKey(base, size, mtimeMs);
-  return Directory(
-    p.join(Directory.systemTemp.path, 'hibiki_vsub_cache', key),
-  );
+  return Directory(p.join(Directory.systemTemp.path, 'hibiki_vsub_cache', key));
 }
 
 /// **Pure**: how long to allow a single extract-all pass given the container's

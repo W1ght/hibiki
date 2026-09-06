@@ -19,10 +19,7 @@ void showSyncMessage(BuildContext context, String message) {
 
 @visibleForTesting
 class SyncMessageDialog extends StatelessWidget {
-  const SyncMessageDialog({
-    required this.message,
-    super.key,
-  });
+  const SyncMessageDialog({required this.message, super.key});
 
   final String message;
 

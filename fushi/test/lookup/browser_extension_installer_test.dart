@@ -8,11 +8,15 @@ void main() {
   group('browserExtensionsPageUrl', () {
     test('management page url of every supported Chromium browser', () {
       expect(
-          browserExtensionsPageUrl(BrowserKind.chrome), 'chrome://extensions');
+        browserExtensionsPageUrl(BrowserKind.chrome),
+        'chrome://extensions',
+      );
       expect(browserExtensionsPageUrl(BrowserKind.edge), 'edge://extensions');
       expect(browserExtensionsPageUrl(BrowserKind.brave), 'brave://extensions');
-      expect(browserExtensionsPageUrl(BrowserKind.vivaldi),
-          'vivaldi://extensions');
+      expect(
+        browserExtensionsPageUrl(BrowserKind.vivaldi),
+        'vivaldi://extensions',
+      );
       expect(browserExtensionsPageUrl(BrowserKind.opera), 'opera://extensions');
     });
 
@@ -47,8 +51,10 @@ void main() {
     });
 
     test('every loadable source file is bundled byte-identical', () {
-      final List<FileSystemEntity> entities =
-          srcDir.listSync(recursive: true).whereType<File>().toList();
+      final List<FileSystemEntity> entities = srcDir
+          .listSync(recursive: true)
+          .whereType<File>()
+          .toList();
       for (final FileSystemEntity e in entities) {
         final String rel = e.path
             .substring(srcDir.path.length)
@@ -58,10 +64,16 @@ void main() {
         if (rel.startsWith('scripts/')) continue; // 构建期生成器/overlay 不进 bundle
         if (rel == 'README.md') continue; // 开发文档不进 bundle（防指纹随文档翻新）
         final File bundled = File('${bundleDir.path}/$rel');
-        expect(bundled.existsSync(), isTrue,
-            reason: 'not bundled: $rel (run the re-sync copy)');
-        expect(bundled.readAsBytesSync(), (e as File).readAsBytesSync(),
-            reason: 'bundle out of sync with source: $rel');
+        expect(
+          bundled.existsSync(),
+          isTrue,
+          reason: 'not bundled: $rel (run the re-sync copy)',
+        );
+        expect(
+          bundled.readAsBytesSync(),
+          (e as File).readAsBytesSync(),
+          reason: 'bundle out of sync with source: $rel',
+        );
       }
     });
   });
@@ -111,8 +123,10 @@ void main() {
         'vendor/popup.js': <int>[4, 5],
         'background.js': <int>[1, 2, 3],
       };
-      expect(computeBrowserExtensionFingerprint(a),
-          computeBrowserExtensionFingerprint(b));
+      expect(
+        computeBrowserExtensionFingerprint(a),
+        computeBrowserExtensionFingerprint(b),
+      );
       expect(computeBrowserExtensionFingerprint(a), hasLength(16));
     });
 
@@ -123,8 +137,10 @@ void main() {
       final Map<String, List<int>> b = <String, List<int>>{
         'background.js': <int>[1, 2, 4],
       };
-      expect(computeBrowserExtensionFingerprint(a),
-          isNot(computeBrowserExtensionFingerprint(b)));
+      expect(
+        computeBrowserExtensionFingerprint(a),
+        isNot(computeBrowserExtensionFingerprint(b)),
+      );
     });
 
     test('ignores fushi-defaults.js (rewritten on every extract)', () {
@@ -136,15 +152,22 @@ void main() {
         'background.js': <int>[1],
         'fushi-defaults.js': <int>[7],
       };
-      expect(computeBrowserExtensionFingerprint(a),
-          computeBrowserExtensionFingerprint(b));
+      expect(
+        computeBrowserExtensionFingerprint(a),
+        computeBrowserExtensionFingerprint(b),
+      );
     });
 
     test('defaults js build key round-trips through parse', () {
       const BrowserExtensionServerConfig cfg = BrowserExtensionServerConfig(
-          host: '127.0.0.1', port: 19633, token: 't');
-      final String withBuild =
-          buildBrowserExtensionDefaultsJs(cfg, build: 'deadbeef01234567');
+        host: '127.0.0.1',
+        port: 19633,
+        token: 't',
+      );
+      final String withBuild = buildBrowserExtensionDefaultsJs(
+        cfg,
+        build: 'deadbeef01234567',
+      );
       expect(parseBrowserExtensionBuild(withBuild), 'deadbeef01234567');
       // 不传 build（旧调用/占位）→ 不写键、解析回 null（与旧副本一致 → 触发刷新）。
       final String withoutBuild = buildBrowserExtensionDefaultsJs(cfg);
@@ -155,8 +178,9 @@ void main() {
     test('prepareBundledBrowserExtension writes fingerprint into defaults', () {
       // 生产接线守卫（源码扫描）：解压时必须把指纹写进 fushi-defaults.js 的 build，
       // 否则启动刷新（refreshBundledBrowserExtensionIfStale）恒判陈旧、每次启动全量重写。
-      final String src = File('lib/src/lookup/browser_extension_installer.dart')
-          .readAsStringSync();
+      final String src = File(
+        'lib/src/lookup/browser_extension_installer.dart',
+      ).readAsStringSync();
       expect(src, contains('build: computeBrowserExtensionFingerprint('));
     });
   });
@@ -166,8 +190,11 @@ void main() {
   group('bundled extension default connection', () {
     test('fushi-defaults.js defaults to 127.0.0.1:19633', () {
       final File defaults = File('assets/browser_extension/fushi-defaults.js');
-      expect(defaults.existsSync(), isTrue,
-          reason: 'missing bundled fushi-defaults.js');
+      expect(
+        defaults.existsSync(),
+        isTrue,
+        reason: 'missing bundled fushi-defaults.js',
+      );
       final String src = defaults.readAsStringSync();
       expect(src, contains('self.FUSHI_DEFAULTS'));
       expect(src, contains("host: '127.0.0.1'"));

@@ -47,16 +47,17 @@ class _LegacyAssetSyncNoticeState extends State<_LegacyAssetSyncNotice> {
   }
 
   Future<void> _load() async {
-    final bool had =
-        await SyncRepository(widget.settingsContext.appModel.database)
-            .hadLegacyAssetAutoSync();
+    final bool had = await SyncRepository(
+      widget.settingsContext.appModel.database,
+    ).hadLegacyAssetAutoSync();
     if (!mounted) return;
     setState(() => _show = had);
   }
 
   Future<void> _dismiss() async {
-    await SyncRepository(widget.settingsContext.appModel.database)
-        .acknowledgeLegacyAssetAutoSync();
+    await SyncRepository(
+      widget.settingsContext.appModel.database,
+    ).acknowledgeLegacyAssetAutoSync();
     if (!mounted) return;
     setState(() => _show = false);
   }
@@ -111,12 +112,12 @@ class _AssetTransferWidgetState extends State<_AssetTransferWidget> {
   /// 说明文字讲的是**方向的语义**（并集的哪一半），与资产类别无关 —— 两类资产的
   /// 传输规则逐字相同，各写一份只会让它们日后漂移。
   String get _subtitle => switch (widget.direction) {
-        SyncAssetDirection.upload => t.sync_asset_upload_hint,
-        SyncAssetDirection.download => t.sync_asset_download_hint,
-        // 这一行只由 upload / download 两个方向构造；[SyncAssetDirection.both] 是
-        // 自动同步路径的方向，不会出现在设置页上。
-        SyncAssetDirection.both => t.sync_asset_upload_hint,
-      };
+    SyncAssetDirection.upload => t.sync_asset_upload_hint,
+    SyncAssetDirection.download => t.sync_asset_download_hint,
+    // 这一行只由 upload / download 两个方向构造；[SyncAssetDirection.both] 是
+    // 自动同步路径的方向，不会出现在设置页上。
+    SyncAssetDirection.both => t.sync_asset_upload_hint,
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -259,10 +260,7 @@ class _SyncNowWidgetState extends State<_SyncNowWidget> {
                       height: 20,
                       child: CircularProgressIndicator(strokeWidth: 2),
                     )
-                  : FilledButton(
-                      onPressed: _syncNow,
-                      child: Text(t.sync_now),
-                    ),
+                  : FilledButton(onPressed: _syncNow, child: Text(t.sync_now)),
             );
             if (!syncing) return row;
             // Inline determinate bar below the row (indeterminate when a phase

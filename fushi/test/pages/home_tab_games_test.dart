@@ -10,10 +10,7 @@ void main() {
   });
 
   test('gamesEnabled 关闭（默认）时不出现', () {
-    expect(
-      homeActiveTabs(videoEnabled: true),
-      isNot(contains(HomeTab.games)),
-    );
+    expect(homeActiveTabs(videoEnabled: true), isNot(contains(HomeTab.games)));
     expect(
       homeActiveTabs(videoEnabled: false, gamesEnabled: false),
       isNot(contains(HomeTab.games)),

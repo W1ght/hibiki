@@ -79,8 +79,8 @@ class MangaGlobalSearchRunner {
   MangaGlobalSearchRunner({
     required MihonManager? mihonManager,
     required AidokuRuntime? Function() resolveAidokuRuntime,
-  })  : _mihonManager = mihonManager,
-        _resolveAidokuRuntime = resolveAidokuRuntime;
+  }) : _mihonManager = mihonManager,
+       _resolveAidokuRuntime = resolveAidokuRuntime;
 
   final MihonManager? _mihonManager;
   final AidokuRuntime? Function() _resolveAidokuRuntime;
@@ -119,8 +119,9 @@ class MangaGlobalSearchRunner {
       switch (run.source) {
         case MihonGlobalSource(:final MangaOnlineSourceRow row):
           final MihonManager manager = _mihonManager!;
-          final MihonSourceContext context =
-              await manager.contextForSource(row);
+          final MihonSourceContext context = await manager.contextForSource(
+            row,
+          );
           final MihonMangaPage page = await manager.runtime.search(
             context.extension,
             context.source,
@@ -150,10 +151,14 @@ class MangaGlobalSearchRunner {
           final List<Map<String, Object?>> entries =
               (result['entries'] as List<Object?>? ?? const <Object?>[])
                   .whereType<Map<Object?, Object?>>()
-                  .map((Map<Object?, Object?> value) =>
-                      value.cast<String, Object?>())
-                  .where((Map<String, Object?> value) =>
-                      value['key']?.toString().isNotEmpty ?? false)
+                  .map(
+                    (Map<Object?, Object?> value) =>
+                        value.cast<String, Object?>(),
+                  )
+                  .where(
+                    (Map<String, Object?> value) =>
+                        value['key']?.toString().isNotEmpty ?? false,
+                  )
                   .toList(growable: false);
           if (isCancelled()) return;
           run.aidokuItems = entries;

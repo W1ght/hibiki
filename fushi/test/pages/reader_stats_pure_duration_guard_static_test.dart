@@ -24,47 +24,62 @@ void main() {
 
   group('断点 A：_flushReadingStats 不按字数拒写（时长与字数同段）', () {
     String flush() => _functionSource(
-          maskComments(File(
-                  'lib/src/pages/implementations/reader_fushi/navigation.part.dart')
-              .readAsStringSync()
-              .replaceAll('\r\n', '\n')),
-          '  Future<void> _flushReadingStats() async {',
-          '\n  }\n',
-        );
+      maskComments(
+        File(
+          'lib/src/pages/implementations/reader_fushi/navigation.part.dart',
+        ).readAsStringSync().replaceAll('\r\n', '\n'),
+      ),
+      '  Future<void> _flushReadingStats() async {',
+      '\n  }\n',
+    );
 
     test('旧「必须有字数」守卫不得回归', () {
       final String body = flush();
       expect(
         body,
         isNot(contains('_sessionCharsRead')),
-        reason: '旧守卫拒写纯时长行：dispose 最后一段 / 歌词·听书模式的时长会整段蒸发'
+        reason:
+            '旧守卫拒写纯时长行：dispose 最后一段 / 歌词·听书模式的时长会整段蒸发'
             '（BUG-1107 断点 A）',
       );
       expect(body, isNot(contains('charsRead <= 0')));
-      expect(body, isNot(contains('return')),
-          reason: '没有任何早退：时长与字数同一段，flush 只能是结算时钟');
+      expect(
+        body,
+        isNot(contains('return')),
+        reason: '没有任何早退：时长与字数同一段，flush 只能是结算时钟',
+      );
     });
 
     test('新形态：函数体只委托 StudyClock.flushNow', () {
-      expect(flush(), contains('await _studyClock?.flushNow();'),
-          reason: '时长与字数记在同一段，flush = 结算时钟当前窗口并绝对值落库');
+      expect(
+        flush(),
+        contains('await _studyClock?.flushNow();'),
+        reason: '时长与字数记在同一段，flush = 结算时钟当前窗口并绝对值落库',
+      );
     });
 
     test('三个阅读器都不再持有会话字数累计器', () {
       final String epub = maskComments(corpus);
       final String pdf = maskComments(
-          File('lib/src/pages/implementations/reader_pdf_page.dart')
-              .readAsStringSync());
+        File(
+          'lib/src/pages/implementations/reader_pdf_page.dart',
+        ).readAsStringSync(),
+      );
       final String manga = maskComments(
-          File('lib/src/media/manga/reader/manga_fushi_page.dart')
-              .readAsStringSync());
+        File(
+          'lib/src/media/manga/reader/manga_fushi_page.dart',
+        ).readAsStringSync(),
+      );
       for (final (String name, String src) in <(String, String)>[
         ('epub', epub),
         ('pdf', pdf),
         ('manga', manga),
       ]) {
-        expect(src, isNot(contains('_sessionCharsRead')),
-            reason: '$name：会话字数累计器已废，字数直接进 StudyClock 段');
+        expect(
+          src,
+          isNot(contains('_sessionCharsRead')),
+          reason: '$name：会话字数累计器已废，字数直接进 StudyClock 段',
+        );
       }
     });
   });
@@ -81,9 +96,12 @@ void main() {
       );
       expect(
         corpus,
-        isNot(contains(
+        isNot(
+          contains(
             'sessionWatermarkAfterRestore(\n      _sessionMaxAbsoluteChars,\n'
-            '      _absoluteCharPosition(_initialProgress),')),
+            '      _absoluteCharPosition(_initialProgress),',
+          ),
+        ),
         reason: '不得退回只看 _initialProgress 的旧播种形式（BUG-1107 断点 B）',
       );
     });
@@ -113,21 +131,19 @@ void main() {
       );
       final int jumpIdx = skipToCue.indexOf('onExplicitCueJump?.call(cue);');
       final int seekIdx = skipToCue.indexOf('_player.seek(');
-      expect(jumpIdx, isNonNegative,
-          reason: 'skipToCue 是所有显式句子跳转的唯一漏斗，必须报 onExplicitCueJump');
-      expect(seekIdx, isNonNegative);
       expect(
         jumpIdx,
-        lessThan(seekIdx),
-        reason: '水位必须在 seek 落地触发的进度回调之前就位',
+        isNonNegative,
+        reason: 'skipToCue 是所有显式句子跳转的唯一漏斗，必须报 onExplicitCueJump',
       );
+      expect(seekIdx, isNonNegative);
+      expect(jumpIdx, lessThan(seekIdx), reason: '水位必须在 seek 落地触发的进度回调之前就位');
     });
 
     test('session attach/detach 双向接线 onExplicitCueJump', () {
-      final String session =
-          File('lib/src/media/audiobook/audiobook_session.dart')
-              .readAsStringSync()
-              .replaceAll('\r\n', '\n');
+      final String session = File(
+        'lib/src/media/audiobook/audiobook_session.dart',
+      ).readAsStringSync().replaceAll('\r\n', '\n');
       expect(
         session,
         contains('controller.onExplicitCueJump = reader.onExplicitCueJump;'),

@@ -14,10 +14,12 @@ void main() {
       'override fun onNewIntent(intent: Intent) {',
     );
 
-    final int extractIndex =
-        onCreateSource.indexOf('val processText = extractProcessText(intent)');
-    final int assignIndex =
-        onCreateSource.indexOf('currentSearchTerm = processText');
+    final int extractIndex = onCreateSource.indexOf(
+      'val processText = extractProcessText(intent)',
+    );
+    final int assignIndex = onCreateSource.indexOf(
+      'currentSearchTerm = processText',
+    );
     final int buildLayoutIndex = onCreateSource.indexOf('buildLayout()');
 
     expect(extractIndex, isNonNegative);
@@ -44,8 +46,7 @@ void main() {
     expect(layoutSource, isNot(contains('android.R.drawable.ic_menu_search')));
   });
 
-  test('native popup mirrors in-reader popup surface and compact search row',
-      () {
+  test('native popup mirrors in-reader popup surface and compact search row', () {
     final String source = File(popupActivityPath).readAsStringSync();
     final String layoutSource = _functionSource(
       source,
@@ -80,11 +81,15 @@ void main() {
     expect(searchSource, contains('dp(SEARCH_ROW_HEIGHT_DP)'));
     expect(searchSource, contains('colors.search'));
     expect(
-        searchSource, contains('setTextSize(TypedValue.COMPLEX_UNIT_SP, 15f)'));
+      searchSource,
+      contains('setTextSize(TypedValue.COMPLEX_UNIT_SP, 15f)'),
+    );
     expect(iconSource, contains('dp(ICON_BUTTON_SIZE_DP)'));
     expect(iconSource, contains('colors.onSurfaceVariant'));
-    expect(injectionSource,
-        contains('val bgColor = safeDictColor ?: "transparent"'));
+    expect(
+      injectionSource,
+      contains('val bgColor = safeDictColor ?: "transparent"'),
+    );
     expect(injectionSource, contains('--background-color'));
   });
 
@@ -103,15 +108,14 @@ void main() {
   });
 }
 
-String _functionSource(
-  String source,
-  String startToken,
-  String endToken,
-) {
+String _functionSource(String source, String startToken, String endToken) {
   final int start = source.indexOf(startToken);
   final int end = source.indexOf(endToken, start + startToken.length);
   expect(start, isNonNegative, reason: 'missing $startToken');
-  expect(end, greaterThan(start),
-      reason: 'missing $endToken after $startToken');
+  expect(
+    end,
+    greaterThan(start),
+    reason: 'missing $endToken after $startToken',
+  );
   return source.substring(start, end);
 }

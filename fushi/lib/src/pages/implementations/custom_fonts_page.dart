@@ -597,12 +597,12 @@ class CustomFontsPage extends BasePage {
 /// 字体用途的显示名。穷尽 switch：新增 [FontTarget] 时这里编译报错，逼着补文案，
 /// 而不是让新用途悄悄顶着枚举名出现在 UI 上。页面标题与每行的用途开关共用。
 String fontTargetLabel(FontTarget target) => switch (target) {
-      FontTarget.appUi => t.font_target_app_ui,
-      FontTarget.body => t.font_target_body,
-      FontTarget.dictionary => t.font_target_dictionary,
-      FontTarget.videoSubtitle => t.font_target_video_subtitle,
-      FontTarget.gameLookup => t.font_target_game_lookup,
-    };
+  FontTarget.appUi => t.font_target_app_ui,
+  FontTarget.body => t.font_target_body,
+  FontTarget.dictionary => t.font_target_dictionary,
+  FontTarget.videoSubtitle => t.font_target_video_subtitle,
+  FontTarget.gameLookup => t.font_target_game_lookup,
+};
 
 /// 阅读器设置的 DB 偏好 key：经单一真相编码器 [dbSourcePrefKey]（`reader_fushi`
 /// 是冻结的历史 sourceId，旧数据兼容，勿改）。
@@ -1258,7 +1258,7 @@ class _CustomFontsPageState extends BasePageState<CustomFontsPage> {
         widget.target == FontTarget.body
             ? t.custom_fonts_catalog_title
             : '${t.custom_fonts_catalog_title} · '
-                '${fontTargetLabel(widget.target)}',
+                  '${fontTargetLabel(widget.target)}',
       ),
       children: [
         AdaptiveSettingsSection(
@@ -1593,9 +1593,9 @@ class _CustomFontCatalogTileState extends State<CustomFontCatalogTile> {
   /// 只影响**显示**：已存的 targetEnabled 由 customFontLegacyListsFromRows 按
   /// FontTarget.values 全量回写，跨平台同步过来的勾选不会被这里的隐藏抹掉。
   static List<FontTarget> get _visibleTargets => <FontTarget>[
-        for (final FontTarget target in FontTarget.values)
-          if (isFontTargetAvailableOnPlatform(target)) target,
-      ];
+    for (final FontTarget target in FontTarget.values)
+      if (isFontTargetAvailableOnPlatform(target)) target,
+  ];
 
   /// 折叠态摘要：把已启用的用途拼成一行，用户不展开也能一眼看到该字体用在哪。
   String get _rolesSummary => <String>[

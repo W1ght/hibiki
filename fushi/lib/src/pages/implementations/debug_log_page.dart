@@ -45,9 +45,9 @@ class _DebugLogPageState extends State<DebugLogPage> {
           onTap: () async {
             await Clipboard.setData(ClipboardData(text: _log));
             if (context.mounted) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text(t.copied_to_clipboard)),
-              );
+              ScaffoldMessenger.of(
+                context,
+              ).showSnackBar(SnackBar(content: Text(t.copied_to_clipboard)));
             }
           },
         ),
@@ -68,11 +68,8 @@ class _DebugLogPageState extends State<DebugLogPage> {
           FushiIconButton(
             icon: Icons.cloud_upload_outlined,
             tooltip: t.log_upload_action,
-            onTap: () => uploadLogToServer(
-              context: context,
-              log: _log,
-              kind: 'debug',
-            ),
+            onTap: () =>
+                uploadLogToServer(context: context, log: _log, kind: 'debug'),
           ),
         if (showSaveLogAction)
           FushiIconButton(

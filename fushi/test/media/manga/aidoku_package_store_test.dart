@@ -37,8 +37,10 @@ void main() {
     final File source = File('${root.path}/source.aix');
     await source.writeAsBytes(<int>[1, 2, 3], flush: true);
 
-    final AidokuInstalledPackage installed =
-        await store.install(source, inspection());
+    final AidokuInstalledPackage installed = await store.install(
+      source,
+      inspection(),
+    );
     final List<AidokuInstalledPackage> packages = await store.listInstalled();
 
     expect(installed.id, 'ja.example');
@@ -58,8 +60,10 @@ void main() {
     await second.writeAsBytes(<int>[2]);
 
     await store.install(first, inspection());
-    final AidokuInstalledPackage replaced =
-        await store.install(second, inspection(version: 2));
+    final AidokuInstalledPackage replaced = await store.install(
+      second,
+      inspection(version: 2),
+    );
 
     expect(await File(replaced.packagePath).readAsBytes(), <int>[2]);
     final List<AidokuInstalledPackage> packages = await store.listInstalled();
@@ -70,11 +74,15 @@ void main() {
   test('persists enabled state for the Browse tab', () async {
     final File packageFile = File('${root.path}/enabled.aix');
     await packageFile.writeAsBytes(<int>[1, 2, 3]);
-    final AidokuInstalledPackage installed =
-        await store.install(packageFile, inspection());
+    final AidokuInstalledPackage installed = await store.install(
+      packageFile,
+      inspection(),
+    );
 
-    final AidokuInstalledPackage disabled =
-        await store.setEnabled(installed, false);
+    final AidokuInstalledPackage disabled = await store.setEnabled(
+      installed,
+      false,
+    );
     final List<AidokuInstalledPackage> packages = await store.listInstalled();
 
     expect(disabled.enabled, isFalse);
@@ -103,11 +111,7 @@ void main() {
     await source.writeAsBytes(<int>[1]);
     final AidokuPackageInspection invalid = AidokuPackageInspection(
       manifest: <String, Object?>{
-        'info': <String, Object?>{
-          'id': '  ',
-          'name': 'Example',
-          'version': 1,
-        },
+        'info': <String, Object?>{'id': '  ', 'name': 'Example', 'version': 1},
       },
       imports: const <String>[],
       exports: const <String>[],

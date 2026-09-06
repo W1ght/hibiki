@@ -176,8 +176,8 @@ class DictionaryPopupController extends ChangeNotifier {
 
   late final List<GlobalKey<DictionaryPopupWebViewState>> _parkedRealmsView =
       UnmodifiableListView<GlobalKey<DictionaryPopupWebViewState>>(
-    _parkedRealms,
-  );
+        _parkedRealms,
+      );
 
   /// 停驻中的嵌套 realm 键（最近用过的在末尾）。宿主必须把每一把键渲染成一层屏外
   /// 隐藏弹窗（[parkedRealmPopupLayer]），否则键背后的 WebView element 会被销毁，
@@ -277,13 +277,15 @@ class DictionaryPopupController extends ChangeNotifier {
   /// canonical 单例（与搜索期占位同一对象，seed→查词的 result 身份不变、不触发重推）。
   void seedWarmSlot({DictionarySearchResult? seedResult}) {
     if (lowMemory || _entries.isNotEmpty) return;
-    _entries.add(DictionaryPopupEntry(
-      searchTerm: '',
-      selectionRect: Rect.zero,
-      result: seedResult ?? kPopupSearchingPlaceholderResult,
-      visible: false,
-      isWarmSlot: true,
-    ));
+    _entries.add(
+      DictionaryPopupEntry(
+        searchTerm: '',
+        selectionRect: Rect.zero,
+        result: seedResult ?? kPopupSearchingPlaceholderResult,
+        visible: false,
+        isWarmSlot: true,
+      ),
+    );
     notifyListeners();
     _notifyLookupStackDepth();
   }

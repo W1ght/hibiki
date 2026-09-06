@@ -19,32 +19,34 @@ void main() {
   });
 
   AidokuRepositoryIndex index(String name) => AidokuRepositoryIndex(
-        name: name,
-        indexUri: Uri.parse('https://example.com/index.min.json'),
-        sources: <AidokuRepositorySource>[
-          AidokuRepositorySource(
-            id: 'en.example',
-            name: 'Example',
-            version: 1,
-            languages: const <String>['en'],
-            downloadUri: Uri.parse('https://example.com/source.aix'),
-          ),
-        ],
-      );
+    name: name,
+    indexUri: Uri.parse('https://example.com/index.min.json'),
+    sources: <AidokuRepositorySource>[
+      AidokuRepositorySource(
+        id: 'en.example',
+        name: 'Example',
+        version: 1,
+        languages: const <String>['en'],
+        downloadUri: Uri.parse('https://example.com/source.aix'),
+      ),
+    ],
+  );
 
-  test('persists, updates, and removes repositories by canonical URL',
-      () async {
-    await store.add(index('First name'));
-    await store.add(index('Updated name'));
+  test(
+    'persists, updates, and removes repositories by canonical URL',
+    () async {
+      await store.add(index('First name'));
+      await store.add(index('Updated name'));
 
-    final List<AidokuSavedRepository> saved = await store.list();
-    expect(saved, hasLength(1));
-    expect(saved.single.name, 'Updated name');
-    expect(saved.single.indexUrl, 'https://example.com/index.min.json');
+      final List<AidokuSavedRepository> saved = await store.list();
+      expect(saved, hasLength(1));
+      expect(saved.single.name, 'Updated name');
+      expect(saved.single.indexUrl, 'https://example.com/index.min.json');
 
-    await store.remove(saved.single);
-    expect(await store.list(), isEmpty);
-  });
+      await store.remove(saved.single);
+      expect(await store.list(), isEmpty);
+    },
+  );
 
   test('ignores a damaged repository metadata file', () async {
     await store.file.parent.create(recursive: true);

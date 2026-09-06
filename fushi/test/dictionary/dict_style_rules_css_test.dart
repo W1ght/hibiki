@@ -287,8 +287,10 @@ void main() {
 
     test('copyWith 省略保持原值，显式 null 清除', () {
       // 「把颜色改回默认」就是传 null，普通 copyWith 分不出「没传」和「清空」。
-      const DictStyleProps base =
-          DictStyleProps(textColor: 0xFF112233, bold: true);
+      const DictStyleProps base = DictStyleProps(
+        textColor: 0xFF112233,
+        bold: true,
+      );
       expect(base.copyWith(bold: false).textColor, 0xFF112233);
       expect(base.copyWith(textColor: null).textColor, isNull);
       expect(base.copyWith(textColor: null).bold, isTrue);
@@ -426,14 +428,16 @@ void main() {
     });
 
     test('只有全局规则时 byDictionary 为空对象而非缺字段', () {
-      final Map<String, dynamic> decoded = jsonDecode(
-        encodeCompiledDictStyleCss(<DictStyleRule>[
-          const DictStyleRule(
-            part: DictStylePart.pitch,
-            props: DictStyleProps(bold: true),
-          ),
-        ]),
-      ) as Map<String, dynamic>;
+      final Map<String, dynamic> decoded =
+          jsonDecode(
+                encodeCompiledDictStyleCss(<DictStyleRule>[
+                  const DictStyleRule(
+                    part: DictStylePart.pitch,
+                    props: DictStyleProps(bold: true),
+                  ),
+                ]),
+              )
+              as Map<String, dynamic>;
       expect(decoded['byDictionary'], isEmpty);
       expect(decoded.containsKey('byDictionary'), isTrue);
     });

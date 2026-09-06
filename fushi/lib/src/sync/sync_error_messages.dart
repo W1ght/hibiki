@@ -18,8 +18,9 @@ String? _friendlyClause(Object error) {
   if (error is SyncPeerUnreachableError) {
     return t.sync_err_peer_unreachable;
   }
-  final String msg =
-      error is SyncBackendError ? error.message : _rawMessage(error);
+  final String msg = error is SyncBackendError
+      ? error.message
+      : _rawMessage(error);
   final String l = msg.toLowerCase();
 
   // This build has no real OAuth credentials baked in (the placeholder secret
@@ -123,8 +124,8 @@ String friendlySyncAuthFailure(SyncAuthFailureKind kind, String? serverReason) {
 String _rawMessage(Object error) => error is SyncBackendError
     ? error.message
     : error is SyncAuthError
-        ? error.message
-        : error.toString();
+    ? error.message
+    : error.toString();
 
 /// Complete, user-facing message for an error shown on its own (snackbar,
 /// dialog body). Known errors become a friendly localized sentence; unknown

@@ -157,10 +157,10 @@ class _VideoQuickSettingsSheetState extends State<VideoQuickSettingsSheet>
         // 详情区四边走共享公式（底部 = card + gap + 键盘 inset）。
         final EdgeInsets widePrimaryPadding =
             FushiMasterDetailSettingsSheet.paneInsets(
-          context,
-          horizontal: horizontalInset,
-          top: topInset,
-        );
+              context,
+              horizontal: horizontalInset,
+              top: topInset,
+            );
         // TODO-556：大分类「顶部横向分类 chip 行（固定）+ 下方全宽详情（独立滚动）」。
         // 顶部 chip 行钉在 sheet 顶部、随详情滚动不动；详情独占整宽、单独纵向滚动。
         // 书籍设置仍保持左右 master-detail。
@@ -295,9 +295,7 @@ class _VideoQuickSettingsSheetState extends State<VideoQuickSettingsSheet>
     final ThemeData theme = Theme.of(context);
     return Text(
       _subPageTitle(selectedId),
-      style: theme.textTheme.titleMedium?.copyWith(
-        fontWeight: FontWeight.w600,
-      ),
+      style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w600),
     );
   }
 

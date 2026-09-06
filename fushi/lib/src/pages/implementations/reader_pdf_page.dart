@@ -30,11 +30,7 @@ import 'package:fushi/utils.dart';
 ///
 /// PDF 绝对路径由 `EpubBooks` 行经 `bookMainFilePath` 还原（唯一真相源，不自拼）。
 class ReaderPdfPage extends BaseSourcePage {
-  const ReaderPdfPage({
-    super.key,
-    required super.item,
-    required this.bookKey,
-  });
+  const ReaderPdfPage({super.key, required super.item, required this.bookKey});
 
   final String bookKey;
 
@@ -221,8 +217,11 @@ class _ReaderPdfPageState extends BaseSourcePageState<ReaderPdfPage>
           charOffset: 0,
         );
       } catch (e, stack) {
-        ErrorLogService.instance
-            .log('ReaderPdfPage._persistPosition', e, stack);
+        ErrorLogService.instance.log(
+          'ReaderPdfPage._persistPosition',
+          e,
+          stack,
+        );
       }
     }
     // 翻到最后一页 → 幂等写「已读完」（判据用总页数，PDF 无 chapters）。
@@ -262,8 +261,11 @@ class _ReaderPdfPageState extends BaseSourcePageState<ReaderPdfPage>
       _pageTextCache[pageIndex] = text;
       return text;
     } catch (e, stack) {
-      ErrorLogService.instance
-          .log('ReaderPdfPage.loadStructuredText', e, stack);
+      ErrorLogService.instance.log(
+        'ReaderPdfPage.loadStructuredText',
+        e,
+        stack,
+      );
       return null;
     }
   }
@@ -350,10 +352,14 @@ class _ReaderPdfPageState extends BaseSourcePageState<ReaderPdfPage>
     // PDF 的 fullText 在**视觉换行**处普遍带 \n/\r，而换行是分句符——直接分句会把每个
     // 视觉行切成一句，制卡拿到半截话。这里用**等长替换**把 \n/\r 换成空格（1 字符换
     // 1 字符，charIndex 与 charRects 的索引对齐**完全不变**），只让句读标点决定句子边界。
-    final String flattened =
-        fullText.replaceAll('\n', ' ').replaceAll('\r', ' ');
-    final SentenceExtractionResult extracted =
-        extractSentenceAt(flattened, charIndex, 1);
+    final String flattened = fullText
+        .replaceAll('\n', ' ')
+        .replaceAll('\r', ' ');
+    final SentenceExtractionResult extracted = extractSentenceAt(
+      flattened,
+      charIndex,
+      1,
+    );
     _lastSentence = extracted.sentence.trim();
     _lastSentenceOffset = extracted.selStart;
     if (_lastSentence.isNotEmpty) {
@@ -387,10 +393,14 @@ class _ReaderPdfPageState extends BaseSourcePageState<ReaderPdfPage>
     required Rect pageRect,
     required PdfRect charRect,
   }) {
-    final Rect documentRect =
-        charRect.toRectInDocument(page: page, pageRect: pageRect);
-    final Rect? localRect =
-        _pdfController.doc2local.rectToLocal(context, documentRect);
+    final Rect documentRect = charRect.toRectInDocument(
+      page: page,
+      pageRect: pageRect,
+    );
+    final Rect? localRect = _pdfController.doc2local.rectToLocal(
+      context,
+      documentRect,
+    );
     if (localRect == null) return null;
     final RenderBox? box = _pdfController.renderBox;
     if (box == null) return null;
@@ -400,8 +410,10 @@ class _ReaderPdfPageState extends BaseSourcePageState<ReaderPdfPage>
 
   void _highlightMatchedTerm(PdfPageText text, int charIndex, int length) {
     try {
-      final int endIndex =
-          math.min(charIndex + length - 1, text.charRects.length - 1);
+      final int endIndex = math.min(
+        charIndex + length - 1,
+        text.charRects.length - 1,
+      );
       if (endIndex < charIndex) return;
       unawaited(
         _pdfController.textSelectionDelegate.setTextSelectionPointRange(
@@ -447,7 +459,9 @@ class _ReaderPdfPageState extends BaseSourcePageState<ReaderPdfPage>
       );
       if (!mounted) return;
       FushiToast.show(
-          msg: t.pdf_bookmark_added, severity: ToastSeverity.success);
+        msg: t.pdf_bookmark_added,
+        severity: ToastSeverity.success,
+      );
     } catch (e, stack) {
       ErrorLogService.instance.log('ReaderPdfPage.addBookmark', e, stack);
     }
@@ -459,8 +473,9 @@ class _ReaderPdfPageState extends BaseSourcePageState<ReaderPdfPage>
     List<Bookmark> bookmarks;
     try {
       // legacyBookKey：`bookmarks_<bookKey>` 遗留偏好一次性迁进 DB（键换 uid）。
-      bookmarks = await BookmarkRepository(appModel.database)
-          .getBookmarks(bookUid, legacyBookKey: widget.bookKey);
+      bookmarks = await BookmarkRepository(
+        appModel.database,
+      ).getBookmarks(bookUid, legacyBookKey: widget.bookKey);
     } catch (e, stack) {
       ErrorLogService.instance.log('ReaderPdfPage.getBookmarks', e, stack);
       return;
@@ -486,8 +501,11 @@ class _ReaderPdfPageState extends BaseSourcePageState<ReaderPdfPage>
           try {
             await BookmarkRepository(appModel.database).removeBookmarkById(id);
           } catch (e, stack) {
-            ErrorLogService.instance
-                .log('ReaderPdfPage.removeBookmark', e, stack);
+            ErrorLogService.instance.log(
+              'ReaderPdfPage.removeBookmark',
+              e,
+              stack,
+            );
           }
         },
       ),
@@ -538,8 +556,9 @@ class _ReaderPdfPageState extends BaseSourcePageState<ReaderPdfPage>
     final BaseAnkiRepository repo = ref.read(ankiRepositoryProvider);
     Directory? tempDir;
     try {
-      final String sentence =
-          _lastSentence.isNotEmpty ? _lastSentence : (fields['sentence'] ?? '');
+      final String sentence = _lastSentence.isNotEmpty
+          ? _lastSentence
+          : (fields['sentence'] ?? '');
 
       // 当前页栅格化成临时 PNG 当卡图；失败则无图落卡（不阻断制卡）。
       String? coverPath;
@@ -645,8 +664,9 @@ class _ReaderPdfPageState extends BaseSourcePageState<ReaderPdfPage>
     int width,
     int height,
   ) async {
-    final ui.ImmutableBuffer buffer =
-        await ui.ImmutableBuffer.fromUint8List(bgra);
+    final ui.ImmutableBuffer buffer = await ui.ImmutableBuffer.fromUint8List(
+      bgra,
+    );
     final ui.ImageDescriptor descriptor = ui.ImageDescriptor.raw(
       buffer,
       width: width,
@@ -657,8 +677,9 @@ class _ReaderPdfPageState extends BaseSourcePageState<ReaderPdfPage>
     final ui.FrameInfo frame = await codec.getNextFrame();
     final ui.Image image = frame.image;
     try {
-      final ByteData? png =
-          await image.toByteData(format: ui.ImageByteFormat.png);
+      final ByteData? png = await image.toByteData(
+        format: ui.ImageByteFormat.png,
+      );
       return png?.buffer.asUint8List();
     } finally {
       image.dispose();
@@ -755,16 +776,19 @@ class _ReaderPdfPageState extends BaseSourcePageState<ReaderPdfPage>
             onViewerReady: (_, __) => _onViewerReady(),
             onPageChanged: _onPageChanged,
             // 单击正文即查词；返回 true 吃掉 tap，阻止 pdfrx 默认清选区行为。
-            onGeneralTap: (
-              BuildContext context,
-              PdfViewerController controller,
-              PdfViewerGeneralTapHandlerDetails details,
-            ) {
-              if (details.type != PdfViewerGeneralTapType.tap) return false;
-              if (details.tapOn == PdfViewerPart.background) return false;
-              unawaited(_lookupAtDocumentPosition(details.documentPosition));
-              return true;
-            },
+            onGeneralTap:
+                (
+                  BuildContext context,
+                  PdfViewerController controller,
+                  PdfViewerGeneralTapHandlerDetails details,
+                ) {
+                  if (details.type != PdfViewerGeneralTapType.tap) return false;
+                  if (details.tapOn == PdfViewerPart.background) return false;
+                  unawaited(
+                    _lookupAtDocumentPosition(details.documentPosition),
+                  );
+                  return true;
+                },
           ),
         );
       },
@@ -883,8 +907,10 @@ class _PdfOutlineSheet extends StatelessWidget {
             final int? pageNumber = entry.node.dest?.pageNumber;
             return FushiListItem(
               // 层级用左内边距表达（FushiListItem 的 padding 是整体内边距）。
-              padding:
-                  EdgeInsets.only(left: 8.0 + entry.depth * 16.0, right: 8),
+              padding: EdgeInsets.only(
+                left: 8.0 + entry.depth * 16.0,
+                right: 8,
+              ),
               title: Text(
                 entry.node.title,
                 maxLines: 2,

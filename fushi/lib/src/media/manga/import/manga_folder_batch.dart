@@ -32,12 +32,14 @@ List<File> mangaCarrierFilesIn(Directory dir) {
   final List<File> files = <File>[
     for (final FileSystemEntity entity in entries)
       if (entity is File &&
-          kMangaCarrierFileExtensions
-              .contains(p.extension(entity.path).toLowerCase()))
+          kMangaCarrierFileExtensions.contains(
+            p.extension(entity.path).toLowerCase(),
+          ))
         entity,
   ];
-  files.sort((File a, File b) =>
-      naturalCompare(p.basename(a.path), p.basename(b.path)));
+  files.sort(
+    (File a, File b) => naturalCompare(p.basename(a.path), p.basename(b.path)),
+  );
   return files;
 }
 
@@ -123,11 +125,13 @@ Future<MangaBatchImportReport> importMangaBatchFolder({
   onVolumeProgress?.call(0, files.length);
   for (int index = 0; index < files.length; index++) {
     final String volumePath = files[index].path;
-    results.add(await _importOneVolume(
-      db: db,
-      volumePath: volumePath,
-      carrier: resolve(volumePath),
-    ));
+    results.add(
+      await _importOneVolume(
+        db: db,
+        volumePath: volumePath,
+        carrier: resolve(volumePath),
+      ),
+    );
     onVolumeProgress?.call(index + 1, files.length);
   }
   return MangaBatchImportReport(results);
@@ -206,9 +210,9 @@ Future<MangaBatchVolumeResult> _importOneVolume({
 /// 批量里单个候选**文件**的真定性。目录判据在这里恒为 false / 0——候选集本身
 /// 就只有文件（[mangaCarrierFilesIn] 只收 `entity is File`）。
 ImportCarrier _classifyCarrierFile(String path) => classifyImportCarrier(
-      path,
-      isDirectory: (String _) => false,
-      isImageArchive: MangaArchiveImporter.looksLikeImageArchive,
-      directoryHasPageImages: (String _) => false,
-      directoryCarrierFileCount: (String _) => 0,
-    );
+  path,
+  isDirectory: (String _) => false,
+  isImageArchive: MangaArchiveImporter.looksLikeImageArchive,
+  directoryHasPageImages: (String _) => false,
+  directoryCarrierFileCount: (String _) => 0,
+);

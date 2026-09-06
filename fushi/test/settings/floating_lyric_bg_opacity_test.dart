@@ -15,9 +15,7 @@ import '../pages/reader_fushi_page_source_corpus.dart';
 /// 本任务新增 `floating_lyric_bg_opacity` 偏好（0..100%），缩放条背景 alpha，并把默认
 /// 值定为 70，使「默认就更透」满足用户诉求，同时滑杆可继续微调。
 FushiDatabase _testDb() {
-  return FushiDatabase.forTesting(
-    DatabaseConnection(NativeDatabase.memory()),
-  );
+  return FushiDatabase.forTesting(DatabaseConnection(NativeDatabase.memory()));
 }
 
 void main() {
@@ -60,32 +58,35 @@ void main() {
   });
 
   group('scaleAlpha applied to the bar background', () {
-    test('default 70% makes the bar background more transparent than before',
-        () {
-      // dark 基础背景 alpha = 230，light = 220（两处构造点一致）。70% 缩放后必须
-      // 明显比原始更透（alpha 更小），证明「默认更不挡视野」。
-      const int darkBase = 0xE6112233; // alpha 0xE6 = 230
-      const int lightBase = 0xDC112233; // alpha 0xDC = 220
-      final int darkScaled = FloatingLyricStyle.scaleAlpha(darkBase, 70);
-      final int lightScaled = FloatingLyricStyle.scaleAlpha(lightBase, 70);
+    test(
+      'default 70% makes the bar background more transparent than before',
+      () {
+        // dark 基础背景 alpha = 230，light = 220（两处构造点一致）。70% 缩放后必须
+        // 明显比原始更透（alpha 更小），证明「默认更不挡视野」。
+        const int darkBase = 0xE6112233; // alpha 0xE6 = 230
+        const int lightBase = 0xDC112233; // alpha 0xDC = 220
+        final int darkScaled = FloatingLyricStyle.scaleAlpha(darkBase, 70);
+        final int lightScaled = FloatingLyricStyle.scaleAlpha(lightBase, 70);
 
-      int alphaOf(int argb) => (argb >> 24) & 0xFF;
-      expect(alphaOf(darkScaled), lessThan(230));
-      expect(alphaOf(lightScaled), lessThan(220));
-      // 230 * 0.7 = 161 (0xA1); 220 * 0.7 = 154 (0x9A).
-      expect(alphaOf(darkScaled), 161);
-      expect(alphaOf(lightScaled), 154);
-      // RGB 不变。
-      expect(darkScaled & 0x00FFFFFF, 0x112233);
-      expect(lightScaled & 0x00FFFFFF, 0x112233);
-    });
+        int alphaOf(int argb) => (argb >> 24) & 0xFF;
+        expect(alphaOf(darkScaled), lessThan(230));
+        expect(alphaOf(lightScaled), lessThan(220));
+        // 230 * 0.7 = 161 (0xA1); 220 * 0.7 = 154 (0x9A).
+        expect(alphaOf(darkScaled), 161);
+        expect(alphaOf(lightScaled), 154);
+        // RGB 不变。
+        expect(darkScaled & 0x00FFFFFF, 0x112233);
+        expect(lightScaled & 0x00FFFFFF, 0x112233);
+      },
+    );
   });
 
   group('source guards: bar background reads the bg-opacity preference', () {
     test('both floating-lyric style builders scale bgColor by bgOpacity', () {
       // app 级（无 reader）样式：app_model._appLevelFloatingLyricStyle。
-      final String appModel =
-          File('lib/src/models/app_model.dart').readAsStringSync();
+      final String appModel = File(
+        'lib/src/models/app_model.dart',
+      ).readAsStringSync();
       // reader 级样式：reader_fushi_page._readerFloatingLyricStyle。
       final String reader = readReaderPageSource();
 
@@ -99,16 +100,17 @@ void main() {
             r'bgOpacity,',
           ).hasMatch(src),
           isTrue,
-          reason: '悬浮条 bgColor 必须经 scaleAlpha(bgOpacity) 缩放，'
+          reason:
+              '悬浮条 bgColor 必须经 scaleAlpha(bgOpacity) 缩放，'
               '否则背景透明度设置不吃。',
         );
       }
     });
 
     test('settings schema exposes the bar background opacity stepper', () {
-      final String schema =
-          File('lib/src/settings/settings_schema_listening.dart')
-              .readAsStringSync();
+      final String schema = File(
+        'lib/src/settings/settings_schema_listening.dart',
+      ).readAsStringSync();
       expect(
         schema.contains("id: 'listening.floating_lyric_bg_opacity'"),
         isTrue,

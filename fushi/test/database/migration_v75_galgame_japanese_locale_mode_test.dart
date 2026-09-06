@@ -11,7 +11,8 @@ import 'package:fushi_core/fushi_core.dart';
 /// 回落的是 **auto** 而不是 off。转区是用户明确要过的功能（BUG-1038），加了开关
 /// 就把老用户默默关掉才是破坏用户空间。
 void main() {
-  String galgamesDdl({required bool withLocaleMode}) => '''
+  String galgamesDdl({required bool withLocaleMode}) =>
+      '''
 CREATE TABLE galgames (
   id TEXT NOT NULL PRIMARY KEY,
   name TEXT NOT NULL,
@@ -77,11 +78,15 @@ CREATE TABLE galgame_sessions (
 
     final version = await db.customSelect('PRAGMA user_version').getSingle();
     expect(version.read<int>('user_version'), db.schemaVersion);
-    expect(db.schemaVersion, 96,
-        reason: 'v75 给 galgames 加 japanese_locale_mode（每游戏转区档位）');
+    expect(
+      db.schemaVersion,
+      96,
+      reason: 'v75 给 galgames 加 japanese_locale_mode（每游戏转区档位）',
+    );
 
-    final List<QueryRow> columns =
-        await db.customSelect('PRAGMA table_info(galgames)').get();
+    final List<QueryRow> columns = await db
+        .customSelect('PRAGMA table_info(galgames)')
+        .get();
     expect(
       columns.map((QueryRow r) => r.read<String>('name')),
       contains('japanese_locale_mode'),
@@ -92,8 +97,11 @@ CREATE TABLE galgame_sessions (
     expect(legacy!.name, '汉化版旧游戏');
     expect(legacy.launchArgs, '-windowed', reason: 'v56 的启动参数不受新列影响');
     expect(legacy.upscalingMode, 'off', reason: 'v62 的超分档不受新列影响');
-    expect(legacy.japaneseLocaleMode, '',
-        reason: '既有行回填空串 = 未设置 = 解析层回落 auto（保住 BUG-1038 的既有行为）');
+    expect(
+      legacy.japaneseLocaleMode,
+      '',
+      reason: '既有行回填空串 = 未设置 = 解析层回落 auto（保住 BUG-1038 的既有行为）',
+    );
   });
 
   test('v75：档位字符串原样往返，DAO 单列写入不碰其它列', () async {
@@ -114,24 +122,31 @@ CREATE TABLE galgame_sessions (
     expect((await db.getGalgame('legacy_game'))!.japaneseLocaleMode, '');
 
     // 整行 upsert 省略该列时是 Value.absent()，UPDATE 分支不碰这一列。
-    await db.upsertGalgame(GalgamesCompanion.insert(
-      id: 'legacy_game',
-      name: '汉化版旧游戏',
-      exePath: r'Z:\vn\game.exe',
-      workdir: r'Z:\vn',
-      japaneseLocaleMode: const Value<String>('off'),
-      addedAt: 1700000000000,
-    ));
-    await db.upsertGalgame(GalgamesCompanion.insert(
-      id: 'legacy_game',
-      name: '汉化版旧游戏',
-      exePath: r'Z:\vn\game.exe',
-      workdir: r'Z:\vn',
-      addedAt: 1700000000000,
-    ));
+    await db.upsertGalgame(
+      GalgamesCompanion.insert(
+        id: 'legacy_game',
+        name: '汉化版旧游戏',
+        exePath: r'Z:\vn\game.exe',
+        workdir: r'Z:\vn',
+        japaneseLocaleMode: const Value<String>('off'),
+        addedAt: 1700000000000,
+      ),
+    );
+    await db.upsertGalgame(
+      GalgamesCompanion.insert(
+        id: 'legacy_game',
+        name: '汉化版旧游戏',
+        exePath: r'Z:\vn\game.exe',
+        workdir: r'Z:\vn',
+        addedAt: 1700000000000,
+      ),
+    );
     row = (await db.getGalgame('legacy_game'))!;
-    expect(row.japaneseLocaleMode, 'off',
-        reason: '不传 ≠ 清空——用户为汉化版设的「关闭」不能被一次整行 upsert 抹掉');
+    expect(
+      row.japaneseLocaleMode,
+      'off',
+      reason: '不传 ≠ 清空——用户为汉化版设的「关闭」不能被一次整行 upsert 抹掉',
+    );
   });
 
   test('v75：迁移幂等——列已存在时守卫短路，不撞 duplicate column', () async {
@@ -140,8 +155,9 @@ CREATE TABLE galgame_sessions (
     final version = await db.customSelect('PRAGMA user_version').getSingle();
     expect(version.read<int>('user_version'), db.schemaVersion);
 
-    final List<QueryRow> columns =
-        await db.customSelect('PRAGMA table_info(galgames)').get();
+    final List<QueryRow> columns = await db
+        .customSelect('PRAGMA table_info(galgames)')
+        .get();
     expect(
       columns
           .map((QueryRow r) => r.read<String>('name'))
@@ -154,13 +170,15 @@ CREATE TABLE galgame_sessions (
     final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
 
-    await db.upsertGalgame(GalgamesCompanion.insert(
-      id: 'fresh',
-      name: 'fresh',
-      exePath: r'Z:\f\f.exe',
-      workdir: r'Z:\f',
-      addedAt: 1700000000000,
-    ));
+    await db.upsertGalgame(
+      GalgamesCompanion.insert(
+        id: 'fresh',
+        name: 'fresh',
+        exePath: r'Z:\f\f.exe',
+        workdir: r'Z:\f',
+        addedAt: 1700000000000,
+      ),
+    );
     expect((await db.getGalgame('fresh'))!.japaneseLocaleMode, '');
   });
 }

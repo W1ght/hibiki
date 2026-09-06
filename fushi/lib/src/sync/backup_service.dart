@@ -27,8 +27,9 @@ import 'package:sqlite3/sqlite3.dart' as sqlite;
 /// 推荐词典包 `fushi-recommended.fushi.zip` 这类同后缀、但绝不该被当成备份清掉的文件。
 /// 这条理由必须住在真相源这里——它以前留在 `backup.part.dart` 的清扫函数头上，正则搬
 /// 过来时被落下了，于是唯一定义这个口径的地方反而不知道自己为什么长这样。
-final RegExp backupArchiveNamePattern =
-    RegExp(r'^(fushi|hibiki)-backup-.*\.(fushi|hibiki)\.zip$');
+final RegExp backupArchiveNamePattern = RegExp(
+  r'^(fushi|hibiki)-backup-.*\.(fushi|hibiki)\.zip$',
+);
 
 bool isBackupArchiveName(String name) =>
     backupArchiveNamePattern.hasMatch(name);
@@ -143,8 +144,12 @@ String rebasePath(String oldPath, String oldRoot, String newRoot) {
 /// importing device's root differs, so the stored absolute paths would not
 /// resolve and the fonts (shown as imported & enabled) would silently never
 /// apply (BUG-183). Import rebases them so the reader/AppFontLoader find them.
-String rebaseFontListJson(String json, String oldRoot, String newRoot,
-    {String Function(String path)? rewritePath}) {
+String rebaseFontListJson(
+  String json,
+  String oldRoot,
+  String newRoot, {
+  String Function(String path)? rewritePath,
+}) {
   String rewrite(String path) => rewritePath == null
       ? rebasePath(path, oldRoot, newRoot)
       : rewritePath(path);
@@ -171,8 +176,12 @@ String rebaseFontListJson(String json, String oldRoot, String newRoot,
 /// Target rows (`font_targets`) refer to catalog entries by id and do not carry
 /// paths, so preserving ids while rebasing catalog paths keeps targets valid.
 /// Malformed values are returned verbatim so a corrupt pref never aborts import.
-String rebaseFontCatalogJson(String json, String oldRoot, String newRoot,
-    {String Function(String path)? rewritePath}) {
+String rebaseFontCatalogJson(
+  String json,
+  String oldRoot,
+  String newRoot, {
+  String Function(String path)? rewritePath,
+}) {
   String rewrite(String path) => rewritePath == null
       ? rebasePath(path, oldRoot, newRoot)
       : rewritePath(path);
@@ -187,10 +196,7 @@ String rebaseFontCatalogJson(String json, String oldRoot, String newRoot,
       final Map<String, dynamic> row = Map<String, dynamic>.from(e);
       final Object? path = row['path'];
       if (path is! String) return row;
-      return <String, dynamic>{
-        ...row,
-        'path': rewrite(path),
-      };
+      return <String, dynamic>{...row, 'path': rewrite(path)};
     }).toList();
     return jsonEncode(root);
   } catch (_) {
@@ -361,49 +367,50 @@ class BackupMeta {
   final Set<String> excludedCategories;
 
   Map<String, dynamic> toJson() => {
-        'appVersion': appVersion,
-        'schemaVersion': schemaVersion,
-        'createdAt': createdAt.toIso8601String(),
-        'bookCount': bookCount,
-        'statsCount': statsCount,
-        if (booksRoot != null) 'booksRoot': booksRoot,
-        if (audiobooksRoot != null) 'audiobooksRoot': audiobooksRoot,
-        if (fontsRoot != null) 'fontsRoot': fontsRoot,
-        if (localAudioRoot != null) 'localAudioRoot': localAudioRoot,
-        if (videoFiles.isNotEmpty) 'videoFiles': videoFiles,
-        if (excludedCategories.isNotEmpty)
-          'excludedCategories': excludedCategories.toList(),
-        if (videoBookCount != null) 'videoBookCount': videoBookCount,
-        if (audiobookCount != null) 'audiobookCount': audiobookCount,
-      };
+    'appVersion': appVersion,
+    'schemaVersion': schemaVersion,
+    'createdAt': createdAt.toIso8601String(),
+    'bookCount': bookCount,
+    'statsCount': statsCount,
+    if (booksRoot != null) 'booksRoot': booksRoot,
+    if (audiobooksRoot != null) 'audiobooksRoot': audiobooksRoot,
+    if (fontsRoot != null) 'fontsRoot': fontsRoot,
+    if (localAudioRoot != null) 'localAudioRoot': localAudioRoot,
+    if (videoFiles.isNotEmpty) 'videoFiles': videoFiles,
+    if (excludedCategories.isNotEmpty)
+      'excludedCategories': excludedCategories.toList(),
+    if (videoBookCount != null) 'videoBookCount': videoBookCount,
+    if (audiobookCount != null) 'audiobookCount': audiobookCount,
+  };
 
   factory BackupMeta.fromJson(Map<String, dynamic> json) => BackupMeta(
-        appVersion: json['appVersion'] as String,
-        schemaVersion: json['schemaVersion'] as int,
-        createdAt: DateTime.parse(json['createdAt'] as String),
-        // Optional for backward compatibility with older backups.
-        bookCount: json['bookCount'] as int? ?? 0,
-        statsCount: json['statsCount'] as int? ?? 0,
-        booksRoot: json['booksRoot'] as String?,
-        audiobooksRoot: json['audiobooksRoot'] as String?,
-        fontsRoot: json['fontsRoot'] as String?,
-        localAudioRoot: json['localAudioRoot'] as String?,
-        videoFiles: (json['videoFiles'] as Map?)?.map(
-                (dynamic k, dynamic v) => MapEntry(k as String, v as String)) ??
-            const <String, String>{},
-        excludedCategories: (json['excludedCategories'] as List?)
-                ?.map((dynamic e) => e as String)
-                .toSet() ??
-            const <String>{},
-        videoBookCount: json['videoBookCount'] as int?,
-        audiobookCount: json['audiobookCount'] as int?,
-      );
+    appVersion: json['appVersion'] as String,
+    schemaVersion: json['schemaVersion'] as int,
+    createdAt: DateTime.parse(json['createdAt'] as String),
+    // Optional for backward compatibility with older backups.
+    bookCount: json['bookCount'] as int? ?? 0,
+    statsCount: json['statsCount'] as int? ?? 0,
+    booksRoot: json['booksRoot'] as String?,
+    audiobooksRoot: json['audiobooksRoot'] as String?,
+    fontsRoot: json['fontsRoot'] as String?,
+    localAudioRoot: json['localAudioRoot'] as String?,
+    videoFiles:
+        (json['videoFiles'] as Map?)?.map(
+          (dynamic k, dynamic v) => MapEntry(k as String, v as String),
+        ) ??
+        const <String, String>{},
+    excludedCategories:
+        (json['excludedCategories'] as List?)
+            ?.map((dynamic e) => e as String)
+            .toSet() ??
+        const <String>{},
+    videoBookCount: json['videoBookCount'] as int?,
+    audiobookCount: json['audiobookCount'] as int?,
+  );
 
   static BackupMeta? tryParse(String source) {
     try {
-      return BackupMeta.fromJson(
-        jsonDecode(source) as Map<String, dynamic>,
-      );
+      return BackupMeta.fromJson(jsonDecode(source) as Map<String, dynamic>);
     } catch (_) {
       return null;
     }
@@ -440,13 +447,13 @@ class BackupService {
     String? booksRootDirectory,
     String? audiobooksRootDirectory,
     String? fontsRootDirectory,
-  })  : _db = db,
-        _dbDirectory = dbDirectory,
-        _dictionaryResourceDirectory = dictionaryResourceDirectory,
-        _booksRootDirectory = booksRootDirectory,
-        _audiobooksRootDirectory = audiobooksRootDirectory,
-        _fontsRootDirectory = fontsRootDirectory,
-        _appVersion = appVersion;
+  }) : _db = db,
+       _dbDirectory = dbDirectory,
+       _dictionaryResourceDirectory = dictionaryResourceDirectory,
+       _booksRootDirectory = booksRootDirectory,
+       _audiobooksRootDirectory = audiobooksRootDirectory,
+       _fontsRootDirectory = fontsRootDirectory,
+       _appVersion = appVersion;
 
   final FushiDatabase _db;
   final String _dbDirectory;
@@ -499,8 +506,9 @@ class BackupService {
   /// Matches a packed local-audio database file (and its `-wal`/`-shm`
   /// siblings). Only these are packed from the support directory so the export
   /// never sweeps in `fushi.db` or other unrelated support files.
-  static final RegExp _localAudioFileName =
-      RegExp(r'^local_audio_\d+\.db(-wal|-shm)?$');
+  static final RegExp _localAudioFileName = RegExp(
+    r'^local_audio_\d+\.db(-wal|-shm)?$',
+  );
 
   /// Matches ONLY a packed local-audio database file (not its `-wal`/`-shm`
   /// siblings), for counting distinct local-audio databases in a summary.
@@ -721,8 +729,9 @@ class BackupService {
 
   /// COUNT(*) of a table on the live DB (used to report honest export totals).
   Future<int> _countRows(String table) async {
-    final row =
-        await _db.customSelect('SELECT COUNT(*) AS c FROM $table').getSingle();
+    final row = await _db
+        .customSelect('SELECT COUNT(*) AS c FROM $table')
+        .getSingle();
     return row.data['c'] as int;
   }
 
@@ -749,13 +758,16 @@ class BackupService {
     int localAudioDbs = 0;
     for (final String raw in archiveFileNames) {
       final String name = raw.replaceAll(r'\', '/');
-      final String? dictSeg =
-          _firstSegmentUnder(name, _dictionaryResourcesPrefix);
+      final String? dictSeg = _firstSegmentUnder(
+        name,
+        _dictionaryResourcesPrefix,
+      );
       if (dictSeg != null) {
         dictDirs.add(dictSeg);
         continue;
       }
-      final String? bookSeg = _firstSegmentUnder(name, _booksPrefix) ??
+      final String? bookSeg =
+          _firstSegmentUnder(name, _booksPrefix) ??
           _firstSegmentUnder(name, _legacyBooksPrefix);
       if (bookSeg != null) {
         bookDirs.add(bookSeg);
@@ -785,7 +797,8 @@ class BackupService {
     // (BUG-779). Priority: meta.videoBookCount (authoritative row count, new
     // backups) → dbVideoBookCount (a DB-blob peek for old backups lacking the
     // field) → packed-file fallback (legacy).
-    final int videoCount = meta?.videoBookCount ??
+    final int videoCount =
+        meta?.videoBookCount ??
         dbVideoBookCount ??
         (meta != null && meta.videoFiles.isNotEmpty
             ? meta.videoFiles.length
@@ -841,19 +854,23 @@ class BackupService {
       final ArchiveFile? dbEntry = _findDbEntry(archive);
       final bool needPeek =
           (meta?.videoBookCount == null || meta?.audiobookCount == null) &&
-              dbEntry != null;
+          dbEntry != null;
       if (needPeek) {
         final ({int videos, int audiobooks})? peek =
             await _peekContentRowCounts(zipPath, dbEntry.name);
         dbVideoBookCount = peek?.videos;
         dbAudiobookCount = peek?.audiobooks;
       }
-      return summarizeBackupEntries(names, meta,
-          dbVideoBookCount: dbVideoBookCount,
-          dbAudiobookCount: dbAudiobookCount);
+      return summarizeBackupEntries(
+        names,
+        meta,
+        dbVideoBookCount: dbVideoBookCount,
+        dbAudiobookCount: dbAudiobookCount,
+      );
     } catch (e, st) {
       debugPrint(
-          'BackupService.summarizeBackupFile failed for $zipPath: $e\n$st');
+        'BackupService.summarizeBackupFile failed for $zipPath: $e\n$st',
+      );
       return const BackupContentSummary();
     } finally {
       await input?.close();
@@ -872,8 +889,9 @@ class BackupService {
     String zipPath,
     String dbEntryName,
   ) async {
-    final Directory tmp =
-        await Directory.systemTemp.createTemp('fushi_content_peek_');
+    final Directory tmp = await Directory.systemTemp.createTemp(
+      'fushi_content_peek_',
+    );
     final String dbTmp = p.join(tmp.path, _dbName);
     try {
       await _extractEntriesStreaming(
@@ -882,8 +900,10 @@ class BackupService {
           MapEntry<String, String>(dbEntryName, dbTmp),
         ],
       );
-      final sqlite.Database db =
-          sqlite.sqlite3.open(dbTmp, mode: sqlite.OpenMode.readOnly);
+      final sqlite.Database db = sqlite.sqlite3.open(
+        dbTmp,
+        mode: sqlite.OpenMode.readOnly,
+      );
       try {
         return (
           videos: _countTableIfPresent(db, 'video_books'),
@@ -995,10 +1015,10 @@ class BackupService {
     }
     final Iterable<dynamic>? entries =
         decoded is Map && decoded['fonts'] is List
-            ? decoded['fonts'] as List<dynamic>
-            : decoded is List
-                ? decoded
-                : null;
+        ? decoded['fonts'] as List<dynamic>
+        : decoded is List
+        ? decoded
+        : null;
     if (entries == null) return;
     for (final dynamic e in entries) {
       if (e is Map && e['path'] is String) yield e['path'] as String;
@@ -1073,15 +1093,18 @@ class BackupService {
     try {
       final cleanDbPath = p.join(tmpDir.path, _dbName);
       try {
-        final safePath =
-            cleanDbPath.replaceAll(r'\', '/').replaceAll("'", "''");
+        final safePath = cleanDbPath
+            .replaceAll(r'\', '/')
+            .replaceAll("'", "''");
         await _db.customStatement("VACUUM INTO '$safePath'");
       } catch (e, st) {
         // HBK-AUDIT-028: do NOT swallow the VACUUM INTO failure. The original
         // reason (disk full, locked, read-only temp, unsupported SQLite) is
         // the only diagnostic we have, so surface it before falling back.
-        debugPrint('BackupService: VACUUM INTO failed, '
-            'falling back to checkpoint+copy: $e\n$st');
+        debugPrint(
+          'BackupService: VACUUM INTO failed, '
+          'falling back to checkpoint+copy: $e\n$st',
+        );
         // Best-effort fallback: flush the WAL into the main DB file, then copy.
         // A raw copy of a still-open WAL database cannot be made fully torn-free
         // from Dart (that needs the SQLite C backup API or a closed DB); the
@@ -1101,8 +1124,8 @@ class BackupService {
       // (HBK-AUDIT-012)
       final Directory? dictionaryResourceRoot =
           _dictionaryResourceDirectory == null
-              ? null
-              : Directory(_dictionaryResourceDirectory);
+          ? null
+          : Directory(_dictionaryResourceDirectory);
       // Full-data backup includes dictionary resources whenever they exist on
       // disk — no longer gated on dictionary-sync being enabled (the user asked
       // for everything). Still strip dictionary DB rows when the resource files
@@ -1111,7 +1134,8 @@ class BackupService {
       // Honor the category selection: when the user unticked Dictionaries,
       // exclude them entirely (and strip their DB rows below) even if the
       // resource files are present on disk.
-      final bool includeDictionary = wants(BackupCategory.dictionary) &&
+      final bool includeDictionary =
+          wants(BackupCategory.dictionary) &&
           await _hasCompleteDictionaryResources(dictionaryResourceRoot);
       // Whether the "book content" category is packed. When it is NOT, the
       // hoshi_books/ tree is skipped below AND the epub_books rows must be
@@ -1128,8 +1152,9 @@ class BackupService {
       //  - book content unticked      → keep NONE (strip every epub_books row).
       //  - a per-book selection given  → keep ONLY the selected book_keys.
       //  - otherwise                   → keep all (null = legacy full export).
-      final Set<String>? retainBookKeys =
-          !includeBooks ? const <String>{} : bookKeys; // null = every book
+      final Set<String>? retainBookKeys = !includeBooks
+          ? const <String>{}
+          : bookKeys; // null = every book
       if (retainBookKeys != null) {
         await _retainBooks(tmpDir.path, retainBookKeys);
       }
@@ -1140,8 +1165,9 @@ class BackupService {
       // Stripping the row (not just skipping the file) is what stops a restore
       // from resurrecting a "ghost video" whose file never travelled.
       final bool includeVideos = wants(BackupCategory.videos);
-      final Set<String>? retainVideoKeys =
-          !includeVideos ? const <String>{} : videoKeys; // null = every video
+      final Set<String>? retainVideoKeys = !includeVideos
+          ? const <String>{}
+          : videoKeys; // null = every video
       if (retainVideoKeys != null) {
         await _retainVideos(tmpDir.path, retainVideoKeys);
       }
@@ -1211,16 +1237,14 @@ class BackupService {
       final int exportedBookCount = retainBookKeys == null
           ? books.length
           : books
-              .where((EpubBookRow b) => retainBookKeys.contains(b.bookKey))
-              .length;
+                .where((EpubBookRow b) => retainBookKeys.contains(b.bookKey))
+                .length;
 
       // Build the flat "zip-path → disk-path" map, then stream every file into
       // the ZIP off the UI isolate. The old path read each file fully into a
       // single in-memory Archive and ran a synchronous ZipEncoder().encode() on
       // the UI isolate — that froze the app (ANR) on any non-trivial library.
-      final Map<String, String> files = <String, String>{
-        _dbName: cleanDbPath,
-      };
+      final Map<String, String> files = <String, String>{_dbName: cleanDbPath};
       Map<String, String> videoFiles = const <String, String>{};
       if (includeVideos) {
         videoFiles = await _collectVideoFiles(files, videoKeys: videoKeys);
@@ -1254,20 +1278,21 @@ class BackupService {
       final int blobVideoBookCount = retainVideoKeys == null
           ? allVideos.length
           : allVideos
-              .where((VideoBookRow v) => retainVideoKeys.contains(v.bookUid))
-              .length;
+                .where((VideoBookRow v) => retainVideoKeys.contains(v.bookUid))
+                .length;
       // Audiobook rows remaining in the exported DB blob after [_retainAudiobooks]
       // (0 when unticked → all stripped). Recorded so import can offer the
       // audiobooks toggle even with no packed audiobook files (BUG-781).
-      final int blobAudiobookCount =
-          includeAudiobooks ? (await _db.getAllAudiobooks()).length : 0;
+      final int blobAudiobookCount = includeAudiobooks
+          ? (await _db.getAllAudiobooks()).length
+          : 0;
 
       // "Statistics records" spans reading + video + mining buckets, not reading
       // alone, so a video-watcher's backup no longer reports "0 statistics".
       final int totalStatsCount = includeStatistics
           ? stats.length +
-              await _countRows('video_watch_statistics') +
-              await _countRows('mining_statistics')
+                await _countRows('video_watch_statistics') +
+                await _countRows('mining_statistics')
           : 0;
 
       // Record the SOURCE-device content roots so import can rebase the stored
@@ -1286,8 +1311,9 @@ class BackupService {
         // carried (a no-op for the missing tree either way, but keeping the
         // meta honest avoids surprising the restore code).
         booksRoot: wants(BackupCategory.books) ? _booksRootDirectory : null,
-        audiobooksRoot:
-            wants(BackupCategory.audiobooks) ? _audiobooksRootDirectory : null,
+        audiobooksRoot: wants(BackupCategory.audiobooks)
+            ? _audiobooksRootDirectory
+            : null,
         fontsRoot: wants(BackupCategory.fonts) ? _fontsRootDirectory : null,
         localAudioRoot: wants(BackupCategory.localAudio) ? _dbDirectory : null,
         videoFiles: videoFiles,
@@ -1304,33 +1330,47 @@ class BackupService {
 
       if (includeDictionary) {
         await _collectTreeFiles(
-            dictionaryResourceRoot!, _dictionaryResourcesPrefix, files);
+          dictionaryResourceRoot!,
+          _dictionaryResourcesPrefix,
+          files,
+        );
       }
       if (_booksRootDirectory != null && includeBooks) {
         if (bookKeys == null) {
           // Legacy full export: pack the whole books tree.
           await _collectTreeFiles(
-              Directory(_booksRootDirectory), _booksPrefix, files);
+            Directory(_booksRootDirectory),
+            _booksPrefix,
+            files,
+          );
         } else {
           // Per-book export (TODO-1195 part A): pack ONLY the selected books'
           // content, keyed by each file's path relative to the books root so
           // the archive layout matches the full-tree export (import restores
           // the whole hoshi_books/ prefix onto this device's root either way).
           await _collectSelectedBookFiles(
-              bookKeys, books, _booksRootDirectory, files);
+            bookKeys,
+            books,
+            _booksRootDirectory,
+            files,
+          );
         }
       }
       if (_audiobooksRootDirectory != null &&
           wants(BackupCategory.audiobooks)) {
         await _collectTreeFiles(
-            Directory(_audiobooksRootDirectory), _audiobooksPrefix, files);
+          Directory(_audiobooksRootDirectory),
+          _audiobooksPrefix,
+          files,
+        );
       }
       if (_fontsRootDirectory != null && wants(BackupCategory.fonts)) {
         await _collectReferencedFontFiles(files);
       }
 
-      final String metaJson =
-          const JsonEncoder.withIndent('  ').convert(meta.toJson());
+      final String metaJson = const JsonEncoder.withIndent(
+        '  ',
+      ).convert(meta.toJson());
       // 分母：files 已经是一张平铺的 archivePath→磁盘路径表，逐项求大小即可。
       final int totalBytes = _totalSourceBytes(files);
       int writtenBytes = 0;
@@ -1476,9 +1516,9 @@ class BackupService {
           .where(PrefRedactionPolicy.isDeviceLocalOrCredential)
           .toList(growable: false);
       if (redactedPrefKeys.isNotEmpty) {
-        await (db.delete(db.preferences)
-              ..where((t) => t.key.isIn(redactedPrefKeys)))
-            .go();
+        await (db.delete(
+          db.preferences,
+        )..where((t) => t.key.isIn(redactedPrefKeys))).go();
       }
       await _stripCredentialRowsFromProfileSnapshots(db);
       // BUG-816: device-local tables (LAN pairing token + sync baselines) live
@@ -1511,17 +1551,21 @@ class BackupService {
   static Future<void> _stripCredentialRowsFromProfileSnapshots(
     FushiDatabase db,
   ) async {
-    final List<QueryRow> rows = await db.customSelect(
-      'SELECT DISTINCT key FROM profile_settings WHERE category = ?',
-      variables: <Variable<Object>>[Variable<String>(profilePrefCategory)],
-    ).get();
+    final List<QueryRow> rows = await db
+        .customSelect(
+          'SELECT DISTINCT key FROM profile_settings WHERE category = ?',
+          variables: <Variable<Object>>[Variable<String>(profilePrefCategory)],
+        )
+        .get();
     final List<String> redacted = rows
         .map((QueryRow row) => row.read<String>('key'))
         .where(PrefRedactionPolicy.isDeviceLocalOrCredential)
         .toList(growable: false);
     if (redacted.isEmpty) return;
-    final String placeholders =
-        List<String>.filled(redacted.length, '?').join(', ');
+    final String placeholders = List<String>.filled(
+      redacted.length,
+      '?',
+    ).join(', ');
     await db.customStatement(
       'DELETE FROM profile_settings '
       'WHERE category = ? AND key IN ($placeholders)',
@@ -1547,33 +1591,40 @@ class BackupService {
     String bakPath,
   ) async {
     if (!File(bakPath).existsSync()) {
-      debugPrint('BackupService._reapplyDeviceLocalTablesFromBak: '
-          'pre-restore.bak missing — local pairing/baselines could not be '
-          'preserved on import.');
+      debugPrint(
+        'BackupService._reapplyDeviceLocalTablesFromBak: '
+        'pre-restore.bak missing — local pairing/baselines could not be '
+        'preserved on import.',
+      );
       return false;
     }
     late final bool hasSqliteHeader;
     try {
       hasSqliteHeader = await _hasSqliteHeader(bakPath);
     } catch (e, st) {
-      debugPrint('BackupService._reapplyDeviceLocalTablesFromBak: '
-          'pre-restore.bak could not be inspected: $e\n$st');
+      debugPrint(
+        'BackupService._reapplyDeviceLocalTablesFromBak: '
+        'pre-restore.bak could not be inspected: $e\n$st',
+      );
       return false;
     }
     if (!hasSqliteHeader) {
       // A few low-level restore callers intentionally swap opaque fixture
       // bytes rather than a Hibiki database. Such a snapshot cannot contain
       // device-local rows, so there is nothing to retry or retain.
-      debugPrint('BackupService._reapplyDeviceLocalTablesFromBak: '
-          'pre-restore.bak is not a SQLite database; no local tables to '
-          'preserve.');
+      debugPrint(
+        'BackupService._reapplyDeviceLocalTablesFromBak: '
+        'pre-restore.bak is not a SQLite database; no local tables to '
+        'preserve.',
+      );
       return true;
     }
     FushiDatabase? db;
     try {
       db = FushiDatabase(dbDirectory);
-      final String safeBak =
-          bakPath.replaceAll(r'\', '/').replaceAll("'", "''");
+      final String safeBak = bakPath
+          .replaceAll(r'\', '/')
+          .replaceAll("'", "''");
       await db.customStatement("ATTACH DATABASE '$safeBak' AS devbak");
       await db.transaction(() async {
         for (final String t in _deviceLocalTables) {
@@ -1589,13 +1640,17 @@ class BackupService {
     } catch (e, st) {
       // Best-effort preservation: a corrupt/unreadable imported DB must not
       // abort the whole restore (the primary overwrite already landed).
-      debugPrint('BackupService._reapplyDeviceLocalTablesFromBak failed: '
-          '$e\n$st');
+      debugPrint(
+        'BackupService._reapplyDeviceLocalTablesFromBak failed: '
+        '$e\n$st',
+      );
       return false;
     } finally {
       try {
         await db?.close();
-      } catch (_) {/* db may have failed to open */}
+      } catch (_) {
+        /* db may have failed to open */
+      }
     }
   }
 
@@ -1652,9 +1707,7 @@ class BackupService {
   /// collide with an unrelated row from the backup device, so id existence by
   /// itself is not sufficient. A missing target is nulled and the job becomes
   /// actionable instead of aborting the whole FK-checked restore.
-  static Future<void> _insertVideoDownloadJobsFromBak(
-    FushiDatabase db,
-  ) async {
+  static Future<void> _insertVideoDownloadJobsFromBak(FushiDatabase db) async {
     final List<String> columns = await _tableColumns(db, 'video_download_jobs');
     const String sourceLookup =
         'SELECT current_source.id FROM media_sources AS current_source '
@@ -1664,7 +1717,8 @@ class BackupService {
         'AND current_source.root_path = old_source.root_path '
         'WHERE old_source.id = j.target_source_id '
         'ORDER BY current_source.id LIMIT 1';
-    const String collectionLookup = 'SELECT current_collection.id '
+    const String collectionLookup =
+        'SELECT current_collection.id '
         'FROM media_collections AS current_collection '
         'JOIN devbak.media_collections AS old_collection '
         'ON current_collection.name = old_collection.name '
@@ -1681,33 +1735,35 @@ class BackupService {
     const String attentionMessage =
         'needsAttention: restored target source or collection is unavailable '
         'on this device';
-    final List<String> selectExpressions = columns.map((String column) {
-      switch (column) {
-        case 'target_source_id':
-          return 'CASE WHEN j.target_source_id IS NULL THEN NULL '
-              'ELSE ($sourceLookup) END';
-        case 'collection_id':
-          return 'CASE WHEN j.collection_id IS NULL THEN NULL '
-              'ELSE ($collectionLookup) END';
-        case 'lifecycle':
-          return "CASE WHEN $referenceMissing THEN 'needsAttention' "
-              'ELSE j.lifecycle END';
-        case 'claimed_by':
-        case 'claim_expires_at':
-          return 'NULL';
-        case 'next_attempt_at':
-          return 'CASE WHEN $referenceMissing THEN NULL '
-              'ELSE j.next_attempt_at END';
-        case 'last_error':
-          return 'CASE WHEN $referenceMissing THEN CASE '
-              'WHEN j.last_error IS NULL OR j.last_error = \'\' '
-              "THEN '$attentionMessage' "
-              "ELSE j.last_error || '; $attentionMessage' END "
-              'ELSE j.last_error END';
-        default:
-          return 'j.${_quoteIdentifier(column)}';
-      }
-    }).toList(growable: false);
+    final List<String> selectExpressions = columns
+        .map((String column) {
+          switch (column) {
+            case 'target_source_id':
+              return 'CASE WHEN j.target_source_id IS NULL THEN NULL '
+                  'ELSE ($sourceLookup) END';
+            case 'collection_id':
+              return 'CASE WHEN j.collection_id IS NULL THEN NULL '
+                  'ELSE ($collectionLookup) END';
+            case 'lifecycle':
+              return "CASE WHEN $referenceMissing THEN 'needsAttention' "
+                  'ELSE j.lifecycle END';
+            case 'claimed_by':
+            case 'claim_expires_at':
+              return 'NULL';
+            case 'next_attempt_at':
+              return 'CASE WHEN $referenceMissing THEN NULL '
+                  'ELSE j.next_attempt_at END';
+            case 'last_error':
+              return 'CASE WHEN $referenceMissing THEN CASE '
+                  'WHEN j.last_error IS NULL OR j.last_error = \'\' '
+                  "THEN '$attentionMessage' "
+                  "ELSE j.last_error || '; $attentionMessage' END "
+                  'ELSE j.last_error END';
+            default:
+              return 'j.${_quoteIdentifier(column)}';
+          }
+        })
+        .toList(growable: false);
     await db.customStatement(
       'INSERT INTO video_download_jobs '
       '(${columns.map(_quoteIdentifier).join(', ')}) '
@@ -1722,8 +1778,10 @@ class BackupService {
   static Future<void> _insertVideoDownloadSubscriptionsFromBak(
     FushiDatabase db,
   ) async {
-    final List<String> columns =
-        await _tableColumns(db, 'video_download_subscriptions');
+    final List<String> columns = await _tableColumns(
+      db,
+      'video_download_subscriptions',
+    );
     const String sourceLookup =
         'SELECT current_source.id FROM media_sources AS current_source '
         'JOIN devbak.media_sources AS old_source '
@@ -1732,7 +1790,8 @@ class BackupService {
         'AND current_source.root_path = old_source.root_path '
         'WHERE old_source.id = s.target_source_id '
         'ORDER BY current_source.id LIMIT 1';
-    const String collectionLookup = 'SELECT current_collection.id '
+    const String collectionLookup =
+        'SELECT current_collection.id '
         'FROM media_collections AS current_collection '
         'JOIN devbak.media_collections AS old_collection '
         'ON current_collection.name = old_collection.name '
@@ -1749,32 +1808,34 @@ class BackupService {
     const String attentionMessage =
         'needsAttention: restored target source or collection is unavailable '
         'on this device';
-    final List<String> selectExpressions = columns.map((String column) {
-      switch (column) {
-        case 'target_source_id':
-          return 'CASE WHEN s.target_source_id IS NULL THEN NULL '
-              'ELSE ($sourceLookup) END';
-        case 'collection_id':
-          return 'CASE WHEN s.collection_id IS NULL THEN NULL '
-              'ELSE ($collectionLookup) END';
-        case 'enabled':
-          return 'CASE WHEN $referenceMissing THEN 0 ELSE s.enabled END';
-        case 'next_check_at':
-          return 'CASE WHEN $referenceMissing THEN NULL '
-              'ELSE s.next_check_at END';
-        case 'claimed_by':
-        case 'claim_expires_at':
-          return 'NULL';
-        case 'last_error':
-          return 'CASE WHEN $referenceMissing THEN CASE '
-              'WHEN s.last_error IS NULL OR s.last_error = \'\' '
-              "THEN '$attentionMessage' "
-              "ELSE s.last_error || '; $attentionMessage' END "
-              'ELSE s.last_error END';
-        default:
-          return 's.${_quoteIdentifier(column)}';
-      }
-    }).toList(growable: false);
+    final List<String> selectExpressions = columns
+        .map((String column) {
+          switch (column) {
+            case 'target_source_id':
+              return 'CASE WHEN s.target_source_id IS NULL THEN NULL '
+                  'ELSE ($sourceLookup) END';
+            case 'collection_id':
+              return 'CASE WHEN s.collection_id IS NULL THEN NULL '
+                  'ELSE ($collectionLookup) END';
+            case 'enabled':
+              return 'CASE WHEN $referenceMissing THEN 0 ELSE s.enabled END';
+            case 'next_check_at':
+              return 'CASE WHEN $referenceMissing THEN NULL '
+                  'ELSE s.next_check_at END';
+            case 'claimed_by':
+            case 'claim_expires_at':
+              return 'NULL';
+            case 'last_error':
+              return 'CASE WHEN $referenceMissing THEN CASE '
+                  'WHEN s.last_error IS NULL OR s.last_error = \'\' '
+                  "THEN '$attentionMessage' "
+                  "ELSE s.last_error || '; $attentionMessage' END "
+                  'ELSE s.last_error END';
+            default:
+              return 's.${_quoteIdentifier(column)}';
+          }
+        })
+        .toList(growable: false);
     await db.customStatement(
       'INSERT INTO video_download_subscriptions '
       '(${columns.map(_quoteIdentifier).join(', ')}) '
@@ -1787,8 +1848,9 @@ class BackupService {
     FushiDatabase db,
     String table,
   ) async {
-    final List<QueryRow> rows =
-        await db.customSelect('PRAGMA table_info($table)').get();
+    final List<QueryRow> rows = await db
+        .customSelect('PRAGMA table_info($table)')
+        .get();
     return rows
         .map((QueryRow row) => row.read<String>('name'))
         .toList(growable: false);
@@ -1842,7 +1904,8 @@ class BackupService {
         await db.customStatement('DELETE FROM reader_positions');
         await db.customStatement('DELETE FROM bookmarks');
         await db.customStatement(
-            "DELETE FROM preferences WHERE key LIKE 'audiobook_pos_%'");
+          "DELETE FROM preferences WHERE key LIKE 'audiobook_pos_%'",
+        );
       }
       if (stripStatistics) {
         for (final String table in _statisticsTables) {
@@ -1851,7 +1914,8 @@ class BackupService {
       }
       if (stripSettings) {
         await db.customStatement(
-            'DELETE FROM preferences WHERE $settingsPrefPredicate');
+          'DELETE FROM preferences WHERE $settingsPrefPredicate',
+        );
       }
       if (stripProfiles) {
         for (final String table in _profilesLayerTablesChildFirst) {
@@ -1934,10 +1998,12 @@ class BackupService {
       // tag-only collection).
       final hadMembersRows = await db
           .customSelect(
-              'SELECT DISTINCT collection_id AS id FROM media_collection_items')
+            'SELECT DISTINCT collection_id AS id FROM media_collection_items',
+          )
           .get();
-      final List<int> hadMembers =
-          hadMembersRows.map((r) => r.data['id'] as int).toList();
+      final List<int> hadMembers = hadMembersRows
+          .map((r) => r.data['id'] as int)
+          .toList();
 
       // (2) Category-gated content rows. Each unticked content category drops
       // its own `media_type`-keyed rows across the shared tables (collection
@@ -1950,8 +2016,9 @@ class BackupService {
           'book_tag_membership_tombstones',
           'sync_deletion_tombstones',
         ]) {
-          await db.customStatement(
-              'DELETE FROM $table WHERE media_type = ?', [mediaType.dbValue]);
+          await db.customStatement('DELETE FROM $table WHERE media_type = ?', [
+            mediaType.dbValue,
+          ]);
         }
       }
 
@@ -1965,11 +2032,13 @@ class BackupService {
       // already stripped when the category is excluded, so this is FK-safe.
       if (!includeBooks) {
         await db.customStatement(
-            "DELETE FROM media_sources WHERE media_kind = 'book'");
+          "DELETE FROM media_sources WHERE media_kind = 'book'",
+        );
       }
       if (!includeVideos) {
         await db.customStatement(
-            "DELETE FROM media_sources WHERE media_kind = 'video'");
+          "DELETE FROM media_sources WHERE media_kind = 'video'",
+        );
       }
       // srt has no category checkbox, but `srt_books` is never category-stripped,
       // so a srt member/shelf row whose `entry_key` has no `srt_books.uid` match
@@ -1979,13 +2048,17 @@ class BackupService {
       // the merge-union still propagates cross-device srt memberships.
       if (!includeBooks || !includeVideos) {
         // P5：'srt' 改参数绑定（值来自 MediaKind.srt.dbValue，串不变）。
-        const String srtDangling = 'media_type = ? AND entry_key NOT IN '
+        const String srtDangling =
+            'media_type = ? AND entry_key NOT IN '
             '(SELECT uid FROM srt_books WHERE uid IS NOT NULL)';
         await db.customStatement(
-            'DELETE FROM media_collection_items WHERE $srtDangling',
-            [MediaKind.srt.dbValue]);
-        await db.customStatement('DELETE FROM shelf_entries WHERE $srtDangling',
-            [MediaKind.srt.dbValue]);
+          'DELETE FROM media_collection_items WHERE $srtDangling',
+          [MediaKind.srt.dbValue],
+        );
+        await db.customStatement(
+          'DELETE FROM shelf_entries WHERE $srtDangling',
+          [MediaKind.srt.dbValue],
+        );
       }
       // Drop collections the strip emptied — but keep always-empty tag-only
       // collections (a member-less collection is a valid tag-union carrier).
@@ -2060,7 +2133,8 @@ class BackupService {
     try {
       if (stripFavorites) {
         await db.customStatement(
-            "DELETE FROM preferences WHERE key = '$_favoriteSentencesPrefKey'");
+          "DELETE FROM preferences WHERE key = '$_favoriteSentencesPrefKey'",
+        );
       }
       if (stripFonts) {
         for (final String k in <String>[
@@ -2072,7 +2146,8 @@ class BackupService {
       }
       if (stripLocalAudio) {
         await db.customStatement(
-            "DELETE FROM preferences WHERE key = '$_localAudioDbsPrefKey'");
+          "DELETE FROM preferences WHERE key = '$_localAudioDbsPrefKey'",
+        );
         await _filterLocalAudioFromAudioSourceConfigs(db);
       }
       await db.customStatement('VACUUM');
@@ -2088,10 +2163,13 @@ class BackupService {
   /// on write. No-op if the pref is absent, unparseable, or has no local-audio
   /// entry.
   static Future<void> _filterLocalAudioFromAudioSourceConfigs(
-      FushiDatabase db) async {
+    FushiDatabase db,
+  ) async {
     final rows = await db
-        .customSelect('SELECT value FROM preferences '
-            "WHERE key = '$_audioSourceConfigsPrefKey'")
+        .customSelect(
+          'SELECT value FROM preferences '
+          "WHERE key = '$_audioSourceConfigsPrefKey'",
+        )
         .get();
     if (rows.isEmpty) return;
     final String? raw = rows.first.read<String?>('value');
@@ -2103,8 +2181,10 @@ class BackupService {
         .toList();
     if (kept.length == decoded.length) return; // no local-audio entry to strip
     if (kept.isEmpty) {
-      await db.customStatement('DELETE FROM preferences '
-          "WHERE key = '$_audioSourceConfigsPrefKey'");
+      await db.customStatement(
+        'DELETE FROM preferences '
+        "WHERE key = '$_audioSourceConfigsPrefKey'",
+      );
       return;
     }
     await db.customStatement(
@@ -2132,7 +2212,7 @@ class BackupService {
       if (reapplyFavorites) _favoriteSentencesPrefKey,
       if (reapplyFonts) ...<String>[
         _fontCatalogPrefKey,
-        ..._legacyFontPrefKeys
+        ..._legacyFontPrefKeys,
       ],
       if (reapplyLocalAudio) ...<String>[
         _localAudioDbsPrefKey,
@@ -2141,34 +2221,45 @@ class BackupService {
     ];
     if (keys.isEmpty) return;
     if (!File(bakPath).existsSync()) {
-      debugPrint('BackupService._reapplyExcludedContentRegistry: '
-          'pre-restore.bak missing — local favorites/fonts/audio registry could '
-          'not be preserved for a category-excluded backup.');
+      debugPrint(
+        'BackupService._reapplyExcludedContentRegistry: '
+        'pre-restore.bak missing — local favorites/fonts/audio registry could '
+        'not be preserved for a category-excluded backup.',
+      );
       return;
     }
     FushiDatabase? db;
     try {
       db = FushiDatabase(dbDirectory);
-      final String safeBak =
-          bakPath.replaceAll(r'\', '/').replaceAll("'", "''");
-      final String inList =
-          keys.map((String k) => "'${k.replaceAll("'", "''")}'").join(', ');
+      final String safeBak = bakPath
+          .replaceAll(r'\', '/')
+          .replaceAll("'", "''");
+      final String inList = keys
+          .map((String k) => "'${k.replaceAll("'", "''")}'")
+          .join(', ');
       await db.customStatement("ATTACH DATABASE '$safeBak' AS crbak");
       await db.transaction(() async {
-        await db!
-            .customStatement('DELETE FROM preferences WHERE key IN ($inList)');
-        await db.customStatement('INSERT INTO preferences '
-            'SELECT * FROM crbak.preferences WHERE key IN ($inList)');
+        await db!.customStatement(
+          'DELETE FROM preferences WHERE key IN ($inList)',
+        );
+        await db.customStatement(
+          'INSERT INTO preferences '
+          'SELECT * FROM crbak.preferences WHERE key IN ($inList)',
+        );
       });
       await db.customStatement('DETACH DATABASE crbak');
       await db.customStatement('PRAGMA wal_checkpoint(TRUNCATE)');
     } catch (e, st) {
-      debugPrint('BackupService._reapplyExcludedContentRegistry failed: '
-          '$e\n$st');
+      debugPrint(
+        'BackupService._reapplyExcludedContentRegistry failed: '
+        '$e\n$st',
+      );
     } finally {
       try {
         await db?.close();
-      } catch (_) {/* db may have failed to open */}
+      } catch (_) {
+        /* db may have failed to open */
+      }
     }
   }
 
@@ -2261,8 +2352,10 @@ class BackupService {
       if (dbFile == null) throw StateError('No $_dbName in backup archive');
 
       // TODO-1183: determinate progress across every streamed byte.
-      final void Function(int deltaBytes) reportBytes =
-          _archiveByteProgress(archive, onProgress);
+      final void Function(int deltaBytes) reportBytes = _archiveByteProgress(
+        archive,
+        onProgress,
+      );
 
       // Parse the source-device content roots so book/audio paths can be
       // rebased onto this device after the trees are restored.
@@ -2276,10 +2369,10 @@ class BackupService {
       // settings layer from bak, so it is inherently safe.
       final bool backupSettingsExcluded =
           meta?.excludedCategories.contains(BackupCategory.settings.name) ??
-              false;
+          false;
       final bool backupProfilesExcluded =
           meta?.excludedCategories.contains(BackupCategory.profiles.name) ??
-              false;
+          false;
       // BUG-816: content-registry prefs (favorites / fonts / local-audio) travel
       // EMPTY when their owning category was unticked, so an overwrite import
       // must preserve THIS device's rows from bak instead of wiping them.
@@ -2289,7 +2382,7 @@ class BackupService {
           meta?.excludedCategories.contains(BackupCategory.fonts.name) ?? false;
       final bool backupLocalAudioExcluded =
           meta?.excludedCategories.contains(BackupCategory.localAudio.name) ??
-              false;
+          false;
 
       final String? dictionaryReapplyDirectory = dictionaryResourceDirectory;
       List<MapEntry<ArchiveFile, String>>? dictionaryReapplyPlan;
@@ -2306,11 +2399,13 @@ class BackupService {
       // existing dictionaries (metadata rows + resource files) instead of
       // wiping them — the backup simply didn't include that category, the same
       // selective-preserve contract the device-local sync prefs already follow.
-      final bool backupHasDictionaries = archive.files.any((ArchiveFile f) =>
-          f.isFile &&
-          f.name
-              .replaceAll(r'\', '/')
-              .startsWith('$_dictionaryResourcesPrefix/'));
+      final bool backupHasDictionaries = archive.files.any(
+        (ArchiveFile f) =>
+            f.isFile &&
+            f.name
+                .replaceAll(r'\', '/')
+                .startsWith('$_dictionaryResourcesPrefix/'),
+      );
 
       // TODO-1358: honour a per-category IMPORT selection (overwrite path only;
       // merge always combines everything). A null [categories] restores every
@@ -2326,14 +2421,18 @@ class BackupService {
           categories == null || categories.contains(c);
       final bool effectiveHasDictionaries =
           backupHasDictionaries && wants(BackupCategory.dictionary);
-      final String? effAudiobooksRoot =
-          wants(BackupCategory.audiobooks) ? audiobooksRootDirectory : null;
-      final String? effFontsRoot =
-          wants(BackupCategory.fonts) ? fontsRootDirectory : null;
-      final String? effVideosRoot =
-          wants(BackupCategory.videos) ? videosRootDirectory : null;
-      final String? effLocalAudioRoot =
-          wants(BackupCategory.localAudio) ? dbDirectory : null;
+      final String? effAudiobooksRoot = wants(BackupCategory.audiobooks)
+          ? audiobooksRootDirectory
+          : null;
+      final String? effFontsRoot = wants(BackupCategory.fonts)
+          ? fontsRootDirectory
+          : null;
+      final String? effVideosRoot = wants(BackupCategory.videos)
+          ? videosRootDirectory
+          : null;
+      final String? effLocalAudioRoot = wants(BackupCategory.localAudio)
+          ? dbDirectory
+          : null;
 
       final sidecar = File(p.join(dbDirectory, _preserveSidecar));
       final String bakPath = '$dbPath.pre-restore.bak';
@@ -2367,10 +2466,7 @@ class BackupService {
         // artifacts. Copy the database first: a sidecar must never advertise a
         // recoverable restore before its corresponding snapshot exists.
         await currentDb.copy(bakPath);
-        await sidecar.writeAsString(
-          jsonEncode(sidecarPayload),
-          flush: true,
-        );
+        await sidecar.writeAsString(jsonEncode(sidecarPayload), flush: true);
       }
 
       // Must delete -wal/-shm AFTER reading prefs (step 1 opened+closed a WAL
@@ -2429,27 +2525,43 @@ class BackupService {
       try {
         if (booksRootDirectory != null &&
             wants(BackupCategory.books) &&
-            await _prepareTreeReapply(zipPath, archive,
-                archiveBooksPrefix(archive), booksRootDirectory,
-                onBytes: reportBytes)) {
+            await _prepareTreeReapply(
+              zipPath,
+              archive,
+              archiveBooksPrefix(archive),
+              booksRootDirectory,
+              onBytes: reportBytes,
+            )) {
           toCommit.add(booksRootDirectory);
         }
         if (effAudiobooksRoot != null &&
             await _prepareTreeReapply(
-                zipPath, archive, _audiobooksPrefix, effAudiobooksRoot,
-                onBytes: reportBytes)) {
+              zipPath,
+              archive,
+              _audiobooksPrefix,
+              effAudiobooksRoot,
+              onBytes: reportBytes,
+            )) {
           toCommit.add(effAudiobooksRoot);
         }
         if (effFontsRoot != null &&
             await _prepareTreeReapply(
-                zipPath, archive, _fontsPrefix, effFontsRoot,
-                onBytes: reportBytes)) {
+              zipPath,
+              archive,
+              _fontsPrefix,
+              effFontsRoot,
+              onBytes: reportBytes,
+            )) {
           toCommit.add(effFontsRoot);
         }
         if (effVideosRoot != null &&
             await _prepareTreeReapply(
-                zipPath, archive, _videosPrefix, effVideosRoot,
-                onBytes: reportBytes)) {
+              zipPath,
+              archive,
+              _videosPrefix,
+              effVideosRoot,
+              onBytes: reportBytes,
+            )) {
           toCommit.add(effVideosRoot);
         }
       } catch (_) {
@@ -2479,8 +2591,12 @@ class BackupService {
       //     backup carries no localAudio/ prefix the existing local-audio DBs
       //     are left untouched (same preserve-on-absent contract as the trees).
       if (wants(BackupCategory.localAudio)) {
-        await _reapplyLocalAudioFiles(zipPath, archive, dbDirectory,
-            onBytes: reportBytes);
+        await _reapplyLocalAudioFiles(
+          zipPath,
+          archive,
+          dbDirectory,
+          onBytes: reportBytes,
+        );
       }
 
       // 3) Restore what must stay on this device — inline, not deferred to
@@ -2514,8 +2630,10 @@ class BackupService {
       //     branches) — else the overwrite would wipe the device's pairings and
       //     baselines. No-op on a fresh install (no bak).
       if (haveCurrent) {
-        deviceLocalTablesReapplied =
-            await _reapplyDeviceLocalTablesFromBak(dbDirectory, bakPath);
+        deviceLocalTablesReapplied = await _reapplyDeviceLocalTablesFromBak(
+          dbDirectory,
+          bakPath,
+        );
         // BUG-816: preserve THIS device's content-registry prefs from bak when
         // the backup excluded their owning category (books/fonts/localAudio) —
         // runs in both importSettings branches, mirroring the export strip.
@@ -2595,9 +2713,11 @@ class BackupService {
         await _safeDelete(sidecar.path);
         await _safeDelete(bakPath);
       } else {
-        debugPrint('BackupService.restoreBackup: device-local tables were not '
-            'reapplied; retaining restore sidecar and pre-restore.bak for '
-            'startup recovery.');
+        debugPrint(
+          'BackupService.restoreBackup: device-local tables were not '
+          'reapplied; retaining restore sidecar and pre-restore.bak for '
+          'startup recovery.',
+        );
       }
     } finally {
       await input.close();
@@ -2641,8 +2761,9 @@ class BackupService {
     // nothing — neither rows nor files.
     bool wants(BackupCategory c) =>
         categories == null || categories.contains(c);
-    final Set<String>? enabledCategoryNames =
-        categories?.map((BackupCategory c) => c.name).toSet();
+    final Set<String>? enabledCategoryNames = categories
+        ?.map((BackupCategory c) => c.name)
+        .toSet();
     final String dbPath = p.join(dbDirectory, _dbName);
     final String mergeSrcPath = p.join(dbDirectory, _mergeSrcName);
     final String bakPath = '$dbPath.pre-merge.bak';
@@ -2655,8 +2776,10 @@ class BackupService {
       if (dbFile == null) throw StateError('No $_dbName in backup archive');
 
       // TODO-1183: determinate progress across every streamed byte.
-      final void Function(int deltaBytes) reportBytes =
-          _archiveByteProgress(archive, onProgress);
+      final void Function(int deltaBytes) reportBytes = _archiveByteProgress(
+        archive,
+        onProgress,
+      );
 
       final BackupMeta? meta = _readBackupMeta(archive);
 
@@ -2692,17 +2815,20 @@ class BackupService {
       if (currentDb.existsSync()) {
         await currentDb.copy(bakPath);
       }
-      await sidecar.writeAsString(jsonEncode(<String, dynamic>{
-        'mode': 'merge',
-        'mergeSrc': mergeSrcPath,
-      }));
+      await sidecar.writeAsString(
+        jsonEncode(<String, dynamic>{
+          'mode': 'merge',
+          'mergeSrc': mergeSrcPath,
+        }),
+      );
 
       // 4) Open the live DB, ATTACH the backup, run the whole row merge in one
       //    transaction (rolled back on any failure -> DB unchanged).
       final FushiDatabase db = FushiDatabase(dbDirectory);
       try {
-        final String safeSrc =
-            mergeSrcPath.replaceAll(r'\', '/').replaceAll("'", "''");
+        final String safeSrc = mergeSrcPath
+            .replaceAll(r'\', '/')
+            .replaceAll("'", "''");
         await db.customStatement("ATTACH DATABASE '$safeSrc' AS mergesrc");
         try {
           // TODO-1261: only import video rows whose file travelled (or streaming
@@ -2729,35 +2855,60 @@ class BackupService {
       //    rows were likewise skipped by the engine above).
       if (dictionaryResourceDirectory != null &&
           wants(BackupCategory.dictionary)) {
-        await _copyTreeIfAbsent(zipPath, archive, _dictionaryResourcesPrefix,
-            dictionaryResourceDirectory,
-            onBytes: reportBytes);
+        await _copyTreeIfAbsent(
+          zipPath,
+          archive,
+          _dictionaryResourcesPrefix,
+          dictionaryResourceDirectory,
+          onBytes: reportBytes,
+        );
       }
       if (booksRootDirectory != null && wants(BackupCategory.books)) {
         await _copyTreeIfAbsent(
-            zipPath, archive, archiveBooksPrefix(archive), booksRootDirectory,
-            onBytes: reportBytes);
+          zipPath,
+          archive,
+          archiveBooksPrefix(archive),
+          booksRootDirectory,
+          onBytes: reportBytes,
+        );
       }
       if (audiobooksRootDirectory != null && wants(BackupCategory.audiobooks)) {
         await _copyTreeIfAbsent(
-            zipPath, archive, _audiobooksPrefix, audiobooksRootDirectory,
-            onBytes: reportBytes);
+          zipPath,
+          archive,
+          _audiobooksPrefix,
+          audiobooksRootDirectory,
+          onBytes: reportBytes,
+        );
       }
       if (fontsRootDirectory != null && wants(BackupCategory.fonts)) {
         await _copyTreeIfAbsent(
-            zipPath, archive, _fontsPrefix, fontsRootDirectory,
-            onBytes: reportBytes);
+          zipPath,
+          archive,
+          _fontsPrefix,
+          fontsRootDirectory,
+          onBytes: reportBytes,
+        );
       }
       if (videosRootDirectory != null && wants(BackupCategory.videos)) {
         await _copyTreeIfAbsent(
-            zipPath, archive, _videosPrefix, videosRootDirectory,
-            onBytes: reportBytes);
+          zipPath,
+          archive,
+          _videosPrefix,
+          videosRootDirectory,
+          onBytes: reportBytes,
+        );
       }
       // Local-audio DBs are copy-if-absent into the support directory (never
       // overwrite the device's own local_audio_*.db files).
       if (wants(BackupCategory.localAudio)) {
-        await _reapplyLocalAudioFiles(zipPath, archive, dbDirectory,
-            overwrite: false, onBytes: reportBytes);
+        await _reapplyLocalAudioFiles(
+          zipPath,
+          archive,
+          dbDirectory,
+          overwrite: false,
+          onBytes: reportBytes,
+        );
       }
 
       // 6) Rebase the newly-merged backup rows' stored paths onto this device's
@@ -2973,12 +3124,16 @@ class BackupService {
       // pre-restore DB snapshot can still rescue device-local tables. Preserve
       // the historical behavior of dropping an irreparably corrupt marker once
       // that table replay succeeds.
-      debugPrint('BackupService.recoverPendingRestore: corrupt sidecar: '
-          '$e\n$st');
+      debugPrint(
+        'BackupService.recoverPendingRestore: corrupt sidecar: '
+        '$e\n$st',
+      );
       sidecarStateApplied = true;
     } on TypeError catch (e, st) {
-      debugPrint('BackupService.recoverPendingRestore: invalid sidecar shape: '
-          '$e\n$st');
+      debugPrint(
+        'BackupService.recoverPendingRestore: invalid sidecar shape: '
+        '$e\n$st',
+      );
       sidecarStateApplied = true;
     } catch (e, st) {
       // Database/filesystem failures are retryable. Keep both artifacts so the
@@ -2992,8 +3147,10 @@ class BackupService {
       final bool deviceLocalTablesReapplied =
           await _reapplyDeviceLocalTablesFromBak(dbDirectory, bakPath);
       if (!deviceLocalTablesReapplied) {
-        debugPrint('BackupService.recoverPendingRestore: retaining sidecar and '
-            'pre-restore.bak because device-local table replay did not finish.');
+        debugPrint(
+          'BackupService.recoverPendingRestore: retaining sidecar and '
+          'pre-restore.bak because device-local table replay did not finish.',
+        );
         return;
       }
     }
@@ -3013,14 +3170,17 @@ class BackupService {
       // surface it loudly rather than silently dropping the user's settings.
       // (Normal flow restores inline while bak definitely exists; reaching here
       // means a crash + external deletion of bak before the next launch.)
-      debugPrint('BackupService._reapplySettingsLayer: pre-restore.bak missing '
-          '— local settings/profiles could not be preserved on import.');
+      debugPrint(
+        'BackupService._reapplySettingsLayer: pre-restore.bak missing '
+        '— local settings/profiles could not be preserved on import.',
+      );
       return;
     }
     final db = FushiDatabase(dbDirectory);
     try {
-      final String safeBak =
-          bakPath.replaceAll(r'\', '/').replaceAll("'", "''");
+      final String safeBak = bakPath
+          .replaceAll(r'\', '/')
+          .replaceAll("'", "''");
       await db.customStatement("ATTACH DATABASE '$safeBak' AS bak");
       await db.transaction(() async {
         // preferences: keep this device's SETTINGS from bak, but let CONTENT
@@ -3029,10 +3189,12 @@ class BackupService {
         // [_keepDeviceSettingsPrefPredicate]. `sync_*` stays restored from bak
         // (device-local, never exported), which this predicate keeps.
         await db.customStatement(
-            'DELETE FROM preferences WHERE $_keepDeviceSettingsPrefPredicate');
+          'DELETE FROM preferences WHERE $_keepDeviceSettingsPrefPredicate',
+        );
         await db.customStatement(
-            'INSERT INTO preferences SELECT * FROM bak.preferences '
-            'WHERE $_keepDeviceSettingsPrefPredicate');
+          'INSERT INTO preferences SELECT * FROM bak.preferences '
+          'WHERE $_keepDeviceSettingsPrefPredicate',
+        );
         // profiles before its FK dependents.
         for (final String t in _settingsLayerTables) {
           await db.customStatement('DELETE FROM $t');
@@ -3069,23 +3231,28 @@ class BackupService {
       // bak is the only copy of this device's settings/profiles after the
       // overwrite. Missing it means a crash + external deletion before this ran;
       // surface loudly rather than silently wiping the layer to empty.
-      debugPrint('BackupService._reapplyExcludedSettingsLayers: '
-          'pre-restore.bak missing — local settings/profiles could not be '
-          'preserved for a settings/profiles-excluded backup.');
+      debugPrint(
+        'BackupService._reapplyExcludedSettingsLayers: '
+        'pre-restore.bak missing — local settings/profiles could not be '
+        'preserved for a settings/profiles-excluded backup.',
+      );
       return;
     }
     final FushiDatabase db = FushiDatabase(dbDirectory);
     try {
-      final String safeBak =
-          bakPath.replaceAll(r'\', '/').replaceAll("'", "''");
+      final String safeBak = bakPath
+          .replaceAll(r'\', '/')
+          .replaceAll("'", "''");
       await db.customStatement("ATTACH DATABASE '$safeBak' AS setbak");
       await db.transaction(() async {
         if (reapplySettings) {
           await db.customStatement(
-              'DELETE FROM preferences WHERE $settingsPrefPredicate');
+            'DELETE FROM preferences WHERE $settingsPrefPredicate',
+          );
           await db.customStatement(
-              'INSERT INTO preferences SELECT * FROM setbak.preferences '
-              'WHERE $settingsPrefPredicate');
+            'INSERT INTO preferences SELECT * FROM setbak.preferences '
+            'WHERE $settingsPrefPredicate',
+          );
         }
         if (reapplyProfiles) {
           // Child-first DELETE so an enforced FK to `profiles` never blocks the
@@ -3129,15 +3296,18 @@ class BackupService {
       // bak is the only copy of this device's dictionary rows after the
       // overwrite. Missing it means a crash + external deletion before this
       // ran; surface loudly rather than silently dropping the dictionaries.
-      debugPrint('BackupService._reapplyDictionaryTablesFromBak: '
-          'pre-restore.bak missing — local dictionaries could not be '
-          'preserved on import.');
+      debugPrint(
+        'BackupService._reapplyDictionaryTablesFromBak: '
+        'pre-restore.bak missing — local dictionaries could not be '
+        'preserved on import.',
+      );
       return;
     }
     final FushiDatabase db = FushiDatabase(dbDirectory);
     try {
-      final String safeBak =
-          bakPath.replaceAll(r'\', '/').replaceAll("'", "''");
+      final String safeBak = bakPath
+          .replaceAll(r'\', '/')
+          .replaceAll("'", "''");
       await db.customStatement("ATTACH DATABASE '$safeBak' AS dictbak");
       await db.transaction(() async {
         for (final String t in _dictionaryLayerTables) {
@@ -3164,7 +3334,8 @@ class BackupService {
   /// list did not name would be deleted from the imported DB and never restored,
   /// silently wiping this device's own SFTP passwords / API keys on import.
   static Future<Map<String, String>> _readDeviceLocalPrefs(
-      String dbDirectory) async {
+    String dbDirectory,
+  ) async {
     FushiDatabase? db;
     try {
       db = FushiDatabase(dbDirectory);
@@ -3184,7 +3355,9 @@ class BackupService {
     } finally {
       try {
         await db?.close();
-      } catch (_) {/* db may have failed to open */}
+      } catch (_) {
+        /* db may have failed to open */
+      }
     }
   }
 
@@ -3192,7 +3365,9 @@ class BackupService {
   /// stale (backup-origin) folder cache so the next sync rebuilds it against the
   /// preserved backend account, then durably flushes.
   static Future<void> _applyPreservedConfig(
-      String dbDirectory, Map<String, String> prefs) async {
+    String dbDirectory,
+    Map<String, String> prefs,
+  ) async {
     final db = FushiDatabase(dbDirectory);
     try {
       for (final entry in prefs.entries) {
@@ -3221,8 +3396,10 @@ class BackupService {
     await for (final FileSystemEntity entity in root.list(recursive: true)) {
       if (entity is! File) continue;
       final String relativePath = p.relative(entity.path, from: root.path);
-      final String archivePath =
-          p.posix.join(archivePrefix, relativePath.replaceAll(r'\', '/'));
+      final String archivePath = p.posix.join(
+        archivePrefix,
+        relativePath.replaceAll(r'\', '/'),
+      );
       into[archivePath] = entity.path;
     }
   }
@@ -3240,10 +3417,7 @@ class BackupService {
   /// restore/merge then inserted book rows with no content = un-openable books.
   /// Filtering the rows here makes the "book content" switch / per-book
   /// selection consistent: a book that isn't packed never appears after import.
-  static Future<void> _retainBooks(
-    String dbDirectory,
-    Set<String> keep,
-  ) async {
+  static Future<void> _retainBooks(String dbDirectory, Set<String> keep) async {
     final FushiDatabase db = FushiDatabase(dbDirectory);
     try {
       for (final EpubBookRow b in await db.getAllEpubBooks()) {
@@ -3334,14 +3508,26 @@ class BackupService {
       // The book's extracted directory subtree (epub + html/images/fonts +
       // in-tree cover) — the bulk of its content.
       await _collectSubtreeUnderRoot(
-          b.extractDir, booksRootDirectory, rootNorm, into);
+        b.extractDir,
+        booksRootDirectory,
+        rootNorm,
+        into,
+      );
       // The epub file and cover file explicitly, in case either lives directly
       // under the books root rather than inside extractDir.
       await _collectSingleFileUnderRoot(
-          b.epubPath, booksRootDirectory, rootNorm, into);
+        b.epubPath,
+        booksRootDirectory,
+        rootNorm,
+        into,
+      );
       if (b.coverPath != null) {
         await _collectSingleFileUnderRoot(
-            b.coverPath!, booksRootDirectory, rootNorm, into);
+          b.coverPath!,
+          booksRootDirectory,
+          rootNorm,
+          into,
+        );
       }
     }
   }
@@ -3399,8 +3585,10 @@ class BackupService {
     Map<String, String> into,
   ) {
     final String relativePath = p.relative(filePath, from: booksRootDirectory);
-    final String archivePath =
-        p.posix.join(_booksPrefix, relativePath.replaceAll(r'\', '/'));
+    final String archivePath = p.posix.join(
+      _booksPrefix,
+      relativePath.replaceAll(r'\', '/'),
+    );
     into[archivePath] = filePath;
   }
 
@@ -3578,7 +3766,8 @@ class BackupService {
       try {
         final List<int> metaBytes = utf8.encode(metaJson);
         encoder.addArchiveFile(
-            ArchiveFile(metaName, metaBytes.length, metaBytes));
+          ArchiveFile(metaName, metaBytes.length, metaBytes),
+        );
         for (final MapEntry<String, String> entry
             in archivePathToSource.entries) {
           final File file = File(entry.value);
@@ -3603,8 +3792,8 @@ class BackupService {
 
   Future<bool> _hasCompleteDictionaryResources(Directory? root) async {
     if (root == null || !await root.exists()) return false;
-    final List<DictionaryMetaRow> dictionaries =
-        await _db.getAllDictionaryMetadata();
+    final List<DictionaryMetaRow> dictionaries = await _db
+        .getAllDictionaryMetadata();
     if (dictionaries.isEmpty) return false;
     for (final DictionaryMetaRow dictionary in dictionaries) {
       final Directory dictionaryDir = Directory(
@@ -3617,8 +3806,9 @@ class BackupService {
 
   static Future<bool> _directoryHasFiles(Directory directory) async {
     if (!await directory.exists()) return false;
-    await for (final FileSystemEntity entity
-        in directory.list(recursive: true)) {
+    await for (final FileSystemEntity entity in directory.list(
+      recursive: true,
+    )) {
       if (entity is File) return true;
     }
     return false;
@@ -3643,8 +3833,9 @@ class BackupService {
         <MapEntry<ArchiveFile, String>>[];
     for (final ArchiveFile file in _dictionaryResourceFiles(archive)) {
       final String rawName = file.name.replaceAll(r'\', '/');
-      final String relativePath =
-          rawName.substring(_dictionaryResourcesPrefix.length + 1);
+      final String relativePath = rawName.substring(
+        _dictionaryResourcesPrefix.length + 1,
+      );
       final String normalizedRelative = p.posix.normalize(relativePath);
       if (relativePath.isEmpty ||
           p.posix.isAbsolute(relativePath) ||
@@ -3685,8 +3876,10 @@ class BackupService {
     await _extractEntriesStreaming(
       zipPath: zipPath,
       entries: reapplyPlan
-          .map((MapEntry<ArchiveFile, String> e) =>
-              MapEntry<String, String>(e.key.name, e.value))
+          .map(
+            (MapEntry<ArchiveFile, String> e) =>
+                MapEntry<String, String>(e.key.name, e.value),
+          )
           .toList(),
       onBytes: onBytes,
     );
@@ -3762,8 +3955,9 @@ class BackupService {
           normalizedRelative.startsWith('../')) {
         throw FormatException('Invalid backup content path: ${file.name}');
       }
-      final String targetPath =
-          p.normalize(p.join(targetRoot.path, normalizedRelative));
+      final String targetPath = p.normalize(
+        p.join(targetRoot.path, normalizedRelative),
+      );
       final String canonicalTarget = p.canonicalize(targetPath);
       if (canonicalTarget != canonicalRoot &&
           !p.isWithin(canonicalRoot, canonicalTarget)) {
@@ -3833,8 +4027,10 @@ class BackupService {
       await _extractEntriesStreaming(
         zipPath: zipPath,
         entries: plan
-            .map((MapEntry<ArchiveFile, String> e) =>
-                MapEntry<String, String>(e.key.name, e.value))
+            .map(
+              (MapEntry<ArchiveFile, String> e) =>
+                  MapEntry<String, String>(e.key.name, e.value),
+            )
             .toList(),
         onBytes: onBytes,
       );
@@ -3943,7 +4139,10 @@ class BackupService {
   /// 结果在本机不存在、而该确定位置存在时，用后者。**原路径有效时一律不动**，
   /// 普通备份恢复的行为不变。
   static String _resolveExtractDirOnDevice(
-      String rebased, String bookKey, String newBooksRoot) {
+    String rebased,
+    String bookKey,
+    String newBooksRoot,
+  ) {
     if (rebased.isNotEmpty && Directory(rebased).existsSync()) return rebased;
     if (bookKey.isEmpty) return rebased;
     final String byKey = p.join(newBooksRoot, bookKey);
@@ -3977,8 +4176,13 @@ class BackupService {
             ),
             coverPath: b.coverPath == null
                 ? null
-                : _rebaseEither(b.coverPath!, oldBooks, newBooksRoot, oldAudio,
-                    newAudiobooksRoot),
+                : _rebaseEither(
+                    b.coverPath!,
+                    oldBooks,
+                    newBooksRoot,
+                    oldAudio,
+                    newAudiobooksRoot,
+                  ),
           );
         }
       }
@@ -3990,9 +4194,16 @@ class BackupService {
                 ? null
                 : rebasePath(a.audioRoot!, oldAudio, newAudiobooksRoot),
             audioPathsJson: _rebaseAudioPathsJson(
-                a.audioPathsJson, oldAudio, newAudiobooksRoot, a.bookKey),
-            alignmentPath:
-                rebasePath(a.alignmentPath, oldAudio, newAudiobooksRoot),
+              a.audioPathsJson,
+              oldAudio,
+              newAudiobooksRoot,
+              a.bookKey,
+            ),
+            alignmentPath: rebasePath(
+              a.alignmentPath,
+              oldAudio,
+              newAudiobooksRoot,
+            ),
           );
         }
         // BUG-1575: srt_books carries its OWN copy of the audio paths and was
@@ -4016,12 +4227,21 @@ class BackupService {
                 ? null
                 : rebasePath(srt.audioRoot!, oldAudio, newAudiobooksRoot),
             audioPathsJson: _rebaseAudioPathsJson(
-                srt.audioPathsJson, oldAudio, newAudiobooksRoot, srt.uid),
+              srt.audioPathsJson,
+              oldAudio,
+              newAudiobooksRoot,
+              srt.uid,
+            ),
             srtPath: rebasePath(srt.srtPath, oldAudio, newAudiobooksRoot),
             coverPath: srt.coverPath == null
                 ? null
-                : _rebaseEither(srt.coverPath!, oldAudio, newAudiobooksRoot,
-                    oldBooks, newBooksRoot),
+                : _rebaseEither(
+                    srt.coverPath!,
+                    oldAudio,
+                    newAudiobooksRoot,
+                    oldBooks,
+                    newBooksRoot,
+                  ),
           );
         }
       }
@@ -4046,13 +4266,16 @@ class BackupService {
     try {
       final dynamic decoded = jsonDecode(json);
       if (decoded is! List) return json;
-      return jsonEncode(decoded
-          .whereType<String>()
-          .map((String s) => rebasePath(s, oldRoot, newRoot))
-          .toList());
+      return jsonEncode(
+        decoded
+            .whereType<String>()
+            .map((String s) => rebasePath(s, oldRoot, newRoot))
+            .toList(),
+      );
     } catch (e) {
       debugPrint(
-          'BackupService: skipped rebasing audioPathsJson for $rowKey: $e');
+        'BackupService: skipped rebasing audioPathsJson for $rowKey: $e',
+      );
       return json;
     }
   }
@@ -4191,8 +4414,11 @@ class BackupService {
     final FushiDatabase db = FushiDatabase(dbDirectory);
     try {
       for (final VideoBookRow row in await db.allVideoBooks()) {
-        final String videoPath =
-            _rebaseVideoPath(row.videoPath, meta.videoFiles, newVideosRoot);
+        final String videoPath = _rebaseVideoPath(
+          row.videoPath,
+          meta.videoFiles,
+          newVideosRoot,
+        );
         final String? playlistJson = _rebaseVideoPlaylistJson(
           row.playlistJson,
           meta.videoFiles,
@@ -4238,8 +4464,11 @@ class BackupService {
         final Map<String, dynamic> row = Map<String, dynamic>.from(entry);
         final Object? path = row['path'];
         if (path is! String) return row;
-        final String rebased =
-            _rebaseVideoPath(path, sourcePathToArchiveRelative, newVideosRoot);
+        final String rebased = _rebaseVideoPath(
+          path,
+          sourcePathToArchiveRelative,
+          newVideosRoot,
+        );
         if (rebased != path) {
           row['path'] = rebased;
           changed = true;
@@ -4264,8 +4493,9 @@ class BackupService {
         normalizedRelative.startsWith('../')) {
       throw FormatException('Invalid backup video path: $archiveRelativePath');
     }
-    final String targetPath =
-        p.normalize(p.join(videosRoot, normalizedRelative));
+    final String targetPath = p.normalize(
+      p.join(videosRoot, normalizedRelative),
+    );
     final String canonicalRoot = p.canonicalize(videosRoot);
     final String canonicalTarget = p.canonicalize(targetPath);
     if (canonicalTarget != canonicalRoot &&
@@ -4457,8 +4687,9 @@ class BackupService {
         final int total = raw.length;
         int written = 0;
         while (written < total) {
-          final int want =
-              (total - written) < chunkSize ? (total - written) : chunkSize;
+          final int want = (total - written) < chunkSize
+              ? (total - written)
+              : chunkSize;
           final Uint8List bytes = raw.readBytes(want).toUint8List();
           if (bytes.isEmpty) break;
           output.writeBytes(bytes);
@@ -4503,13 +4734,12 @@ class BackupService {
     Set<BackupCategory>? categories,
     Set<String>? bookKeys,
     Set<String>? videoKeys,
-  }) =>
-      createBackup(
-        outputPath,
-        categories: categories,
-        bookKeys: bookKeys,
-        videoKeys: videoKeys,
-      );
+  }) => createBackup(
+    outputPath,
+    categories: categories,
+    bookKeys: bookKeys,
+    videoKeys: videoKeys,
+  );
 
   /// 旧名兼容：已改名 [restoreBackup]。
   @Deprecated('已改名 restoreBackup（用户视角动词），请改用新名')
@@ -4524,19 +4754,18 @@ class BackupService {
     String? fontsRootDirectory,
     String? videosRootDirectory,
     void Function(double progress)? onProgress,
-  }) =>
-      restoreBackup(
-        dbDirectory: dbDirectory,
-        zipPath: zipPath,
-        importSettings: importSettings,
-        categories: categories,
-        dictionaryResourceDirectory: dictionaryResourceDirectory,
-        booksRootDirectory: booksRootDirectory,
-        audiobooksRootDirectory: audiobooksRootDirectory,
-        fontsRootDirectory: fontsRootDirectory,
-        videosRootDirectory: videosRootDirectory,
-        onProgress: onProgress,
-      );
+  }) => restoreBackup(
+    dbDirectory: dbDirectory,
+    zipPath: zipPath,
+    importSettings: importSettings,
+    categories: categories,
+    dictionaryResourceDirectory: dictionaryResourceDirectory,
+    booksRootDirectory: booksRootDirectory,
+    audiobooksRootDirectory: audiobooksRootDirectory,
+    fontsRootDirectory: fontsRootDirectory,
+    videosRootDirectory: videosRootDirectory,
+    onProgress: onProgress,
+  );
 
   /// 旧名兼容：已改名 [mergeRestoreBackup]。
   @Deprecated('已改名 mergeRestoreBackup（用户视角动词），请改用新名')
@@ -4550,18 +4779,17 @@ class BackupService {
     String? fontsRootDirectory,
     String? videosRootDirectory,
     void Function(double progress)? onProgress,
-  }) =>
-      mergeRestoreBackup(
-        dbDirectory: dbDirectory,
-        zipPath: zipPath,
-        categories: categories,
-        dictionaryResourceDirectory: dictionaryResourceDirectory,
-        booksRootDirectory: booksRootDirectory,
-        audiobooksRootDirectory: audiobooksRootDirectory,
-        fontsRootDirectory: fontsRootDirectory,
-        videosRootDirectory: videosRootDirectory,
-        onProgress: onProgress,
-      );
+  }) => mergeRestoreBackup(
+    dbDirectory: dbDirectory,
+    zipPath: zipPath,
+    categories: categories,
+    dictionaryResourceDirectory: dictionaryResourceDirectory,
+    booksRootDirectory: booksRootDirectory,
+    audiobooksRootDirectory: audiobooksRootDirectory,
+    fontsRootDirectory: fontsRootDirectory,
+    videosRootDirectory: videosRootDirectory,
+    onProgress: onProgress,
+  );
 
   /// 旧名兼容：已改名 [summarizeBackupEntries]（入参是归档条目名列表而非
   /// `Archive` 对象，旧名易误导）。
@@ -4571,13 +4799,12 @@ class BackupService {
     BackupMeta? meta, {
     int? dbVideoBookCount,
     int? dbAudiobookCount,
-  }) =>
-      summarizeBackupEntries(
-        archiveFileNames,
-        meta,
-        dbVideoBookCount: dbVideoBookCount,
-        dbAudiobookCount: dbAudiobookCount,
-      );
+  }) => summarizeBackupEntries(
+    archiveFileNames,
+    meta,
+    dbVideoBookCount: dbVideoBookCount,
+    dbAudiobookCount: dbAudiobookCount,
+  );
 
   /// 旧名兼容：已改名 [summarizeBackupFile]。
   @Deprecated('已改名 summarizeBackupFile，请改用新名')
@@ -4596,12 +4823,11 @@ class BackupService {
     required FushiDatabase liveDb,
     required String dbDirectory,
     required String zipPath,
-  }) =>
-      previewMergeRestore(
-        liveDb: liveDb,
-        dbDirectory: dbDirectory,
-        zipPath: zipPath,
-      );
+  }) => previewMergeRestore(
+    liveDb: liveDb,
+    dbDirectory: dbDirectory,
+    zipPath: zipPath,
+  );
 
   /// 旧名兼容：已改名 [recoverMergeRestore]。
   @Deprecated('已改名 recoverMergeRestore，请改用新名')

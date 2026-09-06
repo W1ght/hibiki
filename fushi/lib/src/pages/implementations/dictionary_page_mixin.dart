@@ -33,8 +33,9 @@ import 'package:fushi/utils.dart';
 /// 搜索期加载占位卡（[DictionaryPageMixin.buildPopupLoadingPlaceholder]）在宿主 Stack
 /// 里的稳定身份 key。与 reader 车道 `base-source-popup-loading-placeholder` 同用途，
 /// 也是 BUG-1364 行为测试定位该层的锚点。
-const ValueKey<String> kLookupSearchPlaceholderKey =
-    ValueKey<String>('mixin-popup-loading-placeholder');
+const ValueKey<String> kLookupSearchPlaceholderKey = ValueKey<String>(
+  'mixin-popup-loading-placeholder',
+);
 
 /// Non-generic mixin that consolidates the popup stack management, Anki mining,
 /// and audio auto-read logic shared across PopupDictionaryPage
@@ -85,11 +86,11 @@ mixin DictionaryPageMixin {
   /// WebView 上残留的旧表。
   DictionaryPopupInputSpec get dictionaryPopupInputSpec =>
       dictionaryPopupInputScope == null
-          ? const DictionaryPopupInputSpec()
-          : dictionaryPopupInputSpecFor(
-              registry: mixinAppModel.shortcutRegistry,
-              actions: dictionaryPopupForwardedActions,
-            );
+      ? const DictionaryPopupInputSpec()
+      : dictionaryPopupInputSpecFor(
+          registry: mixinAppModel.shortcutRegistry,
+          actions: dictionaryPopupForwardedActions,
+        );
 
   /// 弹窗回传 token 的落地点。
   ///
@@ -150,7 +151,7 @@ mixin DictionaryPageMixin {
   /// 上下文）。视频页覆写返回非空闭包：用 [VideoPlayerController.cues] 在当前 cue 前后
   /// 取 N 条。与 reader 车道（[BaseSourcePageState.onSetSentenceContextToDraft]）对称。
   Future<int> Function(int prevCount, int nextCount)?
-      get onSetSentenceContextToDraft => null;
+  get onSetSentenceContextToDraft => null;
 
   /// TODO-382「+句」可撤销（视频车道）：弹窗点「清空已加句子」清掉本表面会话级制卡
   /// 草稿，返回清空后的句数（恒 0）。默认 null = 不支持（与 [onAppendSentenceToDraft]
@@ -162,7 +163,7 @@ mixin DictionaryPageMixin {
   /// 视频页覆写返回非空闭包（[buildSentenceContextPreview]）。与 reader 车道
   /// （[BaseSourcePageState.onSentenceContextPreviewFromDraft]）对称。
   Future<Map<String, Object?>> Function()?
-      get onSentenceContextPreviewToDraft => null;
+  get onSentenceContextPreviewToDraft => null;
 
   /// BUG-797 / BUG-1040：有多少个「必须盖住查词弹窗」的 Flutter 对话框正开着。
   ///
@@ -193,8 +194,11 @@ mixin DictionaryPageMixin {
       return await body();
     } finally {
       if (mounted) {
-        setState(() => _popupHidingDialogDepth =
-            _popupHidingDialogDepth > 0 ? _popupHidingDialogDepth - 1 : 0);
+        setState(
+          () => _popupHidingDialogDepth = _popupHidingDialogDepth > 0
+              ? _popupHidingDialogDepth - 1
+              : 0,
+        );
       }
     }
   }
@@ -259,17 +263,18 @@ mixin DictionaryPageMixin {
     // [_popupResizePreview] 临时覆盖偏好实时预览（松手落库，见 [_onMixinPopupResizeEnd]）。
     final double preferredMaxHeight =
         (_popupResizePreview?.height ?? mixinAppModel.popupMaxHeight) *
-            mixinAppModel.appUiScale;
+        mixinAppModel.appUiScale;
     final double effectiveMaxHeight = _popupResizePreview != null
         ? preferredMaxHeight
         : (autoFitHeight ?? preferredMaxHeight)
-            .clamp(0.0, preferredMaxHeight)
-            .toDouble();
+              .clamp(0.0, preferredMaxHeight)
+              .toDouble();
     final Rect anchored = resolvePopupRect(
       selectionRect: selectionRect,
       screen: screen,
       bottomDocked: mixinAppModel.popupBottomDocked,
-      maxWidth: (_popupResizePreview?.width ?? mixinAppModel.popupMaxWidth) *
+      maxWidth:
+          (_popupResizePreview?.width ?? mixinAppModel.popupMaxWidth) *
           mixinAppModel.appUiScale,
       maxHeight: effectiveMaxHeight,
     );
@@ -316,7 +321,8 @@ mixin DictionaryPageMixin {
   /// 拖把手进行：盒坐标系增量位移 [deltaPx] 经 [resolveDraggedLookupSize] 折算回基准
   /// （除 appUiScale）并 clamp，驱动实时重建。
   void _onMixinPopupResizeUpdate(Offset deltaPx) {
-    final LookupSize base = _popupResizePreview ??
+    final LookupSize base =
+        _popupResizePreview ??
         LookupSize(mixinAppModel.popupMaxWidth, mixinAppModel.popupMaxHeight);
     setState(() {
       _popupResizePreview = resolveDraggedLookupSize(
@@ -456,13 +462,12 @@ mixin DictionaryPageMixin {
     String expression,
     String reading,
     DictionaryPopupWebViewState? popupState,
-  ) =>
-      autoReadWordUnified(
-        mixinAppModel,
-        expression,
-        reading,
-        playInWebView: popupState?.playWordAudioUrl,
-      );
+  ) => autoReadWordUnified(
+    mixinAppModel,
+    expression,
+    reading,
+    playInWebView: popupState?.playWordAudioUrl,
+  );
 
   /// Checks whether a card for [expression] / [reading] already exists in Anki.
   Future<bool> checkDuplicate(String expression, String reading) async {
@@ -562,16 +567,18 @@ mixin DictionaryPageMixin {
     // 都不得打断弹窗查词流程。
     try {
       final ({String? bookKey, String? title})? identity = lookupBookIdentity;
-      unawaited(mixinAppModel.database
-          .addLookupCount(
-        bookKey: identity?.bookKey,
-        title: identity?.title ?? '',
-        sourceType: dictionarySourceType,
-        dateKey: _statTodayKey(),
-      )
-          .catchError((Object e, StackTrace st) {
-        debugPrint('[fushi-stats] addLookupCount failed: $e\n$st');
-      }));
+      unawaited(
+        mixinAppModel.database
+            .addLookupCount(
+              bookKey: identity?.bookKey,
+              title: identity?.title ?? '',
+              sourceType: dictionarySourceType,
+              dateKey: _statTodayKey(),
+            )
+            .catchError((Object e, StackTrace st) {
+              debugPrint('[fushi-stats] addLookupCount failed: $e\n$st');
+            }),
+      );
     } catch (e, st) {
       debugPrint('[fushi-stats] addLookupCount failed (sync): $e\n$st');
     }
@@ -679,7 +686,7 @@ mixin DictionaryPageMixin {
       screen: screen,
       isDark:
           (mixinAppModel.overrideDictionaryTheme ?? mixinTheme).brightness ==
-              Brightness.dark,
+          Brightness.dark,
       overrideFillColor: mixinAppModel.overrideDictionaryColor,
     );
   }
@@ -706,7 +713,7 @@ mixin DictionaryPageMixin {
     }
     final bool isDark =
         (mixinAppModel.overrideDictionaryTheme ?? mixinTheme).brightness ==
-            Brightness.dark;
+        Brightness.dark;
     // BUG-135 parking + Visibility 几何收口在 [parkedPopupLayer]。
     return parkedPopupLayer(
       // BUG-941：搜索占位层消失时本层会在 Stack children 中前移一位。若顶层
@@ -807,10 +814,12 @@ mixin DictionaryPageMixin {
                   localRect: localRect,
                   fallback: entry.selectionRect,
                 );
-          glog('inapp-mixin/text: localRect=${dbgRect(localRect)} '
-              'zero=${localRect == Rect.zero} '
-              'entrySel=${dbgRect(entry.selectionRect)} '
-              '-> childRect=${dbgRect(childRect)}');
+          glog(
+            'inapp-mixin/text: localRect=${dbgRect(localRect)} '
+            'zero=${localRect == Rect.zero} '
+            'entrySel=${dbgRect(entry.selectionRect)} '
+            '-> childRect=${dbgRect(childRect)}',
+          );
           setState(() => controller.truncateTo(index + 1));
           // TODO-1190: after the child search, mark the clicked word in THIS
           // (parent) card's WebView (parity with base_source_page reader family
@@ -819,8 +828,8 @@ mixin DictionaryPageMixin {
           // char count (0 = no entries -> no highlight, preserving prior look).
           final int count = await onPush(text, childRect);
           if (count > 0) {
-            final Rect? wordRect =
-                await entry.webViewKey.currentState?.highlightSelection(count);
+            final Rect? wordRect = await entry.webViewKey.currentState
+                ?.highlightSelection(count);
             // BUG-2054：同一次高亮顺带取回整词 bbox，把刚打开的子层从「点击的首
             // 字符」重锚到整词矩形——跨行选区时首字符矩形只覆盖第一行，子弹窗会
             // 正好盖住选区的第二行。expectedTerm 是身份门：eval 往返期间用户再点
@@ -847,18 +856,20 @@ mixin DictionaryPageMixin {
                   localRect: localRect,
                   fallback: entry.selectionRect,
                 );
-          glog('inapp-mixin/link: localRect=${dbgRect(localRect)} '
-              'zero=${localRect == Rect.zero} '
-              'entrySel=${dbgRect(entry.selectionRect)} '
-              '-> childRect=${dbgRect(childRect)}');
+          glog(
+            'inapp-mixin/link: localRect=${dbgRect(localRect)} '
+            'zero=${localRect == Rect.zero} '
+            'entrySel=${dbgRect(entry.selectionRect)} '
+            '-> childRect=${dbgRect(childRect)}',
+          );
           setState(() => controller.truncateTo(index + 1));
           // TODO-1190: symmetric with onTextSelected — highlight the clicked
           // headword/link target in this parent card after the child search.
           final int count = await onPush(query, childRect);
           if (count > 0) {
             // BUG-2054：与 onTextSelected 对称——点词头/链接同样按整词 bbox 重锚子层。
-            final Rect? wordRect =
-                await entry.webViewKey.currentState?.highlightSelection(count);
+            final Rect? wordRect = await entry.webViewKey.currentState
+                ?.highlightSelection(count);
             if (mounted &&
                 reanchorNestedPopupToWord(
                   controller: controller,
@@ -890,11 +901,11 @@ mixin DictionaryPageMixin {
         // WebView 内）；确认制卡回该层 WebView 精确点中该词条制卡。
         onOpenSentenceContextModal: onSentenceContextPreviewToDraft != null
             ? (int entryIndex, String matched) =>
-                _openSentenceContextDialogForVideo(
-                  webViewKey: entry.webViewKey,
-                  entryIndex: entryIndex,
-                  matched: matched,
-                )
+                  _openSentenceContextDialogForVideo(
+                    webViewKey: entry.webViewKey,
+                    entryIndex: entryIndex,
+                    matched: matched,
+                  )
             : null,
         headerWidget: buildPopupHeaderFor(index),
       ),
@@ -1079,8 +1090,11 @@ mixin DictionaryPageMixin {
       if (autoRead && ReaderFushiSource.instance.autoReadOnLookup) {
         final first = result.entries.first;
         if (first.word.isNotEmpty) {
-          autoReadWord(first.word, first.reading,
-              popupState: entry.webViewKey.currentState);
+          autoReadWord(
+            first.word,
+            first.reading,
+            popupState: entry.webViewKey.currentState,
+          );
         }
       }
     }
@@ -1104,18 +1118,20 @@ mixin DictionaryPageMixin {
     final int newMax = current + mixinAppModel.maximumTerms;
     setState(() => entry.isSearching = true);
     try {
-      final DictionarySearchResult result =
-          await mixinAppModel.searchDictionary(
-        searchTerm: entry.searchTerm,
-        searchWithWildcards: true,
-        overrideMaximumTerms: newMax,
-      );
+      final DictionarySearchResult result = await mixinAppModel
+          .searchDictionary(
+            searchTerm: entry.searchTerm,
+            searchWithWildcards: true,
+            overrideMaximumTerms: newMax,
+          );
       if (mounted && controller.entries.contains(entry)) {
-        setState(() => controller.fillResult(
-              entry,
-              result: result,
-              allLoaded: !result.truncated,
-            ));
+        setState(
+          () => controller.fillResult(
+            entry,
+            result: result,
+            allLoaded: !result.truncated,
+          ),
+        );
       }
     } finally {
       if (mounted && controller.entries.contains(entry) && entry.isSearching) {

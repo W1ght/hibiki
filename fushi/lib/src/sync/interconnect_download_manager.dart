@@ -53,10 +53,11 @@ class InterconnectDownloadTask {
 
 /// 执行一次实际下载到 [dest] 的原语（注入，便于测试与解耦具体 client）。
 /// [onProgress] 上报 0..1 进度。
-typedef InterconnectDownloadRunner = Future<void> Function(
-  File dest, {
-  void Function(double progress)? onProgress,
-});
+typedef InterconnectDownloadRunner =
+    Future<void> Function(
+      File dest, {
+      void Function(double progress)? onProgress,
+    });
 
 /// 下载成功后落库/建行等收尾（注入；任一失败计入任务失败，不静默丢半成品）。
 typedef InterconnectDownloadComplete = Future<void> Function(File dest);
@@ -116,14 +117,13 @@ class InterconnectDownloadManager extends ChangeNotifier {
     required File dest,
     required InterconnectDownloadRunner run,
     InterconnectDownloadComplete? onComplete,
-  }) =>
-      _startDownload(
-        id: id,
-        title: title,
-        dest: dest,
-        run: run,
-        onComplete: onComplete,
-      );
+  }) => _startDownload(
+    id: id,
+    title: title,
+    dest: dest,
+    run: run,
+    onComplete: onComplete,
+  );
 
   /// 启动一个远端书下载任务（EPUB / 漫画包，含随书有声书；键 = [bookTaskId]）。
   /// 已在跑（同 [downloadId]）则忽略重复调用，返回当前任务。
@@ -133,14 +133,13 @@ class InterconnectDownloadManager extends ChangeNotifier {
     required File dest,
     required InterconnectDownloadRunner run,
     InterconnectDownloadComplete? onComplete,
-  }) =>
-      _startDownload(
-        id: bookTaskId(downloadId),
-        title: title,
-        dest: dest,
-        run: run,
-        onComplete: onComplete,
-      );
+  }) => _startDownload(
+    id: bookTaskId(downloadId),
+    title: title,
+    dest: dest,
+    run: run,
+    onComplete: onComplete,
+  );
 
   /// 启动一个纯 SRT（standalone）远端有声书下载任务（键 = [srtAudiobookTaskId]）。
   /// 已在跑（同 [identity]）则忽略重复调用，返回当前任务。
@@ -150,14 +149,13 @@ class InterconnectDownloadManager extends ChangeNotifier {
     required File dest,
     required InterconnectDownloadRunner run,
     InterconnectDownloadComplete? onComplete,
-  }) =>
-      _startDownload(
-        id: srtAudiobookTaskId(identity),
-        title: title,
-        dest: dest,
-        run: run,
-        onComplete: onComplete,
-      );
+  }) => _startDownload(
+    id: srtAudiobookTaskId(identity),
+    title: title,
+    dest: dest,
+    run: run,
+    onComplete: onComplete,
+  );
 
   /// 三个公开入口共用的任务生命周期本体。
   ///
@@ -270,5 +268,5 @@ class InterconnectDownloadManager extends ChangeNotifier {
 /// app 级单例 provider：在整个 app 生命周期内持有互联下载任务，跨页面存活。
 final interconnectDownloadManagerProvider =
     ChangeNotifierProvider<InterconnectDownloadManager>(
-  (ref) => InterconnectDownloadManager(),
-);
+      (ref) => InterconnectDownloadManager(),
+    );

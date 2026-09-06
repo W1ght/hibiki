@@ -75,13 +75,12 @@ class RemoteLocalAudioInfo {
 
   final String displayName;
 
-  Map<String, Object?> toJson() =>
-      <String, Object?>{'displayName': displayName};
+  Map<String, Object?> toJson() => <String, Object?>{
+    'displayName': displayName,
+  };
 
   static RemoteLocalAudioInfo fromJson(Map<String, Object?> json) =>
-      RemoteLocalAudioInfo(
-        displayName: json['displayName']?.toString() ?? '',
-      );
+      RemoteLocalAudioInfo(displayName: json['displayName']?.toString() ?? '');
 }
 
 /// 旧名兼容：本地音频 diff 已并入 [SyncKeyDiff]。
@@ -93,8 +92,7 @@ typedef LocalAudioSyncDiff = SyncKeyDiff;
 SyncKeyDiff computeLocalAudioSyncDiff({
   required Set<String> localNames,
   required Set<String> remoteNames,
-}) =>
-    computeKeyUnionDiff(localKeys: localNames, remoteKeys: remoteNames);
+}) => computeKeyUnionDiff(localKeys: localNames, remoteKeys: remoteNames);
 
 // ── 有声书包 ──────────────────────────────────────────────────────────────────
 
@@ -148,14 +146,14 @@ class RemoteAudiobookInfo {
   bool get isStandaloneSrt => bookKey.isEmpty;
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'bookKey': bookKey,
-        if (uid != null && uid!.isNotEmpty) 'uid': uid,
-        'title': title,
-        if (positionMs > 0) 'positionMs': positionMs,
-        if (positionUpdatedAtMs > 0) 'positionUpdatedAtMs': positionUpdatedAtMs,
-        if (delayMs != 0) 'delayMs': delayMs,
-        if (delayUpdatedAtMs > 0) 'delayUpdatedAtMs': delayUpdatedAtMs,
-      };
+    'bookKey': bookKey,
+    if (uid != null && uid!.isNotEmpty) 'uid': uid,
+    'title': title,
+    if (positionMs > 0) 'positionMs': positionMs,
+    if (positionUpdatedAtMs > 0) 'positionUpdatedAtMs': positionUpdatedAtMs,
+    if (delayMs != 0) 'delayMs': delayMs,
+    if (delayUpdatedAtMs > 0) 'delayUpdatedAtMs': delayUpdatedAtMs,
+  };
 
   static RemoteAudiobookInfo fromJson(Map<String, Object?> json) =>
       RemoteAudiobookInfo(
@@ -195,8 +193,7 @@ typedef AudiobookSyncDiff = SyncKeyDiff;
 SyncKeyDiff computeAudiobookSyncDiff({
   required Set<String> localKeys,
   required Set<String> remoteKeys,
-}) =>
-    computeKeyUnionDiff(localKeys: localKeys, remoteKeys: remoteKeys);
+}) => computeKeyUnionDiff(localKeys: localKeys, remoteKeys: remoteKeys);
 
 // ── 词典 ──────────────────────────────────────────────────────────────────────
 
@@ -207,8 +204,10 @@ class RemoteDictionaryInfo {
   final String name;
   final String type;
 
-  Map<String, Object?> toJson() =>
-      <String, Object?>{'name': name, 'type': type};
+  Map<String, Object?> toJson() => <String, Object?>{
+    'name': name,
+    'type': type,
+  };
 
   static RemoteDictionaryInfo fromJson(Map<String, Object?> json) =>
       RemoteDictionaryInfo(
@@ -226,8 +225,7 @@ typedef DictionarySyncDiff = SyncKeyDiff;
 SyncKeyDiff computeDictionarySyncDiff({
   required Set<String> localNames,
   required Set<String> remoteNames,
-}) =>
-    computeKeyUnionDiff(localKeys: localNames, remoteKeys: remoteNames);
+}) => computeKeyUnionDiff(localKeys: localNames, remoteKeys: remoteNames);
 
 // ── 合集归属（多端库联合视图 §2.3 任务5.1）────────────────────────────────────
 
@@ -256,10 +254,10 @@ class RemoteCollectionMembership {
   final int sortIndex;
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'name': collectionName,
-        'collectionType': collectionType,
-        'sortIndex': sortIndex,
-      };
+    'name': collectionName,
+    'collectionType': collectionType,
+    'sortIndex': sortIndex,
+  };
 
   /// 解析归属条目。非对象 / 缺自然键（旧 host 不带该字段）返回 null（向后兼容：
   /// 无归属 = 散卡，不破坏既有调用方）。
@@ -404,29 +402,29 @@ class RemoteBookInfo {
       hasEmbeddedCover || _isNonEmpty(coverUrl) || _isNonEmpty(coverPath);
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'title': title,
-        if (_isNonEmpty(displayTitle) && displayTitle != title)
-          'displayTitle': displayTitle,
-        if (_isNonEmpty(displayTitle) &&
-            displayTitle != title &&
-            displayTitleAt > 0)
-          'displayTitleAt': displayTitleAt,
-        if (_isNonEmpty(bookKey)) 'bookKey': bookKey,
-        'hasContent': hasContent,
-        if (hasDisplayCover) 'hasCover': true,
-        if (_isNonEmpty(coverUrl)) 'coverUrl': coverUrl,
-        if (hasAudiobook) 'hasAudiobook': true,
-        if (tags.isNotEmpty) 'tags': tags,
-        if (tagsAddedAt.isNotEmpty) 'tagsAddedAt': tagsAddedAt,
-        if (tagTombstones.isNotEmpty) 'tagTombstones': tagTombstones,
-        if (collection != null) 'collection': collection!.toJson(),
-        if (progressPercent > 0) 'progressPercent': progressPercent,
-        if (progressUpdatedAtMs > 0) 'progressUpdatedAtMs': progressUpdatedAtMs,
-        if (kind != MediaKind.epub) 'kind': kind.dbValue,
-        if (format != 'epub') 'format': format,
-        if (hasMangaContent) 'hasMangaContent': true,
-        if (_isNonEmpty(mangaReadingMode)) 'mangaReadingMode': mangaReadingMode,
-      };
+    'title': title,
+    if (_isNonEmpty(displayTitle) && displayTitle != title)
+      'displayTitle': displayTitle,
+    if (_isNonEmpty(displayTitle) &&
+        displayTitle != title &&
+        displayTitleAt > 0)
+      'displayTitleAt': displayTitleAt,
+    if (_isNonEmpty(bookKey)) 'bookKey': bookKey,
+    'hasContent': hasContent,
+    if (hasDisplayCover) 'hasCover': true,
+    if (_isNonEmpty(coverUrl)) 'coverUrl': coverUrl,
+    if (hasAudiobook) 'hasAudiobook': true,
+    if (tags.isNotEmpty) 'tags': tags,
+    if (tagsAddedAt.isNotEmpty) 'tagsAddedAt': tagsAddedAt,
+    if (tagTombstones.isNotEmpty) 'tagTombstones': tagTombstones,
+    if (collection != null) 'collection': collection!.toJson(),
+    if (progressPercent > 0) 'progressPercent': progressPercent,
+    if (progressUpdatedAtMs > 0) 'progressUpdatedAtMs': progressUpdatedAtMs,
+    if (kind != MediaKind.epub) 'kind': kind.dbValue,
+    if (format != 'epub') 'format': format,
+    if (hasMangaContent) 'hasMangaContent': true,
+    if (_isNonEmpty(mangaReadingMode)) 'mangaReadingMode': mangaReadingMode,
+  };
 
   RemoteBookInfo copyWith({
     String? displayTitle,
@@ -446,28 +444,27 @@ class RemoteBookInfo {
     String? format,
     bool? hasMangaContent,
     String? mangaReadingMode,
-  }) =>
-      RemoteBookInfo(
-        title: title,
-        hasContent: hasContent,
-        displayTitle: displayTitle ?? this.displayTitle,
-        displayTitleAt: displayTitleAt ?? this.displayTitleAt,
-        bookKey: bookKey ?? this.bookKey,
-        hasEmbeddedCover: hasEmbeddedCover ?? this.hasEmbeddedCover,
-        coverUrl: coverUrl ?? this.coverUrl,
-        coverPath: coverPath ?? this.coverPath,
-        hasAudiobook: hasAudiobook ?? this.hasAudiobook,
-        tags: tags ?? this.tags,
-        tagsAddedAt: tagsAddedAt ?? this.tagsAddedAt,
-        tagTombstones: tagTombstones ?? this.tagTombstones,
-        collection: collection ?? this.collection,
-        progressPercent: progressPercent ?? this.progressPercent,
-        progressUpdatedAtMs: progressUpdatedAtMs ?? this.progressUpdatedAtMs,
-        kind: kind ?? this.kind,
-        format: format ?? this.format,
-        hasMangaContent: hasMangaContent ?? this.hasMangaContent,
-        mangaReadingMode: mangaReadingMode ?? this.mangaReadingMode,
-      );
+  }) => RemoteBookInfo(
+    title: title,
+    hasContent: hasContent,
+    displayTitle: displayTitle ?? this.displayTitle,
+    displayTitleAt: displayTitleAt ?? this.displayTitleAt,
+    bookKey: bookKey ?? this.bookKey,
+    hasEmbeddedCover: hasEmbeddedCover ?? this.hasEmbeddedCover,
+    coverUrl: coverUrl ?? this.coverUrl,
+    coverPath: coverPath ?? this.coverPath,
+    hasAudiobook: hasAudiobook ?? this.hasAudiobook,
+    tags: tags ?? this.tags,
+    tagsAddedAt: tagsAddedAt ?? this.tagsAddedAt,
+    tagTombstones: tagTombstones ?? this.tagTombstones,
+    collection: collection ?? this.collection,
+    progressPercent: progressPercent ?? this.progressPercent,
+    progressUpdatedAtMs: progressUpdatedAtMs ?? this.progressUpdatedAtMs,
+    kind: kind ?? this.kind,
+    format: format ?? this.format,
+    hasMangaContent: hasMangaContent ?? this.hasMangaContent,
+    mangaReadingMode: mangaReadingMode ?? this.mangaReadingMode,
+  );
 
   static RemoteBookInfo fromJson(Map<String, Object?> json) {
     final String? coverUrl = _jsonString(json['coverUrl']);
@@ -482,7 +479,8 @@ class RemoteBookInfo {
       bookKey: _jsonString(json['bookKey']),
       // wire `hasCover` 是对端的 hasDisplayCover；解码侧无从区分「内嵌」与「其它
       // 来源」，与 coverUrl/coverPath 一并折进本字段（客户端只消费 hasDisplayCover）。
-      hasEmbeddedCover: json['hasCover'] == true ||
+      hasEmbeddedCover:
+          json['hasCover'] == true ||
           _isNonEmpty(coverUrl) ||
           _isNonEmpty(coverPath),
       coverUrl: coverUrl,
@@ -492,8 +490,9 @@ class RemoteBookInfo {
       tagsAddedAt: _jsonNameIntMap(json['tagsAddedAt']),
       tagTombstones: _jsonNameIntMap(json['tagTombstones']),
       collection: RemoteCollectionMembership.fromJson(json['collection']),
-      progressPercent:
-          _jsonNonNegativeInt(json['progressPercent']).clamp(0, 100),
+      progressPercent: _jsonNonNegativeInt(
+        json['progressPercent'],
+      ).clamp(0, 100),
       progressUpdatedAtMs: _jsonNonNegativeInt(json['progressUpdatedAtMs']),
       // 缺失（旧 host）/未知（对端未来新增）一律回落 epub，绝不抛异常。
       kind: MediaKind.tryParse(_jsonString(json['kind'])) ?? MediaKind.epub,
@@ -539,15 +538,15 @@ class RemoteActivityEvent {
   final int? charsDelta;
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'eventType': eventType,
-        'mediaType': mediaType,
-        'title': title,
-        'dateKey': dateKey,
-        'timestampMs': timestampMs,
-        if (mediaKey != null) 'mediaKey': mediaKey,
-        if (durationMs != null) 'durationMs': durationMs,
-        if (charsDelta != null) 'charsDelta': charsDelta,
-      };
+    'eventType': eventType,
+    'mediaType': mediaType,
+    'title': title,
+    'dateKey': dateKey,
+    'timestampMs': timestampMs,
+    if (mediaKey != null) 'mediaKey': mediaKey,
+    if (durationMs != null) 'durationMs': durationMs,
+    if (charsDelta != null) 'charsDelta': charsDelta,
+  };
 
   /// 宽容解码：字段缺失/类型错给安全默认（坏一条不拖垮整个列表由调用方 skip）。
   static RemoteActivityEvent fromJson(Map<String, Object?> json) {
@@ -687,11 +686,11 @@ class RemoteBookProgress {
   );
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'sectionIndex': sectionIndex,
-        'normCharOffset': normCharOffset,
-        'charOffset': charOffset,
-        'updatedAtMs': updatedAtMs,
-      };
+    'sectionIndex': sectionIndex,
+    'normCharOffset': normCharOffset,
+    'charOffset': charOffset,
+    'updatedAtMs': updatedAtMs,
+  };
 
   static RemoteBookProgress fromJson(Map<String, Object?> json) =>
       RemoteBookProgress(
@@ -721,7 +720,8 @@ RemoteBookProgress resolveBookProgressSync({
   if (remote.updatedAtMs > local.updatedAtMs) return remote;
   if (local.updatedAtMs > remote.updatedAtMs) return local;
   // 时间戳相等（含都为 0）：取阅读位置更靠后者（读得更远者胜），保留该时间戳。
-  final bool remoteFurther = remote.sectionIndex > local.sectionIndex ||
+  final bool remoteFurther =
+      remote.sectionIndex > local.sectionIndex ||
       (remote.sectionIndex == local.sectionIndex &&
           remote.normCharOffset > local.normCharOffset);
   return remoteFurther ? remote : local;
@@ -780,13 +780,15 @@ class PositionPrefKeys {
 }
 
 /// 视频远端断点三件套（TODO-559/653）。前缀冻结：`video_remote_position_`。
-const PositionPrefKeys videoRemotePositionPrefKeys =
-    PositionPrefKeys('video_remote_position_');
+const PositionPrefKeys videoRemotePositionPrefKeys = PositionPrefKeys(
+  'video_remote_position_',
+);
 
 /// 有声书断点三件套（BUG-471）。前缀冻结：`audiobook_pos_`（与
 /// `AudiobookRepository._kPositionMsKeyPrefix` 同公式）。
-const PositionPrefKeys audiobookPositionPrefKeys =
-    PositionPrefKeys('audiobook_pos_');
+const PositionPrefKeys audiobookPositionPrefKeys = PositionPrefKeys(
+  'audiobook_pos_',
+);
 
 /// 视频远端断点位置 prefs key（TODO-559/653）——单一真相源，host service 与
 /// video_fushi_page `_remotePositionPrefKey` 共用同一公式。
@@ -810,14 +812,14 @@ String videoRemotePositionAtPrefKey(String bookUid) =>
 /// 按集键，各集进度互不干扰。client 恢复某集、host 反查某集进度都用它。
 String videoRemotePositionEpisodePrefKey(String bookUid, int episodeIndex) =>
     episodeIndex <= 0
-        ? videoRemotePositionPrefKey(bookUid)
-        : 'video_remote_position_$bookUid#ep$episodeIndex';
+    ? videoRemotePositionPrefKey(bookUid)
+    : 'video_remote_position_$bookUid#ep$episodeIndex';
 
 /// [videoRemotePositionEpisodePrefKey] 对应的「最后更新时间」prefs key（epoch 毫秒）。
 String videoRemotePositionEpisodeAtPrefKey(String bookUid, int episodeIndex) =>
     episodeIndex <= 0
-        ? videoRemotePositionAtPrefKey(bookUid)
-        : 'video_remote_position_at_$bookUid#ep$episodeIndex';
+    ? videoRemotePositionAtPrefKey(bookUid)
+    : 'video_remote_position_at_$bookUid#ep$episodeIndex';
 
 /// [videoRemotePositionPrefKey] 的逆：从位置 prefs key 反解出 bookUid，非该 key 返回
 /// null。用于全量同步枚举「本地看过的流式视频 uid」（无 VideoBooks 行也有此 prefs，
@@ -833,8 +835,9 @@ String? videoUidFromRemotePositionPrefKey(String key) =>
 /// 三件套，而调轴此前只有 host→client 单向下发（BUG-996）——client 远端播放里调轴
 /// 写的是 `VideoBooks.delayMs` 的 UPDATE，但远端视频在 client 无行，静默 0 行写入；
 /// 重进又被 host 清单值覆盖归 0。本三件套补上 client 侧持久化与双向 LWW。
-const PositionPrefKeys videoRemoteDelayPrefKeys =
-    PositionPrefKeys('video_remote_delay_');
+const PositionPrefKeys videoRemoteDelayPrefKeys = PositionPrefKeys(
+  'video_remote_delay_',
+);
 
 /// 视频 [bookUid] 的字幕调轴 prefs key（值 = 调轴毫秒，可负）。client 远端播放与
 /// host 本机播放共用同一公式（与断点键空间同范式，TODO-816）。
@@ -852,8 +855,9 @@ const int kVideoSubtitleDelayLimitMs = 600000;
 
 /// 视频「音轨选择」跨设备三件套（播放偏好同步泛化批）。值 = 轨 id 字符串（同一
 /// 文件的轨 id 跨设备同义）；空串 = 未选/已清除（跟随 libmpv 默认）。
-const PositionPrefKeys videoRemoteAudioTrackPrefKeys =
-    PositionPrefKeys('video_remote_audio_track_');
+const PositionPrefKeys videoRemoteAudioTrackPrefKeys = PositionPrefKeys(
+  'video_remote_audio_track_',
+);
 
 String videoRemoteAudioTrackPrefKey(String bookUid) =>
     videoRemoteAudioTrackPrefKeys.positionKey(bookUid);
@@ -864,8 +868,9 @@ String videoRemoteAudioTrackAtPrefKey(String bookUid) =>
 /// 视频「副字幕来源」跨设备三件套（TODO-2837 / 播放偏好同步泛化批）。值 = 四态
 /// 编码（本地字幕文件绝对路径 / `embedded:<n>` / `off:` 哨兵）；空串 = 未选。
 /// 本地绝对路径在对端解析不到文件时由恢复侧自然跳过（无特例分支）。
-const PositionPrefKeys videoRemoteSecondarySubtitlePrefKeys =
-    PositionPrefKeys('video_remote_secondary_subtitle_');
+const PositionPrefKeys videoRemoteSecondarySubtitlePrefKeys = PositionPrefKeys(
+  'video_remote_secondary_subtitle_',
+);
 
 String videoRemoteSecondarySubtitlePrefKey(String bookUid) =>
     videoRemoteSecondarySubtitlePrefKeys.positionKey(bookUid);
@@ -876,8 +881,9 @@ String videoRemoteSecondarySubtitleAtPrefKey(String bookUid) =>
 /// 视频「副字幕独立调轴」跨设备三件套（播放偏好同步泛化批）。值 = 毫秒（可负）；
 /// 空串 = 跟随主字幕（null）。「清除回跟随」也是一次带戳写（at 键存活），因此
 /// 清除同样跨设备收敛。
-const PositionPrefKeys videoRemoteSecondaryDelayPrefKeys =
-    PositionPrefKeys('video_remote_secondary_delay_');
+const PositionPrefKeys videoRemoteSecondaryDelayPrefKeys = PositionPrefKeys(
+  'video_remote_secondary_delay_',
+);
 
 String videoRemoteSecondaryDelayPrefKey(String bookUid) =>
     videoRemoteSecondaryDelayPrefKeys.positionKey(bookUid);
@@ -931,24 +937,24 @@ class VideoPlaybackSyncState {
       secondaryDelayAt == 0;
 
   Map<String, Object?> toJson() => <String, Object?>{
-        if (delayAt > 0) ...<String, Object?>{
-          'delayMs': delayMs,
-          'delayAt': delayAt,
-        },
-        if (audioTrackAt > 0) ...<String, Object?>{
-          if (audioTrackId != null) 'audioTrackId': audioTrackId,
-          'audioTrackAt': audioTrackAt,
-        },
-        if (secondarySubtitleAt > 0) ...<String, Object?>{
-          if (secondarySubtitleSource != null)
-            'secondarySubtitleSource': secondarySubtitleSource,
-          'secondarySubtitleAt': secondarySubtitleAt,
-        },
-        if (secondaryDelayAt > 0) ...<String, Object?>{
-          if (secondaryDelayMs != null) 'secondaryDelayMs': secondaryDelayMs,
-          'secondaryDelayAt': secondaryDelayAt,
-        },
-      };
+    if (delayAt > 0) ...<String, Object?>{
+      'delayMs': delayMs,
+      'delayAt': delayAt,
+    },
+    if (audioTrackAt > 0) ...<String, Object?>{
+      if (audioTrackId != null) 'audioTrackId': audioTrackId,
+      'audioTrackAt': audioTrackAt,
+    },
+    if (secondarySubtitleAt > 0) ...<String, Object?>{
+      if (secondarySubtitleSource != null)
+        'secondarySubtitleSource': secondarySubtitleSource,
+      'secondarySubtitleAt': secondarySubtitleAt,
+    },
+    if (secondaryDelayAt > 0) ...<String, Object?>{
+      if (secondaryDelayMs != null) 'secondaryDelayMs': secondaryDelayMs,
+      'secondaryDelayAt': secondaryDelayAt,
+    },
+  };
 
   static VideoPlaybackSyncState fromJson(Map<String, Object?> json) =>
       VideoPlaybackSyncState(
@@ -968,33 +974,29 @@ class VideoPlaybackSyncState {
   static VideoPlaybackSyncState merge(
     VideoPlaybackSyncState held,
     VideoPlaybackSyncState incoming,
-  ) =>
-      VideoPlaybackSyncState(
-        delayMs:
-            incoming.delayAt > held.delayAt ? incoming.delayMs : held.delayMs,
-        delayAt:
-            incoming.delayAt > held.delayAt ? incoming.delayAt : held.delayAt,
-        audioTrackId: incoming.audioTrackAt > held.audioTrackAt
-            ? incoming.audioTrackId
-            : held.audioTrackId,
-        audioTrackAt: incoming.audioTrackAt > held.audioTrackAt
-            ? incoming.audioTrackAt
-            : held.audioTrackAt,
-        secondarySubtitleSource:
-            incoming.secondarySubtitleAt > held.secondarySubtitleAt
-                ? incoming.secondarySubtitleSource
-                : held.secondarySubtitleSource,
-        secondarySubtitleAt:
-            incoming.secondarySubtitleAt > held.secondarySubtitleAt
-                ? incoming.secondarySubtitleAt
-                : held.secondarySubtitleAt,
-        secondaryDelayMs: incoming.secondaryDelayAt > held.secondaryDelayAt
-            ? incoming.secondaryDelayMs
-            : held.secondaryDelayMs,
-        secondaryDelayAt: incoming.secondaryDelayAt > held.secondaryDelayAt
-            ? incoming.secondaryDelayAt
-            : held.secondaryDelayAt,
-      );
+  ) => VideoPlaybackSyncState(
+    delayMs: incoming.delayAt > held.delayAt ? incoming.delayMs : held.delayMs,
+    delayAt: incoming.delayAt > held.delayAt ? incoming.delayAt : held.delayAt,
+    audioTrackId: incoming.audioTrackAt > held.audioTrackAt
+        ? incoming.audioTrackId
+        : held.audioTrackId,
+    audioTrackAt: incoming.audioTrackAt > held.audioTrackAt
+        ? incoming.audioTrackAt
+        : held.audioTrackAt,
+    secondarySubtitleSource:
+        incoming.secondarySubtitleAt > held.secondarySubtitleAt
+        ? incoming.secondarySubtitleSource
+        : held.secondarySubtitleSource,
+    secondarySubtitleAt: incoming.secondarySubtitleAt > held.secondarySubtitleAt
+        ? incoming.secondarySubtitleAt
+        : held.secondarySubtitleAt,
+    secondaryDelayMs: incoming.secondaryDelayAt > held.secondaryDelayAt
+        ? incoming.secondaryDelayMs
+        : held.secondaryDelayMs,
+    secondaryDelayAt: incoming.secondaryDelayAt > held.secondaryDelayAt
+        ? incoming.secondaryDelayAt
+        : held.secondaryDelayAt,
+  );
 
   @override
   bool operator ==(Object other) =>
@@ -1010,14 +1012,15 @@ class VideoPlaybackSyncState {
 
   @override
   int get hashCode => Object.hash(
-      delayMs,
-      delayAt,
-      audioTrackId,
-      audioTrackAt,
-      secondarySubtitleSource,
-      secondarySubtitleAt,
-      secondaryDelayMs,
-      secondaryDelayAt);
+    delayMs,
+    delayAt,
+    audioTrackId,
+    audioTrackAt,
+    secondarySubtitleSource,
+    secondarySubtitleAt,
+    secondaryDelayMs,
+    secondaryDelayAt,
+  );
 }
 
 /// 字幕调轴跨设备冲突解决——「严格较新时间戳者胜」。纯函数。
@@ -1032,10 +1035,9 @@ class VideoPlaybackSyncState {
   required int aUpdatedAtMs,
   required int bDelayMs,
   required int bUpdatedAtMs,
-}) =>
-    bUpdatedAtMs > aUpdatedAtMs
-        ? (delayMs: bDelayMs, updatedAtMs: bUpdatedAtMs)
-        : (delayMs: aDelayMs, updatedAtMs: aUpdatedAtMs);
+}) => bUpdatedAtMs > aUpdatedAtMs
+    ? (delayMs: bDelayMs, updatedAtMs: bUpdatedAtMs)
+    : (delayMs: aDelayMs, updatedAtMs: aUpdatedAtMs);
 
 /// 播放位置跨设备冲突解决——「取较新时间戳」last-write-wins（LWW）。
 ///
@@ -1068,26 +1070,27 @@ class VideoPlaybackSyncState {
     return (positionMs: localPositionMs, updatedAtMs: localUpdatedAtMs);
   }
   // 时间戳相等（含都为 0）：取较大位置（看/听得更远者胜），保留该时间戳。
-  final int winnerPos =
-      localPositionMs >= remotePositionMs ? localPositionMs : remotePositionMs;
+  final int winnerPos = localPositionMs >= remotePositionMs
+      ? localPositionMs
+      : remotePositionMs;
   return (positionMs: winnerPos, updatedAtMs: localUpdatedAtMs);
 }
 
 /// 旧名兼容：视频进度 LWW 已并入 [resolvePositionLww]。
 @Deprecated(
-    '已并入 resolvePositionLww（与 resolveAudiobookPositionSync 逐字节相同），请改用新名')
+  '已并入 resolvePositionLww（与 resolveAudiobookPositionSync 逐字节相同），请改用新名',
+)
 ({int positionMs, int updatedAtMs}) resolveVideoPositionSync({
   required int localPositionMs,
   required int localUpdatedAtMs,
   required int remotePositionMs,
   required int remoteUpdatedAtMs,
-}) =>
-    resolvePositionLww(
-      localPositionMs: localPositionMs,
-      localUpdatedAtMs: localUpdatedAtMs,
-      remotePositionMs: remotePositionMs,
-      remoteUpdatedAtMs: remoteUpdatedAtMs,
-    );
+}) => resolvePositionLww(
+  localPositionMs: localPositionMs,
+  localUpdatedAtMs: localUpdatedAtMs,
+  remotePositionMs: remotePositionMs,
+  remoteUpdatedAtMs: remoteUpdatedAtMs,
+);
 
 // ── 有声书进度（BUG-471）──────────────────────────────────────────────────────
 
@@ -1106,8 +1109,9 @@ String audiobookPositionAtPrefKey(String bookKey) =>
 /// 同公式）；时间戳键 `audiobook_delay_at_<identity>` 为 LWW 新增（repo 的
 /// `updateDelayMs` 现同步盖戳）。identity = srt-backed 的 bookKey / 纯 SRT 的 uid，
 /// 与断点键空间同一身份约定。
-const PositionPrefKeys audiobookDelayPrefKeys =
-    PositionPrefKeys('audiobook_delay_');
+const PositionPrefKeys audiobookDelayPrefKeys = PositionPrefKeys(
+  'audiobook_delay_',
+);
 
 /// 有声书 [identity] 的调轴 pref key（值 = 毫秒，可负）。
 String audiobookDelayPrefKey(String identity) =>
@@ -1130,13 +1134,12 @@ String? audiobookKeyFromPositionPrefKey(String key) =>
   required int localUpdatedAtMs,
   required int remotePositionMs,
   required int remoteUpdatedAtMs,
-}) =>
-    resolvePositionLww(
-      localPositionMs: localPositionMs,
-      localUpdatedAtMs: localUpdatedAtMs,
-      remotePositionMs: remotePositionMs,
-      remoteUpdatedAtMs: remoteUpdatedAtMs,
-    );
+}) => resolvePositionLww(
+  localPositionMs: localPositionMs,
+  localUpdatedAtMs: localUpdatedAtMs,
+  remotePositionMs: remotePositionMs,
+  remoteUpdatedAtMs: remoteUpdatedAtMs,
+);
 
 /// host 视频容器内封字幕轨的清单条目（[RemoteVideoInfo.embeddedSubtitleTracks]
 /// 的元素）：[streamIndex]/[codec] 定位轨道，[isText] 区分文本轨与图形轨，
@@ -1161,19 +1164,16 @@ class RemoteVideoEmbeddedSubtitleTrack {
   final String? fileName;
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'streamIndex': streamIndex,
-        'codec': codec,
-        if (_isNonEmpty(language)) 'language': language,
-        if (_isNonEmpty(title)) 'title': title,
-        'isText': isText,
-        if (_isNonEmpty(url)) 'url': url,
-        if (_isNonEmpty(fileName)) 'fileName': fileName,
-      };
+    'streamIndex': streamIndex,
+    'codec': codec,
+    if (_isNonEmpty(language)) 'language': language,
+    if (_isNonEmpty(title)) 'title': title,
+    'isText': isText,
+    if (_isNonEmpty(url)) 'url': url,
+    if (_isNonEmpty(fileName)) 'fileName': fileName,
+  };
 
-  RemoteVideoEmbeddedSubtitleTrack copyWith({
-    String? url,
-    String? fileName,
-  }) =>
+  RemoteVideoEmbeddedSubtitleTrack copyWith({String? url, String? fileName}) =>
       RemoteVideoEmbeddedSubtitleTrack(
         streamIndex: streamIndex,
         codec: codec,
@@ -1184,9 +1184,7 @@ class RemoteVideoEmbeddedSubtitleTrack {
         fileName: fileName ?? this.fileName,
       );
 
-  static RemoteVideoEmbeddedSubtitleTrack fromJson(
-    Map<String, Object?> json,
-  ) =>
+  static RemoteVideoEmbeddedSubtitleTrack fromJson(Map<String, Object?> json) =>
       RemoteVideoEmbeddedSubtitleTrack(
         streamIndex: _jsonInt(json['streamIndex']) ?? -1,
         codec: json['codec']?.toString() ?? '',
@@ -1213,8 +1211,10 @@ class RemoteVideoEpisode {
   /// 集标题（来自 m3u8 `#EXTINF` 解析，或回退文件名）。
   final String title;
 
-  Map<String, Object?> toJson() =>
-      <String, Object?>{'index': index, 'title': title};
+  Map<String, Object?> toJson() => <String, Object?>{
+    'index': index,
+    'title': title,
+  };
 
   static RemoteVideoEpisode fromJson(Map<String, Object?> json) =>
       RemoteVideoEpisode(
@@ -1360,15 +1360,15 @@ class RemoteVideoInfo {
 
   /// 清单字段 → 播放偏好带戳状态（client 起播 LWW 决议 / sweep 的 host 侧读数）。
   VideoPlaybackSyncState get playback => VideoPlaybackSyncState(
-        delayMs: delayMs,
-        delayAt: delayUpdatedAtMs,
-        audioTrackId: audioTrackId,
-        audioTrackAt: audioTrackUpdatedAtMs,
-        secondarySubtitleSource: secondarySubtitleSource,
-        secondarySubtitleAt: secondarySubtitleUpdatedAtMs,
-        secondaryDelayMs: secondaryDelayMs,
-        secondaryDelayAt: secondaryDelayUpdatedAtMs,
-      );
+    delayMs: delayMs,
+    delayAt: delayUpdatedAtMs,
+    audioTrackId: audioTrackId,
+    audioTrackAt: audioTrackUpdatedAtMs,
+    secondarySubtitleSource: secondarySubtitleSource,
+    secondarySubtitleAt: secondarySubtitleUpdatedAtMs,
+    secondaryDelayMs: secondaryDelayMs,
+    secondaryDelayAt: secondaryDelayUpdatedAtMs,
+  );
 
   /// host 端该视频的「看完」时刻（epoch 毫秒；null = 未看完）。client 剧集面板的
   /// 看完角标（Jellyfin played 勾）数据源——此前远端集无口径恒无标记。
@@ -1378,48 +1378,48 @@ class RemoteVideoInfo {
       hasCover || _isNonEmpty(coverUrl) || _isNonEmpty(coverPath);
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'id': id,
-        'title': title,
-        if (sizeBytes != null) 'sizeBytes': sizeBytes,
-        'hasSubtitle': hasSubtitle,
-        if (_isNonEmpty(subtitleFileName)) 'subtitleFileName': subtitleFileName,
-        if (embeddedSubtitleTracks.isNotEmpty)
-          'embeddedSubtitleTracks': <Map<String, Object?>>[
-            for (final RemoteVideoEmbeddedSubtitleTrack track
-                in embeddedSubtitleTracks)
-              track.toJson(),
-          ],
-        if (durationMs != null) 'durationMs': durationMs,
-        if (hasDisplayCover) 'hasCover': true,
-        if (_isNonEmpty(coverUrl)) 'coverUrl': coverUrl,
-        if (positionMs > 0) 'positionMs': positionMs,
-        if (positionUpdatedAtMs > 0) 'positionUpdatedAtMs': positionUpdatedAtMs,
-        if (delayMs != 0) 'delayMs': delayMs,
-        if (delayUpdatedAtMs > 0) 'delayUpdatedAtMs': delayUpdatedAtMs,
-        if (_isNonEmpty(audioTrackId)) 'audioTrackId': audioTrackId,
-        if (audioTrackUpdatedAtMs > 0)
-          'audioTrackUpdatedAtMs': audioTrackUpdatedAtMs,
-        if (_isNonEmpty(secondarySubtitleSource))
-          'secondarySubtitleSource': secondarySubtitleSource,
-        if (secondarySubtitleUpdatedAtMs > 0)
-          'secondarySubtitleUpdatedAtMs': secondarySubtitleUpdatedAtMs,
-        if (secondaryDelayMs != null) 'secondaryDelayMs': secondaryDelayMs,
-        if (secondaryDelayUpdatedAtMs > 0)
-          'secondaryDelayUpdatedAtMs': secondaryDelayUpdatedAtMs,
-        if (completedAt != null) 'completedAt': completedAt,
-        if (importedAt != null) 'importedAt': importedAt,
-        // 单视频（episodes <=1）向后兼容：不写 episodes/currentEpisode 键。
-        if (episodes.length > 1) ...<String, Object?>{
-          'episodes': <Map<String, Object?>>[
-            for (final RemoteVideoEpisode ep in episodes) ep.toJson(),
-          ],
-          if (currentEpisode > 0) 'currentEpisode': currentEpisode,
-        },
-        if (tags.isNotEmpty) 'tags': tags,
-        if (tagsAddedAt.isNotEmpty) 'tagsAddedAt': tagsAddedAt,
-        if (tagTombstones.isNotEmpty) 'tagTombstones': tagTombstones,
-        if (collection != null) 'collection': collection!.toJson(),
-      };
+    'id': id,
+    'title': title,
+    if (sizeBytes != null) 'sizeBytes': sizeBytes,
+    'hasSubtitle': hasSubtitle,
+    if (_isNonEmpty(subtitleFileName)) 'subtitleFileName': subtitleFileName,
+    if (embeddedSubtitleTracks.isNotEmpty)
+      'embeddedSubtitleTracks': <Map<String, Object?>>[
+        for (final RemoteVideoEmbeddedSubtitleTrack track
+            in embeddedSubtitleTracks)
+          track.toJson(),
+      ],
+    if (durationMs != null) 'durationMs': durationMs,
+    if (hasDisplayCover) 'hasCover': true,
+    if (_isNonEmpty(coverUrl)) 'coverUrl': coverUrl,
+    if (positionMs > 0) 'positionMs': positionMs,
+    if (positionUpdatedAtMs > 0) 'positionUpdatedAtMs': positionUpdatedAtMs,
+    if (delayMs != 0) 'delayMs': delayMs,
+    if (delayUpdatedAtMs > 0) 'delayUpdatedAtMs': delayUpdatedAtMs,
+    if (_isNonEmpty(audioTrackId)) 'audioTrackId': audioTrackId,
+    if (audioTrackUpdatedAtMs > 0)
+      'audioTrackUpdatedAtMs': audioTrackUpdatedAtMs,
+    if (_isNonEmpty(secondarySubtitleSource))
+      'secondarySubtitleSource': secondarySubtitleSource,
+    if (secondarySubtitleUpdatedAtMs > 0)
+      'secondarySubtitleUpdatedAtMs': secondarySubtitleUpdatedAtMs,
+    if (secondaryDelayMs != null) 'secondaryDelayMs': secondaryDelayMs,
+    if (secondaryDelayUpdatedAtMs > 0)
+      'secondaryDelayUpdatedAtMs': secondaryDelayUpdatedAtMs,
+    if (completedAt != null) 'completedAt': completedAt,
+    if (importedAt != null) 'importedAt': importedAt,
+    // 单视频（episodes <=1）向后兼容：不写 episodes/currentEpisode 键。
+    if (episodes.length > 1) ...<String, Object?>{
+      'episodes': <Map<String, Object?>>[
+        for (final RemoteVideoEpisode ep in episodes) ep.toJson(),
+      ],
+      if (currentEpisode > 0) 'currentEpisode': currentEpisode,
+    },
+    if (tags.isNotEmpty) 'tags': tags,
+    if (tagsAddedAt.isNotEmpty) 'tagsAddedAt': tagsAddedAt,
+    if (tagTombstones.isNotEmpty) 'tagTombstones': tagTombstones,
+    if (collection != null) 'collection': collection!.toJson(),
+  };
 
   RemoteVideoInfo copyWith({
     bool? hasCover,
@@ -1439,42 +1439,40 @@ class RemoteVideoInfo {
     int? secondaryDelayUpdatedAtMs,
     int? completedAt,
     RemoteCollectionMembership? collection,
-  }) =>
-      RemoteVideoInfo(
-        id: id,
-        title: title,
-        sizeBytes: sizeBytes,
-        hasSubtitle: hasSubtitle,
-        subtitleFileName: subtitleFileName ?? this.subtitleFileName,
-        embeddedSubtitleTracks:
-            embeddedSubtitleTracks ?? this.embeddedSubtitleTracks,
-        durationMs: durationMs,
-        hasCover: hasCover ?? this.hasCover,
-        coverUrl: coverUrl ?? this.coverUrl,
-        coverPath: coverPath ?? this.coverPath,
-        positionMs: positionMs ?? this.positionMs,
-        positionUpdatedAtMs: positionUpdatedAtMs ?? this.positionUpdatedAtMs,
-        delayMs: delayMs ?? this.delayMs,
-        delayUpdatedAtMs: delayUpdatedAtMs ?? this.delayUpdatedAtMs,
-        audioTrackId: audioTrackId ?? this.audioTrackId,
-        audioTrackUpdatedAtMs:
-            audioTrackUpdatedAtMs ?? this.audioTrackUpdatedAtMs,
-        secondarySubtitleSource:
-            secondarySubtitleSource ?? this.secondarySubtitleSource,
-        secondarySubtitleUpdatedAtMs:
-            secondarySubtitleUpdatedAtMs ?? this.secondarySubtitleUpdatedAtMs,
-        secondaryDelayMs: secondaryDelayMs ?? this.secondaryDelayMs,
-        secondaryDelayUpdatedAtMs:
-            secondaryDelayUpdatedAtMs ?? this.secondaryDelayUpdatedAtMs,
-        completedAt: completedAt ?? this.completedAt,
-        episodes: episodes,
-        currentEpisode: currentEpisode,
-        tags: tags,
-        tagsAddedAt: tagsAddedAt,
-        tagTombstones: tagTombstones,
-        collection: collection ?? this.collection,
-        importedAt: importedAt,
-      );
+  }) => RemoteVideoInfo(
+    id: id,
+    title: title,
+    sizeBytes: sizeBytes,
+    hasSubtitle: hasSubtitle,
+    subtitleFileName: subtitleFileName ?? this.subtitleFileName,
+    embeddedSubtitleTracks:
+        embeddedSubtitleTracks ?? this.embeddedSubtitleTracks,
+    durationMs: durationMs,
+    hasCover: hasCover ?? this.hasCover,
+    coverUrl: coverUrl ?? this.coverUrl,
+    coverPath: coverPath ?? this.coverPath,
+    positionMs: positionMs ?? this.positionMs,
+    positionUpdatedAtMs: positionUpdatedAtMs ?? this.positionUpdatedAtMs,
+    delayMs: delayMs ?? this.delayMs,
+    delayUpdatedAtMs: delayUpdatedAtMs ?? this.delayUpdatedAtMs,
+    audioTrackId: audioTrackId ?? this.audioTrackId,
+    audioTrackUpdatedAtMs: audioTrackUpdatedAtMs ?? this.audioTrackUpdatedAtMs,
+    secondarySubtitleSource:
+        secondarySubtitleSource ?? this.secondarySubtitleSource,
+    secondarySubtitleUpdatedAtMs:
+        secondarySubtitleUpdatedAtMs ?? this.secondarySubtitleUpdatedAtMs,
+    secondaryDelayMs: secondaryDelayMs ?? this.secondaryDelayMs,
+    secondaryDelayUpdatedAtMs:
+        secondaryDelayUpdatedAtMs ?? this.secondaryDelayUpdatedAtMs,
+    completedAt: completedAt ?? this.completedAt,
+    episodes: episodes,
+    currentEpisode: currentEpisode,
+    tags: tags,
+    tagsAddedAt: tagsAddedAt,
+    tagTombstones: tagTombstones,
+    collection: collection ?? this.collection,
+    importedAt: importedAt,
+  );
 
   static RemoteVideoInfo fromJson(Map<String, Object?> json) {
     final String? coverUrl = _jsonString(json['coverUrl']);
@@ -1490,7 +1488,8 @@ class RemoteVideoInfo {
       subtitleFileName: subtitleFileName,
       embeddedSubtitleTracks: embeddedSubtitleTracks,
       durationMs: (json['durationMs'] as num?)?.toInt(),
-      hasCover: json['hasCover'] == true ||
+      hasCover:
+          json['hasCover'] == true ||
           _isNonEmpty(coverUrl) ||
           _isNonEmpty(coverPath),
       coverUrl: coverUrl,
@@ -1575,9 +1574,7 @@ List<RemoteVideoEmbeddedSubtitleTrack> _jsonEmbeddedSubtitleTracks(
   return <RemoteVideoEmbeddedSubtitleTrack>[
     for (final Object? item in value)
       if (item is Map)
-        RemoteVideoEmbeddedSubtitleTrack.fromJson(
-          item.cast<String, Object?>(),
-        ),
+        RemoteVideoEmbeddedSubtitleTrack.fromJson(item.cast<String, Object?>()),
   ];
 }
 
@@ -1927,7 +1924,8 @@ abstract class FushiLibraryHostService {
   /// 同一引擎、同一墓碑/LWW 语义，仅通道不同；成员并集 + 移出/删除墓碑防复活 +
   /// 手动序整合集 LWW。重放同一清单幂等（应用端按目标态调和）。
   Future<CollectionManifest> mergeCollectionManifest(
-      CollectionManifest incoming);
+    CollectionManifest incoming,
+  );
 }
 
 /// host 端「列删除墓碑」的**可选**能力（显式确认式删除传播，host→client 消费方向）。
@@ -1939,7 +1937,7 @@ abstract interface class DeletionTombstoneHost {
   /// 列出 host 当前全部删除墓碑（`sync_deletion_tombstones`）为 JSON 数组，供 client
   /// 拉取后与本地在库键求交、弹逐条确认删本地。纯读，无副作用。
   Future<List<({String mediaType, String itemKey, int deletedAt})>>
-      listDeletionTombstones();
+  listDeletionTombstones();
 }
 
 /// host 端「删除视频」的**可选**能力（client→host 删除方向）。

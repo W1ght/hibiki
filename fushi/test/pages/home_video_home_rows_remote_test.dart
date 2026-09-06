@@ -35,8 +35,9 @@ void main() {
 
   late Directory pathProviderDir;
   setUpAll(() {
-    pathProviderDir =
-        Directory.systemTemp.createTempSync('fushi_home_rows_remote_pp');
+    pathProviderDir = Directory.systemTemp.createTempSync(
+      'fushi_home_rows_remote_pp',
+    );
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
       (MethodCall call) async => pathProviderDir.path,
@@ -83,23 +84,23 @@ void main() {
   });
 
   Widget buildApp(RemoteVideoClient client) => ProviderScope(
-        overrides: <Override>[
-          platformServicesProvider.overrideWithValue(platformServices),
-          ankiRepositoryProvider.overrideWithValue(ankiRepository),
-          appProvider.overrideWith((ref) => appModel),
-        ],
-        child: TranslationProvider(
-          child: MaterialApp(
-            home: Scaffold(
-              body: HomeVideoPage(
-                repo: VideoBookRepository(db),
-                section: VideoLibrarySection.home,
-                remoteVideoClientLoader: () async => client,
-              ),
-            ),
+    overrides: <Override>[
+      platformServicesProvider.overrideWithValue(platformServices),
+      ankiRepositoryProvider.overrideWithValue(ankiRepository),
+      appProvider.overrideWith((ref) => appModel),
+    ],
+    child: TranslationProvider(
+      child: MaterialApp(
+        home: Scaffold(
+          body: HomeVideoPage(
+            repo: VideoBookRepository(db),
+            section: VideoLibrarySection.home,
+            remoteVideoClientLoader: () async => client,
           ),
         ),
-      );
+      ),
+    ),
+  );
 
   Future<void> sizeUp(WidgetTester tester) async {
     tester.view.physicalSize = const Size(1400, 1400);
@@ -108,34 +109,41 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
   }
 
-  testWidgets('「下一集」跨本地/远端合并选集：本机看到第 1 集，下一集指向 host 上的第 2 集',
-      (WidgetTester tester) async {
+  testWidgets('「下一集」跨本地/远端合并选集：本机看到第 1 集，下一集指向 host 上的第 2 集', (
+    WidgetTester tester,
+  ) async {
     await sizeUp(tester);
 
-    final int cid =
-        await db.createMediaCollection('MyShow', collectionType: 'collection');
+    final int cid = await db.createMediaCollection(
+      'MyShow',
+      collectionType: 'collection',
+    );
     // 本地第 1 集：有播放痕迹（未看完）→ latestPlayed = 0。
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/local-ep1'),
-      title: Value('Local Ep1'),
-      videoPath: Value('/abs/ep1.mp4'),
-      lastPositionMs: Value(60000),
-    ));
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/local-ep1'),
+        title: Value('Local Ep1'),
+        videoPath: Value('/abs/ep1.mp4'),
+        lastPositionMs: Value(60000),
+      ),
+    );
     await db.addToCollection(cid, MediaKind.video, 'video/local-ep1');
 
-    await tester.pumpWidget(buildApp(_ListFakeRemoteVideoClient(
-      <RemoteVideoInfo>[
-        const RemoteVideoInfo(
-          id: 'video/remote-ep2',
-          title: 'Remote Ep2',
-          collection: RemoteCollectionMembership(
-            collectionName: 'MyShow',
-            collectionType: 'collection',
-            sortIndex: 1,
+    await tester.pumpWidget(
+      buildApp(
+        _ListFakeRemoteVideoClient(<RemoteVideoInfo>[
+          const RemoteVideoInfo(
+            id: 'video/remote-ep2',
+            title: 'Remote Ep2',
+            collection: RemoteCollectionMembership(
+              collectionName: 'MyShow',
+              collectionType: 'collection',
+              sortIndex: 1,
+            ),
           ),
-        ),
-      ],
-    )));
+        ]),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(
@@ -150,60 +158,72 @@ void main() {
     );
   });
 
-  testWidgets('「最近添加」含 host 新入库的远端条目（host 下发 importedAt）',
-      (WidgetTester tester) async {
+  testWidgets('「最近添加」含 host 新入库的远端条目（host 下发 importedAt）', (
+    WidgetTester tester,
+  ) async {
     await sizeUp(tester);
 
     // 本机也有一条最近入库的散卡，确保整行本身会渲染。
     final int nowMs = DateTime.now().millisecondsSinceEpoch;
-    await db.upsertVideoBook(VideoBooksCompanion(
-      bookUid: const Value('video/local-new'),
-      title: const Value('Local New'),
-      videoPath: const Value('/abs/local-new.mp4'),
-      importedAt: Value(nowMs - 1000),
-    ));
+    await db.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: const Value('video/local-new'),
+        title: const Value('Local New'),
+        videoPath: const Value('/abs/local-new.mp4'),
+        importedAt: Value(nowMs - 1000),
+      ),
+    );
 
-    await tester.pumpWidget(buildApp(_ListFakeRemoteVideoClient(
-      <RemoteVideoInfo>[
-        RemoteVideoInfo(
-          id: 'video/remote-new',
-          title: 'Remote New',
-          importedAt: nowMs,
-        ),
-      ],
-    )));
+    await tester.pumpWidget(
+      buildApp(
+        _ListFakeRemoteVideoClient(<RemoteVideoInfo>[
+          RemoteVideoInfo(
+            id: 'video/remote-new',
+            title: 'Remote New',
+            importedAt: nowMs,
+          ),
+        ]),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(
       find.byKey(
-          const ValueKey<String>('home_video_recent_remote_video_remote-new')),
+        const ValueKey<String>('home_video_recent_remote_video_remote-new'),
+      ),
       findsOneWidget,
       reason: 'host 带了入库时刻 → 远端条目必须进「最近添加」',
     );
   });
 
-  testWidgets('旧 host 不带 importedAt → 远端不进「最近添加」（与改动前同行为）',
-      (WidgetTester tester) async {
+  testWidgets('旧 host 不带 importedAt → 远端不进「最近添加」（与改动前同行为）', (
+    WidgetTester tester,
+  ) async {
     await sizeUp(tester);
 
     final int nowMs = DateTime.now().millisecondsSinceEpoch;
-    await db.upsertVideoBook(VideoBooksCompanion(
-      bookUid: const Value('video/local-new'),
-      title: const Value('Local New'),
-      videoPath: const Value('/abs/local-new.mp4'),
-      importedAt: Value(nowMs - 1000),
-    ));
+    await db.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: const Value('video/local-new'),
+        title: const Value('Local New'),
+        videoPath: const Value('/abs/local-new.mp4'),
+        importedAt: Value(nowMs - 1000),
+      ),
+    );
 
-    await tester.pumpWidget(buildApp(_ListFakeRemoteVideoClient(
-      <RemoteVideoInfo>[
-        const RemoteVideoInfo(id: 'video/remote-old', title: 'Remote Old'),
-      ],
-    )));
+    await tester.pumpWidget(
+      buildApp(
+        _ListFakeRemoteVideoClient(<RemoteVideoInfo>[
+          const RemoteVideoInfo(id: 'video/remote-old', title: 'Remote Old'),
+        ]),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(
       find.byKey(
-          const ValueKey<String>('home_video_recent_remote_video_remote-old')),
+        const ValueKey<String>('home_video_recent_remote_video_remote-old'),
+      ),
       findsNothing,
       reason: '没有入库时刻就判不出「最近」，不能凭空造一个',
     );
@@ -221,9 +241,10 @@ class _ListFakeRemoteVideoClient implements RemoteVideoClient {
   Future<List<RemoteVideoInfo>> listRemoteVideos() async => _videos;
 
   @override
-  Future<RemoteVideoStreamUrls> remoteVideoStreamUrls(String id,
-          {int episodeIndex = 0}) async =>
-      const RemoteVideoStreamUrls(streamUrl: 'http://x/stream');
+  Future<RemoteVideoStreamUrls> remoteVideoStreamUrls(
+    String id, {
+    int episodeIndex = 0,
+  }) async => const RemoteVideoStreamUrls(streamUrl: 'http://x/stream');
 
   @override
   Future<void> getRemoteVideoSubtitle(
@@ -245,8 +266,7 @@ class _ListFakeRemoteVideoClient implements RemoteVideoClient {
   Future<({int positionMs, int updatedAtMs})> remoteVideoPosition(
     String id, {
     int episodeIndex = 0,
-  }) async =>
-      (positionMs: 0, updatedAtMs: 0);
+  }) async => (positionMs: 0, updatedAtMs: 0);
 
   @override
   Future<void> putRemoteVideoPosition(

@@ -34,7 +34,8 @@ void main() {
     });
 
     test('多张图逐一处理，非 img 标签不受影响', () {
-      const String html = '<body><img src="a.png"/><p>文</p>'
+      const String html =
+          '<body><img src="a.png"/><p>文</p>'
           '<image href="b.png"/><img src="c.png"/></body>';
       final String out = ReaderResourceSanitizer.markImagesLazy(html);
       expect('loading="lazy"'.allMatches(out).length, 2);

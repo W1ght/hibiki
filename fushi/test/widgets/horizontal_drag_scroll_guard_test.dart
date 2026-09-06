@@ -52,7 +52,7 @@ void main() {
     // WheelToHorizontalScroll 的鼠标滚轮（BUG-1214）。
     'lib/src/media/video/subtitle_waveform_align_panel.dart':
         'cue strip 自带 onHorizontalDrag 调延迟，放开滚动拖动会抢手势；'
-            '滚轮平移由 WheelToHorizontalScroll 提供',
+        '滚轮平移由 WheelToHorizontalScroll 提供',
   };
 
   test('每个横向滚动区都放开了鼠标拖动（或在豁免清单里说明了原因）', () {
@@ -82,17 +82,26 @@ void main() {
       }
     }
 
-    expectScanScale(scanned,
-        what: 'lib/ 下的 .dart', atLeast: 750, measured: 939);
+    expectScanScale(
+      scanned,
+      what: 'lib/ 下的 .dart',
+      atLeast: 750,
+      measured: 939,
+    );
     // `withHorizontal` 才是判据的真分母：扫描面还在、但「横向滚动区」的匹配写法
     // 一旦失配（`dart format` 折行、参数换序），这条守卫就对着 0 个候选跑全绿。
-    expectScanScale(withHorizontal,
-        what: '含横向滚动区的文件', atLeast: 12, measured: 17);
+    expectScanScale(
+      withHorizontal,
+      what: '含横向滚动区的文件',
+      atLeast: 12,
+      measured: 17,
+    );
 
     expect(
       offenders,
       isEmpty,
-      reason: '这些横向滚动区在桌面端鼠标拖不动（默认 dragDevices 不含 mouse）。'
+      reason:
+          '这些横向滚动区在桌面端鼠标拖不动（默认 dragDevices 不含 mouse）。'
           '用 HorizontalDragScrollable 包住滚动件；'
           '若区内已有依赖横拖的手势，加进本测试的 exemptions 并写明理由：\n'
           '${offenders.join('\n')}',
@@ -161,7 +170,8 @@ void f() {}
     expect(
       maskComments(main.readAsStringSync()),
       isNot(contains('scrollBehavior:')),
-      reason: '全局放开鼠标拖动滚动会让垂直网格与 MediaCardDraggable 的 Draggable '
+      reason:
+          '全局放开鼠标拖动滚动会让垂直网格与 MediaCardDraggable 的 Draggable '
           '抢手势，把「拖卡进合集」变成「拖动网格滚动」。只包横向区。',
     );
   });

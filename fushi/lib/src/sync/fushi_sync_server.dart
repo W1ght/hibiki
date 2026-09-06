@@ -113,8 +113,8 @@ bool isAddressInUseError(SocketException e) {
   // Fall back to the message: cross-process conflicts carry an errno above,
   // but a same-process re-bind raises Dart's "shared flag" guard with no code,
   // and some platforms phrase EADDRINUSE without a numeric code.
-  final String message =
-      '${e.osError?.message ?? ''} ${e.message}'.toLowerCase();
+  final String message = '${e.osError?.message ?? ''} ${e.message}'
+      .toLowerCase();
   return message.contains('address already in use') ||
       message.contains('address in use') ||
       message.contains('only one usage of each socket address') ||
@@ -149,21 +149,21 @@ class FushiSyncServer {
     String? deviceName,
     DateTime Function()? now,
     Uint8List? Function(String dictionary, String path)?
-        dictionaryMediaProvider,
-  })  : syncDataDir = p.join(syncDataDir, 'sync-data'),
-        _requestedPort = port,
-        _token = token,
-        _allowLan = allowLan,
-        _securityContext = securityContext,
-        _hostFingerprint = hostFingerprint,
-        _deviceName = deviceName,
-        _remoteLookupService = remoteLookupService,
-        _miningService = miningService,
-        _historyService = historyService,
-        _libraryService = libraryService,
-        _mangaOcrJobs = mangaOcrJobs,
-        _dictionaryMediaProvider = dictionaryMediaProvider,
-        _now = now ?? DateTime.now;
+    dictionaryMediaProvider,
+  }) : syncDataDir = p.join(syncDataDir, 'sync-data'),
+       _requestedPort = port,
+       _token = token,
+       _allowLan = allowLan,
+       _securityContext = securityContext,
+       _hostFingerprint = hostFingerprint,
+       _deviceName = deviceName,
+       _remoteLookupService = remoteLookupService,
+       _miningService = miningService,
+       _historyService = historyService,
+       _libraryService = libraryService,
+       _mangaOcrJobs = mangaOcrJobs,
+       _dictionaryMediaProvider = dictionaryMediaProvider,
+       _now = now ?? DateTime.now;
 
   final String syncDataDir;
   final int _requestedPort;
@@ -196,7 +196,7 @@ class FushiSyncServer {
   /// the server has no compile-time coupling to the dictionary engine and
   /// stays unit-testable. Returns null -> the media endpoint answers 404.
   final Uint8List? Function(String dictionary, String path)?
-      _dictionaryMediaProvider;
+  _dictionaryMediaProvider;
   final DateTime Function() _now;
   final Map<String, _RemoteAudioToken> _remoteAudioTokens =
       <String, _RemoteAudioToken>{};
@@ -351,11 +351,11 @@ class FushiSyncServer {
     return (shelf.Handler innerHandler) {
       return (shelf.Request request) async {
         final shelf.Response response = await innerHandler(request);
-        final String accept =
-            (request.headers['accept-encoding'] ?? '').toLowerCase();
+        final String accept = (request.headers['accept-encoding'] ?? '')
+            .toLowerCase();
         if (!accept.contains('gzip')) return response;
-        final String type =
-            (response.headers['content-type'] ?? '').toLowerCase();
+        final String type = (response.headers['content-type'] ?? '')
+            .toLowerCase();
         final bool compressible =
             type.contains('application/json') || type.contains('xml');
         if (!compressible) return response;
@@ -418,8 +418,10 @@ class FushiSyncServer {
         }
         final auth = request.headers['authorization'];
         if (auth == null || !await _validateAuth(auth)) {
-          return shelf.Response(401,
-              headers: {'WWW-Authenticate': 'Basic realm="Fushi Sync"'});
+          return shelf.Response(
+            401,
+            headers: {'WWW-Authenticate': 'Basic realm="Fushi Sync"'},
+          );
         }
         return innerHandler(request);
       };
@@ -433,8 +435,10 @@ class FushiSyncServer {
     const String suffix = '/stream';
     if (!urlPath.startsWith(prefix)) return false;
     if (!urlPath.endsWith(suffix)) return false;
-    final String idPart =
-        urlPath.substring(prefix.length, urlPath.length - suffix.length);
+    final String idPart = urlPath.substring(
+      prefix.length,
+      urlPath.length - suffix.length,
+    );
     return idPart.isNotEmpty;
   }
 
@@ -459,7 +463,9 @@ class FushiSyncServer {
       final Uint8List pw = Uint8List.fromList(utf8.encode(password));
       for (final String peerToken in peerTokens) {
         if (_constantTimeEquals(
-            pw, Uint8List.fromList(utf8.encode(peerToken)))) {
+          pw,
+          Uint8List.fromList(utf8.encode(peerToken)),
+        )) {
           return true;
         }
       }
@@ -491,8 +497,9 @@ class FushiSyncServer {
   static String? _basicPassword(String header) {
     if (!header.startsWith('Basic ')) return null;
     try {
-      final String decoded =
-          utf8.decode(base64Decode(header.substring('Basic '.length)));
+      final String decoded = utf8.decode(
+        base64Decode(header.substring('Basic '.length)),
+      );
       final int colonIdx = decoded.indexOf(':');
       return colonIdx < 0 ? null : decoded.substring(colonIdx + 1);
     } catch (_) {
@@ -658,10 +665,13 @@ class FushiSyncServer {
       case 'HEAD':
         return _handleHead(fsPath);
       case 'OPTIONS':
-        return shelf.Response.ok('', headers: {
-          'Allow': 'OPTIONS, GET, POST, PUT, DELETE, MKCOL, PROPFIND, HEAD',
-          'DAV': '1',
-        });
+        return shelf.Response.ok(
+          '',
+          headers: {
+            'Allow': 'OPTIONS, GET, POST, PUT, DELETE, MKCOL, PROPFIND, HEAD',
+            'DAV': '1',
+          },
+        );
       default:
         return shelf.Response(405);
     }
@@ -673,7 +683,9 @@ class FushiSyncServer {
   /// 继续。永远只 await 单一路径上的前驱、绝不在持有一把锁时去取另一把，故不会死锁；
   /// 收尾时若自己仍是链尾就从 map 摘除，避免闲置路径无界堆积。
   Future<T> _serializeDavWrite<T>(
-      String fsPath, Future<T> Function() action) async {
+    String fsPath,
+    Future<T> Function() action,
+  ) async {
     final Future<void> prev = _davWriteChain[fsPath] ?? Future<void>.value();
     final Completer<void> done = Completer<void>();
     _davWriteChain[fsPath] = done.future;
@@ -725,10 +737,9 @@ class FushiSyncServer {
         !isMeaninglessDeviceName(reported)) {
       name = reported;
     }
-    final bool approved = await approve(FushiPairRequest(
-      deviceName: name,
-      remoteAddress: pairRemote,
-    ));
+    final bool approved = await approve(
+      FushiPairRequest(deviceName: name, remoteAddress: pairRemote),
+    );
     if (!approved) return _pairDenied('declined');
     return _jsonResponse(<String, dynamic>{'token': _token});
   }
@@ -740,10 +751,10 @@ class FushiSyncServer {
   /// pairing session that timed out (BUG-1556). Older peers reply with a
   /// plain-text body instead, which the client treats as 'unavailable'.
   shelf.Response _pairDenied(String reason) => shelf.Response(
-        403,
-        body: jsonEncode(<String, String>{'reason': reason}),
-        headers: <String, String>{'Content-Type': 'application/json'},
-      );
+    403,
+    body: jsonEncode(<String, String>{'reason': reason}),
+    headers: <String, String>{'Content-Type': 'application/json'},
+  );
 
   /// TODO-961 M1: POST /api/pair/v2 {name, clientNonce} → 200 {sessionId,
   /// pinRequired, hostNonce}。仅创建会话、决定是否需要 PIN，并把 host 生成的 PIN
@@ -761,7 +772,8 @@ class FushiSyncServer {
     final String? reportedName = body?['name']?.toString().trim();
     // Drop a "localhost"/loopback advertisement (never a real device name) so it
     // is not persisted as the peer's name in the paired-devices list (TODO-1356).
-    final String? deviceName = (reportedName != null &&
+    final String? deviceName =
+        (reportedName != null &&
             reportedName.isNotEmpty &&
             !isMeaninglessDeviceName(reportedName))
         ? reportedName
@@ -771,8 +783,8 @@ class FushiSyncServer {
     final String? reportedDeviceId = body?['clientDeviceId']?.toString().trim();
     final String? clientDeviceId =
         (reportedDeviceId != null && reportedDeviceId.isNotEmpty)
-            ? reportedDeviceId
-            : null;
+        ? reportedDeviceId
+        : null;
     final String? remote = _remoteAddress(request);
 
     final bool isLanPeer = FushiPairingProtocol.isPrivateLanAddress(remote);
@@ -815,13 +827,15 @@ class FushiSyncServer {
     // 远不显示、配对永远走不通。免 PIN 会话（LAN 自动发现且 host 允许免 PIN）审批仍留在
     // confirm（本就无 PIN 可显示，行为零变化，Never break userspace）。
     if (pinRequired) {
-      final bool approved = await onPairRequest!(FushiPairRequest(
-        deviceName: deviceName,
-        remoteAddress: remote,
-        // pinVerified 尚未校验（那在 confirm）；pinRequired=true 让审批弹窗显示 PIN。
-        pinVerified: null,
-        pinRequired: true,
-      ));
+      final bool approved = await onPairRequest!(
+        FushiPairRequest(
+          deviceName: deviceName,
+          remoteAddress: remote,
+          // pinVerified 尚未校验（那在 confirm）；pinRequired=true 让审批弹窗显示 PIN。
+          pinVerified: null,
+          pinRequired: true,
+        ),
+      );
       if (!approved) return _pairDenied('declined');
     }
 
@@ -942,12 +956,14 @@ class FushiSyncServer {
     // 校验，两者仍缺一不可）。免 PIN 会话（pinRequired=false）没有 CREATE 阶段审批，仍在
     // 此弹审批（无 PIN 可显示，行为不变）。
     if (!session.pinRequired) {
-      final bool approved = await approve(FushiPairRequest(
-        deviceName: session.deviceName,
-        remoteAddress: session.remoteAddress,
-        pinVerified: true,
-        pinRequired: false,
-      ));
+      final bool approved = await approve(
+        FushiPairRequest(
+          deviceName: session.deviceName,
+          remoteAddress: session.remoteAddress,
+          pinVerified: true,
+          pinRequired: false,
+        ),
+      );
       if (!approved) return _pairDenied('declined');
     }
 
@@ -977,12 +993,14 @@ class FushiSyncServer {
       return _token;
     }
     final String peerToken = generateToken();
-    await persist(FushiPairedPeerRegistration(
-      peerId: peerId,
-      token: peerToken,
-      deviceName: session.deviceName,
-      remoteAddress: session.remoteAddress,
-    ));
+    await persist(
+      FushiPairedPeerRegistration(
+        peerId: peerId,
+        token: peerToken,
+        deviceName: session.deviceName,
+        remoteAddress: session.remoteAddress,
+      ),
+    );
     // 新 token 立即受理：清缓存促下次 auth 从 provider 重载（含刚写入的这行）。
     invalidatePeerTokenCache();
     return peerToken;
@@ -991,19 +1009,19 @@ class FushiSyncServer {
   /// 401，机器可读 reason='pin'：PIN proof 校验未通过。与 403/declined 区分，让
   /// client 提示「PIN 错误，请重输」而非「对端拒绝」。绝不在 body 里回显任何 PIN。
   shelf.Response _pairUnauthorized() => shelf.Response(
-        401,
-        body: jsonEncode(<String, String>{'reason': 'pin'}),
-        headers: <String, String>{'Content-Type': 'application/json'},
-      );
+    401,
+    body: jsonEncode(<String, String>{'reason': 'pin'}),
+    headers: <String, String>{'Content-Type': 'application/json'},
+  );
 
   /// TODO-961 M3：429，机器可读 reason='rate_limited'：该来源 PIN 失败过多已被锁定
   /// 退避。与 401/pin 区分，让 client 提示「尝试过多，请稍后再试」而非「PIN 错误」。
   /// 绝不回显剩余锁定时长的精确值以外的信息，也绝不泄露 PIN 是否部分正确。
   shelf.Response _pairRateLimited() => shelf.Response(
-        429,
-        body: jsonEncode(<String, String>{'reason': 'rate_limited'}),
-        headers: <String, String>{'Content-Type': 'application/json'},
-      );
+    429,
+    body: jsonEncode(<String, String>{'reason': 'rate_limited'}),
+    headers: <String, String>{'Content-Type': 'application/json'},
+  );
 
   /// TODO-961 M3：本会话在 PIN 爆破限速里的来源标识。优先 client 自报的稳定
   /// deviceId（同一物理设备换 IP 也锁得住），回退请求来源 IP。二者都缺（无稳定身份）
@@ -1050,11 +1068,13 @@ class FushiSyncServer {
     final Map<String, dynamic>? body = await _readJsonObject(request);
     if (body == null) return shelf.Response(400, body: 'Invalid JSON');
     // 契约与 YomitanApiServer 共享（BUG-530，单一真相源）。
-    return _jsonResponse(await buildRemoteDictionaryLookupResponse(
-      body,
-      lookup: service,
-      history: _historyService,
-    ));
+    return _jsonResponse(
+      await buildRemoteDictionaryLookupResponse(
+        body,
+        lookup: service,
+        history: _historyService,
+      ),
+    );
   }
 
   Future<shelf.Response> _handleAudioLookup(shelf.Request request) async {
@@ -1113,10 +1133,10 @@ class FushiSyncServer {
   }
 
   shelf.Response _audioMissResponse() => _jsonResponse(<String, dynamic>{
-        'type': 'audioResult',
-        'url': null,
-        'contentType': null,
-      });
+    'type': 'audioResult',
+    'url': null,
+    'contentType': null,
+  });
 
   static bool _isDictionaryMediaPath(String urlPath) =>
       urlPath == 'api/media/dictionary';
@@ -1220,13 +1240,16 @@ class FushiSyncServer {
       switch (path) {
         case '/api/anki/note-type/read':
           return _jsonResponse(
-              await buildAnkiNoteTypeReadResponse(body, mining: svc));
+            await buildAnkiNoteTypeReadResponse(body, mining: svc),
+          );
         case '/api/anki/note-type/styling':
           return _jsonResponse(
-              await buildAnkiNoteTypeStylingResponse(body, mining: svc));
+            await buildAnkiNoteTypeStylingResponse(body, mining: svc),
+          );
         case '/api/anki/note-type/templates':
           return _jsonResponse(
-              await buildAnkiNoteTypeTemplatesResponse(body, mining: svc));
+            await buildAnkiNoteTypeTemplatesResponse(body, mining: svc),
+          );
         default:
           return shelf.Response.notFound('Unknown endpoint');
       }
@@ -1251,10 +1274,12 @@ class FushiSyncServer {
       switch (path) {
         case '/api/anki/media/dedup/probe':
           return _jsonResponse(
-              await buildAnkiMediaDedupProbeResponse(mining: svc));
+            await buildAnkiMediaDedupProbeResponse(mining: svc),
+          );
         case '/api/anki/media/dedup/run':
           return _jsonResponse(
-              await buildAnkiMediaDedupRunResponse(body, mining: svc));
+            await buildAnkiMediaDedupRunResponse(body, mining: svc),
+          );
         default:
           return shelf.Response.notFound('Unknown endpoint');
       }
@@ -1306,12 +1331,14 @@ class FushiSyncServer {
         'books': lib,
         'audio': lib,
         'videos': lib,
-        'serviceConfig': _securityContext != null &&
+        'serviceConfig':
+            _securityContext != null &&
             _libraryService is InterconnectServiceConfigHost,
         // 互联「配置文件」（Profile）双向搬运：与 serviceConfig 同门槛（必须 TLS）。
         // 能力位只说「这台 host 懂这个端点」，不代表此刻允许——端点还会再查一次
         // 用户开关，关着时返回 403，client 如实报错而不是当成不支持。
-        'profileTransfer': _securityContext != null &&
+        'profileTransfer':
+            _securityContext != null &&
             _libraryService is InterconnectProfileHost,
       },
       // TODO-961 M1 能力协商（设计稿 §1.1 / §2.5）：老 client 读不到也不崩。
@@ -1371,12 +1398,16 @@ class FushiSyncServer {
         } on StateError {
           return shelf.Response.notFound(notFoundMessage);
         }
-        return serveFileWithRange(file, request,
-            etag: ExportPackageCache.etagFor(file));
+        return serveFileWithRange(
+          file,
+          request,
+          etag: ExportPackageCache.etagFor(file),
+        );
 
       case 'PUT':
-        final Directory tmpDir =
-            Directory.systemTemp.createTempSync(tempPrefix);
+        final Directory tmpDir = Directory.systemTemp.createTempSync(
+          tempPrefix,
+        );
         final File tmp = File(p.join(tmpDir.path, '$id$tempExtension'));
         final IOSink sink = tmp.openWrite();
         try {
@@ -1421,7 +1452,7 @@ class FushiSyncServer {
       final List<RemoteDictionaryInfo> list = await svc.listDictionaries();
       return shelf.Response.ok(
         jsonEncode(<Map<String, Object?>>[
-          for (final RemoteDictionaryInfo d in list) d.toJson()
+          for (final RemoteDictionaryInfo d in list) d.toJson(),
         ]),
         headers: <String, String>{'Content-Type': 'application/json'},
       );
@@ -1433,8 +1464,10 @@ class FushiSyncServer {
     // decodeComponent 输入）。直接 substring 即可得到正确的词典名。
     final String name = reqPath.substring('/api/library/dictionaries/'.length);
     // HBK-AUDIT-012 路径穿越闸门（收敛到 _rejectUnsafeAssetId），覆盖下面三个方法。
-    final shelf.Response? unsafe =
-        _rejectUnsafeAssetId(name, 'dictionary name');
+    final shelf.Response? unsafe = _rejectUnsafeAssetId(
+      name,
+      'dictionary name',
+    );
     if (unsafe != null) return unsafe;
 
     return _serveAssetPackage(
@@ -1465,7 +1498,7 @@ class FushiSyncServer {
       return shelf.Response.ok(
         jsonEncode(<Map<String, Object?>>[
           for (final RemoteBookInfo b in list)
-            _remoteBookJsonForRequest(b, request)
+            _remoteBookJsonForRequest(b, request),
         ]),
         headers: <String, String>{'Content-Type': 'application/json'},
       );
@@ -1477,9 +1510,13 @@ class FushiSyncServer {
     if (reqPath.startsWith(bookPrefix) && reqPath.endsWith(coverSuffix)) {
       if (method != 'GET') return shelf.Response(405);
       final String coverBookId = reqPath.substring(
-          bookPrefix.length, reqPath.length - coverSuffix.length);
-      final shelf.Response? unsafeCoverBookId =
-          _rejectUnsafeAssetId(coverBookId, 'book title');
+        bookPrefix.length,
+        reqPath.length - coverSuffix.length,
+      );
+      final shelf.Response? unsafeCoverBookId = _rejectUnsafeAssetId(
+        coverBookId,
+        'book title',
+      );
       if (unsafeCoverBookId != null) return unsafeCoverBookId;
       final File? cover = await _resolveBookCover(svc, coverBookId);
       if (cover == null) return shelf.Response.notFound('Book cover not found');
@@ -1492,14 +1529,19 @@ class FushiSyncServer {
     const String progressSuffix = '/progress';
     if (reqPath.startsWith(bookPrefix) && reqPath.endsWith(progressSuffix)) {
       final String progressBookKey = reqPath.substring(
-          bookPrefix.length, reqPath.length - progressSuffix.length);
-      final shelf.Response? unsafeProgressBookKey =
-          _rejectUnsafeAssetId(progressBookKey, 'book key');
+        bookPrefix.length,
+        reqPath.length - progressSuffix.length,
+      );
+      final shelf.Response? unsafeProgressBookKey = _rejectUnsafeAssetId(
+        progressBookKey,
+        'book key',
+      );
       if (unsafeProgressBookKey != null) return unsafeProgressBookKey;
       switch (method) {
         case 'GET':
-          final RemoteBookProgress progress =
-              await svc.getBookProgress(progressBookKey);
+          final RemoteBookProgress progress = await svc.getBookProgress(
+            progressBookKey,
+          );
           return shelf.Response.ok(
             jsonEncode(progress.toJson()),
             headers: <String, String>{'Content-Type': 'application/json'},
@@ -1544,10 +1586,8 @@ class FushiSyncServer {
       import: (File epubFile) => svc.importBook(
         epubFile,
         displayTitle: _decodeHeaderValue(request, kBookDisplayTitleHeader),
-        displayTitleAt: int.tryParse(
-              request.headers[kBookDisplayTitleAtHeader] ?? '',
-            ) ??
-            0,
+        displayTitleAt:
+            int.tryParse(request.headers[kBookDisplayTitleAtHeader] ?? '') ?? 0,
       ),
       delete: () => svc.deleteBook(bookId),
     );
@@ -1562,16 +1602,18 @@ class FushiSyncServer {
       ..remove('hasCover');
     if (_coverFile(book.coverPath) != null) {
       json['hasCover'] = true;
-      json['coverUrl'] = request.requestedUri.replace(
-        pathSegments: <String>[
-          'api',
-          'library',
-          'books',
-          book.downloadId,
-          'cover',
-        ],
-        queryParameters: <String, String>{},
-      ).toString();
+      json['coverUrl'] = request.requestedUri
+          .replace(
+            pathSegments: <String>[
+              'api',
+              'library',
+              'books',
+              book.downloadId,
+              'cover',
+            ],
+            queryParameters: <String, String>{},
+          )
+          .toString();
     }
     return json;
   }
@@ -1598,17 +1640,20 @@ class FushiSyncServer {
       final List<RemoteLocalAudioInfo> list = await svc.listLocalAudio();
       return shelf.Response.ok(
         jsonEncode(<Map<String, Object?>>[
-          for (final RemoteLocalAudioInfo a in list) a.toJson()
+          for (final RemoteLocalAudioInfo a in list) a.toJson(),
         ]),
         headers: <String, String>{'Content-Type': 'application/json'},
       );
     }
 
     // reqPath 已在 _handleRequest 经 Uri.decodeFull 解码，此处无需再解码。
-    final String displayName =
-        reqPath.substring('/api/library/localaudio/'.length);
-    final shelf.Response? unsafe =
-        _rejectUnsafeAssetId(displayName, 'displayName');
+    final String displayName = reqPath.substring(
+      '/api/library/localaudio/'.length,
+    );
+    final shelf.Response? unsafe = _rejectUnsafeAssetId(
+      displayName,
+      'displayName',
+    );
     if (unsafe != null) return unsafe;
 
     return _serveAssetPackage(
@@ -1638,7 +1683,7 @@ class FushiSyncServer {
       final List<RemoteAudiobookInfo> list = await svc.listAudiobooks();
       return shelf.Response.ok(
         jsonEncode(<Map<String, Object?>>[
-          for (final RemoteAudiobookInfo ab in list) ab.toJson()
+          for (final RemoteAudiobookInfo ab in list) ab.toJson(),
         ]),
         headers: <String, String>{'Content-Type': 'application/json'},
       );
@@ -1654,9 +1699,13 @@ class FushiSyncServer {
     if (reqPath.startsWith(audiobookPrefix) &&
         reqPath.endsWith(positionSuffix)) {
       final String positionBookKey = reqPath.substring(
-          audiobookPrefix.length, reqPath.length - positionSuffix.length);
-      final shelf.Response? unsafePositionBookKey =
-          _rejectUnsafeAssetId(positionBookKey, 'bookKey');
+        audiobookPrefix.length,
+        reqPath.length - positionSuffix.length,
+      );
+      final shelf.Response? unsafePositionBookKey = _rejectUnsafeAssetId(
+        positionBookKey,
+        'bookKey',
+      );
       if (unsafePositionBookKey != null) return unsafePositionBookKey;
       // 先确认该有声书在 host DB 真实存在，防任意 key 写脏 prefs；与视频 position
       // 先 resolveVideoFile 同语义。BUG-471a：改用廉价的 audiobookExists（单次 DB
@@ -1672,8 +1721,8 @@ class FushiSyncServer {
       }
       switch (method) {
         case 'GET':
-          final ({int positionMs, int updatedAtMs}) p =
-              await svc.getAudiobookPosition(positionBookKey);
+          final ({int positionMs, int updatedAtMs}) p = await svc
+              .getAudiobookPosition(positionBookKey);
           return shelf.Response.ok(
             jsonEncode(<String, Object?>{
               'positionMs': p.positionMs,
@@ -1705,9 +1754,13 @@ class FushiSyncServer {
     const String delaySuffix = '/delay';
     if (reqPath.startsWith(audiobookPrefix) && reqPath.endsWith(delaySuffix)) {
       final String delayIdentity = reqPath.substring(
-          audiobookPrefix.length, reqPath.length - delaySuffix.length);
-      final shelf.Response? unsafeDelayIdentity =
-          _rejectUnsafeAssetId(delayIdentity, 'bookKey');
+        audiobookPrefix.length,
+        reqPath.length - delaySuffix.length,
+      );
+      final shelf.Response? unsafeDelayIdentity = _rejectUnsafeAssetId(
+        delayIdentity,
+        'bookKey',
+      );
       if (unsafeDelayIdentity != null) return unsafeDelayIdentity;
       if (svc is! AudiobookDelayHost) {
         return shelf.Response.notFound('Audiobook delay not supported');
@@ -1722,8 +1775,8 @@ class FushiSyncServer {
       }
       switch (method) {
         case 'GET':
-          final ({int delayMs, int updatedAtMs}) d =
-              await delayHost.getAudiobookDelay(delayIdentity);
+          final ({int delayMs, int updatedAtMs}) d = await delayHost
+              .getAudiobookDelay(delayIdentity);
           return _jsonResponse(<String, dynamic>{
             'delayMs': d.delayMs,
             'delayUpdatedAtMs': d.updatedAtMs,
@@ -1740,7 +1793,10 @@ class FushiSyncServer {
           final int updatedAtMs =
               (json['delayUpdatedAtMs'] as num?)?.toInt() ?? 0;
           await delayHost.putAudiobookDelay(
-              delayIdentity, delayMs, updatedAtMs);
+            delayIdentity,
+            delayMs,
+            updatedAtMs,
+          );
           return shelf.Response(200);
         default:
           return shelf.Response(405);
@@ -1792,8 +1848,10 @@ class FushiSyncServer {
     final String fullSuffix = '/$suffix';
     if (!reqPath.startsWith(prefix)) return null;
     if (!reqPath.endsWith(fullSuffix)) return null;
-    final String id =
-        reqPath.substring(prefix.length, reqPath.length - fullSuffix.length);
+    final String id = reqPath.substring(
+      prefix.length,
+      reqPath.length - fullSuffix.length,
+    );
     if (id.isEmpty) return null;
     // 只拒 `..`（路径穿越），允许 `/`（bookUid 形如 video/xxx）
     if (id.contains('..') || id.contains('\\')) return null;
@@ -1831,10 +1889,13 @@ class FushiSyncServer {
     if (svc == null) return shelf.Response.notFound('Library service off');
     if (method != 'GET') return shelf.Response(405);
     final int limit =
-        (int.tryParse(request.url.queryParameters['limit'] ?? '') ?? 100)
-            .clamp(1, 500);
-    final List<RemoteActivityEvent> events =
-        await svc.listActivityEvents(limit: limit);
+        (int.tryParse(request.url.queryParameters['limit'] ?? '') ?? 100).clamp(
+          1,
+          500,
+        );
+    final List<RemoteActivityEvent> events = await svc.listActivityEvents(
+      limit: limit,
+    );
     return shelf.Response.ok(
       jsonEncode(<Map<String, Object?>>[
         for (final RemoteActivityEvent e in events) e.toJson(),
@@ -1858,7 +1919,7 @@ class FushiSyncServer {
       return shelf.Response.ok(
         jsonEncode(<Map<String, Object?>>[
           for (final RemoteVideoInfo v in list)
-            _remoteVideoJsonForRequest(v, request)
+            _remoteVideoJsonForRequest(v, request),
         ]),
         headers: <String, String>{'Content-Type': 'application/json'},
       );
@@ -1881,8 +1942,10 @@ class FushiSyncServer {
       if (method != 'GET') return shelf.Response(405);
       // TODO-885: 远端播放列表按集——?episode=N 决定流式哪一集（DB-only 反查）。
       final int episodeIndex = _episodeIndexFromRequest(request);
-      final File? file =
-          await svc.resolveVideoFile(streamUrlId, episodeIndex: episodeIndex);
+      final File? file = await svc.resolveVideoFile(
+        streamUrlId,
+        episodeIndex: episodeIndex,
+      );
       if (file == null) return shelf.Response.notFound('Video not found');
       // BUG-1568：签发前先按 TTL 清过期，再把数量收束到 [_maxVideoStreamTokens] 内
       // （淘汰最旧者）。对照 audio token 的 BUG-908(a) 修法：消费侧（GET /stream）的
@@ -1906,8 +1969,10 @@ class FushiSyncServer {
         queryParameters: streamQuery,
       );
       // subtitle URL 不含 token（走 Basic 鉴权），但带 episode=N。
-      final File? sub = await svc.resolveVideoSubtitle(streamUrlId,
-          episodeIndex: episodeIndex);
+      final File? sub = await svc.resolveVideoSubtitle(
+        streamUrlId,
+        episodeIndex: episodeIndex,
+      );
       final Uri? subtitleUri = sub != null
           ? request.requestedUri.replace(
               path: '/api/library/videos/$encodedId/subtitle',
@@ -1918,11 +1983,11 @@ class FushiSyncServer {
           : null;
       final List<RemoteVideoEmbeddedSubtitleTrack> embeddedTracks =
           await _embeddedSubtitleTracksForRequest(
-        file,
-        request,
-        streamUrlId,
-        episodeIndex,
-      );
+            file,
+            request,
+            streamUrlId,
+            episodeIndex,
+          );
       return _jsonResponse(<String, dynamic>{
         'url': streamUri.toString(),
         'subtitleUrl': subtitleUri?.toString(),
@@ -1942,20 +2007,26 @@ class FushiSyncServer {
       _pruneVideoTokens();
       final String? tokenValue = request.url.queryParameters['token'];
       if (tokenValue == null || tokenValue.isEmpty) {
-        return shelf.Response(401,
-            body: 'Missing token',
-            headers: <String, String>{'Content-Type': 'text/plain'});
+        return shelf.Response(
+          401,
+          body: 'Missing token',
+          headers: <String, String>{'Content-Type': 'text/plain'},
+        );
       }
       final _VideoStreamToken? tok = _videoStreamTokens[tokenValue];
       if (tok == null || tok.videoId != streamId) {
-        return shelf.Response(403,
-            body: 'Invalid or expired token',
-            headers: <String, String>{'Content-Type': 'text/plain'});
+        return shelf.Response(
+          403,
+          body: 'Invalid or expired token',
+          headers: <String, String>{'Content-Type': 'text/plain'},
+        );
       }
       // TODO-885: 用 token 绑定的集下标反查（token 是 streamurl 签发时定的，client 不能
       // 自己改集——?episode 只决定 streamurl 阶段，stream 阶段以 token 为准）。
-      final File? file =
-          await svc.resolveVideoFile(streamId, episodeIndex: tok.episodeIndex);
+      final File? file = await svc.resolveVideoFile(
+        streamId,
+        episodeIndex: tok.episodeIndex,
+      );
       if (file == null) return shelf.Response.notFound('Video not found');
       return serveFileWithRange(file, request);
     }
@@ -1970,8 +2041,9 @@ class FushiSyncServer {
       if (method == 'PUT') {
         final String suffix =
             _decodeHeaderValue(request, 'x-hibiki-subtitle-suffix') ?? '';
-        final Directory tmpDir =
-            Directory.systemTemp.createTempSync('hibiki_subtitle_in');
+        final Directory tmpDir = Directory.systemTemp.createTempSync(
+          'hibiki_subtitle_in',
+        );
         final File tmp = File(p.join(tmpDir.path, 'upload.bin'));
         final IOSink sink = tmp.openWrite();
         try {
@@ -2003,8 +2075,10 @@ class FushiSyncServer {
       final String? embeddedIndexText =
           request.url.queryParameters['embeddedStreamIndex'];
       final File? sub = embeddedIndexText == null
-          ? await svc.resolveVideoSubtitle(subtitleId,
-              episodeIndex: episodeIndex)
+          ? await svc.resolveVideoSubtitle(
+              subtitleId,
+              episodeIndex: episodeIndex,
+            )
           : await _resolveEmbeddedVideoSubtitle(
               svc,
               subtitleId,
@@ -2028,8 +2102,10 @@ class FushiSyncServer {
     if (positionId != null) {
       final int episodeIndex = _episodeIndexFromRequest(request);
       // 先确认该视频 id（含集下标）在 host DB 真实存在，防止任意 id 写脏 prefs。
-      final File? file =
-          await svc.resolveVideoFile(positionId, episodeIndex: episodeIndex);
+      final File? file = await svc.resolveVideoFile(
+        positionId,
+        episodeIndex: episodeIndex,
+      );
       if (file == null) return shelf.Response.notFound('Video not found');
       switch (method) {
         case 'GET':
@@ -2050,8 +2126,12 @@ class FushiSyncServer {
           final int posMs = (json['positionMs'] as num?)?.toInt() ?? 0;
           final int updatedAtMs =
               (json['positionUpdatedAtMs'] as num?)?.toInt() ?? 0;
-          await svc.putVideoPosition(positionId, posMs, updatedAtMs,
-              episodeIndex: episodeIndex);
+          await svc.putVideoPosition(
+            positionId,
+            posMs,
+            updatedAtMs,
+            episodeIndex: episodeIndex,
+          );
           return shelf.Response(200);
         default:
           return shelf.Response(405);
@@ -2078,8 +2158,9 @@ class FushiSyncServer {
       }
       switch (method) {
         case 'GET':
-          final VideoPlaybackSyncState s =
-              await playbackHost.getVideoPlayback(playbackId);
+          final VideoPlaybackSyncState s = await playbackHost.getVideoPlayback(
+            playbackId,
+          );
           return _jsonResponse(s.toJson());
         case 'PUT':
           final String body = await request.readAsString();
@@ -2090,7 +2171,9 @@ class FushiSyncServer {
             return shelf.Response(400, body: 'Invalid JSON');
           }
           await playbackHost.putVideoPlayback(
-              playbackId, VideoPlaybackSyncState.fromJson(json));
+            playbackId,
+            VideoPlaybackSyncState.fromJson(json),
+          );
           return shelf.Response(200);
         default:
           return shelf.Response(405);
@@ -2107,17 +2190,21 @@ class FushiSyncServer {
     if (clipAudioId != null) {
       if (method != 'GET') return shelf.Response(405);
       final int episodeIndex = _episodeIndexFromRequest(request);
-      final int? startMs =
-          int.tryParse(request.url.queryParameters['startMs'] ?? '');
-      final int? endMs =
-          int.tryParse(request.url.queryParameters['endMs'] ?? '');
+      final int? startMs = int.tryParse(
+        request.url.queryParameters['startMs'] ?? '',
+      );
+      final int? endMs = int.tryParse(
+        request.url.queryParameters['endMs'] ?? '',
+      );
       if (startMs == null || endMs == null || endMs <= startMs) {
         return shelf.Response(400, body: 'Invalid clip range');
       }
-      final int? audioStreamIndex =
-          int.tryParse(request.url.queryParameters['audioStreamIndex'] ?? '');
-      final int? audioStreamCount =
-          int.tryParse(request.url.queryParameters['audioStreamCount'] ?? '');
+      final int? audioStreamIndex = int.tryParse(
+        request.url.queryParameters['audioStreamIndex'] ?? '',
+      );
+      final int? audioStreamCount = int.tryParse(
+        request.url.queryParameters['audioStreamCount'] ?? '',
+      );
       final int audioChannels =
           int.tryParse(request.url.queryParameters['ac'] ?? '') ?? 1;
       final String audioBitrate =
@@ -2164,17 +2251,24 @@ class FushiSyncServer {
       }
       final String title =
           _decodeHeaderValue(request, 'x-hibiki-video-title') ?? id;
-      final String? fileName =
-          _decodeHeaderValue(request, 'x-hibiki-video-filename');
-      final Directory tmpDir =
-          Directory.systemTemp.createTempSync('hibiki_video_in');
+      final String? fileName = _decodeHeaderValue(
+        request,
+        'x-hibiki-video-filename',
+      );
+      final Directory tmpDir = Directory.systemTemp.createTempSync(
+        'hibiki_video_in',
+      );
       final File tmp = File(p.join(tmpDir.path, 'upload.bin'));
       final IOSink sink = tmp.openWrite();
       try {
         await request.read().forEach(sink.add);
         await sink.close();
-        await svc.importVideo(tmp,
-            id: id, title: title, originalFileName: fileName);
+        await svc.importVideo(
+          tmp,
+          id: id,
+          title: title,
+          originalFileName: fileName,
+        );
         return shelf.Response(200);
       } catch (e) {
         try {
@@ -2244,23 +2338,26 @@ class FushiSyncServer {
     if (_coverFile(video.coverPath) != null) {
       final String encodedId = Uri.encodeFull(video.id);
       json['hasCover'] = true;
-      json['coverUrl'] = request.requestedUri.replace(
-        path: '/api/library/videos/$encodedId/cover',
-        queryParameters: <String, String>{},
-      ).toString();
+      json['coverUrl'] = request.requestedUri
+          .replace(
+            path: '/api/library/videos/$encodedId/cover',
+            queryParameters: <String, String>{},
+          )
+          .toString();
     }
     return json;
   }
 
   Future<List<RemoteVideoEmbeddedSubtitleTrack>>
-      _embeddedSubtitleTracksForRequest(
+  _embeddedSubtitleTracksForRequest(
     File videoFile,
     shelf.Request request,
     String videoId,
     int episodeIndex,
   ) async {
-    final List<EmbeddedSubtitleTrack> tracks =
-        await listEmbeddedSubtitleTracks(videoFile.path);
+    final List<EmbeddedSubtitleTrack> tracks = await listEmbeddedSubtitleTracks(
+      videoFile.path,
+    );
     final String encodedId = Uri.encodeFull(videoId);
     final String videoStem = p.basenameWithoutExtension(videoFile.path);
     return <RemoteVideoEmbeddedSubtitleTrack>[
@@ -2291,13 +2388,15 @@ class FushiSyncServer {
       title: track.title,
       isText: isText,
       url: isText
-          ? request.requestedUri.replace(
-              path: '/api/library/videos/$encodedId/subtitle',
-              queryParameters: <String, String>{
-                'embeddedStreamIndex': '${track.streamIndex}',
-                if (episodeIndex > 0) 'episode': '$episodeIndex',
-              },
-            ).toString()
+          ? request.requestedUri
+                .replace(
+                  path: '/api/library/videos/$encodedId/subtitle',
+                  queryParameters: <String, String>{
+                    'embeddedStreamIndex': '${track.streamIndex}',
+                    if (episodeIndex > 0) 'episode': '$episodeIndex',
+                  },
+                )
+                .toString()
           : null,
       fileName: isText
           ? '${_safeDownloadStem(videoStem)}.embedded.${track.streamIndex}$extension'
@@ -2317,11 +2416,14 @@ class FushiSyncServer {
     int episodeIndex,
   ) async {
     if (streamIndex == null || streamIndex < 0) return null;
-    final File? videoFile =
-        await service.resolveVideoFile(id, episodeIndex: episodeIndex);
+    final File? videoFile = await service.resolveVideoFile(
+      id,
+      episodeIndex: episodeIndex,
+    );
     if (videoFile == null) return null;
-    final List<EmbeddedSubtitleTrack> tracks =
-        await listEmbeddedSubtitleTracks(videoFile.path);
+    final List<EmbeddedSubtitleTrack> tracks = await listEmbeddedSubtitleTracks(
+      videoFile.path,
+    );
     for (final EmbeddedSubtitleTrack track in tracks) {
       if (track.streamIndex != streamIndex) continue;
       if (subtitleFormatForCodec(track.codec) == null) return null;
@@ -2412,7 +2514,7 @@ class FushiSyncServer {
           // charset=utf-8 必带：快照里的书名/标题/义项含 CJK，client 用
           // package:http `.body` 默认按 latin1 解码会乱码（同 _jsonResponse）。
           headers: <String, String>{
-            'Content-Type': 'application/json; charset=utf-8'
+            'Content-Type': 'application/json; charset=utf-8',
           },
         );
       case 'PUT':
@@ -2455,7 +2557,7 @@ class FushiSyncServer {
           // charset=utf-8 必带：合集名含 CJK，client 用 package:http `.body` 默认按
           // latin1 解码会乱码（同 aggregate / _jsonResponse）。
           headers: <String, String>{
-            'Content-Type': 'application/json; charset=utf-8'
+            'Content-Type': 'application/json; charset=utf-8',
           },
         );
       case 'POST':
@@ -2467,12 +2569,13 @@ class FushiSyncServer {
         } on FormatException catch (e) {
           return shelf.Response(400, body: 'Invalid manifest: $e');
         }
-        final CollectionManifest merged =
-            await svc.mergeCollectionManifest(incoming);
+        final CollectionManifest merged = await svc.mergeCollectionManifest(
+          incoming,
+        );
         return shelf.Response.ok(
           merged.canonicalJson(),
           headers: <String, String>{
-            'Content-Type': 'application/json; charset=utf-8'
+            'Content-Type': 'application/json; charset=utf-8',
           },
         );
       default:
@@ -2602,7 +2705,7 @@ class FushiSyncServer {
       // charset=utf-8 必带：itemKey 可能含 CJK（书名派生 key），client 按 latin1 默认
       // 解码会乱码（同 collections / aggregate）。
       headers: <String, String>{
-        'Content-Type': 'application/json; charset=utf-8'
+        'Content-Type': 'application/json; charset=utf-8',
       },
     );
   }
@@ -2625,7 +2728,7 @@ class FushiSyncServer {
       // TODO-752a：必须带 charset=utf-8。否则远程查词 client 用 package:http 的
       // `.body` 读取时按 latin1 默认解码，CJK 词典义项/书名直接乱码。
       headers: <String, String>{
-        'Content-Type': 'application/json; charset=utf-8'
+        'Content-Type': 'application/json; charset=utf-8',
       },
     );
   }
@@ -2704,7 +2807,10 @@ class FushiSyncServer {
   int get pinRateLimitTrackedSourceCount => _pinRateLimiter.trackedSourceCount;
 
   Future<shelf.Response> _handlePropfind(
-      shelf.Request request, String davPath, String fsPath) async {
+    shelf.Request request,
+    String davPath,
+    String fsPath,
+  ) async {
     final depth = request.headers['depth'] ?? '1';
     // BUG-908(b)：逐项 stat 一律异步，避免在事件循环上做阻塞式系统调用（大目录
     // PROPFIND 会串起成百上千次同步 stat，卡住整个 server）。
@@ -2718,12 +2824,14 @@ class FushiSyncServer {
     final normPath = davPath.endsWith('/') ? davPath : '$davPath/';
 
     if (entity == FileSystemEntityType.directory) {
-      entries.add(_DavEntry(
-        href: normPath,
-        isCollection: true,
-        displayName: p.basename(fsPath),
-        contentLength: 0,
-      ));
+      entries.add(
+        _DavEntry(
+          href: normPath,
+          isCollection: true,
+          displayName: p.basename(fsPath),
+          contentLength: 0,
+        ),
+      );
 
       if (depth == '1') {
         final dir = Directory(fsPath);
@@ -2734,24 +2842,28 @@ class FushiSyncServer {
           // BUG-908(b)：文件长度用异步 stat（await for 循环里安全 await，不打乱 XML
           // 组装顺序）；目录不必取长度。
           final length = isDir ? 0 : (await (child as File).stat()).size;
-          entries.add(_DavEntry(
-            href: childHref,
-            isCollection: isDir,
-            displayName: childName,
-            contentLength: length,
-          ));
+          entries.add(
+            _DavEntry(
+              href: childHref,
+              isCollection: isDir,
+              displayName: childName,
+              contentLength: length,
+            ),
+          );
         }
       }
     } else {
       final file = File(fsPath);
       // BUG-908(b)：单文件长度也用异步 stat。
       final int fileLength = (await file.stat()).size;
-      entries.add(_DavEntry(
-        href: davPath,
-        isCollection: false,
-        displayName: p.basename(fsPath),
-        contentLength: fileLength,
-      ));
+      entries.add(
+        _DavEntry(
+          href: davPath,
+          isCollection: false,
+          displayName: p.basename(fsPath),
+          contentLength: fileLength,
+        ),
+      );
     }
 
     final xml = StringBuffer('<?xml version="1.0" encoding="utf-8"?>\n')
@@ -2763,13 +2875,15 @@ class FushiSyncServer {
         ..write('<d:propstat>\n')
         ..write('<d:prop>\n')
         ..write(
-            '<d:displayname>${_xmlEscape(entry.displayName)}</d:displayname>\n')
+          '<d:displayname>${_xmlEscape(entry.displayName)}</d:displayname>\n',
+        )
         ..write('<d:resourcetype>')
         ..write(entry.isCollection ? '<d:collection/>' : '')
         ..write('</d:resourcetype>\n');
       if (!entry.isCollection) {
         xml.write(
-            '<d:getcontentlength>${entry.contentLength}</d:getcontentlength>\n');
+          '<d:getcontentlength>${entry.contentLength}</d:getcontentlength>\n',
+        );
       }
       xml
         ..write('</d:prop>\n')
@@ -2779,9 +2893,11 @@ class FushiSyncServer {
     }
     xml.write('</d:multistatus>');
 
-    return shelf.Response(207,
-        body: xml.toString(),
-        headers: {'Content-Type': 'application/xml; charset=utf-8'});
+    return shelf.Response(
+      207,
+      body: xml.toString(),
+      headers: {'Content-Type': 'application/xml; charset=utf-8'},
+    );
   }
 
   Future<shelf.Response> _handleGet(String fsPath) async {
@@ -2797,7 +2913,9 @@ class FushiSyncServer {
   }
 
   Future<shelf.Response> _handlePut(
-      shelf.Request request, String fsPath) async {
+    shelf.Request request,
+    String fsPath,
+  ) async {
     final parent = Directory(p.dirname(fsPath));
     if (!parent.existsSync()) parent.createSync(recursive: true);
     final file = File(fsPath);
@@ -2812,11 +2930,15 @@ class FushiSyncServer {
       // response — matching the download paths' cleanup (HBK-AUDIT-029).
       try {
         await sink.close();
-      } catch (_) {/* best-effort: failure is non-critical here */}
+      } catch (_) {
+        /* best-effort: failure is non-critical here */
+      }
       if (file.existsSync()) {
         try {
           file.deleteSync();
-        } catch (_) {/* best-effort: failure is non-critical here */}
+        } catch (_) {
+          /* best-effort: failure is non-critical here */
+        }
       }
       return shelf.Response(500, body: 'Write failed');
     }
@@ -2846,10 +2968,13 @@ class FushiSyncServer {
   Future<shelf.Response> _handleHead(String fsPath) async {
     final file = File(fsPath);
     if (!file.existsSync()) return shelf.Response.notFound('Not found');
-    return shelf.Response.ok(null, headers: {
-      'Content-Type': _guessContentType(fsPath),
-      'Content-Length': '${file.lengthSync()}',
-    });
+    return shelf.Response.ok(
+      null,
+      headers: {
+        'Content-Type': _guessContentType(fsPath),
+        'Content-Length': '${file.lengthSync()}',
+      },
+    );
   }
 
   /// MIME 推断收敛到 hibiki_core 单一映射表 [mimeTypeForFilePath]（命名统一轮 G8）。
@@ -3064,11 +3189,7 @@ class ExportPackageCache {
 
   /// 取 (kind,id) 的缓存导出文件；TTL 内直接命中，否则经 [export] 重新打包。
   /// [export] 返回的临时文件（连同其父临时目录）所有权移交本缓存。
-  Future<File> obtain(
-    String kind,
-    String id,
-    Future<File> Function() export,
-  ) {
+  Future<File> obtain(String kind, String id, Future<File> Function() export) {
     final String key = '$kind|$id';
     final File? hit = _latest[key];
     if (hit != null && hit.existsSync()) {
@@ -3095,8 +3216,9 @@ class ExportPackageCache {
   static String etagFor(File file) {
     final String base = p.basename(file.path);
     final int us = base.indexOf('_');
-    final String seq =
-        (base.startsWith('e') && us > 1) ? base.substring(1, us) : '0';
+    final String seq = (base.startsWith('e') && us > 1)
+        ? base.substring(1, us)
+        : '0';
     final int mtime = file.lastModifiedSync().millisecondsSinceEpoch;
     return '"pkg-$seq-${file.lengthSync()}-$mtime"';
   }
@@ -3105,8 +3227,9 @@ class ExportPackageCache {
     final File exported = await export();
     // 保留原始文件名（扩展名决定 Content-Type，如 .epub → application/epub+zip），
     // 前缀序号防同名不同 key 撞车。
-    final File target =
-        File(p.join(_dir.path, 'e${_seq++}_${p.basename(exported.path)}'));
+    final File target = File(
+      p.join(_dir.path, 'e${_seq++}_${p.basename(exported.path)}'),
+    );
     try {
       exported.renameSync(target.path);
     } on FileSystemException {

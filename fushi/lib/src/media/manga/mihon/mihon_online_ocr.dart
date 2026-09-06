@@ -42,15 +42,15 @@ Future<MangaOcrAutoStartResult> startOnlineMangaOcrWithPreferredEngine({
   );
   final MangaOcrAutoStartResult selected =
       await startMangaOcrWithPreferredEngine(
-    context: context,
-    db: db,
-    bookKey: bookKey,
-    imageDirPath: imagesDirectory.path,
-    startPage: startPage,
-    lensLanguage: lensLanguage,
-    enginesOverride: enginesOverride,
-    lensDisclosureGate: lensDisclosureGate,
-  );
+        context: context,
+        db: db,
+        bookKey: bookKey,
+        imageDirPath: imagesDirectory.path,
+        startPage: startPage,
+        lensLanguage: lensLanguage,
+        enginesOverride: enginesOverride,
+        lensDisclosureGate: lensDisclosureGate,
+      );
   if (!selected.started) return selected;
 
   if (selected.engine == MangaOcrEngineId.googleLens) {
@@ -123,11 +123,12 @@ Future<Directory> materializeOnlineMangaPages({
   await imagesDirectory.create(recursive: true);
   final _OnlinePageIdentityManifest identities =
       await _OnlinePageIdentityManifest.open(
-    File(p.join(imagesDirectory.path, '.mihon-pages.json')),
-    <String>[
-      for (int index = 0; index < total; index++) session.cacheIdentity(index),
-    ],
-  );
+        File(p.join(imagesDirectory.path, '.mihon-pages.json')),
+        <String>[
+          for (int index = 0; index < total; index++)
+            session.cacheIdentity(index),
+        ],
+      );
   final int normalizedStart = startPage.clamp(0, total - 1);
   final List<int> order = <int>[
     for (int index = normalizedStart; index < total; index++) index,
@@ -229,12 +230,12 @@ class MihonOnlineMangaOcr {
     await imagesDirectory.create(recursive: true);
     final _OnlinePageIdentityManifest identities =
         await _OnlinePageIdentityManifest.open(
-      File(p.join(imagesDirectory.path, '.mihon-pages.json')),
-      <String>[
-        for (int index = 0; index < total; index++)
-          session.cacheIdentity(index),
-      ],
-    );
+          File(p.join(imagesDirectory.path, '.mihon-pages.json')),
+          <String>[
+            for (int index = 0; index < total; index++)
+              session.cacheIdentity(index),
+          ],
+        );
     final GoogleLensPageCache cache = GoogleLensPageCache(
       Directory(
         p.join(
@@ -245,8 +246,9 @@ class MihonOnlineMangaOcr {
         ),
       ),
     );
-    final List<MokuroImage> results =
-        List<MokuroImage>.of(initialPayload.images);
+    final List<MokuroImage> results = List<MokuroImage>.of(
+      initialPayload.images,
+    );
     int done = 0;
 
     for (final int pageIndex in order) {
@@ -275,7 +277,8 @@ class MihonOnlineMangaOcr {
         final MokuroImage? memoryCached = _memoryCache.get(memoryKey);
         final MokuroImage? cached =
             memoryCached ?? await cache.read(pageIndex, source);
-        final MokuroImage recognized = cached ??
+        final MokuroImage recognized =
+            cached ??
             await _lens.recognizePageBytes(
               await file.readAsBytes(),
               relativeUrl: relativeUrl,
@@ -319,10 +322,7 @@ class MihonOnlineMangaOcr {
         kMangaOcrOutputFileName,
       ),
     );
-    await _writeTextAtomically(
-      output,
-      jsonEncode(mangaPayloadToJson(payload)),
-    );
+    await _writeTextAtomically(output, jsonEncode(mangaPayloadToJson(payload)));
     emit(
       MangaOcrBackgroundEvent.finished(
         pagesTotal: total,
@@ -374,15 +374,10 @@ class MihonOnlineMangaOcr {
       } on Object catch (error) {
         lastError = error;
         if (attempt >= 2) rethrow;
-        await Future<void>.delayed(
-          Duration(milliseconds: 350 * (attempt + 1)),
-        );
+        await Future<void>.delayed(Duration(milliseconds: 350 * (attempt + 1)));
       }
     }
-    throw GoogleLensOcrException(
-      'image_unavailable',
-      lastError?.toString(),
-    );
+    throw GoogleLensOcrException('image_unavailable', lastError?.toString());
   }
 }
 
@@ -452,10 +447,7 @@ class _OnlinePageIdentityManifest {
     persisted[index] = expected[index];
     await _writeTextAtomically(
       file,
-      jsonEncode(<String, Object?>{
-        'schema_version': 1,
-        'pages': persisted,
-      }),
+      jsonEncode(<String, Object?>{'schema_version': 1, 'pages': persisted}),
     );
   }
 }

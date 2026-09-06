@@ -40,8 +40,9 @@ void main() {
     final File apk = await _fixtureApk(root, 'first.apk', <int>[1, 2, 3]);
     runtime.inspection = _inspection(versionCode: 1, signer: 'AA:BB');
 
-    final MihonInstallProposal untrusted =
-        await manager.prepareLocalInstall(apk.path);
+    final MihonInstallProposal untrusted = await manager.prepareLocalInstall(
+      apk.path,
+    );
     expect(untrusted.signerTrusted, isFalse);
     expect(untrusted.inspection.signerSha256, 'AA:BB');
 
@@ -54,8 +55,9 @@ void main() {
       ),
     );
     final File second = await _fixtureApk(root, 'second.apk', <int>[3, 2, 1]);
-    final MihonInstallProposal trusted =
-        await manager.prepareLocalInstall(second.path);
+    final MihonInstallProposal trusted = await manager.prepareLocalInstall(
+      second.path,
+    );
     expect(trusted.signerTrusted, isTrue);
   });
 
@@ -69,9 +71,7 @@ void main() {
           format: MihonStoreFormat.currentJson.name,
           signingKey: const Value<String?>('aabb'),
           etag: const Value<String?>('"stale-etag"'),
-          lastModified: const Value<String?>(
-            'Wed, 29 Jul 2026 00:00:00 GMT',
-          ),
+          lastModified: const Value<String?>('Wed, 29 Jul 2026 00:00:00 GMT'),
         ),
       );
       manager.dispose();
@@ -80,7 +80,7 @@ void main() {
       final MockClient httpClient = MockClient((http.Request request) async {
         sentConditionalValidator =
             request.headers.containsKey(HttpHeaders.ifNoneMatchHeader) ||
-                request.headers.containsKey(HttpHeaders.ifModifiedSinceHeader);
+            request.headers.containsKey(HttpHeaders.ifModifiedSinceHeader);
         if (sentConditionalValidator) {
           return http.Response('', HttpStatus.notModified);
         }
@@ -172,8 +172,9 @@ void main() {
           trustedAt: 1,
         ),
       );
-      final Directory extensionDirectory =
-          Directory('${root.path}${Platform.pathSeparator}extensions');
+      final Directory extensionDirectory = Directory(
+        '${root.path}${Platform.pathSeparator}extensions',
+      );
       final File installed = File(
         '${extensionDirectory.path}${Platform.pathSeparator}'
         'org.example.fixture.apk',
@@ -182,8 +183,9 @@ void main() {
       runtime.inspection = _inspection(versionCode: 6, signer: 'aabb');
       runtime.failListSources = true;
       final File update = await _fixtureApk(root, 'update.apk', <int>[6]);
-      final MihonInstallProposal proposal =
-          await manager.prepareLocalInstall(update.path);
+      final MihonInstallProposal proposal = await manager.prepareLocalInstall(
+        update.path,
+      );
 
       await expectLater(
         manager.commitInstall(proposal, trustSigner: false),
@@ -253,10 +255,13 @@ void main() {
       if (request.url.path.endsWith('/apk/fresh.apk')) {
         // ZIP 本地文件头魔数：下载器现在会拒收非 APK 的响应（公共镜像限流时
         // 回的 200 + HTML 错误页），fixture 也得是个合法归档。
-        return http.Response.bytes(
-          <int>[0x50, 0x4b, 0x03, 0x04, 9],
-          HttpStatus.ok,
-        );
+        return http.Response.bytes(<int>[
+          0x50,
+          0x4b,
+          0x03,
+          0x04,
+          9,
+        ], HttpStatus.ok);
       }
       // 上游已经删掉的旧 release 资产。
       return http.Response('', HttpStatus.notFound);
@@ -285,8 +290,9 @@ void main() {
       sources: <MihonAvailableSource>[],
     );
 
-    final MihonInstallProposal proposal =
-        await manager.prepareStoreInstall(stale);
+    final MihonInstallProposal proposal = await manager.prepareStoreInstall(
+      stale,
+    );
 
     expect(
       requested,
@@ -310,99 +316,105 @@ void main() {
   // 这条用例真正锁的是**编码**而不是尺度：`index.json` 是 protobuf-JSON，int64 按
   // 规范编成**字符串**（`"versionCode": "104069"`），裸 `as num?` 会当场抛 TypeError
   // 把整份仓库索引炸掉。旧 fixture 用裸数字造索引，结构上测不到这条。
-  test(
-    'BUG-1996: index.json encodes int64 versionCode as a STRING; it parses '
-    'and matches the APK versionCode exactly',
-    () async {
-      await database.upsertMangaExtensionStore(
-        MangaExtensionStoresCompanion.insert(
-          indexUrl: 'https://repo.example/index.json',
-          name: 'Fixture repository',
-          format: MihonStoreFormat.currentJson.name,
-          signingKey: const Value<String?>('aabb'),
-        ),
-      );
-      manager.dispose();
+  test('BUG-1996: index.json encodes int64 versionCode as a STRING; it parses '
+      'and matches the APK versionCode exactly', () async {
+    await database.upsertMangaExtensionStore(
+      MangaExtensionStoresCompanion.insert(
+        indexUrl: 'https://repo.example/index.json',
+        name: 'Fixture repository',
+        format: MihonStoreFormat.currentJson.name,
+        signingKey: const Value<String?>('aabb'),
+      ),
+    );
+    manager.dispose();
 
-      final MockClient httpClient = MockClient((http.Request request) async {
-        if (request.url.path.endsWith('/index.json')) {
-          return http.Response(
-            jsonEncode(<String, Object?>{
-              'name': 'Fixture repository',
-              'badgeLabel': 'Fixture',
-              'signingKey': 'aabb',
-              'extensionList': <String, Object?>{
-                'extensions': <Object?>[
-                  <String, Object?>{
-                    'name': 'Fixture extension',
-                    'packageName': 'org.example.fixture',
-                    'resources': <String, Object?>{
-                      'apkUrl': 'apk/fresh.apk',
-                      'iconUrl': 'icons/fixture.png',
-                    },
-                    'extensionLib': '1.4',
-                    // 索引侧：**字符串**编码的 int64（protobuf-JSON 规范），
-                    // 值与下面 APK 的 android:versionCode 完全相同。
-                    'versionCode': '104069',
-                    'versionName': '1.4.69',
-                    'contentWarning': 'CONTENT_WARNING_SAFE',
-                    'sources': <Object?>[],
+    final MockClient httpClient = MockClient((http.Request request) async {
+      if (request.url.path.endsWith('/index.json')) {
+        return http.Response(
+          jsonEncode(<String, Object?>{
+            'name': 'Fixture repository',
+            'badgeLabel': 'Fixture',
+            'signingKey': 'aabb',
+            'extensionList': <String, Object?>{
+              'extensions': <Object?>[
+                <String, Object?>{
+                  'name': 'Fixture extension',
+                  'packageName': 'org.example.fixture',
+                  'resources': <String, Object?>{
+                    'apkUrl': 'apk/fresh.apk',
+                    'iconUrl': 'icons/fixture.png',
                   },
-                ],
-              },
-            }),
-            HttpStatus.ok,
-          );
-        }
-        if (request.url.path.endsWith('/apk/fresh.apk')) {
-          return http.Response.bytes(
-            <int>[0x50, 0x4b, 0x03, 0x04, 69],
-            HttpStatus.ok,
-          );
-        }
-        return http.Response('', HttpStatus.notFound);
-      });
-      manager = MihonManager(
-        database: database,
-        rootDirectory: root,
-        runtime: runtime,
-        storeClient: MihonExtensionStoreClient(client: httpClient),
-      );
-      await manager.initialise();
-      // APK 侧：android:versionCode，与索引同值（不是「另一个尺度」）。
-      runtime.inspection = _inspection(
-        versionCode: 104069,
-        signer: 'aabb',
-        versionName: '1.4.69',
-        libVersion: '1.4',
-      );
+                  'extensionLib': '1.4',
+                  // 索引侧：**字符串**编码的 int64（protobuf-JSON 规范），
+                  // 值与下面 APK 的 android:versionCode 完全相同。
+                  'versionCode': '104069',
+                  'versionName': '1.4.69',
+                  'contentWarning': 'CONTENT_WARNING_SAFE',
+                  'sources': <Object?>[],
+                },
+              ],
+            },
+          }),
+          HttpStatus.ok,
+        );
+      }
+      if (request.url.path.endsWith('/apk/fresh.apk')) {
+        return http.Response.bytes(<int>[
+          0x50,
+          0x4b,
+          0x03,
+          0x04,
+          69,
+        ], HttpStatus.ok);
+      }
+      return http.Response('', HttpStatus.notFound);
+    });
+    manager = MihonManager(
+      database: database,
+      rootDirectory: root,
+      runtime: runtime,
+      storeClient: MihonExtensionStoreClient(client: httpClient),
+    );
+    await manager.initialise();
+    // APK 侧：android:versionCode，与索引同值（不是「另一个尺度」）。
+    runtime.inspection = _inspection(
+      versionCode: 104069,
+      signer: 'aabb',
+      versionName: '1.4.69',
+      libVersion: '1.4',
+    );
 
-      final MihonAvailableExtension available = MihonAvailableExtension(
-        storeUrl: 'https://repo.example/index.json',
-        name: 'Fixture extension',
-        packageName: 'org.example.fixture',
-        apkUrl: 'https://repo.example/apk/fresh.apk',
-        iconUrl: 'https://repo.example/icons/fixture.png',
-        libVersion: '1.4',
-        extensionVersionCode: 104069,
-        versionName: '1.4.69',
-        language: 'en',
-        contentWarning: 1,
-        sources: const <MihonAvailableSource>[],
-      );
+    final MihonAvailableExtension available = MihonAvailableExtension(
+      storeUrl: 'https://repo.example/index.json',
+      name: 'Fixture extension',
+      packageName: 'org.example.fixture',
+      apkUrl: 'https://repo.example/apk/fresh.apk',
+      iconUrl: 'https://repo.example/icons/fixture.png',
+      libVersion: '1.4',
+      extensionVersionCode: 104069,
+      versionName: '1.4.69',
+      language: 'en',
+      contentWarning: 1,
+      sources: const <MihonAvailableSource>[],
+    );
 
-      // 修复前：`json['versionCode'] as num?` 对字符串抛 TypeError，索引解析整个失败。
-      final MihonInstallProposal proposal =
-          await manager.prepareStoreInstall(available);
+    // 修复前：`json['versionCode'] as num?` 对字符串抛 TypeError，索引解析整个失败。
+    final MihonInstallProposal proposal = await manager.prepareStoreInstall(
+      available,
+    );
 
-      expect(proposal.expected!.extensionVersionCode, 104069,
-          reason: '字符串编码的 int64 必须解析成数，裸 as num? 会抛 TypeError');
-      expect(proposal.inspection.apkVersionCode,
-          proposal.expected!.extensionVersionCode,
-          reason: '索引与 APK 的 versionCode 是同一个量，身份门比的就是它');
-      expect(proposal.inspection.versionName, proposal.expected!.versionName);
-    },
-  );
+    expect(
+      proposal.expected!.extensionVersionCode,
+      104069,
+      reason: '字符串编码的 int64 必须解析成数，裸 as num? 会抛 TypeError',
+    );
+    expect(
+      proposal.inspection.apkVersionCode,
+      proposal.expected!.extensionVersionCode,
+      reason: '索引与 APK 的 versionCode 是同一个量，身份门比的就是它',
+    );
+    expect(proposal.inspection.versionName, proposal.expected!.versionName);
+  });
 
   // 身份门补上 versionName 之后（versionCode 判据**保留**，不是放宽），必须证明新加
   // 的那一条真的会拒：versionCode 两侧同为 104070、只有 versionName 不同仍要拒，且
@@ -447,10 +459,13 @@ void main() {
         );
       }
       if (request.url.path.endsWith('/apk/fresh.apk')) {
-        return http.Response.bytes(
-          <int>[0x50, 0x4b, 0x03, 0x04, 70],
-          HttpStatus.ok,
-        );
+        return http.Response.bytes(<int>[
+          0x50,
+          0x4b,
+          0x03,
+          0x04,
+          70,
+        ], HttpStatus.ok);
       }
       return http.Response('', HttpStatus.notFound);
     });
@@ -487,81 +502,87 @@ void main() {
 
     await expectLater(
       manager.prepareStoreInstall(available),
-      throwsA(isA<MihonRuntimeException>()
-          .having(
-              (MihonRuntimeException e) => e.code, 'code', 'METADATA_MISMATCH')
-          .having((MihonRuntimeException e) => e.message, 'message',
-              allOf(contains('1.4.69'), contains('1.4.70')))),
+      throwsA(
+        isA<MihonRuntimeException>()
+            .having(
+              (MihonRuntimeException e) => e.code,
+              'code',
+              'METADATA_MISMATCH',
+            )
+            .having(
+              (MihonRuntimeException e) => e.message,
+              'message',
+              allOf(contains('1.4.69'), contains('1.4.70')),
+            ),
+      ),
       reason: '异常必须带上两侧实际值，否则下一份用户报告依然不可诊断',
     );
   });
 
-  test('store install reports an extension pulled from the repository',
-      () async {
-    await database.upsertMangaExtensionStore(
-      MangaExtensionStoresCompanion.insert(
-        indexUrl: 'https://repo.example/index.json',
-        name: 'Fixture repository',
-        format: MihonStoreFormat.currentJson.name,
-        signingKey: const Value<String?>('aabb'),
-      ),
-    );
-    manager.dispose();
-
-    final MockClient httpClient = MockClient((http.Request request) async {
-      if (request.url.path.endsWith('/index.json')) {
-        return http.Response(
-          jsonEncode(<String, Object?>{
-            'name': 'Fixture repository',
-            'badgeLabel': 'Fixture',
-            'signingKey': 'aabb',
-            'extensionList': <String, Object?>{'extensions': <Object?>[]},
-          }),
-          HttpStatus.ok,
-        );
-      }
-      return http.Response('', HttpStatus.notFound);
-    });
-    manager = MihonManager(
-      database: database,
-      rootDirectory: root,
-      runtime: runtime,
-      storeClient: MihonExtensionStoreClient(client: httpClient),
-    );
-    await manager.initialise();
-
-    const MihonAvailableExtension stale = MihonAvailableExtension(
-      storeUrl: 'https://repo.example/index.json',
-      name: 'Fixture extension',
-      packageName: 'org.example.fixture',
-      apkUrl: 'https://repo.example/apk/deleted-release.apk',
-      iconUrl: 'https://repo.example/icons/fixture.png',
-      libVersion: '1.6',
-      extensionVersionCode: 8,
-      versionName: '1.6.8',
-      language: 'en',
-      contentWarning: 1,
-      sources: <MihonAvailableSource>[],
-    );
-
-    await expectLater(
-      manager.prepareStoreInstall(stale),
-      throwsA(
-        isA<MihonRuntimeException>().having(
-          (MihonRuntimeException error) => error.code,
-          'code',
-          'EXTENSION_GONE',
+  test(
+    'store install reports an extension pulled from the repository',
+    () async {
+      await database.upsertMangaExtensionStore(
+        MangaExtensionStoresCompanion.insert(
+          indexUrl: 'https://repo.example/index.json',
+          name: 'Fixture repository',
+          format: MihonStoreFormat.currentJson.name,
+          signingKey: const Value<String?>('aabb'),
         ),
-      ),
-    );
-  });
+      );
+      manager.dispose();
+
+      final MockClient httpClient = MockClient((http.Request request) async {
+        if (request.url.path.endsWith('/index.json')) {
+          return http.Response(
+            jsonEncode(<String, Object?>{
+              'name': 'Fixture repository',
+              'badgeLabel': 'Fixture',
+              'signingKey': 'aabb',
+              'extensionList': <String, Object?>{'extensions': <Object?>[]},
+            }),
+            HttpStatus.ok,
+          );
+        }
+        return http.Response('', HttpStatus.notFound);
+      });
+      manager = MihonManager(
+        database: database,
+        rootDirectory: root,
+        runtime: runtime,
+        storeClient: MihonExtensionStoreClient(client: httpClient),
+      );
+      await manager.initialise();
+
+      const MihonAvailableExtension stale = MihonAvailableExtension(
+        storeUrl: 'https://repo.example/index.json',
+        name: 'Fixture extension',
+        packageName: 'org.example.fixture',
+        apkUrl: 'https://repo.example/apk/deleted-release.apk',
+        iconUrl: 'https://repo.example/icons/fixture.png',
+        libVersion: '1.6',
+        extensionVersionCode: 8,
+        versionName: '1.6.8',
+        language: 'en',
+        contentWarning: 1,
+        sources: <MihonAvailableSource>[],
+      );
+
+      await expectLater(
+        manager.prepareStoreInstall(stale),
+        throwsA(
+          isA<MihonRuntimeException>().having(
+            (MihonRuntimeException error) => error.code,
+            'code',
+            'EXTENSION_GONE',
+          ),
+        ),
+      );
+    },
+  );
 }
 
-Future<File> _fixtureApk(
-  Directory root,
-  String name,
-  List<int> bytes,
-) async {
+Future<File> _fixtureApk(Directory root, String name, List<int> bytes) async {
   final File file = File('${root.path}${Platform.pathSeparator}$name');
   await file.writeAsBytes(bytes, flush: true);
   return file;
@@ -577,36 +598,34 @@ MihonExtensionInspection _inspection({
   required String signer,
   String? versionName,
   String libVersion = '1.6',
-}) =>
-    MihonExtensionInspection(
-      packageName: 'org.example.fixture',
-      name: 'Fixture extension',
-      apkVersionCode: versionCode,
-      versionName: versionName ?? '1.6.$versionCode',
-      libVersion: libVersion,
-      signerSha256: signer,
-      sourceClasses: const <String>['FixtureSource'],
-    );
+}) => MihonExtensionInspection(
+  packageName: 'org.example.fixture',
+  name: 'Fixture extension',
+  apkVersionCode: versionCode,
+  versionName: versionName ?? '1.6.$versionCode',
+  libVersion: libVersion,
+  signerSha256: signer,
+  sourceClasses: const <String>['FixtureSource'],
+);
 
 Future<void> _seedInstalled(
   FushiDatabase database, {
   required int versionCode,
   required String signer,
-}) =>
-    database.upsertMangaExtension(
-      MangaExtensionsCompanion.insert(
-        packageName: 'org.example.fixture',
-        name: 'Fixture extension',
-        versionCode: versionCode,
-        versionName: '1.6.$versionCode',
-        libVersion: '1.6',
-        language: 'en',
-        apkPath: 'extensions/org.example.fixture.apk',
-        apkSha256: 'old',
-        signerSha256: signer,
-        installedAt: 1,
-      ),
-    );
+}) => database.upsertMangaExtension(
+  MangaExtensionsCompanion.insert(
+    packageName: 'org.example.fixture',
+    name: 'Fixture extension',
+    versionCode: versionCode,
+    versionName: '1.6.$versionCode',
+    libVersion: '1.6',
+    language: 'en',
+    apkPath: 'extensions/org.example.fixture.apk',
+    apkSha256: 'old',
+    signerSha256: signer,
+    installedAt: 1,
+  ),
+);
 
 class _InstallRuntime extends Fake implements MihonRuntime {
   MihonExtensionInspection inspection = _inspection(
@@ -628,10 +647,7 @@ class _InstallRuntime extends Fake implements MihonRuntime {
     List<MihonPreference> preferences = const <MihonPreference>[],
   }) async {
     if (failListSources) {
-      throw const MihonRuntimeException(
-        'LOAD_FAILED',
-        'Fixture load failed',
-      );
+      throw const MihonRuntimeException('LOAD_FAILED', 'Fixture load failed');
     }
     return const <MihonSource>[
       MihonSource(

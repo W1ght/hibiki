@@ -37,10 +37,13 @@ Dio _dioWith(_FakeAdapter adapter) {
   return dio;
 }
 
-ResponseBody _body(String text, {int status = 200}) =>
-    ResponseBody.fromString(text, status, headers: <String, List<String>>{
-      Headers.contentTypeHeader: <String>['application/json'],
-    });
+ResponseBody _body(String text, {int status = 200}) => ResponseBody.fromString(
+  text,
+  status,
+  headers: <String, List<String>>{
+    Headers.contentTypeHeader: <String>['application/json'],
+  },
+);
 
 void main() {
   group('DictionaryUpdateService.needsUpdate', () {
@@ -112,8 +115,9 @@ void main() {
 
   group('DictionaryUpdateService.fetchRemoteIndex (注入 Dio)', () {
     test('200 + 合法 index.json → revision', () async {
-      final _FakeAdapter adapter =
-          _FakeAdapter((String url) => _body('{"revision":"2026-06-20"}'));
+      final _FakeAdapter adapter = _FakeAdapter(
+        (String url) => _body('{"revision":"2026-06-20"}'),
+      );
       final Dio dio = _dioWith(adapter);
       final String? rev = await DictionaryUpdateService.fetchRemoteIndex(
         'https://x/index.json',
@@ -127,18 +131,26 @@ void main() {
     test('body 空 → null', () async {
       final Dio dio = _dioWith(_FakeAdapter((String url) => _body('')));
       expect(
-        await DictionaryUpdateService.fetchRemoteIndex('https://x/i.json',
-            dio: dio),
+        await DictionaryUpdateService.fetchRemoteIndex(
+          'https://x/i.json',
+          dio: dio,
+        ),
         isNull,
       );
     });
 
     test('网络抛错 → null（不崩）', () async {
-      final Dio dio = _dioWith(_FakeAdapter((String url) =>
-          throw DioError(requestOptions: RequestOptions(path: url))));
+      final Dio dio = _dioWith(
+        _FakeAdapter(
+          (String url) =>
+              throw DioError(requestOptions: RequestOptions(path: url)),
+        ),
+      );
       expect(
-        await DictionaryUpdateService.fetchRemoteIndex('https://x/i.json',
-            dio: dio),
+        await DictionaryUpdateService.fetchRemoteIndex(
+          'https://x/i.json',
+          dio: dio,
+        ),
         isNull,
       );
     });
@@ -156,9 +168,9 @@ void main() {
 
       final DictionaryRemoteIndexResult result =
           await DictionaryUpdateService.fetchRemoteIndexResult(
-        'https://x/index.json',
-        dio: dio,
-      );
+            'https://x/index.json',
+            dio: dio,
+          );
 
       expect(result.succeeded, isTrue);
       expect(result.revision, '2026-07-29');
@@ -177,14 +189,14 @@ void main() {
 
       final DictionaryRemoteIndexResult networkResult =
           await DictionaryUpdateService.fetchRemoteIndexResult(
-        'https://x/network.json',
-        dio: networkDio,
-      );
+            'https://x/network.json',
+            dio: networkDio,
+          );
       final DictionaryRemoteIndexResult invalidResult =
           await DictionaryUpdateService.fetchRemoteIndexResult(
-        'https://x/invalid.json',
-        dio: invalidDio,
-      );
+            'https://x/invalid.json',
+            dio: invalidDio,
+          );
 
       expect(networkResult.succeeded, isFalse);
       expect(networkResult.revision, isNull);

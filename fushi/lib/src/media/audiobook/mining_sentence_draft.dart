@@ -7,10 +7,7 @@ import 'package:fushi_audio/fushi_audio.dart';
 /// [MiningSentenceDraft] 把各条 [audioRange] 收敛成首句起→末句止的合并区间；跨章/
 /// 跨音频文件无法合并时退化为「只合文本」（[mergeMiningAudioRanges] 返回 null）。
 class MiningDraftSentence {
-  const MiningDraftSentence({
-    required this.sentence,
-    this.audioRange,
-  });
+  const MiningDraftSentence({required this.sentence, this.audioRange});
 
   final String sentence;
   final AudioPlaybackRange? audioRange;

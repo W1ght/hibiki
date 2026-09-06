@@ -111,8 +111,9 @@ class DiscoveryHeaderControls extends StatelessWidget {
               Expanded(
                 child: FushiSearchField(
                   fieldKey: const ValueKey<String>('discovery_search_field'),
-                  clearButtonKey:
-                      const ValueKey<String>('discovery_search_clear'),
+                  clearButtonKey: const ValueKey<String>(
+                    'discovery_search_clear',
+                  ),
                   focusId: searchFocusId,
                   controller: searchController,
                   focusNode: searchFocusNode,

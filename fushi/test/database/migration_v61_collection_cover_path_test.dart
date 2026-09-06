@@ -68,8 +68,11 @@ CREATE TABLE media_collection_items (
 
     final version = await db.customSelect('PRAGMA user_version').getSingle();
     expect(version.read<int>('user_version'), db.schemaVersion);
-    expect(db.schemaVersion, 96,
-        reason: 'v61 给 media_collections 加合集自有封面列（BUG-1211）');
+    expect(
+      db.schemaVersion,
+      96,
+      reason: 'v61 给 media_collections 加合集自有封面列（BUG-1211）',
+    );
 
     final MediaCollectionRow? legacy = await db.getMediaCollectionById(7);
     expect(legacy, isNotNull, reason: '旧合集行原样保留');
@@ -80,25 +83,33 @@ CREATE TABLE media_collection_items (
     expect(legacy.createdAt, 1700000000000);
     expect(legacy.orderUpdatedAt, 1700000001000);
     expect(legacy.anilistId, 12345);
-    expect(legacy.coverPath, isNull,
-        reason: '新列对既有行必须是 NULL = 渲染继续借成员封面，老合集封面不变白');
+    expect(
+      legacy.coverPath,
+      isNull,
+      reason: '新列对既有行必须是 NULL = 渲染继续借成员封面，老合集封面不变白',
+    );
 
     // 成员引用行零破坏。
     final List<MediaCollectionItemRow> items = await db.getCollectionItems(7);
-    expect(items.map((MediaCollectionItemRow m) => m.entryKey),
-        <String>['video/ep1']);
+    expect(items.map((MediaCollectionItemRow m) => m.entryKey), <String>[
+      'video/ep1',
+    ]);
   });
 
   test('v61：新列可写可读可清', () async {
     final FushiDatabase db = await openV60Db();
 
     await db.updateMediaCollectionCoverPath(7, r'D:\covers\collections\7.jpg');
-    expect((await db.getMediaCollectionById(7))?.coverPath,
-        r'D:\covers\collections\7.jpg');
+    expect(
+      (await db.getMediaCollectionById(7))?.coverPath,
+      r'D:\covers\collections\7.jpg',
+    );
 
     // 写自有封面绝不动 cover_source（两列正交）。
     expect(
-        (await db.getMediaCollectionById(7))?.coverSource, 'video|video/ep1');
+      (await db.getMediaCollectionById(7))?.coverSource,
+      'video|video/ep1',
+    );
 
     await db.updateMediaCollectionCoverPath(7, null);
     expect((await db.getMediaCollectionById(7))?.coverPath, isNull);

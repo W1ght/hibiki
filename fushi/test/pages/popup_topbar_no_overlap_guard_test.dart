@@ -20,21 +20,21 @@ import '../widgets/widget_test_helpers.dart';
 void main() {
   // 模拟 reader 音频行：固定尺寸按钮 + 内部 FittedBox 收缩（与生产 header 同结构）。
   Widget shrinkableHeader() => const FittedBox(
-        fit: BoxFit.scaleDown,
-        child: SizedBox(
-          key: Key('test-popup-header'),
-          height: 40,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              SizedBox(width: 48, child: Icon(Icons.star_border)),
-              SizedBox(width: 48, child: Icon(Icons.replay)),
-              SizedBox(width: 48, child: Icon(Icons.play_arrow)),
-              SizedBox(width: 48, child: Icon(Icons.play_circle_outline)),
-            ],
-          ),
-        ),
-      );
+    fit: BoxFit.scaleDown,
+    child: SizedBox(
+      key: Key('test-popup-header'),
+      height: 40,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          SizedBox(width: 48, child: Icon(Icons.star_border)),
+          SizedBox(width: 48, child: Icon(Icons.replay)),
+          SizedBox(width: 48, child: Icon(Icons.play_arrow)),
+          SizedBox(width: 48, child: Icon(Icons.play_circle_outline)),
+        ],
+      ),
+    ),
+  );
 
   Future<void> pumpLayer(
     WidgetTester tester,
@@ -68,8 +68,7 @@ void main() {
     await tester.pump();
   }
 
-  testWidgets(
-      'narrow popup top bar keeps font buttons, header and close from '
+  testWidgets('narrow popup top bar keeps font buttons, header and close from '
       'overlapping (BUG-826)', (WidgetTester tester) async {
     // 最窄合法宽度（弹窗尺寸下限）——旧 Stack 在此宽必重叠。
     await pumpLayer(tester, kLookupPopupMinWidth);
@@ -88,8 +87,9 @@ void main() {
     final Rect header = rectOf(find.byKey(const Key('test-popup-header')));
 
     // 左簇（A−/A+）整体在 header 左侧、右端关闭在 header 右侧——三者不水平重叠。
-    final double leftClusterRight =
-        zoomOut.right > zoomIn.right ? zoomOut.right : zoomIn.right;
+    final double leftClusterRight = zoomOut.right > zoomIn.right
+        ? zoomOut.right
+        : zoomIn.right;
     expect(
       leftClusterRight,
       lessThanOrEqualTo(header.left + 0.5),
@@ -106,8 +106,7 @@ void main() {
     expect(header.right, lessThanOrEqualTo(kLookupPopupMinWidth + 0.5));
   });
 
-  test(
-      'reader audio header shrinks to fit instead of clipping/overlapping '
+  test('reader audio header shrinks to fit instead of clipping/overlapping '
       '(BUG-826)', () {
     // 源码守卫：reader 音频行必须内部 FittedBox(scaleDown) + mainAxisSize.min，窄宽等比
     // 缩小而非裁切/溢出。弹窗跑真 WebView 无法 headless 全量挂，故锁源码契约。
@@ -115,8 +114,11 @@ void main() {
       'lib/src/pages/implementations/reader_fushi_page.dart',
     ).readAsStringSync();
     final int start = src.indexOf('Widget? buildPopupAudioControls()');
-    expect(start, isNonNegative,
-        reason: 'buildPopupAudioControls 必须存在（顶栏 header 构建入口）。');
+    expect(
+      start,
+      isNonNegative,
+      reason: 'buildPopupAudioControls 必须存在（顶栏 header 构建入口）。',
+    );
     final int end = src.indexOf('// ── Helpers', start);
     expect(end, greaterThan(start));
     final String fn = src.substring(start, end);
@@ -149,55 +151,56 @@ void main() {
   // 在工作，不是恒绿），包了必不 overflow。生产侧真的走了 FittedBox 这条结构，由
   // `test/pages/video_popup_cue_actions_guard_test.dart` 的源码扫描钉住。
   Widget realIconButtons() => Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          for (final IconData icon in <IconData>[
-            Icons.replay,
-            Icons.play_arrow,
-            Icons.content_copy_outlined,
-            Icons.star_border,
-          ])
-            FushiIconButton(
-              icon: icon,
-              tooltip: 'action',
-              size: 20,
-              onTap: () {},
-            ),
-        ],
-      );
+    mainAxisSize: MainAxisSize.min,
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      for (final IconData icon in <IconData>[
+        Icons.replay,
+        Icons.play_arrow,
+        Icons.content_copy_outlined,
+        Icons.star_border,
+      ])
+        FushiIconButton(icon: icon, tooltip: 'action', size: 20, onTap: () {}),
+    ],
+  );
 
   testWidgets(
-      'video popup header with four real icon buttons does not overflow at '
-      'min popup width (BUG-826)', (WidgetTester tester) async {
-    // 负向对照：裸 Row（生产代码修复前的形态）在下限宽必 RenderFlex overflow。
-    await pumpLayer(tester, kLookupPopupMinWidth,
+    'video popup header with four real icon buttons does not overflow at '
+    'min popup width (BUG-826)',
+    (WidgetTester tester) async {
+      // 负向对照：裸 Row（生产代码修复前的形态）在下限宽必 RenderFlex overflow。
+      await pumpLayer(
+        tester,
+        kLookupPopupMinWidth,
         header: Container(
           padding: const EdgeInsets.symmetric(vertical: 4),
           child: realIconButtons(),
-        ));
-    final Object? bare = tester.takeException();
-    expect(
-      bare,
-      isNotNull,
-      reason: '负向对照失效：裸 Row 在最窄弹窗竟没溢出，说明这条判据已量不到真实尺寸，'
-          '正向断言随之变成恒绿。请复核 FushiIconButton 尺寸或顶栏左右簇宽度。',
-    );
-    expect('$bare', contains('overflowed'));
+        ),
+      );
+      final Object? bare = tester.takeException();
+      expect(
+        bare,
+        isNotNull,
+        reason:
+            '负向对照失效：裸 Row 在最窄弹窗竟没溢出，说明这条判据已量不到真实尺寸，'
+            '正向断言随之变成恒绿。请复核 FushiIconButton 尺寸或顶栏左右簇宽度。',
+      );
+      expect('$bare', contains('overflowed'));
 
-    // 正向：包 FittedBox(scaleDown) + mainAxisSize.min 后等比缩小，零溢出。
-    await pumpLayer(tester, kLookupPopupMinWidth,
+      // 正向：包 FittedBox(scaleDown) + mainAxisSize.min 后等比缩小，零溢出。
+      await pumpLayer(
+        tester,
+        kLookupPopupMinWidth,
         header: Container(
           padding: const EdgeInsets.symmetric(vertical: 4),
-          child: FittedBox(
-            fit: BoxFit.scaleDown,
-            child: realIconButtons(),
-          ),
-        ));
-    expect(
-      tester.takeException(),
-      isNull,
-      reason: 'FittedBox(scaleDown) 必须把 4 颗按钮缩到有界宽内，绝不横向溢出/裁切。',
-    );
-  });
+          child: FittedBox(fit: BoxFit.scaleDown, child: realIconButtons()),
+        ),
+      );
+      expect(
+        tester.takeException(),
+        isNull,
+        reason: 'FittedBox(scaleDown) 必须把 4 颗按钮缩到有界宽内，绝不横向溢出/裁切。',
+      );
+    },
+  );
 }

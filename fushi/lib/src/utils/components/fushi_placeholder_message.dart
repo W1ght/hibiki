@@ -61,7 +61,8 @@ class FushiPlaceholderMessage extends StatelessWidget {
               children: [
                 Icon(
                   icon,
-                  size: iconSize ??
+                  size:
+                      iconSize ??
                       Theme.of(context).textTheme.headlineMedium?.fontSize,
                   color: foreground,
                 ),
@@ -69,10 +70,11 @@ class FushiPlaceholderMessage extends StatelessWidget {
                 Text(
                   message,
                   textAlign: TextAlign.center,
-                  style: messageStyle ??
-                      Theme.of(context).textTheme.bodyLarge?.copyWith(
-                            color: foreground,
-                          ),
+                  style:
+                      messageStyle ??
+                      Theme.of(
+                        context,
+                      ).textTheme.bodyLarge?.copyWith(color: foreground),
                 ),
                 if (detail != null) ...[
                   SizedBox(height: tokens.spacing.gap / 2),
@@ -81,9 +83,9 @@ class FushiPlaceholderMessage extends StatelessWidget {
                     textAlign: TextAlign.center,
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: foreground,
-                        ),
+                    style: Theme.of(
+                      context,
+                    ).textTheme.bodySmall?.copyWith(color: foreground),
                   ),
                 ],
                 if (action != null) ...[

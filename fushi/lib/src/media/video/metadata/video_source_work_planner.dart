@@ -59,8 +59,8 @@ class VideoSourceWorkPlanner {
         .toList();
     if (sourceBooks.isEmpty) return const <VideoSourceScrapeWork>[];
 
-    final List<MediaCollectionItemRow> allItems =
-        await _database.getAllCollectionItems();
+    final List<MediaCollectionItemRow> allItems = await _database
+        .getAllCollectionItems();
     final Map<String, int> primaryCollections =
         multiMemberCollectionIdByVideoUid(allItems);
     final Map<int, MediaCollectionRow> collections = <int, MediaCollectionRow>{
@@ -76,16 +76,19 @@ class VideoSourceWorkPlanner {
       // 可独立识别的作品，不能让一次来源刮削多出四个必失败任务。
       if (classifyLocalVideoExtra(book.videoPath) != null) continue;
       final int? collectionId = primaryCollections[book.bookUid];
-      final VideoNameInfo parsed =
-          parseVideoFilename(p.basename(book.videoPath));
+      final VideoNameInfo parsed = parseVideoFilename(
+        p.basename(book.videoPath),
+      );
       if (collectionId == null ||
           collections[collectionId] == null ||
           parsed.episode == null) {
-        result.add(VideoSourceScrapeWork(
-          source: source,
-          title: book.title,
-          members: <VideoBookRow>[book],
-        ));
+        result.add(
+          VideoSourceScrapeWork(
+            source: source,
+            title: book.title,
+            members: <VideoBookRow>[book],
+          ),
+        );
         continue;
       }
       grouped.putIfAbsent(collectionId, () => <VideoBookRow>[]).add(book);
@@ -93,19 +96,24 @@ class VideoSourceWorkPlanner {
 
     for (final MapEntry<int, List<VideoBookRow>> entry in grouped.entries) {
       final MediaCollectionRow collection = collections[entry.key]!;
-      entry.value.sort((VideoBookRow a, VideoBookRow b) =>
-          a.videoPath.toLowerCase().compareTo(b.videoPath.toLowerCase()));
-      result.add(VideoSourceScrapeWork(
-        source: source,
-        collection: collection,
-        title: collection.name,
-        members: List<VideoBookRow>.unmodifiable(entry.value),
-      ));
+      entry.value.sort(
+        (VideoBookRow a, VideoBookRow b) =>
+            a.videoPath.toLowerCase().compareTo(b.videoPath.toLowerCase()),
+      );
+      result.add(
+        VideoSourceScrapeWork(
+          source: source,
+          collection: collection,
+          title: collection.name,
+          members: List<VideoBookRow>.unmodifiable(entry.value),
+        ),
+      );
     }
 
     result.sort((VideoSourceScrapeWork a, VideoSourceScrapeWork b) {
-      final int byTitle =
-          a.title.toLowerCase().compareTo(b.title.toLowerCase());
+      final int byTitle = a.title.toLowerCase().compareTo(
+        b.title.toLowerCase(),
+      );
       if (byTitle != 0) return byTitle;
       return a.stableKey.compareTo(b.stableKey);
     });

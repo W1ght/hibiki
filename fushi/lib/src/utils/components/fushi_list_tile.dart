@@ -43,27 +43,23 @@ class FushiListTile extends StatelessWidget {
     return FushiListItem(
       selected: selected,
       onTap: onTap,
-      leading: Icon(
-        icon,
-        color: foregroundColor,
-      ),
+      leading: Icon(icon, color: foregroundColor),
       title: FushiMarquee(
         text: title,
-        style:
-            foregroundColor == null ? null : TextStyle(color: foregroundColor),
+        style: foregroundColor == null
+            ? null
+            : TextStyle(color: foregroundColor),
       ),
       subtitle: FushiMarquee(
         text: subtitle,
-        style:
-            foregroundColor == null ? null : TextStyle(color: foregroundColor),
+        style: foregroundColor == null
+            ? null
+            : TextStyle(color: foregroundColor),
       ),
       trailing: trailing != null && selected
           ? Row(
               mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                trailing!,
-                const Gap(6),
-              ],
+              children: <Widget>[trailing!, const Gap(6)],
             )
           : const Gap(6),
     );

@@ -55,16 +55,16 @@ class WebDavOps {
     Duration connectionTimeout = const Duration(seconds: 60),
     String? pinnedFingerprint,
     void Function()? onConnectivityError,
-  })  : _baseUrl = baseUrl,
-        _connectionTimeout = connectionTimeout,
-        _pinnedFingerprint = pinnedFingerprint,
-        _onConnectivityError = onConnectivityError,
-        // 用户名和密码都空 = 匿名 / 无鉴权 WebDAV：根本不带 Authorization 头，
-        // 而不是发 `Basic base64(':')`（很多匿名服务器仍会因此回 401）。任一凭据
-        // 非空时行为完全不变（BUG-1016）。
-        _authHeader = (username.isEmpty && password.isEmpty)
-            ? null
-            : 'Basic ${base64Encode(utf8.encode('$username:$password'))}';
+  }) : _baseUrl = baseUrl,
+       _connectionTimeout = connectionTimeout,
+       _pinnedFingerprint = pinnedFingerprint,
+       _onConnectivityError = onConnectivityError,
+       // 用户名和密码都空 = 匿名 / 无鉴权 WebDAV：根本不带 Authorization 头，
+       // 而不是发 `Basic base64(':')`（很多匿名服务器仍会因此回 401）。任一凭据
+       // 非空时行为完全不变（BUG-1016）。
+       _authHeader = (username.isEmpty && password.isEmpty)
+           ? null
+           : 'Basic ${base64Encode(utf8.encode('$username:$password'))}';
 
   final String _baseUrl;
   final String? _authHeader;
@@ -190,7 +190,8 @@ class WebDavOps {
     await mkcolResp.drain<void>();
     if (mkcolResp.statusCode >= 400 && mkcolResp.statusCode != 405) {
       throw SyncBackendError(
-          'Failed to create folder: ${mkcolResp.statusCode}');
+        'Failed to create folder: ${mkcolResp.statusCode}',
+      );
     }
   }
 
@@ -242,8 +243,10 @@ class WebDavOps {
 
     final body = await response.transform(utf8.decoder).join();
     if (response.statusCode != 207) {
-      throw SyncBackendError('PROPFIND failed: ${response.statusCode}',
-          isRetryable: response.statusCode == 404);
+      throw SyncBackendError(
+        'PROPFIND failed: ${response.statusCode}',
+        isRetryable: response.statusCode == 404,
+      );
     }
     return parsePropfindResponse(body, path);
   }
@@ -251,13 +254,16 @@ class WebDavOps {
   List<DavEntry> parsePropfindResponse(String xml, String basePath) {
     final entries = <DavEntry>[];
     final responsePattern = RegExp(
-        r'<(?:[a-zA-Z0-9]+:)?response[>\s](.*?)</(?:[a-zA-Z0-9]+:)?response>',
-        dotAll: true);
-    final hrefPattern =
-        RegExp(r'<(?:[a-zA-Z0-9]+:)?href>(.*?)</(?:[a-zA-Z0-9]+:)?href>');
+      r'<(?:[a-zA-Z0-9]+:)?response[>\s](.*?)</(?:[a-zA-Z0-9]+:)?response>',
+      dotAll: true,
+    );
+    final hrefPattern = RegExp(
+      r'<(?:[a-zA-Z0-9]+:)?href>(.*?)</(?:[a-zA-Z0-9]+:)?href>',
+    );
     final collectionPattern = RegExp(r'<(?:[a-zA-Z0-9]+:)?collection\s*/?>');
     final displayNamePattern = RegExp(
-        r'<(?:[a-zA-Z0-9]+:)?displayname>(.*?)</(?:[a-zA-Z0-9]+:)?displayname>');
+      r'<(?:[a-zA-Z0-9]+:)?displayname>(.*?)</(?:[a-zA-Z0-9]+:)?displayname>',
+    );
 
     for (final match in responsePattern.allMatches(xml)) {
       final block = match.group(1)!;
@@ -280,11 +286,13 @@ class WebDavOps {
       }
 
       final resolvedHref = resolveHref(href, basePath);
-      entries.add(DavEntry(
-        href: resolvedHref,
-        displayName: displayName,
-        isCollection: isCollection,
-      ));
+      entries.add(
+        DavEntry(
+          href: resolvedHref,
+          displayName: displayName,
+          isCollection: isCollection,
+        ),
+      );
     }
     return entries;
   }
@@ -304,7 +312,8 @@ class WebDavOps {
       }
       return href;
     }
-    final isDefaultPort = (baseUri.scheme == 'http' && baseUri.port == 80) ||
+    final isDefaultPort =
+        (baseUri.scheme == 'http' && baseUri.port == 80) ||
         (baseUri.scheme == 'https' && baseUri.port == 443);
     final portSuffix = isDefaultPort ? '' : ':${baseUri.port}';
     return '${baseUri.scheme}://${baseUri.host}$portSuffix$href';
@@ -331,14 +340,20 @@ class WebDavOps {
   }
 
   Future<void> uploadJson(
-      String folderId, String fileName, dynamic data) async {
+    String folderId,
+    String fileName,
+    dynamic data,
+  ) async {
     final path = '$folderId${Uri.encodeComponent(fileName)}';
     final bytes = utf8.encode(jsonEncode(data));
     await putBytes(path, bytes, 'application/json');
   }
 
   Future<void> putBytes(
-      String path, List<int> bytes, String contentType) async {
+    String path,
+    List<int> bytes,
+    String contentType,
+  ) async {
     final request = await buildRequest('PUT', path);
     request.headers.set('Content-Type', contentType);
     request.headers.set('Content-Length', '${bytes.length}');
@@ -393,7 +408,8 @@ class WebDavOps {
     }
   }
 
-  static const propfindBody = '<?xml version="1.0" encoding="utf-8"?>'
+  static const propfindBody =
+      '<?xml version="1.0" encoding="utf-8"?>'
       '<d:propfind xmlns:d="DAV:">'
       '<d:prop>'
       '<d:resourcetype/>'

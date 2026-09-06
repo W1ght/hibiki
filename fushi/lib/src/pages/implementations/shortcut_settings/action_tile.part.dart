@@ -33,10 +33,7 @@ class _ActionTile extends StatelessWidget {
     // channel is no longer invisible in the list view (was data-only pass-through).
     final List<Widget> chips = <Widget>[
       for (final InputBinding b in bindings.keyboardBindings)
-        FushiTagChip(
-          label: b.displayLabel,
-          tone: FushiTagChipTone.surface,
-        ),
+        FushiTagChip(label: b.displayLabel, tone: FushiTagChipTone.surface),
       for (final GamepadBinding b in bindings.gamepadBindings)
         FushiTagChip(
           label: GamepadGlyphs.glyphFor(b.button, brand).symbol,
@@ -58,9 +55,7 @@ class _ActionTile extends StatelessWidget {
       onTap: onEdit,
       title: Text(action.label),
       subtitle: chips.isEmpty
-          ? Text(
-              t.shortcut_tap_to_assign,
-            )
+          ? Text(t.shortcut_tap_to_assign)
           : Wrap(
               spacing: tokens.spacing.gap / 2,
               runSpacing: tokens.spacing.gap / 2,
@@ -88,10 +83,10 @@ class _MouseChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => _InputIconChip(
-        icon: binding.icon,
-        label: binding.label,
-        onDeleted: onDeleted,
-      );
+    icon: binding.icon,
+    label: binding.label,
+    onDeleted: onDeleted,
+  );
 }
 
 /// 「图标 + 名称」的小 chip（FushiTagChip 无 leading icon 位，这里用同款 surface

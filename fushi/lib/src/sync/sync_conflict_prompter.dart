@@ -55,8 +55,9 @@ class SyncConflictPrompter with PromptQueue {
     if (source == ConflictSource.auto) {
       if (inBook) return false; // 阅读中不打断
       // 整组都被本会话忽略过才压制；任一新指纹则仍弹。
-      final bool allSnoozed =
-          conflicts.every((SyncConflict c) => _snoozed.contains(c.fingerprint));
+      final bool allSnoozed = conflicts.every(
+        (SyncConflict c) => _snoozed.contains(c.fingerprint),
+      );
       if (allSnoozed) return false;
     }
     return true; // manual 不受 in-book/snooze 约束
@@ -83,15 +84,16 @@ class SyncConflictPrompter with PromptQueue {
     required List<SyncConflict> conflicts,
     required ConflictSource source,
     required bool inBook,
-  }) =>
-      enqueuePrompt(() => _presentNow(
-            navigatorKey: navigatorKey,
-            db: db,
-            backend: backend,
-            conflicts: conflicts,
-            source: source,
-            inBook: inBook,
-          ));
+  }) => enqueuePrompt(
+    () => _presentNow(
+      navigatorKey: navigatorKey,
+      db: db,
+      backend: backend,
+      conflicts: conflicts,
+      source: source,
+      inBook: inBook,
+    ),
+  );
 
   Future<void> _presentNow({
     required GlobalKey<NavigatorState> navigatorKey,
@@ -111,11 +113,8 @@ class SyncConflictPrompter with PromptQueue {
       final int? applied = await showAppDialog<int>(
         context: ctx,
         barrierDismissible: false,
-        builder: (_) => SyncCompareDialog(
-          db: db,
-          backend: backend,
-          conflictsOnly: true,
-        ),
+        builder: (_) =>
+            SyncCompareDialog(db: db, backend: backend, conflictsOnly: true),
       );
       // applied>0 表示用户至少解决了一项；否则视为取消，本会话静默这组冲突。
       if (applied == null || applied <= 0) markDismissed(conflicts);

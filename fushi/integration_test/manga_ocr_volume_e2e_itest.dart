@@ -59,8 +59,12 @@ const int _kPageHeight = 1700;
 Future<Uint8List> _renderPage() async {
   final ui.PictureRecorder recorder = ui.PictureRecorder();
   final Canvas canvas = Canvas(recorder);
-  final Rect pageRect =
-      Rect.fromLTWH(0, 0, _kPageWidth.toDouble(), _kPageHeight.toDouble());
+  final Rect pageRect = Rect.fromLTWH(
+    0,
+    0,
+    _kPageWidth.toDouble(),
+    _kPageHeight.toDouble(),
+  );
 
   // 页面底色刻意不是纯白（更像扫描页，也让气泡边界对检测器可见）。
   canvas.drawRect(pageRect, Paint()..color = const Color(0xFFE0E0DE));
@@ -70,9 +74,14 @@ Future<Uint8List> _renderPage() async {
     ..style = PaintingStyle.stroke
     ..strokeWidth = 6;
   canvas.drawRect(
-      Rect.fromLTWH(40, 40, _kPageWidth - 80.0, _kPageHeight - 80.0), stroke);
+    Rect.fromLTWH(40, 40, _kPageWidth - 80.0, _kPageHeight - 80.0),
+    stroke,
+  );
   canvas.drawLine(
-      const Offset(40, 850), Offset(_kPageWidth - 40.0, 850), stroke);
+    const Offset(40, 850),
+    Offset(_kPageWidth - 40.0, 850),
+    stroke,
+  );
 
   final Paint bubbleFill = Paint()..color = const Color(0xFFFFFFFF);
   final Paint bubbleStroke = Paint()
@@ -82,7 +91,10 @@ Future<Uint8List> _renderPage() async {
 
   for (final _Bubble b in _kBubbles) {
     final Rect oval = Rect.fromCenter(
-        center: Offset(b.cx, b.cy), width: b.rx * 2, height: b.ry * 2);
+      center: Offset(b.cx, b.cy),
+      width: b.rx * 2,
+      height: b.ry * 2,
+    );
     canvas.drawOval(oval, bubbleFill);
     canvas.drawOval(oval, bubbleStroke);
 
@@ -91,17 +103,22 @@ Future<Uint8List> _renderPage() async {
     final List<String> chars = b.text.split('');
     double y = b.cy - step * chars.length / 2;
     for (final String ch in chars) {
-      final ui.ParagraphBuilder pb = ui.ParagraphBuilder(ui.ParagraphStyle(
-        fontSize: 74,
-        textAlign: TextAlign.center,
-        // 不钉字体族：Apple 上系统回退到 Hiragino，Android 回退到 Noto CJK。
-      ))
-        ..pushStyle(ui.TextStyle(
-          color: const Color(0xFF000000),
-          fontSize: 74,
-          fontWeight: FontWeight.w600,
-        ))
-        ..addText(ch);
+      final ui.ParagraphBuilder pb =
+          ui.ParagraphBuilder(
+              ui.ParagraphStyle(
+                fontSize: 74,
+                textAlign: TextAlign.center,
+                // 不钉字体族：Apple 上系统回退到 Hiragino，Android 回退到 Noto CJK。
+              ),
+            )
+            ..pushStyle(
+              ui.TextStyle(
+                color: const Color(0xFF000000),
+                fontSize: 74,
+                fontWeight: FontWeight.w600,
+              ),
+            )
+            ..addText(ch);
       final ui.Paragraph paragraph = pb.build()
         ..layout(const ui.ParagraphConstraints(width: 120));
       canvas.drawParagraph(paragraph, Offset(b.cx - 60, y));
@@ -176,8 +193,11 @@ void main() {
           ];
     final MangaOcrServiceImpl service = MangaOcrServiceImpl(manifest: manifest);
 
-    expect(service.isSupportedPlatform, isTrue,
-        reason: '${Platform.operatingSystem} 上整卷本地 OCR 闸门应为真');
+    expect(
+      service.isSupportedPlatform,
+      isTrue,
+      reason: '${Platform.operatingSystem} 上整卷本地 OCR 闸门应为真',
+    );
 
     // ---- 模型就位 -------------------------------------------------------
     final Directory modelsDir =
@@ -197,8 +217,10 @@ void main() {
     MangaOcrModelStatus status = await service.modelStatus();
     if (!status.allReady) {
       // ignore: avoid_print
-      print('[e2e] 模型未就绪，开始下载 '
-          '${(status.totalBytes / 1024 / 1024).toStringAsFixed(0)}MB ...');
+      print(
+        '[e2e] 模型未就绪，开始下载 '
+        '${(status.totalBytes / 1024 / 1024).toStringAsFixed(0)}MB ...',
+      );
       final Stopwatch dl = Stopwatch()..start();
       await for (final MangaOcrDownloadEvent _ in service.downloadModels()) {
         // 进度事件仅消费，不打印（逐字节事件会淹没日志）。
@@ -214,8 +236,10 @@ void main() {
     final Stopwatch sw = Stopwatch()..start();
     MangaOcrVolumeEvent? finished;
     MangaOcrAcceleration? acceleration;
-    await for (final MangaOcrVolumeEvent e
-        in service.ocrFolder(imageDirPath: pagesDir.path, volumeTitle: 'e2e')) {
+    await for (final MangaOcrVolumeEvent e in service.ocrFolder(
+      imageDirPath: pagesDir.path,
+      volumeTitle: 'e2e',
+    )) {
       acceleration = e.acceleration ?? acceleration;
       if (e.finished) finished = e;
     }
@@ -225,8 +249,10 @@ void main() {
     expect(finished!.pagesTotal, 1);
 
     // ignore: avoid_print
-    print('[e2e] ${Platform.operatingSystem}: 1 页耗时 '
-        '${sw.elapsedMilliseconds}ms，加速状态 = $acceleration');
+    print(
+      '[e2e] ${Platform.operatingSystem}: 1 页耗时 '
+      '${sw.elapsedMilliseconds}ms，加速状态 = $acceleration',
+    );
 
     // ---- 断言产物 -------------------------------------------------------
     final File mangaJson = File(finished.mangaJsonPath!);
@@ -271,16 +297,23 @@ void main() {
     // 竖排合成页上 manga-ocr 应当基本逐字命中；阈值留出一个字的余量，
     // 既能抓住「模型没跑/跑错」这种真回归，又不会因为单字混淆变 flaky。
     for (int i = 0; i < _kBubbles.length; i++) {
-      expect(scores[i], greaterThanOrEqualTo(0.75),
-          reason: '气泡 "${_kBubbles[i].text}" 识别重合率过低（${scores[i]}）：'
-              '检出块 = $recognised');
+      expect(
+        scores[i],
+        greaterThanOrEqualTo(0.75),
+        reason:
+            '气泡 "${_kBubbles[i].text}" 识别重合率过低（${scores[i]}）：'
+            '检出块 = $recognised',
+      );
     }
 
     // 竖排标记必须落进 manga.json（阅读器覆盖层按它决定排版方向）。
     final int verticalCount = blocks
         .where((Object? b) => (b! as Map<String, Object?>)['vertical'] == true)
         .length;
-    expect(verticalCount, greaterThan(0),
-        reason: '全是竖排气泡，vertical 标记不应全为 false');
+    expect(
+      verticalCount,
+      greaterThan(0),
+      reason: '全是竖排气泡，vertical 标记不应全为 false',
+    );
   }, timeout: const Timeout(Duration(minutes: 30)));
 }

@@ -45,20 +45,32 @@ void main() {
     );
 
     test('图片以外的点击有专桥回传 Dart', () {
-      expect(html, contains("callHandler('$kEmptyTapBridge')"),
-          reason: 'spread 页没有这条桥就没有任何唤出底栏的手势 → 退不出书');
-      expect(html, contains("document.addEventListener('click'"),
-          reason: '专桥必须挂在文档级，才能收到 letterbox 留白 / 页缝上的点击');
+      expect(
+        html,
+        contains("callHandler('$kEmptyTapBridge')"),
+        reason: 'spread 页没有这条桥就没有任何唤出底栏的手势 → 退不出书',
+      );
+      expect(
+        html,
+        contains("document.addEventListener('click'"),
+        reason: '专桥必须挂在文档级，才能收到 letterbox 留白 / 页缝上的点击',
+      );
     });
 
     test('点在图片上仍走图片查看器，不误报成空白点（位置断言）', () {
       final int bridgeIdx = html.indexOf("callHandler('$kEmptyTapBridge')");
       final int guardIdx = html.indexOf("tagName === 'IMG'");
       expect(guardIdx, greaterThan(0), reason: '缺少 IMG 短路');
-      expect(guardIdx, lessThan(bridgeIdx),
-          reason: 'IMG 短路必须在回传之前，否则点图片会被当成空白点');
-      expect(html, contains("callHandler('onImageTap'"),
-          reason: '点图片查看原图是既有行为，不得被本次修复吃掉');
+      expect(
+        guardIdx,
+        lessThan(bridgeIdx),
+        reason: 'IMG 短路必须在回传之前，否则点图片会被当成空白点',
+      );
+      expect(
+        html,
+        contains("callHandler('onImageTap'"),
+        reason: '点图片查看原图是既有行为，不得被本次修复吃掉',
+      );
     });
 
     // 上一条只断言字面量的**位置**，把 `if (...) return;` 改成空块（保留判断、删掉
@@ -67,8 +79,9 @@ void main() {
     // 点 IMG 只能出 onImageTap，点留白才出 onSpreadTapEmpty。
     test('spread 脚本真跑：IMG 短路真生效，点图片不翻底栏（行为级）', () {
       final String payload = jsonEncode(<String, String>{'html': html});
-      final Directory temp =
-          Directory.systemTemp.createTempSync('hibiki-spread-js-');
+      final Directory temp = Directory.systemTemp.createTempSync(
+        'hibiki-spread-js-',
+      );
       final File payloadFile = File('${temp.path}/payload.json')
         ..writeAsStringSync(payload);
       late final ProcessResult result;
@@ -85,7 +98,8 @@ void main() {
       expect(
         result.exitCode,
         0,
-        reason: 'spread JS behavior runner failed:\n'
+        reason:
+            'spread JS behavior runner failed:\n'
             'stdout=${result.stdout}\nstderr=${result.stderr}',
       );
       expect(result.stdout.toString().trim(), 'OK');
@@ -109,13 +123,22 @@ void main() {
       expect(end, greaterThan(idx));
       final String body = source.substring(idx, end);
 
-      expect(body, contains('_handleFloatingChromeReveal()'),
-          reason: '悬浮态必须走唤出/收起状态机');
+      expect(
+        body,
+        contains('_handleFloatingChromeReveal()'),
+        reason: '悬浮态必须走唤出/收起状态机',
+      );
       expect(body, contains('_toggleChrome()'), reason: '挤压态必须能翻转底栏');
-      expect(body, contains('FocusReclaimCause.gesture'),
-          reason: '不夺回 Flutter 焦点则 ESC 退出仍然失效（BUG-136）');
-      expect(containsCodeLine(body, 'tapEmptyToHideChrome'), isFalse,
-          reason: 'spread 没有别的唤出途径，绝不能被「点空白隐藏控制栏」开关关死');
+      expect(
+        body,
+        contains('FocusReclaimCause.gesture'),
+        reason: '不夺回 Flutter 焦点则 ESC 退出仍然失效（BUG-136）',
+      );
+      expect(
+        containsCodeLine(body, 'tapEmptyToHideChrome'),
+        isFalse,
+        reason: 'spread 没有别的唤出途径，绝不能被「点空白隐藏控制栏」开关关死',
+      );
     });
 
     test('点图片路径夺回阅读焦点，ESC 仍能退出', () {
@@ -125,20 +148,31 @@ void main() {
       expect(end, greaterThan(idx));
       final String body = source.substring(idx, end);
 
-      expect(body, contains('FocusReclaimCause.gesture'),
-          reason: '点图片把 OS 焦点交给 WebView，不 reclaim 则看完图后 ESC 退不出书');
-      expect(body, contains('_openImageViewer('),
-          reason: '查看原图是既有行为，reclaim 不得取代它');
+      expect(
+        body,
+        contains('FocusReclaimCause.gesture'),
+        reason: '点图片把 OS 焦点交给 WebView，不 reclaim 则看完图后 ESC 退不出书',
+      );
+      expect(
+        body,
+        contains('_openImageViewer('),
+        reason: '查看原图是既有行为，reclaim 不得取代它',
+      );
     });
 
     // 平台分叉守卫：Android 的 loadDataWithBaseURL 保留 baseUrl，onLoadStop 只比
     // path 的陈旧判据分不出 spread 文档，会把整份正文引擎（含 onTapEmpty）注进来，
     // 与专桥双触发互相抵消。Windows 因 NavigateToString 丢 baseUrl 天然不会。
     test('spread 独立文档不注入正文引擎（Android/Windows 行为拉齐）', () {
-      final String body =
-          methodBody(source, 'Future<void> _onChapterLoadComplete(');
-      expect(containsCodeLine(body, '_spreadDocumentLoaded'), isTrue,
-          reason: 'spread 文档必须在注入正文引擎之前被挡下');
+      final String body = methodBody(
+        source,
+        'Future<void> _onChapterLoadComplete(',
+      );
+      expect(
+        containsCodeLine(body, '_spreadDocumentLoaded'),
+        isTrue,
+        reason: 'spread 文档必须在注入正文引擎之前被挡下',
+      );
 
       final int guardIdx = body.indexOf('if (_spreadDocumentLoaded)');
       final int injectIdx = body.indexOf('readerEngineSource(');
@@ -151,29 +185,45 @@ void main() {
       // 歌词分支自己的 `return;`，把「删掉守卫的 return」这个变异放了过去（实测
       // 假绿）。
       final String guardBlock = methodBody(body, 'if (_spreadDocumentLoaded)');
-      expect(containsCodeLine(guardBlock, 'return;'), isTrue,
-          reason: '判到 spread 却不 return，正文引擎照样注进去');
+      expect(
+        containsCodeLine(guardBlock, 'return;'),
+        isTrue,
+        reason: '判到 spread 却不 return，正文引擎照样注进去',
+      );
 
       // 两个写点必须都在：置位在 spread 装载原语，复位在正文章节装载原语。
       // 少任何一个，标记要么永远为假（守卫真空通过）、要么置位后再不复位
       // （正文章节从此不再注入引擎 = 整个阅读器废掉）。
-      final String setBody =
-          methodBody(source, 'Future<void> _loadSpreadPage(SpreadEntry entry)');
-      expect(containsCodeLine(setBody, '_spreadDocumentLoaded = true'), isTrue,
-          reason: 'spread 装载原语必须置位，否则守卫永远看不到 spread');
-      final String clearBody =
-          methodBody(source, 'Future<void> _loadChapterDirectly(int index)');
+      final String setBody = methodBody(
+        source,
+        'Future<void> _loadSpreadPage(SpreadEntry entry)',
+      );
       expect(
-          containsCodeLine(clearBody, '_spreadDocumentLoaded = false'), isTrue,
-          reason: '正文章节装载原语必须复位，否则翻回正文后引擎再不注入');
+        containsCodeLine(setBody, '_spreadDocumentLoaded = true'),
+        isTrue,
+        reason: 'spread 装载原语必须置位，否则守卫永远看不到 spread',
+      );
+      final String clearBody = methodBody(
+        source,
+        'Future<void> _loadChapterDirectly(int index)',
+      );
+      expect(
+        containsCodeLine(clearBody, '_spreadDocumentLoaded = false'),
+        isTrue,
+        reason: '正文章节装载原语必须复位，否则翻回正文后引擎再不注入',
+      );
 
       // 第三个装载点：歌词。漏掉它 → 从双页页面切进歌词模式时标记残留为真，
       // spread 守卫把歌词分支一起挡掉 → 歌词永远不就绪。
-      final String lyricsBody =
-          methodBody(source, 'Future<void> _loadLyricsPage()');
+      final String lyricsBody = methodBody(
+        source,
+        'Future<void> _loadLyricsPage()',
+      );
       expect(
-          containsCodeLine(lyricsBody, '_spreadDocumentLoaded = false'), isTrue,
-          reason: '歌词装载点必须复位，否则从双页切歌词会被 spread 守卫挡死');
+        containsCodeLine(lyricsBody, '_spreadDocumentLoaded = false'),
+        isTrue,
+        reason: '歌词装载点必须复位，否则从双页切歌词会被 spread 守卫挡死',
+      );
     });
   });
 
@@ -223,16 +273,26 @@ void main() {
 
       // `isNotNull` 在本文件里与 drift 的同名符号撞车（两边都被 import），
       // 故用显式 `!= null`，语义相同。
-      expect(settingsHit != null, isTrue,
-          reason: '$kSettingsFile 里找不到 spread_mode 的兜底默认，守卫已失效');
-      expect(sourceHit != null, isTrue,
-          reason: '$kSourceFile 里找不到 spread_mode 的兜底默认，守卫已失效');
+      expect(
+        settingsHit != null,
+        isTrue,
+        reason: '$kSettingsFile 里找不到 spread_mode 的兜底默认，守卫已失效',
+      );
+      expect(
+        sourceHit != null,
+        isTrue,
+        reason: '$kSourceFile 里找不到 spread_mode 的兜底默认，守卫已失效',
+      );
 
       final String settingsDefault = settingsHit!.group(1)!;
       final String sourceDefault = sourceHit!.group(1)!;
-      expect(sourceDefault, settingsDefault,
-          reason: '两处兜底默认漂开：$kSettingsFile=$settingsDefault / '
-              '$kSourceFile=$sourceDefault');
+      expect(
+        sourceDefault,
+        settingsDefault,
+        reason:
+            '两处兜底默认漂开：$kSettingsFile=$settingsDefault / '
+            '$kSourceFile=$sourceDefault',
+      );
       expect(settingsDefault, 'off', reason: 'BUG-1280：没设置过的用户不得被自动切进双页展开');
     });
   });

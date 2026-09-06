@@ -20,8 +20,9 @@ import 'package:fushi_core/fushi_core.dart';
 ///   （把 collection_sync_engine_test 的收敛场景搬到 endpoint 全链路层）。
 void main() {
   FushiDatabase memDb() {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(DatabaseConnection(NativeDatabase.memory()));
+    final FushiDatabase db = FushiDatabase.forTesting(
+      DatabaseConnection(NativeDatabase.memory()),
+    );
     addTearDown(db.close);
     return db;
   }
@@ -40,27 +41,35 @@ void main() {
   group('目录响应含合集归属（任务5.1）', () {
     test('listBooks 附主合集归属（name/type/sortIndex）', () async {
       final FushiDatabase db = memDb();
-      await db.insertEpubBook(EpubBooksCompanion.insert(
-        bookKey: 'BookA',
-        title: 'BookA',
-        epubPath: '/tmp/BookA.epub',
-        extractDir: '/tmp/BookA',
-        chapterCount: 1,
-        chaptersJson: '[]',
-        importedAt: DateTime.now().millisecondsSinceEpoch,
-      ));
-      final int cid =
-          await db.createMediaCollection('文学全集', collectionType: 'collection');
+      await db.insertEpubBook(
+        EpubBooksCompanion.insert(
+          bookKey: 'BookA',
+          title: 'BookA',
+          epubPath: '/tmp/BookA.epub',
+          extractDir: '/tmp/BookA',
+          chapterCount: 1,
+          chaptersJson: '[]',
+          importedAt: DateTime.now().millisecondsSinceEpoch,
+        ),
+      );
+      final int cid = await db.createMediaCollection(
+        '文学全集',
+        collectionType: 'collection',
+      );
       // v83：本地书的成员行 entryKey = epub_books.uid；'Other' 本地无书行，是
       // 照抄对端 bookKey 的透传行（合集清单跨端 union，本机替对端转发归属）。
       await db.addToCollection(cid, MediaKind.epub, 'Other'); // sortIndex 0
       await db.addToCollection(
-          cid, MediaKind.epub, (await db.resolveEpubBookUid('BookA'))!);
+        cid,
+        MediaKind.epub,
+        (await db.resolveEpubBookUid('BookA'))!,
+      );
       // ↑ sortIndex 1
 
       final List<RemoteBookInfo> books = await buildSvc(db).listBooks();
-      final RemoteBookInfo bookA =
-          books.firstWhere((RemoteBookInfo b) => b.bookKey == 'BookA');
+      final RemoteBookInfo bookA = books.firstWhere(
+        (RemoteBookInfo b) => b.bookKey == 'BookA',
+      );
       expect(bookA.collection, isNotNull);
       expect(bookA.collection!.collectionName, '文学全集');
       expect(bookA.collection!.collectionType, 'collection');
@@ -69,30 +78,34 @@ void main() {
 
     test('listBooks 对不属任何合集的书归属为 null（散卡）', () async {
       final FushiDatabase db = memDb();
-      await db.insertEpubBook(EpubBooksCompanion.insert(
-        bookKey: 'Bare',
-        title: 'Bare',
-        epubPath: '/tmp/Bare.epub',
-        extractDir: '/tmp/Bare',
-        chapterCount: 1,
-        chaptersJson: '[]',
-        importedAt: DateTime.now().millisecondsSinceEpoch,
-      ));
+      await db.insertEpubBook(
+        EpubBooksCompanion.insert(
+          bookKey: 'Bare',
+          title: 'Bare',
+          epubPath: '/tmp/Bare.epub',
+          extractDir: '/tmp/Bare',
+          chapterCount: 1,
+          chaptersJson: '[]',
+          importedAt: DateTime.now().millisecondsSinceEpoch,
+        ),
+      );
       final List<RemoteBookInfo> books = await buildSvc(db).listBooks();
       expect(books.single.collection, isNull);
     });
 
     test('一书属多合集 → 归属跟随最小 collectionId（主归属折叠语义）', () async {
       final FushiDatabase db = memDb();
-      await db.insertEpubBook(EpubBooksCompanion.insert(
-        bookKey: 'Multi',
-        title: 'Multi',
-        epubPath: '/tmp/Multi.epub',
-        extractDir: '/tmp/Multi',
-        chapterCount: 1,
-        chaptersJson: '[]',
-        importedAt: DateTime.now().millisecondsSinceEpoch,
-      ));
+      await db.insertEpubBook(
+        EpubBooksCompanion.insert(
+          bookKey: 'Multi',
+          title: 'Multi',
+          epubPath: '/tmp/Multi.epub',
+          extractDir: '/tmp/Multi',
+          chapterCount: 1,
+          chaptersJson: '[]',
+          importedAt: DateTime.now().millisecondsSinceEpoch,
+        ),
+      );
       final int first = await db.createMediaCollection('先建'); // 较小 id
       final int second = await db.createMediaCollection('后建'); // 较大 id
       expect(first < second, isTrue);
@@ -102,65 +115,86 @@ void main() {
       await db.addToCollection(first, MediaKind.epub, multiUid);
 
       final List<RemoteBookInfo> books = await buildSvc(db).listBooks();
-      final RemoteBookInfo multi =
-          books.firstWhere((RemoteBookInfo b) => b.bookKey == 'Multi');
-      expect(multi.collection!.collectionName, '先建',
-          reason: '主归属 = 最小 collectionId 的合集');
+      final RemoteBookInfo multi = books.firstWhere(
+        (RemoteBookInfo b) => b.bookKey == 'Multi',
+      );
+      expect(
+        multi.collection!.collectionName,
+        '先建',
+        reason: '主归属 = 最小 collectionId 的合集',
+      );
     });
 
     test('v83 窗口期兜底：成员行还是 bookKey（sync 透传行未收敛）时归属不闪断', () async {
       final FushiDatabase db = memDb();
-      await db.insertEpubBook(EpubBooksCompanion.insert(
-        bookKey: 'WindowBook',
-        title: 'WindowBook',
-        epubPath: '/tmp/WindowBook.epub',
-        extractDir: '/tmp/WindowBook',
-        chapterCount: 1,
-        chaptersJson: '[]',
-        importedAt: DateTime.now().millisecondsSinceEpoch,
-      ));
-      final int cid =
-          await db.createMediaCollection('窗口集', collectionType: 'collection');
+      await db.insertEpubBook(
+        EpubBooksCompanion.insert(
+          bookKey: 'WindowBook',
+          title: 'WindowBook',
+          epubPath: '/tmp/WindowBook.epub',
+          extractDir: '/tmp/WindowBook',
+          chapterCount: 1,
+          chaptersJson: '[]',
+          importedAt: DateTime.now().millisecondsSinceEpoch,
+        ),
+      );
+      final int cid = await db.createMediaCollection(
+        '窗口集',
+        collectionType: 'collection',
+      );
       // 刻意用 bookKey 落成员行：模拟「书刚下载落地、sync 尚未把透传行 diff 收敛
       // 成 uid 行」的窗口期。listBooks 组键按 uid 优先、bookKey 兜底，两键任一命
       // 中都要带上归属（收敛由下一轮 apply 完成，此处不许闪断）。
       await db.addToCollection(cid, MediaKind.epub, 'WindowBook');
 
       final List<RemoteBookInfo> books = await buildSvc(db).listBooks();
-      expect(books.single.collection, isNotNull,
-          reason: '未收敛的 bookKey 成员行也必须带归属（uid 优先 + bookKey 兜底）');
+      expect(
+        books.single.collection,
+        isNotNull,
+        reason: '未收敛的 bookKey 成员行也必须带归属（uid 优先 + bookKey 兜底）',
+      );
       expect(books.single.collection!.collectionName, '窗口集');
     });
 
     test('BUG-812: srt-backed 有声书经 srt|uid 成员键折进合集（listBooks 兜底）', () async {
       final FushiDatabase db = memDb();
       // srt-backed 有声书：同 bookKey 既有 EpubBooks 又有 SrtBooks 行。
-      await db.insertEpubBook(EpubBooksCompanion.insert(
-        bookKey: 'AudioVol1',
-        title: 'AudioVol1',
-        epubPath: '/tmp/AudioVol1.epub',
-        extractDir: '/tmp/AudioVol1',
-        chapterCount: 1,
-        chaptersJson: '[]',
-        importedAt: DateTime.now().millisecondsSinceEpoch,
-      ));
-      await db.upsertSrtBook(SrtBooksCompanion.insert(
-        uid: 'srtbook_epub_AudioVol1',
-        title: 'AudioVol1',
-        srtPath: '/tmp/AudioVol1.srt',
-        importedAt: 0,
-        bookKey: const Value('AudioVol1'),
-      ));
-      final int cid =
-          await db.createMediaCollection('有声集', collectionType: 'collection');
+      await db.insertEpubBook(
+        EpubBooksCompanion.insert(
+          bookKey: 'AudioVol1',
+          title: 'AudioVol1',
+          epubPath: '/tmp/AudioVol1.epub',
+          extractDir: '/tmp/AudioVol1',
+          chapterCount: 1,
+          chaptersJson: '[]',
+          importedAt: DateTime.now().millisecondsSinceEpoch,
+        ),
+      );
+      await db.upsertSrtBook(
+        SrtBooksCompanion.insert(
+          uid: 'srtbook_epub_AudioVol1',
+          title: 'AudioVol1',
+          srtPath: '/tmp/AudioVol1.srt',
+          importedAt: 0,
+          bookKey: const Value('AudioVol1'),
+        ),
+      );
+      final int cid = await db.createMediaCollection(
+        '有声集',
+        collectionType: 'collection',
+      );
       // 有声书加入合集时以 srt|uid 存（本地书架当 SRT 卡渲染的成员键），非 epub|bookKey。
       await db.addToCollection(cid, MediaKind.srt, 'srtbook_epub_AudioVol1');
 
       final List<RemoteBookInfo> books = await buildSvc(db).listBooks();
-      final RemoteBookInfo vol1 =
-          books.firstWhere((RemoteBookInfo b) => b.bookKey == 'AudioVol1');
-      expect(vol1.collection, isNotNull,
-          reason: 'srt-backed 有声书应经 srt|uid 兜底带上合集归属（BUG-812）');
+      final RemoteBookInfo vol1 = books.firstWhere(
+        (RemoteBookInfo b) => b.bookKey == 'AudioVol1',
+      );
+      expect(
+        vol1.collection,
+        isNotNull,
+        reason: 'srt-backed 有声书应经 srt|uid 兜底带上合集归属（BUG-812）',
+      );
       expect(vol1.collection!.collectionName, '有声集');
       expect(vol1.collection!.collectionType, 'collection');
       expect(vol1.collection!.sortIndex, 0);
@@ -168,22 +202,26 @@ void main() {
 
     test('BUG-812: 无 srt 成员的 srt-backed 书归属仍为 null（散卡不误折）', () async {
       final FushiDatabase db = memDb();
-      await db.insertEpubBook(EpubBooksCompanion.insert(
-        bookKey: 'LoneAudio',
-        title: 'LoneAudio',
-        epubPath: '/tmp/LoneAudio.epub',
-        extractDir: '/tmp/LoneAudio',
-        chapterCount: 1,
-        chaptersJson: '[]',
-        importedAt: DateTime.now().millisecondsSinceEpoch,
-      ));
-      await db.upsertSrtBook(SrtBooksCompanion.insert(
-        uid: 'srtbook_epub_LoneAudio',
-        title: 'LoneAudio',
-        srtPath: '/tmp/LoneAudio.srt',
-        importedAt: 0,
-        bookKey: const Value('LoneAudio'),
-      ));
+      await db.insertEpubBook(
+        EpubBooksCompanion.insert(
+          bookKey: 'LoneAudio',
+          title: 'LoneAudio',
+          epubPath: '/tmp/LoneAudio.epub',
+          extractDir: '/tmp/LoneAudio',
+          chapterCount: 1,
+          chaptersJson: '[]',
+          importedAt: DateTime.now().millisecondsSinceEpoch,
+        ),
+      );
+      await db.upsertSrtBook(
+        SrtBooksCompanion.insert(
+          uid: 'srtbook_epub_LoneAudio',
+          title: 'LoneAudio',
+          srtPath: '/tmp/LoneAudio.srt',
+          importedAt: 0,
+          bookKey: const Value('LoneAudio'),
+        ),
+      );
       // 不加入任何合集。
       final List<RemoteBookInfo> books = await buildSvc(db).listBooks();
       expect(books.single.collection, isNull);
@@ -191,19 +229,24 @@ void main() {
 
     test('listVideos 附主合集归属', () async {
       final FushiDatabase db = memDb();
-      await db.upsertVideoBook(VideoBooksCompanion.insert(
-        bookUid: 'video/ep1',
-        title: 'Ep1',
-        videoPath: '/tmp/ep1.mp4',
-        importedAt: Value(DateTime.now().millisecondsSinceEpoch),
-      ));
-      final int cid =
-          await db.createMediaCollection('番剧', collectionType: 'playlist');
+      await db.upsertVideoBook(
+        VideoBooksCompanion.insert(
+          bookUid: 'video/ep1',
+          title: 'Ep1',
+          videoPath: '/tmp/ep1.mp4',
+          importedAt: Value(DateTime.now().millisecondsSinceEpoch),
+        ),
+      );
+      final int cid = await db.createMediaCollection(
+        '番剧',
+        collectionType: 'playlist',
+      );
       await db.addToCollection(cid, MediaKind.video, 'video/ep1');
 
       final List<RemoteVideoInfo> videos = await buildSvc(db).listVideos();
-      final RemoteVideoInfo ep1 =
-          videos.firstWhere((RemoteVideoInfo v) => v.id == 'video/ep1');
+      final RemoteVideoInfo ep1 = videos.firstWhere(
+        (RemoteVideoInfo v) => v.id == 'video/ep1',
+      );
       expect(ep1.collection, isNotNull);
       expect(ep1.collection!.collectionName, '番剧');
       expect(ep1.collection!.collectionType, 'playlist');
@@ -212,25 +255,32 @@ void main() {
 
     test('BUG-814: listVideos 对存在的视频文件不做内嵌字幕 ffmpeg 探测（延迟到播放）', () async {
       final FushiDatabase db = memDb();
-      final Directory tmp =
-          Directory.systemTemp.createTempSync('hbk_video_probe');
+      final Directory tmp = Directory.systemTemp.createTempSync(
+        'hbk_video_probe',
+      );
       addTearDown(() => tmp.deleteSync(recursive: true));
       // 存在的视频文件（走 f.existsSync() 分支，旧实现会在此 spawn ffmpeg）。
       final File video = File('${tmp.path}/ep.mp4')
         ..writeAsBytesSync(<int>[0, 0, 0, 0]);
-      await db.upsertVideoBook(VideoBooksCompanion.insert(
-        bookUid: 'video/probe',
-        title: 'Probe',
-        videoPath: video.path,
-        importedAt: Value(DateTime.now().millisecondsSinceEpoch),
-      ));
+      await db.upsertVideoBook(
+        VideoBooksCompanion.insert(
+          bookUid: 'video/probe',
+          title: 'Probe',
+          videoPath: video.path,
+          importedAt: Value(DateTime.now().millisecondsSinceEpoch),
+        ),
+      );
 
       final List<RemoteVideoInfo> videos = await buildSvc(db).listVideos();
-      final RemoteVideoInfo v =
-          videos.firstWhere((RemoteVideoInfo x) => x.id == 'video/probe');
+      final RemoteVideoInfo v = videos.firstWhere(
+        (RemoteVideoInfo x) => x.id == 'video/probe',
+      );
       // 列表端点是纯 DB/stat 读：内嵌轨探测延迟到 /streamurl，列表恒空。
-      expect(v.embeddedSubtitleTracks, isEmpty,
-          reason: 'BUG-814：列表不再枚举内嵌字幕轨（避免逐视频 ffmpeg 超时）');
+      expect(
+        v.embeddedSubtitleTracks,
+        isEmpty,
+        reason: 'BUG-814：列表不再枚举内嵌字幕轨（避免逐视频 ffmpeg 超时）',
+      );
       // sizeBytes 仍来自廉价 stat（证明文件确被识别为存在、走了 existsSync 分支）。
       expect(v.sizeBytes, 4);
       // 无外挂 sidecar → hasSubtitle 为 false（不再靠内嵌轨点亮）。
@@ -238,12 +288,16 @@ void main() {
     });
 
     test('BUG-814 守卫: host 库服务不得在列表路径引用 ffmpeg 内嵌探测', () {
-      final String src =
-          File('lib/src/sync/app_model_library_host_service.dart')
-              .readAsStringSync();
-      expect(src.contains('listEmbeddedSubtitleTracks'), isFalse,
-          reason: 'listVideos 一旦重新引入内嵌字幕 ffmpeg 探测，大库互联视频列表会再次'
-              '超过 client 15s 超时变空（BUG-814 回归）');
+      final String src = File(
+        'lib/src/sync/app_model_library_host_service.dart',
+      ).readAsStringSync();
+      expect(
+        src.contains('listEmbeddedSubtitleTracks'),
+        isFalse,
+        reason:
+            'listVideos 一旦重新引入内嵌字幕 ffmpeg 探测，大库互联视频列表会再次'
+            '超过 client 15s 超时变空（BUG-814 回归）',
+      );
     });
   });
 
@@ -322,56 +376,68 @@ void main() {
       ]);
       await repo.setFushiClientToken(token);
       final InterconnectSyncBackend backend = InterconnectSyncBackend.withProbe(
-          (String url, String tok) async => true);
+        (String url, String tok) async => true,
+      );
       await backend.restoreAuth(repo);
       await backend.authenticate(repo: repo);
       return backend;
     }
 
     SyncOrchestrator orchestrator(
-            FushiDatabase clientDb, InterconnectSyncBackend backend) =>
-        SyncOrchestrator(
-          db: clientDb,
-          backend: backend,
-          dictionaryResourceRoot: Directory.systemTemp,
-          audioDatabaseRoot: Directory.systemTemp,
-          tempDir: Directory.systemTemp,
-          syncStats: false,
-          syncAudioBookPosition: false,
-          syncContent: false,
-          syncAudioBookFiles: false,
-          syncDictionary: false,
-        );
+      FushiDatabase clientDb,
+      InterconnectSyncBackend backend,
+    ) => SyncOrchestrator(
+      db: clientDb,
+      backend: backend,
+      dictionaryResourceRoot: Directory.systemTemp,
+      audioDatabaseRoot: Directory.systemTemp,
+      tempDir: Directory.systemTemp,
+      syncStats: false,
+      syncAudioBookPosition: false,
+      syncContent: false,
+      syncAudioBookFiles: false,
+      syncDictionary: false,
+    );
 
     Future<void> tick() =>
         Future<void>.delayed(const Duration(milliseconds: 3));
 
-    Future<List<String>> orderOf(FushiDatabase db, String name,
-        [String type = 'playlist']) async {
-      final MediaCollectionRow? row =
-          await db.getMediaCollectionByNaturalKey(name, type);
+    Future<List<String>> orderOf(
+      FushiDatabase db,
+      String name, [
+      String type = 'playlist',
+    ]) async {
+      final MediaCollectionRow? row = await db.getMediaCollectionByNaturalKey(
+        name,
+        type,
+      );
       if (row == null) return const <String>[];
-      return (await db.getCollectionItems(row.id))
-          .map((MediaCollectionItemRow m) => m.entryKey)
-          .toList();
+      return (await db.getCollectionItems(
+        row.id,
+      )).map((MediaCollectionItemRow m) => m.entryKey).toList();
     }
 
     test('GET 返回 host 合集清单；POST 把新合集并入 host DB', () async {
-      final int hc =
-          await hostDb.createMediaCollection('S', collectionType: 'playlist');
+      final int hc = await hostDb.createMediaCollection(
+        'S',
+        collectionType: 'playlist',
+      );
       await hostDb.addToCollection(hc, MediaKind.video, 'v1');
 
       final FushiDatabase clientDb = memDb();
       final InterconnectSyncBackend backend = await buildBackend(clientDb);
 
       // GET：host 清单含 S{v1}。
-      final CollectionManifest? remote =
-          await backend.getRemoteCollectionManifest();
+      final CollectionManifest? remote = await backend
+          .getRemoteCollectionManifest();
       expect(remote, isNotNull);
-      final CollectionManifestEntry sEntry = remote!.collections
-          .firstWhere((CollectionManifestEntry e) => e.name == 'S');
-      expect(sEntry.members.map((CollectionManifestMember m) => m.entryKey),
-          <String>['v1']);
+      final CollectionManifestEntry sEntry = remote!.collections.firstWhere(
+        (CollectionManifestEntry e) => e.name == 'S',
+      );
+      expect(
+        sEntry.members.map((CollectionManifestMember m) => m.entryKey),
+        <String>['v1'],
+      );
 
       // POST：推一份含新合集 T{t1} 的清单 → host DB 并入 T。
       final CollectionManifest pushed = CollectionManifest(
@@ -381,44 +447,61 @@ void main() {
             collectionType: 'collection',
             members: <CollectionManifestMember>[
               CollectionManifestMember(
-                  mediaType: 'epub', entryKey: 't1', sortIndex: 0),
+                mediaType: 'epub',
+                entryKey: 't1',
+                sortIndex: 0,
+              ),
             ],
           ),
         ],
       );
       await backend.putRemoteCollectionManifest(pushed);
-      expect(await orderOf(hostDb, 'T', 'collection'), <String>['t1'],
-          reason: 'host POST 端点经 mergeCollectionManifest 并入新合集');
+      expect(
+        await orderOf(hostDb, 'T', 'collection'),
+        <String>['t1'],
+        reason: 'host POST 端点经 mergeCollectionManifest 并入新合集',
+      );
     });
 
     test('双端各建同名 playlist → 一次互推收敛为成员并集（host+client）', () async {
-      final int hc =
-          await hostDb.createMediaCollection('S', collectionType: 'playlist');
+      final int hc = await hostDb.createMediaCollection(
+        'S',
+        collectionType: 'playlist',
+      );
       await hostDb.addToCollection(hc, MediaKind.video, 'v1');
       await hostDb.addToCollection(hc, MediaKind.video, 'v2');
       await tick();
 
       final FushiDatabase clientDb = memDb();
       final InterconnectSyncBackend backend = await buildBackend(clientDb);
-      final int cc =
-          await clientDb.createMediaCollection('S', collectionType: 'playlist');
+      final int cc = await clientDb.createMediaCollection(
+        'S',
+        collectionType: 'playlist',
+      );
       await clientDb.addToCollection(cc, MediaKind.video, 'v9');
       await tick();
 
       final SyncRunReport report = SyncRunReport();
-      await orchestrator(clientDb, backend)
-          .syncCollectionsLiveForTest(report, backend);
+      await orchestrator(
+        clientDb,
+        backend,
+      ).syncCollectionsLiveForTest(report, backend);
 
       expect(report.collectionsUpdated, greaterThan(0));
       expect(await orderOf(clientDb, 'S'), <String>['v1', 'v2', 'v9']);
-      expect(await orderOf(hostDb, 'S'), <String>['v1', 'v2', 'v9'],
-          reason: 'host 端点也并入 client 独有成员，双端并集收敛');
+      expect(await orderOf(hostDb, 'S'), <String>[
+        'v1',
+        'v2',
+        'v9',
+      ], reason: 'host 端点也并入 client 独有成员，双端并集收敛');
     });
 
     test('client 移出成员 → host 端不复活（成员墓碑经 endpoint 生效）', () async {
       // 先收敛：host 建 S{v1,v2,v3}，client 同步一轮取到全部。
-      final int hc =
-          await hostDb.createMediaCollection('S', collectionType: 'playlist');
+      final int hc = await hostDb.createMediaCollection(
+        'S',
+        collectionType: 'playlist',
+      );
       await hostDb.addToCollection(hc, MediaKind.video, 'v1');
       await hostDb.addToCollection(hc, MediaKind.video, 'v2');
       await hostDb.addToCollection(hc, MediaKind.video, 'v3');
@@ -426,32 +509,44 @@ void main() {
 
       final FushiDatabase clientDb = memDb();
       final InterconnectSyncBackend backend = await buildBackend(clientDb);
-      await orchestrator(clientDb, backend)
-          .syncCollectionsLiveForTest(SyncRunReport(), backend);
+      await orchestrator(
+        clientDb,
+        backend,
+      ).syncCollectionsLiveForTest(SyncRunReport(), backend);
       expect(await orderOf(clientDb, 'S'), <String>['v1', 'v2', 'v3']);
       await tick();
 
       // client 移出 v2 → 再同步：host 端应删除 v2（不靠 host 自删）。
-      final int cc =
-          (await clientDb.getMediaCollectionByNaturalKey('S', 'playlist'))!.id;
+      final int cc = (await clientDb.getMediaCollectionByNaturalKey(
+        'S',
+        'playlist',
+      ))!.id;
       await clientDb.removeFromCollection(cc, MediaKind.video, 'v2');
       await tick();
-      await orchestrator(clientDb, backend)
-          .syncCollectionsLiveForTest(SyncRunReport(), backend);
-      expect(await orderOf(hostDb, 'S'), <String>['v1', 'v3'],
-          reason: 'client 移出经 POST 清单的成员墓碑在 host 生效');
+      await orchestrator(
+        clientDb,
+        backend,
+      ).syncCollectionsLiveForTest(SyncRunReport(), backend);
+      expect(await orderOf(hostDb, 'S'), <String>[
+        'v1',
+        'v3',
+      ], reason: 'client 移出经 POST 清单的成员墓碑在 host 生效');
 
       // 多轮互推：host 并集绝不把 v2 复活（无墓碑就会复活——墓碑存在意义）。
       await tick();
-      await orchestrator(clientDb, backend)
-          .syncCollectionsLiveForTest(SyncRunReport(), backend);
+      await orchestrator(
+        clientDb,
+        backend,
+      ).syncCollectionsLiveForTest(SyncRunReport(), backend);
       expect(await orderOf(clientDb, 'S'), <String>['v1', 'v3']);
       expect(await orderOf(hostDb, 'S'), <String>['v1', 'v3']);
     });
 
     test('client 拖序 → host 采 client 序（手动序整合集 LWW 经 endpoint）', () async {
-      final int hc =
-          await hostDb.createMediaCollection('S', collectionType: 'playlist');
+      final int hc = await hostDb.createMediaCollection(
+        'S',
+        collectionType: 'playlist',
+      );
       await hostDb.addToCollection(hc, MediaKind.video, 'v1');
       await hostDb.addToCollection(hc, MediaKind.video, 'v2');
       await hostDb.addToCollection(hc, MediaKind.video, 'v3');
@@ -459,31 +554,40 @@ void main() {
 
       final FushiDatabase clientDb = memDb();
       final InterconnectSyncBackend backend = await buildBackend(clientDb);
-      await orchestrator(clientDb, backend)
-          .syncCollectionsLiveForTest(SyncRunReport(), backend);
+      await orchestrator(
+        clientDb,
+        backend,
+      ).syncCollectionsLiveForTest(SyncRunReport(), backend);
       await tick();
 
-      final int cc =
-          (await clientDb.getMediaCollectionByNaturalKey('S', 'playlist'))!.id;
-      await clientDb.reorderCollectionItems(
-        cc,
-        <({String mediaType, String entryKey})>[
-          (mediaType: 'video', entryKey: 'v3'),
-          (mediaType: 'video', entryKey: 'v1'),
-          (mediaType: 'video', entryKey: 'v2'),
-        ],
+      final int cc = (await clientDb.getMediaCollectionByNaturalKey(
+        'S',
+        'playlist',
+      ))!.id;
+      await clientDb
+          .reorderCollectionItems(cc, <({String mediaType, String entryKey})>[
+            (mediaType: 'video', entryKey: 'v3'),
+            (mediaType: 'video', entryKey: 'v1'),
+            (mediaType: 'video', entryKey: 'v2'),
+          ]);
+      await tick();
+      await orchestrator(
+        clientDb,
+        backend,
+      ).syncCollectionsLiveForTest(SyncRunReport(), backend);
+
+      expect(
+        await orderOf(hostDb, 'S'),
+        <String>['v3', 'v1', 'v2'],
+        reason: 'orderUpdatedAt 新者整表覆盖 sortIndex（host 采 client 序）',
       );
-      await tick();
-      await orchestrator(clientDb, backend)
-          .syncCollectionsLiveForTest(SyncRunReport(), backend);
-
-      expect(await orderOf(hostDb, 'S'), <String>['v3', 'v1', 'v2'],
-          reason: 'orderUpdatedAt 新者整表覆盖 sortIndex（host 采 client 序）');
       // 幂等：再推一轮零变更、host 序不变。
       await tick();
       final SyncRunReport again = SyncRunReport();
-      await orchestrator(clientDb, backend)
-          .syncCollectionsLiveForTest(again, backend);
+      await orchestrator(
+        clientDb,
+        backend,
+      ).syncCollectionsLiveForTest(again, backend);
       expect(again.collectionsUpdated, 0);
       expect(await orderOf(hostDb, 'S'), <String>['v3', 'v1', 'v2']);
     });

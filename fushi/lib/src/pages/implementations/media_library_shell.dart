@@ -121,8 +121,9 @@ class _MediaLibraryShellState extends State<MediaLibraryShell> {
   final Set<int> _visited = <int>{0};
 
   void _select(MediaLibraryViewKind kind) {
-    final int index = widget.views
-        .indexWhere((MediaLibraryViewSpec spec) => spec.kind == kind);
+    final int index = widget.views.indexWhere(
+      (MediaLibraryViewSpec spec) => spec.kind == kind,
+    );
     if (index < 0) return;
     // 「回到壳」的导航所有权收在这一处：切视图发生在壳里，壳上面压着的路由不弹掉
     // 用户就什么都看不见。以本壳自己的路由为界一次弹到底，与调用方压了几层无关
@@ -175,31 +176,33 @@ class _MediaLibraryShellState extends State<MediaLibraryShell> {
         selected: views[_currentIndex].kind,
         onSelect: _select,
         child: Stack(
-        children: <Widget>[
-          for (int i = 0; i < views.length; i++)
-            if (_visited.contains(i))
-              Offstage(
-                offstage: i != _currentIndex,
-                child: TickerMode(
-                  enabled: i == _currentIndex,
-                  // [Offstage] 只关 Flutter 自己的 hitTest；desktop_drop 是进程级
-                  // 全局广播，只按各 drop target 的 `RenderBox.paintBounds` 过滤，
-                  // 而隐藏的保活视图仍以完整约束布局（全屏大小），于是**每个访问过
-                  // 的子视图都会收到同一次 OS drop**。外层 home-shell 的作用域只
-                  // 回答「书/漫画 tab 可见吗」，用户停在同一个 tab 的发现视图时答案
-                  // 照样是 true —— 隐藏的书架仍会把拖入的文件夹当漫画导入。
-                  // 判据与上面 `offstage:` 用的是同一个表达式，且写成回调、在 drop
-                  // 落地那一刻求值。
-                  child: DropSurfaceScope(
-                    isActive: () => i == _currentIndex,
-                    child: views[i].builder(
-                      context,
-                      i == _currentIndex ? navigation : const SizedBox.shrink(),
+          children: <Widget>[
+            for (int i = 0; i < views.length; i++)
+              if (_visited.contains(i))
+                Offstage(
+                  offstage: i != _currentIndex,
+                  child: TickerMode(
+                    enabled: i == _currentIndex,
+                    // [Offstage] 只关 Flutter 自己的 hitTest；desktop_drop 是进程级
+                    // 全局广播，只按各 drop target 的 `RenderBox.paintBounds` 过滤，
+                    // 而隐藏的保活视图仍以完整约束布局（全屏大小），于是**每个访问过
+                    // 的子视图都会收到同一次 OS drop**。外层 home-shell 的作用域只
+                    // 回答「书/漫画 tab 可见吗」，用户停在同一个 tab 的发现视图时答案
+                    // 照样是 true —— 隐藏的书架仍会把拖入的文件夹当漫画导入。
+                    // 判据与上面 `offstage:` 用的是同一个表达式，且写成回调、在 drop
+                    // 落地那一刻求值。
+                    child: DropSurfaceScope(
+                      isActive: () => i == _currentIndex,
+                      child: views[i].builder(
+                        context,
+                        i == _currentIndex
+                            ? navigation
+                            : const SizedBox.shrink(),
+                      ),
                     ),
                   ),
                 ),
-              ),
-        ],
+          ],
         ),
       ),
     );

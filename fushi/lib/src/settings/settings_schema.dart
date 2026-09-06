@@ -54,8 +54,10 @@ _SettingsSchemaCache _schemaSnapshot() {
   final AppLocale locale = LocaleSettings.currentLocale;
   final _SettingsSchemaCache? cached = _schemaCache;
   if (cached != null && cached.locale == locale) return cached;
-  final _SettingsSchemaCache fresh =
-      _SettingsSchemaCache(locale, _buildDestinations());
+  final _SettingsSchemaCache fresh = _SettingsSchemaCache(
+    locale,
+    _buildDestinations(),
+  );
   _schemaCache = fresh;
   return fresh;
 }
@@ -147,8 +149,10 @@ Map<ReaderGroup, List<SettingsItem>> _collectReaderItems(
     }
   }
   for (final List<SettingsItem> items in grouped.values) {
-    items.sort((SettingsItem a, SettingsItem b) =>
-        a.reader!.order.compareTo(b.reader!.order));
+    items.sort(
+      (SettingsItem a, SettingsItem b) =>
+          a.reader!.order.compareTo(b.reader!.order),
+    );
   }
   return _freezeGroups(grouped);
 }
@@ -159,9 +163,12 @@ Map<G, List<SettingsItem>> _freezeGroups<G>(
   Map<G, List<SettingsItem>> grouped,
 ) {
   return Map<G, List<SettingsItem>>.unmodifiable(
-    grouped.map((G group, List<SettingsItem> items) =>
-        MapEntry<G, List<SettingsItem>>(
-            group, List<SettingsItem>.unmodifiable(items))),
+    grouped.map(
+      (G group, List<SettingsItem> items) => MapEntry<G, List<SettingsItem>>(
+        group,
+        List<SettingsItem>.unmodifiable(items),
+      ),
+    ),
   );
 }
 
@@ -183,9 +190,7 @@ SettingsDestination buildReaderGroupDestination(
 
 /// 遍历完整 schema，收集所有带 [VideoPlacement] 的 item，按 group + order 升序
 /// 分组（与 [collectReaderItems] 同款；阶段 B 视频面板据此投影渲染）。
-Map<VideoGroup, List<SettingsItem>> collectVideoItems(
-  SettingsContext context,
-) {
+Map<VideoGroup, List<SettingsItem>> collectVideoItems(SettingsContext context) {
   final _SettingsSchemaCache snapshot = _schemaSnapshot();
   return snapshot.videoItems ??= _collectVideoItems(snapshot.destinations);
 }
@@ -205,8 +210,10 @@ Map<VideoGroup, List<SettingsItem>> _collectVideoItems(
     }
   }
   for (final List<SettingsItem> items in grouped.values) {
-    items.sort((SettingsItem a, SettingsItem b) =>
-        a.video!.order.compareTo(b.video!.order));
+    items.sort(
+      (SettingsItem a, SettingsItem b) =>
+          a.video!.order.compareTo(b.video!.order),
+    );
   }
   return _freezeGroups(grouped);
 }
@@ -250,8 +257,9 @@ SettingsDestination buildVideoGroupDestination(
 SettingsDestination buildReaderQuickSettingsDestination(
   SettingsContext context,
 ) {
-  final Map<ReaderGroup, List<SettingsItem>> grouped =
-      collectReaderItems(context);
+  final Map<ReaderGroup, List<SettingsItem>> grouped = collectReaderItems(
+    context,
+  );
   SettingsSection sectionFor(ReaderGroup group, String title) {
     return SettingsSection(
       title: title,

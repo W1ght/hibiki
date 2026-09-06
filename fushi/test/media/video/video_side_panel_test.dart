@@ -4,8 +4,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/media/video/video_side_panel.dart';
 
 void main() {
-  testWidgets('VideoTranslucentSidePanel keeps the video area visible',
-      (WidgetTester tester) async {
+  testWidgets('VideoTranslucentSidePanel keeps the video area visible', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(
       MaterialApp(
         home: Stack(
@@ -23,10 +24,7 @@ void main() {
 
     final Material material = tester.widget<Material>(
       find
-          .ancestor(
-            of: find.text('Speed'),
-            matching: find.byType(Material),
-          )
+          .ancestor(of: find.text('Speed'), matching: find.byType(Material))
           .first,
     );
     expect(material.color, isNotNull);
@@ -37,8 +35,9 @@ void main() {
     expect(find.byIcon(Icons.close), findsNothing);
   });
 
-  testWidgets('VideoTranslucentSidePanel mirrors rounded side on the left',
-      (WidgetTester tester) async {
+  testWidgets('VideoTranslucentSidePanel mirrors rounded side on the left', (
+    WidgetTester tester,
+  ) async {
     Future<Material> pumpPanel(Alignment alignment) async {
       await tester.pumpWidget(
         MaterialApp(
@@ -56,8 +55,9 @@ void main() {
       return tester.widget<Material>(
         find
             .ancestor(
-              of: find
-                  .text(alignment == Alignment.centerLeft ? 'Left' : 'Right'),
+              of: find.text(
+                alignment == Alignment.centerLeft ? 'Left' : 'Right',
+              ),
               matching: find.byType(Material),
             )
             .first,
@@ -79,8 +79,11 @@ void main() {
       floatingRadius,
       reason: '浮动侧栏四边都有间距，四个角都应是圆角（不是贴边抽屉的半圆角）',
     );
-    expect(tester.getTopLeft(find.byType(Material).last).dx, 10,
-        reason: '左对齐时面板贴左，留 10 的安全间距');
+    expect(
+      tester.getTopLeft(find.byType(Material).last).dx,
+      10,
+      reason: '左对齐时面板贴左，留 10 的安全间距',
+    );
 
     final Material right = await pumpPanel(Alignment.centerRight);
     expect(
@@ -88,7 +91,10 @@ void main() {
       floatingRadius,
       reason: '左右两侧圆角必须一致——镜像体现在位置上，不再体现在圆角换边',
     );
-    expect(tester.getTopRight(find.byType(Material).last).dx, 790,
-        reason: '右对齐时面板贴右，留同样 10 的安全间距（800 - 10）');
+    expect(
+      tester.getTopRight(find.byType(Material).last).dx,
+      790,
+      reason: '右对齐时面板贴右，留同样 10 的安全间距（800 - 10）',
+    );
   });
 }

@@ -95,8 +95,9 @@ class _VideoSpecsBadgeStripState extends State<VideoSpecsBadgeStrip> {
     return ListenableBuilder(
       listenable: service,
       builder: (BuildContext context, Widget? _) {
-        final List<String> badges =
-            videoSpecsCoverBadges(service.specsFor(path));
+        final List<String> badges = videoSpecsCoverBadges(
+          service.specsFor(path),
+        );
         if (badges.isEmpty) return const SizedBox.shrink();
         return Row(
           mainAxisSize: MainAxisSize.min,

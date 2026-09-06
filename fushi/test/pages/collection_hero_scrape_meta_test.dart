@@ -31,12 +31,14 @@ void main() {
   setUp(() async {
     LocaleSettings.setLocale(AppLocale.zhCn);
     db = FushiDatabase.forTesting(NativeDatabase.memory());
-    await db.upsertVideoBook(VideoBooksCompanion(
-      bookUid: const Value('video/e1'),
-      title: const Value('S01E01'),
-      videoPath: const Value('/abs/e1.mp4'),
-      importedAt: Value(DateTime(2026, 1, 1).millisecondsSinceEpoch),
-    ));
+    await db.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: const Value('video/e1'),
+        title: const Value('S01E01'),
+        videoPath: const Value('/abs/e1.mp4'),
+        importedAt: Value(DateTime(2026, 1, 1).millisecondsSinceEpoch),
+      ),
+    );
     collectionId = await db.createMediaCollection(
       'Tensei Oujo v2 播放列表',
       collectionType: 'playlist',
@@ -47,11 +49,13 @@ void main() {
   tearDown(() => db.close());
 
   Future<List<VideoBookRow>> loadMembers() async => <VideoBookRow>[
-        for (final MediaCollectionItemRow it
-            in await db.getCollectionItems(collectionId))
-          (await db.allVideoBooks())
-              .firstWhere((VideoBookRow r) => r.bookUid == it.entryKey),
-      ];
+    for (final MediaCollectionItemRow it in await db.getCollectionItems(
+      collectionId,
+    ))
+      (await db.allVideoBooks()).firstWhere(
+        (VideoBookRow r) => r.bookUid == it.entryKey,
+      ),
+  ];
 
   Future<void> saveMeta({
     String? backdropPath,
@@ -79,44 +83,42 @@ void main() {
         scrapedAt: DateTime(2026, 1, 1),
       ),
     );
-    await db.replaceMediaImagesForCollection(
-      collectionId,
-      <MediaImagesCompanion>[
-        if (backdropPath != null)
-          MediaImagesCompanion.insert(
-            collectionId: Value<int?>(collectionId),
-            kind: MediaImageKind.backdrop.dbValue,
-            path: backdropPath,
-          ),
-      ],
-    );
+    await db
+        .replaceMediaImagesForCollection(collectionId, <MediaImagesCompanion>[
+          if (backdropPath != null)
+            MediaImagesCompanion.insert(
+              collectionId: Value<int?>(collectionId),
+              kind: MediaImageKind.backdrop.dbValue,
+              path: backdropPath,
+            ),
+        ]);
     if (confirmedTitle != null) {
       await db.renameMediaCollection(collectionId, confirmedTitle);
     }
   }
 
   Widget buildApp() => TranslationProvider(
-        child: MaterialApp(
-          home: MediaCollectionDetailPage(
-            database: db,
-            collection: MediaCollectionRow(
-              id: collectionId,
-              name: 'Tensei Oujo v2 播放列表',
-              collectionType: 'playlist',
-              coverSource: null,
-              sortOrder: 0,
-              createdAt: 0,
-              orderUpdatedAt: 0,
-            ),
-            loadEpisodes: () async => <CollectionEpisodeSlot>[
-              for (final VideoBookRow row in await (loadMembers)())
-                CollectionEpisodeSlot.local(row),
-            ],
-            onOpenEpisode: (VideoBookRow _) {},
-            onChanged: () {},
-          ),
+    child: MaterialApp(
+      home: MediaCollectionDetailPage(
+        database: db,
+        collection: MediaCollectionRow(
+          id: collectionId,
+          name: 'Tensei Oujo v2 播放列表',
+          collectionType: 'playlist',
+          coverSource: null,
+          sortOrder: 0,
+          createdAt: 0,
+          orderUpdatedAt: 0,
         ),
-      );
+        loadEpisodes: () async => <CollectionEpisodeSlot>[
+          for (final VideoBookRow row in await (loadMembers)())
+            CollectionEpisodeSlot.local(row),
+        ],
+        onOpenEpisode: (VideoBookRow _) {},
+        onChanged: () {},
+      ),
+    ),
+  );
 
   /// 屏够宽才会出海报卡（窄屏刻意不出，见 `_buildHero` 的 LayoutBuilder）。
   Future<void> pumpWide(WidgetTester tester) async {
@@ -128,8 +130,9 @@ void main() {
     await tester.pumpAndSettle();
   }
 
-  testWidgets('有刮削资料 → hero 渲染放送日期/话数/评分/标签/简介/原名',
-      (WidgetTester tester) async {
+  testWidgets('有刮削资料 → hero 渲染放送日期/话数/评分/标签/简介/原名', (
+    WidgetTester tester,
+  ) async {
     await saveMeta();
     await pumpWide(tester);
 
@@ -141,8 +144,11 @@ void main() {
     expect(find.text('1234 人评分'), findsOneWidget);
     expect(find.text('已看完 0/1'), findsOneWidget, reason: '观看进度不依赖刮削，恒在');
 
-    expect(find.textContaining('公主与令嬢携手掀起魔法革命'), findsOneWidget,
-        reason: '简介必须出现在 hero');
+    expect(
+      find.textContaining('公主与令嬢携手掀起魔法革命'),
+      findsOneWidget,
+      reason: '简介必须出现在 hero',
+    );
     // 作品标签是 chips（每个标签一个 Text），不是拼起来的一行文字。
     expect(find.text('奇幻'), findsOneWidget, reason: '作品标签按热度降序成 chip');
     expect(find.text('百合'), findsOneWidget);
@@ -204,8 +210,9 @@ void main() {
     );
   });
 
-  testWidgets('有横版 backdrop → 背景用 backdrop + 左侧独立海报卡',
-      (WidgetTester tester) async {
+  testWidgets('有横版 backdrop → 背景用 backdrop + 左侧独立海报卡', (
+    WidgetTester tester,
+  ) async {
     await saveMeta(backdropPath: '/covers/collections/1_backdrop.jpg');
     await pumpWide(tester);
 
@@ -227,9 +234,7 @@ void main() {
     expect(hero.height, greaterThanOrEqualTo(460));
     expect(
       tester
-          .getSize(
-            find.byKey(const ValueKey<String>('collection-hero-poster')),
-          )
+          .getSize(find.byKey(const ValueKey<String>('collection-hero-poster')))
           .height,
       greaterThanOrEqualTo(400),
       reason: '桌面宽屏使用大竖版海报，不再缩成 hero 角落的小卡',
@@ -276,9 +281,7 @@ void main() {
     );
     final PortraitCoverImage poster = tester.widget<PortraitCoverImage>(
       find.descendant(
-        of: find.byKey(
-          const ValueKey<String>('collection-hero-poster'),
-        ),
+        of: find.byKey(const ValueKey<String>('collection-hero-poster')),
         matching: find.byType(PortraitCoverImage),
       ),
     );
@@ -301,8 +304,9 @@ void main() {
     );
   });
 
-  testWidgets('无横版 backdrop → 回落 LandscapeCoverImage，且不重复出海报卡',
-      (WidgetTester tester) async {
+  testWidgets('无横版 backdrop → 回落 LandscapeCoverImage，且不重复出海报卡', (
+    WidgetTester tester,
+  ) async {
     await saveMeta();
     await pumpWide(tester);
 

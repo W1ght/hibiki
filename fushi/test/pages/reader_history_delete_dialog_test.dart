@@ -9,9 +9,7 @@ void main() {
   });
 
   Widget buildApp(Widget home) {
-    return TranslationProvider(
-      child: MaterialApp(home: home),
-    );
+    return TranslationProvider(child: MaterialApp(home: home));
   }
 
   testWidgets('reader history delete dialog fits a compact desktop window', (

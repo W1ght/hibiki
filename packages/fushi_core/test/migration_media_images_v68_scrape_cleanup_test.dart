@@ -70,46 +70,61 @@ CREATE TABLE collection_relations (
 
 void main() {
   test(
-      'v68 migrated null-source backdrop is cleared by exact path without deleting manual image',
-      () async {
-    final FushiDatabase db = _openMigratedFromV67();
-    addTearDown(db.close);
+    'v68 migrated null-source backdrop is cleared by exact path without deleting manual image',
+    () async {
+      final FushiDatabase db = _openMigratedFromV67();
+      addTearDown(db.close);
 
-    final List<QueryRow> migrated = await db.customSelect(
-      'SELECT collection_id, kind, position, path, source_url '
-      'FROM media_images WHERE collection_id = 9',
-    ).get();
-    expect(migrated, hasLength(1));
-    expect(migrated.single.read<String>('kind'), 'backdrop');
-    expect(migrated.single.read<String>('path'),
-        'D:/generated/v68-backdrop.jpg');
-    expect(migrated.single.data['source_url'], isNull,
-        reason: 'v68 migration intentionally had no source_url column value');
+      final List<QueryRow> migrated = await db
+          .customSelect(
+            'SELECT collection_id, kind, position, path, source_url '
+            'FROM media_images WHERE collection_id = 9',
+          )
+          .get();
+      expect(migrated, hasLength(1));
+      expect(migrated.single.read<String>('kind'), 'backdrop');
+      expect(
+        migrated.single.read<String>('path'),
+        'D:/generated/v68-backdrop.jpg',
+      );
+      expect(
+        migrated.single.data['source_url'],
+        isNull,
+        reason: 'v68 migration intentionally had no source_url column value',
+      );
 
-    await db.customStatement(
-      'INSERT INTO media_images '
-      '(collection_id, kind, position, path, source_url) VALUES '
-      "(9, 'backdrop', 1, 'D:/manual/kept-backdrop.jpg', NULL)",
-    );
+      await db.customStatement(
+        'INSERT INTO media_images '
+        '(collection_id, kind, position, path, source_url) VALUES '
+        "(9, 'backdrop', 1, 'D:/manual/kept-backdrop.jpg', NULL)",
+      );
 
-    await db.clearAllVideoScrapeRecords(
-      clearLegacyScrapedMediaImagePaths: const <int, String>{
-        9: 'D:/generated/v68-backdrop.jpg',
-      },
-    );
+      await db.clearAllVideoScrapeRecords(
+        clearLegacyScrapedMediaImagePaths: const <int, String>{
+          9: 'D:/generated/v68-backdrop.jpg',
+        },
+      );
 
-    final List<QueryRow> retained = await db.customSelect(
-      'SELECT path, source_url FROM media_images '
-      'WHERE collection_id = 9 ORDER BY position',
-    ).get();
-    expect(retained, hasLength(1));
-    expect(retained.single.read<String>('path'),
-        'D:/manual/kept-backdrop.jpg');
-    expect(retained.single.data['source_url'], isNull,
-        reason: 'unlisted null-source images are user-owned and must survive');
-    expect(
-      await db.customSelect('SELECT * FROM collection_scrape_meta').get(),
-      isEmpty,
-    );
-  });
+      final List<QueryRow> retained = await db
+          .customSelect(
+            'SELECT path, source_url FROM media_images '
+            'WHERE collection_id = 9 ORDER BY position',
+          )
+          .get();
+      expect(retained, hasLength(1));
+      expect(
+        retained.single.read<String>('path'),
+        'D:/manual/kept-backdrop.jpg',
+      );
+      expect(
+        retained.single.data['source_url'],
+        isNull,
+        reason: 'unlisted null-source images are user-owned and must survive',
+      );
+      expect(
+        await db.customSelect('SELECT * FROM collection_scrape_meta').get(),
+        isEmpty,
+      );
+    },
+  );
 }

@@ -67,20 +67,20 @@ class MihonReaderChapter extends OnlineMangaReaderChapter {
 
   @override
   List<String> get pageIdentities => <String>[
-        for (final MihonPage page in pages)
-          mihonPageCacheIdentity(sourceContext, page),
-      ];
+    for (final MihonPage page in pages)
+      mihonPageCacheIdentity(sourceContext, page),
+  ];
 
   @override
   String get identityFileName => '.mihon-chapter.json';
 
   @override
   Future<MangaReaderSession> openPageSession() => MihonMangaPageProvider(
-        runtime: manager.runtime,
-        context: sourceContext,
-        pages: pages,
-        cacheRoot: Directory(
-          p.join(manager.rootDirectory.path, 'reader-cache', 'pages'),
-        ),
-      ).open();
+    runtime: manager.runtime,
+    context: sourceContext,
+    pages: pages,
+    cacheRoot: Directory(
+      p.join(manager.rootDirectory.path, 'reader-cache', 'pages'),
+    ),
+  ).open();
 }

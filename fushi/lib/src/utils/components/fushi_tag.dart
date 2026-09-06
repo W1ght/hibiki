@@ -31,10 +31,11 @@ class FushiTag extends StatelessWidget {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final Color effectiveForeground =
         foregroundColor ?? scheme.onSecondaryContainer;
-    final TextStyle effectiveStyle = style ??
-        Theme.of(context).textTheme.labelSmall?.copyWith(
-              color: effectiveForeground,
-            ) ??
+    final TextStyle effectiveStyle =
+        style ??
+        Theme.of(
+          context,
+        ).textTheme.labelSmall?.copyWith(color: effectiveForeground) ??
         TextStyle(color: effectiveForeground);
 
     return Padding(
@@ -67,7 +68,8 @@ class FushiTag extends StatelessWidget {
                   Icon(
                     icon,
                     color: effectiveForeground,
-                    size: iconSize ??
+                    size:
+                        iconSize ??
                         Theme.of(context).textTheme.labelSmall?.fontSize,
                   ),
                   SizedBox(width: tokens.spacing.gap / 2),
@@ -95,9 +97,7 @@ class FushiTag extends StatelessWidget {
                         ),
                         child: Text(
                           trailingText!,
-                          style: Theme.of(context)
-                              .textTheme
-                              .labelSmall
+                          style: Theme.of(context).textTheme.labelSmall
                               ?.copyWith(color: scheme.onTertiaryContainer),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,

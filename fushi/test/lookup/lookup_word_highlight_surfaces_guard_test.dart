@@ -150,17 +150,20 @@ void main() {
       // reveal 门，事后重锚会移动已可见的卡片，还会把整个覆盖窗的几何（union
       // bbox → overlaySize → 原生挪窗）在**每次**嵌套查词时重跑一遍（单行选区的
       // 整词 bbox 同样不等于首字符矩形）。
-      final String body = methodBody(
-        src,
-        'Future<void> _lookupNested(',
-      );
+      final String body = methodBody(src, 'Future<void> _lookupNested(');
       final int awaitAnchor = body.indexOf('_highlightAndAwaitWordAnchor(');
       final int push = body.indexOf('_pushChildFrame(');
-      expect(awaitAnchor, greaterThanOrEqualTo(0),
-          reason: '_lookupNested 未等待整词 bbox');
+      expect(
+        awaitAnchor,
+        greaterThanOrEqualTo(0),
+        reason: '_lookupNested 未等待整词 bbox',
+      );
       expect(push, greaterThanOrEqualTo(0), reason: '_lookupNested 未推子卡');
-      expect(awaitAnchor, lessThan(push),
-          reason: 'bbox 往返落在 push 之后 ⇒ 卡片弹出后跳位 + 覆盖窗二次挪动');
+      expect(
+        awaitAnchor,
+        lessThan(push),
+        reason: 'bbox 往返落在 push 之后 ⇒ 卡片弹出后跳位 + 覆盖窗二次挪动',
+      );
       expect(
         containsCodeLine(body, 'effectiveAnchor'),
         isTrue,
@@ -209,10 +212,16 @@ void main() {
         'anchorRectToScreen': anchorAt,
         'postToHost': postAt,
       }.entries) {
-        expect(e.value, greaterThan(tryAt),
-            reason: '${e.key} 落在 try 之外（highlightFrame 的契约是绝不抛）');
-        expect(e.value, lessThan(catchAt),
-            reason: '${e.key} 落在 catch 之后（highlightFrame 的契约是绝不抛）');
+        expect(
+          e.value,
+          greaterThan(tryAt),
+          reason: '${e.key} 落在 try 之外（highlightFrame 的契约是绝不抛）',
+        );
+        expect(
+          e.value,
+          lessThan(catchAt),
+          reason: '${e.key} 落在 catch 之后（highlightFrame 的契约是绝不抛）',
+        );
       }
     });
   });

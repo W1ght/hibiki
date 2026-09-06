@@ -56,9 +56,9 @@ class _ErrorLogPageState extends State<ErrorLogPage> {
           onTap: () async {
             await Clipboard.setData(ClipboardData(text: _log));
             if (context.mounted) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text(t.copied_to_clipboard)),
-              );
+              ScaffoldMessenger.of(
+                context,
+              ).showSnackBar(SnackBar(content: Text(t.copied_to_clipboard)));
             }
           },
         ),
@@ -79,11 +79,8 @@ class _ErrorLogPageState extends State<ErrorLogPage> {
           FushiIconButton(
             icon: Icons.cloud_upload_outlined,
             tooltip: t.log_upload_action,
-            onTap: () => uploadLogToServer(
-              context: context,
-              log: _log,
-              kind: 'error',
-            ),
+            onTap: () =>
+                uploadLogToServer(context: context, log: _log, kind: 'error'),
           ),
         if (showSaveLogAction)
           FushiIconButton(

@@ -27,7 +27,8 @@ void main() {
     expect(
       source,
       isNot(contains('_kContinueVideoCoverWidth')),
-      reason: '「继续」卡的视频专属 16:9 宽度特例已消灭（三类条目统一竖版槽），'
+      reason:
+          '「继续」卡的视频专属 16:9 宽度特例已消灭（三类条目统一竖版槽），'
           '不得回退（BUG-1299）',
     );
     // 本机封面（视频/游戏）的来源解析与渲染都收在 `_localCover` 一处
@@ -58,7 +59,8 @@ void main() {
       expect(
         body,
         contains('_localCover('),
-        reason: '$fn 必须委托给 _localCover（统一来源解析 + 槽向自适应渲染），'
+        reason:
+            '$fn 必须委托给 _localCover（统一来源解析 + 槽向自适应渲染），'
             '不得自己另写一套封面渲染（BUG-1299）',
       );
       // 判据必须用带标识符边界的匹配，不能用裸子串 'Image('：
@@ -70,7 +72,8 @@ void main() {
       expect(
         containsIdentifierCall(body, 'Image'),
         isFalse,
-        reason: '$fn 不得绕过 _localCover 直接构造 Image'
+        reason:
+            '$fn 不得绕过 _localCover 直接构造 Image'
             '（含 Image.file / Image.memory / Image.network / Image.asset）',
       );
     }
@@ -83,7 +86,8 @@ void main() {
     // 回退到硬编码 fit 的裸 Image（旧 148×84 横槽让竖版海报两侧露灰带的祖病）。
     final String source = File(videoHomePath).readAsStringSync();
     final String rowCard = _stripLineComments(
-        _functionSource(source, 'Widget _buildRowMediaCard('));
+      _functionSource(source, 'Widget _buildRowMediaCard('),
+    );
     expect(
       rowCard,
       contains('PortraitCoverImage('),
@@ -99,20 +103,23 @@ void main() {
       isFalse,
       reason: '横滚行卡不得绕过槽向组件直接构造 Image',
     );
-    final String heroPage =
-        _stripLineComments(_functionSource(source, 'Widget _buildHeroPage('));
+    final String heroPage = _stripLineComments(
+      _functionSource(source, 'Widget _buildHeroPage('),
+    );
     expect(
       heroPage,
       contains('LandscapeCoverImage('),
-      reason: 'hero 轮播背景必须走 LandscapeCoverImage（竖版海报模糊垫底 + '
+      reason:
+          'hero 轮播背景必须走 LandscapeCoverImage（竖版海报模糊垫底 + '
           'overlays 层序保文字可读，BUG-1298 血缘）',
     );
   });
 
   test('合集详情单集缩略图：走 PortraitCoverImage 横槽自适应', () {
     final String source = File(collectionDetailPath).readAsStringSync();
-    final String body =
-        _stripLineComments(_functionSource(source, 'Widget _episodeThumb('));
+    final String body = _stripLineComments(
+      _functionSource(source, 'Widget _episodeThumb('),
+    );
     expect(
       body,
       contains('PortraitCoverImage('),
@@ -121,7 +128,8 @@ void main() {
     expect(
       body,
       contains('landscapeSlot: true'),
-      reason: '_episodeThumb 是 16:9 横槽，必须声明 landscapeSlot——否则竖版'
+      reason:
+          '_episodeThumb 是 16:9 横槽，必须声明 landscapeSlot——否则竖版'
           '海报仍按竖槽语义 cover 硬裁',
     );
     expect(
@@ -140,8 +148,9 @@ String _functionSource(String source, String startToken) {
   final RegExpMatch? next = nextWidget.firstMatch(
     source.substring(start + startToken.length),
   );
-  final int end =
-      next == null ? source.length : start + startToken.length + next.start + 1;
+  final int end = next == null
+      ? source.length
+      : start + startToken.length + next.start + 1;
   return source.substring(start, end);
 }
 

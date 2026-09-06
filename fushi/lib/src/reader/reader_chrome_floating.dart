@@ -257,5 +257,4 @@ bool topProgressUsesFrostedGlass({required bool floating}) => floating;
 bool topProgressPillShowsBlur({
   required bool floating,
   required bool obscured,
-}) =>
-    topProgressUsesFrostedGlass(floating: floating) && !obscured;
+}) => topProgressUsesFrostedGlass(floating: floating) && !obscured;

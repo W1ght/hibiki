@@ -32,7 +32,8 @@ void main() {
     MokuroMoeDownloadQueue queue,
     List<({String series, String volume})> calls,
     List<StreamController<MokuroMoeVolumeDownloadEvent>> ctrls,
-  }) makeQueue({List<Duration>? backoff}) {
+  })
+  makeQueue({List<Duration>? backoff}) {
     final List<({String series, String volume})> calls =
         <({String series, String volume})>[];
     final List<StreamController<MokuroMoeVolumeDownloadEvent>> ctrls =
@@ -40,14 +41,14 @@ void main() {
     final MokuroMoeDownloadQueue queue = MokuroMoeDownloadQueue(
       db: db,
       clientFactory: () => MokuroMoeClient(),
-      runnerOverride: (
-          {required String seriesName, required String volumeName}) {
-        calls.add((series: seriesName, volume: volumeName));
-        final StreamController<MokuroMoeVolumeDownloadEvent> c =
-            StreamController<MokuroMoeVolumeDownloadEvent>();
-        ctrls.add(c);
-        return c.stream;
-      },
+      runnerOverride:
+          ({required String seriesName, required String volumeName}) {
+            calls.add((series: seriesName, volume: volumeName));
+            final StreamController<MokuroMoeVolumeDownloadEvent> c =
+                StreamController<MokuroMoeVolumeDownloadEvent>();
+            ctrls.add(c);
+            return c.stream;
+          },
       retryBackoffOverride: backoff,
     );
     return (queue: queue, calls: calls, ctrls: ctrls);
@@ -55,8 +56,10 @@ void main() {
 
   /// 用户实际撞到的失败：mokuro.moe 连接超时（截图里的
   /// `SocketException: 信号灯超时已到 ... mokuro.moe:9253`）。
-  const SocketException timeout =
-      SocketException('信号灯超时时间已到', osError: OSError('timeout', 121));
+  const SocketException timeout = SocketException(
+    '信号灯超时时间已到',
+    osError: OSError('timeout', 121),
+  );
 
   /// 退避全零的队列：Timer(Duration.zero) 在下一轮事件循环触发，pumpEventQueue 可等到。
   List<Duration> instantBackoff(int times) =>
@@ -94,10 +97,12 @@ void main() {
   test('已在库跳过（skippedExisting）：任务 done 但不计 importedCount', () async {
     final r = makeQueue();
     r.queue.enqueue(seriesName: 'S', volumeNames: <String>['v1']);
-    r.ctrls[0].add(const MokuroMoeVolumeDownloadEvent(
-      stage: MokuroMoeDownloadStage.done,
-      skippedExisting: true,
-    ));
+    r.ctrls[0].add(
+      const MokuroMoeVolumeDownloadEvent(
+        stage: MokuroMoeDownloadStage.done,
+        skippedExisting: true,
+      ),
+    );
     await r.ctrls[0].close();
     await pumpEventQueue();
     expect(r.queue.tasks.single.status, MokuroMoeTaskStatus.done);
@@ -132,8 +137,10 @@ void main() {
     // 排队中的 v3 → 直接出队。
     final MokuroMoeDownloadTask v3 = r.queue.tasks[2];
     r.queue.cancel(v3);
-    expect(r.queue.tasks.map((MokuroMoeDownloadTask t) => t.volumeName),
-        <String>['v1', 'v2']);
+    expect(
+      r.queue.tasks.map((MokuroMoeDownloadTask t) => t.volumeName),
+      <String>['v1', 'v2'],
+    );
 
     // 执行中的 v1（注入 runner 无 cancel 通道）→ 掐订阅按取消收尾，起 v2。
     final MokuroMoeDownloadTask v1 = r.queue.tasks[0];
@@ -170,8 +177,10 @@ void main() {
 
     expect(r.queue.tasks, hasLength(2));
     r.queue.clearFinished();
-    expect(r.queue.tasks.map((MokuroMoeDownloadTask t) => t.volumeName),
-        <String>['v2']);
+    expect(
+      r.queue.tasks.map((MokuroMoeDownloadTask t) => t.volumeName),
+      <String>['v2'],
+    );
     r.queue.dispose();
   });
 
@@ -242,8 +251,7 @@ void main() {
       // 前状态已从 waitingRetry 翻成 running —— 那是测试拿真时钟当同步原语，不
       // 是被测代码有问题。假时钟下「退避未到期」和「取消后推进过期」都是确定的。
       fakeAsync((FakeAsync async) {
-        final r =
-            makeQueue(backoff: const <Duration>[Duration(seconds: 10)]);
+        final r = makeQueue(backoff: const <Duration>[Duration(seconds: 10)]);
         r.queue.enqueue(seriesName: 'S', volumeNames: <String>['v1']);
         final MokuroMoeDownloadTask task = r.queue.tasks.single;
 
@@ -383,8 +391,11 @@ void main() {
 
       expect(r.queue.retryAllFailed(), 2);
       await pumpEventQueue();
-      expect(r.queue.tasks[2].status, MokuroMoeTaskStatus.done,
-          reason: '成功的不动');
+      expect(
+        r.queue.tasks[2].status,
+        MokuroMoeTaskStatus.done,
+        reason: '成功的不动',
+      );
       expect(r.queue.tasks, hasLength(3), reason: '仍是原来那三行');
       r.queue.dispose();
     });

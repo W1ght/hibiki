@@ -14,11 +14,7 @@ AudioCue mkCue(int idx, String text) {
 }
 
 EpubSection mkSection(int i, String text, {String? href}) {
-  return EpubSection(
-    index: i,
-    href: href ?? 'ch${i + 1}.xhtml',
-    text: text,
-  );
+  return EpubSection(index: i, href: href ?? 'ch${i + 1}.xhtml', text: text);
 }
 
 void main() {
@@ -33,8 +29,10 @@ void main() {
         mkCue(2, 'どこで生れたかとんと見当がつかぬ。'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.totalCues, 3);
       expect(r.matchedCues, 3);
@@ -61,8 +59,10 @@ void main() {
         mkCue(3, '何でも薄暗いじめじめした所で泣いていた事だけは記憶している。'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matchedCues, 4);
       expect(r.matches[0].sectionIndex, 0);
@@ -80,8 +80,10 @@ void main() {
         mkCue(1, '名前はまだ無い'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matchedCues, 2);
     });
@@ -96,8 +98,10 @@ void main() {
         mkCue(2, '＊どこで生れたかとんと見当がつかぬ。'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matchedCues, 3);
     });
@@ -134,15 +138,19 @@ void main() {
     test('完全无关文本：matchRate ≈ 0', () {
       final List<EpubSection> sections = <EpubSection>[
         mkSection(
-            0, 'Hello world. The quick brown fox jumps over the lazy dog.'),
+          0,
+          'Hello world. The quick brown fox jumps over the lazy dog.',
+        ),
       ];
       final List<AudioCue> cues = <AudioCue>[
         mkCue(0, '吾輩は猫である。'),
         mkCue(1, '名前はまだない。'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matchedCues, 0);
       expect(r.matchRate, 0.0);
@@ -202,8 +210,10 @@ void main() {
         mkCue(1, 'THIS IS A TEST SENTENCE'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matchedCues, 2);
     });
@@ -270,8 +280,10 @@ void main() {
         mkCue(1, 'どこで生れたかとんと見当がつかぬ。'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matches[0].matched, isTrue);
       expect(r.matches[1].matched, isFalse);
@@ -281,10 +293,7 @@ void main() {
       // 场景：SubPlz 把 "曇" 听成 "雲"，或 EPUB 排版多加一字，cue 前后都精确
       // 命中，中间这条靠单次 Dice 滑窗救回。
       final List<EpubSection> sections = <EpubSection>[
-        mkSection(
-          0,
-          '昨日は雨だった今日は晴れ時々曇りだった明日は雪の予報だ',
-        ),
+        mkSection(0, '昨日は雨だった今日は晴れ時々曇りだった明日は雪の予報だ'),
       ];
       final List<AudioCue> cues = <AudioCue>[
         mkCue(0, '昨日は雨だった'),
@@ -292,30 +301,35 @@ void main() {
         mkCue(2, '明日は雪の予報だ'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matches[0].matched, isTrue);
       expect(r.matches[1].matched, isTrue, reason: '单次滑窗应当补上高于默认阈值的中间句');
       expect(r.matches[2].matched, isTrue);
       // 模糊命中的 score 介于阈值和 1.0 之间
-      expect(r.matches[1].score,
-          greaterThanOrEqualTo(EpubSrtMatcher.defaultSimilarityThreshold));
+      expect(
+        r.matches[1].score,
+        greaterThanOrEqualTo(EpubSrtMatcher.defaultSimilarityThreshold),
+      );
       expect(r.matches[1].score, lessThan(1.0));
       // 位置夹在前后锚点之间
-      expect(r.matches[1].normCharStart,
-          greaterThanOrEqualTo(r.matches[0].normCharEnd));
-      expect(r.matches[1].normCharEnd,
-          lessThanOrEqualTo(r.matches[2].normCharStart));
+      expect(
+        r.matches[1].normCharStart,
+        greaterThanOrEqualTo(r.matches[0].normCharEnd),
+      );
+      expect(
+        r.matches[1].normCharEnd,
+        lessThanOrEqualTo(r.matches[2].normCharStart),
+      );
     });
 
     test('模糊兜底：相似度低于阈值不补（避免把噪音塞进 gap）', () {
       // gap 内文本与 cue 差一半以上字符，sim 远低于 0.85，应保持 unmatched。
       final List<EpubSection> sections = <EpubSection>[
-        mkSection(
-          0,
-          '昨日は雨だった全然違う文章がここに入る明日は雪の予報だ',
-        ),
+        mkSection(0, '昨日は雨だった全然違う文章がここに入る明日は雪の予報だ'),
       ];
       final List<AudioCue> cues = <AudioCue>[
         mkCue(0, '昨日は雨だった'),
@@ -323,8 +337,10 @@ void main() {
         mkCue(2, '明日は雪の予報だ'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matches[0].matched, isTrue);
       expect(r.matches[1].matched, isFalse);
@@ -333,10 +349,7 @@ void main() {
 
     test('单次滑窗：同一 gap 内多条未匹配 cue 不回溯补齐', () {
       final List<EpubSection> sections = <EpubSection>[
-        mkSection(
-          0,
-          '最初の文はここにある第二の文が来て第三の文で締めくくる最後の文で終わる',
-        ),
+        mkSection(0, '最初の文はここにある第二の文が来て第三の文で締めくくる最後の文で終わる'),
       ];
       final List<AudioCue> cues = <AudioCue>[
         mkCue(0, '最初の文はここにある'),
@@ -346,16 +359,20 @@ void main() {
         mkCue(3, '最後の文で終わる'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matchedCues, 2);
       expect(r.matches[0].matched, isTrue);
       expect(r.matches[1].matched, isFalse);
       expect(r.matches[2].matched, isFalse);
       expect(r.matches[3].matched, isTrue);
-      expect(r.matches[3].normCharStart,
-          greaterThanOrEqualTo(r.matches[0].normCharEnd));
+      expect(
+        r.matches[3].normCharStart,
+        greaterThanOrEqualTo(r.matches[0].normCharEnd),
+      );
     });
 
     test('起点检测：片头出版社名只在书尾版权页精确命中，不把游标钉到书尾（第 13 卷 0% 事故）', () {
@@ -370,10 +387,11 @@ void main() {
       final List<EpubSection> sections = <EpubSection>[
         mkSection(0, '無職転生　異世界行ったら本気だす　十三'),
         mkSection(
-            1,
-            '目覚め。それは甘美なる匂いによってもたらされた。'
-            'まどろみの中でふわりと香る愛おしい匂いだ。'
-            '驚きに目を開くと目の前に神がいた。$body'),
+          1,
+          '目覚め。それは甘美なる匂いによってもたらされた。'
+          'まどろみの中でふわりと香る愛おしい匂いだ。'
+          '驚きに目を開くと目の前に神がいた。$body',
+        ),
         mkSection(2, '発行　株式会社KADOKAWA　東京都千代田区富士見'),
       ];
       final List<AudioCue> cues = <AudioCue>[
@@ -388,8 +406,10 @@ void main() {
           mkCue(7 + i, '第$i段落は物語の本文であって聴き取りとほぼ同じである'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       // 正文全部命中；版权页那条不许成为起点（余量检查淘汰，且没有同伙佐证）。
       expect(r.matches[4].matched, isTrue);
@@ -417,8 +437,10 @@ void main() {
         mkCue(2, '最後の文で終わる'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matches[0].matched, isTrue);
       expect(r.matches[0].normCharStart, 0);
@@ -438,8 +460,10 @@ void main() {
         mkCue(1, '最後の文で終了すル'), // る → ル 差 1 字
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matchedCues, 2);
     });
@@ -453,8 +477,10 @@ void main() {
         mkCue(1, '第１話が始まる'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matchedCues, 2);
     });
@@ -468,8 +494,10 @@ void main() {
         mkCue(1, 'けーきを食べる。'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matchedCues, 2);
       expect(r.matches[0].score, 1.0);
@@ -485,8 +513,10 @@ void main() {
         mkCue(1, 'ケーキを食べる。'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matchedCues, 2);
     });
@@ -501,8 +531,10 @@ void main() {
         mkCue(2, 'さしすせそ'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matchedCues, 3);
       for (final CueMatch m in r.matches) {
@@ -537,13 +569,18 @@ void main() {
         mkCue(2, 'それで終わりです。'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       // 两条锚点 cue 命中，短 cue 因 gate 挡住模糊兜底而不命中。
       expect(r.matches[0].matched, isTrue);
-      expect(r.matches[1].matched, isFalse,
-          reason: '短 cue 散字异位：gate 挡住模糊，精确子串又缺失，不应命中');
+      expect(
+        r.matches[1].matched,
+        isFalse,
+        reason: '短 cue 散字异位：gate 挡住模糊，精确子串又缺失，不应命中',
+      );
       expect(r.matches[2].matched, isTrue);
       expect(r.matchedCues, 2, reason: '移除 allowFuzzy 门控会让此值变 3（守卫即变红）');
     });
@@ -562,8 +599,10 @@ void main() {
         mkCue(2, 'それで終わりです。'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matches[0].matched, isTrue);
       expect(r.matches[1].matched, isTrue, reason: '短 cue 精确出现仍走快速通道命中');
@@ -584,8 +623,10 @@ void main() {
         mkCue(2, 'どこで生れたかとんと見当がつかぬ。'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect(r.matchedCues, 2);
       expect(r.totalCues, 3);
@@ -602,8 +643,10 @@ void main() {
         mkCue(1, '名前はまだない。'),
       ];
 
-      final MatchResult r =
-          EpubSrtMatcher.match(sections: sections, cues: cues);
+      final MatchResult r = EpubSrtMatcher.match(
+        sections: sections,
+        cues: cues,
+      );
 
       expect((r.matchRate * 100).toStringAsFixed(2), '100.00');
     });

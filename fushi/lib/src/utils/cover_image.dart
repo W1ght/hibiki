@@ -27,8 +27,7 @@ const int kActivityCoverDecodePixelWidth = 192;
 ImageProvider resizedFileImage(
   File file, {
   int width = kLocalCoverDecodePixelWidth,
-}) =>
-    ResizeImage(FileImage(file), width: width, allowUpscaling: false);
+}) => ResizeImage(FileImage(file), width: width, allowUpscaling: false);
 
 /// 换封面（同路径覆盖写）后驱逐该路径的**全部**旧解码缓存条目。
 ///

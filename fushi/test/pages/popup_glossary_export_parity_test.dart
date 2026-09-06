@@ -29,44 +29,38 @@ import 'package:flutter_test/flutter_test.dart';
 ///    （`tools/browser-extension/vendor/popup.js` 由 browser_extension_popup_parity_guard
 ///    另行守全量一致性，这里只保证本修复不漏改镜像）。
 void main() {
-  test(
-    'mining glossary matches Yomitan (no ordinal, em-sized images) '
-    '(executes popup.js via node)',
-    () async {
-      final String? nodeExe = _resolveNode();
-      if (nodeExe == null) {
-        markTestSkipped(
-            'node not found on PATH; skipping JS behavior execution');
-        return;
-      }
+  test('mining glossary matches Yomitan (no ordinal, em-sized images) '
+      '(executes popup.js via node)', () async {
+    final String? nodeExe = _resolveNode();
+    if (nodeExe == null) {
+      markTestSkipped('node not found on PATH; skipping JS behavior execution');
+      return;
+    }
 
-      final File jsTest =
-          File('test/pages/popup_glossary_export_parity_test.js');
-      expect(
-        jsTest.existsSync(),
-        isTrue,
-        reason: 'behavior harness ${jsTest.path} must exist',
-      );
+    final File jsTest = File('test/pages/popup_glossary_export_parity_test.js');
+    expect(
+      jsTest.existsSync(),
+      isTrue,
+      reason: 'behavior harness ${jsTest.path} must exist',
+    );
 
-      final ProcessResult result = await Process.run(
-        nodeExe,
-        <String>[jsTest.path],
-        workingDirectory: Directory.current.path,
-      );
+    final ProcessResult result = await Process.run(nodeExe, <String>[
+      jsTest.path,
+    ], workingDirectory: Directory.current.path);
 
-      expect(
-        result.exitCode,
-        0,
-        reason: 'glossary export parity JS behavior test failed.\n'
-            'stdout:\n${result.stdout}\nstderr:\n${result.stderr}',
-      );
-      expect(
-        result.stdout.toString(),
-        contains('all assertions passed'),
-        reason: 'behavior harness must reach its success marker',
-      );
-    },
-  );
+    expect(
+      result.exitCode,
+      0,
+      reason:
+          'glossary export parity JS behavior test failed.\n'
+          'stdout:\n${result.stdout}\nstderr:\n${result.stderr}',
+    );
+    expect(
+      result.stdout.toString(),
+      contains('all assertions passed'),
+      reason: 'behavior harness must reach its success marker',
+    );
+  });
 
   test('popup.js mirrors keep the Yomitan-shaped mining glossary', () {
     for (final String relative in _mirrors) {
@@ -78,22 +72,26 @@ void main() {
       expect(
         RegExp(r'label = tags \? `\(\$\{index\}').hasMatch(js),
         isFalse,
-        reason: '$relative: the {glossary} label must not carry an ordinal '
+        reason:
+            '$relative: the {glossary} label must not carry an ordinal '
             '(BUG-1061)',
       );
       expect(
         js.contains(r'let index = 0;'),
         isFalse,
-        reason: '$relative: the self-invented glossary ordinal counter must be '
+        reason:
+            '$relative: the self-invented glossary ordinal counter must be '
             'gone (BUG-1061)',
       );
 
       // BUG-1062: the export branch sizes in em; the popup branch keeps px.
       expect(
         js.contains(
-            r'imageContainer.style.width = exporting ? `${usedWidth}em` : `${usedWidth}px`;'),
+          r'imageContainer.style.width = exporting ? `${usedWidth}em` : `${usedWidth}px`;',
+        ),
         isTrue,
-        reason: '$relative: exported definition images must keep Yomitan em '
+        reason:
+            '$relative: exported definition images must keep Yomitan em '
             'sizing while the popup keeps px (BUG-1062)',
       );
       expect(
@@ -116,8 +114,9 @@ const List<String> _mirrors = <String>[
 
 /// Resolve a usable `node` executable, returning null when none is on PATH.
 String? _resolveNode() {
-  final List<String> candidates =
-      Platform.isWindows ? <String>['node.exe', 'node'] : <String>['node'];
+  final List<String> candidates = Platform.isWindows
+      ? <String>['node.exe', 'node']
+      : <String>['node'];
   for (final String name in candidates) {
     try {
       final ProcessResult probe = Process.runSync(name, <String>['--version']);

@@ -32,9 +32,10 @@ class _FakeLookup implements FushiRemoteLookupService {
   }
 
   @override
-  Future<RemoteAudioLookup?> lookupAudio(
-          {required String expression, required String reading}) async =>
-      null;
+  Future<RemoteAudioLookup?> lookupAudio({
+    required String expression,
+    required String reading,
+  }) async => null;
 }
 
 Future<HttpClientResponse> _post(
@@ -60,10 +61,11 @@ void main() {
 
   test('termEntries returns Yomitan shape', () async {
     server = YomitanApiServer(
-        port: 0,
-        lookupService: _FakeLookup(),
-        tokenizer: (t) => [t],
-        readingResolver: (w) => '');
+      port: 0,
+      lookupService: _FakeLookup(),
+      tokenizer: (t) => [t],
+      readingResolver: (w) => '',
+    );
     await server.start();
     final int port = server.port;
 
@@ -77,15 +79,16 @@ void main() {
 
   test('termEntries with array term returns array', () async {
     server = YomitanApiServer(
-        port: 0,
-        lookupService: _FakeLookup(),
-        tokenizer: (t) => [t],
-        readingResolver: (w) => '');
+      port: 0,
+      lookupService: _FakeLookup(),
+      tokenizer: (t) => [t],
+      readingResolver: (w) => '',
+    );
     await server.start();
     final int port = server.port;
 
     final resp = await _post(port, '/termEntries', {
-      'term': ['わかる', 'xxx']
+      'term': ['わかる', 'xxx'],
     });
     final body = jsonDecode(await resp.transform(utf8.decoder).join());
     expect(body, isA<List>());
@@ -95,10 +98,11 @@ void main() {
 
   test('serverVersion is constant', () async {
     server = YomitanApiServer(
-        port: 0,
-        lookupService: _FakeLookup(),
-        tokenizer: (t) => [t],
-        readingResolver: (w) => '');
+      port: 0,
+      lookupService: _FakeLookup(),
+      tokenizer: (t) => [t],
+      readingResolver: (w) => '',
+    );
     await server.start();
     final int port = server.port;
     final resp = await _post(port, '/serverVersion', null);
@@ -108,10 +112,11 @@ void main() {
 
   test('GET method rejected with 405', () async {
     server = YomitanApiServer(
-        port: 0,
-        lookupService: _FakeLookup(),
-        tokenizer: (t) => [t],
-        readingResolver: (w) => '');
+      port: 0,
+      lookupService: _FakeLookup(),
+      tokenizer: (t) => [t],
+      readingResolver: (w) => '',
+    );
     await server.start();
     final int port = server.port;
     final client = HttpClient();
@@ -122,29 +127,32 @@ void main() {
 
   test('api key enforced when set', () async {
     server = YomitanApiServer(
-        port: 0,
-        lookupService: _FakeLookup(),
-        apiKey: 'secret',
-        tokenizer: (t) => [t],
-        readingResolver: (w) => '');
+      port: 0,
+      lookupService: _FakeLookup(),
+      apiKey: 'secret',
+      tokenizer: (t) => [t],
+      readingResolver: (w) => '',
+    );
     await server.start();
     final int port = server.port;
 
     final noKey = await _post(port, '/termEntries', {'term': 'わかる'});
     expect(noKey.statusCode, 401);
 
-    final withKey =
-        await _post(port, '/termEntries', {'term': 'わかる'}, apiKey: 'secret');
+    final withKey = await _post(port, '/termEntries', {
+      'term': 'わかる',
+    }, apiKey: 'secret');
     expect(withKey.statusCode, 200);
   });
 
   test('api key accepts compatible token locations', () async {
     server = YomitanApiServer(
-        port: 0,
-        lookupService: _FakeLookup(),
-        apiKey: 'secret',
-        tokenizer: (t) => [t],
-        readingResolver: (w) => '');
+      port: 0,
+      lookupService: _FakeLookup(),
+      apiKey: 'secret',
+      tokenizer: (t) => [t],
+      readingResolver: (w) => '',
+    );
     await server.start();
     final int port = server.port;
 
@@ -160,11 +168,9 @@ void main() {
     });
     expect(bodyToken.statusCode, 200);
 
-    final queryToken = await _post(
-      port,
-      '/termEntries?token=secret',
-      {'term': 'わかる'},
-    );
+    final queryToken = await _post(port, '/termEntries?token=secret', {
+      'term': 'わかる',
+    });
     expect(queryToken.statusCode, 200);
 
     final bearerToken = await _post(
@@ -184,10 +190,11 @@ void main() {
 
   test('yomitanVersion is constant', () async {
     server = YomitanApiServer(
-        port: 0,
-        lookupService: _FakeLookup(),
-        tokenizer: (t) => [t],
-        readingResolver: (w) => '');
+      port: 0,
+      lookupService: _FakeLookup(),
+      tokenizer: (t) => [t],
+      readingResolver: (w) => '',
+    );
     await server.start();
     final int port = server.port;
     final resp = await _post(port, '/yomitanVersion', null);
@@ -197,10 +204,11 @@ void main() {
 
   test('tokenize returns 2D content with readings', () async {
     server = YomitanApiServer(
-        port: 0,
-        lookupService: _FakeLookup(),
-        tokenizer: (t) => ['日本語', 'は', '難しい'],
-        readingResolver: (w) => w == '日本語' ? 'にほんご' : '');
+      port: 0,
+      lookupService: _FakeLookup(),
+      tokenizer: (t) => ['日本語', 'は', '難しい'],
+      readingResolver: (w) => w == '日本語' ? 'にほんご' : '',
+    );
     await server.start();
     final int port = server.port;
     final resp = await _post(port, '/tokenize', {'text': '日本語は難しい'});
@@ -216,14 +224,15 @@ void main() {
 
   test('tokenize with array text returns array of results', () async {
     server = YomitanApiServer(
-        port: 0,
-        lookupService: _FakeLookup(),
-        tokenizer: (t) => [t],
-        readingResolver: (w) => '');
+      port: 0,
+      lookupService: _FakeLookup(),
+      tokenizer: (t) => [t],
+      readingResolver: (w) => '',
+    );
     await server.start();
     final int port = server.port;
     final resp = await _post(port, '/tokenize', {
-      'text': ['あ', 'い']
+      'text': ['あ', 'い'],
     });
     final body = jsonDecode(await resp.transform(utf8.decoder).join());
     expect(body, isA<List>());

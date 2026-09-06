@@ -8,8 +8,14 @@ library;
 
 /// 字符级 tokenizer（解码用）。
 class MangaOcrTokenizer {
-  MangaOcrTokenizer._(this._idToToken, this._specialIds, this.clsId, this.sepId,
-      this.padId, this.unkId);
+  MangaOcrTokenizer._(
+    this._idToToken,
+    this._specialIds,
+    this.clsId,
+    this.sepId,
+    this.padId,
+    this.unkId,
+  );
 
   /// 从 `vocab.txt` 文本构建（每行一个 token）。
   factory MangaOcrTokenizer.fromVocabText(String vocabText) {

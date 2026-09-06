@@ -45,9 +45,9 @@ class _ServerShapedClient extends MokuroMoeClient {
 
   @override
   Future<List<MokuroMoeSeries>> fetchLibrary() async => <MokuroMoeSeries>[
-        // 关键：只有名字，没有 volumes。
-        for (final String name in detail.keys) MokuroMoeSeries(name: name),
-      ];
+    // 关键：只有名字，没有 volumes。
+    for (final String name in detail.keys) MokuroMoeSeries(name: name),
+  ];
 
   @override
   Future<MokuroMoeSeries> fetchSeries(String name) async {
@@ -98,32 +98,37 @@ void main() {
     MokuroMoeDownloadQueue queue,
     List<(String, String)> calls,
     List<StreamController<MokuroMoeVolumeDownloadEvent>> ctrls,
-  }) makeQueue() {
+  })
+  makeQueue() {
     final List<(String, String)> calls = <(String, String)>[];
     final List<StreamController<MokuroMoeVolumeDownloadEvent>> ctrls =
         <StreamController<MokuroMoeVolumeDownloadEvent>>[];
     final MokuroMoeDownloadQueue queue = MokuroMoeDownloadQueue(
       db: db,
       clientFactory: () => MokuroMoeClient(),
-      runnerOverride: (
-          {required String seriesName, required String volumeName}) {
-        calls.add((seriesName, volumeName));
-        final StreamController<MokuroMoeVolumeDownloadEvent> c =
-            StreamController<MokuroMoeVolumeDownloadEvent>();
-        ctrls.add(c);
-        return c.stream;
-      },
+      runnerOverride:
+          ({required String seriesName, required String volumeName}) {
+            calls.add((seriesName, volumeName));
+            final StreamController<MokuroMoeVolumeDownloadEvent> c =
+                StreamController<MokuroMoeVolumeDownloadEvent>();
+            ctrls.add(c);
+            return c.stream;
+          },
     );
     return (queue: queue, calls: calls, ctrls: ctrls);
   }
 
   testWidgets('browse：目录加载后渲染系列，搜索大小写不敏感过滤', (WidgetTester tester) async {
     final q = makeQueue();
-    await tester.pumpWidget(wrap(MokuroMoeCatalogDialog(
-      db: db,
-      clientOverride: _FakeClient(_library),
-      queueOverride: q.queue,
-    )));
+    await tester.pumpWidget(
+      wrap(
+        MokuroMoeCatalogDialog(
+          db: db,
+          clientOverride: _FakeClient(_library),
+          queueOverride: q.queue,
+        ),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(find.text('よつばと!'), findsOneWidget);
@@ -139,12 +144,16 @@ void main() {
   testWidgets('来源关闭时不请求目录，正文显示开启提示', (WidgetTester tester) async {
     final q = makeQueue();
     final _FakeClient client = _FakeClient(_library);
-    await tester.pumpWidget(wrap(MokuroMoeCatalogDialog(
-      db: db,
-      clientOverride: client,
-      queueOverride: q.queue,
-      enabledOverride: false,
-    )));
+    await tester.pumpWidget(
+      wrap(
+        MokuroMoeCatalogDialog(
+          db: db,
+          clientOverride: client,
+          queueOverride: q.queue,
+          enabledOverride: false,
+        ),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(client.fetchCalls, 0);
@@ -157,11 +166,15 @@ void main() {
     final q = makeQueue();
     final _FakeClient client = _FakeClient(_library)
       ..libraryError = Exception('boom');
-    await tester.pumpWidget(wrap(MokuroMoeCatalogDialog(
-      db: db,
-      clientOverride: client,
-      queueOverride: q.queue,
-    )));
+    await tester.pumpWidget(
+      wrap(
+        MokuroMoeCatalogDialog(
+          db: db,
+          clientOverride: client,
+          queueOverride: q.queue,
+        ),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(find.textContaining(t.manga_online_load_failed), findsOneWidget);
@@ -173,54 +186,66 @@ void main() {
     q.queue.dispose();
   });
 
-  testWidgets('BUG-1927：library 不带 volumes 时，点开系列必须去取详情',
-      (WidgetTester tester) async {
+  testWidgets('BUG-1927：library 不带 volumes 时，点开系列必须去取详情', (
+    WidgetTester tester,
+  ) async {
     final q = makeQueue();
-    final _ServerShapedClient client =
-        _ServerShapedClient(<String, MokuroMoeSeries>{
-      'よつばと!': const MokuroMoeSeries(
-        name: 'よつばと!',
-        volumes: <MokuroMoeVolume>[MokuroMoeVolume(name: 'よつばと! 第01巻')],
+    final _ServerShapedClient client = _ServerShapedClient(
+      <String, MokuroMoeSeries>{
+        'よつばと!': const MokuroMoeSeries(
+          name: 'よつばと!',
+          volumes: <MokuroMoeVolume>[MokuroMoeVolume(name: 'よつばと! 第01巻')],
+        ),
+      },
+    );
+    await tester.pumpWidget(
+      wrap(
+        MokuroMoeCatalogDialog(
+          db: db,
+          clientOverride: client,
+          queueOverride: q.queue,
+        ),
       ),
-    });
-    await tester.pumpWidget(wrap(MokuroMoeCatalogDialog(
-      db: db,
-      clientOverride: client,
-      queueOverride: q.queue,
-    )));
+    );
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('よつばと!'));
     await tester.pumpAndSettle();
 
-    expect(client.seriesCalls, <String>['よつばと!'],
-        reason: '不去取详情就只有浏览列表那个空 volumes 可画 —— 于是一片空白。');
+    expect(client.seriesCalls, <String>[
+      'よつばと!',
+    ], reason: '不去取详情就只有浏览列表那个空 volumes 可画 —— 于是一片空白。');
     expect(find.text('よつばと! 第01巻'), findsOneWidget);
     q.queue.dispose();
   });
 
-  testWidgets('BUG-1927：详情取失败要说出来并可重试，而不是留一片空白',
-      (WidgetTester tester) async {
+  testWidgets('BUG-1927：详情取失败要说出来并可重试，而不是留一片空白', (WidgetTester tester) async {
     final q = makeQueue();
-    final _ServerShapedClient client =
-        _ServerShapedClient(<String, MokuroMoeSeries>{
-      'よつばと!': const MokuroMoeSeries(
-        name: 'よつばと!',
-        volumes: <MokuroMoeVolume>[MokuroMoeVolume(name: 'よつばと! 第01巻')],
+    final _ServerShapedClient client = _ServerShapedClient(
+      <String, MokuroMoeSeries>{
+        'よつばと!': const MokuroMoeSeries(
+          name: 'よつばと!',
+          volumes: <MokuroMoeVolume>[MokuroMoeVolume(name: 'よつばと! 第01巻')],
+        ),
+      },
+    )..seriesError = Exception('boom');
+    await tester.pumpWidget(
+      wrap(
+        MokuroMoeCatalogDialog(
+          db: db,
+          clientOverride: client,
+          queueOverride: q.queue,
+        ),
       ),
-    })
-          ..seriesError = Exception('boom');
-    await tester.pumpWidget(wrap(MokuroMoeCatalogDialog(
-      db: db,
-      clientOverride: client,
-      queueOverride: q.queue,
-    )));
+    );
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('よつばと!'));
     await tester.pumpAndSettle();
-    expect(find.textContaining(t.manga_online_detail_load_failed),
-        findsOneWidget);
+    expect(
+      find.textContaining(t.manga_online_detail_load_failed),
+      findsOneWidget,
+    );
 
     client.seriesError = null;
     await tester.tap(find.text(t.retry));
@@ -229,36 +254,46 @@ void main() {
     q.queue.dispose();
   });
 
-  testWidgets('BUG-1927：系列真的没有卷时给空态文案，不是空白',
-      (WidgetTester tester) async {
+  testWidgets('BUG-1927：系列真的没有卷时给空态文案，不是空白', (WidgetTester tester) async {
     final q = makeQueue();
-    final _ServerShapedClient client =
-        _ServerShapedClient(<String, MokuroMoeSeries>{
-      'からっぽ': const MokuroMoeSeries(name: 'からっぽ'),
-    });
-    await tester.pumpWidget(wrap(MokuroMoeCatalogDialog(
-      db: db,
-      clientOverride: client,
-      queueOverride: q.queue,
-    )));
+    final _ServerShapedClient client = _ServerShapedClient(
+      <String, MokuroMoeSeries>{'からっぽ': const MokuroMoeSeries(name: 'からっぽ')},
+    );
+    await tester.pumpWidget(
+      wrap(
+        MokuroMoeCatalogDialog(
+          db: db,
+          clientOverride: client,
+          queueOverride: q.queue,
+        ),
+      ),
+    );
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('からっぽ'));
     await tester.pumpAndSettle();
 
-    expect(find.text(t.manga_online_series_empty), findsOneWidget,
-        reason: '「加载中 / 取失败 / 真的没有卷」三种情况以前长得一模一样。');
+    expect(
+      find.text(t.manga_online_series_empty),
+      findsOneWidget,
+      reason: '「加载中 / 取失败 / 真的没有卷」三种情况以前长得一模一样。',
+    );
     q.queue.dispose();
   });
 
-  testWidgets('series → 选卷 → 入队：runner 起卷、进度渲染、完成标记 ✓',
-      (WidgetTester tester) async {
+  testWidgets('series → 选卷 → 入队：runner 起卷、进度渲染、完成标记 ✓', (
+    WidgetTester tester,
+  ) async {
     final q = makeQueue();
-    await tester.pumpWidget(wrap(MokuroMoeCatalogDialog(
-      db: db,
-      clientOverride: _FakeClient(_library),
-      queueOverride: q.queue,
-    )));
+    await tester.pumpWidget(
+      wrap(
+        MokuroMoeCatalogDialog(
+          db: db,
+          clientOverride: _FakeClient(_library),
+          queueOverride: q.queue,
+        ),
+      ),
+    );
     await tester.pumpAndSettle();
 
     // 进入 series 阶段。
@@ -281,21 +316,25 @@ void main() {
     expect(q.calls.single, ('よつばと!', 'よつばと! 第01巻'));
 
     // CBZ 字节进度 → 内联面板进度条 + 阶段文案（面板 + 当前卷 subtitle 两处一致）。
-    q.ctrls[0].add(const MokuroMoeVolumeDownloadEvent(
-      stage: MokuroMoeDownloadStage.downloadingCbz,
-      receivedBytes: 512 * 1024,
-      totalBytes: 1024 * 1024,
-    ));
+    q.ctrls[0].add(
+      const MokuroMoeVolumeDownloadEvent(
+        stage: MokuroMoeDownloadStage.downloadingCbz,
+        receivedBytes: 512 * 1024,
+        totalBytes: 1024 * 1024,
+      ),
+    );
     await tester.pump();
     await tester.pump();
     expect(find.byType(LinearProgressIndicator), findsOneWidget);
     expect(find.textContaining(t.manga_online_stage_cbz), findsWidgets);
 
     // 完成 → 该卷标 ✓（不可再选），无复选框残留选中；面板随队列清空收起。
-    q.ctrls[0].add(const MokuroMoeVolumeDownloadEvent(
-      stage: MokuroMoeDownloadStage.done,
-      bookKey: 'yotsubato-01',
-    ));
+    q.ctrls[0].add(
+      const MokuroMoeVolumeDownloadEvent(
+        stage: MokuroMoeDownloadStage.done,
+        bookKey: 'yotsubato-01',
+      ),
+    );
     await q.ctrls[0].close();
     await tester.pumpAndSettle();
     expect(find.byIcon(Icons.check_circle), findsOneWidget);
@@ -306,11 +345,15 @@ void main() {
 
   testWidgets('统一下载中心：关闭对话框不中断队列下载（任务在后台走完并计数）', (WidgetTester tester) async {
     final q = makeQueue();
-    await tester.pumpWidget(wrap(MokuroMoeCatalogDialog(
-      db: db,
-      clientOverride: _FakeClient(_library),
-      queueOverride: q.queue,
-    )));
+    await tester.pumpWidget(
+      wrap(
+        MokuroMoeCatalogDialog(
+          db: db,
+          clientOverride: _FakeClient(_library),
+          queueOverride: q.queue,
+        ),
+      ),
+    );
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('よつばと!'));
@@ -326,10 +369,12 @@ void main() {
     await tester.pumpAndSettle();
     expect(q.queue.runningTask, isNotNull);
 
-    q.ctrls[0].add(const MokuroMoeVolumeDownloadEvent(
-      stage: MokuroMoeDownloadStage.done,
-      bookKey: 'yotsubato-01',
-    ));
+    q.ctrls[0].add(
+      const MokuroMoeVolumeDownloadEvent(
+        stage: MokuroMoeDownloadStage.done,
+        bookKey: 'yotsubato-01',
+      ),
+    );
     await q.ctrls[0].close();
     await tester.pumpAndSettle();
     expect(q.queue.tasks.single.status, MokuroMoeTaskStatus.done);
@@ -337,17 +382,20 @@ void main() {
     q.queue.dispose();
   });
 
-  testWidgets('reopen does not report historical completed tasks as newly done',
-      (WidgetTester tester) async {
+  testWidgets('reopen does not report historical completed tasks as newly done', (
+    WidgetTester tester,
+  ) async {
     final q = makeQueue();
     q.queue.enqueue(
       seriesName: _library.first.name,
       volumeNames: <String>[_library.first.volumes.first.name],
     );
-    q.ctrls[0].add(const MokuroMoeVolumeDownloadEvent(
-      stage: MokuroMoeDownloadStage.done,
-      bookKey: 'historical-volume',
-    ));
+    q.ctrls[0].add(
+      const MokuroMoeVolumeDownloadEvent(
+        stage: MokuroMoeDownloadStage.done,
+        bookKey: 'historical-volume',
+      ),
+    );
     await q.ctrls[0].close();
     expect(q.queue.tasks.single.status, MokuroMoeTaskStatus.done);
 

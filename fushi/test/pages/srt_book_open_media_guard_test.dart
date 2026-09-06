@@ -18,16 +18,14 @@ void main() {
 
     expect(openSrtBook, contains('await appModel.openMedia('));
     expect(openSrtBook, contains('ref: ref'));
-    expect(
-      openSrtBook,
-      contains('mediaSource: ReaderFushiSource.instance'),
-    );
+    expect(openSrtBook, contains('mediaSource: ReaderFushiSource.instance'));
     expect(openSrtBook, contains('item: _srtBookMediaItem(book)'));
 
     expect(
       openSrtBook,
       isNot(contains('Navigator.push')),
-      reason: 'Direct pushes bypass AppModel.openMedia and leave '
+      reason:
+          'Direct pushes bypass AppModel.openMedia and leave '
           'currentMediaSource null for SRT books.',
     );
     expect(openSrtBook, isNot(contains('ReaderFushiPage(')));

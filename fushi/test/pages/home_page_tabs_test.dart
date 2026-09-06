@@ -110,14 +110,8 @@ void main() {
   group('home dashboard tab', () {
     test('HomeTab 枚举包含 home，且是可见 tab 列表的第一个', () {
       expect(HomeTab.values, contains(HomeTab.home));
-      expect(
-        homeActiveTabs(videoEnabled: false).first,
-        HomeTab.home,
-      );
-      expect(
-        homeActiveTabs(videoEnabled: true).first,
-        HomeTab.home,
-      );
+      expect(homeActiveTabs(videoEnabled: false).first, HomeTab.home);
+      expect(homeActiveTabs(videoEnabled: true).first, HomeTab.home);
     });
 
     test('冷启动（未开默认词典 tab）落在首页 home', () {
@@ -137,10 +131,7 @@ void main() {
     });
 
     test('下载 tab 恒在（统一下载中心）：视频关也出现', () {
-      expect(
-        homeActiveTabs(videoEnabled: false),
-        contains(HomeTab.downloads),
-      );
+      expect(homeActiveTabs(videoEnabled: false), contains(HomeTab.downloads));
     });
 
     test('视频开启时下载 tab 出现且紧随视频', () {
@@ -179,8 +170,10 @@ void main() {
     });
 
     test('mangaEnabled=false 只隐藏漫画 tab，其余不动', () {
-      final List<HomeTab> tabs =
-          homeActiveTabs(videoEnabled: true, mangaEnabled: false);
+      final List<HomeTab> tabs = homeActiveTabs(
+        videoEnabled: true,
+        mangaEnabled: false,
+      );
       expect(tabs, isNot(contains(HomeTab.manga)));
       expect(tabs, contains(HomeTab.books));
       expect(tabs, contains(HomeTab.video));
@@ -190,8 +183,10 @@ void main() {
     });
 
     test('booksEnabled=false 只隐藏书架 tab，首页/词典/设置不动', () {
-      final List<HomeTab> tabs =
-          homeActiveTabs(videoEnabled: true, booksEnabled: false);
+      final List<HomeTab> tabs = homeActiveTabs(
+        videoEnabled: true,
+        booksEnabled: false,
+      );
       expect(tabs, isNot(contains(HomeTab.books)));
       expect(tabs, contains(HomeTab.home));
       expect(tabs, contains(HomeTab.dictionaries));
@@ -199,10 +194,14 @@ void main() {
     });
 
     test('browserExtensionEnabled=false 隐藏扩展 tab', () {
-      final List<HomeTab> withExt =
-          homeActiveTabs(videoEnabled: true, browserExtensionEnabled: true);
-      final List<HomeTab> withoutExt =
-          homeActiveTabs(videoEnabled: true, browserExtensionEnabled: false);
+      final List<HomeTab> withExt = homeActiveTabs(
+        videoEnabled: true,
+        browserExtensionEnabled: true,
+      );
+      final List<HomeTab> withoutExt = homeActiveTabs(
+        videoEnabled: true,
+        browserExtensionEnabled: false,
+      );
       expect(withExt, contains(HomeTab.browserExtension));
       expect(withoutExt, isNot(contains(HomeTab.browserExtension)));
     });
@@ -215,15 +214,12 @@ void main() {
         gamesEnabled: false,
         browserExtensionEnabled: false,
       );
-      expect(
-        tabs,
-        <HomeTab>[
-          HomeTab.home,
-          HomeTab.downloads,
-          HomeTab.dictionaries,
-          HomeTab.settings,
-        ],
-      );
+      expect(tabs, <HomeTab>[
+        HomeTab.home,
+        HomeTab.downloads,
+        HomeTab.dictionaries,
+        HomeTab.settings,
+      ]);
     });
 
     test('downloadsEnabled=false 只隐藏下载 tab，词典仍紧随最后一个媒体库页', () {
@@ -234,7 +230,9 @@ void main() {
       );
       expect(tabs, isNot(contains(HomeTab.downloads)));
       expect(
-          tabs.indexOf(HomeTab.dictionaries), tabs.indexOf(HomeTab.games) + 1);
+        tabs.indexOf(HomeTab.dictionaries),
+        tabs.indexOf(HomeTab.games) + 1,
+      );
       expect(tabs, contains(HomeTab.settings));
     });
 

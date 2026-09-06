@@ -49,7 +49,8 @@ class LoadingWatchdogView extends StatelessWidget {
     // data root (AppPaths._resolveDataRoot returns null off desktop), so that
     // wording is both irrelevant and alarming — Retry never changes any location
     // there. Pick a mobile-appropriate copy that reassures the data is safe.
-    final bool mobile = isMobile ??
+    final bool mobile =
+        isMobile ??
         (defaultTargetPlatform == TargetPlatform.android ||
             defaultTargetPlatform == TargetPlatform.iOS);
     return Center(

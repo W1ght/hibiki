@@ -80,15 +80,13 @@ class Dictionary {
 
   /// 词头区（`.expression` / 振假名）实际该用的语言：用户指定优先，其次 index.json
   /// 的 sourceLanguage，都没有则 null（调用方不猜，见 `content_font_chain.dart`）。
-  String? get effectiveSourceLanguage => _firstNonEmpty(
-        <String?>[languageOverride, sourceLanguage],
-      );
+  String? get effectiveSourceLanguage =>
+      _firstNonEmpty(<String?>[languageOverride, sourceLanguage]);
 
   /// 释义区实际该用的语言：用户指定优先（用户指定的是「这本词典是什么语言的」，
   /// 对单语词典而言词头和释义同语言），其次 index.json 的 targetLanguage。
-  String? get effectiveTargetLanguage => _firstNonEmpty(
-        <String?>[languageOverride, targetLanguage],
-      );
+  String? get effectiveTargetLanguage =>
+      _firstNonEmpty(<String?>[languageOverride, targetLanguage]);
 
   static String? _firstNonEmpty(List<String?> candidates) {
     for (final String? candidate in candidates) {

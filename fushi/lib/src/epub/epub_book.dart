@@ -132,9 +132,7 @@ class EpubBook {
 
   static void _removeRubyAnnotations(html_dom.Element? root) {
     if (root == null) return;
-    root.querySelectorAll('rt, rp, rtc').forEach(
-          (el) => el.remove(),
-        );
+    root.querySelectorAll('rt, rp, rtc').forEach((el) => el.remove());
   }
 
   /// TODO-1174: the largest whitespace-stripped plain-text length a chapter may
@@ -175,7 +173,8 @@ class EpubBook {
       return _imageOnlyChapterMemo[index] = false;
     }
     final html_dom.Document doc = parseChapterHtml(chapters[index].html);
-    final bool value = _chapterImageRefs(doc).isNotEmpty &&
+    final bool value =
+        _chapterImageRefs(doc).isNotEmpty &&
         _chapterPlainTextFromBody(doc.body).length <= _imageChapterMaxTextChars;
     return _imageOnlyChapterMemo[index] = value;
   }
@@ -223,8 +222,9 @@ class EpubBook {
     for (final html_dom.Element styleEl in doc.querySelectorAll('style')) {
       css.writeln(styleEl.text);
     }
-    for (final Match match
-        in _backgroundImageUrlPattern.allMatches(css.toString())) {
+    for (final Match match in _backgroundImageUrlPattern.allMatches(
+      css.toString(),
+    )) {
       final String ref = (match.group(1) ?? '').trim();
       if (ref.isNotEmpty) refs.add(ref);
     }
@@ -274,11 +274,13 @@ class EpubBook {
       for (final html_dom.Element img in doc.querySelectorAll('img')) {
         final String? src = img.attributes['src'];
         if (src == null || src.trim().isEmpty) continue;
-        built.add(EpubImageRef(
-          chapterIndex: i,
-          orderInBook: order++,
-          src: resolveImageHref(chapterHref, src),
-        ));
+        built.add(
+          EpubImageRef(
+            chapterIndex: i,
+            orderInBook: order++,
+            src: resolveImageHref(chapterHref, src),
+          ),
+        );
       }
     }
     final List<EpubImageRef> result = List<EpubImageRef>.unmodifiable(built);
@@ -293,7 +295,8 @@ class EpubBook {
     if (!uri.path.startsWith('/epub/')) return null;
 
     final String epubPath = _canonicalEpubPath(
-        _decodeHrefPath(uri.path.substring('/epub/'.length)));
+      _decodeHrefPath(uri.path.substring('/epub/'.length)),
+    );
     final String? fragment = uri.fragment.isNotEmpty ? uri.fragment : null;
 
     for (int i = 0; i < chapters.length; i++) {
@@ -426,8 +429,8 @@ class EpubChapter {
     this.linear = true,
     this.spreadProperty,
     this.isNav = false,
-  })  : _eagerHtml = html,
-        _filePath = null;
+  }) : _eagerHtml = html,
+       _filePath = null;
 
   /// TODO-296: lazy constructor — chapter XHTML is read + decoded from
   /// [filePath] on first [html] access and cached, instead of slurping every
@@ -445,8 +448,8 @@ class EpubChapter {
     this.linear = true,
     this.spreadProperty,
     this.isNav = false,
-  })  : _eagerHtml = null,
-        _filePath = filePath;
+  }) : _eagerHtml = null,
+       _filePath = filePath;
 
   final String id;
   final String href;

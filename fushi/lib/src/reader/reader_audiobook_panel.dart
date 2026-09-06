@@ -268,10 +268,12 @@ class _ReaderAudiobookPanelState extends State<ReaderAudiobookPanel> {
         final Duration dur = ctrl.totalDuration;
         final int durMs = dur.inMilliseconds;
         final int? scrub = _effectiveScrubMs(livePos);
-        final Duration pos =
-            scrub == null ? livePos : Duration(milliseconds: scrub);
-        final double value =
-            durMs > 0 ? (pos.inMilliseconds / durMs).clamp(0.0, 1.0) : 0.0;
+        final Duration pos = scrub == null
+            ? livePos
+            : Duration(milliseconds: scrub);
+        final double value = durMs > 0
+            ? (pos.inMilliseconds / durMs).clamp(0.0, 1.0)
+            : 0.0;
         final List<double> ticks = <double>[
           if (durMs > 0)
             for (final TtuTocEntry e in widget.toc)
@@ -299,15 +301,15 @@ class _ReaderAudiobookPanelState extends State<ReaderAudiobookPanel> {
                 // 留在目标处（见 _effectiveScrubMs）。
                 onChangeStart: durMs > 0
                     ? (double v) => setState(() {
-                          _scrubTargetMs = (v * durMs).round();
-                          _scrubSetAt = DateTime.now();
-                        })
+                        _scrubTargetMs = (v * durMs).round();
+                        _scrubSetAt = DateTime.now();
+                      })
                     : null,
                 onChanged: durMs > 0
                     ? (double v) => setState(() {
-                          _scrubTargetMs = (v * durMs).round();
-                          _scrubSetAt = DateTime.now();
-                        })
+                        _scrubTargetMs = (v * durMs).round();
+                        _scrubSetAt = DateTime.now();
+                      })
                     : null,
                 onChangeEnd: durMs > 0
                     ? (double v) {
@@ -328,11 +330,14 @@ class _ReaderAudiobookPanelState extends State<ReaderAudiobookPanel> {
                 child: SizedBox(
                   height: 4,
                   child: CustomPaint(
-                    key: const ValueKey<String>('fushi_audiobook_chapter_ticks'),
+                    key: const ValueKey<String>(
+                      'fushi_audiobook_chapter_ticks',
+                    ),
                     painter: _ChapterTickPainter(
                       fractions: ticks,
-                      color: theme.colorScheme.onSurfaceVariant
-                          .withValues(alpha: 0.6),
+                      color: theme.colorScheme.onSurfaceVariant.withValues(
+                        alpha: 0.6,
+                      ),
                     ),
                   ),
                 ),
@@ -391,10 +396,9 @@ class _ReaderAudiobookPanelState extends State<ReaderAudiobookPanel> {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final List<File> files = ctrl?.audioFiles ?? const <File>[];
     final String? alignmentPath = ctrl?.audiobook?.alignmentPath;
-    final String? alignmentName =
-        alignmentPath == null || alignmentPath.isEmpty
-            ? null
-            : p.basename(alignmentPath);
+    final String? alignmentName = alignmentPath == null || alignmentPath.isEmpty
+        ? null
+        : p.basename(alignmentPath);
     void closeThen(VoidCallback action) {
       Navigator.of(context).pop();
       action();
@@ -481,8 +485,9 @@ class _ReaderAudiobookPanelState extends State<ReaderAudiobookPanel> {
     required TextStyle? timeStyle,
   }) {
     final int? startMs = ctrl?.sectionStartGlobalMs(entry.index);
-    final String time =
-        startMs == null ? '—' : _formatDuration(Duration(milliseconds: startMs));
+    final String time = startMs == null
+        ? '—'
+        : _formatDuration(Duration(milliseconds: startMs));
     return AdaptiveSettingsRow(
       title: entry.label,
       subtitle: isCurrent ? t.reader_audiobook_current_chapter : null,

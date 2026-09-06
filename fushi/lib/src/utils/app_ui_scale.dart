@@ -14,11 +14,7 @@ import 'package:flutter/widgets.dart';
 /// WebView 处于原生坐标空间、而其上的划词弹窗/高亮浮层仍在缩放后的 canvas 空间，
 /// 两套坐标错位 factor scale，书内查词弹窗与高亮会全部偏位（曾如此回归过）。
 class FushiAppUiScale extends StatelessWidget {
-  const FushiAppUiScale({
-    required this.scale,
-    required this.child,
-    super.key,
-  });
+  const FushiAppUiScale({required this.scale, required this.child, super.key});
 
   static const double minScale = 0.3;
   static const double defaultScale = 1.0;
@@ -78,8 +74,8 @@ class FushiAppUiScale extends StatelessWidget {
 
   /// 读取最近一层祖先注入的有效缩放系数；无祖先时返回 [defaultScale]。
   static double of(BuildContext context) {
-    final _AppUiScaleScope? scope =
-        context.dependOnInheritedWidgetOfExactType<_AppUiScaleScope>();
+    final _AppUiScaleScope? scope = context
+        .dependOnInheritedWidgetOfExactType<_AppUiScaleScope>();
     return scope?.scale ?? defaultScale;
   }
 
@@ -87,10 +83,7 @@ class FushiAppUiScale extends StatelessWidget {
   Widget build(BuildContext context) {
     final double s = normalize(scale);
 
-    final Widget scoped = _AppUiScaleScope(
-      scale: s,
-      child: child,
-    );
+    final Widget scoped = _AppUiScaleScope(scale: s, child: child);
 
     if (s == defaultScale) return scoped;
 
@@ -114,10 +107,7 @@ class FushiAppUiScale extends StatelessWidget {
           alignment: Alignment.topLeft,
           child: SizedBox.fromSize(
             size: canvas,
-            child: MediaQuery(
-              data: _scaleMediaQuery(mq, 1 / s),
-              child: scoped,
-            ),
+            child: MediaQuery(data: _scaleMediaQuery(mq, 1 / s), child: scoped),
           ),
         );
       },
@@ -187,10 +177,7 @@ MediaQueryData _scaleMediaQuery(MediaQueryData mq, double factor) {
 
 /// 向后代暴露当前有效缩放系数。
 class _AppUiScaleScope extends InheritedWidget {
-  const _AppUiScaleScope({
-    required this.scale,
-    required super.child,
-  });
+  const _AppUiScaleScope({required this.scale, required super.child});
 
   final double scale;
 

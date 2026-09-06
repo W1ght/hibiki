@@ -87,7 +87,8 @@ class _DownloadSubscriptionsPanelState
   }
 
   Future<void> _delete(AnimeDownloadSubscription subscription) async {
-    final bool confirmed = await showAppDialog<bool>(
+    final bool confirmed =
+        await showAppDialog<bool>(
           context: context,
           builder: (BuildContext dialogContext) => AlertDialog(
             title: Text(t.download_subscription_delete),
@@ -119,15 +120,17 @@ class _DownloadSubscriptionsPanelState
 
   String _formatTime(int? milliseconds) {
     if (milliseconds == null) return t.download_subscription_never_checked;
-    final DateTime value =
-        DateTime.fromMillisecondsSinceEpoch(milliseconds).toLocal();
+    final DateTime value = DateTime.fromMillisecondsSinceEpoch(
+      milliseconds,
+    ).toLocal();
     return FushiTimeFormat.dateHourMinute(value);
   }
 
   @override
   Widget build(BuildContext context) {
-    final AnimeDownloadSubscriptionService? service =
-        ref.read(appProvider).animeDownloadSubscriptionService;
+    final AnimeDownloadSubscriptionService? service = ref
+        .read(appProvider)
+        .animeDownloadSubscriptionService;
     if (_loading) return buildLoading();
     if (service == null) {
       return Center(child: Text(t.anime_download_store_unavailable));
@@ -150,10 +153,10 @@ class _DownloadSubscriptionsPanelState
                         separatorBuilder: (_, __) => const SizedBox(height: 8),
                         itemBuilder: (BuildContext context, int index) =>
                             _buildSubscriptionCard(
-                          context,
-                          _subscriptions[index],
-                          checking,
-                        ),
+                              context,
+                              _subscriptions[index],
+                              checking,
+                            ),
                       ),
                     ),
             ),
@@ -174,10 +177,7 @@ class _DownloadSubscriptionsPanelState
             padding: const EdgeInsets.fromLTRB(16, 12, 12, 12),
             child: Row(
               children: <Widget>[
-                Icon(
-                  Icons.schedule_outlined,
-                  color: theme.colorScheme.primary,
-                ),
+                Icon(Icons.schedule_outlined, color: theme.colorScheme.primary),
                 const SizedBox(width: 12),
                 Expanded(
                   child: Text(
@@ -226,8 +226,9 @@ class _DownloadSubscriptionsPanelState
         Text(
           t.download_subscription_empty_body,
           textAlign: TextAlign.center,
-          style: theme.textTheme.bodyMedium
-              ?.copyWith(color: theme.colorScheme.outline),
+          style: theme.textTheme.bodyMedium?.copyWith(
+            color: theme.colorScheme.outline,
+          ),
         ),
       ],
     );
@@ -246,7 +247,7 @@ class _DownloadSubscriptionsPanelState
       if (subscription.jimakuEntryName?.isNotEmpty ?? false)
         '${t.video_jimaku_source}: ${subscription.jimakuEntryName}'
             '${subscription.jimakuLanguage == null ? '' : ' · '
-                '${jimakuLanguageLabel(subscription.jimakuLanguage!)}'}',
+                      '${jimakuLanguageLabel(subscription.jimakuLanguage!)}'}',
       t.download_subscription_after_episode(
         episode: subscription.startAfterEpisode,
       ),
@@ -298,8 +299,9 @@ class _DownloadSubscriptionsPanelState
                     subscription.lastError!,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: theme.textTheme.bodySmall
-                        ?.copyWith(color: theme.colorScheme.error),
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: theme.colorScheme.error,
+                    ),
                   ),
               ],
             ),

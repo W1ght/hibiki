@@ -56,11 +56,10 @@ List<GalWindowVideoFrameEntry> planGalWindowVideoFrames({
 }) {
   if (toTickMs < fromTickMs) return const <GalWindowVideoFrameEntry>[];
   final List<WindowRecordingFrame> sorted =
-      List<WindowRecordingFrame>.of(frames)
-        ..sort(
-          (WindowRecordingFrame a, WindowRecordingFrame b) =>
-              a.tickMs.compareTo(b.tickMs),
-        );
+      List<WindowRecordingFrame>.of(frames)..sort(
+        (WindowRecordingFrame a, WindowRecordingFrame b) =>
+            a.tickMs.compareTo(b.tickMs),
+      );
 
   final List<({String path, int tickMs})> picked =
       <({String path, int tickMs})>[];
@@ -279,7 +278,8 @@ Future<GalWindowVideoClip?> buildGalWindowVideoClip({
       audioDurationMs = await probeGalWindowAudioDurationMs(ffmpeg, audioPath);
     }
 
-    final int from = fromTickMs ??
+    final int from =
+        fromTickMs ??
         fallbackGalWindowVideoFromTick(
           toTickMs: to,
           audioDurationMs: audioDurationMs,

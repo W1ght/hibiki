@@ -42,14 +42,13 @@ void main() {
 
     // 与生产同构的两层 PopScope 外壳：外层同步态、内层设置 tab。
     // [isSettingsTab] 控制是否构造内层（生产里设置 tab 才挂 HomeSettingsTabContent）。
-    Widget buildLayered({
-      required bool syncing,
-      required bool isSettingsTab,
-    }) {
-      Widget inner = Builder(builder: (BuildContext ctx) {
-        pageContext = ctx;
-        return const Center(child: Text('home-body'));
-      });
+    Widget buildLayered({required bool syncing, required bool isSettingsTab}) {
+      Widget inner = Builder(
+        builder: (BuildContext ctx) {
+          pageContext = ctx;
+          return const Center(child: Text('home-body'));
+        },
+      );
       if (isSettingsTab) {
         // 内层设置 PopScope：拦截返回（canPop:false），不弹任何告警。
         inner = PopScope(
@@ -81,12 +80,10 @@ void main() {
       );
     }
 
-    testWidgets('FIX: 设置 tab + 同步中 按返回 → 不弹同步告警（OR-veto 遍历仍被收窄拦下）',
-        (WidgetTester tester) async {
-      await tester.pumpWidget(buildLayered(
-        syncing: true,
-        isSettingsTab: true,
-      ));
+    testWidgets('FIX: 设置 tab + 同步中 按返回 → 不弹同步告警（OR-veto 遍历仍被收窄拦下）', (
+      WidgetTester tester,
+    ) async {
+      await tester.pumpWidget(buildLayered(syncing: true, isSettingsTab: true));
       await tester.pumpAndSettle();
 
       // 系统返回：route 被内层 canPop:false 否决（不 pop），但所有 PopScope 回调遍历。
@@ -94,29 +91,33 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(handled, isTrue, reason: 'OR-veto：任一 canPop:false → 返回被消费、不退出');
-      expect(find.text('sync-warning-dialog'), findsNothing,
-          reason: '设置 tab 上即使同步中，顶层也不得弹同步告警（TODO-698 根因）');
+      expect(
+        find.text('sync-warning-dialog'),
+        findsNothing,
+        reason: '设置 tab 上即使同步中，顶层也不得弹同步告警（TODO-698 根因）',
+      );
     });
 
     testWidgets('回归保护：非设置 tab + 同步中 按返回 → 仍弹同步告警', (WidgetTester tester) async {
-      await tester.pumpWidget(buildLayered(
-        syncing: true,
-        isSettingsTab: false,
-      ));
+      await tester.pumpWidget(
+        buildLayered(syncing: true, isSettingsTab: false),
+      );
       await tester.pumpAndSettle();
 
       await tester.binding.handlePopRoute();
       await tester.pumpAndSettle();
 
-      expect(find.text('sync-warning-dialog'), findsOneWidget,
-          reason: '非设置 tab 同步中按返回必须仍弹同步告警，修复不能伤及正常退出拦截');
+      expect(
+        find.text('sync-warning-dialog'),
+        findsOneWidget,
+        reason: '非设置 tab 同步中按返回必须仍弹同步告警，修复不能伤及正常退出拦截',
+      );
     });
 
     testWidgets('回归保护：未同步 时按返回不弹告警', (WidgetTester tester) async {
-      await tester.pumpWidget(buildLayered(
-        syncing: false,
-        isSettingsTab: false,
-      ));
+      await tester.pumpWidget(
+        buildLayered(syncing: false, isSettingsTab: false),
+      );
       await tester.pumpAndSettle();
 
       await tester.binding.handlePopRoute();

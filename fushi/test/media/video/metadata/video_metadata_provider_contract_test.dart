@@ -71,8 +71,8 @@ void main() {
           episodeCount: 16,
         ))!;
         expect(grouped.episodeGroupId, 'seasons');
-        final List<VideoMetadataEpisode> episodes =
-            await provider.fetchEpisodes(grouped, seasonNumber: 3);
+        final List<VideoMetadataEpisode> episodes = await provider
+            .fetchEpisodes(grouped, seasonNumber: 3);
         expect(episodes, hasLength(16));
         expect(episodes.first.seasonNumber, 3);
         expect(episodes.first.episodeNumber, 1);
@@ -239,8 +239,8 @@ void main() {
           9,
         );
 
-        final List<VideoMetadataEpisode> episodes =
-            await provider.fetchEpisodes(lookup, seasonNumber: 1);
+        final List<VideoMetadataEpisode> episodes = await provider
+            .fetchEpisodes(lookup, seasonNumber: 1);
         expect(episodes.single.title, 'Pilot');
         expect(
           episodes.single.credits.single.kind,
@@ -316,19 +316,20 @@ void main() {
           language: 'zh-CN',
         );
 
-        final VideoMetadataResolution result = await VideoMetadataResolver(
-          registry: VideoMetadataProviderRegistry(<VideoMetadataProvider>[
-            provider,
-          ]),
-        ).resolve(
-          VideoMetadataResolveRequest(
-            selectedProvider: VideoMetadataProviderKind.tmdb,
-            mediaKind: VideoMetadataMediaKind.tv,
-            titleCandidates: <String>['Himouto! Umaru-chan'],
-            year: 2015,
-            seasonNumber: 1,
-          ),
-        );
+        final VideoMetadataResolution result =
+            await VideoMetadataResolver(
+              registry: VideoMetadataProviderRegistry(<VideoMetadataProvider>[
+                provider,
+              ]),
+            ).resolve(
+              VideoMetadataResolveRequest(
+                selectedProvider: VideoMetadataProviderKind.tmdb,
+                mediaKind: VideoMetadataMediaKind.tv,
+                titleCandidates: <String>['Himouto! Umaru-chan'],
+                year: 2015,
+                seasonNumber: 1,
+              ),
+            );
 
         expect(result.status, VideoMetadataResolutionStatus.matched);
         expect(result.lookup?.externalId, '67126');
@@ -344,8 +345,8 @@ void main() {
   group('AniListVideoMetadataProvider contract', () {
     test('maps official GraphQL work and Japanese voice actor', () async {
       final MockClient client = MockClient((http.Request request) async {
-        final Map<String, Object?> body =
-            (jsonDecode(request.body) as Map).cast<String, Object?>();
+        final Map<String, Object?> body = (jsonDecode(request.body) as Map)
+            .cast<String, Object?>();
         expect(body['query'], contains('voiceActors'));
         return _json(<String, Object?>{
           'data': <String, Object?>{

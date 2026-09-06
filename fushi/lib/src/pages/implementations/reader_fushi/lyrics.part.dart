@@ -24,8 +24,10 @@ class LyricsCueWindow {
     int maxCues = kLyricsModeMaxInitialCues,
   }) {
     if (allBookCues.isEmpty) {
-      final int safeChapterIndex =
-          _clampIndex(chapterIndex, chapterCues.length);
+      final int safeChapterIndex = _clampIndex(
+        chapterIndex,
+        chapterCues.length,
+      );
       return LyricsCueWindow(
         cues: chapterCues,
         currentIndex: safeChapterIndex,
@@ -85,8 +87,8 @@ extension _ReaderLyrics on _ReaderFushiPageState {
     if (entering) {
       final List<AudioCue> cues =
           _audiobookController!.allBookCuesSnapshot.isNotEmpty
-              ? _audiobookController!.allBookCuesSnapshot
-              : _audiobookController!.chapterCuesSnapshot;
+          ? _audiobookController!.allBookCuesSnapshot
+          : _audiobookController!.chapterCuesSnapshot;
       if (cues.isEmpty) return;
     }
 
@@ -115,8 +117,8 @@ extension _ReaderLyrics on _ReaderFushiPageState {
         // 把入场高亮 clamp 回第一句；按已恢复的播放器位置取正确 cue。
         _lyricsEntryCueIndex =
             _audiobookController!.allBookCuesSnapshot.isNotEmpty
-                ? _audiobookController!.allBookCueIdxAtPosition
-                : _audiobookController!.currentCueIdx;
+            ? _audiobookController!.allBookCueIdxAtPosition
+            : _audiobookController!.currentCueIdx;
         // 首次进入提示改挂「歌词文档就绪」事件（webview.part.dart 的
         // _onChapterLoadComplete 歌词分支消费此旗），替代旧的裸 delay 100ms——
         // 那只是猜 loadData 何时渲染完，慢机上会把对话框弹在空白页上。
@@ -152,8 +154,9 @@ extension _ReaderLyrics on _ReaderFushiPageState {
       allBookIndex: ctrl.allBookCueIdxAtPosition >= 0
           ? ctrl.allBookCueIdxAtPosition
           : _lyricsEntryCueIndex,
-      chapterIndex:
-          ctrl.currentCueIdx >= 0 ? ctrl.currentCueIdx : _lyricsEntryCueIndex,
+      chapterIndex: ctrl.currentCueIdx >= 0
+          ? ctrl.currentCueIdx
+          : _lyricsEntryCueIndex,
     );
     _lyricsCueList = cueWindow.cues;
     _lyricsCueIndexOffset = cueWindow.indexOffset;
@@ -172,8 +175,9 @@ extension _ReaderLyrics on _ReaderFushiPageState {
     // 歌词视图跟正文用同一份自定义字体（FontTarget.body）：它显示的就是这本书的
     // 文本，切个视图不该换字体。readerSettings 为 null（极早期调用）时退回空串，
     // 歌词页保持历史 Noto 链。
-    final ({String fontFamily, String fontFaces})? bodyFont =
-        ReaderFushiSource.readerSettings?.buildCustomFontCss();
+    final ({String fontFamily, String fontFaces})? bodyFont = ReaderFushiSource
+        .readerSettings
+        ?.buildCustomFontCss();
 
     final String html = LyricsModeHtml.generate(
       cues: _lyricsCueList,
@@ -212,11 +216,13 @@ extension _ReaderLyrics on _ReaderFushiPageState {
         mimeType: 'text/html',
         encoding: 'utf-8',
         baseUrl: WebUri(
-          Uri.parse('https://fushi.local/lyrics').replace(
-            queryParameters: <String, String>{
-              'generation': '$loadGeneration',
-            },
-          ).toString(),
+          Uri.parse('https://fushi.local/lyrics')
+              .replace(
+                queryParameters: <String, String>{
+                  'generation': '$loadGeneration',
+                },
+              )
+              .toString(),
         ),
       );
     } catch (_) {
@@ -271,7 +277,8 @@ extension _ReaderLyrics on _ReaderFushiPageState {
     final bool blur = src.lyricsBlur;
     try {
       await _controller!.evaluateJavascript(
-        source: 'window.__lyricsUpdateStyle && window.__lyricsUpdateStyle('
+        source:
+            'window.__lyricsUpdateStyle && window.__lyricsUpdateStyle('
             "'$bgCss','$fgCss','$accentCss',$fontSize,$mt,$mb,$ml,$mr);",
       );
       // TODO-908: 模糊态是独立维度，单独热更（不重建整页），与样式同一路下发。
@@ -281,8 +288,11 @@ extension _ReaderLyrics on _ReaderFushiPageState {
     } catch (e, stack) {
       // 与 _applyStylesLive/_reloadWithCurrentSettings 对称：半销毁 WebView 上
       // eval 抛 PlatformException，安全 no-op（lyrics 路径也不再裸露孤儿 await）。
-      ErrorLogService.instance
-          .log('ReaderFushi.updateLyricsStyleLive.eval', e, stack);
+      ErrorLogService.instance.log(
+        'ReaderFushi.updateLyricsStyleLive.eval',
+        e,
+        stack,
+      );
       return;
     }
     // cue 文本随字号/边距重排，激活中的焦点环坐标会过期——重测一次跟上新布局。
@@ -300,9 +310,8 @@ extension _ReaderLyrics on _ReaderFushiPageState {
     src.setPreference<bool>(key: 'lyrics_mode_hint_shown', value: true);
     showAppDialog<void>(
       context: context,
-      builder: (BuildContext ctx) => ReaderLyricsModeHintDialog(
-        onClose: () => Navigator.of(ctx).pop(),
-      ),
+      builder: (BuildContext ctx) =>
+          ReaderLyricsModeHintDialog(onClose: () => Navigator.of(ctx).pop()),
     );
   }
 
@@ -317,13 +326,15 @@ extension _ReaderLyrics on _ReaderFushiPageState {
     }
     final AudiobookPlayerController ctrl = _audiobookController!;
     final AudioCue? cue = ctrl.currentCue;
-    int targetChapter =
-        _lastProgressSection >= 0 ? _lastProgressSection : _lyricsEntryChapter;
+    int targetChapter = _lastProgressSection >= 0
+        ? _lastProgressSection
+        : _lyricsEntryChapter;
     double targetProgress = _lastProgressValue;
 
     if (cue != null) {
-      final SubtitleRematchFragment? frag =
-          SubtitleRematchCodec.tryDecode(cue.textFragmentId);
+      final SubtitleRematchFragment? frag = SubtitleRematchCodec.tryDecode(
+        cue.textFragmentId,
+      );
       if (frag != null) {
         targetChapter = frag.sectionIndex;
         if (targetChapter >= 0 &&
@@ -406,10 +417,7 @@ extension _ReaderLyrics on _ReaderFushiPageState {
           manufacturer: maker,
         );
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(hint),
-            duration: const Duration(seconds: 4),
-          ),
+          SnackBar(content: Text(hint), duration: const Duration(seconds: 4)),
         );
       }
       return false;
@@ -446,7 +454,10 @@ extension _ReaderLyrics on _ReaderFushiPageState {
   /// 它在 initState 无条件消费已存在的 [DesktopLookupService.pendingText] 并展示——
   /// pending 必须在请求切 tab **之前**就位（这里顺序即如此），否则页面挂载时读不到。
   Future<void> _lookupFromFloatingLyric(
-      String text, int index, Rect? wordRect) async {
+    String text,
+    int index,
+    Rect? wordRect,
+  ) async {
     if (!mounted) return;
     // TODO-872 — 覆盖窗接手即返回；false 时继续原「切主窗词典 tab」回落路由。
     if (await tryFloatingLyricGlobalLookup(

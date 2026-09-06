@@ -24,7 +24,8 @@ void main() {
     expect(
       iss,
       contains('procedure MakeWayForRunningLauncher('),
-      reason: 'launcher 是拉起本安装器的进程，复制阶段必然撞 DeleteFile code 5；'
+      reason:
+          'launcher 是拉起本安装器的进程，复制阶段必然撞 DeleteFile code 5；'
           '没有这一步，/SUPPRESSMSGBOXES 会默认 Abort 并整包回滚',
     );
     // 必须真的被 PrepareToInstall 调用，光定义不算。
@@ -89,7 +90,8 @@ void main() {
     expect(
       missingCheckAt,
       lessThan(firstDeleteAt),
-      reason: '删残留必须发生在「原件在位」这个分支里；'
+      reason:
+          '删残留必须发生在「原件在位」这个分支里；'
           '无条件先删会毁掉唯一的恢复材料',
     );
   });
@@ -110,7 +112,8 @@ void main() {
     expect(
       body,
       contains(r"ExpandConstant('{sysnative}\WindowsPowerShell"),
-      reason: '32 位 Inno 经 {sys} 只能拿到 32 位 PowerShell，读不到 64 位进程的 Path，'
+      reason:
+          '32 位 Inno 经 {sys} 只能拿到 32 位 PowerShell，读不到 64 位进程的 Path，'
           '这个清扫就成了哑弹；必须用 {sysnative} 绕开 WOW64 重定向',
     );
     expect(

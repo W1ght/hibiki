@@ -13,10 +13,8 @@ import 'package:fushi/src/media/import/epub_backed_srt_book.dart';
 import 'package:fushi/src/utils/misc/error_log_service.dart';
 
 /// 字幕书重新导入的进度回调（与 [AudiobookAlignmentProgress] 同形）。
-typedef SrtBookReimportProgress = void Function(
-  double fraction,
-  String message,
-);
+typedef SrtBookReimportProgress =
+    void Function(double fraction, String message);
 
 /// 步骤文案注入（非 UI 层不碰 i18n，范式仿 `AudiobookAlignmentMessages`）。
 class SrtBookReimportMessages {
@@ -42,12 +40,13 @@ class SrtBookReimportMessages {
 }
 
 /// 正文重建的注入点（测试接缝）。生产恒为 null，走 [_rebuildGeneratedBody]。
-typedef SrtBookBodyRebuilder = Future<bool> Function({
-  required FushiDatabase db,
-  required EpubBookRow row,
-  required SrtBook book,
-  required List<AudioCue> cues,
-});
+typedef SrtBookBodyRebuilder =
+    Future<bool> Function({
+      required FushiDatabase db,
+      required EpubBookRow row,
+      required SrtBook book,
+      required List<AudioCue> cues,
+    });
 
 /// 覆写正文重建实现。真实实现要跑 isolate 解压 + path_provider 临时目录，单测里
 /// 跑不动；接缝让「什么时候**该**重建、什么时候**绝不**重建」这条判据可以被正反
@@ -139,8 +138,11 @@ Future<SrtBookReimportOutcome> reimportSrtBook({
     report(0.05, messages.parsing);
     // cue 的命名空间是 uid（与 `SrtBookRepository.cuesFor` / 首次导入同源），
     // 不是 bookKey——两者在字幕书上是不同的键，写错整本书查不到 cue。
-    final List<AudioCue> cues =
-        await parseCuesForFormat(File(subtitlePath), uid, 0);
+    final List<AudioCue> cues = await parseCuesForFormat(
+      File(subtitlePath),
+      uid,
+      0,
+    );
     if (cues.isEmpty) {
       throw SrtBookReimportEmptyCuesException(subtitlePath);
     }
@@ -208,10 +210,7 @@ Future<SrtBookReimportOutcome> reimportSrtBook({
 ///    （[epubBackedSrtBookUid]），那本书的正文是用户自己的 EPUB，用 cue 重新
 ///    生成会**直接毁掉用户的书**——这是本文件最重要的一条负向判据；
 /// 3. EpubBooks 行不存在（孤儿字幕书）→ 无处可写。
-Future<EpubBookRow?> _rebuildableBodyRow(
-  FushiDatabase db,
-  SrtBook book,
-) async {
+Future<EpubBookRow?> _rebuildableBodyRow(FushiDatabase db, SrtBook book) async {
   final String bookKey = book.bookKey;
   if (bookKey.isEmpty) return null;
   if (book.uid == epubBackedSrtBookUid(bookKey)) return null;
@@ -239,16 +238,18 @@ Future<bool> _rebuildGeneratedBody({
     );
     final ({int chapterCount, String chaptersJson, String? coverPath}) parsed =
         await EpubImporter.rebuildExtractedInPlace(
-      epubFilePath: epubPath,
-      extractDir: row.extractDir,
-    );
+          epubFilePath: epubPath,
+          extractDir: row.extractDir,
+        );
     await db.updateEpubBookChapters(
       row.bookKey,
       chapterCount: parsed.chapterCount,
       chaptersJson: parsed.chaptersJson,
     );
-    debugPrint('[fushi-import] srt reimport: body rebuilt key=${row.bookKey} '
-        'chapters=${parsed.chapterCount} cues=${cues.length}');
+    debugPrint(
+      '[fushi-import] srt reimport: body rebuilt key=${row.bookKey} '
+      'chapters=${parsed.chapterCount} cues=${cues.length}',
+    );
     return true;
   } catch (e, stack) {
     ErrorLogService.instance.log('SrtBookReimport.rebuildBody', e, stack);

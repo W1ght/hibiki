@@ -93,8 +93,9 @@ class _MangaDiscoveryPageState extends ConsumerState<MangaDiscoveryPage> {
   bool _loading = false;
 
   MihonManager? _mihonManager;
-  final MihonSourceImageLoadQueue _imageQueue =
-      MihonSourceImageLoadQueue(maxConcurrent: 4);
+  final MihonSourceImageLoadQueue _imageQueue = MihonSourceImageLoadQueue(
+    maxConcurrent: 4,
+  );
 
   StreamSubscription<void>? _aidokuChanges;
   List<AidokuInstalledPackage> _aidokuPackages =
@@ -234,10 +235,8 @@ class _MangaDiscoveryPageState extends ConsumerState<MangaDiscoveryPage> {
     Navigator.of(context).push(
       adaptivePageRoute<void>(
         context: context,
-        builder: (BuildContext context) => MangaDiscoveryDetailPage(
-          entry: entry,
-          onOpenSources: openSources,
-        ),
+        builder: (BuildContext context) =>
+            MangaDiscoveryDetailPage(entry: entry, onOpenSources: openSources),
       ),
     );
   }
@@ -247,8 +246,9 @@ class _MangaDiscoveryPageState extends ConsumerState<MangaDiscoveryPage> {
   ///
   /// 判据是「壳**有** sources 视图」而不是「壳在」：[MediaLibraryShellScope.select]
   /// 对不存在的视图静默忽略，拿后者当判据就会渲染一个点了什么都不发生的按钮。
-  VoidCallback? _openSourcesAction() => MediaLibraryShellScope.maybeOf(context)
-      ?.actionFor(MediaLibraryViewKind.sources);
+  VoidCallback? _openSourcesAction() => MediaLibraryShellScope.maybeOf(
+    context,
+  )?.actionFor(MediaLibraryViewKind.sources);
 
   void _openMokuro() {
     final AppModel appModel = ref.read(appProvider);
@@ -257,10 +257,7 @@ class _MangaDiscoveryPageState extends ConsumerState<MangaDiscoveryPage> {
         context: context,
         builder: (BuildContext context) => FushiPageScaffold(
           title: t.mihon_source_browse_mokuro,
-          body: MokuroMoeCatalogView(
-            db: appModel.database,
-            embedded: true,
-          ),
+          body: MokuroMoeCatalogView(db: appModel.database, embedded: true),
         ),
       ),
     );
@@ -374,9 +371,10 @@ class _MangaDiscoveryPageState extends ConsumerState<MangaDiscoveryPage> {
     final List<DiscoverySourceOption> options = catalog.sourceOptions;
     // 选中的来源被停用/卸载后自动回落到「全部来源」：把它算成派生值而不是在
     // setState 里纠正，选中项就不可能停在一个已经不存在的 id 上。
-    final String selected = options.any(
-      (DiscoverySourceOption option) => option.id == _selectedSourceId,
-    )
+    final String selected =
+        options.any(
+          (DiscoverySourceOption option) => option.id == _selectedSourceId,
+        )
         ? _selectedSourceId
         : kDiscoveryAllSourcesId;
     return DesktopContentLayout(
@@ -414,8 +412,9 @@ class _MangaDiscoveryPageState extends ConsumerState<MangaDiscoveryPage> {
     final bool allSources = selected == kDiscoveryAllSourcesId;
     final MangaDiscoverySnapshot? snapshot = _snapshot;
     final List<MangaDiscoverySourceFeed> feeds = _sourceFeeds()
-        .where((MangaDiscoverySourceFeed feed) =>
-            allSources || feed.id == selected)
+        .where(
+          (MangaDiscoverySourceFeed feed) => allSources || feed.id == selected,
+        )
         .toList(growable: false);
     return ListView(
       padding: const EdgeInsets.symmetric(vertical: 8),
@@ -473,18 +472,15 @@ class _MangaDiscoveryPageState extends ConsumerState<MangaDiscoveryPage> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Text(
-            t.manga_discovery_load_failed,
-            textAlign: TextAlign.center,
-          ),
+          Text(t.manga_discovery_load_failed, textAlign: TextAlign.center),
           if (_error != null) ...<Widget>[
             const SizedBox(height: 8),
             Text(
               '$_error',
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: Theme.of(context).colorScheme.outline,
-                  ),
+                color: Theme.of(context).colorScheme.outline,
+              ),
             ),
           ],
           const SizedBox(height: 16),
@@ -512,10 +508,7 @@ class _MangaDiscoveryPageState extends ConsumerState<MangaDiscoveryPage> {
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Text(
-              title,
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
+            child: Text(title, style: Theme.of(context).textTheme.titleMedium),
           ),
           const SizedBox(height: 8),
           // 桌面端默认 dragDevices 不含 mouse，横滑行必须包
@@ -623,8 +616,8 @@ class _MangaDiscoverySourceRowState extends State<MangaDiscoverySourceRow> {
 
   Future<void> _load() async {
     try {
-      final List<MangaDiscoverySourceItem> items =
-          await widget.feed.loadPopular();
+      final List<MangaDiscoverySourceItem> items = await widget.feed
+          .loadPopular();
       if (!mounted) return;
       setState(() => _items = items);
     } on Object {

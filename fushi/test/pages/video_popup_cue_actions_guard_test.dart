@@ -15,8 +15,7 @@ import 'package:flutter_test/flutter_test.dart';
 /// 但要立起来需要整个视频页 State + media_kit + DB，widget 测试代价远超收益；接线层
 /// 的回归（按钮被误删、handler 接错）源码扫描即可咬死。
 void main() {
-  final File page =
-      File('lib/src/pages/implementations/video_fushi_page.dart');
+  final File page = File('lib/src/pages/implementations/video_fushi_page.dart');
   final File part = File(
     'lib/src/pages/implementations/video_fushi/lookup_favorite.part.dart',
   );
@@ -59,11 +58,7 @@ void main() {
         'video_popup_copy_sentence_button',
         'video_favorite_sentence_button',
       ]) {
-        expect(
-          header.contains("Key('$key')"),
-          isTrue,
-          reason: '顶栏缺少动作按钮 $key',
-        );
+        expect(header.contains("Key('$key')"), isTrue, reason: '顶栏缺少动作按钮 $key');
       }
     });
 

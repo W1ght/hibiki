@@ -89,10 +89,7 @@ class KeyCapWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 6),
       decoration: BoxDecoration(
         borderRadius: radius,
-        border: Border.all(
-          color: borderColor,
-          width: bound ? 1.5 : 1,
-        ),
+        border: Border.all(color: borderColor, width: bound ? 1.5 : 1),
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
@@ -124,10 +121,7 @@ class KeyCapWidget extends StatelessWidget {
           // 侧壁（底层）：填满，底部露出 stepHeight 的深色台阶。
           Positioned.fill(
             child: DecoratedBox(
-              decoration: BoxDecoration(
-                color: sideColor,
-                borderRadius: radius,
-              ),
+              decoration: BoxDecoration(color: sideColor, borderRadius: radius),
             ),
           ),
           // 键面（顶层）：顶部对齐、底部留 stepHeight 露台阶。
@@ -146,11 +140,7 @@ class KeyCapWidget extends StatelessWidget {
 
     return Material(
       type: MaterialType.transparency,
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: radius,
-        child: cap,
-      ),
+      child: InkWell(onTap: onTap, borderRadius: radius, child: cap),
     );
   }
 }

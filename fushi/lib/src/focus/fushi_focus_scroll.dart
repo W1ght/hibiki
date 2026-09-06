@@ -40,7 +40,8 @@ class FushiFocusScroll {
     final Rect widgetRect = globalRectOfBox(renderObject);
     final Rect viewportRect = globalRectOfBox(viewport);
     const double tolerance = 0.5;
-    final bool fullyVisible = widgetRect.top >= viewportRect.top - tolerance &&
+    final bool fullyVisible =
+        widgetRect.top >= viewportRect.top - tolerance &&
         widgetRect.bottom <= viewportRect.bottom + tolerance &&
         widgetRect.left >= viewportRect.left - tolerance &&
         widgetRect.right <= viewportRect.right + tolerance;
@@ -67,8 +68,10 @@ class FushiFocusScroll {
       return false;
     }
     final double target =
-        (position.pixels + position.viewportDimension * signedFraction)
-            .clamp(position.minScrollExtent, position.maxScrollExtent);
+        (position.pixels + position.viewportDimension * signedFraction).clamp(
+          position.minScrollExtent,
+          position.maxScrollExtent,
+        );
     if ((target - position.pixels).abs() < 0.5) return false;
     position.animateTo(
       target,
@@ -83,8 +86,9 @@ class FushiFocusScroll {
   /// 没有焦点几何目标，只能靠页面主滚动区翻屏。命中且仍能滚返回 true；无
   /// PrimaryScrollController / 无 client / 已到边界返回 false。
   static bool scrollPrimary(BuildContext context, double signedFraction) {
-    final ScrollController? controller =
-        PrimaryScrollController.maybeOf(context);
+    final ScrollController? controller = PrimaryScrollController.maybeOf(
+      context,
+    );
     if (controller == null) return false;
     return scrollController(controller, signedFraction);
   }
@@ -101,8 +105,10 @@ class FushiFocusScroll {
     if (controller.positions.length != 1) return false;
     final ScrollPosition position = controller.position;
     final double target =
-        (position.pixels + position.viewportDimension * signedFraction)
-            .clamp(position.minScrollExtent, position.maxScrollExtent);
+        (position.pixels + position.viewportDimension * signedFraction).clamp(
+          position.minScrollExtent,
+          position.maxScrollExtent,
+        );
     if ((target - position.pixels).abs() < 0.5) return false;
     controller.animateTo(
       target,
@@ -114,7 +120,9 @@ class FushiFocusScroll {
 
   /// 方向 → viewport 比例正负号：down/right 为正（向后/下滚），up/left 为负。
   static double signedFractionFor(
-      TraversalDirection direction, double fraction) {
+    TraversalDirection direction,
+    double fraction,
+  ) {
     switch (direction) {
       case TraversalDirection.down:
       case TraversalDirection.right:

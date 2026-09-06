@@ -32,8 +32,9 @@ void main() {
   test('制卡成功 OSD 触发保留：_showOsd(described.message, prominent: true)', () {
     // 只改定位、不动内容 / 触发：突出制卡提示仍走 prominent 变体。
     expect(
-      compactCode(src)
-          .contains(compactCode('_showOsd(described.message, prominent: true,')),
+      compactCode(
+        src,
+      ).contains(compactCode('_showOsd(described.message, prominent: true,')),
       isTrue,
       reason: '制卡成功提示必须仍走 prominent OSD（内容 / 触发不得改）',
     );

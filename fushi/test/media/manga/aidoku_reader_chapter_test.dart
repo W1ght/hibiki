@@ -6,20 +6,16 @@ import 'package:fushi/src/media/manga/mihon/mihon_reader_chapter.dart';
 
 void main() {
   test('keeps page context separate from resolved image request headers', () {
-    final AidokuImagePage page = AidokuImagePage.fromJson(
-      <String, Object?>{
-        'content': <String, Object?>{
-          'Url': <Object?>[
-            'https://cdn.example/page.jpg',
-            <String, String>{'shuffled': '1'},
-          ],
-        },
-        'request_url': 'https://images.example/page.jpg',
-        'request_headers': <String, String>{
-          'Referer': 'https://source.example/',
-        },
+    final AidokuImagePage page = AidokuImagePage.fromJson(<String, Object?>{
+      'content': <String, Object?>{
+        'Url': <Object?>[
+          'https://cdn.example/page.jpg',
+          <String, String>{'shuffled': '1'},
+        ],
       },
-    );
+      'request_url': 'https://images.example/page.jpg',
+      'request_headers': <String, String>{'Referer': 'https://source.example/'},
+    });
 
     expect(page.url, 'https://images.example/page.jpg');
     expect(page.context, <String, String>{'shuffled': '1'});

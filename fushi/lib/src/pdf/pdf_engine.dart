@@ -71,7 +71,10 @@ class PdfEngine {
       if (rendered == null) return null;
       try {
         return await bgraToPng(
-            rendered.pixels, rendered.width, rendered.height);
+          rendered.pixels,
+          rendered.width,
+          rendered.height,
+        );
       } finally {
         rendered.dispose();
       }
@@ -88,8 +91,9 @@ class PdfEngine {
     int width,
     int height,
   ) async {
-    final ui.ImmutableBuffer buffer =
-        await ui.ImmutableBuffer.fromUint8List(bgra);
+    final ui.ImmutableBuffer buffer = await ui.ImmutableBuffer.fromUint8List(
+      bgra,
+    );
     final ui.ImageDescriptor descriptor = ui.ImageDescriptor.raw(
       buffer,
       width: width,
@@ -100,8 +104,9 @@ class PdfEngine {
     final ui.FrameInfo frame = await codec.getNextFrame();
     final ui.Image image = frame.image;
     try {
-      final ByteData? png =
-          await image.toByteData(format: ui.ImageByteFormat.png);
+      final ByteData? png = await image.toByteData(
+        format: ui.ImageByteFormat.png,
+      );
       return png?.buffer.asUint8List();
     } finally {
       image.dispose();

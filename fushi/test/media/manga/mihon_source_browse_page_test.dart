@@ -12,8 +12,9 @@ import 'package:fushi_core/fushi_core.dart';
 
 void main() {
   test('source image queue starts only four cover fetches at a time', () async {
-    final MihonSourceImageLoadQueue queue =
-        MihonSourceImageLoadQueue(maxConcurrent: 4);
+    final MihonSourceImageLoadQueue queue = MihonSourceImageLoadQueue(
+      maxConcurrent: 4,
+    );
     final List<Completer<void>> gates = List<Completer<void>>.generate(
       10,
       (_) => Completer<void>(),
@@ -192,8 +193,9 @@ void main() {
     },
   );
 
-  testWidgets('a stale initial response cannot replace a newer search result',
-      (WidgetTester tester) async {
+  testWidgets('a stale initial response cannot replace a newer search result', (
+    WidgetTester tester,
+  ) async {
     runtime.popularGate = Completer<MihonMangaPage>();
     runtime.searchGate = Completer<MihonMangaPage>();
     await tester.pumpWidget(
@@ -233,8 +235,9 @@ void main() {
     expect(find.text('Stale popular result'), findsNothing);
   });
 
-  testWidgets('a duplicate-only next page terminates pagination',
-      (WidgetTester tester) async {
+  testWidgets('a duplicate-only next page terminates pagination', (
+    WidgetTester tester,
+  ) async {
     runtime.popularPages = <int, MihonMangaPage>{
       1: const MihonMangaPage(
         items: <MihonManga>[_BrowseRuntime.manga],
@@ -284,8 +287,7 @@ class _BrowseRuntime extends Fake implements MihonRuntime {
     MihonExtensionRef extension,
     MihonSource source, {
     List<MihonPreference> preferences = const <MihonPreference>[],
-  }) async =>
-      const <MihonFilter>[];
+  }) async => const <MihonFilter>[];
 
   @override
   Future<MihonMangaPage> getPopular(
@@ -293,14 +295,13 @@ class _BrowseRuntime extends Fake implements MihonRuntime {
     MihonSource source, {
     required int page,
     List<MihonPreference> preferences = const <MihonPreference>[],
-  }) async =>
-      popularGate != null
-          ? popularGate!.future
-          : popularPages?[page] ??
-              const MihonMangaPage(
-                items: <MihonManga>[manga],
-                hasNextPage: false,
-              );
+  }) async => popularGate != null
+      ? popularGate!.future
+      : popularPages?[page] ??
+            const MihonMangaPage(
+              items: <MihonManga>[manga],
+              hasNextPage: false,
+            );
 
   @override
   Future<MihonMangaPage> search(
@@ -339,17 +340,16 @@ class _BrowseRuntime extends Fake implements MihonRuntime {
     MihonSource source,
     MihonManga manga, {
     List<MihonPreference> preferences = const <MihonPreference>[],
-  }) async =>
-      List<MihonChapter>.generate(
-        486,
-        (int index) => MihonChapter(
-          url: '/chapter/${index + 1}',
-          name: 'Chapter ${index + 1}',
-          uploadedAt: index,
-          number: index + 1,
-        ),
-        growable: false,
-      );
+  }) async => List<MihonChapter>.generate(
+    486,
+    (int index) => MihonChapter(
+      url: '/chapter/${index + 1}',
+      name: 'Chapter ${index + 1}',
+      uploadedAt: index,
+      number: index + 1,
+    ),
+    growable: false,
+  );
 
   @override
   Future<void> dispose() async {}

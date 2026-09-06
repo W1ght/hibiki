@@ -17,10 +17,7 @@ class _RecordingFfmpegBackend implements FfmpegBackend {
   }
 
   @override
-  Future<FfmpegRunResult> runProbe(
-    List<String> args,
-    Duration timeout,
-  ) async =>
+  Future<FfmpegRunResult> runProbe(List<String> args, Duration timeout) async =>
       const FfmpegRunResult(returnCode: 1, output: 'unused');
 }
 
@@ -156,10 +153,7 @@ void main() {
 
     test('无事件 ID 时仍旧只取时间窗内最近的一个', () {
       final List<String> picked = pickPairedUnityVoiceWavs(
-        wavFileNames: const <String>[
-          '32147100_onna.wav',
-          '32147190_otoko.wav',
-        ],
+        wavFileNames: const <String>['32147100_onna.wav', '32147190_otoko.wav'],
         textTsMs: 32147200,
       );
       expect(picked, <String>['32147190_otoko.wav']);
@@ -357,8 +351,9 @@ void main() {
     });
 
     test('单个 xWMA 也经 ffmpeg 转成 AAC，不把原始字节写进卡片', () async {
-      final Directory root =
-          await Directory.systemTemp.createTemp('gal_xwma_transcode_');
+      final Directory root = await Directory.systemTemp.createTemp(
+        'gal_xwma_transcode_',
+      );
       final File xwma = File('${root.path}/voice.xwma');
       final Uint8List original = Uint8List.fromList(<int>[
         0x52,
@@ -389,12 +384,7 @@ void main() {
         expect(backend.calls, hasLength(1));
         expect(
           backend.calls.single,
-          containsAllInOrder(<String>[
-            '-i',
-            xwma.path,
-            '-c:a',
-            'aac',
-          ]),
+          containsAllInOrder(<String>['-i', xwma.path, '-c:a', 'aac']),
         );
         expect(backend.calls.single.last, endsWith('voice.aac'));
       } finally {

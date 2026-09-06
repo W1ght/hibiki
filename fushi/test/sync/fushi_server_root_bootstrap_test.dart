@@ -20,16 +20,19 @@ import 'package:fushi_core/fushi_core.dart';
 /// NOT pre-create the sync-data directory — that pre-creation is precisely what
 /// masked this bug in the existing suite.
 void main() {
-  test(
-      'a freshly started server (no pre-created sync-data) is reachable by the '
+  test('a freshly started server (no pre-created sync-data) is reachable by the '
       'client probe', () async {
-    final Directory tempDir =
-        await Directory.systemTemp.createTemp('hibiki_root_bootstrap_');
+    final Directory tempDir = await Directory.systemTemp.createTemp(
+      'hibiki_root_bootstrap_',
+    );
     addTearDown(() => tempDir.delete(recursive: true));
 
     final Directory servedRoot = Directory('${tempDir.path}/sync-data');
-    expect(servedRoot.existsSync(), isFalse,
-        reason: 'precondition: the served WebDAV root must not exist yet');
+    expect(
+      servedRoot.existsSync(),
+      isFalse,
+      reason: 'precondition: the served WebDAV root must not exist yet',
+    );
 
     final String token = FushiSyncServer.generateToken();
     final FushiSyncServer server = FushiSyncServer(
@@ -43,11 +46,13 @@ void main() {
 
     // Server invariant: the served root collection exists after start(), so a
     // PROPFIND on '/' returns 207 (an empty collection) instead of 404.
-    expect(servedRoot.existsSync(), isTrue,
-        reason: 'start() must create the served root so PROPFIND / is 207');
+    expect(
+      servedRoot.existsSync(),
+      isTrue,
+      reason: 'start() must create the served root so PROPFIND / is 207',
+    );
 
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final SyncRepository repo = SyncRepository(db);
     await repo.setFushiClientUrls(<FushiClientUrl>[
@@ -59,13 +64,19 @@ void main() {
     backend.clearCache();
     addTearDown(backend.clearCache);
 
-    expect(await backend.restoreAuth(repo), isTrue,
-        reason: 'configured client should report authenticated');
+    expect(
+      await backend.restoreAuth(repo),
+      isTrue,
+      reason: 'configured client should report authenticated',
+    );
     // The reachability probe runs here. Before the fix it throws
     // SyncBackendError('No reachable Hibiki server address') because the probe
     // PROPFIND returns 404 on the missing served root.
     await backend.ensureResolved();
-    expect(backend.activeBaseUrl, 'http://127.0.0.1:${server.port}',
-        reason: 'client must settle on the reachable server URL');
+    expect(
+      backend.activeBaseUrl,
+      'http://127.0.0.1:${server.port}',
+      reason: 'client must settle on the reachable server URL',
+    );
   });
 }

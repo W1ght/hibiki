@@ -36,7 +36,8 @@ class JimakuApiKeyField extends StatelessWidget {
       obscureText: true,
       decoration: InputDecoration(
         labelText: t.video_jimaku_api_key,
-        helperText: '${t.video_jimaku_api_key_hint}\n'
+        helperText:
+            '${t.video_jimaku_api_key_hint}\n'
             '${t.video_jimaku_api_key_settings_hint}',
         helperMaxLines: 3,
         isDense: dense,

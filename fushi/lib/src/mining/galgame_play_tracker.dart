@@ -79,14 +79,14 @@ class GalgamePlaySessionResult {
   final int durationSeconds;
 
   @override
-  String toString() => 'GalgamePlaySessionResult(gameId: $gameId, '
+  String toString() =>
+      'GalgamePlaySessionResult(gameId: $gameId, '
       'startMs: $startMs, endMs: $endMs, durationSeconds: $durationSeconds)';
 }
 
 /// 会话结束回调（落库在别处接线）。
-typedef GalgamePlaySessionSink = Future<void> Function(
-  GalgamePlaySessionResult result,
-);
+typedef GalgamePlaySessionSink =
+    Future<void> Function(GalgamePlaySessionResult result);
 
 /// 计时器对操作系统的**全部**依赖面。Windows 实现见
 /// [GalgameWindowsProcessProbe]，测试注入假实现。
@@ -122,9 +122,9 @@ class GalgamePlaySessionMachine {
     this.minSessionSeconds = kMinSessionSeconds,
     this.maxConsecutiveFailures = kMaxConsecutiveFailures,
     this.candidateScanDelayMs = kCandidateScanDelayMs,
-  })  : _gameDirectory = gameDirectory,
-        _probe = probe,
-        _onSessionEnded = onSessionEnded;
+  }) : _gameDirectory = gameDirectory,
+       _probe = probe,
+       _onSessionEnded = onSessionEnded;
 
   /// `galgames.id`。
   final String gameId;
@@ -362,14 +362,14 @@ class GalgamePlayTracker {
     int Function()? nowMs,
     Duration foregroundInterval = const Duration(milliseconds: 200),
     Duration accrualInterval = const Duration(seconds: 1),
-  })  : _gameDirectory = gameDirectory,
-        _onSessionEnded = onSessionEnded,
-        _probe = probe,
-        _mode = mode,
-        _isWindows = isWindows ?? Platform.isWindows,
-        _nowMs = nowMs ?? _defaultNowMs,
-        _foregroundInterval = foregroundInterval,
-        _accrualInterval = accrualInterval;
+  }) : _gameDirectory = gameDirectory,
+       _onSessionEnded = onSessionEnded,
+       _probe = probe,
+       _mode = mode,
+       _isWindows = isWindows ?? Platform.isWindows,
+       _nowMs = nowMs ?? _defaultNowMs,
+       _foregroundInterval = foregroundInterval,
+       _accrualInterval = accrualInterval;
 
   static int _defaultNowMs() => DateTime.now().millisecondsSinceEpoch;
 
@@ -440,32 +440,37 @@ class GalgamePlayTracker {
 /// `desktop_foreground_guard.dart` / `selection_capture_ffi.dart` 也是这个范式。
 class GalgameWindowsProcessProbe implements GalgameProcessProbe {
   GalgameWindowsProcessProbe()
-      : _getForegroundWindow = _user32.lookupFunction<
-            _GetForegroundWindowNative,
-            _GetForegroundWindowDart>('GetForegroundWindow'),
-        _getWindowThreadProcessId = _user32.lookupFunction<
+    : _getForegroundWindow = _user32
+          .lookupFunction<_GetForegroundWindowNative, _GetForegroundWindowDart>(
+            'GetForegroundWindow',
+          ),
+      _getWindowThreadProcessId = _user32
+          .lookupFunction<
             _GetWindowThreadProcessIdNative,
-            _GetWindowThreadProcessIdDart>('GetWindowThreadProcessId'),
-        _openProcess =
-            _kernel32.lookupFunction<_OpenProcessNative, _OpenProcessDart>(
-                'OpenProcess'),
-        _getExitCodeProcess = _kernel32.lookupFunction<
-            _GetExitCodeProcessNative,
-            _GetExitCodeProcessDart>('GetExitCodeProcess'),
-        _queryFullProcessImageName = _kernel32.lookupFunction<
+            _GetWindowThreadProcessIdDart
+          >('GetWindowThreadProcessId'),
+      _openProcess = _kernel32
+          .lookupFunction<_OpenProcessNative, _OpenProcessDart>('OpenProcess'),
+      _getExitCodeProcess = _kernel32
+          .lookupFunction<_GetExitCodeProcessNative, _GetExitCodeProcessDart>(
+            'GetExitCodeProcess',
+          ),
+      _queryFullProcessImageName = _kernel32
+          .lookupFunction<
             _QueryFullProcessImageNameNative,
-            _QueryFullProcessImageNameDart>('QueryFullProcessImageNameW'),
-        _createToolhelp32Snapshot = _kernel32.lookupFunction<
+            _QueryFullProcessImageNameDart
+          >('QueryFullProcessImageNameW'),
+      _createToolhelp32Snapshot = _kernel32
+          .lookupFunction<
             _CreateToolhelp32SnapshotNative,
-            _CreateToolhelp32SnapshotDart>('CreateToolhelp32Snapshot'),
-        _process32First =
-            _kernel32.lookupFunction<_Process32Native, _Process32Dart>(
-                'Process32FirstW'),
-        _process32Next = _kernel32
-            .lookupFunction<_Process32Native, _Process32Dart>('Process32NextW'),
-        _closeHandle =
-            _kernel32.lookupFunction<_CloseHandleNative, _CloseHandleDart>(
-                'CloseHandle');
+            _CreateToolhelp32SnapshotDart
+          >('CreateToolhelp32Snapshot'),
+      _process32First = _kernel32
+          .lookupFunction<_Process32Native, _Process32Dart>('Process32FirstW'),
+      _process32Next = _kernel32
+          .lookupFunction<_Process32Native, _Process32Dart>('Process32NextW'),
+      _closeHandle = _kernel32
+          .lookupFunction<_CloseHandleNative, _CloseHandleDart>('CloseHandle');
 
   static final DynamicLibrary _user32 = DynamicLibrary.open('user32.dll');
   static final DynamicLibrary _kernel32 = DynamicLibrary.open('kernel32.dll');
@@ -630,65 +635,48 @@ final class _ProcessEntry32W extends Struct {
 typedef _GetForegroundWindowNative = IntPtr Function();
 typedef _GetForegroundWindowDart = int Function();
 
-typedef _GetWindowThreadProcessIdNative = Uint32 Function(
-  IntPtr hWnd,
-  Pointer<Uint32> processId,
-);
-typedef _GetWindowThreadProcessIdDart = int Function(
-  int hWnd,
-  Pointer<Uint32> processId,
-);
+typedef _GetWindowThreadProcessIdNative =
+    Uint32 Function(IntPtr hWnd, Pointer<Uint32> processId);
+typedef _GetWindowThreadProcessIdDart =
+    int Function(int hWnd, Pointer<Uint32> processId);
 
-typedef _OpenProcessNative = IntPtr Function(
-  Uint32 desiredAccess,
-  Int32 inheritHandle,
-  Uint32 processId,
-);
-typedef _OpenProcessDart = int Function(
-  int desiredAccess,
-  int inheritHandle,
-  int processId,
-);
+typedef _OpenProcessNative =
+    IntPtr Function(
+      Uint32 desiredAccess,
+      Int32 inheritHandle,
+      Uint32 processId,
+    );
+typedef _OpenProcessDart =
+    int Function(int desiredAccess, int inheritHandle, int processId);
 
-typedef _GetExitCodeProcessNative = Int32 Function(
-  IntPtr process,
-  Pointer<Uint32> exitCode,
-);
-typedef _GetExitCodeProcessDart = int Function(
-  int process,
-  Pointer<Uint32> exitCode,
-);
+typedef _GetExitCodeProcessNative =
+    Int32 Function(IntPtr process, Pointer<Uint32> exitCode);
+typedef _GetExitCodeProcessDart =
+    int Function(int process, Pointer<Uint32> exitCode);
 
-typedef _QueryFullProcessImageNameNative = Int32 Function(
-  IntPtr process,
-  Uint32 flags,
-  Pointer<Utf16> exeName,
-  Pointer<Uint32> size,
-);
-typedef _QueryFullProcessImageNameDart = int Function(
-  int process,
-  int flags,
-  Pointer<Utf16> exeName,
-  Pointer<Uint32> size,
-);
+typedef _QueryFullProcessImageNameNative =
+    Int32 Function(
+      IntPtr process,
+      Uint32 flags,
+      Pointer<Utf16> exeName,
+      Pointer<Uint32> size,
+    );
+typedef _QueryFullProcessImageNameDart =
+    int Function(
+      int process,
+      int flags,
+      Pointer<Utf16> exeName,
+      Pointer<Uint32> size,
+    );
 
-typedef _CreateToolhelp32SnapshotNative = IntPtr Function(
-  Uint32 flags,
-  Uint32 processId,
-);
-typedef _CreateToolhelp32SnapshotDart = int Function(
-  int flags,
-  int processId,
-);
+typedef _CreateToolhelp32SnapshotNative =
+    IntPtr Function(Uint32 flags, Uint32 processId);
+typedef _CreateToolhelp32SnapshotDart = int Function(int flags, int processId);
 
-typedef _Process32Native = Int32 Function(
-  IntPtr snapshot,
-  Pointer<_ProcessEntry32W> entry,
-);
-typedef _Process32Dart = int Function(
-  int snapshot,
-  Pointer<_ProcessEntry32W> entry,
-);
+typedef _Process32Native =
+    Int32 Function(IntPtr snapshot, Pointer<_ProcessEntry32W> entry);
+typedef _Process32Dart =
+    int Function(int snapshot, Pointer<_ProcessEntry32W> entry);
 
 typedef _CloseHandleNative = Int32 Function(IntPtr handle);
 typedef _CloseHandleDart = int Function(int handle);

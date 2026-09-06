@@ -80,8 +80,8 @@ Future<void> showManualDownloadTaskDialog({
   }
   final VideoDownloadPipelineService pipeline = resolved.pipeline!;
   final VideoDownloadBackendTarget target = resolved.target!;
-  final List<MediaSourceRow> sources =
-      await appModel.getManagedVideoDownloadSources();
+  final List<MediaSourceRow> sources = await appModel
+      .getManagedVideoDownloadSources();
   if (!context.mounted) return;
   await showAppDialog<void>(
     context: context,
@@ -138,7 +138,8 @@ class _ManualDownloadTaskDialogState extends State<ManualDownloadTaskDialog> {
   @override
   void initState() {
     super.initState();
-    _sourceId = widget.defaultSourceId ??
+    _sourceId =
+        widget.defaultSourceId ??
         (widget.sources.isEmpty ? null : widget.sources.first.id);
   }
 
@@ -199,18 +200,18 @@ class _ManualDownloadTaskDialogState extends State<ManualDownloadTaskDialog> {
     }
     if (!mounted) return;
     if (bytes == null || bytes.isEmpty) {
-      ScaffoldMessenger.maybeOf(context)?.showSnackBar(
-        SnackBar(content: Text(t.download_task_add_invalid)),
-      );
+      ScaffoldMessenger.maybeOf(
+        context,
+      )?.showSnackBar(SnackBar(content: Text(t.download_task_add_invalid)));
       return;
     }
     final InspectedTorrentMetainfo metainfo;
     try {
       metainfo = inspectTorrentMetainfo(bytes);
     } on TorrentMetainfoException {
-      ScaffoldMessenger.maybeOf(context)?.showSnackBar(
-        SnackBar(content: Text(t.download_task_add_invalid)),
-      );
+      ScaffoldMessenger.maybeOf(
+        context,
+      )?.showSnackBar(SnackBar(content: Text(t.download_task_add_invalid)));
       return;
     }
     setState(() {
@@ -239,9 +240,9 @@ class _ManualDownloadTaskDialogState extends State<ManualDownloadTaskDialog> {
       );
       if (!mounted) return;
       Navigator.of(context).pop();
-      ScaffoldMessenger.maybeOf(context)?.showSnackBar(
-        SnackBar(content: Text(t.download_task_add_submitted)),
-      );
+      ScaffoldMessenger.maybeOf(
+        context,
+      )?.showSnackBar(SnackBar(content: Text(t.download_task_add_submitted)));
     } on Object catch (error) {
       if (mounted) {
         ScaffoldMessenger.maybeOf(context)?.showSnackBar(
@@ -340,7 +341,7 @@ class _ManualDownloadTaskDialogState extends State<ManualDownloadTaskDialog> {
                 onChanged: _submitting
                     ? null
                     : (DiscoveryMediaKind? value) =>
-                        setState(() => _discoveryKind = value),
+                          setState(() => _discoveryKind = value),
               ),
               if (_isVideo) ...<Widget>[
                 SizedBox(height: tokens.spacing.gap),
@@ -377,31 +378,33 @@ class _ManualDownloadTaskDialogState extends State<ManualDownloadTaskDialog> {
                     Expanded(
                       child:
                           DropdownButtonFormField<VideoDownloadSubtitlePolicy>(
-                        key: const ValueKey<String>(
-                          'manual-task-subtitle-policy',
-                        ),
-                        initialValue: _subtitlePolicy,
-                        decoration: InputDecoration(
-                          labelText: t.anime_download_include_subs,
-                        ),
-                        items: <DropdownMenuItem<VideoDownloadSubtitlePolicy>>[
-                          DropdownMenuItem<VideoDownloadSubtitlePolicy>(
-                            value: VideoDownloadSubtitlePolicy.none,
-                            child: Text(t.anime_download_no_subs),
+                            key: const ValueKey<String>(
+                              'manual-task-subtitle-policy',
+                            ),
+                            initialValue: _subtitlePolicy,
+                            decoration: InputDecoration(
+                              labelText: t.anime_download_include_subs,
+                            ),
+                            items:
+                                <DropdownMenuItem<VideoDownloadSubtitlePolicy>>[
+                                  DropdownMenuItem<VideoDownloadSubtitlePolicy>(
+                                    value: VideoDownloadSubtitlePolicy.none,
+                                    child: Text(t.anime_download_no_subs),
+                                  ),
+                                  DropdownMenuItem<VideoDownloadSubtitlePolicy>(
+                                    value:
+                                        VideoDownloadSubtitlePolicy.bestEffort,
+                                    child: Text(t.anime_download_include_subs),
+                                  ),
+                                ],
+                            onChanged: _submitting
+                                ? null
+                                : (VideoDownloadSubtitlePolicy? value) {
+                                    if (value != null) {
+                                      setState(() => _subtitlePolicy = value);
+                                    }
+                                  },
                           ),
-                          DropdownMenuItem<VideoDownloadSubtitlePolicy>(
-                            value: VideoDownloadSubtitlePolicy.bestEffort,
-                            child: Text(t.anime_download_include_subs),
-                          ),
-                        ],
-                        onChanged: _submitting
-                            ? null
-                            : (VideoDownloadSubtitlePolicy? value) {
-                                if (value != null) {
-                                  setState(() => _subtitlePolicy = value);
-                                }
-                              },
-                      ),
                     ),
                   ],
                 ),
@@ -410,8 +413,8 @@ class _ManualDownloadTaskDialogState extends State<ManualDownloadTaskDialog> {
                   Text(
                     t.download_no_managed_video_source,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: Theme.of(context).colorScheme.error,
-                        ),
+                      color: Theme.of(context).colorScheme.error,
+                    ),
                   )
                 else
                   DropdownButtonFormField<int>(

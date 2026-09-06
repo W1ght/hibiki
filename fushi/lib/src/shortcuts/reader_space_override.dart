@@ -26,7 +26,8 @@ ShortcutAction? resolveReaderSpaceOverride({
 }) {
   if (modifiers.isNotEmpty) return null;
   if (!hasActiveAudiobook) return null;
-  final bool isSpace = key == LogicalKeyboardKey.space ||
+  final bool isSpace =
+      key == LogicalKeyboardKey.space ||
       (key == LogicalKeyboardKey.process &&
           physicalKey == PhysicalKeyboardKey.space);
   if (!isSpace) return null;
@@ -78,10 +79,12 @@ ShortcutAction? resolveReaderArrowPageTurn({
     return null;
   }
   final bool leftIsForward = rtl ^ reverse;
-  final bool isLeft = key == LogicalKeyboardKey.arrowLeft ||
+  final bool isLeft =
+      key == LogicalKeyboardKey.arrowLeft ||
       (key == LogicalKeyboardKey.process &&
           physicalKey == PhysicalKeyboardKey.arrowLeft);
-  final bool isRight = key == LogicalKeyboardKey.arrowRight ||
+  final bool isRight =
+      key == LogicalKeyboardKey.arrowRight ||
       (key == LogicalKeyboardKey.process &&
           physicalKey == PhysicalKeyboardKey.arrowRight);
   if (isLeft) {

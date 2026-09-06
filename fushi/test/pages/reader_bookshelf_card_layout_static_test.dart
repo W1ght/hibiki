@@ -4,56 +4,62 @@ import 'package:flutter_test/flutter_test.dart';
 import 'reader_history_source_corpus.dart';
 
 void main() {
-  test('bookshelf cards render the title below the cover, not as an overlay',
-      () {
-    final String source = readReaderHistorySource();
+  test(
+    'bookshelf cards render the title below the cover, not as an overlay',
+    () {
+      final String source = readReaderHistorySource();
 
-    expect(
-      source,
-      isNot(contains('Widget _titleOverlay(String title)')),
-      reason: 'book titles must no longer draw inside the cover artwork',
-    );
-    // 巡检 PR-3：footer 实现提取到共享组件 ShelfCardFooter（书卡与
-    // SeriesShelfCard 共用，消除逐行手抄），书架侧守卫改锁「layout 消费共享
-    // footer」；footer 本体的排版守卫移到下方对共享文件的断言。
-    expect(
-      source,
-      contains('ShelfCardFooter(title: title)'),
-      reason: 'the title must live in the shared below-cover footer component',
-    );
-    final String layout = _functionSource(source, 'Widget _bookCardLayout({');
-    expect(
-      layout,
-      contains('Column('),
-      reason: 'the shared card layout separates cover and title footer',
-    );
-    // BUG-1184：footer 高度改为按当前文字缩放算出（ShelfCardFooter.heightFor），
-    // 不再是死的 kShelfTitleFooterHeight。原意图「长书名不得撑动网格」依然成立——
-    // 高度只随**字号设置**变化，与标题长短无关，同一屏内所有卡仍逐像素等高；
-    // 40px 那个死值在 textScale≥1.25 时装不下两行 12sp，会把书名第二行切掉。
-    expect(
-      layout,
-      contains('height: ShelfCardFooter.heightFor(context)'),
-      reason: 'the footer height must stay stable across long titles while '
-          'still growing with the text scale (BUG-1184)',
-    );
-    expect(layout, isNot(contains('height: kShelfTitleFooterHeight')));
-    expect(
-      layout,
-      contains('ShelfCardFooter(title: title)'),
-      reason: 'the title footer must render below the cover stack',
-    );
-    expect(
-      layout,
-      isNot(contains('_titleOverlay(title)')),
-      reason: 'the title must not be added to the cover stack',
-    );
-    expect(
-      RegExp(r'(?:child:|return) _bookCardLayout\(').allMatches(source).length,
-      greaterThanOrEqualTo(4),
-      reason: 'all bookshelf card variants should share the overlay layout',
-    );
-  });
+      expect(
+        source,
+        isNot(contains('Widget _titleOverlay(String title)')),
+        reason: 'book titles must no longer draw inside the cover artwork',
+      );
+      // 巡检 PR-3：footer 实现提取到共享组件 ShelfCardFooter（书卡与
+      // SeriesShelfCard 共用，消除逐行手抄），书架侧守卫改锁「layout 消费共享
+      // footer」；footer 本体的排版守卫移到下方对共享文件的断言。
+      expect(
+        source,
+        contains('ShelfCardFooter(title: title)'),
+        reason:
+            'the title must live in the shared below-cover footer component',
+      );
+      final String layout = _functionSource(source, 'Widget _bookCardLayout({');
+      expect(
+        layout,
+        contains('Column('),
+        reason: 'the shared card layout separates cover and title footer',
+      );
+      // BUG-1184：footer 高度改为按当前文字缩放算出（ShelfCardFooter.heightFor），
+      // 不再是死的 kShelfTitleFooterHeight。原意图「长书名不得撑动网格」依然成立——
+      // 高度只随**字号设置**变化，与标题长短无关，同一屏内所有卡仍逐像素等高；
+      // 40px 那个死值在 textScale≥1.25 时装不下两行 12sp，会把书名第二行切掉。
+      expect(
+        layout,
+        contains('height: ShelfCardFooter.heightFor(context)'),
+        reason:
+            'the footer height must stay stable across long titles while '
+            'still growing with the text scale (BUG-1184)',
+      );
+      expect(layout, isNot(contains('height: kShelfTitleFooterHeight')));
+      expect(
+        layout,
+        contains('ShelfCardFooter(title: title)'),
+        reason: 'the title footer must render below the cover stack',
+      );
+      expect(
+        layout,
+        isNot(contains('_titleOverlay(title)')),
+        reason: 'the title must not be added to the cover stack',
+      );
+      expect(
+        RegExp(
+          r'(?:child:|return) _bookCardLayout\(',
+        ).allMatches(source).length,
+        greaterThanOrEqualTo(4),
+        reason: 'all bookshelf card variants should share the overlay layout',
+      );
+    },
+  );
 
   test('card layout exposes title footer, tags, badge, and metadata', () {
     final String source = readReaderHistorySource();
@@ -79,33 +85,46 @@ void main() {
     expect(layout, contains('_bookCardTagArea(tagLabels)'));
     final int coverStack = layout.indexOf('Stack(');
     final int titleFooter = layout.indexOf('ShelfCardFooter(title: title)');
-    expect(titleFooter, greaterThan(coverStack),
-        reason: 'the title footer must be after the cover stack');
+    expect(
+      titleFooter,
+      greaterThan(coverStack),
+      reason: 'the title footer must be after the cover stack',
+    );
 
     // The progress metadata stays visible, pinned to the bottom of the cover.
     final int metadataPin = layout.indexOf('child: metadata,');
-    expect(metadataPin, isNonNegative,
-        reason: 'progress metadata must still render');
+    expect(
+      metadataPin,
+      isNonNegative,
+      reason: 'progress metadata must still render',
+    );
     final int bottomPin = layout.lastIndexOf('bottom: 0,', metadataPin);
-    expect(bottomPin, isNonNegative,
-        reason: 'metadata (progress bar) must be pinned to the cover bottom');
+    expect(
+      bottomPin,
+      isNonNegative,
+      reason: 'metadata (progress bar) must be pinned to the cover bottom',
+    );
   });
 
-  test(
-      'book cover artwork scales by height (no distortion) across all shelf '
+  test('book cover artwork scales by height (no distortion) across all shelf '
       'sources (TODO-552)', () {
     final String source = readReaderHistorySource();
-    final String remoteCover =
-        _functionSource(source, 'Widget _buildRemoteBookCover(');
+    final String remoteCover = _functionSource(
+      source,
+      'Widget _buildRemoteBookCover(',
+    );
     final String srtCover = _functionSource(source, 'Widget _buildSrtCover(');
     final String fileCover = _functionSource(source, 'Widget _buildFileCover(');
-    final String epubCover =
-        _functionSource(source, 'Widget buildMediaItemContent(');
+    final String epubCover = _functionSource(
+      source,
+      'Widget buildMediaItemContent(',
+    );
 
     expect(
       source,
       contains('BoxFit get _bookCardCoverFit => BoxFit.fitHeight;'),
-      reason: 'book card artwork must scale by height to keep aspect ratio; '
+      reason:
+          'book card artwork must scale by height to keep aspect ratio; '
           'BoxFit.cover crops and distorts the cover (TODO-552)',
     );
     expect(
@@ -125,8 +144,10 @@ void main() {
 
   test('linked SRT cards fall back to the EPUB cover before placeholder', () {
     final String source = readReaderHistorySource();
-    final String body =
-        _functionSource(source, 'Widget _buildBodyWithSrtBooks(');
+    final String body = _functionSource(
+      source,
+      'Widget _buildBodyWithSrtBooks(',
+    );
     final String srtCard = _functionSource(source, 'Widget _buildSrtCard(');
     final String srtCover = _functionSource(source, 'Widget _buildSrtCover(');
 
@@ -155,8 +176,7 @@ void main() {
     );
   });
 
-  test('visual card frame wraps only the cover, while interactions wrap all',
-      () {
+  test('visual card frame wraps only the cover, while interactions wrap all', () {
     final String source = readReaderHistorySource();
     final String shell = _functionSource(source, 'Widget _bookCardShell({');
     final String layout = _functionSource(source, 'Widget _bookCardLayout({');
@@ -167,22 +187,36 @@ void main() {
       reason:
           'the whole touch target may not draw the visual card around the footer',
     );
-    expect(shell, contains('InkWell('),
-        reason: 'tap/long-press/right-click must still cover the whole card');
     expect(
-        shell,
-        contains(
-            'onInvoke: contextMenuInvoker(_selectionMode ? null : onLongPress)'));
-    expect(shell, contains('FushiFocusTarget('),
-        reason: 'keyboard/gamepad activation must stay on the full card');
+      shell,
+      contains('InkWell('),
+      reason: 'tap/long-press/right-click must still cover the whole card',
+    );
+    expect(
+      shell,
+      contains(
+        'onInvoke: contextMenuInvoker(_selectionMode ? null : onLongPress)',
+      ),
+    );
+    expect(
+      shell,
+      contains('FushiFocusTarget('),
+      reason: 'keyboard/gamepad activation must stay on the full card',
+    );
 
     final int coverStack = layout.indexOf('Stack(');
     final int coverFrame = layout.indexOf('_bookCardCoverFrame(');
     final int footer = layout.indexOf('ShelfCardFooter(title: title)');
-    expect(coverStack, greaterThan(coverFrame),
-        reason: 'the visual frame should wrap the cover stack');
-    expect(coverFrame, lessThan(footer),
-        reason: 'the title footer must remain outside the visual frame');
+    expect(
+      coverStack,
+      greaterThan(coverFrame),
+      reason: 'the visual frame should wrap the cover stack',
+    );
+    expect(
+      coverFrame,
+      lessThan(footer),
+      reason: 'the title footer must remain outside the visual frame',
+    );
   });
 
   test('book card footer clamps long titles without resizing the grid', () {
@@ -222,8 +256,11 @@ void main() {
 
     // The badge PositionedDirectional carries the coverBadge child.
     final int badgeAnchor = layout.indexOf('child: coverBadge,');
-    expect(badgeAnchor, isNonNegative,
-        reason: 'the cover badge must render in the top-right slot');
+    expect(
+      badgeAnchor,
+      isNonNegative,
+      reason: 'the cover badge must render in the top-right slot',
+    );
   });
 
   test('cover type badge renders at its normal intrinsic size (TODO-552)', () {
@@ -270,7 +307,8 @@ void main() {
     expect(
       source,
       contains('const double kShelfBookCardAspectRatio = 160 / 260;'),
-      reason: 'TODO-786: book/audiobook/SRT/remote cards must use the narrow '
+      reason:
+          'TODO-786: book/audiobook/SRT/remote cards must use the narrow '
           'book cover ratio so fitHeight fills the slot without side white',
     );
 
@@ -279,7 +317,8 @@ void main() {
     expect(
       source,
       isNot(contains('kShelfVideoCardAspectRatio')),
-      reason: 'the orphaned video slot ratio constant must stay deleted; the '
+      reason:
+          'the orphaned video slot ratio constant must stay deleted; the '
           'video tab owns its own card geometry',
     );
 
@@ -299,7 +338,8 @@ void main() {
     expect(
       mediaSource,
       isNot(contains('176 / 250')),
-      reason: 'the reader media source default ratio must use the book ratio '
+      reason:
+          'the reader media source default ratio must use the book ratio '
           'constant, not the old 176/250 literal (TODO-786)',
     );
     expect(
@@ -317,7 +357,8 @@ void main() {
     expect(
       source,
       contains('TODO-552'),
-      reason: 'TODO-786 must reference TODO-552: 552 keeps the cover '
+      reason:
+          'TODO-786 must reference TODO-552: 552 keeps the cover '
           'undistorted (fitHeight), 786 removes the side white — same '
           'direction, not a regression',
     );
@@ -355,7 +396,8 @@ String _functionSource(String source, String startToken) {
   final RegExpMatch? next = nextWidget.firstMatch(
     source.substring(start + startToken.length),
   );
-  final int end =
-      next == null ? source.length : start + startToken.length + next.start + 1;
+  final int end = next == null
+      ? source.length
+      : start + startToken.length + next.start + 1;
   return source.substring(start, end);
 }

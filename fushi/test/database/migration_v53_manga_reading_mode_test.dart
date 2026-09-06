@@ -62,8 +62,11 @@ CREATE TABLE epub_books (
     expect(legacy, isNotNull, reason: '旧行原样保留');
     expect(legacy!.title, '旧书');
     expect(legacy.format, 'epub', reason: 'format 列原样保留');
-    expect(legacy.mangaReadingMode, isNull,
-        reason: 'ADD COLUMN nullable 自动回填 null = 跟随自动判定，非漫画书无影响');
+    expect(
+      legacy.mangaReadingMode,
+      isNull,
+      reason: 'ADD COLUMN nullable 自动回填 null = 跟随自动判定，非漫画书无影响',
+    );
     expect(legacy.chapterCount, 3, reason: '其它列原样保留');
   });
 
@@ -113,8 +116,9 @@ CREATE TABLE epub_books (
   test('v53：user_version 升到当前 schemaVersion', () async {
     final FushiDatabase db = await openV51Db();
     await db.getEpubBook('legacy_book'); // 触发 open/migrate。
-    final QueryRow version =
-        await db.customSelect('PRAGMA user_version').getSingle();
+    final QueryRow version = await db
+        .customSelect('PRAGMA user_version')
+        .getSingle();
     expect(version.read<int>('user_version'), db.schemaVersion);
     expect(db.schemaVersion, 96);
   });

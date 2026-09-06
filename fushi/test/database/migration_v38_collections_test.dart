@@ -205,10 +205,12 @@ const String _e2 = 'video/MyShow E02';
 const String _e3 = 'video/MyShow E03';
 
 Future<Map<String, dynamic>> _videoRow(FushiDatabase db, String uid) async {
-  final row = await db.customSelect(
-    'SELECT * FROM video_books WHERE book_uid = ?',
-    variables: [Variable.withString(uid)],
-  ).getSingleOrNull();
+  final row = await db
+      .customSelect(
+        'SELECT * FROM video_books WHERE book_uid = ?',
+        variables: [Variable.withString(uid)],
+      )
+      .getSingleOrNull();
   return row?.data ?? <String, dynamic>{};
 }
 
@@ -216,41 +218,44 @@ void main() {
   test('v38: Series 转成 collection，成员/序/名/排序权重照搬，seriesId 清空', () async {
     final FushiDatabase db = await _openV37Db();
     // 触发 onUpgrade。
-    final List<MediaCollectionRow> collections =
-        await db.getAllMediaCollections();
+    final List<MediaCollectionRow> collections = await db
+        .getAllMediaCollections();
 
-    final MediaCollectionRow series =
-        collections.firstWhere((c) => c.name == 'MySeries');
+    final MediaCollectionRow series = collections.firstWhere(
+      (c) => c.name == 'MySeries',
+    );
     expect(series.collectionType, 'collection');
     expect(series.sortOrder, 5);
     expect(series.createdAt, 1000);
 
-    final List<MediaCollectionItemRow> members =
-        await db.getCollectionItems(series.id);
+    final List<MediaCollectionItemRow> members = await db.getCollectionItems(
+      series.id,
+    );
     expect(
-        members.map((m) => '${m.mediaType}|${m.entryKey}').toList(), <String>[
-      'epub|BookA',
-      'srt|srt-1',
-      'epub|BookB',
-    ]);
+      members.map((m) => '${m.mediaType}|${m.entryKey}').toList(),
+      <String>['epub|BookA', 'srt|srt-1', 'epub|BookB'],
+    );
     expect(members.map((m) => m.sortIndex).toList(), <int>[0, 1, 2]);
 
     // 旧 Series 表清空、shelf_entries.series_id 全 NULL、散书 sortOrder 保留。
     expect((await db.getAllSeries()).isEmpty, isTrue);
     final entries = await db
         .customSelect(
-            'SELECT entry_key, sort_order, series_id FROM shelf_entries')
+          'SELECT entry_key, sort_order, series_id FROM shelf_entries',
+        )
         .get();
     for (final e in entries) {
       expect(e.read<int?>('series_id'), isNull);
     }
-    final bookC =
-        entries.firstWhere((e) => e.read<String>('entry_key') == 'BookC');
+    final bookC = entries.firstWhere(
+      (e) => e.read<String>('entry_key') == 'BookC',
+    );
     expect(bookC.read<int>('sort_order'), 9);
     // 父 playlist 视频的 shelf_entry 已删（下面 split 断言复核）。
     expect(
-      entries
-          .any((e) => e.read<String>('entry_key') == 'video/playlist/MyShow'),
+      entries.any(
+        (e) => e.read<String>('entry_key') == 'video/playlist/MyShow',
+      ),
       isFalse,
     );
   });
@@ -304,8 +309,9 @@ void main() {
     final FushiDatabase db = await _openV37Db();
     final collections = await db.getAllMediaCollections();
 
-    final playlist =
-        collections.firstWhere((c) => c.collectionType == 'playlist');
+    final playlist = collections.firstWhere(
+      (c) => c.collectionType == 'playlist',
+    );
     expect(playlist.name, 'MyShow');
     expect(playlist.sortOrder, 7); // 父 shelf_entry sort_order
     // created_at 契约是毫秒；父 imported_at 是 drift 秒(5000) → ×1000。
@@ -323,7 +329,8 @@ void main() {
 
     final rows = await db
         .customSelect(
-            'SELECT expression, book_key, section_index FROM mined_sentences')
+          'SELECT expression, book_key, section_index FROM mined_sentences',
+        )
         .get();
     final Map<String, ({String? key, int? section})> byExpr = {
       for (final r in rows)
@@ -357,8 +364,10 @@ void main() {
     // （断言跑在整条阶梯之后：v57 已把 video_book_uid 更名 book_uid，v77 又把
     // 五张映射表并进 tag_assignments——查统一表的 video kind。）
     final tagged = (await db.getAllTagAssignments())
-        .where((TagAssignmentRow r) =>
-            r.tagId == 1 && r.mediaKind == TagHostKind.video.dbValue)
+        .where(
+          (TagAssignmentRow r) =>
+              r.tagId == 1 && r.mediaKind == TagHostKind.video.dbValue,
+        )
         .map((TagAssignmentRow r) => r.entryKey)
         .toSet();
     expect(tagged, <String>{_e1, _e2, _e3});
@@ -366,7 +375,8 @@ void main() {
     // 收藏句 pref：视频条(section=1) → E02/section0；书籍条不变。
     final prefRow = await db
         .customSelect(
-            "SELECT value FROM preferences WHERE key = 'favorite_sentences'")
+          "SELECT value FROM preferences WHERE key = 'favorite_sentences'",
+        )
         .getSingle();
     final List<dynamic> favs =
         jsonDecode(prefRow.read<String>('value')) as List<dynamic>;
@@ -390,10 +400,11 @@ void main() {
     final FushiDatabase db = await _openV37Db();
     final before = await db.getAllMediaCollections();
     final int beforeCount = before.length;
-    final int beforeVideoCount = (await db
-            .customSelect('SELECT COUNT(*) AS c FROM video_books')
-            .getSingle())
-        .read<int>('c');
+    final int beforeVideoCount =
+        (await db
+                .customSelect('SELECT COUNT(*) AS c FROM video_books')
+                .getSingle())
+            .read<int>('c');
 
     // 直接再跑一次两个助手（series 空 + 无 playlist_json 行 → 全 no-op）。
     await db.migrateSeriesToCollectionsV38();
@@ -409,15 +420,16 @@ void main() {
     );
   });
 
-  test('v38: 旧版 playlist（各集无 positionMs）当前集续播点从 parent.last_position_ms 兜底',
-      () async {
-    // 2 集 legacy playlist：各 entry 无 positionMs（回退 0），当前集续播点只存在于
-    // 父行 last_position_ms=777；current_episode=0 → 第 0 集应承接 777，其余为 0。
-    final db = FushiDatabase.forTesting(
-      NativeDatabase.memory(
-        setup: (rawDb) {
-          rawDb.execute('PRAGMA foreign_keys = OFF');
-          rawDb.execute('''
+  test(
+    'v38: 旧版 playlist（各集无 positionMs）当前集续播点从 parent.last_position_ms 兜底',
+    () async {
+      // 2 集 legacy playlist：各 entry 无 positionMs（回退 0），当前集续播点只存在于
+      // 父行 last_position_ms=777；current_episode=0 → 第 0 集应承接 777，其余为 0。
+      final db = FushiDatabase.forTesting(
+        NativeDatabase.memory(
+          setup: (rawDb) {
+            rawDb.execute('PRAGMA foreign_keys = OFF');
+            rawDb.execute('''
 CREATE TABLE video_books (
   book_uid TEXT NOT NULL PRIMARY KEY,
   title TEXT NOT NULL,
@@ -438,33 +450,34 @@ CREATE TABLE video_books (
   stream_spec_json TEXT
 )
 ''');
-          final String legacyJson = jsonEncode(<Map<String, dynamic>>[
-            {'title': 'L1', 'path': '/v/Legacy E01.mkv'}, // 无 positionMs
-            {'title': 'L2', 'path': '/v/Legacy E02.mkv'},
-          ]);
-          rawDb.execute(
-            'INSERT INTO video_books '
-            '(book_uid, title, video_path, last_position_ms, playlist_json, '
-            'current_episode) VALUES (?, ?, ?, ?, ?, ?)',
-            <Object?>[
-              'video/playlist/Legacy',
-              'Legacy',
-              '/v/Legacy E01.mkv',
-              777,
-              legacyJson,
-              0,
-            ],
-          );
-          rawDb.execute('PRAGMA user_version = 37');
-        },
-      ),
-    );
-    addTearDown(db.close);
-    await db.getAllMediaCollections(); // 触发迁移
+            final String legacyJson = jsonEncode(<Map<String, dynamic>>[
+              {'title': 'L1', 'path': '/v/Legacy E01.mkv'}, // 无 positionMs
+              {'title': 'L2', 'path': '/v/Legacy E02.mkv'},
+            ]);
+            rawDb.execute(
+              'INSERT INTO video_books '
+              '(book_uid, title, video_path, last_position_ms, playlist_json, '
+              'current_episode) VALUES (?, ?, ?, ?, ?, ?)',
+              <Object?>[
+                'video/playlist/Legacy',
+                'Legacy',
+                '/v/Legacy E01.mkv',
+                777,
+                legacyJson,
+                0,
+              ],
+            );
+            rawDb.execute('PRAGMA user_version = 37');
+          },
+        ),
+      );
+      addTearDown(db.close);
+      await db.getAllMediaCollections(); // 触发迁移
 
-    final l1 = await _videoRow(db, 'video/Legacy E01');
-    final l2 = await _videoRow(db, 'video/Legacy E02');
-    expect(l1['last_position_ms'], 777); // 当前集(0) 从 parent 兜底
-    expect(l2['last_position_ms'], 0);
-  });
+      final l1 = await _videoRow(db, 'video/Legacy E01');
+      final l2 = await _videoRow(db, 'video/Legacy E02');
+      expect(l1['last_position_ms'], 777); // 当前集(0) 从 parent 兜底
+      expect(l2['last_position_ms'], 0);
+    },
+  );
 }

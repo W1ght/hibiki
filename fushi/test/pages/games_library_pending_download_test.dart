@@ -32,15 +32,14 @@ DiscoveryResourceItem _item({
   required String title,
   DiscoveryMediaKind kind = DiscoveryMediaKind.game,
   String? coverUrl,
-}) =>
-    DiscoveryResourceItem(
-      sourceId: 'shinnku',
-      title: title,
-      id: title,
-      kind: kind,
-      payloadKind: DiscoveryPayloadKind.httpFile,
-      coverUrl: coverUrl,
-    );
+}) => DiscoveryResourceItem(
+  sourceId: 'shinnku',
+  title: title,
+  id: title,
+  kind: kind,
+  payloadKind: DiscoveryPayloadKind.httpFile,
+  coverUrl: coverUrl,
+);
 
 DiscoveryDownloadTask _task({
   required String title,
@@ -49,13 +48,12 @@ DiscoveryDownloadTask _task({
   int receivedBytes = 0,
   int? totalBytes,
   String? coverUrl,
-}) =>
-    DiscoveryDownloadTask.forTesting(
-      item: _item(title: title, kind: kind, coverUrl: coverUrl),
-      status: status,
-      receivedBytes: receivedBytes,
-      totalBytes: totalBytes,
-    );
+}) => DiscoveryDownloadTask.forTesting(
+  item: _item(title: title, kind: kind, coverUrl: coverUrl),
+  status: status,
+  receivedBytes: receivedBytes,
+  totalBytes: totalBytes,
+);
 
 /// 队列可注入的 [AppModel]：真队列（真 `enqueue` / 真 `tasks` / 真 notify），只是
 /// payload 解析永不完成，任务因此稳定停在「在途」——库页要的正是这个状态。
@@ -91,9 +89,9 @@ void main() {
       ];
 
       expect(
-        pendingGameDownloads(tasks)
-            .map((DiscoveryDownloadTask t) => t.item.title)
-            .toList(),
+        pendingGameDownloads(
+          tasks,
+        ).map((DiscoveryDownloadTask t) => t.item.title).toList(),
         <String>['在下', '排队', '重试'],
       );
     });
@@ -102,11 +100,9 @@ void main() {
   group('pendingGameDownloadLabel', () {
     test('有总大小时显示百分比', () {
       expect(
-        pendingGameDownloadLabel(_task(
-          title: 'x',
-          receivedBytes: 250,
-          totalBytes: 1000,
-        )),
+        pendingGameDownloadLabel(
+          _task(title: 'x', receivedBytes: 250, totalBytes: 1000),
+        ),
         '25%',
       );
     });
@@ -121,12 +117,14 @@ void main() {
     test('排队/重试各有自己的文案', () {
       expect(
         pendingGameDownloadLabel(
-            _task(title: 'x', status: DiscoveryDownloadStatus.queued)),
+          _task(title: 'x', status: DiscoveryDownloadStatus.queued),
+        ),
         t.game_library_download_queued,
       );
       expect(
         pendingGameDownloadLabel(
-            _task(title: 'x', status: DiscoveryDownloadStatus.waitingRetry)),
+          _task(title: 'x', status: DiscoveryDownloadStatus.waitingRetry),
+        ),
         t.game_library_download_retrying,
       );
     });
@@ -150,8 +148,11 @@ void main() {
     );
     await tester.pump();
 
-    expect(find.text('9-nine-'), findsOneWidget,
-        reason: '名称必须来自发现页条目 —— 用户正是靠它确认「加进来了」');
+    expect(
+      find.text('9-nine-'),
+      findsOneWidget,
+      reason: '名称必须来自发现页条目 —— 用户正是靠它确认「加进来了」',
+    );
     final LinearProgressIndicator bar = tester.widget<LinearProgressIndicator>(
       find.byType(LinearProgressIndicator),
     );
@@ -186,12 +187,16 @@ void main() {
 
     // 库页必须跟着下载队列刷新，否则占位卡不会随进度更新/消失。
     expect(page.contains('discoveryDownloadQueue.addListener'), isTrue);
-    expect(page.contains('discoveryDownloadQueue.removeListener'), isTrue,
-        reason: '监听必须解绑，否则页面销毁后队列还持有回调');
+    expect(
+      page.contains('discoveryDownloadQueue.removeListener'),
+      isTrue,
+      reason: '监听必须解绑，否则页面销毁后队列还持有回调',
+    );
 
     // 占位路径绝不能碰写库原语 —— 那正是本条刻意避开的设计。
-    final int start =
-        page.indexOf('List<DiscoveryDownloadTask> pendingGameDownloads(');
+    final int start = page.indexOf(
+      'List<DiscoveryDownloadTask> pendingGameDownloads(',
+    );
     expect(start, greaterThanOrEqualTo(0));
     final int end = page.indexOf('/// 合集详情页的 game 成员卡', start);
     expect(end, greaterThan(start));
@@ -202,9 +207,13 @@ void main() {
       'setGames(',
       'newGalgameEntryFromExe(',
     ]) {
-      expect(body.contains(writer), isFalse,
-          reason: '占位不得调用写库原语 $writer —— Galgames.exePath 是 NOT NULL，'
-              '为占位造行等于埋下孤儿数据');
+      expect(
+        body.contains(writer),
+        isFalse,
+        reason:
+            '占位不得调用写库原语 $writer —— Galgames.exePath 是 NOT NULL，'
+            '为占位造行等于埋下孤儿数据',
+      );
     }
   });
 
@@ -221,7 +230,9 @@ void main() {
 
     Future<_QueuedAppModel> buildModel(List<GalgameEntry> games) async {
       SharedPreferences.setMockInitialValues(<String, Object>{});
-      final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
+      final FushiDatabase db = FushiDatabase.forTesting(
+        NativeDatabase.memory(),
+      );
       addTearDown(db.close);
       final PreferencesRepository prefsRepo = PreferencesRepository(db);
       await prefsRepo.loadFromDb();
@@ -232,7 +243,10 @@ void main() {
         } catch (_) {}
       });
       final _QueuedAppModel appModel = _QueuedAppModel()
-        ..wireLocalAudioForTesting(prefsRepo: prefsRepo, databaseDirectory: tmpDir)
+        ..wireLocalAudioForTesting(
+          prefsRepo: prefsRepo,
+          databaseDirectory: tmpDir,
+        )
         ..wireDatabaseForTesting(db);
       await appModel.setGalgames(games);
       return appModel;
@@ -266,34 +280,35 @@ void main() {
     }
 
     GalgameEntry game(String id, String name) => GalgameEntry(
-          id: id,
-          name: name,
-          exePath: 'Z:\\$id\\$name.exe',
-          workdir: 'Z:\\$id',
-          addedAt: DateTime(2026),
-        );
+      id: id,
+      name: name,
+      exePath: 'Z:\\$id\\$name.exe',
+      workdir: 'Z:\\$id',
+      addedAt: DateTime(2026),
+    );
 
-    testWidgets('空库 + 在途下载：占位与空态同屏，占位不被空态吃掉',
-        (WidgetTester tester) async {
+    testWidgets('空库 + 在途下载：占位与空态同屏，占位不被空态吃掉', (WidgetTester tester) async {
       final _QueuedAppModel appModel = await buildModel(<GalgameEntry>[]);
       enqueueGame(appModel, '9-nine-');
       await pumpPage(tester, appModel);
 
-      expect(find.text(t.game_empty), findsOneWidget,
-          reason: '库确实是空的，空态引导必须还在');
+      expect(
+        find.text(t.game_empty),
+        findsOneWidget,
+        reason: '库确实是空的，空态引导必须还在',
+      );
       expect(
         find.byKey(const ValueKey<String>('games_pending_downloads')),
         findsOneWidget,
         reason: '空库首次下载正是用户提这条需求的场景，占位必须在场',
       );
-      expect(find.text('9-nine-'), findsOneWidget,
-          reason: '占位卡要显示发现页拿到的名称');
+      expect(find.text('9-nine-'), findsOneWidget, reason: '占位卡要显示发现页拿到的名称');
     });
 
-    testWidgets('筛选后无匹配 + 在途下载：占位与无匹配态同屏',
-        (WidgetTester tester) async {
-      final _QueuedAppModel appModel =
-          await buildModel(<GalgameEntry>[game('g1', 'alpha')]);
+    testWidgets('筛选后无匹配 + 在途下载：占位与无匹配态同屏', (WidgetTester tester) async {
+      final _QueuedAppModel appModel = await buildModel(<GalgameEntry>[
+        game('g1', 'alpha'),
+      ]);
       enqueueGame(appModel, 'beta-downloading');
       await pumpPage(tester, appModel);
       // 先确认未筛选时库内容在场，避免下面的断言在「页面根本没渲染」上假绿。
@@ -303,8 +318,11 @@ void main() {
       await tester.pump();
 
       expect(find.text('alpha'), findsNothing, reason: '搜索必须真的把库条目筛掉');
-      expect(find.text(t.game_no_match), findsOneWidget,
-          reason: '库里有东西只是被筛掉了，必须是无匹配态而不是空态');
+      expect(
+        find.text(t.game_no_match),
+        findsOneWidget,
+        reason: '库里有东西只是被筛掉了，必须是无匹配态而不是空态',
+      );
       expect(
         find.byKey(const ValueKey<String>('games_pending_downloads')),
         findsOneWidget,
@@ -313,10 +331,10 @@ void main() {
       expect(find.text('beta-downloading'), findsOneWidget);
     });
 
-    testWidgets('库里有匹配项 + 在途下载：占位排在库内容之前',
-        (WidgetTester tester) async {
-      final _QueuedAppModel appModel =
-          await buildModel(<GalgameEntry>[game('g1', 'alpha')]);
+    testWidgets('库里有匹配项 + 在途下载：占位排在库内容之前', (WidgetTester tester) async {
+      final _QueuedAppModel appModel = await buildModel(<GalgameEntry>[
+        game('g1', 'alpha'),
+      ]);
       enqueueGame(appModel, 'beta-downloading');
       await pumpPage(tester, appModel);
 

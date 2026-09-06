@@ -77,8 +77,9 @@ void main() {
     addTearDown(() => target.close(force: true));
     unawaited(() async {
       await for (final HttpRequest request in target) {
-        received['authorization'] =
-            request.headers.value(HttpHeaders.authorizationHeader);
+        received['authorization'] = request.headers.value(
+          HttpHeaders.authorizationHeader,
+        );
         received['cookie'] = request.headers.value(HttpHeaders.cookieHeader);
         received['referer'] = request.headers.value('referer');
         request.response
@@ -126,11 +127,17 @@ void main() {
     await _waitFor(
       () => queue.tasks.isNotEmpty && queue.tasks.single.isFinished,
     );
-    expect(queue.tasks.single.status, DiscoveryDownloadStatus.done,
-        reason: '下载本身必须成功——剥的是凭据，不是把请求打挂');
+    expect(
+      queue.tasks.single.status,
+      DiscoveryDownloadStatus.done,
+      reason: '下载本身必须成功——剥的是凭据，不是把请求打挂',
+    );
 
-    expect(received['authorization'], isNull,
-        reason: '用户的服务器密码绝不能被转发给第三方 origin');
+    expect(
+      received['authorization'],
+      isNull,
+      reason: '用户的服务器密码绝不能被转发给第三方 origin',
+    );
     expect(received['cookie'], isNull);
     // Referer/UA 不是凭据，且恰恰是重定向后仍然需要的（防盗链）。
     expect(received['referer'], isNotNull, reason: '防盗链头不该被误伤');
@@ -178,7 +185,10 @@ void main() {
       () => queue.tasks.isNotEmpty && queue.tasks.single.isFinished,
     );
     expect(queue.tasks.single.status, DiscoveryDownloadStatus.done);
-    expect(seenAtFinal, 'Basic c2VjcmV0',
-        reason: '同一台服务器内部的重定向必须继续带认证，否则私有 OPDS 目录下不动');
+    expect(
+      seenAtFinal,
+      'Basic c2VjcmV0',
+      reason: '同一台服务器内部的重定向必须继续带认证，否则私有 OPDS 目录下不动',
+    );
   });
 }

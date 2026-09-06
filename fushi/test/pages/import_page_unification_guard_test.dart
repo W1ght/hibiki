@@ -28,13 +28,16 @@ String _methodSlice(String source, String signature) {
 }
 
 void main() {
-  final String page =
-      _read('lib/src/pages/implementations/media_sources_page.dart');
-  final String view =
-      _read('lib/src/pages/implementations/media_sources_view.dart');
+  final String page = _read(
+    'lib/src/pages/implementations/media_sources_page.dart',
+  );
+  final String view = _read(
+    'lib/src/pages/implementations/media_sources_view.dart',
+  );
   final String manga = _read('lib/src/media/manga/manga_sources_page.dart');
-  final String game =
-      _read('lib/src/pages/implementations/home_game_page.dart');
+  final String game = _read(
+    'lib/src/pages/implementations/home_game_page.dart',
+  );
 
   group('页头不再有「添加来源」，入口在常驻来源区头', () {
     test('书 / 视频导入页', () {
@@ -106,8 +109,9 @@ void main() {
     });
 
     test('i18n 里 media_source_local_roots key 已删除', () {
-      final String zh =
-          File('lib/i18n/strings_zh-CN.i18n.json').readAsStringSync();
+      final String zh = File(
+        'lib/i18n/strings_zh-CN.i18n.json',
+      ).readAsStringSync();
       final String en = File('lib/i18n/strings.i18n.json').readAsStringSync();
       expect(zh, isNot(contains('media_source_local_roots')));
       expect(en, isNot(contains('media_source_local_roots')));

@@ -14,17 +14,17 @@ class TorrentAddCoordinator {
   }) {
     return switch (payload) {
       TorrentMagnetPayload magnet => backend.addTorrent(
-          magnet.magnetUri,
-          category: category,
-          sequential: sequential,
-          firstLastPiecePrio: firstLastPiecePrio,
-        ),
+        magnet.magnetUri,
+        category: category,
+        sequential: sequential,
+        firstLastPiecePrio: firstLastPiecePrio,
+      ),
       TorrentMetainfoPayload metainfo => _addMetainfo(
-          metainfo,
-          category: category,
-          sequential: sequential,
-          firstLastPiecePrio: firstLastPiecePrio,
-        ),
+        metainfo,
+        category: category,
+        sequential: sequential,
+        firstLastPiecePrio: firstLastPiecePrio,
+      ),
     };
   }
 

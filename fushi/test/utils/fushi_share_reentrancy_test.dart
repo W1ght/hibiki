@@ -16,16 +16,18 @@ void main() {
   final TestWidgetsFlutterBinding binding =
       TestWidgetsFlutterBinding.ensureInitialized();
 
-  const MethodChannel channel =
-      MethodChannel('dev.fluttercommunity.plus/share');
+  const MethodChannel channel = MethodChannel(
+    'dev.fluttercommunity.plus/share',
+  );
   final List<MethodCall> calls = <MethodCall>[];
   Completer<void>? gate;
 
   setUp(() {
     calls.clear();
     gate = null;
-    binding.defaultBinaryMessenger.setMockMethodCallHandler(channel,
-        (MethodCall call) async {
+    binding.defaultBinaryMessenger.setMockMethodCallHandler(channel, (
+      MethodCall call,
+    ) async {
       calls.add(call);
       if (gate != null) await gate!.future;
       return null;
@@ -37,20 +39,24 @@ void main() {
   });
 
   test('只走非结果通道 shareFiles（绝不走 shareFilesWithResult 结果通道）', () async {
-    await FushiShare.shareFiles(
-      <XFile>[XFile('/tmp/pic.png', mimeType: 'image/png')],
-      subject: 'pic',
-    );
+    await FushiShare.shareFiles(<XFile>[
+      XFile('/tmp/pic.png', mimeType: 'image/png'),
+    ], subject: 'pic');
     expect(calls.length, 1);
-    expect(calls.single.method, 'shareFiles',
-        reason: '必须走非结果变体；shareFilesWithResult 会命中 ShareSuccessManager');
+    expect(
+      calls.single.method,
+      'shareFiles',
+      reason: '必须走非结果变体；shareFilesWithResult 会命中 ShareSuccessManager',
+    );
     expect(calls.single.method, isNot('shareFilesWithResult'));
     final Map<Object?, Object?> args =
         calls.single.arguments as Map<Object?, Object?>;
-    expect(List<String>.from(args['paths']! as List<Object?>),
-        <String>['/tmp/pic.png']);
-    expect(List<String>.from(args['mimeTypes']! as List<Object?>),
-        <String>['image/png']);
+    expect(List<String>.from(args['paths']! as List<Object?>), <String>[
+      '/tmp/pic.png',
+    ]);
+    expect(List<String>.from(args['mimeTypes']! as List<Object?>), <String>[
+      'image/png',
+    ]);
     expect(args['subject'], 'pic');
   });
 
@@ -58,23 +64,24 @@ void main() {
     await FushiShare.shareFiles(<XFile>[XFile('/tmp/clip.mkv')]);
     final Map<Object?, Object?> args =
         calls.single.arguments as Map<Object?, Object?>;
-    expect(List<String>.from(args['mimeTypes']! as List<Object?>),
-        <String>['*/*']);
+    expect(List<String>.from(args['mimeTypes']! as List<Object?>), <String>[
+      '*/*',
+    ]);
   });
 
   test('防重入：面板在途时第二次调用被丢弃，门复位后恢复', () async {
     gate = Completer<void>();
     // 第一次分享挂起（模拟系统面板尚未呈现完成）。
-    final Future<void> first = FushiShare.shareFiles(
-      <XFile>[XFile('/tmp/a.png', mimeType: 'image/png')],
-    );
+    final Future<void> first = FushiShare.shareFiles(<XFile>[
+      XFile('/tmp/a.png', mimeType: 'image/png'),
+    ]);
     await Future<void>.delayed(Duration.zero);
     expect(FushiShare.debugIsSharing, isTrue);
 
     // 重入调用必须被防重入门静默丢弃（不再触发平台调用）。
-    await FushiShare.shareFiles(
-      <XFile>[XFile('/tmp/b.png', mimeType: 'image/png')],
-    );
+    await FushiShare.shareFiles(<XFile>[
+      XFile('/tmp/b.png', mimeType: 'image/png'),
+    ]);
     expect(calls.length, 1, reason: '重入调用必须被静默丢弃');
 
     // 放行第一次，门复位，后续分享恢复。
@@ -82,9 +89,9 @@ void main() {
     await first;
     expect(FushiShare.debugIsSharing, isFalse);
 
-    await FushiShare.shareFiles(
-      <XFile>[XFile('/tmp/c.png', mimeType: 'image/png')],
-    );
+    await FushiShare.shareFiles(<XFile>[
+      XFile('/tmp/c.png', mimeType: 'image/png'),
+    ]);
     expect(calls.length, 2, reason: '门复位后分享应恢复');
   });
 
@@ -119,9 +126,13 @@ void main() {
       'originWidth',
       'originHeight',
     ]) {
-      expect(args[key], isA<double>(),
-          reason: '缺 $key 时 iOS 侧 originRect 退化为 CGRectZero，必抛 '
-              'sharePositionOrigin 异常');
+      expect(
+        args[key],
+        isA<double>(),
+        reason:
+            '缺 $key 时 iOS 侧 originRect 退化为 CGRectZero，必抛 '
+            'sharePositionOrigin 异常',
+      );
     }
     return Rect.fromLTWH(
       args['originX']! as double,
@@ -133,30 +144,37 @@ void main() {
 
   /// 复刻 iOS 侧两道校验。
   void expectValidIosAnchor(Rect origin, Size viewSize) {
-    expect(origin.isEmpty, isFalse,
-        reason: 'CGRectIsEmpty(origin) 为真会被 iOS 侧直接拒绝');
+    expect(
+      origin.isEmpty,
+      isFalse,
+      reason: 'CGRectIsEmpty(origin) 为真会被 iOS 侧直接拒绝',
+    );
     final Rect viewRect = Offset.zero & viewSize;
     expect(
       viewRect.contains(origin.topLeft) &&
           viewRect.contains(origin.bottomRight),
       isTrue,
-      reason: 'origin $origin 必须完全落在 source view $viewRect 内'
+      reason:
+          'origin $origin 必须完全落在 source view $viewRect 内'
           '（CGRectContainsRect）',
     );
   }
 
   test('shareFiles 必带非空且落在 view 内的 iOS 锚点', () async {
-    await FushiShare.shareFiles(
-      <XFile>[XFile('/tmp/shot.jpg', mimeType: 'image/jpeg')],
-    );
+    await FushiShare.shareFiles(<XFile>[
+      XFile('/tmp/shot.jpg', mimeType: 'image/jpeg'),
+    ]);
     expect(calls.single.method, 'shareFiles');
     expectValidIosAnchor(originRectOf(calls.single), viewLogicalSize());
   });
 
   test('shareText 必带非空且落在 view 内的 iOS 锚点', () async {
     await FushiShare.shareText('hello', subject: 'subject');
-    expect(calls.single.method, 'share',
-        reason: '文本分享同样走 iOS `+share:`，同样被校验锚点');
+    expect(
+      calls.single.method,
+      'share',
+      reason: '文本分享同样走 iOS `+share:`，同样被校验锚点',
+    );
     final Map<Object?, Object?> args =
         calls.single.arguments as Map<Object?, Object?>;
     expect(args['text'], 'hello');
@@ -164,8 +182,7 @@ void main() {
     expectValidIosAnchor(originRectOf(calls.single), viewLogicalSize());
   });
 
-  test('shareText 空文本不触发平台调用（iOS 侧会以 Non-empty text expected 拒绝）',
-      () async {
+  test('shareText 空文本不触发平台调用（iOS 侧会以 Non-empty text expected 拒绝）', () async {
     await FushiShare.shareText('');
     expect(calls, isEmpty);
     expect(FushiShare.debugIsSharing, isFalse);
@@ -177,9 +194,9 @@ void main() {
     await Future<void>.delayed(Duration.zero);
     expect(FushiShare.debugIsSharing, isTrue);
 
-    await FushiShare.shareFiles(
-      <XFile>[XFile('/tmp/a.png', mimeType: 'image/png')],
-    );
+    await FushiShare.shareFiles(<XFile>[
+      XFile('/tmp/a.png', mimeType: 'image/png'),
+    ]);
     expect(calls.length, 1, reason: '面板在途时文件分享必须被同一道门丢弃');
 
     gate!.complete();

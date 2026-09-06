@@ -43,10 +43,7 @@ Future<void> _pumpOverlay(
 Finder _removeButtonFor(VideoControlItem item, VideoControlSlot slot) {
   return find.descendant(
     of: find
-        .ancestor(
-          of: _placedChip(item, slot),
-          matching: find.byType(Row),
-        )
+        .ancestor(of: _placedChip(item, slot), matching: find.byType(Row))
         .first,
     matching: find.byIcon(Icons.close),
   );
@@ -77,25 +74,25 @@ Finder _slotRegion(VideoControlSlot slot) {
 }
 
 Future<void> _drag(WidgetTester tester, Finder source, Finder target) async {
-  final Draggable<VideoControlDragData> draggable =
-      tester.widget<Draggable<VideoControlDragData>>(source);
-  final DragTarget<VideoControlDragData> dragTarget =
-      tester.widget<DragTarget<VideoControlDragData>>(target);
+  final Draggable<VideoControlDragData> draggable = tester
+      .widget<Draggable<VideoControlDragData>>(source);
+  final DragTarget<VideoControlDragData> dragTarget = tester
+      .widget<DragTarget<VideoControlDragData>>(target);
   final DragTargetDetails<VideoControlDragData> details =
       DragTargetDetails<VideoControlDragData>(
-    data: draggable.data!,
-    offset: tester.getCenter(target),
-  );
+        data: draggable.data!,
+        offset: tester.getCenter(target),
+      );
   expect(dragTarget.onWillAcceptWithDetails!(details), isTrue);
   dragTarget.onAcceptWithDetails!(details);
   await tester.pumpAndSettle();
 }
 
 bool _willAccept(WidgetTester tester, Finder source, Finder target) {
-  final Draggable<VideoControlDragData> draggable =
-      tester.widget<Draggable<VideoControlDragData>>(source);
-  final DragTarget<VideoControlDragData> dragTarget =
-      tester.widget<DragTarget<VideoControlDragData>>(target);
+  final Draggable<VideoControlDragData> draggable = tester
+      .widget<Draggable<VideoControlDragData>>(source);
+  final DragTarget<VideoControlDragData> dragTarget = tester
+      .widget<DragTarget<VideoControlDragData>>(target);
   return dragTarget.onWillAcceptWithDetails!(
     DragTargetDetails<VideoControlDragData>(
       data: draggable.data!,
@@ -105,8 +102,9 @@ bool _willAccept(WidgetTester tester, Finder source, Finder target) {
 }
 
 void main() {
-  testWidgets('onscreen overlay edits a draft and saves explicitly',
-      (WidgetTester tester) async {
+  testWidgets('onscreen overlay edits a draft and saves explicitly', (
+    WidgetTester tester,
+  ) async {
     await tester.binding.setSurfaceSize(const Size(900, 600));
     addTearDown(() => tester.binding.setSurfaceSize(null));
 
@@ -119,8 +117,10 @@ void main() {
       onClose: () => closed = true,
     );
 
-    final Finder source =
-        _placedChip(VideoControlItem.settings, VideoControlSlot.screenRight);
+    final Finder source = _placedChip(
+      VideoControlItem.settings,
+      VideoControlSlot.screenRight,
+    );
     final Finder target = _slotRegion(VideoControlSlot.bottomLeft);
     expect(source, findsOneWidget);
     expect(target, findsOneWidget);
@@ -136,15 +136,20 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(committed, isNotNull);
-    expect(committed!.itemsIn(VideoControlSlot.bottomLeft),
-        contains(VideoControlItem.settings));
-    expect(committed!.itemsIn(VideoControlSlot.screenRight),
-        isNot(contains(VideoControlItem.settings)));
+    expect(
+      committed!.itemsIn(VideoControlSlot.bottomLeft),
+      contains(VideoControlItem.settings),
+    );
+    expect(
+      committed!.itemsIn(VideoControlSlot.screenRight),
+      isNot(contains(VideoControlItem.settings)),
+    );
     expect(closed, isTrue);
   });
 
-  testWidgets('onscreen overlay cancel discards a draft',
-      (WidgetTester tester) async {
+  testWidgets('onscreen overlay cancel discards a draft', (
+    WidgetTester tester,
+  ) async {
     await tester.binding.setSurfaceSize(const Size(900, 600));
     addTearDown(() => tester.binding.setSurfaceSize(null));
 
@@ -172,8 +177,9 @@ void main() {
     expect(closed, isTrue);
   });
 
-  testWidgets('onscreen overlay can add a palette button to an existing slot',
-      (WidgetTester tester) async {
+  testWidgets('onscreen overlay can add a palette button to an existing slot', (
+    WidgetTester tester,
+  ) async {
     await tester.binding.setSurfaceSize(const Size(900, 600));
     addTearDown(() => tester.binding.setSurfaceSize(null));
 
@@ -194,53 +200,60 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(committed, isNotNull);
-    expect(committed!.itemsIn(VideoControlSlot.screenLeft),
-        contains(VideoControlItem.screenshot));
-    expect(committed!.itemsIn(VideoControlSlot.topRight),
-        contains(VideoControlItem.screenshot));
+    expect(
+      committed!.itemsIn(VideoControlSlot.screenLeft),
+      contains(VideoControlItem.screenshot),
+    );
+    expect(
+      committed!.itemsIn(VideoControlSlot.topRight),
+      contains(VideoControlItem.screenshot),
+    );
   });
 
   testWidgets(
-      'onscreen overlay copies palette volume to the other bottom slot only',
-      (WidgetTester tester) async {
-    await tester.binding.setSurfaceSize(const Size(900, 600));
-    addTearDown(() => tester.binding.setSurfaceSize(null));
+    'onscreen overlay copies palette volume to the other bottom slot only',
+    (WidgetTester tester) async {
+      await tester.binding.setSurfaceSize(const Size(900, 600));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
 
-    VideoControlLayout? committed;
-    await _pumpOverlay(
-      tester,
-      layout: VideoControlLayout.currentChrome,
-      onLayoutChanged: (VideoControlLayout layout) async => committed = layout,
-    );
+      VideoControlLayout? committed;
+      await _pumpOverlay(
+        tester,
+        layout: VideoControlLayout.currentChrome,
+        onLayoutChanged: (VideoControlLayout layout) async =>
+            committed = layout,
+      );
 
-    final Finder source = _paletteChip(VideoControlItem.volume);
-    final Finder bottomLeft = _slotRegion(VideoControlSlot.bottomLeft);
-    final Finder topRight = _slotRegion(VideoControlSlot.topRight);
-    expect(source, findsOneWidget);
-    expect(bottomLeft, findsOneWidget);
-    expect(topRight, findsOneWidget);
-    expect(_willAccept(tester, source, topRight), isFalse);
+      final Finder source = _paletteChip(VideoControlItem.volume);
+      final Finder bottomLeft = _slotRegion(VideoControlSlot.bottomLeft);
+      final Finder topRight = _slotRegion(VideoControlSlot.topRight);
+      expect(source, findsOneWidget);
+      expect(bottomLeft, findsOneWidget);
+      expect(topRight, findsOneWidget);
+      expect(_willAccept(tester, source, topRight), isFalse);
 
-    await _drag(tester, source, bottomLeft);
-    expect(_willAccept(tester, source, bottomLeft), isFalse);
-    await tester.tap(find.text(t.dialog_save));
-    await tester.pumpAndSettle();
+      await _drag(tester, source, bottomLeft);
+      expect(_willAccept(tester, source, bottomLeft), isFalse);
+      await tester.tap(find.text(t.dialog_save));
+      await tester.pumpAndSettle();
 
-    expect(committed, isNotNull);
-    expect(committed!.slotsOf(VideoControlItem.volume), <VideoControlSlot>[
-      VideoControlSlot.bottomLeft,
-      VideoControlSlot.bottomRight,
-    ]);
-    expect(
-      committed!
-          .itemsIn(VideoControlSlot.bottomLeft)
-          .where((VideoControlItem i) => i == VideoControlItem.volume),
-      hasLength(1),
-    );
-  });
+      expect(committed, isNotNull);
+      expect(committed!.slotsOf(VideoControlItem.volume), <VideoControlSlot>[
+        VideoControlSlot.bottomLeft,
+        VideoControlSlot.bottomRight,
+      ]);
+      expect(
+        committed!
+            .itemsIn(VideoControlSlot.bottomLeft)
+            .where((VideoControlItem i) => i == VideoControlItem.volume),
+        hasLength(1),
+      );
+    },
+  );
 
-  testWidgets('onscreen overlay moves, removes, and restores title',
-      (WidgetTester tester) async {
+  testWidgets('onscreen overlay moves, removes, and restores title', (
+    WidgetTester tester,
+  ) async {
     await tester.binding.setSurfaceSize(const Size(900, 600));
     addTearDown(() => tester.binding.setSurfaceSize(null));
 
@@ -258,25 +271,35 @@ void main() {
     expect(topCenter, findsOneWidget);
     expect(hidden, findsOneWidget);
 
-    final Finder titleAtCenter =
-        _placedChip(VideoControlItem.title, VideoControlSlot.topCenter);
+    final Finder titleAtCenter = _placedChip(
+      VideoControlItem.title,
+      VideoControlSlot.topCenter,
+    );
     expect(titleAtCenter, findsOneWidget);
-    expect(_willAccept(tester, _paletteChip(VideoControlItem.speed), topCenter),
-        isFalse);
+    expect(
+      _willAccept(tester, _paletteChip(VideoControlItem.speed), topCenter),
+      isFalse,
+    );
 
     await _drag(tester, titleAtCenter, topLeft);
-    expect(_placedChip(VideoControlItem.title, VideoControlSlot.topCenter),
-        findsNothing);
-    expect(_placedChip(VideoControlItem.title, VideoControlSlot.topLeft),
-        findsOneWidget);
+    expect(
+      _placedChip(VideoControlItem.title, VideoControlSlot.topCenter),
+      findsNothing,
+    );
+    expect(
+      _placedChip(VideoControlItem.title, VideoControlSlot.topLeft),
+      findsOneWidget,
+    );
 
     await _drag(
       tester,
       _placedChip(VideoControlItem.title, VideoControlSlot.topLeft),
       hidden,
     );
-    expect(_placedChip(VideoControlItem.title, VideoControlSlot.hidden),
-        findsNothing);
+    expect(
+      _placedChip(VideoControlItem.title, VideoControlSlot.hidden),
+      findsNothing,
+    );
     expect(_paletteChip(VideoControlItem.title), findsOneWidget);
 
     await _drag(tester, _paletteChip(VideoControlItem.title), topRight);
@@ -284,54 +307,59 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(committed, isNotNull);
-    expect(committed!.slotsOf(VideoControlItem.title),
-        <VideoControlSlot>[VideoControlSlot.topRight]);
+    expect(committed!.slotsOf(VideoControlItem.title), <VideoControlSlot>[
+      VideoControlSlot.topRight,
+    ]);
     expect(committed!.removedItems, isNot(contains(VideoControlItem.title)));
   });
 
   testWidgets(
-      'onscreen overlay includes subtitle and audio chrome in editable controls',
-      (WidgetTester tester) async {
-    await tester.binding.setSurfaceSize(const Size(900, 600));
-    addTearDown(() => tester.binding.setSurfaceSize(null));
+    'onscreen overlay includes subtitle and audio chrome in editable controls',
+    (WidgetTester tester) async {
+      await tester.binding.setSurfaceSize(const Size(900, 600));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
 
-    await _pumpOverlay(
-      tester,
-      layout: VideoControlLayout.currentChrome,
-      onLayoutChanged: (_) async {},
-    );
+      await _pumpOverlay(
+        tester,
+        layout: VideoControlLayout.currentChrome,
+        onLayoutChanged: (_) async {},
+      );
 
-    expect(_paletteChip(VideoControlItem.speed), findsOneWidget);
-    expect(_paletteChip(VideoControlItem.screenshot), findsOneWidget);
-    expect(_paletteChip(VideoControlItem.subtitleTrack), findsOneWidget);
-    expect(_paletteChip(VideoControlItem.audioTrack), findsOneWidget);
-    expect(
-      _placedChip(VideoControlItem.subtitleTrack, VideoControlSlot.topRight),
-      findsOneWidget,
-    );
-    expect(
-      _placedChip(VideoControlItem.audioTrack, VideoControlSlot.topRight),
-      findsOneWidget,
-    );
-  });
+      expect(_paletteChip(VideoControlItem.speed), findsOneWidget);
+      expect(_paletteChip(VideoControlItem.screenshot), findsOneWidget);
+      expect(_paletteChip(VideoControlItem.subtitleTrack), findsOneWidget);
+      expect(_paletteChip(VideoControlItem.audioTrack), findsOneWidget);
+      expect(
+        _placedChip(VideoControlItem.subtitleTrack, VideoControlSlot.topRight),
+        findsOneWidget,
+      );
+      expect(
+        _placedChip(VideoControlItem.audioTrack, VideoControlSlot.topRight),
+        findsOneWidget,
+      );
+    },
+  );
 
-  testWidgets('onscreen overlay has save, cancel, X remove, and no drag handle',
-      (WidgetTester tester) async {
-    await _pumpOverlay(
-      tester,
-      layout: VideoControlLayout.currentChrome,
-      onLayoutChanged: (_) async {},
-    );
+  testWidgets(
+    'onscreen overlay has save, cancel, X remove, and no drag handle',
+    (WidgetTester tester) async {
+      await _pumpOverlay(
+        tester,
+        layout: VideoControlLayout.currentChrome,
+        onLayoutChanged: (_) async {},
+      );
 
-    expect(find.text(t.dialog_save), findsOneWidget);
-    expect(find.text(t.dialog_cancel), findsOneWidget);
-    expect(find.byIcon(Icons.close), findsWidgets);
-    expect(find.byIcon(Icons.drag_indicator), findsNothing);
-    expect(find.text(t.video_control_slot_hidden), findsOneWidget);
-  });
+      expect(find.text(t.dialog_save), findsOneWidget);
+      expect(find.text(t.dialog_cancel), findsOneWidget);
+      expect(find.byIcon(Icons.close), findsWidgets);
+      expect(find.byIcon(Icons.drag_indicator), findsNothing);
+      expect(find.text(t.video_control_slot_hidden), findsOneWidget);
+    },
+  );
 
-  testWidgets('onscreen overlay stays bounded on narrow video surfaces',
-      (WidgetTester tester) async {
+  testWidgets('onscreen overlay stays bounded on narrow video surfaces', (
+    WidgetTester tester,
+  ) async {
     await tester.binding.setSurfaceSize(const Size(560, 360));
     addTearDown(() => tester.binding.setSurfaceSize(null));
 
@@ -346,57 +374,64 @@ void main() {
   });
 
   testWidgets(
-      'onscreen overlay keeps save controls visible on low height with large text',
-      (WidgetTester tester) async {
-    await tester.binding.setSurfaceSize(const Size(360, 260));
-    addTearDown(() => tester.binding.setSurfaceSize(null));
+    'onscreen overlay keeps save controls visible on low height with large text',
+    (WidgetTester tester) async {
+      await tester.binding.setSurfaceSize(const Size(360, 260));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
 
-    await _pumpOverlay(
-      tester,
-      layout: VideoControlLayout.currentChrome,
-      onLayoutChanged: (_) async {},
-      textScaler: const TextScaler.linear(1.6),
-    );
+      await _pumpOverlay(
+        tester,
+        layout: VideoControlLayout.currentChrome,
+        onLayoutChanged: (_) async {},
+        textScaler: const TextScaler.linear(1.6),
+      );
 
-    expect(tester.takeException(), isNull);
-    for (final Finder finder in <Finder>[
-      find.text(t.dialog_save),
-      find.text(t.dialog_cancel),
-      find.byIcon(Icons.close).first,
-    ]) {
-      final Rect rect = tester.getRect(finder);
-      expect(rect.left, greaterThanOrEqualTo(0));
-      expect(rect.top, greaterThanOrEqualTo(0));
-      expect(rect.right, lessThanOrEqualTo(360));
-      expect(rect.bottom, lessThanOrEqualTo(260));
-    }
-  });
+      expect(tester.takeException(), isNull);
+      for (final Finder finder in <Finder>[
+        find.text(t.dialog_save),
+        find.text(t.dialog_cancel),
+        find.byIcon(Icons.close).first,
+      ]) {
+        final Rect rect = tester.getRect(finder);
+        expect(rect.left, greaterThanOrEqualTo(0));
+        expect(rect.top, greaterThanOrEqualTo(0));
+        expect(rect.right, lessThanOrEqualTo(360));
+        expect(rect.bottom, lessThanOrEqualTo(260));
+      }
+    },
+  );
 
-  testWidgets('TODO-554: desktop controls allow dragging settings into hidden',
-      (WidgetTester tester) async {
-    await tester.binding.setSurfaceSize(const Size(900, 600));
-    addTearDown(() => tester.binding.setSurfaceSize(null));
+  testWidgets(
+    'TODO-554: desktop controls allow dragging settings into hidden',
+    (WidgetTester tester) async {
+      await tester.binding.setSurfaceSize(const Size(900, 600));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
 
-    VideoControlLayout? committed;
-    await _pumpOverlay(
-      tester,
-      layout: VideoControlLayout.currentChrome,
-      onLayoutChanged: (VideoControlLayout layout) async => committed = layout,
-    );
-    final Finder settings =
-        _placedChip(VideoControlItem.settings, VideoControlSlot.screenRight);
-    final Finder hidden = _slotRegion(VideoControlSlot.hidden);
-    expect(settings, findsOneWidget);
-    expect(_willAccept(tester, settings, hidden), isTrue);
-    await _drag(tester, settings, hidden);
-    await tester.tap(find.text(t.dialog_save));
-    await tester.pumpAndSettle();
-    expect(committed, isNotNull);
-    expect(committed!.isOnPlayer(VideoControlItem.settings), isFalse);
-  });
+      VideoControlLayout? committed;
+      await _pumpOverlay(
+        tester,
+        layout: VideoControlLayout.currentChrome,
+        onLayoutChanged: (VideoControlLayout layout) async =>
+            committed = layout,
+      );
+      final Finder settings = _placedChip(
+        VideoControlItem.settings,
+        VideoControlSlot.screenRight,
+      );
+      final Finder hidden = _slotRegion(VideoControlSlot.hidden);
+      expect(settings, findsOneWidget);
+      expect(_willAccept(tester, settings, hidden), isTrue);
+      await _drag(tester, settings, hidden);
+      await tester.tap(find.text(t.dialog_save));
+      await tester.pumpAndSettle();
+      expect(committed, isNotNull);
+      expect(committed!.isOnPlayer(VideoControlItem.settings), isFalse);
+    },
+  );
 
-  testWidgets('TODO-554: touch controls reject dragging settings into hidden',
-      (WidgetTester tester) async {
+  testWidgets('TODO-554: touch controls reject dragging settings into hidden', (
+    WidgetTester tester,
+  ) async {
     await tester.binding.setSurfaceSize(const Size(900, 600));
     addTearDown(() => tester.binding.setSurfaceSize(null));
 
@@ -408,8 +443,10 @@ void main() {
       onLayoutChanged: (_) async {},
       isTouchControls: true,
     );
-    final Finder settings =
-        _placedChip(VideoControlItem.settings, VideoControlSlot.screenRight);
+    final Finder settings = _placedChip(
+      VideoControlItem.settings,
+      VideoControlSlot.screenRight,
+    );
     final Finder hidden = _slotRegion(VideoControlSlot.hidden);
     expect(settings, findsOneWidget);
     expect(
@@ -420,39 +457,48 @@ void main() {
   });
 
   testWidgets(
-      'TODO-554: touch controls hide the settings remove "x", desktop shows it',
-      (WidgetTester tester) async {
-    await tester.binding.setSurfaceSize(const Size(900, 600));
-    addTearDown(() => tester.binding.setSurfaceSize(null));
+    'TODO-554: touch controls hide the settings remove "x", desktop shows it',
+    (WidgetTester tester) async {
+      await tester.binding.setSurfaceSize(const Size(900, 600));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
 
-    // Desktop: settings chip carries a remove "x".
-    await _pumpOverlay(
-      tester,
-      layout: VideoControlLayout.currentChrome,
-      onLayoutChanged: (_) async {},
-    );
-    expect(
-      _removeButtonFor(VideoControlItem.settings, VideoControlSlot.screenRight),
-      findsOneWidget,
-    );
+      // Desktop: settings chip carries a remove "x".
+      await _pumpOverlay(
+        tester,
+        layout: VideoControlLayout.currentChrome,
+        onLayoutChanged: (_) async {},
+      );
+      expect(
+        _removeButtonFor(
+          VideoControlItem.settings,
+          VideoControlSlot.screenRight,
+        ),
+        findsOneWidget,
+      );
 
-    // Touch: the settings chip has no remove "x" (it cannot be removed there),
-    // but a freely-removable key like subtitleList still does.
-    await _pumpOverlay(
-      tester,
-      layout: VideoControlLayout.currentChrome,
-      onLayoutChanged: (_) async {},
-      isTouchControls: true,
-    );
-    expect(
-      _removeButtonFor(VideoControlItem.settings, VideoControlSlot.screenRight),
-      findsNothing,
-      reason: 'no rejected tap target for the pinned settings entry on touch',
-    );
-    expect(
-      _removeButtonFor(
-          VideoControlItem.subtitleList, VideoControlSlot.screenRight),
-      findsOneWidget,
-    );
-  });
+      // Touch: the settings chip has no remove "x" (it cannot be removed there),
+      // but a freely-removable key like subtitleList still does.
+      await _pumpOverlay(
+        tester,
+        layout: VideoControlLayout.currentChrome,
+        onLayoutChanged: (_) async {},
+        isTouchControls: true,
+      );
+      expect(
+        _removeButtonFor(
+          VideoControlItem.settings,
+          VideoControlSlot.screenRight,
+        ),
+        findsNothing,
+        reason: 'no rejected tap target for the pinned settings entry on touch',
+      );
+      expect(
+        _removeButtonFor(
+          VideoControlItem.subtitleList,
+          VideoControlSlot.screenRight,
+        ),
+        findsOneWidget,
+      );
+    },
+  );
 }

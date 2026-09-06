@@ -42,38 +42,39 @@ class _BookDragTargetState extends State<BookDragTarget> {
       onLeave: (_) {
         if (_isHovering) setState(() => _isHovering = false);
       },
-      builder: (
-        BuildContext context,
-        List<BookTagRow?> candidateData,
-        List<dynamic> rejectedData,
-      ) {
-        return Stack(
-          fit: StackFit.expand,
-          children: <Widget>[
-            widget.child,
-            if (_isHovering)
-              Positioned.fill(
-                child: DecoratedBox(
-                  decoration: BoxDecoration(
-                    color: hoverColor.withValues(alpha: 0.2),
-                    borderRadius: tokens.radii.cardRadius,
-                    border: Border.all(
-                      color: hoverColor,
-                      width: tokens.spacing.gap / 4,
+      builder:
+          (
+            BuildContext context,
+            List<BookTagRow?> candidateData,
+            List<dynamic> rejectedData,
+          ) {
+            return Stack(
+              fit: StackFit.expand,
+              children: <Widget>[
+                widget.child,
+                if (_isHovering)
+                  Positioned.fill(
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        color: hoverColor.withValues(alpha: 0.2),
+                        borderRadius: tokens.radii.cardRadius,
+                        border: Border.all(
+                          color: hoverColor,
+                          width: tokens.spacing.gap / 4,
+                        ),
+                      ),
+                      child: Center(
+                        child: Icon(
+                          Icons.add_circle_outline,
+                          color: hoverColor,
+                          size: tokens.spacing.gap * 4,
+                        ),
+                      ),
                     ),
                   ),
-                  child: Center(
-                    child: Icon(
-                      Icons.add_circle_outline,
-                      color: hoverColor,
-                      size: tokens.spacing.gap * 4,
-                    ),
-                  ),
-                ),
-              ),
-          ],
-        );
-      },
+              ],
+            );
+          },
     );
   }
 }

@@ -61,8 +61,7 @@ Future<CoverMetaStore?> _admitAutoFrameCoverWrite({
 }) async {
   if (!allowAutoCover) return null;
   try {
-    final CoverMetaStore store =
-        CoverMetaStore(await VideoStorage.coversDir());
+    final CoverMetaStore store = CoverMetaStore(await VideoStorage.coversDir());
     return await store.allowsAutoFrameWrite(bookUid) ? store : null;
   } on Object catch (error) {
     // 元数据不可读时 fail closed：媒体仍可导入，但不得发布未受 provenance
@@ -134,7 +133,7 @@ String singleVideoBookUid(String videoPath) {
 /// 回调基础设施，故采用与 EpubImporter 无回调路径一致的静默后缀 UX。
 String uniqueVideoBookUid(String base, Set<String> existingKeys) {
   if (!existingKeys.contains(base)) return base;
-  for (int i = 2;; i++) {
+  for (int i = 2; ; i++) {
     final String candidate = '$base ($i)';
     if (!existingKeys.contains(candidate)) return candidate;
   }
@@ -312,18 +311,20 @@ class _VideoImportDialogState extends State<VideoImportDialog>
   }
 
   bool get _canImport => videoImportCanImport(
-        videoPath: _videoPath,
-        subtitlePath: _subtitlePath,
-        streamUrl: _streamUrlController.text,
-        busy: importing,
-      );
+    videoPath: _videoPath,
+    subtitlePath: _subtitlePath,
+    streamUrl: _streamUrlController.text,
+    busy: importing,
+  );
 
   Future<void> _pickVideo() async {
     // 安卓：走真实路径浏览器拿绝对路径（不复制到 cache，清缓存不失效）；
     // 桌面/iOS 及安卓无全文件访问时回退 file_picker（board 1112）。
     // 视频不限扩展名（allowedExtensions:null），避免维护第二份视频扩展名清单。
-    final AppModel appModel =
-        ProviderScope.containerOf(context, listen: false).read(appProvider);
+    final AppModel appModel = ProviderScope.containerOf(
+      context,
+      listen: false,
+    ).read(appProvider);
     final String? path = await pickRealFilePath(
       context: context,
       appModel: appModel,
@@ -380,13 +381,15 @@ class _VideoImportDialogState extends State<VideoImportDialog>
       action: () async {
         final String content = await readTextWithEncoding(File(m3u8Path));
         final String baseDir = p.dirname(m3u8Path);
-        final List<PlaylistEntry> entries =
-            parseM3u8(content: content, baseDir: baseDir);
+        final List<PlaylistEntry> entries = parseM3u8(
+          content: content,
+          baseDir: baseDir,
+        );
         if (entries.isEmpty) {
           if (mounted) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text(t.video_file_error_content)),
-            );
+            ScaffoldMessenger.of(
+              context,
+            ).showSnackBar(SnackBar(content: Text(t.video_file_error_content)));
           }
           return;
         }
@@ -394,39 +397,38 @@ class _VideoImportDialogState extends State<VideoImportDialog>
         // 统一合集 Phase 2：多集拆成 N 条独立 VideoBooks 行 + 一个 playlist 合集
         // （单一真相源 importSplitPlaylist，与 v38 迁移落库形状对齐）。
         final SplitPlaylistImportResult result =
-            await _runVideoImportCoverMutation(
-          (bool allowAutoCover) async {
-            final SplitPlaylistImportResult imported =
-                await widget.repo.importSplitPlaylist(
-              collectionName: p.basenameWithoutExtension(m3u8Path),
-              entries: entries,
-            );
-            final String firstUid = imported.episodeUids.first;
-            final CoverMetaStore? coverMetaStore =
-                await _admitAutoFrameCoverWrite(
-              allowAutoCover: allowAutoCover,
-              bookUid: firstUid,
-            );
-            // TODO-1237 ①：遍历各集取首个可用封面（首集缺失/远端占位时退到后续集）给首集
-            // 承接（合集卡封面纯函数取首成员封面）。桌面 ffmpeg；移动端无 ffmpeg 时留空占位。
-            final String? coverPath = coverMetaStore == null
-                ? null
-                : await extractPlaylistCover(
-                    episodePaths:
-                        entries.map((PlaylistEntry e) => e.path).toList(),
+            await _runVideoImportCoverMutation((bool allowAutoCover) async {
+              final SplitPlaylistImportResult imported = await widget.repo
+                  .importSplitPlaylist(
+                    collectionName: p.basenameWithoutExtension(m3u8Path),
+                    entries: entries,
+                  );
+              final String firstUid = imported.episodeUids.first;
+              final CoverMetaStore? coverMetaStore =
+                  await _admitAutoFrameCoverWrite(
+                    allowAutoCover: allowAutoCover,
                     bookUid: firstUid,
                   );
-            if (coverPath != null) {
-              await widget.repo.updateCover(firstUid, coverPath);
-            }
-            await _commitAutoFrameCoverWrite(
-              store: coverMetaStore,
-              bookUid: firstUid,
-              coverPath: coverPath,
-            );
-            return imported;
-          },
-        );
+              // TODO-1237 ①：遍历各集取首个可用封面（首集缺失/远端占位时退到后续集）给首集
+              // 承接（合集卡封面纯函数取首成员封面）。桌面 ffmpeg；移动端无 ffmpeg 时留空占位。
+              final String? coverPath = coverMetaStore == null
+                  ? null
+                  : await extractPlaylistCover(
+                      episodePaths: entries
+                          .map((PlaylistEntry e) => e.path)
+                          .toList(),
+                      bookUid: firstUid,
+                    );
+              if (coverPath != null) {
+                await widget.repo.updateCover(firstUid, coverPath);
+              }
+              await _commitAutoFrameCoverWrite(
+                store: coverMetaStore,
+                bookUid: firstUid,
+                coverPath: coverPath,
+              );
+              return imported;
+            });
         final String firstUid = result.episodeUids.first;
 
         // v49：手动选/拖入 m3u8 播放列表也是用户明示导入，整本只记 1 条 added 活动
@@ -451,8 +453,9 @@ class _VideoImportDialogState extends State<VideoImportDialog>
   /// 对齐 EpubImporter 的无回调去重 UX，保证不写入重复主键。
   Future<String> _uniqueBookUid(String base) async {
     final List<VideoBookRow> existing = await widget.repo.listAll();
-    final Set<String> keys =
-        existing.map((VideoBookRow r) => r.bookUid).toSet();
+    final Set<String> keys = existing
+        .map((VideoBookRow r) => r.bookUid)
+        .toSet();
     return uniqueVideoBookUid(base, keys);
   }
 
@@ -482,10 +485,13 @@ class _VideoImportDialogState extends State<VideoImportDialog>
           List<AudioCue>? cues;
           if (subtitlePath != null) {
             // 选了外挂字幕：先解析 cue；封面文件只在其余输入已就绪后才发布。
-            format =
-                p.extension(subtitlePath).replaceFirst('.', '').toLowerCase();
-            final String content =
-                await readTextWithEncoding(File(subtitlePath));
+            format = p
+                .extension(subtitlePath)
+                .replaceFirst('.', '')
+                .toLowerCase();
+            final String content = await readTextWithEncoding(
+              File(subtitlePath),
+            );
             cues = parseSubtitleCues(
               content: content,
               format: format,
@@ -495,40 +501,41 @@ class _VideoImportDialogState extends State<VideoImportDialog>
 
           final CoverMetaStore? coverMetaStore =
               await _admitAutoFrameCoverWrite(
-            allowAutoCover: allowAutoCover,
-            bookUid: bookUid,
-          );
+                allowAutoCover: allowAutoCover,
+                bookUid: bookUid,
+              );
           // 抽一帧做书架封面（桌面 ffmpeg；移动端无 ffmpeg 时留空占位）。
           final String? coverPath = coverMetaStore == null
               ? null
-              : await extractVideoCover(
-                  videoPath: videoPath,
-                  bookUid: bookUid,
-                );
+              : await extractVideoCover(videoPath: videoPath, bookUid: bookUid);
 
           if (subtitlePath != null) {
-            await widget.repo.saveVideoBook(VideoBooksCompanion(
-              bookUid: Value(bookUid),
-              title: Value(p.basenameWithoutExtension(videoPath)),
-              videoPath: Value(videoPath),
-              subtitleSource: Value(subtitlePath),
-              subtitleFormat: Value(format!),
-              coverPath: Value<String?>(coverPath),
-              importedAt: Value(DateTime.now().millisecondsSinceEpoch),
-            ));
+            await widget.repo.saveVideoBook(
+              VideoBooksCompanion(
+                bookUid: Value(bookUid),
+                title: Value(p.basenameWithoutExtension(videoPath)),
+                videoPath: Value(videoPath),
+                subtitleSource: Value(subtitlePath),
+                subtitleFormat: Value(format!),
+                coverPath: Value<String?>(coverPath),
+                importedAt: Value(DateTime.now().millisecondsSinceEpoch),
+              ),
+            );
           } else {
             // 未选外挂字幕：标记用内嵌默认轨（track 0），不写 cue——字幕靠 libmpv
             // 画面渲染，cue 级功能（高亮/句导航）无数据（Phase 0 已知降级）。
-            await widget.repo.saveVideoBook(VideoBooksCompanion(
-              bookUid: Value(bookUid),
-              title: Value(p.basenameWithoutExtension(videoPath)),
-              videoPath: Value(videoPath),
-              subtitleSource: const Value<String?>(null),
-              subtitleFormat: const Value<String?>(null),
-              embeddedSubtitleTrack: const Value<int?>(0),
-              coverPath: Value<String?>(coverPath),
-              importedAt: Value(DateTime.now().millisecondsSinceEpoch),
-            ));
+            await widget.repo.saveVideoBook(
+              VideoBooksCompanion(
+                bookUid: Value(bookUid),
+                title: Value(p.basenameWithoutExtension(videoPath)),
+                videoPath: Value(videoPath),
+                subtitleSource: const Value<String?>(null),
+                subtitleFormat: const Value<String?>(null),
+                embeddedSubtitleTrack: const Value<int?>(0),
+                coverPath: Value<String?>(coverPath),
+                importedAt: Value(DateTime.now().millisecondsSinceEpoch),
+              ),
+            );
           }
           await _commitAutoFrameCoverWrite(
             store: coverMetaStore,
@@ -577,10 +584,11 @@ class _VideoImportDialogState extends State<VideoImportDialog>
         late String title;
         await _runVideoImportCoverMutation((bool allowAutoCover) async {
           bookUid = await _uniqueBookUid(streamVideoBookUid(url));
-          final String subtitleUrlRaw =
-              _streamSubtitleUrlController.text.trim();
-          final String? subtitleUrl =
-              isPlayableStreamUrl(subtitleUrlRaw) ? subtitleUrlRaw : null;
+          final String subtitleUrlRaw = _streamSubtitleUrlController.text
+              .trim();
+          final String? subtitleUrl = isPlayableStreamUrl(subtitleUrlRaw)
+              ? subtitleUrlRaw
+              : null;
           final String referer = _streamRefererController.text.trim();
           final String userAgent = _streamUserAgentController.text.trim();
           final StreamVideoSpec spec = StreamVideoSpec(
@@ -599,9 +607,9 @@ class _VideoImportDialogState extends State<VideoImportDialog>
           title = _streamTitleForUrl(url);
           final CoverMetaStore? coverMetaStore =
               await _admitAutoFrameCoverWrite(
-            allowAutoCover: allowAutoCover,
-            bookUid: bookUid,
-          );
+                allowAutoCover: allowAutoCover,
+                bookUid: bookUid,
+              );
           String? coverPath;
           switch (streamImportCoverStrategy(url)) {
             case StreamImportCoverStrategy.youtubeThumbnail:
@@ -620,18 +628,22 @@ class _VideoImportDialogState extends State<VideoImportDialog>
               // （桌面 CLI / 移动端 ffmpeg-kit，均支持 http 输入，经 _isRemoteFfmpegInput 放行）。
               // 抽不到（无 ffmpeg / 流不可 seek）→ null，书架占位（与本地视频无 ffmpeg 一致，不中止）。
               if (coverMetaStore != null) {
-                coverPath =
-                    await extractVideoCover(videoPath: url, bookUid: bookUid);
+                coverPath = await extractVideoCover(
+                  videoPath: url,
+                  bookUid: bookUid,
+                );
               }
           }
-          await widget.repo.saveVideoBook(VideoBooksCompanion(
-            bookUid: Value(bookUid),
-            title: Value(title),
-            videoPath: Value(url),
-            streamSpecJson: Value<String?>(spec.toStorageJson()),
-            coverPath: Value<String?>(coverPath),
-            importedAt: Value(DateTime.now().millisecondsSinceEpoch),
-          ));
+          await widget.repo.saveVideoBook(
+            VideoBooksCompanion(
+              bookUid: Value(bookUid),
+              title: Value(title),
+              videoPath: Value(url),
+              streamSpecJson: Value<String?>(spec.toStorageJson()),
+              coverPath: Value<String?>(coverPath),
+              importedAt: Value(DateTime.now().millisecondsSinceEpoch),
+            ),
+          );
           await _commitAutoFrameCoverWrite(
             store: coverMetaStore,
             bookUid: bookUid,
@@ -639,8 +651,10 @@ class _VideoImportDialogState extends State<VideoImportDialog>
           );
         });
         // v49：用户明示导入流媒体成功 → 记一条 added 活动事件（title=解析出的流标题）。
-        await widget.repo
-            .recordVideoImportActivity(bookUid: bookUid, title: title);
+        await widget.repo.recordVideoImportActivity(
+          bookUid: bookUid,
+          title: title,
+        );
         if (!mounted) return;
         debugPrint(
           '[fushi-drop] [video-import] importedStream bookUid=$bookUid '
@@ -672,8 +686,10 @@ class _VideoImportDialogState extends State<VideoImportDialog>
       // 自动封面路径。正常下载路径由调用方的 operation -> mutation 临界区覆盖。
       if (!downloadCover) return null;
       final Directory coverDir = await AppPaths.videoCoversDirectory();
-      final String outputPath =
-          p.join(coverDir.path, videoCoverFileName(bookUid));
+      final String outputPath = p.join(
+        coverDir.path,
+        videoCoverFileName(bookUid),
+      );
       String? cover = await downloadVideoCoverToPath(
         coverUrl: meta.thumbnailUrl,
         outputPath: outputPath,
@@ -784,8 +800,8 @@ class _VideoImportDialogState extends State<VideoImportDialog>
                     ? t.web_video_import_hint
                     : t.web_video_platform_unsupported,
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: Theme.of(context).colorScheme.primary,
-                    ),
+                  color: Theme.of(context).colorScheme.primary,
+                ),
               ),
             ],
             const SizedBox(height: 8),
@@ -807,11 +823,15 @@ class _VideoImportDialogState extends State<VideoImportDialog>
               child: TextButton.icon(
                 onPressed: importing
                     ? null
-                    : () => setState(() =>
-                        _streamAdvancedExpanded = !_streamAdvancedExpanded),
-                icon: Icon(_streamAdvancedExpanded
-                    ? Icons.expand_less
-                    : Icons.expand_more),
+                    : () => setState(
+                        () =>
+                            _streamAdvancedExpanded = !_streamAdvancedExpanded,
+                      ),
+                icon: Icon(
+                  _streamAdvancedExpanded
+                      ? Icons.expand_less
+                      : Icons.expand_more,
+                ),
                 label: Text(t.video_import_stream_advanced),
               ),
             ),

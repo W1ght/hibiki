@@ -9,8 +9,7 @@ import 'package:fushi/src/startup/media_handle_registry.dart';
 import 'package:fushi/src/media/video/video_lua_script_manager.dart';
 import 'package:fushi/src/media/video/video_hdr_output.dart';
 import 'package:fushi/src/media/video/video_mpv_config.dart';
-import 'package:fushi/src/models/preferences_repository.dart'
-    show VideoFitMode;
+import 'package:fushi/src/models/preferences_repository.dart' show VideoFitMode;
 import 'package:fushi/src/media/video/video_playback_source.dart';
 import 'package:fushi/src/media/video/video_shader_manager.dart';
 import 'package:fushi/src/media/video/video_subtitle_source.dart';
@@ -50,7 +49,7 @@ class PrevSeekDecision {
 
   /// 回退（或前进）[deltaMs] 毫秒的相对时间 seek（TODO-085 退化分支恒为负）。
   const PrevSeekDecision.timeSeek(int deltaMs)
-      : this._(timeSeekDeltaMs: deltaMs);
+    : this._(timeSeekDeltaMs: deltaMs);
 
   /// 无可后退的上一句：不动（保持原 no-op 语义）。
   static const PrevSeekDecision none = PrevSeekDecision._();
@@ -139,11 +138,13 @@ List<VideoChapter> parseChapterList({
   for (int i = 0; i < total; i++) {
     final double seconds = double.tryParse(timeAt(i).trim()) ?? 0.0;
     final int ms = (seconds * 1000).round();
-    chapters.add(VideoChapter(
-      index: i,
-      title: titleAt(i),
-      start: Duration(milliseconds: ms < 0 ? 0 : ms),
-    ));
+    chapters.add(
+      VideoChapter(
+        index: i,
+        title: titleAt(i),
+        start: Duration(milliseconds: ms < 0 ? 0 : ms),
+      ),
+    );
   }
   return chapters;
 }
@@ -530,9 +531,9 @@ class VideoPlayerController extends ChangeNotifier
   /// TODO-1312：当前主字幕活动集（重叠 cue 全渲染用）。overlay 据此把同一时刻区间覆盖
   /// 播放位置的所有 cue 竖排堆叠渲染；单条时与 [currentCue] 等价（退化成旧的一个字幕盒）。
   List<AudioCue> get activeCues => <AudioCue>[
-        for (final int i in _activeCueIndices)
-          if (i >= 0 && i < _cues.length) _cues[i],
-      ];
+    for (final int i in _activeCueIndices)
+      if (i >= 0 && i < _cues.length) _cues[i],
+  ];
 
   /// TODO-1312：副字幕全量 cue（诊断 / 测试用）；空 = 无副字幕。
   List<AudioCue> get secondaryCues => _secondaryCues;
@@ -558,9 +559,9 @@ class VideoPlayerController extends ChangeNotifier
 
   /// TODO-1312：副字幕当前活动集（overlay 副层渲染用，可查词）。
   List<AudioCue> get secondaryActiveCues => <AudioCue>[
-        for (final int i in _activeSecondaryCueIndices)
-          if (i >= 0 && i < _secondaryCues.length) _secondaryCues[i],
-      ];
+    for (final int i in _activeSecondaryCueIndices)
+      if (i >= 0 && i < _secondaryCues.length) _secondaryCues[i],
+  ];
 
   VideoController? get videoController => _videoController;
 
@@ -993,8 +994,9 @@ class VideoPlayerController extends ChangeNotifier
       }
     }
 
-    final StreamSubscription<Object?> sub =
-        changes.listen((Object? _) => checkReady());
+    final StreamSubscription<Object?> sub = changes.listen(
+      (Object? _) => checkReady(),
+    );
     checkReady(); // 复读闭合 check-then-subscribe 竞态。
     try {
       return await ready.future.timeout(timeout);
@@ -1156,10 +1158,12 @@ class VideoPlayerController extends ChangeNotifier
     _delayMs = delayMs.clamp(-600000, 600000);
     final Player? player = _player;
     if (player == null) return;
-    unawaited(applySubtitleMpvPropertiesToPlayer(
-      player,
-      buildSubtitleDelayProperty(_subtitleDelayMpvMs),
-    ));
+    unawaited(
+      applySubtitleMpvPropertiesToPlayer(
+        player,
+        buildSubtitleDelayProperty(_subtitleDelayMpvMs),
+      ),
+    );
     _resyncTextSubtitleAfterDelayChange(positionMs);
   }
 
@@ -1275,8 +1279,9 @@ class VideoPlayerController extends ChangeNotifier
   /// unknown，门控按"可能可用"处理。
   Future<void> _probeLuaCapability() async {
     if (luaCapability != MpvLuaCapability.unknown) return;
-    luaCapability =
-        parseMpvLuaCapability(await _getMpvProperty('mpv-configuration'));
+    luaCapability = parseMpvLuaCapability(
+      await _getMpvProperty('mpv-configuration'),
+    );
   }
 
   /// BUG-2032：Player 置 null 的每一处都必须走这里——去重集、状态表、日志订阅三者
@@ -1348,7 +1353,7 @@ class VideoPlayerController extends ChangeNotifier
     // 无分离音轨（本地文件 / muxed 自带音轨）。
     String? externalAudioTrackUrl,
     void Function(DefaultEmbeddedSubtitleLoadResult result)?
-        onEmbeddedSubtitleAutoLoad,
+    onEmbeddedSubtitleAutoLoad,
   }) async {
     assert(
       (videoFile == null) != (mediaUri == null),
@@ -1449,10 +1454,12 @@ class VideoPlayerController extends ChangeNotifier
       final String? mpvLogFile =
           Platform.environment['FUSHI_TEST_MPV_LOG_FILE'];
       if (mpvLogFile != null && mpvLogFile.isNotEmpty) {
-        unawaited(_setMpvProperties(<String, String>{
-          'log-file': mpvLogFile,
-          'msg-level': 'all=v',
-        }));
+        unawaited(
+          _setMpvProperties(<String, String>{
+            'log-file': mpvLogFile,
+            'msg-level': 'all=v',
+          }),
+        );
       }
       // TODO-1212：登记文件句柄释放（幂等，只在首次建 Player 时登记一次）。
       // mediaPath 每次现算：换集后这个 Player 握的是另一个文件，登记时快照会让
@@ -1510,8 +1517,11 @@ class VideoPlayerController extends ChangeNotifier
     // 分支已把 manualPrevious/autoAdvance 归 0，不会给「本就该从头」的入口设 start）；
     // near-end 判定要等 open 后真实 duration，在下面复核并按需拉回 0。
     final int requestedStartMs = initialPositionMs < 0 ? 0 : initialPositionMs;
-    final int preloadStartMs =
-        resolveEpisodeStart(startIntent, requestedStartMs, null);
+    final int preloadStartMs = resolveEpisodeStart(
+      startIntent,
+      requestedStartMs,
+      null,
+    );
     final bool startArmed = await applyMpvStartPosition(player, preloadStartMs);
     if (!_isCurrentLoad(player, loadToken)) return; // start 下发后换片/销毁。
 
@@ -1703,12 +1713,14 @@ class VideoPlayerController extends ChangeNotifier
       // 无外挂字幕且无 cue 时，桌面端后台抽内嵌文本字幕轨成可点击 cue（不阻塞首帧）。
       // TODO-818：用户显式关闭字幕（subtitleExplicitlyOff）时不触发此自动抽取，否则
       // 关了字幕重启又被内嵌轨自动选上。
-      unawaited(_loadEmbeddedSubtitleIfNeeded(
-        player: player,
-        loadToken: loadToken,
-        bookUid: bookUid,
-        onResult: onEmbeddedSubtitleAutoLoad,
-      ));
+      unawaited(
+        _loadEmbeddedSubtitleIfNeeded(
+          player: player,
+          loadToken: loadToken,
+          bookUid: bookUid,
+          onResult: onEmbeddedSubtitleAutoLoad,
+        ),
+      );
     }
 
     // 内封章节（TODO-424 / TODO-521）：等 duration 首次就绪后再读 libmpv
@@ -1729,8 +1741,9 @@ class VideoPlayerController extends ChangeNotifier
     final DateTime now = DateTime.now();
     final DateTime? last = _lastFlickerSampleAt;
     if (last != null && now.difference(last).inMilliseconds < 1000) return;
-    final int windowMs =
-        last == null ? 1000 : now.difference(last).inMilliseconds;
+    final int windowMs = last == null
+        ? 1000
+        : now.difference(last).inMilliseconds;
     _lastFlickerSampleAt = now;
     _flickerSampleInFlight = true;
     unawaited(_sampleBlackFlicker(player, loadToken, windowMs));
@@ -1753,8 +1766,9 @@ class VideoPlayerController extends ChangeNotifier
       // 缓存；查不到时 fail-open（视为活跃，仍受 Windows-gate + 可关闭提示兜底）。
       if (_flickerHwdecActive == null) {
         try {
-          final String hwdec =
-              (await native.getProperty('hwdec-current')).toString();
+          final String hwdec = (await native.getProperty(
+            'hwdec-current',
+          )).toString();
           if (!_isCurrentLoad(player, loadToken)) return;
           final String v = hwdec.trim().toLowerCase();
           _flickerHwdecActive = v.isNotEmpty && v != 'no' && v != 'null';
@@ -1772,8 +1786,9 @@ class VideoPlayerController extends ChangeNotifier
       int delayed = 0;
       int dropped = 0;
       try {
-        delayed =
-            readCounter(await native.getProperty('vo-delayed-frame-count'));
+        delayed = readCounter(
+          await native.getProperty('vo-delayed-frame-count'),
+        );
       } catch (_) {
         // 属性不可读：按 0（不致命）。
       }
@@ -1785,11 +1800,13 @@ class VideoPlayerController extends ChangeNotifier
       }
       if (!_isCurrentLoad(player, loadToken)) return;
 
-      final bool fired = _blackFlickerDetector.addSample(VideoFlickerSample(
-        cumulativeLateFrames: delayed + dropped,
-        windowMs: windowMs,
-        playing: isPlaying,
-      ));
+      final bool fired = _blackFlickerDetector.addSample(
+        VideoFlickerSample(
+          cumulativeLateFrames: delayed + dropped,
+          windowMs: windowMs,
+          playing: isPlaying,
+        ),
+      );
       if (fired) {
         onSuspectedBlackFlicker?.call();
       }
@@ -1881,17 +1898,18 @@ class VideoPlayerController extends ChangeNotifier
       // player）期间用 player identity + loadToken 双判据丢弃旧结果。
       final DefaultEmbeddedSubtitleLoadResult result =
           await loadDefaultTextEmbeddedSubtitleCuesWithReadinessRetry(
-        videoPath: videoPath,
-        bookUid: bookUid,
-        waitForReady: () => _waitUntilSubtitleTracksReady(player),
-        isStillCurrent: () => _isCurrentLoad(player, loadToken),
-      );
+            videoPath: videoPath,
+            bookUid: bookUid,
+            waitForReady: () => _waitUntilSubtitleTracksReady(player),
+            isStillCurrent: () => _isCurrentLoad(player, loadToken),
+          );
       if (!_isCurrentLoad(player, loadToken)) return;
 
       switch (result.status) {
         case DefaultEmbeddedSubtitleLoadStatus.loaded:
           debugPrint(
-              '[video-embedded-sub] extracted ${result.cues.length} cues');
+            '[video-embedded-sub] extracted ${result.cues.length} cues',
+          );
           setCues(result.cues);
           onResult?.call(result);
           return;
@@ -1953,8 +1971,10 @@ class VideoPlayerController extends ChangeNotifier
   void updateCueForPosition(int posMs) {
     // 普通 seek 在途：把 tick 读到的滞后旧 position 调和成跳转目标位置（见
     // [_plainSeekTargetMs] / [_reconcileSeekInFlightPosition]），避免旧字幕被反复确认。
-    _syncCueForPosition(_reconcileSeekInFlightPosition(posMs),
-        persistPosition: true);
+    _syncCueForPosition(
+      _reconcileSeekInFlightPosition(posMs),
+      persistPosition: true,
+    );
   }
 
   void _syncCueForPosition(int posMs, {required bool persistPosition}) {
@@ -1971,11 +1991,14 @@ class VideoPlayerController extends ChangeNotifier
         ? const <int>[]
         : JsonAlignmentParser.findActiveCueIndices(
             cues: _secondaryCues,
-            positionMs:
-                effectiveSubtitlePositionMs(posMs, effectiveSecondaryDelayMs),
+            positionMs: effectiveSubtitlePositionMs(
+              posMs,
+              effectiveSecondaryDelayMs,
+            ),
             // 渲染集半开区间：相邻对白边界不产生「幻影重叠」→ 堆叠不弹跳（见
             // [JsonAlignmentParser.findActiveCueIndices] 的 endInclusive 说明）。
-            endInclusive: false);
+            endInclusive: false,
+          );
     bool changed = !_intListEquals(nextSecondary, _activeSecondaryCueIndices);
     if (changed) _activeSecondaryCueIndices = nextSecondary;
 
@@ -2037,7 +2060,8 @@ class VideoPlayerController extends ChangeNotifier
       _currentCueIndex = idx;
       _currentCue = _cues[idx];
       debugPrint(
-          '[video-cue] idx=$idx pos=${posMs}ms text="${_cues[idx].text}"');
+        '[video-cue] idx=$idx pos=${posMs}ms text="${_cues[idx].text}"',
+      );
       changed = true;
     }
     if (changed) notifyListeners();
@@ -2496,15 +2520,19 @@ class VideoPlayerController extends ChangeNotifier
       gamma: params.gamma,
     );
     if (hdr == _hdrSourceIsHdr && hdrHostActive.value == hdr) return;
-    debugPrint('[hdr-host] params primaries=${params.primaries} '
-        'gamma=${params.gamma} hdr=$hdr');
+    debugPrint(
+      '[hdr-host] params primaries=${params.primaries} '
+      'gamma=${params.gamma} hdr=$hdr',
+    );
     _hdrSourceIsHdr = hdr;
     unawaited(_evaluateHdrOutput());
   }
 
   /// 排队一次重判（串行，见 [_hdrEvalChain]）。
   Future<void> _evaluateHdrOutput() {
-    final Future<void> next = _hdrEvalChain.then((_) => _evaluateHdrOutputNow());
+    final Future<void> next = _hdrEvalChain.then(
+      (_) => _evaluateHdrOutputNow(),
+    );
     _hdrEvalChain = next.catchError((Object _) {});
     return next;
   }
@@ -2524,9 +2552,11 @@ class VideoPlayerController extends ChangeNotifier
       displayHdr: displayHdr,
       sourceHdr: _hdrSourceIsHdr,
     );
-    debugPrint('[hdr-host] eval mode=${_hdrOutputMode.name} '
-        'display=$displayHdr source=$_hdrSourceIsHdr want=$want '
-        'active=${hdrHostActive.value}');
+    debugPrint(
+      '[hdr-host] eval mode=${_hdrOutputMode.name} '
+      'display=$displayHdr source=$_hdrSourceIsHdr want=$want '
+      'active=${hdrHostActive.value}',
+    );
     if (want == hdrHostActive.value) return;
     if (want) {
       await _enterHdrHost(player);
@@ -2559,8 +2589,10 @@ class VideoPlayerController extends ChangeNotifier
     hdrHostActive.value = true;
     hdrHostActiveGlobal.value = true;
     notifyListeners();
-    debugPrint('[hdr-host] enter hwnd=$hwnd rect=$rect fit=$_hdrHostFitMode '
-        'videoController=${_videoController != null}');
+    debugPrint(
+      '[hdr-host] enter hwnd=$hwnd rect=$rect fit=$_hdrHostFitMode '
+      'videoController=${_videoController != null}',
+    );
   }
 
   Future<void> _exitHdrHost(Player player) async {
@@ -2665,11 +2697,13 @@ class VideoPlayerController extends ChangeNotifier
       if (!_isCurrentLoad(player, loadToken)) return; // 逐条读取期间换片：丢弃。
       final double seconds = double.tryParse(time.trim()) ?? 0.0;
       final int ms = (seconds * 1000).round();
-      chapters.add(VideoChapter(
-        index: i,
-        title: title,
-        start: Duration(milliseconds: ms < 0 ? 0 : ms),
-      ));
+      chapters.add(
+        VideoChapter(
+          index: i,
+          title: title,
+          start: Duration(milliseconds: ms < 0 ? 0 : ms),
+        ),
+      );
     }
     _chapters = chapters;
     notifyListeners();
@@ -2908,8 +2942,9 @@ class VideoPlayerController extends ChangeNotifier
     }
     // 进入静音：先快照当前可听音量，再压 0。
     final double live = _player?.state.volume ?? _lastVolume;
-    _volumeBeforeMute =
-        (live > 0 ? live : _lastVolume).clamp(0.0, 100.0).toDouble();
+    _volumeBeforeMute = (live > 0 ? live : _lastVolume)
+        .clamp(0.0, 100.0)
+        .toDouble();
     _muted = true;
     await _player?.setVolume(0.0);
     return 0.0;
@@ -2944,18 +2979,21 @@ class VideoPlayerController extends ChangeNotifier
     // 自清成 off-by-one 又复发。await 与同步置快照在单线程事件循环里对后续 tick 等价可见
     // （tick 不会插在 await 与置快照之间读到半截状态）。用 [_rawSeekMs] 而非 [seekMs]：后者
     // 会挂普通 seek 在途保护 + 权威同步，与本路径自带的 cue-snap 抑制重复且会引入闪烁。
-    await _rawSeekMs(cueSeekTargetMs(
-      cueStartMs: cue.startMs,
-      delayMs: _delayMs,
-      preRollMs: kCueSeekPreRollMs,
-      prevCueStartMs: _prevCueStartMsBefore(cue.startMs),
-    ));
+    await _rawSeekMs(
+      cueSeekTargetMs(
+        cueStartMs: cue.startMs,
+        delayMs: _delayMs,
+        preRollMs: kCueSeekPreRollMs,
+        prevCueStartMs: _prevCueStartMsBefore(cue.startMs),
+      ),
+    );
     _seekTargetCueIndex = targetIndex;
     // 充满在途 seek 宽限（TODO-565 复核退回的真机时序）：异步 seek 落地前 tick 会先读到
     // 旧 position，宽限让快照撑到落点，避免在途 stale tick 把快照提前清掉 → off-by-one。
     // 目标解析不到（cue 不在 _cues，_seekTargetCueIndex==null）时无需宽限，留 0。
-    _seekSnapGraceTicksLeft =
-        _seekTargetCueIndex == null ? 0 : _seekSnapGraceTicks;
+    _seekSnapGraceTicksLeft = _seekTargetCueIndex == null
+        ? 0
+        : _seekSnapGraceTicks;
   }
 
   /// 重播 [cue]：跳回句首并播放，**播到该句结尾自动暂停**（一次性）。
@@ -3246,8 +3284,10 @@ class VideoPlayerController extends ChangeNotifier
     }
     final int pos = positionMs ?? 0;
     // 句中（命中某句时间窗，含句首）：当前句 = hit，上一句 = hit-1，排除当前句。
-    final int hit =
-        JsonAlignmentParser.findCueIndex(cues: cues, positionMs: pos);
+    final int hit = JsonAlignmentParser.findCueIndex(
+      cues: cues,
+      positionMs: pos,
+    );
     if (hit >= 0) {
       return hit == 0 ? null : hit - 1; // 已在首句无上一句。
     }

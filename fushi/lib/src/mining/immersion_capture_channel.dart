@@ -16,8 +16,9 @@ import 'package:fushi_anki/fushi_anki.dart' show AnkiMiningSource;
 /// 第二层B（TODO-1000）：驱动后台专用软解 WebView2 实例抓 Netflix 片段音画。仅 Windows。
 /// native 缺失（未构建 / 非 Windows）时 [capture] 返回 error，seam 降级为 2A 截图卡。
 abstract final class ImmersionCaptureChannel {
-  static const MethodChannel _channel =
-      MethodChannel('app.fushi.reader/immersion_capture');
+  static const MethodChannel _channel = MethodChannel(
+    'app.fushi.reader/immersion_capture',
+  );
 
   static Future<ImmersionCaptureResult> capture({
     required String netflixVideoId,
@@ -27,23 +28,21 @@ abstract final class ImmersionCaptureChannel {
     int width = 320,
   }) async {
     try {
-      final Map<Object?, Object?>? r =
-          await _channel.invokeMethod<Map<Object?, Object?>>(
-        'capture',
-        <String, Object?>{
-          'videoId': netflixVideoId,
-          'startMs': clipStartMs,
-          'endMs': clipEndMs,
-          'fps': fps,
-          'width': width,
-        },
-      );
+      final Map<Object?, Object?>? r = await _channel
+          .invokeMethod<Map<Object?, Object?>>('capture', <String, Object?>{
+            'videoId': netflixVideoId,
+            'startMs': clipStartMs,
+            'endMs': clipEndMs,
+            'fps': fps,
+            'width': width,
+          });
       return ImmersionCaptureResult.fromMap(r ?? const <Object?, Object?>{});
     } on PlatformException catch (e) {
       return ImmersionCaptureResult(error: e.message ?? 'capture failed');
     } on MissingPluginException {
       return const ImmersionCaptureResult(
-          error: 'immersion_capture unavailable');
+        error: 'immersion_capture unavailable',
+      );
     }
   }
 }
@@ -59,14 +58,15 @@ typedef ClipStillTarget = ({int offsetMs, bool exact});
 ///
 /// 与 `immersion_mining_engine.dart` 的 `FrameExtractor` 分开声明，因为这条路必须显式下发
 /// [decodeFromStart]：录制片段是无 Cues 索引的 MediaRecorder webm，输入定位取不准帧。
-typedef ClipFrameExtractor = Future<String?> Function({
-  required String inputPath,
-  required String outputPath,
-  double atSeconds,
-  bool decodeFromStart,
-  FfmpegFailureReporter? onFailure,
-  String? tlsPinSha256,
-});
+typedef ClipFrameExtractor =
+    Future<String?> Function({
+      required String inputPath,
+      required String outputPath,
+      double atSeconds,
+      bool decodeFromStart,
+      FfmpegFailureReporter? onFailure,
+      String? tlsPinSha256,
+    });
 
 /// 纯函数：把用户的图片模式偏好 + 请求里的三个**视频时间**换算成片段内偏移。可单测。
 ///
@@ -183,8 +183,9 @@ ImmersionMiningRequest buildImmersionRequest(
   required bool audioExpected,
 }) {
   final bool useCapture = cap.ok;
-  final Uint8List? cover =
-      useCapture ? (cap.gifBytes ?? p.screenshotBytes) : p.screenshotBytes;
+  final Uint8List? cover = useCapture
+      ? (cap.gifBytes ?? p.screenshotBytes)
+      : p.screenshotBytes;
   final bool coverFromCapture = useCapture && cap.gifBytes != null;
   final bool coverIsAnimated = coverFromCapture && !cap.coverIsStill;
   // 媒体临时文件名的前缀 = **这份字节哪来的**（[ImmersionMiningEngine] 文件头把
@@ -201,8 +202,8 @@ ImmersionMiningRequest buildImmersionRequest(
   final String coverName = coverIsAnimated
       ? '${origin}_clip.${cap.animatedFormat.fileExtension}'
       : coverFromCapture
-          ? '${origin}_frame.${cap.stillFormat.fileExtension}'
-          : '${origin}_shot.jpg';
+      ? '${origin}_frame.${cap.stillFormat.fileExtension}'
+      : '${origin}_shot.jpg';
   final Uint8List? audio = useCapture ? cap.audioBytes : null;
   return ImmersionMiningRequest(
     fields: p.fields,
@@ -320,13 +321,16 @@ Future<ImmersionCaptureResult> transcodeClipToCapture(
     // 封面字节走同一个通道（[ImmersionCaptureResult.gifBytes]），是不是静态帧由
     // coverIsStill 说明——不为静态帧另开一条并行字段/分支。
     final String? coverPath = framePath ?? animated?.path;
-    final Uint8List? cover =
-        coverPath != null ? await File(coverPath).readAsBytes() : null;
-    final Uint8List? audio =
-        audioPath != null ? await File(audioPath).readAsBytes() : null;
+    final Uint8List? cover = coverPath != null
+        ? await File(coverPath).readAsBytes()
+        : null;
+    final Uint8List? audio = audioPath != null
+        ? await File(audioPath).readAsBytes()
+        : null;
     if (cover == null && audio == null) {
       return const ImmersionCaptureResult(
-          error: 'clip transcode produced nothing');
+        error: 'clip transcode produced nothing',
+      );
     }
     return ImmersionCaptureResult(
       gifBytes: cover,

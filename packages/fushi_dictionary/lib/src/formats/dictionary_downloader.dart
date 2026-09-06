@@ -248,15 +248,17 @@ class DictionaryDownloader {
     return RecommendedDictionary(
       name: mono
           ? 'Wiktionary ${srcLang.toUpperCase()}-${srcLang.toUpperCase()} '
-              '($srcName)'
+                '($srcName)'
           : 'Wiktionary ${srcLang.toUpperCase()}-${tgtLang.toUpperCase()} '
-              '($tgtName)',
+                '($tgtName)',
       url: '$_wtyBase/$srcLang/$tgtLang/wty-$srcLang-$tgtLang.zip',
-      description:
-          mono ? 'Wiktionary $srcName' : 'Wiktionary $srcName–$tgtName',
+      description: mono
+          ? 'Wiktionary $srcName'
+          : 'Wiktionary $srcName–$tgtName',
       matchPrefix: 'wty-$srcLang-$tgtLang',
-      category:
-          mono ? DictionaryCategory.monolingual : DictionaryCategory.bilingual,
+      category: mono
+          ? DictionaryCategory.monolingual
+          : DictionaryCategory.bilingual,
       sizeEstimate: '~10 MB',
       langCode: tgtLang,
     );
@@ -319,8 +321,9 @@ class DictionaryDownloader {
   ) {
     final Map<DictionaryCategory, List<RecommendedDictionary>> map = {};
     for (final DictionaryCategory cat in DictionaryCategory.values) {
-      final List<RecommendedDictionary> catItems =
-          items.where((d) => d.category == cat).toList();
+      final List<RecommendedDictionary> catItems = items
+          .where((d) => d.category == cat)
+          .toList();
       if (catItems.isNotEmpty) map[cat] = catItems;
     }
     return map;
@@ -831,10 +834,7 @@ class DictionaryDownloader {
         url,
         destPath,
         cancelToken: cancelToken,
-        options: Options(
-          followRedirects: true,
-          maxRedirects: 5,
-        ),
+        options: Options(followRedirects: true, maxRedirects: 5),
         onReceiveProgress: (int received, int total) {
           if (total > 0) {
             progressNotifier.value = received / total;

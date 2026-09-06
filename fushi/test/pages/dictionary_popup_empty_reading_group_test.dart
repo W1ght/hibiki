@@ -40,9 +40,10 @@ void main() {
 
   List<Map<String, dynamic>> groups(List<FushiLookupResult> results) {
     final json = buildPopupJsonFromLookup(
-        results: results,
-        maximumTerms: 100,
-        hiddenDictionaries: const <String>{});
+      results: results,
+      maximumTerms: 100,
+      hiddenDictionaries: const <String>{},
+    );
     return (jsonDecode(json) as List).cast<Map<String, dynamic>>();
   }
 
@@ -114,10 +115,16 @@ void main() {
       expect(result.length, 3, reason: '两个真读音各一组，空读音自成一组，互不合并');
       final tsurai = result.firstWhere((g) => g['reading'] == 'つらい');
       final karai = result.firstWhere((g) => g['reading'] == 'からい');
-      expect((tsurai['glossaries'] as List).length, 1,
-          reason: 'つらい 组不能被空读音条目污染');
-      expect((karai['glossaries'] as List).length, 1,
-          reason: 'からい 组不能被空读音条目污染');
+      expect(
+        (tsurai['glossaries'] as List).length,
+        1,
+        reason: 'つらい 组不能被空读音条目污染',
+      );
+      expect(
+        (karai['glossaries'] as List).length,
+        1,
+        reason: 'からい 组不能被空读音条目污染',
+      );
     });
   });
 }

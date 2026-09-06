@@ -25,24 +25,24 @@ class _FakeCandidate extends VideoSubtitleCandidate {
 }
 
 List<VideoSubtitleCandidate> _seasonPack() => <VideoSubtitleCandidate>[
-      for (int ep = 1; ep <= 3; ep++)
-        _FakeCandidate(
-          remoteId: '9:[SubsPlease] Show - 0$ep.ass',
-          fileName: '[SubsPlease] Show - 0$ep.ass',
-          episode: ep,
-          fileSize: 30000 + ep,
-          collectionId: '9',
-          collectionLabel: 'Show (2026)',
-        ),
-      _FakeCandidate(
-        remoteId: '9:[MoeSubs] Show - 01.srt',
-        fileName: '[MoeSubs] Show - 01.srt',
-        language: 'zh',
-        episode: 1,
-        collectionId: '9',
-        collectionLabel: 'Show (2026)',
-      ),
-    ];
+  for (int ep = 1; ep <= 3; ep++)
+    _FakeCandidate(
+      remoteId: '9:[SubsPlease] Show - 0$ep.ass',
+      fileName: '[SubsPlease] Show - 0$ep.ass',
+      episode: ep,
+      fileSize: 30000 + ep,
+      collectionId: '9',
+      collectionLabel: 'Show (2026)',
+    ),
+  _FakeCandidate(
+    remoteId: '9:[MoeSubs] Show - 01.srt',
+    fileName: '[MoeSubs] Show - 01.srt',
+    language: 'zh',
+    episode: 1,
+    collectionId: '9',
+    collectionLabel: 'Show (2026)',
+  ),
+];
 
 void main() {
   Future<void> pumpList(
@@ -78,7 +78,8 @@ void main() {
     final List<VideoSubtitleCandidate> discrete = <VideoSubtitleCandidate>[
       for (final int ep in <int>[1, 2, 4, 16, 17])
         _FakeCandidate(
-          remoteId: '9:[SubsPlease] Show - ${ep.toString().padLeft(2, '0')}.ass',
+          remoteId:
+              '9:[SubsPlease] Show - ${ep.toString().padLeft(2, '0')}.ass',
           fileName: '[SubsPlease] Show - ${ep.toString().padLeft(2, '0')}.ass',
           episode: ep,
           fileSize: 30000 + ep,
@@ -86,17 +87,22 @@ void main() {
           collectionLabel: 'Show (2026)',
         ),
     ];
-    final List<SubtitleVersionGroup> groups =
-        buildSubtitleVersionGroups(discrete);
+    final List<SubtitleVersionGroup> groups = buildSubtitleVersionGroups(
+      discrete,
+    );
     await pumpList(tester, groups: groups, onPick: (_) {});
     expect(find.textContaining('EP1–EP2, EP4, EP16–EP17'), findsOneWidget);
-    expect(find.textContaining('(EP1–EP17)'), findsNothing,
-        reason: 'min/max 伪装成连续范围正是 BUG-1986 本体');
+    expect(
+      find.textContaining('(EP1–EP17)'),
+      findsNothing,
+      reason: 'min/max 伪装成连续范围正是 BUG-1986 本体',
+    );
   });
 
   testWidgets('一版本一卡：ass 与 srt 两组各渲染一张卡', (WidgetTester tester) async {
-    final List<SubtitleVersionGroup> groups =
-        buildSubtitleVersionGroups(_seasonPack());
+    final List<SubtitleVersionGroup> groups = buildSubtitleVersionGroups(
+      _seasonPack(),
+    );
     await pumpList(tester, groups: groups, onPick: (_) {});
     expect(find.byType(FushiCard), findsNWidgets(2));
     expect(find.textContaining('Show (2026) › ASS'), findsOneWidget);
@@ -104,8 +110,9 @@ void main() {
   });
 
   testWidgets('指定集数点卡 → 直接选中该集文件', (WidgetTester tester) async {
-    final List<SubtitleVersionGroup> groups =
-        buildSubtitleVersionGroups(_seasonPack());
+    final List<SubtitleVersionGroup> groups = buildSubtitleVersionGroups(
+      _seasonPack(),
+    );
     VideoSubtitleCandidate? picked;
     await pumpList(
       tester,
@@ -113,8 +120,9 @@ void main() {
       requestedEpisode: 2,
       onPick: (VideoSubtitleCandidate candidate) => picked = candidate,
     );
-    final SubtitleVersionGroup assGroup = groups
-        .firstWhere((SubtitleVersionGroup group) => group.container == 'ass');
+    final SubtitleVersionGroup assGroup = groups.firstWhere(
+      (SubtitleVersionGroup group) => group.container == 'ass',
+    );
     await tester.tap(
       find.byKey(ValueKey<String>('subtitle-version-${assGroup.key}')),
     );
@@ -124,8 +132,9 @@ void main() {
   });
 
   testWidgets('无法解析唯一文件 → 点卡展开文件行，点行选中', (WidgetTester tester) async {
-    final List<SubtitleVersionGroup> groups =
-        buildSubtitleVersionGroups(_seasonPack());
+    final List<SubtitleVersionGroup> groups = buildSubtitleVersionGroups(
+      _seasonPack(),
+    );
     VideoSubtitleCandidate? picked;
     await pumpList(
       tester,
@@ -133,17 +142,16 @@ void main() {
       // 不指定集数 + 组内多文件 → 点卡应展开而不是瞎选。
       onPick: (VideoSubtitleCandidate candidate) => picked = candidate,
     );
-    final SubtitleVersionGroup assGroup = groups
-        .firstWhere((SubtitleVersionGroup group) => group.container == 'ass');
+    final SubtitleVersionGroup assGroup = groups.firstWhere(
+      (SubtitleVersionGroup group) => group.container == 'ass',
+    );
     await tester.tap(
       find.byKey(ValueKey<String>('subtitle-version-${assGroup.key}')),
     );
     await tester.pumpAndSettle();
     expect(picked, isNull);
     final Finder fileRow = find.byKey(
-      ValueKey<String>(
-        'subtitle-file-${assGroup.members[1].identityKey}',
-      ),
+      ValueKey<String>('subtitle-file-${assGroup.members[1].identityKey}'),
     );
     expect(fileRow, findsOneWidget, reason: '展开后逐文件可选');
     await tester.tap(fileRow);
@@ -168,36 +176,44 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
-          body: Builder(builder: (BuildContext ctx) {
-            return ElevatedButton(
-              onPressed: () => showDialog<String>(
-                context: ctx,
-                builder: (_) => JimakuSubtitleDialog(
-                  initialQuery: 'Show',
-                  initialApiKey: 'TEST_KEY',
-                  onApiKeyChanged: (_) async {},
-                  saveDirectory: '/tmp/jimaku',
-                  debugInitialCandidates: seeded,
+          body: Builder(
+            builder: (BuildContext ctx) {
+              return ElevatedButton(
+                onPressed: () => showDialog<String>(
+                  context: ctx,
+                  builder: (_) => JimakuSubtitleDialog(
+                    initialQuery: 'Show',
+                    initialApiKey: 'TEST_KEY',
+                    onApiKeyChanged: (_) async {},
+                    saveDirectory: '/tmp/jimaku',
+                    debugInitialCandidates: seeded,
+                  ),
                 ),
-              ),
-              child: const Text('open'),
-            );
-          }),
+                child: const Text('open'),
+              );
+            },
+          ),
         ),
       ),
     );
     await tester.tap(find.text('open'), warnIfMissed: false);
     await tester.pumpAndSettle();
 
-    expect(find.byType(SubtitleVersionGroupList), findsOneWidget,
-        reason: '带真实来源的候选默认走版本卡视图');
+    expect(
+      find.byType(SubtitleVersionGroupList),
+      findsOneWidget,
+      reason: '带真实来源的候选默认走版本卡视图',
+    );
     expect(find.byType(JimakuCandidateList), findsNothing);
 
     await tester.tap(
       find.byKey(const ValueKey<String>('jimaku-file-view-toggle')),
     );
     await tester.pumpAndSettle();
-    expect(find.byType(JimakuCandidateList), findsOneWidget,
-        reason: '文件视图开关切回旧平铺列表');
+    expect(
+      find.byType(JimakuCandidateList),
+      findsOneWidget,
+      reason: '文件视图开关切回旧平铺列表',
+    );
   });
 }

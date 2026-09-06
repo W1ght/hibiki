@@ -151,11 +151,13 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
   @override
   void initState() {
     super.initState();
-    _enabled = widget.enabledOverride ??
+    _enabled =
+        widget.enabledOverride ??
         (widget.clientOverride != null && widget.queueOverride != null
             ? true
             : ref.read(appProvider).mangaOnlineCatalogEnabled);
-    _client = widget.clientOverride ??
+    _client =
+        widget.clientOverride ??
         MokuroMoeClient(
           baseUrl: ref.read(appProvider).mangaOnlineCatalogBaseUrl,
         );
@@ -267,14 +269,16 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
     final List<EpubBookRow> rows = await widget.db.getAllEpubBooks();
     if (!mounted) return;
     setState(() {
-      _existingBookKeys
-          .addAll(rows.map((EpubBookRow r) => sanitizeTtuFilename(r.title)));
+      _existingBookKeys.addAll(
+        rows.map((EpubBookRow r) => sanitizeTtuFilename(r.title)),
+      );
     });
   }
 
   /// 一卷的入库身份 key（与导入侧 [MokuroMoeVolumeDownloader.volumeTitle] 同源）。
   String _volumeKey(String volume) => sanitizeTtuFilename(
-      MokuroMoeVolumeDownloader.volumeTitle(_series?.name ?? '', volume));
+    MokuroMoeVolumeDownloader.volumeTitle(_series?.name ?? '', volume),
+  );
 
   bool _isImported(String volume) =>
       _existingBookKeys.contains(_volumeKey(volume));
@@ -284,7 +288,10 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
     // G6：与库页搜索同一归一化口径——「ふぇいと」要能命中「フェイト」，此前
     // 裸 toLowerCase 子串让同一批日文标题在书架能搜到、在这里搜不到。
     return filterByMediaSearch(
-        all, _query, (MokuroMoeSeries s) => <String>[s.name]);
+      all,
+      _query,
+      (MokuroMoeSeries s) => <String>[s.name],
+    );
   }
 
   /// 打开一个系列的卷列表。
@@ -369,10 +376,7 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Icon(
-                Icons.public_off_outlined,
-                color: tokens.surfaces.onVariant,
-              ),
+              Icon(Icons.public_off_outlined, color: tokens.surfaces.onVariant),
               SizedBox(height: tokens.spacing.gap),
               Text(
                 t.manga_online_source_disabled,
@@ -408,10 +412,7 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
-          OutlinedButton(
-            onPressed: backToBrowse,
-            child: Text(t.back),
-          ),
+          OutlinedButton(onPressed: backToBrowse, child: Text(t.back)),
           SizedBox(width: tokens.spacing.gap),
           FilledButton(
             onPressed: _selectedVolumes.isEmpty ? null : enqueueSelected,
@@ -454,17 +455,15 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
           children: <Widget>[
             Text(
               '${t.manga_online_load_failed}: $error',
-              style: tokens.type.listSubtitle
-                  .copyWith(color: Theme.of(context).colorScheme.error),
+              style: tokens.type.listSubtitle.copyWith(
+                color: Theme.of(context).colorScheme.error,
+              ),
               textAlign: TextAlign.center,
               maxLines: 4,
               overflow: TextOverflow.ellipsis,
             ),
             SizedBox(height: tokens.spacing.gap),
-            OutlinedButton(
-              onPressed: _loadLibrary,
-              child: Text(t.retry),
-            ),
+            OutlinedButton(onPressed: _loadLibrary, child: Text(t.retry)),
           ],
         ),
       );
@@ -552,8 +551,9 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
           children: <Widget>[
             Text(
               '${t.manga_online_detail_load_failed}: $error',
-              style: tokens.type.listSubtitle
-                  .copyWith(color: Theme.of(context).colorScheme.error),
+              style: tokens.type.listSubtitle.copyWith(
+                color: Theme.of(context).colorScheme.error,
+              ),
               textAlign: TextAlign.center,
               maxLines: 4,
               overflow: TextOverflow.ellipsis,
@@ -586,27 +586,31 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
   Widget _buildVolumeRow(FushiDesignTokens tokens, MokuroMoeVolume volume) {
     final MokuroMoeSeries? series = _series;
     final bool imported = _isImported(volume.name);
-    final MokuroMoeDownloadTask? pending =
-        series == null ? null : _queue.pendingTask(series.name, volume.name);
+    final MokuroMoeDownloadTask? pending = series == null
+        ? null
+        : _queue.pendingTask(series.name, volume.name);
     final String? subtitleText = imported
         ? t.manga_online_downloaded
         : switch (pending?.status) {
-            MokuroMoeTaskStatus.running =>
-              mokuroMoeStageLabel(pending!.lastEvent),
+            MokuroMoeTaskStatus.running => mokuroMoeStageLabel(
+              pending!.lastEvent,
+            ),
             MokuroMoeTaskStatus.queued => t.download_status_queued,
             // 退避重试中也是「未完成任务」，行仍不可再选，得说清它在等什么。
             MokuroMoeTaskStatus.waitingRetry => t.manga_online_retry_waiting(
-                attempt: pending!.autoRetries,
-                total: _queue.maxAutoRetries,
-              ),
+              attempt: pending!.autoRetries,
+              total: _queue.maxAutoRetries,
+            ),
             _ => null,
           };
     final Widget? subtitle = subtitleText == null
         ? null
-        : Text(subtitleText,
+        : Text(
+            subtitleText,
             style: tokens.type.listSubtitle,
             maxLines: 1,
-            overflow: TextOverflow.ellipsis);
+            overflow: TextOverflow.ellipsis,
+          );
     final bool selectable = !imported && pending == null;
     // 手排行（MD3 tokens 间距），不走 ListTile（MD3 守卫：普通 chrome 统一走
     // 共享 tokens 布局）。
@@ -615,10 +619,10 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
       onTap: !selectable
           ? null
           : () => setState(() {
-                if (!_selectedVolumes.remove(volume.name)) {
-                  _selectedVolumes.add(volume.name);
-                }
-              }),
+              if (!_selectedVolumes.remove(volume.name)) {
+                _selectedVolumes.add(volume.name);
+              }
+            }),
       child: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: tokens.spacing.gap,
@@ -634,12 +638,12 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
                 onChanged: !selectable
                     ? null
                     : (bool? checked) => setState(() {
-                          if (checked == true) {
-                            _selectedVolumes.add(volume.name);
-                          } else {
-                            _selectedVolumes.remove(volume.name);
-                          }
-                        }),
+                        if (checked == true) {
+                          _selectedVolumes.add(volume.name);
+                        } else {
+                          _selectedVolumes.remove(volume.name);
+                        }
+                      }),
               ),
             SizedBox(width: tokens.spacing.gap),
             Expanded(
@@ -697,7 +701,8 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
           ),
           SizedBox(height: tokens.spacing.gap / 2),
           LinearProgressIndicator(
-              value: mokuroMoeProgressValue(running?.lastEvent)),
+            value: mokuroMoeProgressValue(running?.lastEvent),
+          ),
         ],
       ),
     );

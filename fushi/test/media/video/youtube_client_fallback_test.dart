@@ -16,22 +16,25 @@ import 'package:fushi/src/media/video/youtube_source_resolver.dart';
 
 /// 取 client 的 innertube clientName（兜底链的可读身份，用于断言链的构成与顺序）。
 String _clientName(yt.YoutubeApiClient client) =>
-    (client.payload['context']['client']
-        as Map<String, dynamic>)['clientName'] as String;
+    (client.payload['context']['client'] as Map<String, dynamic>)['clientName']
+        as String;
 
 void main() {
   group('BUG-1832 兜底链构成', () {
     test('链里必须含 ANDROID，且顺序为 androidVr → android → ios → tv', () {
       // ANDROID 缺席正是原始 bug：只有它能给 D8uACXBAqkE 出流。
-      expect(
-        kYoutubeManifestClientFallback.map(_clientName).toList(),
-        <String>['ANDROID_VR', 'ANDROID', 'IOS', 'TVHTML5'],
-      );
+      expect(kYoutubeManifestClientFallback.map(_clientName).toList(), <String>[
+        'ANDROID_VR',
+        'ANDROID',
+        'IOS',
+        'TVHTML5',
+      ]);
     });
 
     test('链内无重复 client（重复 = 白白多等一轮超时）', () {
-      final List<String> names =
-          kYoutubeManifestClientFallback.map(_clientName).toList();
+      final List<String> names = kYoutubeManifestClientFallback
+          .map(_clientName)
+          .toList();
       expect(names.toSet().length, names.length);
     });
   });
@@ -39,12 +42,14 @@ void main() {
   group('BUG-1832 超时预算不变式', () {
     test('外层总超时 ≥ 每 client 上限 × 链长（增删 client 时自动跟随）', () {
       // 旧代码把这个关系写在注释里靠人肉维护，加第 4 个 client 时必然失配。
-      final Duration needed = kYoutubePerClientManifestTimeout *
+      final Duration needed =
+          kYoutubePerClientManifestTimeout *
           kYoutubeManifestClientFallback.length;
       expect(
         kYoutubeResolveTimeout,
         greaterThanOrEqualTo(needed),
-        reason: '总预算 ${kYoutubeResolveTimeout.inSeconds}s 容不下 '
+        reason:
+            '总预算 ${kYoutubeResolveTimeout.inSeconds}s 容不下 '
             '${kYoutubeManifestClientFallback.length} 个 client × '
             '${kYoutubePerClientManifestTimeout.inSeconds}s',
       );
@@ -80,8 +85,9 @@ void main() {
         },
       );
       expect(got, <int>[7]);
-      expect(called, <String>['ANDROID_VR'],
-          reason: '首个非空后仍调用后续 client = 每次解析都多打 3 次无谓请求');
+      expect(called, <String>[
+        'ANDROID_VR',
+      ], reason: '首个非空后仍调用后续 client = 每次解析都多打 3 次无谓请求');
     });
 
     test('全部 client 都空时返回空表（不抛，字幕是 best-effort）', () async {

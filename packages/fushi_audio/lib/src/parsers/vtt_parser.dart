@@ -79,8 +79,9 @@ class VttParser {
     String chapterHref = defaultChapter,
     int audioFileIndex = 0,
   }) {
-    final String stripped =
-        content.startsWith('\uFEFF') ? content.substring(1) : content;
+    final String stripped = content.startsWith('\uFEFF')
+        ? content.substring(1)
+        : content;
 
     final List<String> blocks = stripped
         .replaceAll('\r\n', '\n')
@@ -129,8 +130,10 @@ class VttParser {
         continue;
       }
 
-      final String rawText =
-          lines.skip(timeLineIdx + 1).where((l) => l.isNotEmpty).join(' ');
+      final String rawText = lines
+          .skip(timeLineIdx + 1)
+          .where((l) => l.isNotEmpty)
+          .join(' ');
       // 先剥 VTT/HTML 行内标签（`<b>` / `<ruby>` / `<c.className>` 等，共享
       // [stripHtmlTags]），再交 markup 解析 ASS override 块（两者正交）。
       final SubtitleMarkup markup = parseSubtitleMarkup(stripHtmlTags(rawText));
@@ -164,10 +167,12 @@ class VttParser {
       return null;
     }
     // 位置指令（如 `align:left`）以空白分隔在时间戳后，取第一个 token
-    final int? start =
-        _parseTimecodeToMs(parts[0].trim().split(RegExp(r'\s+')).first);
-    final int? end =
-        _parseTimecodeToMs(parts[1].trim().split(RegExp(r'\s+')).first);
+    final int? start = _parseTimecodeToMs(
+      parts[0].trim().split(RegExp(r'\s+')).first,
+    );
+    final int? end = _parseTimecodeToMs(
+      parts[1].trim().split(RegExp(r'\s+')).first,
+    );
     if (start == null || end == null) {
       return null;
     }
@@ -181,8 +186,9 @@ class VttParser {
     final String normalized = timecode.replaceAll(',', '.');
 
     // HH:MM:SS.mmm
-    final RegExpMatch? full =
-        RegExp(r'^(\d+):(\d{2}):(\d{2})\.(\d{1,3})$').firstMatch(normalized);
+    final RegExpMatch? full = RegExp(
+      r'^(\d+):(\d{2}):(\d{2})\.(\d{1,3})$',
+    ).firstMatch(normalized);
     if (full != null) {
       final int fh = int.parse(full.group(1)!);
       final int fm = int.parse(full.group(2)!);
@@ -195,8 +201,9 @@ class VttParser {
     }
 
     // MM:SS.mmm（无小时）
-    final RegExpMatch? short =
-        RegExp(r'^(\d+):(\d{2})\.(\d{1,3})$').firstMatch(normalized);
+    final RegExpMatch? short = RegExp(
+      r'^(\d+):(\d{2})\.(\d{1,3})$',
+    ).firstMatch(normalized);
     if (short != null) {
       final int sm = int.parse(short.group(1)!);
       final int ss = int.parse(short.group(2)!);

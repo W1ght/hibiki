@@ -38,35 +38,37 @@ void main() {
     expect(d.existsSync(), isTrue, reason: '目录绝不删，更不递归删');
   });
 
-  test('文件被占用（Windows 句柄）→ 记进 failures，不抛、不中断后续', () async {
-    final File held = File(p.join(tmp.path, 'held.mp3'))
-      ..writeAsStringSync('held');
-    final File other = File(p.join(tmp.path, 'other.mp3'))
-      ..writeAsStringSync('other');
-    // 真正握住句柄：Windows 上这会让 delete 抛 errno 32，正是用户「正在播放这一
-    // 本」时的形态。
-    final RandomAccessFile handle = await held.open(mode: FileMode.append);
-    try {
-      final LocalFileDeleteReport report = await deleteLocalFiles(<String>[
-        held.path,
-        other.path,
-      ]);
-      expect(
-        report.failures.map((LocalFileDeleteFailure f) => f.path),
-        <String>[held.path],
-      );
-      expect(report.failures.single.error, isNotNull);
-      expect(held.existsSync(), isTrue);
-      expect(
-        report.removed,
-        <String>[other.path],
-        reason: '一个文件失败不能翻转其它文件的结果',
-      );
-      expect(other.existsSync(), isFalse);
-    } finally {
-      await handle.close();
-    }
-  }, skip: !Platform.isWindows ? 'POSIX 允许删除仍被打开的文件' : null);
+  test(
+    '文件被占用（Windows 句柄）→ 记进 failures，不抛、不中断后续',
+    () async {
+      final File held = File(p.join(tmp.path, 'held.mp3'))
+        ..writeAsStringSync('held');
+      final File other = File(p.join(tmp.path, 'other.mp3'))
+        ..writeAsStringSync('other');
+      // 真正握住句柄：Windows 上这会让 delete 抛 errno 32，正是用户「正在播放这一
+      // 本」时的形态。
+      final RandomAccessFile handle = await held.open(mode: FileMode.append);
+      try {
+        final LocalFileDeleteReport report = await deleteLocalFiles(<String>[
+          held.path,
+          other.path,
+        ]);
+        expect(
+          report.failures.map((LocalFileDeleteFailure f) => f.path),
+          <String>[held.path],
+        );
+        expect(report.failures.single.error, isNotNull);
+        expect(held.existsSync(), isTrue);
+        expect(report.removed, <String>[
+          other.path,
+        ], reason: '一个文件失败不能翻转其它文件的结果');
+        expect(other.existsSync(), isFalse);
+      } finally {
+        await handle.close();
+      }
+    },
+    skip: !Platform.isWindows ? 'POSIX 允许删除仍被打开的文件' : null,
+  );
 
   test('merge 把两次删除的结果并起来（一条记录可能挂两份原件）', () {
     const LocalFileDeleteReport a = LocalFileDeleteReport(

@@ -17,13 +17,13 @@ import 'package:path/path.dart' as p;
 /// 删除以拿到真实的释放字节数。
 class _FakeService extends AsrTranscriptionService {
   _FakeService({required this.root, required this.readyByLanguage})
-      : super(
-          openStore: (AsrLanguage l) async => AsrModelStore(
-            Directory(p.join(root.path, asrModelPackFor(l).id)),
-            asrModelPackFor(l),
-          ),
-          jobsRoot: () async => root,
-        );
+    : super(
+        openStore: (AsrLanguage l) async => AsrModelStore(
+          Directory(p.join(root.path, asrModelPackFor(l).id)),
+          asrModelPackFor(l),
+        ),
+        jobsRoot: () async => root,
+      );
 
   final Directory root;
   final Map<AsrLanguage, bool> readyByLanguage;

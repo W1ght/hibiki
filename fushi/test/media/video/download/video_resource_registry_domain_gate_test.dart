@@ -68,11 +68,11 @@ void main() {
   late _RecordingProvider torznab;
 
   List<VideoResourceProvider> providers() => <VideoResourceProvider>[
-        nyaa,
-        apibay,
-        knaben,
-        torznab,
-      ];
+    nyaa,
+    apibay,
+    knaben,
+    torznab,
+  ];
 
   setUp(() {
     nyaa = _RecordingProvider(
@@ -105,8 +105,9 @@ void main() {
   });
 
   test('anime only reaches nyaa and the unrestricted torznab', () async {
-    await VideoResourceRegistry(providers())
-        .search(_request(VideoDiscoveryCategory.anime));
+    await VideoResourceRegistry(
+      providers(),
+    ).search(_request(VideoDiscoveryCategory.anime));
     expect(nyaa.searchCalls, 1);
     expect(torznab.searchCalls, 1);
     expect(apibay.searchCalls, 0);
@@ -114,8 +115,9 @@ void main() {
   });
 
   test('movies reach the public indexers but never nyaa', () async {
-    await VideoResourceRegistry(providers())
-        .search(_request(VideoDiscoveryCategory.movie));
+    await VideoResourceRegistry(
+      providers(),
+    ).search(_request(VideoDiscoveryCategory.movie));
     expect(apibay.searchCalls, 1);
     expect(knaben.searchCalls, 1);
     expect(torznab.searchCalls, 1);
@@ -123,52 +125,57 @@ void main() {
   });
 
   test('tv reaches the public indexers but never nyaa', () async {
-    await VideoResourceRegistry(providers())
-        .search(_request(VideoDiscoveryCategory.tv));
+    await VideoResourceRegistry(
+      providers(),
+    ).search(_request(VideoDiscoveryCategory.tv));
     expect(apibay.searchCalls, 1);
     expect(knaben.searchCalls, 1);
     expect(nyaa.searchCalls, 0);
   });
 
-  test('a request with no media identity only reaches unrestricted providers',
-      () async {
-    // 与 id 白名单时代逐字一致：那时 anime 为 false，Nyaa 同样不进。
-    await VideoResourceRegistry(providers()).search(_request(null));
-    expect(torznab.searchCalls, 1);
-    expect(nyaa.searchCalls, 0);
-    expect(apibay.searchCalls, 0);
-    expect(knaben.searchCalls, 0);
-  });
+  test(
+    'a request with no media identity only reaches unrestricted providers',
+    () async {
+      // 与 id 白名单时代逐字一致：那时 anime 为 false，Nyaa 同样不进。
+      await VideoResourceRegistry(providers()).search(_request(null));
+      expect(torznab.searchCalls, 1);
+      expect(nyaa.searchCalls, 0);
+      expect(apibay.searchCalls, 0);
+      expect(knaben.searchCalls, 0);
+    },
+  );
 
   test('a disabled source is never queried at all', () async {
     final ProviderBatchResult<VideoResourceCandidate> result =
         await VideoResourceRegistry(
-      providers(),
-      disabledProviderIds: <String>{kApibayResourceProviderId},
-    ).search(_request(VideoDiscoveryCategory.movie));
+          providers(),
+          disabledProviderIds: <String>{kApibayResourceProviderId},
+        ).search(_request(VideoDiscoveryCategory.movie));
     expect(apibay.searchCalls, 0);
     expect(knaben.searchCalls, 1);
     // 停用一家不等于「没有来源」：另一家答了，空态判据必须仍是普通空结果。
     expect(result.hasNoActiveProvider, isFalse);
   });
 
-  test('disabling every applicable source yields the no-provider state',
-      () async {
-    final ProviderBatchResult<VideoResourceCandidate> result =
-        await VideoResourceRegistry(
-      providers(),
-      disabledProviderIds: <String>{
-        kApibayResourceProviderId,
-        kKnabenResourceProviderId,
-        'torznab',
-      },
-    ).search(_request(VideoDiscoveryCategory.movie));
-    expect(apibay.searchCalls, 0);
-    expect(knaben.searchCalls, 0);
-    expect(torznab.searchCalls, 0);
-    // PR#896 的空态：0 成功 0 失败 = 「没有来源可问」，不是「没搜到」。
-    expect(result.hasNoActiveProvider, isTrue);
-  });
+  test(
+    'disabling every applicable source yields the no-provider state',
+    () async {
+      final ProviderBatchResult<VideoResourceCandidate> result =
+          await VideoResourceRegistry(
+            providers(),
+            disabledProviderIds: <String>{
+              kApibayResourceProviderId,
+              kKnabenResourceProviderId,
+              'torznab',
+            },
+          ).search(_request(VideoDiscoveryCategory.movie));
+      expect(apibay.searchCalls, 0);
+      expect(knaben.searchCalls, 0);
+      expect(torznab.searchCalls, 0);
+      // PR#896 的空态：0 成功 0 失败 = 「没有来源可问」，不是「没搜到」。
+      expect(result.hasNoActiveProvider, isTrue);
+    },
+  );
 
   group('builtin source table', () {
     test('every descriptor id matches the provider it constructs', () {

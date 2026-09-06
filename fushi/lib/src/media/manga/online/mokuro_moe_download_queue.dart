@@ -38,10 +38,11 @@ const List<Duration> kMokuroMoeRetryBackoff = <Duration>[
 ];
 
 /// 测试注入口：替换真实 [MokuroMoeVolumeDownloader.run]（测试绕网络/DB）。
-typedef MokuroMoeVolumeRunner = Stream<MokuroMoeVolumeDownloadEvent> Function({
-  required String seriesName,
-  required String volumeName,
-});
+typedef MokuroMoeVolumeRunner =
+    Stream<MokuroMoeVolumeDownloadEvent> Function({
+      required String seriesName,
+      required String volumeName,
+    });
 
 /// 单个卷任务的生命周期状态。
 ///
@@ -53,7 +54,7 @@ enum MokuroMoeTaskStatus {
   waitingRetry,
   done,
   failed,
-  cancelled
+  cancelled,
 }
 
 /// 队列中的一个卷下载任务（可变快照；变更经队列 [MokuroMoeDownloadQueue]
@@ -99,10 +100,10 @@ class MokuroMoeDownloadQueue extends ChangeNotifier {
     required MokuroMoeClient Function() clientFactory,
     @visibleForTesting MokuroMoeVolumeRunner? runnerOverride,
     @visibleForTesting List<Duration>? retryBackoffOverride,
-  })  : _db = db,
-        _clientFactory = clientFactory,
-        _runnerOverride = runnerOverride,
-        _retryBackoff = retryBackoffOverride ?? kMokuroMoeRetryBackoff;
+  }) : _db = db,
+       _clientFactory = clientFactory,
+       _runnerOverride = runnerOverride,
+       _retryBackoff = retryBackoffOverride ?? kMokuroMoeRetryBackoff;
 
   final FushiDatabase _db;
   final MokuroMoeClient Function() _clientFactory;
@@ -142,11 +143,12 @@ class MokuroMoeDownloadQueue extends ChangeNotifier {
   int get totalCount => _tasks.length;
 
   /// 该卷是否已排队/执行中（对话框据此禁用复选框，防重复入队）。
-  bool isPending(String seriesName, String volumeName) =>
-      _tasks.any((MokuroMoeDownloadTask t) =>
-          !t.isFinished &&
-          t.seriesName == seriesName &&
-          t.volumeName == volumeName);
+  bool isPending(String seriesName, String volumeName) => _tasks.any(
+    (MokuroMoeDownloadTask t) =>
+        !t.isFinished &&
+        t.seriesName == seriesName &&
+        t.volumeName == volumeName,
+  );
 
   /// 查找该卷的未完成任务（对话框渲染行内进度用）。
   MokuroMoeDownloadTask? pendingTask(String seriesName, String volumeName) {
@@ -161,15 +163,13 @@ class MokuroMoeDownloadQueue extends ChangeNotifier {
   }
 
   /// 入队若干卷（保持传入顺序）；已排队/执行中的同卷去重。返回实际新增数。
-  int enqueue({
-    required String seriesName,
-    required List<String> volumeNames,
-  }) {
+  int enqueue({required String seriesName, required List<String> volumeNames}) {
     int added = 0;
     for (final String volume in volumeNames) {
       if (isPending(seriesName, volume)) continue;
       _tasks.add(
-          MokuroMoeDownloadTask._(seriesName: seriesName, volumeName: volume));
+        MokuroMoeDownloadTask._(seriesName: seriesName, volumeName: volume),
+      );
       added++;
     }
     if (added > 0) {
@@ -272,8 +272,9 @@ class MokuroMoeDownloadQueue extends ChangeNotifier {
       _activeDownloader = null;
       stream = runner(seriesName: task.seriesName, volumeName: task.volumeName);
     } else {
-      final MokuroMoeVolumeDownloader downloader =
-          MokuroMoeVolumeDownloader(client: _clientFactory());
+      final MokuroMoeVolumeDownloader downloader = MokuroMoeVolumeDownloader(
+        client: _clientFactory(),
+      );
       _activeDownloader = downloader;
       stream = downloader.run(
         db: _db,

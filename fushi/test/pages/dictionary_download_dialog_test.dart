@@ -14,7 +14,9 @@ void main() {
 
   Widget buildApp(Widget child) {
     return TranslationProvider(
-      child: MaterialApp(home: Scaffold(body: Center(child: child))),
+      child: MaterialApp(
+        home: Scaffold(body: Center(child: child)),
+      ),
     );
   }
 
@@ -144,18 +146,20 @@ void main() {
       );
       await tester.pump();
 
-      unawaited(showAppDialog<void>(
-        context: pageContext,
-        barrierDismissible: false,
-        builder: (BuildContext ctx) => DictionaryDownloadProgressAutoCloser(
-          phase: controller.phase,
-          child: DictionaryDownloadProgressDialog(
-            message: 'start',
-            progressListenable: controller.progress,
-            onHide: () => Navigator.of(ctx).pop(),
+      unawaited(
+        showAppDialog<void>(
+          context: pageContext,
+          barrierDismissible: false,
+          builder: (BuildContext ctx) => DictionaryDownloadProgressAutoCloser(
+            phase: controller.phase,
+            child: DictionaryDownloadProgressDialog(
+              message: 'start',
+              progressListenable: controller.progress,
+              onHide: () => Navigator.of(ctx).pop(),
+            ),
           ),
         ),
-      ));
+      );
       await tester.pumpAndSettle();
       expect(find.text(t.dict_download_hide), findsOneWidget);
 
@@ -163,16 +167,22 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.text(t.dict_download_hide), findsNothing, reason: '进度框收起来了');
-      expect(find.text('dictionary page'), findsOneWidget,
-          reason: '收起进度框绝不能连带弹掉词典页本身');
+      expect(
+        find.text('dictionary page'),
+        findsOneWidget,
+        reason: '收起进度框绝不能连带弹掉词典页本身',
+      );
       expect(controller.isBusy, isTrue, reason: '任务不属于对话框，收起来只是不看');
 
       hold.complete();
       expect(await running, isTrue);
       await tester.pumpAndSettle();
 
-      expect(outcomes.single.message, 'finished',
-          reason: '结果由 controller 送出，与页面/对话框是否还在无关');
+      expect(
+        outcomes.single.message,
+        'finished',
+        reason: '结果由 controller 送出，与页面/对话框是否还在无关',
+      );
       expect(tester.takeException(), isNull);
     });
 
@@ -207,18 +217,20 @@ void main() {
       );
       await tester.pump();
 
-      unawaited(showAppDialog<void>(
-        context: pageContext,
-        barrierDismissible: false,
-        builder: (BuildContext ctx) => DictionaryDownloadProgressAutoCloser(
-          phase: controller.phase,
-          child: DictionaryDownloadProgressDialog(
-            message: 'start',
-            progressListenable: controller.progress,
-            onHide: () => Navigator.of(ctx).pop(),
+      unawaited(
+        showAppDialog<void>(
+          context: pageContext,
+          barrierDismissible: false,
+          builder: (BuildContext ctx) => DictionaryDownloadProgressAutoCloser(
+            phase: controller.phase,
+            child: DictionaryDownloadProgressDialog(
+              message: 'start',
+              progressListenable: controller.progress,
+              onHide: () => Navigator.of(ctx).pop(),
+            ),
           ),
         ),
-      ));
+      );
       await tester.pumpAndSettle();
       expect(find.text(t.dict_download_hide), findsOneWidget);
 
@@ -226,8 +238,11 @@ void main() {
       expect(await running, isTrue);
       await tester.pumpAndSettle();
 
-      expect(find.text(t.dict_download_hide), findsNothing,
-          reason: '任务结束进度框应自己消失');
+      expect(
+        find.text(t.dict_download_hide),
+        findsNothing,
+        reason: '任务结束进度框应自己消失',
+      );
       expect(find.text('dictionary page'), findsOneWidget);
       expect(tester.takeException(), isNull);
     });

@@ -111,13 +111,14 @@ class _VideoStatisticsPageState extends BasePageState<VideoStatisticsPage> {
       };
       _primaryCollectionByEntry = await db.getPrimaryCollectionIdByEntry();
       final DateTime now = DateTime.now();
-      final List<FavoriteWordRow> favs =
-          await db.getFavoriteWordsBySource(kStatSourceVideo);
-      final List<MiningStatisticRow> mined =
-          await db.getMiningStatisticsBySource(kStatSourceVideo);
+      final List<FavoriteWordRow> favs = await db.getFavoriteWordsBySource(
+        kStatSourceVideo,
+      );
+      final List<MiningStatisticRow> mined = await db
+          .getMiningStatisticsBySource(kStatSourceVideo);
       // TODO-1204：查词/制卡 per-video 计数（新表）。
-      final List<LookupMiningCounterRow> counters =
-          await db.getLookupMiningCountersBySource(kStatSourceVideo);
+      final List<LookupMiningCounterRow> counters = await db
+          .getLookupMiningCountersBySource(kStatSourceVideo);
       // v76：观看 / 计数 / 收藏三个行宇宙进同一次身份分组，tile 自带全部数字
       // （吸收判据全局一致，绝不各分各的再拼——那是计数在同名 tile 间游走的根因）。
       // 库表级同名判定（≥2 个 uid 共享一个 title）喂给吸收否决：与迁移回填的
@@ -153,8 +154,10 @@ class _VideoStatisticsPageState extends BasePageState<VideoStatisticsPage> {
       final List<FavoriteSentence> favSentences =
           await FavoriteSentenceRepository(db).getAll();
       final List<FavoriteSentence> videoFavSentences = favSentences
-          .where((FavoriteSentence s) =>
-              s.source == kFavoriteSentenceSourceVideo && s.dateKey != null)
+          .where(
+            (FavoriteSentence s) =>
+                s.source == kFavoriteSentenceSourceVideo && s.dateKey != null,
+          )
           .toList();
       _favoritedSentences = bucketActivityByDateKey(
         videoFavSentences.map((FavoriteSentence s) => (s.dateKey!, 1)),
@@ -162,7 +165,8 @@ class _VideoStatisticsPageState extends BasePageState<VideoStatisticsPage> {
       );
       // counters 也算有数据（review4-6）：只在视频域查过词（无观看/收藏/制卡）
       // 时，查词分桶明明有数却显示空状态。
-      _hasData = stats.isNotEmpty ||
+      _hasData =
+          stats.isNotEmpty ||
           completed.isNotEmpty ||
           favs.isNotEmpty ||
           mined.isNotEmpty ||
@@ -231,7 +235,8 @@ class _VideoStatisticsPageState extends BasePageState<VideoStatisticsPage> {
       slivers: [
         SliverToBoxAdapter(child: _buildSummaryCards()),
         SliverToBoxAdapter(
-            child: buildStatHourlyChartSection(context, _hourlyMs)),
+          child: buildStatHourlyChartSection(context, _hourlyMs),
+        ),
         SliverToBoxAdapter(
           child: buildStatDailyDurationChartSection(context, _agg.daily),
         ),
@@ -243,8 +248,10 @@ class _VideoStatisticsPageState extends BasePageState<VideoStatisticsPage> {
               tokens.spacing.card,
               tokens.spacing.gap,
             ),
-            child: Text(t.video_stat_by_video,
-                style: Theme.of(context).textTheme.titleMedium),
+            child: Text(
+              t.video_stat_by_video,
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
           ),
         ),
         SliverList(
@@ -254,7 +261,8 @@ class _VideoStatisticsPageState extends BasePageState<VideoStatisticsPage> {
           ),
         ),
         SliverPadding(
-            padding: EdgeInsets.only(bottom: tokens.spacing.card * 2)),
+          padding: EdgeInsets.only(bottom: tokens.spacing.card * 2),
+        ),
       ],
     );
   }
@@ -262,41 +270,48 @@ class _VideoStatisticsPageState extends BasePageState<VideoStatisticsPage> {
   Widget _buildSummaryCards() {
     // 时段谓词在点击时现算（跨日后点卡按点击时刻的窗口取数）。
     final StatWindow w = StatWindow(DateTime.now());
-    return buildStatPeriodSummaryGrid(
-      context,
-      <StatPeriodSummary>[
-        _periodSummary(
-            t.stat_today,
-            _agg.todayMs,
-            _agg.todayCompleted,
-            _lookup.today,
-            _mined.today,
-            _favorited.today,
-            _favoritedSentences.today,
-            contains: w.isToday),
-        _periodSummary(
-            t.stat_this_week,
-            _agg.weekMs,
-            _agg.weekCompleted,
-            _lookup.week,
-            _mined.week,
-            _favorited.week,
-            _favoritedSentences.week,
-            contains: w.inWeek),
-        _periodSummary(
-            t.stat_this_month,
-            _agg.monthMs,
-            _agg.monthCompleted,
-            _lookup.month,
-            _mined.month,
-            _favorited.month,
-            _favoritedSentences.month,
-            contains: w.inMonth),
-        _periodSummary(t.stat_all_time, _agg.allMs, _agg.allCompleted,
-            _lookup.all, _mined.all, _favorited.all, _favoritedSentences.all,
-            contains: (String _) => true),
-      ],
-    );
+    return buildStatPeriodSummaryGrid(context, <StatPeriodSummary>[
+      _periodSummary(
+        t.stat_today,
+        _agg.todayMs,
+        _agg.todayCompleted,
+        _lookup.today,
+        _mined.today,
+        _favorited.today,
+        _favoritedSentences.today,
+        contains: w.isToday,
+      ),
+      _periodSummary(
+        t.stat_this_week,
+        _agg.weekMs,
+        _agg.weekCompleted,
+        _lookup.week,
+        _mined.week,
+        _favorited.week,
+        _favoritedSentences.week,
+        contains: w.inWeek,
+      ),
+      _periodSummary(
+        t.stat_this_month,
+        _agg.monthMs,
+        _agg.monthCompleted,
+        _lookup.month,
+        _mined.month,
+        _favorited.month,
+        _favoritedSentences.month,
+        contains: w.inMonth,
+      ),
+      _periodSummary(
+        t.stat_all_time,
+        _agg.allMs,
+        _agg.allCompleted,
+        _lookup.all,
+        _mined.all,
+        _favorited.all,
+        _favoritedSentences.all,
+        contains: (String _) => true,
+      ),
+    ]);
   }
 
   StatPeriodSummary _periodSummary(
@@ -314,10 +329,7 @@ class _VideoStatisticsPageState extends BasePageState<VideoStatisticsPage> {
       primaryValue: formatStatTime(ms),
       onTap: () => unawaited(_showPeriodDetail(label, contains)),
       lines: <StatSummaryLine>[
-        StatSummaryLine(
-          label: t.video_stat_completed,
-          value: '$completed',
-        ),
+        StatSummaryLine(label: t.video_stat_completed, value: '$completed'),
         StatSummaryLine(label: t.stat_lookup, value: '$lookup'),
         StatSummaryLine(label: t.stat_mined, value: '$mined'),
         StatSummaryLine(label: t.stat_favorited, value: '$favorited'),
@@ -361,11 +373,14 @@ class _VideoStatisticsPageState extends BasePageState<VideoStatisticsPage> {
             context: context,
             repo: VideoBookRepository(db),
             bookUid: mediaKey,
-            playlistCollectionId: _primaryCollectionByEntry[
-                MediaKind.video.compositeKey(mediaKey)],
+            playlistCollectionId:
+                _primaryCollectionByEntry[MediaKind.video.compositeKey(
+                  mediaKey,
+                )],
           );
         },
-        onEntryDelete: (StatPeriodEntryTarget t) => deleteStatPeriodEntry(db, t),
+        onEntryDelete: (StatPeriodEntryTarget t) =>
+            deleteStatPeriodEntry(db, t),
       ),
     );
     // 删过就从 DB 重新聚合：页面上的时段卡 / 排行都得跟着变。
@@ -424,8 +439,9 @@ class _VideoStatisticsPageState extends BasePageState<VideoStatisticsPage> {
     final int favorites = video.favorites;
     final String? collectionName = _collectionNameForVideo(video);
     // 按观看时长排行（byVideo 已按 ms 降序），进度条与排行同维度。
-    final maxMs =
-        _agg.byVideo.isEmpty ? 1 : _agg.byVideo.first.ms.clamp(1, 1 << 50);
+    final maxMs = _agg.byVideo.isEmpty
+        ? 1
+        : _agg.byVideo.first.ms.clamp(1, 1 << 50);
     final fraction = video.ms / maxMs;
     final colorScheme = Theme.of(context).colorScheme;
     final tokens = FushiDesignTokens.of(context);
@@ -470,12 +486,14 @@ class _VideoStatisticsPageState extends BasePageState<VideoStatisticsPage> {
                         ),
                       ),
                     ),
-                    SizedBox(width: tokens.spacing.gap + tokens.spacing.gap / 2),
+                    SizedBox(
+                      width: tokens.spacing.gap + tokens.spacing.gap / 2,
+                    ),
                     Text(
                       formatStatTime(video.ms),
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                            color: colorScheme.onSurfaceVariant,
-                          ),
+                        color: colorScheme.onSurfaceVariant,
+                      ),
                     ),
                   ],
                 ),
@@ -483,8 +501,8 @@ class _VideoStatisticsPageState extends BasePageState<VideoStatisticsPage> {
                 Text(
                   '${t.stat_lookup}: ${video.lookups} · ${t.stat_mined}: ${video.mines} · ${t.stat_favorited}: $favorites',
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                        color: colorScheme.onSurfaceVariant,
-                      ),
+                    color: colorScheme.onSurfaceVariant,
+                  ),
                 ),
                 SizedBox(height: tokens.spacing.gap / 2),
               ],

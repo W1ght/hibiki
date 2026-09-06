@@ -29,44 +29,51 @@ import 'package:flutter_test/flutter_test.dart';
 /// 当本机/CI 没有 node 时自动 skip（Node 守卫不强制进无 node 环境），但本地
 /// 与装有 node 的环境都会真跑，提供静态守卫缺失的行为级覆盖。
 void main() {
-  test('reader touch handler distinguishes swipe, pan, and lookup tap via node',
-      () async {
-    final String? nodeExe = _resolveNode();
-    if (nodeExe == null) {
-      markTestSkipped('node not found on PATH; skipping JS behavior execution');
-      return;
-    }
+  test(
+    'reader touch handler distinguishes swipe, pan, and lookup tap via node',
+    () async {
+      final String? nodeExe = _resolveNode();
+      if (nodeExe == null) {
+        markTestSkipped(
+          'node not found on PATH; skipping JS behavior execution',
+        );
+        return;
+      }
 
-    final File jsTest = File(
-      'test/reader/reader_paged_touch_swipe_behavior_test.js',
-    );
-    expect(jsTest.existsSync(), isTrue,
-        reason: 'behavior harness ${jsTest.path} must exist');
+      final File jsTest = File(
+        'test/reader/reader_paged_touch_swipe_behavior_test.js',
+      );
+      expect(
+        jsTest.existsSync(),
+        isTrue,
+        reason: 'behavior harness ${jsTest.path} must exist',
+      );
 
-    final ProcessResult result = await Process.run(
-      nodeExe,
-      <String>[jsTest.path],
-      workingDirectory: Directory.current.path,
-    );
+      final ProcessResult result = await Process.run(nodeExe, <String>[
+        jsTest.path,
+      ], workingDirectory: Directory.current.path);
 
-    expect(
-      result.exitCode,
-      0,
-      reason: 'reader handler JS behavior test failed.\n'
-          'stdout:\n${result.stdout}\nstderr:\n${result.stderr}',
-    );
-    expect(
-      result.stdout.toString(),
-      contains('all assertions passed'),
-      reason: 'behavior harness must reach its success marker',
-    );
-  });
+      expect(
+        result.exitCode,
+        0,
+        reason:
+            'reader handler JS behavior test failed.\n'
+            'stdout:\n${result.stdout}\nstderr:\n${result.stderr}',
+      );
+      expect(
+        result.stdout.toString(),
+        contains('all assertions passed'),
+        reason: 'behavior harness must reach its success marker',
+      );
+    },
+  );
 }
 
 /// Resolve a usable `node` executable, returning null when none is on PATH.
 String? _resolveNode() {
-  final List<String> candidates =
-      Platform.isWindows ? <String>['node.exe', 'node'] : <String>['node'];
+  final List<String> candidates = Platform.isWindows
+      ? <String>['node.exe', 'node']
+      : <String>['node'];
   for (final String name in candidates) {
     try {
       final ProcessResult probe = Process.runSync(name, <String>['--version']);

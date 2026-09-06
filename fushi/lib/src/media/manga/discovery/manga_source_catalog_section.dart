@@ -76,22 +76,16 @@ class MangaSourceCatalog {
 
   /// 下拉选项（按 mokuro -> Aidoku -> Mihon 的展示顺序，与卡片顺序一致）。
   List<DiscoverySourceOption> get sourceOptions => <DiscoverySourceOption>[
-        if (mokuroEnabled)
-          DiscoverySourceOption(
-            id: mokuroSourceId,
-            label: t.mihon_source_browse_mokuro,
-          ),
-        for (final AidokuInstalledPackage package in aidokuPackages)
-          DiscoverySourceOption(
-            id: aidokuSourceId(package),
-            label: package.name,
-          ),
-        for (final MangaOnlineSourceRow source in mihonSources)
-          DiscoverySourceOption(
-            id: mihonSourceId(source),
-            label: source.name,
-          ),
-      ];
+    if (mokuroEnabled)
+      DiscoverySourceOption(
+        id: mokuroSourceId,
+        label: t.mihon_source_browse_mokuro,
+      ),
+    for (final AidokuInstalledPackage package in aidokuPackages)
+      DiscoverySourceOption(id: aidokuSourceId(package), label: package.name),
+    for (final MangaOnlineSourceRow source in mihonSources)
+      DiscoverySourceOption(id: mihonSourceId(source), label: source.name),
+  ];
 
   /// 收窄到单个来源。[kDiscoveryAllSourcesId] 原样返回（「全部来源」不过滤）。
   ///
@@ -102,12 +96,15 @@ class MangaSourceCatalog {
     return MangaSourceCatalog(
       mokuroEnabled: mokuroEnabled && sourceId == mokuroSourceId,
       aidokuPackages: aidokuPackages
-          .where((AidokuInstalledPackage package) =>
-              aidokuSourceId(package) == sourceId)
+          .where(
+            (AidokuInstalledPackage package) =>
+                aidokuSourceId(package) == sourceId,
+          )
           .toList(growable: false),
       mihonSources: mihonSources
-          .where((MangaOnlineSourceRow source) =>
-              mihonSourceId(source) == sourceId)
+          .where(
+            (MangaOnlineSourceRow source) => mihonSourceId(source) == sourceId,
+          )
           .toList(growable: false),
       // OPDS 不在 [sourceOptions] 里，所以 [sourceId] 永远不会是某台 OPDS 服务器；
       // 用户选中了具体来源就意味着「只看这一个」，OPDS 卡片必须一并让位，

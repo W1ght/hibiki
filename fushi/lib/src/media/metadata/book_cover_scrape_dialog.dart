@@ -120,8 +120,9 @@ class _BookCoverScrapeDialogState extends State<BookCoverScrapeDialog> {
   Future<List<BookScrapeCandidate>> _resolveCandidates(String keyword) async {
     final String? mappedSubjectId = parseBangumiSubjectUrl(keyword);
     if (mappedSubjectId != null) {
-      final BookScrapeCandidate? candidate =
-          await _scraper.fetchById(mappedSubjectId);
+      final BookScrapeCandidate? candidate = await _scraper.fetchById(
+        mappedSubjectId,
+      );
       return candidate == null
           ? const <BookScrapeCandidate>[]
           : <BookScrapeCandidate>[candidate];
@@ -274,8 +275,11 @@ class _BookCoverScrapeDialogState extends State<BookCoverScrapeDialog> {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(candidate.title,
-                    maxLines: 2, overflow: TextOverflow.ellipsis),
+                Text(
+                  candidate.title,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
                 if (metaParts.isNotEmpty)
                   Padding(
                     padding: const EdgeInsets.only(top: 2),
@@ -291,8 +295,9 @@ class _BookCoverScrapeDialogState extends State<BookCoverScrapeDialog> {
           ),
           const SizedBox(width: 8),
           FilledButton.tonal(
-            onPressed:
-                _applyingCandidate != null ? null : () => _use(candidate),
+            onPressed: _applyingCandidate != null
+                ? null
+                : () => _use(candidate),
             child: identical(_applyingCandidate, candidate)
                 ? const SizedBox(
                     width: 16,

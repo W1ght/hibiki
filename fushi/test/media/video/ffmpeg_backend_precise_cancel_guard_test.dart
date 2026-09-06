@@ -43,11 +43,15 @@ void main() {
       // Match `FFmpegKit.cancel()` with nothing but whitespace inside the
       // parens — the cancel-all form. `FFmpegKit.cancel(sessionId)` is allowed.
       final RegExp cancelAll = RegExp(r'FFmpegKit\.cancel\(\s*\)');
-      expect(cancelAll.hasMatch(source), isFalse,
-          reason: 'FFmpegKit.cancel() with no sessionId cancels EVERY session '
-              'and kills concurrent ffmpeg-kit tasks (dropped embedded '
-              'subtitles). Cancel only the timed-out session with '
-              'FFmpegKit.cancel(session.getSessionId()) — BUG-905.');
+      expect(
+        cancelAll.hasMatch(source),
+        isFalse,
+        reason:
+            'FFmpegKit.cancel() with no sessionId cancels EVERY session '
+            'and kills concurrent ffmpeg-kit tasks (dropped embedded '
+            'subtitles). Cancel only the timed-out session with '
+            'FFmpegKit.cancel(session.getSessionId()) — BUG-905.',
+      );
     });
 
     test('timeout paths cancel via the session id', () {
@@ -55,13 +59,21 @@ void main() {
       // stays green when the real call is commented out with `/* ... */`.
       final String source = codeOnly(libFile(path));
 
-      expect(source, contains('FFmpegKit.cancel(sessionId)'),
-          reason: 'Timeout handling must cancel the specific session id '
-              'obtained from session.getSessionId() — BUG-905.');
-      expect(source, contains('session.getSessionId()'),
-          reason: 'The timed-out session id must come from '
-              'session.getSessionId() so only that session is cancelled — '
-              'BUG-905.');
+      expect(
+        source,
+        contains('FFmpegKit.cancel(sessionId)'),
+        reason:
+            'Timeout handling must cancel the specific session id '
+            'obtained from session.getSessionId() — BUG-905.',
+      );
+      expect(
+        source,
+        contains('session.getSessionId()'),
+        reason:
+            'The timed-out session id must come from '
+            'session.getSessionId() so only that session is cancelled — '
+            'BUG-905.',
+      );
     });
 
     test('sessions are started async so the id is known before timeout', () {
@@ -71,13 +83,21 @@ void main() {
       // The synchronous executeWithArguments(...).timeout(...) form never yields
       // the session until completion, so on timeout there is no id to cancel
       // precisely. The async form returns the session immediately.
-      expect(source, contains('FFmpegKit.executeWithArgumentsAsync('),
-          reason: 'run() must start via executeWithArgumentsAsync so the '
-              'session (and its id) is available inside the TimeoutException '
-              'handler — BUG-905.');
-      expect(source, contains('FFprobeKit.executeWithArgumentsAsync('),
-          reason: 'runProbe() must start via executeWithArgumentsAsync so the '
-              'session id is available on timeout — BUG-905.');
+      expect(
+        source,
+        contains('FFmpegKit.executeWithArgumentsAsync('),
+        reason:
+            'run() must start via executeWithArgumentsAsync so the '
+            'session (and its id) is available inside the TimeoutException '
+            'handler — BUG-905.',
+      );
+      expect(
+        source,
+        contains('FFprobeKit.executeWithArgumentsAsync('),
+        reason:
+            'runProbe() must start via executeWithArgumentsAsync so the '
+            'session id is available on timeout — BUG-905.',
+      );
     });
   });
 }

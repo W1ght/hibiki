@@ -32,7 +32,10 @@ void main() {
   test('legacy native PopupDictActivity no longer holds intent-filters', () {
     final String src = File(manifestPath).readAsStringSync();
     final String nativeBlock = activityBlock(src, '.PopupDictActivity');
-    expect(nativeBlock, isNot(contains('<intent-filter>')),
-        reason: '原生 Activity 应失活（暂留定义，无 filter）');
+    expect(
+      nativeBlock,
+      isNot(contains('<intent-filter>')),
+      reason: '原生 Activity 应失活（暂留定义，无 filter）',
+    );
   });
 }

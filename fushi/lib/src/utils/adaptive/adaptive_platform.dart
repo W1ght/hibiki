@@ -70,7 +70,7 @@ Duration einkSafeDuration(BuildContext context, Duration duration) {
 bool isCupertinoPlatform(BuildContext context) {
   final FushiDesignSystem designSystem =
       Theme.of(context).extension<FushiDesignSystemTheme>()?.designSystem ??
-          FushiDesignSystem.auto;
+      FushiDesignSystem.auto;
   switch (designSystem) {
     case FushiDesignSystem.material:
       return false;
@@ -92,7 +92,7 @@ bool isCupertinoPlatform(BuildContext context) {
 bool isMacosPlatform(BuildContext context) {
   final FushiDesignSystem designSystem =
       Theme.of(context).extension<FushiDesignSystemTheme>()?.designSystem ??
-          FushiDesignSystem.auto;
+      FushiDesignSystem.auto;
   switch (designSystem) {
     case FushiDesignSystem.material:
     case FushiDesignSystem.cupertino:

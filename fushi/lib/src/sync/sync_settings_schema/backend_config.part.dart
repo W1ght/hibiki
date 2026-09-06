@@ -59,7 +59,11 @@ class _CredentialConfigWidget extends StatefulWidget {
 
   /// Persists the raw controller texts (+ switch value).
   final Future<void> Function(
-      SyncRepository repo, List<String> texts, bool switchValue) save;
+    SyncRepository repo,
+    List<String> texts,
+    bool switchValue,
+  )
+  save;
 
   /// Probes the backend with the raw controller texts (+ switch value) and
   /// returns the snackbar message. Must handle its own errors.
@@ -216,7 +220,10 @@ class _WebDavConfigWidget extends StatelessWidget {
   }
 
   static Future<void> _save(
-      SyncRepository repo, List<String> texts, bool _) async {
+    SyncRepository repo,
+    List<String> texts,
+    bool _,
+  ) async {
     // 折全角后再落库：url 键盘只管手输，粘贴进来的全角会被原样存下去，
     // 之后每次连接都用错的地址（BUG-1807）。
     final String url = normalizeUrlInput(texts[0]);
@@ -363,9 +370,9 @@ class _BackendSelectorWidgetState extends State<_BackendSelectorWidget> {
           .map(
             (SyncBackendType type) =>
                 AdaptiveSettingsPickerOption<SyncBackendType>(
-              value: type,
-              label: _backendLabel(type),
-            ),
+                  value: type,
+                  label: _backendLabel(type),
+                ),
           )
           .toList(growable: false),
       controlBelow: true,
@@ -436,7 +443,10 @@ class _FtpConfigWidget extends StatelessWidget {
   }
 
   static Future<void> _save(
-      SyncRepository repo, List<String> texts, bool useTls) async {
+    SyncRepository repo,
+    List<String> texts,
+    bool useTls,
+  ) async {
     final String host = normalizeUrlInput(texts[0]);
     final String user = texts[2].trim();
     final String pass = texts[3];
@@ -511,7 +521,10 @@ class _SftpConfigWidget extends StatelessWidget {
   }
 
   static Future<void> _save(
-      SyncRepository repo, List<String> texts, bool _) async {
+    SyncRepository repo,
+    List<String> texts,
+    bool _,
+  ) async {
     final String host = normalizeUrlInput(texts[0]);
     final String user = texts[2].trim();
     final String pass = texts[3];

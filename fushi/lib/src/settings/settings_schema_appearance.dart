@@ -18,7 +18,7 @@ SettingsSwitchItem _moduleSwitch({
   required HomeTab tab,
   required SettingsSwitchGetter value,
   required Future<void> Function(SettingsContext settingsContext, bool enabled)
-      setValue,
+  setValue,
   SettingsVisibility? visible,
   bool isTool = false,
 }) {
@@ -250,8 +250,9 @@ SettingsDestination buildAppearanceDestination() {
             value: (SettingsContext settingsContext) =>
                 settingsContext.appModel.moduleBrowserExtensionEnabled,
             setValue: (SettingsContext settingsContext, bool value) =>
-                settingsContext.appModel
-                    .setModuleBrowserExtensionEnabled(value),
+                settingsContext.appModel.setModuleBrowserExtensionEnabled(
+                  value,
+                ),
           ),
         ],
       ),

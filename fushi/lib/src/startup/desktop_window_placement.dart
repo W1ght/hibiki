@@ -242,8 +242,9 @@ class DesktopWindowPlacement {
     required List<Rect> workAreas,
     Rect? currentBounds,
   }) {
-    final List<Rect> usableAreas =
-        workAreas.where((Rect area) => _isUsableRect(area)).toList();
+    final List<Rect> usableAreas = workAreas
+        .where((Rect area) => _isUsableRect(area))
+        .toList();
     if (usableAreas.isEmpty) {
       return const Rect.fromLTWH(0, 0, 1280, 720);
     }
@@ -308,8 +309,10 @@ class DesktopWindowPlacement {
   static Future<List<Rect>> _loadWorkAreas(Rect? fallbackBounds) async {
     try {
       final List<Display> displays = await screenRetriever.getAllDisplays();
-      final List<Rect> workAreas =
-          displays.map(_workAreaFromDisplay).whereType<Rect>().toList();
+      final List<Rect> workAreas = displays
+          .map(_workAreaFromDisplay)
+          .whereType<Rect>()
+          .toList();
       if (workAreas.isNotEmpty) return workAreas;
     } catch (e) {
       debugPrint('[Fushi] screen work areas unavailable: $e');

@@ -15,7 +15,8 @@ import 'package:flutter_onnxruntime/flutter_onnxruntime.dart';
 import 'package:fushi/src/ocr/ocr_inference.dart';
 import 'package:fushi/src/onnx/onnx_inference_ort.dart'
     hide isLocalOnnxRuntimeAvailable;
-import 'package:fushi/src/onnx/onnx_inference_ort.dart' as onnx
+import 'package:fushi/src/onnx/onnx_inference_ort.dart'
+    as onnx
     show isLocalOnnxRuntimeAvailable;
 
 /// 本子系统统一的 `dart:developer` 日志通道名。
@@ -63,9 +64,7 @@ Map<String, OcrTensor> resolveOcrSessionInputs({
   required List<String> sessionInputNames,
 }) {
   if (inputs.length == 1 && sessionInputNames.length == 1) {
-    return <String, OcrTensor>{
-      sessionInputNames.single: inputs.values.single,
-    };
+    return <String, OcrTensor>{sessionInputNames.single: inputs.values.single};
   }
   final Map<String, OcrTensor> resolved = <String, OcrTensor>{};
   for (final String sessionName in sessionInputNames) {
@@ -104,9 +103,9 @@ Map<String, OcrTensor> _resolveOcrInputs(
 /// `onProviderResolved` 的 `createSession` 均由父类提供，注释见那里。
 class OrtOcrSessionFactory extends OrtOnnxSessionFactory {
   OrtOcrSessionFactory({OnnxRuntime? runtime})
-      : super(
-          runtime: runtime,
-          resolveInputs: _resolveOcrInputs,
-          logName: kOcrLogName,
-        );
+    : super(
+        runtime: runtime,
+        resolveInputs: _resolveOcrInputs,
+        logName: kOcrLogName,
+      );
 }

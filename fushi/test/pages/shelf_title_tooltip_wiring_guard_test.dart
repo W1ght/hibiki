@@ -27,7 +27,8 @@ void main() {
     expect(
       countIn('lib/src/pages/implementations/home_video_page.dart'),
       greaterThanOrEqualTo(5),
-      reason: '视频首页标题溢出 Tooltip 接线（TODO-2490/2486）不得少于 5 处：'
+      reason:
+          '视频首页标题溢出 Tooltip 接线（TODO-2490/2486）不得少于 5 处：'
           '合集卡、远端卡、本地卡、hero 轮播标题、横滚行卡',
     );
   });
@@ -44,7 +45,8 @@ void main() {
     expect(
       countIn('lib/src/pages/implementations/galgame_home_page.dart'),
       greaterThanOrEqualTo(3),
-      reason: '游戏首页 hero、随机游戏卡、活动时间轴三处标题必须接 '
+      reason:
+          '游戏首页 hero、随机游戏卡、活动时间轴三处标题必须接 '
           'ShelfTitleOverflowTooltip',
     );
   });

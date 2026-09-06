@@ -32,10 +32,12 @@ void main() {
         sourceId: Value<int?>(sourceId),
       ),
     );
-    final SourceLibraryRow source =
-        (await database.getMediaSourceById(sourceId))!;
-    final VideoBookRow book =
-        (await database.getVideoBookByBookUid('movie-1'))!;
+    final SourceLibraryRow source = (await database.getMediaSourceById(
+      sourceId,
+    ))!;
+    final VideoBookRow book = (await database.getVideoBookByBookUid(
+      'movie-1',
+    ))!;
     localWork = VideoSourceScrapeWork(
       source: source,
       title: book.title,
@@ -71,29 +73,27 @@ void main() {
       },
     );
 
-    final PersistedVideoMetadata second =
-        await store.apply(localWork, metadata);
+    final PersistedVideoMetadata second = await store.apply(
+      localWork,
+      metadata,
+    );
     await store.updateCanonicalImagePaths(
       persisted: second,
       metadata: metadata,
       localPathByRemoteUrl: const <String, String>{},
     );
 
-    final List<VideoMetadataImageRow> images =
-        await database.getVideoMetadataImages(workId: second.workId);
+    final List<VideoMetadataImageRow> images = await database
+        .getVideoMetadataImages(workId: second.workId);
     expect(
       images
-          .singleWhere(
-            (VideoMetadataImageRow row) => row.kind == 'cover',
-          )
+          .singleWhere((VideoMetadataImageRow row) => row.kind == 'cover')
           .localPath,
       'D:/Movies/Example Movie (2025)-poster.jpg',
     );
     expect(
       images
-          .singleWhere(
-            (VideoMetadataImageRow row) => row.kind == 'backdrop',
-          )
+          .singleWhere((VideoMetadataImageRow row) => row.kind == 'backdrop')
           .localPath,
       isNull,
     );
@@ -113,25 +113,27 @@ void main() {
     expect(
       (await database.getVideoMetadataImages(
         workId: changedProvider.workId,
-      ))
-          .single
-          .localPath,
+      )).single.localPath,
       isNull,
       reason: '相同 URL 但不同 provider 的图片不能继承旧资产路径',
     );
   });
 
   test('混来源合集交替刮削时保留另一来源已绑定的分集', () async {
-    final (SourceLibraryRow sourceA, VideoBookRow episode1) =
-        await _addSourceEpisode(
+    final (
+      SourceLibraryRow sourceA,
+      VideoBookRow episode1,
+    ) = await _addSourceEpisode(
       database,
       sourceLabel: 'Source A',
       sourceRoot: 'D:/A',
       bookUid: 'show-a-e1',
       videoPath: 'D:/A/Show/Show S01E01.mkv',
     );
-    final (SourceLibraryRow sourceB, VideoBookRow episode2) =
-        await _addSourceEpisode(
+    final (
+      SourceLibraryRow sourceB,
+      VideoBookRow episode2,
+    ) = await _addSourceEpisode(
       database,
       sourceLabel: 'Source B',
       sourceRoot: 'D:/B',
@@ -152,8 +154,8 @@ void main() {
       MediaKind.video,
       episode2.bookUid,
     );
-    final MediaCollectionRow collection =
-        (await database.getMediaCollectionById(collectionId))!;
+    final MediaCollectionRow collection = (await database
+        .getMediaCollectionById(collectionId))!;
     final VideoSourceScrapeWork workA = VideoSourceScrapeWork(
       source: sourceA,
       collection: collection,
@@ -170,9 +172,7 @@ void main() {
       provider: VideoMetadataProviderKind.tmdb,
       kind: VideoMetadataMediaKind.tv,
       title: 'Show',
-      ids: const <VideoMetadataId>[
-        VideoMetadataId(type: 'tmdb', value: '100'),
-      ],
+      ids: const <VideoMetadataId>[VideoMetadataId(type: 'tmdb', value: '100')],
       seasons: <VideoMetadataSeason>[
         VideoMetadataSeason(
           seasonNumber: 1,
@@ -195,31 +195,33 @@ void main() {
 
     await store.apply(workA, metadata);
     await store.apply(workB, metadata);
-    await _expectEpisodeBindings(
-      database,
-      collectionId,
-      const <int, String?>{1: 'show-a-e1', 2: 'show-b-e2'},
-    );
+    await _expectEpisodeBindings(database, collectionId, const <int, String?>{
+      1: 'show-a-e1',
+      2: 'show-b-e2',
+    });
 
     await store.apply(workA, metadata);
-    await _expectEpisodeBindings(
-      database,
-      collectionId,
-      const <int, String?>{1: 'show-a-e1', 2: 'show-b-e2'},
-    );
+    await _expectEpisodeBindings(database, collectionId, const <int, String?>{
+      1: 'show-a-e1',
+      2: 'show-b-e2',
+    });
   });
 
   test('同一 bookUid 重链到新季集前解除旧绑定且保留另一来源成员', () async {
-    final (SourceLibraryRow sourceA, VideoBookRow movingEpisode) =
-        await _addSourceEpisode(
+    final (
+      SourceLibraryRow sourceA,
+      VideoBookRow movingEpisode,
+    ) = await _addSourceEpisode(
       database,
       sourceLabel: 'Source A',
       sourceRoot: 'D:/A',
       bookUid: 'moving-episode',
       videoPath: 'D:/A/Show/Show S01E01.mkv',
     );
-    final (SourceLibraryRow sourceB, VideoBookRow otherEpisode) =
-        await _addSourceEpisode(
+    final (
+      SourceLibraryRow sourceB,
+      VideoBookRow otherEpisode,
+    ) = await _addSourceEpisode(
       database,
       sourceLabel: 'Source B',
       sourceRoot: 'D:/B',
@@ -240,8 +242,8 @@ void main() {
       MediaKind.video,
       otherEpisode.bookUid,
     );
-    final MediaCollectionRow collection =
-        (await database.getMediaCollectionById(collectionId))!;
+    final MediaCollectionRow collection = (await database
+        .getMediaCollectionById(collectionId))!;
     final VideoMetadataWork metadata = _tvMetadata(
       seasons: <VideoMetadataSeason>[
         VideoMetadataSeason(
@@ -288,11 +290,13 @@ void main() {
     await store.apply(workA, metadata);
     await store.apply(workB, metadata);
 
-    await database.upsertVideoBook(VideoBooksCompanion(
-      bookUid: const Value<String>('moving-episode'),
-      title: const Value<String>('moving-episode'),
-      videoPath: const Value<String>('D:/A/Show/Show S02E03.mkv'),
-    ));
+    await database.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: const Value<String>('moving-episode'),
+        title: const Value<String>('moving-episode'),
+        videoPath: const Value<String>('D:/A/Show/Show S02E03.mkv'),
+      ),
+    );
     workA = VideoSourceScrapeWork(
       source: sourceA,
       collection: collection,
@@ -316,8 +320,10 @@ void main() {
   });
 
   test('合集刮削会迁移成员遗留的单视频规范 work', () async {
-    final (SourceLibraryRow source, VideoBookRow episode1) =
-        await _addSourceEpisode(
+    final (
+      SourceLibraryRow source,
+      VideoBookRow episode1,
+    ) = await _addSourceEpisode(
       database,
       sourceLabel: 'Series source',
       sourceRoot: 'D:/Series',
@@ -360,11 +366,17 @@ void main() {
       collectionType: 'playlist',
     );
     await database.addToCollection(
-        collectionId, MediaKind.video, episode1.bookUid);
+      collectionId,
+      MediaKind.video,
+      episode1.bookUid,
+    );
     await database.addToCollection(
-        collectionId, MediaKind.video, episode2.bookUid);
-    final MediaCollectionRow collection =
-        (await database.getMediaCollectionById(collectionId))!;
+      collectionId,
+      MediaKind.video,
+      episode2.bookUid,
+    );
+    final MediaCollectionRow collection = (await database
+        .getMediaCollectionById(collectionId))!;
 
     await store.apply(
       VideoSourceScrapeWork(
@@ -404,8 +416,10 @@ void main() {
   });
 
   test('非权威季集响应只补写且不删除旧完整季集', () async {
-    final (SourceLibraryRow source, VideoBookRow episode1) =
-        await _addSourceEpisode(
+    final (
+      SourceLibraryRow source,
+      VideoBookRow episode1,
+    ) = await _addSourceEpisode(
       database,
       sourceLabel: 'Series source',
       sourceRoot: 'D:/Series',
@@ -424,11 +438,17 @@ void main() {
       collectionType: 'playlist',
     );
     await database.addToCollection(
-        collectionId, MediaKind.video, episode1.bookUid);
+      collectionId,
+      MediaKind.video,
+      episode1.bookUid,
+    );
     await database.addToCollection(
-        collectionId, MediaKind.video, episode2.bookUid);
-    final MediaCollectionRow collection =
-        (await database.getMediaCollectionById(collectionId))!;
+      collectionId,
+      MediaKind.video,
+      episode2.bookUid,
+    );
+    final MediaCollectionRow collection = (await database
+        .getMediaCollectionById(collectionId))!;
     final VideoSourceScrapeWork work = VideoSourceScrapeWork(
       source: source,
       collection: collection,
@@ -501,15 +521,17 @@ void main() {
       seasonEpisodesAuthoritative: false,
     );
 
-    final VideoMetadataWorkRow stored =
-        (await database.getVideoMetadataWorkByCollection(collectionId))!;
-    final List<VideoMetadataSeasonRow> seasons =
-        await database.getVideoMetadataSeasons(stored.id);
-    expect(seasons.map((VideoMetadataSeasonRow row) => row.seasonNumber),
-        <int>[1, 2]);
+    final VideoMetadataWorkRow stored = (await database
+        .getVideoMetadataWorkByCollection(collectionId))!;
+    final List<VideoMetadataSeasonRow> seasons = await database
+        .getVideoMetadataSeasons(stored.id);
+    expect(seasons.map((VideoMetadataSeasonRow row) => row.seasonNumber), <int>[
+      1,
+      2,
+    ]);
     expect(seasons.first.overview, '完整季简介');
-    final List<VideoMetadataEpisodeRow> season1 =
-        await database.getVideoMetadataEpisodes(seasons.first.id);
+    final List<VideoMetadataEpisodeRow> season1 = await database
+        .getVideoMetadataEpisodes(seasons.first.id);
     expect(
       season1.map((VideoMetadataEpisodeRow row) => row.episodeNumber),
       <int>[1, 2],
@@ -584,8 +606,9 @@ void main() {
       ),
     );
 
-    final VideoMetadataWorkRow work =
-        (await database.getVideoMetadataWorkById(persisted.workId))!;
+    final VideoMetadataWorkRow work = (await database.getVideoMetadataWorkById(
+      persisted.workId,
+    ))!;
     expect(work.tagline, 'Tagline');
     expect(work.endDate, '2026-12-31');
     expect(work.status, 'Ended');
@@ -605,15 +628,15 @@ void main() {
     expect(credit.department, 'Acting');
     expect(credit.job, 'Voice');
     expect(credit.providerCreditId, 'credit-1');
-    final VideoMetadataPersonRow person =
-        (await database.getVideoMetadataPerson(credit.personKey))!;
+    final VideoMetadataPersonRow person = (await database
+        .getVideoMetadataPerson(credit.personKey))!;
     expect(person.biography, 'Biography');
     expect(person.birthday, '1990-01-01');
     expect(person.deathday, '2050-01-01');
     expect(person.gender, 2);
     expect(person.placeOfBirth, 'Tokyo');
-    final VideoMetadataCharacterRow character =
-        (await database.getVideoMetadataCharacter(credit.characterKey!))!;
+    final VideoMetadataCharacterRow character = (await database
+        .getVideoMetadataCharacter(credit.characterKey!))!;
     expect(character.description, 'Character description');
   });
 
@@ -621,17 +644,15 @@ void main() {
     final VideoMetadataWork metadata = _tmdbMetadata(
       episodeGroupId: 'group-42',
       ids: const <VideoMetadataId>[
-        VideoMetadataId(
-          type: 'imdb',
-          value: 'tt1234567',
-          isDefault: true,
-        ),
+        VideoMetadataId(type: 'imdb', value: 'tt1234567', isDefault: true),
         VideoMetadataId(type: 'tmdb', value: '42'),
       ],
     );
 
-    final PersistedVideoMetadata persisted =
-        await store.apply(localWork, metadata);
+    final PersistedVideoMetadata persisted = await store.apply(
+      localWork,
+      metadata,
+    );
     final List<VideoMetadataProviderIdentityRow> identities = await database
         .getVideoMetadataProviderIdentities(workId: persisted.workId);
 
@@ -641,14 +662,16 @@ void main() {
           .map((VideoMetadataProviderIdentityRow row) => row.provider),
       <String>['tmdb'],
     );
-    final VideoMetadataLookup lookup =
-        (await store.confirmedLookup(localWork))!;
+    final VideoMetadataLookup lookup = (await store.confirmedLookup(
+      localWork,
+    ))!;
     expect(lookup.provider, VideoMetadataProviderKind.tmdb);
     expect(lookup.externalId, '42');
     expect(lookup.mediaKind, VideoMetadataMediaKind.movie);
     expect(lookup.episodeGroupId, 'group-42');
-    final VideoScrapeMetaRow legacy =
-        (await database.getVideoScrapeMeta('movie-1'))!;
+    final VideoScrapeMetaRow legacy = (await database.getVideoScrapeMeta(
+      'movie-1',
+    ))!;
     expect(legacy.subjectId, '42');
     expect(legacy.detailUrl, 'https://www.themoviedb.org/movie/42');
   });
@@ -718,19 +741,17 @@ Future<void> _expectEpisodeBindings(
   int collectionId,
   Map<int, String?> expected,
 ) async {
-  final VideoMetadataWorkRow work =
-      (await database.getVideoMetadataWorkByCollection(collectionId))!;
-  final VideoMetadataSeasonRow season =
-      (await database.getVideoMetadataSeasons(work.id)).single;
-  final List<VideoMetadataEpisodeRow> episodes =
-      await database.getVideoMetadataEpisodes(season.id);
-  expect(
-    <int, String?>{
-      for (final VideoMetadataEpisodeRow row in episodes)
-        row.episodeNumber: row.bookUid,
-    },
-    expected,
-  );
+  final VideoMetadataWorkRow work = (await database
+      .getVideoMetadataWorkByCollection(collectionId))!;
+  final VideoMetadataSeasonRow season = (await database.getVideoMetadataSeasons(
+    work.id,
+  )).single;
+  final List<VideoMetadataEpisodeRow> episodes = await database
+      .getVideoMetadataEpisodes(season.id);
+  expect(<int, String?>{
+    for (final VideoMetadataEpisodeRow row in episodes)
+      row.episodeNumber: row.bookUid,
+  }, expected);
 }
 
 Future<void> _expectSeasonEpisodeBindings(
@@ -738,8 +759,8 @@ Future<void> _expectSeasonEpisodeBindings(
   int collectionId,
   Map<(int, int), String?> expected,
 ) async {
-  final VideoMetadataWorkRow work =
-      (await database.getVideoMetadataWorkByCollection(collectionId))!;
+  final VideoMetadataWorkRow work = (await database
+      .getVideoMetadataWorkByCollection(collectionId))!;
   final Map<(int, int), String?> actual = <(int, int), String?>{};
   for (final VideoMetadataSeasonRow season
       in await database.getVideoMetadataSeasons(work.id)) {
@@ -751,16 +772,12 @@ Future<void> _expectSeasonEpisodeBindings(
   expect(actual, expected);
 }
 
-VideoMetadataWork _tvMetadata({
-  required List<VideoMetadataSeason> seasons,
-}) =>
+VideoMetadataWork _tvMetadata({required List<VideoMetadataSeason> seasons}) =>
     VideoMetadataWork(
       provider: VideoMetadataProviderKind.tmdb,
       kind: VideoMetadataMediaKind.tv,
       title: 'Show',
-      ids: const <VideoMetadataId>[
-        VideoMetadataId(type: 'tmdb', value: '100'),
-      ],
+      ids: const <VideoMetadataId>[VideoMetadataId(type: 'tmdb', value: '100')],
       seasons: seasons,
     );
 
@@ -770,13 +787,12 @@ VideoMetadataWork _tmdbMetadata({
   ],
   List<VideoMetadataImage> images = const <VideoMetadataImage>[],
   String? episodeGroupId,
-}) =>
-    VideoMetadataWork(
-      provider: VideoMetadataProviderKind.tmdb,
-      kind: VideoMetadataMediaKind.movie,
-      title: 'Example Movie',
-      year: 2025,
-      episodeGroupId: episodeGroupId,
-      ids: ids,
-      images: images,
-    );
+}) => VideoMetadataWork(
+  provider: VideoMetadataProviderKind.tmdb,
+  kind: VideoMetadataMediaKind.movie,
+  title: 'Example Movie',
+  year: 2025,
+  episodeGroupId: episodeGroupId,
+  ids: ids,
+  images: images,
+);

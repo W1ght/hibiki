@@ -9,8 +9,8 @@ class JimakuVideoSubtitleProvider implements VideoSubtitleProvider {
     required JimakuClient client,
     this.priority = 100,
     bool closesClient = false,
-  })  : _client = client,
-        _closesClient = closesClient;
+  }) : _client = client,
+       _closesClient = closesClient;
 
   final JimakuClient _client;
   final bool _closesClient;
@@ -90,7 +90,6 @@ class JimakuVideoSubtitleProvider implements VideoSubtitleProvider {
   }
 
   @override
-
   /// Jimaku 无下载配额概念，允许为语言标签白下一次。
   @override
   bool get allowsFreeProbeDownload => true;
@@ -145,8 +144,7 @@ JimakuAnimeFilter _animeFilterFor(VideoSubtitleSearchRequest request) {
   return switch (request.media?.discoveryCategory) {
     VideoDiscoveryCategory.anime => JimakuAnimeFilter.anime,
     VideoDiscoveryCategory.movie ||
-    VideoDiscoveryCategory.tv =>
-      JimakuAnimeFilter.liveAction,
+    VideoDiscoveryCategory.tv => JimakuAnimeFilter.liveAction,
     null => JimakuAnimeFilter.either,
   };
 }
@@ -159,19 +157,19 @@ class _JimakuSubtitleCandidate extends VideoSubtitleCandidate {
     required int? season,
     required int providerPriority,
   }) : super(
-          providerId: 'jimaku',
-          remoteId: '${entry.id}:${file.name}',
-          fileName: file.name,
-          language: language,
-          providerPriority: providerPriority,
-          releaseName: entry.name,
-          season: season,
-          episode: file.episode,
-          fileSize: file.size,
-          uploadedAtMs: file.lastModifiedMs,
-          collectionId: '${entry.id}',
-          collectionLabel: entry.name,
-        );
+         providerId: 'jimaku',
+         remoteId: '${entry.id}:${file.name}',
+         fileName: file.name,
+         language: language,
+         providerPriority: providerPriority,
+         releaseName: entry.name,
+         season: season,
+         episode: file.episode,
+         fileSize: file.size,
+         uploadedAtMs: file.lastModifiedMs,
+         collectionId: '${entry.id}',
+         collectionLabel: entry.name,
+       );
 
   final JimakuEntry entry;
   final JimakuFile file;
@@ -193,9 +191,10 @@ ExternalProviderFailure _jimakuFailure(String operation, Object error) {
       401 => ExternalProviderFailureKind.unauthorized,
       403 => ExternalProviderFailureKind.forbidden,
       429 => ExternalProviderFailureKind.rateLimited,
-      _ => status == null
-          ? ExternalProviderFailureKind.invalidResponse
-          : ExternalProviderFailureKind.unavailable,
+      _ =>
+        status == null
+            ? ExternalProviderFailureKind.invalidResponse
+            : ExternalProviderFailureKind.unavailable,
     },
     message: status == null
         ? 'Jimaku returned an invalid response'

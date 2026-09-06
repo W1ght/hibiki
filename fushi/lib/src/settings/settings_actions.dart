@@ -18,22 +18,16 @@ Future<void> pushSettingsPage(
   SettingsContext settingsContext,
   WidgetBuilder builder,
 ) async {
-  await Navigator.of(settingsContext.context).push(
-    adaptivePageRoute(
-      context: settingsContext.context,
-      builder: builder,
-    ),
-  );
+  await Navigator.of(
+    settingsContext.context,
+  ).push(adaptivePageRoute(context: settingsContext.context, builder: builder));
 }
 
 Future<void> showSettingsDialog(
   SettingsContext settingsContext,
   WidgetBuilder builder,
 ) async {
-  await showAppDialog(
-    context: settingsContext.context,
-    builder: builder,
-  );
+  await showAppDialog(context: settingsContext.context, builder: builder);
 }
 
 Future<bool> showSettingsConfirmationDialog(
@@ -180,8 +174,9 @@ Widget buildDesignSystemSelector(SettingsContext settingsContext) {
   final String persisted = settingsContext.appModel.themeNotifier.designSystem;
   // 分段控件要求 selected 必须落在 segments 内；这里保留防御性钳制，持久层的
   // Apple / 未知旧值已由 ThemeNotifier 迁移为 auto。
-  final String selected =
-      visibleValues.contains(persisted) ? persisted : 'auto';
+  final String selected = visibleValues.contains(persisted)
+      ? persisted
+      : 'auto';
   return AdaptiveSettingsSegmentedRow<String>(
     title: t.design_system_label,
     subtitle: t.design_system_hint,
@@ -207,10 +202,12 @@ Widget buildDesignSystemSelector(SettingsContext settingsContext) {
 }
 
 Widget buildProfilePickerRow(SettingsContext settingsContext) {
-  final ProfileUiState uiState =
-      settingsContext.ref.watch(profileViewModelProvider);
-  final ProfileViewModel viewModel =
-      settingsContext.ref.read(profileViewModelProvider.notifier);
+  final ProfileUiState uiState = settingsContext.ref.watch(
+    profileViewModelProvider,
+  );
+  final ProfileViewModel viewModel = settingsContext.ref.read(
+    profileViewModelProvider.notifier,
+  );
 
   if (uiState.isLoading || uiState.profiles.isEmpty) {
     return AdaptiveSettingsRow(
@@ -227,9 +224,10 @@ Widget buildProfilePickerRow(SettingsContext settingsContext) {
     );
   }
 
-  final int activeId = uiState.profiles.any(
-    (ProfileRow profile) => profile.id == uiState.activeProfileId,
-  )
+  final int activeId =
+      uiState.profiles.any(
+        (ProfileRow profile) => profile.id == uiState.activeProfileId,
+      )
       ? uiState.activeProfileId
       : uiState.profiles.first.id;
 
@@ -247,9 +245,9 @@ Widget buildProfilePickerRow(SettingsContext settingsContext) {
     onChanged: (int profileId) {
       if (profileId == activeId) return;
       unawaited(
-        viewModel.switchProfile(profileId).then<void>(
-              (_) => settingsContext.refresh(),
-            ),
+        viewModel
+            .switchProfile(profileId)
+            .then<void>((_) => settingsContext.refresh()),
       );
     },
   );
@@ -285,8 +283,9 @@ Widget buildThemeSelector(SettingsContext settingsContext) {
   final AppModel appModel = settingsContext.appModel;
   final Color systemColor =
       appModel.systemPrimaryColor ?? const Color(0xFF1F4959);
-  final FushiDesignTokens tokens =
-      FushiDesignTokens.of(settingsContext.context);
+  final FushiDesignTokens tokens = FushiDesignTokens.of(
+    settingsContext.context,
+  );
   // BUG-1894: 行尾「编辑」按钮的目标只能是**当前活跃的自定义主题**。解析一次放在
   // 这里，既给按钮的 onTap 用，也给它的 enabled 门用——两者必须读同一个值，否则
   // 又会长出「按钮亮着但没有目标」的状态。
@@ -320,32 +319,29 @@ Widget buildThemeSelector(SettingsContext settingsContext) {
             notifyReaderSettingsChanged(settingsContext);
           },
         ),
-        ...AppModel.themePresets.entries.map(
-          (MapEntry<
-                  String,
-                  ({
-                    Color seed,
-                    Brightness brightness,
-                    DynamicSchemeVariant variant
-                  })>
-              entry) {
-            return FushiSchemeSwatch(
-              colors: fushiSchemeSwatchColors(
-                buildFushiColorScheme(
-                  seedColor: entry.value.seed,
-                  brightness: entry.value.brightness,
-                  variant: entry.value.variant,
-                ),
+        ...AppModel.themePresets.entries.map((
+          MapEntry<
+            String,
+            ({Color seed, Brightness brightness, DynamicSchemeVariant variant})
+          >
+          entry,
+        ) {
+          return FushiSchemeSwatch(
+            colors: fushiSchemeSwatchColors(
+              buildFushiColorScheme(
+                seedColor: entry.value.seed,
+                brightness: entry.value.brightness,
+                variant: entry.value.variant,
               ),
-              size: _swatchSize,
-              selected: appModel.appThemeKey == entry.key,
-              onTap: () async {
-                await appModel.setAppThemeKey(entry.key);
-                notifyReaderSettingsChanged(settingsContext);
-              },
-            );
-          },
-        ),
+            ),
+            size: _swatchSize,
+            selected: appModel.appThemeKey == entry.key,
+            onTap: () async {
+              await appModel.setAppThemeKey(entry.key);
+              notifyReaderSettingsChanged(settingsContext);
+            },
+          );
+        }),
         // TODO-930 M1: 每个自定义主题一个 swatch。单击=切换到该主题
         // （写 app_theme_key=custom-theme:<id>），长按=进编辑页编辑该主题。
         // 预览圈读各 entry 的种子+角色色 + 当前真实全局明暗（自定义主题跟随
@@ -359,21 +355,26 @@ Widget buildThemeSelector(SettingsContext settingsContext) {
             colors: fushiSchemeSwatchColors(
               buildFushiColorScheme(
                 seedColor: Color(e.seed),
-                brightness:
-                    appModel.isDarkMode ? Brightness.dark : Brightness.light,
+                brightness: appModel.isDarkMode
+                    ? Brightness.dark
+                    : Brightness.light,
                 primary: e.primaryColor != null ? Color(e.primaryColor!) : null,
-                secondary:
-                    e.secondaryColor != null ? Color(e.secondaryColor!) : null,
-                tertiary:
-                    e.tertiaryColor != null ? Color(e.tertiaryColor!) : null,
-                primaryContainer:
-                    e.containerColor != null ? Color(e.containerColor!) : null,
+                secondary: e.secondaryColor != null
+                    ? Color(e.secondaryColor!)
+                    : null,
+                tertiary: e.tertiaryColor != null
+                    ? Color(e.tertiaryColor!)
+                    : null,
+                primaryContainer: e.containerColor != null
+                    ? Color(e.containerColor!)
+                    : null,
               ),
             ),
             size: _swatchSize,
             // 选中 = 当前 app_theme_key 指向这个 entry（精确 custom-theme:<id>，
             // 或裸 custom-theme 解析到的当前活跃 entry）。
-            selected: appModel.appThemeKey == key ||
+            selected:
+                appModel.appThemeKey == key ||
                 (appModel.appThemeKey == 'custom-theme' &&
                     appModel.activeCustomThemeEntry?.id == e.id),
             onTap: () async {
@@ -397,8 +398,9 @@ Widget buildThemeSelector(SettingsContext settingsContext) {
           colors: fushiSchemeSwatchColors(
             buildFushiColorScheme(
               seedColor: const Color(kCustomThemeDefaultSeed),
-              brightness:
-                  appModel.isDarkMode ? Brightness.dark : Brightness.light,
+              brightness: appModel.isDarkMode
+                  ? Brightness.dark
+                  : Brightness.light,
             ),
           ),
           size: _swatchSize,

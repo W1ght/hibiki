@@ -45,8 +45,8 @@ SettingsDestination buildServicesDestination() {
             searchTitle: 'Jimaku · ${t.video_opensubtitles_settings_title}',
             builder: (SettingsContext settingsContext) =>
                 const VideoExternalProviderSettingsSection(
-              scope: VideoExternalProviderScope.subtitleSources,
-            ),
+                  scope: VideoExternalProviderScope.subtitleSources,
+                ),
           ),
         ],
       ),
@@ -57,12 +57,13 @@ SettingsDestination buildServicesDestination() {
         items: <SettingsItem>[
           SettingsCustomItem(
             id: 'services.resource_sources',
-            searchTitle: '${t.video_builtin_sources_title} · '
+            searchTitle:
+                '${t.video_builtin_sources_title} · '
                 '${t.video_torznab_settings_title}',
             builder: (SettingsContext settingsContext) =>
                 const VideoExternalProviderSettingsSection(
-              scope: VideoExternalProviderScope.resourceSources,
-            ),
+                  scope: VideoExternalProviderScope.resourceSources,
+                ),
           ),
           SettingsCustomItem(
             id: 'services.discovery_sources',
@@ -89,10 +90,12 @@ SettingsDestination buildServicesDestination() {
             title: t.video_source_scrape_anidb_client,
             subtitle: t.video_source_scrape_anidb_client_hint,
             icon: Icons.badge_outlined,
-            value: (SettingsContext settingsContext) => settingsContext
-                .appModel.prefsRepo
-                .getPref(kVideoMetadataAniDbClientNamePref,
-                    defaultValue: '') as String,
+            value: (SettingsContext settingsContext) =>
+                settingsContext.appModel.prefsRepo.getPref(
+                      kVideoMetadataAniDbClientNamePref,
+                      defaultValue: '',
+                    )
+                    as String,
             onChanged: (SettingsContext settingsContext, String value) async {
               await commitVideoMetadataRuntimePreference(
                 settingsContext,
@@ -109,9 +112,10 @@ SettingsDestination buildServicesDestination() {
             placeholder: '1',
             value: (SettingsContext settingsContext) =>
                 settingsContext.appModel.prefsRepo.getPref(
-              kVideoMetadataAniDbClientVersionPref,
-              defaultValue: '',
-            ) as String,
+                      kVideoMetadataAniDbClientVersionPref,
+                      defaultValue: '',
+                    )
+                    as String,
             onChanged: (SettingsContext settingsContext, String value) async {
               await commitVideoMetadataRuntimePreference(
                 settingsContext,
@@ -133,16 +137,18 @@ SettingsDestination buildServicesDestination() {
             subtitle: t.video_setting_tmdb_key_hint,
             icon: Icons.key_outlined,
             secret: true,
-            value: (SettingsContext settingsContext) => settingsContext
-                    .appModel.prefsRepo
-                    .getPref(kVideoScraperTmdbApiKeyPref, defaultValue: '')
-                as String,
+            value: (SettingsContext settingsContext) =>
+                settingsContext.appModel.prefsRepo.getPref(
+                      kVideoScraperTmdbApiKeyPref,
+                      defaultValue: '',
+                    )
+                    as String,
             onChanged: (SettingsContext settingsContext, String value) =>
                 commitVideoMetadataRuntimePreference(
-              settingsContext,
-              kVideoScraperTmdbApiKeyPref,
-              value,
-            ),
+                  settingsContext,
+                  kVideoScraperTmdbApiKeyPref,
+                  value,
+                ),
           ),
         ],
       ),

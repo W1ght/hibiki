@@ -113,10 +113,14 @@ LetterboxTransform computeLetterbox(
 Float32List rtdetrPreprocess(img.Image source, LetterboxTransform transform) {
   final int dstW = transform.dstWidth;
   final int dstH = transform.dstHeight;
-  final int scaledW =
-      (transform.srcWidth * transform.scaleX).round().clamp(1, dstW);
-  final int scaledH =
-      (transform.srcHeight * transform.scaleY).round().clamp(1, dstH);
+  final int scaledW = (transform.srcWidth * transform.scaleX).round().clamp(
+    1,
+    dstW,
+  );
+  final int scaledH = (transform.srcHeight * transform.scaleY).round().clamp(
+    1,
+    dstH,
+  );
 
   img.Image canvas;
   final img.Image resized = img.copyResize(
@@ -242,11 +246,7 @@ List<RawDetection> decodeProcessedRtdetrOutputs({
       continue;
     }
     detections.add(
-      RawDetection(
-        rect: rect,
-        score: score,
-        classId: labels[i].round(),
-      ),
+      RawDetection(rect: rect, score: score, classId: labels[i].round()),
     );
   }
   return detections;
@@ -287,14 +287,17 @@ PageDetections buildPageDetections(List<RawDetection> detections) {
     if (d.classId != kDetClassTextBubble && d.classId != kDetClassTextFree) {
       continue;
     }
-    final bool inside = bubbles
-        .any((OcrRect b) => b.containsPoint(d.rect.centerX, d.rect.centerY));
-    textRegions.add(DetectedTextRegion(
-      rect: d.rect,
-      score: d.score,
-      classId: d.classId,
-      insideBubble: inside,
-    ));
+    final bool inside = bubbles.any(
+      (OcrRect b) => b.containsPoint(d.rect.centerX, d.rect.centerY),
+    );
+    textRegions.add(
+      DetectedTextRegion(
+        rect: d.rect,
+        score: d.score,
+        classId: d.classId,
+        insideBubble: inside,
+      ),
+    );
   }
   return PageDetections(textRegions: textRegions, bubbles: bubbles);
 }
@@ -330,18 +333,20 @@ class TextDetector implements OcrDetector {
       preserveAspect: preserveAspect,
     );
     final Float32List input = rtdetrPreprocess(page, transform);
-    final Map<String, OcrTensor> outputs =
-        await _session.run(<String, OcrTensor>{
-      inputName: OcrTensor.float32(
-          input, <int>[1, 3, transform.dstHeight, transform.dstWidth]),
-      'orig_target_sizes': OcrTensor.int64(
-        Int64List.fromList(<int>[
+    final Map<String, OcrTensor> outputs = await _session.run(
+      <String, OcrTensor>{
+        inputName: OcrTensor.float32(input, <int>[
+          1,
+          3,
           transform.dstHeight,
           transform.dstWidth,
         ]),
-        const <int>[1, 2],
-      ),
-    });
+        'orig_target_sizes': OcrTensor.int64(
+          Int64List.fromList(<int>[transform.dstHeight, transform.dstWidth]),
+          const <int>[1, 2],
+        ),
+      },
+    );
     final OcrTensor? logits = outputs[logitsName];
     final OcrTensor? rawBoxes = outputs[boxesName];
     final OcrTensor? scores = outputs['scores'];
@@ -369,8 +374,9 @@ class TextDetector implements OcrDetector {
       );
     } else {
       throw StateError(
-          'detector outputs missing: got ${outputs.keys.toList()}, '
-          'expected [$logitsName, $boxesName] or [scores, labels, boxes]');
+        'detector outputs missing: got ${outputs.keys.toList()}, '
+        'expected [$logitsName, $boxesName] or [scores, labels, boxes]',
+      );
     }
     return buildPageDetections(applyClassAwareNms(raw));
   }

@@ -8,25 +8,27 @@ import 'reader_fushi_page_source_corpus.dart';
 void main() {
   String read(String path) => File(path).readAsStringSync();
 
-  test('reader JavaScript routes image context menu and long press to Dart',
-      () {
-    final String source = readReaderPageSource();
-    final String js = _functionSource(
-      source,
-      'function _fushiBlockImageUrl(target)',
-      'window.fushiProgressDetails',
-    );
+  test(
+    'reader JavaScript routes image context menu and long press to Dart',
+    () {
+      final String source = readReaderPageSource();
+      final String js = _functionSource(
+        source,
+        'function _fushiBlockImageUrl(target)',
+        'window.fushiProgressDetails',
+      );
 
-    expect(js, contains("document.addEventListener('contextmenu'"));
-    expect(js, contains("'onImageContextMenu'"));
-    expect(js, contains('e.preventDefault()'));
-    expect(js, contains("document.addEventListener('touchstart'"));
-    expect(js, contains('setTimeout'));
-    expect(js, contains("callHandler('onImageLongPress'"));
-    expect(js, contains('clearImageLongPressTimer'));
-    expect(js, contains('imageLongPressConsumed'));
-    expect(js, contains('_fushiBlockImageUrl(e.target'));
-  });
+      expect(js, contains("document.addEventListener('contextmenu'"));
+      expect(js, contains("'onImageContextMenu'"));
+      expect(js, contains('e.preventDefault()'));
+      expect(js, contains("document.addEventListener('touchstart'"));
+      expect(js, contains('setTimeout'));
+      expect(js, contains("callHandler('onImageLongPress'"));
+      expect(js, contains('clearImageLongPressTimer'));
+      expect(js, contains('imageLongPressConsumed'));
+      expect(js, contains('_fushiBlockImageUrl(e.target'));
+    },
+  );
 
   test('reader resolves fushi.local image URLs to files before actions', () {
     final String source = readReaderPageSource();
@@ -81,8 +83,11 @@ void main() {
     // 菜单上 → 视觉尺寸 scale²（实测 scale=2 时 chrome 文字 40px、菜单 80px）。
     // 现在菜单尺寸一律写常量，"随界面大小缩放"由它所在的画布负责。
     // 真行为断言见 test/pages/context_menu_ui_scale_guard_test.dart。
-    expect(source, isNot(contains('double get _readerImageMenuScale')),
-        reason: '双重缩放根源的 getter 必须保持删除状态');
+    expect(
+      source,
+      isNot(contains('double get _readerImageMenuScale')),
+      reason: '双重缩放根源的 getter 必须保持删除状态',
+    );
 
     final String menu = _functionSource(
       source,
@@ -126,21 +131,23 @@ void main() {
     expect(menu, isNot(contains('webViewOffset *')));
   });
 
-  test('expanded reader image viewer exposes Windows right-click copy menu',
-      () {
-    final String source = readReaderPageSource();
-    final String viewer = _functionSource(
-      source,
-      'void _openImageViewer(String imgUrl)',
-      'void _toggleChrome(',
-    );
+  test(
+    'expanded reader image viewer exposes Windows right-click copy menu',
+    () {
+      final String source = readReaderPageSource();
+      final String viewer = _functionSource(
+        source,
+        'void _openImageViewer(String imgUrl)',
+        'void _toggleChrome(',
+      );
 
-    expect(viewer, contains('_readerImageFileForUrl(imgUrl)'));
-    expect(viewer, contains('ContextMenuTrigger('));
-    expect(viewer, contains('isWindowsPlatform'));
-    expect(viewer, contains('(Offset position) => unawaited('));
-    expect(viewer, contains('_showReaderImageContextMenuAtGlobalPosition'));
-  });
+      expect(viewer, contains('_readerImageFileForUrl(imgUrl)'));
+      expect(viewer, contains('ContextMenuTrigger('));
+      expect(viewer, contains('isWindowsPlatform'));
+      expect(viewer, contains('(Offset position) => unawaited('));
+      expect(viewer, contains('_showReaderImageContextMenuAtGlobalPosition'));
+    },
+  );
 
   test('Windows runner registers a native image clipboard channel', () {
     final String constants = read('lib/src/utils/misc/channel_constants.dart');

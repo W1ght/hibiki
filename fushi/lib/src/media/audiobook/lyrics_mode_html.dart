@@ -29,8 +29,8 @@ class LyricsModeHtml {
       final String cls = dist == 0
           ? 'cue current'
           : dist <= 3
-              ? 'cue near-$dist'
-              : 'cue';
+          ? 'cue near-$dist'
+          : 'cue';
       cueHtml.write(
         '<div class="$cls" data-cue-index="$i" '
         'data-text-fragment-id="$fragId">'
@@ -54,14 +54,16 @@ class LyricsModeHtml {
     // 由 writing-mode 决定读序，无需翻 padding 值。
     final double padTop = vertical ? marginTop : 45 + marginTop;
     final double padBottom = vertical ? marginBottom : 45 + marginBottom;
-    final double padLeft =
-        vertical ? 45 + marginLeft : (marginLeft > 0 ? marginLeft : 2.5);
-    final double padRight =
-        vertical ? 45 + marginRight : (marginRight > 0 ? marginRight : 2.5);
+    final double padLeft = vertical
+        ? 45 + marginLeft
+        : (marginLeft > 0 ? marginLeft : 2.5);
+    final double padRight = vertical
+        ? 45 + marginRight
+        : (marginRight > 0 ? marginRight : 2.5);
     final String containerPaddingCss = vertical
         ? 'padding: ${padTop}vh ${padRight}vw ${padBottom}vh ${padLeft}vw;'
         : 'padding: calc(45vh + ${marginTop}vh) ${marginLeft > 0 ? marginLeft : 2.5}vw '
-            'calc(45vh + ${marginBottom}vh) ${marginRight > 0 ? marginRight : 2.5}vw;';
+              'calc(45vh + ${marginBottom}vh) ${marginRight > 0 ? marginRight : 2.5}vw;';
     // JS 端轴标记：true=竖排横滚（用 scrollBy 增量绕开 vertical-rl 负向 scrollX）。
     final String verticalJs = vertical ? 'true' : 'false';
     // TODO-908 / BUG-852：听力沉浸模糊。blur=true 时给 body 挂 `lyrics-blur` class，CSS

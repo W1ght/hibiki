@@ -64,16 +64,25 @@ void main() {
         for (int i = 0; i < 120 && !appModel.isInitialised; i++) {
           await tester.pump(const Duration(milliseconds: 500));
         }
-        expect(appModel.isInitialised, isTrue,
-            reason: 'AppModel must finish initialising');
+        expect(
+          appModel.isInitialised,
+          isTrue,
+          reason: 'AppModel must finish initialising',
+        );
 
         // 分页模式 + 振假名 toggle 模式：让双击既能触发原生选词，又能验证振假名切换。
-        await appModel.database
-            .setPref('src:reader_fushi:view_mode', 'pagination');
-        await appModel.database
-            .setPref('src:reader_fushi:writing_mode', 'horizontal-tb');
-        await appModel.database
-            .setPref('src:reader_fushi:furigana_mode', 'toggle');
+        await appModel.database.setPref(
+          'src:reader_fushi:view_mode',
+          'pagination',
+        );
+        await appModel.database.setPref(
+          'src:reader_fushi:writing_mode',
+          'horizontal-tb',
+        );
+        await appModel.database.setPref(
+          'src:reader_fushi:furigana_mode',
+          'toggle',
+        );
         await ReaderFushiSource.readerSettings?.refreshFromDb();
 
         final String bookKey = await EpubImporter.import(
@@ -94,21 +103,31 @@ void main() {
           canEdit: true,
         );
 
-        final NavigatorState navigator =
-            tester.state<NavigatorState>(find.byType(Navigator).first);
-        unawaited(navigator.push<void>(MaterialPageRoute<void>(
-          builder: (_) => source.buildLaunchPage(item: item),
-        )));
+        final NavigatorState navigator = tester.state<NavigatorState>(
+          find.byType(Navigator).first,
+        );
+        unawaited(
+          navigator.push<void>(
+            MaterialPageRoute<void>(
+              builder: (_) => source.buildLaunchPage(item: item),
+            ),
+          ),
+        );
         await tester.pump(const Duration(seconds: 3));
 
         const Key webViewKey = ValueKey<String>('fushi_webview');
-        for (int i = 0;
-            i < 80 && find.byKey(webViewKey).evaluate().isEmpty;
-            i++) {
+        for (
+          int i = 0;
+          i < 80 && find.byKey(webViewKey).evaluate().isEmpty;
+          i++
+        ) {
           await tester.pump(const Duration(milliseconds: 500));
         }
-        expect(find.byKey(webViewKey), findsOneWidget,
-            reason: 'reader WebView must mount');
+        expect(
+          find.byKey(webViewKey),
+          findsOneWidget,
+          reason: 'reader WebView must mount',
+        );
 
         const Key contentReadyKey = ValueKey<String>('fushi_content_ready');
         bool contentReady = false;
@@ -119,14 +138,20 @@ void main() {
             break;
           }
         }
-        expect(contentReady, isTrue,
-            reason: 'reader content must become ready');
+        expect(
+          contentReady,
+          isTrue,
+          reason: 'reader content must become ready',
+        );
         await tester.pump(const Duration(seconds: 3));
 
         final Future<dynamic> Function(String source)? runInWebView =
             ReaderFushiPage.debugEvaluateJavascript;
-        expect(runInWebView, isNotNull,
-            reason: 'Reader debug JS hook must be set');
+        expect(
+          runInWebView,
+          isNotNull,
+          reason: 'Reader debug JS hook must be set',
+        );
 
         // ── TODO-1028: 真引擎里派发原生双击，断言选区被清 + 振假名 toggle ──
         final dynamic rawDbl = await runInWebView!(_dblclickProbeJs());
@@ -134,23 +159,37 @@ void main() {
             jsonDecode(rawDbl as String) as Map<String, dynamic>;
         debugPrint('[verify][1028] $dbl');
 
-        expect(dbl['ok'], isTrue,
-            reason:
-                'dblclick probe must find visible body text: ${dbl['error']}');
-        expect(dbl['characterHit'], isTrue,
-            reason: 'probe point must land on a real reader character');
+        expect(
+          dbl['ok'],
+          isTrue,
+          reason: 'dblclick probe must find visible body text: ${dbl['error']}',
+        );
+        expect(
+          dbl['characterHit'],
+          isTrue,
+          reason: 'probe point must land on a real reader character',
+        );
         // 修复的核心断言：双击后原生选区被 removeAllRanges 清掉（isCollapsed）。
-        expect(dbl['selectionCollapsedAfter'], isTrue,
-            reason:
-                'TODO-1028: native double-click selection must be CLEARED so it '
-                'stops hijacking single-tap lookup (getSelection().isCollapsed)');
-        expect(dbl['selectionTextAfter'], '',
-            reason: 'no residual native selection text after double-click');
+        expect(
+          dbl['selectionCollapsedAfter'],
+          isTrue,
+          reason:
+              'TODO-1028: native double-click selection must be CLEARED so it '
+              'stops hijacking single-tap lookup (getSelection().isCollapsed)',
+        );
+        expect(
+          dbl['selectionTextAfter'],
+          '',
+          reason: 'no residual native selection text after double-click',
+        );
         // 振假名整页切换在双击后仍生效（capture clear 先跑 → toggle 守卫不被绊住）。
-        expect(dbl['showAllRtToggled'], isTrue,
-            reason:
-                'TODO-1028: furigana whole-page toggle (show-all-rt) must still '
-                'fire on double-click once the capture clear runs first');
+        expect(
+          dbl['showAllRtToggled'],
+          isTrue,
+          reason:
+              'TODO-1028: furigana whole-page toggle (show-all-rt) must still '
+              'fire on double-click once the capture clear runs first',
+        );
 
         // ── TODO-994: fork 引擎在真渲染；右键 DOM 可派发；选区路径可用 ──
         final dynamic rawCtx = await runInWebView(_contextMenuProbeJs());
@@ -161,17 +200,22 @@ void main() {
         // 右键在 DOM 层仍可派发（contextmenu 事件本身没被吞——Flutter 菜单走
         // onSecondaryTapDown，原生菜单由 fork 的 put_AreDefaultContextMenusEnabled
         // 关掉，属引擎级不进 DOM）。这里证明页面仍在真引擎、选区 API 可用。
-        expect(ctx['hasSelectionApi'], isTrue,
-            reason: 'live WebView selection API must be present');
+        expect(
+          ctx['hasSelectionApi'],
+          isTrue,
+          reason: 'live WebView selection API must be present',
+        );
 
         await takeScreenshot(binding, 'reader_dblclick_ctxmenu_verified');
         assertStrictErrors(errors);
 
         navigator.pop();
         await tester.pump(const Duration(seconds: 2));
-        for (int i = 0;
-            i < 40 && ReaderFushiPage.debugEvaluateJavascript != null;
-            i++) {
+        for (
+          int i = 0;
+          i < 40 && ReaderFushiPage.debugEvaluateJavascript != null;
+          i++
+        ) {
           await tester.pump(const Duration(milliseconds: 250));
         }
       } finally {

@@ -124,9 +124,7 @@ class VideoSubtitleBackfillService {
   /// `kSubtitleVerifyMaxCandidates`：候选可能几十条，全下一遍是对来源站的滥用。
   final int maxCandidates;
 
-  Future<SubtitleBackfillResult> backfill(
-    SubtitleBackfillTarget target,
-  ) async {
+  Future<SubtitleBackfillResult> backfill(SubtitleBackfillTarget target) async {
     if (target.hasExistingSubtitle) {
       return const SubtitleBackfillResult(
         SubtitleBackfillOutcome.alreadyHasSubtitle,
@@ -158,8 +156,9 @@ class VideoSubtitleBackfillService {
           fingerprint: LocalVideoFingerprint(
             fileSize: await video.length(),
             fileName: p.basename(video.path),
-            openSubtitlesMovieHash:
-                await computeOpenSubtitlesMovieHash(video.path),
+            openSubtitlesMovieHash: await computeOpenSubtitlesMovieHash(
+              video.path,
+            ),
           ),
         ),
       );
@@ -194,8 +193,9 @@ class VideoSubtitleBackfillService {
       (VideoSubtitleCandidate c) => c.language,
     );
     String? lastRejection;
-    final int limit =
-        ordered.length < maxCandidates ? ordered.length : maxCandidates;
+    final int limit = ordered.length < maxCandidates
+        ? ordered.length
+        : maxCandidates;
     for (int i = 0; i < limit; i++) {
       final VideoSubtitleCandidate candidate = ordered[i];
       final VideoSubtitleDownload download;
@@ -211,8 +211,10 @@ class VideoSubtitleBackfillService {
       );
       if (check.rejected) {
         lastRejection = check.detail;
-        debugPrint('[subtitle-backfill] rejected "${candidate.fileName}" for '
-            '${target.bookUid}: ${check.detail}');
+        debugPrint(
+          '[subtitle-backfill] rejected "${candidate.fileName}" for '
+          '${target.bookUid}: ${check.detail}',
+        );
         continue;
       }
       try {

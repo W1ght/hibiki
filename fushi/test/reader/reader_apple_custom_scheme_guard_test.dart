@@ -25,8 +25,8 @@ void main() {
     expect(reader, contains('ReaderFushi.interceptResource'));
     expect(reader, contains("path.startsWith('/fonts/')"));
     expect(
-        reader,
-        contains(
-            'useShouldInterceptRequest: !_usesReaderResourceCustomScheme'));
+      reader,
+      contains('useShouldInterceptRequest: !_usesReaderResourceCustomScheme'),
+    );
   });
 }

@@ -20,44 +20,39 @@ import 'package:fushi_core/fushi_core.dart';
 import '../helpers/test_platform_services.dart';
 
 FushiDatabase _memDb() => FushiDatabase.forTesting(
-      NativeDatabase.memory(
-        setup: (rawDb) => rawDb.execute('PRAGMA foreign_keys = ON'),
-      ),
-    );
+  NativeDatabase.memory(
+    setup: (rawDb) => rawDb.execute('PRAGMA foreign_keys = ON'),
+  ),
+);
 
 Future<int> _seedSource(
   FushiDatabase db, {
   required String mediaKind,
   String label = 'Anime',
-}) =>
-    db.insertMediaSource(
-      MediaSourcesCompanion(
-        label: Value<String>(label),
-        mediaKind: Value<String>(mediaKind),
-        transport: const Value<String>('local'),
-        rootPath: Value<String>('/nonexistent/$mediaKind'),
-        createdAt: Value<int>(DateTime.now().millisecondsSinceEpoch),
-      ),
-    );
+}) => db.insertMediaSource(
+  MediaSourcesCompanion(
+    label: Value<String>(label),
+    mediaKind: Value<String>(mediaKind),
+    transport: const Value<String>('local'),
+    rootPath: Value<String>('/nonexistent/$mediaKind'),
+    createdAt: Value<int>(DateTime.now().millisecondsSinceEpoch),
+  ),
+);
 
 Future<void> _pumpView(
   WidgetTester tester,
   FushiDatabase db, {
   required String mediaKind,
   Future<void> Function(SourceLibraryRow source)? onScrapeSource,
-  Future<void> Function(
-    SourceLibraryRow source,
-    SourceScanSummary summary,
-  )? onVideoScanCompleted,
+  Future<void> Function(SourceLibraryRow source, SourceScanSummary summary)?
+  onVideoScanCompleted,
   VideoSourceScrapeTaskController? scrapeTaskController,
 }) async {
   final AppModel appModel = AppModel(testPlatformServices())
     ..wireDatabaseForTesting(db);
   await tester.pumpWidget(
     ProviderScope(
-      overrides: <Override>[
-        appProvider.overrideWith((ref) => appModel),
-      ],
+      overrides: <Override>[appProvider.overrideWith((ref) => appModel)],
       child: MaterialApp(
         home: MediaQuery(
           data: const MediaQueryData(size: Size(900, 900)),
@@ -127,8 +122,7 @@ class _ManualBindingRunner
     VideoSourceScrapeBatchContext? batchContext,
     List<VideoSourceScrapeWork>? plannedWorks,
     String runScope = 'source',
-  }) async =>
-      SourceScrapeReport(sourceIds: <int>[source.id]);
+  }) async => SourceScrapeReport(sourceIds: <int>[source.id]);
 
   @override
   Future<List<VideoSourceScrapeConfirmationCandidate>> searchManualCandidates({
@@ -162,20 +156,19 @@ VideoSourceScrapeConfirmationCandidate _candidate({
   required String id,
   required String title,
   int? year,
-}) =>
-    VideoSourceScrapeConfirmationCandidate(
-      lookup: VideoMetadataLookup(
-        provider: VideoMetadataProviderKind.anidb,
-        externalId: id,
-        mediaKind: VideoMetadataMediaKind.tv,
-      ),
-      work: VideoMetadataWork(
-        provider: VideoMetadataProviderKind.anidb,
-        kind: VideoMetadataMediaKind.tv,
-        title: title,
-        year: year,
-      ),
-    );
+}) => VideoSourceScrapeConfirmationCandidate(
+  lookup: VideoMetadataLookup(
+    provider: VideoMetadataProviderKind.anidb,
+    externalId: id,
+    mediaKind: VideoMetadataMediaKind.tv,
+  ),
+  work: VideoMetadataWork(
+    provider: VideoMetadataProviderKind.anidb,
+    kind: VideoMetadataMediaKind.tv,
+    title: title,
+    year: year,
+  ),
+);
 
 /// 用户那次的真实形状：run 已完成，但留下待确认与失败的作品。
 Future<int> _seedUnresolvedRun(FushiDatabase db, int sourceId) =>
@@ -188,25 +181,29 @@ Future<int> _seedUnresolvedRun(FushiDatabase db, int sourceId) =>
         succeededWorks: const Value<int>(22),
         pendingConfirmations: const Value<int>(2),
         failedWorks: const Value<int>(4),
-        summaryJson: Value<String?>(encodeSourceScrapeReport(SourceScrapeReport(
-          sourceIds: <int>[sourceId],
-          totalWorks: 28,
-          succeededWorks: 22,
-          pendingConfirmations: 2,
-          failedWorks: 4,
-          warnings: const <SourceScrapeIssue>[
-            SourceScrapeIssue(
-              workTitle: 'Doraemon Movies',
-              message: 'Multiple exact matches',
+        summaryJson: Value<String?>(
+          encodeSourceScrapeReport(
+            SourceScrapeReport(
+              sourceIds: <int>[sourceId],
+              totalWorks: 28,
+              succeededWorks: 22,
+              pendingConfirmations: 2,
+              failedWorks: 4,
+              warnings: const <SourceScrapeIssue>[
+                SourceScrapeIssue(
+                  workTitle: 'Doraemon Movies',
+                  message: 'Multiple exact matches',
+                ),
+              ],
+              errors: const <SourceScrapeIssue>[
+                SourceScrapeIssue(
+                  workTitle: 'Unknown Show',
+                  message: 'No match found',
+                ),
+              ],
             ),
-          ],
-          errors: const <SourceScrapeIssue>[
-            SourceScrapeIssue(
-              workTitle: 'Unknown Show',
-              message: 'No match found',
-            ),
-          ],
-        ))),
+          ),
+        ),
         startedAt: 1,
         updatedAt: 2,
         finishedAt: const Value<int?>(2),
@@ -216,47 +213,50 @@ Future<int> _seedUnresolvedRun(FushiDatabase db, int sourceId) =>
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  testWidgets('video row exposes scrape/settings and shows live task progress',
-      (WidgetTester tester) async {
-    final FushiDatabase db = _memDb();
-    addTearDown(db.close);
-    final int sourceId = await _seedSource(db, mediaKind: 'video');
-    final _HoldingScrapeRunner runner = _HoldingScrapeRunner();
-    final VideoSourceScrapeTaskController controller =
-        VideoSourceScrapeTaskController(runner);
-    addTearDown(controller.dispose);
+  testWidgets(
+    'video row exposes scrape/settings and shows live task progress',
+    (WidgetTester tester) async {
+      final FushiDatabase db = _memDb();
+      addTearDown(db.close);
+      final int sourceId = await _seedSource(db, mediaKind: 'video');
+      final _HoldingScrapeRunner runner = _HoldingScrapeRunner();
+      final VideoSourceScrapeTaskController controller =
+          VideoSourceScrapeTaskController(runner);
+      addTearDown(controller.dispose);
 
-    await _pumpView(
-      tester,
-      db,
-      mediaKind: 'video',
-      scrapeTaskController: controller,
-      onScrapeSource: (SourceLibraryRow source) async {
-        await controller.scrapeSource(source);
-      },
-    );
+      await _pumpView(
+        tester,
+        db,
+        mediaKind: 'video',
+        scrapeTaskController: controller,
+        onScrapeSource: (SourceLibraryRow source) async {
+          await controller.scrapeSource(source);
+        },
+      );
 
-    expect(find.byTooltip('Scrape this source'), findsOneWidget);
-    expect(find.byTooltip('Source scrape settings'), findsOneWidget);
-    await tester.tap(find.byTooltip('Scrape this source'));
-    await tester.pump();
+      expect(find.byTooltip('Scrape this source'), findsOneWidget);
+      expect(find.byTooltip('Source scrape settings'), findsOneWidget);
+      await tester.tap(find.byTooltip('Scrape this source'));
+      await tester.pump();
 
-    expect(runner.calls, 1);
-    expect(find.textContaining('Matching · 1/3'), findsOneWidget);
-    expect(find.textContaining('Example Show'), findsOneWidget);
+      expect(runner.calls, 1);
+      expect(find.textContaining('Matching · 1/3'), findsOneWidget);
+      expect(find.textContaining('Example Show'), findsOneWidget);
 
-    // 刮削期间重新扫描按钮不可用，不会改写 scan 记录。
-    await tester.tap(find.byTooltip('Rescan'), warnIfMissed: false);
-    await tester.pump();
-    final SourceLibraryRow source = (await db.getMediaSourceById(sourceId))!;
-    expect(source.lastScannedAt, isNull);
+      // 刮削期间重新扫描按钮不可用，不会改写 scan 记录。
+      await tester.tap(find.byTooltip('Rescan'), warnIfMissed: false);
+      await tester.pump();
+      final SourceLibraryRow source = (await db.getMediaSourceById(sourceId))!;
+      expect(source.lastScannedAt, isNull);
 
-    runner.release.complete();
-    await tester.pumpAndSettle();
-  });
+      runner.release.complete();
+      await tester.pumpAndSettle();
+    },
+  );
 
-  testWidgets('background task panel can close and reopen without cancelling',
-      (WidgetTester tester) async {
+  testWidgets('background task panel can close and reopen without cancelling', (
+    WidgetTester tester,
+  ) async {
     final FushiDatabase db = _memDb();
     addTearDown(db.close);
     final int sourceId = await _seedSource(db, mediaKind: 'video');
@@ -315,8 +315,10 @@ void main() {
     expect(find.text('Background tasks'), findsOneWidget);
     expect(find.textContaining('Example Show'), findsOneWidget);
     expect(find.text('Recent tasks'), findsOneWidget);
-    expect(find.byKey(const ValueKey<String>('video-source-scrape-run-1')),
-        findsOneWidget);
+    expect(
+      find.byKey(const ValueKey<String>('video-source-scrape-run-1')),
+      findsOneWidget,
+    );
 
     await tester.tap(find.widgetWithText(TextButton, 'CLOSE'));
     await tester.pumpAndSettle();
@@ -334,8 +336,9 @@ void main() {
     expect(controller.isRunning, isFalse);
   });
 
-  testWidgets('book and manga rows never expose video scrape controls',
-      (WidgetTester tester) async {
+  testWidgets('book and manga rows never expose video scrape controls', (
+    WidgetTester tester,
+  ) async {
     for (final String kind in <String>['book', 'manga']) {
       final FushiDatabase db = _memDb();
       await _seedSource(db, mediaKind: kind, label: kind);
@@ -352,47 +355,49 @@ void main() {
   });
 
   testWidgets(
-      'source settings keep AniDB fixed and persist safe output toggles',
-      (WidgetTester tester) async {
-    final FushiDatabase db = _memDb();
-    addTearDown(db.close);
-    final int sourceId = await _seedSource(db, mediaKind: 'video');
-    await _pumpView(tester, db, mediaKind: 'video');
+    'source settings keep AniDB fixed and persist safe output toggles',
+    (WidgetTester tester) async {
+      final FushiDatabase db = _memDb();
+      addTearDown(db.close);
+      final int sourceId = await _seedSource(db, mediaKind: 'video');
+      await _pumpView(tester, db, mediaKind: 'video');
 
-    await tester.tap(find.byTooltip('Source scrape settings'));
-    await tester.pumpAndSettle();
-    expect(find.text('Use global default'), findsNothing);
-    expect(find.text('AniDB'), findsNothing);
-    expect(find.text('TMDB'), findsNothing);
-    expect(find.text('Use Fanart images'), findsNothing);
-    expect(find.text('Bangumi'), findsNothing);
-    expect(find.text('Douban'), findsNothing);
-    expect(find.text('AniList'), findsNothing);
-    // BUG-1999：enabled 是此来源刮削的总闸，UI 必须可改且真写穿 DB（旧实现
-    // 根本没画这个开关、保存时硬编码回写旧值）。
-    await tester.tap(find.text('Enable scraping for this source'));
-    await tester.tap(find.text('Scrape after scanning'));
-    await tester.tap(find.text('Write image files'));
-    await tester.tap(find.text('SAVE'));
-    await tester.pumpAndSettle();
+      await tester.tap(find.byTooltip('Source scrape settings'));
+      await tester.pumpAndSettle();
+      expect(find.text('Use global default'), findsNothing);
+      expect(find.text('AniDB'), findsNothing);
+      expect(find.text('TMDB'), findsNothing);
+      expect(find.text('Use Fanart images'), findsNothing);
+      expect(find.text('Bangumi'), findsNothing);
+      expect(find.text('Douban'), findsNothing);
+      expect(find.text('AniList'), findsNothing);
+      // BUG-1999：enabled 是此来源刮削的总闸，UI 必须可改且真写穿 DB（旧实现
+      // 根本没画这个开关、保存时硬编码回写旧值）。
+      await tester.tap(find.text('Enable scraping for this source'));
+      await tester.tap(find.text('Scrape after scanning'));
+      await tester.tap(find.text('Write image files'));
+      await tester.tap(find.text('SAVE'));
+      await tester.pumpAndSettle();
 
-    final VideoSourceScrapeSettingRow settings =
-        (await db.getVideoSourceScrapeSettings(sourceId))!;
-    expect(settings.enabled, isFalse);
-    expect(settings.providerOverride, isNull);
-    expect(settings.autoAfterScan, isTrue);
-    expect(settings.writeNfo, isTrue);
-    expect(settings.writeImages, isFalse);
-    expect(
-      settings.fanartEnabled,
-      isTrue,
-      reason: 'legacy column stays compatible even though the UI ignores it',
-    );
-    expect(settings.allowExternalOverwrite, isFalse);
-  });
+      final VideoSourceScrapeSettingRow settings = (await db
+          .getVideoSourceScrapeSettings(sourceId))!;
+      expect(settings.enabled, isFalse);
+      expect(settings.providerOverride, isNull);
+      expect(settings.autoAfterScan, isTrue);
+      expect(settings.writeNfo, isTrue);
+      expect(settings.writeImages, isFalse);
+      expect(
+        settings.fanartEnabled,
+        isTrue,
+        reason: 'legacy column stays compatible even though the UI ignores it',
+      );
+      expect(settings.allowExternalOverwrite, isFalse);
+    },
+  );
 
-  testWidgets('latest persisted run replaces the scan-count subtitle',
-      (WidgetTester tester) async {
+  testWidgets('latest persisted run replaces the scan-count subtitle', (
+    WidgetTester tester,
+  ) async {
     final FushiDatabase db = _memDb();
     addTearDown(db.close);
     final int sourceId = await _seedSource(db, mediaKind: 'video');
@@ -419,36 +424,37 @@ void main() {
     );
   });
 
-  test('unresolved-run predicate looks at works, not run status (BUG-1721)',
-      () {
-    VideoSourceScrapeRunRow run({
-      String status = 'completed',
-      int pending = 0,
-      int failed = 0,
-    }) =>
-        VideoSourceScrapeRunRow(
-          id: 1,
-          scope: 'source',
-          status: status,
-          totalWorks: 0,
-          processedWorks: 0,
-          succeededWorks: 0,
-          failedWorks: failed,
-          pendingConfirmations: pending,
-          startedAt: 1,
-          updatedAt: 1,
-        );
+  test(
+    'unresolved-run predicate looks at works, not run status (BUG-1721)',
+    () {
+      VideoSourceScrapeRunRow run({
+        String status = 'completed',
+        int pending = 0,
+        int failed = 0,
+      }) => VideoSourceScrapeRunRow(
+        id: 1,
+        scope: 'source',
+        status: status,
+        totalWorks: 0,
+        processedWorks: 0,
+        succeededWorks: 0,
+        failedWorks: failed,
+        pendingConfirmations: pending,
+        startedAt: 1,
+        updatedAt: 1,
+      );
 
-    // 回归锚点：这三条以前全被 status 白名单挡在重刮入口之外。
-    expect(scrapeRunHasUnresolvedWorks(run(pending: 2)), isTrue);
-    expect(scrapeRunHasUnresolvedWorks(run(failed: 4)), isTrue);
-    expect(scrapeRunHasUnresolvedWorks(run(pending: 2, failed: 4)), isTrue);
-    expect(scrapeRunHasUnresolvedWorks(run()), isFalse);
-    expect(scrapeRunHasUnresolvedWorks(run(status: 'failed')), isTrue);
-    expect(scrapeRunHasUnresolvedWorks(run(status: 'interrupted')), isTrue);
-    expect(scrapeRunHasUnresolvedWorks(run(status: 'cancelled')), isTrue);
-    expect(scrapeRunHasUnresolvedWorks(run(status: 'running')), isFalse);
-  });
+      // 回归锚点：这三条以前全被 status 白名单挡在重刮入口之外。
+      expect(scrapeRunHasUnresolvedWorks(run(pending: 2)), isTrue);
+      expect(scrapeRunHasUnresolvedWorks(run(failed: 4)), isTrue);
+      expect(scrapeRunHasUnresolvedWorks(run(pending: 2, failed: 4)), isTrue);
+      expect(scrapeRunHasUnresolvedWorks(run()), isFalse);
+      expect(scrapeRunHasUnresolvedWorks(run(status: 'failed')), isTrue);
+      expect(scrapeRunHasUnresolvedWorks(run(status: 'interrupted')), isTrue);
+      expect(scrapeRunHasUnresolvedWorks(run(status: 'cancelled')), isTrue);
+      expect(scrapeRunHasUnresolvedWorks(run(status: 'running')), isFalse);
+    },
+  );
 
   test('run summary json round-trips the per-work issues', () {
     const SourceScrapeReport report = SourceScrapeReport(
@@ -464,8 +470,9 @@ void main() {
         SourceScrapeIssue(workTitle: 'B', message: 'boom', path: '/x/y.nfo'),
       ],
     );
-    final SourceScrapeReport decoded =
-        decodeSourceScrapeReport(encodeSourceScrapeReport(report))!;
+    final SourceScrapeReport decoded = decodeSourceScrapeReport(
+      encodeSourceScrapeReport(report),
+    )!;
     expect(decoded.sourceIds, <int>[7]);
     expect(decoded.pendingConfirmations, 1);
     expect(decoded.warnings.single.workTitle, 'A');
@@ -476,8 +483,7 @@ void main() {
     expect(decodeSourceScrapeReport('not json'), isNull);
   });
 
-  testWidgets(
-      'import row summary opens the run detail with its issues '
+  testWidgets('import row summary opens the run detail with its issues '
       '(BUG-1720)', (WidgetTester tester) async {
     final FushiDatabase db = _memDb();
     addTearDown(db.close);
@@ -500,9 +506,9 @@ void main() {
       find.textContaining('22 succeeded, 2 pending, 4 failed'),
       findsOneWidget,
     );
-    await tester.tap(find.byKey(
-      ValueKey<String>('media-source-scrape-summary-$sourceId'),
-    ));
+    await tester.tap(
+      find.byKey(ValueKey<String>('media-source-scrape-summary-$sourceId')),
+    );
     await tester.pumpAndSettle();
 
     expect(find.text('Scrape result'), findsOneWidget);
@@ -514,8 +520,9 @@ void main() {
     );
   });
 
-  testWidgets('manual binding searches and rebinds through the shared path',
-      (WidgetTester tester) async {
+  testWidgets('manual binding searches and rebinds through the shared path', (
+    WidgetTester tester,
+  ) async {
     final FushiDatabase db = _memDb();
     addTearDown(db.close);
     final int sourceId = await _seedSource(db, mediaKind: 'video');
@@ -535,15 +542,17 @@ void main() {
       scrapeTaskController: controller,
       onScrapeSource: (SourceLibraryRow source) async {},
     );
-    await tester.tap(find.byKey(
-      ValueKey<String>('media-source-scrape-summary-$sourceId'),
-    ));
+    await tester.tap(
+      find.byKey(ValueKey<String>('media-source-scrape-summary-$sourceId')),
+    );
     await tester.pumpAndSettle();
 
     await tester.tap(find.byTooltip('Specify the work manually').first);
     await tester.pumpAndSettle();
-    expect(find.byKey(const ValueKey<String>('video-source-manual-query')),
-        findsOneWidget);
+    expect(
+      find.byKey(const ValueKey<String>('video-source-manual-query')),
+      findsOneWidget,
+    );
 
     await tester.tap(
       find.byKey(const ValueKey<String>('video-source-manual-search')),
@@ -552,21 +561,22 @@ void main() {
     // 搜索框预填的是那条待确认作品名，用户可直接搜。
     expect(runner.queries, <String>['Doraemon Movies']);
 
-    await tester.tap(find.byKey(
-      const ValueKey<String>('video-source-candidate-anidb-65733'),
-    ));
+    await tester.tap(
+      find.byKey(const ValueKey<String>('video-source-candidate-anidb-65733')),
+    );
     await tester.pumpAndSettle();
 
     expect(runner.boundTitles, <String>['Doraemon Movies']);
     expect(runner.boundLookups.single.externalId, '65733');
     expect(
-        runner.boundLookups.single.provider, VideoMetadataProviderKind.anidb);
+      runner.boundLookups.single.provider,
+      VideoMetadataProviderKind.anidb,
+    );
     // 处理完的条目从待办里消失，用户看得见进度。
     expect(find.text('Doraemon Movies'), findsNothing);
   });
 
-  testWidgets(
-      'completed run with pending works still offers a rescrape entry '
+  testWidgets('completed run with pending works still offers a rescrape entry '
       '(BUG-1721)', (WidgetTester tester) async {
     final FushiDatabase db = _memDb();
     addTearDown(db.close);
@@ -584,15 +594,17 @@ void main() {
         home: Builder(
           builder: (BuildContext context) => Scaffold(
             body: TextButton(
-              onPressed: () => unawaited(showVideoSourceScrapeTaskPanel(
-                context: context,
-                controller: controller,
-                loadRuns: () => db.getVideoSourceScrapeRuns(limit: 20),
-                loadSource: (int id) => db.getMediaSourceById(id),
-                onRetry: (VideoSourceScrapeRunRow run) async {
-                  retried++;
-                },
-              )),
+              onPressed: () => unawaited(
+                showVideoSourceScrapeTaskPanel(
+                  context: context,
+                  controller: controller,
+                  loadRuns: () => db.getVideoSourceScrapeRuns(limit: 20),
+                  loadSource: (int id) => db.getMediaSourceById(id),
+                  onRetry: (VideoSourceScrapeRunRow run) async {
+                    retried++;
+                  },
+                ),
+              ),
               child: const Text('Open tasks'),
             ),
           ),
@@ -614,9 +626,9 @@ void main() {
     expect(retried, 1);
 
     // 点条目本身进详情，能看到逐条作品级失败原因。
-    await tester.tap(find.byKey(ValueKey<String>(
-      'video-source-scrape-run-$runId',
-    )));
+    await tester.tap(
+      find.byKey(ValueKey<String>('video-source-scrape-run-$runId')),
+    );
     await tester.pumpAndSettle();
     expect(find.text('Scrape result'), findsOneWidget);
     expect(find.text('No match found'), findsOneWidget);

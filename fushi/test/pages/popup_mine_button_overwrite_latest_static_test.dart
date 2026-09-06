@@ -24,8 +24,11 @@ void main() {
   setUpAll(() {
     source = File('assets/popup/popup.js').readAsStringSync();
     final int onclickIdx = source.indexOf('onclick: async () => {');
-    expect(onclickIdx, greaterThanOrEqualTo(0),
-        reason: 'mine button onclick handler not found');
+    expect(
+      onclickIdx,
+      greaterThanOrEqualTo(0),
+      reason: 'mine button onclick handler not found',
+    );
     final int end = source.indexOf('buttonsContainer.appendChild(mineButton)');
     expect(end, greaterThan(onclickIdx));
     onclickBody = source.substring(onclickIdx, end);
@@ -34,52 +37,85 @@ void main() {
   test('a separate updateEntry path overwrites an existing note by id', () {
     // The JS layer must expose an updateEntry() that posts to the Dart
     // `updateEntry` handler carrying the note id + freshly-built fields.
-    expect(source.contains('async function updateEntry('), isTrue,
-        reason: 'an updateEntry() function must exist for the overwrite path');
-    expect(source.contains("callHandler('updateEntry', { noteId, fields })"),
-        isTrue,
-        reason: 'updateEntry must call the Dart updateEntry handler with '
-            'the note id + fields');
+    expect(
+      source.contains('async function updateEntry('),
+      isTrue,
+      reason: 'an updateEntry() function must exist for the overwrite path',
+    );
+    expect(
+      source.contains("callHandler('updateEntry', { noteId, fields })"),
+      isTrue,
+      reason:
+          'updateEntry must call the Dart updateEntry handler with '
+          'the note id + fields',
+    );
   });
 
-  test('the latest-editable branch runs updateEntry, not a second mineEntry',
-      () {
-    final int latestIdx = onclickBody.indexOf("dataset.latest === '1'");
-    expect(latestIdx, greaterThanOrEqualTo(0),
-        reason: 'onclick must branch on the latest-editable sub-state');
-    final int updateIdx = onclickBody.indexOf('updateEntry(', latestIdx);
-    expect(updateIdx, greaterThan(latestIdx),
-        reason: 'the latest-editable branch must overwrite via updateEntry');
-    // The latest branch must come BEFORE the data-mined re-verify branch so a
-    // green ✓↩ overwrites in place rather than falling into the re-mine path.
-    final int minedIdx = onclickBody.indexOf("dataset.mined === '1'");
-    expect(minedIdx, greaterThan(latestIdx),
-        reason: 'the latest-editable branch must be checked before the '
-            'ordinary mined re-verify branch');
-  });
+  test(
+    'the latest-editable branch runs updateEntry, not a second mineEntry',
+    () {
+      final int latestIdx = onclickBody.indexOf("dataset.latest === '1'");
+      expect(
+        latestIdx,
+        greaterThanOrEqualTo(0),
+        reason: 'onclick must branch on the latest-editable sub-state',
+      );
+      final int updateIdx = onclickBody.indexOf('updateEntry(', latestIdx);
+      expect(
+        updateIdx,
+        greaterThan(latestIdx),
+        reason: 'the latest-editable branch must overwrite via updateEntry',
+      );
+      // The latest branch must come BEFORE the data-mined re-verify branch so a
+      // green ✓↩ overwrites in place rather than falling into the re-mine path.
+      final int minedIdx = onclickBody.indexOf("dataset.mined === '1'");
+      expect(
+        minedIdx,
+        greaterThan(latestIdx),
+        reason:
+            'the latest-editable branch must be checked before the '
+            'ordinary mined re-verify branch',
+      );
+    },
+  );
 
   test('the editable latest is gated on a real backend note id', () {
     // Only a backend that returns a note id (AnkiConnect) becomes the editable
     // latest; AnkiDroid (no id) must degrade to an ordinary ✓.
-    expect(source.contains('function rememberLatestMined('), isTrue,
-        reason: 'a helper must record the latest-mined note id');
-    expect(source.contains('function isLatestEditable('), isTrue,
-        reason: 'a helper must decide whether a word is the editable latest');
+    expect(
+      source.contains('function rememberLatestMined('),
+      isTrue,
+      reason: 'a helper must record the latest-mined note id',
+    );
+    expect(
+      source.contains('function isLatestEditable('),
+      isTrue,
+      reason: 'a helper must decide whether a word is the editable latest',
+    );
     // setMineState gates the green state on isLatestEditable, not just on mined.
     final int setStateIdx = source.indexOf('const setMineState =');
     expect(setStateIdx, greaterThanOrEqualTo(0));
     final int setStateEnd = source.indexOf('const mineButton =', setStateIdx);
     final String setStateBody = source.substring(setStateIdx, setStateEnd);
-    expect(setStateBody.contains('isLatestEditable('), isTrue,
-        reason: 'the green latest state must require a held note id');
-    expect(setStateBody.contains('dataset.latest ='), isTrue,
-        reason: 'setMineState must record the latest sub-state on the button');
+    expect(
+      setStateBody.contains('isLatestEditable('),
+      isTrue,
+      reason: 'the green latest state must require a held note id',
+    );
+    expect(
+      setStateBody.contains('dataset.latest ='),
+      isTrue,
+      reason: 'setMineState must record the latest sub-state on the button',
+    );
   });
 
   test('a successful mine with a note id supersedes any prior latest', () {
     // The normal mine success path (ankiConnect) records the new latest, which
     // supersedes the previous one (rememberLatestMined overwrites the held id).
-    expect(onclickBody.contains('rememberLatestMined('), isTrue,
-        reason: 'a successful mine must (re)record the latest-editable card');
+    expect(
+      onclickBody.contains('rememberLatestMined('),
+      isTrue,
+      reason: 'a successful mine must (re)record the latest-editable card',
+    );
   });
 }

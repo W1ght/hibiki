@@ -23,11 +23,7 @@ void main() {
       icon: Icons.headphones_outlined,
       onPressed: () {},
     ),
-    DialogQuickAction(
-      label: '标签',
-      icon: Icons.sell_outlined,
-      onPressed: () {},
-    ),
+    DialogQuickAction(label: '标签', icon: Icons.sell_outlined, onPressed: () {}),
   ];
 
   Future<void> pumpFrame(WidgetTester tester) async {
@@ -49,8 +45,9 @@ void main() {
     await tester.pumpAndSettle();
   }
 
-  testWidgets('renders every quick-action label as a button',
-      (WidgetTester tester) async {
+  testWidgets('renders every quick-action label as a button', (
+    WidgetTester tester,
+  ) async {
     tester.view.physicalSize = const Size(1200, 1600);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
@@ -64,8 +61,9 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('a wide dialog lays the quick-action chips out equal-width',
-      (WidgetTester tester) async {
+  testWidgets('a wide dialog lays the quick-action chips out equal-width', (
+    WidgetTester tester,
+  ) async {
     tester.view.physicalSize = const Size(1200, 1600);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
@@ -83,8 +81,9 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('a narrow dialog stacks the action chips without overflowing',
-      (WidgetTester tester) async {
+  testWidgets('a narrow dialog stacks the action chips without overflowing', (
+    WidgetTester tester,
+  ) async {
     // Narrow enough that the three chips cannot sit on a single row; the layout
     // degrades to full-width vertical rows without throwing or clipping.
     tester.view.physicalSize = const Size(360, 1600);
@@ -101,8 +100,9 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('tapping a quick-action fires its callback',
-      (WidgetTester tester) async {
+  testWidgets('tapping a quick-action fires its callback', (
+    WidgetTester tester,
+  ) async {
     int tapped = 0;
     await tester.pumpWidget(
       MaterialApp(
@@ -131,27 +131,29 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  test('quick, list, and danger action groups keep explicit vertical rhythm',
-      () {
-    final String source =
-        File('lib/src/pages/implementations/media_item_dialog_page.dart')
-            .readAsStringSync();
-    final int frameStart = source.indexOf('class MediaItemDialogFrame');
-    expect(frameStart, isNonNegative);
-    final String build = _methodSource(
-      source.substring(frameStart),
-      '  @override\n  Widget build(BuildContext context) {',
-    );
+  test(
+    'quick, list, and danger action groups keep explicit vertical rhythm',
+    () {
+      final String source = File(
+        'lib/src/pages/implementations/media_item_dialog_page.dart',
+      ).readAsStringSync();
+      final int frameStart = source.indexOf('class MediaItemDialogFrame');
+      expect(frameStart, isNonNegative);
+      final String build = _methodSource(
+        source.substring(frameStart),
+        '  @override\n  Widget build(BuildContext context) {',
+      );
 
-    expect(build, contains('leading: Icon(action.icon)'));
-    expect(
-      RegExp(r'SizedBox\(height: tokens\.spacing\.gap\)')
-          .allMatches(build)
-          .length,
-      greaterThanOrEqualTo(2),
-      reason: 'quick/list/danger groups need clear MD3 spacing',
-    );
-  });
+      expect(build, contains('leading: Icon(action.icon)'));
+      expect(
+        RegExp(
+          r'SizedBox\(height: tokens\.spacing\.gap\)',
+        ).allMatches(build).length,
+        greaterThanOrEqualTo(2),
+        reason: 'quick/list/danger groups need clear MD3 spacing',
+      );
+    },
+  );
 }
 
 /// Width of the chip wrapping the given label (the OutlinedButton ancestor).

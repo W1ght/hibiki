@@ -18,14 +18,15 @@ import 'package:flutter/services.dart';
 import 'package:fushi/src/lookup/global_lookup_log.dart';
 import 'package:fushi/src/lookup/sentence_extraction.dart';
 
-typedef _KeybdEventNative = Void Function(
-    Uint8 bVk, Uint8 bScan, Uint32 dwFlags, IntPtr dwExtraInfo);
-typedef _KeybdEventDart = void Function(
-    int bVk, int bScan, int dwFlags, int dwExtraInfo);
+typedef _KeybdEventNative =
+    Void Function(Uint8 bVk, Uint8 bScan, Uint32 dwFlags, IntPtr dwExtraInfo);
+typedef _KeybdEventDart =
+    void Function(int bVk, int bScan, int dwFlags, int dwExtraInfo);
 
 abstract final class SelectionCapture {
-  static final DynamicLibrary? _user32 =
-      Platform.isWindows ? DynamicLibrary.open('user32.dll') : null;
+  static final DynamicLibrary? _user32 = Platform.isWindows
+      ? DynamicLibrary.open('user32.dll')
+      : null;
   static final _KeybdEventDart? _keybdEvent = _user32
       ?.lookupFunction<_KeybdEventNative, _KeybdEventDart>('keybd_event');
 
@@ -43,8 +44,9 @@ abstract final class SelectionCapture {
   // macOS: AppDelegate.swift foreground_selection channel). A
   // MissingPluginException / any failure falls back to the clipboard capture
   // below.
-  static const MethodChannel _foregroundSelectionChannel =
-      MethodChannel('app.fushi.reader/foreground_selection');
+  static const MethodChannel _foregroundSelectionChannel = MethodChannel(
+    'app.fushi.reader/foreground_selection',
+  );
 
   /// Saves the clipboard, clears it, injects a clean Ctrl+C so the foreground
   /// app copies its current selection, reads it back, then restores the
@@ -52,13 +54,16 @@ abstract final class SelectionCapture {
   /// captured.
   static Future<String?> captureForegroundSelection() async {
     if (!Platform.isWindows || _keybdEvent == null) {
-      glog('capture: unsupported (windows=${Platform.isWindows} '
-          'ffi=${_keybdEvent != null})');
+      glog(
+        'capture: unsupported (windows=${Platform.isWindows} '
+        'ffi=${_keybdEvent != null})',
+      );
       return null;
     }
 
-    final String? oldText =
-        (await Clipboard.getData(Clipboard.kTextPlain))?.text;
+    final String? oldText = (await Clipboard.getData(
+      Clipboard.kTextPlain,
+    ))?.text;
 
     String? captured;
     await Clipboard.setData(const ClipboardData(text: ''));
@@ -80,8 +85,10 @@ abstract final class SelectionCapture {
       await Clipboard.setData(ClipboardData(text: oldText));
     }
     // 隐私：绝不把选中/剪贴板正文写进 glog——只记长度与成功/失败。
-    glog('capture: clipboard ok=${captured != null && captured.isNotEmpty} '
-        'len=${captured?.length ?? 0} (oldLen=${oldText?.length ?? 0})');
+    glog(
+      'capture: clipboard ok=${captured != null && captured.isNotEmpty} '
+      'len=${captured?.length ?? 0} (oldLen=${oldText?.length ?? 0})',
+    );
     return captured;
   }
 
@@ -102,16 +109,18 @@ abstract final class SelectionCapture {
     int maxExpand = 600,
   }) async {
     if (!Platform.isWindows && !Platform.isMacOS) {
-      glog('context: unsupported (windows=${Platform.isWindows} '
-          'macos=${Platform.isMacOS})');
+      glog(
+        'context: unsupported (windows=${Platform.isWindows} '
+        'macos=${Platform.isMacOS})',
+      );
       return null;
     }
     try {
-      final Map<Object?, Object?>? reply =
-          await _foregroundSelectionChannel.invokeMapMethod<Object?, Object?>(
-        'captureContext',
-        <String, Object?>{'maxExpand': maxExpand},
-      );
+      final Map<Object?, Object?>? reply = await _foregroundSelectionChannel
+          .invokeMapMethod<Object?, Object?>(
+            'captureContext',
+            <String, Object?>{'maxExpand': maxExpand},
+          );
       if (reply == null) {
         glog('context: UIA returned null — fall back to clipboard');
         return null;
@@ -121,18 +130,27 @@ abstract final class SelectionCapture {
       final int selLen = (reply['selLen'] as num?)?.toInt() ?? 0;
       final int elapsedMs = (reply['elapsedMs'] as num?)?.toInt() ?? -1;
       if (contextText.isEmpty || selLen <= 0) {
-        glog('context: UIA empty (len=${contextText.length} selLen=$selLen '
-            'elapsedMs=$elapsedMs) — fall back');
+        glog(
+          'context: UIA empty (len=${contextText.length} selLen=$selLen '
+          'elapsedMs=$elapsedMs) — fall back',
+        );
         return null;
       }
-      final String selectedText =
-          contextText.substring(selStart, selStart + selLen);
-      final SentenceExtractionResult sentence =
-          extractSentenceAt(contextText, selStart, selLen);
+      final String selectedText = contextText.substring(
+        selStart,
+        selStart + selLen,
+      );
+      final SentenceExtractionResult sentence = extractSentenceAt(
+        contextText,
+        selStart,
+        selLen,
+      );
       // 隐私：绝不记录 contextText / sentence 正文——只记长度、耗时、成功。
-      glog('context: UIA ok ctxLen=${contextText.length} '
-          'selLen=$selLen sentenceLen=${sentence.sentence.length} '
-          'elapsedMs=$elapsedMs');
+      glog(
+        'context: UIA ok ctxLen=${contextText.length} '
+        'selLen=$selLen sentenceLen=${sentence.sentence.length} '
+        'elapsedMs=$elapsedMs',
+      );
       return ForegroundSelectionContext(
         selectedText: selectedText,
         sentence: sentence.sentence,

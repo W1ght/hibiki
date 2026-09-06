@@ -28,7 +28,8 @@ void main() {
         _extractBraceBlock(shell, 'notifyRestoreComplete: function()'),
       ),
       isTrue,
-      reason: 'VN restore notification must send handler + perf placeholder + '
+      reason:
+          'VN restore notification must send handler + perf placeholder + '
           'the immutable document generation',
     );
     // 整份 shell 被包成运行时可复用的安装函数（引擎静态化的前提）。
@@ -42,8 +43,7 @@ void main() {
   // 而跨章。本测试钉死「revealSpeed=0 时 shell 走 revealComplete=true 路径、且
   // forward paginate 不返 revealed」这一可落地契约（headless WebView 在 CI 跑不到，
   // 真机行为留真机 Gate）。
-  test(
-      'M0 reveal speed 0 makes every screen complete on render (no '
+  test('M0 reveal speed 0 makes every screen complete on render (no '
       '"revealed" paginate path)', () {
     final String shell0 = ReaderVisualNovelScripts.vnShellScript();
     // M0 的 revealSpeed=0 强制点搬到 Dart 侧 config 组装处（webview.part.dart 的
@@ -85,8 +85,7 @@ void main() {
   // turn: "revealed" is NOT a scroll, which is exactly why M0 must avoid the
   // reveal path (otherwise forward paginate -> "revealed" -> _didScroll false ->
   // _handlePageTurnLimit cross-chapter misjump).
-  test(
-      'chrome _didScroll treats only "scrolled" as a real turn (not '
+  test('chrome _didScroll treats only "scrolled" as a real turn (not '
       '"revealed")', () {
     final String chrome = File(
       'lib/src/pages/implementations/reader_fushi/chrome.part.dart',
@@ -109,19 +108,22 @@ void main() {
   // notifyRestoreComplete 是 initialize() readyPromise 链的最后一步，且所有 restore
   // 方法都 await 这同一个 readyPromise —— 链上任何一步 reject 都会静默吞掉 notify，
   // 遮罩只能等 8s 兜底才消。根因修复：readyPromise 补 .catch 兜底仍 fire notify。
-  test(
-      'BUG-513①: VN initialize readyPromise has a .catch that still fires '
+  test('BUG-513①: VN initialize readyPromise has a .catch that still fires '
       'notifyRestoreComplete (fail-open, never a permanent mask)', () {
     final String shell = ReaderVisualNovelScripts.vnShellScript();
-    final String notifyBody =
-        _extractBraceBlock(shell, 'notifyRestoreComplete: function()');
+    final String notifyBody = _extractBraceBlock(
+      shell,
+      'notifyRestoreComplete: function()',
+    );
     expect(
       _hasGenerationAwareRestoreCall(notifyBody),
       isTrue,
       reason: 'notifyRestoreComplete must forward the document generation',
     );
-    final String initializeBody =
-        _extractBraceBlock(shell, 'initialize: function()');
+    final String initializeBody = _extractBraceBlock(
+      shell,
+      'initialize: function()',
+    );
     // A .catch handler must exist on the initialize promise chain.
     const String catchMarker = '.catch((error) => {';
     final int catchIdx = initializeBody.indexOf(catchMarker);
@@ -138,10 +140,7 @@ void main() {
     );
     // Inside the catch, notifyRestoreComplete must still be called so the Dart
     // loading mask is released even when a build step throws.
-    final String catchBody = _extractBraceBlock(
-      initializeBody,
-      catchMarker,
-    );
+    final String catchBody = _extractBraceBlock(initializeBody, catchMarker);
     expect(
       catchBody.contains('this.notifyRestoreComplete();'),
       isTrue,
@@ -149,8 +148,7 @@ void main() {
     );
   });
 
-  test(
-      'restore handler validates and gates the reported document generation '
+  test('restore handler validates and gates the reported document generation '
       'before settling Dart state', () {
     final String webview = File(
       'lib/src/pages/implementations/reader_fushi/webview.part.dart',
@@ -184,8 +182,10 @@ void main() {
       'lib/src/pages/implementations/reader_fushi/navigation.part.dart',
     ).readAsStringSync();
     final int gateStart = navigation.indexOf('void _acceptRestoreComplete({');
-    final int settleStart =
-        navigation.indexOf('void _onRestoreComplete()', gateStart);
+    final int settleStart = navigation.indexOf(
+      'void _onRestoreComplete()',
+      gateStart,
+    );
     expect(gateStart, greaterThanOrEqualTo(0));
     expect(settleStart, greaterThan(gateStart));
     final String gate = navigation.substring(gateStart, settleStart);
@@ -213,8 +213,7 @@ void main() {
   // .block-img，只能命中 img:not(.block-img){max-width:100%}，100% 对着 shrink-to-fit
   // 的 .fushi-vn-content flex item 解析 -> 坍成几像素。根因修复：VN initialize 里
   // applyImageMaxVars 设变量 + setupReaderImages 把大图提升为 .block-img。
-  test(
-      'BUG-513②: VN shell sets --fushi-image-max vars and promotes large '
+  test('BUG-513②: VN shell sets --fushi-image-max vars and promotes large '
       'images to .block-img so they are not tiny', () {
     final String shell = ReaderVisualNovelScripts.vnShellScript();
     // The image viewport vars are set (single source of truth ratio 0.95).
@@ -268,20 +267,23 @@ void main() {
 
   // Never-break：非 VN 模式（分页/连续）不应被 VN 的图片 var/提升逻辑影响 ——
   // 那些逻辑只存在于 VN shell，分页 shell 的图片处理仍走自己的 _sharedInitImages。
-  test('BUG-513: paginated shell is unchanged (VN-only promoteBlockImages)',
-      () {
-    final String paginated = ReaderPaginationScripts.paginatedShellSource();
-    expect(
-      paginated.contains('this.promoteBlockImages('),
-      isFalse,
-      reason: 'promoteBlockImages is VN-only; paginated must not gain it',
-    );
-    expect(
-      paginated.contains('this.applyImageMaxVars();'),
-      isFalse,
-      reason: 'applyImageMaxVars is VN-only; paginated uses its own image vars',
-    );
-  });
+  test(
+    'BUG-513: paginated shell is unchanged (VN-only promoteBlockImages)',
+    () {
+      final String paginated = ReaderPaginationScripts.paginatedShellSource();
+      expect(
+        paginated.contains('this.promoteBlockImages('),
+        isFalse,
+        reason: 'promoteBlockImages is VN-only; paginated must not gain it',
+      );
+      expect(
+        paginated.contains('this.applyImageMaxVars();'),
+        isFalse,
+        reason:
+            'applyImageMaxVars is VN-only; paginated uses its own image vars',
+      );
+    },
+  );
 
   test('BUG-1244 zero-width media screens attach to adjacent VN text', () {
     final String shell = ReaderVisualNovelScripts.vnShellScript();
@@ -290,8 +292,9 @@ void main() {
       'baseScreens = this.attachMediaScreensToAdjacentText(baseScreens);',
       buildAt,
     );
-    final int cueMergeAt =
-        shell.indexOf('this.mergeSentenceAudioCrossScreenScreens(baseScreens)');
+    final int cueMergeAt = shell.indexOf(
+      'this.mergeSentenceAudioCrossScreenScreens(baseScreens)',
+    );
     expect(attachAt, greaterThan(buildAt));
     expect(
       attachAt,
@@ -306,8 +309,11 @@ void main() {
       reason: '只有没有字符锚的纯媒体屏需要附加，正常文字/图片混排屏不得被重排',
     );
     expect(shell, contains('pendingMedia.concat([screen])'));
-    expect(shell, contains('[previous].concat(pendingMedia)'),
-        reason: '章尾无下一句时必须挂到上一屏，仍然不能永久不可见');
+    expect(
+      shell,
+      contains('[previous].concat(pendingMedia)'),
+      reason: '章尾无下一句时必须挂到上一屏，仍然不能永久不可见',
+    );
   });
 
   // BUG-718：VN 模式按字符偏移恢复（restoreToCharOffset）时整页空白。根因——
@@ -318,43 +324,65 @@ void main() {
   // visibility:hidden → 空白。根因修复：boot 块必须排在 shim IIFE 之后（restore*
   // 方法先定义再被调用），且 boot restore 套 try/catch，任何 restore 错误都不再
   // 连累 cloak 移除。headless WebView 跑不到真实 cloak 时序，这里钉死源码顺序契约。
-  test('BUG-718: charOffset-restore shim is defined BEFORE the boot calls it',
-      () {
+  test('BUG-718: charOffset-restore shim is defined BEFORE the boot calls it', () {
     final String shell = ReaderVisualNovelScripts.vnShellScript();
     // boot must restore by charOffset for a saved position（现在读运行时 C）。
-    final int bootCall = shell
-        .indexOf('window.fushiReader.restoreToCharOffset(C.initialCharOffset)');
-    expect(bootCall, greaterThanOrEqualTo(0),
-        reason:
-            'charOffset restore must call restoreToCharOffset(C.initialCharOffset)');
+    final int bootCall = shell.indexOf(
+      'window.fushiReader.restoreToCharOffset(C.initialCharOffset)',
+    );
+    expect(
+      bootCall,
+      greaterThanOrEqualTo(0),
+      reason:
+          'charOffset restore must call restoreToCharOffset(C.initialCharOffset)',
+    );
     // the host-compat shim that defines restoreToCharOffset must appear earlier
     // in the script than the boot call site (so it is not undefined when called).
     final int shimDef = shell.indexOf('vn.restoreToCharOffset = ');
-    expect(shimDef, greaterThanOrEqualTo(0),
-        reason: 'restoreToCharOffset shim must exist');
-    expect(shimDef, lessThan(bootCall),
-        reason:
-            'restoreToCharOffset shim must be defined BEFORE the boot block '
-            'calls it — otherwise a synchronous TypeError aborts the setup IIFE '
-            'and #fushi-cloak is never removed (BUG-718 blank screen)');
+    expect(
+      shimDef,
+      greaterThanOrEqualTo(0),
+      reason: 'restoreToCharOffset shim must exist',
+    );
+    expect(
+      shimDef,
+      lessThan(bootCall),
+      reason:
+          'restoreToCharOffset shim must be defined BEFORE the boot block '
+          'calls it — otherwise a synchronous TypeError aborts the setup IIFE '
+          'and #fushi-cloak is never removed (BUG-718 blank screen)',
+    );
     // boot restore must be wrapped so a future restore error cannot strand the
     // cloak / caret / gesture setup that follows it in the outer IIFE.
-    final int loadListener =
-        shell.indexOf("window.addEventListener('load', function() {");
-    expect(loadListener, greaterThan(shimDef),
-        reason: 'boot (load listener) must come after the shim IIFE');
-    expect(shell.substring(loadListener).contains('try {'), isTrue,
-        reason: 'boot restore must be wrapped in try/catch');
+    final int loadListener = shell.indexOf(
+      "window.addEventListener('load', function() {",
+    );
+    expect(
+      loadListener,
+      greaterThan(shimDef),
+      reason: 'boot (load listener) must come after the shim IIFE',
+    );
+    expect(
+      shell.substring(loadListener).contains('try {'),
+      isTrue,
+      reason: 'boot restore must be wrapped in try/catch',
+    );
     // 引擎里三种 shell 并存时，VN 那份仍保持 shim-before-boot 顺序。
     final String engine = ReaderPaginationScripts.engineShell(
-        vnMode: true, continuousMode: false);
+      vnMode: true,
+      continuousMode: false,
+    );
     final int engShim = engine.indexOf('vn.restoreToCharOffset = ');
     final int engBoot = engine.indexOf(
-        'window.fushiReader.restoreToCharOffset(C.initialCharOffset)', engShim);
+      'window.fushiReader.restoreToCharOffset(C.initialCharOffset)',
+      engShim,
+    );
     expect(engShim, greaterThanOrEqualTo(0));
-    expect(engBoot, greaterThan(engShim),
-        reason:
-            'engine-assembled VN shell must keep shim-before-boot ordering');
+    expect(
+      engBoot,
+      greaterThan(engShim),
+      reason: 'engine-assembled VN shell must keep shim-before-boot ordering',
+    );
   });
 
   // BUG-1742 / BUG-1743：shim 块是「VN 必须实现的宿主接口清单」的唯一真相点。
@@ -378,7 +406,9 @@ void main() {
     }
     // 引擎三 shell 并存时 VN 那份同样要带齐。
     final String engine = ReaderPaginationScripts.engineShell(
-        vnMode: true, continuousMode: false);
+      vnMode: true,
+      continuousMode: false,
+    );
     expect(engine.contains('vn.highlightSelectorCue = '), isTrue);
     expect(engine.contains('vn.scrollToSearchMatch = '), isTrue);
   });
@@ -390,8 +420,11 @@ void main() {
     final String body = shell.substring(start, start + 200);
     // detachChapterSource 把整章正文搬进游离的 sourceRoot；从 document 取根
     // 就等于回到 BUG-1742 那条静默落空的老路。
-    expect(body.contains('this.sourceRoot'), isTrue,
-        reason: 'contentRoot 必须返回 sourceRoot（正文已被搬出 document）');
+    expect(
+      body.contains('this.sourceRoot'),
+      isTrue,
+      reason: 'contentRoot 必须返回 sourceRoot（正文已被搬出 document）',
+    );
   });
 
   test('BUG-1742: 选择器跟随走「字符偏移 → 屏」链路，而不是滚动', () {
@@ -401,15 +434,27 @@ void main() {
     final int end = shell.indexOf('vn.scrollToSearchMatch = ', start);
     expect(end, greaterThan(start));
     final String body = shell.substring(start, end);
-    expect(body.contains('this.contentRoot()'), isTrue,
-        reason: '必须在 contentRoot 上找元素，document 里只有当前屏的克隆');
-    expect(body.contains('sourcePositionForNode'), isTrue,
-        reason: '必须把源节点换算成字符偏移');
+    expect(
+      body.contains('this.contentRoot()'),
+      isTrue,
+      reason: '必须在 contentRoot 上找元素，document 里只有当前屏的克隆',
+    );
+    expect(
+      body.contains('sourcePositionForNode'),
+      isTrue,
+      reason: '必须把源节点换算成字符偏移',
+    );
     expect(body.contains('this.screenIndexForCharOffset'), isTrue);
-    expect(body.contains('this.renderScreen('), isTrue,
-        reason: 'VN 的跟随语义是翻屏；scrollIntoView 在定屏 stage 上无效果');
-    expect(body.contains('if (!reveal) return null;'), isTrue,
-        reason: 'reveal=false 是「别打断当前阅读位置」的显式请求，不许翻屏');
+    expect(
+      body.contains('this.renderScreen('),
+      isTrue,
+      reason: 'VN 的跟随语义是翻屏；scrollIntoView 在定屏 stage 上无效果',
+    );
+    expect(
+      body.contains('if (!reveal) return null;'),
+      isTrue,
+      reason: 'reveal=false 是「别打断当前阅读位置」的显式请求，不许翻屏',
+    );
   });
 
   test('BUG-1743: VN 搜索在整章 contentStream 上匹配并做坐标换算', () {
@@ -421,16 +466,25 @@ void main() {
     final String body = shell.substring(start, end);
     // 分页版用 createWalker()（只走当前屏）+ scrollToRange（VN 无此方法）——
     // 照搬过来在 VN 下只会在当前屏内找，跨屏命中永远找不到。
-    expect(body.contains('createWalker('), isFalse,
-        reason: 'VN 必须在整章 contentStream 上匹配，不能只走当前屏');
+    expect(
+      body.contains('createWalker('),
+      isFalse,
+      reason: 'VN 必须在整章 contentStream 上匹配，不能只走当前屏',
+    );
     expect(body.contains('stream.textEntries'), isTrue);
     // 命中下标是拼接后的原始文本坐标，屏索引吃的是可匹配字符坐标。
-    expect(body.contains('countChars(prefix)'), isTrue,
-        reason: '缺少 raw→matchable 换算会在任何含空白的章节上系统性偏移');
+    expect(
+      body.contains('countChars(prefix)'),
+      isTrue,
+      reason: '缺少 raw→matchable 换算会在任何含空白的章节上系统性偏移',
+    );
     expect(body.contains('seg.entry.startChar'), isTrue);
     expect(body.contains('this.screenIndexForCharOffset'), isTrue);
-    expect(body.contains('return this.calculateProgress();'), isTrue,
-        reason: '返回契约与分页版一致（调用方靠它落库）');
+    expect(
+      body.contains('return this.calculateProgress();'),
+      isTrue,
+      reason: '返回契约与分页版一致（调用方靠它落库）',
+    );
   });
 }
 

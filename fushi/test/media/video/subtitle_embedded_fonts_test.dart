@@ -82,8 +82,10 @@ void main() {
     });
 
     test('reads Typographic Family (nameID 16)', () {
-      final Uint8List bytes =
-          _buildSfntWithFamily('HYXuanSong 75S', nameId: 16);
+      final Uint8List bytes = _buildSfntWithFamily(
+        'HYXuanSong 75S',
+        nameId: 16,
+      );
       expect(parseSfntFamilyNames(bytes), contains('HYXuanSong 75S'));
     });
 
@@ -97,8 +99,7 @@ void main() {
   });
 
   group('parseFfprobeFontAttachments', () {
-    test(
-        'keeps font attachments, skips non-font, ordinal counts all '
+    test('keeps font attachments, skips non-font, ordinal counts all '
         'attachment streams', () {
       const String json = '''
       {"streams":[
@@ -113,13 +114,19 @@ void main() {
         {"index":6,"codec_type":"attachment",
          "tags":{"filename":"noto.TTC","mimetype":"font/collection"}}
       ]}''';
-      final List<EmbeddedFontAttachment> fonts =
-          parseFfprobeFontAttachments(json);
+      final List<EmbeddedFontAttachment> fonts = parseFfprobeFontAttachments(
+        json,
+      );
       // matisse(ord0) + hyxuansong(ord1) + noto.TTC(ord3) are fonts; cover(ord2) not.
-      expect(fonts.map((EmbeddedFontAttachment f) => f.attachmentOrdinal),
-          <int>[0, 1, 3]);
-      expect(fonts.map((EmbeddedFontAttachment f) => f.fileName),
-          <String>['matisse.ttf', 'hyxuansong.otf', 'noto.TTC']);
+      expect(
+        fonts.map((EmbeddedFontAttachment f) => f.attachmentOrdinal),
+        <int>[0, 1, 3],
+      );
+      expect(fonts.map((EmbeddedFontAttachment f) => f.fileName), <String>[
+        'matisse.ttf',
+        'hyxuansong.otf',
+        'noto.TTC',
+      ]);
     });
 
     test('empty / malformed json → empty list (no throw)', () {
@@ -132,8 +139,9 @@ void main() {
 
   group('SubtitleEmbeddedFontLoader missing-ffprobe degrade (BUG-829)', () {
     test('缺 ffprobe（ProcessException）时降级空集且不刷错误日志', () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_embfont_');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_embfont_',
+      );
       addTearDown(() {
         try {
           dir.deleteSync(recursive: true);
@@ -145,8 +153,9 @@ void main() {
 
       final int before = ErrorLogService.instance.entries.length;
 
-      final SubtitleEmbeddedFontLoader loader =
-          SubtitleEmbeddedFontLoader(backend: _MissingFfprobeBackend());
+      final SubtitleEmbeddedFontLoader loader = SubtitleEmbeddedFontLoader(
+        backend: _MissingFfprobeBackend(),
+      );
       final Set<String> families = await loader.loadForVideo(video.path);
 
       // 无 ffprobe → 无附件 → 空集，回退系统字体 fallback（不崩）。
@@ -156,8 +165,10 @@ void main() {
       final List<ErrorLogEntry> entries = ErrorLogService.instance.entries;
       expect(entries.length, before, reason: '缺 ffprobe 不应新增任何错误日志条目');
       expect(
-        entries.where((ErrorLogEntry e) =>
-            e.source == 'SubtitleEmbeddedFontLoader.loadForVideo'),
+        entries.where(
+          (ErrorLogEntry e) =>
+              e.source == 'SubtitleEmbeddedFontLoader.loadForVideo',
+        ),
         isEmpty,
         reason: 'loadForVideo 不应把「无 ffprobe」记成错误',
       );

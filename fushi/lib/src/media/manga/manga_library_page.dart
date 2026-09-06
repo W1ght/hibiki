@@ -64,9 +64,9 @@ class MangaLibraryPage extends StatelessWidget {
           label: t.settings,
           builder: (BuildContext context, Widget navigation) =>
               ModuleSettingsView(
-            destinationId: SettingsDestinationId.reading,
-            navigation: navigation,
-          ),
+                destinationId: SettingsDestinationId.reading,
+                navigation: navigation,
+              ),
         ),
       ],
     );

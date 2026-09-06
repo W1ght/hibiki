@@ -14,25 +14,23 @@ void main() {
   });
 
   BookTagRow tag() => const BookTagRow(
-        id: 1,
-        name: 'Anime',
-        colorValue: 0xFF2196F3,
-        sortOrder: 0,
-        createdAt: 0,
-      );
+    id: 1,
+    name: 'Anime',
+    colorValue: 0xFF2196F3,
+    sortOrder: 0,
+    createdAt: 0,
+  );
 
   Widget host(Widget child) => TranslationProvider(
-        child: MaterialApp(
-          home: Scaffold(
-            // 宽一点的窗口，确认三段图标 + 文字在常规布局下不溢出。
-            body: SizedBox(width: 600, child: child),
-          ),
-        ),
-      );
+    child: MaterialApp(
+      home: Scaffold(
+        // 宽一点的窗口，确认三段图标 + 文字在常规布局下不溢出。
+        body: SizedBox(width: 600, child: child),
+      ),
+    ),
+  );
 
-  testWidgets('三段都有可见文字标签（Keep / Add / Remove）', (
-    WidgetTester tester,
-  ) async {
+  testWidgets('三段都有可见文字标签（Keep / Add / Remove）', (WidgetTester tester) async {
     await tester.pumpWidget(host(buildBatchTagIntentRowForTesting(tag: tag())));
     await tester.pumpAndSettle();
 
@@ -43,9 +41,7 @@ void main() {
     expect(find.text(t.batch_tag_remove), findsOneWidget);
   });
 
-  testWidgets('三段图标语义区分（不再是两个一样的横杠）', (
-    WidgetTester tester,
-  ) async {
+  testWidgets('三段图标语义区分（不再是两个一样的横杠）', (WidgetTester tester) async {
     await tester.pumpWidget(host(buildBatchTagIntentRowForTesting(tag: tag())));
     await tester.pumpAndSettle();
 
@@ -56,15 +52,27 @@ void main() {
         .toSet();
 
     // 三段意图图标都该出现，且三者互不相同。
-    expect(icons.contains(Icons.remove_circle_outline), isTrue,
-        reason: 'keep 段应是中性「圈内横杠」');
-    expect(icons.contains(Icons.add_circle), isTrue,
-        reason: 'add 段应是主色「实心加号圈」');
-    expect(icons.contains(Icons.do_not_disturb_on), isTrue,
-        reason: 'remove 段应是错误红「禁止圈」');
+    expect(
+      icons.contains(Icons.remove_circle_outline),
+      isTrue,
+      reason: 'keep 段应是中性「圈内横杠」',
+    );
+    expect(
+      icons.contains(Icons.add_circle),
+      isTrue,
+      reason: 'add 段应是主色「实心加号圈」',
+    );
+    expect(
+      icons.contains(Icons.do_not_disturb_on),
+      isTrue,
+      reason: 'remove 段应是错误红「禁止圈」',
+    );
     // 修复前 keep 用 horizontal_rule_outlined、remove 用 remove（都是横杠）。
-    expect(icons.contains(Icons.horizontal_rule_outlined), isFalse,
-        reason: 'keep 不再用与 remove 几乎一样的横杠');
+    expect(
+      icons.contains(Icons.horizontal_rule_outlined),
+      isFalse,
+      reason: 'keep 不再用与 remove 几乎一样的横杠',
+    );
   });
 
   testWidgets('选中 remove 时图标与文字一起染成错误红（整段染红，非只图标）', (
@@ -87,9 +95,7 @@ void main() {
     expect(removeLabel.style?.color, errorColor, reason: '红色应扩到整段（含文字标签），不只图标');
   });
 
-  testWidgets('窄弹窗宽度下三段文字横排单行（不再竖排成「保/持」且不溢出）', (
-    WidgetTester tester,
-  ) async {
+  testWidgets('窄弹窗宽度下三段文字横排单行（不再竖排成「保/持」且不溢出）', (WidgetTester tester) async {
     // 复刻手机窄弹窗：正文可用宽度 ~300dp。修复前三段被 mainAxisSize.min +
     // maxWidth:300 压到 ~270，双字标签竖排换行；修复后铺满行宽 + 单行锁定。
     await tester.pumpWidget(
@@ -134,11 +140,17 @@ void main() {
     final String row = src.substring(rowStart, rowEnd);
 
     // 三段各有可见文字标签（label）。
-    expect('label: segmentLabel('.allMatches(row).length, 3,
-        reason: '三段都应配可见文字标签');
+    expect(
+      'label: segmentLabel('.allMatches(row).length,
+      3,
+      reason: '三段都应配可见文字标签',
+    );
     // 文字标签会随选中切换颜色（不只图标）。
-    expect(row, contains('color: selected == intent ? color : null'),
-        reason: 'segmentLabel 选中时染对应语义色（remove=错误红）');
+    expect(
+      row,
+      contains('color: selected == intent ? color : null'),
+      reason: 'segmentLabel 选中时染对应语义色（remove=错误红）',
+    );
     // keep/remove 不再用同款横杠。
     expect(row, isNot(contains('Icons.horizontal_rule_outlined')));
     expect(row, contains('Icons.remove_circle_outline'));

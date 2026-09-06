@@ -20,8 +20,9 @@ class _FakeRepo extends BaseAnkiRepository {
 
   @override
   Future<List<MinedNoteRef>> findMatchingNotes(
-          String expression, String reading) async =>
-      matches;
+    String expression,
+    String reading,
+  ) async => matches;
 
   @override
   Future<Map<String, String>?> noteFields(int noteId) async => fields;
@@ -36,10 +37,10 @@ class _FakeRepo extends BaseAnkiRepository {
   Future<AnkiFetchResult> fetchConfiguration() async =>
       const AnkiFetchResult.error('unused');
   @override
-  Future<MineOutcome> mineEntry(
-          {required String rawPayloadJson,
-          required AnkiMiningContext context}) async =>
-      const MineOutcome.success();
+  Future<MineOutcome> mineEntry({
+    required String rawPayloadJson,
+    required AnkiMiningContext context,
+  }) async => const MineOutcome.success();
   @override
   Future<bool> isDuplicate(String expression, String reading) async => true;
   @override
@@ -66,24 +67,27 @@ Widget _host(Future<void> Function(BuildContext) onTapBody) {
 }
 
 void main() {
-  testWidgets('lists every matching card (decision 2) + three options',
-      (tester) async {
+  testWidgets('lists every matching card (decision 2) + three options', (
+    tester,
+  ) async {
     final repo = _FakeRepo(const [
       MinedNoteRef(noteId: 300, preview: '日本語 A'),
       MinedNoteRef(noteId: 200, preview: '日本語 B'),
     ]);
     AnkiCardMutationResult? result;
 
-    await tester.pumpWidget(_host((context) async {
-      result = await runAnkiMinedCardAction(
-        context: context,
-        repo: repo,
-        expression: '日本語',
-        reading: 'にほんご',
-        mineNew: () async => (ankiConnect: true, noteId: 999),
-        overwrite: (noteId) async => (ankiConnect: true, noteId: noteId),
-      );
-    }));
+    await tester.pumpWidget(
+      _host((context) async {
+        result = await runAnkiMinedCardAction(
+          context: context,
+          repo: repo,
+          expression: '日本語',
+          reading: 'にほんご',
+          mineNew: () async => (ankiConnect: true, noteId: 999),
+          overwrite: (noteId) async => (ankiConnect: true, noteId: noteId),
+        );
+      }),
+    );
     await tester.tap(find.text('open'));
     await tester.pumpAndSettle();
 
@@ -104,23 +108,26 @@ void main() {
     expect(result!.ankiConnect, isTrue);
   });
 
-  testWidgets('overwriting a specific card targets that note id',
-      (tester) async {
+  testWidgets('overwriting a specific card targets that note id', (
+    tester,
+  ) async {
     final repo = _FakeRepo(const [
       MinedNoteRef(noteId: 300, preview: 'A'),
       MinedNoteRef(noteId: 200, preview: 'B'),
     ]);
     AnkiCardMutationResult? result;
-    await tester.pumpWidget(_host((context) async {
-      result = await runAnkiMinedCardAction(
-        context: context,
-        repo: repo,
-        expression: 'x',
-        reading: '',
-        mineNew: () async => (ankiConnect: true, noteId: 999),
-        overwrite: (noteId) async => (ankiConnect: true, noteId: noteId),
-      );
-    }));
+    await tester.pumpWidget(
+      _host((context) async {
+        result = await runAnkiMinedCardAction(
+          context: context,
+          repo: repo,
+          expression: 'x',
+          reading: '',
+          mineNew: () async => (ankiConnect: true, noteId: 999),
+          overwrite: (noteId) async => (ankiConnect: true, noteId: noteId),
+        );
+      }),
+    );
     await tester.tap(find.text('open'));
     await tester.pumpAndSettle();
 
@@ -128,24 +135,30 @@ void main() {
     await tester.tap(find.byIcon(Icons.edit_outlined).last);
     await tester.pumpAndSettle();
     expect(result, isNotNull);
-    expect(result!.noteId, 200,
-        reason: 'overwrite targets the user-chosen card, not the newest');
+    expect(
+      result!.noteId,
+      200,
+      reason: 'overwrite targets the user-chosen card, not the newest',
+    );
   });
 
-  testWidgets('no matches falls back to mineNew (deleted since detection)',
-      (tester) async {
+  testWidgets('no matches falls back to mineNew (deleted since detection)', (
+    tester,
+  ) async {
     final repo = _FakeRepo(const []);
     AnkiCardMutationResult? result;
-    await tester.pumpWidget(_host((context) async {
-      result = await runAnkiMinedCardAction(
-        context: context,
-        repo: repo,
-        expression: 'gone',
-        reading: '',
-        mineNew: () async => (ankiConnect: true, noteId: 42),
-        overwrite: (noteId) async => (ankiConnect: false, noteId: null),
-      );
-    }));
+    await tester.pumpWidget(
+      _host((context) async {
+        result = await runAnkiMinedCardAction(
+          context: context,
+          repo: repo,
+          expression: 'gone',
+          reading: '',
+          mineNew: () async => (ankiConnect: true, noteId: 42),
+          overwrite: (noteId) async => (ankiConnect: false, noteId: null),
+        );
+      }),
+    );
     await tester.tap(find.text('open'));
     await tester.pumpAndSettle();
     // No sheet shown; mined fresh directly.
@@ -153,38 +166,42 @@ void main() {
     expect(result!.noteId, 42);
   });
 
-  testWidgets('note viewer shows fields read-only + open in Anki (decision 5)',
-      (tester) async {
-    final repo = _FakeRepo(
-      const [MinedNoteRef(noteId: 300, preview: 'A')],
-      fields: const {'Expression': '日本語', 'Meaning': 'language'},
-    );
-    await tester.pumpWidget(_host((context) async {
-      await runAnkiMinedCardAction(
-        context: context,
-        repo: repo,
-        expression: '日本語',
-        reading: '',
-        mineNew: () async => (ankiConnect: true, noteId: 999),
-        overwrite: (noteId) async => (ankiConnect: true, noteId: noteId),
+  testWidgets(
+    'note viewer shows fields read-only + open in Anki (decision 5)',
+    (tester) async {
+      final repo = _FakeRepo(
+        const [MinedNoteRef(noteId: 300, preview: 'A')],
+        fields: const {'Expression': '日本語', 'Meaning': 'language'},
       );
-    }));
-    await tester.tap(find.text('open'));
-    await tester.pumpAndSettle();
+      await tester.pumpWidget(
+        _host((context) async {
+          await runAnkiMinedCardAction(
+            context: context,
+            repo: repo,
+            expression: '日本語',
+            reading: '',
+            mineNew: () async => (ankiConnect: true, noteId: 999),
+            overwrite: (noteId) async => (ankiConnect: true, noteId: noteId),
+          );
+        }),
+      );
+      await tester.tap(find.text('open'));
+      await tester.pumpAndSettle();
 
-    // Open the viewer via the view icon.
-    await tester.tap(find.byIcon(Icons.open_in_new));
-    await tester.pumpAndSettle();
-    // Field names + values are shown read-only.
-    expect(find.text('Expression'), findsOneWidget);
-    expect(find.text('日本語'), findsWidgets);
-    expect(find.text('Meaning'), findsOneWidget);
-    expect(find.text('language'), findsOneWidget);
-    // "Open in Anki" triggers repo.openNoteInAnki for this note.
-    await tester.tap(find.text(t.anki_note_viewer_open_in_anki));
-    await tester.pumpAndSettle();
-    expect(repo.openedNoteId, 300);
-  });
+      // Open the viewer via the view icon.
+      await tester.tap(find.byIcon(Icons.open_in_new));
+      await tester.pumpAndSettle();
+      // Field names + values are shown read-only.
+      expect(find.text('Expression'), findsOneWidget);
+      expect(find.text('日本語'), findsWidgets);
+      expect(find.text('Meaning'), findsOneWidget);
+      expect(find.text('language'), findsOneWidget);
+      // "Open in Anki" triggers repo.openNoteInAnki for this note.
+      await tester.tap(find.text(t.anki_note_viewer_open_in_anki));
+      await tester.pumpAndSettle();
+      expect(repo.openedNoteId, 300);
+    },
+  );
 
   // TODO-1007 健壮性：宿主回调抛错时，action sheet 不能卡在 _busy 进度条无反馈。
   // 这三个用例构造抛错的 mineNew/overwrite，断言：异常不逃逸（无 takeException）、
@@ -193,19 +210,21 @@ void main() {
   testWidgets('回归复现：mineNew 抛错时复位 busy + 弹窗保留可重试（不卡进度条）', (tester) async {
     final repo = _FakeRepo(const [MinedNoteRef(noteId: 300, preview: 'A')]);
     int mineNewCalls = 0;
-    await tester.pumpWidget(_host((context) async {
-      await runAnkiMinedCardAction(
-        context: context,
-        repo: repo,
-        expression: 'x',
-        reading: '',
-        mineNew: () async {
-          mineNewCalls++;
-          throw StateError('host channel failed');
-        },
-        overwrite: (noteId) async => (ankiConnect: true, noteId: noteId),
-      );
-    }));
+    await tester.pumpWidget(
+      _host((context) async {
+        await runAnkiMinedCardAction(
+          context: context,
+          repo: repo,
+          expression: 'x',
+          reading: '',
+          mineNew: () async {
+            mineNewCalls++;
+            throw StateError('host channel failed');
+          },
+          overwrite: (noteId) async => (ankiConnect: true, noteId: noteId),
+        );
+      }),
+    );
     await tester.tap(find.text('open'));
     await tester.pumpAndSettle();
 
@@ -228,19 +247,21 @@ void main() {
   testWidgets('回归复现：overwrite 抛错时复位 busy + 弹窗保留可重试', (tester) async {
     final repo = _FakeRepo(const [MinedNoteRef(noteId: 200, preview: 'B')]);
     int overwriteCalls = 0;
-    await tester.pumpWidget(_host((context) async {
-      await runAnkiMinedCardAction(
-        context: context,
-        repo: repo,
-        expression: 'x',
-        reading: '',
-        mineNew: () async => (ankiConnect: true, noteId: 999),
-        overwrite: (noteId) async {
-          overwriteCalls++;
-          throw StateError('host channel failed');
-        },
-      );
-    }));
+    await tester.pumpWidget(
+      _host((context) async {
+        await runAnkiMinedCardAction(
+          context: context,
+          repo: repo,
+          expression: 'x',
+          reading: '',
+          mineNew: () async => (ankiConnect: true, noteId: 999),
+          overwrite: (noteId) async {
+            overwriteCalls++;
+            throw StateError('host channel failed');
+          },
+        );
+      }),
+    );
     await tester.tap(find.text('open'));
     await tester.pumpAndSettle();
 
@@ -262,19 +283,21 @@ void main() {
       fields: const {'Expression': '日本語'},
     );
     int overwriteCalls = 0;
-    await tester.pumpWidget(_host((context) async {
-      await runAnkiMinedCardAction(
-        context: context,
-        repo: repo,
-        expression: '日本語',
-        reading: '',
-        mineNew: () async => (ankiConnect: true, noteId: 999),
-        overwrite: (noteId) async {
-          overwriteCalls++;
-          throw StateError('host channel failed');
-        },
-      );
-    }));
+    await tester.pumpWidget(
+      _host((context) async {
+        await runAnkiMinedCardAction(
+          context: context,
+          repo: repo,
+          expression: '日本語',
+          reading: '',
+          mineNew: () async => (ankiConnect: true, noteId: 999),
+          overwrite: (noteId) async {
+            overwriteCalls++;
+            throw StateError('host channel failed');
+          },
+        );
+      }),
+    );
     await tester.tap(find.text('open'));
     await tester.pumpAndSettle();
     // 打开 note viewer。

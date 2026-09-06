@@ -41,8 +41,10 @@ String? findDanmakuSidecar(String videoPath) {
   } on FileSystemException {
     return null;
   }
-  final String? picked =
-      pickDanmakuSidecar(p.basenameWithoutExtension(videoPath), files);
+  final String? picked = pickDanmakuSidecar(
+    p.basenameWithoutExtension(videoPath),
+    files,
+  );
   return picked == null ? null : p.normalize(p.join(dir.path, picked));
 }
 
@@ -71,10 +73,10 @@ Future<VideoDanmakuLoadResult> loadDanmakuSidecarFile(
     // 均可跨 isolate 传输，`_parseDanmakuContent` 是无闭包捕获的顶层纯函数。
     final String content = await readTextWithEncoding(file);
     final String ext = p.extension(file.path).toLowerCase();
-    final List<VideoDanmakuItem> items = await compute(
-      _parseDanmakuContent,
-      (content, ext == '.json'),
-    );
+    final List<VideoDanmakuItem> items = await compute(_parseDanmakuContent, (
+      content,
+      ext == '.json',
+    ));
     return VideoDanmakuLoadResult(items: items, sourcePath: file.path);
   } catch (e) {
     return VideoDanmakuLoadResult(
@@ -101,12 +103,17 @@ List<VideoDanmakuItem> parseBilibiliDanmakuXml(String xml) {
     for (final XmlElement node in doc.findAllElements('d')) {
       final String? pValue = node.getAttribute('p');
       final String text = node.innerText.trim();
-      final VideoDanmakuItem? item =
-          _itemFromParts(pValue?.split(','), text, colorIndex: 3);
+      final VideoDanmakuItem? item = _itemFromParts(
+        pValue?.split(','),
+        text,
+        colorIndex: 3,
+      );
       if (item != null) items.add(item);
     }
-    items.sort((VideoDanmakuItem a, VideoDanmakuItem b) =>
-        a.startMs.compareTo(b.startMs));
+    items.sort(
+      (VideoDanmakuItem a, VideoDanmakuItem b) =>
+          a.startMs.compareTo(b.startMs),
+    );
     return items;
   } catch (_) {
     return const <VideoDanmakuItem>[];
@@ -148,8 +155,9 @@ List<VideoDanmakuItem> dandanplayCommentsToDanmaku(
     final int shifted = (item.startMs + shiftMs).clamp(0, 1 << 30).toInt();
     items.add(item.copyWith(startMs: shifted));
   }
-  items.sort((VideoDanmakuItem a, VideoDanmakuItem b) =>
-      a.startMs.compareTo(b.startMs));
+  items.sort(
+    (VideoDanmakuItem a, VideoDanmakuItem b) => a.startMs.compareTo(b.startMs),
+  );
   return items;
 }
 
@@ -180,15 +188,15 @@ VideoDanmakuItem? _itemFromObject(Map<dynamic, dynamic> row, String text) {
   final double? seconds = rawTime is num
       ? rawTime.toDouble()
       : rawTime is String
-          ? double.tryParse(rawTime)
-          : null;
+      ? double.tryParse(rawTime)
+      : null;
   if (seconds == null) return null;
   final Object? rawMode = row['mode'] ?? row['type'];
   final VideoDanmakuMode? mode = rawMode is num
       ? _modeFromRaw(rawMode.toInt())
       : rawMode is String
-          ? _modeFromString(rawMode)
-          : VideoDanmakuMode.scroll;
+      ? _modeFromString(rawMode)
+      : VideoDanmakuMode.scroll;
   if (mode == null) return null;
   final Object? rawColor = row['color'];
   final int color = rawColor is num ? rawColor.toInt() : 0xFFFFFF;

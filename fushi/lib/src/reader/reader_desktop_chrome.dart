@@ -15,6 +15,8 @@ import 'package:flutter/material.dart';
 
 import 'package:fushi/src/reader/reader_status_footer.dart'
     show readerStatusFooterEnabled;
+import 'package:fushi/src/utils/misc/platform_utils.dart'
+    show kFushiSettingsWideMinHeight, kFushiSettingsWideThreshold;
 
 /// 顶部工具栏视觉高度 == 挤压态预留高（chrome 铁律：同一真相源，见
 /// reader_chrome_floating.dart 文件头）。
@@ -32,6 +34,14 @@ bool readerDesktopChromeEnabled({
   required bool desktop,
   required bool lyricsMode,
 }) => readerStatusFooterEnabled(desktop: desktop, lyricsMode: lyricsMode);
+
+/// 设置 / 导航是否走左右抽屉：桌面端恒走；平板等宽窗（宽高都过共享阈值）也走——
+/// 这样居中 master-detail 对话框在阅读器里没有剩余用途，可以删掉。手机窄窗仍走
+/// bottom sheet 的主页 / 子页 push。
+bool readerUsesSideSheets({required bool desktop, required Size window}) =>
+    desktop ||
+    (window.width >= kFushiSettingsWideThreshold &&
+        window.height >= kFushiSettingsWideMinHeight);
 
 /// 顶部工具栏的顶部预留高。
 ///
@@ -63,7 +73,8 @@ double readerSideSheetWidth(double windowWidth) {
 /// 的按钮，其余收进右端 ⋮ 溢出菜单（「常用固定 + 溢出菜单」，避免图标越加越挤）。
 const double kReaderDesktopHeaderCompactWidth = 760;
 
-bool readerHeaderCompact(double width) => width < kReaderDesktopHeaderCompactWidth;
+bool readerHeaderCompact(double width) =>
+    width < kReaderDesktopHeaderCompactWidth;
 
 /// 顶部工具栏的一个动作：图标 + 文案（溢出菜单里显示）+ 回调。
 class ReaderHeaderAction {
@@ -123,13 +134,13 @@ class ReaderDesktopHeader extends StatelessWidget {
   final double height;
 
   Widget _button(ReaderHeaderAction a) => ReaderDesktopHeaderButton(
-        key: a.key,
-        icon: a.icon,
-        tooltip: a.label,
-        color: textColor,
-        semanticsId: a.semanticsId,
-        onPressed: a.onPressed,
-      );
+    key: a.key,
+    icon: a.icon,
+    tooltip: a.label,
+    color: textColor,
+    semanticsId: a.semanticsId,
+    onPressed: a.onPressed,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -141,79 +152,82 @@ class ReaderDesktopHeader extends StatelessWidget {
     );
     return ExcludeFocus(
       child: ColoredBox(
-      color: backgroundColor,
-      child: SizedBox(
-        height: height,
-        child: LayoutBuilder(
-          builder: (BuildContext context, BoxConstraints constraints) {
-            final bool compact = readerHeaderCompact(constraints.maxWidth);
-            final List<ReaderHeaderAction> overflow = readerHeaderOverflow(
-              compact: compact,
-              leading: leading,
-              trailing: trailing,
-            );
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Row(
-                children: <Widget>[
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      for (final ReaderHeaderAction a in leading)
-                        if (!compact || a.pinned) _button(a),
-                    ],
-                  ),
-                  Expanded(
-                    child: Text(
-                      title,
-                      key: const ValueKey<String>('fushi_desktop_header_title'),
-                      textAlign: TextAlign.center,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: titleStyle,
+        color: backgroundColor,
+        child: SizedBox(
+          height: height,
+          child: LayoutBuilder(
+            builder: (BuildContext context, BoxConstraints constraints) {
+              final bool compact = readerHeaderCompact(constraints.maxWidth);
+              final List<ReaderHeaderAction> overflow = readerHeaderOverflow(
+                compact: compact,
+                leading: leading,
+                trailing: trailing,
+              );
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: Row(
+                  children: <Widget>[
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        for (final ReaderHeaderAction a in leading)
+                          if (!compact || a.pinned) _button(a),
+                      ],
                     ),
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      for (final ReaderHeaderAction a in trailing)
-                        if (!compact || a.pinned) _button(a),
-                      if (overflow.isNotEmpty)
-                        PopupMenuButton<ReaderHeaderAction>(
-                          key: const ValueKey<String>(
-                            'fushi_desktop_header_overflow',
-                          ),
-                          tooltip:
-                              MaterialLocalizations.of(context).moreButtonTooltip,
-                          icon: Icon(Icons.more_vert, color: textColor),
-                          iconSize: 22,
-                          onSelected: (ReaderHeaderAction a) =>
-                              a.onPressed?.call(),
-                          itemBuilder: (BuildContext context) => <
-                              PopupMenuEntry<ReaderHeaderAction>>[
-                            for (final ReaderHeaderAction a in overflow)
-                              PopupMenuItem<ReaderHeaderAction>(
-                                value: a,
-                                enabled: a.onPressed != null,
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: <Widget>[
-                                    Icon(a.icon, size: 20),
-                                    const SizedBox(width: 12),
-                                    Text(a.label),
-                                  ],
-                                ),
-                              ),
-                          ],
+                    Expanded(
+                      child: Text(
+                        title,
+                        key: const ValueKey<String>(
+                          'fushi_desktop_header_title',
                         ),
-                    ],
-                  ),
-                ],
-              ),
-            );
-          },
+                        textAlign: TextAlign.center,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: titleStyle,
+                      ),
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        for (final ReaderHeaderAction a in trailing)
+                          if (!compact || a.pinned) _button(a),
+                        if (overflow.isNotEmpty)
+                          PopupMenuButton<ReaderHeaderAction>(
+                            key: const ValueKey<String>(
+                              'fushi_desktop_header_overflow',
+                            ),
+                            tooltip: MaterialLocalizations.of(
+                              context,
+                            ).moreButtonTooltip,
+                            icon: Icon(Icons.more_vert, color: textColor),
+                            iconSize: 22,
+                            onSelected: (ReaderHeaderAction a) =>
+                                a.onPressed?.call(),
+                            itemBuilder: (BuildContext context) =>
+                                <PopupMenuEntry<ReaderHeaderAction>>[
+                                  for (final ReaderHeaderAction a in overflow)
+                                    PopupMenuItem<ReaderHeaderAction>(
+                                      value: a,
+                                      enabled: a.onPressed != null,
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: <Widget>[
+                                          Icon(a.icon, size: 20),
+                                          const SizedBox(width: 12),
+                                          Text(a.label),
+                                        ],
+                                      ),
+                                    ),
+                                ],
+                          ),
+                      ],
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
         ),
-      ),
       ),
     );
   }

@@ -92,25 +92,25 @@ class _MediaItemDialogPageState extends BasePageState<MediaItemDialogPage> {
       _externalActions.whereType<DialogQuickAction>().toList();
 
   List<DialogListAction> get _listActions => [
-        ..._externalActions.whereType<DialogListAction>(),
-        if (widget.item.canEdit && widget.isHistory)
-          DialogListAction(
-            label: t.dialog_edit_info,
-            icon: Icons.edit_outlined,
-            onPressed: _executeEdit,
-          ),
-      ];
+    ..._externalActions.whereType<DialogListAction>(),
+    if (widget.item.canEdit && widget.isHistory)
+      DialogListAction(
+        label: t.dialog_edit_info,
+        icon: Icons.edit_outlined,
+        onPressed: _executeEdit,
+      ),
+  ];
 
   List<DialogDangerAction> get _dangerActions => [
-        ..._externalActions.whereType<DialogDangerAction>(),
-        if (widget.item.canDelete && widget.isHistory)
-          DialogDangerAction(
-            label: t.dialog_clear,
-            icon: Icons.clear_all,
-            onPressed: _executeClear,
-            muted: true,
-          ),
-      ];
+    ..._externalActions.whereType<DialogDangerAction>(),
+    if (widget.item.canDelete && widget.isHistory)
+      DialogDangerAction(
+        label: t.dialog_clear,
+        icon: Icons.clear_all,
+        onPressed: _executeClear,
+        muted: true,
+      ),
+  ];
 
   // -- callbacks ------------------------------------------------------------
 
@@ -150,8 +150,9 @@ class _MediaItemDialogPageState extends BasePageState<MediaItemDialogPage> {
 
   @override
   Widget build(BuildContext context) {
-    final String displayTitle =
-        mediaSource.getDisplayTitleFromMediaItem(widget.item);
+    final String displayTitle = mediaSource.getDisplayTitleFromMediaItem(
+      widget.item,
+    );
     final String? author = widget.item.author;
     final bool hasAuthor = author != null && author.isNotEmpty;
 
@@ -282,10 +283,7 @@ class MediaItemDialogFrame extends StatelessWidget {
               constraints: BoxConstraints(
                 maxHeight: screenHeight * _coverHeightFactor,
               ),
-              child: ColoredBox(
-                color: tokens.surfaces.overlay,
-                child: cover!,
-              ),
+              child: ColoredBox(color: tokens.surfaces.overlay, child: cover!),
             ),
           Padding(
             padding: EdgeInsets.all(tokens.spacing.card),
@@ -387,7 +385,8 @@ class MediaItemDialogFrame extends StatelessWidget {
       builder: (BuildContext context, BoxConstraints constraints) {
         final int count = quickActions.length;
         final double available = constraints.maxWidth;
-        final bool fitsOneRow = available.isFinite &&
+        final bool fitsOneRow =
+            available.isFinite &&
             (available - gap * (count - 1)) / count >= _quickActionMinChipWidth;
         final double chipWidth = fitsOneRow
             ? (available - gap * (count - 1)) / count
@@ -397,10 +396,7 @@ class MediaItemDialogFrame extends StatelessWidget {
           runSpacing: gap,
           children: <Widget>[
             for (final DialogQuickAction action in quickActions)
-              SizedBox(
-                width: chipWidth,
-                child: _quickActionChip(action),
-              ),
+              SizedBox(width: chipWidth, child: _quickActionChip(action)),
           ],
         );
       },

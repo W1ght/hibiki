@@ -112,8 +112,9 @@ Set<String> scanForeignSharedLibraryPaths(File file) {
       for (final RegExpMatch match in _absolutePathPattern.allMatches(text)) {
         final String path = match.group(0)!;
         if (!_looksLikeSharedLibrary(path)) continue;
-        final bool isSystem = _systemLibraryPrefixes
-            .any((String prefix) => path.startsWith(prefix));
+        final bool isSystem = _systemLibraryPrefixes.any(
+          (String prefix) => path.startsWith(prefix),
+        );
         if (!isSystem) found.add(path);
       }
       offset += _chunkSize;
@@ -147,7 +148,8 @@ Directory _repoRoot() {
   fail('找不到含 third_party/ffmpeg-min 的仓库根（从 ${Directory.current.path} 向上）');
 }
 
-String _fixHint(String platformDir) => '''
+String _fixHint(String platformDir) =>
+    '''
 
 这个二进制在**没装对应包管理器的用户机器上直接 dyld 崩溃**（BUG-1443：
 macOS 上 `Abort trap: 6` / exit 134），桌面制卡链全废。
@@ -187,15 +189,11 @@ void main() {
       ]);
 
       final Set<String> found = scanForeignSharedLibraryPaths(fake);
-      expect(
-        found,
-        <String>{
-          '/opt/homebrew/opt/svt-av1/lib/libSvtAv1Enc.4.dylib',
-          '/opt/homebrew/opt/webp/lib/libwebp.7.dylib',
-          '/usr/local/Cellar/x264/r3108/lib/libx264.165.dylib',
-        },
-        reason: '外部 dylib 必须全部被抓到，系统目录下的必须放过',
-      );
+      expect(found, <String>{
+        '/opt/homebrew/opt/svt-av1/lib/libSvtAv1Enc.4.dylib',
+        '/opt/homebrew/opt/webp/lib/libwebp.7.dylib',
+        '/usr/local/Cellar/x264/r3108/lib/libx264.165.dylib',
+      }, reason: '外部 dylib 必须全部被抓到，系统目录下的必须放过');
     });
 
     test('跨块边界的路径不会被漏掉', () {
@@ -227,19 +225,22 @@ void main() {
       expect(
         binaries.length,
         greaterThanOrEqualTo(4),
-        reason: 'third_party/ffmpeg-min 下至少应有 windows + macos 各两个 exe，'
+        reason:
+            'third_party/ffmpeg-min 下至少应有 windows + macos 各两个 exe，'
             '实际只找到 ${binaries.length} 个：'
             '${binaries.map((File f) => f.path).join(", ")}',
       );
       // 规模哨兵按平台再收一道：总数够但全挤在一个平台目录里（另一个被挪走/清空）
       // 同样是「守卫扫不到东西」，不能靠总数蒙混过关。
       for (final String platformDir in <String>['macos', 'windows']) {
-        final List<File> perPlatform =
-            _vendoredBinaries(Directory('${vendorRoot.path}/$platformDir'));
+        final List<File> perPlatform = _vendoredBinaries(
+          Directory('${vendorRoot.path}/$platformDir'),
+        );
         expect(
           perPlatform.length,
           greaterThanOrEqualTo(2),
-          reason: 'third_party/ffmpeg-min/$platformDir 下应有 ffmpeg + ffprobe，'
+          reason:
+              'third_party/ffmpeg-min/$platformDir 下应有 ffmpeg + ffprobe，'
               '实际找到 ${perPlatform.length} 个',
         );
       }
@@ -257,13 +258,16 @@ void main() {
         watch.stop();
         // 耗时打出来，方便判断守卫是否成了单测里的慢点。
         // ignore: avoid_print
-        print('[ffmpeg-min self-contained] $relative '
-            '(${binary.lengthSync()} B) 扫描耗时 ${watch.elapsedMilliseconds}ms');
+        print(
+          '[ffmpeg-min self-contained] $relative '
+          '(${binary.lengthSync()} B) 扫描耗时 ${watch.elapsedMilliseconds}ms',
+        );
 
         expect(
           foreign,
           isEmpty,
-          reason: '${binary.path} 依赖构建机专有的共享库：\n'
+          reason:
+              '${binary.path} 依赖构建机专有的共享库：\n'
               '${foreign.map((String p) => "  $p  ← ${_describeOrigin(p)}").join("\n")}'
               '\n${_fixHint(platformDir)}',
         );
@@ -283,50 +287,60 @@ void main() {
 
       // MH_MAGIC_64 小端（cf fa ed fe）+ cputype 0x0100000C。
       expect(
-        machOArchitectures(write('thin-arm64', <int>[
-          0xcf, 0xfa, 0xed, 0xfe, //
-          0x0c, 0x00, 0x00, 0x01,
-          ...List<int>.filled(24, 0),
-        ])),
+        machOArchitectures(
+          write('thin-arm64', <int>[
+            0xcf, 0xfa, 0xed, 0xfe, //
+            0x0c, 0x00, 0x00, 0x01,
+            ...List<int>.filled(24, 0),
+          ]),
+        ),
         <String>{'arm64'},
       );
       // 同上，cputype 0x01000007。
       expect(
-        machOArchitectures(write('thin-x86', <int>[
-          0xcf, 0xfa, 0xed, 0xfe, //
-          0x07, 0x00, 0x00, 0x01,
-          ...List<int>.filled(24, 0),
-        ])),
+        machOArchitectures(
+          write('thin-x86', <int>[
+            0xcf, 0xfa, 0xed, 0xfe, //
+            0x07, 0x00, 0x00, 0x01,
+            ...List<int>.filled(24, 0),
+          ]),
+        ),
         <String>{'x86_64'},
       );
       // MH_MAGIC_64 大端（fe ed fa cf）：字段跟着换字节序。
       expect(
-        machOArchitectures(write('thin-be', <int>[
-          0xfe, 0xed, 0xfa, 0xcf, //
-          0x01, 0x00, 0x00, 0x0c,
-          ...List<int>.filled(24, 0),
-        ])),
+        machOArchitectures(
+          write('thin-be', <int>[
+            0xfe, 0xed, 0xfa, 0xcf, //
+            0x01, 0x00, 0x00, 0x0c,
+            ...List<int>.filled(24, 0),
+          ]),
+        ),
         <String>{'arm64'},
       );
       // FAT_MAGIC + 2 条 arch（fat header 恒大端）。
       expect(
-        machOArchitectures(write('fat-universal', <int>[
-          0xca, 0xfe, 0xba, 0xbe, //
-          0x00, 0x00, 0x00, 0x02, // nfat_arch = 2
-          0x01, 0x00, 0x00, 0x07, ...List<int>.filled(16, 0), // x86_64
-          0x01, 0x00, 0x00, 0x0c, ...List<int>.filled(16, 0), // arm64
-        ])),
+        machOArchitectures(
+          write('fat-universal', <int>[
+            0xca, 0xfe, 0xba, 0xbe, //
+            0x00, 0x00, 0x00, 0x02, // nfat_arch = 2
+            0x01, 0x00, 0x00, 0x07, ...List<int>.filled(16, 0), // x86_64
+            0x01, 0x00, 0x00, 0x0c, ...List<int>.filled(16, 0), // arm64
+          ]),
+        ),
         <String>{'x86_64', 'arm64'},
       );
       // 不是 Mach-O（比如 PE）→ 空集，交给哨兵判红。
       expect(
-        machOArchitectures(write('not-macho', <int>[
-          0x4d,
-          0x5a,
-          0x90,
-          0x00,
-          ...List<int>.filled(28, 0),
-        ])),
+        machOArchitectures(
+          write('not-macho', <int>[
+            0x4d,
+            0x5a,
+            0x90,
+            0x00,
+            ...List<int>.filled(28, 0),
+          ]),
+        ),
         isEmpty,
       );
     });
@@ -339,27 +353,37 @@ void main() {
       expect(
         binaries.length,
         greaterThanOrEqualTo(2),
-        reason: '${macosDir.path} 下应有 ffmpeg + ffprobe，实际找到 '
+        reason:
+            '${macosDir.path} 下应有 ffmpeg + ffprobe，实际找到 '
             '${binaries.length} 个：${binaries.map((File f) => f.path).join(", ")}',
       );
 
-      final File workflow =
-          File('${root.path}/.github/workflows/release-desktop.yml');
+      final File workflow = File(
+        '${root.path}/.github/workflows/release-desktop.yml',
+      );
       expect(workflow.existsSync(), isTrue, reason: '缺 ${workflow.path}');
-      final String macosJob =
-          _workflowJob(workflow.readAsStringSync(), 'macos');
-      final RegExpMatch? runsOn =
-          RegExp(r'runs-on:\s*(\S+)').firstMatch(macosJob);
+      final String macosJob = _workflowJob(
+        workflow.readAsStringSync(),
+        'macos',
+      );
+      final RegExpMatch? runsOn = RegExp(
+        r'runs-on:\s*(\S+)',
+      ).firstMatch(macosJob);
       // 规模哨兵②：解析不出 runner 标签 = 守卫无从比对，必须红。
-      expect(runsOn, isNotNull,
-          reason: 'release-desktop.yml 的 macos job 里没解析出 runs-on；'
-              '守卫无法判断发版机架构');
+      expect(
+        runsOn,
+        isNotNull,
+        reason:
+            'release-desktop.yml 的 macos job 里没解析出 runs-on；'
+            '守卫无法判断发版机架构',
+      );
       final String label = runsOn!.group(1)!;
       final String? runnerArch = _macRunnerArchitectures[label];
       expect(
         runnerArch,
         isNotNull,
-        reason: '未知的 macOS runner 标签 `$label`。请在 '
+        reason:
+            '未知的 macOS runner 标签 `$label`。请在 '
             '_macRunnerArchitectures 里显式登记它的原生架构——猜标签名会在 '
             '`macos-13-xlarge`（其实是 arm64）这类例外上判错。',
       );
@@ -367,13 +391,18 @@ void main() {
       for (final File binary in binaries) {
         final Set<String> archs = machOArchitectures(binary);
         // 规模哨兵③：解析不出任何架构（文件被换成占位符 / 解析器坏了）必须红。
-        expect(archs, isNotEmpty,
-            reason: '${binary.path} 解析不出 Mach-O 架构——文件可能不是 Mach-O，'
-                '或已被换成占位符');
+        expect(
+          archs,
+          isNotEmpty,
+          reason:
+              '${binary.path} 解析不出 Mach-O 架构——文件可能不是 Mach-O，'
+              '或已被换成占位符',
+        );
         expect(
           archs,
           contains(runnerArch),
-          reason: '${binary.path} 提供 $archs，而 release-desktop.yml 的 macos '
+          reason:
+              '${binary.path} 提供 $archs，而 release-desktop.yml 的 macos '
               'job 跑在 `$label`（$runnerArch）。发版时装配步会把它拷进 .app，'
               '架构不匹配 → 用户机上 `Bad CPU type in executable`，桌面制卡链全废。\n'
               '修法二选一：① 把 macos job 换回 $archs 的 runner；'
@@ -396,8 +425,7 @@ List<File> _vendoredBinaries(Directory vendorRoot) {
   return vendorRoot.listSync(recursive: true).whereType<File>().where((File f) {
     final String name = f.uri.pathSegments.last;
     return !name.endsWith('.md') && !name.endsWith('.txt');
-  }).toList()
-    ..sort((File a, File b) => a.path.compareTo(b.path));
+  }).toList()..sort((File a, File b) => a.path.compareTo(b.path));
 }
 
 // ---------------------------------------------------------------------------
@@ -495,8 +523,9 @@ String _workflowJob(String workflow, String name) {
   final String marker = '\n  $name:\n';
   final int start = workflow.indexOf(marker);
   if (start < 0) fail('release-desktop.yml 里找不到 job：$name');
-  final Match? next = RegExp(r'\n  [a-zA-Z0-9_-]+:\n')
-      .firstMatch(workflow.substring(start + marker.length));
+  final Match? next = RegExp(
+    r'\n  [a-zA-Z0-9_-]+:\n',
+  ).firstMatch(workflow.substring(start + marker.length));
   return workflow.substring(
     start,
     next == null ? workflow.length : start + marker.length + next.start,

@@ -438,10 +438,11 @@ void main() {
     test('版本资源 0x0411 单独出现只是佐证 ⇒ unknown（Unicode 引擎的日文游戏）', () {
       // KiriKiri Z / Unity / Ren'Py 的日文游戏一样带 0x0411 却不需要 CP932；用户手上的
       // 官方多语言版正是这一格（BUG-1691 的「々 → 器」）。
-      final GalJapaneseLocaleVerdict alone =
-          judgeJapaneseLocaleNeed(const <GalJapaneseLocaleEvidence>[
-            GalJapaneseLocaleEvidence.versionInfoJapanese,
-          ]);
+      final GalJapaneseLocaleVerdict alone = judgeJapaneseLocaleNeed(
+        const <GalJapaneseLocaleEvidence>[
+          GalJapaneseLocaleEvidence.versionInfoJapanese,
+        ],
+      );
       expect(alone.need, GalJapaneseLocaleNeed.unknown);
       expect(alone.evidence, isEmpty);
 

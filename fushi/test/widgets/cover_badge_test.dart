@@ -24,30 +24,31 @@ Color _badgeColor(WidgetTester tester) {
 
 void main() {
   testWidgets('渲染图标 + 可选文字', (WidgetTester tester) async {
-    await tester.pumpWidget(_app(
-      eink: false,
-      child: const CoverBadge(icon: Icons.subtitles_outlined, label: '12'),
-    ));
+    await tester.pumpWidget(
+      _app(
+        eink: false,
+        child: const CoverBadge(icon: Icons.subtitles_outlined, label: '12'),
+      ),
+    );
     expect(find.byIcon(Icons.subtitles_outlined), findsOneWidget);
     expect(find.text('12'), findsOneWidget);
   });
 
-  testWidgets('常规主题：半透明深色胶囊（固定 scrim，不随 colorScheme）',
-      (WidgetTester tester) async {
-    await tester.pumpWidget(_app(
-      eink: false,
-      child: const CoverBadge(icon: Icons.cloud_outlined),
-    ));
+  testWidgets('常规主题：半透明深色胶囊（固定 scrim，不随 colorScheme）', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(
+      _app(eink: false, child: const CoverBadge(icon: Icons.cloud_outlined)),
+    );
     final Color color = _badgeColor(tester);
     expect(color.a, lessThan(1.0));
     expect(color.r, 0);
   });
 
   testWidgets('eink：纯黑实底（半透明黑在墨水屏合成抖动灰）', (WidgetTester tester) async {
-    await tester.pumpWidget(_app(
-      eink: true,
-      child: const CoverBadge(icon: Icons.cloud_outlined),
-    ));
+    await tester.pumpWidget(
+      _app(eink: true, child: const CoverBadge(icon: Icons.cloud_outlined)),
+    );
     expect(_badgeColor(tester), Colors.black);
   });
 }

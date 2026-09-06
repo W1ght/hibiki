@@ -93,26 +93,28 @@ CREATE TABLE video_watch_statistics (
     required String dateKey,
     required int subtitleChars,
     required int watchTimeMs,
-  }) =>
-      db.into(db.videoWatchStatistics).insert(
-            VideoWatchStatisticsCompanion.insert(
-              title: title,
-              bookUid: Value(bookUid),
-              dateKey: dateKey,
-              subtitleChars: subtitleChars,
-              watchTimeMs: watchTimeMs,
-              lastModified: 1,
-            ),
-          );
+  }) => db
+      .into(db.videoWatchStatistics)
+      .insert(
+        VideoWatchStatisticsCompanion.insert(
+          title: title,
+          bookUid: Value(bookUid),
+          dateKey: dateKey,
+          subtitleChars: subtitleChars,
+          watchTimeMs: watchTimeMs,
+          lastModified: 1,
+        ),
+      );
 
   test('v39：表重建保数据 + title 唯一匹配回填 uid、同名/孤儿保持 NULL', () async {
     final FushiDatabase db = await openV38Db();
-    final List<VideoWatchStatisticRow> rows =
-        await db.getAllVideoWatchStatistics();
+    final List<VideoWatchStatisticRow> rows = await db
+        .getAllVideoWatchStatistics();
     expect(rows, hasLength(3), reason: '旧行原样保留');
 
-    final VideoWatchStatisticRow unique =
-        rows.firstWhere((r) => r.title == 'Unique');
+    final VideoWatchStatisticRow unique = rows.firstWhere(
+      (r) => r.title == 'Unique',
+    );
     expect(unique.bookUid, 'video/u1', reason: 'title 唯一 → 回填 uid');
     expect(unique.subtitleChars, 100);
     expect(unique.watchTimeMs, 60000);
@@ -120,29 +122,37 @@ CREATE TABLE video_watch_statistics (
 
     final VideoWatchStatisticRow dup = rows.firstWhere((r) => r.title == 'Dup');
     expect(dup.bookUid, isNull, reason: '同名多视频歧义 → 不乱猜，保持 NULL');
-    expect(rows.firstWhere((r) => r.title == 'Orphan').bookUid, isNull,
-        reason: '无对应视频行 → 保持 NULL');
+    expect(
+      rows.firstWhere((r) => r.title == 'Orphan').bookUid,
+      isNull,
+      reason: '无对应视频行 → 保持 NULL',
+    );
   });
 
   test('v39 后：同名两个视频同一天各占一行（不再互串/撞约束）', () async {
     final FushiDatabase db = await openV38Db();
-    await insertWatch(db,
-        title: 'Dup',
-        dateKey: '2026-07-11',
-        subtitleChars: 10,
-        watchTimeMs: 1000,
-        bookUid: 'video/d1');
+    await insertWatch(
+      db,
+      title: 'Dup',
+      dateKey: '2026-07-11',
+      subtitleChars: 10,
+      watchTimeMs: 1000,
+      bookUid: 'video/d1',
+    );
     // 旧唯一键 (title, date_key) 下这一行会撞约束；新键 (book_uid, date_key) 各占一行。
-    await insertWatch(db,
-        title: 'Dup',
-        dateKey: '2026-07-11',
-        subtitleChars: 20,
-        watchTimeMs: 2000,
-        bookUid: 'video/d2');
-    final List<VideoWatchStatisticRow> rows =
-        await db.getAllVideoWatchStatistics();
-    final List<VideoWatchStatisticRow> day11 =
-        rows.where((r) => r.dateKey == '2026-07-11').toList();
+    await insertWatch(
+      db,
+      title: 'Dup',
+      dateKey: '2026-07-11',
+      subtitleChars: 20,
+      watchTimeMs: 2000,
+      bookUid: 'video/d2',
+    );
+    final List<VideoWatchStatisticRow> rows = await db
+        .getAllVideoWatchStatistics();
+    final List<VideoWatchStatisticRow> day11 = rows
+        .where((r) => r.dateKey == '2026-07-11')
+        .toList();
     expect(day11, hasLength(2), reason: '同名不同 uid 各占一行');
     expect(day11.firstWhere((r) => r.bookUid == 'video/d1').watchTimeMs, 1000);
     expect(day11.firstWhere((r) => r.bookUid == 'video/d2').watchTimeMs, 2000);
@@ -152,27 +162,33 @@ CREATE TABLE video_watch_statistics (
     final FushiDatabase db = await openV38Db();
     // 遗留 Dup 行（NULL uid，2026-07-10 watch=120000）原地不动；新式键控行同 title
     // 同日（d1）另起一行——SQLite UNIQUE 视 NULL 互异，不撞约束。
-    await insertWatch(db,
-        title: 'Dup',
-        dateKey: '2026-07-10',
-        subtitleChars: 2,
-        watchTimeMs: 2000,
-        bookUid: 'video/d1');
+    await insertWatch(
+      db,
+      title: 'Dup',
+      dateKey: '2026-07-10',
+      subtitleChars: 2,
+      watchTimeMs: 2000,
+      bookUid: 'video/d1',
+    );
     final List<VideoWatchStatisticRow> rows =
         (await db.getAllVideoWatchStatistics())
             .where((r) => r.title == 'Dup' && r.dateKey == '2026-07-10')
             .toList();
     expect(rows, hasLength(2));
-    expect(rows.firstWhere((r) => r.bookUid == null).watchTimeMs, 120000,
-        reason: '遗留行不被新键控行污染');
+    expect(
+      rows.firstWhere((r) => r.bookUid == null).watchTimeMs,
+      120000,
+      reason: '遗留行不被新键控行污染',
+    );
     expect(rows.firstWhere((r) => r.bookUid == 'video/d1').watchTimeMs, 2000);
   });
 
   test('user_version 升到当前 schemaVersion', () async {
     final FushiDatabase db = await openV38Db();
     await db.getAllVideoWatchStatistics(); // 触发 open/migrate。
-    final QueryRow version =
-        await db.customSelect('PRAGMA user_version').getSingle();
+    final QueryRow version = await db
+        .customSelect('PRAGMA user_version')
+        .getSingle();
     expect(version.read<int>('user_version'), db.schemaVersion);
   });
 }

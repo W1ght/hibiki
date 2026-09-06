@@ -47,8 +47,11 @@ void main() {
 
       c.debugUpdateCueForPosition(1125);
       await Future<void>.delayed(Duration.zero);
-      expect(actions, <String>['play', 'pause', 'seek:1000'],
-          reason: '越过句尾：暂停并回到该句的精确结尾');
+      expect(actions, <String>[
+        'play',
+        'pause',
+        'seek:1000',
+      ], reason: '越过句尾：暂停并回到该句的精确结尾');
       expect(c.debugOneShotHoldCueIndex, isNull, reason: '停下即消耗');
     });
 
@@ -152,8 +155,11 @@ void main() {
       expect(c.debugOneShotHoldCueIndex, 0);
 
       await c.seekMs(300);
-      expect(c.debugOneShotHoldCueIndex, isNull,
-          reason: '主动改变播放位置 = 放弃「停在本句尾」的意图');
+      expect(
+        c.debugOneShotHoldCueIndex,
+        isNull,
+        reason: '主动改变播放位置 = 放弃「停在本句尾」的意图',
+      );
 
       c.debugUpdateCueForPosition(900);
       c.debugUpdateCueForPosition(1125);

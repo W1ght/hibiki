@@ -106,20 +106,24 @@ String webViewKeyBridgeScript({
   );
   final String keyList = keys.map(_jsStringLiteral).join(', ');
   final String buttonList = mouseButtons.join(', ');
-  final String installFlag =
-      _jsStringLiteral('__fushiKeyBridgeInstalled_$handlerName');
+  final String installFlag = _jsStringLiteral(
+    '__fushiKeyBridgeInstalled_$handlerName',
+  );
   final String keysVar = _jsStringLiteral('__fushiKeyBridgeKeys_$handlerName');
-  final String buttonsVar =
-      _jsStringLiteral('__fushiKeyBridgeButtons_$handlerName');
-  final String repeatGuard =
-      forwardRepeats ? '' : '\n    if (e.repeat) return;';
+  final String buttonsVar = _jsStringLiteral(
+    '__fushiKeyBridgeButtons_$handlerName',
+  );
+  final String repeatGuard = forwardRepeats
+      ? ''
+      : '\n    if (e.repeat) return;';
   // 模态让位对键盘与鼠标同时成立：面板开着时点它上面的按钮，侧键也不该把整个查词窗
   // 关掉。故各监听体内统一先判这一条。
   const String modalGuard =
       '\n    if ((window.__fushiPopupModalDepth || 0) > 0) return;';
   final String popupModalGuard = deferToPopupModal ? modalGuard : '';
-  final String propagationGuard =
-      stopPropagation ? '\n    e.stopImmediatePropagation();' : '';
+  final String propagationGuard = stopPropagation
+      ? '\n    e.stopImmediatePropagation();'
+      : '';
   final String mouseListeners = installMouseListeners
       ? '''
   document.addEventListener('mousedown', function(e) {

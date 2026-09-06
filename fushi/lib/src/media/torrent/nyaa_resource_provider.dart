@@ -14,8 +14,8 @@ class NyaaVideoResourceProvider implements VideoResourceProvider {
     this.filter = '0',
     this.priority = 100,
     bool closesClient = false,
-  })  : _client = client,
-        _closesClient = closesClient;
+  }) : _client = client,
+       _closesClient = closesClient;
 
   final NyaaClient _client;
   final bool _closesClient;
@@ -32,8 +32,8 @@ class NyaaVideoResourceProvider implements VideoResourceProvider {
   /// 返回噪声——所以这不是策略，是这家索引器的内容边界。
   @override
   Set<VideoDiscoveryCategory> get categories => const <VideoDiscoveryCategory>{
-        VideoDiscoveryCategory.anime,
-      };
+    VideoDiscoveryCategory.anime,
+  };
 
   @override
   Future<ProviderBatchResult<VideoResourceCandidate>> search(
@@ -149,25 +149,25 @@ List<String> preferredNyaaSearchQueries(VideoResourceSearchRequest request) {
 
 class _NyaaResourceCandidate extends VideoResourceCandidate {
   _NyaaResourceCandidate(this.torrent, int providerPriority)
-      : super(
-          providerId: 'nyaa',
-          providerInstanceId: 'nyaa.si',
-          remoteId: torrent.infoHash.toLowerCase(),
-          title: torrent.title,
-          providerPriority: providerPriority,
-          infoHash: torrent.infoHash.toLowerCase(),
-          sizeBytes: torrent.sizeBytes,
-          seeders: torrent.seeders,
-          leechers: torrent.leechers,
-          completed: torrent.downloads,
-          publishedAt: torrent.pubDate,
-          category: torrent.categoryId,
-          resolution: torrent.resolution,
-          releaseGroup: torrent.releaseGroup,
-          trusted: torrent.trusted,
-          detailsUrl: torrent.pageUrl,
-          magnetUri: torrent.magnet,
-        );
+    : super(
+        providerId: 'nyaa',
+        providerInstanceId: 'nyaa.si',
+        remoteId: torrent.infoHash.toLowerCase(),
+        title: torrent.title,
+        providerPriority: providerPriority,
+        infoHash: torrent.infoHash.toLowerCase(),
+        sizeBytes: torrent.sizeBytes,
+        seeders: torrent.seeders,
+        leechers: torrent.leechers,
+        completed: torrent.downloads,
+        publishedAt: torrent.pubDate,
+        category: torrent.categoryId,
+        resolution: torrent.resolution,
+        releaseGroup: torrent.releaseGroup,
+        trusted: torrent.trusted,
+        detailsUrl: torrent.pageUrl,
+        magnetUri: torrent.magnet,
+      );
 
   final NyaaTorrent torrent;
 }

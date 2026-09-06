@@ -51,18 +51,22 @@ void main() {
       expect(LapisNoteType.template.front, LapisNoteType.front);
       expect(LapisNoteType.template.back, LapisNoteType.back);
       // template.css is the verbatim upstream css followed by the Hibiki delta.
-      expect(LapisNoteType.template.css,
-          '${LapisNoteType.css}\n${LapisNoteType.fushiCssOverride}');
+      expect(
+        LapisNoteType.template.css,
+        '${LapisNoteType.css}\n${LapisNoteType.fushiCssOverride}',
+      );
     });
 
-    test('Hibiki css override separates the def-info label from the sentence',
-        () {
+    test('Hibiki css override separates the def-info label from the sentence', () {
       // BUG-056 follow-up: upstream `.def-info` has no top margin so the
       // "Primary Definition N/M" label crowds the sentence on multi-def desktop
       // cards. The delta lives in its own constant (css stays verbatim) and is
       // appended after the vendored css so it wins by source order.
-      expect(LapisNoteType.css, isNot(contains('Hibiki delta')),
-          reason: 'vendored css must stay byte-identical to upstream');
+      expect(
+        LapisNoteType.css,
+        isNot(contains('Hibiki delta')),
+        reason: 'vendored css must stay byte-identical to upstream',
+      );
       expect(LapisNoteType.fushiCssOverride, contains('.def-info'));
       expect(LapisNoteType.fushiCssOverride, contains('Hibiki delta'));
       expect(LapisNoteType.fushiCssOverride, contains('margin-top'));
@@ -78,8 +82,10 @@ void main() {
         expect(LapisNoteType.fields, contains(field));
       }
       expect(LapisNoteType.defaultFieldMappings['Picture'], '{card-image}');
-      expect(LapisNoteType.defaultFieldMappings['SentenceAudio'],
-          '{sentence-audio}');
+      expect(
+        LapisNoteType.defaultFieldMappings['SentenceAudio'],
+        '{sentence-audio}',
+      );
       expect(LapisNoteType.defaultFieldMappings['IsWordAndSentenceCard'], 'x');
     });
   });

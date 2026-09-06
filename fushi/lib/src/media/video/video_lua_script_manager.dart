@@ -102,9 +102,9 @@ List<List<String>> buildLoadScriptCommands(List<String> absolutePaths) {
 /// （不常驻时间/状态行）。`osd-on-seek=no`：seek 命令不再顺带画原生进度条——
 /// Hibiki 的进度条是 Flutter 层自己的，两条叠着就是 bug。
 Map<String, String> buildLuaOsdProperties() => const <String, String>{
-      'osd-level': '1',
-      'osd-on-seek': 'no',
-    };
+  'osd-level': '1',
+  'osd-on-seek': 'no',
+};
 
 final RegExp _nonIdentifierChar = RegExp(r'[^A-Za-z0-9]');
 

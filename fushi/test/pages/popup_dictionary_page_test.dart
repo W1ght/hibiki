@@ -48,14 +48,9 @@ class PopupTestAppModel extends AppModel {
   }
 }
 
-Widget buildTestApp({
-  required AppModel appModel,
-  required Widget home,
-}) {
+Widget buildTestApp({required AppModel appModel, required Widget home}) {
   return ProviderScope(
-    overrides: [
-      appProvider.overrideWith((ref) => appModel),
-    ],
+    overrides: [appProvider.overrideWith((ref) => appModel)],
     child: TranslationProvider(
       child: MaterialApp(
         navigatorKey: appModel.navigatorKey,
@@ -74,23 +69,23 @@ void main() {
     launchedUrls.clear();
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(
-      const MethodChannel('plugins.flutter.io/url_launcher'),
-      (MethodCall call) async {
-        if (call.method == 'launch') {
-          final args = Map<Object?, Object?>.from(call.arguments as Map);
-          launchedUrls.add(args['url'] as String);
-        }
-        return true;
-      },
-    );
+          const MethodChannel('plugins.flutter.io/url_launcher'),
+          (MethodCall call) async {
+            if (call.method == 'launch') {
+              final args = Map<Object?, Object?>.from(call.arguments as Map);
+              launchedUrls.add(args['url'] as String);
+            }
+            return true;
+          },
+        );
   });
 
   tearDown(() {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(
-      const MethodChannel('plugins.flutter.io/url_launcher'),
-      null,
-    );
+          const MethodChannel('plugins.flutter.io/url_launcher'),
+          null,
+        );
   });
 
   testWidgets('renders an in-app close button when requested', (
@@ -213,8 +208,9 @@ void main() {
     WidgetTester tester,
   ) async {
     final AppModel appModel = AppModel(testPlatformServices());
-    final TextEditingController controller =
-        TextEditingController(text: '  日本語  ');
+    final TextEditingController controller = TextEditingController(
+      text: '  日本語  ',
+    );
     final FocusNode focusNode = FocusNode();
     final List<String> submitted = <String>[];
     addTearDown(controller.dispose);
@@ -368,124 +364,152 @@ void main() {
     expect(searchBar.controller.text, 'cdef');
   });
 
-  test('source guard: popup dictionary consumes layer visibility',
-      () {
-    final String popup =
-        File('lib/src/pages/implementations/popup_dictionary_page.dart')
-            .readAsStringSync();
-    final String model =
-        File('lib/src/models/app_model.dart').readAsStringSync();
+  test('source guard: popup dictionary consumes layer visibility', () {
+    final String popup = File(
+      'lib/src/pages/implementations/popup_dictionary_page.dart',
+    ).readAsStringSync();
+    final String model = File(
+      'lib/src/models/app_model.dart',
+    ).readAsStringSync();
 
-    expect(popup, contains('SourceLookupTextPanel'),
-        reason: 'non-clipboard popup queries need the same clickable source '
-            'text panel outside the WebView.');
+    expect(
+      popup,
+      contains('SourceLookupTextPanel'),
+      reason:
+          'non-clipboard popup queries need the same clickable source '
+          'text panel outside the WebView.',
+    );
     // TODO-951 症状C + TODO-1379：可见层满卡渲染、隐藏层（常驻热槽/挂起冷层）经共享
     // parkedPopupLayer 停到真·屏外（screen.width+8）继续预热——BUG-135 单一真相，与
     // reader/video/首页三宿主同机制。卡片局部坐标 `cardWidth + 8` + IgnorePointer 挡
     // 不住 Android 原生 WebView 平台视图截触摸（弹窗滚动/点击全死），禁止回退。
-    expect(popup, contains('parkedPopupLayer('),
-        reason: 'external popup layers must run through the shared BUG-135 '
-            'parking geometry (true off-screen park).');
-    expect(popup, contains('visible: entry.visible'),
-        reason: 'external popup layers must honor controller visibility before '
-            'any hidden/preload state can be safe.');
-    expect(popup, isNot(contains('left: cardWidth + 8')),
-        reason: 'TODO-1379: card-local parking keeps the hidden native WebView '
-            'on-screen where it eats touches; park off-screen instead.');
-    expect(popup, contains('keepWebViewWarm: entry.isWarmSlot'),
-        reason: 'external popup must keep the warm slot WebView pre-warmed to '
-            'kill the per-lookup flash (TODO-951 symptom C).');
+    expect(
+      popup,
+      contains('parkedPopupLayer('),
+      reason:
+          'external popup layers must run through the shared BUG-135 '
+          'parking geometry (true off-screen park).',
+    );
+    expect(
+      popup,
+      contains('visible: entry.visible'),
+      reason:
+          'external popup layers must honor controller visibility before '
+          'any hidden/preload state can be safe.',
+    );
+    expect(
+      popup,
+      isNot(contains('left: cardWidth + 8')),
+      reason:
+          'TODO-1379: card-local parking keeps the hidden native WebView '
+          'on-screen where it eats touches; park off-screen instead.',
+    );
+    expect(
+      popup,
+      contains('keepWebViewWarm: entry.isWarmSlot'),
+      reason:
+          'external popup must keep the warm slot WebView pre-warmed to '
+          'kill the per-lookup flash (TODO-951 symptom C).',
+    );
     // BUG-914：popup 首查的 [popup-perf] 裸计时探针（Stopwatch + debugPrint）属发布版
     // 噪声已移除，此处不再断言其存在；「已删且不回归」由 dict_perf_probe_removal_guard_test
     // 的 popupPagePath -> [popup-perf] 用例接管。
-    expect(model, contains('MediaSource.setDatabase(_database)'),
-        reason: 'popup init must attach MediaSource prefs to the popup DB.');
-    expect(model, contains('ReaderFushiSource.instance.initialise()'),
-        reason: 'popup init must hydrate ReaderFushiSource preferences.');
-  });
-
-  testWidgets(
-      'TODO-708 P3: search bar shown by default (PROCESS_TEXT / standalone)', (
-    WidgetTester tester,
-  ) async {
-    final AppModel appModel = AppModel(testPlatformServices());
-
-    await tester.pumpWidget(
-      buildTestApp(
-        appModel: appModel,
-        home: PopupDictionaryPage(
-          searchTerm: 'search',
-          closeInApp: () {},
-          autoSearchOnOpen: false,
-        ),
-      ),
-    );
-    await tester.pump();
-
-    // 默认 showSearchBar=true：搜索输入框 + 关闭按钮都在。
     expect(
-      find.byKey(const ValueKey<String>('popup_dictionary_search_field')),
-      findsOneWidget,
+      model,
+      contains('MediaSource.setDatabase(_database)'),
+      reason: 'popup init must attach MediaSource prefs to the popup DB.',
     );
     expect(
-      find.byKey(const ValueKey<String>('popup_dictionary_close_button')),
-      findsOneWidget,
+      model,
+      contains('ReaderFushiSource.instance.initialise()'),
+      reason: 'popup init must hydrate ReaderFushiSource preferences.',
     );
   });
 
   testWidgets(
-      'TODO-708 P3: point-lookup entry hides search bar, keeps close button', (
-    WidgetTester tester,
-  ) async {
-    bool closed = false;
-    final AppModel appModel = AppModel(testPlatformServices());
+    'TODO-708 P3: search bar shown by default (PROCESS_TEXT / standalone)',
+    (WidgetTester tester) async {
+      final AppModel appModel = AppModel(testPlatformServices());
 
-    await tester.pumpWidget(
-      buildTestApp(
-        appModel: appModel,
-        home: PopupDictionaryPage(
-          searchTerm: 'search',
-          closeInApp: () => closed = true,
-          autoSearchOnOpen: false,
-          // 悬浮字幕点字入口：回旧「4.1」轻形态，无搜索输入框。
-          showSearchBar: false,
+      await tester.pumpWidget(
+        buildTestApp(
+          appModel: appModel,
+          home: PopupDictionaryPage(
+            searchTerm: 'search',
+            closeInApp: () {},
+            autoSearchOnOpen: false,
+          ),
         ),
-      ),
-    );
-    await tester.pump();
+      );
+      await tester.pump();
 
-    // 无搜索输入框 / 搜索按钮 / 搜索栏组件。
-    expect(
-      find.byKey(const ValueKey<String>('popup_dictionary_search_field')),
-      findsNothing,
-    );
-    expect(
-      find.byKey(const ValueKey<String>('popup_dictionary_search_button')),
-      findsNothing,
-    );
-    expect(find.byType(PopupDictionarySearchBar), findsNothing);
+      // 默认 showSearchBar=true：搜索输入框 + 关闭按钮都在。
+      expect(
+        find.byKey(const ValueKey<String>('popup_dictionary_search_field')),
+        findsOneWidget,
+      );
+      expect(
+        find.byKey(const ValueKey<String>('popup_dictionary_close_button')),
+        findsOneWidget,
+      );
+    },
+  );
 
-    // 关闭按钮仍恒在、恒可关（独立于搜索栏，never-break 关闭能力）。
-    final Finder closeButton = find.byKey(
-      const ValueKey<String>('popup_dictionary_close_button'),
-    );
-    expect(closeButton, findsOneWidget);
-    await tester.tap(closeButton);
-    await tester.pump();
-    expect(closed, isTrue);
-  });
+  testWidgets(
+    'TODO-708 P3: point-lookup entry hides search bar, keeps close button',
+    (WidgetTester tester) async {
+      bool closed = false;
+      final AppModel appModel = AppModel(testPlatformServices());
+
+      await tester.pumpWidget(
+        buildTestApp(
+          appModel: appModel,
+          home: PopupDictionaryPage(
+            searchTerm: 'search',
+            closeInApp: () => closed = true,
+            autoSearchOnOpen: false,
+            // 悬浮字幕点字入口：回旧「4.1」轻形态，无搜索输入框。
+            showSearchBar: false,
+          ),
+        ),
+      );
+      await tester.pump();
+
+      // 无搜索输入框 / 搜索按钮 / 搜索栏组件。
+      expect(
+        find.byKey(const ValueKey<String>('popup_dictionary_search_field')),
+        findsNothing,
+      );
+      expect(
+        find.byKey(const ValueKey<String>('popup_dictionary_search_button')),
+        findsNothing,
+      );
+      expect(find.byType(PopupDictionarySearchBar), findsNothing);
+
+      // 关闭按钮仍恒在、恒可关（独立于搜索栏，never-break 关闭能力）。
+      final Finder closeButton = find.byKey(
+        const ValueKey<String>('popup_dictionary_close_button'),
+      );
+      expect(closeButton, findsOneWidget);
+      await tester.tap(closeButton);
+      await tester.pump();
+      expect(closed, isTrue);
+    },
+  );
 
   test(
-      'TODO-708 P3: popup_main routes point-lookup (anchorRect) to no search bar',
-      () {
-    // 入口分流守卫（源码级）：悬浮字幕点字宿主 popup_main 只在 _anchorPhysical == null
-    // 时保留搜索栏；非空（点字入口）传 showSearchBar: false。防回归误删/误传全局。
-    final String popupMain = File('lib/popup_main.dart').readAsStringSync();
-    expect(
-      popupMain,
-      contains('showSearchBar: _anchorPhysical == null'),
-      reason: 'floating-lyric point-lookup (anchorRect != null) must hide the '
-          'search bar; PROCESS_TEXT / standalone (anchorRect == null) keep it.',
-    );
-  });
+    'TODO-708 P3: popup_main routes point-lookup (anchorRect) to no search bar',
+    () {
+      // 入口分流守卫（源码级）：悬浮字幕点字宿主 popup_main 只在 _anchorPhysical == null
+      // 时保留搜索栏；非空（点字入口）传 showSearchBar: false。防回归误删/误传全局。
+      final String popupMain = File('lib/popup_main.dart').readAsStringSync();
+      expect(
+        popupMain,
+        contains('showSearchBar: _anchorPhysical == null'),
+        reason:
+            'floating-lyric point-lookup (anchorRect != null) must hide the '
+            'search bar; PROCESS_TEXT / standalone (anchorRect == null) keep it.',
+      );
+    },
+  );
 }

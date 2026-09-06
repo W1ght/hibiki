@@ -23,8 +23,11 @@ void main() {
   );
 
   test('webview.part.dart exists', () {
-    expect(webview.existsSync(), isTrue,
-        reason: 'guarded source ${webview.path} must exist');
+    expect(
+      webview.existsSync(),
+      isTrue,
+      reason: 'guarded source ${webview.path} must exist',
+    );
   });
 
   test('TODO-1028 fix: capture-phase dblclick clears native selection', () {
@@ -35,7 +38,8 @@ void main() {
       src.contains("document.addEventListener('dblclick'") &&
           src.contains('sel.removeAllRanges()'),
       isTrue,
-      reason: 'TODO-1028 fix must clear the native double-click selection via '
+      reason:
+          'TODO-1028 fix must clear the native double-click selection via '
           'removeAllRanges() in a dblclick listener',
     );
     final RegExp captureListener = RegExp(
@@ -56,7 +60,8 @@ void main() {
       src.contains("addEventListener('dblclick', function(e) {") &&
           src.contains('e.preventDefault'),
       isFalse,
-      reason: 'the dblclick clear must use removeAllRanges, not preventDefault '
+      reason:
+          'the dblclick clear must use removeAllRanges, not preventDefault '
           '(the native selection already happened in mousedown/selectstart)',
     );
   });
@@ -73,7 +78,8 @@ void main() {
     expect(
       furiganaToggle.hasMatch(src),
       isTrue,
-      reason: 'the furigana whole-page toggle dblclick handler '
+      reason:
+          'the furigana whole-page toggle dblclick handler '
           '(show-all-rt) must remain intact and must NOT be confused with the '
           'TODO-1028 clear-selection listener',
     );

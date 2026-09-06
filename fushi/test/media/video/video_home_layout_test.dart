@@ -7,7 +7,9 @@ void main() {
   group('videoCardOrientationForAspect', () {
     test('null（未解码/无封面）默认竖卡', () {
       expect(
-          videoCardOrientationForAspect(null), VideoCardOrientation.portrait);
+        videoCardOrientationForAspect(null),
+        VideoCardOrientation.portrait,
+      );
     });
 
     test('阈值与封面组件同一真相源（kCoverLandscapeAspectThreshold）', () {
@@ -23,9 +25,13 @@ void main() {
 
     test('典型输入：2:3 海报竖卡、16:9 截帧横卡、方图竖卡', () {
       expect(
-          videoCardOrientationForAspect(2 / 3), VideoCardOrientation.portrait);
-      expect(videoCardOrientationForAspect(16 / 9),
-          VideoCardOrientation.landscape);
+        videoCardOrientationForAspect(2 / 3),
+        VideoCardOrientation.portrait,
+      );
+      expect(
+        videoCardOrientationForAspect(16 / 9),
+        VideoCardOrientation.landscape,
+      );
       expect(videoCardOrientationForAspect(1.0), VideoCardOrientation.portrait);
     });
   });
@@ -118,9 +124,13 @@ void main() {
 
     test('值语义（PopupMenu initialValue 依赖 ==）', () {
       expect(
-          const VideoYearFilter.year(2024), const VideoYearFilter.year(2024));
+        const VideoYearFilter.year(2024),
+        const VideoYearFilter.year(2024),
+      );
       expect(
-          const VideoYearFilter.all(), isNot(const VideoYearFilter.unknown()));
+        const VideoYearFilter.all(),
+        isNot(const VideoYearFilter.unknown()),
+      );
     });
   });
 
@@ -187,16 +197,18 @@ void main() {
     test('14 天窗口内算最近添加；窗口外/无时间戳/未来时刻不算', () {
       expect(
         isVideoRecentlyAdded(
-          importedAt:
-              now.subtract(const Duration(days: 13)).millisecondsSinceEpoch,
+          importedAt: now
+              .subtract(const Duration(days: 13))
+              .millisecondsSinceEpoch,
           now: now,
         ),
         isTrue,
       );
       expect(
         isVideoRecentlyAdded(
-          importedAt:
-              now.subtract(const Duration(days: 15)).millisecondsSinceEpoch,
+          importedAt: now
+              .subtract(const Duration(days: 15))
+              .millisecondsSinceEpoch,
           now: now,
         ),
         isFalse,
@@ -217,42 +229,42 @@ void main() {
     test('在看优先按最近观看倒序取前 5', () {
       final List<VideoHeroCandidate<int>> candidates =
           <VideoHeroCandidate<int>>[
-        for (int i = 1; i <= 7; i++)
-          VideoHeroCandidate<int>(
-            unit: i,
-            lastWatchedAt: DateTime(2026, 7, i),
-            latestImportedAt: 100 - i,
-            hasUnfinishedTrace: true,
-          ),
-      ];
+            for (int i = 1; i <= 7; i++)
+              VideoHeroCandidate<int>(
+                unit: i,
+                lastWatchedAt: DateTime(2026, 7, i),
+                latestImportedAt: 100 - i,
+                hasUnfinishedTrace: true,
+              ),
+          ];
       expect(selectVideoHeroUnits(candidates), <int>[7, 6, 5, 4, 3]);
     });
 
     test('无在看回落最近添加（成员最近入库倒序）', () {
       final List<VideoHeroCandidate<int>> candidates =
           <VideoHeroCandidate<int>>[
-        const VideoHeroCandidate<int>(unit: 1, latestImportedAt: 10),
-        const VideoHeroCandidate<int>(unit: 2, latestImportedAt: 30),
-        const VideoHeroCandidate<int>(unit: 3, latestImportedAt: 20),
-      ];
+            const VideoHeroCandidate<int>(unit: 1, latestImportedAt: 10),
+            const VideoHeroCandidate<int>(unit: 2, latestImportedAt: 30),
+            const VideoHeroCandidate<int>(unit: 3, latestImportedAt: 20),
+          ];
       expect(selectVideoHeroUnits(candidates), <int>[2, 3, 1]);
     });
 
     test('已整套看完的合集不算在看（hasUnfinishedTrace=false 走回落池）', () {
       final List<VideoHeroCandidate<int>> candidates =
           <VideoHeroCandidate<int>>[
-        VideoHeroCandidate<int>(
-          unit: 1,
-          lastWatchedAt: DateTime(2026, 7, 30),
-          latestImportedAt: 1,
-        ),
-        VideoHeroCandidate<int>(
-          unit: 2,
-          lastWatchedAt: DateTime(2026, 7, 1),
-          latestImportedAt: 2,
-          hasUnfinishedTrace: true,
-        ),
-      ];
+            VideoHeroCandidate<int>(
+              unit: 1,
+              lastWatchedAt: DateTime(2026, 7, 30),
+              latestImportedAt: 1,
+            ),
+            VideoHeroCandidate<int>(
+              unit: 2,
+              lastWatchedAt: DateTime(2026, 7, 1),
+              latestImportedAt: 2,
+              hasUnfinishedTrace: true,
+            ),
+          ];
       // 只有 2 在看 → 在看池非空 → 只出在看的（1 不混入）。
       expect(selectVideoHeroUnits(candidates), <int>[2]);
     });
@@ -263,21 +275,21 @@ void main() {
       // 实报「置顶不是上一个观看的」。
       final List<VideoHeroCandidate<String>> candidates =
           <VideoHeroCandidate<String>>[
-        VideoHeroCandidate<String>(
-          unit: 'c:maid-dragon',
-          lastWatchedAt: DateTime(2026, 8, 1, 20),
-          hasUnfinishedTrace: true,
-        ),
-        VideoHeroCandidate<String>(
-          unit: 'b:happy-end',
-          lastWatchedAt: DateTime(2026, 8, 1, 23),
-          hasUnfinishedTrace: true,
-        ),
-      ];
-      expect(
-        selectVideoHeroUnits(candidates),
-        <String>['b:happy-end', 'c:maid-dragon'],
-      );
+            VideoHeroCandidate<String>(
+              unit: 'c:maid-dragon',
+              lastWatchedAt: DateTime(2026, 8, 1, 20),
+              hasUnfinishedTrace: true,
+            ),
+            VideoHeroCandidate<String>(
+              unit: 'b:happy-end',
+              lastWatchedAt: DateTime(2026, 8, 1, 23),
+              hasUnfinishedTrace: true,
+            ),
+          ];
+      expect(selectVideoHeroUnits(candidates), <String>[
+        'b:happy-end',
+        'c:maid-dragon',
+      ]);
     });
   });
 
@@ -384,12 +396,12 @@ void main() {
     test('继续观看：无痕迹 / 位置拖回 0 且未完成 → 不进本行', () {
       const List<VideoSeriesPlaybackState> untouched =
           <VideoSeriesPlaybackState>[
-        VideoSeriesPlaybackState(
-          lastWatchedAtMs: 0,
-          positionMs: 0,
-          completed: false,
-        ),
-      ];
+            VideoSeriesPlaybackState(
+              lastWatchedAtMs: 0,
+              positionMs: 0,
+              completed: false,
+            ),
+          ];
       expect(continueWatchingSeriesIndex(untouched), isNull);
       const List<VideoSeriesPlaybackState> rewound = <VideoSeriesPlaybackState>[
         VideoSeriesPlaybackState(
@@ -443,10 +455,7 @@ void main() {
     });
 
     test('两者皆无 → 0（没看过）', () {
-      expect(
-        effectiveWatchedAtMs(statsWatchedAtMs: 0, lastPlayedAt: null),
-        0,
-      );
+      expect(effectiveWatchedAtMs(statsWatchedAtMs: 0, lastPlayedAt: null), 0);
     });
 
     test('端到端形状：13 集本机看过、14/15 只有远端回灌时刻 → 锚点 15、下一集 16', () {
@@ -459,12 +468,18 @@ void main() {
         for (int i = 0; i < 16; i++)
           VideoSeriesPlaybackState(
             lastWatchedAtMs: switch (i) {
-              12 =>
-                effectiveWatchedAtMs(statsWatchedAtMs: t13, lastPlayedAt: t13),
-              13 =>
-                effectiveWatchedAtMs(statsWatchedAtMs: 0, lastPlayedAt: t14),
-              14 =>
-                effectiveWatchedAtMs(statsWatchedAtMs: 0, lastPlayedAt: t15),
+              12 => effectiveWatchedAtMs(
+                statsWatchedAtMs: t13,
+                lastPlayedAt: t13,
+              ),
+              13 => effectiveWatchedAtMs(
+                statsWatchedAtMs: 0,
+                lastPlayedAt: t14,
+              ),
+              14 => effectiveWatchedAtMs(
+                statsWatchedAtMs: 0,
+                lastPlayedAt: t15,
+              ),
               _ => 0,
             },
             positionMs: i == 12 || i == 13 || i == 14 ? 1200000 : 0,

@@ -1,8 +1,4 @@
-enum ReaderSearchJumpAction {
-  navigate,
-  replacePending,
-  evaluateNow,
-}
+enum ReaderSearchJumpAction { navigate, replacePending, evaluateNow }
 
 /// Decides which DOM owns a book-search result.
 ///
@@ -46,10 +42,7 @@ bool isCurrentReaderRestoreCompletion({
 class ReaderPreciseLocateQueue {
   ({int generation, String js})? _pending;
 
-  void replace({
-    required int generation,
-    required String js,
-  }) {
+  void replace({required int generation, required String js}) {
     _pending = (generation: generation, js: js);
   }
 
@@ -61,10 +54,7 @@ class ReaderPreciseLocateQueue {
   ///
   /// A disposed/unavailable reader passes [canApply] as false; the request is
   /// still discarded so it can never leak into a later document.
-  String? consume({
-    required int generation,
-    required bool canApply,
-  }) {
+  String? consume({required int generation, required bool canApply}) {
     final ({int generation, String js})? pending = _pending;
     if (!canApply) {
       _pending = null;

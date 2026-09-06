@@ -51,8 +51,9 @@ class FushiWindowsTitleBar extends StatefulWidget {
   /// while another fullscreen surface is still active.
   static final Set<Object> _contentFullscreenOwners = <Object>{};
   static final Object _windowManagerFullscreenOwner = Object();
-  static final ValueNotifier<bool> _contentFullscreen =
-      ValueNotifier<bool>(false);
+  static final ValueNotifier<bool> _contentFullscreen = ValueNotifier<bool>(
+    false,
+  );
 
   static void setContentFullscreen({
     required Object owner,
@@ -257,10 +258,7 @@ class _FushiWindowsTitleBarState extends State<FushiWindowsTitleBar>
                 ),
               Expanded(
                 child: LayoutBuilder(
-                  builder: (
-                    BuildContext context,
-                    BoxConstraints constraints,
-                  ) {
+                  builder: (BuildContext context, BoxConstraints constraints) {
                     // The title bar consumes real layout height. Rebase the
                     // Navigator's MediaQuery to the remaining viewport so
                     // native WebViews paginate against their actual surface,

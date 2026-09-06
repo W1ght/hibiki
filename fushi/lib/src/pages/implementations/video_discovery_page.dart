@@ -39,10 +39,8 @@ class EmptyVideoDiscoveryController implements VideoDiscoveryController {
   }
 }
 
-typedef VideoDiscoveryImageResolver = ImageProvider? Function(
-  discovery.VideoDiscoveryItem item,
-  bool landscape,
-);
+typedef VideoDiscoveryImageResolver =
+    ImageProvider? Function(discovery.VideoDiscoveryItem item, bool landscape);
 
 class VideoDiscoveryPage extends StatefulWidget {
   const VideoDiscoveryPage({
@@ -202,25 +200,25 @@ class _VideoDiscoveryPageState extends State<VideoDiscoveryPage> {
 
     final List<ProviderBatchResult<discovery.VideoDiscoveryPage>> results =
         await Future.wait(
-      <Future<ProviderBatchResult<discovery.VideoDiscoveryPage>>>[
-        _safeLoad(
-          _request(
-            page: 1,
-            feed: discovery.VideoDiscoveryFeed.trending,
-            pageSize: 12,
-          ),
-        ),
-        _safeLoad(
-          _request(
-            page: 1,
-            category: discovery.VideoDiscoveryCategory.anime,
-            feed: discovery.VideoDiscoveryFeed.airing,
-            pageSize: 12,
-          ),
-        ),
-        _safeLoad(_request(page: 1)),
-      ],
-    );
+          <Future<ProviderBatchResult<discovery.VideoDiscoveryPage>>>[
+            _safeLoad(
+              _request(
+                page: 1,
+                feed: discovery.VideoDiscoveryFeed.trending,
+                pageSize: 12,
+              ),
+            ),
+            _safeLoad(
+              _request(
+                page: 1,
+                category: discovery.VideoDiscoveryCategory.anime,
+                feed: discovery.VideoDiscoveryFeed.airing,
+                pageSize: 12,
+              ),
+            ),
+            _safeLoad(_request(page: 1)),
+          ],
+        );
     if (!mounted || generation != _generation) return;
     final _FlattenedDiscoveryBatch popular = _flatten(results[0]);
     final _FlattenedDiscoveryBatch anime = _flatten(results[1]);
@@ -303,9 +301,7 @@ class _VideoDiscoveryPageState extends State<VideoDiscoveryPage> {
     return _FlattenedDiscoveryBatch(
       items: _deduplicate(
         result.items
-            .expand(
-              (discovery.VideoDiscoveryPage page) => page.items,
-            )
+            .expand((discovery.VideoDiscoveryPage page) => page.items)
             .toList(growable: false),
       ),
       hasMore: result.items.any(
@@ -415,8 +411,9 @@ class _VideoDiscoveryPageState extends State<VideoDiscoveryPage> {
             builder: (BuildContext context, BoxConstraints constraints) {
               final Widget search = FushiSearchField(
                 fieldKey: const ValueKey<String>('video-discovery-search'),
-                clearButtonKey:
-                    const ValueKey<String>('video-discovery-search-clear'),
+                clearButtonKey: const ValueKey<String>(
+                  'video-discovery-search-clear',
+                ),
                 focusId: const FushiFocusId('video-discovery-search'),
                 controller: _searchController,
                 focusNode: _searchFocusNode,
@@ -450,9 +447,9 @@ class _VideoDiscoveryPageState extends State<VideoDiscoveryPage> {
                 children: <Widget>[
                   for (final discovery.VideoDiscoveryCategory? category
                       in <discovery.VideoDiscoveryCategory?>[
-                    null,
-                    ...discovery.VideoDiscoveryCategory.values,
-                  ]) ...<Widget>[
+                        null,
+                        ...discovery.VideoDiscoveryCategory.values,
+                      ]) ...<Widget>[
                     FushiSelectableChip(
                       key: ValueKey<String>(
                         'video-discovery-category-${category?.name ?? 'all'}',
@@ -590,9 +587,7 @@ class _VideoDiscoveryPageState extends State<VideoDiscoveryPage> {
     return SizedBox(
       height: _filterControlHeight,
       child: FushiCard(
-        padding: EdgeInsets.symmetric(
-          horizontal: tokens.spacing.rowHorizontal,
-        ),
+        padding: EdgeInsets.symmetric(horizontal: tokens.spacing.rowHorizontal),
         color: active ? tokens.surfaces.selected : tokens.surfaces.page,
         borderColor: active ? colors.primary : tokens.surfaces.outline,
         child: Row(
@@ -709,17 +704,16 @@ class _VideoDiscoveryPageState extends State<VideoDiscoveryPage> {
             ),
           )
         else
-          SliverToBoxAdapter(
-            child: SizedBox(height: tokens.spacing.section),
-          ),
+          SliverToBoxAdapter(child: SizedBox(height: tokens.spacing.section)),
       ],
     );
   }
 
   Widget _buildProviderWarning() {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final Set<String> providerIds =
-        _failures.map((ExternalProviderFailure e) => e.providerId).toSet();
+    final Set<String> providerIds = _failures
+        .map((ExternalProviderFailure e) => e.providerId)
+        .toSet();
     return Padding(
       padding: EdgeInsets.fromLTRB(
         tokens.spacing.page,
@@ -740,10 +734,7 @@ class _VideoDiscoveryPageState extends State<VideoDiscoveryPage> {
             SizedBox(width: tokens.spacing.gap),
             Expanded(child: Text(t.video_discovery_provider_warning)),
             if (providerIds.isNotEmpty)
-              Text(
-                providerIds.join(' · '),
-                style: tokens.type.metadata,
-              ),
+              Text(providerIds.join(' · '), style: tokens.type.metadata),
           ],
         ),
       ),
@@ -761,10 +752,8 @@ class _VideoDiscoveryPageState extends State<VideoDiscoveryPage> {
       context,
       adaptivePageRoute<void>(
         context: context,
-        builder: (_) => VideoDiscoveryDetailPage(
-          item: item,
-          actions: widget.actions,
-        ),
+        builder: (_) =>
+            VideoDiscoveryDetailPage(item: item, actions: widget.actions),
       ),
     );
   }
@@ -801,8 +790,7 @@ class _VideoDiscoveryPageState extends State<VideoDiscoveryPage> {
       'Thriller',
       'War',
       'Western',
-    }.toList()
-      ..sort();
+    }.toList()..sort();
     return result;
   }
 
@@ -815,13 +803,12 @@ class _VideoDiscoveryPageState extends State<VideoDiscoveryPage> {
       };
 
   String _sortLabel(discovery.VideoDiscoverySort sort) => switch (sort) {
-        discovery.VideoDiscoverySort.relevance => t.search,
-        discovery.VideoDiscoverySort.popularity =>
-          t.video_discovery_sort_popularity,
-        discovery.VideoDiscoverySort.rating => t.video_discovery_sort_rating,
-        discovery.VideoDiscoverySort.releaseDate =>
-          t.video_discovery_sort_release,
-      };
+    discovery.VideoDiscoverySort.relevance => t.search,
+    discovery.VideoDiscoverySort.popularity =>
+      t.video_discovery_sort_popularity,
+    discovery.VideoDiscoverySort.rating => t.video_discovery_sort_rating,
+    discovery.VideoDiscoverySort.releaseDate => t.video_discovery_sort_release,
+  };
 }
 
 class _DiscoveryShelf extends StatelessWidget {
@@ -848,10 +835,7 @@ class _DiscoveryShelf extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding: EdgeInsets.symmetric(horizontal: tokens.spacing.page),
-            child: Text(
-              title,
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
+            child: Text(title, style: Theme.of(context).textTheme.titleLarge),
           ),
           SizedBox(height: tokens.spacing.card),
           SizedBox(
@@ -954,20 +938,21 @@ class _DiscoveryMediaCard extends StatelessWidget {
   }
 
   String _metadata(BuildContext context) => <String>[
-        if (item.reference.year != null) '${item.reference.year}',
-        switch (item.reference.discoveryCategory) {
-          discovery.VideoDiscoveryCategory.movie => t.collection_relation_movie,
-          discovery.VideoDiscoveryCategory.tv => t.series,
-          discovery.VideoDiscoveryCategory.anime => t.media_tracking_anime,
-        },
-        if (item.score != null) '★ ${item.score!.toStringAsFixed(1)}',
-      ].join(' · ');
+    if (item.reference.year != null) '${item.reference.year}',
+    switch (item.reference.discoveryCategory) {
+      discovery.VideoDiscoveryCategory.movie => t.collection_relation_movie,
+      discovery.VideoDiscoveryCategory.tv => t.series,
+      discovery.VideoDiscoveryCategory.anime => t.media_tracking_anime,
+    },
+    if (item.score != null) '★ ${item.score!.toStringAsFixed(1)}',
+  ].join(' · ');
 
   ImageProvider? _defaultImage(
     discovery.VideoDiscoveryItem item,
     bool landscape,
   ) {
-    final String value = (landscape
+    final String value =
+        (landscape
                 ? item.backdropUrl ?? item.posterUrl
                 : item.posterUrl ?? item.backdropUrl)
             ?.trim() ??
@@ -977,10 +962,7 @@ class _DiscoveryMediaCard extends StatelessWidget {
 }
 
 class _FlattenedDiscoveryBatch {
-  const _FlattenedDiscoveryBatch({
-    required this.items,
-    required this.hasMore,
-  });
+  const _FlattenedDiscoveryBatch({required this.items, required this.hasMore});
 
   final List<discovery.VideoDiscoveryItem> items;
   final bool hasMore;

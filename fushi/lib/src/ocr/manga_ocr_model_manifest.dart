@@ -48,28 +48,32 @@ class MangaOcrModelFile implements DownloadableModelFile {
 const List<MangaOcrModelFile> kMangaOcrModelManifest = <MangaOcrModelFile>[
   MangaOcrModelFile(
     fileName: 'detector-v4-s_int8.onnx',
-    url: 'https://huggingface.co/ogkalu/comic-text-and-bubble-detector/'
+    url:
+        'https://huggingface.co/ogkalu/comic-text-and-bubble-detector/'
         'resolve/main/detector-v4-s_int8.onnx',
     expectedBytes: 11120765,
     role: MangaOcrModelRole.detector,
   ),
   MangaOcrModelFile(
     fileName: 'encoder_model.onnx',
-    url: 'https://huggingface.co/mayocream/manga-ocr-onnx/'
+    url:
+        'https://huggingface.co/mayocream/manga-ocr-onnx/'
         'resolve/main/encoder_model.onnx',
     expectedBytes: 343454249,
     role: MangaOcrModelRole.recognizer,
   ),
   MangaOcrModelFile(
     fileName: 'decoder_model.onnx',
-    url: 'https://huggingface.co/mayocream/manga-ocr-onnx/'
+    url:
+        'https://huggingface.co/mayocream/manga-ocr-onnx/'
         'resolve/main/decoder_model.onnx',
     expectedBytes: 117480262,
     role: MangaOcrModelRole.recognizer,
   ),
   MangaOcrModelFile(
     fileName: 'vocab.txt',
-    url: 'https://huggingface.co/mayocream/manga-ocr-onnx/'
+    url:
+        'https://huggingface.co/mayocream/manga-ocr-onnx/'
         'resolve/main/vocab.txt',
     expectedBytes: 30216,
     role: MangaOcrModelRole.recognizer,

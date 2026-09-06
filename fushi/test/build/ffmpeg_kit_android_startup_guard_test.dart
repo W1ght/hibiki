@@ -3,8 +3,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  test('Android ffmpeg-kit plugin guards startup when native libs are missing',
-      () {
+  test('Android ffmpeg-kit plugin guards startup when native libs are missing', () {
     final String plugin = File(
       '../third_party/ffmpeg_kit_flutter/android/src/main/java/com/arthenica/ffmpegkit/flutter/FFmpegKitFlutterPlugin.java',
     ).readAsStringSync();

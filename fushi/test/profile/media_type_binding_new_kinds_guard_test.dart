@@ -27,13 +27,15 @@ void main() {
   }
 
   test('binding UI lists every ProfileMediaKind value (exhaustive)', () {
-    final String src =
-        read('lib/src/pages/implementations/profile_management_page.dart');
+    final String src = read(
+      'lib/src/pages/implementations/profile_management_page.dart',
+    );
     for (final ProfileMediaKind kind in ProfileMediaKind.values) {
       expect(
         src.contains('ProfileMediaKind.${kind.name}'),
         isTrue,
-        reason: 'binding row for "${kind.name}" missing from the media-type '
+        reason:
+            'binding row for "${kind.name}" missing from the media-type '
             'binding list — every enum value needs a row (TODO-2936)',
       );
     }
@@ -45,7 +47,8 @@ void main() {
       src.contains('autoApplyBinding(') &&
           src.contains('mediaType: ProfileMediaKind.manga'),
       isTrue,
-      reason: 'MangaFushiPage must call autoApplyBinding(mediaType: '
+      reason:
+          'MangaFushiPage must call autoApplyBinding(mediaType: '
           'ProfileMediaKind.manga) on open, else the manga binding row is '
           'dead UI (TODO-2936)',
     );
@@ -61,19 +64,22 @@ void main() {
       expect(
         src.contains('autoApplyBinding(mediaType: ProfileMediaKind.game)'),
         isTrue,
-        reason: '$path starts a gal hook session but never applies the '
+        reason:
+            '$path starts a gal hook session but never applies the '
             '"game" media-type Profile binding (TODO-2936)',
       );
     }
     // texthooker has TWO session entries (launch + attach) — both must apply.
-    final String texthooker =
-        read('lib/src/pages/implementations/texthooker_page.dart');
+    final String texthooker = read(
+      'lib/src/pages/implementations/texthooker_page.dart',
+    );
     expect(
       'autoApplyBinding(mediaType: ProfileMediaKind.game)'
           .allMatches(texthooker)
           .length,
       greaterThanOrEqualTo(2),
-      reason: 'texthooker must apply the game binding on BOTH the launch and '
+      reason:
+          'texthooker must apply the game binding on BOTH the launch and '
           'the attach-to-running-game entry (TODO-2936)',
     );
   });
@@ -84,16 +90,19 @@ void main() {
       server.contains('_kLookupActivityPaths') &&
           server.contains('_onLookupActivity?.call()'),
       isTrue,
-      reason: 'yomitan-api server must fire onLookupActivity on lookup/mine '
+      reason:
+          'yomitan-api server must fire onLookupActivity on lookup/mine '
           'endpoints (TODO-2936)',
     );
     // The SW-startup ping must NOT trigger a profile switch: a browser merely
     // being opened is not "the user is looking words up in the browser".
     expect(
-      RegExp(r'_kLookupActivityPaths = <String>\{[^}]*extension/status')
-          .hasMatch(server),
+      RegExp(
+        r'_kLookupActivityPaths = <String>\{[^}]*extension/status',
+      ).hasMatch(server),
       isFalse,
-      reason: '/api/extension/status is a liveness ping and must not be a '
+      reason:
+          '/api/extension/status is a liveness ping and must not be a '
           'lookup-activity trigger (TODO-2936)',
     );
 
@@ -109,7 +118,8 @@ void main() {
       appModel.contains('onLookupActivity: _onBrowserLookupActivity') &&
           appModel.contains('browserLookupProfileApplier'),
       isTrue,
-      reason: 'AppModel must forward lookup activity to the injected '
+      reason:
+          'AppModel must forward lookup activity to the injected '
           'browser-profile applier delegate (TODO-2936)',
     );
 
@@ -118,7 +128,8 @@ void main() {
       main.contains('browserLookupProfileApplier') &&
           main.contains('mediaType: ProfileMediaKind.browser'),
       isTrue,
-      reason: 'main.dart must inject the browser-profile applier '
+      reason:
+          'main.dart must inject the browser-profile applier '
           '(autoApplyBinding(mediaType: ProfileMediaKind.browser)) before '
           'initialise() (TODO-2936)',
     );

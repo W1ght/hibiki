@@ -33,7 +33,7 @@ import '../helpers/test_platform_services.dart';
 /// - 重复请求不叠第二个查词页（mainTab 分区若有两个消费者就会双消费）。
 class _HomeShellAppModel extends AppModel {
   _HomeShellAppModel(this._dir, {required this.dictionariesEnabled})
-      : super(testPlatformServices());
+    : super(testPlatformServices());
 
   final Directory _dir;
   final bool dictionariesEnabled;
@@ -44,11 +44,11 @@ class _HomeShellAppModel extends AppModel {
 
   @override
   PackageInfo get packageInfo => PackageInfo(
-        appName: 'Fushi',
-        packageName: 'app.hibiki.reader',
-        version: '1.0.0',
-        buildNumber: '1',
-      );
+    appName: 'Fushi',
+    packageName: 'app.hibiki.reader',
+    version: '1.0.0',
+    buildNumber: '1',
+  );
 
   @override
   Directory get appDirectory => _dir;
@@ -79,8 +79,8 @@ class _HomeShellAppModel extends AppModel {
 
   @override
   List<Dictionary> get dictionaries => <Dictionary>[
-        Dictionary(name: 'Test', formatKey: 'test', order: 0),
-      ];
+    Dictionary(name: 'Test', formatKey: 'test', order: 0),
+  ];
 
   @override
   int get maximumTerms => 10;
@@ -115,20 +115,22 @@ Future<_HomeShellAppModel> _pumpHome(
   addTearDown(db.close);
   final PreferencesRepository prefsRepo = PreferencesRepository(db);
   await prefsRepo.loadFromDb();
-  final Directory tmpDir =
-      Directory.systemTemp.createTempSync('fushi_home_hidden_tab_');
+  final Directory tmpDir = Directory.systemTemp.createTempSync(
+    'fushi_home_hidden_tab_',
+  );
   addTearDown(() {
     try {
       tmpDir.deleteSync(recursive: true);
     } catch (_) {}
   });
 
-  final _HomeShellAppModel appModel = _HomeShellAppModel(
-    tmpDir,
-    dictionariesEnabled: dictionariesEnabled,
-  )
-    ..wireLocalAudioForTesting(prefsRepo: prefsRepo, databaseDirectory: tmpDir)
-    ..wireDatabaseForTesting(db);
+  final _HomeShellAppModel appModel =
+      _HomeShellAppModel(tmpDir, dictionariesEnabled: dictionariesEnabled)
+        ..wireLocalAudioForTesting(
+          prefsRepo: prefsRepo,
+          databaseDirectory: tmpDir,
+        )
+        ..wireDatabaseForTesting(db);
 
   tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(
     const MethodChannel('window_manager'),
@@ -154,8 +156,11 @@ Future<_HomeShellAppModel> _pumpHome(
   );
   await tester.pump();
   await tester.pump();
-  expect(HomePage.debugSelectTab, isNotNull,
-      reason: 'HomePage 必须已挂载并注册 debugSelectTab 生产钩子');
+  expect(
+    HomePage.debugSelectTab,
+    isNotNull,
+    reason: 'HomePage 必须已挂载并注册 debugSelectTab 生产钩子',
+  );
   return appModel;
 }
 
@@ -191,10 +196,13 @@ void main() {
         .setMockMethodCallHandler(const MethodChannel('window_manager'), null);
   });
 
-  testWidgets('查词模块开着：请求打开查词落在 tab 上（不推路由），pending 被消费',
-      (WidgetTester tester) async {
-    final _HomeShellAppModel appModel =
-        await _pumpHome(tester, dictionariesEnabled: true);
+  testWidgets('查词模块开着：请求打开查词落在 tab 上（不推路由），pending 被消费', (
+    WidgetTester tester,
+  ) async {
+    final _HomeShellAppModel appModel = await _pumpHome(
+      tester,
+      dictionariesEnabled: true,
+    );
 
     DesktopLookupService.instance.triggerLookup(' tabword ');
     appModel.requestHomeDictionaryTab();
@@ -211,10 +219,13 @@ void main() {
     await _unmount(tester);
   });
 
-  testWidgets('查词模块关掉：tab 确实隐藏，但请求改推独立路由，pending 仍被消费',
-      (WidgetTester tester) async {
-    final _HomeShellAppModel appModel =
-        await _pumpHome(tester, dictionariesEnabled: false);
+  testWidgets('查词模块关掉：tab 确实隐藏，但请求改推独立路由，pending 仍被消费', (
+    WidgetTester tester,
+  ) async {
+    final _HomeShellAppModel appModel = await _pumpHome(
+      tester,
+      dictionariesEnabled: false,
+    );
 
     // 前置：查词 tab 真的不在可见列表里，_selectTab 会拒绝切换。
     expect(
@@ -244,11 +255,9 @@ void main() {
       findsOneWidget,
       reason: '推成路由必须给得出返回路径。',
     );
-    expect(
-      appModel.searchedTerms,
-      <String>['hiddenword'],
-      reason: '否则用户按热键只会看到窗口弹到前台却什么都不显示。',
-    );
+    expect(appModel.searchedTerms, <String>[
+      'hiddenword',
+    ], reason: '否则用户按热键只会看到窗口弹到前台却什么都不显示。');
     expect(
       DesktopLookupService.instance.pendingText,
       isNull,
@@ -257,10 +266,13 @@ void main() {
     await _unmount(tester);
   });
 
-  testWidgets('查词模块关掉：重复请求不叠第二个查词页（mainTab 分区不得双消费）',
-      (WidgetTester tester) async {
-    final _HomeShellAppModel appModel =
-        await _pumpHome(tester, dictionariesEnabled: false);
+  testWidgets('查词模块关掉：重复请求不叠第二个查词页（mainTab 分区不得双消费）', (
+    WidgetTester tester,
+  ) async {
+    final _HomeShellAppModel appModel = await _pumpHome(
+      tester,
+      dictionariesEnabled: false,
+    );
 
     appModel.requestHomeDictionaryTab();
     await _settle(tester);
@@ -274,7 +286,8 @@ void main() {
     expect(
       find.byType(HomeDictionaryPage),
       findsOneWidget,
-      reason: '同一时刻全 app 只能有一个 HomeDictionaryPage，'
+      reason:
+          '同一时刻全 app 只能有一个 HomeDictionaryPage，'
           '否则 mainTab 分区的 pending 查词会被双消费。',
     );
     await _unmount(tester);

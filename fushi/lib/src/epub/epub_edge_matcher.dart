@@ -27,8 +27,10 @@ class EpubEdgeMatcher {
     if (leftImg == null || rightImg == null) return 0.0;
 
     final img.Image leftResized = img.copyResize(leftImg, height: sampleHeight);
-    final img.Image rightResized =
-        img.copyResize(rightImg, height: sampleHeight);
+    final img.Image rightResized = img.copyResize(
+      rightImg,
+      height: sampleHeight,
+    );
 
     double totalDiff = 0;
     int pixelCount = 0;

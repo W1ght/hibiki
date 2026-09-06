@@ -55,8 +55,12 @@ class CollectionSyncEngine {
     for (final String key in orderedKeys) {
       final _NormalizedEntry? l = lSide[key];
       final _NormalizedEntry? r = rSide[key];
-      CollectionManifestEntry? merged =
-          _mergeOne(l, r, lastSyncedAtMs: lastSyncedAtMs, lPeer: localIsPeer);
+      CollectionManifestEntry? merged = _mergeOne(
+        l,
+        r,
+        lastSyncedAtMs: lastSyncedAtMs,
+        lPeer: localIsPeer,
+      );
       if (merged == null) continue; // 双方都无知识（不可达）或全空壳被剪枝。
       // 首次发布盖时戳：把本端新造/新并入的（publishedAt 尚空的）墓碑/删除标记为
       // now，供对端用「基线 vs publishedAt」判新旧（§2.3 因果修复）。
@@ -90,8 +94,10 @@ class CollectionSyncEngine {
       final int fileTime = peer.lastWrittenAt;
       final Map<String, _NormalizedEntry> norm = _normalize(peer);
       for (final MapEntry<String, _NormalizedEntry> e in norm.entries) {
-        (groups[e.key] ??= _FoldGroup(e.value.name, e.value.collectionType))
-            .observe(e.value, fileTime);
+        (groups[e.key] ??= _FoldGroup(
+          e.value.name,
+          e.value.collectionType,
+        )).observe(e.value, fileTime);
       }
     }
     final List<CollectionManifestEntry> out = <CollectionManifestEntry>[];
@@ -106,7 +112,9 @@ class CollectionSyncEngine {
   /// publishedAt 已有值（来自对端清单）的原样保留——发布时刻一经确定绝不刷新，
   /// 否则每轮都重盖会破坏「字节相等 ⇒ 跳过回写」的幂等。
   static CollectionManifestEntry _stampEntry(
-      CollectionManifestEntry e, int nowMs) {
+    CollectionManifestEntry e,
+    int nowMs,
+  ) {
     final bool deadNeedsStamp =
         e.deletedAt != null && e.deletedPublishedAt == null;
     bool tombNeedsStamp = false;
@@ -122,8 +130,9 @@ class CollectionSyncEngine {
       collectionType: e.collectionType,
       orderUpdatedAt: e.orderUpdatedAt,
       deletedAt: e.deletedAt,
-      deletedPublishedAt:
-          e.deletedAt != null ? (e.deletedPublishedAt ?? nowMs) : null,
+      deletedPublishedAt: e.deletedAt != null
+          ? (e.deletedPublishedAt ?? nowMs)
+          : null,
       members: e.members,
       memberTombstones: <CollectionMemberTombstone>[
         for (final CollectionMemberTombstone t in e.memberTombstones)
@@ -164,19 +173,30 @@ class CollectionSyncEngine {
       // 双死：取新 deletedAt（知识合并），publishedAt 取较早的真·首发戳。
       final int deadAt = lDead >= rDead ? lDead : rDead;
       return _deadEntry(
-          l, deadAt, _minPublished(l.deletedPublishedAt, r.deletedPublishedAt));
+        l,
+        deadAt,
+        _minPublished(l.deletedPublishedAt, r.deletedPublishedAt),
+      );
     }
     if (rDead != null) {
       // 本端活 / 对侧死：删除是新闻 ⇒ 生效；旧闻且本端活着 ⇒ 本端重建 ⇒ 活胜。
-      return _deleteIsNews(rDead, r.deletedPublishedAt,
-              peer: rPeer, baseline: lastSyncedAtMs)
+      return _deleteIsNews(
+            rDead,
+            r.deletedPublishedAt,
+            peer: rPeer,
+            baseline: lastSyncedAtMs,
+          )
           ? _deadEntry(l, rDead, r.deletedPublishedAt)
           : _prune(l.toEntry());
     }
     if (lDead != null) {
       // 本端死 / 对侧活：本端删除未发布(新闻) ⇒ 死胜；已发布过 ⇒ 对侧重建 ⇒ 活胜。
-      return _deleteIsNews(lDead, l.deletedPublishedAt,
-              peer: lPeer, baseline: lastSyncedAtMs)
+      return _deleteIsNews(
+            lDead,
+            l.deletedPublishedAt,
+            peer: lPeer,
+            baseline: lastSyncedAtMs,
+          )
           ? _deadEntry(l, lDead, l.deletedPublishedAt)
           : _prune(r.toEntry());
     }
@@ -234,37 +254,46 @@ class CollectionSyncEngine {
     final int mergedOrderUpdatedAt = l.orderUpdatedAt > r.orderUpdatedAt
         ? l.orderUpdatedAt
         : r.orderUpdatedAt;
-    return _prune(CollectionManifestEntry(
-      name: l.name,
-      collectionType: l.collectionType,
-      orderUpdatedAt: mergedOrderUpdatedAt,
-      members: _reindexed(orderedAlive),
-      memberTombstones: <CollectionMemberTombstone>[
-        for (final MapEntry<String, _Tomb> e in mergedTombstones.entries)
-          CollectionMemberTombstone(
-            mediaType: _memberMediaType(e.key),
-            entryKey: _memberEntryKey(e.key),
-            removedAt: e.value.removedAt,
-            publishedAt: e.value.publishedAt,
-          ),
-      ],
-      // 双活标签并集（只增不删；确定性排序供 canonicalJson 幂等）。
-      tagNames: <String>{...l.tagNames, ...r.tagNames}.toList()..sort(),
-    ));
+    return _prune(
+      CollectionManifestEntry(
+        name: l.name,
+        collectionType: l.collectionType,
+        orderUpdatedAt: mergedOrderUpdatedAt,
+        members: _reindexed(orderedAlive),
+        memberTombstones: <CollectionMemberTombstone>[
+          for (final MapEntry<String, _Tomb> e in mergedTombstones.entries)
+            CollectionMemberTombstone(
+              mediaType: _memberMediaType(e.key),
+              entryKey: _memberEntryKey(e.key),
+              removedAt: e.value.removedAt,
+              publishedAt: e.value.publishedAt,
+            ),
+        ],
+        // 双活标签并集（只增不删；确定性排序供 canonicalJson 幂等）。
+        tagNames: <String>{...l.tagNames, ...r.tagNames}.toList()..sort(),
+      ),
+    );
   }
 
   /// 一条墓碑「对本端是不是新闻」：对端侧用 publishedAt（首次进共享清单的时刻，回退
   /// removedAt 兼容旧清单）判 `> 基线`；本端侧用 removedAt（与本端基线同一时钟轴，
   /// 本端未发布=removedAt>基线=新闻）。
-  static bool _tombIsNews(_Tomb t,
-      {required bool peer, required int baseline}) {
+  static bool _tombIsNews(
+    _Tomb t, {
+    required bool peer,
+    required int baseline,
+  }) {
     final int at = peer ? (t.publishedAt ?? t.removedAt) : t.removedAt;
     return at > baseline;
   }
 
   /// 合集级删除「对本端是不是新闻」：同 [_tombIsNews]，用 deletedPublishedAt/deletedAt。
-  static bool _deleteIsNews(int deletedAt, int? deletedPublishedAt,
-      {required bool peer, required int baseline}) {
+  static bool _deleteIsNews(
+    int deletedAt,
+    int? deletedPublishedAt, {
+    required bool peer,
+    required int baseline,
+  }) {
     final int at = peer ? (deletedPublishedAt ?? deletedAt) : deletedAt;
     return at > baseline;
   }
@@ -275,8 +304,9 @@ class CollectionSyncEngine {
   static _Tomb _mergeTomb(_Tomb? a, _Tomb? b) {
     if (a == null) return b!;
     if (b == null) return a;
-    final int removedAt =
-        a.removedAt >= b.removedAt ? a.removedAt : b.removedAt;
+    final int removedAt = a.removedAt >= b.removedAt
+        ? a.removedAt
+        : b.removedAt;
     return (
       removedAt: removedAt,
       publishedAt: _minPublished(a.publishedAt, b.publishedAt),
@@ -294,17 +324,19 @@ class CollectionSyncEngine {
   /// 死条目（合集墓碑）永远保留——它就是知识本身。
   static CollectionManifestEntry? _prune(CollectionManifestEntry e) =>
       e.deletedAt == null && e.members.isEmpty && e.memberTombstones.isEmpty
-          ? null
-          : e;
+      ? null
+      : e;
 
   static CollectionManifestEntry _deadEntry(
-          _NormalizedEntry key, int at, int? publishedAt) =>
-      CollectionManifestEntry(
-        name: key.name,
-        collectionType: key.collectionType,
-        deletedAt: at,
-        deletedPublishedAt: publishedAt,
-      );
+    _NormalizedEntry key,
+    int at,
+    int? publishedAt,
+  ) => CollectionManifestEntry(
+    name: key.name,
+    collectionType: key.collectionType,
+    deletedAt: at,
+    deletedPublishedAt: publishedAt,
+  );
 
   /// 本地现状 [l]（null = 本地全然不知）是否已与合并结果 [merged] 一致（一致则
   /// 无需产出本地变更；比较忽略 sortIndex 的具体数值，只看序列——本地可能是
@@ -386,9 +418,10 @@ class CollectionSyncEngine {
         continue;
       }
       final List<CollectionManifestMember> sorted =
-          List<CollectionManifestMember>.of(e.members)
-            ..sort((CollectionManifestMember a, CollectionManifestMember b) =>
-                a.sortIndex.compareTo(b.sortIndex));
+          List<CollectionManifestMember>.of(e.members)..sort(
+            (CollectionManifestMember a, CollectionManifestMember b) =>
+                a.sortIndex.compareTo(b.sortIndex),
+          );
       final Map<String, CollectionManifestMember> byKey =
           <String, CollectionManifestMember>{};
       final List<String> order = <String>[];
@@ -458,8 +491,8 @@ class CollectionLocalChanges {
 /// 历史稀疏 sortIndex 原值）：清单只关心序列，归一化让「内容相等 ⇒ 字节相等」。
 Future<CollectionManifest> loadLocalCollectionManifest(FushiDatabase db) async {
   final List<MediaCollectionRow> rows = await db.getAllMediaCollections();
-  final List<CollectionMemberTombstoneRow> tombRows =
-      await db.getAllCollectionMemberTombstones();
+  final List<CollectionMemberTombstoneRow> tombRows = await db
+      .getAllCollectionMemberTombstones();
 
   // v83：成员表 epub 域 entryKey = 本机 epub_books.uid（本地书）或对端 bookKey
   // （透传行）。wire 冻结面要求清单里 epub entryKey 恒为 bookKey——出 wire 前经
@@ -474,8 +507,8 @@ Future<CollectionManifest> loadLocalCollectionManifest(FushiDatabase db) async {
   };
   String wireEntryKey(String mediaType, String entryKey) =>
       mediaType == MediaKind.epub.dbValue
-          ? (bookKeyByUid[entryKey] ?? entryKey)
-          : entryKey;
+      ? (bookKeyByUid[entryKey] ?? entryKey)
+      : entryKey;
 
   // 墓碑按自然键分组；哨兵行单独归为合集级 deletedAt。
   final Map<String, List<CollectionMemberTombstoneRow>> memberTombsByKey =
@@ -486,7 +519,7 @@ Future<CollectionManifest> loadLocalCollectionManifest(FushiDatabase db) async {
     final String key = nk(t.collectionName, t.collectionType);
     final bool isSentinel =
         t.mediaType == FushiDatabase.collectionTombstoneSentinel &&
-            t.entryKey == FushiDatabase.collectionTombstoneSentinel;
+        t.entryKey == FushiDatabase.collectionTombstoneSentinel;
     if (isSentinel) {
       deletedAtByKey[key] = t.deletedAt;
     } else {
@@ -498,9 +531,9 @@ Future<CollectionManifest> loadLocalCollectionManifest(FushiDatabase db) async {
   // getMediaCollectionByNaturalKey(min id) 一致——否则同名两行每轮各选一行、判不
   // 一致永不收敛。getAllMediaCollections 按 sortOrder,id 排序，先见者未必是 min id；
   // 这里显式按 id 升序取先见者，与应用端对齐（BUG 修复）。
-  final List<MediaCollectionRow> byId = List<MediaCollectionRow>.of(rows)
-    ..sort(
-        (MediaCollectionRow a, MediaCollectionRow b) => a.id.compareTo(b.id));
+  final List<MediaCollectionRow> byId = List<MediaCollectionRow>.of(
+    rows,
+  )..sort((MediaCollectionRow a, MediaCollectionRow b) => a.id.compareTo(b.id));
 
   final List<CollectionManifestEntry> entries = <CollectionManifestEntry>[];
   final Set<String> seen = <String>{};
@@ -510,41 +543,45 @@ Future<CollectionManifest> loadLocalCollectionManifest(FushiDatabase db) async {
     if (row.name.isEmpty || row.collectionType.isEmpty) continue;
     final String key = nk(row.name, row.collectionType);
     if (!seen.add(key)) continue; // 历史重名行：取 min id 者（同应用端对齐方向）。
-    final List<MediaCollectionItemRow> items =
-        await db.getCollectionItems(row.id);
+    final List<MediaCollectionItemRow> items = await db.getCollectionItems(
+      row.id,
+    );
     // 合集标签进清单（只增不删并集载荷；空清单键由 toJson 省略保幂等）。
     final List<BookTagRow> rowTags = await db.getTagsForCollection(row.id);
-    entries.add(CollectionManifestEntry(
-      name: row.name,
-      collectionType: row.collectionType,
-      orderUpdatedAt: row.orderUpdatedAt,
-      members: <CollectionManifestMember>[
-        for (int i = 0; i < items.length; i++)
-          // 空成员键是脏数据：跳过（对端 codec 会拒空键）。
-          if (items[i].mediaType.isNotEmpty && items[i].entryKey.isNotEmpty)
-            CollectionManifestMember(
-              mediaType: items[i].mediaType,
-              // epub：本地 uid → wire bookKey（透传行照抄，见上）。
-              entryKey: wireEntryKey(items[i].mediaType, items[i].entryKey),
-              sortIndex: i,
-            ),
-      ],
-      memberTombstones: <CollectionMemberTombstone>[
-        for (final CollectionMemberTombstoneRow t
-            in memberTombsByKey[key] ?? const <CollectionMemberTombstoneRow>[])
-          // 空键 / 负 deletedAt 是脏数据：跳过（对端 codec 会拒之）。
-          // v83：墓碑 entryKey 冻结在 bookKey 域（= wire 域），零换算直发。
-          if (t.mediaType.isNotEmpty &&
-              t.entryKey.isNotEmpty &&
-              t.deletedAt >= 0)
-            CollectionMemberTombstone(
-              mediaType: t.mediaType,
-              entryKey: t.entryKey,
-              removedAt: t.deletedAt,
-            ),
-      ],
-      tagNames: <String>[for (final BookTagRow t in rowTags) t.name],
-    ));
+    entries.add(
+      CollectionManifestEntry(
+        name: row.name,
+        collectionType: row.collectionType,
+        orderUpdatedAt: row.orderUpdatedAt,
+        members: <CollectionManifestMember>[
+          for (int i = 0; i < items.length; i++)
+            // 空成员键是脏数据：跳过（对端 codec 会拒空键）。
+            if (items[i].mediaType.isNotEmpty && items[i].entryKey.isNotEmpty)
+              CollectionManifestMember(
+                mediaType: items[i].mediaType,
+                // epub：本地 uid → wire bookKey（透传行照抄，见上）。
+                entryKey: wireEntryKey(items[i].mediaType, items[i].entryKey),
+                sortIndex: i,
+              ),
+        ],
+        memberTombstones: <CollectionMemberTombstone>[
+          for (final CollectionMemberTombstoneRow t
+              in memberTombsByKey[key] ??
+                  const <CollectionMemberTombstoneRow>[])
+            // 空键 / 负 deletedAt 是脏数据：跳过（对端 codec 会拒之）。
+            // v83：墓碑 entryKey 冻结在 bookKey 域（= wire 域），零换算直发。
+            if (t.mediaType.isNotEmpty &&
+                t.entryKey.isNotEmpty &&
+                t.deletedAt >= 0)
+              CollectionMemberTombstone(
+                mediaType: t.mediaType,
+                entryKey: t.entryKey,
+                removedAt: t.deletedAt,
+              ),
+        ],
+        tagNames: <String>[for (final BookTagRow t in rowTags) t.name],
+      ),
+    );
   }
 
   // 无合集行但有墓碑知识的自然键：死壳（哨兵）或活壳（仅成员墓碑——移空自删后
@@ -560,25 +597,27 @@ Future<CollectionManifest> loadLocalCollectionManifest(FushiDatabase db) async {
     // 空自然键的墓碑壳是脏数据：跳过（绝不发布空 name/type 毒害对端）。
     if (name.isEmpty || type.isEmpty) continue;
     final int? deadAt = deletedAtByKey[key];
-    entries.add(CollectionManifestEntry(
-      name: name,
-      collectionType: type,
-      deletedAt: deadAt,
-      memberTombstones: deadAt != null
-          ? const <CollectionMemberTombstone>[]
-          : <CollectionMemberTombstone>[
-              for (final CollectionMemberTombstoneRow t
-                  in memberTombsByKey[key]!)
-                if (t.mediaType.isNotEmpty &&
-                    t.entryKey.isNotEmpty &&
-                    t.deletedAt >= 0)
-                  CollectionMemberTombstone(
-                    mediaType: t.mediaType,
-                    entryKey: t.entryKey,
-                    removedAt: t.deletedAt,
-                  ),
-            ],
-    ));
+    entries.add(
+      CollectionManifestEntry(
+        name: name,
+        collectionType: type,
+        deletedAt: deadAt,
+        memberTombstones: deadAt != null
+            ? const <CollectionMemberTombstone>[]
+            : <CollectionMemberTombstone>[
+                for (final CollectionMemberTombstoneRow t
+                    in memberTombsByKey[key]!)
+                  if (t.mediaType.isNotEmpty &&
+                      t.entryKey.isNotEmpty &&
+                      t.deletedAt >= 0)
+                    CollectionMemberTombstone(
+                      mediaType: t.mediaType,
+                      entryKey: t.entryKey,
+                      removedAt: t.deletedAt,
+                    ),
+              ],
+      ),
+    );
   }
 
   return CollectionManifest(collections: entries);
@@ -591,7 +630,9 @@ Future<CollectionManifest> loadLocalCollectionManifest(FushiDatabase db) async {
 /// [FushiDatabase.removeFromCollection]/[FushiDatabase.deleteMediaCollection]
 /// （那两条会写全新墓碑，把同步应用伪装成本端的人为操作）。
 Future<int> applyCollectionLocalChanges(
-    FushiDatabase db, CollectionLocalChanges changes) async {
+  FushiDatabase db,
+  CollectionLocalChanges changes,
+) async {
   if (changes.isEmpty) return 0;
   // 被本轮解散的合集行快照：删行发生在事务里，而回收自有封面是文件 IO，必须挪到
   // 事务提交之后做（BUG-1319）。路径只能在行还活着时取，故在删之前入列。
@@ -611,31 +652,37 @@ Future<int> applyCollectionLocalChanges(
   };
   String localEntryKey(String mediaType, String entryKey) =>
       mediaType == MediaKind.epub.dbValue
-          ? (uidByBookKey[entryKey] ?? entryKey)
-          : entryKey;
+      ? (uidByBookKey[entryKey] ?? entryKey)
+      : entryKey;
   await db.transaction(() async {
     for (final CollectionManifestEntry e in changes.entries) {
-      final MediaCollectionRow? row =
-          await db.getMediaCollectionByNaturalKey(e.name, e.collectionType);
+      final MediaCollectionRow? row = await db.getMediaCollectionByNaturalKey(
+        e.name,
+        e.collectionType,
+      );
 
       if (e.deletedAt != null) {
         // 目标态 = 已删：删本地行（若有），墓碑表只留哨兵（镜像 deletedAt）。
         if (row != null) {
           dissolved.add(row);
-          dissolvedImagePaths
-              .addAll(await collectionOwnedImagePaths(db, row.id));
+          dissolvedImagePaths.addAll(
+            await collectionOwnedImagePaths(db, row.id),
+          );
           await db.deleteMediaCollectionRaw(row.id);
         }
         await db.replaceCollectionTombstonesFor(
-            e.name, e.collectionType, <CollectionMemberTombstonesCompanion>[
-          CollectionMemberTombstonesCompanion.insert(
-            collectionName: e.name,
-            collectionType: e.collectionType,
-            mediaType: FushiDatabase.collectionTombstoneSentinel,
-            entryKey: FushiDatabase.collectionTombstoneSentinel,
-            deletedAt: e.deletedAt!,
-          ),
-        ]);
+          e.name,
+          e.collectionType,
+          <CollectionMemberTombstonesCompanion>[
+            CollectionMemberTombstonesCompanion.insert(
+              collectionName: e.name,
+              collectionType: e.collectionType,
+              mediaType: FushiDatabase.collectionTombstoneSentinel,
+              entryKey: FushiDatabase.collectionTombstoneSentinel,
+              deletedAt: e.deletedAt!,
+            ),
+          ],
+        );
         continue;
       }
 
@@ -644,28 +691,32 @@ Future<int> applyCollectionLocalChanges(
         // 活壳（全成员被移出）：本地沿用「移空自删」语义，不留 0 成员合集卡。
         if (row != null) {
           dissolved.add(row);
-          dissolvedImagePaths
-              .addAll(await collectionOwnedImagePaths(db, row.id));
+          dissolvedImagePaths.addAll(
+            await collectionOwnedImagePaths(db, row.id),
+          );
           await db.deleteMediaCollectionRaw(row.id);
         }
       } else {
-        final int id = row?.id ??
-            await db.createMediaCollection(e.name,
-                collectionType: e.collectionType);
+        final int id =
+            row?.id ??
+            await db.createMediaCollection(
+              e.name,
+              collectionType: e.collectionType,
+            );
         // 调和成员：删多余、按位置 upsert（sortIndex = 清单位置序号）。
-        final List<MediaCollectionItemRow> current =
-            await db.getCollectionItems(id);
+        final List<MediaCollectionItemRow> current = await db
+            .getCollectionItems(id);
         // v83：desiredKeys 在**本地键域**比较——wire 成员先经 localEntryKey 整体
         // 换域（epub bookKey→uid，查不上照抄透传），与 current 行同域直比。
         final List<CollectionManifestMember> localMembers =
             <CollectionManifestMember>[
-          for (final CollectionManifestMember m in e.members)
-            CollectionManifestMember(
-              mediaType: m.mediaType,
-              entryKey: localEntryKey(m.mediaType, m.entryKey),
-              sortIndex: m.sortIndex,
-            ),
-        ];
+              for (final CollectionManifestMember m in e.members)
+                CollectionManifestMember(
+                  mediaType: m.mediaType,
+                  entryKey: localEntryKey(m.mediaType, m.entryKey),
+                  sortIndex: m.sortIndex,
+                ),
+            ];
         final Set<String> desiredKeys = <String>{
           for (final CollectionManifestMember m in localMembers)
             '${m.mediaType}\u0000${m.entryKey}',
@@ -677,7 +728,11 @@ Future<int> applyCollectionLocalChanges(
         }
         for (int i = 0; i < localMembers.length; i++) {
           await db.upsertCollectionItemAt(
-              id, localMembers[i].mediaType, localMembers[i].entryKey, i);
+            id,
+            localMembers[i].mediaType,
+            localMembers[i].entryKey,
+            i,
+          );
         }
         await db.setCollectionOrderUpdatedAt(id, e.orderUpdatedAt);
         // 合集标签只增不删（同步语义）：按名 getOrCreate + addTagToCollection。
@@ -690,16 +745,19 @@ Future<int> applyCollectionLocalChanges(
       // v83：墓碑镜像零换算——本地墓碑表 entryKey 冻结在 bookKey 域（= wire 域），
       // 合集级删除哨兵 '' 同样原样镜像，绝不过 localEntryKey。
       await db.replaceCollectionTombstonesFor(
-          e.name, e.collectionType, <CollectionMemberTombstonesCompanion>[
-        for (final CollectionMemberTombstone t in e.memberTombstones)
-          CollectionMemberTombstonesCompanion.insert(
-            collectionName: e.name,
-            collectionType: e.collectionType,
-            mediaType: t.mediaType,
-            entryKey: t.entryKey,
-            deletedAt: t.removedAt,
-          ),
-      ]);
+        e.name,
+        e.collectionType,
+        <CollectionMemberTombstonesCompanion>[
+          for (final CollectionMemberTombstone t in e.memberTombstones)
+            CollectionMemberTombstonesCompanion.insert(
+              collectionName: e.name,
+              collectionType: e.collectionType,
+              mediaType: t.mediaType,
+              entryKey: t.entryKey,
+              deletedAt: t.removedAt,
+            ),
+        ],
+      );
     }
   });
   // 事务外回收：护栏（落在合集封面目录内 + 不被任何存活合集引用）在 helper 里，
@@ -753,30 +811,30 @@ class _NormalizedEntry {
   final Set<String> tagNames;
 
   CollectionManifestEntry toEntry() => CollectionManifestEntry(
-        name: name,
-        collectionType: collectionType,
-        orderUpdatedAt: orderUpdatedAt,
-        deletedAt: deletedAt,
-        deletedPublishedAt: deletedPublishedAt,
-        members: <CollectionManifestMember>[
-          for (int i = 0; i < memberOrder.length; i++)
-            CollectionManifestMember(
-              mediaType: CollectionSyncEngine._memberMediaType(memberOrder[i]),
-              entryKey: CollectionSyncEngine._memberEntryKey(memberOrder[i]),
-              sortIndex: i,
-            ),
-        ],
-        memberTombstones: <CollectionMemberTombstone>[
-          for (final MapEntry<String, _Tomb> e in tombstones.entries)
-            CollectionMemberTombstone(
-              mediaType: CollectionSyncEngine._memberMediaType(e.key),
-              entryKey: CollectionSyncEngine._memberEntryKey(e.key),
-              removedAt: e.value.removedAt,
-              publishedAt: e.value.publishedAt,
-            ),
-        ],
-        tagNames: tagNames.toList()..sort(),
-      );
+    name: name,
+    collectionType: collectionType,
+    orderUpdatedAt: orderUpdatedAt,
+    deletedAt: deletedAt,
+    deletedPublishedAt: deletedPublishedAt,
+    members: <CollectionManifestMember>[
+      for (int i = 0; i < memberOrder.length; i++)
+        CollectionManifestMember(
+          mediaType: CollectionSyncEngine._memberMediaType(memberOrder[i]),
+          entryKey: CollectionSyncEngine._memberEntryKey(memberOrder[i]),
+          sortIndex: i,
+        ),
+    ],
+    memberTombstones: <CollectionMemberTombstone>[
+      for (final MapEntry<String, _Tomb> e in tombstones.entries)
+        CollectionMemberTombstone(
+          mediaType: CollectionSyncEngine._memberMediaType(e.key),
+          entryKey: CollectionSyncEngine._memberEntryKey(e.key),
+          removedAt: e.value.removedAt,
+          publishedAt: e.value.publishedAt,
+        ),
+    ],
+    tagNames: tagNames.toList()..sort(),
+  );
 }
 
 /// [CollectionSyncEngine.combinePeers] 的按自然键聚合器：把 N 份对端清单里同一合集的
@@ -893,8 +951,10 @@ class _FoldGroup {
       if (alive) {
         aliveMembers.add(mk);
       } else if (hasTomb) {
-        tombs[mk] =
-            (removedAt: _tombRemovedMax[mk]!, publishedAt: _tombPubMin[mk]);
+        tombs[mk] = (
+          removedAt: _tombRemovedMax[mk]!,
+          publishedAt: _tombPubMin[mk],
+        );
       }
     }
 
@@ -912,23 +972,25 @@ class _FoldGroup {
     ]..sort();
     ordered.addAll(rest);
 
-    return CollectionSyncEngine._prune(CollectionManifestEntry(
-      name: name,
-      collectionType: collectionType,
-      orderUpdatedAt: _orderUpdatedAtMax,
-      members: CollectionSyncEngine._reindexed(ordered),
-      memberTombstones: <CollectionMemberTombstone>[
-        for (final MapEntry<String, _Tomb> e in tombs.entries)
-          CollectionMemberTombstone(
-            mediaType: CollectionSyncEngine._memberMediaType(e.key),
-            entryKey: CollectionSyncEngine._memberEntryKey(e.key),
-            removedAt: e.value.removedAt,
-            publishedAt: e.value.publishedAt,
-          ),
-      ],
-      // 折叠活分支标签并集（确定性排序）；死分支上方 return 不带标签。
-      tagNames: _tagNames.toList()..sort(),
-    ));
+    return CollectionSyncEngine._prune(
+      CollectionManifestEntry(
+        name: name,
+        collectionType: collectionType,
+        orderUpdatedAt: _orderUpdatedAtMax,
+        members: CollectionSyncEngine._reindexed(ordered),
+        memberTombstones: <CollectionMemberTombstone>[
+          for (final MapEntry<String, _Tomb> e in tombs.entries)
+            CollectionMemberTombstone(
+              mediaType: CollectionSyncEngine._memberMediaType(e.key),
+              entryKey: CollectionSyncEngine._memberEntryKey(e.key),
+              removedAt: e.value.removedAt,
+              publishedAt: e.value.publishedAt,
+            ),
+        ],
+        // 折叠活分支标签并集（确定性排序）；死分支上方 return 不带标签。
+        tagNames: _tagNames.toList()..sort(),
+      ),
+    );
   }
 
   List<String> _pickCanonicalOrder() {

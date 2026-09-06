@@ -49,7 +49,9 @@ void main() {
     expect(result.single.regions.last.utf16Start, 1);
     expect(result.single.regions.last.utf16End, 2);
     expect(
-        result.single.regions.first.normalizedBounds.left, closeTo(0.3, 1e-5));
+      result.single.regions.first.normalizedBounds.left,
+      closeTo(0.3, 1e-5),
+    );
   });
 
   test('rotation produces vertical regions', () {
@@ -135,10 +137,10 @@ void main() {
 
     final double expectedLinePixelWidth =
         lineWidth * pageWidth * math.cos(rotation).abs() +
-            lineHeight * pageHeight * math.sin(rotation).abs();
+        lineHeight * pageHeight * math.sin(rotation).abs();
     final double expectedLinePixelHeight =
         lineWidth * pageWidth * math.sin(rotation).abs() +
-            lineHeight * pageHeight * math.cos(rotation).abs();
+        lineHeight * pageHeight * math.cos(rotation).abs();
     final Rect line = result.single.normalizedBounds;
     expect(line.width * pageWidth, closeTo(expectedLinePixelWidth, 0.5));
     expect(line.height * pageHeight, closeTo(expectedLinePixelHeight, 0.5));
@@ -228,19 +230,21 @@ void main() {
     );
   });
 
-  test('normalizeLensLanguage keeps primary subtags and falls back otherwise',
-      () {
-    expect(normalizeLensLanguage('en'), 'en');
-    expect(normalizeLensLanguage('pt-BR'), 'pt');
-    expect(normalizeLensLanguage('zh_Hans'), 'zh');
-    expect(normalizeLensLanguage('EN'), 'en');
-    expect(normalizeLensLanguage(''), 'ja');
-    expect(normalizeLensLanguage(null), 'ja');
-    expect(normalizeLensLanguage('all'), 'ja');
-    expect(normalizeLensLanguage('multi'), 'ja');
-    expect(normalizeLensLanguage('42'), 'ja');
-    expect(normalizeLensLanguage(null, fallback: 'en'), 'en');
-  });
+  test(
+    'normalizeLensLanguage keeps primary subtags and falls back otherwise',
+    () {
+      expect(normalizeLensLanguage('en'), 'en');
+      expect(normalizeLensLanguage('pt-BR'), 'pt');
+      expect(normalizeLensLanguage('zh_Hans'), 'zh');
+      expect(normalizeLensLanguage('EN'), 'en');
+      expect(normalizeLensLanguage(''), 'ja');
+      expect(normalizeLensLanguage(null), 'ja');
+      expect(normalizeLensLanguage('all'), 'ja');
+      expect(normalizeLensLanguage('multi'), 'ja');
+      expect(normalizeLensLanguage('42'), 'ja');
+      expect(normalizeLensLanguage(null, fallback: 'en'), 'en');
+    },
+  );
 }
 
 bool _containsBytes(Uint8List source, List<int> needle) {

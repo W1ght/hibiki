@@ -17,10 +17,10 @@ void main() {
     );
   }
 
-  testWidgets('renders with import disabled until a video is picked',
-      (WidgetTester tester) async {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+  testWidgets('renders with import disabled until a video is picked', (
+    WidgetTester tester,
+  ) async {
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final VideoBookRepository repo = VideoBookRepository(db);
 

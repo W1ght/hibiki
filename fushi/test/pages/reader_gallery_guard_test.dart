@@ -13,18 +13,26 @@ void main() {
   late String src;
 
   setUpAll(() {
-    expect(chrome.existsSync(), isTrue,
-        reason: 'chrome.part.dart must exist for the guard');
+    expect(
+      chrome.existsSync(),
+      isTrue,
+      reason: 'chrome.part.dart must exist for the guard',
+    );
     src = chrome.readAsStringSync();
   });
 
   test('gallery button is wired into the bottom settings bar (barItems)', () {
     final int barItemsIdx = src.indexOf('final List<Widget> barItems');
     expect(barItemsIdx, greaterThan(-1));
-    final int onPressedIdx =
-        src.indexOf('onPressed: _openGallery,', barItemsIdx);
-    expect(onPressedIdx, greaterThan(-1),
-        reason: 'gallery IconButton must call _openGallery from barItems');
+    final int onPressedIdx = src.indexOf(
+      'onPressed: _openGallery,',
+      barItemsIdx,
+    );
+    expect(
+      onPressedIdx,
+      greaterThan(-1),
+      reason: 'gallery IconButton must call _openGallery from barItems',
+    );
     expect(src.contains('tooltip: t.reader_gallery_tooltip'), isTrue);
   });
 
@@ -34,16 +42,19 @@ void main() {
     // _openGallery wires onOpenImage to _openImageViewer.
     expect(src.contains('onOpenImage: (EpubImageRef ref) =>'), isTrue);
     expect(
-        src.contains('_openImageViewer(ReaderFushiSource.epubUrl(ref.src))'),
-        isTrue,
-        reason: 'gallery thumbnail tap must reuse _openImageViewer');
+      src.contains('_openImageViewer(ReaderFushiSource.epubUrl(ref.src))'),
+      isTrue,
+      reason: 'gallery thumbnail tap must reuse _openImageViewer',
+    );
   });
 
   test('gallery jump reuses _navigateToChapter (no second nav path)', () {
     expect(src.contains('onJumpTo: (EpubImageRef ref)'), isTrue);
-    expect(src.contains('_navigateToChapter(ref.chapterIndex, manual: true)'),
-        isTrue,
-        reason: 'gallery jump must reuse _navigateToChapter');
+    expect(
+      src.contains('_navigateToChapter(ref.chapterIndex, manual: true)'),
+      isTrue,
+      reason: 'gallery jump must reuse _navigateToChapter',
+    );
   });
 
   test('gallery page renders a thumbnail GridView', () {

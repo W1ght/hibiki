@@ -128,7 +128,8 @@ void main() {
     expect(
       header.substring(headerAt).contains('return ExcludeFocus('),
       isTrue,
-      reason: '纯指针面，不进焦点遍历池（TODO-700 不变式）——ExcludeFocus 在组件内部，'
+      reason:
+          '纯指针面，不进焦点遍历池（TODO-700 不变式）——ExcludeFocus 在组件内部，'
           '让 chrome.part 里的 ExcludeFocus 仍唯一属于 _wrapBottomChromeBar',
     );
     expect(page.contains('_buildDesktopHeader(),'), isTrue);

@@ -31,12 +31,21 @@ void main() {
 
   group('BUG-176② 入口接线', () {
     test('存在 _pokeControlsVisible 助手且经 GestureBinding 派发合成 hover', () {
-      expect(src.contains('void _pokeControlsVisible()'), isTrue,
-          reason: '必须有唤醒控制条的助手');
-      expect(src.contains('GestureBinding.instance.handlePointerEvent'), isTrue,
-          reason: 'poke 必须经 GestureBinding 派发指针事件以驱动 media_kit MouseRegion');
-      expect(src.contains('PointerHoverEvent('), isTrue,
-          reason: 'poke 必须派发 hover 事件（media_kit 在 onHover 重置隐藏计时）');
+      expect(
+        src.contains('void _pokeControlsVisible()'),
+        isTrue,
+        reason: '必须有唤醒控制条的助手',
+      );
+      expect(
+        src.contains('GestureBinding.instance.handlePointerEvent'),
+        isTrue,
+        reason: 'poke 必须经 GestureBinding 派发指针事件以驱动 media_kit MouseRegion',
+      );
+      expect(
+        src.contains('PointerHoverEvent('),
+        isTrue,
+        reason: 'poke 必须派发 hover 事件（media_kit 在 onHover 重置隐藏计时）',
+      );
     });
 
     test('poke 仅桌面派发合成 hover（移动端 controls 无 hover 自动隐藏问题）', () {
@@ -53,8 +62,11 @@ void main() {
             '_pokeControlsVisible 必须门控 _isDesktopVideoControls（移动端不派合成 hover）',
       );
       // 移动端分支续命隐藏 Timer 而非派合成 hover（TODO-1059）。
-      expect(body.contains('_restartHideTimerSignal.poke();'), isTrue,
-          reason: '移动端经 _restartHideTimerSignal 续命，而非派合成 hover');
+      expect(
+        body.contains('_restartHideTimerSignal.poke();'),
+        isTrue,
+        reason: '移动端经 _restartHideTimerSignal 续命，而非派合成 hover',
+      );
     });
 
     test('键盘 / 手柄六个入口只【续命】控制条，不唤起（BUG-2030）', () {
@@ -76,13 +88,20 @@ void main() {
         final List<String> callbacks = namedArgumentValues(src, entry);
         expect(callbacks, isNotEmpty, reason: '缺快捷键入口 $entry:');
         for (final String callback in callbacks) {
-          expect(containsCodeLine(callback, '_keepControlsAliveIfVisible()'),
-              isTrue,
-              reason: '$entry: 键盘/手柄回调必须走 _keepControlsAliveIfVisible()'
-                  '（控制条隐藏时不得唤起，BUG-2030）；注释里写着这句不算实现');
-          expect(containsCodeLine(callback, '_pokeControlsVisible()'), isFalse,
-              reason: '$entry: 键盘/手柄回调不得直接 poke——那会把隐藏的控制条整个'
-                  '弹出来（BUG-2030）');
+          expect(
+            containsCodeLine(callback, '_keepControlsAliveIfVisible()'),
+            isTrue,
+            reason:
+                '$entry: 键盘/手柄回调必须走 _keepControlsAliveIfVisible()'
+                '（控制条隐藏时不得唤起，BUG-2030）；注释里写着这句不算实现',
+          );
+          expect(
+            containsCodeLine(callback, '_pokeControlsVisible()'),
+            isFalse,
+            reason:
+                '$entry: 键盘/手柄回调不得直接 poke——那会把隐藏的控制条整个'
+                '弹出来（BUG-2030）',
+          );
         }
       }
     });
@@ -93,10 +112,16 @@ void main() {
         'Future<void> _replayPreviousCueAndKeepControls() async {',
       ]) {
         final String body = methodBody(src, signature);
-        expect(containsCodeLine(body, '_keepControlsAliveIfVisible()'), isTrue,
-            reason: '$signature 必须走 keepAlive（BUG-2030）');
-        expect(containsCodeLine(body, '_pokeControlsVisible()'), isFalse,
-            reason: '$signature 不得唤起隐藏的控制条（BUG-2030）');
+        expect(
+          containsCodeLine(body, '_keepControlsAliveIfVisible()'),
+          isTrue,
+          reason: '$signature 必须走 keepAlive（BUG-2030）',
+        );
+        expect(
+          containsCodeLine(body, '_pokeControlsVisible()'),
+          isFalse,
+          reason: '$signature 不得唤起隐藏的控制条（BUG-2030）',
+        );
       }
     });
 
@@ -105,13 +130,17 @@ void main() {
       expect(
         containsCodeLine(body, 'if (!_mediaKitControlsVisible.value) return;'),
         isTrue,
-        reason: '续命原语必须以「不可见就早退」开路——门控只能做在派发合成 hover '
+        reason:
+            '续命原语必须以「不可见就早退」开路——门控只能做在派发合成 hover '
             '**之前**：media_kit 的 onHover 无条件 `visible = true`，合成 hover 本身'
             '分不出续命与唤起（BUG-2030）',
       );
       // 早退之后才是真正的续命动作，否则这方法就成了空壳。
-      expect(containsCodeLine(body, '_pokeControlsVisible();'), isTrue,
-          reason: '已可见时必须真的续命（复用 poke 的合成 hover 派发路径）');
+      expect(
+        containsCodeLine(body, '_pokeControlsVisible();'),
+        isTrue,
+        reason: '已可见时必须真的续命（复用 poke 的合成 hover 派发路径）',
+      );
     });
 
     test('media_kit fork 的桌面 onHover 仍是无条件唤起（BUG-2030 门控前提）', () {
@@ -123,12 +152,16 @@ void main() {
         'src/controls/material_desktop.dart',
       ).readAsStringSync().replaceAll('\r\n', '\n');
       final String body = methodBody(fork, 'void onHover() {');
-      expect(containsCodeLine(body, 'visible = true;'), isTrue,
-          reason: 'fork 的 onHover 应当仍是无条件把控制条翻可见');
+      expect(
+        containsCodeLine(body, 'visible = true;'),
+        isTrue,
+        reason: 'fork 的 onHover 应当仍是无条件把控制条翻可见',
+      );
       expect(
         RegExp(r'if\s*\(\s*!\s*visible\s*\)').hasMatch(maskComments(body)),
         isFalse,
-        reason: 'onHover 里出现了可见性判断——fork 语义变了，请重新评估 '
+        reason:
+            'onHover 里出现了可见性判断——fork 语义变了，请重新评估 '
             '_keepControlsAliveIfVisible 的门控位置（BUG-2030）',
       );
     });
@@ -136,8 +169,9 @@ void main() {
     test('_seekRelative 与底部跳句按钮都唤醒控制条', () {
       // _seekRelative（底部 ±10 共用）内部 poke。
       expect(
-        RegExp(r'Future<void> _seekRelative\(int deltaMs\) async \{\s*_pokeControlsVisible\(\);')
-            .hasMatch(src),
+        RegExp(
+          r'Future<void> _seekRelative\(int deltaMs\) async \{\s*_pokeControlsVisible\(\);',
+        ).hasMatch(src),
         isTrue,
         reason: '_seekRelative 必须 poke（底部 ±10 按钮共用，tap 不触发 media_kit 重置）',
       );
@@ -145,8 +179,9 @@ void main() {
       expect(src.contains('_skipCueAndPokeControls(forward: false)'), isTrue);
       expect(src.contains('_skipCueAndPokeControls(forward: true)'), isTrue);
       expect(
-        RegExp(r'Future<void> _skipCueAndPokeControls\(\{required bool forward\}\) async \{\s*_pokeControlsVisible\(\);')
-            .hasMatch(src),
+        RegExp(
+          r'Future<void> _skipCueAndPokeControls\(\{required bool forward\}\) async \{\s*_pokeControlsVisible\(\);',
+        ).hasMatch(src),
         isTrue,
         reason: '_skipCueAndPokeControls 必须先 poke',
       );
@@ -175,14 +210,20 @@ void main() {
     String pokeBody() => methodBody(src, 'void _pokeControlsVisible()');
 
     test('存在 _pokeParity 抖动开关字段', () {
-      expect(src.contains('bool _pokeParity = false;'), isTrue,
-          reason: '必须有合成 hover 位置抖动开关字段（TODO-148/BUG-215）');
+      expect(
+        src.contains('bool _pokeParity = false;'),
+        isTrue,
+        reason: '必须有合成 hover 位置抖动开关字段（TODO-148/BUG-215）',
+      );
     });
 
     test('每次 poke 翻转 _pokeParity 并据此 ±1px 偏移合成 hover 位置', () {
       final String body = pokeBody();
-      expect(body.contains('_pokeParity = !_pokeParity;'), isTrue,
-          reason: 'poke 必须翻转 _pokeParity，使每次派发坐标都不同');
+      expect(
+        body.contains('_pokeParity = !_pokeParity;'),
+        isTrue,
+        reason: 'poke 必须翻转 _pokeParity，使每次派发坐标都不同',
+      );
       expect(
         RegExp(r'_pokeParity \? 1\.0 : -1\.0').hasMatch(body),
         isTrue,
@@ -193,8 +234,11 @@ void main() {
     test('合成 hover 派发用抖动后的位置，而非固定 center', () {
       final String body = pokeBody();
       // 抖动后的位置变量喂给 PointerHoverEvent，而不是直接 position: center。
-      expect(body.contains('Offset pokePosition ='), isTrue,
-          reason: '必须先算出抖动后的 pokePosition');
+      expect(
+        body.contains('Offset pokePosition ='),
+        isTrue,
+        reason: '必须先算出抖动后的 pokePosition',
+      );
       expect(
         RegExp(r'PointerHoverEvent\(\s*position: pokePosition,').hasMatch(body),
         isTrue,

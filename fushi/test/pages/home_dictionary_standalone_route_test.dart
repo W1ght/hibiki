@@ -31,8 +31,8 @@ class _StandaloneRouteAppModel extends AppModel {
 
   @override
   List<Dictionary> get dictionaries => <Dictionary>[
-        Dictionary(name: 'Test', formatKey: 'test', order: 0),
-      ];
+    Dictionary(name: 'Test', formatKey: 'test', order: 0),
+  ];
 
   @override
   int get maximumTerms => 10;
@@ -116,8 +116,9 @@ void main() {
     );
   }
 
-  testWidgets('查词 tab 隐藏时推成独立路由：仍消费挂载前排入的 pending 并发起查询',
-      (WidgetTester tester) async {
+  testWidgets('查词 tab 隐藏时推成独立路由：仍消费挂载前排入的 pending 并发起查询', (
+    WidgetTester tester,
+  ) async {
     final _StandaloneRouteAppModel appModel = _StandaloneRouteAppModel();
     mockWindowManager(tester);
 
@@ -134,14 +135,13 @@ void main() {
     expect(
       DesktopLookupService.instance.pendingText,
       isNull,
-      reason: '独立路由承载的查词页必须与 tab 承载一样消费已排入的 pending；'
+      reason:
+          '独立路由承载的查词页必须与 tab 承载一样消费已排入的 pending；'
           '否则用户按热键只会看到窗口弹到前台却什么都不显示。',
     );
-    expect(
-      appModel.searchedTerms,
-      <String>['hotkeyword'],
-      reason: '查词 tab 被「功能模块」隐藏，隐藏的是导航项而不是查词能力。',
-    );
+    expect(appModel.searchedTerms, <String>[
+      'hotkeyword',
+    ], reason: '查词 tab 被「功能模块」隐藏，隐藏的是导航项而不是查词能力。');
   });
 
   testWidgets('独立路由承载时页头有返回箭头，按下退回来源页', (WidgetTester tester) async {
@@ -154,8 +154,9 @@ void main() {
 
     await _pushStandaloneLookup(tester, appModel);
 
-    final Finder back =
-        find.byKey(const ValueKey<String>('home-dictionary-route-back'));
+    final Finder back = find.byKey(
+      const ValueKey<String>('home-dictionary-route-back'),
+    );
     expect(back, findsOneWidget, reason: '推成路由的查词页必须给得出返回路径。');
 
     await tester.tap(back);
@@ -170,8 +171,9 @@ void main() {
     expect(find.text('origin-page'), findsOneWidget);
   });
 
-  testWidgets('tab 承载（showBackButton 默认 false）不画返回箭头',
-      (WidgetTester tester) async {
+  testWidgets('tab 承载（showBackButton 默认 false）不画返回箭头', (
+    WidgetTester tester,
+  ) async {
     final _StandaloneRouteAppModel appModel = _StandaloneRouteAppModel();
     mockWindowManager(tester);
 

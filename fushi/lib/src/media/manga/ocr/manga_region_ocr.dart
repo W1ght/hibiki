@@ -99,10 +99,14 @@ Future<MangaRegionCrop> cropMangaRegionToTempDir({
   required Rect box,
   Directory? tempRoot,
 }) async {
-  final Directory root = await (tempRoot ?? Directory.systemTemp)
-      .createTemp('fushi_manga_region_');
-  final String output =
-      p.join(root.path, kMangaRegionCropDirName, kMangaRegionCropFileName);
+  final Directory root = await (tempRoot ?? Directory.systemTemp).createTemp(
+    'fushi_manga_region_',
+  );
+  final String output = p.join(
+    root.path,
+    kMangaRegionCropDirName,
+    kMangaRegionCropFileName,
+  );
   try {
     final Rect rect = await Isolate.run<Rect>(
       () => _cropToFile(imagePath: imagePath, box: box, outputPath: output),
@@ -166,8 +170,9 @@ Future<List<MokuroBlock>> collectMangaRegionOcrBlocks(
     throw StateError('region OCR ended without a result file');
   }
   final String source = await File(resultPath).readAsString();
-  final MokuroPayload result =
-      finished.external ? parseMokuro(source) : parseMangaJson(source);
+  final MokuroPayload result = finished.external
+      ? parseMokuro(source)
+      : parseMangaJson(source);
   if (result.images.isEmpty) {
     return const <MokuroBlock>[];
   }
@@ -190,10 +195,7 @@ List<MokuroBlock> offsetMangaBlocks(List<MokuroBlock> blocks, Offset origin) {
                 for (final List<List<double>> line in block.linesCoords!)
                   <List<double>>[
                     for (final List<double> point in line)
-                      <double>[
-                        point[0] + origin.dx,
-                        point[1] + origin.dy,
-                      ],
+                      <double>[point[0] + origin.dx, point[1] + origin.dy],
                   ],
               ],
         regions: block.regions == null

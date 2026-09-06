@@ -104,16 +104,20 @@ void _seedThreeBooks(dynamic rawDb) {
 /// schemaVersion (now 23 — favorite_words / mining_statistics landed on top of
 /// the v22 video watch-statistics step), so the version marker is asserted as
 /// the live schema version.
-Future<void> _expectUnifiedV20(FushiDatabase db,
-    {int expectedBooks = 3}) async {
+Future<void> _expectUnifiedV20(
+  FushiDatabase db, {
+  int expectedBooks = 3,
+}) async {
   final version = await db.customSelect('PRAGMA user_version').getSingle();
   expect(version.read<int>('user_version'), db.schemaVersion);
 
   // epub_books name-PK: book_key present, legacy id gone, book_key is the PK.
-  final epubCols =
-      await db.customSelect("PRAGMA table_info('epub_books')").get();
-  final Set<String> epubColNames =
-      epubCols.map((r) => r.data['name'] as String).toSet();
+  final epubCols = await db
+      .customSelect("PRAGMA table_info('epub_books')")
+      .get();
+  final Set<String> epubColNames = epubCols
+      .map((r) => r.data['name'] as String)
+      .toSet();
   expect(epubColNames, contains('book_key'));
   expect(epubColNames, isNot(contains('id')));
   final epubPk = epubCols.firstWhere((r) => r.data['name'] == 'book_key');
@@ -121,30 +125,43 @@ Future<void> _expectUnifiedV20(FushiDatabase db,
 
   if (expectedBooks > 0) {
     final List<EpubBookRow> books = await db.getAllEpubBooks();
-    expect(books.length, expectedBooks,
-        reason: 'no book dropped during convergence');
+    expect(
+      books.length,
+      expectedBooks,
+      reason: 'no book dropped during convergence',
+    );
     final Set<String> keys = books.map((b) => b.bookKey).toSet();
-    expect(keys.length, expectedBooks,
-        reason: 'duplicate titles must dedup to unique keys');
+    expect(
+      keys.length,
+      expectedBooks,
+      reason: 'duplicate titles must dedup to unique keys',
+    );
   }
 
   // video_books book_uid PK, no legacy autoincrement id.
-  final videoCols =
-      await db.customSelect("PRAGMA table_info('video_books')").get();
-  final Set<String> videoColNames =
-      videoCols.map((r) => r.data['name'] as String).toSet();
+  final videoCols = await db
+      .customSelect("PRAGMA table_info('video_books')")
+      .get();
+  final Set<String> videoColNames = videoCols
+      .map((r) => r.data['name'] as String)
+      .toSet();
   expect(videoColNames, contains('book_uid'));
-  expect(videoColNames, isNot(contains('id')),
-      reason: 'video_books has no autoincrement id after convergence');
+  expect(
+    videoColNames,
+    isNot(contains('id')),
+    reason: 'video_books has no autoincrement id after convergence',
+  );
   final videoPk = videoCols.firstWhere((r) => r.data['name'] == 'book_uid');
   expect(videoPk.data['pk'], 1, reason: 'book_uid must be the primary key');
 
   // Usable end-to-end.
-  await db.upsertVideoBook(const VideoBooksCompanion(
-    bookUid: Value('video/probe'),
-    title: Value('Probe'),
-    videoPath: Value('/abs/probe.mp4'),
-  ));
+  await db.upsertVideoBook(
+    const VideoBooksCompanion(
+      bookUid: Value('video/probe'),
+      title: Value('Probe'),
+      videoPath: Value('/abs/probe.mp4'),
+    ),
+  );
   final VideoBookRow? probe = await db.getVideoBookByBookUid('video/probe');
   expect(probe, isNotNull);
   expect(probe!.title, 'Probe');
@@ -152,55 +169,67 @@ Future<void> _expectUnifiedV20(FushiDatabase db,
 
 void main() {
   group('schema convergence to v20', () {
-    test(
-        'PATH A: video-line v19 (id-PK epub + legacy id-PK video_books) '
+    test('PATH A: video-line v19 (id-PK epub + legacy id-PK video_books) '
         '-> v20 name-PK + book_uid, data preserved', () async {
       // This is the lineage real user DBs are stuck on, and the one the
       // from<16/from<17 steps silently skip. The convergence must run name-PK
       // late AND rebuild the legacy video_books.
-      final db = FushiDatabase.forTesting(NativeDatabase.memory(setup: (rawDb) {
-        rawDb.execute(_legacyEpubBooksDdl);
-        _seedThreeBooks(rawDb);
-        rawDb.execute(_legacyVideoBooksDdl);
-        rawDb.execute(
-          'INSERT INTO video_books '
-          '(id, book_uid, title, video_path, imported_at) '
-          "VALUES (1, 'video/old', 'Old Video', '/abs/old.mp4', 0)",
-        );
-        rawDb.execute('PRAGMA user_version = 19');
-      }));
+      final db = FushiDatabase.forTesting(
+        NativeDatabase.memory(
+          setup: (rawDb) {
+            rawDb.execute(_legacyEpubBooksDdl);
+            _seedThreeBooks(rawDb);
+            rawDb.execute(_legacyVideoBooksDdl);
+            rawDb.execute(
+              'INSERT INTO video_books '
+              '(id, book_uid, title, video_path, imported_at) '
+              "VALUES (1, 'video/old', 'Old Video', '/abs/old.mp4', 0)",
+            );
+            rawDb.execute('PRAGMA user_version = 19');
+          },
+        ),
+      );
       addTearDown(db.close);
       await _expectUnifiedV20(db, expectedBooks: 3);
     });
 
-    test(
-        'PATH B: develop name-PK v16 (book_key epub, no video_books) '
+    test('PATH B: develop name-PK v16 (book_key epub, no video_books) '
         '-> v20 adds book_uid video_books, epub untouched', () async {
-      final db = FushiDatabase.forTesting(NativeDatabase.memory(setup: (rawDb) {
-        rawDb.execute(_namePkEpubBooksDdl);
-        // Name-PK rows: book_key directly.
-        rawDb.execute(
-          'INSERT INTO epub_books '
-          '(book_key, title, author, cover_path, epub_path, extract_dir, '
-          ' chapter_count, chapters_json, toc_json, source_metadata, imported_at) '
-          "VALUES ('kokoro', 'こころ', '夏目漱石', NULL, '/abs/x.epub', "
-          "'/abs/extract', 1, '[]', NULL, NULL, 0)",
-        );
-        rawDb.execute('PRAGMA user_version = 16');
-      }));
+      final db = FushiDatabase.forTesting(
+        NativeDatabase.memory(
+          setup: (rawDb) {
+            rawDb.execute(_namePkEpubBooksDdl);
+            // Name-PK rows: book_key directly.
+            rawDb.execute(
+              'INSERT INTO epub_books '
+              '(book_key, title, author, cover_path, epub_path, extract_dir, '
+              ' chapter_count, chapters_json, toc_json, source_metadata, imported_at) '
+              "VALUES ('kokoro', 'こころ', '夏目漱石', NULL, '/abs/x.epub', "
+              "'/abs/extract', 1, '[]', NULL, NULL, 0)",
+            );
+            rawDb.execute('PRAGMA user_version = 16');
+          },
+        ),
+      );
       addTearDown(db.close);
       await _expectUnifiedV20(db, expectedBooks: 1);
     });
 
-    test('PATH C: clean ancestor v15 (id-PK epub, no video_books) -> v20',
-        () async {
-      final db = FushiDatabase.forTesting(NativeDatabase.memory(setup: (rawDb) {
-        rawDb.execute(_legacyEpubBooksDdl);
-        _seedThreeBooks(rawDb);
-        rawDb.execute('PRAGMA user_version = 15');
-      }));
-      addTearDown(db.close);
-      await _expectUnifiedV20(db, expectedBooks: 3);
-    });
+    test(
+      'PATH C: clean ancestor v15 (id-PK epub, no video_books) -> v20',
+      () async {
+        final db = FushiDatabase.forTesting(
+          NativeDatabase.memory(
+            setup: (rawDb) {
+              rawDb.execute(_legacyEpubBooksDdl);
+              _seedThreeBooks(rawDb);
+              rawDb.execute('PRAGMA user_version = 15');
+            },
+          ),
+        );
+        addTearDown(db.close);
+        await _expectUnifiedV20(db, expectedBooks: 3);
+      },
+    );
   });
 }

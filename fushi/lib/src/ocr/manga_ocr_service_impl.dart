@@ -243,8 +243,9 @@ OcrAccelerationPlan planOcrAcceleration({
       platform: platform,
     );
     if (wanted.isEmpty) continue;
-    final String names =
-        wanted.map((OcrExecutionProvider p) => p.name).join('/');
+    final String names = wanted
+        .map((OcrExecutionProvider p) => p.name)
+        .join('/');
     reasons.add('${role.key}: $names not built into this ONNX Runtime -> cpu');
   }
   return OcrAccelerationPlan(
@@ -317,18 +318,22 @@ Future<void> _volumeJobIsolateMain(_JobIsolateArgs args) async {
     final List<String> runtimeDegradeReasons = <String>[];
     void record(String role, OcrProviderResolution resolution) {
       if (!resolution.didFallBack) return;
-      runtimeDegradeReasons.add('$role: ${resolution.requested.first.name} -> '
-          '${resolution.effective.name} (${resolution.fallbackReason})');
+      runtimeDegradeReasons.add(
+        '$role: ${resolution.requested.first.name} -> '
+        '${resolution.effective.name} (${resolution.fallbackReason})',
+      );
     }
 
-    detector = TextDetector(await factory.createSession(
-      args.modelPaths.detectorPath,
-      providers: detectionProviders,
-      onProviderResolved: (OcrProviderResolution resolution) {
-        detectionEffective = resolution.effective;
-        record('detector', resolution);
-      },
-    ));
+    detector = TextDetector(
+      await factory.createSession(
+        args.modelPaths.detectorPath,
+        providers: detectionProviders,
+        onProviderResolved: (OcrProviderResolution resolution) {
+          detectionEffective = resolution.effective;
+          record('detector', resolution);
+        },
+      ),
+    );
     final OcrSession encoder = await factory.createSession(
       args.modelPaths.encoderPath,
       providers: recognitionProviders,
@@ -367,10 +372,10 @@ Future<void> _volumeJobIsolateMain(_JobIsolateArgs args) async {
     // 缓存目录带上本机已安装模型的内容指纹：上游换模型后旧页缓存自然失效，
     // 不会与新模型的结果混进同一卷（BUG-1173）。指纹按 (size, mtime) 记忆化，
     // 常态只做几次 stat。
-    final String engineSignature =
-        await model_fp.resolveLocalMangaOcrEngineSignature(
-      Directory(p.dirname(args.modelPaths.detectorPath)),
-    );
+    final String engineSignature = await model_fp
+        .resolveLocalMangaOcrEngineSignature(
+          Directory(p.dirname(args.modelPaths.detectorPath)),
+        );
     final String mangaJsonPath = await runMangaOcrFolderJob(
       imageDirPath: args.imageDirPath,
       detector: detector,
@@ -516,11 +521,11 @@ class MangaOcrServiceImpl implements MangaOcrService {
     List<MangaOcrModelFile>? manifest,
     MangaOcrVolumeJobRunner? jobRunner,
     bool Function()? platformSupport,
-  })  : _modelsDirProvider = modelsDirProvider ?? defaultMangaOcrModelsDir,
-        _downloader = downloader ?? MangaOcrModelDownloader(),
-        _manifest = manifest ?? kMangaOcrModelManifest,
-        _jobRunner = jobRunner ?? const IsolateMangaOcrVolumeJobRunner(),
-        _platformSupport = platformSupport ?? defaultPlatformSupport;
+  }) : _modelsDirProvider = modelsDirProvider ?? defaultMangaOcrModelsDir,
+       _downloader = downloader ?? MangaOcrModelDownloader(),
+       _manifest = manifest ?? kMangaOcrModelManifest,
+       _jobRunner = jobRunner ?? const IsolateMangaOcrVolumeJobRunner(),
+       _platformSupport = platformSupport ?? defaultPlatformSupport;
 
   final Future<Directory> Function() _modelsDirProvider;
   final MangaOcrModelDownloader _downloader;
@@ -680,7 +685,8 @@ class MangaOcrServiceImpl implements MangaOcrService {
         try {
           if (!isSupportedPlatform) {
             throw StateError(
-                'manga OCR is not supported on ${Platform.operatingSystem}');
+              'manga OCR is not supported on ${Platform.operatingSystem}',
+            );
           }
           // 只问「齐不齐」，不量「占多少」：占用统计要递归遍历整个模型目录，
           // 那是设置页展示的开销，没有理由压在每次开跑 OCR 的路径上。
@@ -716,11 +722,13 @@ class MangaOcrServiceImpl implements MangaOcrService {
           );
           final String mangaJsonPath = await job!.result;
           if (!controller.isClosed) {
-            controller.add(MangaOcrVolumeEvent.finished(
-              pagesTotal: lastTotal,
-              mangaJsonPath: mangaJsonPath,
-              acceleration: acceleration,
-            ));
+            controller.add(
+              MangaOcrVolumeEvent.finished(
+                pagesTotal: lastTotal,
+                mangaJsonPath: mangaJsonPath,
+                acceleration: acceleration,
+              ),
+            );
           }
         } on OcrCancelledException {
           // 取消订阅即请求中止：静默收流，不当错误。

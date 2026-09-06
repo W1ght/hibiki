@@ -27,12 +27,11 @@ CardScreenshotEncoding cardScreenshotEncodingFor(MiningStillFormat format) =>
 MiningStillFormat stillFormatOfBytes(
   Uint8List bytes, {
   required MiningStillFormat fallback,
-}) =>
-    switch (cardScreenshotEncodingOf(bytes)) {
-      CardScreenshotEncoding.png => MiningStillFormat.png,
-      CardScreenshotEncoding.jpeg => MiningStillFormat.jpg,
-      null => fallback,
-    };
+}) => switch (cardScreenshotEncodingOf(bytes)) {
+  CardScreenshotEncoding.png => MiningStillFormat.png,
+  CardScreenshotEncoding.jpeg => MiningStillFormat.jpg,
+  null => fallback,
+};
 
 /// 外部给定封面字节的落盘文件名：**扩展名跟随实际字节**，其余部分保留调用方给的名字
 /// （`netflix_frame` / `external_window` / `netflix_shot` 这些名字是「这张图哪来的」的
@@ -56,45 +55,49 @@ String providedCoverFileName(String? name, Uint8List bytes) {
 }
 
 /// 注入式抽取器（默认指向 desktop_audio_clipper.dart 真身，测试注入假件）。逐参对齐真身。
-typedef GifExtractor = Future<String?> Function({
-  required String inputPath,
-  required int startMs,
-  required int endMs,
-  required String outputPath,
-  int fps,
-  int width,
-  MiningAnimatedFormat format,
-  bool diagnosticOnly,
-  FfmpegFailureReporter? onFailure,
-  String? tlsPinSha256,
-});
-typedef AudioExtractor = Future<String?> Function({
-  required String inputPath,
-  required int startMs,
-  required int endMs,
-  required String outputPath,
-  int? audioStreamIndex,
-  int? audioStreamCount,
-  FfmpegFailureReporter? onFailure,
-  int audioChannels,
-  String audioBitrate,
-  String? tlsPinSha256,
-});
-typedef FrameExtractor = Future<String?> Function({
-  required String inputPath,
-  required String outputPath,
-  double atSeconds,
-  FfmpegFailureReporter? onFailure,
-  String? tlsPinSha256,
-});
+typedef GifExtractor =
+    Future<String?> Function({
+      required String inputPath,
+      required int startMs,
+      required int endMs,
+      required String outputPath,
+      int fps,
+      int width,
+      MiningAnimatedFormat format,
+      bool diagnosticOnly,
+      FfmpegFailureReporter? onFailure,
+      String? tlsPinSha256,
+    });
+typedef AudioExtractor =
+    Future<String?> Function({
+      required String inputPath,
+      required int startMs,
+      required int endMs,
+      required String outputPath,
+      int? audioStreamIndex,
+      int? audioStreamCount,
+      FfmpegFailureReporter? onFailure,
+      int audioChannels,
+      String audioBitrate,
+      String? tlsPinSha256,
+    });
+typedef FrameExtractor =
+    Future<String?> Function({
+      required String inputPath,
+      required String outputPath,
+      double atSeconds,
+      FfmpegFailureReporter? onFailure,
+      String? tlsPinSha256,
+    });
 
 /// TODO-1314（B5）：把远端 audio-only DASH 流物化到本地临时文件（yt-dlp 式 range 分片下载）
 /// 的注入点。默认指向 [materializeRemoteAudioViaRangeDownload] 真身；测试注入假件。
-typedef RemoteAudioMaterializer = Future<String?> Function({
-  required String audioUrl,
-  required String outputPath,
-  FfmpegFailureReporter? onFailure,
-});
+typedef RemoteAudioMaterializer =
+    Future<String?> Function({
+      required String audioUrl,
+      required String outputPath,
+      FfmpegFailureReporter? onFailure,
+    });
 
 /// 动图抽取产物：文件路径 + **实际编码成的格式**。
 ///
@@ -184,10 +187,10 @@ class ImmersionMiningEngine {
     AudioExtractor? audioExtractor,
     FrameExtractor? frameExtractor,
     RemoteAudioMaterializer? audioMaterializer,
-  })  : _gif = gifExtractor ?? extractClipGifViaFfmpeg,
-        _audio = audioExtractor ?? extractAudioSegmentViaFfmpeg,
-        _frame = frameExtractor ?? extractVideoFrameViaFfmpeg,
-        _materialize = audioMaterializer ?? _defaultAudioMaterializer;
+  }) : _gif = gifExtractor ?? extractClipGifViaFfmpeg,
+       _audio = audioExtractor ?? extractAudioSegmentViaFfmpeg,
+       _frame = frameExtractor ?? extractVideoFrameViaFfmpeg,
+       _materialize = audioMaterializer ?? _defaultAudioMaterializer;
 
   final GifExtractor _gif;
   final AudioExtractor _audio;
@@ -204,12 +207,11 @@ class ImmersionMiningEngine {
     required String audioUrl,
     required String outputPath,
     FfmpegFailureReporter? onFailure,
-  }) =>
-      materializeRemoteAudioViaRangeDownload(
-        audioUrl: audioUrl,
-        outputPath: outputPath,
-        onFailure: onFailure,
-      );
+  }) => materializeRemoteAudioViaRangeDownload(
+    audioUrl: audioUrl,
+    outputPath: outputPath,
+    onFailure: onFailure,
+  );
 
   /// 纯函数：判断 [s] 是否为远端 http(s) 输入（audio-only DASH 分离流 URL）。
   static bool _isRemoteHttp(String s) =>
@@ -297,8 +299,11 @@ class ImmersionMiningEngine {
         encoding: cardScreenshotEncodingFor(req.stillFormat),
         quality: compression.screenshotQuality,
       );
-      coverPath = await _writeBytes(tempDir,
-          providedCoverFileName(req.providedCoverName, provided), provided);
+      coverPath = await _writeBytes(
+        tempDir,
+        providedCoverFileName(req.providedCoverName, provided),
+        provided,
+      );
     }
 
     final String? src = req.mediaSource;
@@ -317,16 +322,16 @@ class ImmersionMiningEngine {
       // GIF 也失败才轮到下面既有的单帧降级阶梯。
       final AnimatedClipExtraction? animated =
           await extractAnimatedClipWithFallback(
-        format: req.animatedFormat,
-        inputPath: src,
-        startMs: req.clipStartMs,
-        endMs: req.clipEndMs,
-        outputPathStem: '$tempDir/immersion_clip',
-        compression: compression,
-        extractor: _gif,
-        onFailure: reportCover,
-        tlsPinSha256: req.mediaSourceTlsPinSha256,
-      );
+            format: req.animatedFormat,
+            inputPath: src,
+            startMs: req.clipStartMs,
+            endMs: req.clipEndMs,
+            outputPathStem: '$tempDir/immersion_clip',
+            compression: compression,
+            extractor: _gif,
+            onFailure: reportCover,
+            tlsPinSha256: req.mediaSourceTlsPinSha256,
+          );
       return animated?.path;
     }
 
@@ -368,10 +373,15 @@ class ImmersionMiningEngine {
       // 封面不显示。同 Netflix 那条链对动图降级的处理（buildImmersionRequest）。
       // 兜底 jpg：这条链的入参是 media_kit `controller.screenshot` 的 `image/jpeg`，
       // 降采样解不开时原样返回的就是那份 JPEG 字节。
-      final MiningStillFormat produced =
-          stillFormatOfBytes(small, fallback: MiningStillFormat.jpg);
+      final MiningStillFormat produced = stillFormatOfBytes(
+        small,
+        fallback: MiningStillFormat.jpg,
+      );
       return _writeBytes(
-          tempDir, 'immersion_shot.${produced.fileExtension}', small);
+        tempDir,
+        'immersion_shot.${produced.fileExtension}',
+        small,
+      );
     }
 
     // BUG-1205 — 音频抽取与下面的封面阶梯**无任何数据依赖**，故在此先启动、末尾才
@@ -384,17 +394,18 @@ class ImmersionMiningEngine {
     final String? audioSrc = req.audioSource ?? src;
     Object? audioError;
     StackTrace? audioStack;
-    final Future<String?> audioFuture = _resolveAudioPath(
-      req,
-      compression: compression,
-      tempDir: tempDir,
-      audioSrc: audioSrc,
-      reportAudio: reportAudio,
-    ).catchError((Object e, StackTrace st) {
-      audioError = e;
-      audioStack = st;
-      return null;
-    });
+    final Future<String?> audioFuture =
+        _resolveAudioPath(
+          req,
+          compression: compression,
+          tempDir: tempDir,
+          audioSrc: audioSrc,
+          reportAudio: reportAudio,
+        ).catchError((Object e, StackTrace st) {
+          audioError = e;
+          audioStack = st;
+          return null;
+        });
 
     if (coverPath == null) {
       switch (req.imageMode) {
@@ -444,9 +455,12 @@ class ImmersionMiningEngine {
         audioPath == null &&
         (req.hasRange || viaProvidedBytes)) {
       return ImmersionMiningResult(
-          aborted: true,
-          abortReason:
-              _withRootCause('required audio missing', firstAudioFailure));
+        aborted: true,
+        abortReason: _withRootCause(
+          'required audio missing',
+          firstAudioFailure,
+        ),
+      );
     }
     // TODO-1303：空壳卡兜底——既无封面又无音频（截图/GIF/音频全失败），不建卡。这正是
     // 「降级空壳卡仍报成功」的根：任何来源下都不该产出无媒体的卡。
@@ -454,9 +468,12 @@ class ImmersionMiningEngine {
       // 封面与音频**都**没出来时，两条链的首个摘要通常是同一个根因（例如 ffmpeg 缺失
       // 会同时打死两条）。取封面优先只是取一个稳定顺序，null 时自动退到音频那条。
       return ImmersionMiningResult(
-          aborted: true,
-          abortReason: _withRootCause('no cover and no audio produced',
-              firstCoverFailure ?? firstAudioFailure));
+        aborted: true,
+        abortReason: _withRootCause(
+          'no cover and no audio produced',
+          firstCoverFailure ?? firstAudioFailure,
+        ),
+      );
     }
 
     final AnkiMiningContext context = AnkiMiningContext(
@@ -480,14 +497,20 @@ class ImmersionMiningEngine {
 
     final MineOutcome outcome = req.updateNoteId == null
         ? await repo.mineEntry(
-            rawPayloadJson: jsonEncode(req.fields), context: context)
+            rawPayloadJson: jsonEncode(req.fields),
+            context: context,
+          )
         : await repo.updateMinedNote(
             noteId: req.updateNoteId!,
             rawPayloadJson: jsonEncode(req.fields),
-            context: context);
+            context: context,
+          );
 
     return ImmersionMiningResult(
-        aborted: false, outcome: outcome, degradedToStill: degradedToStill);
+      aborted: false,
+      outcome: outcome,
+      degradedToStill: degradedToStill,
+    );
   }
 
   /// BUG-1205 — 句子音频落地路径的解析，从 [mine] 内联体**原样**抽出（provided 字节 →
@@ -505,10 +528,11 @@ class ImmersionMiningEngine {
     String? audioPath;
     if (req.providedAudioBytes != null) {
       return _writeBytes(
-          tempDir,
-          req.providedAudioName ??
-              'immersion_audio.${immersionMiningAudioExtension()}',
-          req.providedAudioBytes!);
+        tempDir,
+        req.providedAudioName ??
+            'immersion_audio.${immersionMiningAudioExtension()}',
+        req.providedAudioBytes!,
+      );
     }
     // 同 tryGif：`audioSrc != null` 已判源，这里只问窗几何。
     if (audioSrc == null || !req.hasClipWindow) return null;

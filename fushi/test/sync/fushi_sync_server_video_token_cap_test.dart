@@ -29,8 +29,7 @@ class _StreamOnlyLibraryService implements FushiLibraryHostService {
     String id, {
     String langCode = '',
     int episodeIndex = 0,
-  }) async =>
-      null;
+  }) async => null;
 
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
@@ -82,17 +81,25 @@ void main() {
       c.close();
     }
 
-    test('狂发 streamurl 签发时 token 数被上限约束（最旧被逐出）', () async {
-      // 连发超过上限（128）的签发请求，全在 TTL 内（时钟不动）。每次签发都会
-      // 附带一次内嵌字幕枚举（ffmpeg -i，失败降级空表），故迭代数取「必然越界」
-      // 的最小量级并放宽超时。
-      for (int i = 0; i < 150; i++) {
-        await mintOne(i);
-      }
-      expect(server.videoStreamTokenCount, lessThanOrEqualTo(128),
-          reason: '签发侧必须先 prune 再 enforce cap，'
-              '否则 _videoStreamTokens 无界膨胀（BUG-1568）');
-      expect(server.videoStreamTokenCount, greaterThan(0));
-    }, timeout: const Timeout(Duration(minutes: 2)));
+    test(
+      '狂发 streamurl 签发时 token 数被上限约束（最旧被逐出）',
+      () async {
+        // 连发超过上限（128）的签发请求，全在 TTL 内（时钟不动）。每次签发都会
+        // 附带一次内嵌字幕枚举（ffmpeg -i，失败降级空表），故迭代数取「必然越界」
+        // 的最小量级并放宽超时。
+        for (int i = 0; i < 150; i++) {
+          await mintOne(i);
+        }
+        expect(
+          server.videoStreamTokenCount,
+          lessThanOrEqualTo(128),
+          reason:
+              '签发侧必须先 prune 再 enforce cap，'
+              '否则 _videoStreamTokens 无界膨胀（BUG-1568）',
+        );
+        expect(server.videoStreamTokenCount, greaterThan(0));
+      },
+      timeout: const Timeout(Duration(minutes: 2)),
+    );
   });
 }

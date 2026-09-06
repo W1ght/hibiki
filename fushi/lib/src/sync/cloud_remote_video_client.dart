@@ -48,8 +48,10 @@ class CloudRemoteVideoClient implements RemoteVideoSource {
   /// 库页消费的是 [listRemoteVideos] 的 [RemoteVideoInfo] 视图。
   Future<List<RemoteVideoManifestEntry>> listRemoteVideoManifest() async {
     final String ns = await backend.ensureNamespace(kSyncVideosNamespace);
-    final AssetEntry? asset =
-        await backend.findAsset(ns, kSyncVideosManifestName);
+    final AssetEntry? asset = await backend.findAsset(
+      ns,
+      kSyncVideosManifestName,
+    );
     if (asset == null) return const <RemoteVideoManifestEntry>[];
     final Object? json = await backend.getJsonAsset(asset.id);
     if (json == null) return const <RemoteVideoManifestEntry>[];
@@ -94,8 +96,7 @@ class CloudRemoteVideoClient implements RemoteVideoSource {
     String id,
     File dest, {
     void Function(double progress)? onProgress,
-  }) =>
-      getRemoteVideo(id, dest, onProgress: onProgress);
+  }) => getRemoteVideo(id, dest, onProgress: onProgress);
 
   /// 把 [uid] 对应的视频文件资产下载到 [destination]。清单里无此 uid，或清单记录的
   /// 视频资产在命名空间下已不存在 → 抛 [SyncBackendError]（调用方提示下载失败）。

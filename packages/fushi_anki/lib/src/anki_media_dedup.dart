@@ -49,10 +49,10 @@ class MediaDedupDeletion {
       );
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'filename': filename,
-        'canonical': canonical,
-        'bytes': bytes,
-      };
+    'filename': filename,
+    'canonical': canonical,
+    'bytes': bytes,
+  };
 }
 
 /// 从「文件名 → 内容哈希」+「文件名 → 字节数」规划去重组。
@@ -81,8 +81,10 @@ List<MediaDedupGroup> planMediaDedupGroups(
     final List<String> dupes = (names.toList()..remove(canonical))..sort();
     groups.add(MediaDedupGroup(canonical: canonical, duplicates: dupes));
   }
-  groups.sort((MediaDedupGroup a, MediaDedupGroup b) =>
-      a.canonical.compareTo(b.canonical));
+  groups.sort(
+    (MediaDedupGroup a, MediaDedupGroup b) =>
+        a.canonical.compareTo(b.canonical),
+  );
   return groups;
 }
 
@@ -111,9 +113,8 @@ String chooseCanonicalMediaName(List<String> names) {
 /// 覆盖 `src="a.jpg"`、`[sound:a.jpg]`、`url(a.jpg)`、`url("./a.jpg")`、
 /// `@import 'a.css'` 等全部引用形态——它们的边界字符（引号/括号/斜杠/冒号/
 /// 空白）都不在文件名字符集里。
-RegExp mediaReferencePattern(String filename) => RegExp(
-      '(?<![A-Za-z0-9._-])${RegExp.escape(filename)}(?![A-Za-z0-9._-])',
-    );
+RegExp mediaReferencePattern(String filename) =>
+    RegExp('(?<![A-Za-z0-9._-])${RegExp.escape(filename)}(?![A-Za-z0-9._-])');
 
 /// 把文本（笔记字段 / 卡模板 / styling / 媒体文件正文）里对 [from] 的引用
 /// 改写为 [to]。只在文件名边界上替换，见 [mediaReferencePattern]。
@@ -152,8 +153,9 @@ const Set<String> kReferencingMediaExtensions = <String>{
 bool isReferencingMediaFile(String filename) {
   final int dot = filename.lastIndexOf('.');
   if (dot < 0 || dot == filename.length - 1) return false;
-  return kReferencingMediaExtensions
-      .contains(filename.substring(dot + 1).toLowerCase());
+  return kReferencingMediaExtensions.contains(
+    filename.substring(dot + 1).toLowerCase(),
+  );
 }
 
 /// 真删/干跑的 resolving 阶段一次处理多少个副本。
@@ -214,8 +216,8 @@ class AnkiMediaDedupProgress {
 
 /// 进度回调：每个文件/副本边界同步触发一次，实现必须轻量（UI 侧只该更新一个
 /// ValueNotifier）。
-typedef AnkiMediaDedupOnProgress = void Function(
-    AnkiMediaDedupProgress progress);
+typedef AnkiMediaDedupOnProgress =
+    void Function(AnkiMediaDedupProgress progress);
 
 /// 一轮去重的结果汇总（UI 报告 + 日志）。
 class AnkiMediaDedupReport {
@@ -259,8 +261,11 @@ class AnkiMediaDedupReport {
         dryRun: json['dryRun'] == true,
         groupCount: (json['groupCount'] as num?)?.toInt() ?? 0,
         deletions: ((json['deletions'] as List?) ?? const <dynamic>[])
-            .map((dynamic e) =>
-                MediaDedupDeletion.fromJson(Map<String, dynamic>.from(e as Map)))
+            .map(
+              (dynamic e) => MediaDedupDeletion.fromJson(
+                Map<String, dynamic>.from(e as Map),
+              ),
+            )
             .toList(growable: false),
         notesRewritten: (json['notesRewritten'] as num?)?.toInt() ?? 0,
         modelsRewritten: (json['modelsRewritten'] as num?)?.toInt() ?? 0,
@@ -276,16 +281,16 @@ class AnkiMediaDedupReport {
       deletions.fold<int>(0, (int sum, MediaDedupDeletion d) => sum + d.bytes);
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'dryRun': dryRun,
-        'groupCount': groupCount,
-        'duplicatesRemoved': duplicatesRemoved,
-        'bytesSaved': bytesSaved,
-        'notesRewritten': notesRewritten,
-        'modelsRewritten': modelsRewritten,
-        'skipped': skipped,
-        'cancelled': cancelled,
-        'deletions': deletions
-            .map((MediaDedupDeletion d) => d.toJson())
-            .toList(growable: false),
-      };
+    'dryRun': dryRun,
+    'groupCount': groupCount,
+    'duplicatesRemoved': duplicatesRemoved,
+    'bytesSaved': bytesSaved,
+    'notesRewritten': notesRewritten,
+    'modelsRewritten': modelsRewritten,
+    'skipped': skipped,
+    'cancelled': cancelled,
+    'deletions': deletions
+        .map((MediaDedupDeletion d) => d.toJson())
+        .toList(growable: false),
+  };
 }

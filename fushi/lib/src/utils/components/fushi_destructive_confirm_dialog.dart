@@ -113,19 +113,14 @@ class _FushiDestructiveConfirmDialogState
                 // 焦点遍历（单站点契约，行即唯一停靠点）。
                 leading: ExcludeFocus(
                   child: IgnorePointer(
-                    child: Checkbox(
-                      value: _checked,
-                      onChanged: (_) {},
-                    ),
+                    child: Checkbox(value: _checked, onChanged: (_) {}),
                   ),
                 ),
                 onTap: () => setState(() => _checked = !_checked),
               ),
               if (_checked && widget.checkedDisclosure != null) ...<Widget>[
                 SizedBox(height: tokens.spacing.gap),
-                DeletionDisclosureView(
-                  disclosure: widget.checkedDisclosure!,
-                ),
+                DeletionDisclosureView(disclosure: widget.checkedDisclosure!),
               ],
             ],
           ],

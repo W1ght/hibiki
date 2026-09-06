@@ -30,13 +30,12 @@ void main() {
   KeyDownEvent keyDown(
     LogicalKeyboardKey key,
     ui.KeyEventDeviceType deviceType,
-  ) =>
-      KeyDownEvent(
-        physicalKey: const PhysicalKeyboardKey(0),
-        logicalKey: key,
-        timeStamp: Duration.zero,
-        deviceType: deviceType,
-      );
+  ) => KeyDownEvent(
+    physicalKey: const PhysicalKeyboardKey(0),
+    logicalKey: key,
+    timeStamp: Duration.zero,
+    deviceType: deviceType,
+  );
 
   group('resolveReaderSpaceOverride', () {
     test('有声书激活 + 无修饰 Space → 播放/暂停', () {

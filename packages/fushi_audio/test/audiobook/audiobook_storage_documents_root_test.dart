@@ -19,45 +19,53 @@ void main() {
     AudiobookStorage.documentsRootResolver = null;
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(
-      const MethodChannel('plugins.flutter.io/path_provider'),
-      null,
-    );
+          const MethodChannel('plugins.flutter.io/path_provider'),
+          null,
+        );
   });
 
   test('注入自定义数据根 → 有声书持久根落新根下的 audiobooks/', () async {
-    final Directory custom =
-        Directory(p.join(Directory.systemTemp.path, 'todo1236_custom_root'));
+    final Directory custom = Directory(
+      p.join(Directory.systemTemp.path, 'todo1236_custom_root'),
+    );
     AudiobookStorage.documentsRootResolver = () async => custom;
 
     final String root = await AudiobookStorage.audiobooksRootDir();
 
-    expect(p.equals(root, p.join(custom.path, 'audiobooks')), isTrue,
-        reason: '自定义数据根生效时新写入应落 <custom>/audiobooks，实际=$root');
+    expect(
+      p.equals(root, p.join(custom.path, 'audiobooks')),
+      isTrue,
+      reason: '自定义数据根生效时新写入应落 <custom>/audiobooks，实际=$root',
+    );
   });
 
   test('未注入 resolver → 退回平台 Documents（默认根）', () async {
-    final Directory platformDocs =
-        await Directory.systemTemp.createTemp('todo1236_default_docs_');
+    final Directory platformDocs = await Directory.systemTemp.createTemp(
+      'todo1236_default_docs_',
+    );
     addTearDown(() {
       if (platformDocs.existsSync()) platformDocs.deleteSync(recursive: true);
     });
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(
-      const MethodChannel('plugins.flutter.io/path_provider'),
-      (MethodCall call) async {
-        if (call.method == 'getApplicationDocumentsDirectory') {
-          return platformDocs.path;
-        }
-        return null;
-      },
-    );
+          const MethodChannel('plugins.flutter.io/path_provider'),
+          (MethodCall call) async {
+            if (call.method == 'getApplicationDocumentsDirectory') {
+              return platformDocs.path;
+            }
+            return null;
+          },
+        );
 
     // resolver 未注入（tearDown 已保证 null，这里显式再置一次表达契约）。
     AudiobookStorage.documentsRootResolver = null;
 
     final String root = await AudiobookStorage.audiobooksRootDir();
 
-    expect(p.equals(root, p.join(platformDocs.path, 'audiobooks')), isTrue,
-        reason: '未注入时应退回平台 Documents/audiobooks，实际=$root');
+    expect(
+      p.equals(root, p.join(platformDocs.path, 'audiobooks')),
+      isTrue,
+      reason: '未注入时应退回平台 Documents/audiobooks，实际=$root',
+    );
   });
 }

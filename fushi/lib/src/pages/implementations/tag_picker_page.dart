@@ -13,14 +13,11 @@ class TagPickerPage extends ConsumerStatefulWidget {
   ///
   /// 命名统一 Phase 3.3：取代旧的 bookKey / srtBookId / videoBookUid 三个可空
   /// 参数 + isSrtBook bool 分派链。
-  const TagPickerPage({
-    this.media,
-    this.collectionId,
-    super.key,
-  }) : assert(
-          (media != null) ^ (collectionId != null),
-          'exactly one of: media / collectionId',
-        );
+  const TagPickerPage({this.media, this.collectionId, super.key})
+    : assert(
+        (media != null) ^ (collectionId != null),
+        'exactly one of: media / collectionId',
+      );
   final MediaRef? media;
   final int? collectionId;
 
@@ -132,9 +129,9 @@ class _TagPickerPageState extends ConsumerState<TagPickerPage> {
       await _load();
     } on SqliteException catch (e) {
       if (e.extendedResultCode == 2067 && mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(t.tag_name_duplicate)),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(t.tag_name_duplicate)));
       }
     }
   }

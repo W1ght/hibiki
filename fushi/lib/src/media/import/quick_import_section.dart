@@ -46,8 +46,9 @@ class QuickImportSection extends StatelessWidget {
           children: <Widget>[
             for (final QuickImportAction action in actions)
               FilledButton.tonalIcon(
-                onPressed:
-                    action.enabled ? () => unawaited(action.onTap()) : null,
+                onPressed: action.enabled
+                    ? () => unawaited(action.onTap())
+                    : null,
                 icon: Icon(action.icon, size: 18),
                 label: Text(action.label),
               ),

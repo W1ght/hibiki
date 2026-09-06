@@ -90,12 +90,11 @@ RevealCommand revealCommand({
 /// 返回 false = 平台无文件管理器契约、路径已不存在，或启动失败——调用方据此提示，
 /// 不要吞掉。
 Future<bool> revealInFileManager(String path) => revealInFileManagerOn(
-      path,
-      host: currentRevealHost(),
-      typeOf: (String value) =>
-          FileSystemEntity.type(value, followLinks: false),
-      run: Process.run,
-    );
+  path,
+  host: currentRevealHost(),
+  typeOf: (String value) => FileSystemEntity.type(value, followLinks: false),
+  run: Process.run,
+);
 
 /// [revealInFileManager] 的可注入内核：让 per-host 的 argv 形状与退出码策略脱离真实
 /// 文件管理器可测。
@@ -107,7 +106,8 @@ Future<bool> revealInFileManagerOn(
   required Future<ProcessResult> Function(
     String executable,
     List<String> arguments,
-  ) run,
+  )
+  run,
 }) async {
   if (host == null) return false;
   final FileSystemEntityType type = await typeOf(path);

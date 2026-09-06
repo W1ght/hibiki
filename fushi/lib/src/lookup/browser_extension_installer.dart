@@ -108,8 +108,9 @@ String computeBrowserExtensionFingerprint(Map<String, List<int>> assets) {
 /// BUG-726：从已解压副本的 `fushi-defaults.js` 源码里解析 `build` 指纹。
 /// 旧版副本（无 build 键）返回 null —— 与当前指纹必然不等，触发刷新，正是所求。
 String? parseBrowserExtensionBuild(String defaultsJs) {
-  final RegExpMatch? m =
-      RegExp('build:\\s*"([0-9a-f]+)"').firstMatch(defaultsJs);
+  final RegExpMatch? m = RegExp(
+    'build:\\s*"([0-9a-f]+)"',
+  ).firstMatch(defaultsJs);
   return m?.group(1);
 }
 
@@ -158,8 +159,9 @@ Future<void> _extractExtensionTo(
   await dest.create(recursive: true);
 
   for (final MapEntry<String, Uint8List> entry in assets.entries) {
-    final File out =
-        File(p.join(dest.path, p.joinAll(p.posix.split(entry.key))));
+    final File out = File(
+      p.join(dest.path, p.joinAll(p.posix.split(entry.key))),
+    );
     await out.parent.create(recursive: true);
     await out.writeAsBytes(entry.value);
   }
@@ -168,10 +170,12 @@ Future<void> _extractExtensionTo(
   // BUG-726：同时写入内容指纹 build，供「app 升级 → 磁盘副本刷新 → 扩展自 reload」链路。
   if (serverConfig != null) {
     final File defaults = File(p.join(dest.path, _kDefaultsFileName));
-    await defaults.writeAsString(buildBrowserExtensionDefaultsJs(
-      serverConfig,
-      build: computeBrowserExtensionFingerprint(assets),
-    ));
+    await defaults.writeAsString(
+      buildBrowserExtensionDefaultsJs(
+        serverConfig,
+        build: computeBrowserExtensionFingerprint(assets),
+      ),
+    );
   }
 }
 
@@ -187,10 +191,12 @@ Future<Directory> _legacyExtensionDestDir() async {
 
 /// 读出随 app 打包的全部扩展资产（相对路径 → 字节）。
 Future<Map<String, Uint8List>> _loadBundledExtensionAssets() async {
-  final AssetManifest manifest =
-      await AssetManifest.loadFromAssetBundle(rootBundle);
-  final Iterable<String> keys =
-      manifest.listAssets().where((String k) => k.startsWith(_kBundlePrefix));
+  final AssetManifest manifest = await AssetManifest.loadFromAssetBundle(
+    rootBundle,
+  );
+  final Iterable<String> keys = manifest.listAssets().where(
+    (String k) => k.startsWith(_kBundlePrefix),
+  );
   final Map<String, Uint8List> assets = <String, Uint8List>{};
   for (final String key in keys) {
     final String rel = key.substring(_kBundlePrefix.length);
@@ -206,8 +212,9 @@ Future<Map<String, Uint8List>> _loadBundledExtensionAssets() async {
 
 /// BUG-726：当前 app 内置扩展的内容指纹（进程内缓存；内置资产运行期不变）。
 Future<String> bundledBrowserExtensionFingerprint() async {
-  return _bundledFingerprintCache ??=
-      computeBrowserExtensionFingerprint(await _loadBundledExtensionAssets());
+  return _bundledFingerprintCache ??= computeBrowserExtensionFingerprint(
+    await _loadBundledExtensionAssets(),
+  );
 }
 
 String? _bundledFingerprintCache;

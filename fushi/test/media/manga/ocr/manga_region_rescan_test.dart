@@ -52,8 +52,11 @@ String _mangaJson() {
 }
 
 class _Fixture {
-  const _Fixture(
-      {required this.dir, required this.mangaJson, required this.page});
+  const _Fixture({
+    required this.dir,
+    required this.mangaJson,
+    required this.page,
+  });
 
   final Directory dir;
   final File mangaJson;
@@ -132,9 +135,9 @@ void main() {
         tempRoot: f.dir,
         startEngine: (String _) async =>
             const MangaOcrAutoStartResult.unavailable(
-          '模型没下',
-          MangaOcrEngineId.localOnnx,
-        ),
+              '模型没下',
+              MangaOcrEngineId.localOnnx,
+            ),
       );
       expect(outcome.status, MangaRegionRescanStatus.unavailable);
       expect(outcome.unavailableReason, '模型没下');
@@ -242,16 +245,19 @@ void main() {
       // 裁图矩形被撑到覆盖整个气泡（100,100 → 200,220），而不是停在用户框的 y=200。
       expect(outcome.region, const Rect.fromLTRB(100, 100, 200, 220));
 
-      final MokuroImage page =
-          parseMangaJson(f.mangaJson.readAsStringSync()).images.first;
+      final MokuroImage page = parseMangaJson(
+        f.mangaJson.readAsStringSync(),
+      ).images.first;
       expect(
         page.blocks.map((MokuroBlock b) => b.lines.single).toList(),
         <String>['重識別'],
         reason: '旧块被删，且删掉的那块整条都在裁图里被重新识别过',
       );
       // 结果块按裁图原点平移回页图坐标。
-      expect(page.blocks.single.rectangle,
-          const Rect.fromLTRB(120, 120, 180, 220));
+      expect(
+        page.blocks.single.rectangle,
+        const Rect.fromLTRB(120, 120, 180, 220),
+      );
       // ocr 元数据原样保留（抹掉会让整卷缓存被判异源作废）。
       expect(
         parseMangaJson(f.mangaJson.readAsStringSync()).ocr?.engineSignature,
@@ -279,10 +285,7 @@ void main() {
         ]),
       );
       expect(outcome.previousPage, isNotNull);
-      expect(
-        outcome.previousPage!.blocks.single.lines,
-        <String>['既存ブロック'],
-      );
+      expect(outcome.previousPage!.blocks.single.lines, <String>['既存ブロック']);
       expect(outcome.previousPage!.url, 'p001.png');
     });
 
@@ -313,12 +316,9 @@ void main() {
           log.add('before-writeback');
           // 落盘还没发生：几何 debounce 必须在这一刻之前被取消。
           expect(
-            parseMangaJson(f.mangaJson.readAsStringSync())
-                .images
-                .first
-                .blocks
-                .single
-                .lines,
+            parseMangaJson(
+              f.mangaJson.readAsStringSync(),
+            ).images.first.blocks.single.lines,
             <String>['既存ブロック'],
           );
         },
@@ -338,9 +338,9 @@ void main() {
         tempRoot: f.dir,
         startEngine: (String _) async =>
             const MangaOcrAutoStartResult.unavailable(
-          'nope',
-          MangaOcrEngineId.localOnnx,
-        ),
+              'nope',
+              MangaOcrEngineId.localOnnx,
+            ),
         onEngineStarted: () => log.add('started'),
         onBeforeWriteback: () => log.add('before-writeback'),
       );

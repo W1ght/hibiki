@@ -21,13 +21,14 @@ void main() {
 
   tearDown(() => db.close());
 
-  Future<int> addSource(String root) =>
-      db.insertMediaSource(MediaSourcesCompanion.insert(
-        label: root,
-        mediaKind: 'video',
-        rootPath: root,
-        createdAt: 1000,
-      ));
+  Future<int> addSource(String root) => db.insertMediaSource(
+    MediaSourcesCompanion.insert(
+      label: root,
+      mediaKind: 'video',
+      rootPath: root,
+      createdAt: 1000,
+    ),
+  );
 
   Future<void> addVideo({
     required String uid,
@@ -36,18 +37,17 @@ void main() {
     int position = 0,
     String? coverPath,
     String? subtitlePath,
-  }) =>
-      repository.saveVideoBook(
-        VideoBooksCompanion(
-          bookUid: Value<String>(uid),
-          title: Value<String>(path.split('/').last.split('.').first),
-          videoPath: Value<String>(path),
-          lastPositionMs: Value<int>(position),
-          coverPath: Value<String?>(coverPath),
-          subtitleSource: Value<String?>(subtitlePath),
-        ),
-        sourceId: sourceId,
-      );
+  }) => repository.saveVideoBook(
+    VideoBooksCompanion(
+      bookUid: Value<String>(uid),
+      title: Value<String>(path.split('/').last.split('.').first),
+      videoPath: Value<String>(path),
+      lastPositionMs: Value<int>(position),
+      coverPath: Value<String?>(coverPath),
+      subtitleSource: Value<String?>(subtitlePath),
+    ),
+    sourceId: sourceId,
+  );
 
   test('散装分集原地归组、只回填空来源并保持用户数据', () async {
     final int sourceId = await addSource('/library');
@@ -79,8 +79,9 @@ void main() {
     expect(summary.createdCollectionIds, hasLength(1));
     final int collectionId = summary.createdCollectionIds.single;
     expect(
-      (await db.getCollectionItems(collectionId))
-          .map((MediaCollectionItemRow item) => item.entryKey),
+      (await db.getCollectionItems(
+        collectionId,
+      )).map((MediaCollectionItemRow item) => item.entryKey),
       <String>['show-01', 'show-02'],
     );
     final VideoBookRow first = (await repository.getByBookUid('show-01'))!;
@@ -91,8 +92,11 @@ void main() {
     expect(first.subtitleSource, '/library/Show S01E01.srt');
     expect(second.sourceId, otherSourceId, reason: '不得抢占其它来源的既有归属');
     expect(second.lastPositionMs, 222);
-    expect((await db.getMediaCollectionById(collectionId))!.orderUpdatedAt, 0,
-        reason: '机器自然排序不得伪装成用户手动排序');
+    expect(
+      (await db.getMediaCollectionById(collectionId))!.orderUpdatedAt,
+      0,
+      reason: '机器自然排序不得伪装成用户手动排序',
+    );
   });
 
   test('BUG-1739 用户删除的合集不被重扫复活；显式重建后恢复归组', () async {
@@ -129,30 +133,33 @@ void main() {
     expect(rescan.createdCollectionIds, isEmpty);
     expect(rescan.updatedCollectionIds, isEmpty);
     expect(await db.getMediaCollectionByNaturalKey(name, 'playlist'), isNull);
-    expect(rescan.reusedVideoUids, <String>['show-01', 'show-02'],
-        reason: '只是不再归组，成员视频本身不受影响');
+    expect(rescan.reusedVideoUids, <String>[
+      'show-01',
+      'show-02',
+    ], reason: '只是不再归组，成员视频本身不受影响');
 
     // 用户显式重建同名合集 = 撤销删除（createMediaCollection 清墓碑），之后
     // 重扫恢复自动归组，把成员补回来。
-    final int recreated =
-        await db.createMediaCollection(name, collectionType: 'playlist');
+    final int recreated = await db.createMediaCollection(
+      name,
+      collectionType: 'playlist',
+    );
     await coordinator.groupPaths(videoPaths: paths, sourceId: sourceId);
     expect(
-      (await db.getCollectionItems(recreated))
-          .map((MediaCollectionItemRow item) => item.entryKey),
+      (await db.getCollectionItems(
+        recreated,
+      )).map((MediaCollectionItemRow item) => item.entryKey),
       <String>['show-01', 'show-02'],
     );
   });
 
   test('重扫幂等；新增与暂缺分集都复用原合集并对全集排序', () async {
     final int sourceId = await addSource('/library');
-    for (final ({String uid, String path}) item in <({
-      String uid,
-      String path,
-    })>[
-      (uid: 'show-01', path: '/library/Show S01E01.mkv'),
-      (uid: 'show-02', path: '/library/Show S01E02.mkv'),
-    ]) {
+    for (final ({String uid, String path}) item
+        in <({String uid, String path})>[
+          (uid: 'show-01', path: '/library/Show S01E01.mkv'),
+          (uid: 'show-02', path: '/library/Show S01E02.mkv'),
+        ]) {
       await addVideo(uid: item.uid, path: item.path, sourceId: sourceId);
     }
     final VideoFolderGroupSummary first = await coordinator.groupPaths(
@@ -196,8 +203,11 @@ void main() {
     );
     expect(expanded.createdVideoUids, <String>['show-00']);
     expect(expanded.updatedCollectionIds, <int>[collectionId]);
-    expect((await db.getMediaCollectionById(collectionId))!.orderUpdatedAt, 0,
-        reason: '新增分集触发的自动重排不得 bump 手动序时钟');
+    expect(
+      (await db.getMediaCollectionById(collectionId))!.orderUpdatedAt,
+      0,
+      reason: '新增分集触发的自动重排不得 bump 手动序时钟',
+    );
 
     // E00/E01/E02 全部暂缺，本轮只发现 E03：仍按作品身份加入旧合集，旧成员不删。
     await addVideo(
@@ -212,8 +222,9 @@ void main() {
     );
 
     expect(
-      (await db.getCollectionItems(collectionId))
-          .map((MediaCollectionItemRow item) => item.entryKey),
+      (await db.getCollectionItems(
+        collectionId,
+      )).map((MediaCollectionItemRow item) => item.entryKey),
       <String>['show-00', 'show-01', 'show-02', 'show-03'],
     );
     expect(await repository.listAll(), hasLength(4));

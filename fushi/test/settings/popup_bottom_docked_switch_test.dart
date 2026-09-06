@@ -24,16 +24,15 @@ import '../helpers/test_platform_services.dart';
 /// 默认 OFF，且切换后真写穿偏好（[AppModel.popupBottomDocked] → prefsRepo → DB）。
 /// 与 dictionary_popup_layer_test.dart 的纯函数测试互补（一个证开关、一个证位置算法）。
 FushiDatabase _testDb() {
-  return FushiDatabase.forTesting(
-    DatabaseConnection(NativeDatabase.memory()),
-  );
+  return FushiDatabase.forTesting(DatabaseConnection(NativeDatabase.memory()));
 }
 
 Future<AppModel> _prefsBackedAppModel(FushiDatabase db) async {
   final PreferencesRepository prefsRepo = PreferencesRepository(db);
   await prefsRepo.loadFromDb();
-  final Directory tempDir =
-      Directory.systemTemp.createTempSync('hibiki_popup_dock_');
+  final Directory tempDir = Directory.systemTemp.createTempSync(
+    'hibiki_popup_dock_',
+  );
   addTearDown(() async {
     if (tempDir.existsSync()) tempDir.deleteSync(recursive: true);
   });
@@ -54,9 +53,7 @@ Widget _harness(FushiDatabase db, AppModel appModel) {
   addTearDown(themeNotifier.dispose);
 
   return ProviderScope(
-    overrides: <Override>[
-      appProvider.overrideWith((Ref ref) => appModel),
-    ],
+    overrides: <Override>[appProvider.overrideWith((Ref ref) => appModel)],
     child: MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
@@ -75,10 +72,10 @@ Widget _harness(FushiDatabase db, AppModel appModel) {
             readerSource: ReaderFushiSource.instance,
             refresh: () {},
           );
-          final SettingsDestination lookup =
-              buildSettingsSchema(sctx).firstWhere(
-            (SettingsDestination d) => d.id == SettingsDestinationId.lookup,
-          );
+          final SettingsDestination lookup = buildSettingsSchema(sctx)
+              .firstWhere(
+                (SettingsDestination d) => d.id == SettingsDestinationId.lookup,
+              );
           return MaterialSettingsRenderer().buildDetailPage(
             settingsContext: sctx,
             destination: lookup,
@@ -96,56 +93,57 @@ void main() {
   tearDown(() => debugSettingsForceExpandAllSections = false);
 
   testWidgets(
-      'lookup settings exposes a Bottom-docked popup switch (default OFF)',
-      (WidgetTester tester) async {
-    final FushiDatabase db = _testDb();
-    addTearDown(db.close);
-    final AppModel appModel = await _prefsBackedAppModel(db);
+    'lookup settings exposes a Bottom-docked popup switch (default OFF)',
+    (WidgetTester tester) async {
+      final FushiDatabase db = _testDb();
+      addTearDown(db.close);
+      final AppModel appModel = await _prefsBackedAppModel(db);
 
-    await tester.pumpWidget(_harness(db, appModel));
-    await tester.pump(const Duration(milliseconds: 100));
+      await tester.pumpWidget(_harness(db, appModel));
+      await tester.pump(const Duration(milliseconds: 100));
 
-    expect(appModel.popupBottomDocked, isFalse, reason: '默认跟随被查词位置（OFF）');
+      expect(appModel.popupBottomDocked, isFalse, reason: '默认跟随被查词位置（OFF）');
 
-    Finder rowFinder() => find.byWidgetPredicate(
-          (Widget w) =>
-              w is AdaptiveSettingsSwitchRow &&
-              w.title == t.popup_bottom_docked,
-        );
+      Finder rowFinder() => find.byWidgetPredicate(
+        (Widget w) =>
+            w is AdaptiveSettingsSwitchRow && w.title == t.popup_bottom_docked,
+      );
 
-    expect(rowFinder(), findsOneWidget, reason: 'lookup 设置页须渲染底部固定弹窗开关');
-    final AdaptiveSettingsSwitchRow row =
-        tester.widget<AdaptiveSettingsSwitchRow>(rowFinder());
-    expect(row.value, isFalse, reason: '开关初始为 OFF');
-    expect(row.icon, Icons.vertical_align_bottom_outlined);
-  });
+      expect(rowFinder(), findsOneWidget, reason: 'lookup 设置页须渲染底部固定弹窗开关');
+      final AdaptiveSettingsSwitchRow row = tester
+          .widget<AdaptiveSettingsSwitchRow>(rowFinder());
+      expect(row.value, isFalse, reason: '开关初始为 OFF');
+      expect(row.icon, Icons.vertical_align_bottom_outlined);
+    },
+  );
 
-  testWidgets('toggling the switch writes popup_bottom_docked through to prefs',
-      (WidgetTester tester) async {
-    final FushiDatabase db = _testDb();
-    addTearDown(db.close);
-    final AppModel appModel = await _prefsBackedAppModel(db);
+  testWidgets(
+    'toggling the switch writes popup_bottom_docked through to prefs',
+    (WidgetTester tester) async {
+      final FushiDatabase db = _testDb();
+      addTearDown(db.close);
+      final AppModel appModel = await _prefsBackedAppModel(db);
 
-    await tester.pumpWidget(_harness(db, appModel));
-    await tester.pump(const Duration(milliseconds: 100));
+      await tester.pumpWidget(_harness(db, appModel));
+      await tester.pump(const Duration(milliseconds: 100));
 
-    Finder rowFinder() => find.byWidgetPredicate(
-          (Widget w) =>
-              w is AdaptiveSettingsSwitchRow &&
-              w.title == t.popup_bottom_docked,
-        );
+      Finder rowFinder() => find.byWidgetPredicate(
+        (Widget w) =>
+            w is AdaptiveSettingsSwitchRow && w.title == t.popup_bottom_docked,
+      );
 
-    // 切到 ON：onChanged 走 appModel.setPopupBottomDocked → prefsRepo → DB。
-    tester.widget<AdaptiveSettingsSwitchRow>(rowFinder()).onChanged!(true);
-    await tester.pump(const Duration(milliseconds: 50));
+      // 切到 ON：onChanged 走 appModel.setPopupBottomDocked → prefsRepo → DB。
+      tester.widget<AdaptiveSettingsSwitchRow>(rowFinder()).onChanged!(true);
+      await tester.pump(const Duration(milliseconds: 50));
 
-    expect(appModel.popupBottomDocked, isTrue, reason: '切 ON 后内存值翻转');
-    final dynamic stored = await db.getPref('popup_bottom_docked');
-    expect(stored, isNotNull, reason: 'ON 写穿到偏好 DB');
+      expect(appModel.popupBottomDocked, isTrue, reason: '切 ON 后内存值翻转');
+      final dynamic stored = await db.getPref('popup_bottom_docked');
+      expect(stored, isNotNull, reason: 'ON 写穿到偏好 DB');
 
-    // 再切回 OFF：可逆，且写穿。
-    tester.widget<AdaptiveSettingsSwitchRow>(rowFinder()).onChanged!(false);
-    await tester.pump(const Duration(milliseconds: 50));
-    expect(appModel.popupBottomDocked, isFalse, reason: '可切回 OFF');
-  });
+      // 再切回 OFF：可逆，且写穿。
+      tester.widget<AdaptiveSettingsSwitchRow>(rowFinder()).onChanged!(false);
+      await tester.pump(const Duration(milliseconds: 50));
+      expect(appModel.popupBottomDocked, isFalse, reason: '可切回 OFF');
+    },
+  );
 }

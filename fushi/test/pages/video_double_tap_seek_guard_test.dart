@@ -27,11 +27,13 @@ void main() {
   late String schemaSrc;
 
   setUpAll(() {
-    pageSrc = File('lib/src/pages/implementations/video_fushi_page.dart')
-        .readAsStringSync();
+    pageSrc = File(
+      'lib/src/pages/implementations/video_fushi_page.dart',
+    ).readAsStringSync();
     pageCorpus = readVideoFushiSource();
-    schemaSrc =
-        File('lib/src/settings/settings_schema_video.dart').readAsStringSync();
+    schemaSrc = File(
+      'lib/src/settings/settings_schema_video.dart',
+    ).readAsStringSync();
   });
 
   String bodyFromBrace(String source, int start, int braceStart, String label) {
@@ -63,25 +65,34 @@ void main() {
     final int start = source.indexOf(namePrefix);
     expect(start, greaterThanOrEqualTo(0), reason: '找不到方法名前缀: $namePrefix');
     final int braceStart = source.indexOf('{', start);
-    expect(braceStart, greaterThanOrEqualTo(0),
-        reason: '找不到函数体起始 {: $namePrefix');
+    expect(
+      braceStart,
+      greaterThanOrEqualTo(0),
+      reason: '找不到函数体起始 {: $namePrefix',
+    );
     return bodyFromBrace(source, start, braceStart, namePrefix);
   }
 
   group('TODO-172/BUG-230: 竖滑灵敏度降下来', () {
     test('常量 _videoVerticalGestureSensitivity 存在且 > media_kit 默认 100', () {
       final RegExp re = RegExp(
-          r'static const double _videoVerticalGestureSensitivity\s*=\s*([\d.]+)');
+        r'static const double _videoVerticalGestureSensitivity\s*=\s*([\d.]+)',
+      );
       final Match? m = re.firstMatch(pageSrc);
       expect(m, isNotNull, reason: '缺常量 _videoVerticalGestureSensitivity');
       final double value = double.parse(m!.group(1)!);
-      expect(value, greaterThan(100.0),
-          reason: 'verticalGestureSensitivity 必须 > 默认 100 才更不敏感（值越大越钝）');
+      expect(
+        value,
+        greaterThan(100.0),
+        reason: 'verticalGestureSensitivity 必须 > 默认 100 才更不敏感（值越大越钝）',
+      );
     });
 
     test('_mobileControlsTheme 把该常量传给 MaterialVideoControlsThemeData', () {
       final String body = methodBodyByName(
-          pageCorpus, 'MaterialVideoControlsThemeData _mobileControlsTheme(');
+        pageCorpus,
+        'MaterialVideoControlsThemeData _mobileControlsTheme(',
+      );
       // TODO-590 batch11：搬进 controls_theme.part 后，static const 引用全限定为
       // `_VideoFushiPageState._videoVerticalGestureSensitivity`（extension 不能裸名解析
       // host class 的 static 成员）；全限定后超 80 列被 dart format 折成两行，故分段断言
@@ -89,88 +100,141 @@ void main() {
       expect(
         body.contains('verticalGestureSensitivity:') &&
             body.contains(
-                '_VideoFushiPageState._videoVerticalGestureSensitivity,'),
+              '_VideoFushiPageState._videoVerticalGestureSensitivity,',
+            ),
         isTrue,
         reason: '移动控制条主题必须设 verticalGestureSensitivity（TODO-172）',
       );
     });
 
     test('桌面 _desktopControlsTheme 不设竖滑灵敏度（无此手势，诚实降级）', () {
-      final String body = methodBodyByName(pageCorpus,
-          'MaterialDesktopVideoControlsThemeData _desktopControlsTheme(');
-      expect(body.contains('verticalGestureSensitivity'), isFalse,
-          reason: '桌面控制条无竖滑亮度/音量手势，不应设 verticalGestureSensitivity');
+      final String body = methodBodyByName(
+        pageCorpus,
+        'MaterialDesktopVideoControlsThemeData _desktopControlsTheme(',
+      );
+      expect(
+        body.contains('verticalGestureSensitivity'),
+        isFalse,
+        reason: '桌面控制条无竖滑亮度/音量手势，不应设 verticalGestureSensitivity',
+      );
     });
   });
 
   group('TODO-173/BUG-231: 双击左右快进 + 中带保留暂停/全屏', () {
     test('_handleVideoPointerUp 双击命中后先按 dx 分区（早返回），再走平台分流', () {
       final String body = methodBody(
-          pageSrc, 'void _handleVideoPointerUp(PointerUpEvent event) {');
-      final int seekIdx =
-          body.indexOf('_handleDoubleTapSeek(controlsContext, event.position)');
-      expect(seekIdx, greaterThanOrEqualTo(0),
-          reason: '双击命中后必须先尝试 _handleDoubleTapSeek 左右分区（命中则早返回）');
-      final int handledReturnIdx =
-          body.indexOf('if (doubleTapHandled) return;', seekIdx);
-      expect(handledReturnIdx, greaterThan(seekIdx),
-          reason: '_handleDoubleTapSeek 命中左/右区后必须早返回');
+        pageSrc,
+        'void _handleVideoPointerUp(PointerUpEvent event) {',
+      );
+      final int seekIdx = body.indexOf(
+        '_handleDoubleTapSeek(controlsContext, event.position)',
+      );
+      expect(
+        seekIdx,
+        greaterThanOrEqualTo(0),
+        reason: '双击命中后必须先尝试 _handleDoubleTapSeek 左右分区（命中则早返回）',
+      );
+      final int handledReturnIdx = body.indexOf(
+        'if (doubleTapHandled) return;',
+        seekIdx,
+      );
+      expect(
+        handledReturnIdx,
+        greaterThan(seekIdx),
+        reason: '_handleDoubleTapSeek 命中左/右区后必须早返回',
+      );
       // 分区判定必须排在平台分流（BUG-221 暂停/全屏）之前。
       final int platformBranch = body.indexOf('if (_isDesktopVideoControls) {');
-      expect(platformBranch, greaterThan(seekIdx),
-          reason: '左右分区早返回必须排在平台暂停/全屏分流之前（中带才落到分流）');
+      expect(
+        platformBranch,
+        greaterThan(seekIdx),
+        reason: '左右分区早返回必须排在平台暂停/全屏分流之前（中带才落到分流）',
+      );
     });
 
     test('中带仍保留 BUG-221 平台分流（移动 playOrPause / 桌面全屏）—不破坏 149', () {
       final String body = methodBody(
-          pageSrc, 'void _handleVideoPointerUp(PointerUpEvent event) {');
+        pageSrc,
+        'void _handleVideoPointerUp(PointerUpEvent event) {',
+      );
       // 与 video_orientation_fullscreen_guard 同样的两条断言：中带逻辑必须原样保留。
       expect(
         body.contains('if (_isDesktopVideoControls) {') &&
             body.contains(
-                'unawaited(_controller?.playOrPause() ?? Future<void>.value());'),
+              'unawaited(_controller?.playOrPause() ?? Future<void>.value());',
+            ),
         isTrue,
         reason: '中带移动端必须仍 = playOrPause（149 双击暂停不破坏）',
       );
       final int desktopBranch = body.indexOf('if (_isDesktopVideoControls) {');
       final int toggleIdx = body.indexOf(
-          '_toggleVideoFullscreen(controlsContext)', desktopBranch);
+        '_toggleVideoFullscreen(controlsContext)',
+        desktopBranch,
+      );
       final int elseIdx = body.indexOf('} else {', desktopBranch);
-      expect(toggleIdx, greaterThan(desktopBranch),
-          reason: '中带桌面分支应保留 _toggleVideoFullscreen');
-      expect(toggleIdx, lessThan(elseIdx),
-          reason: '_toggleVideoFullscreen 必须在桌面分支内（else 是移动端 playOrPause）');
+      expect(
+        toggleIdx,
+        greaterThan(desktopBranch),
+        reason: '中带桌面分支应保留 _toggleVideoFullscreen',
+      );
+      expect(
+        toggleIdx,
+        lessThan(elseIdx),
+        reason: '_toggleVideoFullscreen 必须在桌面分支内（else 是移动端 playOrPause）',
+      );
     });
 
     test('_handleDoubleTapSeek 读配置 + globalToLocal 拿 dx 三等分 + 调既有原语', () {
-      final String body =
-          methodBodyByName(pageSrc, 'bool _handleDoubleTapSeek(');
+      final String body = methodBodyByName(
+        pageSrc,
+        'bool _handleDoubleTapSeek(',
+      );
       // 读双击行为配置。
-      expect(body.contains('_asbConfig.doubleTapSeekSeconds'), isTrue,
-          reason: '必须读 doubleTapSeekSeconds 配置驱动分区行为');
-      // 0=关：整体跳过分区（向后兼容默认，双击仍走暂停/全屏）。
-      expect(body.contains('if (action == 0) return false;'), isTrue,
-          reason: '配置 0=关时必须早返回 false（交回平台分流，不分区）');
-      // 用本地坐标拿 dx + 宽度做三等分（复用 _isVideoChromePointer 的 globalToLocal 范式）。
-      expect(body.contains('globalToLocal(globalPosition).dx'), isTrue,
-          reason: '必须用 globalToLocal 把双击点换本地 dx');
       expect(
-          body.contains('width / 3') && body.contains('width * 2 / 3'), isTrue,
-          reason: '必须按可视区宽度三等分（左/中/右）');
+        body.contains('_asbConfig.doubleTapSeekSeconds'),
+        isTrue,
+        reason: '必须读 doubleTapSeekSeconds 配置驱动分区行为',
+      );
+      // 0=关：整体跳过分区（向后兼容默认，双击仍走暂停/全屏）。
+      expect(
+        body.contains('if (action == 0) return false;'),
+        isTrue,
+        reason: '配置 0=关时必须早返回 false（交回平台分流，不分区）',
+      );
+      // 用本地坐标拿 dx + 宽度做三等分（复用 _isVideoChromePointer 的 globalToLocal 范式）。
+      expect(
+        body.contains('globalToLocal(globalPosition).dx'),
+        isTrue,
+        reason: '必须用 globalToLocal 把双击点换本地 dx',
+      );
+      expect(
+        body.contains('width / 3') && body.contains('width * 2 / 3'),
+        isTrue,
+        reason: '必须按可视区宽度三等分（左/中/右）',
+      );
       // 中带落空 → 交回平台分流。
-      expect(body.contains('if (!left && !right) return false;'), isTrue,
-          reason: '中带（既非左也非右）必须返回 false 交回平台分流');
+      expect(
+        body.contains('if (!left && !right) return false;'),
+        isTrue,
+        reason: '中带（既非左也非右）必须返回 false 交回平台分流',
+      );
       // 字幕模式调跳句、秒数模式调相对 seek（复用既有原语，不重造）。
       expect(
         body.contains('_skipCueAndPokeControls(forward: forward)'),
         isTrue,
         reason: '字幕模式必须调既有 _skipCueAndPokeControls 跳句',
       );
-      expect(body.contains('_seekRelative(deltaMs)'), isTrue,
-          reason: '秒数模式必须调既有 _seekRelative 相对快进/快退');
+      expect(
+        body.contains('_seekRelative(deltaMs)'),
+        isTrue,
+        reason: '秒数模式必须调既有 _seekRelative 相对快进/快退',
+      );
       // 字幕哨兵走具名常量，不用裸 magic number。
-      expect(body.contains('VideoAsbplayerConfig.kDoubleTapSubtitle'), isTrue,
-          reason: '字幕哨兵必须用具名常量 kDoubleTapSubtitle');
+      expect(
+        body.contains('VideoAsbplayerConfig.kDoubleTapSubtitle'),
+        isTrue,
+        reason: '字幕哨兵必须用具名常量 kDoubleTapSubtitle',
+      );
     });
 
     test('schema 有「双击快进步长」行（video.playback.double_tap）并投影进 playback 分类', () {
@@ -178,19 +242,34 @@ void main() {
       // 渲染；守卫改锁 schema 声明（保护不变：有该行、写 doubleTapSeekSeconds、
       // 字幕哨兵用具名常量、经双路写穿即时回调 + 落盘）。
       final int start = schemaSrc.indexOf("id: 'video.playback.double_tap'");
-      expect(start, greaterThanOrEqualTo(0),
-          reason: '缺双击快进步长行声明 video.playback.double_tap');
+      expect(
+        start,
+        greaterThanOrEqualTo(0),
+        reason: '缺双击快进步长行声明 video.playback.double_tap',
+      );
       final int end = schemaSrc.indexOf("id: '", start + 1);
       expect(end, greaterThan(start));
       final String body = schemaSrc.substring(start, end);
-      expect(body.contains('VideoPlacement(group: VideoGroup.playback'), isTrue,
-          reason: '双击快进步长行必须投影进播放页面板 playback 分类');
-      expect(body.contains('doubleTapSeekSeconds:'), isTrue,
-          reason: 'onChanged 必须 copyWith(doubleTapSeekSeconds:) 落盘');
-      expect(body.contains('commitVideoAsbConfig('), isTrue,
-          reason: '必须经 commitVideoAsbConfig 双路写穿（host 即时回调 / 无 host 落 pref）');
-      expect(body.contains('VideoAsbplayerConfig.kDoubleTapSubtitle'), isTrue,
-          reason: '字幕选项必须用具名哨兵常量');
+      expect(
+        body.contains('VideoPlacement(group: VideoGroup.playback'),
+        isTrue,
+        reason: '双击快进步长行必须投影进播放页面板 playback 分类',
+      );
+      expect(
+        body.contains('doubleTapSeekSeconds:'),
+        isTrue,
+        reason: 'onChanged 必须 copyWith(doubleTapSeekSeconds:) 落盘',
+      );
+      expect(
+        body.contains('commitVideoAsbConfig('),
+        isTrue,
+        reason: '必须经 commitVideoAsbConfig 双路写穿（host 即时回调 / 无 host 落 pref）',
+      );
+      expect(
+        body.contains('VideoAsbplayerConfig.kDoubleTapSubtitle'),
+        isTrue,
+        reason: '字幕选项必须用具名哨兵常量',
+      );
     });
   });
 
@@ -203,49 +282,81 @@ void main() {
     // ③ schema 有 `id: 'video.playback.tap_toggles_playback'` 行并经
     //    `commitVideoAsbConfig` + `copyWith(tapTogglesPlayback:` 落盘。
     test('桌面 theme 的 playAndPauseOnTap 读用户配置，不硬编码 true', () {
-      final String body = methodBody(pageCorpus,
-          'MaterialDesktopVideoControlsThemeData _desktopControlsTheme(');
-      expect(body.contains('playAndPauseOnTap: _asbConfig.tapTogglesPlayback'),
-          isTrue,
-          reason: '桌面单击暂停必须由 _asbConfig.tapTogglesPlayback 驱动');
-      expect(body.contains('playAndPauseOnTap: true'), isFalse,
-          reason: '不得把桌面单击暂停写死为 true（用户关不掉）');
+      final String body = methodBody(
+        pageCorpus,
+        'MaterialDesktopVideoControlsThemeData _desktopControlsTheme(',
+      );
+      expect(
+        body.contains('playAndPauseOnTap: _asbConfig.tapTogglesPlayback'),
+        isTrue,
+        reason: '桌面单击暂停必须由 _asbConfig.tapTogglesPlayback 驱动',
+      );
+      expect(
+        body.contains('playAndPauseOnTap: true'),
+        isFalse,
+        reason: '不得把桌面单击暂停写死为 true（用户关不掉）',
+      );
     });
 
     test('移动端双击中带 fallback 受同一开关门控（门控排在 playOrPause 之前）', () {
       final String body = methodBody(
-          pageSrc, 'void _handleVideoPointerUp(PointerUpEvent event) {');
-      final int gateIdx =
-          body.indexOf('if (!_asbConfig.tapTogglesPlayback) return;');
-      expect(gateIdx, greaterThanOrEqualTo(0),
-          reason: '移动端中带暂停必须受 tapTogglesPlayback 门控');
+        pageSrc,
+        'void _handleVideoPointerUp(PointerUpEvent event) {',
+      );
+      final int gateIdx = body.indexOf(
+        'if (!_asbConfig.tapTogglesPlayback) return;',
+      );
+      expect(
+        gateIdx,
+        greaterThanOrEqualTo(0),
+        reason: '移动端中带暂停必须受 tapTogglesPlayback 门控',
+      );
       final int playIdx = body.indexOf(
-          'unawaited(_controller?.playOrPause() ?? Future<void>.value());',
-          gateIdx);
-      expect(playIdx, greaterThan(gateIdx),
-          reason: '门控必须排在 playOrPause 之前（否则关了还会切播放态）');
+        'unawaited(_controller?.playOrPause() ?? Future<void>.value());',
+        gateIdx,
+      );
+      expect(
+        playIdx,
+        greaterThan(gateIdx),
+        reason: '门控必须排在 playOrPause 之前（否则关了还会切播放态）',
+      );
       // 门控只属移动端分支：桌面分支的全屏切换必须排在门控之前，不被它拦掉。
       final int desktopIdx = body.indexOf('if (_isDesktopVideoControls) {');
-      final int toggleIdx =
-          body.indexOf('_toggleVideoFullscreen(controlsContext)', desktopIdx);
+      final int toggleIdx = body.indexOf(
+        '_toggleVideoFullscreen(controlsContext)',
+        desktopIdx,
+      );
       expect(toggleIdx, greaterThanOrEqualTo(0));
       expect(toggleIdx, lessThan(gateIdx), reason: '桌面双击全屏与播放态无关，不得落进本开关门控之后');
     });
 
     test('schema 有「点击画面播放/暂停」行并经双路写穿落盘', () {
-      final int start =
-          schemaSrc.indexOf("id: 'video.playback.tap_toggles_playback'");
-      expect(start, greaterThanOrEqualTo(0),
-          reason: '缺点击画面播放/暂停开关行 video.playback.tap_toggles_playback');
+      final int start = schemaSrc.indexOf(
+        "id: 'video.playback.tap_toggles_playback'",
+      );
+      expect(
+        start,
+        greaterThanOrEqualTo(0),
+        reason: '缺点击画面播放/暂停开关行 video.playback.tap_toggles_playback',
+      );
       final int end = schemaSrc.indexOf("id: '", start + 1);
       expect(end, greaterThan(start));
       final String body = schemaSrc.substring(start, end);
-      expect(body.contains('VideoPlacement(group: VideoGroup.playback'), isTrue,
-          reason: '该行必须投影进播放页面板 playback 分类');
-      expect(body.contains('tapTogglesPlayback:'), isTrue,
-          reason: 'onChanged 必须 copyWith(tapTogglesPlayback:) 落盘');
-      expect(body.contains('commitVideoAsbConfig('), isTrue,
-          reason: '必须经 commitVideoAsbConfig 双路写穿（host 即时回调 / 无 host 落 pref）');
+      expect(
+        body.contains('VideoPlacement(group: VideoGroup.playback'),
+        isTrue,
+        reason: '该行必须投影进播放页面板 playback 分类',
+      );
+      expect(
+        body.contains('tapTogglesPlayback:'),
+        isTrue,
+        reason: 'onChanged 必须 copyWith(tapTogglesPlayback:) 落盘',
+      );
+      expect(
+        body.contains('commitVideoAsbConfig('),
+        isTrue,
+        reason: '必须经 commitVideoAsbConfig 双路写穿（host 即时回调 / 无 host 落 pref）',
+      );
       // 全平台可见（桌面单击 / 移动端双击中带都受它管），不得加 visible 门把某端变假开关。
       expect(body.contains('visible:'), isFalse, reason: '两端都真实生效，不应按平台隐藏');
     });

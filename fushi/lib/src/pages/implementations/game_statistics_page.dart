@@ -132,10 +132,7 @@ class _GameStatisticsPageState extends BasePageState<GameStatisticsPage> {
       slivers: <Widget>[
         SliverToBoxAdapter(child: _buildSummaryCards()),
         SliverToBoxAdapter(
-          child: buildStatDailyDurationChartSection(
-            context,
-            _aggregate.daily,
-          ),
+          child: buildStatDailyDurationChartSection(context, _aggregate.daily),
         ),
         SliverToBoxAdapter(
           child: Padding(
@@ -168,35 +165,32 @@ class _GameStatisticsPageState extends BasePageState<GameStatisticsPage> {
   Widget _buildSummaryCards() {
     // 时段谓词在点击时现算（跨日后点卡按点击时刻的窗口取数）。
     final StatWindow w = StatWindow(DateTime.now());
-    return buildStatPeriodSummaryGrid(
-      context,
-      <StatPeriodSummary>[
-        _periodSummary(
-          t.stat_today,
-          _aggregate.todayMs,
-          _aggregate.todaySessions,
-          contains: w.isToday,
-        ),
-        _periodSummary(
-          t.stat_this_week,
-          _aggregate.weekMs,
-          _aggregate.weekSessions,
-          contains: w.inWeek,
-        ),
-        _periodSummary(
-          t.stat_this_month,
-          _aggregate.monthMs,
-          _aggregate.monthSessions,
-          contains: w.inMonth,
-        ),
-        _periodSummary(
-          t.stat_all_time,
-          _aggregate.allMs,
-          _aggregate.allSessions,
-          contains: (String _) => true,
-        ),
-      ],
-    );
+    return buildStatPeriodSummaryGrid(context, <StatPeriodSummary>[
+      _periodSummary(
+        t.stat_today,
+        _aggregate.todayMs,
+        _aggregate.todaySessions,
+        contains: w.isToday,
+      ),
+      _periodSummary(
+        t.stat_this_week,
+        _aggregate.weekMs,
+        _aggregate.weekSessions,
+        contains: w.inWeek,
+      ),
+      _periodSummary(
+        t.stat_this_month,
+        _aggregate.monthMs,
+        _aggregate.monthSessions,
+        contains: w.inMonth,
+      ),
+      _periodSummary(
+        t.stat_all_time,
+        _aggregate.allMs,
+        _aggregate.allSessions,
+        contains: (String _) => true,
+      ),
+    ]);
   }
 
   StatPeriodSummary _periodSummary(
@@ -210,10 +204,7 @@ class _GameStatisticsPageState extends BasePageState<GameStatisticsPage> {
       primaryValue: formatStatTime(ms),
       onTap: () => unawaited(_showPeriodDetail(label, contains)),
       lines: <StatSummaryLine>[
-        StatSummaryLine(
-          label: t.game_stat_sessions,
-          value: '$sessions',
-        ),
+        StatSummaryLine(label: t.game_stat_sessions, value: '$sessions'),
       ],
     );
   }
@@ -238,8 +229,10 @@ class _GameStatisticsPageState extends BasePageState<GameStatisticsPage> {
             mediaKey: f.mediaKey,
             title: f.title,
           );
-          final String name =
-              displayTitleForGame(entry: entry, rawTitle: f.title);
+          final String name = displayTitleForGame(
+            entry: entry,
+            rawTitle: f.title,
+          );
           return name.isEmpty ? f.mediaKey : name;
         },
         collectionOf: (StatFact f) => f.mediaKey.isEmpty
@@ -257,7 +250,8 @@ class _GameStatisticsPageState extends BasePageState<GameStatisticsPage> {
             }
           }
         },
-        onEntryDelete: (StatPeriodEntryTarget t) => deleteStatPeriodEntry(db, t),
+        onEntryDelete: (StatPeriodEntryTarget t) =>
+            deleteStatPeriodEntry(db, t),
       ),
     );
     if (deleted && mounted) await _load();
@@ -268,9 +262,7 @@ class _GameStatisticsPageState extends BasePageState<GameStatisticsPage> {
     final ColorScheme colors = Theme.of(context).colorScheme;
     final String lastPlayed = game.lastPlayedMs <= 0
         ? '-'
-        : statDateKey(
-            DateTime.fromMillisecondsSinceEpoch(game.lastPlayedMs),
-          );
+        : statDateKey(DateTime.fromMillisecondsSinceEpoch(game.lastPlayedMs));
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: tokens.spacing.card,
@@ -280,10 +272,7 @@ class _GameStatisticsPageState extends BasePageState<GameStatisticsPage> {
         onTap: () => _openGame(game),
         child: Row(
           children: <Widget>[
-            Icon(
-              Icons.sports_esports_outlined,
-              color: colors.primary,
-            ),
+            Icon(Icons.sports_esports_outlined, color: colors.primary),
             SizedBox(width: tokens.spacing.gap),
             Expanded(
               child: Column(
@@ -319,10 +308,7 @@ class _GameStatisticsPageState extends BasePageState<GameStatisticsPage> {
               ),
             ),
             SizedBox(width: tokens.spacing.gap / 2),
-            Icon(
-              Icons.chevron_right,
-              color: colors.onSurfaceVariant,
-            ),
+            Icon(Icons.chevron_right, color: colors.onSurfaceVariant),
           ],
         ),
       ),
@@ -332,10 +318,8 @@ class _GameStatisticsPageState extends BasePageState<GameStatisticsPage> {
   Future<void> _openGame(GalgameEntry game) async {
     await Navigator.of(context).push(
       MaterialPageRoute<void>(
-        builder: (BuildContext context) => GalgameDetailPage(
-          gameId: game.id,
-          initialTab: 0,
-        ),
+        builder: (BuildContext context) =>
+            GalgameDetailPage(gameId: game.id, initialTab: 0),
       ),
     );
     if (mounted) await _load();

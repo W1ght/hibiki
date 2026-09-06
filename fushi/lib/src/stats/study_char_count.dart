@@ -73,18 +73,24 @@ const List<String> kNoSpaceScripts = <String>[
 /// 撇号必须透明，否则 `don't` 会被拆成 don + t 记 2 个词。它不需要「两侧都是字母」
 /// 那种上下文判据（取词扫描才需要，见 BUG-2056）——这里断词由真正的分隔符负责，
 /// 一个不断词也不计数的字符放在词首 / 词尾都不会改变结果。
-final RegExp kStudyTransparentPattern =
-    RegExp(r"[\p{M}\u200C\u200D'\u2019\u02BC]", unicode: true);
+final RegExp kStudyTransparentPattern = RegExp(
+  r"[\p{M}\u200C\u200D'\u2019\u02BC]",
+  unicode: true,
+);
 
 /// \p{L} 或 \p{N}：够格成为学习单位的码点（标点 / 符号 / 空白都不是）。
-final RegExp kStudyLetterOrNumberPattern =
-    RegExp(r'[\p{L}\p{N}]', unicode: true);
+final RegExp kStudyLetterOrNumberPattern = RegExp(
+  r'[\p{L}\p{N}]',
+  unicode: true,
+);
 
 /// 属于 [kNoSpaceScripts] 之一。用 Script **Extensions** 而不是 Script：长音符
 /// `ー`(U+30FC) 与迭代符 `々`(U+3005) 的 Script 是 Common，只有 Script Extensions
 /// 才把它们归到假名 / 汉字；半角片假名同理。
-final RegExp kStudyNoSpaceScriptPattern =
-    RegExp('[${kNoSpaceScripts.map(_scriptClass).join()}]', unicode: true);
+final RegExp kStudyNoSpaceScriptPattern = RegExp(
+  '[${kNoSpaceScripts.map(_scriptClass).join()}]',
+  unicode: true,
+);
 
 /// 单个脚本的 Unicode 属性转义前缀（raw 字面量，避免在字符串里再转义反斜杠）。
 const String _kScriptExtensionsPrefix = r'\p{Script_Extensions=';

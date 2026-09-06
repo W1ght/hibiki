@@ -105,9 +105,13 @@ void main() {
         fontUrlBuilder: (String safePath) => 'https://x/$safePath',
       );
 
-      expect(urled.fontFamily, inlined.fontFamily,
-          reason: '同一份字体列表在两种模式下必须选出同一组字体，'
-              '否则换平台就会多一条/少一条，变成极难查的显示差异');
+      expect(
+        urled.fontFamily,
+        inlined.fontFamily,
+        reason:
+            '同一份字体列表在两种模式下必须选出同一组字体，'
+            '否则换平台就会多一条/少一条，变成极难查的显示差异',
+      );
       expect(urled.families, inlined.families);
     });
 
@@ -135,12 +139,14 @@ void main() {
         maxFileBytes: 8,
         fontUrlBuilder: (String safePath) => 'https://x/$safePath',
       );
-      expect(tooBig.fontFaces, isEmpty,
-          reason: 'URL 模式也必须尊重 maxFileBytes，门槛与内联模式一致');
+      expect(
+        tooBig.fontFaces,
+        isEmpty,
+        reason: 'URL 模式也必须尊重 maxFileBytes，门槛与内联模式一致',
+      );
     });
 
-    test('白名单之外的路径不得产出 URL（越权读盘的入口不能因换模式而放开）',
-        () async {
+    test('白名单之外的路径不得产出 URL（越权读盘的入口不能因换模式而放开）', () async {
       final Directory allowed = await Directory.systemTemp.createTemp(
         'hibiki_dictfont_allow',
       );

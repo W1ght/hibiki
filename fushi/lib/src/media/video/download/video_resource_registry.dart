@@ -29,8 +29,8 @@ class VideoResourceRegistry {
   VideoResourceRegistry(
     Iterable<VideoResourceProvider> providers, {
     Set<String> disabledProviderIds = const <String>{},
-  })  : providers = List<VideoResourceProvider>.unmodifiable(providers),
-        disabledProviderIds = Set<String>.unmodifiable(disabledProviderIds);
+  }) : providers = List<VideoResourceProvider>.unmodifiable(providers),
+       disabledProviderIds = Set<String>.unmodifiable(disabledProviderIds);
 
   final List<VideoResourceProvider> providers;
 
@@ -42,35 +42,34 @@ class VideoResourceRegistry {
     VideoResourceSearchRequest request,
   ) async {
     final VideoDiscoveryCategory? category = request.media?.discoveryCategory;
-    final List<VideoResourceProvider> applicable = providers
-        .where(
-          (VideoResourceProvider provider) =>
-              !disabledProviderIds.contains(provider.id) &&
-              videoResourceProviderApplies(provider, category),
-        )
-        .toList()
-      ..sort(
-        (VideoResourceProvider a, VideoResourceProvider b) =>
-            a.priority.compareTo(b.priority),
-      );
+    final List<VideoResourceProvider> applicable =
+        providers
+            .where(
+              (VideoResourceProvider provider) =>
+                  !disabledProviderIds.contains(provider.id) &&
+                  videoResourceProviderApplies(provider, category),
+            )
+            .toList()
+          ..sort(
+            (VideoResourceProvider a, VideoResourceProvider b) =>
+                a.priority.compareTo(b.priority),
+          );
     final List<ProviderBatchResult<VideoResourceCandidate>> results =
         await Future.wait(
-      applicable.map(
-        (VideoResourceProvider provider) async {
-          try {
-            return await provider.search(request);
-          } on Object catch (error) {
-            return ProviderBatchResult<VideoResourceCandidate>.failure(
-              ExternalProviderFailure.fromException(
-                providerId: provider.id,
-                operation: 'search',
-                error: error,
-              ),
-            );
-          }
-        },
-      ),
-    );
+          applicable.map((VideoResourceProvider provider) async {
+            try {
+              return await provider.search(request);
+            } on Object catch (error) {
+              return ProviderBatchResult<VideoResourceCandidate>.failure(
+                ExternalProviderFailure.fromException(
+                  providerId: provider.id,
+                  operation: 'search',
+                  error: error,
+                ),
+              );
+            }
+          }),
+        );
     final ProviderBatchResult<VideoResourceCandidate> merged =
         ProviderBatchResult.merge(results);
     return ProviderBatchResult<VideoResourceCandidate>(
@@ -95,8 +94,8 @@ class VideoResourceRegistry {
   }) async {
     for (final VideoResourceProvider provider in providers) {
       if (!_providerMatches(provider.id, selection.providerId)) continue;
-      final ProviderBatchResult<VideoResourceCandidate> result =
-          await provider.search(request);
+      final ProviderBatchResult<VideoResourceCandidate> result = await provider
+          .search(request);
       for (final VideoResourceCandidate candidate in result.items) {
         if (candidate.remoteId == selection.remoteId &&
             (candidate.providerId == selection.providerId ||

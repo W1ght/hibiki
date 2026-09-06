@@ -35,14 +35,12 @@ Widget _stubLibrary(
   BuildContext _,
   GalHookSessionController __,
   VoidCallback ___,
-) =>
-    const Center(child: Icon(Icons.sports_esports_outlined));
+) => const Center(child: Icon(Icons.sports_esports_outlined));
 
 /// 镜像生产 [ModuleSettingsView] 的顶栏形状（FushiPageHeader.customTitle 包分段
 /// 导航），但不构建需要 provider 的设置正文。
-Widget _stubSettings(BuildContext _, Widget navigation) => Column(
-      children: <Widget>[FushiPageHeader.customTitle(title: navigation)],
-    );
+Widget _stubSettings(BuildContext _, Widget navigation) =>
+    Column(children: <Widget>[FushiPageHeader.customTitle(title: navigation)]);
 
 void main() {
   setUp(() {
@@ -72,13 +70,11 @@ void main() {
     expect(f, findsOneWidget, reason: '子区 $section 应有分区导航');
     // 「工作台」在该子区的分段条里必须单行（高度 = 一行行高）。折行是
     // BUG-1719 的直接症状：段被钳到比最长标签窄。
-    final Finder label = find.descendant(
-      of: f,
-      matching: find.text('工作台'),
-    );
+    final Finder label = find.descendant(of: f, matching: find.text('工作台'));
     expect(label, findsOneWidget);
-    final RenderParagraph paragraph =
-        tester.renderObject<RenderParagraph>(label);
+    final RenderParagraph paragraph = tester.renderObject<RenderParagraph>(
+      label,
+    );
     final double lineHeight =
         (paragraph.text.style!.height ?? 1.0) * paragraph.text.style!.fontSize!;
     expect(
@@ -90,8 +86,9 @@ void main() {
   }
 
   for (final double width in <double>[1000, 1440, 2560]) {
-    testWidgets('BUG-1719 顶栏分段条几何跨六个子区一致 @${width.toInt()}px',
-        (WidgetTester tester) async {
+    testWidgets('BUG-1719 顶栏分段条几何跨六个子区一致 @${width.toInt()}px', (
+      WidgetTester tester,
+    ) async {
       await tester.binding.setSurfaceSize(Size(width, 900));
       addTearDown(() => tester.binding.setSurfaceSize(null));
       await tester.pumpWidget(

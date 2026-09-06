@@ -20,14 +20,19 @@ class _FakeBackend implements TorrentBackend {
 
   @override
   Future<TorrentStorageResult> renameFile(
-      String torrentId, int fileIndex, String newPath) async {
+    String torrentId,
+    int fileIndex,
+    String newPath,
+  ) async {
     calls.add('rename($torrentId,$fileIndex,$newPath)');
     return result;
   }
 
   @override
   Future<TorrentStorageResult> moveStorage(
-      String torrentId, String newSavePath) async {
+    String torrentId,
+    String newSavePath,
+  ) async {
     calls.add('move($torrentId,$newSavePath)');
     return result;
   }
@@ -42,11 +47,12 @@ class _FakeBackend implements TorrentBackend {
   Future<bool> prepareCategory(String category) async => true;
 
   @override
-  Future<bool> addTorrent(String magnetOrUrl,
-          {required String category,
-          bool sequential = false,
-          bool firstLastPiecePrio = false}) async =>
-      true;
+  Future<bool> addTorrent(
+    String magnetOrUrl, {
+    required String category,
+    bool sequential = false,
+    bool firstLastPiecePrio = false,
+  }) async => true;
 
   @override
   Future<List<TorrentSnapshot>> listTorrents({String? category}) async =>
@@ -64,16 +70,22 @@ void main() {
 
     test('全等匹配（改名）→ 换成新路径', () {
       expect(
-        remapMediaPath(p.join(root, 'a.mkv'),
-            fromPath: p.join(root, 'a.mkv'), toPath: p.join(root, 'b.mkv')),
+        remapMediaPath(
+          p.join(root, 'a.mkv'),
+          fromPath: p.join(root, 'a.mkv'),
+          toPath: p.join(root, 'b.mkv'),
+        ),
         p.join(root, 'b.mkv'),
       );
     });
 
     test('前缀内（移动）→ 相对部分接到新根下', () {
       expect(
-        remapMediaPath(p.join(root, 'S1', 'ep01.mkv'),
-            fromPath: root, toPath: moved),
+        remapMediaPath(
+          p.join(root, 'S1', 'ep01.mkv'),
+          fromPath: root,
+          toPath: moved,
+        ),
         p.join(moved, 'S1', 'ep01.mkv'),
       );
     });
@@ -81,21 +93,29 @@ void main() {
     test('兄弟目录不被误当成前缀命中', () {
       // 手写 startsWith 会让 <root> 误匹配 <root>x —— 必须走 package:path。
       expect(
-        remapMediaPath('${root}x${p.separator}ep.mkv',
-            fromPath: root, toPath: moved),
+        remapMediaPath(
+          '${root}x${p.separator}ep.mkv',
+          fromPath: root,
+          toPath: moved,
+        ),
         isNull,
       );
     });
 
     test('范围外路径不动', () {
-      final String elsewhere =
-          p.join(p.rootPrefix(p.current), 'somewhere', 'else.mkv');
+      final String elsewhere = p.join(
+        p.rootPrefix(p.current),
+        'somewhere',
+        'else.mkv',
+      );
       expect(remapMediaPath(elsewhere, fromPath: root, toPath: moved), isNull);
     });
 
     test('内嵌字幕哨兵 embedded:<n> 绝不当路径重写', () {
       expect(
-          remapMediaPath('embedded:2', fromPath: root, toPath: moved), isNull);
+        remapMediaPath('embedded:2', fromPath: root, toPath: moved),
+        isNull,
+      );
       expect(isRemappableMediaPath('embedded:2'), isFalse);
     });
 
@@ -106,8 +126,11 @@ void main() {
 
     test('流媒体 URL 不动（磁盘上没有对应文件）', () {
       expect(
-        remapMediaPath('https://example.com/v.m3u8',
-            fromPath: root, toPath: moved),
+        remapMediaPath(
+          'https://example.com/v.m3u8',
+          fromPath: root,
+          toPath: moved,
+        ),
         isNull,
       );
     });
@@ -115,8 +138,10 @@ void main() {
     test('null / 空串 / 相对路径都不动', () {
       expect(remapMediaPath(null, fromPath: root, toPath: moved), isNull);
       expect(remapMediaPath('  ', fromPath: root, toPath: moved), isNull);
-      expect(remapMediaPath('relative/a.mkv', fromPath: root, toPath: moved),
-          isNull);
+      expect(
+        remapMediaPath('relative/a.mkv', fromPath: root, toPath: moved),
+        isNull,
+      );
     });
 
     test('三列各自独立：视频跟着走、内嵌字幕轨原样保留', () {
@@ -150,15 +175,16 @@ void main() {
 
     test('引擎失败 → 库一个字节都不动，且原因原样带回', () async {
       final _FakeBackend backend = _FakeBackend(
-          result: const TorrentStorageResult.failure('target already exists'));
+        result: const TorrentStorageResult.failure('target already exists'),
+      );
       bool libraryTouched = false;
       final DownloadRelocateService service = DownloadRelocateService(
         backendFactory: () => backend,
-        migrateLibraryPaths: (
-            {required String fromPath, required String toPath}) async {
-          libraryTouched = true;
-          return 1;
-        },
+        migrateLibraryPaths:
+            ({required String fromPath, required String toPath}) async {
+              libraryTouched = true;
+              return 1;
+            },
       );
 
       final RelocateOutcome outcome = await service.moveTorrent(
@@ -175,18 +201,21 @@ void main() {
 
     test('两步都成 → success，并带回迁移行数', () async {
       final _FakeBackend backend = _FakeBackend(
-          result: TorrentStorageResult(
-              ok: true, path: p.join(p.rootPrefix(p.current), 'moved')));
+        result: TorrentStorageResult(
+          ok: true,
+          path: p.join(p.rootPrefix(p.current), 'moved'),
+        ),
+      );
       String? seenFrom;
       String? seenTo;
       final DownloadRelocateService service = DownloadRelocateService(
         backendFactory: () => backend,
-        migrateLibraryPaths: (
-            {required String fromPath, required String toPath}) async {
-          seenFrom = fromPath;
-          seenTo = toPath;
-          return 3;
-        },
+        migrateLibraryPaths:
+            ({required String fromPath, required String toPath}) async {
+              seenFrom = fromPath;
+              seenTo = toPath;
+              return 3;
+            },
       );
 
       final String target = p.join(p.rootPrefix(p.current), 'moved');
@@ -205,12 +234,13 @@ void main() {
 
     test('引擎成功但库迁移抛错 → libraryFailed，不许报成功', () async {
       final _FakeBackend backend = _FakeBackend(
-          result: const TorrentStorageResult(ok: true, path: 'newname.mkv'));
+        result: const TorrentStorageResult(ok: true, path: 'newname.mkv'),
+      );
       final DownloadRelocateService service = DownloadRelocateService(
         backendFactory: () => backend,
-        migrateLibraryPaths: (
-                {required String fromPath, required String toPath}) async =>
-            throw StateError('db is locked'),
+        migrateLibraryPaths:
+            ({required String fromPath, required String toPath}) async =>
+                throw StateError('db is locked'),
       );
 
       final RelocateOutcome outcome = await service.renameFile(
@@ -231,11 +261,11 @@ void main() {
       bool libraryTouched = false;
       final DownloadRelocateService service = DownloadRelocateService(
         backendFactory: () => backend,
-        migrateLibraryPaths: (
-            {required String fromPath, required String toPath}) async {
-          libraryTouched = true;
-          return 1;
-        },
+        migrateLibraryPaths:
+            ({required String fromPath, required String toPath}) async {
+              libraryTouched = true;
+              return 1;
+            },
       );
 
       final List<String> invalid = <String>[
@@ -251,8 +281,11 @@ void main() {
           newRelativePath: newPath,
           saveRoot: root,
         );
-        expect(outcome.status, RelocateStatus.engineFailed,
-            reason: '应拒绝 $newPath');
+        expect(
+          outcome.status,
+          RelocateStatus.engineFailed,
+          reason: '应拒绝 $newPath',
+        );
         expect(outcome.error, contains('inside the torrent'));
       }
 
@@ -266,11 +299,11 @@ void main() {
       bool libraryTouched = false;
       final DownloadRelocateService service = DownloadRelocateService(
         backendFactory: () => backend,
-        migrateLibraryPaths: (
-            {required String fromPath, required String toPath}) async {
-          libraryTouched = true;
-          return 0;
-        },
+        migrateLibraryPaths:
+            ({required String fromPath, required String toPath}) async {
+              libraryTouched = true;
+              return 0;
+            },
       );
 
       final RelocateOutcome renamed = await service.renameFile(
@@ -295,17 +328,18 @@ void main() {
 
     test('改名把种子内相对路径拼成绝对路径再迁库（同一坐标系）', () async {
       final _FakeBackend backend = _FakeBackend(
-          result: const TorrentStorageResult(ok: true, path: 'S1/new.mkv'));
+        result: const TorrentStorageResult(ok: true, path: 'S1/new.mkv'),
+      );
       String? seenFrom;
       String? seenTo;
       final DownloadRelocateService service = DownloadRelocateService(
         backendFactory: () => backend,
-        migrateLibraryPaths: (
-            {required String fromPath, required String toPath}) async {
-          seenFrom = fromPath;
-          seenTo = toPath;
-          return 1;
-        },
+        migrateLibraryPaths:
+            ({required String fromPath, required String toPath}) async {
+              seenFrom = fromPath;
+              seenTo = toPath;
+              return 1;
+            },
       );
 
       await service.renameFile(
@@ -319,8 +353,11 @@ void main() {
       // 库里存的是绝对路径，所以重映射必须在绝对路径坐标系里做。
       expect(seenFrom, p.join(root, 'old.mkv'));
       expect(seenTo, p.join(root, 'S1', 'new.mkv'));
-      expect(backend.calls.single, 'rename(abc,2,S1/new.mkv)',
-          reason: '种子内路径跨平台固定使用 POSIX 分隔符');
+      expect(
+        backend.calls.single,
+        'rename(abc,2,S1/new.mkv)',
+        reason: '种子内路径跨平台固定使用 POSIX 分隔符',
+      );
     });
   });
 }

@@ -23,7 +23,9 @@ void main() {
       expect(LocalAudioManager.isInternalCopyName('/d/dicts/jpod.db'), isFalse);
       expect(LocalAudioManager.isInternalCopyName('local_audio_.db'), isFalse);
       expect(
-          LocalAudioManager.isInternalCopyName('local_audio_1.txt'), isFalse);
+        LocalAudioManager.isInternalCopyName('local_audio_1.txt'),
+        isFalse,
+      );
       expect(LocalAudioManager.isInternalCopyName(''), isFalse);
     });
   });
@@ -31,8 +33,10 @@ void main() {
   group('LocalAudioManager.resolveInternalPath', () {
     test('re-homes an internal copy from another machine by filename', () {
       const String stored = r'C:\Users\MACHINE_A\support\local_audio_777.db';
-      final String resolved =
-          LocalAudioManager.resolveInternalPath(stored, '/home/b/support');
+      final String resolved = LocalAudioManager.resolveInternalPath(
+        stored,
+        '/home/b/support',
+      );
       expect(resolved, endsWith('local_audio_777.db'));
       expect(resolved, startsWith('/home/b/support'));
       expect(resolved, isNot(contains('MACHINE_A')));

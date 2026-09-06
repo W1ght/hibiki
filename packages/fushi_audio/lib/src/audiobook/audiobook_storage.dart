@@ -25,8 +25,9 @@ abstract final class AudiobookStorage {
 
   /// [audioExtensions] 的去点形式（file picker 的 `allowedExtensions` 用）。
   /// 两个导入对话框原各持同一派生副本，收敛到源集合旁的单一真相。
-  static final Set<String> audioExtensionsNoDot =
-      audioExtensions.map((String ext) => ext.replaceFirst('.', '')).toSet();
+  static final Set<String> audioExtensionsNoDot = audioExtensions
+      .map((String ext) => ext.replaceFirst('.', ''))
+      .toSet();
 
   static bool isAudioFile(String path) =>
       audioExtensions.contains(p.extension(path).toLowerCase());
@@ -76,7 +77,8 @@ abstract final class AudiobookStorage {
     final Directory docs = await _documentsRoot();
     final String hash = _stableHash(bookUid);
     final Directory oldDir = Directory(
-        p.join(docs.path, 'audiobooks', bookUid.hashCode.toRadixString(16)));
+      p.join(docs.path, 'audiobooks', bookUid.hashCode.toRadixString(16)),
+    );
     final Directory dir = Directory(p.join(docs.path, 'audiobooks', hash));
     if (!dir.existsSync() && oldDir.existsSync()) {
       oldDir.renameSync(dir.path);
@@ -144,8 +146,10 @@ abstract final class AudiobookStorage {
       );
     }
 
-    debugPrint('[hibiki-import] persisted ${src.path} → $dest '
-        '(${(totalBytes / 1024 / 1024).toStringAsFixed(1)} MB)');
+    debugPrint(
+      '[hibiki-import] persisted ${src.path} → $dest '
+      '(${(totalBytes / 1024 / 1024).toStringAsFixed(1)} MB)',
+    );
     return dest;
   }
 
@@ -180,13 +184,9 @@ abstract final class AudiobookStorage {
   static bool anyReferenced({
     required List<String> paths,
     required String persistRoot,
-  }) =>
-      paths.any(
-        (String path) => isReferencedPath(
-          filePath: path,
-          persistRoot: persistRoot,
-        ),
-      );
+  }) => paths.any(
+    (String path) => isReferencedPath(filePath: path, persistRoot: persistRoot),
+  );
 
   /// TODO-935 ①A 断链检测：返回 [paths] 中在磁盘上不存在的路径子集（保持原序）。
   /// [exists] 默认查真实文件系统，测试可注入假谓词。空列表返回空列表。
@@ -203,8 +203,7 @@ abstract final class AudiobookStorage {
   static bool hasMissingPaths(
     List<String> paths, {
     bool Function(String path)? exists,
-  }) =>
-      missingPaths(paths, exists: exists).isNotEmpty;
+  }) => missingPaths(paths, exists: exists).isNotEmpty;
 
   /// 两组音频路径是否是**同一套音频**（BUG-1679 的进度作废判据）。
   /// 有序比较：顺序就是 `AudioCue.audioFileIndex` 的含义，换序即换时间轴。
@@ -256,12 +255,14 @@ abstract final class AudiobookStorage {
       final File src = File(path);
       onFile?.call(p.basename(path));
       final int base = copiedBytes;
-      persisted.add(await persistFileWithProgress(
-        src,
-        persistDir,
-        onProgress: (int copied, int total) =>
-            onProgress?.call(base + copied, totalBytes),
-      ));
+      persisted.add(
+        await persistFileWithProgress(
+          src,
+          persistDir,
+          onProgress: (int copied, int total) =>
+              onProgress?.call(base + copied, totalBytes),
+        ),
+      );
       if (!_isInside(persistDir, path)) copiedBytes += await src.length();
       onProgress?.call(copiedBytes, totalBytes);
     }
@@ -295,7 +296,8 @@ abstract final class AudiobookStorage {
       debugPrint('[hibiki-import] deleted persist dir: ${dir.path}');
     }
     final Directory oldDir = Directory(
-        p.join(docs.path, 'audiobooks', bookUid.hashCode.toRadixString(16)));
+      p.join(docs.path, 'audiobooks', bookUid.hashCode.toRadixString(16)),
+    );
     if (oldDir.existsSync()) {
       await oldDir.delete(recursive: true);
       debugPrint('[hibiki-import] deleted legacy persist dir: ${oldDir.path}');

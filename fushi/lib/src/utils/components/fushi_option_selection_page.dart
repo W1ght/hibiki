@@ -69,9 +69,7 @@ class FushiOptionSelectionPage<T> extends StatelessWidget {
 
     return AdaptiveSettingsScaffold(
       title: Text(title),
-      children: <Widget>[
-        AdaptiveSettingsSection(children: rows),
-      ],
+      children: <Widget>[AdaptiveSettingsSection(children: rows)],
     );
   }
 }

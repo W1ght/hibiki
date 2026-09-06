@@ -10,29 +10,31 @@ import 'package:fushi/src/media/video/metadata/video_source_work_planner.dart'
 
 void main() {
   SourceLibraryRow source(int id) => SourceLibraryRow(
-        id: id,
-        label: 'source-$id',
-        mediaKind: 'video',
-        transport: 'local',
-        rootPath: 'D:/source-$id',
-        recursive: true,
-        configJson: null,
-        mediaCount: 0,
-        lastScannedAt: null,
-        lastScanError: null,
-        sortOrder: 0,
-        createdAt: 1,
-      );
+    id: id,
+    label: 'source-$id',
+    mediaKind: 'video',
+    transport: 'local',
+    rootPath: 'D:/source-$id',
+    recursive: true,
+    configJson: null,
+    mediaCount: 0,
+    lastScannedAt: null,
+    lastScanError: null,
+    sortOrder: 0,
+    createdAt: 1,
+  );
 
   test('全部来源共用单批次锁，重复入口返回同一个任务', () async {
     final _BlockingRunner runner = _BlockingRunner();
     final VideoSourceScrapeTaskController controller =
         VideoSourceScrapeTaskController(runner);
 
-    final Future<SourceScrapeReport> first =
-        controller.scrapeAllSources(<SourceLibraryRow>[source(1), source(2)]);
-    final Future<SourceScrapeReport> duplicate =
-        controller.scrapeSource(source(9));
+    final Future<SourceScrapeReport> first = controller.scrapeAllSources(
+      <SourceLibraryRow>[source(1), source(2)],
+    );
+    final Future<SourceScrapeReport> duplicate = controller.scrapeSource(
+      source(9),
+    );
     expect(identical(first, duplicate), isTrue);
     expect(controller.isRunning, isTrue);
 
@@ -51,8 +53,9 @@ void main() {
     final List<bool> busySnapshots = <bool>[];
     controller.addListener(() => busySnapshots.add(controller.isBusy));
 
-    final Future<SourceScrapeReport> future =
-        controller.scrapeSource(source(1));
+    final Future<SourceScrapeReport> future = controller.scrapeSource(
+      source(1),
+    );
     expect(busySnapshots, isNotEmpty);
     expect(busySnapshots.first, isTrue);
 
@@ -64,8 +67,9 @@ void main() {
     final _BlockingRunner runner = _BlockingRunner();
     final VideoSourceScrapeTaskController controller =
         VideoSourceScrapeTaskController(runner);
-    final Future<SourceScrapeReport> future =
-        controller.scrapeSource(source(1));
+    final Future<SourceScrapeReport> future = controller.scrapeSource(
+      source(1),
+    );
     controller.cancel();
     runner.release();
     final SourceScrapeReport report = await future;
@@ -92,8 +96,9 @@ void main() {
     scanGate.complete();
     await scan;
 
-    final Future<SourceScrapeReport> scrape =
-        controller.scrapeSource(source(1));
+    final Future<SourceScrapeReport> scrape = controller.scrapeSource(
+      source(1),
+    );
     expect(controller.isRunning, isTrue);
     await expectLater(
       controller.runSourceScan<void>(2, () async {}),
@@ -109,12 +114,9 @@ void main() {
     final VideoSourceScrapeTaskController controller =
         VideoSourceScrapeTaskController(runner);
 
-    final Future<SourceScrapeReport> future =
-        controller.scrapeAllSources(<SourceLibraryRow>[
-      source(1),
-      source(2),
-      source(3),
-    ]);
+    final Future<SourceScrapeReport> future = controller.scrapeAllSources(
+      <SourceLibraryRow>[source(1), source(2), source(3)],
+    );
     runner.release();
     await future;
 
@@ -177,10 +179,12 @@ class _BlockingRunner implements VideoSourceScrapeRunner {
     batchContexts.add(batchContext);
     await _gate.future;
     cancellationToken.throwIfCancelled();
-    onProgress(VideoSourceScrapeProgress(
-      phase: VideoSourceScrapePhase.applying,
-      sourceId: source.id,
-    ));
+    onProgress(
+      VideoSourceScrapeProgress(
+        phase: VideoSourceScrapePhase.applying,
+        sourceId: source.id,
+      ),
+    );
     return SourceScrapeReport(
       sourceIds: <int>[source.id],
       totalWorks: 1,
@@ -191,21 +195,21 @@ class _BlockingRunner implements VideoSourceScrapeRunner {
 
 class _ConfirmationRunner implements VideoSourceScrapeRunner {
   _ConfirmationRunner()
-      : candidate = VideoSourceScrapeConfirmationCandidate(
-          lookup: const VideoMetadataLookup(
-            provider: VideoMetadataProviderKind.tmdb,
-            externalId: '42',
-            mediaKind: VideoMetadataMediaKind.movie,
-          ),
-          work: VideoMetadataWork(
-            provider: VideoMetadataProviderKind.tmdb,
-            kind: VideoMetadataMediaKind.movie,
-            title: 'Confirmed movie',
-            ids: const <VideoMetadataId>[
-              VideoMetadataId(type: 'tmdb', value: '42'),
-            ],
-          ),
-        );
+    : candidate = VideoSourceScrapeConfirmationCandidate(
+        lookup: const VideoMetadataLookup(
+          provider: VideoMetadataProviderKind.tmdb,
+          externalId: '42',
+          mediaKind: VideoMetadataMediaKind.movie,
+        ),
+        work: VideoMetadataWork(
+          provider: VideoMetadataProviderKind.tmdb,
+          kind: VideoMetadataMediaKind.movie,
+          title: 'Confirmed movie',
+          ids: const <VideoMetadataId>[
+            VideoMetadataId(type: 'tmdb', value: '42'),
+          ],
+        ),
+      );
 
   final VideoSourceScrapeConfirmationCandidate candidate;
   VideoSourceScrapeConfirmationCandidate? selected;

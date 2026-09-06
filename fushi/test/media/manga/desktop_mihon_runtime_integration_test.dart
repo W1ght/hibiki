@@ -7,19 +7,17 @@ void main() {
   final Directory resourceDirectory = Directory(
     'build/windows/x64/runner/Debug/mihon_bridge',
   );
-  final bool bridgeAvailable = Platform.isWindows &&
-      File(
-        '${resourceDirectory.path}/runtime/bin/java.exe',
-      ).existsSync() &&
-      File(
-        '${resourceDirectory.path}/m-extension-server.jar',
-      ).existsSync();
+  final bool bridgeAvailable =
+      Platform.isWindows &&
+      File('${resourceDirectory.path}/runtime/bin/java.exe').existsSync() &&
+      File('${resourceDirectory.path}/m-extension-server.jar').existsSync();
 
   test(
     'bundled Java bridge is stopped without a residual process',
     () async {
-      final Directory dataDirectory =
-          await Directory.systemTemp.createTemp('hibiki-mihon-runtime-test-');
+      final Directory dataDirectory = await Directory.systemTemp.createTemp(
+        'hibiki-mihon-runtime-test-',
+      );
       final DesktopMihonRuntime runtime = DesktopMihonRuntime(
         dataDirectory: dataDirectory,
         resourceDirectory: resourceDirectory,
@@ -31,16 +29,14 @@ void main() {
 
         await runtime.dispose();
 
-        final ProcessResult lookup = await Process.run(
-          'powershell.exe',
-          <String>[
-            '-NoProfile',
-            '-NonInteractive',
-            '-Command',
-            'if (Get-Process -Id $pid -ErrorAction SilentlyContinue) '
-                '{ exit 1 }',
-          ],
-        );
+        final ProcessResult lookup =
+            await Process.run('powershell.exe', <String>[
+              '-NoProfile',
+              '-NonInteractive',
+              '-Command',
+              'if (Get-Process -Id $pid -ErrorAction SilentlyContinue) '
+                  '{ exit 1 }',
+            ]);
         expect(
           lookup.exitCode,
           0,

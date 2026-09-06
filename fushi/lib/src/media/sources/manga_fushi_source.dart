@@ -29,14 +29,14 @@ import 'package:fushi/utils.dart';
 /// [getActions]/[buildHistoryPage] 极少被触达，实现取与 PDF 源一致的安全回退。
 class MangaFushiSource extends ReaderMediaSource {
   MangaFushiSource._()
-      : super(
-          uniqueKey: kUniqueKey,
-          sourceName: t.source_name_bookshelf,
-          description: t.source_description_epub,
-          icon: Icons.collections_bookmark_outlined,
-          implementsSearch: false,
-          implementsHistory: false,
-        );
+    : super(
+        uniqueKey: kUniqueKey,
+        sourceName: t.source_name_bookshelf,
+        description: t.source_description_epub,
+        icon: Icons.collections_bookmark_outlined,
+        implementsSearch: false,
+        implementsHistory: false,
+      );
 
   /// 媒体源唯一键（持久化标识，与 `reader_fushi`/`reader_pdf` 互异）。
   /// [ReaderFushiSource] 的 `_bookToMediaItem` 用它把 `format=='manga'` 的行路由到本源。
@@ -66,10 +66,7 @@ class MangaFushiSource extends ReaderMediaSource {
   }) async {}
 
   @override
-  Widget buildLaunchPage({
-    MediaItem? item,
-    Bookmark? initialBookmarkJump,
-  }) {
+  Widget buildLaunchPage({MediaItem? item, Bookmark? initialBookmarkJump}) {
     final String bookKey =
         ReaderFushiSource.parseBookKey(item?.mediaIdentifier ?? '') ?? '';
     // 漫画在 WebView 里按原生密度渲染；与阅读器一致包 UI-scale 中和层，
@@ -88,11 +85,7 @@ class MangaFushiSource extends ReaderMediaSource {
     // 漫画有自己的导入按钮与对话框（载体不同、可填字段就不同）；本源作为打开-漫画
     // 的短暂当前源，页头动作给出漫画导入以防被设为当前源时缺动作。
     return <Widget>[
-      buildMangaImportButton(
-        context: context,
-        ref: ref,
-        appModel: appModel,
-      ),
+      buildMangaImportButton(context: context, ref: ref, appModel: appModel),
     ];
   }
 
@@ -141,7 +134,8 @@ class MangaFushiSource extends ReaderMediaSource {
   Future<void> setAuthorFromMediaItem({
     required MediaItem item,
     required String? author,
-  }) =>
-      ReaderFushiSource.instance
-          .setAuthorFromMediaItem(item: item, author: author);
+  }) => ReaderFushiSource.instance.setAuthorFromMediaItem(
+    item: item,
+    author: author,
+  );
 }

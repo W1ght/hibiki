@@ -67,8 +67,12 @@ void main() {
     });
 
     test('会话样本够用会话速度，否则退到本书累计速度', () {
-      const ReaderBookStatTotals book =
-          (todayChars: 0, todayMs: 0, allChars: 6000, allMs: 3600000);
+      const ReaderBookStatTotals book = (
+        todayChars: 0,
+        todayMs: 0,
+        allChars: 6000,
+        allMs: 3600000,
+      );
       // 会话 2 分钟 200 字 → 6000/h（样本够）
       expect(
         readerFinishCph(
@@ -111,10 +115,7 @@ void main() {
       ),
       '97694 / 128006  76.32%  (1784 / 31518 5.66%)',
     );
-    expect(
-      readerProgressLabel(current: 10, total: 100),
-      '10 / 100  10.00%',
-    );
+    expect(readerProgressLabel(current: 10, total: 100), '10 / 100  10.00%');
     expect(
       readerProgressLabel(
         current: 10,

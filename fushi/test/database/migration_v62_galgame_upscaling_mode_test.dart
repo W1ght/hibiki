@@ -17,7 +17,8 @@ import 'package:fushi_core/fushi_core.dart';
 void main() {
   /// v59 shape 的建库脚本。[withUpscalingMode] 为 true 时**提前**建出新列，
   /// 用来复现「迁移在同一形状上重复跑」的幂等场景（③）。
-  String galgamesDdl({required bool withUpscalingMode}) => '''
+  String galgamesDdl({required bool withUpscalingMode}) =>
+      '''
 CREATE TABLE galgames (
   id TEXT NOT NULL PRIMARY KEY,
   name TEXT NOT NULL,
@@ -102,12 +103,16 @@ CREATE TABLE galgame_tag_mappings (
 
     final version = await db.customSelect('PRAGMA user_version').getSingle();
     expect(version.read<int>('user_version'), db.schemaVersion);
-    expect(db.schemaVersion, 96,
-        reason: 'v62 给 galgames 加 upscaling_mode（每游戏窗口超分档位）');
+    expect(
+      db.schemaVersion,
+      96,
+      reason: 'v62 给 galgames 加 upscaling_mode（每游戏窗口超分档位）',
+    );
 
     // 列真的建出来了（不只是 Dart 侧读到默认值）。
-    final List<QueryRow> columns =
-        await db.customSelect('PRAGMA table_info(galgames)').get();
+    final List<QueryRow> columns = await db
+        .customSelect('PRAGMA table_info(galgames)')
+        .get();
     expect(
       columns.map((QueryRow r) => r.read<String>('name')),
       contains('upscaling_mode'),
@@ -124,8 +129,11 @@ CREATE TABLE galgame_tag_mappings (
 
     // 关键的向后兼容断言：老行的新列是空串 = 用户没设过 = 解析层回落到关闭。
     // 老用户绝不能因为一次升级就被莫名打开超分。
-    expect(legacy.upscalingMode, '',
-        reason: '既有行回填空串 = 未设置 = 超分关闭 = Never break userspace');
+    expect(
+      legacy.upscalingMode,
+      '',
+      reason: '既有行回填空串 = 未设置 = 超分关闭 = Never break userspace',
+    );
   });
 
   test('v62：档位字符串原样往返，DAO 单列写入不碰其它列', () async {
@@ -146,21 +154,25 @@ CREATE TABLE galgame_tag_mappings (
 
     // 整行 upsert 省略该列时是 `Value.absent()`，UPDATE 分支**不碰**这一列
     // （drift 语义）。钉住它，免得有人以为「不传 = 清空」。
-    await db.upsertGalgame(GalgamesCompanion.insert(
-      id: 'legacy_game',
-      name: '旧游戏',
-      exePath: r'Z:\vn\game.exe',
-      workdir: r'Z:\vn',
-      upscalingMode: const Value<String>('off'),
-      addedAt: 1700000000000,
-    ));
-    await db.upsertGalgame(GalgamesCompanion.insert(
-      id: 'legacy_game',
-      name: '旧游戏',
-      exePath: r'Z:\vn\game.exe',
-      workdir: r'Z:\vn',
-      addedAt: 1700000000000,
-    ));
+    await db.upsertGalgame(
+      GalgamesCompanion.insert(
+        id: 'legacy_game',
+        name: '旧游戏',
+        exePath: r'Z:\vn\game.exe',
+        workdir: r'Z:\vn',
+        upscalingMode: const Value<String>('off'),
+        addedAt: 1700000000000,
+      ),
+    );
+    await db.upsertGalgame(
+      GalgamesCompanion.insert(
+        id: 'legacy_game',
+        name: '旧游戏',
+        exePath: r'Z:\vn\game.exe',
+        workdir: r'Z:\vn',
+        addedAt: 1700000000000,
+      ),
+    );
     row = (await db.getGalgame('legacy_game'))!;
     expect(row.upscalingMode, 'off');
   });
@@ -179,8 +191,9 @@ CREATE TABLE galgame_tag_mappings (
     expect(legacy.launchArgs, '-windowed');
 
     // 列只有一份，没被建两遍。
-    final List<QueryRow> columns =
-        await db.customSelect('PRAGMA table_info(galgames)').get();
+    final List<QueryRow> columns = await db
+        .customSelect('PRAGMA table_info(galgames)')
+        .get();
     expect(
       columns
           .map((QueryRow r) => r.read<String>('name'))
@@ -193,14 +206,19 @@ CREATE TABLE galgame_tag_mappings (
     final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
 
-    await db.upsertGalgame(GalgamesCompanion.insert(
-      id: 'fresh',
-      name: 'fresh',
-      exePath: r'Z:\f\f.exe',
-      workdir: r'Z:\f',
-      addedAt: 1700000000000,
-    ));
-    expect((await db.getGalgame('fresh'))!.upscalingMode, '',
-        reason: 'onCreate 的 createAll 必须建出该列，且默认未设置 = 超分关闭');
+    await db.upsertGalgame(
+      GalgamesCompanion.insert(
+        id: 'fresh',
+        name: 'fresh',
+        exePath: r'Z:\f\f.exe',
+        workdir: r'Z:\f',
+        addedAt: 1700000000000,
+      ),
+    );
+    expect(
+      (await db.getGalgame('fresh'))!.upscalingMode,
+      '',
+      reason: 'onCreate 的 createAll 必须建出该列，且默认未设置 = 超分关闭',
+    );
   });
 }

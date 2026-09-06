@@ -28,9 +28,9 @@ void main() {
       'fushi-voice-dump-index-test-',
     );
     entry = (String name) => _entry(
-          name,
-          path: '${tempDirectory.path}${Platform.pathSeparator}$name',
-        );
+      name,
+      path: '${tempDirectory.path}${Platform.pathSeparator}$name',
+    );
     changes = StreamController<FileSystemEvent>.broadcast(sync: true);
     nextEntries = <GalVoiceDumpEntry>[];
     incrementalEntries = <String, GalVoiceDumpEntry>{};
@@ -168,10 +168,7 @@ void main() {
         Completer<List<GalVoiceDumpEntry>>();
     final Completer<List<GalVoiceDumpEntry>> newScan =
         Completer<List<GalVoiceDumpEntry>>();
-    blockedScans.addAll(<Completer<List<GalVoiceDumpEntry>>>[
-      oldScan,
-      newScan,
-    ]);
+    blockedScans.addAll(<Completer<List<GalVoiceDumpEntry>>>[oldScan, newScan]);
 
     final Future<void> oldStart = index.startSession();
     await _waitUntil(() => scanCalls == 1);
@@ -243,8 +240,11 @@ void main() {
     changes.add(FileSystemCreateEvent(added.path, false));
     await index.synchronize();
 
-    expect(scanCalls, 1,
-        reason: 'normal file events must not list/stat all N files');
+    expect(
+      scanCalls,
+      1,
+      reason: 'normal file events must not list/stat all N files',
+    );
     expect(entryLoadCalls, 1, reason: 'only the changed path may be statted');
     expect(index.snapshot.entries, hasLength(1001));
     expect(index.snapshot.byName, contains(added.name));
@@ -272,10 +272,10 @@ void main() {
 
     for (final ({int timestampMs, int? eventId}) query
         in <({int timestampMs, int? eventId})>[
-      (timestampMs: 10000, eventId: 7),
-      (timestampMs: 10000, eventId: null),
-      (timestampMs: 12000, eventId: null),
-    ]) {
+          (timestampMs: 10000, eventId: 7),
+          (timestampMs: 10000, eventId: null),
+          (timestampMs: 12000, eventId: null),
+        ]) {
       expect(
         index.findPairedResourceNames(
           textTsMs: query.timestampMs,
@@ -296,9 +296,9 @@ void main() {
     await index.synchronize();
     for (final ({int timestampMs, int? eventId}) query
         in <({int timestampMs, int? eventId})>[
-      (timestampMs: 10000, eventId: 16),
-      (timestampMs: 10000, eventId: null),
-    ]) {
+          (timestampMs: 10000, eventId: 16),
+          (timestampMs: 10000, eventId: null),
+        ]) {
       expect(
         index.findPairedResourceNames(
           textTsMs: query.timestampMs,

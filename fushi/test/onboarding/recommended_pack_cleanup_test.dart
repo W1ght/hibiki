@@ -54,8 +54,9 @@ void main() {
       await RecommendedPackDownloader.cleanupIfImported(packDir);
 
       expect(
-          File(p.join(packDir.path, 'fushi_recommended_pack.zip')).existsSync(),
-          isTrue);
+        File(p.join(packDir.path, 'fushi_recommended_pack.zip')).existsSync(),
+        isTrue,
+      );
     });
 
     test('包目录压根不存在：不抛（启动路径上跑，抛了就是启动失败）', () async {
@@ -66,10 +67,12 @@ void main() {
 
   group('BUG-2109 守卫：收尾必须挂在启动必经路径上', () {
     final File appModel = File('lib/src/models/app_model.dart');
-    final File controller =
-        File('lib/src/onboarding/recommended_pack_download_controller.dart');
-    final File wizard =
-        File('lib/src/pages/implementations/onboarding_wizard_page.dart');
+    final File controller = File(
+      'lib/src/onboarding/recommended_pack_download_controller.dart',
+    );
+    final File wizard = File(
+      'lib/src/pages/implementations/onboarding_wizard_page.dart',
+    );
 
     test('AppModel 初始化持有包目录收尾调用', () {
       expect(appModel.existsSync(), isTrue, reason: '守卫锚点文件不在了，先修锚点再改断言');
@@ -89,14 +92,16 @@ void main() {
           'recommendedPackDownloadController',
         ),
         isTrue,
-        reason: '推荐包收尾删除必须挂在启动必经路径（AppModel 初始化）上；'
+        reason:
+            '推荐包收尾删除必须挂在启动必经路径（AppModel 初始化）上；'
             '任何「只在某个页面打开时才清理」的挂法都会被 onboarding_completed '
             '在导入时被整层替换成 true 而永不执行',
       );
       expect(
         containsCodeLine(appModel.readAsStringSync(), '.prepareDiskState()'),
         isTrue,
-        reason: '包目录收尾（含 cleanupIfImported）由 prepareDiskState 承担，'
+        reason:
+            '包目录收尾（含 cleanupIfImported）由 prepareDiskState 承担，'
             'AppModel 初始化必须调它',
       );
     });
@@ -110,7 +115,8 @@ void main() {
       expect(
         containsCodeLine(body, 'RecommendedPackDownloader.cleanupIfImported('),
         isTrue,
-        reason: 'prepareDiskState 是启动路径上唯一的收尾入口；它不删，'
+        reason:
+            'prepareDiskState 是启动路径上唯一的收尾入口；它不删，'
             '9.5 GB 就永久留在盘上',
       );
     });

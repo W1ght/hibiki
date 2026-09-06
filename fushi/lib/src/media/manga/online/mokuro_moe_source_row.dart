@@ -41,7 +41,7 @@ class MokuroMoeSourceRow extends ConsumerWidget {
           value: isMokuroMoeSourceEnabled(appModel),
           onChanged: ready
               ? (bool value) =>
-                  unawaited(appModel.setMangaOnlineCatalogEnabled(value))
+                    unawaited(appModel.setMangaOnlineCatalogEnabled(value))
               : null,
         ),
         title: const Text('Mokuro.moe'),

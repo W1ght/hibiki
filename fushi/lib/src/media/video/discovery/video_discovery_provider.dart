@@ -32,8 +32,8 @@ class VideoMediaReference {
     this.anilistId,
     this.bangumiId,
     Map<String, String> externalIds = const <String, String>{},
-  })  : aliases = List<String>.unmodifiable(aliases),
-        externalIds = Map<String, String>.unmodifiable(externalIds);
+  }) : aliases = List<String>.unmodifiable(aliases),
+       externalIds = Map<String, String>.unmodifiable(externalIds);
 
   final String providerId;
   final String mediaId;
@@ -100,8 +100,8 @@ class VideoDiscoveryRequest {
     this.year,
     this.genre,
     this.region,
-  })  : assert(page > 0),
-        assert(pageSize > 0);
+  }) : assert(page > 0),
+       assert(pageSize > 0);
 
   /// null means no category filter (the UI's "all" sentinel).
   final VideoDiscoveryCategory? category;
@@ -136,7 +136,8 @@ class VideoDiscoveryItem {
     String? externalId,
   }) {
     final String providerId = work.provider.name;
-    final String resolvedId = externalId ??
+    final String resolvedId =
+        externalId ??
         _metadataId(work, providerId) ??
         _defaultMetadataId(work) ??
         (throw ArgumentError('metadata work has no provider identity'));
@@ -209,17 +210,17 @@ class VideoDiscoveryCapabilities {
   VideoDiscoveryCapabilities({
     Iterable<VideoDiscoveryCategory> categories =
         const <VideoDiscoveryCategory>{
-      VideoDiscoveryCategory.movie,
-      VideoDiscoveryCategory.tv,
-      VideoDiscoveryCategory.anime,
-    },
+          VideoDiscoveryCategory.movie,
+          VideoDiscoveryCategory.tv,
+          VideoDiscoveryCategory.anime,
+        },
     Iterable<VideoDiscoveryFeed> feeds = const <VideoDiscoveryFeed>{
-      VideoDiscoveryFeed.popular
+      VideoDiscoveryFeed.popular,
     },
     this.supportsSearch = true,
     this.supportsPaging = true,
-  })  : categories = Set<VideoDiscoveryCategory>.unmodifiable(categories),
-        feeds = Set<VideoDiscoveryFeed>.unmodifiable(feeds);
+  }) : categories = Set<VideoDiscoveryCategory>.unmodifiable(categories),
+       feeds = Set<VideoDiscoveryFeed>.unmodifiable(feeds);
 
   final Set<VideoDiscoveryCategory> categories;
   final Set<VideoDiscoveryFeed> feeds;

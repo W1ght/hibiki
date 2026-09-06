@@ -128,19 +128,19 @@ class GalgameLibraryView {
 
   /// 清掉全部筛选（保留排序，搜索由 UI 自己清）。
   GalgameLibraryView clearFilters() => GalgameLibraryView(
-        search: search,
-        sortField: sortField,
-        ascending: ascending,
-      );
+    search: search,
+    sortField: sortField,
+    ascending: ascending,
+  );
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'sort': sortField.key,
-        'asc': ascending,
-        if (status != null) 'status': status!.value,
-        'local': localFilter.key,
-        if (tags.isNotEmpty) 'tags': tags.toList(growable: false),
-        if (hideNsfw) 'hideNsfw': true,
-      };
+    'sort': sortField.key,
+    'asc': ascending,
+    if (status != null) 'status': status!.value,
+    'local': localFilter.key,
+    if (tags.isNotEmpty) 'tags': tags.toList(growable: false),
+    if (hideNsfw) 'hideNsfw': true,
+  };
 
   String encode() => jsonEncode(toJson());
 
@@ -233,7 +233,11 @@ int compareGalgameEntries(
     case GalgameSortField.releaseDate:
       // 'YYYY-MM-DD' 的字典序即时间序。
       return _compareNullable<String>(
-          a.effectiveReleaseDate, b.effectiveReleaseDate, dir, tie);
+        a.effectiveReleaseDate,
+        b.effectiveReleaseDate,
+        dir,
+        tie,
+      );
     case GalgameSortField.lastPlayed:
       return _compareNullable<int>(
         a.lastPlayedMs == 0 ? null : a.lastPlayedMs,
@@ -262,8 +266,9 @@ int _compareNullable<T extends Comparable<Object>>(
 }
 
 int _compareTitleThenId(GalgameEntry a, GalgameEntry b) {
-  final int c = normalizeGalgameSearchText(a.displayName)
-      .compareTo(normalizeGalgameSearchText(b.displayName));
+  final int c = normalizeGalgameSearchText(
+    a.displayName,
+  ).compareTo(normalizeGalgameSearchText(b.displayName));
   return c == 0 ? a.id.compareTo(b.id) : c;
 }
 
@@ -285,12 +290,14 @@ List<GalgameEntry> applyGalgameLibraryView(
           matchesGalgameSearch(game, view.search))
         game,
   ];
-  out.sort((GalgameEntry a, GalgameEntry b) => compareGalgameEntries(
-        a,
-        b,
-        field: view.sortField,
-        ascending: view.ascending,
-      ));
+  out.sort(
+    (GalgameEntry a, GalgameEntry b) => compareGalgameEntries(
+      a,
+      b,
+      field: view.sortField,
+      ascending: view.ascending,
+    ),
+  );
   return out;
 }
 
@@ -300,7 +307,10 @@ List<String> collectGalgameTags(List<GalgameEntry> games) {
     for (final GalgameEntry game in games) ...game.tags,
   };
   final List<String> out = tags.toList()
-    ..sort((String a, String b) =>
-        normalizeGalgameSearchText(a).compareTo(normalizeGalgameSearchText(b)));
+    ..sort(
+      (String a, String b) => normalizeGalgameSearchText(
+        a,
+      ).compareTo(normalizeGalgameSearchText(b)),
+    );
   return out;
 }

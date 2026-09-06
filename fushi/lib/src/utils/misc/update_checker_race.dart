@@ -182,7 +182,8 @@ Future<bool> _shouldRaceCandidates({
   if (connectionCount <= 1) return false;
   final int? knownSize = asset.sizeBytes ?? metadata?.sizeBytes;
   if (knownSize != null) {
-    final bool permitsSegmentation = planDownloadSegments(
+    final bool permitsSegmentation =
+        planDownloadSegments(
           totalBytes: knownSize,
           connectionCount: connectionCount,
           minSegmentBytes: minSegmentBytes,
@@ -276,8 +277,10 @@ Future<List<String>?> raceSelectFastestCandidate({
     };
     final UpdateDownloadResponse response;
     try {
-      response =
-          await openUrl(Uri.parse(url), headers).timeout(_kFirstByteTimeout);
+      response = await openUrl(
+        Uri.parse(url),
+        headers,
+      ).timeout(_kFirstByteTimeout);
     } catch (_) {
       // 探针失败（连不上 / 超时 / 非 206 前出错）：不参与胜出，留给串行回退处理。
       return;
@@ -290,12 +293,14 @@ Future<List<String>?> raceSelectFastestCandidate({
         ? _contentRangeTotal(response.header(HttpHeaders.contentRangeHeader))
         : null;
     if (total != null && total > 0) {
-      admit(UpdateProbeOutcome(
-        url: url,
-        total: total,
-        elapsed: watch.elapsed,
-        isDirect: url == directUrl,
-      ));
+      admit(
+        UpdateProbeOutcome(
+          url: url,
+          total: total,
+          elapsed: watch.elapsed,
+          isDirect: url == directUrl,
+        ),
+      );
     }
     await drainQuietly(response); // 非 206 / 拿到总大小都要 drain 回收 body。
   }

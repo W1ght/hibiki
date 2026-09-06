@@ -118,13 +118,12 @@ class ProfileUiState {
     int? activeProfileId,
     Map<String, int>? mediaTypeBindings,
     bool? isLoading,
-  }) =>
-      ProfileUiState(
-        profiles: profiles ?? this.profiles,
-        activeProfileId: activeProfileId ?? this.activeProfileId,
-        mediaTypeBindings: mediaTypeBindings ?? this.mediaTypeBindings,
-        isLoading: isLoading ?? this.isLoading,
-      );
+  }) => ProfileUiState(
+    profiles: profiles ?? this.profiles,
+    activeProfileId: activeProfileId ?? this.activeProfileId,
+    mediaTypeBindings: mediaTypeBindings ?? this.mediaTypeBindings,
+    isLoading: isLoading ?? this.isLoading,
+  );
 }
 
 class ProfileViewModel extends StateNotifier<ProfileUiState> {
@@ -148,9 +147,7 @@ class ProfileViewModel extends StateNotifier<ProfileUiState> {
   final Future<void> Function() _onProfileApplied;
   final ProfileDraftCoordinator _profileDraftCoordinator;
 
-  Future<T> _whileInvalidatingProfileDrafts<T>(
-    Future<T> Function() action,
-  ) =>
+  Future<T> _whileInvalidatingProfileDrafts<T>(Future<T> Function() action) =>
       _profileDraftCoordinator.runProfileChange(action);
 
   Future<void> _load() async {
@@ -185,8 +182,10 @@ class ProfileViewModel extends StateNotifier<ProfileUiState> {
         await switchProfile(resolvedId);
       }
     } catch (e, st) {
-      debugPrint('[profile] auto-apply "${mediaType.dbValue}" binding failed '
-          '(non-fatal): $e\n$st');
+      debugPrint(
+        '[profile] auto-apply "${mediaType.dbValue}" binding failed '
+        '(non-fatal): $e\n$st',
+      );
     }
   }
 
@@ -216,9 +215,7 @@ class ProfileViewModel extends StateNotifier<ProfileUiState> {
       await _repo.snapshotCurrentSettings(sourceId);
     }
     await _repo.copyProfile(sourceId, newName);
-    state = state.copyWith(
-      profiles: await _repo.getAllProfiles(),
-    );
+    state = state.copyWith(profiles: await _repo.getAllProfiles());
   }
 
   Future<void> renameProfile(int id, String name) async {
@@ -227,7 +224,7 @@ class ProfileViewModel extends StateNotifier<ProfileUiState> {
   }
 
   Future<void> deleteProfile(int id) => _profileDraftCoordinator
-          ._runProfileMutation((_ProfileDraftMutation mutation) async {
+      ._runProfileMutation((_ProfileDraftMutation mutation) async {
         // This repository read must happen after acquiring the same lock used
         // by switch/create/Save. State may still describe the previous Profile
         // while an earlier switch has already updated the repository.
@@ -247,7 +244,9 @@ class ProfileViewModel extends StateNotifier<ProfileUiState> {
       });
 
   Future<void> setMediaTypeBinding(
-      ProfileMediaKind mediaType, int? profileId) async {
+    ProfileMediaKind mediaType,
+    int? profileId,
+  ) async {
     if (profileId == null) {
       await _repo.removeMediaTypeBinding(mediaType);
     } else {
@@ -264,10 +263,7 @@ class ProfileViewModel extends StateNotifier<ProfileUiState> {
 
   /// 把指定 Profile 序列化成可分享的 JSON（凭据已剔除、字体绝对路径已剥离）。
   /// [fontsRootDirectory] 是本机 `custom_fonts/` 根，用于 A1 字体路径剥离。
-  Future<String> exportProfile(
-    int profileId, {
-    String? fontsRootDirectory,
-  }) =>
+  Future<String> exportProfile(int profileId, {String? fontsRootDirectory}) =>
       _repo.exportProfileToJson(
         profileId,
         fontsRootDirectory: fontsRootDirectory,
@@ -282,31 +278,31 @@ class ProfileViewModel extends StateNotifier<ProfileUiState> {
     String json, {
     ProfileImportMode mode = ProfileImportMode.createNew,
     int? targetProfileId,
-  }) =>
-      _profileDraftCoordinator
-          ._runProfileMutation((_ProfileDraftMutation mutation) async {
-        // Do not decide this from [state] before entering the lock: a queued
-        // switch can make [targetProfileId] active before the overwrite runs.
-        final int activeProfileId = await _repo.getActiveProfileId();
-        final bool overwritesActiveProfile =
-            mode == ProfileImportMode.overwrite &&
-                targetProfileId == activeProfileId;
-        if (overwritesActiveProfile) {
-          mutation.invalidateDrafts();
-        }
+  }) => _profileDraftCoordinator._runProfileMutation((
+    _ProfileDraftMutation mutation,
+  ) async {
+    // Do not decide this from [state] before entering the lock: a queued
+    // switch can make [targetProfileId] active before the overwrite runs.
+    final int activeProfileId = await _repo.getActiveProfileId();
+    final bool overwritesActiveProfile =
+        mode == ProfileImportMode.overwrite &&
+        targetProfileId == activeProfileId;
+    if (overwritesActiveProfile) {
+      mutation.invalidateDrafts();
+    }
 
-        final int writtenId = await _repo.importProfileFromJson(
-          json,
-          mode: mode,
-          targetProfileId: targetProfileId,
-        );
-        state = state.copyWith(profiles: await _repo.getAllProfiles());
-        if (overwritesActiveProfile && writtenId == activeProfileId) {
-          await _repo.applyProfile(writtenId);
-          await _onProfileApplied();
-        }
-        return writtenId;
-      });
+    final int writtenId = await _repo.importProfileFromJson(
+      json,
+      mode: mode,
+      targetProfileId: targetProfileId,
+    );
+    state = state.copyWith(profiles: await _repo.getAllProfiles());
+    if (overwritesActiveProfile && writtenId == activeProfileId) {
+      await _repo.applyProfile(writtenId);
+      await _onProfileApplied();
+    }
+    return writtenId;
+  });
 }
 
 final fushiDatabaseProvider = Provider<FushiDatabase>((ref) {
@@ -338,27 +334,30 @@ final profileDraftCoordinatorProvider = Provider<ProfileDraftCoordinator>(
 
 final profileViewModelProvider =
     StateNotifierProvider<ProfileViewModel, ProfileUiState>((ref) {
-  final repo = ref.watch(profileRepositoryProvider);
-  final ProfileDraftCoordinator profileDraftCoordinator =
-      ref.watch(profileDraftCoordinatorProvider);
-  Future<void> onApplied() async {
-    final PlatformServices platformServices =
-        ref.read(platformServicesProvider);
-    final AnkiSettings ankiSettings =
-        await ref.read(ankiRepositoryProvider).loadSettings();
-    platformServices.setUseAnkiConnectOnMobile(
-      ankiSettings.useAnkiConnectOnMobile,
-      apiKey: ankiSettings.ankiConnectApiKey,
-    );
-    ref.invalidate(ankiRepositoryProvider);
-    final appModel = ref.read(appProvider);
-    await appModel.refreshPrefCache();
-    // TODO-1077: the profile switch replaced the dictionary_metadata table, so
-    // reload the dictionary cache + native engine to pick up the new enable
-    // list / order / language visibility for the switched-to profile.
-    await appModel.reloadDictionariesFromDb();
-    await ReaderFushiSource.readerSettings?.refreshFromDb();
-  }
+      final repo = ref.watch(profileRepositoryProvider);
+      final ProfileDraftCoordinator profileDraftCoordinator = ref.watch(
+        profileDraftCoordinatorProvider,
+      );
+      Future<void> onApplied() async {
+        final PlatformServices platformServices = ref.read(
+          platformServicesProvider,
+        );
+        final AnkiSettings ankiSettings = await ref
+            .read(ankiRepositoryProvider)
+            .loadSettings();
+        platformServices.setUseAnkiConnectOnMobile(
+          ankiSettings.useAnkiConnectOnMobile,
+          apiKey: ankiSettings.ankiConnectApiKey,
+        );
+        ref.invalidate(ankiRepositoryProvider);
+        final appModel = ref.read(appProvider);
+        await appModel.refreshPrefCache();
+        // TODO-1077: the profile switch replaced the dictionary_metadata table, so
+        // reload the dictionary cache + native engine to pick up the new enable
+        // list / order / language visibility for the switched-to profile.
+        await appModel.reloadDictionariesFromDb();
+        await ReaderFushiSource.readerSettings?.refreshFromDb();
+      }
 
-  return ProfileViewModel(repo, onApplied, profileDraftCoordinator);
-});
+      return ProfileViewModel(repo, onApplied, profileDraftCoordinator);
+    });

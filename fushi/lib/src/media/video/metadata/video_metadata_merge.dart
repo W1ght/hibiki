@@ -74,8 +74,8 @@ VideoMetadataWork remapStandaloneVideoMetadataSeason(
   final VideoMetadataSeason season = work.seasons.single;
   VideoMetadataImage remapImage(VideoMetadataImage image) =>
       image.seasonNumber == 1
-          ? image.copyWith(seasonNumber: localSeasonNumber)
-          : image;
+      ? image.copyWith(seasonNumber: localSeasonNumber)
+      : image;
   return work.copyWith(
     images: <VideoMetadataImage>[
       for (final VideoMetadataImage image in work.images) remapImage(image),
@@ -108,9 +108,9 @@ List<VideoMetadataSeason> _mergeSeasons(
 ) {
   final Map<int, VideoMetadataSeason> supplementByNumber =
       <int, VideoMetadataSeason>{
-    for (final VideoMetadataSeason season in supplement)
-      season.seasonNumber: season,
-  };
+        for (final VideoMetadataSeason season in supplement)
+          season.seasonNumber: season,
+      };
   final List<VideoMetadataSeason> result = <VideoMetadataSeason>[];
   final Set<int> consumed = <int>{};
   for (final VideoMetadataSeason season in primary) {
@@ -122,25 +122,26 @@ List<VideoMetadataSeason> _mergeSeasons(
   for (final VideoMetadataSeason season in supplement) {
     if (!consumed.contains(season.seasonNumber)) result.add(season);
   }
-  result.sort((VideoMetadataSeason a, VideoMetadataSeason b) =>
-      a.seasonNumber.compareTo(b.seasonNumber));
+  result.sort(
+    (VideoMetadataSeason a, VideoMetadataSeason b) =>
+        a.seasonNumber.compareTo(b.seasonNumber),
+  );
   return result;
 }
 
 VideoMetadataSeason _mergeSeason(
   VideoMetadataSeason primary,
   VideoMetadataSeason supplement,
-) =>
-    primary.copyWith(
-      plot: primary.plot ?? supplement.plot,
-      airDate: primary.airDate ?? supplement.airDate,
-      year: primary.year ?? supplement.year,
-      episodeCount: primary.episodeCount ?? supplement.episodeCount,
-      rating: primary.rating ?? supplement.rating,
-      ids: _mergeIds(primary.ids, supplement.ids),
-      images: _mergeImagesFillingMissing(primary.images, supplement.images),
-      episodes: _mergeEpisodes(primary.episodes, supplement.episodes),
-    );
+) => primary.copyWith(
+  plot: primary.plot ?? supplement.plot,
+  airDate: primary.airDate ?? supplement.airDate,
+  year: primary.year ?? supplement.year,
+  episodeCount: primary.episodeCount ?? supplement.episodeCount,
+  rating: primary.rating ?? supplement.rating,
+  ids: _mergeIds(primary.ids, supplement.ids),
+  images: _mergeImagesFillingMissing(primary.images, supplement.images),
+  episodes: _mergeEpisodes(primary.episodes, supplement.episodes),
+);
 
 List<VideoMetadataEpisode> _mergeEpisodes(
   Iterable<VideoMetadataEpisode> primary,
@@ -148,9 +149,9 @@ List<VideoMetadataEpisode> _mergeEpisodes(
 ) {
   final Map<int, VideoMetadataEpisode> supplementByNumber =
       <int, VideoMetadataEpisode>{
-    for (final VideoMetadataEpisode episode in supplement)
-      episode.episodeNumber: episode,
-  };
+        for (final VideoMetadataEpisode episode in supplement)
+          episode.episodeNumber: episode,
+      };
   final List<VideoMetadataEpisode> result = <VideoMetadataEpisode>[];
   final Set<int> consumed = <int>{};
   for (final VideoMetadataEpisode episode in primary) {
@@ -162,27 +163,28 @@ List<VideoMetadataEpisode> _mergeEpisodes(
   for (final VideoMetadataEpisode episode in supplement) {
     if (!consumed.contains(episode.episodeNumber)) result.add(episode);
   }
-  result.sort((VideoMetadataEpisode a, VideoMetadataEpisode b) =>
-      a.episodeNumber.compareTo(b.episodeNumber));
+  result.sort(
+    (VideoMetadataEpisode a, VideoMetadataEpisode b) =>
+        a.episodeNumber.compareTo(b.episodeNumber),
+  );
   return result;
 }
 
 VideoMetadataEpisode _mergeEpisode(
   VideoMetadataEpisode primary,
   VideoMetadataEpisode supplement,
-) =>
-    primary.copyWith(
-      plot: primary.plot ?? supplement.plot,
-      airDate: primary.airDate ?? supplement.airDate,
-      year: primary.year ?? supplement.year,
-      absoluteNumber: primary.absoluteNumber ?? supplement.absoluteNumber,
-      rating: primary.rating ?? supplement.rating,
-      ratingVotes: primary.ratingVotes ?? supplement.ratingVotes,
-      runtimeMinutes: primary.runtimeMinutes ?? supplement.runtimeMinutes,
-      ids: _mergeIds(primary.ids, supplement.ids),
-      credits: _mergeCredits(primary.credits, supplement.credits),
-      images: _mergeImagesFillingMissing(primary.images, supplement.images),
-    );
+) => primary.copyWith(
+  plot: primary.plot ?? supplement.plot,
+  airDate: primary.airDate ?? supplement.airDate,
+  year: primary.year ?? supplement.year,
+  absoluteNumber: primary.absoluteNumber ?? supplement.absoluteNumber,
+  rating: primary.rating ?? supplement.rating,
+  ratingVotes: primary.ratingVotes ?? supplement.ratingVotes,
+  runtimeMinutes: primary.runtimeMinutes ?? supplement.runtimeMinutes,
+  ids: _mergeIds(primary.ids, supplement.ids),
+  credits: _mergeCredits(primary.credits, supplement.credits),
+  images: _mergeImagesFillingMissing(primary.images, supplement.images),
+);
 
 List<VideoMetadataId> _mergeIds(
   Iterable<VideoMetadataId> primary,
@@ -225,59 +227,53 @@ List<VideoMetadataCredit> _mergeCredits(
 VideoMetadataCredit _mergeCredit(
   VideoMetadataCredit primary,
   VideoMetadataCredit supplement,
-) =>
-    primary.copyWith(
-      person: _mergePerson(primary.person, supplement.person),
-      character: switch ((primary.character, supplement.character)) {
-        (
-          final VideoMetadataCharacter value,
-          final VideoMetadataCharacter other
-        ) =>
-          _mergeCharacter(value, other),
-        (final VideoMetadataCharacter value, null) => value,
-        (null, final VideoMetadataCharacter value) => value,
-        (null, null) => null,
-      },
-      language: primary.language ?? supplement.language,
-      roleName: primary.roleName ?? supplement.roleName,
-      department: primary.department ?? supplement.department,
-      job: primary.job ?? supplement.job,
-      providerCreditId: primary.providerCreditId ?? supplement.providerCreditId,
-    );
+) => primary.copyWith(
+  person: _mergePerson(primary.person, supplement.person),
+  character: switch ((primary.character, supplement.character)) {
+    (final VideoMetadataCharacter value, final VideoMetadataCharacter other) =>
+      _mergeCharacter(value, other),
+    (final VideoMetadataCharacter value, null) => value,
+    (null, final VideoMetadataCharacter value) => value,
+    (null, null) => null,
+  },
+  language: primary.language ?? supplement.language,
+  roleName: primary.roleName ?? supplement.roleName,
+  department: primary.department ?? supplement.department,
+  job: primary.job ?? supplement.job,
+  providerCreditId: primary.providerCreditId ?? supplement.providerCreditId,
+);
 
 VideoMetadataPerson _mergePerson(
   VideoMetadataPerson primary,
   VideoMetadataPerson supplement,
-) =>
-    primary.copyWith(
-      id: primary.id ?? supplement.id,
-      originalName: primary.originalName ?? supplement.originalName,
-      biography: primary.biography ?? supplement.biography,
-      birthday: primary.birthday ?? supplement.birthday,
-      deathday: primary.deathday ?? supplement.deathday,
-      gender: primary.gender ?? supplement.gender,
-      placeOfBirth: primary.placeOfBirth ?? supplement.placeOfBirth,
-      profileUrl: primary.profileUrl ?? supplement.profileUrl,
-      ids: _mergeIds(primary.ids, supplement.ids),
-    );
+) => primary.copyWith(
+  id: primary.id ?? supplement.id,
+  originalName: primary.originalName ?? supplement.originalName,
+  biography: primary.biography ?? supplement.biography,
+  birthday: primary.birthday ?? supplement.birthday,
+  deathday: primary.deathday ?? supplement.deathday,
+  gender: primary.gender ?? supplement.gender,
+  placeOfBirth: primary.placeOfBirth ?? supplement.placeOfBirth,
+  profileUrl: primary.profileUrl ?? supplement.profileUrl,
+  ids: _mergeIds(primary.ids, supplement.ids),
+);
 
 VideoMetadataCharacter _mergeCharacter(
   VideoMetadataCharacter primary,
   VideoMetadataCharacter supplement,
-) =>
-    primary.copyWith(
-      id: primary.id ?? supplement.id,
-      originalName: primary.originalName ?? supplement.originalName,
-      description: primary.description ?? supplement.description,
-      imageUrl: primary.imageUrl ?? supplement.imageUrl,
-      ids: _mergeIds(primary.ids, supplement.ids),
-    );
+) => primary.copyWith(
+  id: primary.id ?? supplement.id,
+  originalName: primary.originalName ?? supplement.originalName,
+  description: primary.description ?? supplement.description,
+  imageUrl: primary.imageUrl ?? supplement.imageUrl,
+  ids: _mergeIds(primary.ids, supplement.ids),
+);
 
 String _creditKey(VideoMetadataCredit credit) => <String>[
-      credit.kind.name,
-      _textKey(credit.person.name),
-      _textKey(credit.roleName ?? credit.character?.name ?? ''),
-    ].join('|');
+  credit.kind.name,
+  _textKey(credit.person.name),
+  _textKey(credit.roleName ?? credit.character?.name ?? ''),
+].join('|');
 
 String _textKey(String value) =>
     value.trim().toLowerCase().replaceAll(RegExp(r'\s+'), ' ');
@@ -303,10 +299,10 @@ List<VideoMetadataImage> _mergeImagesFillingMissing(
 }
 
 String _imageSlotKey(VideoMetadataImage image) => <Object?>[
-      image.seasonNumber,
-      image.episodeNumber,
-      image.kind.name,
-    ].join(':');
+  image.seasonNumber,
+  image.episodeNumber,
+  image.kind.name,
+].join(':');
 
 /// 每个层级/图种只选一张（背景图可多张）。候选先按评分、票数，再按
 /// `zh → en → 无语言 → 其它` 和 likes 排序。
@@ -322,8 +318,10 @@ List<VideoMetadataImage> selectVideoMetadataImages({
   final List<VideoMetadataImage> selected = <VideoMetadataImage>[];
   for (final List<VideoMetadataImage> preferred in primaryGroups.values) {
     if (preferred.isEmpty) continue;
-    preferred.sort((VideoMetadataImage a, VideoMetadataImage b) =>
-        _compareImages(a, b, languageOrder));
+    preferred.sort(
+      (VideoMetadataImage a, VideoMetadataImage b) =>
+          _compareImages(a, b, languageOrder),
+    );
     final bool isBackdrop =
         preferred.first.kind == VideoMetadataImageKind.backdrop;
     selected.addAll(preferred.take(isBackdrop ? maxBackdrops : 1));
@@ -331,8 +329,9 @@ List<VideoMetadataImage> selectVideoMetadataImages({
   selected.sort((VideoMetadataImage a, VideoMetadataImage b) {
     final int bySeason = (a.seasonNumber ?? -1).compareTo(b.seasonNumber ?? -1);
     if (bySeason != 0) return bySeason;
-    final int byEpisode =
-        (a.episodeNumber ?? -1).compareTo(b.episodeNumber ?? -1);
+    final int byEpisode = (a.episodeNumber ?? -1).compareTo(
+      b.episodeNumber ?? -1,
+    );
     if (byEpisode != 0) return byEpisode;
     return a.kind.index.compareTo(b.kind.index);
   });
@@ -372,8 +371,9 @@ int _compareImages(
   if (rating != 0) return rating;
   final int votes = (b.voteCount ?? -1).compareTo(a.voteCount ?? -1);
   if (votes != 0) return votes;
-  final int language =
-      languageRank(a.language).compareTo(languageRank(b.language));
+  final int language = languageRank(
+    a.language,
+  ).compareTo(languageRank(b.language));
   if (language != 0) return language;
   final int likes = (b.likes ?? -1).compareTo(a.likes ?? -1);
   if (likes != 0) return likes;

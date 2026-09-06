@@ -58,8 +58,8 @@ Future<CollectionAddOutcome> addMediaRefToCollection({
   final CollectionAddNotifier tell =
       notify ?? (String message) => FushiToast.show(msg: message);
   try {
-    final List<MediaCollectionItemRow> items =
-        await database.getCollectionItems(collectionId);
+    final List<MediaCollectionItemRow> items = await database
+        .getCollectionItems(collectionId);
     final bool already = items.any(
       (MediaCollectionItemRow it) =>
           it.mediaType == mediaRef.dbMediaType &&
@@ -220,11 +220,7 @@ class _CardDragFeedback extends StatelessWidget {
           elevation: 8,
           borderRadius: tokens.radii.cardRadius,
           clipBehavior: Clip.antiAlias,
-          child: SizedBox(
-            width: size.width,
-            height: size.height,
-            child: child,
-          ),
+          child: SizedBox(width: size.width, height: size.height, child: child),
         ),
       ),
     );
@@ -344,47 +340,50 @@ class _CollectionDropTargetState extends State<CollectionDropTarget> {
       onLeave: (_) {
         if (_hovering) setState(() => _hovering = false);
       },
-      builder: (
-        BuildContext context,
-        List<MediaRef?> candidateData,
-        List<dynamic> rejectedData,
-      ) {
-        return Stack(
-          children: <Widget>[
-            widget.child,
-            if (_hovering)
-              Positioned.fill(
-                // IgnorePointer：高亮罩只是反馈，不得吞掉行头 / 卡片本身的点击。
-                child: IgnorePointer(
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      color: eink ? null : hoverColor.withValues(alpha: 0.18),
-                      borderRadius:
-                          widget.borderRadius ?? tokens.radii.cardRadius,
-                      border: Border.all(
-                        color: hoverColor,
-                        width: tokens.spacing.gap / 4,
-                      ),
-                    ),
-                    child: Align(
-                      alignment: widget.alignment,
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: tokens.spacing.gap,
+      builder:
+          (
+            BuildContext context,
+            List<MediaRef?> candidateData,
+            List<dynamic> rejectedData,
+          ) {
+            return Stack(
+              children: <Widget>[
+                widget.child,
+                if (_hovering)
+                  Positioned.fill(
+                    // IgnorePointer：高亮罩只是反馈，不得吞掉行头 / 卡片本身的点击。
+                    child: IgnorePointer(
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          color: eink
+                              ? null
+                              : hoverColor.withValues(alpha: 0.18),
+                          borderRadius:
+                              widget.borderRadius ?? tokens.radii.cardRadius,
+                          border: Border.all(
+                            color: hoverColor,
+                            width: tokens.spacing.gap / 4,
+                          ),
                         ),
-                        child: Icon(
-                          Icons.library_add_outlined,
-                          color: hoverColor,
-                          size: 20,
+                        child: Align(
+                          alignment: widget.alignment,
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: tokens.spacing.gap,
+                            ),
+                            child: Icon(
+                              Icons.library_add_outlined,
+                              color: hoverColor,
+                              size: 20,
+                            ),
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-              ),
-          ],
-        );
-      },
+              ],
+            );
+          },
     );
   }
 }

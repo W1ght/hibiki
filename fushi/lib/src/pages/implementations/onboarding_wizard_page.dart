@@ -162,11 +162,11 @@ class _OnboardingWizardPageState extends BasePageState<OnboardingWizardPage>
   }
 
   List<OnboardingStepId> get _steps => onboardingStepSequence(
-        selected: _selected,
-        browserExtensionAvailable: _browserExtensionAvailable,
-        globalLookupAvailable: _globalLookupAvailable,
-        ankiReady: _ankiReadyForFirstCard,
-      );
+    selected: _selected,
+    browserExtensionAvailable: _browserExtensionAvailable,
+    globalLookupAvailable: _globalLookupAvailable,
+    ankiReady: _ankiReadyForFirstCard,
+  );
 
   @override
   void initState() {
@@ -292,13 +292,13 @@ class _OnboardingWizardPageState extends BasePageState<OnboardingWizardPage>
   /// 查词教程用的练习句子：按已安装词典的词头语言挑，没有就按推荐包（日语）/
   /// 英语兜底。见 [onboardingSampleSentence]。
   String get _sampleSentence => onboardingSampleSentence(
-        dictionarySourceLanguages: appModel.dictionaries.map(
-          (Dictionary dictionary) => dictionary.effectiveSourceLanguage,
-        ),
-        recommendedPackSelected: _selected.contains(
-          OnboardingFeature.recommendedPack,
-        ),
-      );
+    dictionarySourceLanguages: appModel.dictionaries.map(
+      (Dictionary dictionary) => dictionary.effectiveSourceLanguage,
+    ),
+    recommendedPackSelected: _selected.contains(
+      OnboardingFeature.recommendedPack,
+    ),
+  );
 
   /// 练习句子卡 + 点它就进查词页，两处查词教程共用。
   Widget _sampleSentencePreface() {
@@ -378,8 +378,9 @@ class _OnboardingWizardPageState extends BasePageState<OnboardingWizardPage>
       appModel: appModel,
       filePath: path,
       // 打标是包目录级操作（写 `<包目录>/imported.flag`），与走哪条线路无关。
-      onImportConfirmed:
-          deleteAfterImport ? _packController.markImportStarted : null,
+      onImportConfirmed: deleteAfterImport
+          ? _packController.markImportStarted
+          : null,
     );
   }
 
@@ -405,11 +406,11 @@ class _OnboardingWizardPageState extends BasePageState<OnboardingWizardPage>
       final ByteData data = await rootBundle.load(kAnkiConnectAddonAsset);
       final AnkiConnectAddonInstallResult result =
           await installAnkiConnectAddon(
-        addonZipBytes: data.buffer.asUint8List(
-          data.offsetInBytes,
-          data.lengthInBytes,
-        ),
-      );
+            addonZipBytes: data.buffer.asUint8List(
+              data.offsetInBytes,
+              data.lengthInBytes,
+            ),
+          );
       if (!mounted) return;
       setState(() {
         _ankiAddonNotice = switch (result.status) {
@@ -438,7 +439,8 @@ class _OnboardingWizardPageState extends BasePageState<OnboardingWizardPage>
     if (!mounted) return;
     final AnkiUiState anki = ref.read(ankiViewModelProvider);
     setState(() {
-      _ankiConnectionVerified = !anki.isFetching &&
+      _ankiConnectionVerified =
+          !anki.isFetching &&
           anki.errorMessage == null &&
           anki.availableDecks.isNotEmpty &&
           anki.availableNoteTypes.isNotEmpty;
@@ -513,8 +515,9 @@ class _OnboardingWizardPageState extends BasePageState<OnboardingWizardPage>
                 child: CircularProgressIndicator(strokeWidth: 2),
               )
             : null,
-        onPressed:
-            anki.isFetching ? null : () => unawaited(_testAnkiConnection()),
+        onPressed: anki.isFetching
+            ? null
+            : () => unawaited(_testAnkiConnection()),
       ),
       // 还没连上：给「先把 Anki 装起来」的出口（连上即收起；iOS 的 AnkiMobile 是
       // 付费 App，说明文字带过，不放商店外链）。
@@ -612,15 +615,16 @@ class _OnboardingWizardPageState extends BasePageState<OnboardingWizardPage>
     final List<OnboardingTutorialItem> fsrsSteps = ankiFsrsTutorialSteps(
       mobile: mobile,
     );
-    final bool connected = _ankiTestAttempted &&
+    final bool connected =
+        _ankiTestAttempted &&
         !anki.isFetching &&
         anki.errorMessage == null &&
         anki.availableDecks.isNotEmpty;
     final String platformHint = Platform.isAndroid
         ? t.onboarding_anki_setup_android_hint
         : Platform.isIOS
-            ? t.onboarding_anki_setup_ios_hint
-            : t.onboarding_anki_setup_desktop_hint;
+        ? t.onboarding_anki_setup_ios_hint
+        : t.onboarding_anki_setup_desktop_hint;
     return ListView(
       padding: EdgeInsets.all(tokens.spacing.card),
       children: <Widget>[
@@ -1116,18 +1120,18 @@ class _OnboardingWizardPageState extends BasePageState<OnboardingWizardPage>
 
   /// 功能选择页里当前平台真的提供勾选的模块。
   List<OnboardingFeature> get _visibleModuleFeatures => <OnboardingFeature>[
-        for (final OnboardingFeature feature in OnboardingFeature.values)
-          if (kOnboardingModuleFeatures.contains(feature) &&
-              (feature != OnboardingFeature.games || Platform.isWindows) &&
-              (feature != OnboardingFeature.browserExtension ||
-                  _browserExtensionAvailable))
-            feature,
-      ];
+    for (final OnboardingFeature feature in OnboardingFeature.values)
+      if (kOnboardingModuleFeatures.contains(feature) &&
+          (feature != OnboardingFeature.games || Platform.isWindows) &&
+          (feature != OnboardingFeature.browserExtension ||
+              _browserExtensionAvailable))
+        feature,
+  ];
 
   List<OnboardingFeature> get _capabilityFeatures => <OnboardingFeature>[
-        for (final OnboardingFeature feature in OnboardingFeature.values)
-          if (!kOnboardingModuleFeatures.contains(feature)) feature,
-      ];
+    for (final OnboardingFeature feature in OnboardingFeature.values)
+      if (!kOnboardingModuleFeatures.contains(feature)) feature,
+  ];
 
   OnboardingFeatureTile _featureTile(OnboardingFeature feature) =>
       OnboardingFeatureTile(
@@ -1182,7 +1186,7 @@ class _OnboardingWizardPageState extends BasePageState<OnboardingWizardPage>
         label: hasDownloaded
             ? t.onboarding_step_pack_import_existing_action
             : '${t.onboarding_step_pack_download_action}'
-                ' ($kRecommendedPackSizeLabel)',
+                  ' ($kRecommendedPackSizeLabel)',
         description: hasDownloaded
             ? t.onboarding_pack_action_import_existing_desc
             : t.onboarding_pack_action_download_desc,
@@ -1240,7 +1244,8 @@ class _OnboardingWizardPageState extends BasePageState<OnboardingWizardPage>
         final String? downloadError = _packController.error.value;
         // 两条失败路径、两套文案：下载失败由 controller 存裸消息，此处才套模板；
         // 选文件失败（BUG-2107）在写入处就已组好整句，直接显示。
-        final String? shownError = _packPickError ??
+        final String? shownError =
+            _packPickError ??
             (downloadError == null
                 ? null
                 : t.onboarding_pack_download_failed(message: downloadError));
@@ -1469,8 +1474,9 @@ class OnboardingProgressBar extends StatelessWidget {
                     curve: fushiMd3StateCurve,
                     height: 4,
                     decoration: BoxDecoration(
-                      color:
-                          i <= current ? colors.primary : colors.outlineVariant,
+                      color: i <= current
+                          ? colors.primary
+                          : colors.outlineVariant,
                       borderRadius: tokens.radii.chipRadius,
                     ),
                   ),
@@ -1780,7 +1786,8 @@ class OnboardingActionTile extends StatelessWidget {
     final ThemeData theme = Theme.of(context);
     final ColorScheme colors = theme.colorScheme;
     final bool enabled = action.onPressed != null;
-    final Widget? trailing = action.trailing ??
+    final Widget? trailing =
+        action.trailing ??
         (enabled
             ? Icon(Icons.chevron_right, color: colors.onSurfaceVariant)
             : null);

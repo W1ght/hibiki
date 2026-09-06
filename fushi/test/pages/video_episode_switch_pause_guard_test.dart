@@ -13,8 +13,9 @@ import 'package:flutter_test/flutter_test.dart';
 /// 不再依赖延迟 dispose。远端换集复用同一 player + open() 顶替，天然不双开，故只本地
 /// 分支处理。撤掉这个 pause 或把它挪到 pushReplacement 之后即转红。
 void main() {
-  final File episodePart =
-      File('lib/src/pages/implementations/video_fushi/episode.part.dart');
+  final File episodePart = File(
+    'lib/src/pages/implementations/video_fushi/episode.part.dart',
+  );
 
   late String switchBody;
 
@@ -33,20 +34,30 @@ void main() {
     final int pauseIdx = switchBody.indexOf('await _controller?.pause();');
     final int pushIdx = switchBody.indexOf('navigator.pushReplacement');
     expect(pushIdx, isNonNegative, reason: '本地换集应走 pushReplacement');
-    expect(pauseIdx, isNonNegative,
-        reason: '换集前必须 await _controller?.pause() 停旧音轨（BUG-823）');
-    expect(pauseIdx, lessThan(pushIdx),
-        reason: 'pause 必须在 pushReplacement 之前，否则过渡期旧音轨仍在放');
+    expect(
+      pauseIdx,
+      isNonNegative,
+      reason: '换集前必须 await _controller?.pause() 停旧音轨（BUG-823）',
+    );
+    expect(
+      pauseIdx,
+      lessThan(pushIdx),
+      reason: 'pause 必须在 pushReplacement 之前，否则过渡期旧音轨仍在放',
+    );
   });
 
   test('pause sits in the local branch, after the remote early return', () {
     // 远端分支复用同一 player，靠 open() 顶替天然不双开；pause 只属本地分支，必须落在
     // `_loadRemoteEpisode(... return;` 之后，避免误伤远端换流路径。
-    final int remoteReturnIdx =
-        switchBody.indexOf('_loadRemoteEpisode(index, startIntent: intent)');
+    final int remoteReturnIdx = switchBody.indexOf(
+      '_loadRemoteEpisode(index, startIntent: intent)',
+    );
     final int pauseIdx = switchBody.indexOf('await _controller?.pause();');
     expect(remoteReturnIdx, isNonNegative, reason: '远端分支应走 _loadRemoteEpisode');
-    expect(pauseIdx, greaterThan(remoteReturnIdx),
-        reason: 'pause 必须在远端早退之后，只作用于本地换集分支');
+    expect(
+      pauseIdx,
+      greaterThan(remoteReturnIdx),
+      reason: 'pause 必须在远端早退之后，只作用于本地换集分支',
+    );
   });
 }

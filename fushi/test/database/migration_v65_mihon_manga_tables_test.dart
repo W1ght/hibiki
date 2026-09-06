@@ -48,9 +48,7 @@ CREATE TABLE galgames (
 )
 ''');
 
-  db.execute(
-    "INSERT INTO preferences (key, value) VALUES ('theme', 's:dark')",
-  );
+  db.execute("INSERT INTO preferences (key, value) VALUES ('theme', 's:dark')");
   if (includeObsoleteRows) {
     db.execute(
       "INSERT INTO preferences (key, value) VALUES ('$_obsoleteKey', 's:auto')",
@@ -91,14 +89,14 @@ Future<int> _userVersion(FushiDatabase db) async {
 }
 
 Future<int> _countRows(FushiDatabase db, String sql) async {
-  final QueryRow row =
-      await db.customSelect('SELECT COUNT(*) AS n FROM ($sql)').getSingle();
+  final QueryRow row = await db
+      .customSelect('SELECT COUNT(*) AS n FROM ($sql)')
+      .getSingle();
   return row.read<int>('n');
 }
 
 void main() {
-  test(
-      'v62 -> current runs BOTH v63 (obsolete pref delete) and v65 '
+  test('v62 -> current runs BOTH v63 (obsolete pref delete) and v65 '
       '(Mihon tables); neither swallows the other', () async {
     final FushiDatabase db = FushiDatabase.forTesting(
       NativeDatabase.memory(setup: _seedV62),
@@ -147,33 +145,33 @@ void main() {
         signingKey: const Value('aabb'),
       ),
     );
-    expect(
-      await _countRows(db, 'SELECT 1 FROM manga_extension_stores'),
-      1,
-    );
+    expect(await _countRows(db, 'SELECT 1 FROM manga_extension_stores'), 1);
   });
 
-  test('v63 -> current still runs v65, order-independent from v63/v64',
-      () async {
-    // 已经跑过 v63 的库（废弃行本就不在），还差 v64（collection_scrape_meta）
-    // 和 v65（Mihon 五表）。这里只断言 v65 那一段照跑，不依赖它是最后一步。
-    final FushiDatabase db = FushiDatabase.forTesting(
-      NativeDatabase.memory(
-        setup: (sqlite3.Database raw) => _seedV62(
-          raw,
-          userVersion: 63,
-          includeObsoleteRows: false,
+  test(
+    'v63 -> current still runs v65, order-independent from v63/v64',
+    () async {
+      // 已经跑过 v63 的库（废弃行本就不在），还差 v64（collection_scrape_meta）
+      // 和 v65（Mihon 五表）。这里只断言 v65 那一段照跑，不依赖它是最后一步。
+      final FushiDatabase db = FushiDatabase.forTesting(
+        NativeDatabase.memory(
+          setup: (sqlite3.Database raw) =>
+              _seedV62(raw, userVersion: 63, includeObsoleteRows: false),
         ),
-      ),
-    );
-    addTearDown(db.close);
+      );
+      addTearDown(db.close);
 
-    expect(await _userVersion(db), db.schemaVersion);
-    final Set<String> tables = await _tableNames(db);
-    for (final String table in _mangaTables) {
-      expect(tables, contains(table), reason: 'from=63 时 v65 必须仍然建表：缺 $table');
-    }
-  });
+      expect(await _userVersion(db), db.schemaVersion);
+      final Set<String> tables = await _tableNames(db);
+      for (final String table in _mangaTables) {
+        expect(
+          tables,
+          contains(table),
+          reason: 'from=63 时 v65 必须仍然建表：缺 $table',
+        );
+      }
+    },
+  );
 
   test('v65 is idempotent when the Mihon tables already exist', () async {
     final FushiDatabase db = FushiDatabase.forTesting(

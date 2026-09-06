@@ -34,16 +34,22 @@ void main() {
         FushiDicts.scheduleTyped(termPaths: <String>['/nonexistent/$i']);
       }
       expect(FushiDicts.hasPendingDicts, isTrue);
-      expect(FushiDicts.debugPendingTermPathsForTest(),
-          equals(<String>['/nonexistent/49']),
-          reason: '只有最后一次意图应该存活');
+      expect(
+        FushiDicts.debugPendingTermPathsForTest(),
+        equals(<String>['/nonexistent/49']),
+        reason: '只有最后一次意图应该存活',
+      );
     });
 
     test('空集合同样要排期（删掉最后一本词典必须让引擎变空，BUG-171）', () {
       FushiDicts.scheduleTyped();
-      expect(FushiDicts.hasPendingDicts, isTrue,
-          reason: '空集合被当成「没事发生」的话，删完最后一本词典后旧索引还在，'
-              '查词仍会命中已删词典');
+      expect(
+        FushiDicts.hasPendingDicts,
+        isTrue,
+        reason:
+            '空集合被当成「没事发生」的话，删完最后一本词典后旧索引还在，'
+            '查词仍会命中已删词典',
+      );
       expect(FushiDicts.debugPendingTermPathsForTest(), isEmpty);
     });
   });
@@ -69,9 +75,13 @@ void main() {
       FushiDicts.disposeInstance();
       expect(FushiDicts.isInitialized, isFalse);
       FushiDicts.scheduleTyped(termPaths: <String>['/nonexistent/a']);
-      expect(FushiDicts.isInitialized, isTrue,
-          reason: '待办本身就说明集合已知，调用方接着会经 instance 触发结算；'
-              '这里判 false 会让查词走「引擎没准备好」的空结果分支');
+      expect(
+        FushiDicts.isInitialized,
+        isTrue,
+        reason:
+            '待办本身就说明集合已知，调用方接着会经 instance 触发结算；'
+            '这里判 false 会让查词走「引擎没准备好」的空结果分支',
+      );
     });
   });
 }

@@ -30,9 +30,7 @@ abstract class AudioExportField extends Field with ExportFieldSearch {
 
   /// Clears this field's data. The state refresh afterwards is not performed
   /// here and should be performed by the invocation of the clear field button.
-  void clearFieldState({
-    required CreatorModel creatorModel,
-  }) {
+  void clearFieldState({required CreatorModel creatorModel}) {
     _exportFile = null;
     currentSearchTermInternal = null;
     _autoCannotOverride = false;
@@ -82,16 +80,18 @@ abstract class AudioExportField extends Field with ExportFieldSearch {
 
     if (creatorModel.scrollController.hasClients &&
         cause == EnhancementTriggerCause.manual) {
-      creatorModel.scrollController
-          .jumpTo(creatorModel.scrollController.position.minScrollExtent);
+      creatorModel.scrollController.jumpTo(
+        creatorModel.scrollController.position.minScrollExtent,
+      );
     }
 
     /// Show loading state.
     setSearching(
-        appModel: appModel,
-        creatorModel: creatorModel,
-        isSearching: true,
-        searchTerm: searchTerm);
+      appModel: appModel,
+      creatorModel: creatorModel,
+      isSearching: true,
+      searchTerm: searchTerm,
+    );
     try {
       File? file = await generateAudio();
 

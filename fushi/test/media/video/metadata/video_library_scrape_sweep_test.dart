@@ -59,30 +59,33 @@ void main() {
   });
 
   Future<int> addSource(String root) => db.insertMediaSource(
-        MediaSourcesCompanion.insert(
-          label: root,
-          mediaKind: 'video',
-          rootPath: root,
-          createdAt: 1,
-        ),
-      );
+    MediaSourcesCompanion.insert(
+      label: root,
+      mediaKind: 'video',
+      rootPath: root,
+      createdAt: 1,
+    ),
+  );
 
   Future<void> addVideo(
     String uid,
     String path,
     int sourceId, {
     String? title,
-  }) =>
-      db.upsertVideoBook(VideoBooksCompanion(
-        bookUid: Value<String>(uid),
-        title: Value<String>(title ?? uid),
-        videoPath: Value<String>(path),
-        sourceId: Value<int?>(sourceId),
-      ));
+  }) => db.upsertVideoBook(
+    VideoBooksCompanion(
+      bookUid: Value<String>(uid),
+      title: Value<String>(title ?? uid),
+      videoPath: Value<String>(path),
+      sourceId: Value<int?>(sourceId),
+    ),
+  );
 
   /// 给某本书种上规范作品行 + 一条作品级 anidb 身份（= 已刮削）。
   Future<void> seedIdentityForBook(String bookUid) async {
-    final int workId = await db.into(db.videoMetadataWorks).insert(
+    final int workId = await db
+        .into(db.videoMetadataWorks)
+        .insert(
           VideoMetadataWorksCompanion.insert(
             bookUid: Value<String?>(bookUid),
             mediaType: 'movie',
@@ -90,7 +93,9 @@ void main() {
             updatedAt: 1,
           ),
         );
-    await db.into(db.videoMetadataProviderIdentities).insert(
+    await db
+        .into(db.videoMetadataProviderIdentities)
+        .insert(
           VideoMetadataProviderIdentitiesCompanion.insert(
             identityKey: 'work:$workId:anidb',
             workId: Value<int?>(workId),
@@ -110,10 +115,18 @@ void main() {
 
   test('只补刮无规范身份的作品，批次 scope 记 sweep', () async {
     final int sourceId = await addSource('D:/A');
-    await addVideo('movie-a', 'D:/A/Unscraped Movie (2020).mkv', sourceId,
-        title: 'Unscraped Movie');
-    await addVideo('movie-b', 'D:/A/Scraped Movie (2021).mkv', sourceId,
-        title: 'Scraped Movie');
+    await addVideo(
+      'movie-a',
+      'D:/A/Unscraped Movie (2020).mkv',
+      sourceId,
+      title: 'Unscraped Movie',
+    );
+    await addVideo(
+      'movie-b',
+      'D:/A/Scraped Movie (2021).mkv',
+      sourceId,
+      title: 'Scraped Movie',
+    );
     await seedIdentityForBook('movie-b');
 
     await sweep().sweepOnce();
@@ -129,10 +142,9 @@ void main() {
 
     final VideoLibraryScrapeSweep service = sweep();
     final List<VideoPendingScrapeWork> pending = await service.pendingWorks();
-    expect(
-      pending.map((VideoPendingScrapeWork e) => e.work.title),
-      <String>['特典 S00E01'],
-    );
+    expect(pending.map((VideoPendingScrapeWork e) => e.work.title), <String>[
+      '特典 S00E01',
+    ]);
 
     await service.sweepOnce();
     expect(runner.sourceIds, isEmpty);
@@ -140,8 +152,12 @@ void main() {
 
   test('来源刮削开关关闭时既不进队列也不补刮', () async {
     final int sourceId = await addSource('D:/A');
-    await addVideo('movie-a', 'D:/A/Unscraped Movie (2020).mkv', sourceId,
-        title: 'Unscraped Movie');
+    await addVideo(
+      'movie-a',
+      'D:/A/Unscraped Movie (2020).mkv',
+      sourceId,
+      title: 'Unscraped Movie',
+    );
     await db.upsertVideoSourceScrapeSettings(
       VideoSourceScrapeSettingsCompanion.insert(
         sourceId: Value<int>(sourceId),
@@ -158,8 +174,12 @@ void main() {
 
   test('自动刮削总闸关闭时不补刮（队列仍可见）', () async {
     final int sourceId = await addSource('D:/A');
-    await addVideo('movie-a', 'D:/A/Unscraped Movie (2020).mkv', sourceId,
-        title: 'Unscraped Movie');
+    await addVideo(
+      'movie-a',
+      'D:/A/Unscraped Movie (2020).mkv',
+      sourceId,
+      title: 'Unscraped Movie',
+    );
 
     final VideoLibraryScrapeSweep service = sweep(isEnabled: () => false);
     expect(await service.pendingWorks(), hasLength(1));
@@ -173,29 +193,34 @@ void main() {
   // 从设置页撤下，等于给一项后台联网行为配了个不存在的开关。
   group('自动补刮总闸是独立且用户可控的偏好', () {
     test('默认开，读写往返，且与旧的 video_auto_scrape 互不影响', () async {
-      final FushiDatabase prefsDb =
-          FushiDatabase.forTesting(NativeDatabase.memory());
+      final FushiDatabase prefsDb = FushiDatabase.forTesting(
+        NativeDatabase.memory(),
+      );
       addTearDown(prefsDb.close);
       final PreferencesRepository repo = PreferencesRepository(prefsDb);
       await repo.loadFromDb();
 
-      expect(repo.videoLibraryAutoBackfillScrape, isTrue,
-          reason: '默认开——存量用户升级后行为不变');
+      expect(
+        repo.videoLibraryAutoBackfillScrape,
+        isTrue,
+        reason: '默认开——存量用户升级后行为不变',
+      );
 
       await repo.setVideoLibraryAutoBackfillScrape(false);
       expect(repo.videoLibraryAutoBackfillScrape, isFalse);
-      expect(repo.videoAutoScrape, isTrue,
-          reason: '关掉补刮不得连带改动旧的本地封面 sweep 开关');
+      expect(repo.videoAutoScrape, isTrue, reason: '关掉补刮不得连带改动旧的本地封面 sweep 开关');
 
       await repo.setVideoAutoScrape(false);
       await repo.setVideoLibraryAutoBackfillScrape(true);
-      expect(repo.videoAutoScrape, isFalse,
-          reason: '两个键必须是两份独立状态，不是同一个键的两个名字');
+      expect(repo.videoAutoScrape, isFalse, reason: '两个键必须是两份独立状态，不是同一个键的两个名字');
       expect(repo.videoLibraryAutoBackfillScrape, isTrue);
 
       await repo.loadFromDb();
-      expect(repo.videoLibraryAutoBackfillScrape, isTrue,
-          reason: '跨 reload 持久化');
+      expect(
+        repo.videoLibraryAutoBackfillScrape,
+        isTrue,
+        reason: '跨 reload 持久化',
+      );
     });
 
     test('sweep 的接线读新偏好，且设置页真画了这个开关', () {
@@ -205,7 +230,8 @@ void main() {
       expect(
         homePage,
         contains(
-            'isEnabled: () => appModelNoUpdate.videoLibraryAutoBackfillScrape'),
+          'isEnabled: () => appModelNoUpdate.videoLibraryAutoBackfillScrape',
+        ),
         reason: 'sweep 必须挂在自己的总闸上',
       );
       expect(
@@ -232,8 +258,12 @@ void main() {
 
   test('每进程只跑一轮', () async {
     final int sourceId = await addSource('D:/A');
-    await addVideo('movie-a', 'D:/A/Unscraped Movie (2020).mkv', sourceId,
-        title: 'Unscraped Movie');
+    await addVideo(
+      'movie-a',
+      'D:/A/Unscraped Movie (2020).mkv',
+      sourceId,
+      title: 'Unscraped Movie',
+    );
 
     final VideoLibraryScrapeSweep service = sweep();
     await service.sweepOnce();

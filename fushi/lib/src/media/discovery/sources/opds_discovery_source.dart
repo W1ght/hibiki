@@ -113,16 +113,16 @@ class OpdsDiscoverySource extends MediaDiscoverySource {
 
   @override
   DiscoveryCapabilities get capabilities => DiscoveryCapabilities(
-        // 一台 OPDS 服务器可能同时供书和漫画；具体条目按 acquisition 链接的
-        // MIME 定域（见 OpdsFileType），而不是靠源声明去猜。
-        kinds: const <DiscoveryMediaKind>{
-          DiscoveryMediaKind.novel,
-          DiscoveryMediaKind.manga,
-        },
-        supportsSearch: true,
-        supportsBrowse: true,
-        supportsPaging: true,
-      );
+    // 一台 OPDS 服务器可能同时供书和漫画；具体条目按 acquisition 链接的
+    // MIME 定域（见 OpdsFileType），而不是靠源声明去猜。
+    kinds: const <DiscoveryMediaKind>{
+      DiscoveryMediaKind.novel,
+      DiscoveryMediaKind.manga,
+    },
+    supportsSearch: true,
+    supportsBrowse: true,
+    supportsPaging: true,
+  );
 
   @override
   Future<ProviderBatchResult<DiscoveryResultPage>> browse(
@@ -329,8 +329,10 @@ class OpdsDiscoverySource extends MediaDiscoverySource {
       return null;
     }
     final Uri descriptionUri = Uri.parse(descriptionHref);
-    final _OpdsResponse response =
-        await _get(descriptionUri, operation: 'search');
+    final _OpdsResponse response = await _get(
+      descriptionUri,
+      operation: 'search',
+    );
     try {
       final String? template = parseOpenSearchTemplate(
         response.body,
@@ -349,7 +351,8 @@ class OpdsDiscoverySource extends MediaDiscoverySource {
     final DateTime deadline = DateTime.now().add(requestTimeout);
     final http.Request request = http.Request('GET', uri)
       ..headers.addAll(<String, String>{
-        'Accept': 'application/atom+xml, $kOpdsJsonMediaType, '
+        'Accept':
+            'application/atom+xml, $kOpdsJsonMediaType, '
             'application/xml;q=0.8, */*;q=0.5',
         ..._headersFor(uri),
       });
@@ -359,8 +362,10 @@ class OpdsDiscoverySource extends MediaDiscoverySource {
     } on TimeoutException {
       throw _timedOut(operation);
     }
-    final ExternalProviderFailure? rejected =
-        _statusFailure(response.statusCode, operation);
+    final ExternalProviderFailure? rejected = _statusFailure(
+      response.statusCode,
+      operation,
+    );
     if (rejected != null) {
       // 不读的响应体会把连接一直挂着——显式取消订阅才是「关掉它」。
       unawaited(response.stream.listen(null).cancel());
@@ -380,33 +385,33 @@ class OpdsDiscoverySource extends MediaDiscoverySource {
       switch (status) {
         200 => null,
         401 => ExternalProviderFailure(
-            providerId: id,
-            operation: operation,
-            kind: ExternalProviderFailureKind.unauthorized,
-            message: 'server rejected the configured credentials',
-            statusCode: status,
-          ),
+          providerId: id,
+          operation: operation,
+          kind: ExternalProviderFailureKind.unauthorized,
+          message: 'server rejected the configured credentials',
+          statusCode: status,
+        ),
         403 => ExternalProviderFailure(
-            providerId: id,
-            operation: operation,
-            kind: ExternalProviderFailureKind.forbidden,
-            message: 'server rejected the configured credentials',
-            statusCode: status,
-          ),
+          providerId: id,
+          operation: operation,
+          kind: ExternalProviderFailureKind.forbidden,
+          message: 'server rejected the configured credentials',
+          statusCode: status,
+        ),
         404 => ExternalProviderFailure(
-            providerId: id,
-            operation: operation,
-            kind: ExternalProviderFailureKind.notFound,
-            message: 'catalog endpoint not found',
-            statusCode: status,
-          ),
+          providerId: id,
+          operation: operation,
+          kind: ExternalProviderFailureKind.notFound,
+          message: 'catalog endpoint not found',
+          statusCode: status,
+        ),
         _ => ExternalProviderFailure(
-            providerId: id,
-            operation: operation,
-            kind: ExternalProviderFailureKind.unavailable,
-            message: 'http status $status',
-            statusCode: status,
-          ),
+          providerId: id,
+          operation: operation,
+          kind: ExternalProviderFailureKind.unavailable,
+          message: 'http status $status',
+          statusCode: status,
+        ),
       };
 
   /// 读响应体，三条边界同时管着：块间静默 [kOpdsIdleTimeout]、总时限

@@ -154,13 +154,14 @@ void main() {
     // 批次大小 ≤ maxBatchSegments（batchSize 是 20 s 段的参考值，短段按音频预算
     // 可以多装，上限 4 倍）。
     expect(
-        decoder.batchSizes.every((int n) => n <= job.maxBatchSegments), isTrue);
-    expect(decoder.batchSizes.every((int n) => n >= 1), isTrue);
-    final AsrJobState state = await AsrTranscribeJob.loadState(
-      tmp,
-      <String>['a.mp3', 'b.mp3'],
-      modelId: _kModelId,
+      decoder.batchSizes.every((int n) => n <= job.maxBatchSegments),
+      isTrue,
     );
+    expect(decoder.batchSizes.every((int n) => n >= 1), isTrue);
+    final AsrJobState state = await AsrTranscribeJob.loadState(tmp, <String>[
+      'a.mp3',
+      'b.mp3',
+    ], modelId: _kModelId);
     expect(state.finished, isTrue);
     expect(state.isFileDone(0), isTrue);
     expect(state.isFileDone(1), isTrue);
@@ -191,14 +192,16 @@ void main() {
       if (e is AsrTranscribeProgressEvent) first.requestPause();
     }
     expect(firstEvents.last, isA<AsrTranscribePausedEvent>());
-    final AsrJobState paused =
-        await AsrTranscribeJob.loadState(tmp, paths, modelId: _kModelId);
+    final AsrJobState paused = await AsrTranscribeJob.loadState(
+      tmp,
+      paths,
+      modelId: _kModelId,
+    );
     // 第一块 5 s = 80000 样本，进行中语音起点 = 80000 - 16000。
     expect(paused.resumeSamples.single, 5 * kAsrSampleRate - kAsrSampleRate);
     final int segmentsAfterPause = (await AsrTranscribeJob.loadSegments(
       tmp,
-    ))
-        .length;
+    )).length;
     expect(segmentsAfterPause, 3);
 
     // 续跑：从恢复点开始解码。
@@ -264,8 +267,9 @@ void main() {
       '"resumeSamples":[-1],"finished":true}',
     );
     final ({AsrJobState state, bool fresh}) loaded =
-        await AsrTranscribeJob.loadStateDetailed(tmp, <String>['a.mp3'],
-            modelId: _kModelId);
+        await AsrTranscribeJob.loadStateDetailed(tmp, <String>[
+          'a.mp3',
+        ], modelId: _kModelId);
     expect(loaded.fresh, isTrue);
     final AsrTranscribeJob job = AsrTranscribeJob(
       jobDir: tmp,
@@ -324,22 +328,18 @@ void main() {
       '"resumeSamples":[-1],"finished":true}',
     );
     final ({AsrJobState state, bool fresh}) loaded =
-        await AsrTranscribeJob.loadStateDetailed(
-      tmp,
-      <String>['a.mp3'],
-      modelId: _kModelId,
-    );
+        await AsrTranscribeJob.loadStateDetailed(tmp, <String>[
+          'a.mp3',
+        ], modelId: _kModelId);
     expect(loaded.fresh, isTrue);
     expect(loaded.state.modelId, _kModelId);
     expect(loaded.state.finished, isFalse);
 
     // 同一份文件按它自己的 modelId 读则原样复用。
     final ({AsrJobState state, bool fresh}) same =
-        await AsrTranscribeJob.loadStateDetailed(
-      tmp,
-      <String>['a.mp3'],
-      modelId: 'other-pack',
-    );
+        await AsrTranscribeJob.loadStateDetailed(tmp, <String>[
+          'a.mp3',
+        ], modelId: 'other-pack');
     expect(same.fresh, isFalse);
     expect(same.state.finished, isTrue);
 
@@ -362,11 +362,9 @@ void main() {
       File('${tmp.path}/${AsrJobFiles.segments}').readAsStringSync(),
       isNot(contains('"旧"')),
     );
-    final AsrJobState written = await AsrTranscribeJob.loadState(
-      tmp,
-      <String>['a.mp3'],
-      modelId: _kModelId,
-    );
+    final AsrJobState written = await AsrTranscribeJob.loadState(tmp, <String>[
+      'a.mp3',
+    ], modelId: _kModelId);
     expect(written.modelId, _kModelId);
     expect(written.finished, isTrue);
   });
@@ -377,21 +375,19 @@ void main() {
       '"resumeSamples":[-1],"finished":true}',
     );
     final ({AsrJobState state, bool fresh}) loaded =
-        await AsrTranscribeJob.loadStateDetailed(
-      tmp,
-      <String>['a.mp3'],
-      modelId: _kModelId,
-    );
+        await AsrTranscribeJob.loadStateDetailed(tmp, <String>[
+          'a.mp3',
+        ], modelId: _kModelId);
     expect(loaded.fresh, isTrue);
     expect(loaded.state.finished, isFalse);
     expect(loaded.state.resumeSamples, <int>[0]);
   });
 
   test('toJson 带 modelId 与当前版本 3，fromJson 往返', () {
-    final AsrJobState state = AsrJobState.fresh(
-      const <String>['a.mp3', 'b.mp3'],
-      modelId: _kModelId,
-    );
+    final AsrJobState state = AsrJobState.fresh(const <String>[
+      'a.mp3',
+      'b.mp3',
+    ], modelId: _kModelId);
     final Map<String, Object?> json = state.toJson();
     expect(json['version'], 3);
     expect(AsrJobState.currentVersion, 3);
@@ -426,9 +422,9 @@ void main() {
 
   group('pickBatchSize（按音频预算成批）', () {
     AsrSpeechSegment seg(int seconds) => AsrSpeechSegment(
-          startSample: 0,
-          samples: Float32List(seconds * kAsrSampleRate),
-        );
+      startSample: 0,
+      samples: Float32List(seconds * kAsrSampleRate),
+    );
     const int budget = 32 * 20 * kAsrSampleRate;
 
     test('全是 20 s 长段：恰好 batchSize 段', () {

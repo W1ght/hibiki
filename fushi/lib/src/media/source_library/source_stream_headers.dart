@@ -40,8 +40,9 @@ Future<Map<String, String>> resolveSourceStreamHeaders({
   }
   final Map<String, Object?> cfg = decodeSourceConfig(source.configJson);
   final String username = (cfg['username'] as String?) ?? '';
-  final SourceLibrarySecret secret =
-      await SourceLibraryCredentialStore(db).readSecret(source.id);
+  final SourceLibrarySecret secret = await SourceLibraryCredentialStore(
+    db,
+  ).readSecret(source.id);
   final String password = secret.password ?? '';
   if (username.isEmpty && password.isEmpty) return const <String, String>{};
   final String token = base64Encode(utf8.encode('$username:$password'));

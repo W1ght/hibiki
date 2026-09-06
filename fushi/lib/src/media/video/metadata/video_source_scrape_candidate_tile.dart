@@ -30,14 +30,14 @@ class VideoSourceScrapeCandidateTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => FushiListItem(
-        key: ValueKey<String>(
-          'video-source-candidate-${candidate.lookup.provider.name}-'
-          '${candidate.lookup.externalId}',
-        ),
-        padding: EdgeInsets.zero,
-        title: Text(candidate.work.title),
-        subtitle: Text(describe(candidate)),
-        trailing: const Icon(Icons.chevron_right),
-        onTap: () => onSelected(candidate),
-      );
+    key: ValueKey<String>(
+      'video-source-candidate-${candidate.lookup.provider.name}-'
+      '${candidate.lookup.externalId}',
+    ),
+    padding: EdgeInsets.zero,
+    title: Text(candidate.work.title),
+    subtitle: Text(describe(candidate)),
+    trailing: const Icon(Icons.chevron_right),
+    onTap: () => onSelected(candidate),
+  );
 }

@@ -42,7 +42,9 @@ String mokuroMoeStageLabel(MokuroMoeVolumeDownloadEvent? event) {
     case MokuroMoeDownloadStage.importing:
       return event!.pagesTotal > 0
           ? t.manga_ocr_wizard_page_progress(
-              done: event.pagesDone, total: event.pagesTotal)
+              done: event.pagesDone,
+              total: event.pagesTotal,
+            )
           : t.manga_ocr_wizard_importing;
     case MokuroMoeDownloadStage.done:
       return t.manga_ocr_wizard_done;

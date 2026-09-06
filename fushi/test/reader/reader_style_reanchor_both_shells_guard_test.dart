@@ -20,40 +20,46 @@ import 'package:fushi/src/reader/reader_pagination_scripts.dart';
 void main() {
   const List<({String label, bool continuousMode})> shells =
       <({String label, bool continuousMode})>[
-    (label: 'paginated', continuousMode: false),
-    (label: 'continuous', continuousMode: true),
-  ];
+        (label: 'paginated', continuousMode: false),
+        (label: 'continuous', continuousMode: true),
+      ];
 
   for (final ({String label, bool continuousMode}) shell in shells) {
     test(
-        '${shell.label} shell defines beginStyleReanchor + commitStyleReanchor',
-        () {
-      final String script = ReaderPaginationScripts.paginatedShellSource();
-      expect(
-        script.contains('beginStyleReanchor: function'),
-        isTrue,
-        reason: '${shell.label} shell 缺 beginStyleReanchor：'
-            'beginStyleReanchorInvocation 会恒返 -1、CSS 永不换 → '
-            '该模式纯 CSS 设置不实时生效（必须重开书）。',
-      );
-      expect(
-        script.contains('commitStyleReanchor: function'),
-        isTrue,
-        reason: '${shell.label} shell 缺 commitStyleReanchor：'
-            '样式重锚第二阶段无法提交、_reanchorPending 不清。',
-      );
-    });
+      '${shell.label} shell defines beginStyleReanchor + commitStyleReanchor',
+      () {
+        final String script = ReaderPaginationScripts.paginatedShellSource();
+        expect(
+          script.contains('beginStyleReanchor: function'),
+          isTrue,
+          reason:
+              '${shell.label} shell 缺 beginStyleReanchor：'
+              'beginStyleReanchorInvocation 会恒返 -1、CSS 永不换 → '
+              '该模式纯 CSS 设置不实时生效（必须重开书）。',
+        );
+        expect(
+          script.contains('commitStyleReanchor: function'),
+          isTrue,
+          reason:
+              '${shell.label} shell 缺 commitStyleReanchor：'
+              '样式重锚第二阶段无法提交、_reanchorPending 不清。',
+        );
+      },
+    );
   }
 
   test('beginStyleReanchorInvocation 目标方法在分页脚本里真实可解析', () {
     final String paginated = ReaderPaginationScripts.paginatedShellSource();
     // 调用点用 typeof === 'function' 门控；脚本里必须存在同名函数定义，否则门控恒假。
     expect(
-      ReaderPaginationScripts.beginStyleReanchorInvocation('"body{}"')
-          .contains('window.fushiReader.beginStyleReanchor'),
+      ReaderPaginationScripts.beginStyleReanchorInvocation(
+        '"body{}"',
+      ).contains('window.fushiReader.beginStyleReanchor'),
       isTrue,
     );
-    expect(paginated.contains('beginStyleReanchor: function(styleEl, css)'),
-        isTrue);
+    expect(
+      paginated.contains('beginStyleReanchor: function(styleEl, css)'),
+      isTrue,
+    );
   });
 }

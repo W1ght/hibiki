@@ -135,69 +135,110 @@ void main() {
     final FushiDatabase db = _openMigratedFromV69();
     addTearDown(db.close);
 
-    final QueryRow ver =
-        await db.customSelect('PRAGMA user_version').getSingle();
-    expect(ver.read<int>('user_version'), db.schemaVersion,
-        reason: 'migration must land on the current schema version');
+    final QueryRow ver = await db
+        .customSelect('PRAGMA user_version')
+        .getSingle();
+    expect(
+      ver.read<int>('user_version'),
+      db.schemaVersion,
+      reason: 'migration must land on the current schema version',
+    );
 
     // ── preferences ───────────────────────────────────────────────────
     final Map<String, String> prefs = await _tableAsMap(
-        db, 'SELECT key, value FROM preferences', 'key', 'value');
-    expect(prefs['src:reader_fushi:font_size'], 'd:22.0',
-        reason: '① 命名空间 + shortKey 双段改写');
-    expect(prefs['src:reader_fushi:font_catalog'], '{"version":1}',
-        reason: '② 只换命名空间');
-    expect(prefs['src:reader_fushi:override_title://fushi://book/我的书'], 's:新名',
-        reason: '③ 规范 override 键：v70 只换命名空间段，hoshi:// 段由 v73 接力改写');
+      db,
+      'SELECT key, value FROM preferences',
+      'key',
+      'value',
+    );
     expect(
-        prefs[
-            'src:reader_fushi:override_title://reader_fushi/reader_fushi/fushi://book/我的书'],
-        's:旧名',
-        reason: '④ legacy override 键内嵌双源键段一并改写（URI 段是 v73 终值）');
-    expect(prefs['src:reader_fushi:view_mode'], 's:paginated',
-        reason: '⑤ 新旧并存时 OR REPLACE 保留改写结果（旧行值胜出）');
-    expect(prefs.keys.where((k) => k.contains('view_mode')).length, 1,
-        reason: '⑤ 冲突行只留一条');
+      prefs['src:reader_fushi:font_size'],
+      'd:22.0',
+      reason: '① 命名空间 + shortKey 双段改写',
+    );
+    expect(
+      prefs['src:reader_fushi:font_catalog'],
+      '{"version":1}',
+      reason: '② 只换命名空间',
+    );
+    expect(
+      prefs['src:reader_fushi:override_title://fushi://book/我的书'],
+      's:新名',
+      reason: '③ 规范 override 键：v70 只换命名空间段，hoshi:// 段由 v73 接力改写',
+    );
+    expect(
+      prefs['src:reader_fushi:override_title://reader_fushi/reader_fushi/fushi://book/我的书'],
+      's:旧名',
+      reason: '④ legacy override 键内嵌双源键段一并改写（URI 段是 v73 终值）',
+    );
+    expect(
+      prefs['src:reader_fushi:view_mode'],
+      's:paginated',
+      reason: '⑤ 新旧并存时 OR REPLACE 保留改写结果（旧行值胜出）',
+    );
+    expect(
+      prefs.keys.where((k) => k.contains('view_mode')).length,
+      1,
+      reason: '⑤ 冲突行只留一条',
+    );
     // v70 无关行不动（命名空间段/源键段保留）；URI 段由 v73 接力改写。
     expect(
-        prefs[
-            'src:reader_pdf:override_title://reader_pdf/reader_pdf/fushi://book/x'],
-        's:pdf名');
+      prefs['src:reader_pdf:override_title://reader_pdf/reader_pdf/fushi://book/x'],
+      's:pdf名',
+    );
     expect(prefs['src:reader_manga:some_key'], 's:v');
     expect(prefs['audiobook_pos_MyBook'], '1000');
-    expect(prefs['src:reader_ttu_extra:key'], 's:not-a-prefix-match',
-        reason: '形近键（src:reader_ttu_extra:）不是前缀命中，不许动');
-    expect(prefs['current_source/reader'], 's:reader_fushi',
-        reason: '⑥ current_source/* 标签形态值改写');
-    expect(prefs['current_source/reader_legacy_bare'], 'reader_fushi',
-        reason: '⑥ current_source/* 历史裸值改写');
-    expect(prefs['unrelated_value_holder'], 's:reader_ttu',
-        reason: '⑥ 值恰为旧串但键不是 current_source/* 的行不许动');
+    expect(
+      prefs['src:reader_ttu_extra:key'],
+      's:not-a-prefix-match',
+      reason: '形近键（src:reader_ttu_extra:）不是前缀命中，不许动',
+    );
+    expect(
+      prefs['current_source/reader'],
+      's:reader_fushi',
+      reason: '⑥ current_source/* 标签形态值改写',
+    );
+    expect(
+      prefs['current_source/reader_legacy_bare'],
+      'reader_fushi',
+      reason: '⑥ current_source/* 历史裸值改写',
+    );
+    expect(
+      prefs['unrelated_value_holder'],
+      's:reader_ttu',
+      reason: '⑥ 值恰为旧串但键不是 current_source/* 的行不许动',
+    );
     // 旧形态零残留。
     expect(prefs.keys.where((k) => k.startsWith('src:reader_ttu:')), isEmpty);
-    expect(prefs.keys.where((k) => k.startsWith('src:reader_fushi:ttu_')),
-        isEmpty);
+    expect(
+      prefs.keys.where((k) => k.startsWith('src:reader_fushi:ttu_')),
+      isEmpty,
+    );
 
     // ── profile_settings ─────────────────────────────────────────────
     final rows = await db
         .customSelect(
-            'SELECT category, key, value FROM profile_settings ORDER BY id')
+          'SELECT category, key, value FROM profile_settings ORDER BY id',
+        )
         .get();
     final List<List<String>> triples = rows
-        .map((r) => <String>[
-              r.read<String>('category'),
-              r.read<String>('key'),
-              r.read<String>('value'),
-            ])
+        .map(
+          (r) => <String>[
+            r.read<String>('category'),
+            r.read<String>('key'),
+            r.read<String>('value'),
+          ],
+        )
         .toList();
     expect(
-        triples,
-        containsAll(<List<String>>[
-          <String>['pref', 'src:reader_fushi:theme', 's:light'],
-          <String>['reader', 'font_size', 'd:20.0'],
-          <String>['reader', 'lyrics_font_size', 'd:30.0'],
-          <String>['pref', 'audiobook_pos_X', 'i:5'],
-        ]));
+      triples,
+      containsAll(<List<String>>[
+        <String>['pref', 'src:reader_fushi:theme', 's:light'],
+        <String>['reader', 'font_size', 'd:20.0'],
+        <String>['reader', 'lyrics_font_size', 'd:30.0'],
+        <String>['pref', 'audiobook_pos_X', 'i:5'],
+      ]),
+    );
     expect(triples.length, 4, reason: '不多不少：无关行不动、不产生新行');
 
     // ── media_items（v80 搬进 media_open_history，按 (source,id) 断言）──
@@ -206,14 +247,16 @@ void main() {
         .get();
     final Set<(String, String)> pairs = mi
         .map(
-            (r) => (r.read<String>('media_source'), r.read<String>('media_id')))
+          (r) => (r.read<String>('media_source'), r.read<String>('media_id')),
+        )
         .toSet();
     expect(
-        pairs,
-        containsAll(<(String, String)>[
-          ('reader_fushi', 'fushi://book/A'),
-          ('reader_pdf', 'fushi://book/B'),
-        ]),
-        reason: 'v70 只换源键段；hoshi:// 段由 v73 接力改写为 fushi://');
+      pairs,
+      containsAll(<(String, String)>[
+        ('reader_fushi', 'fushi://book/A'),
+        ('reader_pdf', 'fushi://book/B'),
+      ]),
+      reason: 'v70 只换源键段；hoshi:// 段由 v73 接力改写为 fushi://',
+    );
   });
 }

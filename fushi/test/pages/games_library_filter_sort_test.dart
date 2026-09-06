@@ -33,13 +33,13 @@ void main() {
   });
 
   Future<AppModel> buildModel() async {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final PreferencesRepository prefsRepo = PreferencesRepository(db);
     await prefsRepo.loadFromDb();
-    final Directory tmpDir =
-        Directory.systemTemp.createTempSync('hibiki_games_toolbar_');
+    final Directory tmpDir = Directory.systemTemp.createTempSync(
+      'hibiki_games_toolbar_',
+    );
     addTearDown(() {
       try {
         tmpDir.deleteSync(recursive: true);
@@ -47,7 +47,9 @@ void main() {
     });
     final AppModel appModel = AppModel(testPlatformServices())
       ..wireLocalAudioForTesting(
-          prefsRepo: prefsRepo, databaseDirectory: tmpDir)
+        prefsRepo: prefsRepo,
+        databaseDirectory: tmpDir,
+      )
       ..wireDatabaseForTesting(db);
 
     await appModel.setGalgames(<GalgameEntry>[
@@ -89,9 +91,9 @@ void main() {
   /// 游戏进合集后网格改为 CustomScrollView 分区（合集横排行 + 散卡 SliverGrid），
   /// 祖先随之从 GridView 换成 CustomScrollView，语义不变。
   Finder cardTitle(String title) => find.descendant(
-        of: find.byType(CustomScrollView),
-        matching: find.text(title),
-      );
+    of: find.byType(CustomScrollView),
+    matching: find.text(title),
+  );
 
   Future<void> pumpPage(WidgetTester tester, AppModel appModel) async {
     navKey = GlobalKey<NavigatorState>();
@@ -164,8 +166,9 @@ void main() {
 
     await tester.tap(find.byIcon(Icons.filter_alt_outlined));
     await tester.pumpAndSettle();
-    await tester
-        .tap(find.text(galgamePlayStatusLabel(GalgamePlayStatus.playing)));
+    await tester.tap(
+      find.text(galgamePlayStatusLabel(GalgamePlayStatus.playing)),
+    );
     await tester.pumpAndSettle();
     navKey.currentState!.pop();
     await tester.pumpAndSettle();
@@ -174,8 +177,9 @@ void main() {
     expect(cardTitle('贝塔物语'), findsNothing);
 
     // 筛选偏好持久化（下次进页面还在）。
-    final GalgameLibraryView saved =
-        GalgameLibraryView.decode(appModel.galgameLibraryView);
+    final GalgameLibraryView saved = GalgameLibraryView.decode(
+      appModel.galgameLibraryView,
+    );
     expect(saved.status, GalgamePlayStatus.playing);
   });
 }

@@ -10,12 +10,15 @@ import 'package:fushi_audio/fushi_audio.dart';
 
 /// 复刻 reading_statistics_page._loadData 里收藏语句的分桶映射（read-side 修复逻辑）。
 StatActivityBuckets bucketFavoritedSentences(
-    List<FavoriteSentence> favSentences, DateTime now) {
+  List<FavoriteSentence> favSentences,
+  DateTime now,
+) {
   return bucketActivityByDateKey(
     favSentences
         .where((FavoriteSentence s) => s.source != kFavoriteSentenceSourceVideo)
         .map(
-            (FavoriteSentence s) => (s.dateKey ?? statDateKey(s.createdAt), 1)),
+          (FavoriteSentence s) => (s.dateKey ?? statDateKey(s.createdAt), 1),
+        ),
     now,
   );
 }
@@ -27,11 +30,20 @@ void main() {
     test('无 dateKey 的书内收藏按 createdAt 计入（修复前恒 0）', () {
       final favs = <FavoriteSentence>[
         FavoriteSentence(
-            text: 'あ', bookTitle: 'B', createdAt: DateTime(2026, 7, 18, 9)),
+          text: 'あ',
+          bookTitle: 'B',
+          createdAt: DateTime(2026, 7, 18, 9),
+        ),
         FavoriteSentence(
-            text: 'い', bookTitle: 'B', createdAt: DateTime(2026, 7, 18, 10)),
+          text: 'い',
+          bookTitle: 'B',
+          createdAt: DateTime(2026, 7, 18, 10),
+        ),
         FavoriteSentence(
-            text: 'う', bookTitle: 'B', createdAt: DateTime(2026, 7, 17, 22)),
+          text: 'う',
+          bookTitle: 'B',
+          createdAt: DateTime(2026, 7, 17, 22),
+        ),
       ];
       final b = bucketFavoritedSentences(favs, now);
       expect(b.all, 3, reason: '全部三条都应计入（修复前 dateKey==null 被滤 → 0）');
@@ -62,7 +74,10 @@ void main() {
           dateKey: '2026-07-18',
         ),
         FavoriteSentence(
-            text: 'b', bookTitle: 'B', createdAt: DateTime(2026, 7, 18)),
+          text: 'b',
+          bookTitle: 'B',
+          createdAt: DateTime(2026, 7, 18),
+        ),
       ];
       final b = bucketFavoritedSentences(favs, now);
       expect(b.all, 1, reason: '只书内那条计入');
@@ -72,12 +87,17 @@ void main() {
     test('旧过滤逻辑复刻：无 dateKey 收藏被滤成 0（坐实根因）', () {
       final favs = <FavoriteSentence>[
         FavoriteSentence(
-            text: 'a', bookTitle: 'B', createdAt: DateTime(2026, 7, 18)),
+          text: 'a',
+          bookTitle: 'B',
+          createdAt: DateTime(2026, 7, 18),
+        ),
       ];
       final oldBuckets = bucketActivityByDateKey(
         favs
-            .where((s) =>
-                s.source != kFavoriteSentenceSourceVideo && s.dateKey != null)
+            .where(
+              (s) =>
+                  s.source != kFavoriteSentenceSourceVideo && s.dateKey != null,
+            )
             .map((s) => (s.dateKey!, 1)),
         now,
       );
@@ -89,9 +109,9 @@ void main() {
 
   group('source guards (lock the fix)', () {
     test('reader 书内收藏写入端补了 dateKey', () {
-      final String src =
-          File('lib/src/pages/implementations/reader_fushi/chrome.part.dart')
-              .readAsStringSync();
+      final String src = File(
+        'lib/src/pages/implementations/reader_fushi/chrome.part.dart',
+      ).readAsStringSync();
       // 锚定方法「定义」（`Future<void> _toggleFavoriteSentence()`），不是它的调用点。
       final int def = src.indexOf('Future<void> _toggleFavoriteSentence(');
       expect(def, greaterThanOrEqualTo(0));
@@ -101,16 +121,22 @@ void main() {
       // 构造块内（下一处 `);` 之前）出现 dateKey: statTodayKey()。
       final int ctorEnd = src.indexOf(');', ctor);
       final String region = src.substring(ctor, ctorEnd);
-      expect(region.contains('dateKey: statTodayKey()'), isTrue,
-          reason: 'BUG-893 回归：书内收藏不带 dateKey → 统计恒 0');
+      expect(
+        region.contains('dateKey: statTodayKey()'),
+        isTrue,
+        reason: 'BUG-893 回归：书内收藏不带 dateKey → 统计恒 0',
+      );
     });
 
     test('阅读统计读取端回退 createdAt，不再用 dateKey != null 过滤收藏语句', () {
-      final String src =
-          File('lib/src/pages/implementations/reading_statistics_page.dart')
-              .readAsStringSync();
-      expect(src.contains('s.dateKey ?? statDateKey(s.createdAt)'), isTrue,
-          reason: 'BUG-893：读取端须回退 createdAt，兼容已存无 dateKey 收藏');
+      final String src = File(
+        'lib/src/pages/implementations/reading_statistics_page.dart',
+      ).readAsStringSync();
+      expect(
+        src.contains('s.dateKey ?? statDateKey(s.createdAt)'),
+        isTrue,
+        reason: 'BUG-893：读取端须回退 createdAt，兼容已存无 dateKey 收藏',
+      );
     });
   });
 }

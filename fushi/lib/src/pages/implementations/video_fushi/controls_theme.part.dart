@@ -79,9 +79,10 @@ extension _VideoControlsTheme on _VideoFushiPageState {
       // 但构造本 theme 的 builder（layout.part.dart :_buildVideoControlsInner）必须同时监听这三个
       // notifier、否则其翻转时 theme 不重建 = 改了值也白改（见 layout.part.dart 的
       // ListenableBuilder.merge）。仅桌面 theme，移动端不动。
-      hideMouseOnControlsRemoval: !(_subtitleListVisible.value ||
-          _episodeListVisible.value ||
-          _lookupOverlayActive.value),
+      hideMouseOnControlsRemoval:
+          !(_subtitleListVisible.value ||
+              _episodeListVisible.value ||
+              _lookupOverlayActive.value),
       // 单击画面 = 播放/暂停（media_kit 桌面默认 false，故此前点画面毫无反应，
       // BUG-130）。字幕字符点击在更上层 [VideoSubtitleOverlay] 的 opaque GestureDetector
       // 独立处理、不会冒泡到这里，故启用后点字幕仍是查词、点空白区才暂停，不冲突。
@@ -167,9 +168,7 @@ extension _VideoControlsTheme on _VideoFushiPageState {
         // bottomButtonBar 放进 Row，用单个 [Expanded] 占满整宽承接绝对定位布局。
         // 进度/时长文字吃「界面大小」（TODO-128）、5 键带 Tooltip（BUG-247）均在
         // [_centeredBottomControlBar] 内保留。
-        Expanded(
-          child: _centeredBottomControlBar(controller, desktop: true),
-        ),
+        Expanded(child: _centeredBottomControlBar(controller, desktop: true)),
       ],
     );
   }
@@ -190,7 +189,7 @@ extension _VideoControlsTheme on _VideoFushiPageState {
     // 用 media_kit 构造器默认的 `bottom: 0` 贴在屏幕最下面。
     final double bottomChromeInset =
         _VideoFushiPageState._videoBottomChromeBaseline +
-            _videoBottomSystemInset();
+        _videoBottomSystemInset();
     // 进度条抬到底部按钮条上方（TODO-156/BUG-217）：media_kit 把进度条与按钮条放同一
     // 个 bottomCenter Stack、都按 bottom 对齐，进度条 bottom 必须 = 按钮条底部基线 +
     // 按钮条高 + 间距，否则两者落同一基线重叠。保留 [bottomChromeInset]（BUG-184 抬离
@@ -252,19 +251,19 @@ extension _VideoControlsTheme on _VideoFushiPageState {
       // [VideoHorizontalSeekGesture] 改成「拖过整屏 = 固定一段时长」（与总时长解耦）
       // + 超长/超短片钳制 + 幂函数阻尼，档位由用户设置 [_asbConfig.dragSeekSensitivity]
       // 决定。闭包每次调用现读 `_asbConfig`，设置改完立即生效（无需重开播放页）。
-      horizontalSeekResolver: ({
-        required double dragDx,
-        required double surfaceWidth,
-        required Duration duration,
-        required Duration position,
-      }) =>
-          VideoHorizontalSeekGesture.resolveDelta(
-        dragDx: dragDx,
-        surfaceWidth: surfaceWidth,
-        duration: duration,
-        position: position,
-        sensitivity: _asbConfig.dragSeekSensitivity,
-      ),
+      horizontalSeekResolver:
+          ({
+            required double dragDx,
+            required double surfaceWidth,
+            required Duration duration,
+            required Duration position,
+          }) => VideoHorizontalSeekGesture.resolveDelta(
+            dragDx: dragDx,
+            surfaceWidth: surfaceWidth,
+            duration: duration,
+            position: position,
+            sensitivity: _asbConfig.dragSeekSensitivity,
+          ),
       // 居中 HUD：fork 默认只显增量，这里替换成「目标绝对时间 + 增量」两行（主流
       // 播放器手感）。builder 每帧随拖动重建，读 controller 实时 position + 增量算
       // 目标时间（clamp [0,duration]）。delta 为 fork 回传的有符号 swipeDuration。
@@ -356,9 +355,7 @@ extension _VideoControlsTheme on _VideoFushiPageState {
         // seek 簇，与桌面同源（[_centeredBottomControlBar]）。±10s 带可见标注、5 键带
         // Tooltip（BUG-247）、上/下一句走动态 cue 导航（无字幕段对称回退/前进，TODO-073/
         // TODO-119/BUG-198，动态 _asbConfig.seekSeconds 不写死）均在 helper 内保留。
-        Expanded(
-          child: _centeredBottomControlBar(controller, desktop: false),
-        ),
+        Expanded(child: _centeredBottomControlBar(controller, desktop: false)),
       ],
     );
   }
@@ -371,16 +368,18 @@ extension _VideoControlsTheme on _VideoFushiPageState {
   /// [VideoSeekIndicatorLabel.deltaSigned] 算出「目标时间」与「±增量」
   /// 两行。fork 把本 widget 套在居中 `IgnorePointer + AnimatedOpacity` 里，故这里只画
   /// 圆角半透明盒，不再处理定位/淡入淡出。
-  Widget _buildSeekIndicator(
-    VideoPlayerController controller,
-    Duration delta,
-  ) {
-    final Duration position =
-        Duration(milliseconds: controller.positionMs ?? 0);
-    final Duration duration =
-        Duration(milliseconds: controller.durationMs ?? 0);
-    final String targetLabel =
-        VideoSeekIndicatorLabel.target(position, delta, duration);
+  Widget _buildSeekIndicator(VideoPlayerController controller, Duration delta) {
+    final Duration position = Duration(
+      milliseconds: controller.positionMs ?? 0,
+    );
+    final Duration duration = Duration(
+      milliseconds: controller.durationMs ?? 0,
+    );
+    final String targetLabel = VideoSeekIndicatorLabel.target(
+      position,
+      delta,
+      duration,
+    );
     final String deltaLabel = VideoSeekIndicatorLabel.deltaSigned(delta);
     // UI 巡检 PR-4：HUD 表面 / 前景与页内其余 OSD 同源（[_osdSurfaceColor] /
     // [_osdTextColor]，inverseSurface 自配对），字号 / 内边距吃 [_videoUiScale]
@@ -390,8 +389,10 @@ extension _VideoControlsTheme on _VideoFushiPageState {
     final double scale = _videoUiScale;
     return Container(
       alignment: Alignment.center,
-      padding:
-          EdgeInsets.symmetric(horizontal: 20 * scale, vertical: 12 * scale),
+      padding: EdgeInsets.symmetric(
+        horizontal: 20 * scale,
+        vertical: 12 * scale,
+      ),
       decoration: BoxDecoration(
         color: _osdSurfaceColor(cs),
         borderRadius: BorderRadius.circular(12),

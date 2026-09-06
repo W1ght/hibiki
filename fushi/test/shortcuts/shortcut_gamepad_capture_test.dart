@@ -54,8 +54,9 @@ void main() {
     expect(find.text(t.shortcut_press_gamepad), findsOneWidget);
   }
 
-  testWidgets('desktop poller path: GamepadButtonIntent records the button',
-      (WidgetTester tester) async {
+  testWidgets('desktop poller path: GamepadButtonIntent records the button', (
+    WidgetTester tester,
+  ) async {
     final FushiShortcutRegistry registry = buildRegistry();
     await pumpDialog(tester, registry);
     await startGamepadCapture(tester);
@@ -75,12 +76,16 @@ void main() {
       findsOneWidget,
       reason: '捕获到的按钮应立即出现在手柄草稿 chips 中',
     );
-    expect(find.text(t.shortcut_press_gamepad), findsNothing,
-        reason: '录到一个按钮后捕获态应结束（对齐键盘捕获契约）');
+    expect(
+      find.text(t.shortcut_press_gamepad),
+      findsNothing,
+      reason: '录到一个按钮后捕获态应结束（对齐键盘捕获契约）',
+    );
   });
 
-  testWidgets('Android native path: gameButton* key event records the button',
-      (WidgetTester tester) async {
+  testWidgets('Android native path: gameButton* key event records the button', (
+    WidgetTester tester,
+  ) async {
     final FushiShortcutRegistry registry = buildRegistry();
     await pumpDialog(tester, registry);
     await startGamepadCapture(tester);
@@ -95,8 +100,9 @@ void main() {
     expect(find.text(t.shortcut_press_gamepad), findsNothing);
   });
 
-  testWidgets('keyboard keys during gamepad capture are swallowed, not bound',
-      (WidgetTester tester) async {
+  testWidgets('keyboard keys during gamepad capture are swallowed, not bound', (
+    WidgetTester tester,
+  ) async {
     final FushiShortcutRegistry registry = buildRegistry();
     await pumpDialog(tester, registry);
     await startGamepadCapture(tester);
@@ -105,34 +111,42 @@ void main() {
     await tester.pumpAndSettle();
 
     // 仍在捕获态，且没有把键盘 A 记成任何绑定。
-    expect(find.text(t.shortcut_press_gamepad), findsOneWidget,
-        reason: '键盘按键不结束手柄捕获（仅显式停止或录到手柄按钮）');
-    expect(find.widgetWithText(FushiTagChip, 'A'), findsNothing,
-        reason: '键盘按键不得被记录为绑定');
-  });
-
-  testWidgets('stop button cancels capture; pick-list fallback stays available',
-      (WidgetTester tester) async {
-    final FushiShortcutRegistry registry = buildRegistry();
-    await pumpDialog(tester, registry);
-    await startGamepadCapture(tester);
-
-    await tester.tap(find.byKey(const Key('shortcut_stop_gamepad_capture')));
-    await tester.pumpAndSettle();
-    expect(find.text(t.shortcut_press_gamepad), findsNothing);
-
-    // 兜底菜单仍在：无手柄在手也能从列表点选按钮。
-    expect(find.text(t.shortcut_gamepad_pick_list), findsOneWidget);
-    await tester.tap(find.text(t.shortcut_gamepad_pick_list));
-    await tester.pumpAndSettle();
-    // Select 排在菜单末尾，测试视口里可能在滚动区外——先滚到可见再点。
-    await tester.ensureVisible(find.text(GamepadButton.select.label).last);
-    await tester.pumpAndSettle();
-    await tester.tap(find.text(GamepadButton.select.label).last);
-    await tester.pumpAndSettle();
     expect(
-      find.widgetWithText(FushiTagChip, GamepadButton.select.label),
+      find.text(t.shortcut_press_gamepad),
       findsOneWidget,
+      reason: '键盘按键不结束手柄捕获（仅显式停止或录到手柄按钮）',
+    );
+    expect(
+      find.widgetWithText(FushiTagChip, 'A'),
+      findsNothing,
+      reason: '键盘按键不得被记录为绑定',
     );
   });
+
+  testWidgets(
+    'stop button cancels capture; pick-list fallback stays available',
+    (WidgetTester tester) async {
+      final FushiShortcutRegistry registry = buildRegistry();
+      await pumpDialog(tester, registry);
+      await startGamepadCapture(tester);
+
+      await tester.tap(find.byKey(const Key('shortcut_stop_gamepad_capture')));
+      await tester.pumpAndSettle();
+      expect(find.text(t.shortcut_press_gamepad), findsNothing);
+
+      // 兜底菜单仍在：无手柄在手也能从列表点选按钮。
+      expect(find.text(t.shortcut_gamepad_pick_list), findsOneWidget);
+      await tester.tap(find.text(t.shortcut_gamepad_pick_list));
+      await tester.pumpAndSettle();
+      // Select 排在菜单末尾，测试视口里可能在滚动区外——先滚到可见再点。
+      await tester.ensureVisible(find.text(GamepadButton.select.label).last);
+      await tester.pumpAndSettle();
+      await tester.tap(find.text(GamepadButton.select.label).last);
+      await tester.pumpAndSettle();
+      expect(
+        find.widgetWithText(FushiTagChip, GamepadButton.select.label),
+        findsOneWidget,
+      );
+    },
+  );
 }

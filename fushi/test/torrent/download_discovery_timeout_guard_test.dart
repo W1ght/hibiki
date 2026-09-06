@@ -94,7 +94,8 @@ void main() {
           'createDownloadHttpClient()async=>createAppHttpIoClient('
           'connectionTimeout:kDownloadConnectionTimeout)',
         ),
-        reason: 'AppModel.createDownloadHttpClient 必须把 '
+        reason:
+            'AppModel.createDownloadHttpClient 必须把 '
             'kDownloadConnectionTimeout 传给 createAppHttpIoClient',
       );
     });

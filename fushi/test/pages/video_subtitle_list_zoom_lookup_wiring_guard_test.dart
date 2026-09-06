@@ -35,9 +35,10 @@ void main() {
   group('BUG-878 行字号档位持久化', () {
     test('面板字号档位初值从 Drift preferences 读', () {
       expect(
-        RegExp(r'initialFontScaleIndex:\s*'
-                r'appModel\.videoSubtitleListFontScaleIndex')
-            .hasMatch(src),
+        RegExp(
+          r'initialFontScaleIndex:\s*'
+          r'appModel\.videoSubtitleListFontScaleIndex',
+        ).hasMatch(src),
         isTrue,
         reason: '字号档位初值必须来自持久化（不再每次重开重置成默认档）',
       );
@@ -47,9 +48,10 @@ void main() {
       expect(
         // 全程用 \s* 容忍 dart format 的换行：缩进变深时连 `(value)` 的括号内部都会被
         // 折行（接线没变、只是排版变了），写死紧邻会让这条守卫在无关改动上假红。
-        RegExp(r'onFontScaleIndexChanged:\s*\(int value\)\s*=>\s*unawaited\(\s*'
-                r'appModel\s*\.\s*setVideoSubtitleListFontScaleIndex\(\s*value\s*\)')
-            .hasMatch(src),
+        RegExp(
+          r'onFontScaleIndexChanged:\s*\(int value\)\s*=>\s*unawaited\(\s*'
+          r'appModel\s*\.\s*setVideoSubtitleListFontScaleIndex\(\s*value\s*\)',
+        ).hasMatch(src),
         isTrue,
         reason: '字号档位变化必须经 appModel setter 持久化（BUG-878）',
       );
@@ -59,9 +61,10 @@ void main() {
   group('BUG-879 列表行文本 Shift-悬停查词门控传入', () {
     test('面板收到 hoverAutoLookupEnabled（与画面字幕同源）', () {
       expect(
-        RegExp(r'VideoSubtitleJumpPanel\([\s\S]*?hoverAutoLookupEnabled:\s*'
-                r'ReaderFushiSource\.instance\.hoverAutoLookup')
-            .hasMatch(src),
+        RegExp(
+          r'VideoSubtitleJumpPanel\([\s\S]*?hoverAutoLookupEnabled:\s*'
+          r'ReaderFushiSource\.instance\.hoverAutoLookup',
+        ).hasMatch(src),
         isTrue,
         reason: '列表 Shift-悬停查词门控必须与画面字幕共用同一 hoverAutoLookup',
       );
@@ -76,9 +79,10 @@ void main() {
       // 同时容纳箭头体与块体：本条守卫要守的是「页面根确实记录了指针位置」，回调写成哪
       // 种形式不是它的约束对象。
       expect(
-        RegExp(r'onPointerHover:\s*\(PointerHoverEvent event\)\s*(?:=>|\{)'
-                r'[\s\S]{0,400}?_lastGlobalPointerPos = event\.position')
-            .hasMatch(src),
+        RegExp(
+          r'onPointerHover:\s*\(PointerHoverEvent event\)\s*(?:=>|\{)'
+          r'[\s\S]{0,400}?_lastGlobalPointerPos = event\.position',
+        ).hasMatch(src),
         isTrue,
         reason: 'Shift 按下时要用最后指针位置反查，必须先在页面根记录它',
       );
@@ -86,10 +90,11 @@ void main() {
 
     test('Shift 按下触发 keydown 反查查词', () {
       expect(
-        RegExp(r'event is KeyDownEvent[\s\S]*?'
-                r'LogicalKeyboardKey\.shiftLeft[\s\S]*?'
-                r'_triggerShiftLookupAtLastPointer\(\)')
-            .hasMatch(src),
+        RegExp(
+          r'event is KeyDownEvent[\s\S]*?'
+          r'LogicalKeyboardKey\.shiftLeft[\s\S]*?'
+          r'_triggerShiftLookupAtLastPointer\(\)',
+        ).hasMatch(src),
         isTrue,
         reason: 'Shift keydown 必须触发在最后指针位置的反查查词（根治「按了不出」）',
       );
@@ -100,13 +105,22 @@ void main() {
         r'void _triggerShiftLookupAtLastPointer\(\)[\s\S]*?\n  \}',
       );
       final Match? match = method.firstMatch(src);
-      expect(match, isNotNull,
-          reason: '必须存在 _triggerShiftLookupAtLastPointer 方法');
+      expect(
+        match,
+        isNotNull,
+        reason: '必须存在 _triggerShiftLookupAtLastPointer 方法',
+      );
       final String body = match!.group(0)!;
-      expect(body.contains('_subtitleHitTester.hitTest'), isTrue,
-          reason: 'Shift 按下要能反查画面字幕字符');
-      expect(body.contains('_subtitleListHitTester.hitTest'), isTrue,
-          reason: 'Shift 按下也要能反查字幕列表侧栏字符');
+      expect(
+        body.contains('_subtitleHitTester.hitTest'),
+        isTrue,
+        reason: 'Shift 按下要能反查画面字幕字符',
+      );
+      expect(
+        body.contains('_subtitleListHitTester.hitTest'),
+        isTrue,
+        reason: 'Shift 按下也要能反查字幕列表侧栏字符',
+      );
     });
   });
 
@@ -119,12 +133,20 @@ void main() {
       final Match? match = method.firstMatch(src);
       expect(match, isNotNull, reason: '必须存在 _onDismissBarrierHover 方法');
       final String body = match!.group(0)!;
-      expect(body.contains('_subtitleListHitTester.hitTest'), isTrue,
-          reason: '浮层开着时 Shift 悬停列表下一个词必须经 barrier 反查列表句柄换词'
-              '（与 barrier tap 的列表兜底对称，BUG-881）');
-      expect(body.contains('_lastGlobalPointerPos = event.position'), isTrue,
-          reason: '浮层盖住页面根 Listener 时，barrier hover 要接力更新最后指针位置'
-              '（供 Shift keydown 在浮层态也能反查）');
+      expect(
+        body.contains('_subtitleListHitTester.hitTest'),
+        isTrue,
+        reason:
+            '浮层开着时 Shift 悬停列表下一个词必须经 barrier 反查列表句柄换词'
+            '（与 barrier tap 的列表兜底对称，BUG-881）',
+      );
+      expect(
+        body.contains('_lastGlobalPointerPos = event.position'),
+        isTrue,
+        reason:
+            '浮层盖住页面根 Listener 时，barrier hover 要接力更新最后指针位置'
+            '（供 Shift keydown 在浮层态也能反查）',
+      );
     });
   });
 }

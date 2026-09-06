@@ -15,17 +15,17 @@ import 'package:fushi/src/media/torrent/torrent_backend.dart';
 class DownloadRelocateService {
   const DownloadRelocateService({
     required TorrentBackend Function() backendFactory,
-    required Future<int> Function(
-            {required String fromPath, required String toPath})
-        migrateLibraryPaths,
-  })  : _backendFactory = backendFactory,
-        _migrateLibraryPaths = migrateLibraryPaths;
+    required Future<int> Function({
+      required String fromPath,
+      required String toPath,
+    })
+    migrateLibraryPaths,
+  }) : _backendFactory = backendFactory,
+       _migrateLibraryPaths = migrateLibraryPaths;
 
   final TorrentBackend Function() _backendFactory;
-  final Future<int> Function({
-    required String fromPath,
-    required String toPath,
-  }) _migrateLibraryPaths;
+  final Future<int> Function({required String fromPath, required String toPath})
+  _migrateLibraryPaths;
 
   /// 改名：把种子内下标 [fileIndex] 的文件改成 [newRelativePath]
   /// （种子内相对路径，可含子目录，分隔符 `/`）。
@@ -45,8 +45,7 @@ class DownloadRelocateService {
     }
     // 种子内路径跨平台固定用 POSIX `/`；只有拼进本地 save root 时才转成
     // 宿主分隔符。否则 Windows 会把传给 qB/libtorrent 的路径改成 `\`。
-    final String normalized =
-        p.posix.normalize(trimmed.replaceAll(r'\', '/'));
+    final String normalized = p.posix.normalize(trimmed.replaceAll(r'\', '/'));
     final List<String> segments = p.posix.split(normalized);
     if (p.posix.isAbsolute(normalized) ||
         p.windows.rootPrefix(trimmed).isNotEmpty ||
@@ -54,10 +53,12 @@ class DownloadRelocateService {
         segments.isEmpty ||
         segments.first == '..') {
       return const RelocateOutcome.engineFailed(
-          'new name must stay inside the torrent');
+        'new name must stay inside the torrent',
+      );
     }
-    final String normalizedCurrent =
-        p.posix.normalize(currentRelativePath.replaceAll(r'\', '/'));
+    final String normalizedCurrent = p.posix.normalize(
+      currentRelativePath.replaceAll(r'\', '/'),
+    );
     if (normalized == normalizedCurrent) {
       // 名字没变：不打扰引擎，也不动库。
       return const RelocateOutcome.unchanged();
@@ -112,17 +113,24 @@ class DownloadRelocateService {
     if (!result.ok) {
       // 引擎没动 → 库也不动。失败态 = 什么都没变。
       return RelocateOutcome.engineFailed(
-          result.error ?? 'backend refused the operation');
+        result.error ?? 'backend refused the operation',
+      );
     }
     try {
-      final int rows =
-          await _migrateLibraryPaths(fromPath: fromPath, toPath: toPath);
+      final int rows = await _migrateLibraryPaths(
+        fromPath: fromPath,
+        toPath: toPath,
+      );
       return RelocateOutcome.success(
-          newPath: result.path ?? toPath, rows: rows);
+        newPath: result.path ?? toPath,
+        rows: rows,
+      );
     } catch (e) {
       // 磁盘已经动了，库没跟上 —— 必须如实报告，绝不当成功。
-      return RelocateOutcome.libraryFailed('$e',
-          newPath: result.path ?? toPath);
+      return RelocateOutcome.libraryFailed(
+        '$e',
+        newPath: result.path ?? toPath,
+      );
     }
   }
 }
@@ -131,29 +139,29 @@ class DownloadRelocateService {
 class RelocateOutcome {
   /// 目标与现状相同：什么都没做（也不该报错）。
   const RelocateOutcome.unchanged()
-      : status = RelocateStatus.unchanged,
-        newPath = null,
-        rowsMigrated = 0,
-        error = null;
+    : status = RelocateStatus.unchanged,
+      newPath = null,
+      rowsMigrated = 0,
+      error = null;
 
   /// 引擎拒绝/失败：**磁盘与库都没动**。
   const RelocateOutcome.engineFailed(String reason)
-      : status = RelocateStatus.engineFailed,
-        newPath = null,
-        rowsMigrated = 0,
-        error = reason;
+    : status = RelocateStatus.engineFailed,
+      newPath = null,
+      rowsMigrated = 0,
+      error = reason;
 
   /// 引擎成功、库迁移失败：磁盘已经动了，库还指着旧路径（需要用户知道）。
   const RelocateOutcome.libraryFailed(String reason, {this.newPath})
-      : status = RelocateStatus.libraryFailed,
-        rowsMigrated = 0,
-        error = reason;
+    : status = RelocateStatus.libraryFailed,
+      rowsMigrated = 0,
+      error = reason;
 
   /// 两步都成了。
   const RelocateOutcome.success({required this.newPath, required int rows})
-      : status = RelocateStatus.success,
-        rowsMigrated = rows,
-        error = null;
+    : status = RelocateStatus.success,
+      rowsMigrated = rows,
+      error = null;
 
   final RelocateStatus status;
 

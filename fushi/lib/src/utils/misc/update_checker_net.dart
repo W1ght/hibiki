@@ -45,8 +45,8 @@ const String updateDownloadSourceGitHub = 'github';
 const String updateDownloadSourceProxyPrefix = 'proxy:';
 
 /// 进程级更新资产首选源。设置只改变候选顺序，完整回退链始终保留。
-String Function() appUpdateDownloadSourceReader =
-    () => updateDownloadSourceAutomatic;
+String Function() appUpdateDownloadSourceReader = () =>
+    updateDownloadSourceAutomatic;
 
 String updateDownloadSourceForProxy(String prefix) =>
     '$updateDownloadSourceProxyPrefix$prefix';
@@ -147,8 +147,9 @@ UpdateDownloadPlan resolveUpdateDownloadPlan(String url, {String? preference}) {
       _selectedProxyCandidate(value, url),
     _ => null,
   };
-  final String? pinned =
-      requested != null && candidates.contains(requested) ? requested : null;
+  final String? pinned = requested != null && candidates.contains(requested)
+      ? requested
+      : null;
   return UpdateDownloadPlan(
     candidates: pinned == null
         ? candidates
@@ -170,16 +171,16 @@ List<String> updateDownloadUrls(String url, {String? preference}) =>
 /// **纯函数**：下载来源值 → 用户可读标签。设置页的选项标签与「本次没用上所选来源」
 /// 通告共用这一份，避免同一个来源在两处叫不同名字。未知值按「自动」处理。
 String updateDownloadSourceLabel(String source) => switch (source) {
-      updateDownloadSourceCloudflare => t.update_download_source_cloudflare,
-      updateDownloadSourceGitHub => t.update_download_source_github,
-      String value when value.startsWith(updateDownloadSourceProxyPrefix) =>
-        t.update_download_source_proxy(
-          host: Uri.parse(
-            value.substring(updateDownloadSourceProxyPrefix.length),
-          ).host,
-        ),
-      _ => t.update_download_source_auto,
-    };
+  updateDownloadSourceCloudflare => t.update_download_source_cloudflare,
+  updateDownloadSourceGitHub => t.update_download_source_github,
+  String value when value.startsWith(updateDownloadSourceProxyPrefix) =>
+    t.update_download_source_proxy(
+      host: Uri.parse(
+        value.substring(updateDownloadSourceProxyPrefix.length),
+      ).host,
+    ),
+  _ => t.update_download_source_auto,
+};
 
 /// 所选下载来源对本资产不适用时的用户可见通告；用上了 / 没显式选 → null。
 /// 下载遮罩与诊断日志共用它，「静默降级」从此有唯一一句可展示的话。
@@ -191,8 +192,9 @@ String? _downloadSourceUnavailableNotice(UpdateDownloadPlan plan) {
 }
 
 String? _selectedProxyCandidate(String preference, String directUrl) {
-  final String prefix =
-      preference.substring(updateDownloadSourceProxyPrefix.length);
+  final String prefix = preference.substring(
+    updateDownloadSourceProxyPrefix.length,
+  );
   if (!updateCheckProxyPrefixes.contains(prefix)) return null;
   return '$prefix$directUrl';
 }
@@ -240,11 +242,7 @@ Future<String?> fetchFirstSuccessfulBody(
   required Future<String?> Function(String url) fetch,
   void Function(String host, Object? error)? onFailure,
 }) {
-  return raceFirstSuccessfulBody(
-    urls,
-    fetch: fetch,
-    onFailure: onFailure,
-  );
+  return raceFirstSuccessfulBody(urls, fetch: fetch, onFailure: onFailure);
 }
 
 /// 一个并发候选 [fetch] 的结果（检查阶段竞速用）。[url] = 被抓的候选；[body] = 合法成功
@@ -392,8 +390,9 @@ String describeUpdateNetworkFailureReason(Object? error) {
   }
   if (error is SocketException) {
     final OSError? os = error.osError;
-    final String osPart =
-        os != null ? ' (errno=${os.errorCode}: ${os.message})' : '';
+    final String osPart = os != null
+        ? ' (errno=${os.errorCode}: ${os.message})'
+        : '';
     final String message = error.message;
     final String lower = message.toLowerCase();
     final String category;

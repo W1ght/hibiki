@@ -83,11 +83,14 @@ class AssParser {
     String chapterHref = defaultChapter,
     int audioFileIndex = 0,
   }) {
-    final String stripped =
-        content.startsWith('\uFEFF') ? content.substring(1) : content;
+    final String stripped = content.startsWith('\uFEFF')
+        ? content.substring(1)
+        : content;
 
-    final List<String> lines =
-        stripped.replaceAll('\r\n', '\n').replaceAll('\r', '\n').split('\n');
+    final List<String> lines = stripped
+        .replaceAll('\r\n', '\n')
+        .replaceAll('\r', '\n')
+        .split('\n');
 
     bool inEvents = false;
     bool inStyles = false;
@@ -153,13 +156,17 @@ class AssParser {
         }
         if (trimmed.startsWith('Style:') && styleFormatCols != null) {
           final String body = trimmed.substring('Style:'.length);
-          final SubtitleCueStyle? parsed =
-              _parseStyleRow(body, styleFormatCols);
+          final SubtitleCueStyle? parsed = _parseStyleRow(
+            body,
+            styleFormatCols,
+          );
           final int nameIdx = styleFormatCols.indexOf('name');
           if (parsed != null && nameIdx >= 0) {
             // Style 名可含空格但规范不含逗号；按逗号取第 nameIdx 段。
-            final List<String> cells =
-                body.split(',').map((c) => c.trim()).toList();
+            final List<String> cells = body
+                .split(',')
+                .map((c) => c.trim())
+                .toList();
             if (nameIdx < cells.length && cells[nameIdx].isNotEmpty) {
               styles[cells[nameIdx].toLowerCase()] = parsed;
             }
@@ -237,8 +244,11 @@ class AssParser {
         final double? evR = eventMargin(marginRCol);
         final double? evV = eventMargin(marginVCol);
         if (evL != null || evR != null || evV != null) {
-          cueStyle = (cueStyle ?? const SubtitleCueStyle())
-              .withEventMargins(marginL: evL, marginR: evR, marginV: evV);
+          cueStyle = (cueStyle ?? const SubtitleCueStyle()).withEventMargins(
+            marginL: evL,
+            marginR: evR,
+            marginV: evV,
+          );
         }
 
         // Text 列及其后所有列重新拼合（Text 本身可能含逗号）
@@ -275,26 +285,30 @@ class AssParser {
     for (int i = 0; i < rawCues.length; i++) {
       final (int start, int? rawEnd, String text, SubtitleMarkup markup) =
           rawCues[i];
-      final int fallbackEnd =
-          i + 1 < rawCues.length ? rawCues[i + 1].$1 : start + 5000;
+      final int fallbackEnd = i + 1 < rawCues.length
+          ? rawCues[i + 1].$1
+          : start + 5000;
       final int end = rawEnd ?? fallbackEnd;
       if (end <= start) {
         if (kDebugMode) {
           debugPrint(
-              'AssParser: skip cue with end<=start (start=$start end=$end): $text');
+            'AssParser: skip cue with end<=start (start=$start end=$end): $text',
+          );
         }
         continue;
       }
-      cues.add(AudioCue()
-        ..bookKey = bookKey
-        ..chapterHref = chapterHref
-        ..sentenceIndex = cues.length
-        ..textFragmentId = '[data-cue-id="${cues.length}"]'
-        ..text = text
-        ..markup = markup
-        ..startMs = start
-        ..endMs = end
-        ..audioFileIndex = audioFileIndex);
+      cues.add(
+        AudioCue()
+          ..bookKey = bookKey
+          ..chapterHref = chapterHref
+          ..sentenceIndex = cues.length
+          ..textFragmentId = '[data-cue-id="${cues.length}"]'
+          ..text = text
+          ..markup = markup
+          ..startMs = start
+          ..endMs = end
+          ..audioFileIndex = audioFileIndex,
+      );
     }
     return cues;
   }
@@ -303,8 +317,9 @@ class AssParser {
   /// （厘秒/毫秒/十分之一秒可变精度），归一到毫秒的写法与 SRT/VTT
   /// 解析器同构（`padRight(3, '0')`），消除外挂 .ass 的孤立特例（TODO-870）。
   static int? _parseAssTime(String timecode) {
-    final RegExpMatch? m =
-        RegExp(r'^(\d+):(\d{2}):(\d{2})\.(\d{1,3})$').firstMatch(timecode);
+    final RegExpMatch? m = RegExp(
+      r'^(\d+):(\d{2}):(\d{2})\.(\d{1,3})$',
+    ).firstMatch(timecode);
     if (m == null) {
       return null;
     }
@@ -327,8 +342,10 @@ class AssParser {
     List<String> formatCols,
   ) {
     // Style 名规范不含逗号，其余数值/颜色列也不含逗号 → 直接按逗号切分，与列名一一对应。
-    final List<String> cells =
-        body.split(',').map((String c) => c.trim()).toList();
+    final List<String> cells = body
+        .split(',')
+        .map((String c) => c.trim())
+        .toList();
     String? cell(String name) {
       final int idx = formatCols.indexOf(name);
       if (idx < 0 || idx >= cells.length) return null;

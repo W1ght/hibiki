@@ -26,9 +26,10 @@ void main() {
   final String oursPath = Platform.environment['ASR_REALDATA_SRT_OURS'] ?? '';
   final int limitMs =
       int.tryParse(Platform.environment['ASR_REALDATA_LIMIT_MS'] ?? '') ??
-          1 << 62;
+      1 << 62;
   final bool hasRef = refPath.isNotEmpty && File(refPath).existsSync();
-  final bool available = epubPath.isNotEmpty &&
+  final bool available =
+      epubPath.isNotEmpty &&
       oursPath.isNotEmpty &&
       File(epubPath).existsSync() &&
       File(oursPath).existsSync();
@@ -67,8 +68,9 @@ void main() {
           return cues.where((AudioCue c) => c.startMs < limitMs).toList();
         }
 
-        final List<AudioCue> ref =
-            hasRef ? await load(refPath) : const <AudioCue>[];
+        final List<AudioCue> ref = hasRef
+            ? await load(refPath)
+            : const <AudioCue>[];
         final List<AudioCue> ours = await load(oursPath);
 
         final List<double> thresholds =

@@ -59,8 +59,10 @@ void main() {
       final Directory dir = Directory('${root.path}/$rel');
       if (!dir.existsSync()) continue;
 
-      for (final FileSystemEntity entity
-          in dir.listSync(recursive: true, followLinks: false)) {
+      for (final FileSystemEntity entity in dir.listSync(
+        recursive: true,
+        followLinks: false,
+      )) {
         if (entity is! File) continue;
         if (!entity.path.endsWith('.dart')) continue;
         scanned++;
@@ -73,13 +75,18 @@ void main() {
       }
     }
 
-    expectScanScale(scanned,
-        what: '7 个扫描根下的 .dart', atLeast: 2600, measured: 3235);
+    expectScanScale(
+      scanned,
+      what: '7 个扫描根下的 .dart',
+      atLeast: 2600,
+      measured: 3235,
+    );
 
     expect(
       offenders,
       isEmpty,
-      reason: '以下文件含裸 NUL 字节，会被 git 判为 binary、无法三方合并（合并时会'
+      reason:
+          '以下文件含裸 NUL 字节，会被 git 判为 binary、无法三方合并（合并时会'
           '静默丢弃对方改动）。请改用 Dart 的 4 位十六进制 Unicode 转义写法——'
           '运行时逐字节等价，但文件保持纯文本：\n${offenders.join('\n')}',
     );

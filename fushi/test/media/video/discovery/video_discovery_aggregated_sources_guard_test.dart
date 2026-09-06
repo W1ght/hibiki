@@ -24,39 +24,43 @@ void main() {
     );
     addTearDown(service.close);
     final Set<String> providerIds = service.providerIdsForTesting.toSet();
-    expect(
-      providerIds,
-      <String>{'anilist', 'tmdb'},
-    );
+    expect(providerIds, <String>{'anilist', 'tmdb'});
     expect(providerIds, isNot(contains('bangumi')));
   });
 
-  test('discovery source selection has no dependency on proxy configuration',
-      () {
-    final Directory discoveryDir = Directory('lib/src/media/video/discovery');
-    expect(discoveryDir.existsSync(), isTrue,
-        reason: '守卫必须从 fushi/ 目录运行且 discovery 目录存在');
-    final List<String> offenders = <String>[];
-    for (final FileSystemEntity entity
-        in discoveryDir.listSync(recursive: true)) {
-      if (entity is! File || !entity.path.endsWith('.dart')) continue;
-      final String source = maskComments(entity.readAsStringSync());
-      const List<String> forbidden = <String>[
-        'DownloadNetworkProxy',
-        'download_network_proxy',
-        'update_custom_proxy',
-        'appUserProxyReader',
-        'resolveAppProxyDirective',
-      ];
-      if (forbidden.any(source.contains)) {
-        offenders.add(entity.path);
+  test(
+    'discovery source selection has no dependency on proxy configuration',
+    () {
+      final Directory discoveryDir = Directory('lib/src/media/video/discovery');
+      expect(
+        discoveryDir.existsSync(),
+        isTrue,
+        reason: '守卫必须从 fushi/ 目录运行且 discovery 目录存在',
+      );
+      final List<String> offenders = <String>[];
+      for (final FileSystemEntity entity in discoveryDir.listSync(
+        recursive: true,
+      )) {
+        if (entity is! File || !entity.path.endsWith('.dart')) continue;
+        final String source = maskComments(entity.readAsStringSync());
+        const List<String> forbidden = <String>[
+          'DownloadNetworkProxy',
+          'download_network_proxy',
+          'update_custom_proxy',
+          'appUserProxyReader',
+          'resolveAppProxyDirective',
+        ];
+        if (forbidden.any(source.contains)) {
+          offenders.add(entity.path);
+        }
       }
-    }
-    expect(
-      offenders,
-      isEmpty,
-      reason: '发现页聚合来源不得随代理配置分叉（BUG-1538）：'
-          '这些文件读取了代理配置 → $offenders',
-    );
-  });
+      expect(
+        offenders,
+        isEmpty,
+        reason:
+            '发现页聚合来源不得随代理配置分叉（BUG-1538）：'
+            '这些文件读取了代理配置 → $offenders',
+      );
+    },
+  );
 }

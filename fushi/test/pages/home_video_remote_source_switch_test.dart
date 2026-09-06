@@ -55,8 +55,9 @@ void main() {
 
   late Directory pathProviderDir;
   setUpAll(() {
-    pathProviderDir =
-        Directory.systemTemp.createTempSync('hibiki_remote_switch_pp');
+    pathProviderDir = Directory.systemTemp.createTempSync(
+      'hibiki_remote_switch_pp',
+    );
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
       (MethodCall call) async => pathProviderDir.path,
@@ -88,8 +89,9 @@ void main() {
     db = FushiDatabase.forTesting(NativeDatabase.memory());
     prefs = PreferencesRepository(db);
     await prefs.loadFromDb();
-    storeDir =
-        Directory.systemTemp.createTempSync('hibiki_remote_switch_store');
+    storeDir = Directory.systemTemp.createTempSync(
+      'hibiki_remote_switch_store',
+    );
     platformServices = testPlatformServices();
     ankiRepository = FakeAnkiRepository();
     appModel = AppModel(platformServices)
@@ -129,35 +131,37 @@ void main() {
 
     final _FakeInterconnectVideoClient interconnect =
         _FakeInterconnectVideoClient(<RemoteVideoInfo>[
-      const RemoteVideoInfo(id: 'peer-only-vid', title: '对端才有的片子'),
-    ]);
+          const RemoteVideoInfo(id: 'peer-only-vid', title: '对端才有的片子'),
+        ]);
     final _FakeCloudVideoSource cloud = _FakeCloudVideoSource(<RemoteVideoInfo>[
       const RemoteVideoInfo(id: 'cloud-only-vid', title: '云盘才有的片子'),
     ]);
 
-    await tester.pumpWidget(ProviderScope(
-      overrides: <Override>[
-        platformServicesProvider.overrideWithValue(platformServices),
-        ankiRepositoryProvider.overrideWithValue(ankiRepository),
-        appProvider.overrideWith((ref) => appModel),
-      ],
-      child: TranslationProvider(
-        child: MaterialApp(
-          home: Scaffold(
-            body: HomeVideoPage(
-              repo: repo,
-              // #792 起混排墙在 series 分区(home 是 dashboard)。
-              section: VideoLibrarySection.allVideos,
-              // 互联启用时给互联 client；关掉后返 null → 页面回退云盘分支，
-              // 与生产的 `_resolveRemoteVideoClient` 语义一致。
-              remoteVideoClientLoader: () async =>
-                  interconnectEnabled ? interconnect : null,
-              cloudRemoteVideoClientLoader: () async => cloud,
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: <Override>[
+          platformServicesProvider.overrideWithValue(platformServices),
+          ankiRepositoryProvider.overrideWithValue(ankiRepository),
+          appProvider.overrideWith((ref) => appModel),
+        ],
+        child: TranslationProvider(
+          child: MaterialApp(
+            home: Scaffold(
+              body: HomeVideoPage(
+                repo: repo,
+                // #792 起混排墙在 series 分区(home 是 dashboard)。
+                section: VideoLibrarySection.allVideos,
+                // 互联启用时给互联 client；关掉后返 null → 页面回退云盘分支，
+                // 与生产的 `_resolveRemoteVideoClient` 语义一致。
+                remoteVideoClientLoader: () async =>
+                    interconnectEnabled ? interconnect : null,
+                cloudRemoteVideoClientLoader: () async => cloud,
+              ),
             ),
           ),
         ),
       ),
-    ));
+    );
     await tester.pumpAndSettle();
 
     // ① 互联来源：对端的片子在场。
@@ -187,11 +191,7 @@ void main() {
     );
     expect(find.text('云盘才有的片子'), findsOneWidget);
     expect(find.text('对端才有的片子'), findsNothing);
-    expect(
-      cloud.listCalls,
-      1,
-      reason: '云盘是另一个槽，必须真去问云盘要清单，而不是复用互联那份缓存',
-    );
+    expect(cloud.listCalls, 1, reason: '云盘是另一个槽，必须真去问云盘要清单，而不是复用互联那份缓存');
   });
 
   testWidgets('BUG-1202: 反向——云盘视图开启互联后显示对端的片子', (tester) async {
@@ -204,32 +204,34 @@ void main() {
 
     final _FakeInterconnectVideoClient interconnect =
         _FakeInterconnectVideoClient(<RemoteVideoInfo>[
-      const RemoteVideoInfo(id: 'peer-only-vid', title: '对端才有的片子'),
-    ]);
+          const RemoteVideoInfo(id: 'peer-only-vid', title: '对端才有的片子'),
+        ]);
     final _FakeCloudVideoSource cloud = _FakeCloudVideoSource(<RemoteVideoInfo>[
       const RemoteVideoInfo(id: 'cloud-only-vid', title: '云盘才有的片子'),
     ]);
 
-    await tester.pumpWidget(ProviderScope(
-      overrides: <Override>[
-        platformServicesProvider.overrideWithValue(platformServices),
-        ankiRepositoryProvider.overrideWithValue(ankiRepository),
-        appProvider.overrideWith((ref) => appModel),
-      ],
-      child: TranslationProvider(
-        child: MaterialApp(
-          home: Scaffold(
-            body: HomeVideoPage(
-              repo: repo,
-              section: VideoLibrarySection.allVideos,
-              remoteVideoClientLoader: () async =>
-                  interconnectEnabled ? interconnect : null,
-              cloudRemoteVideoClientLoader: () async => cloud,
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: <Override>[
+          platformServicesProvider.overrideWithValue(platformServices),
+          ankiRepositoryProvider.overrideWithValue(ankiRepository),
+          appProvider.overrideWith((ref) => appModel),
+        ],
+        child: TranslationProvider(
+          child: MaterialApp(
+            home: Scaffold(
+              body: HomeVideoPage(
+                repo: repo,
+                section: VideoLibrarySection.allVideos,
+                remoteVideoClientLoader: () async =>
+                    interconnectEnabled ? interconnect : null,
+                cloudRemoteVideoClientLoader: () async => cloud,
+              ),
             ),
           ),
         ),
       ),
-    ));
+    );
     await tester.pumpAndSettle();
 
     expect(
@@ -263,27 +265,29 @@ void main() {
 
     final _FakeInterconnectVideoClient interconnect =
         _FakeInterconnectVideoClient(<RemoteVideoInfo>[
-      const RemoteVideoInfo(id: 'peer-only-vid', title: '对端才有的片子'),
-    ]);
+          const RemoteVideoInfo(id: 'peer-only-vid', title: '对端才有的片子'),
+        ]);
 
-    await tester.pumpWidget(ProviderScope(
-      overrides: <Override>[
-        platformServicesProvider.overrideWithValue(platformServices),
-        ankiRepositoryProvider.overrideWithValue(ankiRepository),
-        appProvider.overrideWith((ref) => appModel),
-      ],
-      child: TranslationProvider(
-        child: MaterialApp(
-          home: Scaffold(
-            body: HomeVideoPage(
-              repo: repo,
-              section: VideoLibrarySection.allVideos,
-              remoteVideoClientLoader: () async => interconnect,
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: <Override>[
+          platformServicesProvider.overrideWithValue(platformServices),
+          ankiRepositoryProvider.overrideWithValue(ankiRepository),
+          appProvider.overrideWith((ref) => appModel),
+        ],
+        child: TranslationProvider(
+          child: MaterialApp(
+            home: Scaffold(
+              body: HomeVideoPage(
+                repo: repo,
+                section: VideoLibrarySection.allVideos,
+                remoteVideoClientLoader: () async => interconnect,
+              ),
             ),
           ),
         ),
       ),
-    ));
+    );
     await tester.pumpAndSettle();
     expect(interconnect.listCalls, 1);
 
@@ -323,15 +327,13 @@ class _FakeInterconnectVideoClient implements RemoteVideoClient {
     String id,
     File dest, {
     void Function(double progress)? onProgress,
-  }) async =>
-      throw UnimplementedError();
+  }) async => throw UnimplementedError();
 
   @override
   Future<RemoteVideoStreamUrls> remoteVideoStreamUrls(
     String id, {
     int episodeIndex = 0,
-  }) async =>
-      throw UnimplementedError();
+  }) async => throw UnimplementedError();
 
   @override
   Future<void> getRemoteVideoSubtitle(
@@ -340,15 +342,13 @@ class _FakeInterconnectVideoClient implements RemoteVideoClient {
     int? embeddedStreamIndex,
     int episodeIndex = 0,
     void Function(double progress)? onProgress,
-  }) async =>
-      throw UnimplementedError();
+  }) async => throw UnimplementedError();
 
   @override
   Future<({int positionMs, int updatedAtMs})> remoteVideoPosition(
     String id, {
     int episodeIndex = 0,
-  }) async =>
-      (positionMs: 0, updatedAtMs: 0);
+  }) async => (positionMs: 0, updatedAtMs: 0);
 
   @override
   Future<void> putRemoteVideoPosition(
@@ -394,22 +394,19 @@ class _FakeCloudVideoSource implements CloudRemoteVideoClient {
     String id,
     File dest, {
     void Function(double progress)? onProgress,
-  }) async =>
-      throw UnimplementedError();
+  }) async => throw UnimplementedError();
 
   @override
   Future<void> getRemoteVideo(
     String uid,
     File destination, {
     void Function(double progress)? onProgress,
-  }) async =>
-      throw UnimplementedError();
+  }) async => throw UnimplementedError();
 
   @override
   Future<bool> getRemoteVideoCover(
     String uid,
     File destination, {
     void Function(double progress)? onProgress,
-  }) async =>
-      false;
+  }) async => false;
 }

@@ -17,8 +17,7 @@ void main() {
   }
 
   test('swipePageTurnSensitivity defaults to 1.0', () async {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final ReaderSettings settings = await defaultSettings(db);
 
@@ -26,8 +25,7 @@ void main() {
   });
 
   test('setSwipePageTurnSensitivity round-trips through DB', () async {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final ReaderSettings settings = await defaultSettings(db);
 
@@ -38,8 +36,7 @@ void main() {
   });
 
   test('sensitivity is clamped to [0.3, 2.0] on read and write', () async {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final ReaderSettings settings = await defaultSettings(db);
 
@@ -58,17 +55,19 @@ void main() {
       expect(t.fastDist, 22);
     });
 
-    test('higher sensitivity raises both thresholds (more deliberate swipe)',
-        () {
-      final ({int dist, int fastDist}) low =
-          ReaderSettings.swipePageTurnDistThresholds(1.0);
-      final ({int dist, int fastDist}) high =
-          ReaderSettings.swipePageTurnDistThresholds(2.0);
-      expect(high.dist, greaterThan(low.dist));
-      expect(high.fastDist, greaterThan(low.fastDist));
-      expect(high.dist, 88);
-      expect(high.fastDist, 44);
-    });
+    test(
+      'higher sensitivity raises both thresholds (more deliberate swipe)',
+      () {
+        final ({int dist, int fastDist}) low =
+            ReaderSettings.swipePageTurnDistThresholds(1.0);
+        final ({int dist, int fastDist}) high =
+            ReaderSettings.swipePageTurnDistThresholds(2.0);
+        expect(high.dist, greaterThan(low.dist));
+        expect(high.fastDist, greaterThan(low.fastDist));
+        expect(high.dist, 88);
+        expect(high.fastDist, 44);
+      },
+    );
 
     test('lower sensitivity lowers both thresholds (more sensitive swipe)', () {
       final ({int dist, int fastDist}) t =

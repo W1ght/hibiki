@@ -49,8 +49,10 @@ Directory _repoRoot() {
     if (parent.path == dir.path) break;
     dir = parent;
   }
-  fail('找不到含 tool/ffmpeg-min/build-ffmpeg-min.sh 的仓库根'
-      '（从 ${Directory.current.path} 向上）');
+  fail(
+    '找不到含 tool/ffmpeg-min/build-ffmpeg-min.sh 的仓库根'
+    '（从 ${Directory.current.path} 向上）',
+  );
 }
 
 /// 把 workflow 切成 `job 名 -> 该 job 的正文行`。
@@ -79,8 +81,9 @@ Map<String, List<String>> _splitJobs(List<String> lines) {
 
 void main() {
   final Directory root = _repoRoot();
-  final File workflow =
-      File('${root.path}/.github/workflows/release-desktop.yml');
+  final File workflow = File(
+    '${root.path}/.github/workflows/release-desktop.yml',
+  );
 
   group('桌面发布装配 ffmpeg-min 守卫（BUG-1420 / BUG-1421）', () {
     test('release-desktop.yml 在', () {
@@ -133,7 +136,8 @@ void main() {
       expect(
         desktopJobsSeen,
         greaterThan(0),
-        reason: '在 release-desktop.yml 里没找到任何 `flutter build <桌面平台> --release`。'
+        reason:
+            '在 release-desktop.yml 里没找到任何 `flutter build <桌面平台> --release`。'
             '若构建命令改了写法，请同步更新本守卫的判据，'
             '否则它会退化成永远通过的空壳。',
       );
@@ -147,12 +151,13 @@ void main() {
       _desktopPlatforms.forEach((String platform, String vendorDir) {
         final bool referenced =
             text.contains('third_party/ffmpeg-min/$vendorDir') ||
-                text.contains(r'third_party\ffmpeg-min\' + vendorDir);
+            text.contains(r'third_party\ffmpeg-min\' + vendorDir);
         if (!referenced) return;
 
         for (final String binary in _requiredBinaries[platform]!) {
-          final File f =
-              File('${root.path}/third_party/ffmpeg-min/$vendorDir/$binary');
+          final File f = File(
+            '${root.path}/third_party/ffmpeg-min/$vendorDir/$binary',
+          );
           if (!f.existsSync()) {
             problems.add(
               '${f.path} 不存在，但 release-desktop.yml 会去拷它 —— 发布当场失败。'

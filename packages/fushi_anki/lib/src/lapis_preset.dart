@@ -11,9 +11,9 @@ class LapisPreset {
   }
 
   static Map<String, String> defaultMappings(AnkiNoteType noteType) => {
-        for (final f in noteType.fields)
-          if (_defaults.containsKey(f)) f: _defaults[f]!,
-      };
+    for (final f in noteType.fields)
+      if (_defaults.containsKey(f)) f: _defaults[f]!,
+  };
 
   static Map<String, String> applyDefaults(
     AnkiNoteType noteType,

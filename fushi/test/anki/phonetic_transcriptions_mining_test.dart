@@ -26,8 +26,7 @@ class _TestRepo extends BaseAnkiRepository {
   Future<MineOutcome> mineEntry({
     required String rawPayloadJson,
     required AnkiMiningContext context,
-  }) =>
-      throw UnimplementedError();
+  }) => throw UnimplementedError();
 
   @override
   Future<bool> isDuplicate(String expression, String reading) =>
@@ -44,19 +43,19 @@ class _TestRepo extends BaseAnkiRepository {
     required AnkiSettings settings,
     required AnkiMiningPayload payload,
     required AnkiMiningContext context,
-  }) =>
-      renderMediaPayload(
-        settings: settings,
-        payload: payload,
-        context: context,
-        coverRef: null,
-        sentenceAudioRef: null,
-        processedAudio: '',
-        dictionaryMediaTags: const <String, String>{},
-      );
+  }) => renderMediaPayload(
+    settings: settings,
+    payload: payload,
+    context: context,
+    coverRef: null,
+    sentenceAudioRef: null,
+    processedAudio: '',
+    dictionaryMediaTags: const <String, String>{},
+  );
 }
 
-const String _ipaHtml = '<ol><li><span style="display:inline;">'
+const String _ipaHtml =
+    '<ol><li><span style="display:inline;">'
     '<span>[</span><span>ˈwɜːd</span><span>]</span></span></li></ol>';
 
 void main() {
@@ -84,8 +83,9 @@ void main() {
       expect(payload.phoneticTranscriptions, _ipaHtml);
       // 缺 key（旧草稿/旧桥）安全回退为空，不炸。
       expect(
-        AnkiMiningPayload.fromJson(<String, dynamic>{'expression': 'a'})
-            .phoneticTranscriptions,
+        AnkiMiningPayload.fromJson(<String, dynamic>{
+          'expression': 'a',
+        }).phoneticTranscriptions,
         '',
       );
     });
@@ -97,8 +97,7 @@ void main() {
       );
     });
 
-    test(
-        'renderMediaPayload passes phoneticTranscriptions through '
+    test('renderMediaPayload passes phoneticTranscriptions through '
         '(媒体二次渲染透传，防 16 字段漂移)', () {
       final _TestRepo repo = _TestRepo();
       final RenderedMinedFields rendered = repo.renderFor(
@@ -130,32 +129,42 @@ void main() {
     /// 且模板串 / 引号串内容原样保留（本文件断言里的 `` `<ol>${items}</ol>` `` 不受影响）。
     String functionBody(String name) {
       final int start = src.indexOf('function $name(');
-      expect(start, greaterThanOrEqualTo(0),
-          reason: 'popup.js 缺少 function $name');
+      expect(
+        start,
+        greaterThanOrEqualTo(0),
+        reason: 'popup.js 缺少 function $name',
+      );
       final int end = src.indexOf('\n}', start);
       expect(end, greaterThan(start), reason: '$name 函数体未闭合？');
       return maskComments(src.substring(start, end + 2));
     }
 
-    test(
-        'constructPitchPositionHtml folds transcriptions into '
+    test('constructPitchPositionHtml folds transcriptions into '
         '{pitch-accent-positions}（英语默认路径）', () {
       final String body = functionBody('constructPitchPositionHtml');
-      expect(body, contains('pitchGroup.transcriptions'),
-          reason: '制卡侧不再消费 transcriptions —— 英语卡声调字段会回到恒空');
-      expect(body, contains('escapePitchText(ipa)'),
-          reason: 'IPA 来自词典数据，进 HTML 前必须转义');
+      expect(
+        body,
+        contains('pitchGroup.transcriptions'),
+        reason: '制卡侧不再消费 transcriptions —— 英语卡声调字段会回到恒空',
+      );
+      expect(
+        body,
+        contains('escapePitchText(ipa)'),
+        reason: 'IPA 来自词典数据，进 HTML 前必须转义',
+      );
       // 全空组返回 ''（而不是 <ol></ol> 空壳），字段才会被按空跳过。
       expect(body, contains(r"items ? `<ol>${items}</ol>` : ''"));
     });
 
-    test(
-        'constructPhoneticTranscriptionsHtml exists and only reads '
+    test('constructPhoneticTranscriptionsHtml exists and only reads '
         'transcriptions', () {
       final String body = functionBody('constructPhoneticTranscriptionsHtml');
       expect(body, contains('pitchGroup.transcriptions'));
-      expect(body, isNot(contains('pitchGroup.pitchPositions')),
-          reason: '{phonetic-transcriptions} 只含 IPA，不混声调 positions');
+      expect(
+        body,
+        isNot(contains('pitchGroup.pitchPositions')),
+        reason: '{phonetic-transcriptions} 只含 IPA，不混声调 positions',
+      );
     });
 
     test('buildMinePayload computes and ships phoneticTranscriptions', () {
@@ -163,7 +172,8 @@ void main() {
       expect(
         body,
         contains(
-            'const phoneticTranscriptions = constructPhoneticTranscriptionsHtml(pitches);'),
+          'const phoneticTranscriptions = constructPhoneticTranscriptionsHtml(pitches);',
+        ),
       );
       // return 对象里必须带该 key（shorthand 属性）。
       expect(body, contains('\n        phoneticTranscriptions,'));

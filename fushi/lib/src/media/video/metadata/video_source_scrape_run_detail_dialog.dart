@@ -18,13 +18,13 @@ import 'package:fushi_core/fushi_core.dart';
 
 /// 与后台任务面板、来源摘要行共用的 run 状态文案。
 String videoSourceScrapeRunStatusLabel(String status) => switch (status) {
-      'completed' => t.download_task_status_completed,
-      'cancelled' => t.download_status_cancelled,
-      'interrupted' => t.video_source_scrape_status_interrupted,
-      'failed' => t.download_task_status_error,
-      'running' => t.video_source_scrape_action,
-      _ => status,
-    };
+  'completed' => t.download_task_status_completed,
+  'cancelled' => t.download_status_cancelled,
+  'interrupted' => t.video_source_scrape_status_interrupted,
+  'failed' => t.download_task_status_error,
+  'running' => t.video_source_scrape_action,
+  _ => status,
+};
 
 /// 返回 true 表示这次交互改动了库（重刮了来源或手动绑定了作品），调用方应刷新。
 Future<bool> showVideoSourceScrapeRunDetailDialog({
@@ -65,8 +65,9 @@ class _VideoSourceScrapeRunDetailDialog extends StatefulWidget {
 
 class _VideoSourceScrapeRunDetailDialogState
     extends State<_VideoSourceScrapeRunDetailDialog> {
-  late final SourceScrapeReport? _report =
-      decodeSourceScrapeReport(widget.run.summaryJson);
+  late final SourceScrapeReport? _report = decodeSourceScrapeReport(
+    widget.run.summaryJson,
+  );
 
   /// 已经手动绑定过、不必再出现在待办里的作品名。
   final Set<String> _resolved = <String>{};
@@ -106,16 +107,20 @@ class _VideoSourceScrapeRunDetailDialogState
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Text(FushiTimeFormat.dateHourMinute(
-                  DateTime.fromMillisecondsSinceEpoch(run.startedAt),
-                )),
+                Text(
+                  FushiTimeFormat.dateHourMinute(
+                    DateTime.fromMillisecondsSinceEpoch(run.startedAt),
+                  ),
+                ),
                 const SizedBox(height: 6),
-                Text(t.video_source_scrape_last_summary(
-                  status: videoSourceScrapeRunStatusLabel(run.status),
-                  succeeded: run.succeededWorks,
-                  pending: run.pendingConfirmations,
-                  failed: run.failedWorks,
-                )),
+                Text(
+                  t.video_source_scrape_last_summary(
+                    status: videoSourceScrapeRunStatusLabel(run.status),
+                    succeeded: run.succeededWorks,
+                    pending: run.pendingConfirmations,
+                    failed: run.failedWorks,
+                  ),
+                ),
                 if (lastError != null && lastError.isNotEmpty) ...<Widget>[
                   const SizedBox(height: 6),
                   SelectableText(lastError),
@@ -172,17 +177,17 @@ class _VideoSourceScrapeRunDetailDialogState
       trailing: !_canBindManually
           ? null
           : busy
-              ? const SizedBox.square(
-                  dimension: 18,
-                  child: CircularProgressIndicator(strokeWidth: 2),
-                )
-              : IconButton(
-                  tooltip: t.video_source_scrape_manual_search_title,
-                  onPressed: _busyWorkTitle != null
-                      ? null
-                      : () => unawaited(_bindManually(issue)),
-                  icon: const Icon(Icons.search),
-                ),
+          ? const SizedBox.square(
+              dimension: 18,
+              child: CircularProgressIndicator(strokeWidth: 2),
+            )
+          : IconButton(
+              tooltip: t.video_source_scrape_manual_search_title,
+              onPressed: _busyWorkTitle != null
+                  ? null
+                  : () => unawaited(_bindManually(issue)),
+              icon: const Icon(Icons.search),
+            ),
     );
   }
 
@@ -201,11 +206,11 @@ class _VideoSourceScrapeRunDetailDialogState
     if (source == null || controller == null) return;
     final VideoSourceScrapeConfirmationCandidate? candidate =
         await showVideoSourceScrapeManualBindingDialog(
-      context: context,
-      controller: controller,
-      source: source,
-      workTitle: issue.workTitle,
-    );
+          context: context,
+          controller: controller,
+          source: source,
+          workTitle: issue.workTitle,
+        );
     if (candidate == null || !mounted) return;
     setState(() {
       _busyWorkTitle = issue.workTitle;
@@ -239,20 +244,19 @@ class _VideoSourceScrapeRunDetailDialogState
 /// 手动搜索资料源并挑一个作品（共享入口：run 详情与待确认队列都用它）。
 /// 返回选中的候选；取消返回 null。
 Future<VideoSourceScrapeConfirmationCandidate?>
-    showVideoSourceScrapeManualBindingDialog({
+showVideoSourceScrapeManualBindingDialog({
   required BuildContext context,
   required VideoSourceScrapeTaskController controller,
   required SourceLibraryRow source,
   required String workTitle,
-}) =>
-        showAppDialog<VideoSourceScrapeConfirmationCandidate>(
-          context: context,
-          builder: (BuildContext context) => _ManualBindingDialog(
-            controller: controller,
-            source: source,
-            workTitle: workTitle,
-          ),
-        );
+}) => showAppDialog<VideoSourceScrapeConfirmationCandidate>(
+  context: context,
+  builder: (BuildContext context) => _ManualBindingDialog(
+    controller: controller,
+    source: source,
+    workTitle: workTitle,
+  ),
+);
 
 /// 手动搜索资料源并挑一个作品。结果行与批次内确认是同一个
 /// [VideoSourceScrapeCandidateTile]，选中后返回同一种候选对象。
@@ -272,8 +276,9 @@ class _ManualBindingDialog extends StatefulWidget {
 }
 
 class _ManualBindingDialogState extends State<_ManualBindingDialog> {
-  late final TextEditingController _query =
-      TextEditingController(text: widget.workTitle);
+  late final TextEditingController _query = TextEditingController(
+    text: widget.workTitle,
+  );
   List<VideoSourceScrapeConfirmationCandidate>? _results;
   bool _searching = false;
   String? _error;
@@ -291,12 +296,13 @@ class _ManualBindingDialogState extends State<_ManualBindingDialog> {
       _error = null;
     });
     try {
-      final List<VideoSourceScrapeConfirmationCandidate> results =
-          await widget.controller.searchManualCandidates(
-        source: widget.source,
-        workTitle: widget.workTitle,
-        query: _query.text,
-      );
+      final List<VideoSourceScrapeConfirmationCandidate> results = await widget
+          .controller
+          .searchManualCandidates(
+            source: widget.source,
+            workTitle: widget.workTitle,
+            query: _query.text,
+          );
       if (!mounted) return;
       setState(() => _results = results);
     } on Object catch (error) {
@@ -348,10 +354,9 @@ class _ManualBindingDialogState extends State<_ManualBindingDialog> {
                       in results)
                     VideoSourceScrapeCandidateTile(
                       candidate: candidate,
-                      onSelected: (
-                        VideoSourceScrapeConfirmationCandidate selected,
-                      ) =>
-                          Navigator.of(context).pop(selected),
+                      onSelected:
+                          (VideoSourceScrapeConfirmationCandidate selected) =>
+                              Navigator.of(context).pop(selected),
                     ),
                 if (_error case final String error) ...<Widget>[
                   const SizedBox(height: 12),

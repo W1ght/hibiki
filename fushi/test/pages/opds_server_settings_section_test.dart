@@ -73,23 +73,21 @@ void main() {
   /// 一个已释放的 repo——那是 harness 假象，不是生产行为（真实 app 里
   /// ProviderScope 在根上，切走设置页只卸载区块）。
   Widget harness({bool showSection = true}) => ProviderScope(
-        overrides: <Override>[
-          appProvider.overrideWith((Ref ref) => appModel),
-        ],
-        child: MaterialApp(
-          theme: ThemeData(useMaterial3: true),
-          home: Scaffold(
-            body: SizedBox(
-              width: 640,
-              child: SingleChildScrollView(
-                child: showSection
-                    ? const OpdsServerSettingsSection()
-                    : const SizedBox.shrink(),
-              ),
-            ),
+    overrides: <Override>[appProvider.overrideWith((Ref ref) => appModel)],
+    child: MaterialApp(
+      theme: ThemeData(useMaterial3: true),
+      home: Scaffold(
+        body: SizedBox(
+          width: 640,
+          child: SingleChildScrollView(
+            child: showSection
+                ? const OpdsServerSettingsSection()
+                : const SizedBox.shrink(),
           ),
         ),
-      );
+      ),
+    ),
+  );
 
   Future<void> pumpSection(WidgetTester tester) async {
     tester.view.physicalSize = const Size(900, 3200);
@@ -126,13 +124,16 @@ void main() {
     expect(saved, hasLength(1));
     expect(saved.single.name, 'My Shelf');
     expect(
-        saved.single.catalogUrl.toString(), 'https://books.example.com/opds');
+      saved.single.catalogUrl.toString(),
+      'https://books.example.com/opds',
+    );
     expect(saved.single.username, 'reader');
     expect(saved.single.password, 'pw');
 
     // 关键：注册表是构造期快照，不重建的话新服务器要等冷启动才出现。
     final List<OpdsDiscoverySource> added = appModel
-        .mediaDiscoveryService.sources
+        .mediaDiscoveryService
+        .sources
         .whereType<OpdsDiscoverySource>()
         .toList();
     expect(added, hasLength(1), reason: '保存后必须立刻能在发现页选到这台服务器，而不是等冷启动');
@@ -157,8 +158,9 @@ void main() {
     );
 
     // 打开开关 → 立刻进注册表。
-    final Finder toggle =
-        find.byKey(const ValueKey<String>('opds-server-0-enabled'));
+    final Finder toggle = find.byKey(
+      const ValueKey<String>('opds-server-0-enabled'),
+    );
     await tester.ensureVisible(toggle);
     await tester.pumpAndSettle();
     await tester.tap(toggle);
@@ -185,8 +187,9 @@ void main() {
     expect(find.text(t.discovery_opds_url_needs_http_optin), findsOneWidget);
 
     // 勾上放行开关后同一个地址即可保存。
-    final Finder allow =
-        find.byKey(const ValueKey<String>('opds-server-0-allow-http'));
+    final Finder allow = find.byKey(
+      const ValueKey<String>('opds-server-0-allow-http'),
+    );
     await tester.ensureVisible(allow);
     await tester.pumpAndSettle();
     await tester.tap(allow);
@@ -206,8 +209,10 @@ void main() {
     await tester.pumpAndSettle();
     expect(prefs.discoveryOpdsServers, isEmpty);
     // 条目仍在 UI 里，等用户填完。
-    expect(find.byKey(const ValueKey<String>('opds-server-0-url')),
-        findsOneWidget);
+    expect(
+      find.byKey(const ValueKey<String>('opds-server-0-url')),
+      findsOneWidget,
+    );
   });
 
   testWidgets('移除一台服务器同时从偏好和注册表消失', (WidgetTester tester) async {
@@ -224,8 +229,9 @@ void main() {
       hasLength(1),
     );
 
-    final Finder remove =
-        find.byKey(const ValueKey<String>('opds-server-0-remove'));
+    final Finder remove = find.byKey(
+      const ValueKey<String>('opds-server-0-remove'),
+    );
     await tester.ensureVisible(remove);
     await tester.pumpAndSettle();
     await tester.tap(remove);
@@ -238,40 +244,34 @@ void main() {
     );
   });
 
-  testWidgets(
-    '防抖窗口内切走页面：编辑必须被 flush，而不是连同异常一起丢掉',
-    (WidgetTester tester) async {
-      // 这条路径正是 dispose-flush 存在的唯一理由。第一版实现在 dispose 里
-      // `ref.read(appProvider)`，而那时 element 已 deactivated，Riverpod 直接抛
-      // 「Looking up a deactivated widget's ancestor is unsafe」——用户那次编辑
-      // 连同异常一起没了。
-      await pumpSection(tester);
-      await tester.tap(find.byKey(const ValueKey<String>('opds-server-add')));
-      await tester.pumpAndSettle();
-      await enter(
-        tester,
-        'opds-server-0-url',
-        'https://books.example.com/opds',
-      );
-      await enter(tester, 'opds-server-0-name', 'Flushed');
+  testWidgets('防抖窗口内切走页面：编辑必须被 flush，而不是连同异常一起丢掉', (WidgetTester tester) async {
+    // 这条路径正是 dispose-flush 存在的唯一理由。第一版实现在 dispose 里
+    // `ref.read(appProvider)`，而那时 element 已 deactivated，Riverpod 直接抛
+    // 「Looking up a deactivated widget's ancestor is unsafe」——用户那次编辑
+    // 连同异常一起没了。
+    await pumpSection(tester);
+    await tester.tap(find.byKey(const ValueKey<String>('opds-server-add')));
+    await tester.pumpAndSettle();
+    await enter(tester, 'opds-server-0-url', 'https://books.example.com/opds');
+    await enter(tester, 'opds-server-0-name', 'Flushed');
 
-      // 不等防抖到期就把区块摘掉（= 用户切走了设置页）。
-      expect(prefs.discoveryOpdsServers, isEmpty, reason: '前提：此时还没落盘');
-      await tester.pumpWidget(harness(showSection: false));
-      await tester.pumpAndSettle();
+    // 不等防抖到期就把区块摘掉（= 用户切走了设置页）。
+    expect(prefs.discoveryOpdsServers, isEmpty, reason: '前提：此时还没落盘');
+    await tester.pumpWidget(harness(showSection: false));
+    await tester.pumpAndSettle();
 
-      expect(prefs.discoveryOpdsServers, hasLength(1));
-      expect(prefs.discoveryOpdsServers.single.name, 'Flushed');
-    },
-  );
+    expect(prefs.discoveryOpdsServers, hasLength(1));
+    expect(prefs.discoveryOpdsServers.single.name, 'Flushed');
+  });
 
   testWidgets('配置无效时「测试连接」按钮不可用', (WidgetTester tester) async {
     await pumpSection(tester);
     await tester.tap(find.byKey(const ValueKey<String>('opds-server-add')));
     await tester.pumpAndSettle();
 
-    final Finder test0 =
-        find.byKey(const ValueKey<String>('opds-server-0-test'));
+    final Finder test0 = find.byKey(
+      const ValueKey<String>('opds-server-0-test'),
+    );
     await tester.ensureVisible(test0);
     await tester.pumpAndSettle();
     // 空地址 → 不可点（而不是点了再报一个通用错误）。

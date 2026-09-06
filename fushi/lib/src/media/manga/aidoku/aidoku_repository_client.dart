@@ -100,8 +100,9 @@ class AidokuRepositoryClient {
     if (parsed.path.toLowerCase().endsWith('.json')) {
       return parsed.replace(fragment: null);
     }
-    final String directoryPath =
-        parsed.path.endsWith('/') ? parsed.path : '${parsed.path}/';
+    final String directoryPath = parsed.path.endsWith('/')
+        ? parsed.path
+        : '${parsed.path}/';
     return parsed
         .replace(path: directoryPath, query: null, fragment: null)
         .resolve('index.min.json');
@@ -109,8 +110,9 @@ class AidokuRepositoryClient {
 
   Future<AidokuRepositoryIndex> fetch(String repositoryUrl) async {
     final Uri requestedUri = normalizeRepositoryUri(repositoryUrl);
-    final ({http.StreamedResponse response, Uri uri}) opened =
-        await _open(requestedUri);
+    final ({http.StreamedResponse response, Uri uri}) opened = await _open(
+      requestedUri,
+    );
     final Uint8List body = await _readBounded(
       opened.response,
       kMaximumAidokuRepositoryBytes,
@@ -129,13 +131,11 @@ class AidokuRepositoryClient {
     return _parseIndex(decoded, opened.uri);
   }
 
-  Future<File> download(
-    AidokuRepositorySource source,
-    File destination,
-  ) async {
+  Future<File> download(AidokuRepositorySource source, File destination) async {
     _requireHttps(source.downloadUri);
-    final ({http.StreamedResponse response, Uri uri}) opened =
-        await _open(source.downloadUri);
+    final ({http.StreamedResponse response, Uri uri}) opened = await _open(
+      source.downloadUri,
+    );
     final int? contentLength = opened.response.contentLength;
     if (contentLength != null &&
         (contentLength <= 0 || contentLength > kMaximumAidokuDownloadBytes)) {
@@ -293,9 +293,10 @@ class AidokuRepositoryClient {
       _requireHttps(downloadUri);
       final Object? languagesValue = json['languages'] ?? json['lang'];
       final List<String> languages = switch (languagesValue) {
-        List<Object?> values => values
-            .map((Object? value) => value.toString())
-            .toList(growable: false),
+        List<Object?> values =>
+          values
+              .map((Object? value) => value.toString())
+              .toList(growable: false),
         String value when value.isNotEmpty => <String>[value],
         _ => const <String>[],
       };

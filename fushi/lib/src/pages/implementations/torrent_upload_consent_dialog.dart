@@ -40,11 +40,14 @@ class _TorrentUploadConsentDialogState
     final QbConnectionConfig c = widget.initialConfig;
     _uploadEnabled = c.uploadEnabled;
     _uploadLimitCtrl = TextEditingController(
-        text: c.uploadLimitKbps == 0 ? '' : '${c.uploadLimitKbps}');
+      text: c.uploadLimitKbps == 0 ? '' : '${c.uploadLimitKbps}',
+    );
     _seedTimeCtrl = TextEditingController(
-        text: c.seedTimeLimitMinutes == 0 ? '' : '${c.seedTimeLimitMinutes}');
+      text: c.seedTimeLimitMinutes == 0 ? '' : '${c.seedTimeLimitMinutes}',
+    );
     _seedRatioCtrl = TextEditingController(
-        text: c.seedRatioLimit == 0 ? '' : '${c.seedRatioLimit}');
+      text: c.seedRatioLimit == 0 ? '' : '${c.seedRatioLimit}',
+    );
   }
 
   @override
@@ -127,8 +130,9 @@ class _TorrentUploadConsentDialogState
               TextField(
                 controller: _seedRatioCtrl,
                 enabled: !_applying,
-                keyboardType:
-                    const TextInputType.numberWithOptions(decimal: true),
+                keyboardType: const TextInputType.numberWithOptions(
+                  decimal: true,
+                ),
                 decoration: InputDecoration(
                   labelText: t.video_setting_torrent_seed_ratio_limit,
                   hintText: t.video_setting_torrent_seed_ratio_hint,

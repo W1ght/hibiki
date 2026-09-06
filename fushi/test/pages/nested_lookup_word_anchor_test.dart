@@ -66,8 +66,9 @@ void main() {
     bool childVisible = false,
     String childTerm = kTerm,
   }) {
-    final DictionaryPopupController c =
-        DictionaryPopupController(lowMemory: false);
+    final DictionaryPopupController c = DictionaryPopupController(
+      lowMemory: false,
+    );
     c.beginTop(
       term: '親',
       rect: const Rect.fromLTWH(0, 0, 1, 1),
@@ -173,8 +174,7 @@ void main() {
       expect(c.entries[1].selectionRect, firstCharScreen);
     });
 
-    testWidgets('子层已被更新的查词清出栈：迟到的重锚 no-op（不错位到别的层）',
-        (tester) async {
+    testWidgets('子层已被更新的查词清出栈：迟到的重锚 no-op（不错位到别的层）', (tester) async {
       final GlobalKey webViewKey = await pumpParentCard(tester);
       final DictionaryPopupController c = stackWithChild();
       c.truncateTo(1); // 只剩父层
@@ -194,8 +194,7 @@ void main() {
       expect(c.entries[0].selectionRect, parentRect, reason: '不得改到父层身上');
     });
 
-    testWidgets('同一下标已换成另一个词的子层：迟到的重锚 no-op（连点竞态）',
-        (tester) async {
+    testWidgets('同一下标已换成另一个词的子层：迟到的重锚 no-op（连点竞态）', (tester) async {
       // pushNestedPopup 的 beginTop 在 await searchDictionary **之前**同步压栈：
       // 高亮 eval 往返期间用户再点一个词，truncateTo+beginTop 立刻在同一下标建好
       // 另一个词的子层。只按位置取条目就会把上一个词的 bbox 锚到它身上。
@@ -247,8 +246,11 @@ void main() {
         screen: screen,
         maxHeight: 360,
       );
-      expect(popup.top, lessThan(wholeWordScreen.bottom),
-          reason: '这就是用户截图里的现象：弹窗顶边在第二行之上');
+      expect(
+        popup.top,
+        lessThan(wholeWordScreen.bottom),
+        reason: '这就是用户截图里的现象：弹窗顶边在第二行之上',
+      );
     });
 
     test('锚在整词 bbox ⇒ 弹窗完整落在选区之下', () {
@@ -278,8 +280,9 @@ void main() {
     });
 
     test('隐身热槽仍不受迟到回调影响（BUG-717 ② 既有不变式）', () {
-      final DictionaryPopupController c =
-          DictionaryPopupController(lowMemory: false)..seedWarmSlot();
+      final DictionaryPopupController c = DictionaryPopupController(
+        lowMemory: false,
+      )..seedWarmSlot();
       final DictionaryPopupEntry warm = c.entries.first;
       expect(warm.isWarmSlot, isTrue);
 

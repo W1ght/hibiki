@@ -35,9 +35,7 @@ void main() {
     // "Bad state: Too many elements"。按标题取，和上一条测试同一个判据。
     final CoreAudioSeries series = CoreAudioCatalog.parse(
       _catalogBytes(),
-    ).series.firstWhere(
-      (CoreAudioSeries value) => value.title == 'リアデイルの大地にて',
-    );
+    ).series.firstWhere((CoreAudioSeries value) => value.title == 'リアデイルの大地にて');
     final InspectedTorrentMetainfo metainfo = inspectTorrentMetainfo(
       _torrentBytes(),
     );

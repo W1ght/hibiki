@@ -29,8 +29,7 @@ class MigrationPage extends StatefulWidget {
 }
 
 /// Fushi 发布页（下载引导用；与更新检查同仓）。
-const String kFushiReleasesUrl =
-    'https://github.com/hajisensai/fushi/releases';
+const String kFushiReleasesUrl = 'https://github.com/hajisensai/fushi/releases';
 
 enum _TargetState { checking, missing, installed }
 
@@ -64,18 +63,19 @@ class _MigrationPageState extends State<MigrationPage> {
   }
 
   String _batchLabel(MigrationBatch batch) => switch (batch) {
-        MigrationBatch.core => t.migration_batch_core_label,
-        MigrationBatch.dictionaries => t.backup_category_dictionary,
-        MigrationBatch.books => t.backup_category_books,
-        MigrationBatch.audiobooks => t.backup_category_audiobooks,
-        MigrationBatch.fonts => t.backup_category_fonts,
-        MigrationBatch.localAudio => t.backup_category_local_audio,
-      };
+    MigrationBatch.core => t.migration_batch_core_label,
+    MigrationBatch.dictionaries => t.backup_category_dictionary,
+    MigrationBatch.books => t.backup_category_books,
+    MigrationBatch.audiobooks => t.backup_category_audiobooks,
+    MigrationBatch.fonts => t.backup_category_fonts,
+    MigrationBatch.localAudio => t.backup_category_local_audio,
+  };
 
   Future<Directory> _transferDir() async {
     final String documents =
         await ExternalPath.getExternalStoragePublicDirectory(
-            ExternalPath.DIRECTORY_DOCUMENTS);
+          ExternalPath.DIRECTORY_DOCUMENTS,
+        );
     // 计划 P1-1 定值：不在 /Android/data 下，卸载老版不会被系统清掉。
     return Directory(p.join(documents, 'Hibiki', 'migration'));
   }
@@ -102,8 +102,10 @@ class _MigrationPageState extends State<MigrationPage> {
         dictionaryResourceDirectory: appModel.dictionaryResourceDirectory.path,
         appVersion: appModel.packageInfo.version,
         booksRootDirectory: p.join(appModel.appDirectory.path, 'fushi_books'),
-        audiobooksRootDirectory:
-            p.join(appModel.appDirectory.path, 'audiobooks'),
+        audiobooksRootDirectory: p.join(
+          appModel.appDirectory.path,
+          'audiobooks',
+        ),
         fontsRootDirectory: p.join(appModel.appDirectory.path, 'custom_fonts'),
       );
       final MigrationExporter exporter = MigrationExporter(
@@ -113,8 +115,9 @@ class _MigrationPageState extends State<MigrationPage> {
         sourceAppVersion: appModel.packageInfo.version,
         nowMs: () => DateTime.now().millisecondsSinceEpoch,
       );
-      final MigrationPlan plan =
-          exporter.planBatches(includeLocalAudio: _includeLocalAudio);
+      final MigrationPlan plan = exporter.planBatches(
+        includeLocalAudio: _includeLocalAudio,
+      );
       for (final MigrationBatch batch in plan.batches) {
         if (!mounted) return;
         setState(() => _currentBatch = batch.name);
@@ -170,14 +173,13 @@ class _MigrationPageState extends State<MigrationPage> {
             Text(t.migration_target_missing),
             const SizedBox(height: 8),
             FilledButton(
-              onPressed: () => launchUrl(Uri.parse(kFushiReleasesUrl),
-                  mode: LaunchMode.externalApplication),
+              onPressed: () => launchUrl(
+                Uri.parse(kFushiReleasesUrl),
+                mode: LaunchMode.externalApplication,
+              ),
               child: Text(t.migration_download_fushi),
             ),
-            TextButton(
-              onPressed: _refreshTarget,
-              child: Text(t.retry),
-            ),
+            TextButton(onPressed: _refreshTarget, child: Text(t.retry)),
           ],
           if (_target == _TargetState.installed) ...<Widget>[
             AdaptiveSettingsSwitchRow(
@@ -194,12 +196,12 @@ class _MigrationPageState extends State<MigrationPage> {
                 leading: _doneBatches.contains(batch.name)
                     ? const Icon(Icons.check_circle_outline)
                     : (_currentBatch == batch.name
-                        ? const SizedBox(
-                            width: 20,
-                            height: 20,
-                            child: CircularProgressIndicator(strokeWidth: 2),
-                          )
-                        : const Icon(Icons.radio_button_unchecked)),
+                          ? const SizedBox(
+                              width: 20,
+                              height: 20,
+                              child: CircularProgressIndicator(strokeWidth: 2),
+                            )
+                          : const Icon(Icons.radio_button_unchecked)),
                 title: Text(_batchLabel(batch)),
               ),
             const SizedBox(height: 8),
@@ -227,7 +229,8 @@ class _MigrationPageState extends State<MigrationPage> {
                 onPressed: _running ? null : () => _run(fresh: false),
                 child: _running
                     ? Text(
-                        t.migration_batch_running(batch: _currentBatch ?? ''))
+                        t.migration_batch_running(batch: _currentBatch ?? ''),
+                      )
                     : Text(t.migration_start),
               ),
           ],

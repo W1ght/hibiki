@@ -88,11 +88,13 @@ void main() {
               body: Center(
                 child: ElevatedButton(
                   onPressed: () async {
-                    holder.add(await showVideoDownloadSubscriptionEditDialog(
-                      context: context,
-                      subscription: subscription,
-                      sources: sources,
-                    ));
+                    holder.add(
+                      await showVideoDownloadSubscriptionEditDialog(
+                        context: context,
+                        subscription: subscription,
+                        sources: sources,
+                      ),
+                    );
                   },
                   child: const Text('open'),
                 ),
@@ -122,15 +124,19 @@ void main() {
       'New query',
     );
     await tester.pumpAndSettle();
-    await tester
-        .tap(find.byKey(const ValueKey<String>('subscription-edit-save')));
+    await tester.tap(
+      find.byKey(const ValueKey<String>('subscription-edit-save')),
+    );
     await tester.pumpAndSettle();
 
     expect(holder, hasLength(1));
     final VideoDownloadSubscriptionEdit edit = holder.single!;
     expect(edit.searchQuery, 'New query');
-    expect(edit.targetSourceId, isNull,
-        reason: '用户没动目标来源 ⇒ 必须返回 null，宿主据此不写这一列');
+    expect(
+      edit.targetSourceId,
+      isNull,
+      reason: '用户没动目标来源 ⇒ 必须返回 null，宿主据此不写这一列',
+    );
   });
 
   testWidgets('主动改目标来源：才返回新值', (WidgetTester tester) async {
@@ -143,13 +149,15 @@ void main() {
       ],
     );
 
-    await tester
-        .tap(find.byKey(const ValueKey<String>('subscription-edit-source')));
+    await tester.tap(
+      find.byKey(const ValueKey<String>('subscription-edit-source')),
+    );
     await tester.pumpAndSettle();
     await tester.tap(find.text('Library B').last);
     await tester.pumpAndSettle();
-    await tester
-        .tap(find.byKey(const ValueKey<String>('subscription-edit-save')));
+    await tester.tap(
+      find.byKey(const ValueKey<String>('subscription-edit-save')),
+    );
     await tester.pumpAndSettle();
 
     expect(holder.single!.targetSourceId, 9);
@@ -174,9 +182,11 @@ void main() {
         find.byKey(const ValueKey<String>('subscription-edit-save')),
       );
       expect(save.onPressed, isNull, reason: '非法起始集「$bad」必须禁用保存');
-      expect(find.text(t.download_subscription_start_episode_invalid),
-          findsOneWidget,
-          reason: '必须显式报错，而不是静默把起始集清空');
+      expect(
+        find.text(t.download_subscription_start_episode_invalid),
+        findsOneWidget,
+        reason: '必须显式报错，而不是静默把起始集清空',
+      );
     }
 
     // 改回合法值后恢复可保存。
@@ -185,8 +195,9 @@ void main() {
       '5',
     );
     await tester.pumpAndSettle();
-    await tester
-        .tap(find.byKey(const ValueKey<String>('subscription-edit-save')));
+    await tester.tap(
+      find.byKey(const ValueKey<String>('subscription-edit-save')),
+    );
     await tester.pumpAndSettle();
     expect(holder.single!.startAfterEpisode, 5);
   });
@@ -202,8 +213,9 @@ void main() {
       '',
     );
     await tester.pumpAndSettle();
-    await tester
-        .tap(find.byKey(const ValueKey<String>('subscription-edit-save')));
+    await tester.tap(
+      find.byKey(const ValueKey<String>('subscription-edit-save')),
+    );
     await tester.pumpAndSettle();
     expect(holder.single!.startAfterEpisode, isNull);
   });

@@ -142,11 +142,16 @@ void _logEmbeddedCoverFailure(
   required bool diagnosticOnly,
 }) {
   if (diagnosticOnly) {
-    ErrorLogService.instance
-        .logDiagnostic('extractEmbeddedVideoCoverViaFfmpeg', error);
+    ErrorLogService.instance.logDiagnostic(
+      'extractEmbeddedVideoCoverViaFfmpeg',
+      error,
+    );
   } else {
-    ErrorLogService.instance
-        .log('extractEmbeddedVideoCoverViaFfmpeg', error, stack);
+    ErrorLogService.instance.log(
+      'extractEmbeddedVideoCoverViaFfmpeg',
+      error,
+      stack,
+    );
   }
 }
 
@@ -380,11 +385,12 @@ Future<String?> _extractVideoCoverUnlocked({
 
 /// 视频封面抽取器签名（[extractVideoCover] 的形状）。仅供 [extractPlaylistCover]
 /// 注入测试替身，生产路径默认走 [extractVideoCover]。
-typedef VideoCoverExtractor = Future<String?> Function({
-  required String videoPath,
-  required String bookUid,
-  double atSeconds,
-});
+typedef VideoCoverExtractor =
+    Future<String?> Function({
+      required String videoPath,
+      required String bookUid,
+      double atSeconds,
+    });
 
 /// 播放列表封面：依次尝试 [episodePaths] 里的各集，返回**首个成功**抽到封面的绝对
 /// 路径；全部失败（首集缺失 / 远端占位 / 无可抽帧）返回 null。
@@ -410,8 +416,11 @@ Future<String?> extractPlaylistCover({
     if (path.isEmpty) continue;
     if (attempts >= maxAttempts) break;
     attempts++;
-    final String? cover =
-        await extract(videoPath: path, bookUid: bookUid, atSeconds: atSeconds);
+    final String? cover = await extract(
+      videoPath: path,
+      bookUid: bookUid,
+      atSeconds: atSeconds,
+    );
     if (cover != null) return cover;
   }
   return null;

@@ -37,22 +37,26 @@ class FushiTextSelectionControls extends MaterialTextSelectionControls {
   static const double _kToolbarContentDistanceBelow = 20;
   static const double _kToolbarContentDistance = 8;
 
-  Widget _wrapWithThemeData(
-          Widget Function(BuildContext) builder) =>
+  Widget _wrapWithThemeData(Widget Function(BuildContext) builder) =>
       Platform.isIOS
-          ? CupertinoTheme(
-              data: CupertinoThemeData(primaryColor: handleColor),
-              child: Builder(builder: builder))
-          : TextSelectionTheme(
-              data: TextSelectionThemeData(selectionHandleColor: handleColor),
-              child: Builder(builder: builder));
+      ? CupertinoTheme(
+          data: CupertinoThemeData(primaryColor: handleColor),
+          child: Builder(builder: builder),
+        )
+      : TextSelectionTheme(
+          data: TextSelectionThemeData(selectionHandleColor: handleColor),
+          child: Builder(builder: builder),
+        );
 
   @override
   Widget buildHandle(
-          BuildContext context, TextSelectionHandleType type, double textHeight,
-          [VoidCallback? onTap]) =>
-      _wrapWithThemeData(
-          (context) => _controls.buildHandle(context, type, textHeight, onTap));
+    BuildContext context,
+    TextSelectionHandleType type,
+    double textHeight, [
+    VoidCallback? onTap,
+  ]) => _wrapWithThemeData(
+    (context) => _controls.buildHandle(context, type, textHeight, onTap),
+  );
 
   @override
   Offset getHandleAnchor(TextSelectionHandleType type, double textLineHeight) {
@@ -76,14 +80,17 @@ class FushiTextSelectionControls extends MaterialTextSelectionControls {
     Offset? lastSecondaryTapDownPosition,
   ) {
     final TextSelectionPoint startTextSelectionPoint = endpoints[0];
-    final TextSelectionPoint endTextSelectionPoint =
-        endpoints.length > 1 ? endpoints[1] : endpoints[0];
+    final TextSelectionPoint endTextSelectionPoint = endpoints.length > 1
+        ? endpoints[1]
+        : endpoints[0];
     final double midX = globalEditableRegion.left + selectionMidpoint.dx;
-    final double rawAboveY = globalEditableRegion.top +
+    final double rawAboveY =
+        globalEditableRegion.top +
         startTextSelectionPoint.point.dy -
         textLineHeight -
         _kToolbarContentDistance;
-    final double rawBelowY = globalEditableRegion.top +
+    final double rawBelowY =
+        globalEditableRegion.top +
         endTextSelectionPoint.point.dy +
         _kToolbarContentDistanceBelow;
 
@@ -99,8 +106,9 @@ class FushiTextSelectionControls extends MaterialTextSelectionControls {
       rawBelowY.clamp(topPad, bottomPad),
     );
 
-    String selectedText() => delegate.textEditingValue.selection
-        .textInside(delegate.textEditingValue.text);
+    String selectedText() => delegate.textEditingValue.selection.textInside(
+      delegate.textEditingValue.text,
+    );
 
     return _FushiSelectionToolbar(
       anchorAbove: anchorAbove,
@@ -122,12 +130,15 @@ class FushiTextSelectionControls extends MaterialTextSelectionControls {
         shareAction(selectedText());
         delegate.hideToolbar();
       },
-      handleCopy:
-          canCopy(delegate) && allowCopy ? () => handleCopy(delegate) : null,
-      handleCut:
-          canCut(delegate) && allowCut ? () => handleCut(delegate) : null,
-      handlePaste:
-          canPaste(delegate) && allowPaste ? () => handlePaste(delegate) : null,
+      handleCopy: canCopy(delegate) && allowCopy
+          ? () => handleCopy(delegate)
+          : null,
+      handleCut: canCut(delegate) && allowCut
+          ? () => handleCut(delegate)
+          : null,
+      handlePaste: canPaste(delegate) && allowPaste
+          ? () => handlePaste(delegate)
+          : null,
       handleSelectAll: canSelectAll(delegate) && allowSelectAll
           ? () => handleSelectAll(delegate)
           : null,
@@ -161,8 +172,7 @@ class _FushiSelectionToolbar extends StatefulWidget {
   final VoidCallback? handleSelectAll;
 
   @override
-  State<_FushiSelectionToolbar> createState() =>
-      _FushiSelectionToolbarState();
+  State<_FushiSelectionToolbar> createState() => _FushiSelectionToolbarState();
 }
 
 class _FushiSelectionToolbarState extends State<_FushiSelectionToolbar> {
@@ -208,7 +218,9 @@ class _FushiSelectionToolbarState extends State<_FushiSelectionToolbar> {
     final List<_ItemData> overflowItems = <_ItemData>[
       if (widget.handleSelectAll != null)
         _ItemData(
-            label: loc.selectAllButtonLabel, onPressed: widget.handleSelectAll),
+          label: loc.selectAllButtonLabel,
+          onPressed: widget.handleSelectAll,
+        ),
       _ItemData(label: t.share, onPressed: widget.shareAction),
       if (widget.handleCut != null)
         _ItemData(label: loc.cutButtonLabel, onPressed: widget.handleCut),
@@ -223,15 +235,15 @@ class _FushiSelectionToolbarState extends State<_FushiSelectionToolbar> {
     return TextSelectionToolbar(
       anchorAbove: widget.anchorAbove,
       anchorBelow: widget.anchorBelow,
-      toolbarBuilder: (context, child) => FushiCard(
-        padding: EdgeInsets.zero,
-        child: child,
-      ),
+      toolbarBuilder: (context, child) =>
+          FushiCard(padding: EdgeInsets.zero, child: child),
       children: [
         ...primaryItems.map((item) {
           return TextSelectionToolbarTextButton(
             padding: TextSelectionToolbarTextButton.getPadding(
-                childIndex++, totalCount),
+              childIndex++,
+              totalCount,
+            ),
             onPressed: item.onPressed,
             child: Text(item.label),
           );

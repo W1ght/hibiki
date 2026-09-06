@@ -240,13 +240,14 @@ enum VideoControlItem {
   bool get isCustomAction => customActionSlotIndex != null;
 
   /// 全部自定义「快捷键」按钮槽位，按序号升序（= 快捷键1、2、3、4）。
-  static List<VideoControlItem> get customActionItems => <VideoControlItem>[
+  static List<VideoControlItem> get customActionItems =>
+      <VideoControlItem>[
         for (final VideoControlItem item in VideoControlItem.values)
           if (item.isCustomAction) item,
       ]..sort(
-          (VideoControlItem a, VideoControlItem b) =>
-              a.customActionSlotIndex!.compareTo(b.customActionSlotIndex!),
-        );
+        (VideoControlItem a, VideoControlItem b) =>
+            a.customActionSlotIndex!.compareTo(b.customActionSlotIndex!),
+      );
 
   static VideoControlItem? fromStorage(String value) {
     for (final VideoControlItem item in VideoControlItem.values) {
@@ -268,9 +269,9 @@ enum VideoControlItem {
   /// settings). Transport / nav keys stay fixed in the chrome and are not
   /// user-customizable in this stage.
   static List<VideoControlItem> get customizableLearning => <VideoControlItem>[
-        for (final VideoControlItem item in VideoControlItem.values)
-          if (item.legacyButton != null) item,
-      ];
+    for (final VideoControlItem item in VideoControlItem.values)
+      if (item.legacyButton != null) item,
+  ];
 
   /// Whether the visual icon-chip editor can represent this button as a single
   /// draggable chip. [volume] is a dedicated player widget, but the editor can
@@ -300,10 +301,7 @@ enum VideoControlItem {
   /// sole in-player settings entry) from being dragged into
   /// [VideoControlSlot.hidden] -- desktop keeps it removable (right-click menu
   /// restores it).
-  bool canMoveToSlot(
-    VideoControlSlot target, {
-    bool isTouchControls = false,
-  }) {
+  bool canMoveToSlot(VideoControlSlot target, {bool isTouchControls = false}) {
     if (this == VideoControlItem.volume) {
       return target == VideoControlSlot.bottomLeft ||
           target == VideoControlSlot.bottomRight;
@@ -341,9 +339,9 @@ enum VideoControlItem {
   /// episode list, fullscreen). The non-chip special renders (volume slider,
   /// title text, position indicator) keep their dedicated branch and stay out.
   static List<VideoControlItem> get customizableItems => <VideoControlItem>[
-        for (final VideoControlItem item in VideoControlItem.values)
-          if (item.isChipRenderable) item,
-      ];
+    for (final VideoControlItem item in VideoControlItem.values)
+      if (item.isChipRenderable) item,
+  ];
 }
 
 class _NormalizedVideoControlLayoutData {
@@ -370,10 +368,8 @@ class _NormalizedVideoControlLayoutData {
 ///   - required buttons ([VideoControlItem.pinnedRequired], currently
 ///     [VideoControlItem.playPause]) cannot be removed.
 class VideoControlLayout {
-  VideoControlLayout._(
-    this._slots,
-    Set<VideoControlItem> removed,
-  ) : _removed = Set<VideoControlItem>.unmodifiable(removed);
+  VideoControlLayout._(this._slots, Set<VideoControlItem> removed)
+    : _removed = Set<VideoControlItem>.unmodifiable(removed);
 
   /// Build from a flat button->slot map; normalizes into slot->ordered list.
   /// [explicitOrder] controls within-slot ordering (preserves user drag order).
@@ -426,9 +422,7 @@ class VideoControlLayout {
     Set<VideoControlItem>? removedItems,
   }) {
     final Map<VideoControlSlot, List<VideoControlItem>> slots = _emptySlotMap();
-    final Set<VideoControlItem> removed = <VideoControlItem>{
-      ...?removedItems,
-    };
+    final Set<VideoControlItem> removed = <VideoControlItem>{...?removedItems};
     final Set<VideoControlItem> seen = <VideoControlItem>{};
     for (final VideoControlSlot slot in VideoControlSlot.values) {
       for (final VideoControlItem item
@@ -535,9 +529,7 @@ class VideoControlLayout {
       VideoControlItem.customAction4: VideoControlSlot.bottomRight,
     },
     explicitOrder: const <VideoControlSlot, List<VideoControlItem>>{
-      VideoControlSlot.topLeft: <VideoControlItem>[
-        VideoControlItem.back,
-      ],
+      VideoControlSlot.topLeft: <VideoControlItem>[VideoControlItem.back],
       VideoControlSlot.topRight: <VideoControlItem>[
         VideoControlItem.previousEpisode,
         VideoControlItem.nextEpisode,
@@ -590,8 +582,8 @@ class VideoControlLayout {
   ///     topRight) and the bottom-center transport cluster (previousCue /
   ///     playPause / nextCue + seek labels) with the position indicator at
   ///     bottomLeft and volume / fullscreen trailing in bottomRight.
-  static final VideoControlLayout currentChrome =
-      VideoControlLayout.fromAssignments(
+  static final VideoControlLayout
+  currentChrome = VideoControlLayout.fromAssignments(
     const <VideoControlItem, VideoControlSlot>{
       // -- fixed top bar / side lock, now rendered from layout slots --
       VideoControlItem.back: VideoControlSlot.topLeft,
@@ -635,9 +627,7 @@ class VideoControlLayout {
       VideoControlItem.customAction4: VideoControlSlot.bottomRight,
     },
     explicitOrder: const <VideoControlSlot, List<VideoControlItem>>{
-      VideoControlSlot.topLeft: <VideoControlItem>[
-        VideoControlItem.back,
-      ],
+      VideoControlSlot.topLeft: <VideoControlItem>[VideoControlItem.back],
       VideoControlSlot.topRight: <VideoControlItem>[
         // TODO-642：默认右上角顺序去掉 4 个 prev/next 导航键（落 hidden，可自定义拖回）。
         // screenshot / clipExport 相邻顺序受守卫钉死，保持紧挨。
@@ -711,9 +701,9 @@ class VideoControlLayout {
 
   /// Items explicitly removed from the player, in enum order.
   List<VideoControlItem> get removedItems => <VideoControlItem>[
-        for (final VideoControlItem item in VideoControlItem.values)
-          if (_removed.contains(item)) item,
-      ];
+    for (final VideoControlItem item in VideoControlItem.values)
+      if (_removed.contains(item)) item,
+  ];
 
   /// Hidden slot entries are no longer persisted as recoverable buttons. Kept
   /// for old callers and tests that inspect the slot directly; removed items
@@ -733,10 +723,10 @@ class VideoControlLayout {
     }
     final Map<VideoControlSlot, List<VideoControlItem>> next =
         <VideoControlSlot, List<VideoControlItem>>{
-      for (final VideoControlSlot slot in VideoControlSlot.values)
-        slot: List<VideoControlItem>.from(_slots[slot]!)
-          ..removeWhere((VideoControlItem i) => i == item),
-    };
+          for (final VideoControlSlot slot in VideoControlSlot.values)
+            slot: List<VideoControlItem>.from(_slots[slot]!)
+              ..removeWhere((VideoControlItem i) => i == item),
+        };
     final Set<VideoControlItem> removed = <VideoControlItem>{..._removed};
     if (target == VideoControlSlot.hidden) {
       removed.add(item);
@@ -744,8 +734,9 @@ class VideoControlLayout {
     }
     removed.remove(item);
     final List<VideoControlItem> targetList = next[target]!;
-    final int insertAt =
-        (index == null) ? targetList.length : index.clamp(0, targetList.length);
+    final int insertAt = (index == null)
+        ? targetList.length
+        : index.clamp(0, targetList.length);
     targetList.insert(insertAt, item);
     return _fromRaw(next, removedItems: removed);
   }
@@ -784,14 +775,15 @@ class VideoControlLayout {
     if (_slots[target]!.contains(item)) return this; // already here, no-op.
     final Map<VideoControlSlot, List<VideoControlItem>> next =
         <VideoControlSlot, List<VideoControlItem>>{
-      for (final VideoControlSlot slot in VideoControlSlot.values)
-        slot: List<VideoControlItem>.from(_slots[slot]!),
-    };
+          for (final VideoControlSlot slot in VideoControlSlot.values)
+            slot: List<VideoControlItem>.from(_slots[slot]!),
+        };
     final Set<VideoControlItem> removed = <VideoControlItem>{..._removed}
       ..remove(item);
     final List<VideoControlItem> targetList = next[target]!;
-    final int insertAt =
-        (index == null) ? targetList.length : index.clamp(0, targetList.length);
+    final int insertAt = (index == null)
+        ? targetList.length
+        : index.clamp(0, targetList.length);
     targetList.insert(insertAt, item);
     return _fromRaw(next, removedItems: removed);
   }
@@ -821,13 +813,15 @@ class VideoControlLayout {
     final VideoControlSlot source = payload.sourceSlot!;
     final Map<VideoControlSlot, List<VideoControlItem>> next =
         <VideoControlSlot, List<VideoControlItem>>{
-      for (final VideoControlSlot slot in VideoControlSlot.values)
-        slot: List<VideoControlItem>.from(_slots[slot]!),
-    };
+          for (final VideoControlSlot slot in VideoControlSlot.values)
+            slot: List<VideoControlItem>.from(_slots[slot]!),
+        };
     final List<VideoControlItem> sourceList = next[source]!;
-    final int sourceIndex = payload.sourceIndex ??
-        sourceList
-            .indexWhere((VideoControlItem candidate) => candidate == item);
+    final int sourceIndex =
+        payload.sourceIndex ??
+        sourceList.indexWhere(
+          (VideoControlItem candidate) => candidate == item,
+        );
     if (sourceIndex < 0 ||
         sourceIndex >= sourceList.length ||
         sourceList[sourceIndex] != item) {
@@ -869,9 +863,9 @@ class VideoControlLayout {
     if (!_slots[slot]!.contains(item)) return this;
     final Map<VideoControlSlot, List<VideoControlItem>> next =
         <VideoControlSlot, List<VideoControlItem>>{
-      for (final VideoControlSlot s in VideoControlSlot.values)
-        s: List<VideoControlItem>.from(_slots[s]!),
-    };
+          for (final VideoControlSlot s in VideoControlSlot.values)
+            s: List<VideoControlItem>.from(_slots[s]!),
+        };
     next[slot]!.removeWhere((VideoControlItem i) => i == item);
     final Set<VideoControlItem> removed = <VideoControlItem>{..._removed};
     final bool stillVisible = VideoControlSlot.values.any(
@@ -951,16 +945,18 @@ class VideoControlLayout {
   static VideoControlLayout _migrateFromV1(Object? placementsRaw) {
     final Map<VideoControlItem, VideoControlSlot> assignments =
         <VideoControlItem, VideoControlSlot>{
-      for (final VideoControlItem item in VideoControlItem.values)
-        item: currentChrome.slotOf(item),
-    };
+          for (final VideoControlItem item in VideoControlItem.values)
+            item: currentChrome.slotOf(item),
+        };
     if (placementsRaw is Map<String, dynamic>) {
       for (final MapEntry<String, dynamic> entry in placementsRaw.entries) {
-        final VideoControlButton? legacy =
-            VideoControlButton.fromStorage(entry.key);
+        final VideoControlButton? legacy = VideoControlButton.fromStorage(
+          entry.key,
+        );
         final Object? value = entry.value;
-        final VideoControlPlacement? placement =
-            value is String ? VideoControlPlacement.fromStorage(value) : null;
+        final VideoControlPlacement? placement = value is String
+            ? VideoControlPlacement.fromStorage(value)
+            : null;
         if (legacy == null || placement == null) continue;
         final VideoControlItem? item = VideoControlItem.fromLegacy(legacy);
         if (item == null) continue;
@@ -1032,9 +1028,9 @@ class VideoControlLayout {
     }
     final Map<VideoControlItem, VideoControlSlot> fallback =
         <VideoControlItem, VideoControlSlot>{
-      for (final VideoControlItem item in VideoControlItem.values)
-        item: currentChrome.slotOf(item),
-    };
+          for (final VideoControlItem item in VideoControlItem.values)
+            item: currentChrome.slotOf(item),
+        };
     // fromSlots (not fromAssignments) so a button persisted into several slots
     // survives the round trip (TODO-399 one-button-many-positions).
     return VideoControlLayout.fromSlots(
@@ -1127,10 +1123,7 @@ class VideoControlLayout {
           ),
     );
     slots[VideoControlSlot.hidden]!.clear();
-    return _NormalizedVideoControlLayoutData(
-      slots: slots,
-      removed: removed,
-    );
+    return _NormalizedVideoControlLayoutData(slots: slots, removed: removed);
   }
 
   static void _dedupeWithinSlots(
@@ -1166,10 +1159,7 @@ class VideoControlLayout {
     }
 
     if (!hasBottomVolume) {
-      slots[VideoControlSlot.bottomRight]!.insert(
-        0,
-        VideoControlItem.volume,
-      );
+      slots[VideoControlSlot.bottomRight]!.insert(0, VideoControlItem.volume);
     }
     removed.remove(VideoControlItem.volume);
   }

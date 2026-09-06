@@ -135,9 +135,6 @@ void main() {
     expect(productionFilesContaining('CoverDownloader('), isEmpty);
     expect(productionFilesContaining('AliasCache('), isEmpty);
     expect(productionFilesContaining('MatchScorer('), isEmpty);
-    expect(
-      productionFilesMatching(RegExp(r'\bScrapeCandidate\s*\(')),
-      isEmpty,
-    );
+    expect(productionFilesMatching(RegExp(r'\bScrapeCandidate\s*\(')), isEmpty);
   });
 }

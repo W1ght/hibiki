@@ -137,12 +137,16 @@ void main() {
   setUp(() => LocaleSettings.setLocale(AppLocale.en));
 
   group('behaviour: barrier onTapUp -> onDismissBarrierTap hook', () {
-    testWidgets('forwards the global pointer position to the override',
-        (WidgetTester tester) async {
+    testWidgets('forwards the global pointer position to the override', (
+      WidgetTester tester,
+    ) async {
       final appModel = _BarrierTapAppModel();
       final hostKey = GlobalKey<_RecordingHostPageState>();
       await tester.pumpWidget(
-        _wrap(appModel: appModel, child: _RecordingHostPage(key: hostKey)),
+        _wrap(
+          appModel: appModel,
+          child: _RecordingHostPage(key: hostKey),
+        ),
       );
       await tester.pump();
       await tester.pump();
@@ -156,72 +160,107 @@ void main() {
       await tester.tapAt(_bareBarrierPoint);
       await tester.pump();
 
-      expect(host.barrierTaps, hasLength(1),
-          reason: 'a tap on the bare barrier must invoke onDismissBarrierTap');
-      expect(host.barrierTaps.single, _bareBarrierPoint,
-          reason: 'the hook receives the GLOBAL pointer position so reader can '
-              'globalToLocal it onto the WebView (TODO-1027)');
+      expect(
+        host.barrierTaps,
+        hasLength(1),
+        reason: 'a tap on the bare barrier must invoke onDismissBarrierTap',
+      );
+      expect(
+        host.barrierTaps.single,
+        _bareBarrierPoint,
+        reason:
+            'the hook receives the GLOBAL pointer position so reader can '
+            'globalToLocal it onto the WebView (TODO-1027)',
+      );
     });
 
     testWidgets(
-        'default override (video/home/audiobook parity) still clears the whole '
-        'stack, hidden warm slot survives', (WidgetTester tester) async {
-      final appModel = _BarrierTapAppModel();
-      final hostKey = GlobalKey<_DefaultHostPageState>();
-      await tester.pumpWidget(
-        _wrap(appModel: appModel, child: _DefaultHostPage(key: hostKey)),
-      );
-      await tester.pump();
-      await tester.pump();
+      'default override (video/home/audiobook parity) still clears the whole '
+      'stack, hidden warm slot survives',
+      (WidgetTester tester) async {
+        final appModel = _BarrierTapAppModel();
+        final hostKey = GlobalKey<_DefaultHostPageState>();
+        await tester.pumpWidget(
+          _wrap(
+            appModel: appModel,
+            child: _DefaultHostPage(key: hostKey),
+          ),
+        );
+        await tester.pump();
+        await tester.pump();
 
-      final host = hostKey.currentState!;
-      await host.topSearch('first');
-      await tester.pump();
-      expect(host.dictionaryPopupShown, isTrue);
+        final host = hostKey.currentState!;
+        await host.topSearch('first');
+        await tester.pump();
+        expect(host.dictionaryPopupShown, isTrue);
 
-      await tester.tapAt(_bareBarrierPoint);
-      await tester.pump();
+        await tester.tapAt(_bareBarrierPoint);
+        await tester.pump();
 
-      expect(host.dictionaryPopupShown, isFalse,
-          reason: 'default onDismissBarrierTap=clearDictionaryResult, '
-              'tap-blank closes the visible stack (unchanged for non-reader)');
-      expect(host.debugPopupStack, hasLength(1),
-          reason: 'the hidden warm slot survives (BUG-092)');
-      expect(host.debugPopupStack.single.visible, isFalse);
-      expect(host.debugPopupStack.single.isWarmSlot, isTrue);
-    });
+        expect(
+          host.dictionaryPopupShown,
+          isFalse,
+          reason:
+              'default onDismissBarrierTap=clearDictionaryResult, '
+              'tap-blank closes the visible stack (unchanged for non-reader)',
+        );
+        expect(
+          host.debugPopupStack,
+          hasLength(1),
+          reason: 'the hidden warm slot survives (BUG-092)',
+        );
+        expect(host.debugPopupStack.single.visible, isFalse);
+        expect(host.debugPopupStack.single.isWarmSlot, isTrue);
+      },
+    );
   });
 
   group('source guard: base barrier wiring', () {
-    final String base = File('lib/src/pages/base_source_page.dart')
-        .readAsStringSync()
-        .replaceAll('\r\n', '\n');
+    final String base = File(
+      'lib/src/pages/base_source_page.dart',
+    ).readAsStringSync().replaceAll('\r\n', '\n');
 
     test(
-        'barrier forwards onTapUp.globalPosition to onDismissBarrierTap, not a '
-        'hardcoded onTap: clearDictionaryResult', () {
-      // BUG-1757 起 barrier 手势收口进 LookupDismissBarrier 原语：宿主接钩子，
-      // onTapUp + 坐标转发在原语里。守的语义（必须带全局坐标、不能是无参硬编码
-      // onTap）没变，只是判据分两处。
-      expect(base.contains('LookupDismissBarrier('), isTrue,
-          reason: 'the barrier must go through the shared primitive');
-      expect(base.contains('onTapDismiss: onDismissBarrierTap'), isTrue,
-          reason: 'the host must hand its overridable hook to the primitive');
-      final String barrier = File(
-        'lib/src/utils/misc/lookup_dismiss_barrier.dart',
-      ).readAsStringSync();
-      expect(barrier.contains('onTapUp:'), isTrue);
-      expect(barrier.contains('widget.onTapDismiss(d.globalPosition)'), isTrue,
-          reason: 'the primitive forwards the GLOBAL position');
-      expect(base.contains('onTap: clearDictionaryResult'), isFalse,
-          reason: 'the barrier must NOT hardcode onTap: clearDictionaryResult '
-              '(reader overrides the hook to forward taps to lookup)');
-    });
+      'barrier forwards onTapUp.globalPosition to onDismissBarrierTap, not a '
+      'hardcoded onTap: clearDictionaryResult',
+      () {
+        // BUG-1757 起 barrier 手势收口进 LookupDismissBarrier 原语：宿主接钩子，
+        // onTapUp + 坐标转发在原语里。守的语义（必须带全局坐标、不能是无参硬编码
+        // onTap）没变，只是判据分两处。
+        expect(
+          base.contains('LookupDismissBarrier('),
+          isTrue,
+          reason: 'the barrier must go through the shared primitive',
+        );
+        expect(
+          base.contains('onTapDismiss: onDismissBarrierTap'),
+          isTrue,
+          reason: 'the host must hand its overridable hook to the primitive',
+        );
+        final String barrier = File(
+          'lib/src/utils/misc/lookup_dismiss_barrier.dart',
+        ).readAsStringSync();
+        expect(barrier.contains('onTapUp:'), isTrue);
+        expect(
+          barrier.contains('widget.onTapDismiss(d.globalPosition)'),
+          isTrue,
+          reason: 'the primitive forwards the GLOBAL position',
+        );
+        expect(
+          base.contains('onTap: clearDictionaryResult'),
+          isFalse,
+          reason:
+              'the barrier must NOT hardcode onTap: clearDictionaryResult '
+              '(reader overrides the hook to forward taps to lookup)',
+        );
+      },
+    );
 
     test('onDismissBarrierTap default still clears the whole stack', () {
       expect(
         base.contains(
-            'void onDismissBarrierTap(Offset globalPos) => clearDictionaryResult();'),
+          'void onDismissBarrierTap(Offset globalPos) => clearDictionaryResult();',
+        ),
         isTrue,
         reason: 'default keeps video/home/audiobook "tap blank closes stack"',
       );
@@ -231,32 +270,47 @@ void main() {
   group('source guard: reader override + onTapEmpty', () {
     final String corpus = readReaderPageSource();
 
-    test(
-        'reader overrides onDismissBarrierTap and forwards the tap to lookup '
+    test('reader overrides onDismissBarrierTap and forwards the tap to lookup '
         'via globalToLocal + _selectTextAt', () {
-      final int idx =
-          corpus.indexOf('void onDismissBarrierTap(Offset globalPos)');
-      expect(idx, greaterThan(0),
-          reason: 'reader must override the barrier-tap hook (TODO-1027)');
+      final int idx = corpus.indexOf(
+        'void onDismissBarrierTap(Offset globalPos)',
+      );
+      expect(
+        idx,
+        greaterThan(0),
+        reason: 'reader must override the barrier-tap hook (TODO-1027)',
+      );
       final String body = corpus.substring(idx, idx + 900);
-      expect(body.contains('_webViewKey.currentContext?.findRenderObject()'),
-          isTrue,
-          reason: 'reader must map global -> WebView local via its RenderBox');
+      expect(
+        body.contains('_webViewKey.currentContext?.findRenderObject()'),
+        isTrue,
+        reason: 'reader must map global -> WebView local via its RenderBox',
+      );
       expect(body.contains('obj.globalToLocal(globalPos)'), isTrue);
-      expect(body.contains('_selectTextAt(local.dx, local.dy)'), isTrue,
-          reason:
-              'real tap path (fromHover:false): word->lookup, blank->onTapEmpty');
-      expect(body.contains('clearDictionaryResult();'), isTrue,
-          reason: 'RenderBox-unavailable fallback still closes (no crash)');
+      expect(
+        body.contains('_selectTextAt(local.dx, local.dy)'),
+        isTrue,
+        reason:
+            'real tap path (fromHover:false): word->lookup, blank->onTapEmpty',
+      );
+      expect(
+        body.contains('clearDictionaryResult();'),
+        isTrue,
+        reason: 'RenderBox-unavailable fallback still closes (no crash)',
+      );
     });
 
     test('reader onTapEmpty clears the stack when a popup is visible', () {
       final int idx = corpus.indexOf("handlerName: 'onTapEmpty'");
       expect(idx, greaterThan(0));
       final String body = corpus.substring(idx, idx + 700);
-      expect(body.contains('if (isDictionaryShown) {'), isTrue,
-          reason: 'barrier-forwarded blank tap (popup visible) must close the '
-              'stack, not toggle chrome (TODO-1027)');
+      expect(
+        body.contains('if (isDictionaryShown) {'),
+        isTrue,
+        reason:
+            'barrier-forwarded blank tap (popup visible) must close the '
+            'stack, not toggle chrome (TODO-1027)',
+      );
       expect(body.contains('clearDictionaryResult();'), isTrue);
     });
   });

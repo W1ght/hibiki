@@ -46,8 +46,9 @@ void main() {
   }
 
   Future<TestGesture> hoverOnto(WidgetTester tester) async {
-    final TestGesture mouse =
-        await tester.createGesture(kind: PointerDeviceKind.mouse);
+    final TestGesture mouse = await tester.createGesture(
+      kind: PointerDeviceKind.mouse,
+    );
     await mouse.addPointer(location: Offset.zero);
     addTearDown(mouse.removePointer);
     await tester.pump();
@@ -57,8 +58,9 @@ void main() {
   }
 
   double? currentScale(WidgetTester tester) {
-    final Iterable<AnimatedScale> scales =
-        tester.widgetList<AnimatedScale>(find.byType(AnimatedScale));
+    final Iterable<AnimatedScale> scales = tester.widgetList<AnimatedScale>(
+      find.byType(AnimatedScale),
+    );
     return scales.isEmpty ? null : scales.first.scale;
   }
 
@@ -79,32 +81,43 @@ void main() {
   testWidgets('减弱动态效果：不缩放，但 hover 态照常传给 builder', (WidgetTester tester) async {
     await tester.pumpWidget(harness(disableAnimations: true));
     await hoverOnto(tester);
-    expect(find.byType(AnimatedScale), findsNothing,
-        reason: '系统开了「减弱动态效果」就不该有缩放动画');
+    expect(
+      find.byType(AnimatedScale),
+      findsNothing,
+      reason: '系统开了「减弱动态效果」就不该有缩放动画',
+    );
     expect(seenHover.last, isTrue, reason: '静态 hover 反馈（阴影/描边）必须保留，只去掉动效');
   });
 
-  testWidgets('墨水屏：不缩放（持续缩放会不停刷屏），hover 态仍传给 builder',
-      (WidgetTester tester) async {
-    await tester.pumpWidget(harness(
-      theme: ThemeData(
-        extensions: const <ThemeExtension<dynamic>>[
-          FushiEinkTheme(true),
-        ],
+  testWidgets('墨水屏：不缩放（持续缩放会不停刷屏），hover 态仍传给 builder', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(
+      harness(
+        theme: ThemeData(
+          extensions: const <ThemeExtension<dynamic>>[FushiEinkTheme(true)],
+        ),
       ),
-    ));
+    );
     await hoverOnto(tester);
-    expect(find.byType(AnimatedScale), findsNothing,
-        reason: '墨水屏上连续缩放会不断触发整屏重绘/残影');
+    expect(
+      find.byType(AnimatedScale),
+      findsNothing,
+      reason: '墨水屏上连续缩放会不断触发整屏重绘/残影',
+    );
     expect(seenHover.last, isTrue, reason: 'hover 反馈本身要留着（墨水屏上通常改成描边）');
   });
 
-  testWidgets('enabled=false 时不建 MouseRegion，builder 恒拿到 false',
-      (WidgetTester tester) async {
+  testWidgets('enabled=false 时不建 MouseRegion，builder 恒拿到 false', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(harness(enabled: false));
     expect(find.byType(AnimatedScale), findsNothing);
     await hoverOnto(tester);
-    expect(seenHover, everyElement(isFalse),
-        reason: '禁用时不得有任何 hover 态泄漏给 builder');
+    expect(
+      seenHover,
+      everyElement(isFalse),
+      reason: '禁用时不得有任何 hover 态泄漏给 builder',
+    );
   });
 }

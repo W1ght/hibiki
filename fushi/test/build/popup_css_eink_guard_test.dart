@@ -22,9 +22,13 @@ void main() {
     final String css = maskCssComments(File(popupCssPath).readAsStringSync());
     final int open = '{'.allMatches(css).length;
     final int close = '}'.allMatches(css).length;
-    expect(open, close,
-        reason: 'popup.css 花括号不配平（$open 个 { vs $close 个 }）——缺闭合的'
-            '规则会静默吞掉下一条规则（见 .ctx-adjust-button 历史 bug）');
+    expect(
+      open,
+      close,
+      reason:
+          'popup.css 花括号不配平（$open 个 { vs $close 个 }）——缺闭合的'
+          '规则会静默吞掉下一条规则（见 .ctx-adjust-button 历史 bug）',
+    );
   });
 
   test('popup.css carries the html.eink override block', () {

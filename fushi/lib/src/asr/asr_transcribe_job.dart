@@ -173,18 +173,17 @@ class AsrJobState {
   factory AsrJobState.fresh(
     List<String> audioPaths, {
     required String modelId,
-  }) =>
-      AsrJobState(
-        audioPaths: List<String>.unmodifiable(audioPaths),
-        modelId: modelId,
-        fileDurationsMs: List<int?>.filled(audioPaths.length, null),
-        resumeSamples: List<int>.filled(audioPaths.length, 0),
-        finished: false,
-      );
+  }) => AsrJobState(
+    audioPaths: List<String>.unmodifiable(audioPaths),
+    modelId: modelId,
+    fileDurationsMs: List<int?>.filled(audioPaths.length, null),
+    resumeSamples: List<int>.filled(audioPaths.length, 0),
+    finished: false,
+  );
 
   factory AsrJobState.fromJson(Map<String, Object?> json) {
-    final List<String> paths =
-        (json['audioPaths'] as List<Object?>).cast<String>();
+    final List<String> paths = (json['audioPaths'] as List<Object?>)
+        .cast<String>();
     final List<Object?> durations =
         (json['fileDurationsMs'] as List<Object?>?) ?? const <Object?>[];
     final List<Object?> resumes =
@@ -229,13 +228,13 @@ class AsrJobState {
   static const int currentVersion = 3;
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'version': currentVersion,
-        'audioPaths': audioPaths,
-        'modelId': modelId,
-        'fileDurationsMs': fileDurationsMs,
-        'resumeSamples': resumeSamples,
-        'finished': finished,
-      };
+    'version': currentVersion,
+    'audioPaths': audioPaths,
+    'modelId': modelId,
+    'fileDurationsMs': fileDurationsMs,
+    'resumeSamples': resumeSamples,
+    'finished': finished,
+  };
 
   AsrJobState copyWith({
     List<int?>? fileDurationsMs,
@@ -274,9 +273,9 @@ class AsrTranscribeJob {
     this.progressInterval = const Duration(milliseconds: 500),
     this.statsProvider,
     this.usePipeline = true,
-  })  : assert(audioPaths.isNotEmpty),
-        assert(batchSize > 0),
-        assert(chunkSeconds > 0);
+  }) : assert(audioPaths.isNotEmpty),
+       assert(batchSize > 0),
+       assert(chunkSeconds > 0);
 
   final Directory jobDir;
   final List<String> audioPaths;
@@ -470,17 +469,18 @@ class AsrTranscribeJob {
 
       final int budgetSamples =
           batchSize * kAsrBatchReferenceSeconds * kAsrSampleRate;
-      final AsrBatchShaper? shaper =
-          decoder is AsrBatchShaper ? decoder as AsrBatchShaper : null;
+      final AsrBatchShaper? shaper = decoder is AsrBatchShaper
+          ? decoder as AsrBatchShaper
+          : null;
       int pendingSamples() => pending.fold<int>(
-            0,
-            (int acc, AsrSpeechSegment s) => acc + s.samples.length,
-          );
+        0,
+        (int acc, AsrSpeechSegment s) => acc + s.samples.length,
+      );
       int longestPending() => pending.fold<int>(
-            0,
-            (int acc, AsrSpeechSegment s) =>
-                s.samples.length > acc ? s.samples.length : acc,
-          );
+        0,
+        (int acc, AsrSpeechSegment s) =>
+            s.samples.length > acc ? s.samples.length : acc,
+      );
       bool enoughPending() {
         if (pending.isEmpty) return false;
         final int? cap = shaper?.batchCapFor(longestPending());
@@ -491,8 +491,8 @@ class AsrTranscribeJob {
 
       final AsrPipelinedDecoder? pipe =
           usePipeline && decoder is AsrPipelinedDecoder
-              ? decoder as AsrPipelinedDecoder
-              : null;
+          ? decoder as AsrPipelinedDecoder
+          : null;
       // 流水线状态（跨 drain 调用保留，块末 drain(all: true) 冲干净）。
       Future<AsrEncodedBatch>? inFlight;
       List<AsrSpeechSegment>? peeked;

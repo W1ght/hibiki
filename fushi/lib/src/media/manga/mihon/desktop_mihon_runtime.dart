@@ -49,9 +49,9 @@ class DesktopMihonRuntime extends MihonBridgeRuntime
     required this.dataDirectory,
     Directory? resourceDirectory,
     http.Client? httpClient,
-  })  : resourceDirectory = resourceDirectory ?? _defaultResourceDirectory(),
-        _processContainment = MihonChildProcessContainment.platform(),
-        _http = httpClient ?? http.Client();
+  }) : resourceDirectory = resourceDirectory ?? _defaultResourceDirectory(),
+       _processContainment = MihonChildProcessContainment.platform(),
+       _http = httpClient ?? http.Client();
 
   final Directory dataDirectory;
   final Directory resourceDirectory;
@@ -84,13 +84,13 @@ class DesktopMihonRuntime extends MihonBridgeRuntime
   }
 
   Map<String, String> get _headers => <String, String>{
-        'Authorization': 'Bearer $_token',
-        // NanoHTTPD 2.3.1 falls back to US-ASCII when a request content type
-        // omits its charset. Mihon manga URLs commonly contain CJK text, so
-        // omitting this parameter corrupts those URLs into U+FFFD on the
-        // bridge round trip and makes otherwise valid detail pages return 404.
-        'Content-Type': 'application/json; charset=utf-8',
-      };
+    'Authorization': 'Bearer $_token',
+    // NanoHTTPD 2.3.1 falls back to US-ASCII when a request content type
+    // omits its charset. Mihon manga URLs commonly contain CJK text, so
+    // omitting this parameter corrupts those URLs into U+FFFD on the
+    // bridge round trip and makes otherwise valid detail pages return 404.
+    'Content-Type': 'application/json; charset=utf-8',
+  };
 
   @override
   Future<MihonCapabilities> getCapabilities() async {
@@ -135,14 +135,13 @@ class DesktopMihonRuntime extends MihonBridgeRuntime
     MihonSource source,
     MihonPage page, {
     List<MihonPreference> preferences = const <MihonPreference>[],
-  }) =>
-      fetchImageRequest(
-        extension,
-        source,
-        page,
-        requestId: 'direct-${_imageRequestSequence++}',
-        preferences: preferences,
-      );
+  }) => fetchImageRequest(
+    extension,
+    source,
+    page,
+    requestId: 'direct-${_imageRequestSequence++}',
+    preferences: preferences,
+  );
 
   @override
   Future<Uint8List> fetchImageRequest(
@@ -216,8 +215,9 @@ class DesktopMihonRuntime extends MihonBridgeRuntime
         'url': url,
         'preferences': mihonBridgePreferences(source, preferences),
       });
-    final http.StreamedResponse response =
-        await _http.send(request).timeout(kMihonSourceImageHeaderTimeout);
+    final http.StreamedResponse response = await _http
+        .send(request)
+        .timeout(kMihonSourceImageHeaderTimeout);
     if (response.statusCode != HttpStatus.ok) {
       await response.stream.drain<void>().timeout(kMihonSourceImageIdleTimeout);
       throw MihonRuntimeException(
@@ -240,13 +240,10 @@ class DesktopMihonRuntime extends MihonBridgeRuntime
     MihonExtensionRef extension,
     MihonSource source,
   ) async {
-    await _postObject(
-      '/source-data/clear',
-      <String, Object?>{
-        'data': await _apkBase64(extension.apkPath),
-        'sourceId': source.id,
-      },
-    );
+    await _postObject('/source-data/clear', <String, Object?>{
+      'data': await _apkBase64(extension.apkPath),
+      'sourceId': source.id,
+    });
     await _restart();
   }
 
@@ -323,10 +320,9 @@ class DesktopMihonRuntime extends MihonBridgeRuntime
 
   Future<void> _start() async {
     final File java = File(_javaExecutablePath());
-    final File server = File(p.join(
-      resourceDirectory.path,
-      'm-extension-server.jar',
-    ));
+    final File server = File(
+      p.join(resourceDirectory.path, 'm-extension-server.jar'),
+    );
     if (!java.existsSync() || !server.existsSync()) {
       throw MihonRuntimeException(
         'RUNTIME_MISSING',
@@ -335,8 +331,9 @@ class DesktopMihonRuntime extends MihonBridgeRuntime
       );
     }
     await dataDirectory.create(recursive: true);
-    final Directory preferences =
-        Directory(p.join(dataDirectory.path, 'preferences'));
+    final Directory preferences = Directory(
+      p.join(dataDirectory.path, 'preferences'),
+    );
     await preferences.create(recursive: true);
     final Random random = Random.secure();
     final String token = base64UrlEncode(
@@ -408,25 +405,27 @@ class DesktopMihonRuntime extends MihonBridgeRuntime
         .transform(const Utf8Decoder(allowMalformed: true))
         .transform(const LineSplitter())
         .listen((String line) {
-      log.write(line);
-      if (announced.isCompleted) return;
-      final int? port = _parseReadyPort(line);
-      if (port != null) announced.complete(port);
-    });
+          log.write(line);
+          if (announced.isCompleted) return;
+          final int? port = _parseReadyPort(line);
+          if (port != null) announced.complete(port);
+        });
     process.stderr
         .transform(const Utf8Decoder(allowMalformed: true))
         .transform(const LineSplitter())
         .listen(log.write);
-    unawaited(process.exitCode.then((int _) {
-      if (!announced.isCompleted) announced.complete(null);
-      if (identical(_process, process)) {
-        _process = null;
-        _port = null;
-        _token = null;
-      }
-      if (identical(_log, log)) _log = null;
-      unawaited(log.close());
-    }));
+    unawaited(
+      process.exitCode.then((int _) {
+        if (!announced.isCompleted) announced.complete(null);
+        if (identical(_process, process)) {
+          _process = null;
+          _port = null;
+          _token = null;
+        }
+        if (identical(_log, log)) _log = null;
+        unawaited(log.close());
+      }),
+    );
 
     final DateTime deadline = DateTime.now().add(const Duration(seconds: 20));
     final int? readyPort = await announced.future.timeout(
@@ -552,11 +551,13 @@ class DesktopMihonRuntime extends MihonBridgeRuntime
       final http.Response response = await _http
           .post(_uri(path), headers: _headers, body: jsonEncode(body))
           .timeout(const Duration(seconds: 45));
-      final Object? decoded =
-          response.body.isEmpty ? null : jsonDecode(response.body);
+      final Object? decoded = response.body.isEmpty
+          ? null
+          : jsonDecode(response.body);
       if (response.statusCode < 200 || response.statusCode >= 300) {
-        final Map<Object?, Object?>? error =
-            decoded is Map<Object?, Object?> ? decoded : null;
+        final Map<Object?, Object?>? error = decoded is Map<Object?, Object?>
+            ? decoded
+            : null;
         throw MihonRuntimeException(
           'BRIDGE_HTTP_${response.statusCode}',
           error?['error']?.toString() ?? 'Mihon bridge request failed',
@@ -627,8 +628,8 @@ class DesktopMihonRuntime extends MihonBridgeRuntime
   String _javaExecutablePath() {
     final String runtimeName = Platform.isMacOS
         ? (Abi.current() == Abi.macosArm64
-            ? 'runtime-macos-arm64'
-            : 'runtime-macos-x64')
+              ? 'runtime-macos-arm64'
+              : 'runtime-macos-x64')
         : 'runtime';
     return p.join(
       resourceDirectory.path,
@@ -650,12 +651,9 @@ class DesktopMihonRuntime extends MihonBridgeRuntime
   static Directory _defaultResourceDirectory() {
     final Directory executable = File(Platform.resolvedExecutable).parent;
     if (Platform.isMacOS) {
-      return Directory(p.normalize(p.join(
-        executable.path,
-        '..',
-        'Resources',
-        'mihon_bridge',
-      )));
+      return Directory(
+        p.normalize(p.join(executable.path, '..', 'Resources', 'mihon_bridge')),
+      );
     }
     return Directory(p.join(executable.path, 'mihon_bridge'));
   }

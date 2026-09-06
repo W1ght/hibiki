@@ -81,8 +81,10 @@ double _partialRatio(String a, String b) {
   if (longer.contains(shorter)) return 1;
   double best = 0;
   for (int start = 0; start + shorter.length <= longer.length; start++) {
-    final double score =
-        _ratio(shorter, longer.substring(start, start + shorter.length));
+    final double score = _ratio(
+      shorter,
+      longer.substring(start, start + shorter.length),
+    );
     if (score > best) best = score;
     if (best >= 1) break;
   }
@@ -92,10 +94,14 @@ double _partialRatio(String a, String b) {
 /// 词集合相似度（fuzzywuzzy 的 token_set_ratio 简化版）：交集串与两个「交集+
 /// 差集」串两两比较取最高。CJK 无空白时退化为整串比较（词表只有一个元素）。
 double _tokenSetRatio(String a, String b) {
-  final Set<String> tokensA =
-      a.split(' ').where((String t) => t.isNotEmpty).toSet();
-  final Set<String> tokensB =
-      b.split(' ').where((String t) => t.isNotEmpty).toSet();
+  final Set<String> tokensA = a
+      .split(' ')
+      .where((String t) => t.isNotEmpty)
+      .toSet();
+  final Set<String> tokensB = b
+      .split(' ')
+      .where((String t) => t.isNotEmpty)
+      .toSet();
   if (tokensA.isEmpty || tokensB.isEmpty) return 0;
   final List<String> intersection = (tokensA.intersection(tokensB)).toList()
     ..sort();
@@ -115,8 +121,11 @@ double _tokenSetRatio(String a, String b) {
 int _levenshtein(String a, String b) {
   if (a.isEmpty) return b.length;
   if (b.isEmpty) return a.length;
-  List<int> previous =
-      List<int>.generate(b.length + 1, (int index) => index, growable: false);
+  List<int> previous = List<int>.generate(
+    b.length + 1,
+    (int index) => index,
+    growable: false,
+  );
   List<int> current = List<int>.filled(b.length + 1, 0, growable: false);
   for (int i = 0; i < a.length; i++) {
     current[0] = i + 1;

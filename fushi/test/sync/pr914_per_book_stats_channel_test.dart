@@ -30,14 +30,26 @@ void main() {
         "    'Auto-sync failed for \$mediaIdentifier',",
       );
 
-      expect(body, contains('resolveChannelSyncFlags('),
-          reason: '门控必须复用同一份分通道解析，不得在这里重抄');
-      expect(body, contains('syncStats: flags.syncStats'),
-          reason: 'per-book 统计必须取自分通道解析结果');
-      expect(body, isNot(contains('repo.isSyncStatsEnabled()')),
-          reason: '云备份共享开关不得对互联通道的 per-book 统计一刀切（PR#914 ②）');
-      expect(body, isNot(contains('isInterconnectSyncStatsEnabled')),
-          reason: '别在消费方重抄三元式——那正是当年 content 分了、stats 忘了的形状');
+      expect(
+        body,
+        contains('resolveChannelSyncFlags('),
+        reason: '门控必须复用同一份分通道解析，不得在这里重抄',
+      );
+      expect(
+        body,
+        contains('syncStats: flags.syncStats'),
+        reason: 'per-book 统计必须取自分通道解析结果',
+      );
+      expect(
+        body,
+        isNot(contains('repo.isSyncStatsEnabled()')),
+        reason: '云备份共享开关不得对互联通道的 per-book 统计一刀切（PR#914 ②）',
+      );
+      expect(
+        body,
+        isNot(contains('isInterconnectSyncStatsEnabled')),
+        reason: '别在消费方重抄三元式——那正是当年 content 分了、stats 忘了的形状',
+      );
     });
 
     test('手动「解决冲突并应用」（_applyChoices）按通道解析统计开关', () {
@@ -47,19 +59,32 @@ void main() {
         '  /// 750a：互联下载远端独有书时补下其有声书包（若有）。',
       );
 
-      expect(body, contains('resolveChannelSyncFlags('),
-          reason: '手动应用与自动同步必须同一份门控');
-      expect(body, contains('flags.syncStats'),
-          reason: 'per-book 统计必须取自分通道解析结果');
-      expect(body, isNot(contains('repo.isSyncStatsEnabled()')),
-          reason: '关掉互联「共享统计」后，手动应用一本书也不得再推该书统计（PR#914 ②）');
-      expect(body, isNot(contains('isInterconnectSyncContentEnabled')),
-          reason: '内容也一并归 resolveChannelSyncFlags，不留手抄三元式');
+      expect(
+        body,
+        contains('resolveChannelSyncFlags('),
+        reason: '手动应用与自动同步必须同一份门控',
+      );
+      expect(
+        body,
+        contains('flags.syncStats'),
+        reason: 'per-book 统计必须取自分通道解析结果',
+      );
+      expect(
+        body,
+        isNot(contains('repo.isSyncStatsEnabled()')),
+        reason: '关掉互联「共享统计」后，手动应用一本书也不得再推该书统计（PR#914 ②）',
+      );
+      expect(
+        body,
+        isNot(contains('isInterconnectSyncContentEnabled')),
+        reason: '内容也一并归 resolveChannelSyncFlags，不留手抄三元式',
+      );
     });
 
     test('互联后端确有 per-book 统计通道（否则本守卫在守一个不存在的路径）', () {
-      final String backend =
-          _readSource('lib/src/sync/interconnect_sync_backend.dart');
+      final String backend = _readSource(
+        'lib/src/sync/interconnect_sync_backend.dart',
+      );
       expect(backend, contains('updateStatsFile'));
       expect(backend, contains("'statistics_'"));
     });

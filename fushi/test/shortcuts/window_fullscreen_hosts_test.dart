@@ -50,9 +50,7 @@ void main() {
   group('WindowFullscreenHost widget', () {
     testWidgets('挂载即登记、卸载即注销', (WidgetTester tester) async {
       await tester.pumpWidget(
-        const MaterialApp(
-          home: WindowFullscreenHost(child: SizedBox.shrink()),
-        ),
+        const MaterialApp(home: WindowFullscreenHost(child: SizedBox.shrink())),
       );
       expect(WindowFullscreenHosts.hasVisibleHost, isTrue);
 
@@ -151,8 +149,9 @@ void main() {
     test('宿主离场时的归还判定推到帧末', () {
       // 当场判 = 每次 pushReplacement 换集都把全屏闪掉一次（BUG-839 场景）。
       final String hostSrc = maskComments(
-        File('lib/src/shortcuts/window_fullscreen_hosts.dart')
-            .readAsStringSync(),
+        File(
+          'lib/src/shortcuts/window_fullscreen_hosts.dart',
+        ).readAsStringSync(),
       );
       final String release = methodBody(
         hostSrc,
@@ -168,8 +167,9 @@ void main() {
 
     test('小说页底栏有全屏按钮，Esc 先退全屏再退书', () {
       final String chrome = maskComments(
-        File('lib/src/pages/implementations/reader_fushi/chrome.part.dart')
-            .readAsStringSync(),
+        File(
+          'lib/src/pages/implementations/reader_fushi/chrome.part.dart',
+        ).readAsStringSync(),
       );
       expect(
         chrome,
@@ -178,8 +178,9 @@ void main() {
       );
 
       final String caret = maskComments(
-        File('lib/src/pages/implementations/reader_fushi/caret.part.dart')
-            .readAsStringSync(),
+        File(
+          'lib/src/pages/implementations/reader_fushi/caret.part.dart',
+        ).readAsStringSync(),
       );
       expect(
         caret,
@@ -196,8 +197,9 @@ void main() {
       //   ② 底栏按钮 —— 自己那条路；
       //   ③ Esc 阶梯 —— 退的是同一个全屏，不复位图标就撒谎。
       final String chrome = maskComments(
-        File('lib/src/pages/implementations/reader_fushi/chrome.part.dart')
-            .readAsStringSync(),
+        File(
+          'lib/src/pages/implementations/reader_fushi/chrome.part.dart',
+        ).readAsStringSync(),
       );
 
       final String initial = methodBody(
@@ -236,15 +238,18 @@ void main() {
       // 上一条只证明 helper 写对了；这条证明它**被调用**——helper 存在但没人调，
       // 是同一个 bug 的另一种活法。
       final String page = maskComments(
-        File('lib/src/pages/implementations/reader_fushi_page.dart')
-            .readAsStringSync(),
+        File(
+          'lib/src/pages/implementations/reader_fushi_page.dart',
+        ).readAsStringSync(),
       );
       final int idxInit = page.indexOf('void initState() {');
       expect(idxInit, isNonNegative, reason: 'initState 锚点没了，守卫失去判据');
       final int idxDispose = page.indexOf('void dispose() {', idxInit);
       expect(idxDispose, greaterThan(idxInit));
-      final int idxCall =
-          page.indexOf('_readInitialWindowFullscreenState()', idxInit);
+      final int idxCall = page.indexOf(
+        '_readInitialWindowFullscreenState()',
+        idxInit,
+      );
       expect(
         idxCall,
         inInclusiveRange(idxInit, idxDispose),
@@ -261,8 +266,9 @@ void main() {
       // 用户用 F11 进的全屏不会置所有权标志，但在他眼里那和按钮进的是同一个全屏，
       // Esc 都该先退它，而不是连人带全屏一起退出漫画。
       final String manga = maskComments(
-        File('lib/src/media/manga/reader/manga_fushi_page.dart')
-            .readAsStringSync(),
+        File(
+          'lib/src/media/manga/reader/manga_fushi_page.dart',
+        ).readAsStringSync(),
       );
       final String exitBeforePop = methodBody(
         manga,

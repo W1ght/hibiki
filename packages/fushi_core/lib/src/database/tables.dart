@@ -172,8 +172,8 @@ class ReadingStatistics extends Table {
 
   @override
   List<Set<Column>> get uniqueKeys => [
-        {title, dateKey},
-      ];
+    {title, dateKey},
+  ];
 }
 
 // ── reading_hourly_logs ────────────────────────────���────────────────
@@ -193,8 +193,8 @@ class ReadingHourlyLogs extends Table {
 
   @override
   List<Set<Column>> get uniqueKeys => [
-        {dateKey, hour, format},
-      ];
+    {dateKey, hour, format},
+  ];
 }
 
 // ── video_watch_statistics ──────────────────────────────────────────
@@ -214,10 +214,10 @@ class VideoWatchStatistics extends Table {
 
   @override
   List<Set<Column>> get uniqueKeys => [
-        // v39：唯一键从 {title,dateKey} 换 {bookUid,dateKey}——同名不同视频当天
-        // 各写各行不再撞约束/互串（SQLite UNIQUE 视 NULL 互异，旧 NULL 行不冲突）。
-        {bookUid, dateKey},
-      ];
+    // v39：唯一键从 {title,dateKey} 换 {bookUid,dateKey}——同名不同视频当天
+    // 各写各行不再撞约束/互串（SQLite UNIQUE 视 NULL 互异，旧 NULL 行不冲突）。
+    {bookUid, dateKey},
+  ];
 }
 
 // ── video_hourly_logs ───────────────────────────────────────────────
@@ -230,8 +230,8 @@ class VideoHourlyLogs extends Table {
 
   @override
   List<Set<Column>> get uniqueKeys => [
-        {dateKey, hour},
-      ];
+    {dateKey, hour},
+  ];
 }
 
 // ── activity_events ─────────────────────────────────────────────────
@@ -375,8 +375,8 @@ class MediaTrackingMappings extends Table {
 
   @override
   List<Set<Column>> get uniqueKeys => [
-        {provider, mediaType, mediaKey},
-      ];
+    {provider, mediaType, mediaKey},
+  ];
 }
 
 /// 事务性待同步队列。每个映射最多一行；新事件以 MAX(progress) + completed OR
@@ -384,9 +384,11 @@ class MediaTrackingMappings extends Table {
 @DataClassName('MediaTrackingOutboxRow')
 class MediaTrackingOutbox extends Table {
   IntColumn get id => integer().autoIncrement()();
-  IntColumn get mappingId => integer()
-      .unique()
-      .references(MediaTrackingMappings, #id, onDelete: KeyAction.cascade)();
+  IntColumn get mappingId => integer().unique().references(
+    MediaTrackingMappings,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
   IntColumn get progress => integer()();
   BoolColumn get completed => boolean().withDefault(const Constant(false))();
   IntColumn get attemptCount => integer().withDefault(const Constant(0))();
@@ -453,9 +455,11 @@ class EpubBooks extends Table {
 
   /// TODO-817：归属的网络/本地来源库（[MediaSources].id）。可空 = 手动导入无来源。
   /// onDelete:setNull = 移除来源时保留书目（归 NULL），不连坐删条目。
-  IntColumn get sourceId => integer()
-      .nullable()
-      .references(MediaSources, #id, onDelete: KeyAction.setNull)();
+  IntColumn get sourceId => integer().nullable().references(
+    MediaSources,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
 
   @override
   Set<Column> get primaryKey => {bookKey};
@@ -531,8 +535,8 @@ class ProfileSettings extends Table {
 
   @override
   List<Set<Column>> get uniqueKeys => [
-        {profileId, category, key},
-      ];
+    {profileId, category, key},
+  ];
 }
 
 // ── media_type_profiles ─────────────────────────────────────────────
@@ -645,9 +649,11 @@ class VideoBooks extends Table {
 
   /// TODO-817：归属的网络/本地来源库（[MediaSources].id）。可空 = 手动导入无来源。
   /// onDelete:setNull = 移除来源时保留视频（归 NULL），不连坐删条目。
-  IntColumn get sourceId => integer()
-      .nullable()
-      .references(MediaSources, #id, onDelete: KeyAction.setNull)();
+  IntColumn get sourceId => integer().nullable().references(
+    MediaSources,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
 
   /// TODO-1157：流媒体书的重开规格（JSON）。非空当且仅当这是一条「粘贴 URL 导入」的
   /// 流媒体书（判据以 [videoPath] 是 http/https 为准，本列只补 videoPath 装不下的
@@ -689,8 +695,8 @@ class FavoriteWords extends Table {
 
   @override
   List<Set<Column>> get uniqueKeys => [
-        {expression, reading, sourceType},
-      ];
+    {expression, reading, sourceType},
+  ];
 }
 
 // ── mining_statistics ───────────────────────────────────────────────
@@ -705,8 +711,8 @@ class MiningStatistics extends Table {
 
   @override
   List<Set<Column>> get uniqueKeys => [
-        {sourceType, dateKey},
-      ];
+    {sourceType, dateKey},
+  ];
 }
 
 // ── lookup_mining_counters ──────────────────
@@ -744,8 +750,8 @@ class LookupMiningCounters extends Table {
   /// 会让全部 title 粒度查询退化成全表扫描（sync 应用逐 record 扫两遍）。
   @override
   List<Set<Column>> get uniqueKeys => [
-        {title, sourceType, dateKey, bookKey},
-      ];
+    {title, sourceType, dateKey, bookKey},
+  ];
 }
 
 // ── mined_sentences ──────────────────────────────────────────────────
@@ -888,9 +894,11 @@ class ShelfEntries extends Table {
 
   /// 归属系列（NULL = 散书）。onDelete:setNull 仿 [EpubBooks].sourceId：移除系列时
   /// 成员归 NULL（散回书架），不连坐删条目。
-  IntColumn get seriesId => integer()
-      .nullable()
-      .references(Series, #id, onDelete: KeyAction.setNull)();
+  IntColumn get seriesId => integer().nullable().references(
+    Series,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
 
   /// 复合主键：一条目一行。
   @override
@@ -1002,8 +1010,11 @@ class MediaCollections extends Table {
 @DataClassName('MediaCollectionItemRow')
 class MediaCollectionItems extends Table {
   /// 所属合集（[MediaCollections].id）。onDelete:cascade = 删合集连带删本引用行。
-  IntColumn get collectionId => integer()
-      .references(MediaCollections, #id, onDelete: KeyAction.cascade)();
+  IntColumn get collectionId => integer().references(
+    MediaCollections,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
 
   /// 媒体种类：'epub' | 'srt' | 'video' | 'game'（前三者同 [ShelfEntries].mediaType
   /// 值域；'game' 仅存在于本表——游戏库无书架排序行）。自由 TextColumn，无 CHECK。
@@ -1060,8 +1071,12 @@ class CollectionMemberTombstones extends Table {
 
   /// 一 (合集, 成员) 一行；合集级哨兵行天然也唯一。
   @override
-  Set<Column> get primaryKey =>
-      {collectionName, collectionType, mediaType, entryKey};
+  Set<Column> get primaryKey => {
+    collectionName,
+    collectionType,
+    mediaType,
+    entryKey,
+  };
 }
 
 // ── fushi_paired_peers ─────────────────────────────
@@ -1257,8 +1272,11 @@ class RevealedImages extends Table {
 @DataClassName('CollectionScrapeMetaRow')
 class CollectionScrapeMeta extends Table {
   /// 合集身份（= MediaCollections.id）。删合集 cascade 清本表。
-  IntColumn get collectionId => integer()
-      .references(MediaCollections, #id, onDelete: KeyAction.cascade)();
+  IntColumn get collectionId => integer().references(
+    MediaCollections,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
 
   /// 来源（`ScrapeSource.name`：bangumi / tmdb / offlineDb / manualUrl）。
   TextColumn get source => text()();
@@ -1402,8 +1420,11 @@ class CollectionRelations extends Table {
   IntColumn get id => integer().autoIncrement()();
 
   /// 边的起点：本地合集。删合集 cascade 清边。
-  IntColumn get collectionId => integer()
-      .references(MediaCollections, #id, onDelete: KeyAction.cascade)();
+  IntColumn get collectionId => integer().references(
+    MediaCollections,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
 
   /// 关系类型，wire 值固定小写下划线：`prequel`（前传）/ `sequel`（续集）/
   /// `side_story`（番外/外传）/ `movie`（剧场版）/ `spin_off`（衍生）/ `other`。
@@ -1415,9 +1436,11 @@ class CollectionRelations extends Table {
 
   /// 已绑定态：目标在本地库中的合集 id。纯刮削态为 NULL；目标合集被删自动
   /// setNull 退回纯刮削态。
-  IntColumn get targetCollectionId => integer()
-      .nullable()
-      .references(MediaCollections, #id, onDelete: KeyAction.setNull)();
+  IntColumn get targetCollectionId => integer().nullable().references(
+    MediaCollections,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
 
   /// 目标条目来源（`ScrapeSource.name`：bangumi / tmdb）。
   TextColumn get source => text()();
@@ -1437,8 +1460,8 @@ class CollectionRelations extends Table {
   /// 同一合集下同一源内条目只此一边（重复刮削按此去重）。
   @override
   List<Set<Column>> get uniqueKeys => [
-        {collectionId, source, subjectId},
-      ];
+    {collectionId, source, subjectId},
+  ];
 }
 
 // ── media_images ────────────────────────────────────────────────────
@@ -1464,14 +1487,18 @@ class MediaImages extends Table {
   IntColumn get id => integer().autoIncrement()();
 
   /// 归属合集（与 [bookUid] 二选一）。删合集 cascade 清行。
-  IntColumn get collectionId => integer()
-      .nullable()
-      .references(MediaCollections, #id, onDelete: KeyAction.cascade)();
+  IntColumn get collectionId => integer().nullable().references(
+    MediaCollections,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
 
   /// 归属单视频（与 [collectionId] 二选一；散装电影的图组）。删视频 cascade 清行。
-  TextColumn get bookUid => text()
-      .nullable()
-      .references(VideoBooks, #bookUid, onDelete: KeyAction.cascade)();
+  TextColumn get bookUid => text().nullable().references(
+    VideoBooks,
+    #bookUid,
+    onDelete: KeyAction.cascade,
+  )();
 
   /// 图种类（`MediaImageKind.dbValue`：backdrop / logo / title_card）。
   TextColumn get kind => text()();
@@ -1489,16 +1516,16 @@ class MediaImages extends Table {
   /// 单一归属：合集与视频二选一，恰好一个非空。
   @override
   List<String> get customConstraints => <String>[
-        'CHECK ((collection_id IS NULL) != (book_uid IS NULL))',
-      ];
+    'CHECK ((collection_id IS NULL) != (book_uid IS NULL))',
+  ];
 
   /// 同归属同种类同槽位唯一（重复刮削整组替换按此幂等）。两条唯一键分别覆盖两种
   /// 归属——SQLite 的 UNIQUE 对 NULL 不判等，各自只约束自己那种归属的行。
   @override
   List<Set<Column>> get uniqueKeys => [
-        {collectionId, kind, position},
-        {bookUid, kind, position},
-      ];
+    {collectionId, kind, position},
+    {bookUid, kind, position},
+  ];
 }
 
 // ── video_metadata_works（v77：视频规范作品资料）─────────────────────
@@ -1510,14 +1537,18 @@ class VideoMetadataWorks extends Table {
   IntColumn get id => integer().autoIncrement()();
 
   /// 电视剧作品通常绑定合集；与 [bookUid] 恰好一个非空。
-  IntColumn get collectionId => integer()
-      .nullable()
-      .references(MediaCollections, #id, onDelete: KeyAction.cascade)();
+  IntColumn get collectionId => integer().nullable().references(
+    MediaCollections,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
 
   /// 独立电影通常绑定视频；与 [collectionId] 恰好一个非空。
-  TextColumn get bookUid => text()
-      .nullable()
-      .references(VideoBooks, #bookUid, onDelete: KeyAction.cascade)();
+  TextColumn get bookUid => text().nullable().references(
+    VideoBooks,
+    #bookUid,
+    onDelete: KeyAction.cascade,
+  )();
 
   /// `movie` | `tv`。值域由视频刮削域枚举维护，DB 保持前向兼容。
   TextColumn get mediaType => text()();
@@ -1542,22 +1573,25 @@ class VideoMetadataWorks extends Table {
 
   @override
   List<String> get customConstraints => <String>[
-        'CHECK ((collection_id IS NULL) != (book_uid IS NULL))',
-      ];
+    'CHECK ((collection_id IS NULL) != (book_uid IS NULL))',
+  ];
 
   @override
   List<Set<Column>> get uniqueKeys => <Set<Column>>[
-        <Column>{collectionId},
-        <Column>{bookUid},
-      ];
+    <Column>{collectionId},
+    <Column>{bookUid},
+  ];
 }
 
 // ── video_metadata_seasons ──────────────────────────────────────────
 @DataClassName('VideoMetadataSeasonRow')
 class VideoMetadataSeasons extends Table {
   IntColumn get id => integer().autoIncrement()();
-  IntColumn get workId => integer()
-      .references(VideoMetadataWorks, #id, onDelete: KeyAction.cascade)();
+  IntColumn get workId => integer().references(
+    VideoMetadataWorks,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
   IntColumn get seasonNumber => integer()();
   TextColumn get title => text().nullable()();
   TextColumn get overview => text().nullable()();
@@ -1570,22 +1604,26 @@ class VideoMetadataSeasons extends Table {
 
   @override
   List<Set<Column>> get uniqueKeys => <Set<Column>>[
-        <Column>{workId, seasonNumber},
-      ];
+    <Column>{workId, seasonNumber},
+  ];
 }
 
 // ── video_metadata_episodes ─────────────────────────────────────────
 @DataClassName('VideoMetadataEpisodeRow')
 class VideoMetadataEpisodes extends Table {
   IntColumn get id => integer().autoIncrement()();
-  IntColumn get seasonId => integer()
-      .references(VideoMetadataSeasons, #id, onDelete: KeyAction.cascade)();
+  IntColumn get seasonId => integer().references(
+    VideoMetadataSeasons,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
 
   /// 可选的本地分集绑定。删视频只解绑，源侧季集骨架继续保留供重链。
-  TextColumn get bookUid => text()
-      .nullable()
-      .unique()
-      .references(VideoBooks, #bookUid, onDelete: KeyAction.setNull)();
+  TextColumn get bookUid => text().nullable().unique().references(
+    VideoBooks,
+    #bookUid,
+    onDelete: KeyAction.setNull,
+  )();
   IntColumn get episodeNumber => integer()();
   IntColumn get absoluteNumber => integer().nullable()();
   TextColumn get title => text().nullable()();
@@ -1599,8 +1637,8 @@ class VideoMetadataEpisodes extends Table {
 
   @override
   List<Set<Column>> get uniqueKeys => <Set<Column>>[
-        <Column>{seasonId, episodeNumber},
-      ];
+    <Column>{seasonId, episodeNumber},
+  ];
 }
 
 // ── video_metadata_people / characters ──────────────────────────────
@@ -1642,21 +1680,31 @@ class VideoMetadataCharacters extends Table {
 class VideoMetadataProviderIdentities extends Table {
   /// 抓取层稳定键：`<owner-kind>:<owner-key>:<provider>`。
   TextColumn get identityKey => text()();
-  IntColumn get workId => integer()
-      .nullable()
-      .references(VideoMetadataWorks, #id, onDelete: KeyAction.cascade)();
-  IntColumn get seasonId => integer()
-      .nullable()
-      .references(VideoMetadataSeasons, #id, onDelete: KeyAction.cascade)();
-  IntColumn get episodeId => integer()
-      .nullable()
-      .references(VideoMetadataEpisodes, #id, onDelete: KeyAction.cascade)();
-  TextColumn get personKey =>
-      text().nullable().references(VideoMetadataPeople, #personKey,
-          onDelete: KeyAction.cascade)();
-  TextColumn get characterKey =>
-      text().nullable().references(VideoMetadataCharacters, #characterKey,
-          onDelete: KeyAction.cascade)();
+  IntColumn get workId => integer().nullable().references(
+    VideoMetadataWorks,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
+  IntColumn get seasonId => integer().nullable().references(
+    VideoMetadataSeasons,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
+  IntColumn get episodeId => integer().nullable().references(
+    VideoMetadataEpisodes,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
+  TextColumn get personKey => text().nullable().references(
+    VideoMetadataPeople,
+    #personKey,
+    onDelete: KeyAction.cascade,
+  )();
+  TextColumn get characterKey => text().nullable().references(
+    VideoMetadataCharacters,
+    #characterKey,
+    onDelete: KeyAction.cascade,
+  )();
   TextColumn get provider => text()();
   TextColumn get externalId => text()();
   TextColumn get externalUrl => text().nullable()();
@@ -1668,27 +1716,29 @@ class VideoMetadataProviderIdentities extends Table {
 
   @override
   List<String> get customConstraints => <String>[
-        'CHECK ((work_id IS NOT NULL) + (season_id IS NOT NULL) + '
-            '(episode_id IS NOT NULL) + (person_key IS NOT NULL) + '
-            '(character_key IS NOT NULL) = 1)',
-      ];
+    'CHECK ((work_id IS NOT NULL) + (season_id IS NOT NULL) + '
+        '(episode_id IS NOT NULL) + (person_key IS NOT NULL) + '
+        '(character_key IS NOT NULL) = 1)',
+  ];
 
   @override
   List<Set<Column>> get uniqueKeys => <Set<Column>>[
-        <Column>{workId, provider},
-        <Column>{seasonId, provider},
-        <Column>{episodeId, provider},
-        <Column>{personKey, provider},
-        <Column>{characterKey, provider},
-      ];
+    <Column>{workId, provider},
+    <Column>{seasonId, provider},
+    <Column>{episodeId, provider},
+    <Column>{personKey, provider},
+    <Column>{characterKey, provider},
+  ];
 }
 
 @DataClassName('VideoMetadataRawSnapshotRow')
 class VideoMetadataRawSnapshots extends Table {
   IntColumn get id => integer().autoIncrement()();
-  TextColumn get identityKey =>
-      text().references(VideoMetadataProviderIdentities, #identityKey,
-          onDelete: KeyAction.cascade)();
+  TextColumn get identityKey => text().references(
+    VideoMetadataProviderIdentities,
+    #identityKey,
+    onDelete: KeyAction.cascade,
+  )();
 
   /// `details` / `credits` / `images` / `season` / `episode` 等响应类别。
   TextColumn get snapshotKind => text()();
@@ -1700,8 +1750,8 @@ class VideoMetadataRawSnapshots extends Table {
 
   @override
   List<Set<Column>> get uniqueKeys => <Set<Column>>[
-        <Column>{identityKey, snapshotKind},
-      ];
+    <Column>{identityKey, snapshotKind},
+  ];
 }
 
 // ── video_metadata_terms / work_terms ───────────────────────────────
@@ -1718,16 +1768,22 @@ class VideoMetadataTerms extends Table {
 
   @override
   List<Set<Column>> get uniqueKeys => <Set<Column>>[
-        <Column>{kind, normalizedName},
-      ];
+    <Column>{kind, normalizedName},
+  ];
 }
 
 @DataClassName('VideoMetadataWorkTermRow')
 class VideoMetadataWorkTerms extends Table {
-  IntColumn get workId => integer()
-      .references(VideoMetadataWorks, #id, onDelete: KeyAction.cascade)();
-  TextColumn get termKey => text()
-      .references(VideoMetadataTerms, #termKey, onDelete: KeyAction.cascade)();
+  IntColumn get workId => integer().references(
+    VideoMetadataWorks,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
+  TextColumn get termKey => text().references(
+    VideoMetadataTerms,
+    #termKey,
+    onDelete: KeyAction.cascade,
+  )();
   IntColumn get sortOrder => integer().withDefault(const Constant(0))();
 
   @override
@@ -1738,20 +1794,31 @@ class VideoMetadataWorkTerms extends Table {
 @DataClassName('VideoMetadataCreditRow')
 class VideoMetadataCredits extends Table {
   IntColumn get id => integer().autoIncrement()();
-  IntColumn get workId => integer()
-      .nullable()
-      .references(VideoMetadataWorks, #id, onDelete: KeyAction.cascade)();
-  IntColumn get seasonId => integer()
-      .nullable()
-      .references(VideoMetadataSeasons, #id, onDelete: KeyAction.cascade)();
-  IntColumn get episodeId => integer()
-      .nullable()
-      .references(VideoMetadataEpisodes, #id, onDelete: KeyAction.cascade)();
-  TextColumn get personKey => text().references(VideoMetadataPeople, #personKey,
-      onDelete: KeyAction.cascade)();
-  TextColumn get characterKey =>
-      text().nullable().references(VideoMetadataCharacters, #characterKey,
-          onDelete: KeyAction.setNull)();
+  IntColumn get workId => integer().nullable().references(
+    VideoMetadataWorks,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
+  IntColumn get seasonId => integer().nullable().references(
+    VideoMetadataSeasons,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
+  IntColumn get episodeId => integer().nullable().references(
+    VideoMetadataEpisodes,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
+  TextColumn get personKey => text().references(
+    VideoMetadataPeople,
+    #personKey,
+    onDelete: KeyAction.cascade,
+  )();
+  TextColumn get characterKey => text().nullable().references(
+    VideoMetadataCharacters,
+    #characterKey,
+    onDelete: KeyAction.setNull,
+  )();
 
   /// director / writer / actor / guest / voice_actor / producer 等。
   TextColumn get creditKind => text()();
@@ -1764,16 +1831,16 @@ class VideoMetadataCredits extends Table {
 
   @override
   List<String> get customConstraints => <String>[
-        'CHECK ((work_id IS NOT NULL) + (season_id IS NOT NULL) + '
-            '(episode_id IS NOT NULL) = 1)',
-      ];
+    'CHECK ((work_id IS NOT NULL) + (season_id IS NOT NULL) + '
+        '(episode_id IS NOT NULL) = 1)',
+  ];
 
   @override
   List<Set<Column>> get uniqueKeys => <Set<Column>>[
-        <Column>{workId, personKey, creditKind, roleName},
-        <Column>{seasonId, personKey, creditKind, roleName},
-        <Column>{episodeId, personKey, creditKind, roleName},
-      ];
+    <Column>{workId, personKey, creditKind, roleName},
+    <Column>{seasonId, personKey, creditKind, roleName},
+    <Column>{episodeId, personKey, creditKind, roleName},
+  ];
 }
 
 // ── video_metadata_images ───────────────────────────────────────────
@@ -1781,21 +1848,31 @@ class VideoMetadataCredits extends Table {
 @DataClassName('VideoMetadataImageRow')
 class VideoMetadataImages extends Table {
   IntColumn get id => integer().autoIncrement()();
-  IntColumn get workId => integer()
-      .nullable()
-      .references(VideoMetadataWorks, #id, onDelete: KeyAction.cascade)();
-  IntColumn get seasonId => integer()
-      .nullable()
-      .references(VideoMetadataSeasons, #id, onDelete: KeyAction.cascade)();
-  IntColumn get episodeId => integer()
-      .nullable()
-      .references(VideoMetadataEpisodes, #id, onDelete: KeyAction.cascade)();
-  TextColumn get personKey =>
-      text().nullable().references(VideoMetadataPeople, #personKey,
-          onDelete: KeyAction.cascade)();
-  TextColumn get characterKey =>
-      text().nullable().references(VideoMetadataCharacters, #characterKey,
-          onDelete: KeyAction.cascade)();
+  IntColumn get workId => integer().nullable().references(
+    VideoMetadataWorks,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
+  IntColumn get seasonId => integer().nullable().references(
+    VideoMetadataSeasons,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
+  IntColumn get episodeId => integer().nullable().references(
+    VideoMetadataEpisodes,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
+  TextColumn get personKey => text().nullable().references(
+    VideoMetadataPeople,
+    #personKey,
+    onDelete: KeyAction.cascade,
+  )();
+  TextColumn get characterKey => text().nullable().references(
+    VideoMetadataCharacters,
+    #characterKey,
+    onDelete: KeyAction.cascade,
+  )();
   TextColumn get provider => text()();
 
   /// poster / backdrop / logo / disc / banner / thumb / landscape / clearart。
@@ -1813,19 +1890,19 @@ class VideoMetadataImages extends Table {
 
   @override
   List<String> get customConstraints => <String>[
-        'CHECK ((work_id IS NOT NULL) + (season_id IS NOT NULL) + '
-            '(episode_id IS NOT NULL) + (person_key IS NOT NULL) + '
-            '(character_key IS NOT NULL) = 1)',
-      ];
+    'CHECK ((work_id IS NOT NULL) + (season_id IS NOT NULL) + '
+        '(episode_id IS NOT NULL) + (person_key IS NOT NULL) + '
+        '(character_key IS NOT NULL) = 1)',
+  ];
 
   @override
   List<Set<Column>> get uniqueKeys => <Set<Column>>[
-        <Column>{workId, kind, position},
-        <Column>{seasonId, kind, position},
-        <Column>{episodeId, kind, position},
-        <Column>{personKey, kind, position},
-        <Column>{characterKey, kind, position},
-      ];
+    <Column>{workId, kind, position},
+    <Column>{seasonId, kind, position},
+    <Column>{episodeId, kind, position},
+    <Column>{personKey, kind, position},
+    <Column>{characterKey, kind, position},
+  ];
 }
 
 // ── video_metadata_extras（v77：作品预告片 / 花絮）────────────────────
@@ -1834,12 +1911,16 @@ class VideoMetadataImages extends Table {
 @DataClassName('VideoMetadataExtraRow')
 class VideoMetadataExtras extends Table {
   TextColumn get extraKey => text()();
-  IntColumn get workId => integer()
-      .references(VideoMetadataWorks, #id, onDelete: KeyAction.cascade)();
-  TextColumn get bookUid => text()
-      .nullable()
-      .unique()
-      .references(VideoBooks, #bookUid, onDelete: KeyAction.setNull)();
+  IntColumn get workId => integer().references(
+    VideoMetadataWorks,
+    #id,
+    onDelete: KeyAction.cascade,
+  )();
+  TextColumn get bookUid => text().nullable().unique().references(
+    VideoBooks,
+    #bookUid,
+    onDelete: KeyAction.setNull,
+  )();
 
   /// trailer / teaser / clip / featurette / interview / behind_the_scenes /
   /// deleted_scene / short / scene / sample / extra。
@@ -1864,10 +1945,10 @@ class VideoMetadataExtras extends Table {
 
   @override
   List<String> get customConstraints => <String>[
-        "CHECK (source_kind IN ('local', 'online'))",
-        "CHECK ((source_kind = 'local' AND book_uid IS NOT NULL) OR "
-            "(source_kind = 'online' AND remote_url IS NOT NULL))",
-      ];
+    "CHECK (source_kind IN ('local', 'online'))",
+    "CHECK ((source_kind = 'local' AND book_uid IS NOT NULL) OR "
+        "(source_kind = 'online' AND remote_url IS NOT NULL))",
+  ];
 }
 
 // ── video_source_scrape_settings / runs ─────────────────────────────
@@ -1902,9 +1983,11 @@ class VideoSourceScrapeRuns extends Table {
   IntColumn get id => integer().autoIncrement()();
 
   /// NULL 表示「全部来源」批次，或来源行删除后保留的审计摘要。
-  IntColumn get sourceId => integer()
-      .nullable()
-      .references(MediaSources, #id, onDelete: KeyAction.setNull)();
+  IntColumn get sourceId => integer().nullable().references(
+    MediaSources,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
   TextColumn get scope => text()(); // source / all
   TextColumn get status => text()(); // queued / running / completed / ...
   TextColumn get provider => text().nullable()();
@@ -1929,21 +2012,31 @@ class VideoSidecarArtifacts extends Table {
   IntColumn get id => integer().autoIncrement()();
 
   /// 来源移除只解除关联；媒体旁已有文件及本行 hash/所有权记录全部保留。
-  IntColumn get sourceId => integer()
-      .nullable()
-      .references(MediaSources, #id, onDelete: KeyAction.setNull)();
-  IntColumn get runId => integer()
-      .nullable()
-      .references(VideoSourceScrapeRuns, #id, onDelete: KeyAction.setNull)();
-  IntColumn get workId => integer()
-      .nullable()
-      .references(VideoMetadataWorks, #id, onDelete: KeyAction.setNull)();
-  IntColumn get seasonId => integer()
-      .nullable()
-      .references(VideoMetadataSeasons, #id, onDelete: KeyAction.setNull)();
-  IntColumn get episodeId => integer()
-      .nullable()
-      .references(VideoMetadataEpisodes, #id, onDelete: KeyAction.setNull)();
+  IntColumn get sourceId => integer().nullable().references(
+    MediaSources,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
+  IntColumn get runId => integer().nullable().references(
+    VideoSourceScrapeRuns,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
+  IntColumn get workId => integer().nullable().references(
+    VideoMetadataWorks,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
+  IntColumn get seasonId => integer().nullable().references(
+    VideoMetadataSeasons,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
+  IntColumn get episodeId => integer().nullable().references(
+    VideoMetadataEpisodes,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
   TextColumn get artifactKind => text()(); // nfo / poster / backdrop / ...
 
   /// 规范绝对路径；同一个物理 sidecar 只保留一条所有权记录。
@@ -1959,9 +2052,9 @@ class VideoSidecarArtifacts extends Table {
   /// 冒充多个层级的资产。
   @override
   List<String> get customConstraints => <String>[
-        'CHECK ((work_id IS NOT NULL) + (season_id IS NOT NULL) + '
-            '(episode_id IS NOT NULL) <= 1)',
-      ];
+    'CHECK ((work_id IS NOT NULL) + (season_id IS NOT NULL) + '
+        '(episode_id IS NOT NULL) <= 1)',
+  ];
 }
 
 // ── durable video download pipeline（v78）────────────────────────────
@@ -2074,12 +2167,16 @@ class VideoDownloadJobs extends Table {
   TextColumn get category => text().nullable()();
 
   /// 目标来源库/合集被删时任务审计仍保留，只解除绑定。
-  IntColumn get targetSourceId => integer()
-      .nullable()
-      .references(MediaSources, #id, onDelete: KeyAction.setNull)();
-  IntColumn get collectionId => integer()
-      .nullable()
-      .references(MediaCollections, #id, onDelete: KeyAction.setNull)();
+  IntColumn get targetSourceId => integer().nullable().references(
+    MediaSources,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
+  IntColumn get collectionId => integer().nullable().references(
+    MediaCollections,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
   TextColumn get organizationPolicy =>
       text().withDefault(const Constant('library'))();
   TextColumn get subtitlePolicy =>
@@ -2113,22 +2210,22 @@ class VideoDownloadJobs extends Table {
 
   @override
   List<String> get customConstraints => <String>[
-        "CHECK (job_id != '' AND resource_provider != '' AND "
-            "selected_resource_id != '' AND media_kind != '' AND title != '' "
-            "AND backend_kind != '' AND fingerprint != '')",
-        'CHECK ((metadata_provider IS NULL) = (external_id IS NULL))',
-        "CHECK (lifecycle IN ('active', 'needsAttention', 'completed', "
-            "'failed', 'cancelled'))",
-        "CHECK (stage IN ('enqueue', 'download', 'organize', 'subtitle', "
-            "'import', 'scrape'))",
-        'CHECK (stage_progress >= 0.0 AND stage_progress <= 1.0)',
-        'CHECK (attempt_count >= 0 AND max_attempts > 0)',
-        'CHECK (year IS NULL OR year >= 0)',
-        'CHECK (season IS NULL OR season >= 0)',
-        "CHECK (magnet_uri IS NULL OR magnet_uri LIKE 'magnet:%')",
-        'CHECK ((claimed_by IS NULL) = (claim_expires_at IS NULL))',
-        "CHECK (claimed_by IS NULL OR lifecycle = 'active')",
-      ];
+    "CHECK (job_id != '' AND resource_provider != '' AND "
+        "selected_resource_id != '' AND media_kind != '' AND title != '' "
+        "AND backend_kind != '' AND fingerprint != '')",
+    'CHECK ((metadata_provider IS NULL) = (external_id IS NULL))',
+    "CHECK (lifecycle IN ('active', 'needsAttention', 'completed', "
+        "'failed', 'cancelled'))",
+    "CHECK (stage IN ('enqueue', 'download', 'organize', 'subtitle', "
+        "'import', 'scrape'))",
+    'CHECK (stage_progress >= 0.0 AND stage_progress <= 1.0)',
+    'CHECK (attempt_count >= 0 AND max_attempts > 0)',
+    'CHECK (year IS NULL OR year >= 0)',
+    'CHECK (season IS NULL OR season >= 0)',
+    "CHECK (magnet_uri IS NULL OR magnet_uri LIKE 'magnet:%')",
+    'CHECK ((claimed_by IS NULL) = (claim_expires_at IS NULL))',
+    "CHECK (claimed_by IS NULL OR lifecycle = 'active')",
+  ];
 }
 
 abstract final class VideoDownloadJobFileStatus {
@@ -2144,8 +2241,11 @@ abstract final class VideoDownloadJobFileStatus {
 @DataClassName('VideoDownloadJobFileRow')
 class VideoDownloadJobFiles extends Table {
   IntColumn get id => integer().autoIncrement()();
-  TextColumn get jobId => text()
-      .references(VideoDownloadJobs, #jobId, onDelete: KeyAction.cascade)();
+  TextColumn get jobId => text().references(
+    VideoDownloadJobs,
+    #jobId,
+    onDelete: KeyAction.cascade,
+  )();
   IntColumn get backendFileIndex => integer().nullable()();
   TextColumn get originalRelativePath => text()();
   TextColumn get currentRelativePath => text()();
@@ -2164,21 +2264,21 @@ class VideoDownloadJobFiles extends Table {
 
   @override
   List<Set<Column>> get uniqueKeys => <Set<Column>>[
-        <Column>{jobId, originalRelativePath},
-        <Column>{jobId, backendFileIndex},
-      ];
+    <Column>{jobId, originalRelativePath},
+    <Column>{jobId, backendFileIndex},
+  ];
 
   @override
   List<String> get customConstraints => <String>[
-        "CHECK (original_relative_path != '' AND current_relative_path != '')",
-        "CHECK (kind IN ('video', 'subtitle', 'extra', 'other'))",
-        "CHECK (status IN ('pending', 'downloading', 'downloaded', "
-            "'organized', 'imported', 'skipped', 'failed'))",
-        'CHECK (backend_file_index IS NULL OR backend_file_index >= 0)',
-        'CHECK (season IS NULL OR season >= 0)',
-        'CHECK (episode IS NULL OR episode >= 0)',
-        'CHECK (size_bytes IS NULL OR size_bytes >= 0)',
-      ];
+    "CHECK (original_relative_path != '' AND current_relative_path != '')",
+    "CHECK (kind IN ('video', 'subtitle', 'extra', 'other'))",
+    "CHECK (status IN ('pending', 'downloading', 'downloaded', "
+        "'organized', 'imported', 'skipped', 'failed'))",
+    'CHECK (backend_file_index IS NULL OR backend_file_index >= 0)',
+    'CHECK (season IS NULL OR season >= 0)',
+    'CHECK (episode IS NULL OR episode >= 0)',
+    'CHECK (size_bytes IS NULL OR size_bytes >= 0)',
+  ];
 }
 
 abstract final class VideoDownloadJobSubtitleStatus {
@@ -2194,11 +2294,16 @@ abstract final class VideoDownloadJobSubtitleStatus {
 @DataClassName('VideoDownloadJobSubtitleRow')
 class VideoDownloadJobSubtitles extends Table {
   TextColumn get subtitleId => text()();
-  TextColumn get jobId => text()
-      .references(VideoDownloadJobs, #jobId, onDelete: KeyAction.cascade)();
-  IntColumn get jobFileId => integer()
-      .nullable()
-      .references(VideoDownloadJobFiles, #id, onDelete: KeyAction.setNull)();
+  TextColumn get jobId => text().references(
+    VideoDownloadJobs,
+    #jobId,
+    onDelete: KeyAction.cascade,
+  )();
+  IntColumn get jobFileId => integer().nullable().references(
+    VideoDownloadJobFiles,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
   TextColumn get provider => text()();
   TextColumn get selectedSubtitleId => text().nullable()();
   TextColumn get language => text().nullable()();
@@ -2207,8 +2312,9 @@ class VideoDownloadJobSubtitles extends Table {
   TextColumn get originalFileName => text().nullable()();
   TextColumn get stagedPath => text().nullable()();
   TextColumn get finalPath => text().nullable()();
-  TextColumn get status => text()
-      .withDefault(const Constant(VideoDownloadJobSubtitleStatus.pending))();
+  TextColumn get status => text().withDefault(
+    const Constant(VideoDownloadJobSubtitleStatus.pending),
+  )();
   TextColumn get error => text().nullable()();
   IntColumn get createdAt => integer()();
   IntColumn get updatedAt => integer()();
@@ -2218,12 +2324,12 @@ class VideoDownloadJobSubtitles extends Table {
 
   @override
   List<String> get customConstraints => <String>[
-        "CHECK (subtitle_id != '' AND provider != '')",
-        "CHECK (status IN ('pending', 'resolving', 'staged', 'placed', "
-            "'unavailable', 'skipped', 'failed'))",
-        'CHECK (season IS NULL OR season >= 0)',
-        'CHECK (episode IS NULL OR episode >= 0)',
-      ];
+    "CHECK (subtitle_id != '' AND provider != '')",
+    "CHECK (status IN ('pending', 'resolving', 'staged', 'placed', "
+        "'unavailable', 'skipped', 'failed'))",
+    'CHECK (season IS NULL OR season >= 0)',
+    'CHECK (episode IS NULL OR episode >= 0)',
+  ];
 }
 
 @DataClassName('VideoDownloadSubscriptionRow')
@@ -2253,12 +2359,16 @@ class VideoDownloadSubscriptions extends Table {
   TextColumn get backendProfileId => text().nullable()();
   TextColumn get fingerprint => text()();
   TextColumn get category => text().nullable()();
-  IntColumn get targetSourceId => integer()
-      .nullable()
-      .references(MediaSources, #id, onDelete: KeyAction.setNull)();
-  IntColumn get collectionId => integer()
-      .nullable()
-      .references(MediaCollections, #id, onDelete: KeyAction.setNull)();
+  IntColumn get targetSourceId => integer().nullable().references(
+    MediaSources,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
+  IntColumn get collectionId => integer().nullable().references(
+    MediaCollections,
+    #id,
+    onDelete: KeyAction.setNull,
+  )();
   TextColumn get organizationPolicy =>
       text().withDefault(const Constant('library'))();
   TextColumn get subtitlePolicy =>
@@ -2281,18 +2391,18 @@ class VideoDownloadSubscriptions extends Table {
 
   @override
   List<String> get customConstraints => <String>[
-        "CHECK (subscription_id != '' AND resource_provider != '' AND "
-            "media_kind != '' AND title != '' AND search_query != '' AND "
-            "backend_kind != '' AND fingerprint != '')",
-        'CHECK ((metadata_provider IS NULL) = (external_id IS NULL))',
-        "CHECK (mode IN ('oneShot', 'ongoing'))",
-        'CHECK (year IS NULL OR year >= 0)',
-        'CHECK (season IS NULL OR season >= 0)',
-        'CHECK (start_after_episode IS NULL OR start_after_episode >= 0)',
-        'CHECK (retry_count >= 0)',
-        'CHECK ((claimed_by IS NULL) = (claim_expires_at IS NULL))',
-        "CHECK (fulfilled_at IS NULL OR (mode = 'oneShot' AND enabled = 0))",
-      ];
+    "CHECK (subscription_id != '' AND resource_provider != '' AND "
+        "media_kind != '' AND title != '' AND search_query != '' AND "
+        "backend_kind != '' AND fingerprint != '')",
+    'CHECK ((metadata_provider IS NULL) = (external_id IS NULL))',
+    "CHECK (mode IN ('oneShot', 'ongoing'))",
+    'CHECK (year IS NULL OR year >= 0)',
+    'CHECK (season IS NULL OR season >= 0)',
+    'CHECK (start_after_episode IS NULL OR start_after_episode >= 0)',
+    'CHECK (retry_count >= 0)',
+    'CHECK ((claimed_by IS NULL) = (claim_expires_at IS NULL))',
+    "CHECK (fulfilled_at IS NULL OR (mode = 'oneShot' AND enabled = 0))",
+  ];
 }
 
 abstract final class VideoDownloadSubscriptionItemStatus {
@@ -2306,9 +2416,11 @@ abstract final class VideoDownloadSubscriptionItemStatus {
 @DataClassName('VideoDownloadSubscriptionItemRow')
 class VideoDownloadSubscriptionItems extends Table {
   IntColumn get id => integer().autoIncrement()();
-  TextColumn get subscriptionId =>
-      text().references(VideoDownloadSubscriptions, #subscriptionId,
-          onDelete: KeyAction.cascade)();
+  TextColumn get subscriptionId => text().references(
+    VideoDownloadSubscriptions,
+    #subscriptionId,
+    onDelete: KeyAction.cascade,
+  )();
   TextColumn get logicalItemKey => text()();
   TextColumn get resourceProvider => text()();
   TextColumn get selectedResourceId => text()();
@@ -2317,30 +2429,33 @@ class VideoDownloadSubscriptionItems extends Table {
   IntColumn get season => integer().nullable()();
   IntColumn get episode => integer().nullable()();
   IntColumn get publishedAt => integer().nullable()();
-  TextColumn get jobId => text()
-      .nullable()
-      .references(VideoDownloadJobs, #jobId, onDelete: KeyAction.setNull)();
+  TextColumn get jobId => text().nullable().references(
+    VideoDownloadJobs,
+    #jobId,
+    onDelete: KeyAction.setNull,
+  )();
   TextColumn get status => text().withDefault(
-      const Constant(VideoDownloadSubscriptionItemStatus.discovered))();
+    const Constant(VideoDownloadSubscriptionItemStatus.discovered),
+  )();
   TextColumn get error => text().nullable()();
   IntColumn get discoveredAt => integer()();
   IntColumn get updatedAt => integer()();
 
   @override
   List<Set<Column>> get uniqueKeys => <Set<Column>>[
-        <Column>{subscriptionId, logicalItemKey},
-        <Column>{subscriptionId, resourceProvider, selectedResourceId},
-      ];
+    <Column>{subscriptionId, logicalItemKey},
+    <Column>{subscriptionId, resourceProvider, selectedResourceId},
+  ];
 
   @override
   List<String> get customConstraints => <String>[
-        "CHECK (logical_item_key != '' AND resource_provider != '' AND "
-            "selected_resource_id != '' AND title != '')",
-        "CHECK (status IN ('discovered', 'queued', 'processed', 'skipped', "
-            "'failed'))",
-        'CHECK (season IS NULL OR season >= 0)',
-        'CHECK (episode IS NULL OR episode >= 0)',
-      ];
+    "CHECK (logical_item_key != '' AND resource_provider != '' AND "
+        "selected_resource_id != '' AND title != '')",
+    "CHECK (status IN ('discovered', 'queued', 'processed', 'skipped', "
+        "'failed'))",
+    'CHECK (season IS NULL OR season >= 0)',
+    'CHECK (episode IS NULL OR episode >= 0)',
+  ];
 }
 
 // ── galgames ────────────────────────────────────────────────────────

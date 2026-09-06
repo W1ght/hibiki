@@ -28,25 +28,30 @@ String _between(String src, String startMarker, String endMarker) {
 }
 
 void main() {
-  final String chrome =
-      File('lib/src/pages/implementations/reader_fushi/chrome.part.dart')
-          .readAsStringSync();
+  final String chrome = File(
+    'lib/src/pages/implementations/reader_fushi/chrome.part.dart',
+  ).readAsStringSync();
 
   String selectionMenuBody() => _between(
-      chrome,
-      'Future<void> _handleSelectionMenu(',
-      'Future<void> _clearReaderAppSelection(');
+    chrome,
+    'Future<void> _handleSelectionMenu(',
+    'Future<void> _clearReaderAppSelection(',
+  );
   String desktopMenuBody() => _between(
-      chrome,
-      'Future<void> _showReaderTextContextMenu(',
-      'Future<void> _handleSelectionMenu(');
+    chrome,
+    'Future<void> _showReaderTextContextMenu(',
+    'Future<void> _handleSelectionMenu(',
+  );
 
   group('① 手机拖选菜单补「收藏」（自绘选区，无原生选区）', () {
     test('菜单项含 favorite + 复用 action_favorite i18n key', () {
       final String body = selectionMenuBody();
       expect(body, contains("'favorite'"), reason: '缺「收藏」操作项');
-      expect(body, contains('t.action_favorite'),
-          reason: '收藏项必须复用既有 action_favorite i18n key（勿新增重复 key）');
+      expect(
+        body,
+        contains('t.action_favorite'),
+        reason: '收藏项必须复用既有 action_favorite i18n key（勿新增重复 key）',
+      );
       // 查词 / 复制两条老出口仍在（共存，不回退）。
       expect(body, contains('t.search'));
       expect(body, contains('t.copy'));
@@ -57,14 +62,22 @@ void main() {
       final String body = selectionMenuBody().replaceAll(RegExp(r'\s+'), ' ');
       expect(body, contains("case 'favorite':"));
       expect(
-          body,
-          contains(
-              '_fillLookupStateFromSelectionData(data, extractNativeImages: false)'),
-          reason: '触屏自绘选区无原生选区，须从 payload 填 currentSentence / 句级区间');
-      expect(body, contains('_toggleFavoriteSentence()'),
-          reason: '收藏必须复用桌面同一后端 _toggleFavoriteSentence');
-      expect(body, contains('_clearReaderAppSelection()'),
-          reason: '收藏完清掉 app 选区高亮');
+        body,
+        contains(
+          '_fillLookupStateFromSelectionData(data, extractNativeImages: false)',
+        ),
+        reason: '触屏自绘选区无原生选区，须从 payload 填 currentSentence / 句级区间',
+      );
+      expect(
+        body,
+        contains('_toggleFavoriteSentence()'),
+        reason: '收藏必须复用桌面同一后端 _toggleFavoriteSentence',
+      );
+      expect(
+        body,
+        contains('_clearReaderAppSelection()'),
+        reason: '收藏完清掉 app 选区高亮',
+      );
     });
   });
 
@@ -80,10 +93,16 @@ void main() {
     test('switch favorite 分支从原生选区填状态后走收藏后端', () {
       final String body = desktopMenuBody();
       expect(body, contains("case 'favorite':"));
-      expect(body, contains('_fillLookupStateFromNativeSelection()'),
-          reason: '桌面走原生选区路径填 currentSentence（与 search 同源）');
-      expect(body, contains('_toggleFavoriteSentence()'),
-          reason: '收藏必须复用桌面同一后端 _toggleFavoriteSentence');
+      expect(
+        body,
+        contains('_fillLookupStateFromNativeSelection()'),
+        reason: '桌面走原生选区路径填 currentSentence（与 search 同源）',
+      );
+      expect(
+        body,
+        contains('_toggleFavoriteSentence()'),
+        reason: '收藏必须复用桌面同一后端 _toggleFavoriteSentence',
+      );
     });
   });
 }

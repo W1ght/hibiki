@@ -45,7 +45,7 @@ abstract interface class SystemOcrMangaRunner {
 
 class SystemOcrMangaService implements SystemOcrMangaRunner {
   SystemOcrMangaService({SystemOcrPlatform? platform})
-      : _platform = platform ?? const MethodChannelSystemOcr();
+    : _platform = platform ?? const MethodChannelSystemOcr();
 
   final SystemOcrPlatform _platform;
 
@@ -74,20 +74,25 @@ class SystemOcrMangaService implements SystemOcrMangaRunner {
               isCancelled: () => cancelled || controller.isClosed,
               onProgress: (int done, int total) {
                 if (!controller.isClosed) {
-                  controller.add(MangaOcrVolumeEvent.page(
-                    pagesDone: done,
-                    pagesTotal: total,
-                  ));
+                  controller.add(
+                    MangaOcrVolumeEvent.page(
+                      pagesDone: done,
+                      pagesTotal: total,
+                    ),
+                  );
                 }
               },
             );
             if (!controller.isClosed) {
-              final int pages =
-                  enumerateMangaPages(Directory(imageDirPath)).length;
-              controller.add(MangaOcrVolumeEvent.finished(
-                pagesTotal: pages,
-                mangaJsonPath: output,
-              ));
+              final int pages = enumerateMangaPages(
+                Directory(imageDirPath),
+              ).length;
+              controller.add(
+                MangaOcrVolumeEvent.finished(
+                  pagesTotal: pages,
+                  mangaJsonPath: output,
+                ),
+              );
               await controller.close();
             }
           } on Object catch (error, stack) {
@@ -113,18 +118,21 @@ class SystemOcrMangaService implements SystemOcrMangaRunner {
     required bool Function() isCancelled,
     required void Function(int done, int total) onProgress,
   }) async {
-    final List<MangaOcrPageFile> pages =
-        enumerateMangaPages(Directory(imageDirPath));
+    final List<MangaOcrPageFile> pages = enumerateMangaPages(
+      Directory(imageDirPath),
+    );
     if (pages.isEmpty) {
       throw StateError('no images found in $imageDirPath');
     }
     final GoogleLensPageCache cache = GoogleLensPageCache(
-      Directory(p.join(
-        imageDirPath,
-        kMangaOcrOutDirName,
-        kMangaOcrPagesCacheDirName,
-        systemOcrEngineSignature(language),
-      )),
+      Directory(
+        p.join(
+          imageDirPath,
+          kMangaOcrOutDirName,
+          kMangaOcrPagesCacheDirName,
+          systemOcrEngineSignature(language),
+        ),
+      ),
     );
     await cache.writeManifest(pages);
 
@@ -219,10 +227,7 @@ class SystemOcrMangaService implements SystemOcrMangaRunner {
 /// 拆成好几列回来，展示层早就有一套「相邻列合成整句」的合并（见
 /// `manga_overlay_html.dart` 的 sentence 合并）。再写第二套聚类只会得到两套在
 /// 边界情况下不一致的实现。
-MokuroImage buildSystemOcrPage(
-  String relativeUrl,
-  SystemOcrPageResult result,
-) {
+MokuroImage buildSystemOcrPage(String relativeUrl, SystemOcrPageResult result) {
   final double width = result.imageWidth.toDouble();
   final double height = result.imageHeight.toDouble();
   final List<MokuroBlock> blocks = <MokuroBlock>[];
@@ -237,19 +242,21 @@ MokuroImage buildSystemOcrPage(
     if (rect.width <= 0 || rect.height <= 0) {
       continue;
     }
-    blocks.add(MokuroBlock(
-      rectangle: rect,
-      isVertical: line.isVertical,
-      // 复用回写路径那套面积均摊估算（带 clamp），不再写第二个 sqrt。字号只
-      // 影响透明文字层的命中区域大小，估歪一点不影响能不能查词。
-      fontSize: estimateMangaBlockFontSize(
-        width: rect.width,
-        height: rect.height,
-        charCount: line.text.length,
+    blocks.add(
+      MokuroBlock(
+        rectangle: rect,
+        isVertical: line.isVertical,
+        // 复用回写路径那套面积均摊估算（带 clamp），不再写第二个 sqrt。字号只
+        // 影响透明文字层的命中区域大小，估歪一点不影响能不能查词。
+        fontSize: estimateMangaBlockFontSize(
+          width: rect.width,
+          height: rect.height,
+          charCount: line.text.length,
+        ),
+        zIndex: index,
+        lines: <String>[line.text],
       ),
-      zIndex: index,
-      lines: <String>[line.text],
-    ));
+    );
   }
   return MokuroImage(
     url: relativeUrl,

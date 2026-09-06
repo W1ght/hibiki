@@ -37,8 +37,9 @@ void main() {
     });
 
     test('typed 写入落库串不变：addActivityEvent → DB 读回裸 book 串', () async {
-      final FushiDatabase db =
-          FushiDatabase.forTesting(NativeDatabase.memory());
+      final FushiDatabase db = FushiDatabase.forTesting(
+        NativeDatabase.memory(),
+      );
       addTearDown(db.close);
       await db.addActivityEvent(
         eventType: kActivityRead,
@@ -69,14 +70,16 @@ void main() {
       expect(StatSourceKind.tryParse('video'), StatSourceKind.video);
       expect(StatSourceKind.tryParse(null), isNull);
       expect(StatSourceKind.tryParse('epub'), isNull);
-      expect(StatSourceKind.tryParse('game'), isNull,
-          reason: '游戏不入 book/video 统计域');
+      expect(
+        StatSourceKind.tryParse('game'),
+        isNull,
+        reason: '游戏不入 book/video 统计域',
+      );
     });
   });
 
   group('ProfileMediaKind（media_type_profiles.media_type）', () {
-    test(
-        'dbValue 集合守卫：恰为 {epub, srtbook, audiobook, lyrics, video, '
+    test('dbValue 集合守卫：恰为 {epub, srtbook, audiobook, lyrics, video, '
         'manga, game, browser}', () {
       expect(
         ProfileMediaKind.values.map((ProfileMediaKind k) => k.dbValue).toSet(),
@@ -107,7 +110,9 @@ void main() {
       expect(ProfileMediaKind.tryParse('epub'), ProfileMediaKind.epub);
       expect(ProfileMediaKind.tryParse('srtbook'), ProfileMediaKind.srtbook);
       expect(
-          ProfileMediaKind.tryParse('audiobook'), ProfileMediaKind.audiobook);
+        ProfileMediaKind.tryParse('audiobook'),
+        ProfileMediaKind.audiobook,
+      );
       expect(ProfileMediaKind.tryParse('lyrics'), ProfileMediaKind.lyrics);
       expect(ProfileMediaKind.tryParse('video'), ProfileMediaKind.video);
       expect(ProfileMediaKind.tryParse('manga'), ProfileMediaKind.manga);
@@ -147,22 +152,32 @@ void main() {
       expect(SyncTombstoneKind.favoriteword.dbValue, 'favoriteword');
       expect(SyncTombstoneKind.favoritesentence.dbValue, 'favoritesentence');
       // hibiki_audio 的墓碑常量与本枚举同串（两处真相一致性钉死）。
-      expect(kFavoriteSentenceTombstoneType,
-          SyncTombstoneKind.favoritesentence.dbValue);
+      expect(
+        kFavoriteSentenceTombstoneType,
+        SyncTombstoneKind.favoritesentence.dbValue,
+      );
     });
 
     test('tryParse：七个已知值命中，null/未知/它域串返 null 不抛', () {
       expect(SyncTombstoneKind.tryParse('book'), SyncTombstoneKind.book);
       expect(
-          SyncTombstoneKind.tryParse('audiobook'), SyncTombstoneKind.audiobook);
+        SyncTombstoneKind.tryParse('audiobook'),
+        SyncTombstoneKind.audiobook,
+      );
       expect(SyncTombstoneKind.tryParse('srtbook'), SyncTombstoneKind.srtbook);
       expect(SyncTombstoneKind.tryParse('video'), SyncTombstoneKind.video);
-      expect(SyncTombstoneKind.tryParse('localaudio'),
-          SyncTombstoneKind.localaudio);
-      expect(SyncTombstoneKind.tryParse('favoriteword'),
-          SyncTombstoneKind.favoriteword);
-      expect(SyncTombstoneKind.tryParse('favoritesentence'),
-          SyncTombstoneKind.favoritesentence);
+      expect(
+        SyncTombstoneKind.tryParse('localaudio'),
+        SyncTombstoneKind.localaudio,
+      );
+      expect(
+        SyncTombstoneKind.tryParse('favoriteword'),
+        SyncTombstoneKind.favoriteword,
+      );
+      expect(
+        SyncTombstoneKind.tryParse('favoritesentence'),
+        SyncTombstoneKind.favoritesentence,
+      );
       expect(SyncTombstoneKind.tryParse(null), isNull);
       // 'epub' 是合集/书架域的串（book ≠ epub）。
       expect(SyncTombstoneKind.tryParse('epub'), isNull);
@@ -170,11 +185,15 @@ void main() {
     });
 
     test('typed 写入落库串不变：writeSyncDeletionTombstone → DB 读回裸串', () async {
-      final FushiDatabase db =
-          FushiDatabase.forTesting(NativeDatabase.memory());
+      final FushiDatabase db = FushiDatabase.forTesting(
+        NativeDatabase.memory(),
+      );
       addTearDown(db.close);
       await db.writeSyncDeletionTombstone(
-          SyncTombstoneKind.localaudio.dbValue, 'Lib', 100);
+        SyncTombstoneKind.localaudio.dbValue,
+        'Lib',
+        100,
+      );
       final rows = await db.getSyncDeletionTombstonesOfType('localaudio');
       expect(rows.single.mediaType, 'localaudio');
       expect(rows.single.itemKey, 'Lib');
@@ -189,18 +208,24 @@ void main() {
       expect(activityMediaKindOf(MediaKind.srt), ActivityMediaKind.book);
       expect(activityMediaKindOf(MediaKind.video), ActivityMediaKind.video);
       expect(activityMediaKindOf(MediaKind.game), ActivityMediaKind.game);
-      expect(MediaKind.values.map(activityMediaKindOf).toSet(),
-          ActivityMediaKind.values.toSet(),
-          reason: '每个活动种类都至少有一个书架种类来源');
+      expect(
+        MediaKind.values.map(activityMediaKindOf).toSet(),
+        ActivityMediaKind.values.toSet(),
+        reason: '每个活动种类都至少有一个书架种类来源',
+      );
     });
 
     test('shelfKindsOfActivityMedia 穷尽、有序（epub 优先 srt 回退）且与正向映射互逆', () {
-      expect(shelfKindsOfActivityMedia(ActivityMediaKind.book),
-          <MediaKind>[MediaKind.epub, MediaKind.srt]);
-      expect(shelfKindsOfActivityMedia(ActivityMediaKind.video),
-          <MediaKind>[MediaKind.video]);
-      expect(shelfKindsOfActivityMedia(ActivityMediaKind.game),
-          <MediaKind>[MediaKind.game]);
+      expect(shelfKindsOfActivityMedia(ActivityMediaKind.book), <MediaKind>[
+        MediaKind.epub,
+        MediaKind.srt,
+      ]);
+      expect(shelfKindsOfActivityMedia(ActivityMediaKind.video), <MediaKind>[
+        MediaKind.video,
+      ]);
+      expect(shelfKindsOfActivityMedia(ActivityMediaKind.game), <MediaKind>[
+        MediaKind.game,
+      ]);
       // 互逆：反向映射列出的每个书架种类，正向映射必须折回同一活动种类。
       for (final ActivityMediaKind a in ActivityMediaKind.values) {
         for (final MediaKind k in shelfKindsOfActivityMedia(a)) {
@@ -220,8 +245,11 @@ void main() {
       expect(statSourceKindOf(MediaKind.epub), StatSourceKind.book);
       expect(statSourceKindOf(MediaKind.srt), StatSourceKind.book);
       expect(statSourceKindOf(MediaKind.video), StatSourceKind.video);
-      expect(statSourceKindOf(MediaKind.game), isNull,
-          reason: '游戏不入 book/video 统计');
+      expect(
+        statSourceKindOf(MediaKind.game),
+        isNull,
+        reason: '游戏不入 book/video 统计',
+      );
     });
   });
 }

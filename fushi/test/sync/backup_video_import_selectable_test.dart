@@ -43,8 +43,9 @@ void main() {
   }
 
   Future<int> countRows(FushiDatabase db, String table) async {
-    final row =
-        await db.customSelect('SELECT COUNT(*) AS c FROM $table').getSingle();
+    final row = await db
+        .customSelect('SELECT COUNT(*) AS c FROM $table')
+        .getSingle();
     return row.data['c'] as int;
   }
 
@@ -56,20 +57,27 @@ void main() {
       await writeFile(p.join(videos, 'A.mp4'), 'VID-A');
       await writeFile(p.join(videos, 'B.mp4'), 'VID-B');
 
-      final FushiDatabase db =
-          FushiDatabase.forTesting(NativeDatabase.memory());
+      final FushiDatabase db = FushiDatabase.forTesting(
+        NativeDatabase.memory(),
+      );
       for (final String k in <String>['A', 'B']) {
-        await db.upsertVideoBook(VideoBooksCompanion.insert(
-          bookUid: 'video/$k',
-          title: 'Video $k',
-          videoPath: p.join(videos, '$k.mp4'),
-        ));
+        await db.upsertVideoBook(
+          VideoBooksCompanion.insert(
+            bookUid: 'video/$k',
+            title: 'Video $k',
+            videoPath: p.join(videos, '$k.mp4'),
+          ),
+        );
       }
-      final BackupService service =
-          BackupService(db: db, dbDirectory: dbDir, appVersion: '1.0.0');
+      final BackupService service = BackupService(
+        db: db,
+        dbDirectory: dbDir,
+        appVersion: '1.0.0',
+      );
 
-      final BackupMeta withVideos =
-          await service.createBackup(p.join(src.path, 'with.zip'));
+      final BackupMeta withVideos = await service.createBackup(
+        p.join(src.path, 'with.zip'),
+      );
       expect(withVideos.videoBookCount, 2);
 
       final BackupMeta noVideos = await service.createBackup(
@@ -84,13 +92,13 @@ void main() {
 
   group('summarizeBackupEntries video visibility', () {
     BackupMeta metaWith({int? videoBookCount}) => BackupMeta(
-          appVersion: '1.0.0',
-          schemaVersion: 1,
-          createdAt: DateTime(2026, 7, 7),
-          bookCount: 0,
-          statsCount: 0,
-          videoBookCount: videoBookCount,
-        );
+      appVersion: '1.0.0',
+      schemaVersion: 1,
+      createdAt: DateTime(2026, 7, 7),
+      bookCount: 0,
+      statsCount: 0,
+      videoBookCount: videoBookCount,
+    );
 
     test('meta.videoBookCount>0 shows videos even with NO packed files', () {
       final BackupContentSummary s = BackupService.summarizeBackupEntries(
@@ -122,52 +130,68 @@ void main() {
   });
 
   test(
-      'summarizeBackupFile peeks the DB blob so an OLD backup (video rows, no '
-      'files, no meta count) still offers the video toggle (BUG-779)',
-      () async {
-    // Build the user's exact scenario: a backup whose hibiki.db carries
-    // video_books rows, packs NO video files, and whose meta predates
-    // videoBookCount.
-    final String oldDbDir = p.join(src.path, 'olddb');
-    Directory(oldDbDir).createSync(recursive: true);
-    final FushiDatabase db = FushiDatabase(oldDbDir);
-    for (final String k in <String>['1', '2']) {
-      await db.upsertVideoBook(VideoBooksCompanion.insert(
-        bookUid: 'v/$k',
-        title: 'Show $k',
-        videoPath: '/gone/$k.mp4', // file no longer exists → nothing to pack
-      ));
-    }
-    await db.customStatement('PRAGMA wal_checkpoint(TRUNCATE)');
-    await db.close();
-    final List<int> dbBytes =
-        File(p.join(oldDbDir, 'fushi.db')).readAsBytesSync();
+    'summarizeBackupFile peeks the DB blob so an OLD backup (video rows, no '
+    'files, no meta count) still offers the video toggle (BUG-779)',
+    () async {
+      // Build the user's exact scenario: a backup whose hibiki.db carries
+      // video_books rows, packs NO video files, and whose meta predates
+      // videoBookCount.
+      final String oldDbDir = p.join(src.path, 'olddb');
+      Directory(oldDbDir).createSync(recursive: true);
+      final FushiDatabase db = FushiDatabase(oldDbDir);
+      for (final String k in <String>['1', '2']) {
+        await db.upsertVideoBook(
+          VideoBooksCompanion.insert(
+            bookUid: 'v/$k',
+            title: 'Show $k',
+            videoPath:
+                '/gone/$k.mp4', // file no longer exists → nothing to pack
+          ),
+        );
+      }
+      await db.customStatement('PRAGMA wal_checkpoint(TRUNCATE)');
+      await db.close();
+      final List<int> dbBytes = File(
+        p.join(oldDbDir, 'fushi.db'),
+      ).readAsBytesSync();
 
-    // Meta WITHOUT videoBookCount (older schema) and NO videos/ entries.
-    final List<int> metaBytes = utf8.encode(jsonEncode(<String, Object?>{
-      'appVersion': '1.0.0',
-      'schemaVersion': db.schemaVersion,
-      'createdAt': DateTime(2026, 7, 7).toIso8601String(),
-      'bookCount': 0,
-      'statsCount': 0,
-    }));
-    final Archive archive = Archive()
-      ..addFile(ArchiveFile('hibiki.db', dbBytes.length, dbBytes))
-      ..addFile(ArchiveFile('backup_meta.json', metaBytes.length, metaBytes));
-    final String zip = p.join(src.path, 'old_backup.zip');
-    File(zip).writeAsBytesSync(ZipEncoder().encode(archive)!);
+      // Meta WITHOUT videoBookCount (older schema) and NO videos/ entries.
+      final List<int> metaBytes = utf8.encode(
+        jsonEncode(<String, Object?>{
+          'appVersion': '1.0.0',
+          'schemaVersion': db.schemaVersion,
+          'createdAt': DateTime(2026, 7, 7).toIso8601String(),
+          'bookCount': 0,
+          'statsCount': 0,
+        }),
+      );
+      final Archive archive = Archive()
+        ..addFile(ArchiveFile('hibiki.db', dbBytes.length, dbBytes))
+        ..addFile(ArchiveFile('backup_meta.json', metaBytes.length, metaBytes));
+      final String zip = p.join(src.path, 'old_backup.zip');
+      File(zip).writeAsBytesSync(ZipEncoder().encode(archive)!);
 
-    final FushiDatabase dummy =
-        FushiDatabase.forTesting(NativeDatabase.memory());
-    final BackupService service =
-        BackupService(db: dummy, dbDirectory: src.path, appVersion: '1.0.0');
-    final BackupContentSummary summary = await service.summarizeBackupFile(zip);
-    await dummy.close();
+      final FushiDatabase dummy = FushiDatabase.forTesting(
+        NativeDatabase.memory(),
+      );
+      final BackupService service = BackupService(
+        db: dummy,
+        dbDirectory: src.path,
+        appVersion: '1.0.0',
+      );
+      final BackupContentSummary summary = await service.summarizeBackupFile(
+        zip,
+      );
+      await dummy.close();
 
-    expect(summary.has(BackupCategory.videos), isTrue,
-        reason: 'the DB-blob peek must reveal the 2 video rows');
-    expect(summary.countFor(BackupCategory.videos), 2);
-  });
+      expect(
+        summary.has(BackupCategory.videos),
+        isTrue,
+        reason: 'the DB-blob peek must reveal the 2 video rows',
+      );
+      expect(summary.countFor(BackupCategory.videos), 2);
+    },
+  );
 
   group('overwrite import honors the video toggle', () {
     Future<String> exportWithTwoVideos() async {
@@ -176,17 +200,23 @@ void main() {
       Directory(dbDir).createSync(recursive: true);
       await writeFile(p.join(videos, 'A.mp4'), 'VID-A');
       await writeFile(p.join(videos, 'B.mp4'), 'VID-B');
-      final FushiDatabase db =
-          FushiDatabase.forTesting(NativeDatabase.memory());
+      final FushiDatabase db = FushiDatabase.forTesting(
+        NativeDatabase.memory(),
+      );
       for (final String k in <String>['A', 'B']) {
-        await db.upsertVideoBook(VideoBooksCompanion.insert(
-          bookUid: 'video/$k',
-          title: 'Video $k',
-          videoPath: p.join(videos, '$k.mp4'),
-        ));
+        await db.upsertVideoBook(
+          VideoBooksCompanion.insert(
+            bookUid: 'video/$k',
+            title: 'Video $k',
+            videoPath: p.join(videos, '$k.mp4'),
+          ),
+        );
       }
-      final BackupService service =
-          BackupService(db: db, dbDirectory: dbDir, appVersion: '1.0.0');
+      final BackupService service = BackupService(
+        db: db,
+        dbDirectory: dbDir,
+        appVersion: '1.0.0',
+      );
       final String zip = p.join(src.path, 'videos.zip');
       await service.createBackup(zip);
       await db.close();

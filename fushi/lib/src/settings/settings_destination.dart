@@ -82,8 +82,11 @@ enum VideoGroup { playback, audio, subtitle, shaders, mpv, danmaku, controls }
 /// 描述某个 [SettingsItem] 在视频快捷面板里的放置位置。
 /// 为 null 表示该项不出现在视频面板（仅全局可见）。
 class VideoPlacement {
-  const VideoPlacement(
-      {required this.group, required this.order, this.section});
+  const VideoPlacement({
+    required this.group,
+    required this.order,
+    this.section,
+  });
 
   final VideoGroup group;
 
@@ -105,18 +108,13 @@ typedef SettingsVisibility = bool Function(SettingsContext context);
 typedef SettingsSubtitleBuilder = String? Function(SettingsContext context);
 typedef SettingsItemAction = FutureOr<void> Function(SettingsContext context);
 typedef SettingsItemBuilder = Widget Function(SettingsContext context);
-typedef SettingsValueGetter<T extends Object> = T Function(
-  SettingsContext context,
-);
-typedef SettingsValueChanged<T extends Object> = FutureOr<void> Function(
-  SettingsContext context,
-  T value,
-);
+typedef SettingsValueGetter<T extends Object> =
+    T Function(SettingsContext context);
+typedef SettingsValueChanged<T extends Object> =
+    FutureOr<void> Function(SettingsContext context, T value);
 typedef SettingsSwitchGetter = bool Function(SettingsContext context);
-typedef SettingsSwitchChanged = FutureOr<void> Function(
-  SettingsContext context,
-  bool value,
-);
+typedef SettingsSwitchChanged =
+    FutureOr<void> Function(SettingsContext context, bool value);
 typedef SettingsDoubleFormatter = String Function(double value);
 
 class SettingsDestination {
@@ -340,7 +338,6 @@ class SettingsSwitchItem extends SettingsItem {
 
   final SettingsSwitchGetter value;
   final SettingsSwitchChanged onChanged;
-
 }
 
 class SettingsSegmentOption<T extends Object> {
@@ -409,9 +406,9 @@ class SettingsSliderItem extends SettingsItem {
     this.titleReadout = false,
     this.commitOnRelease = false,
   }) : assert(
-          !commitOnRelease || onChangeEnd == null,
-          'commitOnRelease 滑条松手统一走 onChanged 提交，不得再声明 onChangeEnd',
-        );
+         !commitOnRelease || onChangeEnd == null,
+         'commitOnRelease 滑条松手统一走 onChanged 提交，不得再声明 onChangeEnd',
+       );
 
   final double Function(SettingsContext context) value;
   final double min;

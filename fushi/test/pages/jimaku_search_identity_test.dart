@@ -28,21 +28,20 @@ void main() {
     int status = 200,
     List<Map<String, Object?>> media = const <Map<String, Object?>>[],
     List<String>? recordInto,
-  }) =>
-      http_testing.MockClient((http.Request request) async {
-        recordInto?.add(request.url.toString());
-        return http.Response(
-          jsonEncode(<String, Object?>{
-            'data': <String, Object?>{
-              'Page': <String, Object?>{'media': media},
-            },
-          }),
-          status,
-          headers: <String, String>{
-            'content-type': 'application/json; charset=utf-8',
-          },
-        );
-      });
+  }) => http_testing.MockClient((http.Request request) async {
+    recordInto?.add(request.url.toString());
+    return http.Response(
+      jsonEncode(<String, Object?>{
+        'data': <String, Object?>{
+          'Page': <String, Object?>{'media': media},
+        },
+      }),
+      status,
+      headers: <String, String>{
+        'content-type': 'application/json; charset=utf-8',
+      },
+    );
+  });
 
   Widget host({
     required VideoSubtitleRegistry registry,
@@ -52,24 +51,23 @@ void main() {
     String initialQuery = 'Re：从零开始的异世界生活 第四季 丧失篇',
     String? videoPath,
     List<AniListMedia>? series,
-  }) =>
-      TranslationProvider(
-        child: MaterialApp(
-          home: Scaffold(
-            body: JimakuSubtitleDialog(
-              initialQuery: initialQuery,
-              initialApiKey: 'jimaku-key',
-              onApiKeyChanged: (String _) async {},
-              saveDirectory: saveDirectory,
-              subtitleRegistry: () => registry,
-              seed: seed,
-              videoPath: videoPath,
-              httpClientFactory: () async => anilist,
-              debugInitialSeriesMatches: series,
-            ),
-          ),
+  }) => TranslationProvider(
+    child: MaterialApp(
+      home: Scaffold(
+        body: JimakuSubtitleDialog(
+          initialQuery: initialQuery,
+          initialApiKey: 'jimaku-key',
+          onApiKeyChanged: (String _) async {},
+          saveDirectory: saveDirectory,
+          subtitleRegistry: () => registry,
+          seed: seed,
+          videoPath: videoPath,
+          httpClientFactory: () async => anilist,
+          debugInitialSeriesMatches: series,
         ),
-      );
+      ),
+    ),
+  );
 
   Future<void> sized(WidgetTester tester, Widget widget) async {
     tester.view.physicalSize = const Size(1400, 1000);
@@ -263,7 +261,8 @@ void main() {
       expect(
         find.text('Re:Zero 2nd Season Part 2'),
         findsNothing,
-        reason: '「没问上」才保留旧列表；「问了、真没有」必须如实替换，否则用户对着一批'
+        reason:
+            '「没问上」才保留旧列表；「问了、真没有」必须如实替换，否则用户对着一批'
             '与当前搜索词无关的系列以为还能选',
       );
     });

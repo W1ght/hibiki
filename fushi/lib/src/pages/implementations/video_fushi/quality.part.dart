@@ -109,10 +109,7 @@ extension _VideoQuality on _VideoFushiPageState {
         !_youtubeVariantsLoading) {
       unawaited(_ensureYoutubeVariantsLoaded());
     }
-    _showVideoSidePanel(
-      _VideoSidePanelKind.quality,
-      sourceSlot: sourceSlot,
-    );
+    _showVideoSidePanel(_VideoSidePanelKind.quality, sourceSlot: sourceSlot);
   }
 
   /// 懒解析当前 YouTube 视频的各档 video-only 流（用户点开画质菜单时调）。填
@@ -129,8 +126,10 @@ extension _VideoQuality on _VideoFushiPageState {
     final int seq = _episodeLoadSeq;
     _rebuild(() => _youtubeVariantsLoading = true);
     try {
-      final YoutubeVariantSet set = await resolveYoutubeVideoVariants(watch,
-          playbackTargetHeight: appModel.youtubeQualityTargetHeightOrNull);
+      final YoutubeVariantSet set = await resolveYoutubeVideoVariants(
+        watch,
+        playbackTargetHeight: appModel.youtubeQualityTargetHeightOrNull,
+      );
       // 换集：丢弃迟到结果（新集已复位状态、bump seq），绝不覆盖新集画质态。
       if (!mounted || seq != _episodeLoadSeq) return;
       _rebuild(() {
@@ -188,8 +187,9 @@ extension _VideoQuality on _VideoFushiPageState {
       detectHls: false,
     );
     if (!mounted) return;
-    final String label =
-        index < 0 ? t.video_quality_auto : _youtubeVariants[index].label;
+    final String label = index < 0
+        ? t.video_quality_auto
+        : _youtubeVariants[index].label;
     _showOsd(t.video_quality_switched(label: label), icon: Icons.high_quality);
   }
 
@@ -226,8 +226,9 @@ extension _VideoQuality on _VideoFushiPageState {
       detectHls: false,
     );
     if (!mounted) return;
-    final String label =
-        index < 0 ? t.video_quality_auto : _hlsVariants[index].qualityLabel;
+    final String label = index < 0
+        ? t.video_quality_auto
+        : _hlsVariants[index].qualityLabel;
     _showOsd(t.video_quality_switched(label: label), icon: Icons.high_quality);
   }
 

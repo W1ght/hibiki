@@ -58,7 +58,9 @@ class AudiobookRepository {
     required List<AudioCue> cues,
   }) async {
     await _db.replaceCuesForBook(
-        bookKey, cues.map(AudioCue.toCompanion).toList());
+      bookKey,
+      cues.map(AudioCue.toCompanion).toList(),
+    );
   }
 
   // ── 窄写入：一次只改一件事 ───────────────────────────────────────
@@ -76,7 +78,9 @@ class AudiobookRepository {
     // 删除传播：重新导入同 bookKey 的有声书 → 清其 sync 删除墓碑，防「删了又加、
     // 墓碑还在」误判（范式仿书/视频的插入清墓碑）。
     await _db.clearSyncDeletionTombstone(
-        SyncTombstoneKind.audiobook.dbValue, bookKey);
+      SyncTombstoneKind.audiobook.dbValue,
+      bookKey,
+    );
   }
 
   /// 换音频（唯一写音频两列的入口）。[audioPaths] 为落地后的绝对路径列表，
@@ -100,12 +104,10 @@ class AudiobookRepository {
   }) async {
     await ensureAudiobook(bookKey);
     final AudiobookRow? before = await _db.getAudiobookByBookKey(bookKey);
-    final bool audioChanged = before == null ||
+    final bool audioChanged =
+        before == null ||
         before.audioRoot != null ||
-        !AudiobookStorage.sameAudioPathList(
-          _audioPathsOf(before),
-          audioPaths,
-        );
+        !AudiobookStorage.sameAudioPathList(_audioPathsOf(before), audioPaths);
 
     await _db.patchAudiobook(
       bookKey,
@@ -117,8 +119,10 @@ class AudiobookRepository {
     if (audioChanged) {
       await updatePositionMs(bookKey: bookKey, positionMs: 0);
     }
-    debugPrint('[hibiki-audiobook] replaceAudio bookKey=$bookKey '
-        'files=${audioPaths.length} audioChanged=$audioChanged');
+    debugPrint(
+      '[hibiki-audiobook] replaceAudio bookKey=$bookKey '
+      'files=${audioPaths.length} audioChanged=$audioChanged',
+    );
   }
 
   /// 换对齐字幕（唯一写 alignment 两列的入口）。
@@ -181,16 +185,18 @@ class AudiobookRepository {
     bool propagateDeletion = false,
     bool deleteLocalFiles = false,
   }) async {
-    final Audiobook? before =
-        deleteLocalFiles ? await findByBookKey(bookKey) : null;
+    final Audiobook? before = deleteLocalFiles
+        ? await findByBookKey(bookKey)
+        : null;
     // deleteAudiobookByBookKey 内部已先删 audioCues 再删 audiobooks。
     await _db.deleteAudiobookByBookKey(bookKey);
     if (propagateDeletion) {
       try {
         await _db.writeSyncDeletionTombstone(
-            SyncTombstoneKind.audiobook.dbValue,
-            bookKey,
-            DateTime.now().millisecondsSinceEpoch);
+          SyncTombstoneKind.audiobook.dbValue,
+          bookKey,
+          DateTime.now().millisecondsSinceEpoch,
+        );
       } catch (_) {
         // best-effort：记账失败不影响有声书已删。
       }
@@ -226,8 +232,10 @@ class AudiobookRepository {
     required int positionMs,
   }) async {
     await _db.setPrefTyped('$_kPositionMsKeyPrefix$bookKey', positionMs);
-    await _db.setPrefTyped('$_kPositionAtMsKeyPrefix$bookKey',
-        DateTime.now().millisecondsSinceEpoch);
+    await _db.setPrefTyped(
+      '$_kPositionAtMsKeyPrefix$bookKey',
+      DateTime.now().millisecondsSinceEpoch,
+    );
   }
 
   // ── follow audio (preferences) ─────────────────────────────────
@@ -252,8 +260,7 @@ class AudiobookRepository {
   Future<void> updateFollowAudio({
     required String bookKey,
     required bool value,
-  }) =>
-      _db.setPrefTyped('$_kFollowAudioKeyPrefix$bookKey', value);
+  }) => _db.setPrefTyped('$_kFollowAudioKeyPrefix$bookKey', value);
 
   Future<int> readDelayMs(String bookKey) async {
     return _db.getPrefTyped('$_kDelayMsKeyPrefix$bookKey', 0);
@@ -262,13 +269,12 @@ class AudiobookRepository {
   /// 写调轴（毫秒）并同时盖更新时间戳（互联 LWW 用，与 [updatePositionMs] 同
   /// 纪律：值与时间戳是同一调轴的两个 pref，必须一起写，否则 LWW 无依据——本机
   /// 调整无戳恒 0，会永远输给对端旧戳、再也传不出去）。
-  Future<void> updateDelayMs({
-    required String bookKey,
-    required int ms,
-  }) async {
+  Future<void> updateDelayMs({required String bookKey, required int ms}) async {
     await _db.setPrefTyped('$_kDelayMsKeyPrefix$bookKey', ms);
     await _db.setPrefTyped(
-        '$_kDelayAtMsKeyPrefix$bookKey', DateTime.now().millisecondsSinceEpoch);
+      '$_kDelayAtMsKeyPrefix$bookKey',
+      DateTime.now().millisecondsSinceEpoch,
+    );
   }
 
   Future<double> readSpeed(String bookKey) async {
@@ -277,10 +283,7 @@ class AudiobookRepository {
     return double.tryParse(raw) ?? 1.0;
   }
 
-  Future<void> updateSpeed({
-    required String bookKey,
-    required double speed,
-  }) =>
+  Future<void> updateSpeed({required String bookKey, required double speed}) =>
       _db.setPref('$_kSpeedKeyPrefix$bookKey', speed.toString());
 
   Future<double> readVolume(String bookKey) async {
@@ -292,8 +295,7 @@ class AudiobookRepository {
   Future<void> updateVolume({
     required String bookKey,
     required double volume,
-  }) =>
-      _db.setPref('$_kVolumeKeyPrefix$bookKey', volume.toString());
+  }) => _db.setPref('$_kVolumeKeyPrefix$bookKey', volume.toString());
 
   // ── image pause ─────────────────────────────────────────────────
 
@@ -304,8 +306,7 @@ class AudiobookRepository {
   Future<void> updateImagePauseSec({
     required String bookKey,
     required int sec,
-  }) =>
-      _db.setPrefTyped('$_kImagePauseSecKeyPrefix$bookKey', sec);
+  }) => _db.setPrefTyped('$_kImagePauseSecKeyPrefix$bookKey', sec);
 
   // ── health overlay ──────────────────────────────────────────────
 

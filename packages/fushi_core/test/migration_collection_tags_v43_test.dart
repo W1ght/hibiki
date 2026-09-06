@@ -47,43 +47,61 @@ CREATE TABLE media_collections (
 }
 
 void main() {
-  test('v42 -> v43 creates collection_tag_mappings with zero loss of old rows',
-      () async {
-    final FushiDatabase db = _openMigratedFromV42();
-    addTearDown(db.close);
+  test(
+    'v42 -> v43 creates collection_tag_mappings with zero loss of old rows',
+    () async {
+      final FushiDatabase db = _openMigratedFromV42();
+      addTearDown(db.close);
 
-    // Opening runs onUpgrade(42 -> current). Compare to the live schemaVersion
-    // so this never goes stale on a future bump.
-    final QueryRow ver =
-        await db.customSelect('PRAGMA user_version').getSingle();
-    expect(ver.read<int>('user_version'), db.schemaVersion,
-        reason: 'migration must land on the current schema version');
-    // collection_tag_mappings 自 v43（合集打标签 阶段1）引入；断言下界而非瞬时值，
-    // 使后续 schema bump 不会把这个迁移守护测试拖 stale。
-    expect(db.schemaVersion, greaterThanOrEqualTo(43),
-        reason: 'collection_tag_mappings 自 v43 引入，schema 版本不应回退到其之前');
+      // Opening runs onUpgrade(42 -> current). Compare to the live schemaVersion
+      // so this never goes stale on a future bump.
+      final QueryRow ver = await db
+          .customSelect('PRAGMA user_version')
+          .getSingle();
+      expect(
+        ver.read<int>('user_version'),
+        db.schemaVersion,
+        reason: 'migration must land on the current schema version',
+      );
+      // collection_tag_mappings 自 v43（合集打标签 阶段1）引入；断言下界而非瞬时值，
+      // 使后续 schema bump 不会把这个迁移守护测试拖 stale。
+      expect(
+        db.schemaVersion,
+        greaterThanOrEqualTo(43),
+        reason: 'collection_tag_mappings 自 v43 引入，schema 版本不应回退到其之前',
+      );
 
-    // Old media_collections row survived the upgrade untouched (Never break
-    // userspace).
-    final List<MediaCollectionRow> cols = await db.getAllMediaCollections();
-    expect(cols.map((MediaCollectionRow c) => c.name), contains('Existing'),
-        reason: '旧合集行必须在无损迁移后原样存活');
+      // Old media_collections row survived the upgrade untouched (Never break
+      // userspace).
+      final List<MediaCollectionRow> cols = await db.getAllMediaCollections();
+      expect(
+        cols.map((MediaCollectionRow c) => c.name),
+        contains('Existing'),
+        reason: '旧合集行必须在无损迁移后原样存活',
+      );
 
-    // The new table now exists and is usable (empty), proving the from<43
-    // createTable(collectionTagMappings) ran without throwing.
-    expect(await db.getCollectionIdsForAllTags(<int>{1}), <int>{},
-        reason: '空表 = 无合集标签 = 行为与旧版一致（sync 零命中）');
-  });
+      // The new table now exists and is usable (empty), proving the from<43
+      // createTable(collectionTagMappings) ran without throwing.
+      expect(
+        await db.getCollectionIdsForAllTags(<int>{1}),
+        <int>{},
+        reason: '空表 = 无合集标签 = 行为与旧版一致（sync 零命中）',
+      );
+    },
+  );
 
-  test('fresh DB has collection_tag_mappings from createAll (no onUpgrade)',
-      () async {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
-    addTearDown(db.close);
+  test(
+    'fresh DB has collection_tag_mappings from createAll (no onUpgrade)',
+    () async {
+      final FushiDatabase db = FushiDatabase.forTesting(
+        NativeDatabase.memory(),
+      );
+      addTearDown(db.close);
 
-    // onCreate's createAll must include the new table; querying it proves it
-    // exists without any onUpgrade running.
-    expect(db.schemaVersion, greaterThanOrEqualTo(43));
-    expect(await db.getCollectionIdsForAllTags(<int>{1}), <int>{});
-  });
+      // onCreate's createAll must include the new table; querying it proves it
+      // exists without any onUpgrade running.
+      expect(db.schemaVersion, greaterThanOrEqualTo(43));
+      expect(await db.getCollectionIdsForAllTags(<int>{1}), <int>{});
+    },
+  );
 }

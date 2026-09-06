@@ -19,8 +19,9 @@ CREATE TABLE preferences (
   value TEXT NOT NULL
 )
 ''');
-  db.execute(malformedProfileSettings
-      ? '''
+  db.execute(
+    malformedProfileSettings
+        ? '''
 CREATE TABLE profile_settings (
   id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
   profile_id INTEGER NOT NULL,
@@ -28,7 +29,7 @@ CREATE TABLE profile_settings (
   value TEXT NOT NULL
 )
 '''
-      : '''
+        : '''
 CREATE TABLE profile_settings (
   id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
   profile_id INTEGER NOT NULL,
@@ -37,7 +38,8 @@ CREATE TABLE profile_settings (
   value TEXT NOT NULL,
   UNIQUE (profile_id, category, key)
 )
-''');
+''',
+  );
   db.execute('''
 CREATE TABLE galgames (
   id TEXT NOT NULL PRIMARY KEY,
@@ -89,12 +91,12 @@ CREATE TABLE unrelated_table (
 }
 
 Map<String, String> _tableSql(sqlite3.Database db) => <String, String>{
-      for (final row in db.select(
-        "SELECT name, sql FROM sqlite_master WHERE type = 'table' "
-        "AND name NOT LIKE 'sqlite_%' ORDER BY name",
-      ))
-        row['name'] as String: row['sql'] as String,
-    };
+  for (final row in db.select(
+    "SELECT name, sql FROM sqlite_master WHERE type = 'table' "
+    "AND name NOT LIKE 'sqlite_%' ORDER BY name",
+  ))
+    row['name'] as String: row['sql'] as String,
+};
 
 Future<Map<String, String>> _tableSqlFromDrift(FushiDatabase db) async {
   final List<QueryRow> rows = await db
@@ -110,8 +112,7 @@ Future<Map<String, String>> _tableSqlFromDrift(FushiDatabase db) async {
 }
 
 void main() {
-  test(
-      'v63 deletes only the legacy live/pref Profile rows and leaves schema, '
+  test('v63 deletes only the legacy live/pref Profile rows and leaves schema, '
       'per-game modes, and unrelated data untouched', () async {
     late Map<String, String> schemaBefore;
     final FushiDatabase db = FushiDatabase.forTesting(
@@ -124,19 +125,19 @@ void main() {
     );
     addTearDown(db.close);
 
-    final QueryRow version =
-        await db.customSelect('PRAGMA user_version').getSingle();
+    final QueryRow version = await db
+        .customSelect('PRAGMA user_version')
+        .getSingle();
     expect(version.read<int>('user_version'), 96);
     expect(db.schemaVersion, 96);
 
     final List<QueryRow> preferences = await db
-        .customSelect(
-          'SELECT key, value FROM preferences ORDER BY key',
-        )
+        .customSelect('SELECT key, value FROM preferences ORDER BY key')
         .get();
     expect(
-      preferences.map((QueryRow row) =>
-          (row.read<String>('key'), row.read<String>('value'))),
+      preferences.map(
+        (QueryRow row) => (row.read<String>('key'), row.read<String>('value')),
+      ),
       <(String, String)>[
         // seed 里的 `download_custom_proxy` 走完阶梯后被 v90 删除：下载域独立
         // 代理已并入全局项，没有 `download_network_proxy_mode = custom` 行的
@@ -153,11 +154,13 @@ void main() {
         )
         .get();
     expect(
-      profileRows.map((QueryRow row) => (
-            row.read<String>('category'),
-            row.read<String>('key'),
-            row.read<String>('value'),
-          )),
+      profileRows.map(
+        (QueryRow row) => (
+          row.read<String>('category'),
+          row.read<String>('key'),
+          row.read<String>('value'),
+        ),
+      ),
       <(String, String, String)>[
         ('legacy_non_pref', _obsoleteKey, 'must-survive'),
         ('pref', 'font_size', 'i:20'),
@@ -167,15 +170,13 @@ void main() {
     );
 
     final List<QueryRow> gameRows = await db
-        .customSelect(
-          'SELECT id, upscaling_mode FROM galgames ORDER BY id',
-        )
+        .customSelect('SELECT id, upscaling_mode FROM galgames ORDER BY id')
         .get();
     expect(
-      gameRows.map((QueryRow row) => (
-            row.read<String>('id'),
-            row.read<String>('upscaling_mode'),
-          )),
+      gameRows.map(
+        (QueryRow row) =>
+            (row.read<String>('id'), row.read<String>('upscaling_mode')),
+      ),
       <(String, String)>[
         ('auto-game', 'auto'),
         ('installed-game', 'installed_only'),
@@ -204,22 +205,23 @@ void main() {
         // 摘掉之后必须与 v62 形状逐字节相同」，这样既容下这一次加列，又仍然钉死
         // 「v63 不得 ALTER/DROP/rebuild、不得偷改任何其它列」。
         final String after = schemaAfter[entry.key] ?? '';
-        expect(after, contains('japanese_locale_mode'),
-            reason: 'v75 必须给 galgames 加出该列');
+        expect(
+          after,
+          contains('japanese_locale_mode'),
+          reason: 'v75 必须给 galgames 加出该列',
+        );
         // v87（内容语言字体链）同样在这条阶梯上合法 ADD COLUMN language。
         expect(after, contains('language'), reason: 'v87 必须给 galgames 加出该列');
         final String stripped = after
-            .replaceAll(
-              RegExp(r',\s*"?japanese_locale_mode"?[^,)]*'),
-              '',
-            )
-            .replaceAll(
-              RegExp(r',\s*"language"[^,)]*'),
-              '',
-            );
-        expect(stripped, entry.value,
-            reason: '除 v75 / v87 那两列外，galgames 的形状必须逐字节不变'
-                '（v63 只能删行，不得 ALTER/DROP/rebuild）');
+            .replaceAll(RegExp(r',\s*"?japanese_locale_mode"?[^,)]*'), '')
+            .replaceAll(RegExp(r',\s*"language"[^,)]*'), '');
+        expect(
+          stripped,
+          entry.value,
+          reason:
+              '除 v75 / v87 那两列外，galgames 的形状必须逐字节不变'
+              '（v63 只能删行，不得 ALTER/DROP/rebuild）',
+        );
         continue;
       }
       if (entry.key == 'preferences') {
@@ -228,19 +230,29 @@ void main() {
         // 那一列的片段后必须与 v62 形状逐字节相同，既容下这一次加列，又仍然钉死
         // 「v63 不得 ALTER/DROP/rebuild、不得偷改任何其它列」。
         final String after = schemaAfter[entry.key] ?? '';
-        expect(after, contains('updated_at'),
-            reason: 'v84 必须给 preferences 加出该列');
+        expect(
+          after,
+          contains('updated_at'),
+          reason: 'v84 必须给 preferences 加出该列',
+        );
         final String stripped = after.replaceAll(
           RegExp(r',\s*"?updated_at"?[^,)]*'),
           '',
         );
-        expect(stripped, entry.value,
-            reason: '除 v84 那一列外，preferences 的形状必须逐字节不变'
-                '（v63 只能删行，不得 ALTER/DROP/rebuild）');
+        expect(
+          stripped,
+          entry.value,
+          reason:
+              '除 v84 那一列外，preferences 的形状必须逐字节不变'
+              '（v63 只能删行，不得 ALTER/DROP/rebuild）',
+        );
         continue;
       }
-      expect(schemaAfter[entry.key], entry.value,
-          reason: 'v63 只能删行，不得 ALTER/DROP/rebuild 既有表 ${entry.key}');
+      expect(
+        schemaAfter[entry.key],
+        entry.value,
+        reason: 'v63 只能删行，不得 ALTER/DROP/rebuild 既有表 ${entry.key}',
+      );
     }
     expect(
       schemaAfter.keys.toSet().difference(schemaBefore.keys.toSet()),
@@ -281,7 +293,8 @@ void main() {
         'web_mine_queue',
         'video_file_specs',
       },
-      reason: '除 v64 的 collection_scrape_meta、v65 的 Mihon 五表、v66 的 '
+      reason:
+          '除 v64 的 collection_scrape_meta、v65 的 Mihon 五表、v66 的 '
           'collection_relations、v68 的 media_images、v77 视频来源刮削表、'
           'v78 下载流水线表、v79 的 tag_assignments（五张标签映射表合一）、'
           'v80 的 media_open_history（取代 media_items）、v89 的 '
@@ -305,16 +318,17 @@ void main() {
 
     expect(await db.getPref(_obsoleteKey), isNull);
     expect(await db.getPref('theme'), 's:dark');
-    final QueryRow version =
-        await db.customSelect('PRAGMA user_version').getSingle();
+    final QueryRow version = await db
+        .customSelect('PRAGMA user_version')
+        .getSingle();
     expect(version.read<int>('user_version'), 96);
   });
 
-  test(
-      'backup source opened through atFile upgrades once and cannot resurrect '
+  test('backup source opened through atFile upgrades once and cannot resurrect '
       'the obsolete rows on reopen', () async {
-    final Directory tempDir =
-        Directory.systemTemp.createTempSync('hibiki_v63_backup_upgrade');
+    final Directory tempDir = Directory.systemTemp.createTempSync(
+      'hibiki_v63_backup_upgrade',
+    );
     final String dbPath =
         '${tempDir.path}${Platform.pathSeparator}backup-source.db';
     addTearDown(() {
@@ -335,8 +349,10 @@ void main() {
     expect(await migrated.getPref('theme'), 's:dark');
     await migrated.close();
 
-    final sqlite3.Database probe =
-        sqlite3.sqlite3.open(dbPath, mode: sqlite3.OpenMode.readOnly);
+    final sqlite3.Database probe = sqlite3.sqlite3.open(
+      dbPath,
+      mode: sqlite3.OpenMode.readOnly,
+    );
     try {
       expect(probe.select('PRAGMA user_version').first.values.first, 96);
       expect(
@@ -360,57 +376,70 @@ void main() {
     }
 
     migrated = FushiDatabase.atFile(dbPath, isMainProcess: false);
-    expect(await migrated.getPref(_obsoleteKey), isNull,
-        reason: '第二次打开 user_version=65，不得产生复活或重复迁移副作用');
+    expect(
+      await migrated.getPref(_obsoleteKey),
+      isNull,
+      reason: '第二次打开 user_version=65，不得产生复活或重复迁移副作用',
+    );
     await migrated.close();
   });
 
-  test('a failure in the second delete rolls the first delete back as a batch',
-      () async {
-    final Directory tempDir =
-        Directory.systemTemp.createTempSync('hibiki_v63_rollback');
-    final String dbPath = '${tempDir.path}${Platform.pathSeparator}rollback.db';
-    addTearDown(() {
-      if (tempDir.existsSync()) {
-        tempDir.deleteSync(recursive: true);
-      }
-    });
-
-    final sqlite3.Database raw = sqlite3.sqlite3.open(dbPath);
-    try {
-      _seedV62(raw, malformedProfileSettings: true);
-    } finally {
-      raw.dispose();
-    }
-
-    final FushiDatabase broken =
-        FushiDatabase.atFile(dbPath, isMainProcess: false);
-    await expectLater(
-      broken.getPref('theme'),
-      throwsA(anything),
-      reason: '缺 category 列必须让第二条 DELETE 失败，不能吞异常假装升级成功',
-    );
-    try {
-      await broken.close();
-    } catch (_) {
-      // The lazy connection failed during migration; close may repeat it.
-    }
-
-    final sqlite3.Database probe =
-        sqlite3.sqlite3.open(dbPath, mode: sqlite3.OpenMode.readOnly);
-    try {
-      expect(probe.select('PRAGMA user_version').first.values.first, 62,
-          reason: '失败升级不得推进 user_version');
-      expect(
-        probe.select(
-          'SELECT value FROM preferences WHERE key = ?',
-          <Object?>[_obsoleteKey],
-        ).single['value'],
-        's:auto',
-        reason: '第二条失败后第一条 DELETE 必须回滚，整批同成同败',
+  test(
+    'a failure in the second delete rolls the first delete back as a batch',
+    () async {
+      final Directory tempDir = Directory.systemTemp.createTempSync(
+        'hibiki_v63_rollback',
       );
-    } finally {
-      probe.dispose();
-    }
-  });
+      final String dbPath =
+          '${tempDir.path}${Platform.pathSeparator}rollback.db';
+      addTearDown(() {
+        if (tempDir.existsSync()) {
+          tempDir.deleteSync(recursive: true);
+        }
+      });
+
+      final sqlite3.Database raw = sqlite3.sqlite3.open(dbPath);
+      try {
+        _seedV62(raw, malformedProfileSettings: true);
+      } finally {
+        raw.dispose();
+      }
+
+      final FushiDatabase broken = FushiDatabase.atFile(
+        dbPath,
+        isMainProcess: false,
+      );
+      await expectLater(
+        broken.getPref('theme'),
+        throwsA(anything),
+        reason: '缺 category 列必须让第二条 DELETE 失败，不能吞异常假装升级成功',
+      );
+      try {
+        await broken.close();
+      } catch (_) {
+        // The lazy connection failed during migration; close may repeat it.
+      }
+
+      final sqlite3.Database probe = sqlite3.sqlite3.open(
+        dbPath,
+        mode: sqlite3.OpenMode.readOnly,
+      );
+      try {
+        expect(
+          probe.select('PRAGMA user_version').first.values.first,
+          62,
+          reason: '失败升级不得推进 user_version',
+        );
+        expect(
+          probe.select('SELECT value FROM preferences WHERE key = ?', <Object?>[
+            _obsoleteKey,
+          ]).single['value'],
+          's:auto',
+          reason: '第二条失败后第一条 DELETE 必须回滚，整批同成同败',
+        );
+      } finally {
+        probe.dispose();
+      }
+    },
+  );
 }

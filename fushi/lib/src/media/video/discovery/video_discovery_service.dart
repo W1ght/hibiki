@@ -23,18 +23,17 @@ class VideoDiscoveryService {
     Iterable<VideoMetadataProvider> metadataProviders =
         const <VideoMetadataProvider>[],
     bool closesProviders = false,
-  })  : _providers = List<VideoDiscoveryProvider>.unmodifiable(
-          providers.toList()
-            ..sort(
-              (VideoDiscoveryProvider a, VideoDiscoveryProvider b) =>
-                  a.priority.compareTo(b.priority),
-            ),
-        ),
-        _metadataProviders = <VideoMetadataProviderKind, VideoMetadataProvider>{
-          for (final VideoMetadataProvider provider in metadataProviders)
-            provider.providerKind: provider,
-        },
-        _closesProviders = closesProviders;
+  }) : _providers = List<VideoDiscoveryProvider>.unmodifiable(
+         providers.toList()..sort(
+           (VideoDiscoveryProvider a, VideoDiscoveryProvider b) =>
+               a.priority.compareTo(b.priority),
+         ),
+       ),
+       _metadataProviders = <VideoMetadataProviderKind, VideoMetadataProvider>{
+         for (final VideoMetadataProvider provider in metadataProviders)
+           provider.providerKind: provider,
+       },
+       _closesProviders = closesProviders;
 
   factory VideoDiscoveryService.production(
     VideoSourceScrapeGlobalConfig config,
@@ -59,7 +58,7 @@ class VideoDiscoveryService {
 
   final List<VideoDiscoveryProvider> _providers;
   final Map<VideoMetadataProviderKind, VideoMetadataProvider>
-      _metadataProviders;
+  _metadataProviders;
   final bool _closesProviders;
   bool _closed = false;
 
@@ -107,9 +106,9 @@ class VideoDiscoveryService {
 
     final List<_ProviderResponse> responses =
         await Future.wait(<Future<_ProviderResponse>>[
-      for (final VideoDiscoveryProvider provider in selected)
-        _invokeWindow(provider, request),
-    ]);
+          for (final VideoDiscoveryProvider provider in selected)
+            _invokeWindow(provider, request),
+        ]);
     final List<ExternalProviderFailure> failures = <ExternalProviderFailure>[];
     int successfulProviders = 0;
     bool hasMore = false;
@@ -121,9 +120,9 @@ class VideoDiscoveryService {
 
     final List<VideoDiscoveryItem> interleaved =
         _roundRobin(<List<VideoDiscoveryItem>>[
-      for (final _ProviderResponse response in responses)
-        _prepareProviderItems(response, request),
-    ]);
+          for (final _ProviderResponse response in responses)
+            _prepareProviderItems(response, request),
+        ]);
     final List<VideoDiscoveryItem> mergedWindow = mergeVideoDiscoveryItems(
       interleaved,
       request: request,
@@ -172,9 +171,9 @@ class VideoDiscoveryService {
     final List<VideoMetadataWork> works = <VideoMetadataWork>[
       for (final VideoMetadataWork? work
           in await Future.wait(<Future<VideoMetadataWork?>>[
-        for (final VideoMetadataLookup lookup in _detailLookups(item))
-          _fetchDetails(lookup),
-      ]))
+            for (final VideoMetadataLookup lookup in _detailLookups(item))
+              _fetchDetails(lookup),
+          ]))
         if (work != null) work,
     ];
     if (works.isEmpty) return item.metadataWork;
@@ -277,8 +276,9 @@ class VideoDiscoveryService {
     VideoDiscoveryProvider provider,
     VideoDiscoveryRequest request,
   ) async {
-    final int lastProviderPage =
-        provider.capabilities.supportsPaging ? request.page : 1;
+    final int lastProviderPage = provider.capabilities.supportsPaging
+        ? request.page
+        : 1;
     final List<VideoDiscoveryPage> pages = <VideoDiscoveryPage>[];
     final List<ExternalProviderFailure> failures = <ExternalProviderFailure>[];
     bool succeeded = false;
@@ -365,7 +365,7 @@ List<VideoDiscoveryItem> mergeVideoDiscoveryItems(
 
 class _MergedDiscoveryItem {
   _MergedDiscoveryItem(VideoDiscoveryItem item)
-      : _items = <VideoDiscoveryItem>[item];
+    : _items = <VideoDiscoveryItem>[item];
 
   final List<VideoDiscoveryItem> _items;
 
@@ -488,7 +488,8 @@ class _MergedDiscoveryItem {
           ? VideoDiscoveryCategory.anime
           : primary.reference.discoveryCategory,
       title: primary.reference.title,
-      originalTitle: primary.reference.originalTitle ??
+      originalTitle:
+          primary.reference.originalTitle ??
           _firstNonEmpty(
             ranked.map(
               (VideoDiscoveryItem item) => item.reference.originalTitle,
@@ -497,7 +498,8 @@ class _MergedDiscoveryItem {
       aliases: aliases
           .where((String value) => value != primary.reference.title)
           .toList(growable: false),
-      year: primary.reference.year ??
+      year:
+          primary.reference.year ??
           _firstValue(
             ranked.map((VideoDiscoveryItem item) => item.reference.year),
           ),
@@ -515,21 +517,26 @@ class _MergedDiscoveryItem {
     );
     return VideoDiscoveryItem(
       reference: reference,
-      overview: primary.overview ??
+      overview:
+          primary.overview ??
           _firstNonEmpty(
             ranked.map((VideoDiscoveryItem item) => item.overview),
           ),
-      posterUrl: primary.posterUrl ??
+      posterUrl:
+          primary.posterUrl ??
           _firstNonEmpty(
             ranked.map((VideoDiscoveryItem item) => item.posterUrl),
           ),
-      backdropUrl: primary.backdropUrl ??
+      backdropUrl:
+          primary.backdropUrl ??
           _firstNonEmpty(
             ranked.map((VideoDiscoveryItem item) => item.backdropUrl),
           ),
-      score: primary.score ??
+      score:
+          primary.score ??
           _firstValue(ranked.map((VideoDiscoveryItem item) => item.score)),
-      releaseDate: primary.releaseDate ??
+      releaseDate:
+          primary.releaseDate ??
           _firstNonEmpty(
             ranked.map((VideoDiscoveryItem item) => item.releaseDate),
           ),
@@ -609,11 +616,12 @@ bool _hasNamespaceConflict(
   return false;
 }
 
-Set<String> _normalizedTitles(VideoDiscoveryItem item) => <String>{
-      item.reference.title,
-      if (item.reference.originalTitle case final String original) original,
-      ...?item.metadataWork?.aliases,
-    }
+Set<String> _normalizedTitles(VideoDiscoveryItem item) =>
+    <String>{
+          item.reference.title,
+          if (item.reference.originalTitle case final String original) original,
+          ...?item.metadataWork?.aliases,
+        }
         .map(TitleNormalizer.normalize)
         .where((String value) => value.isNotEmpty)
         .toSet();
@@ -748,7 +756,8 @@ bool _matchesSearchFilters(
 }
 
 String _canonicalDiscoveryGenre(String? genre) {
-  final String normalized = genre
+  final String normalized =
+      genre
           ?.trim()
           .toLowerCase()
           .replaceAll(RegExp(r'[_-]+'), ' ')
@@ -770,8 +779,7 @@ String _canonicalRegion(String? region) {
     'united states of america' ||
     'usa' ||
     '美国' ||
-    '美國' =>
-      'US',
+    '美國' => 'US',
     'united kingdom' || 'great britain' || '英国' || '英國' => 'GB',
     'france' || '法国' || '法國' => 'FR',
     _ => normalized.toUpperCase(),

@@ -75,8 +75,9 @@ class _SyncAccountWidgetState extends State<_SyncAccountWidget> {
       );
     }
 
-    final String subtitle =
-        _isAuthenticated ? t.sync_signed_in : t.sync_not_signed_in;
+    final String subtitle = _isAuthenticated
+        ? t.sync_signed_in
+        : t.sync_not_signed_in;
 
     if (_isAuthenticated) {
       return AdaptiveSettingsRow(
@@ -145,17 +146,14 @@ class _SyncAccountWidgetState extends State<_SyncAccountWidget> {
     try {
       final backend = await _resolveBackend();
       final repo = SyncRepository(widget.settingsContext.appModel.database);
-      await DesktopOAuthLaunchObserver.observe(
-        (DesktopOAuthLaunch launch) {
-          if (!mounted) return;
-          showDesktopOAuthWaitDialog(
-            context: context,
-            launch: launch,
-            done: flowDone.future,
-          );
-        },
-        () => backend.authenticate(repo: repo),
-      );
+      await DesktopOAuthLaunchObserver.observe((DesktopOAuthLaunch launch) {
+        if (!mounted) return;
+        showDesktopOAuthWaitDialog(
+          context: context,
+          launch: launch,
+          done: flowDone.future,
+        );
+      }, () => backend.authenticate(repo: repo));
       await _checkAuth();
     } on SyncAuthError catch (e, st) {
       // 用户自己点的取消：不是错误，不提示、不记日志。
@@ -167,7 +165,9 @@ class _SyncAccountWidgetState extends State<_SyncAccountWidget> {
       ErrorLogService.instance.log('SyncSettings.signIn', e, st);
       if (mounted) {
         _showSnackBar(
-            context, t.sync_auth_error(message: friendlySyncErrorDetail(e)));
+          context,
+          t.sync_auth_error(message: friendlySyncErrorDetail(e)),
+        );
       }
     } catch (e, st) {
       ErrorLogService.instance.log('SyncSettings.signIn', e, st);

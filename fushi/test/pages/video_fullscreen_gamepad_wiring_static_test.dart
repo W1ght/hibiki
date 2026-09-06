@@ -28,7 +28,8 @@ void main() {
     expect(
       fn,
       contains('pageBuilder: (_, __, ___) => _wrapVideoGamepadControls('),
-      reason: '全屏路由子树必须持有与窗口模式同一个 GamepadButtonIntent 处理层，'
+      reason:
+          '全屏路由子树必须持有与窗口模式同一个 GamepadButtonIntent 处理层，'
           '否则桌面手柄轮询以 primaryFocus 为派发起点时 A/D-pad 在全屏内静默 no-op'
           '（BUG-697 根因）。若重构改了包裹方式，请保证等价的 Actions 仍是全屏'
           '子树祖先，并同步更新本守卫与 video_fullscreen_gamepad_dispatch_test。',
@@ -42,13 +43,11 @@ void main() {
     // Host 一起匹配——只写 `_wrapVideoGamepadControls(` 会被页面里任何一处调用蒙混，
     // 而这里要的是 build 的返回树本身。
     final int idxHost = mainShell.indexOf('return WindowFullscreenHost(');
-    expect(
+    expect(idxHost, isNonNegative, reason: '视频页必须声明自己是窗口全屏宿主，否则它的全屏键会被门掉');
+    final int idxWrap = mainShell.indexOf(
+      'child: _wrapVideoGamepadControls(',
       idxHost,
-      isNonNegative,
-      reason: '视频页必须声明自己是窗口全屏宿主，否则它的全屏键会被门掉',
     );
-    final int idxWrap =
-        mainShell.indexOf('child: _wrapVideoGamepadControls(', idxHost);
     expect(
       idxWrap,
       isNonNegative,

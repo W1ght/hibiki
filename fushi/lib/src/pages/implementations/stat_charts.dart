@@ -95,14 +95,19 @@ class StatHourlyChartPainter extends CustomPainter {
 
   /// 某小时所有带的合计（决定柱高与纵轴上限）。
   int totalAt(int hour) => bands.fold<int>(
-      0, (int sum, StatHourlyBand band) => sum + _valueAt(band, hour));
+    0,
+    (int sum, StatHourlyBand band) => sum + _valueAt(band, hour),
+  );
 
   @override
   void paint(Canvas canvas, Size size) {
     if (bands.isEmpty) return;
 
-    final List<int> totals =
-        List<int>.generate(kStatHourlyBuckets, totalAt, growable: false);
+    final List<int> totals = List<int>.generate(
+      kStatHourlyBuckets,
+      totalAt,
+      growable: false,
+    );
     final maxMs = totals.fold<int>(0, (prev, ms) => ms > prev ? ms : prev);
     if (maxMs == 0) return;
 
@@ -178,10 +183,7 @@ class StatHourlyChartPainter extends CustomPainter {
 
       if (i % 3 == 0) {
         final tp = TextPainter(
-          text: TextSpan(
-            text: i.toString().padLeft(2, '0'),
-            style: labelStyle,
-          ),
+          text: TextSpan(text: i.toString().padLeft(2, '0'), style: labelStyle),
           textDirection: TextDirection.ltr,
         )..layout();
         tp.paint(
@@ -240,8 +242,10 @@ class StatBarChartPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     if (data.isEmpty) return;
 
-    final maxValue =
-        data.fold<int>(0, (prev, d) => valueOf(d) > prev ? valueOf(d) : prev);
+    final maxValue = data.fold<int>(
+      0,
+      (prev, d) => valueOf(d) > prev ? valueOf(d) : prev,
+    );
     if (maxValue == 0) return;
 
     const bottomPadding = 20.0;
@@ -301,10 +305,7 @@ class StatBarChartPainter extends CustomPainter {
 
       if (i % 5 == 0 || i == data.length - 1) {
         final tp = TextPainter(
-          text: TextSpan(
-            text: labelOf(d),
-            style: labelStyle,
-          ),
+          text: TextSpan(text: labelOf(d), style: labelStyle),
           textDirection: TextDirection.ltr,
         )..layout();
         tp.paint(
@@ -373,7 +374,9 @@ class StatLineChartPainter extends CustomPainter {
 
   /// 所有线里的最大点数（决定横轴刻度数）。
   int get _pointCount => series.fold<int>(
-      0, (int p, StatLineSeries s) => math.max(p, s.values.length));
+    0,
+    (int p, StatLineSeries s) => math.max(p, s.values.length),
+  );
 
   @override
   void paint(Canvas canvas, Size size) {

@@ -123,7 +123,8 @@ const String headerTemplate = '''# Bug 跟踪
 ''';
 
 /// bug 新建骨架模板（`new` 子命令用）。
-String bugSkeleton(String paddedNum, String title, String dateIso) => '''## BUG-$paddedNum · $title
+String bugSkeleton(String paddedNum, String title, String dateIso) =>
+    '''## BUG-$paddedNum · $title
 - **报告**：$dateIso（用户：）
 - **真实性**：（沿真实代码路径验真伪后填：✅ 真 bug / ❌ 未复现，附根因 `file:line`）
 - **[ ] ① 未修复** —
@@ -199,7 +200,8 @@ String padNum(int n) => n.toString().padLeft(3, '0');
     if (buf.isEmpty) return;
     // 去掉块尾的分隔线 `---` 和空行。
     var end = buf.length;
-    while (end > 0 && (buf[end - 1].trim().isEmpty || buf[end - 1].trim() == '---')) {
+    while (end > 0 &&
+        (buf[end - 1].trim().isEmpty || buf[end - 1].trim() == '---')) {
       end--;
     }
     final block = buf.sublist(0, end).join('\n').trimRight();
@@ -483,7 +485,8 @@ Future<BranchScan> scanBranchBugNumbers() async {
   final remote = env['FUSHI_BUG_REMOTE'] ?? 'origin';
   final skipRaw = env['FUSHI_BUG_SKIP_REMOTE_FETCH'] ?? '';
   final skipFetch = skipRaw.isNotEmpty && skipRaw != '0';
-  final timeoutSeconds = int.tryParse(env['FUSHI_BUG_REMOTE_TIMEOUT'] ?? '') ?? 25;
+  final timeoutSeconds =
+      int.tryParse(env['FUSHI_BUG_REMOTE_TIMEOUT'] ?? '') ?? 25;
 
   final inRepo = await runGit(<String>[
     'rev-parse',
@@ -569,7 +572,10 @@ final RegExp _bugFileNameRe = RegExp(r'^BUG-0*(\d+)');
 /// 二进制 tree），UTF-8 的 `·`（0xC2 0xB7）在 latin1 下是两个字符 `Â·`，
 /// [parseHeading] 那条要求单个 `·` 的正则永远匹配不上，H2 口径会静默失效
 /// （实测：只认文件名，031 被当空号发出去）。
-final RegExp _h2BugNumberRe = RegExp(r'^##[ \t]+BUG-0*(\d+)(?![0-9])', multiLine: true);
+final RegExp _h2BugNumberRe = RegExp(
+  r'^##[ \t]+BUG-0*(\d+)(?![0-9])',
+  multiLine: true,
+);
 
 /// 取一段 bug 正文里首个 H2 的号；解析不出返回 null。
 int? h2BugNumber(String body) {
@@ -588,7 +594,8 @@ Future<List<String>> gitWorktreePaths() async {
   final paths = <String>[];
   for (final line in (r.stdout as String).split('\n')) {
     final t = line.trim();
-    if (t.startsWith('worktree ')) paths.add(normalizeRelPath(t.substring(9).trim()));
+    if (t.startsWith('worktree '))
+      paths.add(normalizeRelPath(t.substring(9).trim()));
   }
   // 当前目录可能是某个 worktree 的子目录，也可能压根没被 git 列出来；总之要包含自己。
   final self = normalizeRelPath(Directory.current.path);
@@ -606,7 +613,10 @@ Future<List<String>> gitWorktreePaths() async {
 ///   · `new` / `renumber` 生成的文件两者天然一致，新建这条路径不受影响（撞号的正是新建）；
 ///   · 一旦那条 bug 被 commit，ref 扫描这边会读 blob 的 H2，两个号都会记上；
 ///   · 本工作区自己的 H2 由 [scanBugs] / [cmdCheck] 覆盖，坏态直接报红。
-int collectWorktreeBugNumbers(List<String> worktreePaths, BugNumberOccupancy occupancy) {
+int collectWorktreeBugNumbers(
+  List<String> worktreePaths,
+  BugNumberOccupancy occupancy,
+) {
   var scanned = 0;
   for (final path in worktreePaths) {
     final dir = Directory('$path/$bugsDir');
@@ -633,7 +643,10 @@ int collectWorktreeBugNumbers(List<String> worktreePaths, BugNumberOccupancy occ
 
 /// 对一批 ref 读 `<ref>:docs/bugs` 目录，把号 + 文件名记进 [occupancy]。
 /// 成功返回 null；git 出错返回失败原因（调用方据此降级）。
-Future<String?> collectRefBugNumbers(List<String> refs, BugNumberOccupancy occupancy) async {
+Future<String?> collectRefBugNumbers(
+  List<String> refs,
+  BugNumberOccupancy occupancy,
+) async {
   final check = await runGit(
     <String>['cat-file', '--batch-check'],
     stdinData: refs.map((String r) => '$r:$bugsDir\n').join(),
@@ -814,8 +827,10 @@ Future<void> cmdNew(List<String> args, {BranchScanner? scanner}) async {
   if (scan.status == BranchScanStatus.unavailable) {
     logOut('  跨分支/工作区：未扫到（见上面的警告）');
   } else {
-    logOut('  跨分支/工作区已占最大：BUG-${padNum(scan.maxNumber)}'
-        '（扫了 ${scan.scopeNote}，共 ${scan.numbers.length} 个号已被占用）');
+    logOut(
+      '  跨分支/工作区已占最大：BUG-${padNum(scan.maxNumber)}'
+      '（扫了 ${scan.scopeNote}，共 ${scan.numbers.length} 个号已被占用）',
+    );
     final recent = describeTopOccupied(scan.occupancy, 5);
     if (recent.isNotEmpty) {
       logOut('  最近已被占用的号（**这些是已占，不是可用**）：');
@@ -831,7 +846,8 @@ Future<void> cmdNew(List<String> args, {BranchScanner? scanner}) async {
 
 /// 最大的 [count] 个已占号的说明行（每行写清号 + 承载它的文件名 + 来源）。
 List<String> describeTopOccupied(BugNumberOccupancy occupancy, int count) {
-  final nums = occupancy.fileNames.keys.toList()..sort((int a, int b) => b.compareTo(a));
+  final nums = occupancy.fileNames.keys.toList()
+    ..sort((int a, int b) => b.compareTo(a));
   return nums.take(count).map(occupancy.describe).toList();
 }
 
@@ -847,7 +863,10 @@ String sanitizeSlug(String s) {
       buf.write('-');
     }
   }
-  return buf.toString().replaceAll(RegExp(r'-+'), '-').replaceAll(RegExp(r'^-|-$'), '');
+  return buf
+      .toString()
+      .replaceAll(RegExp(r'-+'), '-')
+      .replaceAll(RegExp(r'^-|-$'), '');
 }
 
 // ---------------------------------------------------------------------------
@@ -856,7 +875,8 @@ String sanitizeSlug(String s) {
 
 /// 号引用的**唯一口径**：`BUG-1138` / `bug_1138` / `bug-1138`（允许前导 0；禁止数字粘连，
 /// 也不误伤 `debug-1138` 这种词尾）。替换、预览、自校验三处共用同一个正则，口径不会漂。
-RegExp bugRefPattern(int number) => RegExp('(?<![0-9A-Za-z])(BUG|Bug|bug)([-_])0*$number(?![0-9])');
+RegExp bugRefPattern(int number) =>
+    RegExp('(?<![0-9A-Za-z])(BUG|Bug|bug)([-_])0*$number(?![0-9])');
 
 /// 一处待改的引用。
 class BugRefEdit {
@@ -981,11 +1001,14 @@ bool fileLooksBinary(String path) {
 bool isExcludedScanPath(String path) {
   final String p = normalizeRelPath(path);
   for (final prefix in excludedScanPrefixes) {
-    if (p.startsWith(prefix) || p == prefix.substring(0, prefix.length - 1)) return true;
+    if (p.startsWith(prefix) || p == prefix.substring(0, prefix.length - 1))
+      return true;
   }
   final int slash = p.lastIndexOf('/');
   final int dot = p.lastIndexOf('.');
-  if (dot > slash + 1 && binaryExtensions.contains(p.substring(dot).toLowerCase())) return true;
+  if (dot > slash + 1 &&
+      binaryExtensions.contains(p.substring(dot).toLowerCase()))
+    return true;
   return false;
 }
 
@@ -1040,7 +1063,10 @@ List<String> walkFallback() {
 /// git 不可用时退回目录遍历。
 Future<List<String>> repoScanPaths() async {
   final paths = <String>{};
-  final tracked = await runGit(<String>['ls-files', '-z'], timeout: const Duration(seconds: 60));
+  final tracked = await runGit(<String>[
+    'ls-files',
+    '-z',
+  ], timeout: const Duration(seconds: 60));
   final others = await runGit(<String>[
     'ls-files',
     '-z',
@@ -1050,7 +1076,9 @@ Future<List<String>> repoScanPaths() async {
   if (tracked != null && tracked.exitCode == 0) {
     for (final r in <ProcessResult?>[tracked, others]) {
       if (r == null || r.exitCode != 0) continue;
-      paths.addAll((r.stdout as String).split('\u0000').where((String p) => p.isNotEmpty));
+      paths.addAll(
+        (r.stdout as String).split('\u0000').where((String p) => p.isNotEmpty),
+      );
     }
   } else {
     paths.addAll(walkFallback());
@@ -1059,7 +1087,12 @@ Future<List<String>> repoScanPaths() async {
     if (File(extra).existsSync()) paths.add(extra);
   }
   // 先 exists 再 looksTextual：后者要开文件做 NUL 嗅探，路径不存在时白扔一个异常。
-  final list = paths.where((String p) => File(p).existsSync()).where(looksTextual).toList()..sort();
+  final list =
+      paths
+          .where((String p) => File(p).existsSync())
+          .where(looksTextual)
+          .toList()
+        ..sort();
   return list;
 }
 
@@ -1075,7 +1108,10 @@ Future<List<String>> repoScanPaths() async {
 /// [findResidualRefs] 里按字节现场判。
 Future<List<String>> residualScanPaths() async {
   final paths = <String>{};
-  final tracked = await runGit(<String>['ls-files', '-z'], timeout: const Duration(seconds: 60));
+  final tracked = await runGit(<String>[
+    'ls-files',
+    '-z',
+  ], timeout: const Duration(seconds: 60));
   final others = await runGit(<String>[
     'ls-files',
     '-z',
@@ -1093,11 +1129,12 @@ Future<List<String>> residualScanPaths() async {
   for (final extra in extraScanPaths) {
     if (File(extra).existsSync()) paths.add(normalizeRelPath(extra));
   }
-  final list = paths
-      .where((String p) => !p.startsWith('.git/'))
-      .where((String p) => File(p).existsSync())
-      .toList()
-    ..sort();
+  final list =
+      paths
+          .where((String p) => !p.startsWith('.git/'))
+          .where((String p) => File(p).existsSync())
+          .toList()
+        ..sort();
   return list;
 }
 
@@ -1133,9 +1170,9 @@ class RenumberScope {
 
   /// 解析失败时的空作用域（[detail] 说明原因）。
   RenumberScope.unavailable(this.detail)
-      : paths = const <String>{},
-        baseRef = '',
-        mergeBase = '';
+    : paths = const <String>{},
+      baseRef = '',
+      mergeBase = '';
 
   /// 相对仓库根、正斜杠的路径集合。
   final Set<String> paths;
@@ -1155,8 +1192,11 @@ class RenumberScope {
 }
 
 /// 把 `-z` 分隔的 git 路径输出切成集合。
-Set<String> splitGitZ(String raw) =>
-    raw.split('\u0000').where((String p) => p.isNotEmpty).map(normalizeRelPath).toSet();
+Set<String> splitGitZ(String raw) => raw
+    .split('\u0000')
+    .where((String p) => p.isNotEmpty)
+    .map(normalizeRelPath)
+    .toSet();
 
 /// 解析基线 ref：显式 `--base` > `FUSHI_BUG_BASE` > [defaultBaseRefCandidates]。
 /// 返回第一个真实存在的 ref 名；都不存在返回 null。
@@ -1166,7 +1206,9 @@ Future<String?> resolveBaseRef(String? explicit) async {
   final wanted = (explicit != null && explicit.trim().isNotEmpty)
       ? explicit.trim()
       : (fromEnv.isNotEmpty ? fromEnv : null);
-  final candidates = wanted != null ? <String>[wanted] : defaultBaseRefCandidates;
+  final candidates = wanted != null
+      ? <String>[wanted]
+      : defaultBaseRefCandidates;
   for (final ref in candidates) {
     final r = await runGit(<String>[
       'rev-parse',
@@ -1174,7 +1216,9 @@ Future<String?> resolveBaseRef(String? explicit) async {
       '--quiet',
       '$ref^{commit}',
     ], timeout: const Duration(seconds: 15));
-    if (r != null && r.exitCode == 0 && (r.stdout as String).trim().isNotEmpty) {
+    if (r != null &&
+        r.exitCode == 0 &&
+        (r.stdout as String).trim().isNotEmpty) {
       return ref;
     }
   }
@@ -1195,7 +1239,8 @@ Future<RenumberScope> resolveRenumberScope({String? baseRef}) async {
   }
   final resolved = await resolveBaseRef(baseRef);
   if (resolved == null) {
-    final tried = (baseRef ?? Platform.environment['FUSHI_BUG_BASE'] ?? '').trim();
+    final tried = (baseRef ?? Platform.environment['FUSHI_BUG_BASE'] ?? '')
+        .trim();
     return RenumberScope.unavailable(
       tried.isNotEmpty
           ? 'base ref `$tried` 不存在'
@@ -1208,7 +1253,9 @@ Future<RenumberScope> resolveRenumberScope({String? baseRef}) async {
     'HEAD',
   ], timeout: const Duration(seconds: 30));
   if (mb == null || mb.exitCode != 0 || (mb.stdout as String).trim().isEmpty) {
-    return RenumberScope.unavailable('git merge-base $resolved HEAD 失败（无共同祖先？）');
+    return RenumberScope.unavailable(
+      'git merge-base $resolved HEAD 失败（无共同祖先？）',
+    );
   }
   final mergeBase = (mb.stdout as String).trim();
   final diff = await runGit(<String>[
@@ -1230,7 +1277,12 @@ Future<RenumberScope> resolveRenumberScope({String? baseRef}) async {
   if (untracked != null && untracked.exitCode == 0) {
     paths.addAll(splitGitZ(untracked.stdout as String));
   }
-  return RenumberScope(paths: paths, baseRef: resolved, mergeBase: mergeBase, detail: '');
+  return RenumberScope(
+    paths: paths,
+    baseRef: resolved,
+    mergeBase: mergeBase,
+    detail: '',
+  );
 }
 
 /// 某路径在 [ref] 那个 commit 上是否存在。撞号消歧的**首选判据**：
@@ -1306,7 +1358,11 @@ Future<List<String>> findResidualRefs(int number, {List<String>? paths}) async {
 
 /// 组装 renumber 计划（不落盘）。
 /// [paths] 是**已经框定好的**替换范围；不传则退回全仓（只在 old 号唯一时才成立）。
-Future<RenumberPlan> buildRenumberPlan(int oldNumber, int newNumber, {List<String>? paths}) async {
+Future<RenumberPlan> buildRenumberPlan(
+  int oldNumber,
+  int newNumber, {
+  List<String>? paths,
+}) async {
   paths ??= await repoScanPaths();
   final re = bugRefPattern(oldNumber);
   final newPad = padNum(newNumber);
@@ -1330,7 +1386,9 @@ Future<RenumberPlan> buildRenumberPlan(int oldNumber, int newNumber, {List<Strin
             p,
             i + 1,
             lines[i].trimRight(),
-            lines[i].replaceAllMapped(re, (Match m) => '${m[1]}${m[2]}$newPad').trimRight(),
+            lines[i]
+                .replaceAllMapped(re, (Match m) => '${m[1]}${m[2]}$newPad')
+                .trimRight(),
           ),
         );
       }
@@ -1356,7 +1414,8 @@ List<String> locateBugFiles(int number) {
     final byName = RegExp(r'^BUG-0*(\d+)').firstMatch(name);
     final headingNum = parseHeading(f.readAsStringSync())?.$1;
     final nameNum = byName == null ? null : int.tryParse(byName.group(1)!);
-    if (headingNum == number || nameNum == number) matches.add('$bugsDir/$name');
+    if (headingNum == number || nameNum == number)
+      matches.add('$bugsDir/$name');
   }
   matches.sort();
   return matches;
@@ -1366,7 +1425,8 @@ List<String> locateBugFiles(int number) {
 /// 只给「必须唯一」的场景用（例如判断目标号是否已被占用）。
 String locateBugFile(int number) {
   final matches = locateBugFiles(number);
-  if (matches.isEmpty) throw BugToolError('BUG-${padNum(number)} 在 $bugsDir/ 里不存在');
+  if (matches.isEmpty)
+    throw BugToolError('BUG-${padNum(number)} 在 $bugsDir/ 里不存在');
   if (matches.length > 1) {
     throw BugToolError('BUG-${padNum(number)} 命中多个文件：${matches.join('、')}');
   }
@@ -1379,7 +1439,11 @@ String locateBugFile(int number) {
 ///   1. **base 上不存在** —— 我新建的那一份。这是最硬的事实，和文件内容、行状态都无关。
 ///   2. 落在作用域（本次改动的文件集）内 —— 兜底，覆盖「base 上有同名文件但被我整体替换」。
 /// 两条都判不出唯一解就抛错，让人处理，**绝不猜**——猜错就是改坏 base 侧合法条目。
-Future<String> pickOwnBugFile(int number, List<String> candidates, RenumberScope scope) async {
+Future<String> pickOwnBugFile(
+  int number,
+  List<String> candidates,
+  RenumberScope scope,
+) async {
   if (candidates.length == 1) return candidates.first;
   final introduced = <String>[];
   for (final p in candidates) {
@@ -1435,10 +1499,15 @@ Future<void> cmdRenumber(List<String> args, {BranchScanner? scanner}) async {
     }
   }
   if (positional.length != 2) {
-    throw BugToolError('用法：dart run tool/bug.dart renumber <old> <new> [--base <ref>] [--dry-run]');
+    throw BugToolError(
+      '用法：dart run tool/bug.dart renumber <old> <new> [--base <ref>] [--dry-run]',
+    );
   }
-  if (!RegExp(r'^\d+$').hasMatch(positional[0]) || !RegExp(r'^\d+$').hasMatch(positional[1])) {
-    throw BugToolError('<old> 与 <new> 必须是纯数字（拿到 ${positional[0]} / ${positional[1]}）');
+  if (!RegExp(r'^\d+$').hasMatch(positional[0]) ||
+      !RegExp(r'^\d+$').hasMatch(positional[1])) {
+    throw BugToolError(
+      '<old> 与 <new> 必须是纯数字（拿到 ${positional[0]} / ${positional[1]}）',
+    );
   }
   final oldNumber = int.parse(positional[0]);
   final newNumber = int.parse(positional[1]);
@@ -1472,7 +1541,9 @@ Future<void> cmdRenumber(List<String> args, {BranchScanner? scanner}) async {
     );
   }
   final String oldPath = await pickOwnBugFile(oldNumber, oldMatches, scope);
-  final List<String> foreignBugFiles = oldMatches.where((String p) => p != oldPath).toList();
+  final List<String> foreignBugFiles = oldMatches
+      .where((String p) => p != oldPath)
+      .toList();
 
   final localNumbers = scanBugs().map((BugEntry e) => e.number).toSet();
   final localNames = Directory(bugsDir)
@@ -1515,14 +1586,16 @@ Future<void> cmdRenumber(List<String> args, {BranchScanner? scanner}) async {
   bool inScope(String p) => !collided || scope.contains(p);
   bool isForeign(String p) => foreignSet.contains(normalizeRelPath(p));
 
-  final List<String> effectivePaths =
-      allPaths.where((String p) => !isIndex(p) && inScope(p) && !isForeign(p)).toList();
+  final List<String> effectivePaths = allPaths
+      .where((String p) => !isIndex(p) && inScope(p) && !isForeign(p))
+      .toList();
   // 范围外文件（改号前后必须一字不变）。
   // 刻意**不**由 effectivePaths 取反算出来——那样一旦替换范围被改宽，守卫会跟着一起
   // 缩小、失去作用（变异实测抓到过）。两个集合各自独立地从 scope / foreign 判据算出，
   // 互为补集，替换范围漏了什么，守卫就一定看得见。
-  final List<String> outsidePaths =
-      allPaths.where((String p) => !isIndex(p) && (!inScope(p) || isForeign(p))).toList();
+  final List<String> outsidePaths = allPaths
+      .where((String p) => !isIndex(p) && (!inScope(p) || isForeign(p)))
+      .toList();
 
   if (collided) {
     logWarn(
@@ -1537,7 +1610,11 @@ Future<void> cmdRenumber(List<String> args, {BranchScanner? scanner}) async {
     );
   }
 
-  final plan = await buildRenumberPlan(oldNumber, newNumber, paths: effectivePaths);
+  final plan = await buildRenumberPlan(
+    oldNumber,
+    newNumber,
+    paths: effectivePaths,
+  );
   for (final r in plan.renames) {
     if (File(r.to).existsSync()) {
       throw BugToolError('目标文件已存在：${r.to}——换一个号');
@@ -1571,7 +1648,10 @@ Future<void> cmdRenumber(List<String> args, {BranchScanner? scanner}) async {
   }
 
   // —— 事后守卫的基线：范围外每个文件的 BUG-<old> 指纹。
-  final Map<String, String> outsideBefore = bugRefFingerprint(oldNumber, outsidePaths);
+  final Map<String, String> outsideBefore = bugRefFingerprint(
+    oldNumber,
+    outsidePaths,
+  );
 
   // —— 落盘：先改内容，再改名（改名后路径变了，内容已改完不受影响）。
   final re = bugRefPattern(oldNumber);
@@ -1580,7 +1660,9 @@ Future<void> cmdRenumber(List<String> args, {BranchScanner? scanner}) async {
   for (final path in touched) {
     final f = File(path);
     final content = f.readAsStringSync();
-    f.writeAsStringSync(content.replaceAllMapped(re, (Match m) => '${m[1]}${m[2]}$newPad'));
+    f.writeAsStringSync(
+      content.replaceAllMapped(re, (Match m) => '${m[1]}${m[2]}$newPad'),
+    );
   }
   for (final r in plan.renames) {
     await renameTracked(r.from, r.to);
@@ -1590,7 +1672,10 @@ Future<void> cmdRenumber(List<String> args, {BranchScanner? scanner}) async {
 
   // —— 守卫①：范围外文件一字未变。撞号时 base 侧那条合法同号 bug 就在这里面；
   //    这是把「静默的二次破坏」变成「显式失败」的那道断言。
-  final Map<String, String> outsideAfter = bugRefFingerprint(oldNumber, outsidePaths);
+  final Map<String, String> outsideAfter = bugRefFingerprint(
+    oldNumber,
+    outsidePaths,
+  );
   final drift = <String>[];
   for (final key in <String>{...outsideBefore.keys, ...outsideAfter.keys}) {
     final before = outsideBefore[key];
@@ -1618,7 +1703,10 @@ Future<void> cmdRenumber(List<String> args, {BranchScanner? scanner}) async {
   final residual = await findResidualRefs(
     oldNumber,
     paths: collided
-        ? scope.paths.where((String p) => !isIndex(p) && !isForeign(p)).map(afterRename).toList()
+        ? scope.paths
+              .where((String p) => !isIndex(p) && !isForeign(p))
+              .map(afterRename)
+              .toList()
         : null,
   );
   if (residual.isNotEmpty) {
@@ -1670,7 +1758,9 @@ int cmdCheck() {
     }
     byNum[e.number] = e.fileName;
     final nameMatch = RegExp(r'^BUG-0*(\d+)').firstMatch(e.fileName);
-    final nameNum = nameMatch == null ? null : int.tryParse(nameMatch.group(1)!);
+    final nameNum = nameMatch == null
+        ? null
+        : int.tryParse(nameMatch.group(1)!);
     if (nameNum != null && nameNum != e.number) {
       logWarn(
         '✗ ${e.fileName} 文件名是 BUG-${padNum(nameNum)} 但正文 H2 是 BUG-${e.paddedNum}'
@@ -1688,7 +1778,9 @@ int cmdCheck() {
   } else {
     final beginLineEnd = indexContent.indexOf('\n', beginIdx);
     final endLineStart = indexContent.lastIndexOf('\n', endIdx) + 1;
-    final current = indexContent.substring(beginLineEnd + 1, endLineStart).trim();
+    final current = indexContent
+        .substring(beginLineEnd + 1, endLineStart)
+        .trim();
     final expected = buildIndexTable(entries).trim();
     if (current != expected) {
       logWarn('✗ 索引与 $bugsDir/ 不同步——跑 `dart run tool/bug.dart reindex`');
@@ -1732,13 +1824,17 @@ List<ForeignOccupancy> foreignOccupancies(
 }) {
   final out = <ForeignOccupancy>[];
   for (final e in mine) {
-    if (settledFileNames != null && settledFileNames.contains(e.fileName)) continue;
+    if (settledFileNames != null && settledFileNames.contains(e.fileName))
+      continue;
     final names = occupancy.fileNames[e.number];
     if (names == null) continue;
     final others = names.where((String n) => n != e.fileName).toList()..sort();
-    if (others.isNotEmpty) out.add(ForeignOccupancy(e.number, e.fileName, others));
+    if (others.isNotEmpty)
+      out.add(ForeignOccupancy(e.number, e.fileName, others));
   }
-  out.sort((ForeignOccupancy a, ForeignOccupancy b) => a.number.compareTo(b.number));
+  out.sort(
+    (ForeignOccupancy a, ForeignOccupancy b) => a.number.compareTo(b.number),
+  );
   return out;
 }
 
@@ -1785,17 +1881,23 @@ Future<int> cmdCheckAll(List<String> args, {BranchScanner? scanner}) async {
 
   final entries = scanBugs();
   final settled = await settledBugFileNames();
-  final foreign = foreignOccupancies(entries, scan.occupancy, settledFileNames: settled);
+  final foreign = foreignOccupancies(
+    entries,
+    scan.occupancy,
+    settledFileNames: settled,
+  );
   final inFlight = settled == null
       ? entries.length
       : entries.where((BugEntry e) => !settled.contains(e.fileName)).length;
-  logOut('跨源复核：扫了 ${scan.scopeNote}，共 ${scan.occupancy.fileNames.length} 个号已被占用');
+  logOut(
+    '跨源复核：扫了 ${scan.scopeNote}，共 ${scan.occupancy.fileNames.length} 个号已被占用',
+  );
   logOut(
     settled == null
         ? '  ⚠ 拿不到 base（origin/develop 等）上的 bug 文件清单，本次对全部 '
-            '${entries.length} 个本地号复核（会带上历史噪声）'
+              '${entries.length} 个本地号复核（会带上历史噪声）'
         : '  本工作区有 $inFlight 个号是 base 之外新引入的（其余已并入 base，'
-            '陈旧分支上的同号是那些分支 rebase 时的活）',
+              '陈旧分支上的同号是那些分支 rebase 时的活）',
   );
   if (foreign.isEmpty) {
     logOut('  这些号都没有被别的文件名占用');
@@ -1807,7 +1909,8 @@ Future<int> cmdCheckAll(List<String> args, {BranchScanner? scanner}) async {
       '同时被 ${f.others.length} 个别的文件名占用：',
     );
     for (final name in f.others) {
-      final src = (scan.occupancy.sources[name] ?? const <String>{}).toList()..sort();
+      final src = (scan.occupancy.sources[name] ?? const <String>{}).toList()
+        ..sort();
       logWarn('    $name ← ${src.isEmpty ? '（来源未知）' : src.join(' / ')}');
     }
   }
@@ -1819,7 +1922,8 @@ Future<int> cmdCheckAll(List<String> args, {BranchScanner? scanner}) async {
   return strict ? 1 : localCode;
 }
 
-const String usage = '用法：dart run tool/bug.dart <new|renumber|reindex|migrate|check> ...\n'
+const String usage =
+    '用法：dart run tool/bug.dart <new|renumber|reindex|migrate|check> ...\n'
     '  new <slug> [标题...]                 新建（跨本地+远端分支+本机所有工作区取下一个空号）\n'
     '  renumber <old> <new> [--base <ref>] [--dry-run]\n'
     '                                       改号：文件名 / 正文 H2 / 代码引用 / 测试名 /\n'

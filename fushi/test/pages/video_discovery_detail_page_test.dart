@@ -24,10 +24,7 @@ VideoDiscoveryItem _item(String id, String title) {
 
 Widget _harness(VideoDiscoveryDetailPage page) {
   return TranslationProvider(
-    child: MaterialApp(
-      theme: ThemeData.dark(useMaterial3: true),
-      home: page,
-    ),
+    child: MaterialApp(theme: ThemeData.dark(useMaterial3: true), home: page),
   );
 }
 
@@ -186,8 +183,11 @@ void main() {
     final FilledButton subscribe = tester.widget<FilledButton>(
       find.byKey(const ValueKey<String>('video-discovery-subscribe')),
     );
-    expect(resource.onPressed, isNotNull,
-        reason: '下载进行中要能换源重下；per-series 并发限制在队列层根本不存在。');
+    expect(
+      resource.onPressed,
+      isNotNull,
+      reason: '下载进行中要能换源重下；per-series 并发限制在队列层根本不存在。',
+    );
     expect(subscribe.onPressed, isNull);
     expect(subtitle.onPressed, isNotNull);
 

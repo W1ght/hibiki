@@ -74,8 +74,9 @@ class AppFontLoader {
       if (!(font['enabled'] as bool? ?? true)) continue;
       final String? rawName = font['name'] as String?;
       if (rawName == null) continue;
-      final String family =
-          ReaderCustomFontCss.normalizedFontFamilyName(rawName);
+      final String family = ReaderCustomFontCss.normalizedFontFamilyName(
+        rawName,
+      );
       if (family.isEmpty) continue;
 
       final String? rawPath = font['path'] as String?;
@@ -180,15 +181,20 @@ class AppFontLoader {
         bytes = sfnt;
       }
       final FontLoader loader = FontLoader(family)
-        ..addFont(Future<ByteData>.value(
-            bytes.buffer.asByteData(bytes.offsetInBytes, bytes.lengthInBytes)));
+        ..addFont(
+          Future<ByteData>.value(
+            bytes.buffer.asByteData(bytes.offsetInBytes, bytes.lengthInBytes),
+          ),
+        );
       await loader.load();
       _loadedFamilies.add(family);
       // BUG-897：自定义字体不在系统字体目录（扫描不到），把字节同步喂进 ASS 字号
       // 换算索引（OS/2 win cell 语义），别名=本处注册的家族名——视频字幕用自定义
       // 字体时字号也与 mpv/libass 同源。
-      AssFontCellIndex.instance
-          .registerFontBytes(bytes, aliases: <String>[family]);
+      AssFontCellIndex.instance.registerFontBytes(
+        bytes,
+        aliases: <String>[family],
+      );
     } catch (e, stack) {
       ErrorLogService.instance.log('AppFontLoader.resolveAndLoad', e, stack);
       return null;

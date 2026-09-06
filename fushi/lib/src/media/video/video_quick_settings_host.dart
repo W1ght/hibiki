@@ -143,9 +143,9 @@ class VideoQuickSettingsHost extends VideoSettingsHost {
 
   // ── 字幕遮蔽 / 外观（页面持久化 + overlay 即时刷新 / 实时预览）───────────
   final Future<void> Function(VideoSubtitleObscureMode mode)
-      onSetSubtitleObscureMode;
+  onSetSubtitleObscureMode;
   final Future<void> Function(VideoSubtitleObscureMode mode)
-      onSetSecondarySubtitleObscureMode;
+  onSetSecondarySubtitleObscureMode;
 
   /// 页面当前生效的字幕样式（含拖动中的预览态），schema 滑条以它为权威值回显。
   final VideoSubtitleStyle Function() subtitleStyle;
@@ -180,7 +180,8 @@ class VideoQuickSettingsHost extends VideoSettingsHost {
     VideoShaderTier tier,
     bool highQuality,
     List<String> enabledNames,
-  ) onSelectShaderTier;
+  )
+  onSelectShaderTier;
   final Future<void> Function(String dir)? onMpvShaderDirChanged;
 
   // ── 画面/窗口/沉浸（页面持久化 + 重建 Video / 原生窗口联动）──────────────
@@ -195,14 +196,14 @@ class VideoQuickSettingsHost extends VideoSettingsHost {
   // ── 控制条 9 槽位布局 ─────────────────────────────────────────────────────
   final VideoControlLayout Function() controlLayout;
   final Future<void> Function(VideoControlLayout layout)?
-      onControlLayoutChanged;
+  onControlLayoutChanged;
 
   /// 自定义「快捷键 1..4」按钮当前绑定的动作（活值 getter，与 [controlLayout] 同款）。
   final VideoCustomActionBindings Function()? customActionBindings;
 
   /// 改绑「快捷键 N」后落盘 + 实时生效。null = 编辑器不提供改绑入口。
   final Future<void> Function(VideoCustomActionBindings bindings)?
-      onCustomActionBindingsChanged;
+  onCustomActionBindingsChanged;
 
   // ── HLS 画质入口 / Skia 降级入口（仅特定流/机型出现）─────────────────────
   final int qualityOptionCount;

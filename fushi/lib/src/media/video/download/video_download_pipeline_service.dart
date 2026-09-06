@@ -2669,8 +2669,8 @@ class VideoDownloadPipelineService {
     // 字幕补齐链路（VideoSubtitleBackfillService）接手。
     final VideoDownloadJobFileRow? movieMain =
         job.mediaKind == VideoMetadataMediaKind.movie.name
-            ? _mainMovieRow(files)
-            : null;
+        ? _mainMovieRow(files)
+        : null;
     bool anyInstalled = false;
     for (final VideoDownloadJobFileRow file in files) {
       if (movieMain != null && file.id != movieMain.id) continue;
@@ -3463,8 +3463,9 @@ class VideoDownloadPipelineService {
   /// 任务携带的已确认 AniDB 身份：优先 v94 identity_json 快照，回退旧行
   /// （metadataProvider == 'anidb' 的 externalId）。null = 无规范身份。
   int? _confirmedAniDbId(VideoDownloadJobRow job) {
-    final VideoMediaReference? stored =
-        decodeVideoMediaReference(job.identityJson);
+    final VideoMediaReference? stored = decodeVideoMediaReference(
+      job.identityJson,
+    );
     if (stored?.anidbId != null) return stored!.anidbId;
     if (job.metadataProvider == 'anidb') {
       return int.tryParse(job.externalId ?? '');
@@ -3860,8 +3861,9 @@ class VideoDownloadPipelineService {
     // v94（BUG-2003）：身份面（原名/别名/全部外部 id）从入队快照恢复——字幕
     // 搜索从此拿得到日文原名与罗马字别名。任务列（title/year/season/kind）仍是
     // 用户可见与流程真值。旧行（NULL 快照）走修前的单 id 重建。
-    final VideoMediaReference? stored =
-        decodeVideoMediaReference(job.identityJson);
+    final VideoMediaReference? stored = decodeVideoMediaReference(
+      job.identityJson,
+    );
     if (stored != null) {
       return VideoMediaReference(
         providerId: stored.providerId,
@@ -3946,7 +3948,8 @@ class VideoDownloadPipelineService {
     }
     return <int, String>{
       for (final int id in raw.keys)
-        id: parsed[id]!.isEmpty ||
+        id:
+            parsed[id]!.isEmpty ||
                 parsed[id] == mainTitle ||
                 hits[parsed[id]]! > 1
             ? raw[id]!

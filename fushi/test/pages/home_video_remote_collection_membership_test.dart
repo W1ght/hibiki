@@ -41,8 +41,9 @@ void main() {
 
   late Directory pathProviderDir;
   setUpAll(() {
-    pathProviderDir =
-        Directory.systemTemp.createTempSync('hibiki_remote_coll_video_pp');
+    pathProviderDir = Directory.systemTemp.createTempSync(
+      'hibiki_remote_coll_video_pp',
+    );
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
       (MethodCall call) async => pathProviderDir.path,
@@ -91,55 +92,59 @@ void main() {
   Widget buildApp(
     RemoteVideoClient client, {
     VideoLibrarySection section = VideoLibrarySection.allVideos,
-  }) =>
-      ProviderScope(
-        overrides: <Override>[
-          platformServicesProvider.overrideWithValue(platformServices),
-          ankiRepositoryProvider.overrideWithValue(ankiRepository),
-          appProvider.overrideWith((ref) => appModel),
-        ],
-        child: TranslationProvider(
-          child: MaterialApp(
-            home: Scaffold(
-              body: HomeVideoPage(
-                repo: VideoBookRepository(db),
-                // #792 分区化：home 分区只渲染 dashboard 概览，混排墙在 series；
-                // 远端占位则只在「全部视频」出现（见文件头的契约变更说明），故
-                // 两个分区都要测，由调用方指定。
-                section: section,
-                remoteVideoClientLoader: () async => client,
-                remoteVideoDownloadDestination: (RemoteVideoInfo v) async =>
-                    File('${pathProviderDir.path}/${v.id.hashCode}.mp4'),
-              ),
-            ),
+  }) => ProviderScope(
+    overrides: <Override>[
+      platformServicesProvider.overrideWithValue(platformServices),
+      ankiRepositoryProvider.overrideWithValue(ankiRepository),
+      appProvider.overrideWith((ref) => appModel),
+    ],
+    child: TranslationProvider(
+      child: MaterialApp(
+        home: Scaffold(
+          body: HomeVideoPage(
+            repo: VideoBookRepository(db),
+            // #792 分区化：home 分区只渲染 dashboard 概览，混排墙在 series；
+            // 远端占位则只在「全部视频」出现（见文件头的契约变更说明），故
+            // 两个分区都要测，由调用方指定。
+            section: section,
+            remoteVideoClientLoader: () async => client,
+            remoteVideoDownloadDestination: (RemoteVideoInfo v) async =>
+                File('${pathProviderDir.path}/${v.id.hashCode}.mp4'),
           ),
         ),
-      );
+      ),
+    ),
+  );
 
-  testWidgets('系列墙：远端占位照常折进本地合集（BUG-1839 准入不再看 canonical 身份）',
-      (WidgetTester tester) async {
+  testWidgets('系列墙：远端占位照常折进本地合集（BUG-1839 准入不再看 canonical 身份）', (
+    WidgetTester tester,
+  ) async {
     tester.view.physicalSize = const Size(1400, 900);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
 
     // 本地合集 + 本地成员一集。
-    final int cid =
-        await db.createMediaCollection('MyShow', collectionType: 'collection');
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/local-ep1'),
-      title: Value('Local Ep1'),
-      videoPath: Value('/abs/ep1.mp4'),
-    ));
+    final int cid = await db.createMediaCollection(
+      'MyShow',
+      collectionType: 'collection',
+    );
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/local-ep1'),
+        title: Value('Local Ep1'),
+        videoPath: Value('/abs/ep1.mp4'),
+      ),
+    );
     await db.addToCollection(cid, MediaKind.video, 'video/local-ep1');
     // BUG-1839 起入墙资格不再看刮削身份；这里仍种一条 AniDB 作品身份，是为了让
     // 本用例与改动前逐字节可比（种不种都该渲染，见 home_video_series_admission_test）。
     await seedAniDbSeriesIdentity(db, cid, title: 'MyShow');
 
     // 远端有归属同一合集的第二集。
-    await tester.pumpWidget(buildApp(
-      _ListFakeRemoteVideoClient(
-        <RemoteVideoInfo>[
+    await tester.pumpWidget(
+      buildApp(
+        _ListFakeRemoteVideoClient(<RemoteVideoInfo>[
           const RemoteVideoInfo(
             id: 'video/remote-ep2',
             title: 'Remote Ep2',
@@ -149,14 +154,15 @@ void main() {
               sortIndex: 1,
             ),
           ),
-        ],
+        ]),
+        section: VideoLibrarySection.series,
       ),
-      section: VideoLibrarySection.series,
-    ));
+    );
     await tester.pumpAndSettle();
 
-    final Finder collectionCard =
-        find.byKey(ValueKey<String>('home_video_collection_card_$cid'));
+    final Finder collectionCard = find.byKey(
+      ValueKey<String>('home_video_collection_card_$cid'),
+    );
     expect(collectionCard, findsOneWidget, reason: '本地合集封面卡必须渲染');
     // 远端那一集折进合集卡，不另出独立散卡。
     expect(
@@ -190,47 +196,53 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
 
     // 本地无 'Ghost' 合集，只有一本散视频占位判定基线。
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/local-1'),
-      title: Value('Local One'),
-      videoPath: Value('/abs/local-1.mp4'),
-    ));
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/local-1'),
+        title: Value('Local One'),
+        videoPath: Value('/abs/local-1.mp4'),
+      ),
+    );
 
-    await tester.pumpWidget(buildApp(_ListFakeRemoteVideoClient(
-      <RemoteVideoInfo>[
-        const RemoteVideoInfo(
-          id: 'video/remote-orphan',
-          title: 'Remote Orphan',
-          collection: RemoteCollectionMembership(
-            collectionName: 'Ghost',
-            collectionType: 'collection',
-            sortIndex: 0,
+    await tester.pumpWidget(
+      buildApp(
+        _ListFakeRemoteVideoClient(<RemoteVideoInfo>[
+          const RemoteVideoInfo(
+            id: 'video/remote-orphan',
+            title: 'Remote Orphan',
+            collection: RemoteCollectionMembership(
+              collectionName: 'Ghost',
+              collectionType: 'collection',
+              sortIndex: 0,
+            ),
           ),
-        ),
-      ],
-    )));
+        ]),
+      ),
+    );
     await tester.pumpAndSettle();
 
-    final Finder remoteCard = find
-        .byKey(const ValueKey<String>('remote_video_card_video_remote-orphan'));
+    final Finder remoteCard = find.byKey(
+      const ValueKey<String>('remote_video_card_video_remote-orphan'),
+    );
     expect(remoteCard, findsOneWidget);
     // 归属解析不到 → 散卡降级：进主散卡网格，且不在任何合集横排行内。
     // BUG-1989 起「全部视频」散卡区是 16:9 等宽 SliverGrid（系列墙才留 Wrap），
     // 判据同步换容器；且不能只断言「有网格祖先」——远端自成独立分区时它也自带
     // 一个 SliverGrid，照样通过。判据必须落在「与本地散卡同一个 SliverGrid
     // 实例」上，才真的钉住混排。
-    final Finder localCard =
-        find.byKey(const ValueKey<String>('home_video_video/local-1'));
-    expect(localCard, findsOneWidget, reason: '本地散卡基线必须渲染');
-    final Finder remoteGrid =
-        find.ancestor(of: remoteCard, matching: find.byType(SliverGrid));
-    final Finder localGrid =
-        find.ancestor(of: localCard, matching: find.byType(SliverGrid));
-    expect(
-      remoteGrid,
-      findsOneWidget,
-      reason: '归属解析不到本地合集 → 占位卡落散卡网格（散卡降级）',
+    final Finder localCard = find.byKey(
+      const ValueKey<String>('home_video_video/local-1'),
     );
+    expect(localCard, findsOneWidget, reason: '本地散卡基线必须渲染');
+    final Finder remoteGrid = find.ancestor(
+      of: remoteCard,
+      matching: find.byType(SliverGrid),
+    );
+    final Finder localGrid = find.ancestor(
+      of: localCard,
+      matching: find.byType(SliverGrid),
+    );
+    expect(remoteGrid, findsOneWidget, reason: '归属解析不到本地合集 → 占位卡落散卡网格（散卡降级）');
     expect(
       tester.element(remoteGrid),
       same(tester.element(localGrid)),
@@ -238,8 +250,7 @@ void main() {
     );
   });
 
-  testWidgets('BUG-1699：合集落库后视频页自动重组（无需下拉刷新/重启）',
-      (WidgetTester tester) async {
+  testWidgets('BUG-1699：合集落库后视频页自动重组（无需下拉刷新/重启）', (WidgetTester tester) async {
     tester.view.physicalSize = const Size(1400, 900);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
@@ -248,17 +259,21 @@ void main() {
     // BUG-1699 守的是「_collectionsById 不能停在首帧快照」，与「谁被折叠」无关。
     // 原用例拿远端占位当被折叠方，而远端占位已不进系列墙（见文件头契约变更），
     // 于是改用**本地视频**：它同样只有在合集表变化被监听到之后才会折进合集卡。
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/late-ep1'),
-      title: Value('Late Ep1'),
-      videoPath: Value('/abs/late1.mp4'),
-    ));
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/late-ep1'),
+        title: Value('Late Ep1'),
+        videoPath: Value('/abs/late1.mp4'),
+      ),
+    );
     await seedAniDbLooseIdentity(db, 'video/late-ep1', title: 'Late Ep1');
 
-    await tester.pumpWidget(buildApp(
-      _ListFakeRemoteVideoClient(const <RemoteVideoInfo>[]),
-      section: VideoLibrarySection.series,
-    ));
+    await tester.pumpWidget(
+      buildApp(
+        _ListFakeRemoteVideoClient(const <RemoteVideoInfo>[]),
+        section: VideoLibrarySection.series,
+      ),
+    );
     await tester.pumpAndSettle();
     expect(
       find.byKey(const ValueKey<String>('home_video_video/late-ep1')),
@@ -267,8 +282,10 @@ void main() {
     );
 
     // 模拟后台合集同步落库（互联 live / 云清单 / 备份导入任一写入者）。
-    final int cid = await db.createMediaCollection('LateShow',
-        collectionType: 'collection');
+    final int cid = await db.createMediaCollection(
+      'LateShow',
+      collectionType: 'collection',
+    );
     await db.addToCollection(cid, MediaKind.video, 'video/late-ep1');
     await seedAniDbSeriesIdentity(db, cid, title: 'LateShow');
     // 合集表 watch 有 300ms 合并窗口。
@@ -278,7 +295,8 @@ void main() {
     expect(
       find.byKey(ValueKey<String>('home_video_collection_card_$cid')),
       findsOneWidget,
-      reason: '合集落库后无需任何手动刷新即渲染合集封面卡（BUG-1699 主诉：'
+      reason:
+          '合集落库后无需任何手动刷新即渲染合集封面卡（BUG-1699 主诉：'
           '此前 _collectionsById 停在首帧快照，恒散卡直到重启）',
     );
     expect(
@@ -300,9 +318,10 @@ class _ListFakeRemoteVideoClient implements RemoteVideoClient {
   Future<List<RemoteVideoInfo>> listRemoteVideos() async => _videos;
 
   @override
-  Future<RemoteVideoStreamUrls> remoteVideoStreamUrls(String id,
-          {int episodeIndex = 0}) async =>
-      const RemoteVideoStreamUrls(streamUrl: 'http://x/stream');
+  Future<RemoteVideoStreamUrls> remoteVideoStreamUrls(
+    String id, {
+    int episodeIndex = 0,
+  }) async => const RemoteVideoStreamUrls(streamUrl: 'http://x/stream');
 
   @override
   Future<void> getRemoteVideoSubtitle(
@@ -324,8 +343,7 @@ class _ListFakeRemoteVideoClient implements RemoteVideoClient {
   Future<({int positionMs, int updatedAtMs})> remoteVideoPosition(
     String id, {
     int episodeIndex = 0,
-  }) async =>
-      (positionMs: 0, updatedAtMs: 0);
+  }) async => (positionMs: 0, updatedAtMs: 0);
 
   @override
   Future<void> putRemoteVideoPosition(

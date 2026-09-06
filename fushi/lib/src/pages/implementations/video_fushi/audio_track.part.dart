@@ -60,11 +60,14 @@ extension _VideoAudioTrack on _VideoFushiPageState {
     if (_isRemote) {
       final (String uid, _) = _remotePositionKeyForIndex(_currentEpisode);
       final int nowMs = await _stampRemoteStringPref(
-          videoRemoteAudioTrackPrefKey(uid),
-          videoRemoteAudioTrackAtPrefKey(uid),
-          track.id);
-      _pushRemotePlayback(uid,
-          VideoPlaybackSyncState(audioTrackId: track.id, audioTrackAt: nowMs));
+        videoRemoteAudioTrackPrefKey(uid),
+        videoRemoteAudioTrackAtPrefKey(uid),
+        track.id,
+      );
+      _pushRemotePlayback(
+        uid,
+        VideoPlaybackSyncState(audioTrackId: track.id, audioTrackAt: nowMs),
+      );
     } else {
       final int? collectionId = widget.playlistCollectionId;
       if (collectionId != null) {
@@ -75,9 +78,10 @@ extension _VideoAudioTrack on _VideoFushiPageState {
         // 本机镜像盖戳（互联 LWW 载体）：否则对端上报过一次后，本机选轨（row
         // 无戳恒 0）永远输给旧戳、再也传不出去。
         await _stampRemoteStringPref(
-            videoRemoteAudioTrackPrefKey(widget.bookUid),
-            videoRemoteAudioTrackAtPrefKey(widget.bookUid),
-            track.id);
+          videoRemoteAudioTrackPrefKey(widget.bookUid),
+          videoRemoteAudioTrackAtPrefKey(widget.bookUid),
+          track.id,
+        );
       }
     }
     if (!mounted) return;

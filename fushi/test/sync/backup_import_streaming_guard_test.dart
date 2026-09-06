@@ -23,48 +23,76 @@ void main() {
     test('backup_service：导入/合并路径不再把整个条目 materialize 后 writeAsBytes', () {
       final String src = read('lib/src/sync/backup_service.dart');
       // 旧的整条目 materialize 直写必须消失（meta.content 仍可，因为它极小）。
-      expect(src.contains('writeAsBytes(dbFile.content'), isFalse,
-          reason: 'DB 覆盖必须流式，不得 writeAsBytes 整个 DB（OOM 根因）');
-      expect(src.contains('writeAsBytes(file.content'), isFalse,
-          reason: 'local_audio DB（可数 GB）必须流式落盘');
-      expect(src.contains('entry.key.content as List<int>'), isFalse,
-          reason: '内容树/词典资源必须流式落盘，不得整条目读进堆');
+      expect(
+        src.contains('writeAsBytes(dbFile.content'),
+        isFalse,
+        reason: 'DB 覆盖必须流式，不得 writeAsBytes 整个 DB（OOM 根因）',
+      );
+      expect(
+        src.contains('writeAsBytes(file.content'),
+        isFalse,
+        reason: 'local_audio DB（可数 GB）必须流式落盘',
+      );
+      expect(
+        src.contains('entry.key.content as List<int>'),
+        isFalse,
+        reason: '内容树/词典资源必须流式落盘，不得整条目读进堆',
+      );
       // 流式 + 后台 isolate 基础设施在场。
       expect(src.contains('_extractEntriesStreaming'), isTrue);
-      expect(src.contains('OutputFileStream'), isTrue,
-          reason: '必须用 OutputFileStream 分块落盘');
-      expect(src.contains('Isolate.spawn('), isTrue,
-          reason: '重解压/落盘必须在后台 isolate，避免冻结 UI isolate（进度卡死）');
-      expect(src.contains('file.rawContent'), isTrue,
-          reason:
-              '走 rawContent 分块流式（archive 3.6.1 writeContent 会 materialize）');
+      expect(
+        src.contains('OutputFileStream'),
+        isTrue,
+        reason: '必须用 OutputFileStream 分块落盘',
+      );
+      expect(
+        src.contains('Isolate.spawn('),
+        isTrue,
+        reason: '重解压/落盘必须在后台 isolate，避免冻结 UI isolate（进度卡死）',
+      );
+      expect(
+        src.contains('file.rawContent'),
+        isTrue,
+        reason: '走 rawContent 分块流式（archive 3.6.1 writeContent 会 materialize）',
+      );
     });
 
     test('backup_service：restoreBackup/mergeRestoreBackup 暴露 onProgress', () {
       final String src = read('lib/src/sync/backup_service.dart');
-      expect(src.contains('void Function(double progress)? onProgress'), isTrue,
-          reason: '导入必须能把确定进度回报给遮罩');
+      expect(
+        src.contains('void Function(double progress)? onProgress'),
+        isTrue,
+        reason: '导入必须能把确定进度回报给遮罩',
+      );
     });
 
     test('app_model：BackupImportPhase 具备 failed 态 + 确定进度 notifier', () {
       final String src = read('lib/src/models/app_model.dart');
       // TODO-1151 起 validating 相位加入（读取/预览遮罩）；此处只锁 failed 态仍在。
       expect(
-          src.contains(
-              'enum BackupImportPhase { validating, running, done, failed }'),
-          isTrue,
-          reason: '必须有 failed 态，才能把失败画成错误图标而非绿✓');
+        src.contains(
+          'enum BackupImportPhase { validating, running, done, failed }',
+        ),
+        isTrue,
+        reason: '必须有 failed 态，才能把失败画成错误图标而非绿✓',
+      );
       expect(src.contains('void failBackupImport('), isTrue);
-      expect(src.contains('backupImportProgress'), isTrue,
-          reason: '确定进度用 ValueNotifier，只重建进度条');
+      expect(
+        src.contains('backupImportProgress'),
+        isTrue,
+        reason: '确定进度用 ValueNotifier，只重建进度条',
+      );
     });
 
     test('backup.part：导入失败走 failBackupImport（不再 completeBackupImport 显成功）', () {
-      final String src =
-          read('lib/src/sync/sync_settings_schema/backup.part.dart');
+      final String src = read(
+        'lib/src/sync/sync_settings_schema/backup.part.dart',
+      );
       final int importIdx = src.indexOf('Future<void> _import()');
-      final int nextTop =
-          src.indexOf('Future<_BackupImportChoice?>', importIdx);
+      final int nextTop = src.indexOf(
+        'Future<_BackupImportChoice?>',
+        importIdx,
+      );
       expect(importIdx, greaterThan(0));
       expect(nextTop, greaterThan(importIdx));
       final String importBody = src.substring(importIdx, nextTop);
@@ -72,13 +100,15 @@ void main() {
       expect(catchIdx, greaterThan(0));
       // catch 分支（失败）必须切失败态。
       expect(
-          importBody.substring(catchIdx).contains('appModel.failBackupImport('),
-          isTrue,
-          reason: '导入失败必须切 failed 态，根治「失败却显绿✓成功」');
+        importBody.substring(catchIdx).contains('appModel.failBackupImport('),
+        isTrue,
+        reason: '导入失败必须切 failed 态，根治「失败却显绿✓成功」',
+      );
       // 成功路径仍显成功文案。
       expect(
-          importBody.contains('completeBackupImport(t.backup_import_success)'),
-          isTrue);
+        importBody.contains('completeBackupImport(t.backup_import_success)'),
+        isTrue,
+      );
     });
 
     test('overlay：failed 态画 error_outline（cs.error），done 态画 check_circle', () {

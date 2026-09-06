@@ -18,17 +18,16 @@ Future<void> showVideoSourceScrapeTaskPanel({
   Future<void> Function(VideoSourceScrapeRunRow run)? onRetry,
   Future<SourceLibraryRow?> Function(int sourceId)? loadSource,
   Future<List<VideoPendingScrapeWork>> Function()? loadPendingWorks,
-}) =>
-    showAppDialog<void>(
-      context: context,
-      builder: (BuildContext context) => _VideoSourceScrapeTaskPanel(
-        controller: controller,
-        loadRuns: loadRuns,
-        onRetry: onRetry,
-        loadSource: loadSource,
-        loadPendingWorks: loadPendingWorks,
-      ),
-    );
+}) => showAppDialog<void>(
+  context: context,
+  builder: (BuildContext context) => _VideoSourceScrapeTaskPanel(
+    controller: controller,
+    loadRuns: loadRuns,
+    onRetry: onRetry,
+    loadSource: loadSource,
+    loadPendingWorks: loadPendingWorks,
+  ),
+);
 
 class _VideoSourceScrapeTaskPanel extends StatefulWidget {
   const _VideoSourceScrapeTaskPanel({
@@ -80,7 +79,8 @@ class _VideoSourceScrapeTaskPanelState
 
   void _changed() {
     final VideoSourceScrapePhase next = widget.controller.progress.phase;
-    final bool becameTerminal = next != _lastPhase &&
+    final bool becameTerminal =
+        next != _lastPhase &&
         !widget.controller.progress.isRunning &&
         next != VideoSourceScrapePhase.idle;
     _lastPhase = next;
@@ -158,10 +158,10 @@ class _VideoSourceScrapeTaskPanelState
                     child: widget.controller.isScanning
                         ? Text(t.video_source_scrape_phase_scanning)
                         : confirmation != null
-                            ? _buildConfirmation(confirmation)
-                            : report != null
-                                ? _buildReport(report)
-                                : _buildProgress(progress),
+                        ? _buildConfirmation(confirmation)
+                        : report != null
+                        ? _buildReport(report)
+                        : _buildProgress(progress),
                   ),
                   const SizedBox(height: 18),
                 ],
@@ -221,11 +221,13 @@ class _VideoSourceScrapeTaskPanelState
       children: <Widget>[
         if (progress.isRunning) LinearProgressIndicator(value: value),
         if (progress.isRunning) const SizedBox(height: 12),
-        Text(t.video_source_scrape_progress(
-          phase: phase,
-          current: progress.current,
-          total: total,
-        )),
+        Text(
+          t.video_source_scrape_progress(
+            phase: phase,
+            current: progress.current,
+            total: total,
+          ),
+        ),
         if (progress.sourceLabel case final String label) ...<Widget>[
           const SizedBox(height: 6),
           Text(label),
@@ -283,11 +285,11 @@ class _VideoSourceScrapeTaskPanelState
   Future<void> _bindPendingWork(VideoPendingScrapeWork entry) async {
     final VideoSourceScrapeConfirmationCandidate? candidate =
         await showVideoSourceScrapeManualBindingDialog(
-      context: context,
-      controller: widget.controller,
-      source: entry.source,
-      workTitle: entry.work.title,
-    );
+          context: context,
+          controller: widget.controller,
+          source: entry.source,
+          workTitle: entry.work.title,
+        );
     if (candidate == null || !mounted) return;
     setState(() {
       _bindingStableKey = entry.work.stableKey;
@@ -337,7 +339,8 @@ class _VideoSourceScrapeTaskPanelState
             subtitle: Text(_runSubtitle(run)),
             subtitleMaxLines: 3,
             onTap: () => unawaited(_openRunDetail(run)),
-            trailing: widget.onRetry != null &&
+            trailing:
+                widget.onRetry != null &&
                     run.sourceId != null &&
                     scrapeRunHasUnresolvedWorks(run)
                 ? IconButton(
@@ -412,28 +415,28 @@ class _VideoSourceScrapeTaskPanelState
   }
 
   String _phaseLabel(VideoSourceScrapePhase phase) => switch (phase) {
-        VideoSourceScrapePhase.planning => t.video_source_scrape_phase_planning,
-        VideoSourceScrapePhase.recognizing =>
-          t.video_source_scrape_phase_recognizing,
-        VideoSourceScrapePhase.fetching => t.video_source_scrape_phase_fetching,
-        VideoSourceScrapePhase.applying => t.video_source_scrape_phase_applying,
-        VideoSourceScrapePhase.writingSidecars =>
-          t.video_source_scrape_phase_writing_sidecars,
-        VideoSourceScrapePhase.completed => t.download_task_status_completed,
-        VideoSourceScrapePhase.cancelled => t.download_status_cancelled,
-        VideoSourceScrapePhase.interrupted =>
-          t.video_source_scrape_status_interrupted,
-        VideoSourceScrapePhase.failed => t.download_task_status_error,
-        VideoSourceScrapePhase.idle => t.video_source_scrape_tasks_empty,
-      };
+    VideoSourceScrapePhase.planning => t.video_source_scrape_phase_planning,
+    VideoSourceScrapePhase.recognizing =>
+      t.video_source_scrape_phase_recognizing,
+    VideoSourceScrapePhase.fetching => t.video_source_scrape_phase_fetching,
+    VideoSourceScrapePhase.applying => t.video_source_scrape_phase_applying,
+    VideoSourceScrapePhase.writingSidecars =>
+      t.video_source_scrape_phase_writing_sidecars,
+    VideoSourceScrapePhase.completed => t.download_task_status_completed,
+    VideoSourceScrapePhase.cancelled => t.download_status_cancelled,
+    VideoSourceScrapePhase.interrupted =>
+      t.video_source_scrape_status_interrupted,
+    VideoSourceScrapePhase.failed => t.download_task_status_error,
+    VideoSourceScrapePhase.idle => t.video_source_scrape_tasks_empty,
+  };
 
   IconData _runIcon(String status) => switch (status) {
-        'completed' => Icons.check_circle_outline,
-        'failed' => Icons.error_outline,
-        'cancelled' => Icons.cancel_outlined,
-        'interrupted' => Icons.pause_circle_outline,
-        _ => Icons.sync,
-      };
+    'completed' => Icons.check_circle_outline,
+    'failed' => Icons.error_outline,
+    'cancelled' => Icons.cancel_outlined,
+    'interrupted' => Icons.pause_circle_outline,
+    _ => Icons.sync,
+  };
 
   Widget _buildConfirmation(VideoSourceScrapeConfirmation confirmation) {
     return Column(
@@ -457,9 +460,9 @@ class _VideoSourceScrapeTaskPanelState
             separatorBuilder: (_, __) => const Divider(height: 1),
             itemBuilder: (BuildContext context, int index) =>
                 VideoSourceScrapeCandidateTile(
-              candidate: confirmation.candidates[index],
-              onSelected: widget.controller.confirmPending,
-            ),
+                  candidate: confirmation.candidates[index],
+                  onSelected: widget.controller.confirmPending,
+                ),
           ),
         ),
       ],
@@ -475,12 +478,14 @@ class _VideoSourceScrapeTaskPanelState
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        Text(t.scrape_all_done(
-          applied: report.succeededWorks,
-          review: report.pendingConfirmations,
-          skipped: report.protectedArtifacts,
-          failed: report.failedWorks,
-        )),
+        Text(
+          t.scrape_all_done(
+            applied: report.succeededWorks,
+            review: report.pendingConfirmations,
+            skipped: report.protectedArtifacts,
+            failed: report.failedWorks,
+          ),
+        ),
         if (issues.isNotEmpty) ...<Widget>[
           const SizedBox(height: 12),
           ConstrainedBox(

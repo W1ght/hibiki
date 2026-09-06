@@ -86,10 +86,10 @@ class SyncCompareEntry {
   /// 冲突 = 双边都偏离共同祖先 base（真分叉），不再是简单的时间戳不等。
   /// 单边改动（一边等于 base）由 [resolveProgressSync] 判为自动方向，不算冲突。
   bool get hasConflict => resolveProgressSync(
-        local: localUpdatedAt,
-        remote: remoteUpdatedAt,
-        base: base,
-      ).isConflict;
+    local: localUpdatedAt,
+    remote: remoteUpdatedAt,
+    base: base,
+  ).isConflict;
   bool get isSynced =>
       hasLocal && hasRemote && localUpdatedAt == remoteUpdatedAt;
   bool get needsManualChoice => hasConflict;
@@ -131,8 +131,9 @@ Future<bool> _remoteFolderHasContent(
 ) async {
   try {
     final List<AssetEntry> children = await backend.listChildren(folderId);
-    return children.any((AssetEntry e) =>
-        !e.isFolder && e.name.toLowerCase().endsWith('.epub'));
+    return children.any(
+      (AssetEntry e) => !e.isFolder && e.name.toLowerCase().endsWith('.epub'),
+    );
   } catch (e) {
     developer.log(
       'Failed to check remote content for "$folderId"',
@@ -148,8 +149,7 @@ Future<bool> _remoteFolderHasContent(
 Future<List<SyncCompareEntry>> fetchCompareDataForTest(
   FushiDatabase db,
   SyncBackend backend,
-) =>
-    _fetchCompareData(db, backend);
+) => _fetchCompareData(db, backend);
 
 Future<List<SyncCompareEntry>> _fetchCompareData(
   FushiDatabase db,
@@ -161,12 +161,13 @@ Future<List<SyncCompareEntry>> _fetchCompareData(
   // Reserved asset namespaces (e.g. __dictionaries__) live alongside book
   // folders under the root; they are not books and must not appear as phantom
   // compare entries.
-  final remoteBooks = (await backend.listBooks(rootId))
-      .where((SyncFileRef f) => !isReservedSyncFolderName(f.name))
-      .toList();
+  final remoteBooks = (await backend.listBooks(
+    rootId,
+  )).where((SyncFileRef f) => !isReservedSyncFolderName(f.name)).toList();
   backend.cacheBookFolderIds(remoteBooks);
-  final List<RemoteBookInfo> liveBooks =
-      backend is InterconnectSyncBackend ? await backend.listRemoteBooks() : [];
+  final List<RemoteBookInfo> liveBooks = backend is InterconnectSyncBackend
+      ? await backend.listRemoteBooks()
+      : [];
   final localBooks = await db.getAllEpubBooks();
 
   final allTitles = <String>{};
@@ -265,32 +266,36 @@ Future<List<SyncCompareEntry>> _fetchCompareData(
     // that never clears (BUG-049). The row is still kept so it can be deleted.
     final bool remoteHasContent = local == null
         ? (remote != null
-            ? await _remoteFolderHasContent(backend, remote.id)
-            : (live?.hasContent ?? true))
+              ? await _remoteFolderHasContent(backend, remote.id)
+              : (live?.hasContent ?? true))
         : true;
 
     // 跨设备资产身份与 SyncManager 一致：sanitizeTtuFilename(title)。读共同祖先
     // 基线，让「时间戳不等」收紧为「真分叉」冲突判定。
-    final int? base =
-        await db.getSyncBaseline(sanitizeTtuFilename(title), 'progress');
+    final int? base = await db.getSyncBaseline(
+      sanitizeTtuFilename(title),
+      'progress',
+    );
 
-    entries.add(SyncCompareEntry(
-      title: title,
-      bookKey: local?.bookKey,
-      remoteFolderId: remote?.id,
-      remoteLiveTitle: live?.title,
-      remoteHasContent: remoteHasContent,
-      remoteAudioBookId: remoteData?.audioBookId,
-      localProgress: localProg,
-      localUpdatedAt: localUpdatedAt,
-      remoteProgress: remoteData?.progress,
-      remoteUpdatedAt: remoteData?.updatedAt,
-      localStatsCount: localStatsCount,
-      remoteStatsCount: remoteData?.statsCount,
-      localAudioPosMs: localAudioMs,
-      remoteAudioPosSec: remoteData?.audioPosSec,
-      base: base,
-    ));
+    entries.add(
+      SyncCompareEntry(
+        title: title,
+        bookKey: local?.bookKey,
+        remoteFolderId: remote?.id,
+        remoteLiveTitle: live?.title,
+        remoteHasContent: remoteHasContent,
+        remoteAudioBookId: remoteData?.audioBookId,
+        localProgress: localProg,
+        localUpdatedAt: localUpdatedAt,
+        remoteProgress: remoteData?.progress,
+        remoteUpdatedAt: remoteData?.updatedAt,
+        localStatsCount: localStatsCount,
+        remoteStatsCount: remoteData?.statsCount,
+        localAudioPosMs: localAudioMs,
+        remoteAudioPosSec: remoteData?.audioPosSec,
+        base: base,
+      ),
+    );
   }
 
   // BUG-1576：folder 缓存按通道分槽落盘。对比对话框拿的是**某一条**已解析通道的
@@ -344,8 +349,10 @@ Future<List<SyncDictEntry>> _fetchDictEntries(
   // 纯本地项（远端没有、这里没得删）曾被「词典同步开关关着」过滤掉，理由是别用
   // 无关本地词典刷屏。开关没了之后这个过滤反而有害：本地独有 = 「还没上传的那些」，
   // 正是用户点设置页那个上传按钮之前要看的清单。远端项本来就始终保留（要删它）。
-  out.sort((SyncDictEntry a, SyncDictEntry b) =>
-      a.name.toLowerCase().compareTo(b.name.toLowerCase()));
+  out.sort(
+    (SyncDictEntry a, SyncDictEntry b) =>
+        a.name.toLowerCase().compareTo(b.name.toLowerCase()),
+  );
   return out;
 }
 
@@ -383,21 +390,27 @@ Future<_RemoteBookData> _fetchRemoteBookData(
     final futures = <Future<void>>[];
 
     if (syncFiles.progress != null) {
-      futures.add(backend.getProgressFile(syncFiles.progress!.id).then((p) {
-        progress = p.progress;
-        updatedAt = p.lastBookmarkModified;
-      }));
+      futures.add(
+        backend.getProgressFile(syncFiles.progress!.id).then((p) {
+          progress = p.progress;
+          updatedAt = p.lastBookmarkModified;
+        }),
+      );
     }
     if (syncFiles.statistics != null) {
-      futures.add(backend.getStatsFile(syncFiles.statistics!.id).then((s) {
-        statsCount = s.length;
-      }));
+      futures.add(
+        backend.getStatsFile(syncFiles.statistics!.id).then((s) {
+          statsCount = s.length;
+        }),
+      );
     }
     if (syncFiles.audioBook != null) {
       audioBookId = syncFiles.audioBook!.id;
-      futures.add(backend.getAudioBookFile(syncFiles.audioBook!.id).then((a) {
-        audioPosSec = a.playbackPositionSec;
-      }));
+      futures.add(
+        backend.getAudioBookFile(syncFiles.audioBook!.id).then((a) {
+          audioPosSec = a.playbackPositionSec;
+        }),
+      );
     }
 
     await Future.wait(futures);
@@ -419,10 +432,7 @@ Future<_RemoteBookData> _fetchRemoteBookData(
   }
 }
 
-Future<String> _ensureRoot(
-  SyncBackend backend,
-  SyncRepository repo,
-) async {
+Future<String> _ensureRoot(SyncBackend backend, SyncRepository repo) async {
   if (backend.cachedRootFolderId != null) return backend.cachedRootFolderId!;
   // BUG-1576：只读**本通道**那格。读全局键时，互联通道上一轮写下的绝对 URL 会被
   // 云后端当成 fileId / 被 WebDAV 当成自己的路径直接请求出去。
@@ -464,8 +474,8 @@ Future<void> showSyncCompareDialog(
   // "set up sync first" (mobile google_sign_in / desktop refresh) (BUG-047).
   // Do it under the sync mutex so the auth restore (which can reconnect/clear a
   // backend's cache) never races an in-flight sync (BUG-083).
-  final SyncBackend? backend =
-      await runExclusiveWithSync<SyncBackend?>(() async {
+  final SyncBackend?
+  backend = await runExclusiveWithSync<SyncBackend?>(() async {
     for (final SyncChannel channel in await enabledSyncChannelBackends(repo)) {
       try {
         await channel.backend.restoreAuth(repo);
@@ -566,11 +576,12 @@ class _SyncCompareDialogState extends State<SyncCompareDialog> {
       // and rewrites the singleton backend's folder-id cache, so running it
       // concurrently with an in-flight sync corrupted the sync's view and made
       // this load contend on the same connection (slow / timeout) (BUG-083).
-      final results =
-          await runExclusiveWithSync(() => Future.wait(<Future<Object>>[
-                _fetchCompareData(widget.db, widget.backend),
-                _fetchDictEntries(widget.db, widget.backend),
-              ]));
+      final results = await runExclusiveWithSync(
+        () => Future.wait(<Future<Object>>[
+          _fetchCompareData(widget.db, widget.backend),
+          _fetchDictEntries(widget.db, widget.backend),
+        ]),
+      );
       final entries = results[0] as List<SyncCompareEntry>;
       final dicts = results[1] as List<SyncDictEntry>;
       final choices = <String, SyncChoice>{};
@@ -661,7 +672,8 @@ class _SyncCompareDialogState extends State<SyncCompareDialog> {
           onContentProgress: (fraction) {
             if (mounted && total > 0) {
               setState(
-                  () => _progress = (done + fraction.clamp(0.0, 1.0)) / total);
+                () => _progress = (done + fraction.clamp(0.0, 1.0)) / total,
+              );
             }
           },
         );
@@ -751,10 +763,7 @@ class _SyncCompareDialogState extends State<SyncCompareDialog> {
 
         if (mounted) {
           if (errors.isNotEmpty) {
-            showSyncMessage(
-              context,
-              t.sync_error(message: errors.join(', ')),
-            );
+            showSyncMessage(context, t.sync_error(message: errors.join(', ')));
           }
           Navigator.pop(context, applied);
         }
@@ -786,8 +795,8 @@ class _SyncCompareDialogState extends State<SyncCompareDialog> {
     final Directory? audioRoot = widget.audioDatabaseRoot;
     if (audioRoot == null) return;
 
-    final List<RemoteAudiobookInfo> remote =
-        await backend.listRemoteAudiobooks();
+    final List<RemoteAudiobookInfo> remote = await backend
+        .listRemoteAudiobooks();
     // host 清单条目带真实 bookKey（= Audiobooks.bookKey）+ title（= srt.title）。
     // 按 title 找到该书，用其真实 bookKey 下载——不要按书名重算 ttu 文件名（BUG-414）。
     String? remoteBookKey;
@@ -964,7 +973,9 @@ class _SyncCompareDialogState extends State<SyncCompareDialog> {
         // （BUG-202）。DB 写不依赖 UI，放在 mounted 检查前以保证一定落盘。
         widget.backend.evictFolderId(id);
         await SyncRepository(widget.db).setFolderCache(
-            syncChannelScopeOf(widget.backend), widget.backend.cachedFolderIds);
+          syncChannelScopeOf(widget.backend),
+          widget.backend.cachedFolderIds,
+        );
       }
       if (!mounted) return;
       setState(onSuccess);
@@ -1013,8 +1024,10 @@ class _SyncCompareDialogState extends State<SyncCompareDialog> {
       body = Center(
         child: Padding(
           padding: EdgeInsets.all(tokens.spacing.card),
-          child:
-              Text(_error!, style: TextStyle(color: theme.colorScheme.error)),
+          child: Text(
+            _error!,
+            style: TextStyle(color: theme.colorScheme.error),
+          ),
         ),
       );
     } else if (_entries == null) {
@@ -1166,15 +1179,21 @@ class _SyncCompareDialogState extends State<SyncCompareDialog> {
     );
   }
 
-  Widget _sectionHeader(String text, ThemeData theme,
-      {bool isConflict = false}) {
+  Widget _sectionHeader(
+    String text,
+    ThemeData theme, {
+    bool isConflict = false,
+  }) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
       child: Row(
         children: [
           if (isConflict) ...[
-            Icon(Icons.warning_amber_rounded,
-                size: 16, color: theme.colorScheme.error),
+            Icon(
+              Icons.warning_amber_rounded,
+              size: 16,
+              color: theme.colorScheme.error,
+            ),
             const SizedBox(width: 4),
           ],
           Text(
@@ -1219,8 +1238,11 @@ class _SyncCompareDialogState extends State<SyncCompareDialog> {
               if (isConflict)
                 Padding(
                   padding: const EdgeInsetsDirectional.only(start: 4),
-                  child: Icon(Icons.warning_amber_rounded,
-                      size: 16, color: theme.colorScheme.error),
+                  child: Icon(
+                    Icons.warning_amber_rounded,
+                    size: 16,
+                    color: theme.colorScheme.error,
+                  ),
                 ),
               if (entry.remoteFolderId != null ||
                   entry.remoteAudioBookId != null)
@@ -1298,8 +1320,9 @@ class _SyncCompareDialogState extends State<SyncCompareDialog> {
             const SizedBox(height: 6),
             Text(
               t.sync_compare_no_content,
-              style: theme.textTheme.labelMedium
-                  ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+              style: theme.textTheme.labelMedium?.copyWith(
+                color: theme.colorScheme.onSurfaceVariant,
+              ),
             ),
           ],
         ],
@@ -1330,8 +1353,11 @@ class _SyncCompareDialogState extends State<SyncCompareDialog> {
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
       child: Row(
         children: <Widget>[
-          Icon(Icons.menu_book_outlined,
-              size: 18, color: theme.colorScheme.onSurfaceVariant),
+          Icon(
+            Icons.menu_book_outlined,
+            size: 18,
+            color: theme.colorScheme.onSurfaceVariant,
+          ),
           const SizedBox(width: 6),
           Expanded(
             child: Text(
@@ -1343,8 +1369,9 @@ class _SyncCompareDialogState extends State<SyncCompareDialog> {
           ),
           Text(
             d.hasRemote ? t.sync_compare_remote : t.sync_compare_local,
-            style: theme.textTheme.bodySmall
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+            style: theme.textTheme.bodySmall?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
           ),
           if (d.hasRemote)
             FushiOverflowMenu<String>(
@@ -1443,8 +1470,9 @@ class _SyncCompareDialogState extends State<SyncCompareDialog> {
     final progress = isLocal ? e.localProgress : e.remoteProgress;
     final updatedAt = isLocal ? e.localUpdatedAt : e.remoteUpdatedAt;
     final statsCount = isLocal ? e.localStatsCount : e.remoteStatsCount;
-    final hasAudio =
-        isLocal ? e.localAudioPosMs != null : e.remoteAudioPosSec != null;
+    final hasAudio = isLocal
+        ? e.localAudioPosMs != null
+        : e.remoteAudioPosSec != null;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

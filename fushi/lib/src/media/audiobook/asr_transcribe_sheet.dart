@@ -41,7 +41,8 @@ Future<String?> showAsrTranscribeSheet({
   Future<String?> Function({
     required String fileName,
     required String? initialDirectory,
-  })? saveFilePicker,
+  })?
+  saveFilePicker,
   String Function()? languageGetter,
   Future<void> Function(String tag)? languageSetter,
 }) {
@@ -50,19 +51,21 @@ Future<String?> showAsrTranscribeSheet({
   String Function() getter = languageGetter ?? () => '';
   Future<void> Function(String) setter = languageSetter ?? (String _) async {};
   if (languageGetter == null || languageSetter == null) {
-    final AppModel appModel =
-        ProviderScope.containerOf(context, listen: false).read(appProvider);
+    final AppModel appModel = ProviderScope.containerOf(
+      context,
+      listen: false,
+    ).read(appProvider);
     getter = languageGetter ?? () => appModel.asrTranscribeLanguage;
     setter = languageSetter ?? appModel.setAsrTranscribeLanguage;
   }
   Widget build(BuildContext ctx) => AsrTranscribeSheet(
-        audioPaths: audioPaths,
-        service: effective,
-        saveFilePicker: saveFilePicker,
-        languageHint: languageHint,
-        languageGetter: getter,
-        languageSetter: setter,
-      );
+    audioPaths: audioPaths,
+    service: effective,
+    saveFilePicker: saveFilePicker,
+    languageHint: languageHint,
+    languageGetter: getter,
+    languageSetter: setter,
+  );
   if (isDesktopPlatform) {
     return showAppDialog<String>(
       context: context,
@@ -84,9 +87,9 @@ Future<String?> showAsrTranscribeSheet({
 
 /// 语音语言的用户可见名（转录弹层分段按钮与设置页模型行共用）。
 String asrLanguageLabel(AsrLanguage language) => switch (language) {
-      AsrLanguage.japanese => t.audiobook_transcribe_language_ja,
-      AsrLanguage.english => t.audiobook_transcribe_language_en,
-    };
+  AsrLanguage.japanese => t.audiobook_transcribe_language_ja,
+  AsrLanguage.english => t.audiobook_transcribe_language_en,
+};
 
 /// 纯函数：由书的语言标签（EPUB `dc:language`，如 `ja-JP` / `en_GB` / `EN`）推
 /// 转录弹层的语言初值——取 BCP-47 主子标签（`-` / `_` 前那段，大小写不敏感）再
@@ -114,8 +117,7 @@ enum SubtitleSourceChoice {
 bool shouldOfferSubtitleSourceChooser({
   required bool asrSupported,
   required bool hasAudio,
-}) =>
-    asrSupported && hasAudio;
+}) => asrSupported && hasAudio;
 
 /// 弹「字幕来源」选择：选现成文件 / 设备端转录。关闭返回 null。
 ///
@@ -181,17 +183,21 @@ Future<bool> exportTranscribedSrt({
   Future<String?> Function({
     required String fileName,
     required String? initialDirectory,
-  })? saveFilePicker,
+  })?
+  saveFilePicker,
   bool? desktop,
 }) async {
   final String suggestedName = suggestedTranscriptFileName(audioPaths);
   if (desktop ?? isDesktopPlatform) {
-    final String? initialDirectory =
-        audioPaths.isEmpty ? null : File(audioPaths.first).parent.path;
+    final String? initialDirectory = audioPaths.isEmpty
+        ? null
+        : File(audioPaths.first).parent.path;
     final Future<String?> Function({
       required String fileName,
       required String? initialDirectory,
-    }) pick = saveFilePicker ??
+    })
+    pick =
+        saveFilePicker ??
         ({required String fileName, required String? initialDirectory}) =>
             FilePicker.platform.saveFile(
               dialogTitle: t.audiobook_transcribe_export,
@@ -208,12 +214,9 @@ Future<bool> exportTranscribedSrt({
     await File(srtPath).copy(savePath);
     return true;
   }
-  await FushiShare.shareFiles(
-    <XFile>[
-      XFile(srtPath, mimeType: 'application/x-subrip', name: suggestedName)
-    ],
-    subject: suggestedName,
-  );
+  await FushiShare.shareFiles(<XFile>[
+    XFile(srtPath, mimeType: 'application/x-subrip', name: suggestedName),
+  ], subject: suggestedName);
   return true;
 }
 
@@ -255,7 +258,8 @@ class AsrTranscribeSheet extends StatefulWidget {
   final Future<String?> Function({
     required String fileName,
     required String? initialDirectory,
-  })? saveFilePicker;
+  })?
+  saveFilePicker;
   final AsrTranscriptionService service;
 
   /// 书本身的语言推出的初值（见 [showAsrTranscribeSheet]）；优先于 [languageGetter]，
@@ -297,7 +301,8 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
   @override
   void initState() {
     super.initState();
-    _language = widget.languageHint ??
+    _language =
+        widget.languageHint ??
         AsrLanguage.fromTag(widget.languageGetter?.call()) ??
         AsrLanguage.japanese;
     _refreshPlan();
@@ -382,30 +387,30 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
     _downloadSub = widget.service
         .downloadModel(language: plan.language, variant: plan.variant)
         .listen(
-      (ModelDownloadEvent e) {
-        if (e.fileName != lastFile) {
-          completedBytes += lastFileTotal;
-          lastFile = e.fileName;
-          lastFileTotal = e.totalBytes;
-        }
-        if (!mounted) return;
-        setState(() {
-          _downloadFile = e.fileName;
-          _downloadReceived = completedBytes + e.receivedBytes;
-        });
-      },
-      onError: (Object e, StackTrace _) {
-        if (!mounted) return;
-        setState(() {
-          _phase = _Phase.error;
-          _error = '$e';
-        });
-      },
-      onDone: () {
-        if (!mounted) return;
-        _refreshPlan();
-      },
-    );
+          (ModelDownloadEvent e) {
+            if (e.fileName != lastFile) {
+              completedBytes += lastFileTotal;
+              lastFile = e.fileName;
+              lastFileTotal = e.totalBytes;
+            }
+            if (!mounted) return;
+            setState(() {
+              _downloadFile = e.fileName;
+              _downloadReceived = completedBytes + e.receivedBytes;
+            });
+          },
+          onError: (Object e, StackTrace _) {
+            if (!mounted) return;
+            setState(() {
+              _phase = _Phase.error;
+              _error = '$e';
+            });
+          },
+          onDone: () {
+            if (!mounted) return;
+            _refreshPlan();
+          },
+        );
   }
 
   Future<void> _startTranscription() async {
@@ -437,19 +442,19 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
           if (!mounted) return;
           switch (e) {
             case AsrTranscribeProgressEvent(
-                progress: final AsrTranscribeProgress p,
-              ):
+              progress: final AsrTranscribeProgress p,
+            ):
               setState(() => _progress = p);
             case AsrTranscribePausedEvent(
-                progress: final AsrTranscribeProgress p,
-              ):
+              progress: final AsrTranscribeProgress p,
+            ):
               setState(() {
                 _progress = p;
                 _phase = _Phase.paused;
               });
             case AsrTranscribeFinishedEvent(
-                result: final AsrTranscribeResult r,
-              ):
+              result: final AsrTranscribeResult r,
+            ):
               setState(() {
                 _result = r;
                 _finishedSrt = r.srtPath;
@@ -530,16 +535,16 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
   // ── 展示 ───────────────────────────────────────────────────────────────────
 
   String _providerLabel(OnnxExecutionProvider p) => switch (p) {
-        OnnxExecutionProvider.cuda => 'CUDA (GPU)',
-        OnnxExecutionProvider.directml => 'DirectML (GPU)',
-        OnnxExecutionProvider.coreml => 'CoreML',
-        OnnxExecutionProvider.cpu => 'CPU',
-      };
+    OnnxExecutionProvider.cuda => 'CUDA (GPU)',
+    OnnxExecutionProvider.directml => 'DirectML (GPU)',
+    OnnxExecutionProvider.coreml => 'CoreML',
+    OnnxExecutionProvider.cpu => 'CPU',
+  };
 
   String _variantLabel(AsrEncoderVariant v) => switch (v) {
-        AsrEncoderVariant.fp32 => 'fp32 · GPU',
-        AsrEncoderVariant.int8 => 'int8 · CPU',
-      };
+    AsrEncoderVariant.fp32 => 'fp32 · GPU',
+    AsrEncoderVariant.int8 => 'int8 · CPU',
+  };
 
   static String _fmtDuration(Duration d) {
     final int h = d.inHours;
@@ -574,7 +579,7 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
           variant: plan == null
               ? ''
               : '${asrModelPackFor(plan.language).displayName} · '
-                  '${_variantLabel(plan.variant)}',
+                    '${_variantLabel(plan.variant)}',
         );
         final StringBuffer sb = StringBuffer(ready);
         if (_phase == _Phase.paused) {
@@ -625,8 +630,9 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
             t.audiobook_transcribe_speed(
               elapsed: _fmtDuration(p.elapsed),
               eta: eta == null ? '—' : _fmtDuration(eta),
-              speed:
-                  rtf == null || rtf <= 0 ? '—' : (1 / rtf).toStringAsFixed(1),
+              speed: rtf == null || rtf <= 0
+                  ? '—'
+                  : (1 / rtf).toStringAsFixed(1),
             ),
           );
         }
@@ -698,7 +704,8 @@ class _AsrTranscribeSheetState extends State<AsrTranscribeSheet> {
   @override
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final bool showProgressBar = _phase == _Phase.downloading ||
+    final bool showProgressBar =
+        _phase == _Phase.downloading ||
         _phase == _Phase.running ||
         _phase == _Phase.pausing ||
         _phase == _Phase.loading ||

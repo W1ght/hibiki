@@ -232,9 +232,6 @@ extension _VideoChapter on _VideoFushiPageState {
     VideoPlayerController _, {
     VideoControlSlot? sourceSlot,
   }) {
-    _showVideoSidePanel(
-      _VideoSidePanelKind.chapters,
-      sourceSlot: sourceSlot,
-    );
+    _showVideoSidePanel(_VideoSidePanelKind.chapters, sourceSlot: sourceSlot);
   }
 }

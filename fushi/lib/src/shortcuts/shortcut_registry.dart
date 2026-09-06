@@ -112,13 +112,21 @@ class FushiShortcutRegistry extends ChangeNotifier {
     if (from < 2) {
       // 全部「仅手柄改动」：键盘默认未变，用平台无关的 keyboard-untouched 判据。
       _restoreGamepadDefaultIfKeyboardUntouched(
-          ShortcutAction.globalBack, defaults);
+        ShortcutAction.globalBack,
+        defaults,
+      );
       _restoreGamepadDefaultIfKeyboardUntouched(
-          ShortcutAction.audiobookPrevSentence, defaults);
+        ShortcutAction.audiobookPrevSentence,
+        defaults,
+      );
       _restoreGamepadDefaultIfKeyboardUntouched(
-          ShortcutAction.audiobookNextSentence, defaults);
+        ShortcutAction.audiobookNextSentence,
+        defaults,
+      );
       _restoreGamepadDefaultIfKeyboardUntouched(
-          ShortcutAction.readerDismissDict, defaults);
+        ShortcutAction.readerDismissDict,
+        defaults,
+      );
     }
     // v2 -> v3（TODO-700 T6/T7）：新增 dpadUp/Down/Left/Right（gamepad scope）+
     // readerEnterCaret（reader scope）。这些是**全新 action**，老快照里根本没有它们的
@@ -240,9 +248,13 @@ class FushiShortcutRegistry extends ChangeNotifier {
     // 判据。B 不在此列——退出/关弹窗归 universal globalBack 的手柄 B（v1→v2 已补）。
     if (from < 9) {
       _restoreGamepadDefaultIfKeyboardUntouched(
-          ShortcutAction.mangaPageForward, defaults);
+        ShortcutAction.mangaPageForward,
+        defaults,
+      );
       _restoreGamepadDefaultIfKeyboardUntouched(
-          ShortcutAction.mangaPageBackward, defaults);
+        ShortcutAction.mangaPageBackward,
+        defaults,
+      );
     }
     // v9 -> v10（手柄全功能重设计 P2，查词弹窗接手柄）：给三个**已存在**的
     // dictionaryPopup 动作新增手柄默认（dpad下/上=词条导航、X=制卡）。不能用
@@ -335,16 +347,22 @@ class FushiShortcutRegistry extends ChangeNotifier {
       return; // 损坏的条目：丢弃即可，绝不因此打断整段迁移。
     }
     final bool keyboardUntouched = _sameBindings<InputBinding>(
-        legacy.keyboardBindings, oldDefaultKeyboard);
+      legacy.keyboardBindings,
+      oldDefaultKeyboard,
+    );
     final bool gamepadUntouched = _sameBindings<GamepadBinding>(
-        legacy.gamepadBindings, oldDefaultGamepad);
+      legacy.gamepadBindings,
+      oldDefaultGamepad,
+    );
     if (keyboardUntouched && gamepadUntouched) return;
 
     final ShortcutBindingSet back = bindingsFor(ShortcutAction.globalBack);
-    final List<InputBinding> keyboard =
-        List<InputBinding>.of(back.keyboardBindings);
-    final List<GamepadBinding> gamepad =
-        List<GamepadBinding>.of(back.gamepadBindings);
+    final List<InputBinding> keyboard = List<InputBinding>.of(
+      back.keyboardBindings,
+    );
+    final List<GamepadBinding> gamepad = List<GamepadBinding>.of(
+      back.gamepadBindings,
+    );
     if (!keyboardUntouched) {
       for (final InputBinding b in legacy.keyboardBindings) {
         if (!keyboard.contains(b)) keyboard.add(b);
@@ -440,22 +458,27 @@ class FushiShortcutRegistry extends ChangeNotifier {
     Iterable<MouseBinding> removeMouseConflicts = const <MouseBinding>[],
     Iterable<WheelBinding> removeWheelConflicts = const <WheelBinding>[],
   }) {
-    final Set<InputBinding> keyboardToRemove =
-        Set<InputBinding>.of(removeKeyboardConflicts);
-    final Set<GamepadBinding> gamepadToRemove =
-        Set<GamepadBinding>.of(removeGamepadConflicts);
-    final Set<MouseBinding> mouseToRemove =
-        Set<MouseBinding>.of(removeMouseConflicts);
-    final Set<WheelBinding> wheelToRemove =
-        Set<WheelBinding>.of(removeWheelConflicts);
+    final Set<InputBinding> keyboardToRemove = Set<InputBinding>.of(
+      removeKeyboardConflicts,
+    );
+    final Set<GamepadBinding> gamepadToRemove = Set<GamepadBinding>.of(
+      removeGamepadConflicts,
+    );
+    final Set<MouseBinding> mouseToRemove = Set<MouseBinding>.of(
+      removeMouseConflicts,
+    );
+    final Set<WheelBinding> wheelToRemove = Set<WheelBinding>.of(
+      removeWheelConflicts,
+    );
 
     if (keyboardToRemove.isNotEmpty ||
         gamepadToRemove.isNotEmpty ||
         mouseToRemove.isNotEmpty ||
         wheelToRemove.isNotEmpty) {
       for (final ShortcutScope scope in action.scope.coactiveScopes) {
-        for (final ShortcutAction oldAction
-            in ShortcutAction.actionsForScope(scope)) {
+        for (final ShortcutAction oldAction in ShortcutAction.actionsForScope(
+          scope,
+        )) {
           if (oldAction == action) continue;
           final ShortcutBindingSet oldBindings = bindingsFor(oldAction);
           final List<InputBinding> keyboard = oldBindings.keyboardBindings
@@ -560,10 +583,7 @@ class FushiShortcutRegistry extends ChangeNotifier {
     return null;
   }
 
-  ShortcutAction? resolveMouse(
-    int button, {
-    required ShortcutScope scope,
-  }) {
+  ShortcutAction? resolveMouse(int button, {required ShortcutScope scope}) {
     final target = MouseBinding(button);
     for (final action in ShortcutAction.actionsForScope(scope)) {
       final bindings = _bindings[action];

@@ -103,9 +103,9 @@ SettingsDestination buildMangaDestination() {
                 label: t.manga_page_animation_fade,
               ),
             ],
-            selected: (SettingsContext c) =>
-                MangaPageAnimationKey.fromKey(c.appModel.mangaPageAnimation)
-                    .key,
+            selected: (SettingsContext c) => MangaPageAnimationKey.fromKey(
+              c.appModel.mangaPageAnimation,
+            ).key,
             onChanged: (SettingsContext c, String value) =>
                 c.appModel.setMangaPageAnimation(value),
           ),

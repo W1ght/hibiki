@@ -37,12 +37,11 @@ class _ModuleSettingsViewState extends ConsumerState<ModuleSettingsView>
       appModel: appModel,
       ref: ref,
     );
-    final SettingsDestination destination = buildSettingsSchema(
-      settingsContext,
-    ).firstWhere(
-      (SettingsDestination destination) =>
-          destination.id == widget.destinationId,
-    );
+    final SettingsDestination destination = buildSettingsSchema(settingsContext)
+        .firstWhere(
+          (SettingsDestination destination) =>
+              destination.id == widget.destinationId,
+        );
     final SettingsRenderer renderer = isCupertinoPlatform(context)
         ? const CupertinoSettingsRenderer()
         : const MaterialSettingsRenderer();

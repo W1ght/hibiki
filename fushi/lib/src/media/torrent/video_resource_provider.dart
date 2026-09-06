@@ -10,8 +10,8 @@ class VideoResourceSearchRequest {
     this.episode,
     this.page = 1,
     this.limit = 100,
-  })  : assert(page > 0),
-        assert(limit > 0);
+  }) : assert(page > 0),
+       assert(limit > 0);
 
   final VideoMediaReference? media;
   final String? query;

@@ -69,7 +69,7 @@ class BookScrapeCandidate {
 /// 书籍封面刮削客户端。构造注入 [http.Client]（默认自建），测试用 mock client。
 class BookMetadataScraper {
   BookMetadataScraper({http.Client? client})
-      : _api = BangumiApiClient(client: client, userAgent: _userAgent);
+    : _api = BangumiApiClient(client: client, userAgent: _userAgent);
 
   final BangumiApiClient _api;
 

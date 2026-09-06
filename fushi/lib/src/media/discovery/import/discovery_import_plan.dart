@@ -21,11 +21,7 @@ const Set<String> kDiscoverySubtitleExtensions = <String>{
 };
 
 /// 需要先解压的压缩包扩展名。zip 走内置解码，7z/rar 依赖 7-Zip 命令行。
-const Set<String> kDiscoveryArchiveExtensions = <String>{
-  '.zip',
-  '.7z',
-  '.rar',
-};
+const Set<String> kDiscoveryArchiveExtensions = <String>{'.zip', '.7z', '.rar'};
 
 /// 漫画**图包**载体：整包交给 `MangaArchiveImporter`，不走通用解压器。
 ///
@@ -94,7 +90,8 @@ class DiscoveryImportBlockedException implements Exception {
   final String? detail;
 
   @override
-  String toString() => 'DiscoveryImportBlockedException(${blocker.name}'
+  String toString() =>
+      'DiscoveryImportBlockedException(${blocker.name}'
       '${detail == null ? '' : ': $detail'})';
 }
 
@@ -353,9 +350,9 @@ String? pickGalgameMainExe(
   if (candidates.isEmpty) candidates = exes;
 
   int depthOf(String path) => '/'.allMatches(path.replaceAll('\\', '/')).length;
-  final int minDepth = candidates.map(depthOf).reduce(
-        (int a, int b) => a < b ? a : b,
-      );
+  final int minDepth = candidates
+      .map(depthOf)
+      .reduce((int a, int b) => a < b ? a : b);
   candidates = <String>[
     for (final String path in candidates)
       if (depthOf(path) == minDepth) path,

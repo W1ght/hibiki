@@ -58,21 +58,14 @@ const Set<String> kDragVideoExtensions = <String>{
 /// 播放列表扩展名（不带点，小写）。扩展 M3U（m3u8/m3u）= 多集视频清单，语义不同于
 /// 单个视频文件：拖入后走 [parseM3u8] 解析成 playlist VideoBook（多集 + 各集进度），
 /// 不能当单视频导入。故单列一类，与 [kDragVideoExtensions] 区分。
-const Set<String> kDragPlaylistExtensions = <String>{
-  'm3u8',
-  'm3u',
-};
+const Set<String> kDragPlaylistExtensions = <String>{'m3u8', 'm3u'};
 
 /// 词典包扩展名（不带点，小写）。= 词典管理页文件选择器实际能导入的格式
 /// （Yomitan/Migaku/mdict/dsl 的 zip + 裸 .dsl/.mdx），见 DictionaryImportManager
 /// 的 detectFormat。`.ifo`/`.css` 不在此列：前者非独立导入单位、后者是随词典的样式
 /// 附件（拖单个 css 不构成一次导入）。词典拖放是词典管理页专属落点，与书架/视频
 /// 表面（books/video）互不影响，故 .zip 在此被识别为词典包而非 unknown。
-const Set<String> kDragDictionaryExtensions = <String>{
-  'zip',
-  'dsl',
-  'mdx',
-};
+const Set<String> kDragDictionaryExtensions = <String>{'zip', 'dsl', 'mdx'};
 
 /// 漫画扩展名（不带点，小写）：**明确**的漫画载体，落点表面一见即知。
 ///
@@ -104,9 +97,7 @@ const Set<String> kDragMangaExtensions = <String>{
 /// 又一处「按钮能导、拖进去不认」。判据由调用方注入（widget 层传
 /// `MangaModule.isImageArchive`，即 `MangaArchiveImporter.looksLikeImageArchive`），
 /// 分类层自身仍不碰文件系统；判据缺席时 zip 维持词典包分类，向后兼容。
-const Set<String> kDragImageArchiveProbeExtensions = <String>{
-  'zip',
-};
+const Set<String> kDragImageArchiveProbeExtensions = <String>{'zip'};
 
 /// 看得出是漫画包、但当前**导入器不支持**的扩展名（不带点，小写）。
 ///

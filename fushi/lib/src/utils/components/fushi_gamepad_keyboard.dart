@@ -102,10 +102,7 @@ class _FushiGamepadKeyboardState extends State<FushiGamepadKeyboard> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 for (final String ch in row.split(''))
-                  _KbKey(
-                    label: ch,
-                    onPress: () => widget.onChar(ch),
-                  ),
+                  _KbKey(label: ch, onPress: () => widget.onChar(ch)),
               ],
             ),
           ),
@@ -163,8 +160,9 @@ class _KbKey extends StatefulWidget {
 }
 
 class _KbKeyState extends State<_KbKey> {
-  late final FushiFocusId _focusId =
-      FushiFocusId('gamepad-key-${identityHashCode(this)}');
+  late final FushiFocusId _focusId = FushiFocusId(
+    'gamepad-key-${identityHashCode(this)}',
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -185,8 +183,9 @@ class _KbKeyState extends State<_KbKey> {
                 ? Icon(widget.icon, size: 20, color: colors.onSurface)
                 : Text(
                     widget.label,
-                    style: tokens.type.controlLabel
-                        .copyWith(color: colors.onSurface),
+                    style: tokens.type.controlLabel.copyWith(
+                      color: colors.onSurface,
+                    ),
                   ),
           ),
         ),
@@ -203,10 +202,12 @@ class _KbKeyState extends State<_KbKey> {
         ? tipped
         : Actions(
             actions: <Type, Action<Intent>>{
-              ActivateIntent: CallbackAction<ActivateIntent>(onInvoke: (_) {
-                widget.onPress();
-                return null;
-              }),
+              ActivateIntent: CallbackAction<ActivateIntent>(
+                onInvoke: (_) {
+                  widget.onPress();
+                  return null;
+                },
+              ),
             },
             child: FushiFocusTarget(id: _focusId, child: tipped),
           );
