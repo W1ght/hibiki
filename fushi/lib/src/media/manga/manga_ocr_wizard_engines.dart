@@ -49,8 +49,10 @@ class MangaOcrWizardEngines {
     MangaOcrRemoteRunner? remoteRunnerOverride,
     bool? desktopOverride,
   }) {
-    final ProviderContainer container =
-        ProviderScope.containerOf(context, listen: false);
+    final ProviderContainer container = ProviderScope.containerOf(
+      context,
+      listen: false,
+    );
     final AppModel appModel = container.read(appProvider);
     final bool desktop = desktopOverride ?? isDesktopPlatform;
     final String configured = appModel.mangaExternalMokuroPath.trim();
@@ -61,7 +63,8 @@ class MangaOcrWizardEngines {
               configuredPath: configured.isEmpty ? null : configured,
             )
           : null,
-      remoteRunner: remoteRunnerOverride ??
+      remoteRunner:
+          remoteRunnerOverride ??
           InterconnectMangaOcrClient(repo: SyncRepository(db)),
       lensRunner: GoogleLensMangaOcrService(),
       systemOcrRunner: SystemOcrMangaService(),

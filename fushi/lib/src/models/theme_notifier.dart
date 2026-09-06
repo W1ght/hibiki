@@ -24,8 +24,9 @@ Color _readableOnColor(Color color) {
 }
 
 Color _deriveContainer(Color role, Brightness brightness) {
-  final Color target =
-      brightness == Brightness.dark ? Colors.black : Colors.white;
+  final Color target = brightness == Brightness.dark
+      ? Colors.black
+      : Colors.white;
   return Color.lerp(role, target, brightness == Brightness.dark ? 0.7 : 0.85)!;
 }
 
@@ -98,10 +99,12 @@ ColorScheme buildFushiColorScheme({
     brightness: brightness,
     dynamicSchemeVariant: variant,
   );
-  final Color? secContainer =
-      secondary != null ? _deriveContainer(secondary, brightness) : null;
-  final Color? terContainer =
-      tertiary != null ? _deriveContainer(tertiary, brightness) : null;
+  final Color? secContainer = secondary != null
+      ? _deriveContainer(secondary, brightness)
+      : null;
+  final Color? terContainer = tertiary != null
+      ? _deriveContainer(tertiary, brightness)
+      : null;
   if (_hibikiSchemeCache.length >= _hibikiSchemeCacheLimit) {
     _hibikiSchemeCache.remove(_hibikiSchemeCache.keys.first);
   }
@@ -109,8 +112,9 @@ ColorScheme buildFushiColorScheme({
     primary: primary ?? base.primary,
     onPrimary: primary != null ? _readableOnColor(primary) : base.onPrimary,
     secondary: secondary ?? base.secondary,
-    onSecondary:
-        secondary != null ? _readableOnColor(secondary) : base.onSecondary,
+    onSecondary: secondary != null
+        ? _readableOnColor(secondary)
+        : base.onSecondary,
     secondaryContainer: secContainer ?? base.secondaryContainer,
     onSecondaryContainer: secContainer != null
         ? _readableOnColor(secContainer)
@@ -233,11 +237,7 @@ class CustomThemeEntry {
   final int? sentenceAudioHighlightColor;
   final int? linkColor;
 
-  CustomThemeEntry copyWith({
-    String? id,
-    String? name,
-    int? seed,
-  }) {
+  CustomThemeEntry copyWith({String? id, String? name, int? seed}) {
     return CustomThemeEntry(
       id: id ?? this.id,
       name: name ?? this.name,
@@ -255,22 +255,22 @@ class CustomThemeEntry {
   }
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'id': id,
-        'name': name,
-        'seed': seed,
-        if (fontColor != null) 'fontColor': fontColor,
-        if (bgColor != null) 'bgColor': bgColor,
-        if (selectionColor != null) 'selectionColor': selectionColor,
-        if (primaryColor != null) 'primaryColor': primaryColor,
-        if (secondaryColor != null) 'secondaryColor': secondaryColor,
-        if (tertiaryColor != null) 'tertiaryColor': tertiaryColor,
-        if (containerColor != null) 'containerColor': containerColor,
-        // JSON 键与字段同名；历史键 'sasayakiColor'（custom_themes 旧行）已由
-        // v71 Drift 迁移一次性改写。分享码不含此键（用 'sk' 段），不受影响。
-        if (sentenceAudioHighlightColor != null)
-          'sentenceAudioHighlightColor': sentenceAudioHighlightColor,
-        if (linkColor != null) 'linkColor': linkColor,
-      };
+    'id': id,
+    'name': name,
+    'seed': seed,
+    if (fontColor != null) 'fontColor': fontColor,
+    if (bgColor != null) 'bgColor': bgColor,
+    if (selectionColor != null) 'selectionColor': selectionColor,
+    if (primaryColor != null) 'primaryColor': primaryColor,
+    if (secondaryColor != null) 'secondaryColor': secondaryColor,
+    if (tertiaryColor != null) 'tertiaryColor': tertiaryColor,
+    if (containerColor != null) 'containerColor': containerColor,
+    // JSON 键与字段同名；历史键 'sasayakiColor'（custom_themes 旧行）已由
+    // v71 Drift 迁移一次性改写。分享码不含此键（用 'sk' 段），不受影响。
+    if (sentenceAudioHighlightColor != null)
+      'sentenceAudioHighlightColor': sentenceAudioHighlightColor,
+    if (linkColor != null) 'linkColor': linkColor,
+  };
 
   factory CustomThemeEntry.fromJson(Map<String, dynamic> json) {
     int? asInt(Object? v) => v is int ? v : (v is num ? v.toInt() : null);
@@ -340,8 +340,11 @@ LegacyCustomThemeMigration migrateLegacyCustomTheme({
       try {
         final dynamic decoded = jsonDecode(s);
         if (decoded is Map) {
-          parsed.add(CustomThemeEntry.fromJson(
-              decoded.map((k, v) => MapEntry(k.toString(), v))));
+          parsed.add(
+            CustomThemeEntry.fromJson(
+              decoded.map((k, v) => MapEntry(k.toString(), v)),
+            ),
+          );
         }
       } catch (_) {
         // Skip malformed rows.
@@ -354,7 +357,8 @@ LegacyCustomThemeMigration migrateLegacyCustomTheme({
     );
   }
 
-  final bool configured = legacySeed != kCustomThemeDefaultSeed ||
+  final bool configured =
+      legacySeed != kCustomThemeDefaultSeed ||
       legacyFontColor != 0 ||
       legacyBgColor != 0 ||
       legacySelectionColor != 0 ||
@@ -406,7 +410,7 @@ class ThemeNotifier extends ChangeNotifier {
     this._textThemeBuilder, {
     String Function()? customThemeIdGenerator,
   }) : _customThemeIdGenerator =
-            customThemeIdGenerator ?? _defaultCustomThemeIdGenerator;
+           customThemeIdGenerator ?? _defaultCustomThemeIdGenerator;
 
   // Stable, testable id source. Defaults to epoch-millis + a monotonic counter
   // so two entries created in the same millisecond never collide. Tests can
@@ -474,10 +478,7 @@ class ThemeNotifier extends ChangeNotifier {
       // migration owns all of its async errors so this fire-and-forget boundary
       // can never surface an unhandled Future during app startup.
       unawaited(
-        _persistHiddenDesignSystemMigration(
-          migration,
-          notifyOnReload: true,
-        ),
+        _persistHiddenDesignSystemMigration(migration, notifyOnReload: true),
       );
     }
   }
@@ -583,9 +584,11 @@ class ThemeNotifier extends ChangeNotifier {
 
   // ── Theme presets ──────────────────────────────────────────────────
 
-  static const Map<String,
-          ({Color seed, Brightness brightness, DynamicSchemeVariant variant})>
-      themePresets = {
+  static const Map<
+    String,
+    ({Color seed, Brightness brightness, DynamicSchemeVariant variant})
+  >
+  themePresets = {
     'light-theme': (
       seed: Color(0xFF1F4959),
       brightness: Brightness.light,
@@ -767,8 +770,8 @@ class ThemeNotifier extends ChangeNotifier {
   }
 
   String get designSystem => normalizeDesignSystemPreference(
-        _get('design_system', defaultValue: 'auto'),
-      );
+    _get('design_system', defaultValue: 'auto'),
+  );
 
   Future<void> setDesignSystem(String value) async {
     await _set('design_system', normalizeDesignSystemPreference(value));
@@ -954,11 +957,15 @@ class ThemeNotifier extends ChangeNotifier {
       brightness: brightness,
       variant: _variant,
       primary: roleColor(entry?.primaryColor, () => customThemePrimaryColor),
-      secondary:
-          roleColor(entry?.secondaryColor, () => customThemeSecondaryColor),
+      secondary: roleColor(
+        entry?.secondaryColor,
+        () => customThemeSecondaryColor,
+      ),
       tertiary: roleColor(entry?.tertiaryColor, () => customThemeTertiaryColor),
-      primaryContainer:
-          roleColor(entry?.containerColor, () => customThemeContainerColor),
+      primaryContainer: roleColor(
+        entry?.containerColor,
+        () => customThemeContainerColor,
+      ),
     );
   }
 
@@ -1045,14 +1052,10 @@ class ThemeNotifier extends ChangeNotifier {
         labelTextStyle: WidgetStateProperty.all(tt.labelSmall),
       ),
       popupMenuTheme: PopupMenuThemeData(
-        shape: RoundedRectangleBorder(
-          borderRadius: FushiBorderRadius.menu,
-        ),
+        shape: RoundedRectangleBorder(borderRadius: FushiBorderRadius.menu),
       ),
       dialogTheme: DialogThemeData(
-        shape: RoundedRectangleBorder(
-          borderRadius: FushiBorderRadius.dialog,
-        ),
+        shape: RoundedRectangleBorder(borderRadius: FushiBorderRadius.dialog),
       ),
       listTileTheme: const ListTileThemeData(),
       inputDecorationTheme: InputDecorationTheme(
@@ -1084,9 +1087,7 @@ class ThemeNotifier extends ChangeNotifier {
       ),
       snackBarTheme: SnackBarThemeData(
         behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(
-          borderRadius: FushiBorderRadius.card,
-        ),
+        shape: RoundedRectangleBorder(borderRadius: FushiBorderRadius.card),
       ),
       cardTheme: CardThemeData(
         elevation: 0,
@@ -1100,9 +1101,7 @@ class ThemeNotifier extends ChangeNotifier {
       ),
       bottomSheetTheme: const BottomSheetThemeData(
         showDragHandle: true,
-        shape: RoundedRectangleBorder(
-          borderRadius: FushiBorderRadius.sheet,
-        ),
+        shape: RoundedRectangleBorder(borderRadius: FushiBorderRadius.sheet),
         surfaceTintColor: Colors.transparent,
       ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
@@ -1110,22 +1109,16 @@ class ThemeNotifier extends ChangeNotifier {
         highlightElevation: 0,
         backgroundColor: cs.primaryContainer,
         foregroundColor: cs.onPrimaryContainer,
-        shape: RoundedRectangleBorder(
-          borderRadius: FushiBorderRadius.control,
-        ),
+        shape: RoundedRectangleBorder(borderRadius: FushiBorderRadius.control),
       ),
       chipTheme: ChipThemeData(
-        shape: RoundedRectangleBorder(
-          borderRadius: FushiBorderRadius.chip,
-        ),
+        shape: RoundedRectangleBorder(borderRadius: FushiBorderRadius.chip),
         side: BorderSide(color: cs.outlineVariant),
         selectedColor: cs.secondaryContainer,
         showCheckmark: false,
       ),
       filledButtonTheme: FilledButtonThemeData(
-        style: FilledButton.styleFrom(
-          shape: const StadiumBorder(),
-        ),
+        style: FilledButton.styleFrom(shape: const StadiumBorder()),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
@@ -1134,9 +1127,7 @@ class ThemeNotifier extends ChangeNotifier {
         ),
       ),
       textButtonTheme: TextButtonThemeData(
-        style: TextButton.styleFrom(
-          shape: const StadiumBorder(),
-        ),
+        style: TextButton.styleFrom(shape: const StadiumBorder()),
       ),
       dividerTheme: DividerThemeData(
         color: cs.outlineVariant,
@@ -1248,8 +1239,10 @@ class ThemeNotifier extends ChangeNotifier {
   bool _legacyCustomThemeMigrated = false;
 
   List<String> _rawCustomThemes() {
-    final Object value =
-        _get(customThemesPrefKey, defaultValue: const <String>[]);
+    final Object value = _get(
+      customThemesPrefKey,
+      defaultValue: const <String>[],
+    );
     if (value is List) return value.map((dynamic e) => e.toString()).toList();
     return const <String>[];
   }
@@ -1262,8 +1255,11 @@ class ThemeNotifier extends ChangeNotifier {
         if (decoded is Map<String, dynamic>) {
           out.add(CustomThemeEntry.fromJson(decoded));
         } else if (decoded is Map) {
-          out.add(CustomThemeEntry.fromJson(
-              decoded.map((k, v) => MapEntry(k.toString(), v))));
+          out.add(
+            CustomThemeEntry.fromJson(
+              decoded.map((k, v) => MapEntry(k.toString(), v)),
+            ),
+          );
         }
       } catch (_) {
         // Skip a malformed row rather than aborting the whole read.
@@ -1307,8 +1303,9 @@ class ThemeNotifier extends ChangeNotifier {
 
   /// Insert a new entry (and select it) or replace an existing one by id.
   Future<void> upsertCustomTheme(CustomThemeEntry entry) async {
-    final List<CustomThemeEntry> list =
-        List<CustomThemeEntry>.from(customThemes);
+    final List<CustomThemeEntry> list = List<CustomThemeEntry>.from(
+      customThemes,
+    );
     final int idx = list.indexWhere((CustomThemeEntry e) => e.id == entry.id);
     if (idx >= 0) {
       list[idx] = entry;
@@ -1324,8 +1321,9 @@ class ThemeNotifier extends ChangeNotifier {
   /// Remove the entry with [id]. If it was selected, selection falls back to the
   /// first remaining entry (or clears when the list becomes empty).
   Future<void> deleteCustomTheme(String id) async {
-    final List<CustomThemeEntry> list =
-        customThemes.where((CustomThemeEntry e) => e.id != id).toList();
+    final List<CustomThemeEntry> list = customThemes
+        .where((CustomThemeEntry e) => e.id != id)
+        .toList();
     await _writeCustomThemes(list);
     if (selectedCustomThemeId == id) {
       await _writeSelectedCustomThemeId(list.isEmpty ? null : list.first.id);
@@ -1372,11 +1370,16 @@ class ThemeNotifier extends ChangeNotifier {
         .map((CustomThemeEntry e) => jsonEncode(e.toJson()))
         .toList();
     _prefs[customThemesPrefKey] = PrefCodec.encode(encoded);
-    _prefs[selectedCustomThemeIdPrefKey] =
-        PrefCodec.encode(result.selectedId ?? '');
+    _prefs[selectedCustomThemeIdPrefKey] = PrefCodec.encode(
+      result.selectedId ?? '',
+    );
     unawaited(_db.setPref(customThemesPrefKey, PrefCodec.encode(encoded)));
-    unawaited(_db.setPref(selectedCustomThemeIdPrefKey,
-        PrefCodec.encode(result.selectedId ?? '')));
+    unawaited(
+      _db.setPref(
+        selectedCustomThemeIdPrefKey,
+        PrefCodec.encode(result.selectedId ?? ''),
+      ),
+    );
   }
 
   // ── Setters ───────────────────────────────────────────────────────
@@ -1390,7 +1393,8 @@ class ThemeNotifier extends ChangeNotifier {
     final preset = themePresets[key];
     if (preset != null) {
       await setBrightnessMode(
-          preset.brightness == Brightness.dark ? 'dark' : 'light');
+        preset.brightness == Brightness.dark ? 'dark' : 'light',
+      );
       return;
     }
     notifyListeners();
@@ -1438,7 +1442,8 @@ class ThemeNotifier extends ChangeNotifier {
     await setCustomThemeTertiaryColor(tertiaryColor);
     await setCustomThemeContainerColor(containerColor);
     await setCustomThemeSentenceAudioHighlightColor(
-        sentenceAudioHighlightColor);
+      sentenceAudioHighlightColor,
+    );
     await setCustomThemeLinkColor(linkColor);
 
     int? argb(Color? c) => c?.toARGB32();
@@ -1472,12 +1477,14 @@ class ThemeNotifier extends ChangeNotifier {
     if (!Platform.isAndroid && !Platform.isIOS) return;
     final brightness = isDarkMode ? Brightness.dark : Brightness.light;
     final surface = buildColorScheme(brightness).surface;
-    _splashChannel.invokeMethod('setSplashColor', {
-      'color': surface.toARGB32(),
-      'isDark': isDarkMode,
-    }).catchError((Object e) {
-      debugPrint('[theme] setSplashColor failed: $e');
-    });
+    _splashChannel
+        .invokeMethod('setSplashColor', {
+          'color': surface.toARGB32(),
+          'isDark': isDarkMode,
+        })
+        .catchError((Object e) {
+          debugPrint('[theme] setSplashColor failed: $e');
+        });
   }
 }
 

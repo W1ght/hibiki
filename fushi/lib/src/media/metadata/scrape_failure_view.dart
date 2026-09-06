@@ -60,8 +60,9 @@ class _ScrapeFailureViewState extends State<ScrapeFailureView> {
             Text(
               widget.title,
               textAlign: TextAlign.center,
-              style: theme.textTheme.bodyMedium
-                  ?.copyWith(color: theme.colorScheme.error),
+              style: theme.textTheme.bodyMedium?.copyWith(
+                color: theme.colorScheme.error,
+              ),
             ),
             const SizedBox(height: 4),
             Text(
@@ -77,9 +78,11 @@ class _ScrapeFailureViewState extends State<ScrapeFailureView> {
                 _detailShown ? Icons.expand_less : Icons.expand_more,
                 size: 18,
               ),
-              label: Text(_detailShown
-                  ? t.scrape_failure_detail_hide
-                  : t.scrape_failure_detail_show),
+              label: Text(
+                _detailShown
+                    ? t.scrape_failure_detail_hide
+                    : t.scrape_failure_detail_show,
+              ),
               onPressed: () => setState(() => _detailShown = !_detailShown),
             ),
             if (_detailShown) ...<Widget>[

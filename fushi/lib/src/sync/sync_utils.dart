@@ -28,8 +28,9 @@ const String kLegacySyncRootFolderName = 'hibiki-data';
 /// （如 `hibiki-database`）；Google Drive 的不透明 ID 无斜杠也不可能整串等于
 /// 旧根名，天然不受影响。
 bool syncFolderIdEmbedsLegacyRoot(String folderId) {
-  final RegExp segment =
-      RegExp('(^|/)${RegExp.escape(kLegacySyncRootFolderName)}(/|\$)');
+  final RegExp segment = RegExp(
+    '(^|/)${RegExp.escape(kLegacySyncRootFolderName)}(/|\$)',
+  );
   return segment.hasMatch(folderId);
 }
 
@@ -102,8 +103,8 @@ mixin SyncFolderCache {
   }) {
     rootFolderIdCache =
         (rootFolderId == null || syncFolderIdEmbedsLegacyRoot(rootFolderId))
-            ? null
-            : normalizeFolderId(rootFolderId);
+        ? null
+        : normalizeFolderId(rootFolderId);
     if (titleToFolderId != null) {
       titleToFolderId.forEach((String title, String id) {
         if (syncFolderIdEmbedsLegacyRoot(id)) return;

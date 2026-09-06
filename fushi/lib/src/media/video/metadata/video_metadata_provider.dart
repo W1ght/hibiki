@@ -46,9 +46,7 @@ abstract interface class VideoMetadataProvider {
 
   Future<VideoMetadataWork?> fetchWork(VideoMetadataLookup lookup);
 
-  Future<List<VideoMetadataSeason>> fetchSeasons(
-    VideoMetadataLookup lookup,
-  );
+  Future<List<VideoMetadataSeason>> fetchSeasons(VideoMetadataLookup lookup);
 
   Future<List<VideoMetadataEpisode>> fetchEpisodes(
     VideoMetadataLookup lookup, {

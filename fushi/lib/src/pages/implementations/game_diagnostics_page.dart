@@ -90,8 +90,9 @@ class _GameDiagnosticsPageState extends State<GameDiagnosticsPage> {
       await DesktopAudioPlayback.stop();
       return;
     }
-    final GalTrackPreview? preview =
-        await _controller.exportTrackPreview(track.sourcePtr);
+    final GalTrackPreview? preview = await _controller.exportTrackPreview(
+      track.sourcePtr,
+    );
     if (!mounted) return;
     if (preview == null) {
       FushiToast.show(
@@ -129,12 +130,12 @@ class _GameDiagnosticsPageState extends State<GameDiagnosticsPage> {
           final GalHookSessionState state = _controller.state;
           final List<GalHookEvent> events = _warningsOnly
               ? _controller.events
-                  .where(
-                    (GalHookEvent event) =>
-                        event.severity == GalHookEventSeverity.warning ||
-                        event.severity == GalHookEventSeverity.error,
-                  )
-                  .toList(growable: false)
+                    .where(
+                      (GalHookEvent event) =>
+                          event.severity == GalHookEventSeverity.warning ||
+                          event.severity == GalHookEventSeverity.error,
+                    )
+                    .toList(growable: false)
               : _controller.events;
           return Column(
             children: <Widget>[
@@ -211,12 +212,12 @@ class _GameDiagnosticsPageState extends State<GameDiagnosticsPage> {
                         // 「序号缺口」是 hook 文本环丢行计数——0 为正常，非告警。
                         child: Text(
                           t.game_text_gaps_hint,
-                          style:
-                              Theme.of(context).textTheme.bodySmall?.copyWith(
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .onSurfaceVariant,
-                                  ),
+                          style: Theme.of(context).textTheme.bodySmall
+                              ?.copyWith(
+                                color: Theme.of(
+                                  context,
+                                ).colorScheme.onSurfaceVariant,
+                              ),
                         ),
                       ),
                       const SizedBox(height: 16),
@@ -310,8 +311,8 @@ class _PipelineCard extends StatelessWidget {
             value: state.boundWindow == null
                 ? t.game_window_missing
                 : (state.boundWindow!.title.isEmpty
-                    ? '#${state.boundWindow!.hwnd}'
-                    : state.boundWindow!.title),
+                      ? '#${state.boundWindow!.hwnd}'
+                      : state.boundWindow!.title),
             ok: state.boundWindow != null,
           ),
           _DiagnosticRow(
@@ -325,10 +326,7 @@ class _PipelineCard extends StatelessWidget {
             ok: state.hasAudio,
           ),
           if (state.fallbackReason != null)
-            _DetailBox(
-              icon: Icons.info_outline,
-              text: state.fallbackReason!,
-            ),
+            _DetailBox(icon: Icons.info_outline, text: state.fallbackReason!),
           if (state.lastError != null)
             _DetailBox(
               icon: Icons.error_outline,
@@ -355,9 +353,7 @@ class _EndpointCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle? hintStyle = Theme.of(context)
-        .textTheme
-        .bodySmall
+    final TextStyle? hintStyle = Theme.of(context).textTheme.bodySmall
         ?.copyWith(color: Theme.of(context).colorScheme.onSurfaceVariant);
     // 端点是 Textractor / agent / LunaTranslator 等外部工具的兼容接入口；普通用户
     // 永远处于「连接中/重试中」循环属正常，解释文案常驻，且重试态不再用告警观感
@@ -436,7 +432,8 @@ class _EndpointRow extends StatelessWidget {
           const SizedBox(width: 12),
           Flexible(
             child: Tooltip(
-              message: endpoint.lastError ??
+              message:
+                  endpoint.lastError ??
                   texthookerEndpointPhaseLabel(endpoint.phase),
               child: Text(
                 texthookerEndpointPhaseLabel(endpoint.phase),
@@ -558,15 +555,12 @@ class _EventTile extends StatelessWidget {
     };
     // eink 下彩色圆点塌缩成同一灰阶（巡检 G5）：改成形状可辨的语义图标区分严重度。
     final Widget leading = isEinkTheme(context)
-        ? Icon(
-            switch (event.severity) {
-              GalHookEventSeverity.info => Icons.info_outline,
-              GalHookEventSeverity.success => Icons.check_circle_outline,
-              GalHookEventSeverity.warning => Icons.warning_amber_outlined,
-              GalHookEventSeverity.error => Icons.error_outline,
-            },
-            size: 18,
-          )
+        ? Icon(switch (event.severity) {
+            GalHookEventSeverity.info => Icons.info_outline,
+            GalHookEventSeverity.success => Icons.check_circle_outline,
+            GalHookEventSeverity.warning => Icons.warning_amber_outlined,
+            GalHookEventSeverity.error => Icons.error_outline,
+          }, size: 18)
         : Icon(Icons.circle, size: 10, color: color);
     return ListTile(
       dense: true,
@@ -668,8 +662,11 @@ class _DiagnosticRow extends StatelessWidget {
 }
 
 class _DetailBox extends StatelessWidget {
-  const _DetailBox(
-      {required this.icon, required this.text, this.error = false});
+  const _DetailBox({
+    required this.icon,
+    required this.text,
+    this.error = false,
+  });
 
   final IconData icon;
   final String text;
@@ -678,10 +675,12 @@ class _DetailBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ColorScheme colors = Theme.of(context).colorScheme;
-    final Color background =
-        error ? colors.errorContainer : colors.secondaryContainer;
-    final Color foreground =
-        error ? colors.onErrorContainer : colors.onSecondaryContainer;
+    final Color background = error
+        ? colors.errorContainer
+        : colors.secondaryContainer;
+    final Color foreground = error
+        ? colors.onErrorContainer
+        : colors.onSecondaryContainer;
     return Container(
       margin: const EdgeInsets.only(top: 8),
       padding: const EdgeInsets.all(10),
@@ -693,7 +692,9 @@ class _DetailBox extends StatelessWidget {
         children: <Widget>[
           Icon(icon, color: foreground, size: 18),
           const SizedBox(width: 8),
-          Expanded(child: Text(text, style: TextStyle(color: foreground))),
+          Expanded(
+            child: Text(text, style: TextStyle(color: foreground)),
+          ),
         ],
       ),
     );

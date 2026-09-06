@@ -46,16 +46,16 @@ class FushiRemoteLookupClient {
     Future<Directory> Function()? pinnedAudioCacheDirectoryProvider,
     Duration timeout = const Duration(seconds: 3),
     Duration audioTransferTimeout = kInterconnectAssetTransferTimeout,
-  })  : _transport = InterconnectPostTransport(
-          repo: repo,
-          httpClient: httpClient,
-          pinnedClientFactory: pinnedClientFactory,
-        ),
-        _timeout = timeout,
-        _audioTransferTimeout = audioTransferTimeout,
-        _pinnedAudioCacheDirectoryProvider =
-            pinnedAudioCacheDirectoryProvider ??
-                _defaultPinnedAudioCacheDirectory;
+  }) : _transport = InterconnectPostTransport(
+         repo: repo,
+         httpClient: httpClient,
+         pinnedClientFactory: pinnedClientFactory,
+       ),
+       _timeout = timeout,
+       _audioTransferTimeout = audioTransferTimeout,
+       _pinnedAudioCacheDirectoryProvider =
+           pinnedAudioCacheDirectoryProvider ??
+           _defaultPinnedAudioCacheDirectory;
 
   /// 候选轮询 / 鉴权 / 指纹钉扎 / socket 回收统一由 [InterconnectPostTransport]
   /// 承担——本类只管端点、超时与响应体的语义解析。
@@ -106,8 +106,9 @@ class FushiRemoteLookupClient {
     if (json == null || json['type'] != 'dictionaryResult') return null;
     final dynamic resultJson = json['result'];
     if (resultJson is! Map) return null;
-    final DictionarySearchResult result =
-        _parseDictionaryResult(Map<String, dynamic>.from(resultJson));
+    final DictionarySearchResult result = _parseDictionaryResult(
+      Map<String, dynamic>.from(resultJson),
+    );
     result.popupJson = json['popupJson']?.toString();
     // BUG-1570：kanji-only 结果（单字命中汉字词典但无词条）也算有效结果——与本地
     // 路径的 kanjiOnly 分支同语义。瘦 client（本地无词典）此前会把它当「无结果」
@@ -141,8 +142,9 @@ class FushiRemoteLookupClient {
     if (kanjiJson is List) {
       for (final dynamic kanji in kanjiJson) {
         if (kanji is Map) {
-          kanjiResults
-              .add(FushiKanjiResult.fromMap(Map<String, dynamic>.from(kanji)));
+          kanjiResults.add(
+            FushiKanjiResult.fromMap(Map<String, dynamic>.from(kanji)),
+          );
         }
       }
     }
@@ -169,10 +171,7 @@ class FushiRemoteLookupClient {
   }) async {
     final InterconnectPostOutcome outcome = await _postLookup(
       path: '/api/lookup/audio',
-      body: <String, dynamic>{
-        'expression': expression,
-        'reading': reading,
-      },
+      body: <String, dynamic>{'expression': expression, 'reading': reading},
     );
     if (outcome.allUnreachable) {
       throw RemoteLookupUnreachableError(

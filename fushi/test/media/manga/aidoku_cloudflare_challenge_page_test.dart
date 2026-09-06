@@ -168,8 +168,7 @@ void main() {
           return stubPage(url, userAgent);
         },
       );
-      final AidokuCloudflareResolver resolve =
-          AidokuCloudflareGate.resolver!;
+      final AidokuCloudflareResolver resolve = AidokuCloudflareGate.resolver!;
 
       // navigator 还没挂上（启动期 / 两个共用 key 的 widget 切换窗口）：
       // 走的是一个 await 都没有的同步早退路径。
@@ -192,9 +191,7 @@ void main() {
       expect(await solving, isTrue);
     });
 
-    testWidgets('同站并发共享一次解题，解完后 map 释放、下一次重新推页', (
-      WidgetTester tester,
-    ) async {
+    testWidgets('同站并发共享一次解题，解完后 map 释放、下一次重新推页', (WidgetTester tester) async {
       final GlobalKey<NavigatorState> navigatorKey =
           GlobalKey<NavigatorState>();
       int pushes = 0;
@@ -205,8 +202,7 @@ void main() {
           return stubPage(url, userAgent);
         },
       );
-      final AidokuCloudflareResolver resolve =
-          AidokuCloudflareGate.resolver!;
+      final AidokuCloudflareResolver resolve = AidokuCloudflareGate.resolver!;
       await tester.pumpWidget(
         MaterialApp(navigatorKey: navigatorKey, home: const SizedBox.shrink()),
       );
@@ -229,7 +225,6 @@ void main() {
       await tester.pumpAndSettle();
       expect(await third, isFalse);
     });
-
   });
 
   testWidgets('the close button pops false and stops the page', (

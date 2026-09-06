@@ -53,15 +53,9 @@ Widget adaptiveDialogAction({
     );
   }
   if (isDefaultAction) {
-    return FilledButton(
-      onPressed: onPressed,
-      child: child,
-    );
+    return FilledButton(onPressed: onPressed, child: child);
   }
-  return TextButton(
-    onPressed: onPressed,
-    child: child,
-  );
+  return TextButton(onPressed: onPressed, child: child);
 }
 
 Widget adaptiveSwitch({
@@ -77,10 +71,7 @@ Widget adaptiveSwitch({
     // Let MacosSwitch use the system accent for its active track — that's the
     // native macOS look, more correct than forcing the app's activeColor (which
     // is a Material/Cupertino Color, not macos_ui's MacosColor anyway).
-    return MacosSwitch(
-      value: value,
-      onChanged: onChanged,
-    );
+    return MacosSwitch(value: value, onChanged: onChanged);
   }
   if (isCupertinoPlatform(context)) {
     return CupertinoSwitch(
@@ -89,11 +80,7 @@ Widget adaptiveSwitch({
       activeTrackColor: activeColor ?? CupertinoTheme.of(context).primaryColor,
     );
   }
-  return Switch(
-    value: value,
-    onChanged: onChanged,
-    activeColor: activeColor,
-  );
+  return Switch(value: value, onChanged: onChanged, activeColor: activeColor);
 }
 
 Widget adaptiveSlider({
@@ -198,10 +185,7 @@ Future<T?> adaptiveModalSheet<T>({
   bool showDragHandle = true,
 }) {
   if (isCupertinoPlatform(context)) {
-    return showCupertinoModalPopup<T>(
-      context: context,
-      builder: builder,
-    );
+    return showCupertinoModalPopup<T>(context: context, builder: builder);
   }
   return showModalBottomSheet<T>(
     context: context,

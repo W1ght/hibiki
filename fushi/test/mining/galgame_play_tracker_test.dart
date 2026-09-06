@@ -15,8 +15,11 @@ void main() {
   final String launcherExe = p.join(gameDir, 'Launcher.exe');
   final String mainExe = p.join(gameDir, 'bin', 'SiglusEngine.exe');
   final String siblingExe = p.join(siblingDir, 'SiglusEngine.exe');
-  final String browserExe =
-      p.join(p.rootPrefix(p.current), 'Programs', 'browser.exe');
+  final String browserExe = p.join(
+    p.rootPrefix(p.current),
+    'Programs',
+    'browser.exe',
+  );
 
   test('playtime：只累计前台活跃秒；后台/无前台窗口不计', () async {
     final _Harness h = _Harness(gameDir, <int, String>{100: launcherExe});
@@ -37,11 +40,9 @@ void main() {
   });
 
   test('elapsed：墙钟计时，后台时间照算', () async {
-    final _Harness h = _Harness(
-      gameDir,
-      <int, String>{100: launcherExe},
-      mode: GalgamePlayTimingMode.elapsed,
-    );
+    final _Harness h = _Harness(gameDir, <int, String>{
+      100: launcherExe,
+    }, mode: GalgamePlayTimingMode.elapsed);
     h.run(10, (int _) => 100);
     h.run(170, (int _) => 777);
     await h.stop();
@@ -151,10 +152,10 @@ void main() {
   });
 
   test('候选组重建会剔除已退出的 PID，防 PID 回收后误判前台', () async {
-    final _Harness h = _Harness(
-      gameDir,
-      <int, String>{100: launcherExe, 200: mainExe},
-    );
+    final _Harness h = _Harness(gameDir, <int, String>{
+      100: launcherExe,
+      200: mainExe,
+    });
     h.run(4, (int _) => 100); // 跨过 3 秒扫描点
     expect(h.machine.candidatePids, containsAll(<int>[100, 200]));
 
@@ -164,8 +165,11 @@ void main() {
     h.probe.deadPids.add(100);
     h.run(kMaxConsecutiveFailures, (int _) => null);
 
-    expect(h.machine.candidatePids.contains(200), isFalse,
-        reason: '回收后的 PID 必须被重扫剔除，否则会被当成本游戏继续计时');
+    expect(
+      h.machine.candidatePids.contains(200),
+      isFalse,
+      reason: '回收后的 PID 必须被重扫剔除，否则会被当成本游戏继续计时',
+    );
     expect(h.machine.isEnded, isTrue);
   });
 
@@ -211,11 +215,11 @@ class _Harness {
     GalgamePlayTimingMode mode = GalgamePlayTimingMode.playtime,
     int mainPid = 100,
     Map<String, String> canonicalMap = const <String, String>{},
-  })  : probe = _FakeProcessProbe(
-          processes: processes,
-          canonicalMap: canonicalMap,
-        ),
-        results = <GalgamePlaySessionResult>[] {
+  }) : probe = _FakeProcessProbe(
+         processes: processes,
+         canonicalMap: canonicalMap,
+       ),
+       results = <GalgamePlaySessionResult>[] {
     machine = GalgamePlaySessionMachine(
       gameId: 'g1',
       gameDirectory: gameDirectory,

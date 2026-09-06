@@ -24,29 +24,27 @@ void main() {
       final String? nodeExe = _resolveNode();
       if (nodeExe == null) {
         markTestSkipped(
-            'node not found on PATH; skipping JS behavior execution');
+          'node not found on PATH; skipping JS behavior execution',
+        );
         return;
       }
 
-      final File jsTest = File(
-        'test/pages/popup_pitch_transcriptions_test.js',
-      );
+      final File jsTest = File('test/pages/popup_pitch_transcriptions_test.js');
       expect(
         jsTest.existsSync(),
         isTrue,
         reason: 'behavior harness ${jsTest.path} must exist',
       );
 
-      final ProcessResult result = await Process.run(
-        nodeExe,
-        <String>[jsTest.path],
-        workingDirectory: Directory.current.path,
-      );
+      final ProcessResult result = await Process.run(nodeExe, <String>[
+        jsTest.path,
+      ], workingDirectory: Directory.current.path);
 
       expect(
         result.exitCode,
         0,
-        reason: 'popup IPA transcriptions JS behavior test failed.\n'
+        reason:
+            'popup IPA transcriptions JS behavior test failed.\n'
             'stdout:\n${result.stdout}\nstderr:\n${result.stderr}',
       );
       expect(
@@ -78,7 +76,9 @@ void main() {
     final int groupDef = js.indexOf('function createPitchGroup');
     expect(groupDef, greaterThanOrEqualTo(0));
     final int call = js.indexOf(
-        'createTranscriptionsHtml(pitchData.transcriptions)', groupDef);
+      'createTranscriptionsHtml(pitchData.transcriptions)',
+      groupDef,
+    );
     expect(
       call,
       greaterThan(groupDef),
@@ -88,8 +88,7 @@ void main() {
     expect(builderDef, greaterThanOrEqualTo(0));
   });
 
-  test('popup.js dedup branch keeps IPA-only pitch groups (empty positions)',
-      () {
+  test('popup.js dedup branch keeps IPA-only pitch groups (empty positions)', () {
     final String js = File('assets/popup/popup.js').readAsStringSync();
 
     // The deduplicate-pitch-accents branch must not drop a group that has no
@@ -97,16 +96,20 @@ void main() {
     // the transcriptions into createPitchGroup.
     final int dedup = js.indexOf('if (window.deduplicatePitchAccents)');
     expect(dedup, greaterThanOrEqualTo(0));
-    final int hasTranscriptions =
-        js.indexOf('pitch.transcriptions?.length', dedup);
+    final int hasTranscriptions = js.indexOf(
+      'pitch.transcriptions?.length',
+      dedup,
+    );
     expect(
       hasTranscriptions,
       greaterThan(dedup),
       reason:
           'the dedup branch must keep IPA-only groups (transcriptions guard)',
     );
-    final int forwarded =
-        js.indexOf('transcriptions: pitch.transcriptions', dedup);
+    final int forwarded = js.indexOf(
+      'transcriptions: pitch.transcriptions',
+      dedup,
+    );
     expect(
       forwarded,
       greaterThan(dedup),
@@ -118,8 +121,9 @@ void main() {
 
 /// Resolve a usable `node` executable, returning null when none is on PATH.
 String? _resolveNode() {
-  final List<String> candidates =
-      Platform.isWindows ? <String>['node.exe', 'node'] : <String>['node'];
+  final List<String> candidates = Platform.isWindows
+      ? <String>['node.exe', 'node']
+      : <String>['node'];
   for (final String name in candidates) {
     try {
       final ProcessResult probe = Process.runSync(name, <String>['--version']);

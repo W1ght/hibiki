@@ -17,7 +17,8 @@ void main() {
           'span[data-sc-img][data-sc-class="gaiji"] .gloss-image-container';
 
       // 触发追加（含 data-sc-img + gloss-image），并把词典规则放进输入模拟真实卡片。
-      const input = '<div class="yomitan-glossary">'
+      const input =
+          '<div class="yomitan-glossary">'
           '<span data-sc-img data-sc-class="gaiji">'
           '<span class="gloss-image-link"><span class="gloss-image-container">'
           '<span class="gloss-image">3分の2</span></span></span></span>'
@@ -27,18 +28,27 @@ void main() {
       final out = normalizeAnkiDictionaryHtml(input);
 
       // 取「追加在末尾」的中和器 <style> 的 .gloss-image-container 规则选择器。
-      final neutralizerSelector =
-          _selectorForRuleEndingWith(out, '.gloss-image-container');
-      expect(neutralizerSelector, isNotNull,
-          reason: '中和器必须包含一条 .gloss-image-container 规则');
+      final neutralizerSelector = _selectorForRuleEndingWith(
+        out,
+        '.gloss-image-container',
+      );
+      expect(
+        neutralizerSelector,
+        isNotNull,
+        reason: '中和器必须包含一条 .gloss-image-container 规则',
+      );
 
       final dictSpec = _specificity(dictGaijiContainerSelector);
       final neutSpec = _specificity(neutralizerSelector!);
 
       // 中和器追加在末尾，等特异性即可取胜；故要求 >= 词典规则。
-      expect(_compareSpecificity(neutSpec, dictSpec) >= 0, isTrue,
-          reason: '中和器 .gloss-image-container 特异性 $neutSpec 必须 >= 词典 $dictSpec，'
-              '否则 width:15em!important 仍生效→外字框撑爆重叠');
+      expect(
+        _compareSpecificity(neutSpec, dictSpec) >= 0,
+        isTrue,
+        reason:
+            '中和器 .gloss-image-container 特异性 $neutSpec 必须 >= 词典 $dictSpec，'
+            '否则 width:15em!important 仍生效→外字框撑爆重叠',
+      );
 
       // 中和器必须把宽度收回到 1em 量级且 !important。
       expect(out, contains('width:1em!important'));

@@ -56,11 +56,11 @@ void main() {
           navigatorKey: navigatorKey,
           builder: (BuildContext context, Widget? child) =>
               wrapWithGlobalNavigation(
-            navigatorKey: navigatorKey,
-            focusNavigationEnabled: false,
-            registry: registry,
-            child: child ?? const SizedBox.shrink(),
-          ),
+                navigatorKey: navigatorKey,
+                focusNavigationEnabled: false,
+                registry: registry,
+                child: child ?? const SizedBox.shrink(),
+              ),
           home: Scaffold(
             body: Center(
               child: ShortcutBindingEditDialog(
@@ -94,13 +94,14 @@ void main() {
                 onPressed: () async {
                   final ShortcutBindingEditResult? result =
                       await showAppDialog<ShortcutBindingEditResult>(
-                    context: context,
-                    builder: (BuildContext ctx) => ShortcutBindingEditDialog(
-                      action: action,
-                      registry: registry,
-                      initial: const ShortcutBindingSet(),
-                    ),
-                  );
+                        context: context,
+                        builder: (BuildContext ctx) =>
+                            ShortcutBindingEditDialog(
+                              action: action,
+                              registry: registry,
+                              initial: const ShortcutBindingSet(),
+                            ),
+                      );
                   if (result == null) return;
                   registry.updateBindingWithReassignments(
                     action,
@@ -120,8 +121,9 @@ void main() {
     await tester.pumpAndSettle();
   }
 
-  testWidgets('Tab is captured as a binding instead of moving focus',
-      (WidgetTester tester) async {
+  testWidgets('Tab is captured as a binding instead of moving focus', (
+    WidgetTester tester,
+  ) async {
     await pumpDialog(tester, buildRegistry());
     await startCapture(tester);
     expect(find.text(t.shortcut_press_key), findsOneWidget);
@@ -135,13 +137,17 @@ void main() {
     expect(find.byType(ShortcutBindingEditDialog), findsOneWidget);
   });
 
-  testWidgets('Escape is captured, not treated as a dialog dismiss',
-      (WidgetTester tester) async {
+  testWidgets('Escape is captured, not treated as a dialog dismiss', (
+    WidgetTester tester,
+  ) async {
     // homeFocusSearch lives in a scope where Escape is unbound by default, so
     // it is recorded rather than rejected as a conflict — this isolates the
     // "Escape must not leak to the dismiss intent" behaviour.
-    await pumpDialog(tester, buildRegistry(),
-        action: ShortcutAction.homeFocusSearch);
+    await pumpDialog(
+      tester,
+      buildRegistry(),
+      action: ShortcutAction.homeFocusSearch,
+    );
     await startCapture(tester);
 
     await tester.sendKeyEvent(LogicalKeyboardKey.escape);
@@ -152,151 +158,167 @@ void main() {
   });
 
   testWidgets(
-      'capturing a key already bound in scope warns and cancel keeps draft unchanged',
-      (WidgetTester tester) async {
-    // M is a reader-scope default (readerToggleChrome，底栏开关), so trying to
-    // bind it to another reader action must ask before moving ownership.
-    // （样本从 Escape 换成 M：Esc 自 v8 起属于 universal 的「返回上一级」，
-    //   不在 reader co-active 组里，用它就触发不到组内冲突流程。）
-    await pumpDialog(tester, buildRegistry(),
-        action: ShortcutAction.readerToggleFurigana);
-    await startCapture(tester);
+    'capturing a key already bound in scope warns and cancel keeps draft unchanged',
+    (WidgetTester tester) async {
+      // M is a reader-scope default (readerToggleChrome，底栏开关), so trying to
+      // bind it to another reader action must ask before moving ownership.
+      // （样本从 Escape 换成 M：Esc 自 v8 起属于 universal 的「返回上一级」，
+      //   不在 reader co-active 组里，用它就触发不到组内冲突流程。）
+      await pumpDialog(
+        tester,
+        buildRegistry(),
+        action: ShortcutAction.readerToggleFurigana,
+      );
+      await startCapture(tester);
 
-    await tester.sendKeyEvent(LogicalKeyboardKey.keyM);
-    await tester.pumpAndSettle();
+      await tester.sendKeyEvent(LogicalKeyboardKey.keyM);
+      await tester.pumpAndSettle();
 
-    expect(
-      find.text(t.shortcut_conflict_replace_confirm(
-        s: t.shortcut_action_reader_toggle_chrome,
-      )),
-      findsOneWidget,
-    );
-    await tester.tap(find.text(t.dialog_cancel).last);
-    await tester.pumpAndSettle();
+      expect(
+        find.text(
+          t.shortcut_conflict_replace_confirm(
+            s: t.shortcut_action_reader_toggle_chrome,
+          ),
+        ),
+        findsOneWidget,
+      );
+      await tester.tap(find.text(t.dialog_cancel).last);
+      await tester.pumpAndSettle();
 
-    expect(find.widgetWithText(FushiTagChip, 'M'), findsNothing);
-    expect(
-      find.text(t.shortcut_conflict(s: t.shortcut_action_reader_toggle_chrome)),
-      findsOneWidget,
-    );
-  });
-
-  testWidgets(
-      'conflict confirmation reassigns from old action to new action on OK',
-      (WidgetTester tester) async {
-    final FushiShortcutRegistry registry = buildRegistry();
-    await pumpDialogHost(
-      tester,
-      registry,
-      action: ShortcutAction.readerToggleFurigana,
-    );
-    await startCapture(tester);
-
-    await tester.sendKeyEvent(LogicalKeyboardKey.pageDown);
-    await tester.pumpAndSettle();
-    await tester.tap(find.text('OK').last);
-    await tester.pumpAndSettle();
-
-    expect(find.widgetWithText(FushiTagChip, 'PageDown'), findsOneWidget);
-    await tester.tap(find.text('OK').last);
-    await tester.pumpAndSettle();
-
-    const InputBinding pageDown =
-        InputBinding(key: LogicalKeyboardKey.pageDown);
-    expect(
-      registry.bindingsFor(ShortcutAction.readerPageForward).keyboardBindings,
-      isNot(contains(pageDown)),
-    );
-    expect(
-      registry
-          .bindingsFor(ShortcutAction.readerToggleFurigana)
-          .keyboardBindings,
-      contains(pageDown),
-    );
-  });
+      expect(find.widgetWithText(FushiTagChip, 'M'), findsNothing);
+      expect(
+        find.text(
+          t.shortcut_conflict(s: t.shortcut_action_reader_toggle_chrome),
+        ),
+        findsOneWidget,
+      );
+    },
+  );
 
   testWidgets(
-      'deleting a confirmed keyboard conflict chip keeps the old action binding',
-      (WidgetTester tester) async {
-    final FushiShortcutRegistry registry = buildRegistry();
-    await pumpDialogHost(
-      tester,
-      registry,
-      action: ShortcutAction.readerToggleFurigana,
-    );
-    await startCapture(tester);
+    'conflict confirmation reassigns from old action to new action on OK',
+    (WidgetTester tester) async {
+      final FushiShortcutRegistry registry = buildRegistry();
+      await pumpDialogHost(
+        tester,
+        registry,
+        action: ShortcutAction.readerToggleFurigana,
+      );
+      await startCapture(tester);
 
-    await tester.sendKeyEvent(LogicalKeyboardKey.pageDown);
-    await tester.pumpAndSettle();
-    await tester.tap(find.text('OK').last);
-    await tester.pumpAndSettle();
+      await tester.sendKeyEvent(LogicalKeyboardKey.pageDown);
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('OK').last);
+      await tester.pumpAndSettle();
 
-    final Finder pageDownChip = find.widgetWithText(FushiTagChip, 'PageDown');
-    expect(pageDownChip, findsOneWidget);
-    await tester.tap(find.descendant(
-      of: pageDownChip,
-      matching: find.byIcon(Icons.close),
-    ));
-    await tester.pumpAndSettle();
-    await tester.tap(find.text('OK').last);
-    await tester.pumpAndSettle();
+      expect(find.widgetWithText(FushiTagChip, 'PageDown'), findsOneWidget);
+      await tester.tap(find.text('OK').last);
+      await tester.pumpAndSettle();
 
-    const InputBinding pageDown =
-        InputBinding(key: LogicalKeyboardKey.pageDown);
-    expect(
-      registry.bindingsFor(ShortcutAction.readerPageForward).keyboardBindings,
-      contains(pageDown),
-    );
-    expect(
-      registry
-          .bindingsFor(ShortcutAction.readerToggleFurigana)
-          .keyboardBindings,
-      isNot(contains(pageDown)),
-    );
-  });
+      const InputBinding pageDown = InputBinding(
+        key: LogicalKeyboardKey.pageDown,
+      );
+      expect(
+        registry.bindingsFor(ShortcutAction.readerPageForward).keyboardBindings,
+        isNot(contains(pageDown)),
+      );
+      expect(
+        registry
+            .bindingsFor(ShortcutAction.readerToggleFurigana)
+            .keyboardBindings,
+        contains(pageDown),
+      );
+    },
+  );
 
   testWidgets(
-      'deleting a confirmed gamepad conflict chip keeps the old action binding',
-      (WidgetTester tester) async {
-    final FushiShortcutRegistry registry = buildRegistry();
-    await pumpDialogHost(
-      tester,
-      registry,
-      action: ShortcutAction.readerToggleFurigana,
-    );
+    'deleting a confirmed keyboard conflict chip keeps the old action binding',
+    (WidgetTester tester) async {
+      final FushiShortcutRegistry registry = buildRegistry();
+      await pumpDialogHost(
+        tester,
+        registry,
+        action: ShortcutAction.readerToggleFurigana,
+      );
+      await startCapture(tester);
 
-    // 手柄实时录键上线后，下拉菜单降级为「从列表选择」兜底入口。
-    await tester.tap(find.text(t.shortcut_gamepad_pick_list));
-    await tester.pumpAndSettle();
-    await tester.tap(find.text(GamepadButton.dpadRight.label).last);
-    await tester.pumpAndSettle();
-    await tester.tap(find.text('OK').last);
-    await tester.pumpAndSettle();
+      await tester.sendKeyEvent(LogicalKeyboardKey.pageDown);
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('OK').last);
+      await tester.pumpAndSettle();
 
-    final Finder dpadChip =
-        find.widgetWithText(FushiTagChip, GamepadButton.dpadRight.label);
-    expect(dpadChip, findsOneWidget);
-    await tester.tap(find.descendant(
-      of: dpadChip,
-      matching: find.byIcon(Icons.close),
-    ));
-    await tester.pumpAndSettle();
-    await tester.tap(find.text('OK').last);
-    await tester.pumpAndSettle();
+      final Finder pageDownChip = find.widgetWithText(FushiTagChip, 'PageDown');
+      expect(pageDownChip, findsOneWidget);
+      await tester.tap(
+        find.descendant(of: pageDownChip, matching: find.byIcon(Icons.close)),
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('OK').last);
+      await tester.pumpAndSettle();
 
-    const GamepadBinding dpadRight = GamepadBinding(GamepadButton.dpadRight);
-    expect(
-      registry.bindingsFor(ShortcutAction.readerPageForward).gamepadBindings,
-      contains(dpadRight),
-    );
-    expect(
-      registry.bindingsFor(ShortcutAction.readerToggleFurigana).gamepadBindings,
-      isNot(contains(dpadRight)),
-    );
-  });
+      const InputBinding pageDown = InputBinding(
+        key: LogicalKeyboardKey.pageDown,
+      );
+      expect(
+        registry.bindingsFor(ShortcutAction.readerPageForward).keyboardBindings,
+        contains(pageDown),
+      );
+      expect(
+        registry
+            .bindingsFor(ShortcutAction.readerToggleFurigana)
+            .keyboardBindings,
+        isNot(contains(pageDown)),
+      );
+    },
+  );
 
-  testWidgets('Ctrl modifier is captured with the key',
-      (WidgetTester tester) async {
+  testWidgets(
+    'deleting a confirmed gamepad conflict chip keeps the old action binding',
+    (WidgetTester tester) async {
+      final FushiShortcutRegistry registry = buildRegistry();
+      await pumpDialogHost(
+        tester,
+        registry,
+        action: ShortcutAction.readerToggleFurigana,
+      );
+
+      // 手柄实时录键上线后，下拉菜单降级为「从列表选择」兜底入口。
+      await tester.tap(find.text(t.shortcut_gamepad_pick_list));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text(GamepadButton.dpadRight.label).last);
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('OK').last);
+      await tester.pumpAndSettle();
+
+      final Finder dpadChip = find.widgetWithText(
+        FushiTagChip,
+        GamepadButton.dpadRight.label,
+      );
+      expect(dpadChip, findsOneWidget);
+      await tester.tap(
+        find.descendant(of: dpadChip, matching: find.byIcon(Icons.close)),
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('OK').last);
+      await tester.pumpAndSettle();
+
+      const GamepadBinding dpadRight = GamepadBinding(GamepadButton.dpadRight);
+      expect(
+        registry.bindingsFor(ShortcutAction.readerPageForward).gamepadBindings,
+        contains(dpadRight),
+      );
+      expect(
+        registry
+            .bindingsFor(ShortcutAction.readerToggleFurigana)
+            .gamepadBindings,
+        isNot(contains(dpadRight)),
+      );
+    },
+  );
+
+  testWidgets('Ctrl modifier is captured with the key', (
+    WidgetTester tester,
+  ) async {
     await pumpDialog(tester, buildRegistry());
     await startCapture(tester);
 
@@ -309,27 +331,29 @@ void main() {
   });
 
   testWidgets(
-      'bare single key is captured even under global navigation Shortcuts',
-      (WidgetTester tester) async {
-    // TODO-838: with the dialog nested under wrapWithGlobalNavigation, the
-    // capture Focus must deterministically hold primary focus so a bare letter
-    // key reaches _onKeyEvent instead of bubbling to the global Shortcuts and
-    // getting dropped. Covers both "bare single key recorded" and "global layer
-    // does not steal it".
-    await pumpDialogWithGlobalNav(tester, buildRegistry());
-    await startCapture(tester);
-    expect(find.text(t.shortcut_press_key), findsOneWidget);
+    'bare single key is captured even under global navigation Shortcuts',
+    (WidgetTester tester) async {
+      // TODO-838: with the dialog nested under wrapWithGlobalNavigation, the
+      // capture Focus must deterministically hold primary focus so a bare letter
+      // key reaches _onKeyEvent instead of bubbling to the global Shortcuts and
+      // getting dropped. Covers both "bare single key recorded" and "global layer
+      // does not steal it".
+      await pumpDialogWithGlobalNav(tester, buildRegistry());
+      await startCapture(tester);
+      expect(find.text(t.shortcut_press_key), findsOneWidget);
 
-    await tester.sendKeyEvent(LogicalKeyboardKey.keyB);
-    await tester.pumpAndSettle();
+      await tester.sendKeyEvent(LogicalKeyboardKey.keyB);
+      await tester.pumpAndSettle();
 
-    expect(find.widgetWithText(FushiTagChip, 'KeyB'), findsOneWidget);
-    expect(find.text(t.shortcut_press_key), findsNothing);
-    expect(find.byType(ShortcutBindingEditDialog), findsOneWidget);
-  });
+      expect(find.widgetWithText(FushiTagChip, 'KeyB'), findsOneWidget);
+      expect(find.text(t.shortcut_press_key), findsNothing);
+      expect(find.byType(ShortcutBindingEditDialog), findsOneWidget);
+    },
+  );
 
-  testWidgets('stop-capture control exits capture without binding a key',
-      (WidgetTester tester) async {
+  testWidgets('stop-capture control exits capture without binding a key', (
+    WidgetTester tester,
+  ) async {
     await pumpDialog(tester, buildRegistry());
     await startCapture(tester);
     expect(find.text(t.shortcut_press_key), findsOneWidget);

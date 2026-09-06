@@ -9,45 +9,46 @@ import 'package:fushi/src/utils/misc/error_log_service.dart';
 void main() {
   group('buildFfmpegVideoClipExportArgs', () {
     test(
-        'maps video and the selected audio stream without subtitle/data streams',
-        () {
-      final List<String> args = buildFfmpegVideoClipExportArgs(
-        inputPath: '/video/source.mkv',
-        startMs: 1234,
-        endMs: 6234,
-        outputPath: '/video/clip.mkv',
-        audioStreamIndex: 1,
-      );
+      'maps video and the selected audio stream without subtitle/data streams',
+      () {
+        final List<String> args = buildFfmpegVideoClipExportArgs(
+          inputPath: '/video/source.mkv',
+          startMs: 1234,
+          endMs: 6234,
+          outputPath: '/video/clip.mkv',
+          audioStreamIndex: 1,
+        );
 
-      expect(args, <String>[
-        '-hide_banner',
-        '-y',
-        '-ss',
-        '1.234',
-        '-t',
-        '5.000',
-        '-i',
-        '/video/source.mkv',
-        '-map',
-        '0:v:0',
-        '-map',
-        // 尾随 '?'：当 0:a:1 在真实 ffmpeg 流里越界（mpv 轨序号 != ffmpeg 0:a:N，
-        // 挂外挂音频时常见），ffmpeg 不再 "Stream map matches no streams" 硬失败，
-        // 而是降级回退默认轨（BUG-345）。
-        '0:a:1?',
-        '-sn',
-        '-dn',
-        // 片段绝不继承源整集的章节表（BUG-2011）：不丢的话 mp4 muxer 会建一条与整集
-        // 等长的 text track，把 mvhd.duration 拉满，5 秒的片段显示成整集的进度条。
-        '-map_chapters',
-        '-1',
-        '-c',
-        'copy',
-        // 这里**没有** `-avoid_negative_ts make_zero`：视频 copy 时它会把关键帧前导
-        // 从「edit list 跳过」变成正片内容，片段平白多出一个 GOP（BUG-2011）。
-        '/video/clip.mkv',
-      ]);
-    });
+        expect(args, <String>[
+          '-hide_banner',
+          '-y',
+          '-ss',
+          '1.234',
+          '-t',
+          '5.000',
+          '-i',
+          '/video/source.mkv',
+          '-map',
+          '0:v:0',
+          '-map',
+          // 尾随 '?'：当 0:a:1 在真实 ffmpeg 流里越界（mpv 轨序号 != ffmpeg 0:a:N，
+          // 挂外挂音频时常见），ffmpeg 不再 "Stream map matches no streams" 硬失败，
+          // 而是降级回退默认轨（BUG-345）。
+          '0:a:1?',
+          '-sn',
+          '-dn',
+          // 片段绝不继承源整集的章节表（BUG-2011）：不丢的话 mp4 muxer 会建一条与整集
+          // 等长的 text track，把 mvhd.duration 拉满，5 秒的片段显示成整集的进度条。
+          '-map_chapters',
+          '-1',
+          '-c',
+          'copy',
+          // 这里**没有** `-avoid_negative_ts make_zero`：视频 copy 时它会把关键帧前导
+          // 从「edit list 跳过」变成正片内容，片段平白多出一个 GOP（BUG-2011）。
+          '/video/clip.mkv',
+        ]);
+      },
+    );
 
     test('audio map always carries the optional "?" suffix', () {
       final List<String> args = buildFfmpegVideoClipExportArgs(
@@ -62,51 +63,57 @@ void main() {
       expect(args, isNot(contains('0:a:3')));
     });
 
-    test('uses ffmpeg default audio selection when no explicit track is set',
-        () {
-      final List<String> args = buildFfmpegVideoClipExportArgs(
-        inputPath: '/video/source.mp4',
-        startMs: 0,
-        endMs: 2000,
-        outputPath: '/video/clip.mp4',
-        audioStreamIndex: null,
-      );
+    test(
+      'uses ffmpeg default audio selection when no explicit track is set',
+      () {
+        final List<String> args = buildFfmpegVideoClipExportArgs(
+          inputPath: '/video/source.mp4',
+          startMs: 0,
+          endMs: 2000,
+          outputPath: '/video/clip.mp4',
+          audioStreamIndex: null,
+        );
 
-      expect(args.contains('-map'), isFalse);
-      expect(args, contains('-sn'));
-      expect(args, contains('-dn'));
-      expect(args, isNot(contains('-filter_complex')));
-      expect(args, isNot(contains('-vf')));
-    });
+        expect(args.contains('-map'), isFalse);
+        expect(args, contains('-sn'));
+        expect(args, contains('-dn'));
+        expect(args, isNot(contains('-filter_complex')));
+        expect(args, isNot(contains('-vf')));
+      },
+    );
 
-    test('drops the audio map when the index is out of the known stream count',
-        () {
-      // audioStreamCount=2 → 合法下标只有 0/1；下标 2 越界（mpv 把外挂音频也算进
-      // tracks.audio，但 ffmpeg 容器里只有 2 条），不加 -map，回退默认轨。
-      final List<String> args = buildFfmpegVideoClipExportArgs(
-        inputPath: '/video/source.mkv',
-        startMs: 0,
-        endMs: 1000,
-        outputPath: '/video/clip.mkv',
-        audioStreamIndex: 2,
-        audioStreamCount: 2,
-      );
-      expect(args.contains('-map'), isFalse);
-      expect(args.any((String a) => a.startsWith('0:a:')), isFalse);
-    });
+    test(
+      'drops the audio map when the index is out of the known stream count',
+      () {
+        // audioStreamCount=2 → 合法下标只有 0/1；下标 2 越界（mpv 把外挂音频也算进
+        // tracks.audio，但 ffmpeg 容器里只有 2 条），不加 -map，回退默认轨。
+        final List<String> args = buildFfmpegVideoClipExportArgs(
+          inputPath: '/video/source.mkv',
+          startMs: 0,
+          endMs: 1000,
+          outputPath: '/video/clip.mkv',
+          audioStreamIndex: 2,
+          audioStreamCount: 2,
+        );
+        expect(args.contains('-map'), isFalse);
+        expect(args.any((String a) => a.startsWith('0:a:')), isFalse);
+      },
+    );
 
-    test('keeps the audio map when the index is within the known stream count',
-        () {
-      final List<String> args = buildFfmpegVideoClipExportArgs(
-        inputPath: '/video/source.mkv',
-        startMs: 0,
-        endMs: 1000,
-        outputPath: '/video/clip.mkv',
-        audioStreamIndex: 1,
-        audioStreamCount: 2,
-      );
-      expect(args, contains('0:a:1?'));
-    });
+    test(
+      'keeps the audio map when the index is within the known stream count',
+      () {
+        final List<String> args = buildFfmpegVideoClipExportArgs(
+          inputPath: '/video/source.mkv',
+          startMs: 0,
+          endMs: 1000,
+          outputPath: '/video/clip.mkv',
+          audioStreamIndex: 1,
+          audioStreamCount: 2,
+        );
+        expect(args, contains('0:a:1?'));
+      },
+    );
   });
 
   group('buildFfmpegVideoClipReencodeArgs (BUG-917 fallback)', () {
@@ -123,19 +130,20 @@ void main() {
       // clip export (TODO-1257); this path guarantees a muxable container even
       // when -c copy can't hold the source codecs.
       expect(
-          args,
-          containsAllInOrder(<String>[
-            '-i',
-            '/video/source.mkv',
-            '-map',
-            '0:v:0',
-            '-map',
-            '0:a:1?',
-            '-sn',
-            '-dn',
-            '-c:v',
-            'libx264',
-          ]));
+        args,
+        containsAllInOrder(<String>[
+          '-i',
+          '/video/source.mkv',
+          '-map',
+          '0:v:0',
+          '-map',
+          '0:a:1?',
+          '-sn',
+          '-dn',
+          '-c:v',
+          'libx264',
+        ]),
+      );
       expect(args, containsAllInOrder(<String>['-c:a', 'aac']));
       expect(args, containsAllInOrder(<String>['-pix_fmt', 'yuv420p']));
       expect(args, containsAllInOrder(<String>['-movflags', '+faststart']));
@@ -159,14 +167,14 @@ void main() {
   });
 
   group('exportVideoClipViaFfmpeg', () {
-    test(
-        'falls back to re-encode when stream-copy fails, then succeeds '
+    test('falls back to re-encode when stream-copy fails, then succeeds '
         '(BUG-917)', () async {
       // Root cause: the bundled ffmpeg-min can only mux mp4/mov for video+audio.
       // When -c copy into .mp4 fails (codec not mp4-compatible), the exporter
       // must retry with libx264 + aac rather than surfacing exit -22.
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_export_fallback');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_clip_export_fallback',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final File input = File('${dir.path}/source.mkv')
         ..writeAsBytesSync(<int>[1]);
@@ -203,60 +211,67 @@ void main() {
       expect(output.existsSync(), isTrue);
     });
 
-    test('reports ffmpegFailed only when BOTH copy and re-encode fail',
-        () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_export_bothfail');
-      addTearDown(() => dir.deleteSync(recursive: true));
-      final File input = File('${dir.path}/source.mkv')
-        ..writeAsBytesSync(<int>[1]);
-      final File output = File('${dir.path}/clip.mp4');
-      final _FakeFfmpegBackend backend = _FakeFfmpegBackend(
-        onRun: (List<String> args) =>
-            const FfmpegRunResult(returnCode: 1, output: 'boom'),
-      );
+    test(
+      'reports ffmpegFailed only when BOTH copy and re-encode fail',
+      () async {
+        final Directory dir = Directory.systemTemp.createTempSync(
+          'hibiki_clip_export_bothfail',
+        );
+        addTearDown(() => dir.deleteSync(recursive: true));
+        final File input = File('${dir.path}/source.mkv')
+          ..writeAsBytesSync(<int>[1]);
+        final File output = File('${dir.path}/clip.mp4');
+        final _FakeFfmpegBackend backend = _FakeFfmpegBackend(
+          onRun: (List<String> args) =>
+              const FfmpegRunResult(returnCode: 1, output: 'boom'),
+        );
 
-      final VideoClipExportResult result = await exportVideoClipViaFfmpeg(
-        inputPath: input.path,
-        startMs: 0,
-        endMs: 1000,
-        outputPath: output.path,
-        backend: backend,
-      );
+        final VideoClipExportResult result = await exportVideoClipViaFfmpeg(
+          inputPath: input.path,
+          startMs: 0,
+          endMs: 1000,
+          outputPath: output.path,
+          backend: backend,
+        );
 
-      expect(result.failure, VideoClipExportFailure.ffmpegFailed);
-      expect(backend.clipCalls.length, 2);
-      expect(output.existsSync(), isFalse);
-    });
+        expect(result.failure, VideoClipExportFailure.ffmpegFailed);
+        expect(backend.clipCalls.length, 2);
+        expect(output.existsSync(), isFalse);
+      },
+    );
 
-    test('rejects invalid ranges without running ffmpeg and removes leftovers',
-        () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_export_invalid');
-      addTearDown(() => dir.deleteSync(recursive: true));
-      final File input = File('${dir.path}/source.mp4')
-        ..writeAsBytesSync(<int>[1]);
-      final File output = File('${dir.path}/clip.mp4')
-        ..writeAsBytesSync(<int>[1, 2, 3]);
-      final _FakeFfmpegBackend backend = _FakeFfmpegBackend();
+    test(
+      'rejects invalid ranges without running ffmpeg and removes leftovers',
+      () async {
+        final Directory dir = Directory.systemTemp.createTempSync(
+          'hibiki_clip_export_invalid',
+        );
+        addTearDown(() => dir.deleteSync(recursive: true));
+        final File input = File('${dir.path}/source.mp4')
+          ..writeAsBytesSync(<int>[1]);
+        final File output = File('${dir.path}/clip.mp4')
+          ..writeAsBytesSync(<int>[1, 2, 3]);
+        final _FakeFfmpegBackend backend = _FakeFfmpegBackend();
 
-      final VideoClipExportResult result = await exportVideoClipViaFfmpeg(
-        inputPath: input.path,
-        startMs: 5000,
-        endMs: 5000,
-        outputPath: output.path,
-        backend: backend,
-      );
+        final VideoClipExportResult result = await exportVideoClipViaFfmpeg(
+          inputPath: input.path,
+          startMs: 5000,
+          endMs: 5000,
+          outputPath: output.path,
+          backend: backend,
+        );
 
-      expect(result.failure, VideoClipExportFailure.invalidRange);
-      expect(result.outputPath, isNull);
-      expect(backend.calls, isEmpty);
-      expect(output.existsSync(), isFalse);
-    });
+        expect(result.failure, VideoClipExportFailure.invalidRange);
+        expect(result.outputPath, isNull);
+        expect(backend.calls, isEmpty);
+        expect(output.existsSync(), isFalse);
+      },
+    );
 
     test('runs ffmpeg and returns the output path on success', () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_export_success');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_clip_export_success',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final File input = File('${dir.path}/source.mkv')
         ..writeAsBytesSync(<int>[1]);
@@ -282,23 +297,25 @@ void main() {
       expect(result.isSuccess, isTrue);
       expect(result.outputPath, output.path);
       expect(
-          observedArgs,
-          containsAllInOrder(<String>[
-            '-map',
-            '0:v:0',
-            '-map',
-            '0:a:2?',
-            '-sn',
-            '-dn',
-            '-c',
-            'copy',
-          ]));
+        observedArgs,
+        containsAllInOrder(<String>[
+          '-map',
+          '0:v:0',
+          '-map',
+          '0:a:2?',
+          '-sn',
+          '-dn',
+          '-c',
+          'copy',
+        ]),
+      );
       expect(output.existsSync(), isTrue);
     });
 
     test('cleans partial output after ffmpeg failure', () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_export_fail');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_clip_export_fail',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final File input = File('${dir.path}/source.mkv')
         ..writeAsBytesSync(<int>[1]);
@@ -323,51 +340,56 @@ void main() {
       expect(output.existsSync(), isFalse);
     });
 
-    test('logs the ffmpeg stderr to ErrorLogService on failure (BUG-345)',
-        () async {
-      // C 修：ffmpeg 退出码非 0 时，真实 stderr 必须写进 ErrorLogService（设置
-      // → 错误日志页能看到），不再被吞成黑盒。
-      await ErrorLogService.instance.clear();
-      addTearDown(() => ErrorLogService.instance.clear());
-      final int before = ErrorLogService.instance.entries.length;
+    test(
+      'logs the ffmpeg stderr to ErrorLogService on failure (BUG-345)',
+      () async {
+        // C 修：ffmpeg 退出码非 0 时，真实 stderr 必须写进 ErrorLogService（设置
+        // → 错误日志页能看到），不再被吞成黑盒。
+        await ErrorLogService.instance.clear();
+        addTearDown(() => ErrorLogService.instance.clear());
+        final int before = ErrorLogService.instance.entries.length;
 
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_export_log');
-      addTearDown(() => dir.deleteSync(recursive: true));
-      final File input = File('${dir.path}/source.mkv')
-        ..writeAsBytesSync(<int>[1]);
-      final File output = File('${dir.path}/clip.mkv');
-      const String stderr =
-          "Stream map '0:a:3' matches no streams. To ignore this, "
-          "add a trailing '?' to the map.";
-      final _FakeFfmpegBackend backend = _FakeFfmpegBackend(
-        onRun: (List<String> args) =>
-            const FfmpegRunResult(returnCode: 1, output: stderr),
-      );
+        final Directory dir = Directory.systemTemp.createTempSync(
+          'hibiki_clip_export_log',
+        );
+        addTearDown(() => dir.deleteSync(recursive: true));
+        final File input = File('${dir.path}/source.mkv')
+          ..writeAsBytesSync(<int>[1]);
+        final File output = File('${dir.path}/clip.mkv');
+        const String stderr =
+            "Stream map '0:a:3' matches no streams. To ignore this, "
+            "add a trailing '?' to the map.";
+        final _FakeFfmpegBackend backend = _FakeFfmpegBackend(
+          onRun: (List<String> args) =>
+              const FfmpegRunResult(returnCode: 1, output: stderr),
+        );
 
-      final VideoClipExportResult result = await exportVideoClipViaFfmpeg(
-        inputPath: input.path,
-        startMs: 0,
-        endMs: 1000,
-        outputPath: output.path,
-        audioStreamIndex: 3,
-        backend: backend,
-      );
+        final VideoClipExportResult result = await exportVideoClipViaFfmpeg(
+          inputPath: input.path,
+          startMs: 0,
+          endMs: 1000,
+          outputPath: output.path,
+          audioStreamIndex: 3,
+          backend: backend,
+        );
 
-      expect(result.failure, VideoClipExportFailure.ffmpegFailed);
-      // detail 仍携真实 stderr（给调用方拼 OSD）。
-      expect(result.detail, contains('matches no streams'));
-      // 关键：失败被记进错误日志服务，且包含真实 stderr。
-      final List<ErrorLogEntry> added =
-          ErrorLogService.instance.entries.skip(before).toList();
-      expect(added, isNotEmpty);
-      final ErrorLogEntry logged = added.firstWhere(
-        (ErrorLogEntry e) => e.source == 'VideoClipExport',
-        orElse: () => throw StateError(
-            'no VideoClipExport entry logged: ${added.map((ErrorLogEntry e) => e.source).toList()}'),
-      );
-      expect(logged.error, contains('matches no streams'));
-    });
+        expect(result.failure, VideoClipExportFailure.ffmpegFailed);
+        // detail 仍携真实 stderr（给调用方拼 OSD）。
+        expect(result.detail, contains('matches no streams'));
+        // 关键：失败被记进错误日志服务，且包含真实 stderr。
+        final List<ErrorLogEntry> added = ErrorLogService.instance.entries
+            .skip(before)
+            .toList();
+        expect(added, isNotEmpty);
+        final ErrorLogEntry logged = added.firstWhere(
+          (ErrorLogEntry e) => e.source == 'VideoClipExport',
+          orElse: () => throw StateError(
+            'no VideoClipExport entry logged: ${added.map((ErrorLogEntry e) => e.source).toList()}',
+          ),
+        );
+        expect(logged.error, contains('matches no streams'));
+      },
+    );
   });
   group('soft-subtitle muxing', () {
     test('stream map stays untouched when there are no subtitle inputs', () {
@@ -400,14 +422,16 @@ void main() {
       );
     });
 
-    test('unknown audio track maps ALL audio rather than gambling on 0:a:0',
-        () {
-      // 多音轨番剧的默认轨常常不是 0；赌 0:a:0 会导出错误语言的音频。
-      expect(
-        buildClipStreamMapArgs(explicitAudio: null, subtitleInputCount: 1),
-        <String>['-map', '0:v:0', '-map', '0:a?', '-map', '1:s:0'],
-      );
-    });
+    test(
+      'unknown audio track maps ALL audio rather than gambling on 0:a:0',
+      () {
+        // 多音轨番剧的默认轨常常不是 0；赌 0:a:0 会导出错误语言的音频。
+        expect(
+          buildClipStreamMapArgs(explicitAudio: null, subtitleInputCount: 1),
+          <String>['-map', '0:v:0', '-map', '0:a?', '-map', '1:s:0'],
+        );
+      },
+    );
 
     test('copy args add the subtitle input, its codec, and drop -sn', () {
       final List<String> args = buildFfmpegVideoClipExportArgs(
@@ -457,25 +481,27 @@ void main() {
       expect(args, isNot(contains('-sn')));
     });
 
-    test('re-encode args carry the subtitles too, so the fallback keeps them',
-        () {
-      // copy 轮失败降级到重编码时若丢字幕，用户拿到的就是没字幕的片段。
-      final List<String> args = buildFfmpegVideoClipReencodeArgs(
-        inputPath: '/video/source.mkv',
-        startMs: 0,
-        endMs: 1000,
-        outputPath: '/video/clip.mp4',
-        audioStreamIndex: 1,
-        subtitlePaths: <String>['/tmp/a.srt'],
-        subtitleCodec: 'mov_text',
-      );
+    test(
+      're-encode args carry the subtitles too, so the fallback keeps them',
+      () {
+        // copy 轮失败降级到重编码时若丢字幕，用户拿到的就是没字幕的片段。
+        final List<String> args = buildFfmpegVideoClipReencodeArgs(
+          inputPath: '/video/source.mkv',
+          startMs: 0,
+          endMs: 1000,
+          outputPath: '/video/clip.mp4',
+          audioStreamIndex: 1,
+          subtitlePaths: <String>['/tmp/a.srt'],
+          subtitleCodec: 'mov_text',
+        );
 
-      expect(args, containsAllInOrder(<String>['-i', '/tmp/a.srt']));
-      expect(args, containsAllInOrder(<String>['-map', '1:s:0']));
-      expect(args, containsAllInOrder(<String>['-c:s', 'mov_text']));
-      expect(args, contains('libx264'));
-      expect(args, isNot(contains('-sn')));
-    });
+        expect(args, containsAllInOrder(<String>['-i', '/tmp/a.srt']));
+        expect(args, containsAllInOrder(<String>['-map', '1:s:0']));
+        expect(args, containsAllInOrder(<String>['-c:s', 'mov_text']));
+        expect(args, contains('libx264'));
+        expect(args, isNot(contains('-sn')));
+      },
+    );
 
     test('subtitle args are inert without a codec (unsupported container)', () {
       // 容器封不下文本字幕时，命令必须与「加字幕功能不存在」时逐字节一致。
@@ -499,58 +525,62 @@ void main() {
       expect(withPaths, contains('-sn'));
     });
 
-    test('writes cues to a temp SRT, feeds ffmpeg, then cleans it up',
-        () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_sub_ok');
-      addTearDown(() => dir.deleteSync(recursive: true));
-      final File input = File('${dir.path}/source.mkv')
-        ..writeAsBytesSync(<int>[1]);
-      final File output = File('${dir.path}/clip.mp4');
+    test(
+      'writes cues to a temp SRT, feeds ffmpeg, then cleans it up',
+      () async {
+        final Directory dir = Directory.systemTemp.createTempSync(
+          'hibiki_clip_sub_ok',
+        );
+        addTearDown(() => dir.deleteSync(recursive: true));
+        final File input = File('${dir.path}/source.mkv')
+          ..writeAsBytesSync(<int>[1]);
+        final File output = File('${dir.path}/clip.mp4');
 
-      final List<String> seenSubtitlePaths = <String>[];
-      String? seenSubtitleContent;
-      final _FakeFfmpegBackend backend = _FakeFfmpegBackend(
-        onRun: (List<String> args) {
-          for (final String a in args) {
-            if (a.endsWith('.srt')) {
-              seenSubtitlePaths.add(a);
-              // ffmpeg 真跑的那一刻文件必须已经落盘且可读（flush: true）。
-              seenSubtitleContent = File(a).readAsStringSync();
+        final List<String> seenSubtitlePaths = <String>[];
+        String? seenSubtitleContent;
+        final _FakeFfmpegBackend backend = _FakeFfmpegBackend(
+          onRun: (List<String> args) {
+            for (final String a in args) {
+              if (a.endsWith('.srt')) {
+                seenSubtitlePaths.add(a);
+                // ffmpeg 真跑的那一刻文件必须已经落盘且可读（flush: true）。
+                seenSubtitleContent = File(a).readAsStringSync();
+              }
             }
-          }
-          output.writeAsBytesSync(<int>[9]);
-          return const FfmpegRunResult(returnCode: 0, output: 'ok');
-        },
-      );
+            output.writeAsBytesSync(<int>[9]);
+            return const FfmpegRunResult(returnCode: 0, output: 'ok');
+          },
+        );
 
-      final VideoClipExportResult result = await exportVideoClipViaFfmpeg(
-        inputPath: input.path,
-        startMs: 0,
-        endMs: 2000,
-        outputPath: output.path,
-        backend: backend,
-        subtitleContents: <String>[
-          '1\n00:00:00,000 --> 00:00:01,000\n主字幕\n\n',
-          '1\n00:00:00,000 --> 00:00:01,000\nsecondary\n\n',
-        ],
-      );
+        final VideoClipExportResult result = await exportVideoClipViaFfmpeg(
+          inputPath: input.path,
+          startMs: 0,
+          endMs: 2000,
+          outputPath: output.path,
+          backend: backend,
+          subtitleContents: <String>[
+            '1\n00:00:00,000 --> 00:00:01,000\n主字幕\n\n',
+            '1\n00:00:00,000 --> 00:00:01,000\nsecondary\n\n',
+          ],
+        );
 
-      expect(result.isSuccess, isTrue);
-      expect(result.subtitleTrackCount, 2);
-      expect(seenSubtitlePaths.length, 2);
-      expect(seenSubtitleContent, isNotNull);
-      // UTF-8 往返：日文字幕不能在落盘时变成 mojibake。
-      expect(
-        File(seenSubtitlePaths.first).existsSync(),
-        isFalse,
-        reason: '临时 SRT 必须在导出结束后清理，否则每导一次就留一份垃圾',
-      );
-    });
+        expect(result.isSuccess, isTrue);
+        expect(result.subtitleTrackCount, 2);
+        expect(seenSubtitlePaths.length, 2);
+        expect(seenSubtitleContent, isNotNull);
+        // UTF-8 往返：日文字幕不能在落盘时变成 mojibake。
+        expect(
+          File(seenSubtitlePaths.first).existsSync(),
+          isFalse,
+          reason: '临时 SRT 必须在导出结束后清理，否则每导一次就留一份垃圾',
+        );
+      },
+    );
 
     test('UTF-8 subtitle content survives the round trip to disk', () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_sub_utf8');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_clip_sub_utf8',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final File input = File('${dir.path}/source.mkv')
         ..writeAsBytesSync(<int>[1]);
@@ -580,13 +610,13 @@ void main() {
       expect(readBack, srt);
     });
 
-    test(
-        'falls back to a subtitle-less export when subtitle muxing keeps '
+    test('falls back to a subtitle-less export when subtitle muxing keeps '
         'failing', () async {
       // 根因场景：旧的桌面精简 ffmpeg 没编入 movtext 编码器 → 'Unknown encoder'。
       // 加字幕这个增强绝不能把原本能成功的导出变成失败。
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_sub_degrade');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_clip_sub_degrade',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final File input = File('${dir.path}/source.mkv')
         ..writeAsBytesSync(<int>[1]);
@@ -624,41 +654,47 @@ void main() {
       expect(backend.clipCalls[2].contains('-c:s'), isFalse);
     });
 
-    test('skips subtitles entirely for containers that cannot carry them',
-        () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_sub_avi');
-      addTearDown(() => dir.deleteSync(recursive: true));
-      final File input = File('${dir.path}/source.mkv')
-        ..writeAsBytesSync(<int>[1]);
-      final File output = File('${dir.path}/clip.avi');
+    test(
+      'skips subtitles entirely for containers that cannot carry them',
+      () async {
+        final Directory dir = Directory.systemTemp.createTempSync(
+          'hibiki_clip_sub_avi',
+        );
+        addTearDown(() => dir.deleteSync(recursive: true));
+        final File input = File('${dir.path}/source.mkv')
+          ..writeAsBytesSync(<int>[1]);
+        final File output = File('${dir.path}/clip.avi');
 
-      final _FakeFfmpegBackend backend = _FakeFfmpegBackend(
-        onRun: (List<String> args) {
-          output.writeAsBytesSync(<int>[9]);
-          return const FfmpegRunResult(returnCode: 0, output: 'ok');
-        },
-      );
+        final _FakeFfmpegBackend backend = _FakeFfmpegBackend(
+          onRun: (List<String> args) {
+            output.writeAsBytesSync(<int>[9]);
+            return const FfmpegRunResult(returnCode: 0, output: 'ok');
+          },
+        );
 
-      final VideoClipExportResult result = await exportVideoClipViaFfmpeg(
-        inputPath: input.path,
-        startMs: 0,
-        endMs: 2000,
-        outputPath: output.path,
-        backend: backend,
-        subtitleContents: <String>['1\n00:00:00,000 --> 00:00:01,000\nx\n\n'],
-      );
+        final VideoClipExportResult result = await exportVideoClipViaFfmpeg(
+          inputPath: input.path,
+          startMs: 0,
+          endMs: 2000,
+          outputPath: output.path,
+          backend: backend,
+          subtitleContents: <String>['1\n00:00:00,000 --> 00:00:01,000\nx\n\n'],
+        );
 
-      expect(result.isSuccess, isTrue);
-      expect(result.subtitleTrackCount, 0);
-      expect(backend.clipCalls.single.any((String a) => a.endsWith('.srt')),
-          isFalse);
-      expect(backend.clipCalls.single.contains('-sn'), isTrue);
-    });
+        expect(result.isSuccess, isTrue);
+        expect(result.subtitleTrackCount, 0);
+        expect(
+          backend.clipCalls.single.any((String a) => a.endsWith('.srt')),
+          isFalse,
+        );
+        expect(backend.clipCalls.single.contains('-sn'), isTrue);
+      },
+    );
 
     test('blank subtitle content is ignored', () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_sub_blank');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_clip_sub_blank',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final File input = File('${dir.path}/source.mkv')
         ..writeAsBytesSync(<int>[1]);
@@ -721,53 +757,58 @@ frame=    1 fps=0.0 q=-1.0 size=       0kB time=00:00:00.00
       expect(reason, isNot(contains('Input #0')));
     });
 
-    test('degrades to the last non-noise line when no error keyword exists',
-        () {
-      // 退化输入：只有 banner / Metadata，无真错误行——绝不能返回 `Input #0` banner。
-      const String bannerOnly = '''
+    test(
+      'degrades to the last non-noise line when no error keyword exists',
+      () {
+        // 退化输入：只有 banner / Metadata，无真错误行——绝不能返回 `Input #0` banner。
+        const String bannerOnly = '''
 Input #0, matroska,webm, from 'a.mkv':
   Metadata:
     encoder         : libebml v1.3.0
   Duration: 00:23:40.00, start: 0.000000, bitrate: 2543 kb/s
   Stream #0:0: Video: h264 (High), yuv420p, 1920x1080
 ''';
-      final String reason = extractFfmpegFailureReason(bannerOnly);
-      expect(reason, isNot(startsWith('Input #0')));
-      expect(reason, isNot(contains('encoder')));
-      expect(reason, isNotEmpty);
-    });
+        final String reason = extractFfmpegFailureReason(bannerOnly);
+        expect(reason, isNot(startsWith('Input #0')));
+        expect(reason, isNot(contains('encoder')));
+        expect(reason, isNotEmpty);
+      },
+    );
 
     test('returns empty string for blank stderr', () {
       expect(extractFfmpegFailureReason(''), '');
       expect(extractFfmpegFailureReason('   \n  \n'), '');
     });
 
-    test('exportVideoClipViaFfmpeg detail carries the tail error, not banner',
-        () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_export_tail');
-      addTearDown(() => dir.deleteSync(recursive: true));
-      final File input = File('${dir.path}/source.mkv')
-        ..writeAsBytesSync(<int>[1]);
-      final File output = File('${dir.path}/clip.mkv');
-      final _FakeFfmpegBackend backend = _FakeFfmpegBackend(
-        onRun: (List<String> args) =>
-            const FfmpegRunResult(returnCode: 1, output: realStderr),
-      );
+    test(
+      'exportVideoClipViaFfmpeg detail carries the tail error, not banner',
+      () async {
+        final Directory dir = Directory.systemTemp.createTempSync(
+          'hibiki_clip_export_tail',
+        );
+        addTearDown(() => dir.deleteSync(recursive: true));
+        final File input = File('${dir.path}/source.mkv')
+          ..writeAsBytesSync(<int>[1]);
+        final File output = File('${dir.path}/clip.mkv');
+        final _FakeFfmpegBackend backend = _FakeFfmpegBackend(
+          onRun: (List<String> args) =>
+              const FfmpegRunResult(returnCode: 1, output: realStderr),
+        );
 
-      final VideoClipExportResult result = await exportVideoClipViaFfmpeg(
-        inputPath: input.path,
-        startMs: 0,
-        endMs: 1000,
-        outputPath: output.path,
-        backend: backend,
-      );
+        final VideoClipExportResult result = await exportVideoClipViaFfmpeg(
+          inputPath: input.path,
+          startMs: 0,
+          endMs: 1000,
+          outputPath: output.path,
+          backend: backend,
+        );
 
-      expect(result.failure, VideoClipExportFailure.ffmpegFailed);
-      // detail = 尾段真因，不再是全量 stderr / 头部 banner。
-      expect(result.detail, 'Conversion failed!');
-      expect(result.detail, isNot(contains('Input #0')));
-    });
+        expect(result.failure, VideoClipExportFailure.ffmpegFailed);
+        // detail = 尾段真因，不再是全量 stderr / 头部 banner。
+        expect(result.detail, 'Conversion failed!');
+        expect(result.detail, isNot(contains('Input #0')));
+      },
+    );
   });
 
   // BUG-2011：导出的片段在 mpv 之外播不了、进度条显示成整集时长。三条独立根因，
@@ -797,8 +838,9 @@ At least one output file must be specified''';
     });
 
     test('plans a full re-encode for the reported file', () {
-      final ClipCodecPlan plan =
-          resolveClipCodecPlan(parseClipSourceCodecs(realWorldLog));
+      final ClipCodecPlan plan = resolveClipCodecPlan(
+        parseClipSourceCodecs(realWorldLog),
+      );
       // 10-bit HEVC：Windows / 浏览器的通用解码路径放不了。
       expect(plan.copyVideo, isFalse);
       // FLAC-in-mp4：系统解码器不认，而且它还是 default 轨。
@@ -834,8 +876,12 @@ At least one output file must be specified''';
       // `hev1` 把参数集放带内，Apple 生态 / 浏览器 / Media Foundation 只认 `hvc1`；
       // 改 tag 不碰码流，所以仍然是瞬时的 copy。
       expect(plan.videoTag, 'hvc1');
-      expect(buildClipCodecArgs(plan: plan),
-          <String>['-c', 'copy', '-tag:v', 'hvc1']);
+      expect(buildClipCodecArgs(plan: plan), <String>[
+        '-c',
+        'copy',
+        '-tag:v',
+        'hvc1',
+      ]);
     });
 
     test('re-encodes only the audio when just the audio is unplayable', () {
@@ -849,8 +895,14 @@ At least one output file must be specified''';
       // 视频照旧 copy（瞬时），只有音频转 AAC —— 5 秒音频的编码代价可以忽略。
       expect(plan.copyVideo, isTrue);
       expect(plan.copyAudio, isFalse);
-      expect(buildClipCodecArgs(plan: plan),
-          <String>['-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k']);
+      expect(buildClipCodecArgs(plan: plan), <String>[
+        '-c:v',
+        'copy',
+        '-c:a',
+        'aac',
+        '-b:a',
+        '192k',
+      ]);
     });
 
     test('nv12 is 8-bit and must not be mistaken for 12-bit', () {
@@ -868,8 +920,9 @@ At least one output file must be specified''';
     test('an unparseable probe degrades to the pre-gating behaviour', () {
       // 探测是优化判据，不是导出的前置条件：探不出来就按老样子全 copy，
       // 绝不能把原本瞬时的导出变成整段重编码。
-      final ClipSourceCodecs codecs =
-          parseClipSourceCodecs('ffmpeg: command not found');
+      final ClipSourceCodecs codecs = parseClipSourceCodecs(
+        'ffmpeg: command not found',
+      );
       expect(codecs.isEmpty, isTrue);
       final ClipCodecPlan plan = resolveClipCodecPlan(codecs);
       expect(plan.isFullCopy, isTrue);
@@ -909,28 +962,36 @@ At least one output file must be specified''';
             codecPlan: plan,
           );
 
-      expect(argsFor(ClipCodecPlan.fullCopy).contains('-avoid_negative_ts'),
-          isFalse);
       expect(
-          argsFor(const ClipCodecPlan(copyVideo: true, copyAudio: false))
-              .contains('-avoid_negative_ts'),
-          isFalse);
-      expect(argsFor(const ClipCodecPlan(copyVideo: false, copyAudio: false)),
-          containsAllInOrder(<String>['-avoid_negative_ts', 'make_zero']));
+        argsFor(ClipCodecPlan.fullCopy).contains('-avoid_negative_ts'),
+        isFalse,
+      );
+      expect(
+        argsFor(
+          const ClipCodecPlan(copyVideo: true, copyAudio: false),
+        ).contains('-avoid_negative_ts'),
+        isFalse,
+      );
+      expect(
+        argsFor(const ClipCodecPlan(copyVideo: false, copyAudio: false)),
+        containsAllInOrder(<String>['-avoid_negative_ts', 'make_zero']),
+      );
       // 重编码兜底路径恒重编码视频，那条必须一直带着。
       expect(
-          buildFfmpegVideoClipReencodeArgs(
-            inputPath: '/v/in.mkv',
-            startMs: 1000,
-            endMs: 6000,
-            outputPath: '/v/out.mp4',
-          ),
-          containsAllInOrder(<String>['-avoid_negative_ts', 'make_zero']));
+        buildFfmpegVideoClipReencodeArgs(
+          inputPath: '/v/in.mkv',
+          startMs: 1000,
+          endMs: 6000,
+          outputPath: '/v/out.mp4',
+        ),
+        containsAllInOrder(<String>['-avoid_negative_ts', 'make_zero']),
+      );
     });
 
     test('the probe runs before the clip and does not carry -ss', () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_probe');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_clip_probe',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final File input = File('${dir.path}/source.mp4')
         ..writeAsBytesSync(<int>[1]);
@@ -940,10 +1001,7 @@ At least one output file must be specified''';
           if (!args.contains('-ss')) {
             // 探测那一轮：ffmpeg 没有输出文件时**必然**非 0 退出，流信息却已经打进
             // 日志。所以探测只能读输出、不能看退出码。
-            return const FfmpegRunResult(
-              returnCode: 1,
-              output: realWorldLog,
-            );
+            return const FfmpegRunResult(returnCode: 1, output: realWorldLog);
           }
           output.writeAsBytesSync(<int>[9]);
           return const FfmpegRunResult(returnCode: 0, output: 'ok');

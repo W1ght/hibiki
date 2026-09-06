@@ -105,8 +105,8 @@ class _NowListeningMiniBarState extends ConsumerState<NowListeningMiniBar> {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                            color: scheme.onSurfaceVariant,
-                          ),
+                        color: scheme.onSurfaceVariant,
+                      ),
                     ),
                   ],
                 ),
@@ -161,10 +161,7 @@ class _NowListeningMiniBarState extends ConsumerState<NowListeningMiniBar> {
         manufacturer: maker,
       );
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(hint),
-          duration: const Duration(seconds: 4),
-        ),
+        SnackBar(content: Text(hint), duration: const Duration(seconds: 4)),
       );
       return;
     }
@@ -198,11 +195,7 @@ class _NowListeningMiniBarState extends ConsumerState<NowListeningMiniBar> {
   }
 
   Widget _coverFallback(ColorScheme scheme) => ColoredBox(
-        color: scheme.primaryContainer,
-        child: Icon(
-          Icons.headphones,
-          size: 20,
-          color: scheme.onPrimaryContainer,
-        ),
-      );
+    color: scheme.primaryContainer,
+    child: Icon(Icons.headphones, size: 20, color: scheme.onPrimaryContainer),
+  );
 }

@@ -26,9 +26,10 @@ class _FakeRepo implements BaseAnkiRepository {
   AnkiMiningContext? minedContext;
 
   @override
-  Future<MineOutcome> mineEntry(
-      {required String rawPayloadJson,
-      required AnkiMiningContext context}) async {
+  Future<MineOutcome> mineEntry({
+    required String rawPayloadJson,
+    required AnkiMiningContext context,
+  }) async {
     minedContext = context;
     return const MineOutcome.success(noteId: 1);
   }
@@ -73,8 +74,7 @@ Future<String?> _okAudio({
   int audioChannels = 1,
   String audioBitrate = '64k',
   String? tlsPinSha256,
-}) async =>
-    outputPath;
+}) async => outputPath;
 
 /// Netflix 那条链会把产物 `readAsBytes` 回来，故假件必须真落盘（引擎那条只传路径）。
 Future<String?> _okAudioOnDisk({
@@ -106,8 +106,7 @@ Future<String?> _nullGif({
   bool diagnosticOnly = false,
   FfmpegFailureReporter? onFailure,
   String? tlsPinSha256,
-}) async =>
-    null;
+}) async => null;
 
 /// 一张真 JPEG（media_kit 的 `controller.screenshot` 给的就是 `image/jpeg`）。尺寸刻意小于
 /// 降采样长边阈值 —— 「不需要缩放」正是旧实现原样返回入参、把 JPEG 写进 `.png` 的那条路。
@@ -131,10 +130,13 @@ void main() {
     });
 
     test('encodeAttempts：png 退 jpg，jpg 是链尾（不自我重试）', () {
-      expect(MiningStillFormat.png.encodeAttempts,
-          <MiningStillFormat>[MiningStillFormat.png, MiningStillFormat.jpg]);
-      expect(MiningStillFormat.jpg.encodeAttempts,
-          <MiningStillFormat>[MiningStillFormat.jpg]);
+      expect(MiningStillFormat.png.encodeAttempts, <MiningStillFormat>[
+        MiningStillFormat.png,
+        MiningStillFormat.jpg,
+      ]);
+      expect(MiningStillFormat.jpg.encodeAttempts, <MiningStillFormat>[
+        MiningStillFormat.jpg,
+      ]);
     });
   });
 
@@ -183,18 +185,25 @@ void main() {
 
     test('选 png → .png（ffmpeg 按扩展名选编码器）', () async {
       final _FakeFrameExtractor frame = _FakeFrameExtractor();
-      final AnkiMiningContext ctx =
-          await mine(stillFormat: MiningStillFormat.png, frame: frame);
+      final AnkiMiningContext ctx = await mine(
+        stillFormat: MiningStillFormat.png,
+        frame: frame,
+      );
       expect(ctx.coverPath, endsWith('immersion_frame.png'));
       expect(frame.outputs.single, endsWith('.png'));
     });
 
     test('png 编码器缺失 → 退回 .jpg，封面不丢', () async {
       final _FakeFrameExtractor frame = _FakeFrameExtractor(accept: '.jpg');
-      final AnkiMiningContext ctx =
-          await mine(stillFormat: MiningStillFormat.png, frame: frame);
-      expect(ctx.coverPath, endsWith('immersion_frame.jpg'),
-          reason: '降级后扩展名必须跟随实际产出，不能还写 .png');
+      final AnkiMiningContext ctx = await mine(
+        stillFormat: MiningStillFormat.png,
+        frame: frame,
+      );
+      expect(
+        ctx.coverPath,
+        endsWith('immersion_frame.jpg'),
+        reason: '降级后扩展名必须跟随实际产出，不能还写 .png',
+      );
       expect(frame.outputs, hasLength(2));
       expect(frame.outputs.first, endsWith('.png'));
       expect(frame.outputs.last, endsWith('.jpg'));
@@ -239,16 +248,20 @@ void main() {
     test('默认 jpg → immersion_shot.jpg 且字节是 JPEG', () async {
       final AnkiMiningContext ctx = await mineShot(MiningStillFormat.jpg);
       expect(ctx.coverPath, endsWith('immersion_shot.jpg'));
-      expect(img.findFormatForData(File(ctx.coverPath!).readAsBytesSync()),
-          img.ImageFormat.jpg);
+      expect(
+        img.findFormatForData(File(ctx.coverPath!).readAsBytesSync()),
+        img.ImageFormat.jpg,
+      );
     });
 
     test('选 png → immersion_shot.png 且字节真是 PNG（不是改名的 JPEG）', () async {
       final AnkiMiningContext ctx = await mineShot(MiningStillFormat.png);
       expect(ctx.coverPath, endsWith('immersion_shot.png'));
-      expect(img.findFormatForData(File(ctx.coverPath!).readAsBytesSync()),
-          img.ImageFormat.png,
-          reason: 'Anki 按扩展名判 MIME：.png 里装 JPEG 字节会显示不出封面');
+      expect(
+        img.findFormatForData(File(ctx.coverPath!).readAsBytesSync()),
+        img.ImageFormat.png,
+        reason: 'Anki 按扩展名判 MIME：.png 里装 JPEG 字节会显示不出封面',
+      );
     });
   });
 
@@ -269,16 +282,21 @@ void main() {
     });
 
     test('尺寸不超限 + 目标 jpeg + 入参 png → 重编码成 JPEG（gal 抓图那条链）', () {
-      final Uint8List src =
-          Uint8List.fromList(img.encodePng(img.Image(width: 8, height: 8)));
+      final Uint8List src = Uint8List.fromList(
+        img.encodePng(img.Image(width: 8, height: 8)),
+      );
       final Uint8List out = downsampleCardScreenshot(src);
-      expect(img.findFormatForData(out), img.ImageFormat.jpg,
-          reason: 'gal 窗口抓图恒为 PNG；选 JPG 就必须真转码，不能靠改扩展名糊弄');
+      expect(
+        img.findFormatForData(out),
+        img.ImageFormat.jpg,
+        reason: 'gal 窗口抓图恒为 PNG；选 JPG 就必须真转码，不能靠改扩展名糊弄',
+      );
     });
 
     test('需要缩放 + 目标 png → 既缩了也编成 PNG', () {
       final Uint8List src = Uint8List.fromList(
-          img.encodeJpg(img.Image(width: 2400, height: 600)));
+        img.encodeJpg(img.Image(width: 2400, height: 600)),
+      );
       final Uint8List out = downsampleCardScreenshot(
         src,
         maxLongEdge: 1000,
@@ -289,16 +307,22 @@ void main() {
     });
 
     test('cardScreenshotEncodingOf：认得 jpeg/png，其余（含 GIF）返 null', () {
-      expect(cardScreenshotEncodingOf(_smallJpegBytes()),
-          CardScreenshotEncoding.jpeg);
       expect(
-          cardScreenshotEncodingOf(Uint8List.fromList(
-              img.encodePng(img.Image(width: 4, height: 4)))),
-          CardScreenshotEncoding.png);
+        cardScreenshotEncodingOf(_smallJpegBytes()),
+        CardScreenshotEncoding.jpeg,
+      );
       expect(
-          cardScreenshotEncodingOf(Uint8List.fromList(
-              img.encodeGif(img.Image(width: 4, height: 4)))),
-          isNull);
+        cardScreenshotEncodingOf(
+          Uint8List.fromList(img.encodePng(img.Image(width: 4, height: 4))),
+        ),
+        CardScreenshotEncoding.png,
+      );
+      expect(
+        cardScreenshotEncodingOf(
+          Uint8List.fromList(img.encodeGif(img.Image(width: 4, height: 4))),
+        ),
+        isNull,
+      );
     });
 
     // 认不出格式时的兜底**方向由调用点定**：视频侧入参是 media_kit 的 JPEG，gal 侧是
@@ -306,20 +330,26 @@ void main() {
     // 而且只在降采样解码失败时才现形。
     test('stillFormatOfBytes：认得的按字节走，认不出的按调用点声明的兜底走', () {
       final Uint8List junk = Uint8List.fromList(<int>[0, 1, 2]);
-      expect(stillFormatOfBytes(junk, fallback: MiningStillFormat.jpg),
-          MiningStillFormat.jpg);
-      expect(stillFormatOfBytes(junk, fallback: MiningStillFormat.png),
-          MiningStillFormat.png);
       expect(
-          stillFormatOfBytes(_smallJpegBytes(),
-              fallback: MiningStillFormat.png),
-          MiningStillFormat.jpg,
-          reason: '认得出就以字节为准，兜底不该越过真实格式');
+        stillFormatOfBytes(junk, fallback: MiningStillFormat.jpg),
+        MiningStillFormat.jpg,
+      );
       expect(
-          stillFormatOfBytes(
-              Uint8List.fromList(img.encodePng(img.Image(width: 4, height: 4))),
-              fallback: MiningStillFormat.jpg),
-          MiningStillFormat.png);
+        stillFormatOfBytes(junk, fallback: MiningStillFormat.png),
+        MiningStillFormat.png,
+      );
+      expect(
+        stillFormatOfBytes(_smallJpegBytes(), fallback: MiningStillFormat.png),
+        MiningStillFormat.jpg,
+        reason: '认得出就以字节为准，兜底不该越过真实格式',
+      );
+      expect(
+        stillFormatOfBytes(
+          Uint8List.fromList(img.encodePng(img.Image(width: 4, height: 4))),
+          fallback: MiningStillFormat.jpg,
+        ),
+        MiningStillFormat.png,
+      );
     });
   });
 
@@ -335,22 +365,23 @@ void main() {
     Future<ImmersionCaptureResult> transcode({
       required MiningStillFormat stillFormat,
       required _FakeFrameExtractor frame,
-    }) =>
-        transcodeClipToCapture(
-          Uint8List.fromList(<int>[1, 2, 3]),
-          durationMs: 4000,
-          compression: MiningMediaCompression.compressed,
-          tempDir: tmp.path,
-          stillFormat: stillFormat,
-          stillTarget: (offsetMs: 2000, exact: true),
-          audioExtractor: _okAudioOnDisk,
-          frameExtractor: frame.call,
-        );
+    }) => transcodeClipToCapture(
+      Uint8List.fromList(<int>[1, 2, 3]),
+      durationMs: 4000,
+      compression: MiningMediaCompression.compressed,
+      tempDir: tmp.path,
+      stillFormat: stillFormat,
+      stillTarget: (offsetMs: 2000, exact: true),
+      audioExtractor: _okAudioOnDisk,
+      frameExtractor: frame.call,
+    );
 
     test('选 png → clip_frame.png，结果带回 png', () async {
       final _FakeFrameExtractor frame = _FakeFrameExtractor();
-      final ImmersionCaptureResult cap =
-          await transcode(stillFormat: MiningStillFormat.png, frame: frame);
+      final ImmersionCaptureResult cap = await transcode(
+        stillFormat: MiningStillFormat.png,
+        frame: frame,
+      );
       expect(cap.coverIsStill, isTrue);
       expect(cap.stillFormat, MiningStillFormat.png);
       expect(frame.outputs.single, endsWith('clip_frame.png'));
@@ -358,8 +389,10 @@ void main() {
 
     test('png 失败 → 退 jpg，结果带回的是**实际**格式', () async {
       final _FakeFrameExtractor frame = _FakeFrameExtractor(accept: '.jpg');
-      final ImmersionCaptureResult cap =
-          await transcode(stillFormat: MiningStillFormat.png, frame: frame);
+      final ImmersionCaptureResult cap = await transcode(
+        stillFormat: MiningStillFormat.png,
+        frame: frame,
+      );
       expect(cap.coverIsStill, isTrue);
       expect(cap.stillFormat, MiningStillFormat.jpg);
       expect(frame.outputs, hasLength(2));
@@ -392,8 +425,11 @@ void main() {
         ),
         audioExpected: true,
       );
-      expect(jpg.providedCoverName, 'netflix_frame.jpg',
-          reason: '默认档必须与改动前逐字一致');
+      expect(
+        jpg.providedCoverName,
+        'netflix_frame.jpg',
+        reason: '默认档必须与改动前逐字一致',
+      );
     });
   });
 
@@ -437,14 +473,17 @@ void main() {
 
     test('gal 抓图是 PNG，用户选 JPG → 落盘转成 JPEG 且改名 .jpg', () async {
       final AnkiMiningContext ctx = await mineProvided(
-        cover:
-            Uint8List.fromList(img.encodePng(img.Image(width: 8, height: 8))),
+        cover: Uint8List.fromList(
+          img.encodePng(img.Image(width: 8, height: 8)),
+        ),
         coverName: 'external_window.png',
         stillFormat: MiningStillFormat.jpg,
       );
       expect(ctx.coverPath, endsWith('external_window.jpg'));
-      expect(img.findFormatForData(File(ctx.coverPath!).readAsBytesSync()),
-          img.ImageFormat.jpg);
+      expect(
+        img.findFormatForData(File(ctx.coverPath!).readAsBytesSync()),
+        img.ImageFormat.jpg,
+      );
     });
 
     test('用户选 PNG，扩展给的是 JPEG → 转成 PNG 且改名 .png', () async {
@@ -453,28 +492,38 @@ void main() {
         coverName: 'netflix_shot.jpg',
         stillFormat: MiningStillFormat.png,
       );
-      expect(ctx.coverPath, endsWith('netflix_shot.png'),
-          reason: '名字前缀是「这张图哪来的」的线索，只换扩展名');
-      expect(img.findFormatForData(File(ctx.coverPath!).readAsBytesSync()),
-          img.ImageFormat.png);
+      expect(
+        ctx.coverPath,
+        endsWith('netflix_shot.png'),
+        reason: '名字前缀是「这张图哪来的」的线索，只换扩展名',
+      );
+      expect(
+        img.findFormatForData(File(ctx.coverPath!).readAsBytesSync()),
+        img.ImageFormat.png,
+      );
     });
 
     test('动图字节（GIF）绝不被当成静图转码', () async {
-      final Uint8List gif =
-          Uint8List.fromList(img.encodeGif(img.Image(width: 8, height: 8)));
+      final Uint8List gif = Uint8List.fromList(
+        img.encodeGif(img.Image(width: 8, height: 8)),
+      );
       final AnkiMiningContext ctx = await mineProvided(
         cover: gif,
         coverName: 'external_window.gif',
         stillFormat: MiningStillFormat.png,
       );
       expect(ctx.coverPath, endsWith('external_window.gif'));
-      expect(File(ctx.coverPath!).readAsBytesSync(), gif,
-          reason: '动图格式由另一根轴负责，静图轴不得插手');
+      expect(
+        File(ctx.coverPath!).readAsBytesSync(),
+        gif,
+        reason: '动图格式由另一根轴负责，静图轴不得插手',
+      );
     });
 
     test('默认档（不传 stillFormat）→ 字节与文件名逐字不变', () async {
-      final Uint8List png =
-          Uint8List.fromList(img.encodePng(img.Image(width: 8, height: 8)));
+      final Uint8List png = Uint8List.fromList(
+        img.encodePng(img.Image(width: 8, height: 8)),
+      );
       final _FakeRepo repo = _FakeRepo();
       await ImmersionMiningEngine(
         gifExtractor: _nullGif,
@@ -502,34 +551,41 @@ void main() {
 
     test('providedCoverFileName：只换扩展名，动图/无名走历史默认', () {
       final Uint8List jpeg = _smallJpegBytes();
-      expect(providedCoverFileName('netflix_frame.png', jpeg),
-          'netflix_frame.jpg');
-      expect(providedCoverFileName('external_window', jpeg),
-          'external_window.jpg');
       expect(
-          providedCoverFileName(
-              'external_window.gif',
-              Uint8List.fromList(
-                  img.encodeGif(img.Image(width: 4, height: 4)))),
-          'external_window.gif');
+        providedCoverFileName('netflix_frame.png', jpeg),
+        'netflix_frame.jpg',
+      );
+      expect(
+        providedCoverFileName('external_window', jpeg),
+        'external_window.jpg',
+      );
+      expect(
+        providedCoverFileName(
+          'external_window.gif',
+          Uint8List.fromList(img.encodeGif(img.Image(width: 4, height: 4))),
+        ),
+        'external_window.gif',
+      );
       expect(providedCoverFileName(null, Uint8List(0)), 'immersion_cover.gif');
     });
 
     test('transcodeCardScreenshot：目标一致 / 认不出 → 原样返回，不重编码', () {
       final Uint8List jpeg = _smallJpegBytes();
       expect(
-          identical(
-              transcodeCardScreenshot(jpeg,
-                  encoding: CardScreenshotEncoding.jpeg),
-              jpeg),
-          isTrue);
+        identical(
+          transcodeCardScreenshot(jpeg, encoding: CardScreenshotEncoding.jpeg),
+          jpeg,
+        ),
+        isTrue,
+      );
       final Uint8List junk = Uint8List.fromList(<int>[1, 2, 3]);
       expect(
-          identical(
-              transcodeCardScreenshot(junk,
-                  encoding: CardScreenshotEncoding.png),
-              junk),
-          isTrue);
+        identical(
+          transcodeCardScreenshot(junk, encoding: CardScreenshotEncoding.png),
+          junk,
+        ),
+        isTrue,
+      );
     });
   });
 

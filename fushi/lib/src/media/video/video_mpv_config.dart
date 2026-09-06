@@ -188,63 +188,62 @@ class VideoMpvConfig {
     String? hdrToneMapping,
     String? hdrComputePeak,
     String? rawConf,
-  }) =>
-      VideoMpvConfig(
-        hwdec: hwdec ?? this.hwdec,
-        highQuality: highQuality ?? this.highQuality,
-        deband: deband ?? this.deband,
-        dither: dither ?? this.dither,
-        interpolation: interpolation ?? this.interpolation,
-        deinterlace: deinterlace ?? this.deinterlace,
-        sigmoidUpscaling: sigmoidUpscaling ?? this.sigmoidUpscaling,
-        correctDownscaling: correctDownscaling ?? this.correctDownscaling,
-        videoRotate: videoRotate ?? this.videoRotate,
-        videoZoom: videoZoom ?? this.videoZoom,
-        aspectOverride: aspectOverride ?? this.aspectOverride,
-        panscan: panscan ?? this.panscan,
-        brightness: brightness ?? this.brightness,
-        contrast: contrast ?? this.contrast,
-        saturation: saturation ?? this.saturation,
-        gamma: gamma ?? this.gamma,
-        hue: hue ?? this.hue,
-        audioDelayMs: audioDelayMs ?? this.audioDelayMs,
-        audioPitchCorrection: audioPitchCorrection ?? this.audioPitchCorrection,
-        audioChannels: audioChannels ?? this.audioChannels,
-        normalizeDownmix: normalizeDownmix ?? this.normalizeDownmix,
-        loopFile: loopFile ?? this.loopFile,
-        hdrToneMapping: hdrToneMapping ?? this.hdrToneMapping,
-        hdrComputePeak: hdrComputePeak ?? this.hdrComputePeak,
-        rawConf: rawConf ?? this.rawConf,
-      );
+  }) => VideoMpvConfig(
+    hwdec: hwdec ?? this.hwdec,
+    highQuality: highQuality ?? this.highQuality,
+    deband: deband ?? this.deband,
+    dither: dither ?? this.dither,
+    interpolation: interpolation ?? this.interpolation,
+    deinterlace: deinterlace ?? this.deinterlace,
+    sigmoidUpscaling: sigmoidUpscaling ?? this.sigmoidUpscaling,
+    correctDownscaling: correctDownscaling ?? this.correctDownscaling,
+    videoRotate: videoRotate ?? this.videoRotate,
+    videoZoom: videoZoom ?? this.videoZoom,
+    aspectOverride: aspectOverride ?? this.aspectOverride,
+    panscan: panscan ?? this.panscan,
+    brightness: brightness ?? this.brightness,
+    contrast: contrast ?? this.contrast,
+    saturation: saturation ?? this.saturation,
+    gamma: gamma ?? this.gamma,
+    hue: hue ?? this.hue,
+    audioDelayMs: audioDelayMs ?? this.audioDelayMs,
+    audioPitchCorrection: audioPitchCorrection ?? this.audioPitchCorrection,
+    audioChannels: audioChannels ?? this.audioChannels,
+    normalizeDownmix: normalizeDownmix ?? this.normalizeDownmix,
+    loopFile: loopFile ?? this.loopFile,
+    hdrToneMapping: hdrToneMapping ?? this.hdrToneMapping,
+    hdrComputePeak: hdrComputePeak ?? this.hdrComputePeak,
+    rawConf: rawConf ?? this.rawConf,
+  );
 
   static String encode(VideoMpvConfig c) => jsonEncode(<String, dynamic>{
-        '_v': _schemaVersion,
-        'hwdec': c.hwdec,
-        'highQuality': c.highQuality,
-        'deband': c.deband,
-        'dither': c.dither,
-        'interpolation': c.interpolation,
-        'deinterlace': c.deinterlace,
-        'sigmoidUpscaling': c.sigmoidUpscaling,
-        'correctDownscaling': c.correctDownscaling,
-        'videoRotate': c.videoRotate,
-        'videoZoom': c.videoZoom,
-        'aspectOverride': c.aspectOverride,
-        'panscan': c.panscan,
-        'brightness': c.brightness,
-        'contrast': c.contrast,
-        'saturation': c.saturation,
-        'gamma': c.gamma,
-        'hue': c.hue,
-        'audioDelayMs': c.audioDelayMs,
-        'audioPitchCorrection': c.audioPitchCorrection,
-        'audioChannels': c.audioChannels,
-        'normalizeDownmix': c.normalizeDownmix,
-        'loopFile': c.loopFile,
-        'hdrToneMapping': c.hdrToneMapping,
-        'hdrComputePeak': c.hdrComputePeak,
-        'rawConf': c.rawConf,
-      });
+    '_v': _schemaVersion,
+    'hwdec': c.hwdec,
+    'highQuality': c.highQuality,
+    'deband': c.deband,
+    'dither': c.dither,
+    'interpolation': c.interpolation,
+    'deinterlace': c.deinterlace,
+    'sigmoidUpscaling': c.sigmoidUpscaling,
+    'correctDownscaling': c.correctDownscaling,
+    'videoRotate': c.videoRotate,
+    'videoZoom': c.videoZoom,
+    'aspectOverride': c.aspectOverride,
+    'panscan': c.panscan,
+    'brightness': c.brightness,
+    'contrast': c.contrast,
+    'saturation': c.saturation,
+    'gamma': c.gamma,
+    'hue': c.hue,
+    'audioDelayMs': c.audioDelayMs,
+    'audioPitchCorrection': c.audioPitchCorrection,
+    'audioChannels': c.audioChannels,
+    'normalizeDownmix': c.normalizeDownmix,
+    'loopFile': c.loopFile,
+    'hdrToneMapping': c.hdrToneMapping,
+    'hdrComputePeak': c.hdrComputePeak,
+    'rawConf': c.rawConf,
+  });
 
   static VideoMpvConfig decode(String? json) {
     if (json == null || json.isEmpty) return defaults;
@@ -257,10 +256,12 @@ class VideoMpvConfig {
       const Set<int> rotates = <int>{0, 90, 180, 270};
       const Set<String> hwdecs = <String>{'no', 'auto-safe', 'auto-copy'};
       const Set<String> channels = <String>{'auto-safe', 'stereo', 'mono'};
-      final int rot =
-          d['videoRotate'] is num ? (d['videoRotate'] as num).toInt() : 0;
-      final String hw =
-          d['hwdec'] is String ? d['hwdec'] as String : defaults.hwdec;
+      final int rot = d['videoRotate'] is num
+          ? (d['videoRotate'] as num).toInt()
+          : 0;
+      final String hw = d['hwdec'] is String
+          ? d['hwdec'] as String
+          : defaults.hwdec;
       String decodedHwdec = hwdecs.contains(hw) ? hw : defaults.hwdec;
       if (version < _schemaVersion && decodedHwdec == 'no') {
         decodedHwdec = defaults.hwdec;
@@ -568,13 +569,20 @@ Map<String, String> resolveAndroidPixelFormatProperties({bool? isAndroid}) {
   return const <String, String>{'vf': 'format=yuv420p'};
 }
 
-Map<String, String> buildMpvProperties(VideoMpvConfig config,
-    {bool? isAndroid, bool? isMobile, bool? isWindows}) {
+Map<String, String> buildMpvProperties(
+  VideoMpvConfig config, {
+  bool? isAndroid,
+  bool? isMobile,
+  bool? isWindows,
+}) {
   final Map<String, String> out = <String, String>{};
   // 解码：Android 纹理渲染下把 surface-直渲的 auto-safe 改写成 copy 变体（BUG-465）；
   // Windows GL 纹理渲染下把 auto* 改写成不含 CUDA 的 d3d11va 列表（BUG-1639）。
-  out['hwdec'] = resolvePlatformHwdec(config.hwdec,
-      isAndroid: isAndroid, isWindows: isWindows);
+  out['hwdec'] = resolvePlatformHwdec(
+    config.hwdec,
+    isAndroid: isAndroid,
+    isWindows: isWindows,
+  );
   // Android 10-bit → 8-bit 降位：VO 前 vf=format=yuv420p 绕开 Mali GL 16-bit 纹理 OOM
   // （TODO-1196 / BUG-465 根因）；桌面/iOS 不下发。见 [resolveAndroidPixelFormatProperties]。
   out.addAll(resolveAndroidPixelFormatProperties(isAndroid: isAndroid));
@@ -630,7 +638,9 @@ Map<String, String> buildMpvProperties(VideoMpvConfig config,
 /// best-effort：`player.platform` 非 libmpv（无 setProperty）或某属性不被接受时
 /// 单条静默吞掉，不影响其余属性与播放。与 [applyShadersToPlayer] 同范式。
 Future<void> applyMpvConfigToPlayer(
-    Player player, VideoMpvConfig config) async {
+  Player player,
+  VideoMpvConfig config,
+) async {
   final dynamic native = player.platform;
   if (native == null) return;
   final Map<String, String> props = buildMpvProperties(config);
@@ -693,7 +703,9 @@ Map<String, String> buildNetworkCacheProperties() {
 ///
 /// best-effort：与 [applyMpvConfigToPlayer] 同范式，单条属性失败静默吞掉。
 Future<void> applyNetworkCachePropertiesToPlayer(
-    Player player, String sourceUri) async {
+  Player player,
+  String sourceUri,
+) async {
   if (!isNetworkStreamUri(sourceUri)) return;
   final dynamic native = player.platform;
   if (native == null) return;
@@ -725,10 +737,7 @@ Future<void> applyNetworkCachePropertiesToPlayer(
 /// 画面渲染（无文本可查词，BUG-122 兜底），那条路径会自行把 `sub-visibility` 打开，
 /// 故这里的默认抑制不影响它（见 [buildGraphicSubtitleVisibilityProperties]）。
 Map<String, String> buildSubtitleSuppressionProperties() {
-  return <String, String>{
-    'sub-auto': 'no',
-    'sub-visibility': 'no',
-  };
+  return <String, String>{'sub-auto': 'no', 'sub-visibility': 'no'};
 }
 
 /// 图形内封字幕（PGS 等）走 libmpv 画面渲染时，重新打开画面字幕可见性。纯函数。
@@ -738,9 +747,7 @@ Map<String, String> buildSubtitleSuppressionProperties() {
 /// 时才把可见性打开，让 libmpv 把位图字幕画到画面上。`sub-auto` 仍保持 `no`——轨由代码
 /// 显式 `setSubtitleTrack` 选定，不交给 mpv 自动选。
 Map<String, String> buildGraphicSubtitleVisibilityProperties() {
-  return <String, String>{
-    'sub-visibility': 'yes',
-  };
+  return <String, String>{'sub-visibility': 'yes'};
 }
 
 /// 构建图形字幕调轴用的 libmpv `sub-delay` 属性 map（`属性名→值`）。纯函数。
@@ -757,9 +764,7 @@ Map<String, String> buildGraphicSubtitleVisibilityProperties() {
 /// 状态（per-video），不是 mpv 全局画质/音频偏好；与 `audio-delay`（真实音频轨移位，
 /// 属全局配置）正交。与 [buildGraphicSubtitleVisibilityProperties] 同范式，可单测。
 Map<String, String> buildSubtitleDelayProperty(int delayMs) {
-  return <String, String>{
-    'sub-delay': (delayMs / 1000).toString(),
-  };
+  return <String, String>{'sub-delay': (delayMs / 1000).toString()};
 }
 
 /// 把 [props]（字幕抑制/可见性属性）逐条 best-effort 注入 media_kit [player]。
@@ -768,7 +773,9 @@ Map<String, String> buildSubtitleDelayProperty(int delayMs) {
 /// `player.platform`（NativePlayer）的 `setProperty`，仅 libmpv 后端生效；非 libmpv /
 /// 不支持属性单条静默吞掉，不影响播放。
 Future<void> applySubtitleMpvPropertiesToPlayer(
-    Player player, Map<String, String> props) async {
+  Player player,
+  Map<String, String> props,
+) async {
   final dynamic native = player.platform;
   if (native == null) return;
   for (final MapEntry<String, String> e in props.entries) {
@@ -808,7 +815,9 @@ Map<String, String> buildHttpHeaderFieldsProperty(Map<String, String> headers) {
 /// best-effort：与 [applyMpvConfigToPlayer] / [applyNetworkCachePropertiesToPlayer]
 /// 同范式，单条属性失败静默吞掉。
 Future<void> applyHttpHeaderFieldsToPlayer(
-    Player player, Map<String, String> headers) async {
+  Player player,
+  Map<String, String> headers,
+) async {
   final Map<String, String> props = buildHttpHeaderFieldsProperty(headers);
   if (props.isEmpty) return;
   final dynamic native = player.platform;

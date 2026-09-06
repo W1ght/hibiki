@@ -120,9 +120,9 @@ void main() {
     test('findDanmakuSidecar returns an absolute same-name sidecar path', () {
       final File video = File(p.join(tempDir.path, 'Episode 01.mkv'))
         ..writeAsStringSync('video');
-      final File danmaku =
-          File(p.join(tempDir.path, 'Episode 01.dandanplay.json'))
-            ..writeAsStringSync('{"comments": []}');
+      final File danmaku = File(
+        p.join(tempDir.path, 'Episode 01.dandanplay.json'),
+      )..writeAsStringSync('{"comments": []}');
       File(p.join(tempDir.path, 'Other.danmaku.xml')).writeAsStringSync('<i/>');
 
       expect(findDanmakuSidecar(video.path), p.normalize(danmaku.path));
@@ -132,8 +132,10 @@ void main() {
       final File file = File(p.join(tempDir.path, 'Episode 01.xml'))
         ..writeAsStringSync('<i>${'x' * 64}</i>');
 
-      final VideoDanmakuLoadResult result =
-          await loadDanmakuSidecarFile(file, maxBytes: 8);
+      final VideoDanmakuLoadResult result = await loadDanmakuSidecarFile(
+        file,
+        maxBytes: 8,
+      );
 
       expect(result.tooLarge, isTrue);
       expect(result.items, isEmpty);

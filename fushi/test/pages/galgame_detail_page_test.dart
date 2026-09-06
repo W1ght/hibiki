@@ -29,13 +29,13 @@ void main() {
   });
 
   Future<AppModel> buildModel({bool withSessions = true}) async {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final PreferencesRepository prefsRepo = PreferencesRepository(db);
     await prefsRepo.loadFromDb();
-    final Directory tmpDir =
-        Directory.systemTemp.createTempSync('hibiki_game_detail_');
+    final Directory tmpDir = Directory.systemTemp.createTempSync(
+      'hibiki_game_detail_',
+    );
     addTearDown(() {
       try {
         tmpDir.deleteSync(recursive: true);
@@ -43,7 +43,9 @@ void main() {
     });
     final AppModel appModel = AppModel(testPlatformServices())
       ..wireLocalAudioForTesting(
-          prefsRepo: prefsRepo, databaseDirectory: tmpDir)
+        prefsRepo: prefsRepo,
+        databaseDirectory: tmpDir,
+      )
       ..wireDatabaseForTesting(db);
 
     await appModel.setGalgames(<GalgameEntry>[
@@ -100,9 +102,9 @@ void main() {
 
   /// 编辑 tab 的字段定位：按 key 而不是按标签文案（文案随 17 语言翻译漂移）。
   Finder editField(String fieldKey) => find.descendant(
-        of: find.byKey(ValueKey<String>('galgame-edit-$fieldKey')),
-        matching: find.byType(TextField),
-      );
+    of: find.byKey(ValueKey<String>('galgame-edit-$fieldKey')),
+    matching: find.byType(TextField),
+  );
 
   Future<void> pumpPage(
     WidgetTester tester,
@@ -143,7 +145,8 @@ void main() {
     // 折线图与会话流水都在（流水在折叠线以下，先滚上来）。
     expect(
       find.byWidgetPredicate(
-          (Widget w) => w is CustomPaint && w.painter is StatLineChartPainter),
+        (Widget w) => w is CustomPaint && w.painter is StatLineChartPainter,
+      ),
       findsOneWidget,
     );
     await tester.drag(find.byType(ListView), const Offset(0, -400));
@@ -227,10 +230,10 @@ void main() {
     final GalgameEntry saved = appModel.galgameRepo.byId('g1')!;
     expect(saved.launchArgs, r'-windowed --save="Z:\My Saves"');
     // 原样存的一行，拆出来才是 argv（injector 侧一个 token 一个 --arg）。
-    expect(
-      saved.launchArgumentTokens,
-      <String>['-windowed', r'--save=Z:\My Saves'],
-    );
+    expect(saved.launchArgumentTokens, <String>[
+      '-windowed',
+      r'--save=Z:\My Saves',
+    ]);
     // 逐字段重建的其余字段一个都不能丢。
     expect(saved.exePath, r'Z:\a\alpha.exe');
     expect(saved.workdir, r'Z:\a');

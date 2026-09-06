@@ -139,8 +139,7 @@ String _themeVariablesJs({
 String dictionaryFontStyleJs(
   AppModel appModel, {
   String Function(String safePath)? fontUrlBuilder,
-}) =>
-    _dictionaryFontStyleJsMemo(appModel, fontUrlBuilder: fontUrlBuilder).js;
+}) => _dictionaryFontStyleJsMemo(appModel, fontUrlBuilder: fontUrlBuilder).js;
 
 /// BUG-717 ③：[dictionaryFontStyleJs] 最终产物的进程内 memo。
 ///
@@ -185,8 +184,9 @@ void debugResetDictionaryFontStyleMemo() {
   AppModel appModel, {
   String Function(String safePath)? fontUrlBuilder,
 }) {
-  final _FontStyleMemoSlot slot =
-      fontUrlBuilder == null ? _fontStyleMemoInline : _fontStyleMemoUrl;
+  final _FontStyleMemoSlot slot = fontUrlBuilder == null
+      ? _fontStyleMemoInline
+      : _fontStyleMemoUrl;
   // BUG: `ReaderFushiSource.readerSettings` is only populated while a book /
   // reader is open. In the app-external clipboard-lookup flow (VN / game, no
   // book), it is null, so the user's configured dictionary font was never

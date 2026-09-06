@@ -191,23 +191,34 @@ CREATE TABLE book_tag_membership_tombstones (
 
     final version = await db.customSelect('PRAGMA user_version').getSingle();
     expect(version.read<int>('user_version'), db.schemaVersion);
-    expect(db.schemaVersion, 96,
-        reason: 'v57 = 命名统一；v58 = 外部媒体自动记录；v59 = 游戏标签；'
-            'v60 = 阅读页数；v61 = 合集自有封面；v62 = 每游戏窗口超分档位；'
-            'v63 = 清理旧全局超分 pref');
+    expect(
+      db.schemaVersion,
+      96,
+      reason:
+          'v57 = 命名统一；v58 = 外部媒体自动记录；v59 = 游戏标签；'
+          'v60 = 阅读页数；v61 = 合集自有封面；v62 = 每游戏窗口超分档位；'
+          'v63 = 清理旧全局超分 pref',
+    );
 
     // ① 的旧表在 v77 已整体搬进 tag_assignments 并 DROP；改名正确性由
     // 「v57 ①」测试用搬移后的行值（entryKey/addedAt 保真）证明。
-    expect(await columnsOf(db, 'video_book_tag_mappings'), isEmpty,
-        reason: '旧映射表在 v77 已 DROP');
+    expect(
+      await columnsOf(db, 'video_book_tag_mappings'),
+      isEmpty,
+      reason: '旧映射表在 v77 已 DROP',
+    );
 
-    final Set<String> collTomb =
-        await columnsOf(db, 'collection_member_tombstones');
+    final Set<String> collTomb = await columnsOf(
+      db,
+      'collection_member_tombstones',
+    );
     expect(collTomb, contains('deleted_at'));
     expect(collTomb, isNot(contains('removed_at')), reason: '② 列 rename');
 
-    final Set<String> tagTomb =
-        await columnsOf(db, 'book_tag_membership_tombstones');
+    final Set<String> tagTomb = await columnsOf(
+      db,
+      'book_tag_membership_tombstones',
+    );
     expect(tagTomb, contains('deleted_at'));
     expect(tagTomb, isNot(contains('removed_at')), reason: '② 列 rename');
   });
@@ -220,10 +231,16 @@ CREATE TABLE book_tag_membership_tombstones (
     expect(a!.title, '甲');
     expect(a.videoPath, 'Z:/v/a.mkv');
     expect(a.lastPositionMs, 4200, reason: '相邻列不被搬运殃及');
-    expect(a.importedAt, 1700000000 * 1000,
-        reason: '旧 drift DateTime 存 Unix 秒，×1000 转毫秒');
-    expect(a.completedAt?.millisecondsSinceEpoch, 1700000123 * 1000,
-        reason: 'completed_at 仍是 DateTime（秒存储），原值往返不变');
+    expect(
+      a.importedAt,
+      1700000000 * 1000,
+      reason: '旧 drift DateTime 存 Unix 秒，×1000 转毫秒',
+    );
+    expect(
+      a.completedAt?.millisecondsSinceEpoch,
+      1700000123 * 1000,
+      reason: 'completed_at 仍是 DateTime（秒存储），原值往返不变',
+    );
 
     final VideoBookRow? b = await db.getVideoBookByBookUid('video/b');
     expect(b!.importedAt, isNull, reason: 'NULL 不被 ×1000 造出假时间');
@@ -245,22 +262,27 @@ CREATE TABLE book_tag_membership_tombstones (
 
     // v77 起映射是逻辑外键：删视频经显式删除路径清映射（不再是 DB cascade）。
     await db.deleteVideoBook('video/a');
-    expect(await db.getAllTagAssignments(), isEmpty,
-        reason: '删除路径显式清理，行为与旧 cascade 等价');
+    expect(
+      await db.getAllTagAssignments(),
+      isEmpty,
+      reason: '删除路径显式清理，行为与旧 cascade 等价',
+    );
   });
 
   test('v57 ②：两张墓碑表值保真、主键/upsert 语义不变', () async {
     final FushiDatabase db = await openV56Db();
 
-    final List<CollectionMemberTombstoneRow> tombs =
-        await db.getAllCollectionMemberTombstones();
+    final List<CollectionMemberTombstoneRow> tombs = await db
+        .getAllCollectionMemberTombstones();
     expect(tombs, hasLength(2));
-    final CollectionMemberTombstoneRow member =
-        tombs.firstWhere((r) => r.entryKey == 'gone');
+    final CollectionMemberTombstoneRow member = tombs.firstWhere(
+      (r) => r.entryKey == 'gone',
+    );
     expect(member.collectionName, 'C');
     expect(member.deletedAt, 1234, reason: 'removed_at 值原样搬进 deleted_at');
     final CollectionMemberTombstoneRow sentinel = tombs.firstWhere(
-        (r) => r.entryKey == FushiDatabase.collectionTombstoneSentinel);
+      (r) => r.entryKey == FushiDatabase.collectionTombstoneSentinel,
+    );
     expect(sentinel.collectionName, 'Dead');
     expect(sentinel.deletedAt, 5678, reason: '合集级哨兵行同样保真');
 
@@ -272,14 +294,16 @@ CREATE TABLE book_tag_membership_tombstones (
       entryKey: 'gone',
       deletedAt: 9999,
     );
-    final List<CollectionMemberTombstoneRow> after =
-        await db.getAllCollectionMemberTombstones();
+    final List<CollectionMemberTombstoneRow> after = await db
+        .getAllCollectionMemberTombstones();
     expect(after, hasLength(2));
     expect(after.firstWhere((r) => r.entryKey == 'gone').deletedAt, 9999);
 
     // 标签移除墓碑：值保真 + 读 API（LWW 时钟）返回原值。
-    final Map<String, int> tagTombs =
-        await db.tagTombstonesByName('video/a', MediaKind.video);
+    final Map<String, int> tagTombs = await db.tagTombstonesByName(
+      'video/a',
+      MediaKind.video,
+    );
     expect(tagTombs, {'旧标签': 42});
   });
 
@@ -287,22 +311,33 @@ CREATE TABLE book_tag_membership_tombstones (
     final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
 
-    expect(await columnsOf(db, 'tag_assignments'), contains('entry_key'),
-        reason: 'v77：fresh 库映射直接落统一表');
-    expect(await columnsOf(db, 'collection_member_tombstones'),
-        contains('deleted_at'));
-    expect(await columnsOf(db, 'book_tag_membership_tombstones'),
-        contains('deleted_at'));
-
-    await db.upsertVideoBook(VideoBooksCompanion.insert(
-      bookUid: 'video/x',
-      title: 'x',
-      videoPath: 'Z:/x.mkv',
-      importedAt: const Value<int?>(1700000000000),
-    ));
     expect(
-        (await db.getVideoBookByBookUid('video/x'))!.importedAt, 1700000000000,
-        reason: '新库 importedAt 直接以毫秒写读');
+      await columnsOf(db, 'tag_assignments'),
+      contains('entry_key'),
+      reason: 'v77：fresh 库映射直接落统一表',
+    );
+    expect(
+      await columnsOf(db, 'collection_member_tombstones'),
+      contains('deleted_at'),
+    );
+    expect(
+      await columnsOf(db, 'book_tag_membership_tombstones'),
+      contains('deleted_at'),
+    );
+
+    await db.upsertVideoBook(
+      VideoBooksCompanion.insert(
+        bookUid: 'video/x',
+        title: 'x',
+        videoPath: 'Z:/x.mkv',
+        importedAt: const Value<int?>(1700000000000),
+      ),
+    );
+    expect(
+      (await db.getVideoBookByBookUid('video/x'))!.importedAt,
+      1700000000000,
+      reason: '新库 importedAt 直接以毫秒写读',
+    );
 
     final int tagId = await db.getOrCreateTagByName('t');
     await db.addTagToVideoBook('video/x', tagId);

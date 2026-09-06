@@ -12,7 +12,9 @@ import 'package:fushi/src/media/audiobook/book_import_dialog.dart';
 
 void main() {
   Widget buildApp(Widget child) {
-    return MaterialApp(home: Scaffold(body: Center(child: child)));
+    return MaterialApp(
+      home: Scaffold(body: Center(child: child)),
+    );
   }
 
   testWidgets('book import dialog frame fits compact form content', (
@@ -52,8 +54,10 @@ void main() {
   test(
     'windows audio file filter includes an all files option',
     () {
-      final String filter =
-          FilePickerWindows().fileTypeToFileFilter(FileType.audio, null);
+      final String filter = FilePickerWindows().fileTypeToFileFilter(
+        FileType.audio,
+        null,
+      );
 
       expect(
         filter,
@@ -72,29 +76,41 @@ void main() {
   // bookKey-less SrtBook shell row is still saved (orphan card that can't open
   // + later fakes a successful delete). Source guard: the EPUB import catch must
   // rethrow so the top-level handler reports the failure.
-  test('subtitle-book bad-EPUB import rethrows instead of saving a shell row',
-      () {
-    final String source =
-        File('lib/src/media/audiobook/book_import_dialog.dart')
-            .readAsStringSync();
+  test(
+    'subtitle-book bad-EPUB import rethrows instead of saving a shell row',
+    () {
+      final String source = File(
+        'lib/src/media/audiobook/book_import_dialog.dart',
+      ).readAsStringSync();
 
-    final int start = source.indexOf('Future<void> _importSubtitleBook(');
-    expect(start, isNonNegative,
-        reason: '_importSubtitleBook must exist in book_import_dialog.dart');
-    // Inspect only the EPUB import try/catch region of _importSubtitleBook.
-    final int regionEnd = source.indexOf('reportProgress(0.7', start);
-    expect(regionEnd, greaterThan(start));
-    final String region = source.substring(start, regionEnd);
+      final int start = source.indexOf('Future<void> _importSubtitleBook(');
+      expect(
+        start,
+        isNonNegative,
+        reason: '_importSubtitleBook must exist in book_import_dialog.dart',
+      );
+      // Inspect only the EPUB import try/catch region of _importSubtitleBook.
+      final int regionEnd = source.indexOf('reportProgress(0.7', start);
+      expect(regionEnd, greaterThan(start));
+      final String region = source.substring(start, regionEnd);
 
-    // The catch that logs the EPUB import failure must rethrow.
-    final int logIdx = region
-        .indexOf("ErrorLogService.instance.log('BookImportDialog.epubImport'");
-    expect(logIdx, isNonNegative,
-        reason: 'the bad-EPUB catch must still log for diagnostics');
-    final String afterLog = region.substring(logIdx);
-    expect(afterLog, contains('rethrow;'),
+      // The catch that logs the EPUB import failure must rethrow.
+      final int logIdx = region.indexOf(
+        "ErrorLogService.instance.log('BookImportDialog.epubImport'",
+      );
+      expect(
+        logIdx,
+        isNonNegative,
+        reason: 'the bad-EPUB catch must still log for diagnostics',
+      );
+      final String afterLog = region.substring(logIdx);
+      expect(
+        afterLog,
+        contains('rethrow;'),
         reason:
             'a bad EPUB must abort the import (rethrow), not fall through to '
-            'save an orphan SrtBook shell row with an empty bookKey (BUG-439).');
-  });
+            'save an orphan SrtBook shell row with an empty bookKey (BUG-439).',
+      );
+    },
+  );
 }

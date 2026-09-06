@@ -21,8 +21,8 @@ extension _VideoEpisode on _VideoFushiPageState {
     final int cur = _currentEpisode;
     final int? nextEpisode =
         (_episodes.length > 1 && cur >= 0 && cur < _episodes.length - 1)
-            ? cur + 1
-            : null;
+        ? cur + 1
+        : null;
     // TODO-639　三门控(自动连播开关/有下一集/未在换集)任一不满足都停在本集结束。
     if (!shouldAutoPlayNextOnCompletion(
       autoPlayNextEnabled: appModel.videoAutoPlayNext,
@@ -41,23 +41,22 @@ extension _VideoEpisode on _VideoFushiPageState {
     _autoAdvanceCountdownTimer?.cancel();
     _autoAdvanceCountdownTarget = targetEpisode;
     _autoAdvanceCountdownNotifier.value = kAutoPlayNextCountdownSeconds;
-    _autoAdvanceCountdownTimer = Timer.periodic(
-      const Duration(seconds: 1),
-      (_) {
-        if (!mounted) {
-          _cancelAutoAdvanceCountdown();
-          return;
-        }
-        final int remaining = (_autoAdvanceCountdownNotifier.value ?? 0) - 1;
-        if (remaining <= 0) {
-          final int? target = _autoAdvanceCountdownTarget;
-          _cancelAutoAdvanceCountdown();
-          if (target != null) _runAutoAdvance(target);
-        } else {
-          _autoAdvanceCountdownNotifier.value = remaining;
-        }
-      },
-    );
+    _autoAdvanceCountdownTimer = Timer.periodic(const Duration(seconds: 1), (
+      _,
+    ) {
+      if (!mounted) {
+        _cancelAutoAdvanceCountdown();
+        return;
+      }
+      final int remaining = (_autoAdvanceCountdownNotifier.value ?? 0) - 1;
+      if (remaining <= 0) {
+        final int? target = _autoAdvanceCountdownTarget;
+        _cancelAutoAdvanceCountdown();
+        if (target != null) _runAutoAdvance(target);
+      } else {
+        _autoAdvanceCountdownNotifier.value = remaining;
+      }
+    });
   }
 
   /// 取消 / 清掉自动连播倒计时(用户点「取消」、倒计时归零推进前、或页面销毁时)。
@@ -146,8 +145,10 @@ extension _VideoEpisode on _VideoFushiPageState {
     final PageRoute<void>? oldFullscreenRoute = _videoFullscreenRoute;
     // 捕获 NavigatorState / 本页路由（在 await 前），避免跨 async gap 用 context。
     final NavigatorState navigator = Navigator.of(context);
-    final NavigatorState rootNavigator =
-        Navigator.of(context, rootNavigator: true);
+    final NavigatorState rootNavigator = Navigator.of(
+      context,
+      rootNavigator: true,
+    );
     final Route<Object?>? currentRoute = ModalRoute.of(context);
     // 「接管 vs 顶替」与「是否把原生全屏交给新页」收敛进纯函数（真值表单测：
     // test/media/video/video_episode_start_policy_test.dart）。这里不再手写布尔
@@ -270,8 +271,9 @@ extension _VideoEpisode on _VideoFushiPageState {
   /// 旧单行 playlist 远端模型（`RemoteVideoEpisode`）不下发封面，全部图源皆空 →
   /// 返回 null，面板退回纯序号形态。
   List<VideoEpisodeEntry> _episodePanelEntries() {
-    final RemoteCoverFetcher? fetcher =
-        remoteCoverFetcherFor(widget.remoteClient ?? _resolvedStreamClient);
+    final RemoteCoverFetcher? fetcher = remoteCoverFetcherFor(
+      widget.remoteClient ?? _resolvedStreamClient,
+    );
     final ImageProvider? seriesFallback = _playlistSeriesFallbackCover();
     return <VideoEpisodeEntry>[
       for (final _PlaylistEpisodeRef e in _episodes)
@@ -279,9 +281,11 @@ extension _VideoEpisode on _VideoFushiPageState {
           title: e.displayTitle ?? e.title,
           // 角标集号取**文件名解析值**而非列表下标（BUG-1544）：缺集时下标必然
           // 说谎。远端集无路径 → 退回按标题解析；再解不出由卡片回落顺位号。
-          episodeNumber:
-              parsedEpisodeNumberOf(e.path.isNotEmpty ? e.path : e.title),
-          cover: resolveMediaCoverImage(
+          episodeNumber: parsedEpisodeNumberOf(
+            e.path.isNotEmpty ? e.path : e.title,
+          ),
+          cover:
+              resolveMediaCoverImage(
                 kind: MediaKind.video,
                 localPath: e.coverPath,
                 remoteUrl: e.coverUrl,
@@ -324,8 +328,10 @@ extension _VideoEpisode on _VideoFushiPageState {
   Widget _episodeOverlayPanel(bool visible) {
     final ColorScheme cs = _videoChromeColorScheme(context);
     final double panelHeight = (220 * _videoUiScale).clamp(200.0, 360.0);
-    final Duration duration =
-        einkSafeDuration(context, const Duration(milliseconds: 220));
+    final Duration duration = einkSafeDuration(
+      context,
+      const Duration(milliseconds: 220),
+    );
     return PositionedDirectional(
       start: 0,
       end: 0,

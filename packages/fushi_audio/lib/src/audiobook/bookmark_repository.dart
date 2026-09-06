@@ -1,4 +1,4 @@
-﻿import 'dart:convert';
+import 'dart:convert';
 
 import 'package:drift/drift.dart';
 import 'package:fushi_core/fushi_core.dart';
@@ -7,16 +7,16 @@ class Bookmark {
   // json 键名 'bookKey' 是遗留偏好的 wire 面貌，冻结不改；v82 起值语义为书
   // 稳定 uid（遗留 json 里的旧 bookKey 值在迁移落库时被调用方传入的 uid 覆盖）。
   factory Bookmark.fromJson(Map<String, dynamic> json) => Bookmark(
-        id: json['id'] as int?,
-        sectionIndex: json['sectionIndex'] as int,
-        normCharOffset: json['normCharOffset'] as int,
-        label: json['label'] as String,
-        createdAt: DateTime.parse(json['createdAt'] as String),
-        bookUid: json['bookKey'] as String?,
-        bookTitle: json['bookTitle'] as String?,
-        pageInChapter: json['pageInChapter'] as int?,
-        totalPagesInChapter: json['totalPagesInChapter'] as int?,
-      );
+    id: json['id'] as int?,
+    sectionIndex: json['sectionIndex'] as int,
+    normCharOffset: json['normCharOffset'] as int,
+    label: json['label'] as String,
+    createdAt: DateTime.parse(json['createdAt'] as String),
+    bookUid: json['bookKey'] as String?,
+    bookTitle: json['bookTitle'] as String?,
+    pageInChapter: json['pageInChapter'] as int?,
+    totalPagesInChapter: json['totalPagesInChapter'] as int?,
+  );
   Bookmark({
     required this.sectionIndex,
     required this.normCharOffset,
@@ -33,16 +33,16 @@ class Bookmark {
   });
 
   factory Bookmark.fromRow(BookmarkRow row) => Bookmark(
-        id: row.id,
-        sectionIndex: row.sectionIndex,
-        normCharOffset: row.normCharOffset,
-        label: row.label,
-        createdAt: DateTime.fromMillisecondsSinceEpoch(row.createdAt),
-        bookUid: row.bookUid,
-        bookTitle: row.bookTitle,
-        pageInChapter: row.pageInChapter,
-        totalPagesInChapter: row.totalPagesInChapter,
-      );
+    id: row.id,
+    sectionIndex: row.sectionIndex,
+    normCharOffset: row.normCharOffset,
+    label: row.label,
+    createdAt: DateTime.fromMillisecondsSinceEpoch(row.createdAt),
+    bookUid: row.bookUid,
+    bookTitle: row.bookTitle,
+    pageInChapter: row.pageInChapter,
+    totalPagesInChapter: row.totalPagesInChapter,
+  );
 
   final int? id;
   final int sectionIndex;
@@ -82,17 +82,16 @@ class Bookmark {
   final bool preserveSavedPosition;
 
   Map<String, dynamic> toJson() => {
-        if (id != null) 'id': id,
-        'sectionIndex': sectionIndex,
-        'normCharOffset': normCharOffset,
-        'label': label,
-        'createdAt': createdAt.toIso8601String(),
-        if (bookUid != null) 'bookKey': bookUid,
-        if (bookTitle != null) 'bookTitle': bookTitle,
-        if (pageInChapter != null) 'pageInChapter': pageInChapter,
-        if (totalPagesInChapter != null)
-          'totalPagesInChapter': totalPagesInChapter,
-      };
+    if (id != null) 'id': id,
+    'sectionIndex': sectionIndex,
+    'normCharOffset': normCharOffset,
+    'label': label,
+    'createdAt': createdAt.toIso8601String(),
+    if (bookUid != null) 'bookKey': bookUid,
+    if (bookTitle != null) 'bookTitle': bookTitle,
+    if (pageInChapter != null) 'pageInChapter': pageInChapter,
+    if (totalPagesInChapter != null) 'totalPagesInChapter': totalPagesInChapter,
+  };
 }
 
 class BookmarkRepository {
@@ -111,15 +110,18 @@ class BookmarkRepository {
     if (legacyBookKey != null) {
       await _migrateLegacyBookmarks(bookUid, legacyBookKey);
     }
-    final rows = await (_db.select(_db.bookmarks)
-          ..where((tbl) => tbl.bookUid.equals(bookUid))
-          ..orderBy([(tbl) => OrderingTerm.desc(tbl.createdAt)]))
-        .get();
+    final rows =
+        await (_db.select(_db.bookmarks)
+              ..where((tbl) => tbl.bookUid.equals(bookUid))
+              ..orderBy([(tbl) => OrderingTerm.desc(tbl.createdAt)]))
+            .get();
     return rows.map(Bookmark.fromRow).toList();
   }
 
   Future<int> addBookmark(String bookUid, Bookmark bookmark) async {
-    return _db.into(_db.bookmarks).insert(
+    return _db
+        .into(_db.bookmarks)
+        .insert(
           BookmarksCompanion.insert(
             bookUid: bookUid,
             sectionIndex: bookmark.sectionIndex,
@@ -156,12 +158,13 @@ class BookmarkRepository {
     required int normCharOffset,
     required DateTime createdAt,
   }) async {
-    await (_db.delete(_db.bookmarks)
-          ..where((tbl) =>
+    await (_db.delete(_db.bookmarks)..where(
+          (tbl) =>
               tbl.bookUid.equals(bookUid) &
               tbl.sectionIndex.equals(sectionIndex) &
               tbl.normCharOffset.equals(normCharOffset) &
-              tbl.createdAt.equals(createdAt.millisecondsSinceEpoch)))
+              tbl.createdAt.equals(createdAt.millisecondsSinceEpoch),
+        ))
         .go();
   }
 
@@ -171,11 +174,12 @@ class BookmarkRepository {
   ) async {
     final raw = await _db.getPref(_key(legacyBookKey));
     if (raw == null || raw.isEmpty) return;
-    final existing = await (_db.selectOnly(_db.bookmarks)
-          ..where(_db.bookmarks.bookUid.equals(bookUid))
-          ..addColumns([_db.bookmarks.id.count()]))
-        .map((row) => row.read(_db.bookmarks.id.count()) ?? 0)
-        .getSingle();
+    final existing =
+        await (_db.selectOnly(_db.bookmarks)
+              ..where(_db.bookmarks.bookUid.equals(bookUid))
+              ..addColumns([_db.bookmarks.id.count()]))
+            .map((row) => row.read(_db.bookmarks.id.count()) ?? 0)
+            .getSingle();
     if (existing == 0) {
       final List<dynamic> list;
       try {
@@ -208,16 +212,13 @@ class BookmarkRepository {
 
   Future<List<Bookmark>> getAllBookmarks() async {
     await _db.migrateLegacyBookmarkPreferences();
-    final rows = await (_db.select(_db.bookmarks)
-          ..orderBy([(tbl) => OrderingTerm.desc(tbl.createdAt)]))
-        .get();
+    final rows = await (_db.select(
+      _db.bookmarks,
+    )..orderBy([(tbl) => OrderingTerm.desc(tbl.createdAt)])).get();
     return rows.map(Bookmark.fromRow).toList();
   }
 
-  Future<void> importLegacyBookmark(
-    String bookUid,
-    Bookmark bookmark,
-  ) async {
+  Future<void> importLegacyBookmark(String bookUid, Bookmark bookmark) async {
     await addBookmark(bookUid, bookmark);
   }
 }

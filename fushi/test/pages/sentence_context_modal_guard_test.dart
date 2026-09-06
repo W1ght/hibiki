@@ -30,15 +30,21 @@ void main() {
         'function buildHighlightedCurrentText(',
         "className: 'sentence-context-modal'",
       ]) {
-        expect(js.contains(gone), isFalse,
-            reason: 'popup.js 仍残留旧模态代码：$gone（应已删，改走原生对话框）');
+        expect(
+          js.contains(gone),
+          isFalse,
+          reason: 'popup.js 仍残留旧模态代码：$gone（应已删，改走原生对话框）',
+        );
       }
     });
 
     test('popup.css 不再有 .scm-* 模态样式', () {
       final String css = read('assets/popup/popup.css');
-      expect(css.contains('.scm-'), isFalse,
-          reason: 'popup.css 仍残留 .scm-* 模态样式（应随模态一起删除）');
+      expect(
+        css.contains('.scm-'),
+        isFalse,
+        reason: 'popup.css 仍残留 .scm-* 模态样式（应随模态一起删除）',
+      );
       expect(css.contains('.sentence-context-modal'), isFalse);
     });
 
@@ -48,90 +54,119 @@ void main() {
         '../tools/browser-extension',
       ]) {
         final String content = read('$root/vendor/content.css');
-        expect(content.contains('.scm-'), isFalse,
-            reason: '$root/vendor/content.css 仍残留 .scm-*（重跑 generate-content-css.mjs）');
+        expect(
+          content.contains('.scm-'),
+          isFalse,
+          reason:
+              '$root/vendor/content.css 仍残留 .scm-*（重跑 generate-content-css.mjs）',
+        );
       }
     });
   });
 
   group('词条「调整上下文」按钮改触发原生对话框', () {
-    test('popup.js 按钮 callHandler openSentenceContextModal 带 entryIndex+matched', () {
-      final String js = read('assets/popup/popup.js');
-      expect(js.contains('ctx-adjust-button'), isTrue);
-      expect(js.contains("'openSentenceContextModal'"), isTrue,
-          reason: '按钮必须 callHandler openSentenceContextModal 弹宿主原生对话框');
-      expect(js.contains('entryIndex'), isTrue);
-      expect(js.contains('matched: matched'), isTrue);
-      // entryIndex 用点击时的稳定 DOM 序（:scope > .entry），与回点同源。
-      expect(js.contains(':scope > .entry'), isTrue);
-    });
+    test(
+      'popup.js 按钮 callHandler openSentenceContextModal 带 entryIndex+matched',
+      () {
+        final String js = read('assets/popup/popup.js');
+        expect(js.contains('ctx-adjust-button'), isTrue);
+        expect(
+          js.contains("'openSentenceContextModal'"),
+          isTrue,
+          reason: '按钮必须 callHandler openSentenceContextModal 弹宿主原生对话框',
+        );
+        expect(js.contains('entryIndex'), isTrue);
+        expect(js.contains('matched: matched'), isTrue);
+        // entryIndex 用点击时的稳定 DOM 序（:scope > .entry），与回点同源。
+        expect(js.contains(':scope > .entry'), isTrue);
+      },
+    );
 
     test('popup.js 提供 fushiPopupMineEntryByIndex 供确认制卡精确回点', () {
       final String js = read('assets/popup/popup.js');
       expect(js.contains('window.fushiPopupMineEntryByIndex'), isTrue);
       // 回点同样按 :scope > .entry DOM 序，点该词条的 .mine-button。
       expect(
-          js.contains("querySelectorAll(':scope > .entry')") &&
-              js.contains('.mine-button'),
-          isTrue);
+        js.contains("querySelectorAll(':scope > .entry')") &&
+            js.contains('.mine-button'),
+        isTrue,
+      );
     });
   });
 
   group('Dart 侧原生对话框接线', () {
-    test('webview 注册 openSentenceContextModal handler + onOpenSentenceContextModal 字段 + mineEntryByIndex', () {
-      final String src =
-          read('lib/src/pages/implementations/dictionary_popup_webview.dart');
-      expect(src.contains("handlerName: 'openSentenceContextModal'"), isTrue);
-      expect(src.contains('widget.onOpenSentenceContextModal'), isTrue);
-      expect(src.contains('onOpenSentenceContextModal'), isTrue);
-      // 确认制卡回点：Dart 精确点第 idx 个词条（复用 mineEntry 全逻辑）。
-      expect(src.contains('Future<void> mineEntryByIndex('), isTrue);
-      expect(src.contains('fushiPopupMineEntryByIndex'), isTrue);
-      // 预览/增减 handler 仍在（对话框仍复用后端）。
-      expect(src.contains("handlerName: 'sentenceContextPreview'"), isTrue);
-    });
+    test(
+      'webview 注册 openSentenceContextModal handler + onOpenSentenceContextModal 字段 + mineEntryByIndex',
+      () {
+        final String src = read(
+          'lib/src/pages/implementations/dictionary_popup_webview.dart',
+        );
+        expect(src.contains("handlerName: 'openSentenceContextModal'"), isTrue);
+        expect(src.contains('widget.onOpenSentenceContextModal'), isTrue);
+        expect(src.contains('onOpenSentenceContextModal'), isTrue);
+        // 确认制卡回点：Dart 精确点第 idx 个词条（复用 mineEntry 全逻辑）。
+        expect(src.contains('Future<void> mineEntryByIndex('), isTrue);
+        expect(src.contains('fushiPopupMineEntryByIndex'), isTrue);
+        // 预览/增减 handler 仍在（对话框仍复用后端）。
+        expect(src.contains("handlerName: 'sentenceContextPreview'"), isTrue);
+      },
+    );
 
     test('layer 透传 onOpenSentenceContextModal', () {
-      final String src =
-          read('lib/src/pages/implementations/dictionary_popup_layer.dart');
+      final String src = read(
+        'lib/src/pages/implementations/dictionary_popup_layer.dart',
+      );
       expect(
-          src.contains(
-              'final Future<void> Function(int entryIndex, String matched)?'),
-          isTrue);
+        src.contains(
+          'final Future<void> Function(int entryIndex, String matched)?',
+        ),
+        isTrue,
+      );
       expect(src.contains('this.onOpenSentenceContextModal,'), isTrue);
       expect(
-          src.contains(
-              'onOpenSentenceContextModal: onOpenSentenceContextModal'),
-          isTrue);
+        src.contains('onOpenSentenceContextModal: onOpenSentenceContextModal'),
+        isTrue,
+      );
     });
 
     test('reader 车道 (base) 弹原生对话框 + 确认回点 mineEntryByIndex', () {
       final String src = read('lib/src/pages/base_source_page.dart');
-      expect(src.contains('onOpenSentenceContextModal: supportsSentenceDraft'),
-          isTrue);
+      expect(
+        src.contains('onOpenSentenceContextModal: supportsSentenceDraft'),
+        isTrue,
+      );
       expect(src.contains('showAppDialog<void>'), isTrue);
       expect(src.contains('SentenceContextDialog('), isTrue);
-      expect(src.contains('webViewKey.currentState?.mineEntryByIndex('), isTrue);
+      expect(
+        src.contains('webViewKey.currentState?.mineEntryByIndex('),
+        isTrue,
+      );
       // 后端预览/增减回调仍复用（未改）。
-      expect(src.contains('fetchPreview: onSentenceContextPreviewFromDraft'),
-          isTrue);
+      expect(
+        src.contains('fetchPreview: onSentenceContextPreviewFromDraft'),
+        isTrue,
+      );
       expect(src.contains('setContext: onSetSentenceContextToDraft'), isTrue);
     });
 
     test('video 车道 (mixin) 弹原生对话框 + 确认回点', () {
-      final String src =
-          read('lib/src/pages/implementations/dictionary_page_mixin.dart');
+      final String src = read(
+        'lib/src/pages/implementations/dictionary_page_mixin.dart',
+      );
       expect(src.contains('onOpenSentenceContextModal:'), isTrue);
       expect(src.contains('showAppDialog<void>'), isTrue);
       expect(src.contains('SentenceContextDialog('), isTrue);
-      expect(src.contains('webViewKey.currentState?.mineEntryByIndex('), isTrue);
+      expect(
+        src.contains('webViewKey.currentState?.mineEntryByIndex('),
+        isTrue,
+      );
     });
   });
 
   group('SentenceContextDialog 顶层对话框本体', () {
-    final String src =
-        File('lib/src/pages/implementations/sentence_context_dialog.dart')
-            .readAsStringSync();
+    final String src = File(
+      'lib/src/pages/implementations/sentence_context_dialog.dart',
+    ).readAsStringSync();
 
     test('文件存在且是 showAppDialog 弹的 AlertDialog', () {
       expect(src.contains('class SentenceContextDialog'), isTrue);
@@ -166,14 +201,18 @@ void main() {
   });
 
   group('后端预览/增减回调仍在（对话框复用，未改后端）', () {
-    test('base 保留 onSentenceContextPreviewFromDraft / onSetSentenceContextToDraft', () {
-      final String src = readReaderPageSource();
-      expect(
-        src.contains(
-            'Future<Map<String, Object?>> onSentenceContextPreviewFromDraft() async'),
-        isTrue,
-      );
-      expect(src.contains('buildSentenceContextPreview('), isTrue);
-    });
+    test(
+      'base 保留 onSentenceContextPreviewFromDraft / onSetSentenceContextToDraft',
+      () {
+        final String src = readReaderPageSource();
+        expect(
+          src.contains(
+            'Future<Map<String, Object?>> onSentenceContextPreviewFromDraft() async',
+          ),
+          isTrue,
+        );
+        expect(src.contains('buildSentenceContextPreview('), isTrue);
+      },
+    );
   });
 }

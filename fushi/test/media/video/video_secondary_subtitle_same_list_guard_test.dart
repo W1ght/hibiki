@@ -33,14 +33,18 @@ void main() {
 
   test('副字幕行遍历完整可用列表（不得过滤成 isEmbedded）', () {
     final String src = source.readAsStringSync();
-    final String body =
-        methodBody(src, 'List<Widget> _buildSecondarySubtitleRows(');
+    final String body = methodBody(
+      src,
+      'List<Widget> _buildSecondarySubtitleRows(',
+    );
 
     // BUG-1861 起「同一份可用列表」是 `_menuSubtitleSources`（枚举结果 ∪ 本会话导入 /
     // 下载的档案），不再是裸 `_subtitleMenuSources`（只有枚举结果）。BUG-900 的不变量
     // 没变——副字幕要与主字幕轨行读同一份——只是那份列表的名字换了。
     expect(
-      body.contains('for (final SubtitleSource source in _menuSubtitleSources)'),
+      body.contains(
+        'for (final SubtitleSource source in _menuSubtitleSources)',
+      ),
       isTrue,
       reason: '副字幕行必须遍历完整 _menuSubtitleSources（与主字幕同一份可用列表）',
     );
@@ -53,8 +57,10 @@ void main() {
 
   test('副字幕恢复对称支持外挂绝对路径（SubtitleSource.external + 文件存在）', () {
     final String src = source.readAsStringSync();
-    final String body =
-        methodBody(src, 'Future<void> _restoreSecondarySubtitle(');
+    final String body = methodBody(
+      src,
+      'Future<void> _restoreSecondarySubtitle(',
+    );
 
     expect(
       body.contains('SubtitleSource.external('),

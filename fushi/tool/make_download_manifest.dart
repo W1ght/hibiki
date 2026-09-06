@@ -60,8 +60,9 @@ void main(List<String> argv) async {
   }
 
   // 整包摘要边读边算；切片模式下同一遍读顺手把片写出去 + 算片摘要。
-  final ByteConversionSink wholeSink =
-      sha256.startChunkedConversion(_DigestSink((Digest d) => _whole = d));
+  final ByteConversionSink wholeSink = sha256.startChunkedConversion(
+    _DigestSink((Digest d) => _whole = d),
+  );
 
   final RandomAccessFile reader = await input.open();
   try {
@@ -75,13 +76,15 @@ void main(List<String> argv) async {
           '$packName.${partIndex.toString().padLeft(3, '0')}';
 
       Digest? partDigest;
-      final ByteConversionSink partSink = sha256
-          .startChunkedConversion(_DigestSink((Digest d) => partDigest = d));
+      final ByteConversionSink partSink = sha256.startChunkedConversion(
+        _DigestSink((Digest d) => partDigest = d),
+      );
 
       IOSink? sliceSink;
       if (outDir != null) {
-        sliceSink = File('${outDir.path}${Platform.pathSeparator}$partName')
-            .openWrite();
+        sliceSink = File(
+          '${outDir.path}${Platform.pathSeparator}$partName',
+        ).openWrite();
       }
 
       int remaining = partLength;
@@ -134,13 +137,14 @@ void main(List<String> argv) async {
     },
   };
 
-  final String outPath = args.manifestPath ??
+  final String outPath =
+      args.manifestPath ??
       (args.slice
           ? '${outDir!.path}${Platform.pathSeparator}$packName.manifest.json'
           : '${input.parent.path}${Platform.pathSeparator}$packName.manifest.json');
-  File(outPath).writeAsStringSync(
-    const JsonEncoder.withIndent('  ').convert(manifest),
-  );
+  File(
+    outPath,
+  ).writeAsStringSync(const JsonEncoder.withIndent('  ').convert(manifest));
 
   stdout.writeln('\n整包 sha256：$_whole');
   stdout.writeln('清单写入：$outPath');
@@ -290,8 +294,10 @@ class _Args {
 /// 支持 `1073741824` / `1GiB` / `64MiB` / `512KiB` 三种写法。
 int? _parseSize(String? raw) {
   if (raw == null) return null;
-  final RegExpMatch? match =
-      RegExp(r'^(\d+)(B|KiB|MiB|GiB)?$', caseSensitive: false).firstMatch(raw);
+  final RegExpMatch? match = RegExp(
+    r'^(\d+)(B|KiB|MiB|GiB)?$',
+    caseSensitive: false,
+  ).firstMatch(raw);
   if (match == null) {
     throw FormatException('看不懂的大小：$raw');
   }

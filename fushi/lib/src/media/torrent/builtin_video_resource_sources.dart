@@ -39,31 +39,31 @@ class BuiltinVideoResourceSource {
 /// 内置视频资源索引器全表（构造序 = 设置页显示序）。
 final List<BuiltinVideoResourceSource> kBuiltinVideoResourceSources =
     <BuiltinVideoResourceSource>[
-  BuiltinVideoResourceSource(
-    id: kNyaaResourceProviderId,
-    displayName: 'Nyaa',
-    hint: () => t.video_builtin_nyaa_hint,
-    create: (http.Client client) => NyaaVideoResourceProvider(
-      client: NyaaClient(client: client),
-      closesClient: true,
-    ),
-  ),
-  BuiltinVideoResourceSource(
-    id: kApibayResourceProviderId,
-    displayName: 'apibay',
-    hint: () => t.video_builtin_apibay_hint,
-    create: (http.Client client) => ApibayVideoResourceProvider(
-      client: ApibayClient(client: client),
-      closesClient: true,
-    ),
-  ),
-  BuiltinVideoResourceSource(
-    id: kKnabenResourceProviderId,
-    displayName: 'Knaben',
-    hint: () => t.video_builtin_knaben_hint,
-    create: (http.Client client) => KnabenVideoResourceProvider(
-      client: KnabenClient(client: client),
-      closesClient: true,
-    ),
-  ),
-];
+      BuiltinVideoResourceSource(
+        id: kNyaaResourceProviderId,
+        displayName: 'Nyaa',
+        hint: () => t.video_builtin_nyaa_hint,
+        create: (http.Client client) => NyaaVideoResourceProvider(
+          client: NyaaClient(client: client),
+          closesClient: true,
+        ),
+      ),
+      BuiltinVideoResourceSource(
+        id: kApibayResourceProviderId,
+        displayName: 'apibay',
+        hint: () => t.video_builtin_apibay_hint,
+        create: (http.Client client) => ApibayVideoResourceProvider(
+          client: ApibayClient(client: client),
+          closesClient: true,
+        ),
+      ),
+      BuiltinVideoResourceSource(
+        id: kKnabenResourceProviderId,
+        displayName: 'Knaben',
+        hint: () => t.video_builtin_knaben_hint,
+        create: (http.Client client) => KnabenVideoResourceProvider(
+          client: KnabenClient(client: client),
+          closesClient: true,
+        ),
+      ),
+    ];

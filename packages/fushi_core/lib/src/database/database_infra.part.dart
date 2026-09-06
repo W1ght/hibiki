@@ -7,11 +7,17 @@ mixin _FushiDbInfra on _$FushiDatabase {
   Future<bool> _columnExists(String tableName, String columnName) async {
     if (!_identifierRe.hasMatch(tableName)) {
       throw ArgumentError.value(
-          tableName, 'tableName', 'not a valid identifier');
+        tableName,
+        'tableName',
+        'not a valid identifier',
+      );
     }
     if (!_identifierRe.hasMatch(columnName)) {
       throw ArgumentError.value(
-          columnName, 'columnName', 'not a valid identifier');
+        columnName,
+        'columnName',
+        'not a valid identifier',
+      );
     }
     final rows = await customSelect('PRAGMA table_info($tableName)').get();
     return rows.any((row) => row.read<String>('name') == columnName);
@@ -27,7 +33,10 @@ mixin _FushiDbInfra on _$FushiDatabase {
   Future<bool> _tableExists(String tableName) async {
     if (!_identifierRe.hasMatch(tableName)) {
       throw ArgumentError.value(
-          tableName, 'tableName', 'not a valid identifier');
+        tableName,
+        'tableName',
+        'not a valid identifier',
+      );
     }
     final rows = await customSelect(
       "SELECT name FROM sqlite_master WHERE type = 'table' AND name = ?",
@@ -45,47 +54,47 @@ mixin _FushiDbInfra on _$FushiDatabase {
     const List<List<String>> indexes = <List<String>>[
       [
         'profile_settings',
-        'CREATE INDEX IF NOT EXISTS idx_profile_settings_profile ON profile_settings (profile_id)'
+        'CREATE INDEX IF NOT EXISTS idx_profile_settings_profile ON profile_settings (profile_id)',
       ],
       [
         'media_type_profiles',
-        'CREATE INDEX IF NOT EXISTS idx_media_type_profiles_profile ON media_type_profiles (profile_id)'
+        'CREATE INDEX IF NOT EXISTS idx_media_type_profiles_profile ON media_type_profiles (profile_id)',
       ],
       [
         'book_profiles',
-        'CREATE INDEX IF NOT EXISTS idx_book_profiles_profile ON book_profiles (profile_id)'
+        'CREATE INDEX IF NOT EXISTS idx_book_profiles_profile ON book_profiles (profile_id)',
       ],
       // bookmarks 索引 v82 起换 book_uid 列，移出本清单（清单会被早期迁移步
       // 调用，彼时新列不存在）：v82 步与 onCreate 成对内联维护。
       [
         'media_items',
         'CREATE INDEX IF NOT EXISTS idx_media_items_type '
-            'ON media_items (media_type_identifier)'
+            'ON media_items (media_type_identifier)',
       ],
       [
         'media_items',
         'CREATE INDEX IF NOT EXISTS idx_media_items_source '
-            'ON media_items (media_source_identifier)'
+            'ON media_items (media_source_identifier)',
       ],
       [
         'audio_cues',
         'CREATE INDEX IF NOT EXISTS idx_audio_cues_book_key '
-            'ON audio_cues (book_key)'
+            'ON audio_cues (book_key)',
       ],
       [
         'search_history_items',
         'CREATE INDEX IF NOT EXISTS idx_search_history_key '
-            'ON search_history_items (history_key)'
+            'ON search_history_items (history_key)',
       ],
       [
         'audiobooks',
         'CREATE INDEX IF NOT EXISTS idx_audiobooks_book_key '
-            'ON audiobooks (book_key)'
+            'ON audiobooks (book_key)',
       ],
       [
         'srt_books',
         'CREATE INDEX IF NOT EXISTS idx_srt_books_book_key '
-            'ON srt_books (book_key)'
+            'ON srt_books (book_key)',
       ],
       // BUG-906 (B): hot-path indexes that were missing.
       // audio_cues is read on every audiobook chapter load via
@@ -98,7 +107,7 @@ mixin _FushiDbInfra on _$FushiDatabase {
       [
         'audio_cues',
         'CREATE INDEX IF NOT EXISTS idx_audio_cues_book_chapter_sentence '
-            'ON audio_cues (book_key, chapter_href, sentence_index)'
+            'ON audio_cues (book_key, chapter_href, sentence_index)',
       ],
       // tag_id lookups（v77 合表后一条索引服务全部 kind）：countBooksForTag /
       // _entryKeysForAllTags 按 tag_id 过滤，PK (media_kind, entry_key, tag_id)
@@ -106,83 +115,83 @@ mixin _FushiDbInfra on _$FushiDatabase {
       [
         'tag_assignments',
         'CREATE INDEX IF NOT EXISTS idx_tag_assignments_tag_id '
-            'ON tag_assignments (tag_id)'
+            'ON tag_assignments (tag_id)',
       ],
       // favorite_words is filtered by source_type ('book' | 'video') in
       // getFavoritesBySource; the table had no index on it.
       [
         'favorite_words',
         'CREATE INDEX IF NOT EXISTS idx_favorite_words_source_type '
-            'ON favorite_words (source_type)'
+            'ON favorite_words (source_type)',
       ],
       // v49：首页 Activity 面板按 timestamp_ms DESC 取最近 N 条（可按 event_type
       // 过滤），主排序列建索引避免全表扫描 + 排序。
       [
         'activity_events',
         'CREATE INDEX IF NOT EXISTS idx_activity_events_timestamp '
-            'ON activity_events (timestamp_ms DESC)'
+            'ON activity_events (timestamp_ms DESC)',
       ],
       // v69：provider 外部 id 反查、来源任务历史与 sidecar 批次查询是刮削热路径。
       [
         'video_metadata_provider_identities',
         'CREATE INDEX IF NOT EXISTS idx_video_metadata_identity_external '
-            'ON video_metadata_provider_identities (provider, external_id)'
+            'ON video_metadata_provider_identities (provider, external_id)',
       ],
       [
         'video_source_scrape_runs',
         'CREATE INDEX IF NOT EXISTS idx_video_scrape_runs_source_started '
-            'ON video_source_scrape_runs (source_id, started_at DESC)'
+            'ON video_source_scrape_runs (source_id, started_at DESC)',
       ],
       [
         'video_sidecar_artifacts',
         'CREATE INDEX IF NOT EXISTS idx_video_sidecar_artifacts_source_run '
-            'ON video_sidecar_artifacts (source_id, run_id)'
+            'ON video_sidecar_artifacts (source_id, run_id)',
       ],
       // v78：worker claim、任务列表与订阅轮询的热路径。
       [
         'video_download_jobs',
         'CREATE INDEX IF NOT EXISTS idx_video_download_jobs_claim '
             'ON video_download_jobs '
-            '(lifecycle, next_attempt_at, priority DESC, created_at)'
+            '(lifecycle, next_attempt_at, priority DESC, created_at)',
       ],
       [
         'video_download_jobs',
         'CREATE UNIQUE INDEX IF NOT EXISTS '
             'idx_video_download_jobs_fingerprint_torrent '
             'ON video_download_jobs (fingerprint, torrent_hash) '
-            'WHERE torrent_hash IS NOT NULL'
+            'WHERE torrent_hash IS NOT NULL',
       ],
       [
         'video_download_jobs',
         'CREATE INDEX IF NOT EXISTS idx_video_download_jobs_backend_task '
-            'ON video_download_jobs (backend_kind, backend_task_id)'
+            'ON video_download_jobs (backend_kind, backend_task_id)',
       ],
       [
         'video_download_job_files',
         'CREATE INDEX IF NOT EXISTS idx_video_download_job_files_job_status '
-            'ON video_download_job_files (job_id, status)'
+            'ON video_download_job_files (job_id, status)',
       ],
       [
         'video_download_job_subtitles',
         'CREATE INDEX IF NOT EXISTS idx_video_download_job_subtitles_job_status '
-            'ON video_download_job_subtitles (job_id, status)'
+            'ON video_download_job_subtitles (job_id, status)',
       ],
       [
         'video_download_subscriptions',
         'CREATE INDEX IF NOT EXISTS idx_video_download_subscriptions_claim '
             'ON video_download_subscriptions '
-            '(enabled, next_check_at, claim_expires_at)'
+            '(enabled, next_check_at, claim_expires_at)',
       ],
       [
         'video_download_subscription_items',
         'CREATE INDEX IF NOT EXISTS idx_video_download_subscription_items_state '
             'ON video_download_subscription_items '
-            '(subscription_id, status, season, episode)'
+            '(subscription_id, status, season, episode)',
       ],
       [
         'video_download_subscription_items',
         'CREATE INDEX IF NOT EXISTS idx_video_download_subscription_items_job '
-            'ON video_download_subscription_items (job_id)'
+            'ON video_download_subscription_items (job_id)',
       ],
     ];
     for (final List<String> entry in indexes) {
@@ -208,60 +217,60 @@ mixin _FushiDbInfra on _$FushiDatabase {
     const List<List<String>> indexes = <List<String>>[
       [
         'profile_settings',
-        'CREATE INDEX IF NOT EXISTS idx_profile_settings_profile ON profile_settings (profile_id)'
+        'CREATE INDEX IF NOT EXISTS idx_profile_settings_profile ON profile_settings (profile_id)',
       ],
       [
         'media_type_profiles',
-        'CREATE INDEX IF NOT EXISTS idx_media_type_profiles_profile ON media_type_profiles (profile_id)'
+        'CREATE INDEX IF NOT EXISTS idx_media_type_profiles_profile ON media_type_profiles (profile_id)',
       ],
       [
         'book_profiles',
-        'CREATE INDEX IF NOT EXISTS idx_book_profiles_profile ON book_profiles (profile_id)'
+        'CREATE INDEX IF NOT EXISTS idx_book_profiles_profile ON book_profiles (profile_id)',
       ],
       [
         'bookmarks',
         'CREATE INDEX IF NOT EXISTS idx_bookmarks_ttu_book_id_created '
             'ON bookmarks (ttu_book_id, created_at DESC)',
-        'ttu_book_id'
+        'ttu_book_id',
       ],
       [
         'media_items',
         'CREATE INDEX IF NOT EXISTS idx_media_items_type '
-            'ON media_items (media_type_identifier)'
+            'ON media_items (media_type_identifier)',
       ],
       [
         'media_items',
         'CREATE INDEX IF NOT EXISTS idx_media_items_source '
-            'ON media_items (media_source_identifier)'
+            'ON media_items (media_source_identifier)',
       ],
       [
         'audio_cues',
         'CREATE INDEX IF NOT EXISTS idx_audio_cues_book_uid '
             'ON audio_cues (book_uid)',
-        'book_uid'
+        'book_uid',
       ],
       [
         'search_history_items',
         'CREATE INDEX IF NOT EXISTS idx_search_history_key '
-            'ON search_history_items (history_key)'
+            'ON search_history_items (history_key)',
       ],
       [
         'audiobooks',
         'CREATE INDEX IF NOT EXISTS idx_audiobooks_book_uid '
             'ON audiobooks (book_uid)',
-        'book_uid'
+        'book_uid',
       ],
       [
         'srt_books',
         'CREATE INDEX IF NOT EXISTS idx_srt_books_ttu_book_id '
             'ON srt_books (ttu_book_id)',
-        'ttu_book_id'
+        'ttu_book_id',
       ],
       [
         'book_tag_mappings',
         'CREATE INDEX IF NOT EXISTS idx_book_tag_mappings_book_id '
             'ON book_tag_mappings (book_id)',
-        'book_id'
+        'book_id',
       ],
       // v55 游戏库：会话表按游戏取流水（详情页时间线）与全局按时间取最近游玩
       // （首页「最近玩过」）是两条热路径，各建一条索引。
@@ -269,20 +278,20 @@ mixin _FushiDbInfra on _$FushiDatabase {
         'galgame_sessions',
         'CREATE INDEX IF NOT EXISTS idx_galgame_sessions_game_start '
             'ON galgame_sessions (game_id, start_ms DESC)',
-        'game_id'
+        'game_id',
       ],
       [
         'galgame_sessions',
         'CREATE INDEX IF NOT EXISTS idx_galgame_sessions_start '
             'ON galgame_sessions (start_ms DESC)',
-        'start_ms'
+        'start_ms',
       ],
       // 按天聚合（统计页每日柱状图）走 dateKey。
       [
         'galgame_sessions',
         'CREATE INDEX IF NOT EXISTS idx_galgame_sessions_date '
             'ON galgame_sessions (date_key)',
-        'date_key'
+        'date_key',
       ],
       // v92 study_segments：按媒体身份（per-media tile / 删除）、按日（窗口聚合 /
       // 热力图）、按设备+更新时刻（同步 v2 增量水位）。

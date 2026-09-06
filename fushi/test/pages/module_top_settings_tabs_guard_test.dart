@@ -18,16 +18,15 @@ bool _containsCode(String source, String needle) =>
 /// 第四个顶部段，不是临时齿轮模式），锚点跟着搬到新形态即可——别因为形态换了就把断言
 /// 删掉。
 bool _hasSettingsSegment(String source) => RegExp(
-      r'\bLibrarySectionTab<int>\s*\(\s*value:\s*3\s*,\s*'
-      r'label:\s*t\.settings\s*\)',
-    ).hasMatch(_code(source));
+  r'\bLibrarySectionTab<int>\s*\(\s*value:\s*3\s*,\s*'
+  r'label:\s*t\.settings\s*\)',
+).hasMatch(_code(source));
 
 /// BUG-1858 起 `constrainWidth` 参数已删：全宽不再是调用点的一个选项，而是
 /// [TorrentSettingsSection] 唯一的形态。守的**行为**没变（下载页的设置面是全宽的），
 /// 锚点跟着搬到无参调用。
-bool _hasFullWidthTorrentSettings(String source) => RegExp(
-      r'\bTorrentSettingsSection\s*\(\s*\)',
-    ).hasMatch(_code(source));
+bool _hasFullWidthTorrentSettings(String source) =>
+    RegExp(r'\bTorrentSettingsSection\s*\(\s*\)').hasMatch(_code(source));
 
 void main() {
   String source(String path) => File(path).readAsStringSync();
@@ -42,16 +41,10 @@ TorrentSettingsSection()
 */
 ''';
     expect(
-      _containsCode(
-        commentsOnly,
-        'kind: MediaLibraryViewKind.settings',
-      ),
+      _containsCode(commentsOnly, 'kind: MediaLibraryViewKind.settings'),
       isFalse,
     );
-    expect(
-      _containsCode(commentsOnly, 'value: GameSection.settings'),
-      isFalse,
-    );
+    expect(_containsCode(commentsOnly, 'value: GameSection.settings'), isFalse);
     expect(
       _containsCode(commentsOnly, 'value: VideoLibrarySection.settings'),
       isFalse,
@@ -74,10 +67,7 @@ TorrentSettingsSection()
       _containsCode(stringsOnly, 'kind: MediaLibraryViewKind.settings'),
       isFalse,
     );
-    expect(
-      _containsCode(stringsOnly, 'value: GameSection.settings'),
-      isFalse,
-    );
+    expect(_containsCode(stringsOnly, 'value: GameSection.settings'), isFalse);
     expect(
       _containsCode(stringsOnly, 'value: VideoLibrarySection.settings'),
       isFalse,
@@ -124,12 +114,21 @@ TorrentSettingsSection()
       isTrue,
       reason: '游戏页签必须由 kGameSectionTabOrder 循环生成（序的唯一真相）',
     );
-    expect(kGameSectionTabOrder.contains(GameSection.settings), isTrue,
-        reason: '游戏顶部导航缺少设置页');
-    expect(kGameSectionTabOrder.contains(GameSection.diagnostics), isFalse,
-        reason: '兼容性诊断不能继续占用游戏顶部高频 tab');
-    expect(kGameSectionTabOrder.last, GameSection.settings,
-        reason: '设置恒排末位，与书 / 漫画 / 视频库页同构');
+    expect(
+      kGameSectionTabOrder.contains(GameSection.settings),
+      isTrue,
+      reason: '游戏顶部导航缺少设置页',
+    );
+    expect(
+      kGameSectionTabOrder.contains(GameSection.diagnostics),
+      isFalse,
+      reason: '兼容性诊断不能继续占用游戏顶部高频 tab',
+    );
+    expect(
+      kGameSectionTabOrder.last,
+      GameSection.settings,
+      reason: '设置恒排末位，与书 / 漫画 / 视频库页同构',
+    );
   });
 
   test('下载把设置作为第四个顶部 tab，而不是临时齿轮模式', () {
@@ -169,10 +168,7 @@ TorrentSettingsSection()
       'lib/src/pages/implementations/game_diagnostics_page.dart',
     );
     expect(
-      _containsCode(
-        diagnostics,
-        'icon: Icons.arrow_back',
-      ),
+      _containsCode(diagnostics, 'icon: Icons.arrow_back'),
       isTrue,
       reason: '诊断页高亮设置段时，重选当前段不会回调，必须另有显式返回入口',
     );

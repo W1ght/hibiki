@@ -195,11 +195,11 @@ class _MelBanks {
 /// 基 2 迭代复 FFT（Float64），只暴露实输入 → 功率谱。
 class _RealFft {
   _RealFft(this.size)
-      : _bitReverse = _buildBitReverse(size),
-        _cos = Float64List(size ~/ 2),
-        _sin = Float64List(size ~/ 2),
-        _re = Float64List(size),
-        _im = Float64List(size) {
+    : _bitReverse = _buildBitReverse(size),
+      _cos = Float64List(size ~/ 2),
+      _sin = Float64List(size ~/ 2),
+      _re = Float64List(size),
+      _im = Float64List(size) {
     if (size < 2 || (size & (size - 1)) != 0) {
       throw ArgumentError.value(size, 'size', 'FFT 长度必须是 2 的幂');
     }

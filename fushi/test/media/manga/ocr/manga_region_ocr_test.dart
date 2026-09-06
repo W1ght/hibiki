@@ -49,7 +49,10 @@ void main() {
     test('页内框：left/top 向下取整、right/bottom 向上取整', () {
       expect(
         clampMangaRegion(
-            const Rect.fromLTRB(10.4, 20.6, 110.2, 220.1), 1000, 1600),
+          const Rect.fromLTRB(10.4, 20.6, 110.2, 220.1),
+          1000,
+          1600,
+        ),
         const Rect.fromLTRB(10, 20, 111, 221),
       );
     });
@@ -61,7 +64,10 @@ void main() {
       );
       expect(
         clampMangaRegion(
-            const Rect.fromLTRB(999.5, 1599.5, 999.6, 1599.6), 1000, 1600),
+          const Rect.fromLTRB(999.5, 1599.5, 999.6, 1599.6),
+          1000,
+          1600,
+        ),
         const Rect.fromLTRB(999, 1599, 1000, 1600),
       );
     });
@@ -85,9 +91,12 @@ void main() {
       expect(crop.rect, const Rect.fromLTRB(20, 30, 121, 91));
       expect(p.isWithin(root.path, crop.root.path), isTrue);
       expect(
-          crop.imageDir.path, p.join(crop.root.path, kMangaRegionCropDirName));
-      final File output =
-          File(p.join(crop.imageDir.path, kMangaRegionCropFileName));
+        crop.imageDir.path,
+        p.join(crop.root.path, kMangaRegionCropDirName),
+      );
+      final File output = File(
+        p.join(crop.imageDir.path, kMangaRegionCropFileName),
+      );
       expect(output.existsSync(), isTrue);
       final img.Image? decoded = img.decodePng(output.readAsBytesSync());
       expect(decoded, isNotNull);
@@ -95,9 +104,9 @@ void main() {
       expect(decoded.height, 61);
       // 引擎链扫的是子目录：里面只有这一张图，根目录本身没有图片。
       expect(
-        crop.imageDir
-            .listSync()
-            .map((FileSystemEntity e) => p.basename(e.path)),
+        crop.imageDir.listSync().map(
+          (FileSystemEntity e) => p.basename(e.path),
+        ),
         <String>[kMangaRegionCropFileName],
       );
     });
@@ -124,32 +133,31 @@ void main() {
 
   group('offsetMangaBlocks', () {
     test('块框、字符区域、行多边形一起平移', () {
-      final List<MokuroBlock> moved = offsetMangaBlocks(
-        <MokuroBlock>[
-          _block(
-            const Rect.fromLTRB(1, 2, 11, 42),
-            'ab',
-            regions: <MangaOcrTextRegion>[
-              const MangaOcrTextRegion(
-                rectangle: Rect.fromLTRB(1, 2, 11, 22),
-                utf16Start: 0,
-                utf16End: 1,
-              ),
+      final List<MokuroBlock> moved = offsetMangaBlocks(<MokuroBlock>[
+        _block(
+          const Rect.fromLTRB(1, 2, 11, 42),
+          'ab',
+          regions: <MangaOcrTextRegion>[
+            const MangaOcrTextRegion(
+              rectangle: Rect.fromLTRB(1, 2, 11, 22),
+              utf16Start: 0,
+              utf16End: 1,
+            ),
+          ],
+          linesCoords: <List<List<double>>>[
+            <List<double>>[
+              <double>[1, 2],
+              <double>[11, 42],
             ],
-            linesCoords: <List<List<double>>>[
-              <List<double>>[
-                <double>[1, 2],
-                <double>[11, 42],
-              ],
-            ],
-          ),
-        ],
-        const Offset(100, 200),
-      );
+          ],
+        ),
+      ], const Offset(100, 200));
       final MokuroBlock block = moved.single;
       expect(block.rectangle, const Rect.fromLTRB(101, 202, 111, 242));
-      expect(block.regions!.single.rectangle,
-          const Rect.fromLTRB(101, 202, 111, 222));
+      expect(
+        block.regions!.single.rectangle,
+        const Rect.fromLTRB(101, 202, 111, 222),
+      );
       expect(block.regions!.single.utf16End, 1);
       expect(block.linesCoords, <List<List<double>>>[
         <List<double>>[
@@ -161,10 +169,9 @@ void main() {
     });
 
     test('无 regions / lines_coords 的块保持 null（不凭空造空列表）', () {
-      final MokuroBlock block = offsetMangaBlocks(
-        <MokuroBlock>[_block(const Rect.fromLTRB(0, 0, 10, 10), 'x')],
-        const Offset(5, 5),
-      ).single;
+      final MokuroBlock block = offsetMangaBlocks(<MokuroBlock>[
+        _block(const Rect.fromLTRB(0, 0, 10, 10), 'x'),
+      ], const Offset(5, 5)).single;
       expect(block.regions, isNull);
       expect(block.linesCoords, isNull);
     });
@@ -176,13 +183,17 @@ void main() {
     test('块面积过半在区域内 → 属于', () {
       expect(
         isMangaBlockInsideRegion(
-            const Rect.fromLTRB(150, 150, 250, 190), region),
+          const Rect.fromLTRB(150, 150, 250, 190),
+          region,
+        ),
         isTrue,
         reason: '一半在内（恰好 50%）按属于算',
       );
       expect(
         isMangaBlockInsideRegion(
-            const Rect.fromLTRB(110, 110, 190, 190), region),
+          const Rect.fromLTRB(110, 110, 190, 190),
+          region,
+        ),
         isTrue,
       );
     });
@@ -190,13 +201,17 @@ void main() {
     test('只擦到边的邻块不属于', () {
       expect(
         isMangaBlockInsideRegion(
-            const Rect.fromLTRB(180, 100, 300, 200), region),
+          const Rect.fromLTRB(180, 100, 300, 200),
+          region,
+        ),
         isFalse,
         reason: '只有 1/6 在区域内',
       );
       expect(
         isMangaBlockInsideRegion(
-            const Rect.fromLTRB(300, 300, 400, 400), region),
+          const Rect.fromLTRB(300, 300, 400, 400),
+          region,
+        ),
         isFalse,
       );
     });
@@ -204,7 +219,9 @@ void main() {
     test('零面积块退化为左上角判定', () {
       expect(
         isMangaBlockInsideRegion(
-            const Rect.fromLTRB(150, 150, 150, 150), region),
+          const Rect.fromLTRB(150, 150, 150, 150),
+          region,
+        ),
         isTrue,
       );
       expect(
@@ -220,12 +237,16 @@ void main() {
     test('完整落在区域内（含贴边）→ 覆盖', () {
       expect(
         isMangaBlockCoveredByRegion(
-            const Rect.fromLTRB(110, 110, 190, 190), region),
+          const Rect.fromLTRB(110, 110, 190, 190),
+          region,
+        ),
         isTrue,
       );
       expect(
         isMangaBlockCoveredByRegion(
-            const Rect.fromLTRB(100, 100, 200, 200), region),
+          const Rect.fromLTRB(100, 100, 200, 200),
+          region,
+        ),
         isTrue,
         reason: '边界闭：裁图矩形取整时是向外取整，贴边块仍被完整裁进去',
       );
@@ -234,12 +255,16 @@ void main() {
     test('伸出去一点点就不算覆盖（哪怕面积过半在内）', () {
       expect(
         isMangaBlockCoveredByRegion(
-            const Rect.fromLTRB(110, 110, 190, 200.5), region),
+          const Rect.fromLTRB(110, 110, 190, 200.5),
+          region,
+        ),
         isFalse,
       );
       expect(
         isMangaBlockInsideRegion(
-            const Rect.fromLTRB(110, 110, 190, 200.5), region),
+          const Rect.fromLTRB(110, 110, 190, 200.5),
+          region,
+        ),
         isTrue,
         reason: '这正是两条判据的分工：意图会圈中它，落盘删块不会',
       );
@@ -249,10 +274,14 @@ void main() {
   group('expandMangaRegionToBlocks', () {
     // 用户框只圈住竖排气泡的上 80%：照用户框裁图会「整条删、只认回来 80%」。
     const Rect userBox = Rect.fromLTRB(100, 100, 200, 200);
-    final MokuroBlock bubble =
-        _block(const Rect.fromLTRB(120, 120, 180, 220), '气泡');
-    final MokuroBlock neighbour =
-        _block(const Rect.fromLTRB(190, 100, 300, 200), '邻块');
+    final MokuroBlock bubble = _block(
+      const Rect.fromLTRB(120, 120, 180, 220),
+      '气泡',
+    );
+    final MokuroBlock neighbour = _block(
+      const Rect.fromLTRB(190, 100, 300, 200),
+      '邻块',
+    );
 
     test('被圈中的块把框撑成包围盒，只擦到边的邻块不参与', () {
       expect(
@@ -267,7 +296,9 @@ void main() {
         userBox,
       );
       expect(
-          expandMangaRegionToBlocks(userBox, const <MokuroBlock>[]), userBox);
+        expandMangaRegionToBlocks(userBox, const <MokuroBlock>[]),
+        userBox,
+      );
     });
 
     test('不变量：每个被圈中的块都被扩后的框完整覆盖', () {
@@ -286,8 +317,10 @@ void main() {
     test('只扩一轮、不迭代到不动点：邻块不会被链式拉进来', () {
       // 扩后的框 (100,100,200,220) 仍然只擦到邻块左侧 10px；再迭代一轮就会把它
       // 也吞进去，密集页上会链式膨胀到整页。
-      final Rect expanded =
-          expandMangaRegionToBlocks(userBox, <MokuroBlock>[bubble, neighbour]);
+      final Rect expanded = expandMangaRegionToBlocks(userBox, <MokuroBlock>[
+        bubble,
+        neighbour,
+      ]);
       expect(
         expandMangaRegionToBlocks(expanded, <MokuroBlock>[bubble, neighbour]),
         expanded,
@@ -321,10 +354,12 @@ void main() {
         replaced.blocks.map((MokuroBlock b) => b.lines.single).toList(),
         <String>['keep-a', 'keep-b', 'new-1', 'new-2'],
       );
-      expect(
-        replaced.blocks.map((MokuroBlock b) => b.zIndex).toList(),
-        <int>[0, 1, 2, 3],
-      );
+      expect(replaced.blocks.map((MokuroBlock b) => b.zIndex).toList(), <int>[
+        0,
+        1,
+        2,
+        3,
+      ]);
     });
 
     test('只被盖住一部分的旧块不删：删它就等于丢掉裁图外那段文字', () {
@@ -343,7 +378,8 @@ void main() {
       expect(
         replaced.blocks.map((MokuroBlock b) => b.lines.single).toList(),
         <String>['half-out', 'new'],
-        reason: '真实调用里裁图矩形已被 expandMangaRegionToBlocks 撑到盖住整块；'
+        reason:
+            '真实调用里裁图矩形已被 expandMangaRegionToBlocks 撑到盖住整块；'
             '若哪天有人绕过扩框直接传用户框，宁可留双层也不能静默截断',
       );
     });
@@ -371,15 +407,17 @@ void main() {
           '"blocks":[{"box":[10,5,40,45],"vertical":true,"font_size":12,'
           '"z_index":0,"lines":["こんにちは"]}]}]}',
         );
-      final Stream<MangaOcrBackgroundEvent> events = Stream<
-          MangaOcrBackgroundEvent>.fromIterable(<MangaOcrBackgroundEvent>[
-        const MangaOcrBackgroundEvent.progress(pagesDone: 1, pagesTotal: 1),
-        MangaOcrBackgroundEvent.finished(
-          pagesTotal: 1,
-          resultPath: result.path,
-          external: false,
-        ),
-      ]);
+      final Stream<MangaOcrBackgroundEvent> events =
+          Stream<MangaOcrBackgroundEvent>.fromIterable(<
+            MangaOcrBackgroundEvent
+          >[
+            const MangaOcrBackgroundEvent.progress(pagesDone: 1, pagesTotal: 1),
+            MangaOcrBackgroundEvent.finished(
+              pagesTotal: 1,
+              resultPath: result.path,
+              external: false,
+            ),
+          ]);
       final List<MokuroBlock> blocks = await collectMangaRegionOcrBlocks(
         events,
         origin: const Offset(300, 400),

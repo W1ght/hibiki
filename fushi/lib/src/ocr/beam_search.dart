@@ -24,8 +24,8 @@ import 'dart:typed_data';
 /// 输入：当前每条存活 beam 的完整 token 序列（含 decoder 起始 token）。
 /// 输出：每条 beam 对应的最后一个位置的词表 logits（长度 = vocabSize，
 /// 未做 softmax）。实现方通常把 beams 打成一个 batch 跑 decoder。
-typedef BeamStepLogits = Future<List<Float32List>> Function(
-    List<List<int>> sequences);
+typedef BeamStepLogits =
+    Future<List<Float32List>> Function(List<List<int>> sequences);
 
 class BeamSearchConfig {
   const BeamSearchConfig({
@@ -35,8 +35,8 @@ class BeamSearchConfig {
     this.lengthPenalty = 2.0,
     this.noRepeatNgramSize = 3,
     this.maxLength = 300,
-  })  : assert(numBeams >= 1),
-        assert(maxLength >= 2);
+  }) : assert(numBeams >= 1),
+       assert(maxLength >= 2);
 
   /// decoder 起始 token（manga-ocr 为 [CLS]）。
   final int startTokenId;
@@ -127,8 +127,10 @@ Future<BeamSearchResult> beamSearchDecode({
     for (int i = 0; i < numBeams; i++) <int>[config.startTokenId],
   ];
   // 首步除 beam0 外全部 -inf，避免 numBeams 条相同序列占满候选（对齐 HF）。
-  final List<double> beamScores =
-      List<double>.filled(numBeams, double.negativeInfinity);
+  final List<double> beamScores = List<double>.filled(
+    numBeams,
+    double.negativeInfinity,
+  );
   beamScores[0] = 0;
 
   final List<_Hypothesis> finished = <_Hypothesis>[];
@@ -171,8 +173,10 @@ Future<BeamSearchResult> beamSearchDecode({
     final List<Float64List> nextScores = <Float64List>[];
     for (int b = 0; b < numBeams; b++) {
       final Float64List logProbs = logSoftmax(logitsPerBeam[b]);
-      final Set<int> banned =
-          bannedNgramTokens(sequences[b], config.noRepeatNgramSize);
+      final Set<int> banned = bannedNgramTokens(
+        sequences[b],
+        config.noRepeatNgramSize,
+      );
       for (final int token in banned) {
         logProbs[token] = double.negativeInfinity;
       }
@@ -186,8 +190,10 @@ Future<BeamSearchResult> beamSearchDecode({
     final int candidateCount = math.min(2 * numBeams, numBeams * vocabSize);
     final List<int> topBeam = List<int>.filled(candidateCount, 0);
     final List<int> topToken = List<int>.filled(candidateCount, 0);
-    final List<double> topScore =
-        List<double>.filled(candidateCount, double.negativeInfinity);
+    final List<double> topScore = List<double>.filled(
+      candidateCount,
+      double.negativeInfinity,
+    );
     for (int b = 0; b < numBeams; b++) {
       final Float64List scores = nextScores[b];
       for (int v = 0; v < vocabSize; v++) {
@@ -281,8 +287,5 @@ Future<BeamSearchResult> beamSearchDecode({
   best ??= _Hypothesis(<int>[config.startTokenId], 0);
 
   // 去掉起始 token。
-  return BeamSearchResult(
-    tokens: best.tokens.sublist(1),
-    score: best.score,
-  );
+  return BeamSearchResult(tokens: best.tokens.sublist(1), score: best.score);
 }

@@ -89,11 +89,7 @@ Uint8List downsampleCardScreenshot(
     }
     final img.Image out = target == null
         ? decoded
-        : img.copyResize(
-            decoded,
-            width: target.width,
-            height: target.height,
-          );
+        : img.copyResize(decoded, width: target.width, height: target.height);
     return switch (encoding) {
       CardScreenshotEncoding.jpeg => img.encodeJpg(out, quality: quality),
       CardScreenshotEncoding.png => img.encodePng(out),

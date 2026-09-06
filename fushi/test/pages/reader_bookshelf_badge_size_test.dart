@@ -22,23 +22,22 @@ Size _visualSizeOf(WidgetTester tester, GlobalKey key) {
     transform,
     Offset(layoutSize.width, layoutSize.height),
   );
-  return Size(
-    (bottomRight - topLeft).dx,
-    (bottomRight - topLeft).dy,
-  );
+  return Size((bottomRight - topLeft).dx, (bottomRight - topLeft).dy);
 }
 
 void main() {
   testWidgets(
-      'cover badge dimension constant equals the badge intrinsic size (22px)',
-      (tester) async {
-    // The box equals the badge intrinsic size so BoxFit.contain renders the
-    // badge at its full, normal size instead of shrinking it (TODO-552).
-    expect(kShelfCoverBadgeDimension, equals(22.0));
-  });
+    'cover badge dimension constant equals the badge intrinsic size (22px)',
+    (tester) async {
+      // The box equals the badge intrinsic size so BoxFit.contain renders the
+      // badge at its full, normal size instead of shrinking it (TODO-552).
+      expect(kShelfCoverBadgeDimension, equals(22.0));
+    },
+  );
 
-  testWidgets('cover type badge paints at its normal intrinsic 22px size',
-      (tester) async {
+  testWidgets('cover type badge paints at its normal intrinsic 22px size', (
+    tester,
+  ) async {
     final GlobalKey badgeKey = GlobalKey();
     await tester.pumpWidget(
       MaterialApp(

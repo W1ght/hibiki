@@ -73,8 +73,11 @@ void main() {
         (Widget w) => w is SizedBox && w.width == double.infinity,
       ),
     );
-    expect(host, findsOneWidget,
-        reason: 'each controlBelow strip is hosted in a full-width box');
+    expect(
+      host,
+      findsOneWidget,
+      reason: 'each controlBelow strip is hosted in a full-width box',
+    );
     return tester.getSize(host).width;
   }
 
@@ -95,15 +98,24 @@ void main() {
       final double longWidth = hostWidthUnder(tester, 'long');
 
       // Both boxes span the same full available width: EQUAL.
-      expect((shortWidth - longWidth).abs(), lessThan(0.5),
-          reason: 'both segmented boxes occupy the same full row width');
+      expect(
+        (shortWidth - longWidth).abs(),
+        lessThan(0.5),
+        reason: 'both segmented boxes occupy the same full row width',
+      );
 
       // And both really do fill the row (≈ pane minus row horizontal padding),
       // not the strip's narrow intrinsic width.
-      expect(shortWidth, greaterThan(pane - 40),
-          reason: 'the short box fills the row');
-      expect(longWidth, greaterThan(pane - 40),
-          reason: 'the long box fills the row, not its intrinsic narrow width');
+      expect(
+        shortWidth,
+        greaterThan(pane - 40),
+        reason: 'the short box fills the row',
+      );
+      expect(
+        longWidth,
+        greaterThan(pane - 40),
+        reason: 'the long box fills the row, not its intrinsic narrow width',
+      );
 
       // BUG-008 guard: the long strip is genuinely scrollable inside its
       // full-width box, so the trailing segment stays reachable.
@@ -111,16 +123,22 @@ void main() {
         of: find.byKey(const ValueKey<String>('long')),
         matching: find.byType(SingleChildScrollView),
       );
-      expect(longScroll, findsOneWidget,
-          reason: 'the long strip scrolls inside its full-width box');
+      expect(
+        longScroll,
+        findsOneWidget,
+        reason: 'the long strip scrolls inside its full-width box',
+      );
       final ScrollableState scrollState = tester.state(
         find.descendant(
           of: find.byKey(const ValueKey<String>('long')),
           matching: find.byType(Scrollable),
         ),
       );
-      expect(scrollState.position.maxScrollExtent, greaterThan(0.0),
-          reason: 'the long strip overflows its box → scrolls to last segment');
+      expect(
+        scrollState.position.maxScrollExtent,
+        greaterThan(0.0),
+        reason: 'the long strip overflows its box → scrolls to last segment',
+      );
 
       // The short strip fits, so it is NOT scroll-hosted (full-width equal
       // segments instead).
@@ -128,8 +146,11 @@ void main() {
         of: find.byKey(const ValueKey<String>('short')),
         matching: find.byType(SingleChildScrollView),
       );
-      expect(shortScroll, findsNothing,
-          reason: 'the fitting short strip stretches, no scroll host');
+      expect(
+        shortScroll,
+        findsNothing,
+        reason: 'the fitting short strip stretches, no scroll host',
+      );
     },
   );
 }

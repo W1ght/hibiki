@@ -28,8 +28,9 @@ class FushiSettingsSubPageHeader extends StatelessWidget {
     final TextStyle? titleStyle = cupertino
         ? CupertinoTheme.of(context).textTheme.navTitleTextStyle
         : Theme.of(context).textTheme.titleMedium;
-    final IconData icon =
-        cupertino ? CupertinoIcons.chevron_back : Icons.arrow_back;
+    final IconData icon = cupertino
+        ? CupertinoIcons.chevron_back
+        : Icons.arrow_back;
 
     return Row(
       children: <Widget>[
@@ -114,7 +115,7 @@ class FushiMasterDetailSettingsSheet extends StatelessWidget {
 
   /// 宽窗内容（两边发散）：在有界高度下构造各自的 master-detail / 顶栏+详情。
   final Widget Function(BuildContext context, BoxConstraints constraints)
-      wideBuilder;
+  wideBuilder;
 
   /// 窄窗外层 [SingleChildScrollView] 的 key（阅读器 `ValueKey(_subPage ?? 'main')`、
   /// 视频 `null`），保留各自的主/子页切换 Element 复用语义。
@@ -122,11 +123,11 @@ class FushiMasterDetailSettingsSheet extends StatelessWidget {
 
   /// 窄窗 padding（阅读器 `page + gap/2`、视频 `page + gap`，含底部键盘 inset）。
   final EdgeInsets Function(BuildContext context, BoxConstraints constraints)
-      narrowPadding;
+  narrowPadding;
 
   /// 窄窗 [AnimatedSize] 的内容（调用方按 [subPageActive] 选 main / sub 页）。
   final Widget Function(BuildContext context, BoxConstraints constraints)
-      narrowChild;
+  narrowChild;
 
   /// 主/子 pane 内边距共享公式（TODO-344，阅读器 / 视频两张 sheet 的 narrow +
   /// wide 共 4 个使用点同款）：水平两侧对称 [horizontal]、顶部 [top]，底部恒为
@@ -171,7 +172,7 @@ class FushiMasterDetailSettingsSheet extends StatelessWidget {
             // 确定性几何判据：宽且高都够才进宽窗 master-detail，否则窄窗 push。
             final bool wide =
                 constraints.maxWidth >= kFushiSettingsWideThreshold &&
-                    constraints.maxHeight >= kFushiSettingsWideMinHeight;
+                constraints.maxHeight >= kFushiSettingsWideMinHeight;
             onWideChanged(wide);
             if (wide) {
               return wideBuilder(context, constraints);

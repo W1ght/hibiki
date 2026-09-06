@@ -62,14 +62,13 @@ class UpdateAsset {
     int? sizeBytes,
     String? sha256Digest,
     String? version,
-  }) =>
-      UpdateAsset(
-        name: name ?? this.name,
-        url: url ?? this.url,
-        sizeBytes: sizeBytes ?? this.sizeBytes,
-        sha256Digest: sha256Digest ?? this.sha256Digest,
-        version: version ?? this.version,
-      );
+  }) => UpdateAsset(
+    name: name ?? this.name,
+    url: url ?? this.url,
+    sizeBytes: sizeBytes ?? this.sizeBytes,
+    sha256Digest: sha256Digest ?? this.sha256Digest,
+    version: version ?? this.version,
+  );
 }
 
 int? _assetSizeBytes(Object? raw) {
@@ -248,9 +247,9 @@ bool androidAssetMatchesAbi(String name, String abi) =>
 /// 候选里是否存在**任何**按架构切分的包。用于区分「这个 release 提供分架构包、只是
 /// 没有本机这一档」与「这个 release 只有一个 universal 包」（debug 通道即后者）。
 bool _hasPerAbiCandidate(Iterable<String> names) => names.any(
-      (String n) => kAndroidReleaseAbis
-          .any((String abi) => androidAssetMatchesAbi(n, abi)),
-    );
+  (String n) =>
+      kAndroidReleaseAbis.any((String abi) => androidAssetMatchesAbi(n, abi)),
+);
 
 bool _isDebugWindowsSetupAsset(String name) =>
     name.endsWith('-windows-setup.exe') && name.contains('-debug.');
@@ -260,8 +259,7 @@ bool _windowsAssetMatchesChannel(String name, UpdateChannel channel) {
   return switch (channel) {
     UpdateChannel.debug => _isDebugWindowsSetupAsset(name),
     UpdateChannel.stable ||
-    UpdateChannel.beta =>
-      !_isDebugWindowsSetupAsset(name),
+    UpdateChannel.beta => !_isDebugWindowsSetupAsset(name),
   };
 }
 
@@ -281,7 +279,7 @@ bool _macosAssetMatchesChannel(String name, UpdateChannel channel) {
 
 class AndroidUpdater extends PlatformUpdater {
   AndroidUpdater({Future<List<String>> Function()? abiProvider})
-      : _abiProvider = abiProvider ?? _defaultAbis;
+    : _abiProvider = abiProvider ?? _defaultAbis;
 
   final Future<List<String>> Function() _abiProvider;
 
@@ -413,8 +411,7 @@ class IosUpdater extends PlatformUpdater {
   Future<UpdateAsset?> selectAsset(
     List<Map<String, dynamic>> assets, {
     UpdateChannel channel = UpdateChannel.stable,
-  }) async =>
-      null;
+  }) async => null;
 
   @override
   Future<UpdateLanding> resolveDownloadLanding(String releaseHtmlUrl) async {
@@ -440,8 +437,7 @@ class UnsupportedUpdater extends PlatformUpdater {
   Future<UpdateAsset?> selectAsset(
     List<Map<String, dynamic>> assets, {
     UpdateChannel channel = UpdateChannel.stable,
-  }) async =>
-      null;
+  }) async => null;
 
   @override
   Future<void> apply(File file, String version) async {
@@ -473,19 +469,18 @@ List<String> windowsInstallerArgs(
   String installerPath, {
   String? logPath,
   String? targetInstallDir,
-}) =>
-    <String>[
-      '/VERYSILENT',
-      '/SP-',
-      '/SUPPRESSMSGBOXES',
-      '/NOCLOSEAPPLICATIONS',
-      '/NOFORCECLOSEAPPLICATIONS',
-      '/NORESTARTAPPLICATIONS',
-      '/NORESTART',
-      if (targetInstallDir != null && targetInstallDir.trim().isNotEmpty)
-        '/DIR=$targetInstallDir',
-      '/LOG=${logPath ?? windowsInstallerLogPath(installerPath)}',
-    ];
+}) => <String>[
+  '/VERYSILENT',
+  '/SP-',
+  '/SUPPRESSMSGBOXES',
+  '/NOCLOSEAPPLICATIONS',
+  '/NOFORCECLOSEAPPLICATIONS',
+  '/NORESTARTAPPLICATIONS',
+  '/NORESTART',
+  if (targetInstallDir != null && targetInstallDir.trim().isNotEmpty)
+    '/DIR=$targetInstallDir',
+  '/LOG=${logPath ?? windowsInstallerLogPath(installerPath)}',
+];
 
 const String kWindowsUpdateLauncherExecutable = 'fushi_update_launcher.exe';
 
@@ -544,25 +539,33 @@ String? resolveWindowsUpdateLauncherSource({
   if (probe(stalePath)) return stalePath;
 
   // 带序号的退让名（`.old1.exe`…）。名字不固定，只能扫。
-  final List<String> Function(String dirPath) list = listDirectory ??
+  final List<String> Function(String dirPath) list =
+      listDirectory ??
       (String path) {
         try {
           return Directory(path)
               .listSync(followLinks: false)
               .whereType<File>()
-              .map((File f) => f.path.substring(
-                  _lastPathSeparatorIndex(f.path) + 1))
+              .map(
+                (File f) =>
+                    f.path.substring(_lastPathSeparatorIndex(f.path) + 1),
+              )
               .toList();
         } catch (_) {
           return const <String>[];
         }
       };
-  final List<String> candidates = list(dirPath)
-      .where((String name) =>
-          name.toLowerCase().startsWith(kWindowsUpdateLauncherStalePrefix) &&
-          name.toLowerCase().endsWith('.exe'))
-      .toList()
-    ..sort();
+  final List<String> candidates =
+      list(dirPath)
+          .where(
+            (String name) =>
+                name.toLowerCase().startsWith(
+                  kWindowsUpdateLauncherStalePrefix,
+                ) &&
+                name.toLowerCase().endsWith('.exe'),
+          )
+          .toList()
+        ..sort();
   for (final String name in candidates) {
     final String path = joined(name);
     if (probe(path)) return path;
@@ -576,21 +579,23 @@ List<String> windowsUpdateLauncherArgs({
   required String installerPath,
   required List<String> installerArgs,
   String? appExecutablePath,
-}) =>
-    <String>[
-      '--marker',
-      markerPath,
-      '--parent-pid',
-      '$parentProcessId',
-      '--installer',
-      installerPath,
-      // BUG-1786：launcher 从安装目录外的副本运行，副本同目录没有 fushi.exe，
-      // 「安装失败就把 app 拉回来」这一环必须拿到显式路径才不至于失效。
-      if (appExecutablePath != null && appExecutablePath.trim().isNotEmpty)
-        ...<String>['--app-exe', appExecutablePath],
-      '--',
-      ...installerArgs,
-    ];
+}) => <String>[
+  '--marker',
+  markerPath,
+  '--parent-pid',
+  '$parentProcessId',
+  '--installer',
+  installerPath,
+  // BUG-1786：launcher 从安装目录外的副本运行，副本同目录没有 fushi.exe，
+  // 「安装失败就把 app 拉回来」这一环必须拿到显式路径才不至于失效。
+  if (appExecutablePath != null &&
+      appExecutablePath.trim().isNotEmpty) ...<String>[
+    '--app-exe',
+    appExecutablePath,
+  ],
+  '--',
+  ...installerArgs,
+];
 
 /// launcher 副本的落地目录名（在 updates 目录下，**安装目录之外**）。
 const String kWindowsUpdateLauncherStageDirName = 'launcher';
@@ -650,8 +655,9 @@ Future<String?> stageWindowsUpdateLauncher({
 String windowsInstallerLogPath(String installerPath) {
   final int sep = _lastPathSeparatorIndex(installerPath);
   final String dir = sep >= 0 ? installerPath.substring(0, sep) : '';
-  final String name =
-      sep >= 0 ? installerPath.substring(sep + 1) : installerPath;
+  final String name = sep >= 0
+      ? installerPath.substring(sep + 1)
+      : installerPath;
   final String stem = name.toLowerCase().endsWith('.exe')
       ? name.substring(0, name.length - 4)
       : name;
@@ -722,7 +728,8 @@ class WindowsInstaller {
     Future<WindowsInstallerStartedProcess> Function(
       String executable,
       List<String> args,
-    )? startProcess,
+    )?
+    startProcess,
     void Function(int code)? exitProcess,
   }) async {
     final DateTime Function() clock = now ?? DateTime.now;
@@ -749,9 +756,12 @@ class WindowsInstaller {
         // 抛错让上层提示「更新失败」并保留 app 存活，而不是硬启动一个坏 exe。
         try {
           installer.deleteSync();
-        } catch (_) {/* best-effort cleanup */}
+        } catch (_) {
+          /* best-effort cleanup */
+        }
         throw UpdateInstallerException(
-            'downloaded file is not a Windows executable: $installerPath');
+          'downloaded file is not a Windows executable: $installerPath',
+        );
       }
     } catch (e, stack) {
       await _markLaunchFailed(handoffMarkerFile, e, clock(), stack);
@@ -760,23 +770,23 @@ class WindowsInstaller {
 
     final WindowsInstallerDiagnostics rawDiagnostics =
         collectDiagnostics != null
-            ? await collectDiagnostics()
-            : Platform.isWindows
-                ? await collectWindowsInstallerDiagnostics(
-                    currentExecutablePath: resolvedExecutablePath,
-                    currentProcessId: pid,
-                  )
-                : WindowsInstallerDiagnostics(
-                    currentExecutablePath: resolvedExecutablePath,
-                    currentInstallDir: currentInstallDir.path,
-                    targetInstallDir: currentInstallDir.path,
-                    detectedInstallLocations: <WindowsDetectedInstallLocation>[
-                      WindowsDetectedInstallLocation(
-                        source: 'current',
-                        path: currentInstallDir.path,
-                      ),
-                    ],
-                  );
+        ? await collectDiagnostics()
+        : Platform.isWindows
+        ? await collectWindowsInstallerDiagnostics(
+            currentExecutablePath: resolvedExecutablePath,
+            currentProcessId: pid,
+          )
+        : WindowsInstallerDiagnostics(
+            currentExecutablePath: resolvedExecutablePath,
+            currentInstallDir: currentInstallDir.path,
+            targetInstallDir: currentInstallDir.path,
+            detectedInstallLocations: <WindowsDetectedInstallLocation>[
+              WindowsDetectedInstallLocation(
+                source: 'current',
+                path: currentInstallDir.path,
+              ),
+            ],
+          );
     final String targetInstallDir =
         rawDiagnostics.targetInstallDir ?? currentInstallDir.path;
     final WindowsInstallerDiagnostics diagnostics = rawDiagnostics.copyWith(
@@ -839,7 +849,8 @@ class WindowsInstaller {
       // BUG-1831：原件可能已被「改名让路 + 本次安装回滚」的组合抹掉，安装目录里只剩
       // `fushi_update_launcher.old.exe`。它是同一份映像，拿它接着走即可自愈；不接受
       // 它就等于让这台机器永远发不出更新（安装器一次都起不来，连日志都不会有）。
-      final String launcherSourcePath = resolveWindowsUpdateLauncherSource(
+      final String launcherSourcePath =
+          resolveWindowsUpdateLauncherSource(
             installedLauncherPath: installedLauncherPath,
           ) ??
           installedLauncherPath;
@@ -853,20 +864,20 @@ class WindowsInstaller {
       }
       final String? stagedLauncherPath =
           useDelayedLauncher && Platform.isWindows
-              ? await stageWindowsUpdateLauncher(
-                  launcherPath: launcherSourcePath,
-                  stageRoot: handoffMarkerFile.parent,
-                )
-              : null;
+          ? await stageWindowsUpdateLauncher(
+              launcherPath: launcherSourcePath,
+              stageRoot: handoffMarkerFile.parent,
+            )
+          : null;
       if (useDelayedLauncher) {
         ErrorLogService.instance.log(
           'WindowsInstaller.stageLauncher',
           stagedLauncherPath != null
               ? 'Running update launcher from a staged copy outside the '
-                  'install dir: $stagedLauncherPath'
+                    'install dir: $stagedLauncherPath'
               : 'Staging the update launcher failed; falling back to the '
-                  'in-place copy at $installedLauncherPath '
-                  '(Inno may abort on it).',
+                    'in-place copy at $installedLauncherPath '
+                    '(Inno may abort on it).',
         );
       }
       final String executable = useDelayedLauncher
@@ -886,19 +897,21 @@ class WindowsInstaller {
           Platform.isWindows &&
           !File(executable).existsSync()) {
         throw UpdateInstallerException(
-            'update launcher not found: $executable');
+          'update launcher not found: $executable',
+        );
       }
       ErrorLogService.instance.log(
         'WindowsInstaller.launch',
         useDelayedLauncher
             ? 'Launching Windows update launcher: $executable '
-                'parent=$pid installer=$installerPath'
+                  'parent=$pid installer=$installerPath'
             : 'Launching Windows installer: $installerPath',
       );
       final Future<WindowsInstallerStartedProcess> Function(
         String executable,
         List<String> args,
-      ) start = startProcess ?? _startDetachedLauncherProcess;
+      )
+      start = startProcess ?? _startDetachedLauncherProcess;
       final WindowsInstallerStartedProcess started = await start(
         executable,
         launchArgs,
@@ -907,10 +920,10 @@ class WindowsInstaller {
         'WindowsInstaller.launch',
         useDelayedLauncher
             ? 'Windows update launcher launched: '
-                'target=${targetVersion ?? 'unknown'}, '
-                'launcherPid=${started.pid ?? 'unknown'}, log=$innoLogPath'
+                  'target=${targetVersion ?? 'unknown'}, '
+                  'launcherPid=${started.pid ?? 'unknown'}, log=$innoLogPath'
             : 'Windows installer launched: target=${targetVersion ?? 'unknown'}, '
-                'pid=${started.pid ?? 'unknown'}, log=$innoLogPath',
+                  'pid=${started.pid ?? 'unknown'}, log=$innoLogPath',
       );
     } on ProcessException catch (e) {
       final exception = UpdateInstallerException(
@@ -963,16 +976,19 @@ class WindowsInstaller {
     WindowsInstallerDiagnostics diagnostics,
     String innoLogPath,
   ) {
-    final List<WindowsProcessInfo> blockers =
-        _blockingWindowsInstallProcesses(diagnostics);
+    final List<WindowsProcessInfo> blockers = _blockingWindowsInstallProcesses(
+      diagnostics,
+    );
     if (blockers.isEmpty) return;
 
     final String target = diagnostics.targetInstallDir ?? 'unknown';
     final List<WindowsProcessInfo> externalLocks = blockers
-        .where((WindowsProcessInfo process) => !_installerCanClose(
-              process,
-              targetInstallDir: diagnostics.targetInstallDir,
-            ))
+        .where(
+          (WindowsProcessInfo process) => !_installerCanClose(
+            process,
+            targetInstallDir: diagnostics.targetInstallDir,
+          ),
+        )
         .toList(growable: false);
     if (externalLocks.isEmpty) {
       // 只剩安装器能强杀的 hibiki.exe / WebView2 实例：不中止，记警告后继续启动安装器，
@@ -1001,12 +1017,16 @@ class WindowsInstaller {
         .map((WindowsProcessInfo process) => process.pid)
         .toSet();
     final List<WindowsProcessInfo> hookHolders = externalLocks
-        .where((WindowsProcessInfo process) =>
-            galHookHolderPids.contains(process.pid))
+        .where(
+          (WindowsProcessInfo process) =>
+              galHookHolderPids.contains(process.pid),
+        )
         .toList(growable: false);
     final List<WindowsProcessInfo> otherLocks = externalLocks
-        .where((WindowsProcessInfo process) =>
-            !galHookHolderPids.contains(process.pid))
+        .where(
+          (WindowsProcessInfo process) =>
+              !galHookHolderPids.contains(process.pid),
+        )
         .toList(growable: false);
 
     final StringBuffer message = StringBuffer(
@@ -1088,13 +1108,12 @@ class WindowsInstaller {
 
   static String _summarizeBlockingProcesses(
     List<WindowsProcessInfo> processes,
-  ) =>
-      processes
-          .map(
-            (WindowsProcessInfo process) =>
-                'PID ${process.pid}: ${process.path ?? process.name ?? 'unknown'}',
-          )
-          .join('; ');
+  ) => processes
+      .map(
+        (WindowsProcessInfo process) =>
+            'PID ${process.pid}: ${process.path ?? process.name ?? 'unknown'}',
+      )
+      .join('; ');
 
   static List<WindowsProcessInfo> _blockingWindowsInstallProcesses(
     WindowsInstallerDiagnostics diagnostics,
@@ -1136,11 +1155,7 @@ class WindowsInstaller {
         failedAt: failedAt,
       );
     } catch (e, s) {
-      ErrorLogService.instance.log(
-        'WindowsInstaller.markLaunchFailed',
-        e,
-        s,
-      );
+      ErrorLogService.instance.log('WindowsInstaller.markLaunchFailed', e, s);
     }
   }
 }
@@ -1153,27 +1168,33 @@ Future<WindowsInstallerDiagnostics> collectWindowsInstallerDiagnostics({
   final String targetInstallDir = currentInstallDir;
   final List<WindowsDetectedInstallLocation> detectedInstallLocations =
       <WindowsDetectedInstallLocation>[
-    WindowsDetectedInstallLocation(
-      source: 'current',
-      path: currentInstallDir,
-    ),
-    ...await queryWindowsRegisteredInstallLocations(),
-    ...detectWindowsHistoricalInstallLocations(),
-  ];
+        WindowsDetectedInstallLocation(
+          source: 'current',
+          path: currentInstallDir,
+        ),
+        ...await queryWindowsRegisteredInstallLocations(),
+        ...detectWindowsHistoricalInstallLocations(),
+      ];
   final List<WindowsProcessInfo> runningFushiProcesses =
       (await queryWindowsFushiProcesses())
-          .where((WindowsProcessInfo process) =>
-              currentProcessId == null || process.pid != currentProcessId)
+          .where(
+            (WindowsProcessInfo process) =>
+                currentProcessId == null || process.pid != currentProcessId,
+          )
           .toList(growable: false);
   final List<WindowsProcessInfo> libmpvModuleHolders =
       (await queryWindowsLibmpvModuleHolders(targetInstallDir))
-          .where((WindowsProcessInfo process) =>
-              currentProcessId == null || process.pid != currentProcessId)
+          .where(
+            (WindowsProcessInfo process) =>
+                currentProcessId == null || process.pid != currentProcessId,
+          )
           .toList(growable: false);
   final List<WindowsProcessInfo> galHookModuleHolders =
       (await queryWindowsGalHookModuleHolders(targetInstallDir))
-          .where((WindowsProcessInfo process) =>
-              currentProcessId == null || process.pid != currentProcessId)
+          .where(
+            (WindowsProcessInfo process) =>
+                currentProcessId == null || process.pid != currentProcessId,
+          )
           .toList(growable: false);
 
   return WindowsInstallerDiagnostics(
@@ -1192,32 +1213,25 @@ Future<WindowsInstallerDiagnostics> collectWindowsInstallerDiagnostics({
 }
 
 Future<List<WindowsDetectedInstallLocation>>
-    queryWindowsRegisteredInstallLocations() async {
+queryWindowsRegisteredInstallLocations() async {
   if (!Platform.isWindows) return const <WindowsDetectedInstallLocation>[];
   const String appId = r'{8F2C1A3E-7B4D-4E9A-9C21-0A1B2C3D4E5F}_is1';
   const String uninstallSubKey =
       r'Software\Microsoft\Windows\CurrentVersion\Uninstall\' + appId;
   const List<(WindowsRegistryRoot, String)> keys =
       <(WindowsRegistryRoot, String)>[
-    (WindowsRegistryRoot.currentUser, uninstallSubKey),
-    (WindowsRegistryRoot.localMachine, uninstallSubKey),
-  ];
+        (WindowsRegistryRoot.currentUser, uninstallSubKey),
+        (WindowsRegistryRoot.localMachine, uninstallSubKey),
+      ];
   final List<WindowsDetectedInstallLocation> result =
       <WindowsDetectedInstallLocation>[];
   for (final (WindowsRegistryRoot root, String subKey) in keys) {
     try {
       result.addAll(
         windowsRegistryInstallLocations(
-          installLocation: readWindowsRegistryString(
-                root,
-                subKey,
-                'InstallLocation',
-              ) ??
-              readWindowsRegistryString(
-                root,
-                subKey,
-                'Inno Setup: App Path',
-              ),
+          installLocation:
+              readWindowsRegistryString(root, subKey, 'InstallLocation') ??
+              readWindowsRegistryString(root, subKey, 'Inno Setup: App Path'),
           displayIcon: readWindowsRegistryString(root, subKey, 'DisplayIcon'),
         ),
       );
@@ -1273,13 +1287,11 @@ List<WindowsDetectedInstallLocation> detectWindowsHistoricalInstallLocations() {
     if ((Platform.environment['LOCALAPPDATA'] ?? '').isNotEmpty)
       '${Platform.environment['LOCALAPPDATA']}\\Hibiki',
   ];
-  return _dedupeInstallLocations(
-    <WindowsDetectedInstallLocation>[
-      for (final String path in candidates)
-        if (Directory(path).existsSync())
-          WindowsDetectedInstallLocation(source: 'historical', path: path),
-    ],
-  );
+  return _dedupeInstallLocations(<WindowsDetectedInstallLocation>[
+    for (final String path in candidates)
+      if (Directory(path).existsSync())
+        WindowsDetectedInstallLocation(source: 'historical', path: path),
+  ]);
 }
 
 String? windowsInstallPathMismatchWarning({
@@ -1287,14 +1299,18 @@ String? windowsInstallPathMismatchWarning({
   required List<WindowsDetectedInstallLocation> locations,
 }) {
   final List<WindowsDetectedInstallLocation> mismatches = locations
-      .where((WindowsDetectedInstallLocation location) =>
-          location.path.isNotEmpty &&
-          !_windowsPathEquals(location.path, targetInstallDir))
+      .where(
+        (WindowsDetectedInstallLocation location) =>
+            location.path.isNotEmpty &&
+            !_windowsPathEquals(location.path, targetInstallDir),
+      )
       .toList(growable: false);
   if (mismatches.isEmpty) return null;
   final String details = mismatches
-      .map((WindowsDetectedInstallLocation location) =>
-          '${location.source}: ${location.path}')
+      .map(
+        (WindowsDetectedInstallLocation location) =>
+            '${location.source}: ${location.path}',
+      )
       .join('; ');
   return 'Install locations differ from the running Fushi directory '
       '$targetInstallDir. This update will install only to the running '
@@ -1314,11 +1330,13 @@ Future<List<WindowsProcessInfo>> queryWindowsFushiProcesses() async {
   if (!Platform.isWindows) return const <WindowsProcessInfo>[];
   try {
     return windowsProcessesByNames(kFushiImageNames)
-        .map((WindowsProcessEntry entry) => WindowsProcessInfo(
-              pid: entry.pid,
-              name: entry.name,
-              path: entry.path,
-            ))
+        .map(
+          (WindowsProcessEntry entry) => WindowsProcessInfo(
+            pid: entry.pid,
+            name: entry.name,
+            path: entry.path,
+          ),
+        )
         .toList(growable: false);
   } catch (_) {
     return const <WindowsProcessInfo>[];
@@ -1346,11 +1364,13 @@ Future<List<WindowsProcessInfo>> queryWindowsLibmpvModuleHolders(
     final String libmpv =
         '$targetInstallDir${Platform.pathSeparator}libmpv-2.dll';
     return windowsProcessesHoldingFile(libmpv)
-        .map((WindowsProcessEntry entry) => WindowsProcessInfo(
-              pid: entry.pid,
-              name: entry.name,
-              path: entry.path,
-            ))
+        .map(
+          (WindowsProcessEntry entry) => WindowsProcessInfo(
+            pid: entry.pid,
+            name: entry.name,
+            path: entry.path,
+          ),
+        )
         .toList(growable: false);
   } catch (_) {
     return const <WindowsProcessInfo>[];
@@ -1393,13 +1413,16 @@ Future<List<WindowsProcessInfo>> queryWindowsGalHookModuleHolders(
     // 按 pid 去重：一个游戏进程通常同时持有 hook DLL 和它加载的 LunaHook DLL，
     // 逐文件查会把同一个占用者报好几遍。
     final Map<int, WindowsProcessInfo> holders = <int, WindowsProcessInfo>{};
-    for (final FileSystemEntity entity
-        in root.listSync(recursive: true, followLinks: false)) {
+    for (final FileSystemEntity entity in root.listSync(
+      recursive: true,
+      followLinks: false,
+    )) {
       if (entity is! File) continue;
       final String lower = entity.path.toLowerCase();
       if (!lower.endsWith('.dll') && !lower.endsWith('.exe')) continue;
-      for (final WindowsProcessEntry entry
-          in windowsProcessesHoldingFile(entity.path)) {
+      for (final WindowsProcessEntry entry in windowsProcessesHoldingFile(
+        entity.path,
+      )) {
         holders[entry.pid] = WindowsProcessInfo(
           pid: entry.pid,
           name: entry.name,
@@ -1537,11 +1560,14 @@ String buildMacSwapScript({
   final StringBuffer b = StringBuffer();
   b.writeln('#!/bin/sh');
   b.writeln(
-      '# Fushi macOS in-app update swap (Phase 3). Waits for the running');
+    '# Fushi macOS in-app update swap (Phase 3). Waits for the running',
+  );
   b.writeln(
-      '# app to exit, then swaps the .app bundle and relaunches. Restores');
+    '# app to exit, then swaps the .app bundle and relaunches. Restores',
+  );
   b.writeln(
-      '# the previous bundle on any failure so a botched swap never leaves');
+    '# the previous bundle on any failure so a botched swap never leaves',
+  );
   b.writeln('# the user without a working app.');
   b.writeln('set -u');
   b.writeln('PARENT_PID=$parentPid');
@@ -1552,13 +1578,17 @@ String buildMacSwapScript({
   b.writeln('RESULT=${_shSingleQuote(resultPath)}');
   b.writeln('LOG=${_shSingleQuote(logPath)}');
   b.writeln(
-      r'''log() { echo "$(date '+%Y-%m-%dT%H:%M:%S') $1" >> "$LOG" 2>/dev/null || true; }''');
+    r'''log() { echo "$(date '+%Y-%m-%dT%H:%M:%S') $1" >> "$LOG" 2>/dev/null || true; }''',
+  );
   b.writeln(
-      r'''write_result() { printf '{"status":"%s","message":"%s"}' "$1" "$2" > "$RESULT" 2>/dev/null || true; }''');
+    r'''write_result() { printf '{"status":"%s","message":"%s"}' "$1" "$2" > "$RESULT" 2>/dev/null || true; }''',
+  );
   b.writeln(
-      '# Wait (bounded ~60s) for the parent process to exit. Uses a `ps`');
+    '# Wait (bounded ~60s) for the parent process to exit. Uses a `ps`',
+  );
   b.writeln(
-      '# liveness probe (never terminates anything) so the swap only starts');
+    '# liveness probe (never terminates anything) so the swap only starts',
+  );
   b.writeln('# once Fushi has quit on its own and released the bundle.');
   b.writeln('i=0');
   b.writeln(r'while ps -p "$PARENT_PID" > /dev/null 2>&1; do');
@@ -1571,21 +1601,25 @@ String buildMacSwapScript({
   b.writeln(r'  log "FAIL: $1"');
   b.writeln(r'  write_result failed "$1"');
   b.writeln(
-      r'  open "$TARGET_APP" 2>/dev/null || open "$BACKUP" 2>/dev/null || true');
+    r'  open "$TARGET_APP" 2>/dev/null || open "$BACKUP" 2>/dev/null || true',
+  );
   b.writeln(r'  rm -rf "$EXTRACT_DIR" 2>/dev/null || true');
   b.writeln('  exit 1');
   b.writeln('}');
   b.writeln(r'[ -d "$NEW_APP" ] || fail "extracted app bundle missing"');
   b.writeln(
-      '# Move the old bundle aside (reversible) rather than deleting first.');
+    '# Move the old bundle aside (reversible) rather than deleting first.',
+  );
   b.writeln(r'rm -rf "$BACKUP" 2>/dev/null || true');
   b.writeln(r'if [ -d "$TARGET_APP" ]; then');
   b.writeln(
-      r'  mv "$TARGET_APP" "$BACKUP" || fail "cannot move current app aside"');
+    r'  mv "$TARGET_APP" "$BACKUP" || fail "cannot move current app aside"',
+  );
   b.writeln('fi');
   b.writeln(r'if /usr/bin/ditto "$NEW_APP" "$TARGET_APP"; then');
   b.writeln(
-      r'  /usr/bin/xattr -dr com.apple.quarantine "$TARGET_APP" 2>/dev/null || true');
+    r'  /usr/bin/xattr -dr com.apple.quarantine "$TARGET_APP" 2>/dev/null || true',
+  );
   b.writeln(r'  rm -rf "$BACKUP" 2>/dev/null || true');
   b.writeln(r'  rm -rf "$EXTRACT_DIR" 2>/dev/null || true');
   b.writeln(r'  log "OK swapped -> $TARGET_APP"');
@@ -1597,7 +1631,8 @@ String buildMacSwapScript({
   b.writeln(r'  rm -rf "$TARGET_APP" 2>/dev/null || true');
   b.writeln(r'  [ -d "$BACKUP" ] && mv "$BACKUP" "$TARGET_APP"');
   b.writeln(
-      r'  fail "failed to copy new app into place; restored previous version"');
+    r'  fail "failed to copy new app into place; restored previous version"',
+  );
   b.writeln('fi');
   return b.toString();
 }
@@ -1664,10 +1699,12 @@ class MacInstaller {
       await extractDir.delete(recursive: true);
     }
     await extractDir.create(recursive: true);
-    final ProcessResult unzip = await Process.run(
-      '/usr/bin/ditto',
-      <String>['-x', '-k', zipPath, extractDir.path],
-    );
+    final ProcessResult unzip = await Process.run('/usr/bin/ditto', <String>[
+      '-x',
+      '-k',
+      zipPath,
+      extractDir.path,
+    ]);
     if (unzip.exitCode != 0) {
       throw UpdateInstallerException(
         'Failed to extract macOS update zip (ditto exit ${unzip.exitCode}): '
@@ -1694,9 +1731,11 @@ class MacInstaller {
       startedAt: clock(),
     );
     final int parentPid = currentPid ?? pid;
-    final String backupPath = '${updatesDir.path}${Platform.pathSeparator}'
+    final String backupPath =
+        '${updatesDir.path}${Platform.pathSeparator}'
         'mac-update-$targetVersion.backup';
-    final String logPath = '${updatesDir.path}${Platform.pathSeparator}'
+    final String logPath =
+        '${updatesDir.path}${Platform.pathSeparator}'
         'mac-update-$targetVersion.log';
     final String script = buildMacSwapScript(
       parentPid: parentPid,
@@ -1737,11 +1776,9 @@ class MacInstaller {
   static Future<MacSwapStartedProcess> _startDetachedScript(
     String scriptPath,
   ) async {
-    final Process process = await Process.start(
-      '/bin/sh',
-      <String>[scriptPath],
-      mode: ProcessStartMode.detached,
-    );
+    final Process process = await Process.start('/bin/sh', <String>[
+      scriptPath,
+    ], mode: ProcessStartMode.detached);
     return MacSwapStartedProcess(pid: process.pid);
   }
 

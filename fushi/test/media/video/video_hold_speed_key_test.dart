@@ -218,18 +218,19 @@ void main() {
         expect(
           activator.trigger,
           isNot(LogicalKeyboardKey.keyE),
-          reason: '裸 E（videoHoldSpeed 默认键）装进 activator 表会在 keydown '
+          reason:
+              '裸 E（videoHoldSpeed 默认键）装进 activator 表会在 keydown '
               '就消费事件，页面级按下/松开判定永远收不到',
         );
       }
     });
 
-    test(
-        '手柄通道仍活着：videoActionCallbacks 把 videoHoldSpeed 派发到 '
+    test('手柄通道仍活着：videoActionCallbacks 把 videoHoldSpeed 派发到 '
         'toggleHoldSpeed', () {
       final List<String> log = <String>[];
-      final Map<ShortcutAction, VoidCallback> callbacks =
-          videoActionCallbacks(actions(log));
+      final Map<ShortcutAction, VoidCallback> callbacks = videoActionCallbacks(
+        actions(log),
+      );
       final VoidCallback? callback = callbacks[ShortcutAction.videoHoldSpeed];
       expect(callback, isNotNull);
       callback!();
@@ -243,11 +244,14 @@ void main() {
         TargetPlatform.android,
       ]) {
         final ShortcutBindingSet? bindings = ShortcutDefaults.forPlatform(
-            platform)[ShortcutAction.videoHoldSpeed];
+          platform,
+        )[ShortcutAction.videoHoldSpeed];
         expect(bindings, isNotNull, reason: '$platform 缺默认绑定');
         expect(
-          bindings!.keyboardBindings.any((InputBinding b) =>
-              b.key == LogicalKeyboardKey.keyE && b.modifiers.isEmpty),
+          bindings!.keyboardBindings.any(
+            (InputBinding b) =>
+                b.key == LogicalKeyboardKey.keyE && b.modifiers.isEmpty,
+          ),
           isTrue,
           reason: '$platform 默认键应为裸 E',
         );

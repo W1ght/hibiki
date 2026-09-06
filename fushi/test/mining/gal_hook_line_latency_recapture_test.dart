@@ -49,19 +49,19 @@ void main() {
       isWindows: true,
       targetWow64Probe: (_) async => false,
       injectorResolver: ({required bool is32Bit}) async => 'injector.exe',
-      engineSourceFactory: ({
-        required int targetPid,
-        required String? launchExe,
-        required String injectorPath,
-        required bool lunaPcHooks,
-        int? lunaCodepage,
-        List<String> launchArguments = const <String>[],
-        String launchWorkdir = '',
-        GalJapaneseLocaleMode japaneseLocaleMode =
-            kGalDefaultJapaneseLocaleMode,
-        String? contentLanguage,
-      }) =>
-          engine,
+      engineSourceFactory:
+          ({
+            required int targetPid,
+            required String? launchExe,
+            required String injectorPath,
+            required bool lunaPcHooks,
+            int? lunaCodepage,
+            List<String> launchArguments = const <String>[],
+            String launchWorkdir = '',
+            GalJapaneseLocaleMode japaneseLocaleMode =
+                kGalDefaultJapaneseLocaleMode,
+            String? contentLanguage,
+          }) => engine,
       loopbackSourceFactory: _SilentLoopback.new,
       textPollInterval: const Duration(milliseconds: 5),
       endpointListenable: endpoints,
@@ -100,19 +100,19 @@ void main() {
       isWindows: true,
       targetWow64Probe: (_) async => false,
       injectorResolver: ({required bool is32Bit}) async => 'injector.exe',
-      engineSourceFactory: ({
-        required int targetPid,
-        required String? launchExe,
-        required String injectorPath,
-        required bool lunaPcHooks,
-        int? lunaCodepage,
-        List<String> launchArguments = const <String>[],
-        String launchWorkdir = '',
-        GalJapaneseLocaleMode japaneseLocaleMode =
-            kGalDefaultJapaneseLocaleMode,
-        String? contentLanguage,
-      }) =>
-          engine,
+      engineSourceFactory:
+          ({
+            required int targetPid,
+            required String? launchExe,
+            required String injectorPath,
+            required bool lunaPcHooks,
+            int? lunaCodepage,
+            List<String> launchArguments = const <String>[],
+            String launchWorkdir = '',
+            GalJapaneseLocaleMode japaneseLocaleMode =
+                kGalDefaultJapaneseLocaleMode,
+            String? contentLanguage,
+          }) => engine,
       loopbackSourceFactory: _SilentLoopback.new,
       textPollInterval: const Duration(milliseconds: 5),
       now: () => clock,
@@ -158,19 +158,19 @@ void main() {
       isWindows: true,
       targetWow64Probe: (_) async => false,
       injectorResolver: ({required bool is32Bit}) async => 'injector.exe',
-      engineSourceFactory: ({
-        required int targetPid,
-        required String? launchExe,
-        required String injectorPath,
-        required bool lunaPcHooks,
-        int? lunaCodepage,
-        List<String> launchArguments = const <String>[],
-        String launchWorkdir = '',
-        GalJapaneseLocaleMode japaneseLocaleMode =
-            kGalDefaultJapaneseLocaleMode,
-        String? contentLanguage,
-      }) =>
-          engine,
+      engineSourceFactory:
+          ({
+            required int targetPid,
+            required String? launchExe,
+            required String injectorPath,
+            required bool lunaPcHooks,
+            int? lunaCodepage,
+            List<String> launchArguments = const <String>[],
+            String launchWorkdir = '',
+            GalJapaneseLocaleMode japaneseLocaleMode =
+                kGalDefaultJapaneseLocaleMode,
+            String? contentLanguage,
+          }) => engine,
       loopbackSourceFactory: () => loopback,
       textPollInterval: const Duration(milliseconds: 5),
       // BUG-1101：逐行 loopback 是延迟冻结的，单测把等待压到 10ms 才能确定地
@@ -198,10 +198,7 @@ void main() {
     expect(await controller.startLineRecapture(line.id), isTrue);
     expect(controller.isRecapturing, isTrue);
     expect(controller.recapturingLineId, line.id);
-    expect(
-      service.entries.last.audioStatus,
-      TexthookerLineAudioStatus.pending,
-    );
+    expect(service.entries.last.audioStatus, TexthookerLineAudioStatus.pending);
 
     expect(await controller.finishLineRecapture(), isTrue);
     expect(controller.isRecapturing, isFalse);
@@ -222,11 +219,7 @@ void main() {
       sentence: line.text,
       outputExtension: 'aac',
     );
-    expect(
-      engine.pairedRequests,
-      isEmpty,
-      reason: '补录过的行必须直接用补录切片，不再询问资源语音',
-    );
+    expect(engine.pairedRequests, isEmpty, reason: '补录过的行必须直接用补录切片，不再询问资源语音');
 
     await controller.close();
     endpoints.dispose();
@@ -245,19 +238,19 @@ void main() {
       isWindows: true,
       targetWow64Probe: (_) async => false,
       injectorResolver: ({required bool is32Bit}) async => 'injector.exe',
-      engineSourceFactory: ({
-        required int targetPid,
-        required String? launchExe,
-        required String injectorPath,
-        required bool lunaPcHooks,
-        int? lunaCodepage,
-        List<String> launchArguments = const <String>[],
-        String launchWorkdir = '',
-        GalJapaneseLocaleMode japaneseLocaleMode =
-            kGalDefaultJapaneseLocaleMode,
-        String? contentLanguage,
-      }) =>
-          engine,
+      engineSourceFactory:
+          ({
+            required int targetPid,
+            required String? launchExe,
+            required String injectorPath,
+            required bool lunaPcHooks,
+            int? lunaCodepage,
+            List<String> launchArguments = const <String>[],
+            String launchWorkdir = '',
+            GalJapaneseLocaleMode japaneseLocaleMode =
+                kGalDefaultJapaneseLocaleMode,
+            String? contentLanguage,
+          }) => engine,
       loopbackSourceFactory: () {
         final _SilentLoopback source = _SilentLoopback(withPcm: true);
         loopbacks.add(source);
@@ -367,16 +360,14 @@ class _LatencyEngine extends EngineHookGalAudioSource {
     int? sourcePtr,
     List<int>? exclude,
     int? endTsMs,
-  }) async =>
-      null;
+  }) async => null;
 
   @override
   String? findPairedVoiceResourceId(
     int textTsMs, {
     int? textEventId,
     bool allowLatestSessionFallback = true,
-  }) =>
-      pairedCandidate ? 'fake-$textTsMs.ogg' : null;
+  }) => pairedCandidate ? 'fake-$textTsMs.ogg' : null;
 
   @override
   Future<Uint8List?> grabPairedVoiceBytes(

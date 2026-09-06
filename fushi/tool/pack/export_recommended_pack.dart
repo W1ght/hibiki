@@ -74,18 +74,23 @@ void main() {
       expect(await output.exists(), isTrue, reason: '导出未落盘：$outputPath');
       final int bytes = await output.length();
 
-      debugPrint('PACK_EXPORT_OK path=$outputPath '
-          'bytes=$bytes '
-          'schemaVersion=${meta.schemaVersion} '
-          'localAudioRoot=${meta.localAudioRoot} '
-          'excluded=${meta.excludedCategories.toList()..sort()} '
-          'elapsed=${sw.elapsed}');
+      debugPrint(
+        'PACK_EXPORT_OK path=$outputPath '
+        'bytes=$bytes '
+        'schemaVersion=${meta.schemaVersion} '
+        'localAudioRoot=${meta.localAudioRoot} '
+        'excluded=${meta.excludedCategories.toList()..sort()} '
+        'elapsed=${sw.elapsed}',
+      );
 
       // 包不该带上个人内容：这两个计数必须是 0，否则说明类别集合选错了。
       expect(meta.bookCount, 0, reason: '分发包不应携带书/视频记录');
       expect(meta.statsCount, 0, reason: '分发包不应携带统计记录');
-      expect(meta.localAudioRoot, dbDirectory,
-          reason: 'localAudioRoot 必须是真实 support 目录，导入侧靠它重定基址');
+      expect(
+        meta.localAudioRoot,
+        dbDirectory,
+        reason: 'localAudioRoot 必须是真实 support 目录，导入侧靠它重定基址',
+      );
     },
     // 打包 10GB 级素材，默认 30s 超时远远不够。
     timeout: const Timeout(Duration(hours: 4)),

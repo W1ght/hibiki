@@ -65,7 +65,8 @@ void main() {
       expect(
         actions,
         contains('t.tag_label'),
-        reason: '统一三库页卡菜单：书卡与视频/游戏卡对称含「标签」项'
+        reason:
+            '统一三库页卡菜单：书卡与视频/游戏卡对称含「标签」项'
             '（用户 2026-07-28 拍板推翻 TODO-455）。',
       );
       expect(actions, contains('Icons.sell_outlined'));
@@ -151,7 +152,8 @@ void main() {
     expect(
       addToCollectionBody,
       contains('resolveEpubBookUid(bookKey) ?? bookKey'),
-      reason: 'v83：单卡加入合集必须把 bookKey 换算成成员表键域的 uid'
+      reason:
+          'v83：单卡加入合集必须把 bookKey 换算成成员表键域的 uid'
           '（换算不上沿用 bookKey，与批量档兜底口径一致）。',
     );
     expect(
@@ -246,7 +248,8 @@ void main() {
     expect(
       srtCover,
       contains('resolveOverrideThumbnailFile'),
-      reason: 'SRT 卡封面必须优先读编辑信息弹窗写入的 override thumbnail（TODO-1191），'
+      reason:
+          'SRT 卡封面必须优先读编辑信息弹窗写入的 override thumbnail（TODO-1191），'
           '且必须走迁移感知入口（BUG-1317）。',
     );
     // 仍保留 book.coverPath 回退，向后兼容历史外层「选择封面图片」写入的封面。
@@ -281,7 +284,10 @@ String _sectionSource(String source, String startToken, String endToken) {
   final int start = source.indexOf(startToken);
   final int end = source.indexOf(endToken, start + startToken.length);
   expect(start, isNonNegative, reason: 'Missing source marker: $startToken');
-  expect(end, greaterThan(start),
-      reason: 'Missing end marker after $startToken: $endToken');
+  expect(
+    end,
+    greaterThan(start),
+    reason: 'Missing end marker after $startToken: $endToken',
+  );
   return source.substring(start, end);
 }

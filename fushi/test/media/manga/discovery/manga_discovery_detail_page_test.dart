@@ -24,10 +24,8 @@ void main() {
   );
 
   Widget wrap(Widget child) => ProviderScope(
-        child: TranslationProvider(
-          child: MaterialApp(home: child),
-        ),
-      );
+    child: TranslationProvider(child: MaterialApp(home: child)),
+  );
 
   testWidgets('打开即自动匹配，命中带来源名与分数展示', (WidgetTester tester) async {
     await tester.pumpWidget(
@@ -100,16 +98,16 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    final Finder button =
-        find.byKey(const ValueKey<String>('manga_global_search_open_sources'));
+    final Finder button = find.byKey(
+      const ValueKey<String>('manga_global_search_open_sources'),
+    );
     expect(button, findsOneWidget, reason: '兜底搜索页的空态必须也有「去导入」按钮');
     await tester.tap(button);
     await tester.pumpAndSettle();
     expect(opened, 1);
   });
 
-  testWidgets('不在壳里（去处为 null）：兜底搜索页只给文案不给按钮',
-      (WidgetTester tester) async {
+  testWidgets('不在壳里（去处为 null）：兜底搜索页只给文案不给按钮', (WidgetTester tester) async {
     await tester.pumpWidget(
       wrap(
         MangaDiscoveryDetailPage(

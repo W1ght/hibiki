@@ -47,7 +47,8 @@ void main() {
             child: VideoTopBarSlots(
               leftLead: slot(leftLeadKey, leftLead),
               leftTail: slot(leftTailKey, leftTail),
-              title: title ??
+              title:
+                  title ??
                   SizedBox(key: titleKey, width: barWidth, height: height),
               titlePlacement: placement,
               rightLead: slot(rightLeadKey, rightLead),
@@ -62,33 +63,32 @@ void main() {
   group('顶栏：按钮按需拿宽、标题吃剩余', () {
     testWidgets('右按钮组能拿到远超 1/3 顶栏宽的自身所需宽度', (WidgetTester tester) async {
       // 600 宽顶栏、右组需要 400（= 2/3）。旧的三等分 Flex 只会给 200。
-      await pumpBar(
-        tester,
-        barWidth: 600,
-        leftLead: 60,
-        rightLead: 400,
-      );
+      await pumpBar(tester, barWidth: 600, leftLead: 60, rightLead: 400);
 
-      expect(tester.getSize(find.byKey(rightLeadKey)).width, 400,
-          reason: '右按钮组必须足额拿到自身需要的宽，不被平分成 1/3（200）');
+      expect(
+        tester.getSize(find.byKey(rightLeadKey)).width,
+        400,
+        reason: '右按钮组必须足额拿到自身需要的宽，不被平分成 1/3（200）',
+      );
       expect(tester.getSize(find.byKey(leftLeadKey)).width, 60);
       // 标题只吃剩余：600 - 60 - 400 = 140。
-      expect(tester.getSize(find.byKey(titleKey)).width, 140,
-          reason: '标题只拿两侧按钮用剩的宽');
+      expect(
+        tester.getSize(find.byKey(titleKey)).width,
+        140,
+        reason: '标题只拿两侧按钮用剩的宽',
+      );
     });
 
     testWidgets('右按钮组贴右边缘、左按钮组贴左边缘、标题接在左段之后', (WidgetTester tester) async {
-      await pumpBar(
-        tester,
-        barWidth: 600,
-        leftLead: 60,
-        rightLead: 400,
-      );
+      await pumpBar(tester, barWidth: 600, leftLead: 60, rightLead: 400);
 
       expect(tester.getTopLeft(find.byKey(leftLeadKey)).dx, 0);
       expect(tester.getTopLeft(find.byKey(titleKey)).dx, 60);
-      expect(tester.getTopRight(find.byKey(rightLeadKey)).dx, 600,
-          reason: 'topRight 组必须右对齐到顶栏右边缘');
+      expect(
+        tester.getTopRight(find.byKey(rightLeadKey)).dx,
+        600,
+        reason: 'topRight 组必须右对齐到顶栏右边缘',
+      );
     });
 
     testWidgets('标题槽为空时整条宽度都归按钮，不留霸占中段的空白占位', (WidgetTester tester) async {
@@ -101,8 +101,11 @@ void main() {
         title: const SizedBox.shrink(key: titleKey),
       );
 
-      expect(tester.getSize(find.byKey(rightLeadKey)).width, 520,
-          reason: '标题空了，右按钮组应能吃到 60 之外的全部宽');
+      expect(
+        tester.getSize(find.byKey(rightLeadKey)).width,
+        520,
+        reason: '标题空了，右按钮组应能吃到 60 之外的全部宽',
+      );
       expect(tester.getSize(find.byKey(titleKey)).width, 0);
       expect(tester.getTopRight(find.byKey(rightLeadKey)).dx, 600);
     });
@@ -118,22 +121,23 @@ void main() {
       );
 
       expect(tester.getSize(find.byKey(rightLeadKey)).width, 400);
-      expect(tester.getSize(find.byKey(titleKey)).width, 140,
-          reason: '标题被剩余宽钳住（按钮优先于名称）');
+      expect(
+        tester.getSize(find.byKey(titleKey)).width,
+        140,
+        reason: '标题被剩余宽钳住（按钮优先于名称）',
+      );
       expect(tester.takeException(), isNull, reason: '超长标题不得造成溢出');
     });
 
     testWidgets('极窄顶栏：左段优先满足，右段吃掉剩下的全部，标题归零且不溢出', (WidgetTester tester) async {
-      await pumpBar(
-        tester,
-        barWidth: 300,
-        leftLead: 60,
-        rightLead: 400,
-      );
+      await pumpBar(tester, barWidth: 300, leftLead: 60, rightLead: 400);
 
       expect(tester.getSize(find.byKey(leftLeadKey)).width, 60);
-      expect(tester.getSize(find.byKey(rightLeadKey)).width, 240,
-          reason: '右段被钳到剩余的 240（段内自带横滚兜底可达性）');
+      expect(
+        tester.getSize(find.byKey(rightLeadKey)).width,
+        240,
+        reason: '右段被钳到剩余的 240（段内自带横滚兜底可达性）',
+      );
       expect(tester.getSize(find.byKey(titleKey)).width, 0);
       expect(tester.takeException(), isNull);
     });
@@ -153,8 +157,9 @@ void main() {
   });
 
   group('标题被拖进按钮槽：位置保住，但宽度最后才分', () {
-    testWidgets('标题落在 topRight 组中间：两段按钮先拿够，标题吃剩余且夹在中间',
-        (WidgetTester tester) async {
+    testWidgets('标题落在 topRight 组中间：两段按钮先拿够，标题吃剩余且夹在中间', (
+      WidgetTester tester,
+    ) async {
       // 旧实现里标题是组内 220 宽的内联块，会把同组按钮挤进横滚区。
       await pumpBar(
         tester,
@@ -166,12 +171,21 @@ void main() {
         title: const SizedBox(key: titleKey, width: 10000, height: 48),
       );
 
-      expect(tester.getSize(find.byKey(rightLeadKey)).width, 200,
-          reason: '标题前的那段按钮必须足额');
-      expect(tester.getSize(find.byKey(rightTailKey)).width, 100,
-          reason: '标题后的那段按钮必须足额');
-      expect(tester.getSize(find.byKey(titleKey)).width, 240,
-          reason: '标题只拿 600-60-200-100=240，不再是固定 220');
+      expect(
+        tester.getSize(find.byKey(rightLeadKey)).width,
+        200,
+        reason: '标题前的那段按钮必须足额',
+      );
+      expect(
+        tester.getSize(find.byKey(rightTailKey)).width,
+        100,
+        reason: '标题后的那段按钮必须足额',
+      );
+      expect(
+        tester.getSize(find.byKey(titleKey)).width,
+        240,
+        reason: '标题只拿 600-60-200-100=240，不再是固定 220',
+      );
 
       // 显示顺序仍是 rightLead → title → rightTail，且整段贴右边缘。
       final double leadRight = tester.getTopRight(find.byKey(rightLeadKey)).dx;
@@ -180,12 +194,16 @@ void main() {
       final double tailLeft = tester.getTopLeft(find.byKey(rightTailKey)).dx;
       expect(titleLeft, leadRight, reason: '标题紧跟它前面那段按钮');
       expect(tailLeft, titleRight, reason: '标题后面那段按钮紧跟标题');
-      expect(tester.getTopRight(find.byKey(rightTailKey)).dx, 600,
-          reason: '整个右段仍贴右边缘');
+      expect(
+        tester.getTopRight(find.byKey(rightTailKey)).dx,
+        600,
+        reason: '整个右段仍贴右边缘',
+      );
     });
 
-    testWidgets('标题落在 topRight 时按钮永远优先：窄窗下标题归零，按钮一个不少',
-        (WidgetTester tester) async {
+    testWidgets('标题落在 topRight 时按钮永远优先：窄窗下标题归零，按钮一个不少', (
+      WidgetTester tester,
+    ) async {
       await pumpBar(
         tester,
         barWidth: 320,
@@ -198,13 +216,17 @@ void main() {
 
       expect(tester.getSize(find.byKey(rightLeadKey)).width, 160);
       expect(tester.getSize(find.byKey(rightTailKey)).width, 100);
-      expect(tester.getSize(find.byKey(titleKey)).width, 0,
-          reason: '宽度不够时先饿死标题，绝不裁按钮');
+      expect(
+        tester.getSize(find.byKey(titleKey)).width,
+        0,
+        reason: '宽度不够时先饿死标题，绝不裁按钮',
+      );
       expect(tester.takeException(), isNull);
     });
 
-    testWidgets('标题落在 topLeft 组中间：夹在两段按钮之间，从左边缘起排',
-        (WidgetTester tester) async {
+    testWidgets('标题落在 topLeft 组中间：夹在两段按钮之间，从左边缘起排', (
+      WidgetTester tester,
+    ) async {
       await pumpBar(
         tester,
         barWidth: 600,
@@ -218,14 +240,23 @@ void main() {
       expect(tester.getSize(find.byKey(leftLeadKey)).width, 40);
       expect(tester.getSize(find.byKey(leftTailKey)).width, 80);
       expect(tester.getSize(find.byKey(rightLeadKey)).width, 120);
-      expect(tester.getSize(find.byKey(titleKey)).width, 360,
-          reason: '标题吃 600-40-80-120=360');
+      expect(
+        tester.getSize(find.byKey(titleKey)).width,
+        360,
+        reason: '标题吃 600-40-80-120=360',
+      );
 
       expect(tester.getTopLeft(find.byKey(leftLeadKey)).dx, 0);
-      expect(tester.getTopLeft(find.byKey(titleKey)).dx, 40,
-          reason: '标题紧跟 lead 段');
-      expect(tester.getTopLeft(find.byKey(leftTailKey)).dx, 400,
-          reason: 'tail 段紧跟标题');
+      expect(
+        tester.getTopLeft(find.byKey(titleKey)).dx,
+        40,
+        reason: '标题紧跟 lead 段',
+      );
+      expect(
+        tester.getTopLeft(find.byKey(leftTailKey)).dx,
+        400,
+        reason: 'tail 段紧跟标题',
+      );
       expect(tester.getTopRight(find.byKey(rightLeadKey)).dx, 600);
     });
   });

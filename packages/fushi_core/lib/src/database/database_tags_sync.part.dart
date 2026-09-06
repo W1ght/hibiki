@@ -5,12 +5,12 @@ part of 'database.dart';
 
 mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   // ── book tags ───────────────────────────────────────────────────
-  Future<List<BookTagRow>> getAllTags() => (select(bookTags)
-        ..orderBy([
-          (t) => OrderingTerm.asc(t.sortOrder),
-          (t) => OrderingTerm.asc(t.createdAt),
-        ]))
-      .get();
+  Future<List<BookTagRow>> getAllTags() =>
+      (select(bookTags)..orderBy([
+            (t) => OrderingTerm.asc(t.sortOrder),
+            (t) => OrderingTerm.asc(t.createdAt),
+          ]))
+          .get();
 
   // ── tag_assignments 通用内核（v77 五表合一）───────────────────────
   // 五种宿主的公开 API 保持类型化签名（addTagToBook / addTagToGame / ...），
@@ -19,18 +19,28 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
 
   /// 宿主当前标签（按 createdAt 升序，五域一致）。
   Future<List<BookTagRow>> _tagsForHost(TagHostKind kind, String entryKey) {
-    final query = select(bookTags).join([
-      innerJoin(tagAssignments, tagAssignments.tagId.equalsExp(bookTags.id)),
-    ])
-      ..where(tagAssignments.mediaKind.equals(kind.dbValue) &
-          tagAssignments.entryKey.equals(entryKey))
-      ..orderBy([OrderingTerm.asc(bookTags.createdAt)]);
+    final query =
+        select(bookTags).join([
+            innerJoin(
+              tagAssignments,
+              tagAssignments.tagId.equalsExp(bookTags.id),
+            ),
+          ])
+          ..where(
+            tagAssignments.mediaKind.equals(kind.dbValue) &
+                tagAssignments.entryKey.equals(entryKey),
+          )
+          ..orderBy([OrderingTerm.asc(bookTags.createdAt)]);
     return query.map((row) => row.readTable(bookTags)).get();
   }
 
   /// upsert 一条映射并写 [addedAt]（无则插入，有则刷新 addedAt——LWW add 时钟）。
   Future<void> _upsertAssignmentWithTime(
-      TagHostKind kind, String entryKey, int tagId, int addedAt) async {
+    TagHostKind kind,
+    String entryKey,
+    int tagId,
+    int addedAt,
+  ) async {
     await into(tagAssignments).insert(
       TagAssignmentsCompanion.insert(
         mediaKind: kind.dbValue,
@@ -50,17 +60,23 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   }
 
   Future<void> _deleteAssignment(
-          TagHostKind kind, String entryKey, int tagId) =>
-      (delete(tagAssignments)
-            ..where((t) =>
+    TagHostKind kind,
+    String entryKey,
+    int tagId,
+  ) =>
+      (delete(tagAssignments)..where(
+            (t) =>
                 t.mediaKind.equals(kind.dbValue) &
                 t.entryKey.equals(entryKey) &
-                t.tagId.equals(tagId)))
+                t.tagId.equals(tagId),
+          ))
           .go();
 
   /// 含【全部】选中标签的宿主键（AND 语义）。空集返回空。
   Future<Set<String>> _entryKeysForAllTags(
-      TagHostKind kind, Set<int> tagIds) async {
+    TagHostKind kind,
+    Set<int> tagIds,
+  ) async {
     if (tagIds.isEmpty) return <String>{};
     final int tagCount = tagIds.length;
     final String placeholders = List.generate(tagCount, (_) => '?').join(',');
@@ -81,16 +97,18 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   /// 宿主删除路径的映射清理（v77 起五表 cascade 由显式清理取代——逻辑外键，
   /// 同 ShelfEntries 惯例）。
   Future<void> deleteTagAssignmentsForHost(TagHostKind kind, String entryKey) =>
-      (delete(tagAssignments)
-            ..where((t) =>
-                t.mediaKind.equals(kind.dbValue) & t.entryKey.equals(entryKey)))
+      (delete(tagAssignments)..where(
+            (t) =>
+                t.mediaKind.equals(kind.dbValue) & t.entryKey.equals(entryKey),
+          ))
           .go();
 
   /// 某 kind 的全部映射行（SQL 面过滤——PK 前缀白拿的索引，别在调用方全表
   /// 扫再 Dart 滤，review5-8）。
   Future<List<TagAssignmentRow>> getTagAssignmentsForKind(TagHostKind kind) =>
-      (select(tagAssignments)..where((t) => t.mediaKind.equals(kind.dbValue)))
-          .get();
+      (select(
+        tagAssignments,
+      )..where((t) => t.mediaKind.equals(kind.dbValue))).get();
 
   /// 全部映射行（迁移/合并测试断言全景用；业务查询走
   /// [getTagAssignmentsForKind]）。
@@ -127,9 +145,9 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
     // 存在的 tag 名时，旧实现会一个插入成功、另一个撞 UNIQUE 抛异常丢标签）。命中
     // 既有行时 insertOrIgnore 整条无操作，既有色值/排序不被覆盖；仅新建才给默认灰
     // + 末位排序（与 [createTag] 语义一致）。
-    final maxRow = await (selectOnly(bookTags)
-          ..addColumns([bookTags.sortOrder.max()]))
-        .getSingleOrNull();
+    final maxRow = await (selectOnly(
+      bookTags,
+    )..addColumns([bookTags.sortOrder.max()])).getSingleOrNull();
     final int nextOrder = (maxRow?.read(bookTags.sortOrder.max()) ?? 0) + 1;
     await into(bookTags).insert(
       BookTagsCompanion.insert(
@@ -140,10 +158,11 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
       ),
       mode: InsertMode.insertOrIgnore,
     );
-    final BookTagRow row = await (select(bookTags)
-          ..where((t) => t.name.equals(name))
-          ..limit(1))
-        .getSingle();
+    final BookTagRow row =
+        await (select(bookTags)
+              ..where((t) => t.name.equals(name))
+              ..limit(1))
+            .getSingle();
     return row.id;
   }
 
@@ -151,8 +170,9 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
       (update(bookTags)..where((t) => t.id.equals(id))).write(
         BookTagsCompanion(
           name: name != null ? Value(name) : const Value.absent(),
-          colorValue:
-              colorValue != null ? Value(colorValue) : const Value.absent(),
+          colorValue: colorValue != null
+              ? Value(colorValue)
+              : const Value.absent(),
         ),
       );
 
@@ -166,33 +186,38 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   /// 无墓碑语义，走各自的简单增删）。墓碑域由 [tombstoneMediaKindOf] 从 kind
   /// 推导——手工传配对双参能配错且编译不拦（review5-9）。
   Future<void> _setTagsWithTombstones(
-          TagHostKind kind, String entryKey, Set<int> tagIds) =>
-      transaction(() async {
-        final MediaKind tombstoneKind = tombstoneMediaKindOf(kind);
-        final int now = DateTime.now().millisecondsSinceEpoch;
-        final existing = await (select(tagAssignments)
-              ..where((t) =>
+    TagHostKind kind,
+    String entryKey,
+    Set<int> tagIds,
+  ) => transaction(() async {
+    final MediaKind tombstoneKind = tombstoneMediaKindOf(kind);
+    final int now = DateTime.now().millisecondsSinceEpoch;
+    final existing =
+        await (select(tagAssignments)..where(
+              (t) =>
                   t.mediaKind.equals(kind.dbValue) &
-                  t.entryKey.equals(entryKey)))
+                  t.entryKey.equals(entryKey),
+            ))
             .get();
-        final existingTagIds =
-            existing.map((TagAssignmentRow e) => e.tagId).toSet();
+    final existingTagIds = existing
+        .map((TagAssignmentRow e) => e.tagId)
+        .toSet();
 
-        for (final tagId in existingTagIds.difference(tagIds)) {
-          final String? name = await _tagNameById(tagId);
-          await _deleteAssignment(kind, entryKey, tagId);
-          if (name != null) {
-            await _upsertTagTombstone(entryKey, tombstoneKind, name, now);
-          }
-        }
-        for (final tagId in tagIds.difference(existingTagIds)) {
-          await _upsertAssignmentWithTime(kind, entryKey, tagId, now);
-          final String? name = await _tagNameById(tagId);
-          if (name != null) {
-            await _clearTagTombstone(entryKey, tombstoneKind, name);
-          }
-        }
-      });
+    for (final tagId in existingTagIds.difference(tagIds)) {
+      final String? name = await _tagNameById(tagId);
+      await _deleteAssignment(kind, entryKey, tagId);
+      if (name != null) {
+        await _upsertTagTombstone(entryKey, tombstoneKind, name, now);
+      }
+    }
+    for (final tagId in tagIds.difference(existingTagIds)) {
+      await _upsertAssignmentWithTime(kind, entryKey, tagId, now);
+      final String? name = await _tagNameById(tagId);
+      if (name != null) {
+        await _clearTagTombstone(entryKey, tombstoneKind, name);
+      }
+    }
+  });
 
   Future<void> addTagToBook(String bookKey, int tagId) async {
     final int now = DateTime.now().millisecondsSinceEpoch;
@@ -206,7 +231,11 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
     await _deleteAssignment(TagHostKind.epub, bookKey, tagId);
     if (name != null) {
       await _upsertTagTombstone(
-          bookKey, MediaKind.epub, name, DateTime.now().millisecondsSinceEpoch);
+        bookKey,
+        MediaKind.epub,
+        name,
+        DateTime.now().millisecondsSinceEpoch,
+      );
     }
   }
 
@@ -214,24 +243,27 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
       _entryKeysForAllTags(TagHostKind.epub, tagIds);
 
   Future<void> reorderTags(List<int> orderedTagIds) => transaction(() async {
-        for (int i = 0; i < orderedTagIds.length; i++) {
-          await (update(bookTags)..where((t) => t.id.equals(orderedTagIds[i])))
-              .write(BookTagsCompanion(sortOrder: Value(i)));
-        }
-      });
+    for (int i = 0; i < orderedTagIds.length; i++) {
+      await (update(bookTags)..where((t) => t.id.equals(orderedTagIds[i])))
+          .write(BookTagsCompanion(sortOrder: Value(i)));
+    }
+  });
 
   /// 某标签下的条目数量 = EPUB + 有声书(SRT) + 视频 + 游戏命中该 tagId 的映射
   /// 行数（合集刻意不计：合集是容器而非条目）。v77 合表后一条 COUNT 搞定——
   /// 旧实现逐表 COUNT 漏表的 bug 形状（BUG-1113）在结构上不可能再犯。
   Future<int> countBooksForTag(int tagId) async {
     final cnt = countAll();
-    final row = await (selectOnly(tagAssignments)
-          ..where(tagAssignments.tagId.equals(tagId) &
-              tagAssignments.mediaKind
-                  .equals(TagHostKind.collection.dbValue)
-                  .not())
-          ..addColumns([cnt]))
-        .getSingle();
+    final row =
+        await (selectOnly(tagAssignments)
+              ..where(
+                tagAssignments.tagId.equals(tagId) &
+                    tagAssignments.mediaKind
+                        .equals(TagHostKind.collection.dbValue)
+                        .not(),
+              )
+              ..addColumns([cnt]))
+            .getSingle();
     return row.read(cnt) ?? 0;
   }
 
@@ -242,8 +274,12 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
       _tagsForHost(TagHostKind.srt, srtUid);
 
   Future<void> addTagToSrtBook(String srtUid, int tagId) =>
-      _upsertAssignmentWithTime(TagHostKind.srt, srtUid, tagId,
-          DateTime.now().millisecondsSinceEpoch);
+      _upsertAssignmentWithTime(
+        TagHostKind.srt,
+        srtUid,
+        tagId,
+        DateTime.now().millisecondsSinceEpoch,
+      );
 
   Future<void> removeTagFromSrtBook(String srtUid, int tagId) =>
       _deleteAssignment(TagHostKind.srt, srtUid, tagId);
@@ -259,7 +295,11 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   Future<void> addTagToVideoBook(String videoBookUid, int tagId) async {
     final int now = DateTime.now().millisecondsSinceEpoch;
     await _upsertAssignmentWithTime(
-        TagHostKind.video, videoBookUid, tagId, now);
+      TagHostKind.video,
+      videoBookUid,
+      tagId,
+      now,
+    );
     final String? name = await _tagNameById(tagId);
     if (name != null) {
       await _clearTagTombstone(videoBookUid, MediaKind.video, name);
@@ -270,8 +310,12 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
     final String? name = await _tagNameById(tagId);
     await _deleteAssignment(TagHostKind.video, videoBookUid, tagId);
     if (name != null) {
-      await _upsertTagTombstone(videoBookUid, MediaKind.video, name,
-          DateTime.now().millisecondsSinceEpoch);
+      await _upsertTagTombstone(
+        videoBookUid,
+        MediaKind.video,
+        name,
+        DateTime.now().millisecondsSinceEpoch,
+      );
     }
   }
 
@@ -284,20 +328,26 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   /// 给合集加标签（幂等；不写墓碑——合集标签同步不消费墓碑）。
   Future<void> addTagToCollection(int collectionId, int tagId) =>
       _upsertAssignmentWithTime(
-          TagHostKind.collection,
-          collectionTagEntryKey(collectionId),
-          tagId,
-          DateTime.now().millisecondsSinceEpoch);
+        TagHostKind.collection,
+        collectionTagEntryKey(collectionId),
+        tagId,
+        DateTime.now().millisecondsSinceEpoch,
+      );
 
   /// 从合集移除标签（纯 DELETE，本地生效；同步不传播移除——同书/视频标签现状）。
   Future<void> removeTagFromCollection(int collectionId, int tagId) =>
       _deleteAssignment(
-          TagHostKind.collection, collectionTagEntryKey(collectionId), tagId);
+        TagHostKind.collection,
+        collectionTagEntryKey(collectionId),
+        tagId,
+      );
 
   /// 含【全部】选中标签的合集 id（AND 语义，仿 getBookKeysForAllTags）。空集返回空。
   Future<Set<int>> getCollectionIdsForAllTags(Set<int> tagIds) async {
-    final Set<String> keys =
-        await _entryKeysForAllTags(TagHostKind.collection, tagIds);
+    final Set<String> keys = await _entryKeysForAllTags(
+      TagHostKind.collection,
+      tagIds,
+    );
     return <int>{
       for (final String key in keys)
         if (collectionIdOfTagEntryKey(key) case final int id) id,
@@ -310,21 +360,28 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
       _tagsForHost(TagHostKind.game, gameId);
 
   Future<void> addTagToGame(String gameId, int tagId) =>
-      _upsertAssignmentWithTime(TagHostKind.game, gameId, tagId,
-          DateTime.now().millisecondsSinceEpoch);
+      _upsertAssignmentWithTime(
+        TagHostKind.game,
+        gameId,
+        tagId,
+        DateTime.now().millisecondsSinceEpoch,
+      );
 
   Future<void> removeTagFromGame(String gameId, int tagId) =>
       _deleteAssignment(TagHostKind.game, gameId, tagId);
 
   Future<void> setTagsForGame(String gameId, Set<int> tagIds) =>
       transaction(() async {
-        final existing = await (select(tagAssignments)
-              ..where((t) =>
-                  t.mediaKind.equals(TagHostKind.game.dbValue) &
-                  t.entryKey.equals(gameId)))
-            .get();
-        final Set<int> existingTagIds =
-            existing.map((TagAssignmentRow e) => e.tagId).toSet();
+        final existing =
+            await (select(tagAssignments)..where(
+                  (t) =>
+                      t.mediaKind.equals(TagHostKind.game.dbValue) &
+                      t.entryKey.equals(gameId),
+                ))
+                .get();
+        final Set<int> existingTagIds = existing
+            .map((TagAssignmentRow e) => e.tagId)
+            .toSet();
         for (final int tagId in existingTagIds.difference(tagIds)) {
           await removeTagFromGame(gameId, tagId);
         }
@@ -345,22 +402,27 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   // 防误删。UI 加/删标签写 addedAt/墓碑，让本地操作也进入同一 LWW 时钟。
 
   Future<String?> _tagNameById(int tagId) async {
-    final BookTagRow? row = await (select(bookTags)
-          ..where((t) => t.id.equals(tagId))
-          ..limit(1))
-        .getSingleOrNull();
+    final BookTagRow? row =
+        await (select(bookTags)
+              ..where((t) => t.id.equals(tagId))
+              ..limit(1))
+            .getSingleOrNull();
     return row?.name;
   }
 
   /// 宿主标签「名 → 加入毫秒戳」（sync 合并的 add 时钟）。
   Future<Map<String, int>> _tagAddedAtByName(
-      TagHostKind kind, String entryKey) async {
-    final rows = await (select(tagAssignments).join([
-      innerJoin(bookTags, bookTags.id.equalsExp(tagAssignments.tagId)),
-    ])
-          ..where(tagAssignments.mediaKind.equals(kind.dbValue) &
-              tagAssignments.entryKey.equals(entryKey)))
-        .get();
+    TagHostKind kind,
+    String entryKey,
+  ) async {
+    final rows =
+        await (select(tagAssignments).join([
+              innerJoin(bookTags, bookTags.id.equalsExp(tagAssignments.tagId)),
+            ])..where(
+              tagAssignments.mediaKind.equals(kind.dbValue) &
+                  tagAssignments.entryKey.equals(entryKey),
+            ))
+            .get();
     return <String, int>{
       for (final row in rows)
         row.readTable(bookTags).name: row.readTable(tagAssignments).addedAt,
@@ -378,12 +440,16 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   /// 某宿主 [itemKey]（[mediaType] 为 [MediaKind.epub]/[MediaKind.video]）的
   /// 标签移除墓碑「名 → 移除毫秒戳」。
   Future<Map<String, int>> tagTombstonesByName(
-      String itemKey, MediaKind mediaType) async {
-    final rows = await (select(bookTagMembershipTombstones)
-          ..where((t) =>
-              t.itemKey.equals(itemKey) &
-              t.mediaType.equals(mediaType.dbValue)))
-        .get();
+    String itemKey,
+    MediaKind mediaType,
+  ) async {
+    final rows =
+        await (select(bookTagMembershipTombstones)..where(
+              (t) =>
+                  t.itemKey.equals(itemKey) &
+                  t.mediaType.equals(mediaType.dbValue),
+            ))
+            .get();
     return <String, int>{for (final r in rows) r.tagName: r.deletedAt};
   }
 
@@ -393,12 +459,11 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   /// O(N) 次查询，大库拖慢清单端点；这里一条 join 拉全量再按 entryKey 分组，
   /// 语义与逐条版一致。
   Future<Map<String, Map<String, int>>> _allTagAddedAtByName(
-      TagHostKind kind) async {
+    TagHostKind kind,
+  ) async {
     final rows = await (select(tagAssignments).join([
       innerJoin(bookTags, bookTags.id.equalsExp(tagAssignments.tagId)),
-    ])
-          ..where(tagAssignments.mediaKind.equals(kind.dbValue)))
-        .get();
+    ])..where(tagAssignments.mediaKind.equals(kind.dbValue))).get();
     final Map<String, Map<String, int>> out = <String, Map<String, int>>{};
     for (final row in rows) {
       final TagAssignmentRow m = row.readTable(tagAssignments);
@@ -417,10 +482,11 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   /// 某 [mediaType] 全部标签移除墓碑「itemKey → (名 → 移除毫秒戳)」一趟批查
   /// （替代清单端点逐条 [tagTombstonesByName]）。
   Future<Map<String, Map<String, int>>> allTagTombstonesByName(
-      MediaKind mediaType) async {
-    final rows = await (select(bookTagMembershipTombstones)
-          ..where((t) => t.mediaType.equals(mediaType.dbValue)))
-        .get();
+    MediaKind mediaType,
+  ) async {
+    final rows = await (select(
+      bookTagMembershipTombstones,
+    )..where((t) => t.mediaType.equals(mediaType.dbValue))).get();
     final Map<String, Map<String, int>> out = <String, Map<String, int>>{};
     for (final r in rows) {
       (out[r.itemKey] ??= <String, int>{})[r.tagName] = r.deletedAt;
@@ -429,23 +495,30 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   }
 
   Future<void> _upsertTagTombstone(
-          String itemKey, MediaKind mediaType, String tagName, int deletedAt) =>
-      into(bookTagMembershipTombstones).insertOnConflictUpdate(
-        BookTagMembershipTombstonesCompanion.insert(
-          itemKey: itemKey,
-          mediaType: mediaType.dbValue,
-          tagName: tagName,
-          deletedAt: deletedAt,
-        ),
-      );
+    String itemKey,
+    MediaKind mediaType,
+    String tagName,
+    int deletedAt,
+  ) => into(bookTagMembershipTombstones).insertOnConflictUpdate(
+    BookTagMembershipTombstonesCompanion.insert(
+      itemKey: itemKey,
+      mediaType: mediaType.dbValue,
+      tagName: tagName,
+      deletedAt: deletedAt,
+    ),
+  );
 
   Future<void> _clearTagTombstone(
-          String itemKey, MediaKind mediaType, String tagName) =>
-      (delete(bookTagMembershipTombstones)
-            ..where((t) =>
+    String itemKey,
+    MediaKind mediaType,
+    String tagName,
+  ) =>
+      (delete(bookTagMembershipTombstones)..where(
+            (t) =>
                 t.itemKey.equals(itemKey) &
                 t.mediaType.equals(mediaType.dbValue) &
-                t.tagName.equals(tagName)))
+                t.tagName.equals(tagName),
+          ))
           .go();
 
   /// LWW-element-set 合并内核（epub/video 两个 sync kind 共用）：把远端标签快照
@@ -458,50 +531,61 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
     String entryKey, {
     required Map<String, int> remoteAddedAt,
     required Map<String, int> remoteTombstones,
-  }) =>
-      transaction(() async {
-        final MediaKind tombstoneKind = tombstoneMediaKindOf(kind);
-        final Map<String, int> localAdded =
-            await _tagAddedAtByName(kind, entryKey);
-        final Map<String, int> localTomb =
-            await tagTombstonesByName(entryKey, tombstoneKind);
-        final _MergedTagState merged = _mergeTagClocks(
-            localAdded, remoteAddedAt, localTomb, remoteTombstones);
-        for (final MapEntry<String, int> e in merged.present.entries) {
-          final int tagId = await getOrCreateTagByName(e.key);
-          await _upsertAssignmentWithTime(kind, entryKey, tagId, e.value);
-          await _clearTagTombstone(entryKey, tombstoneKind, e.key);
-        }
-        for (final MapEntry<String, int> e in merged.tombstones.entries) {
-          final int? tagId = await _tagIdByName(e.key);
-          if (tagId != null) await _deleteAssignment(kind, entryKey, tagId);
-          await _upsertTagTombstone(entryKey, tombstoneKind, e.key, e.value);
-        }
-      });
+  }) => transaction(() async {
+    final MediaKind tombstoneKind = tombstoneMediaKindOf(kind);
+    final Map<String, int> localAdded = await _tagAddedAtByName(kind, entryKey);
+    final Map<String, int> localTomb = await tagTombstonesByName(
+      entryKey,
+      tombstoneKind,
+    );
+    final _MergedTagState merged = _mergeTagClocks(
+      localAdded,
+      remoteAddedAt,
+      localTomb,
+      remoteTombstones,
+    );
+    for (final MapEntry<String, int> e in merged.present.entries) {
+      final int tagId = await getOrCreateTagByName(e.key);
+      await _upsertAssignmentWithTime(kind, entryKey, tagId, e.value);
+      await _clearTagTombstone(entryKey, tombstoneKind, e.key);
+    }
+    for (final MapEntry<String, int> e in merged.tombstones.entries) {
+      final int? tagId = await _tagIdByName(e.key);
+      if (tagId != null) await _deleteAssignment(kind, entryKey, tagId);
+      await _upsertTagTombstone(entryKey, tombstoneKind, e.key, e.value);
+    }
+  });
 
   /// LWW-element-set：把远端标签快照合并进书 [bookKey] 本地状态。
   Future<void> mergeRemoteBookTags(
     String bookKey, {
     required Map<String, int> remoteAddedAt,
     Map<String, int> remoteTombstones = const <String, int>{},
-  }) =>
-      _mergeRemoteTags(TagHostKind.epub, bookKey,
-          remoteAddedAt: remoteAddedAt, remoteTombstones: remoteTombstones);
+  }) => _mergeRemoteTags(
+    TagHostKind.epub,
+    bookKey,
+    remoteAddedAt: remoteAddedAt,
+    remoteTombstones: remoteTombstones,
+  );
 
   /// LWW-element-set：把远端标签快照合并进视频 [videoBookUid] 本地状态。
   Future<void> mergeRemoteVideoTags(
     String videoBookUid, {
     required Map<String, int> remoteAddedAt,
     Map<String, int> remoteTombstones = const <String, int>{},
-  }) =>
-      _mergeRemoteTags(TagHostKind.video, videoBookUid,
-          remoteAddedAt: remoteAddedAt, remoteTombstones: remoteTombstones);
+  }) => _mergeRemoteTags(
+    TagHostKind.video,
+    videoBookUid,
+    remoteAddedAt: remoteAddedAt,
+    remoteTombstones: remoteTombstones,
+  );
 
   Future<int?> _tagIdByName(String name) async {
-    final BookTagRow? row = await (select(bookTags)
-          ..where((t) => t.name.equals(name))
-          ..limit(1))
-        .getSingleOrNull();
+    final BookTagRow? row =
+        await (select(bookTags)
+              ..where((t) => t.name.equals(name))
+              ..limit(1))
+            .getSingleOrNull();
     return row?.id;
   }
 
@@ -509,26 +593,35 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
 
   /// 记录/刷新书 [bookUid]（v82 起 = 书稳定 uid）的 CSS 文件 [relativePath] 自定义内容（保存时调，updatedAt=now）。
   Future<void> upsertBookCss(
-          String bookUid, String relativePath, String content, int updatedAt) =>
-      into(bookCustomCss).insertOnConflictUpdate(BookCustomCssRow(
-        bookUid: bookUid,
-        relativePath: relativePath,
-        content: content,
-        deleted: false,
-        updatedAt: updatedAt,
-      ));
+    String bookUid,
+    String relativePath,
+    String content,
+    int updatedAt,
+  ) => into(bookCustomCss).insertOnConflictUpdate(
+    BookCustomCssRow(
+      bookUid: bookUid,
+      relativePath: relativePath,
+      content: content,
+      deleted: false,
+      updatedAt: updatedAt,
+    ),
+  );
 
   /// 记录书 [bookUid] 的 CSS 文件 [relativePath] 已重置回原始（重置墓碑，updatedAt=now）。
   /// 使「reset」跨端传播（LWW 较新的重置让他端也 reset）。
   Future<void> markBookCssReset(
-          String bookUid, String relativePath, int updatedAt) =>
-      into(bookCustomCss).insertOnConflictUpdate(BookCustomCssRow(
-        bookUid: bookUid,
-        relativePath: relativePath,
-        content: '',
-        deleted: true,
-        updatedAt: updatedAt,
-      ));
+    String bookUid,
+    String relativePath,
+    int updatedAt,
+  ) => into(bookCustomCss).insertOnConflictUpdate(
+    BookCustomCssRow(
+      bookUid: bookUid,
+      relativePath: relativePath,
+      content: '',
+      deleted: true,
+      updatedAt: updatedAt,
+    ),
+  );
 
   /// 书 [bookUid] 的全部自定义 CSS 行（含重置墓碑）。sync push 快照用。
   Future<List<BookCustomCssRow>> getBookCssRows(String bookUid) =>
@@ -540,16 +633,23 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   /// 遮罩。幂等 upsert（重复揭开刷新 [revealedAt]）。阅读器点击/手柄/音频跨图、图片库
   /// 点开都调它，DB 是唯一真相源。
   Future<void> markImageRevealed(
-          String bookUid, String imageKey, int revealedAt) =>
-      into(revealedImages).insertOnConflictUpdate(RevealedImageRow(
-        bookUid: bookUid,
-        imageKey: imageKey,
-        revealedAt: revealedAt,
-      ));
+    String bookUid,
+    String imageKey,
+    int revealedAt,
+  ) => into(revealedImages).insertOnConflictUpdate(
+    RevealedImageRow(
+      bookUid: bookUid,
+      imageKey: imageKey,
+      revealedAt: revealedAt,
+    ),
+  );
 
   /// 一次标记书 [bookUid] 的多张图片已揭开（音频跨多图一次全揭时批量写，省往返）。
   Future<void> markImagesRevealed(
-      String bookUid, Iterable<String> imageKeys, int revealedAt) {
+    String bookUid,
+    Iterable<String> imageKeys,
+    int revealedAt,
+  ) {
     final List<String> keys = imageKeys.toList(growable: false);
     if (keys.isEmpty) return Future<void>.value();
     return batch((Batch b) {
@@ -557,7 +657,10 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
         b.insert(
           revealedImages,
           RevealedImageRow(
-              bookUid: bookUid, imageKey: k, revealedAt: revealedAt),
+            bookUid: bookUid,
+            imageKey: k,
+            revealedAt: revealedAt,
+          ),
           mode: InsertMode.insertOrReplace,
         );
       }
@@ -567,37 +670,43 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   /// 书 [bookUid] 全部已揭开图片 key 集合。阅读器打开时读它灌入会话集、图片库渲染时读它
   /// 判断哪些图不遮罩。
   Future<Set<String>> getRevealedImageKeys(String bookUid) async {
-    final List<RevealedImageRow> rows = await (select(revealedImages)
-          ..where((t) => t.bookUid.equals(bookUid)))
-        .get();
+    final List<RevealedImageRow> rows = await (select(
+      revealedImages,
+    )..where((t) => t.bookUid.equals(bookUid))).get();
     return rows.map((RevealedImageRow r) => r.imageKey).toSet();
   }
 
   /// 书 [bookUid] 已揭开图片 key 的实时流（图片库/阅读器 live 双向同步：一端揭开另一端
   /// 自动收到更新）。
   Stream<Set<String>> watchRevealedImageKeys(String bookUid) =>
-      (select(revealedImages)..where((t) => t.bookUid.equals(bookUid)))
-          .watch()
-          .map((List<RevealedImageRow> rows) =>
-              rows.map((RevealedImageRow r) => r.imageKey).toSet());
+      (select(
+        revealedImages,
+      )..where((t) => t.bookUid.equals(bookUid))).watch().map(
+        (List<RevealedImageRow> rows) =>
+            rows.map((RevealedImageRow r) => r.imageKey).toSet(),
+      );
 
   // ── 删除传播墓碑（显式确认式）─────────────────────────────────────────────────
 
   /// 记一条删除墓碑（本地删资产时调；重复删同键 upsert 刷新 deletedAt，重置发布状态）。
   Future<void> writeSyncDeletionTombstone(
-          String mediaType, String itemKey, int deletedAt) =>
-      into(syncDeletionTombstones).insertOnConflictUpdate(
-          SyncDeletionTombstoneRow(
-              mediaType: mediaType,
-              itemKey: itemKey,
-              deletedAt: deletedAt,
-              remotePublishedAt: 0));
+    String mediaType,
+    String itemKey,
+    int deletedAt,
+  ) => into(syncDeletionTombstones).insertOnConflictUpdate(
+    SyncDeletionTombstoneRow(
+      mediaType: mediaType,
+      itemKey: itemKey,
+      deletedAt: deletedAt,
+      remotePublishedAt: 0,
+    ),
+  );
 
   /// 清除某资产的删除墓碑（重新导入 / 新增同 (mediaType, itemKey) 时调，防误删复活）。
   Future<void> clearSyncDeletionTombstone(String mediaType, String itemKey) =>
-      (delete(syncDeletionTombstones)
-            ..where((t) =>
-                t.mediaType.equals(mediaType) & t.itemKey.equals(itemKey)))
+      (delete(syncDeletionTombstones)..where(
+            (t) => t.mediaType.equals(mediaType) & t.itemKey.equals(itemKey),
+          ))
           .go();
 
   /// 全部删除墓碑（sync 发布 / compare 对话框读）。
@@ -606,19 +715,25 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
 
   /// 某种资产的删除墓碑。
   Future<List<SyncDeletionTombstoneRow>> getSyncDeletionTombstonesOfType(
-          String mediaType) =>
-      (select(syncDeletionTombstones)
-            ..where((t) => t.mediaType.equals(mediaType)))
-          .get();
+    String mediaType,
+  ) => (select(
+    syncDeletionTombstones,
+  )..where((t) => t.mediaType.equals(mediaType))).get();
 
   /// 标记某墓碑已发布到远端（避免每轮重发；[publishedAt] = 发布时刻）。
   Future<void> markSyncDeletionPublished(
-          String mediaType, String itemKey, int publishedAt) =>
-      (update(syncDeletionTombstones)
-            ..where((t) =>
-                t.mediaType.equals(mediaType) & t.itemKey.equals(itemKey)))
-          .write(SyncDeletionTombstonesCompanion(
-              remotePublishedAt: Value(publishedAt)));
+    String mediaType,
+    String itemKey,
+    int publishedAt,
+  ) =>
+      (update(syncDeletionTombstones)..where(
+            (t) => t.mediaType.equals(mediaType) & t.itemKey.equals(itemKey),
+          ))
+          .write(
+            SyncDeletionTombstonesCompanion(
+              remotePublishedAt: Value(publishedAt),
+            ),
+          );
 
   /// LWW 合并远端 CSS 快照进书 [bookKey]。[remote] 是远端每个 relativePath 的
   /// (content, deleted, updatedAt)。逐 relativePath 比 updatedAt 取较新写本地行；返回
@@ -626,41 +741,40 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   /// 写穿磁盘（BookCssRepository.saveCss / resetFile）——DB 只是时间戳载体，磁盘才是
   /// 渲染真相源。幂等（同快照重复合并第二次返回空）。
   Future<List<({String relativePath, String content, bool deleted})>>
-      mergeRemoteBookCss(
+  mergeRemoteBookCss(
     String bookUid,
     Map<String, ({String content, bool deleted, int updatedAt})> remote,
-  ) =>
-          transaction(() async {
-            final Map<String, BookCustomCssRow> localByPath =
-                <String, BookCustomCssRow>{
-              for (final BookCustomCssRow r in await getBookCssRows(bookUid))
-                r.relativePath: r,
-            };
-            final List<({String relativePath, String content, bool deleted})>
-                changed =
-                <({String relativePath, String content, bool deleted})>[];
-            for (final MapEntry<String,
-                    ({String content, bool deleted, int updatedAt})> e
-                in remote.entries) {
-              final BookCustomCssRow? local = localByPath[e.key];
-              // 远端严格更新才落地（相等 / 更旧不动，防每轮写放大 + 保留本地更新）。
-              if (local != null && local.updatedAt >= e.value.updatedAt)
-                continue;
-              await into(bookCustomCss).insertOnConflictUpdate(BookCustomCssRow(
-                bookUid: bookUid,
-                relativePath: e.key,
-                content: e.value.deleted ? '' : e.value.content,
-                deleted: e.value.deleted,
-                updatedAt: e.value.updatedAt,
-              ));
-              changed.add((
-                relativePath: e.key,
-                content: e.value.content,
-                deleted: e.value.deleted,
-              ));
-            }
-            return changed;
-          });
+  ) => transaction(() async {
+    final Map<String, BookCustomCssRow> localByPath =
+        <String, BookCustomCssRow>{
+          for (final BookCustomCssRow r in await getBookCssRows(bookUid))
+            r.relativePath: r,
+        };
+    final List<({String relativePath, String content, bool deleted})> changed =
+        <({String relativePath, String content, bool deleted})>[];
+    for (final MapEntry<String, ({String content, bool deleted, int updatedAt})>
+        e
+        in remote.entries) {
+      final BookCustomCssRow? local = localByPath[e.key];
+      // 远端严格更新才落地（相等 / 更旧不动，防每轮写放大 + 保留本地更新）。
+      if (local != null && local.updatedAt >= e.value.updatedAt) continue;
+      await into(bookCustomCss).insertOnConflictUpdate(
+        BookCustomCssRow(
+          bookUid: bookUid,
+          relativePath: e.key,
+          content: e.value.deleted ? '' : e.value.content,
+          deleted: e.value.deleted,
+          updatedAt: e.value.updatedAt,
+        ),
+      );
+      changed.add((
+        relativePath: e.key,
+        content: e.value.content,
+        deleted: e.value.deleted,
+      ));
+    }
+    return changed;
+  });
 
   Future<Set<String>> getVideoBookUidsForAllTags(Set<int> tagIds) =>
       _entryKeysForAllTags(TagHostKind.video, tagIds);
@@ -693,9 +807,9 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   }
 
   // ── profile settings ─────────────────────────────────────────────
-  Future<List<ProfileSettingRow>> getProfileSettings(int profileId) =>
-      (select(profileSettings)..where((t) => t.profileId.equals(profileId)))
-          .get();
+  Future<List<ProfileSettingRow>> getProfileSettings(int profileId) => (select(
+    profileSettings,
+  )..where((t) => t.profileId.equals(profileId))).get();
 
   Future<void> upsertProfileSetting(ProfileSettingsCompanion s) =>
       into(profileSettings).insert(
@@ -711,25 +825,26 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
       );
 
   Future<void> replaceProfileSettings(
-          int profileId, List<ProfileSettingsCompanion> settings) =>
-      transaction(() async {
-        await (delete(profileSettings)
-              ..where((t) => t.profileId.equals(profileId)))
-            .go();
-        await batch((b) {
-          for (final s in settings) {
-            b.insert(profileSettings, s);
-          }
-        });
-      });
+    int profileId,
+    List<ProfileSettingsCompanion> settings,
+  ) => transaction(() async {
+    await (delete(
+      profileSettings,
+    )..where((t) => t.profileId.equals(profileId))).go();
+    await batch((b) {
+      for (final s in settings) {
+        b.insert(profileSettings, s);
+      }
+    });
+  });
 
   // ── media type profiles ──────────────────────────────────────────
   Future<List<MediaTypeProfileRow>> getAllMediaTypeProfiles() =>
       select(mediaTypeProfiles).get();
 
-  Future<MediaTypeProfileRow?> getMediaTypeProfile(String mediaType) =>
-      (select(mediaTypeProfiles)..where((t) => t.mediaType.equals(mediaType)))
-          .getSingleOrNull();
+  Future<MediaTypeProfileRow?> getMediaTypeProfile(String mediaType) => (select(
+    mediaTypeProfiles,
+  )..where((t) => t.mediaType.equals(mediaType))).getSingleOrNull();
 
   Future<void> setMediaTypeProfile(String mediaType, int profileId) =>
       into(mediaTypeProfiles).insertOnConflictUpdate(
@@ -739,21 +854,18 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
         ),
       );
 
-  Future<int> deleteMediaTypeProfile(String mediaType) =>
-      (delete(mediaTypeProfiles)..where((t) => t.mediaType.equals(mediaType)))
-          .go();
+  Future<int> deleteMediaTypeProfile(String mediaType) => (delete(
+    mediaTypeProfiles,
+  )..where((t) => t.mediaType.equals(mediaType))).go();
 
   // ── book profiles ────────────────────────────────────────────────
-  Future<BookProfileRow?> getBookProfile(String bookKey) =>
-      (select(bookProfiles)..where((t) => t.bookKey.equals(bookKey)))
-          .getSingleOrNull();
+  Future<BookProfileRow?> getBookProfile(String bookKey) => (select(
+    bookProfiles,
+  )..where((t) => t.bookKey.equals(bookKey))).getSingleOrNull();
 
   Future<void> setBookProfile(String bookKey, int profileId) =>
       into(bookProfiles).insertOnConflictUpdate(
-        BookProfilesCompanion.insert(
-          bookKey: bookKey,
-          profileId: profileId,
-        ),
+        BookProfilesCompanion.insert(bookKey: bookKey, profileId: profileId),
       );
 
   Future<int> deleteBookProfile(String bookKey) =>
@@ -762,10 +874,12 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   // ── sync baselines ──────────────────────────────────────────────
   /// 读某资产某维度的基线版本；无记录返回 null。
   Future<int?> getSyncBaseline(String assetKey, String dimension) async {
-    final SyncBaselineRow? row = await (select(syncBaselines)
-          ..where((t) =>
-              t.assetKey.equals(assetKey) & t.dimension.equals(dimension)))
-        .getSingleOrNull();
+    final SyncBaselineRow? row =
+        await (select(syncBaselines)..where(
+              (t) =>
+                  t.assetKey.equals(assetKey) & t.dimension.equals(dimension),
+            ))
+            .getSingleOrNull();
     return row?.baseVersion;
   }
 
@@ -774,12 +888,13 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
     String assetKey,
     String dimension,
     int baseVersion,
-  ) =>
-      into(syncBaselines).insertOnConflictUpdate(SyncBaselinesCompanion(
-        assetKey: Value(assetKey),
-        dimension: Value(dimension),
-        baseVersion: Value(baseVersion),
-      ));
+  ) => into(syncBaselines).insertOnConflictUpdate(
+    SyncBaselinesCompanion(
+      assetKey: Value(assetKey),
+      dimension: Value(dimension),
+      baseVersion: Value(baseVersion),
+    ),
+  );
 
   // ── v16 book-key migration ──────────────────────────────────────
   // Legacy uid prefix that wrapped the int book id in audiobooks/audio_cues/
@@ -839,16 +954,16 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
       }
 
       // 1. Read (id, title); compute key + dedup collisions deterministically.
-      final List<QueryRow> books =
-          await customSelect('SELECT id, title FROM epub_books ORDER BY id')
-              .get();
+      final List<QueryRow> books = await customSelect(
+        'SELECT id, title FROM epub_books ORDER BY id',
+      ).get();
       final Map<int, String> idToKey = <int, String>{};
       final Set<String> used = <String>{};
       for (final QueryRow r in books) {
         final int id = r.read<int>('id');
         String key = _sanitizeBookKey(r.read<String>('title'));
         if (used.contains(key)) {
-          for (int i = 2;; i++) {
+          for (int i = 2; ; i++) {
             final String candidate = '$key ($i)';
             if (!used.contains(candidate)) {
               key = candidate;
@@ -863,11 +978,13 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
       // 2. Temp map table (old_id -> book_key).
       await customStatement('DROP TABLE IF EXISTS _id_key_map');
       await customStatement(
-          'CREATE TABLE _id_key_map (old_id INTEGER PRIMARY KEY, book_key TEXT NOT NULL)');
+        'CREATE TABLE _id_key_map (old_id INTEGER PRIMARY KEY, book_key TEXT NOT NULL)',
+      );
       for (final MapEntry<int, String> e in idToKey.entries) {
         await customStatement(
-            'INSERT INTO _id_key_map (old_id, book_key) VALUES (?, ?)',
-            <Object?>[e.key, e.value]);
+          'INSERT INTO _id_key_map (old_id, book_key) VALUES (?, ?)',
+          <Object?>[e.key, e.value],
+        );
       }
 
       // 3. epub_books: id PK -> book_key PK.
@@ -911,15 +1028,18 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
           norm_char_offset INTEGER NOT NULL,
           ttu_char_offset INTEGER NOT NULL DEFAULT -1,
           updated_at INTEGER NOT NULL)''');
-        await customStatement('''
+        await customStatement(
+          '''
         INSERT INTO reader_positions_new
           (book_key, section_index, norm_char_offset, ttu_char_offset, updated_at)
         SELECT m.book_key, rp.section_index, rp.norm_char_offset,
                rp.ttu_char_offset, rp.updated_at
-        FROM reader_positions rp JOIN _id_key_map m ON m.old_id = rp.ttu_book_id''');
+        FROM reader_positions rp JOIN _id_key_map m ON m.old_id = rp.ttu_book_id''',
+        );
         await customStatement('DROP TABLE reader_positions');
         await customStatement(
-            'ALTER TABLE reader_positions_new RENAME TO reader_positions');
+          'ALTER TABLE reader_positions_new RENAME TO reader_positions',
+        );
       }
 
       // 5. bookmarks: ttu_book_id INT FK -> book_key TEXT FK (cascade).
@@ -955,13 +1075,16 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
           book_key TEXT NOT NULL REFERENCES epub_books (book_key) ON DELETE CASCADE,
           tag_id INTEGER NOT NULL REFERENCES book_tags (id) ON DELETE CASCADE,
           UNIQUE (book_key, tag_id))''');
-        await customStatement('''
+        await customStatement(
+          '''
         INSERT INTO book_tag_mappings_new (id, book_key, tag_id)
         SELECT btm.id, m.book_key, btm.tag_id
-        FROM book_tag_mappings btm JOIN _id_key_map m ON m.old_id = btm.book_id''');
+        FROM book_tag_mappings btm JOIN _id_key_map m ON m.old_id = btm.book_id''',
+        );
         await customStatement('DROP TABLE book_tag_mappings');
         await customStatement(
-            'ALTER TABLE book_tag_mappings_new RENAME TO book_tag_mappings');
+          'ALTER TABLE book_tag_mappings_new RENAME TO book_tag_mappings',
+        );
       }
 
       // 7. srt_books: ttu_book_id INT (0 = standalone) -> book_key TEXT ('').
@@ -979,14 +1102,16 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
           cover_path TEXT,
           imported_at INTEGER NOT NULL,
           book_key TEXT NOT NULL DEFAULT '')''');
-        await customStatement('''
+        await customStatement(
+          '''
         INSERT INTO srt_books_new
           (id, uid, title, author, audio_root, audio_paths_json, srt_path,
            cover_path, imported_at, book_key)
         SELECT sb.id, sb.uid, sb.title, sb.author, sb.audio_root,
                sb.audio_paths_json, sb.srt_path, sb.cover_path, sb.imported_at,
                COALESCE(m.book_key, '')
-        FROM srt_books sb LEFT JOIN _id_key_map m ON m.old_id = sb.ttu_book_id''');
+        FROM srt_books sb LEFT JOIN _id_key_map m ON m.old_id = sb.ttu_book_id''',
+        );
         await customStatement('DROP TABLE srt_books');
         await customStatement('ALTER TABLE srt_books_new RENAME TO srt_books');
       }
@@ -1024,7 +1149,8 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
         WHERE ab.book_uid LIKE '$_kLegacyUidPrefix%' ''');
         await customStatement('DROP TABLE audiobooks');
         await customStatement(
-            'ALTER TABLE audiobooks_new RENAME TO audiobooks');
+          'ALTER TABLE audiobooks_new RENAME TO audiobooks',
+        );
       }
 
       // 9. audio_cues: book_uid owns EITHER an audiobook uid OR an srt_books.uid.
@@ -1068,15 +1194,18 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
         WHERE ac.book_uid LIKE '$_kLegacyUidPrefix%' ''');
         await customStatement('DROP TABLE audio_cues');
         await customStatement(
-            'ALTER TABLE audio_cues_new RENAME TO audio_cues');
+          'ALTER TABLE audio_cues_new RENAME TO audio_cues',
+        );
       }
 
       // 10. book_profiles: book_uid PK 'reader_ttu/hoshi://book/<id>' -> book_key.
       if (await _columnExists('book_profiles', 'book_uid')) {
-        await customStatement('''
+        await customStatement(
+          '''
         CREATE TABLE book_profiles_new (
           book_key TEXT NOT NULL PRIMARY KEY,
-          profile_id INTEGER NOT NULL REFERENCES profiles (id) ON DELETE CASCADE)''');
+          profile_id INTEGER NOT NULL REFERENCES profiles (id) ON DELETE CASCADE)''',
+        );
         await customStatement('''
         INSERT INTO book_profiles_new (book_key, profile_id)
         SELECT m.book_key, bp.profile_id
@@ -1087,7 +1216,8 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
         WHERE bp.book_uid LIKE '$_kLegacyUidPrefix%' ''');
         await customStatement('DROP TABLE book_profiles');
         await customStatement(
-            'ALTER TABLE book_profiles_new RENAME TO book_profiles');
+          'ALTER TABLE book_profiles_new RENAME TO book_profiles',
+        );
       }
 
       // 11. media_items identifier/unique_key: hoshi://book/<id> -> /<key>.
@@ -1131,11 +1261,13 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
       // 15. Integrity gate: any dangling FK relation means the re-key was
       //     lossy/wrong. Throw to roll back the whole transaction (FK checks
       //     are deferred while foreign_keys=OFF, so this runs them explicitly).
-      final List<QueryRow> violations =
-          await customSelect('PRAGMA foreign_key_check').get();
+      final List<QueryRow> violations = await customSelect(
+        'PRAGMA foreign_key_check',
+      ).get();
       if (violations.isNotEmpty) {
         throw StateError(
-            'book-key migration left FK violations: ${violations.length}');
+          'book-key migration left FK violations: ${violations.length}',
+        );
       }
     }
   }
@@ -1146,8 +1278,9 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   /// the uid-style value wins (it is the live player write).
   Future<void> _migrateBookKeyPrefsV16(Map<int, String> idToKey) async {
     if (!await _tableExists('preferences')) return;
-    final List<QueryRow> rows =
-        await customSelect('SELECT key, value FROM preferences').get();
+    final List<QueryRow> rows = await customSelect(
+      'SELECT key, value FROM preferences',
+    ).get();
 
     // Resolved new key -> value, with a priority flag so uid-style audiobook_pos
     // wins over int-style on collision.
@@ -1168,8 +1301,9 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
 
     String? mapUidSuffix(String suffix) {
       if (!suffix.startsWith(_kLegacyUidPrefix)) return null;
-      final int? oldId =
-          int.tryParse(suffix.substring(_kLegacyUidPrefix.length));
+      final int? oldId = int.tryParse(
+        suffix.substring(_kLegacyUidPrefix.length),
+      );
       if (oldId == null) return null;
       return idToKey[oldId];
     }
@@ -1236,8 +1370,9 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
 
     // Delete old keys first, then write resolved new keys (uid-priority applied).
     for (final String k in oldKeysToDelete) {
-      await customStatement(
-          'DELETE FROM preferences WHERE key = ?', <Object?>[k]);
+      await customStatement('DELETE FROM preferences WHERE key = ?', <Object?>[
+        k,
+      ]);
     }
     for (final MapEntry<String, String> e in resolved.entries) {
       await customStatement(
@@ -1264,9 +1399,9 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
   Future<void> _migrateReadingStatsTitlesV16() async {
     if (!await _tableExists('reading_statistics')) return;
     final List<QueryRow> rows = await customSelect(
-            'SELECT id, title, date_key, characters_read, reading_time_ms, '
-            'last_statistic_modified FROM reading_statistics')
-        .get();
+      'SELECT id, title, date_key, characters_read, reading_time_ms, '
+      'last_statistic_modified FROM reading_statistics',
+    ).get();
 
     // Group target (sanitizedTitle, dateKey) -> accumulated values + the row id
     // we keep (smallest id) and the row ids we delete (merged away).
@@ -1299,18 +1434,14 @@ mixin _FushiDbTagsSync on _$FushiDatabase, _FushiDbInfra {
     for (final _StatAccum acc in merged.values) {
       for (final int delId in acc.deleteIds) {
         await customStatement(
-            'DELETE FROM reading_statistics WHERE id = ?', <Object?>[delId]);
+          'DELETE FROM reading_statistics WHERE id = ?',
+          <Object?>[delId],
+        );
       }
       await customStatement(
         'UPDATE reading_statistics SET title = ?, characters_read = ?, '
         'reading_time_ms = ?, last_statistic_modified = ? WHERE id = ?',
-        <Object?>[
-          acc.title,
-          acc.chars,
-          acc.timeMs,
-          acc.lastMod,
-          acc.keepId,
-        ],
+        <Object?>[acc.title, acc.chars, acc.timeMs, acc.lastMod, acc.keepId],
       );
     }
   }

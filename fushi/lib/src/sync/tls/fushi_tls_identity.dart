@@ -41,10 +41,7 @@ class FushiSelfSignedCertGenerator {
     final publicKey = pair.publicKey as ECPublicKey;
 
     final dn = <String, String>{'CN': commonName};
-    final sans = <String>[
-      commonName,
-      ...sanIpAddresses,
-    ];
+    final sans = <String>[commonName, ...sanIpAddresses];
 
     final String csrPem = X509Utils.generateEccCsrPem(
       dn,
@@ -73,8 +70,9 @@ class FushiSelfSignedCertGenerator {
       notBefore: notBefore,
     );
 
-    final String privateKeyPem =
-        CryptoUtils.encodePrivateEcdsaKeyToPkcs8(privateKey);
+    final String privateKeyPem = CryptoUtils.encodePrivateEcdsaKeyToPkcs8(
+      privateKey,
+    );
 
     return (certificatePem: certificatePem, privateKeyPem: privateKeyPem);
   }
@@ -126,9 +124,9 @@ class FushiTlsIdentityStore {
 
     final ({String certificatePem, String privateKeyPem}) generated =
         FushiSelfSignedCertGenerator.generate(
-      commonName: commonName,
-      sanIpAddresses: ipv4,
-    );
+          commonName: commonName,
+          sanIpAddresses: ipv4,
+        );
 
     // 私钥先写内容再 chmod 0600（POSIX 有效，Windows 无操作，靠 app 私有目录 + NTFS ACL）。
     final keyFile = File(_keyPath);

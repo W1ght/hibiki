@@ -23,15 +23,19 @@ const Duration kRemoteAudioReceiveTimeout = Duration(seconds: 10);
 /// （TODO-1057）。窗口过后自动放行重试一次。
 const Duration kRemoteAudioFailureCooldown = Duration(seconds: 45);
 
-typedef LocalAudioQuery = Future<Map<String, dynamic>?> Function(
-    String expression, String reading);
-typedef IndexedLocalAudioQuery = Future<Map<String, dynamic>?> Function(
-    String expression, String reading, int dbIndex);
-typedef LocalAudioExtractor = Future<String?>
-    Function(String file, String source, {int dbIndex});
+typedef LocalAudioQuery =
+    Future<Map<String, dynamic>?> Function(String expression, String reading);
+typedef IndexedLocalAudioQuery =
+    Future<Map<String, dynamic>?> Function(
+      String expression,
+      String reading,
+      int dbIndex,
+    );
+typedef LocalAudioExtractor =
+    Future<String?> Function(String file, String source, {int dbIndex});
 typedef AudioSourceListFetcher = Future<List<String>> Function(String url);
-typedef RemoteAudioQuery = Future<String?> Function(
-    String expression, String reading);
+typedef RemoteAudioQuery =
+    Future<String?> Function(String expression, String reading);
 
 class WordAudioResolver {
   WordAudioResolver({
@@ -40,11 +44,13 @@ class WordAudioResolver {
     IndexedLocalAudioQuery? queryLocalAudioByDbIndex,
     this.queryRemoteAudio,
     AudioSourceListFetcher? fetchAudioSourceList,
-  })  : queryLocalAudioByDbIndex = queryLocalAudioByDbIndex ??
-            ((String expression, String reading, int _) =>
-                queryLocalAudio(expression, reading)),
-        fetchAudioSourceList = fetchAudioSourceList ??
-            WordAudioResolver.defaultFetchAudioSourceList;
+  }) : queryLocalAudioByDbIndex =
+           queryLocalAudioByDbIndex ??
+           ((String expression, String reading, int _) =>
+               queryLocalAudio(expression, reading)),
+       fetchAudioSourceList =
+           fetchAudioSourceList ??
+           WordAudioResolver.defaultFetchAudioSourceList;
 
   static const String localAudioUrl =
       'http://localhost:8765/localaudio/get/?term={term}&reading={reading}';
@@ -186,8 +192,10 @@ class WordAudioResolver {
 
   Future<String?> _resolveLocal(String expression, String reading) async {
     try {
-      final Map<String, dynamic>? info =
-          await queryLocalAudio(expression, reading);
+      final Map<String, dynamic>? info = await queryLocalAudio(
+        expression,
+        reading,
+      );
       return await _extractLocal(info);
     } on LocalAudioUnavailableError catch (e, stack) {
       _logLocalAudioUnavailable(e, stack, expression);
@@ -201,8 +209,11 @@ class WordAudioResolver {
     int dbIndex,
   ) async {
     try {
-      final Map<String, dynamic>? info =
-          await queryLocalAudioByDbIndex(expression, reading, dbIndex);
+      final Map<String, dynamic>? info = await queryLocalAudioByDbIndex(
+        expression,
+        reading,
+        dbIndex,
+      );
       return await _extractLocal(info, fallbackDbIndex: dbIndex);
     } on LocalAudioUnavailableError catch (e, stack) {
       _logLocalAudioUnavailable(e, stack, expression);
@@ -263,10 +274,11 @@ class WordAudioResolver {
   // yomichan）/ `localhost:8765`（AnkiConnect local-audio）仍走直连——`isDirectProxyTarget`
   // 闸门在解析层就把本机目标挡在代理之外。
   static final Dio _dio = createAppDio(
-      options: BaseOptions(
-    connectTimeout: kRemoteAudioConnectTimeout,
-    receiveTimeout: kRemoteAudioReceiveTimeout,
-  ));
+    options: BaseOptions(
+      connectTimeout: kRemoteAudioConnectTimeout,
+      receiveTimeout: kRemoteAudioReceiveTimeout,
+    ),
+  );
 
   /// 远端音源失败冷却表：host -> 冷却截止时间。窗口内命中的 host 直接短路跳过，
   /// 不发请求、不再记日志（TODO-1057）。成功时清除该 host 的条目。
@@ -300,8 +312,9 @@ class WordAudioResolver {
   /// 记录一次失败：把该 host 的冷却截止时间设为 now + [kRemoteAudioFailureCooldown]。
   static void _markRemoteSourceFailed(String url) {
     final String key = remoteFailureCooldownKey(url);
-    _remoteFailureCooldownUntil[key] =
-        _nowProvider().add(kRemoteAudioFailureCooldown);
+    _remoteFailureCooldownUntil[key] = _nowProvider().add(
+      kRemoteAudioFailureCooldown,
+    );
   }
 
   /// 记录一次成功：清除该 host 的冷却条目，让它立即恢复优先级。
@@ -370,8 +383,9 @@ class WordAudioResolver {
         } else if (e.type == DioErrorType.connectionTimeout) {
           detail = t.audio_source_timeout(host: host);
         } else {
-          detail =
-              t.audio_source_request_error(detail: e.message ?? e.type.name);
+          detail = t.audio_source_request_error(
+            detail: e.message ?? e.type.name,
+          );
         }
       } else {
         detail = t.audio_source_error(detail: '$e');

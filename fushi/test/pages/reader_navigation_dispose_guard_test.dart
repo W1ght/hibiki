@@ -98,10 +98,13 @@ void main() {
       'Future<void> _handleCueCrossChapter(',
       'Future<void> _pauseThroughImageOnlyChapters(',
     );
-    final int pauseAwait =
-        body.indexOf('await _pauseThroughImageOnlyChapters(newSection);');
-    final int mountedGuard =
-        body.indexOf('if (!mounted || _controller == null)', pauseAwait);
+    final int pauseAwait = body.indexOf(
+      'await _pauseThroughImageOnlyChapters(newSection);',
+    );
+    final int mountedGuard = body.indexOf(
+      'if (!mounted || _controller == null)',
+      pauseAwait,
+    );
     final int cancelTransition = body.indexOf(
       '_audiobookController?.cancelChapterTransition();',
       mountedGuard,

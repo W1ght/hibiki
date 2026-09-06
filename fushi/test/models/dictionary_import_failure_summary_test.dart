@@ -4,16 +4,23 @@ import 'package:fushi/src/models/dictionary_import_manager.dart';
 void main() {
   group('DictionaryImportManager.formatImportFailureSummary (BUG-082)', () {
     test('single failure names the one dictionary', () {
-      final String msg =
-          DictionaryImportManager.formatImportFailureSummary(['辞書A']);
+      final String msg = DictionaryImportManager.formatImportFailureSummary([
+        '辞書A',
+      ]);
       expect(msg, contains('辞書A'));
-      expect(msg, isNot(contains(',')),
-          reason: 'single failure should not look like a list');
+      expect(
+        msg,
+        isNot(contains(',')),
+        reason: 'single failure should not look like a list',
+      );
     });
 
     test('multiple failures list every failed dictionary in one message', () {
-      final String msg = DictionaryImportManager.formatImportFailureSummary(
-          ['辞書A', '辞書B', '辞書C']);
+      final String msg = DictionaryImportManager.formatImportFailureSummary([
+        '辞書A',
+        '辞書B',
+        '辞書C',
+      ]);
       expect(msg, contains('辞書A'));
       expect(msg, contains('辞書B'));
       expect(msg, contains('辞書C'));

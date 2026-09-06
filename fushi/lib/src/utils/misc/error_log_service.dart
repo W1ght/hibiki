@@ -147,8 +147,9 @@ class ErrorLogService extends ChangeNotifier with FrameSafeNotifier {
     final String separator = '─' * 60;
     final firstSep = content.indexOf(separator);
     if (firstSep != -1) {
-      final String afterSeparator =
-          content.substring(firstSep + separator.length).trimLeft();
+      final String afterSeparator = content
+          .substring(firstSep + separator.length)
+          .trimLeft();
       if (afterSeparator.isNotEmpty) {
         content = afterSeparator;
       }
@@ -163,7 +164,8 @@ class ErrorLogService extends ChangeNotifier with FrameSafeNotifier {
     }
 
     final String separator = '─' * 60;
-    final String header = '[${entry.timestamp}] ${entry.source}\n'
+    final String header =
+        '[${entry.timestamp}] ${entry.source}\n'
         '[truncated: single log entry exceeded $_maxFileBytes bytes]\n';
     final StringBuffer body = StringBuffer(entry.error);
     final String? stackTrace = entry.stackTrace;
@@ -211,7 +213,8 @@ class ErrorLogService extends ChangeNotifier with FrameSafeNotifier {
   /// [directoryOverride] 仅供测试注入临时目录（端到端验面包屑恢复，不碰
   /// path_provider）；生产不传，走 [fushiTestDirectory] / 应用文档目录。
   Future<void> init({Directory? directoryOverride}) async {
-    final dir = directoryOverride ??
+    final dir =
+        directoryOverride ??
         fushiTestDirectory('app-documents') ??
         await getApplicationDocumentsDirectory();
     _appDir = dir;
@@ -246,11 +249,14 @@ class ErrorLogService extends ChangeNotifier with FrameSafeNotifier {
       // 不在（正常清掉），步进文件若残留也单独读出，定位到「哪一步」而不仅「哪本词典」。
       final String? nativeStep = readAndClearBreadcrumb(_importStepFile!);
       if (culprit != null || nativeStep != null) {
-        final String stepSuffix =
-            nativeStep != null ? '，native 最后步骤=$nativeStep' : '';
+        final String stepSuffix = nativeStep != null
+            ? '，native 最后步骤=$nativeStep'
+            : '';
         final String head = culprit ?? '（无导入面包屑残留）';
-        log('DictImport.crashRecovered',
-            '上次词典导入疑似让 app 崩溃（native 进程级，Dart 无法捕获）：$head$stepSuffix');
+        log(
+          'DictImport.crashRecovered',
+          '上次词典导入疑似让 app 崩溃（native 进程级，Dart 无法捕获）：$head$stepSuffix',
+        );
       }
     } catch (e) {
       debugPrint('[ErrorLogService] breadcrumb recovery failed: $e');
@@ -259,13 +265,15 @@ class ErrorLogService extends ChangeNotifier with FrameSafeNotifier {
     // 活跃时（最高频是嵌套查词）没退出就 native 崩了。独立文件、独立分支，折成
     // `Lookup.crashRecovered`（日志 label，非 i18n key），记下崩时栈深度。
     try {
-      final String? lookupCulprit =
-          readAndClearBreadcrumb(_lookupBreadcrumbFile!);
+      final String? lookupCulprit = readAndClearBreadcrumb(
+        _lookupBreadcrumbFile!,
+      );
       if (lookupCulprit != null) {
         log(
-            'Lookup.crashRecovered',
-            '上次查词疑似让 app 崩溃（native 进程级，Dart 无法捕获；嵌套查词最高频，'
-                '文档推断同 603-B 跨线程 teardown 竞态，待 dump 坐实）：$lookupCulprit');
+          'Lookup.crashRecovered',
+          '上次查词疑似让 app 崩溃（native 进程级，Dart 无法捕获；嵌套查词最高频，'
+              '文档推断同 603-B 跨线程 teardown 竞态，待 dump 坐实）：$lookupCulprit',
+        );
       }
     } catch (e) {
       debugPrint('[ErrorLogService] lookup breadcrumb recovery failed: $e');
@@ -277,9 +285,10 @@ class ErrorLogService extends ChangeNotifier with FrameSafeNotifier {
       final String? initStep = readAndClearBreadcrumb(_initStepFile!);
       if (initStep != null) {
         log(
-            'AppInit.hangRecovered',
-            '上次启动疑似卡在某步没返回（无限加载 / 首帧不出，多半是自定义数据根所在磁盘'
-                '掉线致早期 IO 永不返回）：$initStep');
+          'AppInit.hangRecovered',
+          '上次启动疑似卡在某步没返回（无限加载 / 首帧不出，多半是自定义数据根所在磁盘'
+              '掉线致早期 IO 永不返回）：$initStep',
+        );
       }
     } catch (e) {
       debugPrint('[ErrorLogService] init-step breadcrumb recovery failed: $e');
@@ -298,8 +307,10 @@ class ErrorLogService extends ChangeNotifier with FrameSafeNotifier {
 
   void markImportStart(String detail) {
     try {
-      _breadcrumbFile?.writeAsStringSync('[${DateTime.now()}] $detail',
-          flush: true);
+      _breadcrumbFile?.writeAsStringSync(
+        '[${DateTime.now()}] $detail',
+        flush: true,
+      );
     } catch (e) {
       debugPrint('[ErrorLogService] markImportStart failed: $e');
     }
@@ -379,8 +390,10 @@ class ErrorLogService extends ChangeNotifier with FrameSafeNotifier {
   /// 同步落盘（`flush: true`），否则 hang→强杀期间异步缓冲来不及写盘。
   void markInitStep(String step) {
     try {
-      _initStepFile?.writeAsStringSync('[${DateTime.now()}] $step',
-          flush: true);
+      _initStepFile?.writeAsStringSync(
+        '[${DateTime.now()}] $step',
+        flush: true,
+      );
     } catch (e) {
       debugPrint('[ErrorLogService] markInitStep failed: $e');
     }
@@ -457,8 +470,11 @@ class ErrorLogService extends ChangeNotifier with FrameSafeNotifier {
     }
     notifyListenersFrameSafe();
     try {
-      _logFile?.writeAsStringSync(_formatEntryForFile(entry),
-          mode: FileMode.append, flush: true);
+      _logFile?.writeAsStringSync(
+        _formatEntryForFile(entry),
+        mode: FileMode.append,
+        flush: true,
+      );
       _trimLogFileToMaxBytesSync();
     } catch (e) {
       debugPrint('[ErrorLogService] logFatal sync append failed: $e');
@@ -610,10 +626,7 @@ String? localizeAnkiMineError(String? code) {
 ///   mixin 的 update 方法各自复制一份与 mine 几乎相同的 switch（只差 card_overwritten
 ///   + 不记账），一并收口于此。
 ({String message, bool success, bool record, MineToastStatus status})
-    describeMineOutcome(
-  MineOutcome outcome, {
-  bool overwrite = false,
-}) {
+describeMineOutcome(MineOutcome outcome, {bool overwrite = false}) {
   switch (outcome.result) {
     case MineResult.success:
       // TODO-779：卡片已建好，但单词远程音频下载失败（非 200 / 网络异常）时，把

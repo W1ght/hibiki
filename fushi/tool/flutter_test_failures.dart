@@ -5,8 +5,9 @@ import 'dart:io';
 import 'test_flow/flutter_test_failure_filter.dart';
 
 Future<void> main(List<String> args) async {
-  final _FlutterTestFailureOptions options =
-      _FlutterTestFailureOptions.parse(args);
+  final _FlutterTestFailureOptions options = _FlutterTestFailureOptions.parse(
+    args,
+  );
   final Directory outputDir = Directory(options.outputDir)
     ..createSync(recursive: true);
   final File jsonLog = File('${outputDir.path}/flutter_test.jsonl');
@@ -31,22 +32,34 @@ Future<void> main(List<String> args) async {
   final Completer<void> stderrDone = Completer<void>();
   const Utf8Decoder decoder = Utf8Decoder(allowMalformed: true);
 
-  process.stdout.transform(decoder).transform(const LineSplitter()).listen(
-      (String line) {
-    jsonLines.add(line);
-    logSink.writeln(line);
-    if (options.verboseOutput) {
-      stdout.writeln(line);
-    }
-  }, onDone: stdoutDone.complete, onError: stdoutDone.completeError);
+  process.stdout
+      .transform(decoder)
+      .transform(const LineSplitter())
+      .listen(
+        (String line) {
+          jsonLines.add(line);
+          logSink.writeln(line);
+          if (options.verboseOutput) {
+            stdout.writeln(line);
+          }
+        },
+        onDone: stdoutDone.complete,
+        onError: stdoutDone.completeError,
+      );
 
   // Always mirror the child's stderr. Native-assets / compile failures report
   // exclusively there, and swallowing it is what makes a dead run look silent
   // and therefore green.
-  process.stderr.transform(decoder).listen((String chunk) {
-    stderrSink.write(chunk);
-    stderr.write(chunk);
-  }, onDone: stderrDone.complete, onError: stderrDone.completeError);
+  process.stderr
+      .transform(decoder)
+      .listen(
+        (String chunk) {
+          stderrSink.write(chunk);
+          stderr.write(chunk);
+        },
+        onDone: stderrDone.complete,
+        onError: stderrDone.completeError,
+      );
 
   final int exitCode = await process.exitCode;
   await Future.wait(<Future<void>>[stdoutDone.future, stderrDone.future]);
@@ -61,16 +74,20 @@ Future<void> main(List<String> args) async {
   );
 
   if (verdictFailure != null) {
-    stderr.writeln(renderFlutterTestFailureSummary(
-      summary,
-      logPath: jsonLog.path,
-      stderrLogPath: stderrLog.path,
-      minimumTests: options.minimumTests,
-    ));
+    stderr.writeln(
+      renderFlutterTestFailureSummary(
+        summary,
+        logPath: jsonLog.path,
+        stderrLogPath: stderrLog.path,
+        minimumTests: options.minimumTests,
+      ),
+    );
     await stderr.flush();
-    stdout.writeln('$kFlutterTestVerdictPrefix FAILED - $verdictFailure '
-        '(tests completed: ${summary.testsCompleted}, '
-        'flutter exit code: $exitCode)');
+    stdout.writeln(
+      '$kFlutterTestVerdictPrefix FAILED - $verdictFailure '
+      '(tests completed: ${summary.testsCompleted}, '
+      'flutter exit code: $exitCode)',
+    );
     await stdout.flush();
     exit(exitCode != 0 ? exitCode : 1);
   }
@@ -78,8 +95,9 @@ Future<void> main(List<String> args) async {
   stdout
     ..writeln('Full JSON log: ${jsonLog.path}')
     ..writeln(
-        '$kFlutterTestVerdictPrefix PASSED - ${summary.testsCompleted} tests ran, '
-        'all tests passed');
+      '$kFlutterTestVerdictPrefix PASSED - ${summary.testsCompleted} tests ran, '
+      'all tests passed',
+    );
   await stdout.flush();
 }
 

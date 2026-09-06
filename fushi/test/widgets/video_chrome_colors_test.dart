@@ -24,11 +24,17 @@ void main() {
         brightness: Brightness.light,
       );
       // 旧实现的 cs.primary 在浅色主题是深色（tone 40）——这正是 bug。
-      expect(light.primary.computeLuminance(), lessThan(0.25),
-          reason: '前提：浅色主题 primary 本身是深色（旧实现在深色 scrim 上不可读）');
+      expect(
+        light.primary.computeLuminance(),
+        lessThan(0.25),
+        reason: '前提：浅色主题 primary 本身是深色（旧实现在深色 scrim 上不可读）',
+      );
       final Color accent = videoChromeAccentColor(light);
-      expect(accent.computeLuminance(), greaterThan(0.25),
-          reason: '修复后：浅色主题下 chrome 强调色必须是亮 tone');
+      expect(
+        accent.computeLuminance(),
+        greaterThan(0.25),
+        reason: '修复后：浅色主题下 chrome 强调色必须是亮 tone',
+      );
     });
 
     test('多个种子色的浅色主题强调色均为亮色', () {
@@ -68,10 +74,16 @@ void main() {
       final String src = File(
         'lib/src/pages/implementations/video_fushi/controls_theme.part.dart',
       ).readAsStringSync();
-      expect(src, isNot(contains('seekBarPositionColor: cs.primary')),
-          reason: '进度条前景必须走 chrome 固定亮色 helper');
-      expect(src, isNot(contains('buttonBarButtonColor: cs.primary')),
-          reason: '按钮条前景必须走 chrome 固定亮色 helper');
+      expect(
+        src,
+        isNot(contains('seekBarPositionColor: cs.primary')),
+        reason: '进度条前景必须走 chrome 固定亮色 helper',
+      );
+      expect(
+        src,
+        isNot(contains('buttonBarButtonColor: cs.primary')),
+        reason: '按钮条前景必须走 chrome 固定亮色 helper',
+      );
       expect(src, contains('buttonBarButtonColor: _videoChromeAccent(cs)'));
     });
 
@@ -91,9 +103,13 @@ void main() {
           'alpha: 0.92',
           'alpha: 0.94',
         ]) {
-          expect(src, isNot(contains(stray)),
-              reason: '${entry.key} 的浮层表面 alpha 必须走 kVideoOverlay* 两档常量，'
-                  '不再写字面 $stray');
+          expect(
+            src,
+            isNot(contains(stray)),
+            reason:
+                '${entry.key} 的浮层表面 alpha 必须走 kVideoOverlay* 两档常量，'
+                '不再写字面 $stray',
+          );
         }
       }
     });

@@ -10,10 +10,7 @@ import 'dart:ui';
 /// produce this type; [mangaPayloadToJson] serialises it back to `manga.json`.
 class MokuroPayload {
   /// Initialise this object.
-  const MokuroPayload({
-    required this.images,
-    this.ocr,
-  });
+  const MokuroPayload({required this.images, this.ocr});
 
   /// All images in sequential order.
   final List<MokuroImage> images;
@@ -179,8 +176,9 @@ List<String>? resolveMokuroPageRoot({
   required bool Function(String relPath) pageExists,
 }) {
   if (payload.images.isEmpty) return null;
-  final List<List<String>> candidates =
-      mokuroPageRootCandidates(volumeName: volumeName);
+  final List<List<String>> candidates = mokuroPageRootCandidates(
+    volumeName: volumeName,
+  );
   final String firstUrl = payload.images.first.url;
   List<String>? firstPageHit;
   for (final List<String> candidate in candidates) {
@@ -233,8 +231,9 @@ MokuroPayload parseMokuro(String jsonStr) {
 
     final double width = _asDouble(rawPage['img_width']);
     final double height = _asDouble(rawPage['img_height']);
-    final String url =
-        normalizeMangaUrl((rawPage['img_path'] as String?) ?? '');
+    final String url = normalizeMangaUrl(
+      (rawPage['img_path'] as String?) ?? '',
+    );
 
     final List<MokuroBlock> blocks = <MokuroBlock>[];
     final Object? rawBlocks = rawPage['blocks'];
@@ -249,11 +248,7 @@ MokuroPayload parseMokuro(String jsonStr) {
     }
 
     images.add(
-      MokuroImage(
-        url: url,
-        size: Size(width, height),
-        blocks: blocks,
-      ),
+      MokuroImage(url: url, size: Size(width, height), blocks: blocks),
     );
   }
 
@@ -299,18 +294,11 @@ MokuroPayload parseMangaJson(String jsonStr) {
     }
 
     images.add(
-      MokuroImage(
-        url: url,
-        size: Size(width, height),
-        blocks: blocks,
-      ),
+      MokuroImage(url: url, size: Size(width, height), blocks: blocks),
     );
   }
 
-  return MokuroPayload(
-    images: images,
-    ocr: _parseOcrMetadata(decoded['ocr']),
-  );
+  return MokuroPayload(images: images, ocr: _parseOcrMetadata(decoded['ocr']));
 }
 
 /// Serialise a [MokuroPayload] into the internal `manga.json` structure

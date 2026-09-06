@@ -85,8 +85,10 @@ void main() {
     String path,
     VideoProbeFacts facts,
   ) async {
-    final VideoSpecsService service =
-        VideoSpecsService(db, probe: (String p) async => facts);
+    final VideoSpecsService service = VideoSpecsService(
+      db,
+      probe: (String p) async => facts,
+    );
     await tester.runAsync(() => service.resolve(path));
     return service;
   }
@@ -112,8 +114,11 @@ void main() {
       final String path = writeFile('a.mkv');
       final VideoSpecsService service = await serviceWith(tester, path, hdr4k);
 
-      await pumpWith(tester, service,
-          VideoSpecsBadgeStrip(service: service, filePath: path));
+      await pumpWith(
+        tester,
+        service,
+        VideoSpecsBadgeStrip(service: service, filePath: path),
+      );
 
       expect(find.text('4K'), findsOneWidget);
       expect(find.text('HDR10'), findsOneWidget);
@@ -134,8 +139,11 @@ void main() {
         ),
       );
 
-      await pumpWith(tester, service,
-          VideoSpecsBadgeStrip(service: service, filePath: path));
+      await pumpWith(
+        tester,
+        service,
+        VideoSpecsBadgeStrip(service: service, filePath: path),
+      );
 
       expect(find.text('1080p'), findsOneWidget);
       expect(find.text('SDR'), findsNothing);
@@ -144,18 +152,21 @@ void main() {
 
     testWidgets('规格未知时整个不占位', (WidgetTester tester) async {
       final String path = writeFile('c.mkv');
-      final VideoSpecsService service =
-          await serviceWith(tester, path, VideoProbeFacts.empty);
+      final VideoSpecsService service = await serviceWith(
+        tester,
+        path,
+        VideoProbeFacts.empty,
+      );
 
-      await pumpWith(tester, service,
-          VideoSpecsBadgeStrip(service: service, filePath: path));
+      await pumpWith(
+        tester,
+        service,
+        VideoSpecsBadgeStrip(service: service, filePath: path),
+      );
 
       // 没有任何文字，且自身尺寸为零——卡片布局一格不该被撑开。
       expect(find.byType(Text), findsNothing);
-      expect(
-        tester.getSize(find.byType(VideoSpecsBadgeStrip)),
-        Size.zero,
-      );
+      expect(tester.getSize(find.byType(VideoSpecsBadgeStrip)), Size.zero);
     });
 
     testWidgets('流 URL 不探也不显示', (WidgetTester tester) async {
@@ -186,19 +197,28 @@ void main() {
       final String path = writeFile('d.mkv');
       final VideoSpecsService service = await serviceWith(tester, path, hdr4k);
 
-      await pumpWith(tester, service,
-          VideoSpecsInlineLine(service: service, filePath: path));
+      await pumpWith(
+        tester,
+        service,
+        VideoSpecsInlineLine(service: service, filePath: path),
+      );
 
       expect(find.text('4K · HDR10 · HEVC'), findsOneWidget);
     });
 
     testWidgets('未探到时不占位（集卡高度钳死，多一行会顶掉简介）', (WidgetTester tester) async {
       final String path = writeFile('e.mkv');
-      final VideoSpecsService service =
-          await serviceWith(tester, path, VideoProbeFacts.empty);
+      final VideoSpecsService service = await serviceWith(
+        tester,
+        path,
+        VideoProbeFacts.empty,
+      );
 
-      await pumpWith(tester, service,
-          VideoSpecsInlineLine(service: service, filePath: path));
+      await pumpWith(
+        tester,
+        service,
+        VideoSpecsInlineLine(service: service, filePath: path),
+      );
 
       expect(tester.getSize(find.byType(VideoSpecsInlineLine)), Size.zero);
     });
@@ -210,7 +230,10 @@ void main() {
       final VideoSpecsService service = await serviceWith(tester, path, hdr4k);
 
       await pumpWith(
-          tester, service, VideoSpecsPanel(service: service, filePath: path));
+        tester,
+        service,
+        VideoSpecsPanel(service: service, filePath: path),
+      );
 
       expect(find.text('4K (3840×2160)'), findsOneWidget);
       expect(find.text('HDR10'), findsOneWidget);
@@ -225,7 +248,10 @@ void main() {
       final VideoSpecsService service = await serviceWith(tester, path, hdr4k);
 
       await pumpWith(
-          tester, service, VideoSpecsPanel(service: service, filePath: path));
+        tester,
+        service,
+        VideoSpecsPanel(service: service, filePath: path),
+      );
 
       expect(find.textContaining('日本語 · FLAC · 5.1'), findsOneWidget);
       expect(find.textContaining('ENG · AAC · 2.0'), findsOneWidget);
@@ -248,18 +274,27 @@ void main() {
       final VideoSpecsService service = await serviceWith(tester, path, hdr4k);
 
       await pumpWith(
-          tester, service, VideoSpecsPanel(service: service, filePath: path));
+        tester,
+        service,
+        VideoSpecsPanel(service: service, filePath: path),
+      );
 
       expect(find.textContaining('CHI · SRT'), findsOneWidget);
     });
 
     testWidgets('规格未探到时整块不渲染', (WidgetTester tester) async {
       final String path = writeFile('i.mkv');
-      final VideoSpecsService service =
-          await serviceWith(tester, path, VideoProbeFacts.empty);
+      final VideoSpecsService service = await serviceWith(
+        tester,
+        path,
+        VideoProbeFacts.empty,
+      );
 
       await pumpWith(
-          tester, service, VideoSpecsPanel(service: service, filePath: path));
+        tester,
+        service,
+        VideoSpecsPanel(service: service, filePath: path),
+      );
 
       expect(tester.getSize(find.byType(VideoSpecsPanel)), Size.zero);
     });

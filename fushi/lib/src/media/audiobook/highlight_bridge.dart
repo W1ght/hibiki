@@ -468,7 +468,8 @@ class HighlightBridge {
     InAppWebViewController controller,
   ) async {
     final Object? raw = await controller.evaluateJavascript(
-      source: '(function(){try{var r=window.__fushiGetSelectionNormRange();'
+      source:
+          '(function(){try{var r=window.__fushiGetSelectionNormRange();'
           'return r?JSON.stringify(r):"null";}catch(e){return "null";}})();',
     );
     if (raw is! String || raw.isEmpty || raw == 'null') return null;
@@ -521,25 +522,32 @@ class HighlightBridge {
             backfillCount++;
           }
         } catch (e, stack) {
-          ErrorLogService.instance
-              .log('HighlightBridge.backfillDecode', e, stack);
+          ErrorLogService.instance.log(
+            'HighlightBridge.backfillDecode',
+            e,
+            stack,
+          );
         }
       }
     }
     if (backfillCount > 0) {
       debugPrint(
-          '[fushi-hl] backfilled $backfillCount favorites via text search');
+        '[fushi-hl] backfilled $backfillCount favorites via text search',
+      );
     }
     final String json = jsonEncode(payload);
     // G14：深/浅判定在 Dart 侧用与原生滚动条同一个单一真相
     // （ReaderContentStyles.isDarkBackground，Rec.601/0.5）算好，注入 bool；
     // JS 侧不再持有第二套亮度公式。
-    final bool backgroundIsDark =
-        ReaderContentStyles.isDarkBackground(backgroundHex);
-    final String escapedCustom =
-        customHighlightCss != null ? jsonEncode(customHighlightCss) : 'null';
+    final bool backgroundIsDark = ReaderContentStyles.isDarkBackground(
+      backgroundHex,
+    );
+    final String escapedCustom = customHighlightCss != null
+        ? jsonEncode(customHighlightCss)
+        : 'null';
     await controller.evaluateJavascript(
-      source: 'window.__fushiHighlightBgDark=$backgroundIsDark;'
+      source:
+          'window.__fushiHighlightBgDark=$backgroundIsDark;'
           'window.__fushiCustomHighlightColor=$escapedCustom;'
           'window.__fushiApplyHighlights && window.__fushiApplyHighlights($json);',
     );

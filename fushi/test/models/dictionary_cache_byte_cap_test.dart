@@ -18,9 +18,7 @@ import 'package:fushi_dictionary/fushi_dictionary.dart';
 import 'package:fushi/src/models/dictionary_repository.dart';
 
 FushiDatabase _testDb() {
-  return FushiDatabase.forTesting(
-    DatabaseConnection(NativeDatabase.memory()),
-  );
+  return FushiDatabase.forTesting(DatabaseConnection(NativeDatabase.memory()));
 }
 
 /// 造一条估算体积由 [popupJsonChars] 主导的搜索结果（估算 ≈ 2×chars）。
@@ -63,21 +61,22 @@ List<FushiLookupResult> _bigFfiResults(String term, int glossaryChars) {
 
 void main() {
   group('size estimators', () {
-    test(
-        'estimateDictionarySearchResultBytes counts popupJson at 2 bytes '
+    test('estimateDictionarySearchResultBytes counts popupJson at 2 bytes '
         'per UTF-16 code unit', () {
       final DictionarySearchResult without = _bigSearchResult('猫', 0)
         ..popupJson = null;
       final DictionarySearchResult with100k = _bigSearchResult('猫', 100000);
-      final int delta = estimateDictionarySearchResultBytes(with100k) -
+      final int delta =
+          estimateDictionarySearchResultBytes(with100k) -
           estimateDictionarySearchResultBytes(without);
       expect(delta, 200000, reason: 'popupJson 是缓存大头，必须按 UTF-16 每字符 2 字节精确计入');
-      expect(estimateDictionarySearchResultBytes(with100k),
-          greaterThanOrEqualTo(200000));
+      expect(
+        estimateDictionarySearchResultBytes(with100k),
+        greaterThanOrEqualTo(200000),
+      );
     });
 
-    test(
-        'estimateDictionarySearchResultBytes counts entries and kanji '
+    test('estimateDictionarySearchResultBytes counts entries and kanji '
         'results and never returns a trivial size', () {
       final DictionarySearchResult result = DictionarySearchResult(
         searchTerm: '猫',
@@ -97,19 +96,24 @@ void main() {
         ],
       );
       // meaning 500 字符 ×2 = 1000 字节起步，加对象开销必须只多不少。
-      expect(estimateDictionarySearchResultBytes(result),
-          greaterThanOrEqualTo(1000));
+      expect(
+        estimateDictionarySearchResultBytes(result),
+        greaterThanOrEqualTo(1000),
+      );
     });
 
-    test(
-        'estimateFushiLookupResultsBytes counts glossary strings at 2 bytes '
+    test('estimateFushiLookupResultsBytes counts glossary strings at 2 bytes '
         'per code unit', () {
       final int small = estimateFushiLookupResultsBytes(_bigFfiResults('a', 0));
-      final int big =
-          estimateFushiLookupResultsBytes(_bigFfiResults('a', 100000));
+      final int big = estimateFushiLookupResultsBytes(
+        _bigFfiResults('a', 100000),
+      );
       expect(big - small, 200000);
-      expect(estimateFushiLookupResultsBytes(const []), greaterThan(0),
-          reason: '空列表也有列表本身的开销，估算恒为正');
+      expect(
+        estimateFushiLookupResultsBytes(const []),
+        greaterThan(0),
+        reason: '空列表也有列表本身的开销，估算恒为正',
+      );
     });
   });
 
@@ -129,20 +133,27 @@ void main() {
     const int bigChars = 3 * 1000 * 1000;
 
     test('low-memory mode caps the search cache at 8MB (oldest evicted)', () {
-      final DictionaryRepository repo =
-          DictionaryRepository(db, isLowMemory: () => true);
+      final DictionaryRepository repo = DictionaryRepository(
+        db,
+        isLowMemory: () => true,
+      );
       repo.cacheSearchResult('a', _bigSearchResult('a', bigChars));
       expect(repo.getCachedSearch('a'), isNotNull);
       repo.cacheSearchResult('b', _bigSearchResult('b', bigChars));
-      expect(repo.getCachedSearch('a'), isNull,
-          reason: '低内存 8MB 上限下两条 6MB 结果放不下，最旧的必须被淘汰');
+      expect(
+        repo.getCachedSearch('a'),
+        isNull,
+        reason: '低内存 8MB 上限下两条 6MB 结果放不下，最旧的必须被淘汰',
+      );
       expect(repo.getCachedSearch('b'), isNotNull);
       repo.dispose();
     });
 
     test('normal mode keeps the same two results (32MB cap)', () {
-      final DictionaryRepository repo =
-          DictionaryRepository(db, isLowMemory: () => false);
+      final DictionaryRepository repo = DictionaryRepository(
+        db,
+        isLowMemory: () => false,
+      );
       repo.cacheSearchResult('a', _bigSearchResult('a', bigChars));
       repo.cacheSearchResult('b', _bigSearchResult('b', bigChars));
       expect(repo.getCachedSearch('a'), isNotNull);
@@ -151,8 +162,10 @@ void main() {
     });
 
     test('low-memory mode caps the ffi lookup cache at 8MB', () {
-      final DictionaryRepository repo =
-          DictionaryRepository(db, isLowMemory: () => true);
+      final DictionaryRepository repo = DictionaryRepository(
+        db,
+        isLowMemory: () => true,
+      );
       repo.cacheFfiLookup('a', _bigFfiResults('a', bigChars));
       expect(repo.getCachedFfiLookup('a'), isNotNull);
       repo.cacheFfiLookup('b', _bigFfiResults('b', bigChars));
@@ -162,8 +175,10 @@ void main() {
     });
 
     test('normal mode keeps both ffi lookup results', () {
-      final DictionaryRepository repo =
-          DictionaryRepository(db, isLowMemory: () => false);
+      final DictionaryRepository repo = DictionaryRepository(
+        db,
+        isLowMemory: () => false,
+      );
       repo.cacheFfiLookup('a', _bigFfiResults('a', bigChars));
       repo.cacheFfiLookup('b', _bigFfiResults('b', bigChars));
       expect(repo.getCachedFfiLookup('a'), isNotNull);
@@ -173,8 +188,10 @@ void main() {
 
     test('flipping low-memory at runtime shrinks on the next cache write', () {
       bool lowMemory = false;
-      final DictionaryRepository repo =
-          DictionaryRepository(db, isLowMemory: () => lowMemory);
+      final DictionaryRepository repo = DictionaryRepository(
+        db,
+        isLowMemory: () => lowMemory,
+      );
       repo.cacheSearchResult('a', _bigSearchResult('a', bigChars));
       repo.cacheSearchResult('b', _bigSearchResult('b', bigChars));
       // 32MB 下两条都在。注意 get 会刷新 recency，按 a→b 顺序各读一次，
@@ -184,18 +201,22 @@ void main() {
       lowMemory = true;
       repo.cacheSearchResult('c', _bigSearchResult('c', 100));
       // 下一次写入即应用 8MB：a 被淘汰；b（6MB）+ c（小）still ≤ 8MB。
-      expect(repo.getCachedSearch('a'), isNull,
-          reason: '低内存开关翻转后，下一次缓存写入必须立即按 8MB 收缩');
+      expect(
+        repo.getCachedSearch('a'),
+        isNull,
+        reason: '低内存开关翻转后，下一次缓存写入必须立即按 8MB 收缩',
+      );
       expect(repo.getCachedSearch('b'), isNotNull);
       expect(repo.getCachedSearch('c'), isNotNull);
       repo.dispose();
     });
 
-    test(
-        'clearDictionaryResultsCache still empties both caches '
+    test('clearDictionaryResultsCache still empties both caches '
         '(BUG-171/BUG-177 clear semantics unchanged)', () {
-      final DictionaryRepository repo =
-          DictionaryRepository(db, isLowMemory: () => false);
+      final DictionaryRepository repo = DictionaryRepository(
+        db,
+        isLowMemory: () => false,
+      );
       repo.cacheSearchResult('a', _bigSearchResult('a', 100));
       repo.cacheFfiLookup('a', _bigFfiResults('a', 100));
       repo.clearDictionaryResultsCache();
@@ -215,8 +236,11 @@ void main() {
     // 接 isLowMemory，否则低内存模式永远拿不到 8MB 上限。
     test('both DictionaryRepository construction sites pass isLowMemory', () {
       final File f = File('lib/src/models/app_model.dart');
-      expect(f.existsSync(), isTrue,
-          reason: 'app_model.dart not found at ${f.absolute.path}');
+      expect(
+        f.existsSync(),
+        isTrue,
+        reason: 'app_model.dart not found at ${f.absolute.path}',
+      );
       final String src = f.readAsStringSync();
 
       const String marker = 'DictionaryRepository(';
@@ -227,19 +251,29 @@ void main() {
         if (at < 0) break;
         // 跳过 import/注释里的出现：只统计 `DictionaryRepository(` 后真正的
         // 构造实参段（到配对右括号为止的窗口，用 300 字符窗口近似即可）。
-        final String window =
-            src.substring(at, (at + 300).clamp(0, src.length));
+        final String window = src.substring(
+          at,
+          (at + 300).clamp(0, src.length),
+        );
         if (window.contains('_database')) {
           found++;
-          expect(window.contains('isLowMemory'), isTrue,
-              reason: '第 $found 个 DictionaryRepository 构造点未接 isLowMemory，'
-                  '低内存模式将无法收缩查词缓存（32MB→8MB）');
+          expect(
+            window.contains('isLowMemory'),
+            isTrue,
+            reason:
+                '第 $found 个 DictionaryRepository 构造点未接 isLowMemory，'
+                '低内存模式将无法收缩查词缓存（32MB→8MB）',
+          );
         }
         from = at + marker.length;
       }
-      expect(found, 2,
-          reason: 'app_model.dart 应有主进程 + popup 进程两个构造点；数量变化'
-              '时请同步更新本守卫');
+      expect(
+        found,
+        2,
+        reason:
+            'app_model.dart 应有主进程 + popup 进程两个构造点；数量变化'
+            '时请同步更新本守卫',
+      );
     });
   });
 }

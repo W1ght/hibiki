@@ -56,14 +56,14 @@ class PlatformServices {
     BaseAnkiRepository Function()? createMobileAnkiConnectRepository,
     bool isMobile = false,
     AndroidClipboardService? androidClipboard,
-  })  : _createDefaultAnkiRepository = createAnkiRepository,
-        _createMobileAnkiConnectRepository = createMobileAnkiConnectRepository,
-        _isMobile = isMobile,
-        _androidClipboard = androidClipboard,
-        assert(
-          !isMobile || createMobileAnkiConnectRepository != null,
-          'Mobile requires an AnkiConnect repository factory.',
-        );
+  }) : _createDefaultAnkiRepository = createAnkiRepository,
+       _createMobileAnkiConnectRepository = createMobileAnkiConnectRepository,
+       _isMobile = isMobile,
+       _androidClipboard = androidClipboard,
+       assert(
+         !isMobile || createMobileAnkiConnectRepository != null,
+         'Mobile requires an AnkiConnect repository factory.',
+       );
 
   /// Creates the active Anki backend. 移动端保留各自的原生后端（AnkiDroid /
   /// AnkiMobile）作为升级安全的默认值，但可显式改用一台可达的 AnkiConnect。
@@ -82,10 +82,7 @@ class PlatformServices {
   /// 运行时后端选择。判据只有 [AnkiSettings.ankiConnectUsableOnMobile] 一份——
   /// 这里不再自己写一遍 `value && apiKey.isNotEmpty`，否则与 UI 门控、启动期修复
   /// 三处迟早漂开（BUG-1608）。
-  void setUseAnkiConnectOnMobile(
-    bool value, {
-    String apiKey = '',
-  }) {
+  void setUseAnkiConnectOnMobile(bool value, {String apiKey = ''}) {
     if (!_isMobile) return;
     _useAnkiConnectOnMobile = AnkiSettings(
       useAnkiConnectOnMobile: value,
@@ -100,8 +97,8 @@ class PlatformServices {
   Future<void> init() async {
     await _androidClipboard?.init();
     if (_isMobile) {
-      final AnkiSettings settings =
-          await _createDefaultAnkiRepository().loadSettings();
+      final AnkiSettings settings = await _createDefaultAnkiRepository()
+          .loadSettings();
       setUseAnkiConnectOnMobile(
         settings.useAnkiConnectOnMobile,
         apiKey: settings.ankiConnectApiKey,
@@ -126,8 +123,9 @@ class PlatformServices {
   factory PlatformServices.forCurrentPlatform() {
     if (Platform.isAndroid) {
       final AndroidDeviceInfoService deviceInfo = AndroidDeviceInfoService();
-      final AndroidClipboardService clipboard =
-          AndroidClipboardService(deviceInfo);
+      final AndroidClipboardService clipboard = AndroidClipboardService(
+        deviceInfo,
+      );
       return PlatformServices(
         directory: AndroidDirectoryService(),
         lifecycle: AndroidLifecycleService(),

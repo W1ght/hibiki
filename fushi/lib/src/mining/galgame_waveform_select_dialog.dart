@@ -67,8 +67,10 @@ class _GalWaveformSelectDialogState extends State<_GalWaveformSelectDialog> {
   @override
   void initState() {
     super.initState();
-    _totalMs =
-        pcmDurationMs(widget.slice.pcm.length, widget.slice.format.byteRate);
+    _totalMs = pcmDurationMs(
+      widget.slice.pcm.length,
+      widget.slice.format.byteRate,
+    );
     _dbFrames = pcmToEnergyEnvelope(widget.slice.pcm, widget.slice.format);
     _range = defaultVadRange(
       _dbFrames,
@@ -138,8 +140,10 @@ class _GalWaveformSelectDialogState extends State<_GalWaveformSelectDialog> {
           );
         case _GalDragMode.move:
           final int duration = _range.durationMs;
-          final int start =
-              (ms - _moveGrabOffsetMs).clamp(0, _totalMs - duration);
+          final int start = (ms - _moveGrabOffsetMs).clamp(
+            0,
+            _totalMs - duration,
+          );
           _range = GalWaveformRange(startMs: start, endMs: start + duration);
       }
     });

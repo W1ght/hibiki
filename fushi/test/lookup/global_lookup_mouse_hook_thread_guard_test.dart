@@ -43,8 +43,11 @@ void main() {
     final String hook = read('low_level_mouse_hook.cpp');
     expect(hook.contains('SetWindowsHookEx(WH_MOUSE_LL'), isTrue);
     expect(hook.contains('std::thread'), isTrue, reason: '钩子必须有自己的承载线程');
-    expect(hook.contains('GetMessage('), isTrue,
-        reason: '低级钩子事件靠线程消息队列分发，线程必须有消息循环');
+    expect(
+      hook.contains('GetMessage('),
+      isTrue,
+      reason: '低级钩子事件靠线程消息队列分发，线程必须有消息循环',
+    );
   });
 
   test('钩子回调只异步投递，不同步等窗口线程', () {

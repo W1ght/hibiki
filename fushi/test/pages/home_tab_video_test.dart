@@ -11,8 +11,10 @@ import 'package:fushi/src/pages/implementations/home_page.dart';
 void main() {
   group('homeActiveTabs', () {
     test('关闭实验视频：无视频 tab；下载 tab 恒在（统一下载中心），顺序为 首页→书架→漫画→游戏→下载→词典→设置', () {
-      final List<HomeTab> tabs =
-          homeActiveTabs(videoEnabled: false, gamesEnabled: true);
+      final List<HomeTab> tabs = homeActiveTabs(
+        videoEnabled: false,
+        gamesEnabled: true,
+      );
       expect(tabs, <HomeTab>[
         HomeTab.home,
         HomeTab.books,
@@ -26,8 +28,10 @@ void main() {
     });
 
     test('开启实验视频：视频+下载 tab 出现，顺序为 首页→书架→漫画→视频→游戏→下载→词典→设置', () {
-      final List<HomeTab> tabs =
-          homeActiveTabs(videoEnabled: true, gamesEnabled: true);
+      final List<HomeTab> tabs = homeActiveTabs(
+        videoEnabled: true,
+        gamesEnabled: true,
+      );
       expect(tabs, <HomeTab>[
         HomeTab.home,
         HomeTab.books,
@@ -42,8 +46,10 @@ void main() {
     });
 
     test('视频后紧随游戏，再到下载与词典（用户要求：游戏移到视频后面）', () {
-      final List<HomeTab> tabs =
-          homeActiveTabs(videoEnabled: true, gamesEnabled: true);
+      final List<HomeTab> tabs = homeActiveTabs(
+        videoEnabled: true,
+        gamesEnabled: true,
+      );
       final int books = tabs.indexOf(HomeTab.books);
       final int manga = tabs.indexOf(HomeTab.manga);
       final int video = tabs.indexOf(HomeTab.video);
@@ -58,15 +64,16 @@ void main() {
     });
 
     test('视频开关只增删视频 tab（下载 tab 不随动，统一下载中心），不动其它 tab 顺序', () {
-      final List<HomeTab> off =
-          homeActiveTabs(videoEnabled: false, gamesEnabled: true);
-      final List<HomeTab> on =
-          homeActiveTabs(videoEnabled: true, gamesEnabled: true);
-      // 去掉视频后两者应完全一致（视频是仅有的差异；下载恒在）。
-      expect(
-        on.where((HomeTab t) => t != HomeTab.video).toList(),
-        equals(off),
+      final List<HomeTab> off = homeActiveTabs(
+        videoEnabled: false,
+        gamesEnabled: true,
       );
+      final List<HomeTab> on = homeActiveTabs(
+        videoEnabled: true,
+        gamesEnabled: true,
+      );
+      // 去掉视频后两者应完全一致（视频是仅有的差异；下载恒在）。
+      expect(on.where((HomeTab t) => t != HomeTab.video).toList(), equals(off));
     });
   });
 }

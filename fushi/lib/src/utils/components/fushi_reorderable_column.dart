@@ -2,8 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 /// 行内容构造器：返回**不含任何拖拽监听**的纯行内容（开关/按钮照常可点）。
-typedef FushiReorderItemBuilder = Widget Function(
-    BuildContext context, int index);
+typedef FushiReorderItemBuilder =
+    Widget Function(BuildContext context, int index);
 
 /// 为某个 index 返回稳定 Key（行身份，用于测高与浮层复制）。
 typedef FushiReorderKeyBuilder = Key Function(int index);
@@ -67,8 +67,7 @@ class FushiReorderableColumn extends StatefulWidget {
   final BorderRadius? feedbackBorderRadius;
 
   @override
-  State<FushiReorderableColumn> createState() =>
-      _FushiReorderableColumnState();
+  State<FushiReorderableColumn> createState() => _FushiReorderableColumnState();
 }
 
 class _FushiReorderableColumnState extends State<FushiReorderableColumn> {
@@ -190,8 +189,10 @@ class _FushiReorderableColumnState extends State<FushiReorderableColumn> {
     _maybeAutoScroll(globalPosition);
     final double draggedH = _heightOf(dragged);
     final double maxTop = (_totalHeight - draggedH).clamp(0.0, double.infinity);
-    final double newTop =
-        (_localY(globalPosition) - _grabDy).clamp(0.0, maxTop);
+    final double newTop = (_localY(globalPosition) - _grabDy).clamp(
+      0.0,
+      maxTop,
+    );
 
     // 浮层中心落在哪个槽 → 目标 display 下标。用 `<=`（含边界）而非 `<`：
     // 拖到最顶端时 newTop 被 clamp 到 0，等高行的浮层中心恰好停在第一行中点
@@ -256,7 +257,9 @@ class _FushiReorderableColumnState extends State<FushiReorderableColumn> {
     // 尺寸混拼——scale<1 时底边高估、边缘带够不到（自动滚动失效），scale>1
     // 时边缘带侵入视口中部（误触发）。transformRect 连尺寸一起过变换。
     final Rect viewport = MatrixUtils.transformRect(
-        ro.getTransformTo(null), Offset.zero & ro.size);
+      ro.getTransformTo(null),
+      Offset.zero & ro.size,
+    );
     double step = 0;
     if (globalPosition.dy < viewport.top + _autoScrollEdge &&
         pos.pixels > pos.minScrollExtent) {
@@ -280,8 +283,10 @@ class _FushiReorderableColumnState extends State<FushiReorderableColumn> {
     final ScrollableState? sc = _scrollable;
     if (sc == null || !sc.mounted) return;
     final ScrollPosition pos = sc.position;
-    final double next = (pos.pixels + _autoScrollStepSigned)
-        .clamp(pos.minScrollExtent, pos.maxScrollExtent);
+    final double next = (pos.pixels + _autoScrollStepSigned).clamp(
+      pos.minScrollExtent,
+      pos.maxScrollExtent,
+    );
     if (next != pos.pixels) pos.jumpTo(next);
     _updateDrag(_lastPointerGlobal);
   }
@@ -319,7 +324,8 @@ class _FushiReorderableColumnState extends State<FushiReorderableColumn> {
                 color: Theme.of(context).colorScheme.surface,
                 shape: widget.feedbackBorderRadius != null
                     ? RoundedRectangleBorder(
-                        borderRadius: widget.feedbackBorderRadius!)
+                        borderRadius: widget.feedbackBorderRadius!,
+                      )
                     : null,
                 clipBehavior: widget.feedbackBorderRadius != null
                     ? Clip.antiAlias
@@ -354,12 +360,12 @@ class _FushiReorderableColumnState extends State<FushiReorderableColumn> {
   /// （= 模拟左键拖），两指滚动走 `PointerScrollEvent` 不进 MultiDrag 竞技场，不冲突。
   static const Set<PointerDeviceKind> _immediateDragDevices =
       <PointerDeviceKind>{
-    PointerDeviceKind.mouse,
-    PointerDeviceKind.trackpad,
-    PointerDeviceKind.stylus,
-    PointerDeviceKind.invertedStylus,
-    PointerDeviceKind.unknown,
-  };
+        PointerDeviceKind.mouse,
+        PointerDeviceKind.trackpad,
+        PointerDeviceKind.stylus,
+        PointerDeviceKind.invertedStylus,
+        PointerDeviceKind.unknown,
+      };
 
   /// 触摸屏：长按起拖（避免与列表滚动争用，快速滑动仍交给滚动）。
   static const Set<PointerDeviceKind> _delayedDragDevices = <PointerDeviceKind>{
@@ -395,24 +401,29 @@ class _FushiReorderableColumnState extends State<FushiReorderableColumn> {
         // 鼠标等精确指针：按下即拖（修 Win 端必须长按等待才能排序）。
         ImmediateMultiDragGestureRecognizer:
             GestureRecognizerFactoryWithHandlers<
-                ImmediateMultiDragGestureRecognizer>(
-          () => ImmediateMultiDragGestureRecognizer(
-              supportedDevices: _immediateDragDevices),
-          (ImmediateMultiDragGestureRecognizer instance) {
-            instance.onStart =
-                (Offset position) => _onMultiDragStart(original, position);
-          },
-        ),
+              ImmediateMultiDragGestureRecognizer
+            >(
+              () => ImmediateMultiDragGestureRecognizer(
+                supportedDevices: _immediateDragDevices,
+              ),
+              (ImmediateMultiDragGestureRecognizer instance) {
+                instance.onStart = (Offset position) =>
+                    _onMultiDragStart(original, position);
+              },
+            ),
         // 触摸屏：长按再拖。
-        DelayedMultiDragGestureRecognizer: GestureRecognizerFactoryWithHandlers<
-            DelayedMultiDragGestureRecognizer>(
-          () => DelayedMultiDragGestureRecognizer(
-              supportedDevices: _delayedDragDevices),
-          (DelayedMultiDragGestureRecognizer instance) {
-            instance.onStart =
-                (Offset position) => _onMultiDragStart(original, position);
-          },
-        ),
+        DelayedMultiDragGestureRecognizer:
+            GestureRecognizerFactoryWithHandlers<
+              DelayedMultiDragGestureRecognizer
+            >(
+              () => DelayedMultiDragGestureRecognizer(
+                supportedDevices: _delayedDragDevices,
+              ),
+              (DelayedMultiDragGestureRecognizer instance) {
+                instance.onStart = (Offset position) =>
+                    _onMultiDragStart(original, position);
+              },
+            ),
       },
       child: slot,
     );

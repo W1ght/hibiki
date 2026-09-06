@@ -37,8 +37,11 @@ void main() {
     final int assemble = historyPage.indexOf('epubProgressByBookKey[key] =');
     final int filter = historyPage.indexOf('!srtBookKeys.contains(key)');
     expect(assemble, greaterThanOrEqualTo(0));
-    expect(filter, greaterThan(assemble),
-        reason: '进度映射装配必须早于 EPUB 卡过滤，才能覆盖被过滤成 SRT 卡的有声书');
+    expect(
+      filter,
+      greaterThan(assemble),
+      reason: '进度映射装配必须早于 EPUB 卡过滤，才能覆盖被过滤成 SRT 卡的有声书',
+    );
   });
 
   test('_srtBookMediaItem 用 _epubProgressByBookKey 而非硬编码 0/1', () {
@@ -72,10 +75,14 @@ void main() {
     // 纯字幕书 `: null` 不渲染。用正则而非单行字面量，容忍进度条扩展参数（如 BUG-888
     // 手动读完态 `completed:`）导致的多行 dart format，同时仍锁死门控与真/假分支。
     expect(
-      booksPart.contains(RegExp(
-          r'metadata: _srtBookHasProgress\(book\)\s*\?\s*_progressBar\(\s*srtItem,?[\s\S]*?\)\s*:\s*null')),
+      booksPart.contains(
+        RegExp(
+          r'metadata: _srtBookHasProgress\(book\)\s*\?\s*_progressBar\(\s*srtItem,?[\s\S]*?\)\s*:\s*null',
+        ),
+      ),
       isTrue,
-      reason: 'SRT 卡进度条须按 _srtBookHasProgress 门控渲染'
+      reason:
+          'SRT 卡进度条须按 _srtBookHasProgress 门控渲染'
           '（true 分支画 _progressBar(srtItem…)，纯字幕书 : null 不渲染）',
     );
     expect(

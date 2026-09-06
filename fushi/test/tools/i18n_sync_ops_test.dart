@@ -19,10 +19,10 @@ import '../../tool/i18n_sync.dart';
 /// **多余 / 缺失 / 错位的 operand 一律报错而非静默吞掉**。
 void main() {
   Map<String, dynamic> table() => <String, dynamic>{
-        'alpha': 'A',
-        'beta': 'B',
-        'gamma': 'C',
-      };
+    'alpha': 'A',
+    'beta': 'B',
+    'gamma': 'C',
+  };
 
   I18nApplyResult run(
     List<String> args,
@@ -48,44 +48,39 @@ void main() {
         '--remove',
         'gamma',
       ]);
-      expect(command.ops, hasLength(3),
-          reason: '三个 --remove 必须解析成三个 op，多出来的不得被丢弃');
-
-      final I18nApplyResult result = run(
-        <String>['--remove', 'alpha', '--remove', 'beta', '--remove', 'gamma'],
-        table(),
+      expect(
+        command.ops,
+        hasLength(3),
+        reason: '三个 --remove 必须解析成三个 op，多出来的不得被丢弃',
       );
+
+      final I18nApplyResult result = run(<String>[
+        '--remove',
+        'alpha',
+        '--remove',
+        'beta',
+        '--remove',
+        'gamma',
+      ], table());
       expect(result.json, isEmpty, reason: '三个 key 必须都被删掉');
       expect(result.hitsPerOp, <int>[1, 1, 1]);
     });
 
     test('多个 --add 全部写入，且 zh-CN 取中文值', () {
-      final I18nApplyResult en = run(
-        <String>[
-          '--add',
-          'one',
-          'One',
-          '一',
-          '--add',
-          'two',
-          'Two',
-          '二',
-        ],
-        <String, dynamic>{},
-      );
+      final I18nApplyResult en = run(<String>[
+        '--add',
+        'one',
+        'One',
+        '一',
+        '--add',
+        'two',
+        'Two',
+        '二',
+      ], <String, dynamic>{});
       expect(en.json, <String, dynamic>{'one': 'One', 'two': 'Two'});
 
       final I18nApplyResult zh = run(
-        <String>[
-          '--add',
-          'one',
-          'One',
-          '一',
-          '--add',
-          'two',
-          'Two',
-          '二',
-        ],
+        <String>['--add', 'one', 'One', '一', '--add', 'two', 'Two', '二'],
         <String, dynamic>{},
         isZhCn: true,
       );
@@ -93,31 +88,34 @@ void main() {
     });
 
     test('不同 flag 混用按给出的顺序执行', () {
-      final I18nApplyResult result = run(
-        <String>[
-          '--remove',
-          'beta',
-          '--rename',
-          'alpha',
-          'zeta',
-          '--add',
-          'delta',
-          'D',
-          'D中',
-          '--sort',
-        ],
-        table(),
-      );
-      expect(result.json.keys.toList(), <String>['delta', 'gamma', 'zeta'],
-          reason: '删/改名/新增都要落地，且末尾 --sort 对最终结果排序');
+      final I18nApplyResult result = run(<String>[
+        '--remove',
+        'beta',
+        '--rename',
+        'alpha',
+        'zeta',
+        '--add',
+        'delta',
+        'D',
+        'D中',
+        '--sort',
+      ], table());
+      expect(result.json.keys.toList(), <String>[
+        'delta',
+        'gamma',
+        'zeta',
+      ], reason: '删/改名/新增都要落地，且末尾 --sort 对最终结果排序');
       expect(result.hitsPerOp, <int>[1, 1, 1, 1]);
     });
 
     test('顺序敏感：先改名到 b 再删 b，最终 b 不存在', () {
-      final I18nApplyResult result = run(
-        <String>['--rename', 'alpha', 'beta2', '--remove', 'beta2'],
-        table(),
-      );
+      final I18nApplyResult result = run(<String>[
+        '--rename',
+        'alpha',
+        'beta2',
+        '--remove',
+        'beta2',
+      ], table());
       expect(result.json.containsKey('beta2'), isFalse);
       expect(result.json.containsKey('alpha'), isFalse);
     });
@@ -137,12 +135,18 @@ void main() {
     });
 
     test('缺 operand 报 usage error', () {
-      expect(() => parseI18nCommand(<String>['--remove']),
-          throwsA(isA<I18nUsageError>()));
-      expect(() => parseI18nCommand(<String>['--add', 'k', 'en']),
-          throwsA(isA<I18nUsageError>()));
-      expect(() => parseI18nCommand(<String>['--rename', 'old']),
-          throwsA(isA<I18nUsageError>()));
+      expect(
+        () => parseI18nCommand(<String>['--remove']),
+        throwsA(isA<I18nUsageError>()),
+      );
+      expect(
+        () => parseI18nCommand(<String>['--add', 'k', 'en']),
+        throwsA(isA<I18nUsageError>()),
+      );
+      expect(
+        () => parseI18nCommand(<String>['--rename', 'old']),
+        throwsA(isA<I18nUsageError>()),
+      );
     });
 
     test('operand 位置上出现 flag 报错，不会被当成 key 吃掉', () {
@@ -167,10 +171,14 @@ void main() {
 
   group('单 op 行为与历史一致（向后兼容）', () {
     test('--dry-run 只是标志位，可出现在任意位置', () {
-      expect(parseI18nCommand(<String>['--dry-run', '--remove', 'a']).dryRun,
-          isTrue);
-      expect(parseI18nCommand(<String>['--remove', 'a', '--dry-run']).dryRun,
-          isTrue);
+      expect(
+        parseI18nCommand(<String>['--dry-run', '--remove', 'a']).dryRun,
+        isTrue,
+      );
+      expect(
+        parseI18nCommand(<String>['--remove', 'a', '--dry-run']).dryRun,
+        isTrue,
+      );
       expect(parseI18nCommand(<String>['--remove', 'a']).dryRun, isFalse);
     });
 
@@ -180,8 +188,12 @@ void main() {
     });
 
     test('--add 已存在的 key 跳过，不覆盖既有翻译', () {
-      final I18nApplyResult result =
-          run(<String>['--add', 'alpha', 'NEW', 'NEW中'], table());
+      final I18nApplyResult result = run(<String>[
+        '--add',
+        'alpha',
+        'NEW',
+        'NEW中',
+      ], table());
       expect(result.json['alpha'], 'A');
       expect(result.hitsPerOp, <int>[0]);
       expect(result.changed, isFalse);
@@ -201,21 +213,30 @@ void main() {
     });
 
     test('--rename 保留原值与键序', () {
-      final I18nApplyResult result =
-          run(<String>['--rename', 'beta', 'beta_renamed'], table());
-      expect(
-          result.json.keys.toList(), <String>['alpha', 'beta_renamed', 'gamma'],
-          reason: '改名必须就地换键，不得把键挪到末尾');
+      final I18nApplyResult result = run(<String>[
+        '--rename',
+        'beta',
+        'beta_renamed',
+      ], table());
+      expect(result.json.keys.toList(), <String>[
+        'alpha',
+        'beta_renamed',
+        'gamma',
+      ], reason: '改名必须就地换键，不得把键挪到末尾');
       expect(result.json['beta_renamed'], 'B');
     });
 
     test('--sort 幂等：已排序的表不算改动', () {
-      final I18nApplyResult sorted =
-          run(<String>['--sort'], <String, dynamic>{'a': '1', 'b': '2'});
+      final I18nApplyResult sorted = run(
+        <String>['--sort'],
+        <String, dynamic>{'a': '1', 'b': '2'},
+      );
       expect(sorted.changed, isFalse);
 
-      final I18nApplyResult unsorted =
-          run(<String>['--sort'], <String, dynamic>{'b': '2', 'a': '1'});
+      final I18nApplyResult unsorted = run(
+        <String>['--sort'],
+        <String, dynamic>{'b': '2', 'a': '1'},
+      );
       expect(unsorted.json.keys.toList(), <String>['a', 'b']);
       expect(unsorted.changed, isTrue);
     });

@@ -43,8 +43,9 @@ void main() {
       );
       expect(withTitle, contains(title));
       // 没书名时退化成不带名字的文案，不能漏出空引号 / null。
-      final String withoutTitle =
-          syncActivityLine(const SyncActivity(SyncActivityKind.singleBook));
+      final String withoutTitle = syncActivityLine(
+        const SyncActivity(SyncActivityKind.singleBook),
+      );
       expect(withoutTitle, isNotEmpty);
       expect(withoutTitle, isNot(contains('null')));
       expect(withoutTitle, isNot(equals(withTitle)));
@@ -57,7 +58,8 @@ void main() {
       expect(
         line,
         equals(
-            syncActivityLine(const SyncActivity(SyncActivityKind.singleBook))),
+          syncActivityLine(const SyncActivity(SyncActivityKind.singleBook)),
+        ),
       );
     });
   });
@@ -66,12 +68,14 @@ void main() {
     test('每种结局各有各的文案，且都不为空', () {
       final Map<SyncOutcomeReason, String> lines = <SyncOutcomeReason, String>{
         for (final SyncOutcomeReason reason in SyncOutcomeReason.values)
-          reason: syncOutcomeLine(SyncRunOutcome(
-            kind: SyncActivityKind.fullSweep,
-            reason: reason,
-            channelsRun: reason == SyncOutcomeReason.completed ? 1 : 0,
-            finishedAt: 0,
-          )),
+          reason: syncOutcomeLine(
+            SyncRunOutcome(
+              kind: SyncActivityKind.fullSweep,
+              reason: reason,
+              channelsRun: reason == SyncOutcomeReason.completed ? 1 : 0,
+              finishedAt: 0,
+            ),
+          ),
       };
       for (final MapEntry<SyncOutcomeReason, String> e in lines.entries) {
         expect(e.value, isNotEmpty, reason: '${e.key} 没有可显示的文案');
@@ -85,13 +89,13 @@ void main() {
 
     test('「跑完了」与「一条通道都没跑起来」文案必须不同（本 bug 的核心）', () {
       String lineFor(SyncOutcomeReason reason, int channels) => syncOutcomeLine(
-            SyncRunOutcome(
-              kind: SyncActivityKind.fullSweep,
-              reason: reason,
-              channelsRun: channels,
-              finishedAt: 0,
-            ),
-          );
+        SyncRunOutcome(
+          kind: SyncActivityKind.fullSweep,
+          reason: reason,
+          channelsRun: channels,
+          finishedAt: 0,
+        ),
+      );
       expect(
         lineFor(SyncOutcomeReason.completed, 2),
         isNot(equals(lineFor(SyncOutcomeReason.noChannels, 0))),
@@ -100,18 +104,22 @@ void main() {
     });
 
     test('completed 把实跑通道数带进文案', () {
-      final String one = syncOutcomeLine(const SyncRunOutcome(
-        kind: SyncActivityKind.fullSweep,
-        reason: SyncOutcomeReason.completed,
-        channelsRun: 1,
-        finishedAt: 0,
-      ));
-      final String two = syncOutcomeLine(const SyncRunOutcome(
-        kind: SyncActivityKind.fullSweep,
-        reason: SyncOutcomeReason.completed,
-        channelsRun: 2,
-        finishedAt: 0,
-      ));
+      final String one = syncOutcomeLine(
+        const SyncRunOutcome(
+          kind: SyncActivityKind.fullSweep,
+          reason: SyncOutcomeReason.completed,
+          channelsRun: 1,
+          finishedAt: 0,
+        ),
+      );
+      final String two = syncOutcomeLine(
+        const SyncRunOutcome(
+          kind: SyncActivityKind.fullSweep,
+          reason: SyncOutcomeReason.completed,
+          channelsRun: 2,
+          finishedAt: 0,
+        ),
+      );
       expect(one, contains('1'));
       expect(two, contains('2'));
       expect(one, isNot(equals(two)));
@@ -126,10 +134,8 @@ void main() {
     });
 
     Future<void> pumpBanner(WidgetTester tester) => tester.pumpWidget(
-          const MaterialApp(
-            home: Scaffold(body: SyncProgressBanner()),
-          ),
-        );
+      const MaterialApp(home: Scaffold(body: SyncProgressBanner())),
+    );
 
     testWidgets('没有同步在跑时收成零高度，不占布局', (WidgetTester tester) async {
       syncInProgress.value = false;
@@ -138,8 +144,9 @@ void main() {
       expect(find.byType(Text), findsNothing);
     });
 
-    testWidgets('同步中但没有阶段 tick（轻量路径）→ 仍然有文字，不是光秃秃一条线',
-        (WidgetTester tester) async {
+    testWidgets('同步中但没有阶段 tick（轻量路径）→ 仍然有文字，不是光秃秃一条线', (
+      WidgetTester tester,
+    ) async {
       syncInProgress.value = true;
       syncProgress.value = null;
       syncActivity.value = const SyncActivity(SyncActivityKind.collections);
@@ -150,7 +157,8 @@ void main() {
       expect(
         (tester.widget<Text>(text).data ?? ''),
         equals(
-            syncActivityLine(const SyncActivity(SyncActivityKind.collections))),
+          syncActivityLine(const SyncActivity(SyncActivityKind.collections)),
+        ),
       );
     });
 
@@ -200,8 +208,9 @@ void main() {
     // 运行时表面在 headless 测试里挂不稳（真跑一轮同步要 DB + 网络后端），故用源码
     // 扫描锁住不变式本身：全局同步状态只能由 _beginSyncActivity / _endSyncActivity
     // 这一对维护。
-    final String src =
-        File('lib/src/sync/sync_auto_trigger.dart').readAsStringSync();
+    final String src = File(
+      'lib/src/sync/sync_auto_trigger.dart',
+    ).readAsStringSync();
 
     int occurrences(String needle) => needle.allMatches(src).length;
 
@@ -237,9 +246,9 @@ void main() {
       // 那一行讲的是「立即同步」这件事；拿后台单本 / 合集轻量同步的结局来填会
       // 答非所问（用户点的是全量，看到的却是某本书的结果）。设置页运行时表面要
       // AppModel + SettingsContext，headless 挂不稳，故在此锁不变式。
-      final String rowSrc =
-          File('lib/src/sync/sync_settings_schema/actions.part.dart')
-              .readAsStringSync();
+      final String rowSrc = File(
+        'lib/src/sync/sync_settings_schema/actions.part.dart',
+      ).readAsStringSync();
       // 不变式没变，钉的位置变了：这一行现在读**语义精确的那个值**
       // （`lastFullSweepOutcome`），而不是读 `lastSyncOutcome` 再在消费端过滤
       // `kind`。后者会被任何一轮别的同步挤掉 —— 合集轻量、单本，以及同页那四个

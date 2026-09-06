@@ -38,9 +38,9 @@ class VideoLibraryScrapeSweep {
     required FushiDatabase database,
     required VideoSourceScrapeTaskController controller,
     bool Function()? isEnabled,
-  })  : _database = database,
-        _controller = controller,
-        _isEnabled = isEnabled;
+  }) : _database = database,
+       _controller = controller,
+       _isEnabled = isEnabled;
 
   final FushiDatabase _database;
   final VideoSourceScrapeTaskController _controller;
@@ -55,11 +55,12 @@ class VideoLibraryScrapeSweep {
   Future<List<VideoPendingScrapeWork>> pendingWorks() async {
     final List<VideoPendingScrapeWork> pending = <VideoPendingScrapeWork>[];
     for (final SourceLibraryRow source in await _localVideoSources()) {
-      final VideoSourceScrapeSettingRow? settings =
-          await _database.getVideoSourceScrapeSettings(source.id);
+      final VideoSourceScrapeSettingRow? settings = await _database
+          .getVideoSourceScrapeSettings(source.id);
       if (settings?.enabled == false) continue;
-      final List<VideoSourceScrapeWork> works =
-          await VideoSourceWorkPlanner(_database).plan(source);
+      final List<VideoSourceScrapeWork> works = await VideoSourceWorkPlanner(
+        _database,
+      ).plan(source);
       for (final VideoSourceScrapeWork work in works) {
         if (!await _hasCanonicalIdentity(work)) {
           pending.add(VideoPendingScrapeWork(source: source, work: work));
@@ -101,12 +102,13 @@ class VideoLibraryScrapeSweep {
   /// 规范身份存在判据：works 行存在且至少有一条作品级 provider 身份。
   Future<bool> _hasCanonicalIdentity(VideoSourceScrapeWork work) async {
     final VideoMetadataWorkRow? row = work.collection == null
-        ? await _database
-            .getVideoMetadataWorkByBook(work.members.single.bookUid)
+        ? await _database.getVideoMetadataWorkByBook(
+            work.members.single.bookUid,
+          )
         : await _database.getVideoMetadataWorkByCollection(work.collection!.id);
     if (row == null) return false;
-    final List<VideoMetadataProviderIdentityRow> identities =
-        await _database.getVideoMetadataProviderIdentities(workId: row.id);
+    final List<VideoMetadataProviderIdentityRow> identities = await _database
+        .getVideoMetadataProviderIdentities(workId: row.id);
     return identities.isNotEmpty;
   }
 }

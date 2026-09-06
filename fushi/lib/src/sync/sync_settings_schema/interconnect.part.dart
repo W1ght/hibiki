@@ -51,23 +51,23 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
     _tokenController.addListener(_onTokenTextChanged);
     _tokenFocus = FocusNode();
     _load();
-    _syncSettings(widget.settingsContext)
-        .clientConfigRevision
-        .addListener(_onClientConfigRevision);
+    _syncSettings(
+      widget.settingsContext,
+    ).clientConfigRevision.addListener(_onClientConfigRevision);
     // Rebuild when the server-enabled flag flips so "add connection" re-gates.
-    _syncSettings(widget.settingsContext)
-        .roleRevision
-        .addListener(_onRoleRevision);
+    _syncSettings(
+      widget.settingsContext,
+    ).roleRevision.addListener(_onRoleRevision);
   }
 
   @override
   void dispose() {
-    _syncSettings(widget.settingsContext)
-        .clientConfigRevision
-        .removeListener(_onClientConfigRevision);
-    _syncSettings(widget.settingsContext)
-        .roleRevision
-        .removeListener(_onRoleRevision);
+    _syncSettings(
+      widget.settingsContext,
+    ).clientConfigRevision.removeListener(_onClientConfigRevision);
+    _syncSettings(
+      widget.settingsContext,
+    ).roleRevision.removeListener(_onRoleRevision);
     _tokenFocus.dispose();
     _tokenController.removeListener(_onTokenTextChanged);
     _tokenController.dispose();
@@ -97,8 +97,9 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
       _tokenPresent = _tokenController.text.trim().isNotEmpty;
       _loaded = true;
     });
-    _syncSettings(widget.settingsContext)
-        .setHasClientConnection(urls.isNotEmpty);
+    _syncSettings(
+      widget.settingsContext,
+    ).setHasClientConnection(urls.isNotEmpty);
   }
 
   void _onClientConfigRevision() {
@@ -119,8 +120,9 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
       }
       _tokenPresent = _tokenController.text.trim().isNotEmpty;
     });
-    _syncSettings(widget.settingsContext)
-        .setHasClientConnection(urls.isNotEmpty);
+    _syncSettings(
+      widget.settingsContext,
+    ).setHasClientConnection(urls.isNotEmpty);
   }
 
   Future<void> _persistUrls() async {
@@ -129,12 +131,14 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
     // 冒充新测）。收在这里而不是各调用点：所有 URL 变更都必经本方法（见下），
     // 单点清理消除「哪个入口忘了清」的特例。
     _reachable.removeWhere(
-        (String url, bool _) => !_urls.any((FushiClientUrl u) => u.url == url));
+      (String url, bool _) => !_urls.any((FushiClientUrl u) => u.url == url),
+    );
     await _repo.setFushiClientUrls(_urls);
     // Keep the role lock honest: deleting the last URL must release the server
     // toggle; adding one must lock it. Every URL mutation routes through here.
-    _syncSettings(widget.settingsContext)
-        .setHasClientConnection(_urls.isNotEmpty);
+    _syncSettings(
+      widget.settingsContext,
+    ).setHasClientConnection(_urls.isNotEmpty);
   }
 
   Future<void> _saveToken() async {
@@ -235,8 +239,9 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
       final List<FushiClientUrl> copy = <FushiClientUrl>[..._urls];
       if (index != null) {
         final bool dupElsewhere = copy.asMap().entries.any(
-            (MapEntry<int, FushiClientUrl> e) =>
-                e.key != index && e.value.url == normalizedResult);
+          (MapEntry<int, FushiClientUrl> e) =>
+              e.key != index && e.value.url == normalizedResult,
+        );
         if (!dupElsewhere) {
           final FushiClientUrl edited = copy[index];
           // BUG-1557：只有「还是同一个端点」（scheme+host+port 未变，只是补斜杠/改
@@ -294,8 +299,10 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
       // https 首连：先用一次性 TOFU 探测捕获 host 证书指纹（仅取指纹，不传数据）。
       String? capturedFingerprint;
       if (isHttps) {
-        final FushiTofuOutcome tofu =
-            await FushiTofuProbe.probeFingerprint(parsed.host, port);
+        final FushiTofuOutcome tofu = await FushiTofuProbe.probeFingerprint(
+          parsed.host,
+          port,
+        );
         if (!mounted) return;
         if (!tofu.speaksTls) {
           // BUG-1741：握手都没成，后面的 ping 必然也失败。此前这里不作分辨地
@@ -319,8 +326,10 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
         // 设备」，是「地址的 scheme 写错了」——两句话指向完全相反的排查方向，而旧
         // 实现把它们说成同一句。
         if (!isHttps && outcome.failure == FushiPingFailure.unreachable) {
-          final FushiTofuOutcome tofu =
-              await FushiTofuProbe.probeFingerprint(parsed.host, port);
+          final FushiTofuOutcome tofu = await FushiTofuProbe.probeFingerprint(
+            parsed.host,
+            port,
+          );
           if (!mounted) return;
           if (tofu.speaksTls) {
             _showSnackBar(context, t.sync_pair_peer_requires_https);
@@ -341,8 +350,9 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
         return;
       }
       // https host 的钉扎指纹以 ping 回传为准（与捕获一致），明文 http 无指纹。
-      final String? fingerprint =
-          isHttps ? (ping.fingerprint ?? capturedFingerprint) : null;
+      final String? fingerprint = isHttps
+          ? (ping.fingerprint ?? capturedFingerprint)
+          : null;
       // https 必须有指纹才能继续（否则无法钉扎，拒绝裸 https）。
       if (isHttps && (fingerprint == null || fingerprint.isEmpty)) {
         // 语义就是「拿不到可钉扎的证书」，不是笼统的「配对失败」。
@@ -444,8 +454,9 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
     // Mutual exclusion: while this device serves peers, it can't also connect
     // out as a client. Block adding/editing connections; deleting stays allowed
     // so the user can clear them and switch roles.
-    final bool lockedByServer =
-        _syncSettings(widget.settingsContext).serverEnabled;
+    final bool lockedByServer = _syncSettings(
+      widget.settingsContext,
+    ).serverEnabled;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Column(
@@ -454,8 +465,10 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
           // 列表标题与下方 _LanDiscoveryWidget 的「局域网设备」同级对齐：section 标题
           // 「连接到其他设备」罩着两个 widget，此前本列表裸露无题，空列表时更是只剩一个
           // 孤零零的「添加」按钮，用户不知道这块是什么、该怎么连。
-          Text(t.interconnect_peer_list_title,
-              style: theme.textTheme.titleSmall),
+          Text(
+            t.interconnect_peer_list_title,
+            style: theme.textTheme.titleSmall,
+          ),
           const SizedBox(height: 8),
           if (_urls.isEmpty)
             Text(
@@ -579,8 +592,10 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
                   ? SizedBox(
                       width: 18,
                       height: 18,
-                      child:
-                          adaptiveIndicator(context: context, strokeWidth: 2),
+                      child: adaptiveIndicator(
+                        context: context,
+                        strokeWidth: 2,
+                      ),
                     )
                   : const Icon(Icons.add, size: 18),
               label: Text(_pairingManual ? t.sync_pair_pairing : t.dialog_add),
@@ -598,13 +613,17 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
               padding: const EdgeInsets.only(bottom: 8),
               child: Row(
                 children: <Widget>[
-                  Icon(Icons.check_circle_outline,
-                      size: 18, color: theme.colorScheme.primary),
+                  Icon(
+                    Icons.check_circle_outline,
+                    size: 18,
+                    color: theme.colorScheme.primary,
+                  ),
                   const SizedBox(width: 6),
                   Text(
                     t.sync_client_connected,
-                    style: theme.textTheme.bodySmall
-                        ?.copyWith(color: theme.colorScheme.primary),
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: theme.colorScheme.primary,
+                    ),
                   ),
                 ],
               ),
@@ -619,8 +638,9 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
             childrenPadding: const EdgeInsets.only(top: 10),
             title: Text(
               t.sync_client_token_manual,
-              style: theme.textTheme.bodySmall
-                  ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+              style: theme.textTheme.bodySmall?.copyWith(
+                color: theme.colorScheme.onSurfaceVariant,
+              ),
             ),
             children: <Widget>[
               FushiTextField(
@@ -643,8 +663,10 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
                   ? SizedBox(
                       width: 24,
                       height: 24,
-                      child:
-                          adaptiveIndicator(context: context, strokeWidth: 2),
+                      child: adaptiveIndicator(
+                        context: context,
+                        strokeWidth: 2,
+                      ),
                     )
                   : FilledButton.tonal(
                       onPressed: _testAll,
@@ -724,8 +746,9 @@ mixin _PairingV2FlowMixin<T extends StatefulWidget> on State<T> {
           message = await _onPairSuccess(baseUrl, token, fingerprint);
         case FushiPairV2Failure(:final String reason):
           // 'cancelled' = 用户在 PIN 输入框点了取消，静默收场不弹提示。
-          message =
-              reason == 'cancelled' ? null : _pairV2FailureMessage(reason);
+          message = reason == 'cancelled'
+              ? null
+              : _pairV2FailureMessage(reason);
       }
     } catch (e, stack) {
       ErrorLogService.instance.log('PairV2:$baseUrl', e, stack);
@@ -775,10 +798,9 @@ mixin _PairingV2FlowMixin<T extends StatefulWidget> on State<T> {
       context: context,
       builder: (BuildContext ctx) {
         final FushiDesignTokens tokens = FushiDesignTokens.of(ctx);
-        final TextStyle? mono = Theme.of(ctx)
-            .textTheme
-            .bodySmall
-            ?.copyWith(fontFamily: 'monospace');
+        final TextStyle? mono = Theme.of(
+          ctx,
+        ).textTheme.bodySmall?.copyWith(fontFamily: 'monospace');
         return FushiDialogFrame(
           maxWidth: 460,
           insetPadding: EdgeInsets.symmetric(
@@ -807,13 +829,17 @@ mixin _PairingV2FlowMixin<T extends StatefulWidget> on State<T> {
               children: <Widget>[
                 Text(t.sync_pair_fingerprint_changed_body),
                 SizedBox(height: tokens.spacing.gap),
-                Text(t.sync_pair_fingerprint_stored_label,
-                    style: Theme.of(ctx).textTheme.labelSmall),
+                Text(
+                  t.sync_pair_fingerprint_stored_label,
+                  style: Theme.of(ctx).textTheme.labelSmall,
+                ),
                 const SizedBox(height: 4),
                 SelectableText(stored, style: mono),
                 SizedBox(height: tokens.spacing.gap),
-                Text(t.sync_pair_fingerprint_new_label,
-                    style: Theme.of(ctx).textTheme.labelSmall),
+                Text(
+                  t.sync_pair_fingerprint_new_label,
+                  style: Theme.of(ctx).textTheme.labelSmall,
+                ),
                 const SizedBox(height: 4),
                 SelectableText(incoming, style: mono),
               ],
@@ -978,21 +1004,25 @@ mixin _PairingV2FlowMixin<T extends StatefulWidget> on State<T> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Text(t.sync_pair_confirm_identity_body(
-                  device: (deviceName != null && deviceName.trim().isNotEmpty)
-                      ? deviceName
-                      : t.sync_pair_unknown_device,
-                )),
+                Text(
+                  t.sync_pair_confirm_identity_body(
+                    device: (deviceName != null && deviceName.trim().isNotEmpty)
+                        ? deviceName
+                        : t.sync_pair_unknown_device,
+                  ),
+                ),
                 if (fingerprint != null && fingerprint.isNotEmpty) ...<Widget>[
                   SizedBox(height: tokens.spacing.gap),
-                  Text(t.sync_pair_fingerprint_label,
-                      style: Theme.of(ctx).textTheme.labelSmall),
+                  Text(
+                    t.sync_pair_fingerprint_label,
+                    style: Theme.of(ctx).textTheme.labelSmall,
+                  ),
                   const SizedBox(height: 4),
                   SelectableText(
                     fingerprint,
-                    style: Theme.of(ctx).textTheme.bodySmall?.copyWith(
-                          fontFamily: 'monospace',
-                        ),
+                    style: Theme.of(
+                      ctx,
+                    ).textTheme.bodySmall?.copyWith(fontFamily: 'monospace'),
                   ),
                 ],
               ],
@@ -1095,8 +1125,8 @@ mixin _PairingV2FlowMixin<T extends StatefulWidget> on State<T> {
   /// hardware model instead of Android's meaningless "localhost" hostname
   /// (TODO-1356), never advertising "localhost" as the device name.
   Future<String> _localDeviceName() => resolveInterconnectDeviceName(
-        _pairSettingsContext.appModel.platformServices.deviceInfo,
-      );
+    _pairSettingsContext.appModel.platformServices.deviceInfo,
+  );
 }
 
 // ── Server mode widget ──────────────────────────────────────────────
@@ -1135,18 +1165,18 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
     _portController = TextEditingController(text: '$_port');
     _serverController.addListener(_onServerChanged);
     // Rebuild when the client-connection flag flips so the toggle re-gates.
-    _syncSettings(widget.settingsContext)
-        .roleRevision
-        .addListener(_onRoleRevision);
+    _syncSettings(
+      widget.settingsContext,
+    ).roleRevision.addListener(_onRoleRevision);
     _loadSettings();
   }
 
   @override
   void dispose() {
     _serverController.removeListener(_onServerChanged);
-    _syncSettings(widget.settingsContext)
-        .roleRevision
-        .removeListener(_onRoleRevision);
+    _syncSettings(
+      widget.settingsContext,
+    ).roleRevision.removeListener(_onRoleRevision);
     _portController.dispose();
     // NOTE: do NOT stop the server here. It is owned app-wide by AppModel now
     // (BUG-085); leaving this settings page must not kill the running host.
@@ -1177,8 +1207,8 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
       await repo.setServerPassword(token);
     }
     // TODO-961 M1b: 预取已配对设备（server 开启时才展示列表，但不阻塞开关加载）。
-    final List<FushiPairedPeerRow> peers =
-        await _serverController.pairedPeers();
+    final List<FushiPairedPeerRow> peers = await _serverController
+        .pairedPeers();
     if (mounted) {
       setState(() {
         _enabled = enabled;
@@ -1209,8 +1239,9 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
       return;
     }
     setState(() => _port = parsed);
-    await SyncRepository(widget.settingsContext.appModel.database)
-        .setServerPort(parsed);
+    await SyncRepository(
+      widget.settingsContext.appModel.database,
+    ).setServerPort(parsed);
   }
 
   /// On commit, snap the field back to the persisted port when the typed value
@@ -1267,8 +1298,9 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
   /// 存量 URL/指纹不再匹配，提示需重新配对。
   Future<void> _setTlsEnabled(bool v) async {
     setState(() => _tlsEnabled = v);
-    await SyncRepository(widget.settingsContext.appModel.database)
-        .setServerTlsEnabled(v);
+    await SyncRepository(
+      widget.settingsContext.appModel.database,
+    ).setServerTlsEnabled(v);
     if (_serverController.isRunning) {
       // BUG-1563：开 TLS 要生成/加载自签证书再重新绑端口，是最容易失败的一次重启；
       // 失败时旧代码照样弹「已配对设备需重新配对」，等于对着一台已经不存在的 host
@@ -1285,8 +1317,8 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
 
   /// TODO-961 M1b: 重新拉取已配对设备列表（吊销 / 页面重进后刷新）。
   Future<void> _reloadPairedPeers() async {
-    final List<FushiPairedPeerRow> peers =
-        await _serverController.pairedPeers();
+    final List<FushiPairedPeerRow> peers = await _serverController
+        .pairedPeers();
     if (mounted) setState(() => _pairedPeers = peers);
   }
 
@@ -1328,8 +1360,8 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
                       // TLS 与 serverEnabled 两个偏好 key 都从未写入过；存量用户
                       // 保持现状不动，见 applyFirstHostingTlsDefault 文档）。
                       final bool tlsDefaulted = await SyncRepository(
-                              widget.settingsContext.appModel.database)
-                          .applyFirstHostingTlsDefault();
+                        widget.settingsContext.appModel.database,
+                      ).applyFirstHostingTlsDefault();
                       if (!mounted) return;
                       if (tlsDefaulted) setState(() => _tlsEnabled = true);
                       // Reflect the toggle while starting; the controller
@@ -1341,8 +1373,9 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
                       _applyStartOutcome(await _serverController.start());
                     } else {
                       setState(() => _enabled = false);
-                      _syncSettings(widget.settingsContext)
-                          .setServerEnabled(false);
+                      _syncSettings(
+                        widget.settingsContext,
+                      ).setServerEnabled(false);
                       await _serverController.stop(persistDisabled: true);
                     }
                   },
@@ -1360,8 +1393,9 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
               Padding(
                 padding: const EdgeInsets.only(top: 4),
                 child: Text(
-                    '${t.sync_server_running}: ${_serverController.boundPort}',
-                    style: Theme.of(context).textTheme.bodySmall),
+                  '${t.sync_server_running}: ${_serverController.boundPort}',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
               ),
             const SizedBox(height: 8),
             // TODO-961: 互联加密开关——接 setServerTlsEnabled（自签证书 + TOFU
@@ -1373,16 +1407,18 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
               onChanged: (bool v) => _setTlsEnabled(v),
             ),
             const SizedBox(height: 12),
-            Text(t.sync_server_token,
-                style: Theme.of(context).textTheme.labelSmall),
+            Text(
+              t.sync_server_token,
+              style: Theme.of(context).textTheme.labelSmall,
+            ),
             const SizedBox(height: 4),
             // BUG-1184：令牌是等宽长串，原先硬钳 2 行且无 ellipsis —— 窄屏上尾部被
             // 直接切掉且毫无提示。令牌必须整串可见（用户要照着输/核对），去掉行数上限。
             SelectableText(
               _token ?? '',
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    fontFamily: 'monospace',
-                  ),
+              style: Theme.of(
+                context,
+              ).textTheme.bodySmall?.copyWith(fontFamily: 'monospace'),
             ),
             const SizedBox(height: 8),
             // BUG-1184：两个 icon+label 按钮此前用 Row，窄屏（尤其英文/德文文案更长）
@@ -1411,15 +1447,17 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
             ),
             // TODO-961 M1b: 已配对设备列表 + 逐台移除（吊销 per-peer token）。
             const SizedBox(height: 16),
-            Text(t.sync_paired_peers_title,
-                style: Theme.of(context).textTheme.labelSmall),
+            Text(
+              t.sync_paired_peers_title,
+              style: Theme.of(context).textTheme.labelSmall,
+            ),
             const SizedBox(height: 4),
             if (_pairedPeers.isEmpty)
               Text(
                 t.sync_paired_peers_empty,
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: Theme.of(context).colorScheme.onSurfaceVariant,
-                    ),
+                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                ),
               )
             else
               ..._pairedPeers.map(
@@ -1435,7 +1473,8 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  subtitle: (peer.lastSeenIp != null &&
+                  subtitle:
+                      (peer.lastSeenIp != null &&
                           peer.lastSeenIp!.trim().isNotEmpty)
                       ? Text(
                           peer.lastSeenIp!,
@@ -1490,9 +1529,9 @@ class _LanDiscoveryWidgetState extends State<_LanDiscoveryWidget>
   void initState() {
     super.initState();
     // Rebuild when the server-enabled flag flips so device taps re-gate.
-    _syncSettings(widget.settingsContext)
-        .roleRevision
-        .addListener(_onRoleRevision);
+    _syncSettings(
+      widget.settingsContext,
+    ).roleRevision.addListener(_onRoleRevision);
     _init();
   }
 
@@ -1502,18 +1541,20 @@ class _LanDiscoveryWidgetState extends State<_LanDiscoveryWidget>
 
   Future<void> _init() async {
     try {
-      final String deviceId =
-          await SyncRepository(widget.settingsContext.appModel.database)
-              .getOrCreateDeviceId();
+      final String deviceId = await SyncRepository(
+        widget.settingsContext.appModel.database,
+      ).getOrCreateDeviceId();
       if (!mounted) return;
-      final LanDiscoveryService discovery =
-          LanDiscoveryService(deviceId: deviceId);
+      final LanDiscoveryService discovery = LanDiscoveryService(
+        deviceId: deviceId,
+      );
       _discovery = discovery;
       // Register with the app-level controller so the app-exit hook can stop
       // this Bonsoir browser before the engine is torn down (TODO-036). The
       // widget still owns dispose()/unregister for the normal page-close path.
-      widget.settingsContext.appModel.syncServerController
-          .registerDiscovery(discovery);
+      widget.settingsContext.appModel.syncServerController.registerDiscovery(
+        discovery,
+      );
       await _startScan();
     } catch (e, stack) {
       // Loading the device id (a DB read) can throw; surface it as a scan
@@ -1525,16 +1566,17 @@ class _LanDiscoveryWidgetState extends State<_LanDiscoveryWidget>
 
   @override
   void dispose() {
-    _syncSettings(widget.settingsContext)
-        .roleRevision
-        .removeListener(_onRoleRevision);
+    _syncSettings(
+      widget.settingsContext,
+    ).roleRevision.removeListener(_onRoleRevision);
     _devicesSub?.cancel();
     final LanDiscoveryService? discovery = _discovery;
     if (discovery != null) {
       // Drop it from the exit-teardown set first (idempotent) so the controller
       // never double-disposes an already-disposed browser.
-      widget.settingsContext.appModel.syncServerController
-          .unregisterDiscovery(discovery);
+      widget.settingsContext.appModel.syncServerController.unregisterDiscovery(
+        discovery,
+      );
       discovery.dispose();
     }
     super.dispose();
@@ -1584,10 +1626,10 @@ class _LanDiscoveryWidgetState extends State<_LanDiscoveryWidget>
     try {
       final DiscoveredPairingProbeOutcome outcome =
           await probeDiscoveredPairingEndpointDetailed(
-        host: device.host,
-        port: device.port,
-        tlsAdvertised: device.tlsEnabled,
-      );
+            host: device.host,
+            port: device.port,
+            tlsAdvertised: device.tlsEnabled,
+          );
       if (!mounted) return;
       final DiscoveredPairingProbeResult? probe = outcome.result;
       if (probe != null && probe.ping.supportsPairV2) {
@@ -1667,16 +1709,18 @@ class _LanDiscoveryWidgetState extends State<_LanDiscoveryWidget>
           .post(
             Uri.parse('$baseUrl/api/pair'),
             headers: <String, String>{'Content-Type': 'application/json'},
-            body:
-                jsonEncode(<String, String>{'name': await _localDeviceName()}),
+            body: jsonEncode(<String, String>{
+              'name': await _localDeviceName(),
+            }),
           )
           // Outlast the host's 60s approval window so its auto-deny 403 reaches
           // us instead of us timing out first.
           .timeout(const Duration(seconds: 65));
       if (resp.statusCode == 200) {
         final dynamic body = jsonDecode(resp.body);
-        final String? token =
-            body is Map<String, dynamic> ? body['token'] as String? : null;
+        final String? token = body is Map<String, dynamic>
+            ? body['token'] as String?
+            : null;
         if (token != null && token.isNotEmpty) {
           // BUG-1550：v1 老路径同样把凭据落在这条地址上（理由见 _onPairSuccess）。
           await repo.setFushiClientTokenForUrl(baseUrl, token);
@@ -1715,7 +1759,9 @@ class _LanDiscoveryWidgetState extends State<_LanDiscoveryWidget>
       if (decoded is Map && decoded['reason'] == 'upgrade_required') {
         return t.sync_pair_upgrade_required;
       }
-    } catch (_) {/* older peers reply with a plain-text 403 body */}
+    } catch (_) {
+      /* older peers reply with a plain-text 403 body */
+    }
     return t.sync_pair_unavailable;
   }
 
@@ -1723,8 +1769,9 @@ class _LanDiscoveryWidgetState extends State<_LanDiscoveryWidget>
   Widget build(BuildContext context) {
     // Mutual exclusion: while this device serves peers, it can't connect out as
     // a client, so device taps are inert and a note explains why.
-    final bool lockedByServer =
-        _syncSettings(widget.settingsContext).serverEnabled;
+    final bool lockedByServer = _syncSettings(
+      widget.settingsContext,
+    ).serverEnabled;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Column(
@@ -1732,8 +1779,10 @@ class _LanDiscoveryWidgetState extends State<_LanDiscoveryWidget>
         children: <Widget>[
           Row(
             children: <Widget>[
-              Text(t.sync_lan_discovery,
-                  style: Theme.of(context).textTheme.titleSmall),
+              Text(
+                t.sync_lan_discovery,
+                style: Theme.of(context).textTheme.titleSmall,
+              ),
               const Spacer(),
               if (_scanning)
                 SizedBox(
@@ -1750,18 +1799,22 @@ class _LanDiscoveryWidgetState extends State<_LanDiscoveryWidget>
               child: Text(
                 t.sync_role_locked_by_server,
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: Theme.of(context).colorScheme.onSurfaceVariant,
-                    ),
+                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                ),
               ),
             ),
           if (_scanFailed)
-            Text(t.sync_lan_scan_failed,
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: Theme.of(context).colorScheme.error,
-                    ))
+            Text(
+              t.sync_lan_scan_failed,
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                color: Theme.of(context).colorScheme.error,
+              ),
+            )
           else if (_devices.isEmpty)
-            Text(t.sync_lan_no_devices,
-                style: Theme.of(context).textTheme.bodySmall),
+            Text(
+              t.sync_lan_no_devices,
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
           for (final FushiDevice device in _devices)
             FushiListItem(
               leading: const Icon(Icons.devices_outlined, size: 20),
@@ -1773,8 +1826,10 @@ class _LanDiscoveryWidgetState extends State<_LanDiscoveryWidget>
                   ? SizedBox(
                       width: 18,
                       height: 18,
-                      child:
-                          adaptiveIndicator(context: context, strokeWidth: 2),
+                      child: adaptiveIndicator(
+                        context: context,
+                        strokeWidth: 2,
+                      ),
                     )
                   : null,
               minHeight: 52,
@@ -1835,8 +1890,7 @@ class _InterconnectProfileTransferWidgetState
     extends State<_InterconnectProfileTransferWidget> {
   bool _busy = false;
 
-  bool get _isUpload =>
-      widget.direction == _ProfileTransferDirection.upload;
+  bool get _isUpload => widget.direction == _ProfileTransferDirection.upload;
 
   Future<void> _run() async {
     if (_busy) return;
@@ -1886,8 +1940,8 @@ class _InterconnectProfileTransferWidgetState
   }
 
   Future<String?> _download(AppModel appModel) async {
-    final String? json =
-        await InterconnectSyncBackend.instance.getRemoteProfileJson();
+    final String? json = await InterconnectSyncBackend.instance
+        .getRemoteProfileJson();
     if (json == null) return null;
     final ProfileRepository repo = appModel.interconnectProfileRepository();
     // createNew（默认）：本机现有配置一份都不动。
@@ -2012,8 +2066,8 @@ class _InterconnectBackupBackendWidgetState
             subtitle: active
                 ? t.interconnect_backup_backend_active
                 : (paired
-                    ? t.interconnect_backup_backend_hint
-                    : t.interconnect_backup_backend_needs_pairing),
+                      ? t.interconnect_backup_backend_hint
+                      : t.interconnect_backup_backend_needs_pairing),
             icon: Icons.backup_outlined,
           ),
           Text(
@@ -2030,8 +2084,9 @@ class _InterconnectBackupBackendWidgetState
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
                 FilledButton.tonal(
-                  onPressed:
-                      (paired && !_busy) ? _useInterconnectAsBackend : null,
+                  onPressed: (paired && !_busy)
+                      ? _useInterconnectAsBackend
+                      : null,
                   child: Text(t.interconnect_backup_backend_apply),
                 ),
               ],

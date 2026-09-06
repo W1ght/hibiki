@@ -18,10 +18,7 @@ const int kMihonPageDiskCacheFiles = 1024;
 const int kMihonPagePrefetchConcurrency = 4;
 const int _kMihonMaximumPageBytes = 100 * 1024 * 1024;
 
-String mihonPageCacheIdentity(
-  MihonSourceContext context,
-  MihonPage page,
-) {
+String mihonPageCacheIdentity(MihonSourceContext context, MihonPage page) {
   final String identity = <String>[
     context.extension.packageName,
     context.source.id,
@@ -82,9 +79,9 @@ class LocalMangaPageProvider implements MangaPageProvider {
 
   @override
   Future<MangaReaderSession> open() async => LocalMangaReaderSession(
-        imagesRoot: imagesRoot,
-        relativePaths: List<String>.unmodifiable(relativePaths),
-      );
+    imagesRoot: imagesRoot,
+    relativePaths: List<String>.unmodifiable(relativePaths),
+  );
 }
 
 class LocalMangaReaderSession implements MangaReaderSession {
@@ -104,8 +101,9 @@ class LocalMangaReaderSession implements MangaReaderSession {
   Future<MangaPageBytes> page(int index) async {
     final File file = await _validatedFile(index);
     final Uint8List bytes = await file.readAsBytes();
-    final ({int width, int height})? dimensions =
-        await mangaImageDimensions(bytes);
+    final ({int width, int height})? dimensions = await mangaImageDimensions(
+      bytes,
+    );
     return MangaPageBytes(
       bytes: bytes,
       contentType: mangaImageContentType(bytes),
@@ -266,15 +264,13 @@ class MihonMangaReaderSession implements MangaReaderSession {
           candidate,
     ];
     await Future.wait<void>(
-      indices.take(4).map(
-        (int candidate) async {
-          try {
-            await page(candidate);
-          } on Object {
-            // Prefetch failures are retried by the foreground request.
-          }
-        },
-      ),
+      indices.take(4).map((int candidate) async {
+        try {
+          await page(candidate);
+        } on Object {
+          // Prefetch failures are retried by the foreground request.
+        }
+      }),
     );
   }
 
@@ -352,8 +348,9 @@ class MihonMangaReaderSession implements MangaReaderSession {
   }
 
   Future<MangaPageBytes> _describe(Uint8List bytes) async {
-    final ({int width, int height})? dimensions =
-        await mangaImageDimensions(bytes);
+    final ({int width, int height})? dimensions = await mangaImageDimensions(
+      bytes,
+    );
     return MangaPageBytes(
       bytes: bytes,
       contentType: mangaImageContentType(bytes),
@@ -397,20 +394,16 @@ class MihonMangaReaderSession implements MangaReaderSession {
   void _remember(int index, MangaPageBytes page) {
     final _MangaMemoryEntry? previous = _memory.remove(index);
     if (previous != null) _memoryBytes -= previous.page.bytes.length;
-    _memory[index] = _MangaMemoryEntry(
-      page: page,
-      lastAccess: DateTime.now(),
-    );
+    _memory[index] = _MangaMemoryEntry(page: page, lastAccess: DateTime.now());
     _memoryBytes += page.bytes.length;
     while (_memoryBytes > maxMemoryCacheBytes && _memory.length > 1) {
       final MapEntry<int, _MangaMemoryEntry> oldest = _memory.entries.reduce(
         (
           MapEntry<int, _MangaMemoryEntry> first,
           MapEntry<int, _MangaMemoryEntry> second,
-        ) =>
-            first.value.lastAccess.isBefore(second.value.lastAccess)
-                ? first
-                : second,
+        ) => first.value.lastAccess.isBefore(second.value.lastAccess)
+            ? first
+            : second,
       );
       _memory.remove(oldest.key);
       _memoryBytes -= oldest.value.page.bytes.length;
@@ -428,25 +421,19 @@ class MihonMangaReaderSession implements MangaReaderSession {
       try {
         final FileStat stat = await entity.stat();
         if (stat.type == FileSystemEntityType.file) {
-          entries.add((
-            file: entity,
-            size: stat.size,
-            modified: stat.modified,
-          ));
+          entries.add((file: entity, size: stat.size, modified: stat.modified));
         }
       } on FileSystemException {
         continue;
       }
     }
-    entries.sort(
-      (
-        ({File file, int size, DateTime modified}) a,
-        ({File file, int size, DateTime modified}) b,
-      ) {
-        final int time = a.modified.compareTo(b.modified);
-        return time != 0 ? time : a.file.path.compareTo(b.file.path);
-      },
-    );
+    entries.sort((
+      ({File file, int size, DateTime modified}) a,
+      ({File file, int size, DateTime modified}) b,
+    ) {
+      final int time = a.modified.compareTo(b.modified);
+      return time != 0 ? time : a.file.path.compareTo(b.file.path);
+    });
     int total = entries.fold<int>(0, (int sum, var item) => sum + item.size);
     while (entries.length > maxDiskCacheFiles || total > maxDiskCacheBytes) {
       final int removal = entries.indexWhere(
@@ -454,8 +441,9 @@ class MihonMangaReaderSession implements MangaReaderSession {
             p.canonicalize(item.file.path) != p.canonicalize(protecting.path),
       );
       if (removal < 0) return;
-      final ({File file, int size, DateTime modified}) entry =
-          entries.removeAt(removal);
+      final ({File file, int size, DateTime modified}) entry = entries.removeAt(
+        removal,
+      );
       try {
         await entry.file.delete();
         total -= entry.size;
@@ -465,9 +453,8 @@ class MihonMangaReaderSession implements MangaReaderSession {
     }
   }
 
-  File _diskFile(int index) => File(
-        p.join(directory.path, cacheIdentity(index)),
-      );
+  File _diskFile(int index) =>
+      File(p.join(directory.path, cacheIdentity(index)));
 
   void _validateIndex(int index, {bool requireOpen = true}) {
     if (requireOpen && _closed) {
@@ -501,10 +488,7 @@ class MihonMangaReaderSession implements MangaReaderSession {
 }
 
 class _MangaMemoryEntry {
-  _MangaMemoryEntry({
-    required this.page,
-    required this.lastAccess,
-  });
+  _MangaMemoryEntry({required this.page, required this.lastAccess});
 
   final MangaPageBytes page;
   DateTime lastAccess;
@@ -566,9 +550,7 @@ class _AsyncPermitPool {
   }
 }
 
-Future<({int width, int height})?> mangaImageDimensions(
-  Uint8List bytes,
-) async {
+Future<({int width, int height})?> mangaImageDimensions(Uint8List bytes) async {
   if (bytes.isEmpty) return null;
   return Isolate.run<({int width, int height})?>(() {
     try {

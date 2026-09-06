@@ -9,13 +9,12 @@ TorrentUploadMetrics _m({
   int uploaded = 0,
   int downloaded = 1000,
   int elapsedMs = 0,
-}) =>
-    TorrentUploadMetrics(
-      isSeeding: seeding,
-      uploaded: uploaded,
-      downloaded: downloaded,
-      seedingElapsedMs: elapsedMs,
-    );
+}) => TorrentUploadMetrics(
+  isSeeding: seeding,
+  uploaded: uploaded,
+  downloaded: downloaded,
+  seedingElapsedMs: elapsedMs,
+);
 
 void main() {
   test('upload disabled by default → never allow upload', () {
@@ -50,9 +49,9 @@ void main() {
     test('time limit only applies while seeding, not during download', () {
       // 下载阶段（未做种）即便 elapsed 很大也允许上传（换下载速度）。
       expect(
-          shouldAllowUpload(
-              cfg, _m(seeding: false, elapsedMs: 999 * 60 * 1000)),
-          isTrue);
+        shouldAllowUpload(cfg, _m(seeding: false, elapsedMs: 999 * 60 * 1000)),
+        isTrue,
+      );
     });
   });
 
@@ -64,14 +63,20 @@ void main() {
 
     test('below ratio → allow', () {
       expect(
-          shouldAllowUpload(cfg, _m(uploaded: 1000, downloaded: 1000)), isTrue);
+        shouldAllowUpload(cfg, _m(uploaded: 1000, downloaded: 1000)),
+        isTrue,
+      );
     });
 
     test('at/above ratio → stop', () {
-      expect(shouldAllowUpload(cfg, _m(uploaded: 2000, downloaded: 1000)),
-          isFalse);
-      expect(shouldAllowUpload(cfg, _m(uploaded: 5000, downloaded: 1000)),
-          isFalse);
+      expect(
+        shouldAllowUpload(cfg, _m(uploaded: 2000, downloaded: 1000)),
+        isFalse,
+      );
+      expect(
+        shouldAllowUpload(cfg, _m(uploaded: 5000, downloaded: 1000)),
+        isFalse,
+      );
     });
 
     test('downloaded==0 → ratio undefined, do not stop on ratio', () {
@@ -87,18 +92,27 @@ void main() {
     );
     // 时长未到但分享率超 → 停。
     expect(
-        shouldAllowUpload(
-            cfg, _m(uploaded: 3000, downloaded: 1000, elapsedMs: 0)),
-        isFalse);
+      shouldAllowUpload(
+        cfg,
+        _m(uploaded: 3000, downloaded: 1000, elapsedMs: 0),
+      ),
+      isFalse,
+    );
     // 分享率未到但时长超 → 停。
     expect(
-        shouldAllowUpload(
-            cfg, _m(uploaded: 0, downloaded: 1000, elapsedMs: 61 * 60 * 1000)),
-        isFalse);
+      shouldAllowUpload(
+        cfg,
+        _m(uploaded: 0, downloaded: 1000, elapsedMs: 61 * 60 * 1000),
+      ),
+      isFalse,
+    );
     // 两者都未到 → 允许。
     expect(
-        shouldAllowUpload(cfg,
-            _m(uploaded: 500, downloaded: 1000, elapsedMs: 10 * 60 * 1000)),
-        isTrue);
+      shouldAllowUpload(
+        cfg,
+        _m(uploaded: 500, downloaded: 1000, elapsedMs: 10 * 60 * 1000),
+      ),
+      isTrue,
+    );
   });
 }

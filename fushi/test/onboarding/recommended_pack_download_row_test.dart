@@ -36,13 +36,13 @@ void main() {
   RecommendedPackDownloadController newController() {
     return RecommendedPackDownloadController(
       packDirectory: () => packDir,
-      runner: ({
-        required Directory packDir,
-        required ValueNotifier<double> progress,
-        required ValueNotifier<int> receivedBytes,
-        required CancelToken cancelToken,
-      }) async =>
-          throw StateError('本用例不下载'),
+      runner:
+          ({
+            required Directory packDir,
+            required ValueNotifier<double> progress,
+            required ValueNotifier<int> receivedBytes,
+            required CancelToken cancelToken,
+          }) async => throw StateError('本用例不下载'),
       showOutcome: (String message, ToastSeverity severity) {},
     );
   }

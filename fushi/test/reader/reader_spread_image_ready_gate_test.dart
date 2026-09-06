@@ -47,14 +47,18 @@ void main() {
 
       // callHandler('spreadReady') 只出现一次，且在 signalReady 定义之后（=被它包裹），
       // 不再在解析时同步触发。
-      final int readyCount =
-          "callHandler('spreadReady')".allMatches(html).length;
+      final int readyCount = "callHandler('spreadReady')"
+          .allMatches(html)
+          .length;
       expect(readyCount, 1, reason: 'spreadReady 应只由 signalReady 单点发出');
       final int signalDefIdx = html.indexOf('function signalReady');
       final int readyIdx = html.indexOf("callHandler('spreadReady')");
       expect(signalDefIdx, greaterThanOrEqualTo(0));
-      expect(readyIdx, greaterThan(signalDefIdx),
-          reason: 'spreadReady 必须在 signalReady 函数体内，而非解析时同步调用');
+      expect(
+        readyIdx,
+        greaterThan(signalDefIdx),
+        reason: 'spreadReady 必须在 signalReady 函数体内，而非解析时同步调用',
+      );
 
       // 图片就绪门控逻辑必须在脚本闭合前（=真的在这段脚本里生效）。
       final int completeIdx = html.indexOf('img.complete');
@@ -65,7 +69,8 @@ void main() {
       // 旧的同步尾（点击循环 `});` 后直接 `callHandler('spreadReady')`）必须已消除。
       expect(
         html.contains(
-            "  });\nwindow.flutter_inappwebview.callHandler('spreadReady');"),
+          "  });\nwindow.flutter_inappwebview.callHandler('spreadReady');",
+        ),
         isFalse,
         reason: '不得回退到解析时同步触发 spreadReady',
       );
@@ -79,31 +84,47 @@ void main() {
       final int loadSpreadIdx = source.indexOf('Future<void> _loadSpreadPage(');
       expect(loadSpreadIdx, greaterThan(0), reason: '_loadSpreadPage 应存在于合并语料');
       // _loadSpreadPage 到下一个方法（_resolveSpreadImageUrl）之间的函数体切片。
-      final int nextIdx =
-          source.indexOf('String _resolveSpreadImageUrl(', loadSpreadIdx);
+      final int nextIdx = source.indexOf(
+        'String _resolveSpreadImageUrl(',
+        loadSpreadIdx,
+      );
       expect(nextIdx, greaterThan(loadSpreadIdx));
       final String body = source.substring(loadSpreadIdx, nextIdx);
       // 钉的是「委托给 builder」，不是调用点的换行方式——BUG-1426 给 builder 加了
       // 阈值/键桥参数后调用点被 dart format 折成多行，旧的 `buildSpreadPageHtml(leftUrl:`
       // 连写断言当场转红，那是拼写脆弱而不是契约破裂。
-      expect(body, contains('buildSpreadPageHtml('),
-          reason: '_loadSpreadPage 必须走 buildSpreadPageHtml 生成 spread HTML');
-      expect(body, contains('leftUrl:'),
-          reason: 'builder 的左右图入参必须由 _loadSpreadPage 解析后传入');
-      expect(body.contains("callHandler('spreadReady')"), isFalse,
-          reason: '_loadSpreadPage 函数体内不得再内联 spreadReady（已下沉到 builder）');
+      expect(
+        body,
+        contains('buildSpreadPageHtml('),
+        reason: '_loadSpreadPage 必须走 buildSpreadPageHtml 生成 spread HTML',
+      );
+      expect(
+        body,
+        contains('leftUrl:'),
+        reason: 'builder 的左右图入参必须由 _loadSpreadPage 解析后传入',
+      );
+      expect(
+        body.contains("callHandler('spreadReady')"),
+        isFalse,
+        reason: '_loadSpreadPage 函数体内不得再内联 spreadReady（已下沉到 builder）',
+      );
     });
 
     test('spreadReady 处理器仍保留 cf0adf642 冷却窗重锚接线', () {
       // BUG-568 v3：spread content-ready 消费 pending 并重 stamp 冷却窗，勿被本次修复破坏。
       final int handlerIdx = source.indexOf("handlerName: 'spreadReady'");
       expect(handlerIdx, greaterThan(0));
-      final int handlerEnd =
-          source.indexOf("handlerName: 'onCueTap'", handlerIdx);
+      final int handlerEnd = source.indexOf(
+        "handlerName: 'onCueTap'",
+        handlerIdx,
+      );
       expect(handlerEnd, greaterThan(handlerIdx));
       final String handlerBody = source.substring(handlerIdx, handlerEnd);
-      expect(handlerBody, contains('_noteChapterTurnSettledIfPending()'),
-          reason: 'spreadReady 处理器必须保留跨章冷却窗重锚（cf0adf642 / BUG-568 v3）');
+      expect(
+        handlerBody,
+        contains('_noteChapterTurnSettledIfPending()'),
+        reason: 'spreadReady 处理器必须保留跨章冷却窗重锚（cf0adf642 / BUG-568 v3）',
+      );
     });
   });
 }

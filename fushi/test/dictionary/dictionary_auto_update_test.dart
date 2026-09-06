@@ -7,26 +7,38 @@ import 'package:fushi_dictionary/fushi_dictionary.dart';
 void main() {
   group('DictionaryUpdateInterval', () {
     test('fromName 解析 daily/weekly/monthly', () {
-      expect(DictionaryUpdateInterval.fromName('daily'),
-          DictionaryUpdateInterval.daily);
-      expect(DictionaryUpdateInterval.fromName('weekly'),
-          DictionaryUpdateInterval.weekly);
-      expect(DictionaryUpdateInterval.fromName('monthly'),
-          DictionaryUpdateInterval.monthly);
+      expect(
+        DictionaryUpdateInterval.fromName('daily'),
+        DictionaryUpdateInterval.daily,
+      );
+      expect(
+        DictionaryUpdateInterval.fromName('weekly'),
+        DictionaryUpdateInterval.weekly,
+      );
+      expect(
+        DictionaryUpdateInterval.fromName('monthly'),
+        DictionaryUpdateInterval.monthly,
+      );
     });
 
     test('未知/空值回退 weekly', () {
-      expect(DictionaryUpdateInterval.fromName(null),
-          DictionaryUpdateInterval.weekly);
-      expect(DictionaryUpdateInterval.fromName('garbage'),
-          DictionaryUpdateInterval.weekly);
+      expect(
+        DictionaryUpdateInterval.fromName(null),
+        DictionaryUpdateInterval.weekly,
+      );
+      expect(
+        DictionaryUpdateInterval.fromName('garbage'),
+        DictionaryUpdateInterval.weekly,
+      );
     });
 
     test('每档 Duration 正确', () {
       expect(DictionaryUpdateInterval.daily.duration, const Duration(days: 1));
       expect(DictionaryUpdateInterval.weekly.duration, const Duration(days: 7));
       expect(
-          DictionaryUpdateInterval.monthly.duration, const Duration(days: 30));
+        DictionaryUpdateInterval.monthly.duration,
+        const Duration(days: 30),
+      );
     });
   });
 
@@ -38,14 +50,13 @@ void main() {
       DictionaryUpdateInterval interval = DictionaryUpdateInterval.weekly,
       bool hasUpdatable = true,
       bool isBusy = false,
-    }) =>
-        shouldAutoUpdateDictionaries(
-          now: now,
-          lastUpdate: lastUpdate,
-          interval: interval,
-          hasUpdatable: hasUpdatable,
-          isBusy: isBusy,
-        );
+    }) => shouldAutoUpdateDictionaries(
+      now: now,
+      lastUpdate: lastUpdate,
+      interval: interval,
+      hasUpdatable: hasUpdatable,
+      isBusy: isBusy,
+    );
 
     test('从未更新（lastUpdate=null）且有可更新 → true', () {
       expect(run(lastUpdate: null), isTrue);
@@ -95,46 +106,32 @@ void main() {
   group('didCompleteDictionaryAutoUpdateBatch', () {
     test('所有可更新词典都完成检查或更新 → true', () {
       expect(
-        didCompleteDictionaryAutoUpdateBatch(
-          totalCount: 3,
-          completedCount: 3,
-        ),
+        didCompleteDictionaryAutoUpdateBatch(totalCount: 3, completedCount: 3),
         isTrue,
       );
     });
 
     test('任一本检查或重导失败 → false，保留下次启动重试', () {
       expect(
-        didCompleteDictionaryAutoUpdateBatch(
-          totalCount: 3,
-          completedCount: 2,
-        ),
+        didCompleteDictionaryAutoUpdateBatch(totalCount: 3, completedCount: 2),
         isFalse,
       );
     });
 
     test('没有可更新词典不构成一轮检查', () {
       expect(
-        didCompleteDictionaryAutoUpdateBatch(
-          totalCount: 0,
-          completedCount: 0,
-        ),
+        didCompleteDictionaryAutoUpdateBatch(totalCount: 0, completedCount: 0),
         isFalse,
       );
     });
   });
 
   test('BUG-1281 自动更新按完整检查结果写时间，而非只认实际重导数量', () {
-    final String source =
-        File('lib/src/models/app_model.dart').readAsStringSync();
-    expect(
-      source,
-      contains('DictionaryUpdateService.fetchRemoteIndexResult'),
-    );
-    expect(
-      source,
-      contains('didCompleteDictionaryAutoUpdateBatch('),
-    );
+    final String source = File(
+      'lib/src/models/app_model.dart',
+    ).readAsStringSync();
+    expect(source, contains('DictionaryUpdateService.fetchRemoteIndexResult'));
+    expect(source, contains('didCompleteDictionaryAutoUpdateBatch('));
     expect(
       source,
       matches(

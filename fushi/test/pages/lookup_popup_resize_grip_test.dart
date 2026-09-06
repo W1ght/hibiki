@@ -105,8 +105,9 @@ void main() {
     // AppModel 构造时 DefaultCacheManager 经 path_provider 平台通道，单测 mock 掉。
     late Directory pathProviderDir;
     setUpAll(() {
-      pathProviderDir =
-          Directory.systemTemp.createTempSync('hibiki_path_provider');
+      pathProviderDir = Directory.systemTemp.createTempSync(
+        'hibiki_path_provider',
+      );
       binding.defaultBinaryMessenger.setMockMethodCallHandler(
         const MethodChannel('plugins.flutter.io/path_provider'),
         (MethodCall call) async => pathProviderDir.path,

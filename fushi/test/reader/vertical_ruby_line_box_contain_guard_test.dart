@@ -37,8 +37,7 @@ Future<String> _readerCss({
 
 void main() {
   group('BUG-611 竖排 ruby 不被 -webkit-line-box-contain 抹掉标注预留', () {
-    test(
-        '四组合(竖排/横排 × 连续/分页)生成的正文 CSS 都不含活的 '
+    test('四组合(竖排/横排 × 连续/分页)生成的正文 CSS 都不含活的 '
         '-webkit-line-box-contain 声明', () async {
       const List<({String wm, String vm})> combos = <({String wm, String vm})>[
         (wm: 'vertical-rl', vm: 'continuous'),
@@ -48,11 +47,13 @@ void main() {
       ];
       for (final ({String wm, String vm}) c in combos) {
         final String css = _stripCssComments(
-            await _readerCss(writingMode: c.wm, viewMode: c.vm));
+          await _readerCss(writingMode: c.wm, viewMode: c.vm),
+        );
         expect(
           css.contains('-webkit-line-box-contain'),
           isFalse,
-          reason: '${c.wm}/${c.vm}: 正文 CSS 不得发出 -webkit-line-box-contain '
+          reason:
+              '${c.wm}/${c.vm}: 正文 CSS 不得发出 -webkit-line-box-contain '
               '声明——它会抹掉竖排 ruby 交叉轴预留 → 振假名塌进基字(BUG-611)。'
               '删除后所有引擎回到默认 line-box 行为(为 ruby 预留空间)。',
         );
@@ -61,16 +62,24 @@ void main() {
 
     test('文档注释里仍可提及属性名(仅剥注释后才断言，避免误判)', () async {
       // 完整 CSS(含注释)里允许出现属性名(记录决策的注释)；只有剥掉注释后才不能有声明。
-      final String rawCss =
-          await _readerCss(writingMode: 'vertical-rl', viewMode: 'continuous');
+      final String rawCss = await _readerCss(
+        writingMode: 'vertical-rl',
+        viewMode: 'continuous',
+      );
       final String stripped = _stripCssComments(rawCss);
       // 剥注释后不含 → 守卫本体；下面两条保证 stripper 真的把注释剥掉了(否则上面的
       // 守卫失效)。判据从「长度变短」改成「内容变了 + 注释标记没了」：共享掩码是
       // **等长**替换（下标可回原串切片），长度不再变短，旧判据会永远红。
-      expect(stripped.length, rawCss.length,
-          reason: 'maskCssComments 是等长掩码，长度必须守恒');
-      expect(stripped, isNot(rawCss),
-          reason: 'CSS 应含注释，_stripCssComments 必须真的把注释掩掉了');
+      expect(
+        stripped.length,
+        rawCss.length,
+        reason: 'maskCssComments 是等长掩码，长度必须守恒',
+      );
+      expect(
+        stripped,
+        isNot(rawCss),
+        reason: 'CSS 应含注释，_stripCssComments 必须真的把注释掩掉了',
+      );
       expect(stripped.contains('/*'), isFalse, reason: '掩码后不该再有块注释起始标记');
     });
   });

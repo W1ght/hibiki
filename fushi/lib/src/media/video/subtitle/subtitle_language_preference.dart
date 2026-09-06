@@ -36,8 +36,10 @@ import 'package:fushi/src/models/content_font_chain.dart';
 /// 脏 token（`chs` / `简体` / `ja[cc]`），这个的输入是**声明过的语言标签**。两者
 /// 产出同一套码，所以结果可以直接比。
 String? normalizeSubtitleLanguageCode(String? tag) {
-  final String normalized =
-      (tag ?? '').trim().toLowerCase().replaceAll('_', '-');
+  final String normalized = (tag ?? '').trim().toLowerCase().replaceAll(
+    '_',
+    '-',
+  );
   if (normalized.isEmpty) return null;
   final String base = normalized.split('-').first;
   if (base.isEmpty) return null;

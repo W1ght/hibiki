@@ -30,7 +30,9 @@ bool isHomeReady() {
 }
 
 Future<int> takeScreenshot(
-    IntegrationTestWidgetsFlutterBinding binding, String name) async {
+  IntegrationTestWidgetsFlutterBinding binding,
+  String name,
+) async {
   try {
     await binding.takeScreenshot(name).timeout(const Duration(seconds: 10));
     debugPrint('[test] Screenshot saved: $name');
@@ -54,9 +56,13 @@ void assertStrictErrors(List<FlutterErrorDetails> errors) {
     return true;
   }).toList();
 
-  expect(unexpected, isEmpty,
-      reason: 'Errors (including WebView/renderer) are fatal: '
-          '${unexpected.map((e) => e.exceptionAsString()).join('; ')}');
+  expect(
+    unexpected,
+    isEmpty,
+    reason:
+        'Errors (including WebView/renderer) are fatal: '
+        '${unexpected.map((e) => e.exceptionAsString()).join('; ')}',
+  );
 }
 
 Finder findBookEntries() {
@@ -71,8 +77,9 @@ Finder findBookEntries() {
 }
 
 Finder findSearchField() {
-  final Finder homeDictionarySearch =
-      find.byKey(const ValueKey<String>('home_dictionary_search_field'));
+  final Finder homeDictionarySearch = find.byKey(
+    const ValueKey<String>('home_dictionary_search_field'),
+  );
   if (homeDictionarySearch.evaluate().isNotEmpty) {
     return homeDictionarySearch.first;
   }
@@ -83,15 +90,16 @@ Finder findSearchField() {
     return find.byType(TextFormField).first;
   }
   final Finder searchBar = find.byType(SearchBar);
-  expect(searchBar, findsWidgets,
-      reason: 'No TextField, TextFormField, or SearchBar found');
+  expect(
+    searchBar,
+    findsWidgets,
+    reason: 'No TextField, TextFormField, or SearchBar found',
+  );
   return searchBar.first;
 }
 
 Finder findDictionaryResultEvidence() {
-  return find.byKey(
-    const ValueKey<String>('home_dictionary_result_evidence'),
-  );
+  return find.byKey(const ValueKey<String>('home_dictionary_result_evidence'));
 }
 
 List<Finder> findPrimaryNavigationTargets() {
@@ -117,8 +125,7 @@ Finder findNavTargetForTab(HomeTab tab) {
   );
   if (root == null) {
     // 导航根还没挂载：返回一个此刻必空的 finder（调用方按「不可达」处理）。
-    return find.descendant(
-        of: find.byKey(fushiMaterialNavKey), matching: icon);
+    return find.descendant(of: find.byKey(fushiMaterialNavKey), matching: icon);
   }
   return find.descendant(of: root, matching: icon);
 }

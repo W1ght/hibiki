@@ -28,10 +28,9 @@ void main() {
 
     test('仅标点/大小写差异视同一致', () {
       expect(
-        mangaTitleMatchScore(
-          'Frieren - Beyond Journeys End',
-          <String>["Frieren: Beyond Journey's End"],
-        ),
+        mangaTitleMatchScore('Frieren - Beyond Journeys End', <String>[
+          "Frieren: Beyond Journey's End",
+        ]),
         greaterThan(0.9),
       );
     });
@@ -44,10 +43,10 @@ void main() {
     });
 
     test('取多标题中的最高分：native 不像但 english 像', () {
-      final double score = mangaTitleMatchScore(
+      final double score = mangaTitleMatchScore('Attack on Titan', <String>[
+        '進撃の巨人',
         'Attack on Titan',
-        <String>['進撃の巨人', 'Attack on Titan'],
-      );
+      ]);
       expect(score, 1.0);
     });
 
@@ -57,8 +56,9 @@ void main() {
         lessThan(0.4),
       );
       expect(
-        mangaTitleMatchScore(
-            'Berserk', <String>["Frieren: Beyond Journey's End"]),
+        mangaTitleMatchScore('Berserk', <String>[
+          "Frieren: Beyond Journey's End",
+        ]),
         lessThan(0.4),
       );
     });

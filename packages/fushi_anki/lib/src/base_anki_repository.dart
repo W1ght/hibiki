@@ -26,10 +26,10 @@ import 'lapis_preset.dart';
 @immutable
 class AudioFetchOutcome {
   const AudioFetchOutcome._({this.ref, this.failureReason})
-      : assert(
-          ref == null || failureReason == null,
-          'A successful audio fetch (ref) cannot also carry a failure reason.',
-        );
+    : assert(
+        ref == null || failureReason == null,
+        'A successful audio fetch (ref) cannot also carry a failure reason.',
+      );
 
   /// 成功：拿到裸媒体引用 [ref]。
   const AudioFetchOutcome.stored(String ref) : this._(ref: ref);
@@ -77,8 +77,9 @@ const Set<String> kAnkiVideoCoverExtensions = <String>{'mp4', 'webm'};
 /// 另一边把 mp4 塞进 `<img>` 变成坏图。
 String coverMediaRef(String mediaName) {
   final int dot = mediaName.lastIndexOf('.');
-  final String extension =
-      dot < 0 ? '' : mediaName.substring(dot + 1).toLowerCase();
+  final String extension = dot < 0
+      ? ''
+      : mediaName.substring(dot + 1).toLowerCase();
   if (kAnkiVideoCoverExtensions.contains(extension)) {
     return '[sound:$mediaName]';
   }
@@ -229,10 +230,9 @@ abstract class BaseAnkiRepository {
     required int noteId,
     required String rawPayloadJson,
     required AnkiMiningContext context,
-  }) async =>
-      MineOutcome.failure(
-        'This Anki backend does not support overwriting a mined card.',
-      );
+  }) async => MineOutcome.failure(
+    'This Anki backend does not support overwriting a mined card.',
+  );
 
   /// TODO-614：按「与查重同一条件」反查一张可被覆写的**已存在** note id。
   ///
@@ -247,8 +247,7 @@ abstract class BaseAnkiRepository {
   Future<int?> findOverwriteTargetNoteId(
     String expression,
     String reading,
-  ) async =>
-      null;
+  ) async => null;
 
   /// TODO-1007/1008：按「与查重同一条件」（第一字段=expression）反查 Anki 中**所有**
   /// 已存在的同词卡，返回它们的 [MinedNoteRef]（noteId + 一行预览），**不受
@@ -264,8 +263,7 @@ abstract class BaseAnkiRepository {
   Future<List<MinedNoteRef>> findMatchingNotes(
     String expression,
     String reading,
-  ) async =>
-      const <MinedNoteRef>[];
+  ) async => const <MinedNoteRef>[];
 
   /// TODO-1007/1008：读取一张已存在 note（[noteId]）的现有字段（字段名 → 值），供
   /// note viewer 只读展示。两后端各自覆写（AnkiConnect `notesInfo` / AnkiDroid
@@ -297,8 +295,10 @@ abstract class BaseAnkiRepository {
     String reading,
   ) async {
     if (expression.isEmpty) return AnkiOpenWordOutcome.failed;
-    final List<MinedNoteRef> matches =
-        await findMatchingNotes(expression, reading);
+    final List<MinedNoteRef> matches = await findMatchingNotes(
+      expression,
+      reading,
+    );
     if (matches.isEmpty) return AnkiOpenWordOutcome.noMatch;
     final int newest = matches
         .map((MinedNoteRef m) => m.noteId)
@@ -347,8 +347,7 @@ abstract class BaseAnkiRepository {
   /// （调用方决定提示还是静默跳过）。**默认实现 = 优雅降级**：返回 `null`。
   Future<AnkiNoteTypeDefinition?> readNoteTypeDefinition(
     String modelName,
-  ) async =>
-      null;
+  ) async => null;
 
   /// 覆写 [modelName] 的 styling（CSS）。返回 `false` = 后端不支持（默认
   /// 降级）；成功返回 `true`；后端失败照抛。
@@ -361,8 +360,7 @@ abstract class BaseAnkiRepository {
   Future<bool> updateNoteTypeTemplates(
     String modelName,
     List<AnkiCardTemplate> templates,
-  ) async =>
-      false;
+  ) async => false;
 
   // ── 媒体存储优化（字节级去重，见 anki_media_dedup.dart）────────────────
 
@@ -411,8 +409,7 @@ abstract class BaseAnkiRepository {
     Future<void> Function(Map<String, dynamic> entry)? onJournal,
     AnkiMediaDedupOnProgress? onProgress,
     bool Function()? shouldCancel,
-  }) async =>
-      null;
+  }) async => null;
 
   /// BUG-1549：按设置解析**当前制卡目标牌组**（id 优先、name 兜底）的单一真相。
   /// 此前这段两级 firstWhereOrNull 在 AnkiConnect / AnkiDroid / AnkiMobile 三个
@@ -573,8 +570,10 @@ abstract class BaseAnkiRepository {
     // 块级标签承担换行分词，直接删空会把相邻词粘连成一个词；字幕行内标签则
     // 紧贴正文、删空才不会在日文句中引入假空格。两份实现不强并（G11）。
     final String noTags = value.replaceAll(RegExp(r'<[^>]*>'), ' ');
-    final String collapsed =
-        noTags.replaceAll('&nbsp;', ' ').replaceAll(RegExp(r'\s+'), ' ').trim();
+    final String collapsed = noTags
+        .replaceAll('&nbsp;', ' ')
+        .replaceAll(RegExp(r'\s+'), ' ')
+        .trim();
     if (collapsed.length <= maxLen) return collapsed;
     return '${collapsed.substring(0, maxLen)}…';
   }

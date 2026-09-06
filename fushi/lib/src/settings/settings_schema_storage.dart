@@ -40,25 +40,26 @@ SettingsDestination buildStorageDestination() {
     body: (SettingsContext c) => StorageUsageView(
       service: StorageUsageService(),
       booksProvider: () async {
-        final List<EpubBookRow> rows =
-            await c.appModel.database.getAllEpubBooks();
+        final List<EpubBookRow> rows = await c.appModel.database
+            .getAllEpubBooks();
         // 有声书 persist 目录的真实键口径与删除侧一致（审查 H1）：EPUB 配音频
         // 用 bookKey（AudiobookRepository.delete），字幕书音频用关联 SrtBooks.uid
         //（SrtBookRepository）；EpubBooks.uid 是 v81 本机机器 id，从不入哈希。
-        final List<SrtBookRow> srtRows =
-            await c.appModel.database.getAllSrtBooks();
+        final List<SrtBookRow> srtRows = await c.appModel.database
+            .getAllSrtBooks();
         // BUG-1893：音频的真相源是 DB 里记的路径（audioRoot / audioPathsJson）。
         // 互联同步拉来的有声书落的是明文目录 audiobooks/<safeDirName(key)>，哈希
         // 目录只是本地导入那一条路径的形态；两者都喂给扫描层，重叠部分由
         // resolveBookStoragePaths 去嵌套去重，不会重复计数。
-        final List<AudiobookRow> audiobookRows =
-            await c.appModel.database.getAllAudiobooks();
+        final List<AudiobookRow> audiobookRows = await c.appModel.database
+            .getAllAudiobooks();
         final Map<String, List<String>> audioPathsByBookKey =
             <String, List<String>>{};
         for (final AudiobookRow ab in audiobookRows) {
           if (ab.bookKey.isEmpty) continue;
-          (audioPathsByBookKey[ab.bookKey] ??= <String>[])
-              .addAll(_audioPathsOf(ab.audioRoot, ab.audioPathsJson));
+          (audioPathsByBookKey[ab.bookKey] ??= <String>[]).addAll(
+            _audioPathsOf(ab.audioRoot, ab.audioPathsJson),
+          );
         }
         final Map<String, List<String>> srtUidsByBookKey =
             <String, List<String>>{};
@@ -71,8 +72,9 @@ SettingsDestination buildStorageDestination() {
             continue;
           }
           (srtUidsByBookKey[srt.bookKey] ??= <String>[]).add(srt.uid);
-          (audioPathsByBookKey[srt.bookKey] ??= <String>[])
-              .addAll(_audioPathsOf(srt.audioRoot, srt.audioPathsJson));
+          (audioPathsByBookKey[srt.bookKey] ??= <String>[]).addAll(
+            _audioPathsOf(srt.audioRoot, srt.audioPathsJson),
+          );
         }
         return <StorageBookRef>[
           for (final EpubBookRow row in rows)
@@ -102,12 +104,12 @@ SettingsDestination buildStorageDestination() {
         for (final Dictionary d in c.appModel.dictionaries) d.name,
       ],
       deleteBook: (String bookKey) async {
-        final DeleteBookResult result =
-            await ReaderFushiSource.instance.deleteBook(
-          db: c.appModel.database,
-          bookKey: bookKey,
-          appModel: c.appModel,
-        );
+        final DeleteBookResult result = await ReaderFushiSource.instance
+            .deleteBook(
+              db: c.appModel.database,
+              bookKey: bookKey,
+              appModel: c.appModel,
+            );
         if (result.deleted) {
           // 与书架删除路径同款缓存失效（books.part.dart），否则书架/首页里
           // 这本书要等那些页自己刷新才消失（审查 M3）。invalidate 整个
@@ -137,8 +139,7 @@ SettingsDestination buildStorageDestination() {
       deleteFiles: (List<String> paths) async {
         for (final String path in paths) {
           try {
-            final FileSystemEntityType type =
-                await FileSystemEntity.type(path);
+            final FileSystemEntityType type = await FileSystemEntity.type(path);
             switch (type) {
               case FileSystemEntityType.directory:
                 await Directory(path).delete(recursive: true);
@@ -160,8 +161,9 @@ SettingsDestination buildStorageDestination() {
         for (final Dictionary d in c.appModel.dictionaries) {
           if (d.name == name) {
             await c.appModel.deleteDictionary(d);
-            final bool stillPresent =
-                c.appModel.dictionaries.any((Dictionary x) => x.name == name);
+            final bool stillPresent = c.appModel.dictionaries.any(
+              (Dictionary x) => x.name == name,
+            );
             return stillPresent ? t.storage_dictionary_delete_incomplete : null;
           }
         }
@@ -177,7 +179,8 @@ SettingsDestination buildStorageDestination() {
       SettingsBodySearchEntry(
         id: 'storage.shaders',
         title: t.storage_category_shaders,
-        subtitle: '${t.storage_modules_anime4k_title} · '
+        subtitle:
+            '${t.storage_modules_anime4k_title} · '
             '${t.storage_shaders_delete_anime4k}',
       ),
       SettingsBodySearchEntry(
@@ -194,7 +197,9 @@ SettingsDestination buildStorageDestination() {
 /// （`sync_asset_package_service.dart`），所以两列全取、重叠交给
 /// `resolveBookStoragePaths` 去嵌套。坏 JSON 降级成空列表，不能炸整页扫描。
 List<String> _audioPathsOf(
-    final String? audioRoot, final String? audioPathsJson) {
+  final String? audioRoot,
+  final String? audioPathsJson,
+) {
   final List<String> out = <String>[
     if (audioRoot != null && audioRoot.isNotEmpty) audioRoot,
   ];

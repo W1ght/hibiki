@@ -49,20 +49,24 @@ String _dartString(String v) {
 
 void main(List<String> args) {
   if (args.isEmpty) {
-    stderr.writeln('usage: dart run tool/i18n_patch_generated.dart <key> [<key>...]');
+    stderr.writeln(
+      'usage: dart run tool/i18n_patch_generated.dart <key> [<key>...]',
+    );
     exit(64);
   }
   final File genFile = File(_generated);
   final List<String> lines = genFile.readAsStringSync().split('\n');
-  final Map<String, dynamic> base = jsonDecode(
-    File('$_i18nDir/strings.i18n.json').readAsStringSync(),
-  ) as Map<String, dynamic>;
+  final Map<String, dynamic> base =
+      jsonDecode(File('$_i18nDir/strings.i18n.json').readAsStringSync())
+          as Map<String, dynamic>;
   final List<String> order = base.keys.toList();
-  final Map<String, Map<String, dynamic>> perLocale = <String, Map<String, dynamic>>{
-    for (final (String cls, String file) in _classes)
-      cls: jsonDecode(File('$_i18nDir/$file').readAsStringSync())
-          as Map<String, dynamic>,
-  };
+  final Map<String, Map<String, dynamic>> perLocale =
+      <String, Map<String, dynamic>>{
+        for (final (String cls, String file) in _classes)
+          cls:
+              jsonDecode(File('$_i18nDir/$file').readAsStringSync())
+                  as Map<String, dynamic>,
+      };
 
   int inserted = 0;
   for (final String key in args) {
@@ -115,12 +119,17 @@ void _insertGetters(
   int i = 0;
   while (i < lines.length) {
     final String line = lines[i];
-    final RegExpMatch? cls = RegExp(r'^class (_Strings[A-Za-z]+) ').firstMatch(line);
+    final RegExpMatch? cls = RegExp(
+      r'^class (_Strings[A-Za-z]+) ',
+    ).firstMatch(line);
     if (cls != null) currentClass = cls.group(1);
-    final bool isAnchor = line.startsWith('  String get $anchor => ') ||
+    final bool isAnchor =
+        line.startsWith('  String get $anchor => ') ||
         line.startsWith('  String $anchor(') ||
         line.startsWith('  TextSpan $anchor(');
-    if (isAnchor && currentClass != null && perLocale.containsKey(currentClass)) {
+    if (isAnchor &&
+        currentClass != null &&
+        perLocale.containsKey(currentClass)) {
       int j = i;
       while (!lines[j].trimRight().endsWith(';')) {
         j++;
@@ -161,7 +170,9 @@ void _insertCases(
     i++;
   }
   if (classIdx != _classes.length) {
-    stderr.writeln('warning: patched $classIdx flat-map switches for $key '
-        '(expected ${_classes.length})');
+    stderr.writeln(
+      'warning: patched $classIdx flat-map switches for $key '
+      '(expected ${_classes.length})',
+    );
   }
 }

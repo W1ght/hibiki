@@ -30,8 +30,8 @@ class CloudRemoteBookClient implements RemoteBookClient {
     this.contentProbeConcurrency = 4,
     this.contentProbeRetries = 1,
     this.contentProbeRetryBackoff = const Duration(milliseconds: 300),
-  })  : assert(contentProbeConcurrency >= 1),
-        assert(contentProbeRetries >= 0);
+  }) : assert(contentProbeConcurrency >= 1),
+       assert(contentProbeRetries >= 0);
 
   /// 远端存储后端；务必是 `resolveSyncBackend` 的产物（带解混淆装饰层）。
   final SyncBackend backend;
@@ -95,8 +95,11 @@ class CloudRemoteBookClient implements RemoteBookClient {
   /// 并发（≤[contentProbeConcurrency]）探测每个书文件夹是否含 `.epub` 内容资产，
   /// 返回与 [folders] 等长、同序的结果。
   Future<List<bool>> _probeContentBounded(List<SyncFileRef> folders) async {
-    final List<bool> results =
-        List<bool>.filled(folders.length, false, growable: false);
+    final List<bool> results = List<bool>.filled(
+      folders.length,
+      false,
+      growable: false,
+    );
     int next = 0;
 
     Future<void> worker() async {
@@ -128,11 +131,13 @@ class CloudRemoteBookClient implements RemoteBookClient {
   /// 失败时做至多 [contentProbeRetries] 次有界退避重试吸收瞬时抖动；仍失败即 false。
   /// 正确性不依赖重试成功——重试只降低把真书误藏的概率。
   Future<bool> _remoteFolderHasContent(String folderId) async {
-    for (int attempt = 0;; attempt++) {
+    for (int attempt = 0; ; attempt++) {
       try {
         final List<AssetEntry> children = await backend.listChildren(folderId);
-        return children.any((AssetEntry e) =>
-            !e.isFolder && e.name.toLowerCase().endsWith('.epub'));
+        return children.any(
+          (AssetEntry e) =>
+              !e.isFolder && e.name.toLowerCase().endsWith('.epub'),
+        );
       } catch (_) {
         if (attempt >= contentProbeRetries) return false;
         if (contentProbeRetryBackoff > Duration.zero) {

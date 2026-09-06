@@ -37,12 +37,12 @@ void main() {
   });
 
   MihonManager build(MihonExtensionStoreClient client) => MihonManager(
-        database: database,
-        rootDirectory: root,
-        runtime: _SeedRuntime(),
-        storeClient: client,
-        seedDefaultStore: true,
-      );
+    database: database,
+    rootDirectory: root,
+    runtime: _SeedRuntime(),
+    storeClient: client,
+    seedDefaultStore: true,
+  );
 
   test('首次初始化自动装上 keiyoushi 仓库，且只拉这一个索引', () async {
     final _FakeStoreClient client = _FakeStoreClient();
@@ -92,17 +92,9 @@ void main() {
       reason: '装配是一次本地 DB 写，不该被网络失败取消掉',
     );
     final MangaExtensionStoreRow seeded = offline.stores.single;
-    expect(
-      seeded.lastError,
-      isNotNull,
-      reason: '拉不到目录要让用户在扩展页看见，而不是整个仓库静默消失',
-    );
+    expect(seeded.lastError, isNotNull, reason: '拉不到目录要让用户在扩展页看见，而不是整个仓库静默消失');
     expect(seeded.lastSyncAt, isNull, reason: '一次都没成功同步过');
-    expect(
-      offline.error,
-      isNull,
-      reason: '默认仓库不是用户发起的操作，拉不到不该在扩展页顶上挂一条全局报错',
-    );
+    expect(offline.error, isNull, reason: '默认仓库不是用户发起的操作，拉不到不该在扩展页顶上挂一条全局报错');
     expect(
       await database.getPrefTyped<bool>(kMihonDefaultStoreSeededPref, false),
       isTrue,
@@ -132,9 +124,9 @@ void main() {
   // 用例打红的：setUp 里种进来的默认仓库让后续 refresh 多刷了一个仓库。
   test('默认仓库装配默认关闭，只有真实 app 启动那一处打开', () {
     final String managerSource = maskComments(
-      File(p.join(
-              'lib', 'src', 'media', 'manga', 'mihon', 'mihon_manager.dart'))
-          .readAsStringSync(),
+      File(
+        p.join('lib', 'src', 'media', 'manga', 'mihon', 'mihon_manager.dart'),
+      ).readAsStringSync(),
     );
     expect(
       managerSource,
@@ -153,29 +145,29 @@ void main() {
 }
 
 MihonStore _store(String indexUrl) => MihonStore(
-      indexUrl: indexUrl,
-      name: 'Keiyoushi',
-      badgeLabel: '',
-      signingKey: 'aabb',
-      contact: const <String, String?>{},
-      format: MihonStoreFormat.currentJson,
-      extensionListUrl: null,
-      embeddedExtensions: <MihonAvailableExtension>[
-        MihonAvailableExtension(
-          storeUrl: indexUrl,
-          name: 'RawKuma',
-          packageName: 'org.example.rawkuma',
-          apkUrl: '$indexUrl/rawkuma.apk',
-          iconUrl: '',
-          libVersion: '1.6',
-          extensionVersionCode: 1,
-          versionName: '1.6.1',
-          language: 'ja',
-          contentWarning: 0,
-          sources: const <MihonAvailableSource>[],
-        ),
-      ],
-    );
+  indexUrl: indexUrl,
+  name: 'Keiyoushi',
+  badgeLabel: '',
+  signingKey: 'aabb',
+  contact: const <String, String?>{},
+  format: MihonStoreFormat.currentJson,
+  extensionListUrl: null,
+  embeddedExtensions: <MihonAvailableExtension>[
+    MihonAvailableExtension(
+      storeUrl: indexUrl,
+      name: 'RawKuma',
+      packageName: 'org.example.rawkuma',
+      apkUrl: '$indexUrl/rawkuma.apk',
+      iconUrl: '',
+      libVersion: '1.6',
+      extensionVersionCode: 1,
+      versionName: '1.6.1',
+      language: 'ja',
+      contentWarning: 0,
+      sources: const <MihonAvailableSource>[],
+    ),
+  ],
+);
 
 class _FakeStoreClient extends Fake implements MihonExtensionStoreClient {
   final List<String> fetchedStoreUrls = <String>[];
@@ -199,8 +191,7 @@ class _FakeStoreClient extends Fake implements MihonExtensionStoreClient {
   Future<List<MihonAvailableExtension>> fetchExtensions(
     MihonStore store, {
     bool allowInsecure = false,
-  }) async =>
-      store.embeddedExtensions;
+  }) async => store.embeddedExtensions;
 
   @override
   void close() {}
@@ -213,8 +204,7 @@ class _FailingStoreClient extends Fake implements MihonExtensionStoreClient {
     String? etag,
     String? lastModified,
     bool allowInsecure = false,
-  }) async =>
-      throw const SocketException('offline');
+  }) async => throw const SocketException('offline');
 
   @override
   void close() {}

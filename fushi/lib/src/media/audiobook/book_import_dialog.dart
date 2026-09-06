@@ -236,9 +236,7 @@ class _BookImportDialogState extends State<BookImportDialog>
       context: context,
       builder: (BuildContext ctx) => AlertDialog(
         title: Text(t.manga_import_detected_title),
-        content: Text(
-          t.manga_import_detected_message(name: p.basename(path)),
-        ),
+        content: Text(t.manga_import_detected_message(name: p.basename(path))),
         actions: <Widget>[
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
@@ -291,7 +289,9 @@ class _BookImportDialogState extends State<BookImportDialog>
         _epubPath = droppedEpub;
         _epubName = p.basename(droppedEpub);
         _autoFillTitle(
-            p.basenameWithoutExtension(droppedEpub), ImportTitleSource.epub);
+          p.basenameWithoutExtension(droppedEpub),
+          ImportTitleSource.epub,
+        );
       }
       if (r.subtitlePath != null) {
         _subtitlePath = r.subtitlePath;
@@ -320,18 +320,10 @@ class _BookImportDialogState extends State<BookImportDialog>
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text(
-          t.srt_import_hint_epub_or_srt,
-          style: tokens.type.metadata,
-        ),
+        Text(t.srt_import_hint_epub_or_srt, style: tokens.type.metadata),
         SizedBox(height: tokens.spacing.gap),
         AdaptiveSettingsSection(
-          children: [
-            _epubRow(),
-            _subtitleRow(),
-            _audioRow(),
-            _coverRow(),
-          ],
+          children: [_epubRow(), _subtitleRow(), _audioRow(), _coverRow()],
         ),
         if (isDesktopPlatform && _audioPaths.isNotEmpty) ...[
           SizedBox(height: tokens.spacing.gap),
@@ -481,8 +473,9 @@ class _BookImportDialogState extends State<BookImportDialog>
       return null;
     }
     try {
-      final String? language =
-          await Isolate.run(() => EpubParser.readLanguageSync(path));
+      final String? language = await Isolate.run(
+        () => EpubParser.readLanguageSync(path),
+      );
       return asrLanguageHintFromBookLanguage(language);
     } catch (error, stack) {
       developer.log(
@@ -528,8 +521,8 @@ class _BookImportDialogState extends State<BookImportDialog>
       subtitle: _audioPaths.isEmpty
           ? null
           : _audioPaths.length == 1
-              ? p.basename(_audioPaths.first)
-              : t.file_count(count: _audioPaths.length),
+          ? p.basename(_audioPaths.first)
+          : t.file_count(count: _audioPaths.length),
       icon: Icons.audio_file_outlined,
       onTap: _pickAudio,
       actions: [
@@ -589,10 +582,12 @@ class _BookImportDialogState extends State<BookImportDialog>
           _epubName = file.name;
           _autoFillTitle(
             file.name.replaceAll(
-                RegExp(
-                    r'\.(epub|pdf|mokuro|cbz|zip|txt|html?|xhtml|md|markdown|rst|org|csv|tsv|log|json|xml)$',
-                    caseSensitive: false),
-                ''),
+              RegExp(
+                r'\.(epub|pdf|mokuro|cbz|zip|txt|html?|xhtml|md|markdown|rst|org|csv|tsv|log|json|xml)$',
+                caseSensitive: false,
+              ),
+              '',
+            ),
             ImportTitleSource.epub,
           );
         });
@@ -635,10 +630,7 @@ class _BookImportDialogState extends State<BookImportDialog>
       if (attachedAudio) t.import_sidecar_audio(count: _audioPaths.length),
     ];
     if (parts.isNotEmpty && mounted) {
-      FushiToast.show(
-        msg: parts.join(' · '),
-        severity: ToastSeverity.info,
-      );
+      FushiToast.show(msg: parts.join(' · '), severity: ToastSeverity.info);
     }
   }
 
@@ -675,8 +667,10 @@ class _BookImportDialogState extends State<BookImportDialog>
         _subtitleName = p.basename(path);
         final String name = p.basename(path);
         final int dot = name.lastIndexOf('.');
-        _autoFillTitle(dot > 0 ? name.substring(0, dot) : name,
-            ImportTitleSource.subtitle);
+        _autoFillTitle(
+          dot > 0 ? name.substring(0, dot) : name,
+          ImportTitleSource.subtitle,
+        );
       });
     } finally {
       _pickerActive = false;
@@ -687,8 +681,10 @@ class _BookImportDialogState extends State<BookImportDialog>
     if (_pickerActive) return;
     _pickerActive = true;
     try {
-      final AppModel appModel =
-          ProviderScope.containerOf(context, listen: false).read(appProvider);
+      final AppModel appModel = ProviderScope.containerOf(
+        context,
+        listen: false,
+      ).read(appProvider);
       final List<String> paths = await pickRealFilePaths(
         context: context,
         appModel: appModel,
@@ -770,8 +766,8 @@ class _BookImportDialogState extends State<BookImportDialog>
     // 两框都已填就无事可做（避免无谓 ffprobe 进程）。
     if (_titleCtrl.text.isNotEmpty && _authorCtrl.text.isNotEmpty) return;
     for (final String audioPath in _audioPaths) {
-      final AudioMetadata? meta =
-          await TtsChannel.instance.extractAudioMetadata(audioPath: audioPath);
+      final AudioMetadata? meta = await TtsChannel.instance
+          .extractAudioMetadata(audioPath: audioPath);
       if (meta == null) continue;
       if (!mounted) return;
       final bool fillAuthor = _authorCtrl.text.isEmpty && meta.author != null;
@@ -858,18 +854,16 @@ class _BookImportDialogState extends State<BookImportDialog>
   }
 
   Future<bool> _epubHasCover(String bookKey) async {
-    final row = await (widget.db.select(widget.db.epubBooks)
-          ..where((tbl) => tbl.bookKey.equals(bookKey)))
-        .getSingleOrNull();
+    final row = await (widget.db.select(
+      widget.db.epubBooks,
+    )..where((tbl) => tbl.bookKey.equals(bookKey))).getSingleOrNull();
     return row?.coverPath != null;
   }
 
   // ── 导入 ────────────────────────────────────────────────────────────────
 
   /// 同名书弹窗回调，喂给 [EpubImporter]。是→加后缀，否/关闭→取消这本书。
-  Future<DuplicateChoice> _askOnDuplicate(
-    String proposedTitle,
-  ) async {
+  Future<DuplicateChoice> _askOnDuplicate(String proposedTitle) async {
     if (!mounted) return DuplicateChoice.cancel;
     final bool? keep = await showAppDialog<bool>(
       context: context,
@@ -938,11 +932,13 @@ class _BookImportDialogState extends State<BookImportDialog>
       },
       action: () async {
         reportProgress(0, '');
-        final String? authorText =
-            _authorCtrl.text.trim().isEmpty ? null : _authorCtrl.text.trim();
+        final String? authorText = _authorCtrl.text.trim().isEmpty
+            ? null
+            : _authorCtrl.text.trim();
 
         debugPrint(
-            '[fushi-import] route: epub=$_epubPath sub=$_subtitlePath audio=${_audioPaths.length} files');
+          '[fushi-import] route: epub=$_epubPath sub=$_subtitlePath audio=${_audioPaths.length} files',
+        );
         String? tail;
         if (_epubPath != null && _hasSubtitles) {
           debugPrint('[fushi-import] → _importEpubWithAlignment');
@@ -1000,7 +996,8 @@ class _BookImportDialogState extends State<BookImportDialog>
           policy: DuplicatePolicy.ask(_askOnDuplicate),
         );
         debugPrint(
-            '[fushi-import] subtitleBook: EPUB import done, key=$bookKey');
+          '[fushi-import] subtitleBook: EPUB import done, key=$bookKey',
+        );
       } on DuplicateImportCancelledException {
         // 取消必须冒泡到顶层中止整次导入，不能被吞成 bookId=0 继续。
         rethrow;
@@ -1023,7 +1020,9 @@ class _BookImportDialogState extends State<BookImportDialog>
       persistDir,
       onProgress: (int copied, int total) {
         reportProgress(
-            0.7, t.import_step_copying_file(name: p.basename(_subtitlePath!)));
+          0.7,
+          t.import_step_copying_file(name: p.basename(_subtitlePath!)),
+        );
       },
     );
 
@@ -1032,12 +1031,12 @@ class _BookImportDialogState extends State<BookImportDialog>
     // 持久目录音频的唯一写入原语（同步成恰好这一组，幂等、不会先删掉自己的源）。
     final List<String> persistedAudioPaths =
         await AudiobookStorage.syncAudioFiles(
-      persistDir,
-      _audioPaths,
-      copy: !referenceAudio,
-      onFile: (String name) =>
-          reportProgress(0.8, t.import_step_copying_file(name: name)),
-    );
+          persistDir,
+          _audioPaths,
+          copy: !referenceAudio,
+          onFile: (String name) =>
+              reportProgress(0.8, t.import_step_copying_file(name: name)),
+        );
 
     reportProgress(0.9, t.import_step_saving);
     final SrtBook book = SrtBook()
@@ -1063,8 +1062,10 @@ class _BookImportDialogState extends State<BookImportDialog>
       book.coverPath = dest;
     }
 
-    debugPrint('[fushi-import] SrtBook save: uid=$uid title="$title" '
-        'bookKey=$bookKey cues=${cues.length}');
+    debugPrint(
+      '[fushi-import] SrtBook save: uid=$uid title="$title" '
+      'bookKey=$bookKey cues=${cues.length}',
+    );
 
     await widget.repo.save(book);
     await widget.repo.saveCues(uid: uid, cues: cues);
@@ -1099,8 +1100,10 @@ class _BookImportDialogState extends State<BookImportDialog>
     final String bookKey;
     if (carrier == ImportCarrier.text) {
       reportProgress(0.3, t.import_step_converting_epub);
-      final Uint8List bytes =
-          await TextToEpub.convert(file: file, title: title);
+      final Uint8List bytes = await TextToEpub.convert(
+        file: file,
+        title: title,
+      );
       final String filename =
           '${title.replaceAll(RegExp(r'[^\w\s\-]'), '')}.epub';
       reportProgress(0.5, t.import_step_importing_epub);
@@ -1142,8 +1145,10 @@ class _BookImportDialogState extends State<BookImportDialog>
     final String bookKey;
     if (TextToEpub.isSupported(_epubPath!)) {
       reportProgress(0.1, t.import_step_converting_epub);
-      final Uint8List importBytes =
-          await TextToEpub.convert(file: epubFile, title: title);
+      final Uint8List importBytes = await TextToEpub.convert(
+        file: epubFile,
+        title: title,
+      );
       final String importFilename =
           '${title.replaceAll(RegExp(r'[^\w\s\-]'), '')}.epub';
       reportProgress(0.2, t.import_step_importing_epub);
@@ -1227,9 +1232,7 @@ class BookImportDialogFrame extends StatelessWidget {
           DefaultTextStyle.merge(
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            style: tokens.type.listTitle.copyWith(
-              fontWeight: FontWeight.w600,
-            ),
+            style: tokens.type.listTitle.copyWith(fontWeight: FontWeight.w600),
             child: title,
           ),
           SizedBox(height: tokens.spacing.gap),

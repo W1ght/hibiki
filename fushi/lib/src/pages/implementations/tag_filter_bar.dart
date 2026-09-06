@@ -168,10 +168,12 @@ class _FushiTagFilterBarState extends ConsumerState<FushiTagFilterBar> {
                 onWillAcceptWithDetails: (details) => details.data.id != tag.id,
                 onAcceptWithDetails: (details) {
                   final BookTagRow draggedTag = details.data;
-                  final int oldIdx =
-                      widget.tags.indexWhere((t) => t.id == draggedTag.id);
-                  final int newIdx =
-                      widget.tags.indexWhere((t) => t.id == tag.id);
+                  final int oldIdx = widget.tags.indexWhere(
+                    (t) => t.id == draggedTag.id,
+                  );
+                  final int newIdx = widget.tags.indexWhere(
+                    (t) => t.id == tag.id,
+                  );
                   if (oldIdx != -1 && newIdx != -1) {
                     widget.onReorder(oldIdx, newIdx);
                   }
@@ -204,8 +206,9 @@ class _FushiTagFilterBarState extends ConsumerState<FushiTagFilterBar> {
       tooltip: tooltip,
       size: tokens.spacing.gap * 2.25,
       padding: EdgeInsets.all(tokens.spacing.gap * 0.875),
-      enabledColor:
-          selected ? tokens.surfaces.primary : tokens.surfaces.onVariant,
+      enabledColor: selected
+          ? tokens.surfaces.primary
+          : tokens.surfaces.onVariant,
       onTap: onTap,
     );
   }
@@ -220,8 +223,9 @@ class _FushiTagFilterBarState extends ConsumerState<FushiTagFilterBar> {
       controller: _sortMenu,
       style: MenuStyle(
         backgroundColor: WidgetStatePropertyAll<Color>(tokens.surfaces.overlay),
-        surfaceTintColor:
-            const WidgetStatePropertyAll<Color>(Colors.transparent),
+        surfaceTintColor: const WidgetStatePropertyAll<Color>(
+          Colors.transparent,
+        ),
         shape: WidgetStatePropertyAll<OutlinedBorder>(
           RoundedRectangleBorder(borderRadius: tokens.radii.menuRadius),
         ),
@@ -250,8 +254,9 @@ class _FushiTagFilterBarState extends ConsumerState<FushiTagFilterBar> {
     ShelfSortMode selectedMode,
   ) {
     final bool selected = mode == selectedMode;
-    final Color foreground =
-        selected ? tokens.surfaces.primary : tokens.surfaces.onSurface;
+    final Color foreground = selected
+        ? tokens.surfaces.primary
+        : tokens.surfaces.onSurface;
     return Actions(
       // B 只关菜单（焦点回归标签栏），不冒泡成 GamepadService 的整页返回。
       actions: <Type, Action<Intent>>{

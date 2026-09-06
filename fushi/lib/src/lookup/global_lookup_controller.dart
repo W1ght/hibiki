@@ -1478,8 +1478,9 @@ class GlobalLookupController {
     final Object? args = message['args'];
     if (args is List && args.length >= 3) {
       final Object? rawToken = args[2];
-      final int? token =
-          rawToken is num ? rawToken.toInt() : int.tryParse('$rawToken');
+      final int? token = rawToken is num
+          ? rawToken.toInt()
+          : int.tryParse('$rawToken');
       if (token != null) {
         final Completer<Rect?>? completer = _pendingWordAnchors.remove(token);
         if (completer != null && !completer.isCompleted) {
@@ -2013,7 +2014,9 @@ class GlobalLookupController {
     }
     // BUG-2128 — root card height rides the same box; 0 = host did not report.
     final double rootHeightCss = num2(box['rootHeight']) ?? 0;
-    final int rootHeight = rootHeightCss > 0 ? (rootHeightCss * dpr).round() : 0;
+    final int rootHeight = rootHeightCss > 0
+        ? (rootHeightCss * dpr).round()
+        : 0;
     // TODO-1231 (BUG-583) — ratchet the origin outward-only so a nested close
     // never slides the window top-left back inward (which raced the host's
     // compensating layer shift across the DWM/WebView2 boundary and lurched the

@@ -40,10 +40,9 @@ void main() {
     });
 
     test('游戏:裸 exe 直接登记', () {
-      final RegisterGameExesPlan plan = classifyDiscoveryFile(
-        DiscoveryMediaKind.game,
-        r'D:\games\atri.exe',
-      ) as RegisterGameExesPlan;
+      final RegisterGameExesPlan plan =
+          classifyDiscoveryFile(DiscoveryMediaKind.game, r'D:\games\atri.exe')
+              as RegisterGameExesPlan;
       expect(plan.exePaths, <String>[r'D:\games\atri.exe']);
     });
 
@@ -79,63 +78,77 @@ void main() {
 
   group('classifyDiscoveryDirectory', () {
     test('小说目录:全部书文件收成 MultiPlan', () {
-      final MultiPlan plan = classifyDiscoveryDirectory(
-        DiscoveryMediaKind.novel,
-        <String>['/d/a.epub', '/d/b.txt', '/d/cover.jpg', '/d/c.pdf'],
-      ) as MultiPlan;
+      final MultiPlan plan =
+          classifyDiscoveryDirectory(DiscoveryMediaKind.novel, <String>[
+                '/d/a.epub',
+                '/d/b.txt',
+                '/d/cover.jpg',
+                '/d/c.pdf',
+              ])
+              as MultiPlan;
       expect(plan.children, hasLength(3));
     });
 
     test('小说目录只有一本时不套 MultiPlan', () {
       expect(
-        classifyDiscoveryDirectory(
-          DiscoveryMediaKind.novel,
-          <String>['/d/a.epub', '/d/cover.jpg'],
-        ),
+        classifyDiscoveryDirectory(DiscoveryMediaKind.novel, <String>[
+          '/d/a.epub',
+          '/d/cover.jpg',
+        ]),
         isA<ImportEpubPlan>(),
       );
     });
 
     test('有声书:EPUB+字幕+音频齐 → 对齐计划;音频排序稳定', () {
-      final AlignAudiobookPlan plan = classifyDiscoveryDirectory(
-        DiscoveryMediaKind.audiobook,
-        <String>['/d/02.mp3', '/d/book.epub', '/d/book.srt', '/d/01.mp3'],
-      ) as AlignAudiobookPlan;
+      final AlignAudiobookPlan plan =
+          classifyDiscoveryDirectory(DiscoveryMediaKind.audiobook, <String>[
+                '/d/02.mp3',
+                '/d/book.epub',
+                '/d/book.srt',
+                '/d/01.mp3',
+              ])
+              as AlignAudiobookPlan;
       expect(plan.contentPath, '/d/book.epub');
       expect(plan.subtitlePath, '/d/book.srt');
       expect(plan.audioPaths, <String>['/d/01.mp3', '/d/02.mp3']);
     });
 
     test('有声书:无 EPUB 退纯文本当正文', () {
-      final AlignAudiobookPlan plan = classifyDiscoveryDirectory(
-        DiscoveryMediaKind.audiobook,
-        <String>['/d/a.mp3', '/d/book.txt', '/d/book.lrc'],
-      ) as AlignAudiobookPlan;
+      final AlignAudiobookPlan plan =
+          classifyDiscoveryDirectory(DiscoveryMediaKind.audiobook, <String>[
+                '/d/a.mp3',
+                '/d/book.txt',
+                '/d/book.lrc',
+              ])
+              as AlignAudiobookPlan;
       expect(plan.contentPath, '/d/book.txt');
     });
 
     test('有声书三缺一时给出稳定原因码', () {
       expect(
-        (classifyDiscoveryDirectory(
-          DiscoveryMediaKind.audiobook,
-          <String>['/d/book.epub', '/d/book.srt'],
-        ) as UnsupportedPlan)
+        (classifyDiscoveryDirectory(DiscoveryMediaKind.audiobook, <String>[
+                  '/d/book.epub',
+                  '/d/book.srt',
+                ])
+                as UnsupportedPlan)
             .blocker,
         DiscoveryImportBlocker.audiobookMissingAudio,
       );
       expect(
-        (classifyDiscoveryDirectory(
-          DiscoveryMediaKind.audiobook,
-          <String>['/d/book.epub', '/d/a.mp3'],
-        ) as UnsupportedPlan)
+        (classifyDiscoveryDirectory(DiscoveryMediaKind.audiobook, <String>[
+                  '/d/book.epub',
+                  '/d/a.mp3',
+                ])
+                as UnsupportedPlan)
             .blocker,
         DiscoveryImportBlocker.audiobookMissingSubtitle,
       );
       expect(
-        (classifyDiscoveryDirectory(
-          DiscoveryMediaKind.audiobook,
-          <String>['/d/book.srt', '/d/a.mp3'],
-        ) as UnsupportedPlan)
+        (classifyDiscoveryDirectory(DiscoveryMediaKind.audiobook, <String>[
+                  '/d/book.srt',
+                  '/d/a.mp3',
+                ])
+                as UnsupportedPlan)
             .blocker,
         DiscoveryImportBlocker.audiobookMissingText,
       );
@@ -143,10 +156,10 @@ void main() {
 
     test('游戏:无 exe → gameNoExecutable', () {
       expect(
-        (classifyDiscoveryDirectory(
-          DiscoveryMediaKind.game,
-          <String>['/d/readme.txt'],
-        ) as UnsupportedPlan)
+        (classifyDiscoveryDirectory(DiscoveryMediaKind.game, <String>[
+                  '/d/readme.txt',
+                ])
+                as UnsupportedPlan)
             .blocker,
         DiscoveryImportBlocker.gameNoExecutable,
       );
@@ -163,19 +176,13 @@ void main() {
           '/g/launcher.exe',
           '/g/sub/deep.exe',
         ],
-        fileSizes: <String, int>{
-          '/g/game.exe': 100,
-          '/g/launcher.exe': 5000,
-        },
+        fileSizes: <String, int>{'/g/game.exe': 100, '/g/launcher.exe': 5000},
       );
       expect(picked, '/g/launcher.exe', reason: '同层按体积;deep.exe 层级更深被排除');
     });
 
     test('全是辅助名时退回全量再挑(配置器命名的本体不漏)', () {
-      expect(
-        pickGalgameMainExe(<String>['/g/setup.exe']),
-        '/g/setup.exe',
-      );
+      expect(pickGalgameMainExe(<String>['/g/setup.exe']), '/g/setup.exe');
     });
 
     test('无 exe 返回 null', () {
@@ -194,31 +201,28 @@ void main() {
       }
     });
 
-    test(
-      '.rar/.zip 在漫画域不许被通用解压器截胡（否则包内 .mokuro OCR 层被静默丢弃）',
-      () {
-        // 这是本次改动的核心不变式：两个扩展名同时落在
-        // kDiscoveryArchiveExtensions 与 kDiscoveryMangaArchiveExtensions 里，
-        // 判定顺序反了就会解成散图、丢掉 OCR 层，而且不报任何错。
-        for (final String path in <String>['vol.rar', 'vol.zip']) {
-          expect(
-            classifyDiscoveryFile(DiscoveryMediaKind.manga, path),
-            isA<ImportMangaArchivePlan>(),
-            reason: '$path 在漫画域必须先于通用解压判定命中',
-          );
-          // 其它域维持原行为：仍走通用解压。
-          expect(
-            classifyDiscoveryFile(DiscoveryMediaKind.novel, path),
-            isA<ExtractArchivePlan>(),
-            reason: '$path 在小说域行为不得改变',
-          );
-          expect(
-            classifyDiscoveryFile(DiscoveryMediaKind.game, path),
-            isA<ExtractArchivePlan>(),
-          );
-        }
-      },
-    );
+    test('.rar/.zip 在漫画域不许被通用解压器截胡（否则包内 .mokuro OCR 层被静默丢弃）', () {
+      // 这是本次改动的核心不变式：两个扩展名同时落在
+      // kDiscoveryArchiveExtensions 与 kDiscoveryMangaArchiveExtensions 里，
+      // 判定顺序反了就会解成散图、丢掉 OCR 层，而且不报任何错。
+      for (final String path in <String>['vol.rar', 'vol.zip']) {
+        expect(
+          classifyDiscoveryFile(DiscoveryMediaKind.manga, path),
+          isA<ImportMangaArchivePlan>(),
+          reason: '$path 在漫画域必须先于通用解压判定命中',
+        );
+        // 其它域维持原行为：仍走通用解压。
+        expect(
+          classifyDiscoveryFile(DiscoveryMediaKind.novel, path),
+          isA<ExtractArchivePlan>(),
+          reason: '$path 在小说域行为不得改变',
+        );
+        expect(
+          classifyDiscoveryFile(DiscoveryMediaKind.game, path),
+          isA<ExtractArchivePlan>(),
+        );
+      }
+    });
 
     test('漫画域不认 pdf/epub——它们恒归小说域，免得同一文件按页签进不同的库', () {
       for (final String path in <String>['book.pdf', 'book.epub']) {
@@ -244,27 +248,29 @@ void main() {
       expect(plan, isA<MultiPlan>());
       expect((plan as MultiPlan).children, hasLength(2));
       expect(
-          plan.children
-              .every((DiscoveryImportPlan c) => c is ImportMangaArchivePlan),
-          isTrue);
+        plan.children.every(
+          (DiscoveryImportPlan c) => c is ImportMangaArchivePlan,
+        ),
+        isTrue,
+      );
     });
 
     test('目录树只有一个图包时不套 MultiPlan', () {
       expect(
-        classifyDiscoveryDirectory(
-          DiscoveryMediaKind.manga,
-          <String>['/m/only.cbz', '/m/readme.txt'],
-        ),
+        classifyDiscoveryDirectory(DiscoveryMediaKind.manga, <String>[
+          '/m/only.cbz',
+          '/m/readme.txt',
+        ]),
         isA<ImportMangaArchivePlan>(),
       );
     });
 
     test('目录树里没有图包仍是 unsupported', () {
       expect(
-        classifyDiscoveryDirectory(
-          DiscoveryMediaKind.manga,
-          <String>['/m/a.txt', '/m/b.jpg'],
-        ),
+        classifyDiscoveryDirectory(DiscoveryMediaKind.manga, <String>[
+          '/m/a.txt',
+          '/m/b.jpg',
+        ]),
         isA<UnsupportedPlan>(),
       );
     });
@@ -274,10 +280,9 @@ void main() {
   // 分类层不得把这份偶然顺序带进用户可见的导入次序 —— CI 上曾据此偶发红。
   group('分类结果不依赖输入清单顺序', () {
     List<String> plannedPaths(List<String> input) {
-      final MultiPlan plan = classifyDiscoveryDirectory(
-        DiscoveryMediaKind.novel,
-        input,
-      ) as MultiPlan;
+      final MultiPlan plan =
+          classifyDiscoveryDirectory(DiscoveryMediaKind.novel, input)
+              as MultiPlan;
       return <String>[
         for (final DiscoveryImportPlan child in plan.children)
           switch (child) {
@@ -335,10 +340,9 @@ void main() {
         files,
         files.reversed.toList(),
       ]) {
-        final AlignAudiobookPlan plan = classifyDiscoveryDirectory(
-          DiscoveryMediaKind.audiobook,
-          input,
-        ) as AlignAudiobookPlan;
+        final AlignAudiobookPlan plan =
+            classifyDiscoveryDirectory(DiscoveryMediaKind.audiobook, input)
+                as AlignAudiobookPlan;
         expect(plan.contentPath, '/d/a-first.epub', reason: input.join(','));
         expect(plan.subtitlePath, '/d/a-first.srt', reason: input.join(','));
         expect(plan.audioPaths, <String>['/d/01.mp3', '/d/02.mp3']);
@@ -396,10 +400,9 @@ void main() {
           '/m/vol02.cbz',
         ],
       ]) {
-        final MultiPlan plan = classifyDiscoveryDirectory(
-          DiscoveryMediaKind.manga,
-          input,
-        ) as MultiPlan;
+        final MultiPlan plan =
+            classifyDiscoveryDirectory(DiscoveryMediaKind.manga, input)
+                as MultiPlan;
         expect(
           <String>[
             for (final DiscoveryImportPlan child in plan.children)
@@ -421,10 +424,7 @@ void main() {
     });
 
     test('正常条目归一分隔符', () {
-      expect(
-        sanitizeArchiveEntryPath('a/b/c.txt'),
-        'a${_sep}b${_sep}c.txt',
-      );
+      expect(sanitizeArchiveEntryPath('a/b/c.txt'), 'a${_sep}b${_sep}c.txt');
       expect(sanitizeArchiveEntryPath(r'a\b.txt'), 'a${_sep}b.txt');
       expect(sanitizeArchiveEntryPath('./a/./b.txt'), 'a${_sep}b.txt');
     });

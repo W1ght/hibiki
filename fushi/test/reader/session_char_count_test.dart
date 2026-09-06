@@ -13,26 +13,34 @@ import 'package:fushi/src/pages/implementations/reader_fushi_page.dart'
 void main() {
   group('accumulateSessionChars (high-water mark)', () {
     test('首次前进：从起点读到位置即全部计入', () {
-      final ReadProgressResult r =
-          accumulateSessionChars(absoluteChars: 100, highWaterMark: 0);
+      final ReadProgressResult r = accumulateSessionChars(
+        absoluteChars: 100,
+        highWaterMark: 0,
+      );
       expect(r.charsAdded, 100);
       expect(r.highWaterMark, 100);
     });
 
     test('单调前进：每次只计新推进的部分', () {
-      ReadProgressResult r =
-          accumulateSessionChars(absoluteChars: 100, highWaterMark: 0);
+      ReadProgressResult r = accumulateSessionChars(
+        absoluteChars: 100,
+        highWaterMark: 0,
+      );
       expect(r.charsAdded, 100);
       r = accumulateSessionChars(
-          absoluteChars: 250, highWaterMark: r.highWaterMark);
+        absoluteChars: 250,
+        highWaterMark: r.highWaterMark,
+      );
       expect(r.charsAdded, 150);
       expect(r.highWaterMark, 250);
     });
 
     test('回退不计、也不降低水位', () {
       // 读到 100 → 回退到 50：不计入，水位保持 100。
-      ReadProgressResult r =
-          accumulateSessionChars(absoluteChars: 100, highWaterMark: 100);
+      ReadProgressResult r = accumulateSessionChars(
+        absoluteChars: 100,
+        highWaterMark: 100,
+      );
       expect(r.charsAdded, 0);
       expect(r.highWaterMark, 100);
       r = accumulateSessionChars(absoluteChars: 50, highWaterMark: 100);
@@ -45,8 +53,10 @@ void main() {
       int water = 0;
       int total = 0;
 
-      ReadProgressResult r =
-          accumulateSessionChars(absoluteChars: 100, highWaterMark: water);
+      ReadProgressResult r = accumulateSessionChars(
+        absoluteChars: 100,
+        highWaterMark: water,
+      );
       total += r.charsAdded; // +100
       water = r.highWaterMark;
 
@@ -72,13 +82,17 @@ void main() {
       int total = 0;
       // 来回研读 [0,200] 区间三遍，再前进到 300。
       for (final int pos in <int>[200, 0, 200, 0, 200, 0]) {
-        final ReadProgressResult r =
-            accumulateSessionChars(absoluteChars: pos, highWaterMark: water);
+        final ReadProgressResult r = accumulateSessionChars(
+          absoluteChars: pos,
+          highWaterMark: water,
+        );
         total += r.charsAdded;
         water = r.highWaterMark;
       }
-      final ReadProgressResult last =
-          accumulateSessionChars(absoluteChars: 300, highWaterMark: water);
+      final ReadProgressResult last = accumulateSessionChars(
+        absoluteChars: 300,
+        highWaterMark: water,
+      );
       total += last.charsAdded;
       water = last.highWaterMark;
 
@@ -91,8 +105,10 @@ void main() {
       int water = 500;
       int total = 0;
       for (int i = 0; i < 5; i++) {
-        final ReadProgressResult r =
-            accumulateSessionChars(absoluteChars: 500, highWaterMark: water);
+        final ReadProgressResult r = accumulateSessionChars(
+          absoluteChars: 500,
+          highWaterMark: water,
+        );
         total += r.charsAdded;
         water = r.highWaterMark;
       }

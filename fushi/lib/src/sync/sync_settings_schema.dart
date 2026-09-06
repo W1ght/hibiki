@@ -166,8 +166,9 @@ SettingsDestination buildSyncBackupDestination() {
             value: (SettingsContext ctx) => _syncSettings(ctx).autoSync,
             onChanged: (SettingsContext ctx, bool value) async {
               _syncSettings(ctx).autoSync = value;
-              await SyncRepository(ctx.appModel.database)
-                  .setAutoSyncEnabled(value);
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setAutoSyncEnabled(value);
             },
           ),
           SettingsSwitchItem(
@@ -177,8 +178,9 @@ SettingsDestination buildSyncBackupDestination() {
             value: (SettingsContext ctx) => _syncSettings(ctx).syncStats,
             onChanged: (SettingsContext ctx, bool value) async {
               _syncSettings(ctx).syncStats = value;
-              await SyncRepository(ctx.appModel.database)
-                  .setSyncStatsEnabled(value);
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setSyncStatsEnabled(value);
             },
           ),
           // 词典与本地音频源数据库不再是「开关 + 自动双向同步」，而是两个显式动作行：
@@ -275,8 +277,9 @@ SettingsDestination buildSyncBackupDestination() {
             value: (SettingsContext ctx) => _syncSettings(ctx).syncContent,
             onChanged: (SettingsContext ctx, bool value) async {
               _syncSettings(ctx).syncContent = value;
-              await SyncRepository(ctx.appModel.database)
-                  .setSyncContentEnabled(value);
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setSyncContentEnabled(value);
             },
           ),
           SettingsSwitchItem(
@@ -290,8 +293,9 @@ SettingsDestination buildSyncBackupDestination() {
                 _syncSettings(ctx).syncAudioBookFiles,
             onChanged: (SettingsContext ctx, bool value) async {
               _syncSettings(ctx).syncAudioBookFiles = value;
-              await SyncRepository(ctx.appModel.database)
-                  .setSyncAudioBookFilesEnabled(value);
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setSyncAudioBookFilesEnabled(value);
             },
           ),
           // 上传视频文件（多端库联合视图 §2.6）：默认关。云后端走 syncVideoAssets 的
@@ -309,8 +313,9 @@ SettingsDestination buildSyncBackupDestination() {
             value: (SettingsContext ctx) => _syncSettings(ctx).syncVideoFiles,
             onChanged: (SettingsContext ctx, bool value) async {
               _syncSettings(ctx).syncVideoFiles = value;
-              await SyncRepository(ctx.appModel.database)
-                  .setSyncVideoFilesEnabled(value);
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setSyncVideoFilesEnabled(value);
             },
           ),
           // 远端占位卡开关抽成共享 builder：同步内容分类与 Hibiki 互联分类共享同一份
@@ -510,8 +515,9 @@ SettingsDestination buildInterconnectDestination() {
                 _syncSettings(ctx).interconnectSyncContent,
             onChanged: (SettingsContext ctx, bool value) async {
               _syncSettings(ctx).interconnectSyncContent = value;
-              await SyncRepository(ctx.appModel.database)
-                  .setInterconnectSyncContentEnabled(value);
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setInterconnectSyncContentEnabled(value);
             },
           ),
           SettingsSwitchItem(
@@ -523,8 +529,9 @@ SettingsDestination buildInterconnectDestination() {
                 _syncSettings(ctx).interconnectSyncDictionary,
             onChanged: (SettingsContext ctx, bool value) async {
               _syncSettings(ctx).interconnectSyncDictionary = value;
-              await SyncRepository(ctx.appModel.database)
-                  .setInterconnectSyncDictionaryEnabled(value);
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setInterconnectSyncDictionaryEnabled(value);
             },
           ),
           SettingsSwitchItem(
@@ -536,8 +543,9 @@ SettingsDestination buildInterconnectDestination() {
                 _syncSettings(ctx).interconnectSyncAudioBookFiles,
             onChanged: (SettingsContext ctx, bool value) async {
               _syncSettings(ctx).interconnectSyncAudioBookFiles = value;
-              await SyncRepository(ctx.appModel.database)
-                  .setInterconnectSyncAudioBookFilesEnabled(value);
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setInterconnectSyncAudioBookFilesEnabled(value);
             },
           ),
           SettingsSwitchItem(
@@ -549,8 +557,9 @@ SettingsDestination buildInterconnectDestination() {
                 _syncSettings(ctx).interconnectSyncVideoFiles,
             onChanged: (SettingsContext ctx, bool value) async {
               _syncSettings(ctx).interconnectSyncVideoFiles = value;
-              await SyncRepository(ctx.appModel.database)
-                  .setInterconnectSyncVideoFilesEnabled(value);
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setInterconnectSyncVideoFilesEnabled(value);
             },
           ),
         ],
@@ -575,8 +584,9 @@ SettingsDestination buildInterconnectDestination() {
                 _syncSettings(ctx).interconnectSyncStats,
             onChanged: (SettingsContext ctx, bool value) async {
               _syncSettings(ctx).interconnectSyncStats = value;
-              await SyncRepository(ctx.appModel.database)
-                  .setInterconnectSyncStatsEnabled(value);
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setInterconnectSyncStatsEnabled(value);
             },
           ),
           SettingsSwitchItem(
@@ -588,8 +598,9 @@ SettingsDestination buildInterconnectDestination() {
                 _syncSettings(ctx).interconnectSyncFavorites,
             onChanged: (SettingsContext ctx, bool value) async {
               _syncSettings(ctx).interconnectSyncFavorites = value;
-              await SyncRepository(ctx.appModel.database)
-                  .setInterconnectSyncFavoritesEnabled(value);
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setInterconnectSyncFavoritesEnabled(value);
             },
           ),
         ],
@@ -634,8 +645,9 @@ SettingsDestination buildInterconnectDestination() {
                 _syncSettings(ctx).interconnectServiceConfigSync,
             onChanged: (SettingsContext ctx, bool value) async {
               _syncSettings(ctx).interconnectServiceConfigSync = value;
-              await SyncRepository(ctx.appModel.database)
-                  .setInterconnectServiceConfigSyncEnabled(value);
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setInterconnectServiceConfigSyncEnabled(value);
             },
           ),
           // 「配置文件」（Profile）双向搬运：用户诉求是把一台设备调好的配置搬到另一
@@ -649,9 +661,9 @@ SettingsDestination buildInterconnectDestination() {
             icon: Icons.settings_backup_restore_outlined,
             builder: (SettingsContext ctx) =>
                 _InterconnectProfileTransferWidget(
-              settingsContext: ctx,
-              direction: _ProfileTransferDirection.upload,
-            ),
+                  settingsContext: ctx,
+                  direction: _ProfileTransferDirection.upload,
+                ),
           ),
           SettingsCustomItem(
             id: 'interconnect.profile_download',
@@ -659,9 +671,9 @@ SettingsDestination buildInterconnectDestination() {
             icon: Icons.settings_backup_restore_outlined,
             builder: (SettingsContext ctx) =>
                 _InterconnectProfileTransferWidget(
-              settingsContext: ctx,
-              direction: _ProfileTransferDirection.download,
-            ),
+                  settingsContext: ctx,
+                  direction: _ProfileTransferDirection.download,
+                ),
           ),
         ],
       ),
@@ -690,8 +702,9 @@ SettingsDestination buildInterconnectDestination() {
                 _syncSettings(ctx).interconnectProfileTransfer,
             onChanged: (SettingsContext ctx, bool value) async {
               _syncSettings(ctx).interconnectProfileTransfer = value;
-              await SyncRepository(ctx.appModel.database)
-                  .setInterconnectProfileTransferEnabled(value);
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setInterconnectProfileTransferEnabled(value);
             },
           ),
         ],
@@ -780,12 +793,13 @@ void _showSnackBar(BuildContext context, String message) {
 
 class _SyncSettingsState {
   _SyncSettingsState(this._settingsContext)
-      : _repo = SyncRepository(_settingsContext.appModel.database) {
+    : _repo = SyncRepository(_settingsContext.appModel.database) {
     // BUG-1560：互联总开关还有第二个写入口（库页来源视图的互联虚拟来源行）。
     // 本状态按 AppModel 缓存、[load] 一辈子只跑一次，不订阅就永远停在开页那一刻
     // 的值——开关本身和互联各 section 的显隐一起显示旧值，直到重启 app。
-    SyncRepository.interconnectEnabledRevision
-        .addListener(_onInterconnectEnabledChanged);
+    SyncRepository.interconnectEnabledRevision.addListener(
+      _onInterconnectEnabledChanged,
+    );
   }
 
   final SettingsContext _settingsContext;
@@ -814,6 +828,7 @@ class _SyncSettingsState {
   // apikey 同步设定重设计（2026-08-17）：service-config（host 的外部服务 API key）
   // 接收开关。默认 true = 既有行为；此前这条通道无 UI 无开关，用户不可见也关不掉。
   bool interconnectServiceConfigSync = true;
+
   /// host 侧：是否允许已配对设备读写本机「配置文件」（Profile）。默认 false。
   bool interconnectProfileTransfer = false;
   bool _loaded = false;
@@ -877,8 +892,9 @@ class _SyncSettingsState {
   /// 解除全局监听。缓存被换 owner 顶掉时调用；两个 ValueNotifier 仍有 widget 在
   /// 监听（它们各自在 State.dispose 里摘钩），故这里**不**dispose 它们。
   void dispose() {
-    SyncRepository.interconnectEnabledRevision
-        .removeListener(_onInterconnectEnabledChanged);
+    SyncRepository.interconnectEnabledRevision.removeListener(
+      _onInterconnectEnabledChanged,
+    );
   }
 
   Future<void> load() async {
@@ -894,19 +910,19 @@ class _SyncSettingsState {
       syncAudioBookFiles = await _repo.isSyncAudioBookFilesEnabled();
       syncVideoFiles = await _repo.isSyncVideoFilesEnabled();
       interconnectSyncContent = await _repo.isInterconnectSyncContentEnabled();
-      interconnectSyncDictionary =
-          await _repo.isInterconnectSyncDictionaryEnabled();
-      interconnectSyncAudioBookFiles =
-          await _repo.isInterconnectSyncAudioBookFilesEnabled();
-      interconnectSyncVideoFiles =
-          await _repo.isInterconnectSyncVideoFilesEnabled();
+      interconnectSyncDictionary = await _repo
+          .isInterconnectSyncDictionaryEnabled();
+      interconnectSyncAudioBookFiles = await _repo
+          .isInterconnectSyncAudioBookFilesEnabled();
+      interconnectSyncVideoFiles = await _repo
+          .isInterconnectSyncVideoFilesEnabled();
       interconnectSyncStats = await _repo.isInterconnectSyncStatsEnabled();
-      interconnectSyncFavorites =
-          await _repo.isInterconnectSyncFavoritesEnabled();
-      interconnectServiceConfigSync =
-          await _repo.isInterconnectServiceConfigSyncEnabled();
-      interconnectProfileTransfer =
-          await _repo.isInterconnectProfileTransferEnabled();
+      interconnectSyncFavorites = await _repo
+          .isInterconnectSyncFavoritesEnabled();
+      interconnectServiceConfigSync = await _repo
+          .isInterconnectServiceConfigSyncEnabled();
+      interconnectProfileTransfer = await _repo
+          .isInterconnectProfileTransferEnabled();
       serverEnabled = await _repo.isServerEnabled();
       hasClientConnection = (await _repo.getFushiClientUrls()).isNotEmpty;
       _loaded = true;

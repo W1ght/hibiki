@@ -19,12 +19,13 @@ class DictionaryRepository {
     this._db, {
     VoidCallback? onCacheRebuild,
     bool Function()? isLowMemory,
-  })  : _onCacheRebuild = onCacheRebuild,
-        _isLowMemory = isLowMemory ?? _neverLowMemory {
+  }) : _onCacheRebuild = onCacheRebuild,
+       _isLowMemory = isLowMemory ?? _neverLowMemory {
     // 查词历史持久化改为 debounce 写穿后，进程退出前必须 flush pending 变更
     // （桌面点 X 快杀 / Android 退后台的保留式 flush 都走这条注册表）。
-    _historyExitFlush =
-        ExitFlushRegistry.instance.register(flushDictionaryHistoryNow);
+    _historyExitFlush = ExitFlushRegistry.instance.register(
+      flushDictionaryHistoryNow,
+    );
   }
 
   final FushiDatabase _db;
@@ -53,22 +54,22 @@ class DictionaryRepository {
   final List<DictionarySearchResult> _dictionaryHistoryResults = [];
   final LruCache<String, DictionarySearchResult> _dictionarySearchCache =
       LruCache<String, DictionarySearchResult>(
-    2000,
-    maxBytes: searchCacheMaxBytes,
-    sizeOf: estimateDictionarySearchResultBytes,
-  );
+        2000,
+        maxBytes: searchCacheMaxBytes,
+        sizeOf: estimateDictionarySearchResultBytes,
+      );
   final LruCache<String, List<FushiLookupResult>> _ffiLookupCache =
       LruCache<String, List<FushiLookupResult>>(
-    2000,
-    maxBytes: ffiLookupCacheMaxBytes,
-    sizeOf: estimateFushiLookupResultsBytes,
-  );
+        2000,
+        maxBytes: ffiLookupCacheMaxBytes,
+        sizeOf: estimateFushiLookupResultsBytes,
+      );
   final LruCache<String, DictionaryPopupCacheEntry> _popupSearchCache =
       LruCache<String, DictionaryPopupCacheEntry>(
-    2000,
-    maxBytes: popupSearchCacheMaxBytes,
-    sizeOf: estimateDictionaryPopupCacheEntryBytes,
-  );
+        2000,
+        maxBytes: popupSearchCacheMaxBytes,
+        sizeOf: estimateDictionaryPopupCacheEntryBytes,
+      );
 
   // ── getters ──────────────────────────────────────────────────────────
 
@@ -104,8 +105,9 @@ class DictionaryRepository {
     final histRows = await _db.getAllDictionaryHistory();
     for (final row in histRows) {
       try {
-        _dictionaryHistoryResults
-            .add(DictionarySearchResult.fromJson(row.resultJson));
+        _dictionaryHistoryResults.add(
+          DictionarySearchResult.fromJson(row.resultJson),
+        );
       } catch (e, stack) {
         ErrorLogService.instance.log('DictRepo.historyLoad', e, stack);
         debugPrint('[Fushi] skipping corrupted dictionary history: $e');
@@ -128,16 +130,23 @@ class DictionaryRepository {
     try {
       hiddenLanguages = List<String>.from(jsonDecode(r.hiddenLanguagesJson));
     } catch (e, stack) {
-      ErrorLogService.instance
-          .log('_rowToDictionary.hiddenLanguages', e, stack);
+      ErrorLogService.instance.log(
+        '_rowToDictionary.hiddenLanguages',
+        e,
+        stack,
+      );
       hiddenLanguages = [];
     }
     try {
-      collapsedLanguages =
-          List<String>.from(jsonDecode(r.collapsedLanguagesJson));
+      collapsedLanguages = List<String>.from(
+        jsonDecode(r.collapsedLanguagesJson),
+      );
     } catch (e, stack) {
-      ErrorLogService.instance
-          .log('_rowToDictionary.collapsedLanguages', e, stack);
+      ErrorLogService.instance.log(
+        '_rowToDictionary.collapsedLanguages',
+        e,
+        stack,
+      );
       collapsedLanguages = [];
     }
     return Dictionary(
@@ -192,8 +201,9 @@ class DictionaryRepository {
 
   Future<void> updateDictionaryOrder(List<Dictionary> newDictionaries) async {
     final updatedNames = newDictionaries.map((d) => d.name).toSet();
-    final others =
-        _dictionariesCache.where((d) => !updatedNames.contains(d.name));
+    final others = _dictionariesCache.where(
+      (d) => !updatedNames.contains(d.name),
+    );
     _dictionariesCache = [...others, ...newDictionaries]
       ..sort((a, b) => a.order.compareTo(b.order));
     _onCacheRebuild?.call();
@@ -311,8 +321,9 @@ class DictionaryRepository {
   void cacheSearchResult(String searchTerm, DictionarySearchResult result) {
     // 低内存开关可在运行期翻转（AppModel.setLowMemoryMode），每次写入前
     // 现查并应用上限：调小会立即淘汰到预算内，翻回则恢复大上限。
-    _dictionarySearchCache.maxBytes =
-        _isLowMemory() ? searchCacheMaxBytesLowMemory : searchCacheMaxBytes;
+    _dictionarySearchCache.maxBytes = _isLowMemory()
+        ? searchCacheMaxBytesLowMemory
+        : searchCacheMaxBytes;
     _dictionarySearchCache[searchTerm] = result;
   }
 
@@ -360,8 +371,9 @@ class DictionaryRepository {
   void addHistoryResult(DictionarySearchResult result, int maximumItems) {
     if (result.entries.isEmpty || result.searchTerm.isEmpty) return;
 
-    _dictionaryHistoryResults
-        .removeWhere((r) => r.searchTerm == result.searchTerm);
+    _dictionaryHistoryResults.removeWhere(
+      (r) => r.searchTerm == result.searchTerm,
+    );
     _dictionaryHistoryResults.add(result);
 
     while (_dictionaryHistoryResults.length > maximumItems) {
@@ -420,10 +432,12 @@ class DictionaryRepository {
     final items = <DictionaryHistoryCompanion>[];
     for (int i = 0; i < _dictionaryHistoryResults.length; i++) {
       final DictionarySearchResult r = _dictionaryHistoryResults[i];
-      items.add(DictionaryHistoryCompanion.insert(
-        position: i,
-        resultJson: _historyJsonMemo[r] ??= r.toJson(),
-      ));
+      items.add(
+        DictionaryHistoryCompanion.insert(
+          position: i,
+          resultJson: _historyJsonMemo[r] ??= r.toJson(),
+        ),
+      );
     }
     // 序列化段与上面的取消/快照在同一同步区间内完成；此后 clear 等竞态由
     // drift 单连接 FIFO 保序（本次写先入队，后续 clear 的 DELETE 后到后赢）。
@@ -462,7 +476,8 @@ int estimateDictionarySearchResultBytes(DictionarySearchResult result) {
   int chars = result.searchTerm.length + (result.popupJson?.length ?? 0);
   int overhead = _kObjectOverheadBytes;
   for (final DictionaryEntry entry in result.entries) {
-    chars += entry.dictionaryName.length +
+    chars +=
+        entry.dictionaryName.length +
         entry.word.length +
         entry.reading.length +
         entry.meaning.length +
@@ -470,7 +485,8 @@ int estimateDictionarySearchResultBytes(DictionarySearchResult result) {
     overhead += _kObjectOverheadBytes;
   }
   for (final FushiKanjiResult kanji in result.kanjiResults) {
-    chars += kanji.character.length +
+    chars +=
+        kanji.character.length +
         kanji.onyomi.length +
         kanji.kunyomi.length +
         kanji.radical.length +
@@ -499,7 +515,8 @@ int estimateFushiLookupResultsBytes(List<FushiLookupResult> results) {
     chars += term.expression.length + term.reading.length + term.rules.length;
     for (final FushiGlossaryEntry glossary in term.glossaries) {
       overhead += _kObjectOverheadBytes;
-      chars += glossary.dictName.length +
+      chars +=
+          glossary.dictName.length +
           glossary.glossary.length +
           glossary.definitionTags.length +
           glossary.termTags.length;

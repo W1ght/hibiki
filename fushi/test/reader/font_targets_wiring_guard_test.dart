@@ -20,7 +20,8 @@ void main() {
     expect(
       'AppFontLoader.resolveAndLoad'.allMatches(src).length,
       greaterThanOrEqualTo(4),
-      reason: 'expected the four AppFontLoader call sites '
+      reason:
+          'expected the four AppFontLoader call sites '
           '(refresh appUi+videoSub, init appUi+videoSub)',
     );
     // The appUi target consumes the WHOLE ordered list (fallback chain), so it
@@ -28,32 +29,44 @@ void main() {
     // the first, which silently kills the user's own fallback order.
     expect(src.contains('resolveAndLoadAll(settings.appUiFonts)'), isTrue);
     expect(
-        src.contains('resolveAndLoadAll(readerSettings.appUiFonts)'), isTrue);
+      src.contains('resolveAndLoadAll(readerSettings.appUiFonts)'),
+      isTrue,
+    );
     // It must NOT be fed the body list any more.
     expect(src.contains('resolveAndLoad(settings.customFonts)'), isFalse);
     expect(src.contains('resolveAndLoad(readerSettings.customFonts)'), isFalse);
   });
 
-  test('video subtitle font is resolved from the videoSubtitleFonts target',
-      () {
-    final String src = read('lib/src/models/app_model.dart');
-    // Both the live refresh and the init path must feed videoSubtitleFonts.
-    expect(src.contains('resolveAndLoad(settings.videoSubtitleFonts)'), isTrue);
-    expect(src.contains('resolveAndLoad(readerSettings.videoSubtitleFonts)'),
-        isTrue);
-    // app_model exposes the dedicated family getter.
-    expect(src.contains('String? get subtitleFontFamily'), isTrue);
-  });
+  test(
+    'video subtitle font is resolved from the videoSubtitleFonts target',
+    () {
+      final String src = read('lib/src/models/app_model.dart');
+      // Both the live refresh and the init path must feed videoSubtitleFonts.
+      expect(
+        src.contains('resolveAndLoad(settings.videoSubtitleFonts)'),
+        isTrue,
+      );
+      expect(
+        src.contains('resolveAndLoad(readerSettings.videoSubtitleFonts)'),
+        isTrue,
+      );
+      // app_model exposes the dedicated family getter.
+      expect(src.contains('String? get subtitleFontFamily'), isTrue);
+    },
+  );
 
-  test('video subtitle overlay binds to subtitleFontFamily, not appFontFamily',
-      () {
-    final String src =
-        read('lib/src/pages/implementations/video_fushi/layout.part.dart');
-    // The overlay font source must be the subtitle target (TODO-864); a future
-    // refactor pointing it back at appFontFamily silently re-couples them.
-    expect(src.contains('fontFamily: appModel.subtitleFontFamily'), isTrue);
-    expect(src.contains('fontFamily: appModel.appFontFamily'), isFalse);
-  });
+  test(
+    'video subtitle overlay binds to subtitleFontFamily, not appFontFamily',
+    () {
+      final String src = read(
+        'lib/src/pages/implementations/video_fushi/layout.part.dart',
+      );
+      // The overlay font source must be the subtitle target (TODO-864); a future
+      // refactor pointing it back at appFontFamily silently re-couples them.
+      expect(src.contains('fontFamily: appModel.subtitleFontFamily'), isTrue);
+      expect(src.contains('fontFamily: appModel.appFontFamily'), isFalse);
+    },
+  );
 
   test('dictionary popup injects the dictionaryFonts target', () {
     // TODO-895 moved the dictionary-font injection out of the in-app WebView
@@ -62,8 +75,9 @@ void main() {
     // (dictionary_popup_webview.dart) and the app-outside global-lookup window
     // both call. Pin the wiring at the source-of-truth builder so the
     // dictionaryFonts target stays wired.
-    final String src =
-        read('lib/src/pages/implementations/popup_settings_injection.dart');
+    final String src = read(
+      'lib/src/pages/implementations/popup_settings_injection.dart',
+    );
     expect(src.contains('DictionaryFontCss.build('), isTrue);
     expect(src.contains('settings.dictionaryFonts'), isTrue);
     // The injected style element id is the contract popup.css/JS keys off.
@@ -74,8 +88,9 @@ void main() {
     // (buildPopupStaticSettingsJs — which carries the DictionaryFontCss.build
     // injection) + the per-lookup entries half; the in-app hot-slot path now
     // feeds through buildPopupStaticSettingsJs, still the shared source of truth.
-    final String webview =
-        read('lib/src/pages/implementations/dictionary_popup_webview.dart');
+    final String webview = read(
+      'lib/src/pages/implementations/dictionary_popup_webview.dart',
+    );
     expect(webview.contains('buildPopupStaticSettingsJs('), isTrue);
   });
 
@@ -86,24 +101,29 @@ void main() {
     // buildCustomFontCss must stay bound to the BODY target (legacy key).
     expect(
       settings.contains(
-          'buildCustomFontCss() =>\n      customFontCssForEntries(customFonts)'),
+        'buildCustomFontCss() =>\n      customFontCssForEntries(customFonts)',
+      ),
       isTrue,
     );
   });
 
   test('settings exposes one font catalog entry with five row targets', () {
-    final String schema =
-        read('lib/src/settings/settings_schema_appearance.dart');
+    final String schema = read(
+      'lib/src/settings/settings_schema_appearance.dart',
+    );
     expect(schema.contains("'appearance.font_catalog'"), isTrue);
     expect(schema.contains('t.custom_fonts_catalog_title'), isTrue);
     expect(schema.contains("'appearance.fonts_app_ui'"), isFalse);
     expect(schema.contains("'appearance.fonts_body'"), isFalse);
     expect(schema.contains("'appearance.fonts_dictionary'"), isFalse);
 
-    final String page =
-        read('lib/src/pages/implementations/custom_fonts_page.dart');
-    expect(page.contains('for (final FontTarget target in FontTarget.values)'),
-        isTrue);
+    final String page = read(
+      'lib/src/pages/implementations/custom_fonts_page.dart',
+    );
+    expect(
+      page.contains('for (final FontTarget target in FontTarget.values)'),
+      isTrue,
+    );
     expect(page.contains('customFontCatalogRowsFromState'), isTrue);
     expect(page.contains('customFontCatalogStateFromRows'), isTrue);
     expect(page.contains('ReaderSettings.fontCatalogKey'), isTrue);
@@ -112,18 +132,23 @@ void main() {
   });
 
   test('font catalog init reads DB without watching ProviderScope', () {
-    final String page =
-        read('lib/src/pages/implementations/custom_fonts_page.dart');
+    final String page = read(
+      'lib/src/pages/implementations/custom_fonts_page.dart',
+    );
     final int start = page.indexOf('Future<void> _initializeFonts()');
     final int end = page.indexOf('Future<void> _persistFontState(');
     expect(start, greaterThanOrEqualTo(0));
     expect(end, greaterThan(start));
     final String initAndRead = page.substring(start, end);
     expect(initAndRead.contains('appModelNoUpdate.database'), isTrue);
-    expect(initAndRead.contains('appModel.database'), isFalse,
-        reason: 'BasePageState.appModel uses ref.watch and is illegal during '
-            'initState; initialization must use the cache populated by '
-            'super.initState().');
+    expect(
+      initAndRead.contains('appModel.database'),
+      isFalse,
+      reason:
+          'BasePageState.appModel uses ref.watch and is illegal during '
+          'initState; initialization must use the cache populated by '
+          'super.initState().',
+    );
   });
 
   test('the legacy body key is never renamed (backward-compat ironclad)', () {
@@ -136,21 +161,25 @@ void main() {
     expect(src.contains("fontKeyGameLookup = 'game_lookup_fonts'"), isTrue);
   });
 
-  test('native game lookup overlay consumes only the gameLookup font target',
-      () {
-    final String controller =
-        read('lib/src/lookup/gal_hook_text_overlay_controller.dart');
-    expect(controller.contains('settings.gameLookupFonts'), isTrue);
-    expect(controller.contains('resolveForNativeOverlay('), isTrue);
-    expect(controller.contains('settings.dictionaryFonts'), isFalse);
+  test(
+    'native game lookup overlay consumes only the gameLookup font target',
+    () {
+      final String controller = read(
+        'lib/src/lookup/gal_hook_text_overlay_controller.dart',
+      );
+      expect(controller.contains('settings.gameLookupFonts'), isTrue);
+      expect(controller.contains('resolveForNativeOverlay('), isTrue);
+      expect(controller.contains('settings.dictionaryFonts'), isFalse);
 
-    final String channel =
-        read('lib/src/platform/gal_hook_text_overlay_channel.dart');
-    expect(channel.contains("'fontFamily': fontFamily"), isTrue);
-    expect(channel.contains("'fontPath': fontPath"), isTrue);
+      final String channel = read(
+        'lib/src/platform/gal_hook_text_overlay_channel.dart',
+      );
+      expect(channel.contains("'fontFamily': fontFamily"), isTrue);
+      expect(channel.contains("'fontPath': fontPath"), isTrue);
 
-    final String native = read('windows/runner/floating_lyric_window.cpp');
-    expect(native.contains('CreateFontCollectionFromFontSet'), isTrue);
-    expect(native.contains('custom_font_collection_.Get()'), isTrue);
-  });
+      final String native = read('windows/runner/floating_lyric_window.cpp');
+      expect(native.contains('CreateFontCollectionFromFontSet'), isTrue);
+      expect(native.contains('custom_font_collection_.Get()'), isTrue);
+    },
+  );
 }

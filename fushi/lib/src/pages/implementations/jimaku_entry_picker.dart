@@ -37,8 +37,9 @@ class JimakuEntryPicker extends StatelessWidget {
       children: <Widget>[
         Text(
           t.video_jimaku_source,
-          style: theme.textTheme.labelMedium
-              ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+          style: theme.textTheme.labelMedium?.copyWith(
+            color: theme.colorScheme.onSurfaceVariant,
+          ),
         ),
         const SizedBox(height: 6),
         for (final JimakuEntry entry in entries)
@@ -49,8 +50,9 @@ class JimakuEntryPicker extends StatelessWidget {
         const SizedBox(height: 6),
         Text(
           t.video_jimaku_source_hint,
-          style: theme.textTheme.bodySmall
-              ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+          style: theme.textTheme.bodySmall?.copyWith(
+            color: theme.colorScheme.onSurfaceVariant,
+          ),
         ),
       ],
     );
@@ -130,23 +132,26 @@ class JimakuEntryPicker extends StatelessWidget {
     if (failedEntryIds.contains(entryId)) {
       return Text(
         t.video_jimaku_source_failed,
-        style:
-            theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.error),
+        style: theme.textTheme.bodySmall?.copyWith(
+          color: theme.colorScheme.error,
+        ),
       );
     }
     final JimakuFileInventory? inventory = inventories[entryId];
     if (inventory == null) {
       return Text(
         t.video_jimaku_source_hint,
-        style: theme.textTheme.bodySmall
-            ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+        style: theme.textTheme.bodySmall?.copyWith(
+          color: theme.colorScheme.onSurfaceVariant,
+        ),
       );
     }
     if (inventory.files.isEmpty) {
       return Text(
         t.video_jimaku_no_results,
-        style:
-            theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.error),
+        style: theme.textTheme.bodySmall?.copyWith(
+          color: theme.colorScheme.error,
+        ),
       );
     }
     final String languages = inventory.languages.isEmpty
@@ -158,8 +163,9 @@ class JimakuEntryPicker extends StatelessWidget {
         episodes: inventory.episodes.length,
         languages: languages,
       ),
-      style: theme.textTheme.bodySmall
-          ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+      style: theme.textTheme.bodySmall?.copyWith(
+        color: theme.colorScheme.onSurfaceVariant,
+      ),
     );
   }
 }

@@ -54,8 +54,10 @@ class ReaderResourceSanitizer {
     caseSensitive: false,
   );
 
-  static final RegExp _bodyOpenPattern =
-      RegExp(r'<body[^>]*>', caseSensitive: false);
+  static final RegExp _bodyOpenPattern = RegExp(
+    r'<body[^>]*>',
+    caseSensitive: false,
+  );
 
   // 属性部分与 [_selfClosingElementPattern] 同款：把整段引号串（"…" / '…'）当单个
   // token，这样属性值里的字面 `>`（如 `alt="a>b"`）不会被误当成标签结束。
@@ -63,11 +65,14 @@ class ReaderResourceSanitizer {
     '<img\\b((?:"[^"]*"|\'[^\']*\'|[^>"\'])*)>',
     caseSensitive: false,
   );
-  static final RegExp _loadingAttrPattern =
-      RegExp(r'\bloading\s*=', caseSensitive: false);
+  static final RegExp _loadingAttrPattern = RegExp(
+    r'\bloading\s*=',
+    caseSensitive: false,
+  );
   static final RegExp _gaijiClassPattern = RegExp(
-      r'''\bclass\s*=\s*(?:"[^"]*\bgaiji|'[^']*\bgaiji|gaiji)''',
-      caseSensitive: false);
+    r'''\bclass\s*=\s*(?:"[^"]*\bgaiji|'[^']*\bgaiji|gaiji)''',
+    caseSensitive: false,
+  );
 
   /// TODO-perf（跨章·图片）：在**生成 HTML 时**就给正文插图标上 `loading="lazy"` /
   /// `decoding="async"`。

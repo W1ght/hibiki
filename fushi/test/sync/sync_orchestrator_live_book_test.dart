@@ -46,8 +46,9 @@ Future<void> _seedBook({
   required String extractDir,
 }) async {
   Directory(extractDir).createSync(recursive: true);
-  File(p.join(extractDir, 'mimetype'))
-      .writeAsStringSync('application/epub+zip');
+  File(
+    p.join(extractDir, 'mimetype'),
+  ).writeAsStringSync('application/epub+zip');
   final Directory metaInf = Directory(p.join(extractDir, 'META-INF'))
     ..createSync();
   File(p.join(metaInf.path, 'container.xml')).writeAsStringSync(
@@ -87,8 +88,9 @@ Future<InterconnectSyncBackend> _buildClientBackend({
     FushiClientUrl(url: base, enabled: true),
   ]);
   await repo.setFushiClientToken(token);
-  final InterconnectSyncBackend backend =
-      InterconnectSyncBackend.withProbe((String u, String t) async => true);
+  final InterconnectSyncBackend backend = InterconnectSyncBackend.withProbe(
+    (String u, String t) async => true,
+  );
   await backend.restoreAuth(repo);
   await backend.authenticate(repo: repo);
   return backend;
@@ -100,19 +102,18 @@ SyncOrchestrator _bookOrchestrator({
   required SyncBackend backend,
   required Directory tmp,
   required bool syncContent,
-}) =>
-    SyncOrchestrator(
-      db: db,
-      backend: backend,
-      dictionaryResourceRoot: tmp,
-      audioDatabaseRoot: tmp,
-      tempDir: tmp,
-      syncStats: false,
-      syncAudioBookPosition: false,
-      syncContent: syncContent,
-      syncAudioBookFiles: false,
-      syncDictionary: false,
-    );
+}) => SyncOrchestrator(
+  db: db,
+  backend: backend,
+  dictionaryResourceRoot: tmp,
+  audioDatabaseRoot: tmp,
+  tempDir: tmp,
+  syncStats: false,
+  syncAudioBookPosition: false,
+  syncContent: syncContent,
+  syncAudioBookFiles: false,
+  syncDictionary: false,
+);
 
 // ── Fake staged backend（云路径用，同 sync_orchestrator_live_dict_test.dart）──
 
@@ -134,13 +135,18 @@ class _FakeSyncBackend implements SyncBackend {
   Future<AssetEntry?> findAsset(String namespaceId, String name) =>
       _store.findAsset(namespaceId, name);
   @override
-  Future<void> putAsset(String namespaceId, String name, File file,
-          {void Function(double progress)? onProgress}) =>
-      _store.putAsset(namespaceId, name, file, onProgress: onProgress);
+  Future<void> putAsset(
+    String namespaceId,
+    String name,
+    File file, {
+    void Function(double progress)? onProgress,
+  }) => _store.putAsset(namespaceId, name, file, onProgress: onProgress);
   @override
-  Future<void> getAsset(String assetId, File destination,
-          {void Function(double progress)? onProgress}) =>
-      _store.getAsset(assetId, destination, onProgress: onProgress);
+  Future<void> getAsset(
+    String assetId,
+    File destination, {
+    void Function(double progress)? onProgress,
+  }) => _store.getAsset(assetId, destination, onProgress: onProgress);
   @override
   Future<Object?> getJsonAsset(String assetId) => _store.getJsonAsset(assetId);
   @override
@@ -227,13 +233,16 @@ class _FakeSyncBackend implements SyncBackend {
   }) async {}
   @override
   Future<SyncFileRef?> findContentFile(
-          String folderId, String fileName) async =>
-      null;
+    String folderId,
+    String fileName,
+  ) async => null;
   @override
   void clearCache() {}
   @override
-  void restoreCache(
-      {String? rootFolderId, Map<String, String>? titleToFolderId}) {}
+  void restoreCache({
+    String? rootFolderId,
+    Map<String, String>? titleToFolderId,
+  }) {}
   @override
   String? get cachedRootFolderId => 'root';
   @override
@@ -281,8 +290,10 @@ void main() {
         // host 侧 fake 导入：把 epub 写入 host DB 而不用真实 EpubImporter
         importBookFromFile: (File f) async {
           final String title = p.basenameWithoutExtension(f.path);
-          final String extractDir =
-              p.join(work.path, 'host_extract_${title}_imported');
+          final String extractDir = p.join(
+            work.path,
+            'host_extract_${title}_imported',
+          );
           await _seedBook(db: hostDb, title: title, extractDir: extractDir);
           return sanitizeTtuFilename(title);
         },
@@ -310,8 +321,10 @@ void main() {
 
       final Directory tmp = Directory(p.join(work.path, 'tmp_pull'))
         ..createSync();
-      final InterconnectSyncBackend backend =
-          await _buildClientBackend(base: serverBase, token: token);
+      final InterconnectSyncBackend backend = await _buildClientBackend(
+        base: serverBase,
+        token: token,
+      );
 
       final SyncOrchestrator orch = _bookOrchestrator(
         db: localDb,
@@ -322,10 +335,16 @@ void main() {
       final SyncRunReport report = SyncRunReport();
       await orch.syncBooksContentLiveForTest(report, backend);
 
-      expect(report.errors, isEmpty,
-          reason: 'live book upload 无错误: ${report.errors}');
-      expect(report.booksImported, 0,
-          reason: 'Upload book files 不能把远端独有 BookY 自动拉到本机');
+      expect(
+        report.errors,
+        isEmpty,
+        reason: 'live book upload 无错误: ${report.errors}',
+      );
+      expect(
+        report.booksImported,
+        0,
+        reason: 'Upload book files 不能把远端独有 BookY 自动拉到本机',
+      );
       final List<EpubBookRow> localBooks = await localDb.getAllEpubBooks();
       expect(
         localBooks.map((EpubBookRow b) => b.title),
@@ -333,38 +352,45 @@ void main() {
       );
     });
 
-    test('push：host 无 BookX，syncContent=true → 推送 BookX，且 host 收到 epub',
-        () async {
-      // 本地：只有 BookX，没有 BookY
-      final FushiDatabase localDb = _memDb();
-      addTearDown(localDb.close);
-      final String localExtractX = p.join(work.path, 'local_extract_X_push');
-      await _seedBook(db: localDb, title: 'BookX', extractDir: localExtractX);
+    test(
+      'push：host 无 BookX，syncContent=true → 推送 BookX，且 host 收到 epub',
+      () async {
+        // 本地：只有 BookX，没有 BookY
+        final FushiDatabase localDb = _memDb();
+        addTearDown(localDb.close);
+        final String localExtractX = p.join(work.path, 'local_extract_X_push');
+        await _seedBook(db: localDb, title: 'BookX', extractDir: localExtractX);
 
-      final Directory tmp = Directory(p.join(work.path, 'tmp_push'))
-        ..createSync();
-      final InterconnectSyncBackend backend =
-          await _buildClientBackend(base: serverBase, token: token);
+        final Directory tmp = Directory(p.join(work.path, 'tmp_push'))
+          ..createSync();
+        final InterconnectSyncBackend backend = await _buildClientBackend(
+          base: serverBase,
+          token: token,
+        );
 
-      final SyncOrchestrator orch = _bookOrchestrator(
-        db: localDb,
-        backend: backend,
-        tmp: tmp,
-        syncContent: true,
-      );
-      final SyncRunReport report = SyncRunReport();
-      await orch.syncBooksContentLiveForTest(report, backend);
+        final SyncOrchestrator orch = _bookOrchestrator(
+          db: localDb,
+          backend: backend,
+          tmp: tmp,
+          syncContent: true,
+        );
+        final SyncRunReport report = SyncRunReport();
+        await orch.syncBooksContentLiveForTest(report, backend);
 
-      expect(report.errors, isEmpty,
-          reason: 'live book push 无错误: ${report.errors}');
-      // 检查 host DB 收到 BookX（host 侧 importBookFromFile 已 fake 导入）
-      final List<EpubBookRow> hostBooks = await hostDb.getAllEpubBooks();
-      expect(
-        hostBooks.map((EpubBookRow b) => b.title),
-        contains('BookX'),
-        reason: 'BookX 应被推送并导入 host',
-      );
-    });
+        expect(
+          report.errors,
+          isEmpty,
+          reason: 'live book push 无错误: ${report.errors}',
+        );
+        // 检查 host DB 收到 BookX（host 侧 importBookFromFile 已 fake 导入）
+        final List<EpubBookRow> hostBooks = await hostDb.getAllEpubBooks();
+        expect(
+          hostBooks.map((EpubBookRow b) => b.title),
+          contains('BookX'),
+          reason: 'BookX 应被推送并导入 host',
+        );
+      },
+    );
 
     test('upload-only：本地 BookX，host BookY → 只推 BookX，不拉 BookY', () async {
       final FushiDatabase localDb = _memDb();
@@ -374,8 +400,10 @@ void main() {
 
       final Directory tmp = Directory(p.join(work.path, 'tmp_rt'))
         ..createSync();
-      final InterconnectSyncBackend backend =
-          await _buildClientBackend(base: serverBase, token: token);
+      final InterconnectSyncBackend backend = await _buildClientBackend(
+        base: serverBase,
+        token: token,
+      );
 
       final SyncOrchestrator orch = _bookOrchestrator(
         db: localDb,
@@ -386,8 +414,11 @@ void main() {
       final SyncRunReport report = SyncRunReport();
       await orch.syncBooksContentLiveForTest(report, backend);
 
-      expect(report.errors, isEmpty,
-          reason: 'upload-only errors: ${report.errors}');
+      expect(
+        report.errors,
+        isEmpty,
+        reason: 'upload-only errors: ${report.errors}',
+      );
       expect(report.booksImported, 0, reason: 'BookY 不应被自动 pull');
 
       // host 含 BookX
@@ -406,8 +437,10 @@ void main() {
 
       final Directory tmp = Directory(p.join(work.path, 'tmp_no_staging'))
         ..createSync();
-      final InterconnectSyncBackend backend =
-          await _buildClientBackend(base: serverBase, token: token);
+      final InterconnectSyncBackend backend = await _buildClientBackend(
+        base: serverBase,
+        token: token,
+      );
 
       final SyncOrchestrator orch = _bookOrchestrator(
         db: localDb,
@@ -420,12 +453,18 @@ void main() {
       // server sync-data 下不应出现以书名命名的书文件夹（epub 内容不经暂存）。
       final String syncDataDir = p.join(work.path, 'server_data', 'sync-data');
       if (Directory(syncDataDir).existsSync()) {
-        final List<FileSystemEntity> children =
-            Directory(syncDataDir).listSync();
-        final bool hasBookFolder = children.any((FileSystemEntity e) =>
-            e is Directory && p.basename(e.path) == 'BookY');
-        expect(hasBookFolder, isFalse,
-            reason: 'live 路径不应在 sync-data 下创建书文件夹暂存 epub');
+        final List<FileSystemEntity> children = Directory(
+          syncDataDir,
+        ).listSync();
+        final bool hasBookFolder = children.any(
+          (FileSystemEntity e) =>
+              e is Directory && p.basename(e.path) == 'BookY',
+        );
+        expect(
+          hasBookFolder,
+          isFalse,
+          reason: 'live 路径不应在 sync-data 下创建书文件夹暂存 epub',
+        );
       }
     });
   });
@@ -468,29 +507,41 @@ void main() {
 
     tearDown(() async => server.stop());
 
-    test('syncContent=false → orchestrator.run() 不传 epub 内容（booksImported=0）',
-        () async {
-      final FushiDatabase localDb = _memDb();
-      addTearDown(localDb.close);
-      final String localExtractX = p.join(work.path, 'local_extract_X_b');
-      await _seedBook(db: localDb, title: 'BookX', extractDir: localExtractX);
+    test(
+      'syncContent=false → orchestrator.run() 不传 epub 内容（booksImported=0）',
+      () async {
+        final FushiDatabase localDb = _memDb();
+        addTearDown(localDb.close);
+        final String localExtractX = p.join(work.path, 'local_extract_X_b');
+        await _seedBook(db: localDb, title: 'BookX', extractDir: localExtractX);
 
-      final Directory tmp = Directory(p.join(work.path, 'tmp_b'))..createSync();
-      final InterconnectSyncBackend backend =
-          await _buildClientBackend(base: serverBase, token: token);
+        final Directory tmp = Directory(p.join(work.path, 'tmp_b'))
+          ..createSync();
+        final InterconnectSyncBackend backend = await _buildClientBackend(
+          base: serverBase,
+          token: token,
+        );
 
-      final SyncOrchestrator orch = _bookOrchestrator(
-        db: localDb,
-        backend: backend,
-        tmp: tmp,
-        syncContent: false,
-      );
-      final SyncRunReport report = await orch.run();
+        final SyncOrchestrator orch = _bookOrchestrator(
+          db: localDb,
+          backend: backend,
+          tmp: tmp,
+          syncContent: false,
+        );
+        final SyncRunReport report = await orch.run();
 
-      expect(report.booksImported, 0, reason: 'syncContent=false 不应传输 epub 内容');
-      expect(report.errors, isEmpty,
-          reason: 'syncContent=false 运行无错误: ${report.errors}');
-    });
+        expect(
+          report.booksImported,
+          0,
+          reason: 'syncContent=false 不应传输 epub 内容',
+        );
+        expect(
+          report.errors,
+          isEmpty,
+          reason: 'syncContent=false 运行无错误: ${report.errors}',
+        );
+      },
+    );
   });
 
   // ── 用例 C：云后端仍走 SyncManager 书文件夹路径 ───────────────────────────

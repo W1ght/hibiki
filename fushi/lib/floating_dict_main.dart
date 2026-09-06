@@ -12,28 +12,31 @@ const _overlayChannel = MethodChannel('app.fushi.reader/floating_overlay');
 
 @pragma('vm:entry-point')
 void floatingDictMain() {
-  runZonedGuarded<Future<void>>(() async {
-    WidgetsFlutterBinding.ensureInitialized();
+  runZonedGuarded<Future<void>>(
+    () async {
+      WidgetsFlutterBinding.ensureInitialized();
 
-    final platformServices = PlatformServices.forCurrentPlatform();
-    final container = ProviderContainer(
-      overrides: [
-        platformServicesProvider.overrideWithValue(platformServices),
-      ],
-    );
-    final appModel = container.read(appProvider);
+      final platformServices = PlatformServices.forCurrentPlatform();
+      final container = ProviderContainer(
+        overrides: [
+          platformServicesProvider.overrideWithValue(platformServices),
+        ],
+      );
+      final appModel = container.read(appProvider);
 
-    runApp(
-      UncontrolledProviderScope(
-        container: container,
-        child: const FloatingDictApp(channel: _overlayChannel),
-      ),
-    );
+      runApp(
+        UncontrolledProviderScope(
+          container: container,
+          child: const FloatingDictApp(channel: _overlayChannel),
+        ),
+      );
 
-    unawaited(appModel.initialiseForDictionaryPopup());
-  }, (exception, stack) {
-    debugPrint('[Fushi-floatingDict] uncaught: $exception\n$stack');
-  });
+      unawaited(appModel.initialiseForDictionaryPopup());
+    },
+    (exception, stack) {
+      debugPrint('[Fushi-floatingDict] uncaught: $exception\n$stack');
+    },
+  );
 }
 
 class FloatingDictApp extends ConsumerStatefulWidget {
@@ -85,12 +88,14 @@ class _FloatingDictAppState extends ConsumerState<FloatingDictApp> {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: appModel.overrideDictionaryTheme ??
+      theme:
+          appModel.overrideDictionaryTheme ??
           ThemeData(
             useMaterial3: true,
             colorSchemeSeed: const Color(0xFF1F4959),
-            brightness:
-                appModel.isDarkMode ? Brightness.dark : Brightness.light,
+            brightness: appModel.isDarkMode
+                ? Brightness.dark
+                : Brightness.light,
           ),
       home: FloatingDictPage(
         channel: widget.channel,

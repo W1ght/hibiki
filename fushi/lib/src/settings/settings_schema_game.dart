@@ -266,8 +266,9 @@ SettingsDestination buildGameDestination() {
             value: (SettingsContext settingsContext) =>
                 settingsContext.appModel.galHookPassThroughBlocksMouse,
             onChanged: (SettingsContext settingsContext, bool value) async {
-              await settingsContext.appModel
-                  .setGalHookPassThroughBlocksMouse(value);
+              await settingsContext.appModel.setGalHookPassThroughBlocksMouse(
+                value,
+              );
               await GalHookTextOverlayChannel.setPassThroughBlocksMouse(value);
               settingsContext.refresh();
             },
@@ -287,8 +288,9 @@ SettingsDestination buildGameDestination() {
             value: (SettingsContext settingsContext) =>
                 settingsContext.appModel.galHookFoldProgressiveLines,
             onChanged: (SettingsContext settingsContext, bool value) async {
-              await settingsContext.appModel
-                  .setGalHookFoldProgressiveLines(value);
+              await settingsContext.appModel.setGalHookFoldProgressiveLines(
+                value,
+              );
               settingsContext.refresh();
             },
           ),
@@ -653,8 +655,7 @@ GalLookupAdmission _ingameLookupAdmission() =>
 
 /// 准入是否把本局的游戏内查词整个挡在门外。判据的唯一真值在
 /// [GalLookupAdmissionState.blocksLookup]——尤其 unknown（"还不知道"）不算挡住。
-bool _isIngameLookupBlocked() =>
-    _ingameLookupAdmission().state.blocksLookup;
+bool _isIngameLookupBlocked() => _ingameLookupAdmission().state.blocksLookup;
 
 /// 开关**副标题**上的原因文案；没被挡住时返回 null（回落静态 hint）。
 /// 开关本身不置灰，理由见上面构造处。
@@ -680,7 +681,9 @@ String? _ingameLookupExeSha256() {
 
 /// 轻量提示条（与 settings_schema_video.dart 的 `_showVideoSettingsSnackBar` 同款）。
 void _showGameSettingsSnackBar(
-    SettingsContext settingsContext, String message) {
+  SettingsContext settingsContext,
+  String message,
+) {
   final BuildContext ctx = settingsContext.context;
   if (!ctx.mounted) return;
   ScaffoldMessenger.of(ctx).showSnackBar(SnackBar(content: Text(message)));

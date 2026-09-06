@@ -68,28 +68,34 @@ void main() {
   group('[B] 每服务器的媒体库点名', () {
     test('libraryIds 随服务器配置整条落 prefs 并原样读回', () async {
       final SyncRepository sync = SyncRepository(db);
-      await sync.setJellyfinServer(const JellyfinServerConfig(
-        serverUrl: 'http://nas:8096',
-        username: 'u',
-        userId: 'u1',
-        accessToken: 'tok',
-        libraryIds: <String>['lib-anime', 'lib-movies'],
-      ));
+      await sync.setJellyfinServer(
+        const JellyfinServerConfig(
+          serverUrl: 'http://nas:8096',
+          username: 'u',
+          userId: 'u1',
+          accessToken: 'tok',
+          libraryIds: <String>['lib-anime', 'lib-movies'],
+        ),
+      );
 
       final JellyfinServerConfig? back = await sync.getJellyfinServer();
       expect(back!.libraryIds, <String>['lib-anime', 'lib-movies']);
-      expect(back.buildClient().libraryIds, <String>['lib-anime', 'lib-movies'],
-          reason: '配置里点了名，client 却照旧整库递归 = 设置形同虚设');
+      expect(back.buildClient().libraryIds, <String>[
+        'lib-anime',
+        'lib-movies',
+      ], reason: '配置里点了名，client 却照旧整库递归 = 设置形同虚设');
     });
 
     test('旧配置（无 libraryIds 字段）读成空 = 全部视频库，老用户行为不变', () async {
       final SyncRepository sync = SyncRepository(db);
-      await sync.setJellyfinServer(const JellyfinServerConfig(
-        serverUrl: 'http://nas:8096',
-        username: 'u',
-        userId: 'u1',
-        accessToken: 'tok',
-      ));
+      await sync.setJellyfinServer(
+        const JellyfinServerConfig(
+          serverUrl: 'http://nas:8096',
+          username: 'u',
+          userId: 'u1',
+          accessToken: 'tok',
+        ),
+      );
       final JellyfinServerConfig? back = await sync.getJellyfinServer();
       expect(back!.libraryIds, isEmpty);
       // 空集不该被写进 JSON——旧端读到未知键不会炸，但没必要留噪音。
@@ -112,13 +118,14 @@ void main() {
     });
 
     test('脏 JSON 里的非字符串 / 空串库 id 被丢掉，不会拼出空 ParentId', () {
-      final JellyfinServerConfig? c =
-          JellyfinServerConfig.fromJson(<String, dynamic>{
-        'serverUrl': 'http://nas:8096',
-        'userId': 'u1',
-        'accessToken': 'tok',
-        'libraryIds': <Object?>['ok', '', 42, null],
-      });
+      final JellyfinServerConfig? c = JellyfinServerConfig.fromJson(
+        <String, dynamic>{
+          'serverUrl': 'http://nas:8096',
+          'userId': 'u1',
+          'accessToken': 'tok',
+          'libraryIds': <Object?>['ok', '', 42, null],
+        },
+      );
       expect(c!.libraryIds, <String>['ok']);
     });
   });
@@ -156,8 +163,10 @@ void main() {
       now = 10 * 60 * 1000; // 远超默认 60s TTL
       expect(cache.isFresh('s', 'videos'), isFalse);
       expect(
-          cache.peek<List<String>>(sourceId: 's', key: 'videos'), <String>['a'],
-          reason: '过期就交白卷 = 切一次 tab 卡片全没了，比自动枚举还糟');
+        cache.peek<List<String>>(sourceId: 's', key: 'videos'),
+        <String>['a'],
+        reason: '过期就交白卷 = 切一次 tab 卡片全没了，比自动枚举还糟',
+      );
       expect(
         cache.peek<List<String>>(
           sourceId: 's',

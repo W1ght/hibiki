@@ -75,9 +75,11 @@ class _AiringCalendarPageState extends ConsumerState<AiringCalendarPage> {
   @override
   void initState() {
     super.initState();
-    unawaited(initializeDateFormatting().then((_) {
-      if (mounted) setState(() => _dateSymbolsReady = true);
-    }));
+    unawaited(
+      initializeDateFormatting().then((_) {
+        if (mounted) setState(() => _dateSymbolsReady = true);
+      }),
+    );
     unawaited(_load());
   }
 
@@ -89,8 +91,8 @@ class _AiringCalendarPageState extends ConsumerState<AiringCalendarPage> {
       _errorDetail = null;
     });
     try {
-      final List<MediaCollectionRow> collections =
-          await _appModel.database.getAllMediaCollections();
+      final List<MediaCollectionRow> collections = await _appModel.database
+          .getAllMediaCollections();
       final AnimeDownloadSubscriptionStore? store =
           _appModel.animeDownloadSubscriptionStore;
       final List<AnimeDownloadSubscription> subscriptions = store == null
@@ -133,7 +135,8 @@ class _AiringCalendarPageState extends ConsumerState<AiringCalendarPage> {
     required bool force,
   }) async {
     final int weekStartSeconds = _weekStart.millisecondsSinceEpoch ~/ 1000;
-    final int weekEndSeconds = DateTime(
+    final int weekEndSeconds =
+        DateTime(
           _weekStart.year,
           _weekStart.month,
           _weekStart.day + 7,
@@ -145,11 +148,17 @@ class _AiringCalendarPageState extends ConsumerState<AiringCalendarPage> {
     );
     final int nowMs = DateTime.now().millisecondsSinceEpoch;
     if (!force) {
-      final AiringScheduleCache? memory =
-          AiringMemoryCache.get(signature, nowMs: nowMs);
+      final AiringScheduleCache? memory = AiringMemoryCache.get(
+        signature,
+        nowMs: nowMs,
+      );
       if (memory != null) return memory.episodes;
-      final String raw = _appModel.prefsRepo
-          .getPref(kAiringCalendarCachePrefKey, defaultValue: '') as String;
+      final String raw =
+          _appModel.prefsRepo.getPref(
+                kAiringCalendarCachePrefKey,
+                defaultValue: '',
+              )
+              as String;
       final AiringScheduleCache? persisted = decodeAiringScheduleCache(
         raw,
         signature: signature,
@@ -327,9 +336,9 @@ class _AiringCalendarPageState extends ConsumerState<AiringCalendarPage> {
     }
     final List<List<AniListAiringEpisode>> buckets =
         groupEpisodesByLocalWeekday(
-      episodes: _episodes,
-      weekStartLocal: _weekStart,
-    );
+          episodes: _episodes,
+          weekStartLocal: _weekStart,
+        );
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         final bool wide = constraints.maxWidth >= _wideLayoutMinWidth;
@@ -478,8 +487,9 @@ class _AiringCalendarPageState extends ConsumerState<AiringCalendarPage> {
     final bool inLibrary = _libraryAnilistIds.contains(episode.mediaId);
     final bool subscribed = _subscribedAnilistIds.contains(episode.mediaId);
     final DateTime local = airingAtToLocal(episode.airingAtSeconds);
-    final String episodeLabel =
-        t.download_airing_calendar_episode_label(episode: episode.episode);
+    final String episodeLabel = t.download_airing_calendar_episode_label(
+      episode: episode.episode,
+    );
     return FushiListItem(
       key: ValueKey<String>(
         'airing-episode-${episode.mediaId}-${episode.episode}',
@@ -487,8 +497,10 @@ class _AiringCalendarPageState extends ConsumerState<AiringCalendarPage> {
       density: FushiListDensity.compact,
       // 重做后每个条目都可点：进发现详情页拿 搜索资源/订阅/字幕/播放。
       onTap: () => unawaited(_openEpisode(episode)),
-      leading:
-          _buildCover(FushiDesignTokens.of(context), episode.media.coverUrl),
+      leading: _buildCover(
+        FushiDesignTokens.of(context),
+        episode.media.coverUrl,
+      ),
       // 条目落在 ListView 里（高度自由），可以安全放宽到两行——番名普遍很长，
       // 单行 ellipsis 在七列窄栏里只看得到开头几个字。
       titleMaxLines: 2,

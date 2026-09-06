@@ -473,11 +473,13 @@ class _MangaOcrSettingsSectionState
       if (rejection.reason != MangaOcrModelImportRejectReason.sizeMismatch) {
         continue;
       }
-      lines.add(t.manga_ocr_import_size_mismatch(
-        file: rejection.source,
-        expected: _formatBytes(rejection.expectedBytes ?? 0),
-        actual: _formatBytes(rejection.actualBytes ?? 0),
-      ));
+      lines.add(
+        t.manga_ocr_import_size_mismatch(
+          file: rejection.source,
+          expected: _formatBytes(rejection.expectedBytes ?? 0),
+          actual: _formatBytes(rejection.actualBytes ?? 0),
+        ),
+      );
     }
     if (!result.allReady && !result.matchedNothing) {
       lines.add(
@@ -499,8 +501,9 @@ class _MangaOcrSettingsSectionState
   Widget _importButton() {
     return TextButton.icon(
       key: const ValueKey<String>('manga_ocr_import_button'),
-      onPressed:
-          (_importing || _downloading) ? null : () => unawaited(_showImportDialog()),
+      onPressed: (_importing || _downloading)
+          ? null
+          : () => unawaited(_showImportDialog()),
       icon: _importing
           ? const SizedBox.square(
               dimension: 16,
@@ -545,10 +548,7 @@ class _MangaOcrSettingsSectionState
     // Material 透明层：cupertino 桌面嵌入渲染（BUG-009 R2 路径）下设置正文没有
     // Material 祖先，而本组含 TextField/InkWell 系控件——透明 Material 只补墨水
     // 与文本编辑依赖，不改视觉。
-    return Material(
-      type: MaterialType.transparency,
-      child: _buildBody(theme),
-    );
+    return Material(type: MaterialType.transparency, child: _buildBody(theme));
   }
 
   /// 补齐标准设置行的水平内边距。
@@ -590,8 +590,9 @@ class _MangaOcrSettingsSectionState
               padding: const EdgeInsets.symmetric(vertical: 8),
               child: Text(
                 t.manga_ocr_unsupported,
-                style: theme.textTheme.bodySmall
-                    ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: theme.colorScheme.onSurfaceVariant,
+                ),
               ),
             ),
           ),
@@ -717,8 +718,9 @@ class _MangaOcrSettingsSectionState
     final List<DropdownMenuItem<String>> items = <DropdownMenuItem<String>>[
       for (final (String tag, String label) in kGoogleLensLanguageOptions)
         DropdownMenuItem<String>(value: tag, child: Text(label)),
-      if (!kGoogleLensLanguageOptions
-          .any(((String, String) option) => option.$1 == _lensLanguage))
+      if (!kGoogleLensLanguageOptions.any(
+        ((String, String) option) => option.$1 == _lensLanguage,
+      ))
         DropdownMenuItem<String>(
           value: _lensLanguage,
           child: Text(_lensLanguage),
@@ -846,10 +848,7 @@ class _MangaOcrSettingsSectionState
             child: Wrap(
               spacing: 8,
               runSpacing: 4,
-              children: <Widget>[
-                _deleteButton(),
-                _importButton(),
-              ],
+              children: <Widget>[_deleteButton(), _importButton()],
             ),
           ),
         ),
@@ -934,10 +933,7 @@ class _MangaOcrSettingsSectionState
           if (!ready && (status?.hasAnyFiles ?? false)) ...<Widget>[
             const SizedBox(height: 4),
             _inset(
-              Align(
-                alignment: Alignment.centerLeft,
-                child: _deleteButton(),
-              ),
+              Align(alignment: Alignment.centerLeft, child: _deleteButton()),
             ),
           ],
         ],
@@ -965,15 +961,17 @@ class _MangaOcrSettingsSectionState
     final String? needed = status.totalBytes <= 0
         ? null
         : status.obtainedBytes > 0
-            ? t.manga_ocr_download_total_progress(
-                done: _formatBytes(status.obtainedBytes),
-                total: _formatBytes(status.totalBytes),
-              )
-            : t.manga_ocr_model_download_size(
-                size: _formatBytes(status.totalBytes),
-              );
-    final String joined =
-        <String?>[usage, needed].whereType<String>().join(' · ');
+        ? t.manga_ocr_download_total_progress(
+            done: _formatBytes(status.obtainedBytes),
+            total: _formatBytes(status.totalBytes),
+          )
+        : t.manga_ocr_model_download_size(
+            size: _formatBytes(status.totalBytes),
+          );
+    final String joined = <String?>[
+      usage,
+      needed,
+    ].whereType<String>().join(' · ');
     return joined.isEmpty ? null : joined;
   }
 
@@ -1049,8 +1047,9 @@ class _MangaOcrSettingsSectionState
       padding: const EdgeInsets.only(top: 8, bottom: 4),
       child: Text(
         text,
-        style: theme.textTheme.titleSmall
-            ?.copyWith(color: theme.colorScheme.primary),
+        style: theme.textTheme.titleSmall?.copyWith(
+          color: theme.colorScheme.primary,
+        ),
       ),
     );
   }

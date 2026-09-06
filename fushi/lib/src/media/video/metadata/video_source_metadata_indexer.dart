@@ -34,27 +34,34 @@ class VideoSourceMetadataIndexer {
   }
 
   Future<void> _indexUnlocked(SourceLibraryRow source) async {
-    final List<VideoSourceScrapeWork> allWorks =
-        await VideoSourceWorkPlanner(database).plan(source);
+    final List<VideoSourceScrapeWork> allWorks = await VideoSourceWorkPlanner(
+      database,
+    ).plan(source);
     final List<VideoSourceScrapeWork> works = <VideoSourceScrapeWork>[
       for (final VideoSourceScrapeWork work in allWorks)
-        if (work.members.any((VideoBookRow member) =>
-            classifyLocalVideoExtra(member.videoPath) == null))
+        if (work.members.any(
+          (VideoBookRow member) =>
+              classifyLocalVideoExtra(member.videoPath) == null,
+        ))
           work,
     ];
-    final VideoMetadataDatabaseStore store =
-        VideoMetadataDatabaseStore(database);
+    final VideoMetadataDatabaseStore store = VideoMetadataDatabaseStore(
+      database,
+    );
     final VideoNfoReader nfoReader = VideoNfoReader(
-      generatedArtifactChecker:
-          DatabaseSidecarGeneratedArtifactChecker(database),
+      generatedArtifactChecker: DatabaseSidecarGeneratedArtifactChecker(
+        database,
+      ),
     );
     final Map<int, _IndexedWorkRoot> indexed = <int, _IndexedWorkRoot>{};
     for (final VideoSourceScrapeWork work in works) {
       final VideoMetadataWorkRow? existing = work.collection == null
-          ? await database
-              .getVideoMetadataWorkByBook(work.members.single.bookUid)
-          : await database
-              .getVideoMetadataWorkByCollection(work.collection!.id);
+          ? await database.getVideoMetadataWorkByBook(
+              work.members.single.bookUid,
+            )
+          : await database.getVideoMetadataWorkByCollection(
+              work.collection!.id,
+            );
       final VideoMetadataWork? nfoMetadata = await nfoReader.readForPaths(
         sourceRoot: source.rootPath,
         fallbackTitle: work.title,
@@ -62,8 +69,9 @@ class VideoSourceMetadataIndexer {
           for (final VideoBookRow member in work.members) member.videoPath,
         ],
       );
-      final VideoMetadataLookup? existingLookup =
-          existing == null ? null : await store.confirmedLookup(work);
+      final VideoMetadataLookup? existingLookup = existing == null
+          ? null
+          : await store.confirmedLookup(work);
       final bool existingIsAniDb =
           existingLookup?.provider == VideoMetadataProviderKind.anidb;
       int workId;
@@ -80,8 +88,7 @@ class VideoSourceMetadataIndexer {
           work,
           metadata,
           seasonEpisodesAuthoritative: metadata.seasons.isNotEmpty,
-        ))
-            .workId;
+        )).workId;
       }
       indexed[workId] = _IndexedWorkRoot(
         workId: workId,
@@ -93,18 +100,25 @@ class VideoSourceMetadataIndexer {
         .where((VideoBookRow row) => row.sourceId == source.id)
         .toList(growable: false);
     for (final VideoBookRow book in books) {
-      final VideoLocalExtraMatch? match =
-          classifyLocalVideoExtra(book.videoPath);
+      final VideoLocalExtraMatch? match = classifyLocalVideoExtra(
+        book.videoPath,
+      );
       if (match == null) continue;
-      final String directory =
-          p.dirname(p.normalize(p.absolute(book.videoPath)));
-      final List<_IndexedWorkRoot> candidates = indexed.values
-          .where((_IndexedWorkRoot value) =>
-              p.equals(value.root, directory) ||
-              p.isWithin(value.root, directory))
-          .toList()
-        ..sort((_IndexedWorkRoot a, _IndexedWorkRoot b) =>
-            b.root.length.compareTo(a.root.length));
+      final String directory = p.dirname(
+        p.normalize(p.absolute(book.videoPath)),
+      );
+      final List<_IndexedWorkRoot> candidates =
+          indexed.values
+              .where(
+                (_IndexedWorkRoot value) =>
+                    p.equals(value.root, directory) ||
+                    p.isWithin(value.root, directory),
+              )
+              .toList()
+            ..sort(
+              (_IndexedWorkRoot a, _IndexedWorkRoot b) =>
+                  b.root.length.compareTo(a.root.length),
+            );
       if (candidates.isEmpty ||
           (candidates.length > 1 &&
               candidates[0].root.length == candidates[1].root.length)) {
@@ -112,9 +126,9 @@ class VideoSourceMetadataIndexer {
       }
       // 旧版本把 NCOP/NCED 当独立电影建立过 book-owned work。现在已能唯一绑定
       // 父作品时原地清掉这份错误规范实体；VideoBook 本身不删，仍留在“全部视频”。
-      await (database.delete(database.videoMetadataWorks)
-            ..where((table) => table.bookUid.equals(book.bookUid)))
-          .go();
+      await (database.delete(
+        database.videoMetadataWorks,
+      )..where((table) => table.bookUid.equals(book.bookUid))).go();
       final int now = DateTime.now().millisecondsSinceEpoch;
       await database.upsertVideoMetadataExtra(
         VideoMetadataExtrasCompanion.insert(
@@ -136,11 +150,14 @@ class VideoSourceMetadataIndexer {
     final Map<int, List<VideoMetadataEpisode>> episodes =
         <int, List<VideoMetadataEpisode>>{};
     for (final VideoBookRow member in work.members) {
-      final VideoNameInfo parsed =
-          parseVideoFilename(p.basename(member.videoPath));
+      final VideoNameInfo parsed = parseVideoFilename(
+        p.basename(member.videoPath),
+      );
       if (parsed.episode == null) continue;
       final int season = parsed.season ?? 1;
-      episodes.putIfAbsent(season, () => <VideoMetadataEpisode>[]).add(
+      episodes
+          .putIfAbsent(season, () => <VideoMetadataEpisode>[])
+          .add(
             VideoMetadataEpisode(
               seasonNumber: season,
               episodeNumber: parsed.episode!,
@@ -161,19 +178,23 @@ class VideoSourceMetadataIndexer {
             title: 'Season ${entry.key}',
             episodeCount: entry.value.length,
             episodes: entry.value
-              ..sort((VideoMetadataEpisode a, VideoMetadataEpisode b) =>
-                  a.episodeNumber.compareTo(b.episodeNumber)),
+              ..sort(
+                (VideoMetadataEpisode a, VideoMetadataEpisode b) =>
+                    a.episodeNumber.compareTo(b.episodeNumber),
+              ),
           ),
       ],
     );
   }
 
   static String _workRoot(List<VideoBookRow> members, String sourceRoot) {
-    List<String> parts =
-        p.split(p.dirname(p.normalize(p.absolute(members.first.videoPath))));
+    List<String> parts = p.split(
+      p.dirname(p.normalize(p.absolute(members.first.videoPath))),
+    );
     for (final VideoBookRow member in members.skip(1)) {
-      final List<String> other =
-          p.split(p.dirname(p.normalize(p.absolute(member.videoPath))));
+      final List<String> other = p.split(
+        p.dirname(p.normalize(p.absolute(member.videoPath))),
+      );
       int length = 0;
       while (length < parts.length &&
           length < other.length &&
@@ -183,8 +204,10 @@ class VideoSourceMetadataIndexer {
       parts = parts.take(length).toList(growable: false);
     }
     String root = p.joinAll(parts);
-    if (RegExp(r'^(season|s)\s*\d+|specials$', caseSensitive: false)
-        .hasMatch(p.basename(root))) {
+    if (RegExp(
+      r'^(season|s)\s*\d+|specials$',
+      caseSensitive: false,
+    ).hasMatch(p.basename(root))) {
       root = p.dirname(root);
     }
     final String source = p.normalize(p.absolute(sourceRoot));
@@ -192,10 +215,10 @@ class VideoSourceMetadataIndexer {
   }
 
   static String _kindName(VideoMetadataExtraKind kind) => switch (kind) {
-        VideoMetadataExtraKind.behindTheScenes => 'behind_the_scenes',
-        VideoMetadataExtraKind.deletedScene => 'deleted_scene',
-        _ => kind.name,
-      };
+    VideoMetadataExtraKind.behindTheScenes => 'behind_the_scenes',
+    VideoMetadataExtraKind.deletedScene => 'deleted_scene',
+    _ => kind.name,
+  };
 }
 
 class _IndexedWorkRoot {

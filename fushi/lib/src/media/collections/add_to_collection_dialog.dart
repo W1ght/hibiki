@@ -20,10 +20,10 @@ Future<bool> showAddToCollectionDialog({
   required String entryKey,
   String defaultNewName = '',
 }) async {
-  final List<MediaCollectionRow> collections =
-      await database.getAllMediaCollections();
-  final List<MediaCollectionItemRow> allItems =
-      await database.getAllCollectionItems();
+  final List<MediaCollectionRow> collections = await database
+      .getAllMediaCollections();
+  final List<MediaCollectionItemRow> allItems = await database
+      .getAllCollectionItems();
   final Map<int, int> memberCounts = <int, int>{};
   final Set<int> alreadyIn = <int>{};
   for (final MediaCollectionItemRow item in allItems) {

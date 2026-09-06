@@ -46,22 +46,28 @@ void main() {
     test('every locale keeps the 万/萬/만 multiplier marker', () {
       final List<String> offenders = <String>[];
       for (final String name in _localeFiles) {
-        final File file =
-            File(p.join(Directory.current.path, 'lib', 'i18n', name));
+        final File file = File(
+          p.join(Directory.current.path, 'lib', 'i18n', name),
+        );
         expect(file.existsSync(), isTrue, reason: '$name 应存在于 ${file.path}');
         final Map<String, dynamic> json =
             jsonDecode(file.readAsStringSync()) as Map<String, dynamic>;
         expect(json.containsKey(_key), isTrue, reason: '$name 缺少 key "$_key"');
         final String value = json[_key] as String;
-        final bool hasMarker =
-            _myriadMarkers.any((String m) => value.contains(m));
+        final bool hasMarker = _myriadMarkers.any(
+          (String m) => value.contains(m),
+        );
         if (!hasMarker) {
           offenders.add('$name: "$value"');
         }
       }
-      expect(offenders, isEmpty,
-          reason: '以下语言的 "$_key" 漏掉「万」倍率单位（会渲染成「19.2 characters」而非'
-              '「19.2万 characters」，与图表坐标轴不一致）：\n${offenders.join("\n")}');
+      expect(
+        offenders,
+        isEmpty,
+        reason:
+            '以下语言的 "$_key" 漏掉「万」倍率单位（会渲染成「19.2 characters」而非'
+            '「19.2万 characters」，与图表坐标轴不一致）：\n${offenders.join("\n")}',
+      );
     });
   });
 }

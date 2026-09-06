@@ -16,19 +16,29 @@ class FakeDetector implements OcrDetector {
   @override
   Future<PageDetections> detect(img.Image page) async {
     callsByPage.update(pageOf(page), (int c) => c + 1, ifAbsent: () => 1);
-    const OcrRect rightTall =
-        OcrRect(left: 400, top: 10, right: 440, bottom: 130);
+    const OcrRect rightTall = OcrRect(
+      left: 400,
+      top: 10,
+      right: 440,
+      bottom: 130,
+    );
     const OcrRect leftWide = OcrRect(left: 20, top: 40, right: 200, bottom: 80);
     return const PageDetections(
       textRegions: <DetectedTextRegion>[
         DetectedTextRegion(
-            rect: leftWide, score: 0.8, classId: 2, insideBubble: false),
+          rect: leftWide,
+          score: 0.8,
+          classId: 2,
+          insideBubble: false,
+        ),
         DetectedTextRegion(
-            rect: rightTall, score: 0.9, classId: 1, insideBubble: true),
+          rect: rightTall,
+          score: 0.9,
+          classId: 1,
+          insideBubble: true,
+        ),
       ],
-      bubbles: <OcrRect>[
-        OcrRect(left: 390, top: 0, right: 450, bottom: 140),
-      ],
+      bubbles: <OcrRect>[OcrRect(left: 390, top: 0, right: 450, bottom: 140)],
     );
   }
 }
@@ -140,10 +150,13 @@ void main() {
         onProgress: (int done, int total) => progress.add(<int>[done, total]),
       );
       expect(results, hasLength(5));
-      expect(
-        results.map((OcrPageResult r) => r.pageIndex).toList(),
-        <int>[0, 1, 2, 3, 4],
-      );
+      expect(results.map((OcrPageResult r) => r.pageIndex).toList(), <int>[
+        0,
+        1,
+        2,
+        3,
+        4,
+      ]);
       // 每页检测总次数仍为 1：缓存页没有重复检测。
       expect(detector.callsByPage, <int, int>{0: 1, 1: 1, 2: 1, 3: 1, 4: 1});
       expect(progress.last, <int>[5, 5]);

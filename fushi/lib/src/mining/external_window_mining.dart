@@ -58,8 +58,9 @@ ImmersionMiningRequest buildExternalWindowRequest({
     bookTitleTag: bookTitleTag,
     updateNoteId: updateNoteId,
     providedCoverBytes: screenshotBytes,
-    providedCoverName:
-        screenshotBytes == null ? null : (coverName ?? 'external_window.png'),
+    providedCoverName: screenshotBytes == null
+        ? null
+        : (coverName ?? 'external_window.png'),
     providedAudioBytes: hasAudio ? audioBytes : null,
     providedAudioName: hasAudio
         ? (audioName ?? 'galgame_audio.${immersionMiningAudioExtension()}')

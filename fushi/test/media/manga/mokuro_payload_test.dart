@@ -111,8 +111,9 @@ void main() {
 }
 ''';
 
-      final MokuroBlock block =
-          parseMokuro(jsonStr).images.single.blocks.single;
+      final MokuroBlock block = parseMokuro(
+        jsonStr,
+      ).images.single.blocks.single;
       expect(block.rectangle, const Rect.fromLTRB(1, 2, 3, 4));
       expect(block.fontSize, isA<double>());
       expect(block.fontSize, 40.0);
@@ -128,9 +129,10 @@ void main() {
       expect(parseMokuro('42').images, isEmpty);
     });
 
-    test('normalises back-slash img_path to forward-slash url (portability)',
-        () {
-      const String jsonStr = '''
+    test(
+      'normalises back-slash img_path to forward-slash url (portability)',
+      () {
+        const String jsonStr = '''
 {
   "pages": [
     {
@@ -142,12 +144,13 @@ void main() {
   ]
 }
 ''';
-      final MokuroPayload payload = parseMokuro(jsonStr);
-      // Windows back-slash path must become a forward-slash relative url so it
-      // is portable / does not collide with same-name pages elsewhere.
-      expect(payload.images.single.url, 'vol2/p003.jpg');
-      expect(payload.images.single.url.contains('\\'), isFalse);
-    });
+        final MokuroPayload payload = parseMokuro(jsonStr);
+        // Windows back-slash path must become a forward-slash relative url so it
+        // is portable / does not collide with same-name pages elsewhere.
+        expect(payload.images.single.url, 'vol2/p003.jpg');
+        expect(payload.images.single.url.contains('\\'), isFalse);
+      },
+    );
 
     test('preserves sub-directory structure (no basename flattening)', () {
       const String jsonStr = '''
@@ -186,8 +189,9 @@ void main() {
   ]
 }
 ''';
-      final MokuroBlock block =
-          parseMokuro(jsonStr).images.single.blocks.single;
+      final MokuroBlock block = parseMokuro(
+        jsonStr,
+      ).images.single.blocks.single;
       expect(block.linesCoords, isNotNull);
       expect(block.linesCoords!.length, 1);
       expect(block.linesCoords!.single.length, 4);
@@ -197,8 +201,7 @@ void main() {
   });
 
   group('mangaPayloadToJson', () {
-    test(
-        'serialises the internal manga.json shape (forward-slash url + '
+    test('serialises the internal manga.json shape (forward-slash url + '
         'z_index)', () {
       const MokuroPayload payload = MokuroPayload(
         images: <MokuroImage>[
@@ -220,8 +223,8 @@ void main() {
       final Map<String, Object?> json = mangaPayloadToJson(payload);
       final List<Object?> pages = json['pages']! as List<Object?>;
       expect(pages.length, 1);
-      final Map<String, Object?> page0 =
-          (pages.first! as Map).cast<String, Object?>();
+      final Map<String, Object?> page0 = (pages.first! as Map)
+          .cast<String, Object?>();
       expect(page0['url'], 'vol1/p001.jpg');
       expect(page0['width'], 1200.0);
       expect(page0['height'], 1700.0);
@@ -321,8 +324,9 @@ void main() {
   ]
 }
 ''';
-      final MokuroBlock block =
-          parseMangaJson(mangaJson).images.single.blocks.single;
+      final MokuroBlock block = parseMangaJson(
+        mangaJson,
+      ).images.single.blocks.single;
       // z_index=5 must win over the array index 0.
       expect(block.zIndex, 5);
     });
@@ -354,8 +358,9 @@ void main() {
         ],
       );
       final String serialized = jsonEncode(mangaPayloadToJson(payload));
-      final MokuroBlock restored =
-          parseMangaJson(serialized).images.single.blocks.single;
+      final MokuroBlock restored = parseMangaJson(
+        serialized,
+      ).images.single.blocks.single;
       expect(restored.linesCoords, isNotNull);
       expect(restored.linesCoords!.single.length, 4);
       expect(restored.linesCoords!.single[2], <double>[50, 50]);
@@ -396,8 +401,9 @@ void main() {
           ),
         ],
       );
-      final MokuroPayload parsed =
-          parseMangaJson(jsonEncode(mangaPayloadToJson(source)));
+      final MokuroPayload parsed = parseMangaJson(
+        jsonEncode(mangaPayloadToJson(source)),
+      );
       expect(parsed.ocr?.engine, 'google_lens');
       expect(parsed.ocr?.engineSignature, 'google-lens-v1-ja');
       final MangaOcrTextRegion region =

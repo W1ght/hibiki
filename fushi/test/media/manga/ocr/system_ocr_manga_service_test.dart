@@ -49,21 +49,22 @@ class _FakePlatform implements SystemOcrPlatform {
 void main() {
   group('平台契约 parseSystemOcrPayload', () {
     test('正常载荷：字段名与坐标原样落地', () {
-      final SystemOcrPageResult result =
-          parseSystemOcrPayload(<Object?, Object?>{
-        'width': 800,
-        'height': 1200,
-        'lines': <Object?>[
-          <Object?, Object?>{
-            'text': 'こんにちは',
-            'left': 10,
-            'top': 20,
-            'right': 60,
-            'bottom': 200,
-            'vertical': true,
-          },
-        ],
-      });
+      final SystemOcrPageResult result = parseSystemOcrPayload(
+        <Object?, Object?>{
+          'width': 800,
+          'height': 1200,
+          'lines': <Object?>[
+            <Object?, Object?>{
+              'text': 'こんにちは',
+              'left': 10,
+              'top': 20,
+              'right': 60,
+              'bottom': 200,
+              'vertical': true,
+            },
+          ],
+        },
+      );
       expect(result.imageWidth, 800);
       expect(result.imageHeight, 1200);
       expect(result.lines.single.text, 'こんにちは');
@@ -72,59 +73,62 @@ void main() {
     });
 
     test('平台不表态竖排时按包围盒推断（错了也只影响 writing-mode）', () {
-      final SystemOcrPageResult result =
-          parseSystemOcrPayload(<Object?, Object?>{
-        'width': 800,
-        'height': 1200,
-        'lines': <Object?>[
-          <Object?, Object?>{
-            'text': 'たて',
-            'left': 0,
-            'top': 0,
-            'right': 20,
-            'bottom': 200,
-          },
-          <Object?, Object?>{
-            'text': 'よこ',
-            'left': 0,
-            'top': 0,
-            'right': 200,
-            'bottom': 20,
-          },
-        ],
-      });
+      final SystemOcrPageResult result = parseSystemOcrPayload(
+        <Object?, Object?>{
+          'width': 800,
+          'height': 1200,
+          'lines': <Object?>[
+            <Object?, Object?>{
+              'text': 'たて',
+              'left': 0,
+              'top': 0,
+              'right': 20,
+              'bottom': 200,
+            },
+            <Object?, Object?>{
+              'text': 'よこ',
+              'left': 0,
+              'top': 0,
+              'right': 200,
+              'bottom': 20,
+            },
+          ],
+        },
+      );
       expect(result.lines[0].isVertical, isTrue);
       expect(result.lines[1].isVertical, isFalse);
     });
 
     test('空文本、退化矩形一律丢弃，不产出点不中的透明框', () {
-      final SystemOcrPageResult result =
-          parseSystemOcrPayload(<Object?, Object?>{
-        'width': 800,
-        'height': 1200,
-        'lines': <Object?>[
-          <Object?, Object?>{
-            'text': '   ',
-            'left': 0,
-            'top': 0,
-            'right': 10,
-            'bottom': 10,
-          },
-          <Object?, Object?>{
-            'text': 'ok',
-            'left': 10,
-            'top': 10,
-            'right': 10,
-            'bottom': 40,
-          },
-        ],
-      });
+      final SystemOcrPageResult result = parseSystemOcrPayload(
+        <Object?, Object?>{
+          'width': 800,
+          'height': 1200,
+          'lines': <Object?>[
+            <Object?, Object?>{
+              'text': '   ',
+              'left': 0,
+              'top': 0,
+              'right': 10,
+              'bottom': 10,
+            },
+            <Object?, Object?>{
+              'text': 'ok',
+              'left': 10,
+              'top': 10,
+              'right': 10,
+              'bottom': 40,
+            },
+          ],
+        },
+      );
       expect(result.lines, isEmpty);
     });
 
     test('图片尺寸缺失即报错：没有分母就没法映射回页图', () {
       expect(
-        () => parseSystemOcrPayload(<Object?, Object?>{'width': 0, 'height': 0}),
+        () =>
+            parseSystemOcrPayload(<Object?, Object?>{'width': 0, 'height': 0}),
         throwsA(isA<SystemOcrUnavailableException>()),
       );
     });
@@ -134,22 +138,25 @@ void main() {
     // 两者塌成同一个错误码的话，用户看到「识别失败」会去查错方向。
     test('模型未就绪单独成一类，不冒充识别失败', () async {
       TestWidgetsFlutterBinding.ensureInitialized();
-      const MethodChannel channel =
-          MethodChannel('test.fushi/system_ocr_unavailable');
+      const MethodChannel channel = MethodChannel(
+        'test.fushi/system_ocr_unavailable',
+      );
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
           .setMockMethodCallHandler(channel, (MethodCall call) async {
-        throw PlatformException(
-          code: 'MODEL_UNAVAILABLE',
-          message: 'Waiting for the text recognition model to be downloaded',
-        );
-      });
+            throw PlatformException(
+              code: 'MODEL_UNAVAILABLE',
+              message:
+                  'Waiting for the text recognition model to be downloaded',
+            );
+          });
       addTearDown(() {
         TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
             .setMockMethodCallHandler(channel, null);
       });
 
-      const MethodChannelSystemOcr platform =
-          MethodChannelSystemOcr(channel: channel);
+      const MethodChannelSystemOcr platform = MethodChannelSystemOcr(
+        channel: channel,
+      );
       await expectLater(
         () => platform.recognize(Uint8List(0), language: 'ja'),
         throwsA(isA<SystemOcrUnavailableException>()),
@@ -159,19 +166,21 @@ void main() {
 
     test('真正的识别失败不被冒充成「不可用」', () async {
       TestWidgetsFlutterBinding.ensureInitialized();
-      const MethodChannel channel =
-          MethodChannel('test.fushi/system_ocr_failed');
+      const MethodChannel channel = MethodChannel(
+        'test.fushi/system_ocr_failed',
+      );
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
           .setMockMethodCallHandler(channel, (MethodCall call) async {
-        throw PlatformException(code: 'RECOGNIZE_FAILED', message: 'boom');
-      });
+            throw PlatformException(code: 'RECOGNIZE_FAILED', message: 'boom');
+          });
       addTearDown(() {
         TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
             .setMockMethodCallHandler(channel, null);
       });
 
-      const MethodChannelSystemOcr platform =
-          MethodChannelSystemOcr(channel: channel);
+      const MethodChannelSystemOcr platform = MethodChannelSystemOcr(
+        channel: channel,
+      );
       await expectLater(
         () => platform.recognize(Uint8List(0), language: 'ja'),
         throwsA(isA<PlatformException>()),
@@ -180,20 +189,21 @@ void main() {
     });
 
     test('数字用字符串回传也能吃下（平台侧 JSON 化的常见走样）', () {
-      final SystemOcrPageResult result =
-          parseSystemOcrPayload(<Object?, Object?>{
-        'width': '800',
-        'height': '1200',
-        'lines': <Object?>[
-          <Object?, Object?>{
-            'text': 'あ',
-            'left': '1',
-            'top': '2',
-            'right': '30',
-            'bottom': '40',
-          },
-        ],
-      });
+      final SystemOcrPageResult result = parseSystemOcrPayload(
+        <Object?, Object?>{
+          'width': '800',
+          'height': '1200',
+          'lines': <Object?>[
+            <Object?, Object?>{
+              'text': 'あ',
+              'left': '1',
+              'top': '2',
+              'right': '30',
+              'bottom': '40',
+            },
+          ],
+        },
+      );
       expect(result.imageWidth, 800);
       expect(result.lines.single.rect.right, 30);
     });
@@ -221,8 +231,11 @@ void main() {
       expect(page.blocks.single.rectangle.bottom, 200);
       expect(page.blocks.single.isVertical, isTrue);
       expect(page.blocks.single.lines, <String>['あい']);
-      expect(page.blocks.single.fontSize, greaterThan(0),
-          reason: 'font_size 为 0 会让透明文字层塌缩、整框点不中');
+      expect(
+        page.blocks.single.fontSize,
+        greaterThan(0),
+        reason: 'font_size 为 0 会让透明文字层塌缩、整框点不中',
+      );
     });
 
     test('页尺寸原样透传（覆盖层按比例定位，尺寸错则全盘错位）', () {
@@ -246,8 +259,9 @@ void main() {
     setUp(() {
       dir = Directory.systemTemp.createTempSync('system_ocr_');
       for (int i = 0; i < 3; i++) {
-        File(p.join(dir.path, 'p00$i.jpg'))
-            .writeAsBytesSync(<int>[0x30 + i, 1, 2, 3]);
+        File(
+          p.join(dir.path, 'p00$i.jpg'),
+        ).writeAsBytesSync(<int>[0x30 + i, 1, 2, 3]);
       }
     });
 
@@ -264,42 +278,44 @@ void main() {
     });
 
     _FakePlatform platformWithText() => _FakePlatform(
-          byPage: <String, List<SystemOcrTextLine>>{
-            '0': <SystemOcrTextLine>[
-              const SystemOcrTextLine(
-                text: 'ページ0',
-                rect: Rect.fromLTRB(0, 0, 50, 200),
-                isVertical: true,
-              ),
-            ],
-            '1': <SystemOcrTextLine>[
-              const SystemOcrTextLine(
-                text: 'ページ1',
-                rect: Rect.fromLTRB(0, 0, 50, 200),
-                isVertical: true,
-              ),
-            ],
-            '2': <SystemOcrTextLine>[
-              const SystemOcrTextLine(
-                text: 'ページ2',
-                rect: Rect.fromLTRB(0, 0, 50, 200),
-                isVertical: true,
-              ),
-            ],
-          },
-        );
+      byPage: <String, List<SystemOcrTextLine>>{
+        '0': <SystemOcrTextLine>[
+          const SystemOcrTextLine(
+            text: 'ページ0',
+            rect: Rect.fromLTRB(0, 0, 50, 200),
+            isVertical: true,
+          ),
+        ],
+        '1': <SystemOcrTextLine>[
+          const SystemOcrTextLine(
+            text: 'ページ1',
+            rect: Rect.fromLTRB(0, 0, 50, 200),
+            isVertical: true,
+          ),
+        ],
+        '2': <SystemOcrTextLine>[
+          const SystemOcrTextLine(
+            text: 'ページ2',
+            rect: Rect.fromLTRB(0, 0, 50, 200),
+            isVertical: true,
+          ),
+        ],
+      },
+    );
 
     test('产出 manga.json：三页齐全、引擎标记为 system_ocr', () async {
-      final SystemOcrMangaService service =
-          SystemOcrMangaService(platform: platformWithText());
+      final SystemOcrMangaService service = SystemOcrMangaService(
+        platform: platformWithText(),
+      );
       final List<MangaOcrVolumeEvent> events = await service
           .ocrFolder(imageDirPath: dir.path, language: 'ja')
           .toList();
 
       final MangaOcrVolumeEvent last = events.last;
       expect(last.finished, isTrue);
-      final MokuroPayload payload =
-          parseMangaJson(File(last.mangaJsonPath!).readAsStringSync());
+      final MokuroPayload payload = parseMangaJson(
+        File(last.mangaJsonPath!).readAsStringSync(),
+      );
       expect(payload.images.length, 3);
       expect(payload.ocr?.engine, 'system_ocr');
       expect(
@@ -310,64 +326,71 @@ void main() {
 
     test('当前页优先：从 startPage 开始扫，绕回补前面的页', () async {
       final _FakePlatform platform = platformWithText();
-      final SystemOcrMangaService service =
-          SystemOcrMangaService(platform: platform);
+      final SystemOcrMangaService service = SystemOcrMangaService(
+        platform: platform,
+      );
       await service
           .ocrFolder(imageDirPath: dir.path, startPage: 2, language: 'ja')
           .toList();
 
       // 「点一下就查词」能成立全靠这条顺序：用户点的那一页必须最先识别。
-      final String first = File(p.join(dir.path, 'p002.jpg'))
-          .readAsBytesSync()
-          .first
-          .toString();
+      final String first = File(
+        p.join(dir.path, 'p002.jpg'),
+      ).readAsBytesSync().first.toString();
       expect(platform.requestSizes.length, 3);
       expect(first, isNotEmpty);
       final MokuroPayload payload = parseMangaJson(
-        File(p.join(dir.path, kMangaOcrOutDirName, kMangaOcrOutputFileName))
-            .readAsStringSync(),
+        File(
+          p.join(dir.path, kMangaOcrOutDirName, kMangaOcrOutputFileName),
+        ).readAsStringSync(),
       );
       expect(payload.images.length, 3, reason: '绕回后三页都要补齐');
     });
 
     test('第二次跑命中缓存，不再打平台一次', () async {
       final _FakePlatform first = platformWithText();
-      await SystemOcrMangaService(platform: first)
-          .ocrFolder(imageDirPath: dir.path, language: 'ja')
-          .toList();
+      await SystemOcrMangaService(
+        platform: first,
+      ).ocrFolder(imageDirPath: dir.path, language: 'ja').toList();
       expect(first.requestSizes.length, 3);
 
       final _FakePlatform second = platformWithText();
-      await SystemOcrMangaService(platform: second)
-          .ocrFolder(imageDirPath: dir.path, language: 'ja')
-          .toList();
-      expect(second.requestSizes, isEmpty,
-          reason: '识别结果有 per-page 缓存，重跑不该再问平台一遍');
+      await SystemOcrMangaService(
+        platform: second,
+      ).ocrFolder(imageDirPath: dir.path, language: 'ja').toList();
+      expect(
+        second.requestSizes,
+        isEmpty,
+        reason: '识别结果有 per-page 缓存，重跑不该再问平台一遍',
+      );
     });
 
     test('换语言不复用旧缓存（签名带语言）', () async {
-      await SystemOcrMangaService(platform: platformWithText())
-          .ocrFolder(imageDirPath: dir.path, language: 'ja')
-          .toList();
+      await SystemOcrMangaService(
+        platform: platformWithText(),
+      ).ocrFolder(imageDirPath: dir.path, language: 'ja').toList();
       final _FakePlatform english = platformWithText();
-      await SystemOcrMangaService(platform: english)
-          .ocrFolder(imageDirPath: dir.path, language: 'en')
-          .toList();
+      await SystemOcrMangaService(
+        platform: english,
+      ).ocrFolder(imageDirPath: dir.path, language: 'en').toList();
       expect(english.requestSizes.length, 3);
-      expect(systemOcrEngineSignature('ja'),
-          isNot(systemOcrEngineSignature('en')));
+      expect(
+        systemOcrEngineSignature('ja'),
+        isNot(systemOcrEngineSignature('en')),
+      );
     });
 
     test('中途取消：已识别的页留在 per-page 缓存里，重跑只补没跑过的', () async {
       final _FakePlatform interrupted = platformWithText();
-      final Stream<MangaOcrVolumeEvent> stream =
-          SystemOcrMangaService(platform: interrupted)
-              .ocrFolder(imageDirPath: dir.path, language: 'ja');
+      final Stream<MangaOcrVolumeEvent> stream = SystemOcrMangaService(
+        platform: interrupted,
+      ).ocrFolder(imageDirPath: dir.path, language: 'ja');
       // 收第一页进度后立刻断开订阅，模拟用户中途取消。
       final Completer<MangaOcrVolumeEvent> firstSeen =
           Completer<MangaOcrVolumeEvent>();
-      final StreamSubscription<MangaOcrVolumeEvent> sub =
-          stream.listen((MangaOcrVolumeEvent event) {
+      final StreamSubscription<MangaOcrVolumeEvent> sub = stream.listen((
+        MangaOcrVolumeEvent event,
+      ) {
         if (!firstSeen.isCompleted) firstSeen.complete(event);
       });
       final MangaOcrVolumeEvent first = await firstSeen.future;
@@ -380,15 +403,16 @@ void main() {
       expect(beforeCancel, lessThan(3), reason: '取消要真的止住后面的页');
 
       final _FakePlatform resumed = platformWithText();
-      await SystemOcrMangaService(platform: resumed)
-          .ocrFolder(imageDirPath: dir.path, language: 'ja')
-          .toList();
+      await SystemOcrMangaService(
+        platform: resumed,
+      ).ocrFolder(imageDirPath: dir.path, language: 'ja').toList();
 
       // 两次加起来正好识别三页：取消掉的那部分成果留在 per-page 缓存里，
       // 重跑只补没跑过的，没有一页被白识别两次。
       expect(beforeCancel + resumed.requestSizes.length, 3);
-      final File output =
-          File(p.join(dir.path, kMangaOcrOutDirName, kMangaOcrOutputFileName));
+      final File output = File(
+        p.join(dir.path, kMangaOcrOutDirName, kMangaOcrOutputFileName),
+      );
       expect(output.existsSync(), isTrue);
       final Map<String, Object?> decoded =
           jsonDecode(output.readAsStringSync()) as Map<String, Object?>;
@@ -396,13 +420,14 @@ void main() {
     });
 
     test('空图片目录报错，而不是产出一份空 manga.json', () async {
-      final Directory empty =
-          Directory.systemTemp.createTempSync('system_ocr_empty_');
+      final Directory empty = Directory.systemTemp.createTempSync(
+        'system_ocr_empty_',
+      );
       addTearDown(() => empty.deleteSync(recursive: true));
       await expectLater(
-        SystemOcrMangaService(platform: _FakePlatform())
-            .ocrFolder(imageDirPath: empty.path, language: 'ja')
-            .toList(),
+        SystemOcrMangaService(
+          platform: _FakePlatform(),
+        ).ocrFolder(imageDirPath: empty.path, language: 'ja').toList(),
         throwsA(isA<StateError>()),
       );
     });
@@ -411,8 +436,9 @@ void main() {
   group('可用性', () {
     test('平台说不可用就是不可用——引擎选项据此置灰，不能假装能跑', () async {
       expect(
-        await SystemOcrMangaService(platform: _FakePlatform(available: false))
-            .isAvailable(),
+        await SystemOcrMangaService(
+          platform: _FakePlatform(available: false),
+        ).isAvailable(),
         isFalse,
       );
       expect(

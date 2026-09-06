@@ -72,12 +72,10 @@ class InterconnectServiceConfigSnapshot {
   factory InterconnectServiceConfigSnapshot.fromPreferences(
     Map<String, String> allPreferences,
   ) {
-    return InterconnectServiceConfigSnapshot._(
-      <String, String>{
-        for (final String key in sharedPreferenceKeys)
-          key: allPreferences[key] ?? _defaultRawValues[key]!,
-      },
-    );
+    return InterconnectServiceConfigSnapshot._(<String, String>{
+      for (final String key in sharedPreferenceKeys)
+        key: allPreferences[key] ?? _defaultRawValues[key]!,
+    });
   }
 
   factory InterconnectServiceConfigSnapshot.fromJson(
@@ -102,9 +100,9 @@ class InterconnectServiceConfigSnapshot {
   }
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'schemaVersion': schemaVersion,
-        'preferences': preferences,
-      };
+    'schemaVersion': schemaVersion,
+    'preferences': preferences,
+  };
 
   /// Applies only changed allowlisted rows. Returns the number of rows changed.
   ///

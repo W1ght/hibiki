@@ -54,8 +54,10 @@ DiscoveryDomainImporters buildProductionDiscoveryImporters({
 
   Future<String?> importText(String filePath) async {
     final String title = _stem(filePath);
-    final Uint8List bytes =
-        await TextToEpub.convert(file: File(filePath), title: title);
+    final Uint8List bytes = await TextToEpub.convert(
+      file: File(filePath),
+      title: title,
+    );
     try {
       return await EpubImporter.import(
         db: db,
@@ -121,8 +123,10 @@ DiscoveryDomainImporters buildProductionDiscoveryImporters({
       }
     },
     registerGameExes: (List<String> exePaths) async {
-      final List<String> fresh =
-          filterOutDuplicateGameExes(galgameRepo.games, exePaths);
+      final List<String> fresh = filterOutDuplicateGameExes(
+        galgameRepo.games,
+        exePaths,
+      );
       if (fresh.isEmpty) return 0;
       final DateTime base = DateTime.now();
       // 批内 id 用微秒错开，防同微秒撞 id（同 games_library_page 拖拽入库）。

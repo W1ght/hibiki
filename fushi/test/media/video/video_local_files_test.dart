@@ -14,14 +14,14 @@ import 'package:path/path.dart' as p;
 
 /// 把路径里的字母大小写整体翻转，用来构造「同一个文件的另一种写法」。
 String _swapCase(String value) => String.fromCharCodes(<int>[
-      for (final int c in value.codeUnits)
-        if (c >= 0x41 && c <= 0x5A)
-          c + 32
-        else if (c >= 0x61 && c <= 0x7A)
-          c - 32
-        else
-          c,
-    ]);
+  for (final int c in value.codeUnits)
+    if (c >= 0x41 && c <= 0x5A)
+      c + 32
+    else if (c >= 0x61 && c <= 0x7A)
+      c - 32
+    else
+      c,
+]);
 
 void main() {
   group('isLocalVideoFilePath', () {
@@ -99,22 +99,26 @@ void main() {
       );
     });
 
-    test('Windows：分隔符写法不同的同一集只留一条', () {
-      // 分隔符等价（`D:/v/e1.mkv` ≡ `D:\v\e1.mkv`）是 Windows 独有的；posix 下
-      // 反斜杠是合法文件名字符，那真是两个文件。
-      final String json = jsonEncode(<Map<String, Object>>[
-        <String, Object>{'title': 'e1', 'path': 'D:/v/e1.mkv'},
-        <String, Object>{'title': 'e1-dup', 'path': r'D:\v\e1.mkv'},
-        <String, Object>{'title': 'remote', 'path': 'https://h/e2.mkv'},
-      ]);
-      expect(
-        localVideoFileCandidates(
-          videoPath: r'D:\v\list.m3u8',
-          playlistJson: json,
-        ),
-        <String>[r'D:\v\list.m3u8', 'D:/v/e1.mkv'],
-      );
-    }, skip: Platform.isWindows ? null : '盘符路径只在 Windows 上是绝对路径');
+    test(
+      'Windows：分隔符写法不同的同一集只留一条',
+      () {
+        // 分隔符等价（`D:/v/e1.mkv` ≡ `D:\v\e1.mkv`）是 Windows 独有的；posix 下
+        // 反斜杠是合法文件名字符，那真是两个文件。
+        final String json = jsonEncode(<Map<String, Object>>[
+          <String, Object>{'title': 'e1', 'path': 'D:/v/e1.mkv'},
+          <String, Object>{'title': 'e1-dup', 'path': r'D:\v\e1.mkv'},
+          <String, Object>{'title': 'remote', 'path': 'https://h/e2.mkv'},
+        ]);
+        expect(
+          localVideoFileCandidates(
+            videoPath: r'D:\v\list.m3u8',
+            playlistJson: json,
+          ),
+          <String>[r'D:\v\list.m3u8', 'D:/v/e1.mkv'],
+        );
+      },
+      skip: Platform.isWindows ? null : '盘符路径只在 Windows 上是绝对路径',
+    );
 
     test('远端流 → 无候选 → 弹窗不摆勾选框', () {
       expect(
@@ -175,14 +179,11 @@ void main() {
         expect(report.removed, isEmpty, reason: 'Windows 上大小写不同 = 同一个文件');
         expect(a.existsSync(), isTrue);
       } else {
-        expect(
-          report.removedSet,
-          <String>{a.path},
-          reason: 'Linux/Android 大小写敏感，那真是另一个文件，不该被护栏挡住',
-        );
+        expect(report.removedSet, <String>{
+          a.path,
+        }, reason: 'Linux/Android 大小写敏感，那真是另一个文件，不该被护栏挡住');
         expect(a.existsSync(), isFalse);
       }
     });
-
   });
 }

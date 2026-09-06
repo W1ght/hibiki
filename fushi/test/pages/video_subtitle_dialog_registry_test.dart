@@ -22,39 +22,39 @@ void main() {
     required VideoSubtitleRegistry registry,
     required String saveDirectory,
     String apiKey = 'jimaku-key',
-  }) =>
-      TranslationProvider(
-        child: MaterialApp(
-          home: Scaffold(
-            body: JimakuSubtitleDialog(
-              initialQuery: 'Some Anime',
-              initialApiKey: apiKey,
-              onApiKeyChanged: (String _) async {},
-              saveDirectory: saveDirectory,
-              subtitleRegistry: () => registry,
-              // AniList 恒空 → 走文本回退路径，不触网。
-              httpClientFactory: () async => http_testing.MockClient(
-                (http.Request request) async => http.Response(
-                  jsonEncode(<String, Object?>{
-                    'data': <String, Object?>{
-                      'Page': <String, Object?>{'media': <Object?>[]},
-                    },
-                  }),
-                  200,
-                  headers: <String, String>{
-                    'content-type': 'application/json; charset=utf-8',
-                  },
-                ),
-              ),
+  }) => TranslationProvider(
+    child: MaterialApp(
+      home: Scaffold(
+        body: JimakuSubtitleDialog(
+          initialQuery: 'Some Anime',
+          initialApiKey: apiKey,
+          onApiKeyChanged: (String _) async {},
+          saveDirectory: saveDirectory,
+          subtitleRegistry: () => registry,
+          // AniList 恒空 → 走文本回退路径，不触网。
+          httpClientFactory: () async => http_testing.MockClient(
+            (http.Request request) async => http.Response(
+              jsonEncode(<String, Object?>{
+                'data': <String, Object?>{
+                  'Page': <String, Object?>{'media': <Object?>[]},
+                },
+              }),
+              200,
+              headers: <String, String>{
+                'content-type': 'application/json; charset=utf-8',
+              },
             ),
           ),
         ),
-      );
+      ),
+    ),
+  );
 
   setUp(() => LocaleSettings.setLocale(AppLocale.zhCn));
 
-  testWidgets('播放页找字幕列出全部已配置来源的候选（Jimaku + OpenSubtitles）',
-      (WidgetTester tester) async {
+  testWidgets('播放页找字幕列出全部已配置来源的候选（Jimaku + OpenSubtitles）', (
+    WidgetTester tester,
+  ) async {
     tester.view.physicalSize = const Size(1400, 1000);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
@@ -62,26 +62,28 @@ void main() {
 
     final VideoSubtitleRegistry registry =
         VideoSubtitleRegistry(<VideoSubtitleProvider>[
-      _FakeSubtitleProvider(
-        id: 'jimaku',
-        priority: 100,
-        fileName: 'from.jimaku.ep01.ja.srt',
-        releaseName: 'Jimaku Entry',
-        language: 'ja',
-      ),
-      _FakeSubtitleProvider(
-        id: 'opensubtitles',
-        priority: 200,
-        fileName: 'from.opensubtitles.ep01.en.srt',
-        releaseName: 'OpenSubtitles Release',
-        language: 'en',
-      ),
-    ]);
+          _FakeSubtitleProvider(
+            id: 'jimaku',
+            priority: 100,
+            fileName: 'from.jimaku.ep01.ja.srt',
+            releaseName: 'Jimaku Entry',
+            language: 'ja',
+          ),
+          _FakeSubtitleProvider(
+            id: 'opensubtitles',
+            priority: 200,
+            fileName: 'from.opensubtitles.ep01.en.srt',
+            releaseName: 'OpenSubtitles Release',
+            language: 'en',
+          ),
+        ]);
 
-    await tester.pumpWidget(host(
-      registry: registry,
-      saveDirectory: Directory.systemTemp.createTempSync('fushi_subs').path,
-    ));
+    await tester.pumpWidget(
+      host(
+        registry: registry,
+        saveDirectory: Directory.systemTemp.createTempSync('fushi_subs').path,
+      ),
+    );
     await tester.pumpAndSettle();
 
     await tester.tap(find.widgetWithText(FilledButton, t.video_jimaku_search));
@@ -95,8 +97,9 @@ void main() {
     );
   });
 
-  testWidgets('只配了 OpenSubtitles（Jimaku key 为空）也能搜，不再被 Jimaku key 卡住',
-      (WidgetTester tester) async {
+  testWidgets('只配了 OpenSubtitles（Jimaku key 为空）也能搜，不再被 Jimaku key 卡住', (
+    WidgetTester tester,
+  ) async {
     tester.view.physicalSize = const Size(1400, 1000);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
@@ -104,27 +107,32 @@ void main() {
 
     final VideoSubtitleRegistry registry =
         VideoSubtitleRegistry(<VideoSubtitleProvider>[
-      _FakeSubtitleProvider(
-        id: 'opensubtitles',
-        priority: 200,
-        fileName: 'only.opensubtitles.ep01.en.srt',
-        releaseName: 'OpenSubtitles Release',
-        language: 'en',
-      ),
-    ]);
+          _FakeSubtitleProvider(
+            id: 'opensubtitles',
+            priority: 200,
+            fileName: 'only.opensubtitles.ep01.en.srt',
+            releaseName: 'OpenSubtitles Release',
+            language: 'en',
+          ),
+        ]);
 
-    await tester.pumpWidget(host(
-      registry: registry,
-      saveDirectory: Directory.systemTemp.createTempSync('fushi_subs2').path,
-      apiKey: '',
-    ));
+    await tester.pumpWidget(
+      host(
+        registry: registry,
+        saveDirectory: Directory.systemTemp.createTempSync('fushi_subs2').path,
+        apiKey: '',
+      ),
+    );
     await tester.pumpAndSettle();
 
     await tester.tap(find.widgetWithText(FilledButton, t.video_jimaku_search));
     await tester.pumpAndSettle();
 
-    expect(find.text(t.video_jimaku_no_key), findsNothing,
-        reason: '门槛是「有没有可用来源」，不是「有没有 Jimaku key」');
+    expect(
+      find.text(t.video_jimaku_no_key),
+      findsNothing,
+      reason: '门槛是「有没有可用来源」，不是「有没有 Jimaku key」',
+    );
     expect(find.text('only.opensubtitles.ep01.en.srt'), findsOneWidget);
   });
 
@@ -147,11 +155,13 @@ void main() {
       allowsFreeProbeDownload: false,
     );
 
-    await tester.pumpWidget(host(
-      registry: VideoSubtitleRegistry(<VideoSubtitleProvider>[metered]),
-      saveDirectory: Directory.systemTemp.createTempSync('fushi_probe1').path,
-      apiKey: '',
-    ));
+    await tester.pumpWidget(
+      host(
+        registry: VideoSubtitleRegistry(<VideoSubtitleProvider>[metered]),
+        saveDirectory: Directory.systemTemp.createTempSync('fushi_probe1').path,
+        apiKey: '',
+      ),
+    );
     await tester.pumpAndSettle();
     await tester.tap(find.widgetWithText(FilledButton, t.video_jimaku_search));
     await tester.pumpAndSettle();
@@ -174,16 +184,21 @@ void main() {
       allowsFreeProbeDownload: true,
     );
 
-    await tester.pumpWidget(host(
-      registry: VideoSubtitleRegistry(<VideoSubtitleProvider>[free]),
-      saveDirectory: Directory.systemTemp.createTempSync('fushi_probe2').path,
-    ));
+    await tester.pumpWidget(
+      host(
+        registry: VideoSubtitleRegistry(<VideoSubtitleProvider>[free]),
+        saveDirectory: Directory.systemTemp.createTempSync('fushi_probe2').path,
+      ),
+    );
     await tester.pumpAndSettle();
     await tester.tap(find.widgetWithText(FilledButton, t.video_jimaku_search));
     await tester.pumpAndSettle();
 
-    expect(free.downloadCalls, greaterThan(0),
-        reason: '无配额的源仍应探测，否则门控写成了「一律不探」');
+    expect(
+      free.downloadCalls,
+      greaterThan(0),
+      reason: '无配额的源仍应探测，否则门控写成了「一律不探」',
+    );
   });
 }
 
@@ -216,19 +231,18 @@ class _FakeSubtitleProvider implements VideoSubtitleProvider {
   @override
   Future<ProviderBatchResult<VideoSubtitleCandidate>> search(
     VideoSubtitleSearchRequest request,
-  ) async =>
-      ProviderBatchResult<VideoSubtitleCandidate>.success(
-        <VideoSubtitleCandidate>[
-          _FakeCandidate(
-            providerId: id,
-            remoteId: '$id:1',
-            fileName: fileName,
-            language: language,
-            providerPriority: priority,
-            releaseName: releaseName,
-          ),
-        ],
-      );
+  ) async => ProviderBatchResult<VideoSubtitleCandidate>.success(
+    <VideoSubtitleCandidate>[
+      _FakeCandidate(
+        providerId: id,
+        remoteId: '$id:1',
+        fileName: fileName,
+        language: language,
+        providerPriority: priority,
+        releaseName: releaseName,
+      ),
+    ],
+  );
 
   @override
   Future<VideoSubtitleDownload> download(

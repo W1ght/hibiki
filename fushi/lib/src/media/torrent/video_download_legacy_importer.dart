@@ -48,9 +48,8 @@ class LegacyTorrentProbe {
   final String category;
 }
 
-typedef LegacyTorrentMatcher = Future<LegacyTorrentBinding?> Function(
-  LegacyTorrentProbe probe,
-);
+typedef LegacyTorrentMatcher =
+    Future<LegacyTorrentBinding?> Function(LegacyTorrentProbe probe);
 
 /// Non-secret backend identity used by a migrated subscription. Legacy
 /// subscription JSON did not persist a qB category or connection identity, so
@@ -70,10 +69,10 @@ class LegacySubscriptionBackendBinding {
   final String? backendProfileId;
 }
 
-typedef LegacySubscriptionBackendResolver
-    = Future<LegacySubscriptionBackendBinding?> Function(
-  AnimeDownloadSubscription subscription,
-);
+typedef LegacySubscriptionBackendResolver =
+    Future<LegacySubscriptionBackendBinding?> Function(
+      AnimeDownloadSubscription subscription,
+    );
 
 enum LegacyImportIssueKind {
   corruptFile,
@@ -172,7 +171,8 @@ class VideoDownloadLegacyImporter {
     required Future<_LegacyFileImportOutcome> Function(
       File file,
       _MutableLegacyImportReport report,
-    ) importFile,
+    )
+    importFile,
   }) async {
     if (!await source.exists()) return;
     final List<File> files = <File>[];
@@ -184,11 +184,13 @@ class VideoDownloadLegacyImporter {
         }
       }
     } on FileSystemException {
-      report.issues.add(LegacyImportIssue(
-        kind: LegacyImportIssueKind.corruptFile,
-        fileName: p.basename(source.path),
-        message: 'legacy import directory is not readable',
-      ));
+      report.issues.add(
+        LegacyImportIssue(
+          kind: LegacyImportIssueKind.corruptFile,
+          fileName: p.basename(source.path),
+          message: 'legacy import directory is not readable',
+        ),
+      );
       return;
     }
     files.sort((File a, File b) => a.path.compareTo(b.path));
@@ -200,11 +202,13 @@ class VideoDownloadLegacyImporter {
         if (archived) {
           report.archivedFiles.add(p.basename(file.path));
         } else {
-          report.issues.add(LegacyImportIssue(
-            kind: LegacyImportIssueKind.archiveFailure,
-            fileName: p.basename(file.path),
-            message: 'database commit succeeded but JSON archive failed',
-          ));
+          report.issues.add(
+            LegacyImportIssue(
+              kind: LegacyImportIssueKind.archiveFailure,
+              fileName: p.basename(file.path),
+              message: 'database commit succeeded but JSON archive failed',
+            ),
+          );
         }
       } else if (outcome == _LegacyFileImportOutcome.corrupt) {
         final bool quarantined = await _quarantine(file, kind);
@@ -229,8 +233,9 @@ class VideoDownloadLegacyImporter {
     required _MutableLegacyImportReport report,
   }) async {
     final int now = _now().millisecondsSinceEpoch;
-    final String digest =
-        sha256.convert(utf8.encode('$kind|$fileName')).toString();
+    final String digest = sha256
+        .convert(utf8.encode('$kind|$fileName'))
+        .toString();
     try {
       await database.upsertVideoDownloadJob(
         VideoDownloadJobsCompanion.insert(
@@ -255,11 +260,13 @@ class VideoDownloadLegacyImporter {
         ),
       );
     } on Object {
-      report.issues.add(LegacyImportIssue(
-        kind: LegacyImportIssueKind.databaseWrite,
-        fileName: fileName,
-        message: 'quarantine report could not be persisted for the UI',
-      ));
+      report.issues.add(
+        LegacyImportIssue(
+          kind: LegacyImportIssueKind.databaseWrite,
+          fileName: fileName,
+          message: 'quarantine report could not be persisted for the UI',
+        ),
+      );
     }
   }
 
@@ -268,14 +275,17 @@ class VideoDownloadLegacyImporter {
     _MutableLegacyImportReport report,
   ) async {
     final Map<dynamic, dynamic>? raw = await _readJsonMap(file);
-    final AnimeDownloadPlan? plan =
-        raw == null ? null : decodeAnimeDownloadPlan(raw);
+    final AnimeDownloadPlan? plan = raw == null
+        ? null
+        : decodeAnimeDownloadPlan(raw);
     if (plan == null || !_validPlan(plan)) {
-      report.issues.add(LegacyImportIssue(
-        kind: LegacyImportIssueKind.corruptFile,
-        fileName: p.basename(file.path),
-        message: 'legacy plan JSON is malformed or incomplete',
-      ));
+      report.issues.add(
+        LegacyImportIssue(
+          kind: LegacyImportIssueKind.corruptFile,
+          fileName: p.basename(file.path),
+          message: 'legacy plan JSON is malformed or incomplete',
+        ),
+      );
       return _LegacyFileImportOutcome.corrupt;
     }
 
@@ -288,11 +298,14 @@ class VideoDownloadLegacyImporter {
         'needsAttention: backend torrent was not confirmed by hash, title, '
         'and category',
       );
-      report.issues.add(LegacyImportIssue(
-        kind: LegacyImportIssueKind.backendUnconfirmed,
-        fileName: p.basename(file.path),
-        message: 'legacy backend binding requires matching hash/title/category',
-      ));
+      report.issues.add(
+        LegacyImportIssue(
+          kind: LegacyImportIssueKind.backendUnconfirmed,
+          fileName: p.basename(file.path),
+          message:
+              'legacy backend binding requires matching hash/title/category',
+        ),
+      );
     }
 
     int? collectionId = plan.collectionId;
@@ -302,11 +315,13 @@ class VideoDownloadLegacyImporter {
       attentionReasons.add(
         'needsAttention: legacy collection is unavailable on this device',
       );
-      report.issues.add(LegacyImportIssue(
-        kind: LegacyImportIssueKind.missingReference,
-        fileName: p.basename(file.path),
-        message: 'legacy collection reference is unavailable',
-      ));
+      report.issues.add(
+        LegacyImportIssue(
+          kind: LegacyImportIssueKind.missingReference,
+          fileName: p.basename(file.path),
+          message: 'legacy collection reference is unavailable',
+        ),
+      );
     }
     if (plan.status == AnimeDownloadPlan.statusFailed) {
       attentionReasons.add('legacy task previously failed');
@@ -317,17 +332,19 @@ class VideoDownloadLegacyImporter {
 
     final int importedAt = _nonNegativeTimestamp(plan.createdAtMs);
     final String stage = _legacyPlanStage(plan);
-    final String lifecycle = attentionReasons.any(
-      (String reason) => reason.startsWith('needsAttention:'),
-    )
+    final String lifecycle =
+        attentionReasons.any(
+          (String reason) => reason.startsWith('needsAttention:'),
+        )
         ? VideoDownloadJobLifecycle.needsAttention
         : _legacyPlanLifecycle(plan);
     final String? magnet =
         plan.magnet.trim().toLowerCase().startsWith('magnet:')
-            ? plan.magnet.trim()
-            : null;
+        ? plan.magnet.trim()
+        : null;
     final String backendKind = binding?.backendKind.trim() ?? 'legacy';
-    final String fingerprint = binding?.fingerprint.trim() ??
+    final String fingerprint =
+        binding?.fingerprint.trim() ??
         _stableFingerprint('plan|${plan.id}|${plan.qbCategory}');
 
     try {
@@ -354,8 +371,9 @@ class VideoDownloadLegacyImporter {
             coverUrl: Value<String?>(_nonEmpty(plan.coverUrl)),
             backendKind: backendKind.isEmpty ? 'legacy' : backendKind,
             backendTaskId: Value<String?>(_nonEmpty(binding?.backendTaskId)),
-            backendProfileId:
-                Value<String?>(_nonEmpty(binding?.backendProfileId)),
+            backendProfileId: Value<String?>(
+              _nonEmpty(binding?.backendProfileId),
+            ),
             fingerprint: fingerprint.isEmpty
                 ? _stableFingerprint('plan|${plan.id}')
                 : fingerprint,
@@ -367,8 +385,9 @@ class VideoDownloadLegacyImporter {
                   ? 'none'
                   : 'bestEffort',
             ),
-            observedSavePath:
-                Value<String?>(_nonEmpty(binding?.observedSavePath)),
+            observedSavePath: Value<String?>(
+              _nonEmpty(binding?.observedSavePath),
+            ),
             lifecycle: Value<String>(lifecycle),
             stage: Value<String>(stage),
             stageProgress: Value<double>(
@@ -379,7 +398,8 @@ class VideoDownloadLegacyImporter {
             ),
             createdAt: importedAt,
             updatedAt: importedAt,
-            completedAt: plan.status == AnimeDownloadPlan.statusImported &&
+            completedAt:
+                plan.status == AnimeDownloadPlan.statusImported &&
                     lifecycle == VideoDownloadJobLifecycle.completed
                 ? Value<int?>(importedAt)
                 : const Value<int?>.absent(),
@@ -416,11 +436,14 @@ class VideoDownloadLegacyImporter {
       report.importedPlans++;
       return _LegacyFileImportOutcome.committed;
     } catch (_) {
-      report.issues.add(LegacyImportIssue(
-        kind: LegacyImportIssueKind.databaseWrite,
-        fileName: p.basename(file.path),
-        message: 'legacy plan database transaction failed and was rolled back',
-      ));
+      report.issues.add(
+        LegacyImportIssue(
+          kind: LegacyImportIssueKind.databaseWrite,
+          fileName: p.basename(file.path),
+          message:
+              'legacy plan database transaction failed and was rolled back',
+        ),
+      );
       return _LegacyFileImportOutcome.failed;
     }
   }
@@ -430,14 +453,17 @@ class VideoDownloadLegacyImporter {
     _MutableLegacyImportReport report,
   ) async {
     final Map<dynamic, dynamic>? raw = await _readJsonMap(file);
-    final AnimeDownloadSubscription? subscription =
-        raw == null ? null : decodeAnimeDownloadSubscription(raw);
+    final AnimeDownloadSubscription? subscription = raw == null
+        ? null
+        : decodeAnimeDownloadSubscription(raw);
     if (subscription == null) {
-      report.issues.add(LegacyImportIssue(
-        kind: LegacyImportIssueKind.corruptFile,
-        fileName: p.basename(file.path),
-        message: 'legacy subscription JSON is malformed or incomplete',
-      ));
+      report.issues.add(
+        LegacyImportIssue(
+          kind: LegacyImportIssueKind.corruptFile,
+          fileName: p.basename(file.path),
+          message: 'legacy subscription JSON is malformed or incomplete',
+        ),
+      );
       return _LegacyFileImportOutcome.corrupt;
     }
 
@@ -453,11 +479,13 @@ class VideoDownloadLegacyImporter {
         binding.fingerprint.trim().isEmpty ||
         binding.category.trim().isEmpty) {
       binding = null;
-      report.issues.add(LegacyImportIssue(
-        kind: LegacyImportIssueKind.backendUnconfirmed,
-        fileName: p.basename(file.path),
-        message: 'legacy subscription needs a configured backend binding',
-      ));
+      report.issues.add(
+        LegacyImportIssue(
+          kind: LegacyImportIssueKind.backendUnconfirmed,
+          fileName: p.basename(file.path),
+          message: 'legacy subscription needs a configured backend binding',
+        ),
+      );
     }
     final int createdAt = _nonNegativeTimestamp(subscription.createdAtMs);
     final bool enabled = subscription.enabled && binding != null;
@@ -495,9 +523,11 @@ class VideoDownloadLegacyImporter {
             mode: const Value<String>('ongoing'),
             startAfterEpisode: Value<int?>(subscription.startAfterEpisode),
             backendKind: binding?.backendKind.trim() ?? 'legacy',
-            backendProfileId:
-                Value<String?>(_nonEmpty(binding?.backendProfileId)),
-            fingerprint: binding?.fingerprint.trim() ??
+            backendProfileId: Value<String?>(
+              _nonEmpty(binding?.backendProfileId),
+            ),
+            fingerprint:
+                binding?.fingerprint.trim() ??
                 _stableFingerprint('subscription|${subscription.id}'),
             category: Value<String?>(_nonEmpty(binding?.category)),
             organizationPolicy: const Value<String>('legacy'),
@@ -510,9 +540,11 @@ class VideoDownloadLegacyImporter {
                 : const Value<int?>(null),
             lastCheckedAt: Value<int?>(subscription.lastCheckedAtMs),
             lastMatchedAt: Value<int?>(subscription.lastMatchedAtMs),
-            lastError: Value<String?>(binding == null
-                ? 'needsAttention: legacy subscription backend is unbound'
-                : _safeLegacySubscriptionError(subscription.lastError)),
+            lastError: Value<String?>(
+              binding == null
+                  ? 'needsAttention: legacy subscription backend is unbound'
+                  : _safeLegacySubscriptionError(subscription.lastError),
+            ),
             createdAt: createdAt,
             updatedAt: createdAt,
           ),
@@ -549,12 +581,14 @@ class VideoDownloadLegacyImporter {
       report.importedSubscriptionItems += itemCount;
       return _LegacyFileImportOutcome.committed;
     } catch (_) {
-      report.issues.add(LegacyImportIssue(
-        kind: LegacyImportIssueKind.databaseWrite,
-        fileName: p.basename(file.path),
-        message:
-            'legacy subscription database transaction failed and was rolled back',
-      ));
+      report.issues.add(
+        LegacyImportIssue(
+          kind: LegacyImportIssueKind.databaseWrite,
+          fileName: p.basename(file.path),
+          message:
+              'legacy subscription database transaction failed and was rolled back',
+        ),
+      );
       return _LegacyFileImportOutcome.failed;
     }
   }
@@ -566,11 +600,13 @@ class VideoDownloadLegacyImporter {
     if (matcher == null) return null;
     LegacyTorrentBinding? candidate;
     try {
-      candidate = await matcher(LegacyTorrentProbe(
-        torrentHash: plan.id,
-        title: plan.torrentTitle,
-        category: plan.qbCategory,
-      ));
+      candidate = await matcher(
+        LegacyTorrentProbe(
+          torrentHash: plan.id,
+          title: plan.torrentTitle,
+          category: plan.qbCategory,
+        ),
+      );
     } catch (_) {
       return null;
     }
@@ -595,15 +631,13 @@ class VideoDownloadLegacyImporter {
     }
   }
 
-  Future<bool> _archive(File source, String kind) async => _moveAfterCommit(
-        source,
-        Directory(p.join(_archiveDirectory.path, kind)),
-      );
+  Future<bool> _archive(File source, String kind) async =>
+      _moveAfterCommit(source, Directory(p.join(_archiveDirectory.path, kind)));
 
   Future<bool> _quarantine(File source, String kind) async => _moveAfterCommit(
-        source,
-        Directory(p.join(_quarantineDirectory.path, kind)),
-      );
+    source,
+    Directory(p.join(_quarantineDirectory.path, kind)),
+  );
 
   Future<bool> _moveAfterCommit(File source, Directory destination) async {
     try {
@@ -617,10 +651,12 @@ class VideoDownloadLegacyImporter {
           return true;
         }
         final String stem = p.basenameWithoutExtension(source.path);
-        target = File(p.join(
-          destination.path,
-          '$stem.${_now().microsecondsSinceEpoch}.json',
-        ));
+        target = File(
+          p.join(
+            destination.path,
+            '$stem.${_now().microsecondsSinceEpoch}.json',
+          ),
+        );
       }
       await source.rename(target.path);
       return true;
@@ -664,8 +700,8 @@ class VideoDownloadLegacyImporter {
 
   static String? _safeLegacySubscriptionError(String? value) =>
       value == null || value.trim().isEmpty
-          ? null
-          : 'legacy subscription previously reported an error';
+      ? null
+      : 'legacy subscription previously reported an error';
 
   static String _stableFingerprint(String input) =>
       'legacy-unbound:${sha256.convert(utf8.encode(input))}';
@@ -675,9 +711,7 @@ class VideoDownloadLegacyImporter {
     int index,
     PlanSubtitle subtitle,
   ) =>
-      'legacy-subtitle:${sha256.convert(utf8.encode(
-        '$jobId|$index|${subtitle.fileName}|${subtitle.stagedPath}',
-      ))}';
+      'legacy-subtitle:${sha256.convert(utf8.encode('$jobId|$index|${subtitle.fileName}|${subtitle.stagedPath}'))}';
 
   static String _episodeKey(int episode) =>
       'S01E${episode.toString().padLeft(2, '0')}';
@@ -691,12 +725,7 @@ class VideoDownloadLegacyImporter {
   }
 }
 
-enum _LegacyFileImportOutcome {
-  committed,
-  alreadyImported,
-  corrupt,
-  failed,
-}
+enum _LegacyFileImportOutcome { committed, alreadyImported, corrupt, failed }
 
 class _MutableLegacyImportReport {
   int importedPlans = 0;
@@ -708,12 +737,12 @@ class _MutableLegacyImportReport {
   final List<LegacyImportIssue> issues = <LegacyImportIssue>[];
 
   LegacyVideoDownloadImportReport freeze() => LegacyVideoDownloadImportReport(
-        importedPlans: importedPlans,
-        importedSubscriptions: importedSubscriptions,
-        importedSubscriptionItems: importedSubscriptionItems,
-        alreadyImportedFiles: alreadyImportedFiles,
-        archivedFiles: List<String>.unmodifiable(archivedFiles),
-        quarantinedFiles: List<String>.unmodifiable(quarantinedFiles),
-        issues: List<LegacyImportIssue>.unmodifiable(issues),
-      );
+    importedPlans: importedPlans,
+    importedSubscriptions: importedSubscriptions,
+    importedSubscriptionItems: importedSubscriptionItems,
+    alreadyImportedFiles: alreadyImportedFiles,
+    archivedFiles: List<String>.unmodifiable(archivedFiles),
+    quarantinedFiles: List<String>.unmodifiable(quarantinedFiles),
+    issues: List<LegacyImportIssue>.unmodifiable(issues),
+  );
 }

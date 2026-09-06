@@ -130,10 +130,7 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     return GestureDetector(
       onPanUpdate: (details) {
-        _invoke('drag', {
-          'dx': details.delta.dx,
-          'dy': details.delta.dy,
-        });
+        _invoke('drag', {'dx': details.delta.dx, 'dy': details.delta.dy});
       },
       onPanEnd: (_) {
         _invoke('dragEnd');
@@ -146,10 +143,7 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
         child: Row(
           children: [
             Expanded(
-              child: Text(
-                t.floating_dict_title,
-                style: tokens.type.listTitle,
-              ),
+              child: Text(t.floating_dict_title, style: tokens.type.listTitle),
             ),
             SizedBox(
               width: 28,
@@ -206,10 +200,7 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
         ),
       );
     }
-    return DictionaryPopupNative(
-      result: _result!,
-      onMineEntry: _exportToAnki,
-    );
+    return DictionaryPopupNative(result: _result!, onMineEntry: _exportToAnki);
   }
 
   Widget _buildResizeHandle() {
@@ -218,10 +209,7 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
       alignment: Alignment.bottomRight,
       child: GestureDetector(
         onPanUpdate: (details) {
-          _invoke('resize', {
-            'dw': details.delta.dx,
-            'dh': details.delta.dy,
-          });
+          _invoke('resize', {'dw': details.delta.dx, 'dh': details.delta.dy});
         },
         onPanEnd: (_) {
           _invoke('dragEnd');
@@ -230,11 +218,7 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
           width: 20,
           height: 20,
           alignment: Alignment.bottomRight,
-          child: Icon(
-            Icons.drag_handle,
-            size: 14,
-            color: cs.outlineVariant,
-          ),
+          child: Icon(Icons.drag_handle, size: 14, color: cs.outlineVariant),
         ),
       ),
     );

@@ -73,9 +73,9 @@ class _TagManagementPageState extends ConsumerState<TagManagementPage> {
       await _db.createTag(result.name, result.color);
     } on SqliteException catch (e) {
       if (e.extendedResultCode == 2067 && mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(t.tag_name_duplicate)),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(t.tag_name_duplicate)));
         return;
       }
       rethrow;
@@ -94,9 +94,9 @@ class _TagManagementPageState extends ConsumerState<TagManagementPage> {
       await _db.updateTag(tag.id, name: result.name, colorValue: result.color);
     } on SqliteException catch (e) {
       if (e.extendedResultCode == 2067 && mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(t.tag_name_duplicate)),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(t.tag_name_duplicate)));
         return;
       }
       rethrow;
@@ -109,8 +109,9 @@ class _TagManagementPageState extends ConsumerState<TagManagementPage> {
   /// 既无 swipe 又无 gamepad，删除此前无入口——本菜单补齐，同时保留 tap→编辑、
   /// swipe→删除、gamepad X→删除。
   Future<void> _showTagMenu(BookTagRow tag, Offset globalPosition) async {
-    final RenderObject? overlay =
-        Overlay.of(context).context.findRenderObject();
+    final RenderObject? overlay = Overlay.of(
+      context,
+    ).context.findRenderObject();
     if (overlay is! RenderBox) return;
     // 与 media_collection_grid_detail_page 同理：globalPosition 是真实视口坐标，
     // 需经 Overlay 的 RenderBox 换算到根 Navigator Overlay 坐标系，界面缩放≠100%
@@ -159,9 +160,7 @@ class _TagManagementPageState extends ConsumerState<TagManagementPage> {
   Future<void> _deleteTag(BookTagRow tag) async {
     final confirmed = await showAppDialog<bool>(
       context: context,
-      builder: (ctx) => TagDeleteConfirmationDialog(
-        tagName: tag.name,
-      ),
+      builder: (ctx) => TagDeleteConfirmationDialog(tagName: tag.name),
     );
     if (confirmed != true) return;
 
@@ -269,7 +268,8 @@ class _TagManagementPageState extends ConsumerState<TagManagementPage> {
                     },
                     child: ContextMenuTrigger(
                       // 右键菜单改由绑定表决定唤出键（默认仍是右键）；右键被别的动作占用时自动让位。
-                      onInvoke: (Offset position) => _showTagMenu(tag, position),
+                      onInvoke: (Offset position) =>
+                          _showTagMenu(tag, position),
                       child: GestureDetector(
                         behavior: HitTestBehavior.translucent,
                         onLongPressStart: (LongPressStartDetails d) =>
@@ -294,10 +294,7 @@ class _TagManagementPageState extends ConsumerState<TagManagementPage> {
 }
 
 class TagDeleteConfirmationDialog extends StatelessWidget {
-  const TagDeleteConfirmationDialog({
-    required this.tagName,
-    super.key,
-  });
+  const TagDeleteConfirmationDialog({required this.tagName, super.key});
 
   final String tagName;
 
@@ -457,9 +454,9 @@ class TagEditDialogState extends State<TagEditDialog> {
               onPressed: () {
                 final name = _nameController.text.trim();
                 if (name.isEmpty) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text(t.tag_name_empty)),
-                  );
+                  ScaffoldMessenger.of(
+                    context,
+                  ).showSnackBar(SnackBar(content: Text(t.tag_name_empty)));
                   return;
                 }
                 Navigator.pop(

@@ -10,40 +10,40 @@ import 'package:fushi/src/pages/implementations/sentence_context_dialog.dart';
 /// + 正文直接铺卡，任何朝向/尺寸下句子预览都保有真实高度、按需滚动、不再塌陷或溢出。
 void main() {
   Map<String, Object?> preview() => <String, Object?>{
-        'prev': const <String>[],
-        'current': '俺に対する同情。',
-        'currentOffset': 2, // 「対する」在偏移 2
-        'next': const <String>[],
-        'total': 0,
-      };
+    'prev': const <String>[],
+    'current': '俺に対する同情。',
+    'currentOffset': 2, // 「対する」在偏移 2
+    'next': const <String>[],
+    'total': 0,
+  };
 
   Widget harness() => MaterialApp(
-        home: Scaffold(
-          body: Builder(
-            builder: (BuildContext ctx) => Center(
-              child: ElevatedButton(
-                onPressed: () => showDialog<void>(
-                  context: ctx,
-                  builder: (_) => SentenceContextDialog(
-                    matched: '対する',
-                    fetchPreview: () async => preview(),
-                    setContext: (int p, int n) async => p + n,
-                    onConfirm: () {},
-                  ),
-                ),
-                child: const Text('open'),
+    home: Scaffold(
+      body: Builder(
+        builder: (BuildContext ctx) => Center(
+          child: ElevatedButton(
+            onPressed: () => showDialog<void>(
+              context: ctx,
+              builder: (_) => SentenceContextDialog(
+                matched: '対する',
+                fetchPreview: () async => preview(),
+                setContext: (int p, int n) async => p + n,
+                onConfirm: () {},
               ),
             ),
+            child: const Text('open'),
           ),
         ),
-      );
+      ),
+    ),
+  );
 
   Finder currentSentence() => find.byWidgetPredicate(
-        (Widget w) =>
-            w is RichText &&
-            w.text is TextSpan &&
-            (w.text as TextSpan).toPlainText().contains('俺に対する同情。'),
-      );
+    (Widget w) =>
+        w is RichText &&
+        w.text is TextSpan &&
+        (w.text as TextSpan).toPlainText().contains('俺に対する同情。'),
+  );
 
   testWidgets('横屏矮窗下句子预览不塌陷、可见、且不溢出', (WidgetTester tester) async {
     // 手机横屏：2340x1080 物理 / dpr 3 => 780x360 逻辑（用户截图正是横向）。

@@ -22,9 +22,9 @@ import '../helpers/test_platform_services.dart';
 void main() {
   group('默认选中分类 = schema 首项（源码守卫）', () {
     test('settings_home_page 不再硬编码 appearance 默认值', () {
-      final String home = File('lib/src/settings/settings_home_page.dart')
-          .readAsStringSync()
-          .replaceAll('\r\n', '\n');
+      final String home = File(
+        'lib/src/settings/settings_home_page.dart',
+      ).readAsStringSync().replaceAll('\r\n', '\n');
       // 默认项延迟到 build 里从可见分类列表解析，顺序真相源是 buildSettingsSchema
       // （settings_destination_order_guard_test 锁顺序）；这里锁「不再硬编码」。
       expect(home, contains('SettingsDestinationId? _selectedDestinationId'));
@@ -63,23 +63,30 @@ void main() {
       );
     }
 
-    testWidgets('bodySearchEntries 被展平进搜索索引且指向 cardCreation',
-        (WidgetTester tester) async {
+    testWidgets('bodySearchEntries 被展平进搜索索引且指向 cardCreation', (
+      WidgetTester tester,
+    ) async {
       await pumpContext(tester);
       final SettingsDestination dest = buildCardCreationDestination();
-      final List<SettingsSearchEntry> entries =
-          flattenVisibleSettings(<SettingsDestination>[dest], sctx);
+      final List<SettingsSearchEntry> entries = flattenVisibleSettings(
+        <SettingsDestination>[dest],
+        sctx,
+      );
 
       // sections 为空（body 逃生口），条目全部来自 bodySearchEntries。
-      expect(entries, isNotEmpty,
-          reason: '制卡分类必须有可搜条目（此前 sections 空 = 搜索完全不可见）');
+      expect(
+        entries,
+        isNotEmpty,
+        reason: '制卡分类必须有可搜条目（此前 sections 空 = 搜索完全不可见）',
+      );
       for (final SettingsSearchEntry entry in entries) {
         expect(entry.destination.id, SettingsDestinationId.cardCreation);
         expect(entry.isBodyEntry, isTrue);
         expect(entry.title, isNotEmpty);
       }
-      final List<String> ids =
-          entries.map((SettingsSearchEntry e) => e.item.id).toList();
+      final List<String> ids = entries
+          .map((SettingsSearchEntry e) => e.item.id)
+          .toList();
       expect(ids, contains('card_creation.anki.deck'));
       expect(ids, contains('card_creation.anki.note_type'));
       expect(ids, contains('card_creation.anki.field_mappings'));
@@ -89,11 +96,15 @@ void main() {
     testWidgets('按「牌组」行标题检索能命中并跳转制卡分类', (WidgetTester tester) async {
       await pumpContext(tester);
       final SettingsDestination dest = buildCardCreationDestination();
-      final List<SettingsSearchEntry> entries =
-          flattenVisibleSettings(<SettingsDestination>[dest], sctx);
+      final List<SettingsSearchEntry> entries = flattenVisibleSettings(
+        <SettingsDestination>[dest],
+        sctx,
+      );
       // 用与正文行同源的 i18n 文案检索（locale 无关）。
-      final List<SettingsSearchEntry> hits =
-          filterSettingsEntries(entries, t.anki_deck);
+      final List<SettingsSearchEntry> hits = filterSettingsEntries(
+        entries,
+        t.anki_deck,
+      );
       expect(hits, isNotEmpty);
       expect(hits.first.destination.id, SettingsDestinationId.cardCreation);
       expect(hits.first.item.id, 'card_creation.anki.deck');
@@ -193,20 +204,36 @@ void main() {
       await tester.pumpWidget(schemaHarness(showIcons: true));
       await tester.pumpAndSettle();
 
-      expect(find.byIcon(Icons.toggle_on_outlined), findsOneWidget,
-          reason: 'Switch 行声明的 icon 必须渲染（此前 showIcon 未转发从不渲染）');
-      expect(find.byIcon(Icons.linear_scale_outlined), findsOneWidget,
-          reason: 'Slider 行图标');
-      expect(find.byIcon(Icons.exposure_outlined), findsOneWidget,
-          reason: 'Stepper 行图标');
-      expect(find.byIcon(Icons.tune_outlined), findsOneWidget,
-          reason: 'Segmented 行图标');
-      expect(find.byIcon(Icons.list_outlined), findsOneWidget,
-          reason: '内联 Picker（dropdown 分支）行图标');
+      expect(
+        find.byIcon(Icons.toggle_on_outlined),
+        findsOneWidget,
+        reason: 'Switch 行声明的 icon 必须渲染（此前 showIcon 未转发从不渲染）',
+      );
+      expect(
+        find.byIcon(Icons.linear_scale_outlined),
+        findsOneWidget,
+        reason: 'Slider 行图标',
+      );
+      expect(
+        find.byIcon(Icons.exposure_outlined),
+        findsOneWidget,
+        reason: 'Stepper 行图标',
+      );
+      expect(
+        find.byIcon(Icons.tune_outlined),
+        findsOneWidget,
+        reason: 'Segmented 行图标',
+      );
+      expect(
+        find.byIcon(Icons.list_outlined),
+        findsOneWidget,
+        reason: '内联 Picker（dropdown 分支）行图标',
+      );
     });
 
-    testWidgets('showIcons=false 时不渲染（Cupertino 渲染器契约不变）',
-        (WidgetTester tester) async {
+    testWidgets('showIcons=false 时不渲染（Cupertino 渲染器契约不变）', (
+      WidgetTester tester,
+    ) async {
       await tester.binding.setSurfaceSize(const Size(800, 1200));
       addTearDown(() => tester.binding.setSurfaceSize(null));
       await tester.pumpWidget(schemaHarness(showIcons: false));

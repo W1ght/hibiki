@@ -24,27 +24,35 @@ void main() {
       // Buffer holds three sentences; the selection is "世界" in the middle one.
       const String text = '前の文です。こんにちは世界。次の文です。';
       final int selStart = text.indexOf('世界');
-      final SentenceExtractionResult r =
-          extractSentenceAt(text, selStart, '世界'.length);
+      final SentenceExtractionResult r = extractSentenceAt(
+        text,
+        selStart,
+        '世界'.length,
+      );
       expect(r.sentence, 'こんにちは世界。');
       // selStart re-based into the extracted sentence.
       expect(r.sentence.substring(r.selStart, r.selStart + r.selLen), '世界');
     });
 
-    test('sentence begins AFTER the preceding delimiter (delimiter excluded)',
-        () {
-      const String text = 'A。B';
-      final SentenceExtractionResult r = extractSentenceAt(text, 2, 1); // "B"
-      expect(r.sentence, 'B');
-      expect(r.selStart, 0);
-      expect(r.selLen, 1);
-    });
+    test(
+      'sentence begins AFTER the preceding delimiter (delimiter excluded)',
+      () {
+        const String text = 'A。B';
+        final SentenceExtractionResult r = extractSentenceAt(text, 2, 1); // "B"
+        expect(r.sentence, 'B');
+        expect(r.selStart, 0);
+        expect(r.selLen, 1);
+      },
+    );
 
     test('terminating delimiter is INCLUDED, with trailing closers', () {
       const String text = 'これはテストです。」あと';
       final int selStart = text.indexOf('テスト');
-      final SentenceExtractionResult r =
-          extractSentenceAt(text, selStart, 'テスト'.length);
+      final SentenceExtractionResult r = extractSentenceAt(
+        text,
+        selStart,
+        'テスト'.length,
+      );
       // The 」 after 。is a trailing closer pulled into the sentence.
       expect(r.sentence, 'これはテストです。」');
     });
@@ -60,28 +68,39 @@ void main() {
     test('latin sentence with . delimiter', () {
       const String text = 'First one. Second word here. Third.';
       final int selStart = text.indexOf('word');
-      final SentenceExtractionResult r =
-          extractSentenceAt(text, selStart, 'word'.length);
+      final SentenceExtractionResult r = extractSentenceAt(
+        text,
+        selStart,
+        'word'.length,
+      );
       expect(r.sentence, 'Second word here.');
       expect(r.sentence.substring(r.selStart, r.selStart + r.selLen), 'word');
     });
 
-    test('leading whitespace after delimiter is trimmed and offsets re-based',
-        () {
-      const String text = 'A。   BB world.';
-      final int selStart = text.indexOf('BB');
-      final SentenceExtractionResult r =
-          extractSentenceAt(text, selStart, 'BB'.length);
-      expect(r.sentence, 'BB world.');
-      expect(r.selStart, 0);
-      expect(r.selLen, 2);
-    });
+    test(
+      'leading whitespace after delimiter is trimmed and offsets re-based',
+      () {
+        const String text = 'A。   BB world.';
+        final int selStart = text.indexOf('BB');
+        final SentenceExtractionResult r = extractSentenceAt(
+          text,
+          selStart,
+          'BB'.length,
+        );
+        expect(r.sentence, 'BB world.');
+        expect(r.selStart, 0);
+        expect(r.selLen, 2);
+      },
+    );
 
     test('newline is a sentence boundary', () {
       const String text = 'line one\nselected line\nlast';
       final int selStart = text.indexOf('selected');
-      final SentenceExtractionResult r =
-          extractSentenceAt(text, selStart, 'selected'.length);
+      final SentenceExtractionResult r = extractSentenceAt(
+        text,
+        selStart,
+        'selected'.length,
+      );
       expect(r.sentence, 'selected line');
     });
   });
@@ -111,32 +130,57 @@ void main() {
   });
 
   group('double-sided consistency with the reader DOM sentence walk', () {
-    test('delimiter tables are byte-identical to reader_selection_scripts.dart',
-        () {
-      final File readerScripts =
-          File('lib/src/reader/reader_selection_scripts.dart');
-      expect(readerScripts.existsSync(), isTrue,
-          reason: 'reader_selection_scripts.dart must exist to guard against '
-              'delimiter drift');
-      final String src = readerScripts.readAsStringSync();
-      // The reader stores the same two tables as JS string literals. Extract
-      // them and assert byte equality with the Dart extractor's constants.
-      final String? readerSentence =
-          _extractJsStringField(src, 'sentenceDelimiters');
-      final String? readerTrailing =
-          _extractJsStringField(src, 'trailingSentenceChars');
-      expect(readerSentence, isNotNull,
-          reason: 'could not locate sentenceDelimiters in reader scripts');
-      expect(readerTrailing, isNotNull,
-          reason: 'could not locate trailingSentenceChars in reader scripts');
-      expect(readerSentence, kSentenceDelimiters,
-          reason: 'sentence_extraction.dart kSentenceDelimiters drifted from '
+    test(
+      'delimiter tables are byte-identical to reader_selection_scripts.dart',
+      () {
+        final File readerScripts = File(
+          'lib/src/reader/reader_selection_scripts.dart',
+        );
+        expect(
+          readerScripts.existsSync(),
+          isTrue,
+          reason:
+              'reader_selection_scripts.dart must exist to guard against '
+              'delimiter drift',
+        );
+        final String src = readerScripts.readAsStringSync();
+        // The reader stores the same two tables as JS string literals. Extract
+        // them and assert byte equality with the Dart extractor's constants.
+        final String? readerSentence = _extractJsStringField(
+          src,
+          'sentenceDelimiters',
+        );
+        final String? readerTrailing = _extractJsStringField(
+          src,
+          'trailingSentenceChars',
+        );
+        expect(
+          readerSentence,
+          isNotNull,
+          reason: 'could not locate sentenceDelimiters in reader scripts',
+        );
+        expect(
+          readerTrailing,
+          isNotNull,
+          reason: 'could not locate trailingSentenceChars in reader scripts',
+        );
+        expect(
+          readerSentence,
+          kSentenceDelimiters,
+          reason:
+              'sentence_extraction.dart kSentenceDelimiters drifted from '
               'the reader; re-sync so app-external capture matches in-app '
-              'sentence boundaries');
-      expect(readerTrailing, kTrailingSentenceChars,
-          reason: 'sentence_extraction.dart kTrailingSentenceChars drifted '
-              'from the reader; re-sync the trailing-closer table');
-    });
+              'sentence boundaries',
+        );
+        expect(
+          readerTrailing,
+          kTrailingSentenceChars,
+          reason:
+              'sentence_extraction.dart kTrailingSentenceChars drifted '
+              'from the reader; re-sync the trailing-closer table',
+        );
+      },
+    );
   });
 }
 

@@ -20,7 +20,7 @@ import '../helpers/test_platform_services.dart';
 
 class _MemorySubscriptionStore extends AnimeDownloadSubscriptionStore {
   _MemorySubscriptionStore()
-      : super(baseDir: Directory('unused-subscription-store'));
+    : super(baseDir: Directory('unused-subscription-store'));
 
   final Map<String, AnimeDownloadSubscription> values =
       <String, AnimeDownloadSubscription>{};
@@ -57,8 +57,7 @@ class _NoopBackend implements TorrentBackend {
     required String category,
     bool sequential = false,
     bool firstLastPiecePrio = false,
-  }) async =>
-      true;
+  }) async => true;
 
   @override
   void close() {}
@@ -67,13 +66,16 @@ class _NoopBackend implements TorrentBackend {
   // 假装成功——真要测这条链路的用例应当显式覆盖它。
   @override
   Future<TorrentStorageResult> renameFile(
-          String torrentId, int fileIndex, String newPath) async =>
-      const TorrentStorageResult.failure('not supported by fake');
+    String torrentId,
+    int fileIndex,
+    String newPath,
+  ) async => const TorrentStorageResult.failure('not supported by fake');
 
   @override
   Future<TorrentStorageResult> moveStorage(
-          String torrentId, String newSavePath) async =>
-      const TorrentStorageResult.failure('not supported by fake');
+    String torrentId,
+    String newSavePath,
+  ) async => const TorrentStorageResult.failure('not supported by fake');
 
   @override
   Future<List<TorrentFileEntry>> listFiles(String torrentId) async =>
@@ -92,7 +94,7 @@ class _NoopBackend implements TorrentBackend {
 
 class _FakeAppModel extends AppModel {
   _FakeAppModel(this.store, this.planStore, this.service)
-      : super(testPlatformServices());
+    : super(testPlatformServices());
 
   final _MemorySubscriptionStore store;
   final _MemoryPlanStore planStore;
@@ -146,38 +148,36 @@ void main() {
     if (withSubscription) {
       final AnimeDownloadSubscription subscription =
           AnimeDownloadSubscription.fromSelection(
-        anilistId: 42,
-        seriesTitle: 'A Rather Long Example Anime Series Title',
-        nyaaQuery: 'Example',
-        category: '1_2',
-        releaseGroup: 'A-Rather-Long-Release-Group',
-        resolution: '1080p',
-        startAfterEpisode: 12,
-        jimakuEntryId: 77,
-        jimakuEntryName: 'Complete season pack',
-        jimakuLanguage: 'ja',
-        now: DateTime.utc(2026, 7, 1),
-      ).copyWith(
-        processedEpisodes: <int>{13},
-        lastCheckedAtMs: DateTime.utc(2026, 7, 23).millisecondsSinceEpoch,
-      );
+            anilistId: 42,
+            seriesTitle: 'A Rather Long Example Anime Series Title',
+            nyaaQuery: 'Example',
+            category: '1_2',
+            releaseGroup: 'A-Rather-Long-Release-Group',
+            resolution: '1080p',
+            startAfterEpisode: 12,
+            jimakuEntryId: 77,
+            jimakuEntryName: 'Complete season pack',
+            jimakuLanguage: 'ja',
+            now: DateTime.utc(2026, 7, 1),
+          ).copyWith(
+            processedEpisodes: <int>{13},
+            lastCheckedAtMs: DateTime.utc(2026, 7, 23).millisecondsSinceEpoch,
+          );
       store.values[subscription.id] = subscription;
     }
     final _MemoryPlanStore planStore = _MemoryPlanStore();
     final AnimeDownloadSubscriptionService service =
         AnimeDownloadSubscriptionService(
-      store: store,
-      planStore: planStore,
-      configProvider: () => const QbConnectionConfig(),
-      backendFactory: (_) => _NoopBackend(),
-      search: (_) async => const [],
-    );
+          store: store,
+          planStore: planStore,
+          configProvider: () => const QbConnectionConfig(),
+          backendFactory: (_) => _NoopBackend(),
+          search: (_) async => const [],
+        );
     final _FakeAppModel appModel = _FakeAppModel(store, planStore, service);
     await tester.pumpWidget(
       ProviderScope(
-        overrides: <Override>[
-          appProvider.overrideWith((ref) => appModel),
-        ],
+        overrides: <Override>[appProvider.overrideWith((ref) => appModel)],
         child: TranslationProvider(
           child: const MaterialApp(
             home: Scaffold(body: DownloadSubscriptionsPanel()),
@@ -189,16 +189,16 @@ void main() {
     return (appModel, service);
   }
 
-  testWidgets('subscription card has no overflow on a narrow phone',
-      (WidgetTester tester) async {
+  testWidgets('subscription card has no overflow on a narrow phone', (
+    WidgetTester tester,
+  ) async {
     final (_FakeAppModel appModel, AnimeDownloadSubscriptionService service) =
-        await pumpPanel(
-      tester,
-      size: const Size(360, 720),
-    );
+        await pumpPanel(tester, size: const Size(360, 720));
 
     expect(
-        find.text('A Rather Long Example Anime Series Title'), findsOneWidget);
+      find.text('A Rather Long Example Anime Series Title'),
+      findsOneWidget,
+    );
     expect(find.textContaining('A-Rather-Long-Release-Group'), findsOneWidget);
     expect(find.textContaining('Complete season pack'), findsOneWidget);
     expect(tester.takeException(), isNull);
@@ -207,30 +207,28 @@ void main() {
     appModel.store.revision.dispose();
   });
 
-  testWidgets('subscription panel remains bounded on desktop',
-      (WidgetTester tester) async {
+  testWidgets('subscription panel remains bounded on desktop', (
+    WidgetTester tester,
+  ) async {
     final (_FakeAppModel appModel, AnimeDownloadSubscriptionService service) =
-        await pumpPanel(
-      tester,
-      size: const Size(1200, 800),
-    );
+        await pumpPanel(tester, size: const Size(1200, 800));
 
     final Finder card = find.byType(FushiCard);
     expect(card, findsWidgets);
-    expect(
-      tester.getSize(card.last).width,
-      lessThanOrEqualTo(760),
-    );
+    expect(tester.getSize(card.last).width, lessThanOrEqualTo(760));
     expect(tester.takeException(), isNull);
 
     service.checking.dispose();
     appModel.store.revision.dispose();
   });
 
-  testWidgets('empty state explains how to create a subscription',
-      (WidgetTester tester) async {
-    final (_FakeAppModel appModel, AnimeDownloadSubscriptionService service) =
-        await pumpPanel(
+  testWidgets('empty state explains how to create a subscription', (
+    WidgetTester tester,
+  ) async {
+    final (
+      _FakeAppModel appModel,
+      AnimeDownloadSubscriptionService service,
+    ) = await pumpPanel(
       tester,
       size: const Size(360, 720),
       withSubscription: false,
@@ -244,43 +242,42 @@ void main() {
   });
 
   testWidgets(
-      'downloads page switches between resources, tasks and subscriptions',
-      (WidgetTester tester) async {
-    final _MemorySubscriptionStore store = _MemorySubscriptionStore();
-    final _MemoryPlanStore planStore = _MemoryPlanStore();
-    final AnimeDownloadSubscriptionService service =
-        AnimeDownloadSubscriptionService(
-      store: store,
-      planStore: planStore,
-      configProvider: () => const QbConnectionConfig(),
-      backendFactory: (_) => _NoopBackend(),
-      search: (_) async => const [],
-    );
-    final _FakeAppModel appModel = _FakeAppModel(store, planStore, service);
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: <Override>[
-          appProvider.overrideWith((ref) => appModel),
-        ],
-        child: TranslationProvider(
-          child: const MaterialApp(home: DownloadsPage()),
+    'downloads page switches between resources, tasks and subscriptions',
+    (WidgetTester tester) async {
+      final _MemorySubscriptionStore store = _MemorySubscriptionStore();
+      final _MemoryPlanStore planStore = _MemoryPlanStore();
+      final AnimeDownloadSubscriptionService service =
+          AnimeDownloadSubscriptionService(
+            store: store,
+            planStore: planStore,
+            configProvider: () => const QbConnectionConfig(),
+            backendFactory: (_) => _NoopBackend(),
+            search: (_) async => const [],
+          );
+      final _FakeAppModel appModel = _FakeAppModel(store, planStore, service);
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: <Override>[appProvider.overrideWith((ref) => appModel)],
+          child: TranslationProvider(
+            child: const MaterialApp(home: DownloadsPage()),
+          ),
         ),
-      ),
-    );
-    await tester.pumpAndSettle();
+      );
+      await tester.pumpAndSettle();
 
-    expect(find.text(t.download_resources_tab), findsOneWidget);
-    await tester.tap(find.text(t.download_tasks_tab));
-    await tester.pumpAndSettle();
-    expect(find.text(t.anime_download_no_tasks), findsOneWidget);
+      expect(find.text(t.download_resources_tab), findsOneWidget);
+      await tester.tap(find.text(t.download_tasks_tab));
+      await tester.pumpAndSettle();
+      expect(find.text(t.anime_download_no_tasks), findsOneWidget);
 
-    await tester.tap(find.text(t.download_subscriptions_tab));
-    await tester.pumpAndSettle();
-    expect(find.text(t.download_subscription_empty_title), findsOneWidget);
-    expect(tester.takeException(), isNull);
+      await tester.tap(find.text(t.download_subscriptions_tab));
+      await tester.pumpAndSettle();
+      expect(find.text(t.download_subscription_empty_title), findsOneWidget);
+      expect(tester.takeException(), isNull);
 
-    service.checking.dispose();
-    store.revision.dispose();
-    await appModel.testDatabase?.close();
-  });
+      service.checking.dispose();
+      store.revision.dispose();
+      await appModel.testDatabase?.close();
+    },
+  );
 }

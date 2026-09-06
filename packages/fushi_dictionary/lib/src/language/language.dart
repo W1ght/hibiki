@@ -143,10 +143,7 @@ abstract class Language {
       start: rawStart.clamp(0, sentenceToReturn.length),
       end: rawEnd.clamp(0, sentenceToReturn.length),
     );
-    return FushiTextSelection(
-      text: sentenceToReturn,
-      range: range,
-    );
+    return FushiTextSelection(text: sentenceToReturn, range: range);
   }
 
   /// Returns a list of sentences for a block of text.
@@ -187,10 +184,7 @@ abstract class Language {
   ///
   /// In the case of English, 'This is a pen.' at index 10 (p), should return
   /// the word 'pen'.
-  String wordFromIndex({
-    required String text,
-    required int index,
-  }) {
+  String wordFromIndex({required String text, required int index}) {
     /// See [indexMaxDistance] above.
     /// If the [indexMaxDistance] is not defined...
     if (indexMaxDistance != null) {
@@ -218,8 +212,9 @@ abstract class Language {
 
         for (int i = 0; i < text.runes.length; i++) {
           if (i >= rangeStart && i < rangeEnd) {
-            final String character =
-                String.fromCharCode(text.runes.elementAt(i));
+            final String character = String.fromCharCode(
+              text.runes.elementAt(i),
+            );
             buffer.write(character);
 
             indexTape.add(i);
@@ -255,10 +250,7 @@ abstract class Language {
   /// is within the range of the first word, with remainder words included.
   /// For a language that is not space-delimited, this is simply the substring
   /// function.
-  String getSearchTermFromIndex({
-    required String text,
-    required int index,
-  }) {
+  String getSearchTermFromIndex({required String text, required int index}) {
     if (isSpaceDelimited) {
       final workingBuffer = StringBuffer();
       final termBuffer = StringBuffer();
@@ -282,9 +274,7 @@ abstract class Language {
   /// from, given a clicked index and full text. For a space-delimited language,
   /// this will return the starting index of a clicked word. Otherwise, this
   /// returns the clicked index itself.
-  TextRange getWordRange({
-    required FushiTextSelection selection,
-  }) {
+  TextRange getWordRange({required FushiTextSelection selection}) {
     final workingBuffer = StringBuffer();
     String selectedWord = '';
     int start = 0;
@@ -317,13 +307,13 @@ abstract class Language {
   }
 
   /// Get preliminary highlight length before a dictionary search.
-  int getGuessHighlightLength({
-    required String searchTerm,
-  }) {
-    final truncated =
-        searchTerm.length > 40 ? searchTerm.substring(0, 40) : searchTerm;
-    final word = textToWords(truncated)
-        .firstWhere((e) => e.trim().isNotEmpty, orElse: () => '');
+  int getGuessHighlightLength({required String searchTerm}) {
+    final truncated = searchTerm.length > 40
+        ? searchTerm.substring(0, 40)
+        : searchTerm;
+    final word = textToWords(
+      truncated,
+    ).firstWhere((e) => e.trim().isNotEmpty, orElse: () => '');
     final length = word.trim().length;
     return length > 0 ? length : 1;
   }
@@ -349,10 +339,7 @@ abstract class Language {
   /// from, given a clicked index and full text. For a space-delimited language,
   /// this will return the starting index of a clicked word. Otherwise, this
   /// returns the clicked index itself.
-  int getStartingIndex({
-    required String text,
-    required int index,
-  }) {
+  int getStartingIndex({required String text, required int index}) {
     if (isSpaceDelimited) {
       final workingBuffer = StringBuffer();
 
@@ -385,15 +372,11 @@ abstract class Language {
       children: [
         Text(
           entry.word,
-          style: Theme.of(context)
-              .textTheme
-              .titleLarge!
-              .copyWith(fontWeight: FontWeight.bold),
+          style: Theme.of(
+            context,
+          ).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold),
         ),
-        Text(
-          entry.reading,
-          style: Theme.of(context).textTheme.titleMedium,
-        ),
+        Text(entry.reading, style: Theme.of(context).textTheme.titleMedium),
       ],
     );
   }
@@ -440,7 +423,7 @@ List<DeinflectionTag> buildDeinflectionTags({
   }
   if (matched != deinflected && deinflected.isNotEmpty) {
     return <DeinflectionTag>[
-      (name: '$matched → $deinflected', description: '')
+      (name: '$matched → $deinflected', description: ''),
     ];
   }
   return const <DeinflectionTag>[];
@@ -488,11 +471,13 @@ List<DeinflectionTag> deinflectionTagsFromExtra(Map<String, dynamic> extra) {
           ),
     ]);
   }
-  return localizeDeinflectionTags(buildDeinflectionTags(
-    matched: (extra['matched'] ?? '').toString(),
-    deinflected: (extra['deinflected'] ?? '').toString(),
-    trace: const <FushiTransformGroup>[],
-  ));
+  return localizeDeinflectionTags(
+    buildDeinflectionTags(
+      matched: (extra['matched'] ?? '').toString(),
+      deinflected: (extra['deinflected'] ?? '').toString(),
+      trace: const <FushiTransformGroup>[],
+    ),
+  );
 }
 
 String buildLookupEntryExtra(FushiLookupResult r, FushiGlossaryEntry g) {
@@ -504,29 +489,32 @@ String buildLookupEntryExtra(FushiLookupResult r, FushiGlossaryEntry g) {
     // 变形链带着语法说明一起随 entry 走。走 extra 的两条弹窗路径（原生弹窗、
     // buildLookupEntriesJson）本来只能看到 matched/deinflected，只好现编一条
     // 「matched → deinflected」且说明恒空——语法说明就是断在这里的。
-    'deinflectionTrace': deinflectionTagsToJson(buildDeinflectionTags(
-      matched: r.matched,
-      deinflected: r.deinflected,
-      trace: r.trace,
-    )),
+    'deinflectionTrace': deinflectionTagsToJson(
+      buildDeinflectionTags(
+        matched: r.matched,
+        deinflected: r.deinflected,
+        trace: r.trace,
+      ),
+    ),
     'frequencies': r.term.frequencies
-        .map((f) => {
-              'dictName': f.dictName,
-              'values': f.frequencies
-                  .map((v) => {
-                        'value': v.value,
-                        'display': v.displayValue,
-                      })
-                  .toList(),
-            })
+        .map(
+          (f) => {
+            'dictName': f.dictName,
+            'values': f.frequencies
+                .map((v) => {'value': v.value, 'display': v.displayValue})
+                .toList(),
+          },
+        )
         .toList(),
     'pitches': r.term.pitches
-        .map((p) => {
-              'dictName': p.dictName,
-              'positions': p.pitchPositions,
-              'patterns': p.patterns,
-              'transcriptions': p.transcriptions,
-            })
+        .map(
+          (p) => {
+            'dictName': p.dictName,
+            'positions': p.pitchPositions,
+            'patterns': p.patterns,
+            'transcriptions': p.transcriptions,
+          },
+        )
         .toList(),
   });
 }
@@ -559,15 +547,19 @@ DictionarySearchResult buildResultFromLookup({
       break outer;
     }
     headwords.add(headword);
-    for (final g
-        in _glossariesInDictionaryOrder(r.term.glossaries, dictionaryOrder)) {
-      entries.add(DictionaryEntry(
-        dictionaryName: g.dictName,
-        word: r.term.expression,
-        reading: r.term.reading,
-        meaning: g.glossary,
-        extra: buildLookupEntryExtra(r, g),
-      ));
+    for (final g in _glossariesInDictionaryOrder(
+      r.term.glossaries,
+      dictionaryOrder,
+    )) {
+      entries.add(
+        DictionaryEntry(
+          dictionaryName: g.dictName,
+          word: r.term.expression,
+          reading: r.term.reading,
+          meaning: g.glossary,
+          extra: buildLookupEntryExtra(r, g),
+        ),
+      );
     }
   }
   return DictionarySearchResult(
@@ -585,8 +577,9 @@ DictionarySearchResult buildResultFromLookup({
 /// 假名词（reading 有的显式给、有的留空）会被拆成两个词头。只归一分组 key，不改
 /// 存储的 display reading（空读音仍无注音）。
 String lookupHeadwordKey(FushiLookupResult r) {
-  final String effectiveReading =
-      r.term.reading.isEmpty ? r.term.expression : r.term.reading;
+  final String effectiveReading = r.term.reading.isEmpty
+      ? r.term.expression
+      : r.term.reading;
   return '${r.term.expression}\n$effectiveReading';
 }
 
@@ -608,14 +601,18 @@ String buildPopupJsonFromLookup({
   final groupPitches = <String, List<FushiPitchEntry>>{};
   final seenFreqs = <String, Set<String>>{};
   final seenPitches = <String, Set<String>>{};
-  final groupGlossaries = <String,
-      List<
+  final groupGlossaries =
+      <
+        String,
+        List<
           ({
             String dictionary,
             String contentJson,
             String defTags,
             String termTags,
-          })>>{};
+          })
+        >
+      >{};
 
   // BUG-1472：与 [buildResultFromLookup] 同一处根因——预算按词头算，不按 glossary
   // 注释行算。这里本来就是按 key 分组的，所以「已有几个词头」= groupKeys.length。
@@ -625,8 +622,10 @@ String buildPopupJsonFromLookup({
     if (!groupExpression.containsKey(key) && groupKeys.length >= maximumTerms) {
       break outer;
     }
-    for (final g
-        in _glossariesInDictionaryOrder(r.term.glossaries, dictionaryOrder)) {
+    for (final g in _glossariesInDictionaryOrder(
+      r.term.glossaries,
+      dictionaryOrder,
+    )) {
       // 被用户关掉的词典在源头就不进 popupJson。此前这步只存在于渲染期的 JS
       // （靠宿主注入 window.hiddenDictionaryNames 驱动），app 内 WebView 注入了、浏览器
       // 扩展走的 HTTP 路径从来不下发它 ⇒ 关掉的词典在扩展里照旧出释义，
@@ -679,8 +678,9 @@ String buildPopupJsonFromLookup({
       }
 
       final String m = g.glossary;
-      final String contentJson =
-          (m.isNotEmpty && (m[0] == '[' || m[0] == '{')) ? m : jsonEncode(m);
+      final String contentJson = (m.isNotEmpty && (m[0] == '[' || m[0] == '{'))
+          ? m
+          : jsonEncode(m);
       groupGlossaries[key]!.add((
         dictionary: g.dictName,
         contentJson: contentJson,
@@ -702,12 +702,19 @@ String buildPopupJsonFromLookup({
     sb.write(jsonEncode(groupMatched[key]));
     sb.write(',"rules":[],"deinflectionTrace":');
     // 弹窗 JSON 是显示路径 → 翻译；持久化的 extra 不翻（BUG-2038）。
-    sb.write(jsonEncode(
-        deinflectionTagsToJson(localizeDeinflectionTags(buildDeinflectionTags(
-      matched: groupMatched[key]!,
-      deinflected: groupDeinflected[key]!,
-      trace: groupTrace[key] ?? const <FushiTransformGroup>[],
-    )))));
+    sb.write(
+      jsonEncode(
+        deinflectionTagsToJson(
+          localizeDeinflectionTags(
+            buildDeinflectionTags(
+              matched: groupMatched[key]!,
+              deinflected: groupDeinflected[key]!,
+              trace: groupTrace[key] ?? const <FushiTransformGroup>[],
+            ),
+          ),
+        ),
+      ),
+    );
     sb.write(',"glossaries":[');
     final gl = groupGlossaries[key]!;
     for (var j = 0; j < gl.length; j++) {
@@ -779,9 +786,9 @@ List<FushiGlossaryEntry> _glossariesInDictionaryOrder(
   };
   final List<({FushiGlossaryEntry glossary, int sourceIndex})> indexed =
       <({FushiGlossaryEntry glossary, int sourceIndex})>[
-    for (int i = 0; i < glossaries.length; i++)
-      (glossary: glossaries[i], sourceIndex: i),
-  ];
+        for (int i = 0; i < glossaries.length; i++)
+          (glossary: glossaries[i], sourceIndex: i),
+      ];
   indexed.sort((a, b) {
     final int byRank = (rank[a.glossary.dictName] ?? dictionaryOrder.length)
         .compareTo(rank[b.glossary.dictName] ?? dictionaryOrder.length);

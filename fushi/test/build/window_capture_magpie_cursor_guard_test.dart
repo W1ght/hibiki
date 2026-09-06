@@ -11,12 +11,15 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  final String capture =
-      File('windows/runner/window_capture.cpp').readAsStringSync();
-  final String header =
-      File('windows/runner/window_capture.h').readAsStringSync();
-  final String flutterWindow =
-      File('windows/runner/flutter_window.cpp').readAsStringSync();
+  final String capture = File(
+    'windows/runner/window_capture.cpp',
+  ).readAsStringSync();
+  final String header = File(
+    'windows/runner/window_capture.h',
+  ).readAsStringSync();
+  final String flutterWindow = File(
+    'windows/runner/flutter_window.cpp',
+  ).readAsStringSync();
 
   test('① Magpie 缩放窗按 Magpie.SrcHWND 属性重定向到源窗口', () {
     expect(
@@ -38,8 +41,9 @@ void main() {
   });
 
   test('① 枚举阶段与捕获绑定阶段都过一次重定向', () {
-    final int enumUse =
-        'ResolveScalingSourceWindow('.allMatches(capture).length;
+    final int enumUse = 'ResolveScalingSourceWindow('
+        .allMatches(capture)
+        .length;
     expect(
       enumUse,
       greaterThanOrEqualTo(3),
@@ -60,7 +64,8 @@ void main() {
     );
     expect(
       capture.contains(
-          'const HRESULT cursor_hr = session2->put_IsCursorCaptureEnabled(false);'),
+        'const HRESULT cursor_hr = session2->put_IsCursorCaptureEnabled(false);',
+      ),
       isTrue,
       reason: 'put_IsCursorCaptureEnabled 的 HRESULT 必须被接住，不得裸调丢弃',
     );
@@ -87,8 +92,9 @@ void main() {
       isTrue,
       reason: 'native 记了但不回传等于没记',
     );
-    final String dartChannel =
-        File('lib/src/mining/window_capture_channel.dart').readAsStringSync();
+    final String dartChannel = File(
+      'lib/src/mining/window_capture_channel.dart',
+    ).readAsStringSync();
     expect(
       dartChannel.contains("diagnostics: m['diagnostics'] as String?"),
       isTrue,

@@ -6,8 +6,9 @@ import 'package:fushi/src/media/manga/aidoku/aidoku_runtime.dart';
 import 'package:fushi/src/media/manga/aidoku/aidoku_source_browse_page.dart';
 
 void main() {
-  testWidgets('uses the source listing and renders the Mihon-shaped grid',
-      (WidgetTester tester) async {
+  testWidgets('uses the source listing and renders the Mihon-shaped grid', (
+    WidgetTester tester,
+  ) async {
     final _BrowseRuntime runtime = _BrowseRuntime();
     final AidokuInstalledPackage package = AidokuInstalledPackage(
       id: 'ja.fixture',
@@ -31,8 +32,10 @@ void main() {
     expect(runtime.searchCalls, 0);
     expect(find.text('Latest fixture manga'), findsOneWidget);
     expect(find.byType(GridView), findsOneWidget);
-    expect(find.byKey(const ValueKey<String>('aidoku_source_search')),
-        findsOneWidget);
+    expect(
+      find.byKey(const ValueKey<String>('aidoku_source_search')),
+      findsOneWidget,
+    );
     final Offset titlePosition = tester.getTopLeft(find.text('Aidoku fixture'));
     final Offset backPosition = tester.getTopLeft(
       find.byKey(const ValueKey<String>('aidoku_source_back')),
@@ -113,34 +116,32 @@ class _BrowseRuntime extends Fake implements AidokuRuntime {
   Future<Map<String, Object?>> getDetails(
     String packagePath,
     Map<String, Object?> manga,
-  ) async =>
+  ) async => <String, Object?>{
+    ...manga,
+    'description': 'Fixture description',
+    'chapters': <Object?>[
       <String, Object?>{
-        ...manga,
-        'description': 'Fixture description',
-        'chapters': <Object?>[
-          <String, Object?>{
-            'key': '/internal/chapter-key/',
-            'title': null,
-            'chapter_number': 13.5,
-            'volume_number': null,
-            'scanlators': <Object?>['Fixture group'],
-            'language': 'ja',
-            'locked': false,
-          },
-        ],
-      };
+        'key': '/internal/chapter-key/',
+        'title': null,
+        'chapter_number': 13.5,
+        'volume_number': null,
+        'scanlators': <Object?>['Fixture group'],
+        'language': 'ja',
+        'locked': false,
+      },
+    ],
+  };
 
   @override
   Future<List<Object?>> getPages(
     String packagePath,
     Map<String, Object?> manga,
     Map<String, Object?> chapter,
-  ) async =>
-      <Object?>[
-        <String, Object?>{
-          'content': <String, Object?>{
-            'Url': <Object?>['https://example.test/page.jpg', null],
-          },
-        },
-      ];
+  ) async => <Object?>[
+    <String, Object?>{
+      'content': <String, Object?>{
+        'Url': <Object?>['https://example.test/page.jpg', null],
+      },
+    },
+  ];
 }

@@ -11,10 +11,10 @@ import 'package:fushi/src/media/video/discovery/video_discovery_provider.dart'
 import 'package:fushi/src/media/video/metadata/video_metadata_models.dart';
 import 'package:fushi/src/pages/implementations/video_discovery_page.dart';
 
-typedef _LoadHandler = Future<ProviderBatchResult<discovery.VideoDiscoveryPage>>
-    Function(
-  discovery.VideoDiscoveryRequest request,
-);
+typedef _LoadHandler =
+    Future<ProviderBatchResult<discovery.VideoDiscoveryPage>> Function(
+      discovery.VideoDiscoveryRequest request,
+    );
 
 class _FakeDiscoveryController implements VideoDiscoveryController {
   _FakeDiscoveryController(this.handler);
@@ -64,11 +64,7 @@ ProviderBatchResult<discovery.VideoDiscoveryPage> _result(
 }) {
   return ProviderBatchResult<discovery.VideoDiscoveryPage>(
     items: <discovery.VideoDiscoveryPage>[
-      discovery.VideoDiscoveryPage(
-        items: items,
-        page: 1,
-        hasMore: hasMore,
-      ),
+      discovery.VideoDiscoveryPage(items: items, page: 1, hasMore: hasMore),
     ],
     failures: failures,
     successfulProviderCount: successfulProviderCount,
@@ -101,28 +97,25 @@ void main() {
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
-    final _FakeDiscoveryController controller = _FakeDiscoveryController(
-      (discovery.VideoDiscoveryRequest request) async {
-        return switch (request.feed) {
-          discovery.VideoDiscoveryFeed.trending =>
-            _result(<discovery.VideoDiscoveryItem>[
-              _item('popular', '热门作品'),
-            ]),
-          discovery.VideoDiscoveryFeed.airing =>
-            _result(<discovery.VideoDiscoveryItem>[
-              _item(
-                'anime',
-                '本季动画',
-                category: discovery.VideoDiscoveryCategory.anime,
-                mediaKind: VideoMetadataMediaKind.tv,
-              ),
-            ]),
-          _ => _result(<discovery.VideoDiscoveryItem>[
-              _item('all', '全部作品条目'),
-            ]),
-        };
-      },
-    );
+    final _FakeDiscoveryController controller = _FakeDiscoveryController((
+      discovery.VideoDiscoveryRequest request,
+    ) async {
+      return switch (request.feed) {
+        discovery.VideoDiscoveryFeed.trending => _result(
+          <discovery.VideoDiscoveryItem>[_item('popular', '热门作品')],
+        ),
+        discovery.VideoDiscoveryFeed.airing =>
+          _result(<discovery.VideoDiscoveryItem>[
+            _item(
+              'anime',
+              '本季动画',
+              category: discovery.VideoDiscoveryCategory.anime,
+              mediaKind: VideoMetadataMediaKind.tv,
+            ),
+          ]),
+        _ => _result(<discovery.VideoDiscoveryItem>[_item('all', '全部作品条目')]),
+      };
+    });
 
     await tester.pumpWidget(_harness(controller));
     await tester.pumpAndSettle();
@@ -154,17 +147,17 @@ void main() {
         Completer<ProviderBatchResult<discovery.VideoDiscoveryPage>>();
     final Completer<ProviderBatchResult<discovery.VideoDiscoveryPage>> fresh =
         Completer<ProviderBatchResult<discovery.VideoDiscoveryPage>>();
-    final _FakeDiscoveryController controller = _FakeDiscoveryController(
-      (discovery.VideoDiscoveryRequest request) {
-        return switch (request.query) {
-          'old' => old.future,
-          'new' => fresh.future,
-          _ => Future<ProviderBatchResult<discovery.VideoDiscoveryPage>>.value(
-              _result(const <discovery.VideoDiscoveryItem>[]),
-            ),
-        };
-      },
-    );
+    final _FakeDiscoveryController controller = _FakeDiscoveryController((
+      discovery.VideoDiscoveryRequest request,
+    ) {
+      return switch (request.query) {
+        'old' => old.future,
+        'new' => fresh.future,
+        _ => Future<ProviderBatchResult<discovery.VideoDiscoveryPage>>.value(
+          _result(const <discovery.VideoDiscoveryItem>[]),
+        ),
+      };
+    });
 
     await tester.pumpWidget(_harness(controller));
     await tester.pumpAndSettle();
@@ -186,15 +179,15 @@ void main() {
     );
 
     await tester.enterText(editable, 'new');
-    old.complete(_result(<discovery.VideoDiscoveryItem>[
-      _item('old', '过期请求结果'),
-    ]));
+    old.complete(
+      _result(<discovery.VideoDiscoveryItem>[_item('old', '过期请求结果')]),
+    );
     await tester.pump(const Duration(milliseconds: 349));
     expect(find.text('过期请求结果'), findsNothing);
     await tester.pump(const Duration(milliseconds: 1));
-    fresh.complete(_result(<discovery.VideoDiscoveryItem>[
-      _item('new', '新请求结果'),
-    ]));
+    fresh.complete(
+      _result(<discovery.VideoDiscoveryItem>[_item('new', '新请求结果')]),
+    );
     await tester.pump();
     await tester.pump();
     expect(find.text('新请求结果'), findsOneWidget);
@@ -205,9 +198,8 @@ void main() {
 
   testWidgets('筛选态隐藏推荐横栏并显示搜索结果网格', (WidgetTester tester) async {
     final _FakeDiscoveryController controller = _FakeDiscoveryController(
-      (_) async => _result(<discovery.VideoDiscoveryItem>[
-        _item('result', '筛选结果'),
-      ]),
+      (_) async =>
+          _result(<discovery.VideoDiscoveryItem>[_item('result', '筛选结果')]),
     );
     await tester.pumpWidget(_harness(controller));
     await tester.pumpAndSettle();
@@ -238,9 +230,8 @@ void main() {
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
     final _FakeDiscoveryController controller = _FakeDiscoveryController(
-      (_) async => _result(<discovery.VideoDiscoveryItem>[
-        _item('compact', '紧凑布局作品'),
-      ]),
+      (_) async =>
+          _result(<discovery.VideoDiscoveryItem>[_item('compact', '紧凑布局作品')]),
     );
 
     await tester.pumpWidget(_harness(controller));
@@ -268,9 +259,7 @@ void main() {
 
     final double expectedHeight = tester
         .getSize(
-          find.byKey(
-            const ValueKey<String>('video-discovery-filter-year'),
-          ),
+          find.byKey(const ValueKey<String>('video-discovery-filter-year')),
         )
         .height;
     for (final String key in <String>[
@@ -287,17 +276,18 @@ void main() {
 
   testWidgets('年份与题材菜单不依赖首批趋势卡片', (WidgetTester tester) async {
     final _FakeDiscoveryController controller = _FakeDiscoveryController(
-      (_) async => _result(<discovery.VideoDiscoveryItem>[
-        _item('current', '首批作品'),
-      ]),
+      (_) async =>
+          _result(<discovery.VideoDiscoveryItem>[_item('current', '首批作品')]),
     );
     await tester.pumpWidget(_harness(controller));
     await tester.pumpAndSettle();
 
-    final Finder yearFinder =
-        find.byKey(const ValueKey<String>('video-discovery-filter-year'));
-    final PopupMenuButton<int> yearMenu =
-        tester.widget<PopupMenuButton<int>>(yearFinder);
+    final Finder yearFinder = find.byKey(
+      const ValueKey<String>('video-discovery-filter-year'),
+    );
+    final PopupMenuButton<int> yearMenu = tester.widget<PopupMenuButton<int>>(
+      yearFinder,
+    );
     final Iterable<int?> yearValues = yearMenu
         .itemBuilder(tester.element(yearFinder))
         .whereType<PopupMenuItem<int>>()
@@ -307,16 +297,18 @@ void main() {
     await tester.pumpAndSettle();
     expect(controller.requests.last.year, 1999);
 
-    final Finder genreFinder =
-        find.byKey(const ValueKey<String>('video-discovery-filter-genre'));
-    final PopupMenuButton<String> genreMenu =
-        tester.widget<PopupMenuButton<String>>(genreFinder);
-    final List<PopupMenuEntry<String>> genreEntries =
-        genreMenu.itemBuilder(tester.element(genreFinder));
+    final Finder genreFinder = find.byKey(
+      const ValueKey<String>('video-discovery-filter-genre'),
+    );
+    final PopupMenuButton<String> genreMenu = tester
+        .widget<PopupMenuButton<String>>(genreFinder);
+    final List<PopupMenuEntry<String>> genreEntries = genreMenu.itemBuilder(
+      tester.element(genreFinder),
+    );
     expect(
-      genreEntries
-          .whereType<PopupMenuItem<String>>()
-          .map((entry) => entry.value),
+      genreEntries.whereType<PopupMenuItem<String>>().map(
+        (entry) => entry.value,
+      ),
       contains('Mecha'),
     );
   });
@@ -340,10 +332,11 @@ void main() {
     await tester.pumpWidget(_harness(controller));
     await tester.pumpAndSettle();
 
-    final Finder genreFinder =
-        find.byKey(const ValueKey<String>('video-discovery-filter-genre'));
-    final PopupMenuButton<String> genreMenu =
-        tester.widget<PopupMenuButton<String>>(genreFinder);
+    final Finder genreFinder = find.byKey(
+      const ValueKey<String>('video-discovery-filter-genre'),
+    );
+    final PopupMenuButton<String> genreMenu = tester
+        .widget<PopupMenuButton<String>>(genreFinder);
     final Iterable<String?> values = genreMenu
         .itemBuilder(tester.element(genreFinder))
         .whereType<PopupMenuItem<String>>()
@@ -369,8 +362,9 @@ void main() {
     await tester.pumpWidget(_harness(controller));
     await tester.pump();
 
-    final PortraitCoverImage cover = tester
-        .widget<PortraitCoverImage>(find.byType(PortraitCoverImage).first);
+    final PortraitCoverImage cover = tester.widget<PortraitCoverImage>(
+      find.byType(PortraitCoverImage).first,
+    );
     expect(cover.image, isA<CachedNetworkImageProvider>());
   });
 
@@ -409,9 +403,8 @@ void main() {
       retryable: true,
     );
     final _FakeDiscoveryController controller = _FakeDiscoveryController(
-      (_) async => ProviderBatchResult<discovery.VideoDiscoveryPage>.failure(
-        failure,
-      ),
+      (_) async =>
+          ProviderBatchResult<discovery.VideoDiscoveryPage>.failure(failure),
     );
 
     await tester.pumpWidget(_harness(controller));

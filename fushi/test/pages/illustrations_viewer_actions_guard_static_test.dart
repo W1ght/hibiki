@@ -41,16 +41,18 @@ void main() {
     expect(source, isNot(contains('Clipboard.setData')));
   });
 
-  test('illustration gallery wires right-click (win) and long-press (mobile)',
-      () {
-    expect(source, contains('isWindowsPlatform'));
-    expect(source, contains('ContextMenuTrigger('));
-    expect(source, contains('_showImageContextMenu(position)'));
-    expect(source, contains('onLongPress'));
-    // 顶栏也提供可发现入口（复制 / 分享按钮）。
-    expect(source, contains('Icons.copy_outlined'));
-    expect(source, contains('Icons.share_outlined'));
-  });
+  test(
+    'illustration gallery wires right-click (win) and long-press (mobile)',
+    () {
+      expect(source, contains('isWindowsPlatform'));
+      expect(source, contains('ContextMenuTrigger('));
+      expect(source, contains('_showImageContextMenu(position)'));
+      expect(source, contains('onLongPress'));
+      // 顶栏也提供可发现入口（复制 / 分享按钮）。
+      expect(source, contains('Icons.copy_outlined'));
+      expect(source, contains('Icons.share_outlined'));
+    },
+  );
   test('illustration gallery wires keyboard ESC + arrow paging (BUG-404)', () {
     // 查看器自己持有键盘处理，不依赖整页 PageRoute 下不稳定的全局
     // `_handleGlobalEscape`：ESC 走 Navigator.maybePop（本页永远可退），

@@ -21,8 +21,10 @@ void main() {
   const double bottomReserve = kVideoControlsBottomReserve; // 56
   const double topReserve = 60;
   // 片源真值：\pos(461,672) 在 1280x720 画布 → 归一后落到 1080p 显示区。
-  const Offset opCharPos =
-      Offset(461 / 1280 * 1920, 672 / 720 * 1080); // dy=1008
+  const Offset opCharPos = Offset(
+    461 / 1280 * 1920,
+    672 / 720 * 1080,
+  ); // dy=1008
   // OP_JP Fontsize 38（720 画布）→ 1080p 上约 57px 高的单字盒。
   const Size charBox = Size(57, 57);
   // \an7 = 左上锚点。
@@ -37,17 +39,16 @@ void main() {
     double dodgeProgress = 1,
     double top = topReserve,
     double bottom = bottomReserve,
-  }) =>
-      resolveAbsoluteCueOffset(
-        pos: pos,
-        container: container,
-        child: child,
-        anchorFx: anchorFx,
-        anchorFy: anchorFy,
-        topReserve: top,
-        bottomReserve: bottom,
-        dodgeProgress: dodgeProgress,
-      );
+  }) => resolveAbsoluteCueOffset(
+    pos: pos,
+    container: container,
+    child: child,
+    anchorFx: anchorFx,
+    anchorFy: anchorFy,
+    topReserve: top,
+    bottomReserve: bottom,
+    dodgeProgress: dodgeProgress,
+  );
 
   group('\\pos 绝对定位盒的 chrome 避让（BUG-1332）', () {
     test('控制条隐藏时逐像素等于作者 \\pos（不改变既有外观）', () {
@@ -59,17 +60,22 @@ void main() {
     test('控制条可见时 OP 逐字歌词被抬到恰骑进度条上缘（用户报的原始失败路径）', () {
       final Offset o = resolve();
       // 作者位盒底 1008+57=1065 > 可用带底 1080-56=1024 → 上抬 41px。
-      expect(o.dy + charBox.height,
-          closeTo(container.height - bottomReserve, 0.01),
-          reason: '盒底应恰骑控制条上缘，既不被压住也不飞');
+      expect(
+        o.dy + charBox.height,
+        closeTo(container.height - bottomReserve, 0.01),
+        reason: '盒底应恰骑控制条上缘，既不被压住也不飞',
+      );
       expect(o.dy, lessThan(1008), reason: '必须是上抬');
     });
 
     test('取下限而非加法：盒底没探进控制条带的 \\pos 字幕坐标一动不动', () {
       // 画面中部的招牌/特效：盒底 600+57 远在 1024 之上。
       final Offset o = resolve(pos: const Offset(300, 600));
-      expect(o.dy, closeTo(600, 0.01),
-          reason: '加法叠加会把它凭空多抬一个 reserve（TODO-161 顶飞回归）');
+      expect(
+        o.dy,
+        closeTo(600, 0.01),
+        reason: '加法叠加会把它凭空多抬一个 reserve（TODO-161 顶飞回归）',
+      );
     });
 
     test('避让只上抬、绝不把字幕往下拽', () {
@@ -80,8 +86,11 @@ void main() {
 
     test('顶部 chrome 同契约：只下压到顶栏下缘，且不把低位盒往上顶', () {
       final Offset o = resolve(pos: const Offset(300, 5));
-      expect(o.dy, closeTo(topReserve, 0.01),
-          reason: '盒顶探进顶栏 → 压到其下缘（BUG-1069 同契约）');
+      expect(
+        o.dy,
+        closeTo(topReserve, 0.01),
+        reason: '盒顶探进顶栏 → 压到其下缘（BUG-1069 同契约）',
+      );
       final Offset low = resolve(pos: const Offset(300, 500));
       expect(low.dy, closeTo(500, 0.01), reason: '顶栏避让不得把画面中部的盒往上顶');
     });
@@ -101,8 +110,11 @@ void main() {
         anchorFy: 1,
         child: const Size(700, 57),
       );
-      expect(o.dx, closeTo(10 / 1280 * 1920 - 350, 0.01),
-          reason: 'x 必须原样透传（含负值）；钳到屏内会把竖排字体未支持这个真 bug 盖住');
+      expect(
+        o.dx,
+        closeTo(10 / 1280 * 1920 - 350, 0.01),
+        reason: 'x 必须原样透传（含负值）；钳到屏内会把竖排字体未支持这个真 bug 盖住',
+      );
     });
 
     test('可用带比字幕盒还矮时顶部优先，结果确定不抖', () {
@@ -128,8 +140,9 @@ void main() {
   });
 
   group('源码守卫：避让契约不得随定位分支消失', () {
-    final String src = File('lib/src/media/video/video_subtitle_overlay.dart')
-        .readAsStringSync();
+    final String src = File(
+      'lib/src/media/video/video_subtitle_overlay.dart',
+    ).readAsStringSync();
 
     test('\\pos 分支不得退回裸 Positioned（那正是 BUG-1332 的形状）', () {
       final int branch = src.indexOf('final Offset? posScreen = _posScreen(');
@@ -137,10 +150,16 @@ void main() {
       final int branchEnd = src.indexOf('    // 无 \\pos：', branch);
       expect(branchEnd, greaterThan(branch));
       final String body = src.substring(branch, branchEnd);
-      expect(body, contains('_absolutePositioned('),
-          reason: '\\pos 分支必须走带避让的定位盒');
-      expect(body, isNot(contains('FractionalTranslation')),
-          reason: 'FractionalTranslation 在布局前定位、拿不到子盒尺寸，无法判断是否探进控制条');
+      expect(
+        body,
+        contains('_absolutePositioned('),
+        reason: '\\pos 分支必须走带避让的定位盒',
+      );
+      expect(
+        body,
+        isNot(contains('FractionalTranslation')),
+        reason: 'FractionalTranslation 在布局前定位、拿不到子盒尺寸，无法判断是否探进控制条',
+      );
     });
 
     test('绝对定位避让必须取下限（min/max），不得写成 reserve 加法', () {
@@ -151,12 +170,21 @@ void main() {
       final int fnEnd = src.indexOf('class _AbsoluteCueLayoutDelegate', fn);
       expect(fnEnd, greaterThan(fn));
       final String body = src.substring(fn, fnEnd);
-      expect(body, contains('math.min(dodgedY, bandBottom - child.height)'),
-          reason: '底部避让取下限：盒底骑控制条上缘');
-      expect(body, contains('math.max(dodgedY, topReserve)'),
-          reason: '顶部避让取下限（对称）');
-      expect(body, isNot(contains('+ bottomReserve')),
-          reason: '避让不能写成加法叠加（TODO-161 顶飞回归）');
+      expect(
+        body,
+        contains('math.min(dodgedY, bandBottom - child.height)'),
+        reason: '底部避让取下限：盒底骑控制条上缘',
+      );
+      expect(
+        body,
+        contains('math.max(dodgedY, topReserve)'),
+        reason: '顶部避让取下限（对称）',
+      );
+      expect(
+        body,
+        isNot(contains('+ bottomReserve')),
+        reason: '避让不能写成加法叠加（TODO-161 顶飞回归）',
+      );
     });
   });
 }

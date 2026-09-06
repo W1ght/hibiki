@@ -81,8 +81,9 @@ class SrtParser {
     int audioFileIndex = 0,
   }) {
     // 移除 UTF-8 BOM
-    final String stripped =
-        content.startsWith('\uFEFF') ? content.substring(1) : content;
+    final String stripped = content.startsWith('\uFEFF')
+        ? content.substring(1)
+        : content;
 
     // 统一换行符，按空行分割 block
     final List<String> blocks = stripped
@@ -94,8 +95,10 @@ class SrtParser {
     int sentenceIndex = 0;
 
     for (final String block in blocks) {
-      final List<String> lines =
-          block.split('\n').map((l) => l.trim()).toList();
+      final List<String> lines = block
+          .split('\n')
+          .map((l) => l.trim())
+          .toList();
 
       // block 至少需要：序号行 + 时间行 + 文本行
       if (lines.length < 3) {
@@ -115,8 +118,10 @@ class SrtParser {
 
       // 时间行之后的所有行合并为文本（多行字幕 → 空格连接），并剥离 HTML 标签
       final int timeLineIndex = lines.indexOf(timeLine);
-      final String rawText =
-          lines.skip(timeLineIndex + 1).where((l) => l.isNotEmpty).join(' ');
+      final String rawText = lines
+          .skip(timeLineIndex + 1)
+          .where((l) => l.isNotEmpty)
+          .join(' ');
       // 先剥 HTML 标签（`<i>` / `<b>` / `<font>` 等，共享 [stripHtmlTags]），
       // 再交 markup 解析 ASS override 块（两者正交）。
       final SubtitleMarkup markup = parseSubtitleMarkup(stripHtmlTags(rawText));

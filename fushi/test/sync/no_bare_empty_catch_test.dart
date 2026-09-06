@@ -11,15 +11,19 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   test('no bare empty catch blocks in lib/src/sync', () {
     final Directory dir = Directory('lib/src/sync');
-    expect(dir.existsSync(), isTrue,
-        reason: 'run from the fushi/ package root');
+    expect(
+      dir.existsSync(),
+      isTrue,
+      reason: 'run from the fushi/ package root',
+    );
 
     // Matches an empty (whitespace-only) catch body in either form:
     //   `catch (...) {}` / `catch (...) { }` / `catch (...) {\n}`
     //   `on SomeType {}` (parenthesis-less typed catch, also swallows silently)
     // A `{/* reason */}` body does NOT match.
-    final RegExp bareCatch =
-        RegExp(r'(?:catch\s*\([^)]*\)|on\s+[\w.<>]+)\s*\{\s*\}');
+    final RegExp bareCatch = RegExp(
+      r'(?:catch\s*\([^)]*\)|on\s+[\w.<>]+)\s*\{\s*\}',
+    );
     final List<String> offenders = <String>[];
 
     for (final FileSystemEntity entity in dir.listSync(recursive: true)) {
@@ -35,7 +39,8 @@ void main() {
     expect(
       offenders,
       isEmpty,
-      reason: 'Bare empty catch blocks swallow errors silently. Log them '
+      reason:
+          'Bare empty catch blocks swallow errors silently. Log them '
           '(ErrorLogService/debugPrint), rethrow, or document the best-effort '
           'intent with a comment inside the braces. Offenders:\n'
           '${offenders.join('\n')}',

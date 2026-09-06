@@ -10,9 +10,11 @@ import 'package:fushi/src/asr/asr_fbank.dart';
 void main() {
   late Map<String, Object?> golden;
   setUpAll(() {
-    golden = jsonDecode(
-      File('test/asr/fixtures/fbank_golden.json').readAsStringSync(),
-    ) as Map<String, Object?>;
+    golden =
+        jsonDecode(
+              File('test/asr/fixtures/fbank_golden.json').readAsStringSync(),
+            )
+            as Map<String, Object?>;
   });
 
   group('AsrFbank.frameCount', () {
@@ -56,7 +58,8 @@ void main() {
       expect(
         maxDiff,
         lessThan(1e-3),
-        reason: '最大偏差 $maxDiff 在帧 ${worst ~/ 80} bin ${worst % 80}：'
+        reason:
+            '最大偏差 $maxDiff 在帧 ${worst ~/ 80} bin ${worst % 80}：'
             'dart=${actual[worst]} knf=${expected[worst]}',
       );
     });

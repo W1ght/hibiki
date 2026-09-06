@@ -64,14 +64,16 @@ class _AidokuSourceBrowsePageState extends State<AidokuSourceBrowsePage> {
 
   Future<void> _initialise() async {
     try {
-      final AidokuPackageInspection inspection =
-          await _runtime.inspect(widget.package.packagePath);
+      final AidokuPackageInspection inspection = await _runtime.inspect(
+        widget.package.packagePath,
+      );
       if (!mounted) return;
       _listings = inspection.listings;
       _sourceBaseUrl = (inspection.sourceInfo['urls'] as List<Object?>?)
           ?.map((Object? value) => value.toString())
           .where(
-              (String value) => Uri.tryParse(value)?.isScheme('https') == true)
+            (String value) => Uri.tryParse(value)?.isScheme('https') == true,
+          )
           .firstOrNull;
       _listing = _listings.firstOrNull;
       _searching = _listing == null;
@@ -109,28 +111,34 @@ class _AidokuSourceBrowsePageState extends State<AidokuSourceBrowsePage> {
               listing,
               page: requestedPage,
             );
-      final List<Map<String, Object?>> entries = (result['entries']
-                  as List<Object?>? ??
-              const <Object?>[])
-          .whereType<Map<Object?, Object?>>()
-          .map((Map<Object?, Object?> value) => value.cast<String, Object?>())
-          .where((Map<String, Object?> value) =>
-              (value['key']?.toString().isNotEmpty ?? false))
-          .toList(growable: false);
+      final List<Map<String, Object?>> entries =
+          (result['entries'] as List<Object?>? ?? const <Object?>[])
+              .whereType<Map<Object?, Object?>>()
+              .map(
+                (Map<Object?, Object?> value) => value.cast<String, Object?>(),
+              )
+              .where(
+                (Map<String, Object?> value) =>
+                    (value['key']?.toString().isNotEmpty ?? false),
+              )
+              .toList(growable: false);
       if (!mounted || generation != _generation) return;
       setState(() {
-        final List<Map<String, Object?>> previous =
-            reset ? const <Map<String, Object?>>[] : _items;
+        final List<Map<String, Object?>> previous = reset
+            ? const <Map<String, Object?>>[]
+            : _items;
         final Set<String> seen = previous
             .map((Map<String, Object?> item) => item['key'].toString())
             .toSet();
         final List<Map<String, Object?>> additions = entries
             .where(
-                (Map<String, Object?> item) => seen.add(item['key'].toString()))
+              (Map<String, Object?> item) => seen.add(item['key'].toString()),
+            )
             .toList(growable: false);
         _items = <Map<String, Object?>>[...previous, ...additions];
         _page = requestedPage;
-        _hasNextPage = result['has_next_page'] == true &&
+        _hasNextPage =
+            result['has_next_page'] == true &&
             entries.isNotEmpty &&
             (reset || additions.isNotEmpty);
         _loading = false;
@@ -174,50 +182,46 @@ class _AidokuSourceBrowsePageState extends State<AidokuSourceBrowsePage> {
 
   @override
   Widget build(BuildContext context) => FushiPageScaffold(
-        title: widget.package.name,
-        automaticallyImplyLeading: false,
-        headerCompact: true,
-        leading: BackButton(
-          key: const ValueKey<String>('aidoku_source_back'),
-          onPressed: () => Navigator.of(context).maybePop(),
-        ),
-        actions: <Widget>[
-          if (_listings.isNotEmpty)
-            DropdownButton<AidokuListing>(
-              key: const ValueKey<String>('aidoku_source_listing'),
-              value: _searching ? null : _listing,
-              hint: Text(t.mihon_source_search),
-              items: <DropdownMenuItem<AidokuListing>>[
-                for (final AidokuListing listing in _listings)
-                  DropdownMenuItem<AidokuListing>(
-                    value: listing,
-                    child: Text(listing.name),
-                  ),
-              ],
-              onChanged: (AidokuListing? value) {
-                if (value != null) _selectListing(value);
-              },
-            ),
-        ],
-        headerBottom: Padding(
-          padding: const EdgeInsets.only(top: 8),
-          child: TextField(
-            key: const ValueKey<String>('aidoku_source_search'),
-            controller: _searchController,
-            textInputAction: TextInputAction.search,
-            decoration: InputDecoration(
-              hintText: t.mihon_source_search,
-              prefixIcon: const Icon(Icons.search),
-            ),
-            onSubmitted: (_) => _search(),
-          ),
-        ),
-        body: Column(
-          children: <Widget>[
-            Expanded(child: _buildResults()),
+    title: widget.package.name,
+    automaticallyImplyLeading: false,
+    headerCompact: true,
+    leading: BackButton(
+      key: const ValueKey<String>('aidoku_source_back'),
+      onPressed: () => Navigator.of(context).maybePop(),
+    ),
+    actions: <Widget>[
+      if (_listings.isNotEmpty)
+        DropdownButton<AidokuListing>(
+          key: const ValueKey<String>('aidoku_source_listing'),
+          value: _searching ? null : _listing,
+          hint: Text(t.mihon_source_search),
+          items: <DropdownMenuItem<AidokuListing>>[
+            for (final AidokuListing listing in _listings)
+              DropdownMenuItem<AidokuListing>(
+                value: listing,
+                child: Text(listing.name),
+              ),
           ],
+          onChanged: (AidokuListing? value) {
+            if (value != null) _selectListing(value);
+          },
         ),
-      );
+    ],
+    headerBottom: Padding(
+      padding: const EdgeInsets.only(top: 8),
+      child: TextField(
+        key: const ValueKey<String>('aidoku_source_search'),
+        controller: _searchController,
+        textInputAction: TextInputAction.search,
+        decoration: InputDecoration(
+          hintText: t.mihon_source_search,
+          prefixIcon: const Icon(Icons.search),
+        ),
+        onSubmitted: (_) => _search(),
+      ),
+    ),
+    body: Column(children: <Widget>[Expanded(child: _buildResults())]),
+  );
 
   Widget _buildResults() {
     if (_loading && _items.isEmpty) {
@@ -322,10 +326,7 @@ class AidokuMangaDetailPage extends ConsumerWidget {
     return MangaSeriesPage(
       target: SourceMangaSeriesTarget(
         // 包与 runtime 都已在手：预置进去，别让作品页再去扫一遍已安装包列表。
-        adapter: AidokuLibraryAdapter(
-          runtime: runtime,
-          presetPackage: package,
-        ),
+        adapter: AidokuLibraryAdapter(runtime: runtime, presetPackage: package),
         // 刻意不走 AppModel.onlineMangaLibraryService：那条分派恒用
         // AidokuRuntimeFactory.create()，会把这里注入的 runtime（测试替身、
         // 或浏览页已经建好的那一份）丢掉。拿不到 AppModel 时留空——展示照旧，
@@ -399,8 +400,10 @@ class _AidokuChapterReaderPageState extends State<_AidokuChapterReaderPage> {
       );
       final List<AidokuImagePage> pages = result
           .whereType<Map<Object?, Object?>>()
-          .map((Map<Object?, Object?> value) =>
-              AidokuImagePage.fromJson(value.cast<String, Object?>()))
+          .map(
+            (Map<Object?, Object?> value) =>
+                AidokuImagePage.fromJson(value.cast<String, Object?>()),
+          )
           .toList(growable: false);
       if (pages.isEmpty) {
         throw const AidokuRuntimeException(
@@ -487,7 +490,6 @@ String aidokuChapterDisplayTitle(Map<String, Object?> chapter) {
   if (volume.isNotEmpty) return 'Vol. $volume';
   return chapter['key']?.toString() ?? '';
 }
-
 
 String _aidokuNumber(Object? value) {
   if (value is! num) return '';

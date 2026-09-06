@@ -11,21 +11,25 @@ import '../helpers/source_guard.dart';
 /// 无法在 headless widget test 里 pump（同 macos_shell_static_test 的理由），故
 /// 按仓库 `*_static_test` 惯例断言源码级不变式；活的行为由 Mac 真机验收截图确认。
 void main() {
-  final String nav =
-      File('lib/src/shortcuts/global_navigation.dart').readAsStringSync();
+  final String nav = File(
+    'lib/src/shortcuts/global_navigation.dart',
+  ).readAsStringSync();
   final String main = File('lib/main.dart').readAsStringSync();
-  final String home =
-      File('lib/src/pages/implementations/home_page.dart').readAsStringSync();
-  final String appModel =
-      File('lib/src/models/app_model.dart').readAsStringSync();
+  final String home = File(
+    'lib/src/pages/implementations/home_page.dart',
+  ).readAsStringSync();
+  final String appModel = File(
+    'lib/src/models/app_model.dart',
+  ).readAsStringSync();
   final String reader = File(
     'lib/src/pages/implementations/reader_fushi_page.dart',
   ).readAsStringSync();
   final String readerChrome = File(
     'lib/src/pages/implementations/reader_fushi/chrome.part.dart',
   ).readAsStringSync();
-  final String fullscreenState =
-      File('lib/src/platform/macos_fullscreen_state.dart').readAsStringSync();
+  final String fullscreenState = File(
+    'lib/src/platform/macos_fullscreen_state.dart',
+  ).readAsStringSync();
 
   test('macOS fullscreen toggles through the single NSWindow owner', () {
     // 根因：window_manager.setFullScreen 与 macos_window_utils（NSWindow.delegate
@@ -60,24 +64,37 @@ void main() {
   });
 
   test(
-      'macOS root sidebar is driven by mediaOpenNotifier, not stale isMediaOpen',
-      () {
-    // 根因：openMedia/closeMedia 改 _currentMediaSource 却不 notifyListeners，
-    // 退出阅读器后 MaterialApp.builder 不重跑 → sidebar 卡在上一次求值的 null
-    // （永久消失 → 设置 tab 无 sidebar 出口 → 困死）。改由可靠通知源驱动。
-    expect(main, contains('appModel.mediaOpenNotifier'),
-        reason: 'sidebar visibility must listen to the reliable notifier.');
-    expect(main, contains('ValueListenableBuilder<bool>'));
-    expect(main, isNot(contains('sidebar: appModel.isMediaOpen')),
-        reason: 'sidebar must NOT read the un-notified isMediaOpen directly.');
-  });
+    'macOS root sidebar is driven by mediaOpenNotifier, not stale isMediaOpen',
+    () {
+      // 根因：openMedia/closeMedia 改 _currentMediaSource 却不 notifyListeners，
+      // 退出阅读器后 MaterialApp.builder 不重跑 → sidebar 卡在上一次求值的 null
+      // （永久消失 → 设置 tab 无 sidebar 出口 → 困死）。改由可靠通知源驱动。
+      expect(
+        main,
+        contains('appModel.mediaOpenNotifier'),
+        reason: 'sidebar visibility must listen to the reliable notifier.',
+      );
+      expect(main, contains('ValueListenableBuilder<bool>'));
+      expect(
+        main,
+        isNot(contains('sidebar: appModel.isMediaOpen')),
+        reason: 'sidebar must NOT read the un-notified isMediaOpen directly.',
+      );
+    },
+  );
 
   test('openMedia/closeMedia keep mediaOpenNotifier in sync', () {
     expect(appModel, contains('final ValueNotifier<bool> mediaOpenNotifier'));
-    expect(appModel, contains('mediaOpenNotifier.value = true'),
-        reason: 'openMedia must flag media open.');
-    expect(appModel, contains('mediaOpenNotifier.value = false'),
-        reason: 'closeMedia must flag media closed (restores sidebar).');
+    expect(
+      appModel,
+      contains('mediaOpenNotifier.value = true'),
+      reason: 'openMedia must flag media open.',
+    );
+    expect(
+      appModel,
+      contains('mediaOpenNotifier.value = false'),
+      reason: 'closeMedia must flag media closed (restores sidebar).',
+    );
     expect(appModel, contains('mediaOpenNotifier.dispose()'));
   });
 
@@ -87,49 +104,83 @@ void main() {
     expect(layoutStart, isNonNegative);
     expect(layoutEnd, greaterThan(layoutStart));
     final String body = home.substring(layoutStart, layoutEnd);
-    expect(body, contains('HomeTab.settings'),
-        reason: 'settings tab needs its own back affordance.');
-    expect(body, contains('MacosBackButton'),
-        reason: 'settings tab must expose a back button independent of the '
-            'sidebar so it can never be trapped.');
-    expect(body, contains('_selectTab(_previousVisibleTab)'),
-        reason: 'back returns to the tab the user came from.');
+    expect(
+      body,
+      contains('HomeTab.settings'),
+      reason: 'settings tab needs its own back affordance.',
+    );
+    expect(
+      body,
+      contains('MacosBackButton'),
+      reason:
+          'settings tab must expose a back button independent of the '
+          'sidebar so it can never be trapped.',
+    );
+    expect(
+      body,
+      contains('_selectTab(_previousVisibleTab)'),
+      reason: 'back returns to the tab the user came from.',
+    );
     // 真正的不变量是「回不去就困死」，不是某个字面量。
     // 「功能模块」开关可以把 _previousTab 指向的 tab 藏掉，而 _selectTab
     // 对隐藏 tab 直接 return——那时返回键会变成空点击，用户困在设置页。
     // 所以返回目标必须经过一层可见性回落，而不能裸用 _previousTab。
-    expect(home, contains('HomeTab get _previousVisibleTab'),
-        reason: 'back target must go through a visibility fallback.');
+    expect(
+      home,
+      contains('HomeTab get _previousVisibleTab'),
+      reason: 'back target must go through a visibility fallback.',
+    );
     final int getterStart = home.indexOf('HomeTab get _previousVisibleTab');
     final String getterBody = home.substring(getterStart, getterStart + 200);
-    expect(getterBody, contains('_activeTabs().contains(_previousTab)'),
-        reason: 'the fallback must test the previous tab against the active '
-            'tab set, otherwise a hidden module traps the user in settings.');
-    expect(getterBody, contains('HomeTab.home'),
-        reason: 'when the previous tab is hidden, fall back to a tab that is '
-            'always present.');
-    expect(body, isNot(contains('_selectTab(_previousTab)')),
-        reason: 'the macOS back button must not bypass the visibility '
-            'fallback.');
+    expect(
+      getterBody,
+      contains('_activeTabs().contains(_previousTab)'),
+      reason:
+          'the fallback must test the previous tab against the active '
+          'tab set, otherwise a hidden module traps the user in settings.',
+    );
+    expect(
+      getterBody,
+      contains('HomeTab.home'),
+      reason:
+          'when the previous tab is hidden, fall back to a tab that is '
+          'always present.',
+    );
+    expect(
+      body,
+      isNot(contains('_selectTab(_previousTab)')),
+      reason:
+          'the macOS back button must not bypass the visibility '
+          'fallback.',
+    );
   });
 
-  test('reader re-feeds chrome inset to pagination on viewport inset change',
-      () {
-    // 根因（症状②）：全屏 / 旋转 / notch 改 viewPadding(inset) 时，过去只更新
-    // _stableTopInset/Bottom 两个 Dart 字段，却从不把新 inset 回喂 WebView 的分页
-    // 几何（padding 的 --chrome-*-inset、竖排列高扣项）→ 列高 / 边距按 stale inset
-    // 算，正文越出可视带、手调页边距被淹没。didChangeDependencies 必须在 inset 真
-    // 变时回喂（_applyChromeInsets）。Mac 真机实测：全屏尺寸下 chromeBottomInset
-    // 0→52.5px 被正确回喂、pitchDelta=0（几何无失配）。
-    final int didChangeDeps = reader.indexOf('void didChangeDependencies()');
-    expect(didChangeDeps, isNonNegative);
-    final String body = reader.substring(didChangeDeps, didChangeDeps + 900);
-    expect(body, contains('insetChanged'),
-        reason: 'didChangeDependencies must detect a real inset change.');
-    expect(body, contains('_applyChromeInsets'),
-        reason: 'TODO-1375 (2): an inset change must re-feed the WebView '
-            'pagination geometry so fullscreen re-layout uses the live inset.');
-  });
+  test(
+    'reader re-feeds chrome inset to pagination on viewport inset change',
+    () {
+      // 根因（症状②）：全屏 / 旋转 / notch 改 viewPadding(inset) 时，过去只更新
+      // _stableTopInset/Bottom 两个 Dart 字段，却从不把新 inset 回喂 WebView 的分页
+      // 几何（padding 的 --chrome-*-inset、竖排列高扣项）→ 列高 / 边距按 stale inset
+      // 算，正文越出可视带、手调页边距被淹没。didChangeDependencies 必须在 inset 真
+      // 变时回喂（_applyChromeInsets）。Mac 真机实测：全屏尺寸下 chromeBottomInset
+      // 0→52.5px 被正确回喂、pitchDelta=0（几何无失配）。
+      final int didChangeDeps = reader.indexOf('void didChangeDependencies()');
+      expect(didChangeDeps, isNonNegative);
+      final String body = reader.substring(didChangeDeps, didChangeDeps + 900);
+      expect(
+        body,
+        contains('insetChanged'),
+        reason: 'didChangeDependencies must detect a real inset change.',
+      );
+      expect(
+        body,
+        contains('_applyChromeInsets'),
+        reason:
+            'TODO-1375 (2): an inset change must re-feed the WebView '
+            'pagination geometry so fullscreen re-layout uses the live inset.',
+      );
+    },
+  );
 
   test('BUG-1343 windowed macOS reader exposes a draggable titlebar strip', () {
     // 默认 auto=MD3 时根部不会挂 MacosWindow/ToolBar，但 NSWindow 仍是透明标题栏 +
@@ -151,7 +202,8 @@ void main() {
     expect(
       containsIdentifierCall(buildBody, 'independentDocumentInsets'),
       isTrue,
-      reason: '不注入正文引擎的歌词/spread 文档也必须避开顶部拖拽区，'
+      reason:
+          '不注入正文引擎的歌词/spread 文档也必须避开顶部拖拽区，'
           '缩进量走单一真相源 independentDocumentInsets',
     );
     expect(
@@ -169,59 +221,72 @@ void main() {
   // BUG-1744：用户报的「阅读器顶部横带」。BUG-1343 引入的 28pt 拖拽带唯一条件是
   // Platform.isMacOS——进原生全屏后既没有标题栏也没有交通灯、窗口也拖不动，这条
   // 不透明带和它同高的正文让位却仍在，就是那条横带。
-  test('BUG-1744 fullscreen drops the titlebar strip and its content inset',
-      () {
-    // 让位量必须由全屏态门控（单一真相源：_readerTopOffset / popupTopReserve /
-    // independentDocumentInsets / 顶部进度 pill 全部读它）。
-    expect(
-      reader,
-      contains(
-          'Platform.isMacOS && !_macosFullscreen ? kMacTitleBarHeight : 0'),
-      reason: '_macosWindowTitlebarInset 未按全屏态门控 → 全屏下正文仍被下压 28pt',
-    );
-    // 带子本身也必须整体不挂，只归零 inset 会留下一条盖住正文的不透明条。
-    // （DragToMoveArea 挂在 build() 的 Stack 里，不在 _buildBody()。）
-    final String pageBuild =
-        methodBody(reader, '  Widget build(BuildContext context)');
-    expect(
-      containsCodeLine(pageBuild, 'if (Platform.isMacOS && !_macosFullscreen)'),
-      isTrue,
-      reason: '全屏下仍挂 DragToMoveArea 的 ColoredBox = 一条纯浪费的顶部横带',
-    );
-    expect(
-      containsCodeLine(pageBuild, 'DragToMoveArea('),
-      isTrue,
-      reason: '守卫取错了窗口（DragToMoveArea 应在同一个 build 方法体内）',
-    );
-    // 状态来源必须是能覆盖**全部**入口的 NSWindowDelegate：绿灯按钮和「显示」
-    // 菜单都不经过 app 自己的 F11 快捷键，只记快捷键状态会漏掉最常用的两条路。
-    expect(
-      reader,
-      contains('MacosFullscreenState.instance'),
-      reason: '全屏态必须取自单一真相源 MacosFullscreenState',
-    );
-    expect(
-      fullscreenState,
-      contains('windowDidEnterFullScreen'),
-      reason: 'NSWindowDelegate 是唯一能覆盖绿灯/菜单/快捷键全部入口的信号',
-    );
-    expect(
-      fullscreenState,
-      contains('windowDidExitFullScreen'),
-      reason: '只监听进入不监听退出，退出全屏后横带不会回来',
-    );
-    // 光 setState 不够：JS 的 --chrome-top-inset 由 _applyChromeInsets 单独推送，
-    // 漏了它正文 padding-top 会停在旧的 28px 上（横带原样还在）。
-    final String onChange =
-        methodBody(reader, '  void _onMacosFullscreenChanged()');
-    expect(containsCodeLine(onChange, '_applyChromeInsets'), isTrue,
-        reason: '全屏翻转后必须把新 inset 回喂 WebView，否则 CSS 侧仍留 28px 空白');
-    expect(containsCodeLine(onChange, 'setState'), isTrue);
-    // 监听器必须摘掉，否则页面走了还在被全局 notifier 持有。
-    expect(
-      reader,
-      contains('removeListener(_onMacosFullscreenChanged)'),
-      reason: 'dispose 未摘监听 = 泄漏 + 已 dispose 的 State 上 setState',
-    );
-  });
+  test(
+    'BUG-1744 fullscreen drops the titlebar strip and its content inset',
+    () {
+      // 让位量必须由全屏态门控（单一真相源：_readerTopOffset / popupTopReserve /
+      // independentDocumentInsets / 顶部进度 pill 全部读它）。
+      expect(
+        reader,
+        contains(
+          'Platform.isMacOS && !_macosFullscreen ? kMacTitleBarHeight : 0',
+        ),
+        reason: '_macosWindowTitlebarInset 未按全屏态门控 → 全屏下正文仍被下压 28pt',
+      );
+      // 带子本身也必须整体不挂，只归零 inset 会留下一条盖住正文的不透明条。
+      // （DragToMoveArea 挂在 build() 的 Stack 里，不在 _buildBody()。）
+      final String pageBuild = methodBody(
+        reader,
+        '  Widget build(BuildContext context)',
+      );
+      expect(
+        containsCodeLine(
+          pageBuild,
+          'if (Platform.isMacOS && !_macosFullscreen)',
+        ),
+        isTrue,
+        reason: '全屏下仍挂 DragToMoveArea 的 ColoredBox = 一条纯浪费的顶部横带',
+      );
+      expect(
+        containsCodeLine(pageBuild, 'DragToMoveArea('),
+        isTrue,
+        reason: '守卫取错了窗口（DragToMoveArea 应在同一个 build 方法体内）',
+      );
+      // 状态来源必须是能覆盖**全部**入口的 NSWindowDelegate：绿灯按钮和「显示」
+      // 菜单都不经过 app 自己的 F11 快捷键，只记快捷键状态会漏掉最常用的两条路。
+      expect(
+        reader,
+        contains('MacosFullscreenState.instance'),
+        reason: '全屏态必须取自单一真相源 MacosFullscreenState',
+      );
+      expect(
+        fullscreenState,
+        contains('windowDidEnterFullScreen'),
+        reason: 'NSWindowDelegate 是唯一能覆盖绿灯/菜单/快捷键全部入口的信号',
+      );
+      expect(
+        fullscreenState,
+        contains('windowDidExitFullScreen'),
+        reason: '只监听进入不监听退出，退出全屏后横带不会回来',
+      );
+      // 光 setState 不够：JS 的 --chrome-top-inset 由 _applyChromeInsets 单独推送，
+      // 漏了它正文 padding-top 会停在旧的 28px 上（横带原样还在）。
+      final String onChange = methodBody(
+        reader,
+        '  void _onMacosFullscreenChanged()',
+      );
+      expect(
+        containsCodeLine(onChange, '_applyChromeInsets'),
+        isTrue,
+        reason: '全屏翻转后必须把新 inset 回喂 WebView，否则 CSS 侧仍留 28px 空白',
+      );
+      expect(containsCodeLine(onChange, 'setState'), isTrue);
+      // 监听器必须摘掉，否则页面走了还在被全局 notifier 持有。
+      expect(
+        reader,
+        contains('removeListener(_onMacosFullscreenChanged)'),
+        reason: 'dispose 未摘监听 = 泄漏 + 已 dispose 的 State 上 setState',
+      );
+    },
+  );
 }

@@ -29,15 +29,13 @@ mixin _FushiDbVideoDomain
   /// （N+1）。返回 Set 供 O(1) 判断。
   Future<Set<String>> scrapedVideoBookUids() async {
     final List<VideoScrapeMetaRow> rows = await select(videoScrapeMeta).get();
-    return <String>{
-      for (final VideoScrapeMetaRow r in rows) r.bookUid,
-    };
+    return <String>{for (final VideoScrapeMetaRow r in rows) r.bookUid};
   }
 
   /// 删除单本刮削资料（用户「重新刮削」前先清，或纠错后作废）。
-  Future<void> deleteVideoScrapeMeta(String bookUid) => (delete(videoScrapeMeta)
-        ..where(($VideoScrapeMetaTable t) => t.bookUid.equals(bookUid)))
-      .go();
+  Future<void> deleteVideoScrapeMeta(String bookUid) => (delete(
+    videoScrapeMeta,
+  )..where(($VideoScrapeMetaTable t) => t.bookUid.equals(bookUid))).go();
 
   /// 全量条目刮削资料（TODO-2486 视频首页年份筛选）。库页一次拉全表内存建
   /// uid → 行映射，替代逐本 [getVideoScrapeMeta] 的 N+1。
@@ -52,18 +50,21 @@ mixin _FushiDbVideoDomain
 
   /// 取合集刮削资料；未刮过返回 null（详情页据此回落到「只有标题 + 进度」的旧形态）。
   Future<CollectionScrapeMetaRow?> getCollectionScrapeMeta(int collectionId) =>
-      (select(collectionScrapeMeta)
-            ..where(($CollectionScrapeMetaTable t) =>
-                t.collectionId.equals(collectionId)))
+      (select(collectionScrapeMeta)..where(
+            ($CollectionScrapeMetaTable t) =>
+                t.collectionId.equals(collectionId),
+          ))
           .getSingleOrNull();
 
   /// 监听单个合集的刮削资料。详情页据此在刮削落库后自动重建 hero，无需手动刷新
   /// （与合集封面同一次写入事务，用户点「使用」后资料与背景图一起出现）。
   Stream<CollectionScrapeMetaRow?> watchCollectionScrapeMeta(
-          int collectionId) =>
-      (select(collectionScrapeMeta)
-            ..where(($CollectionScrapeMetaTable t) =>
-                t.collectionId.equals(collectionId)))
+    int collectionId,
+  ) =>
+      (select(collectionScrapeMeta)..where(
+            ($CollectionScrapeMetaTable t) =>
+                t.collectionId.equals(collectionId),
+          ))
           .watchSingleOrNull();
 
   /// 全量合集刮削资料（TODO-2486 视频首页 hero 轮播：backdrop / 简介 / airDate）。
@@ -73,9 +74,10 @@ mixin _FushiDbVideoDomain
 
   /// 删除合集刮削资料（「重新刮削」前先清，或纠错后作废）。
   Future<void> deleteCollectionScrapeMeta(int collectionId) =>
-      (delete(collectionScrapeMeta)
-            ..where(($CollectionScrapeMetaTable t) =>
-                t.collectionId.equals(collectionId)))
+      (delete(collectionScrapeMeta)..where(
+            ($CollectionScrapeMetaTable t) =>
+                t.collectionId.equals(collectionId),
+          ))
           .go();
 
   // ── collection_relations（合集相关作品，schema v66 / TODO-2484）──────
@@ -87,24 +89,25 @@ mixin _FushiDbVideoDomain
   Future<void> replaceCollectionRelations(
     int collectionId,
     List<CollectionRelationsCompanion> relations,
-  ) =>
-      transaction(() async {
-        await (delete(collectionRelations)
-              ..where(($CollectionRelationsTable t) =>
-                  t.collectionId.equals(collectionId)))
-            .go();
-        for (final CollectionRelationsCompanion c in relations) {
-          await into(collectionRelations).insert(c);
-        }
-      });
+  ) => transaction(() async {
+    await (delete(collectionRelations)..where(
+          ($CollectionRelationsTable t) => t.collectionId.equals(collectionId),
+        ))
+        .go();
+    for (final CollectionRelationsCompanion c in relations) {
+      await into(collectionRelations).insert(c);
+    }
+  });
 
   /// 按展示顺序（sortIndex → id）列出某合集的相关作品。
   Future<List<CollectionRelationRow>> getCollectionRelations(
     int collectionId,
   ) =>
       (select(collectionRelations)
-            ..where(($CollectionRelationsTable t) =>
-                t.collectionId.equals(collectionId))
+            ..where(
+              ($CollectionRelationsTable t) =>
+                  t.collectionId.equals(collectionId),
+            )
             ..orderBy([
               ($CollectionRelationsTable t) =>
                   OrderingTerm(expression: t.sortIndex),
@@ -117,8 +120,10 @@ mixin _FushiDbVideoDomain
     int collectionId,
   ) =>
       (select(collectionRelations)
-            ..where(($CollectionRelationsTable t) =>
-                t.collectionId.equals(collectionId))
+            ..where(
+              ($CollectionRelationsTable t) =>
+                  t.collectionId.equals(collectionId),
+            )
             ..orderBy([
               ($CollectionRelationsTable t) =>
                   OrderingTerm(expression: t.sortIndex),
@@ -128,9 +133,10 @@ mixin _FushiDbVideoDomain
 
   /// 删除某合集的全部相关作品边（「重新刮削」前先清，或纠错后作废）。
   Future<void> deleteCollectionRelations(int collectionId) =>
-      (delete(collectionRelations)
-            ..where(($CollectionRelationsTable t) =>
-                t.collectionId.equals(collectionId)))
+      (delete(collectionRelations)..where(
+            ($CollectionRelationsTable t) =>
+                t.collectionId.equals(collectionId),
+          ))
           .go();
 
   /// 升级绑定：把一条纯刮削目标边绑定为本地合集（[targetCollectionId] 传 null
@@ -139,11 +145,13 @@ mixin _FushiDbVideoDomain
     int relationId,
     int? targetCollectionId,
   ) =>
-      (update(collectionRelations)
-            ..where(($CollectionRelationsTable t) => t.id.equals(relationId)))
-          .write(CollectionRelationsCompanion(
-        targetCollectionId: Value<int?>(targetCollectionId),
-      ));
+      (update(
+        collectionRelations,
+      )..where(($CollectionRelationsTable t) => t.id.equals(relationId))).write(
+        CollectionRelationsCompanion(
+          targetCollectionId: Value<int?>(targetCollectionId),
+        ),
+      );
 
   /// 反查：已把 (source, subjectId) 刮成资料的本地合集 id 列表（抓取层用它把
   /// 「纯刮削目标」自动升级绑定为本地合集）。
@@ -152,9 +160,10 @@ mixin _FushiDbVideoDomain
     String subjectId,
   ) async {
     final List<CollectionScrapeMetaRow> rows =
-        await (select(collectionScrapeMeta)
-              ..where(($CollectionScrapeMetaTable t) =>
-                  t.source.equals(source) & t.subjectId.equals(subjectId)))
+        await (select(collectionScrapeMeta)..where(
+              ($CollectionScrapeMetaTable t) =>
+                  t.source.equals(source) & t.subjectId.equals(subjectId),
+            ))
             .get();
     return <int>[for (final CollectionScrapeMetaRow r in rows) r.collectionId];
   }
@@ -168,36 +177,34 @@ mixin _FushiDbVideoDomain
   Future<void> replaceMediaImagesForCollection(
     int collectionId,
     List<MediaImagesCompanion> images,
-  ) =>
-      transaction(() async {
-        await (delete(mediaImages)
-              ..where(
-                  ($MediaImagesTable t) => t.collectionId.equals(collectionId)))
-            .go();
-        for (final MediaImagesCompanion c in images) {
-          await into(mediaImages).insert(c);
-        }
-      });
+  ) => transaction(() async {
+    await (delete(mediaImages)
+          ..where(($MediaImagesTable t) => t.collectionId.equals(collectionId)))
+        .go();
+    for (final MediaImagesCompanion c in images) {
+      await into(mediaImages).insert(c);
+    }
+  });
 
   /// 整体替换某视频的附加图组（散装电影刮削用；空列表 = 清空）。
   Future<void> replaceMediaImagesForBook(
     String bookUid,
     List<MediaImagesCompanion> images,
-  ) =>
-      transaction(() async {
-        await (delete(mediaImages)
-              ..where(($MediaImagesTable t) => t.bookUid.equals(bookUid)))
-            .go();
-        for (final MediaImagesCompanion c in images) {
-          await into(mediaImages).insert(c);
-        }
-      });
+  ) => transaction(() async {
+    await (delete(
+      mediaImages,
+    )..where(($MediaImagesTable t) => t.bookUid.equals(bookUid))).go();
+    for (final MediaImagesCompanion c in images) {
+      await into(mediaImages).insert(c);
+    }
+  });
 
   /// 某合集的附加图组（kind 组内按 position 升序，backdrop 轮换序即此序）。
   Future<List<MediaImageRow>> getMediaImagesForCollection(int collectionId) =>
       (select(mediaImages)
             ..where(
-                ($MediaImagesTable t) => t.collectionId.equals(collectionId))
+              ($MediaImagesTable t) => t.collectionId.equals(collectionId),
+            )
             ..orderBy([
               ($MediaImagesTable t) => OrderingTerm(expression: t.kind),
               ($MediaImagesTable t) => OrderingTerm(expression: t.position),
@@ -216,20 +223,18 @@ mixin _FushiDbVideoDomain
 
   /// 全表附加图组（库页/首页批量预取，替代逐归属查询的 N+1；调用方按
   /// collectionId / bookUid 内存分组）。
-  Future<List<MediaImageRow>> getAllMediaImages() => (select(mediaImages)
-        ..orderBy([
-          ($MediaImagesTable t) => OrderingTerm(expression: t.kind),
-          ($MediaImagesTable t) => OrderingTerm(expression: t.position),
-        ]))
-      .get();
+  Future<List<MediaImageRow>> getAllMediaImages() =>
+      (select(mediaImages)..orderBy([
+            ($MediaImagesTable t) => OrderingTerm(expression: t.kind),
+            ($MediaImagesTable t) => OrderingTerm(expression: t.position),
+          ]))
+          .get();
 
   // ── video metadata（schema v69 / 来源规范刮削）────────────────────
 
   /// 新增或更新一部规范作品并返回稳定行 id。调用方必须提供 collectionId/bookUid
   /// 之一；DB CHECK 再锁死「恰好一个」的最终不变量。
-  Future<int> upsertVideoMetadataWork(
-    VideoMetadataWorksCompanion work,
-  ) async {
+  Future<int> upsertVideoMetadataWork(VideoMetadataWorksCompanion work) async {
     final List<Column<Object>> conflictTarget;
     if (work.collectionId.present && work.collectionId.value != null) {
       conflictTarget = <Column<Object>>[videoMetadataWorks.collectionId];
@@ -242,27 +247,27 @@ mixin _FushiDbVideoDomain
         'VideoMetadataWorksCompanion must identify a collection or book',
       );
     }
-    await into(videoMetadataWorks).insert(
-      work,
-      onConflict: DoUpdate(
-        (_) => work,
-        target: conflictTarget,
-      ),
-    );
+    await into(
+      videoMetadataWorks,
+    ).insert(work, onConflict: DoUpdate((_) => work, target: conflictTarget));
     if (work.collectionId.present && work.collectionId.value != null) {
-      final VideoMetadataWorkRow? row =
-          await getVideoMetadataWorkByCollection(work.collectionId.value!);
+      final VideoMetadataWorkRow? row = await getVideoMetadataWorkByCollection(
+        work.collectionId.value!,
+      );
       if (row != null) return row.id;
     }
     if (work.bookUid.present && work.bookUid.value != null) {
-      final VideoMetadataWorkRow? row =
-          await getVideoMetadataWorkByBook(work.bookUid.value!);
+      final VideoMetadataWorkRow? row = await getVideoMetadataWorkByBook(
+        work.bookUid.value!,
+      );
       if (row != null) return row.id;
     }
     if (work.id.present) {
-      final VideoMetadataWorkRow? row = await (select(videoMetadataWorks)
-            ..where(($VideoMetadataWorksTable t) => t.id.equals(work.id.value)))
-          .getSingleOrNull();
+      final VideoMetadataWorkRow? row =
+          await (select(videoMetadataWorks)..where(
+                ($VideoMetadataWorksTable t) => t.id.equals(work.id.value),
+              ))
+              .getSingleOrNull();
       if (row != null) return row.id;
     }
     throw StateError('upserted video metadata work cannot be read back');
@@ -271,9 +276,9 @@ mixin _FushiDbVideoDomain
   Future<VideoMetadataWorkRow?> getVideoMetadataWorkByCollection(
     int collectionId,
   ) =>
-      (select(videoMetadataWorks)
-            ..where(($VideoMetadataWorksTable t) =>
-                t.collectionId.equals(collectionId)))
+      (select(videoMetadataWorks)..where(
+            ($VideoMetadataWorksTable t) => t.collectionId.equals(collectionId),
+          ))
           .getSingleOrNull();
 
   Future<VideoMetadataWorkRow?> getVideoMetadataWorkByBook(String bookUid) =>
@@ -296,18 +301,20 @@ mixin _FushiDbVideoDomain
   }) async {
     final List<VideoMetadataProviderIdentityRow> identities =
         await (select(videoMetadataProviderIdentities)
-              ..where(($VideoMetadataProviderIdentitiesTable t) =>
-                  t.workId.isNotNull() &
-                  t.provider.equals(provider) &
-                  t.externalId.equals(externalId))
-              ..orderBy(<OrderingTerm Function(
-                $VideoMetadataProviderIdentitiesTable,
-              )>[
+              ..where(
                 ($VideoMetadataProviderIdentitiesTable t) =>
-                    OrderingTerm.desc(t.isPrimary),
-                ($VideoMetadataProviderIdentitiesTable t) =>
-                    OrderingTerm(expression: t.identityKey),
-              ]))
+                    t.workId.isNotNull() &
+                    t.provider.equals(provider) &
+                    t.externalId.equals(externalId),
+              )
+              ..orderBy(
+                <OrderingTerm Function($VideoMetadataProviderIdentitiesTable)>[
+                  ($VideoMetadataProviderIdentitiesTable t) =>
+                      OrderingTerm.desc(t.isPrimary),
+                  ($VideoMetadataProviderIdentitiesTable t) =>
+                      OrderingTerm(expression: t.identityKey),
+                ],
+              ))
             .get();
     final int? workId = identities.isEmpty ? null : identities.first.workId;
     return workId == null ? null : getVideoMetadataWorkById(workId);
@@ -336,11 +343,13 @@ mixin _FushiDbVideoDomain
         ],
       ),
     );
-    final VideoMetadataSeasonRow row = await (select(videoMetadataSeasons)
-          ..where(($VideoMetadataSeasonsTable t) =>
-              t.workId.equals(season.workId.value) &
-              t.seasonNumber.equals(season.seasonNumber.value)))
-        .getSingle();
+    final VideoMetadataSeasonRow row =
+        await (select(videoMetadataSeasons)..where(
+              ($VideoMetadataSeasonsTable t) =>
+                  t.workId.equals(season.workId.value) &
+                  t.seasonNumber.equals(season.seasonNumber.value),
+            ))
+            .getSingle();
     return row.id;
   }
 
@@ -349,37 +358,37 @@ mixin _FushiDbVideoDomain
   Future<void> replaceVideoMetadataSeasons(
     int workId,
     List<VideoMetadataSeasonsCompanion> seasons,
-  ) =>
-      transaction(() async {
-        final Set<int> numbers = <int>{};
-        for (final VideoMetadataSeasonsCompanion season in seasons) {
-          if (!season.seasonNumber.present) {
-            throw ArgumentError('seasonNumber must be present');
-          }
-          numbers.add(season.seasonNumber.value);
-          final VideoMetadataSeasonsCompanion normalized =
-              season.copyWith(workId: Value<int>(workId));
-          await into(videoMetadataSeasons).insert(
-            normalized,
-            onConflict: DoUpdate(
-              (_) => normalized,
-              target: <Column<Object>>[
-                videoMetadataSeasons.workId,
-                videoMetadataSeasons.seasonNumber,
-              ],
-            ),
-          );
-        }
-        final DeleteStatement<$VideoMetadataSeasonsTable,
-            VideoMetadataSeasonRow> statement = delete(videoMetadataSeasons)
-          ..where(($VideoMetadataSeasonsTable t) {
-            final Expression<bool> owner = t.workId.equals(workId);
-            return numbers.isEmpty
-                ? owner
-                : owner & t.seasonNumber.isNotIn(numbers);
-          });
-        await statement.go();
+  ) => transaction(() async {
+    final Set<int> numbers = <int>{};
+    for (final VideoMetadataSeasonsCompanion season in seasons) {
+      if (!season.seasonNumber.present) {
+        throw ArgumentError('seasonNumber must be present');
+      }
+      numbers.add(season.seasonNumber.value);
+      final VideoMetadataSeasonsCompanion normalized = season.copyWith(
+        workId: Value<int>(workId),
+      );
+      await into(videoMetadataSeasons).insert(
+        normalized,
+        onConflict: DoUpdate(
+          (_) => normalized,
+          target: <Column<Object>>[
+            videoMetadataSeasons.workId,
+            videoMetadataSeasons.seasonNumber,
+          ],
+        ),
+      );
+    }
+    final DeleteStatement<$VideoMetadataSeasonsTable, VideoMetadataSeasonRow>
+    statement = delete(videoMetadataSeasons)
+      ..where(($VideoMetadataSeasonsTable t) {
+        final Expression<bool> owner = t.workId.equals(workId);
+        return numbers.isEmpty
+            ? owner
+            : owner & t.seasonNumber.isNotIn(numbers);
       });
+    await statement.go();
+  });
 
   Future<List<VideoMetadataSeasonRow>> getVideoMetadataSeasons(int workId) =>
       (select(videoMetadataSeasons)
@@ -416,11 +425,13 @@ mixin _FushiDbVideoDomain
         ],
       ),
     );
-    final VideoMetadataEpisodeRow row = await (select(videoMetadataEpisodes)
-          ..where(($VideoMetadataEpisodesTable t) =>
-              t.seasonId.equals(episode.seasonId.value) &
-              t.episodeNumber.equals(episode.episodeNumber.value)))
-        .getSingle();
+    final VideoMetadataEpisodeRow row =
+        await (select(videoMetadataEpisodes)..where(
+              ($VideoMetadataEpisodesTable t) =>
+                  t.seasonId.equals(episode.seasonId.value) &
+                  t.episodeNumber.equals(episode.episodeNumber.value),
+            ))
+            .getSingle();
     return row.id;
   }
 
@@ -429,44 +440,45 @@ mixin _FushiDbVideoDomain
   Future<void> replaceVideoMetadataEpisodes(
     int seasonId,
     List<VideoMetadataEpisodesCompanion> episodes,
-  ) =>
-      transaction(() async {
-        final Set<int> numbers = <int>{};
-        for (final VideoMetadataEpisodesCompanion episode in episodes) {
-          if (!episode.episodeNumber.present) {
-            throw ArgumentError('episodeNumber must be present');
-          }
-          numbers.add(episode.episodeNumber.value);
-          final VideoMetadataEpisodesCompanion normalized =
-              episode.copyWith(seasonId: Value<int>(seasonId));
-          await into(videoMetadataEpisodes).insert(
-            normalized,
-            onConflict: DoUpdate(
-              (_) => normalized,
-              target: <Column<Object>>[
-                videoMetadataEpisodes.seasonId,
-                videoMetadataEpisodes.episodeNumber,
-              ],
-            ),
-          );
-        }
-        final DeleteStatement<$VideoMetadataEpisodesTable,
-            VideoMetadataEpisodeRow> statement = delete(videoMetadataEpisodes)
-          ..where(($VideoMetadataEpisodesTable t) {
-            final Expression<bool> owner = t.seasonId.equals(seasonId);
-            return numbers.isEmpty
-                ? owner
-                : owner & t.episodeNumber.isNotIn(numbers);
-          });
-        await statement.go();
+  ) => transaction(() async {
+    final Set<int> numbers = <int>{};
+    for (final VideoMetadataEpisodesCompanion episode in episodes) {
+      if (!episode.episodeNumber.present) {
+        throw ArgumentError('episodeNumber must be present');
+      }
+      numbers.add(episode.episodeNumber.value);
+      final VideoMetadataEpisodesCompanion normalized = episode.copyWith(
+        seasonId: Value<int>(seasonId),
+      );
+      await into(videoMetadataEpisodes).insert(
+        normalized,
+        onConflict: DoUpdate(
+          (_) => normalized,
+          target: <Column<Object>>[
+            videoMetadataEpisodes.seasonId,
+            videoMetadataEpisodes.episodeNumber,
+          ],
+        ),
+      );
+    }
+    final DeleteStatement<$VideoMetadataEpisodesTable, VideoMetadataEpisodeRow>
+    statement = delete(videoMetadataEpisodes)
+      ..where(($VideoMetadataEpisodesTable t) {
+        final Expression<bool> owner = t.seasonId.equals(seasonId);
+        return numbers.isEmpty
+            ? owner
+            : owner & t.episodeNumber.isNotIn(numbers);
       });
+    await statement.go();
+  });
 
   Future<List<VideoMetadataEpisodeRow>> getVideoMetadataEpisodes(
     int seasonId,
   ) =>
       (select(videoMetadataEpisodes)
             ..where(
-                ($VideoMetadataEpisodesTable t) => t.seasonId.equals(seasonId))
+              ($VideoMetadataEpisodesTable t) => t.seasonId.equals(seasonId),
+            )
             ..orderBy(<OrderingTerm Function($VideoMetadataEpisodesTable)>[
               ($VideoMetadataEpisodesTable t) =>
                   OrderingTerm(expression: t.episodeNumber),
@@ -486,37 +498,36 @@ mixin _FushiDbVideoDomain
   Future<VideoMetadataEpisodeRow?> getVideoMetadataEpisodeByBook(
     String bookUid,
   ) =>
-      (select(videoMetadataEpisodes)
-            ..where(
-                ($VideoMetadataEpisodesTable t) => t.bookUid.equals(bookUid)))
+      (select(videoMetadataEpisodes)..where(
+            ($VideoMetadataEpisodesTable t) => t.bookUid.equals(bookUid),
+          ))
           .getSingleOrNull();
 
   Future<void> upsertVideoMetadataPeople(
     List<VideoMetadataPeopleCompanion> people,
-  ) =>
-      batch((Batch batch) {
-        batch.insertAllOnConflictUpdate(videoMetadataPeople, people);
-      });
+  ) => batch((Batch batch) {
+    batch.insertAllOnConflictUpdate(videoMetadataPeople, people);
+  });
 
   Future<VideoMetadataPersonRow?> getVideoMetadataPerson(String personKey) =>
-      (select(videoMetadataPeople)
-            ..where(
-                ($VideoMetadataPeopleTable t) => t.personKey.equals(personKey)))
+      (select(videoMetadataPeople)..where(
+            ($VideoMetadataPeopleTable t) => t.personKey.equals(personKey),
+          ))
           .getSingleOrNull();
 
   Future<void> upsertVideoMetadataCharacters(
     List<VideoMetadataCharactersCompanion> characters,
-  ) =>
-      batch((Batch batch) {
-        batch.insertAllOnConflictUpdate(videoMetadataCharacters, characters);
-      });
+  ) => batch((Batch batch) {
+    batch.insertAllOnConflictUpdate(videoMetadataCharacters, characters);
+  });
 
   Future<VideoMetadataCharacterRow?> getVideoMetadataCharacter(
     String characterKey,
   ) =>
-      (select(videoMetadataCharacters)
-            ..where(($VideoMetadataCharactersTable t) =>
-                t.characterKey.equals(characterKey)))
+      (select(videoMetadataCharacters)..where(
+            ($VideoMetadataCharactersTable t) =>
+                t.characterKey.equals(characterKey),
+          ))
           .getSingleOrNull();
 
   /// 整体替换单一 owner 的 provider identities。五种 owner 必须恰好提供一个。
@@ -536,24 +547,35 @@ mixin _FushiDbVideoDomain
       characterKey: characterKey,
     );
     return transaction(() async {
-      final DeleteStatement<$VideoMetadataProviderIdentitiesTable,
-              VideoMetadataProviderIdentityRow> statement =
-          delete(videoMetadataProviderIdentities);
+      final DeleteStatement<
+        $VideoMetadataProviderIdentitiesTable,
+        VideoMetadataProviderIdentityRow
+      >
+      statement = delete(videoMetadataProviderIdentities);
       if (workId != null) {
-        statement.where(($VideoMetadataProviderIdentitiesTable t) =>
-            t.workId.equals(workId));
+        statement.where(
+          ($VideoMetadataProviderIdentitiesTable t) => t.workId.equals(workId),
+        );
       } else if (seasonId != null) {
-        statement.where(($VideoMetadataProviderIdentitiesTable t) =>
-            t.seasonId.equals(seasonId));
+        statement.where(
+          ($VideoMetadataProviderIdentitiesTable t) =>
+              t.seasonId.equals(seasonId),
+        );
       } else if (episodeId != null) {
-        statement.where(($VideoMetadataProviderIdentitiesTable t) =>
-            t.episodeId.equals(episodeId));
+        statement.where(
+          ($VideoMetadataProviderIdentitiesTable t) =>
+              t.episodeId.equals(episodeId),
+        );
       } else if (personKey != null) {
-        statement.where(($VideoMetadataProviderIdentitiesTable t) =>
-            t.personKey.equals(personKey));
+        statement.where(
+          ($VideoMetadataProviderIdentitiesTable t) =>
+              t.personKey.equals(personKey),
+        );
       } else {
-        statement.where(($VideoMetadataProviderIdentitiesTable t) =>
-            t.characterKey.equals(characterKey!));
+        statement.where(
+          ($VideoMetadataProviderIdentitiesTable t) =>
+              t.characterKey.equals(characterKey!),
+        );
       }
       await statement.go();
       for (final VideoMetadataProviderIdentitiesCompanion identity
@@ -572,7 +594,7 @@ mixin _FushiDbVideoDomain
   }
 
   Future<List<VideoMetadataProviderIdentityRow>>
-      getVideoMetadataProviderIdentities({
+  getVideoMetadataProviderIdentities({
     int? workId,
     int? seasonId,
     int? episodeId,
@@ -586,33 +608,43 @@ mixin _FushiDbVideoDomain
       personKey: personKey,
       characterKey: characterKey,
     );
-    final SimpleSelectStatement<$VideoMetadataProviderIdentitiesTable,
-            VideoMetadataProviderIdentityRow> query =
-        select(videoMetadataProviderIdentities);
+    final SimpleSelectStatement<
+      $VideoMetadataProviderIdentitiesTable,
+      VideoMetadataProviderIdentityRow
+    >
+    query = select(videoMetadataProviderIdentities);
     if (workId != null) {
       query.where(
-          ($VideoMetadataProviderIdentitiesTable t) => t.workId.equals(workId));
+        ($VideoMetadataProviderIdentitiesTable t) => t.workId.equals(workId),
+      );
     } else if (seasonId != null) {
-      query.where(($VideoMetadataProviderIdentitiesTable t) =>
-          t.seasonId.equals(seasonId));
+      query.where(
+        ($VideoMetadataProviderIdentitiesTable t) =>
+            t.seasonId.equals(seasonId),
+      );
     } else if (episodeId != null) {
-      query.where(($VideoMetadataProviderIdentitiesTable t) =>
-          t.episodeId.equals(episodeId));
+      query.where(
+        ($VideoMetadataProviderIdentitiesTable t) =>
+            t.episodeId.equals(episodeId),
+      );
     } else if (personKey != null) {
-      query.where(($VideoMetadataProviderIdentitiesTable t) =>
-          t.personKey.equals(personKey));
+      query.where(
+        ($VideoMetadataProviderIdentitiesTable t) =>
+            t.personKey.equals(personKey),
+      );
     } else {
-      query.where(($VideoMetadataProviderIdentitiesTable t) =>
-          t.characterKey.equals(characterKey!));
+      query.where(
+        ($VideoMetadataProviderIdentitiesTable t) =>
+            t.characterKey.equals(characterKey!),
+      );
     }
-    query.orderBy(<OrderingTerm Function(
-      $VideoMetadataProviderIdentitiesTable,
-    )>[
-      ($VideoMetadataProviderIdentitiesTable t) =>
-          OrderingTerm.desc(t.isPrimary),
-      ($VideoMetadataProviderIdentitiesTable t) =>
-          OrderingTerm(expression: t.provider),
-    ]);
+    query
+        .orderBy(<OrderingTerm Function($VideoMetadataProviderIdentitiesTable)>[
+          ($VideoMetadataProviderIdentitiesTable t) =>
+              OrderingTerm.desc(t.isPrimary),
+          ($VideoMetadataProviderIdentitiesTable t) =>
+              OrderingTerm(expression: t.provider),
+        ]);
     return query.get();
   }
 
@@ -624,12 +656,14 @@ mixin _FushiDbVideoDomain
   Future<Set<int>> aniDbScrapedVideoCollectionIds() async {
     final query = selectOnly(videoMetadataWorks, distinct: true)
       ..addColumns(<Expression<Object>>[videoMetadataWorks.collectionId])
-      ..join(<Join>[innerJoin(
-        videoMetadataProviderIdentities,
-        videoMetadataProviderIdentities.workId.equalsExp(
-          videoMetadataWorks.id,
+      ..join(<Join>[
+        innerJoin(
+          videoMetadataProviderIdentities,
+          videoMetadataProviderIdentities.workId.equalsExp(
+            videoMetadataWorks.id,
+          ),
         ),
-      )])
+      ])
       ..where(
         videoMetadataWorks.collectionId.isNotNull() &
             videoMetadataProviderIdentities.provider.equals('anidb') &
@@ -645,12 +679,14 @@ mixin _FushiDbVideoDomain
   Future<Set<String>> aniDbScrapedVideoBookUids() async {
     final query = selectOnly(videoMetadataWorks, distinct: true)
       ..addColumns(<Expression<Object>>[videoMetadataWorks.bookUid])
-      ..join(<Join>[innerJoin(
-        videoMetadataProviderIdentities,
-        videoMetadataProviderIdentities.workId.equalsExp(
-          videoMetadataWorks.id,
+      ..join(<Join>[
+        innerJoin(
+          videoMetadataProviderIdentities,
+          videoMetadataProviderIdentities.workId.equalsExp(
+            videoMetadataWorks.id,
+          ),
         ),
-      )])
+      ])
       ..where(
         videoMetadataWorks.bookUid.isNotNull() &
             videoMetadataProviderIdentities.provider.equals('anidb') &
@@ -665,25 +701,27 @@ mixin _FushiDbVideoDomain
   Future<void> replaceVideoMetadataRawSnapshots(
     String identityKey,
     List<VideoMetadataRawSnapshotsCompanion> snapshots,
-  ) =>
-      transaction(() async {
-        await (delete(videoMetadataRawSnapshots)
-              ..where(($VideoMetadataRawSnapshotsTable t) =>
-                  t.identityKey.equals(identityKey)))
-            .go();
-        for (final VideoMetadataRawSnapshotsCompanion snapshot in snapshots) {
-          await into(videoMetadataRawSnapshots).insert(
-            snapshot.copyWith(identityKey: Value<String>(identityKey)),
-          );
-        }
-      });
+  ) => transaction(() async {
+    await (delete(videoMetadataRawSnapshots)..where(
+          ($VideoMetadataRawSnapshotsTable t) =>
+              t.identityKey.equals(identityKey),
+        ))
+        .go();
+    for (final VideoMetadataRawSnapshotsCompanion snapshot in snapshots) {
+      await into(
+        videoMetadataRawSnapshots,
+      ).insert(snapshot.copyWith(identityKey: Value<String>(identityKey)));
+    }
+  });
 
   Future<List<VideoMetadataRawSnapshotRow>> getVideoMetadataRawSnapshots(
     String identityKey,
   ) =>
       (select(videoMetadataRawSnapshots)
-            ..where(($VideoMetadataRawSnapshotsTable t) =>
-                t.identityKey.equals(identityKey))
+            ..where(
+              ($VideoMetadataRawSnapshotsTable t) =>
+                  t.identityKey.equals(identityKey),
+            )
             ..orderBy(<OrderingTerm Function($VideoMetadataRawSnapshotsTable)>[
               ($VideoMetadataRawSnapshotsTable t) =>
                   OrderingTerm(expression: t.snapshotKind),
@@ -695,32 +733,32 @@ mixin _FushiDbVideoDomain
     required int workId,
     required List<VideoMetadataTermsCompanion> terms,
     required List<VideoMetadataWorkTermsCompanion> mappings,
-  }) =>
-      transaction(() async {
-        for (final VideoMetadataTermsCompanion term in terms) {
-          await into(videoMetadataTerms).insertOnConflictUpdate(term);
-        }
-        await (delete(videoMetadataWorkTerms)
-              ..where(
-                  ($VideoMetadataWorkTermsTable t) => t.workId.equals(workId)))
-            .go();
-        for (final VideoMetadataWorkTermsCompanion mapping in mappings) {
-          await into(videoMetadataWorkTerms).insert(
-            mapping.copyWith(workId: Value<int>(workId)),
-          );
-        }
-      });
+  }) => transaction(() async {
+    for (final VideoMetadataTermsCompanion term in terms) {
+      await into(videoMetadataTerms).insertOnConflictUpdate(term);
+    }
+    await (delete(
+      videoMetadataWorkTerms,
+    )..where(($VideoMetadataWorkTermsTable t) => t.workId.equals(workId))).go();
+    for (final VideoMetadataWorkTermsCompanion mapping in mappings) {
+      await into(
+        videoMetadataWorkTerms,
+      ).insert(mapping.copyWith(workId: Value<int>(workId)));
+    }
+  });
 
   Future<List<VideoMetadataTermRow>> getVideoMetadataTermsForWork(
     int workId,
   ) async {
     final JoinedSelectStatement<HasResultSet, dynamic> query =
         select(videoMetadataTerms).join(<Join<HasResultSet, dynamic>>[
-      innerJoin(
-        videoMetadataWorkTerms,
-        videoMetadataWorkTerms.termKey.equalsExp(videoMetadataTerms.termKey),
-      ),
-    ])
+            innerJoin(
+              videoMetadataWorkTerms,
+              videoMetadataWorkTerms.termKey.equalsExp(
+                videoMetadataTerms.termKey,
+              ),
+            ),
+          ])
           ..where(videoMetadataWorkTerms.workId.equals(workId))
           ..orderBy(<OrderingTerm>[
             OrderingTerm(expression: videoMetadataWorkTerms.sortOrder),
@@ -746,16 +784,19 @@ mixin _FushiDbVideoDomain
     );
     return transaction(() async {
       final DeleteStatement<$VideoMetadataCreditsTable, VideoMetadataCreditRow>
-          statement = delete(videoMetadataCredits);
+      statement = delete(videoMetadataCredits);
       if (workId != null) {
-        statement
-            .where(($VideoMetadataCreditsTable t) => t.workId.equals(workId));
+        statement.where(
+          ($VideoMetadataCreditsTable t) => t.workId.equals(workId),
+        );
       } else if (seasonId != null) {
         statement.where(
-            ($VideoMetadataCreditsTable t) => t.seasonId.equals(seasonId));
+          ($VideoMetadataCreditsTable t) => t.seasonId.equals(seasonId),
+        );
       } else {
         statement.where(
-            ($VideoMetadataCreditsTable t) => t.episodeId.equals(episodeId!));
+          ($VideoMetadataCreditsTable t) => t.episodeId.equals(episodeId!),
+        );
       }
       await statement.go();
       for (final VideoMetadataCreditsCompanion credit in credits) {
@@ -780,16 +821,21 @@ mixin _FushiDbVideoDomain
       seasonId: seasonId,
       episodeId: episodeId,
     );
-    final SimpleSelectStatement<$VideoMetadataCreditsTable,
-        VideoMetadataCreditRow> query = select(videoMetadataCredits);
+    final SimpleSelectStatement<
+      $VideoMetadataCreditsTable,
+      VideoMetadataCreditRow
+    >
+    query = select(videoMetadataCredits);
     if (workId != null) {
       query.where(($VideoMetadataCreditsTable t) => t.workId.equals(workId));
     } else if (seasonId != null) {
-      query
-          .where(($VideoMetadataCreditsTable t) => t.seasonId.equals(seasonId));
+      query.where(
+        ($VideoMetadataCreditsTable t) => t.seasonId.equals(seasonId),
+      );
     } else {
       query.where(
-          ($VideoMetadataCreditsTable t) => t.episodeId.equals(episodeId!));
+        ($VideoMetadataCreditsTable t) => t.episodeId.equals(episodeId!),
+      );
     }
     query.orderBy(<OrderingTerm Function($VideoMetadataCreditsTable)>[
       ($VideoMetadataCreditsTable t) => OrderingTerm(expression: t.sortOrder),
@@ -816,22 +862,27 @@ mixin _FushiDbVideoDomain
     );
     return transaction(() async {
       final DeleteStatement<$VideoMetadataImagesTable, VideoMetadataImageRow>
-          statement = delete(videoMetadataImages);
+      statement = delete(videoMetadataImages);
       if (workId != null) {
-        statement
-            .where(($VideoMetadataImagesTable t) => t.workId.equals(workId));
+        statement.where(
+          ($VideoMetadataImagesTable t) => t.workId.equals(workId),
+        );
       } else if (seasonId != null) {
         statement.where(
-            ($VideoMetadataImagesTable t) => t.seasonId.equals(seasonId));
+          ($VideoMetadataImagesTable t) => t.seasonId.equals(seasonId),
+        );
       } else if (episodeId != null) {
         statement.where(
-            ($VideoMetadataImagesTable t) => t.episodeId.equals(episodeId));
+          ($VideoMetadataImagesTable t) => t.episodeId.equals(episodeId),
+        );
       } else if (personKey != null) {
         statement.where(
-            ($VideoMetadataImagesTable t) => t.personKey.equals(personKey));
+          ($VideoMetadataImagesTable t) => t.personKey.equals(personKey),
+        );
       } else {
-        statement.where(($VideoMetadataImagesTable t) =>
-            t.characterKey.equals(characterKey!));
+        statement.where(
+          ($VideoMetadataImagesTable t) => t.characterKey.equals(characterKey!),
+        );
       }
       await statement.go();
       for (final VideoMetadataImagesCompanion image in images) {
@@ -862,21 +913,27 @@ mixin _FushiDbVideoDomain
       personKey: personKey,
       characterKey: characterKey,
     );
-    final SimpleSelectStatement<$VideoMetadataImagesTable,
-        VideoMetadataImageRow> query = select(videoMetadataImages);
+    final SimpleSelectStatement<
+      $VideoMetadataImagesTable,
+      VideoMetadataImageRow
+    >
+    query = select(videoMetadataImages);
     if (workId != null) {
       query.where(($VideoMetadataImagesTable t) => t.workId.equals(workId));
     } else if (seasonId != null) {
       query.where(($VideoMetadataImagesTable t) => t.seasonId.equals(seasonId));
     } else if (episodeId != null) {
       query.where(
-          ($VideoMetadataImagesTable t) => t.episodeId.equals(episodeId));
+        ($VideoMetadataImagesTable t) => t.episodeId.equals(episodeId),
+      );
     } else if (personKey != null) {
       query.where(
-          ($VideoMetadataImagesTable t) => t.personKey.equals(personKey));
+        ($VideoMetadataImagesTable t) => t.personKey.equals(personKey),
+      );
     } else {
-      query.where(($VideoMetadataImagesTable t) =>
-          t.characterKey.equals(characterKey!));
+      query.where(
+        ($VideoMetadataImagesTable t) => t.characterKey.equals(characterKey!),
+      );
     }
     query.orderBy(<OrderingTerm Function($VideoMetadataImagesTable)>[
       ($VideoMetadataImagesTable t) => OrderingTerm(expression: t.kind),
@@ -890,23 +947,21 @@ mixin _FushiDbVideoDomain
   Future<void> replaceOnlineVideoMetadataExtras(
     int workId,
     List<VideoMetadataExtrasCompanion> extras,
-  ) =>
-      transaction(() async {
-        await (delete(videoMetadataExtras)
-              ..where(($VideoMetadataExtrasTable t) =>
-                  t.workId.equals(workId) & t.sourceKind.equals('online')))
-            .go();
-        for (final VideoMetadataExtrasCompanion extra in extras) {
-          await into(videoMetadataExtras).insertOnConflictUpdate(
-            extra.copyWith(workId: Value<int>(workId)),
-          );
-        }
-      });
+  ) => transaction(() async {
+    await (delete(videoMetadataExtras)..where(
+          ($VideoMetadataExtrasTable t) =>
+              t.workId.equals(workId) & t.sourceKind.equals('online'),
+        ))
+        .go();
+    for (final VideoMetadataExtrasCompanion extra in extras) {
+      await into(
+        videoMetadataExtras,
+      ).insertOnConflictUpdate(extra.copyWith(workId: Value<int>(workId)));
+    }
+  });
 
   /// 新增或更新本地附件；同一个 VideoBook 只能绑定一部作品。
-  Future<void> upsertVideoMetadataExtra(
-    VideoMetadataExtrasCompanion extra,
-  ) =>
+  Future<void> upsertVideoMetadataExtra(VideoMetadataExtrasCompanion extra) =>
       into(videoMetadataExtras).insertOnConflictUpdate(extra);
 
   Future<List<VideoMetadataExtraRow>> getVideoMetadataExtras(int workId) =>
@@ -937,9 +992,7 @@ mixin _FushiDbVideoDomain
             ]))
           .get();
 
-  Future<VideoMetadataExtraRow?> getVideoMetadataExtraByBook(
-    String bookUid,
-  ) =>
+  Future<VideoMetadataExtraRow?> getVideoMetadataExtraByBook(String bookUid) =>
       (select(videoMetadataExtras)
             ..where(($VideoMetadataExtrasTable t) => t.bookUid.equals(bookUid)))
           .getSingleOrNull();
@@ -949,19 +1002,16 @@ mixin _FushiDbVideoDomain
   Future<VideoSourceScrapeSettingRow?> getVideoSourceScrapeSettings(
     int sourceId,
   ) =>
-      (select(videoSourceScrapeSettings)
-            ..where(($VideoSourceScrapeSettingsTable t) =>
-                t.sourceId.equals(sourceId)))
+      (select(videoSourceScrapeSettings)..where(
+            ($VideoSourceScrapeSettingsTable t) => t.sourceId.equals(sourceId),
+          ))
           .getSingleOrNull();
 
   Future<void> upsertVideoSourceScrapeSettings(
     VideoSourceScrapeSettingsCompanion settings,
-  ) =>
-      into(videoSourceScrapeSettings).insertOnConflictUpdate(settings);
+  ) => into(videoSourceScrapeSettings).insertOnConflictUpdate(settings);
 
-  Future<int> insertVideoSourceScrapeRun(
-    VideoSourceScrapeRunsCompanion run,
-  ) =>
+  Future<int> insertVideoSourceScrapeRun(VideoSourceScrapeRunsCompanion run) =>
       into(videoSourceScrapeRuns).insert(run);
 
   Future<void> updateVideoSourceScrapeRun(
@@ -981,11 +1031,15 @@ mixin _FushiDbVideoDomain
     int? sourceId,
     int limit = 50,
   }) {
-    final SimpleSelectStatement<$VideoSourceScrapeRunsTable,
-        VideoSourceScrapeRunRow> query = select(videoSourceScrapeRuns);
+    final SimpleSelectStatement<
+      $VideoSourceScrapeRunsTable,
+      VideoSourceScrapeRunRow
+    >
+    query = select(videoSourceScrapeRuns);
     if (sourceId != null) {
       query.where(
-          ($VideoSourceScrapeRunsTable t) => t.sourceId.equals(sourceId));
+        ($VideoSourceScrapeRunsTable t) => t.sourceId.equals(sourceId),
+      );
     }
     query
       ..orderBy(<OrderingTerm Function($VideoSourceScrapeRunsTable)>[
@@ -1000,31 +1054,32 @@ mixin _FushiDbVideoDomain
   /// 又把 work / sidecar ledger 写回来。
   Future<bool> hasRunningVideoSourceScrapeRun() async =>
       await (select(videoSourceScrapeRuns)
-                ..where(($VideoSourceScrapeRunsTable t) =>
-                    t.status.equals('running'))
-                ..limit(1))
-              .getSingleOrNull() !=
-          null;
+            ..where(
+              ($VideoSourceScrapeRunsTable t) => t.status.equals('running'),
+            )
+            ..limit(1))
+          .getSingleOrNull() !=
+      null;
 
   /// 进程异常退出不会经过 Flutter dispose；下次启动把遗留 running 任务诚实标成
   /// interrupted，避免任务面板永久显示正在运行。
   Future<int> interruptStaleVideoSourceScrapeRuns({int? finishedAt}) {
     final int now = finishedAt ?? DateTime.now().millisecondsSinceEpoch;
-    return (update(videoSourceScrapeRuns)
-          ..where(
-              ($VideoSourceScrapeRunsTable t) => t.status.equals('running')))
-        .write(VideoSourceScrapeRunsCompanion(
-      status: const Value<String>('interrupted'),
-      phase: const Value<String>('interrupted'),
-      lastError: const Value<String>('应用在任务完成前退出'),
-      updatedAt: Value<int>(now),
-      finishedAt: Value<int?>(now),
-    ));
+    return (update(
+          videoSourceScrapeRuns,
+        )..where(($VideoSourceScrapeRunsTable t) => t.status.equals('running')))
+        .write(
+          VideoSourceScrapeRunsCompanion(
+            status: const Value<String>('interrupted'),
+            phase: const Value<String>('interrupted'),
+            lastError: const Value<String>('应用在任务完成前退出'),
+            updatedAt: Value<int>(now),
+            finishedAt: Value<int?>(now),
+          ),
+        );
   }
 
-  Future<VideoSidecarArtifactRow?> getVideoSidecarArtifactByPath(
-    String path,
-  ) =>
+  Future<VideoSidecarArtifactRow?> getVideoSidecarArtifactByPath(String path) =>
       (select(videoSidecarArtifacts)
             ..where(($VideoSidecarArtifactsTable t) => t.path.equals(path)))
           .getSingleOrNull();
@@ -1042,10 +1097,12 @@ mixin _FushiDbVideoDomain
         target: <Column<Object>>[videoSidecarArtifacts.path],
       ),
     );
-    final VideoSidecarArtifactRow row = await (select(videoSidecarArtifacts)
-          ..where(($VideoSidecarArtifactsTable t) =>
-              t.path.equals(artifact.path.value)))
-        .getSingle();
+    final VideoSidecarArtifactRow row =
+        await (select(videoSidecarArtifacts)..where(
+              ($VideoSidecarArtifactsTable t) =>
+                  t.path.equals(artifact.path.value),
+            ))
+            .getSingle();
     return row.id;
   }
 
@@ -1053,11 +1110,15 @@ mixin _FushiDbVideoDomain
     int? sourceId,
     int? runId,
   }) {
-    final SimpleSelectStatement<$VideoSidecarArtifactsTable,
-        VideoSidecarArtifactRow> query = select(videoSidecarArtifacts);
+    final SimpleSelectStatement<
+      $VideoSidecarArtifactsTable,
+      VideoSidecarArtifactRow
+    >
+    query = select(videoSidecarArtifacts);
     if (sourceId != null) {
       query.where(
-          ($VideoSidecarArtifactsTable t) => t.sourceId.equals(sourceId));
+        ($VideoSidecarArtifactsTable t) => t.sourceId.equals(sourceId),
+      );
     }
     if (runId != null) {
       query.where(($VideoSidecarArtifactsTable t) => t.runId.equals(runId));
@@ -1083,93 +1144,90 @@ mixin _FushiDbVideoDomain
   Future<void> clearAllVideoScrapeRecords({
     Map<String, String> clearBookCoverPaths = const <String, String>{},
     Map<int, String> clearCollectionCoverPaths = const <int, String>{},
-    Map<int, String> clearLegacyScrapedMediaImagePaths =
-        const <int, String>{},
+    Map<int, String> clearLegacyScrapedMediaImagePaths = const <int, String>{},
     bool preserveAllSidecarArtifacts = false,
     Set<int>? clearSidecarArtifactIds,
-  }) =>
-      transaction(() async {
-        if (await hasRunningVideoSourceScrapeRun()) {
-          throw const VideoScrapeRecordsBusyException();
-        }
-        for (final MapEntry<String, String> entry
-            in clearBookCoverPaths.entries) {
-          await (update(videoBooks)
-                ..where(($VideoBooksTable t) =>
-                    t.bookUid.equals(entry.key) &
-                    t.coverPath.equals(entry.value)))
-              .write(const VideoBooksCompanion(
-            coverPath: Value<String?>(null),
-          ));
-        }
-        for (final MapEntry<int, String> entry
-            in clearCollectionCoverPaths.entries) {
-          await (update(mediaCollections)
-                ..where(($MediaCollectionsTable t) =>
-                    t.id.equals(entry.key) &
-                    t.coverPath.equals(entry.value)))
-              .write(const MediaCollectionsCompanion(
-            coverPath: Value<String?>(null),
-          ));
-        }
+  }) => transaction(() async {
+    if (await hasRunningVideoSourceScrapeRun()) {
+      throw const VideoScrapeRecordsBusyException();
+    }
+    for (final MapEntry<String, String> entry in clearBookCoverPaths.entries) {
+      await (update(videoBooks)..where(
+            ($VideoBooksTable t) =>
+                t.bookUid.equals(entry.key) & t.coverPath.equals(entry.value),
+          ))
+          .write(const VideoBooksCompanion(coverPath: Value<String?>(null)));
+    }
+    for (final MapEntry<int, String> entry
+        in clearCollectionCoverPaths.entries) {
+      await (update(mediaCollections)..where(
+            ($MediaCollectionsTable t) =>
+                t.id.equals(entry.key) & t.coverPath.equals(entry.value),
+          ))
+          .write(
+            const MediaCollectionsCompanion(coverPath: Value<String?>(null)),
+          );
+    }
 
-        // sidecar ledger 对 canonical owner/run 使用 SET NULL，不会随父行级联，必须
-        // 显式清；先删它也避免后续父表删除制造一批短暂的无主记录。
-        if (preserveAllSidecarArtifacts) {
-          // 文件校验前的事务预检：保留全部 ledger 作为所有权证据。
-        } else if (clearSidecarArtifactIds case final Set<int> ids) {
-          // 不用 `NOT IN(全部保护 ID)`：大型动画库会超过 Android/旧 SQLite
-          // 常见的 999 绑定变量上限。这里只按固定小批次删除已确认可清的 ID。
-          final List<int> orderedIds = ids.toList(growable: false)..sort();
-          const int batchSize = 400;
-          for (int offset = 0; offset < orderedIds.length; offset += batchSize) {
-            final int end = (offset + batchSize < orderedIds.length)
-                ? offset + batchSize
-                : orderedIds.length;
-            await (delete(videoSidecarArtifacts)
-                  ..where(($VideoSidecarArtifactsTable t) =>
-                      t.id.isIn(orderedIds.sublist(offset, end))))
-                .go();
-          }
-        } else {
-          await delete(videoSidecarArtifacts).go();
-        }
-        await delete(videoSourceScrapeRuns).go();
-
-        // `source='local'` 是用户在合集详情中“按季拆分”后建立的前传/续作结构，
-        // 不属于刮削缓存；全量清理只能删外部 provider 关系。
-        await (delete(collectionRelations)
-              ..where(($CollectionRelationsTable t) =>
-                  t.source.equals('local').not()))
+    // sidecar ledger 对 canonical owner/run 使用 SET NULL，不会随父行级联，必须
+    // 显式清；先删它也避免后续父表删除制造一批短暂的无主记录。
+    if (preserveAllSidecarArtifacts) {
+      // 文件校验前的事务预检：保留全部 ledger 作为所有权证据。
+    } else if (clearSidecarArtifactIds case final Set<int> ids) {
+      // 不用 `NOT IN(全部保护 ID)`：大型动画库会超过 Android/旧 SQLite
+      // 常见的 999 绑定变量上限。这里只按固定小批次删除已确认可清的 ID。
+      final List<int> orderedIds = ids.toList(growable: false)..sort();
+      const int batchSize = 400;
+      for (int offset = 0; offset < orderedIds.length; offset += batchSize) {
+        final int end = (offset + batchSize < orderedIds.length)
+            ? offset + batchSize
+            : orderedIds.length;
+        await (delete(videoSidecarArtifacts)..where(
+              ($VideoSidecarArtifactsTable t) =>
+                  t.id.isIn(orderedIds.sublist(offset, end)),
+            ))
             .go();
-        await delete(collectionScrapeMeta).go();
-        await delete(videoScrapeMeta).go();
-        // v68 会把旧 collection_scrape_meta.backdrop_path 搬入 media_images，
-        // 但迁移行没有 sourceUrl。调用方携带清理前 meta 快照作精确 CAS，避免把
-        // 这类遗留刮削投影误认成手工附加图；其余 sourceUrl=null 仍全部保留。
-        for (final MapEntry<int, String> entry
-            in clearLegacyScrapedMediaImagePaths.entries) {
-          await (delete(mediaImages)
-                ..where(($MediaImagesTable t) =>
-                    t.collectionId.equals(entry.key) &
-                    t.path.equals(entry.value) &
-                    t.kind.equals('backdrop') &
-                    t.sourceUrl.isNull()))
-              .go();
-        }
-        // 有远端来源的行是可重建刮削投影；无来源且未被上方精确命中的行是手工图。
-        await (delete(mediaImages)
-              ..where(($MediaImagesTable t) => t.sourceUrl.isNotNull()))
-            .go();
+      }
+    } else {
+      await delete(videoSidecarArtifacts).go();
+    }
+    await delete(videoSourceScrapeRuns).go();
 
-        // work 删除会级联 seasons / episodes / owner identities / snapshots /
-        // work_terms / credits / images / extras；people / characters / terms 是独立
-        // 字典根，必须随后显式清掉，否则全量清理仍会留下孤儿资料。
-        await delete(videoMetadataWorks).go();
-        await delete(videoMetadataPeople).go();
-        await delete(videoMetadataCharacters).go();
-        await delete(videoMetadataTerms).go();
-      });
+    // `source='local'` 是用户在合集详情中“按季拆分”后建立的前传/续作结构，
+    // 不属于刮削缓存；全量清理只能删外部 provider 关系。
+    await (delete(collectionRelations)..where(
+          ($CollectionRelationsTable t) => t.source.equals('local').not(),
+        ))
+        .go();
+    await delete(collectionScrapeMeta).go();
+    await delete(videoScrapeMeta).go();
+    // v68 会把旧 collection_scrape_meta.backdrop_path 搬入 media_images，
+    // 但迁移行没有 sourceUrl。调用方携带清理前 meta 快照作精确 CAS，避免把
+    // 这类遗留刮削投影误认成手工附加图；其余 sourceUrl=null 仍全部保留。
+    for (final MapEntry<int, String> entry
+        in clearLegacyScrapedMediaImagePaths.entries) {
+      await (delete(mediaImages)..where(
+            ($MediaImagesTable t) =>
+                t.collectionId.equals(entry.key) &
+                t.path.equals(entry.value) &
+                t.kind.equals('backdrop') &
+                t.sourceUrl.isNull(),
+          ))
+          .go();
+    }
+    // 有远端来源的行是可重建刮削投影；无来源且未被上方精确命中的行是手工图。
+    await (delete(
+      mediaImages,
+    )..where(($MediaImagesTable t) => t.sourceUrl.isNotNull())).go();
+
+    // work 删除会级联 seasons / episodes / owner identities / snapshots /
+    // work_terms / credits / images / extras；people / characters / terms 是独立
+    // 字典根，必须随后显式清掉，否则全量清理仍会留下孤儿资料。
+    await delete(videoMetadataWorks).go();
+    await delete(videoMetadataPeople).go();
+    await delete(videoMetadataCharacters).go();
+    await delete(videoMetadataTerms).go();
+  });
 
   /// 视频库刮削展示层依赖的任一表变化信号。与 uid watcher 正交：清资料/封面时
   /// VideoBooks 的 uid 集合不变，单靠 uid 流会被消费方去重，系列页便停在旧快照。
@@ -1178,24 +1236,25 @@ mixin _FushiDbVideoDomain
     StreamSubscription<void>? updatesSub;
     controller = StreamController<void>(
       onListen: () {
-        updatesSub = tableUpdates(
-          TableUpdateQuery.onAllTables(
-            <ResultSetImplementation<dynamic, dynamic>>[
-              videoScrapeMeta,
-              collectionScrapeMeta,
-              videoSourceScrapeRuns,
-              mediaImages,
-              videoMetadataWorks,
-              videoMetadataProviderIdentities,
-              videoMetadataSeasons,
-              videoMetadataEpisodes,
-              videoMetadataImages,
-              videoMetadataExtras,
-            ],
-          ),
-        ).listen((_) {
-          if (!controller.isClosed) controller.add(null);
-        });
+        updatesSub =
+            tableUpdates(
+              TableUpdateQuery.onAllTables(
+                <ResultSetImplementation<dynamic, dynamic>>[
+                  videoScrapeMeta,
+                  collectionScrapeMeta,
+                  videoSourceScrapeRuns,
+                  mediaImages,
+                  videoMetadataWorks,
+                  videoMetadataProviderIdentities,
+                  videoMetadataSeasons,
+                  videoMetadataEpisodes,
+                  videoMetadataImages,
+                  videoMetadataExtras,
+                ],
+              ),
+            ).listen((_) {
+              if (!controller.isClosed) controller.add(null);
+            });
       },
       onCancel: () async {
         await updatesSub?.cancel();
@@ -1228,10 +1287,11 @@ mixin _FushiDbVideoDomain
     String fingerprint,
     String torrentHash,
   ) =>
-      (select(videoDownloadJobs)
-            ..where(($VideoDownloadJobsTable t) =>
+      (select(videoDownloadJobs)..where(
+            ($VideoDownloadJobsTable t) =>
                 t.fingerprint.equals(fingerprint) &
-                t.torrentHash.equals(torrentHash)))
+                t.torrentHash.equals(torrentHash),
+          ))
           .getSingleOrNull();
 
   Future<List<VideoDownloadJobRow>> getVideoDownloadJobs() =>
@@ -1255,14 +1315,13 @@ mixin _FushiDbVideoDomain
   Future<int> updateVideoDownloadJob(
     String jobId,
     VideoDownloadJobsCompanion patch,
-  ) =>
-      (update(videoDownloadJobs)
-            ..where(($VideoDownloadJobsTable t) => t.jobId.equals(jobId)))
-          .write(patch);
+  ) => (update(
+    videoDownloadJobs,
+  )..where(($VideoDownloadJobsTable t) => t.jobId.equals(jobId))).write(patch);
 
-  Future<int> deleteVideoDownloadJob(String jobId) => (delete(videoDownloadJobs)
-        ..where(($VideoDownloadJobsTable t) => t.jobId.equals(jobId)))
-      .go();
+  Future<int> deleteVideoDownloadJob(String jobId) => (delete(
+    videoDownloadJobs,
+  )..where(($VideoDownloadJobsTable t) => t.jobId.equals(jobId))).go();
 
   /// 原子领取下一条到期任务。lifecycle 保持 active；worker 是否正在处理完全由 lease
   /// 字段表达。lease 已过期即允许新进程接管，更新带完整 CAS 条件，两个 worker 不能
@@ -1279,50 +1338,55 @@ mixin _FushiDbVideoDomain
     final int claimExpiresAt = nowAt + leaseDurationMs;
     return transaction(() async {
       for (int attempt = 0; attempt < 4; attempt++) {
-        final VideoDownloadJobRow? candidate = await (select(videoDownloadJobs)
-              ..where(($VideoDownloadJobsTable t) {
-                final Expression<bool> due =
-                    t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
+        final VideoDownloadJobRow? candidate =
+            await (select(videoDownloadJobs)
+                  ..where(($VideoDownloadJobsTable t) {
+                    final Expression<bool> due =
+                        t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
                         (t.nextAttemptAt.isNull() |
                             t.nextAttemptAt.isSmallerOrEqualValue(nowAt));
-                final Expression<bool> unclaimed = t.claimedBy.isNull();
-                final Expression<bool> abandoned =
-                    t.claimExpiresAt.isNotNull() &
+                    final Expression<bool> unclaimed = t.claimedBy.isNull();
+                    final Expression<bool> abandoned =
+                        t.claimExpiresAt.isNotNull() &
                         t.claimExpiresAt.isSmallerOrEqualValue(nowAt);
-                return due & (unclaimed | abandoned);
-              })
-              ..orderBy(<OrderingTerm Function($VideoDownloadJobsTable)>[
-                ($VideoDownloadJobsTable t) => OrderingTerm.desc(t.priority),
-                ($VideoDownloadJobsTable t) =>
-                    OrderingTerm(expression: t.createdAt),
-                ($VideoDownloadJobsTable t) =>
-                    OrderingTerm(expression: t.jobId),
-              ])
-              ..limit(1))
-            .getSingleOrNull();
+                    return due & (unclaimed | abandoned);
+                  })
+                  ..orderBy(<OrderingTerm Function($VideoDownloadJobsTable)>[
+                    ($VideoDownloadJobsTable t) =>
+                        OrderingTerm.desc(t.priority),
+                    ($VideoDownloadJobsTable t) =>
+                        OrderingTerm(expression: t.createdAt),
+                    ($VideoDownloadJobsTable t) =>
+                        OrderingTerm(expression: t.jobId),
+                  ])
+                  ..limit(1))
+                .getSingleOrNull();
         if (candidate == null) return null;
 
-        final int changed = await (update(videoDownloadJobs)
-              ..where(($VideoDownloadJobsTable t) {
-                final Expression<bool> due =
-                    t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
+        final int changed =
+            await (update(videoDownloadJobs)
+                  ..where(($VideoDownloadJobsTable t) {
+                    final Expression<bool> due =
+                        t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
                         (t.nextAttemptAt.isNull() |
                             t.nextAttemptAt.isSmallerOrEqualValue(nowAt));
-                final Expression<bool> unclaimed = t.claimedBy.isNull();
-                final Expression<bool> abandoned =
-                    t.claimExpiresAt.isNotNull() &
+                    final Expression<bool> unclaimed = t.claimedBy.isNull();
+                    final Expression<bool> abandoned =
+                        t.claimExpiresAt.isNotNull() &
                         t.claimExpiresAt.isSmallerOrEqualValue(nowAt);
-                return t.jobId.equals(candidate.jobId) &
-                    due &
-                    (unclaimed | abandoned);
-              }))
-            .write(VideoDownloadJobsCompanion(
-          nextAttemptAt: const Value<int?>(null),
-          claimedBy: Value<String?>(workerId),
-          claimExpiresAt: Value<int?>(claimExpiresAt),
-          lastError: const Value<String?>(null),
-          updatedAt: Value<int>(nowAt),
-        ));
+                    return t.jobId.equals(candidate.jobId) &
+                        due &
+                        (unclaimed | abandoned);
+                  }))
+                .write(
+                  VideoDownloadJobsCompanion(
+                    nextAttemptAt: const Value<int?>(null),
+                    claimedBy: Value<String?>(workerId),
+                    claimExpiresAt: Value<int?>(claimExpiresAt),
+                    lastError: const Value<String?>(null),
+                    updatedAt: Value<int>(nowAt),
+                  ),
+                );
         if (changed == 1) return getVideoDownloadJob(candidate.jobId);
       }
       return null;
@@ -1339,16 +1403,20 @@ mixin _FushiDbVideoDomain
     if (leaseDurationMs <= 0) {
       throw ArgumentError.value(leaseDurationMs, 'leaseDurationMs');
     }
-    final int changed = await (update(videoDownloadJobs)
-          ..where(($VideoDownloadJobsTable t) =>
-              t.jobId.equals(jobId) &
-              t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
-              t.claimedBy.equals(workerId) &
-              t.claimExpiresAt.isBiggerThanValue(nowAt)))
-        .write(VideoDownloadJobsCompanion(
-      claimExpiresAt: Value<int?>(nowAt + leaseDurationMs),
-      updatedAt: Value<int>(nowAt),
-    ));
+    final int changed =
+        await (update(videoDownloadJobs)..where(
+              ($VideoDownloadJobsTable t) =>
+                  t.jobId.equals(jobId) &
+                  t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
+                  t.claimedBy.equals(workerId) &
+                  t.claimExpiresAt.isBiggerThanValue(nowAt),
+            ))
+            .write(
+              VideoDownloadJobsCompanion(
+                claimExpiresAt: Value<int?>(nowAt + leaseDurationMs),
+                updatedAt: Value<int>(nowAt),
+              ),
+            );
     return changed == 1;
   }
 
@@ -1359,56 +1427,67 @@ mixin _FushiDbVideoDomain
     required String error,
     required int nowAt,
     required int nextAttemptAt,
-  }) =>
-      transaction(() async {
-        final VideoDownloadJobRow? row = await getVideoDownloadJob(jobId);
-        if (row == null ||
-            row.lifecycle != VideoDownloadJobLifecycle.active ||
-            row.claimedBy != workerId) {
-          return false;
-        }
-        final int nextAttemptCount = row.attemptCount + 1;
-        final bool exhausted = nextAttemptCount >= row.maxAttempts;
-        final int changed = await (update(videoDownloadJobs)
-              ..where(($VideoDownloadJobsTable t) =>
+  }) => transaction(() async {
+    final VideoDownloadJobRow? row = await getVideoDownloadJob(jobId);
+    if (row == null ||
+        row.lifecycle != VideoDownloadJobLifecycle.active ||
+        row.claimedBy != workerId) {
+      return false;
+    }
+    final int nextAttemptCount = row.attemptCount + 1;
+    final bool exhausted = nextAttemptCount >= row.maxAttempts;
+    final int changed =
+        await (update(videoDownloadJobs)..where(
+              ($VideoDownloadJobsTable t) =>
                   t.jobId.equals(jobId) &
                   t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
-                  t.claimedBy.equals(workerId)))
-            .write(VideoDownloadJobsCompanion(
-          lifecycle: Value<String>(exhausted
-              ? VideoDownloadJobLifecycle.failed
-              : VideoDownloadJobLifecycle.active),
-          attemptCount: Value<int>(nextAttemptCount),
-          nextAttemptAt: Value<int?>(exhausted ? null : nextAttemptAt),
-          claimedBy: const Value<String?>(null),
-          claimExpiresAt: const Value<int?>(null),
-          lastError: Value<String?>(error),
-          updatedAt: Value<int>(nowAt),
-          completedAt: Value<int?>(exhausted ? nowAt : null),
-        ));
-        return changed == 1;
-      });
+                  t.claimedBy.equals(workerId),
+            ))
+            .write(
+              VideoDownloadJobsCompanion(
+                lifecycle: Value<String>(
+                  exhausted
+                      ? VideoDownloadJobLifecycle.failed
+                      : VideoDownloadJobLifecycle.active,
+                ),
+                attemptCount: Value<int>(nextAttemptCount),
+                nextAttemptAt: Value<int?>(exhausted ? null : nextAttemptAt),
+                claimedBy: const Value<String?>(null),
+                claimExpiresAt: const Value<int?>(null),
+                lastError: Value<String?>(error),
+                updatedAt: Value<int>(nowAt),
+                completedAt: Value<int?>(exhausted ? nowAt : null),
+              ),
+            );
+    return changed == 1;
+  });
 
   Future<bool> completeVideoDownloadJob({
     required String jobId,
     required String workerId,
     required int completedAt,
   }) async {
-    final int changed = await (update(videoDownloadJobs)
-          ..where(($VideoDownloadJobsTable t) =>
-              t.jobId.equals(jobId) &
-              t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
-              t.claimedBy.equals(workerId)))
-        .write(VideoDownloadJobsCompanion(
-      lifecycle: const Value<String>(VideoDownloadJobLifecycle.completed),
-      stageProgress: const Value<double>(1.0),
-      nextAttemptAt: const Value<int?>(null),
-      claimedBy: const Value<String?>(null),
-      claimExpiresAt: const Value<int?>(null),
-      lastError: const Value<String?>(null),
-      updatedAt: Value<int>(completedAt),
-      completedAt: Value<int?>(completedAt),
-    ));
+    final int changed =
+        await (update(videoDownloadJobs)..where(
+              ($VideoDownloadJobsTable t) =>
+                  t.jobId.equals(jobId) &
+                  t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
+                  t.claimedBy.equals(workerId),
+            ))
+            .write(
+              VideoDownloadJobsCompanion(
+                lifecycle: const Value<String>(
+                  VideoDownloadJobLifecycle.completed,
+                ),
+                stageProgress: const Value<double>(1.0),
+                nextAttemptAt: const Value<int?>(null),
+                claimedBy: const Value<String?>(null),
+                claimExpiresAt: const Value<int?>(null),
+                lastError: const Value<String?>(null),
+                updatedAt: Value<int>(completedAt),
+                completedAt: Value<int?>(completedAt),
+              ),
+            );
     return changed == 1;
   }
 
@@ -1432,36 +1511,41 @@ mixin _FushiDbVideoDomain
     String? targetRelativeRoot,
     bool resetAttempts = true,
   }) async {
-    final int changed = await (update(videoDownloadJobs)
-          ..where(($VideoDownloadJobsTable t) =>
-              t.jobId.equals(jobId) &
-              t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
-              t.claimedBy.equals(workerId)))
-        .write(VideoDownloadJobsCompanion(
-      stage: Value<String>(stage),
-      stageProgress: progress == null
-          ? const Value<double>.absent()
-          : Value<double>(progress),
-      backendTaskId: backendTaskId == null
-          ? const Value<String?>.absent()
-          : Value<String?>(backendTaskId),
-      torrentHash: torrentHash == null
-          ? const Value<String?>.absent()
-          : Value<String?>(torrentHash),
-      observedSavePath: observedSavePath == null
-          ? const Value<String?>.absent()
-          : Value<String?>(observedSavePath),
-      targetRelativeRoot: targetRelativeRoot == null
-          ? const Value<String?>.absent()
-          : Value<String?>(targetRelativeRoot),
-      attemptCount:
-          resetAttempts ? const Value<int>(0) : const Value<int>.absent(),
-      nextAttemptAt: Value<int?>(nowAt),
-      claimedBy: const Value<String?>(null),
-      claimExpiresAt: const Value<int?>(null),
-      lastError: const Value<String?>(null),
-      updatedAt: Value<int>(nowAt),
-    ));
+    final int changed =
+        await (update(videoDownloadJobs)..where(
+              ($VideoDownloadJobsTable t) =>
+                  t.jobId.equals(jobId) &
+                  t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
+                  t.claimedBy.equals(workerId),
+            ))
+            .write(
+              VideoDownloadJobsCompanion(
+                stage: Value<String>(stage),
+                stageProgress: progress == null
+                    ? const Value<double>.absent()
+                    : Value<double>(progress),
+                backendTaskId: backendTaskId == null
+                    ? const Value<String?>.absent()
+                    : Value<String?>(backendTaskId),
+                torrentHash: torrentHash == null
+                    ? const Value<String?>.absent()
+                    : Value<String?>(torrentHash),
+                observedSavePath: observedSavePath == null
+                    ? const Value<String?>.absent()
+                    : Value<String?>(observedSavePath),
+                targetRelativeRoot: targetRelativeRoot == null
+                    ? const Value<String?>.absent()
+                    : Value<String?>(targetRelativeRoot),
+                attemptCount: resetAttempts
+                    ? const Value<int>(0)
+                    : const Value<int>.absent(),
+                nextAttemptAt: Value<int?>(nowAt),
+                claimedBy: const Value<String?>(null),
+                claimExpiresAt: const Value<int?>(null),
+                lastError: const Value<String?>(null),
+                updatedAt: Value<int>(nowAt),
+              ),
+            );
     return changed == 1;
   }
 
@@ -1472,19 +1556,25 @@ mixin _FushiDbVideoDomain
     required String error,
     required int nowAt,
   }) async {
-    final int changed = await (update(videoDownloadJobs)
-          ..where(($VideoDownloadJobsTable t) =>
-              t.jobId.equals(jobId) &
-              t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
-              t.claimedBy.equals(workerId)))
-        .write(VideoDownloadJobsCompanion(
-      lifecycle: const Value<String>(VideoDownloadJobLifecycle.needsAttention),
-      nextAttemptAt: const Value<int?>(null),
-      claimedBy: const Value<String?>(null),
-      claimExpiresAt: const Value<int?>(null),
-      lastError: Value<String?>(error),
-      updatedAt: Value<int>(nowAt),
-    ));
+    final int changed =
+        await (update(videoDownloadJobs)..where(
+              ($VideoDownloadJobsTable t) =>
+                  t.jobId.equals(jobId) &
+                  t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
+                  t.claimedBy.equals(workerId),
+            ))
+            .write(
+              VideoDownloadJobsCompanion(
+                lifecycle: const Value<String>(
+                  VideoDownloadJobLifecycle.needsAttention,
+                ),
+                nextAttemptAt: const Value<int?>(null),
+                claimedBy: const Value<String?>(null),
+                claimExpiresAt: const Value<int?>(null),
+                lastError: Value<String?>(error),
+                updatedAt: Value<int>(nowAt),
+              ),
+            );
     return changed == 1;
   }
 
@@ -1495,32 +1585,38 @@ mixin _FushiDbVideoDomain
     required int nowAt,
     bool rewindToEnqueue = false,
   }) async {
-    final int changed = await (update(videoDownloadJobs)
-          ..where(($VideoDownloadJobsTable t) =>
-              t.jobId.equals(jobId) &
-              t.lifecycle.isIn(<String>[
-                VideoDownloadJobLifecycle.needsAttention,
-                VideoDownloadJobLifecycle.failed,
-              ])))
-        .write(VideoDownloadJobsCompanion(
-      lifecycle: const Value<String>(VideoDownloadJobLifecycle.active),
-      stage: rewindToEnqueue
-          ? const Value<String>(VideoDownloadJobStage.enqueue)
-          : const Value<String>.absent(),
-      stageProgress: rewindToEnqueue
-          ? const Value<double>(0)
-          : const Value<double>.absent(),
-      backendTaskId: rewindToEnqueue
-          ? const Value<String?>(null)
-          : const Value<String?>.absent(),
-      attemptCount: const Value<int>(0),
-      nextAttemptAt: Value<int?>(nowAt),
-      claimedBy: const Value<String?>(null),
-      claimExpiresAt: const Value<int?>(null),
-      lastError: const Value<String?>(null),
-      completedAt: const Value<int?>(null),
-      updatedAt: Value<int>(nowAt),
-    ));
+    final int changed =
+        await (update(videoDownloadJobs)..where(
+              ($VideoDownloadJobsTable t) =>
+                  t.jobId.equals(jobId) &
+                  t.lifecycle.isIn(<String>[
+                    VideoDownloadJobLifecycle.needsAttention,
+                    VideoDownloadJobLifecycle.failed,
+                  ]),
+            ))
+            .write(
+              VideoDownloadJobsCompanion(
+                lifecycle: const Value<String>(
+                  VideoDownloadJobLifecycle.active,
+                ),
+                stage: rewindToEnqueue
+                    ? const Value<String>(VideoDownloadJobStage.enqueue)
+                    : const Value<String>.absent(),
+                stageProgress: rewindToEnqueue
+                    ? const Value<double>(0)
+                    : const Value<double>.absent(),
+                backendTaskId: rewindToEnqueue
+                    ? const Value<String?>(null)
+                    : const Value<String?>.absent(),
+                attemptCount: const Value<int>(0),
+                nextAttemptAt: Value<int?>(nowAt),
+                claimedBy: const Value<String?>(null),
+                claimExpiresAt: const Value<int?>(null),
+                lastError: const Value<String?>(null),
+                completedAt: const Value<int?>(null),
+                updatedAt: Value<int>(nowAt),
+              ),
+            );
     return changed == 1;
   }
 
@@ -1566,22 +1662,28 @@ mixin _FushiDbVideoDomain
           ? row.attemptCount - row.maxAttempts
           : 0;
       if (borrowed >= autoRetryBudget) return false;
-      final int changed = await (update(videoDownloadJobs)
-            ..where(($VideoDownloadJobsTable t) =>
-                t.jobId.equals(jobId) &
-                t.lifecycle.isIn(<String>[
-                  VideoDownloadJobLifecycle.failed,
-                  VideoDownloadJobLifecycle.needsAttention,
-                ])))
-          .write(VideoDownloadJobsCompanion(
-        lifecycle: const Value<String>(VideoDownloadJobLifecycle.active),
-        attemptCount: Value<int>(row.maxAttempts + borrowed + 1),
-        nextAttemptAt: Value<int?>(nowAt),
-        claimedBy: const Value<String?>(null),
-        claimExpiresAt: const Value<int?>(null),
-        completedAt: const Value<int?>(null),
-        updatedAt: Value<int>(nowAt),
-      ));
+      final int changed =
+          await (update(videoDownloadJobs)..where(
+                ($VideoDownloadJobsTable t) =>
+                    t.jobId.equals(jobId) &
+                    t.lifecycle.isIn(<String>[
+                      VideoDownloadJobLifecycle.failed,
+                      VideoDownloadJobLifecycle.needsAttention,
+                    ]),
+              ))
+              .write(
+                VideoDownloadJobsCompanion(
+                  lifecycle: const Value<String>(
+                    VideoDownloadJobLifecycle.active,
+                  ),
+                  attemptCount: Value<int>(row.maxAttempts + borrowed + 1),
+                  nextAttemptAt: Value<int?>(nowAt),
+                  claimedBy: const Value<String?>(null),
+                  claimExpiresAt: const Value<int?>(null),
+                  completedAt: const Value<int?>(null),
+                  updatedAt: Value<int>(nowAt),
+                ),
+              );
       return changed == 1;
     });
   }
@@ -1601,12 +1703,15 @@ mixin _FushiDbVideoDomain
     required int priority,
     required int nowAt,
   }) async {
-    final int changed = await (update(videoDownloadJobs)
-          ..where(($VideoDownloadJobsTable t) => t.jobId.equals(jobId)))
-        .write(VideoDownloadJobsCompanion(
-      priority: Value<int>(priority),
-      updatedAt: Value<int>(nowAt),
-    ));
+    final int changed =
+        await (update(
+          videoDownloadJobs,
+        )..where(($VideoDownloadJobsTable t) => t.jobId.equals(jobId))).write(
+          VideoDownloadJobsCompanion(
+            priority: Value<int>(priority),
+            updatedAt: Value<int>(nowAt),
+          ),
+        );
     return changed == 1;
   }
 
@@ -1618,29 +1723,35 @@ mixin _FushiDbVideoDomain
     required int nowAt,
     bool rewindToEnqueue = false,
   }) async {
-    final int changed = await (update(videoDownloadJobs)
-          ..where(($VideoDownloadJobsTable t) =>
-              t.jobId.equals(jobId) &
-              t.lifecycle.equals(VideoDownloadJobLifecycle.cancelled)))
-        .write(VideoDownloadJobsCompanion(
-      lifecycle: const Value<String>(VideoDownloadJobLifecycle.active),
-      stage: rewindToEnqueue
-          ? const Value<String>(VideoDownloadJobStage.enqueue)
-          : const Value<String>.absent(),
-      stageProgress: rewindToEnqueue
-          ? const Value<double>(0)
-          : const Value<double>.absent(),
-      backendTaskId: rewindToEnqueue
-          ? const Value<String?>(null)
-          : const Value<String?>.absent(),
-      attemptCount: const Value<int>(0),
-      nextAttemptAt: Value<int?>(nowAt),
-      claimedBy: const Value<String?>(null),
-      claimExpiresAt: const Value<int?>(null),
-      lastError: const Value<String?>(null),
-      completedAt: const Value<int?>(null),
-      updatedAt: Value<int>(nowAt),
-    ));
+    final int changed =
+        await (update(videoDownloadJobs)..where(
+              ($VideoDownloadJobsTable t) =>
+                  t.jobId.equals(jobId) &
+                  t.lifecycle.equals(VideoDownloadJobLifecycle.cancelled),
+            ))
+            .write(
+              VideoDownloadJobsCompanion(
+                lifecycle: const Value<String>(
+                  VideoDownloadJobLifecycle.active,
+                ),
+                stage: rewindToEnqueue
+                    ? const Value<String>(VideoDownloadJobStage.enqueue)
+                    : const Value<String>.absent(),
+                stageProgress: rewindToEnqueue
+                    ? const Value<double>(0)
+                    : const Value<double>.absent(),
+                backendTaskId: rewindToEnqueue
+                    ? const Value<String?>(null)
+                    : const Value<String?>.absent(),
+                attemptCount: const Value<int>(0),
+                nextAttemptAt: Value<int?>(nowAt),
+                claimedBy: const Value<String?>(null),
+                claimExpiresAt: const Value<int?>(null),
+                lastError: const Value<String?>(null),
+                completedAt: const Value<int?>(null),
+                updatedAt: Value<int>(nowAt),
+              ),
+            );
     return changed == 1;
   }
 
@@ -1661,38 +1772,43 @@ mixin _FushiDbVideoDomain
     required String error,
     required int nowAt,
     required int nextAttemptAt,
-  }) =>
-      transaction(() async {
-        final VideoDownloadJobRow? row = await getVideoDownloadJob(jobId);
-        if (row == null ||
-            row.lifecycle != VideoDownloadJobLifecycle.active ||
-            row.claimedBy != workerId) {
-          return false;
-        }
-        final int nextAttemptCount = row.attemptCount + 1;
-        final bool exhausted = nextAttemptCount >= row.maxAttempts;
-        final int changed = await (update(videoDownloadJobs)
-              ..where(($VideoDownloadJobsTable t) =>
+  }) => transaction(() async {
+    final VideoDownloadJobRow? row = await getVideoDownloadJob(jobId);
+    if (row == null ||
+        row.lifecycle != VideoDownloadJobLifecycle.active ||
+        row.claimedBy != workerId) {
+      return false;
+    }
+    final int nextAttemptCount = row.attemptCount + 1;
+    final bool exhausted = nextAttemptCount >= row.maxAttempts;
+    final int changed =
+        await (update(videoDownloadJobs)..where(
+              ($VideoDownloadJobsTable t) =>
                   t.jobId.equals(jobId) &
                   t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
-                  t.claimedBy.equals(workerId)))
-            .write(VideoDownloadJobsCompanion(
-          lifecycle: Value<String>(exhausted
-              ? VideoDownloadJobLifecycle.failed
-              : VideoDownloadJobLifecycle.active),
-          stage: const Value<String>(VideoDownloadJobStage.enqueue),
-          stageProgress: const Value<double>(0),
-          backendTaskId: const Value<String?>(null),
-          attemptCount: Value<int>(nextAttemptCount),
-          nextAttemptAt: Value<int?>(exhausted ? null : nextAttemptAt),
-          claimedBy: const Value<String?>(null),
-          claimExpiresAt: const Value<int?>(null),
-          lastError: Value<String?>(error),
-          completedAt: Value<int?>(exhausted ? nowAt : null),
-          updatedAt: Value<int>(nowAt),
-        ));
-        return changed == 1;
-      });
+                  t.claimedBy.equals(workerId),
+            ))
+            .write(
+              VideoDownloadJobsCompanion(
+                lifecycle: Value<String>(
+                  exhausted
+                      ? VideoDownloadJobLifecycle.failed
+                      : VideoDownloadJobLifecycle.active,
+                ),
+                stage: const Value<String>(VideoDownloadJobStage.enqueue),
+                stageProgress: const Value<double>(0),
+                backendTaskId: const Value<String?>(null),
+                attemptCount: Value<int>(nextAttemptCount),
+                nextAttemptAt: Value<int?>(exhausted ? null : nextAttemptAt),
+                claimedBy: const Value<String?>(null),
+                claimExpiresAt: const Value<int?>(null),
+                lastError: Value<String?>(error),
+                completedAt: Value<int?>(exhausted ? nowAt : null),
+                updatedAt: Value<int>(nowAt),
+              ),
+            );
+    return changed == 1;
+  });
 
   /// Explicit user cancellation. Files and backend tasks are deliberately not
   /// deleted here; the app layer pauses a matching backend task first when the
@@ -1701,23 +1817,29 @@ mixin _FushiDbVideoDomain
     required String jobId,
     required int nowAt,
   }) async {
-    final int changed = await (update(videoDownloadJobs)
-          ..where(($VideoDownloadJobsTable t) =>
-              t.jobId.equals(jobId) &
-              t.lifecycle.isIn(<String>[
-                VideoDownloadJobLifecycle.active,
-                VideoDownloadJobLifecycle.needsAttention,
-                VideoDownloadJobLifecycle.failed,
-              ])))
-        .write(VideoDownloadJobsCompanion(
-      lifecycle: const Value<String>(VideoDownloadJobLifecycle.cancelled),
-      nextAttemptAt: const Value<int?>(null),
-      claimedBy: const Value<String?>(null),
-      claimExpiresAt: const Value<int?>(null),
-      lastError: const Value<String?>(null),
-      completedAt: Value<int?>(nowAt),
-      updatedAt: Value<int>(nowAt),
-    ));
+    final int changed =
+        await (update(videoDownloadJobs)..where(
+              ($VideoDownloadJobsTable t) =>
+                  t.jobId.equals(jobId) &
+                  t.lifecycle.isIn(<String>[
+                    VideoDownloadJobLifecycle.active,
+                    VideoDownloadJobLifecycle.needsAttention,
+                    VideoDownloadJobLifecycle.failed,
+                  ]),
+            ))
+            .write(
+              VideoDownloadJobsCompanion(
+                lifecycle: const Value<String>(
+                  VideoDownloadJobLifecycle.cancelled,
+                ),
+                nextAttemptAt: const Value<int?>(null),
+                claimedBy: const Value<String?>(null),
+                claimExpiresAt: const Value<int?>(null),
+                lastError: const Value<String?>(null),
+                completedAt: Value<int?>(nowAt),
+                updatedAt: Value<int>(nowAt),
+              ),
+            );
     return changed == 1;
   }
 
@@ -1728,17 +1850,21 @@ mixin _FushiDbVideoDomain
     required int nowAt,
     int? nextAttemptAt,
   }) async {
-    final int changed = await (update(videoDownloadJobs)
-          ..where(($VideoDownloadJobsTable t) =>
-              t.jobId.equals(jobId) &
-              t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
-              t.claimedBy.equals(workerId)))
-        .write(VideoDownloadJobsCompanion(
-      nextAttemptAt: Value<int?>(nextAttemptAt),
-      claimedBy: const Value<String?>(null),
-      claimExpiresAt: const Value<int?>(null),
-      updatedAt: Value<int>(nowAt),
-    ));
+    final int changed =
+        await (update(videoDownloadJobs)..where(
+              ($VideoDownloadJobsTable t) =>
+                  t.jobId.equals(jobId) &
+                  t.lifecycle.equals(VideoDownloadJobLifecycle.active) &
+                  t.claimedBy.equals(workerId),
+            ))
+            .write(
+              VideoDownloadJobsCompanion(
+                nextAttemptAt: Value<int?>(nextAttemptAt),
+                claimedBy: const Value<String?>(null),
+                claimExpiresAt: const Value<int?>(null),
+                updatedAt: Value<int>(nowAt),
+              ),
+            );
     return changed == 1;
   }
 
@@ -1789,30 +1915,27 @@ mixin _FushiDbVideoDomain
   Future<int> updateVideoDownloadJobFile(
     int id,
     VideoDownloadJobFilesCompanion patch,
-  ) =>
-      (update(videoDownloadJobFiles)
-            ..where(($VideoDownloadJobFilesTable t) => t.id.equals(id)))
-          .write(patch);
+  ) => (update(
+    videoDownloadJobFiles,
+  )..where(($VideoDownloadJobFilesTable t) => t.id.equals(id))).write(patch);
 
-  Future<int> deleteVideoDownloadJobFile(int id) =>
-      (delete(videoDownloadJobFiles)
-            ..where(($VideoDownloadJobFilesTable t) => t.id.equals(id)))
-          .go();
+  Future<int> deleteVideoDownloadJobFile(int id) => (delete(
+    videoDownloadJobFiles,
+  )..where(($VideoDownloadJobFilesTable t) => t.id.equals(id))).go();
 
   Future<void> replaceVideoDownloadJobFiles(
     String jobId,
     List<VideoDownloadJobFilesCompanion> files,
-  ) =>
-      transaction(() async {
-        await (delete(videoDownloadJobFiles)
-              ..where(($VideoDownloadJobFilesTable t) => t.jobId.equals(jobId)))
-            .go();
-        for (final VideoDownloadJobFilesCompanion file in files) {
-          await into(videoDownloadJobFiles).insert(
-            file.copyWith(jobId: Value<String>(jobId)),
-          );
-        }
-      });
+  ) => transaction(() async {
+    await (delete(
+      videoDownloadJobFiles,
+    )..where(($VideoDownloadJobFilesTable t) => t.jobId.equals(jobId))).go();
+    for (final VideoDownloadJobFilesCompanion file in files) {
+      await into(
+        videoDownloadJobFiles,
+      ).insert(file.copyWith(jobId: Value<String>(jobId)));
+    }
+  });
 
   Future<void> upsertVideoDownloadJobSubtitle(
     VideoDownloadJobSubtitlesCompanion subtitle,
@@ -1834,7 +1957,8 @@ mixin _FushiDbVideoDomain
   ) =>
       (select(videoDownloadJobSubtitles)
             ..where(
-                ($VideoDownloadJobSubtitlesTable t) => t.jobId.equals(jobId))
+              ($VideoDownloadJobSubtitlesTable t) => t.jobId.equals(jobId),
+            )
             ..orderBy(<OrderingTerm Function($VideoDownloadJobSubtitlesTable)>[
               ($VideoDownloadJobSubtitlesTable t) =>
                   OrderingTerm(expression: t.season),
@@ -1850,7 +1974,8 @@ mixin _FushiDbVideoDomain
   ) =>
       (select(videoDownloadJobSubtitles)
             ..where(
-                ($VideoDownloadJobSubtitlesTable t) => t.jobId.equals(jobId))
+              ($VideoDownloadJobSubtitlesTable t) => t.jobId.equals(jobId),
+            )
             ..orderBy(<OrderingTerm Function($VideoDownloadJobSubtitlesTable)>[
               ($VideoDownloadJobSubtitlesTable t) =>
                   OrderingTerm(expression: t.season),
@@ -1865,15 +1990,17 @@ mixin _FushiDbVideoDomain
     String subtitleId,
     VideoDownloadJobSubtitlesCompanion patch,
   ) =>
-      (update(videoDownloadJobSubtitles)
-            ..where(($VideoDownloadJobSubtitlesTable t) =>
-                t.subtitleId.equals(subtitleId)))
+      (update(videoDownloadJobSubtitles)..where(
+            ($VideoDownloadJobSubtitlesTable t) =>
+                t.subtitleId.equals(subtitleId),
+          ))
           .write(patch);
 
   Future<int> deleteVideoDownloadJobSubtitle(String subtitleId) =>
-      (delete(videoDownloadJobSubtitles)
-            ..where(($VideoDownloadJobSubtitlesTable t) =>
-                t.subtitleId.equals(subtitleId)))
+      (delete(videoDownloadJobSubtitles)..where(
+            ($VideoDownloadJobSubtitlesTable t) =>
+                t.subtitleId.equals(subtitleId),
+          ))
           .go();
 
   Future<void> upsertVideoDownloadSubscription(
@@ -1886,9 +2013,7 @@ mixin _FushiDbVideoDomain
       subscription,
       onConflict: DoUpdate(
         (_) => subscription,
-        target: <Column<Object>>[
-          videoDownloadSubscriptions.subscriptionId,
-        ],
+        target: <Column<Object>>[videoDownloadSubscriptions.subscriptionId],
       ),
     );
   }
@@ -1896,9 +2021,10 @@ mixin _FushiDbVideoDomain
   Future<VideoDownloadSubscriptionRow?> getVideoDownloadSubscription(
     String subscriptionId,
   ) =>
-      (select(videoDownloadSubscriptions)
-            ..where(($VideoDownloadSubscriptionsTable t) =>
-                t.subscriptionId.equals(subscriptionId)))
+      (select(videoDownloadSubscriptions)..where(
+            ($VideoDownloadSubscriptionsTable t) =>
+                t.subscriptionId.equals(subscriptionId),
+          ))
           .getSingleOrNull();
 
   Future<List<VideoDownloadSubscriptionRow>> getVideoDownloadSubscriptions() =>
@@ -1912,7 +2038,8 @@ mixin _FushiDbVideoDomain
           .get();
 
   Stream<List<VideoDownloadSubscriptionRow>>
-      watchVideoDownloadSubscriptions() => (select(videoDownloadSubscriptions)
+  watchVideoDownloadSubscriptions() =>
+      (select(videoDownloadSubscriptions)
             ..orderBy(<OrderingTerm Function($VideoDownloadSubscriptionsTable)>[
               ($VideoDownloadSubscriptionsTable t) =>
                   OrderingTerm.desc(t.createdAt),
@@ -1925,15 +2052,17 @@ mixin _FushiDbVideoDomain
     String subscriptionId,
     VideoDownloadSubscriptionsCompanion patch,
   ) =>
-      (update(videoDownloadSubscriptions)
-            ..where(($VideoDownloadSubscriptionsTable t) =>
-                t.subscriptionId.equals(subscriptionId)))
+      (update(videoDownloadSubscriptions)..where(
+            ($VideoDownloadSubscriptionsTable t) =>
+                t.subscriptionId.equals(subscriptionId),
+          ))
           .write(patch);
 
   Future<int> deleteVideoDownloadSubscription(String subscriptionId) =>
-      (delete(videoDownloadSubscriptions)
-            ..where(($VideoDownloadSubscriptionsTable t) =>
-                t.subscriptionId.equals(subscriptionId)))
+      (delete(videoDownloadSubscriptions)..where(
+            ($VideoDownloadSubscriptionsTable t) =>
+                t.subscriptionId.equals(subscriptionId),
+          ))
           .go();
 
   /// 原子领取一个到期订阅检查。订阅没有 job lifecycle/stage；enabled、nextCheckAt
@@ -1953,46 +2082,52 @@ mixin _FushiDbVideoDomain
         final VideoDownloadSubscriptionRow? candidate =
             await (select(videoDownloadSubscriptions)
                   ..where(($VideoDownloadSubscriptionsTable t) {
-                    final Expression<bool> due = t.enabled.equals(true) &
+                    final Expression<bool> due =
+                        t.enabled.equals(true) &
                         (t.nextCheckAt.isNull() |
                             t.nextCheckAt.isSmallerOrEqualValue(nowAt));
                     final Expression<bool> unclaimed = t.claimedBy.isNull();
                     final Expression<bool> abandoned =
                         t.claimExpiresAt.isNotNull() &
-                            t.claimExpiresAt.isSmallerOrEqualValue(nowAt);
+                        t.claimExpiresAt.isSmallerOrEqualValue(nowAt);
                     return due & (unclaimed | abandoned);
                   })
-                  ..orderBy(<OrderingTerm Function(
-                      $VideoDownloadSubscriptionsTable)>[
-                    ($VideoDownloadSubscriptionsTable t) =>
-                        OrderingTerm(expression: t.nextCheckAt),
-                    ($VideoDownloadSubscriptionsTable t) =>
-                        OrderingTerm(expression: t.createdAt),
-                    ($VideoDownloadSubscriptionsTable t) =>
-                        OrderingTerm(expression: t.subscriptionId),
-                  ])
+                  ..orderBy(
+                    <OrderingTerm Function($VideoDownloadSubscriptionsTable)>[
+                      ($VideoDownloadSubscriptionsTable t) =>
+                          OrderingTerm(expression: t.nextCheckAt),
+                      ($VideoDownloadSubscriptionsTable t) =>
+                          OrderingTerm(expression: t.createdAt),
+                      ($VideoDownloadSubscriptionsTable t) =>
+                          OrderingTerm(expression: t.subscriptionId),
+                    ],
+                  )
                   ..limit(1))
                 .getSingleOrNull();
         if (candidate == null) return null;
 
-        final int changed = await (update(videoDownloadSubscriptions)
-              ..where(($VideoDownloadSubscriptionsTable t) {
-                final Expression<bool> due = t.enabled.equals(true) &
-                    (t.nextCheckAt.isNull() |
-                        t.nextCheckAt.isSmallerOrEqualValue(nowAt));
-                final Expression<bool> unclaimed = t.claimedBy.isNull();
-                final Expression<bool> abandoned =
-                    t.claimExpiresAt.isNotNull() &
+        final int changed =
+            await (update(videoDownloadSubscriptions)
+                  ..where(($VideoDownloadSubscriptionsTable t) {
+                    final Expression<bool> due =
+                        t.enabled.equals(true) &
+                        (t.nextCheckAt.isNull() |
+                            t.nextCheckAt.isSmallerOrEqualValue(nowAt));
+                    final Expression<bool> unclaimed = t.claimedBy.isNull();
+                    final Expression<bool> abandoned =
+                        t.claimExpiresAt.isNotNull() &
                         t.claimExpiresAt.isSmallerOrEqualValue(nowAt);
-                return t.subscriptionId.equals(candidate.subscriptionId) &
-                    due &
-                    (unclaimed | abandoned);
-              }))
-            .write(VideoDownloadSubscriptionsCompanion(
-          claimedBy: Value<String?>(workerId),
-          claimExpiresAt: Value<int?>(claimExpiresAt),
-          updatedAt: Value<int>(nowAt),
-        ));
+                    return t.subscriptionId.equals(candidate.subscriptionId) &
+                        due &
+                        (unclaimed | abandoned);
+                  }))
+                .write(
+                  VideoDownloadSubscriptionsCompanion(
+                    claimedBy: Value<String?>(workerId),
+                    claimExpiresAt: Value<int?>(claimExpiresAt),
+                    updatedAt: Value<int>(nowAt),
+                  ),
+                );
         if (changed == 1) {
           return getVideoDownloadSubscription(candidate.subscriptionId);
         }
@@ -2049,16 +2184,20 @@ mixin _FushiDbVideoDomain
     if (leaseDurationMs <= 0) {
       throw ArgumentError.value(leaseDurationMs, 'leaseDurationMs');
     }
-    final int changed = await (update(videoDownloadSubscriptions)
-          ..where(($VideoDownloadSubscriptionsTable t) =>
-              t.subscriptionId.equals(subscriptionId) &
-              t.enabled.equals(true) &
-              t.claimedBy.equals(workerId) &
-              t.claimExpiresAt.isBiggerThanValue(nowAt)))
-        .write(VideoDownloadSubscriptionsCompanion(
-      claimExpiresAt: Value<int?>(nowAt + leaseDurationMs),
-      updatedAt: Value<int>(nowAt),
-    ));
+    final int changed =
+        await (update(videoDownloadSubscriptions)..where(
+              ($VideoDownloadSubscriptionsTable t) =>
+                  t.subscriptionId.equals(subscriptionId) &
+                  t.enabled.equals(true) &
+                  t.claimedBy.equals(workerId) &
+                  t.claimExpiresAt.isBiggerThanValue(nowAt),
+            ))
+            .write(
+              VideoDownloadSubscriptionsCompanion(
+                claimExpiresAt: Value<int?>(nowAt + leaseDurationMs),
+                updatedAt: Value<int>(nowAt),
+              ),
+            );
     return changed == 1;
   }
 
@@ -2070,27 +2209,32 @@ mixin _FushiDbVideoDomain
     int? matchedAt,
     bool fulfillOneShot = false,
   }) async {
-    final int changed = await (update(videoDownloadSubscriptions)
-          ..where(($VideoDownloadSubscriptionsTable t) =>
-              t.subscriptionId.equals(subscriptionId) &
-              t.claimedBy.equals(workerId)))
-        .write(VideoDownloadSubscriptionsCompanion(
-      enabled: fulfillOneShot
-          ? const Value<bool>(false)
-          : const Value<bool>.absent(),
-      nextCheckAt: Value<int?>(nextCheckAt),
-      claimedBy: const Value<String?>(null),
-      claimExpiresAt: const Value<int?>(null),
-      retryCount: const Value<int>(0),
-      lastCheckedAt: Value<int?>(checkedAt),
-      lastMatchedAt: matchedAt == null
-          ? const Value<int?>.absent()
-          : Value<int?>(matchedAt),
-      fulfilledAt:
-          fulfillOneShot ? Value<int?>(checkedAt) : const Value<int?>.absent(),
-      lastError: const Value<String?>(null),
-      updatedAt: Value<int>(checkedAt),
-    ));
+    final int changed =
+        await (update(videoDownloadSubscriptions)..where(
+              ($VideoDownloadSubscriptionsTable t) =>
+                  t.subscriptionId.equals(subscriptionId) &
+                  t.claimedBy.equals(workerId),
+            ))
+            .write(
+              VideoDownloadSubscriptionsCompanion(
+                enabled: fulfillOneShot
+                    ? const Value<bool>(false)
+                    : const Value<bool>.absent(),
+                nextCheckAt: Value<int?>(nextCheckAt),
+                claimedBy: const Value<String?>(null),
+                claimExpiresAt: const Value<int?>(null),
+                retryCount: const Value<int>(0),
+                lastCheckedAt: Value<int?>(checkedAt),
+                lastMatchedAt: matchedAt == null
+                    ? const Value<int?>.absent()
+                    : Value<int?>(matchedAt),
+                fulfilledAt: fulfillOneShot
+                    ? Value<int?>(checkedAt)
+                    : const Value<int?>.absent(),
+                lastError: const Value<String?>(null),
+                updatedAt: Value<int>(checkedAt),
+              ),
+            );
     return changed == 1;
   }
 
@@ -2100,28 +2244,31 @@ mixin _FushiDbVideoDomain
     required String error,
     required int failedAt,
     required int nextCheckAt,
-  }) =>
-      transaction(() async {
-        final VideoDownloadSubscriptionRow? row =
-            await getVideoDownloadSubscription(subscriptionId);
-        if (row == null || row.claimedBy != workerId) {
-          return false;
-        }
-        final int changed = await (update(videoDownloadSubscriptions)
-              ..where(($VideoDownloadSubscriptionsTable t) =>
+  }) => transaction(() async {
+    final VideoDownloadSubscriptionRow? row =
+        await getVideoDownloadSubscription(subscriptionId);
+    if (row == null || row.claimedBy != workerId) {
+      return false;
+    }
+    final int changed =
+        await (update(videoDownloadSubscriptions)..where(
+              ($VideoDownloadSubscriptionsTable t) =>
                   t.subscriptionId.equals(subscriptionId) &
-                  t.claimedBy.equals(workerId)))
-            .write(VideoDownloadSubscriptionsCompanion(
-          nextCheckAt: Value<int?>(nextCheckAt),
-          claimedBy: const Value<String?>(null),
-          claimExpiresAt: const Value<int?>(null),
-          retryCount: Value<int>(row.retryCount + 1),
-          lastCheckedAt: Value<int?>(failedAt),
-          lastError: Value<String?>(error),
-          updatedAt: Value<int>(failedAt),
-        ));
-        return changed == 1;
-      });
+                  t.claimedBy.equals(workerId),
+            ))
+            .write(
+              VideoDownloadSubscriptionsCompanion(
+                nextCheckAt: Value<int?>(nextCheckAt),
+                claimedBy: const Value<String?>(null),
+                claimExpiresAt: const Value<int?>(null),
+                retryCount: Value<int>(row.retryCount + 1),
+                lastCheckedAt: Value<int?>(failedAt),
+                lastError: Value<String?>(error),
+                updatedAt: Value<int>(failedAt),
+              ),
+            );
+    return changed == 1;
+  });
 
   Future<void> upsertVideoDownloadSubscriptionItem(
     VideoDownloadSubscriptionItemsCompanion item,
@@ -2131,7 +2278,8 @@ mixin _FushiDbVideoDomain
         !item.resourceProvider.present ||
         !item.selectedResourceId.present) {
       throw ArgumentError(
-          'subscription item requires subscription and resource identity');
+        'subscription item requires subscription and resource identity',
+      );
     }
     await into(videoDownloadSubscriptionItems).insert(
       item,
@@ -2146,43 +2294,49 @@ mixin _FushiDbVideoDomain
   }
 
   Future<List<VideoDownloadSubscriptionItemRow>>
-      getVideoDownloadSubscriptionItems(String subscriptionId) =>
-          (select(videoDownloadSubscriptionItems)
-                ..where(($VideoDownloadSubscriptionItemsTable t) =>
-                    t.subscriptionId.equals(subscriptionId))
-                ..orderBy(<OrderingTerm Function(
-                    $VideoDownloadSubscriptionItemsTable)>[
-                  ($VideoDownloadSubscriptionItemsTable t) =>
-                      OrderingTerm(expression: t.season),
-                  ($VideoDownloadSubscriptionItemsTable t) =>
-                      OrderingTerm(expression: t.episode),
-                  ($VideoDownloadSubscriptionItemsTable t) =>
-                      OrderingTerm(expression: t.discoveredAt),
-                ]))
-              .get();
+  getVideoDownloadSubscriptionItems(String subscriptionId) =>
+      (select(videoDownloadSubscriptionItems)
+            ..where(
+              ($VideoDownloadSubscriptionItemsTable t) =>
+                  t.subscriptionId.equals(subscriptionId),
+            )
+            ..orderBy(
+              <OrderingTerm Function($VideoDownloadSubscriptionItemsTable)>[
+                ($VideoDownloadSubscriptionItemsTable t) =>
+                    OrderingTerm(expression: t.season),
+                ($VideoDownloadSubscriptionItemsTable t) =>
+                    OrderingTerm(expression: t.episode),
+                ($VideoDownloadSubscriptionItemsTable t) =>
+                    OrderingTerm(expression: t.discoveredAt),
+              ],
+            ))
+          .get();
 
   Stream<List<VideoDownloadSubscriptionItemRow>>
-      watchVideoDownloadSubscriptionItems(String subscriptionId) =>
-          (select(videoDownloadSubscriptionItems)
-                ..where(($VideoDownloadSubscriptionItemsTable t) =>
-                    t.subscriptionId.equals(subscriptionId))
-                ..orderBy(<OrderingTerm Function(
-                    $VideoDownloadSubscriptionItemsTable)>[
-                  ($VideoDownloadSubscriptionItemsTable t) =>
-                      OrderingTerm(expression: t.season),
-                  ($VideoDownloadSubscriptionItemsTable t) =>
-                      OrderingTerm(expression: t.episode),
-                  ($VideoDownloadSubscriptionItemsTable t) =>
-                      OrderingTerm(expression: t.discoveredAt),
-                ]))
-              .watch();
+  watchVideoDownloadSubscriptionItems(String subscriptionId) =>
+      (select(videoDownloadSubscriptionItems)
+            ..where(
+              ($VideoDownloadSubscriptionItemsTable t) =>
+                  t.subscriptionId.equals(subscriptionId),
+            )
+            ..orderBy(
+              <OrderingTerm Function($VideoDownloadSubscriptionItemsTable)>[
+                ($VideoDownloadSubscriptionItemsTable t) =>
+                    OrderingTerm(expression: t.season),
+                ($VideoDownloadSubscriptionItemsTable t) =>
+                    OrderingTerm(expression: t.episode),
+                ($VideoDownloadSubscriptionItemsTable t) =>
+                    OrderingTerm(expression: t.discoveredAt),
+              ],
+            ))
+          .watch();
 
   /// 每个订阅的 items 状态计数（外层 map 键 = subscriptionId，内层键 =
   /// [VideoDownloadSubscriptionItemStatus] 值）。订阅面板卡片的
   /// 「N 已入库 · M 排队中 · K 失败」摘要用；一条 GROUP BY 拿全量，
   /// 避免面板对每张卡各发一查。
   Future<Map<String, Map<String, int>>>
-      getVideoDownloadSubscriptionItemStatusCounts() async {
+  getVideoDownloadSubscriptionItemStatusCounts() async {
     final List<QueryRow> rows = await customSelect(
       'SELECT subscription_id AS sid, status AS st, COUNT(*) AS cnt '
       'FROM video_download_subscription_items '
@@ -2192,8 +2346,8 @@ mixin _FushiDbVideoDomain
     final Map<String, Map<String, int>> out = <String, Map<String, int>>{};
     for (final QueryRow row in rows) {
       final String sid = row.read<String>('sid');
-      out.putIfAbsent(sid, () => <String, int>{})[row.read<String>('st')] =
-          row.read<int>('cnt');
+      out.putIfAbsent(sid, () => <String, int>{})[row.read<String>('st')] = row
+          .read<int>('cnt');
     }
     return out;
   }
@@ -2202,15 +2356,14 @@ mixin _FushiDbVideoDomain
     int id,
     VideoDownloadSubscriptionItemsCompanion patch,
   ) =>
-      (update(videoDownloadSubscriptionItems)
-            ..where(
-                ($VideoDownloadSubscriptionItemsTable t) => t.id.equals(id)))
+      (update(
+            videoDownloadSubscriptionItems,
+          )..where(($VideoDownloadSubscriptionItemsTable t) => t.id.equals(id)))
           .write(patch);
 
   Future<int> deleteVideoDownloadSubscriptionItem(int id) => (delete(
-          videoDownloadSubscriptionItems)
-        ..where(($VideoDownloadSubscriptionItemsTable t) => t.id.equals(id)))
-      .go();
+    videoDownloadSubscriptionItems,
+  )..where(($VideoDownloadSubscriptionItemsTable t) => t.id.equals(id))).go();
 
   /// 监听视频库 uid 集合。插入/删除行时发出更新后的 uid 列表；库页据此在任意
   /// 导入路径（页内 / 拖拽 / 外部「用 Fushi 打开」/ 远端下载）落库后自动重查，
@@ -2226,9 +2379,9 @@ mixin _FushiDbVideoDomain
   /// 不安排该 Timer，故切走视频页不再遗留孤儿 async。消费方（`_onVideoUidsChanged`）按
   /// 集合去重，表内非集合变更（进度/封面回写）触发的额外重查无害。
   Stream<List<String>> watchVideoBookUids() {
-    Future<List<String>> currentUids() async => (await select(videoBooks).get())
-        .map((VideoBookRow row) => row.bookUid)
-        .toList();
+    Future<List<String>> currentUids() async => (await select(
+      videoBooks,
+    ).get()).map((VideoBookRow row) => row.bookUid).toList();
     late final StreamController<List<String>> controller;
     StreamSubscription<void>? updatesSub;
     controller = StreamController<List<String>>(
@@ -2238,8 +2391,9 @@ mixin _FushiDbVideoDomain
           if (!controller.isClosed) controller.add(v);
         });
         // 表级变更重查：BUG-793 自动刷新保留。
-        updatesSub =
-            tableUpdates(TableUpdateQuery.onTable(videoBooks)).listen((_) {
+        updatesSub = tableUpdates(TableUpdateQuery.onTable(videoBooks)).listen((
+          _,
+        ) {
           currentUids().then((List<String> v) {
             if (!controller.isClosed) controller.add(v);
           });
@@ -2273,59 +2427,73 @@ mixin _FushiDbVideoDomain
     String bookUid,
     int positionMs, {
     required int playedAt,
-  }) =>
-      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid)))
-          .write(VideoBooksCompanion(
-        lastPositionMs: Value(positionMs),
-        lastPlayedAt: Value<int?>(playedAt > 0 ? playedAt : null),
-      ));
+  }) => (update(videoBooks)..where((t) => t.bookUid.equals(bookUid))).write(
+    VideoBooksCompanion(
+      lastPositionMs: Value(positionMs),
+      lastPlayedAt: Value<int?>(playedAt > 0 ? playedAt : null),
+    ),
+  );
 
   Future<void> updateVideoBookEpisode(String bookUid, int episodeIndex) =>
-      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid)))
-          .write(VideoBooksCompanion(currentEpisode: Value(episodeIndex)));
+      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid))).write(
+        VideoBooksCompanion(currentEpisode: Value(episodeIndex)),
+      );
 
   /// 回写整段播放列表 JSON（各集 positionMs 改变时持久化每集进度）。
   Future<void> updateVideoBookPlaylistJson(
-          String bookUid, String playlistJson) =>
-      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid)))
-          .write(VideoBooksCompanion(playlistJson: Value(playlistJson)));
+    String bookUid,
+    String playlistJson,
+  ) => (update(videoBooks)..where((t) => t.bookUid.equals(bookUid))).write(
+    VideoBooksCompanion(playlistJson: Value(playlistJson)),
+  );
 
   /// 更新音画延迟（毫秒）：字幕 cue 同步偏移，跨重启保留。
   Future<void> updateVideoBookDelayMs(String bookUid, int delayMs) =>
-      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid)))
-          .write(VideoBooksCompanion(delayMs: Value(delayMs)));
+      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid))).write(
+        VideoBooksCompanion(delayMs: Value(delayMs)),
+      );
 
   /// 更新副字幕独立调轴（毫秒，schema v86，TODO-2837）。[secondaryDelayMs] 为
   /// null = 清除独立值（副字幕回到跟随主字幕 [VideoBooks.delayMs]）。
   Future<void> updateVideoBookSecondaryDelayMs(
-          String bookUid, int? secondaryDelayMs) =>
-      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid))).write(
-          VideoBooksCompanion(secondaryDelayMs: Value<int?>(secondaryDelayMs)));
+    String bookUid,
+    int? secondaryDelayMs,
+  ) => (update(videoBooks)..where((t) => t.bookUid.equals(bookUid))).write(
+    VideoBooksCompanion(secondaryDelayMs: Value<int?>(secondaryDelayMs)),
+  );
 
   /// 更新用户选中的字幕源（外挂存路径；内嵌存 `embedded:<n>`；关闭存 null）。
   Future<void> updateVideoBookSubtitleSource(
-          String bookUid, String? subtitleSource) =>
-      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid)))
-          .write(VideoBooksCompanion(subtitleSource: Value(subtitleSource)));
+    String bookUid,
+    String? subtitleSource,
+  ) => (update(videoBooks)..where((t) => t.bookUid.equals(bookUid))).write(
+    VideoBooksCompanion(subtitleSource: Value(subtitleSource)),
+  );
 
   /// 更新用户选中的副字幕源（TODO-857）：与 [updateVideoBookSubtitleSource] 同款
   /// 四态编码（外挂路径 / `embedded:<n>` / `off:` / null）。
   Future<void> updateVideoBookSecondarySubtitleSource(
-          String bookUid, String? secondarySubtitleSource) =>
-      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid))).write(
-          VideoBooksCompanion(
-              secondarySubtitleSource: Value(secondarySubtitleSource)));
+    String bookUid,
+    String? secondarySubtitleSource,
+  ) => (update(videoBooks)..where((t) => t.bookUid.equals(bookUid))).write(
+    VideoBooksCompanion(
+      secondarySubtitleSource: Value(secondarySubtitleSource),
+    ),
+  );
 
   /// 更新用户选中的音轨 id（libmpv `AudioTrack.id`；清除存 null）。
   Future<void> updateVideoBookAudioTrackId(
-          String bookUid, String? audioTrackId) =>
-      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid)))
-          .write(VideoBooksCompanion(audioTrackId: Value(audioTrackId)));
+    String bookUid,
+    String? audioTrackId,
+  ) => (update(videoBooks)..where((t) => t.bookUid.equals(bookUid))).write(
+    VideoBooksCompanion(audioTrackId: Value(audioTrackId)),
+  );
 
   /// 更新视频封面图绝对路径（用户在书架/视频库长按菜单手动设置）。
   Future<void> updateVideoBookCover(String bookUid, String coverPath) =>
-      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid)))
-          .write(VideoBooksCompanion(coverPath: Value(coverPath)));
+      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid))).write(
+        VideoBooksCompanion(coverPath: Value(coverPath)),
+      );
 
   /// 清空视频封面图路径（回落到「无封面」占位）。
   ///
@@ -2333,44 +2501,45 @@ mixin _FushiDbVideoDomain
   /// 子篇作品海报摘除，见 `member_cover_cleanup.dart`），可空参数会让「忘了传」
   /// 和「有意清空」在类型上无法区分。
   Future<void> clearVideoBookCover(String bookUid) =>
-      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid)))
-          .write(const VideoBooksCompanion(coverPath: Value<String?>(null)));
+      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid))).write(
+        const VideoBooksCompanion(coverPath: Value<String?>(null)),
+      );
 
   /// 更新视频/播放列表标题（用户在视频库长按菜单「重命名」）。title 列已存在，
   /// 无 schema 变更。
   Future<void> updateVideoBookTitle(String bookUid, String title) =>
-      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid)))
-          .write(VideoBooksCompanion(title: Value(title)));
+      (update(videoBooks)..where((t) => t.bookUid.equals(bookUid))).write(
+        VideoBooksCompanion(title: Value(title)),
+      );
 
   /// 删除视频书：标签映射（v77 起逻辑外键）与 audio_cues 的 bookKey 都不是 DB
   /// 外键（cue 的 owner key 对有声书/SRT/视频共用一个字符串，无法挂 FK），必须
   /// 在同一事务里显式清（BUG-276：否则删视频后 cue 行永久残留）。
   Future<void> deleteVideoBook(String bookUid) => transaction(() async {
-        await (delete(audioCues)..where((t) => t.bookKey.equals(bookUid))).go();
-        // TODO-616：同事务清 shelf_entry（mediaType='video'、entryKey=bookUid）。
-        await deleteShelfEntry(MediaKind.video, bookUid);
-        await deleteTagAssignmentsForHost(TagHostKind.video, bookUid);
-        // v95：同事务清该书涉及的规格缓存。缓存以**文件路径**为键、与 book 无 FK，
-        // 不在这里清就永远不会被清——`video_file_specs` 会随「每个曾经扫描过的文件」
-        // 单调增长，删片子也不缩。取主视频 + 播放列表里的每一集。
-        final VideoBookRow? row = await (select(videoBooks)
-              ..where((t) => t.bookUid.equals(bookUid)))
-            .getSingleOrNull();
-        if (row != null) {
-          for (final String path in videoBookFilePaths(row)) {
-            await deleteVideoFileSpec(path);
-          }
-        }
-        await (delete(videoBooks)..where((t) => t.bookUid.equals(bookUid)))
-            .go();
-      });
+    await (delete(audioCues)..where((t) => t.bookKey.equals(bookUid))).go();
+    // TODO-616：同事务清 shelf_entry（mediaType='video'、entryKey=bookUid）。
+    await deleteShelfEntry(MediaKind.video, bookUid);
+    await deleteTagAssignmentsForHost(TagHostKind.video, bookUid);
+    // v95：同事务清该书涉及的规格缓存。缓存以**文件路径**为键、与 book 无 FK，
+    // 不在这里清就永远不会被清——`video_file_specs` 会随「每个曾经扫描过的文件」
+    // 单调增长，删片子也不缩。取主视频 + 播放列表里的每一集。
+    final VideoBookRow? row = await (select(
+      videoBooks,
+    )..where((t) => t.bookUid.equals(bookUid))).getSingleOrNull();
+    if (row != null) {
+      for (final String path in videoBookFilePaths(row)) {
+        await deleteVideoFileSpec(path);
+      }
+    }
+    await (delete(videoBooks)..where((t) => t.bookUid.equals(bookUid))).go();
+  });
 
   // ── video_file_specs（v95 规格探测缓存）────────────────────────────
 
   /// 读一个文件的规格；没探过返回 null。
-  Future<VideoFileSpecRow?> videoFileSpec(String filePath) =>
-      (select(videoFileSpecs)..where((t) => t.filePath.equals(filePath)))
-          .getSingleOrNull();
+  Future<VideoFileSpecRow?> videoFileSpec(String filePath) => (select(
+    videoFileSpecs,
+  )..where((t) => t.filePath.equals(filePath))).getSingleOrNull();
 
   /// 批量读一屏卡片的规格。
   ///
@@ -2382,9 +2551,9 @@ mixin _FushiDbVideoDomain
   ) async {
     final List<String> paths = filePaths.toSet().toList();
     if (paths.isEmpty) return const <String, VideoFileSpecRow>{};
-    final List<VideoFileSpecRow> rows =
-        await (select(videoFileSpecs)..where((t) => t.filePath.isIn(paths)))
-            .get();
+    final List<VideoFileSpecRow> rows = await (select(
+      videoFileSpecs,
+    )..where((t) => t.filePath.isIn(paths))).get();
     return <String, VideoFileSpecRow>{
       for (final VideoFileSpecRow row in rows) row.filePath: row,
     };

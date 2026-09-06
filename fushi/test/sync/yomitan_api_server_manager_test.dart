@@ -9,15 +9,16 @@ import 'package:fushi/src/sync/yomitan_api_server_manager.dart';
 
 class _FakeLookup implements FushiRemoteLookupService {
   @override
-  Future<DictionarySearchResult?> searchDictionary(
-          {required String term,
-          required bool wildcards,
-          required int maximumTerms}) async =>
-      null;
+  Future<DictionarySearchResult?> searchDictionary({
+    required String term,
+    required bool wildcards,
+    required int maximumTerms,
+  }) async => null;
   @override
-  Future<RemoteAudioLookup?> lookupAudio(
-          {required String expression, required String reading}) async =>
-      null;
+  Future<RemoteAudioLookup?> lookupAudio({
+    required String expression,
+    required String reading,
+  }) async => null;
 }
 
 void main() {
@@ -36,8 +37,11 @@ void main() {
     final int boundPort = mgr.port!;
 
     final HttpClient client = HttpClient();
-    final HttpClientRequest req =
-        await client.post('127.0.0.1', boundPort, '/serverVersion');
+    final HttpClientRequest req = await client.post(
+      '127.0.0.1',
+      boundPort,
+      '/serverVersion',
+    );
     final HttpClientResponse resp = await req.close();
     expect(resp.statusCode, 200);
     final dynamic body = jsonDecode(await resp.transform(utf8.decoder).join());

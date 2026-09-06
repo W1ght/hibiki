@@ -10,36 +10,39 @@ import 'package:flutter_test/flutter_test.dart';
 /// Right）没有同行 ahead 候选时，几何遍历会在整页找候选并选中 body 里上方注册
 /// 的焦点目标，焦点「跑到上部」。两组隔离让左右遍历各自闭合，只有上下才跨区。
 void main() {
-  test('mobile layout isolates body and bottom-nav with FocusTraversalGroup',
-      () {
-    final String source = File(
-      'lib/src/pages/implementations/home_page.dart',
-    ).readAsStringSync();
+  test(
+    'mobile layout isolates body and bottom-nav with FocusTraversalGroup',
+    () {
+      final String source = File(
+        'lib/src/pages/implementations/home_page.dart',
+      ).readAsStringSync();
 
-    final int mobileStart = source.indexOf('Widget _buildMobileLayout()');
-    expect(mobileStart, isNonNegative, reason: '应存在 _buildMobileLayout');
+      final int mobileStart = source.indexOf('Widget _buildMobileLayout()');
+      expect(mobileStart, isNonNegative, reason: '应存在 _buildMobileLayout');
 
-    // 截取 _buildMobileLayout 到下一个方法（buildBody）之间的片段。
-    final int mobileEnd = source.indexOf('Widget buildBody()', mobileStart);
-    expect(mobileEnd, greaterThan(mobileStart));
-    final String mobileBody = source.substring(mobileStart, mobileEnd);
+      // 截取 _buildMobileLayout 到下一个方法（buildBody）之间的片段。
+      final int mobileEnd = source.indexOf('Widget buildBody()', mobileStart);
+      expect(mobileEnd, greaterThan(mobileStart));
+      final String mobileBody = source.substring(mobileStart, mobileEnd);
 
-    // body 与 bottomNavigationBar 两处都必须包 FocusTraversalGroup。
-    expect(
-      mobileBody.contains('FocusTraversalGroup(child: _bodyWithMiniBar())'),
-      isTrue,
-      reason: '移动端 body 必须被 FocusTraversalGroup 隔离（TODO-713）',
-    );
-    expect(
-      'FocusTraversalGroup('.allMatches(mobileBody).length,
-      greaterThanOrEqualTo(2),
-      reason: '移动端 body 与 bottomNavigationBar 各需一个 '
-          'FocusTraversalGroup（共 2 个）以隔离左右遍历（TODO-713）',
-    );
-    expect(
-      mobileBody.indexOf('bottomNavigationBar: FocusTraversalGroup('),
-      isNonNegative,
-      reason: '移动端 bottomNavigationBar 必须被 FocusTraversalGroup 隔离（TODO-713）',
-    );
-  });
+      // body 与 bottomNavigationBar 两处都必须包 FocusTraversalGroup。
+      expect(
+        mobileBody.contains('FocusTraversalGroup(child: _bodyWithMiniBar())'),
+        isTrue,
+        reason: '移动端 body 必须被 FocusTraversalGroup 隔离（TODO-713）',
+      );
+      expect(
+        'FocusTraversalGroup('.allMatches(mobileBody).length,
+        greaterThanOrEqualTo(2),
+        reason:
+            '移动端 body 与 bottomNavigationBar 各需一个 '
+            'FocusTraversalGroup（共 2 个）以隔离左右遍历（TODO-713）',
+      );
+      expect(
+        mobileBody.indexOf('bottomNavigationBar: FocusTraversalGroup('),
+        isNonNegative,
+        reason: '移动端 bottomNavigationBar 必须被 FocusTraversalGroup 隔离（TODO-713）',
+      );
+    },
+  );
 }

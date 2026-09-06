@@ -11,9 +11,7 @@ import 'package:fushi_core/fushi_core.dart';
 //   2) 读写往返 + 跨 reload 持久化 + 归一夹到 [0, 3]；
 //   3) session/channel/app_model/settings 各层把 N 接对（源级守卫，原生渲染另需真机）。
 FushiDatabase _testDb() {
-  return FushiDatabase.forTesting(
-    DatabaseConnection(NativeDatabase.memory()),
-  );
+  return FushiDatabase.forTesting(DatabaseConnection(NativeDatabase.memory()));
 }
 
 void main() {
@@ -63,16 +61,19 @@ void main() {
 
   group('source guards: 上下文行数各层接线', () {
     test('app_model 委托 getter/setter + session 注入闭包', () {
-      final String appModel =
-          File('lib/src/models/app_model.dart').readAsStringSync();
+      final String appModel = File(
+        'lib/src/models/app_model.dart',
+      ).readAsStringSync();
       expect(
         appModel.contains(
-            'int get floatingLyricContextLines => prefsRepo.floatingLyricContextLines'),
+          'int get floatingLyricContextLines => prefsRepo.floatingLyricContextLines',
+        ),
         isTrue,
       );
       expect(
         appModel.contains(
-            'floatingLyricContextLines: () => floatingLyricContextLines'),
+          'floatingLyricContextLines: () => floatingLyricContextLines',
+        ),
         isTrue,
         reason: 'AudiobookSession 构造必须注入上下文行数闭包',
       );
@@ -94,9 +95,9 @@ void main() {
     });
 
     test('settings schema 暴露上下文行数 stepper 且改值即时重推', () {
-      final String schema =
-          File('lib/src/settings/settings_schema_listening.dart')
-              .readAsStringSync();
+      final String schema = File(
+        'lib/src/settings/settings_schema_listening.dart',
+      ).readAsStringSync();
       expect(
         schema.contains("id: 'listening.floating_lyric_context_lines'"),
         isTrue,

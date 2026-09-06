@@ -185,20 +185,26 @@ class ReaderPaginationScripts {
     final int nearestPage = rawPageCoordinate.round();
     final double pageCoordinate =
         (rawPageCoordinate - nearestPage).abs() * columnPitch <= 1
-            ? nearestPage.toDouble()
-            : rawPageCoordinate;
+        ? nearestPage.toDouble()
+        : rawPageCoordinate;
     final double target;
     if (direction == ReaderNavigationDirection.forward) {
       final int basePage = pageCoordinate.floor();
       target = _clampDouble(
-          (basePage + 1) * columnPitch, minAlignedScroll, maxAlignedScroll);
+        (basePage + 1) * columnPitch,
+        minAlignedScroll,
+        maxAlignedScroll,
+      );
       // 已对齐在末页时 target == currentScroll（差值 <=1px 视为同页）→ 无下一页。
       final bool scrolled = target > stepScroll + 1;
       return ReaderPageStep(scrolled: scrolled, targetScroll: target);
     } else {
       final int basePage = pageCoordinate.ceil();
       target = _clampDouble(
-          (basePage - 1) * columnPitch, minAlignedScroll, maxAlignedScroll);
+        (basePage - 1) * columnPitch,
+        minAlignedScroll,
+        maxAlignedScroll,
+      );
       final bool scrolled = target < stepScroll - 1;
       return ReaderPageStep(scrolled: scrolled, targetScroll: target);
     }
@@ -306,11 +312,12 @@ class ReaderPaginationScripts {
     final double lastContentScroll = lastContentEdge <= 0
         ? 0
         : (((lastContentEdge - 1) < 0 ? 0 : (lastContentEdge - 1)) / pageStep)
-                .floorToDouble() *
-            pageStep;
+                  .floorToDouble() *
+              pageStep;
     final double physicalMax = physicalMaxScroll < 0 ? 0 : physicalMaxScroll;
-    double maxScroll =
-        maxAligned < lastContentScroll ? maxAligned : lastContentScroll;
+    double maxScroll = maxAligned < lastContentScroll
+        ? maxAligned
+        : lastContentScroll;
     // The CSS page pitch can be smaller than the scrolling element's client
     // extent after chrome insets. In that case the final full grid line may be
     // unreachable while the browser still exposes a useful partial terminal
@@ -320,11 +327,13 @@ class ReaderPaginationScripts {
       maxScroll = physicalMax;
     }
     if (lastContentScroll > maxScroll + 1 && physicalMax > maxScroll + 1) {
-      maxScroll =
-          lastContentScroll < physicalMax ? lastContentScroll : physicalMax;
+      maxScroll = lastContentScroll < physicalMax
+          ? lastContentScroll
+          : physicalMax;
     }
-    final double minScroll =
-        maxScroll < startAligned ? maxScroll : startAligned;
+    final double minScroll = maxScroll < startAligned
+        ? maxScroll
+        : startAligned;
     return (minScroll: minScroll, maxScroll: maxScroll);
   }
 
@@ -550,8 +559,10 @@ class ReaderPaginationScripts {
   ///
   /// [deltaY]/[deltaX] = wheel 事件的滚动增量。主轴取绝对值更大的那个，>0 = forward。
   @visibleForTesting
-  static String? wheelPaginateDir(
-      {required double deltaY, required double deltaX}) {
+  static String? wheelPaginateDir({
+    required double deltaY,
+    required double deltaX,
+  }) {
     final double delta = deltaY.abs() >= deltaX.abs() ? deltaY : deltaX;
     if (delta == 0) return null;
     return delta > 0
@@ -721,7 +732,8 @@ class ReaderPaginationScripts {
       '? window.fushiReader.scrollToSearchMatch('
       '${_jsStringLiteral(query)}, $hintOffset) : null';
 
-  static String clearSearchHighlightInvocation() => '(window.fushiReader && '
+  static String clearSearchHighlightInvocation() =>
+      '(window.fushiReader && '
       'typeof window.fushiReader.clearSearchHighlight === "function") '
       '? window.fushiReader.clearSearchHighlight() : null';
 
@@ -740,13 +752,15 @@ class ReaderPaginationScripts {
   /// 的字符偏移；-1 = 无可用锚 / 已有重锚在飞 → 调用方跳过提交阶段。
   /// `beginUiScaleReanchor` 只存在于连续模式的 `window.fushiReader`，分页模式缺席，
   /// `typeof` 守卫使分页模式整体 no-op（分页有 snap/lock 保护，无需此重锚）。
-  static String beginUiScaleReanchorInvocation() => '(window.fushiReader && '
+  static String beginUiScaleReanchorInvocation() =>
+      '(window.fushiReader && '
       "typeof window.fushiReader.beginUiScaleReanchor === 'function') "
       '? window.fushiReader.beginUiScaleReanchor() : -1';
 
   /// TODO-693: 第二阶段——过渡帧 settle 后把暂存锚滚回视口首边并清 `_reanchorPending`。
   /// 仅当第一阶段成功暂存了有效锚时才生效，否则 no-op（绝不误清别处的重锚旗）。
-  static String commitUiScaleReanchorInvocation() => '(window.fushiReader && '
+  static String commitUiScaleReanchorInvocation() =>
+      '(window.fushiReader && '
       "typeof window.fushiReader.commitUiScaleReanchor === 'function') "
       '? window.fushiReader.commitUiScaleReanchor() : false';
 
@@ -766,7 +780,8 @@ class ReaderPaginationScripts {
 
   /// TODO-736 B-1：第二阶段——过渡帧 settle 后把暂存锚滚回视口首边并清 `_reanchorPending`。
   /// 仅当第一阶段成功暂存了有效锚时才生效，否则 no-op（绝不误清别处的重锚旗）。
-  static String commitStyleReanchorInvocation() => '(window.fushiReader && '
+  static String commitStyleReanchorInvocation() =>
+      '(window.fushiReader && '
       "typeof window.fushiReader.commitStyleReanchor === 'function') "
       '? window.fushiReader.commitStyleReanchor() : false';
 

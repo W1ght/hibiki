@@ -34,8 +34,11 @@ void main() {
     expect(start, isNonNegative);
     // 截取 _refresh 方法体（到下一个方法/文档注释起始）。
     final int bodyEnd = src.indexOf('/// 下拉刷新', start);
-    expect(bodyEnd, greaterThan(start),
-        reason: '_refresh 方法体后应紧接 _pullToRefresh 文档注释');
+    expect(
+      bodyEnd,
+      greaterThan(start),
+      reason: '_refresh 方法体后应紧接 _pullToRefresh 文档注释',
+    );
     final String body = src.substring(start, bodyEnd);
     expect(
       body.contains('if (remote) _remoteFuture = _loadRemoteVideos();'),
@@ -52,11 +55,7 @@ void main() {
 
   test('从播放器返回后的刷新是本地 _refresh()（不带 remote）', () {
     // _open() 返回后刷新继续观看 hero / 进度，只需本地。
-    expect(
-      src.contains('从播放器返回后刷新'),
-      isTrue,
-      reason: '_open 返回后应有本地刷新注释锚点',
-    );
+    expect(src.contains('从播放器返回后刷新'), isTrue, reason: '_open 返回后应有本地刷新注释锚点');
     final int anchor = src.indexOf('从播放器返回后刷新');
     final String tail = src.substring(anchor, anchor + 300);
     expect(
@@ -78,8 +77,9 @@ void main() {
       reason: '管理互联源后必须重拉远端清单（remote: true）',
     );
     // 全文件里 remote: true 的刷新调用应恰好 1 处（仅管理源）。
-    final int count =
-        RegExp(r'_refresh\(remote: true\)').allMatches(src).length;
+    final int count = RegExp(
+      r'_refresh\(remote: true\)',
+    ).allMatches(src).length;
     expect(count, 1, reason: '当前仅管理互联源需要 remote: true 刷新');
   });
 }

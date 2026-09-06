@@ -29,43 +29,57 @@ FushiDatabase _openMigratedFromV45() {
 }
 
 void main() {
-  test('v45 -> v47 creates revealed_images, lands on current version, empty',
-      () async {
-    final FushiDatabase db = _openMigratedFromV45();
-    addTearDown(db.close);
+  test(
+    'v45 -> v47 creates revealed_images, lands on current version, empty',
+    () async {
+      final FushiDatabase db = _openMigratedFromV45();
+      addTearDown(db.close);
 
-    final QueryRow ver =
-        await db.customSelect('PRAGMA user_version').getSingle();
-    expect(ver.read<int>('user_version'), db.schemaVersion,
-        reason: 'migration must land on the current schema version');
-    // revealed_images 自 v47 引入；断言下界而非瞬时值，避免后续 bump 拖 stale。
-    expect(db.schemaVersion, greaterThanOrEqualTo(47),
-        reason: 'revealed_images 自 v47 引入，schema 版本不应回退到其之前');
+      final QueryRow ver = await db
+          .customSelect('PRAGMA user_version')
+          .getSingle();
+      expect(
+        ver.read<int>('user_version'),
+        db.schemaVersion,
+        reason: 'migration must land on the current schema version',
+      );
+      // revealed_images 自 v47 引入；断言下界而非瞬时值，避免后续 bump 拖 stale。
+      expect(
+        db.schemaVersion,
+        greaterThanOrEqualTo(47),
+        reason: 'revealed_images 自 v47 引入，schema 版本不应回退到其之前',
+      );
 
-    // 建表成功且可查：空表 = 无揭开记录 = 全部遮罩（行为与旧版一致）。
-    expect(await db.getRevealedImageKeys('any-book'), <String>{},
-        reason: '旧库升级后空表 = 全部图片保持遮罩');
-  });
+      // 建表成功且可查：空表 = 无揭开记录 = 全部遮罩（行为与旧版一致）。
+      expect(
+        await db.getRevealedImageKeys('any-book'),
+        <String>{},
+        reason: '旧库升级后空表 = 全部图片保持遮罩',
+      );
+    },
+  );
 
   test('fresh DB round-trips revealed image keys, isolated per book', () async {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
 
     expect(db.schemaVersion, greaterThanOrEqualTo(47));
 
     await db.markImageRevealed('book-a', 'OEBPS/images/foo.jpg', 1000);
-    await db.markImagesRevealed(
-        'book-a', <String>['OEBPS/images/bar.png', 'cover.svg'], 2000);
+    await db.markImagesRevealed('book-a', <String>[
+      'OEBPS/images/bar.png',
+      'cover.svg',
+    ], 2000);
     await db.markImageRevealed('book-b', 'OEBPS/images/foo.jpg', 3000);
 
-    expect(
-      await db.getRevealedImageKeys('book-a'),
-      <String>{'OEBPS/images/foo.jpg', 'OEBPS/images/bar.png', 'cover.svg'},
-    );
-    expect(await db.getRevealedImageKeys('book-b'),
-        <String>{'OEBPS/images/foo.jpg'},
-        reason: '不同书的相同 imageKey 各自独立，互不影响');
+    expect(await db.getRevealedImageKeys('book-a'), <String>{
+      'OEBPS/images/foo.jpg',
+      'OEBPS/images/bar.png',
+      'cover.svg',
+    });
+    expect(await db.getRevealedImageKeys('book-b'), <String>{
+      'OEBPS/images/foo.jpg',
+    }, reason: '不同书的相同 imageKey 各自独立，互不影响');
 
     // 幂等：重复揭开同 key 刷新时间戳、不产生重复行。
     await db.markImageRevealed('book-a', 'cover.svg', 9999);

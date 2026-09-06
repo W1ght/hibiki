@@ -32,15 +32,24 @@ class SyncObfuscator {
   /// 选 8 字节是为了让旧明文「碰巧以这 8 字节开头」的概率可忽略；epub(zip) 头是
   /// `PK\x03\x04`、PNG 头是 `\x89PNG`、JPEG 头是 `\xFF\xD8` —— 都与本魔数不同，
   /// 故旧明文不会被误判为混淆产物。
-  static final Uint8List magicHeader =
-      Uint8List.fromList(<int>[0x48, 0x42, 0x4B, 0x4F, 0x42, 0x46, 0x01, 0x00]);
+  static final Uint8List magicHeader = Uint8List.fromList(<int>[
+    0x48,
+    0x42,
+    0x4B,
+    0x4F,
+    0x42,
+    0x46,
+    0x01,
+    0x00,
+  ]);
 
   /// magic header 字节数。
   static int get magicHeaderLength => magicHeader.length;
 
   /// 32 字节循环 keystream（`SHA-256("hibiki")`），懒加载缓存。
-  static final Uint8List _keystream =
-      Uint8List.fromList(sha256.convert(utf8.encode(_keySeed)).bytes);
+  static final Uint8List _keystream = Uint8List.fromList(
+    sha256.convert(utf8.encode(_keySeed)).bytes,
+  );
 
   /// keystream 周期（SHA-256 = 32 字节）。
   static int get _period => _keystream.length;

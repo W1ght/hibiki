@@ -135,13 +135,13 @@ void main() {
       final File file = _writeTempMangaJson();
       final MangaRegionReplaceResult returned =
           await replaceMangaBlocksInRegion(
-        mangaJsonPath: file.path,
-        pageIndex: 1,
-        region: const Rect.fromLTRB(0, 0, 200, 300),
-        blocks: <MokuroBlock>[
-          _block(const Rect.fromLTRB(12, 22, 108, 218), '重识别'),
-        ],
-      );
+            mangaJsonPath: file.path,
+            pageIndex: 1,
+            region: const Rect.fromLTRB(0, 0, 200, 300),
+            blocks: <MokuroBlock>[
+              _block(const Rect.fromLTRB(12, 22, 108, 218), '重识别'),
+            ],
+          );
       final MokuroImage page = returned.payload.images[1];
       expect(page.blocks, hasLength(1));
       expect(page.blocks.single.lines, <String>['重识别']);
@@ -179,20 +179,23 @@ void main() {
       final File file = _writeTempMangaJson();
       final MangaRegionReplaceResult returned =
           await replaceMangaBlocksInRegion(
-        mangaJsonPath: file.path,
-        pageIndex: 0,
-        region: const Rect.fromLTRB(0, 0, 50, 50),
-        blocks: <MokuroBlock>[
-          _block(const Rect.fromLTRB(0, 0, 50, 50), 'inline'),
-        ],
-      );
-      expect(
-          returned.payload.images[0].blocks.single.lines, <String>['inline']);
+            mangaJsonPath: file.path,
+            pageIndex: 0,
+            region: const Rect.fromLTRB(0, 0, 50, 50),
+            blocks: <MokuroBlock>[
+              _block(const Rect.fromLTRB(0, 0, 50, 50), 'inline'),
+            ],
+          );
+      expect(returned.payload.images[0].blocks.single.lines, <String>[
+        'inline',
+      ]);
       // 返回值与磁盘一致（不是凭空构造的另一份）。
       final MokuroPayload onDisk = parseMangaJson(file.readAsStringSync());
       expect(onDisk.images[0].blocks.single.lines, <String>['inline']);
       expect(
-          returned.payload.ocr?.engineSignature, onDisk.ocr?.engineSignature);
+        returned.payload.ocr?.engineSignature,
+        onDisk.ocr?.engineSignature,
+      );
       // 替换前快照来自锁内读到的那一份（撤销的唯一依据）。
       expect(returned.previousPage.url, 'p001.jpg');
       expect(returned.previousPage.blocks, isEmpty);
@@ -300,13 +303,13 @@ void main() {
       final File file = _writeTempMangaJson();
       final MangaRegionReplaceResult replaced =
           await replaceMangaBlocksInRegion(
-        mangaJsonPath: file.path,
-        pageIndex: 1,
-        region: const Rect.fromLTRB(0, 0, 200, 300),
-        blocks: <MokuroBlock>[
-          _block(const Rect.fromLTRB(12, 22, 108, 218), '重识别'),
-        ],
-      );
+            mangaJsonPath: file.path,
+            pageIndex: 1,
+            region: const Rect.fromLTRB(0, 0, 200, 300),
+            blocks: <MokuroBlock>[
+              _block(const Rect.fromLTRB(12, 22, 108, 218), '重识别'),
+            ],
+          );
       expect(
         parseMangaJson(file.readAsStringSync()).images[1].blocks.single.lines,
         <String>['重识别'],
@@ -317,8 +320,9 @@ void main() {
         pageIndex: 1,
         page: replaced.previousPage,
       );
-      final MokuroImage page =
-          parseMangaJson(file.readAsStringSync()).images[1];
+      final MokuroImage page = parseMangaJson(
+        file.readAsStringSync(),
+      ).images[1];
       expect(page.blocks.single.lines, <String>['既存ブロック']);
       expect(page.blocks.single.zIndex, 0);
       expect(page.blocks.single.linesCoords, isNotNull, reason: '行多边形也要原样回来');
@@ -352,7 +356,7 @@ void main() {
           pageIndex: 0,
           region: const Rect.fromLTRB(0, 0, 50, 50),
           blocks: <MokuroBlock>[
-            _block(const Rect.fromLTRB(0, 0, 50, 50), 'p0')
+            _block(const Rect.fromLTRB(0, 0, 50, 50), 'p0'),
           ],
         ),
       ]);
@@ -386,7 +390,8 @@ void main() {
       expect(
         body.substring(start, end),
         isNot(contains('.delete()')),
-        reason: 'rename 已能覆盖已存在目标（Windows 实测 RENAME_OVER_EXISTING: OK）；'
+        reason:
+            'rename 已能覆盖已存在目标（Windows 实测 RENAME_OVER_EXISTING: OK）；'
             '先 delete 再 rename 会开出一个目标不存在的窗口',
       );
     });
@@ -410,7 +415,8 @@ void main() {
           expect(
             preceding,
             contains('runExclusiveOnMangaJson'),
-            reason: '$path 偏移 $at 处的落盘不在 per-path 写锁内：'
+            reason:
+                '$path 偏移 $at 处的落盘不在 per-path 写锁内：'
                 '与框选回写交叠会整份覆写、吞掉刚追加的块',
           );
           at = body.indexOf('writeMangaJsonAtomically(', at + 1);
@@ -419,11 +425,12 @@ void main() {
     });
 
     test('在线章节失效时删 manga.json 也在锁内', () {
-      final String body =
-          File('lib/src/media/manga/reader/manga_fushi_page.dart')
-              .readAsStringSync();
-      final int start =
-          body.indexOf('Future<void> _invalidateOnlineChapterPayload(');
+      final String body = File(
+        'lib/src/media/manga/reader/manga_fushi_page.dart',
+      ).readAsStringSync();
+      final int start = body.indexOf(
+        'Future<void> _invalidateOnlineChapterPayload(',
+      );
       expect(start, greaterThan(0));
       final int end = body.indexOf('\n  Future<', start + 1);
       final String fn = body.substring(start, end > start ? end : body.length);
@@ -438,9 +445,9 @@ void main() {
       // 只钉阅读器页：它对书根 manga.json 的写全部应经本模块。向导那边还留着一处
       // 合法的 mangaPayloadToJson——写的是 `manga_ocr_out/` 里的 OCR 中间产物，
       // 与书根 manga.json 不同路径，不在这把锁的语义范围内。
-      final String body =
-          File('lib/src/media/manga/reader/manga_fushi_page.dart')
-              .readAsStringSync();
+      final String body = File(
+        'lib/src/media/manga/reader/manga_fushi_page.dart',
+      ).readAsStringSync();
       expect(
         body,
         isNot(contains('mangaPayloadToJson(')),
@@ -449,9 +456,9 @@ void main() {
     });
 
     test('向导对书根 manga.json 的落盘经本模块（其余 mangaPayloadToJson 是 OCR 中间产物）', () {
-      final String body =
-          File('lib/src/media/manga/manga_ocr_wizard_dialog.dart')
-              .readAsStringSync();
+      final String body = File(
+        'lib/src/media/manga/manga_ocr_wizard_dialog.dart',
+      ).readAsStringSync();
       final int at = body.indexOf('MangaStorage.kMangaJsonFileName');
       expect(at, greaterThan(0));
       // 书根 manga.json 的那处落盘必须紧跟锁 + 原子写，而不是自己拼 .tmp。
@@ -485,12 +492,15 @@ void main() {
       final File a = _writeTempMangaJson();
       final File b = _writeTempMangaJson();
       final Completer<void> holdA = Completer<void>();
-      final Future<void> first =
-          runExclusiveOnMangaJson<void>(a.path, () => holdA.future);
-      // b 的临界区不该等 a 释放。
-      await runExclusiveOnMangaJson<void>(b.path, () async {}).timeout(
-        const Duration(seconds: 2),
+      final Future<void> first = runExclusiveOnMangaJson<void>(
+        a.path,
+        () => holdA.future,
       );
+      // b 的临界区不该等 a 释放。
+      await runExclusiveOnMangaJson<void>(
+        b.path,
+        () async {},
+      ).timeout(const Duration(seconds: 2));
       holdA.complete();
       await first;
     });

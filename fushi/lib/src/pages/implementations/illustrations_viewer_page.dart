@@ -87,13 +87,17 @@ class _IllustrationsViewerPageState extends State<IllustrationsViewerPage> {
   Future<void> _loadRevealedThenImages() async {
     if (widget.bookUid.isNotEmpty) {
       try {
-        final Set<String> keys =
-            await widget.database.getRevealedImageKeys(widget.bookUid);
+        final Set<String> keys = await widget.database.getRevealedImageKeys(
+          widget.bookUid,
+        );
         if (!mounted) return;
         _revealed.addAll(keys);
       } catch (e, stack) {
-        ErrorLogService.instance
-            .log('IllustrationsViewer.loadRevealed', e, stack);
+        ErrorLogService.instance.log(
+          'IllustrationsViewer.loadRevealed',
+          e,
+          stack,
+        );
       }
     }
     await _extractImages();
@@ -101,10 +105,10 @@ class _IllustrationsViewerPageState extends State<IllustrationsViewerPage> {
 
   /// 某图当前是否应遮罩（共用判据，缩略图 / 全屏一致）。
   bool _isBlurred(_Illustration im) => ImageRevealKey.shouldBlur(
-        blurEnabled: _blurEnabled,
-        revealKey: im.revealKey,
-        revealed: _revealed,
-      );
+    blurEnabled: _blurEnabled,
+    revealKey: im.revealKey,
+    revealed: _revealed,
+  );
 
   /// 揭开一张图（幂等）：登记内存集 + 持久化到 Drift（阅读器下次开书据此不遮罩）。
   Future<void> _revealImage(_Illustration im) async {
@@ -114,7 +118,10 @@ class _IllustrationsViewerPageState extends State<IllustrationsViewerPage> {
     if (widget.bookUid.isEmpty) return; // 无 uid 只留内存态，不落孤儿行。
     try {
       await widget.database.markImageRevealed(
-          widget.bookUid, key, DateTime.now().millisecondsSinceEpoch);
+        widget.bookUid,
+        key,
+        DateTime.now().millisecondsSinceEpoch,
+      );
     } catch (e, stack) {
       ErrorLogService.instance.log('IllustrationsViewer.reveal', e, stack);
     }
@@ -145,10 +152,9 @@ class _IllustrationsViewerPageState extends State<IllustrationsViewerPage> {
       // 插图网格的展示顺序。自然序才能把 2.jpg 排在 10.jpg 前面。
       final List<File> imageFiles =
           dir.listSync(recursive: true).whereType<File>().where((f) {
-        final String ext = p.extension(f.path).toLowerCase();
-        return _imageExtensions.contains(ext);
-      }).toList()
-            ..sort((File a, File b) => naturalCompare(a.path, b.path));
+            final String ext = p.extension(f.path).toLowerCase();
+            return _imageExtensions.contains(ext);
+          }).toList()..sort((File a, File b) => naturalCompare(a.path, b.path));
 
       for (final File file in imageFiles) {
         if (!mounted) {
@@ -165,8 +171,11 @@ class _IllustrationsViewerPageState extends State<IllustrationsViewerPage> {
             setState(() => _images.add(illust));
           }
         } catch (e, stack) {
-          ErrorLogService.instance
-              .log('IllustrationsViewer.readImage', e, stack);
+          ErrorLogService.instance.log(
+            'IllustrationsViewer.readImage',
+            e,
+            stack,
+          );
           debugPrint('[Fushi] illustration read failed: $e');
         }
       }
@@ -283,8 +292,11 @@ class _IllustrationsViewerPageState extends State<IllustrationsViewerPage> {
         ),
         const ColoredBox(color: Color(0x33000000)),
         const Center(
-          child: Icon(Icons.visibility_off_outlined,
-              color: Colors.white70, size: 36),
+          child: Icon(
+            Icons.visibility_off_outlined,
+            color: Colors.white70,
+            size: 36,
+          ),
         ),
       ],
     );
@@ -371,8 +383,10 @@ class _FullScreenGalleryState extends State<_FullScreenGallery> {
   }
 
   void _pageBy(int delta) {
-    final int target =
-        (_currentIndex + delta).clamp(0, widget.images.length - 1);
+    final int target = (_currentIndex + delta).clamp(
+      0,
+      widget.images.length - 1,
+    );
     if (target == _currentIndex) return;
     _pageController.animateToPage(
       target,
@@ -384,8 +398,9 @@ class _FullScreenGalleryState extends State<_FullScreenGallery> {
   void _toggleZoom() {
     setState(() {
       _zoomed = !_zoomed;
-      _transformationController.value =
-          _zoomed ? (Matrix4.identity()..scale(2.0)) : Matrix4.identity();
+      _transformationController.value = _zoomed
+          ? (Matrix4.identity()..scale(2.0))
+          : Matrix4.identity();
     });
   }
 
@@ -401,10 +416,10 @@ class _FullScreenGalleryState extends State<_FullScreenGallery> {
 
   /// 该图当前是否遮罩（与网格页同判据，读共享集）。
   bool _isBlurred(_Illustration im) => ImageRevealKey.shouldBlur(
-        blurEnabled: widget.blurEnabled,
-        revealKey: im.revealKey,
-        revealed: widget.revealed,
-      );
+    blurEnabled: widget.blurEnabled,
+    revealKey: im.revealKey,
+    revealed: widget.revealed,
+  );
 
   /// 全屏点击遮罩 → 揭开（写共享集 + DB）后本地刷新为原图。
   Future<void> _revealCurrent(_Illustration im) async {
@@ -423,10 +438,9 @@ class _FullScreenGalleryState extends State<_FullScreenGallery> {
       return;
     }
     try {
-      await FushiShare.shareFiles(
-        <XFile>[XFile(file.path, mimeType: fallbackMimeType(file.path))],
-        subject: p.basename(file.path),
-      );
+      await FushiShare.shareFiles(<XFile>[
+        XFile(file.path, mimeType: fallbackMimeType(file.path)),
+      ], subject: p.basename(file.path));
     } catch (e) {
       FushiToast.show(
         msg: t.reader_image_share_failed(error: e),
@@ -567,15 +581,20 @@ class _FullScreenGalleryState extends State<_FullScreenGallery> {
                       children: <Widget>[
                         ClipRect(
                           child: ImageFiltered(
-                            imageFilter:
-                                ImageFilter.blur(sigmaX: 24, sigmaY: 24),
+                            imageFilter: ImageFilter.blur(
+                              sigmaX: 24,
+                              sigmaY: 24,
+                            ),
                             child: Center(child: image),
                           ),
                         ),
                         const ColoredBox(color: Color(0x66000000)),
                         const Center(
-                          child: Icon(Icons.visibility_off_outlined,
-                              color: Colors.white70, size: 48),
+                          child: Icon(
+                            Icons.visibility_off_outlined,
+                            color: Colors.white70,
+                            size: 48,
+                          ),
                         ),
                       ],
                     ),

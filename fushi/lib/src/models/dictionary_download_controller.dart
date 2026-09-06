@@ -169,7 +169,8 @@ class DictionaryDownloadController {
     required String initialMessage,
     required Future<DictionaryDownloadOutcome?> Function(
       DictionaryDownloadJob job,
-    ) body,
+    )
+    body,
   }) async {
     if (isBusy) return false;
 

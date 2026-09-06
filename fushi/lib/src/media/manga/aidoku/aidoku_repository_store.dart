@@ -17,7 +17,8 @@ class AidokuSavedRepository {
       AidokuSavedRepository(
         name: json['name']?.toString() ?? '',
         indexUrl: json['indexUrl']?.toString() ?? '',
-        addedAt: DateTime.tryParse(json['addedAt']?.toString() ?? '') ??
+        addedAt:
+            DateTime.tryParse(json['addedAt']?.toString() ?? '') ??
             DateTime.fromMillisecondsSinceEpoch(0, isUtc: true),
       );
 
@@ -33,10 +34,10 @@ class AidokuSavedRepository {
   final DateTime addedAt;
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'name': name,
-        'indexUrl': indexUrl,
-        'addedAt': addedAt.toIso8601String(),
-      };
+    'name': name,
+    'indexUrl': indexUrl,
+    'addedAt': addedAt.toIso8601String(),
+  };
 }
 
 class AidokuRepositoryStore {
@@ -67,8 +68,9 @@ class AidokuRepositoryStore {
           <AidokuSavedRepository>[];
       for (final Object? entry in decoded) {
         if (entry is! Map<Object?, Object?>) continue;
-        final AidokuSavedRepository repository =
-            AidokuSavedRepository.fromJson(entry.cast<String, Object?>());
+        final AidokuSavedRepository repository = AidokuSavedRepository.fromJson(
+          entry.cast<String, Object?>(),
+        );
         if (repository.name.isEmpty || repository.indexUrl.isEmpty) continue;
         repositories.add(repository);
       }
@@ -99,11 +101,10 @@ class AidokuRepositoryStore {
     AidokuSavedRepository repository,
   ) async {
     final List<AidokuSavedRepository> repositories =
-        List<AidokuSavedRepository>.of(await list())
-          ..removeWhere(
-            (AidokuSavedRepository entry) =>
-                entry.indexUrl == repository.indexUrl,
-          );
+        List<AidokuSavedRepository>.of(await list())..removeWhere(
+          (AidokuSavedRepository entry) =>
+              entry.indexUrl == repository.indexUrl,
+        );
     await _write(repositories);
     return list();
   }

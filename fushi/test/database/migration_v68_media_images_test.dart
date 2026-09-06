@@ -104,9 +104,11 @@ CREATE TABLE media_images (
             rawDb.execute(mediaCollectionsDdl);
             rawDb.execute(videoBooksDdl);
             rawDb.execute(
-                "INSERT INTO media_collections (id, name) VALUES (5, 'c5')");
+              "INSERT INTO media_collections (id, name) VALUES (5, 'c5')",
+            );
             rawDb.execute(
-                "INSERT INTO media_collections (id, name) VALUES (6, 'c6')");
+              "INSERT INTO media_collections (id, name) VALUES (6, 'c6')",
+            );
           }
           rawDb.execute(scrapeMetaDdl);
           rawDb.execute(
@@ -134,9 +136,11 @@ CREATE TABLE media_images (
           rawDb.execute('PRAGMA user_version = 67');
           // 真实 app 恒以外键强制打开库（_openWithRecovery 的 applyPragmas），
           // 迁移就是在这个状态下跑的。
-          rawDb.execute(foreignKeys
-              ? 'PRAGMA foreign_keys = ON'
-              : 'PRAGMA foreign_keys = OFF');
+          rawDb.execute(
+            foreignKeys
+                ? 'PRAGMA foreign_keys = ON'
+                : 'PRAGMA foreign_keys = OFF',
+          );
         },
       ),
     );
@@ -145,22 +149,29 @@ CREATE TABLE media_images (
   }
 
   Future<int> userVersionOf(FushiDatabase db) async =>
-      (await db.customSelect('PRAGMA user_version').getSingle())
-          .read<int>('user_version');
+      (await db.customSelect('PRAGMA user_version').getSingle()).read<int>(
+        'user_version',
+      );
 
   Future<bool> foreignKeysOf(FushiDatabase db) async =>
-      (await db.customSelect('PRAGMA foreign_keys').getSingle())
-          .read<int>('foreign_keys') ==
+      (await db.customSelect('PRAGMA foreign_keys').getSingle()).read<int>(
+        'foreign_keys',
+      ) ==
       1;
 
   test('外键开着 + 两张父表都缺席：v67 升 v68 不抛，背景图照搬', () async {
     // 修复前这里抛 SqliteException(1): no such table: main.media_collections，
     // 整条 onUpgrade 中断——用户侧就是 app 打不开。
-    final FushiDatabase db =
-        await openV67Db(withParentTables: false, foreignKeys: true);
+    final FushiDatabase db = await openV67Db(
+      withParentTables: false,
+      foreignKeys: true,
+    );
 
-    expect(await userVersionOf(db), db.schemaVersion,
-        reason: '迁移必须跑完并落 user_version');
+    expect(
+      await userVersionOf(db),
+      db.schemaVersion,
+      reason: '迁移必须跑完并落 user_version',
+    );
 
     final List<MediaImageRow> rows = await db.getAllMediaImages();
     expect(rows, hasLength(1), reason: 'NULL backdrop_path 不得搬出垃圾行');
@@ -174,8 +185,10 @@ CREATE TABLE media_images (
   });
 
   test('外键开着 + 父表齐全（真实旧库形态）：搬运正确且外键仍是真强制', () async {
-    final FushiDatabase db =
-        await openV67Db(withParentTables: true, foreignKeys: true);
+    final FushiDatabase db = await openV67Db(
+      withParentTables: true,
+      foreignKeys: true,
+    );
 
     expect(await userVersionOf(db), db.schemaVersion);
 
@@ -193,8 +206,10 @@ CREATE TABLE media_images (
   });
 
   test('进来时外键是关的：v68 按原值恢复，不无条件置 ON', () async {
-    final FushiDatabase db =
-        await openV67Db(withParentTables: true, foreignKeys: false);
+    final FushiDatabase db = await openV67Db(
+      withParentTables: true,
+      foreignKeys: false,
+    );
 
     expect(await userVersionOf(db), db.schemaVersion);
     expect(await db.getAllMediaImages(), hasLength(1));

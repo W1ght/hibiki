@@ -24,24 +24,28 @@ void main() {
     resolverSrc = read('lib/src/media/video/youtube_source_resolver.dart');
   });
 
-  test('① 快解析 gate：buildStreamVideoLaunch 的 YouTube 分支用 withCaptions:false',
-      () {
-    expect(
-      // TODO-1314：快解析 gate 现经可注入的默认 resolver 闭包（参数名 u）保留，行为不变。
-      // 画质目标（playbackTargetHeight）加参后调用折行，折叠空白后断言完整参数形态。
-      launchSrc
-          .replaceAll(RegExp(r'\s+'), ' ')
-          .contains('resolveYoutubeSource(u, withCaptions: false, '
-              'playbackTargetHeight: youtubeTargetHeight)'),
-      isTrue,
-      reason: 'YouTube 分支必须走快解析 gate（withCaptions:false），不前置阻塞字幕/title',
-    );
-    expect(
-      launchSrc.contains('resolveYoutubeSource(url);'),
-      isFalse,
-      reason: '不得用默认 withCaptions:true 在首帧前串行解析字幕 + 重复 videos.get',
-    );
-  });
+  test(
+    '① 快解析 gate：buildStreamVideoLaunch 的 YouTube 分支用 withCaptions:false',
+    () {
+      expect(
+        // TODO-1314：快解析 gate 现经可注入的默认 resolver 闭包（参数名 u）保留，行为不变。
+        // 画质目标（playbackTargetHeight）加参后调用折行，折叠空白后断言完整参数形态。
+        launchSrc
+            .replaceAll(RegExp(r'\s+'), ' ')
+            .contains(
+              'resolveYoutubeSource(u, withCaptions: false, '
+              'playbackTargetHeight: youtubeTargetHeight)',
+            ),
+        isTrue,
+        reason: 'YouTube 分支必须走快解析 gate（withCaptions:false），不前置阻塞字幕/title',
+      );
+      expect(
+        launchSrc.contains('resolveYoutubeSource(url);'),
+        isFalse,
+        reason: '不得用默认 withCaptions:true 在首帧前串行解析字幕 + 重复 videos.get',
+      );
+    },
+  );
 
   test('① 字幕后置：起播不再前置注入 preresolvedCues，改传 watch URL', () {
     expect(
@@ -61,7 +65,8 @@ void main() {
     // 修「快加载 withCaptions:false 后字幕整个消失」。
     expect(
       pageSrc.contains(
-          'unawaited(_resolveDeferredYoutubeCaptionTracks(client, seq))'),
+        'unawaited(_resolveDeferredYoutubeCaptionTracks(client, seq))',
+      ),
       isTrue,
       reason: 'load 后必须异步 kick 字幕轨列表解析（不阻塞首帧）',
     );
@@ -94,7 +99,8 @@ void main() {
     // youtubeCaptionsUrl 非空触发轨列表解析，列表回填与 cue 下载解耦。
     expect(
       pageSrc.contains(
-          'client is UrlStreamVideoClient && client.youtubeCaptionsUrl != null'),
+        'client is UrlStreamVideoClient && client.youtubeCaptionsUrl != null',
+      ),
       isTrue,
       reason: '字幕轨后置只以 youtubeCaptionsUrl 非空触发，不再用 preresolvedCues.isEmpty 门控',
     );
@@ -127,11 +133,17 @@ void main() {
     final int iConnect = pageSrc.indexOf('// TODO-1307：把「正在连接视频流…」阶段反馈提前');
     // 画质目标加参后调用折行：锚到 `(row` 前缀（不含收尾括号）。
     final int iBuild = pageSrc.indexOf('await buildStreamVideoLaunch(row');
-    expect(iConnect, greaterThan(0),
-        reason: 'stream book 分支必须提前置 connecting 阶段反馈');
+    expect(
+      iConnect,
+      greaterThan(0),
+      reason: 'stream book 分支必须提前置 connecting 阶段反馈',
+    );
     expect(iBuild, greaterThan(0));
-    expect(iConnect, lessThan(iBuild),
-        reason: 'connecting 阶段必须在 buildStreamVideoLaunch（慢网可数秒）之前置起');
+    expect(
+      iConnect,
+      lessThan(iBuild),
+      reason: 'connecting 阶段必须在 buildStreamVideoLaunch（慢网可数秒）之前置起',
+    );
   });
 
   test('A2：字幕解析只做 getPlayerResponse（不再取多余 WatchPage）', () {

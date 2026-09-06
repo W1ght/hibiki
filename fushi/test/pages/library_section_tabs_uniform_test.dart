@@ -59,14 +59,7 @@ void main() {
       tester.getRect(find.widgetWithText(Tab, right)).center.dx -
       tester.getRect(find.widgetWithText(Tab, left)).center.dx;
 
-  const List<String> videoTabs = <String>[
-    '首页',
-    '系列',
-    '全部视频',
-    '发现',
-    '来源',
-    '设置',
-  ];
+  const List<String> videoTabs = <String>['首页', '系列', '全部视频', '发现', '来源', '设置'];
 
   testWidgets('段宽由各自文案决定，不被同排最长段绑架', (WidgetTester tester) async {
     addTearDown(() => tester.binding.setSurfaceSize(null));
@@ -105,11 +98,14 @@ void main() {
 
   testWidgets('顶栏形态是 MD3 tabs，不是分段按钮', (WidgetTester tester) async {
     addTearDown(() => tester.binding.setSurfaceSize(null));
-    await pumpTabs(
-      tester,
-      <String>['首页', '系列', '全部视频', '发现', '来源', '设置'],
-      width: 1600,
-    );
+    await pumpTabs(tester, <String>[
+      '首页',
+      '系列',
+      '全部视频',
+      '发现',
+      '来源',
+      '设置',
+    ], width: 1600);
 
     final TabBar bar = tester.widget<TabBar>(find.byType(TabBar));
     expect(bar.isScrollable, isTrue, reason: '段数可变，滚动是正常形态而非降级');
@@ -160,20 +156,25 @@ void main() {
     expect(
       tester.widget<TabBar>(find.byType(TabBar)).controller!.index,
       0,
-      reason: '宿主没改 selected，指示器必须被拉回——controller 是 selected 的投影，'
+      reason:
+          '宿主没改 selected，指示器必须被拉回——controller 是 selected 的投影，'
           '不是第二份真相',
     );
   });
 
-  testWidgets('controlled 形态共用宿主 TabController，不镜像出第二份选中态',
-      (WidgetTester tester) async {
+  testWidgets('controlled 形态共用宿主 TabController，不镜像出第二份选中态', (
+    WidgetTester tester,
+  ) async {
     addTearDown(() => tester.binding.setSurfaceSize(null));
     await tester.binding.setSurfaceSize(const Size(1600, 900));
 
     // 宿主（下载页）自己持有 controller 驱动 TabBarView。导航组件必须共用**那一个**：
     // 镜像出第二个 controller 时，横滑 TabBarView 的连续进度传不到指示器上，指示器
     // 只能在宿主 index 越过一半跳变时跟着跳一下。
-    final TabController host = TabController(length: 4, vsync: const TestVSync());
+    final TabController host = TabController(
+      length: 4,
+      vsync: const TestVSync(),
+    );
     addTearDown(host.dispose);
 
     await tester.pumpWidget(
@@ -243,7 +244,8 @@ void main() {
         expect(
           topBarSource.contains(bypass),
           isFalse,
-          reason: '${entry.key} 顶栏（${entry.value}）不应绕过共享组件手拼一排导航'
+          reason:
+              '${entry.key} 顶栏（${entry.value}）不应绕过共享组件手拼一排导航'
               '（发现的 `$bypass`：焦点约定与几何会随调用点漂移）',
         );
       }
@@ -259,11 +261,14 @@ void main() {
     // 既有的 horizontal_drag_scroll_guard 判据是字面量 `scrollDirection: Axis.
     // horizontal`，`isScrollable: true` 这一形态结构上落在它的扫描面外——所以那次
     // 回归 CI 一声不响。这条补的就是那个缺口。
-    final String src =
-        File('lib/src/utils/components/library_section_tabs.dart')
-            .readAsStringSync();
-    expect(src.contains('isScrollable: true'), isTrue,
-        reason: '锚点过期：顶栏不再是可滚动 tabs，请同步改本守卫');
+    final String src = File(
+      'lib/src/utils/components/library_section_tabs.dart',
+    ).readAsStringSync();
+    expect(
+      src.contains('isScrollable: true'),
+      isTrue,
+      reason: '锚点过期：顶栏不再是可滚动 tabs，请同步改本守卫',
+    );
     expect(
       src.contains('HorizontalDragScrollable('),
       isTrue,

@@ -82,7 +82,7 @@ List<String> buildFfmpegPcmEnvelopeArgs({
     '-hide_banner',
     '-nostats',
     '-i',
-    inputPath
+    inputPath,
   ];
   if (mapIndex != null) {
     args.addAll(<String>['-map', '0:a:$mapIndex']);
@@ -128,7 +128,8 @@ List<double> parseAudioRmsEnvelopeFromFfmpegLog(
   if (ffmpegStderr.isEmpty) return const <double>[];
   final List<double> values = <double>[];
   final RegExp pattern = RegExp(
-      r'lavfi\.astats\.Overall\.RMS_level\s*=\s*(-?\d+(?:\.\d+)?|-?inf)');
+    r'lavfi\.astats\.Overall\.RMS_level\s*=\s*(-?\d+(?:\.\d+)?|-?inf)',
+  );
   for (final RegExpMatch m in pattern.allMatches(ffmpegStderr)) {
     final String raw = m.group(1)!;
     if (raw == '-inf' || raw == 'inf') {
@@ -174,8 +175,9 @@ Future<List<double>> extractAudioEnergyEnvelope({
   final Duration timeout = audioEnergyProbeTimeoutForBytes(sizeBytes);
   // 性能截断：limitMs 换算成 ffmpeg `-t` 秒数（向上取整，保证覆盖到上界那一格）；
   // <=0 或 null 表示抽整轨。与 [buildCueActivityEnvelope] 的 durationMs 上界须取同值。
-  final int? limitSeconds =
-      (limitMs != null && limitMs > 0) ? (limitMs + 999) ~/ 1000 : null;
+  final int? limitSeconds = (limitMs != null && limitMs > 0)
+      ? (limitMs + 999) ~/ 1000
+      : null;
   try {
     final FfmpegRunResult result = await resolveFfmpegBackend().run(
       buildFfmpegPcmEnvelopeArgs(
@@ -188,18 +190,23 @@ Future<List<double>> extractAudioEnergyEnvelope({
       timeout,
     );
     if (result.returnCode == null) {
-      debugPrint('[audio-energy] timed out for "$videoPath" '
-          '(size=$sizeBytes bytes) — auto-align skipped this time');
+      debugPrint(
+        '[audio-energy] timed out for "$videoPath" '
+        '(size=$sizeBytes bytes) — auto-align skipped this time',
+      );
       return const <double>[];
     }
-    final List<double> envelope =
-        parseAudioRmsEnvelopeFromFfmpegLog(result.output);
+    final List<double> envelope = parseAudioRmsEnvelopeFromFfmpegLog(
+      result.output,
+    );
     if (envelope.isEmpty) {
       // 跑成功但拿不到逐帧 RMS 行：移动端 KitFfmpegBackend.getOutput 不含 ametadata
       // 逐帧打印的典型表现。上层据空包络置信门控降级，不静默。
-      debugPrint('[audio-energy] no per-frame RMS in ffmpeg output for '
-          '"$videoPath" (returnCode=${result.returnCode}, '
-          'executable=${result.executable}); auto-align will degrade');
+      debugPrint(
+        '[audio-energy] no per-frame RMS in ffmpeg output for '
+        '"$videoPath" (returnCode=${result.returnCode}, '
+        'executable=${result.executable}); auto-align will degrade',
+      );
     }
     return envelope;
   } on ProcessException catch (e) {

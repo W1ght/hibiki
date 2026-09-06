@@ -146,8 +146,9 @@ class _FushiIconButtonState extends State<FushiIconButton> {
   /// default (no explicit [focusId] needed). Derived from this State's identity
   /// so it survives rebuilds and stays unique per instance — mirrors FushiCard
   /// / FushiListItem.
-  late final FushiFocusId _fallbackFocusId =
-      FushiFocusId('hibiki-icon-button-${identityHashCode(this)}');
+  late final FushiFocusId _fallbackFocusId = FushiFocusId(
+    'hibiki-icon-button-${identityHashCode(this)}',
+  );
 
   /// HBK-AUDIT-151: true while a busy [onTap] action is awaiting completion.
   /// Used so [didUpdateWidget] does not re-enable the button mid-action when

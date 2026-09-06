@@ -230,8 +230,9 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
       title: showImportForm
           ? (widget.audioOnly ? t.audio_import : t.audiobook_import)
           : t.audiobook_attached,
-      content:
-          showImportForm ? _buildImportForm() : _buildAttachedView(existing),
+      content: showImportForm
+          ? _buildImportForm()
+          : _buildAttachedView(existing),
       actions: showImportForm
           ? [
               adaptiveDialogAction(
@@ -266,8 +267,8 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final String audioLabel =
         (ab.audioPaths != null && ab.audioPaths!.isNotEmpty)
-            ? t.srt_import_files_selected(n: ab.audioPaths!.length)
-            : (ab.audioRoot ?? '');
+        ? t.srt_import_files_selected(n: ab.audioPaths!.length)
+        : (ab.audioRoot ?? '');
     return FutureBuilder<AudiobookHealth>(
       future: _healthFuture,
       builder: (context, snapshot) {
@@ -390,10 +391,7 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         AdaptiveSettingsSection(
-          children: [
-            _audioSourceRow(),
-            if (!widget.audioOnly) _alignmentRow(),
-          ],
+          children: [_audioSourceRow(), if (!widget.audioOnly) _alignmentRow()],
         ),
         if (isDesktopPlatform) ...[
           SizedBox(height: tokens.spacing.gap),
@@ -516,8 +514,9 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
     }
     // 语言初值跟随书本身的语言（导入时从 OPF 回填的 `epub_books.language`）；
     // 认不出（如中文书、没写语言）再退回上次选择。
-    final EpubBookRow? book =
-        await widget.repo.database.getEpubBook(widget.bookKey);
+    final EpubBookRow? book = await widget.repo.database.getEpubBook(
+      widget.bookKey,
+    );
     if (!mounted) return;
     final String? srtPath = await showAsrTranscribeSheet(
       context: context,
@@ -541,8 +540,10 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
     if (_pickerActive) return;
     _pickerActive = true;
     try {
-      final AppModel appModel =
-          ProviderScope.containerOf(context, listen: false).read(appProvider);
+      final AppModel appModel = ProviderScope.containerOf(
+        context,
+        listen: false,
+      ).read(appProvider);
       final List<String> paths = await pickRealFilePaths(
         context: context,
         appModel: appModel,
@@ -671,8 +672,9 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
     }
 
     debugPrint(
-        '[fushi-audiobook] doImport bookKey.len=${widget.bookKey.length} '
-        'hash=${widget.bookKey.hashCode} key=${widget.bookKey}');
+      '[fushi-audiobook] doImport bookKey.len=${widget.bookKey.length} '
+      'hash=${widget.bookKey.hashCode} key=${widget.bookKey}',
+    );
     setState(() => importing = true);
     reportProgress(0, '');
 
@@ -753,7 +755,9 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
           grandTotal = totalBytes;
           final double ratio = totalBytes > 0 ? copiedBytes / totalBytes : 0.0;
           reportProgress(
-              0.5 + ratio * 0.3, t.import_step_copying_file(name: copyingName));
+            0.5 + ratio * 0.3,
+            t.import_step_copying_file(name: copyingName),
+          );
         },
       );
 
@@ -783,8 +787,10 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
       }
 
       if (parsed != null) {
-        await widget.repo
-            .writeHealth(bookKey: widget.bookKey, health: parsed.health);
+        await widget.repo.writeHealth(
+          bookKey: widget.bookKey,
+          health: parsed.health,
+        );
       }
       // TODO-1288：EPUB-backed 有声书导入必须补写一条配对 srt_books 行，否则互联
       // host 的 hasAudiobook 判据（app_model_library_host_service
@@ -798,8 +804,9 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
       // 天然豁免。非 audioOnly 路径在 line 637 已门控 alignment 非空，故
       // persistedAlignment 此处必非 null。
       if (!widget.audioOnly && persistedAlignment != null) {
-        final EpubBookRow? epubRow =
-            await widget.repo.database.getEpubBook(widget.bookKey);
+        final EpubBookRow? epubRow = await widget.repo.database.getEpubBook(
+          widget.bookKey,
+        );
         if (epubRow != null) {
           await writeEpubBackedSrtBook(
             repo: SrtBookRepository(widget.repo.database),
@@ -830,14 +837,13 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
               fileDurationsMs: durationsMs,
             );
           } else {
-            debugPrint('[AudiobookImport] TODO-811 skip cue reindex: '
-                'duration probe incomplete ($durationsMs).');
+            debugPrint(
+              '[AudiobookImport] TODO-811 skip cue reindex: '
+              'duration probe incomplete ($durationsMs).',
+            );
           }
         }
-        await widget.repo.saveCues(
-          bookKey: widget.bookKey,
-          cues: parsed.cues,
-        );
+        await widget.repo.saveCues(bookKey: widget.bookKey, cues: parsed.cues);
         await widget.repo.updateHealthOverlay(
           bookKey: widget.bookKey,
           health: parsed.health,
@@ -846,8 +852,9 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
       reportProgress(1, t.import_step_done);
 
       if (mounted) {
-        final String? tail =
-            parsed != null ? summarizeAudiobookHealth(parsed.health) : null;
+        final String? tail = parsed != null
+            ? summarizeAudiobookHealth(parsed.health)
+            : null;
         final String msg = tail == null
             ? t.audiobook_import_success
             : '${t.audiobook_import_success} · $tail';
@@ -858,7 +865,8 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
       ErrorLogService.instance.log('AudiobookImport.doImport', e, stack);
       debugPrint('AudiobookImportDialog import error (FS): $e');
       if (mounted) {
-        final bool diskFull = e.osError?.errorCode == 28 ||
+        final bool diskFull =
+            e.osError?.errorCode == 28 ||
             e.message.toLowerCase().contains('no space');
         if (diskFull) {
           FushiToast.show(
@@ -870,9 +878,7 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
           );
         } else {
           FushiToast.show(
-            msg: t.audiobook_import_error_copy_failed(
-              name: e.path ?? '',
-            ),
+            msg: t.audiobook_import_error_copy_failed(name: e.path ?? ''),
             severity: ToastSeverity.error,
           );
         }
@@ -927,7 +933,8 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
   Future<AudiobookHealth> _matchCuesToTtu(List<AudioCue> cues) async {
     if (!_hasEpub) {
       return AudiobookHealth.notApplicable(
-        reason: 'no book bound — subtitle playback works, but no '
+        reason:
+            'no book bound — subtitle playback works, but no '
             'cross-chapter highlight',
       );
     }
@@ -936,12 +943,11 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
     }
     try {
       reportProgress(0.2, t.import_step_reading_idb);
-      final List<EpubSection> sections =
-          epubSectionsFromExtractDir(widget.extractDir!);
+      final List<EpubSection> sections = epubSectionsFromExtractDir(
+        widget.extractDir!,
+      );
       if (sections.isEmpty) {
-        return AudiobookHealth.failed(
-          reason: 'EPUB has 0 chapters',
-        );
+        return AudiobookHealth.failed(reason: 'EPUB has 0 chapters');
       }
       reportProgress(0.3, t.import_step_matching);
       // 匹配器放 isolate 跑，主线程不能被大书的 bigram 扫描挤出 ANR。
@@ -966,7 +972,8 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
       final int pct = (result.matchRate * 100).round();
       return AudiobookHealth.fromRatePct(
         ratePct: pct,
-        reason: '${result.matchedCues}/${result.totalCues} cues matched '
+        reason:
+            '${result.matchedCues}/${result.totalCues} cues matched '
             '(window=$_searchWindow threshold=$_similarityThreshold)',
       );
     } catch (e, stack) {
@@ -1008,23 +1015,30 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
       cues = await parseCuesForFormat(alignFile, widget.bookKey, 0);
     } else if (format == 'json') {
       cues = await JsonAlignmentParser.parse(
-          jsonFile: alignFile, bookKey: widget.bookKey);
+        jsonFile: alignFile,
+        bookKey: widget.bookKey,
+      );
       useFragmentHealth = true;
     } else {
       final String fileName = p.basename(alignmentFilePath);
       final String chapterHref = fileName.replaceAll(
-          RegExp(r'\.smil$', caseSensitive: false), '.xhtml');
+        RegExp(r'\.smil$', caseSensitive: false),
+        '.xhtml',
+      );
       cues = await SmilParser.parse(
-          smilFile: alignFile,
-          bookKey: widget.bookKey,
-          chapterHref: chapterHref);
+        smilFile: alignFile,
+        bookKey: widget.bookKey,
+        chapterHref: chapterHref,
+      );
       useFragmentHealth = true;
       formatLabel = 'smil';
     }
 
     if (cues.length > _maxCuesPerFile) {
-      debugPrint('[AudiobookImport] cue count ${cues.length} exceeds limit '
-          '$_maxCuesPerFile, truncating');
+      debugPrint(
+        '[AudiobookImport] cue count ${cues.length} exceeds limit '
+        '$_maxCuesPerFile, truncating',
+      );
       cues = cues.sublist(0, _maxCuesPerFile);
     }
 
@@ -1075,15 +1089,20 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
 
   Future<void> _removeAudiobook(Audiobook ab) async {
     debugPrint('AudiobookImportDialog: remove tapped for ${widget.bookKey}');
-    final AppModel appModel =
-        ProviderScope.containerOf(context, listen: false).read(appProvider);
-    final NavigatorState outerNavigator =
-        Navigator.of(context, rootNavigator: true);
+    final AppModel appModel = ProviderScope.containerOf(
+      context,
+      listen: false,
+    ).read(appProvider);
+    final NavigatorState outerNavigator = Navigator.of(
+      context,
+      rootNavigator: true,
+    );
 
     // 显式登记、且落在 app 持久目录之外的音频才是用户原件；纯 audioRoot 的旧行
     // 与「导入时复制进来」的副本都没有可安全删除的清单，不摆勾选框。
-    final bool hasLocalFiles =
-        await resolveAudiobookHasLocalFiles(ab.audioPaths);
+    final bool hasLocalFiles = await resolveAudiobookHasLocalFiles(
+      ab.audioPaths,
+    );
     if (!mounted) return;
     final DeleteDecision? decision = await showDeleteScopeConfirm(
       context,
@@ -1093,8 +1112,9 @@ class _AudiobookImportDialogState extends State<AudiobookImportDialog>
         target: DeletionDisclosureTarget.attachedAudiobook,
       ),
       db: widget.repo.database,
-      localFilesSubtitle:
-          hasLocalFiles ? t.delete_local_files_audio_desc : null,
+      localFilesSubtitle: hasLocalFiles
+          ? t.delete_local_files_audio_desc
+          : null,
     );
     debugPrint('AudiobookImportDialog: decision=$decision');
     if (decision == null) return;
@@ -1167,10 +1187,7 @@ class AudiobookImportDialogFrame extends StatelessWidget {
 
 @visibleForTesting
 class AudiobookRemoveConfirmationDialog extends StatelessWidget {
-  const AudiobookRemoveConfirmationDialog({
-    required this.onConfirm,
-    super.key,
-  });
+  const AudiobookRemoveConfirmationDialog({required this.onConfirm, super.key});
 
   final VoidCallback onConfirm;
 
@@ -1196,10 +1213,7 @@ class AudiobookRemoveConfirmationDialog extends StatelessWidget {
           tokens.spacing.card,
           tokens.spacing.card,
         ),
-        body: Text(
-          t.audiobook_delete_confirm,
-          style: tokens.type.listSubtitle,
-        ),
+        body: Text(t.audiobook_delete_confirm, style: tokens.type.listSubtitle),
         footer: Wrap(
           alignment: WrapAlignment.end,
           spacing: tokens.spacing.gap,

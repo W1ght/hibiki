@@ -9,8 +9,12 @@ void main() {
         .listSync(recursive: true)
         .whereType<File>()
         .where((File file) => file.path.endsWith('.dart'));
-    expectScanScale(dartFiles.length,
-        what: 'lib/src 下的 .dart', atLeast: 750, measured: 930);
+    expectScanScale(
+      dartFiles.length,
+      what: 'lib/src 下的 .dart',
+      atLeast: 750,
+      measured: 930,
+    );
 
     for (final File file in dartFiles) {
       final String normalized = file.path.replaceAll('\\', '/');
@@ -22,7 +26,8 @@ void main() {
       expect(
         source,
         isNot(contains('Scrollable.ensureVisible')),
-        reason: '$normalized should delegate focus-driven scroll to '
+        reason:
+            '$normalized should delegate focus-driven scroll to '
             'FushiFocusScroll instead of owning it locally.',
       );
     }

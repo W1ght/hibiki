@@ -12,8 +12,8 @@ import 'package:fushi/utils.dart' show t, FushiToast, ToastSeverity;
 /// 必须由持有弹窗层的宿主页面在对话框期间把弹窗停靠屏外。两条查词车道
 /// （`BaseSourcePageState` / `DictionaryPageMixin`）各实现一份并传进来；为 null 时
 /// 原样执行（无弹窗层的宿主，如纯查词页）。
-typedef LookupPopupHiddenRunner = Future<T> Function<T>(
-    Future<T> Function() body);
+typedef LookupPopupHiddenRunner =
+    Future<T> Function<T>(Future<T> Function() body);
 
 /// [LookupPopupHiddenRunner] 缺省实现：直接跑，不动任何层级。
 Future<T> _runDirect<T>(Future<T> Function() body) => body();
@@ -37,9 +37,9 @@ class AnkiMinedCardActionResult {
   });
 
   const AnkiMinedCardActionResult.unchanged()
-      : mined = true,
-        ankiConnect = false,
-        noteId = null;
+    : mined = true,
+      ankiConnect = false,
+      noteId = null;
 
   final bool mined;
   final bool ankiConnect;
@@ -112,11 +112,13 @@ class _MinedCardActionDialogState extends State<_MinedCardActionDialog> {
       return;
     }
     if (!mounted) return;
-    Navigator.of(context).pop(AnkiMinedCardActionResult(
-      mined: true,
-      ankiConnect: r.ankiConnect,
-      noteId: r.noteId,
-    ));
+    Navigator.of(context).pop(
+      AnkiMinedCardActionResult(
+        mined: true,
+        ankiConnect: r.ankiConnect,
+        noteId: r.noteId,
+      ),
+    );
   }
 
   Future<void> _runOverwrite(int noteId) async {
@@ -136,11 +138,13 @@ class _MinedCardActionDialogState extends State<_MinedCardActionDialog> {
       return;
     }
     if (!mounted) return;
-    Navigator.of(context).pop(AnkiMinedCardActionResult(
-      mined: true,
-      ankiConnect: r.ankiConnect,
-      noteId: r.noteId,
-    ));
+    Navigator.of(context).pop(
+      AnkiMinedCardActionResult(
+        mined: true,
+        ankiConnect: r.ankiConnect,
+        noteId: r.noteId,
+      ),
+    );
   }
 
   Future<void> _viewNote(int noteId) async {
@@ -186,26 +190,32 @@ class _MinedCardActionDialogState extends State<_MinedCardActionDialog> {
                 itemCount: matches.length,
                 itemBuilder: (context, i) {
                   final note = matches[i];
-                  final preview =
-                      note.preview.isEmpty ? '#${note.noteId}' : note.preview;
+                  final preview = note.preview.isEmpty
+                      ? '#${note.noteId}'
+                      : note.preview;
                   return ListTile(
                     contentPadding: EdgeInsets.zero,
-                    title: Text(preview,
-                        maxLines: 2, overflow: TextOverflow.ellipsis),
+                    title: Text(
+                      preview,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         IconButton(
                           tooltip: t.anki_mined_action_overwrite,
                           icon: const Icon(Icons.edit_outlined),
-                          onPressed:
-                              _busy ? null : () => _runOverwrite(note.noteId),
+                          onPressed: _busy
+                              ? null
+                              : () => _runOverwrite(note.noteId),
                         ),
                         IconButton(
                           tooltip: t.anki_mined_action_view,
                           icon: const Icon(Icons.open_in_new),
-                          onPressed:
-                              _busy ? null : () => _viewNote(note.noteId),
+                          onPressed: _busy
+                              ? null
+                              : () => _viewNote(note.noteId),
                         ),
                       ],
                     ),
@@ -247,11 +257,8 @@ Future<AnkiMinedCardActionResult?> showAnkiNoteViewer({
 }) {
   return showDialog<AnkiMinedCardActionResult>(
     context: context,
-    builder: (_) => _AnkiNoteViewerDialog(
-      repo: repo,
-      noteId: noteId,
-      overwrite: overwrite,
-    ),
+    builder: (_) =>
+        _AnkiNoteViewerDialog(repo: repo, noteId: noteId, overwrite: overwrite),
   );
 }
 
@@ -321,11 +328,13 @@ class _AnkiNoteViewerDialogState extends State<_AnkiNoteViewerDialog> {
       return;
     }
     if (!mounted) return;
-    Navigator.of(context).pop(AnkiMinedCardActionResult(
-      mined: true,
-      ankiConnect: r.ankiConnect,
-      noteId: r.noteId,
-    ));
+    Navigator.of(context).pop(
+      AnkiMinedCardActionResult(
+        mined: true,
+        ankiConnect: r.ankiConnect,
+        noteId: r.noteId,
+      ),
+    );
   }
 
   @override
@@ -341,37 +350,42 @@ class _AnkiNoteViewerDialogState extends State<_AnkiNoteViewerDialog> {
         width: 420,
         child: _loading
             ? const SizedBox(
-                height: 80, child: Center(child: CircularProgressIndicator()))
+                height: 80,
+                child: Center(child: CircularProgressIndicator()),
+              )
             : nonEmpty.isEmpty
-                ? Text(t.anki_note_viewer_empty)
-                : SingleChildScrollView(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        for (final e in nonEmpty)
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 12),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(e.key,
-                                    style: theme.textTheme.labelMedium
-                                        ?.copyWith(
-                                            color: theme.colorScheme.primary)),
-                                const SizedBox(height: 2),
-                                Text(
-                                  BaseAnkiRepository.previewFromFieldValue(
-                                      e.value,
-                                      maxLen: 4000),
-                                  style: theme.textTheme.bodyMedium,
-                                ),
-                              ],
+            ? Text(t.anki_note_viewer_empty)
+            : SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    for (final e in nonEmpty)
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 12),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              e.key,
+                              style: theme.textTheme.labelMedium?.copyWith(
+                                color: theme.colorScheme.primary,
+                              ),
                             ),
-                          ),
-                      ],
-                    ),
-                  ),
+                            const SizedBox(height: 2),
+                            Text(
+                              BaseAnkiRepository.previewFromFieldValue(
+                                e.value,
+                                maxLen: 4000,
+                              ),
+                              style: theme.textTheme.bodyMedium,
+                            ),
+                          ],
+                        ),
+                      ),
+                  ],
+                ),
+              ),
       ),
       actions: [
         TextButton(

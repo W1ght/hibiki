@@ -14,10 +14,10 @@ part of '../reader_fushi_history_page.dart';
 /// 空串哨兵（standalone SRT）走 `hoshi://srtbook/<uid>`（BUG-1018 A3，与
 /// `_srtBookMediaItem` 同一套分派）。
 String _srtDisplayTitle(SrtBook book) => displayTitleForBook(
-      bookKey: book.bookKey,
-      srtUid: book.uid,
-      rawTitle: book.title,
-    );
+  bookKey: book.bookKey,
+  srtUid: book.uid,
+  rawTitle: book.title,
+);
 
 bool isEpubBackedAudiobookSrt(SrtBook book) {
   if (book.bookKey.isEmpty) return false;
@@ -33,10 +33,8 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
   // v79：srtBookTagMapProvider 键换 uid（String）。泛型 map 索引不受编译器
   // 保护——int 键查 String 键 map 恒 miss 且 analyze 全绿（review5-3），
   // 类型签名钉死在 String 上防复发。
-  Widget? _buildSrtBookTagLabels(String srtUid) => _tagLabelsFromMap(
-        ref.watch(srtBookTagMapProvider).valueOrNull,
-        srtUid,
-      );
+  Widget? _buildSrtBookTagLabels(String srtUid) =>
+      _tagLabelsFromMap(ref.watch(srtBookTagMapProvider).valueOrNull, srtUid);
 
   /// [selectable]（默认 true）= 多选态可单独勾选。块2：合集行成员卡传 false
   /// （selectionKey 置空 → 不画勾、不可单独勾），点击照常开书。
@@ -44,11 +42,13 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
   /// 动作，让键盘/手柄用户（聚焦长按 A 弹此对话框，不经网格指针菜单）也能移出。
   /// [focusIdPrefix]：详情页渲染路径传 'collection-detail-' 隔离焦点 id 命名空间
   /// （BUG-1009，见 [_buildCollectionMemberCard]）；书架路径恒空串（id 不变）。
-  Widget _buildSrtCard(SrtBook book,
-      {String? epubCoverUri,
-      bool selectable = true,
-      VoidCallback? removeFromCollection,
-      String focusIdPrefix = ''}) {
+  Widget _buildSrtCard(
+    SrtBook book, {
+    String? epubCoverUri,
+    bool selectable = true,
+    VoidCallback? removeFromCollection,
+    String focusIdPrefix = '',
+  }) {
     final String selKey = 'srt_${book.uid}';
     final tagWidget = _buildSrtBookTagLabels(book.uid);
     final int? srtBookId = book.id;
@@ -59,15 +59,16 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     final IconData badgeIcon = audioMissing
         ? Icons.error_outline
         : isEpubBackedAudiobookSrt(book)
-            ? Icons.headphones_outlined
-            : Icons.subtitles_outlined;
+        ? Icons.headphones_outlined
+        : Icons.subtitles_outlined;
     // TODO-1094：书架 SRT 卡书名必须与长按对话框同源——两者都基于同一
     // [_srtBookMediaItem]，再经 [MediaSource.getDisplayTitleFromMediaItem] 应用
     // 编辑弹窗写入的 override_title 偏好。以前直接读 DB 原始列 book.title，忽略
     // override，导致「编辑书名」保存后网格仍显示旧名。
     final MediaItem srtItem = _srtBookMediaItem(book);
-    final String displayTitle =
-        mediaSource.getDisplayTitleFromMediaItem(srtItem);
+    final String displayTitle = mediaSource.getDisplayTitleFromMediaItem(
+      srtItem,
+    );
     return _bookCardShell(
       slotAspectRatio: kShelfBookCardAspectRatio,
       cardKey: ValueKey<String>('srt_entry_${book.uid}'),
@@ -103,7 +104,8 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
         metadata: _srtBookHasProgress(book)
             ? _progressBar(
                 srtItem,
-                completed: book.bookKey.isNotEmpty &&
+                completed:
+                    book.bookKey.isNotEmpty &&
                     _completedBookKeys.contains(book.bookKey),
               )
             : null,
@@ -127,11 +129,11 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     // BUG-1317：读 override 封面必须走 resolveOverrideThumbnailFile——它才认得
     // 存量的旧文件名（源键烧进 hash）并就地迁移；裸 getOverrideThumbnailFilename
     // 只拿得到规范路径，会把还没迁移的封面判成「没有」。
-    final File? overrideCover =
-        ReaderFushiSource.instance.resolveOverrideThumbnailFile(
-      appModel: appModel,
-      item: _srtBookMediaItem(book),
-    );
+    final File? overrideCover = ReaderFushiSource.instance
+        .resolveOverrideThumbnailFile(
+          appModel: appModel,
+          item: _srtBookMediaItem(book),
+        );
     if (overrideCover != null) {
       return _buildFileCover(overrideCover.path, fallbackIcon);
     }
@@ -204,8 +206,11 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     );
   }
 
-  List<DialogAction> _srtExtraActions(BuildContext dialogContext, SrtBook book,
-      {VoidCallback? removeFromCollection}) {
+  List<DialogAction> _srtExtraActions(
+    BuildContext dialogContext,
+    SrtBook book, {
+    VoidCallback? removeFromCollection,
+  }) {
     final String bookKey = book.bookKey;
     final MediaItem item = _srtBookMediaItem(book);
     return [
@@ -350,18 +355,19 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
       mediaType: MediaKind.srt,
       entryKey: book.uid,
       // P4：用户看到的默认合集名用改名后的显示名（身份 entryKey 仍是 raw uid）。
-      defaultNewName: deriveSeriesDefaultName(
-        <String>[_srtDisplayTitle(book)],
-        fallback: t.series_default_name,
-      ),
+      defaultNewName: deriveSeriesDefaultName(<String>[
+        _srtDisplayTitle(book),
+      ], fallback: t.series_default_name),
     );
     if (!added || !mounted) return;
     _shelfMapsFuture = _loadShelfMaps();
     _rebuild(() {});
   }
 
-  Future<void> _showSrtBookDialog(SrtBook book,
-      {VoidCallback? removeFromCollection}) async {
+  Future<void> _showSrtBookDialog(
+    SrtBook book, {
+    VoidCallback? removeFromCollection,
+  }) async {
     await showAppDialog(
       context: context,
       builder: (ctx) => MediaItemDialogPage(
@@ -373,8 +379,11 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
         coverFallbackIcon: isEpubBackedAudiobookSrt(book)
             ? Icons.headphones_outlined
             : Icons.subtitles_outlined,
-        extraActions: (_) => _srtExtraActions(ctx, book,
-            removeFromCollection: removeFromCollection),
+        extraActions: (_) => _srtExtraActions(
+          ctx,
+          book,
+          removeFromCollection: removeFromCollection,
+        ),
       ),
     );
     if (mounted) _rebuild(() {});
@@ -399,7 +408,9 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
       _refreshSrtBooks();
       _rebuild(() {});
       FushiToast.show(
-          msg: t.audiobook_relocate_done, severity: ToastSeverity.success);
+        msg: t.audiobook_relocate_done,
+        severity: ToastSeverity.success,
+      );
     }
   }
 
@@ -416,17 +427,21 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
   Set<String> _selectableLooseKeys() => _selection.visibleLooseKeys.toSet();
 
   void _selectAll() {
-    _rebuild(() => _selection.selectAll(
-          loose: _selectableLooseKeys(),
-          collections: _visibleCollectionIds,
-        ));
+    _rebuild(
+      () => _selection.selectAll(
+        loose: _selectableLooseKeys(),
+        collections: _visibleCollectionIds,
+      ),
+    );
   }
 
   void _invertSelection() {
-    _rebuild(() => _selection.invert(
-          loose: _selectableLooseKeys(),
-          collections: _visibleCollectionIds,
-        ));
+    _rebuild(
+      () => _selection.invert(
+        loose: _selectableLooseKeys(),
+        collections: _visibleCollectionIds,
+      ),
+    );
   }
 
   Widget _buildBatchActionBar() {
@@ -438,7 +453,8 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
         _selectedKeys.isNotEmpty || _selectedCollectionIds.isNotEmpty;
     // 复查 #5：组合按钮 noop 档（0 合集 0 散卡 / 仅 1 合集且无散卡）不再当启用态死按钮，
     // 只在真能组合（新建 / 并入 / 合并）时才可点，与 [_batchCombineIntoSeries] 同判据。
-    final bool canCombine = classifyCombine(
+    final bool canCombine =
+        classifyCombine(
           collectionCount: _selectedCollectionIds.length,
           looseCount: _selectedKeys.length,
         ) !=
@@ -535,8 +551,8 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     final String baseMessage = collectionCount == 0
         ? t.batch_delete_confirm(n: mediaCount)
         : mediaCount == 0
-            ? t.batch_dissolve_confirm(m: collectionCount)
-            : t.batch_delete_mixed_confirm(n: mediaCount, m: collectionCount);
+        ? t.batch_dissolve_confirm(m: collectionCount)
+        : t.batch_delete_mixed_confirm(n: mediaCount, m: collectionCount);
     // 勾过但被当前搜索/标签筛选挡住的那些不会被删，必须说出来。
     final int hidden = _selection.hiddenSelectedCount;
     final String message = hidden == 0
@@ -546,7 +562,8 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     //   ① 本轮真会删媒体本体（纯解散合集 mediaCount==0 只解除分组，scope 无处可用，
     //      合集自身的删除传播走 collection_sync_engine；与视频页同一判断）；
     //   ② 本机存在删除传播通道（纯本地零网络判据）。
-    final bool canSyncEverywhere = mediaCount > 0 &&
+    final bool canSyncEverywhere =
+        mediaCount > 0 &&
         await hasDeletionPropagationChannel(SyncRepository(appModel.database));
     // 「同时删除本地文件」只在选中散卡里至少有一条**显式登记了 app 目录之外的
     // 原始音频**时才摆出来（书本体没有可删原件，见 ReaderFushiSource.deleteBook）。
@@ -570,8 +587,9 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
                 target: DeletionDisclosureTarget.shelfBook,
               ),
         showSyncScope: canSyncEverywhere,
-        localFilesSubtitle:
-            anyLocalFiles ? t.delete_local_files_audio_desc : null,
+        localFilesSubtitle: anyLocalFiles
+            ? t.delete_local_files_audio_desc
+            : null,
         rememberedChoices: rememberedChoices,
         onPersistChoices: preferenceStore.write,
         onConfirm: (DeleteDecision d) => Navigator.pop(ctx, d),
@@ -586,8 +604,10 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     final Set<int> toDissolve = targetCollectionIds;
     int dissolved = 0;
     for (final int id in toDissolve) {
-      final int removed =
-          await deleteMediaCollectionWithAssets(appModel.database, id);
+      final int removed = await deleteMediaCollectionWithAssets(
+        appModel.database,
+        id,
+      );
       if (removed > 0) dissolved++;
     }
 
@@ -628,22 +648,24 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
           // TODO-2470 死角①：纯字幕书（bookKey 空）没有上面那次 deleteBook，
           // scope 以前到这里就被丢弃、勾了「从所有设备删除」完全无效。propagateDeletion
           // 由 repo 按 standalone 判据决定写不写墓碑（srt-backed 已由 deleteBook 写过）。
-          final SrtBookDeleteResult removed = await repo.delete(uid,
-              propagateDeletion: scope == DeleteScope.syncEverywhere,
-              deleteLocalFiles: deleteLocalFiles);
+          final SrtBookDeleteResult removed = await repo.delete(
+            uid,
+            propagateDeletion: scope == DeleteScope.syncEverywhere,
+            deleteLocalFiles: deleteLocalFiles,
+          );
           localFiles = localFiles.merge(removed.localFiles);
           if (removed.deleted > 0) deleted++;
         }
       } else {
         final String? bookKey = _parseBookKey(key);
         if (bookKey != null) {
-          final DeleteBookResult result =
-              await ReaderFushiSource.instance.deleteBook(
-            db: appModel.database,
-            bookKey: bookKey,
-            scope: scope,
-            deleteLocalFiles: deleteLocalFiles,
-          );
+          final DeleteBookResult result = await ReaderFushiSource.instance
+              .deleteBook(
+                db: appModel.database,
+                bookKey: bookKey,
+                scope: scope,
+                deleteLocalFiles: deleteLocalFiles,
+              );
           localFiles = localFiles.merge(result.localFiles);
           if (result.deleted) deleted++;
         }
@@ -663,10 +685,10 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     final String successMsg = deleted > 0 && dissolved > 0
         ? t.batch_delete_mixed_success(n: deleted, m: dissolved)
         : deleted > 0
-            ? t.batch_delete_success(n: deleted)
-            : collectionCount == 0
-                ? t.batch_delete_success(n: deleted)
-                : t.batch_dissolve_success(m: dissolved);
+        ? t.batch_delete_success(n: deleted)
+        : collectionCount == 0
+        ? t.batch_delete_success(n: deleted)
+        : t.batch_dissolve_success(m: dissolved);
     FushiToast.show(
       msg: successMsg,
       severity: deleted > 0 || dissolved > 0
@@ -685,20 +707,25 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     final FushiDatabase db = appModel.database;
     for (final String key in _selectedKeys) {
       if (key.startsWith('srt_')) {
-        final SrtBook? book =
-            await SrtBookRepository(db).findByUid(key.substring(4));
+        final SrtBook? book = await SrtBookRepository(
+          db,
+        ).findByUid(key.substring(4));
         if (book == null) continue;
         if (await resolveAudiobookHasLocalFiles(book.audioPaths)) return true;
         if (book.bookKey.isNotEmpty &&
-            await ReaderFushiSource.instance
-                .hasLocalFiles(db: db, bookKey: book.bookKey)) {
+            await ReaderFushiSource.instance.hasLocalFiles(
+              db: db,
+              bookKey: book.bookKey,
+            )) {
           return true;
         }
       } else {
         final String? bookKey = _parseBookKey(key);
         if (bookKey != null &&
-            await ReaderFushiSource.instance
-                .hasLocalFiles(db: db, bookKey: bookKey)) {
+            await ReaderFushiSource.instance.hasLocalFiles(
+              db: db,
+              bookKey: bookKey,
+            )) {
           return true;
         }
       }
@@ -733,8 +760,8 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
         if (row.uid.isNotEmpty) row.bookKey: row.uid,
     };
     final List<SrtBook> srtBooks = await SrtBookRepository(db).listAll();
-    final List<MediaCollectionRow> collections =
-        await db.getAllMediaCollections();
+    final List<MediaCollectionRow> collections = await db
+        .getAllMediaCollections();
     if (!mounted) return false;
     final int dropped = _selection.retainExisting(
       loose: <String>{
@@ -788,8 +815,8 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
   /// 一致，不静默丢条目。srt/video 键本就是稳定 uid，原样透传。
   String _collectionEntryKeyFor(ShelfEntryRef ref) =>
       ref.mediaType == MediaKind.epub
-          ? (_epubUidByKey[ref.entryKey] ?? ref.entryKey)
-          : ref.entryKey;
+      ? (_epubUidByKey[ref.entryKey] ?? ref.entryKey)
+      : ref.entryKey;
 
   /// 块3：批量「组合」按钮三档自适应（[classifyCombine]）。书架选择键经
   /// shelfSelectionToEntry 解码成 (mediaType, entryKey)：
@@ -808,12 +835,14 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     final Map<String, String> titleByRef = <String, String>{
       for (final MediaItem item in _visibleEpubBooks)
         if (shelfSelectionToEntry(
-          item.mediaIdentifier,
-          ShelfSelectionSurface.books,
-        )
+              item.mediaIdentifier,
+              ShelfSelectionSurface.books,
+            )
             case final ShelfEntryRef ref)
-          '${ref.mediaType}|${ref.entryKey}':
-              displayTitleForBook(item: item, rawTitle: item.title),
+          '${ref.mediaType}|${ref.entryKey}': displayTitleForBook(
+            item: item,
+            rawTitle: item.title,
+          ),
       for (final SrtBook book in _visibleSrtBooks)
         '${MediaKind.srt}|${book.uid}': _srtDisplayTitle(book),
     };
@@ -866,16 +895,10 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     final List<Widget> previewCovers = <Widget>[
       for (final MediaItem item in _visibleEpubBooks)
         if (_selectedKeys.contains(item.mediaIdentifier))
-          _slotCover(
-            _ShelfBookSlot(epub: item),
-            _epubCoverUrisByBookKey,
-          ),
+          _slotCover(_ShelfBookSlot(epub: item), _epubCoverUrisByBookKey),
       for (final SrtBook book in _visibleSrtBooks)
         if (_selectedKeys.contains('srt_${book.uid}'))
-          _slotCover(
-            _ShelfBookSlot(srt: book),
-            _epubCoverUrisByBookKey,
-          ),
+          _slotCover(_ShelfBookSlot(srt: book), _epubCoverUrisByBookKey),
     ].take(4).toList();
     final String? name = await showCollectionNameDialog(
       context: context,
@@ -884,12 +907,16 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
       previewCovers: previewCovers,
     );
     if (name == null || !mounted) return;
-    final int collectionId =
-        await appModel.database.createMediaCollection(name);
+    final int collectionId = await appModel.database.createMediaCollection(
+      name,
+    );
     for (final ShelfEntryRef ref in refs) {
       // v83：epub 落库键 = uid（[_collectionEntryKeyFor]，剪枝时已刷新换算表）。
       await appModel.database.addToCollection(
-          collectionId, ref.mediaType, _collectionEntryKeyFor(ref));
+        collectionId,
+        ref.mediaType,
+        _collectionEntryKeyFor(ref),
+      );
     }
     if (!mounted) return;
     _exitSelectionMode();
@@ -906,15 +933,19 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     for (final ShelfEntryRef ref in refs) {
       // v83：epub 落库键 = uid（[_collectionEntryKeyFor]，剪枝时已刷新换算表）。
       await appModel.database.addToCollection(
-          collectionId, ref.mediaType, _collectionEntryKeyFor(ref));
+        collectionId,
+        ref.mediaType,
+        _collectionEntryKeyFor(ref),
+      );
     }
     if (!mounted) return;
     _exitSelectionMode();
     _shelfMapsFuture = _loadShelfMaps();
     _rebuild(() {});
     FushiToast.show(
-        msg: t.batch_add_to_collection_success(n: refs.length),
-        severity: ToastSeverity.success);
+      msg: t.batch_add_to_collection_success(n: refs.length),
+      severity: ToastSeverity.success,
+    );
   }
 
   /// 档3：≥2 合集（可带散卡）→ 合并成一个。目标 = 成员最多合集（其名作默认名，
@@ -930,16 +961,15 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     for (final int id in collectionIds) {
       itemsById[id] = await db.getCollectionItems(id);
     }
-    final MergeTargetChoice choice = chooseMergeTarget(
-      <({int id, String name, int memberCount})>[
-        for (final int id in collectionIds)
-          (
-            id: id,
-            name: _collectionsById[id]?.name ?? '',
-            memberCount: itemsById[id]!.length,
-          ),
-      ],
-    );
+    final MergeTargetChoice choice =
+        chooseMergeTarget(<({int id, String name, int memberCount})>[
+          for (final int id in collectionIds)
+            (
+              id: id,
+              name: _collectionsById[id]?.name ?? '',
+              memberCount: itemsById[id]!.length,
+            ),
+        ]);
     if (!mounted) return;
     final String? name = await showCollectionNameDialog(
       context: context,
@@ -954,8 +984,9 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     // addToCollection 幂等去重，重复成员无副作用。
     for (final int id in collectionIds) {
       if (id == targetId) continue;
-      final List<MediaCollectionItemRow> members =
-          await db.getCollectionItems(id);
+      final List<MediaCollectionItemRow> members = await db.getCollectionItems(
+        id,
+      );
       for (final MediaCollectionItemRow m in members) {
         // 原样搬家现有成员行：行值可能是对端未知种类，走 raw 版防静默丢成员。
         await db.addToCollectionRaw(targetId, m.mediaType, m.entryKey);
@@ -965,7 +996,10 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     for (final ShelfEntryRef ref in refs) {
       // v83：epub 落库键 = uid（[_collectionEntryKeyFor]，剪枝时已刷新换算表）。
       await db.addToCollection(
-          targetId, ref.mediaType, _collectionEntryKeyFor(ref));
+        targetId,
+        ref.mediaType,
+        _collectionEntryKeyFor(ref),
+      );
     }
     await db.renameMediaCollection(targetId, name);
     if (!mounted) return;
@@ -978,11 +1012,11 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
   Future<void> _confirmDeleteSrtBook(SrtBook book) async {
     final bool hasLocalFiles =
         await resolveAudiobookHasLocalFiles(book.audioPaths) ||
-            (book.bookKey.isNotEmpty &&
-                await ReaderFushiSource.instance.hasLocalFiles(
-                  db: appModel.database,
-                  bookKey: book.bookKey,
-                ));
+        (book.bookKey.isNotEmpty &&
+            await ReaderFushiSource.instance.hasLocalFiles(
+              db: appModel.database,
+              bookKey: book.bookKey,
+            ));
     if (!mounted) return;
     // P4：确认弹窗给人看，书名过门面（删除本体仍按 raw bookKey/uid 身份执行）。
     final DeleteDecision? decision = await _confirmMediaDelete(
@@ -991,8 +1025,9 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
       disclosure: buildDeletionDisclosure(
         target: DeletionDisclosureTarget.shelfBook,
       ),
-      localFilesSubtitle:
-          hasLocalFiles ? t.delete_local_files_audio_desc : null,
+      localFilesSubtitle: hasLocalFiles
+          ? t.delete_local_files_audio_desc
+          : null,
     );
     if (decision == null) return;
     final DeleteScope scope = decision.scope;
@@ -1006,21 +1041,23 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
       ]);
     }
     if (book.bookKey.isNotEmpty) {
-      final DeleteBookResult result =
-          await ReaderFushiSource.instance.deleteBook(
-        db: appModel.database,
-        bookKey: book.bookKey,
-        scope: scope,
-        deleteLocalFiles: decision.deleteLocalFiles,
-      );
+      final DeleteBookResult result = await ReaderFushiSource.instance
+          .deleteBook(
+            db: appModel.database,
+            bookKey: book.bookKey,
+            scope: scope,
+            deleteLocalFiles: decision.deleteLocalFiles,
+          );
       localFiles = localFiles.merge(result.localFiles);
     }
     // TODO-2470 死角①：纯字幕书（bookKey 空）不走上面的 deleteBook，删除范围必须在
     // 这里落地，否则勾了「从所有设备删除」静默无效。
     final SrtBookDeleteResult srtResult =
-        await SrtBookRepository(appModel.database).delete(book.uid,
-            propagateDeletion: scope == DeleteScope.syncEverywhere,
-            deleteLocalFiles: decision.deleteLocalFiles);
+        await SrtBookRepository(appModel.database).delete(
+          book.uid,
+          propagateDeletion: scope == DeleteScope.syncEverywhere,
+          deleteLocalFiles: decision.deleteLocalFiles,
+        );
     localFiles = localFiles.merge(srtResult.localFiles);
     if (mounted) {
       reportLocalFileDeleteFailures(
@@ -1050,19 +1087,23 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
       if (mounted) _rebuild(() {});
       return;
     }
-    final BackgroundListenResult result =
-        await appModel.startBackgroundListening(bookKey);
+    final BackgroundListenResult result = await appModel
+        .startBackgroundListening(bookKey);
     if (!mounted) return;
     switch (result) {
       case BackgroundListenResult.started:
         break;
       case BackgroundListenResult.noAudio:
         FushiToast.show(
-            msg: t.floating_lyric_no_audio, severity: ToastSeverity.error);
+          msg: t.floating_lyric_no_audio,
+          severity: ToastSeverity.error,
+        );
         break;
       case BackgroundListenResult.loadFailed:
         FushiToast.show(
-            msg: t.audiobook_load_error, severity: ToastSeverity.error);
+          msg: t.audiobook_load_error,
+          severity: ToastSeverity.error,
+        );
         break;
     }
     _rebuild(() {});
@@ -1070,8 +1111,10 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
 
   Future<void> _confirmDeleteEpub(MediaItem item, String bookKey) async {
     Navigator.pop(context);
-    final bool hasLocalFiles = await ReaderFushiSource.instance
-        .hasLocalFiles(db: appModel.database, bookKey: bookKey);
+    final bool hasLocalFiles = await ReaderFushiSource.instance.hasLocalFiles(
+      db: appModel.database,
+      bookKey: bookKey,
+    );
     if (!mounted) return;
     // P4：确认弹窗给人看，书名过门面（删除本体仍按 raw bookKey 身份执行）。
     final DeleteDecision? decision = await _confirmMediaDelete(
@@ -1082,8 +1125,9 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
       disclosure: buildDeletionDisclosure(
         target: DeletionDisclosureTarget.shelfBook,
       ),
-      localFilesSubtitle:
-          hasLocalFiles ? t.delete_local_files_audio_desc : null,
+      localFilesSubtitle: hasLocalFiles
+          ? t.delete_local_files_audio_desc
+          : null,
     );
     if (decision == null) return;
 
@@ -1167,13 +1211,13 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     final SrtBookRepository repo = SrtBookRepository(appModel.database);
     final SrtBookReimportOutcome? outcome =
         await showAppDialog<SrtBookReimportOutcome>(
-      context: context,
-      builder: (_) => SrtBookReimportDialog(
-        book: book,
-        db: appModel.database,
-        repo: repo,
-      ),
-    );
+          context: context,
+          builder: (_) => SrtBookReimportDialog(
+            book: book,
+            db: appModel.database,
+            repo: repo,
+          ),
+        );
     if (outcome == null || !mounted) return;
     _refreshSrtBooks();
     ref.invalidate(fushiBooksProvider(JapaneseLanguage.instance));
@@ -1233,8 +1277,9 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
     // 长在 desktop_drop 回调的同步栈上：拖个大包进来 UI 线程直接卡死。先离线程一次
     // 性判完（[probeDroppedImageArchives]），再把结果当同步谓词喂回去，分类函数保持
     // 纯函数不变。
-    final Map<String, bool> imageArchives =
-        await probeDroppedImageArchives(paths);
+    final Map<String, bool> imageArchives = await probeDroppedImageArchives(
+      paths,
+    );
     if (!mounted) return;
 
     // 目录（漫画页图文件夹）没有扩展名，纯分类函数分不出来——把真实文件系统判据
@@ -1265,13 +1310,16 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
       // （importNewManga），把整个目录登记成扫描根是视频页的语义。列出来只为让
       // `decideDropIntent` 以后给 books 也加上文件夹语义时，这里编译期就红。
       case DropIntent.addFolderAsSource:
-        debugPrint('[fushi-drop] [reader-shelf] intent=addFolderAsSource '
-            '(not produced on this surface)');
+        debugPrint(
+          '[fushi-drop] [reader-shelf] intent=addFolderAsSource '
+          '(not produced on this surface)',
+        );
       case DropIntent.importNewBook:
         _openBookImportPrefilled(
           epubPath: files.books.first,
-          subtitlePath:
-              files.subtitles.isNotEmpty ? files.subtitles.first : null,
+          subtitlePath: files.subtitles.isNotEmpty
+              ? files.subtitles.first
+              : null,
           audioPaths: files.audios,
         );
       case DropIntent.importNewManga:
@@ -1290,21 +1338,23 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
         _openAudiobookPrefilled(
           bookKey: hitBookKey!,
           audioPaths: files.audios,
-          alignmentPath:
-              files.subtitles.isNotEmpty ? files.subtitles.first : null,
+          alignmentPath: files.subtitles.isNotEmpty
+              ? files.subtitles.first
+              : null,
         );
       case DropIntent.needCardTarget:
         debugPrint('[fushi-drop] [reader-shelf] intent=needCardTarget');
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(t.drag_drop_need_card_target)),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(t.drag_drop_need_card_target)));
       case DropIntent.importNewVideo:
         // 书架拖入视频 → 自动切到视频导入流程，带上文件（不再只提示让用户手动切，
         // TODO-558）。视频卡与书卡同页渲染，无需跨 tab 通信。
         _openVideoImportPrefilled(
           videoPath: files.videos.first,
-          subtitlePath:
-              files.subtitles.isNotEmpty ? files.subtitles.first : null,
+          subtitlePath: files.subtitles.isNotEmpty
+              ? files.subtitles.first
+              : null,
         );
       case DropIntent.importNewPlaylist:
         _openPlaylistImportPrefilled(playlistPath: files.playlists.first);
@@ -1353,10 +1403,8 @@ extension _ReaderHistoryBooks on _ReaderFushiHistoryPageState {
   Future<void> _openMangaImportPrefilled({required String mangaPath}) async {
     final bool? imported = await showAppDialog<bool>(
       context: context,
-      builder: (_) => MangaImportDialog(
-        db: appModel.database,
-        initialPath: mangaPath,
-      ),
+      builder: (_) =>
+          MangaImportDialog(db: appModel.database, initialPath: mangaPath),
     );
     if (imported == true && mounted) {
       _refreshSrtBooks();

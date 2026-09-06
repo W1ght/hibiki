@@ -77,8 +77,9 @@ class GamepadMenuDropdown<T> extends StatefulWidget {
 
 class _GamepadMenuDropdownState<T> extends State<GamepadMenuDropdown<T>> {
   final MenuController _menu = MenuController();
-  final FocusNode _triggerFocus =
-      FocusNode(debugLabel: 'gamepadDropdownTrigger');
+  final FocusNode _triggerFocus = FocusNode(
+    debugLabel: 'gamepadDropdownTrigger',
+  );
   late final FushiFocusId _fallbackFocusId = FushiFocusId(
     'gamepad-dropdown-${identityHashCode(this)}',
   );
@@ -185,9 +186,10 @@ class _GamepadMenuDropdownState<T> extends State<GamepadMenuDropdown<T>> {
       builder: (BuildContext context, BoxConstraints constraints) {
         final double? fixedWidth =
             (widget.width != null && widget.width!.isFinite)
-                ? widget.width
-                : null;
-        final double? menuWidth = fixedWidth ??
+            ? widget.width
+            : null;
+        final double? menuWidth =
+            fixedWidth ??
             (constraints.maxWidth.isFinite ? constraints.maxWidth : null);
         final Widget anchor = _focusableAnchor(
           context,
@@ -235,8 +237,9 @@ class _GamepadMenuDropdownState<T> extends State<GamepadMenuDropdown<T>> {
       childFocusNode: _triggerFocus,
       style: MenuStyle(
         backgroundColor: WidgetStatePropertyAll<Color>(tokens.surfaces.overlay),
-        surfaceTintColor:
-            const WidgetStatePropertyAll<Color>(Colors.transparent),
+        surfaceTintColor: const WidgetStatePropertyAll<Color>(
+          Colors.transparent,
+        ),
         shape: WidgetStatePropertyAll<OutlinedBorder>(
           RoundedRectangleBorder(borderRadius: tokens.radii.menuRadius),
         ),
@@ -259,38 +262,38 @@ class _GamepadMenuDropdownState<T> extends State<GamepadMenuDropdown<T>> {
       ],
       builder:
           (BuildContext context, MenuController controller, Widget? child) {
-        return OutlinedButton(
-          focusNode: _triggerFocus,
-          onPressed: widget.enabled
-              ? () => controller.isOpen ? controller.close() : controller.open()
-              : null,
-          style: OutlinedButton.styleFrom(
-            alignment: Alignment.centerLeft,
-            padding: EdgeInsets.symmetric(
-              horizontal: tokens.spacing.rowHorizontal,
-              vertical: tokens.spacing.rowVertical,
-            ),
-            shape:
-                RoundedRectangleBorder(borderRadius: tokens.radii.chipRadius),
-          ),
-          child: Row(
-            children: <Widget>[
-              Expanded(
-                child: Text(
-                  _selectedLabel ?? widget.hintText ?? widget.label ?? '',
-                  maxLines: 2,
-                  softWrap: true,
-                  style: tokens.type.listTitle,
+            return OutlinedButton(
+              focusNode: _triggerFocus,
+              onPressed: widget.enabled
+                  ? () => controller.isOpen
+                        ? controller.close()
+                        : controller.open()
+                  : null,
+              style: OutlinedButton.styleFrom(
+                alignment: Alignment.centerLeft,
+                padding: EdgeInsets.symmetric(
+                  horizontal: tokens.spacing.rowHorizontal,
+                  vertical: tokens.spacing.rowVertical,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: tokens.radii.chipRadius,
                 ),
               ),
-              Icon(
-                Icons.arrow_drop_down,
-                color: tokens.surfaces.onVariant,
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Text(
+                      _selectedLabel ?? widget.hintText ?? widget.label ?? '',
+                      maxLines: 2,
+                      softWrap: true,
+                      style: tokens.type.listTitle,
+                    ),
+                  ),
+                  Icon(Icons.arrow_drop_down, color: tokens.surfaces.onVariant),
+                ],
               ),
-            ],
-          ),
-        );
-      },
+            );
+          },
     );
   }
 
@@ -306,8 +309,9 @@ class _GamepadMenuDropdownState<T> extends State<GamepadMenuDropdown<T>> {
   ) {
     final bool selected = i == sel;
     final GamepadDropdownEntry<T> entry = widget.entries[i];
-    final Color foreground =
-        selected ? tokens.surfaces.primary : tokens.surfaces.onSurface;
+    final Color foreground = selected
+        ? tokens.surfaces.primary
+        : tokens.surfaces.onSurface;
     final Widget title = Text(
       entry.label,
       maxLines: 2,

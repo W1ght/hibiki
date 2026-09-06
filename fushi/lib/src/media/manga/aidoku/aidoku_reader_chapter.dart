@@ -118,8 +118,10 @@ String _normalizeAidokuRequestHeader(String name, String value) {
 List<AidokuImagePage> aidokuImagePagesFrom(List<Object?> raw) {
   final List<AidokuImagePage> pages = raw
       .whereType<Map<Object?, Object?>>()
-      .map((Map<Object?, Object?> value) =>
-          AidokuImagePage.fromJson(value.cast<String, Object?>()))
+      .map(
+        (Map<Object?, Object?> value) =>
+            AidokuImagePage.fromJson(value.cast<String, Object?>()),
+      )
       .toList(growable: false);
   if (pages.isEmpty) {
     throw const AidokuRuntimeException(
@@ -139,12 +141,13 @@ class AidokuReaderChapter extends OnlineMangaReaderChapter {
     Directory? managedDirectory,
     this.persistProgress = false,
     this.initialPage,
-  }) : managedDirectory = managedDirectory ??
-            defaultCacheDirectory(
-              package: package,
-              manga: manga,
-              chapter: chapter,
-            );
+  }) : managedDirectory =
+           managedDirectory ??
+           defaultCacheDirectory(
+             package: package,
+             manga: manga,
+             chapter: chapter,
+           );
 
   /// 未入库（在源浏览里随手翻一章）时的落盘位置：包目录旁的私有缓存。
   ///
@@ -154,20 +157,19 @@ class AidokuReaderChapter extends OnlineMangaReaderChapter {
     required AidokuInstalledPackage package,
     required Map<String, Object?> manga,
     required Map<String, Object?> chapter,
-  }) =>
-      Directory(
-          p.join(
-            p.dirname(package.packagePath),
-            '.reader-cache',
-            sha256
-                .convert(
-                  utf8.encode(
-                    '${package.id}\u001f${manga['key']}\u001f${chapter['key']}',
-                  ),
-                )
-                .toString(),
-          ),
-        );
+  }) => Directory(
+    p.join(
+      p.dirname(package.packagePath),
+      '.reader-cache',
+      sha256
+          .convert(
+            utf8.encode(
+              '${package.id}\u001f${manga['key']}\u001f${chapter['key']}',
+            ),
+          )
+          .toString(),
+    ),
+  );
 
   final AidokuInstalledPackage package;
   final Map<String, Object?> manga;
@@ -212,13 +214,11 @@ class AidokuReaderChapter extends OnlineMangaReaderChapter {
 
   @override
   Future<MangaReaderSession> openPageSession() => AidokuMangaPageProvider(
-        pages: pages,
-        cacheRoot: Directory(
-          p.join(p.dirname(package.packagePath), '.page-cache'),
-        ),
-        referer: _httpsUrl(manga['url']),
-        jar: AidokuCookieJar.shared,
-      ).open();
+    pages: pages,
+    cacheRoot: Directory(p.join(p.dirname(package.packagePath), '.page-cache')),
+    referer: _httpsUrl(manga['url']),
+    jar: AidokuCookieJar.shared,
+  ).open();
 }
 
 String? _httpsUrl(Object? value) {
@@ -280,8 +280,9 @@ class _AidokuMangaReaderSession implements MangaReaderSession {
   Future<MangaPageBytes> page(int index) async {
     final File file = await _file(index);
     final Uint8List bytes = await file.readAsBytes();
-    final ({int width, int height})? dimensions =
-        await mangaImageDimensions(bytes);
+    final ({int width, int height})? dimensions = await mangaImageDimensions(
+      bytes,
+    );
     return MangaPageBytes(
       bytes: bytes,
       contentType: mangaImageContentType(bytes),
@@ -325,8 +326,9 @@ class _AidokuMangaReaderSession implements MangaReaderSession {
     return _inFlight.putIfAbsent(index, () async {
       try {
         final AidokuImagePage page = pages[index];
-        final File target =
-            File(p.join(cacheRoot.path, '${page.identity}.img'));
+        final File target = File(
+          p.join(cacheRoot.path, '${page.identity}.img'),
+        );
         if (await target.exists() && await target.length() > 0) return target;
         final Uri url = Uri.parse(page.url);
         final http.Request request = http.Request('GET', url);
@@ -335,8 +337,9 @@ class _AidokuMangaReaderSession implements MangaReaderSession {
         // host 生效的 cookie，让 Cloudflare 放行 cookie 跟到图片 CDN 上。
         final String? cookie = jar?.cookieHeaderFor(url);
         if (cookie != null &&
-            !request.headers.keys
-                .any((String name) => name.toLowerCase() == 'cookie')) {
+            !request.headers.keys.any(
+              (String name) => name.toLowerCase() == 'cookie',
+            )) {
           request.headers[HttpHeaders.cookieHeader] = cookie;
         }
         final http.StreamedResponse response = await client.send(request);

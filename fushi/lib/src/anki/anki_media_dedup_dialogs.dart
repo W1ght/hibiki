@@ -33,42 +33,48 @@ Future<AnkiMediaDedupReport?> runAnkiMediaDedupWithProgress(
   final ValueNotifier<bool> cancelRequested = ValueNotifier<bool>(false);
   BuildContext? dialogContext;
   bool dialogClosed = false;
-  unawaited(showDialog<void>(
-    context: context,
-    barrierDismissible: false,
-    builder: (BuildContext ctx) {
-      dialogContext = ctx;
-      return PopScope(
-        canPop: false,
-        child: AlertDialog(
-          title: Text(t.anki_dedup_progress_title),
-          content: SizedBox(
-            width: 420,
-            child: _AnkiMediaDedupProgressBody(
-              progress: progress,
-              dryRun: dryRun,
-            ),
-          ),
-          actions: [
-            // 后端不支持中途叫停（整轮在主机进程里跑）时**不画**取消按钮：
-            // 一个点了没反应的取消按钮比没有更糟，用户会以为已经停了。
-            if (runner.supportsProgress)
-              ValueListenableBuilder<bool>(
-                valueListenable: cancelRequested,
-                builder:
-                    (BuildContext context, bool requested, Widget? child) =>
-                        TextButton(
-                  onPressed:
-                      requested ? null : () => cancelRequested.value = true,
-                  child: Text(
-                      requested ? t.anki_dedup_cancelling : t.dialog_cancel),
-                ),
+  unawaited(
+    showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext ctx) {
+        dialogContext = ctx;
+        return PopScope(
+          canPop: false,
+          child: AlertDialog(
+            title: Text(t.anki_dedup_progress_title),
+            content: SizedBox(
+              width: 420,
+              child: _AnkiMediaDedupProgressBody(
+                progress: progress,
+                dryRun: dryRun,
               ),
-          ],
-        ),
-      );
-    },
-  ).then((void _) => dialogClosed = true));
+            ),
+            actions: [
+              // 后端不支持中途叫停（整轮在主机进程里跑）时**不画**取消按钮：
+              // 一个点了没反应的取消按钮比没有更糟，用户会以为已经停了。
+              if (runner.supportsProgress)
+                ValueListenableBuilder<bool>(
+                  valueListenable: cancelRequested,
+                  builder:
+                      (BuildContext context, bool requested, Widget? child) =>
+                          TextButton(
+                            onPressed: requested
+                                ? null
+                                : () => cancelRequested.value = true,
+                            child: Text(
+                              requested
+                                  ? t.anki_dedup_cancelling
+                                  : t.dialog_cancel,
+                            ),
+                          ),
+                ),
+            ],
+          ),
+        );
+      },
+    ).then((void _) => dialogClosed = true),
+  );
   try {
     return await runner.runNow(
       dryRun: dryRun,
@@ -105,46 +111,54 @@ class _AnkiMediaDedupProgressBody extends StatelessWidget {
       valueListenable: progress,
       builder:
           (BuildContext context, AnkiMediaDedupProgress? p, Widget? child) {
-        // scanning 阶段总量未知，走不定型进度条。
-        final double? value = (p != null &&
-                p.stage != AnkiMediaDedupStage.scanning &&
-                p.total > 0)
-            ? p.done / p.total
-            : null;
-        final String line;
-        if (p == null || p.stage == AnkiMediaDedupStage.scanning) {
-          line = t.anki_dedup_progress_scanning(count: '${p?.done ?? 0}');
-        } else if (p.stage == AnkiMediaDedupStage.hashing) {
-          line = t.anki_dedup_progress_hashing(
-              done: '${p.done}', total: '${p.total}');
-        } else {
-          line = t.anki_dedup_progress_resolving(
-              done: '${p.done}', total: '${p.total}');
-        }
-        return Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            LinearProgressIndicator(value: value),
-            const SizedBox(height: 12),
-            Text(line),
-            if (p?.currentFile != null) ...[
-              const SizedBox(height: 4),
-              Text(
-                p!.currentFile!,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-            ],
-            if (!dryRun && (p?.bytesFreed ?? 0) > 0) ...[
-              const SizedBox(height: 4),
-              Text(t.anki_dedup_progress_freed(
-                  size: formatAnkiMediaDedupBytes(p!.bytesFreed))),
-            ],
-          ],
-        );
-      },
+            // scanning 阶段总量未知，走不定型进度条。
+            final double? value =
+                (p != null &&
+                    p.stage != AnkiMediaDedupStage.scanning &&
+                    p.total > 0)
+                ? p.done / p.total
+                : null;
+            final String line;
+            if (p == null || p.stage == AnkiMediaDedupStage.scanning) {
+              line = t.anki_dedup_progress_scanning(count: '${p?.done ?? 0}');
+            } else if (p.stage == AnkiMediaDedupStage.hashing) {
+              line = t.anki_dedup_progress_hashing(
+                done: '${p.done}',
+                total: '${p.total}',
+              );
+            } else {
+              line = t.anki_dedup_progress_resolving(
+                done: '${p.done}',
+                total: '${p.total}',
+              );
+            }
+            return Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                LinearProgressIndicator(value: value),
+                const SizedBox(height: 12),
+                Text(line),
+                if (p?.currentFile != null) ...[
+                  const SizedBox(height: 4),
+                  Text(
+                    p!.currentFile!,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ],
+                if (!dryRun && (p?.bytesFreed ?? 0) > 0) ...[
+                  const SizedBox(height: 4),
+                  Text(
+                    t.anki_dedup_progress_freed(
+                      size: formatAnkiMediaDedupBytes(p!.bytesFreed),
+                    ),
+                  ),
+                ],
+              ],
+            );
+          },
     );
   }
 }
@@ -183,24 +197,30 @@ Future<bool> showAnkiMediaDedupPlanDialog(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(t.anki_dedup_plan_intro(
-                count: '${plan.duplicatesRemoved}',
-                size: formatAnkiMediaDedupBytes(plan.bytesSaved),
-              )),
+              Text(
+                t.anki_dedup_plan_intro(
+                  count: '${plan.duplicatesRemoved}',
+                  size: formatAnkiMediaDedupBytes(plan.bytesSaved),
+                ),
+              ),
               const SizedBox(height: 12),
               for (final MediaDedupDeletion d in plan.deletions)
                 Padding(
                   padding: const EdgeInsets.only(bottom: 4),
-                  child: Text(t.anki_dedup_plan_entry(
-                    file: d.filename,
-                    size: formatAnkiMediaDedupBytes(d.bytes),
-                    canonical: d.canonical,
-                  )),
+                  child: Text(
+                    t.anki_dedup_plan_entry(
+                      file: d.filename,
+                      size: formatAnkiMediaDedupBytes(d.bytes),
+                      canonical: d.canonical,
+                    ),
+                  ),
                 ),
               const SizedBox(height: 12),
-              Text(offerDelete
-                  ? t.anki_dedup_plan_journal
-                  : t.anki_dedup_report_dry_note),
+              Text(
+                offerDelete
+                    ? t.anki_dedup_plan_journal
+                    : t.anki_dedup_report_dry_note,
+              ),
               if (offerDelete) ...[
                 const SizedBox(height: 8),
                 // BUG-1263：AnkiConnect 在 Anki 主线程执行，真删期间 Anki

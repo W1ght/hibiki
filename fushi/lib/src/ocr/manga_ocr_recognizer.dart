@@ -104,8 +104,8 @@ class MangaOcrRecognizer implements OcrRecognizer {
     this.decoderInputIdsName = 'input_ids',
     this.decoderHiddenStatesName = 'encoder_hidden_states',
     this.decoderOutputName = 'logits',
-  })  : _encoder = encoderSession,
-        _decoder = decoderSession;
+  }) : _encoder = encoderSession,
+       _decoder = decoderSession;
 
   final OcrSession _encoder;
   final OcrSession _decoder;
@@ -127,15 +127,22 @@ class MangaOcrRecognizer implements OcrRecognizer {
     final img.Image resized = cropAndResizeForRecognition(page, box);
     final Float32List pixels = mangaOcrNormalize(resized);
 
-    final Map<String, OcrTensor> encoderOutputs =
-        await _encoder.run(<String, OcrTensor>{
-      encoderInputName:
-          OcrTensor.float32(pixels, <int>[1, 3, kRecInputSize, kRecInputSize]),
-    });
+    final Map<String, OcrTensor> encoderOutputs = await _encoder.run(
+      <String, OcrTensor>{
+        encoderInputName: OcrTensor.float32(pixels, <int>[
+          1,
+          3,
+          kRecInputSize,
+          kRecInputSize,
+        ]),
+      },
+    );
     final OcrTensor? hidden = encoderOutputs[encoderOutputName];
     if (hidden == null) {
-      throw StateError('encoder output $encoderOutputName missing: '
-          '${encoderOutputs.keys.toList()}');
+      throw StateError(
+        'encoder output $encoderOutputName missing: '
+        '${encoderOutputs.keys.toList()}',
+      );
     }
     final int encTokens = hidden.shape[1];
     final int hiddenSize = hidden.shape[2];
@@ -147,8 +154,11 @@ class MangaOcrRecognizer implements OcrRecognizer {
     for (int b = 0; b < numBeams; b++) {
       tiledHidden.setRange(b * perBeam, (b + 1) * perBeam, hiddenData);
     }
-    final OcrTensor hiddenTensor =
-        OcrTensor.float32(tiledHidden, <int>[numBeams, encTokens, hiddenSize]);
+    final OcrTensor hiddenTensor = OcrTensor.float32(tiledHidden, <int>[
+      numBeams,
+      encTokens,
+      hiddenSize,
+    ]);
 
     final BeamSearchResult result = await beamSearchDecode(
       config: BeamSearchConfig(
@@ -178,15 +188,18 @@ class MangaOcrRecognizer implements OcrRecognizer {
         inputIds[b * seqLen + t] = sequences[b][t];
       }
     }
-    final Map<String, OcrTensor> outputs =
-        await _decoder.run(<String, OcrTensor>{
-      decoderInputIdsName: OcrTensor.int64(inputIds, <int>[beams, seqLen]),
-      decoderHiddenStatesName: hiddenTensor,
-    });
+    final Map<String, OcrTensor> outputs = await _decoder.run(
+      <String, OcrTensor>{
+        decoderInputIdsName: OcrTensor.int64(inputIds, <int>[beams, seqLen]),
+        decoderHiddenStatesName: hiddenTensor,
+      },
+    );
     final OcrTensor? logits = outputs[decoderOutputName];
     if (logits == null) {
-      throw StateError('decoder output $decoderOutputName missing: '
-          '${outputs.keys.toList()}');
+      throw StateError(
+        'decoder output $decoderOutputName missing: '
+        '${outputs.keys.toList()}',
+      );
     }
     final int vocabSize = logits.shape[2];
     final Float32List data = logits.floatData!;

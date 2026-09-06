@@ -47,8 +47,7 @@ class RenderBackendService {
   static bool resolveImpellerDisabled({
     required bool? storedPref,
     required bool isAndroid,
-  }) =>
-      storedPref ?? false;
+  }) => storedPref ?? false;
 
   /// 可注入的 channel（测试替换成 mock messenger）；生产走真实 native channel。
   @visibleForTesting
@@ -94,8 +93,9 @@ class RenderBackendService {
       // 走 Skia）；非 null＝用户显式设过，遵从其选择。channel 有响应即代表本平台已
       // 接线（当前仅 Android），用 Platform.isAndroid（物理 OS，不受主题 target 平台
       // 覆盖影响）兜底未设置态，与 native getFlutterShellArgs 的同默认保持一致。
-      final bool? storedPref =
-          await channel.invokeMethod<bool>('isImpellerDisabled');
+      final bool? storedPref = await channel.invokeMethod<bool>(
+        'isImpellerDisabled',
+      );
       _impellerDisabled = resolveImpellerDisabled(
         storedPref: storedPref,
         isAndroid: Platform.isAndroid,

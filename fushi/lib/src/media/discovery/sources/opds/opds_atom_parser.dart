@@ -47,9 +47,7 @@ OpdsFeed parseOpdsAtomFeed(String xml, {required Uri baseUri}) {
     final XmlElement? entry = _firstElement(document, 'entry');
     if (entry != null) {
       final OpdsEntry? parsed = _parseEntry(entry, baseUri);
-      return OpdsFeed(
-        entries: <OpdsEntry>[if (parsed != null) parsed],
-      );
+      return OpdsFeed(entries: <OpdsEntry>[if (parsed != null) parsed]);
     }
     throw const FormatException('OPDS Atom document has no <feed> or <entry>');
   }
@@ -144,7 +142,8 @@ OpdsEntry? _parseEntry(XmlElement entry, Uri baseUri) {
           href: resolved,
           rel: acquisitionRel,
           // MIME 优先，认不出再退回按 href 末段的扩展名定型。
-          fileType: OpdsFileType.fromMediaType(type) ??
+          fileType:
+              OpdsFileType.fromMediaType(type) ??
               OpdsFileType.fromPath(Uri.tryParse(resolved)?.path),
           sizeBytes: int.tryParse(_attribute(link, 'length') ?? ''),
         ),

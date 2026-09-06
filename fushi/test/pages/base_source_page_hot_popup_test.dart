@@ -11,7 +11,7 @@ import '../helpers/test_platform_services.dart';
 
 class HotPopupTestAppModel extends AppModel {
   HotPopupTestAppModel({this.lowMemory = false})
-      : super(testPlatformServices());
+    : super(testPlatformServices());
 
   final bool lowMemory;
 
@@ -95,15 +95,11 @@ Widget buildHotPopupTestApp({
   required GlobalKey<HotPopupHostPageState> hostKey,
 }) {
   return ProviderScope(
-    overrides: [
-      appProvider.overrideWith((ref) => appModel),
-    ],
+    overrides: [appProvider.overrideWith((ref) => appModel)],
     child: TranslationProvider(
       child: MaterialApp(
         builder: (context, child) => child ?? const SizedBox.shrink(),
-        home: Scaffold(
-          body: HotPopupHostPage(key: hostKey),
-        ),
+        home: Scaffold(body: HotPopupHostPage(key: hostKey)),
       ),
     ),
   );
@@ -129,8 +125,9 @@ void main() {
 
     expect(find.byType(DictionaryPopupLayer), findsOneWidget);
 
-    final DictionaryPopupLayer firstLayer =
-        tester.widget(find.byType(DictionaryPopupLayer));
+    final DictionaryPopupLayer firstLayer = tester.widget(
+      find.byType(DictionaryPopupLayer),
+    );
 
     hostKey.currentState!.clearDictionaryResult();
     await tester.pump();
@@ -148,8 +145,9 @@ void main() {
     expect(find.byType(DictionaryPopupLayer), findsOneWidget);
     expect(hostKey.currentState!.dictionaryPopupShown, isTrue);
 
-    final DictionaryPopupLayer secondLayer =
-        tester.widget(find.byType(DictionaryPopupLayer));
+    final DictionaryPopupLayer secondLayer = tester.widget(
+      find.byType(DictionaryPopupLayer),
+    );
     expect(secondLayer.webViewKey, same(firstLayer.webViewKey));
   });
 

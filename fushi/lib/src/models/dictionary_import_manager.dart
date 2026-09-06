@@ -16,9 +16,9 @@ class DictionaryImportManager {
     required DictionaryRepository dictRepo,
     required Directory resourceDirectory,
     required Map<String, DictionaryFormat> formats,
-  })  : _dictRepo = dictRepo,
-        _resourceDirectory = resourceDirectory,
-        _formats = formats;
+  }) : _dictRepo = dictRepo,
+       _resourceDirectory = resourceDirectory,
+       _formats = formats;
 
   final DictionaryRepository _dictRepo;
   final Directory _resourceDirectory;
@@ -46,8 +46,9 @@ class DictionaryImportManager {
 
       if (fileNames.isEmpty) return _formats['yomichan']!;
 
-      if (fileNames
-          .any((f) => f == 'index.json' || f.endsWith('/index.json'))) {
+      if (fileNames.any(
+        (f) => f == 'index.json' || f.endsWith('/index.json'),
+      )) {
         return _formats['yomichan']!;
       }
       if (fileNames.any((f) => f.endsWith('.mdx') || f.endsWith('.mdd'))) {
@@ -64,10 +65,9 @@ class DictionaryImportManager {
   DictionaryFormat detectFormatFromDirectory(Directory dir) {
     final indexFile = File(path.join(dir.path, 'index.json'));
     if (indexFile.existsSync()) return _formats['yomichan']!;
-    final hasJson = dir
-        .listSync()
-        .whereType<File>()
-        .any((f) => f.path.toLowerCase().endsWith('.json'));
+    final hasJson = dir.listSync().whereType<File>().any(
+      (f) => f.path.toLowerCase().endsWith('.json'),
+    );
     if (hasJson) return _formats['migaku']!;
     throw Exception(t.dictionary_unrecognized_format);
   }
@@ -83,7 +83,8 @@ class DictionaryImportManager {
   /// 情况（导入失败、或成功但 0 词条＝被吞空）才写入；正常成功不再落错误日志。
   /// BUG-927 想要的诊断（失败 / 0 词条）依旧可在错误日志查到。
   void _logImportResultSummary(String source, FushiImportResult result) {
-    final int total = result.termCount +
+    final int total =
+        result.termCount +
         result.metaCount +
         result.freqCount +
         result.pitchCount +
@@ -134,8 +135,7 @@ class DictionaryImportManager {
     final zipFiles = entities.whereType<File>().where((f) {
       final ext = path.extension(f.path).toLowerCase();
       return ext == '.zip' || ext == '.dsl' || ext == '.mdx';
-    }).toList()
-      ..sort((File a, File b) => a.path.compareTo(b.path));
+    }).toList()..sort((File a, File b) => a.path.compareTo(b.path));
 
     if (zipFiles.isNotEmpty) {
       final cssFiles = entities
@@ -213,8 +213,10 @@ class DictionaryImportManager {
     try {
       progressNotifier.value = t.import_extract;
 
-      final tempZipPath =
-          path.join(_resourceDirectory.path, 'import_temp_dir.zip');
+      final tempZipPath = path.join(
+        _resourceDirectory.path,
+        'import_temp_dir.zip',
+      );
       final tempZip = File(tempZipPath);
 
       // 把整个目录读进内存再 zip 压缩是纯文件操作但很重（大词典目录可达数百
@@ -224,15 +226,17 @@ class DictionaryImportManager {
       await Isolate.run(() => packDirectoryToZip(directory.path, tempZipPath));
 
       try {
-        final tempOutputDir =
-            Directory(path.join(_resourceDirectory.path, 'import_temp'));
+        final tempOutputDir = Directory(
+          path.join(_resourceDirectory.path, 'import_temp'),
+        );
         if (tempOutputDir.existsSync()) {
           tempOutputDir.deleteSync(recursive: true);
         }
         tempOutputDir.createSync(recursive: true);
 
-        ErrorLogService.instance
-            .markImportStart('native 词典导入(目录)未返回：${directory.path}');
+        ErrorLogService.instance.markImportStart(
+          'native 词典导入(目录)未返回：${directory.path}',
+        );
         final FushiImportResult result;
         try {
           result = await importDictionaryViaFushidicts(
@@ -250,7 +254,8 @@ class DictionaryImportManager {
 
         if (!result.success) {
           throw Exception(
-              result.error.isNotEmpty ? result.error : t.import_failed);
+            result.error.isNotEmpty ? result.error : t.import_failed,
+          );
         }
 
         final name = _sanitizeTitle(result.title);
@@ -283,8 +288,10 @@ class DictionaryImportManager {
         _validatePath(finalDir);
         // 走原语：残留同名目录可能仍被引擎映射着，裸 deleteSync 在 Windows 上
         // 会抛 ERROR_USER_MAPPED_FILE（BUG-1756）。
-        await deleteDictionaryDirectory(finalDir,
-            reloadEngine: _dictRepo.rebuildEngine);
+        await deleteDictionaryDirectory(
+          finalDir,
+          reloadEngine: _dictRepo.rebuildEngine,
+        );
 
         if (innerDataDir.existsSync()) {
           await _publishImportedDir(innerDataDir, finalDir.path);
@@ -296,25 +303,28 @@ class DictionaryImportManager {
         }
 
         final detectedType = _parseType(result.detectedType);
-        _dictRepo.persistDictionary(Dictionary(
-          order: order,
-          name: name,
-          formatKey: 'yomichan',
-          type: detectedType,
-          // TODO-609 来源 metadata + TODO-622 混合词典也进 kanji 桶(add_term+add_kanji)。
-          metadata: <String, String>{
-            ...readSourceMetadataFromIndex(finalDir),
-            if (result.kanjiCount > 0) 'hasKanji': 'true',
-            // 导入时 native 已经数过 term/kanji 记录，等于类型探测刚做完：直接落
-            // 标记，启动期的自愈循环就不会再对这本做一次全表扫描。
-            kDictTypeProbeKey: kDictTypeProbeVersion,
-          },
-          hiddenLanguages: preservedSettings?.hiddenLanguages ?? const [],
-          collapsedLanguages: preservedSettings?.collapsedLanguages ?? const [],
-          // 用户手动指定的内容语言属于用户设置，重导必须继承——metadata 会被包内
-          // index.json 整体重建，塞那里等于每次更新都被抹掉。
-          languageOverride: preservedSettings?.languageOverride,
-        ));
+        _dictRepo.persistDictionary(
+          Dictionary(
+            order: order,
+            name: name,
+            formatKey: 'yomichan',
+            type: detectedType,
+            // TODO-609 来源 metadata + TODO-622 混合词典也进 kanji 桶(add_term+add_kanji)。
+            metadata: <String, String>{
+              ...readSourceMetadataFromIndex(finalDir),
+              if (result.kanjiCount > 0) 'hasKanji': 'true',
+              // 导入时 native 已经数过 term/kanji 记录，等于类型探测刚做完：直接落
+              // 标记，启动期的自愈循环就不会再对这本做一次全表扫描。
+              kDictTypeProbeKey: kDictTypeProbeVersion,
+            },
+            hiddenLanguages: preservedSettings?.hiddenLanguages ?? const [],
+            collapsedLanguages:
+                preservedSettings?.collapsedLanguages ?? const [],
+            // 用户手动指定的内容语言属于用户设置，重导必须继承——metadata 会被包内
+            // index.json 整体重建，塞那里等于每次更新都被抹掉。
+            languageOverride: preservedSettings?.languageOverride,
+          ),
+        );
 
         progressNotifier.value = t.import_complete;
         onImportSuccess();
@@ -350,8 +360,9 @@ class DictionaryImportManager {
     required bool lowMemoryMode,
     VoidCallback? onMemoryError,
   }) async {
-    final Directory work =
-        Directory(path.join(_resourceDirectory.path, 'import_multi_temp'));
+    final Directory work = Directory(
+      path.join(_resourceDirectory.path, 'import_multi_temp'),
+    );
     if (work.existsSync()) work.deleteSync(recursive: true);
     work.createSync(recursive: true);
     try {
@@ -359,15 +370,11 @@ class DictionaryImportManager {
       await Future<void>.delayed(Duration.zero);
       await extractFileToDisk(archive.path, work.path);
 
-      final List<File> dictionaries = work
-          .listSync(recursive: true)
-          .whereType<File>()
-          .where((File f) {
+      final List<File> dictionaries =
+          work.listSync(recursive: true).whereType<File>().where((File f) {
             final String ext = path.extension(f.path).toLowerCase();
             return ext == '.mdx' || ext == '.dsl';
-          })
-          .toList()
-        ..sort((File a, File b) => a.path.compareTo(b.path));
+          }).toList()..sort((File a, File b) => a.path.compareTo(b.path));
 
       final List<String> failedNames = <String>[];
       for (int i = 0; i < dictionaries.length; i++) {
@@ -411,7 +418,11 @@ class DictionaryImportManager {
         try {
           work.deleteSync(recursive: true);
         } catch (e, stack) {
-          ErrorLogService.instance.log('DictImport.multiArchiveCleanup', e, stack);
+          ErrorLogService.instance.log(
+            'DictImport.multiArchiveCleanup',
+            e,
+            stack,
+          );
         }
       }
     }
@@ -450,8 +461,9 @@ class DictionaryImportManager {
         !forceReplaceExisting &&
         sourceOverride == null &&
         path.extension(file.path).toLowerCase() == '.zip') {
-      final List<String> archived =
-          archivedDictionaryEntries(_readZipFileNames(file));
+      final List<String> archived = archivedDictionaryEntries(
+        _readZipFileNames(file),
+      );
       if (archived.length > 1) {
         await _importArchivedDictionaries(
           archive: file,
@@ -470,8 +482,9 @@ class DictionaryImportManager {
       progressNotifier.value = t.import_extract;
       await Future<void>.delayed(Duration.zero);
 
-      final tempOutputDir =
-          Directory(path.join(_resourceDirectory.path, 'import_temp'));
+      final tempOutputDir = Directory(
+        path.join(_resourceDirectory.path, 'import_temp'),
+      );
       if (tempOutputDir.existsSync()) {
         tempOutputDir.deleteSync(recursive: true);
       }
@@ -493,7 +506,8 @@ class DictionaryImportManager {
 
       if (!result.success) {
         throw Exception(
-            result.error.isNotEmpty ? result.error : t.import_failed);
+          result.error.isNotEmpty ? result.error : t.import_failed,
+        );
       }
 
       final name = _sanitizeTitle(result.title);
@@ -524,8 +538,10 @@ class DictionaryImportManager {
       final finalDir = Directory(path.join(_resourceDirectory.path, name));
       _validatePath(finalDir);
       // 同上（BUG-1756）：删旧目录必须经原语，先让引擎释放映射。
-      await deleteDictionaryDirectory(finalDir,
-          reloadEngine: _dictRepo.rebuildEngine);
+      await deleteDictionaryDirectory(
+        finalDir,
+        reloadEngine: _dictRepo.rebuildEngine,
+      );
 
       if (innerDataDir.existsSync()) {
         await _publishImportedDir(innerDataDir, finalDir.path);
@@ -543,8 +559,10 @@ class DictionaryImportManager {
       }
       for (final fontDir in fontDirs) {
         if (fontDir.existsSync()) {
-          _copyDirectory(fontDir,
-              Directory(path.join(finalDir.path, path.basename(fontDir.path))));
+          _copyDirectory(
+            fontDir,
+            Directory(path.join(finalDir.path, path.basename(fontDir.path))),
+          );
         }
       }
 
@@ -560,23 +578,25 @@ class DictionaryImportManager {
         readSourceMetadataFromIndex(finalDir),
         sourceOverride,
       );
-      _dictRepo.persistDictionary(Dictionary(
-        order: order,
-        name: name,
-        formatKey: 'yomichan',
-        type: detectedType,
-        // TODO-622: 混合词典也进 kanji 桶(叠加 609 的来源 metadata)。
-        metadata: <String, String>{
-          ...metadata,
-          if (result.kanjiCount > 0) 'hasKanji': 'true',
-          // 同目录导入路径：native 刚数完记录，探测标记直接落库（见另一处注释）。
-          kDictTypeProbeKey: kDictTypeProbeVersion,
-        },
-        hiddenLanguages: preservedSettings?.hiddenLanguages ?? const [],
-        collapsedLanguages: preservedSettings?.collapsedLanguages ?? const [],
-        // 同上：用户手动指定的内容语言随 preservedSettings 继承，不被重导冲掉。
-        languageOverride: preservedSettings?.languageOverride,
-      ));
+      _dictRepo.persistDictionary(
+        Dictionary(
+          order: order,
+          name: name,
+          formatKey: 'yomichan',
+          type: detectedType,
+          // TODO-622: 混合词典也进 kanji 桶(叠加 609 的来源 metadata)。
+          metadata: <String, String>{
+            ...metadata,
+            if (result.kanjiCount > 0) 'hasKanji': 'true',
+            // 同目录导入路径：native 刚数完记录，探测标记直接落库（见另一处注释）。
+            kDictTypeProbeKey: kDictTypeProbeVersion,
+          },
+          hiddenLanguages: preservedSettings?.hiddenLanguages ?? const [],
+          collapsedLanguages: preservedSettings?.collapsedLanguages ?? const [],
+          // 同上：用户手动指定的内容语言随 preservedSettings 继承，不被重导冲掉。
+          languageOverride: preservedSettings?.languageOverride,
+        ),
+      );
 
       progressNotifier.value = t.import_complete;
       onImportSuccess();
@@ -722,10 +742,17 @@ class DictionaryImportManager {
     final Archive archive = Archive();
     for (final FileSystemEntity entity in directory.listSync(recursive: true)) {
       if (entity is File) {
-        final String relativePath =
-            path.relative(entity.path, from: directory.path);
-        archive.addFile(ArchiveFile(
-            relativePath, entity.lengthSync(), entity.readAsBytesSync()));
+        final String relativePath = path.relative(
+          entity.path,
+          from: directory.path,
+        );
+        archive.addFile(
+          ArchiveFile(
+            relativePath,
+            entity.lengthSync(),
+            entity.readAsBytesSync(),
+          ),
+        );
       }
     }
     File(zipPath).writeAsBytesSync(ZipEncoder().encode(archive)!);
@@ -744,7 +771,9 @@ class DictionaryImportManager {
   }
 
   static Future<void> _copyDirectoryAsync(
-      Directory source, Directory destination) async {
+    Directory source,
+    Directory destination,
+  ) async {
     await destination.create(recursive: true);
     await for (final entity in source.list()) {
       final newPath = path.join(destination.path, path.basename(entity.path));
@@ -877,10 +906,12 @@ class DictionaryImportManager {
         decision != UpdateDecision.replaceOldVersion) {
       return null;
     }
-    final Dictionary existing = replaceTarget ??
+    final Dictionary existing =
+        replaceTarget ??
         (decision == UpdateDecision.replaceExact
-            ? _dictRepo.dictionaries
-                .firstWhere((Dictionary d) => d.name == newName)
+            ? _dictRepo.dictionaries.firstWhere(
+                (Dictionary d) => d.name == newName,
+              )
             : _dictRepo.findUpdatable(newName)!);
     await _removeDictionaryDirAndMeta(existing.name);
     if (existing.name != newName && _dictRepo.hasDictionaryNamed(newName)) {
@@ -924,9 +955,9 @@ class DictionaryImportManager {
     Map<String, String> fromIndex,
     Map<String, String>? sourceOverride,
   ) {
-    final Map<String, String> override =
-        Map<String, String>.from(sourceOverride ?? const <String, String>{})
-          ..remove('revision');
+    final Map<String, String> override = Map<String, String>.from(
+      sourceOverride ?? const <String, String>{},
+    )..remove('revision');
     return <String, String>{...fromIndex, ...override};
   }
 

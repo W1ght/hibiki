@@ -105,7 +105,9 @@ class _ExampleSentencesDialogPageState
         controller: _scrollController,
         child: widget.exampleSentences.isEmpty
             ? SingleChildScrollView(
-                controller: _scrollController, child: buildEmptyMessage())
+                controller: _scrollController,
+                child: buildEmptyMessage(),
+              )
             : buildTextWidgets(),
       ),
     );
@@ -115,10 +117,9 @@ class _ExampleSentencesDialogPageState
     return MasonryGridView.builder(
       controller: _scrollController,
       gridDelegate: SliverSimpleGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount:
-              MediaQuery.of(context).orientation == Orientation.portrait
-                  ? 1
-                  : 3),
+        crossAxisCount:
+            MediaQuery.of(context).orientation == Orientation.portrait ? 1 : 3,
+      ),
       mainAxisSpacing: FushiDesignTokens.of(context).spacing.gap,
       crossAxisSpacing: FushiDesignTokens.of(context).spacing.gap,
       itemCount: widget.exampleSentences.length,
@@ -142,9 +143,9 @@ class _ExampleSentencesDialogPageState
   }
 
   List<Widget> get actions => [
-        if (widget.onAppend != null) buildAppendButton(),
-        buildSelectButton(),
-      ];
+    if (widget.onAppend != null) buildAppendButton(),
+    buildSelectButton(),
+  ];
 
   Widget buildAppendButton() {
     return adaptiveDialogAction(

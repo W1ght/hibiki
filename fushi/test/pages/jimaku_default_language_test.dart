@@ -55,7 +55,7 @@ const NyaaTorrent _kTorrent = NyaaTorrent(
 /// 只替换偏好读取与 HTTP 的 AppModel 替身：语言预选走的仍是生产代码路径。
 class _FakeAppModel extends AppModel {
   _FakeAppModel({required this.defaultLanguage})
-      : super(testPlatformServices());
+    : super(testPlatformServices());
 
   final String defaultLanguage;
 
@@ -68,9 +68,9 @@ class _FakeAppModel extends AppModel {
   // 以下两项只为让对话框能渲染（未 initialise 的 AppModel 读 prefsRepo 会抛）。
   @override
   QbConnectionConfig? get qbConnectionConfig => const QbConnectionConfig(
-        backend: QbConnectionConfig.backendQbittorrent,
-        baseUrl: 'http://127.0.0.1:1',
-      );
+    backend: QbConnectionConfig.backendQbittorrent,
+    baseUrl: 'http://127.0.0.1:1',
+  );
 
   @override
   bool get torrentUploadIntroShown => true;
@@ -81,20 +81,24 @@ class _FakeAppModel extends AppModel {
         final String url = req.url.toString();
         if (url.contains('/entries/search')) {
           return http.Response.bytes(
-            utf8.encode(jsonEncode(<Map<String, Object>>[
-              <String, Object>{'id': 7, 'name': 'Test Anime'},
-            ])),
+            utf8.encode(
+              jsonEncode(<Map<String, Object>>[
+                <String, Object>{'id': 7, 'name': 'Test Anime'},
+              ]),
+            ),
             200,
           );
         }
         if (url.contains('/files')) {
           return http.Response.bytes(
-            utf8.encode(jsonEncode(<Map<String, Object>>[
-              <String, Object>{
-                'name': 'Test Anime - 01.zh.srt',
-                'url': 'https://jimaku.cc/f/1.srt',
-              },
-            ])),
+            utf8.encode(
+              jsonEncode(<Map<String, Object>>[
+                <String, Object>{
+                  'name': 'Test Anime - 01.zh.srt',
+                  'url': 'https://jimaku.cc/f/1.srt',
+                },
+              ]),
+            ),
             200,
           );
         }
@@ -140,12 +144,18 @@ void main() {
 
   group('AppModel 归一', () {
     test('空 / 空白 → null（= 不限），有值 → 原码', () {
-      expect(_FakeAppModel(defaultLanguage: '').jimakuDefaultLanguageOrNull,
-          isNull);
-      expect(_FakeAppModel(defaultLanguage: '   ').jimakuDefaultLanguageOrNull,
-          isNull);
-      expect(_FakeAppModel(defaultLanguage: 'ja').jimakuDefaultLanguageOrNull,
-          'ja');
+      expect(
+        _FakeAppModel(defaultLanguage: '').jimakuDefaultLanguageOrNull,
+        isNull,
+      );
+      expect(
+        _FakeAppModel(defaultLanguage: '   ').jimakuDefaultLanguageOrNull,
+        isNull,
+      );
+      expect(
+        _FakeAppModel(defaultLanguage: 'ja').jimakuDefaultLanguageOrNull,
+        'ja',
+      );
     });
 
     test('偏好仓库未就绪 → 回退「不限」而不是抛', () {
@@ -172,23 +182,26 @@ void main() {
 }
 
 Future<void> _pumpDialog(WidgetTester tester, String language) async {
-  await tester.pumpWidget(ProviderScope(
-    overrides: <Override>[
-      appProvider
-          .overrideWith((Ref ref) => _FakeAppModel(defaultLanguage: language)),
-    ],
-    child: TranslationProvider(
-      child: MaterialApp(
-        home: Scaffold(
-          body: AnimeDownloadDialog(
-            embedded: true,
-            debugInitialMedia: _kMedia,
-            debugInitialTorrent: _kTorrent,
+  await tester.pumpWidget(
+    ProviderScope(
+      overrides: <Override>[
+        appProvider.overrideWith(
+          (Ref ref) => _FakeAppModel(defaultLanguage: language),
+        ),
+      ],
+      child: TranslationProvider(
+        child: MaterialApp(
+          home: Scaffold(
+            body: AnimeDownloadDialog(
+              embedded: true,
+              debugInitialMedia: _kMedia,
+              debugInitialTorrent: _kTorrent,
+            ),
           ),
         ),
       ),
     ),
-  ));
+  );
   await tester.pumpAndSettle();
   // 触发一次字幕搜索，语言选择器才会出现（它依赖搜到的条目）。
   await tester.tap(find.byIcon(Icons.search).last);

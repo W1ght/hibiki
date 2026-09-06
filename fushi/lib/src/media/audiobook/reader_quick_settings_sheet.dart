@@ -128,7 +128,7 @@ class ReaderQuickSettingsSheet extends StatefulWidget {
   final bool floatingLyricClickLookup;
   final ValueChanged<bool>? onFloatingLyricClickLookupChanged;
   final Future<void> Function(BookSearchResult result, String query)?
-      onSearchJump;
+  onSearchJump;
   final Future<void> Function(int globalCharOffset)? onJumpToCharOffset;
   final (int current, int total)? charProgress;
   final VoidCallback? onPageMarginChanged;
@@ -222,8 +222,9 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
   /// 纯按窗口宽高确定性判定（>= 共享常量阈值），与视频设置同条件。
   bool _isWide = false;
 
-  late List<FavoriteSentence> _favorites =
-      List<FavoriteSentence>.of(widget.favoriteSentences);
+  late List<FavoriteSentence> _favorites = List<FavoriteSentence>.of(
+    widget.favoriteSentences,
+  );
 
   // Local mirror of the audiobook overlay toggles. These are NOT schema items:
   // flipping them needs reader-page side effects (overlay show/hide, permission
@@ -302,7 +303,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
         'pageColumns',
         'spreadMode',
         'spreadDirection',
-        'prioritizeReaderStyles'
+        'prioritizeReaderStyles',
       };
       if (layoutKeys.contains(key)) {
         await _reloadLayoutLive();
@@ -393,11 +394,13 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final BuildContext? rowContext = _currentTocRowKey.currentContext;
       if (rowContext == null || !mounted) return;
-      unawaited(Scrollable.ensureVisible(
-        rowContext,
-        alignment: 0.3,
-        duration: const Duration(milliseconds: 160),
-      ));
+      unawaited(
+        Scrollable.ensureVisible(
+          rowContext,
+          alignment: 0.3,
+          duration: const Duration(milliseconds: 160),
+        ),
+      );
     });
     return ReaderSideSheet(
       title: t.section_navigation,
@@ -453,19 +456,23 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     if (tab == 'layout' && widget.onToggleLyricsMode != null) {
       children
         ..add(ReaderSideSheetSectionLabel(t.lyrics_mode))
-        ..add(AdaptiveSettingsSection(children: <Widget>[
-          AdaptiveSettingsNavigationRow(
-            key: const ValueKey<String>('fushi_lyrics_mode_toggle'),
-            title: widget.lyricsMode ? t.book_mode : t.lyrics_mode,
-            icon: widget.lyricsMode
-                ? Icons.auto_stories_outlined
-                : Icons.lyrics_outlined,
-            onTap: () {
-              Navigator.of(context).pop();
-              widget.onToggleLyricsMode!();
-            },
+        ..add(
+          AdaptiveSettingsSection(
+            children: <Widget>[
+              AdaptiveSettingsNavigationRow(
+                key: const ValueKey<String>('fushi_lyrics_mode_toggle'),
+                title: widget.lyricsMode ? t.book_mode : t.lyrics_mode,
+                icon: widget.lyricsMode
+                    ? Icons.auto_stories_outlined
+                    : Icons.lyrics_outlined,
+                onTap: () {
+                  Navigator.of(context).pop();
+                  widget.onToggleLyricsMode!();
+                },
+              ),
+            ],
           ),
-        ]));
+        );
     }
     return ReaderSideSheet(
       title: t.reader_settings_section,
@@ -513,7 +520,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
       (
         id: 'layout',
         icon: Icons.auto_stories_outlined,
-        label: t.section_layout
+        label: t.section_layout,
       ),
       (
         id: 'behavior',
@@ -776,8 +783,10 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
   /// 可选「编辑书籍 CSS」行。窄窗 push 子页与宽窗右 pane 共用（经
   /// [_subPageContent] 的 'layout' 分支）。
   Widget _buildLayoutDetail() {
-    final Widget layoutContent =
-        _buildReaderGroupContent(ReaderGroup.layout, t.section_layout);
+    final Widget layoutContent = _buildReaderGroupContent(
+      ReaderGroup.layout,
+      t.section_layout,
+    );
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -832,12 +841,14 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     if (rp != null && rp.$2 > 0) {
       final int displayIdx = rp.$1 + 1;
       final double pct = (displayIdx / rp.$2) * 100;
-      lines.add(t.chapter_progress(
-        idx: displayIdx,
-        total: rp.$2,
-        suffix: '',
-        pct: pct.toStringAsFixed(1),
-      ));
+      lines.add(
+        t.chapter_progress(
+          idx: displayIdx,
+          total: rp.$2,
+          suffix: '',
+          pct: pct.toStringAsFixed(1),
+        ),
+      );
     }
 
     final (int, int)? pp = widget.pageProgress;
@@ -861,11 +872,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
           t.reading_progress,
           padding: EdgeInsets.only(bottom: tokens.spacing.gap),
         ),
-        if (hasTitle)
-          Text(
-            rawTitle,
-            style: theme.textTheme.titleSmall,
-          ),
+        if (hasTitle) Text(rawTitle, style: theme.textTheme.titleSmall),
         if (hasChapter)
           Text(
             rawChapter,
@@ -908,10 +915,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
               SizedBox(height: tokens.spacing.gap / 2),
               ClipRRect(
                 borderRadius: tokens.radii.chipRadius,
-                child: LinearProgressIndicator(
-                  value: fraction,
-                  minHeight: 3,
-                ),
+                child: LinearProgressIndicator(value: fraction, minHeight: 3),
               ),
             ],
           ),
@@ -980,8 +984,10 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
                     ? SizedBox(
                         width: 18,
                         height: 18,
-                        child:
-                            adaptiveIndicator(context: context, strokeWidth: 2),
+                        child: adaptiveIndicator(
+                          context: context,
+                          strokeWidth: 2,
+                        ),
                       )
                     : FushiIconButton(
                         icon: Icons.search,
@@ -1013,19 +1019,21 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
                 final String query = _searchResultsQuery;
                 final int rawIdx = r.sectionIndex;
                 final List<TtuTocEntry> toc = widget.toc;
-                final TtuTocEntry? tocEntry =
-                    toc.cast<TtuTocEntry?>().firstWhere(
-                          (e) => e!.index == rawIdx,
-                          orElse: () => null,
-                        );
+                final TtuTocEntry? tocEntry = toc
+                    .cast<TtuTocEntry?>()
+                    .firstWhere((e) => e!.index == rawIdx, orElse: () => null);
                 final String chapterLabel =
                     tocEntry?.label ?? t.go_to_chapter(n: rawIdx + 1);
 
                 final String before = r.context.substring(0, r.matchStart);
-                final int matchEnd =
-                    (r.matchStart + query.length).clamp(0, r.context.length);
-                final String match =
-                    r.context.substring(r.matchStart, matchEnd);
+                final int matchEnd = (r.matchStart + query.length).clamp(
+                  0,
+                  r.context.length,
+                );
+                final String match = r.context.substring(
+                  r.matchStart,
+                  matchEnd,
+                );
                 final String after = r.context.substring(matchEnd);
 
                 return _InBookSearchResultRow(
@@ -1045,10 +1053,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
         ] else if (!_isSearching &&
             _searchController.text.trim().isNotEmpty) ...[
           SizedBox(height: tokens.spacing.gap),
-          Text(
-            t.book_search_no_results,
-            style: theme.textTheme.bodySmall,
-          ),
+          Text(t.book_search_no_results, style: theme.textTheme.bodySmall),
         ],
       ],
     );
@@ -1133,7 +1138,9 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
       }
     }
     bool hasFoldableChildren(int i) =>
-        i + 1 < toc.length && toc[i + 1].depth > toc[i].depth && toc[i + 1].depth >= 2;
+        i + 1 < toc.length &&
+        toc[i + 1].depth > toc[i].depth &&
+        toc[i + 1].depth >= 2;
     bool isExpanded(TtuTocEntry parent) =>
         _expandedTocParents.contains(parent.label) ||
         autoExpanded.contains(parent.label);
@@ -1155,11 +1162,11 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
               expanded: hasFoldableChildren(i) && isExpanded(toc[i]),
               onToggleExpanded: hasFoldableChildren(i)
                   ? () => setState(() {
-                        final String label = toc[i].label;
-                        if (!_expandedTocParents.remove(label)) {
-                          _expandedTocParents.add(label);
-                        }
-                      })
+                      final String label = toc[i].label;
+                      if (!_expandedTocParents.remove(label)) {
+                        _expandedTocParents.add(label);
+                      }
+                    })
                   : null,
               onTap: toc[i].isHeader
                   ? null
@@ -1291,12 +1298,14 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
       title: t.skip_action,
       icon: Icons.skip_next_outlined,
       options: _skipActionOptions
-          .map((s) => AdaptiveSettingsPickerOption<int>(
-                value: s,
-                label: s == 0
-                    ? t.skip_action_sentence
-                    : t.skip_action_seconds(n: s),
-              ))
+          .map(
+            (s) => AdaptiveSettingsPickerOption<int>(
+              value: s,
+              label: s == 0
+                  ? t.skip_action_sentence
+                  : t.skip_action_seconds(n: s),
+            ),
+          )
           .toList(),
       selected: current,
       onChanged: (int value) {
@@ -1316,11 +1325,13 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
           icon: Icons.image_outlined,
           controlBelow: true,
           segments: _imagePauseOptions
-              .map((s) => ButtonSegment<int>(
-                    value: s,
-                    label: Text(s == 0 ? t.image_pause_off : '${s}s'),
-                    tooltip: s == 0 ? t.image_pause_off : '${s}s',
-                  ))
+              .map(
+                (s) => ButtonSegment<int>(
+                  value: s,
+                  label: Text(s == 0 ? t.image_pause_off : '${s}s'),
+                  tooltip: s == 0 ? t.image_pause_off : '${s}s',
+                ),
+              )
               .toList(),
           selected: sec,
           onChanged: ctrl.setImagePauseSec,
@@ -1455,9 +1466,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
   Widget _buildLyricsMarginSection() {
     return AdaptiveSettingsSection(
       children: [
-        AdaptiveSettingsRow(
-          title: t.lyrics_font_size_hint,
-        ),
+        AdaptiveSettingsRow(title: t.lyrics_font_size_hint),
         // TODO-907: 歌词竖排开关（独立于正文 writing-mode）。切换走整页重建。
         AdaptiveSettingsSwitchRow(
           title: t.lyrics_vertical_writing,
@@ -1567,8 +1576,9 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
       onChanged: (bool enabled) {
         if (enabled) {
           // 开启自定义：种一个不透明的初始色（用当前主题文字色），避免落哨兵 0。
-          final Color seed =
-              Color(0xFF000000 | (themeFallback.value & 0xFFFFFF));
+          final Color seed = Color(
+            0xFF000000 | (themeFallback.value & 0xFFFFFF),
+          );
           _src.setLyricsTextColor(seed.value);
         } else {
           _src.clearLyricsTextColor();
@@ -1590,29 +1600,30 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
           ? LayoutBuilder(
               builder:
                   (BuildContext layoutContext, BoxConstraints constraints) {
-                final double pickerWidth = constraints.maxWidth.clamp(
-                  0.0,
-                  MediaQuery.of(layoutContext).size.width - 64,
-                );
-                return ColorPicker(
-                  pickerColor: current,
-                  onColorChanged: (Color c) {
-                    // 强制不透明（文字色透明无意义；也保证非哨兵 0）。
-                    final Color opaque =
-                        Color(0xFF000000 | (c.value & 0xFFFFFF));
-                    _src.setLyricsTextColor(opaque.value);
-                    setState(() {});
-                    widget.onStyleChanged?.call();
+                    final double pickerWidth = constraints.maxWidth.clamp(
+                      0.0,
+                      MediaQuery.of(layoutContext).size.width - 64,
+                    );
+                    return ColorPicker(
+                      pickerColor: current,
+                      onColorChanged: (Color c) {
+                        // 强制不透明（文字色透明无意义；也保证非哨兵 0）。
+                        final Color opaque = Color(
+                          0xFF000000 | (c.value & 0xFFFFFF),
+                        );
+                        _src.setLyricsTextColor(opaque.value);
+                        setState(() {});
+                        widget.onStyleChanged?.call();
+                      },
+                      portraitOnly: true,
+                      colorPickerWidth: pickerWidth,
+                      pickerAreaHeightPercent: 0.5,
+                      enableAlpha: false,
+                      displayThumbColor: true,
+                      hexInputBar: true,
+                      labelTypes: const <ColorLabelType>[],
+                    );
                   },
-                  portraitOnly: true,
-                  colorPickerWidth: pickerWidth,
-                  pickerAreaHeightPercent: 0.5,
-                  enableAlpha: false,
-                  displayThumbColor: true,
-                  hexInputBar: true,
-                  labelTypes: const <ColorLabelType>[],
-                );
-              },
             )
           : null,
     );
@@ -1664,11 +1675,11 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
                 : () async => widget.onPlayFavorite?.call(favorite),
             onJump:
                 favorite.sectionIndex == null || widget.onJumpToFavorite == null
-                    ? null
-                    : () async {
-                        Navigator.of(context).pop();
-                        await widget.onJumpToFavorite?.call(favorite);
-                      },
+                ? null
+                : () async {
+                    Navigator.of(context).pop();
+                    await widget.onJumpToFavorite?.call(favorite);
+                  },
             onCopy: () {
               Clipboard.setData(ClipboardData(text: favorite.text));
               FushiToast.show(msg: t.copy, severity: ToastSeverity.success);
@@ -1829,7 +1840,8 @@ class _InBookTocRow extends StatelessWidget {
       final ThemeData theme = Theme.of(context);
       return Padding(
         padding: EdgeInsetsDirectional.only(
-          start: (cupertino
+          start:
+              (cupertino
                   ? tokens.spacing.rowHorizontal
                   : tokens.spacing.gap + tokens.spacing.gap / 2) +
               indent,
@@ -2078,11 +2090,11 @@ class _InBookIconButton extends StatelessWidget {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final Color color = destructive
         ? (cupertino
-            ? CupertinoColors.destructiveRed.resolveFrom(context)
-            : Theme.of(context).colorScheme.error)
+              ? CupertinoColors.destructiveRed.resolveFrom(context)
+              : Theme.of(context).colorScheme.error)
         : (cupertino
-            ? CupertinoTheme.of(context).primaryColor
-            : Theme.of(context).colorScheme.onSurfaceVariant);
+              ? CupertinoTheme.of(context).primaryColor
+              : Theme.of(context).colorScheme.onSurfaceVariant);
 
     if (cupertino) {
       return CupertinoButton(

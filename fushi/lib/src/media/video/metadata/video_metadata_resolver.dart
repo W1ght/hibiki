@@ -25,8 +25,8 @@ class VideoMetadataResolveRequest {
     this.episodeCount,
     this.confirmedLookup,
     List<String> identityHints = const <String>[],
-  })  : titleCandidates = List<String>.unmodifiable(titleCandidates),
-        identityHints = List<String>.unmodifiable(identityHints);
+  }) : titleCandidates = List<String>.unmodifiable(titleCandidates),
+       identityHints = List<String>.unmodifiable(identityHints);
 
   final VideoMetadataProviderKind selectedProvider;
   final VideoMetadataMediaKind mediaKind;
@@ -65,10 +65,10 @@ class VideoMetadataResolution {
 
 class VideoMetadataProviderRegistry {
   VideoMetadataProviderRegistry(Iterable<VideoMetadataProvider> providers)
-      : _providers = <VideoMetadataProviderKind, VideoMetadataProvider>{
-          for (final VideoMetadataProvider provider in providers)
-            provider.providerKind: provider,
-        };
+    : _providers = <VideoMetadataProviderKind, VideoMetadataProvider>{
+        for (final VideoMetadataProvider provider in providers)
+          provider.providerKind: provider,
+      };
 
   final Map<VideoMetadataProviderKind, VideoMetadataProvider> _providers;
 
@@ -142,8 +142,9 @@ class VideoMetadataResolver {
       }
     }
 
-    final List<VideoMetadataProvider> chain =
-        _resolutionChain(request.selectedProvider);
+    final List<VideoMetadataProvider> chain = _resolutionChain(
+      request.selectedProvider,
+    );
     if (chain.isEmpty) {
       return VideoMetadataResolution(
         status: VideoMetadataResolutionStatus.providerUnavailable,
@@ -152,8 +153,10 @@ class VideoMetadataResolver {
     }
     VideoMetadataResolution? ambiguous;
     for (final VideoMetadataProvider provider in chain) {
-      final VideoMetadataResolution resolved =
-          await _searchWithProvider(provider, request);
+      final VideoMetadataResolution resolved = await _searchWithProvider(
+        provider,
+        request,
+      );
       if (resolved.status == VideoMetadataResolutionStatus.matched) {
         return resolved;
       }
@@ -193,12 +196,16 @@ class VideoMetadataResolver {
           <String, VideoMetadataWork>{};
       for (final VideoMetadataWork candidate in searched) {
         if (!_passesTypeYearGate(candidate, request)) continue;
-        final VideoMetadataLookup? lookup =
-            _lookupForWork(candidate, provider.providerKind);
+        final VideoMetadataLookup? lookup = _lookupForWork(
+          candidate,
+          provider.providerKind,
+        );
         if (lookup == null) continue;
         final String lookupKey = '${lookup.provider.name}:${lookup.externalId}';
-        final bool summaryMatches =
-            _matchesNormalizedTitle(candidate, normalizedTitles);
+        final bool summaryMatches = _matchesNormalizedTitle(
+          candidate,
+          normalizedTitles,
+        );
         if (provider.providerKind == VideoMetadataProviderKind.anidb &&
             !summaryMatches) {
           // AniDB's local titles dump already carries the searchable title and
@@ -357,20 +364,21 @@ class VideoMetadataResolver {
     )) {
       return work;
     }
-    final List<VideoMetadataSeason> seasons =
-        await provider.fetchSeasons(lookup);
+    final List<VideoMetadataSeason> seasons = await provider.fetchSeasons(
+      lookup,
+    );
     if (seasons.any(
       (VideoMetadataSeason season) => season.seasonNumber == seasonNumber,
     )) {
       return work;
     }
     if (provider case final VideoMetadataEpisodeGroupProvider groupProvider) {
-      final VideoMetadataLookup? grouped =
-          await groupProvider.resolveEpisodeGroup(
-        lookup,
-        seasonNumber: seasonNumber,
-        episodeCount: request.episodeCount,
-      );
+      final VideoMetadataLookup? grouped = await groupProvider
+          .resolveEpisodeGroup(
+            lookup,
+            seasonNumber: seasonNumber,
+            episodeCount: request.episodeCount,
+          );
       if (grouped != null) {
         return work.copyWith(episodeGroupId: grouped.episodeGroupId);
       }
@@ -383,8 +391,9 @@ Set<String> _normalizedTitles(String value) {
   final Set<String> result = <String>{};
   final String direct = TitleNormalizer.normalize(value);
   if (direct.isNotEmpty) result.add(direct);
-  final String parsed =
-      TitleNormalizer.normalize(FilenameParser.parse(value).title);
+  final String parsed = TitleNormalizer.normalize(
+    FilenameParser.parse(value).title,
+  );
   if (parsed.isNotEmpty) result.add(parsed);
   return result;
 }
@@ -393,11 +402,7 @@ bool _matchesNormalizedTitle(
   VideoMetadataWork work,
   Set<String> normalizedTitles,
 ) {
-  return <String?>[
-    work.title,
-    work.originalTitle,
-    ...work.aliases,
-  ].any(
+  return <String?>[work.title, work.originalTitle, ...work.aliases].any(
     (String? value) =>
         value != null &&
         _normalizedTitles(value).any(normalizedTitles.contains),
@@ -454,16 +459,19 @@ List<VideoMetadataLookup> parseExplicitVideoMetadataIds(
     final String key =
         '${provider.name}:$normalizedId:${mediaKind.name}:${normalizedGroup ?? ''}';
     if (normalizedId.isNotEmpty && seen.add(key)) {
-      result.add(VideoMetadataLookup(
-        provider: provider,
-        externalId: normalizedId,
-        mediaKind: mediaKind,
-        episodeGroupId: provider == VideoMetadataProviderKind.tmdb &&
-                normalizedGroup != null &&
-                normalizedGroup.isNotEmpty
-            ? normalizedGroup
-            : null,
-      ));
+      result.add(
+        VideoMetadataLookup(
+          provider: provider,
+          externalId: normalizedId,
+          mediaKind: mediaKind,
+          episodeGroupId:
+              provider == VideoMetadataProviderKind.tmdb &&
+                  normalizedGroup != null &&
+                  normalizedGroup.isNotEmpty
+              ? normalizedGroup
+              : null,
+        ),
+      );
     }
   }
 
@@ -546,12 +554,7 @@ List<VideoMetadataLookup> parseExplicitVideoMetadataIds(
         'bangumi' || 'bgm' => VideoMetadataProviderKind.bangumi,
         _ => VideoMetadataProviderKind.anilist,
       };
-      add(
-        provider,
-        id,
-        declaredKind,
-        episodeGroupId: episodeGroupId,
-      );
+      add(provider, id, declaredKind, episodeGroupId: episodeGroupId);
     }
   }
   return result;

@@ -83,11 +83,12 @@ class MangaOcrWizardDialog extends ConsumerStatefulWidget {
 }
 
 /// 落库回调签名：把 OCR 产物（内置=`manga.json` / 外部=`.mokuro`）落库，返回 bookKey。
-typedef MangaOcrImportRunner = Future<String> Function({
-  required String path,
-  required bool external,
-  String? title,
-});
+typedef MangaOcrImportRunner =
+    Future<String> Function({
+      required String path,
+      required bool external,
+      String? title,
+    });
 
 /// 向导所处阶段。
 enum _WizardStage { pick, configure, running, importing }
@@ -98,8 +99,9 @@ class _MangaOcrWizardDialogState extends ConsumerState<MangaOcrWizardDialog> {
   _WizardStage _stage = _WizardStage.pick;
 
   /// Lens 识别语言（主子标签）。初值来自偏好；仅 Lens 引擎显示选择器。
-  late String _lensLanguage =
-      normalizeLensLanguage(widget.engines.initialLensLanguage);
+  late String _lensLanguage = normalizeLensLanguage(
+    widget.engines.initialLensLanguage,
+  );
   String? _imageDir;
   MangaOcrFolderStatus? _folderStatus;
 
@@ -202,8 +204,8 @@ class _MangaOcrWizardDialogState extends ConsumerState<MangaOcrWizardDialog> {
     bool builtin = false;
     if (widget.engines.service.isSupportedPlatform) {
       try {
-        final MangaOcrModelStatus status =
-            await widget.engines.service.modelStatus();
+        final MangaOcrModelStatus status = await widget.engines.service
+            .modelStatus();
         builtin = status.allReady;
       } catch (_) {
         builtin = false;
@@ -237,11 +239,13 @@ class _MangaOcrWizardDialogState extends ConsumerState<MangaOcrWizardDialog> {
       _remoteTarget = remote;
       _lensAvailable = widget.engines.lensRunner != null;
       _checkingEngines = false;
-      final String preferenceKey = widget.engines.initialEnginePreference ??
+      final String preferenceKey =
+          widget.engines.initialEnginePreference ??
           MangaOcrEnginePreference.auto.key;
       final MangaOcrEnginePreference preference =
           MangaOcrEnginePreferenceKey.fromKey(preferenceKey);
-      _engine = resolveMangaOcrEngine(
+      _engine =
+          resolveMangaOcrEngine(
             preference: preference,
             hasExistingMetadata: false,
             capabilities: <MangaOcrEngineCapability>[
@@ -288,19 +292,18 @@ class _MangaOcrWizardDialogState extends ConsumerState<MangaOcrWizardDialog> {
   /// 构造本次任务的输入。编排本身在 `manga_ocr_job_stream.dart`——对话框只负责
   /// 「选参数」，跑任务的能力不该被绑在一个 widget 的 State 上。
   MangaOcrJobSpec _jobSpec(String dir) => MangaOcrJobSpec(
-        engine: _engine,
-        engines: widget.engines,
-        imageDirPath: dir,
-        lensLanguage: _lensLanguage,
-        startPage: widget.startPage,
-        onlyMissing: widget.onlyMissing,
-        volumeTitle: _title,
-        remoteTarget: _remoteTarget,
-      );
+    engine: _engine,
+    engines: widget.engines,
+    imageDirPath: dir,
+    lensLanguage: _lensLanguage,
+    startPage: widget.startPage,
+    onlyMissing: widget.onlyMissing,
+    volumeTitle: _title,
+    remoteTarget: _remoteTarget,
+  );
 
   Stream<MangaOcrBackgroundEvent> _backgroundEvents(String dir) =>
       mangaOcrBackgroundEvents(_jobSpec(dir));
-
 
   /// 系统 OCR 可用性单独探测，**不并进 `_checkingEngines`**。
   ///
@@ -448,93 +451,83 @@ class _MangaOcrWizardDialogState extends ConsumerState<MangaOcrWizardDialog> {
   void _runSystem(String dir) {
     _runSub = widget.engines.systemOcrRunner!
         .ocrFolder(
-      imageDirPath: dir,
-      volumeTitle: _title,
-      startPage: widget.startPage,
-      onlyMissing: widget.onlyMissing,
-      language: _lensLanguage,
-    )
-        .listen(
-      (MangaOcrVolumeEvent event) {
-        if (!mounted) return;
-        if (event.finished) {
-          unawaited(_onOcrFinished(event.mangaJsonPath!, external: false));
-        } else {
-          setState(() {
-            _indeterminate = event.pagesTotal <= 0;
-            _pagesDone = event.pagesDone;
-            _pagesTotal = event.pagesTotal;
-          });
-        }
-      },
-      onError: (Object error) => _onOcrError(error),
-    );
+          imageDirPath: dir,
+          volumeTitle: _title,
+          startPage: widget.startPage,
+          onlyMissing: widget.onlyMissing,
+          language: _lensLanguage,
+        )
+        .listen((MangaOcrVolumeEvent event) {
+          if (!mounted) return;
+          if (event.finished) {
+            unawaited(_onOcrFinished(event.mangaJsonPath!, external: false));
+          } else {
+            setState(() {
+              _indeterminate = event.pagesTotal <= 0;
+              _pagesDone = event.pagesDone;
+              _pagesTotal = event.pagesTotal;
+            });
+          }
+        }, onError: (Object error) => _onOcrError(error));
   }
 
   void _runLens(String dir) {
     _runSub = widget.engines.lensRunner!
         .ocrFolder(
-      imageDirPath: dir,
-      volumeTitle: _title,
-      startPage: widget.startPage,
-      onlyMissing: widget.onlyMissing,
-      language: _lensLanguage,
-    )
-        .listen(
-      (MangaOcrVolumeEvent event) {
-        if (!mounted) return;
-        if (event.finished) {
-          unawaited(_onOcrFinished(event.mangaJsonPath!, external: false));
-        } else {
-          setState(() {
-            _indeterminate = event.pagesTotal <= 0;
-            _pagesDone = event.pagesDone;
-            _pagesTotal = event.pagesTotal;
-          });
-        }
-      },
-      onError: (Object error) => _onOcrError(error),
-    );
+          imageDirPath: dir,
+          volumeTitle: _title,
+          startPage: widget.startPage,
+          onlyMissing: widget.onlyMissing,
+          language: _lensLanguage,
+        )
+        .listen((MangaOcrVolumeEvent event) {
+          if (!mounted) return;
+          if (event.finished) {
+            unawaited(_onOcrFinished(event.mangaJsonPath!, external: false));
+          } else {
+            setState(() {
+              _indeterminate = event.pagesTotal <= 0;
+              _pagesDone = event.pagesDone;
+              _pagesTotal = event.pagesTotal;
+            });
+          }
+        }, onError: (Object error) => _onOcrError(error));
   }
 
   void _runBuiltin(String dir) {
     _runSub = widget.engines.service
         .ocrFolder(imageDirPath: dir, volumeTitle: _title)
-        .listen(
-      (MangaOcrVolumeEvent event) {
-        if (!mounted) return;
-        if (event.finished) {
-          unawaited(_onOcrFinished(event.mangaJsonPath!, external: false));
-        } else {
-          setState(() {
-            _indeterminate = event.pagesTotal <= 0;
-            _pagesDone = event.pagesDone;
-            _pagesTotal = event.pagesTotal;
-          });
-        }
-      },
-      onError: (Object e) => _onOcrError(e),
-    );
+        .listen((MangaOcrVolumeEvent event) {
+          if (!mounted) return;
+          if (event.finished) {
+            unawaited(_onOcrFinished(event.mangaJsonPath!, external: false));
+          } else {
+            setState(() {
+              _indeterminate = event.pagesTotal <= 0;
+              _pagesDone = event.pagesDone;
+              _pagesTotal = event.pagesTotal;
+            });
+          }
+        }, onError: (Object e) => _onOcrError(e));
   }
 
   void _runExternal(String dir) {
-    _runSub = widget.engines.externalRunner!.run(dir).listen(
-      (MokuroRunEvent event) {
-        if (!mounted) return;
-        if (event.finished) {
-          unawaited(_onOcrFinished(event.mokuroPath!, external: true));
-        } else if (event.isRunning) {
-          setState(() => _indeterminate = true);
-        } else {
-          setState(() {
-            _indeterminate = event.total <= 0;
-            _pagesDone = event.done;
-            _pagesTotal = event.total;
-          });
-        }
-      },
-      onError: (Object e) => _onOcrError(e),
-    );
+    _runSub = widget.engines.externalRunner!.run(dir).listen((
+      MokuroRunEvent event,
+    ) {
+      if (!mounted) return;
+      if (event.finished) {
+        unawaited(_onOcrFinished(event.mokuroPath!, external: true));
+      } else if (event.isRunning) {
+        setState(() => _indeterminate = true);
+      } else {
+        setState(() {
+          _indeterminate = event.total <= 0;
+          _pagesDone = event.done;
+          _pagesTotal = event.total;
+        });
+      }
+    }, onError: (Object e) => _onOcrError(e));
   }
 
   /// 漫画 P3：已配对主机代跑。上传/远端两阶段进度分别展示；完成事件携带的
@@ -548,22 +541,19 @@ class _MangaOcrWizardDialogState extends ConsumerState<MangaOcrWizardDialog> {
     }
     _runSub = widget.engines.remoteRunner!
         .run(target: target, imageDirPath: dir, volumeTitle: _title)
-        .listen(
-      (MangaOcrRemoteEvent event) {
-        if (!mounted) return;
-        if (event.finished) {
-          unawaited(_onOcrFinished(event.mangaJsonPath!, external: false));
-        } else {
-          setState(() {
-            _remoteUploading = event.uploading;
-            _indeterminate = event.total <= 0;
-            _pagesDone = event.done;
-            _pagesTotal = event.total;
-          });
-        }
-      },
-      onError: (Object e) => _onOcrError(_remoteErrorMessage(e)),
-    );
+        .listen((MangaOcrRemoteEvent event) {
+          if (!mounted) return;
+          if (event.finished) {
+            unawaited(_onOcrFinished(event.mangaJsonPath!, external: false));
+          } else {
+            setState(() {
+              _remoteUploading = event.uploading;
+              _indeterminate = event.total <= 0;
+              _pagesDone = event.done;
+              _pagesTotal = event.total;
+            });
+          }
+        }, onError: (Object e) => _onOcrError(_remoteErrorMessage(e)));
   }
 
   /// 远程失败 → 本地化可读文案（机器可读 code 映射；未知归入通用失败 + 详情）。
@@ -605,17 +595,17 @@ class _MangaOcrWizardDialogState extends ConsumerState<MangaOcrWizardDialog> {
         await _applyOcrToManagedBook(path, external: external);
         if (!mounted) return;
         // 书已在库，这条路径只把 OCR 结果贴回去，没有导入动作 —— 用 OCR 文案。
-        FushiToast.show(
-          msg: t.manga_ocr_done,
-          severity: ToastSeverity.success,
-        );
+        FushiToast.show(msg: t.manga_ocr_done, severity: ToastSeverity.success);
         Navigator.pop(context, createdBookKey);
         return;
       }
       final MangaOcrImportRunner runner =
           widget.importOverride ?? _defaultImport;
-      final String bookKey =
-          await runner(path: path, external: external, title: _title);
+      final String bookKey = await runner(
+        path: path,
+        external: external,
+        title: _title,
+      );
       if (!mounted) return;
       FushiToast.show(
         msg: t.manga_ocr_wizard_done,
@@ -640,8 +630,9 @@ class _MangaOcrWizardDialogState extends ConsumerState<MangaOcrWizardDialog> {
       throw StateError('Managed manga directory is missing');
     }
     final String source = await File(resultPath).readAsString();
-    final MokuroPayload payload =
-        external ? parseMokuro(source) : parseMangaJson(source);
+    final MokuroPayload payload = external
+        ? parseMokuro(source)
+        : parseMangaJson(source);
     if (payload.images.isEmpty) {
       throw const MangaImportException('OCR result has no pages');
     }
@@ -705,11 +696,15 @@ class _MangaOcrWizardDialogState extends ConsumerState<MangaOcrWizardDialog> {
     if (_engine == MangaOcrEngineId.pairedHost) {
       if (_remoteUploading && _pagesTotal > 0) {
         return t.manga_remote_ocr_uploading(
-            done: _pagesDone, total: _pagesTotal);
+          done: _pagesDone,
+          total: _pagesTotal,
+        );
       }
       return _pagesTotal > 0
           ? t.manga_ocr_wizard_page_progress(
-              done: _pagesDone, total: _pagesTotal)
+              done: _pagesDone,
+              total: _pagesTotal,
+            )
           : t.manga_remote_ocr_running;
     }
     return _pagesTotal > 0
@@ -770,10 +765,7 @@ class _MangaOcrWizardDialogState extends ConsumerState<MangaOcrWizardDialog> {
                     : (_pagesDone / _pagesTotal).clamp(0.0, 1.0),
               ),
               const SizedBox(height: 8),
-              Text(
-                _busyLabel(),
-                style: theme.textTheme.bodySmall,
-              ),
+              Text(_busyLabel(), style: theme.textTheme.bodySmall),
             ],
           ],
         ),
@@ -832,36 +824,36 @@ class _MangaOcrWizardDialogState extends ConsumerState<MangaOcrWizardDialog> {
     }
     final List<ButtonSegment<MangaOcrEngineId>> segments =
         <ButtonSegment<MangaOcrEngineId>>[
-      ButtonSegment<MangaOcrEngineId>(
-        value: MangaOcrEngineId.localOnnx,
-        enabled: _builtinAvailable,
-        label: Text(t.manga_ocr_engine_local_onnx),
-      ),
-      // 系统 OCR 排在本地模型之后、Lens 之前：它离线且零下载，但识别竖排
-      // 气泡明显更弱，不该抢在真正好用的引擎前面。
-      ButtonSegment<MangaOcrEngineId>(
-        value: MangaOcrEngineId.systemOcr,
-        enabled: _systemAvailable,
-        label: Text(t.manga_ocr_engine_system),
-      ),
-      ButtonSegment<MangaOcrEngineId>(
-        value: MangaOcrEngineId.googleLens,
-        enabled: _lensAvailable,
-        label: Text(t.manga_ocr_engine_google_lens),
-      ),
-      ButtonSegment<MangaOcrEngineId>(
-        value: MangaOcrEngineId.externalMokuro,
-        enabled: _externalAvailable,
-        label: Text(t.manga_ocr_engine_external),
-      ),
-      // 与另外三个引擎同构：始终保留 segment，不可用时置灰而非隐藏。否则持久化的
-      // pairedHost 偏好在主机暂时离线时会变成「selected 不在 segments 里」的死状态。
-      ButtonSegment<MangaOcrEngineId>(
-        value: MangaOcrEngineId.pairedHost,
-        enabled: _remoteAvailable,
-        label: Text(t.manga_remote_ocr_engine),
-      ),
-    ];
+          ButtonSegment<MangaOcrEngineId>(
+            value: MangaOcrEngineId.localOnnx,
+            enabled: _builtinAvailable,
+            label: Text(t.manga_ocr_engine_local_onnx),
+          ),
+          // 系统 OCR 排在本地模型之后、Lens 之前：它离线且零下载，但识别竖排
+          // 气泡明显更弱，不该抢在真正好用的引擎前面。
+          ButtonSegment<MangaOcrEngineId>(
+            value: MangaOcrEngineId.systemOcr,
+            enabled: _systemAvailable,
+            label: Text(t.manga_ocr_engine_system),
+          ),
+          ButtonSegment<MangaOcrEngineId>(
+            value: MangaOcrEngineId.googleLens,
+            enabled: _lensAvailable,
+            label: Text(t.manga_ocr_engine_google_lens),
+          ),
+          ButtonSegment<MangaOcrEngineId>(
+            value: MangaOcrEngineId.externalMokuro,
+            enabled: _externalAvailable,
+            label: Text(t.manga_ocr_engine_external),
+          ),
+          // 与另外三个引擎同构：始终保留 segment，不可用时置灰而非隐藏。否则持久化的
+          // pairedHost 偏好在主机暂时离线时会变成「selected 不在 segments 里」的死状态。
+          ButtonSegment<MangaOcrEngineId>(
+            value: MangaOcrEngineId.pairedHost,
+            enabled: _remoteAvailable,
+            label: Text(t.manga_remote_ocr_engine),
+          ),
+        ];
     // 只有一个可用引擎时无需选择器，直接省略（仍已在 _refreshEngines 选好）。
     if (segments.length < 2) return remoteReason ?? const SizedBox.shrink();
     final Widget selector = Align(
@@ -889,8 +881,9 @@ class _MangaOcrWizardDialogState extends ConsumerState<MangaOcrWizardDialog> {
       for (final (String tag, String label) in kGoogleLensLanguageOptions)
         DropdownMenuItem<String>(value: tag, child: Text(label)),
       // 偏好里存了列表外的语言（未来扩充/手改）时保留原值，避免选中项失效。
-      if (!kGoogleLensLanguageOptions
-          .any(((String, String) option) => option.$1 == _lensLanguage))
+      if (!kGoogleLensLanguageOptions.any(
+        ((String, String) option) => option.$1 == _lensLanguage,
+      ))
         DropdownMenuItem<String>(
           value: _lensLanguage,
           child: Text(_lensLanguage),
@@ -917,20 +910,14 @@ class _MangaOcrWizardDialogState extends ConsumerState<MangaOcrWizardDialog> {
   Widget _errorText(ThemeData theme, String message) {
     return Padding(
       padding: const EdgeInsets.only(top: 8),
-      child: Text(
-        message,
-        style: TextStyle(color: theme.colorScheme.error),
-      ),
+      child: Text(message, style: TextStyle(color: theme.colorScheme.error)),
     );
   }
 
   List<Widget> _buildActions(bool busy) {
     if (_stage == _WizardStage.running) {
       return <Widget>[
-        TextButton(
-          onPressed: _cancelRun,
-          child: Text(t.dialog_cancel),
-        ),
+        TextButton(onPressed: _cancelRun, child: Text(t.dialog_cancel)),
       ];
     }
     return <Widget>[
@@ -1022,8 +1009,9 @@ MangaOcrFolderStatus _checkImportedBookDir(File mangaJson) {
         : MangaOcrFolderStatus.valid;
   }
   if (payload.images.isEmpty) return MangaOcrFolderStatus.noImages;
-  final bool everyPageOcred =
-      payload.images.every((MokuroImage page) => page.blocks.isNotEmpty);
+  final bool everyPageOcred = payload.images.every(
+    (MokuroImage page) => page.blocks.isNotEmpty,
+  );
   return everyPageOcred
       ? MangaOcrFolderStatus.alreadyOcred
       : MangaOcrFolderStatus.valid;

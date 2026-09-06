@@ -37,14 +37,16 @@ void main() {
 
   test('Windows 插件真的调了 AddFreeDimensionOverrideByName', () {
     final String src = maskComments(
-      File('$vendored/windows/flutter_onnxruntime_plugin.cpp')
-          .readAsStringSync(),
+      File(
+        '$vendored/windows/flutter_onnxruntime_plugin.cpp',
+      ).readAsStringSync(),
     );
 
     expect(
       src,
       contains('AddFreeDimensionOverrideByName'),
-      reason: 'delta #8 的 C++ 半没了：Dart 仍会传 freeDimensionOverrides，插件不再'
+      reason:
+          'delta #8 的 C++ 半没了：Dart 仍会传 freeDimensionOverrides，插件不再'
           '读它，会话静默退回动态 shape —— 结果正确但编码器慢 5~7 倍，'
           '没有任何别的测试会红',
     );

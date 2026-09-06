@@ -29,8 +29,9 @@ void main() {
 
   late Directory pathProviderDir;
   setUpAll(() {
-    pathProviderDir =
-        Directory.systemTemp.createTempSync('hibiki_remote_book_pp');
+    pathProviderDir = Directory.systemTemp.createTempSync(
+      'hibiki_remote_book_pp',
+    );
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
       (MethodCall call) async => pathProviderDir.path,
@@ -69,8 +70,9 @@ void main() {
     db = FushiDatabase.forTesting(NativeDatabase.memory());
     final PreferencesRepository prefs = PreferencesRepository(db);
     await prefs.loadFromDb();
-    final Directory storeDir =
-        Directory.systemTemp.createTempSync('hibiki_remote_book_store');
+    final Directory storeDir = Directory.systemTemp.createTempSync(
+      'hibiki_remote_book_store',
+    );
     remoteBookCover = File('${storeDir.path}/remote-book-cover.png')
       ..writeAsBytesSync(_tinyPngBytes);
     appModel = AppModel(testPlatformServices())
@@ -93,25 +95,23 @@ void main() {
   });
 
   Widget wrapScope(Widget body) => ProviderScope(
-        overrides: <Override>[
-          appProvider.overrideWith((ref) => appModel),
-          fushiBooksProvider.overrideWith(
-            (ref, language) => Future<List<MediaItem>>.value(
-              const <MediaItem>[],
-            ),
-          ),
-          srtBooksProvider.overrideWith(
-            (ref) => Future<List<SrtBook>>.value(shelfSrtBooks),
-          ),
-        ],
-        child: TranslationProvider(
-          child: MaterialApp(
-            builder: (BuildContext context, Widget? child) =>
-                child ?? const SizedBox.shrink(),
-            home: Scaffold(body: body),
-          ),
-        ),
-      );
+    overrides: <Override>[
+      appProvider.overrideWith((ref) => appModel),
+      fushiBooksProvider.overrideWith(
+        (ref, language) => Future<List<MediaItem>>.value(const <MediaItem>[]),
+      ),
+      srtBooksProvider.overrideWith(
+        (ref) => Future<List<SrtBook>>.value(shelfSrtBooks),
+      ),
+    ],
+    child: TranslationProvider(
+      child: MaterialApp(
+        builder: (BuildContext context, Widget? child) =>
+            child ?? const SizedBox.shrink(),
+        home: Scaffold(body: body),
+      ),
+    ),
+  );
 
   // 书架页本体。书架与漫画书架是**同一个 State 类**的两个实例：既要能单独挂载，
   // 也要能挂在同一个 ProviderScope 里同时活着（真实 app 的 HomePage 保活形态），
@@ -120,9 +120,8 @@ void main() {
       ReaderFushiHistoryPage(
         mangaOnly: mangaOnly,
         remoteBookClientLoader: () async => remoteClient,
-        remoteBookDownloadDestination: (RemoteBookInfo book) async => File(
-          '${pathProviderDir.path}/${book.title.hashCode}.epub',
-        ),
+        remoteBookDownloadDestination: (RemoteBookInfo book) async =>
+            File('${pathProviderDir.path}/${book.title.hashCode}.epub'),
         remoteBookImporter: (File file) async {
           importedFiles.add(file);
           final String? key = importedBookKey;
@@ -134,15 +133,17 @@ void main() {
           // 于是 BUG-813 的进度回填在假 importer 下永远不发生（BUG-1497）。
           // 这里补上落库，让假 importer 与真 importer 的**后置条件**一致。
           if (key != null) {
-            await db.insertEpubBook(EpubBooksCompanion.insert(
-              bookKey: key,
-              title: key,
-              epubPath: file.path,
-              extractDir: pathProviderDir.path,
-              chapterCount: 1,
-              chaptersJson: '["a"]',
-              importedAt: 0,
-            ));
+            await db.insertEpubBook(
+              EpubBooksCompanion.insert(
+                bookKey: key,
+                title: key,
+                epubPath: file.path,
+                extractDir: pathProviderDir.path,
+                chapterCount: 1,
+                chaptersJson: '["a"]',
+                importedAt: 0,
+              ),
+            );
           }
           return key;
         },
@@ -160,17 +161,19 @@ void main() {
           return pkg;
         },
         remoteAudiobookImporter: (File package, String? bookKeyOverride) async {
-          importedAudiobooks.add(
-            (package: package, bookKeyOverride: bookKeyOverride),
-          );
+          importedAudiobooks.add((
+            package: package,
+            bookKeyOverride: bookKeyOverride,
+          ));
         },
       );
 
   Widget buildApp({bool mangaOnly = false}) =>
       wrapScope(buildPage(mangaOnly: mangaOnly));
 
-  testWidgets('bookshelf mixes interconnect remote books into the main grid',
-      (WidgetTester tester) async {
+  testWidgets('bookshelf mixes interconnect remote books into the main grid', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(buildApp());
     await tester.pumpAndSettle();
 
@@ -178,49 +181,47 @@ void main() {
     // 卡片在、带云角标 ☁、右上角保留下载按钮（能力未丢失）。
     expect(find.text('Remote Book'), findsOneWidget);
     expect(
-      find.byKey(const ValueKey<String>(
-        'remote_book_cloud_badge_Remote_Book',
-      )),
+      find.byKey(const ValueKey<String>('remote_book_cloud_badge_Remote_Book')),
       findsOneWidget,
     );
     expect(
-      find.byKey(const ValueKey<String>(
-        'remote_book_download_Remote_Book',
-      )),
+      find.byKey(const ValueKey<String>('remote_book_download_Remote_Book')),
       findsOneWidget,
     );
 
-    final String source =
-        File('lib/src/pages/implementations/reader_fushi_history_page.dart')
-            .readAsStringSync();
+    final String source = File(
+      'lib/src/pages/implementations/reader_fushi_history_page.dart',
+    ).readAsStringSync();
     expect(source, isNot(contains('浏览电脑')));
     expect(source.toLowerCase(), isNot(contains('computer')));
   });
 
   testWidgets(
-      'cloud backend remote books also mix into the main grid as placeholders',
-      (WidgetTester tester) async {
-    // 撤独立远端分区后不再有「互联 vs 云端」分区文案区分——云盘后端
-    // （CloudRemoteBookClient，来源 cloud）的远端书同样以占位卡混排进主网格，
-    // 与互联来源共用同一占位卡渲染（云角标 + 远端封面 + 下载按钮）。
-    remoteClient = _FakeRemoteBookClient(
-      coverPath: remoteBookCover.path,
-      sourceKind: RemoteBookSourceKind.cloud,
-    );
-    await tester.pumpWidget(buildApp());
-    await tester.pumpAndSettle();
+    'cloud backend remote books also mix into the main grid as placeholders',
+    (WidgetTester tester) async {
+      // 撤独立远端分区后不再有「互联 vs 云端」分区文案区分——云盘后端
+      // （CloudRemoteBookClient，来源 cloud）的远端书同样以占位卡混排进主网格，
+      // 与互联来源共用同一占位卡渲染（云角标 + 远端封面 + 下载按钮）。
+      remoteClient = _FakeRemoteBookClient(
+        coverPath: remoteBookCover.path,
+        sourceKind: RemoteBookSourceKind.cloud,
+      );
+      await tester.pumpWidget(buildApp());
+      await tester.pumpAndSettle();
 
-    expect(find.text('Remote Book'), findsOneWidget);
-    expect(
-      find.byKey(const ValueKey<String>(
-        'remote_book_cloud_badge_Remote_Book',
-      )),
-      findsOneWidget,
-    );
-  });
+      expect(find.text('Remote Book'), findsOneWidget);
+      expect(
+        find.byKey(
+          const ValueKey<String>('remote_book_cloud_badge_Remote_Book'),
+        ),
+        findsOneWidget,
+      );
+    },
+  );
 
-  testWidgets('remote book uses the shelf card cover layout',
-      (WidgetTester tester) async {
+  testWidgets('remote book uses the shelf card cover layout', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(buildApp());
     await tester.pumpAndSettle();
 
@@ -237,18 +238,21 @@ void main() {
       ),
       findsOneWidget,
     );
-    expect(find.descendant(of: card, matching: find.byType(AspectRatio)),
-        findsOneWidget);
+    expect(
+      find.descendant(of: card, matching: find.byType(AspectRatio)),
+      findsOneWidget,
+    );
   });
 
-  testWidgets('remote book title renders below the cover',
-      (WidgetTester tester) async {
+  testWidgets('remote book title renders below the cover', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(buildApp());
     await tester.pumpAndSettle();
 
-    final Rect coverRect = tester.getRect(find.byKey(
-      const ValueKey<String>('remote_book_cover_Remote_Book'),
-    ));
+    final Rect coverRect = tester.getRect(
+      find.byKey(const ValueKey<String>('remote_book_cover_Remote_Book')),
+    );
     final Rect titleRect = tester.getRect(find.text('Remote Book'));
 
     // Remote shelf cards share the same stable cover + footer layout as local
@@ -265,8 +269,7 @@ void main() {
     );
   });
 
-  testWidgets(
-      'remote book renders normal-book type badge by default '
+  testWidgets('remote book renders normal-book type badge by default '
       '(TODO-655a)', (WidgetTester tester) async {
     await tester.pumpWidget(buildApp());
     await tester.pumpAndSettle();
@@ -281,23 +284,31 @@ void main() {
         const ValueKey<String>('remote_book_type_badge_Remote_Book'),
       ),
     );
-    expect(badge, findsOneWidget,
-        reason: 'remote book card must show a type badge like local books');
+    expect(
+      badge,
+      findsOneWidget,
+      reason: 'remote book card must show a type badge like local books',
+    );
     // Normal book → book icon, never the headphones (audiobook) icon.
     expect(
       find.descendant(
-          of: badge, matching: find.byIcon(Icons.headphones_outlined)),
+        of: badge,
+        matching: find.byIcon(Icons.headphones_outlined),
+      ),
       findsNothing,
     );
     expect(
       find.descendant(
-          of: badge, matching: find.byIcon(Icons.menu_book_outlined)),
+        of: badge,
+        matching: find.byIcon(Icons.menu_book_outlined),
+      ),
       findsOneWidget,
     );
   });
 
-  testWidgets('remote audiobook renders headphones type badge (TODO-655a)',
-      (WidgetTester tester) async {
+  testWidgets('remote audiobook renders headphones type badge (TODO-655a)', (
+    WidgetTester tester,
+  ) async {
     remoteClient = _FakeRemoteBookClient(
       coverPath: remoteBookCover.path,
       hasAudiobook: true,
@@ -311,39 +322,44 @@ void main() {
     expect(badge, findsOneWidget);
     expect(
       find.descendant(
-          of: badge, matching: find.byIcon(Icons.headphones_outlined)),
+        of: badge,
+        matching: find.byIcon(Icons.headphones_outlined),
+      ),
       findsOneWidget,
       reason: 'a remote book with an audiobook must show the headphones badge',
     );
   });
 
   testWidgets(
-      'remote book renders as a placeholder card in the main scatter grid '
-      '(spec §2.1 mixed grid)', (WidgetTester tester) async {
-    await tester.pumpWidget(buildApp());
-    await tester.pumpAndSettle();
+    'remote book renders as a placeholder card in the main scatter grid '
+    '(spec §2.1 mixed grid)',
+    (WidgetTester tester) async {
+      await tester.pumpWidget(buildApp());
+      await tester.pumpAndSettle();
 
-    final Finder card = find.byKey(
-      const ValueKey<String>('remote_book_card_Remote_Book'),
-    );
-    expect(card, findsOneWidget);
-    // 撤独立远端 GridView 分区后，远端占位卡是主散卡网格（SliverGrid）的一个 cell，
-    // 与本地书卡同一网格、同一卡宽基准（不再被独立 section 的内边距压窄）。
-    expect(
-      find.ancestor(of: card, matching: find.byType(SliverGrid)),
-      findsOneWidget,
-    );
-  });
+      final Finder card = find.byKey(
+        const ValueKey<String>('remote_book_card_Remote_Book'),
+      );
+      expect(card, findsOneWidget);
+      // 撤独立远端 GridView 分区后，远端占位卡是主散卡网格（SliverGrid）的一个 cell，
+      // 与本地书卡同一网格、同一卡宽基准（不再被独立 section 的内边距压窄）。
+      expect(
+        find.ancestor(of: card, matching: find.byType(SliverGrid)),
+        findsOneWidget,
+      );
+    },
+  );
 
-  testWidgets('remote book download action pulls epub and imports locally',
-      (WidgetTester tester) async {
+  testWidgets('remote book download action pulls epub and imports locally', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(buildApp());
     await tester.pumpAndSettle();
 
     await tester.runAsync(() async {
-      await tester.tap(find.byKey(const ValueKey<String>(
-        'remote_book_download_Remote_Book',
-      )));
+      await tester.tap(
+        find.byKey(const ValueKey<String>('remote_book_download_Remote_Book')),
+      );
       for (int i = 0; i < 30; i++) {
         await Future<void>.delayed(const Duration(milliseconds: 50));
         if (remoteClient.downloadedTitles.isNotEmpty &&
@@ -358,8 +374,9 @@ void main() {
     expect(importedFiles.single.existsSync(), isTrue);
   });
 
-  testWidgets('remote book download uses stable bookKey for special titles',
-      (WidgetTester tester) async {
+  testWidgets('remote book download uses stable bookKey for special titles', (
+    WidgetTester tester,
+  ) async {
     remoteClient = _FakeRemoteBookClient(
       coverPath: remoteBookCover.path,
       title: r'Vol 1/2\3?..: Finale',
@@ -385,50 +402,56 @@ void main() {
   });
 
   testWidgets(
-      'remote audiobook download wires getRemoteAudiobook + import with '
-      'stable remote key and local bookKey override (BUG-406)',
-      (WidgetTester tester) async {
-    // host 把书名重复时加了后缀，真实 bookKey 与 sanitizeTtuFilename(title) 不同。
-    // 下载有声书必须用 host 传来的真实 bookKey（= downloadId），否则 404（BUG-414）。
-    const String hostAudiobookKey = 'Vol_1_2_Audio_2';
-    remoteClient = _FakeRemoteBookClient(
-      coverPath: remoteBookCover.path,
-      title: r'Vol 1/2: Audio',
-      bookKey: hostAudiobookKey,
-      hasAudiobook: true,
-    );
-    importedBookKey = 'local-renamed-key';
-    // 守护：真实 key 与 sanitize(title) 必须不同，回归用例才有意义。
-    expect(hostAudiobookKey,
-        isNot(equals(sanitizeTtuFilename(r'Vol 1/2: Audio'))));
-    await tester.pumpWidget(buildApp());
-    await tester.pumpAndSettle();
+    'remote audiobook download wires getRemoteAudiobook + import with '
+    'stable remote key and local bookKey override (BUG-406)',
+    (WidgetTester tester) async {
+      // host 把书名重复时加了后缀，真实 bookKey 与 sanitizeTtuFilename(title) 不同。
+      // 下载有声书必须用 host 传来的真实 bookKey（= downloadId），否则 404（BUG-414）。
+      const String hostAudiobookKey = 'Vol_1_2_Audio_2';
+      remoteClient = _FakeRemoteBookClient(
+        coverPath: remoteBookCover.path,
+        title: r'Vol 1/2: Audio',
+        bookKey: hostAudiobookKey,
+        hasAudiobook: true,
+      );
+      importedBookKey = 'local-renamed-key';
+      // 守护：真实 key 与 sanitize(title) 必须不同，回归用例才有意义。
+      expect(
+        hostAudiobookKey,
+        isNot(equals(sanitizeTtuFilename(r'Vol 1/2: Audio'))),
+      );
+      await tester.pumpWidget(buildApp());
+      await tester.pumpAndSettle();
 
-    await tester.runAsync(() async {
-      await tester.tap(find.byTooltip(t.remote_book_download));
-      for (int i = 0; i < 40; i++) {
-        await Future<void>.delayed(const Duration(milliseconds: 50));
-        if (importedAudiobooks.isNotEmpty) break;
-      }
-    });
-    await tester.pump();
+      await tester.runAsync(() async {
+        await tester.tap(find.byTooltip(t.remote_book_download));
+        for (int i = 0; i < 40; i++) {
+          await Future<void>.delayed(const Duration(milliseconds: 50));
+          if (importedAudiobooks.isNotEmpty) break;
+        }
+      });
+      await tester.pump();
 
-    // EPUB still imported.
-    expect(importedFiles.single.existsSync(), isTrue);
-    // Audiobook fetched with the host's real bookKey (= downloadId = bookKey ?? title),
-    // NOT sanitizeTtuFilename(title). Reverting the fix flips this back to sanitize(title)
-    // and turns this red (BUG-414 regression guard).
-    expect(fetchedAudiobookKeys, <String>[hostAudiobookKey]);
-    expect(fetchedAudiobookKeys,
-        isNot(equals(<String>[sanitizeTtuFilename(r'Vol 1/2: Audio')])));
-    // Audiobook imported once, bound to the *local* imported EPUB bookKey.
-    expect(importedAudiobooks, hasLength(1));
-    expect(importedAudiobooks.single.bookKeyOverride, 'local-renamed-key');
-    expect(importedAudiobooks.single.package.existsSync(), isTrue);
-  });
+      // EPUB still imported.
+      expect(importedFiles.single.existsSync(), isTrue);
+      // Audiobook fetched with the host's real bookKey (= downloadId = bookKey ?? title),
+      // NOT sanitizeTtuFilename(title). Reverting the fix flips this back to sanitize(title)
+      // and turns this red (BUG-414 regression guard).
+      expect(fetchedAudiobookKeys, <String>[hostAudiobookKey]);
+      expect(
+        fetchedAudiobookKeys,
+        isNot(equals(<String>[sanitizeTtuFilename(r'Vol 1/2: Audio')])),
+      );
+      // Audiobook imported once, bound to the *local* imported EPUB bookKey.
+      expect(importedAudiobooks, hasLength(1));
+      expect(importedAudiobooks.single.bookKeyOverride, 'local-renamed-key');
+      expect(importedAudiobooks.single.package.existsSync(), isTrue);
+    },
+  );
 
-  testWidgets('BUG-813: 下载远端书把 host 阅读进度回填进本地 reader_positions',
-      (WidgetTester tester) async {
+  testWidgets('BUG-813: 下载远端书把 host 阅读进度回填进本地 reader_positions', (
+    WidgetTester tester,
+  ) async {
     remoteClient = _FakeRemoteBookClient(
       coverPath: remoteBookCover.path,
       progress: const RemoteBookProgress(
@@ -442,9 +465,9 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.runAsync(() async {
-      await tester.tap(find.byKey(const ValueKey<String>(
-        'remote_book_download_Remote_Book',
-      )));
+      await tester.tap(
+        find.byKey(const ValueKey<String>('remote_book_download_Remote_Book')),
+      );
       // 轮询直到进度回填落库（下载 → 导入 → 拉进度 upsert 是异步链）。
       // v82：reader_positions 的键是导入后书行的稳定 uid，不是 bookKey。
       for (int i = 0; i < 60; i++) {
@@ -460,8 +483,11 @@ void main() {
     final String? localUid = await db.resolveEpubBookUid('local-book-key');
     expect(localUid, isNotNull, reason: '导入后本地书行必须存在且带稳定 uid');
     final ReaderPositionRow? row = await db.getReaderPosition(localUid!);
-    expect(row, isNotNull,
-        reason: 'BUG-813：下载远端书必须把 host 阅读进度落进 reader_positions');
+    expect(
+      row,
+      isNotNull,
+      reason: 'BUG-813：下载远端书必须把 host 阅读进度落进 reader_positions',
+    );
     expect(row!.sectionIndex, 3);
     expect(row.normCharOffset, 4200);
     expect(row.charOffset, 137);
@@ -487,17 +513,18 @@ void main() {
     await tester.pumpWidget(buildApp());
     await tester.pumpAndSettle();
 
-    const ValueKey<String> overlayKey =
-        ValueKey<String>('audiobook_downloading_local-book-key');
+    const ValueKey<String> overlayKey = ValueKey<String>(
+      'audiobook_downloading_local-book-key',
+    );
     // 下载前：本地 SRT 卡在，无加载覆盖层。
     expect(find.byKey(overlayKey), findsNothing);
 
     // 点远端占位卡下载 → EPUB 导入(importer 返回 local-book-key) → 标记有声书下载中 →
     // 有声书 fetch 卡在闸门。
     await tester.runAsync(() async {
-      await tester.tap(find.byKey(const ValueKey<String>(
-        'remote_book_download_Remote_Book',
-      )));
+      await tester.tap(
+        find.byKey(const ValueKey<String>('remote_book_download_Remote_Book')),
+      );
       for (int i = 0; i < 60; i++) {
         await Future<void>.delayed(const Duration(milliseconds: 25));
         if (fetchedAudiobookKeys.isNotEmpty) break;
@@ -505,8 +532,11 @@ void main() {
     });
     await tester.pump();
 
-    expect(find.byKey(overlayKey), findsOneWidget,
-        reason: 'BUG-990：有声书下载中本地卡必须显示加载覆盖层');
+    expect(
+      find.byKey(overlayKey),
+      findsOneWidget,
+      reason: 'BUG-990：有声书下载中本地卡必须显示加载覆盖层',
+    );
 
     // 放行有声书下载 → 完成 → 覆盖层清除。
     await tester.runAsync(() async {
@@ -518,8 +548,11 @@ void main() {
     });
     await tester.pump();
 
-    expect(find.byKey(overlayKey), findsNothing,
-        reason: 'BUG-990：有声书下载完成后覆盖层必须清除');
+    expect(
+      find.byKey(overlayKey),
+      findsNothing,
+      reason: 'BUG-990：有声书下载完成后覆盖层必须清除',
+    );
   });
 
   testWidgets('书架统计带已按用户要求移除（原 BUG-991 口径随之退役）', (WidgetTester tester) async {
@@ -549,8 +582,9 @@ void main() {
     );
   });
 
-  testWidgets('BUG-992/1175: 切回书架 tab 远端卡在场，且 TTL 内不重打网络',
-      (WidgetTester tester) async {
+  testWidgets('BUG-992/1175: 切回书架 tab 远端卡在场，且 TTL 内不重打网络', (
+    WidgetTester tester,
+  ) async {
     // BUG-992 当初断言的是「切回 tab 后 listRemoteBooks 调用次数增加」——那是实现
     // 细节，不是用户诉求。用户要的是「切回书架能看到远端占位卡」，而**不是**「每切
     // 一次页面就联网一次」（后者正是 BUG-1180 的症状）。清单现在过 RemoteLibraryCache
@@ -562,8 +596,9 @@ void main() {
     // 首帧懒加载已拉一次。
     expect(remoteClient.listRemoteBooksCalls, greaterThanOrEqualTo(1));
     final int before = remoteClient.listRemoteBooksCalls;
-    final Finder remoteCard =
-        find.byKey(const ValueKey<String>('remote_book_card_Remote_Book'));
+    final Finder remoteCard = find.byKey(
+      const ValueKey<String>('remote_book_card_Remote_Book'),
+    );
     expect(remoteCard, findsOneWidget);
 
     // 切到别的 tab 再切回书架。
@@ -573,10 +608,16 @@ void main() {
 
     homeShellTabNotifier.value = HomeTab.books;
     await tester.pumpAndSettle();
-    expect(remoteCard, findsOneWidget,
-        reason: 'BUG-992：切回书架 tab 远端占位卡必须仍在场（不必手动下拉刷新）');
-    expect(remoteClient.listRemoteBooksCalls, before,
-        reason: 'BUG-1180：TTL 内切回 tab 不得再问对端要一次清单');
+    expect(
+      remoteCard,
+      findsOneWidget,
+      reason: 'BUG-992：切回书架 tab 远端占位卡必须仍在场（不必手动下拉刷新）',
+    );
+    expect(
+      remoteClient.listRemoteBooksCalls,
+      before,
+      reason: 'BUG-1180：TTL 内切回 tab 不得再问对端要一次清单',
+    );
   });
 
   testWidgets('BUG-1180: 下拉刷新强制穿透缓存（用户要最新的就必须联网）', (WidgetTester tester) async {
@@ -592,8 +633,11 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    expect(remoteClient.listRemoteBooksCalls, greaterThan(before),
-        reason: '显式下拉刷新是强制入口，必须穿透 TTL 重新联网');
+    expect(
+      remoteClient.listRemoteBooksCalls,
+      greaterThan(before),
+      reason: '显式下拉刷新是强制入口，必须穿透 TTL 重新联网',
+    );
   });
 
   testWidgets('BUG-1640: 漫画书架只拿 host 的漫画', (WidgetTester tester) async {
@@ -664,19 +708,26 @@ void main() {
     await tester.pumpAndSettle();
     homeShellTabNotifier.value = HomeTab.manga;
     await tester.pumpAndSettle();
-    expect(remoteClient.listRemoteBooksCalls, 1,
-        reason: 'BUG-1181/1180：TTL 内切 tab 不得再打一轮网络');
+    expect(
+      remoteClient.listRemoteBooksCalls,
+      1,
+      reason: 'BUG-1181/1180：TTL 内切 tab 不得再打一轮网络',
+    );
   });
 
-  testWidgets('BUG-1182: 关闭「显示远端条目」后根本不联网（而不是拉完再丢）',
-      (WidgetTester tester) async {
+  testWidgets('BUG-1182: 关闭「显示远端条目」后根本不联网（而不是拉完再丢）', (
+    WidgetTester tester,
+  ) async {
     await appModel.prefsRepo.setShowRemoteEntries(false);
     homeShellTabNotifier.value = HomeTab.books;
     await tester.pumpWidget(buildApp());
     await tester.pumpAndSettle();
 
-    expect(remoteClient.listRemoteBooksCalls, 0,
-        reason: '开关关闭时门控必须在取数之前，不能拉完再在渲染期丢弃');
+    expect(
+      remoteClient.listRemoteBooksCalls,
+      0,
+      reason: '开关关闭时门控必须在取数之前，不能拉完再在渲染期丢弃',
+    );
     expect(
       find.byKey(const ValueKey<String>('remote_book_card_Remote_Book')),
       findsNothing,
@@ -685,8 +736,11 @@ void main() {
     // 开关翻回来：`??=` 不会自己重跑，门控翻转必须触发重新取数，否则用户要下拉刷新。
     await appModel.prefsRepo.setShowRemoteEntries(true);
     await tester.pumpAndSettle();
-    expect(remoteClient.listRemoteBooksCalls, greaterThanOrEqualTo(1),
-        reason: 'BUG-1182：开关从关翻到开必须重新取数');
+    expect(
+      remoteClient.listRemoteBooksCalls,
+      greaterThanOrEqualTo(1),
+      reason: 'BUG-1182：开关从关翻到开必须重新取数',
+    );
     expect(
       find.byKey(const ValueKey<String>('remote_book_card_Remote_Book')),
       findsOneWidget,
@@ -694,24 +748,26 @@ void main() {
   });
 
   testWidgets(
-      'remote book without audiobook never touches the audiobook wiring '
-      '(BUG-406)', (WidgetTester tester) async {
-    await tester.pumpWidget(buildApp());
-    await tester.pumpAndSettle();
+    'remote book without audiobook never touches the audiobook wiring '
+    '(BUG-406)',
+    (WidgetTester tester) async {
+      await tester.pumpWidget(buildApp());
+      await tester.pumpAndSettle();
 
-    await tester.runAsync(() async {
-      await tester.tap(find.byTooltip(t.remote_book_download));
-      for (int i = 0; i < 30; i++) {
-        await Future<void>.delayed(const Duration(milliseconds: 50));
-        if (importedFiles.isNotEmpty) break;
-      }
-    });
-    await tester.pump();
+      await tester.runAsync(() async {
+        await tester.tap(find.byTooltip(t.remote_book_download));
+        for (int i = 0; i < 30; i++) {
+          await Future<void>.delayed(const Duration(milliseconds: 50));
+          if (importedFiles.isNotEmpty) break;
+        }
+      });
+      await tester.pump();
 
-    expect(importedFiles.single.existsSync(), isTrue);
-    expect(fetchedAudiobookKeys, isEmpty);
-    expect(importedAudiobooks, isEmpty);
-  });
+      expect(importedFiles.single.existsSync(), isTrue);
+      expect(fetchedAudiobookKeys, isEmpty);
+      expect(importedAudiobooks, isEmpty);
+    },
+  );
 }
 
 class _FakeRemoteBookClient implements RemoteBookClient {
@@ -790,6 +846,7 @@ class _FakeRemoteBookClient implements RemoteBookClient {
   ) async {}
 }
 
-final List<int> _tinyPngBytes =
-    base64Decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJ'
-        'AAAADUlEQVR42mP8z8BQDwAFgwJ/l5YV3wAAAABJRU5ErkJggg==');
+final List<int> _tinyPngBytes = base64Decode(
+  'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJ'
+  'AAAADUlEQVR42mP8z8BQDwAFgwJ/l5YV3wAAAABJRU5ErkJggg==',
+);

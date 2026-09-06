@@ -21,8 +21,10 @@ abstract class MihonBridgeRuntime implements MihonRuntime {
       <String, Object?>{},
     );
     return _asMapList(response)
-        .map((Map<String, Object?> json) =>
-            MihonSource.fromJson(extension.packageName, json))
+        .map(
+          (Map<String, Object?> json) =>
+              MihonSource.fromJson(extension.packageName, json),
+        )
         .toList(growable: false);
   }
 
@@ -40,12 +42,14 @@ abstract class MihonBridgeRuntime implements MihonRuntime {
     final List<Object?> filters = response is List<Object?>
         ? response
         : ((response as Map<Object?, Object?>?)?['filterList']
-                as List<Object?>? ??
-            const <Object?>[]);
+                  as List<Object?>? ??
+              const <Object?>[]);
     return filters
         .whereType<Map<Object?, Object?>>()
-        .map((Map<Object?, Object?> value) =>
-            _filterFromJson(value.cast<String, Object?>()))
+        .map(
+          (Map<Object?, Object?> value) =>
+              _filterFromJson(value.cast<String, Object?>()),
+        )
         .toList(growable: false);
   }
 
@@ -55,19 +59,14 @@ abstract class MihonBridgeRuntime implements MihonRuntime {
     MihonSource source, {
     required int page,
     List<MihonPreference> preferences = const <MihonPreference>[],
-  }) async =>
-      MihonMangaPage.fromJson(
-        _asMap(
-          await invokeBridge(
-            extension,
-            'getPopularManga',
-            <String, Object?>{
-              ..._sourceArguments(source, preferences),
-              'page': page,
-            },
-          ),
-        ),
-      );
+  }) async => MihonMangaPage.fromJson(
+    _asMap(
+      await invokeBridge(extension, 'getPopularManga', <String, Object?>{
+        ..._sourceArguments(source, preferences),
+        'page': page,
+      }),
+    ),
+  );
 
   @override
   Future<MihonMangaPage> getLatest(
@@ -75,19 +74,14 @@ abstract class MihonBridgeRuntime implements MihonRuntime {
     MihonSource source, {
     required int page,
     List<MihonPreference> preferences = const <MihonPreference>[],
-  }) async =>
-      MihonMangaPage.fromJson(
-        _asMap(
-          await invokeBridge(
-            extension,
-            'getLatestManga',
-            <String, Object?>{
-              ..._sourceArguments(source, preferences),
-              'page': page,
-            },
-          ),
-        ),
-      );
+  }) async => MihonMangaPage.fromJson(
+    _asMap(
+      await invokeBridge(extension, 'getLatestManga', <String, Object?>{
+        ..._sourceArguments(source, preferences),
+        'page': page,
+      }),
+    ),
+  );
 
   @override
   Future<MihonMangaPage> search(
@@ -97,23 +91,18 @@ abstract class MihonBridgeRuntime implements MihonRuntime {
     required String query,
     List<MihonFilter> filters = const <MihonFilter>[],
     List<MihonPreference> preferences = const <MihonPreference>[],
-  }) async =>
-      MihonMangaPage.fromJson(
-        _asMap(
-          await invokeBridge(
-            extension,
-            'getSearchManga',
-            <String, Object?>{
-              ..._sourceArguments(source, preferences),
-              'page': page,
-              'search': query,
-              'filterList': filters
-                  .map((MihonFilter filter) => filter.toBridgeJson())
-                  .toList(growable: false),
-            },
-          ),
-        ),
-      );
+  }) async => MihonMangaPage.fromJson(
+    _asMap(
+      await invokeBridge(extension, 'getSearchManga', <String, Object?>{
+        ..._sourceArguments(source, preferences),
+        'page': page,
+        'search': query,
+        'filterList': filters
+            .map((MihonFilter filter) => filter.toBridgeJson())
+            .toList(growable: false),
+      }),
+    ),
+  );
 
   @override
   Future<MihonManga> getDetails(
@@ -124,14 +113,10 @@ abstract class MihonBridgeRuntime implements MihonRuntime {
   }) async {
     final MihonManga parsed = MihonManga.fromJson(
       _asMap(
-        await invokeBridge(
-          extension,
-          'getDetailsManga',
-          <String, Object?>{
-            ..._sourceArguments(source, preferences),
-            'mangaData': manga.toJson(),
-          },
-        ),
+        await invokeBridge(extension, 'getDetailsManga', <String, Object?>{
+          ..._sourceArguments(source, preferences),
+          'mangaData': manga.toJson(),
+        }),
       ),
     );
     return manga.mergedWithDetails(parsed);
@@ -152,9 +137,9 @@ abstract class MihonBridgeRuntime implements MihonRuntime {
         'mangaData': manga.toJson(),
       },
     );
-    return _asMapList(response)
-        .map(MihonChapter.fromJson)
-        .toList(growable: false);
+    return _asMapList(
+      response,
+    ).map(MihonChapter.fromJson).toList(growable: false);
   }
 
   @override
@@ -180,14 +165,13 @@ abstract class MihonBridgeRuntime implements MihonRuntime {
     MihonExtensionRef extension,
     MihonSource source, {
     List<MihonPreference> persisted = const <MihonPreference>[],
-  }) async =>
-      _preferencesFromResponse(
-        await invokeBridge(
-          extension,
-          'preferencesManga',
-          _sourceArguments(source, persisted),
-        ),
-      );
+  }) async => _preferencesFromResponse(
+    await invokeBridge(
+      extension,
+      'preferencesManga',
+      _sourceArguments(source, persisted),
+    ),
+  );
 
   @override
   Future<List<MihonPreference>> setPreference(
@@ -202,27 +186,22 @@ abstract class MihonBridgeRuntime implements MihonRuntime {
       preference,
     ];
     return _preferencesFromResponse(
-      await invokeBridge(
-        extension,
-        'setPreferenceManga',
-        <String, Object?>{
-          'preferences': mihonBridgePreferences(
-            source,
-            merged,
-            changedPreferenceKey: preference.key,
-          ),
-        },
-      ),
+      await invokeBridge(extension, 'setPreferenceManga', <String, Object?>{
+        'preferences': mihonBridgePreferences(
+          source,
+          merged,
+          changedPreferenceKey: preference.key,
+        ),
+      }),
     );
   }
 
   Map<String, Object?> _sourceArguments(
     MihonSource source,
     List<MihonPreference> preferences,
-  ) =>
-      <String, Object?>{
-        'preferences': mihonBridgePreferences(source, preferences),
-      };
+  ) => <String, Object?>{
+    'preferences': mihonBridgePreferences(source, preferences),
+  };
 
   List<MihonPreference> _preferencesFromResponse(Object? response) =>
       _asMapList(response)
@@ -265,15 +244,19 @@ abstract class MihonBridgeRuntime implements MihonRuntime {
         (json['values'] as List<Object?>? ?? const <Object?>[])
             .map((Object? value) => value.toString())
             .toList(growable: false);
-    final List<MihonFilter> children = (state is List<Object?>
-            ? state
-            : json['children'] as List<Object?>? ?? const <Object?>[])
-        .whereType<Map<Object?, Object?>>()
-        .map((Map<Object?, Object?> child) =>
-            _filterFromJson(child.cast<String, Object?>()))
-        .toList(growable: false);
-    final String type =
-        (json['type'] ?? json['runtimeType'] ?? '').toString().toLowerCase();
+    final List<MihonFilter> children =
+        (state is List<Object?>
+                ? state
+                : json['children'] as List<Object?>? ?? const <Object?>[])
+            .whereType<Map<Object?, Object?>>()
+            .map(
+              (Map<Object?, Object?> child) =>
+                  _filterFromJson(child.cast<String, Object?>()),
+            )
+            .toList(growable: false);
+    final String type = (json['type'] ?? json['runtimeType'] ?? '')
+        .toString()
+        .toLowerCase();
     final MihonFilterKind kind = switch (type) {
       final String value when value.contains('header') =>
         MihonFilterKind.header,

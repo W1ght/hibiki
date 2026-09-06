@@ -20,11 +20,11 @@ class TmdbVideoMetadataProvider
     this.baseUrl = 'https://api.themoviedb.org/3',
     this.imageBaseUrl = 'https://image.tmdb.org/t/p/original',
     this.language = 'zh-CN',
-  })  : assert(client == null || transport == null),
-        _apiKey = apiKey.trim(),
-        _accessToken = accessToken.trim(),
-        _transport = transport ?? VideoMetadataHttpClient(client: client),
-        _ownsTransport = transport == null;
+  }) : assert(client == null || transport == null),
+       _apiKey = apiKey.trim(),
+       _accessToken = accessToken.trim(),
+       _transport = transport ?? VideoMetadataHttpClient(client: client),
+       _ownsTransport = transport == null;
 
   final String _apiKey;
   final String _accessToken;
@@ -50,19 +50,18 @@ class TmdbVideoMetadataProvider
     // `Himouto! Umaru-chan` 错误拒绝，因为返回行只剩中文名和日文原名。
     // 在同一 TMDB 主源内合并常用动画元数据语言的展示名，仍由上层 exact gate
     // 决定是否自动应用；这不是跨 provider fallback，也不放宽成模糊匹配。
-    final List<String> languages = <String>[
-      language,
-      'en-US',
-      'ja-JP',
-      'zh-CN',
-    ].fold<List<String>>(<String>[], (List<String> values, String value) {
-      if (value.trim().isNotEmpty && !values.contains(value)) values.add(value);
-      return values;
-    });
+    final List<String> languages = <String>[language, 'en-US', 'ja-JP', 'zh-CN']
+        .fold<List<String>>(<String>[], (List<String> values, String value) {
+          if (value.trim().isNotEmpty && !values.contains(value))
+            values.add(value);
+          return values;
+        });
     final Map<String, VideoMetadataWork> merged = <String, VideoMetadataWork>{};
-    for (int languageIndex = 0;
-        languageIndex < languages.length;
-        languageIndex++) {
+    for (
+      int languageIndex = 0;
+      languageIndex < languages.length;
+      languageIndex++
+    ) {
       final String responseLanguage = languages[languageIndex];
       final Map<String, Object?> payload;
       try {
@@ -75,7 +74,8 @@ class TmdbVideoMetadataProvider
             'page': '1',
             'language': responseLanguage,
           },
-          cacheKey: 'tmdb:search:${request.mediaKind.name}:'
+          cacheKey:
+              'tmdb:search:${request.mediaKind.name}:'
               '${request.title}:${request.year}:$responseLanguage',
         );
       } on Object {
@@ -107,17 +107,18 @@ class TmdbVideoMetadataProvider
     final List<VideoMetadataWork> exact = <VideoMetadataWork>[];
     final List<VideoMetadataWork> remaining = <VideoMetadataWork>[];
     for (final VideoMetadataWork work in merged.values) {
-      final bool matches = <String?>[
-        work.title,
-        work.originalTitle,
-        ...work.aliases,
-      ].any((String? value) =>
-          value != null && TitleNormalizer.normalize(value) == normalizedQuery);
+      final bool matches =
+          <String?>[work.title, work.originalTitle, ...work.aliases].any(
+            (String? value) =>
+                value != null &&
+                TitleNormalizer.normalize(value) == normalizedQuery,
+          );
       (matches ? exact : remaining).add(work);
     }
-    return <VideoMetadataWork>[...exact, ...remaining]
-        .take(request.limit)
-        .toList(growable: false);
+    return <VideoMetadataWork>[
+      ...exact,
+      ...remaining,
+    ].take(request.limit).toList(growable: false);
   }
 
   VideoMetadataWork _mergeLocalizedSearchWork(
@@ -145,7 +146,7 @@ class TmdbVideoMetadataProvider
       query: const <String, String>{
         'append_to_response':
             'external_ids,credits,images,content_ratings,release_dates,keywords,'
-                'alternative_titles,translations',
+            'alternative_titles,translations',
         'include_image_language': 'zh,en,null',
       },
       cacheKey: 'tmdb:work:${lookup.mediaKind.name}:${lookup.externalId}',
@@ -166,9 +167,7 @@ class TmdbVideoMetadataProvider
       return const <VideoMetadataSeason>[];
     }
     if (lookup.episodeGroupId case final String groupId) {
-      return _mapEpisodeGroupSeasons(
-        await _episodeGroupDetails(groupId),
-      );
+      return _mapEpisodeGroupSeasons(await _episodeGroupDetails(groupId));
     }
     final VideoMetadataWork? work = await fetchWork(lookup);
     if (work == null) return const <VideoMetadataSeason>[];
@@ -237,7 +236,8 @@ class TmdbVideoMetadataProvider
         await _episodeGroupDetails(lookup.episodeGroupId!),
       );
       return seasons.any(
-              (VideoMetadataSeason value) => value.seasonNumber == seasonNumber)
+            (VideoMetadataSeason value) => value.seasonNumber == seasonNumber,
+          )
           ? lookup
           : null;
     }
@@ -302,29 +302,35 @@ class TmdbVideoMetadataProvider
         if (episode == null) continue;
         final int episodeNumber =
             (metadataInt(episode['order']) ?? episodes.length) + 1;
-        episodes.add(_mapEpisode(
-          <String, Object?>{
-            ...episode,
-            'season_number': seasonNumber,
-            'episode_number': episodeNumber,
-          },
-          seasonNumber,
-          episodeNumber,
-        ));
+        episodes.add(
+          _mapEpisode(
+            <String, Object?>{
+              ...episode,
+              'season_number': seasonNumber,
+              'episode_number': episodeNumber,
+            },
+            seasonNumber,
+            episodeNumber,
+          ),
+        );
       }
-      seasons.add(VideoMetadataSeason(
-        seasonNumber: seasonNumber,
-        title: metadataString(group['name']) ?? 'Season $seasonNumber',
-        episodeCount: episodes.length,
-        ids: <VideoMetadataId>[
-          if (metadataString(group['id']) case final String id)
-            VideoMetadataId(type: 'tmdb_episode_group', value: id),
-        ],
-        episodes: episodes,
-      ));
+      seasons.add(
+        VideoMetadataSeason(
+          seasonNumber: seasonNumber,
+          title: metadataString(group['name']) ?? 'Season $seasonNumber',
+          episodeCount: episodes.length,
+          ids: <VideoMetadataId>[
+            if (metadataString(group['id']) case final String id)
+              VideoMetadataId(type: 'tmdb_episode_group', value: id),
+          ],
+          episodes: episodes,
+        ),
+      );
     }
-    seasons.sort((VideoMetadataSeason a, VideoMetadataSeason b) =>
-        a.seasonNumber.compareTo(b.seasonNumber));
+    seasons.sort(
+      (VideoMetadataSeason a, VideoMetadataSeason b) =>
+          a.seasonNumber.compareTo(b.seasonNumber),
+    );
     return seasons;
   }
 
@@ -333,8 +339,9 @@ class TmdbVideoMetadataProvider
     VideoMetadataLookup lookup,
   ) async {
     _validateLookup(lookup);
-    final String media =
-        lookup.mediaKind == VideoMetadataMediaKind.tv ? 'tv' : 'movie';
+    final String media = lookup.mediaKind == VideoMetadataMediaKind.tv
+        ? 'tv'
+        : 'movie';
     final Map<String, Object?>? payload = await _getObjectOrNull(
       '/$media/${lookup.externalId}/videos',
       operation: 'TMDB videos',
@@ -363,21 +370,23 @@ class TmdbVideoMetadataProvider
         'behind the scenes' => VideoMetadataExtraKind.behindTheScenes,
         _ => VideoMetadataExtraKind.extra,
       };
-      result.add(VideoMetadataExtra(
-        kind: kind,
-        title: title,
-        provider: providerKind,
-        providerVideoId: key,
-        site: site,
-        remoteUrl: url,
-        thumbnailUrl: normalizedSite == 'youtube'
-            ? 'https://i.ytimg.com/vi/$key/hqdefault.jpg'
-            : null,
-        official: item?['official'] == true,
-        language: metadataString(item?['iso_639_1']),
-        publishedAt: metadataString(item?['published_at']),
-        order: result.length,
-      ));
+      result.add(
+        VideoMetadataExtra(
+          kind: kind,
+          title: title,
+          provider: providerKind,
+          providerVideoId: key,
+          site: site,
+          remoteUrl: url,
+          thumbnailUrl: normalizedSite == 'youtube'
+              ? 'https://i.ytimg.com/vi/$key/hqdefault.jpg'
+              : null,
+          official: item?['official'] == true,
+          language: metadataString(item?['iso_639_1']),
+          publishedAt: metadataString(item?['published_at']),
+          order: result.length,
+        ),
+      );
     }
     return result;
   }
@@ -466,7 +475,8 @@ class TmdbVideoMetadataProvider
     VideoMetadataMediaKind kind,
   ) {
     final String id = '${metadataInt(item['id']) ?? item['id']}';
-    final String title = (kind == VideoMetadataMediaKind.tv
+    final String title =
+        (kind == VideoMetadataMediaKind.tv
             ? metadataString(item['name'])
             : metadataString(item['title'])) ??
         id;
@@ -493,26 +503,28 @@ class TmdbVideoMetadataProvider
       final int? number = metadataInt(season?['season_number']);
       if (season == null || number == null) continue;
       final String? airDate = metadataString(season['air_date']);
-      seasons.add(VideoMetadataSeason(
-        seasonNumber: number,
-        title: metadataString(season['name']) ?? 'Season $number',
-        airDate: airDate,
-        year: metadataYear(airDate),
-        episodeCount: _positiveInt(season['episode_count']),
-        ids: <VideoMetadataId>[
-          if (metadataInt(season['id']) case final int seasonId)
-            VideoMetadataId(type: 'tmdb', value: '$seasonId'),
-        ],
-        images: <VideoMetadataImage>[
-          if (metadataString(season['poster_path']) case final String path)
-            VideoMetadataImage(
-              kind: VideoMetadataImageKind.cover,
-              url: '$imageBaseUrl$path',
-              provider: providerKind,
-              seasonNumber: number,
-            ),
-        ],
-      ));
+      seasons.add(
+        VideoMetadataSeason(
+          seasonNumber: number,
+          title: metadataString(season['name']) ?? 'Season $number',
+          airDate: airDate,
+          year: metadataYear(airDate),
+          episodeCount: _positiveInt(season['episode_count']),
+          ids: <VideoMetadataId>[
+            if (metadataInt(season['id']) case final int seasonId)
+              VideoMetadataId(type: 'tmdb', value: '$seasonId'),
+          ],
+          images: <VideoMetadataImage>[
+            if (metadataString(season['poster_path']) case final String path)
+              VideoMetadataImage(
+                kind: VideoMetadataImageKind.cover,
+                url: '$imageBaseUrl$path',
+                provider: providerKind,
+                seasonNumber: number,
+              ),
+          ],
+        ),
+      );
     }
     final List<int> runtimes = <int>[
       for (final Object? value in metadataList(item['episode_run_time']))
@@ -598,8 +610,10 @@ class TmdbVideoMetadataProvider
     final int seasonNumber =
         metadataInt(item['season_number']) ?? fallbackSeasonNumber;
     final String? airDate = metadataString(item['air_date']);
-    final List<VideoMetadataEpisode> episodes =
-        _mapEpisodes(item, seasonNumber);
+    final List<VideoMetadataEpisode> episodes = _mapEpisodes(
+      item,
+      seasonNumber,
+    );
     return VideoMetadataSeason(
       seasonNumber: seasonNumber,
       title: metadataString(item['name']) ?? 'Season $seasonNumber',
@@ -634,8 +648,10 @@ class TmdbVideoMetadataProvider
           metadataInt(item['season_number']) ?? fallbackSeasonNumber;
       episodes.add(_mapEpisode(item, seasonNumber, episodeNumber));
     }
-    episodes.sort((VideoMetadataEpisode a, VideoMetadataEpisode b) =>
-        a.episodeNumber.compareTo(b.episodeNumber));
+    episodes.sort(
+      (VideoMetadataEpisode a, VideoMetadataEpisode b) =>
+          a.episodeNumber.compareTo(b.episodeNumber),
+    );
     return episodes;
   }
 
@@ -713,19 +729,21 @@ class TmdbVideoMetadataProvider
       final VideoMetadataCreditKind? kind = job.contains('director')
           ? VideoMetadataCreditKind.director
           : (job.contains('writer') ||
-                  job.contains('screenplay') ||
-                  department == 'writing')
-              ? VideoMetadataCreditKind.writer
-              : null;
+                job.contains('screenplay') ||
+                department == 'writing')
+          ? VideoMetadataCreditKind.writer
+          : null;
       if (kind == null) continue;
-      credits.add(VideoMetadataCredit(
-        kind: kind,
-        person: _mapPerson(item, name),
-        department: metadataString(item['department']),
-        job: metadataString(item['job']),
-        providerCreditId: metadataString(item['credit_id']),
-        order: metadataInt(item['order']) ?? credits.length,
-      ));
+      credits.add(
+        VideoMetadataCredit(
+          kind: kind,
+          person: _mapPerson(item, name),
+          department: metadataString(item['department']),
+          job: metadataString(item['job']),
+          providerCreditId: metadataString(item['credit_id']),
+          order: metadataInt(item['order']) ?? credits.length,
+        ),
+      );
     }
     return credits;
   }
@@ -740,18 +758,20 @@ class TmdbVideoMetadataProvider
       final String? name = metadataString(item?['name']);
       if (item == null || name == null) continue;
       final String? characterName = metadataString(item['character']);
-      credits.add(VideoMetadataCredit(
-        kind: guest
-            ? VideoMetadataCreditKind.guest
-            : VideoMetadataCreditKind.actor,
-        person: _mapPerson(item, name),
-        character: characterName == null
-            ? null
-            : VideoMetadataCharacter(name: characterName),
-        roleName: characterName,
-        providerCreditId: metadataString(item['credit_id']),
-        order: metadataInt(item['order']) ?? credits.length,
-      ));
+      credits.add(
+        VideoMetadataCredit(
+          kind: guest
+              ? VideoMetadataCreditKind.guest
+              : VideoMetadataCreditKind.actor,
+          person: _mapPerson(item, name),
+          character: characterName == null
+              ? null
+              : VideoMetadataCharacter(name: characterName),
+          roleName: characterName,
+          providerCreditId: metadataString(item['credit_id']),
+          order: metadataInt(item['order']) ?? credits.length,
+        ),
+      );
     }
     return credits;
   }
@@ -790,21 +810,17 @@ class TmdbVideoMetadataProvider
   List<VideoMetadataImage> _mapSeasonPrimaryImages(
     Map<String, Object?> item,
     int seasonNumber,
-  ) =>
-      <VideoMetadataImage>[
-        if (metadataString(item['poster_path']) case final String path)
-          VideoMetadataImage(
-            kind: VideoMetadataImageKind.cover,
-            url: '$imageBaseUrl$path',
-            provider: providerKind,
-            seasonNumber: seasonNumber,
-          ),
-      ];
+  ) => <VideoMetadataImage>[
+    if (metadataString(item['poster_path']) case final String path)
+      VideoMetadataImage(
+        kind: VideoMetadataImageKind.cover,
+        url: '$imageBaseUrl$path',
+        provider: providerKind,
+        seasonNumber: seasonNumber,
+      ),
+  ];
 
-  List<VideoMetadataImage> _mapImageSet(
-    Object? value, {
-    int? seasonNumber,
-  }) {
+  List<VideoMetadataImage> _mapImageSet(Object? value, {int? seasonNumber}) {
     final Map<String, Object?> images =
         metadataObject(value) ?? const <String, Object?>{};
     final List<VideoMetadataImage> result = <VideoMetadataImage>[
@@ -842,16 +858,18 @@ class TmdbVideoMetadataProvider
       final String? path = metadataString(item?['file_path']);
       if (item == null || path == null) continue;
       if (skipSvg && path.toLowerCase().endsWith('.svg')) continue;
-      result.add(VideoMetadataImage(
-        kind: kind,
-        url: '$imageBaseUrl$path',
-        provider: providerKind,
-        language: metadataString(item['iso_639_1']),
-        voteAverage: metadataDouble(item['vote_average']),
-        voteCount: metadataInt(item['vote_count']),
-        seasonNumber: seasonNumber,
-        episodeNumber: episodeNumber,
-      ));
+      result.add(
+        VideoMetadataImage(
+          kind: kind,
+          url: '$imageBaseUrl$path',
+          provider: providerKind,
+          language: metadataString(item['iso_639_1']),
+          voteAverage: metadataDouble(item['vote_average']),
+          voteCount: metadataInt(item['vote_count']),
+          seasonNumber: seasonNumber,
+          episodeNumber: episodeNumber,
+        ),
+      );
     }
     return result;
   }
@@ -867,9 +885,7 @@ class TmdbVideoMetadataProvider
     ];
   }
 
-  List<VideoMetadataImage> _dedupeImages(
-    Iterable<VideoMetadataImage> images,
-  ) {
+  List<VideoMetadataImage> _dedupeImages(Iterable<VideoMetadataImage> images) {
     final Map<String, VideoMetadataImage> result =
         <String, VideoMetadataImage>{};
     for (final VideoMetadataImage image in images) {
@@ -893,10 +909,10 @@ class TmdbVideoMetadataProvider
   }
 
   List<String> _names(Object? value) => <String>[
-        for (final Object? node in metadataList(value))
-          if (metadataObject(node) case final Map<String, Object?> item)
-            if (metadataString(item['name']) case final String name) name,
-      ];
+    for (final Object? node in metadataList(value))
+      if (metadataObject(node) case final Map<String, Object?> item)
+        if (metadataString(item['name']) case final String name) name,
+  ];
 
   List<String> _keywordNames(Object? value) {
     final Map<String, Object?>? node = metadataObject(value);
@@ -908,8 +924,9 @@ class TmdbVideoMetadataProvider
     VideoMetadataMediaKind kind,
   ) {
     if (kind == VideoMetadataMediaKind.tv) {
-      final Map<String, Object?>? ratings =
-          metadataObject(item['content_ratings']);
+      final Map<String, Object?>? ratings = metadataObject(
+        item['content_ratings'],
+      );
       return _pickCertification(metadataList(ratings?['results']));
     }
     final Map<String, Object?>? dates = metadataObject(item['release_dates']);
@@ -918,8 +935,9 @@ class TmdbVideoMetadataProvider
         final Map<String, Object?>? group = metadataObject(node);
         if (metadataString(group?['iso_3166_1']) != country) continue;
         for (final Object? release in metadataList(group?['release_dates'])) {
-          final String? rating =
-              metadataString(metadataObject(release)?['certification']);
+          final String? rating = metadataString(
+            metadataObject(release)?['certification'],
+          );
           if (rating != null) return rating;
         }
       }
@@ -993,9 +1011,9 @@ class TmdbVideoMetadataProvider
   }
 
   Map<String, String> get _headers => <String, String>{
-        'Accept': 'application/json',
-        if (_accessToken.isNotEmpty) 'Authorization': 'Bearer $_accessToken',
-      };
+    'Accept': 'application/json',
+    if (_accessToken.isNotEmpty) 'Authorization': 'Bearer $_accessToken',
+  };
 
   void _requireAvailable() {
     if (!isAvailable) {

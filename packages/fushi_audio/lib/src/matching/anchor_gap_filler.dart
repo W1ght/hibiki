@@ -237,7 +237,8 @@ class AnchorGapFiller {
       if (!f.matched || c.isPseudo(k)) continue;
       final CueMatch o = c.out[k];
       if (!o.matched) return 'matched cue #$k became unmatched';
-      final bool same = o.sectionIndex == f.sectionIndex &&
+      final bool same =
+          o.sectionIndex == f.sectionIndex &&
           o.normCharStart == f.normCharStart &&
           o.normCharEnd == f.normCharEnd &&
           o.score == f.score;
@@ -442,7 +443,7 @@ class AnchorGapFiller {
     }
     final bool anchorsInsideUnion =
         regionStart + spans.first!.start >= unionStart &&
-            regionStart + spans.last!.end <= unionEnd;
+        regionStart + spans.last!.end <= unionEnd;
     if (placed <= dropped && !(dropped == 0 && anchorsInsideUnion)) {
       c.stats.abandonedRuns++;
       return true;
@@ -503,8 +504,9 @@ class AnchorGapFiller {
     final String na = c.norms[left + q1];
     final String nb = c.norms[left + q2];
     final String nm = c.norms[left + o];
-    final List<int> shrinkA =
-        pinnedA ? const <int>[0] : _tiedShrinks(na, region, a, fromRight: true);
+    final List<int> shrinkA = pinnedA
+        ? const <int>[0]
+        : _tiedShrinks(na, region, a, fromRight: true);
     final List<int> shrinkB = pinnedB
         ? const <int>[0]
         : _tiedShrinks(nb, region, b, fromRight: false);
@@ -528,7 +530,8 @@ class AnchorGapFiller {
           if (!_lengthPlausible(nm.length, ub - lb)) continue;
           m = _Span(lb, ub, _similarity(nm, region.substring(lb, ub)));
         }
-        final bool better = bestM == null ||
+        final bool better =
+            bestM == null ||
             m.similarity > bestM.similarity + 1e-9 ||
             (m.similarity > bestM.similarity - 1e-9 &&
                 da + db < bestDa + bestDb);
@@ -898,7 +901,8 @@ class GapFillStats {
   bool get skippedAny => oversizeRuns > 0 || budgetSkippedRuns > 0;
 
   @override
-  String toString() => 'GapFillStats(runs=$runs filled=$filledRuns '
+  String toString() =>
+      'GapFillStats(runs=$runs filled=$filledRuns '
       'abandoned=$abandonedRuns oversize=$oversizeRuns '
       'budgetSkipped=$budgetSkippedRuns work=$work '
       'invariantViolated=$invariantViolated)';
@@ -914,14 +918,14 @@ class _Stats {
   int work = 0;
 
   GapFillStats snapshot({required bool invariantViolated}) => GapFillStats(
-        runs: runs,
-        filledRuns: filledRuns,
-        abandonedRuns: abandonedRuns,
-        oversizeRuns: oversizeRuns,
-        budgetSkippedRuns: budgetSkippedRuns,
-        work: work,
-        invariantViolated: invariantViolated,
-      );
+    runs: runs,
+    filledRuns: filledRuns,
+    abandonedRuns: abandonedRuns,
+    oversizeRuns: oversizeRuns,
+    budgetSkippedRuns: budgetSkippedRuns,
+    work: work,
+    invariantViolated: invariantViolated,
+  );
 }
 
 /// 一次 [AnchorGapFiller.fill] 的工作集。
@@ -934,9 +938,9 @@ class _Ctx {
     required this.first,
     required this.out,
     required int softAnchorMaxLen,
-  })  : _softAnchorMaxLen = softAnchorMaxLen,
-        _firstPrevEnd = List<int>.filled(first.length, 0),
-        _firstNextStart = List<int>.filled(first.length, big.length) {
+  }) : _softAnchorMaxLen = softAnchorMaxLen,
+       _firstPrevEnd = List<int>.filled(first.length, 0),
+       _firstNextStart = List<int>.filled(first.length, big.length) {
     // 第一遍里每条 cue 前/后最近一条命中 cue 的终点/起点（全局偏移），软锚点
     // 重切不得越过。
     int prevEnd = 0;

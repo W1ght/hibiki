@@ -72,7 +72,8 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
         ? appModelNoUpdate.customThemeById(widget.themeId!)
         : null;
     _isDraft = persisted == null;
-    final CustomThemeEntry entry = persisted ??
+    final CustomThemeEntry entry =
+        persisted ??
         CustomThemeEntry(
           id: widget.themeId ?? 'ct-${DateTime.now().microsecondsSinceEpoch}',
           name: '',
@@ -152,8 +153,9 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
   /// hint (`Custom N`). Falls back to list length + 1 for a not-yet-persisted
   /// new entry.
   int get _defaultNameIndex {
-    final int idx = appModelNoUpdate.customThemes
-        .indexWhere((CustomThemeEntry e) => e.id == _entryId);
+    final int idx = appModelNoUpdate.customThemes.indexWhere(
+      (CustomThemeEntry e) => e.id == _entryId,
+    );
     return idx >= 0 ? idx + 1 : appModelNoUpdate.customThemes.length + 1;
   }
 
@@ -166,13 +168,13 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
       ColorScheme.fromSeed(seedColor: _seed, brightness: _previewBrightness);
 
   ColorScheme get _preview => buildFushiColorScheme(
-        seedColor: _seed,
-        brightness: _previewBrightness,
-        primary: _usePrimaryColor ? _primaryColor : null,
-        secondary: _useSecondaryColor ? _secondaryColor : null,
-        tertiary: _useTertiaryColor ? _tertiaryColor : null,
-        primaryContainer: _useContainerColor ? _containerColor : null,
-      );
+    seedColor: _seed,
+    brightness: _previewBrightness,
+    primary: _usePrimaryColor ? _primaryColor : null,
+    secondary: _useSecondaryColor ? _secondaryColor : null,
+    tertiary: _useTertiaryColor ? _tertiaryColor : null,
+    primaryContainer: _useContainerColor ? _containerColor : null,
+  );
 
   void _refreshInactiveRoleColors() {
     final ColorScheme generated = _generatedScheme;
@@ -212,28 +214,38 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
       code += ':bg$bgHex';
     }
     if (_useSelectionColor && _selectionColor != null) {
-      final selHex =
-          _selectionColor!.toARGB32().toRadixString(16).padLeft(8, '0');
+      final selHex = _selectionColor!
+          .toARGB32()
+          .toRadixString(16)
+          .padLeft(8, '0');
       code += ':sc$selHex';
     }
     if (_usePrimaryColor && _primaryColor != null) {
-      final primaryHex =
-          _primaryColor!.toARGB32().toRadixString(16).padLeft(8, '0');
+      final primaryHex = _primaryColor!
+          .toARGB32()
+          .toRadixString(16)
+          .padLeft(8, '0');
       code += ':pr$primaryHex';
     }
     if (_useSecondaryColor && _secondaryColor != null) {
-      final secondaryHex =
-          _secondaryColor!.toARGB32().toRadixString(16).padLeft(8, '0');
+      final secondaryHex = _secondaryColor!
+          .toARGB32()
+          .toRadixString(16)
+          .padLeft(8, '0');
       code += ':sr$secondaryHex';
     }
     if (_useTertiaryColor && _tertiaryColor != null) {
-      final tertiaryHex =
-          _tertiaryColor!.toARGB32().toRadixString(16).padLeft(8, '0');
+      final tertiaryHex = _tertiaryColor!
+          .toARGB32()
+          .toRadixString(16)
+          .padLeft(8, '0');
       code += ':tr$tertiaryHex';
     }
     if (_useContainerColor && _containerColor != null) {
-      final containerHex =
-          _containerColor!.toARGB32().toRadixString(16).padLeft(8, '0');
+      final containerHex = _containerColor!
+          .toARGB32()
+          .toRadixString(16)
+          .padLeft(8, '0');
       code += ':cr$containerHex';
     }
     if (_useSentenceAudioHighlightColor &&
@@ -263,7 +275,8 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
     Color? containerColor,
     Color? sentenceAudioHighlightColor,
     Color? linkColor,
-  })? _decodeTheme(String code) {
+  })?
+  _decodeTheme(String code) {
     final parts = code.trim().split(':');
     if (parts.length < 3 || parts[0] != 'hibiki-theme') return null;
     final colorVal = int.tryParse(parts[1], radix: 16);
@@ -334,26 +347,25 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
   void _shareTheme() {
     final code = _encodeTheme();
     Clipboard.setData(ClipboardData(text: code));
-    FushiToast.show(
-      msg: t.theme_code_copied,
-      severity: ToastSeverity.success,
-    );
+    FushiToast.show(msg: t.theme_code_copied, severity: ToastSeverity.success);
   }
 
   void _applyImportedTheme(
-      ({
-        Color seed,
-        String brightnessMode,
-        Color? fontColor,
-        Color? bgColor,
-        Color? selectionColor,
-        Color? primaryColor,
-        Color? secondaryColor,
-        Color? tertiaryColor,
-        Color? containerColor,
-        Color? sentenceAudioHighlightColor,
-        Color? linkColor,
-      }) result) {
+    ({
+      Color seed,
+      String brightnessMode,
+      Color? fontColor,
+      Color? bgColor,
+      Color? selectionColor,
+      Color? primaryColor,
+      Color? secondaryColor,
+      Color? tertiaryColor,
+      Color? containerColor,
+      Color? sentenceAudioHighlightColor,
+      Color? linkColor,
+    })
+    result,
+  ) {
     setState(() {
       _seed = result.seed;
       _brightnessMode = result.brightnessMode;
@@ -385,7 +397,8 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
       _useTertiaryColor = result.tertiaryColor != null;
       _containerColor = result.containerColor ?? generated.primaryContainer;
       _useContainerColor = result.containerColor != null;
-      _sentenceAudioHighlightColor = result.sentenceAudioHighlightColor ??
+      _sentenceAudioHighlightColor =
+          result.sentenceAudioHighlightColor ??
           FushiColor.defaultSentenceAudioHighlightColor;
       _useSentenceAudioHighlightColor =
           result.sentenceAudioHighlightColor != null;
@@ -546,7 +559,8 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
               onEnabledChanged: (bool value) {
                 setState(() => _useSentenceAudioHighlightColor = value);
                 appModel.setAudioHighlightColor(
-                    value ? _sentenceAudioHighlightColor : null);
+                  value ? _sentenceAudioHighlightColor : null,
+                );
               },
               color: _sentenceAudioHighlightColor!,
               onChanged: (Color color) {
@@ -721,7 +735,8 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
   /// system-theme) so the app never points at a now-missing custom entry.
   Future<void> _confirmDelete() async {
     final NavigatorState navigator = Navigator.of(context);
-    final bool confirmed = await showAppDialog<bool>(
+    final bool confirmed =
+        await showAppDialog<bool>(
           context: context,
           builder: (BuildContext ctx) {
             final FushiDesignTokens tokens = FushiDesignTokens.of(ctx);
@@ -852,8 +867,9 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
           SizedBox(height: tokens.spacing.gap + tokens.spacing.gap / 2),
           Container(
             width: double.infinity,
-            padding:
-                EdgeInsets.all(tokens.spacing.gap + tokens.spacing.gap / 2),
+            padding: EdgeInsets.all(
+              tokens.spacing.gap + tokens.spacing.gap / 2,
+            ),
             decoration: BoxDecoration(
               color: bgColor,
               borderRadius: tokens.radii.chipRadius,
@@ -869,8 +885,9 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
                       TextSpan(
                         text: 'テキスト',
                         style: TextStyle(
-                          backgroundColor:
-                              _useSelectionColor ? _selectionColor : null,
+                          backgroundColor: _useSelectionColor
+                              ? _selectionColor
+                              : null,
                         ),
                       ),
                       const TextSpan(text: 'プレビュー'),
@@ -889,10 +906,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
                         : FushiColor.defaultSentenceAudioHighlightColor,
                     borderRadius: tokens.radii.chipRadius,
                   ),
-                  child: Text(
-                    '♪ 音声ハイライト',
-                    style: bodyStyle,
-                  ),
+                  child: Text('♪ 音声ハイライト', style: bodyStyle),
                 ),
                 SizedBox(height: tokens.spacing.gap * 0.75),
                 RichText(
@@ -914,8 +928,9 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
                         style: TextStyle(
                           color: _useLinkColor ? _linkColor! : cs.primary,
                           decoration: TextDecoration.underline,
-                          decorationColor:
-                              _useLinkColor ? _linkColor! : cs.primary,
+                          decorationColor: _useLinkColor
+                              ? _linkColor!
+                              : cs.primary,
                         ),
                       ),
                     ],
@@ -976,10 +991,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
         color: bg,
         borderRadius: tokens.radii.chipRadius,
       ),
-      child: Text(
-        'あいうえお',
-        style: tokens.type.listSubtitle.copyWith(color: fc),
-      ),
+      child: Text('あいうえお', style: tokens.type.listSubtitle.copyWith(color: fc)),
     );
   }
 
@@ -999,10 +1011,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
           color: Theme.of(context).dividerColor.withValues(alpha: 0.3),
         ),
       ),
-      child: Text(
-        '日本語',
-        style: tokens.type.listSubtitle.copyWith(color: fc),
-      ),
+      child: Text('日本語', style: tokens.type.listSubtitle.copyWith(color: fc)),
     );
   }
 
@@ -1029,7 +1038,8 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final Color primary = _primaryColor!;
     final Color fc = _useFontColor ? _fontColor! : cs.onSurface;
-    final Color track = (_useContainerColor
+    final Color track =
+        (_useContainerColor
             ? _containerColor
             : _generatedScheme.primaryContainer) ??
         cs.primaryContainer;
@@ -1050,10 +1060,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
           ),
         ),
         SizedBox(width: tokens.spacing.gap),
-        FushiPreviewSwitch(
-          trackColor: track,
-          thumbColor: primary,
-        ),
+        FushiPreviewSwitch(trackColor: track, thumbColor: primary),
       ],
     );
   }
@@ -1071,9 +1078,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
       ),
       child: Text(
         '辞書',
-        style: tokens.type.metadata.copyWith(
-          color: cs.onSecondaryContainer,
-        ),
+        style: tokens.type.metadata.copyWith(color: cs.onSecondaryContainer),
       ),
     );
   }
@@ -1203,10 +1208,7 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
                 AnimatedRotation(
                   turns: _seedExpanded ? 0.5 : 0.0,
                   duration: fushiMd3StateDuration,
-                  child: Icon(
-                    Icons.expand_more,
-                    color: cs.onSurfaceVariant,
-                  ),
+                  child: Icon(Icons.expand_more, color: cs.onSurfaceVariant),
                 ),
               ],
             ),
@@ -1237,8 +1239,10 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
   }) {
     return LayoutBuilder(
       builder: (layoutContext, constraints) {
-        final pickerWidth = constraints.maxWidth
-            .clamp(0.0, MediaQuery.of(layoutContext).size.width - 64);
+        final pickerWidth = constraints.maxWidth.clamp(
+          0.0,
+          MediaQuery.of(layoutContext).size.width - 64,
+        );
         final isLandscape =
             MediaQuery.of(layoutContext).orientation == Orientation.landscape;
         return Listener(
@@ -1330,18 +1334,12 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(
-            Icons.lightbulb_outline,
-            size: 18,
-            color: cs.primary,
-          ),
+          Icon(Icons.lightbulb_outline, size: 18, color: cs.primary),
           SizedBox(width: tokens.spacing.gap),
           Expanded(
             child: Text(
               text,
-              style: tokens.type.metadata.copyWith(
-                color: cs.onSurfaceVariant,
-              ),
+              style: tokens.type.metadata.copyWith(color: cs.onSurfaceVariant),
             ),
           ),
         ],
@@ -1363,18 +1361,12 @@ class _CustomThemePageState extends BasePageState<CustomThemePage> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(
-            Icons.info_outline,
-            size: 16,
-            color: cs.onSurfaceVariant,
-          ),
+          Icon(Icons.info_outline, size: 16, color: cs.onSurfaceVariant),
           SizedBox(width: tokens.spacing.gap),
           Expanded(
             child: Text(
               text,
-              style: tokens.type.metadata.copyWith(
-                color: cs.onSurfaceVariant,
-              ),
+              style: tokens.type.metadata.copyWith(color: cs.onSurfaceVariant),
             ),
           ),
         ],

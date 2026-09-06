@@ -25,14 +25,14 @@ void main() {
     // 解析持久根，测试把它指向临时目录。
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(
-      const MethodChannel('plugins.flutter.io/path_provider'),
-      (MethodCall call) async {
-        if (call.method == 'getApplicationDocumentsDirectory') {
-          return docsDir.path;
-        }
-        return null;
-      },
-    );
+          const MethodChannel('plugins.flutter.io/path_provider'),
+          (MethodCall call) async {
+            if (call.method == 'getApplicationDocumentsDirectory') {
+              return docsDir.path;
+            }
+            return null;
+          },
+        );
     db = FushiDatabase.forTesting(NativeDatabase.memory());
   });
 
@@ -40,9 +40,9 @@ void main() {
     await db.close();
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(
-      const MethodChannel('plugins.flutter.io/path_provider'),
-      null,
-    );
+          const MethodChannel('plugins.flutter.io/path_provider'),
+          null,
+        );
     if (docsDir.existsSync()) docsDir.deleteSync(recursive: true);
   });
 
@@ -56,8 +56,7 @@ void main() {
     await repo.save(book);
   }
 
-  test(
-      'replaceAudio copies picked files into the uid persist dir, sets '
+  test('replaceAudio copies picked files into the uid persist dir, sets '
       'audioPaths to the copied paths, and clears audioRoot', () async {
     final SrtBookRepository repo = SrtBookRepository(db);
     await seedBook(repo, audioRoot: '/some/old/folder');
@@ -81,20 +80,22 @@ void main() {
     expect(saved.audioRoot, isNull);
 
     // 复制后的路径落在 uid 派生的持久目录之内（非原始 /src 路径）。
-    final Directory persistDir =
-        await AudiobookStorage.ensurePersistDir('srtbook_1');
+    final Directory persistDir = await AudiobookStorage.ensurePersistDir(
+      'srtbook_1',
+    );
     for (final String path in persisted) {
-      expect(p.isWithin(p.canonicalize(persistDir.path), p.canonicalize(path)),
-          isTrue,
-          reason: '$path should be inside ${persistDir.path}');
+      expect(
+        p.isWithin(p.canonicalize(persistDir.path), p.canonicalize(path)),
+        isTrue,
+        reason: '$path should be inside ${persistDir.path}',
+      );
       expect(File(path).existsSync(), isTrue);
     }
     expect(File(persisted[0]).readAsStringSync(), 'AAA');
     expect(File(persisted[1]).readAsStringSync(), 'BBBB');
   });
 
-  test(
-      'replaceAudio replaces a previous audio set (cleanAudioFiles) instead '
+  test('replaceAudio replaces a previous audio set (cleanAudioFiles) instead '
       'of accumulating', () async {
     final SrtBookRepository repo = SrtBookRepository(db);
     await seedBook(repo);
@@ -103,20 +104,25 @@ void main() {
       ..createSync(recursive: true);
     final File first = File(p.join(srcDir.path, 'first.mp3'))
       ..writeAsStringSync('1');
-    await repo
-        .replaceAudio(uid: 'srtbook_1', pickedPaths: <String>[first.path]);
+    await repo.replaceAudio(
+      uid: 'srtbook_1',
+      pickedPaths: <String>[first.path],
+    );
 
     final File second = File(p.join(srcDir.path, 'second.mp3'))
       ..writeAsStringSync('2');
-    final List<String> persisted = await repo
-        .replaceAudio(uid: 'srtbook_1', pickedPaths: <String>[second.path]);
+    final List<String> persisted = await repo.replaceAudio(
+      uid: 'srtbook_1',
+      pickedPaths: <String>[second.path],
+    );
 
     final SrtBook? saved = await repo.findByUid('srtbook_1');
     expect(saved!.audioPaths, equals(persisted));
 
     // 持久目录只剩最新一组音频，旧文件已被 cleanAudioFiles 删除。
-    final Directory persistDir =
-        await AudiobookStorage.ensurePersistDir('srtbook_1');
+    final Directory persistDir = await AudiobookStorage.ensurePersistDir(
+      'srtbook_1',
+    );
     final List<String> audioInDir = persistDir
         .listSync()
         .whereType<File>()
@@ -126,20 +132,24 @@ void main() {
     expect(audioInDir, <String>['second.mp3']);
   });
 
-  test('replaceAudio with empty picks is a no-op (no write, no throw)',
-      () async {
-    final SrtBookRepository repo = SrtBookRepository(db);
-    await seedBook(repo, audioRoot: '/keep/this');
+  test(
+    'replaceAudio with empty picks is a no-op (no write, no throw)',
+    () async {
+      final SrtBookRepository repo = SrtBookRepository(db);
+      await seedBook(repo, audioRoot: '/keep/this');
 
-    final List<String> persisted =
-        await repo.replaceAudio(uid: 'srtbook_1', pickedPaths: <String>[]);
-    expect(persisted, isEmpty);
+      final List<String> persisted = await repo.replaceAudio(
+        uid: 'srtbook_1',
+        pickedPaths: <String>[],
+      );
+      expect(persisted, isEmpty);
 
-    final SrtBook? saved = await repo.findByUid('srtbook_1');
-    // 空选不触碰既有真值。
-    expect(saved!.audioRoot, '/keep/this');
-    expect(saved.audioPaths, isNull);
-  });
+      final SrtBook? saved = await repo.findByUid('srtbook_1');
+      // 空选不触碰既有真值。
+      expect(saved!.audioRoot, '/keep/this');
+      expect(saved.audioPaths, isNull);
+    },
+  );
 
   test('replaceAudio throws StateError for an unknown uid', () async {
     final SrtBookRepository repo = SrtBookRepository(db);

@@ -48,10 +48,7 @@ class RemoteDownloadProgressBadge extends StatelessWidget {
 /// 的这个角标是失败态唯一恒定的出口：重进页面照样看得到，tooltip 给出真实错误文本，
 /// 再点一次下载即可重试（重试会把上一轮的失败态顶掉）。
 class RemoteDownloadFailedBadge extends StatelessWidget {
-  const RemoteDownloadFailedBadge({
-    required this.tooltip,
-    super.key,
-  });
+  const RemoteDownloadFailedBadge({required this.tooltip, super.key});
 
   final String tooltip;
 

@@ -29,13 +29,13 @@ class TorrentTaskDetailDialog extends ConsumerStatefulWidget {
     required AnimeDownloadPlan plan,
     super.key,
     @visibleForTesting this.backendOverride,
-  })  : torrentId = plan.id,
-        title = plan.seriesTitle,
-        torrentTitle = plan.torrentTitle,
-        initialSnapshot = null,
-        initialFiles = null,
-        liveDataAbsence = VideoDownloadLiveDataAbsence.none,
-        resolveBackendFromAppModel = true;
+  }) : torrentId = plan.id,
+       title = plan.seriesTitle,
+       torrentTitle = plan.torrentTitle,
+       initialSnapshot = null,
+       initialFiles = null,
+       liveDataAbsence = VideoDownloadLiveDataAbsence.none,
+       resolveBackendFromAppModel = true;
 
   /// Durable download jobs use the same real backend detail surface without
   /// manufacturing a legacy [AnimeDownloadPlan].
@@ -228,20 +228,22 @@ class _TorrentTaskDetailDialogState
           // 详情能力缺失时这两项本就没有来源，UI 走「当前后端不支持」，
           // 不能记成失败态。
           if (detail == null) return;
-          final TorrentSessionStatusInfo? sessionStatus =
-              await detail.sessionStatus();
-          final TorrentPieceStates? pieces =
-              await detail.pieceStates(widget.torrentId);
+          final TorrentSessionStatusInfo? sessionStatus = await detail
+              .sessionStatus();
+          final TorrentPieceStates? pieces = await detail.pieceStates(
+            widget.torrentId,
+          );
           if (!mounted) return;
           setState(() {
             if (sessionStatus != null) _sessionStatus = sessionStatus;
             if (pieces != null) _pieces = pieces;
           });
         case 1:
-          final List<TorrentFileEntry> files =
-              await backend.listFiles(widget.torrentId);
-          final List<TorrentFilePriority>? priorities =
-              await detail?.filePriorities(widget.torrentId);
+          final List<TorrentFileEntry> files = await backend.listFiles(
+            widget.torrentId,
+          );
+          final List<TorrentFilePriority>? priorities = await detail
+              ?.filePriorities(widget.torrentId);
           if (!mounted) return;
           setState(() {
             _files = _files.withData(files);
@@ -249,18 +251,20 @@ class _TorrentTaskDetailDialogState
           });
         case 2:
           if (detail == null) return;
-          final List<TorrentPeerDetail>? peers =
-              await detail.listPeers(widget.torrentId);
+          final List<TorrentPeerDetail>? peers = await detail.listPeers(
+            widget.torrentId,
+          );
           if (!mounted) return;
           // null = 后端明确答不上来（同 Trackers），是失败而不是「还在加载」。
           setState(() {
-            _peers =
-                peers == null ? _peers.withFailure() : _peers.withData(peers);
+            _peers = peers == null
+                ? _peers.withFailure()
+                : _peers.withData(peers);
           });
         case 3:
           if (detail == null) return;
-          final List<TorrentTrackerDetail>? trackers =
-              await detail.listTrackers(widget.torrentId);
+          final List<TorrentTrackerDetail>? trackers = await detail
+              .listTrackers(widget.torrentId);
           if (!mounted) return;
           setState(() {
             _trackers = trackers == null
@@ -333,8 +337,9 @@ class _TorrentTaskDetailDialogState
             widget.torrentTitle,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            style: theme.textTheme.bodySmall
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+            style: theme.textTheme.bodySmall?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
           ),
           const SizedBox(height: 8),
           TabBar(
@@ -375,19 +380,18 @@ class _TorrentTaskDetailDialogState
   }
 
   String get _backendUnavailableMessage => switch (widget.liveDataAbsence) {
-        // 排队等槽位是正常状态，不能报成故障（用户报障：「明明只是因为其他
-        // 东西在下载」）。
-        VideoDownloadLiveDataAbsence.notHandedOff =>
-          t.download_detail_task_queued,
-        VideoDownloadLiveDataAbsence.missingFromBackend =>
-          t.download_detail_task_missing,
-        VideoDownloadLiveDataAbsence.backendOffline =>
-          t.download_detail_backend_offline,
-        VideoDownloadLiveDataAbsence.none =>
-          !widget.resolveBackendFromAppModel && _backend == null
-              ? t.download_detail_backend_offline
-              : t.download_detail_backend_unsupported,
-      };
+    // 排队等槽位是正常状态，不能报成故障（用户报障：「明明只是因为其他
+    // 东西在下载」）。
+    VideoDownloadLiveDataAbsence.notHandedOff => t.download_detail_task_queued,
+    VideoDownloadLiveDataAbsence.missingFromBackend =>
+      t.download_detail_task_missing,
+    VideoDownloadLiveDataAbsence.backendOffline =>
+      t.download_detail_backend_offline,
+    VideoDownloadLiveDataAbsence.none =>
+      !widget.resolveBackendFromAppModel && _backend == null
+          ? t.download_detail_backend_offline
+          : t.download_detail_backend_unsupported,
+  };
 
   /// 四路数据共用的「没有数据时显示什么」——**唯一**会显示转圈的路径：
   /// 后端整体不可用 → 说明后端；还没有过任何结果 → 转圈；最近一次尝试
@@ -422,8 +426,9 @@ class _TorrentTaskDetailDialogState
           icon: Icons.info_outline,
           iconSize: 36,
           message: text,
-          messageStyle: theme.textTheme.bodyMedium
-              ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+          messageStyle: theme.textTheme.bodyMedium?.copyWith(
+            color: theme.colorScheme.onSurfaceVariant,
+          ),
         ),
       ),
     );
@@ -440,8 +445,9 @@ class _TorrentTaskDetailDialogState
             flex: 1,
             child: Text(
               label,
-              style: theme.textTheme.bodySmall
-                  ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+              style: theme.textTheme.bodySmall?.copyWith(
+                color: theme.colorScheme.onSurfaceVariant,
+              ),
             ),
           ),
           const SizedBox(width: 12),
@@ -537,26 +543,20 @@ class _TorrentTaskDetailDialogState
           Text(
             '${t.download_detail_pieces_label}: '
             '${pieces.haveCount}/${pieces.numPieces}',
-            style: theme.textTheme.bodySmall
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+            style: theme.textTheme.bodySmall?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
           ),
         ],
         const SizedBox(height: 12),
-        Text(
-          t.download_detail_section_task,
-          style: theme.textTheme.titleSmall,
-        ),
+        Text(t.download_detail_section_task, style: theme.textTheme.titleSmall),
         const SizedBox(height: 4),
         _statRow(
           theme,
           t.download_detail_hash_label,
           snapshot.hash.trim().isEmpty ? '—' : snapshot.hash,
         ),
-        _statRow(
-          theme,
-          t.download_detail_raw_state_label,
-          snapshot.state,
-        ),
+        _statRow(theme, t.download_detail_raw_state_label, snapshot.state),
         if (snapshot.totalSizeBytes >= 0)
           _statRow(
             theme,
@@ -570,11 +570,7 @@ class _TorrentTaskDetailDialogState
             FushiByteFormat.bytes(snapshot.amountLeft),
           ),
         if (snapshot.savePath.trim().isNotEmpty)
-          _statRow(
-            theme,
-            t.download_detail_save_path_label,
-            snapshot.savePath,
-          ),
+          _statRow(theme, t.download_detail_save_path_label, snapshot.savePath),
         if (snapshot.contentPath.trim().isNotEmpty)
           _statRow(
             theme,
@@ -582,8 +578,10 @@ class _TorrentTaskDetailDialogState
             snapshot.contentPath,
           ),
         const SizedBox(height: 12),
-        Text(t.download_detail_section_transfer,
-            style: theme.textTheme.titleSmall),
+        Text(
+          t.download_detail_section_transfer,
+          style: theme.textTheme.titleSmall,
+        ),
         const SizedBox(height: 4),
         _statRow(
           theme,
@@ -632,8 +630,10 @@ class _TorrentTaskDetailDialogState
             ),
           ),
         const SizedBox(height: 12),
-        Text(t.download_detail_section_network,
-            style: theme.textTheme.titleSmall),
+        Text(
+          t.download_detail_section_network,
+          style: theme.textTheme.titleSmall,
+        ),
         const SizedBox(height: 4),
         ..._buildNetworkRows(theme, session),
       ],
@@ -649,8 +649,9 @@ class _TorrentTaskDetailDialogState
       return <Widget>[
         Text(
           _backendUnavailableMessage,
-          style: theme.textTheme.bodySmall
-              ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+          style: theme.textTheme.bodySmall?.copyWith(
+            color: theme.colorScheme.onSurfaceVariant,
+          ),
         ),
       ];
     }
@@ -664,8 +665,8 @@ class _TorrentTaskDetailDialogState
           'DHT',
           session.dhtEnabled!
               ? (session.dhtNodes >= 0
-                  ? '${t.download_detail_dht_nodes}: ${session.dhtNodes}'
-                  : '✓')
+                    ? '${t.download_detail_dht_nodes}: ${session.dhtNodes}'
+                    : '✓')
               : '✗',
         ),
       if (session.lsdEnabled != null)
@@ -673,11 +674,7 @@ class _TorrentTaskDetailDialogState
       if (session.pexEnabled != null)
         _statRow(theme, 'PEX', session.pexEnabled! ? '✓' : '✗'),
       if (session.listenPort > 0)
-        _statRow(
-          theme,
-          t.download_detail_listen_port,
-          '${session.listenPort}',
-        ),
+        _statRow(theme, t.download_detail_listen_port, '${session.listenPort}'),
       if (session.downRateBps >= 0 || session.upRateBps >= 0)
         _statRow(
           theme,
@@ -718,7 +715,8 @@ class _TorrentTaskDetailDialogState
       itemCount: files.length,
       itemBuilder: (BuildContext context, int index) {
         final TorrentFileEntry file = files[index];
-        final TorrentFilePriority? priority = (priorities != null &&
+        final TorrentFilePriority? priority =
+            (priorities != null &&
                 file.index >= 0 &&
                 file.index < priorities.length)
             ? priorities[file.index]
@@ -750,8 +748,9 @@ class _TorrentTaskDetailDialogState
                   value: priority,
                   isDense: true,
                   underline: const SizedBox.shrink(),
-                  style: theme.textTheme.bodySmall
-                      ?.copyWith(color: theme.colorScheme.onSurface),
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: theme.colorScheme.onSurface,
+                  ),
                   items: <DropdownMenuItem<TorrentFilePriority>>[
                     for (final TorrentFilePriority p
                         in TorrentFilePriority.values)
@@ -810,8 +809,9 @@ class _TorrentTaskDetailDialogState
               Text(
                 '↓ ${FushiByteFormat.bytes(peer.downloadedBytes)} '
                 '↑ ${FushiByteFormat.bytes(peer.uploadedBytes)}',
-                style: theme.textTheme.bodySmall
-                    ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: theme.colorScheme.onSurfaceVariant,
+                ),
               ),
             ],
           ),
@@ -859,8 +859,9 @@ class _TorrentTaskDetailDialogState
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: failing
-                ? theme.textTheme.bodySmall
-                    ?.copyWith(color: theme.colorScheme.error)
+                ? theme.textTheme.bodySmall?.copyWith(
+                    color: theme.colorScheme.error,
+                  )
                 : null,
           ),
           trailing: Text(
@@ -868,8 +869,9 @@ class _TorrentTaskDetailDialogState
             '${tracker.seeds >= 0 ? tracker.seeds : '—'} · '
             '${t.download_detail_leechers_label} '
             '${tracker.leeches >= 0 ? tracker.leeches : '—'}',
-            style: theme.textTheme.bodySmall
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+            style: theme.textTheme.bodySmall?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
           ),
         );
       },
@@ -888,10 +890,7 @@ class _TorrentTaskDetailDialogState
 /// 把已经渲染出来的列表闪成失败态再闪回来。
 @immutable
 class _LoadState<T extends Object> {
-  const _LoadState.initial()
-      : value = null,
-        attempted = false,
-        failed = false;
+  const _LoadState.initial() : value = null, attempted = false, failed = false;
 
   const _LoadState._(
     this.value, {
@@ -953,8 +952,9 @@ class TorrentPieceBarPainter extends CustomPainter {
         }
       }
       final double fraction = weight / (end - start);
-      final Color base =
-          downloading && fraction < 1 ? downloadingColor : haveColor;
+      final Color base = downloading && fraction < 1
+          ? downloadingColor
+          : haveColor;
       paint.color = Color.lerp(missingColor, base, fraction) ?? missingColor;
       canvas.drawRect(
         Rect.fromLTWH(b * bucketWidth, 0, bucketWidth + 0.5, size.height),

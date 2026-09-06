@@ -23,26 +23,21 @@ import 'package:fushi/utils.dart';
 export 'package:fushi/src/pages/implementations/game_shared.dart'
     show GameSection, gameSectionNotifier;
 
-typedef GameMonitorBuilder = Widget Function(
-  BuildContext context,
-  VoidCallback onShowLibrary,
-);
-typedef GameLibraryBuilder = Widget Function(
-  BuildContext context,
-  GalHookSessionController controller,
-  VoidCallback onLaunched,
-);
+typedef GameMonitorBuilder =
+    Widget Function(BuildContext context, VoidCallback onShowLibrary);
+typedef GameLibraryBuilder =
+    Widget Function(
+      BuildContext context,
+      GalHookSessionController controller,
+      VoidCallback onLaunched,
+    );
 
 /// 游戏首页（仪表盘）子页构造器；测试可注入桩，绕开 [GalgameHomePage] 对
 /// `appProvider`（Drift DB / 仓储）的依赖。
-typedef GameDashboardBuilder = Widget Function(
-  BuildContext context,
-  VoidCallback onShowLibrary,
-);
-typedef GameSettingsBuilder = Widget Function(
-  BuildContext context,
-  Widget navigation,
-);
+typedef GameDashboardBuilder =
+    Widget Function(BuildContext context, VoidCallback onShowLibrary);
+typedef GameSettingsBuilder =
+    Widget Function(BuildContext context, Widget navigation);
 
 /// 首页一级「游戏」模块。
 ///
@@ -128,21 +123,23 @@ class _HomeGamePageState extends State<HomeGamePage> {
 
   @override
   Widget build(BuildContext context) {
-    final GameMonitorBuilder monitorBuilder = widget.monitorBuilder ??
+    final GameMonitorBuilder monitorBuilder =
+        widget.monitorBuilder ??
         (BuildContext context, VoidCallback onShowLibrary) => TexthookerPage(
-              embedded: true,
-              captureSetupEnabled: _section == GameSection.monitor,
-              onShowLibrary: onShowLibrary,
-              onShowDiagnostics: _showDiagnostics,
-            );
-    final GameDashboardBuilder dashboardBuilder = widget.dashboardBuilder ??
+          embedded: true,
+          captureSetupEnabled: _section == GameSection.monitor,
+          onShowLibrary: onShowLibrary,
+          onShowDiagnostics: _showDiagnostics,
+        );
+    final GameDashboardBuilder dashboardBuilder =
+        widget.dashboardBuilder ??
         (BuildContext context, VoidCallback onShowLibrary) => GalgameHomePage(
-              sessionController: _controller,
-              onShowLibrary: onShowLibrary,
-              onShowMonitor: _showMonitor,
-              onShowDiagnostics: _showDiagnostics,
-              onLaunched: _showMonitor,
-            );
+          sessionController: _controller,
+          onShowLibrary: onShowLibrary,
+          onShowMonitor: _showMonitor,
+          onShowDiagnostics: _showDiagnostics,
+          onLaunched: _showMonitor,
+        );
     // 子区内容按 [GameSection] 建表，再按 `GameSection.values` 顺序展开：既把
     // 「IndexedStack 索引 == 枚举序」这条隐式约定变成结构约束（`index:` 用的就是
     // `_section.index`），也保证**每个**子区必然经过下面同一处拖放作用域包裹，
@@ -206,20 +203,20 @@ class _HomeGamePageState extends State<HomeGamePage> {
         selected: _section,
         onSelect: _showSection,
         child: IndexedStack(
-        index: _section.index,
-        children: <Widget>[
-          for (final GameSection section in GameSection.values)
-            // [IndexedStack] 比 [Offstage] 更狠：它**急切构建全部子区**并以完整约束
-            // 布局，而 desktop_drop 是进程级全局广播、只按各 drop target 的
-            // `RenderBox.paintBounds` 过滤 —— 于是七个子区的 drop target 会全部命中
-            // 同一次 OS drop。外层 home-shell 的作用域只回答「游戏 tab 可见吗」，
-            // 用户停在诊断/设置子区时答案照样是 true。判据与 `index:` 用的是同一个
-            // `_section`，且写成回调、在 drop 落地那一刻求值。
-            DropSurfaceScope(
-              isActive: () => _section == section,
-              child: sections[section]!,
-            ),
-        ],
+          index: _section.index,
+          children: <Widget>[
+            for (final GameSection section in GameSection.values)
+              // [IndexedStack] 比 [Offstage] 更狠：它**急切构建全部子区**并以完整约束
+              // 布局，而 desktop_drop 是进程级全局广播、只按各 drop target 的
+              // `RenderBox.paintBounds` 过滤 —— 于是七个子区的 drop target 会全部命中
+              // 同一次 OS drop。外层 home-shell 的作用域只回答「游戏 tab 可见吗」，
+              // 用户停在诊断/设置子区时答案照样是 true。判据与 `index:` 用的是同一个
+              // `_section`，且写成回调、在 drop 落地那一刻求值。
+              DropSurfaceScope(
+                isActive: () => _section == section,
+                child: sections[section]!,
+              ),
+          ],
         ),
       ),
     );
@@ -256,9 +253,10 @@ class _HomeGamePageState extends State<HomeGamePage> {
       // 直接漂进 zone，用户看到的只有「拖了没反应」——正是本页要修的症状）。
       // 包成 unawaited 等于把回调立刻变成 void，await 什么也接不到。
       onDrop: (List<String> paths, Offset position) => addGamesFromPaths(
-        ProviderScope.containerOf(context, listen: false)
-            .read(appProvider)
-            .galgameRepo,
+        ProviderScope.containerOf(
+          context,
+          listen: false,
+        ).read(appProvider).galgameRepo,
         paths,
         onImported: _showLibrary,
       ),
@@ -298,10 +296,10 @@ class _HomeGamePageState extends State<HomeGamePage> {
                               // 观感上一模一样（用户「导成功没反应我还以为失败了
                               // 重试了好几次」）。
                               onTap: () => addGameViaFilePicker(
-                                ProviderScope.containerOf(context,
-                                        listen: false)
-                                    .read(appProvider)
-                                    .galgameRepo,
+                                ProviderScope.containerOf(
+                                  context,
+                                  listen: false,
+                                ).read(appProvider).galgameRepo,
                                 onImported: _showLibrary,
                               ),
                             ),
@@ -357,10 +355,11 @@ class _HomeGamePageState extends State<HomeGamePage> {
                     final lines = _controller.lines;
                     final GalWorkbenchReadiness readiness =
                         galWorkbenchReadiness(
-                      state: state,
-                      hasEngineSource: _controller.hasEngineSource,
-                      selectedTextThreadKey: _controller.selectedTextThreadKey,
-                    );
+                          state: state,
+                          hasEngineSource: _controller.hasEngineSource,
+                          selectedTextThreadKey:
+                              _controller.selectedTextThreadKey,
+                        );
                     return Padding(
                       padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
                       child: _CaptureStatusStrip(
@@ -375,7 +374,8 @@ class _HomeGamePageState extends State<HomeGamePage> {
                 ),
                 const Divider(height: 1),
                 Expanded(
-                  child: widget.libraryBuilder?.call(
+                  child:
+                      widget.libraryBuilder?.call(
                         context,
                         _controller,
                         _showMonitor,
@@ -426,8 +426,8 @@ class _CaptureStatusStrip extends StatelessWidget {
 
     final Widget detail = active
         ? readiness == GalWorkbenchReadiness.waitingForThread
-            ? _buildWaitingForThreadDetail(theme, colors)
-            : _buildActiveDetail(theme, colors)
+              ? _buildWaitingForThreadDetail(theme, colors)
+              : _buildActiveDetail(theme, colors)
         : Text(
             '${t.game_session_idle}  ·  ${t.game_open_capture_workspace}',
             maxLines: 1,
@@ -459,10 +459,7 @@ class _CaptureStatusStrip extends StatelessWidget {
     );
   }
 
-  Widget _buildWaitingForThreadDetail(
-    ThemeData theme,
-    ColorScheme colors,
-  ) {
+  Widget _buildWaitingForThreadDetail(ThemeData theme, ColorScheme colors) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,

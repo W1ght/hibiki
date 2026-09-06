@@ -26,8 +26,11 @@ void main() {
     // 以类声明的真实代码锚点 + 花括号配对抽体，邻接类增删不会把窗口误扩/截断。
     final String searchable = maskComments(source);
     final int start = searchable.indexOf('class _SessionOverviewCard');
-    expect(start, greaterThanOrEqualTo(0),
-        reason: '找不到 _SessionOverviewCard，测试锚点过期');
+    expect(
+      start,
+      greaterThanOrEqualTo(0),
+      reason: '找不到 _SessionOverviewCard，测试锚点过期',
+    );
     cardSource = balancedBlockFrom(
       source,
       start,
@@ -42,10 +45,7 @@ void main() {
       reason: '降级原因的渲染条件必须只看 fallbackReason，不看屏宽',
     );
     expect(
-      containsCodeLine(
-        cardSource,
-        '!compact && state.fallbackReason != null',
-      ),
+      containsCodeLine(cardSource, '!compact && state.fallbackReason != null'),
       isFalse,
       reason: '窄屏藏掉降级原因正是 BUG-1110，不得回退',
     );
@@ -68,16 +68,25 @@ void main() {
     final int at = code.indexOf('compact');
     expect(at, greaterThanOrEqualTo(0), reason: '找不到 compact 分支');
     final int ternary = code.indexOf(r"? '$phase · $audio", at);
-    expect(ternary, greaterThanOrEqualTo(0),
-        reason: '找不到「phase · audio」那条 compact 三元；改写了就同步改本守卫');
+    expect(
+      ternary,
+      greaterThanOrEqualTo(0),
+      reason: '找不到「phase · audio」那条 compact 三元；改写了就同步改本守卫',
+    );
     final int elseAt = code.indexOf(r": '$phase · $audio", ternary);
     expect(elseAt, greaterThan(ternary), reason: '找不到非 compact 分支');
     final String compactBranch = code.substring(ternary, elseAt);
     final String fullBranch = code.substring(elseAt, elseAt + 240);
-    expect(compactBranch.contains('format'), isFalse,
-        reason: 'compact 分支不该带 format（采样率/声道/位深是次要信息）');
-    expect(fullBranch.contains('format == null'), isTrue,
-        reason: '非 compact 分支必须仍带 format');
+    expect(
+      compactBranch.contains('format'),
+      isFalse,
+      reason: 'compact 分支不该带 format（采样率/声道/位深是次要信息）',
+    );
+    expect(
+      fullBranch.contains('format == null'),
+      isTrue,
+      reason: '非 compact 分支必须仍带 format',
+    );
   });
 
   test('降级徽章与降级原因的显示条件必须对称（BUG-1110）', () {

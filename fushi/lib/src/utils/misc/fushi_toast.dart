@@ -66,10 +66,7 @@ abstract final class FushiToast {
   /// pending 蓝）并配 Material 图标。有 navigator overlay（主 app，桌面与移动）时走
   /// 自绘 overlay（图标 + 颜色齐全，且会顶替上一条，让 pending → 结果自然过渡）；
   /// 无 overlay 的独立弹窗 Activity 降级为原生着色 toast（无图标但仍着色，绝不静默）。
-  static void showMine({
-    required String msg,
-    required MineToastStatus status,
-  }) {
+  static void showMine({required String msg, required MineToastStatus status}) {
     final overlay = _toastNavigatorKey?.currentState?.overlay;
     if (overlay != null) {
       _showMineOverlay(overlay: overlay, msg: msg, status: status);
@@ -95,10 +92,8 @@ abstract final class FushiToast {
     _insertToastEntry(
       overlay: overlay,
       durationMs: status == MineToastStatus.pending ? 4000 : 2400,
-      builder: (BuildContext context) => _SeverityToastWidget(
-        msg: msg,
-        palette: mineToastPalette(status),
-      ),
+      builder: (BuildContext context) =>
+          _SeverityToastWidget(msg: msg, palette: mineToastPalette(status)),
     );
   }
 
@@ -297,8 +292,10 @@ class _SeverityToastWidgetState extends State<_SeverityToastWidget>
               color: Colors.transparent,
               child: Container(
                 constraints: const BoxConstraints(maxWidth: 420),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 12,
+                ),
                 decoration: BoxDecoration(
                   color: palette.background,
                   borderRadius: tokens.radii.controlRadius,

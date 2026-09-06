@@ -50,8 +50,9 @@ const bool kSentenceContextPickerEnabled = false;
 /// 这个 recognizer 只为触发原生选区，并不需要跟系统长按菜单对齐 500ms；缩短 deadline
 /// 让原生选词更跟手。250ms 明显高于点按（tap 立即），不会把单击查词误判成长按，又比
 /// 500ms 快一倍——与弹窗其它可调交互（滚轮 250~450ms）同量级。
-const Duration kPopupNativeSelectLongPressDuration =
-    Duration(milliseconds: 250);
+const Duration kPopupNativeSelectLongPressDuration = Duration(
+  milliseconds: 250,
+);
 
 /// TODO-270 D：制卡（mineEntry）回传给弹窗 JS 的结构化结果。
 ///
@@ -86,9 +87,9 @@ class MinePopupResult {
   /// `MinePopupResult(duplicate: outcome.result == MineResult.duplicate)`，
   /// 漏一处就是漏一个用户可见的表面——用户实报的正是被漏掉的视频页。
   MinePopupResult.failed(MineOutcome outcome)
-      : ankiConnect = false,
-        noteId = null,
-        duplicate = outcome.result == MineResult.duplicate;
+    : ankiConnect = false,
+      noteId = null,
+      duplicate = outcome.result == MineResult.duplicate;
 
   /// 旧 `isAnkiConnect` 语义：true 表示制卡后可同步刷新 ✓ 状态。
   final bool ankiConnect;
@@ -110,12 +111,12 @@ class MinePopupResult {
 
   /// 序列化成 JS 可读的 Map（经 inappwebview callHandler 回传）。
   Map<String, Object?> toJson() => <String, Object?>{
-        'ankiConnect': ankiConnect,
-        'noteId': noteId,
-        // 只在为真时带上：popup.js 的 `reply.duplicate === true` 对缺字段与 false
-        // 同解，省一个恒 false 的字段；守卫 popup_mine_failure_hint_test 逐字钉这行。
-        if (duplicate) 'duplicate': true,
-      };
+    'ankiConnect': ankiConnect,
+    'noteId': noteId,
+    // 只在为真时带上：popup.js 的 `reply.duplicate === true` 对缺字段与 false
+    // 同解，省一个恒 false 的字段；守卫 popup_mine_failure_hint_test 逐字钉这行。
+    if (duplicate) 'duplicate': true,
+  };
 }
 
 /// TODO-896 症状②：Windows 桌面右键 Flutter 上下文菜单的动作枚举（替代被禁用的
@@ -228,20 +229,23 @@ class DictionaryPopupWebView extends ConsumerStatefulWidget {
   final void Function(String query, Rect localRect)? onLinkClick;
   final VoidCallback? onTapOutside;
   final Future<MinePopupResult> Function(Map<String, String> fields)?
-      onMineEntry;
+  onMineEntry;
 
   /// TODO-270 D：覆盖「最新制的那张卡」。[noteId] 是要覆盖的卡片 id，[fields] 是新
   /// 内容。返回 [MinePopupResult]（成功时带回同一 [noteId]，保持 ✓ 第三态）。
   final Future<MinePopupResult> Function(
-      int noteId, Map<String, String> fields)? onUpdateEntry;
+    int noteId,
+    Map<String, String> fields,
+  )?
+  onUpdateEntry;
   final Future<bool> Function(String expression, String reading)?
-      onDuplicateCheck;
+  onDuplicateCheck;
 
   /// TODO-614：覆写范围=「全部」时，按与查重同一条件反查一张可覆写的已存在 note id
   /// （多张取最近一张），供 popup.js 把更早的卡也标成「最新可改」✓↩ 态。范围为默认
   /// latest 或后端拿不到 id 时返回 `null` → 弹窗维持旧两态行为（Never break userspace）。
   final Future<int?> Function(String expression, String reading)?
-      onOverwriteTargetNoteId;
+  onOverwriteTargetNoteId;
 
   /// TODO-1007/1008：点 ✓（卡已存在）时弹宿主操作选择（覆写/新增重复卡/查看·在 Anki
   /// 中打开），命中多张让用户选哪张。[fields] 是当前词条的制卡 payload（与 onMineEntry
@@ -249,7 +253,7 @@ class DictionaryPopupWebView extends ConsumerStatefulWidget {
   /// 的 [MinePopupResult]（驱动 popup.js 刷新 ✓/+ 与第三态）。null 时 popup 回退到旧的
   /// 「重验 + 静默」两态行为（Never break userspace）。
   final Future<MinePopupResult> Function(Map<String, String> fields)?
-      onMinedCardAction;
+  onMinedCardAction;
 
   /// TODO-1360 / BUG-2051：已制卡的词旁 ↗「在 Anki 中打开卡片」按钮回调。宿主把 Anki
   /// 浏览器过滤到「Anki 认为 [expression] 已有的卡」（判据与画 ✓ 的查重同源，见
@@ -259,14 +263,14 @@ class DictionaryPopupWebView extends ConsumerStatefulWidget {
   /// 与 [onMinedCardAction]（点 ✓ 弹覆写·新增·查看操作单）解耦：本回调不改卡片。
   /// null 时 popup 端点击是 no-op（按钮仅在已制卡时显示）。
   final Future<AnkiOpenWordOutcome> Function(String expression, String reading)?
-      onOpenInAnki;
+  onOpenInAnki;
 
   /// 切换收藏：返回切换后的新状态（true=已收藏）。供弹窗「☆/★」按钮回调。
   final Future<bool> Function(Map<String, String> fields)? onFavoriteEntry;
 
   /// 查询某词条当前是否已收藏，用于按钮初始 ☆/★ 状态。
   final Future<bool> Function(String expression, String reading)?
-      onFavoriteCheck;
+  onFavoriteCheck;
 
   /// TODO-270 F/G「查词窗口多句合一制卡」(乙方案)：把当前正查的这一句追加进会话级
   /// 制卡草稿缓冲。popup 点「+句」按钮经 `appendSentence` JS 处理器触发本回调；宿主
@@ -281,7 +285,7 @@ class DictionaryPopupWebView extends ConsumerStatefulWidget {
   /// 返回上下文句总数（上 N + 下 N），供 popup 更新角标。非空才在 popup 渲染上下文
   /// 选择器（与 [onAppendSentence] 同生命周期；reader/视频启用）。
   final Future<int> Function(int prevCount, int nextCount)?
-      onSetSentenceContext;
+  onSetSentenceContext;
 
   /// TODO-382「+句」可撤销：popup 点「清空已加句子」经 `clearSentenceDraft` JS
   /// 处理器触发本回调，宿主清空草稿并回传清空后句数（恒 0），popup 据此把所有「+句」
@@ -301,7 +305,7 @@ class DictionaryPopupWebView extends ConsumerStatefulWidget {
   /// 制卡时用 [DictionaryPopupWebViewState.mineEntryByIndex] 精确回点），[matched] 是查到
   /// 的词表现形（对话框里在当前句高亮）。非空才在 popup 渲染「调整上下文」按钮。
   final Future<void> Function(int entryIndex, String matched)?
-      onOpenSentenceContextModal;
+  onOpenSentenceContextModal;
   final VoidCallback? onScrolledToBottom;
   final VoidCallback? onTopPullReleased;
 
@@ -317,7 +321,7 @@ class DictionaryPopupWebView extends ConsumerStatefulWidget {
   /// zoom 变）或 Flutter 平台视图的布局高度，本就是 host CSS px。消费方
   /// （[resolveAutoFitPopupHeight]）直接作差，不得再乘任何缩放。
   final void Function(double contentHeight, double viewportHeight)?
-      onContentMetrics;
+  onContentMetrics;
 
   /// TODO-058 fail-safe：主框架加载失败（`onReceivedError`）时触发。挂起到
   /// `popupRendered` 才显示的冷层若加载失败，`popupRendered` 永不会发；宿主据此
@@ -368,12 +372,14 @@ class DictionaryPopupWebViewState
   double? _layoutHeight;
 
   void _capturePopupLayout(BoxConstraints constraints) {
-    final double? width = constraints.hasBoundedWidth &&
+    final double? width =
+        constraints.hasBoundedWidth &&
             constraints.maxWidth.isFinite &&
             constraints.maxWidth > 0
         ? constraints.maxWidth
         : null;
-    final double? height = constraints.hasBoundedHeight &&
+    final double? height =
+        constraints.hasBoundedHeight &&
             constraints.maxHeight.isFinite &&
             constraints.maxHeight > 0
         ? constraints.maxHeight
@@ -398,7 +404,9 @@ class DictionaryPopupWebViewState
     if (controller == null || width == null || width <= 0) return;
     final String heightValue = height == null ? '0' : '$height';
     try {
-      await controller.evaluateJavascript(source: '''(function(){
+      await controller.evaluateJavascript(
+        source:
+            '''(function(){
   var w = $width, h = $heightValue;
   document.documentElement.style.setProperty('--fushi-popup-viewport-width', w + 'px');
   if (h > 0) {
@@ -421,15 +429,19 @@ class DictionaryPopupWebViewState
     }
   };
   window.__fushiApplyPopupViewport();
-})();''');
+})();''',
+      );
     } catch (e, stack) {
       // macOS WKWebView may tear down its platform controller after this
       // asynchronous call has started (for example when a lookup is cleared).
       // That is a normal lifecycle completion, not an app error. A live
       // controller failure is logged, but must not skip the first result push.
       if (!mounted || !identical(_controller, controller)) return;
-      ErrorLogService.instance
-          .log('DictPopupWebview.applyPopupViewportSize', e, stack);
+      ErrorLogService.instance.log(
+        'DictPopupWebview.applyPopupViewportSize',
+        e,
+        stack,
+      );
     }
   }
 
@@ -440,8 +452,11 @@ class DictionaryPopupWebViewState
       await _applyPopupViewportSize();
     } catch (e, stack) {
       if (mounted) {
-        ErrorLogService.instance
-            .log('DictPopupWebview.loadBootstrap', e, stack);
+        ErrorLogService.instance.log(
+          'DictPopupWebview.loadBootstrap',
+          e,
+          stack,
+        );
       }
     }
     if (!mounted) return;
@@ -601,10 +616,13 @@ class DictionaryPopupWebViewState
   /// TODO-1353: 单格 Ctrl+滚轮的词典字号步进（纯函数，供守卫）。[zoomIn] 为 true（滚轮
   /// 上滚 / deltaY<0）放大一档，否则缩小一档，结果经 [clampPopupZoomFontSize] 夹紧。
   /// 与 [_zoomWheelJs] 里 `fs += (deltaY<0?1:-1)` 的语义镜像。
-  static double steppedPopupZoomFontSize(double current,
-      {required bool zoomIn}) {
-    final double base =
-        (current.isFinite && current > 0) ? current : _popupFontBaseline;
+  static double steppedPopupZoomFontSize(
+    double current, {
+    required bool zoomIn,
+  }) {
+    final double base = (current.isFinite && current > 0)
+        ? current
+        : _popupFontBaseline;
     return clampPopupZoomFontSize(base + (zoomIn ? 1.0 : -1.0));
   }
 
@@ -680,7 +698,8 @@ class DictionaryPopupWebViewState
   /// `dictionaryFontSize`。WebView 未就绪（controller 为空 / 监听未装）时安全 no-op。
   void zoomFontStep({required bool zoomIn}) {
     _controller?.evaluateJavascript(
-      source: 'window.__fushiPopupZoomStep'
+      source:
+          'window.__fushiPopupZoomStep'
           ' && window.__fushiPopupZoomStep(${zoomIn ? 1 : -1});',
     );
   }
@@ -785,7 +804,8 @@ JSON.stringify((function(){
     if (controller == null) return null;
     try {
       final Object? raw = await controller.evaluateJavascript(
-        source: 'window.fushiSelection?.highlightSelection ? '
+        source:
+            'window.fushiSelection?.highlightSelection ? '
             '${ReaderSelectionScripts.highlightInvocation(charCount)} : null',
       );
       return ReaderSelectionScripts.highlightRectFromResult(raw);
@@ -793,8 +813,11 @@ JSON.stringify((function(){
       // BUG-005 同根因（TODO-678）：WebView 半销毁时其 per-instance method channel
       // 已摘除，evaluateJavascript 抛 MissingPluginException。`controller != null`
       // 防不了通道已废 —— 必须 try/catch；重锚是锦上添花，绝不冒泡打断查词。
-      ErrorLogService.instance
-          .log('DictPopupWebview.highlightSelection', e, stack);
+      ErrorLogService.instance.log(
+        'DictPopupWebview.highlightSelection',
+        e,
+        stack,
+      );
       return null;
     }
   }
@@ -838,7 +861,8 @@ JSON.stringify((function(){
   /// 「复制/搜索」都靠它拿选区。空选区（或 controller 未就绪）返回空串，调用方据此早退。
   Future<String> _selectedTextAcrossFrames() async {
     final Object? raw = await _controller?.evaluateJavascript(
-        source: _selectedTextAcrossFramesJs);
+      source: _selectedTextAcrossFramesJs,
+    );
     if (raw == null) return '';
     final String trimmed = raw.toString().trim();
     if (trimmed.isEmpty || trimmed == 'null') return '';
@@ -854,7 +878,8 @@ JSON.stringify((function(){
 
   Future<void> _clearSelectedTextAcrossFrames() async {
     try {
-      await _controller?.evaluateJavascript(source: r'''
+      await _controller?.evaluateJavascript(
+        source: r'''
         (() => {
           const clear = (win) => {
             try {
@@ -866,45 +891,55 @@ JSON.stringify((function(){
           };
           clear(window);
         })()
-      ''');
+      ''',
+      );
     } catch (e, stack) {
-      ErrorLogService.instance
-          .log('DictionaryPopup.clearSelectedTextAcrossFrames', e, stack);
+      ErrorLogService.instance.log(
+        'DictionaryPopup.clearSelectedTextAcrossFrames',
+        e,
+        stack,
+      );
     }
   }
 
   Future<String> caretEnter() async {
     final Object? raw = await _controller?.evaluateJavascript(
-        source: ReaderCaretScripts.enterInvocation());
+      source: ReaderCaretScripts.enterInvocation(),
+    );
     return ReaderCaretScripts.moveStatus(raw);
   }
 
   void caretExit() {
     _controller?.evaluateJavascript(
-        source: ReaderCaretScripts.exitInvocation());
+      source: ReaderCaretScripts.exitInvocation(),
+    );
   }
 
   /// Hide the caret ring without dropping it (user switched to the mouse).
   void caretSuspend() {
     _controller?.evaluateJavascript(
-        source: ReaderCaretScripts.suspendInvocation());
+      source: ReaderCaretScripts.suspendInvocation(),
+    );
   }
 
   /// Re-show the caret ring (user switched back to keyboard/gamepad).
   void caretResume() {
     _controller?.evaluateJavascript(
-        source: ReaderCaretScripts.resumeInvocation());
+      source: ReaderCaretScripts.resumeInvocation(),
+    );
   }
 
   Future<String> caretMove(String dir) async {
     final Object? raw = await _controller?.evaluateJavascript(
-        source: ReaderCaretScripts.moveInvocation(dir));
+      source: ReaderCaretScripts.moveInvocation(dir),
+    );
     return ReaderCaretScripts.moveStatus(raw);
   }
 
   Future<String> caretReanchor(String edge) async {
     final Object? raw = await _controller?.evaluateJavascript(
-        source: ReaderCaretScripts.reanchorInvocation(edge));
+      source: ReaderCaretScripts.reanchorInvocation(edge),
+    );
     return ReaderCaretScripts.moveStatus(raw);
   }
 
@@ -913,7 +948,8 @@ JSON.stringify((function(){
   /// the status is only ever 'moved'/'blocked'.
   Future<String> caretScrollPage(bool forward) async {
     final Object? raw = await _controller?.evaluateJavascript(
-        source: ReaderCaretScripts.scrollPageInvocation(forward));
+      source: ReaderCaretScripts.scrollPageInvocation(forward),
+    );
     return ReaderCaretScripts.moveStatus(raw);
   }
 
@@ -924,7 +960,8 @@ JSON.stringify((function(){
   /// already at the last/first section).
   Future<String> caretJumpDict(bool forward) async {
     final Object? raw = await _controller?.evaluateJavascript(
-        source: ReaderCaretScripts.jumpDictInvocation(forward));
+      source: ReaderCaretScripts.jumpDictInvocation(forward),
+    );
     return ReaderCaretScripts.moveStatus(raw);
   }
 
@@ -937,7 +974,8 @@ JSON.stringify((function(){
   /// entry indicator + viewport, never the caret ring.
   Future<String> focusEntryMove(bool forward) async {
     final Object? raw = await _controller?.evaluateJavascript(
-      source: 'window.fushiFocusDictionaryEntryMove'
+      source:
+          'window.fushiFocusDictionaryEntryMove'
           " ? window.fushiFocusDictionaryEntryMove('${forward ? 'next' : 'prev'}')"
           " : 'blocked'",
     );
@@ -946,7 +984,8 @@ JSON.stringify((function(){
 
   Future<void> caretLookup() async {
     await _controller?.evaluateJavascript(
-        source: ReaderCaretScripts.lookupInvocation());
+      source: ReaderCaretScripts.lookupInvocation(),
+    );
   }
 
   /// A / Enter "context click" at the cursor: follow a cross-reference link,
@@ -954,17 +993,20 @@ JSON.stringify((function(){
   /// [ReaderCaretScripts.activate].
   Future<void> caretActivate() async {
     await _controller?.evaluateJavascript(
-        source: ReaderCaretScripts.activateInvocation());
+      source: ReaderCaretScripts.activateInvocation(),
+    );
   }
 
   Future<void> caretLongPress() async {
     await _controller?.evaluateJavascript(
-        source: ReaderCaretScripts.longPressInvocation());
+      source: ReaderCaretScripts.longPressInvocation(),
+    );
   }
 
   Future<void> mineFirstVisibleEntry() async {
     await _controller?.evaluateJavascript(
-      source: 'window.fushiPopupMineFirstEntry'
+      source:
+          'window.fushiPopupMineFirstEntry'
           ' ? window.fushiPopupMineFirstEntry() : false',
     );
   }
@@ -973,7 +1015,8 @@ JSON.stringify((function(){
   /// 复用其全部音源解析/回退逻辑（与制卡同一「点按钮不另起桥」纪律）。
   Future<void> playFirstVisibleAudio() async {
     await _controller?.evaluateJavascript(
-      source: 'window.fushiPopupPlayFirstAudio'
+      source:
+          'window.fushiPopupPlayFirstAudio'
           ' ? window.fushiPopupPlayFirstAudio() : false',
     );
   }
@@ -981,7 +1024,8 @@ JSON.stringify((function(){
   /// 手柄右摇杆：连续滚动弹窗内容 [dy] CSS 像素（正=向下）。
   Future<void> scrollContentBy(double dy) async {
     await _controller?.evaluateJavascript(
-      source: 'window.fushiPopupScrollBy'
+      source:
+          'window.fushiPopupScrollBy'
           ' ? window.fushiPopupScrollBy(${dy.round()}) : false',
     );
   }
@@ -991,14 +1035,16 @@ JSON.stringify((function(){
   /// 「制卡指定词条」直接入口——mineEntry 契约要求 JS 先构造 payload）。
   Future<void> mineEntryByIndex(int idx) async {
     await _controller?.evaluateJavascript(
-      source: 'window.fushiPopupMineEntryByIndex'
+      source:
+          'window.fushiPopupMineEntryByIndex'
           ' ? window.fushiPopupMineEntryByIndex($idx) : false',
     );
   }
 
   Future<void> caretRefresh() async {
     await _controller?.evaluateJavascript(
-        source: ReaderCaretScripts.refreshInvocation());
+      source: ReaderCaretScripts.refreshInvocation(),
+    );
   }
 
   /// Resolves the word audio into a URL popup.js can play directly with an HTML5
@@ -1037,7 +1083,9 @@ JSON.stringify((function(){
       // BUG-1204：与 app 外 host 同一契约——回报第三个参数 = 失败原因（popup.js 存在
       // window.__fushiWordAudioLastError 上），让 app 内首播失败也能定位到 DOMException
       // 名字，而不是只看到一个 false。
-      await controller.evaluateJavascript(source: '''
+      await controller.evaluateJavascript(
+        source:
+            '''
 (function () {
   var reason = function () {
     try { return String(window.__fushiWordAudioLastError || ''); }
@@ -1057,7 +1105,8 @@ JSON.stringify((function(){
               function (e) { report(false, (e && e.name) || 'PlayThrew'); });
   } catch (e) { report(false, (e && e.name) || 'EvalThrew'); }
 })();
-''');
+''',
+      );
       return await completer.future.timeout(_kWordAudioPlayReportTimeout);
     } on TimeoutException {
       return false;
@@ -1107,8 +1156,9 @@ JSON.stringify((function(){
   /// onLoadStop 旁的种子调用补发当前值。
   void _setHasChildPopupJs(bool hasChild) {
     if (_controller == null || !_ready) return;
-    _controller!
-        .evaluateJavascript(source: 'window.__hasChildPopup = $hasChild;');
+    _controller!.evaluateJavascript(
+      source: 'window.__hasChildPopup = $hasChild;',
+    );
   }
 
   @override
@@ -1143,7 +1193,8 @@ JSON.stringify((function(){
       options: PopupSettingsOptions(
         // TODO-1065：app 外 / 悬浮字幕独立查词窗令 <html> 透明消除泛白（见字段 doc）。
         mobileExternal: widget.transparentDocumentBackground,
-        sentenceDraftEnabled: kSentenceContextPickerEnabled &&
+        sentenceDraftEnabled:
+            kSentenceContextPickerEnabled &&
             widget.onSetSentenceContext != null,
       ),
     );
@@ -1166,7 +1217,8 @@ JSON.stringify((function(){
     _lastPushedResult = widget.result;
 
     final int renderToken = ++_renderToken;
-    final bool isLoadMore = _lastSearchTerm == widget.result.searchTerm &&
+    final bool isLoadMore =
+        _lastSearchTerm == widget.result.searchTerm &&
         widget.result.entries.length > _lastEntryCount;
     _lastSearchTerm = widget.result.searchTerm;
     _lastEntryCount = widget.result.entries.length;
@@ -1197,15 +1249,18 @@ JSON.stringify((function(){
     if (staticChanged) {
       _lastSentStaticRevision = staticSettings.revision;
     }
-    final String staticSettingsJs =
-        staticChanged ? staticSettings.combined : '';
+    final String staticSettingsJs = staticChanged
+        ? staticSettings.combined
+        : '';
     // BUG-717 ③：in-app 固定块（__fushiResetPopupScroll 钩子 + 句子上下文 i18n +
     // sentenceContextPreviewEnabled）并入静态段的失效节奏：随静态段版本重发
     // （语言切换 → builder memo 键含 locale → 新 revision → 必然重发），另跟踪
     // preview 回调有无（宿主换回调时也要刷新）。原来每次查词都重发这 1-2KB。
     final bool sentencePreviewEnabled = widget.onSentenceContextPreview != null;
-    final ({int revision, bool preview}) extrasKey =
-        (revision: staticSettings.revision, preview: sentencePreviewEnabled);
+    final ({int revision, bool preview}) extrasKey = (
+      revision: staticSettings.revision,
+      preview: sentencePreviewEnabled,
+    );
     final bool extrasChanged = extrasKey != _lastSentInAppExtrasKey;
     if (extrasChanged) {
       _lastSentInAppExtrasKey = extrasKey;
@@ -1237,7 +1292,9 @@ JSON.stringify((function(){
           window.resetSelectedDictionaries();
           window.renderPopup();
         ''';
-    _controller!.evaluateJavascript(source: '''
+    _controller!.evaluateJavascript(
+      source:
+          '''
       $staticSettingsJs
       $inAppExtrasJs
       $entriesJs
@@ -1245,7 +1302,8 @@ JSON.stringify((function(){
       window.__fushiRenderToken = $renderToken;
       $beforeRenderJs
       ${needsScrollCheck ? _scrollCheckJs : ""}
-    ''');
+    ''',
+    );
   }
 
   /// BUG-717 ③：in-app 专属的固定注入块。内容与拆分前逐字节一致，只是不再每次
@@ -1357,10 +1415,15 @@ JSON.stringify((function(){
         popupJs: popupJs,
       );
     } catch (e, stack) {
-      debugPrint('[PopupWebView] Popup asset inlining failed, '
-          'falling back to file:// URL loading: $e');
-      ErrorLogService.instance
-          .log('PopupWebView._ensureInlinePopupAssetsLoaded', e, stack);
+      debugPrint(
+        '[PopupWebView] Popup asset inlining failed, '
+        'falling back to file:// URL loading: $e',
+      );
+      ErrorLogService.instance.log(
+        'PopupWebView._ensureInlinePopupAssetsLoaded',
+        e,
+        stack,
+      );
     }
   }
 
@@ -1396,8 +1459,11 @@ JSON.stringify((function(){
         popupJs: popupJs,
       );
     } catch (e, stack) {
-      ErrorLogService.instance
-          .log('PopupWebView._preloadInlinePopupAssets', e, stack);
+      ErrorLogService.instance.log(
+        'PopupWebView._preloadInlinePopupAssets',
+        e,
+        stack,
+      );
     } finally {
       // 允许失败后下次调用重试（与同步路径的「失败不闩死」语义一致）。
       _inlineAssetsPreload = null;
@@ -1435,7 +1501,8 @@ JSON.stringify((function(){
     final String cacheKey = '$themeAttr|$bgHex';
     final String? cached = _inlineHtmlCache;
     if (cached != null && cacheKey == _inlineHtmlCacheKey) return cached;
-    final String html = '<!DOCTYPE html>'
+    final String html =
+        '<!DOCTYPE html>'
         '<html data-theme="$themeAttr" style="--background-color:$bgHex">'
         '<head>'
         '<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">'
@@ -1523,8 +1590,7 @@ JSON.stringify((function(){
   static String debugBuildInlinePopupHtml({
     required String themeAttr,
     required String bgHex,
-  }) =>
-      _buildInlinePopupHtml(themeAttr: themeAttr, bgHex: bgHex);
+  }) => _buildInlinePopupHtml(themeAttr: themeAttr, bgHex: bgHex);
 
   static String _popupAssetFilePath(String name) =>
       Uri.parse(webViewAssetUrl('assets/popup/$name')).toFilePath();
@@ -1563,8 +1629,9 @@ JSON.stringify((function(){
     // 初始 HTML 底色与主题注入器同源（popupCardSurface），
     // 避免两路底色不一致造成的一帧闪变。
     final Color bgColor = popupCardSurface(
-        scheme: Theme.of(context).colorScheme,
-        override: appModel.overrideDictionaryColor);
+      scheme: Theme.of(context).colorScheme,
+      override: appModel.overrideDictionaryColor,
+    );
     final bool isDark = Theme.of(context).brightness == Brightness.dark;
     final String bgHex = _colorToHex(bgColor);
     final String themeAttr = isDark ? 'dark' : 'light';
@@ -1589,9 +1656,7 @@ JSON.stringify((function(){
       initialData: popupInitialData,
       initialUrlRequest: popupInitialData != null
           ? null
-          : URLRequest(
-              url: WebUri(webViewAssetUrl('assets/popup/popup.html')),
-            ),
+          : URLRequest(url: WebUri(webViewAssetUrl('assets/popup/popup.html'))),
       contextMenu: ContextMenu(
         settings: ContextMenuSettings(
           // TODO-896 症状②：Windows 上禁掉 WebView2 的原生上下文菜单——它是独立的
@@ -1644,8 +1709,8 @@ JSON.stringify((function(){
               action: () async {
                 final String text = await _selectedTextAcrossFrames();
                 if (text.isEmpty) return;
-                final bool shared =
-                    await SelectionExternalActions.instance.shareText(text);
+                final bool shared = await SelectionExternalActions.instance
+                    .shareText(text);
                 if (!shared) {
                   FushiToast.show(
                     msg: t.selection_share_failed,
@@ -1662,8 +1727,8 @@ JSON.stringify((function(){
               action: () async {
                 final String text = await _selectedTextAcrossFrames();
                 if (text.isEmpty) return;
-                final bool opened =
-                    await SelectionExternalActions.instance.searchWeb(text);
+                final bool opened = await SelectionExternalActions.instance
+                    .searchWeb(text);
                 if (!opened) {
                   FushiToast.show(
                     msg: t.selection_web_search_unavailable,
@@ -1684,12 +1749,17 @@ JSON.stringify((function(){
       // 的「顶栏/留白横拖关」保留，仅正文区让位给框选。边界由「谁渲染谁吃手势」自然
       // 划定，无坐标特判。
       gestureRecognizers: <Factory<OneSequenceGestureRecognizer>>{
-        Factory<LongPressGestureRecognizer>(() => LongPressGestureRecognizer(
-            duration: kPopupNativeSelectLongPressDuration)),
+        Factory<LongPressGestureRecognizer>(
+          () => LongPressGestureRecognizer(
+            duration: kPopupNativeSelectLongPressDuration,
+          ),
+        ),
         Factory<VerticalDragGestureRecognizer>(
-            () => VerticalDragGestureRecognizer()),
+          () => VerticalDragGestureRecognizer(),
+        ),
         Factory<HorizontalDragGestureRecognizer>(
-            () => HorizontalDragGestureRecognizer()),
+          () => HorizontalDragGestureRecognizer(),
+        ),
       },
       initialSettings: InAppWebViewSettings(
         transparentBackground: true,
@@ -1814,14 +1884,15 @@ JSON.stringify((function(){
               null,
               ErrorLogService.instance,
               () {
-                final int? token =
-                    args.isNotEmpty ? (args[0] as num?)?.toInt() : null;
+                final int? token = args.isNotEmpty
+                    ? (args[0] as num?)?.toInt()
+                    : null;
                 final bool ok = args.length > 1 && args[1] == true;
                 // BUG-1204：失败原因（args[2]）记进诊断日志——首播失败到底是 autoplay
                 // 拦截还是解码失败，决定了修法，不能再只留一个 false。成功不记。
                 if (!ok) {
-                  final String reason =
-                      (args.length > 2 ? '${args[2]}' : '').trim();
+                  final String reason = (args.length > 2 ? '${args[2]}' : '')
+                      .trim();
                   ErrorLogService.instance.logDiagnostic(
                     'DictPopupWebview.wordAudioPlayed',
                     'WebView 播放失败 token=$token '
@@ -1829,8 +1900,8 @@ JSON.stringify((function(){
                   );
                 }
                 if (token != null) {
-                  final Completer<bool>? pending =
-                      _pendingWordAudioPlays.remove(token);
+                  final Completer<bool>? pending = _pendingWordAudioPlays
+                      .remove(token);
                   if (pending != null && !pending.isCompleted) {
                     pending.complete(ok);
                   }
@@ -1928,8 +1999,8 @@ JSON.stringify((function(){
                 if (token != null && token != _renderToken) {
                   return null;
                 }
-                final double? contentHeight = (args.isNotEmpty ? args[0] : null)
-                        is num
+                final double? contentHeight =
+                    (args.isNotEmpty ? args[0] : null) is num
                     ? (args[0] as num).toDouble()
                     : double.tryParse(
                         (args.isNotEmpty ? args[0] : null)?.toString() ?? '',
@@ -1941,7 +2012,8 @@ JSON.stringify((function(){
                 final RenderObject? renderObject = context.findRenderObject();
                 final double? viewportHeight = resolvePopupViewportHeight(
                   reportedHeight: reportedViewportHeight,
-                  layoutHeight: renderObject is RenderBox &&
+                  layoutHeight:
+                      renderObject is RenderBox &&
                           renderObject.attached &&
                           renderObject.hasSize
                       ? renderObject.size.height
@@ -1981,22 +2053,28 @@ JSON.stringify((function(){
                   args[0] is Map &&
                   widget.onMineEntry != null) {
                 final fields = Map<String, String>.from(
-                  (args[0] as Map)
-                      .map((k, v) => MapEntry(k.toString(), v.toString())),
+                  (args[0] as Map).map(
+                    (k, v) => MapEntry(k.toString(), v.toString()),
+                  ),
                 );
                 // 落盘词典媒体（gaiji）字节供 repo 嵌进卡片；必须在 onMineEntry
                 // （->repo.mineEntry 读缓存）之前完成。空/无媒体时内部直接返回。
                 await writeDictionaryMediaCache(
-                    fields['dictionaryMedia'] ?? '');
-                final MinePopupResult result =
-                    await widget.onMineEntry!(fields);
+                  fields['dictionaryMedia'] ?? '',
+                );
+                final MinePopupResult result = await widget.onMineEntry!(
+                  fields,
+                );
                 // TODO-270 D：回传结构化结果（ankiConnect + noteId）给 popup.js，
                 // 让它把刚制的这张标记为「最新可改」第三态。
                 return result.toJson();
               }
             } catch (e, stack) {
-              ErrorLogService.instance
-                  .log('DictPopupWebview.mineEntry', e, stack);
+              ErrorLogService.instance.log(
+                'DictPopupWebview.mineEntry',
+                e,
+                stack,
+              );
             }
             return const MinePopupResult().toJson();
           },
@@ -2015,18 +2093,24 @@ JSON.stringify((function(){
                   args[0] is Map &&
                   widget.onMinedCardAction != null) {
                 final fields = Map<String, String>.from(
-                  (args[0] as Map)
-                      .map((k, v) => MapEntry(k.toString(), v.toString())),
+                  (args[0] as Map).map(
+                    (k, v) => MapEntry(k.toString(), v.toString()),
+                  ),
                 );
                 await writeDictionaryMediaCache(
-                    fields['dictionaryMedia'] ?? '');
-                final MinePopupResult result =
-                    await widget.onMinedCardAction!(fields);
+                  fields['dictionaryMedia'] ?? '',
+                );
+                final MinePopupResult result = await widget.onMinedCardAction!(
+                  fields,
+                );
                 return result.toJson();
               }
             } catch (e, stack) {
-              ErrorLogService.instance
-                  .log('DictPopupWebview.minedCardAction', e, stack);
+              ErrorLogService.instance.log(
+                'DictPopupWebview.minedCardAction',
+                e,
+                stack,
+              );
             }
             return const MinePopupResult().toJson();
           },
@@ -2048,13 +2132,18 @@ JSON.stringify((function(){
                 final data = args[0] as Map;
                 final expression = (data['expression'] ?? '').toString();
                 final reading = (data['reading'] ?? '').toString();
-                final AnkiOpenWordOutcome outcome =
-                    await widget.onOpenInAnki!(expression, reading);
+                final AnkiOpenWordOutcome outcome = await widget.onOpenInAnki!(
+                  expression,
+                  reading,
+                );
                 return outcome.name;
               }
             } catch (e, stack) {
-              ErrorLogService.instance
-                  .log('DictPopupWebview.openInAnki', e, stack);
+              ErrorLogService.instance.log(
+                'DictPopupWebview.openInAnki',
+                e,
+                stack,
+              );
             }
             return AnkiOpenWordOutcome.failed.name;
           },
@@ -2085,14 +2174,20 @@ JSON.stringify((function(){
                 );
                 // 与制卡同链路：先落盘词典媒体字节，再覆盖卡片（repo 从缓存读外字）。
                 await writeDictionaryMediaCache(
-                    fields['dictionaryMedia'] ?? '');
-                final MinePopupResult result =
-                    await widget.onUpdateEntry!(noteId, fields);
+                  fields['dictionaryMedia'] ?? '',
+                );
+                final MinePopupResult result = await widget.onUpdateEntry!(
+                  noteId,
+                  fields,
+                );
                 return result.toJson();
               }
             } catch (e, stack) {
-              ErrorLogService.instance
-                  .log('DictPopupWebview.updateEntry', e, stack);
+              ErrorLogService.instance.log(
+                'DictPopupWebview.updateEntry',
+                e,
+                stack,
+              );
             }
             return const MinePopupResult().toJson();
           },
@@ -2160,8 +2255,9 @@ JSON.stringify((function(){
                     args[0] is Map &&
                     widget.onFavoriteEntry != null) {
                   final fields = Map<String, String>.from(
-                    (args[0] as Map)
-                        .map((k, v) => MapEntry(k.toString(), v.toString())),
+                    (args[0] as Map).map(
+                      (k, v) => MapEntry(k.toString(), v.toString()),
+                    ),
                   );
                   if ((fields['expression'] ?? '').isEmpty) return false;
                   return widget.onFavoriteEntry!(fields);
@@ -2297,8 +2393,9 @@ JSON.stringify((function(){
                 // BUG-1326：popup.js 现在传对象；老的扩展 vendor 副本（用户装在浏览器
                 // 里、与 app 不同步更新）还可能传 JSON 字符串。两种形态都解析，否则
                 // entryIndex 静默退化成 0 → 确认制卡永远点第一个词条。
-                final Map<dynamic, dynamic>? data =
-                    decodeBridgeMap(args.isEmpty ? null : args[0]);
+                final Map<dynamic, dynamic>? data = decodeBridgeMap(
+                  args.isEmpty ? null : args[0],
+                );
                 if (data != null) {
                   entryIndex = (data['entryIndex'] as num?)?.toInt() ?? 0;
                   matched = data['matched']?.toString() ?? '';
@@ -2331,11 +2428,13 @@ JSON.stringify((function(){
                         (r['height'] as num?)?.toDouble() ?? 1,
                       );
                     }
-                    glog('inapp-js/textSelected: raw=${args.length > 1 ? args[1] : null} '
-                        '-> local=L${localRect.left.toStringAsFixed(1)} '
-                        'T${localRect.top.toStringAsFixed(1)} '
-                        'W${localRect.width.toStringAsFixed(1)} '
-                        'H${localRect.height.toStringAsFixed(1)}');
+                    glog(
+                      'inapp-js/textSelected: raw=${args.length > 1 ? args[1] : null} '
+                      '-> local=L${localRect.left.toStringAsFixed(1)} '
+                      'T${localRect.top.toStringAsFixed(1)} '
+                      'W${localRect.width.toStringAsFixed(1)} '
+                      'H${localRect.height.toStringAsFixed(1)}',
+                    );
                     widget.onTextSelected?.call(text, localRect);
                   }
                 }
@@ -2463,8 +2562,10 @@ JSON.stringify((function(){
         // 都不出）。这里通知宿主立即把该层翻可见（revealRendered），加载失败也至少
         // 显示空壳，不卡死。仅主框架失败触发，子资源失败不影响整体可见性。
         if (request.isForMainFrame ?? false) {
-          debugPrint('[PopupWebView] onReceivedError: ${error.description} '
-              'url=${request.url}');
+          debugPrint(
+            '[PopupWebView] onReceivedError: ${error.description} '
+            'url=${request.url}',
+          );
           widget.onRenderError?.call();
         }
       },
@@ -2486,10 +2587,12 @@ JSON.stringify((function(){
       // 非 null 本身就是救命动作：Java 侧据此 `return true`，不再连坐杀 app。
       onRenderProcessGone:
           (InAppWebViewController _, RenderProcessGoneDetail detail) =>
-              unawaited(_deathGuard.handleDeath(
-        didCrash: detail.didCrash,
-        rendererPriorityAtExit: detail.rendererPriorityAtExit,
-      )),
+              unawaited(
+                _deathGuard.handleDeath(
+                  didCrash: detail.didCrash,
+                  rendererPriorityAtExit: detail.rendererPriorityAtExit,
+                ),
+              ),
     );
 
     // TODO-896 症状②：Windows 上原生 WebView2 菜单已禁（hideDefaultSystemContextMenuItems
@@ -2521,8 +2624,10 @@ JSON.stringify((function(){
         ),
       );
     } else {
-      guardedWebView =
-          KeyedSubtree(key: _deathGuard.rebuildKey, child: webView);
+      guardedWebView = KeyedSubtree(
+        key: _deathGuard.rebuildKey,
+        child: webView,
+      );
     }
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
@@ -2574,7 +2679,9 @@ JSON.stringify((function(){
   /// `getSelectedText`（桌面 fork 未实现 + 只读顶层文档）改为穿透同源 iframe 的
   /// [_selectedTextAcrossFrames]，否则复制/搜索拿到空串永远无效。
   Future<void> _showWindowsContextMenu(
-      BuildContext context, Offset globalPosition) async {
+    BuildContext context,
+    Offset globalPosition,
+  ) async {
     // BUG-1451 根因：选区是**易失状态**，而 [showMenu] 是一个真实 route——打开到用户
     // 点中项之间，Flutter 焦点转移到菜单、弹窗可能被 dismiss / 热槽换页 / WebView2 因
     // 右键落在选区外而清掉 caret。旧实现在 `await showMenu` **之后**才去读选区，读到的
@@ -2582,8 +2689,9 @@ JSON.stringify((function(){
     // 再被 `if (text.isEmpty) return` 静默吞掉 —— 用户看到的就是「菜单弹了、点复制没反应」。
     // 正确的数据流是在**事件源头**取快照：右键按下即发起读取，菜单只是选择动作的 UI。
     final Future<String> selectionAtRightClick = _selectedTextAcrossFrames();
-    final RenderObject? overlayObject =
-        Overlay.of(context).context.findRenderObject();
+    final RenderObject? overlayObject = Overlay.of(
+      context,
+    ).context.findRenderObject();
     if (overlayObject is! RenderBox || !overlayObject.hasSize) return;
     final Offset anchor = overlayObject.globalToLocal(globalPosition);
     final Size overlaySize = overlayObject.size;
@@ -2596,19 +2704,19 @@ JSON.stringify((function(){
     final t = Translations.of(context);
     final _PopupContextMenuAction? action =
         await showMenu<_PopupContextMenuAction>(
-      context: context,
-      position: position,
-      items: <PopupMenuEntry<_PopupContextMenuAction>>[
-        PopupMenuItem<_PopupContextMenuAction>(
-          value: _PopupContextMenuAction.search,
-          child: Text(t.search),
-        ),
-        PopupMenuItem<_PopupContextMenuAction>(
-          value: _PopupContextMenuAction.copy,
-          child: Text(t.copy),
-        ),
-      ],
-    );
+          context: context,
+          position: position,
+          items: <PopupMenuEntry<_PopupContextMenuAction>>[
+            PopupMenuItem<_PopupContextMenuAction>(
+              value: _PopupContextMenuAction.search,
+              child: Text(t.search),
+            ),
+            PopupMenuItem<_PopupContextMenuAction>(
+              value: _PopupContextMenuAction.copy,
+              child: Text(t.copy),
+            ),
+          ],
+        );
     if (action == null) return;
     // BUG-802：桌面 fork 未实现 getSelectedText 且选区在同源子 iframe 内，改用穿透 iframe
     // 的 [_selectedTextAcrossFrames]，否则复制/搜索永远拿到空串直接早退（表现为无效）。
@@ -2678,21 +2786,25 @@ JSON.stringify((function(){
     final Map<String, Set<String>> seenFrequencies = {};
     final Map<String, Set<String>> seenPitches = {};
     final Map<
-        String,
-        List<
-            ({
-              String dictionary,
-              String contentJson,
-              String defTags,
-              String termTags,
-            })>> rawGlossaries = {};
+      String,
+      List<
+        ({
+          String dictionary,
+          String contentJson,
+          String defTags,
+          String termTags,
+        })
+      >
+    >
+    rawGlossaries = {};
 
     for (final entry in entries) {
       // BUG-791：空读音按 Yomitan 约定等价于「读音同表记」。分组前归一，
       // 免得同一个假名词（reading 有的显式给、有的留空）被拆成两张卡。
       // 与 buildPopupJsonFromLookup 的 key 逻辑保持一致。
-      final String effectiveReading =
-          entry.reading.isEmpty ? entry.word : entry.reading;
+      final String effectiveReading = entry.reading.isEmpty
+          ? entry.word
+          : entry.reading;
       final key = '${entry.word}\n$effectiveReading';
       final extraData = _decodeExtra(entry);
       if (!groups.containsKey(key)) {
@@ -2720,8 +2832,9 @@ JSON.stringify((function(){
       // entry.meaning from fushidicts FFI is valid JSON (structured content).
       // Embed raw to skip the jsonDecode + jsonEncode roundtrip.
       final String m = entry.meaning;
-      final String contentJson =
-          (m.isNotEmpty && (m[0] == '[' || m[0] == '{')) ? m : jsonEncode(m);
+      final String contentJson = (m.isNotEmpty && (m[0] == '[' || m[0] == '{'))
+          ? m
+          : jsonEncode(m);
 
       rawGlossaries[key]!.add((
         dictionary: entry.dictionaryName,
@@ -2797,8 +2910,9 @@ JSON.stringify((function(){
     // 这里只解析不再自己拼——回落语义只有那一份。
     final trace = group['deinflectionTrace'] as List<Map<String, String>>;
     if (trace.isEmpty) {
-      trace
-          .addAll(deinflectionTagsToJson(deinflectionTagsFromExtra(extraData)));
+      trace.addAll(
+        deinflectionTagsToJson(deinflectionTagsFromExtra(extraData)),
+      );
     }
 
     _appendUniqueMetadata(
@@ -2827,7 +2941,8 @@ JSON.stringify((function(){
   }
 
   static List<Map<String, dynamic>> _convertFrequencies(
-      Map<String, dynamic>? extraData) {
+    Map<String, dynamic>? extraData,
+  ) {
     if (extraData == null || !extraData.containsKey('frequencies')) return [];
     final freqs = extraData['frequencies'] as List<dynamic>? ?? [];
     return freqs.map((f) {
@@ -2835,17 +2950,20 @@ JSON.stringify((function(){
       return {
         'dictionary': f['dictName'] ?? '',
         'frequencies': values
-            .map((v) => {
-                  'value': v['value'] ?? 0,
-                  'displayValue': v['display']?.toString() ?? '',
-                })
+            .map(
+              (v) => {
+                'value': v['value'] ?? 0,
+                'displayValue': v['display']?.toString() ?? '',
+              },
+            )
             .toList(),
       };
     }).toList();
   }
 
   static List<Map<String, dynamic>> _convertPitches(
-      Map<String, dynamic>? extraData) {
+    Map<String, dynamic>? extraData,
+  ) {
     if (extraData == null || !extraData.containsKey('pitches')) return [];
     final pitches = extraData['pitches'] as List<dynamic>? ?? [];
     return pitches.map((p) {
@@ -2898,8 +3016,9 @@ Map<dynamic, dynamic>? decodeBridgeMap(Object? raw) {
 
 void logPopupJsError(ErrorLogService errorLogService, List<dynamic> rawArgs) {
   final Object? raw = rawArgs.isNotEmpty ? rawArgs.first : null;
-  final Map<Object?, Object?> payload =
-      raw is Map ? raw : const <Object?, Object?>{};
+  final Map<Object?, Object?> payload = raw is Map
+      ? raw
+      : const <Object?, Object?>{};
   final String source = (payload['source'] ?? 'unknown').toString();
   final String message = (payload['message'] ?? '').toString();
   final String stack = (payload['stack'] ?? '').toString();

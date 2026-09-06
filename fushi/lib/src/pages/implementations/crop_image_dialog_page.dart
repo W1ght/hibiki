@@ -36,8 +36,9 @@ class CropImageDialogPage extends BasePage {
 }
 
 class _CropImageDialogPageState extends BasePageState<CropImageDialogPage> {
-  late final CropController _controller =
-      CropController(aspectRatio: widget.aspectRatio);
+  late final CropController _controller = CropController(
+    aspectRatio: widget.aspectRatio,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -62,10 +63,7 @@ class _CropImageDialogPageState extends BasePageState<CropImageDialogPage> {
           tokens.spacing.card,
           tokens.spacing.card,
         ),
-        body: SizedBox(
-          width: double.maxFinite,
-          child: buildContent(),
-        ),
+        body: SizedBox(width: double.maxFinite, child: buildContent()),
         footer: Wrap(
           alignment: WrapAlignment.end,
           spacing: tokens.spacing.gap,
@@ -76,18 +74,16 @@ class _CropImageDialogPageState extends BasePageState<CropImageDialogPage> {
     );
   }
 
-  List<Widget> get actions => [
-        buildCancelButton(),
-        buildCropButton(),
-      ];
+  List<Widget> get actions => [buildCancelButton(), buildCropButton()];
 
   Widget buildContent() {
     return Center(
       child: CropImage(
-          minimumImageSize: 25,
-          gridColor: Theme.of(context).colorScheme.onSurfaceVariant,
-          controller: _controller,
-          image: Image(image: FileImage(widget.imageFile))),
+        minimumImageSize: 25,
+        gridColor: Theme.of(context).colorScheme.onSurfaceVariant,
+        controller: _controller,
+        image: Image(image: FileImage(widget.imageFile)),
+      ),
     );
   }
 
@@ -120,8 +116,9 @@ class _CropImageDialogPageState extends BasePageState<CropImageDialogPage> {
     String timestamp = DateFormat('yyyyMMddTkkmmss').format(DateTime.now());
     Directory imageDir = Directory('$cropImagePath/$timestamp');
     ui.Image croppedImage = await _controller.croppedBitmap();
-    ByteData? data =
-        await croppedImage.toByteData(format: ui.ImageByteFormat.png);
+    ByteData? data = await croppedImage.toByteData(
+      format: ui.ImageByteFormat.png,
+    );
     Uint8List bytes = data!.buffer.asUint8List();
 
     String imagePath = '${imageDir.path}/cropped';

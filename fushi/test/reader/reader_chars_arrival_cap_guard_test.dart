@@ -14,38 +14,48 @@ import 'package:flutter_test/flutter_test.dart';
 ///    同章分支此前完全裸奔）与文本搜索跳转（跨章旧行为只播到章首）落点后的首个
 ///    `_refreshProgress` 不得把「旧位置 → 落点」的前缀计成新读字数。
 void main() {
-  final String navSrc =
-      File('lib/src/pages/implementations/reader_fushi/navigation.part.dart')
-          .readAsStringSync();
-  final String chromeSrc =
-      File('lib/src/pages/implementations/reader_fushi/chrome.part.dart')
-          .readAsStringSync();
+  final String navSrc = File(
+    'lib/src/pages/implementations/reader_fushi/navigation.part.dart',
+  ).readAsStringSync();
+  final String chromeSrc = File(
+    'lib/src/pages/implementations/reader_fushi/chrome.part.dart',
+  ).readAsStringSync();
 
   test('字数推进走速度封顶版，裸 accumulateSessionChars 不得回潮', () {
-    expect(navSrc.contains('accumulateSessionCharsCapped('), isTrue,
-        reason: '_refreshProgress 必须走带封顶的推进');
-    expect(navSrc.contains('accumulateSessionChars('), isFalse,
-        reason: '裸版只挡重复计入、不挡首次快速掠过——到达即计回潮');
+    expect(
+      navSrc.contains('accumulateSessionCharsCapped('),
+      isTrue,
+      reason: '_refreshProgress 必须走带封顶的推进',
+    );
+    expect(
+      navSrc.contains('accumulateSessionChars('),
+      isFalse,
+      reason: '裸版只挡重复计入、不挡首次快速掠过——到达即计回潮',
+    );
   });
 
   test('速度封顶按令牌桶结算：额度跨次结转、桶有容量上限', () {
-    expect(navSrc.contains('creditMilliChars: _readChargeCreditMilliChars'),
-        isTrue,
-        reason: '额度必须从上一次结转进来，否则每次上报都从零开始 = 按上报节奏收费');
     expect(
-        navSrc.contains('_readChargeCreditMilliChars = delta.creditMilliChars'),
-        isTrue,
-        reason: '花剩的额度必须写回，否则余量被丢弃、碎片化上报被惩罚');
+      navSrc.contains('creditMilliChars: _readChargeCreditMilliChars'),
+      isTrue,
+      reason: '额度必须从上一次结转进来，否则每次上报都从零开始 = 按上报节奏收费',
+    );
     expect(
-        navSrc
-            .contains('maxCreditMilliChars: gapCapMs * kMaxReadCharsPerSecond'),
-        isTrue,
-        reason: '桶容量必须按 kMaxReadingGap 折算：挂机不攒无限额度');
+      navSrc.contains('_readChargeCreditMilliChars = delta.creditMilliChars'),
+      isTrue,
+      reason: '花剩的额度必须写回，否则余量被丢弃、碎片化上报被惩罚',
+    );
+    expect(
+      navSrc.contains('maxCreditMilliChars: gapCapMs * kMaxReadCharsPerSecond'),
+      isTrue,
+      reason: '桶容量必须按 kMaxReadingGap 折算：挂机不攒无限额度',
+    );
     // 旧语义（只在水位推进时重锚计时基准）不得回潮：它让后续碎片各自只隔几十毫秒。
     expect(
-        navSrc.contains('if (delta.highWaterMark > _sessionMaxAbsoluteChars)'),
-        isFalse,
-        reason: '计时基准必须每次采样都推进，额度才是连续累积的');
+      navSrc.contains('if (delta.highWaterMark > _sessionMaxAbsoluteChars)'),
+      isFalse,
+      reason: '计时基准必须每次采样都推进，额度才是连续累积的',
+    );
   });
 
   test('进度条拖动先抬水位（不计数）再跳', () {
@@ -66,10 +76,15 @@ void main() {
     final int start = chromeSrc.indexOf(head);
     expect(start, isNot(-1), reason: '搜索跳转入口不在了，先确认它没被改名');
     final String body = chromeSrc.substring(
-        start, chromeSrc.indexOf('onDeleteFavorite:', start));
+      start,
+      chromeSrc.indexOf('onDeleteFavorite:', start),
+    );
     expect(body.contains('sessionWatermarkAfterRestore('), isTrue);
-    expect(body.contains('computeCharWatermark('), isTrue,
-        reason: '必须用命中 charOffset 推绝对水位——只播章首时章首到命中处仍被误计');
+    expect(
+      body.contains('computeCharWatermark('),
+      isTrue,
+      reason: '必须用命中 charOffset 推绝对水位——只播章首时章首到命中处仍被误计',
+    );
     expect(body.contains('charOffset: result.charOffset'), isTrue);
   });
 }

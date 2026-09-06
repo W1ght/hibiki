@@ -127,9 +127,9 @@ MangaOcrEngineId? resolveMangaOcrEngine({
   }
   final Map<MangaOcrEngineId, MangaOcrEngineCapability> byId =
       <MangaOcrEngineId, MangaOcrEngineCapability>{
-    for (final MangaOcrEngineCapability capability in capabilities)
-      capability.id: capability,
-  };
+        for (final MangaOcrEngineCapability capability in capabilities)
+          capability.id: capability,
+      };
   // 回退顺序 = 质量优先、其次本机可用性。系统 OCR 排在本地模型之后（它识别
   // 竖排气泡明显更差），但排在外部 CLI 和远程主机之前（那两个要么只在桌面存在、
   // 要么要有另一台机器开着）。Lens 依旧刻意缺席：auto 的契约就是不自作主张上传。

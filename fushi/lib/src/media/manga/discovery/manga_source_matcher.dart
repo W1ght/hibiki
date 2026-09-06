@@ -69,10 +69,13 @@ Future<List<MangaSourceMatch>> matchMangaAcrossSources({
 }) async {
   final List<String> targets = entry.allTitles;
   if (targets.isEmpty || sources.isEmpty) return const <MangaSourceMatch>[];
-  final List<MangaSourceMatch?> results =
-      List<MangaSourceMatch?>.filled(sources.length, null);
-  final Queue<int> pending =
-      Queue<int>.of(List<int>.generate(sources.length, (int i) => i));
+  final List<MangaSourceMatch?> results = List<MangaSourceMatch?>.filled(
+    sources.length,
+    null,
+  );
+  final Queue<int> pending = Queue<int>.of(
+    List<int>.generate(sources.length, (int i) => i),
+  );
   Future<void> worker() async {
     while (pending.isNotEmpty) {
       final int index = pending.removeFirst();
@@ -85,21 +88,20 @@ Future<List<MangaSourceMatch>> matchMangaAcrossSources({
     }
   }
 
-  final int workers =
-      maxConcurrent < sources.length ? maxConcurrent : sources.length;
+  final int workers = maxConcurrent < sources.length
+      ? maxConcurrent
+      : sources.length;
   // 抑制解题页：自动匹配是页面打开就跑的后台流，被 Cloudflare 拦下的源
   // 静默跳过（本函数的既有语义），绝不无操作弹全屏 WebView。
   await AidokuCloudflareGate.runSuppressed(
-    () => Future.wait<void>(
-      <Future<void>>[for (int i = 0; i < workers; i++) worker()],
-    ),
+    () => Future.wait<void>(<Future<void>>[
+      for (int i = 0; i < workers; i++) worker(),
+    ]),
   );
-  final List<MangaSourceMatch> matches = results
-      .whereType<MangaSourceMatch>()
-      .toList()
-    ..sort(
-      (MangaSourceMatch a, MangaSourceMatch b) => b.score.compareTo(a.score),
-    );
+  final List<MangaSourceMatch> matches =
+      results.whereType<MangaSourceMatch>().toList()..sort(
+        (MangaSourceMatch a, MangaSourceMatch b) => b.score.compareTo(a.score),
+      );
   return matches;
 }
 

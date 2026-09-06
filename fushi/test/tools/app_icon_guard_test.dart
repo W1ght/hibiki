@@ -18,25 +18,35 @@ void main() {
     final RegExp appIcon = RegExp(
       r'android:name="\$\{applicationName\}"[\s\S]*?android:icon="@mipmap/launcher_icon_squircle"',
     );
-    expect(appIcon.hasMatch(manifest), isTrue,
-        reason: '<application> 默认图标应引用 launcher_icon_squircle');
+    expect(
+      appIcon.hasMatch(manifest),
+      isTrue,
+      reason: '<application> 默认图标应引用 launcher_icon_squircle',
+    );
     // 默认 alias 也应引用 squircle。
     final RegExp defaultAlias = RegExp(
       r'MainActivityDefault[\s\S]*?android:icon="@mipmap/launcher_icon_squircle"',
     );
-    expect(defaultAlias.hasMatch(manifest), isTrue,
-        reason: '.MainActivityDefault 应引用 launcher_icon_squircle');
+    expect(
+      defaultAlias.hasMatch(manifest),
+      isTrue,
+      reason: '.MainActivityDefault 应引用 launcher_icon_squircle',
+    );
     // squircle mipmap 资源（自适应 xml + 至少一档 legacy png）必须存在。
     expect(
-        File('android/app/src/main/res/mipmap-anydpi-v26/launcher_icon_squircle.xml')
-            .existsSync(),
-        isTrue,
-        reason: '缺失 launcher_icon_squircle 自适应图标 xml');
+      File(
+        'android/app/src/main/res/mipmap-anydpi-v26/launcher_icon_squircle.xml',
+      ).existsSync(),
+      isTrue,
+      reason: '缺失 launcher_icon_squircle 自适应图标 xml',
+    );
     expect(
-        File('android/app/src/main/res/mipmap-xxxhdpi/launcher_icon_squircle.png')
-            .existsSync(),
-        isTrue,
-        reason: '缺失 launcher_icon_squircle legacy png');
+      File(
+        'android/app/src/main/res/mipmap-xxxhdpi/launcher_icon_squircle.png',
+      ).existsSync(),
+      isTrue,
+      reason: '缺失 launcher_icon_squircle legacy png',
+    );
   });
 
   test('Android 透明（无背景）档保留为独立可选 alias（TODO-1241）', () {
@@ -45,19 +55,29 @@ void main() {
     final RegExp transparentAlias = RegExp(
       r'MainActivityFushiTransparent[\s\S]*?android:icon="@mipmap/launcher_icon_minimal"',
     );
-    expect(transparentAlias.hasMatch(manifest), isTrue,
-        reason:
-            '.MainActivityFushiTransparent 应引用 launcher_icon_minimal（透明 wordmark）');
+    expect(
+      transparentAlias.hasMatch(manifest),
+      isTrue,
+      reason:
+          '.MainActivityFushiTransparent 应引用 launcher_icon_minimal（透明 wordmark）',
+    );
     // 透明档在原生映射与预设映射里都可选。
     final String helper = read(
-        'android/app/src/main/java/app/fushi/reader/IconSwitchHelper.java');
-    expect(helper.contains('"hibiki_transparent"'), isTrue,
-        reason: 'IconSwitchHelper 应把 hibiki_transparent 列为可选档');
+      'android/app/src/main/java/app/fushi/reader/IconSwitchHelper.java',
+    );
+    expect(
+      helper.contains('"hibiki_transparent"'),
+      isTrue,
+      reason: 'IconSwitchHelper 应把 hibiki_transparent 列为可选档',
+    );
     expect(helper.contains('.MainActivityFushiTransparent'), isTrue);
     final String prefs = read('lib/src/utils/misc/app_icon_preferences.dart');
     expect(prefs.contains("'hibiki_transparent':"), isTrue);
-    expect(prefs.contains('assets/meta/launcher_icon_squircle.png'), isTrue,
-        reason: 'default 预设预览应指向 squircle 资源');
+    expect(
+      prefs.contains('assets/meta/launcher_icon_squircle.png'),
+      isTrue,
+      reason: 'default 预设预览应指向 squircle 资源',
+    );
   });
 
   test('Windows runner 暴露 setWindowIcon 通道方法', () {
@@ -73,57 +93,95 @@ void main() {
   });
 
   test('设置页图标网格对 Windows 可见', () {
-    final String page =
-        read('lib/src/pages/implementations/miscellaneous_settings_page.dart');
+    final String page = read(
+      'lib/src/pages/implementations/miscellaneous_settings_page.dart',
+    );
     expect(page.contains('Platform.isWindows'), isTrue);
-    final String schema =
-        read('lib/src/settings/settings_schema_appearance.dart');
+    final String schema = read(
+      'lib/src/settings/settings_schema_appearance.dart',
+    );
     expect(schema.contains('Platform.isWindows'), isTrue);
   });
 
   test('BUG-1920：设置、启动恢复与宽屏 rail 共用可监听的当前图标真值', () {
     final String prefs = read('lib/src/utils/misc/app_icon_preferences.dart');
-    final String page =
-        read('lib/src/pages/implementations/miscellaneous_settings_page.dart');
+    final String page = read(
+      'lib/src/pages/implementations/miscellaneous_settings_page.dart',
+    );
     final String home = read('lib/src/pages/implementations/home_page.dart');
     final String main = read('lib/main.dart');
-    final String component =
-        read('lib/src/utils/components/current_app_icon.dart');
+    final String component = read(
+      'lib/src/utils/components/current_app_icon.dart',
+    );
 
     expect(prefs.contains('currentAppIconSelection'), isTrue);
-    expect(prefs.contains('appIconDecodePixelWidth = 256'), isTrue,
-        reason: '侧栏不得按原尺寸解码用户选择的相机/8K 图片');
-    expect(prefs.contains('await appIconImageProvider(resolved).evict()'),
-        isTrue,
-        reason: '固定自定义路径覆盖内容后必须清掉旧 ResizeImage cache');
-    expect(page.contains('saveAppIconSelection('), isTrue,
-        reason: '预设与自定义成功路径必须在持久化后发布运行时选择');
-    expect(page.contains('_persistAppliedIcon('), isTrue,
-        reason: '原生切换成功后即使偏好写入失败，rail 也必须同步本次运行态');
+    expect(
+      prefs.contains('appIconDecodePixelWidth = 256'),
+      isTrue,
+      reason: '侧栏不得按原尺寸解码用户选择的相机/8K 图片',
+    );
+    expect(
+      prefs.contains('await appIconImageProvider(resolved).evict()'),
+      isTrue,
+      reason: '固定自定义路径覆盖内容后必须清掉旧 ResizeImage cache',
+    );
+    expect(
+      page.contains('saveAppIconSelection('),
+      isTrue,
+      reason: '预设与自定义成功路径必须在持久化后发布运行时选择',
+    );
+    expect(
+      page.contains('_persistAppliedIcon('),
+      isTrue,
+      reason: '原生切换成功后即使偏好写入失败，rail 也必须同步本次运行态',
+    );
     expect(page.contains('saveIconPresetKey('), isFalse);
     expect(page.contains('saveCustomIconPath('), isFalse);
     // rail 的品牌位已从 home_page 的私有方法抽成 NavRailBrandButton（它同时是
     // 官网入口，需要独立可测）：home_page 只剩「rail 确实挂了品牌位」，图标真值
     // 判据跟着实现搬进该组件。
-    final String brand =
-        read('lib/src/utils/components/nav_rail_brand_button.dart');
-    expect(home.contains('leading: const NavRailBrandButton()'), isTrue,
-        reason: 'rail 必须挂品牌位，否则下面两条判据会在一个没人用的文件上空转');
-    expect(brand.contains('child: const CurrentAppIcon()'), isTrue,
-        reason: 'rail 不得再读取 AppModel 中固定的 assets/meta/icon.png');
-    expect(brand.contains('child: DecoratedBox('), isFalse,
-        reason: 'rail 应直接显示应用图标，不得再套卡片底色和描边');
-    expect(component.contains('ValueListenableBuilder<AppIconSelection>'),
-        isTrue);
-    expect(main.contains('startupAppIcon = await loadAppIconSelection()'),
-        isTrue,
-        reason: 'runApp 前必须恢复选择，避免第一帧画旧图标');
-    expect(main.contains("'getCurrentIcon'"), isTrue,
-        reason: 'Android 冷启动必须以 launcher alias 为当前图标真值');
-    expect(main.contains('appIconImageProvider(startupAppIcon)'), isTrue,
-        reason: '启动预缓存必须与 rail 共用同一个 provider 映射');
-    expect(main.contains("AssetImage('assets/meta/icon.png')"), isFalse,
-        reason: '启动路径不得再固定预缓存旧品牌图');
+    final String brand = read(
+      'lib/src/utils/components/nav_rail_brand_button.dart',
+    );
+    expect(
+      home.contains('leading: const NavRailBrandButton()'),
+      isTrue,
+      reason: 'rail 必须挂品牌位，否则下面两条判据会在一个没人用的文件上空转',
+    );
+    expect(
+      brand.contains('child: const CurrentAppIcon()'),
+      isTrue,
+      reason: 'rail 不得再读取 AppModel 中固定的 assets/meta/icon.png',
+    );
+    expect(
+      brand.contains('child: DecoratedBox('),
+      isFalse,
+      reason: 'rail 应直接显示应用图标，不得再套卡片底色和描边',
+    );
+    expect(
+      component.contains('ValueListenableBuilder<AppIconSelection>'),
+      isTrue,
+    );
+    expect(
+      main.contains('startupAppIcon = await loadAppIconSelection()'),
+      isTrue,
+      reason: 'runApp 前必须恢复选择，避免第一帧画旧图标',
+    );
+    expect(
+      main.contains("'getCurrentIcon'"),
+      isTrue,
+      reason: 'Android 冷启动必须以 launcher alias 为当前图标真值',
+    );
+    expect(
+      main.contains('appIconImageProvider(startupAppIcon)'),
+      isTrue,
+      reason: '启动预缓存必须与 rail 共用同一个 provider 映射',
+    );
+    expect(
+      main.contains("AssetImage('assets/meta/icon.png')"),
+      isFalse,
+      reason: '启动路径不得再固定预缓存旧品牌图',
+    );
   });
 
   test('Windows app icon 用已提交的 app_icon.ico wordmark', () {
@@ -131,18 +189,27 @@ void main() {
     // 覆盖手调 adaptive 图标），Windows 改用已提交的 app_icon.ico。
     // 守卫真实不变量：已提交的 ico 存在且非空 + Runner.rc 引用它。
     final File ico = File('windows/runner/resources/app_icon.ico');
-    expect(ico.existsSync(), isTrue,
-        reason: '缺失已提交的 Windows 图标: windows/runner/resources/app_icon.ico');
-    expect(ico.lengthSync() > 0, isTrue,
-        reason: 'app_icon.ico 不应为空（应是文字 wordmark 图标）');
+    expect(
+      ico.existsSync(),
+      isTrue,
+      reason: '缺失已提交的 Windows 图标: windows/runner/resources/app_icon.ico',
+    );
+    expect(
+      ico.lengthSync() > 0,
+      isTrue,
+      reason: 'app_icon.ico 不应为空（应是文字 wordmark 图标）',
+    );
 
     final String rc = read('windows/runner/Runner.rc');
     // .rc 里路径用双反斜杠转义：resources\app_icon.ico。
     final RegExp iconRef = RegExp(
       r'IDI_APP_ICON\s+ICON\s+"resources\\\\app_icon\.ico"',
     );
-    expect(iconRef.hasMatch(rc), isTrue,
-        reason: 'Runner.rc 应以 IDI_APP_ICON 引用 resources\\\\app_icon.ico');
+    expect(
+      iconRef.hasMatch(rc),
+      isTrue,
+      reason: 'Runner.rc 应以 IDI_APP_ICON 引用 resources\\\\app_icon.ico',
+    );
   });
 
   test('Android 12+ 系统 splash 图标用专用 splash wordmark 前景（TODO-886）', () {
@@ -163,44 +230,70 @@ void main() {
     }
   });
 
-  test('TODO-868/1241：预设三档 default+hibiki_transparent+full，无重复的 hibiki_minimal',
-      () {
-    // 预设映射为三档，且不含去重掉的 hibiki_minimal。
-    final String prefs = read('lib/src/utils/misc/app_icon_preferences.dart');
-    expect(prefs.contains("'hibiki_minimal':"), isFalse,
-        reason: 'presetIconAssets 不应再映射已去重的 hibiki_minimal');
-    expect(prefs.contains("'default':"), isTrue);
-    expect(prefs.contains("'hibiki_transparent':"), isTrue);
-    expect(prefs.contains("'hibiki_full':"), isTrue);
+  test(
+    'TODO-868/1241：预设三档 default+hibiki_transparent+full，无重复的 hibiki_minimal',
+    () {
+      // 预设映射为三档，且不含去重掉的 hibiki_minimal。
+      final String prefs = read('lib/src/utils/misc/app_icon_preferences.dart');
+      expect(
+        prefs.contains("'hibiki_minimal':"),
+        isFalse,
+        reason: 'presetIconAssets 不应再映射已去重的 hibiki_minimal',
+      );
+      expect(prefs.contains("'default':"), isTrue);
+      expect(prefs.contains("'hibiki_transparent':"), isTrue);
+      expect(prefs.contains("'hibiki_full':"), isTrue);
 
-    // 设置页渲染三档 tile（含新透明档），仍不引用已删除的 hibiki_minimal / icon_minimal。
-    final String page =
-        read('lib/src/pages/implementations/miscellaneous_settings_page.dart');
-    expect(page.contains("key: 'hibiki_transparent'"), isTrue,
-        reason: '设置页应渲染 hibiki_transparent 预设 tile');
-    expect(page.contains("key: 'hibiki_minimal'"), isFalse,
-        reason: '设置页不应再渲染 hibiki_minimal 预设 tile');
-    expect(page.contains('t.icon_minimal'), isFalse,
-        reason: '设置页不应再引用已删除的 icon_minimal label');
-  });
+      // 设置页渲染三档 tile（含新透明档），仍不引用已删除的 hibiki_minimal / icon_minimal。
+      final String page = read(
+        'lib/src/pages/implementations/miscellaneous_settings_page.dart',
+      );
+      expect(
+        page.contains("key: 'hibiki_transparent'"),
+        isTrue,
+        reason: '设置页应渲染 hibiki_transparent 预设 tile',
+      );
+      expect(
+        page.contains("key: 'hibiki_minimal'"),
+        isFalse,
+        reason: '设置页不应再渲染 hibiki_minimal 预设 tile',
+      );
+      expect(
+        page.contains('t.icon_minimal'),
+        isFalse,
+        reason: '设置页不应再引用已删除的 icon_minimal label',
+      );
+    },
+  );
 
   test(
-      'TODO-868 Android 老用户安全：minimal alias 仍声明 + IconSwitchHelper 迁移回 default',
-      () {
-    // manifest 保留退役 alias 声明，避免老用户升级后 launcher 图标消失。
-    final String manifest = read('android/app/src/main/AndroidManifest.xml');
-    expect(manifest.contains('.MainActivityFushiMinimal'), isTrue,
-        reason: '退役 minimal alias 必须保留声明（老用户 launcher 安全）');
+    'TODO-868 Android 老用户安全：minimal alias 仍声明 + IconSwitchHelper 迁移回 default',
+    () {
+      // manifest 保留退役 alias 声明，避免老用户升级后 launcher 图标消失。
+      final String manifest = read('android/app/src/main/AndroidManifest.xml');
+      expect(
+        manifest.contains('.MainActivityFushiMinimal'),
+        isTrue,
+        reason: '退役 minimal alias 必须保留声明（老用户 launcher 安全）',
+      );
 
-    // IconSwitchHelper：不再把 hibiki_minimal 列为可选项，但提供迁移逻辑。
-    final String helper = read(
-        'android/app/src/main/java/app/fushi/reader/IconSwitchHelper.java');
-    expect(helper.contains('"hibiki_minimal"'), isFalse,
-        reason: 'hibiki_minimal 不应再出现在可选 ALIAS_KEYS 中');
-    expect(helper.contains('migrateRetiredMinimalIfEnabled'), isTrue,
-        reason: '必须提供老用户迁移逻辑，把启用的 minimal alias 迁回 default');
-    expect(helper.contains('RETIRED_MINIMAL_ALIAS'), isTrue);
-  });
+      // IconSwitchHelper：不再把 hibiki_minimal 列为可选项，但提供迁移逻辑。
+      final String helper = read(
+        'android/app/src/main/java/app/fushi/reader/IconSwitchHelper.java',
+      );
+      expect(
+        helper.contains('"hibiki_minimal"'),
+        isFalse,
+        reason: 'hibiki_minimal 不应再出现在可选 ALIAS_KEYS 中',
+      );
+      expect(
+        helper.contains('migrateRetiredMinimalIfEnabled'),
+        isTrue,
+        reason: '必须提供老用户迁移逻辑，把启用的 minimal alias 迁回 default',
+      );
+      expect(helper.contains('RETIRED_MINIMAL_ALIAS'), isTrue);
+    },
+  );
   test('TODO-1269 回归守卫：所有启动器自适应图标背景必须不透明且非纯黑（纯透明会被渲染成黑）', () {
     // 根因：TODO-1241 把 ic_launcher_minimal_background 从 #FFFFFF 改成纯透明
     // #00000000，adaptive-icon 背景层不能透明——Android 合成到不透明底层、多数
@@ -237,17 +330,23 @@ void main() {
       ];
     }
 
-    final Directory adaptiveDir =
-        Directory('android/app/src/main/res/mipmap-anydpi-v26');
-    expect(adaptiveDir.existsSync(), isTrue,
-        reason: '缺失自适应图标目录 mipmap-anydpi-v26');
+    final Directory adaptiveDir = Directory(
+      'android/app/src/main/res/mipmap-anydpi-v26',
+    );
+    expect(
+      adaptiveDir.existsSync(),
+      isTrue,
+      reason: '缺失自适应图标目录 mipmap-anydpi-v26',
+    );
 
     final List<FileSystemEntity> iconXmls = adaptiveDir
         .listSync()
-        .where((FileSystemEntity e) =>
-            e is File &&
-            e.uri.pathSegments.last.startsWith('launcher_icon') &&
-            e.path.endsWith('.xml'))
+        .where(
+          (FileSystemEntity e) =>
+              e is File &&
+              e.uri.pathSegments.last.startsWith('launcher_icon') &&
+              e.path.endsWith('.xml'),
+        )
         .toList();
     expect(iconXmls, isNotEmpty, reason: '未发现任何 launcher_icon*.xml 自适应图标');
 
@@ -262,15 +361,25 @@ void main() {
       if (bg == null) continue;
       final String colorName = bg.group(1)!;
       final String? hex = colorByName[colorName];
-      expect(hex, isNotNull,
-          reason: '$name 引用的 @color/$colorName 在 colors.xml 中未定义');
+      expect(
+        hex,
+        isNotNull,
+        reason: '$name 引用的 @color/$colorName 在 colors.xml 中未定义',
+      );
       final List<int> argb = parseArgb(hex!);
-      expect(argb[0], 0xFF,
-          reason: '$name 背景 @color/$colorName = $hex 不是不透明（alpha != 0xFF）；'
-              '自适应图标背景纯/半透明会被渲染成黑（TODO-1269）');
+      expect(
+        argb[0],
+        0xFF,
+        reason:
+            '$name 背景 @color/$colorName = $hex 不是不透明（alpha != 0xFF）；'
+            '自适应图标背景纯/半透明会被渲染成黑（TODO-1269）',
+      );
       final bool isPureBlack = argb[1] == 0 && argb[2] == 0 && argb[3] == 0;
-      expect(isPureBlack, isFalse,
-          reason: '$name 背景 @color/$colorName = $hex 是纯黑，图标会背景全黑（TODO-1269）');
+      expect(
+        isPureBlack,
+        isFalse,
+        reason: '$name 背景 @color/$colorName = $hex 是纯黑，图标会背景全黑（TODO-1269）',
+      );
     }
   });
 }

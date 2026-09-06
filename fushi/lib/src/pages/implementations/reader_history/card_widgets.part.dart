@@ -69,10 +69,7 @@ extension _ReaderHistoryCardWidgets on _ReaderFushiHistoryPageState {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     return Padding(
       padding: _cardTagChipPadding(tokens),
-      child: FushiTagChip(
-        label: tag.name,
-        color: Color(tag.colorValue),
-      ),
+      child: FushiTagChip(label: tag.name, color: Color(tag.colorValue)),
     );
   }
 
@@ -80,9 +77,7 @@ extension _ReaderHistoryCardWidgets on _ReaderFushiHistoryPageState {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     return Padding(
       padding: _cardTagChipPadding(tokens),
-      child: FushiTagChip(
-        label: '+$count',
-      ),
+      child: FushiTagChip(label: '+$count'),
     );
   }
 
@@ -102,9 +97,9 @@ extension _ReaderHistoryCardWidgets on _ReaderFushiHistoryPageState {
         );
 
         if (maxSlots >= tags.length) {
-          return _uniformWidthTagColumn(
-            [for (final tag in tags) _tagChip(tag)],
-          );
+          return _uniformWidthTagColumn([
+            for (final tag in tags) _tagChip(tag),
+          ]);
         }
 
         // 溢出时最后一个槽恒让给「+N」合并 chip。仅 1 槽（书卡容器高恒 ≈1 槽）
@@ -163,9 +158,7 @@ extension _ReaderHistoryCardWidgets on _ReaderFushiHistoryPageState {
 
   Widget _buildFileCover(String coverPath, IconData placeholderIcon) {
     return FadeInImage(
-      imageErrorBuilder: (_, __, ___) => _coverPlaceholderIcon(
-        placeholderIcon,
-      ),
+      imageErrorBuilder: (_, __, ___) => _coverPlaceholderIcon(placeholderIcon),
       placeholder: MemoryImage(kTransparentImage),
       // BUG-959: 降采样解码，避免 EPUB 原始封面(常 1600×2400)整帧撑爆 ImageCache。
       image: resizedFileImage(File(coverPath)),
@@ -185,11 +178,7 @@ extension _ReaderHistoryCardWidgets on _ReaderFushiHistoryPageState {
         borderRadius: tokens.radii.cardRadius,
       ),
       child: Center(
-        child: Icon(
-          icon,
-          size: 40,
-          color: theme.colorScheme.onSurfaceVariant,
-        ),
+        child: Icon(icon, size: 40, color: theme.colorScheme.onSurfaceVariant),
       ),
     );
   }
@@ -214,8 +203,9 @@ extension _ReaderHistoryCardWidgets on _ReaderFushiHistoryPageState {
         selectionKey != null && _selectedKeys.contains(selectionKey);
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final double selectionInset = tokens.spacing.gap / 2;
-    final SelectionSlot? slot =
-        selectionKey == null ? null : SelectionSlot.loose(selectionKey);
+    final SelectionSlot? slot = selectionKey == null
+        ? null
+        : SelectionSlot.loose(selectionKey);
     void handleTap() {
       if (slot == null) {
         onTap();
@@ -369,10 +359,7 @@ extension _ReaderHistoryCardWidgets on _ReaderFushiHistoryPageState {
                     // 缩得太小看不清，TODO-552 恢复正常大小。
                     child: SizedBox.square(
                       dimension: kShelfCoverBadgeDimension,
-                      child: FittedBox(
-                        fit: BoxFit.contain,
-                        child: coverBadge,
-                      ),
+                      child: FittedBox(fit: BoxFit.contain, child: coverBadge),
                     ),
                   ),
                 if (leadingBadge != null)

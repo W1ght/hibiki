@@ -28,19 +28,19 @@ void main() {
 
   final Map<String, ({String file, String signature})> pullEntries =
       <String, ({String file, String signature})>{
-    '书架': (
-      file: 'lib/src/pages/implementations/reader_history/remote.part.dart',
-      signature: 'Future<void> _pullToRefreshBooks() async {',
-    ),
-    '视频': (
-      file: 'lib/src/pages/implementations/home_video_page.dart',
-      signature: 'Future<void> _pullToRefresh() async {',
-    ),
-    '词典': (
-      file: 'lib/src/pages/implementations/home_dictionary_page.dart',
-      signature: 'Future<void> _pullToRefreshDictionary() async {',
-    ),
-  };
+        '书架': (
+          file: 'lib/src/pages/implementations/reader_history/remote.part.dart',
+          signature: 'Future<void> _pullToRefreshBooks() async {',
+        ),
+        '视频': (
+          file: 'lib/src/pages/implementations/home_video_page.dart',
+          signature: 'Future<void> _pullToRefresh() async {',
+        ),
+        '词典': (
+          file: 'lib/src/pages/implementations/home_dictionary_page.dart',
+          signature: 'Future<void> _pullToRefreshDictionary() async {',
+        ),
+      };
 
   pullEntries.forEach((String page, ({String file, String signature}) e) {
     test('$page页下拉刷新调用共享的 runManualSyncWithFeedback', () {
@@ -57,7 +57,8 @@ void main() {
       expect(
         body,
         contains('announceNotConfigured: false'),
-        reason: '没配同步后端的用户每次下拉都被弹一句「同步不可用」是纯噪音；'
+        reason:
+            '没配同步后端的用户每次下拉都被弹一句「同步不可用」是纯噪音；'
             '此时下拉应静默退化成纯列表刷新',
       );
       expect(
@@ -71,15 +72,17 @@ void main() {
       expect(
         read(e.file),
         isNot(contains('runManualFullSync(')),
-        reason: '同步 + 反馈只能有一份实现（manual_sync_ui.dart）：复制出去的那份迟早'
+        reason:
+            '同步 + 反馈只能有一份实现（manual_sync_ui.dart）：复制出去的那份迟早'
             '漏掉逐通道冲突呈现（写错端）或鉴权失效登出',
       );
     });
   });
 
   test('设置页「立即同步」与下拉同步走同一入口', () {
-    final String src =
-        read('lib/src/sync/sync_settings_schema/actions.part.dart');
+    final String src = read(
+      'lib/src/sync/sync_settings_schema/actions.part.dart',
+    );
     final String body = bodyAfter(src, 'Future<void> _syncNow() async {');
     expect(body, contains('runManualSyncWithFeedback('));
     expect(
@@ -115,8 +118,9 @@ void main() {
   });
 
   test('词典页查询结果屏不叠下拉刷新（手势与「清空查询」冲突）', () {
-    final String src =
-        read('lib/src/pages/implementations/home_dictionary_page.dart');
+    final String src = read(
+      'lib/src/pages/implementations/home_dictionary_page.dart',
+    );
     final String body = bodyAfter(src, 'Widget _buildBody() {', span: 500);
     final int queryReturn = body.indexOf('return _buildQueryBody();');
     final int refreshStart = body.indexOf('RefreshIndicator(');
@@ -124,7 +128,8 @@ void main() {
     expect(
       refreshStart,
       greaterThan(queryReturn),
-      reason: '有活跃查询时必须在包 RefreshIndicator 之前就 return —— 结果屏的下拉'
+      reason:
+          '有活跃查询时必须在包 RefreshIndicator 之前就 return —— 结果屏的下拉'
           '已经是 _clearSearchFromResultPull（清空查询），两个手势不能抢',
     );
   });

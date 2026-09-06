@@ -54,8 +54,8 @@ class FushiPairV2Client {
     required this.expectedFingerprint,
     http.Client? httpClient,
     this.timeout = const Duration(seconds: 65),
-  })  : _httpClient = httpClient,
-        _ownsClient = httpClient == null;
+  }) : _httpClient = httpClient,
+       _ownsClient = httpClient == null;
 
   final String baseUrl;
   final String expectedFingerprint;

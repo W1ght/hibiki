@@ -128,7 +128,7 @@ bool isMangaOcrModelFileExact(File file, MangaOcrModelFile model) {
 /// 手动导入器。[manifest] 可注入（测试用小清单）。
 class MangaOcrModelImporter {
   MangaOcrModelImporter({List<MangaOcrModelFile>? manifest})
-      : _manifest = manifest ?? kMangaOcrModelManifest;
+    : _manifest = manifest ?? kMangaOcrModelManifest;
 
   final List<MangaOcrModelFile> _manifest;
 
@@ -156,7 +156,8 @@ class MangaOcrModelImporter {
     final List<String> stillMissing = <String>[
       for (final MangaOcrModelFile model in _manifest)
         if (!isMangaOcrModelFileReady(
-            File(p.join(targetDir.path, model.fileName))))
+          File(p.join(targetDir.path, model.fileName)),
+        ))
           model.fileName,
     ];
 
@@ -194,8 +195,9 @@ class MangaOcrModelImporter {
           visitFile(File(path));
         case FileSystemEntityType.directory:
           try {
-            await for (final FileSystemEntity entity
-                in Directory(path).list(recursive: true, followLinks: false)) {
+            await for (final FileSystemEntity entity in Directory(
+              path,
+            ).list(recursive: true, followLinks: false)) {
               if (entity is! File) continue;
               final String name = p.basename(entity.path);
               final bool isZip = p.extension(name).toLowerCase() == '.zip';
@@ -205,18 +207,22 @@ class MangaOcrModelImporter {
               visitFile(entity);
             }
           } on Object catch (error) {
-            rejected.add(MangaOcrModelImportRejection(
-              source: p.basename(path),
-              reason: MangaOcrModelImportRejectReason.unreadable,
-              detail: '$error',
-            ));
+            rejected.add(
+              MangaOcrModelImportRejection(
+                source: p.basename(path),
+                reason: MangaOcrModelImportRejectReason.unreadable,
+                detail: '$error',
+              ),
+            );
           }
         default:
-          rejected.add(MangaOcrModelImportRejection(
-            source: p.basename(path),
-            reason: MangaOcrModelImportRejectReason.unreadable,
-            detail: 'not a file or directory',
-          ));
+          rejected.add(
+            MangaOcrModelImportRejection(
+              source: p.basename(path),
+              reason: MangaOcrModelImportRejectReason.unreadable,
+              detail: 'not a file or directory',
+            ),
+          );
       }
     }
     return _ImportSources(files: files, zips: zips);
@@ -232,10 +238,12 @@ class MangaOcrModelImporter {
     final String name = p.basename(file.path);
     final MangaOcrModelFile? model = matchMangaOcrModelFile(name, _manifest);
     if (model == null) {
-      rejected.add(MangaOcrModelImportRejection(
-        source: name,
-        reason: MangaOcrModelImportRejectReason.unknownFile,
-      ));
+      rejected.add(
+        MangaOcrModelImportRejection(
+          source: name,
+          reason: MangaOcrModelImportRejectReason.unknownFile,
+        ),
+      );
       return;
     }
 
@@ -249,20 +257,24 @@ class MangaOcrModelImporter {
     try {
       actual = await file.length();
     } on Object catch (error) {
-      rejected.add(MangaOcrModelImportRejection(
-        source: name,
-        reason: MangaOcrModelImportRejectReason.unreadable,
-        detail: '$error',
-      ));
+      rejected.add(
+        MangaOcrModelImportRejection(
+          source: name,
+          reason: MangaOcrModelImportRejectReason.unreadable,
+          detail: '$error',
+        ),
+      );
       return;
     }
     if (model.expectedBytes > 0 && actual != model.expectedBytes) {
-      rejected.add(MangaOcrModelImportRejection(
-        source: name,
-        reason: MangaOcrModelImportRejectReason.sizeMismatch,
-        actualBytes: actual,
-        expectedBytes: model.expectedBytes,
-      ));
+      rejected.add(
+        MangaOcrModelImportRejection(
+          source: name,
+          reason: MangaOcrModelImportRejectReason.sizeMismatch,
+          actualBytes: actual,
+          expectedBytes: model.expectedBytes,
+        ),
+      );
       return;
     }
 
@@ -272,11 +284,13 @@ class MangaOcrModelImporter {
       await _promote(staged, target);
     } on Object catch (error) {
       _discard(staged);
-      rejected.add(MangaOcrModelImportRejection(
-        source: name,
-        reason: MangaOcrModelImportRejectReason.unreadable,
-        detail: '$error',
-      ));
+      rejected.add(
+        MangaOcrModelImportRejection(
+          source: name,
+          reason: MangaOcrModelImportRejectReason.unreadable,
+          detail: '$error',
+        ),
+      );
       return;
     }
     imported.add(model.fileName);
@@ -301,25 +315,31 @@ class MangaOcrModelImporter {
     try {
       entries = await Isolate.run(() => _scanZipEntries(zipPath, wanted));
     } on Object catch (error) {
-      rejected.add(MangaOcrModelImportRejection(
-        source: zipName,
-        reason: MangaOcrModelImportRejectReason.unreadable,
-        detail: '$error',
-      ));
+      rejected.add(
+        MangaOcrModelImportRejection(
+          source: zipName,
+          reason: MangaOcrModelImportRejectReason.unreadable,
+          detail: '$error',
+        ),
+      );
       return;
     }
 
     if (entries.isEmpty) {
-      rejected.add(MangaOcrModelImportRejection(
-        source: zipName,
-        reason: MangaOcrModelImportRejectReason.unknownFile,
-      ));
+      rejected.add(
+        MangaOcrModelImportRejection(
+          source: zipName,
+          reason: MangaOcrModelImportRejectReason.unknownFile,
+        ),
+      );
       return;
     }
 
     for (final _ZipEntry entry in entries) {
-      final MangaOcrModelFile? model =
-          matchMangaOcrModelFile(entry.name, _manifest);
+      final MangaOcrModelFile? model = matchMangaOcrModelFile(
+        entry.name,
+        _manifest,
+      );
       if (model == null) {
         continue;
       }
@@ -330,12 +350,14 @@ class MangaOcrModelImporter {
         continue;
       }
       if (model.expectedBytes > 0 && entry.size != model.expectedBytes) {
-        rejected.add(MangaOcrModelImportRejection(
-          source: source,
-          reason: MangaOcrModelImportRejectReason.sizeMismatch,
-          actualBytes: entry.size,
-          expectedBytes: model.expectedBytes,
-        ));
+        rejected.add(
+          MangaOcrModelImportRejection(
+            source: source,
+            reason: MangaOcrModelImportRejectReason.sizeMismatch,
+            actualBytes: entry.size,
+            expectedBytes: model.expectedBytes,
+          ),
+        );
         continue;
       }
 
@@ -344,21 +366,25 @@ class MangaOcrModelImporter {
       final String entryName = entry.name;
       try {
         await Isolate.run(
-            () => _extractZipEntry(zipPath, entryName, stagedPath));
+          () => _extractZipEntry(zipPath, entryName, stagedPath),
+        );
         final int actual = await staged.length();
         if (model.expectedBytes > 0 && actual != model.expectedBytes) {
           // zip 头里的 size 与实际解出的字节数不符：包本身坏了。
           throw StateError(
-              'extracted $actual bytes, expected ${model.expectedBytes}');
+            'extracted $actual bytes, expected ${model.expectedBytes}',
+          );
         }
         await _promote(staged, target);
       } on Object catch (error) {
         _discard(staged);
-        rejected.add(MangaOcrModelImportRejection(
-          source: source,
-          reason: MangaOcrModelImportRejectReason.unreadable,
-          detail: '$error',
-        ));
+        rejected.add(
+          MangaOcrModelImportRejection(
+            source: source,
+            reason: MangaOcrModelImportRejectReason.unreadable,
+            detail: '$error',
+          ),
+        );
         continue;
       }
       imported.add(model.fileName);
@@ -405,8 +431,9 @@ class _ZipEntry {
 
 /// isolate 侧：扫 zip 目录区，挑出 basename 命中清单的 entry。只读头，不解压。
 List<_ZipEntry> _scanZipEntries(String zipPath, List<String> wantedNames) {
-  final Set<String> wanted =
-      wantedNames.map((String n) => n.toLowerCase()).toSet();
+  final Set<String> wanted = wantedNames
+      .map((String n) => n.toLowerCase())
+      .toSet();
   final InputFileStream input = InputFileStream(zipPath);
   try {
     final Archive archive = ZipDecoder().decodeBuffer(input);

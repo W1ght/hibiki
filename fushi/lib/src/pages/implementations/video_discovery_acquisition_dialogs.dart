@@ -32,13 +32,11 @@ import 'package:fushi/src/pages/implementations/video_resource_version_group_lis
 export 'package:fushi/src/media/video/download/video_resource_version_groups.dart'
     show episodeNumberFromReleaseTitle;
 
-typedef VideoDiscoveryDownloadSubmit = Future<void> Function(
-  VideoDiscoveryDownloadSelection selection,
-);
+typedef VideoDiscoveryDownloadSubmit =
+    Future<void> Function(VideoDiscoveryDownloadSelection selection);
 
-typedef VideoDiscoverySubscriptionSubmit = Future<void> Function(
-  VideoDiscoverySubscriptionSelection selection,
-);
+typedef VideoDiscoverySubscriptionSubmit =
+    Future<void> Function(VideoDiscoverySubscriptionSelection selection);
 
 /// 失败态里「去配置下载后端」的端口。返回 true = 用户真配完了，调用方可以重试原动作。
 ///
@@ -49,24 +47,24 @@ typedef VideoDiscoverySubscriptionSubmit = Future<void> Function(
 ///
 /// 允许为 null：宿主没接线时 SnackBar 只报事实、**不给一个按下去什么都不发生的按钮**
 /// （与 `settings_schema_lookup.dart` 里「平台不支持就给 null」同一姿态）。
-typedef VideoDownloadBackendSetupPrompt = Future<bool> Function(
-  BuildContext context,
-);
+typedef VideoDownloadBackendSetupPrompt =
+    Future<bool> Function(BuildContext context);
 
-typedef VideoDiscoveryPathPicker = Future<String?> Function(
-  BuildContext context,
-);
+typedef VideoDiscoveryPathPicker =
+    Future<String?> Function(BuildContext context);
 
-typedef VideoDiscoverySubtitleInstalled = Future<void> Function(
-  SubtitleInstallTarget target,
-  String selectedPath,
-  String installedPath,
-);
+typedef VideoDiscoverySubtitleInstalled =
+    Future<void> Function(
+      SubtitleInstallTarget target,
+      String selectedPath,
+      String installedPath,
+    );
 
-typedef VideoDiscoverySubtitleAttach = Future<void> Function(
-  VideoDownloadJobRow job,
-  VideoSubtitleCandidate candidate,
-);
+typedef VideoDiscoverySubtitleAttach =
+    Future<void> Function(
+      VideoDownloadJobRow job,
+      VideoSubtitleCandidate candidate,
+    );
 
 @immutable
 class VideoDiscoveryDownloadSelection {
@@ -146,10 +144,10 @@ bool isAttachableVideoDownloadJob(
     'imdb' => externalId == reference.imdbId?.trim().toLowerCase(),
     'tvdb' => externalId == reference.tvdbId?.toString(),
     _ => reference.externalIds.entries.any(
-        (MapEntry<String, String> entry) =>
-            entry.key.trim().toLowerCase() == provider &&
-            entry.value.trim().toLowerCase() == externalId,
-      ),
+      (MapEntry<String, String> entry) =>
+          entry.key.trim().toLowerCase() == provider &&
+          entry.value.trim().toLowerCase() == externalId,
+    ),
   };
 }
 
@@ -160,7 +158,8 @@ StrictVideoSubscriptionFilter? deriveStrictVideoSubscriptionFilter(
 ) {
   final String provider = candidate.providerId.trim().toLowerCase();
   final String? releaseGroup = _nonEmpty(candidate.releaseGroup);
-  final String? resolution = _nonEmpty(candidate.resolution) ??
+  final String? resolution =
+      _nonEmpty(candidate.resolution) ??
       _firstMatch(candidate.title, RegExp(r'\b(?:2160|1080|720|576|480)p\b'));
   final Map<String, Object> filter = <String, Object>{'strict': true};
   final List<String> summary = <String>[];
@@ -438,7 +437,9 @@ Future<String> installDiscoverySubtitle({
     directory = Directory(selectedPath);
     if (!await directory.exists()) {
       throw FileSystemException(
-          'selected directory is unavailable', selectedPath);
+        'selected directory is unavailable',
+        selectedPath,
+      );
     }
     stem = p.basenameWithoutExtension(download.fileName);
   }
@@ -453,8 +454,8 @@ Future<String> installDiscoverySubtitle({
   final String language = safeWindowsFileName(download.language).trim();
   final String baseName =
       target == SubtitleInstallTarget.existingVideo && language.isNotEmpty
-          ? '$safeStem.$language'
-          : safeStem;
+      ? '$safeStem.$language'
+      : safeStem;
 
   for (int suffix = 0; suffix < 1000; suffix++) {
     final String leaf = '$baseName${suffix == 0 ? '' : '.$suffix'}$extension';
@@ -472,8 +473,9 @@ Future<String> installDiscoverySubtitle({
     );
     await temporary.create(exclusive: true);
     try {
-      final RandomAccessFile handle =
-          await temporary.open(mode: FileMode.write);
+      final RandomAccessFile handle = await temporary.open(
+        mode: FileMode.write,
+      );
       try {
         await handle.writeFrom(download.bytes);
         await handle.flush();
@@ -489,7 +491,9 @@ Future<String> installDiscoverySubtitle({
     }
   }
   throw FileSystemException(
-      'no conflict-free subtitle file name', selectedPath);
+    'no conflict-free subtitle file name',
+    selectedPath,
+  );
 }
 
 class VideoDiscoveryResourceSearchDialog extends StatelessWidget {
@@ -512,20 +516,20 @@ class VideoDiscoveryResourceSearchDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => FushiDialogFrame(
-        maxWidth: 760,
-        maxHeightFactor: 0.88,
-        scrollable: false,
-        insetPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-        child: VideoResourceSearchSurface(
-          initialItem: item,
-          registry: registry,
-          sources: sources,
-          defaultSourceId: defaultSourceId,
-          onSubmit: onSubmit,
-          onConfigureBackend: onConfigureBackend,
-          onClose: () => Navigator.pop(context),
-        ),
-      );
+    maxWidth: 760,
+    maxHeightFactor: 0.88,
+    scrollable: false,
+    insetPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+    child: VideoResourceSearchSurface(
+      initialItem: item,
+      registry: registry,
+      sources: sources,
+      defaultSourceId: defaultSourceId,
+      onSubmit: onSubmit,
+      onConfigureBackend: onConfigureBackend,
+      onClose: () => Navigator.pop(context),
+    ),
+  );
 }
 
 /// 详情页的资源搜索使用独立路由，避免在小对话框内压缩发布信息。
@@ -549,20 +553,20 @@ class VideoDiscoveryResourceSearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: Text(t.video_discovery_resource_search)),
-        body: SafeArea(
-          child: VideoResourceSearchSurface(
-            initialItem: item,
-            registry: registry,
-            sources: sources,
-            defaultSourceId: defaultSourceId,
-            onSubmit: onSubmit,
-            onConfigureBackend: onConfigureBackend,
-            onClose: () => Navigator.of(context).pop(),
-            pageMode: true,
-          ),
-        ),
-      );
+    appBar: AppBar(title: Text(t.video_discovery_resource_search)),
+    body: SafeArea(
+      child: VideoResourceSearchSurface(
+        initialItem: item,
+        registry: registry,
+        sources: sources,
+        defaultSourceId: defaultSourceId,
+        onSubmit: onSubmit,
+        onConfigureBackend: onConfigureBackend,
+        onClose: () => Navigator.of(context).pop(),
+        pageMode: true,
+      ),
+    ),
+  );
 }
 
 /// 发现详情的订阅创建使用独立路由，与资源搜索共享同一块全尺寸 surface。
@@ -586,20 +590,20 @@ class VideoDiscoverySubscriptionPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: Text(t.video_discovery_subscribe)),
-        body: SafeArea(
-          child: VideoResourceSearchSurface(
-            initialItem: item,
-            registry: registry,
-            sources: sources,
-            defaultSourceId: defaultSourceId,
-            onSubscriptionSubmit: onSubmit,
-            onConfigureBackend: onConfigureBackend,
-            onClose: () => Navigator.of(context).pop(),
-            pageMode: true,
-          ),
-        ),
-      );
+    appBar: AppBar(title: Text(t.video_discovery_subscribe)),
+    body: SafeArea(
+      child: VideoResourceSearchSurface(
+        initialItem: item,
+        registry: registry,
+        sources: sources,
+        defaultSourceId: defaultSourceId,
+        onSubscriptionSubmit: onSubmit,
+        onConfigureBackend: onConfigureBackend,
+        onClose: () => Navigator.of(context).pop(),
+        pageMode: true,
+      ),
+    ),
+  );
 }
 
 /// 发现详情对话框与下载模块“资源”tab 共用的资源搜索 surface。
@@ -665,12 +669,14 @@ class _VideoResourceSearchSurfaceState
         : preferredNyaaSearchQueries(
             VideoResourceSearchRequest(media: reference),
           );
-    _queryController.text = preferredQueries.firstOrNull ??
+    _queryController.text =
+        preferredQueries.firstOrNull ??
         widget.initialItem?.reference.title ??
         '';
-    _sourceId = widget.sources.any(
-      (MediaSourceRow source) => source.id == widget.defaultSourceId,
-    )
+    _sourceId =
+        widget.sources.any(
+          (MediaSourceRow source) => source.id == widget.defaultSourceId,
+        )
         ? widget.defaultSourceId
         : widget.sources.firstOrNull?.id;
     if (widget.initialItem != null) unawaited(_search());
@@ -723,10 +729,14 @@ class _VideoResourceSearchSurfaceState
       _selected = null;
       _strictConfirmed = false;
     });
-    final ProviderBatchResult<VideoResourceCandidate> result =
-        await widget.registry.search(
-      VideoResourceSearchRequest(media: media, query: _queryController.text),
-    );
+    final ProviderBatchResult<VideoResourceCandidate> result = await widget
+        .registry
+        .search(
+          VideoResourceSearchRequest(
+            media: media,
+            query: _queryController.text,
+          ),
+        );
     if (!mounted || generation != _generation) return;
     setState(() {
       _result = result;
@@ -762,11 +772,11 @@ class _VideoResourceSearchSurfaceState
     }
     final VideoDiscoveryDownloadSelection download =
         VideoDiscoveryDownloadSelection(
-      media: media,
-      resource: resource,
-      source: source,
-      subtitlePolicy: _subtitlePolicy,
-    );
+          media: media,
+          resource: resource,
+          source: source,
+          subtitlePolicy: _subtitlePolicy,
+        );
     setState(() => _submitting = true);
     try {
       if (widget.subscription) {
@@ -854,8 +864,9 @@ class _VideoResourceSearchSurfaceState
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final bool manual = widget.initialItem == null;
     final VideoResourceCandidate? selected = _selected;
-    final StrictVideoSubscriptionFilter? filter =
-        selected == null ? null : deriveStrictVideoSubscriptionFilter(selected);
+    final StrictVideoSubscriptionFilter? filter = selected == null
+        ? null
+        : deriveStrictVideoSubscriptionFilter(selected);
     return Padding(
       padding: EdgeInsets.all(tokens.spacing.card + 4),
       child: Column(
@@ -899,23 +910,24 @@ class _VideoResourceSearchSurfaceState
               Wrap(
                 spacing: tokens.spacing.gap,
                 runSpacing: tokens.spacing.gap,
-                children: preferredNyaaSearchQueries(
-                  VideoResourceSearchRequest(
-                    media: widget.initialItem!.reference,
-                  ),
-                )
-                    .map(
-                      (String query) => ActionChip(
-                        label: Text(query),
-                        onPressed: _loading
-                            ? null
-                            : () {
-                                _queryController.text = query;
-                                unawaited(_search());
-                              },
-                      ),
-                    )
-                    .toList(growable: false),
+                children:
+                    preferredNyaaSearchQueries(
+                          VideoResourceSearchRequest(
+                            media: widget.initialItem!.reference,
+                          ),
+                        )
+                        .map(
+                          (String query) => ActionChip(
+                            label: Text(query),
+                            onPressed: _loading
+                                ? null
+                                : () {
+                                    _queryController.text = query;
+                                    unawaited(_search());
+                                  },
+                          ),
+                        )
+                        .toList(growable: false),
               ),
             ],
             SizedBox(height: tokens.spacing.card),
@@ -936,39 +948,40 @@ class _VideoResourceSearchSurfaceState
                 );
                 final Widget category =
                     DropdownButtonFormField<VideoDiscoveryCategory>(
-                  key: const ValueKey<String>('video-resource-category'),
-                  initialValue: _manualCategory,
-                  items: <DropdownMenuItem<VideoDiscoveryCategory>>[
-                    DropdownMenuItem<VideoDiscoveryCategory>(
-                      value: VideoDiscoveryCategory.anime,
-                      child: Text(t.media_tracking_anime),
-                    ),
-                    DropdownMenuItem<VideoDiscoveryCategory>(
-                      value: VideoDiscoveryCategory.movie,
-                      child: Text(t.collection_relation_movie),
-                    ),
-                    DropdownMenuItem<VideoDiscoveryCategory>(
-                      value: VideoDiscoveryCategory.tv,
-                      child: Text(t.series),
-                    ),
-                  ],
-                  onChanged: (VideoDiscoveryCategory? value) {
-                    if (value == null) return;
-                    setState(() {
-                      _manualCategory = value;
-                      if (value == VideoDiscoveryCategory.movie) {
-                        _manualMediaKind = VideoMetadataMediaKind.movie;
-                      } else if (value == VideoDiscoveryCategory.tv) {
-                        _manualMediaKind = VideoMetadataMediaKind.tv;
-                      }
-                      _manualProvider = value == VideoDiscoveryCategory.anime
-                          ? 'anidb'
-                          : 'tmdb';
-                      _result = null;
-                      _selected = null;
-                    });
-                  },
-                );
+                      key: const ValueKey<String>('video-resource-category'),
+                      initialValue: _manualCategory,
+                      items: <DropdownMenuItem<VideoDiscoveryCategory>>[
+                        DropdownMenuItem<VideoDiscoveryCategory>(
+                          value: VideoDiscoveryCategory.anime,
+                          child: Text(t.media_tracking_anime),
+                        ),
+                        DropdownMenuItem<VideoDiscoveryCategory>(
+                          value: VideoDiscoveryCategory.movie,
+                          child: Text(t.collection_relation_movie),
+                        ),
+                        DropdownMenuItem<VideoDiscoveryCategory>(
+                          value: VideoDiscoveryCategory.tv,
+                          child: Text(t.series),
+                        ),
+                      ],
+                      onChanged: (VideoDiscoveryCategory? value) {
+                        if (value == null) return;
+                        setState(() {
+                          _manualCategory = value;
+                          if (value == VideoDiscoveryCategory.movie) {
+                            _manualMediaKind = VideoMetadataMediaKind.movie;
+                          } else if (value == VideoDiscoveryCategory.tv) {
+                            _manualMediaKind = VideoMetadataMediaKind.tv;
+                          }
+                          _manualProvider =
+                              value == VideoDiscoveryCategory.anime
+                              ? 'anidb'
+                              : 'tmdb';
+                          _result = null;
+                          _selected = null;
+                        });
+                      },
+                    );
                 if (constraints.maxWidth < 520) {
                   return Column(
                     children: <Widget>[
@@ -1078,9 +1091,7 @@ class _VideoResourceSearchSurfaceState
                   key: const ValueKey<String>('video-resource-year'),
                   controller: _manualYearController,
                   keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                    labelText: t.video_filter_year,
-                  ),
+                  decoration: InputDecoration(labelText: t.video_filter_year),
                   onChanged: (_) => _invalidateManualSearch(),
                 );
                 if (constraints.maxWidth < 520) {
@@ -1115,8 +1126,8 @@ class _VideoResourceSearchSurfaceState
                 t.video_discovery_manual_identity_hint,
                 key: const ValueKey<String>('video-resource-identity-hint'),
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: Theme.of(context).colorScheme.onSurfaceVariant,
-                    ),
+                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                ),
               ),
             ],
             SizedBox(height: tokens.spacing.gap),
@@ -1142,16 +1153,19 @@ class _VideoResourceSearchSurfaceState
                       ? 'video-subscription-submit'
                       : 'video-resource-submit',
                 ),
-                onPressed:
-                    _canSubmit(filter) ? () => unawaited(_submit()) : null,
+                onPressed: _canSubmit(filter)
+                    ? () => unawaited(_submit())
+                    : null,
                 icon: _submitting
                     ? const SizedBox.square(
                         dimension: 16,
                         child: CircularProgressIndicator(strokeWidth: 2),
                       )
-                    : Icon(widget.subscription
-                        ? Icons.favorite_border_rounded
-                        : Icons.download_rounded),
+                    : Icon(
+                        widget.subscription
+                            ? Icons.favorite_border_rounded
+                            : Icons.download_rounded,
+                      ),
                 label: Text(
                   widget.subscription
                       ? t.video_discovery_subscribe
@@ -1185,7 +1199,9 @@ class _VideoResourceSearchSurfaceState
           children: <Widget>[
             Text(t.video_discovery_load_failed),
             TextButton(
-                onPressed: () => unawaited(_search()), child: Text(t.retry)),
+              onPressed: () => unawaited(_search()),
+              child: Text(t.retry),
+            ),
           ],
         ),
       );
@@ -1280,9 +1296,11 @@ class _VideoResourceSearchSurfaceState
           );
           final List<int> episodes = group.episodeNumbers;
           if (episodes.isNotEmpty) {
-            metadata.add(episodes.length == 1
-                ? 'EP${episodes.first}'
-                : 'EP${episodes.first}-${episodes.last}');
+            metadata.add(
+              episodes.length == 1
+                  ? 'EP${episodes.first}'
+                  : 'EP${episodes.first}-${episodes.last}',
+            );
           }
         }
         return FushiListItem(
@@ -1295,9 +1313,11 @@ class _VideoResourceSearchSurfaceState
               ? FushiListDensity.standard
               : FushiListDensity.compact,
           selected: identical(_selected, candidate),
-          leading: Icon(candidate.trusted
-              ? Icons.verified_rounded
-              : Icons.cloud_download_outlined),
+          leading: Icon(
+            candidate.trusted
+                ? Icons.verified_rounded
+                : Icons.cloud_download_outlined,
+          ),
           onTap: () => _select(candidate),
         );
       },
@@ -1453,15 +1473,15 @@ class VideoDiscoverySubtitleSearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => VideoDiscoverySubtitleSearchDialog(
-        item: item,
-        registry: registry,
-        pickVideo: pickVideo,
-        pickDirectory: pickDirectory,
-        attachableJobs: attachableJobs,
-        onAttach: onAttach,
-        onInstalled: onInstalled,
-        pageMode: true,
-      );
+    item: item,
+    registry: registry,
+    pickVideo: pickVideo,
+    pickDirectory: pickDirectory,
+    attachableJobs: attachableJobs,
+    onAttach: onAttach,
+    onInstalled: onInstalled,
+    pageMode: true,
+  );
 }
 
 class VideoDiscoverySubtitleSearchDialog extends StatefulWidget {
@@ -1519,25 +1539,28 @@ class _VideoDiscoverySubtitleSearchDialogState
       if (await file.exists()) {
         fingerprint = LocalVideoFingerprint(
           fileSize: await file.length(),
-          openSubtitlesMovieHash:
-              await computeOpenSubtitlesMovieHash(selectedPath),
+          openSubtitlesMovieHash: await computeOpenSubtitlesMovieHash(
+            selectedPath,
+          ),
           fileName: p.basename(selectedPath),
         );
       }
     }
-    final ProviderBatchResult<VideoSubtitleCandidate> result =
-        await widget.registry.search(
-      VideoSubtitleSearchRequest(
-        media: widget.item.reference,
-        query: widget.item.reference.title,
-        alternateTitles: <String>[
-          if (widget.item.reference.originalTitle?.trim().isNotEmpty == true)
-            widget.item.reference.originalTitle!,
-          ...widget.item.reference.aliases,
-        ],
-        fingerprint: fingerprint,
-      ),
-    );
+    final ProviderBatchResult<VideoSubtitleCandidate> result = await widget
+        .registry
+        .search(
+          VideoSubtitleSearchRequest(
+            media: widget.item.reference,
+            query: widget.item.reference.title,
+            alternateTitles: <String>[
+              if (widget.item.reference.originalTitle?.trim().isNotEmpty ==
+                  true)
+                widget.item.reference.originalTitle!,
+              ...widget.item.reference.aliases,
+            ],
+            fingerprint: fingerprint,
+          ),
+        );
     if (!mounted || generation != _generation) return;
     setState(() {
       _loading = false;
@@ -1572,8 +1595,9 @@ class _VideoDiscoverySubtitleSearchDialogState
         return;
       }
       final String selectedPath = _selectedPath!;
-      final VideoSubtitleDownload download =
-          await widget.registry.download(candidate);
+      final VideoSubtitleDownload download = await widget.registry.download(
+        candidate,
+      );
       final String installed = await installDiscoverySubtitle(
         download: download,
         target: _target,
@@ -1690,8 +1714,8 @@ class _VideoDiscoverySubtitleSearchDialogState
                 key: const ValueKey<String>('video-subtitle-install'),
                 onPressed:
                     _selected == null || !_hasSelectedTarget || _installing
-                        ? null
-                        : () => unawaited(_install()),
+                    ? null
+                    : () => unawaited(_install()),
                 icon: _installing
                     ? const SizedBox.square(
                         dimension: 16,
@@ -1730,7 +1754,9 @@ class _VideoDiscoverySubtitleSearchDialogState
           children: <Widget>[
             Text(t.video_discovery_load_failed),
             TextButton(
-                onPressed: () => unawaited(_search()), child: Text(t.retry)),
+              onPressed: () => unawaited(_search()),
+              child: Text(t.retry),
+            ),
           ],
         ),
       );

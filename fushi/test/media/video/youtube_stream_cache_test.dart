@@ -27,11 +27,7 @@ void main() {
     test('takes earliest expire minus margin', () {
       // stream expire=10000s, audio expire=9000s -> min 9000s; margin 30min.
       final int? e = computeStreamCacheExpiryMs(
-        <String?>[
-          'https://g/v?expire=10000',
-          'https://g/a?expire=9000',
-          null,
-        ],
+        <String?>['https://g/v?expire=10000', 'https://g/a?expire=9000', null],
         now,
         margin: const Duration(minutes: 30),
       );
@@ -40,8 +36,11 @@ void main() {
 
     test('no parseable expire -> null (do not cache)', () {
       expect(
-        computeStreamCacheExpiryMs(
-            <String?>['https://g/v', 'https://g/a', null], now),
+        computeStreamCacheExpiryMs(<String?>[
+          'https://g/v',
+          'https://g/a',
+          null,
+        ], now),
         isNull,
       );
     });
@@ -79,49 +78,69 @@ void main() {
           expiresAtMs: expiresAtMs,
         );
 
-    test('put then get returns the entry (persisted across instances)',
-        () async {
-      final DateTime now = DateTime.fromMillisecondsSinceEpoch(1000);
-      final File file = File('${tmp.path}/cache.json');
-      final YoutubeStreamCache c1 =
-          YoutubeStreamCache(file: file, now: () => now);
-      await c1.put('vid1', entryExpiringAt(now.millisecondsSinceEpoch + 60000));
-      // 新实例（模拟重启）从同一文件读回。
-      final YoutubeStreamCache c2 =
-          YoutubeStreamCache(file: file, now: () => now);
-      final YoutubeStreamCacheEntry? got = await c2.get('vid1');
-      expect(got, isNotNull);
-      expect(got!.streamUrl, 'https://g/v?itag=137');
-      expect(got.audioStreamUrl, 'https://g/a?itag=251');
-      expect(got.miningVideoHasAudio, isTrue);
-      expect(got.httpHeaders['User-Agent'], 'Mozilla/5.0');
-    });
+    test(
+      'put then get returns the entry (persisted across instances)',
+      () async {
+        final DateTime now = DateTime.fromMillisecondsSinceEpoch(1000);
+        final File file = File('${tmp.path}/cache.json');
+        final YoutubeStreamCache c1 = YoutubeStreamCache(
+          file: file,
+          now: () => now,
+        );
+        await c1.put(
+          'vid1',
+          entryExpiringAt(now.millisecondsSinceEpoch + 60000),
+        );
+        // 新实例（模拟重启）从同一文件读回。
+        final YoutubeStreamCache c2 = YoutubeStreamCache(
+          file: file,
+          now: () => now,
+        );
+        final YoutubeStreamCacheEntry? got = await c2.get('vid1');
+        expect(got, isNotNull);
+        expect(got!.streamUrl, 'https://g/v?itag=137');
+        expect(got.audioStreamUrl, 'https://g/a?itag=251');
+        expect(got.miningVideoHasAudio, isTrue);
+        expect(got.httpHeaders['User-Agent'], 'Mozilla/5.0');
+      },
+    );
 
-    test('expired entry is not returned and is pruned on access (get)',
-        () async {
-      final DateTime t0 = DateTime.fromMillisecondsSinceEpoch(1000);
-      final File file = File('${tmp.path}/cache.json');
-      final YoutubeStreamCache c1 =
-          YoutubeStreamCache(file: file, now: () => t0);
-      await c1.put('vid1', entryExpiringAt(t0.millisecondsSinceEpoch + 5000));
-      // 时钟推进到过期后（新实例、同文件）。
-      final DateTime t1 =
-          DateTime.fromMillisecondsSinceEpoch(t0.millisecondsSinceEpoch + 6000);
-      final YoutubeStreamCache c2 =
-          YoutubeStreamCache(file: file, now: () => t1);
-      expect(await c2.get('vid1'), isNull);
-      // get 命中过期条目 -> 剔除并落盘（自愈），磁盘不再残留。
-      final Map<String, dynamic> onDisk =
-          jsonDecode(file.readAsStringSync()) as Map<String, dynamic>;
-      expect((onDisk['entries'] as Map<String, dynamic>).containsKey('vid1'),
-          isFalse);
-    });
+    test(
+      'expired entry is not returned and is pruned on access (get)',
+      () async {
+        final DateTime t0 = DateTime.fromMillisecondsSinceEpoch(1000);
+        final File file = File('${tmp.path}/cache.json');
+        final YoutubeStreamCache c1 = YoutubeStreamCache(
+          file: file,
+          now: () => t0,
+        );
+        await c1.put('vid1', entryExpiringAt(t0.millisecondsSinceEpoch + 5000));
+        // 时钟推进到过期后（新实例、同文件）。
+        final DateTime t1 = DateTime.fromMillisecondsSinceEpoch(
+          t0.millisecondsSinceEpoch + 6000,
+        );
+        final YoutubeStreamCache c2 = YoutubeStreamCache(
+          file: file,
+          now: () => t1,
+        );
+        expect(await c2.get('vid1'), isNull);
+        // get 命中过期条目 -> 剔除并落盘（自愈），磁盘不再残留。
+        final Map<String, dynamic> onDisk =
+            jsonDecode(file.readAsStringSync()) as Map<String, dynamic>;
+        expect(
+          (onDisk['entries'] as Map<String, dynamic>).containsKey('vid1'),
+          isFalse,
+        );
+      },
+    );
 
     test('invalidate removes the entry', () async {
       final DateTime now = DateTime.fromMillisecondsSinceEpoch(1000);
       final File file = File('${tmp.path}/cache.json');
-      final YoutubeStreamCache c =
-          YoutubeStreamCache(file: file, now: () => now);
+      final YoutubeStreamCache c = YoutubeStreamCache(
+        file: file,
+        now: () => now,
+      );
       await c.put('vid1', entryExpiringAt(now.millisecondsSinceEpoch + 60000));
       await c.invalidate('vid1');
       expect(await c.get('vid1'), isNull);
@@ -131,14 +150,17 @@ void main() {
       final File file = File('${tmp.path}/cache.json');
       file.writeAsStringSync('{ this is not json');
       final YoutubeStreamCache c = YoutubeStreamCache(
-          file: file, now: () => DateTime.fromMillisecondsSinceEpoch(1000));
+        file: file,
+        now: () => DateTime.fromMillisecondsSinceEpoch(1000),
+      );
       expect(await c.get('vid1'), isNull);
     });
 
     test('entry json round-trips', () {
       final YoutubeStreamCacheEntry e = entryExpiringAt(123456);
-      final YoutubeStreamCacheEntry back =
-          YoutubeStreamCacheEntry.fromJson(e.toJson());
+      final YoutubeStreamCacheEntry back = YoutubeStreamCacheEntry.fromJson(
+        e.toJson(),
+      );
       expect(back.streamUrl, e.streamUrl);
       expect(back.audioStreamUrl, e.audioStreamUrl);
       expect(back.miningVideoUrl, e.miningVideoUrl);
@@ -160,19 +182,20 @@ void main() {
         expiresAtMs: 123456,
         targetHeight: 1440,
       );
-      final YoutubeStreamCacheEntry back =
-          YoutubeStreamCacheEntry.fromJson(e.toJson());
+      final YoutubeStreamCacheEntry back = YoutubeStreamCacheEntry.fromJson(
+        e.toJson(),
+      );
       expect(back.targetHeight, 1440);
     });
 
     test('旧缓存 JSON 无 targetHeight 字段 → 读回 null（自动语义，向后兼容）', () {
       final YoutubeStreamCacheEntry back =
           YoutubeStreamCacheEntry.fromJson(<String, dynamic>{
-        'streamUrl': 'https://g/v?itag=137',
-        'miningVideoHasAudio': true,
-        'httpHeaders': <String, dynamic>{},
-        'expiresAtMs': 99,
-      });
+            'streamUrl': 'https://g/v?itag=137',
+            'miningVideoHasAudio': true,
+            'httpHeaders': <String, dynamic>{},
+            'expiresAtMs': 99,
+          });
       expect(back.targetHeight, isNull);
     });
   });

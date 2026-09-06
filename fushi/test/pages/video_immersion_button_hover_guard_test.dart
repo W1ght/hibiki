@@ -39,7 +39,8 @@ void main() {
     );
     expect(
       src.contains(
-          'Listenable.merge(<Listenable>[\n                  _lockButtonVisible,\n                  _lockButtonHovered,\n                ])'),
+        'Listenable.merge(<Listenable>[\n                  _lockButtonVisible,\n                  _lockButtonHovered,\n                ])',
+      ),
       isTrue,
       reason: '锁按钮应同时监听 _lockButtonVisible 与 _lockButtonHovered',
     );
@@ -51,13 +52,22 @@ void main() {
     final int end = src.indexOf('Widget _buildVideoSideActionRail(', start);
     expect(end, greaterThan(start));
     final String body = src.substring(start, end);
-    expect(body.contains('opaque: false'), isTrue,
-        reason: 'keep-alive 不阻断指针下探（按钮点击 / 画面 hover 不受影响）');
-    expect(body.contains('_lockButtonHovered.value = true'), isTrue,
-        reason: '进按钮置 _lockButtonHovered=true，顶住锁按钮显示');
+    expect(
+      body.contains('opaque: false'),
+      isTrue,
+      reason: 'keep-alive 不阻断指针下探（按钮点击 / 画面 hover 不受影响）',
+    );
+    expect(
+      body.contains('_lockButtonHovered.value = true'),
+      isTrue,
+      reason: '进按钮置 _lockButtonHovered=true，顶住锁按钮显示',
+    );
     expect(body.contains('_pokeLockButton()'), isTrue, reason: '进按钮续命自动淡出定时器');
-    expect(body.contains('_lockButtonHovered.value = false'), isTrue,
-        reason: '出按钮置 false，可见性回落到 _lockButtonVisible 的自然淡出');
+    expect(
+      body.contains('_lockButtonHovered.value = false'),
+      isTrue,
+      reason: '出按钮置 false，可见性回落到 _lockButtonVisible 的自然淡出',
+    );
   });
 
   test('keep-alive 真正包住锁按钮本体（_buildSideLockButton 内调用）', () {
@@ -66,7 +76,10 @@ void main() {
     final int end = src.indexOf('onPressed: _toggleImmersiveLock,', start);
     expect(end, greaterThan(start));
     final String body = src.substring(start, end);
-    expect(body.contains('_lockButtonHoverKeepAlive('), isTrue,
-        reason: 'keep-alive 应包在锁按钮本体上');
+    expect(
+      body.contains('_lockButtonHoverKeepAlive('),
+      isTrue,
+      reason: 'keep-alive 应包在锁按钮本体上',
+    );
   });
 }

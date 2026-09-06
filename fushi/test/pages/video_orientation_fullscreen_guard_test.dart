@@ -51,25 +51,41 @@ void main() {
 
   group('子1: 全屏方向回调-移动端永不放开方向, 桌面保留原生全屏', () {
     test('两个回调存在且替换 media_kit 默认 (窗口侧+全屏路由 Video 都接)', () {
-      expect(src.contains('Future<void> _enterVideoNativeFullscreen() async {'),
-          isTrue,
-          reason: '缺 _enterVideoNativeFullscreen');
-      expect(src.contains('Future<void> _exitVideoNativeFullscreen() async {'),
-          isTrue,
-          reason: '缺 _exitVideoNativeFullscreen');
-      expect(src.contains('onEnterFullscreen: _enterVideoNativeFullscreen,'),
-          isTrue,
-          reason: '窗口侧 Video 未接 _enterVideoNativeFullscreen');
       expect(
-          src.contains('onExitFullscreen: _exitVideoNativeFullscreen,'), isTrue,
-          reason: '窗口侧 Video 未接 _exitVideoNativeFullscreen');
-      expect(src.contains('onEnterFullscreen: enterNativeFullscreen,'), isTrue,
-          reason: '全屏路由 Video 未接 enterNativeFullscreen');
-      expect(src.contains('onExitFullscreen: exitNativeFullscreen,'), isTrue,
-          reason: '全屏路由 Video 未接 exitNativeFullscreen');
+        src.contains('Future<void> _enterVideoNativeFullscreen() async {'),
+        isTrue,
+        reason: '缺 _enterVideoNativeFullscreen',
+      );
       expect(
-        src.contains('final Future<void> Function() enterNativeFullscreen =\n'
-            '        stateValue.widget.onEnterFullscreen;'),
+        src.contains('Future<void> _exitVideoNativeFullscreen() async {'),
+        isTrue,
+        reason: '缺 _exitVideoNativeFullscreen',
+      );
+      expect(
+        src.contains('onEnterFullscreen: _enterVideoNativeFullscreen,'),
+        isTrue,
+        reason: '窗口侧 Video 未接 _enterVideoNativeFullscreen',
+      );
+      expect(
+        src.contains('onExitFullscreen: _exitVideoNativeFullscreen,'),
+        isTrue,
+        reason: '窗口侧 Video 未接 _exitVideoNativeFullscreen',
+      );
+      expect(
+        src.contains('onEnterFullscreen: enterNativeFullscreen,'),
+        isTrue,
+        reason: '全屏路由 Video 未接 enterNativeFullscreen',
+      );
+      expect(
+        src.contains('onExitFullscreen: exitNativeFullscreen,'),
+        isTrue,
+        reason: '全屏路由 Video 未接 exitNativeFullscreen',
+      );
+      expect(
+        src.contains(
+          'final Future<void> Function() enterNativeFullscreen =\n'
+          '        stateValue.widget.onEnterFullscreen;',
+        ),
         isTrue,
         reason: '全屏路由回调必须来自窗口侧 widget.onEnterFullscreen (同一套)',
       );
@@ -92,18 +108,28 @@ void main() {
           isTrue,
           reason: '$sig 移动端分支必须只允许两个横屏',
         );
-        expect(body.contains('DeviceOrientation.portraitUp'), isFalse,
-            reason: '$sig 不得允许竖屏 (删竖屏模式)');
-        expect(body.contains('DeviceOrientation.portraitDown'), isFalse,
-            reason: '$sig 不得允许倒置竖屏');
+        expect(
+          body.contains('DeviceOrientation.portraitUp'),
+          isFalse,
+          reason: '$sig 不得允许竖屏 (删竖屏模式)',
+        );
+        expect(
+          body.contains('DeviceOrientation.portraitDown'),
+          isFalse,
+          reason: '$sig 不得允许倒置竖屏',
+        );
       }
     });
 
     test('桌面分支转调 media_kit 默认回调 (保留全屏=OS窗口真全屏, 不破坏桌面)', () {
-      final String enterBody =
-          methodBody(src, 'Future<void> _enterVideoNativeFullscreen() async {');
-      final String exitBody =
-          methodBody(src, 'Future<void> _exitVideoNativeFullscreen() async {');
+      final String enterBody = methodBody(
+        src,
+        'Future<void> _enterVideoNativeFullscreen() async {',
+      );
+      final String exitBody = methodBody(
+        src,
+        'Future<void> _exitVideoNativeFullscreen() async {',
+      );
       expect(
         enterBody.contains('!isMobilePlatform') &&
             enterBody.contains('defaultEnterNativeFullscreen()'),
@@ -128,10 +154,16 @@ void main() {
         isTrue,
         reason: '退全屏桌面分支必须转调 defaultExitNativeFullscreen (对称还原OS窗口)',
       );
-      expect(enterBody.contains('if (!isMobilePlatform) return;'), isFalse,
-          reason: '进全屏桌面分支不得 no-op (会丢桌面OS窗口真全屏)');
-      expect(exitBody.contains('if (!isMobilePlatform) return;'), isFalse,
-          reason: '退全屏桌面分支不得 no-op');
+      expect(
+        enterBody.contains('if (!isMobilePlatform) return;'),
+        isFalse,
+        reason: '进全屏桌面分支不得 no-op (会丢桌面OS窗口真全屏)',
+      );
+      expect(
+        exitBody.contains('if (!isMobilePlatform) return;'),
+        isFalse,
+        reason: '退全屏桌面分支不得 no-op',
+      );
     });
 
     test('整个回调链不含真实的空列表 setPreferredOrientations (全文件守卫)', () {
@@ -145,48 +177,67 @@ void main() {
 
   group('子2: 双击按平台分流-移动端 playOrPause, 桌面全屏', () {
     test('移动端双击接 playOrPause (非全屏路由)', () {
-      final String body =
-          methodBody(src, 'void _handleVideoPointerUp(PointerUpEvent event) {');
+      final String body = methodBody(
+        src,
+        'void _handleVideoPointerUp(PointerUpEvent event) {',
+      );
       expect(
         body.contains('if (_isDesktopVideoControls) {') &&
             body.contains(
-                'unawaited(_controller?.playOrPause() ?? Future<void>.value());'),
+              'unawaited(_controller?.playOrPause() ?? Future<void>.value());',
+            ),
         isTrue,
         reason: '移动端双击必须 = playOrPause (不再进 media_kit 全屏路由弹回竖屏)',
       );
     });
 
     test('桌面双击保留全屏 toggle', () {
-      final String body =
-          methodBody(src, 'void _handleVideoPointerUp(PointerUpEvent event) {');
+      final String body = methodBody(
+        src,
+        'void _handleVideoPointerUp(PointerUpEvent event) {',
+      );
       final int desktopBranch = body.indexOf('if (_isDesktopVideoControls) {');
       expect(desktopBranch, greaterThanOrEqualTo(0));
       final int toggleIdx = body.indexOf(
-          '_toggleVideoFullscreen(controlsContext)', desktopBranch);
+        '_toggleVideoFullscreen(controlsContext)',
+        desktopBranch,
+      );
       final int elseIdx = body.indexOf('} else {', desktopBranch);
-      expect(toggleIdx, greaterThan(desktopBranch),
-          reason: '桌面双击分支应保留 _toggleVideoFullscreen');
-      expect(toggleIdx, lessThan(elseIdx),
-          reason: '_toggleVideoFullscreen 必须在桌面分支内 (else 是移动端 playOrPause)');
+      expect(
+        toggleIdx,
+        greaterThan(desktopBranch),
+        reason: '桌面双击分支应保留 _toggleVideoFullscreen',
+      );
+      expect(
+        toggleIdx,
+        lessThan(elseIdx),
+        reason: '_toggleVideoFullscreen 必须在桌面分支内 (else 是移动端 playOrPause)',
+      );
     });
 
     test('media_kit 桌面主题禁用内置双击全屏 (toggleFullscreenOnDoublePress:false)', () {
-      expect(src.contains('toggleFullscreenOnDoublePress: false'), isTrue,
-          reason: '桌面主题必须禁用 media_kit 内置双击全屏 (避免与 app 双击重复触发)');
+      expect(
+        src.contains('toggleFullscreenOnDoublePress: false'),
+        isTrue,
+        reason: '桌面主题必须禁用 media_kit 内置双击全屏 (避免与 app 双击重复触发)',
+      );
     });
   });
 
   group('子3: 移动端永不进全屏路由 - 系统返回只一段退出', () {
     test('_toggleVideoFullscreen 移动端 no-op (杜绝所有入口推进全屏路由)', () {
       final String body = methodBody(
-          src, 'Future<void> _toggleVideoFullscreen(BuildContext context) {');
+        src,
+        'Future<void> _toggleVideoFullscreen(BuildContext context) {',
+      );
       expect(
         body.contains('if (isMobilePlatform) return Future<void>.value();'),
         isTrue,
         reason: '移动端 _toggleVideoFullscreen 必须 no-op (否则全屏路由进栈 两段式返回)',
       );
-      final int gate =
-          body.indexOf('if (isMobilePlatform) return Future<void>.value();');
+      final int gate = body.indexOf(
+        'if (isMobilePlatform) return Future<void>.value();',
+      );
       final int push = body.indexOf('_pushNeutralizedVideoFullscreen(context)');
       expect(gate, greaterThanOrEqualTo(0));
       expect(push, greaterThan(gate), reason: '移动端早返回必须排在进全屏路由之前');
@@ -194,7 +245,9 @@ void main() {
 
     test('移动端隐藏全屏按钮 (底栏无全屏入口, 永不进全屏路由)', () {
       final String body = methodBody(
-          src, 'Widget _buildFullscreenButton({required bool desktop}) {');
+        src,
+        'Widget _buildFullscreenButton({required bool desktop}) {',
+      );
       expect(
         body.contains('if (isMobilePlatform) return const SizedBox.shrink();'),
         isTrue,
@@ -203,16 +256,27 @@ void main() {
     });
 
     test('系统返回/Esc 退出经 _handleBackOrExit, 不依赖先退全屏', () {
-      expect(src.contains('Future<void> _handleBackOrExit() async {'), isTrue,
-          reason: '缺统一返回收口 _handleBackOrExit');
-      final String body =
-          methodBody(src, 'Future<void> _handleBackOrExit() async {');
+      expect(
+        src.contains('Future<void> _handleBackOrExit() async {'),
+        isTrue,
+        reason: '缺统一返回收口 _handleBackOrExit',
+      );
+      final String body = methodBody(
+        src,
+        'Future<void> _handleBackOrExit() async {',
+      );
       // BUG-2119 起 pop 经 exitAfterPersist 的 `exit: nav.pop` 无条件执行，
       // 锚点从 `nav.pop()` 改成 `nav.pop`；语义不变：直接退页，无全屏路由中间态。
-      expect(body.contains('nav.pop'), isTrue,
-          reason: '_handleBackOrExit 应直接退页 (无全屏路由中间态)');
-      expect(body.contains('_pushNeutralizedVideoFullscreen'), isFalse,
-          reason: '返回收口不得反向进全屏路由');
+      expect(
+        body.contains('nav.pop'),
+        isTrue,
+        reason: '_handleBackOrExit 应直接退页 (无全屏路由中间态)',
+      );
+      expect(
+        body.contains('_pushNeutralizedVideoFullscreen'),
+        isFalse,
+        reason: '返回收口不得反向进全屏路由',
+      );
     });
   });
 }

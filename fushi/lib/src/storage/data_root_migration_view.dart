@@ -37,8 +37,9 @@ class DataRootMigrationView extends StatelessWidget {
     final ColorScheme cs = Theme.of(context).colorScheme;
     if (failure != null) return _buildFailure(context, cs, failure!);
     final ({int copied, int total})? p = progress;
-    final double? fraction =
-        p != null && p.total > 0 ? p.copied / p.total : null;
+    final double? fraction = p != null && p.total > 0
+        ? p.copied / p.total
+        : null;
     return Scaffold(
       backgroundColor: background ?? cs.surface,
       body: Center(

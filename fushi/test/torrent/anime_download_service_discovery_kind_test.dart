@@ -69,14 +69,14 @@ AnimeDownloadPlan _plan(String contentKind) {
 }
 
 Map<String, dynamic> _completedTorrent() => <String, dynamic>{
-      'hash': _kHash,
-      'name': 'torrent',
-      'progress': 1.0,
-      'state': 'stalledUP',
-      'save_path': '/dl',
-      'content_path': '/dl/Pack',
-      'amount_left': 0,
-    };
+  'hash': _kHash,
+  'name': 'torrent',
+  'progress': 1.0,
+  'state': 'stalledUP',
+  'save_path': '/dl',
+  'content_path': '/dl/Pack',
+  'amount_left': 0,
+};
 
 void main() {
   group('resolveAllAbsolutePaths', () {
@@ -90,8 +90,8 @@ void main() {
         contentPath: '/dl/Pack',
         amountLeft: 0,
       );
-      final List<String> all =
-          resolveAllAbsolutePaths(info, const <TorrentFileEntry>[
+      final List<String>
+      all = resolveAllAbsolutePaths(info, const <TorrentFileEntry>[
         TorrentFileEntry(name: 'Pack/game.exe', size: 1, progress: 1, index: 0),
         TorrentFileEntry(name: 'Pack/data.xp3', size: 1, progress: 1, index: 1),
       ]);
@@ -174,10 +174,7 @@ void main() {
 
       expect(calls.single.$1, AnimeDownloadPlan.kindGame);
       expect(calls.single.$2, hasLength(2));
-      expect(
-        (await singlePlan()).status,
-        AnimeDownloadPlan.statusImported,
-      );
+      expect((await singlePlan()).status, AnimeDownloadPlan.statusImported);
     });
 
     test('kindAudiobook 导入 0 条 → failed 带原因', () async {

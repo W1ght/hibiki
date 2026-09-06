@@ -97,9 +97,9 @@ class _AudioRecorderDialogPageState
   }
 
   List<Widget> get actions => [
-        if (_isRecording) buildStopButton() else buildRecordButton(),
-        buildSaveButton(),
-      ];
+    if (_isRecording) buildStopButton() else buildRecordButton(),
+    buildSaveButton(),
+  ];
 
   Widget buildContent() {
     return SizedBox(
@@ -112,13 +112,15 @@ class _AudioRecorderDialogPageState
 
   final AudioPlayer _audioPlayer = AudioPlayer();
 
-  final ValueNotifier<Duration> _positionNotifier =
-      ValueNotifier<Duration>(Duration.zero);
+  final ValueNotifier<Duration> _positionNotifier = ValueNotifier<Duration>(
+    Duration.zero,
+  );
   // Consumers (buildSlider/buildDurationAndPosition) always treat this as a
   // non-null Duration, so the notifier is non-nullable and stream nulls are
   // mapped to Duration.zero at the listener (HBK-AUDIT-107).
-  final ValueNotifier<Duration> _durationNotifier =
-      ValueNotifier<Duration>(Duration.zero);
+  final ValueNotifier<Duration> _durationNotifier = ValueNotifier<Duration>(
+    Duration.zero,
+  );
   final ValueNotifier<PlayerState?> _playerStateNotifier =
       ValueNotifier<PlayerState?>(null);
 
@@ -135,9 +137,7 @@ class _AudioRecorderDialogPageState
             children: [
               buildPlayButton(),
               if (showTime) buildDurationAndPosition(),
-              Expanded(
-                child: buildSlider(),
-              ),
+              Expanded(child: buildSlider()),
             ],
           );
         },
@@ -148,9 +148,7 @@ class _AudioRecorderDialogPageState
   /// Build the play/pause button
   Widget buildPlayButton() {
     return MultiValueListenableBuilder(
-      valueListenables: [
-        _playerStateNotifier,
-      ],
+      valueListenables: [_playerStateNotifier],
       builder: (context, values, _) {
         final FushiDesignTokens tokens = FushiDesignTokens.of(context);
         PlayerState? playerState = values.elementAt(0);
@@ -196,8 +194,9 @@ class _AudioRecorderDialogPageState
               );
 
               _noisySub?.cancel();
-              _noisySub =
-                  session.becomingNoisyEventStream.listen((event) async {
+              _noisySub = session.becomingNoisyEventStream.listen((
+                event,
+              ) async {
                 await _audioPlayer.pause();
                 session?.setActive(false);
               });
@@ -254,9 +253,7 @@ class _AudioRecorderDialogPageState
           return FushiTimeFormat.getVideoDurationText(duration).trim();
         }
 
-        return Text(
-          '${getPositionText()} / ${getDurationText()}',
-        );
+        return Text('${getPositionText()} / ${getDurationText()}');
       },
     );
   }
@@ -353,20 +350,16 @@ class _AudioRecorderDialogPageState
                     ),
                   ),
                 if (showTime)
-                  const Opacity(
-                    opacity: 0.5,
-                    child: Text(
-                      '--:-- / --:--',
-                    ),
-                  ),
+                  const Opacity(opacity: 0.5, child: Text('--:-- / --:--')),
                 Expanded(
                   child: Opacity(
                     opacity: 0.5,
                     child: adaptiveSlider(
                       context: context,
                       value: 0,
-                      thumbColor:
-                          Theme.of(context).colorScheme.onSurfaceVariant,
+                      thumbColor: Theme.of(
+                        context,
+                      ).colorScheme.onSurfaceVariant,
                       onChanged: (value) {},
                     ),
                   ),
@@ -383,9 +376,7 @@ class _AudioRecorderDialogPageState
     return adaptiveDialogAction(
       context: context,
       isDestructiveAction: true,
-      child: Text(
-        t.dialog_stop,
-      ),
+      child: Text(t.dialog_stop),
       onPressed: () async {
         await _recorder.stop();
         _audioFile = File(widget.filePath);
@@ -441,10 +432,7 @@ class _AudioRecorderDialogPageState
 
   void executeSave() {
     if (_audioFile == null) {
-      FushiToast.show(
-        msg: t.no_audio_file,
-        severity: ToastSeverity.error,
-      );
+      FushiToast.show(msg: t.no_audio_file, severity: ToastSeverity.error);
       return;
     }
 

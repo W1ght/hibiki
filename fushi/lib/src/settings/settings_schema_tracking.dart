@@ -11,9 +11,8 @@ SettingsDestination buildMediaTrackingDestination() {
     summary: t.media_tracking_summary,
     icon: Icons.auto_awesome_motion_outlined,
     sections: const <SettingsSection>[],
-    body: (SettingsContext settingsContext) => MediaTrackingSettingsBody(
-      appModel: settingsContext.appModel,
-    ),
+    body: (SettingsContext settingsContext) =>
+        MediaTrackingSettingsBody(appModel: settingsContext.appModel),
     bodySearchEntries: <SettingsBodySearchEntry>[
       SettingsBodySearchEntry(
         id: 'media_tracking.account',

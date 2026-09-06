@@ -55,8 +55,10 @@ String? buildClipSrtContent({
     index++;
     buffer
       ..writeln(index)
-      ..writeln('${formatSrtTimestamp(outStart)} --> '
-          '${formatSrtTimestamp(outEnd)}')
+      ..writeln(
+        '${formatSrtTimestamp(outStart)} --> '
+        '${formatSrtTimestamp(outEnd)}',
+      )
       ..writeln(text)
       ..writeln();
   }

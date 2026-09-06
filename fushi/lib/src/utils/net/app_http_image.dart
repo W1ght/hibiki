@@ -36,16 +36,15 @@ class AppHttpImage extends ImageProvider<AppHttpImage> {
   ImageStreamCompleter loadImage(
     AppHttpImage key,
     ImageDecoderCallback decode,
-  ) =>
-      MultiFrameImageStreamCompleter(
-        codec: _loadCodec(key, decode),
-        scale: key.scale,
-        debugLabel: key.url,
-        informationCollector: () => <DiagnosticsNode>[
-          DiagnosticsProperty<ImageProvider>('Image provider', this),
-          DiagnosticsProperty<String>('URL', key.url),
-        ],
-      );
+  ) => MultiFrameImageStreamCompleter(
+    codec: _loadCodec(key, decode),
+    scale: key.scale,
+    debugLabel: key.url,
+    informationCollector: () => <DiagnosticsNode>[
+      DiagnosticsProperty<ImageProvider>('Image provider', this),
+      DiagnosticsProperty<String>('URL', key.url),
+    ],
+  );
 
   Future<ui.Codec> _loadCodec(
     AppHttpImage key,

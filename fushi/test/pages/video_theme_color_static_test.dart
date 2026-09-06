@@ -40,8 +40,10 @@ void main() {
     expect(source, contains('uiScale: _videoUiScale'));
     expect(source, isNot(contains('FushiAppUiScale.of(context)')));
     expect(source, isNot(contains('fontWeight: _subtitleStyle.fontWeight')));
-    expect(source,
-        isNot(contains('shadowThickness: _subtitleStyle.shadowThickness')));
+    expect(
+      source,
+      isNot(contains('shadowThickness: _subtitleStyle.shadowThickness')),
+    );
     expect(source, isNot(contains('color: Colors.white')));
     expect(source, isNot(contains('color: Colors.black.withValues')));
   });

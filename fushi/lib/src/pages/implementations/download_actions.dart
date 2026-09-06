@@ -20,7 +20,7 @@ enum GenericPushOutcome {
   invalidMagnet,
   storeUnavailable,
   notReady,
-  pushFailed
+  pushFailed,
 }
 
 /// 下载后端是否就绪：内置引擎宿主就绪（桌面 + DLL）且未显式选外接 qb → 就绪；
@@ -33,8 +33,9 @@ enum GenericPushOutcome {
 /// 它当「未配置」再弹一次配置引导，字段原样、无错误提示，用户出不去。所以两处
 /// 必须是同一个函数，而不是各判各的。
 bool torrentBackendReady(AppModel appModel) {
-  final QbConnectionConfig config =
-      effectiveTorrentConfig(appModel.qbConnectionConfig);
+  final QbConnectionConfig config = effectiveTorrentConfig(
+    appModel.qbConnectionConfig,
+  );
   if (appModel.isEmbeddedTorrentReady &&
       config.backend != QbConnectionConfig.backendQbittorrent) {
     return true;
@@ -48,8 +49,9 @@ Future<void> maybeShowTorrentUploadConsent(
   BuildContext context,
   AppModel appModel,
 ) async {
-  final QbConnectionConfig config =
-      effectiveTorrentConfig(appModel.qbConnectionConfig);
+  final QbConnectionConfig config = effectiveTorrentConfig(
+    appModel.qbConnectionConfig,
+  );
   if (appModel.torrentUploadIntroShown ||
       !appModel.isEmbeddedTorrentReady ||
       config.backend == QbConnectionConfig.backendQbittorrent) {
@@ -78,8 +80,9 @@ Future<GenericPushOutcome> pushGenericMagnet({
   required String contentKind,
 }) async {
   if (!torrentBackendReady(appModel)) return GenericPushOutcome.notReady;
-  final QbConnectionConfig config =
-      effectiveTorrentConfig(appModel.qbConnectionConfig);
+  final QbConnectionConfig config = effectiveTorrentConfig(
+    appModel.qbConnectionConfig,
+  );
   final String? infoHash = parseMagnetInfoHash(magnet.trim());
   if (infoHash == null) return GenericPushOutcome.invalidMagnet;
   final AnimeDownloadPlanStore? store = appModel.animeDownloadPlanStore;
@@ -142,8 +145,8 @@ Future<GenericPushOutcome> enqueueSelectedDiscoveryTorrent({
   if (pipeline == null) return GenericPushOutcome.storeUnavailable;
   await maybeShowTorrentUploadConsent(context, appModel);
   try {
-    final VideoDownloadBackendTarget target =
-        await appModel.currentVideoDownloadBackendTarget();
+    final VideoDownloadBackendTarget target = await appModel
+        .currentVideoDownloadBackendTarget();
     await pipeline.enqueueManual(
       VideoDownloadManualEnqueueRequest(
         title: title,

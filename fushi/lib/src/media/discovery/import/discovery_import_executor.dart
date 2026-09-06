@@ -42,8 +42,8 @@ class DiscoveryImportExecutor {
   DiscoveryImportExecutor({
     required DiscoveryDomainImporters importers,
     DiscoveryArchiveExtractor? extractor,
-  })  : _importers = importers,
-        _extractor = extractor ?? DiscoveryArchiveExtractor();
+  }) : _importers = importers,
+       _extractor = extractor ?? DiscoveryArchiveExtractor();
 
   final DiscoveryDomainImporters _importers;
   final DiscoveryArchiveExtractor _extractor;
@@ -52,8 +52,7 @@ class DiscoveryImportExecutor {
   Future<DiscoveryImportOutcome> importDownload(
     DiscoveryDownloadTask task,
     File file,
-  ) =>
-      importFile(task.item.kind, file);
+  ) => importFile(task.item.kind, file);
 
   /// torrent 整包入口：对一组已就位的绝对路径分类入库（torrent 下载完成后
   /// `AnimeDownloadService` 调这里）。
@@ -71,17 +70,21 @@ class DiscoveryImportExecutor {
       for (final String path in filePaths)
         if (File(path).existsSync()) path: File(path).lengthSync(),
     };
-    DiscoveryImportPlan plan =
-        classifyDiscoveryDirectory(kind, filePaths, fileSizes: sizes);
+    DiscoveryImportPlan plan = classifyDiscoveryDirectory(
+      kind,
+      filePaths,
+      fileSizes: sizes,
+    );
     if (plan is UnsupportedPlan) {
-      final List<String> archives = <String>[
-        for (final String path in filePaths)
-          if (isDiscoveryArchivePath(path)) path,
-      ]..sort((String a, String b) {
-          // 同大小时按路径定二，不把「解哪个包」交给调用方清单的偶然顺序。
-          final int bySize = (sizes[b] ?? 0).compareTo(sizes[a] ?? 0);
-          return bySize != 0 ? bySize : a.compareTo(b);
-        });
+      final List<String> archives =
+          <String>[
+            for (final String path in filePaths)
+              if (isDiscoveryArchivePath(path)) path,
+          ]..sort((String a, String b) {
+            // 同大小时按路径定二，不把「解哪个包」交给调用方清单的偶然顺序。
+            final int bySize = (sizes[b] ?? 0).compareTo(sizes[a] ?? 0);
+            return bySize != 0 ? bySize : a.compareTo(b);
+          });
       if (archives.isNotEmpty) {
         final File archive = File(archives.first);
         final Directory extracted = await _extractor.extract(
@@ -90,8 +93,10 @@ class DiscoveryImportExecutor {
               '${archive.parent.path}${Platform.pathSeparator}${_stemOf(archive.path)}',
         );
         final List<String> merged = List<String>.of(filePaths);
-        for (final FileSystemEntity entity
-            in extracted.listSync(recursive: true, followLinks: false)) {
+        for (final FileSystemEntity entity in extracted.listSync(
+          recursive: true,
+          followLinks: false,
+        )) {
           if (entity is File) {
             merged.add(entity.path);
             sizes[entity.path] = entity.lengthSync();
@@ -116,8 +121,10 @@ class DiscoveryImportExecutor {
       );
       final List<String> paths = <String>[];
       final Map<String, int> sizes = <String, int>{};
-      for (final FileSystemEntity entity
-          in extracted.listSync(recursive: true, followLinks: false)) {
+      for (final FileSystemEntity entity in extracted.listSync(
+        recursive: true,
+        followLinks: false,
+      )) {
         if (entity is File) {
           paths.add(entity.path);
           sizes[entity.path] = entity.lengthSync();
@@ -167,10 +174,8 @@ class DiscoveryImportExecutor {
     }
   }
 
-  static DiscoveryImportOutcome _single(String? key) => DiscoveryImportOutcome(
-        importedCount: key == null ? 0 : 1,
-        summary: key,
-      );
+  static DiscoveryImportOutcome _single(String? key) =>
+      DiscoveryImportOutcome(importedCount: key == null ? 0 : 1, summary: key);
 
   static String _stemOf(String path) {
     final String base = _fileName(path);

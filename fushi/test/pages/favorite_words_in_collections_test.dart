@@ -23,8 +23,9 @@ void main() {
 
   late Directory pathProviderDir;
   setUpAll(() {
-    pathProviderDir =
-        Directory.systemTemp.createTempSync('hibiki_fav_words_collections_pp');
+    pathProviderDir = Directory.systemTemp.createTempSync(
+      'hibiki_fav_words_collections_pp',
+    );
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
       (MethodCall call) async => pathProviderDir.path,
@@ -71,16 +72,15 @@ void main() {
   }
 
   Widget buildPage() => ProviderScope(
-        overrides: <Override>[
-          appProvider.overrideWith((ref) => appModel),
-        ],
-        child: TranslationProvider(
-          child: const MaterialApp(home: CollectionsPage()),
-        ),
-      );
+    overrides: <Override>[appProvider.overrideWith((ref) => appModel)],
+    child: TranslationProvider(
+      child: const MaterialApp(home: CollectionsPage()),
+    ),
+  );
 
-  testWidgets('收藏的单词在收藏列表里真渲染（词形 + 读音 + 释义 + 类型标签）',
-      (WidgetTester tester) async {
+  testWidgets('收藏的单词在收藏列表里真渲染（词形 + 读音 + 释义 + 类型标签）', (
+    WidgetTester tester,
+  ) async {
     await seedWord(
       expression: '邂逅',
       reading: 'かいこう',
@@ -93,8 +93,11 @@ void main() {
     // 词形（标题行）。
     expect(find.text('邂逅'), findsOneWidget, reason: '收藏的单词词形必须出现在收藏列表');
     // 类型标签「单词」（leading 列）。
-    expect(find.text(t.collection_word), findsWidgets,
-        reason: '收藏词行必须标注「单词」类型');
+    expect(
+      find.text(t.collection_word),
+      findsWidgets,
+      reason: '收藏词行必须标注「单词」类型',
+    );
     // 副标题包含读音 + 释义（用 textContaining，因副标题还拼了日期）。
     expect(find.textContaining('かいこう'), findsOneWidget);
     expect(find.textContaining('chance meeting'), findsOneWidget);

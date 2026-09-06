@@ -56,18 +56,19 @@ class _ProbeBackend implements SyncBackend {
 }
 
 /// 造一对通道：云通道（会抛）+ 互联通道（应当仍被跑到）。
-({_ProbeBackend cloud, _ProbeBackend interconnect}) _probePair() => (
-      cloud: _ProbeBackend(throwOnRestore: true),
-      interconnect: _ProbeBackend(),
-    );
+({_ProbeBackend cloud, _ProbeBackend interconnect}) _probePair() =>
+    (cloud: _ProbeBackend(throwOnRestore: true), interconnect: _ProbeBackend());
 
 List<SyncChannel> _channels(
-        ({_ProbeBackend cloud, _ProbeBackend interconnect}) p) =>
-    <SyncChannel>[
-      SyncChannel(p.cloud, type: SyncBackendType.webDav, isInterconnect: false),
-      SyncChannel(p.interconnect,
-          type: SyncBackendType.fushiServer, isInterconnect: true),
-    ];
+  ({_ProbeBackend cloud, _ProbeBackend interconnect}) p,
+) => <SyncChannel>[
+  SyncChannel(p.cloud, type: SyncBackendType.webDav, isInterconnect: false),
+  SyncChannel(
+    p.interconnect,
+    type: SyncBackendType.fushiServer,
+    isInterconnect: true,
+  ),
+];
 
 void main() {
   tearDown(() => debugSyncChannelsOverride = null);
@@ -129,15 +130,17 @@ void main() {
       await repo.setAutoSyncEnabled(true);
       // per-book 路径要先取到书，取不到会在进入通道循环前就以 nothingToSync 收尾。
       const String bookKey = 'bug1604book';
-      await db.insertEpubBook(EpubBooksCompanion.insert(
-        bookKey: bookKey,
-        title: 'BUG-1604 fixture',
-        epubPath: '/tmp/$bookKey/original.epub',
-        extractDir: '/tmp/$bookKey',
-        chapterCount: 1,
-        chaptersJson: '["c"]',
-        importedAt: 0,
-      ));
+      await db.insertEpubBook(
+        EpubBooksCompanion.insert(
+          bookKey: bookKey,
+          title: 'BUG-1604 fixture',
+          epubPath: '/tmp/$bookKey/original.epub',
+          extractDir: '/tmp/$bookKey',
+          chapterCount: 1,
+          chaptersJson: '["c"]',
+          importedAt: 0,
+        ),
+      );
 
       final ({_ProbeBackend cloud, _ProbeBackend interconnect}) p =
           _probePair();

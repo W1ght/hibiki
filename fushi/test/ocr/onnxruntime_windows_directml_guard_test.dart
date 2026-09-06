@@ -29,7 +29,9 @@ void main() {
   // DML 接线独占一个翻译单元：ORT 的 dml_provider_factory.h 与 Flutter 的
   // flutter_windows.h 各在**全局作用域**声明了一个叫 Default 的枚举量，同处一个
   // TU 必然 C2365（换 include 顺序只是换谁被判成重定义）。
-  final String dmlUnit = File('$pluginRoot/src/dml_provider.cc').readAsStringSync();
+  final String dmlUnit = File(
+    '$pluginRoot/src/dml_provider.cc',
+  ).readAsStringSync();
 
   group('Windows ONNX Runtime DirectML 接线', () {
     test('构建使用官方 DirectML Runtime 并随包带齐依赖 DLL', () {
@@ -43,7 +45,8 @@ void main() {
       expect(
         cmake,
         contains('microsoft.ai.directml'),
-        reason: 'DirectML 重分发包与 ORT 包分开下载；这里必须是 nuget v3-flatcontainer '
+        reason:
+            'DirectML 重分发包与 ORT 包分开下载；这里必须是 nuget v3-flatcontainer '
             '的**全小写** package id——该端点的路径段只接受小写，写成展示用的 '
             'Microsoft.AI.DirectML 会让构建期下载 404',
       );
@@ -72,7 +75,8 @@ void main() {
       expect(
         dmlUnit.contains('#include <flutter/'),
         isFalse,
-        reason: 'dml_provider.cc 里加一行 flutter 头就会把 flutter_windows.h 的'
+        reason:
+            'dml_provider.cc 里加一行 flutter 头就会把 flutter_windows.h 的'
             '全局 Default 拉进来，与 OrtDmlPerformancePreference::Default 撞成 C2365',
       );
       expect(
@@ -81,9 +85,9 @@ void main() {
         reason: '反向同理：plugin.cpp 已经含 flutter 头，不得再把 DML 头拉回来',
       );
       expect(
-        File('$pluginRoot/CMakeLists.txt')
-            .readAsStringSync()
-            .contains('src/dml_provider.cc'),
+        File(
+          '$pluginRoot/CMakeLists.txt',
+        ).readAsStringSync().contains('src/dml_provider.cc'),
         isTrue,
         reason: '新翻译单元必须进源码表，否则 AppendDirectMLProvider 链接不到',
       );

@@ -42,13 +42,12 @@ void main() {
         AnkiNoteType(id: 0, name: 'Vocab', fields: ['Expression', 'Meaning']),
       ],
     );
-    SharedPreferences.setMockInitialValues(
-      {'fushi_anki_settings': jsonEncode(settings.toJson())},
-    );
+    SharedPreferences.setMockInitialValues({
+      'fushi_anki_settings': jsonEncode(settings.toJson()),
+    });
   }
 
-  test(
-      'transport-dead host is probed once, then short-circuited inside the '
+  test('transport-dead host is probed once, then short-circuited inside the '
       'cooldown window (BUG-1302)', () async {
     await seedSettings();
     var calls = 0;
@@ -63,33 +62,41 @@ void main() {
 
     expect(await repo.isDuplicate('日本語', 'にほんご'), isFalse);
     final int callsAfterFirst = calls;
-    expect(callsAfterFirst, greaterThan(0),
-        reason: 'the first probe must actually try the host');
-    expect(AnkiConnectRepository.isDuplicateCheckInCooldown, isTrue,
-        reason: 'a transport failure must arm the cooldown');
+    expect(
+      callsAfterFirst,
+      greaterThan(0),
+      reason: 'the first probe must actually try the host',
+    );
+    expect(
+      AnkiConnectRepository.isDuplicateCheckInCooldown,
+      isTrue,
+      reason: 'a transport failure must arm the cooldown',
+    );
 
     // 模拟一次多词条渲染：后续每个词条都不该再触网。
     for (var i = 0; i < 5; i++) {
       expect(await repo.isDuplicate('単語$i', 'たんご'), isFalse);
     }
 
-    expect(calls, callsAfterFirst,
-        reason: 'cooldown window must issue zero further HTTP requests');
+    expect(
+      calls,
+      callsAfterFirst,
+      reason: 'cooldown window must issue zero further HTTP requests',
+    );
   });
 
-  test(
-      'cooldown is shared across repository instances (createAnkiRepository '
+  test('cooldown is shared across repository instances (createAnkiRepository '
       'builds a fresh one per bridge call)', () async {
     await seedSettings();
     var calls = 0;
     AnkiConnectRepository newRepo() => AnkiConnectRepository(
-          service: AnkiConnectService(
-            client: MockClient((http.Request request) async {
-              calls++;
-              throw const SocketException('Connection refused');
-            }),
-          ),
-        );
+      service: AnkiConnectService(
+        client: MockClient((http.Request request) async {
+          calls++;
+          throw const SocketException('Connection refused');
+        }),
+      ),
+    );
 
     expect(await newRepo().isDuplicate('日本語', 'にほんご'), isFalse);
     final int callsAfterFirst = calls;
@@ -99,38 +106,50 @@ void main() {
       expect(await newRepo().isDuplicate('単語$i', 'たんご'), isFalse);
     }
 
-    expect(calls, callsAfterFirst,
-        reason: 'the cooldown must be process-wide, not per-instance');
+    expect(
+      calls,
+      callsAfterFirst,
+      reason: 'the cooldown must be process-wide, not per-instance',
+    );
   });
 
   test(
-      'a reachable host answering a business error does NOT arm the cooldown '
-      '(short-circuiting it would break duplicate detection for good)',
-      () async {
-    await seedSettings();
-    var calls = 0;
-    final repo = AnkiConnectRepository(
-      service: AnkiConnectService(
-        client: MockClient((http.Request request) async {
-          calls++;
-          // 主机活着，只是这个 action 报了业务错误。
-          return http.Response(
-            jsonEncode(
-                {'result': null, 'error': 'collection is not available'}),
-            200,
-          );
-        }),
-      ),
-    );
+    'a reachable host answering a business error does NOT arm the cooldown '
+    '(short-circuiting it would break duplicate detection for good)',
+    () async {
+      await seedSettings();
+      var calls = 0;
+      final repo = AnkiConnectRepository(
+        service: AnkiConnectService(
+          client: MockClient((http.Request request) async {
+            calls++;
+            // 主机活着，只是这个 action 报了业务错误。
+            return http.Response(
+              jsonEncode({
+                'result': null,
+                'error': 'collection is not available',
+              }),
+              200,
+            );
+          }),
+        ),
+      );
 
-    expect(await repo.isDuplicate('日本語', 'にほんご'), isFalse);
-    expect(AnkiConnectRepository.isDuplicateCheckInCooldown, isFalse,
-        reason: 'an answering host is reachable — never cool it down');
+      expect(await repo.isDuplicate('日本語', 'にほんご'), isFalse);
+      expect(
+        AnkiConnectRepository.isDuplicateCheckInCooldown,
+        isFalse,
+        reason: 'an answering host is reachable — never cool it down',
+      );
 
-    expect(await repo.isDuplicate('単語', 'たんご'), isFalse);
-    expect(calls, greaterThan(1),
-        reason: 'a reachable host must keep being queried');
-  });
+      expect(await repo.isDuplicate('単語', 'たんご'), isFalse);
+      expect(
+        calls,
+        greaterThan(1),
+        reason: 'a reachable host must keep being queried',
+      );
+    },
+  );
 
   test('a successful probe clears an armed cooldown immediately', () async {
     await seedSettings();
@@ -167,17 +186,24 @@ void main() {
     fail = false;
     final int callsBefore = calls;
 
-    expect(await repo.isDuplicate('日本語', 'にほんご'), isTrue,
-        reason: 'a live host must report the duplicate');
+    expect(
+      await repo.isDuplicate('日本語', 'にほんご'),
+      isTrue,
+      reason: 'a live host must report the duplicate',
+    );
     expect(calls, greaterThan(callsBefore));
     expect(AnkiConnectRepository.isDuplicateCheckInCooldown, isFalse);
   });
 
   test('cooldown window is bounded, not permanent', () {
-    expect(AnkiConnectRepository.kDuplicateCheckUnreachableCooldown,
-        lessThanOrEqualTo(const Duration(minutes: 1)),
-        reason: 'Anki coming back online must be picked up quickly');
-    expect(AnkiConnectRepository.kDuplicateCheckUnreachableCooldown,
-        greaterThan(Duration.zero));
+    expect(
+      AnkiConnectRepository.kDuplicateCheckUnreachableCooldown,
+      lessThanOrEqualTo(const Duration(minutes: 1)),
+      reason: 'Anki coming back online must be picked up quickly',
+    );
+    expect(
+      AnkiConnectRepository.kDuplicateCheckUnreachableCooldown,
+      greaterThan(Duration.zero),
+    );
   });
 }

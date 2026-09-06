@@ -33,7 +33,9 @@ void main() {
       expect(js, contains('if (key && _fushiRevealedKeys[key]) return;'));
       // 揭开 key 计算器暴露给点击/焦点揭开路径复用。
       expect(
-          js, contains('window.__fushiImageRevealKey = _fushiImageRevealKey;'));
+        js,
+        contains('window.__fushiImageRevealKey = _fushiImageRevealKey;'),
+      );
     });
 
     test('连续模式同样透传 revealedKeys（重排/重载不复原遮罩）', () {
@@ -57,13 +59,18 @@ void main() {
       // 两个 window 全局只在开了防剧透遮罩时才挂上（caret / 有声书桥接都靠这个
       // 全局在不在来探测），否则行为与改动前不一致。
       final int gate = js.indexOf('if (C.blurImages) {');
-      final int export =
-          js.indexOf('window.__fushiImageRevealKey = _fushiImageRevealKey;');
+      final int export = js.indexOf(
+        'window.__fushiImageRevealKey = _fushiImageRevealKey;',
+      );
       expect(gate, isNonNegative);
-      expect(export, greaterThan(gate),
-          reason: '揭开 key 计算器的 window 暴露必须落在 C.blurImages 门控之内');
-      final int markExport =
-          js.indexOf('window.__fushiMarkImageRevealed = function(key)');
+      expect(
+        export,
+        greaterThan(gate),
+        reason: '揭开 key 计算器的 window 暴露必须落在 C.blurImages 门控之内',
+      );
+      final int markExport = js.indexOf(
+        'window.__fushiMarkImageRevealed = function(key)',
+      );
       expect(markExport, greaterThan(gate), reason: '会话内揭开登记同样受同一个开关门控');
     });
   });
@@ -86,17 +93,17 @@ void main() {
       expect(src, contains("handlerName: 'onImageRevealed'"));
       expect(src, contains('_revealedImageKeys.add(key)'));
       // BUG-1140 第二阶段①：会话集不再嵌进脚本源码，改随每章 config 下发。
-      expect(
-        src,
-        contains('revealedKeys: _revealedImageKeys.toList(),'),
-      );
+      expect(src, contains('revealedKeys: _revealedImageKeys.toList(),'));
     });
 
     test('会话集字段声明在阅读器 State（随本书阅读会话存活）', () {
-      final String page =
-          _read('lib/src/pages/implementations/reader_fushi_page.dart');
+      final String page = _read(
+        'lib/src/pages/implementations/reader_fushi_page.dart',
+      );
       expect(
-          page, contains('final Set<String> _revealedImageKeys = <String>{};'));
+        page,
+        contains('final Set<String> _revealedImageKeys = <String>{};'),
+      );
     });
   });
 }

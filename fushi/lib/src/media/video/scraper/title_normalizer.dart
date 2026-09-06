@@ -153,8 +153,11 @@ class TitleNormalizer {
     final List<int> rb = b.runes.toList();
     if (ra.isEmpty) return rb.length;
     if (rb.isEmpty) return ra.length;
-    List<int> prev =
-        List<int>.generate(rb.length + 1, (int i) => i, growable: false);
+    List<int> prev = List<int>.generate(
+      rb.length + 1,
+      (int i) => i,
+      growable: false,
+    );
     List<int> curr = List<int>.filled(rb.length + 1, 0, growable: false);
     for (int i = 1; i <= ra.length; i++) {
       curr[0] = i;

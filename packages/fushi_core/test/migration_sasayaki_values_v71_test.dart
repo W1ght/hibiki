@@ -99,35 +99,52 @@ void main() {
     final FushiDatabase db = _openMigratedFromV70();
     addTearDown(db.close);
 
-    final QueryRow ver =
-        await db.customSelect('PRAGMA user_version').getSingle();
-    expect(ver.read<int>('user_version'), db.schemaVersion,
-        reason: 'migration must land on the current schema version');
+    final QueryRow ver = await db
+        .customSelect('PRAGMA user_version')
+        .getSingle();
+    expect(
+      ver.read<int>('user_version'),
+      db.schemaVersion,
+      reason: 'migration must land on the current schema version',
+    );
 
     // ── audio_cues.text_fragment_id ──────────────────────────────────
     final cues = await db
         .customSelect(
-            'SELECT text_fragment_id FROM audio_cues ORDER BY sentence_index')
+          'SELECT text_fragment_id FROM audio_cues ORDER BY sentence_index',
+        )
         .get();
-    expect(cues.map((r) => r.read<String>('text_fragment_id')).toList(),
-        <String>['fushi-cue://s=1&ns=100&ne=200', 'srt://5', 'frag-1']);
+    expect(
+      cues.map((r) => r.read<String>('text_fragment_id')).toList(),
+      <String>['fushi-cue://s=1&ns=100&ne=200', 'srt://5', 'frag-1'],
+    );
 
     // ── preferences ──────────────────────────────────────────────────
     final prefs = await db
         .customSelect('SELECT key, value FROM preferences')
         .get()
-        .then((rows) => <String, String>{
-              for (final QueryRow r in rows)
-                r.read<String>('key'): r.read<String>('value'),
-            });
-    expect(prefs['custom_themes'],
-        '["{\\"id\\":\\"t1\\",\\"seed\\":1,\\"sentenceAudioHighlightColor\\":4278}"]',
-        reason: '② 条目 JSON 键改写，其余字节不动');
-    expect(prefs['custom_theme_sentence_audio_color'], 'i:123',
-        reason: '③ 偏好键整键改名，值不动');
+        .then(
+          (rows) => <String, String>{
+            for (final QueryRow r in rows)
+              r.read<String>('key'): r.read<String>('value'),
+          },
+        );
+    expect(
+      prefs['custom_themes'],
+      '["{\\"id\\":\\"t1\\",\\"seed\\":1,\\"sentenceAudioHighlightColor\\":4278}"]',
+      reason: '② 条目 JSON 键改写，其余字节不动',
+    );
+    expect(
+      prefs['custom_theme_sentence_audio_color'],
+      'i:123',
+      reason: '③ 偏好键整键改名，值不动',
+    );
     expect(prefs.containsKey('custom_theme_sasayaki_color'), isFalse);
-    expect(prefs['unrelated_theme_holder'], 'keep sasayakiColor as-is',
-        reason: '键不是 custom_themes 的值不许动');
+    expect(
+      prefs['unrelated_theme_holder'],
+      'keep sasayakiColor as-is',
+      reason: '键不是 custom_themes 的值不许动',
+    );
 
     // ── profile_settings ─────────────────────────────────────────────
     final rows = await db
@@ -137,15 +154,16 @@ void main() {
         .map((r) => <String>[r.read<String>('key'), r.read<String>('value')])
         .toList();
     expect(
-        pairs,
-        containsAll(<List<String>>[
-          <String>[
-            'custom_themes',
-            '["{\\"id\\":\\"t2\\",\\"sentenceAudioHighlightColor\\":99}"]'
-          ],
-          <String>['custom_theme_sentence_audio_color', 'i:5'],
-          <String>['audio_highlight_color', 'i:7'],
-        ]));
+      pairs,
+      containsAll(<List<String>>[
+        <String>[
+          'custom_themes',
+          '["{\\"id\\":\\"t2\\",\\"sentenceAudioHighlightColor\\":99}"]',
+        ],
+        <String>['custom_theme_sentence_audio_color', 'i:5'],
+        <String>['audio_highlight_color', 'i:7'],
+      ]),
+    );
     expect(pairs.length, 3);
   });
 }

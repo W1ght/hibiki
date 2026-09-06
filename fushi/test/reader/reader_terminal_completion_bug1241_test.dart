@@ -36,10 +36,7 @@ void main() {
     final String webview = File(
       'lib/src/pages/implementations/reader_fushi/webview.part.dart',
     ).readAsStringSync();
-    expect(
-      webview,
-      contains("typeof r.isAtEnd === 'function' && r.isAtEnd()"),
-    );
+    expect(webview, contains("typeof r.isAtEnd === 'function' && r.isAtEnd()"));
     expect(
       webview,
       contains('(atEnd ? total : Math.round(p * total))'),

@@ -96,13 +96,9 @@ int? videoAirSeasonQuarter(String? airDate) {
 /// 数据结构消掉特例：`year == null && unknownOnly == false` 即「全部」，
 /// 不需要独立的 all 标志位。
 class VideoYearFilter {
-  const VideoYearFilter.all()
-      : year = null,
-        unknownOnly = false;
+  const VideoYearFilter.all() : year = null, unknownOnly = false;
 
-  const VideoYearFilter.unknown()
-      : year = null,
-        unknownOnly = true;
+  const VideoYearFilter.unknown() : year = null, unknownOnly = true;
 
   const VideoYearFilter.year(int this.year) : unknownOnly = false;
 
@@ -198,9 +194,7 @@ int? latestPlayedSeriesIndex(List<VideoSeriesPlaybackState> members) {
 
 /// The Next Episode target is always the member immediately after the episode
 /// returned by [latestPlayedSeriesIndex].
-int? nextEpisodeAfterLatestPlayed(
-  List<VideoSeriesPlaybackState> members,
-) {
+int? nextEpisodeAfterLatestPlayed(List<VideoSeriesPlaybackState> members) {
   final int? current = latestPlayedSeriesIndex(members);
   if (current == null || current + 1 >= members.length) return null;
   return current + 1;
@@ -304,17 +298,19 @@ List<T> selectVideoHeroUnits<T>(
   List<VideoHeroCandidate<T>> candidates, {
   int limit = 5,
 }) {
-  final List<VideoHeroCandidate<T>> watching = <VideoHeroCandidate<T>>[
-    for (final VideoHeroCandidate<T> c in candidates)
-      if (c.hasUnfinishedTrace && c.lastWatchedAt != null) c,
-  ]..sort((VideoHeroCandidate<T> a, VideoHeroCandidate<T> b) =>
-      b.lastWatchedAt!.compareTo(a.lastWatchedAt!));
+  final List<VideoHeroCandidate<T>> watching =
+      <VideoHeroCandidate<T>>[
+        for (final VideoHeroCandidate<T> c in candidates)
+          if (c.hasUnfinishedTrace && c.lastWatchedAt != null) c,
+      ]..sort(
+        (VideoHeroCandidate<T> a, VideoHeroCandidate<T> b) =>
+            b.lastWatchedAt!.compareTo(a.lastWatchedAt!),
+      );
   final List<VideoHeroCandidate<T>> pool = watching.isNotEmpty
       ? watching
-      : (List<VideoHeroCandidate<T>>.of(candidates)
-        ..sort((VideoHeroCandidate<T> a, VideoHeroCandidate<T> b) =>
-            b.latestImportedAt.compareTo(a.latestImportedAt)));
-  return <T>[
-    for (final VideoHeroCandidate<T> c in pool.take(limit)) c.unit,
-  ];
+      : (List<VideoHeroCandidate<T>>.of(candidates)..sort(
+          (VideoHeroCandidate<T> a, VideoHeroCandidate<T> b) =>
+              b.latestImportedAt.compareTo(a.latestImportedAt),
+        ));
+  return <T>[for (final VideoHeroCandidate<T> c in pool.take(limit)) c.unit];
 }

@@ -73,8 +73,11 @@ List<T> filterByMediaSearch<T>(
   final String needle = normalizeMediaSearchText(query);
   if (needle.isEmpty) return items;
   return items
-      .where((T it) => titles(it)
-          .any((String t) => normalizeMediaSearchText(t).contains(needle)))
+      .where(
+        (T it) => titles(
+          it,
+        ).any((String t) => normalizeMediaSearchText(t).contains(needle)),
+      )
       .toList(growable: false);
 }
 

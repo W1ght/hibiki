@@ -8,10 +8,8 @@ import 'package:fushi/src/utils/components/settings_shared.dart';
 
 /// 把一个父级 [WidgetBuilder] 包成平台对应的页面路由（Material/Cupertino）。
 /// 两个渲染器各自提供工厂，是它们之间唯一的导航差异。
-typedef SettingsRouteBuilder = Route<void> Function(
-  BuildContext context,
-  WidgetBuilder builder,
-);
+typedef SettingsRouteBuilder =
+    Route<void> Function(BuildContext context, WidgetBuilder builder);
 
 /// section footer 文字样式解析器。两个渲染器对 footer 用不同的 TextStyle
 /// （Material：bodySmall + surfaces.onVariant；Cupertino：metadata + secondaryLabel），
@@ -66,9 +64,11 @@ class SettingsSchemaSection extends StatelessWidget {
     // 让覆盖守卫能焦点驱动到所有行（见 debugSettingsForceExpandAllSections）。
     final bool containsPendingReveal =
         SettingsSearchReveal.pendingItemId != null &&
-            section.items.any((SettingsItem item) =>
-                item.id == SettingsSearchReveal.pendingItemId);
-    final bool initiallyExpanded = debugSettingsForceExpandAllSections ||
+        section.items.any(
+          (SettingsItem item) => item.id == SettingsSearchReveal.pendingItemId,
+        );
+    final bool initiallyExpanded =
+        debugSettingsForceExpandAllSections ||
         !section.collapsedByDefault ||
         containsPendingReveal;
     return Column(
@@ -110,8 +110,8 @@ class SettingsSchemaItem extends StatelessWidget {
       SettingsActionItem action => _action(action),
       SettingsSwitchItem toggle => _switch(toggle),
       SettingsSegmentedItem<dynamic> segmented => _segmented<Object>(
-          segmented as SettingsSegmentedItem<Object>,
-        ),
+        segmented as SettingsSegmentedItem<Object>,
+      ),
       SettingsSliderItem slider => _slider(slider),
       SettingsStepperItem stepper => _stepper(stepper),
       SettingsTextItem text => _text(text),
@@ -127,10 +127,7 @@ class SettingsSchemaItem extends StatelessWidget {
     return row;
   }
 
-  Widget _routeRow(
-    BuildContext context,
-    SettingsNavigationItem navigation,
-  ) {
+  Widget _routeRow(BuildContext context, SettingsNavigationItem navigation) {
     return AdaptiveSettingsNavigationRow(
       // resolveTitle：诊断行的实时计数在这里求值（schema 树本身是缓存的常量树）。
       title: navigation.resolveTitle(settingsContext),
@@ -286,7 +283,8 @@ class SettingsSchemaItem extends StatelessWidget {
       initialValue: text.value(settingsContext),
       obscureText: text.secret,
       revealToggle: text.secret,
-      keyboardType: text.keyboardType ??
+      keyboardType:
+          text.keyboardType ??
           (text.secret ? TextInputType.visiblePassword : TextInputType.text),
       hintText: text.placeholder,
       debounce: text.debounce,

@@ -127,16 +127,18 @@ Future<void> _pumpBook(
   int savedPage = 0,
 }) async {
   await tester.runAsync(() async {
-    await db.insertEpubBook(EpubBooksCompanion.insert(
-      bookKey: bookKey,
-      title: bookKey,
-      epubPath: 'manga.json',
-      extractDir: bookDir.path,
-      chapterCount: 4,
-      chaptersJson: '[]',
-      importedAt: DateTime.now().millisecondsSinceEpoch,
-      format: const Value<String>('manga'),
-    ));
+    await db.insertEpubBook(
+      EpubBooksCompanion.insert(
+        bookKey: bookKey,
+        title: bookKey,
+        epubPath: 'manga.json',
+        extractDir: bookDir.path,
+        chapterCount: 4,
+        chaptersJson: '[]',
+        importedAt: DateTime.now().millisecondsSinceEpoch,
+        format: const Value<String>('manga'),
+      ),
+    );
     if (savedPage > 0) {
       // v82：进度键 = epub_books.uid（insertEpubBook 自动生成，取回换算）。
       await ReaderPositionRepository(db).save(
@@ -162,8 +164,9 @@ Future<void> _pumpBook(
 }
 
 Directory _bookDir() {
-  final Directory dir =
-      Directory.systemTemp.createTempSync('manga_double_widget_');
+  final Directory dir = Directory.systemTemp.createTempSync(
+    'manga_double_widget_',
+  );
   File(p.join(dir.path, 'manga.json')).writeAsStringSync(_mangaJson());
   Directory(p.join(dir.path, 'images')).createSync();
   for (int i = 1; i <= 4; i++) {
@@ -194,10 +197,15 @@ void main() {
     // 配对 [0],[1,2],[3] → 跨页 1。
     await _pumpBook(tester, db, appModel, '横屏漫画', bookDir, savedPage: 2);
 
-    expect(find.byKey(const ValueKey<String>('manga_content_ready')),
-        findsOneWidget);
-    expect(find.text('2-3 / 4'), findsOneWidget,
-        reason: '横屏 auto 双页 + 封面独占：恢复到含第 3 页的跨页，指示区间 2-3');
+    expect(
+      find.byKey(const ValueKey<String>('manga_content_ready')),
+      findsOneWidget,
+    );
+    expect(
+      find.text('2-3 / 4'),
+      findsOneWidget,
+      reason: '横屏 auto 双页 + 封面独占：恢复到含第 3 页的跨页，指示区间 2-3',
+    );
     // 布局偏好菜单在 spread 模式下可见。
     expect(find.byType(PopupMenuButton<MangaSpreadPreference>), findsOneWidget);
   });

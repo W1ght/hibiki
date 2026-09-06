@@ -153,7 +153,8 @@ class VideoTopBarSlotsDelegate extends MultiChildLayoutDelegate {
     }
 
     // 右段整体右对齐贴右边缘；标题若属于右组，同样夹在 lead / tail 之间。
-    final double rightTotal = rightLead +
+    final double rightTotal =
+        rightLead +
         rightTail +
         (titlePlacement == VideoTopBarTitlePlacement.right ? title : 0);
     double rx = size.width - rightTotal;

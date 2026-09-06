@@ -92,10 +92,7 @@ class _ShortcutSettingsPageState extends BasePageState<ShortcutSettingsPage> {
   }
 
   Future<void> _save() async {
-    await saveShortcutRegistry(
-      _registry,
-      ReaderFushiSource.instance,
-    );
+    await saveShortcutRegistry(_registry, ReaderFushiSource.instance);
   }
 
   Future<void> _confirmResetScope(ShortcutScope scope) async {
@@ -160,15 +157,15 @@ class _ShortcutSettingsPageState extends BasePageState<ShortcutSettingsPage> {
   }) async {
     final ShortcutBindingEditResult? result =
         await showAppDialog<ShortcutBindingEditResult>(
-      context: context,
-      builder: (BuildContext ctx) => ShortcutBindingEditDialog(
-        action: action,
-        registry: _registry,
-        initial: _registry.bindingsFor(action),
-        prefillKey: prefillKey,
-        prefillButton: prefillButton,
-      ),
-    );
+          context: context,
+          builder: (BuildContext ctx) => ShortcutBindingEditDialog(
+            action: action,
+            registry: _registry,
+            initial: _registry.bindingsFor(action),
+            prefillKey: prefillKey,
+            prefillButton: prefillButton,
+          ),
+        );
     if (result == null || !mounted) return;
     _registry.updateBindingWithReassignments(
       action,
@@ -231,8 +228,9 @@ class _ShortcutSettingsPageState extends BasePageState<ShortcutSettingsPage> {
   /// [ShortcutAction.actionsForScope] + [ShortcutActionLabel]），选中返回该 action，
   /// 取消返回 null。纯 UI 选择器，不写任何注册表（写穿仍由后续 [_editBinding] 完成）。
   Future<ShortcutAction?> _pickActionForScope(ShortcutScope scope) {
-    final List<ShortcutAction> actions =
-        ShortcutAction.actionsForScope(scope).toList(growable: false);
+    final List<ShortcutAction> actions = ShortcutAction.actionsForScope(
+      scope,
+    ).toList(growable: false);
     return showAppDialog<ShortcutAction>(
       context: context,
       builder: (BuildContext ctx) {
@@ -440,7 +438,7 @@ class _ShortcutSettingsPageState extends BasePageState<ShortcutSettingsPage> {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final bool isMobilePlatform =
         defaultTargetPlatform == TargetPlatform.android ||
-            defaultTargetPlatform == TargetPlatform.iOS;
+        defaultTargetPlatform == TargetPlatform.iOS;
     if (scope == ShortcutScope.globalExternal && isMobilePlatform) {
       return AdaptiveSettingsSection(
         title: scope.label,
@@ -459,7 +457,7 @@ class _ShortcutSettingsPageState extends BasePageState<ShortcutSettingsPage> {
     // 还会写出一条永不触发的死绑定——这类 scope 在可视化模式下也回落到列表行。
     final bool hasVisualChannels =
         scope.channels.contains(ShortcutChannel.keyboard) ||
-            scope.channels.contains(ShortcutChannel.gamepad);
+        scope.channels.contains(ShortcutChannel.gamepad);
     return AdaptiveSettingsSection(
       title: scope.label,
       children: <Widget>[
@@ -524,8 +522,9 @@ class _ShortcutSettingsPageState extends BasePageState<ShortcutSettingsPage> {
             ),
           )
         else
-          for (final ShortcutAction action
-              in ShortcutAction.actionsForScope(scope))
+          for (final ShortcutAction action in ShortcutAction.actionsForScope(
+            scope,
+          ))
             _ActionTile(
               action: action,
               bindings: _registry.bindingsFor(action),

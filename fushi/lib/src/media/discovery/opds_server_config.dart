@@ -85,16 +85,15 @@ class OpdsServerConfig {
     String? password,
     bool? enabled,
     bool? allowInsecureHttp,
-  }) =>
-      OpdsServerConfig(
-        id: id,
-        name: name ?? this.name,
-        catalogUrl: catalogUrl ?? this.catalogUrl,
-        username: username ?? this.username,
-        password: password ?? this.password,
-        enabled: enabled ?? this.enabled,
-        allowInsecureHttp: allowInsecureHttp ?? this.allowInsecureHttp,
-      );
+  }) => OpdsServerConfig(
+    id: id,
+    name: name ?? this.name,
+    catalogUrl: catalogUrl ?? this.catalogUrl,
+    username: username ?? this.username,
+    password: password ?? this.password,
+    enabled: enabled ?? this.enabled,
+    allowInsecureHttp: allowInsecureHttp ?? this.allowInsecureHttp,
+  );
 
   /// 密码在 JSON 里 base64 存放。
   ///
@@ -105,15 +104,14 @@ class OpdsServerConfig {
   /// `kCredentialPreferenceKeys`（绝不写日志、绝不进明文导出）与
   /// device-local 清单（绝不随备份/同步出设备）。
   Map<String, Object?> toJson() => <String, Object?>{
-        'id': id,
-        'name': name,
-        'url': catalogUrl.toString(),
-        'username': username,
-        if (password.isNotEmpty)
-          'passwordB64': base64Encode(utf8.encode(password)),
-        'enabled': enabled,
-        'allowInsecureHttp': allowInsecureHttp,
-      };
+    'id': id,
+    'name': name,
+    'url': catalogUrl.toString(),
+    'username': username,
+    if (password.isNotEmpty) 'passwordB64': base64Encode(utf8.encode(password)),
+    'enabled': enabled,
+    'allowInsecureHttp': allowInsecureHttp,
+  };
 
   /// 解析一条配置；任何字段畸形都抛，由列表层逐条丢弃（见
   /// [decodeOpdsServerConfigs]）——一条坏记录不该让整份清单消失。

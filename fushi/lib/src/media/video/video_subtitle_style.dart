@@ -105,9 +105,9 @@ double videoSubtitleControlsReserve({
   final double hotzoneBottom = isDesktop
       ? buttonBarHeight - seekBarBottomButtonBarOverlap
       : bottomChromeBaseline +
-          bottomSystemInset +
-          buttonBarHeight +
-          seekBarButtonGap;
+            bottomSystemInset +
+            buttonBarHeight +
+            seekBarButtonGap;
   // 热区上缘 + 呼吸间距：字幕命中区整体骑在进度条整段可点区上方，不与 seek 命中区重叠
   // （BUG-901 移动 / BUG-1224 桌面）。
   return hotzoneBottom + seekBarContainerHeight + subtitleBreathingGap;
@@ -158,7 +158,8 @@ double videoSubtitleControlsTopReserve({
     trackCenter = buttonBarHeight;
   } else {
     // 移动：轨道贴容器底缘（bottomCenter），中线 = seekBarBottom + 轨道半高。
-    final double seekBarBottom = bottomChromeBaseline +
+    final double seekBarBottom =
+        bottomChromeBaseline +
         bottomSystemInset +
         buttonBarHeight +
         seekBarButtonGap;
@@ -192,8 +193,7 @@ EdgeInsets videoControlsChromeInsets({
   required EdgeInsets systemPadding,
   EdgeInsets? themePadding,
 }) {
-  return themePadding ??
-      (isFullscreenRoute ? systemPadding : EdgeInsets.zero);
+  return themePadding ?? (isFullscreenRoute ? systemPadding : EdgeInsets.zero);
 }
 
 /// 字幕字号的**屏幕自适应因子**（TODO-1199）。
@@ -466,22 +466,22 @@ class VideoSubtitleStyle {
   }
 
   static String encode(VideoSubtitleStyle s) => jsonEncode(<String, dynamic>{
-        '_v': 2,
-        'fontSize': s.fontSize,
-        'textColor': s.textColor?.toARGB32(),
-        'fontWeight': s.fontWeight,
-        'shadowColor': s.shadowColor?.toARGB32(),
-        'shadowThickness': s.shadowThickness,
-        'backgroundColor': s.backgroundColor?.toARGB32(),
-        'backgroundOpacity': s.backgroundOpacity,
-        'bottomPadding': s.bottomPadding,
-        // null（从未单独调过副字幕位置）也照写：decode 侧 null → 继续跟随主字幕。
-        'secondaryBottomPadding': s.secondaryBottomPadding,
-        // 锚定（TODO-2838）：主层枚举名字符串（'bottom'/'top'）；副层 null（自动
-        // 对侧）也照写，decode 侧 null → 继续自动。
-        'mainAnchor': s.mainAnchor.name,
-        'secondaryAnchor': s.secondaryAnchor?.name,
-      });
+    '_v': 2,
+    'fontSize': s.fontSize,
+    'textColor': s.textColor?.toARGB32(),
+    'fontWeight': s.fontWeight,
+    'shadowColor': s.shadowColor?.toARGB32(),
+    'shadowThickness': s.shadowThickness,
+    'backgroundColor': s.backgroundColor?.toARGB32(),
+    'backgroundOpacity': s.backgroundOpacity,
+    'bottomPadding': s.bottomPadding,
+    // null（从未单独调过副字幕位置）也照写：decode 侧 null → 继续跟随主字幕。
+    'secondaryBottomPadding': s.secondaryBottomPadding,
+    // 锚定（TODO-2838）：主层枚举名字符串（'bottom'/'top'）；副层 null（自动
+    // 对侧）也照写，decode 侧 null → 继续自动。
+    'mainAnchor': s.mainAnchor.name,
+    'secondaryAnchor': s.secondaryAnchor?.name,
+  });
 
   static VideoSubtitleStyle decode(String? json) {
     if (json == null || json.isEmpty) return defaults;
@@ -541,14 +541,16 @@ class VideoSubtitleStyle {
           d['backgroundOpacity'],
           defaults.backgroundOpacity,
         ).clamp(0.0, 1.0),
-        bottomPadding: num2d(d['bottomPadding'], defaults.bottomPadding)
-            .clamp(0, kVideoSubtitleMaxPadding),
+        bottomPadding: num2d(
+          d['bottomPadding'],
+          defaults.bottomPadding,
+        ).clamp(0, kVideoSubtitleMaxPadding),
         // 缺字段（旧数据）/ 非数字 → null = 副字幕继续跟随主字幕位置（旧外观不变）。
         secondaryBottomPadding: d['secondaryBottomPadding'] is num
             ? (d['secondaryBottomPadding'] as num)
-                .toDouble()
-                .clamp(0, kVideoSubtitleMaxPadding)
-                .toDouble()
+                  .toDouble()
+                  .clamp(0, kVideoSubtitleMaxPadding)
+                  .toDouble()
             : null,
         // 锚定（TODO-2838）：缺字段（旧数据）/ 未知值 → 主层底锚、副层自动（对侧），
         // 旧外观像素级不变。
@@ -563,10 +565,10 @@ class VideoSubtitleStyle {
 
   /// JSON 里的锚定字符串 → 枚举；未知/非字符串返回 null（调用方决定回退语义）。
   static SubtitleLayerVAnchor? _decodeAnchor(Object? v) => switch (v) {
-        'top' => SubtitleLayerVAnchor.top,
-        'bottom' => SubtitleLayerVAnchor.bottom,
-        _ => null,
-      };
+    'top' => SubtitleLayerVAnchor.top,
+    'bottom' => SubtitleLayerVAnchor.bottom,
+    _ => null,
+  };
 
   static double _normalizeUiScale(double uiScale) {
     return FushiAppUiScale.normalize(uiScale);
@@ -694,8 +696,10 @@ EdgeInsets videoTopBarMargin({
 }) {
   return EdgeInsets.only(
     left: math.max(16.0, math.max(systemPadding.left, systemViewPadding.left)),
-    right:
-        math.max(16.0, math.max(systemPadding.right, systemViewPadding.right)),
+    right: math.max(
+      16.0,
+      math.max(systemPadding.right, systemViewPadding.right),
+    ),
     top: systemBarsVisible ? systemViewPadding.top : 0.0,
   );
 }

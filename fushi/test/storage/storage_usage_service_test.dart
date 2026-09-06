@@ -79,8 +79,11 @@ void main() {
     expect(assigned.toSet().length, assigned.length, reason: '同一顶层目录被分进了多个类目');
     // 与白名单互为全集（新目录加进 fushiOwnedDocumentsEntries 时，这里逼着
     // 给它选一个存储类目——否则存储页总量会漏账）。
-    expect(assigned.toSet(), AppPaths.fushiOwnedDocumentsEntries,
-        reason: '存储类目清单必须与 AppPaths.fushiOwnedDocumentsEntries 全覆盖对齐');
+    expect(
+      assigned.toSet(),
+      AppPaths.fushiOwnedDocumentsEntries,
+      reason: '存储类目清单必须与 AppPaths.fushiOwnedDocumentsEntries 全覆盖对齐',
+    );
   });
 
   test('audiobookPersistDirPath 与 AudiobookStorage 真实落盘目录逐字节一致', () async {
@@ -92,8 +95,10 @@ void main() {
     final Directory real = await AudiobookStorage.ensurePersistDir(persistKey);
     expect(audiobookPersistDirPath(docs, persistKey), real.path);
     // 哈希口径回归锚（与 fushi_core stable_hash 金标同源）。
-    expect(real.path,
-        p.join(docs.path, 'audiobooks', fnv1a32Hex(utf8.encode(persistKey))));
+    expect(
+      real.path,
+      p.join(docs.path, 'audiobooks', fnv1a32Hex(utf8.encode(persistKey))),
+    );
   });
 
   group('scanCategories', () {
@@ -111,30 +116,34 @@ void main() {
       addTearDown(() => AudiobookStorage.documentsRootResolver = null);
       final Directory audioA = await AudiobookStorage.ensurePersistDir('keyA');
       writeFile(p.join(audioA.path, 'audio.mp3'), 500);
-      final Directory srtAudioA =
-          await AudiobookStorage.ensurePersistDir('srtbook_1');
+      final Directory srtAudioA = await AudiobookStorage.ensurePersistDir(
+        'srtbook_1',
+      );
       writeFile(p.join(srtAudioA.path, 'audio2.mp3'), 40);
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: <StorageBookRef>[
-          StorageBookRef(
-            id: 'keyA',
-            title: 'A',
-            extractDir: bookA,
-            persistKeys: const <String>['keyA', 'srtbook_1'],
-          ),
-          StorageBookRef(
-            id: 'keyB',
-            title: 'B',
-            extractDir: bookB,
-            persistKeys: const <String>['keyB'],
-          ),
-        ],
-        dictionaryNames: const <String>[],
-      ).toList();
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: <StorageBookRef>[
+              StorageBookRef(
+                id: 'keyA',
+                title: 'A',
+                extractDir: bookA,
+                persistKeys: const <String>['keyA', 'srtbook_1'],
+              ),
+              StorageBookRef(
+                id: 'keyB',
+                title: 'B',
+                extractDir: bookB,
+                persistKeys: const <String>['keyB'],
+              ),
+            ],
+            dictionaryNames: const <String>[],
+          )
+          .toList();
 
       final StorageCategoryUsage books = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.books);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.books,
+      );
       // 100 + 300 + 11（孤儿）+ 500 + 40（audiobooks 整树）。
       expect(books.bytes, 951);
       // BUG-2096：孤儿目录也是一条明细。旧实现只铺 DB 已知的书，孤儿只体现在
@@ -154,9 +163,12 @@ void main() {
       expect(books.entries[2].kind, StorageEntryKind.readOnly);
       // 账对得上：明细之和 == 类目总量，页面上再没有解释不了的差额。
       expect(
-          books.entries
-              .fold<int>(0, (int sum, StorageEntryUsage e) => sum + e.bytes),
-          books.bytes);
+        books.entries.fold<int>(
+          0,
+          (int sum, StorageEntryUsage e) => sum + e.bytes,
+        ),
+        books.bytes,
+      );
     });
 
     test('BUG-1893：同步导入的明文音频目录（非哈希）计进明细，且不重复计数', () async {
@@ -169,29 +181,34 @@ void main() {
       writeFile(p.join(plainDir, 'a.mp3'), 500);
       writeFile(p.join(plainDir, 'b.mp3'), 200);
       // 哈希目录根本不存在（同步导入从不建它）。
-      expect(Directory(audiobookPersistDirPath(docs, 'keyA')).existsSync(),
-          isFalse);
+      expect(
+        Directory(audiobookPersistDirPath(docs, 'keyA')).existsSync(),
+        isFalse,
+      );
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: <StorageBookRef>[
-          StorageBookRef(
-            id: 'keyA',
-            title: 'A',
-            extractDir: bookA,
-            persistKeys: const <String>['keyA'],
-            // DB 真相源：audioRoot（目录）+ audioPathsJson（它下面的文件）。
-            audioPaths: <String>[
-              plainDir,
-              p.join(plainDir, 'a.mp3'),
-              p.join(plainDir, 'b.mp3'),
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: <StorageBookRef>[
+              StorageBookRef(
+                id: 'keyA',
+                title: 'A',
+                extractDir: bookA,
+                persistKeys: const <String>['keyA'],
+                // DB 真相源：audioRoot（目录）+ audioPathsJson（它下面的文件）。
+                audioPaths: <String>[
+                  plainDir,
+                  p.join(plainDir, 'a.mp3'),
+                  p.join(plainDir, 'b.mp3'),
+                ],
+              ),
             ],
-          ),
-        ],
-        dictionaryNames: const <String>[],
-      ).toList();
+            dictionaryNames: const <String>[],
+          )
+          .toList();
 
       final StorageCategoryUsage books = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.books);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.books,
+      );
       expect(books.bytes, 800);
       // 明细之和 == 类目总量：音频不再只出现在差额里。
       expect(books.entries.single.bytes, 800);
@@ -211,24 +228,27 @@ void main() {
       final Directory persist = await AudiobookStorage.ensurePersistDir('keyA');
       writeFile(p.join(persist.path, 'audio.mp3'), 640);
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: <StorageBookRef>[
-          StorageBookRef(
-            id: 'keyA',
-            title: 'A',
-            extractDir: p.join(docs.path, 'fushi_books', 'keyA'),
-            persistKeys: const <String>['keyA'],
-            audioPaths: <String>[
-              persist.path,
-              p.join(persist.path, 'audio.mp3'),
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: <StorageBookRef>[
+              StorageBookRef(
+                id: 'keyA',
+                title: 'A',
+                extractDir: p.join(docs.path, 'fushi_books', 'keyA'),
+                persistKeys: const <String>['keyA'],
+                audioPaths: <String>[
+                  persist.path,
+                  p.join(persist.path, 'audio.mp3'),
+                ],
+              ),
             ],
-          ),
-        ],
-        dictionaryNames: const <String>[],
-      ).toList();
+            dictionaryNames: const <String>[],
+          )
+          .toList();
 
       final StorageCategoryUsage books = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.books);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.books,
+      );
       expect(books.entries.single.bytes, 640);
       expect(books.bytes, 640);
     });
@@ -238,26 +258,30 @@ void main() {
       // 也没有删除入口。
       AudiobookStorage.documentsRootResolver = () async => docs;
       addTearDown(() => AudiobookStorage.documentsRootResolver = null);
-      final Directory persist =
-          await AudiobookStorage.ensurePersistDir('srt-uid-1');
+      final Directory persist = await AudiobookStorage.ensurePersistDir(
+        'srt-uid-1',
+      );
       writeFile(p.join(persist.path, 'ch1.mp3'), 300);
       writeFile(p.join(persist.path, 'sub.srt'), 20);
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: <StorageBookRef>[
-          const StorageBookRef(
-            id: 'srt-uid-1',
-            title: 'S',
-            extractDir: '',
-            persistKeys: <String>['srt-uid-1'],
-            kind: StorageEntryKind.srtBook,
-          ),
-        ],
-        dictionaryNames: const <String>[],
-      ).toList();
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: <StorageBookRef>[
+              const StorageBookRef(
+                id: 'srt-uid-1',
+                title: 'S',
+                extractDir: '',
+                persistKeys: <String>['srt-uid-1'],
+                kind: StorageEntryKind.srtBook,
+              ),
+            ],
+            dictionaryNames: const <String>[],
+          )
+          .toList();
 
       final StorageCategoryUsage books = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.books);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.books,
+      );
       final StorageEntryUsage entry = books.entries.single;
       expect(entry.id, 'srt-uid-1');
       expect(entry.kind, StorageEntryKind.srtBook);
@@ -273,21 +297,24 @@ void main() {
       final String external = p.join(tempRoot.path, 'external', 'audio.mp3');
       writeFile(external, 900);
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: <StorageBookRef>[
-          StorageBookRef(
-            id: 'keyA',
-            title: 'A',
-            extractDir: bookA,
-            persistKeys: const <String>['keyA'],
-            audioPaths: <String>[external],
-          ),
-        ],
-        dictionaryNames: const <String>[],
-      ).toList();
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: <StorageBookRef>[
+              StorageBookRef(
+                id: 'keyA',
+                title: 'A',
+                extractDir: bookA,
+                persistKeys: const <String>['keyA'],
+                audioPaths: <String>[external],
+              ),
+            ],
+            dictionaryNames: const <String>[],
+          )
+          .toList();
 
       final StorageCategoryUsage books = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.books);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.books,
+      );
       // 类目总量本来就扫不到 app 目录外的文件；明细必须同口径，否则明细之和 >
       // 类目总量，页面自相矛盾。
       expect(books.bytes, 100);
@@ -298,19 +325,28 @@ void main() {
 
     test('词典类目：明细按词典名对应资源子目录', () async {
       writeFile(
-          p.join(docs.path, 'dictionaryResources', 'JMdict', 'blobs.bin'), 800);
+        p.join(docs.path, 'dictionaryResources', 'JMdict', 'blobs.bin'),
+        800,
+      );
       writeFile(
-          p.join(docs.path, 'dictionaryResources', 'Pixiv', 'blobs.bin'), 200);
+        p.join(docs.path, 'dictionaryResources', 'Pixiv', 'blobs.bin'),
+        200,
+      );
       writeFile(
-          p.join(docs.path, 'dictionaryImportWorkingDirectory', 'tmp.bin'), 5);
+        p.join(docs.path, 'dictionaryImportWorkingDirectory', 'tmp.bin'),
+        5,
+      );
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: const <StorageBookRef>[],
-        dictionaryNames: const <String>['JMdict', 'Pixiv'],
-      ).toList();
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: const <StorageBookRef>[],
+            dictionaryNames: const <String>['JMdict', 'Pixiv'],
+          )
+          .toList();
 
       final StorageCategoryUsage dicts = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.dictionaries);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.dictionaries,
+      );
       expect(dicts.bytes, 1005);
       expect(dicts.entries.length, 3);
       expect(dicts.entries[0].id, 'JMdict');
@@ -319,45 +355,58 @@ void main() {
       expect(dicts.entries[1].bytes, 200);
       // BUG-2096：DB 只认识 `dictionaryResources/<名>`，导入工作目录的残留同样
       // 占盘，必须自己冒出来。
-      expect(dicts.entries[2].label,
-          'dictionaryImportWorkingDirectory/tmp.bin');
+      expect(
+        dicts.entries[2].label,
+        'dictionaryImportWorkingDirectory/tmp.bin',
+      );
       expect(dicts.entries[2].bytes, 5);
       expect(
-          dicts.entries
-              .fold<int>(0, (int sum, StorageEntryUsage e) => sum + e.bytes),
-          dicts.bytes);
+        dicts.entries.fold<int>(
+          0,
+          (int sum, StorageEntryUsage e) => sum + e.bytes,
+        ),
+        dicts.bytes,
+      );
     });
 
-    test('BUG-2096：推荐包暂存的整包 zip 出现在词典明细里，而不是只体现为差额',
-        () async {
+    test('BUG-2096：推荐包暂存的整包 zip 出现在词典明细里，而不是只体现为差额', () async {
       // 用户实测：词典类目 11.3 GB，展开只有 583 MB 的词典条目——差的 10.7 GB
       // 是新手引导下载的推荐包（`recommended_pack/` 与 `dictionaryResources/`
       // 同属词典类目），旧实现下既看不见也删不掉。
       writeFile(
-          p.join(docs.path, 'dictionaryResources', 'JMdict', 'blobs.bin'), 600);
+        p.join(docs.path, 'dictionaryResources', 'JMdict', 'blobs.bin'),
+        600,
+      );
       writeFile(
-          p.join(docs.path, 'recommended_pack', 'fushi_recommended_pack.zip'),
-          9500);
+        p.join(docs.path, 'recommended_pack', 'fushi_recommended_pack.zip'),
+        9500,
+      );
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: const <StorageBookRef>[],
-        dictionaryNames: const <String>['JMdict'],
-      ).toList();
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: const <StorageBookRef>[],
+            dictionaryNames: const <String>['JMdict'],
+          )
+          .toList();
 
       final StorageCategoryUsage dicts = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.dictionaries);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.dictionaries,
+      );
       expect(dicts.bytes, 10100);
       final StorageEntryUsage pack = dicts.entries.singleWhere(
-          (StorageEntryUsage e) => e.label.contains('recommended_pack'));
+        (StorageEntryUsage e) => e.label.contains('recommended_pack'),
+      );
       expect(pack.bytes, 9500);
       expect(
-          dicts.entries
-              .fold<int>(0, (int sum, StorageEntryUsage e) => sum + e.bytes),
-          dicts.bytes);
+        dicts.entries.fold<int>(
+          0,
+          (int sum, StorageEntryUsage e) => sum + e.bytes,
+        ),
+        dicts.bytes,
+      );
     });
 
-    test('BUG-2096：认领判据按「类目根的直接子项」收敛，不与已知条目重复计数',
-        () async {
+    test('BUG-2096：认领判据按「类目根的直接子项」收敛，不与已知条目重复计数', () async {
       // 书的 extractDir 深于直接子项时（音频落在 `fushi_books/<key>/audio/`），
       // 直接子项 `fushi_books/<key>` 整个已被那本书认领——若按路径全等去重，它会
       // 被当成没人认领而再计一遍，类目总量凭空翻倍。
@@ -365,20 +414,23 @@ void main() {
       writeFile(p.join(bookA, 'ch1.html'), 100);
       writeFile(p.join(bookA, 'audio', 'a.mp3'), 400);
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: <StorageBookRef>[
-          StorageBookRef(
-            id: 'keyA',
-            title: 'A',
-            extractDir: bookA,
-            persistKeys: const <String>['keyA'],
-          ),
-        ],
-        dictionaryNames: const <String>[],
-      ).toList();
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: <StorageBookRef>[
+              StorageBookRef(
+                id: 'keyA',
+                title: 'A',
+                extractDir: bookA,
+                persistKeys: const <String>['keyA'],
+              ),
+            ],
+            dictionaryNames: const <String>[],
+          )
+          .toList();
 
       final StorageCategoryUsage books = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.books);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.books,
+      );
       expect(books.entries.length, 1);
       expect(books.entries.single.id, 'keyA');
       expect(books.bytes, 500);
@@ -387,25 +439,33 @@ void main() {
     test('database 类目 = support 根整体减去 OCR 模型；ocrModels 单列', () async {
       writeFile(p.join(support.path, 'fushi.sqlite'), 1000);
       writeFile(
-          p.join(support.path, kOcrModelsSupportChild, 'manga', 'a.onnx'), 300);
+        p.join(support.path, kOcrModelsSupportChild, 'manga', 'a.onnx'),
+        300,
+      );
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: const <StorageBookRef>[],
-        dictionaryNames: const <String>[],
-      ).toList();
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: const <StorageBookRef>[],
+            dictionaryNames: const <String>[],
+          )
+          .toList();
 
       expect(
-          all
-              .singleWhere((StorageCategoryUsage u) =>
-                  u.id == StorageCategoryId.database)
-              .bytes,
-          1000);
+        all
+            .singleWhere(
+              (StorageCategoryUsage u) => u.id == StorageCategoryId.database,
+            )
+            .bytes,
+        1000,
+      );
       expect(
-          all
-              .singleWhere((StorageCategoryUsage u) =>
-                  u.id == StorageCategoryId.ocrModels)
-              .bytes,
-          300);
+        all
+            .singleWhere(
+              (StorageCategoryUsage u) => u.id == StorageCategoryId.ocrModels,
+            )
+            .bytes,
+        300,
+      );
     });
 
     test('通用类目：明细 = 类目根下直接子项，label 带顶层目录前缀，总量 = 明细之和', () async {
@@ -414,30 +474,37 @@ void main() {
       writeFile(p.join(docs.path, 'mpv_shaders', 'Anime4K_Clamp.glsl'), 12);
       writeFile(p.join(docs.path, 'custom_fonts', 'NotoSerif.ttf'), 55);
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: const <StorageBookRef>[],
-        dictionaryNames: const <String>[],
-      ).toList();
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: const <StorageBookRef>[],
+            dictionaryNames: const <String>[],
+          )
+          .toList();
 
       final StorageCategoryUsage video = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.videoDownloads);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.videoDownloads,
+      );
       // 跨 4 个根（videos / remote_videos / anime_downloads / manual_torrents）
       // 的直接子项合成一张明细，按字节降序。
       expect(video.bytes, 1000);
-      expect(video.entries.map((StorageEntryUsage e) => e.label).toList(),
-          <String>['videos/a.mkv', 'remote_videos/series']);
+      expect(
+        video.entries.map((StorageEntryUsage e) => e.label).toList(),
+        <String>['videos/a.mkv', 'remote_videos/series'],
+      );
       expect(video.entries[0].bytes, 700);
       expect(video.entries[1].bytes, 300);
       // 通用条目的 id 是绝对路径（没有域内主键）。
       expect(video.entries[0].id, p.join(docs.path, 'videos', 'a.mkv'));
 
       final StorageCategoryUsage shaders = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.shaders);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.shaders,
+      );
       expect(shaders.entries.single.label, 'mpv_shaders/Anime4K_Clamp.glsl');
       expect(shaders.bytes, 12);
 
       final StorageCategoryUsage fonts = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.customFonts);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.customFonts,
+      );
       expect(fonts.entries.single.label, 'custom_fonts/NotoSerif.ttf');
       expect(fonts.bytes, 55);
     });
@@ -446,21 +513,29 @@ void main() {
       writeFile(p.join(support.path, 'fushi.sqlite'), 1000);
       writeFile(p.join(support.path, 'local_audio_1.db'), 20);
       writeFile(
-          p.join(support.path, kOcrModelsSupportChild, 'manga', 'a.onnx'), 300);
+        p.join(support.path, kOcrModelsSupportChild, 'manga', 'a.onnx'),
+        300,
+      );
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: const <StorageBookRef>[],
-        dictionaryNames: const <String>[],
-      ).toList();
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: const <StorageBookRef>[],
+            dictionaryNames: const <String>[],
+          )
+          .toList();
 
       final StorageCategoryUsage db = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.database);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.database,
+      );
       expect(db.bytes, 1020);
-      expect(db.entries.map((StorageEntryUsage e) => e.label).toList(),
-          <String>['support/fushi.sqlite', 'support/local_audio_1.db']);
+      expect(
+        db.entries.map((StorageEntryUsage e) => e.label).toList(),
+        <String>['support/fushi.sqlite', 'support/local_audio_1.db'],
+      );
 
       final StorageCategoryUsage ocr = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.ocrModels);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.ocrModels,
+      );
       expect(ocr.entries.single.label, 'ocr_models/manga');
       expect(ocr.bytes, 300);
     });
@@ -483,27 +558,27 @@ void main() {
       // 同名子目录不是文件，不进快照集合（按只读目录单列）。
       writeFile(p.join(support.path, 'fushi.db.corrupt-bak-2.db', 'x'), 2);
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: const <StorageBookRef>[],
-        dictionaryNames: const <String>[],
-      ).toList();
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: const <StorageBookRef>[],
+            dictionaryNames: const <String>[],
+          )
+          .toList();
       final StorageCategoryUsage db = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.database);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.database,
+      );
 
       final StorageEntryUsage snapshots = db.entries.singleWhere(
-          (StorageEntryUsage e) =>
-              e.kind == StorageEntryKind.databaseSnapshots);
+        (StorageEntryUsage e) => e.kind == StorageEntryKind.databaseSnapshots,
+      );
       expect(snapshots.id, StorageUsageService.kDatabaseSnapshotsEntryId);
       expect(snapshots.bytes, 7 + 5 + 3 + 1);
-      expect(
-        snapshots.paths.map(p.basename).toSet(),
-        <String>{
-          'fushi.db.corrupt-bak-1.db',
-          'fushi.db.corrupt-bak-1.db-wal',
-          'hibiki.db.bak.v16.1780592923530',
-          'hibiki.db-wal.bak.v20.1',
-        },
-      );
+      expect(snapshots.paths.map(p.basename).toSet(), <String>{
+        'fushi.db.corrupt-bak-1.db',
+        'fushi.db.corrupt-bak-1.db-wal',
+        'hibiki.db.bak.v16.1780592923530',
+        'hibiki.db-wal.bak.v20.1',
+      });
       // 新旧两个库名都命中时 fallback label 并列列出，不再写死 fushi.db。
       expect(snapshots.label, 'support/{fushi.db,hibiki.db}.*');
       // 其余条目全是只读，且活库 + 侧车 + 活控制文件 + 无关文件 + 同名目录
@@ -511,18 +586,15 @@ void main() {
       final List<StorageEntryUsage> readOnly = db.entries
           .where((StorageEntryUsage e) => e.kind == StorageEntryKind.readOnly)
           .toList();
-      expect(
-        readOnly.map((StorageEntryUsage e) => e.label).toSet(),
-        <String>{
-          'support/fushi.db',
-          'support/fushi.db-wal',
-          'support/fushi.db-shm',
-          'support/local_audio_1.db',
-          'support/fushi.db.merge-src',
-          'support/fushi.db.merge-preview-src',
-          'support/fushi.db.corrupt-bak-2.db',
-        },
-      );
+      expect(readOnly.map((StorageEntryUsage e) => e.label).toSet(), <String>{
+        'support/fushi.db',
+        'support/fushi.db-wal',
+        'support/fushi.db-shm',
+        'support/local_audio_1.db',
+        'support/fushi.db.merge-src',
+        'support/fushi.db.merge-preview-src',
+        'support/fushi.db.corrupt-bak-2.db',
+      });
       // 类目总量 = 全部明细之和（快照没有被算两次、也没有丢）。
       expect(db.bytes, 1000 + 100 + 10 + 7 + 5 + 3 + 1 + 20 + 9 + 8 + 2);
       expect(db.entries.length, readOnly.length + 1);
@@ -537,17 +609,21 @@ void main() {
       writeFile(p.join(support.path, 'fushi.db.pre-restore.bak'), 300);
       writeFile(p.join(support.path, 'fushi.db.corrupt-bak-9.db'), 7);
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: const <StorageBookRef>[],
-        dictionaryNames: const <String>[],
-      ).toList();
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: const <StorageBookRef>[],
+            dictionaryNames: const <String>[],
+          )
+          .toList();
       final StorageCategoryUsage db = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.database);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.database,
+      );
       final StorageEntryUsage snapshots = db.entries.singleWhere(
-          (StorageEntryUsage e) =>
-              e.kind == StorageEntryKind.databaseSnapshots);
-      expect(snapshots.paths.map(p.basename).toSet(),
-          <String>{'fushi.db.corrupt-bak-9.db'});
+        (StorageEntryUsage e) => e.kind == StorageEntryKind.databaseSnapshots,
+      );
+      expect(snapshots.paths.map(p.basename).toSet(), <String>{
+        'fushi.db.corrupt-bak-9.db',
+      });
       // 只命中新库名 ⇒ label 不带并列括号。
       expect(snapshots.label, 'support/fushi.db.*');
       expect(
@@ -566,17 +642,21 @@ void main() {
       writeFile(p.join(support.path, 'fushi.db'), 1000);
       writeFile(p.join(support.path, 'fushi.db.pre-restore.bak'), 300);
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: const <StorageBookRef>[],
-        dictionaryNames: const <String>[],
-      ).toList();
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: const <StorageBookRef>[],
+            dictionaryNames: const <String>[],
+          )
+          .toList();
       final StorageCategoryUsage db = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.database);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.database,
+      );
       final StorageEntryUsage snapshots = db.entries.singleWhere(
-          (StorageEntryUsage e) =>
-              e.kind == StorageEntryKind.databaseSnapshots);
-      expect(snapshots.paths.map(p.basename).toSet(),
-          <String>{'fushi.db.pre-restore.bak'});
+        (StorageEntryUsage e) => e.kind == StorageEntryKind.databaseSnapshots,
+      );
+      expect(snapshots.paths.map(p.basename).toSet(), <String>{
+        'fushi.db.pre-restore.bak',
+      });
       expect(snapshots.bytes, 300);
     });
 
@@ -584,12 +664,15 @@ void main() {
       writeFile(p.join(support.path, 'fushi.db'), 1000);
       writeFile(p.join(support.path, 'fushi.db-wal'), 100);
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: const <StorageBookRef>[],
-        dictionaryNames: const <String>[],
-      ).toList();
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: const <StorageBookRef>[],
+            dictionaryNames: const <String>[],
+          )
+          .toList();
       final StorageCategoryUsage db = all.singleWhere(
-          (StorageCategoryUsage u) => u.id == StorageCategoryId.database);
+        (StorageCategoryUsage u) => u.id == StorageCategoryId.database,
+      );
       expect(
         db.entries.map((StorageEntryUsage e) => e.kind).toSet(),
         <StorageEntryKind>{StorageEntryKind.readOnly},
@@ -597,12 +680,16 @@ void main() {
     });
 
     test('每个类目恰好产出一次结果', () async {
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: const <StorageBookRef>[],
-        dictionaryNames: const <String>[],
-      ).toList();
-      expect(all.map((StorageCategoryUsage u) => u.id).toSet(),
-          StorageCategoryId.values.toSet());
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: const <StorageBookRef>[],
+            dictionaryNames: const <String>[],
+          )
+          .toList();
+      expect(
+        all.map((StorageCategoryUsage u) => u.id).toSet(),
+        StorageCategoryId.values.toSet(),
+      );
       expect(all.length, StorageCategoryId.values.length);
     });
 
@@ -617,12 +704,13 @@ void main() {
       StorageCategoryId id, {
       bool documentsRootIsFushiOwned = true,
     }) async {
-      final List<StorageCategoryUsage> all = await service(
-        documentsRootIsFushiOwned: documentsRootIsFushiOwned,
-      ).scanCategories(
-        books: const <StorageBookRef>[],
-        dictionaryNames: const <String>[],
-      ).toList();
+      final List<StorageCategoryUsage> all =
+          await service(documentsRootIsFushiOwned: documentsRootIsFushiOwned)
+              .scanCategories(
+                books: const <StorageBookRef>[],
+                dictionaryNames: const <String>[],
+              )
+              .toList();
       return all.firstWhere((StorageCategoryUsage u) => u.id == id);
     }
 
@@ -630,8 +718,9 @@ void main() {
       writeFile(p.join(cache.path, 'remote_cover_cache', 'a.jpg'), 4000);
       writeFile(p.join(cache.path, 'hibiki_remote_audiobooks', 'x.zip'), 6000);
 
-      final StorageCategoryUsage usage =
-          await categoryOf(StorageCategoryId.cache);
+      final StorageCategoryUsage usage = await categoryOf(
+        StorageCategoryId.cache,
+      );
 
       expect(usage.bytes, 10000);
       expect(
@@ -646,10 +735,12 @@ void main() {
       writeFile(p.join(cache.path, 'hibiki-backup-old.hibiki.zip'), 3000);
       writeFile(p.join(cache.path, 'ordinary-cache.bin'), 700);
 
-      final StorageCategoryUsage backups =
-          await categoryOf(StorageCategoryId.backups);
-      final StorageCategoryUsage cached =
-          await categoryOf(StorageCategoryId.cache);
+      final StorageCategoryUsage backups = await categoryOf(
+        StorageCategoryId.backups,
+      );
+      final StorageCategoryUsage cached = await categoryOf(
+        StorageCategoryId.cache,
+      );
 
       expect(backups.bytes, 12000);
       expect(backups.entries, hasLength(1));
@@ -657,8 +748,11 @@ void main() {
       expect(backups.entries.single.paths, hasLength(2));
       expect(cached.bytes, 700, reason: '总计必须每个字节只算一次');
       expect(
-        cached.entries.any((StorageEntryUsage e) =>
-            e.paths.any((String path) => isBackupArchiveName(p.basename(path)))),
+        cached.entries.any(
+          (StorageEntryUsage e) => e.paths.any(
+            (String path) => isBackupArchiveName(p.basename(path)),
+          ),
+        ),
         isFalse,
       );
     });
@@ -679,23 +773,27 @@ void main() {
         },
         documentsRootIsFushiOwned: () async => true,
       );
-      final List<StorageCategoryUsage> all = await svc.scanCategories(
-        books: const <StorageBookRef>[],
-        dictionaryNames: const <String>[],
-      ).toList();
+      final List<StorageCategoryUsage> all = await svc
+          .scanCategories(
+            books: const <StorageBookRef>[],
+            dictionaryNames: const <String>[],
+          )
+          .toList();
 
       expect(cacheRootsCalls, 1, reason: '两个类目共用一次列举，不得各扫一遍');
       expect(
         all
             .firstWhere(
-                (StorageCategoryUsage u) => u.id == StorageCategoryId.backups)
+              (StorageCategoryUsage u) => u.id == StorageCategoryId.backups,
+            )
             .bytes,
         9000,
       );
       expect(
         all
             .firstWhere(
-                (StorageCategoryUsage u) => u.id == StorageCategoryId.cache)
+              (StorageCategoryUsage u) => u.id == StorageCategoryId.cache,
+            )
             .bytes,
         700,
       );
@@ -708,34 +806,47 @@ void main() {
       writeFile(p.join(cache.path, 'ordinary-cache.bin'), 700);
       writeFile(p.join(docs.path, 'video_covers', 'c.jpg'), 100);
 
-      final List<StorageCategoryUsage> all = await service().scanCategories(
-        books: const <StorageBookRef>[],
-        dictionaryNames: const <String>[],
-      ).toList();
+      final List<StorageCategoryUsage> all = await service()
+          .scanCategories(
+            books: const <StorageBookRef>[],
+            dictionaryNames: const <String>[],
+          )
+          .toList();
 
       final Set<StorageCategoryId> deletableSeen = <StorageCategoryId>{};
       for (final StorageCategoryUsage usage in all) {
         for (final StorageEntryUsage entry in usage.entries) {
           if (!kDirectlyDeletableEntryKinds.contains(entry.kind)) continue;
           deletableSeen.add(usage.id);
-          expect(kDeletableEntryCategories, contains(usage.id),
-              reason: '${usage.id} 产出了可直接删的明细（${entry.kind}），'
-                  '却不在 kDeletableEntryCategories 里');
+          expect(
+            kDeletableEntryCategories,
+            contains(usage.id),
+            reason:
+                '${usage.id} 产出了可直接删的明细（${entry.kind}），'
+                '却不在 kDeletableEntryCategories 里',
+          );
         }
       }
-      expect(deletableSeen, contains(StorageCategoryId.backups),
-          reason: '本用例必须真的走到备份聚合项，否则断言是空转');
+      expect(
+        deletableSeen,
+        contains(StorageCategoryId.backups),
+        reason: '本用例必须真的走到备份聚合项，否则断言是空转',
+      );
       expect(deletableSeen, contains(StorageCategoryId.cache));
     });
 
     test('备份聚合项的 label 是路径形状身份串，不是写死的英文 UI 文案', () async {
       writeFile(p.join(cache.path, 'fushi-backup-2026-08-31.fushi.zip'), 9000);
-      final StorageCategoryUsage backups =
-          await categoryOf(StorageCategoryId.backups);
+      final StorageCategoryUsage backups = await categoryOf(
+        StorageCategoryId.backups,
+      );
       final String label = backups.entries.single.label;
       expect(label, contains('fushi-backup-2026-08-31.fushi.zip'));
-      expect(label, isNot(contains('backup archives')),
-          reason: '显示名由 UI 按 paths.length 翻译；服务层不产出未翻译的英文');
+      expect(
+        label,
+        isNot(contains('backup archives')),
+        reason: '显示名由 UI 按 paths.length 翻译；服务层不产出未翻译的英文',
+      );
     });
 
     test('other 类目收白名单之外的顶层项（video_clips / 日志，BUG-1905）', () async {
@@ -745,16 +856,21 @@ void main() {
       writeFile(p.join(docs.path, 'video_clips', 'clip.mp4'), 7000);
       writeFile(p.join(docs.path, 'fushi_error_log.txt'), 300);
 
-      final StorageCategoryUsage usage =
-          await categoryOf(StorageCategoryId.other);
+      final StorageCategoryUsage usage = await categoryOf(
+        StorageCategoryId.other,
+      );
 
       expect(usage.bytes, 7300);
-      final List<String> labels =
-          usage.entries.map((StorageEntryUsage e) => e.label).toList();
+      final List<String> labels = usage.entries
+          .map((StorageEntryUsage e) => e.label)
+          .toList();
       expect(labels.any((String l) => l.contains('video_clips')), isTrue);
       expect(labels.any((String l) => l.contains('fushi_error_log')), isTrue);
-      expect(labels.any((String l) => l.contains('video_covers')), isFalse,
-          reason: '白名单内的目录已归属别的类目，出现在 other 就是重复计数');
+      expect(
+        labels.any((String l) => l.contains('video_covers')),
+        isFalse,
+        reason: '白名单内的目录已归属别的类目，出现在 other 就是重复计数',
+      );
     });
 
     test('documents 根不是 Fushi 专属容器时 other 恒为 0（不把用户自己的文件算进来）', () async {

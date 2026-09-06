@@ -28,12 +28,11 @@ void main() {
         initialCustomCss: '',
         interact: (WidgetTester tester) async {
           await _expand(tester, t.anki_lapis_visual_layout);
-          await tester.tap(
-            find.text(t.anki_lapis_visual_layout_sentence),
-          );
+          await tester.tap(find.text(t.anki_lapis_visual_layout_sentence));
           await tester.pumpAndSettle();
-          await tester
-              .tap(find.text(t.anki_lapis_visual_layout_sentence_below).last);
+          await tester.tap(
+            find.text(t.anki_lapis_visual_layout_sentence_below).last,
+          );
           await tester.pumpAndSettle();
         },
       );
@@ -62,8 +61,9 @@ void main() {
           await _expand(tester, t.anki_lapis_visual_layout);
           await tester.tap(find.text(t.anki_lapis_visual_layout_picture));
           await tester.pumpAndSettle();
-          await tester
-              .tap(find.text(t.anki_lapis_visual_layout_picture_left).last);
+          await tester.tap(
+            find.text(t.anki_lapis_visual_layout_picture_left).last,
+          );
           await tester.pumpAndSettle();
         },
       );
@@ -91,9 +91,9 @@ void main() {
       );
 
       expect(
-        splitLapisVisualStyleSheet(result!.customCss)
-            .layout
-            .audioButtonsPosition,
+        splitLapisVisualStyleSheet(
+          result!.customCss,
+        ).layout.audioButtonsPosition,
         LapisAudioButtonsPosition.alt,
         reason: '打开-保存一轮把已有位置吃掉了',
       );
@@ -327,9 +327,9 @@ void main() {
       expect(result!.blocks.single.rule.bold, isTrue);
       // 内置字段（默认选中的「单词」）不该被顺带改掉。
       expect(
-        splitLapisVisualStyleSheet(result.customCss)
-            .ruleFor(LapisVisualField.expression)
-            .bold,
+        splitLapisVisualStyleSheet(
+          result.customCss,
+        ).ruleFor(LapisVisualField.expression).bold,
         isFalse,
       );
     });
@@ -427,8 +427,9 @@ void main() {
           // 映射行在滚动区里，先滚过去再点，否则 tap 静默 miss。
           // 用 MiscInfo 的**当前映射**定位它那一行（而非硬编码某个占位符字面量），
           // 出厂默认变了也照样点得中。
-          final Finder row =
-              find.text(LapisNoteType.defaultFieldMappings['MiscInfo']!);
+          final Finder row = find.text(
+            LapisNoteType.defaultFieldMappings['MiscInfo']!,
+          );
           await tester.ensureVisible(row);
           await tester.pumpAndSettle();
           await tester.tap(row);

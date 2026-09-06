@@ -34,9 +34,12 @@ void main() {
   test('工作线程与平台线程分发器的源文件在，且进了 CMake', () {
     expect(File('$vendored/windows/src/async_dispatch.h').existsSync(), isTrue);
     expect(
-        File('$vendored/windows/src/async_dispatch.cc').existsSync(), isTrue);
-    final String cmake =
-        File('$vendored/windows/CMakeLists.txt').readAsStringSync();
+      File('$vendored/windows/src/async_dispatch.cc').existsSync(),
+      isTrue,
+    );
+    final String cmake = File(
+      '$vendored/windows/CMakeLists.txt',
+    ).readAsStringSync();
     expect(
       cmake,
       contains('src/async_dispatch.cc'),
@@ -46,8 +49,9 @@ void main() {
 
   test('三个重活都经 queueFor 下放工作线程，回复经 dispatcher 回平台线程', () {
     final String src = maskComments(
-      File('$vendored/windows/flutter_onnxruntime_plugin.cpp')
-          .readAsStringSync(),
+      File(
+        '$vendored/windows/flutter_onnxruntime_plugin.cpp',
+      ).readAsStringSync(),
     );
     for (final String handler in <String>[
       'HandleRunInference',
@@ -61,7 +65,8 @@ void main() {
       expect(
         body,
         contains('queueFor('),
-        reason: '$handler 又回到平台线程同步执行：UI 会被推理卡住、GPU/CPU 会话'
+        reason:
+            '$handler 又回到平台线程同步执行：UI 会被推理卡住、GPU/CPU 会话'
             '无法重叠，且没有别的测试会红',
       );
       expect(
@@ -98,8 +103,9 @@ void main() {
       reason: 'runInference 必须只在查表时持锁，拿到 shared_ptr 后放锁再 Run',
     );
     // 锁的作用域必须在 Run 之前结束：lock_guard 所在的块要在 Run 之前闭合。
-    final int lockAt =
-        beforeRun.indexOf('std::lock_guard<std::mutex> lock(mutex_);');
+    final int lockAt = beforeRun.indexOf(
+      'std::lock_guard<std::mutex> lock(mutex_);',
+    );
     expect(lockAt, greaterThan(0));
     expect(
       beforeRun.substring(lockAt),

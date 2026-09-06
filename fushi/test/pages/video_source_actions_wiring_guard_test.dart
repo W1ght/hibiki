@@ -75,10 +75,10 @@ void main() {
     expect(source, contains('showAppDialog<_AddSourceChoice>'));
     expect(source, contains('await addLocalFolder();'));
     expect(
-        source,
-        contains(
-            "widget.mediaKind == 'video'\n      ? const <String>['webdav']"),
-        reason: '视频网络 transport 必须收窄到仅 WebDAV');
+      source,
+      contains("widget.mediaKind == 'video'\n      ? const <String>['webdav']"),
+      reason: '视频网络 transport 必须收窄到仅 WebDAV',
+    );
     expect(source, contains('onLibraryChanged?.call();'));
   });
 
@@ -102,7 +102,9 @@ void main() {
     expect(view, contains("widget.mediaKind == 'video'"));
     expect(view, contains('controller.runSourceScan(row.id, scan)'));
     expect(
-        view, contains('await onVideoScanCompleted(updated ?? row, summary)'));
+      view,
+      contains('await onVideoScanCompleted(updated ?? row, summary)'),
+    );
     expect(view, contains('nfoPolicy: Value<String>(draft.nfoPolicy)'));
     expect(view, contains('imagePolicy: Value<String>(draft.imagePolicy)'));
     expect(view, contains('allowExternalOverwrite:'));

@@ -54,7 +54,9 @@ const String kRedactedPlaceholder = '<redacted>';
 String redactCredentialsInText(String text) {
   if (text.isEmpty) return text;
   final RegExp pattern = RegExp(
-    r'([?&])([A-Za-z_][A-Za-z0-9_\-]*)=([^&\s"' "'" r'<>)]*)',
+    r'([?&])([A-Za-z_][A-Za-z0-9_\-]*)=([^&\s"'
+    "'"
+    r'<>)]*)',
   );
   return text.replaceAllMapped(pattern, (Match m) {
     final String sep = m.group(1)!;

@@ -79,13 +79,12 @@ void main() {
       required bool dictionaryShown,
       required MangaReadingMode mode,
       bool crossPageStep = false,
-    }) =>
-        MangaFushiPage.inputActionForShortcut(
-          action: ShortcutAction.mangaToggleChrome,
-          crossPageStep: crossPageStep,
-          dictionaryShown: dictionaryShown,
-          mode: mode,
-        );
+    }) => MangaFushiPage.inputActionForShortcut(
+      action: ShortcutAction.mangaToggleChrome,
+      crossPageStep: crossPageStep,
+      dictionaryShown: dictionaryShown,
+      mode: mode,
+    );
 
     test('spread 模式、无弹窗：解析成 toggleChrome', () {
       expect(
@@ -176,9 +175,9 @@ void main() {
         reason: '唤回按钮不得挂内容门控——隐藏界面后内容加载失败会连返回键一起叫不回来',
       );
       expect(
-        RegExp(r'_bookRow != null && !_loadFailed && _chromeVisible')
-            .allMatches(pageSrc)
-            .length,
+        RegExp(
+          r'_bookRow != null && !_loadFailed && _chromeVisible',
+        ).allMatches(pageSrc).length,
         1,
         reason: '内容门控只该剩顶栏那一处；返回键若还挂着它，失败态就没有出口了',
       );
@@ -188,7 +187,8 @@ void main() {
       expect(
         pageSrc.contains("'manga_chrome_show_button'"),
         isTrue,
-        reason: '漫画正文是原生 WebView、空白点击已被翻页占用，'
+        reason:
+            '漫画正文是原生 WebView、空白点击已被翻页占用，'
             '没有这个按钮触屏设备再无第二条通道唤回界面',
       );
       expect(pageSrc.contains("'manga_chrome_hide_button'"), isTrue);
@@ -207,10 +207,7 @@ void main() {
     });
 
     test('快捷键执行体走同一个 _toggleMangaChrome', () {
-      expect(
-        pageSrc.contains('MangaReaderInputAction.toggleChrome'),
-        isTrue,
-      );
+      expect(pageSrc.contains('MangaReaderInputAction.toggleChrome'), isTrue);
       expect(pageSrc.contains('_toggleMangaChrome();'), isTrue);
       expect(
         pageSrc.contains('onPressed: _toggleMangaChrome,'),

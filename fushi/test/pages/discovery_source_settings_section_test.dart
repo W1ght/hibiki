@@ -24,8 +24,9 @@ void main() {
 
   late Directory pathProviderDir;
   setUpAll(() {
-    pathProviderDir =
-        Directory.systemTemp.createTempSync('hibiki_discovery_settings_pp');
+    pathProviderDir = Directory.systemTemp.createTempSync(
+      'hibiki_discovery_settings_pp',
+    );
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
       (MethodCall call) async => pathProviderDir.path,
@@ -63,51 +64,53 @@ void main() {
   });
 
   Widget harness() => ProviderScope(
-        overrides: <Override>[
-          appProvider.overrideWith((Ref ref) => appModel),
-        ],
-        child: MaterialApp(
-          theme: ThemeData(useMaterial3: true),
-          home: Scaffold(
-            body: SizedBox(
-              width: 560,
-              child: SingleChildScrollView(
-                child: const DiscoverySourceSettingsSection(),
-              ),
-            ),
+    overrides: <Override>[appProvider.overrideWith((Ref ref) => appModel)],
+    child: MaterialApp(
+      theme: ThemeData(useMaterial3: true),
+      home: Scaffold(
+        body: SizedBox(
+          width: 560,
+          child: SingleChildScrollView(
+            child: const DiscoverySourceSettingsSection(),
           ),
         ),
-      );
+      ),
+    ),
+  );
 
-  testWidgets('lists every registered discovery source, sukebei off by default',
-      (WidgetTester tester) async {
-    tester.view.physicalSize = const Size(800, 2400);
-    tester.view.devicePixelRatio = 1;
-    addTearDown(tester.view.reset);
+  testWidgets(
+    'lists every registered discovery source, sukebei off by default',
+    (WidgetTester tester) async {
+      tester.view.physicalSize = const Size(800, 2400);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
 
-    await tester.pumpWidget(harness());
-    await tester.pumpAndSettle();
-
-    // 遍历运行期注册表，不抄第二份 id 清单：新加一个 adapter 自动出现在这里。
-    final List<MediaDiscoverySource> sources =
-        appModel.mediaDiscoveryService.sources;
-    expect(sources, isNotEmpty);
-    for (final MediaDiscoverySource source in sources) {
-      final Finder row =
-          find.byKey(ValueKey<String>('discovery-source-${source.id}'));
-      expect(row, findsOneWidget, reason: 'missing row for ${source.id}');
-      await tester.ensureVisible(row);
+      await tester.pumpWidget(harness());
       await tester.pumpAndSettle();
-      expect(
-        tester.widget<SwitchListTile>(row).value,
-        source.id == 'sukebei' ? isFalse : isTrue,
-        reason: '${source.id} default',
-      );
-    }
-  });
 
-  testWidgets('用户自配的 OPDS 服务器不进这一区（它自己带 enabled，两套开关会两头对不上）',
-      (WidgetTester tester) async {
+      // 遍历运行期注册表，不抄第二份 id 清单：新加一个 adapter 自动出现在这里。
+      final List<MediaDiscoverySource> sources =
+          appModel.mediaDiscoveryService.sources;
+      expect(sources, isNotEmpty);
+      for (final MediaDiscoverySource source in sources) {
+        final Finder row = find.byKey(
+          ValueKey<String>('discovery-source-${source.id}'),
+        );
+        expect(row, findsOneWidget, reason: 'missing row for ${source.id}');
+        await tester.ensureVisible(row);
+        await tester.pumpAndSettle();
+        expect(
+          tester.widget<SwitchListTile>(row).value,
+          source.id == 'sukebei' ? isFalse : isTrue,
+          reason: '${source.id} default',
+        );
+      }
+    },
+  );
+
+  testWidgets('用户自配的 OPDS 服务器不进这一区（它自己带 enabled，两套开关会两头对不上）', (
+    WidgetTester tester,
+  ) async {
     // 在这里关掉只影响聚合扇出：OPDS 配置区仍显示「启用」、单选仍能用；
     // 反过来在配置区关掉，源直接离开注册表，停用清单里那条 id 就成了
     // 再没有 UI 能清的垃圾。分界同视频域的自配 Torznab。
@@ -127,8 +130,9 @@ void main() {
 
     // 前提：这台服务器确实已经在运行期注册表里（否则这条断言是空转）。
     expect(
-      appModel.mediaDiscoveryService.sources
-          .where((MediaDiscoverySource s) => s.isUserConfigured),
+      appModel.mediaDiscoveryService.sources.where(
+        (MediaDiscoverySource s) => s.isUserConfigured,
+      ),
       hasLength(1),
     );
     expect(
@@ -142,8 +146,9 @@ void main() {
     );
   });
 
-  testWidgets('toggling a source writes through to the shared preference',
-      (WidgetTester tester) async {
+  testWidgets('toggling a source writes through to the shared preference', (
+    WidgetTester tester,
+  ) async {
     tester.view.physicalSize = const Size(800, 2400);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.reset);
@@ -151,8 +156,9 @@ void main() {
     await tester.pumpWidget(harness());
     await tester.pumpAndSettle();
 
-    final Finder nyaa =
-        find.byKey(const ValueKey<String>('discovery-source-nyaa'));
+    final Finder nyaa = find.byKey(
+      const ValueKey<String>('discovery-source-nyaa'),
+    );
     await tester.ensureVisible(nyaa);
     await tester.pumpAndSettle();
     await tester.tap(nyaa);

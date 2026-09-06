@@ -130,7 +130,8 @@ class AsrCueBuilder {
   }
 
   /// token（去掉 BPE 前导空格后）是否是闭合符号。
-  static bool isClosingMark(String token) => closingMarks.contains(token.trim());
+  static bool isClosingMark(String token) =>
+      closingMarks.contains(token.trim());
 
   /// 本句到目前为止以 `.` 收尾时，这个点是不是缩写点（不该切句）：
   /// 最后一个词是 [dotAbbreviations] 之一，或单个大写字母（人名首字母）。
@@ -141,7 +142,9 @@ class AsrCueBuilder {
     final int cut = body.lastIndexOf(RegExp(r'\s'));
     final String word = (cut < 0 ? body : body.substring(cut + 1)).trim();
     if (word.isEmpty) return false;
-    if (word.length == 1 && word.toUpperCase() == word && word != word.toLowerCase()) {
+    if (word.length == 1 &&
+        word.toUpperCase() == word &&
+        word != word.toLowerCase()) {
       return true;
     }
     return dotAbbreviations.contains(word.toLowerCase());

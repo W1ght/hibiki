@@ -64,8 +64,9 @@ class _BrowserExtensionPageState extends ConsumerState<BrowserExtensionPage> {
 
   void _snack(String message) {
     if (!mounted) return;
-    ScaffoldMessenger.of(context)
-        .showSnackBar(SnackBar(content: Text(message)));
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(message)));
   }
 
   bool _isRecentlySeen(AppModel appModel) {
@@ -81,8 +82,8 @@ class _BrowserExtensionPageState extends ConsumerState<BrowserExtensionPage> {
     final AppModel appModel = ref.read(appProvider);
     setState(() => _preparing = true);
     // TODO-1266：装扩展即默认开启 yomitan-api server（省得装完 401 连不上）。
-    final bool serverReady =
-        await appModel.ensureYomitanApiServerForBrowserExtension();
+    final bool serverReady = await appModel
+        .ensureYomitanApiServerForBrowserExtension();
     // TODO-1087：解压时注入当前 server 真值，扩展默认即连本机 app，无需手填。
     final String dir = await prepareBundledBrowserExtension(
       serverConfig: BrowserExtensionServerConfig(
@@ -173,10 +174,12 @@ class _BrowserExtensionPageState extends ConsumerState<BrowserExtensionPage> {
         // 返回键在页头的 leading 上（见 build），正文不再重复放一个。
         Text(t.browser_extension_page_intro, style: theme.textTheme.bodyMedium),
         const SizedBox(height: 16),
-        _statusCard(theme,
-            serverOn: serverOn,
-            connected: connected,
-            port: appModel.yomitanApiPort),
+        _statusCard(
+          theme,
+          serverOn: serverOn,
+          connected: connected,
+          port: appModel.yomitanApiPort,
+        ),
         const SizedBox(height: 16),
         FilledButton.icon(
           onPressed: _preparing ? null : _prepare,
@@ -187,15 +190,18 @@ class _BrowserExtensionPageState extends ConsumerState<BrowserExtensionPage> {
                   child: CircularProgressIndicator(strokeWidth: 2),
                 )
               : const Icon(Icons.extension_outlined, size: 18),
-          label: Text(_extensionDir == null
-              ? t.browser_extension_prepare_button
-              : t.browser_extension_reinstall_button),
+          label: Text(
+            _extensionDir == null
+                ? t.browser_extension_prepare_button
+                : t.browser_extension_reinstall_button,
+          ),
         ),
         const SizedBox(height: 8),
         Text(
           t.browser_extension_prepare_hint,
-          style: theme.textTheme.bodySmall
-              ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+          style: theme.textTheme.bodySmall?.copyWith(
+            color: theme.colorScheme.onSurfaceVariant,
+          ),
         ),
         if (_extensionDir != null) ...<Widget>[
           const Divider(height: 32),
@@ -236,9 +242,11 @@ class _BrowserExtensionPageState extends ConsumerState<BrowserExtensionPage> {
               ),
               const SizedBox(width: 10),
               Expanded(
-                child: Text(serverOn
-                    ? '${t.browser_extension_server_on} · $port'
-                    : t.browser_extension_server_off),
+                child: Text(
+                  serverOn
+                      ? '${t.browser_extension_server_on} · $port'
+                      : t.browser_extension_server_off,
+                ),
               ),
             ],
           ),
@@ -254,9 +262,11 @@ class _BrowserExtensionPageState extends ConsumerState<BrowserExtensionPage> {
               ),
               const SizedBox(width: 10),
               Expanded(
-                child: Text(connected
-                    ? t.browser_extension_status_connected
-                    : t.browser_extension_status_never),
+                child: Text(
+                  connected
+                      ? t.browser_extension_status_connected
+                      : t.browser_extension_status_never,
+                ),
               ),
             ],
           ),
@@ -286,8 +296,11 @@ class _BrowserExtensionPageState extends ConsumerState<BrowserExtensionPage> {
         children: <Widget>[
           Row(
             children: <Widget>[
-              Icon(Icons.verified_outlined,
-                  size: 20, color: theme.colorScheme.primary),
+              Icon(
+                Icons.verified_outlined,
+                size: 20,
+                color: theme.colorScheme.primary,
+              ),
               const SizedBox(width: 10),
               Expanded(child: Text(t.browser_extension_step_verify)),
             ],
@@ -304,9 +317,11 @@ class _BrowserExtensionPageState extends ConsumerState<BrowserExtensionPage> {
                       child: CircularProgressIndicator(strokeWidth: 2),
                     )
                   : const Icon(Icons.wifi_tethering, size: 18),
-              label: Text(_verifying
-                  ? t.browser_extension_verify_checking
-                  : t.browser_extension_verify_button),
+              label: Text(
+                _verifying
+                    ? t.browser_extension_verify_checking
+                    : t.browser_extension_verify_button,
+              ),
             ),
           ),
           if (resultText != null) ...<Widget>[
@@ -342,8 +357,11 @@ class _BrowserExtensionPageState extends ConsumerState<BrowserExtensionPage> {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Icon(Icons.info_outline,
-                      size: 20, color: theme.colorScheme.onSurfaceVariant),
+                  Icon(
+                    Icons.info_outline,
+                    size: 20,
+                    color: theme.colorScheme.onSurfaceVariant,
+                  ),
                   const SizedBox(width: 10),
                   Expanded(child: Text(t.browser_extension_version_label)),
                 ],
@@ -370,14 +388,18 @@ class _BrowserExtensionPageState extends ConsumerState<BrowserExtensionPage> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Icon(Icons.update,
-                          size: 18, color: theme.colorScheme.onErrorContainer),
+                      Icon(
+                        Icons.update,
+                        size: 18,
+                        color: theme.colorScheme.onErrorContainer,
+                      ),
                       const SizedBox(width: 8),
                       Expanded(
                         child: Text(
                           t.browser_extension_version_mismatch,
                           style: TextStyle(
-                              color: theme.colorScheme.onErrorContainer),
+                            color: theme.colorScheme.onErrorContainer,
+                          ),
                         ),
                       ),
                     ],
@@ -492,9 +514,9 @@ class BrowserExtensionInstallSteps extends StatelessWidget {
             onTap: () async {
               await Clipboard.setData(ClipboardData(text: value));
               if (!context.mounted) return;
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text(t.copied)),
-              );
+              ScaffoldMessenger.of(
+                context,
+              ).showSnackBar(SnackBar(content: Text(t.copied)));
             },
           ),
         ],

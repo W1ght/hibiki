@@ -190,7 +190,7 @@ GalgameMetadataDraft mergeDrafts(
   final GalgameMetadataSource? preferred = overlay.coverSource;
   final String? coverUrl =
       (preferred == null ? null : bySource[preferred]?.coverUrl) ??
-          pick<String>((GalgameMetadataDraft d) => d.coverUrl);
+      pick<String>((GalgameMetadataDraft d) => d.coverUrl);
 
   return GalgameMetadataDraft(
     name: overlay.name ?? pick<String>((GalgameMetadataDraft d) => d.name),

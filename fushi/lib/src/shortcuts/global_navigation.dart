@@ -154,7 +154,8 @@ KeyEventResult _moveFocusForArrow(
   // Mirror the gamepad service's dispatch context: the focused widget's context
   // when one exists, else the navigator, so directional resolution starts from
   // the right scope inside whichever route is on top.
-  final BuildContext? context = FocusManager.instance.primaryFocus?.context ??
+  final BuildContext? context =
+      FocusManager.instance.primaryFocus?.context ??
       navigatorKey.currentContext;
   if (context == null) return KeyEventResult.ignored;
   gamepadMoveFocusInDirection(context, dir);
@@ -665,8 +666,9 @@ Widget wrapWithGlobalNavigation({
       // 关闭，此前把整块手柄逻辑一起关掉，导致默认安装上「注册表 globalBack」根本
       // 不参与解析——Android 上按 B 之所以还能返回，靠的是系统兜底（见下），于是
       // 用户把「返回」改绑到 RB 后 B 依旧退出页面。
-      final KeyEventResult gamepadResult =
-          dispatchNativeGamepadButtonIntent(event);
+      final KeyEventResult gamepadResult = dispatchNativeGamepadButtonIntent(
+        event,
+      );
       if (gamepadResult == KeyEventResult.handled) return gamepadResult;
       // 手柄重设计 P2（Android 键事件链）：页面 Actions 没消费的手柄按钮，弹窗
       // 可见时按 dictionaryPopup scope 解析（词条导航/制卡/发音）——与桌面轮询
@@ -679,24 +681,31 @@ Widget wrapWithGlobalNavigation({
         }
       }
       if (focusNavigationEnabled) {
-        final KeyEventResult arrowResult =
-            _handleGlobalArrowFocus(navigatorKey, event);
+        final KeyEventResult arrowResult = _handleGlobalArrowFocus(
+          navigatorKey,
+          event,
+        );
         if (arrowResult == KeyEventResult.handled) return arrowResult;
       }
       // TODO-700 T1：注册表驱动的全局返回回退（Esc / Alt+← / B，或用户改键后的
       // 「返回」键）。仅对未自解析 globalBack 的页面（设置/对话框）生效；
       // home/reader/manga/video 已在更近的处理器消费。
       if (registry != null) {
-        final KeyEventResult backResult =
-            _handleGlobalBack(navigatorKey, registry, event);
+        final KeyEventResult backResult = _handleGlobalBack(
+          navigatorKey,
+          registry,
+          event,
+        );
         if (backResult == KeyEventResult.handled) return backResult;
         // TODO-1093 / BUG-1886：注册表驱动的窗口级全屏切换（默认 F11）。放在 globalBack
         // 之后、Escape 之前；仅桌面有窗口时真正 toggle，移动端 no-op（见下）。
         // **不受 [focusNavigationEnabled] 门控**——理由同 globalBack 与手柄分发
         // （BUG-1266）：全屏改键是正式功能（快捷键设置里有完整 UI 与默认绑定 F11），把它
         // 挂在一个默认关闭的实验开关上，等于在默认安装上「配了 F11 却永不解析」。
-        final KeyEventResult fullscreenResult =
-            _handleGlobalToggleFullscreen(registry, event);
+        final KeyEventResult fullscreenResult = _handleGlobalToggleFullscreen(
+          registry,
+          event,
+        );
         if (fullscreenResult == KeyEventResult.handled) {
           return fullscreenResult;
         }
@@ -735,11 +744,11 @@ Widget wrapWithGlobalNavigation({
                   behavior: HitTestBehavior.translucent,
                   onPointerDown: (PointerDownEvent event) =>
                       _handleGlobalPointerDown(
-                    context,
-                    navigatorKey,
-                    registry,
-                    event,
-                  ),
+                        context,
+                        navigatorKey,
+                        registry,
+                        event,
+                      ),
                   child: child,
                 ),
               ),

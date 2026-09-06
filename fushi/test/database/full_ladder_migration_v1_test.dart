@@ -120,106 +120,132 @@ CREATE TABLE dictionary_metadata (
 
 void main() {
   group('full ladder from v1 baseline', () {
-    test('v1 -> current: every step composes, all tracked data preserved',
-        () async {
-      final db = await _openV1Baseline();
+    test(
+      'v1 -> current: every step composes, all tracked data preserved',
+      () async {
+        final db = await _openV1Baseline();
 
-      // (a) Ladder walked to the live schema version.
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
+        // (a) Ladder walked to the live schema version.
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
 
-      // (b) from<2: dictionary_metadata gained the `type` column (default
-      //     'term'), the seeded row preserved.
-      final dictCols = await db
-          .customSelect("PRAGMA table_info('dictionary_metadata')")
-          .get();
-      final dictColNames =
-          dictCols.map((r) => r.data['name'] as String).toSet();
-      expect(dictColNames, contains('type'));
-      final dictRow = await db
-          .customSelect(
-              "SELECT name, type FROM dictionary_metadata WHERE name='JMdict'")
-          .getSingle();
-      expect(dictRow.read<String>('type'), 'term',
-          reason: 'from<2 addColumn default is term');
+        // (b) from<2: dictionary_metadata gained the `type` column (default
+        //     'term'), the seeded row preserved.
+        final dictCols = await db
+            .customSelect("PRAGMA table_info('dictionary_metadata')")
+            .get();
+        final dictColNames = dictCols
+            .map((r) => r.data['name'] as String)
+            .toSet();
+        expect(dictColNames, contains('type'));
+        final dictRow = await db
+            .customSelect(
+              "SELECT name, type FROM dictionary_metadata WHERE name='JMdict'",
+            )
+            .getSingle();
+        expect(
+          dictRow.read<String>('type'),
+          'term',
+          reason: 'from<2 addColumn default is term',
+        );
 
-      // (c) v16 re-key: epub_books now book_key-PK (no legacy id); both books
-      //     survive and their keys equal the sanitized titles (ASCII titles
-      //     sanitize verbatim).
-      final epubCols =
-          await db.customSelect("PRAGMA table_info('epub_books')").get();
-      final epubColNames =
-          epubCols.map((r) => r.data['name'] as String).toSet();
-      expect(epubColNames, contains('book_key'));
-      expect(epubColNames, isNot(contains('id')),
-          reason: 'v16 re-key drops the legacy autoincrement id');
-      final books = await db.getAllEpubBooks();
-      expect(books.map((b) => b.bookKey).toSet(),
+        // (c) v16 re-key: epub_books now book_key-PK (no legacy id); both books
+        //     survive and their keys equal the sanitized titles (ASCII titles
+        //     sanitize verbatim).
+        final epubCols = await db
+            .customSelect("PRAGMA table_info('epub_books')")
+            .get();
+        final epubColNames = epubCols
+            .map((r) => r.data['name'] as String)
+            .toSet();
+        expect(epubColNames, contains('book_key'));
+        expect(
+          epubColNames,
+          isNot(contains('id')),
+          reason: 'v16 re-key drops the legacy autoincrement id',
+        );
+        final books = await db.getAllEpubBooks();
+        expect(
+          books.map((b) => b.bookKey).toSet(),
           equals(<String>{_kTitleA, _kTitleB}),
-          reason: 'both books survive the re-key with key == sanitized title');
+          reason: 'both books survive the re-key with key == sanitized title',
+        );
 
-      // (d) v16 row-level data-preservation for reader_positions: the two
-      //     positions re-keyed from ttu_book_id -> book_key (v16) -> stable
-      //     uid (v82), every other column intact, reachable via the typed
-      //     getReaderPosition(bookUid)（bookKey 经 resolveEpubBookUid 换算）.
-      final String uidA = (await db.resolveEpubBookUid(_kTitleA))!;
-      final String uidB = (await db.resolveEpubBookUid(_kTitleB))!;
-      final posA = await db.getReaderPosition(uidA);
-      expect(posA, isNotNull, reason: 'position for book 1 survived re-key');
-      expect(posA!.sectionIndex, 5);
-      expect(posA.normCharOffset, 3333);
-      expect(posA.updatedAt, 1111);
-      final posB = await db.getReaderPosition(uidB);
-      expect(posB, isNotNull, reason: 'position for book 2 survived re-key');
-      expect(posB!.sectionIndex, 7);
-      expect(posB.normCharOffset, 6666);
+        // (d) v16 row-level data-preservation for reader_positions: the two
+        //     positions re-keyed from ttu_book_id -> book_key (v16) -> stable
+        //     uid (v82), every other column intact, reachable via the typed
+        //     getReaderPosition(bookUid)（bookKey 经 resolveEpubBookUid 换算）.
+        final String uidA = (await db.resolveEpubBookUid(_kTitleA))!;
+        final String uidB = (await db.resolveEpubBookUid(_kTitleB))!;
+        final posA = await db.getReaderPosition(uidA);
+        expect(posA, isNotNull, reason: 'position for book 1 survived re-key');
+        expect(posA!.sectionIndex, 5);
+        expect(posA.normCharOffset, 3333);
+        expect(posA.updatedAt, 1111);
+        final posB = await db.getReaderPosition(uidB);
+        expect(posB, isNotNull, reason: 'position for book 2 survived re-key');
+        expect(posB!.sectionIndex, 7);
+        expect(posB.normCharOffset, 6666);
 
-      // (e) v24: ttu_char_offset terminally dropped, char_offset present and
-      //     defaulting to -1 on the carried-over rows.
-      final rpCols =
-          await db.customSelect("PRAGMA table_info('reader_positions')").get();
-      final rpColNames = rpCols.map((r) => r.data['name'] as String).toSet();
-      expect(rpColNames, contains('char_offset'));
-      expect(rpColNames, isNot(contains('ttu_char_offset')),
-          reason: 'v24 terminally drops ttu_char_offset');
-      expect(posA.charOffset, -1,
-          reason: 'rows carried through the ladder default char_offset to -1');
+        // (e) v24: ttu_char_offset terminally dropped, char_offset present and
+        //     defaulting to -1 on the carried-over rows.
+        final rpCols = await db
+            .customSelect("PRAGMA table_info('reader_positions')")
+            .get();
+        final rpColNames = rpCols.map((r) => r.data['name'] as String).toSet();
+        expect(rpColNames, contains('char_offset'));
+        expect(
+          rpColNames,
+          isNot(contains('ttu_char_offset')),
+          reason: 'v24 terminally drops ttu_char_offset',
+        );
+        expect(
+          posA.charOffset,
+          -1,
+          reason: 'rows carried through the ladder default char_offset to -1',
+        );
 
-      // (f) Key tables all present after the full ladder (sanity that no step
-      //     dropped a table). Mirrors migration_test.dart "all expected tables".
-      final tables = await db
-          .customSelect("SELECT name FROM sqlite_master WHERE type='table' "
-              "AND name NOT LIKE 'sqlite_%'")
-          .get();
-      final tableNames = tables.map((r) => r.data['name'] as String).toSet();
-      expect(
-        tableNames,
-        containsAll(<String>[
-          'epub_books',
-          'reader_positions',
-          'bookmarks',
-          'dictionary_metadata',
-          'sync_baselines',
-          'video_books',
-          'tag_assignments',
-          'video_watch_statistics',
-          'video_hourly_logs',
-          'favorite_words',
-          'mining_statistics',
-        ]),
-      );
-    });
+        // (f) Key tables all present after the full ladder (sanity that no step
+        //     dropped a table). Mirrors migration_test.dart "all expected tables".
+        final tables = await db
+            .customSelect(
+              "SELECT name FROM sqlite_master WHERE type='table' "
+              "AND name NOT LIKE 'sqlite_%'",
+            )
+            .get();
+        final tableNames = tables.map((r) => r.data['name'] as String).toSet();
+        expect(
+          tableNames,
+          containsAll(<String>[
+            'epub_books',
+            'reader_positions',
+            'bookmarks',
+            'dictionary_metadata',
+            'sync_baselines',
+            'video_books',
+            'tag_assignments',
+            'video_watch_statistics',
+            'video_hourly_logs',
+            'favorite_words',
+            'mining_statistics',
+          ]),
+        );
+      },
+    );
 
-    test('v2 entry point also lands on the current schema (no double-add)',
-        () async {
-      // Same seed but the DB already declares v2 — from<2 (dictionary type) must
-      // NOT re-fire and error. We add the type column up front to mirror a real
-      // v2 DB.
-      final db = FushiDatabase.forTesting(
-        NativeDatabase.memory(
-          setup: (rawDb) {
-            rawDb.execute('PRAGMA foreign_keys = OFF');
-            rawDb.execute('''
+    test(
+      'v2 entry point also lands on the current schema (no double-add)',
+      () async {
+        // Same seed but the DB already declares v2 — from<2 (dictionary type) must
+        // NOT re-fire and error. We add the type column up front to mirror a real
+        // v2 DB.
+        final db = FushiDatabase.forTesting(
+          NativeDatabase.memory(
+            setup: (rawDb) {
+              rawDb.execute('PRAGMA foreign_keys = OFF');
+              rawDb.execute('''
 CREATE TABLE epub_books (
   id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
   title TEXT NOT NULL,
@@ -234,7 +260,7 @@ CREATE TABLE epub_books (
   imported_at INTEGER NOT NULL
 )
 ''');
-            rawDb.execute('''
+              rawDb.execute('''
 CREATE TABLE reader_positions (
   id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
   ttu_book_id INTEGER NOT NULL UNIQUE,
@@ -243,8 +269,8 @@ CREATE TABLE reader_positions (
   updated_at INTEGER NOT NULL
 )
 ''');
-            // v2 DB: dictionary_metadata already HAS the type column.
-            rawDb.execute('''
+              // v2 DB: dictionary_metadata already HAS the type column.
+              rawDb.execute('''
 CREATE TABLE dictionary_metadata (
   name TEXT NOT NULL PRIMARY KEY,
   format_key TEXT NOT NULL,
@@ -255,39 +281,45 @@ CREATE TABLE dictionary_metadata (
   collapsed_languages_json TEXT NOT NULL DEFAULT '[]'
 )
 ''');
-            rawDb.execute(
-              'INSERT INTO epub_books '
-              '(id, title, epub_path, extract_dir, chapter_count, '
-              ' chapters_json, imported_at) '
-              "VALUES (1, '$_kTitleA', '/abs/a.epub', '/abs/a', 1, '[]', 1)",
-            );
-            rawDb.execute(
-              'INSERT INTO reader_positions '
-              '(ttu_book_id, section_index, norm_char_offset, updated_at) '
-              'VALUES (1, 9, 4242, 5)',
-            );
-            rawDb.execute('PRAGMA user_version = 2');
-          },
-        ),
-      );
-      addTearDown(db.close);
+              rawDb.execute(
+                'INSERT INTO epub_books '
+                '(id, title, epub_path, extract_dir, chapter_count, '
+                ' chapters_json, imported_at) '
+                "VALUES (1, '$_kTitleA', '/abs/a.epub', '/abs/a', 1, '[]', 1)",
+              );
+              rawDb.execute(
+                'INSERT INTO reader_positions '
+                '(ttu_book_id, section_index, norm_char_offset, updated_at) '
+                'VALUES (1, 9, 4242, 5)',
+              );
+              rawDb.execute('PRAGMA user_version = 2');
+            },
+          ),
+        );
+        addTearDown(db.close);
 
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
 
-      // Book re-keyed, position carried through, ttu_char_offset gone.
-      // （v82 起进度键 = uid，bookKey 经 resolveEpubBookUid 换算后查。）
-      final pos =
-          await db.getReaderPosition((await db.resolveEpubBookUid(_kTitleA))!);
-      expect(pos, isNotNull);
-      expect(pos!.sectionIndex, 9);
-      expect(pos.normCharOffset, 4242);
-      expect(pos.charOffset, -1);
-      final rpColNames =
-          (await db.customSelect("PRAGMA table_info('reader_positions')").get())
-              .map((r) => r.data['name'] as String)
-              .toSet();
-      expect(rpColNames, isNot(contains('ttu_char_offset')));
-    });
+        // Book re-keyed, position carried through, ttu_char_offset gone.
+        // （v82 起进度键 = uid，bookKey 经 resolveEpubBookUid 换算后查。）
+        final pos = await db.getReaderPosition(
+          (await db.resolveEpubBookUid(_kTitleA))!,
+        );
+        expect(pos, isNotNull);
+        expect(pos!.sectionIndex, 9);
+        expect(pos.normCharOffset, 4242);
+        expect(pos.charOffset, -1);
+        final rpColNames =
+            (await db
+                    .customSelect("PRAGMA table_info('reader_positions')")
+                    .get())
+                .map((r) => r.data['name'] as String)
+                .toSet();
+        expect(rpColNames, isNot(contains('ttu_char_offset')));
+      },
+    );
   });
 }

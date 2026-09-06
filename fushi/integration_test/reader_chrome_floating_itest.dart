@@ -75,12 +75,21 @@ void main() {
         // Defaults now float: top progress ON, top floating ON, bottom floating
         // (tap_empty_hide_chrome) ON. Assert once so a silently-changed default
         // fails loudly here.
-        expect(ReaderFushiSource.instance.showTopProgressBar, isTrue,
-            reason: 'top progress must default ON.');
-        expect(ReaderFushiSource.instance.topProgressFloating, isTrue,
-            reason: 'top progress must default to floating.');
-        expect(ReaderFushiSource.instance.tapEmptyToHideChrome, isTrue,
-            reason: 'bottom bar must default to floating.');
+        expect(
+          ReaderFushiSource.instance.showTopProgressBar,
+          isTrue,
+          reason: 'top progress must default ON.',
+        );
+        expect(
+          ReaderFushiSource.instance.topProgressFloating,
+          isTrue,
+          reason: 'top progress must default to floating.',
+        );
+        expect(
+          ReaderFushiSource.instance.tapEmptyToHideChrome,
+          isTrue,
+          reason: 'bottom bar must default to floating.',
+        );
 
         // This test exercises the squeeze -> floating transition, so force both
         // back to the squeeze baseline BEFORE the reader mounts (prefs land in
@@ -88,10 +97,16 @@ void main() {
         ReaderFushiSource.instance.toggleTopProgressFloating();
         ReaderFushiSource.instance.toggleTapEmptyToHideChrome();
         await _pumpForPref(tester);
-        expect(ReaderFushiSource.instance.topProgressFloating, isFalse,
-            reason: 'forced squeeze baseline: top floating off.');
-        expect(ReaderFushiSource.instance.tapEmptyToHideChrome, isFalse,
-            reason: 'forced squeeze baseline: bottom floating off.');
+        expect(
+          ReaderFushiSource.instance.topProgressFloating,
+          isFalse,
+          reason: 'forced squeeze baseline: top floating off.',
+        );
+        expect(
+          ReaderFushiSource.instance.tapEmptyToHideChrome,
+          isFalse,
+          reason: 'forced squeeze baseline: bottom floating off.',
+        );
 
         // BUG-1106：Tab 遍历前必须先开实验焦点导航开关——关闭（默认）时裸 Tab 被全局
         // 中和成 DoNothingIntent，而集成测试跑在全新隔离根上、偏好恒为默认值。
@@ -108,19 +123,27 @@ void main() {
         for (int i = 0; i < 40 && seededEntry.evaluate().isEmpty; i++) {
           await tester.pump(const Duration(milliseconds: 500));
         }
-        expect(seededEntry, findsOneWidget,
-            reason: 'freshly seeded paginated book must appear on the shelf');
+        expect(
+          seededEntry,
+          findsOneWidget,
+          reason: 'freshly seeded paginated book must appear on the shelf',
+        );
 
         await _activateBook(tester, bookKey);
         await tester.pump(const Duration(seconds: 3));
 
-        for (int i = 0;
-            i < 40 && find.byType(ReaderFushiPage).evaluate().isEmpty;
-            i++) {
+        for (
+          int i = 0;
+          i < 40 && find.byType(ReaderFushiPage).evaluate().isEmpty;
+          i++
+        ) {
           await tester.pump(const Duration(milliseconds: 250));
         }
-        expect(find.byType(ReaderFushiPage), findsOneWidget,
-            reason: 'ReaderFushiPage must mount after openMedia.');
+        expect(
+          find.byType(ReaderFushiPage),
+          findsOneWidget,
+          reason: 'ReaderFushiPage must mount after openMedia.',
+        );
 
         const Key webViewKey = ValueKey<String>('fushi_webview');
         bool webViewPresent = false;
@@ -146,8 +169,11 @@ void main() {
         expect(contentReady, isTrue, reason: 'Reader content ready within 60s');
 
         final eval = ReaderFushiPage.debugEvaluateJavascript;
-        expect(eval, isNotNull,
-            reason: 'Reader debug JS hook must be set (debug/profile build).');
+        expect(
+          eval,
+          isNotNull,
+          reason: 'Reader debug JS hook must be set (debug/profile build).',
+        );
 
         // ── DOM probes ────────────────────────────────────────────────
         Future<double> readCssVar(String name) async {
@@ -203,20 +229,33 @@ void main() {
         );
         final double baseBottomInset = await readChromeBottomInset();
         final double baseFirstTop = await firstLineTop();
-        debugPrint('[CHROME975] BASELINE topInset=$baseTopInset '
-            'bottomInset=$baseBottomInset firstTop=$baseFirstTop');
+        debugPrint(
+          '[CHROME975] BASELINE topInset=$baseTopInset '
+          'bottomInset=$baseBottomInset firstTop=$baseFirstTop',
+        );
 
-        expect(baseTopInset, greaterThanOrEqualTo(kTopReservePx - 1.0),
-            reason: 'baseline: top squeeze ON, --chrome-top-inset has 18px. '
-                'got=$baseTopInset');
-        expect(baseFirstTop, greaterThanOrEqualTo(kTopReservePx - 1.0),
-            reason:
-                'baseline: first line top clears the strip. got=$baseFirstTop');
+        expect(
+          baseTopInset,
+          greaterThanOrEqualTo(kTopReservePx - 1.0),
+          reason:
+              'baseline: top squeeze ON, --chrome-top-inset has 18px. '
+              'got=$baseTopInset',
+        );
+        expect(
+          baseFirstTop,
+          greaterThanOrEqualTo(kTopReservePx - 1.0),
+          reason:
+              'baseline: first line top clears the strip. got=$baseFirstTop',
+        );
         // System bottom inset is usually 0 on desktop; assert "clearly > 0" with
         // a wide tolerance rather than coupling to the exact scaled height.
-        expect(baseBottomInset, greaterThan(30.0),
-            reason: 'baseline: bottom squeeze, --chrome-bottom-inset has bar '
-                'height (~56px). got=$baseBottomInset');
+        expect(
+          baseBottomInset,
+          greaterThan(30.0),
+          reason:
+              'baseline: bottom squeeze, --chrome-bottom-inset has bar '
+              'height (~56px). got=$baseBottomInset',
+        );
 
         // ───────────────────────────────────────────────────────────────
         // Goal 1: reclaim blank. show_top_progress_bar ON->OFF -> top-inset
@@ -224,8 +263,11 @@ void main() {
         // ───────────────────────────────────────────────────────────────
         ReaderFushiSource.instance.toggleShowTopProgressBar();
         await _pumpForPref(tester);
-        expect(ReaderFushiSource.instance.showTopProgressBar, isFalse,
-            reason: 'progress-off pref must land false');
+        expect(
+          ReaderFushiSource.instance.showTopProgressBar,
+          isFalse,
+          reason: 'progress-off pref must land false',
+        );
         ReaderFushiSource.onChromeReanchorLive?.call();
 
         final double offTopInset = await settleCssVar(
@@ -233,15 +275,25 @@ void main() {
           (v) => v <= 1.0,
         );
         final double offFirstTop = await firstLineTop();
-        debugPrint('[CHROME975] PROGRESS-OFF topInset=$offTopInset '
-            'firstTop=$offFirstTop');
+        debugPrint(
+          '[CHROME975] PROGRESS-OFF topInset=$offTopInset '
+          'firstTop=$offFirstTop',
+        );
 
-        expect(offTopInset, lessThanOrEqualTo(1.0),
-            reason: 'goal1: progress OFF -> --chrome-top-inset reclaimed to 0. '
-                'got=$offTopInset');
-        expect(offFirstTop, lessThanOrEqualTo(kTopReservePx - 1.0),
-            reason: 'goal1: progress OFF -> first line moves into former strip '
-                'area (< 18px). got=$offFirstTop');
+        expect(
+          offTopInset,
+          lessThanOrEqualTo(1.0),
+          reason:
+              'goal1: progress OFF -> --chrome-top-inset reclaimed to 0. '
+              'got=$offTopInset',
+        );
+        expect(
+          offFirstTop,
+          lessThanOrEqualTo(kTopReservePx - 1.0),
+          reason:
+              'goal1: progress OFF -> first line moves into former strip '
+              'area (< 18px). got=$offFirstTop',
+        );
 
         // ───────────────────────────────────────────────────────────────
         // Goal 2: floating does not take text space. Restore progress ON (now
@@ -256,14 +308,21 @@ void main() {
           readChromeTopInset,
           (v) => v >= kTopReservePx - 1.0,
         );
-        expect(reTopInset, greaterThanOrEqualTo(kTopReservePx - 1.0),
-            reason: 'precondition: restoring progress ON re-adds 18px. '
-                'got=$reTopInset');
+        expect(
+          reTopInset,
+          greaterThanOrEqualTo(kTopReservePx - 1.0),
+          reason:
+              'precondition: restoring progress ON re-adds 18px. '
+              'got=$reTopInset',
+        );
 
         ReaderFushiSource.instance.toggleTopProgressFloating(); // to floating
         await _pumpForPref(tester);
-        expect(ReaderFushiSource.instance.topProgressFloating, isTrue,
-            reason: 'top floating pref must land true');
+        expect(
+          ReaderFushiSource.instance.topProgressFloating,
+          isTrue,
+          reason: 'top floating pref must land true',
+        );
         ReaderFushiSource.onChromeReanchorLive?.call();
 
         final double floatTopInset = await settleCssVar(
@@ -271,15 +330,25 @@ void main() {
           (v) => v <= 1.0,
         );
         final double floatFirstTop = await firstLineTop();
-        debugPrint('[CHROME975] TOP-FLOATING topInset=$floatTopInset '
-            'firstTop=$floatFirstTop');
+        debugPrint(
+          '[CHROME975] TOP-FLOATING topInset=$floatTopInset '
+          'firstTop=$floatFirstTop',
+        );
 
-        expect(floatTopInset, lessThanOrEqualTo(1.0),
-            reason: 'goal2: top floating -> --chrome-top-inset is 0 (floating '
-                'reserve 0, strip overlays body). got=$floatTopInset');
-        expect(floatFirstTop, lessThanOrEqualTo(kTopReservePx - 1.0),
-            reason: 'goal2: floating -> first line not pushed down (< 18px), '
-                'i.e. does not take text space. got=$floatFirstTop');
+        expect(
+          floatTopInset,
+          lessThanOrEqualTo(1.0),
+          reason:
+              'goal2: top floating -> --chrome-top-inset is 0 (floating '
+              'reserve 0, strip overlays body). got=$floatTopInset',
+        );
+        expect(
+          floatFirstTop,
+          lessThanOrEqualTo(kTopReservePx - 1.0),
+          reason:
+              'goal2: floating -> first line not pushed down (< 18px), '
+              'i.e. does not take text space. got=$floatFirstTop',
+        );
 
         await takeScreenshot(binding, 'todo975_top_floating_no_layout_shift');
 
@@ -291,21 +360,29 @@ void main() {
         // ───────────────────────────────────────────────────────────────
         ReaderFushiSource.instance.toggleTapEmptyToHideChrome();
         await _pumpForPref(tester);
-        expect(ReaderFushiSource.instance.tapEmptyToHideChrome, isTrue,
-            reason: 'bottom floating pref must land true');
+        expect(
+          ReaderFushiSource.instance.tapEmptyToHideChrome,
+          isTrue,
+          reason: 'bottom floating pref must land true',
+        );
         ReaderFushiSource.onChromeReanchorLive?.call();
 
         final double floatBottomInset = await settleCssVar(
           readChromeBottomInset,
           (v) => v <= 5.0,
         );
-        debugPrint('[CHROME975] BOTTOM-FLOATING(hidden) '
-            'bottomInset=$floatBottomInset');
-        expect(floatBottomInset, lessThan(baseBottomInset - 20.0),
-            reason:
-                'goal3: bottom floating -> --chrome-bottom-inset drops from '
-                'bar height ($baseBottomInset) to system inset only. '
-                'got=$floatBottomInset');
+        debugPrint(
+          '[CHROME975] BOTTOM-FLOATING(hidden) '
+          'bottomInset=$floatBottomInset',
+        );
+        expect(
+          floatBottomInset,
+          lessThan(baseBottomInset - 20.0),
+          reason:
+              'goal3: bottom floating -> --chrome-bottom-inset drops from '
+              'bar height ($baseBottomInset) to system inset only. '
+              'got=$floatBottomInset',
+        );
 
         // Diagnostic: confirm the JS bridge + handler are reachable from the
         // debug eval context before relying on it to reveal the bar.
@@ -333,8 +410,10 @@ void main() {
         //    chrome is the settings bar (_buildSettingsBar, no ValueKey), not
         //    the audiobook play bar (fushi_play_bar). Its unique headphones
         //    (audio-import) IconButton is the direct bottom-bar witness.
-        final Finder bottomBarWitness =
-            find.widgetWithIcon(IconButton, Icons.headphones_outlined);
+        final Finder bottomBarWitness = find.widgetWithIcon(
+          IconButton,
+          Icons.headphones_outlined,
+        );
         bool progressRevealed = false;
         bool bottomBarRevealed = false;
         for (int i = 0; i < 40; i++) {
@@ -347,29 +426,42 @@ void main() {
           if (progressRevealed && bottomBarRevealed) break;
         }
         final double revealedBottomInset = await readChromeBottomInset();
-        debugPrint('[CHROME975] BOTTOM-FLOATING(revealed) '
-            'progressRevealed=$progressRevealed '
-            'bottomBarRevealed=$bottomBarRevealed '
-            'bottomInset=$revealedBottomInset');
+        debugPrint(
+          '[CHROME975] BOTTOM-FLOATING(revealed) '
+          'progressRevealed=$progressRevealed '
+          'bottomBarRevealed=$bottomBarRevealed '
+          'bottomInset=$revealedBottomInset',
+        );
 
         // The tap-reveal state machine (_handleFloatingChromeReveal) flips
         // the single _chromeTransientVisible flag shared by both floating
         // surfaces. Assert the tap revealed the floating bottom bar (975
         // decision #3: tap-empty reveals the floating chrome) AND the top
         // progress strip (both share the transient flag).
-        expect(bottomBarRevealed, isTrue,
-            reason: 'goal3: onTapEmpty must reveal the floating bottom bar '
-                '(settings-bar audio-import icon appears).');
-        expect(progressRevealed, isTrue,
-            reason: 'goal3: the shared transient-visible flag also reveals '
-                'the floating top progress strip.');
+        expect(
+          bottomBarRevealed,
+          isTrue,
+          reason:
+              'goal3: onTapEmpty must reveal the floating bottom bar '
+              '(settings-bar audio-import icon appears).',
+        );
+        expect(
+          progressRevealed,
+          isTrue,
+          reason:
+              'goal3: the shared transient-visible flag also reveals '
+              'the floating top progress strip.',
+        );
         // Core: inset unchanged after reveal (floating overlay does not push the
         // body / shrink the visible body height).
-        expect((revealedBottomInset - floatBottomInset).abs(),
-            lessThanOrEqualTo(kEps),
-            reason: 'goal3: revealing the floating bottom bar must NOT change '
-                '--chrome-bottom-inset (no layout shift). '
-                'hidden=$floatBottomInset revealed=$revealedBottomInset');
+        expect(
+          (revealedBottomInset - floatBottomInset).abs(),
+          lessThanOrEqualTo(kEps),
+          reason:
+              'goal3: revealing the floating bottom bar must NOT change '
+              '--chrome-bottom-inset (no layout shift). '
+              'hidden=$floatBottomInset revealed=$revealedBottomInset',
+        );
 
         await takeScreenshot(binding, 'todo975_bottom_floating_revealed');
 
@@ -404,18 +496,23 @@ void main() {
           }
         }
         debugPrint('[CHROME975] AUTO-HIDE autoHidden=$autoHidden');
-        expect(autoHidden, isTrue,
-            reason: 'goal4: after waiting auto-hide (${autoHideMs}ms), both '
-                'revealed floating surfaces (top progress + bottom bar) must '
-                'auto-hide.');
+        expect(
+          autoHidden,
+          isTrue,
+          reason:
+              'goal4: after waiting auto-hide (${autoHideMs}ms), both '
+              'revealed floating surfaces (top progress + bottom bar) must '
+              'auto-hide.',
+        );
 
         // ── Restore prefs + exit ────────────────────────────────────────
         ReaderFushiSource.instance.toggleTopProgressFloating();
         ReaderFushiSource.instance.toggleTapEmptyToHideChrome();
         await _pumpForPref(tester);
 
-        final NavigatorState nav =
-            Navigator.of(tester.element(find.byType(Scaffold).first));
+        final NavigatorState nav = Navigator.of(
+          tester.element(find.byType(Scaffold).first),
+        );
         nav.pop();
         await tester.pump(const Duration(seconds: 2));
         await tester.pumpAndSettle();
@@ -487,8 +584,11 @@ Future<String> _seedTestBook(WidgetTester tester) async {
   for (int i = 0; i < 120 && !appModel.isInitialised; i++) {
     await tester.pump(const Duration(milliseconds: 500));
   }
-  expect(appModel.isInitialised, isTrue,
-      reason: 'AppModel must be initialised before importing a book');
+  expect(
+    appModel.isInitialised,
+    isTrue,
+    reason: 'AppModel must be initialised before importing a book',
+  );
 
   final Uint8List bytes = EpubGenerator().generate();
   final String bookKey = await EpubImporter.import(
@@ -507,25 +607,33 @@ Future<String> _seedTestBook(WidgetTester tester) async {
 /// reader_top_progress_inset_dom_test._activateBook): resolve MediaItem from key
 /// and drive AppModel.openMedia directly (bypassing the focus tree, TODO-783).
 Future<void> _activateBook(WidgetTester tester, String bookKey) async {
-  final BuildContext appContext =
-      tester.element(find.byType(MaterialApp).first);
+  final BuildContext appContext = tester.element(
+    find.byType(MaterialApp).first,
+  );
   final ProviderContainer container = ProviderScope.containerOf(appContext);
   final AppModel appModel = container.read(appProvider);
 
-  final ConsumerStatefulElement appElement = tester
-      .element(find.byType(app.FushiReaderApp)) as ConsumerStatefulElement;
+  final ConsumerStatefulElement appElement =
+      tester.element(find.byType(app.FushiReaderApp))
+          as ConsumerStatefulElement;
   final WidgetRef ref = appElement;
 
-  final MediaItem? item =
-      await ReaderFushiSource.instance.mediaItemForBookKey(bookKey);
-  expect(item, isNotNull,
-      reason: 'Seeded book must resolve to a MediaItem (key=$bookKey)');
+  final MediaItem? item = await ReaderFushiSource.instance.mediaItemForBookKey(
+    bookKey,
+  );
+  expect(
+    item,
+    isNotNull,
+    reason: 'Seeded book must resolve to a MediaItem (key=$bookKey)',
+  );
 
-  unawaited(appModel.openMedia(
-    ref: ref,
-    mediaSource: ReaderFushiSource.instance,
-    item: item!,
-  ));
+  unawaited(
+    appModel.openMedia(
+      ref: ref,
+      mediaSource: ReaderFushiSource.instance,
+      item: item!,
+    ),
+  );
   for (int i = 0; i < 8; i++) {
     await tester.pump(const Duration(milliseconds: 250));
   }

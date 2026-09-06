@@ -108,9 +108,13 @@ void main() {
     test('三条惯性跨章入口都传 inertia:true / inertia:throttleMs>0', () {
       // onBoundarySwipe（连续滚轮/触摸跨章）。
       expect(
-          source, contains("_handlePageTurnLimit('forward', inertia: true)"));
+        source,
+        contains("_handlePageTurnLimit('forward', inertia: true)"),
+      );
       expect(
-          source, contains("_handlePageTurnLimit('backward', inertia: true)"));
+        source,
+        contains("_handlePageTurnLimit('backward', inertia: true)"),
+      );
       // _paginate 两分支（滚轮 throttleMs>0=惯性，键盘/手柄 throttleMs==0 不置旗）。
       expect(
         'inertia: throttleMs > 0'.allMatches(source).length,
@@ -125,8 +129,11 @@ void main() {
         'void _onRestoreComplete()',
         'void _handlePageTurnLimit(String direction',
       );
-      expect(restore, contains('_noteChapterTurnSettledIfPending();'),
-          reason: '正文章 content-ready（最常见路径）必须重新 stamp 冷却窗');
+      expect(
+        restore,
+        contains('_noteChapterTurnSettledIfPending();'),
+        reason: '正文章 content-ready（最常见路径）必须重新 stamp 冷却窗',
+      );
     });
 
     test('content-ready 完成点消费 pending：spreadReady + 兜底超时', () {
@@ -136,16 +143,22 @@ void main() {
         "handlerName: 'spreadReady'",
         "handlerName: 'onCueTap'",
       );
-      expect(spread, contains('_noteChapterTurnSettledIfPending();'),
-          reason: 'spread(漫画双页) content-ready 也要重新 stamp 冷却窗');
+      expect(
+        spread,
+        contains('_noteChapterTurnSettledIfPending();'),
+        reason: 'spread(漫画双页) content-ready 也要重新 stamp 冷却窗',
+      );
       // 兜底超时（content ready timeout）。
       final String timeout = _slice(
         source,
         'void _startContentReadyTimeout()',
         'void _clearContentReadyTimeout()',
       );
-      expect(timeout, contains('_noteChapterTurnSettledIfPending();'),
-          reason: '兜底超时也算就绪，必须消费 pending 避免旗子悬空');
+      expect(
+        timeout,
+        contains('_noteChapterTurnSettledIfPending();'),
+        reason: '兜底超时也算就绪，必须消费 pending 避免旗子悬空',
+      );
     });
   });
 }

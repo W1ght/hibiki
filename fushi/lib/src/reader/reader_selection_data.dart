@@ -30,10 +30,10 @@ class ReaderSelectionData {
       normalizedOffset: (json['normalizedOffset'] as num?)?.toInt(),
       normalizedLength: (json['normalizedLength'] as num?)?.toInt(),
       sentenceOffset: (json['sentenceOffset'] as num?)?.toInt() ?? 0,
-      sentenceNormalizedOffset:
-          (json['sentenceNormalizedOffset'] as num?)?.toInt(),
-      sentenceNormalizedLength:
-          (json['sentenceNormalizedLength'] as num?)?.toInt(),
+      sentenceNormalizedOffset: (json['sentenceNormalizedOffset'] as num?)
+          ?.toInt(),
+      sentenceNormalizedLength: (json['sentenceNormalizedLength'] as num?)
+          ?.toInt(),
       verticalWriting: json['verticalWriting'] as bool? ?? false,
       mangaPageIndex: (json['mangaPageIndex'] as num?)?.toInt(),
     );

@@ -36,7 +36,8 @@ class AidokuInstalledPackage {
           : const <String>[],
       requiresWebView: json['requiresWebView'] == true,
       packagePath: packagePath,
-      installedAt: DateTime.tryParse(json['installedAt']?.toString() ?? '') ??
+      installedAt:
+          DateTime.tryParse(json['installedAt']?.toString() ?? '') ??
           DateTime.fromMillisecondsSinceEpoch(0, isUtc: true),
       enabled: json['enabled'] != false,
     );
@@ -72,26 +73,26 @@ class AidokuInstalledPackage {
   final bool enabled;
 
   AidokuInstalledPackage copyWith({bool? enabled}) => AidokuInstalledPackage(
-        id: id,
-        name: name,
-        version: version,
-        languages: languages,
-        requiresWebView: requiresWebView,
-        packagePath: packagePath,
-        installedAt: installedAt,
-        enabled: enabled ?? this.enabled,
-      );
+    id: id,
+    name: name,
+    version: version,
+    languages: languages,
+    requiresWebView: requiresWebView,
+    packagePath: packagePath,
+    installedAt: installedAt,
+    enabled: enabled ?? this.enabled,
+  );
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'schemaVersion': 1,
-        'id': id,
-        'name': name,
-        'version': version,
-        'languages': languages,
-        'requiresWebView': requiresWebView,
-        'installedAt': installedAt.toIso8601String(),
-        'enabled': enabled,
-      };
+    'schemaVersion': 1,
+    'id': id,
+    'name': name,
+    'version': version,
+    'languages': languages,
+    'requiresWebView': requiresWebView,
+    'installedAt': installedAt.toIso8601String(),
+    'enabled': enabled,
+  };
 }
 
 class AidokuPackageStore {
@@ -167,14 +168,18 @@ class AidokuPackageStore {
     final File target = File(p.join(directory.path, '$stem.aix'));
     final File metadata = File(p.join(directory.path, '$stem.json'));
     final String nonce = DateTime.now().microsecondsSinceEpoch.toString();
-    final File stagedPackage =
-        File(p.join(directory.path, '.$stem.$nonce.aix'));
-    final File stagedMetadata =
-        File(p.join(directory.path, '.$stem.$nonce.json'));
-    final File backupPackage =
-        File(p.join(directory.path, '.$stem.$nonce.aix.bak'));
-    final File backupMetadata =
-        File(p.join(directory.path, '.$stem.$nonce.json.bak'));
+    final File stagedPackage = File(
+      p.join(directory.path, '.$stem.$nonce.aix'),
+    );
+    final File stagedMetadata = File(
+      p.join(directory.path, '.$stem.$nonce.json'),
+    );
+    final File backupPackage = File(
+      p.join(directory.path, '.$stem.$nonce.aix.bak'),
+    );
+    final File backupMetadata = File(
+      p.join(directory.path, '.$stem.$nonce.json.bak'),
+    );
     final bool hadPackage = await target.exists();
     final bool hadMetadata = await metadata.exists();
 

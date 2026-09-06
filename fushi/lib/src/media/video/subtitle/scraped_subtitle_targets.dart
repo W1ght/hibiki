@@ -37,22 +37,24 @@ List<SubtitleBackfillTarget> scrapedSubtitleTargets({
     final int? episode = parsed.episode;
     if (episode == null && !single) continue;
     final int? season = episode == null ? null : (parsed.season ?? 1);
-    out.add(SubtitleBackfillTarget(
-      bookUid: book.bookUid,
-      videoPath: book.videoPath,
-      hasExistingSubtitle: hasExistingSubtitle(book.bookUid),
-      media: scrapedMediaReference(
-        metadata,
-        season: season,
-        episode: episode,
+    out.add(
+      SubtitleBackfillTarget(
+        bookUid: book.bookUid,
+        videoPath: book.videoPath,
+        hasExistingSubtitle: hasExistingSubtitle(book.bookUid),
+        media: scrapedMediaReference(
+          metadata,
+          season: season,
+          episode: episode,
+        ),
+        scrapedRuntimeMinutes: _runtimeFor(metadata, season, episode),
+        // 「默认下视频语言的字幕」的两个来源：用户对本视频手动指定的内容语言
+        // （压过一切），与刮削出的作品原语言。两者都可能为空，那时由 ffprobe 的
+        // 音轨 tag 兜底，再没有就不表态——不猜。
+        contentLanguage: book.language,
+        originalLanguage: metadata.originalLanguage,
       ),
-      scrapedRuntimeMinutes: _runtimeFor(metadata, season, episode),
-      // 「默认下视频语言的字幕」的两个来源：用户对本视频手动指定的内容语言
-      // （压过一切），与刮削出的作品原语言。两者都可能为空，那时由 ffprobe 的
-      // 音轨 tag 兜底，再没有就不表态——不猜。
-      contentLanguage: book.language,
-      originalLanguage: metadata.originalLanguage,
-    ));
+    );
   }
   return out;
 }
@@ -69,18 +71,17 @@ VideoMediaReference scrapedMediaReference(
   VideoMetadataWork metadata, {
   int? season,
   int? episode,
-}) =>
-    identityMediaReference(
-      providerId: metadata.provider.name,
-      kind: metadata.kind,
-      externalIds: _idsOf(metadata),
-      title: metadata.title,
-      originalTitle: metadata.originalTitle,
-      aliases: metadata.aliases,
-      year: metadata.year,
-      season: season,
-      episode: episode,
-    );
+}) => identityMediaReference(
+  providerId: metadata.provider.name,
+  kind: metadata.kind,
+  externalIds: _idsOf(metadata),
+  title: metadata.title,
+  originalTitle: metadata.originalTitle,
+  aliases: metadata.aliases,
+  year: metadata.year,
+  season: season,
+  episode: episode,
+);
 
 /// 同一张映射的**去模型化**入口：只吃 `provider → externalId` 与媒体形态。
 ///
@@ -133,9 +134,9 @@ VideoMediaReference identityMediaReference({
 
 /// `VideoMetadataWork.ids` → `provider → externalId`（空值直接丢弃）。
 Map<String, String> _idsOf(VideoMetadataWork metadata) => <String, String>{
-      for (final VideoMetadataId id in metadata.ids)
-        if (id.value.trim().isNotEmpty) id.type.trim().toLowerCase(): id.value,
-    };
+  for (final VideoMetadataId id in metadata.ids)
+    if (id.value.trim().isNotEmpty) id.type.trim().toLowerCase(): id.value,
+};
 
 /// 刮削元数据 → 发现层分类。
 ///

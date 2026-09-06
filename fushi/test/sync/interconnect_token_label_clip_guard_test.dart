@@ -30,10 +30,7 @@ Future<double> _labelTopMinusClipTop(
               childrenPadding: childrenPadding,
               title: const Text('手动填写令牌'),
               children: <Widget>[
-                FushiTextField(
-                  controller: controller,
-                  labelText: '对端访问令牌',
-                ),
+                FushiTextField(controller: controller, labelText: '对端访问令牌'),
               ],
             ),
           ),
@@ -56,30 +53,34 @@ Future<double> _labelTopMinusClipTop(
 
 void main() {
   testWidgets(
-      'BUG-755 repro: zero childrenPadding clips the floating label top half',
-      (WidgetTester tester) async {
-    final double delta = await _labelTopMinusClipTop(tester, EdgeInsets.zero);
-    expect(
-      delta < 0,
-      isTrue,
-      reason:
-          'floating label top ($delta) should be above the Expansible ClipRect '
-          'top when childrenPadding is zero (this is the clipped state)',
-    );
-  });
+    'BUG-755 repro: zero childrenPadding clips the floating label top half',
+    (WidgetTester tester) async {
+      final double delta = await _labelTopMinusClipTop(tester, EdgeInsets.zero);
+      expect(
+        delta < 0,
+        isTrue,
+        reason:
+            'floating label top ($delta) should be above the Expansible ClipRect '
+            'top when childrenPadding is zero (this is the clipped state)',
+      );
+    },
+  );
 
   testWidgets(
-      'BUG-755 fix: top childrenPadding keeps the floating label inside clip',
-      (WidgetTester tester) async {
-    // Must match the value used in interconnect.part.dart.
-    final double delta =
-        await _labelTopMinusClipTop(tester, const EdgeInsets.only(top: 10));
-    expect(
-      delta >= 0,
-      isTrue,
-      reason:
-          'floating label top ($delta) must sit within the Expansible ClipRect '
-          '(fully visible) once top childrenPadding is applied',
-    );
-  });
+    'BUG-755 fix: top childrenPadding keeps the floating label inside clip',
+    (WidgetTester tester) async {
+      // Must match the value used in interconnect.part.dart.
+      final double delta = await _labelTopMinusClipTop(
+        tester,
+        const EdgeInsets.only(top: 10),
+      );
+      expect(
+        delta >= 0,
+        isTrue,
+        reason:
+            'floating label top ($delta) must sit within the Expansible ClipRect '
+            '(fully visible) once top childrenPadding is applied',
+      );
+    },
+  );
 }

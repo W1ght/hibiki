@@ -46,7 +46,8 @@ class VideoLibraryShell extends StatefulWidget {
   final Future<void> Function(
     SourceLibraryRow source,
     SourceScanSummary summary,
-  ) onVideoScanCompleted;
+  )
+  onVideoScanCompleted;
   final VoidCallback onOpenScrapeTasks;
   final VoidCallback onLibraryChanged;
 
@@ -61,11 +62,12 @@ class VideoLibraryShell extends StatefulWidget {
     BuildContext context,
     Widget navigation,
     VideoLibrarySection section,
-  )? localLibraryPageBuilder;
+  )?
+  localLibraryPageBuilder;
 
   /// 仅供宿主定制或 widget 测试注入发现页，不改变惰性构建/保活语义。
   final Widget Function(BuildContext context, Widget navigation)?
-      discoveryPageBuilder;
+  discoveryPageBuilder;
 
   @override
   State<VideoLibraryShell> createState() => _VideoLibraryShellState();
@@ -94,15 +96,13 @@ class _VideoLibraryShellState extends State<VideoLibraryShell> {
   }
 
   bool get _showsLocalLibrary => switch (_section) {
-        VideoLibrarySection.home ||
-        VideoLibrarySection.series ||
-        VideoLibrarySection.allVideos =>
-          true,
-        VideoLibrarySection.discover ||
-        VideoLibrarySection.sources ||
-        VideoLibrarySection.settings =>
-          false,
-      };
+    VideoLibrarySection.home ||
+    VideoLibrarySection.series ||
+    VideoLibrarySection.allVideos => true,
+    VideoLibrarySection.discover ||
+    VideoLibrarySection.sources ||
+    VideoLibrarySection.settings => false,
+  };
 
   Widget _navigationFor(bool active, Widget navigation) =>
       active ? navigation : const SizedBox.shrink();
@@ -127,35 +127,35 @@ class _VideoLibraryShellState extends State<VideoLibraryShell> {
     // 页签与横滑切区（[SectionSwipeNavigator]）共用同一份序：加减分区只改这里。
     final List<LibrarySectionTab<VideoLibrarySection>> tabs =
         <LibrarySectionTab<VideoLibrarySection>>[
-        LibrarySectionTab<VideoLibrarySection>(
-          value: VideoLibrarySection.home,
-          label: t.nav_home,
-        ),
-        LibrarySectionTab<VideoLibrarySection>(
-          value: VideoLibrarySection.series,
-          label: t.series,
-        ),
-        LibrarySectionTab<VideoLibrarySection>(
-          value: VideoLibrarySection.allVideos,
-          label: t.video_library_all_videos,
-        ),
-        // 与书 / 漫画 / 游戏的发现视图同 key（同概念一词,原 video_discovery_tab 已删），
-        // **也同位**：本地库的各视图排完才是在线发现，最后才是管理类分区。此前发现夹在
-        // 首页与系列 / 全部视频之间，一排里「自己的库 → 推荐 → 自己的库」来回跳，是四个
-        // 模块里唯一的例外（2026-08-24 用户反馈）。
-        LibrarySectionTab<VideoLibrarySection>(
-          value: VideoLibrarySection.discover,
-          label: t.library_view_browse,
-        ),
-        LibrarySectionTab<VideoLibrarySection>(
-          value: VideoLibrarySection.sources,
-          label: t.library_view_import,
-        ),
-        LibrarySectionTab<VideoLibrarySection>(
-          value: VideoLibrarySection.settings,
-          label: t.settings,
-        ),
-      ];
+          LibrarySectionTab<VideoLibrarySection>(
+            value: VideoLibrarySection.home,
+            label: t.nav_home,
+          ),
+          LibrarySectionTab<VideoLibrarySection>(
+            value: VideoLibrarySection.series,
+            label: t.series,
+          ),
+          LibrarySectionTab<VideoLibrarySection>(
+            value: VideoLibrarySection.allVideos,
+            label: t.video_library_all_videos,
+          ),
+          // 与书 / 漫画 / 游戏的发现视图同 key（同概念一词,原 video_discovery_tab 已删），
+          // **也同位**：本地库的各视图排完才是在线发现，最后才是管理类分区。此前发现夹在
+          // 首页与系列 / 全部视频之间，一排里「自己的库 → 推荐 → 自己的库」来回跳，是四个
+          // 模块里唯一的例外（2026-08-24 用户反馈）。
+          LibrarySectionTab<VideoLibrarySection>(
+            value: VideoLibrarySection.discover,
+            label: t.library_view_browse,
+          ),
+          LibrarySectionTab<VideoLibrarySection>(
+            value: VideoLibrarySection.sources,
+            label: t.library_view_import,
+          ),
+          LibrarySectionTab<VideoLibrarySection>(
+            value: VideoLibrarySection.settings,
+            label: t.settings,
+          ),
+        ];
     final Widget navigation = LibrarySectionTabs<VideoLibrarySection>(
       tabs: tabs,
       selected: _section,
@@ -191,8 +191,10 @@ class _VideoLibraryShellState extends State<VideoLibraryShell> {
                     ) ??
                     HomeVideoPage(
                       repo: widget.repository,
-                      navigation:
-                          _navigationFor(_showsLocalLibrary, navigation),
+                      navigation: _navigationFor(
+                        _showsLocalLibrary,
+                        navigation,
+                      ),
                       section: _localSection,
                       libraryRefreshSignal: widget.libraryRefreshSignal,
                       onOpenScrapeTasks: widget.onOpenScrapeTasks,
@@ -247,8 +249,7 @@ class _VideoLibraryShellState extends State<VideoLibraryShell> {
                       navigation,
                     ),
                     onScrapeAll: widget.onScrapeAll,
-                    onClearAllScrapeRecords:
-                        widget.onClearAllScrapeRecords,
+                    onClearAllScrapeRecords: widget.onClearAllScrapeRecords,
                     onScrapeSource: widget.onScrapeSource,
                     onVideoScanCompleted: widget.onVideoScanCompleted,
                     scrapeTaskController: widget.scrapeTaskController,

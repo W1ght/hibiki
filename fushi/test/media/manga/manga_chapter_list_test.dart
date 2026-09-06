@@ -81,28 +81,35 @@ void main() {
 
   /// 按屏幕纵坐标读出当前可见的章节标题顺序。
   List<String> visibleTitles(WidgetTester tester) {
-    final List<({double dy, String text})> found = <({double dy, String text})>[];
+    final List<({double dy, String text})> found =
+        <({double dy, String text})>[];
     for (final Element element in find.byType(Text).evaluate()) {
       final Text widget = element.widget as Text;
       final String? data = widget.data;
       if (data == null || !data.startsWith('Chapter ')) continue;
       found.add((dy: tester.getTopLeft(find.byWidget(widget)).dy, text: data));
     }
-    found.sort((({double dy, String text}) a, ({double dy, String text}) b) =>
-        a.dy.compareTo(b.dy));
+    found.sort(
+      (({double dy, String text}) a, ({double dy, String text}) b) =>
+          a.dy.compareTo(b.dy),
+    );
     return found.map((({double dy, String text}) e) => e.text).toList();
   }
 
   testWidgets('默认保持源顺序（新→旧）；翻转后第 1 话在前', (WidgetTester tester) async {
     await pumpList(tester, entry: entryWith(chapters));
-    expect(visibleTitles(tester), <String>['Chapter 3', 'Chapter 2', 'Chapter 1']);
+    expect(visibleTitles(tester), <String>[
+      'Chapter 3',
+      'Chapter 2',
+      'Chapter 1',
+    ]);
 
     await pumpList(tester, entry: entryWith(chapters), newestFirst: false);
-    expect(
-      visibleTitles(tester),
-      <String>['Chapter 1', 'Chapter 2', 'Chapter 3'],
-      reason: '「最早在前」必须真的翻转，而不是只改按钮文案',
-    );
+    expect(visibleTitles(tester), <String>[
+      'Chapter 1',
+      'Chapter 2',
+      'Chapter 3',
+    ], reason: '「最早在前」必须真的翻转，而不是只改按钮文案');
   });
 
   testWidgets('已读 / 读了一半 / 未读三态各有自己的图标', (WidgetTester tester) async {
@@ -115,12 +122,21 @@ void main() {
       },
     );
 
-    expect(find.byIcon(Icons.check_circle_outline), findsOneWidget,
-        reason: 'readAt != null = 已读');
-    expect(find.byIcon(Icons.incomplete_circle), findsOneWidget,
-        reason: '有状态行、没读完、且真的翻过页 = 读了一半');
-    expect(find.byIcon(Icons.circle_outlined), findsOneWidget,
-        reason: '没有状态行 = 未读');
+    expect(
+      find.byIcon(Icons.check_circle_outline),
+      findsOneWidget,
+      reason: 'readAt != null = 已读',
+    );
+    expect(
+      find.byIcon(Icons.incomplete_circle),
+      findsOneWidget,
+      reason: '有状态行、没读完、且真的翻过页 = 读了一半',
+    );
+    expect(
+      find.byIcon(Icons.circle_outlined),
+      findsOneWidget,
+      reason: '没有状态行 = 未读',
+    );
   });
 
   testWidgets('lastPage 为 0 不算「读了一半」', (WidgetTester tester) async {
@@ -193,14 +209,9 @@ void main() {
       },
     );
     // lastPage 是 0-based，显示要 +1。
+    expect(find.textContaining('Fixture scans'), findsOneWidget);
     expect(
-      find.textContaining('Fixture scans'),
-      findsOneWidget,
-    );
-    expect(
-      find.textContaining(
-        t.manga_series_read_progress(page: '8', total: '24'),
-      ),
+      find.textContaining(t.manga_series_read_progress(page: '8', total: '24')),
       findsOneWidget,
       reason: 'lastPage 是 0-based，显示必须 +1，否则用户看到的页码永远少一页',
     );
@@ -225,13 +236,12 @@ MangaChapterStateRow _state({
   int? pageCount,
   int? readAt,
   int updatedAt = 1,
-}) =>
-    MangaChapterStateRow(
-      bookUid: 'uid',
-      chapterKey: chapterKey,
-      lastPage: lastPage,
-      lastFraction: -1,
-      pageCount: pageCount,
-      readAt: readAt,
-      updatedAt: updatedAt,
-    );
+}) => MangaChapterStateRow(
+  bookUid: 'uid',
+  chapterKey: chapterKey,
+  lastPage: lastPage,
+  lastFraction: -1,
+  pageCount: pageCount,
+  readAt: readAt,
+  updatedAt: updatedAt,
+);

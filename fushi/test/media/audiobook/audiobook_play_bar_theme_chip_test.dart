@@ -42,18 +42,16 @@ AppModel _testAppModel() {
 }
 
 void main() {
-  testWidgets('audiobook play bar keeps lyrics mode out of bottom bar',
-      (tester) async {
+  testWidgets('audiobook play bar keeps lyrics mode out of bottom bar', (
+    tester,
+  ) async {
     final controller = AudiobookPlayerController();
     addTearDown(controller.dispose);
 
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
-          body: AudiobookPlayBar(
-            controller: controller,
-            onOpenSettings: () {},
-          ),
+          body: AudiobookPlayBar(controller: controller, onOpenSettings: () {}),
         ),
       ),
     );
@@ -62,8 +60,9 @@ void main() {
     expect(find.byIcon(Icons.auto_stories), findsNothing);
   });
 
-  testWidgets('in-book settings sheet uses adaptive settings rows',
-      (tester) async {
+  testWidgets('in-book settings sheet uses adaptive settings rows', (
+    tester,
+  ) async {
     // 窄窗：< 640 走单列内联 + push（本用例的语义）。宽窗 master-detail 由
     // 单独的 wide 用例覆盖。
     await tester.binding.setSurfaceSize(const Size(420, 1600));
@@ -130,16 +129,14 @@ void main() {
     expect(find.text(t.reader_view_mode_label), findsOneWidget);
     // Schema-projected segmented items render as AdaptiveSettingsSegmentedRow
     // with the renderer's erased <Object> type arg, not the bespoke <String>.
-    expect(
-      find.byType(AdaptiveSettingsSegmentedRow<Object>),
-      findsWidgets,
-    );
+    expect(find.byType(AdaptiveSettingsSegmentedRow<Object>), findsWidgets);
     expect(find.byType(AdaptiveSettingsStepperRow), findsWidgets);
     expect(find.byType(ListTile), findsNothing);
   });
 
-  testWidgets('in-book settings shows master-detail on wide windows',
-      (tester) async {
+  testWidgets('in-book settings shows master-detail on wide windows', (
+    tester,
+  ) async {
     // 宽窗：>= 640 走左父菜单 + 右详情同屏（master-detail）。
     await tester.binding.setSurfaceSize(const Size(1000, 800));
     addTearDown(() => tester.binding.setSurfaceSize(null));
@@ -188,8 +185,9 @@ void main() {
     expect(find.byIcon(Icons.arrow_back), findsNothing);
   });
 
-  testWidgets('reader exit is deferred and only scheduled once',
-      (tester) async {
+  testWidgets('reader exit is deferred and only scheduled once', (
+    tester,
+  ) async {
     await tester.binding.setSurfaceSize(const Size(420, 1600));
     addTearDown(() => tester.binding.setSurfaceSize(null));
 
@@ -240,66 +238,69 @@ void main() {
   });
 
   testWidgets(
-      'wide in-book settings keeps the left pane fixed while the right scrolls '
-      '(BUG-096)', (tester) async {
-    // 用户报：宽窗书内设置「整个页面一块滚动、左边不固定」。根因=frame 外层
-    // SingleChildScrollView 给 master-detail 无界高度 → 左右一块滚。回归锁：让右
-    // 详情（布局，行多）溢出可滚，拖右 pane 时左父菜单必须纹丝不动。
-    //
-    // 高度取 760（够 reader 左父菜单放下 → 进 master-detail）：左父菜单更高
-    // （进度+5分类+动作），太矮（如旧的 380）会触发「左栏溢出回退 push」的新
-    // 行为而非分栏（push 回退本身另有 video 用例覆盖）。
-    await tester.binding.setSurfaceSize(const Size(1000, 760));
-    addTearDown(() => tester.binding.setSurfaceSize(null));
-    await tester.pumpWidget(
-      ProviderScope(
-        child: MaterialApp(
-          theme: ThemeData(useMaterial3: true),
-          home: Scaffold(
-            body: Consumer(
-              builder: (context, ref, _) => ReaderQuickSettingsSheet(
-                controller: null,
-                toc: const [],
-                readerProgress: const (1, 3),
-                onJumpSection: (_) async {},
-                onExitReader: () {},
-                webViewController: _FakeInAppWebViewController(),
-                appModel: _testAppModel(),
-                ref: ref,
-                isFushiReader: true,
+    'wide in-book settings keeps the left pane fixed while the right scrolls '
+    '(BUG-096)',
+    (tester) async {
+      // 用户报：宽窗书内设置「整个页面一块滚动、左边不固定」。根因=frame 外层
+      // SingleChildScrollView 给 master-detail 无界高度 → 左右一块滚。回归锁：让右
+      // 详情（布局，行多）溢出可滚，拖右 pane 时左父菜单必须纹丝不动。
+      //
+      // 高度取 760（够 reader 左父菜单放下 → 进 master-detail）：左父菜单更高
+      // （进度+5分类+动作），太矮（如旧的 380）会触发「左栏溢出回退 push」的新
+      // 行为而非分栏（push 回退本身另有 video 用例覆盖）。
+      await tester.binding.setSurfaceSize(const Size(1000, 760));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      await tester.pumpWidget(
+        ProviderScope(
+          child: MaterialApp(
+            theme: ThemeData(useMaterial3: true),
+            home: Scaffold(
+              body: Consumer(
+                builder: (context, ref, _) => ReaderQuickSettingsSheet(
+                  controller: null,
+                  toc: const [],
+                  readerProgress: const (1, 3),
+                  onJumpSection: (_) async {},
+                  onExitReader: () {},
+                  webViewController: _FakeInAppWebViewController(),
+                  appModel: _testAppModel(),
+                  ref: ref,
+                  isFushiReader: true,
+                ),
               ),
             ),
           ),
         ),
-      ),
-    );
-    await tester.pump();
+      );
+      await tester.pump();
 
-    // 选「布局」让右 pane 内容变长（必然超过 380 高 → 可独立滚动）。
-    await tester.tap(find.text(t.section_layout));
-    await tester.pumpAndSettle();
+      // 选「布局」让右 pane 内容变长（必然超过 380 高 → 可独立滚动）。
+      await tester.tap(find.text(t.section_layout));
+      await tester.pumpAndSettle();
 
-    // 左父菜单里的「查词」分类项作为锚点：只出现在左 pane（右 pane 现是布局）。
-    // TODO-802：原用的「外观」分类已删，改用同样只在左 pane 的「查词」。
-    final Finder leftAnchor = find.text(t.settings_destination_lookup);
-    expect(leftAnchor, findsOneWidget);
-    final Offset leftBefore = tester.getTopLeft(leftAnchor);
+      // 左父菜单里的「查词」分类项作为锚点：只出现在左 pane（右 pane 现是布局）。
+      // TODO-802：原用的「外观」分类已删，改用同样只在左 pane 的「查词」。
+      final Finder leftAnchor = find.text(t.settings_destination_lookup);
+      expect(leftAnchor, findsOneWidget);
+      final Offset leftBefore = tester.getTopLeft(leftAnchor);
 
-    // 在右 pane 区域（x=850，远在左 pane 之外）向上拖：修好后只滚右 pane，
-    // 左父菜单不动；若回归成「一块滚」，这一拖会带着左锚点一起上移。
-    await tester.dragFrom(const Offset(850, 250), const Offset(0, -160));
-    await tester.pump();
+      // 在右 pane 区域（x=850，远在左 pane 之外）向上拖：修好后只滚右 pane，
+      // 左父菜单不动；若回归成「一块滚」，这一拖会带着左锚点一起上移。
+      await tester.dragFrom(const Offset(850, 250), const Offset(0, -160));
+      await tester.pump();
 
-    final Offset leftAfter = tester.getTopLeft(leftAnchor);
-    expect(
-      leftAfter,
-      leftBefore,
-      reason: '左父菜单必须固定，不能跟随右详情滚动（BUG-096：整页一块滚）',
-    );
-  });
+      final Offset leftAfter = tester.getTopLeft(leftAnchor);
+      expect(
+        leftAfter,
+        leftBefore,
+        reason: '左父菜单必须固定，不能跟随右详情滚动（BUG-096：整页一块滚）',
+      );
+    },
+  );
 
-  testWidgets('in-book navigation lists avoid legacy Material tiles',
-      (tester) async {
+  testWidgets('in-book navigation lists avoid legacy Material tiles', (
+    tester,
+  ) async {
     await tester.pumpWidget(
       ProviderScope(
         child: MaterialApp(

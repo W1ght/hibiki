@@ -16,20 +16,18 @@ void main() {
     String id,
     String language,
     Future<List<MangaMatchHit>> Function(String query) search,
-  ) =>
-      MangaMatchSource(id: id, name: id, language: language, search: search);
+  ) => MangaMatchSource(id: id, name: id, language: language, search: search);
 
   test('mangaMatchQueriesFor：日文源先原文，英文源先英文', () {
+    expect(mangaMatchQueriesFor(entry, 'ja'), <String>[
+      '葬送のフリーレン',
+      'Sousou no Frieren',
+      "Frieren: Beyond Journey's End",
+    ]);
     expect(
-      mangaMatchQueriesFor(entry, 'ja'),
-      <String>[
-        '葬送のフリーレン',
-        'Sousou no Frieren',
-        "Frieren: Beyond Journey's End",
-      ],
+      mangaMatchQueriesFor(entry, 'en').first,
+      "Frieren: Beyond Journey's End",
     );
-    expect(mangaMatchQueriesFor(entry, 'en').first,
-        "Frieren: Beyond Journey's End");
   });
 
   test('每源留最佳命中，低于阈值的来源被整个丢弃，结果按分降序', () async {
@@ -37,24 +35,27 @@ void main() {
       entry: entry,
       sources: <MangaMatchSource>[
         source(
-            'close',
-            'ja',
-            (String query) async => <MangaMatchHit>[
-                  const MangaMatchHit(title: '葬送のフリーレン 第1巻', payload: 'a'),
-                  const MangaMatchHit(title: 'ワンピース', payload: 'noise'),
-                ]),
+          'close',
+          'ja',
+          (String query) async => <MangaMatchHit>[
+            const MangaMatchHit(title: '葬送のフリーレン 第1巻', payload: 'a'),
+            const MangaMatchHit(title: 'ワンピース', payload: 'noise'),
+          ],
+        ),
         source(
-            'exact',
-            'ja',
-            (String query) async => <MangaMatchHit>[
-                  const MangaMatchHit(title: '葬送のフリーレン', payload: 'b'),
-                ]),
+          'exact',
+          'ja',
+          (String query) async => <MangaMatchHit>[
+            const MangaMatchHit(title: '葬送のフリーレン', payload: 'b'),
+          ],
+        ),
         source(
-            'unrelated',
-            'ja',
-            (String query) async => <MangaMatchHit>[
-                  const MangaMatchHit(title: 'ベルセルク', payload: 'c'),
-                ]),
+          'unrelated',
+          'ja',
+          (String query) async => <MangaMatchHit>[
+            const MangaMatchHit(title: 'ベルセルク', payload: 'c'),
+          ],
+        ),
       ],
     );
     expect(matches, hasLength(2));
@@ -72,11 +73,12 @@ void main() {
           throw StateError('Cloudflare');
         }),
         source(
-            'ok',
-            'ja',
-            (String query) async => <MangaMatchHit>[
-                  const MangaMatchHit(title: '葬送のフリーレン', payload: 'x'),
-                ]),
+          'ok',
+          'ja',
+          (String query) async => <MangaMatchHit>[
+            const MangaMatchHit(title: '葬送のフリーレン', payload: 'x'),
+          ],
+        ),
       ],
     );
     expect(matches, hasLength(1));

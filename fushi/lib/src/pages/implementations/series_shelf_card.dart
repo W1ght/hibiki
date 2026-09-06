@@ -66,8 +66,9 @@ class SeriesShelfCard extends StatelessWidget {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final ThemeData theme = Theme.of(context);
     final double overlayInset = tokens.spacing.gap * 0.75;
-    final VoidCallback effectiveTap =
-        selectionMode && onSelectionToggle != null ? onSelectionToggle! : onTap;
+    final VoidCallback effectiveTap = selectionMode && onSelectionToggle != null
+        ? onSelectionToggle!
+        : onTap;
 
     final Widget card = ContextMenuTrigger(
       onInvoke: contextMenuInvoker(selectionMode ? null : onSecondaryTap),
@@ -210,8 +211,9 @@ class SeriesFolderCover extends StatelessWidget {
     final double pad = tokens.spacing.gap / 2;
     // 文件夹底：微着色圆角容器 + 内边距，内嵌 2x2 成员封面网格。
     return DecoratedBox(
-      decoration:
-          BoxDecoration(color: theme.colorScheme.surfaceContainerHighest),
+      decoration: BoxDecoration(
+        color: theme.colorScheme.surfaceContainerHighest,
+      ),
       child: Padding(
         padding: EdgeInsets.all(pad),
         child: Column(

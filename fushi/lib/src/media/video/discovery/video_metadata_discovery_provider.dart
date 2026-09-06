@@ -13,14 +13,14 @@ class VideoMetadataSearchDiscoveryProvider implements VideoDiscoveryProvider {
     required Iterable<VideoDiscoveryCategory> categories,
     this.priority = 100,
     bool closesProvider = false,
-  })  : _provider = provider,
-        _closesProvider = closesProvider,
-        capabilities = VideoDiscoveryCapabilities(
-          categories: categories,
-          feeds: const <VideoDiscoveryFeed>{},
-          supportsSearch: true,
-          supportsPaging: false,
-        );
+  }) : _provider = provider,
+       _closesProvider = closesProvider,
+       capabilities = VideoDiscoveryCapabilities(
+         categories: categories,
+         feeds: const <VideoDiscoveryFeed>{},
+         supportsSearch: true,
+         supportsPaging: false,
+       );
 
   final VideoMetadataProvider _provider;
   final bool _closesProvider;
@@ -37,15 +37,14 @@ class VideoMetadataSearchDiscoveryProvider implements VideoDiscoveryProvider {
   @override
   Future<ProviderBatchResult<VideoDiscoveryPage>> discover(
     VideoDiscoveryRequest request,
-  ) async =>
-      ProviderBatchResult<VideoDiscoveryPage>.failure(
-        ExternalProviderFailure(
-          providerId: id,
-          operation: 'discover',
-          kind: ExternalProviderFailureKind.unsupported,
-          message: 'metadata provider does not expose discovery feeds',
-        ),
-      );
+  ) async => ProviderBatchResult<VideoDiscoveryPage>.failure(
+    ExternalProviderFailure(
+      providerId: id,
+      operation: 'discover',
+      kind: ExternalProviderFailureKind.unsupported,
+      message: 'metadata provider does not expose discovery feeds',
+    ),
+  );
 
   @override
   Future<ProviderBatchResult<VideoDiscoveryPage>> search(
@@ -78,7 +77,10 @@ class VideoMetadataSearchDiscoveryProvider implements VideoDiscoveryProvider {
       return ProviderBatchResult<VideoDiscoveryPage>.success(
         <VideoDiscoveryPage>[
           VideoDiscoveryPage(
-              items: const <VideoDiscoveryItem>[], page: 1, hasMore: false),
+            items: const <VideoDiscoveryItem>[],
+            page: 1,
+            hasMore: false,
+          ),
         ],
       );
     }
@@ -133,9 +135,7 @@ class VideoMetadataSearchDiscoveryProvider implements VideoDiscoveryProvider {
     );
   }
 
-  List<VideoMetadataMediaKind> _requestedKinds(
-    VideoDiscoveryRequest request,
-  ) {
+  List<VideoMetadataMediaKind> _requestedKinds(VideoDiscoveryRequest request) {
     final VideoDiscoveryCategory? requested = request.category;
     if (requested != null && !capabilities.categories.contains(requested)) {
       return const <VideoMetadataMediaKind>[];

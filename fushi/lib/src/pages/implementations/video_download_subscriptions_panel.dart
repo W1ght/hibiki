@@ -19,20 +19,20 @@ import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/pages/implementations/video_download_subscription_edit_dialog.dart';
 import 'package:fushi/utils.dart';
 
-typedef VideoDownloadSubscriptionAction = Future<void> Function(
-  VideoDownloadSubscriptionRow subscription,
-);
+typedef VideoDownloadSubscriptionAction =
+    Future<void> Function(VideoDownloadSubscriptionRow subscription);
 
-typedef VideoDownloadSubscriptionToggle = Future<void> Function(
-  VideoDownloadSubscriptionRow subscription,
-  bool enabled,
-);
+typedef VideoDownloadSubscriptionToggle =
+    Future<void> Function(
+      VideoDownloadSubscriptionRow subscription,
+      bool enabled,
+    );
 
 /// 订阅逐集历史的窄读端口（面板卡片展开时接 DB stream；测试可注入假流）。
-typedef VideoDownloadSubscriptionItemsWatcher
-    = Stream<List<VideoDownloadSubscriptionItemRow>> Function(
-  String subscriptionId,
-);
+typedef VideoDownloadSubscriptionItemsWatcher =
+    Stream<List<VideoDownloadSubscriptionItemRow>> Function(
+      String subscriptionId,
+    );
 
 /// 订阅列表的排序维度（会话级）。
 enum VideoDownloadSubscriptionSort {
@@ -46,13 +46,11 @@ enum VideoDownloadSubscriptionSort {
 List<VideoDownloadSubscriptionRow> filterVideoDownloadSubscriptions(
   List<VideoDownloadSubscriptionRow> subscriptions,
   String query,
-) =>
-    filterByMediaSearch(
-      subscriptions,
-      query,
-      (VideoDownloadSubscriptionRow row) =>
-          <String>[row.title, row.searchQuery],
-    );
+) => filterByMediaSearch(
+  subscriptions,
+  query,
+  (VideoDownloadSubscriptionRow row) => <String>[row.title, row.searchQuery],
+);
 
 /// 按 [sort] 返回新的有序列表。纯函数，稳定 tiebreak createdAt 倒序 + id。
 List<VideoDownloadSubscriptionRow> sortedVideoDownloadSubscriptions(
@@ -82,21 +80,28 @@ List<VideoDownloadSubscriptionRow> sortedVideoDownloadSubscriptions(
     case VideoDownloadSubscriptionSort.createdDesc:
       out.sort(byCreatedDesc);
     case VideoDownloadSubscriptionSort.titleAsc:
-      out.sort(
-          (VideoDownloadSubscriptionRow a, VideoDownloadSubscriptionRow b) {
-        final int byTitle =
-            a.title.toLowerCase().compareTo(b.title.toLowerCase());
+      out.sort((
+        VideoDownloadSubscriptionRow a,
+        VideoDownloadSubscriptionRow b,
+      ) {
+        final int byTitle = a.title.toLowerCase().compareTo(
+          b.title.toLowerCase(),
+        );
         return byTitle != 0 ? byTitle : byCreatedDesc(a, b);
       });
     case VideoDownloadSubscriptionSort.lastCheckedDesc:
-      out.sort(
-          (VideoDownloadSubscriptionRow a, VideoDownloadSubscriptionRow b) {
+      out.sort((
+        VideoDownloadSubscriptionRow a,
+        VideoDownloadSubscriptionRow b,
+      ) {
         final int byChecked = byNullableDesc(a.lastCheckedAt, b.lastCheckedAt);
         return byChecked != 0 ? byChecked : byCreatedDesc(a, b);
       });
     case VideoDownloadSubscriptionSort.lastMatchedDesc:
-      out.sort(
-          (VideoDownloadSubscriptionRow a, VideoDownloadSubscriptionRow b) {
+      out.sort((
+        VideoDownloadSubscriptionRow a,
+        VideoDownloadSubscriptionRow b,
+      ) {
         final int byMatched = byNullableDesc(a.lastMatchedAt, b.lastMatchedAt);
         return byMatched != 0 ? byMatched : byCreatedDesc(a, b);
       });
@@ -136,8 +141,9 @@ class _VideoDownloadSubscriptionsPanelState
         nextCheckAt: enabled ? Value<int?>(now) : const Value<int?>.absent(),
         // oneShot 完成位只在 disabled 态合法（表级 CHECK）；重新启用必须同时
         // 清掉，否则写入直接抛。
-        fulfilledAt:
-            enabled ? const Value<int?>(null) : const Value<int?>.absent(),
+        fulfilledAt: enabled
+            ? const Value<int?>(null)
+            : const Value<int?>.absent(),
         updatedAt: Value<int>(now),
       ),
     );
@@ -146,9 +152,7 @@ class _VideoDownloadSubscriptionsPanelState
     }
   }
 
-  Future<void> _checkOne(
-    VideoDownloadSubscriptionRow subscription,
-  ) async {
+  Future<void> _checkOne(VideoDownloadSubscriptionRow subscription) async {
     if (!subscription.enabled) return;
     final AppModel appModel = ref.read(appProvider);
     final int now = DateTime.now().millisecondsSinceEpoch;
@@ -172,8 +176,8 @@ class _VideoDownloadSubscriptionsPanelState
       final int now = DateTime.now().millisecondsSinceEpoch;
       for (final VideoDownloadSubscriptionRow subscription
           in subscriptions.where(
-        (VideoDownloadSubscriptionRow row) => row.enabled,
-      )) {
+            (VideoDownloadSubscriptionRow row) => row.enabled,
+          )) {
         await appModel.database.updateVideoDownloadSubscription(
           subscription.subscriptionId,
           VideoDownloadSubscriptionsCompanion(
@@ -188,17 +192,14 @@ class _VideoDownloadSubscriptionsPanelState
     }
   }
 
-  Future<void> _delete(
-    VideoDownloadSubscriptionRow subscription,
-  ) async {
-    final bool confirmed = await showAppDialog<bool>(
+  Future<void> _delete(VideoDownloadSubscriptionRow subscription) async {
+    final bool confirmed =
+        await showAppDialog<bool>(
           context: context,
           builder: (BuildContext dialogContext) => AlertDialog(
             title: Text(t.download_subscription_delete),
             content: Text(
-              t.download_subscription_delete_confirm(
-                title: subscription.title,
-              ),
+              t.download_subscription_delete_confirm(title: subscription.title),
             ),
             actions: <Widget>[
               TextButton(
@@ -225,8 +226,8 @@ class _VideoDownloadSubscriptionsPanelState
   /// items 历史与调度状态其余字段一概不动——「改规则不清历史」。
   Future<void> _edit(VideoDownloadSubscriptionRow subscription) async {
     final AppModel appModel = ref.read(appProvider);
-    final List<MediaSourceRow> sources =
-        await appModel.getManagedVideoDownloadSources();
+    final List<MediaSourceRow> sources = await appModel
+        .getManagedVideoDownloadSources();
     if (!mounted) return;
     if (sources.isEmpty) {
       ScaffoldMessenger.maybeOf(context)?.showSnackBar(
@@ -236,10 +237,10 @@ class _VideoDownloadSubscriptionsPanelState
     }
     final VideoDownloadSubscriptionEdit? result =
         await showVideoDownloadSubscriptionEditDialog(
-      context: context,
-      subscription: subscription,
-      sources: sources,
-    );
+          context: context,
+          subscription: subscription,
+          sources: sources,
+        );
     if (result == null || !mounted) return;
     final int now = DateTime.now().millisecondsSinceEpoch;
     await appModel.database.updateVideoDownloadSubscription(
@@ -267,33 +268,35 @@ class _VideoDownloadSubscriptionsPanelState
     final FushiDatabase database = ref.read(appProvider).database;
     return StreamBuilder<List<VideoDownloadSubscriptionRow>>(
       stream: database.watchVideoDownloadSubscriptions(),
-      builder: (
-        BuildContext context,
-        AsyncSnapshot<List<VideoDownloadSubscriptionRow>> snapshot,
-      ) {
-        if (snapshot.hasError) {
-          return _VideoDownloadSubscriptionMessage(
-            icon: Icons.error_outline,
-            title: t.error_load_failed,
-          );
-        }
-        if (!snapshot.hasData) {
-          return const Center(child: CircularProgressIndicator());
-        }
-        final List<VideoDownloadSubscriptionRow> subscriptions = snapshot.data!;
-        return VideoDownloadSubscriptionsView(
-          subscriptions: subscriptions,
-          checkingAll: _checkingAll,
-          onCheckAll: () => _checkAll(subscriptions),
-          onToggle: _setEnabled,
-          onCheck: _checkOne,
-          onDelete: _delete,
-          onEdit: _edit,
-          itemsWatcher: database.watchVideoDownloadSubscriptionItems,
-          itemCountsLoader:
-              database.getVideoDownloadSubscriptionItemStatusCounts,
-        );
-      },
+      builder:
+          (
+            BuildContext context,
+            AsyncSnapshot<List<VideoDownloadSubscriptionRow>> snapshot,
+          ) {
+            if (snapshot.hasError) {
+              return _VideoDownloadSubscriptionMessage(
+                icon: Icons.error_outline,
+                title: t.error_load_failed,
+              );
+            }
+            if (!snapshot.hasData) {
+              return const Center(child: CircularProgressIndicator());
+            }
+            final List<VideoDownloadSubscriptionRow> subscriptions =
+                snapshot.data!;
+            return VideoDownloadSubscriptionsView(
+              subscriptions: subscriptions,
+              checkingAll: _checkingAll,
+              onCheckAll: () => _checkAll(subscriptions),
+              onToggle: _setEnabled,
+              onCheck: _checkOne,
+              onDelete: _delete,
+              onEdit: _edit,
+              itemsWatcher: database.watchVideoDownloadSubscriptionItems,
+              itemCountsLoader:
+                  database.getVideoDownloadSubscriptionItemStatusCounts,
+            );
+          },
     );
   }
 }
@@ -365,11 +368,13 @@ class _VideoDownloadSubscriptionsViewState
     final Future<Map<String, Map<String, int>>> Function()? loader =
         widget.itemCountsLoader;
     if (loader == null) return;
-    loader().then((Map<String, Map<String, int>> counts) {
-      if (mounted) setState(() => _itemCounts = counts);
-    }).catchError((Object _) {
-      // 计数是增强信息，查询失败不影响订阅列表本体。
-    });
+    loader()
+        .then((Map<String, Map<String, int>> counts) {
+          if (mounted) setState(() => _itemCounts = counts);
+        })
+        .catchError((Object _) {
+          // 计数是增强信息，查询失败不影响订阅列表本体。
+        });
   }
 
   @override
@@ -451,9 +456,9 @@ class _VideoDownloadSubscriptionsViewState
   Widget build(BuildContext context) {
     final List<VideoDownloadSubscriptionRow> visible =
         sortedVideoDownloadSubscriptions(
-      filterVideoDownloadSubscriptions(widget.subscriptions, _searchQuery),
-      _sort,
-    );
+          filterVideoDownloadSubscriptions(widget.subscriptions, _searchQuery),
+          _sort,
+        );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
@@ -476,10 +481,9 @@ class _VideoDownloadSubscriptionsViewState
                   ),
                 ),
                 FilledButton.tonalIcon(
-                  key: const ValueKey<String>(
-                    'video-subscription-check-all',
-                  ),
-                  onPressed: widget.checkingAll ||
+                  key: const ValueKey<String>('video-subscription-check-all'),
+                  onPressed:
+                      widget.checkingAll ||
                           !widget.subscriptions.any(
                             (VideoDownloadSubscriptionRow row) => row.enabled,
                           )
@@ -506,66 +510,68 @@ class _VideoDownloadSubscriptionsViewState
                   body: t.download_subscription_empty_body,
                 )
               : visible.isEmpty
-                  ? _VideoDownloadSubscriptionMessage(
-                      icon: Icons.search_off,
-                      title: t.subscription_no_match,
-                    )
-                  : RefreshIndicator(
-                      onRefresh: widget.onCheckAll,
-                      child: ListView.separated(
-                        padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-                        itemCount: visible.length,
-                        separatorBuilder: (_, __) => const SizedBox(height: 8),
-                        itemBuilder: (BuildContext context, int index) {
-                          final VideoDownloadSubscriptionRow subscription =
-                              visible[index];
-                          final bool busy =
-                              _busy.contains(subscription.subscriptionId);
-                          return _VideoDownloadSubscriptionCard(
-                            key: ValueKey<String>(
-                              'video-subscription-card-${subscription.subscriptionId}',
-                            ),
-                            subscription: subscription,
-                            busy: busy,
-                            itemCounts:
-                                _itemCounts[subscription.subscriptionId] ??
-                                    const <String, int>{},
-                            expanded:
-                                _expanded.contains(subscription.subscriptionId),
-                            itemsWatcher: widget.itemsWatcher,
-                            onToggleExpanded: widget.itemsWatcher == null
-                                ? null
-                                : () => setState(() {
-                                      if (!_expanded
-                                          .add(subscription.subscriptionId)) {
-                                        _expanded.remove(
-                                            subscription.subscriptionId);
-                                      }
-                                    }),
-                            onToggle: (bool enabled) => _run(
-                              subscription,
-                              () => widget.onToggle(subscription, enabled),
-                            ),
-                            onCheck: subscription.enabled
-                                ? () => _run(
-                                      subscription,
-                                      () => widget.onCheck(subscription),
-                                    )
-                                : null,
-                            onEdit: widget.onEdit == null
-                                ? null
-                                : () => _run(
-                                      subscription,
-                                      () => widget.onEdit!(subscription),
-                                    ),
-                            onDelete: () => _run(
-                              subscription,
-                              () => widget.onDelete(subscription),
-                            ),
-                          );
-                        },
-                      ),
-                    ),
+              ? _VideoDownloadSubscriptionMessage(
+                  icon: Icons.search_off,
+                  title: t.subscription_no_match,
+                )
+              : RefreshIndicator(
+                  onRefresh: widget.onCheckAll,
+                  child: ListView.separated(
+                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                    itemCount: visible.length,
+                    separatorBuilder: (_, __) => const SizedBox(height: 8),
+                    itemBuilder: (BuildContext context, int index) {
+                      final VideoDownloadSubscriptionRow subscription =
+                          visible[index];
+                      final bool busy = _busy.contains(
+                        subscription.subscriptionId,
+                      );
+                      return _VideoDownloadSubscriptionCard(
+                        key: ValueKey<String>(
+                          'video-subscription-card-${subscription.subscriptionId}',
+                        ),
+                        subscription: subscription,
+                        busy: busy,
+                        itemCounts:
+                            _itemCounts[subscription.subscriptionId] ??
+                            const <String, int>{},
+                        expanded: _expanded.contains(
+                          subscription.subscriptionId,
+                        ),
+                        itemsWatcher: widget.itemsWatcher,
+                        onToggleExpanded: widget.itemsWatcher == null
+                            ? null
+                            : () => setState(() {
+                                if (!_expanded.add(
+                                  subscription.subscriptionId,
+                                )) {
+                                  _expanded.remove(subscription.subscriptionId);
+                                }
+                              }),
+                        onToggle: (bool enabled) => _run(
+                          subscription,
+                          () => widget.onToggle(subscription, enabled),
+                        ),
+                        onCheck: subscription.enabled
+                            ? () => _run(
+                                subscription,
+                                () => widget.onCheck(subscription),
+                              )
+                            : null,
+                        onEdit: widget.onEdit == null
+                            ? null
+                            : () => _run(
+                                subscription,
+                                () => widget.onEdit!(subscription),
+                              ),
+                        onDelete: () => _run(
+                          subscription,
+                          () => widget.onDelete(subscription),
+                        ),
+                      );
+                    },
+                  ),
+                ),
         ),
       ],
     );
@@ -610,18 +616,18 @@ class _VideoDownloadSubscriptionCard extends StatelessWidget {
   }
 
   static String itemStatusLabel(String status) => switch (status) {
-        VideoDownloadSubscriptionItemStatus.discovered =>
-          t.subscription_item_status_discovered,
-        VideoDownloadSubscriptionItemStatus.queued =>
-          t.subscription_item_status_queued,
-        VideoDownloadSubscriptionItemStatus.processed =>
-          t.subscription_item_status_processed,
-        VideoDownloadSubscriptionItemStatus.skipped =>
-          t.subscription_item_status_skipped,
-        VideoDownloadSubscriptionItemStatus.failed =>
-          t.subscription_item_status_failed,
-        _ => status,
-      };
+    VideoDownloadSubscriptionItemStatus.discovered =>
+      t.subscription_item_status_discovered,
+    VideoDownloadSubscriptionItemStatus.queued =>
+      t.subscription_item_status_queued,
+    VideoDownloadSubscriptionItemStatus.processed =>
+      t.subscription_item_status_processed,
+    VideoDownloadSubscriptionItemStatus.skipped =>
+      t.subscription_item_status_skipped,
+    VideoDownloadSubscriptionItemStatus.failed =>
+      t.subscription_item_status_failed,
+    _ => status,
+  };
 
   /// 逐集计数摘要（`已入库 5 · 排队中 1 · 失败 2`）；零计数状态跳过。
   String get _itemCountsLine {
@@ -670,8 +676,9 @@ class _VideoDownloadSubscriptionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
-    final List<String> strictParts =
-        videoDownloadSubscriptionFilterSummary(subscription.filterJson);
+    final List<String> strictParts = videoDownloadSubscriptionFilterSummary(
+      subscription.filterJson,
+    );
     final String mediaLabel = subscription.mediaKind == 'movie'
         ? t.collection_relation_movie
         : t.series;
@@ -878,89 +885,88 @@ class _SubscriptionItemsSection extends StatelessWidget {
     final ThemeData theme = Theme.of(context);
     return StreamBuilder<List<VideoDownloadSubscriptionItemRow>>(
       stream: itemsWatcher(subscriptionId),
-      builder: (
-        BuildContext context,
-        AsyncSnapshot<List<VideoDownloadSubscriptionItemRow>> snapshot,
-      ) {
-        if (!snapshot.hasData) {
-          return const Padding(
-            padding: EdgeInsets.all(12),
-            child: Center(
-              child: SizedBox.square(
-                dimension: 18,
-                child: CircularProgressIndicator(strokeWidth: 2),
-              ),
-            ),
-          );
-        }
-        final List<VideoDownloadSubscriptionItemRow> items = snapshot.data!;
-        if (items.isEmpty) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8),
-            child: Text(
-              t.subscription_items_empty,
-              style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.onSurfaceVariant,
-              ),
-            ),
-          );
-        }
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            const SizedBox(height: 4),
-            for (final VideoDownloadSubscriptionItemRow item in items)
-              FushiListItem(
-                key: ValueKey<String>(
-                  'video-subscription-item-${item.id}',
+      builder:
+          (
+            BuildContext context,
+            AsyncSnapshot<List<VideoDownloadSubscriptionItemRow>> snapshot,
+          ) {
+            if (!snapshot.hasData) {
+              return const Padding(
+                padding: EdgeInsets.all(12),
+                child: Center(
+                  child: SizedBox.square(
+                    dimension: 18,
+                    child: CircularProgressIndicator(strokeWidth: 2),
+                  ),
                 ),
-                density: FushiListDensity.compact,
-                padding: const EdgeInsets.symmetric(horizontal: 4),
-                leading: Icon(
-                  switch (item.status) {
-                    VideoDownloadSubscriptionItemStatus.processed =>
-                      Icons.check_circle_outline,
-                    VideoDownloadSubscriptionItemStatus.queued =>
-                      Icons.downloading_outlined,
-                    VideoDownloadSubscriptionItemStatus.failed =>
-                      Icons.error_outline,
-                    VideoDownloadSubscriptionItemStatus.skipped =>
-                      Icons.remove_circle_outline,
-                    _ => Icons.schedule_outlined,
-                  },
-                  size: 18,
-                  color: switch (item.status) {
-                    VideoDownloadSubscriptionItemStatus.processed =>
-                      theme.colorScheme.primary,
-                    VideoDownloadSubscriptionItemStatus.failed =>
-                      theme.colorScheme.error,
-                    _ => theme.colorScheme.onSurfaceVariant,
-                  },
+              );
+            }
+            final List<VideoDownloadSubscriptionItemRow> items = snapshot.data!;
+            if (items.isEmpty) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Text(
+                  t.subscription_items_empty,
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: theme.colorScheme.onSurfaceVariant,
+                  ),
                 ),
-                title: Text(
-                  item.title,
-                  maxLines: 2,
-                  softWrap: true,
-                  overflow: TextOverflow.fade,
-                ),
-                titleMaxLines: 2,
-                subtitle: Text(
-                  <String>[
-                    item.logicalItemKey,
-                    _VideoDownloadSubscriptionCard.itemStatusLabel(
-                      item.status,
+              );
+            }
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                const SizedBox(height: 4),
+                for (final VideoDownloadSubscriptionItemRow item in items)
+                  FushiListItem(
+                    key: ValueKey<String>('video-subscription-item-${item.id}'),
+                    density: FushiListDensity.compact,
+                    padding: const EdgeInsets.symmetric(horizontal: 4),
+                    leading: Icon(
+                      switch (item.status) {
+                        VideoDownloadSubscriptionItemStatus.processed =>
+                          Icons.check_circle_outline,
+                        VideoDownloadSubscriptionItemStatus.queued =>
+                          Icons.downloading_outlined,
+                        VideoDownloadSubscriptionItemStatus.failed =>
+                          Icons.error_outline,
+                        VideoDownloadSubscriptionItemStatus.skipped =>
+                          Icons.remove_circle_outline,
+                        _ => Icons.schedule_outlined,
+                      },
+                      size: 18,
+                      color: switch (item.status) {
+                        VideoDownloadSubscriptionItemStatus.processed =>
+                          theme.colorScheme.primary,
+                        VideoDownloadSubscriptionItemStatus.failed =>
+                          theme.colorScheme.error,
+                        _ => theme.colorScheme.onSurfaceVariant,
+                      },
                     ),
-                    if (item.error?.trim().isNotEmpty ?? false)
-                      item.error!.trim(),
-                  ].join(' · '),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                subtitleMaxLines: 2,
-              ),
-          ],
-        );
-      },
+                    title: Text(
+                      item.title,
+                      maxLines: 2,
+                      softWrap: true,
+                      overflow: TextOverflow.fade,
+                    ),
+                    titleMaxLines: 2,
+                    subtitle: Text(
+                      <String>[
+                        item.logicalItemKey,
+                        _VideoDownloadSubscriptionCard.itemStatusLabel(
+                          item.status,
+                        ),
+                        if (item.error?.trim().isNotEmpty ?? false)
+                          item.error!.trim(),
+                      ].join(' · '),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    subtitleMaxLines: 2,
+                  ),
+              ],
+            );
+          },
     );
   }
 }

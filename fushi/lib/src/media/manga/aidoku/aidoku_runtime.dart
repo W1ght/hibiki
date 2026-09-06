@@ -52,9 +52,10 @@ class AidokuPackageInspection {
   factory AidokuPackageInspection.fromJson(Map<String, Object?> json) {
     final Map<String, Object?> runtime =
         (json['runtime'] as Map<Object?, Object?>?)?.cast<String, Object?>() ??
-            const <String, Object?>{};
+        const <String, Object?>{};
     return AidokuPackageInspection(
-      manifest: (json['manifest'] as Map<Object?, Object?>?)
+      manifest:
+          (json['manifest'] as Map<Object?, Object?>?)
               ?.cast<String, Object?>() ??
           const <String, Object?>{},
       imports: (runtime['imports'] as List<Object?>? ?? const <Object?>[])
@@ -95,20 +96,20 @@ class AidokuListing {
   });
 
   factory AidokuListing.fromJson(Map<String, Object?> json) => AidokuListing(
-        id: json['id']?.toString() ?? '',
-        name: json['name']?.toString() ?? '',
-        kind: json['kind']?.toString() ?? 'Default',
-      );
+    id: json['id']?.toString() ?? '',
+    name: json['name']?.toString() ?? '',
+    kind: json['kind']?.toString() ?? 'Default',
+  );
 
   final String id;
   final String name;
   final String kind;
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'id': id,
-        'name': name,
-        'kind': kind,
-      };
+    'id': id,
+    'name': name,
+    'kind': kind,
+  };
 }
 
 abstract interface class AidokuRuntime {
@@ -319,8 +320,9 @@ class IosAidokuRuntime implements AidokuRuntime {
         error.message ?? 'Aidoku runtime failed',
         cause: error,
         challengeUrl: challenged ? _challengeUrl(error.details) : null,
-        challengeUserAgent:
-            challenged ? _challengeUserAgent(error.details) : null,
+        challengeUserAgent: challenged
+            ? _challengeUserAgent(error.details)
+            : null,
       );
     } on MissingPluginException catch (error) {
       throw AidokuRuntimeException(
@@ -369,10 +371,8 @@ class IosAidokuRuntime implements AidokuRuntime {
 }
 
 class DesktopAidokuRuntime implements AidokuRuntime {
-  DesktopAidokuRuntime({
-    File? executable,
-    this.timeout = kAidokuRuntimeTimeout,
-  }) : executable = executable ?? _bundledExecutable();
+  DesktopAidokuRuntime({File? executable, this.timeout = kAidokuRuntimeTimeout})
+    : executable = executable ?? _bundledExecutable();
 
   final File executable;
   final Duration timeout;
@@ -387,12 +387,14 @@ class DesktopAidokuRuntime implements AidokuRuntime {
       );
     }
     final Directory contents = File(Platform.resolvedExecutable).parent.parent;
-    return File(p.join(
-      contents.path,
-      'Resources',
-      'aidoku_runtime',
-      'fushi-aidoku-runtime',
-    ));
+    return File(
+      p.join(
+        contents.path,
+        'Resources',
+        'aidoku_runtime',
+        'fushi-aidoku-runtime',
+      ),
+    );
   }
 
   @override

@@ -130,8 +130,9 @@ void main() {
     // contains('MangaDiscoveryPage(\n          embedded: true')，加个 const 让
     // dart format 重排一次就恒假——断言的是排版不是行为。
     expect(
-      RegExp(r'MangaDiscoveryPage\(\s*embedded:\s*true')
-          .hasMatch(downloadsStructural),
+      RegExp(
+        r'MangaDiscoveryPage\(\s*embedded:\s*true',
+      ).hasMatch(downloadsStructural),
       isTrue,
       reason: '漫画发现页必须以 embedded: true 打开（否则它会自带一整套页头/导航）',
     );
@@ -163,8 +164,11 @@ void main() {
 
     expect(code, contains('currentVideoDownloadBackendTarget()'));
     expect(code, contains('backendTarget: target'));
-    expect(code, isNot(contains('currentVideoDownloadBackendIdentity()')),
-        reason: '裸后端身份已被 BUG-1879 删除，新任务必须同时快照分类');
+    expect(
+      code,
+      isNot(contains('currentVideoDownloadBackendIdentity()')),
+      reason: '裸后端身份已被 BUG-1879 删除，新任务必须同时快照分类',
+    );
     expect(code, isNot(contains('backendIdentity: identity')));
   });
 }

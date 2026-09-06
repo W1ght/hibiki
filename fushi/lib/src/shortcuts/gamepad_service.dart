@@ -94,10 +94,7 @@ class GamepadLongPressIntent extends Intent {
 /// Dispatches a normalized gamepad [button] to the [GamepadButtonIntent]
 /// handler nearest [context]. Returns true only when a focused page/widget
 /// explicitly consumes the button.
-bool dispatchGamepadButtonIntent(
-  BuildContext context,
-  GamepadButton button,
-) {
+bool dispatchGamepadButtonIntent(BuildContext context, GamepadButton button) {
   return Actions.maybeInvoke<GamepadButtonIntent>(
         context,
         GamepadButtonIntent(button),
@@ -325,8 +322,9 @@ class GamepadService {
   /// exposes (`packages/gamepads_windows`). Used ONLY to query
   /// [gameInputBackendAvailable]; normalized controller input still flows
   /// through the `gamepads` package abstraction (`_PluginGamepadPoller`).
-  static const MethodChannel _windowsGamepadChannel =
-      MethodChannel('xyz.luan/gamepads');
+  static const MethodChannel _windowsGamepadChannel = MethodChannel(
+    'xyz.luan/gamepads',
+  );
 
   /// TODO-1223: whether the platform's controller backend is actually usable.
   ///
@@ -345,8 +343,9 @@ class GamepadService {
   static Future<bool> gameInputBackendAvailable() async {
     if (!Platform.isWindows) return true;
     try {
-      final bool? available =
-          await _windowsGamepadChannel.invokeMethod<bool>('gameInputAvailable');
+      final bool? available = await _windowsGamepadChannel.invokeMethod<bool>(
+        'gameInputAvailable',
+      );
       return available ?? true;
     } on MissingPluginException {
       // Plugin not registered (should not happen on Windows) — do not nag.
@@ -437,7 +436,8 @@ class GamepadService {
     if (ctx == null) return;
     _setHighlightForHardwareNav();
 
-    final bool handled = Actions.maybeInvoke<GamepadButtonIntent>(
+    final bool handled =
+        Actions.maybeInvoke<GamepadButtonIntent>(
           ctx,
           GamepadButtonIntent(button),
         ) ==
@@ -502,8 +502,10 @@ class GamepadService {
   /// button is unbound in the gamepad scope (caller falls back to the physical
   /// direction) or no registry is wired (tests).
   TraversalDirection? _dpadFocusDirection(GamepadButton button) {
-    final ShortcutAction? action =
-        registry?.resolveGamepad(button, scope: ShortcutScope.gamepad);
+    final ShortcutAction? action = registry?.resolveGamepad(
+      button,
+      scope: ShortcutScope.gamepad,
+    );
     switch (action) {
       case ShortcutAction.dpadUp:
         return TraversalDirection.up;
@@ -543,7 +545,7 @@ class GamepadService {
     // P5：游戏内卡片可见时右摇杆滚动卡片内容（独占路由优先）。
     final DictionaryPopupGamepadHooks? hooks =
         GalIngameLookupGamepadRoute.current ??
-            DictionaryPopupGamepadRegistry.current;
+        DictionaryPopupGamepadRegistry.current;
     if (hooks == null) return;
     unawaited(hooks.scrollBy(dyNorm * _kRightStickScrollPxPerTick));
   }
@@ -552,8 +554,10 @@ class GamepadService {
   /// action, page the nearest [PrimaryScrollController] by ~0.9 viewport.
   /// Returns whether it scrolled (so the dispatcher can stop).
   bool _tryScrollPage(BuildContext context, GamepadButton button) {
-    final ShortcutAction? action =
-        registry?.resolveGamepad(button, scope: ShortcutScope.global);
+    final ShortcutAction? action = registry?.resolveGamepad(
+      button,
+      scope: ShortcutScope.global,
+    );
     final double fraction;
     if (action == ShortcutAction.globalScrollPageDown) {
       fraction = 0.9;
@@ -585,7 +589,8 @@ class GamepadService {
     final BuildContext? ctx = _dispatchContext;
     if (ctx == null) return;
     _setHighlightForHardwareNav();
-    final bool handled = Actions.maybeInvoke<GamepadLongPressIntent>(
+    final bool handled =
+        Actions.maybeInvoke<GamepadLongPressIntent>(
           ctx,
           GamepadLongPressIntent(button),
         ) ==
@@ -822,8 +827,9 @@ bool gamepadMoveFocusInDirection(
   BuildContext context,
   TraversalDirection direction,
 ) {
-  final FushiFocusController? controller =
-      FushiFocusRoot.maybeControllerOf(context);
+  final FushiFocusController? controller = FushiFocusRoot.maybeControllerOf(
+    context,
+  );
   if (controller != null) {
     if (controller.move(fushiFocusDirectionFromTraversal(direction))) {
       return true;

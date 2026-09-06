@@ -34,20 +34,16 @@ class _FakeProvider implements MangaDiscoveryProvider {
 }
 
 MangaDiscoveryEntry _entry(int id, String title, {double? score}) =>
-    MangaDiscoveryEntry(
-      anilistId: id,
-      titleNative: title,
-      averageScore: score,
-    );
+    MangaDiscoveryEntry(anilistId: id, titleNative: title, averageScore: score);
 
 void main() {
   setUp(() => LocaleSettings.setLocale(AppLocale.zhCn));
 
   Widget wrap(Widget child) => ProviderScope(
-        child: TranslationProvider(
-          child: MaterialApp(home: Scaffold(body: child)),
-        ),
-      );
+    child: TranslationProvider(
+      child: MaterialApp(home: Scaffold(body: child)),
+    ),
+  );
 
   testWidgets('四条 feed 渲染成横滑行；空 feed 整段不出现', (WidgetTester tester) async {
     final _FakeProvider provider = _FakeProvider(<Object>[
@@ -56,18 +52,20 @@ void main() {
           MangaDiscoveryFeed.trending: <MangaDiscoveryEntry>[
             _entry(1, '趋势作品', score: 8.9),
           ],
-          MangaDiscoveryFeed.popular: <MangaDiscoveryEntry>[
-            _entry(2, '热门作品'),
-          ],
+          MangaDiscoveryFeed.popular: <MangaDiscoveryEntry>[_entry(2, '热门作品')],
           MangaDiscoveryFeed.topRated: const <MangaDiscoveryEntry>[],
           MangaDiscoveryFeed.latestFinished: const <MangaDiscoveryEntry>[],
         },
       ),
     ]);
-    await tester.pumpWidget(wrap(MangaDiscoveryPage(
-      provider: provider,
-      sourceFeedsOverride: const <MangaDiscoverySourceFeed>[],
-    )));
+    await tester.pumpWidget(
+      wrap(
+        MangaDiscoveryPage(
+          provider: provider,
+          sourceFeedsOverride: const <MangaDiscoverySourceFeed>[],
+        ),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(find.text(t.manga_discovery_section_trending), findsOneWidget);
@@ -93,15 +91,20 @@ void main() {
         },
       ),
     ]);
-    await tester.pumpWidget(wrap(MangaDiscoveryPage(
-      provider: provider,
-      sourceFeedsOverride: const <MangaDiscoverySourceFeed>[],
-    )));
+    await tester.pumpWidget(
+      wrap(
+        MangaDiscoveryPage(
+          provider: provider,
+          sourceFeedsOverride: const <MangaDiscoverySourceFeed>[],
+        ),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(find.text(t.manga_discovery_load_failed), findsOneWidget);
-    await tester
-        .tap(find.byKey(const ValueKey<String>('manga_discovery_retry')));
+    await tester.tap(
+      find.byKey(const ValueKey<String>('manga_discovery_retry')),
+    );
     await tester.pumpAndSettle();
     expect(provider.calls, 2);
     expect(find.text('重试后出现'), findsOneWidget);
@@ -115,30 +118,34 @@ void main() {
         feeds: <MangaDiscoveryFeed, List<MangaDiscoveryEntry>>{},
       ),
     ]);
-    await tester.pumpWidget(wrap(MangaDiscoveryPage(
-      provider: provider,
-      sourceFeedsOverride: <MangaDiscoverySourceFeed>[
-        MangaDiscoverySourceFeed(
-          id: 'ok',
-          name: '好源',
-          language: 'ja',
-          loadPopular: () async => <MangaDiscoverySourceItem>[
-            MangaDiscoverySourceItem(
-              title: '源里的热门作品',
-              buildCover: (BuildContext context) =>
-                  const ColoredBox(color: Color(0xFF808080)),
-              open: (BuildContext context) => opened++,
+    await tester.pumpWidget(
+      wrap(
+        MangaDiscoveryPage(
+          provider: provider,
+          sourceFeedsOverride: <MangaDiscoverySourceFeed>[
+            MangaDiscoverySourceFeed(
+              id: 'ok',
+              name: '好源',
+              language: 'ja',
+              loadPopular: () async => <MangaDiscoverySourceItem>[
+                MangaDiscoverySourceItem(
+                  title: '源里的热门作品',
+                  buildCover: (BuildContext context) =>
+                      const ColoredBox(color: Color(0xFF808080)),
+                  open: (BuildContext context) => opened++,
+                ),
+              ],
+            ),
+            MangaDiscoverySourceFeed(
+              id: 'broken',
+              name: '坏源',
+              language: 'ja',
+              loadPopular: () async => throw StateError('Cloudflare'),
             ),
           ],
         ),
-        MangaDiscoverySourceFeed(
-          id: 'broken',
-          name: '坏源',
-          language: 'ja',
-          loadPopular: () async => throw StateError('Cloudflare'),
-        ),
-      ],
-    )));
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(
@@ -167,22 +174,27 @@ void main() {
         feeds: <MangaDiscoveryFeed, List<MangaDiscoveryEntry>>{},
       ),
     ]);
-    await tester.pumpWidget(wrap(MangaDiscoveryPage(
-      provider: provider,
-      sourceFeedsOverride: <MangaDiscoverySourceFeed>[
-        MangaDiscoverySourceFeed(
-          id: 'slow',
-          name: '慢源',
-          language: 'ja',
-          loadPopular: () => pending.future,
+    await tester.pumpWidget(
+      wrap(
+        MangaDiscoveryPage(
+          provider: provider,
+          sourceFeedsOverride: <MangaDiscoverySourceFeed>[
+            MangaDiscoverySourceFeed(
+              id: 'slow',
+              name: '慢源',
+              language: 'ja',
+              loadPopular: () => pending.future,
+            ),
+          ],
         ),
-      ],
-    )));
+      ),
+    );
     await tester.pump();
     await tester.pump();
 
-    final Finder header =
-        find.text(t.manga_discovery_source_popular(source: '慢源'));
+    final Finder header = find.text(
+      t.manga_discovery_source_popular(source: '慢源'),
+    );
     expect(header, findsOneWidget, reason: '加载中就要能看出在等哪个源');
     expect(
       find.descendant(
@@ -196,8 +208,9 @@ void main() {
     // 加载中就要把卡片条的高度占住，否则加载完成那一刻凭空插入 222px，标题下方
     // 所有内容整体下移。`pumpAndSettle` 会跳过中间帧，钉不住这一条——必须在
     // pending 态直接量行高，再与 done 态比。
-    final double pendingHeight =
-        tester.getSize(find.byType(MangaDiscoverySourceRow)).height;
+    final double pendingHeight = tester
+        .getSize(find.byType(MangaDiscoverySourceRow))
+        .height;
 
     pending.complete(<MangaDiscoverySourceItem>[
       MangaDiscoverySourceItem(
@@ -232,10 +245,14 @@ void main() {
         feeds: <MangaDiscoveryFeed, List<MangaDiscoveryEntry>>{},
       ),
     ]);
-    await tester.pumpWidget(wrap(MangaDiscoveryPage(
-      provider: provider,
-      sourceFeedsOverride: const <MangaDiscoverySourceFeed>[],
-    )));
+    await tester.pumpWidget(
+      wrap(
+        MangaDiscoveryPage(
+          provider: provider,
+          sourceFeedsOverride: const <MangaDiscoverySourceFeed>[],
+        ),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(
@@ -259,31 +276,33 @@ void main() {
     final _FakeProvider provider = _FakeProvider(<Object>[
       MangaDiscoverySnapshot(
         feeds: <MangaDiscoveryFeed, List<MangaDiscoveryEntry>>{
-          MangaDiscoveryFeed.trending: <MangaDiscoveryEntry>[
-            _entry(1, '趋势作品'),
-          ],
+          MangaDiscoveryFeed.trending: <MangaDiscoveryEntry>[_entry(1, '趋势作品')],
         },
       ),
     ]);
-    await tester.pumpWidget(wrap(MangaDiscoveryPage(
-      provider: provider,
-      catalogOverride: const MangaSourceCatalog(mokuroEnabled: true),
-      sourceFeedsOverride: <MangaDiscoverySourceFeed>[
-        MangaDiscoverySourceFeed(
-          id: 'mihon:pkg:1',
-          name: '某在线源',
-          language: 'ja',
-          loadPopular: () async => <MangaDiscoverySourceItem>[
-            MangaDiscoverySourceItem(
-              title: '源里的热门作品',
-              buildCover: (BuildContext context) =>
-                  const ColoredBox(color: Color(0xFF808080)),
-              open: (BuildContext context) {},
+    await tester.pumpWidget(
+      wrap(
+        MangaDiscoveryPage(
+          provider: provider,
+          catalogOverride: const MangaSourceCatalog(mokuroEnabled: true),
+          sourceFeedsOverride: <MangaDiscoverySourceFeed>[
+            MangaDiscoverySourceFeed(
+              id: 'mihon:pkg:1',
+              name: '某在线源',
+              language: 'ja',
+              loadPopular: () async => <MangaDiscoverySourceItem>[
+                MangaDiscoverySourceItem(
+                  title: '源里的热门作品',
+                  buildCover: (BuildContext context) =>
+                      const ColoredBox(color: Color(0xFF808080)),
+                  open: (BuildContext context) {},
+                ),
+              ],
             ),
           ],
         ),
-      ],
-    )));
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(find.text(t.manga_discovery_section_trending), findsOneWidget);
@@ -293,8 +312,9 @@ void main() {
     );
     expect(find.text(t.mihon_source_browse_mokuro), findsOneWidget);
 
-    await tester
-        .tap(find.byKey(const ValueKey<String>('discovery_source_menu')));
+    await tester.tap(
+      find.byKey(const ValueKey<String>('discovery_source_menu')),
+    );
     await tester.pumpAndSettle();
     // DropdownMenu 会把条目渲染两遍（隐藏的一份只用来量宽度），可见的那份在后。
     await tester.tap(

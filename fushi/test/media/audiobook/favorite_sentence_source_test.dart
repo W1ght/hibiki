@@ -71,11 +71,11 @@ void main() {
     test('向后兼容：旧 JSON（无 source / 无 dateKey）→ 默认 book / null', () {
       final FavoriteSentence legacy =
           FavoriteSentence.fromJson(<String, dynamic>{
-        'id': 'hl_old',
-        'text': '旧条目',
-        'bookTitle': '旧本',
-        'createdAt': DateTime(2025, 1, 1).toIso8601String(),
-      });
+            'id': 'hl_old',
+            'text': '旧条目',
+            'bookTitle': '旧本',
+            'createdAt': DateTime(2025, 1, 1).toIso8601String(),
+          });
       expect(legacy.source, kFavoriteSentenceSourceBook);
       expect(legacy.dateKey, isNull);
       expect(legacy.id, 'hl_old');

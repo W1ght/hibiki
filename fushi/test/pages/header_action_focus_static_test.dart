@@ -45,8 +45,9 @@ void main() {
   test('reader history batch toolbar uses FushiIconButton actions', () {
     final String source = readReaderHistorySource();
     final int barStart = source.indexOf('Widget _buildBatchActionBar()');
-    final int deleteStart =
-        source.indexOf('Future<void> _batchDeleteConfirm()');
+    final int deleteStart = source.indexOf(
+      'Future<void> _batchDeleteConfirm()',
+    );
     final String selectionBar = source.substring(barStart, deleteStart);
 
     expect(selectionBar, contains('FushiIconButton('));

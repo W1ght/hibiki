@@ -194,9 +194,7 @@ class FilenameParser {
   }
 
   /// 文本中是否含可作标题的文字（拉丁字母 / 假名 / 汉字）。
-  static final RegExp _titleChar = RegExp(
-    r'[A-Za-z぀-ヿ㐀-鿿豈-﫿]',
-  );
+  static final RegExp _titleChar = RegExp(r'[A-Za-z぀-ヿ㐀-鿿豈-﫿]');
 
   static bool _hasTitleChars(String text) => _titleChar.hasMatch(text);
 
@@ -294,8 +292,10 @@ class FilenameParser {
     }
     // 复合 token（`hevc-10bit`）：各段全是噪音才算噪音。
     if (t.contains('-')) {
-      final List<String> parts =
-          t.split('-').where((String p) => p.isNotEmpty).toList();
+      final List<String> parts = t
+          .split('-')
+          .where((String p) => p.isNotEmpty)
+          .toList();
       if (parts.length >= 2 &&
           parts.every(
             (String p) =>
@@ -402,12 +402,16 @@ class FilenameParser {
     // 做：下划线是标题内的普通字符（`ドライブ行かない_`），先替换会让串里凭空多出
     // 空格，判定失效、`.` 不再当分隔符，整串 `.WEBRip.Netflix.ja` 留在标题里
     // （BUG-1435）。
-    final String base =
-        s.replaceAll('　', ' ').replaceAll(RegExp(r'\s+'), ' ').trim();
+    final String base = s
+        .replaceAll('　', ' ')
+        .replaceAll(RegExp(r'\s+'), ' ')
+        .trim();
     final bool dotSeparated =
         !base.contains(' ') && '.'.allMatches(base).length >= 2;
-    String out =
-        base.replaceAll('_', ' ').replaceAll(RegExp(r'\s+'), ' ').trim();
+    String out = base
+        .replaceAll('_', ' ')
+        .replaceAll(RegExp(r'\s+'), ' ')
+        .trim();
     if (dotSeparated) {
       out = out.replaceAll('.', ' ').replaceAll(RegExp(r'\s+'), ' ').trim();
     }
@@ -446,12 +450,14 @@ class FilenameParser {
 
   /// 尾部裸集数（前导零 2–3 位如 `04`，或恰 2 位如 `26`；
   /// 3 位无前导零如 `100` 不认，避免误伤 `Mob Psycho 100`）。
-  static final RegExp _bareTrailingEpisode =
-      RegExp(r'(?:^|\s)(0\d{1,2}|\d{2})\s*$');
+  static final RegExp _bareTrailingEpisode = RegExp(
+    r'(?:^|\s)(0\d{1,2}|\d{2})\s*$',
+  );
 
   /// `第三季` / `第3季` / `第2期`（中文数字支持到九十九）。
-  static final RegExp _cnSeason =
-      RegExp(r'第\s*([0-9零一二两三四五六七八九十]{1,3})\s*[季期]');
+  static final RegExp _cnSeason = RegExp(
+    r'第\s*([0-9零一二两三四五六七八九十]{1,3})\s*[季期]',
+  );
 
   /// `2nd Season` / `3rd Season`。
   static final RegExp _ordinalSeason = RegExp(
@@ -547,8 +553,10 @@ class FilenameParser {
   /// 外部文本尾部噪音 token 截断（点分隔西式命名的 `1080p WEB-DL x265` 尾巴）：
   /// 自首个分辨率/编码/来源 token 起全部截掉；语言标签不参与（歧义太大）。
   static String _cutTrailingNoiseTokens(String text, _ParseState st) {
-    final List<String> tokens =
-        text.split(' ').where((String t) => t.isNotEmpty).toList();
+    final List<String> tokens = text
+        .split(' ')
+        .where((String t) => t.isNotEmpty)
+        .toList();
     int cut = tokens.length;
     for (int i = 0; i < tokens.length; i++) {
       if (_resolutionToken.hasMatch(tokens[i]) ||
@@ -613,10 +621,7 @@ class FilenameParser {
       final String head = text.substring(0, se.start);
       if (_hasTitleChars(head)) {
         final String tail = _cleanupTitle(
-          _cutTrailingNoiseTokens(
-            _cleanupTitle(text.substring(se.end)),
-            st,
-          ),
+          _cutTrailingNoiseTokens(_cleanupTitle(text.substring(se.end)), st),
         );
         if (tail.isNotEmpty) st.secondaryTitle ??= tail;
         text = head;
@@ -738,8 +743,11 @@ class FilenameParser {
     }
     if (st.season == null) {
       text = _extractFirst(text, _asciiRomanTail, (RegExpMatch m) {
-        st.season =
-            const <String, int>{'II': 2, 'III': 3, 'IV': 4}[m.group(1)!];
+        st.season = const <String, int>{
+          'II': 2,
+          'III': 3,
+          'IV': 4,
+        }[m.group(1)!];
       });
     }
     // ⑩ 结尾裸数字季号（`Hibike! Euphonium 2` → 系列名 + 第 2 季，BUG-1543）。

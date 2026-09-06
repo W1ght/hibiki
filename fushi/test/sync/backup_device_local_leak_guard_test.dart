@@ -17,18 +17,27 @@ void main() {
     final String s = f.readAsStringSync();
 
     // The device-local table registry names both tables.
-    final int listStart =
-        s.indexOf('static const List<String> _deviceLocalTables =');
-    expect(listStart, greaterThan(-1),
-        reason: '_deviceLocalTables constant must exist');
+    final int listStart = s.indexOf(
+      'static const List<String> _deviceLocalTables =',
+    );
+    expect(
+      listStart,
+      greaterThan(-1),
+      reason: '_deviceLocalTables constant must exist',
+    );
     final int listEnd = s.indexOf('];', listStart);
     expect(listEnd, greaterThan(listStart));
     final String listBody = s.substring(listStart, listEnd);
-    expect(listBody.contains("'fushi_paired_peers'"), isTrue,
-        reason:
-            'pairing table (holds the plaintext token) must be device-local');
-    expect(listBody.contains("'sync_baselines'"), isTrue,
-        reason: 'sync baselines must be device-local');
+    expect(
+      listBody.contains("'fushi_paired_peers'"),
+      isTrue,
+      reason: 'pairing table (holds the plaintext token) must be device-local',
+    );
+    expect(
+      listBody.contains("'sync_baselines'"),
+      isTrue,
+      reason: 'sync baselines must be device-local',
+    );
     for (final String table in <String>[
       'manga_extension_stores',
       'manga_extensions',
@@ -52,8 +61,11 @@ void main() {
     int previousOffset = -1;
     for (final String table in videoTablesChildFirst) {
       final int offset = listBody.indexOf("'$table'");
-      expect(offset, greaterThan(previousOffset),
-          reason: '$table must be deleted after its FK children');
+      expect(
+        offset,
+        greaterThan(previousOffset),
+        reason: '$table must be deleted after its FK children',
+      );
       previousOffset = offset;
     }
 
@@ -73,8 +85,11 @@ void main() {
     previousOffset = -1;
     for (final String table in videoTablesParentFirst) {
       final int offset = parentListBody.indexOf("'$table'");
-      expect(offset, greaterThan(previousOffset),
-          reason: '$table must be restored after its FK parents');
+      expect(
+        offset,
+        greaterThan(previousOffset),
+        reason: '$table must be restored after its FK parents',
+      );
       previousOffset = offset;
     }
 
@@ -84,8 +99,10 @@ void main() {
     expect(stripStart, greaterThan(-1), reason: '_stripCredentials must exist');
     // 命名统一后备份内部子步骤 restore* → reapply*/strip*：锚到下一个 static
     // 方法声明即可，不与具体后继方法名耦合。
-    final int stripEnd =
-        s.indexOf('static Future<void> _strip', stripStart + 1);
+    final int stripEnd = s.indexOf(
+      'static Future<void> _strip',
+      stripStart + 1,
+    );
     expect(stripEnd, greaterThan(stripStart));
     final String stripBody = s.substring(stripStart, stripEnd);
     expect(

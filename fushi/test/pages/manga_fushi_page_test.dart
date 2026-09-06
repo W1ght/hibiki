@@ -86,11 +86,11 @@ class _FakeMangaOcrService implements MangaOcrService {
 
   @override
   Future<MangaOcrModelStatus> modelStatus() async => MangaOcrModelStatus(
-        detectorReady: false,
-        recognizerReady: ready,
-        diskBytes: 0,
-        totalBytes: 1,
-      );
+    detectorReady: false,
+    recognizerReady: ready,
+    diskBytes: 0,
+    totalBytes: 1,
+  );
 
   @override
   Stream<MangaOcrDownloadEvent> downloadModels() =>
@@ -103,12 +103,15 @@ class _FakeMangaOcrService implements MangaOcrService {
   Stream<MangaOcrVolumeEvent> ocrFolder({
     required String imageDirPath,
     String? volumeTitle,
-  }) =>
-      const Stream<MangaOcrVolumeEvent>.empty();
+  }) => const Stream<MangaOcrVolumeEvent>.empty();
 }
 
-Widget _harness(AppModel appModel, MediaItem item, String bookKey,
-    {List<Override> extraOverrides = const <Override>[]}) {
+Widget _harness(
+  AppModel appModel,
+  MediaItem item,
+  String bookKey, {
+  List<Override> extraOverrides = const <Override>[],
+}) {
   return ProviderScope(
     overrides: <Override>[
       // TODO-2936 起页面 initState 会读 profileViewModelProvider（媒体类型绑定），
@@ -170,16 +173,19 @@ void main() {
     addTearDown(db.close);
     final _MangaTestAppModel appModel = _MangaTestAppModel(db);
 
-    await tester
-        .pumpWidget(_harness(appModel, _item('missing_book'), 'missing_book'));
+    await tester.pumpWidget(
+      _harness(appModel, _item('missing_book'), 'missing_book'),
+    );
     await tester.pump();
     await tester.pump();
 
     // 页面挂载（build 无异常）。
     expect(find.byType(MangaFushiPage), findsOneWidget);
     // 词典弹窗层已接进树（buildDictionary 在空栈时收缩，但宿主 key 必须在）。
-    expect(find.byKey(const ValueKey<String>('manga_dictionary_host')),
-        findsOneWidget);
+    expect(
+      find.byKey(const ValueKey<String>('manga_dictionary_host')),
+      findsOneWidget,
+    );
     final Iterable<Focus> keyboardAncestors = tester.widgetList<Focus>(
       find.ancestor(
         of: find.byKey(const ValueKey<String>('manga_dictionary_host')),
@@ -203,8 +209,9 @@ void main() {
     addTearDown(db.close);
     final _MangaTestAppModel appModel = _MangaTestAppModel(db);
 
-    final Directory bookDir =
-        Directory.systemTemp.createTempSync('manga_page_widget_');
+    final Directory bookDir = Directory.systemTemp.createTempSync(
+      'manga_page_widget_',
+    );
     addTearDown(() {
       if (bookDir.existsSync()) bookDir.deleteSync(recursive: true);
     });
@@ -217,16 +224,18 @@ void main() {
     // runAsync：_loadBook 走真实文件 IO + Isolate.run（FakeAsync 下 isolate 的
     // future 永不完成）。
     await tester.runAsync(() async {
-      await db.insertEpubBook(EpubBooksCompanion.insert(
-        bookKey: bookKey,
-        title: 'テスト漫画',
-        epubPath: 'manga.json',
-        extractDir: bookDir.path,
-        chapterCount: 2,
-        chaptersJson: '[]',
-        importedAt: DateTime.now().millisecondsSinceEpoch,
-        format: const Value<String>('manga'),
-      ));
+      await db.insertEpubBook(
+        EpubBooksCompanion.insert(
+          bookKey: bookKey,
+          title: 'テスト漫画',
+          epubPath: 'manga.json',
+          extractDir: bookDir.path,
+          chapterCount: 2,
+          chaptersJson: '[]',
+          importedAt: DateTime.now().millisecondsSinceEpoch,
+          format: const Value<String>('manga'),
+        ),
+      );
       // 预存进度：第 2 页（0-based sectionIndex=1，charOffset 显式 0）。
       // v82：进度键 = epub_books.uid（insertEpubBook 自动生成，取回换算）。
       await ReaderPositionRepository(db).save(
@@ -253,11 +262,16 @@ void main() {
 
     // 内容区已构建（manga_content_ready 平台无关标记：非 Linux 是原生 WebView，
     // Linux 是无后端占位）——书行 + manga.json 全链路加载成功。
-    expect(find.byKey(const ValueKey<String>('manga_content_ready')),
-        findsOneWidget);
+    expect(
+      find.byKey(const ValueKey<String>('manga_content_ready')),
+      findsOneWidget,
+    );
     // 页码指示恢复到已存页：2 / 2（sectionIndex=1 → 1-based 第 2 页）。
-    expect(find.text('2 / 2'), findsOneWidget,
-        reason: 'ReaderPositions.sectionIndex 必须恢复为当前页（0-based → 1-based 显示）');
+    expect(
+      find.text('2 / 2'),
+      findsOneWidget,
+      reason: 'ReaderPositions.sectionIndex 必须恢复为当前页（0-based → 1-based 显示）',
+    );
   });
 
   testWidgets('整卷 OCR 入口：书加载成功后 chrome 出现按钮', (WidgetTester tester) async {
@@ -268,8 +282,9 @@ void main() {
     addTearDown(db.close);
     final _MangaTestAppModel appModel = _MangaTestAppModel(db);
 
-    final Directory bookDir =
-        Directory.systemTemp.createTempSync('manga_full_ocr_entry_');
+    final Directory bookDir = Directory.systemTemp.createTempSync(
+      'manga_full_ocr_entry_',
+    );
     addTearDown(() {
       if (bookDir.existsSync()) bookDir.deleteSync(recursive: true);
     });
@@ -280,25 +295,30 @@ void main() {
 
     const String bookKey = '整卷 OCR テスト';
     await tester.runAsync(() async {
-      await db.insertEpubBook(EpubBooksCompanion.insert(
-        bookKey: bookKey,
-        title: '整卷 OCR テスト',
-        epubPath: 'manga.json',
-        extractDir: bookDir.path,
-        chapterCount: 2,
-        chaptersJson: '[]',
-        importedAt: DateTime.now().millisecondsSinceEpoch,
-        format: const Value<String>('manga'),
-      ));
-      await tester.pumpWidget(_harness(
-        appModel,
-        _item(bookKey),
-        bookKey,
-        extraOverrides: <Override>[
-          mangaOcrServiceProvider
-              .overrideWithValue(_FakeMangaOcrService(ready: true)),
-        ],
-      ));
+      await db.insertEpubBook(
+        EpubBooksCompanion.insert(
+          bookKey: bookKey,
+          title: '整卷 OCR テスト',
+          epubPath: 'manga.json',
+          extractDir: bookDir.path,
+          chapterCount: 2,
+          chaptersJson: '[]',
+          importedAt: DateTime.now().millisecondsSinceEpoch,
+          format: const Value<String>('manga'),
+        ),
+      );
+      await tester.pumpWidget(
+        _harness(
+          appModel,
+          _item(bookKey),
+          bookKey,
+          extraOverrides: <Override>[
+            mangaOcrServiceProvider.overrideWithValue(
+              _FakeMangaOcrService(ready: true),
+            ),
+          ],
+        ),
+      );
       for (int i = 0; i < 50; i++) {
         await Future<void>.delayed(const Duration(milliseconds: 50));
         await tester.pump();
@@ -313,34 +333,44 @@ void main() {
     await tester.pump();
 
     // 书加载成功 → chrome 在树 → 整卷 OCR 入口在场。
-    expect(find.byKey(const ValueKey<String>('manga_full_ocr_button')),
-        findsOneWidget,
-        reason: '整卷 OCR 入口必须出现在 chrome');
-    expect(find.byKey(const ValueKey<String>('manga_reader_back_button')),
-        findsOneWidget,
-        reason: '漫画阅读器必须常显左上返回按钮');
+    expect(
+      find.byKey(const ValueKey<String>('manga_full_ocr_button')),
+      findsOneWidget,
+      reason: '整卷 OCR 入口必须出现在 chrome',
+    );
+    expect(
+      find.byKey(const ValueKey<String>('manga_reader_back_button')),
+      findsOneWidget,
+      reason: '漫画阅读器必须常显左上返回按钮',
+    );
   });
 
-  testWidgets('整卷 OCR 入口：加载失败（无书行）时 chrome 不构建 → 无按钮',
-      (WidgetTester tester) async {
+  testWidgets('整卷 OCR 入口：加载失败（无书行）时 chrome 不构建 → 无按钮', (
+    WidgetTester tester,
+  ) async {
     final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final _MangaTestAppModel appModel = _MangaTestAppModel(db);
 
-    await tester.pumpWidget(_harness(
-      appModel,
-      _item('missing_book'),
-      'missing_book',
-      extraOverrides: <Override>[
-        mangaOcrServiceProvider
-            .overrideWithValue(_FakeMangaOcrService(ready: true)),
-      ],
-    ));
+    await tester.pumpWidget(
+      _harness(
+        appModel,
+        _item('missing_book'),
+        'missing_book',
+        extraOverrides: <Override>[
+          mangaOcrServiceProvider.overrideWithValue(
+            _FakeMangaOcrService(ready: true),
+          ),
+        ],
+      ),
+    );
     await tester.pump();
     await tester.pump();
 
-    expect(find.byKey(const ValueKey<String>('manga_full_ocr_button')),
-        findsNothing);
+    expect(
+      find.byKey(const ValueKey<String>('manga_full_ocr_button')),
+      findsNothing,
+    );
     // 但**出口必须还在**。加载失败时正文只剩一行「找不到书籍文件」，返回键若
     // 跟着顶栏一起消失，iOS 上就彻底无路可走：没有系统返回键，本页
     // PopScope(canPop: false) 又关掉了侧滑返回，正文原生 WebView 的空白点击
@@ -388,55 +418,76 @@ void main() {
   group('窗口 generation 闸门丢弃旧文档回调', () {
     test('只有与当前 generation 严格相等的回报才放行', () {
       expect(MangaWindowGeneration.isCurrent(7, 7), isTrue);
-      expect(MangaWindowGeneration.isCurrent(7.0, 7), isTrue,
-          reason: 'WebView 桥可能把整数回成 double');
-      expect(MangaWindowGeneration.isCurrent('7', 7), isTrue,
-          reason: '部分平台的 evaluateJavascript 回字符串');
+      expect(
+        MangaWindowGeneration.isCurrent(7.0, 7),
+        isTrue,
+        reason: 'WebView 桥可能把整数回成 double',
+      );
+      expect(
+        MangaWindowGeneration.isCurrent('7', 7),
+        isTrue,
+        reason: '部分平台的 evaluateJavascript 回字符串',
+      );
     });
 
     test('迟到的旧 generation 被丢弃', () {
       // 场景：第 7 代文档的 onLoadStop 在第 8 代已经发起后才到。
       expect(MangaWindowGeneration.isCurrent(7, 8), isFalse);
       expect(MangaWindowGeneration.isCurrent('7', 8), isFalse);
-      expect(MangaWindowGeneration.isCurrent(0, 3), isFalse,
-          reason: '首个文档的迟到回调同样不能解锁第 3 代');
+      expect(
+        MangaWindowGeneration.isCurrent(0, 3),
+        isFalse,
+        reason: '首个文档的迟到回调同样不能解锁第 3 代',
+      );
     });
 
     test('对不上号或解析不出的回报一律 fail-closed', () {
-      expect(MangaWindowGeneration.isCurrent(9, 8), isFalse,
-          reason: '比当前更大同样是对不上号，不能放行');
+      expect(
+        MangaWindowGeneration.isCurrent(9, 8),
+        isFalse,
+        reason: '比当前更大同样是对不上号，不能放行',
+      );
       expect(MangaWindowGeneration.isCurrent(null, 8), isFalse);
       expect(MangaWindowGeneration.isCurrent('undefined', 8), isFalse);
       expect(MangaWindowGeneration.isCurrent(<String>['8'], 8), isFalse);
       expect(MangaWindowGeneration.parse('not a number'), isNull);
-      expect(MangaWindowGeneration.isCurrent(null, 0), isFalse,
-          reason: '解析失败绝不能因为默认值 0 而误判成第 0 代');
+      expect(
+        MangaWindowGeneration.isCurrent(null, 0),
+        isFalse,
+        reason: '解析失败绝不能因为默认值 0 而误判成第 0 代',
+      );
     });
 
     test('相邻两代文档带的 generation 标记必须不同，闸门才有可区分的依据', () {
       String documentFor(int generation) => mangaWindowDocument(
-            <MokuroImage>[
-              const MokuroImage(
-                url: 'p.jpg',
-                size: Size(100, 200),
-                blocks: <MokuroBlock>[],
-              ),
-            ],
-            <String>['p.jpg'],
-            mode: MangaReadingMode.spread,
-            spreadDirection: 'rtl',
-            inlineSelectionJs: '',
-            currentSpread: 0,
-            documentGeneration: generation,
-          );
+        <MokuroImage>[
+          const MokuroImage(
+            url: 'p.jpg',
+            size: Size(100, 200),
+            blocks: <MokuroBlock>[],
+          ),
+        ],
+        <String>['p.jpg'],
+        mode: MangaReadingMode.spread,
+        spreadDirection: 'rtl',
+        inlineSelectionJs: '',
+        currentSpread: 0,
+        documentGeneration: generation,
+      );
 
-      expect(documentFor(7).contains('window.__mangaDocumentGeneration=7;'),
-          isTrue);
-      expect(documentFor(8).contains('window.__mangaDocumentGeneration=8;'),
-          isTrue);
-      expect(documentFor(7).contains('window.__mangaDocumentGeneration=8;'),
-          isFalse,
-          reason: '旧文档不能携带新 generation，否则闸门永远放行');
+      expect(
+        documentFor(7).contains('window.__mangaDocumentGeneration=7;'),
+        isTrue,
+      );
+      expect(
+        documentFor(8).contains('window.__mangaDocumentGeneration=8;'),
+        isTrue,
+      );
+      expect(
+        documentFor(7).contains('window.__mangaDocumentGeneration=8;'),
+        isFalse,
+        reason: '旧文档不能携带新 generation，否则闸门永远放行',
+      );
     });
   });
 
@@ -457,8 +508,10 @@ void main() {
     expect(restored, isNotNull);
     expect(restored!.sectionIndex, 3);
     expect(
-        MangaFushiPage.charOffsetToWebtoonFraction(restored.charOffset), 0.75,
-        reason: 'webtoon 页内滚动位置必须经 charOffset 千分比写穿并无损恢复');
+      MangaFushiPage.charOffsetToWebtoonFraction(restored.charOffset),
+      0.75,
+      reason: 'webtoon 页内滚动位置必须经 charOffset 千分比写穿并无损恢复',
+    );
   });
 
   group('键位经注册表解析后的上下文门控（inputActionForShortcut）', () {
@@ -581,18 +634,30 @@ void main() {
     // JS 本身的通用不变式由 test/focus/webview_key_bridge_test.dart 守，这里只钉
     // 本页特有的接线：键表、幂等、独占、不转发长按。
     final String script = MangaFushiPage.navigationKeyBridgeScript;
-    expect(script, contains('__fushiKeyBridgeInstalled_onMangaNavigationKey'),
-        reason: '每次换加载窗口都会重新注入，必须幂等，否则 listener 叠加导致一次按键翻两页');
+    expect(
+      script,
+      contains('__fushiKeyBridgeInstalled_onMangaNavigationKey'),
+      reason: '每次换加载窗口都会重新注入，必须幂等，否则 listener 叠加导致一次按键翻两页',
+    );
     expect(script, contains("'ArrowLeft'"));
     expect(script, contains("'ArrowRight'"));
     expect(script, contains("'Escape'"));
     expect(script, contains('preventDefault()'));
-    expect(script, contains('stopImmediatePropagation()'),
-        reason: '导航键必须独占给 Dart');
-    expect(script, contains('if (e.repeat) return;'),
-        reason: '按住方向键不得堆翻页风暴（本页既有语义）');
-    expect(script, contains("callHandler('onMangaNavigationKey', _hit)"),
-        reason: '回传的是命中的 token（裸键时与 e.key 同值），不再是原始 e.key');
+    expect(
+      script,
+      contains('stopImmediatePropagation()'),
+      reason: '导航键必须独占给 Dart',
+    );
+    expect(
+      script,
+      contains('if (e.repeat) return;'),
+      reason: '按住方向键不得堆翻页风暴（本页既有语义）',
+    );
+    expect(
+      script,
+      contains("callHandler('onMangaNavigationKey', _hit)"),
+      reason: '回传的是命中的 token（裸键时与 e.key 同值），不再是原始 e.key',
+    );
   });
 
   test('高频翻页在异步窗口加载期间累积并按净位移排空', () async {
@@ -620,19 +685,27 @@ void main() {
 
     // 完整压力序列：→→→→←←→→→→。第一步在飞期间剩余输入净值为 +5。
     for (final int step in <int>[1, 1, 1, -1, -1, 1, 1, 1, 1]) {
-      unawaited(queue.enqueue(
-        step,
-        maxMagnitude: 100,
-        canApply: () => true,
-        applyStep: applyStep,
-      ));
+      unawaited(
+        queue.enqueue(
+          step,
+          maxMagnitude: 100,
+          canApply: () => true,
+          applyStep: applyStep,
+        ),
+      );
     }
     expect(queue.pendingDelta, 5);
 
     firstWindowLoad.complete();
     await firstDrain;
-    expect(applied, <int>[1, 1, 1, 1, 1, 1],
-        reason: '不得因窗口加载在飞而丢后半批输入，最终净前进 6 个 spread');
+    expect(applied, <int>[
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+    ], reason: '不得因窗口加载在飞而丢后半批输入，最终净前进 6 个 spread');
     expect(queue.pendingDelta, 0);
     expect(queue.isDraining, isFalse);
   });

@@ -69,7 +69,8 @@ class _PortraitCoverImageState extends State<PortraitCoverImage>
     }
     final double? aspect = coverAspect;
     // 朝向不合槽 = 垫底 + contain；首帧前（aspect 未知）按合槽 cover 渲染。
-    final bool mismatch = aspect != null &&
+    final bool mismatch =
+        aspect != null &&
         (widget.landscapeSlot
             ? aspect < PortraitCoverImage.landscapeAspectThreshold
             : aspect > PortraitCoverImage.portraitAspectThreshold);
@@ -81,7 +82,7 @@ class _PortraitCoverImageState extends State<PortraitCoverImage>
       errorBuilder: widget.errorBuilder == null
           ? null
           : (BuildContext context, Object error, StackTrace? stackTrace) =>
-              widget.errorBuilder!(context),
+                widget.errorBuilder!(context),
     );
     if (!mismatch) return foreground;
     return ClipRect(

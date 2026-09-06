@@ -78,16 +78,16 @@ class FushiRemoteMiningClient implements RemoteMineSender {
     Duration duplicateTimeout = const Duration(seconds: 5),
     Duration noteTypeTimeout = const Duration(seconds: 15),
     Duration mediaDedupTimeout = const Duration(minutes: 30),
-  })  : _repo = repo,
-        _transport = InterconnectPostTransport(
-          repo: repo,
-          httpClient: httpClient,
-          pinnedClientFactory: pinnedClientFactory,
-        ),
-        _mineTimeout = mineTimeout,
-        _duplicateTimeout = duplicateTimeout,
-        _noteTypeTimeout = noteTypeTimeout,
-        _mediaDedupTimeout = mediaDedupTimeout;
+  }) : _repo = repo,
+       _transport = InterconnectPostTransport(
+         repo: repo,
+         httpClient: httpClient,
+         pinnedClientFactory: pinnedClientFactory,
+       ),
+       _mineTimeout = mineTimeout,
+       _duplicateTimeout = duplicateTimeout,
+       _noteTypeTimeout = noteTypeTimeout,
+       _mediaDedupTimeout = mediaDedupTimeout;
 
   final SyncRepository _repo;
   final InterconnectPostTransport _transport;
@@ -112,7 +112,8 @@ class FushiRemoteMiningClient implements RemoteMineSender {
     // 任一候选拿得出凭据就算有目标。
     final String? fallbackToken = await _repo.getFushiClientToken();
     return candidates.any(
-        (FushiClientUrl u) => interconnectTokenFor(u, fallbackToken) != null);
+      (FushiClientUrl u) => interconnectTokenFor(u, fallbackToken) != null,
+    );
   }
 
   /// 转发一次制卡到已配对主机。返回服务端 `{result, message?, detail?}`；
@@ -159,7 +160,8 @@ class FushiRemoteMiningClient implements RemoteMineSender {
   /// 必须原样报给用户，压成 null 会被 UI 误报成「Lapis 卡型不存在」。
   @override
   Future<AnkiNoteTypeDefinition?> readNoteTypeDefinition(
-      String modelName) async {
+    String modelName,
+  ) async {
     final Map<String, dynamic>? json = await _postNoteType(
       path: '/api/anki/note-type/read',
       body: <String, dynamic>{'modelName': modelName},
@@ -231,7 +233,8 @@ class FushiRemoteMiningClient implements RemoteMineSender {
     );
     if (outcome.json == null && outcome.allUnreachable) {
       throw StateError(
-          'No paired device is reachable for Lapis template editing.');
+        'No paired device is reachable for Lapis template editing.',
+      );
     }
     return outcome.json;
   }

@@ -100,7 +100,8 @@ Future<Map<String, dynamic>> buildRemoteDictionaryLookupResponse(
   //   - 字段**缺失** ⇒ 老客户端不认识该契约 ⇒ 一个字节都不发（向后兼容，旧扩展行为不变）；
   //   - 字段在且与当前 revision 不同 ⇒ 全量下发一次，之后一直命中缓存。
   final RemotePopupDictionaryCss? popupCss = popupDictionaryCssProvider?.call();
-  final bool cssStale = popupCss != null &&
+  final bool cssStale =
+      popupCss != null &&
       body.containsKey('stylesRevision') &&
       body['stylesRevision']?.toString() != popupCss.revision;
   final Map<String, Object?> envelope = <String, Object?>{
@@ -139,17 +140,17 @@ Future<Map<String, dynamic>> buildRemoteDictionaryLookupResponse(
         lookup as FushiRemotePopupLookupService;
     final RemoteDictionaryPopupLookup? popup =
         popupTiming != null && popupLookup is FushiRemoteTimedPopupLookupService
-            ? await popupLookup.searchDictionaryPopupWithTiming(
-                term: term,
-                wildcards: wildcards,
-                maximumTerms: maximumTerms,
-                timing: popupTiming,
-              )
-            : await popupLookup.searchDictionaryPopup(
-                term: term,
-                wildcards: wildcards,
-                maximumTerms: maximumTerms,
-              );
+        ? await popupLookup.searchDictionaryPopupWithTiming(
+            term: term,
+            wildcards: wildcards,
+            maximumTerms: maximumTerms,
+            timing: popupTiming,
+          )
+        : await popupLookup.searchDictionaryPopup(
+            term: term,
+            wildcards: wildcards,
+            maximumTerms: maximumTerms,
+          );
     return <String, dynamic>{
       'type': 'dictionaryResult',
       'result': popup == null
@@ -172,8 +173,8 @@ Future<Map<String, dynamic>> buildRemoteDictionaryLookupResponse(
     'result': result == null
         ? null
         : popupOnly
-            ? <String, dynamic>{'bestLength': result.bestLength}
-            : jsonDecode(result.toJson()),
+        ? <String, dynamic>{'bestLength': result.bestLength}
+        : jsonDecode(result.toJson()),
     'popupJson': result?.popupJson,
     ...envelope,
   };
@@ -195,7 +196,9 @@ Future<Map<String, dynamic>> buildRemoteMineResponse(
   final RemoteMineResult r = payload.isImmersion
       ? await mining.mineImmersion(payload)
       : await mining.mineEntry(
-          fields: payload.fields, sentence: payload.sentence);
+          fields: payload.fields,
+          sentence: payload.sentence,
+        );
   return <String, dynamic>{
     'result': r.result,
     if (r.message != null) 'message': r.message,
@@ -237,8 +240,10 @@ Future<Map<String, dynamic>> buildRemoteDuplicateResponse(
   if (expression.trim().isEmpty) {
     return <String, dynamic>{'duplicate': false};
   }
-  final bool duplicate =
-      await mining.isDuplicate(expression: expression, reading: reading);
+  final bool duplicate = await mining.isDuplicate(
+    expression: expression,
+    reading: reading,
+  );
   return <String, dynamic>{'duplicate': duplicate};
 }
 
@@ -251,8 +256,9 @@ Future<Map<String, dynamic>> buildAnkiNoteTypeReadResponse(
   Map<String, dynamic> body, {
   required FushiRemoteMiningService mining,
 }) async {
-  final AnkiNoteTypeDefinition? def =
-      await mining.readNoteTypeDefinition(_requiredModelName(body));
+  final AnkiNoteTypeDefinition? def = await mining.readNoteTypeDefinition(
+    _requiredModelName(body),
+  );
   return <String, dynamic>{'noteType': def?.toJson()};
 }
 
@@ -313,8 +319,9 @@ Future<Map<String, dynamic>> buildAnkiMediaDedupRunResponse(
   if (rawDryRun != null && rawDryRun is! bool) {
     throw const FormatException('Malformed dryRun');
   }
-  final AnkiMediaDedupReport? report =
-      await mining.runMediaDedup(dryRun: (rawDryRun as bool?) ?? true);
+  final AnkiMediaDedupReport? report = await mining.runMediaDedup(
+    dryRun: (rawDryRun as bool?) ?? true,
+  );
   return <String, dynamic>{'report': report?.toJson()};
 }
 

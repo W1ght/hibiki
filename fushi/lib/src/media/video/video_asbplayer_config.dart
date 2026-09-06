@@ -80,14 +80,14 @@ class VideoAsbplayerConfig {
   }
 
   Map<String, Object> toJson() => <String, Object>{
-        'seekSeconds': seekSeconds,
-        'speedStep': speedStep,
-        'pauseAtSubtitleEnd': pauseAtSubtitleEnd,
-        'doubleTapSeekSeconds': doubleTapSeekSeconds,
-        'longPressSpeed': longPressSpeed,
-        'dragSeekSensitivity': dragSeekSensitivity.name,
-        'tapTogglesPlayback': tapTogglesPlayback,
-      };
+    'seekSeconds': seekSeconds,
+    'speedStep': speedStep,
+    'pauseAtSubtitleEnd': pauseAtSubtitleEnd,
+    'doubleTapSeekSeconds': doubleTapSeekSeconds,
+    'longPressSpeed': longPressSpeed,
+    'dragSeekSensitivity': dragSeekSensitivity.name,
+    'tapTogglesPlayback': tapTogglesPlayback,
+  };
 
   static String encode(VideoAsbplayerConfig config) =>
       jsonEncode(config.toJson());
@@ -98,18 +98,21 @@ class VideoAsbplayerConfig {
       final Object? raw = jsonDecode(json);
       if (raw is! Map<String, dynamic>) return defaults;
       return VideoAsbplayerConfig(
-        seekSeconds:
-            _readInt(raw['seekSeconds'], defaults.seekSeconds).clamp(1, 30),
-        speedStep: _readDouble(raw['speedStep'], defaults.speedStep)
-            .clamp(0.05, 0.5)
-            .toDouble(),
+        seekSeconds: _readInt(
+          raw['seekSeconds'],
+          defaults.seekSeconds,
+        ).clamp(1, 30),
+        speedStep: _readDouble(
+          raw['speedStep'],
+          defaults.speedStep,
+        ).clamp(0.05, 0.5).toDouble(),
         pauseAtSubtitleEnd:
             raw['pauseAtSubtitleEnd'] as bool? ?? defaults.pauseAtSubtitleEnd,
         doubleTapSeekSeconds: _readDoubleTap(raw['doubleTapSeekSeconds']),
-        longPressSpeed:
-            _readDouble(raw['longPressSpeed'], defaults.longPressSpeed)
-                .clamp(1.0, 4.0)
-                .toDouble(),
+        longPressSpeed: _readDouble(
+          raw['longPressSpeed'],
+          defaults.longPressSpeed,
+        ).clamp(1.0, 4.0).toDouble(),
         dragSeekSensitivity: _readDragSeekSensitivity(
           raw['dragSeekSensitivity'],
         ),

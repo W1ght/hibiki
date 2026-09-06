@@ -30,7 +30,8 @@ void main() {
 
   // 复刻 webview.part.dart _injectMergedChapterImages 的注入形状：每张合并前导图是
   // `<div class="fushi-merged-image"><img class="block-img"></div>`，插在正文最前。
-  const String html = '<!DOCTYPE html><html><head><meta charset="utf-8"></head>'
+  const String html =
+      '<!DOCTYPE html><html><head><meta charset="utf-8"></head>'
       '<body>'
       '<div class="fushi-merged-image"><img id="lead1" class="block-img" src="$tinyPng"/></div>'
       '<div class="fushi-merged-image"><img id="lead2" class="block-img" src="$tinyPng"/></div>'
@@ -40,60 +41,77 @@ void main() {
       '</body></html>';
 
   testWidgets(
-      'merge-injected leading illustrations stay eager; normal images stay lazy',
-      (WidgetTester tester) async {
-    final Completer<void> driven = Completer<void>();
-    String? lead1Loading;
-    String? lead2Loading;
-    String? normalLoading;
-    String? gaijiLoading;
+    'merge-injected leading illustrations stay eager; normal images stay lazy',
+    (WidgetTester tester) async {
+      final Completer<void> driven = Completer<void>();
+      String? lead1Loading;
+      String? lead2Loading;
+      String? normalLoading;
+      String? gaijiLoading;
 
-    await tester.pumpWidget(MaterialApp(
-      home: Scaffold(
-        body: InAppWebView(
-          initialData: InAppWebViewInitialData(data: html),
-          onLoadStop: (InAppWebViewController controller, WebUri? url) async {
-            // 跑真实产品脚本（_sharedInitImages 的公开测试壳）。
-            await controller.evaluateJavascript(
-                source: ReaderPaginationScripts.initImagesScriptForTesting());
-            Future<String?> loadingOf(String id) async {
-              final Object? v = await controller.evaluateJavascript(source: '''
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: InAppWebView(
+              initialData: InAppWebViewInitialData(data: html),
+              onLoadStop:
+                  (InAppWebViewController controller, WebUri? url) async {
+                    // 跑真实产品脚本（_sharedInitImages 的公开测试壳）。
+                    await controller.evaluateJavascript(
+                      source:
+                          ReaderPaginationScripts.initImagesScriptForTesting(),
+                    );
+                    Future<String?> loadingOf(String id) async {
+                      final Object? v = await controller.evaluateJavascript(
+                        source:
+                            '''
                 (function(){
                   var el = document.getElementById('$id');
                   if (!el) return 'MISSING';
                   var l = el.getAttribute('loading');
                   return l === null ? 'eager' : l;
                 })();
-              ''');
-              return v?.toString();
-            }
+              ''',
+                      );
+                      return v?.toString();
+                    }
 
-            lead1Loading = await loadingOf('lead1');
-            lead2Loading = await loadingOf('lead2');
-            normalLoading = await loadingOf('normal');
-            gaijiLoading = await loadingOf('gaijiimg');
-            if (!driven.isCompleted) driven.complete();
-          },
+                    lead1Loading = await loadingOf('lead1');
+                    lead2Loading = await loadingOf('lead2');
+                    normalLoading = await loadingOf('normal');
+                    gaijiLoading = await loadingOf('gaijiimg');
+                    if (!driven.isCompleted) driven.complete();
+                  },
+            ),
+          ),
         ),
-      ),
-    ));
+      );
 
-    for (int i = 0; i < 150 && !driven.isCompleted; i++) {
-      await tester.pump(const Duration(milliseconds: 100));
-    }
-    expect(driven.isCompleted, isTrue,
-        reason: 'WebView did not load + run init within 15s');
+      for (int i = 0; i < 150 && !driven.isCompleted; i++) {
+        await tester.pump(const Duration(milliseconds: 100));
+      }
+      expect(
+        driven.isCompleted,
+        isTrue,
+        reason: 'WebView did not load + run init within 15s',
+      );
 
-    debugPrint('[merge-eager] lead1=$lead1Loading lead2=$lead2Loading '
-        'normal=$normalLoading gaiji=$gaijiLoading');
+      debugPrint(
+        '[merge-eager] lead1=$lead1Loading lead2=$lead2Loading '
+        'normal=$normalLoading gaiji=$gaijiLoading',
+      );
 
-    // 核心修复：两张合并前导图都必须 eager（不是 lazy），否则第一张会被章首锚跳过。
-    expect(lead1Loading, isNot('lazy'),
-        reason: '第一张合并前导插图必须 eager，否则离屏永不 load → 被 firstContentEdge 跳过');
-    expect(lead2Loading, isNot('lazy'), reason: '第二张合并前导插图必须 eager');
-    // 不回退 TODO-1074：普通正文大图仍懒加载。
-    expect(normalLoading, 'lazy', reason: '普通正文图仍须 lazy（保留 TODO-1074 懒加载优化）');
-    // 既有行为：gaiji 内联图 eager（参与文字几何）。
-    expect(gaijiLoading, isNot('lazy'), reason: 'gaiji 内联图仍 eager');
-  });
+      // 核心修复：两张合并前导图都必须 eager（不是 lazy），否则第一张会被章首锚跳过。
+      expect(
+        lead1Loading,
+        isNot('lazy'),
+        reason: '第一张合并前导插图必须 eager，否则离屏永不 load → 被 firstContentEdge 跳过',
+      );
+      expect(lead2Loading, isNot('lazy'), reason: '第二张合并前导插图必须 eager');
+      // 不回退 TODO-1074：普通正文大图仍懒加载。
+      expect(normalLoading, 'lazy', reason: '普通正文图仍须 lazy（保留 TODO-1074 懒加载优化）');
+      // 既有行为：gaiji 内联图 eager（参与文字几何）。
+      expect(gaijiLoading, isNot('lazy'), reason: 'gaiji 内联图仍 eager');
+    },
+  );
 }

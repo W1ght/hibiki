@@ -75,20 +75,11 @@ class MangaExtensionManagementTile extends StatelessWidget {
                 ),
               ),
             if (enabled != null)
-              Switch.adaptive(
-                value: enabled!,
-                onChanged: onEnabledChanged,
-              ),
+              Switch.adaptive(value: enabled!, onChanged: onEnabledChanged),
             if (secondaryLabel != null)
-              TextButton(
-                onPressed: onSecondary,
-                child: Text(secondaryLabel!),
-              ),
+              TextButton(onPressed: onSecondary, child: Text(secondaryLabel!)),
             if (primaryLabel != null)
-              TextButton(
-                onPressed: onPrimary,
-                child: Text(primaryLabel!),
-              ),
+              TextButton(onPressed: onPrimary, child: Text(primaryLabel!)),
           ],
         ),
       ),

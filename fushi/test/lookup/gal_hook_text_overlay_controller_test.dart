@@ -294,7 +294,8 @@ void main() {
     expect(
       controller.isSuppressedForSession,
       isFalse,
-      reason: '窗口被外部销毁不是用户不想要它 —— 那是 close 的语义，两条事件'
+      reason:
+          '窗口被外部销毁不是用户不想要它 —— 那是 close 的语义，两条事件'
           '不能合并',
     );
 
@@ -329,11 +330,10 @@ void main() {
     }
 
     expect(
-      nativeCalls
-          .where((MethodCall call) => call.method == 'isShowing')
-          .length,
+      nativeCalls.where((MethodCall call) => call.method == 'isShowing').length,
       probesAfterShow,
-      reason: '窗口在不在是 native 的事实，它会用 overlayDestroyed 推过来；'
+      reason:
+          '窗口在不在是 native 的事实，它会用 overlayDestroyed 推过来；'
           '按行回头问就是把派生状态退化成轮询',
     );
   });

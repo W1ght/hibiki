@@ -39,10 +39,11 @@ Future<DeleteDecision?> showDeleteScopeConfirm(
   FushiDatabase? db,
   String? localFilesSubtitle,
 }) async {
-  final DeletePromptPreferenceStore? preferenceStore =
-      db == null ? null : DeletePromptPreferenceStore(db);
-  final DeletePromptRememberedChoices? rememberedChoices =
-      await preferenceStore?.load();
+  final DeletePromptPreferenceStore? preferenceStore = db == null
+      ? null
+      : DeletePromptPreferenceStore(db);
+  final DeletePromptRememberedChoices? rememberedChoices = await preferenceStore
+      ?.load();
   final bool canSyncEverywhere =
       db == null || await hasDeletionPropagationChannel(SyncRepository(db));
   if (!context.mounted) return null;
@@ -81,8 +82,7 @@ class _DeleteScopeConfirmDialog extends StatefulWidget {
   /// 非 null = 渲染，且这句副标题必须如实说清这个入口到底删什么。
   final String? localFilesSubtitle;
   final DeletePromptRememberedChoices? rememberedChoices;
-  final Future<void> Function(DeletePromptRememberedChoices?)?
-      onPersistChoices;
+  final Future<void> Function(DeletePromptRememberedChoices?)? onPersistChoices;
 
   @override
   State<_DeleteScopeConfirmDialog> createState() =>
@@ -140,9 +140,17 @@ class _DeleteScopeConfirmDialogState extends State<_DeleteScopeConfirmDialog> {
         title: widget.title,
         leadingIcon: Icons.delete_outline,
         bodyPadding: EdgeInsets.fromLTRB(
-            tokens.spacing.card, 0, tokens.spacing.card, tokens.spacing.gap),
-        footerPadding: EdgeInsets.fromLTRB(tokens.spacing.card,
-            tokens.spacing.gap, tokens.spacing.card, tokens.spacing.card),
+          tokens.spacing.card,
+          0,
+          tokens.spacing.card,
+          tokens.spacing.gap,
+        ),
+        footerPadding: EdgeInsets.fromLTRB(
+          tokens.spacing.card,
+          tokens.spacing.gap,
+          tokens.spacing.card,
+          tokens.spacing.card,
+        ),
         body: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -213,8 +221,8 @@ class DeletionCandidateView {
 }
 
 /// 应用用户确认的删除：逐条按 mediaType 删本地（keepLocalOnly，绝不回写墓碑）。
-typedef ApplyDeletions = Future<void> Function(
-    List<DeletionPropagationCandidate> confirmed);
+typedef ApplyDeletions =
+    Future<void> Function(List<DeletionPropagationCandidate> confirmed);
 
 /// 「其他设备已删除这些，本地也删？」逐条确认弹窗：候选列表 + 复选框（默认勾选），
 /// 「全选 / 删除选中 / 取消」。确认返回勾选的候选列表；取消返回 null。
@@ -238,18 +246,18 @@ class _DeletionPromptDialogState extends State<DeletionPromptDialog> {
   }
 
   void _toggle(int i) => setState(() {
-        if (!_checked.remove(i)) _checked.add(i);
-      });
+    if (!_checked.remove(i)) _checked.add(i);
+  });
 
   void _selectAll() => setState(() {
-        if (_checked.length == widget.views.length) {
-          _checked.clear();
-        } else {
-          _checked
-            ..clear()
-            ..addAll(<int>[for (int i = 0; i < widget.views.length; i++) i]);
-        }
-      });
+    if (_checked.length == widget.views.length) {
+      _checked.clear();
+    } else {
+      _checked
+        ..clear()
+        ..addAll(<int>[for (int i = 0; i < widget.views.length; i++) i]);
+    }
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -279,8 +287,10 @@ class _DeletionPromptDialogState extends State<DeletionPromptDialog> {
           children: [
             Padding(
               padding: EdgeInsets.only(bottom: tokens.spacing.gap),
-              child: Text(t.delete_prompt_message,
-                  style: tokens.type.listSubtitle),
+              child: Text(
+                t.delete_prompt_message,
+                style: tokens.type.listSubtitle,
+              ),
             ),
             Flexible(
               child: ConstrainedBox(
@@ -328,12 +338,10 @@ class _DeletionPromptDialogState extends State<DeletionPromptDialog> {
             adaptiveDialogAction(
               context: context,
               isDestructiveAction: true,
-              onPressed: () => Navigator.pop(
-                context,
-                <DeletionPropagationCandidate>[
-                  for (final int i in _checked) widget.views[i].candidate,
-                ],
-              ),
+              onPressed: () =>
+                  Navigator.pop(context, <DeletionPropagationCandidate>[
+                    for (final int i in _checked) widget.views[i].candidate,
+                  ]),
               child: Text(t.delete_prompt_delete_selected),
             ),
           ],
@@ -364,7 +372,8 @@ class DeletionPromptPrompter with PromptQueue {
     if (source == ConflictSource.auto) {
       if (inBook) return false;
       final bool allSnoozed = views.every(
-          (DeletionCandidateView v) => _snoozed.contains(_fp(v.candidate)));
+        (DeletionCandidateView v) => _snoozed.contains(_fp(v.candidate)),
+      );
       if (allSnoozed) return false;
     }
     return true;
@@ -394,16 +403,17 @@ class DeletionPromptPrompter with PromptQueue {
     required ApplyDeletions applyDeletions,
     required ConflictSource source,
     required bool inBook,
-  }) =>
-      enqueuePrompt(() => _presentNow(
-            navigatorKey: navigatorKey,
-            db: db,
-            views: views,
-            highWaterMsByScope: highWaterMsByScope,
-            applyDeletions: applyDeletions,
-            source: source,
-            inBook: inBook,
-          ));
+  }) => enqueuePrompt(
+    () => _presentNow(
+      navigatorKey: navigatorKey,
+      db: db,
+      views: views,
+      highWaterMsByScope: highWaterMsByScope,
+      applyDeletions: applyDeletions,
+      source: source,
+      inBook: inBook,
+    ),
+  );
 
   Future<void> _presentNow({
     required GlobalKey<NavigatorState> navigatorKey,
@@ -421,10 +431,10 @@ class DeletionPromptPrompter with PromptQueue {
     try {
       final List<DeletionPropagationCandidate>? confirmed =
           await showAppDialog<List<DeletionPropagationCandidate>>(
-        context: ctx,
-        barrierDismissible: false,
-        builder: (_) => DeletionPromptDialog(views: views),
-      );
+            context: ctx,
+            barrierDismissible: false,
+            builder: (_) => DeletionPromptDialog(views: views),
+          );
       if (confirmed == null) {
         // 取消 = 稍后再提醒：本会话静默，基线不动。
         _markDismissed(views);
@@ -436,7 +446,9 @@ class DeletionPromptPrompter with PromptQueue {
       for (final MapEntry<String, int> e in highWaterMsByScope.entries) {
         if (e.value <= 0) continue;
         await repo.setDeletionTombstonesBaselineMs(
-            SyncChannelScope.byId(e.key), e.value);
+          SyncChannelScope.byId(e.key),
+          e.value,
+        );
       }
     } finally {
       dialogOpen = false;

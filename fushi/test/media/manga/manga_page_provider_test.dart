@@ -10,57 +10,62 @@ import 'package:fushi/src/media/manga/mihon/mihon_runtime.dart';
 import 'package:image/image.dart' as img;
 
 void main() {
-  test('local reader session serves managed pages and blocks traversal',
-      () async {
-    final Directory root =
-        await Directory.systemTemp.createTemp('hibiki-local-manga-reader-');
-    addTearDown(() async {
-      if (await root.exists()) await root.delete(recursive: true);
-    });
-    final Directory images =
-        Directory('${root.path}${Platform.pathSeparator}images');
-    await images.create();
-    await File('${images.path}${Platform.pathSeparator}page.png').writeAsBytes(
-      <int>[0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a],
-    );
-    await File('${root.path}${Platform.pathSeparator}secret.jpg').writeAsBytes(
-      <int>[0xff, 0xd8, 0xff],
-    );
+  test(
+    'local reader session serves managed pages and blocks traversal',
+    () async {
+      final Directory root = await Directory.systemTemp.createTemp(
+        'hibiki-local-manga-reader-',
+      );
+      addTearDown(() async {
+        if (await root.exists()) await root.delete(recursive: true);
+      });
+      final Directory images = Directory(
+        '${root.path}${Platform.pathSeparator}images',
+      );
+      await images.create();
+      await File(
+        '${images.path}${Platform.pathSeparator}page.png',
+      ).writeAsBytes(<int>[0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+      await File(
+        '${root.path}${Platform.pathSeparator}secret.jpg',
+      ).writeAsBytes(<int>[0xff, 0xd8, 0xff]);
 
-    final MangaReaderSession session = await LocalMangaPageProvider(
-      imagesRoot: images,
-      relativePaths: const <String>['page.png', '../secret.jpg'],
-    ).open();
-    expect(session.pageCount, 2);
-    expect((await session.page(0)).contentType, 'image/png');
-    expect((await session.localFile(0))?.path, endsWith('page.png'));
-    await expectLater(
-      session.page(1),
-      throwsA(
-        isA<MihonRuntimeException>().having(
-          (MihonRuntimeException error) => error.code,
-          'code',
-          'PATH_TRAVERSAL',
+      final MangaReaderSession session = await LocalMangaPageProvider(
+        imagesRoot: images,
+        relativePaths: const <String>['page.png', '../secret.jpg'],
+      ).open();
+      expect(session.pageCount, 2);
+      expect((await session.page(0)).contentType, 'image/png');
+      expect((await session.localFile(0))?.path, endsWith('page.png'));
+      await expectLater(
+        session.page(1),
+        throwsA(
+          isA<MihonRuntimeException>().having(
+            (MihonRuntimeException error) => error.code,
+            'code',
+            'PATH_TRAVERSAL',
+          ),
         ),
-      ),
-    );
+      );
 
-    await session.close();
-    await expectLater(
-      session.page(0),
-      throwsA(
-        isA<MihonRuntimeException>().having(
-          (MihonRuntimeException error) => error.code,
-          'code',
-          'SESSION_CLOSED',
+      await session.close();
+      await expectLater(
+        session.page(0),
+        throwsA(
+          isA<MihonRuntimeException>().having(
+            (MihonRuntimeException error) => error.code,
+            'code',
+            'SESSION_CLOSED',
+          ),
         ),
-      ),
-    );
-  });
+      );
+    },
+  );
 
   test('online reader uses memory LRU and preserves the disk cache', () async {
-    final Directory root =
-        await Directory.systemTemp.createTemp('hibiki-mihon-reader-');
+    final Directory root = await Directory.systemTemp.createTemp(
+      'hibiki-mihon-reader-',
+    );
     addTearDown(() async {
       if (await root.exists()) await root.delete(recursive: true);
     });
@@ -126,8 +131,9 @@ void main() {
   });
 
   test('closing a chapter cancels unfinished runtime image requests', () async {
-    final Directory root =
-        await Directory.systemTemp.createTemp('hibiki-mihon-cancel-');
+    final Directory root = await Directory.systemTemp.createTemp(
+      'hibiki-mihon-cancel-',
+    );
     addTearDown(() async {
       if (await root.exists()) await root.delete(recursive: true);
     });
@@ -153,14 +159,10 @@ void main() {
 
   test('decodes the real landscape and portrait page dimensions', () async {
     final ({int width, int height})? landscape = await mangaImageDimensions(
-      Uint8List.fromList(
-        img.encodePng(img.Image(width: 1200, height: 700)),
-      ),
+      Uint8List.fromList(img.encodePng(img.Image(width: 1200, height: 700))),
     );
     final ({int width, int height})? portrait = await mangaImageDimensions(
-      Uint8List.fromList(
-        img.encodePng(img.Image(width: 720, height: 1280)),
-      ),
+      Uint8List.fromList(img.encodePng(img.Image(width: 720, height: 1280))),
     );
 
     expect(landscape, (width: 1200, height: 700));
@@ -168,8 +170,9 @@ void main() {
   });
 
   test('online image requests never exceed four concurrent fetches', () async {
-    final Directory root =
-        await Directory.systemTemp.createTemp('hibiki-mihon-concurrency-');
+    final Directory root = await Directory.systemTemp.createTemp(
+      'hibiki-mihon-concurrency-',
+    );
     addTearDown(() async {
       if (await root.exists()) await root.delete(recursive: true);
     });
@@ -184,19 +187,18 @@ void main() {
       cacheRoot: root,
     ).open();
 
-    await Future.wait<MangaPageBytes>(
-      <Future<MangaPageBytes>>[
-        for (int index = 0; index < 8; index++) session.page(index),
-      ],
-    );
+    await Future.wait<MangaPageBytes>(<Future<MangaPageBytes>>[
+      for (int index = 0; index < 8; index++) session.page(index),
+    ]);
 
     expect(runtime.maximumActive, 4);
     await session.close();
   });
 
   test('cache identities are stable for Unicode source URLs', () async {
-    final Directory root =
-        await Directory.systemTemp.createTemp('hibiki-mihon-unicode-cache-');
+    final Directory root = await Directory.systemTemp.createTemp(
+      'hibiki-mihon-unicode-cache-',
+    );
     addTearDown(() async {
       if (await root.exists()) await root.delete(recursive: true);
     });
@@ -312,7 +314,9 @@ class _CancellableImageRuntime extends Fake
   Future<void> cancelImageRequests(Iterable<String> requestIds) async {
     for (final String requestId in requestIds) {
       cancelledIds.add(requestId);
-      requests.remove(requestId)?.completeError(
+      requests
+          .remove(requestId)
+          ?.completeError(
             const MihonRuntimeException(
               'REQUEST_CANCELLED',
               'Fixture request cancelled',

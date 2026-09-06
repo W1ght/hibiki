@@ -73,7 +73,8 @@ double readerSideSheetWidth(double windowWidth) {
 /// 的按钮，其余收进右端 ⋮ 溢出菜单（「常用固定 + 溢出菜单」，避免图标越加越挤）。
 const double kReaderDesktopHeaderCompactWidth = 760;
 
-bool readerHeaderCompact(double width) => width < kReaderDesktopHeaderCompactWidth;
+bool readerHeaderCompact(double width) =>
+    width < kReaderDesktopHeaderCompactWidth;
 
 /// 顶部工具栏的一个动作：图标 + 文案（溢出菜单里显示）+ 回调。
 class ReaderHeaderAction {
@@ -133,13 +134,13 @@ class ReaderDesktopHeader extends StatelessWidget {
   final double height;
 
   Widget _button(ReaderHeaderAction a) => ReaderDesktopHeaderButton(
-        key: a.key,
-        icon: a.icon,
-        tooltip: a.label,
-        color: textColor,
-        semanticsId: a.semanticsId,
-        onPressed: a.onPressed,
-      );
+    key: a.key,
+    icon: a.icon,
+    tooltip: a.label,
+    color: textColor,
+    semanticsId: a.semanticsId,
+    onPressed: a.onPressed,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -151,79 +152,82 @@ class ReaderDesktopHeader extends StatelessWidget {
     );
     return ExcludeFocus(
       child: ColoredBox(
-      color: backgroundColor,
-      child: SizedBox(
-        height: height,
-        child: LayoutBuilder(
-          builder: (BuildContext context, BoxConstraints constraints) {
-            final bool compact = readerHeaderCompact(constraints.maxWidth);
-            final List<ReaderHeaderAction> overflow = readerHeaderOverflow(
-              compact: compact,
-              leading: leading,
-              trailing: trailing,
-            );
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Row(
-                children: <Widget>[
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      for (final ReaderHeaderAction a in leading)
-                        if (!compact || a.pinned) _button(a),
-                    ],
-                  ),
-                  Expanded(
-                    child: Text(
-                      title,
-                      key: const ValueKey<String>('fushi_desktop_header_title'),
-                      textAlign: TextAlign.center,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: titleStyle,
+        color: backgroundColor,
+        child: SizedBox(
+          height: height,
+          child: LayoutBuilder(
+            builder: (BuildContext context, BoxConstraints constraints) {
+              final bool compact = readerHeaderCompact(constraints.maxWidth);
+              final List<ReaderHeaderAction> overflow = readerHeaderOverflow(
+                compact: compact,
+                leading: leading,
+                trailing: trailing,
+              );
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: Row(
+                  children: <Widget>[
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        for (final ReaderHeaderAction a in leading)
+                          if (!compact || a.pinned) _button(a),
+                      ],
                     ),
-                  ),
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      for (final ReaderHeaderAction a in trailing)
-                        if (!compact || a.pinned) _button(a),
-                      if (overflow.isNotEmpty)
-                        PopupMenuButton<ReaderHeaderAction>(
-                          key: const ValueKey<String>(
-                            'fushi_desktop_header_overflow',
-                          ),
-                          tooltip:
-                              MaterialLocalizations.of(context).moreButtonTooltip,
-                          icon: Icon(Icons.more_vert, color: textColor),
-                          iconSize: 22,
-                          onSelected: (ReaderHeaderAction a) =>
-                              a.onPressed?.call(),
-                          itemBuilder: (BuildContext context) => <
-                              PopupMenuEntry<ReaderHeaderAction>>[
-                            for (final ReaderHeaderAction a in overflow)
-                              PopupMenuItem<ReaderHeaderAction>(
-                                value: a,
-                                enabled: a.onPressed != null,
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: <Widget>[
-                                    Icon(a.icon, size: 20),
-                                    const SizedBox(width: 12),
-                                    Text(a.label),
-                                  ],
-                                ),
-                              ),
-                          ],
+                    Expanded(
+                      child: Text(
+                        title,
+                        key: const ValueKey<String>(
+                          'fushi_desktop_header_title',
                         ),
-                    ],
-                  ),
-                ],
-              ),
-            );
-          },
+                        textAlign: TextAlign.center,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: titleStyle,
+                      ),
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        for (final ReaderHeaderAction a in trailing)
+                          if (!compact || a.pinned) _button(a),
+                        if (overflow.isNotEmpty)
+                          PopupMenuButton<ReaderHeaderAction>(
+                            key: const ValueKey<String>(
+                              'fushi_desktop_header_overflow',
+                            ),
+                            tooltip: MaterialLocalizations.of(
+                              context,
+                            ).moreButtonTooltip,
+                            icon: Icon(Icons.more_vert, color: textColor),
+                            iconSize: 22,
+                            onSelected: (ReaderHeaderAction a) =>
+                                a.onPressed?.call(),
+                            itemBuilder: (BuildContext context) =>
+                                <PopupMenuEntry<ReaderHeaderAction>>[
+                                  for (final ReaderHeaderAction a in overflow)
+                                    PopupMenuItem<ReaderHeaderAction>(
+                                      value: a,
+                                      enabled: a.onPressed != null,
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: <Widget>[
+                                          Icon(a.icon, size: 20),
+                                          const SizedBox(width: 12),
+                                          Text(a.label),
+                                        ],
+                                      ),
+                                    ),
+                                ],
+                          ),
+                      ],
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
         ),
-      ),
       ),
     );
   }

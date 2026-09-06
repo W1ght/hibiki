@@ -160,6 +160,7 @@ class GalIngameLookupController {
   GalLookupGeometryAdmissionMode _geometryAdmissionMode =
       GalLookupGeometryAdmissionMode.disabled;
   bool _geometryAttachedReady = false;
+
   /// 服务层缓存的「已被注入侧 ack 的」允许位。它与 mode/attachedReady 一起
   /// 构成完整 admission 字，使本类可以在不劳烦调用方的情况下独立重发。
   bool _geometryNativeInputAllowed = false;
@@ -1161,14 +1162,8 @@ class GalIngameLookupController {
     // 查词立刻跟上，不存在读到上一次 present 旧值的窗口。量不到（0）时退回画布口径。
     final int clientW = hit.clientW > 0 ? hit.clientW : hit.viewW;
     final int clientH = hit.clientH > 0 ? hit.clientH : hit.viewH;
-    double w = math.min(
-      clientW * _kCardViewportFraction,
-      hit.viewW.toDouble(),
-    );
-    double h = math.min(
-      clientH * _kCardViewportFraction,
-      hit.viewH.toDouble(),
-    );
+    double w = math.min(clientW * _kCardViewportFraction, hit.viewW.toDouble());
+    double h = math.min(clientH * _kCardViewportFraction, hit.viewH.toDouble());
     const int budgetPixels = _kCardBitmapBytes ~/ 4;
     final double area = w * h;
     if (area > budgetPixels) {
@@ -1224,11 +1219,7 @@ class GalIngameLookupController {
   /// `[0, viewH - capH]`），而 cap 高度又常常远超锚侧空间：卡片明明放在下方，夹子
   /// 却把 top 拽到 `viewH - capH` 之上，反推出来就是「above」，edgeY 随之变成视口
   /// 底边——与字形完全脱钩，正是 BUG-2082 要消灭的那段空隙的镜像形态。
-  GalRootPlacement _resolveRootPlacement(
-    GalLookupHit hit,
-    int capW,
-    int capH,
-  ) {
+  GalRootPlacement _resolveRootPlacement(GalLookupHit hit, int capW, int capH) {
     final ({({int x, int y}) anchor, bool showBelow}) solution = _solveAnchor(
       hit,
       capW,

@@ -53,8 +53,9 @@ void main() {
       }),
     );
 
-    final AidokuRepositoryIndex index =
-        await client.fetch('https://example.com/repo');
+    final AidokuRepositoryIndex index = await client.fetch(
+      'https://example.com/repo',
+    );
 
     expect(index.name, 'Example Sources');
     expect(index.sources, hasLength(1));
@@ -124,8 +125,9 @@ void main() {
         return http.Response.bytes(<int>[1, 2, 3, 4], 200);
       }),
     );
-    final Directory root =
-        await Directory.systemTemp.createTemp('fushi-aidoku-download-test-');
+    final Directory root = await Directory.systemTemp.createTemp(
+      'fushi-aidoku-download-test-',
+    );
     addTearDown(() async => root.delete(recursive: true));
     final AidokuRepositorySource source = AidokuRepositorySource(
       id: 'en.example',
@@ -135,8 +137,10 @@ void main() {
       downloadUri: Uri.parse('https://example.com/source.aix'),
     );
 
-    final File downloaded =
-        await client.download(source, File('${root.path}/source.aix'));
+    final File downloaded = await client.download(
+      source,
+      File('${root.path}/source.aix'),
+    );
 
     expect(await downloaded.readAsBytes(), <int>[1, 2, 3, 4]);
     client.close();

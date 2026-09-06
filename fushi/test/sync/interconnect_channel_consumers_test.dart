@@ -42,8 +42,11 @@ void main() {
 
       final List<SyncChannel> channels = await enabledSyncChannelBackends(repo);
 
-      expect(channels.length, 2,
-          reason: '删除传播/比较入口只看第一条 = 互联通道整条被漏掉（BUG-1566）');
+      expect(
+        channels.length,
+        2,
+        reason: '删除传播/比较入口只看第一条 = 互联通道整条被漏掉（BUG-1566）',
+      );
       expect(channels[0].isInterconnect, isFalse);
       expect(channels[0].type, SyncBackendType.googleDrive);
       expect(channels[1].isInterconnect, isTrue);
@@ -59,14 +62,21 @@ void main() {
       // 一刀切）在这里会直接 return，互联对端上的词典永远删不掉。
       await repo.setInterconnectSyncDictionaryEnabled(true);
 
-      final ChannelSyncFlags cloud =
-          await resolveChannelSyncFlags(repo, isInterconnect: false);
-      final ChannelSyncFlags interconnect =
-          await resolveChannelSyncFlags(repo, isInterconnect: true);
+      final ChannelSyncFlags cloud = await resolveChannelSyncFlags(
+        repo,
+        isInterconnect: false,
+      );
+      final ChannelSyncFlags interconnect = await resolveChannelSyncFlags(
+        repo,
+        isInterconnect: true,
+      );
 
       expect(cloud.syncDictionary, isFalse);
-      expect(interconnect.syncDictionary, isTrue,
-          reason: '互联通道必须读 isInterconnectSyncDictionaryEnabled（BUG-988 分通道语义）');
+      expect(
+        interconnect.syncDictionary,
+        isTrue,
+        reason: '互联通道必须读 isInterconnectSyncDictionaryEnabled（BUG-988 分通道语义）',
+      );
     });
 
     // 反向：互联词典关 → 两条通道都不传播删除。云侧不再有开关可开，所以它恒 false；
@@ -77,14 +87,18 @@ void main() {
       await repo.setInterconnectSyncDictionaryEnabled(false);
 
       expect(
-        (await resolveChannelSyncFlags(repo, isInterconnect: false))
-            .syncDictionary,
+        (await resolveChannelSyncFlags(
+          repo,
+          isInterconnect: false,
+        )).syncDictionary,
         isFalse,
         reason: '云通道的词典改成显式上传 / 下载，自动路径恒不碰',
       );
       expect(
-        (await resolveChannelSyncFlags(repo, isInterconnect: true))
-            .syncDictionary,
+        (await resolveChannelSyncFlags(
+          repo,
+          isInterconnect: true,
+        )).syncDictionary,
         isFalse,
         reason: '互联专属开关关着时不得顺手动对端',
       );
@@ -113,14 +127,26 @@ void main() {
         '  void clearDictionaryResultsCache()',
       );
 
-      expect(body, contains('enabledSyncChannelBackends'),
-          reason: '通道枚举必须复用同步真正跑的那一份，不得在这里重抄');
-      expect(body, contains('resolveChannelSyncFlags'),
-          reason: '门控必须按通道解析（互联通道读互联专属开关）');
-      expect(body, isNot(contains('resolveSyncBackend')),
-          reason: '单通道解析 = 互联对端的词典删不掉（BUG-1566 根因A）');
-      expect(body, isNot(contains('repo.isSyncDictionaryEnabled()')),
-          reason: '云备份共享开关不得再对互联通道一刀切');
+      expect(
+        body,
+        contains('enabledSyncChannelBackends'),
+        reason: '通道枚举必须复用同步真正跑的那一份，不得在这里重抄',
+      );
+      expect(
+        body,
+        contains('resolveChannelSyncFlags'),
+        reason: '门控必须按通道解析（互联通道读互联专属开关）',
+      );
+      expect(
+        body,
+        isNot(contains('resolveSyncBackend')),
+        reason: '单通道解析 = 互联对端的词典删不掉（BUG-1566 根因A）',
+      );
+      expect(
+        body,
+        isNot(contains('repo.isSyncDictionaryEnabled()')),
+        reason: '云备份共享开关不得再对互联通道一刀切',
+      );
     });
 
     test('showSyncCompareDialog 遍历所有启用通道取第一条已认证后端', () {
@@ -130,12 +156,21 @@ void main() {
         '/// 同步对比对话框：',
       );
 
-      expect(body, contains('enabledSyncChannelBackends'),
-          reason: '只开互联的用户必须能进比较对话框（BUG-1566 根因B）');
-      expect(body, isNot(contains('resolveSyncBackend')),
-          reason: '单通道解析 = 云后端没配过时恒报「请先设置同步」');
-      expect(body, contains('sync_compare_unavailable'),
-          reason: '一条通道都没认证过时仍应如实报「没配同步」，不得静默打开空对话框');
+      expect(
+        body,
+        contains('enabledSyncChannelBackends'),
+        reason: '只开互联的用户必须能进比较对话框（BUG-1566 根因B）',
+      );
+      expect(
+        body,
+        isNot(contains('resolveSyncBackend')),
+        reason: '单通道解析 = 云后端没配过时恒报「请先设置同步」',
+      );
+      expect(
+        body,
+        contains('sync_compare_unavailable'),
+        reason: '一条通道都没认证过时仍应如实报「没配同步」，不得静默打开空对话框',
+      );
     });
   });
 }

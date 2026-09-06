@@ -142,15 +142,15 @@ class MangaOcrVolumeEvent {
     required this.pagesDone,
     required this.pagesTotal,
     this.acceleration,
-  })  : mangaJsonPath = null,
-        finished = false;
+  }) : mangaJsonPath = null,
+       finished = false;
 
   const MangaOcrVolumeEvent.finished({
     required this.pagesTotal,
     required String this.mangaJsonPath,
     this.acceleration,
-  })  : pagesDone = pagesTotal,
-        finished = true;
+  }) : pagesDone = pagesTotal,
+       finished = true;
 
   final int pagesDone;
   final int pagesTotal;

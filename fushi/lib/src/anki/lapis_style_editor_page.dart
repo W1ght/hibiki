@@ -9,17 +9,16 @@ import 'package:fushi/src/webview/webview_death_guard.dart';
 import 'package:fushi/utils.dart';
 import 'package:fushi_anki/fushi_anki.dart';
 
-typedef LapisPreviewBuilder = Widget Function(
-  BuildContext context,
-  LapisVisualField selectedField,
-  bool showBack,
-);
+typedef LapisPreviewBuilder =
+    Widget Function(
+      BuildContext context,
+      LapisVisualField selectedField,
+      bool showBack,
+    );
 
 /// 选中某个 Anki 字段的占位符时弹选择器；返回 null = 用户取消。
-typedef LapisHandlebarPicker = Future<String?> Function(
-  String ankiField,
-  String currentValue,
-);
+typedef LapisHandlebarPicker =
+    Future<String?> Function(String ankiField, String currentValue);
 
 /// 可视化编辑器的保存结果。
 ///
@@ -147,8 +146,9 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
   @override
   void initState() {
     super.initState();
-    final LapisVisualStyleSheet sheet =
-        splitLapisVisualStyleSheet(widget.initialCustomCss);
+    final LapisVisualStyleSheet sheet = splitLapisVisualStyleSheet(
+      widget.initialCustomCss,
+    );
     _rules = Map<LapisVisualField, LapisVisualRule>.of(sheet.rules);
     _layout = sheet.layout;
     _blocks = List<LapisCustomBlock>.of(widget.initialBlocks);
@@ -169,12 +169,12 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
   }
 
   String _composeCustomCss() => composeLapisVisualStyleSheet(
-        freeformCss: _advancedCssController.text,
-        rules: _rules,
-        layout: _layout,
-        extraManagedCss: buildLapisBlocksCss(_blocks),
-        managedFirst: _managedFirst,
-      );
+    freeformCss: _advancedCssController.text,
+    rules: _rules,
+    layout: _layout,
+    extraManagedCss: buildLapisBlocksCss(_blocks),
+    managedFirst: _managedFirst,
+  );
 
   bool get _isDirty =>
       _composeCustomCss() != _initialComposedCss ||
@@ -184,8 +184,9 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
   /// 当前选中的自定义区域；没选区域时为 null。
   LapisCustomBlock? get _selectedBlock => _selectedBlockId == null
       ? null
-      : _blocks
-          .firstWhereOrNull((LapisCustomBlock b) => b.id == _selectedBlockId);
+      : _blocks.firstWhereOrNull(
+          (LapisCustomBlock b) => b.id == _selectedBlockId,
+        );
 
   /// 字段当前占位符：本次改过的优先，否则取进页面时的值。
   String _mappingFor(String ankiField) =>
@@ -224,8 +225,10 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
       if (blockId != null) {
         // 区域样式内嵌在区域自己身上——删区域时样式一起没，不留孤儿规则。
         _blocks = _blocks
-            .map((LapisCustomBlock b) =>
-                b.id == blockId ? b.copyWith(rule: rule) : b)
+            .map(
+              (LapisCustomBlock b) =>
+                  b.id == blockId ? b.copyWith(rule: rule) : b,
+            )
             .toList();
       } else if (rule.isDefault) {
         _rules.remove(_selectedField);
@@ -272,8 +275,9 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
 
   void _updateBlock(String id, LapisCustomBlock Function(LapisCustomBlock) f) {
     setState(() {
-      _blocks =
-          _blocks.map((LapisCustomBlock b) => b.id == id ? f(b) : b).toList();
+      _blocks = _blocks
+          .map((LapisCustomBlock b) => b.id == id ? f(b) : b)
+          .toList();
     });
     _refreshPreview();
   }
@@ -350,12 +354,12 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
   }
 
   void _save() => _pop(
-        LapisVisualEditorResult(
-          customCss: _composeCustomCss(),
-          fieldMappings: Map<String, String>.of(_mappingEdits),
-          blocks: List<LapisCustomBlock>.of(_blocks),
-        ),
-      );
+    LapisVisualEditorResult(
+      customCss: _composeCustomCss(),
+      fieldMappings: Map<String, String>.of(_mappingEdits),
+      blocks: List<LapisCustomBlock>.of(_blocks),
+    ),
+  );
 
   void _pop([LapisVisualEditorResult? result]) {
     if (!mounted) return;
@@ -473,20 +477,17 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
           borderRadius: tokens.radii.cardRadius,
           border: Border.all(color: tokens.surfaces.outline),
         ),
-        child: ClipRRect(
-          borderRadius: tokens.radii.cardRadius,
-          child: preview,
-        ),
+        child: ClipRRect(borderRadius: tokens.radii.cardRadius, child: preview),
       ),
     );
   }
 
   /// 预览注入的完整样式 = 用户自己的基线 + 本次客制化。
   String _composePreviewCss() => composeLapisCssOnBase(
-        baseCss: widget.baseCss ?? LapisNoteType.template.css,
-        fontScalePercent: widget.fontScalePercent,
-        customCss: _composeCustomCss(),
-      );
+    baseCss: widget.baseCss ?? LapisNoteType.template.css,
+    fontScalePercent: widget.fontScalePercent,
+    customCss: _composeCustomCss(),
+  );
 
   Widget _buildWebPreview() {
     final String css = _composePreviewCss();
@@ -542,10 +543,12 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
       // 非 null 本身就是救命动作：Java 侧据此 `return true`，不再连坐杀 app。
       onRenderProcessGone:
           (InAppWebViewController _, RenderProcessGoneDetail detail) =>
-              unawaited(_previewDeathGuard.handleDeath(
-        didCrash: detail.didCrash,
-        rendererPriorityAtExit: detail.rendererPriorityAtExit,
-      )),
+              unawaited(
+                _previewDeathGuard.handleDeath(
+                  didCrash: detail.didCrash,
+                  rendererPriorityAtExit: detail.rendererPriorityAtExit,
+                ),
+              ),
     );
   }
 
@@ -606,11 +609,11 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
                   children: <Widget>[
                     for (final LapisVisualField field
                         in const <LapisVisualField>[
-                      LapisVisualField.definitionInfo,
-                      LapisVisualField.dictionaryEntry,
-                      LapisVisualField.dictionaryName,
-                      LapisVisualField.definitionExample,
-                    ])
+                          LapisVisualField.definitionInfo,
+                          LapisVisualField.dictionaryEntry,
+                          LapisVisualField.dictionaryName,
+                          LapisVisualField.definitionExample,
+                        ])
                       FushiSelectableChip(
                         label: _fieldLabel(field),
                         selected: field == _selectedField,
@@ -627,10 +630,7 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
           Row(
             children: <Widget>[
               Expanded(
-                child: Text(
-                  _selectedTargetLabel,
-                  style: tokens.type.listTitle,
-                ),
+                child: Text(_selectedTargetLabel, style: tokens.type.listTitle),
               ),
               TextButton(
                 onPressed: rule.isDefault
@@ -652,16 +652,12 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
                     color: tokens.surfaces.onVariant,
                   ),
                   SizedBox(width: tokens.spacing.gap),
-                  Expanded(
-                    child: Text(note, style: tokens.type.listSubtitle),
-                  ),
+                  Expanded(child: Text(note, style: tokens.type.listSubtitle)),
                 ],
               ),
             ),
           Text(
-            t.anki_lapis_visual_font_size(
-              percent: rule.fontScalePercent,
-            ),
+            t.anki_lapis_visual_font_size(percent: rule.fontScalePercent),
             style: tokens.type.listSubtitle,
           ),
           Slider(
@@ -707,10 +703,7 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
             ),
           ),
           SizedBox(height: tokens.spacing.gap),
-          Text(
-            t.anki_lapis_visual_alignment,
-            style: tokens.type.listSubtitle,
-          ),
+          Text(t.anki_lapis_visual_alignment, style: tokens.type.listSubtitle),
           SizedBox(height: tokens.spacing.gap),
           SegmentedButton<LapisVisualTextAlign?>(
             showSelectedIcon: false,
@@ -734,9 +727,7 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
             ],
             selected: <LapisVisualTextAlign?>{rule.alignment},
             onSelectionChanged: (Set<LapisVisualTextAlign?> value) =>
-                _updateSelectedRule(
-              rule.copyWith(alignment: value.first),
-            ),
+                _updateSelectedRule(rule.copyWith(alignment: value.first)),
           ),
           SizedBox(height: tokens.spacing.card),
           _buildColorRow(
@@ -773,8 +764,9 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
                   onChanged: (int? value) => _updateSelectedRule(
                     rule.copyWith(
                       borderWidthPx: value,
-                      borderColorHex:
-                          value == null ? null : rule.borderColorHex,
+                      borderColorHex: value == null
+                          ? null
+                          : rule.borderColorHex,
                     ),
                   ),
                 ),
@@ -795,27 +787,24 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
                   value: rule.borderRadiusPx,
                   enabledValue: 8,
                   max: 32,
-                  onChanged: (int? value) => _updateSelectedRule(
-                    rule.copyWith(borderRadiusPx: value),
-                  ),
+                  onChanged: (int? value) =>
+                      _updateSelectedRule(rule.copyWith(borderRadiusPx: value)),
                 ),
                 _buildOptionalSlider(
                   title: t.anki_lapis_visual_padding,
                   value: rule.paddingPx,
                   enabledValue: 12,
                   max: 32,
-                  onChanged: (int? value) => _updateSelectedRule(
-                    rule.copyWith(paddingPx: value),
-                  ),
+                  onChanged: (int? value) =>
+                      _updateSelectedRule(rule.copyWith(paddingPx: value)),
                 ),
                 _buildOptionalSlider(
                   title: t.anki_lapis_visual_margin,
                   value: rule.marginBlockPx,
                   enabledValue: 8,
                   max: 32,
-                  onChanged: (int? value) => _updateSelectedRule(
-                    rule.copyWith(marginBlockPx: value),
-                  ),
+                  onChanged: (int? value) =>
+                      _updateSelectedRule(rule.copyWith(marginBlockPx: value)),
                 ),
               ],
             ),
@@ -833,10 +822,9 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
                 controller: _advancedCssController,
                 minLines: 8,
                 maxLines: 16,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium
-                    ?.copyWith(fontFamily: 'monospace'),
+                style: Theme.of(
+                  context,
+                ).textTheme.bodyMedium?.copyWith(fontFamily: 'monospace'),
                 decoration: const InputDecoration(
                   hintText: '.front-vocab { color: #8ab4f8; }',
                 ),
@@ -850,37 +838,36 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
   }
 
   String _fieldLabel(LapisVisualField field) => switch (field) {
-        LapisVisualField.expression => t.anki_lapis_visual_field_expression,
-        LapisVisualField.reading => t.anki_lapis_visual_field_reading,
-        LapisVisualField.sentence => t.anki_lapis_visual_field_sentence,
-        LapisVisualField.definitionInfo =>
-          t.anki_lapis_visual_field_definition_info,
-        LapisVisualField.definitionBox =>
-          t.anki_lapis_visual_field_definition_box,
-        LapisVisualField.definitionContent =>
-          t.anki_lapis_visual_field_definition_content,
-        LapisVisualField.selectedDefinition =>
-          t.anki_lapis_visual_field_selected_definition,
-        LapisVisualField.primaryDefinition =>
-          t.anki_lapis_visual_field_primary_definition,
-        LapisVisualField.glossaries => t.anki_lapis_visual_field_glossaries,
-        LapisVisualField.dictionaryEntry =>
-          t.anki_lapis_visual_field_dictionary_entry,
-        LapisVisualField.dictionaryName =>
-          t.anki_lapis_visual_field_dictionary_name,
-        LapisVisualField.definitionExample =>
-          t.anki_lapis_visual_field_definition_example,
-      };
+    LapisVisualField.expression => t.anki_lapis_visual_field_expression,
+    LapisVisualField.reading => t.anki_lapis_visual_field_reading,
+    LapisVisualField.sentence => t.anki_lapis_visual_field_sentence,
+    LapisVisualField.definitionInfo =>
+      t.anki_lapis_visual_field_definition_info,
+    LapisVisualField.definitionBox => t.anki_lapis_visual_field_definition_box,
+    LapisVisualField.definitionContent =>
+      t.anki_lapis_visual_field_definition_content,
+    LapisVisualField.selectedDefinition =>
+      t.anki_lapis_visual_field_selected_definition,
+    LapisVisualField.primaryDefinition =>
+      t.anki_lapis_visual_field_primary_definition,
+    LapisVisualField.glossaries => t.anki_lapis_visual_field_glossaries,
+    LapisVisualField.dictionaryEntry =>
+      t.anki_lapis_visual_field_dictionary_entry,
+    LapisVisualField.dictionaryName =>
+      t.anki_lapis_visual_field_dictionary_name,
+    LapisVisualField.definitionExample =>
+      t.anki_lapis_visual_field_definition_example,
+  };
 
   /// 字段在真卡上的可见性/结构限制。预览是理想卡，真卡不一定长这样——把差异
   /// 说清楚，别让用户以为改了没生效是 bug。
   String? _fieldNote(LapisVisualField field) => switch (field) {
-        LapisVisualField.definitionInfo =>
-          t.anki_lapis_visual_field_definition_info_note,
-        LapisVisualField.dictionaryName =>
-          t.anki_lapis_visual_field_dictionary_name_note,
-        _ => null,
-      };
+    LapisVisualField.definitionInfo =>
+      t.anki_lapis_visual_field_definition_info_note,
+    LapisVisualField.dictionaryName =>
+      t.anki_lapis_visual_field_dictionary_name_note,
+    _ => null,
+  };
 
   /// 当前编辑目标的面包屑。
   List<String> get _selectedTargetPath {
@@ -911,10 +898,7 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
         _fieldLabel(field),
       ];
     }
-    return <String>[
-      t.anki_lapis_visual_target_definition,
-      _fieldLabel(field),
-    ];
+    return <String>[t.anki_lapis_visual_target_definition, _fieldLabel(field)];
   }
 
   bool _isDetailedDefinitionTarget(LapisVisualField field) =>
@@ -929,26 +913,25 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
     required FushiDesignTokens tokens,
     required String label,
     required List<LapisVisualField> fields,
-  }) =>
-      Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+  }) => Column(
+    crossAxisAlignment: CrossAxisAlignment.stretch,
+    children: <Widget>[
+      Text(label, style: tokens.type.listSubtitle),
+      SizedBox(height: tokens.spacing.gap),
+      Wrap(
+        spacing: tokens.spacing.gap,
+        runSpacing: tokens.spacing.gap,
         children: <Widget>[
-          Text(label, style: tokens.type.listSubtitle),
-          SizedBox(height: tokens.spacing.gap),
-          Wrap(
-            spacing: tokens.spacing.gap,
-            runSpacing: tokens.spacing.gap,
-            children: <Widget>[
-              for (final LapisVisualField field in fields)
-                FushiSelectableChip(
-                  label: _fieldLabel(field),
-                  selected: field == _selectedField,
-                  onSelected: (_) => _selectField(field),
-                ),
-            ],
-          ),
+          for (final LapisVisualField field in fields)
+            FushiSelectableChip(
+              label: _fieldLabel(field),
+              selected: field == _selectedField,
+              onSelected: (_) => _selectField(field),
+            ),
         ],
-      );
+      ),
+    ],
+  );
 
   /// 当前编辑目标由哪些 Anki 字段填充。
   ///
@@ -979,17 +962,14 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Icon(
-            Icons.edit_outlined,
-            size: 16,
-            color: colors.onPrimaryContainer,
-          ),
+          Icon(Icons.edit_outlined, size: 16, color: colors.onPrimaryContainer),
           SizedBox(width: tokens.spacing.gap),
           Expanded(
             child: RichText(
               text: TextSpan(
-                style: tokens.type.listSubtitle
-                    .copyWith(color: colors.onPrimaryContainer),
+                style: tokens.type.listSubtitle.copyWith(
+                  color: colors.onPrimaryContainer,
+                ),
                 children: <InlineSpan>[
                   TextSpan(text: '${t.anki_lapis_visual_editing_now}  '),
                   TextSpan(
@@ -1013,21 +993,19 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
   String get _selectedTargetLabel {
     final LapisCustomBlock? block = _selectedBlock;
     if (block == null) return _fieldLabel(_selectedField);
-    return t.anki_lapis_visual_block_name(
-      index: _blocks.indexOf(block) + 1,
-    );
+    return t.anki_lapis_visual_block_name(index: _blocks.indexOf(block) + 1);
   }
 
   String _blockAnchorLabel(LapisBlockAnchor anchor) => switch (anchor) {
-        LapisBlockAnchor.top => t.anki_lapis_visual_block_anchor_top,
-        LapisBlockAnchor.aboveSentence =>
-          t.anki_lapis_visual_block_anchor_above_sentence,
-        LapisBlockAnchor.aboveDefinition =>
-          t.anki_lapis_visual_block_anchor_above_definition,
-        LapisBlockAnchor.belowDefinition =>
-          t.anki_lapis_visual_block_anchor_below_definition,
-        LapisBlockAnchor.bottom => t.anki_lapis_visual_block_anchor_bottom,
-      };
+    LapisBlockAnchor.top => t.anki_lapis_visual_block_anchor_top,
+    LapisBlockAnchor.aboveSentence =>
+      t.anki_lapis_visual_block_anchor_above_sentence,
+    LapisBlockAnchor.aboveDefinition =>
+      t.anki_lapis_visual_block_anchor_above_definition,
+    LapisBlockAnchor.belowDefinition =>
+      t.anki_lapis_visual_block_anchor_below_definition,
+    LapisBlockAnchor.bottom => t.anki_lapis_visual_block_anchor_bottom,
+  };
 
   /// 自定义区域：列表 + 新建 + （选中时）位置与字段编辑。
   ///
@@ -1050,15 +1028,13 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
             selected: block.id == _selectedBlockId,
             leading: const Icon(Icons.crop_free_outlined),
             title: Text(
-              t.anki_lapis_visual_block_name(
-                index: _blocks.indexOf(block) + 1,
-              ),
+              t.anki_lapis_visual_block_name(index: _blocks.indexOf(block) + 1),
             ),
             subtitle: Text(
               block.fields.isEmpty
                   ? t.anki_lapis_visual_block_no_fields
                   : '${_blockAnchorLabel(block.anchor)} · '
-                      '${block.fields.join(' / ')}',
+                        '${block.fields.join(' / ')}',
             ),
             trailing: IconButton(
               icon: const Icon(Icons.delete_outline),
@@ -1092,8 +1068,9 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
                 ),
             ],
             onSelected: (String? value) {
-              final LapisBlockAnchor? anchor =
-                  value == null ? null : LapisBlockAnchor.fromWireName(value);
+              final LapisBlockAnchor? anchor = value == null
+                  ? null
+                  : LapisBlockAnchor.fromWireName(value);
               if (anchor == null) return;
               _updateBlock(
                 selected.id,
@@ -1136,8 +1113,8 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
                         (LapisCustomBlock b) => b.copyWith(
                           fields: b.fields.contains(field)
                               ? (b.fields
-                                  .where((String f) => f != field)
-                                  .toList())
+                                    .where((String f) => f != field)
+                                    .toList())
                               : <String>[...b.fields, field],
                         ),
                       ),
@@ -1153,90 +1130,89 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
   /// 卡片区块位置。三项都直接映射 vendored Lapis 自己的 user settings 变量
   /// （见 [LapisVisualLayout]）——空值 = 不覆写 = 保持出厂布局。
   Widget _buildLayoutSection(FushiDesignTokens tokens) => ExpansionTile(
-        tilePadding: EdgeInsets.zero,
-        // top 不能是 0：outline 输入框的浮动 label 竖直居中压在顶边框线上，约半个
-        // 字高（实测 5.5px）画在自身 RenderBox **外面**，而 ExpansionTile 用
-        // ClipRect + Align(heightFactor) 做展开动画，裁剪线正压在第一个子控件顶
-        // 边——首个 `_buildLayoutPicker` 的「例句位置」会被削掉上半截（BUG-1677）。
-        childrenPadding: EdgeInsets.only(
-          top: tokens.spacing.gap,
-          bottom: tokens.spacing.gap,
-        ),
-        leading: const Icon(Icons.dashboard_customize_outlined),
-        title: Text(t.anki_lapis_visual_layout),
-        subtitle: Text(t.anki_lapis_visual_layout_hint),
-        initiallyExpanded: !_layout.isDefault,
-        children: <Widget>[
-          _buildLayoutPicker(
-            label: t.anki_lapis_visual_layout_sentence,
-            selected: _layout.sentencePosition?.cssValue ?? '',
-            options: <MapEntry<String, String>>[
-              MapEntry<String, String>(
-                LapisSentencePosition.above.cssValue,
-                t.anki_lapis_visual_layout_sentence_above,
-              ),
-              MapEntry<String, String>(
-                LapisSentencePosition.below.cssValue,
-                t.anki_lapis_visual_layout_sentence_below,
-              ),
-            ],
-            onSelected: (String value) => _updateLayout(
-              _layout.copyWith(
-                sentencePosition: LapisSentencePosition.fromCssValue(value),
-              ),
-            ),
+    tilePadding: EdgeInsets.zero,
+    // top 不能是 0：outline 输入框的浮动 label 竖直居中压在顶边框线上，约半个
+    // 字高（实测 5.5px）画在自身 RenderBox **外面**，而 ExpansionTile 用
+    // ClipRect + Align(heightFactor) 做展开动画，裁剪线正压在第一个子控件顶
+    // 边——首个 `_buildLayoutPicker` 的「例句位置」会被削掉上半截（BUG-1677）。
+    childrenPadding: EdgeInsets.only(
+      top: tokens.spacing.gap,
+      bottom: tokens.spacing.gap,
+    ),
+    leading: const Icon(Icons.dashboard_customize_outlined),
+    title: Text(t.anki_lapis_visual_layout),
+    subtitle: Text(t.anki_lapis_visual_layout_hint),
+    initiallyExpanded: !_layout.isDefault,
+    children: <Widget>[
+      _buildLayoutPicker(
+        label: t.anki_lapis_visual_layout_sentence,
+        selected: _layout.sentencePosition?.cssValue ?? '',
+        options: <MapEntry<String, String>>[
+          MapEntry<String, String>(
+            LapisSentencePosition.above.cssValue,
+            t.anki_lapis_visual_layout_sentence_above,
           ),
-          SizedBox(height: tokens.spacing.gap),
-          _buildLayoutPicker(
-            label: t.anki_lapis_visual_layout_picture,
-            selected: _layout.picturePosition?.cssValue ?? '',
-            options: <MapEntry<String, String>>[
-              MapEntry<String, String>(
-                LapisPicturePosition.right.cssValue,
-                t.anki_lapis_visual_layout_picture_right,
-              ),
-              MapEntry<String, String>(
-                LapisPicturePosition.left.cssValue,
-                t.anki_lapis_visual_layout_picture_left,
-              ),
-              MapEntry<String, String>(
-                LapisPicturePosition.alt.cssValue,
-                t.anki_lapis_visual_layout_picture_alt,
-              ),
-            ],
-            onSelected: (String value) => _updateLayout(
-              _layout.copyWith(
-                picturePosition: LapisPicturePosition.fromCssValue(value),
-              ),
-            ),
-          ),
-          SizedBox(height: tokens.spacing.gap),
-          _buildLayoutPicker(
-            label: t.anki_lapis_visual_layout_audio,
-            selected: _layout.audioButtonsPosition?.cssValue ?? '',
-            options: <MapEntry<String, String>>[
-              MapEntry<String, String>(
-                LapisAudioButtonsPosition.header.cssValue,
-                t.anki_lapis_visual_layout_audio_header,
-              ),
-              MapEntry<String, String>(
-                LapisAudioButtonsPosition.fixed.cssValue,
-                t.anki_lapis_visual_layout_audio_fixed,
-              ),
-              MapEntry<String, String>(
-                LapisAudioButtonsPosition.alt.cssValue,
-                t.anki_lapis_visual_layout_audio_alt,
-              ),
-            ],
-            onSelected: (String value) => _updateLayout(
-              _layout.copyWith(
-                audioButtonsPosition:
-                    LapisAudioButtonsPosition.fromCssValue(value),
-              ),
-            ),
+          MapEntry<String, String>(
+            LapisSentencePosition.below.cssValue,
+            t.anki_lapis_visual_layout_sentence_below,
           ),
         ],
-      );
+        onSelected: (String value) => _updateLayout(
+          _layout.copyWith(
+            sentencePosition: LapisSentencePosition.fromCssValue(value),
+          ),
+        ),
+      ),
+      SizedBox(height: tokens.spacing.gap),
+      _buildLayoutPicker(
+        label: t.anki_lapis_visual_layout_picture,
+        selected: _layout.picturePosition?.cssValue ?? '',
+        options: <MapEntry<String, String>>[
+          MapEntry<String, String>(
+            LapisPicturePosition.right.cssValue,
+            t.anki_lapis_visual_layout_picture_right,
+          ),
+          MapEntry<String, String>(
+            LapisPicturePosition.left.cssValue,
+            t.anki_lapis_visual_layout_picture_left,
+          ),
+          MapEntry<String, String>(
+            LapisPicturePosition.alt.cssValue,
+            t.anki_lapis_visual_layout_picture_alt,
+          ),
+        ],
+        onSelected: (String value) => _updateLayout(
+          _layout.copyWith(
+            picturePosition: LapisPicturePosition.fromCssValue(value),
+          ),
+        ),
+      ),
+      SizedBox(height: tokens.spacing.gap),
+      _buildLayoutPicker(
+        label: t.anki_lapis_visual_layout_audio,
+        selected: _layout.audioButtonsPosition?.cssValue ?? '',
+        options: <MapEntry<String, String>>[
+          MapEntry<String, String>(
+            LapisAudioButtonsPosition.header.cssValue,
+            t.anki_lapis_visual_layout_audio_header,
+          ),
+          MapEntry<String, String>(
+            LapisAudioButtonsPosition.fixed.cssValue,
+            t.anki_lapis_visual_layout_audio_fixed,
+          ),
+          MapEntry<String, String>(
+            LapisAudioButtonsPosition.alt.cssValue,
+            t.anki_lapis_visual_layout_audio_alt,
+          ),
+        ],
+        onSelected: (String value) => _updateLayout(
+          _layout.copyWith(
+            audioButtonsPosition: LapisAudioButtonsPosition.fromCssValue(value),
+          ),
+        ),
+      ),
+    ],
+  );
 
   /// 位置下拉。空串是「默认」的哨兵值——`DropdownMenu` 的 `initialSelection`
   /// 传 null 会显示成空输入框（看不出当前是默认还是没选），与「行高」同一处理。
@@ -1245,25 +1221,18 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
     required String selected,
     required List<MapEntry<String, String>> options,
     required ValueChanged<String> onSelected,
-  }) =>
-      DropdownMenu<String>(
-        key: ValueKey<String>('lapis-layout-$label-$selected'),
-        expandedInsets: EdgeInsets.zero,
-        initialSelection: selected,
-        label: Text(label),
-        dropdownMenuEntries: <DropdownMenuEntry<String>>[
-          DropdownMenuEntry<String>(
-            value: '',
-            label: t.anki_lapis_visual_default,
-          ),
-          for (final MapEntry<String, String> option in options)
-            DropdownMenuEntry<String>(
-              value: option.key,
-              label: option.value,
-            ),
-        ],
-        onSelected: (String? value) => onSelected(value ?? ''),
-      );
+  }) => DropdownMenu<String>(
+    key: ValueKey<String>('lapis-layout-$label-$selected'),
+    expandedInsets: EdgeInsets.zero,
+    initialSelection: selected,
+    label: Text(label),
+    dropdownMenuEntries: <DropdownMenuEntry<String>>[
+      DropdownMenuEntry<String>(value: '', label: t.anki_lapis_visual_default),
+      for (final MapEntry<String, String> option in options)
+        DropdownMenuEntry<String>(value: option.key, label: option.value),
+    ],
+    onSelected: (String? value) => onSelected(value ?? ''),
+  );
 
   /// 选中区域由哪些 Anki 字段填充。只列**当前卡型真有**的字段：用户选的不是
   /// Lapis 时这里自然空掉，不会把 Lapis 的字段名写到别的卡型头上。
@@ -1272,8 +1241,9 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
       return const SizedBox.shrink();
     }
     final List<String> sources = _selectedTargetSources;
-    final List<String> present =
-        sources.where(widget.noteTypeFields.contains).toList();
+    final List<String> present = sources
+        .where(widget.noteTypeFields.contains)
+        .toList();
     // 有来源字段、但当前卡型一个都没有 = 用户选的不是 Lapis 系卡型。整块收起，
     // 而不是拿「这块没有字段」的说法糊过去——那是另一回事（下面那条分支）。
     if (sources.isNotEmpty && present.isEmpty) return const SizedBox.shrink();
@@ -1290,8 +1260,8 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
               // 天生没有字段；自定义区域是用户还没挑。用同一句话糊过去，
               // 用户会以为区域坏了。
               : _selectedBlockId != null
-                  ? t.anki_lapis_visual_block_no_fields
-                  : t.anki_lapis_visual_mapping_none,
+              ? t.anki_lapis_visual_block_no_fields
+              : t.anki_lapis_visual_mapping_none,
           style: tokens.type.listSubtitle,
         ),
         for (final String ankiField in present)
@@ -1414,27 +1384,25 @@ class _LapisStyleEditorPageState extends State<LapisStyleEditorPage> {
     required int enabledValue,
     required int max,
     required ValueChanged<int?> onChanged,
-  }) =>
-      Column(
-        children: <Widget>[
-          SwitchListTile.adaptive(
-            contentPadding: EdgeInsets.zero,
-            title: Text(value == null ? title : '$title · ${value}px'),
-            value: value != null,
-            onChanged: (bool enabled) =>
-                onChanged(enabled ? enabledValue : null),
-          ),
-          if (value != null)
-            Slider(
-              value: value.toDouble(),
-              min: 0,
-              max: max.toDouble(),
-              divisions: max,
-              label: '${value}px',
-              onChanged: (double next) => onChanged(next.round()),
-            ),
-        ],
-      );
+  }) => Column(
+    children: <Widget>[
+      SwitchListTile.adaptive(
+        contentPadding: EdgeInsets.zero,
+        title: Text(value == null ? title : '$title · ${value}px'),
+        value: value != null,
+        onChanged: (bool enabled) => onChanged(enabled ? enabledValue : null),
+      ),
+      if (value != null)
+        Slider(
+          value: value.toDouble(),
+          min: 0,
+          max: max.toDouble(),
+          divisions: max,
+          label: '${value}px',
+          onChanged: (double next) => onChanged(next.round()),
+        ),
+    ],
+  );
 }
 
 class _LapisColorChoice extends StatelessWidget {
@@ -1484,11 +1452,11 @@ class _LapisColorChoice extends StatelessWidget {
             child: switch ((showPaletteIcon, selected, colorHex)) {
               (true, _, _) => const Icon(Icons.palette_outlined, size: 20),
               (_, true, _) => Icon(
-                  Icons.check,
-                  color: color.computeLuminance() > 0.55
-                      ? colors.onSurface
-                      : colors.surface,
-                ),
+                Icons.check,
+                color: color.computeLuminance() > 0.55
+                    ? colors.onSurface
+                    : colors.surface,
+              ),
               (_, _, null) => const Icon(Icons.format_color_reset_outlined),
               _ => null,
             },
@@ -1506,5 +1474,6 @@ Color lapisColorFromHex(String colorHex) =>
 /// [Color] → `#RRGGBB`（大写）。大写是硬要求：[LapisVisualRule.fromJson] 回读时
 /// 统一大写，取色器若吐小写，同一个颜色在「选中判定」与「是否 dirty」上会被判成
 /// 两个不同值。
-String lapisHexFromColor(Color color) => '#'
+String lapisHexFromColor(Color color) =>
+    '#'
     '${(color.toARGB32() & 0xFFFFFF).toRadixString(16).padLeft(6, '0').toUpperCase()}';

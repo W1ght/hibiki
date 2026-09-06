@@ -249,8 +249,9 @@ class EpubSrtMatcher {
     );
     for (int si = 0; si < sections.length; si++) {
       final int s0 = idx.sectionNormStarts[si];
-      final int s1 =
-          (si + 1 < sections.length) ? idx.sectionNormStarts[si + 1] : totalLen;
+      final int s1 = (si + 1 < sections.length)
+          ? idx.sectionNormStarts[si + 1]
+          : totalLen;
       debugPrint(
         '[sentenceAudioHighlight] matcher.section[$si] href="${sections[si].href}" '
         'normStart=$s0 normLen=${s1 - s0}',
@@ -518,7 +519,7 @@ class EpubSrtMatcher {
         final int outKey = tn == 1
             ? haystack.codeUnitAt(outIdx)
             : (haystack.codeUnitAt(outIdx) << 16) |
-                haystack.codeUnitAt(outIdx + 1);
+                  haystack.codeUnitAt(outIdx + 1);
         final int outOldCount = cGrams[outKey]!;
         final int outNCount = effectiveNGrams[outKey] ?? 0;
         // If this gram was contributing to matches, check if removing reduces it.
@@ -536,7 +537,7 @@ class EpubSrtMatcher {
         final int inKey = tn == 1
             ? haystack.codeUnitAt(inIdx)
             : (haystack.codeUnitAt(inIdx) << 16) |
-                haystack.codeUnitAt(inIdx + 1);
+                  haystack.codeUnitAt(inIdx + 1);
         final int inOldCount = cGrams[inKey] ?? 0;
         final int inNCount = effectiveNGrams[inKey] ?? 0;
         // If adding this gram brings the candidate count to within needle range.
@@ -578,8 +579,9 @@ class EpubSrtMatcher {
     double similarityThreshold, [
     List<String>? preNormCueTexts,
   ]) {
-    final int limit =
-        cues.length < defaultProbeCount ? cues.length : defaultProbeCount;
+    final int limit = cues.length < defaultProbeCount
+        ? cues.length
+        : defaultProbeCount;
     // 每条 cue 的候选起点（去重）。
     final List<List<int>> perCue = <List<int>>[];
     int totalCueLen = 0;

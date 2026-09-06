@@ -16,9 +16,9 @@ class AniListMangaDiscoveryProvider implements MangaDiscoveryProvider {
     http.Client? client,
     VideoMetadataHttpClient? transport,
     this.endpoint = 'https://graphql.anilist.co',
-  })  : assert(client == null || transport == null),
-        _transport = transport ?? VideoMetadataHttpClient(client: client),
-        _ownsTransport = transport == null;
+  }) : assert(client == null || transport == null),
+       _transport = transport ?? VideoMetadataHttpClient(client: client),
+       _ownsTransport = transport == null;
 
   final VideoMetadataHttpClient _transport;
   final bool _ownsTransport;
@@ -65,11 +65,11 @@ fragment entry on Media {
 
   static const Map<MangaDiscoveryFeed, String> _feedAliases =
       <MangaDiscoveryFeed, String>{
-    MangaDiscoveryFeed.trending: 'trending',
-    MangaDiscoveryFeed.popular: 'popular',
-    MangaDiscoveryFeed.topRated: 'topRated',
-    MangaDiscoveryFeed.latestFinished: 'latestFinished',
-  };
+        MangaDiscoveryFeed.trending: 'trending',
+        MangaDiscoveryFeed.popular: 'popular',
+        MangaDiscoveryFeed.topRated: 'topRated',
+        MangaDiscoveryFeed.latestFinished: 'latestFinished',
+      };
 
   @override
   Future<MangaDiscoverySnapshot> fetchSnapshot({int perPage = 20}) async {
@@ -83,13 +83,14 @@ fragment entry on Media {
       operation: 'AniList manga discovery',
       cacheKey: 'anilist:manga-discovery:$perPage',
     );
-    final Map<String, Object?> payload =
-        response.decodeJsonObject(operation: 'AniList manga discovery');
+    final Map<String, Object?> payload = response.decodeJsonObject(
+      operation: 'AniList manga discovery',
+    );
     final List<Object?> errors = metadataList(payload['errors']);
     if (errors.isNotEmpty) {
       final String message =
           metadataString(metadataObject(errors.first)?['message']) ??
-              '${errors.first}';
+          '${errors.first}';
       throw VideoMetadataNetworkException(
         'AniList manga discovery GraphQL error: $message',
       );

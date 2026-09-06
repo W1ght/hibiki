@@ -71,8 +71,11 @@ void main() {
         reason: '粗滚轮应在多帧内逐步到达目标，流畅由这段补间给，不由缩短距离给',
       );
     } else {
-      expect(controller.offset, 120,
-          reason: 'macOS/移动端保持平台原生 pointer delta，单帧到位');
+      expect(
+        controller.offset,
+        120,
+        reason: 'macOS/移动端保持平台原生 pointer delta，单帧到位',
+      );
     }
     await tester.pumpAndSettle();
     expect(controller.offset, 120);
@@ -91,8 +94,7 @@ void main() {
     expect(controller.offset, 132);
   });
 
-  testWidgets('粗滚轮手势里的小尾帧不得走同步路径掐断动画',
-      (WidgetTester tester) async {
+  testWidgets('粗滚轮手势里的小尾帧不得走同步路径掐断动画', (WidgetTester tester) async {
     final FushiScrollController controller = FushiScrollController();
     addTearDown(controller.dispose);
     await tester.pumpWidget(buildList(controller));
@@ -108,8 +110,7 @@ void main() {
     expect(controller.offset, 132);
   });
 
-  testWidgets('静默超过 200ms 后重新分类（滚轮之后换触控板）',
-      (WidgetTester tester) async {
+  testWidgets('静默超过 200ms 后重新分类（滚轮之后换触控板）', (WidgetTester tester) async {
     final FushiScrollController controller = FushiScrollController();
     addTearDown(controller.dispose);
     await tester.pumpWidget(buildList(controller));
@@ -125,8 +126,7 @@ void main() {
     expect(controller.offset, 132);
   });
 
-  testWidgets('delta 0（惯性取消）立刻清掉分类且不丢已拨出的距离',
-      (WidgetTester tester) async {
+  testWidgets('delta 0（惯性取消）立刻清掉分类且不丢已拨出的距离', (WidgetTester tester) async {
     final FushiScrollController controller = FushiScrollController();
     addTearDown(controller.dispose);
     await tester.pumpWidget(buildList(controller));

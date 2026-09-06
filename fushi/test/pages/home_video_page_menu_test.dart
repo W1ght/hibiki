@@ -73,8 +73,9 @@ void main() {
 
   late Directory pathProviderDir;
   setUpAll(() {
-    pathProviderDir =
-        Directory.systemTemp.createTempSync('hibiki_home_video_pp');
+    pathProviderDir = Directory.systemTemp.createTempSync(
+      'hibiki_home_video_pp',
+    );
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
       (MethodCall call) async => pathProviderDir.path,
@@ -114,8 +115,9 @@ void main() {
     final PreferencesRepository prefs = PreferencesRepository(db);
     await prefs.loadFromDb();
     storeDir = Directory.systemTemp.createTempSync('hibiki_home_video_store');
-    externalVideoDir =
-        Directory.systemTemp.createTempSync('hibiki_home_video_external');
+    externalVideoDir = Directory.systemTemp.createTempSync(
+      'hibiki_home_video_external',
+    );
     platformServices = testPlatformServices();
     ankiRepository = FakeAnkiRepository();
     appModel = AppModel(platformServices)
@@ -173,13 +175,14 @@ void main() {
   Directory writeEmbeddedSubtitleCache(File video) {
     final Directory dir = embeddedSubtitleCacheDir(video.path);
     dir.createSync(recursive: true);
-    File(p.join(dir.path, 'sub_0.srt'))
-        .writeAsStringSync('1\n00:00:00,000 --> 00:00:01,000\nhello');
+    File(
+      p.join(dir.path, 'sub_0.srt'),
+    ).writeAsStringSync('1\n00:00:00,000 --> 00:00:01,000\nhello');
     return dir;
   }
 
   Future<({File cover, Directory embeddedCache, File subtitle, File video})>
-      seedVideoWithAssets({
+  seedVideoWithAssets({
     required String bookUid,
     required String title,
     required File cover,
@@ -190,13 +193,15 @@ void main() {
       videoFileName ?? '${bookUid.replaceAll('/', '_')}.mp4',
     );
     final Directory embeddedCache = writeEmbeddedSubtitleCache(video);
-    await db.upsertVideoBook(VideoBooksCompanion(
-      bookUid: Value(bookUid),
-      title: Value(title),
-      videoPath: Value(video.path),
-      coverPath: Value(cover.path),
-      subtitleSource: Value(subtitle.path),
-    ));
+    await db.upsertVideoBook(
+      VideoBooksCompanion(
+        bookUid: Value(bookUid),
+        title: Value(title),
+        videoPath: Value(video.path),
+        coverPath: Value(cover.path),
+        subtitleSource: Value(subtitle.path),
+      ),
+    );
     return (
       cover: cover,
       embeddedCache: embeddedCache,
@@ -225,28 +230,29 @@ void main() {
   }
 
   Future<void> seedTaggedVideo() async {
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/1'),
-      title: Value('My Episode'),
-      videoPath: Value('/abs/ep1.mp4'),
-    ));
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/1'),
+        title: Value('My Episode'),
+        videoPath: Value('/abs/ep1.mp4'),
+      ),
+    );
     final int tagId = await db.createTag('Anime', 0xFF2196F3);
     await db.addTagToVideoBook('video/1', tagId);
   }
 
   Future<int> seedVideoAndLooseTag() async {
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/1'),
-      title: Value('My Episode'),
-      videoPath: Value('/abs/ep1.mp4'),
-    ));
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/1'),
+        title: Value('My Episode'),
+        videoPath: Value('/abs/ep1.mp4'),
+      ),
+    );
     return db.createTag('Anime', 0xFF2196F3);
   }
 
-  Widget buildApp({
-    bool captureToasts = false,
-    VideoBookRepository? repo,
-  }) =>
+  Widget buildApp({bool captureToasts = false, VideoBookRepository? repo}) =>
       ProviderScope(
         overrides: <Override>[
           platformServicesProvider.overrideWithValue(platformServices),
@@ -278,8 +284,9 @@ void main() {
           matching: find.widgetWithText(FushiTagChip, 'Anime'),
         )
         .first;
-    final Finder card =
-        find.byKey(const ValueKey<String>('home_video_video/1'));
+    final Finder card = find.byKey(
+      const ValueKey<String>('home_video_video/1'),
+    );
 
     final TestGesture gesture = await tester.startGesture(
       tester.getCenter(tagChip),
@@ -322,8 +329,11 @@ void main() {
 
     await openCardMenu(tester, find.byType(FushiCard).first);
 
-    expect(find.text(t.batch_selected_count(n: 1)), findsNothing,
-        reason: '触屏必须先点明确的「选择」入口，长按不能暗中进入多选');
+    expect(
+      find.text(t.batch_selected_count(n: 1)),
+      findsNothing,
+      reason: '触屏必须先点明确的「选择」入口，长按不能暗中进入多选',
+    );
     expect(find.byType(FushiDialogFrame), findsOneWidget);
     expect(find.text(t.tag_label), findsOneWidget);
     expect(find.text(t.video_rename), findsOneWidget);
@@ -379,64 +389,66 @@ void main() {
   });
 
   testWidgets(
-      'first video open prompts for Anime4K recommended shaders (desktop)',
-      (WidgetTester tester) async {
-    // TODO-874：首次提示只在桌面端弹（移动端着色器超分掉帧/发热，纯抑制）。
-    // widget 测试默认平台是 android，需显式 override 到桌面端验证弹窗路径。
-    // override 必须在测试体内 try/finally 复位（绑定的 invariant 检查在
-    // tearDown 之前跑，用 addTearDown 复位会触发 foundation debug var 泄漏断言）。
-    debugDefaultTargetPlatformOverride = TargetPlatform.windows;
-    try {
-      await seedTaggedVideo();
-      await tester.pumpWidget(buildApp());
-      await tester.pumpAndSettle();
+    'first video open prompts for Anime4K recommended shaders (desktop)',
+    (WidgetTester tester) async {
+      // TODO-874：首次提示只在桌面端弹（移动端着色器超分掉帧/发热，纯抑制）。
+      // widget 测试默认平台是 android，需显式 override 到桌面端验证弹窗路径。
+      // override 必须在测试体内 try/finally 复位（绑定的 invariant 检查在
+      // tearDown 之前跑，用 addTearDown 复位会触发 foundation debug var 泄漏断言）。
+      debugDefaultTargetPlatformOverride = TargetPlatform.windows;
+      try {
+        await seedTaggedVideo();
+        await tester.pumpWidget(buildApp());
+        await tester.pumpAndSettle();
 
-      await tester.tap(find.text('My Episode'));
-      await tester.pumpAndSettle();
+        await tester.tap(find.text('My Episode'));
+        await tester.pumpAndSettle();
 
-      expect(find.text(t.video_shader_first_use_title), findsOneWidget);
-      expect(find.text(t.video_shader_first_use_body), findsOneWidget);
-      expect(
-        await db.getPref(PreferencesRepository.videoAnime4kPromptShownKey),
-        'b:true',
-      );
-      expect(appModel.prefsRepo.videoAnime4kPromptShown, isTrue);
-    } finally {
-      debugDefaultTargetPlatformOverride = null;
-    }
-  });
+        expect(find.text(t.video_shader_first_use_title), findsOneWidget);
+        expect(find.text(t.video_shader_first_use_body), findsOneWidget);
+        expect(
+          await db.getPref(PreferencesRepository.videoAnime4kPromptShownKey),
+          'b:true',
+        );
+        expect(appModel.prefsRepo.videoAnime4kPromptShown, isTrue);
+      } finally {
+        debugDefaultTargetPlatformOverride = null;
+      }
+    },
+  );
 
   testWidgets(
-      'TODO-874 mobile first video open suppresses Anime4K prompt (no side effect)',
-      (WidgetTester tester) async {
-    // 移动端首次打开视频不弹 Anime4K 提示，且不置 videoAnime4kPromptShown 标记
-    // （零副作用，保证桌面端跨平台同步后仍能首次弹出）。
-    debugDefaultTargetPlatformOverride = TargetPlatform.android;
-    try {
-      await seedTaggedVideo();
-      await tester.pumpWidget(buildApp());
-      await tester.pumpAndSettle();
+    'TODO-874 mobile first video open suppresses Anime4K prompt (no side effect)',
+    (WidgetTester tester) async {
+      // 移动端首次打开视频不弹 Anime4K 提示，且不置 videoAnime4kPromptShown 标记
+      // （零副作用，保证桌面端跨平台同步后仍能首次弹出）。
+      debugDefaultTargetPlatformOverride = TargetPlatform.android;
+      try {
+        await seedTaggedVideo();
+        await tester.pumpWidget(buildApp());
+        await tester.pumpAndSettle();
 
-      await tester.tap(find.text('My Episode'));
-      // 不能 pumpAndSettle：移动端 _open 不弹模态提示（desktop 用例靠 modal 暂停
-      // _open 才停在对话框），android 路径会继续 Navigator.push 真正的视频播放页
-      // （VideoFushiPage，media_kit 播放器在无头测试里永不 settle）。本用例只验
-      // 「无提示 + 无副作用」，把同步的 _showAnime4kFirstUsePromptIfNeeded（android
-      // 立即 early-return，无 async 对话框）跑完即可，用有界 pump 取代 pumpAndSettle。
-      await tester.pump();
-      await tester.pump(const Duration(milliseconds: 50));
+        await tester.tap(find.text('My Episode'));
+        // 不能 pumpAndSettle：移动端 _open 不弹模态提示（desktop 用例靠 modal 暂停
+        // _open 才停在对话框），android 路径会继续 Navigator.push 真正的视频播放页
+        // （VideoFushiPage，media_kit 播放器在无头测试里永不 settle）。本用例只验
+        // 「无提示 + 无副作用」，把同步的 _showAnime4kFirstUsePromptIfNeeded（android
+        // 立即 early-return，无 async 对话框）跑完即可，用有界 pump 取代 pumpAndSettle。
+        await tester.pump();
+        await tester.pump(const Duration(milliseconds: 50));
 
-      expect(find.text(t.video_shader_first_use_title), findsNothing);
-      expect(find.text(t.video_shader_first_use_body), findsNothing);
-      expect(
-        await db.getPref(PreferencesRepository.videoAnime4kPromptShownKey),
-        isNull,
-      );
-      expect(appModel.prefsRepo.videoAnime4kPromptShown, isFalse);
-    } finally {
-      debugDefaultTargetPlatformOverride = null;
-    }
-  });
+        expect(find.text(t.video_shader_first_use_title), findsNothing);
+        expect(find.text(t.video_shader_first_use_body), findsNothing);
+        expect(
+          await db.getPref(PreferencesRepository.videoAnime4kPromptShownKey),
+          isNull,
+        );
+        expect(appModel.prefsRepo.videoAnime4kPromptShown, isFalse);
+      } finally {
+        debugDefaultTargetPlatformOverride = null;
+      }
+    },
+  );
 
   testWidgets('顶部标签可拖到视频卡并写入视频标签映射', (WidgetTester tester) async {
     final int tagId = await seedVideoAndLooseTag();
@@ -515,16 +527,20 @@ void main() {
   });
 
   testWidgets('选择态点视频卡勾选 → 批量删除真删视频书', (WidgetTester tester) async {
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/1'),
-      title: Value('Episode One'),
-      videoPath: Value('/abs/ep1.mp4'),
-    ));
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/2'),
-      title: Value('Episode Two'),
-      videoPath: Value('/abs/ep2.mp4'),
-    ));
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/1'),
+        title: Value('Episode One'),
+        videoPath: Value('/abs/ep1.mp4'),
+      ),
+    );
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/2'),
+        title: Value('Episode Two'),
+        videoPath: Value('/abs/ep2.mp4'),
+      ),
+    );
     await tester.pumpWidget(buildApp());
     await tester.pumpAndSettle();
 
@@ -534,7 +550,8 @@ void main() {
 
     // 选择态下点卡片切换勾选（不再打开播放页）。
     await tester.ensureVisible(
-        find.byKey(const ValueKey<String>('home_video_video/1')));
+      find.byKey(const ValueKey<String>('home_video_video/1')),
+    );
     await tester.tap(find.byKey(const ValueKey<String>('home_video_video/1')));
     await tester.pumpAndSettle();
     expect(find.text(t.batch_selected_count(n: 1)), findsOneWidget);
@@ -546,14 +563,19 @@ void main() {
     await tester.tap(find.text(t.dialog_delete).last);
     await tester.pumpAndSettle();
 
-    final List<VideoBookRow> remaining =
-        await VideoBookRepository(db).listAll();
-    expect(remaining.map((VideoBookRow b) => b.bookUid), <String>['video/2'],
-        reason: 'video/1 被批量删除，video/2 保留');
+    final List<VideoBookRow> remaining = await VideoBookRepository(
+      db,
+    ).listAll();
+    expect(
+      remaining.map((VideoBookRow b) => b.bookUid),
+      <String>['video/2'],
+      reason: 'video/1 被批量删除，video/2 保留',
+    );
   });
 
-  testWidgets('卡片菜单单删会回收本视频 app-owned 封面字幕与内嵌字幕缓存',
-      (WidgetTester tester) async {
+  testWidgets('卡片菜单单删会回收本视频 app-owned 封面字幕与内嵌字幕缓存', (
+    WidgetTester tester,
+  ) async {
     resetAppOwnedVideoAssetDirs();
     final deleted = await seedVideoWithAssets(
       bookUid: 'video/1',
@@ -588,7 +610,9 @@ void main() {
     await tester.pumpAndSettle();
 
     await openCardMenu(
-        tester, find.byKey(const ValueKey<String>('home_video_video/1')));
+      tester,
+      find.byKey(const ValueKey<String>('home_video_video/1')),
+    );
     await tester.tap(find.text(t.dialog_delete).last);
     await tester.pumpAndSettle();
     await tester.tap(find.text(t.dialog_delete).last);
@@ -606,8 +630,11 @@ void main() {
     expect(deleted.cover.existsSync(), isFalse);
     expect(deleted.subtitle.existsSync(), isFalse);
     expect(deleted.embeddedCache.existsSync(), isFalse);
-    expect(deleted.video.existsSync(), isTrue,
-        reason: '删除视频书不得删除用户原始 videoPath');
+    expect(
+      deleted.video.existsSync(),
+      isTrue,
+      reason: '删除视频书不得删除用户原始 videoPath',
+    );
     expect(kept.cover.existsSync(), isTrue);
     expect(kept.subtitle.existsSync(), isTrue);
     expect(kept.embeddedCache.existsSync(), isTrue);
@@ -660,11 +687,13 @@ void main() {
     await tester.pumpAndSettle();
     await enterSelectionMode(tester);
     await tester.ensureVisible(
-        find.byKey(const ValueKey<String>('home_video_video/1')));
+      find.byKey(const ValueKey<String>('home_video_video/1')),
+    );
     await tester.tap(find.byKey(const ValueKey<String>('home_video_video/1')));
     await tester.pumpAndSettle();
     await tester.ensureVisible(
-        find.byKey(const ValueKey<String>('home_video_video/2')));
+      find.byKey(const ValueKey<String>('home_video_video/2')),
+    );
     await tester.tap(find.byKey(const ValueKey<String>('home_video_video/2')));
     await tester.pumpAndSettle();
 
@@ -692,8 +721,11 @@ void main() {
     expect(selectedTwo.embeddedCache.existsSync(), isFalse);
     expect(selectedOne.video.existsSync(), isTrue);
     expect(selectedTwo.video.existsSync(), isTrue);
-    expect(sharedSubtitle.existsSync(), isTrue,
-        reason: '其他视频仍引用的 app-owned 字幕不能被选中视频删除波及');
+    expect(
+      sharedSubtitle.existsSync(),
+      isTrue,
+      reason: '其他视频仍引用的 app-owned 字幕不能被选中视频删除波及',
+    );
     expect(kept.cover.existsSync(), isTrue);
     expect(kept.embeddedCache.existsSync(), isTrue);
     expect(kept.video.existsSync(), isTrue);
@@ -736,11 +768,13 @@ void main() {
     await tester.pumpAndSettle();
     await enterSelectionMode(tester);
     await tester.ensureVisible(
-        find.byKey(const ValueKey<String>('home_video_video/1')));
+      find.byKey(const ValueKey<String>('home_video_video/1')),
+    );
     await tester.tap(find.byKey(const ValueKey<String>('home_video_video/1')));
     await tester.pumpAndSettle();
     await tester.ensureVisible(
-        find.byKey(const ValueKey<String>('home_video_video/2')));
+      find.byKey(const ValueKey<String>('home_video_video/2')),
+    );
     await tester.tap(find.byKey(const ValueKey<String>('home_video_video/2')));
     await tester.pumpAndSettle();
 
@@ -790,27 +824,33 @@ void main() {
   });
 
   testWidgets('选择态批量打标签 → 真写视频标签映射', (WidgetTester tester) async {
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/1'),
-      title: Value('Episode One'),
-      videoPath: Value('/abs/ep1.mp4'),
-    ));
-    await db.upsertVideoBook(const VideoBooksCompanion(
-      bookUid: Value('video/2'),
-      title: Value('Episode Two'),
-      videoPath: Value('/abs/ep2.mp4'),
-    ));
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/1'),
+        title: Value('Episode One'),
+        videoPath: Value('/abs/ep1.mp4'),
+      ),
+    );
+    await db.upsertVideoBook(
+      const VideoBooksCompanion(
+        bookUid: Value('video/2'),
+        title: Value('Episode Two'),
+        videoPath: Value('/abs/ep2.mp4'),
+      ),
+    );
     final int tagId = await db.createTag('Anime', 0xFF2196F3);
     await tester.pumpWidget(buildApp());
     await tester.pumpAndSettle();
 
     await enterSelectionMode(tester);
     await tester.ensureVisible(
-        find.byKey(const ValueKey<String>('home_video_video/1')));
+      find.byKey(const ValueKey<String>('home_video_video/1')),
+    );
     await tester.tap(find.byKey(const ValueKey<String>('home_video_video/1')));
     await tester.pumpAndSettle();
     await tester.ensureVisible(
-        find.byKey(const ValueKey<String>('home_video_video/2')));
+      find.byKey(const ValueKey<String>('home_video_video/2')),
+    );
     await tester.tap(find.byKey(const ValueKey<String>('home_video_video/2')));
     await tester.pumpAndSettle();
     expect(find.text(t.batch_selected_count(n: 2)), findsOneWidget);
@@ -827,10 +867,12 @@ void main() {
       (Widget w) => w is SegmentedButton,
     );
     expect(segmentedButton, findsWidgets);
-    await tester.tap(find.descendant(
-      of: segmentedButton.first,
-      matching: find.byIcon(Icons.add),
-    ));
+    await tester.tap(
+      find.descendant(
+        of: segmentedButton.first,
+        matching: find.byIcon(Icons.add),
+      ),
+    );
     await tester.pumpAndSettle();
     await tester.tap(find.text(t.batch_tag_apply));
     await tester.pumpAndSettle();

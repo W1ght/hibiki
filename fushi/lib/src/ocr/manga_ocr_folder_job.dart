@@ -153,8 +153,10 @@ List<MangaOcrPageFile> enumerateMangaPages(Directory root) {
   }
 
   walk(root, 0);
-  pages.sort((MangaOcrPageFile a, MangaOcrPageFile b) =>
-      naturalCompare(a.relativeUrl, b.relativeUrl));
+  pages.sort(
+    (MangaOcrPageFile a, MangaOcrPageFile b) =>
+        naturalCompare(a.relativeUrl, b.relativeUrl),
+  );
   return pages;
 }
 
@@ -246,8 +248,10 @@ class MangaOcrFilePageCache implements OcrPageCache {
 /// 字符网格的经典估计，横竖排通用。无字符或零面积返回 0（覆盖层渲染端已有
 /// 非零兜底，ERRATA M1）。
 double estimateMangaFontSize(OcrBlock block) {
-  final int charCount =
-      block.lines.fold<int>(0, (int acc, String line) => acc + line.length);
+  final int charCount = block.lines.fold<int>(
+    0,
+    (int acc, String line) => acc + line.length,
+  );
   if (charCount <= 0 || block.box.area <= 0) {
     return 0;
   }
@@ -268,30 +272,31 @@ MokuroPayload buildMangaPayloadFromResults(
     final List<MokuroBlock> blocks = <MokuroBlock>[];
     for (int b = 0; b < result.blocks.length; b++) {
       final OcrBlock block = result.blocks[b];
-      blocks.add(MokuroBlock(
-        rectangle: Rect.fromLTRB(
-          block.box.left,
-          block.box.top,
-          block.box.right,
-          block.box.bottom,
+      blocks.add(
+        MokuroBlock(
+          rectangle: Rect.fromLTRB(
+            block.box.left,
+            block.box.top,
+            block.box.right,
+            block.box.bottom,
+          ),
+          // Re-evaluate cached local blocks so pages produced by the older,
+          // overly strict 1.5 ratio threshold gain queryable vertical regions
+          // without rerunning OCR.
+          isVertical: block.vertical || isVerticalBlock(block.box),
+          fontSize: estimateMangaFontSize(block),
+          zIndex: b,
+          lines: block.lines,
         ),
-        // Re-evaluate cached local blocks so pages produced by the older,
-        // overly strict 1.5 ratio threshold gain queryable vertical regions
-        // without rerunning OCR.
-        isVertical: block.vertical || isVerticalBlock(block.box),
-        fontSize: estimateMangaFontSize(block),
-        zIndex: b,
-        lines: block.lines,
-      ));
+      );
     }
-    images.add(MokuroImage(
-      url: pages[i].relativeUrl,
-      size: Size(
-        result.imageWidth.toDouble(),
-        result.imageHeight.toDouble(),
+    images.add(
+      MokuroImage(
+        url: pages[i].relativeUrl,
+        size: Size(result.imageWidth.toDouble(), result.imageHeight.toDouble()),
+        blocks: blocks,
       ),
-      blocks: blocks,
-    ));
+    );
   }
   return MokuroPayload(images: images);
 }
@@ -339,18 +344,14 @@ Future<String> runMangaOcrFolderJob({
 
   final Directory outDir = Directory(p.join(imageDirPath, kMangaOcrOutDirName));
   final Directory cacheDir = Directory(
-    p.join(
-      outDir.path,
-      kMangaOcrPagesCacheDirName,
-      engineSignature,
-    ),
+    p.join(outDir.path, kMangaOcrPagesCacheDirName, engineSignature),
   );
   await cacheDir.create(recursive: true);
 
   final MangaOcrFilePageCache cache = MangaOcrFilePageCache(
     cacheDir: cacheDir,
     pageNames: <String>[
-      for (final MangaOcrPageFile page in pages) page.relativeUrl
+      for (final MangaOcrPageFile page in pages) page.relativeUrl,
     ],
     pageFiles: <File>[for (final MangaOcrPageFile page in pages) page.file],
   );

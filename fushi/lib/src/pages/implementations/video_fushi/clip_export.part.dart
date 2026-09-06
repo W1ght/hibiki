@@ -366,8 +366,9 @@ extension _VideoClipExport on _VideoFushiPageState {
   }
 
   String _uniqueScreenshotSavePath(String savePath) {
-    final String desiredPath =
-        p.extension(savePath).isEmpty ? '$savePath.jpg' : savePath;
+    final String desiredPath = p.extension(savePath).isEmpty
+        ? '$savePath.jpg'
+        : savePath;
     return uniqueVideoScreenshotPath(
       desiredPath,
       exists: (String path) => File(path).existsSync(),

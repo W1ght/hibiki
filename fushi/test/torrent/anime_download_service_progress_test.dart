@@ -31,8 +31,7 @@ class _FakeBackend implements TorrentBackend {
     required String category,
     bool sequential = false,
     bool firstLastPiecePrio = false,
-  }) async =>
-      true;
+  }) async => true;
 
   @override
   Future<List<TorrentSnapshot>> listTorrents({String? category}) async =>
@@ -52,13 +51,16 @@ class _FakeBackend implements TorrentBackend {
   // 假装成功——真要测这条链路的用例应当显式覆盖它。
   @override
   Future<TorrentStorageResult> renameFile(
-          String torrentId, int fileIndex, String newPath) async =>
-      const TorrentStorageResult.failure('not supported by fake');
+    String torrentId,
+    int fileIndex,
+    String newPath,
+  ) async => const TorrentStorageResult.failure('not supported by fake');
 
   @override
   Future<TorrentStorageResult> moveStorage(
-          String torrentId, String newSavePath) async =>
-      const TorrentStorageResult.failure('not supported by fake');
+    String torrentId,
+    String newSavePath,
+  ) async => const TorrentStorageResult.failure('not supported by fake');
 }
 
 TorrentSnapshot _snapshot({
@@ -91,7 +93,8 @@ void main() {
   setUp(() async {
     tempDir = await Directory.systemTemp.createTemp('anime-progress-test');
     store = AnimeDownloadPlanStore(
-        baseDir: Directory(p.join(tempDir.path, 'anime_downloads')));
+      baseDir: Directory(p.join(tempDir.path, 'anime_downloads')),
+    );
     backend = _FakeBackend();
     service = AnimeDownloadService(
       store: store,
@@ -100,14 +103,16 @@ void main() {
           const AnimeDownloadImportOutcome(collectionId: 1),
       backendFactory: (QbConnectionConfig config) => backend,
     );
-    await store.save(AnimeDownloadPlan(
-      id: _kHash,
-      createdAtMs: DateTime.now().millisecondsSinceEpoch,
-      seriesTitle: 'series',
-      torrentTitle: 'torrent',
-      magnet: 'magnet:?xt=urn:btih:$_kHash',
-      qbCategory: 'hibiki',
-    ));
+    await store.save(
+      AnimeDownloadPlan(
+        id: _kHash,
+        createdAtMs: DateTime.now().millisecondsSinceEpoch,
+        seriesTitle: 'series',
+        torrentTitle: 'torrent',
+        magnet: 'magnet:?xt=urn:btih:$_kHash',
+        qbCategory: 'hibiki',
+      ),
+    );
   });
 
   tearDown(() async {
@@ -194,7 +199,11 @@ void main() {
     // 种子里有可识别视频 → importNow 会走到「未完成也先发进度」那一支。
     backend.files = const <TorrentFileEntry>[
       TorrentFileEntry(
-          name: 'Test Anime - 01.mkv', size: 100, progress: 0.42, index: 0),
+        name: 'Test Anime - 01.mkv',
+        size: 100,
+        progress: 0.42,
+        index: 0,
+      ),
     ];
     await service.importNow(_kHash);
 
@@ -211,8 +220,9 @@ void main() {
   });
 
   test('轮询周期决策：内置引擎 + 有活跃下载才提频（BUG-1294）', () {
-    const QbConnectionConfig embedded =
-        QbConnectionConfig(backend: QbConnectionConfig.backendEmbedded);
+    const QbConnectionConfig embedded = QbConnectionConfig(
+      backend: QbConnectionConfig.backendEmbedded,
+    );
     const Duration idle = Duration(seconds: 20);
 
     expect(

@@ -65,10 +65,12 @@ Widget adaptiveBottomBar({
         currentIndex: currentIndex,
         onTap: onTap,
         items: items
-            .map((AdaptiveNavItem e) => BottomNavigationBarItem(
-                  icon: _maybeBadge(item: e, child: Icon(e.icon)),
-                  label: e.label,
-                ))
+            .map(
+              (AdaptiveNavItem e) => BottomNavigationBarItem(
+                icon: _maybeBadge(item: e, child: Icon(e.icon)),
+                label: e.label,
+              ),
+            )
             .toList(),
       ),
     );
@@ -167,16 +169,18 @@ class _MaterialNavCluster extends StatelessWidget {
                   builder: (BuildContext context, BoxConstraints constraints) {
                     return SingleChildScrollView(
                       child: ConstrainedBox(
-                        constraints:
-                            BoxConstraints(minHeight: constraints.maxHeight),
+                        constraints: BoxConstraints(
+                          minHeight: constraints.maxHeight,
+                        ),
                         child: IntrinsicHeight(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               for (final Widget tile in tiles)
                                 Padding(
-                                  padding:
-                                      const EdgeInsets.symmetric(vertical: 6),
+                                  padding: const EdgeInsets.symmetric(
+                                    vertical: 6,
+                                  ),
                                   child: tile,
                                 ),
                             ],
@@ -359,8 +363,9 @@ class GamepadNavCluster extends StatefulWidget {
 }
 
 class _GamepadNavClusterState extends State<GamepadNavCluster> {
-  late final FushiFocusId _focusId =
-      FushiFocusId('nav-cluster-${identityHashCode(this)}');
+  late final FushiFocusId _focusId = FushiFocusId(
+    'nav-cluster-${identityHashCode(this)}',
+  );
 
   void _step(int delta) {
     if (widget.count <= 0) return;
@@ -383,10 +388,12 @@ class _GamepadNavClusterState extends State<GamepadNavCluster> {
         GamepadButtonIntent: GamepadButtonForwardingAction(
           ancestorContext: context,
           handle: (GamepadButton button) {
-            final GamepadButton prev =
-                horizontal ? GamepadButton.dpadLeft : GamepadButton.dpadUp;
-            final GamepadButton next =
-                horizontal ? GamepadButton.dpadRight : GamepadButton.dpadDown;
+            final GamepadButton prev = horizontal
+                ? GamepadButton.dpadLeft
+                : GamepadButton.dpadUp;
+            final GamepadButton next = horizontal
+                ? GamepadButton.dpadRight
+                : GamepadButton.dpadDown;
             if (button == next) {
               _step(1);
               return true;
@@ -402,12 +409,20 @@ class _GamepadNavClusterState extends State<GamepadNavCluster> {
       child: Shortcuts(
         // Android delivers the D-pad as arrow keys; mirror the along-axis step.
         shortcuts: <ShortcutActivator, Intent>{
-          SingleActivator(horizontal
-              ? LogicalKeyboardKey.arrowLeft
-              : LogicalKeyboardKey.arrowUp): const _NavStepIntent(-1),
-          SingleActivator(horizontal
-              ? LogicalKeyboardKey.arrowRight
-              : LogicalKeyboardKey.arrowDown): const _NavStepIntent(1),
+          SingleActivator(
+            horizontal
+                ? LogicalKeyboardKey.arrowLeft
+                : LogicalKeyboardKey.arrowUp,
+          ): const _NavStepIntent(
+            -1,
+          ),
+          SingleActivator(
+            horizontal
+                ? LogicalKeyboardKey.arrowRight
+                : LogicalKeyboardKey.arrowDown,
+          ): const _NavStepIntent(
+            1,
+          ),
         },
         child: Actions(
           actions: <Type, Action<Intent>>{
@@ -466,18 +481,18 @@ class _CupertinoAppBarWithBottom extends StatelessWidget
   final CupertinoNavigationBar navBar;
   final PreferredSizeWidget bottom;
 
-  const _CupertinoAppBarWithBottom(
-      {required this.navBar, required this.bottom});
+  const _CupertinoAppBarWithBottom({
+    required this.navBar,
+    required this.bottom,
+  });
 
   @override
   Size get preferredSize => Size.fromHeight(
-      navBar.preferredSize.height + bottom.preferredSize.height);
+    navBar.preferredSize.height + bottom.preferredSize.height,
+  );
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [navBar, bottom],
-    );
+    return Column(mainAxisSize: MainAxisSize.min, children: [navBar, bottom]);
   }
 }

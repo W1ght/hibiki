@@ -15,9 +15,11 @@ void main() {
     final Float32List samples = readPcm16MonoWav(
       File('test/asr/fixtures/ja_tts_16k.wav'),
     );
-    final Map<String, Object?> golden = jsonDecode(
-      File('test/asr/fixtures/fbank_golden_ja.json').readAsStringSync(),
-    ) as Map<String, Object?>;
+    final Map<String, Object?> golden =
+        jsonDecode(
+              File('test/asr/fixtures/fbank_golden_ja.json').readAsStringSync(),
+            )
+            as Map<String, Object?>;
     expect(samples.length, golden['num_samples']);
 
     final int frames = golden['frames']! as int;
@@ -40,7 +42,8 @@ void main() {
     expect(
       maxDiff,
       lessThan(1e-3),
-      reason: '最大偏差 $maxDiff 在帧 ${worst ~/ 80} bin ${worst % 80}：'
+      reason:
+          '最大偏差 $maxDiff 在帧 ${worst ~/ 80} bin ${worst % 80}：'
           'dart=${actual[worst]} knf=${expected[worst]}',
     );
   });

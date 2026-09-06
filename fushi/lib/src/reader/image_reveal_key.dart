@@ -55,8 +55,7 @@ class ImageRevealKey {
     required bool blurEnabled,
     required String? revealKey,
     required Set<String> revealed,
-  }) =>
-      blurEnabled && revealKey != null && !revealed.contains(revealKey);
+  }) => blurEnabled && revealKey != null && !revealed.contains(revealKey);
 
   /// 正斜杠归一 + 折叠 `.`/`..`/重复斜杠 + 去前导斜杠；越界 / 空返回 `null`。
   static String? _sanitizeRel(String rel) {

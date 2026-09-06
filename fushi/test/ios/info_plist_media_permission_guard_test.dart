@@ -45,15 +45,25 @@ void main() {
   }
 
   test('扫描规模哨兵：lib/ 确实被枚举到了', () {
-    expectScanScale(scannedDartFiles().length,
-        what: 'lib/ 下的 .dart', atLeast: 750, measured: 939);
+    expectScanScale(
+      scannedDartFiles().length,
+      what: 'lib/ 下的 .dart',
+      atLeast: 750,
+      measured: 939,
+    );
   });
 
   test('iOS Info.plist declares media usage keys for used ImageSources', () {
-    expect(libDir.existsSync(), isTrue,
-        reason: 'lib/ must exist to scan for ImageSource usage');
-    expect(plistFile.existsSync(), isTrue,
-        reason: 'BUG-531/TODO-1020 fix lives in this Info.plist');
+    expect(
+      libDir.existsSync(),
+      isTrue,
+      reason: 'lib/ must exist to scan for ImageSource usage',
+    );
+    expect(
+      plistFile.existsSync(),
+      isTrue,
+      reason: 'BUG-531/TODO-1020 fix lives in this Info.plist',
+    );
 
     final String plist = plistFile.readAsStringSync();
     final bool usesCamera = libUses('ImageSource.camera');
@@ -63,7 +73,8 @@ void main() {
       expect(
         plist.contains('<key>NSCameraUsageDescription</key>'),
         isTrue,
-        reason: 'BUG-531/TODO-1020: lib/ opens ImageSource.camera but '
+        reason:
+            'BUG-531/TODO-1020: lib/ opens ImageSource.camera but '
             'ios/Runner/Info.plist is missing NSCameraUsageDescription; iOS '
             'hard-crashes (SIGABRT) the first time the camera is accessed',
       );
@@ -73,7 +84,8 @@ void main() {
       expect(
         plist.contains('<key>NSPhotoLibraryUsageDescription</key>'),
         isTrue,
-        reason: 'BUG-531/TODO-1020: lib/ opens ImageSource.gallery but '
+        reason:
+            'BUG-531/TODO-1020: lib/ opens ImageSource.gallery but '
             'ios/Runner/Info.plist is missing NSPhotoLibraryUsageDescription; '
             'iOS hard-crashes (SIGABRT) the first time the photo library is '
             'accessed',
@@ -81,25 +93,34 @@ void main() {
     }
   });
 
-  test('iOS Info.plist declares Apple Music usage when audio files are picked',
-      () {
-    expect(libDir.existsSync(), isTrue,
-        reason: 'lib/ must exist to scan for FileType.audio usage');
-    expect(plistFile.existsSync(), isTrue,
-        reason: 'BUG-641 fix lives in this Info.plist');
-
-    final String plist = plistFile.readAsStringSync();
-    final bool usesAudioPicker = libUses('FileType.audio');
-
-    if (usesAudioPicker) {
+  test(
+    'iOS Info.plist declares Apple Music usage when audio files are picked',
+    () {
       expect(
-        plist.contains('<key>NSAppleMusicUsageDescription</key>'),
+        libDir.existsSync(),
         isTrue,
-        reason: 'BUG-641: lib/ opens FilePicker with FileType.audio but '
-            'ios/Runner/Info.plist is missing NSAppleMusicUsageDescription; '
-            'iOS hard-crashes (SIGABRT/TCC) the first time audio import '
-            'requests media access',
+        reason: 'lib/ must exist to scan for FileType.audio usage',
       );
-    }
-  });
+      expect(
+        plistFile.existsSync(),
+        isTrue,
+        reason: 'BUG-641 fix lives in this Info.plist',
+      );
+
+      final String plist = plistFile.readAsStringSync();
+      final bool usesAudioPicker = libUses('FileType.audio');
+
+      if (usesAudioPicker) {
+        expect(
+          plist.contains('<key>NSAppleMusicUsageDescription</key>'),
+          isTrue,
+          reason:
+              'BUG-641: lib/ opens FilePicker with FileType.audio but '
+              'ios/Runner/Info.plist is missing NSAppleMusicUsageDescription; '
+              'iOS hard-crashes (SIGABRT/TCC) the first time audio import '
+              'requests media access',
+        );
+      }
+    },
+  );
 }

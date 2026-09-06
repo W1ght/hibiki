@@ -83,9 +83,10 @@ class DandanplayConfig {
     }
     // 只取 scheme+host(+port)，丢掉用户可能误填的尾部 path/query（请求自带 /api/v2/...）。
     return Uri(
-        scheme: parsed.scheme,
-        host: parsed.host,
-        port: parsed.hasPort ? parsed.port : null);
+      scheme: parsed.scheme,
+      host: parsed.host,
+      port: parsed.hasPort ? parsed.port : null,
+    );
   }
 
   /// 是否启用 API v2 签名（[effectiveAppId] 与 [effectiveAppSecret] 同时非空）。
@@ -113,10 +114,10 @@ class DandanplayConfig {
   }
 
   static String encode(DandanplayConfig config) => jsonEncode(<String, dynamic>{
-        'baseUrl': config.baseUrl,
-        'appId': config.appId,
-        'appSecret': config.appSecret,
-      });
+    'baseUrl': config.baseUrl,
+    'appId': config.appId,
+    'appSecret': config.appSecret,
+  });
 
   static DandanplayConfig decode(String? json) {
     if (json == null || json.isEmpty) return defaults;
@@ -173,8 +174,9 @@ class DandanplayMatch {
       episodeId: id.toInt(),
       animeTitle: json['animeTitle']?.toString(),
       episodeTitle: json['episodeTitle']?.toString(),
-      shiftSeconds:
-          json['shift'] is num ? (json['shift'] as num).toDouble() : 0,
+      shiftSeconds: json['shift'] is num
+          ? (json['shift'] as num).toDouble()
+          : 0,
     );
   }
 }
@@ -262,12 +264,12 @@ class DandanplayClient {
     DandanplayConfig? config,
     Duration timeout = const Duration(seconds: 8),
     Duration commentTimeout = const Duration(seconds: 30),
-  })  : _client = httpClient ?? createAppHttpIoClient(),
-        _config = config ?? DandanplayConfig.current,
-        _baseUri =
-            baseUri ?? (config ?? DandanplayConfig.current).resolvedBaseUri,
-        _timeout = timeout,
-        _commentTimeout = commentTimeout;
+  }) : _client = httpClient ?? createAppHttpIoClient(),
+       _config = config ?? DandanplayConfig.current,
+       _baseUri =
+           baseUri ?? (config ?? DandanplayConfig.current).resolvedBaseUri,
+       _timeout = timeout,
+       _commentTimeout = commentTimeout;
 
   final http.Client _client;
   final DandanplayConfig _config;
@@ -294,8 +296,9 @@ class DandanplayClient {
           matched.match == null) {
         return matched;
       }
-      final DandanplayFetchResult comments =
-          await fetchCommentsForMatch(matched.match!);
+      final DandanplayFetchResult comments = await fetchCommentsForMatch(
+        matched.match!,
+      );
       // 拉弹幕失败时如实上抛失败状态（此前被吞成「命中且 0 条」，见 BUG-1057）；
       // 匹配信息仍保留，供 UI 展示已匹配到哪一集。
       return DandanplayFetchResult(
@@ -382,9 +385,7 @@ class DandanplayClient {
     final String path = '/api/v2/comment/${match.episodeId}';
     final Uri uri = _baseUri.replace(
       path: path,
-      queryParameters: const <String, String>{
-        'withRelated': 'true',
-      },
+      queryParameters: const <String, String>{'withRelated': 'true'},
     );
     try {
       final http.Response response = await _client
@@ -427,7 +428,8 @@ class DandanplayClient {
     final String trimmed = keyword.trim();
     if (trimmed.isEmpty) {
       return const DandanplaySearchResult(
-          status: DandanplayFetchStatus.noMatch);
+        status: DandanplayFetchStatus.noMatch,
+      );
     }
     const String path = '/api/v2/search/episodes';
     final Uri uri = _baseUri.replace(
@@ -435,8 +437,9 @@ class DandanplayClient {
       queryParameters: <String, String>{'anime': trimmed},
     );
     try {
-      final http.Response response =
-          await _client.get(uri, headers: _headersFor(path)).timeout(_timeout);
+      final http.Response response = await _client
+          .get(uri, headers: _headersFor(path))
+          .timeout(_timeout);
       if (response.statusCode < 200 || response.statusCode >= 300) {
         return DandanplaySearchResult(
           status: DandanplayFetchStatus.serverError,
@@ -455,8 +458,9 @@ class DandanplayClient {
           error: decoded['errorMessage'],
         );
       }
-      final List<DandanplaySearchAnime> animes =
-          _animesFromJson(decoded['animes']);
+      final List<DandanplaySearchAnime> animes = _animesFromJson(
+        decoded['animes'],
+      );
       if (animes.isEmpty) {
         return const DandanplaySearchResult(
           status: DandanplayFetchStatus.noMatch,
@@ -476,7 +480,8 @@ class DandanplayClient {
 /// （用户侧可重试），其余（JSON 畸形等）算 `serverError`。三处调用点共用同一判据，
 /// 消除此前每处各写四个 `on ... catch` 的重复分支。
 DandanplayFetchStatus _statusForError(Object error) {
-  final bool network = error is IOException || // Socket/Handshake/Http 等
+  final bool network =
+      error is IOException || // Socket/Handshake/Http 等
       error is http.ClientException ||
       error is TimeoutException;
   return network
@@ -507,12 +512,14 @@ List<DandanplaySearchAnime> _animesFromJson(Object? raw) {
     if (anime is! Map) continue;
     final Object? id = anime['animeId'];
     if (id is! num) continue;
-    out.add(DandanplaySearchAnime(
-      animeId: id.toInt(),
-      animeTitle: anime['animeTitle']?.toString() ?? '',
-      typeDescription: anime['typeDescription']?.toString(),
-      episodes: _searchEpisodesFromJson(anime['episodes']),
-    ));
+    out.add(
+      DandanplaySearchAnime(
+        animeId: id.toInt(),
+        animeTitle: anime['animeTitle']?.toString() ?? '',
+        typeDescription: anime['typeDescription']?.toString(),
+        episodes: _searchEpisodesFromJson(anime['episodes']),
+      ),
+    );
   }
   return out;
 }

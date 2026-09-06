@@ -108,7 +108,8 @@ class _FakeMining implements FushiRemoteMiningService {
 
   @override
   Future<AnkiNoteTypeDefinition?> readNoteTypeDefinition(
-      String modelName) async {
+    String modelName,
+  ) async {
     lastNoteTypeRead = modelName;
     return noteTypeDef;
   }
@@ -121,8 +122,9 @@ class _FakeMining implements FushiRemoteMiningService {
 
   @override
   Future<bool> updateNoteTypeTemplates(
-          String modelName, List<AnkiCardTemplate> templates) async =>
-      true;
+    String modelName,
+    List<AnkiCardTemplate> templates,
+  ) async => true;
 
   @override
   Future<bool> probeMediaMaintenance() async => false;
@@ -143,8 +145,9 @@ Future<HttpClientResponse> _post(
 }) async {
   // 不在这里 close client（响应尚未被调用方读取）；测试进程退出即回收。
   final HttpClient c = HttpClient();
-  final HttpClientRequest req =
-      await c.postUrl(Uri.parse('http://127.0.0.1:$port$path'));
+  final HttpClientRequest req = await c.postUrl(
+    Uri.parse('http://127.0.0.1:$port$path'),
+  );
   req.headers.contentType = ContentType.json;
   if (auth != null) req.headers.set('authorization', auth);
   req.write(jsonEncode(body));
@@ -221,63 +224,63 @@ void main() {
       expect(j['popupJson'], contains('走る'));
     });
 
-    test('/api/extension/status identifies Hibiki on the configured port',
-        () async {
-      await startServer(apiKey: 'k123');
-      final HttpClientResponse resp = await _post(
-        server.port,
-        '/api/extension/status',
-        <String, dynamic>{},
-        auth: _basic('k123'),
-      );
-      expect(resp.statusCode, 200);
-      final Map<String, dynamic> j = await _json(resp);
-      expect(j['app'], 'fushi');
-      expect(j['ready'], true);
-      expect(j['port'], server.port);
-    });
-
-    test('popupOnly returns only bestLength while default keeps full result',
-        () async {
-      await startServer(apiKey: 'k123');
-
-      final Map<String, dynamic> compact = await _json(await _post(
-        server.port,
-        '/api/lookup/dictionary',
-        <String, dynamic>{
-          'term': '見る',
-          'record': false,
-          'popupOnly': true,
-        },
-        auth: _basic('k123'),
-      ));
-      expect(compact['result'], <String, dynamic>{'bestLength': 0});
-      expect(compact['popupJson'], contains('見る'));
-      expect(lookup.popupLookupCount, 1);
-      expect(lookup.fullLookupCount, 0);
-
-      final Map<String, dynamic> full = await _json(await _post(
-        server.port,
-        '/api/lookup/dictionary',
-        <String, dynamic>{'term': '見る', 'record': false},
-        auth: _basic('k123'),
-      ));
-      expect((full['result'] as Map<String, dynamic>)['searchTerm'], '見る');
-      expect(lookup.fullLookupCount, 1);
-    });
+    test(
+      '/api/extension/status identifies Hibiki on the configured port',
+      () async {
+        await startServer(apiKey: 'k123');
+        final HttpClientResponse resp = await _post(
+          server.port,
+          '/api/extension/status',
+          <String, dynamic>{},
+          auth: _basic('k123'),
+        );
+        expect(resp.statusCode, 200);
+        final Map<String, dynamic> j = await _json(resp);
+        expect(j['app'], 'fushi');
+        expect(j['ready'], true);
+        expect(j['port'], server.port);
+      },
+    );
 
     test(
-        'lookup response carries popup size vars from themeColorsProvider '
+      'popupOnly returns only bestLength while default keeps full result',
+      () async {
+        await startServer(apiKey: 'k123');
+
+        final Map<String, dynamic> compact = await _json(
+          await _post(server.port, '/api/lookup/dictionary', <String, dynamic>{
+            'term': '見る',
+            'record': false,
+            'popupOnly': true,
+          }, auth: _basic('k123')),
+        );
+        expect(compact['result'], <String, dynamic>{'bestLength': 0});
+        expect(compact['popupJson'], contains('見る'));
+        expect(lookup.popupLookupCount, 1);
+        expect(lookup.fullLookupCount, 0);
+
+        final Map<String, dynamic> full = await _json(
+          await _post(server.port, '/api/lookup/dictionary', <String, dynamic>{
+            'term': '見る',
+            'record': false,
+          }, auth: _basic('k123')),
+        );
+        expect((full['result'] as Map<String, dynamic>)['searchTerm'], '見る');
+        expect(lookup.fullLookupCount, 1);
+      },
+    );
+
+    test('lookup response carries popup size vars from themeColorsProvider '
         '(TODO-1185)', () async {
       // TODO-1185 follow-up：浏览器扩展弹窗尺寸跟随 app 内弹窗尺寸设置。app 注入的
       // browserExtensionThemeColors 把用户配置的 popupMaxWidth/Height 作为
       // --fushi-popup-max-width / --fushi-popup-max-height 放进查词响应 theme 字段，
       // content.js 逐项 setProperty 到 #entries-container，content.css 同名 var(...) 消费。
       Map<String, String> provider() => <String, String>{
-            '--md-primary': 'rgb(1, 2, 3)',
-            '--fushi-popup-max-width': '520px',
-            '--fushi-popup-max-height': '640px',
-          };
+        '--md-primary': 'rgb(1, 2, 3)',
+        '--fushi-popup-max-width': '520px',
+        '--fushi-popup-max-height': '640px',
+      };
       await startServer(apiKey: 'k123', themeColorsProvider: provider);
       final HttpClientResponse resp = await _post(
         server.port,
@@ -292,23 +295,24 @@ void main() {
       expect(theme['--fushi-popup-max-height'], '640px');
     });
 
-    test('lookup response omits theme when provider absent (backward compat)',
-        () async {
-      await startServer(apiKey: 'k123');
-      final HttpClientResponse resp = await _post(
-        server.port,
-        '/api/lookup/dictionary',
-        <String, dynamic>{'term': '猫', 'record': false},
-        auth: _basic('k123'),
-      );
-      expect(resp.statusCode, 200);
-      final Map<String, dynamic> j = await _json(resp);
-      // 无 provider（旧 app / server 未注入）→ 不带 theme，扩展 CSS 回落默认 400x360。
-      expect(j.containsKey('theme'), isFalse);
-    });
-
     test(
-        'lookup response carries extensionBuild from provider and omits it '
+      'lookup response omits theme when provider absent (backward compat)',
+      () async {
+        await startServer(apiKey: 'k123');
+        final HttpClientResponse resp = await _post(
+          server.port,
+          '/api/lookup/dictionary',
+          <String, dynamic>{'term': '猫', 'record': false},
+          auth: _basic('k123'),
+        );
+        expect(resp.statusCode, 200);
+        final Map<String, dynamic> j = await _json(resp);
+        // 无 provider（旧 app / server 未注入）→ 不带 theme，扩展 CSS 回落默认 400x360。
+        expect(j.containsKey('theme'), isFalse);
+      },
+    );
+
+    test('lookup response carries extensionBuild from provider and omits it '
         'when absent (BUG-726)', () async {
       // BUG-726：扩展自更新信号。app 把内置扩展内容指纹随查词响应下发（extensionBuild），
       // 扩展 background 与自身 FUSHI_DEFAULTS.build 比对，不一致即 runtime.reload 拉新。
@@ -326,12 +330,12 @@ void main() {
       // 未注入（旧 app / sync host）→ 不带该字段（向后兼容：旧扩展代码不受影响）。
       await server.stop();
       await startServer(apiKey: 'k123');
-      final Map<String, dynamic> j2 = await _json(await _post(
-        server.port,
-        '/api/lookup/dictionary',
-        <String, dynamic>{'term': '猫', 'record': false},
-        auth: _basic('k123'),
-      ));
+      final Map<String, dynamic> j2 = await _json(
+        await _post(server.port, '/api/lookup/dictionary', <String, dynamic>{
+          'term': '猫',
+          'record': false,
+        }, auth: _basic('k123')),
+      );
       expect(j2.containsKey('extensionBuild'), isFalse);
     });
 
@@ -387,18 +391,20 @@ void main() {
       await resp.drain<void>();
     });
 
-    test('no api key configured → auth skipped (extension still works)',
-        () async {
-      await startServer(apiKey: null);
-      final HttpClientResponse resp = await _post(
-        server.port,
-        '/api/lookup/dictionary',
-        <String, dynamic>{'term': '猫'},
-        auth: _basic(''),
-      );
-      expect(resp.statusCode, 200);
-      expect((await _json(resp))['type'], 'dictionaryResult');
-    });
+    test(
+      'no api key configured → auth skipped (extension still works)',
+      () async {
+        await startServer(apiKey: null);
+        final HttpClientResponse resp = await _post(
+          server.port,
+          '/api/lookup/dictionary',
+          <String, dynamic>{'term': '猫'},
+          auth: _basic(''),
+        );
+        expect(resp.statusCode, 200);
+        expect((await _json(resp))['type'], 'dictionaryResult');
+      },
+    );
 
     test('mine without fields → 400', () async {
       await startServer(apiKey: null);
@@ -426,20 +432,22 @@ void main() {
       expect(mining.lastDupReading, 'はしる');
     });
 
-    test('/api/duplicate empty expression → false without hitting backend',
-        () async {
-      await startServer(apiKey: 'k123');
-      mining.dupResult = true;
-      final HttpClientResponse resp = await _post(
-        server.port,
-        '/api/duplicate',
-        <String, dynamic>{'expression': ''},
-        auth: _basic('k123'),
-      );
-      expect(resp.statusCode, 200);
-      expect((await _json(resp))['duplicate'], false);
-      expect(mining.lastDupExpression, isNull);
-    });
+    test(
+      '/api/duplicate empty expression → false without hitting backend',
+      () async {
+        await startServer(apiKey: 'k123');
+        mining.dupResult = true;
+        final HttpClientResponse resp = await _post(
+          server.port,
+          '/api/duplicate',
+          <String, dynamic>{'expression': ''},
+          auth: _basic('k123'),
+        );
+        expect(resp.statusCode, 200);
+        expect((await _json(resp))['duplicate'], false);
+        expect(mining.lastDupExpression, isNull);
+      },
+    );
 
     test('单词音频①②：/api/lookup/audio 返 file url，GET file 免鉴权返字节', () async {
       await startServer(apiKey: 'k123');
@@ -503,15 +511,17 @@ void main() {
     test('/api/lookup/audio/file 未知 id → 404', () async {
       await startServer(apiKey: 'k123');
       final HttpClientResponse resp = await _get(
-          'http://127.0.0.1:${server.port}/api/lookup/audio/file?id=nope');
+        'http://127.0.0.1:${server.port}/api/lookup/audio/file?id=nope',
+      );
       expect(resp.statusCode, 404);
       await resp.drain<void>();
     });
 
     test('查词响应带 audioSources（provider 非空 → 渲染 ♪ 按钮）', () async {
       await startServer(
-          apiKey: 'k123',
-          audioSourcesProvider: () => <String>['hibiki://audio']);
+        apiKey: 'k123',
+        audioSourcesProvider: () => <String>['hibiki://audio'],
+      );
       final HttpClientResponse resp = await _post(
         server.port,
         '/api/lookup/dictionary',
@@ -548,29 +558,31 @@ void main() {
     });
 
     // 弹窗尺寸精细化 Phase D：扩展拖角 resize 回写端点 /api/extension/popup-size。
-    test('/api/extension/popup-size 把原始尺寸交给 sink（未 clamp，clamp 在 app 侧）',
-        () async {
-      double? gotW;
-      double? gotH;
-      await startServer(
-        apiKey: 'k123',
-        onExtensionPopupSize: (double w, double h) {
-          gotW = w;
-          gotH = h;
-        },
-      );
-      final HttpClientResponse resp = await _post(
-        server.port,
-        '/api/extension/popup-size',
-        <String, dynamic>{'maxWidth': 720, 'maxHeight': 600},
-        auth: _basic('k123'),
-      );
-      expect(resp.statusCode, 200);
-      expect((await _json(resp))['ok'], true);
-      // server 不 clamp（透传原始值给 app 侧 resolveExtensionPopupSize）。
-      expect(gotW, 720);
-      expect(gotH, 600);
-    });
+    test(
+      '/api/extension/popup-size 把原始尺寸交给 sink（未 clamp，clamp 在 app 侧）',
+      () async {
+        double? gotW;
+        double? gotH;
+        await startServer(
+          apiKey: 'k123',
+          onExtensionPopupSize: (double w, double h) {
+            gotW = w;
+            gotH = h;
+          },
+        );
+        final HttpClientResponse resp = await _post(
+          server.port,
+          '/api/extension/popup-size',
+          <String, dynamic>{'maxWidth': 720, 'maxHeight': 600},
+          auth: _basic('k123'),
+        );
+        expect(resp.statusCode, 200);
+        expect((await _json(resp))['ok'], true);
+        // server 不 clamp（透传原始值给 app 侧 resolveExtensionPopupSize）。
+        expect(gotW, 720);
+        expect(gotH, 600);
+      },
+    );
 
     test('/api/extension/popup-size 数值型 int/double 都接受', () async {
       double? gotW;
@@ -610,18 +622,20 @@ void main() {
       expect(called, isFalse);
     });
 
-    test('/api/extension/popup-size 未注入 sink → 404（旧 app / 配对 host 向后兼容）',
-        () async {
-      await startServer(apiKey: 'k123'); // onExtensionPopupSize 缺省 null
-      final HttpClientResponse resp = await _post(
-        server.port,
-        '/api/extension/popup-size',
-        <String, dynamic>{'maxWidth': 720, 'maxHeight': 600},
-        auth: _basic('k123'),
-      );
-      expect(resp.statusCode, 404);
-      await resp.drain<void>();
-    });
+    test(
+      '/api/extension/popup-size 未注入 sink → 404（旧 app / 配对 host 向后兼容）',
+      () async {
+        await startServer(apiKey: 'k123'); // onExtensionPopupSize 缺省 null
+        final HttpClientResponse resp = await _post(
+          server.port,
+          '/api/extension/popup-size',
+          <String, dynamic>{'maxWidth': 720, 'maxHeight': 600},
+          auth: _basic('k123'),
+        );
+        expect(resp.statusCode, 404);
+        await resp.drain<void>();
+      },
+    );
 
     test('/api/extension/popup-size 错 token → 401，不触发 sink（鉴权守卫）', () async {
       bool called = false;

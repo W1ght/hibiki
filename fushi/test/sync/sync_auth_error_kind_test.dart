@@ -60,8 +60,11 @@ void main() {
     test('403 的服务端原因原样保留，并进 toString', () {
       SyncAuthError? caught;
       try {
-        ops.checkStatus(403, 'GET /svc',
-            serverReason: 'HTTPS required for service config');
+        ops.checkStatus(
+          403,
+          'GET /svc',
+          serverReason: 'HTTPS required for service config',
+        );
       } on SyncAuthError catch (e) {
         caught = e;
       }
@@ -72,11 +75,18 @@ void main() {
     test('404 / 5xx / 2xx 契约不变（都不是鉴权错误）', () {
       expect(
         () => ops.checkStatus(404, 'GET /x'),
-        throwsA(isA<SyncBackendError>().having(
-            (SyncBackendError e) => e.isRetryable, 'isRetryable', isTrue)),
+        throwsA(
+          isA<SyncBackendError>().having(
+            (SyncBackendError e) => e.isRetryable,
+            'isRetryable',
+            isTrue,
+          ),
+        ),
       );
-      expect(() => ops.checkStatus(500, 'GET /x'),
-          throwsA(isA<SyncBackendError>()));
+      expect(
+        () => ops.checkStatus(500, 'GET /x'),
+        throwsA(isA<SyncBackendError>()),
+      );
       expect(() => ops.checkStatus(207, 'PROPFIND /x'), returnsNormally);
     });
   });
@@ -185,7 +195,8 @@ void main() {
       expect(
         shown,
         t.sync_err_forbidden_detail(
-            reason: 'HTTPS required for service config'),
+          reason: 'HTTPS required for service config',
+        ),
       );
     });
 
@@ -219,26 +230,33 @@ void main() {
 
   group('BUG-1323 403 不得毁掉一个好端端的会话', () {
     test('凭据类失败必须登出（TODO-836 契约）', () {
-      expect(shouldSignOutOnAuthError(SyncAuthError('Authentication failed')),
-          isTrue);
-      expect(shouldSignOutOnAuthError(SyncAuthError('insufficient_scope')),
-          isTrue);
+      expect(
+        shouldSignOutOnAuthError(SyncAuthError('Authentication failed')),
+        isTrue,
+      );
+      expect(
+        shouldSignOutOnAuthError(SyncAuthError('insufficient_scope')),
+        isTrue,
+      );
     });
 
     test('服务端拒绝不得登出', () {
       expect(
-        shouldSignOutOnAuthError(SyncAuthError(
-          'Server refused (403): GET /svc',
-          kind: SyncAuthFailureKind.forbidden,
-          serverReason: 'HTTPS required for service config',
-        )),
+        shouldSignOutOnAuthError(
+          SyncAuthError(
+            'Server refused (403): GET /svc',
+            kind: SyncAuthFailureKind.forbidden,
+            serverReason: 'HTTPS required for service config',
+          ),
+        ),
         isFalse,
       );
     });
 
     test('手动同步的 catch 走的是这个判断，不是自己再写一遍', () {
-      final String src =
-          File('lib/src/sync/manual_sync_ui.dart').readAsStringSync();
+      final String src = File(
+        'lib/src/sync/manual_sync_ui.dart',
+      ).readAsStringSync();
       // BUG-1578 起，登出判断多了一层「这条错误是哪条通道的」（互联通道的 signOut
       // 会清空整份配对配置，不能由一次 401 触发），但那一层**必须**把 kind 的判断
       // 委托回 shouldSignOutOnAuthError，而不是在 catch 里自己再写一遍。
@@ -249,10 +267,14 @@ void main() {
     });
 
     test('登出的对象是**出错那条通道**的后端，不是 getBackendType() 猜的那个', () {
-      final String src =
-          File('lib/src/sync/manual_sync_ui.dart').readAsStringSync();
-      expect(src, contains('e.channel.backend'),
-          reason: 'BUG-1578：互联对端的一次 401 曾去登出用户的云盘会话');
+      final String src = File(
+        'lib/src/sync/manual_sync_ui.dart',
+      ).readAsStringSync();
+      expect(
+        src,
+        contains('e.channel.backend'),
+        reason: 'BUG-1578：互联对端的一次 401 曾去登出用户的云盘会话',
+      );
       expect(
         src,
         isNot(contains('resolveSyncBackend(await repo.getBackendType())')),
@@ -265,7 +287,9 @@ void main() {
     test('日志行与改动前逐字相同（errors 的既有契约不动）', () {
       final SyncRunReport r = SyncRunReport();
       r.noteError(
-          'service config live sync', SyncAuthError('Authentication failed'));
+        'service config live sync',
+        SyncAuthError('Authentication failed'),
+      );
       expect(r.errors, <String>[
         'service config live sync: SyncAuthError: Authentication failed',
       ]);
@@ -275,15 +299,19 @@ void main() {
       final SyncRunReport r = SyncRunReport();
       r.noteError(
         'service config live sync',
-        SyncAuthError('Server refused (403): GET /svc',
-            kind: SyncAuthFailureKind.forbidden,
-            serverReason: 'HTTPS required for service config'),
+        SyncAuthError(
+          'Server refused (403): GET /svc',
+          kind: SyncAuthFailureKind.forbidden,
+          serverReason: 'HTTPS required for service config',
+        ),
       );
       expect(r.authFailures, hasLength(1));
       expect(r.authFailures.single.isForbidden, isTrue);
       expect(r.authFailures.single.label, 'service config live sync');
-      expect(r.authFailures.single.serverReason,
-          'HTTPS required for service config');
+      expect(
+        r.authFailures.single.serverReason,
+        'HTTPS required for service config',
+      );
     });
 
     test('非鉴权错误不进 authFailures（不许扩大化）', () {
@@ -298,7 +326,9 @@ void main() {
       final SyncRunReport r = SyncRunReport();
       for (int i = 0; i < 200; i++) {
         r.noteError(
-            'import book "b$i"', SyncAuthError('Authentication failed'));
+          'import book "b$i"',
+          SyncAuthError('Authentication failed'),
+        );
       }
       expect(r.errors, hasLength(200));
       expect(r.authFailures, hasLength(1));
@@ -309,9 +339,12 @@ void main() {
       final SyncRunReport r = SyncRunReport();
       r.noteError('a', SyncAuthError('Authentication failed'));
       r.noteError(
-          'b',
-          SyncAuthError('Server refused (403): x',
-              kind: SyncAuthFailureKind.forbidden));
+        'b',
+        SyncAuthError(
+          'Server refused (403): x',
+          kind: SyncAuthFailureKind.forbidden,
+        ),
+      );
       expect(r.authFailures, hasLength(2));
     });
 
@@ -321,9 +354,12 @@ void main() {
       final SyncRunReport live = SyncRunReport()
         ..noteError('b', SyncAuthError('Authentication failed'))
         ..noteError(
-            'c',
-            SyncAuthError('Server refused (403): x',
-                kind: SyncAuthFailureKind.forbidden));
+          'c',
+          SyncAuthError(
+            'Server refused (403): x',
+            kind: SyncAuthFailureKind.forbidden,
+          ),
+        );
       cloud.mergeFrom(live);
       expect(cloud.errors, hasLength(3));
       expect(cloud.authFailures, hasLength(2));
@@ -332,8 +368,10 @@ void main() {
 
   group('BUG-1324 「N 项失败」不再是唯一一句话', () {
     test('零失败时摘要逐字不变', () {
-      expect(summarizeSyncReport(SyncRunReport()),
-          t.sync_now_done(detail: t.sync_now_no_changes));
+      expect(
+        summarizeSyncReport(SyncRunReport()),
+        t.sync_now_done(detail: t.sync_now_no_changes),
+      );
     });
 
     test('非鉴权失败时摘要逐字不变（回归护栏）', () {
@@ -350,9 +388,11 @@ void main() {
       final SyncRunReport r = SyncRunReport()
         ..noteError(
           'service config live sync',
-          SyncAuthError('Server refused (403): GET /svc',
-              kind: SyncAuthFailureKind.forbidden,
-              serverReason: 'HTTPS required for service config'),
+          SyncAuthError(
+            'Server refused (403): GET /svc',
+            kind: SyncAuthFailureKind.forbidden,
+            serverReason: 'HTTPS required for service config',
+          ),
         );
       final String shown = summarizeSyncReport(r);
       expect(shown, contains('HTTPS required for service config'));

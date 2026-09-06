@@ -5,8 +5,9 @@ import 'package:flutter_test/flutter_test.dart';
 import '../../integration_test/test_helpers.dart';
 
 void main() {
-  testWidgets('findPrimaryNavigationTargets scopes icons to NavigationRail',
-      (WidgetTester tester) async {
+  testWidgets('findPrimaryNavigationTargets scopes icons to NavigationRail', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
@@ -29,11 +30,7 @@ void main() {
                   ),
                 ],
               ),
-              Expanded(
-                child: Center(
-                  child: Icon(Icons.search),
-                ),
-              ),
+              Expanded(child: Center(child: Icon(Icons.search))),
             ],
           ),
         ),
@@ -46,8 +43,9 @@ void main() {
     expect(tester.getCenter(targets[1]).dx, lessThan(100));
   });
 
-  testWidgets('findPrimaryNavigationTargets preserves rail tab order',
-      (WidgetTester tester) async {
+  testWidgets('findPrimaryNavigationTargets preserves rail tab order', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
@@ -80,8 +78,9 @@ void main() {
     expect(tester.widget<Icon>(targets[2]).icon, Icons.tune);
   });
 
-  testWidgets('findPrimaryNavigationTargets falls back to bottom navigation',
-      (WidgetTester tester) async {
+  testWidgets('findPrimaryNavigationTargets falls back to bottom navigation', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
@@ -109,8 +108,9 @@ void main() {
     expect(tester.widget<Icon>(targets[1]).icon, Icons.search);
   });
 
-  testWidgets('findSearchField prefers keyed dictionary search field',
-      (WidgetTester tester) async {
+  testWidgets('findSearchField prefers keyed dictionary search field', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
@@ -126,12 +126,15 @@ void main() {
 
     final Finder target = findSearchField();
 
-    expect(tester.widget<TextField>(target).key,
-        const ValueKey<String>('home_dictionary_search_field'));
+    expect(
+      tester.widget<TextField>(target).key,
+      const ValueKey<String>('home_dictionary_search_field'),
+    );
   });
 
-  testWidgets('findDictionaryResultEvidence ignores unrelated cards',
-      (WidgetTester tester) async {
+  testWidgets('findDictionaryResultEvidence ignores unrelated cards', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
@@ -152,13 +155,12 @@ void main() {
     expect(findDictionaryResultEvidence(), findsOneWidget);
   });
 
-  testWidgets('isHomeReady ignores unrelated book icons',
-      (WidgetTester tester) async {
+  testWidgets('isHomeReady ignores unrelated book icons', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(
       MaterialApp(
-        home: Scaffold(
-          body: Center(child: Icon(Icons.menu_book)),
-        ),
+        home: Scaffold(body: Center(child: Icon(Icons.menu_book))),
       ),
     );
 

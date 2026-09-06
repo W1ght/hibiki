@@ -32,8 +32,11 @@ void main() {
 
   setUpAll(() {
     final File f = File('lib/src/models/app_model.dart');
-    expect(f.existsSync(), isTrue,
-        reason: 'app_model.dart not found at ${f.absolute.path}');
+    expect(
+      f.existsSync(),
+      isTrue,
+      reason: 'app_model.dart not found at ${f.absolute.path}',
+    );
     appModel = f.readAsStringSync();
   });
 
@@ -62,40 +65,58 @@ void main() {
     test('bucketDictPaths 把 kanji 收进独立桶（不并进 term，TODO-094 S4）', () {
       final String body = bodyOf(appModel, 'bucketDictPaths(');
       expect(
-          body.contains('case DictionaryType.kanji:') &&
-              body.contains('kanji.add('),
-          isTrue,
-          reason: 'bucketDictPaths 的 kanji case 必须加进独立 kanji 桶');
+        body.contains('case DictionaryType.kanji:') &&
+            body.contains('kanji.add('),
+        isTrue,
+        reason: 'bucketDictPaths 的 kanji case 必须加进独立 kanji 桶',
+      );
       expect(
-          body.contains('case DictionaryType.term:\n'
-              '        case DictionaryType.kanji:'),
-          isFalse,
-          reason:
-              'kanji must not fall through to the term case (pre-S4 behaviour)');
+        body.contains(
+          'case DictionaryType.term:\n'
+          '        case DictionaryType.kanji:',
+        ),
+        isFalse,
+        reason:
+            'kanji must not fall through to the term case (pre-S4 behaviour)',
+      );
     });
 
-    test(
-        '_rebuildDictPathsCache passes the kanji bucket to initializeTyped '
+    test('_rebuildDictPathsCache passes the kanji bucket to initializeTyped '
         '(not folded into termPaths)', () {
       final String body = bodyOf(appModel, 'void _rebuildDictPathsCache(');
-      expect(body.contains('bucketDictPaths('), isTrue,
-          reason: 'sync rebuild must bucket via bucketDictPaths');
-      expect(body.contains('kanjiPaths: b.kanji'), isTrue,
-          reason:
-              'initializeTyped must receive the kanji bucket so kanji dicts '
-              'load into the kanji index (TODO-094 S4)');
+      expect(
+        body.contains('bucketDictPaths('),
+        isTrue,
+        reason: 'sync rebuild must bucket via bucketDictPaths',
+      );
+      expect(
+        body.contains('kanjiPaths: b.kanji'),
+        isTrue,
+        reason:
+            'initializeTyped must receive the kanji bucket so kanji dicts '
+            'load into the kanji index (TODO-094 S4)',
+      );
     });
 
     test(
-        '_rebuildDictPathsCacheAsync passes the kanji bucket to initializeTyped',
-        () {
-      final String body =
-          bodyOf(appModel, 'Future<void> _rebuildDictPathsCacheAsync(');
-      expect(body.contains('bucketDictPaths('), isTrue,
-          reason: 'async rebuild must bucket via bucketDictPaths');
-      expect(body.contains('kanjiPaths: b.kanji'), isTrue,
-          reason: 'async initializeTyped must receive the kanji bucket');
-    });
+      '_rebuildDictPathsCacheAsync passes the kanji bucket to initializeTyped',
+      () {
+        final String body = bodyOf(
+          appModel,
+          'Future<void> _rebuildDictPathsCacheAsync(',
+        );
+        expect(
+          body.contains('bucketDictPaths('),
+          isTrue,
+          reason: 'async rebuild must bucket via bucketDictPaths',
+        );
+        expect(
+          body.contains('kanjiPaths: b.kanji'),
+          isTrue,
+          reason: 'async initializeTyped must receive the kanji bucket',
+        );
+      },
+    );
   });
 
   /// Slices the source between the [start] signature and the next method
@@ -115,53 +136,87 @@ void main() {
       // `_searchRemoteDictionary` is the method immediately after
       // `searchDictionary`, bounding its source region.
       final String body = regionBetween(
-          appModel,
-          'Future<DictionarySearchResult> searchDictionary(',
-          'Future<DictionarySearchResult?> _searchRemoteDictionary(');
-      expect(body.contains('queryKanjiForTerm('), isTrue,
-          reason: 'searchDictionary must query the kanji bucket for a '
-              'single-kanji lookup');
-      expect(body.contains('withKanjiResults('), isTrue,
-          reason: 'kanji results must be attached to the term result so the '
-              'popup data layer carries them (TODO-094 S4)');
-      expect(body.contains('kanjiResults: kanjiResults'), isTrue,
-          reason: 'a kanji-only lookup (no term match) must still return a '
-              'result carrying the kanji card');
+        appModel,
+        'Future<DictionarySearchResult> searchDictionary(',
+        'Future<DictionarySearchResult?> _searchRemoteDictionary(',
+      );
+      expect(
+        body.contains('queryKanjiForTerm('),
+        isTrue,
+        reason:
+            'searchDictionary must query the kanji bucket for a '
+            'single-kanji lookup',
+      );
+      expect(
+        body.contains('withKanjiResults('),
+        isTrue,
+        reason:
+            'kanji results must be attached to the term result so the '
+            'popup data layer carries them (TODO-094 S4)',
+      );
+      expect(
+        body.contains('kanjiResults: kanjiResults'),
+        isTrue,
+        reason:
+            'a kanji-only lookup (no term match) must still return a '
+            'result carrying the kanji card',
+      );
     });
 
     test('queryKanjiForTerm only queries the engine for a single kanji', () {
-      final String body =
-          bodyOf(appModel, 'List<FushiKanjiResult> queryKanjiForTerm(');
-      expect(body.contains('isSingleKanji('), isTrue,
-          reason: 'must gate the engine call on isSingleKanji so multi-char '
-              'terms and kana/latin singletons skip the kanji query');
-      expect(body.contains('FushiDicts.instance.queryKanji('), isTrue,
-          reason: 'must call the FFI queryKanji for a real single kanji');
+      final String body = bodyOf(
+        appModel,
+        'List<FushiKanjiResult> queryKanjiForTerm(',
+      );
+      expect(
+        body.contains('isSingleKanji('),
+        isTrue,
+        reason:
+            'must gate the engine call on isSingleKanji so multi-char '
+            'terms and kana/latin singletons skip the kanji query',
+      );
+      expect(
+        body.contains('FushiDicts.instance.queryKanji('),
+        isTrue,
+        reason: 'must call the FFI queryKanji for a real single kanji',
+      );
     });
   });
 
   group('Android popup process routes kanji to its own bucket', () {
     test('PopupDbReader maps the kanji type to a real "kanji" bucket', () {
-      final File f =
-          File('android/app/src/main/java/app/fushi/reader/PopupDbReader.kt');
-      expect(f.existsSync(), isTrue);
-      final String src = f.readAsStringSync();
-      expect(src.contains('"term", "kanji" -> "term"'), isFalse,
-          reason: 'the pre-S4 kanji->term shim must be removed (TODO-094 S4)');
-      expect(src.contains('"kanji" -> "kanji"'), isTrue,
-          reason: 'the popup DB reader must emit a real "kanji" type so the '
-              'kanji bucket is routed to nativeAddKanjiDict');
-    });
-
-    test('FushiBridge routes a "kanji" type to nativeAddKanjiDict', () {
-      final File f =
-          File('android/app/src/main/java/app/fushi/reader/FushiBridge.kt');
+      final File f = File(
+        'android/app/src/main/java/app/fushi/reader/PopupDbReader.kt',
+      );
       expect(f.existsSync(), isTrue);
       final String src = f.readAsStringSync();
       expect(
-          src.contains('"kanji" -> nativeAddKanjiDict(handle, path)'), isTrue,
-          reason: 'the kanji branch (no longer dormant) must add to the native '
-              'kanji index (TODO-094 S4)');
+        src.contains('"term", "kanji" -> "term"'),
+        isFalse,
+        reason: 'the pre-S4 kanji->term shim must be removed (TODO-094 S4)',
+      );
+      expect(
+        src.contains('"kanji" -> "kanji"'),
+        isTrue,
+        reason:
+            'the popup DB reader must emit a real "kanji" type so the '
+            'kanji bucket is routed to nativeAddKanjiDict',
+      );
+    });
+
+    test('FushiBridge routes a "kanji" type to nativeAddKanjiDict', () {
+      final File f = File(
+        'android/app/src/main/java/app/fushi/reader/FushiBridge.kt',
+      );
+      expect(f.existsSync(), isTrue);
+      final String src = f.readAsStringSync();
+      expect(
+        src.contains('"kanji" -> nativeAddKanjiDict(handle, path)'),
+        isTrue,
+        reason:
+            'the kanji branch (no longer dormant) must add to the native '
+            'kanji index (TODO-094 S4)',
+      );
     });
   });
 }

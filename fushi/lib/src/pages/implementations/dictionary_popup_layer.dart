@@ -25,7 +25,7 @@ export 'package:fushi/src/pages/implementations/dictionary_popup_controller.dart
 String dbgRect(Rect? r) => r == null
     ? 'null'
     : 'L${r.left.toStringAsFixed(1)} T${r.top.toStringAsFixed(1)} '
-        'W${r.width.toStringAsFixed(1)} H${r.height.toStringAsFixed(1)}';
+          'W${r.width.toStringAsFixed(1)} H${r.height.toStringAsFixed(1)}';
 
 Rect calcPopupPosition({
   required Rect selectionRect,
@@ -55,8 +55,10 @@ Rect calcPopupPosition({
   final double effectiveBottom = screen.height - reserve;
   final double horizontalInset = padding.clamp(0, screen.width / 2);
   final double verticalInset = padding.clamp(0, effectiveBottom / 2);
-  final double availableWidth =
-      (screen.width - horizontalInset * 2).clamp(0, maxWidth);
+  final double availableWidth = (screen.width - horizontalInset * 2).clamp(
+    0,
+    maxWidth,
+  );
   final double availableHeight =
       (effectiveBottom - effectiveTop - verticalInset * 2).clamp(0, maxHeight);
   final double minLeft = horizontalInset;
@@ -109,13 +111,15 @@ Rect calcPopupPosition({
     left = left.clamp(minLeft, maxLeft);
 
     final Rect placed = Rect.fromLTWH(left, top, width, height);
-    glog('inapp-place: sel=${dbgRect(selectionRect)} '
-        'screen=${screen.width.toStringAsFixed(1)}x'
-        '${screen.height.toStringAsFixed(1)} below=$below '
-        'roomBelow=${roomBelow.toStringAsFixed(1)} '
-        'roomAbove=${roomAbove.toStringAsFixed(1)} gap=$gap '
-        'minTop=${safeMinTop.toStringAsFixed(1)} '
-        'maxBottom=${maxBottom.toStringAsFixed(1)} -> ${dbgRect(placed)}');
+    glog(
+      'inapp-place: sel=${dbgRect(selectionRect)} '
+      'screen=${screen.width.toStringAsFixed(1)}x'
+      '${screen.height.toStringAsFixed(1)} below=$below '
+      'roomBelow=${roomBelow.toStringAsFixed(1)} '
+      'roomAbove=${roomAbove.toStringAsFixed(1)} gap=$gap '
+      'minTop=${safeMinTop.toStringAsFixed(1)} '
+      'maxBottom=${maxBottom.toStringAsFixed(1)} -> ${dbgRect(placed)}',
+    );
     return placed;
   }
 
@@ -138,8 +142,9 @@ Rect calcPopupPosition({
         roomLeft < minPopupWidth) {
       final double roomBelow = maxBottom - (selectionRect.bottom + gap);
       final double roomAbove = (selectionRect.top - gap) - safeMinTop;
-      final double bestVerticalRoom =
-          roomBelow > roomAbove ? roomBelow : roomAbove;
+      final double bestVerticalRoom = roomBelow > roomAbove
+          ? roomBelow
+          : roomAbove;
       if (bestVerticalRoom >= minPopupHeight) {
         return placeAboveBelow();
       }
@@ -204,10 +209,14 @@ Rect dockedPopupRect({
   final double effectiveTop = topReserve.clamp(0, screen.height);
   final double effectiveBottom = screen.height - reserve;
   final double horizontalInset = inset.clamp(0, screen.width / 2);
-  final double verticalInset =
-      inset.clamp(0, (effectiveBottom).clamp(0, screen.height) / 2);
-  final double width =
-      (screen.width - horizontalInset * 2).clamp(0, screen.width);
+  final double verticalInset = inset.clamp(
+    0,
+    (effectiveBottom).clamp(0, screen.height) / 2,
+  );
+  final double width = (screen.width - horizontalInset * 2).clamp(
+    0,
+    screen.width,
+  );
   final double maxAvail = (effectiveBottom - effectiveTop - verticalInset * 2)
       .clamp(0, screen.height);
   final double height = dockedHeight.clamp(0, maxAvail);
@@ -309,10 +318,14 @@ Rect anchorPopupTopLeft({
   final double maxTop = (screen.height - inset).clamp(0.0, screen.height);
   final double left = topLeft.dx.clamp(inset.clamp(0.0, maxLeft), maxLeft);
   final double top = topLeft.dy.clamp(inset.clamp(0.0, maxTop), maxTop);
-  final double width = anchored.width
-      .clamp(0.0, (screen.width - inset - left).clamp(0.0, screen.width));
-  final double height = anchored.height
-      .clamp(0.0, (screen.height - inset - top).clamp(0.0, screen.height));
+  final double width = anchored.width.clamp(
+    0.0,
+    (screen.width - inset - left).clamp(0.0, screen.width),
+  );
+  final double height = anchored.height.clamp(
+    0.0,
+    (screen.height - inset - top).clamp(0.0, screen.height),
+  );
   return Rect.fromLTWH(left, top, width, height);
 }
 
@@ -331,8 +344,7 @@ bool shouldShowLookupDismissBarrier({
   required bool hasVisiblePopup,
   required bool isSearching,
   required bool hiddenByDialog,
-}) =>
-    (hasVisiblePopup || isSearching) && !hiddenByDialog;
+}) => (hasVisiblePopup || isSearching) && !hiddenByDialog;
 
 /// 把一个弹窗层 [child] 按 [pos] 摆放；隐藏层（[visible]=false，即 BUG-094 常驻热槽 /
 /// TODO-058 挂起冷层）停到屏幕右外侧 `(screen.width + 8, 0)` 继续预热。
@@ -527,11 +539,13 @@ Rect popupWordScreenRect({
     final Offset bottomRight = obj.localToGlobal(localRect.bottomRight);
     final Rect mapped = Rect.fromPoints(topLeft, bottomRight);
     final Offset wvOrigin = obj.localToGlobal(Offset.zero);
-    glog('inapp-anchor: local=${dbgRect(localRect)} '
-        'wv=${obj.size.width.toStringAsFixed(1)}x'
-        '${obj.size.height.toStringAsFixed(1)} '
-        'wvOrigin=${wvOrigin.dx.toStringAsFixed(1)},'
-        '${wvOrigin.dy.toStringAsFixed(1)} -> screen=${dbgRect(mapped)}');
+    glog(
+      'inapp-anchor: local=${dbgRect(localRect)} '
+      'wv=${obj.size.width.toStringAsFixed(1)}x'
+      '${obj.size.height.toStringAsFixed(1)} '
+      'wvOrigin=${wvOrigin.dx.toStringAsFixed(1)},'
+      '${wvOrigin.dy.toStringAsFixed(1)} -> screen=${dbgRect(mapped)}',
+    );
     return mapped;
   }
   glog('inapp-anchor: RENDERBOX UNAVAILABLE -> fallback=${dbgRect(fallback)}');
@@ -571,8 +585,10 @@ bool reanchorNestedPopupToWord({
   required Rect? wordLocalRect,
   required Rect fallback,
 }) {
-  glog('inapp-reanchor: term="$expectedTerm" '
-      'wordLocal=${dbgRect(wordLocalRect)} fallback=${dbgRect(fallback)}');
+  glog(
+    'inapp-reanchor: term="$expectedTerm" '
+    'wordLocal=${dbgRect(wordLocalRect)} fallback=${dbgRect(fallback)}',
+  );
   if (wordLocalRect == null || wordLocalRect.isEmpty) return false;
   final int childIndex = parentIndex + 1;
   if (childIndex <= 0 || childIndex >= controller.entries.length) return false;
@@ -583,8 +599,10 @@ bool reanchorNestedPopupToWord({
     localRect: wordLocalRect,
     fallback: fallback,
   );
-  glog('inapp-reanchor: -> screenRect=${dbgRect(screenRect)} '
-      'prevAnchor=${dbgRect(child.selectionRect)}');
+  glog(
+    'inapp-reanchor: -> screenRect=${dbgRect(screenRect)} '
+    'prevAnchor=${dbgRect(child.selectionRect)}',
+  );
   if (screenRect == fallback || screenRect == child.selectionRect) return false;
   controller.reanchorEntry(child, screenRect);
   return true;
@@ -663,34 +681,37 @@ class DictionaryPopupLayer extends StatelessWidget {
   final void Function(String text, Rect localRect) onTextSelected;
   final void Function(String query, Rect localRect) onLinkClick;
   final Future<MinePopupResult> Function(Map<String, String> fields)
-      onMineEntry;
+  onMineEntry;
 
   /// TODO-270 D：覆盖「最新制的那张卡」（[noteId] + 新字段）。null 时弹窗不进
   /// 「最新可改」第三态，点 ✓ 仍走旧的查重/再制流程（向后兼容）。
   final Future<MinePopupResult> Function(
-      int noteId, Map<String, String> fields)? onUpdateEntry;
+    int noteId,
+    Map<String, String> fields,
+  )?
+  onUpdateEntry;
   final Future<bool> Function(String expression, String reading)
-      onDuplicateCheck;
+  onDuplicateCheck;
 
   /// TODO-614：覆写范围=「全部」时按内容反查可覆写的已存在 note id（多张取最近），
   /// 透传给 [DictionaryPopupWebView] 让更早的卡也能进「✓↩ 最新可改」态。null 时弹窗
   /// 维持旧两态行为（默认 latest / AnkiDroid 降级）。
   final Future<int?> Function(String expression, String reading)?
-      onOverwriteTargetNoteId;
+  onOverwriteTargetNoteId;
 
   /// TODO-1007/1008：点 ✓（卡已存在）弹操作选择（覆写/新增重复卡/查看·在 Anki 中打开），
   /// 命中多张让用户选。透传给 [DictionaryPopupWebView]。null 时回退旧两态行为。
   final Future<MinePopupResult> Function(Map<String, String> fields)?
-      onMinedCardAction;
+  onMinedCardAction;
 
   /// TODO-1360 / BUG-2051：已制卡的词旁 ↗「在 Anki 中打开卡片」按钮回调，透传给
   /// [DictionaryPopupWebView]。宿主把 Anki 浏览器过滤到「Anki 认为这个词已有的卡」
   /// （判据与画 ✓ 的查重同源），并回传三态结局供弹窗就地提示。
   final Future<AnkiOpenWordOutcome> Function(String expression, String reading)?
-      onOpenInAnki;
+  onOpenInAnki;
   final Future<bool> Function(Map<String, String> fields)? onFavoriteEntry;
   final Future<bool> Function(String expression, String reading)?
-      onFavoriteCheck;
+  onFavoriteCheck;
 
   /// TODO-270 F/G「查词窗口多句合一制卡」(乙方案)：弹窗「+句」追加当前句到宿主草稿，
   /// 返回累积句数。null 时弹窗不渲染「+句」按钮（纯查词页 / 视频 E 未接入前向后兼容）。
@@ -698,7 +719,7 @@ class DictionaryPopupLayer extends StatelessWidget {
 
   /// TODO-393：「上 N 句 / 下 N 句」上下文选择回调，透传给 webview。
   final Future<int> Function(int prevCount, int nextCount)?
-      onSetSentenceContext;
+  onSetSentenceContext;
 
   /// TODO-382「+句」可撤销：弹窗点「清空已加句子」清空宿主草稿，返回清空后句数（恒 0）。
   /// 与 [onAppendSentence] 同生命周期：支持草稿的表面非空，纯查词页 null（不渲染清空入口）。
@@ -711,14 +732,14 @@ class DictionaryPopupLayer extends StatelessWidget {
 
   /// BUG-763/766：弹窗点某词条「调整上下文」→ 宿主弹 app 原生顶层对话框。透传给 webview。
   final Future<void> Function(int entryIndex, String matched)?
-      onOpenSentenceContextModal;
+  onOpenSentenceContextModal;
   final VoidCallback? onTapOutside;
   final VoidCallback? onScrolledToBottom;
   final VoidCallback? onRendered;
 
   /// JS 内容高度与当前 WebView 视口高度。宿主用二者差值自适应外壳总高。
   final void Function(double contentHeight, double viewportHeight)?
-      onContentMetrics;
+  onContentMetrics;
 
   /// TODO-058 fail-safe：弹窗 WebView 主框架加载失败时触发，宿主据此立即翻可见
   /// 挂起的冷层（加载失败也显示，不卡死）。
@@ -780,15 +801,18 @@ class DictionaryPopupLayer extends StatelessWidget {
   final VoidCallback? onResizeCancel;
 
   /// 拖拽把手的测试锚点（widget 测试用 `find.byKey` 定位后模拟 pan）。
-  static const Key resizeGripKey =
-      ValueKey<String>('dictionary-popup-resize-grip');
+  static const Key resizeGripKey = ValueKey<String>(
+    'dictionary-popup-resize-grip',
+  );
 
   /// TODO-406/407：滑动关闭是否生效——平台/偏好开关（[enableSwipeToClose]）与调用方
   /// 层级开关（[swipeDismissible]）同时为真才挂 [SwipeDismissWrapper]。
   bool get _swipeActive => swipeDismissible && enableSwipeToClose;
 
-  static const BoxConstraints _topActionConstraints =
-      BoxConstraints.tightFor(width: 36, height: 36);
+  static const BoxConstraints _topActionConstraints = BoxConstraints.tightFor(
+    width: 36,
+    height: 36,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -1046,8 +1070,9 @@ class DictionaryPopupLayer extends StatelessWidget {
       return null;
     }
 
-    final String backTooltip =
-        MaterialLocalizations.of(context).backButtonTooltip;
+    final String backTooltip = MaterialLocalizations.of(
+      context,
+    ).backButtonTooltip;
 
     // 左簇：返回（可选）+ A−/A+ 字号按钮（TODO-1353）。定宽，钉在行首。
     final Widget leftCluster = Row(
@@ -1108,8 +1133,9 @@ class DictionaryPopupLayer extends StatelessWidget {
   /// 交给 [FushiIconButton.tooltip]，由那唯一一层负责显示（并带
   /// [kIconButtonTooltipHoverDelay] 悬停延迟，避免子弹窗落到光标下就自动冒泡盖住父层正文）。
   Widget _buildZoomFontButton(BuildContext context, {required bool zoomIn}) {
-    final String label =
-        zoomIn ? t.popup_font_size_increase : t.popup_font_size_decrease;
+    final String label = zoomIn
+        ? t.popup_font_size_increase
+        : t.popup_font_size_decrease;
     // 桌面才提 Ctrl+滚轮：移动端没有滚轮，多这行只会让气泡更长。
     final String message = isDesktopPlatform
         ? '$label\n${t.dictionary_font_size_zoom_hint}'
@@ -1135,7 +1161,8 @@ class DictionaryPopupLayer extends StatelessWidget {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
 
     final bool hasRenderableResults = _hasRenderableResults;
-    final bool isSeedWarmSlot = keepWebViewWarm &&
+    final bool isSeedWarmSlot =
+        keepWebViewWarm &&
         result != null &&
         result!.searchTerm.isEmpty &&
         !hasRenderableResults;
@@ -1220,8 +1247,8 @@ class DictionaryPopupLayer extends StatelessWidget {
           message: t.no_search_results,
           iconSize: 20,
           messageStyle: Theme.of(context).textTheme.bodySmall?.copyWith(
-                color: Theme.of(context).colorScheme.onSurfaceVariant,
-              ),
+            color: Theme.of(context).colorScheme.onSurfaceVariant,
+          ),
         ),
       ),
     );
@@ -1320,9 +1347,8 @@ class _BodySwipeDismissDetectorState extends State<_BodySwipeDismissDetector>
   /// null=尚未判轴，true=横拖关闭候选，false=纵向/斜向滚动（交还 WebView）。
   bool? _pointerIsHorizontal;
 
-  double get _threshold => swipeDismissThreshold(
-        ReaderFushiSource.instance.dismissSwipeSensitivity,
-      );
+  double get _threshold =>
+      swipeDismissThreshold(ReaderFushiSource.instance.dismissSwipeSensitivity);
 
   @override
   void initState() {
@@ -1337,8 +1363,9 @@ class _BodySwipeDismissDetectorState extends State<_BodySwipeDismissDetector>
     super.didChangeDependencies();
     // 墨水屏模式：滑出/弹回补间归零（Duration.zero 的 forward 立即 complete，
     // onDismiss 时序不变，只是不再画补间帧）。跟随主题切换双向生效。
-    _controller.duration =
-        isEinkTheme(context) ? Duration.zero : _kSlideDuration;
+    _controller.duration = isEinkTheme(context)
+        ? Duration.zero
+        : _kSlideDuration;
   }
 
   @override
@@ -1482,15 +1509,14 @@ class _BodySwipeDismissDetectorState extends State<_BodySwipeDismissDetector>
                 // 跟手淡出：位移越大越淡，最低 0.3（与 SwipeDismissWrapper 同手感）；
                 // 滑出补间末段（_dragTargetX = width + margin）自然趋近 0。
                 final double opacity = _dismissing
-                    ? (1 - (_dragX.abs() / (width + _kSlideOutMargin)))
-                        .clamp(0.0, 1.0)
+                    ? (1 - (_dragX.abs() / (width + _kSlideOutMargin))).clamp(
+                        0.0,
+                        1.0,
+                      )
                     : (1 - (_dragX.abs() / width) * 0.7).clamp(0.3, 1.0);
                 return Transform.translate(
                   offset: Offset(_dragX, 0),
-                  child: Opacity(
-                    opacity: opacity,
-                    child: widget.child,
-                  ),
+                  child: Opacity(opacity: opacity, child: widget.child),
                 );
               },
             )
@@ -1525,8 +1551,9 @@ class _PopupResizeGrip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color color =
-        Theme.of(context).colorScheme.onSurfaceVariant.withValues(alpha: 0.55);
+    final Color color = Theme.of(
+      context,
+    ).colorScheme.onSurfaceVariant.withValues(alpha: 0.55);
     return MouseRegion(
       cursor: SystemMouseCursors.resizeUpLeftDownRight,
       child: GestureDetector(

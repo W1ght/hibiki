@@ -32,26 +32,30 @@ Future<FushiDatabase> _openV34DbWithoutStreamSpecJson() async {
     NativeDatabase.memory(
       setup: (rawDb) {
         // Minimal video_books shaped like the v34 schema (no stream_spec_json).
-        rawDb.execute('CREATE TABLE video_books ('
-            'book_uid TEXT NOT NULL PRIMARY KEY, '
-            'title TEXT NOT NULL, '
-            'video_path TEXT NOT NULL, '
-            'subtitle_source TEXT, '
-            'secondary_subtitle_source TEXT, '
-            'subtitle_format TEXT, '
-            'embedded_subtitle_track INTEGER, '
-            'cover_path TEXT, '
-            'last_position_ms INTEGER NOT NULL DEFAULT 0, '
-            'imported_at INTEGER, '
-            'playlist_json TEXT, '
-            'current_episode INTEGER NOT NULL DEFAULT 0, '
-            'audio_track_id TEXT, '
-            'delay_ms INTEGER NOT NULL DEFAULT 0, '
-            'completed_at INTEGER, '
-            'source_id INTEGER)');
-        rawDb.execute('INSERT INTO video_books (book_uid, title, video_path, '
-            'last_position_ms, current_episode, delay_ms) VALUES '
-            "('video/stream/x', 't', 'https://x/y.m3u8', 0, 0, 0)");
+        rawDb.execute(
+          'CREATE TABLE video_books ('
+          'book_uid TEXT NOT NULL PRIMARY KEY, '
+          'title TEXT NOT NULL, '
+          'video_path TEXT NOT NULL, '
+          'subtitle_source TEXT, '
+          'secondary_subtitle_source TEXT, '
+          'subtitle_format TEXT, '
+          'embedded_subtitle_track INTEGER, '
+          'cover_path TEXT, '
+          'last_position_ms INTEGER NOT NULL DEFAULT 0, '
+          'imported_at INTEGER, '
+          'playlist_json TEXT, '
+          'current_episode INTEGER NOT NULL DEFAULT 0, '
+          'audio_track_id TEXT, '
+          'delay_ms INTEGER NOT NULL DEFAULT 0, '
+          'completed_at INTEGER, '
+          'source_id INTEGER)',
+        );
+        rawDb.execute(
+          'INSERT INTO video_books (book_uid, title, video_path, '
+          'last_position_ms, current_episode, delay_ms) VALUES '
+          "('video/stream/x', 't', 'https://x/y.m3u8', 0, 0, 0)",
+        );
         rawDb.execute('PRAGMA user_version = 34');
       },
     ),
@@ -68,16 +72,20 @@ Future<FushiDatabase> _openV44DbWithoutCollectionAnilistId() async {
     NativeDatabase.memory(
       setup: (rawDb) {
         // Minimal media_collections shaped like the v44 schema (no anilist_id).
-        rawDb.execute('CREATE TABLE media_collections ('
-            'id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, '
-            'name TEXT NOT NULL, '
-            "collection_type TEXT NOT NULL DEFAULT 'collection', "
-            'cover_source TEXT, '
-            'sort_order INTEGER NOT NULL DEFAULT 0, '
-            'created_at INTEGER NOT NULL, '
-            'order_updated_at INTEGER NOT NULL DEFAULT 0)');
-        rawDb.execute('INSERT INTO media_collections (id, name, created_at) '
-            "VALUES (1, 'Bocchi the Rock!', 1)");
+        rawDb.execute(
+          'CREATE TABLE media_collections ('
+          'id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, '
+          'name TEXT NOT NULL, '
+          "collection_type TEXT NOT NULL DEFAULT 'collection', "
+          'cover_source TEXT, '
+          'sort_order INTEGER NOT NULL DEFAULT 0, '
+          'created_at INTEGER NOT NULL, '
+          'order_updated_at INTEGER NOT NULL DEFAULT 0)',
+        );
+        rawDb.execute(
+          'INSERT INTO media_collections (id, name, created_at) '
+          "VALUES (1, 'Bocchi the Rock!', 1)",
+        );
         rawDb.execute('PRAGMA user_version = 44');
       },
     ),
@@ -94,18 +102,22 @@ Future<FushiDatabase> _openV35DbWithoutFavoriteBookColumns() async {
     NativeDatabase.memory(
       setup: (rawDb) {
         // Minimal favorite_words shaped like the v35 schema (no book_key/title).
-        rawDb.execute('CREATE TABLE favorite_words ('
-            'id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, '
-            'expression TEXT NOT NULL, '
-            'reading TEXT NOT NULL, '
-            'glossary TEXT NOT NULL, '
-            'source_type TEXT NOT NULL, '
-            'date_key TEXT NOT NULL, '
-            'created_at INTEGER NOT NULL, '
-            'UNIQUE (expression, reading, source_type))');
-        rawDb.execute('INSERT INTO favorite_words (expression, reading, '
-            'glossary, source_type, date_key, created_at) VALUES '
-            "('語', 'ご', 'g', 'book', '2026-07-06', 1)");
+        rawDb.execute(
+          'CREATE TABLE favorite_words ('
+          'id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, '
+          'expression TEXT NOT NULL, '
+          'reading TEXT NOT NULL, '
+          'glossary TEXT NOT NULL, '
+          'source_type TEXT NOT NULL, '
+          'date_key TEXT NOT NULL, '
+          'created_at INTEGER NOT NULL, '
+          'UNIQUE (expression, reading, source_type))',
+        );
+        rawDb.execute(
+          'INSERT INTO favorite_words (expression, reading, '
+          'glossary, source_type, date_key, created_at) VALUES '
+          "('語', 'ご', 'g', 'book', '2026-07-06', 1)",
+        );
         rawDb.execute('PRAGMA user_version = 35');
       },
     ),
@@ -713,7 +725,8 @@ void main() {
       final db = await _openDb();
       final tables = await db
           .customSelect(
-              "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'")
+            "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'",
+          )
           .get();
       final tableNames = tables.map((r) => r.data['name'] as String).toSet();
 
@@ -758,315 +771,370 @@ void main() {
       expect(await db.getSyncBaseline('x', 'progress'), isNull);
     });
 
-    test('real v14->v15 upgrade creates a usable sync_baselines table',
-        () async {
-      // A pre-v15 DB has no sync_baselines table; opening it must drive the
-      // from<15 onUpgrade branch (createTable(syncBaselines)) rather than
-      // onCreate.
-      final db = await _openV14DbWithoutSyncBaselines();
+    test(
+      'real v14->v15 upgrade creates a usable sync_baselines table',
+      () async {
+        // A pre-v15 DB has no sync_baselines table; opening it must drive the
+        // from<15 onUpgrade branch (createTable(syncBaselines)) rather than
+        // onCreate.
+        final db = await _openV14DbWithoutSyncBaselines();
 
-      // The upgrade ladder bumped the schema to the current version (a v14 DB
-      // walks the full ladder past 15 to the latest schema).
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
+        // The upgrade ladder bumped the schema to the current version (a v14 DB
+        // walks the full ladder past 15 to the latest schema).
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
 
-      // The newly-migrated table exists and querying an absent baseline does
-      // not throw.
-      expect(await db.getSyncBaseline('x', 'progress'), isNull);
-    });
-
-    test('real v15->v17 upgrade creates a book_uid-keyed video_books table',
-        () async {
-      // A pre-v16 (v15) DB has no video_books table; opening it must walk the
-      // ladder past the name-PK v16 step and drive the from<17 onUpgrade branch
-      // (createTable(videoBooks)) — building the full schema (book_uid PK +
-      // playlist_json / current_episode / audio_track_id / delay_ms) in one
-      // shot, because develop users never had a video_books table.
-      final db = await _openV15DbWithoutVideoBooks();
-
-      // The upgrade ladder bumped the schema to the current version.
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
-
-      // The table carries the full v17 column set (no stepwise add-column
-      // ladder remains).
-      final cols =
-          await db.customSelect("PRAGMA table_info('video_books')").get();
-      final colNames = cols.map((r) => r.data['name'] as String).toSet();
-      expect(
-        colNames,
-        containsAll([
-          'book_uid',
-          'playlist_json',
-          'current_episode',
-          'audio_track_id',
-          'delay_ms'
-        ]),
-      );
-      // book_uid is the primary key (pk == 1); there is no autoincrement id.
-      expect(colNames, isNot(contains('id')));
-      final bookUidCol = cols.firstWhere((r) => r.data['name'] == 'book_uid');
-      expect(bookUidCol.data['pk'], 1);
-
-      // The newly-migrated table is usable: upsert then read back.
-      await db.upsertVideoBook(const VideoBooksCompanion(
-        bookUid: Value('video/migrated'),
-        title: Value('Migrated'),
-        videoPath: Value('/abs/migrated.mp4'),
-      ));
-      final row = await db.getVideoBookByBookUid('video/migrated');
-      expect(row, isNotNull);
-      expect(row!.title, 'Migrated');
-      expect(row.lastPositionMs, 0);
-      expect(row.delayMs, 0);
-    });
-
-    test('real v20->v21 upgrade creates a usable video tag mapping path',
-        () async {
-      // A v20 DB has video_books but no video_book_tag_mappings; opening it must
-      // drive the from<21 onUpgrade branch（v77 冻结 SQL 建表，随后 v77 步把行
-      // 搬进 tag_assignments 并 DROP 旧表）——标签链路必须在全阶梯后仍可用。
-      final db = await _openV20DbWithoutVideoTagMappings();
-
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
-
-      // The new mapping table exists and shares the BookTags pool: tag the
-      // seeded video book and read it back.
-      final tagId = await db.createTag('Migrated', 0xFF112233);
-      await db.addTagToVideoBook('video/seed', tagId);
-      final tags = await db.getTagsForVideoBook('video/seed');
-      expect(tags, hasLength(1));
-      expect(tags.single.name, 'Migrated');
-    });
+        // The newly-migrated table exists and querying an absent baseline does
+        // not throw.
+        expect(await db.getSyncBaseline('x', 'progress'), isNull);
+      },
+    );
 
     test(
-        'real v21->v22 upgrade adds video stats tables + completed_at losslessly',
-        () async {
-      // A v21 DB has video_books (no completed_at) and no video stats tables;
-      // opening it must drive the from<22 onUpgrade branch.
-      final db = await _openV21DbWithoutVideoStats();
+      'real v15->v17 upgrade creates a book_uid-keyed video_books table',
+      () async {
+        // A pre-v16 (v15) DB has no video_books table; opening it must walk the
+        // ladder past the name-PK v16 step and drive the from<17 onUpgrade branch
+        // (createTable(videoBooks)) — building the full schema (book_uid PK +
+        // playlist_json / current_episode / audio_track_id / delay_ms) in one
+        // shot, because develop users never had a video_books table.
+        final db = await _openV15DbWithoutVideoBooks();
 
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
+        // The upgrade ladder bumped the schema to the current version.
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
 
-      // The pre-existing video_books row survived the migration, with the new
-      // completed_at column defaulting to null (lossless add-column).
-      final row = await db.getVideoBookByBookUid('video/seed');
-      expect(row, isNotNull);
-      expect(row!.title, 'Seed');
-      expect(row.lastPositionMs, 4242);
-      expect(row.completedAt, isNull);
+        // The table carries the full v17 column set (no stepwise add-column
+        // ladder remains).
+        final cols = await db
+            .customSelect("PRAGMA table_info('video_books')")
+            .get();
+        final colNames = cols.map((r) => r.data['name'] as String).toSet();
+        expect(
+          colNames,
+          containsAll([
+            'book_uid',
+            'playlist_json',
+            'current_episode',
+            'audio_track_id',
+            'delay_ms',
+          ]),
+        );
+        // book_uid is the primary key (pk == 1); there is no autoincrement id.
+        expect(colNames, isNot(contains('id')));
+        final bookUidCol = cols.firstWhere((r) => r.data['name'] == 'book_uid');
+        expect(bookUidCol.data['pk'], 1);
 
-      // The two new stats tables are usable（v92 起累加 DAO 已删，legacy 表只剩
-      // 同步落地的 OVERWRITE 版 set*；新事实进 study_segments）。
-      await db.setVideoWatchStatistic(VideoWatchStatisticsCompanion.insert(
-          title: 'Seed',
+        // The newly-migrated table is usable: upsert then read back.
+        await db.upsertVideoBook(
+          const VideoBooksCompanion(
+            bookUid: Value('video/migrated'),
+            title: Value('Migrated'),
+            videoPath: Value('/abs/migrated.mp4'),
+          ),
+        );
+        final row = await db.getVideoBookByBookUid('video/migrated');
+        expect(row, isNotNull);
+        expect(row!.title, 'Migrated');
+        expect(row.lastPositionMs, 0);
+        expect(row.delayMs, 0);
+      },
+    );
+
+    test(
+      'real v20->v21 upgrade creates a usable video tag mapping path',
+      () async {
+        // A v20 DB has video_books but no video_book_tag_mappings; opening it must
+        // drive the from<21 onUpgrade branch（v77 冻结 SQL 建表，随后 v77 步把行
+        // 搬进 tag_assignments 并 DROP 旧表）——标签链路必须在全阶梯后仍可用。
+        final db = await _openV20DbWithoutVideoTagMappings();
+
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
+
+        // The new mapping table exists and shares the BookTags pool: tag the
+        // seeded video book and read it back.
+        final tagId = await db.createTag('Migrated', 0xFF112233);
+        await db.addTagToVideoBook('video/seed', tagId);
+        final tags = await db.getTagsForVideoBook('video/seed');
+        expect(tags, hasLength(1));
+        expect(tags.single.name, 'Migrated');
+      },
+    );
+
+    test(
+      'real v21->v22 upgrade adds video stats tables + completed_at losslessly',
+      () async {
+        // A v21 DB has video_books (no completed_at) and no video stats tables;
+        // opening it must drive the from<22 onUpgrade branch.
+        final db = await _openV21DbWithoutVideoStats();
+
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
+
+        // The pre-existing video_books row survived the migration, with the new
+        // completed_at column defaulting to null (lossless add-column).
+        final row = await db.getVideoBookByBookUid('video/seed');
+        expect(row, isNotNull);
+        expect(row!.title, 'Seed');
+        expect(row.lastPositionMs, 4242);
+        expect(row.completedAt, isNull);
+
+        // The two new stats tables are usable（v92 起累加 DAO 已删，legacy 表只剩
+        // 同步落地的 OVERWRITE 版 set*；新事实进 study_segments）。
+        await db.setVideoWatchStatistic(
+          VideoWatchStatisticsCompanion.insert(
+            title: 'Seed',
+            dateKey: '2026-06-06',
+            subtitleChars: 12,
+            watchTimeMs: 3000,
+            lastModified: 1,
+          ),
+        );
+        final stats = await db.getAllVideoWatchStatistics();
+        expect(stats, hasLength(1));
+        expect(stats.single.subtitleChars, 12);
+
+        await db.setVideoHourlyLog(
           dateKey: '2026-06-06',
-          subtitleChars: 12,
-          watchTimeMs: 3000,
-          lastModified: 1));
-      final stats = await db.getAllVideoWatchStatistics();
-      expect(stats, hasLength(1));
-      expect(stats.single.subtitleChars, 12);
+          hour: 8,
+          watchTimeMs: 500,
+        );
+        final hourly = await db.getVideoHourlyLogsForDate('2026-06-06');
+        expect(hourly, hasLength(1));
+        expect(hourly.single.watchTimeMs, 500);
 
-      await db.setVideoHourlyLog(
-          dateKey: '2026-06-06', hour: 8, watchTimeMs: 500);
-      final hourly = await db.getVideoHourlyLogsForDate('2026-06-06');
-      expect(hourly, hasLength(1));
-      expect(hourly.single.watchTimeMs, 500);
-
-      // markVideoCompleted works on the migrated row.
-      final ts = DateTime(2026, 6, 6, 20);
-      await db.markVideoCompleted('video/seed', ts);
-      final completed = await db.getVideoBookByBookUid('video/seed');
-      expect(completed!.completedAt, ts);
-    });
+        // markVideoCompleted works on the migrated row.
+        final ts = DateTime(2026, 6, 6, 20);
+        await db.markVideoCompleted('video/seed', ts);
+        final completed = await db.getVideoBookByBookUid('video/seed');
+        expect(completed!.completedAt, ts);
+      },
+    );
 
     test(
-        'real v22->v23 upgrade creates usable favorite_words + mining_statistics',
-        () async {
-      // A v22 DB lacks favorite_words / mining_statistics; opening it must drive
-      // the from<23 onUpgrade branch (createTable both) rather than onCreate.
-      final db = await _openV22DbWithoutActivityTables();
+      'real v22->v23 upgrade creates usable favorite_words + mining_statistics',
+      () async {
+        // A v22 DB lacks favorite_words / mining_statistics; opening it must drive
+        // the from<23 onUpgrade branch (createTable both) rather than onCreate.
+        final db = await _openV22DbWithoutActivityTables();
 
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
 
-      // 收藏：新增→已存在判定→取消，全链可用。
-      final added = await db.addFavoriteWord(
-        expression: '猫',
-        reading: 'ねこ',
-        glossary: 'cat',
-        sourceType: 'video',
-        dateKey: '2026-06-07',
-      );
-      expect(added, isTrue);
-      final dup = await db.addFavoriteWord(
-        expression: '猫',
-        reading: 'ねこ',
-        glossary: 'cat',
-        sourceType: 'video',
-        dateKey: '2026-06-07',
-      );
-      expect(dup, isFalse, reason: '同 (expression,reading,sourceType) 幂等不重复');
-      expect(
+        // 收藏：新增→已存在判定→取消，全链可用。
+        final added = await db.addFavoriteWord(
+          expression: '猫',
+          reading: 'ねこ',
+          glossary: 'cat',
+          sourceType: 'video',
+          dateKey: '2026-06-07',
+        );
+        expect(added, isTrue);
+        final dup = await db.addFavoriteWord(
+          expression: '猫',
+          reading: 'ねこ',
+          glossary: 'cat',
+          sourceType: 'video',
+          dateKey: '2026-06-07',
+        );
+        expect(dup, isFalse, reason: '同 (expression,reading,sourceType) 幂等不重复');
+        expect(
           await db.isFavoriteWord(
-              expression: '猫', reading: 'ねこ', sourceType: 'video'),
-          isTrue);
-      // 来源隔离：book 来源未收藏。
-      expect(
+            expression: '猫',
+            reading: 'ねこ',
+            sourceType: 'video',
+          ),
+          isTrue,
+        );
+        // 来源隔离：book 来源未收藏。
+        expect(
           await db.isFavoriteWord(
-              expression: '猫', reading: 'ねこ', sourceType: 'book'),
-          isFalse);
-      expect((await db.getFavoriteWordsBySource('video')), hasLength(1));
-      await db.removeFavoriteWord(
-          expression: '猫', reading: 'ねこ', sourceType: 'video');
-      expect((await db.getFavoriteWordsBySource('video')), isEmpty);
+            expression: '猫',
+            reading: 'ねこ',
+            sourceType: 'book',
+          ),
+          isFalse,
+        );
+        expect((await db.getFavoriteWordsBySource('video')), hasLength(1));
+        await db.removeFavoriteWord(
+          expression: '猫',
+          reading: 'ねこ',
+          sourceType: 'video',
+        );
+        expect((await db.getFavoriteWordsBySource('video')), isEmpty);
 
-      // 制卡计数：同 (sourceType,dateKey) 累加。
-      await db.addMiningCount(sourceType: 'video', dateKey: '2026-06-07');
-      await db.addMiningCount(
-          sourceType: 'video', dateKey: '2026-06-07', delta: 2);
-      final mined = await db.getMiningStatisticsBySource('video');
-      expect(mined, hasLength(1));
-      expect(mined.single.count, 3);
-      expect(await db.getMiningStatisticsBySource('book'), isEmpty);
-    });
+        // 制卡计数：同 (sourceType,dateKey) 累加。
+        await db.addMiningCount(sourceType: 'video', dateKey: '2026-06-07');
+        await db.addMiningCount(
+          sourceType: 'video',
+          dateKey: '2026-06-07',
+          delta: 2,
+        );
+        final mined = await db.getMiningStatisticsBySource('video');
+        expect(mined, hasLength(1));
+        expect(mined.single.count, 3);
+        expect(await db.getMiningStatisticsBySource('book'), isEmpty);
+      },
+    );
 
-    test('real v24->v25 upgrade creates a usable mined_sentences table',
-        () async {
-      // A v24 DB lacks mined_sentences; opening it must drive the from<25
-      // onUpgrade branch (createTable) rather than onCreate.
-      final db = await _openV24DbWithoutMinedSentences();
+    test(
+      'real v24->v25 upgrade creates a usable mined_sentences table',
+      () async {
+        // A v24 DB lacks mined_sentences; opening it must drive the from<25
+        // onUpgrade branch (createTable) rather than onCreate.
+        final db = await _openV24DbWithoutMinedSentences();
 
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
 
-      // The migrated table is usable: record two mined sentences (history is a
-      // flow, not deduplicated) then read them back newest-first.
-      await db.addMinedSentence(
-        source: 'book',
-        dateKey: '2026-06-21',
-        expression: '猫',
-        reading: 'ねこ',
-        glossary: 'cat',
-        sentence: '猫が好きです。',
-        documentTitle: 'AlphaBook',
-        bookKey: 'AlphaBook',
-        sectionIndex: 2,
-        normCharOffset: 1234,
-      );
-      await db.addMinedSentence(
-        source: 'video',
-        dateKey: '2026-06-21',
-        expression: '犬',
-        reading: 'いぬ',
-        sentence: '犬も好きです。',
-        documentTitle: 'Clip',
-        bookKey: 'video/clip',
-        sectionIndex: 0,
-        normCharOffset: 5000,
-        normCharLength: 2000,
-        noteId: 4242,
-      );
+        // The migrated table is usable: record two mined sentences (history is a
+        // flow, not deduplicated) then read them back newest-first.
+        await db.addMinedSentence(
+          source: 'book',
+          dateKey: '2026-06-21',
+          expression: '猫',
+          reading: 'ねこ',
+          glossary: 'cat',
+          sentence: '猫が好きです。',
+          documentTitle: 'AlphaBook',
+          bookKey: 'AlphaBook',
+          sectionIndex: 2,
+          normCharOffset: 1234,
+        );
+        await db.addMinedSentence(
+          source: 'video',
+          dateKey: '2026-06-21',
+          expression: '犬',
+          reading: 'いぬ',
+          sentence: '犬も好きです。',
+          documentTitle: 'Clip',
+          bookKey: 'video/clip',
+          sectionIndex: 0,
+          normCharOffset: 5000,
+          normCharLength: 2000,
+          noteId: 4242,
+        );
 
-      final all = await db.getAllMinedSentences();
-      expect(all, hasLength(2));
-      // newest (video) first.
-      expect(all.first.expression, '犬');
-      expect(all.first.source, 'video');
-      expect(all.first.bookKey, 'video/clip');
-      expect(all.first.normCharLength, 2000);
-      expect(all.first.noteId, 4242);
-      expect(all.last.expression, '猫');
-      expect(all.last.sentence, '猫が好きです。');
+        final all = await db.getAllMinedSentences();
+        expect(all, hasLength(2));
+        // newest (video) first.
+        expect(all.first.expression, '犬');
+        expect(all.first.source, 'video');
+        expect(all.first.bookKey, 'video/clip');
+        expect(all.first.normCharLength, 2000);
+        expect(all.first.noteId, 4242);
+        expect(all.last.expression, '猫');
+        expect(all.last.sentence, '猫が好きです。');
 
-      // Delete one by id; clear empties the rest.
-      await db.removeMinedSentence(all.first.id);
-      expect(await db.getAllMinedSentences(), hasLength(1));
-      await db.clearMinedSentences();
-      expect(await db.getAllMinedSentences(), isEmpty);
-    });
+        // Delete one by id; clear empties the rest.
+        await db.removeMinedSentence(all.first.id);
+        expect(await db.getAllMinedSentences(), hasLength(1));
+        await db.clearMinedSentences();
+        expect(await db.getAllMinedSentences(), isEmpty);
+      },
+    );
 
-    test('real v26->v27 creates media_sources + adds source_id (lossless)',
-        () async {
-      // TODO-817 M0: the from<27 onUpgrade branch must (a) create the
-      // media_sources table, (b) add a nullable source_id FK column to both
-      // video_books and epub_books, and (c) leave the pre-existing book rows
-      // intact with source_id defaulting to NULL ("Never break userspace").
-      final db = await _openV26DbWithBookRows();
+    test(
+      'real v26->v27 creates media_sources + adds source_id (lossless)',
+      () async {
+        // TODO-817 M0: the from<27 onUpgrade branch must (a) create the
+        // media_sources table, (b) add a nullable source_id FK column to both
+        // video_books and epub_books, and (c) leave the pre-existing book rows
+        // intact with source_id defaulting to NULL ("Never break userspace").
+        final db = await _openV26DbWithBookRows();
 
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
 
-      // media_sources table now exists.
-      final tables = await db
-          .customSelect("SELECT name FROM sqlite_master WHERE type='table'")
-          .get();
-      final tableNames = tables.map((r) => r.data['name'] as String).toSet();
-      expect(tableNames, contains('media_sources'));
+        // media_sources table now exists.
+        final tables = await db
+            .customSelect("SELECT name FROM sqlite_master WHERE type='table'")
+            .get();
+        final tableNames = tables.map((r) => r.data['name'] as String).toSet();
+        expect(tableNames, contains('media_sources'));
 
-      // Both book tables gained the source_id column.
-      final epubCols =
-          (await db.customSelect("PRAGMA table_info('epub_books')").get())
-              .map((r) => r.data['name'] as String)
-              .toSet();
-      expect(epubCols, contains('source_id'));
-      final videoCols =
-          (await db.customSelect("PRAGMA table_info('video_books')").get())
-              .map((r) => r.data['name'] as String)
-              .toSet();
-      expect(videoCols, contains('source_id'));
+        // Both book tables gained the source_id column.
+        final epubCols =
+            (await db.customSelect("PRAGMA table_info('epub_books')").get())
+                .map((r) => r.data['name'] as String)
+                .toSet();
+        expect(epubCols, contains('source_id'));
+        final videoCols =
+            (await db.customSelect("PRAGMA table_info('video_books')").get())
+                .map((r) => r.data['name'] as String)
+                .toSet();
+        expect(videoCols, contains('source_id'));
 
-      // Lossless: the seeded rows survive, with source_id NULL.
-      final epub = await db
-          .customSelect(
-              "SELECT book_key, source_id FROM epub_books WHERE book_key='GammaBook'")
-          .getSingle();
-      expect(epub.read<String>('book_key'), 'GammaBook');
-      expect(epub.data['source_id'], isNull);
+        // Lossless: the seeded rows survive, with source_id NULL.
+        final epub = await db
+            .customSelect(
+              "SELECT book_key, source_id FROM epub_books WHERE book_key='GammaBook'",
+            )
+            .getSingle();
+        expect(epub.read<String>('book_key'), 'GammaBook');
+        expect(epub.data['source_id'], isNull);
 
-      final video = await db
-          .customSelect(
-              "SELECT book_uid, source_id FROM video_books WHERE book_uid='video/seed'")
-          .getSingle();
-      expect(video.read<String>('book_uid'), 'video/seed');
-      expect(video.data['source_id'], isNull);
-    });
+        final video = await db
+            .customSelect(
+              "SELECT book_uid, source_id FROM video_books WHERE book_uid='video/seed'",
+            )
+            .getSingle();
+        expect(video.read<String>('book_uid'), 'video/seed');
+        expect(video.data['source_id'], isNull);
+      },
+    );
 
-    test('real v27->v28 adds video_books.secondary_subtitle_source (lossless)',
-        () async {
-      // TODO-857: the from<28 onUpgrade branch must add a nullable
-      // secondary_subtitle_source column to video_books and leave the
-      // pre-existing video row intact (subtitle_source untouched,
-      // secondary_subtitle_source defaulting to NULL — "Never break userspace").
-      final db = await _openV27DbWithVideoRow();
+    test(
+      'real v27->v28 adds video_books.secondary_subtitle_source (lossless)',
+      () async {
+        // TODO-857: the from<28 onUpgrade branch must add a nullable
+        // secondary_subtitle_source column to video_books and leave the
+        // pre-existing video row intact (subtitle_source untouched,
+        // secondary_subtitle_source defaulting to NULL — "Never break userspace").
+        final db = await _openV27DbWithVideoRow();
 
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
 
-      // video_books gained the secondary_subtitle_source column.
-      final videoCols =
-          (await db.customSelect("PRAGMA table_info('video_books')").get())
-              .map((r) => r.data['name'] as String)
-              .toSet();
-      expect(videoCols, contains('secondary_subtitle_source'));
+        // video_books gained the secondary_subtitle_source column.
+        final videoCols =
+            (await db.customSelect("PRAGMA table_info('video_books')").get())
+                .map((r) => r.data['name'] as String)
+                .toSet();
+        expect(videoCols, contains('secondary_subtitle_source'));
 
-      // Lossless: the seeded row survives, primary subtitle untouched, the new
-      // secondary subtitle column defaulting to NULL.
-      final video = await db
-          .customSelect(
+        // Lossless: the seeded row survives, primary subtitle untouched, the new
+        // secondary subtitle column defaulting to NULL.
+        final video = await db
+            .customSelect(
               'SELECT book_uid, subtitle_source, secondary_subtitle_source '
-              "FROM video_books WHERE book_uid='video/seed27'")
-          .getSingle();
-      expect(video.read<String>('book_uid'), 'video/seed27');
-      expect(video.read<String>('subtitle_source'), 'embedded:0');
-      expect(video.data['secondary_subtitle_source'], isNull);
-    });
+              "FROM video_books WHERE book_uid='video/seed27'",
+            )
+            .getSingle();
+        expect(video.read<String>('book_uid'), 'video/seed27');
+        expect(video.read<String>('subtitle_source'), 'embedded:0');
+        expect(video.data['secondary_subtitle_source'], isNull);
+      },
+    );
 
-    test(
-        'real v28->v29 backfills a paired srt_books row for an EPUB-backed '
+    test('real v28->v29 backfills a paired srt_books row for an EPUB-backed '
         'audiobook (TODO-894), heals push gating', () async {
       // TODO-894: a v28 DB with an EPUB-backed audiobook (key 'A') but NO
       // srt_books row is the bug shape — push (live + syncAudiobookPackages)
@@ -1080,33 +1148,52 @@ void main() {
       // now 31 (v30 series/shelf_entries + v31 paired peers 表). This v28 DB
       // upgrades all the way to current; TODO-894's backfill still ran (asserted
       // below). The literal had to track the bump.
-      expect(db.schemaVersion, 96,
-          reason: 'global schemaVersion is now 38 (TODO-616 v30 + TODO-1017 '
-              'v31 + TODO-1195 v32 + TODO-1204 v33 + v34 statistics_tombstones + '
-              'TODO-1157 v35 stream_spec_json + TODO-1252 v36 favorite_words '
-              'book_key/title + TODO-1288 v37 audiobook srt_books self-heal + '
-              'v38 unified media_collections + v39 watch-stats book_uid + '
-              'v40 collection order_updated_at/tombstones + '
-              'v49 activity_events + v50 clipboard_history + '
-              'v51 epub_books format + v52 media_collections '
-              'audio_track_id/subtitle_delay_ms 系列级音轨/调轴记忆 + v53 epub_books manga_reading_mode 漫画阅读形态 + '
-              'v54 video_scrape_meta 视频条目刮削资料 + v55 galgames 游戏库三表); '
-              'TODO-894 backfill behavior asserted by the srt_books checks below');
+      expect(
+        db.schemaVersion,
+        96,
+        reason:
+            'global schemaVersion is now 38 (TODO-616 v30 + TODO-1017 '
+            'v31 + TODO-1195 v32 + TODO-1204 v33 + v34 statistics_tombstones + '
+            'TODO-1157 v35 stream_spec_json + TODO-1252 v36 favorite_words '
+            'book_key/title + TODO-1288 v37 audiobook srt_books self-heal + '
+            'v38 unified media_collections + v39 watch-stats book_uid + '
+            'v40 collection order_updated_at/tombstones + '
+            'v49 activity_events + v50 clipboard_history + '
+            'v51 epub_books format + v52 media_collections '
+            'audio_track_id/subtitle_delay_ms 系列级音轨/调轴记忆 + v53 epub_books manga_reading_mode 漫画阅读形态 + '
+            'v54 video_scrape_meta 视频条目刮削资料 + v55 galgames 游戏库三表); '
+            'TODO-894 backfill behavior asserted by the srt_books checks below',
+      );
 
       // The previously-unpaired EPUB-backed audiobook now has a srt_books row.
       final paired = await db.getSrtBookByBookKey('A');
-      expect(paired, isNotNull,
-          reason: 'backfill must create the missing paired SrtBook for key A');
-      expect(paired!.uid, 'srtbook_epub_A',
-          reason: 'uid must be the stable derivation shared with the importer');
+      expect(
+        paired,
+        isNotNull,
+        reason: 'backfill must create the missing paired SrtBook for key A',
+      );
+      expect(
+        paired!.uid,
+        'srtbook_epub_A',
+        reason: 'uid must be the stable derivation shared with the importer',
+      );
       expect(paired.title, '安達としまむら', reason: 'title from epub_books');
       expect(paired.author, '入間人間', reason: 'author from epub_books');
-      expect(paired.srtPath, '/abs/persist/A/aligned.srt',
-          reason: 'srt_path = audiobooks.alignment_path');
-      expect(paired.audioPathsJson, '["/abs/persist/A/disc1.mp3"]',
-          reason: 'audio_paths_json passed through from audiobooks');
-      expect(paired.coverPath, isNull,
-          reason: 'cover_path intentionally empty');
+      expect(
+        paired.srtPath,
+        '/abs/persist/A/aligned.srt',
+        reason: 'srt_path = audiobooks.alignment_path',
+      );
+      expect(
+        paired.audioPathsJson,
+        '["/abs/persist/A/disc1.mp3"]',
+        reason: 'audio_paths_json passed through from audiobooks',
+      );
+      expect(
+        paired.coverPath,
+        isNull,
+        reason: 'cover_path intentionally empty',
+      );
       expect(paired.importedAt, 111000, reason: 'imported_at from epub_books');
 
       // The standalone subtitle book (no audiobooks row) is untouched: still
@@ -1114,39 +1201,49 @@ void main() {
       // backfill never created a phantom audiobook for it.
       final standalone = await db.getSrtBookByBookKey('Standalone');
       expect(standalone, isNotNull);
-      expect(standalone!.uid, 'srtbook_222',
-          reason: 'standalone row must keep its original uid (untouched)');
+      expect(
+        standalone!.uid,
+        'srtbook_222',
+        reason: 'standalone row must keep its original uid (untouched)',
+      );
       expect(standalone.title, 'Standalone Sub');
-      expect(await db.getAudiobookByBookKey('Standalone'), isNull,
-          reason: 'backfill must not invent an audiobook for standalone books');
+      expect(
+        await db.getAudiobookByBookKey('Standalone'),
+        isNull,
+        reason: 'backfill must not invent an audiobook for standalone books',
+      );
 
       // Exactly two srt_books rows total: the healed 'A' + the standalone.
       final all = await db.getAllSrtBooks();
       expect(all, hasLength(2));
     });
 
-    test('v28->v29 backfill is idempotent: re-running adds no rows, uid stable',
-        () async {
-      final db = await _openV28DbWithUnpairedAudiobook();
-      // First open already ran the migration (schemaVersion now 29).
-      final beforeAll = await db.getAllSrtBooks();
-      expect(beforeAll, hasLength(2));
-      final healedBefore = (await db.getSrtBookByBookKey('A'))!;
-
-      // Re-run the backfill path directly (simulates an extra migration pass):
-      // WHERE NOT IN + INSERT OR IGNORE must be a no-op now.
-      await db.backfillMissingAudiobookSrtBooksV29();
-
-      final afterAll = await db.getAllSrtBooks();
-      expect(afterAll, hasLength(2), reason: '幂等：re-run must not add rows');
-      final healedAfter = (await db.getSrtBookByBookKey('A'))!;
-      expect(healedAfter.uid, healedBefore.uid,
-          reason: 'uid stable across runs');
-      expect(healedAfter.uid, 'srtbook_epub_A');
-    });
-
     test(
-        'real v36->v37 self-heals an EPUB-backed audiobook left unpaired by '
+      'v28->v29 backfill is idempotent: re-running adds no rows, uid stable',
+      () async {
+        final db = await _openV28DbWithUnpairedAudiobook();
+        // First open already ran the migration (schemaVersion now 29).
+        final beforeAll = await db.getAllSrtBooks();
+        expect(beforeAll, hasLength(2));
+        final healedBefore = (await db.getSrtBookByBookKey('A'))!;
+
+        // Re-run the backfill path directly (simulates an extra migration pass):
+        // WHERE NOT IN + INSERT OR IGNORE must be a no-op now.
+        await db.backfillMissingAudiobookSrtBooksV29();
+
+        final afterAll = await db.getAllSrtBooks();
+        expect(afterAll, hasLength(2), reason: '幂等：re-run must not add rows');
+        final healedAfter = (await db.getSrtBookByBookKey('A'))!;
+        expect(
+          healedAfter.uid,
+          healedBefore.uid,
+          reason: 'uid stable across runs',
+        );
+        expect(healedAfter.uid, 'srtbook_epub_A');
+      },
+    );
+
+    test('real v36->v37 self-heals an EPUB-backed audiobook left unpaired by '
         'audiobook_import_dialog after v29 (TODO-1288)', () async {
       // TODO-1288: audiobook_import_dialog（给已有 EPUB 书加/换音频）在修复前只写
       // audiobooks 行、漏写配对 srt_books 行。v29 的一次性 backfill 只在跨过 29 时
@@ -1157,41 +1254,59 @@ void main() {
 
       final version = await db.customSelect('PRAGMA user_version').getSingle();
       expect(version.read<int>('user_version'), db.schemaVersion);
-      expect(db.schemaVersion, 96,
-          reason:
-              'TODO-1288 bumps schema to v37 (audiobook srt_books self-heal)');
+      expect(
+        db.schemaVersion,
+        96,
+        reason: 'TODO-1288 bumps schema to v37 (audiobook srt_books self-heal)',
+      );
 
       // 之前未配对的 EPUB-backed 有声书 'B' 现在有了配对 srt_books 行。
       final paired = await db.getSrtBookByBookKey('B');
-      expect(paired, isNotNull,
-          reason: 'v37 self-heal 必须为 key B 补写缺失的配对 SrtBook');
+      expect(
+        paired,
+        isNotNull,
+        reason: 'v37 self-heal 必须为 key B 补写缺失的配对 SrtBook',
+      );
       expect(paired!.uid, 'srtbook_epub_B', reason: 'uid 必须是与导入路径共用的稳定派生');
       expect(paired.title, 'よつばと！', reason: 'title from epub_books');
       expect(paired.author, 'あずまきよひこ', reason: 'author from epub_books');
-      expect(paired.srtPath, '/abs/persist/B/aligned.srt',
-          reason: 'srt_path = audiobooks.alignment_path');
-      expect(paired.audioPathsJson, '["/abs/persist/B/ch1.mp3"]',
-          reason: 'audio_paths_json passed through from audiobooks');
-      expect(paired.coverPath, isNull,
-          reason: 'cover_path intentionally empty');
+      expect(
+        paired.srtPath,
+        '/abs/persist/B/aligned.srt',
+        reason: 'srt_path = audiobooks.alignment_path',
+      );
+      expect(
+        paired.audioPathsJson,
+        '["/abs/persist/B/ch1.mp3"]',
+        reason: 'audio_paths_json passed through from audiobooks',
+      );
+      expect(
+        paired.coverPath,
+        isNull,
+        reason: 'cover_path intentionally empty',
+      );
       expect(paired.importedAt, 333000, reason: 'imported_at from epub_books');
 
       // standalone 字幕书（无 audiobooks 行）原封不动。
       final standalone = await db.getSrtBookByBookKey('StandaloneB');
       expect(standalone, isNotNull);
-      expect(standalone!.uid, 'srtbook_444',
-          reason: 'standalone row must keep its original uid (untouched)');
-      expect(await db.getAudiobookByBookKey('StandaloneB'), isNull,
-          reason:
-              'self-heal must not invent an audiobook for standalone books');
+      expect(
+        standalone!.uid,
+        'srtbook_444',
+        reason: 'standalone row must keep its original uid (untouched)',
+      );
+      expect(
+        await db.getAudiobookByBookKey('StandaloneB'),
+        isNull,
+        reason: 'self-heal must not invent an audiobook for standalone books',
+      );
 
       // 总共两行 srt_books：治愈的 'B' + standalone。
       final all = await db.getAllSrtBooks();
       expect(all, hasLength(2));
     });
 
-    test(
-        'real v15->v16 re-key preserves reader_positions + bookmarks ROW DATA '
+    test('real v15->v16 re-key preserves reader_positions + bookmarks ROW DATA '
         'under book_key', () async {
       // video_books_migration_v20_test only asserts epub_books ROWS survive the
       // v16 re-key; it never checks the reader_positions / bookmarks row
@@ -1218,14 +1333,20 @@ void main() {
       final String uidA = (await db.resolveEpubBookUid('AlphaBook'))!;
       final String uidB = (await db.resolveEpubBookUid('BetaBook'))!;
       final posA = await db.getReaderPosition(uidA);
-      expect(posA, isNotNull,
-          reason: 'book 1 reading position survived the re-key');
+      expect(
+        posA,
+        isNotNull,
+        reason: 'book 1 reading position survived the re-key',
+      );
       expect(posA!.sectionIndex, 4);
       expect(posA.normCharOffset, 1234);
       expect(posA.updatedAt, 9001);
       final posB = await db.getReaderPosition(uidB);
-      expect(posB, isNotNull,
-          reason: 'book 2 reading position survived the re-key');
+      expect(
+        posB,
+        isNotNull,
+        reason: 'book 2 reading position survived the re-key',
+      );
       expect(posB!.sectionIndex, 8);
       expect(posB.normCharOffset, 5678);
       expect(posB.updatedAt, 9002);
@@ -1237,8 +1358,10 @@ void main() {
       // bookmarks row-level preservation: the seeded bookmark re-keyed to
       // book_key (v16) then stable uid (v82) with all payload fields intact.
       final bm = await db
-          .customSelect('SELECT book_uid, section_index, norm_char_offset, '
-              'label, created_at, book_title FROM bookmarks')
+          .customSelect(
+            'SELECT book_uid, section_index, norm_char_offset, '
+            'label, created_at, book_title FROM bookmarks',
+          )
           .get();
       expect(bm, hasLength(1), reason: 'the bookmark survived the re-key');
       expect(bm.single.read<String>('book_uid'), uidA);
@@ -1249,8 +1372,7 @@ void main() {
       expect(bm.single.read<String>('book_title'), 'AlphaBook');
     });
 
-    test(
-        'tag_assignments references book_tags via foreign key (v77：宿主是'
+    test('tag_assignments references book_tags via foreign key (v77：宿主是'
         '逻辑外键，只有 tag_id 挂真 FK)', () async {
       final db = await _openDb();
       final fks = await db
@@ -1258,14 +1380,18 @@ void main() {
           .get();
       final tables = fks.map((r) => r.data['table'] as String).toSet();
       expect(tables, contains('book_tags'));
-      expect(tables, isNot(contains('video_books')),
-          reason: '宿主键跨五 kind 复用，不挂 DB FK（ShelfEntries 同惯例）');
+      expect(
+        tables,
+        isNot(contains('video_books')),
+        reason: '宿主键跨五 kind 复用，不挂 DB FK（ShelfEntries 同惯例）',
+      );
     });
 
     test('preferences table has key and value columns', () async {
       final db = await _openDb();
-      final cols =
-          await db.customSelect("PRAGMA table_info('preferences')").get();
+      final cols = await db
+          .customSelect("PRAGMA table_info('preferences')")
+          .get();
       final colNames = cols.map((r) => r.data['name'] as String).toSet();
       expect(colNames, containsAll(['key', 'value']));
     });
@@ -1284,193 +1410,258 @@ void main() {
 
     test('epub_books has epub_path and extract_dir columns', () async {
       final db = await _openDb();
-      final cols =
-          await db.customSelect("PRAGMA table_info('epub_books')").get();
+      final cols = await db
+          .customSelect("PRAGMA table_info('epub_books')")
+          .get();
       final colNames = cols.map((r) => r.data['name'] as String).toSet();
       expect(colNames, containsAll(['epub_path', 'extract_dir']));
     });
 
     test('audio_cues has book_key and chapter_href columns', () async {
       final db = await _openDb();
-      final cols =
-          await db.customSelect("PRAGMA table_info('audio_cues')").get();
+      final cols = await db
+          .customSelect("PRAGMA table_info('audio_cues')")
+          .get();
       final colNames = cols.map((r) => r.data['name'] as String).toSet();
       expect(colNames, containsAll(['book_key', 'chapter_href']));
     });
 
-    test('reading_statistics has date_key and characters_read columns',
-        () async {
-      final db = await _openDb();
-      final cols = await db
-          .customSelect("PRAGMA table_info('reading_statistics')")
-          .get();
-      final colNames = cols.map((r) => r.data['name'] as String).toSet();
-      expect(colNames, containsAll(['date_key', 'characters_read']));
-    });
+    test(
+      'reading_statistics has date_key and characters_read columns',
+      () async {
+        final db = await _openDb();
+        final cols = await db
+            .customSelect("PRAGMA table_info('reading_statistics')")
+            .get();
+        final colNames = cols.map((r) => r.data['name'] as String).toSet();
+        expect(colNames, containsAll(['date_key', 'characters_read']));
+      },
+    );
 
     test(
-        'real v29->v30 creates series + shelf_entries, bumps user_version to 30, '
-        'preserves既有数据 (TODO-616)', () async {
-      final db = await _openV29Db();
+      'real v29->v30 creates series + shelf_entries, bumps user_version to 30, '
+      'preserves既有数据 (TODO-616)',
+      () async {
+        final db = await _openV29Db();
 
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
-      expect(db.schemaVersion, 96,
-          reason: 'global schemaVersion is now 38 (…v35 + TODO-1252 v36 + '
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
+        expect(
+          db.schemaVersion,
+          96,
+          reason:
+              'global schemaVersion is now 38 (…v35 + TODO-1252 v36 + '
               'TODO-1288 v37 audiobook srt_books self-heal + v38 unified '
               'media_collections); v29->v30 '
-              'series/shelf_entries creation asserted below');
+              'series/shelf_entries creation asserted below',
+        );
 
-      // Both new tables now exist.
-      final tableNames = (await db
-              .customSelect("SELECT name FROM sqlite_master WHERE type='table'")
-              .get())
-          .map((r) => r.data['name'] as String)
-          .toSet();
-      expect(tableNames, contains('series'),
-          reason: 'from<30 must createTable(series)');
-      expect(tableNames, contains('shelf_entries'),
-          reason: 'from<30 must createTable(shelf_entries)');
+        // Both new tables now exist.
+        final tableNames =
+            (await db
+                    .customSelect(
+                      "SELECT name FROM sqlite_master WHERE type='table'",
+                    )
+                    .get())
+                .map((r) => r.data['name'] as String)
+                .toSet();
+        expect(
+          tableNames,
+          contains('series'),
+          reason: 'from<30 must createTable(series)',
+        );
+        expect(
+          tableNames,
+          contains('shelf_entries'),
+          reason: 'from<30 must createTable(shelf_entries)',
+        );
 
-      // shelf_entries.series_id is a real FK to series(id) (onDelete:setNull).
-      final fks = await db
-          .customSelect("PRAGMA foreign_key_list('shelf_entries')")
-          .get();
-      final fkTables = fks.map((r) => r.data['table'] as String).toSet();
-      expect(fkTables, contains('series'),
-          reason: 'shelf_entries.series_id references series(id)');
+        // shelf_entries.series_id is a real FK to series(id) (onDelete:setNull).
+        final fks = await db
+            .customSelect("PRAGMA foreign_key_list('shelf_entries')")
+            .get();
+        final fkTables = fks.map((r) => r.data['table'] as String).toSet();
+        expect(
+          fkTables,
+          contains('series'),
+          reason: 'shelf_entries.series_id references series(id)',
+        );
 
-      // 既有数据不丢：the seeded pre-v30 epub_books row survives the bump.
-      final preserved = await db.getEpubBook('PreV30');
-      expect(preserved, isNotNull,
-          reason: 'v30 createTable migration must not touch existing rows');
-      expect(preserved!.title, 'PreExistingBook');
-      expect(preserved.author, 'AuthorX');
-      expect(preserved.importedAt, 333000);
+        // 既有数据不丢：the seeded pre-v30 epub_books row survives the bump.
+        final preserved = await db.getEpubBook('PreV30');
+        expect(
+          preserved,
+          isNotNull,
+          reason: 'v30 createTable migration must not touch existing rows',
+        );
+        expect(preserved!.title, 'PreExistingBook');
+        expect(preserved.author, 'AuthorX');
+        expect(preserved.importedAt, 333000);
 
-      // The new tables start empty (no backfill) -> default散书 + importedAt
-      // 倒序退化 (Never break userspace).
-      expect(await db.getAllSeries(), isEmpty);
-      expect(await db.getAllShelfEntries(), isEmpty);
-    });
+        // The new tables start empty (no backfill) -> default散书 + importedAt
+        // 倒序退化 (Never break userspace).
+        expect(await db.getAllSeries(), isEmpty);
+        expect(await db.getAllShelfEntries(), isEmpty);
+      },
+    );
 
-    test('v29->v30 createTable migration is idempotent on a fresh DB',
-        () async {
+    test('v29->v30 createTable migration is idempotent on a fresh DB', () async {
       // A fresh DB is created at v30 by onCreate's createAll; the from<30 guard
       // (_tableExists) must make re-entering the step a no-op rather than a
       // "table already exists" failure.
       final db = await _openDb();
-      final tableNames = (await db
-              .customSelect("SELECT name FROM sqlite_master WHERE type='table'")
-              .get())
-          .map((r) => r.data['name'] as String)
-          .toSet();
+      final tableNames =
+          (await db
+                  .customSelect(
+                    "SELECT name FROM sqlite_master WHERE type='table'",
+                  )
+                  .get())
+              .map((r) => r.data['name'] as String)
+              .toSet();
       expect(tableNames, containsAll(['series', 'shelf_entries']));
       expect(db.schemaVersion, 96);
     });
 
-    test(
-        'fresh DB (v33) has lookup_mining_counters with the expected columns '
+    test('fresh DB (v33) has lookup_mining_counters with the expected columns '
         '(TODO-1204)', () async {
       final db = await _openDb();
       final version = await db.customSelect('PRAGMA user_version').getSingle();
       expect(version.read<int>('user_version'), db.schemaVersion);
-      expect(db.schemaVersion, 96,
-          reason:
-              'TODO-1288 v37 audiobook srt_books self-heal; v38 unified media_collections (series→collection + playlist split)');
+      expect(
+        db.schemaVersion,
+        96,
+        reason:
+            'TODO-1288 v37 audiobook srt_books self-heal; v38 unified media_collections (series→collection + playlist split)',
+      );
 
-      final tableNames = (await db
-              .customSelect("SELECT name FROM sqlite_master WHERE type='table'")
-              .get())
-          .map((r) => r.data['name'] as String)
-          .toSet();
-      expect(tableNames, contains('lookup_mining_counters'),
-          reason: 'from<33 must createTable(lookup_mining_counters)');
+      final tableNames =
+          (await db
+                  .customSelect(
+                    "SELECT name FROM sqlite_master WHERE type='table'",
+                  )
+                  .get())
+              .map((r) => r.data['name'] as String)
+              .toSet();
+      expect(
+        tableNames,
+        contains('lookup_mining_counters'),
+        reason: 'from<33 must createTable(lookup_mining_counters)',
+      );
 
       final cols = await db
           .customSelect("PRAGMA table_info('lookup_mining_counters')")
           .get();
       final colNames = cols.map((r) => r.data['name'] as String).toSet();
       expect(
-          colNames,
-          containsAll(<String>[
-            'book_key',
-            'title',
-            'source_type',
-            'date_key',
-            'lookup_count',
-            'mine_count',
-          ]));
+        colNames,
+        containsAll(<String>[
+          'book_key',
+          'title',
+          'source_type',
+          'date_key',
+          'lookup_count',
+          'mine_count',
+        ]),
+      );
     });
 
-    test(
-        'fresh DB (v34) has statistics_tombstones with the expected columns '
+    test('fresh DB (v34) has statistics_tombstones with the expected columns '
         '(TODO-1204 后续)', () async {
       final db = await _openDb();
       final version = await db.customSelect('PRAGMA user_version').getSingle();
       expect(version.read<int>('user_version'), db.schemaVersion);
-      expect(db.schemaVersion, 96,
-          reason:
-              'TODO-1288 v37 audiobook srt_books self-heal; v38 unified media_collections (series→collection + playlist split)');
+      expect(
+        db.schemaVersion,
+        96,
+        reason:
+            'TODO-1288 v37 audiobook srt_books self-heal; v38 unified media_collections (series→collection + playlist split)',
+      );
 
-      final tableNames = (await db
-              .customSelect("SELECT name FROM sqlite_master WHERE type='table'")
-              .get())
-          .map((r) => r.data['name'] as String)
-          .toSet();
+      final tableNames =
+          (await db
+                  .customSelect(
+                    "SELECT name FROM sqlite_master WHERE type='table'",
+                  )
+                  .get())
+              .map((r) => r.data['name'] as String)
+              .toSet();
       expect(tableNames, contains('statistics_tombstones'));
 
       final cols = await db
           .customSelect("PRAGMA table_info('statistics_tombstones')")
           .get();
       final colNames = cols.map((r) => r.data['name'] as String).toSet();
-      expect(colNames,
-          containsAll(<String>['title', 'source_type', 'deleted_at']));
+      expect(
+        colNames,
+        containsAll(<String>['title', 'source_type', 'deleted_at']),
+      );
     });
 
     test(
-        'real v33->v34 creates statistics_tombstones, bumps user_version to 34 '
-        '(TODO-1204 后续)', () async {
-      final db = await _openV33DbWithoutStatisticsTombstones();
-      // Opening triggers the from<34 branch; the table must now exist and a
-      // tombstone round-trips.
-      final tableNames = (await db
-              .customSelect("SELECT name FROM sqlite_master WHERE type='table'")
-              .get())
-          .map((r) => r.data['name'] as String)
-          .toSet();
-      expect(tableNames, contains('statistics_tombstones'),
-          reason: 'from<34 must createTable(statisticsTombstones)');
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
-      await db.insertStatisticsTombstone('A', 'book');
-      expect(await db.getStatisticsTombstoneKeys(), contains(('A', 'book')));
-    });
-    test('fresh DB (v35) has video_books.stream_spec_json column (TODO-1157)',
-        () async {
-      final db = await _openDb();
-      expect(db.schemaVersion, 96);
-      final cols =
-          await db.customSelect("PRAGMA table_info('video_books')").get();
-      final colNames = cols.map((r) => r.data['name'] as String).toSet();
-      expect(colNames, contains('stream_spec_json'),
-          reason: 'fresh createAll must include TODO-1157 stream_spec_json');
-    });
-
+      'real v33->v34 creates statistics_tombstones, bumps user_version to 34 '
+      '(TODO-1204 后续)',
+      () async {
+        final db = await _openV33DbWithoutStatisticsTombstones();
+        // Opening triggers the from<34 branch; the table must now exist and a
+        // tombstone round-trips.
+        final tableNames =
+            (await db
+                    .customSelect(
+                      "SELECT name FROM sqlite_master WHERE type='table'",
+                    )
+                    .get())
+                .map((r) => r.data['name'] as String)
+                .toSet();
+        expect(
+          tableNames,
+          contains('statistics_tombstones'),
+          reason: 'from<34 must createTable(statisticsTombstones)',
+        );
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
+        await db.insertStatisticsTombstone('A', 'book');
+        expect(await db.getStatisticsTombstoneKeys(), contains(('A', 'book')));
+      },
+    );
     test(
-        'real v34->v35 adds video_books.stream_spec_json, preserves rows, '
+      'fresh DB (v35) has video_books.stream_spec_json column (TODO-1157)',
+      () async {
+        final db = await _openDb();
+        expect(db.schemaVersion, 96);
+        final cols = await db
+            .customSelect("PRAGMA table_info('video_books')")
+            .get();
+        final colNames = cols.map((r) => r.data['name'] as String).toSet();
+        expect(
+          colNames,
+          contains('stream_spec_json'),
+          reason: 'fresh createAll must include TODO-1157 stream_spec_json',
+        );
+      },
+    );
+
+    test('real v34->v35 adds video_books.stream_spec_json, preserves rows, '
         'bumps user_version (TODO-1157)', () async {
       final db = await _openV34DbWithoutStreamSpecJson();
       // Opening triggers from<35 addColumn(streamSpecJson).
-      final cols =
-          await db.customSelect("PRAGMA table_info('video_books')").get();
+      final cols = await db
+          .customSelect("PRAGMA table_info('video_books')")
+          .get();
       final colNames = cols.map((r) => r.data['name'] as String).toSet();
-      expect(colNames, contains('stream_spec_json'),
-          reason: 'from<35 must addColumn(videoBooks.streamSpecJson)');
+      expect(
+        colNames,
+        contains('stream_spec_json'),
+        reason: 'from<35 must addColumn(videoBooks.streamSpecJson)',
+      );
       // 既有行保留、新列默认 NULL（无损迁移）。
       final rows = await db
           .customSelect(
-              "SELECT stream_spec_json FROM video_books WHERE book_uid='video/stream/x'")
+            "SELECT stream_spec_json FROM video_books WHERE book_uid='video/stream/x'",
+          )
           .get();
       expect(rows, hasLength(1));
       expect(rows.single.data['stream_spec_json'], isNull);
@@ -1481,23 +1672,30 @@ void main() {
     test('fresh DB (v45) has media_collections.anilist_id column', () async {
       final db = await _openDb();
       expect(db.schemaVersion, 96);
-      final cols =
-          await db.customSelect("PRAGMA table_info('media_collections')").get();
+      final cols = await db
+          .customSelect("PRAGMA table_info('media_collections')")
+          .get();
       final colNames = cols.map((r) => r.data['name'] as String).toSet();
-      expect(colNames, contains('anilist_id'),
-          reason: 'fresh createAll must include v45 anilist_id');
+      expect(
+        colNames,
+        contains('anilist_id'),
+        reason: 'fresh createAll must include v45 anilist_id',
+      );
     });
 
-    test(
-        'real v44->v45 adds media_collections.anilist_id, preserves rows, '
+    test('real v44->v45 adds media_collections.anilist_id, preserves rows, '
         'DAO round-trips', () async {
       final db = await _openV44DbWithoutCollectionAnilistId();
       // Opening triggers from<45 addColumn(mediaCollections.anilistId).
-      final cols =
-          await db.customSelect("PRAGMA table_info('media_collections')").get();
+      final cols = await db
+          .customSelect("PRAGMA table_info('media_collections')")
+          .get();
       final colNames = cols.map((r) => r.data['name'] as String).toSet();
-      expect(colNames, contains('anilist_id'),
-          reason: 'from<45 must addColumn(mediaCollections.anilistId)');
+      expect(
+        colNames,
+        contains('anilist_id'),
+        reason: 'from<45 must addColumn(mediaCollections.anilistId)',
+      );
       // 既有行保留、新列默认 NULL（无损迁移）。
       final row = await db.getMediaCollectionById(1);
       expect(row, isNotNull);
@@ -1515,39 +1713,52 @@ void main() {
     test('fresh DB (v46) has epub_books.completed_at column', () async {
       final db = await _openDb();
       expect(db.schemaVersion, 96);
-      final cols =
-          await db.customSelect("PRAGMA table_info('epub_books')").get();
+      final cols = await db
+          .customSelect("PRAGMA table_info('epub_books')")
+          .get();
       final colNames = cols.map((r) => r.data['name'] as String).toSet();
-      expect(colNames, contains('completed_at'),
-          reason: 'fresh createAll must include v46 epub_books.completed_at');
+      expect(
+        colNames,
+        contains('completed_at'),
+        reason: 'fresh createAll must include v46 epub_books.completed_at',
+      );
     });
 
     test(
-        'fresh DB (v36) has favorite_words.book_key + title columns (TODO-1252)',
-        () async {
-      final db = await _openDb();
-      expect(db.schemaVersion, 96);
-      final cols =
-          await db.customSelect("PRAGMA table_info('favorite_words')").get();
-      final colNames = cols.map((r) => r.data['name'] as String).toSet();
-      expect(colNames, containsAll(<String>['book_key', 'title']),
-          reason: 'fresh createAll must include TODO-1252 book_key/title');
-    });
+      'fresh DB (v36) has favorite_words.book_key + title columns (TODO-1252)',
+      () async {
+        final db = await _openDb();
+        expect(db.schemaVersion, 96);
+        final cols = await db
+            .customSelect("PRAGMA table_info('favorite_words')")
+            .get();
+        final colNames = cols.map((r) => r.data['name'] as String).toSet();
+        expect(
+          colNames,
+          containsAll(<String>['book_key', 'title']),
+          reason: 'fresh createAll must include TODO-1252 book_key/title',
+        );
+      },
+    );
 
-    test(
-        'real v35->v36 adds favorite_words.book_key + title, preserves rows, '
+    test('real v35->v36 adds favorite_words.book_key + title, preserves rows, '
         'bumps user_version (TODO-1252)', () async {
       final db = await _openV35DbWithoutFavoriteBookColumns();
       // Opening triggers from<36 addColumn(bookKey/title).
-      final cols =
-          await db.customSelect("PRAGMA table_info('favorite_words')").get();
+      final cols = await db
+          .customSelect("PRAGMA table_info('favorite_words')")
+          .get();
       final colNames = cols.map((r) => r.data['name'] as String).toSet();
-      expect(colNames, containsAll(<String>['book_key', 'title']),
-          reason: 'from<36 must addColumn(favoriteWords.bookKey/.title)');
+      expect(
+        colNames,
+        containsAll(<String>['book_key', 'title']),
+        reason: 'from<36 must addColumn(favoriteWords.bookKey/.title)',
+      );
       // 既有行保留、新列 book_key 默认 NULL / title 默认空串（无损迁移）。
       final rows = await db
           .customSelect(
-              "SELECT book_key, title FROM favorite_words WHERE source_type='book'")
+            "SELECT book_key, title FROM favorite_words WHERE source_type='book'",
+          )
           .get();
       expect(rows, hasLength(1));
       expect(rows.single.data['book_key'], isNull);
@@ -1565,20 +1776,24 @@ void main() {
       expect(db.schemaVersion, 96);
       final rows = await db
           .customSelect(
-              "SELECT name FROM sqlite_master WHERE type='table' AND name='collection_scrape_meta'")
+            "SELECT name FROM sqlite_master WHERE type='table' AND name='collection_scrape_meta'",
+          )
           .get();
-      expect(rows, hasLength(1),
-          reason: 'fresh createAll must include v64 collection_scrape_meta');
+      expect(
+        rows,
+        hasLength(1),
+        reason: 'fresh createAll must include v64 collection_scrape_meta',
+      );
     });
 
-    test(
-        'real v63->v64 creates collection_scrape_meta, preserves collections, '
+    test('real v63->v64 creates collection_scrape_meta, preserves collections, '
         'bumps user_version (BUG-1310)', () async {
       final db = await _openV63DbWithoutCollectionScrapeMeta();
 
       final tables = await db
           .customSelect(
-              "SELECT name FROM sqlite_master WHERE type='table' AND name='collection_scrape_meta'")
+            "SELECT name FROM sqlite_master WHERE type='table' AND name='collection_scrape_meta'",
+          )
           .get();
       expect(tables, hasLength(1), reason: 'from<64 分支必须建出新表');
 
@@ -1605,42 +1820,47 @@ void main() {
       expect(version.read<int>('user_version'), db.schemaVersion);
     });
 
-    test('v66 -> v67 rebuilds reading_hourly_logs with format dimension',
-        () async {
-      final db = await _openV66DbWithLegacyReadingHourlyLogs();
+    test(
+      'v66 -> v67 rebuilds reading_hourly_logs with format dimension',
+      () async {
+        final db = await _openV66DbWithLegacyReadingHourlyLogs();
 
-      // 既有行零丢失，format 落 ''（历史未区分——写入时信息已丢，不猜身份）。
-      final legacy = await db.getHourlyLogsForDate('2026-07-01');
-      expect(legacy, hasLength(2));
-      expect(legacy.map((l) => l.format).toSet(), {''});
-      expect(legacy.singleWhere((l) => l.hour == 9).readingTimeMs, 1800000);
-      expect(legacy.singleWhere((l) => l.hour == 10).readingTimeMs, 600000);
+        // 既有行零丢失，format 落 ''（历史未区分——写入时信息已丢，不猜身份）。
+        final legacy = await db.getHourlyLogsForDate('2026-07-01');
+        expect(legacy, hasLength(2));
+        expect(legacy.map((l) => l.format).toSet(), {''});
+        expect(legacy.singleWhere((l) => l.hour == 9).readingTimeMs, 1800000);
+        expect(legacy.singleWhere((l) => l.hour == 10).readingTimeMs, 600000);
 
-      // 新唯一键 {dateKey, hour, format}：同一小时不同写入面各自成行，与
-      // 历史 '' 行共存互不冲突。
-      await db.setReadingHourlyLog(
-        dateKey: '2026-07-01',
-        hour: 9,
-        readingTimeMs: 300000,
-        format: BookFormat.manga.dbValue,
-      );
-      final after = await db.getHourlyLogsForDate('2026-07-01');
-      expect(after, hasLength(3));
-      expect(
+        // 新唯一键 {dateKey, hour, format}：同一小时不同写入面各自成行，与
+        // 历史 '' 行共存互不冲突。
+        await db.setReadingHourlyLog(
+          dateKey: '2026-07-01',
+          hour: 9,
+          readingTimeMs: 300000,
+          format: BookFormat.manga.dbValue,
+        );
+        final after = await db.getHourlyLogsForDate('2026-07-01');
+        expect(after, hasLength(3));
+        expect(
           after
               .singleWhere((l) => l.format.isEmpty && l.hour == 9)
               .readingTimeMs,
-          1800000);
-      expect(
-        after
-            .singleWhere((l) => l.format == BookFormat.manga.dbValue)
-            .readingTimeMs,
-        300000,
-      );
+          1800000,
+        );
+        expect(
+          after
+              .singleWhere((l) => l.format == BookFormat.manga.dbValue)
+              .readingTimeMs,
+          300000,
+        );
 
-      final version = await db.customSelect('PRAGMA user_version').getSingle();
-      expect(version.read<int>('user_version'), db.schemaVersion);
-    });
+        final version = await db
+            .customSelect('PRAGMA user_version')
+            .getSingle();
+        expect(version.read<int>('user_version'), db.schemaVersion);
+      },
+    );
   });
 }
 

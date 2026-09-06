@@ -3,11 +3,7 @@ import 'dart:io';
 
 import 'package:fushi/src/utils/misc/build_version.dart';
 
-enum WindowsUpdateHandoffStatus {
-  installed,
-  incomplete,
-  launchFailed,
-}
+enum WindowsUpdateHandoffStatus { installed, incomplete, launchFailed }
 
 class WindowsUpdateHandoffResult {
   const WindowsUpdateHandoffResult({
@@ -36,17 +32,13 @@ class WindowsDetectedInstallLocation {
   final String path;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'source': source,
-        'path': path,
-      };
+    'source': source,
+    'path': path,
+  };
 }
 
 class WindowsProcessInfo {
-  const WindowsProcessInfo({
-    required this.pid,
-    this.name,
-    this.path,
-  });
+  const WindowsProcessInfo({required this.pid, this.name, this.path});
 
   factory WindowsProcessInfo.fromJson(Map<String, dynamic> json) {
     return WindowsProcessInfo(
@@ -61,16 +53,12 @@ class WindowsProcessInfo {
   final String? path;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'pid': pid,
-        if (name != null && name!.isNotEmpty) 'name': name,
-        if (path != null && path!.isNotEmpty) 'path': path,
-      };
+    'pid': pid,
+    if (name != null && name!.isNotEmpty) 'name': name,
+    if (path != null && path!.isNotEmpty) 'path': path,
+  };
 
-  WindowsProcessInfo copyWith({
-    int? pid,
-    String? name,
-    String? path,
-  }) {
+  WindowsProcessInfo copyWith({int? pid, String? name, String? path}) {
     return WindowsProcessInfo(
       pid: pid ?? this.pid,
       name: name ?? this.name,
@@ -99,10 +87,10 @@ class WindowsInnoDeleteFileFailure {
   final String? message;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'path': path,
-        'code': code,
-        if (message != null && message!.isNotEmpty) 'message': message,
-      };
+    'path': path,
+    'code': code,
+    if (message != null && message!.isNotEmpty) 'message': message,
+  };
 }
 
 class WindowsInstallerFailureSummary {
@@ -235,19 +223,20 @@ class WindowsUpdateHandoffRecord {
       currentExecutablePath: json['currentExecutablePath'] as String?,
       currentInstallDir: json['currentInstallDir'] as String?,
       targetInstallDir: json['targetInstallDir'] as String?,
-      detectedInstallLocations: _listOfMaps(json['detectedInstallLocations'])
-          .map(WindowsDetectedInstallLocation.fromJson)
-          .toList(growable: false),
+      detectedInstallLocations: _listOfMaps(
+        json['detectedInstallLocations'],
+      ).map(WindowsDetectedInstallLocation.fromJson).toList(growable: false),
       // W2-6 真实跨版本 wire 兼容：旧键 'runningHibikiProcesses' 只在**读侧**
       // 保留——「hibiki → fushi 更新桥」时代的旧版二进制写下 marker、装完由新版
       // 读取，这是唯一会见到旧键的窗口。写侧只写新键。清理条件：更新桥通道
       // 退役（不再存在从旧 Hibiki 版本直升本包的升级路径）后删除旧键回退。
-      runningFushiProcesses: _listOfMaps(
-        json['runningFushiProcesses'] ?? json['runningHibikiProcesses'],
-      )
-          .map(WindowsProcessInfo.fromJson)
-          .where((WindowsProcessInfo process) => process.pid > 0)
-          .toList(growable: false),
+      runningFushiProcesses:
+          _listOfMaps(
+                json['runningFushiProcesses'] ?? json['runningHibikiProcesses'],
+              )
+              .map(WindowsProcessInfo.fromJson)
+              .where((WindowsProcessInfo process) => process.pid > 0)
+              .toList(growable: false),
       libmpvModuleHolders: _listOfMaps(json['libmpvModuleHolders'])
           .map(WindowsProcessInfo.fromJson)
           .where((WindowsProcessInfo process) => process.pid > 0)
@@ -321,84 +310,80 @@ class WindowsUpdateHandoffRecord {
   final DateTime? lastPromptedAt;
 
   WindowsInstallerDiagnostics get diagnostics => WindowsInstallerDiagnostics(
-        currentExecutablePath: currentExecutablePath,
-        currentInstallDir: currentInstallDir,
-        targetInstallDir: targetInstallDir,
-        detectedInstallLocations: detectedInstallLocations,
-        runningFushiProcesses: runningFushiProcesses,
-        libmpvModuleHolders: libmpvModuleHolders,
-        galHookModuleHolders: galHookModuleHolders,
-        innoLogDeleteFileFailures: innoLogDeleteFileFailures,
-        pathMismatchWarning: pathMismatchWarning,
-      );
+    currentExecutablePath: currentExecutablePath,
+    currentInstallDir: currentInstallDir,
+    targetInstallDir: targetInstallDir,
+    detectedInstallLocations: detectedInstallLocations,
+    runningFushiProcesses: runningFushiProcesses,
+    libmpvModuleHolders: libmpvModuleHolders,
+    galHookModuleHolders: galHookModuleHolders,
+    innoLogDeleteFileFailures: innoLogDeleteFileFailures,
+    pathMismatchWarning: pathMismatchWarning,
+  );
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'targetVersion': targetVersion,
-        'installerPath': installerPath,
-        'innoLogPath': innoLogPath,
-        'startedAt': startedAt.toUtc().toIso8601String(),
-        if (currentExecutablePath != null)
-          'currentExecutablePath': currentExecutablePath,
-        if (currentInstallDir != null) 'currentInstallDir': currentInstallDir,
-        if (targetInstallDir != null) 'targetInstallDir': targetInstallDir,
-        if (detectedInstallLocations.isNotEmpty)
-          'detectedInstallLocations': detectedInstallLocations
-              .map((WindowsDetectedInstallLocation location) =>
-                  location.toJson())
-              .toList(growable: false),
-        if (runningFushiProcesses.isNotEmpty)
-          'runningFushiProcesses': runningFushiProcesses
-              .map((WindowsProcessInfo process) => process.toJson())
-              .toList(growable: false),
-        if (libmpvModuleHolders.isNotEmpty)
-          'libmpvModuleHolders': libmpvModuleHolders
-              .map((WindowsProcessInfo process) => process.toJson())
-              .toList(growable: false),
-        if (galHookModuleHolders.isNotEmpty)
-          'galHookModuleHolders': galHookModuleHolders
-              .map((WindowsProcessInfo process) => process.toJson())
-              .toList(growable: false),
-        if (innoLogDeleteFileFailures.isNotEmpty)
-          'innoLogDeleteFileFailures': innoLogDeleteFileFailures
-              .map((WindowsInnoDeleteFileFailure failure) => failure.toJson())
-              .toList(growable: false),
-        if (pathMismatchWarning != null)
-          'pathMismatchWarning': pathMismatchWarning,
-        if (launcherStartedAt != null)
-          'launcherStartedAt': launcherStartedAt!.toUtc().toIso8601String(),
-        if (launcherPid != null) 'launcherPid': launcherPid,
-        if (parentProcessId != null) 'parentProcessId': parentProcessId,
-        if (parentExitObserved != null)
-          'parentExitObserved': parentExitObserved,
-        if (parentExitObservedAt != null)
-          'parentExitObservedAt':
-              parentExitObservedAt!.toUtc().toIso8601String(),
-        if (installerLaunchSucceeded != null)
-          'installerLaunchSucceeded': installerLaunchSucceeded,
-        if (installerLaunchedAt != null)
-          'installerLaunchedAt': installerLaunchedAt!.toUtc().toIso8601String(),
-        if (installerPid != null) 'installerPid': installerPid,
-        if (innoLogExists != null) 'innoLogExists': innoLogExists,
-        if (innoLogSizeBytes != null) 'innoLogSizeBytes': innoLogSizeBytes,
-        if (innoLogModifiedAt != null)
-          'innoLogModifiedAt': innoLogModifiedAt!.toUtc().toIso8601String(),
-        if (installerFailureType != null)
-          'installerFailureType': installerFailureType,
-        if (installerFailureSummary != null)
-          'installerFailureSummary': installerFailureSummary,
-        if (installerLaunchFailedAt != null)
-          'installerLaunchFailedAt':
-              installerLaunchFailedAt!.toUtc().toIso8601String(),
-        if (launchError != null) 'launchError': launchError,
-        if (failureFingerprint != null)
-          'failureFingerprint': failureFingerprint,
-        if (lastPromptedAppVersion != null)
-          'lastPromptedAppVersion': lastPromptedAppVersion,
-        if (lastPromptedFailureFingerprint != null)
-          'lastPromptedFailureFingerprint': lastPromptedFailureFingerprint,
-        if (lastPromptedAt != null)
-          'lastPromptedAt': lastPromptedAt!.toUtc().toIso8601String(),
-      };
+    'targetVersion': targetVersion,
+    'installerPath': installerPath,
+    'innoLogPath': innoLogPath,
+    'startedAt': startedAt.toUtc().toIso8601String(),
+    if (currentExecutablePath != null)
+      'currentExecutablePath': currentExecutablePath,
+    if (currentInstallDir != null) 'currentInstallDir': currentInstallDir,
+    if (targetInstallDir != null) 'targetInstallDir': targetInstallDir,
+    if (detectedInstallLocations.isNotEmpty)
+      'detectedInstallLocations': detectedInstallLocations
+          .map((WindowsDetectedInstallLocation location) => location.toJson())
+          .toList(growable: false),
+    if (runningFushiProcesses.isNotEmpty)
+      'runningFushiProcesses': runningFushiProcesses
+          .map((WindowsProcessInfo process) => process.toJson())
+          .toList(growable: false),
+    if (libmpvModuleHolders.isNotEmpty)
+      'libmpvModuleHolders': libmpvModuleHolders
+          .map((WindowsProcessInfo process) => process.toJson())
+          .toList(growable: false),
+    if (galHookModuleHolders.isNotEmpty)
+      'galHookModuleHolders': galHookModuleHolders
+          .map((WindowsProcessInfo process) => process.toJson())
+          .toList(growable: false),
+    if (innoLogDeleteFileFailures.isNotEmpty)
+      'innoLogDeleteFileFailures': innoLogDeleteFileFailures
+          .map((WindowsInnoDeleteFileFailure failure) => failure.toJson())
+          .toList(growable: false),
+    if (pathMismatchWarning != null) 'pathMismatchWarning': pathMismatchWarning,
+    if (launcherStartedAt != null)
+      'launcherStartedAt': launcherStartedAt!.toUtc().toIso8601String(),
+    if (launcherPid != null) 'launcherPid': launcherPid,
+    if (parentProcessId != null) 'parentProcessId': parentProcessId,
+    if (parentExitObserved != null) 'parentExitObserved': parentExitObserved,
+    if (parentExitObservedAt != null)
+      'parentExitObservedAt': parentExitObservedAt!.toUtc().toIso8601String(),
+    if (installerLaunchSucceeded != null)
+      'installerLaunchSucceeded': installerLaunchSucceeded,
+    if (installerLaunchedAt != null)
+      'installerLaunchedAt': installerLaunchedAt!.toUtc().toIso8601String(),
+    if (installerPid != null) 'installerPid': installerPid,
+    if (innoLogExists != null) 'innoLogExists': innoLogExists,
+    if (innoLogSizeBytes != null) 'innoLogSizeBytes': innoLogSizeBytes,
+    if (innoLogModifiedAt != null)
+      'innoLogModifiedAt': innoLogModifiedAt!.toUtc().toIso8601String(),
+    if (installerFailureType != null)
+      'installerFailureType': installerFailureType,
+    if (installerFailureSummary != null)
+      'installerFailureSummary': installerFailureSummary,
+    if (installerLaunchFailedAt != null)
+      'installerLaunchFailedAt': installerLaunchFailedAt!
+          .toUtc()
+          .toIso8601String(),
+    if (launchError != null) 'launchError': launchError,
+    if (failureFingerprint != null) 'failureFingerprint': failureFingerprint,
+    if (lastPromptedAppVersion != null)
+      'lastPromptedAppVersion': lastPromptedAppVersion,
+    if (lastPromptedFailureFingerprint != null)
+      'lastPromptedFailureFingerprint': lastPromptedFailureFingerprint,
+    if (lastPromptedAt != null)
+      'lastPromptedAt': lastPromptedAt!.toUtc().toIso8601String(),
+  };
 
   WindowsUpdateHandoffRecord copyWith({
     String? targetVersion,
@@ -505,7 +490,8 @@ abstract final class WindowsUpdateHandoff {
     // 换成**不同** target 版本（真正的新版本 / 新 debug 指纹）时不保留——那是一次
     // 全新的更新尝试，失败理应重新提示。
     final WindowsUpdateHandoffRecord? existing = await read(markerFile);
-    final bool sameTarget = existing != null &&
+    final bool sameTarget =
+        existing != null &&
         _isSameHandoffTarget(existing.targetVersion, targetVersion);
     await _write(
       markerFile,
@@ -523,10 +509,12 @@ abstract final class WindowsUpdateHandoff {
         galHookModuleHolders: diagnostics.galHookModuleHolders,
         innoLogDeleteFileFailures: diagnostics.innoLogDeleteFileFailures,
         pathMismatchWarning: diagnostics.pathMismatchWarning,
-        lastPromptedAppVersion:
-            sameTarget ? existing.lastPromptedAppVersion : null,
-        lastPromptedFailureFingerprint:
-            sameTarget ? existing.lastPromptedFailureFingerprint : null,
+        lastPromptedAppVersion: sameTarget
+            ? existing.lastPromptedAppVersion
+            : null,
+        lastPromptedFailureFingerprint: sameTarget
+            ? existing.lastPromptedFailureFingerprint
+            : null,
         lastPromptedAt: sameTarget ? existing.lastPromptedAt : null,
       ),
     );
@@ -679,8 +667,9 @@ abstract final class WindowsUpdateHandoff {
     // 代码）。现在加入编译进 `app.so` 的 [kFushiBuildVersionDefine]，它与被替换的
     // 产物同体，是唯一伪造不了的证据。没有它的历史版本/本地构建行为与旧判据完全
     // 一致。
-    final String? runningCodeVersion =
-        normalizeFushiBuildVersion(runningCodeVersionDefine);
+    final String? runningCodeVersion = normalizeFushiBuildVersion(
+      runningCodeVersionDefine,
+    );
     // 「这条提示是不是已经弹过」的幂等键。优先用代码版本：它来自 `app.so`，
     // `currentVersion` 来自 exe 版本资源，半更新态下两者会指向不同的构建，而这个
     // 键要回答的正是「跑着的这份代码有没有被提示过」。
@@ -731,8 +720,9 @@ abstract final class WindowsUpdateHandoff {
       );
     }
 
-    final WindowsUpdateHandoffRecord enriched =
-        await _enrichFailureDiagnostics(record);
+    final WindowsUpdateHandoffRecord enriched = await _enrichFailureDiagnostics(
+      record,
+    );
     if (enriched.lastPromptedAppVersion == promptedVersionKey &&
         enriched.lastPromptedFailureFingerprint ==
             enriched.failureFingerprint) {
@@ -758,18 +748,18 @@ abstract final class WindowsUpdateHandoff {
     final _WindowsInnoLogSnapshot log = await _readInnoLog(record.innoLogPath);
     final List<WindowsInnoDeleteFileFailure> deleteFailures =
         log.contents == null
-            ? record.innoLogDeleteFileFailures
-            : parseWindowsInnoDeleteFileFailures(log.contents!);
+        ? record.innoLogDeleteFileFailures
+        : parseWindowsInnoDeleteFileFailures(log.contents!);
     final WindowsInstallerFailureSummary summary =
         summarizeWindowsInstallerFailure(
-      record: record.copyWith(
-        innoLogDeleteFileFailures: deleteFailures,
-        innoLogExists: log.exists,
-        innoLogSizeBytes: log.sizeBytes,
-        innoLogModifiedAt: log.modifiedAt,
-      ),
-      innoLogContents: log.contents,
-    );
+          record: record.copyWith(
+            innoLogDeleteFileFailures: deleteFailures,
+            innoLogExists: log.exists,
+            innoLogSizeBytes: log.sizeBytes,
+            innoLogModifiedAt: log.modifiedAt,
+          ),
+          innoLogContents: log.contents,
+        );
     final String fingerprint = windowsInstallerFailureFingerprint(
       record: record.copyWith(
         innoLogDeleteFileFailures: deleteFailures,
@@ -847,7 +837,8 @@ WindowsInstallerFailureSummary summarizeWindowsInstallerFailure({
   if (launchError != null && launchError.trim().isNotEmpty) {
     return WindowsInstallerFailureSummary(
       type: 'launch_error',
-      message: 'The update launcher could not start the installer: '
+      message:
+          'The update launcher could not start the installer: '
           '${launchError.trim()}',
     );
   }
@@ -864,7 +855,8 @@ WindowsInstallerFailureSummary summarizeWindowsInstallerFailure({
   if (code5 != null) {
     return WindowsInstallerFailureSummary(
       type: 'deletefile_code_5',
-      message: 'The installer could not replace ${code5.path} because Windows '
+      message:
+          'The installer could not replace ${code5.path} because Windows '
           'reported access denied (DeleteFile code 5). Close Fushi and any '
           'process using that file, then run the installer again.',
     );
@@ -874,7 +866,8 @@ WindowsInstallerFailureSummary summarizeWindowsInstallerFailure({
     final WindowsInnoDeleteFileFailure failure = deleteFailures.first;
     return WindowsInstallerFailureSummary(
       type: 'deletefile_failed',
-      message: 'The installer could not replace ${failure.path} '
+      message:
+          'The installer could not replace ${failure.path} '
           '(DeleteFile code ${failure.code}).',
     );
   }
@@ -883,26 +876,30 @@ WindowsInstallerFailureSummary summarizeWindowsInstallerFailure({
   if (log == null || record.innoLogExists == false) {
     return const WindowsInstallerFailureSummary(
       type: 'missing_log',
-      message: 'The installer log was not created, so Fushi could not confirm '
+      message:
+          'The installer log was not created, so Fushi could not confirm '
           'that Inno Setup started. This usually means the handoff launcher '
           'failed before the installer began.',
     );
   }
 
   final String lower = log.toLowerCase();
-  final bool mentionsRunningApp = lower.contains('currently running') ||
+  final bool mentionsRunningApp =
+      lower.contains('currently running') ||
       lower.contains('is running') ||
       lower.contains('appmutex') ||
       lower.contains('mutex') ||
       lower.contains('another instance');
   final bool hasEAbort = lower.contains('eabort');
-  final bool looksCanceled = lower.contains('cancel') ||
+  final bool looksCanceled =
+      lower.contains('cancel') ||
       lower.contains('aborted') ||
       lower.contains('abort');
   if (mentionsRunningApp) {
     return WindowsInstallerFailureSummary(
       type: 'app_mutex_running',
-      message: 'Inno Setup reported that Fushi was still running. The '
+      message:
+          'Inno Setup reported that Fushi was still running. The '
           'installer is guarded by FushiSingleInstanceMutex, so every active '
           'fushi.exe process must be closed before the silent installer can '
           'continue.',
@@ -911,7 +908,8 @@ WindowsInstallerFailureSummary summarizeWindowsInstallerFailure({
   if (hasEAbort || looksCanceled) {
     return const WindowsInstallerFailureSummary(
       type: 'silent_cancel',
-      message: 'Inno Setup canceled in silent mode. With /VERYSILENT and '
+      message:
+          'Inno Setup canceled in silent mode. With /VERYSILENT and '
           '/SUPPRESSMSGBOXES, a blocked prompt becomes a cancel instead of an '
           'interactive dialog.',
     );
@@ -919,7 +917,8 @@ WindowsInstallerFailureSummary summarizeWindowsInstallerFailure({
 
   return const WindowsInstallerFailureSummary(
     type: 'installer_incomplete',
-    message: 'The installer ran, but Fushi restarted with the previous '
+    message:
+        'The installer ran, but Fushi restarted with the previous '
         'version. Check the installer log for the full Inno Setup details.',
   );
 }
@@ -959,8 +958,9 @@ List<WindowsInnoDeleteFileFailure> parseWindowsInnoDeleteFileFailures(
 
     final int? code = int.tryParse(codeMatch.group(1)!);
     if (code == null) continue;
-    final String? nextPath =
-        i + 1 < lines.length ? _extractWindowsPath(lines[i + 1]) : null;
+    final String? nextPath = i + 1 < lines.length
+        ? _extractWindowsPath(lines[i + 1])
+        : null;
     final String path = pathOnLine ?? previousPath ?? nextPath ?? '';
     failures.add(
       WindowsInnoDeleteFileFailure(
@@ -1063,10 +1063,8 @@ List<Map<String, dynamic>> _listOfMaps(Object? raw) {
       .whereType<Map>()
       .map(
         (Map value) => value.map(
-          (Object? key, Object? value) => MapEntry<String, dynamic>(
-            key.toString(),
-            value,
-          ),
+          (Object? key, Object? value) =>
+              MapEntry<String, dynamic>(key.toString(), value),
         ),
       )
       .toList(growable: false);
@@ -1150,10 +1148,12 @@ RunningCodeVersionEvidence classifyRunningCodeVersion({
   if (runningCodeVersion == null) {
     return RunningCodeVersionEvidence.inconclusive;
   }
-  final String running =
-      _stripBuildMetadata(_stripLeadingV(runningCodeVersion.trim()));
-  final String target =
-      _stripBuildMetadata(_stripLeadingV(targetVersion.trim()));
+  final String running = _stripBuildMetadata(
+    _stripLeadingV(runningCodeVersion.trim()),
+  );
+  final String target = _stripBuildMetadata(
+    _stripLeadingV(targetVersion.trim()),
+  );
 
   final int base = _compareBase(_basePart(running), _basePart(target));
   if (base != 0) {

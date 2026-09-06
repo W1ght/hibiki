@@ -109,8 +109,10 @@ class _AudioSourcesDialogState extends State<AudioSourcesDialog> {
   @override
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final double maxHeight =
-        (MediaQuery.of(context).size.height * 0.55).clamp(128.0, 420.0);
+    final double maxHeight = (MediaQuery.of(context).size.height * 0.55).clamp(
+      128.0,
+      420.0,
+    );
 
     return FushiDialogFrame(
       maxWidth: 560,
@@ -242,8 +244,9 @@ class _AudioSourcesDialogState extends State<AudioSourcesDialog> {
     final bool isRemoteUrl = source.kind == AudioSourceKind.remoteAudio;
     final bool isEditingThis =
         _editingSource != null && _editingSource == source;
-    final String title =
-        isHibiki ? t.audio_source_fushi_interconnect : source.displayLabel;
+    final String title = isHibiki
+        ? t.audio_source_fushi_interconnect
+        : source.displayLabel;
     final bool loopbackWarn = source.pointsAtLoopbackHost;
     final String baseSubtitle = isHibiki
         ? t.remote_audio_source
@@ -282,8 +285,9 @@ class _AudioSourcesDialogState extends State<AudioSourcesDialog> {
               icon: isEditingThis ? Icons.edit : Icons.edit_outlined,
               size: 18,
               tooltip: t.dialog_edit,
-              enabledColor:
-                  isEditingThis ? Theme.of(context).colorScheme.primary : null,
+              enabledColor: isEditingThis
+                  ? Theme.of(context).colorScheme.primary
+                  : null,
               padding: EdgeInsets.all(tokens.spacing.gap / 2),
               onTap: () => _beginEditRemoteUrl(source),
             ),
@@ -360,16 +364,17 @@ class _AudioSourcesDialogState extends State<AudioSourcesDialog> {
               // 编辑态下不再暴露「加入 Hibiki 互联源」——那是新增动作，与当前正在改的
               // 那一行无关，混在一起只会让 ✓ 的语义变模糊。
               if (!editing &&
-                  !_sources.any((AudioSourceConfig s) =>
-                      s.kind == AudioSourceKind.fushiRemote))
+                  !_sources.any(
+                    (AudioSourceConfig s) =>
+                        s.kind == AudioSourceKind.fushiRemote,
+                  ))
                 FushiIconButton(
                   icon: Icons.hub_outlined,
                   tooltip: t.audio_source_fushi_interconnect,
                   padding: EdgeInsets.all(tokens.spacing.gap / 2),
-                  onTap: () => setState(() => _sources.insert(
-                        0,
-                        AudioSourceConfig.fushiRemote(),
-                      )),
+                  onTap: () => setState(
+                    () => _sources.insert(0, AudioSourceConfig.fushiRemote()),
+                  ),
                 ),
               if (editing)
                 FushiIconButton(
@@ -468,8 +473,9 @@ class _AudioSourcesDialogState extends State<AudioSourcesDialog> {
   Future<void> _addLocalDb() async {
     setState(() => _importing = true);
     try {
-      final AudioSourceConfig? added = await widget
-          .onPickLocalDb!(_referenceOriginal && _canReferenceOriginal);
+      final AudioSourceConfig? added = await widget.onPickLocalDb!(
+        _referenceOriginal && _canReferenceOriginal,
+      );
       if (!mounted) return;
       if (added != null) {
         setState(() => _sources.insert(0, added));
@@ -488,9 +494,11 @@ class _AudioSourcesDialogState extends State<AudioSourcesDialog> {
       if (mounted) {
         // BUG-779：无效文件（zip / 备份 zip / 空库）给专属可读文案，不把裸异常字符串
         // 甩给用户；其它真·失败（权限 / 磁盘 / 平台）仍带异常摘要便于复述。
-        _showSnack(e is InvalidLocalAudioDbException
-            ? t.local_audio_invalid_db
-            : t.local_audio_import_failed_detail(reason: '$e'));
+        _showSnack(
+          e is InvalidLocalAudioDbException
+              ? t.local_audio_invalid_db
+              : t.local_audio_import_failed_detail(reason: '$e'),
+        );
       }
     } finally {
       if (mounted) setState(() => _importing = false);
@@ -501,8 +509,9 @@ class _AudioSourcesDialogState extends State<AudioSourcesDialog> {
     setState(() {
       // 整表重建 → 编辑目标不再属于新列表，编辑态必须一起清掉。
       _cancelEdit();
-      final bool hadHibiki = _sources
-          .any((AudioSourceConfig s) => s.kind == AudioSourceKind.fushiRemote);
+      final bool hadHibiki = _sources.any(
+        (AudioSourceConfig s) => s.kind == AudioSourceKind.fushiRemote,
+      );
       final List<AudioSourceConfig> locals = _sources
           .where((AudioSourceConfig s) => s.kind == AudioSourceKind.localAudio)
           .toList();
@@ -521,8 +530,9 @@ class _AudioSourcesDialogState extends State<AudioSourcesDialog> {
   }
 
   void _showSnack(String message) {
-    ScaffoldMessenger.maybeOf(context)
-        ?.showSnackBar(SnackBar(content: Text(message)));
+    ScaffoldMessenger.maybeOf(
+      context,
+    )?.showSnackBar(SnackBar(content: Text(message)));
   }
 }
 
@@ -557,12 +567,13 @@ _DictCssDraftSession? _dictCssDraftSession;
 ///
 /// 与 `LapisStyleEditorPage.previewBuilder` 同一模式——widget 测试跑不了平台
 /// WebView，而本对话框的草稿/保存语义又必须能测。
-typedef DictStylePreviewBuilder = Widget Function(
-  BuildContext context,
-  String css,
-  DictStylePart highlightPart,
-  ValueChanged<DictStylePart> onPickPart,
-);
+typedef DictStylePreviewBuilder =
+    Widget Function(
+      BuildContext context,
+      String css,
+      DictStylePart highlightPart,
+      ValueChanged<DictStylePart> onPickPart,
+    );
 
 class DictCssEditorDialog extends StatefulWidget {
   const DictCssEditorDialog({
@@ -597,8 +608,10 @@ class _DictCssEditorDialogState extends State<DictCssEditorDialog> {
   @override
   void initState() {
     super.initState();
-    _appModel =
-        ProviderScope.containerOf(context, listen: false).read(appProvider);
+    _appModel = ProviderScope.containerOf(
+      context,
+      listen: false,
+    ).read(appProvider);
     _profileDraftCoordinator = ProviderScope.containerOf(
       context,
       listen: false,
@@ -610,8 +623,9 @@ class _DictCssEditorDialogState extends State<DictCssEditorDialog> {
         identical(existingDraft.appModel, _appModel) &&
         identical(existingDraft.profileDraftScope, profileDraftScope)) {
       _draft = existingDraft;
-      _selectedIndex =
-          _selectedIndexForDictionary(_draft.selectedDictionaryName);
+      _selectedIndex = _selectedIndexForDictionary(
+        _draft.selectedDictionaryName,
+      );
     } else {
       _selectedIndex = _initialSelectedIndex();
       _draft = _DictCssDraftSession(
@@ -661,10 +675,7 @@ class _DictCssEditorDialogState extends State<DictCssEditorDialog> {
             if (dictionaryName == null) {
               await _appModel.setGlobalDictCSS(entry.value);
             } else {
-              await _appModel.setCustomCSSForDict(
-                dictionaryName,
-                entry.value,
-              );
+              await _appModel.setCustomCSSForDict(dictionaryName, entry.value);
             }
           }
           // null = 本次没碰过可视化页。不能拿 `?? []` 兜底——那会把用户已存的
@@ -845,7 +856,8 @@ class _DictCssEditorDialogState extends State<DictCssEditorDialog> {
       ),
       child: ClipRRect(
         borderRadius: tokens.radii.cardRadius,
-        child: widget.previewBuilder?.call(
+        child:
+            widget.previewBuilder?.call(
               context,
               previewCss,
               _draft.selectedPart,
@@ -860,8 +872,10 @@ class _DictCssEditorDialogState extends State<DictCssEditorDialog> {
             ),
       ),
     );
-    final Widget hint =
-        Text(t.dict_style_pick_hint, style: tokens.type.listSubtitle);
+    final Widget hint = Text(
+      t.dict_style_pick_hint,
+      style: tokens.type.listSubtitle,
+    );
     final Widget controls = DictStyleVisualEditor(
       rules: rules,
       scopeDictionary: scope,

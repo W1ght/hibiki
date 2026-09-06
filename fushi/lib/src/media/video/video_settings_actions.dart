@@ -164,8 +164,9 @@ Future<void> commitVideoDanmakuStyle(
   SettingsContext context,
   VideoDanmakuStyle Function(VideoDanmakuStyle style) mutate,
 ) async {
-  final VideoDanmakuStyle next =
-      mutate(currentVideoDanmakuStyle(context)).normalized();
+  final VideoDanmakuStyle next = mutate(
+    currentVideoDanmakuStyle(context),
+  ).normalized();
   final VideoQuickSettingsHost? host = videoQuickSettingsHostOf(context);
   if (host?.onDanmakuStyleCommit != null) {
     await host!.onDanmakuStyleCommit!(next);
@@ -406,13 +407,15 @@ Widget _buildSubtitleColorRow(
       size: 24,
       borderColor: Theme.of(buildContext).dividerColor,
     ),
-    onTap: () => unawaited(_pickSubtitleColor(
-      buildContext,
-      title: title,
-      initial: current,
-      onPreview: onPreview,
-      onCommit: onCommit,
-    )),
+    onTap: () => unawaited(
+      _pickSubtitleColor(
+        buildContext,
+        title: title,
+        initial: current,
+        onPreview: onPreview,
+        onCommit: onCommit,
+      ),
+    ),
   );
 }
 
@@ -474,10 +477,12 @@ Widget buildVideoSubtitleTextColorRow(SettingsContext context) {
       context,
       (VideoSubtitleStyle s) => s.copyWith(textColor: c),
     ),
-    onCommit: (Color c) => unawaited(commitVideoSubtitleStyle(
-      context,
-      (VideoSubtitleStyle s) => s.copyWith(textColor: c),
-    )),
+    onCommit: (Color c) => unawaited(
+      commitVideoSubtitleStyle(
+        context,
+        (VideoSubtitleStyle s) => s.copyWith(textColor: c),
+      ),
+    ),
   );
 }
 
@@ -488,9 +493,9 @@ Widget buildVideoSubtitleTextColorRow(SettingsContext context) {
 Widget buildVideoSubtitleBgColorRow(SettingsContext context) {
   final VideoSubtitleStyle style = currentVideoSubtitleStyle(context);
   VideoSubtitleStyle applyColor(VideoSubtitleStyle s, Color c) => s.copyWith(
-        backgroundColor: c,
-        backgroundOpacity: s.backgroundOpacity <= 0 ? 0.6 : s.backgroundOpacity,
-      );
+    backgroundColor: c,
+    backgroundOpacity: s.backgroundOpacity <= 0 ? 0.6 : s.backgroundOpacity,
+  );
   return _buildSubtitleColorRow(
     context,
     title: t.video_setting_subtitle_bg_color,
@@ -500,10 +505,12 @@ Widget buildVideoSubtitleBgColorRow(SettingsContext context) {
       context,
       (VideoSubtitleStyle s) => applyColor(s, c),
     ),
-    onCommit: (Color c) => unawaited(commitVideoSubtitleStyle(
-      context,
-      (VideoSubtitleStyle s) => applyColor(s, c),
-    )),
+    onCommit: (Color c) => unawaited(
+      commitVideoSubtitleStyle(
+        context,
+        (VideoSubtitleStyle s) => applyColor(s, c),
+      ),
+    ),
   );
 }
 
@@ -515,22 +522,25 @@ Widget buildVideoShaderManager(SettingsContext context) {
   return VideoShaderManagerView(
     initialEnabled: decodeEnabledShaders(context.appModel.videoShadersEnabled),
     qualityEnhancementEnabled: currentVideoMpvConfig(context).highQuality,
-    onQualityEnhancementChanged: (bool value) => unawaited(commitVideoMpvConfig(
-      context,
-      (VideoMpvConfig c) => c.copyWith(highQuality: value),
-    )),
+    onQualityEnhancementChanged: (bool value) => unawaited(
+      commitVideoMpvConfig(
+        context,
+        (VideoMpvConfig c) => c.copyWith(highQuality: value),
+      ),
+    ),
     onApply: (List<String> names) async {
       await host.onApplyShaders(names);
       context.refresh();
     },
-    onSelectTier: (
-      VideoShaderTier tier,
-      bool highQuality,
-      List<String> enabledNames,
-    ) async {
-      await host.onSelectShaderTier(tier, highQuality, enabledNames);
-      context.refresh();
-    },
+    onSelectTier:
+        (
+          VideoShaderTier tier,
+          bool highQuality,
+          List<String> enabledNames,
+        ) async {
+          await host.onSelectShaderTier(tier, highQuality, enabledNames);
+          context.refresh();
+        },
     initialMpvDir: context.appModel.videoMpvShaderDir,
     embedded: true,
     onMpvDirChanged: (String dir) async {
@@ -589,8 +599,9 @@ class _VideoLuaScriptListState extends State<_VideoLuaScriptList> {
     final List<String>? paths = _paths;
     if (paths == null) return const SizedBox.shrink();
     final ThemeData theme = Theme.of(context);
-    final TextStyle? noteStyle = theme.textTheme.bodySmall
-        ?.copyWith(color: theme.colorScheme.onSurfaceVariant);
+    final TextStyle? noteStyle = theme.textTheme.bodySmall?.copyWith(
+      color: theme.colorScheme.onSurfaceVariant,
+    );
     final Widget note = Padding(
       padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
       child: Text(t.video_setting_mpv_lua_scripts_input_note, style: noteStyle),
@@ -603,8 +614,9 @@ class _VideoLuaScriptListState extends State<_VideoLuaScriptList> {
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
             child: Text(
               t.video_setting_mpv_lua_scripts_empty,
-              style: theme.textTheme.bodyMedium
-                  ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+              style: theme.textTheme.bodyMedium?.copyWith(
+                color: theme.colorScheme.onSurfaceVariant,
+              ),
             ),
           ),
           note,
@@ -643,20 +655,20 @@ class _VideoLuaScriptListState extends State<_VideoLuaScriptList> {
     final String? status = !live
         ? null
         : !loaded
-            ? t.video_setting_mpv_lua_scripts_status_not_loaded
-            : error == null
-                ? t.video_setting_mpv_lua_scripts_status_loaded
-                : '${t.video_setting_mpv_lua_scripts_status_error}: $error';
+        ? t.video_setting_mpv_lua_scripts_status_not_loaded
+        : error == null
+        ? t.video_setting_mpv_lua_scripts_status_loaded
+        : '${t.video_setting_mpv_lua_scripts_status_error}: $error';
     final IconData icon = error != null
         ? Icons.error_outline
         : loaded
-            ? Icons.check_circle_outline
-            : Icons.description_outlined;
+        ? Icons.check_circle_outline
+        : Icons.description_outlined;
     final Color? tint = error != null
         ? scheme.error
         : loaded
-            ? scheme.primary
-            : null;
+        ? scheme.primary
+        : null;
     return FushiListItem(
       density: FushiListDensity.compact,
       leading: Icon(icon, color: tint),
@@ -701,8 +713,9 @@ class _VideoMpvRawConfFieldState extends State<_VideoMpvRawConfField> {
     // 契约依赖：页面 onMpvConfigChanged 在其第一个 await 前同步落 pref 缓存
     // （currentVideoMpvConfig 立即读到刚键入的值）——否则键入后的 rebuild 会在
     // 这里读到旧值并回写输入框、打断光标。改动持久化时序前先看这里。
-    final String external =
-        currentVideoMpvConfig(widget.settingsContext).rawConf;
+    final String external = currentVideoMpvConfig(
+      widget.settingsContext,
+    ).rawConf;
     if (external != _controller.text) _controller.text = external;
   }
 
@@ -740,10 +753,12 @@ class _VideoMpvRawConfFieldState extends State<_VideoMpvRawConfField> {
               helperMaxLines: 4,
               border: const OutlineInputBorder(),
             ),
-            onChanged: (String v) => unawaited(commitVideoMpvConfig(
-              widget.settingsContext,
-              (VideoMpvConfig c) => c.copyWith(rawConf: v),
-            )),
+            onChanged: (String v) => unawaited(
+              commitVideoMpvConfig(
+                widget.settingsContext,
+                (VideoMpvConfig c) => c.copyWith(rawConf: v),
+              ),
+            ),
           ),
         ],
       ),
@@ -779,13 +794,15 @@ class _VideoDanmakuBlockRulesFieldState
   }
 
   Future<void> _commit(String value) async {
-    final VideoQuickSettingsHost? host =
-        videoQuickSettingsHostOf(widget.settingsContext);
+    final VideoQuickSettingsHost? host = videoQuickSettingsHostOf(
+      widget.settingsContext,
+    );
     if (host?.onDanmakuBlockRulesChanged != null) {
       await host!.onDanmakuBlockRulesChanged!(value);
     } else {
-      await widget.settingsContext.appModel
-          .setVideoDanmakuBlockRulesText(value);
+      await widget.settingsContext.appModel.setVideoDanmakuBlockRulesText(
+        value,
+      );
     }
   }
 
@@ -805,8 +822,8 @@ class _VideoDanmakuBlockRulesFieldState
           Text(
             t.video_setting_danmaku_block_rules_hint,
             style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: Theme.of(context).colorScheme.onSurfaceVariant,
-                ),
+              color: Theme.of(context).colorScheme.onSurfaceVariant,
+            ),
           ),
           SizedBox(height: tokens.spacing.gap / 2),
           TextField(

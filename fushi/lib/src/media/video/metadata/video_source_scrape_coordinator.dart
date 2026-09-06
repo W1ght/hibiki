@@ -39,11 +39,11 @@ class VideoSourceScrapeCoordinator
     VideoMetadataProviderRegistry? registry,
     VideoMetadataAssetDownloader? assetDownloader,
     this.onWorkScraped,
-  })  : registry = registry ?? _createRegistry(config),
-        assetDownloader = assetDownloader ?? VideoMetadataAssetDownloader(),
-        _ownsRegistry = registry == null,
-        _ownsAssetDownloader = assetDownloader == null,
-        _store = VideoMetadataDatabaseStore(database);
+  }) : registry = registry ?? _createRegistry(config),
+       assetDownloader = assetDownloader ?? VideoMetadataAssetDownloader(),
+       _ownsRegistry = registry == null,
+       _ownsAssetDownloader = assetDownloader == null,
+       _store = VideoMetadataDatabaseStore(database);
 
   final FushiDatabase database;
   final VideoSourceScrapeGlobalConfig config;
@@ -68,18 +68,17 @@ class VideoSourceScrapeCoordinator
 
   static VideoMetadataProviderRegistry _createRegistry(
     VideoSourceScrapeGlobalConfig config,
-  ) =>
-      VideoMetadataProviderRegistry(<VideoMetadataProvider>[
-        AniDbVideoMetadataProvider(
-          clientName: config.anidbClientName,
-          clientVersion: config.anidbClientVersion,
-          language: config.locale,
-        ),
-        TmdbVideoMetadataProvider(
-          apiKey: config.tmdbApiKey,
-          language: config.locale,
-        ),
-      ]);
+  ) => VideoMetadataProviderRegistry(<VideoMetadataProvider>[
+    AniDbVideoMetadataProvider(
+      clientName: config.anidbClientName,
+      clientVersion: config.anidbClientVersion,
+      language: config.locale,
+    ),
+    TmdbVideoMetadataProvider(
+      apiKey: config.tmdbApiKey,
+      language: config.locale,
+    ),
+  ]);
 
   /// 对刚完成下载导入的单个作品执行身份受控的刮削。
   ///
@@ -92,18 +91,15 @@ class VideoSourceScrapeCoordinator
     required VideoMetadataLookup lookup,
     VideoSourceScrapeCancellationToken? cancellationToken,
     VideoSourceScrapeProgressCallback? onProgress,
-  }) =>
-      scrapeSource(
-        work.source,
-        cancellationToken:
-            cancellationToken ?? VideoSourceScrapeCancellationToken(),
-        onProgress: onProgress ?? (_) {},
-        plannedWorks: <VideoSourceScrapeWork>[work],
-        confirmedLookups: <String, VideoMetadataLookup>{
-          work.stableKey: lookup,
-        },
-        runScope: 'work',
-      );
+  }) => scrapeSource(
+    work.source,
+    cancellationToken:
+        cancellationToken ?? VideoSourceScrapeCancellationToken(),
+    onProgress: onProgress ?? (_) {},
+    plannedWorks: <VideoSourceScrapeWork>[work],
+    confirmedLookups: <String, VideoMetadataLookup>{work.stableKey: lookup},
+    runScope: 'work',
+  );
 
   @override
   Future<List<VideoSourceScrapeConfirmationCandidate>> searchManualCandidates({
@@ -118,10 +114,13 @@ class VideoSourceScrapeCoordinator
     // 作品可能已不在当前计划里（文件改名/移动/删除后标题漂移，BUG-1998）。
     // 搜索只需要「电影还是剧集」这一个参数：拿不到就双形态各搜一次再按身份
     // 去重合并，绝不让只读的候选搜索因为计划回查失败而整个抛异常。
-    final VideoSourceScrapeWork? work =
-        await _plannedWorkOrNull(source, workTitle);
-    final VideoMetadataProvider? provider =
-        _manualSearchProvider(await _sourceProvider(source));
+    final VideoSourceScrapeWork? work = await _plannedWorkOrNull(
+      source,
+      workTitle,
+    );
+    final VideoMetadataProvider? provider = _manualSearchProvider(
+      await _sourceProvider(source),
+    );
     if (provider == null) {
       return const <VideoSourceScrapeConfirmationCandidate>[];
     }
@@ -141,14 +140,17 @@ class VideoSourceScrapeCoordinator
       for (final VideoMetadataWork candidate in results) {
         if (_lookupForCandidate(candidate, provider.providerKind)
             case final VideoMetadataLookup lookup) {
-          if (!seenLookups
-              .add('${lookup.mediaKind.name}:${lookup.externalId}')) {
+          if (!seenLookups.add(
+            '${lookup.mediaKind.name}:${lookup.externalId}',
+          )) {
             continue;
           }
-          candidates.add(VideoSourceScrapeConfirmationCandidate(
-            lookup: lookup,
-            work: candidate,
-          ));
+          candidates.add(
+            VideoSourceScrapeConfirmationCandidate(
+              lookup: lookup,
+              work: candidate,
+            ),
+          );
         }
       }
     }
@@ -187,8 +189,9 @@ class VideoSourceScrapeCoordinator
     SourceLibraryRow source,
     String workTitle,
   ) async {
-    final List<VideoSourceScrapeWork> works =
-        await VideoSourceWorkPlanner(database).plan(source);
+    final List<VideoSourceScrapeWork> works = await VideoSourceWorkPlanner(
+      database,
+    ).plan(source);
     for (final VideoSourceScrapeWork work in works) {
       if (work.title == workTitle) return work;
     }
@@ -197,12 +200,11 @@ class VideoSourceScrapeCoordinator
 
   Future<VideoMetadataProviderKind> _sourceProvider(
     SourceLibraryRow source,
-  ) async =>
-      _EffectiveSourceSettings.from(
-        await database.getVideoSourceScrapeSettings(source.id),
-        config,
-        allowProtectedOverwrite: false,
-      ).provider;
+  ) async => _EffectiveSourceSettings.from(
+    await database.getVideoSourceScrapeSettings(source.id),
+    config,
+    allowProtectedOverwrite: false,
+  ).provider;
 
   /// 手动搜索与自动识别共用严格单主源规则：只返回 selected provider；缺失或
   /// 不可用时 fail closed，补充/历史 provider 不得被提升为可绑定的规范身份源。
@@ -216,8 +218,9 @@ class VideoSourceScrapeCoordinator
 
   /// 剧集/电影形态由来源计划里的真实成员决定，与 [_resolveWork] 同一判据。
   VideoMetadataMediaKind _manualMediaKind(VideoSourceScrapeWork work) {
-    final VideoNameInfo parsed =
-        parseVideoFilename(p.basename(work.members.first.videoPath));
+    final VideoNameInfo parsed = parseVideoFilename(
+      p.basename(work.members.first.videoPath),
+    );
     return work.isEpisodic || parsed.episode != null
         ? VideoMetadataMediaKind.tv
         : VideoMetadataMediaKind.movie;
@@ -238,9 +241,7 @@ class VideoSourceScrapeCoordinator
     final VideoScrapeOperationLease? lease =
         VideoScrapeOperationGate.tryEnterOperation();
     if (lease == null) {
-      return Future<SourceScrapeReport>.error(
-        StateError('视频刮削资料正在清理'),
-      );
+      return Future<SourceScrapeReport>.error(StateError('视频刮削资料正在清理'));
     }
     return _scrapeSourceUnlocked(
       source,
@@ -280,8 +281,8 @@ class VideoSourceScrapeCoordinator
         ],
       );
     }
-    final VideoSourceScrapeSettingRow? storedSettings =
-        await database.getVideoSourceScrapeSettings(source.id);
+    final VideoSourceScrapeSettingRow? storedSettings = await database
+        .getVideoSourceScrapeSettings(source.id);
     final _EffectiveSourceSettings settings = _EffectiveSourceSettings.from(
       storedSettings,
       config,
@@ -339,16 +340,18 @@ class VideoSourceScrapeCoordinator
       // 也不能让它接管身份；整批只给一条聚合、可操作的说明。
       final bool hasProvider =
           registry.provider(VideoMetadataProviderKind.anidb)?.isAvailable ??
-              false;
+          false;
       if (!hasProvider && works.isNotEmpty) {
         failed = works.length;
-        errors.add(SourceScrapeIssue(
-          workTitle: source.label,
-          message: describeVideoScrapeFailure(
-            VideoMetadataResolutionStatus.providerUnavailable,
-            null,
+        errors.add(
+          SourceScrapeIssue(
+            workTitle: source.label,
+            message: describeVideoScrapeFailure(
+              VideoMetadataResolutionStatus.providerUnavailable,
+              null,
+            ),
           ),
-        ));
+        );
       }
 
       // AniDB 明确下发 banned 后整批停手。封禁按客户端 IP 记在服务端、是 endpoint
@@ -356,16 +359,19 @@ class VideoSourceScrapeCoordinator
       // 侧已经闩住不再发请求（见 AniDbVideoMetadataProvider.isBanned），这里负责把
       // 「剩下的没做」如实结账成一条可操作说明，而不是让用户对着 N 条一模一样的分
       // 集抓取失败去猜发生了什么。
-      final AniDbVideoMetadataProvider? anidb =
-          switch (registry.provider(VideoMetadataProviderKind.anidb)) {
+      final AniDbVideoMetadataProvider? anidb = switch (registry.provider(
+        VideoMetadataProviderKind.anidb,
+      )) {
         final AniDbVideoMetadataProvider provider => provider,
         _ => null,
       };
       int startedWorks = 0;
 
-      for (int index = 0;
-          hasProvider && anidb?.isBanned != true && index < works.length;
-          index++) {
+      for (
+        int index = 0;
+        hasProvider && anidb?.isBanned != true && index < works.length;
+        index++
+      ) {
         startedWorks++;
         cancellationToken.throwIfCancelled();
         final VideoSourceScrapeWork localWork = works[index];
@@ -400,25 +406,29 @@ class VideoSourceScrapeCoordinator
           );
           if (resolved.pending) {
             pending++;
-            warnings.add(SourceScrapeIssue(
-              workTitle: localWork.title,
-              message: describeVideoScrapeFailure(
-                VideoMetadataResolutionStatus.ambiguous,
-                resolved.reason,
+            warnings.add(
+              SourceScrapeIssue(
+                workTitle: localWork.title,
+                message: describeVideoScrapeFailure(
+                  VideoMetadataResolutionStatus.ambiguous,
+                  resolved.reason,
+                ),
               ),
-            ));
+            );
             continue;
           }
           final VideoMetadataWork? metadata = resolved.metadata;
           if (metadata == null) {
             failed++;
-            errors.add(SourceScrapeIssue(
-              workTitle: localWork.title,
-              message: describeVideoScrapeFailure(
-                resolved.status,
-                resolved.reason,
+            errors.add(
+              SourceScrapeIssue(
+                workTitle: localWork.title,
+                message: describeVideoScrapeFailure(
+                  resolved.status,
+                  resolved.reason,
+                ),
               ),
-            ));
+            );
             continue;
           }
 
@@ -484,20 +494,24 @@ class VideoSourceScrapeCoordinator
               rethrow;
             } catch (error) {
               // 补字幕失败绝不影响刮削结论——它是刮削的下游增值，不是前置条件。
-              warnings.add(SourceScrapeIssue(
-                workTitle: localWork.title,
-                message: '字幕补齐失败：$error',
-              ));
+              warnings.add(
+                SourceScrapeIssue(
+                  workTitle: localWork.title,
+                  message: '字幕补齐失败：$error',
+                ),
+              );
             }
           }
         } on VideoSourceScrapeCancelled {
           rethrow;
         } catch (error) {
           failed++;
-          errors.add(SourceScrapeIssue(
-            workTitle: localWork.title,
-            message: error.toString(),
-          ));
+          errors.add(
+            SourceScrapeIssue(
+              workTitle: localWork.title,
+              message: error.toString(),
+            ),
+          );
         } finally {
           await _updateRunCounts(
             runId,
@@ -513,12 +527,15 @@ class VideoSourceScrapeCoordinator
       final int skippedByBan = works.length - startedWorks;
       if (banRemaining != null && hasProvider && skippedByBan > 0) {
         failed += skippedByBan;
-        errors.add(SourceScrapeIssue(
-          workTitle: source.label,
-          message: 'AniDB 已封禁本客户端，本轮剩余 $skippedByBan 个作品全部跳过'
-              '（约 ${banRemaining.inHours + 1} 小时后自动恢复）。'
-              '封禁期间继续请求只会延长封禁。',
-        ));
+        errors.add(
+          SourceScrapeIssue(
+            workTitle: source.label,
+            message:
+                'AniDB 已封禁本客户端，本轮剩余 $skippedByBan 个作品全部跳过'
+                '（约 ${banRemaining.inHours + 1} 小时后自动恢复）。'
+                '封禁期间继续请求只会延长封禁。',
+          ),
+        );
       }
 
       final SourceScrapeReport report = SourceScrapeReport(
@@ -552,8 +569,9 @@ class VideoSourceScrapeCoordinator
         errors: errors,
         cancelled: true,
       );
-      final String status =
-          _interruptedRunIds.contains(runId) ? 'interrupted' : 'cancelled';
+      final String status = _interruptedRunIds.contains(runId)
+          ? 'interrupted'
+          : 'cancelled';
       await _finishRun(runId, status: status, report: report);
       rethrow;
     } catch (error) {
@@ -606,29 +624,34 @@ class VideoSourceScrapeCoordinator
       );
     }
 
-    final VideoNameInfo parsed =
-        parseVideoFilename(p.basename(localWork.members.first.videoPath));
+    final VideoNameInfo parsed = parseVideoFilename(
+      p.basename(localWork.members.first.videoPath),
+    );
     final int? seasonNumber = _parsedSeason(localWork, parsed);
     final VideoMetadataMediaKind kind =
         localWork.isEpisodic || parsed.episode != null
-            ? VideoMetadataMediaKind.tv
-            : VideoMetadataMediaKind.movie;
-    final VideoMetadataWork? nfo = await VideoNfoReader(
-      generatedArtifactChecker:
-          DatabaseSidecarGeneratedArtifactChecker(database),
-    ).readForPaths(
-      sourceRoot: source.rootPath,
-      fallbackTitle: localWork.title,
-      videoPaths: <String>[
-        for (final VideoBookRow member in localWork.members) member.videoPath,
-      ],
-    );
+        ? VideoMetadataMediaKind.tv
+        : VideoMetadataMediaKind.movie;
+    final VideoMetadataWork? nfo =
+        await VideoNfoReader(
+          generatedArtifactChecker: DatabaseSidecarGeneratedArtifactChecker(
+            database,
+          ),
+        ).readForPaths(
+          sourceRoot: source.rootPath,
+          fallbackTitle: localWork.title,
+          videoPaths: <String>[
+            for (final VideoBookRow member in localWork.members)
+              member.videoPath,
+          ],
+        );
     final List<String> candidates = <String>[
       if (nfo != null) nfo.title,
       ..._titleCandidates(localWork, parsed),
     ];
-    final List<VideoMetadataLookup> storedLookups =
-        await _store.lookupsForWork(localWork);
+    final List<VideoMetadataLookup> storedLookups = await _store.lookupsForWork(
+      localWork,
+    );
     final List<VideoMetadataLookup> identityHints = <VideoMetadataLookup>[
       if (confirmedLookup != null) confirmedLookup,
       ...storedLookups,
@@ -642,20 +665,21 @@ class VideoSourceScrapeCoordinator
       identityHints,
       VideoMetadataProviderKind.tmdb,
     );
-    final VideoMetadataResolution resolution = await VideoMetadataResolver(
-      registry: registry,
-    ).resolve(VideoMetadataResolveRequest(
-      selectedProvider: selectedProvider,
-      mediaKind: kind,
-      titleCandidates: candidates,
-      year: nfo?.year ?? _parsedYear(localWork),
-      seasonNumber: seasonNumber,
-      episodeCount: localWork.isEpisodic ? localWork.members.length : null,
-      confirmedLookup: canonicalLookup,
-      identityHints: <String>[
-        for (final VideoBookRow member in localWork.members) member.videoPath,
-      ],
-    ));
+    final VideoMetadataResolution
+    resolution = await VideoMetadataResolver(registry: registry).resolve(
+      VideoMetadataResolveRequest(
+        selectedProvider: selectedProvider,
+        mediaKind: kind,
+        titleCandidates: candidates,
+        year: nfo?.year ?? _parsedYear(localWork),
+        seasonNumber: seasonNumber,
+        episodeCount: localWork.isEpisodic ? localWork.members.length : null,
+        confirmedLookup: canonicalLookup,
+        identityHints: <String>[
+          for (final VideoBookRow member in localWork.members) member.videoPath,
+        ],
+      ),
+    );
     VideoMetadataWork? resolvedWork = resolution.work;
     VideoMetadataLookup? resolvedLookup = resolution.lookup;
     if (resolution.status == VideoMetadataResolutionStatus.ambiguous) {
@@ -665,14 +689,14 @@ class VideoSourceScrapeCoordinator
           resolution.providerKind ?? selectedProvider;
       final List<VideoSourceScrapeConfirmationCandidate> options =
           <VideoSourceScrapeConfirmationCandidate>[
-        for (final VideoMetadataWork candidate in resolution.candidates)
-          if (_lookupForCandidate(candidate, candidateProvider)
-              case final VideoMetadataLookup lookup)
-            VideoSourceScrapeConfirmationCandidate(
-              lookup: lookup,
-              work: candidate,
-            ),
-      ];
+            for (final VideoMetadataWork candidate in resolution.candidates)
+              if (_lookupForCandidate(candidate, candidateProvider)
+                  case final VideoMetadataLookup lookup)
+                VideoSourceScrapeConfirmationCandidate(
+                  lookup: lookup,
+                  work: candidate,
+                ),
+          ];
       if (onConfirmation == null || options.isEmpty) {
         return _ResolvedWork(
           pending: true,
@@ -681,12 +705,14 @@ class VideoSourceScrapeCoordinator
         );
       }
       final VideoSourceScrapeConfirmationCandidate? selected =
-          await onConfirmation(VideoSourceScrapeConfirmation(
-        sourceId: source.id,
-        sourceLabel: source.label,
-        localWorkTitle: localWork.title,
-        candidates: options,
-      ));
+          await onConfirmation(
+            VideoSourceScrapeConfirmation(
+              sourceId: source.id,
+              sourceLabel: source.label,
+              localWorkTitle: localWork.title,
+              candidates: options,
+            ),
+          );
       if (selected == null) {
         return _ResolvedWork(
           pending: true,
@@ -697,19 +723,22 @@ class VideoSourceScrapeCoordinator
       resolvedWork = selected.work;
       resolvedLookup = selected.lookup;
       if (selected.lookup.provider == VideoMetadataProviderKind.anidb &&
-          selected.work.rawPayload?[
-                  AniDbVideoMetadataProvider.catalogOnlyPayloadKey] ==
+          selected.work.rawPayload?[AniDbVideoMetadataProvider
+                  .catalogOnlyPayloadKey] ==
               true) {
-        final VideoMetadataProvider? provider =
-            registry.provider(selected.lookup.provider);
+        final VideoMetadataProvider? provider = registry.provider(
+          selected.lookup.provider,
+        );
         try {
           resolvedWork =
               await provider?.fetchWork(selected.lookup) ?? selected.work;
         } catch (error) {
-          warnings.add(SourceScrapeIssue(
-            workTitle: localWork.title,
-            message: 'AniDB 手工确认项详情抓取失败，已保留标题目录摘要：$error',
-          ));
+          warnings.add(
+            SourceScrapeIssue(
+              workTitle: localWork.title,
+              message: 'AniDB 手工确认项详情抓取失败，已保留标题目录摘要：$error',
+            ),
+          );
         }
       }
     }
@@ -736,10 +765,7 @@ class VideoSourceScrapeCoordinator
     bool seasonEpisodesAuthoritative = primaryHydration.complete;
     if (metadata.provider != VideoMetadataProviderKind.tmdb) {
       metadata = _preserveTmdbIdentity(metadata, tmdbLookupHint);
-      metadata = remapStandaloneVideoMetadataSeason(
-        metadata,
-        seasonNumber,
-      );
+      metadata = remapStandaloneVideoMetadataSeason(metadata, seasonNumber);
       final _TmdbSupplementResult tmdb = await _tmdbSupplement(
         metadata,
         candidates,
@@ -750,13 +776,10 @@ class VideoSourceScrapeCoordinator
       );
       metadata = supplementVideoMetadataWithTmdb(metadata, tmdb.metadata);
     }
-    metadata = _preserveHistoricalIdentities(
-      metadata,
-      <VideoMetadataLookup>[
-        ...storedLookups,
-        if (confirmedLookup != null) confirmedLookup,
-      ],
-    );
+    metadata = _preserveHistoricalIdentities(metadata, <VideoMetadataLookup>[
+      ...storedLookups,
+      if (confirmedLookup != null) confirmedLookup,
+    ]);
     metadata = _selectImages(metadata);
     if (nfo != null) metadata = mergeNfoAuthority(nfo, metadata);
     resolvedWorkCache[cacheKey] = metadata;
@@ -806,9 +829,7 @@ class VideoSourceScrapeCoordinator
       return primary;
     }
     final VideoMetadataId? current = primary.ids
-        .where(
-          (VideoMetadataId id) => id.type.trim().toLowerCase() == 'tmdb',
-        )
+        .where((VideoMetadataId id) => id.type.trim().toLowerCase() == 'tmdb')
         .firstOrNull;
     if (current != null && current.value.trim() != persisted.externalId) {
       // A fresh AniDB cross-reference explicitly changed. Do not attach the
@@ -866,25 +887,29 @@ class VideoSourceScrapeCoordinator
     if (provider.providerKind == VideoMetadataProviderKind.anidb &&
         work.rawPayload?[AniDbVideoMetadataProvider.catalogOnlyPayloadKey] ==
             true) {
-      warnings.add(SourceScrapeIssue(
-        workTitle: localTitle,
-        message: 'AniDB HTTP 详情不可用，已保留标题目录摘要且不会把分集标记为完整。',
-      ));
+      warnings.add(
+        SourceScrapeIssue(
+          workTitle: localTitle,
+          message: 'AniDB HTTP 详情不可用，已保留标题目录摘要且不会把分集标记为完整。',
+        ),
+      );
       return _HydratedWork(metadata: work, complete: false);
     }
     bool complete = true;
     List<VideoMetadataExtra> extras = work.extras;
     try {
-      final List<VideoMetadataExtra> fetched = provider
-              is VideoMetadataExtrasProvider
+      final List<VideoMetadataExtra> fetched =
+          provider is VideoMetadataExtrasProvider
           ? await (provider as VideoMetadataExtrasProvider).fetchExtras(lookup)
           : const <VideoMetadataExtra>[];
       if (fetched.isNotEmpty) extras = fetched;
     } catch (error) {
-      warnings.add(SourceScrapeIssue(
-        workTitle: localTitle,
-        message: '预告片与花絮抓取失败，作品资料仍已保留：$error',
-      ));
+      warnings.add(
+        SourceScrapeIssue(
+          workTitle: localTitle,
+          message: '预告片与花絮抓取失败，作品资料仍已保留：$error',
+        ),
+      );
     }
     if (work.kind == VideoMetadataMediaKind.movie) {
       return _HydratedWork(
@@ -894,15 +919,18 @@ class VideoSourceScrapeCoordinator
     }
     List<VideoMetadataSeason> seasons = work.seasons;
     try {
-      final List<VideoMetadataSeason> fetched =
-          await provider.fetchSeasons(lookup);
+      final List<VideoMetadataSeason> fetched = await provider.fetchSeasons(
+        lookup,
+      );
       if (fetched.isNotEmpty) seasons = fetched;
     } catch (error) {
       complete = false;
-      warnings.add(SourceScrapeIssue(
-        workTitle: localTitle,
-        message: '季资料抓取失败，保留作品摘要：$error',
-      ));
+      warnings.add(
+        SourceScrapeIssue(
+          workTitle: localTitle,
+          message: '季资料抓取失败，保留作品摘要：$error',
+        ),
+      );
     }
     final List<VideoMetadataSeason> hydrated = <VideoMetadataSeason>[];
     for (final VideoMetadataSeason season in seasons) {
@@ -915,15 +943,19 @@ class VideoSourceScrapeCoordinator
         if (fetched.isNotEmpty) episodes = fetched;
       } catch (error) {
         complete = false;
-        warnings.add(SourceScrapeIssue(
-          workTitle: localTitle,
-          message: '第 ${season.seasonNumber} 季分集资料抓取失败：$error',
-        ));
+        warnings.add(
+          SourceScrapeIssue(
+            workTitle: localTitle,
+            message: '第 ${season.seasonNumber} 季分集资料抓取失败：$error',
+          ),
+        );
       }
-      hydrated.add(season.copyWith(
-        episodes: episodes,
-        episodeCount: season.episodeCount ?? episodes.length,
-      ));
+      hydrated.add(
+        season.copyWith(
+          episodes: episodes,
+          episodeCount: season.episodeCount ?? episodes.length,
+        ),
+      );
     }
     return _HydratedWork(
       metadata: work.copyWith(seasons: hydrated, extras: extras),
@@ -939,8 +971,9 @@ class VideoSourceScrapeCoordinator
     String localTitle, {
     VideoMetadataLookup? lookupHint,
   }) async {
-    final VideoMetadataProvider? tmdb =
-        registry.provider(VideoMetadataProviderKind.tmdb);
+    final VideoMetadataProvider? tmdb = registry.provider(
+      VideoMetadataProviderKind.tmdb,
+    );
     if (tmdb == null || !tmdb.isAvailable) {
       return const _TmdbSupplementResult();
     }
@@ -969,39 +1002,48 @@ class VideoSourceScrapeCoordinator
       if (lookup != null) {
         work = await tmdb.fetchWork(lookup);
       } else {
-        final VideoMetadataResolution resolution = await VideoMetadataResolver(
-          registry: registry,
-        ).resolve(VideoMetadataResolveRequest(
-          selectedProvider: VideoMetadataProviderKind.tmdb,
-          mediaKind: primary.kind,
-          titleCandidates: <String>[primary.title, ...titles],
-          year: primary.year,
-          seasonNumber: seasonNumber,
-        ));
+        final VideoMetadataResolution resolution =
+            await VideoMetadataResolver(registry: registry).resolve(
+              VideoMetadataResolveRequest(
+                selectedProvider: VideoMetadataProviderKind.tmdb,
+                mediaKind: primary.kind,
+                titleCandidates: <String>[primary.title, ...titles],
+                year: primary.year,
+                seasonNumber: seasonNumber,
+              ),
+            );
         if (resolution.status == VideoMetadataResolutionStatus.matched) {
           work = resolution.work;
           lookup = resolution.lookup;
         }
       }
     } catch (error) {
-      warnings.add(SourceScrapeIssue(
-        workTitle: localTitle,
-        message: 'TMDB 规范身份补充失败，主源资料仍已保留：$error',
-      ));
+      warnings.add(
+        SourceScrapeIssue(
+          workTitle: localTitle,
+          message: 'TMDB 规范身份补充失败，主源资料仍已保留：$error',
+        ),
+      );
       return const _TmdbSupplementResult();
     }
     if (work == null || lookup == null) {
       return const _TmdbSupplementResult();
     }
     try {
-      final _HydratedWork hydrated =
-          await _hydrateWork(work, lookup, warnings, localTitle);
+      final _HydratedWork hydrated = await _hydrateWork(
+        work,
+        lookup,
+        warnings,
+        localTitle,
+      );
       return _TmdbSupplementResult(metadata: hydrated.metadata);
     } catch (error) {
-      warnings.add(SourceScrapeIssue(
-        workTitle: localTitle,
-        message: 'TMDB 季集骨架补充失败，主源资料仍已保留：$error',
-      ));
+      warnings.add(
+        SourceScrapeIssue(
+          workTitle: localTitle,
+          message: 'TMDB 季集骨架补充失败，主源资料仍已保留：$error',
+        ),
+      );
       return _TmdbSupplementResult(metadata: work);
     }
   }
@@ -1023,17 +1065,21 @@ class VideoSourceScrapeCoordinator
       for (final VideoMetadataSeason season in metadata.seasons)
         season.copyWith(
           images: selected
-              .where((VideoMetadataImage image) =>
-                  image.seasonNumber == season.seasonNumber &&
-                  image.episodeNumber == null)
+              .where(
+                (VideoMetadataImage image) =>
+                    image.seasonNumber == season.seasonNumber &&
+                    image.episodeNumber == null,
+              )
               .toList(),
           episodes: <VideoMetadataEpisode>[
             for (final VideoMetadataEpisode episode in season.episodes)
               episode.copyWith(
                 images: selected
-                    .where((VideoMetadataImage image) =>
-                        image.seasonNumber == episode.seasonNumber &&
-                        image.episodeNumber == episode.episodeNumber)
+                    .where(
+                      (VideoMetadataImage image) =>
+                          image.seasonNumber == episode.seasonNumber &&
+                          image.episodeNumber == episode.episodeNumber,
+                    )
                     .toList(),
               ),
           ],
@@ -1041,8 +1087,10 @@ class VideoSourceScrapeCoordinator
     ];
     return metadata.copyWith(
       images: selected
-          .where((VideoMetadataImage image) =>
-              image.seasonNumber == null && image.episodeNumber == null)
+          .where(
+            (VideoMetadataImage image) =>
+                image.seasonNumber == null && image.episodeNumber == null,
+          )
           .toList(),
       seasons: seasons,
     );
@@ -1073,21 +1121,26 @@ class VideoSourceScrapeCoordinator
     } else {
       final List<VideoEpisodePath> members = <VideoEpisodePath>[];
       for (final VideoBookRow member in localWork.members) {
-        final VideoNameInfo parsed =
-            parseVideoFilename(p.basename(member.videoPath));
+        final VideoNameInfo parsed = parseVideoFilename(
+          p.basename(member.videoPath),
+        );
         if (parsed.episode == null) {
-          warnings.add(SourceScrapeIssue(
-            workTitle: localWork.title,
-            path: member.videoPath,
-            message: '无法从文件名确定集号，跳过该分集 sidecar',
-          ));
+          warnings.add(
+            SourceScrapeIssue(
+              workTitle: localWork.title,
+              path: member.videoPath,
+              message: '无法从文件名确定集号，跳过该分集 sidecar',
+            ),
+          );
           continue;
         }
-        members.add(VideoEpisodePath(
-          path: member.videoPath,
-          seasonNumber: parsed.season ?? 1,
-          episodeNumber: parsed.episode!,
-        ));
+        members.add(
+          VideoEpisodePath(
+            path: member.videoPath,
+            seasonNumber: parsed.season ?? 1,
+            episodeNumber: parsed.episode!,
+          ),
+        );
       }
       layout = VideoSidecarTargetResolver.resolveTv(
         sourceRoot: source.rootPath,
@@ -1130,8 +1183,9 @@ class VideoSourceScrapeCoordinator
         context: VideoSidecarArtifactContext(
           artifactKind: kind,
           writePolicy: policy.name,
-          workId:
-              seasonId == null && episodeId == null ? persisted.workId : null,
+          workId: seasonId == null && episodeId == null
+              ? persisted.workId
+              : null,
           seasonId: episodeId == null ? seasonId : null,
           episodeId: episodeId,
           fileSize: bytes.length,
@@ -1154,8 +1208,10 @@ class VideoSourceScrapeCoordinator
       }
       for (final VideoSidecarTarget target in layout.seasons) {
         final VideoMetadataSeason? season = metadata.seasons
-            .where((VideoMetadataSeason value) =>
-                value.seasonNumber == target.seasonNumber)
+            .where(
+              (VideoMetadataSeason value) =>
+                  value.seasonNumber == target.seasonNumber,
+            )
             .firstOrNull;
         if (season == null) continue;
         plan(
@@ -1172,11 +1228,11 @@ class VideoSourceScrapeCoordinator
       for (final VideoSidecarTarget target in layout.episodes) {
         final VideoMetadataEpisode episode =
             _episode(metadata, target.seasonNumber!, target.episodeNumber!) ??
-                VideoMetadataEpisode(
-                  seasonNumber: target.seasonNumber!,
-                  episodeNumber: target.episodeNumber!,
-                  title: '',
-                );
+            VideoMetadataEpisode(
+              seasonNumber: target.seasonNumber!,
+              episodeNumber: target.episodeNumber!,
+              title: '',
+            );
         plan(
           path: target.nfoPath,
           bytes: VideoNfoBuilder.buildEpisode(
@@ -1200,22 +1256,28 @@ class VideoSourceScrapeCoordinator
       final Set<String> plannedImageSlots = <String>{};
       for (final VideoMetadataImage image in _allImages(metadata)) {
         cancellationToken.throwIfCancelled();
-        final List<VideoSidecarTarget> targets =
-            _targetsForImage(layout, image);
+        final List<VideoSidecarTarget> targets = _targetsForImage(
+          layout,
+          image,
+        );
         if (targets.isEmpty) continue;
-        final String imageSlot = '${image.seasonNumber ?? 'work'}:'
+        final String imageSlot =
+            '${image.seasonNumber ?? 'work'}:'
             '${image.episodeNumber ?? 'work'}:${image.kind.name}';
         if (!plannedImageSlots.add(imageSlot)) continue;
         VideoMetadataDownloadedAsset asset;
         try {
-          asset = downloads[image.url] ??=
-              await assetDownloader.download(image.url);
+          asset = downloads[image.url] ??= await assetDownloader.download(
+            image.url,
+          );
         } catch (error) {
-          errors.add(SourceScrapeIssue(
-            workTitle: localWork.title,
-            message: '图片下载失败：$error',
-            path: image.url,
-          ));
+          errors.add(
+            SourceScrapeIssue(
+              workTitle: localWork.title,
+              message: '图片下载失败：$error',
+              path: image.url,
+            ),
+          );
           continue;
         }
         for (final VideoSidecarTarget target in targets) {
@@ -1224,8 +1286,10 @@ class VideoSourceScrapeCoordinator
               : persisted.seasonIds[image.seasonNumber!];
           final int? episodeId = image.episodeNumber == null
               ? null
-              : persisted
-                  .episodeIds[(image.seasonNumber ?? 1, image.episodeNumber!)];
+              : persisted.episodeIds[(
+                  image.seasonNumber ?? 1,
+                  image.episodeNumber!,
+                )];
           for (final String path in target.imagePaths(
             image.kind,
             extension: asset.extension,
@@ -1275,11 +1339,14 @@ class VideoSourceScrapeCoordinator
         );
       }
       if (result.isFailure || result.artifactStoreError != null) {
-        errors.add(SourceScrapeIssue(
-          workTitle: localWork.title,
-          path: result.targetPath,
-          message: result.message ?? result.error?.toString() ?? 'sidecar 写入失败',
-        ));
+        errors.add(
+          SourceScrapeIssue(
+            workTitle: localWork.title,
+            path: result.targetPath,
+            message:
+                result.message ?? result.error?.toString() ?? 'sidecar 写入失败',
+          ),
+        );
       }
     }
     if (localPathByUrl.isNotEmpty) {
@@ -1306,9 +1373,11 @@ class VideoSourceScrapeCoordinator
     Map<String, String> localPathByUrl,
   ) async {
     final VideoMetadataImage? cover = metadata.images
-        .where((VideoMetadataImage image) =>
-            image.kind == VideoMetadataImageKind.cover &&
-            localPathByUrl.containsKey(image.url))
+        .where(
+          (VideoMetadataImage image) =>
+              image.kind == VideoMetadataImageKind.cover &&
+              localPathByUrl.containsKey(image.url),
+        )
         .firstOrNull;
     if (cover != null) {
       final String coverPath = localPathByUrl[cover.url]!;
@@ -1316,8 +1385,8 @@ class VideoSourceScrapeCoordinator
           DatabaseSidecarGeneratedArtifactChecker(database);
       await VideoCoverMutationGate.runExclusive(() async {
         if (localWork.collection case final MediaCollectionRow collection) {
-          final MediaCollectionRow? current =
-              await database.getMediaCollectionById(collection.id);
+          final MediaCollectionRow? current = await database
+              .getMediaCollectionById(collection.id);
           if (current != null &&
               (current.coverPath == null ||
                   await generated.isUnmodifiedGeneratedArtifact(
@@ -1330,8 +1399,9 @@ class VideoSourceScrapeCoordinator
           }
         } else {
           final VideoBookRow planned = localWork.members.single;
-          final VideoBookRow? current =
-              await database.getVideoBookByBookUid(planned.bookUid);
+          final VideoBookRow? current = await database.getVideoBookByBookUid(
+            planned.bookUid,
+          );
           if (current != null &&
               (current.coverPath == null ||
                   await generated.isUnmodifiedGeneratedArtifact(
@@ -1354,7 +1424,9 @@ class VideoSourceScrapeCoordinator
     if (workImages.isNotEmpty) {
       if (localWork.collection case final MediaCollectionRow collection) {
         await database.replaceMediaImagesForCollection(
-            collection.id, workImages);
+          collection.id,
+          workImages,
+        );
       } else {
         await database.replaceMediaImagesForBook(
           localWork.members.single.bookUid,
@@ -1363,11 +1435,15 @@ class VideoSourceScrapeCoordinator
       }
     }
     for (final VideoBookRow book in localWork.members) {
-      final VideoNameInfo parsed =
-          parseVideoFilename(p.basename(book.videoPath));
+      final VideoNameInfo parsed = parseVideoFilename(
+        p.basename(book.videoPath),
+      );
       if (parsed.episode == null) continue;
-      final VideoMetadataEpisode? episode =
-          _episode(metadata, parsed.season ?? 1, parsed.episode!);
+      final VideoMetadataEpisode? episode = _episode(
+        metadata,
+        parsed.season ?? 1,
+        parsed.episode!,
+      );
       if (episode == null) continue;
       final List<MediaImagesCompanion> rows = _legacyImageRows(
         episode.images,
@@ -1395,8 +1471,7 @@ class VideoSourceScrapeCoordinator
         VideoMetadataImageKind.backdrop => MediaImageKind.backdrop,
         VideoMetadataImageKind.logo => MediaImageKind.logo,
         VideoMetadataImageKind.thumb ||
-        VideoMetadataImageKind.landscape =>
-          MediaImageKind.titleCard,
+        VideoMetadataImageKind.landscape => MediaImageKind.titleCard,
         _ => null,
       };
       if (kind == null) continue;
@@ -1406,14 +1481,16 @@ class VideoSourceScrapeCoordinator
         ifAbsent: () => 0,
       );
       if (kind != MediaImageKind.backdrop && position > 0) continue;
-      result.add(MediaImagesCompanion.insert(
-        collectionId: Value<int?>(collectionId),
-        bookUid: Value<String?>(bookUid),
-        kind: kind.dbValue,
-        position: Value<int>(position),
-        path: path,
-        sourceUrl: Value<String?>(image.url),
-      ));
+      result.add(
+        MediaImagesCompanion.insert(
+          collectionId: Value<int?>(collectionId),
+          bookUid: Value<String?>(bookUid),
+          kind: kind.dbValue,
+          position: Value<int>(position),
+          path: path,
+          sourceUrl: Value<String?>(image.url),
+        ),
+      );
     }
     return result;
   }
@@ -1424,15 +1501,19 @@ class VideoSourceScrapeCoordinator
   ) {
     if (image.episodeNumber != null) {
       return layout.episodes
-          .where((VideoSidecarTarget target) =>
-              target.seasonNumber == (image.seasonNumber ?? 1) &&
-              target.episodeNumber == image.episodeNumber)
+          .where(
+            (VideoSidecarTarget target) =>
+                target.seasonNumber == (image.seasonNumber ?? 1) &&
+                target.episodeNumber == image.episodeNumber,
+          )
           .toList();
     }
     if (image.seasonNumber != null) {
       return layout.seasons
-          .where((VideoSidecarTarget target) =>
-              target.seasonNumber == image.seasonNumber)
+          .where(
+            (VideoSidecarTarget target) =>
+                target.seasonNumber == image.seasonNumber,
+          )
           .toList();
     }
     return layout.work == null
@@ -1440,9 +1521,7 @@ class VideoSourceScrapeCoordinator
         : <VideoSidecarTarget>[layout.work!];
   }
 
-  static Iterable<VideoMetadataImage> _allImages(
-    VideoMetadataWork work,
-  ) sync* {
+  static Iterable<VideoMetadataImage> _allImages(VideoMetadataWork work) sync* {
     yield* work.images;
     for (final VideoMetadataSeason season in work.seasons) {
       yield* season.images;
@@ -1534,9 +1613,11 @@ class VideoSourceScrapeCoordinator
     VideoMetadataProviderKind provider,
   ) {
     final VideoMetadataId? id = work.ids
-        .where((VideoMetadataId value) =>
-            value.type.toLowerCase() == provider.name &&
-            value.value.trim().isNotEmpty)
+        .where(
+          (VideoMetadataId value) =>
+              value.type.toLowerCase() == provider.name &&
+              value.value.trim().isNotEmpty,
+        )
         .firstOrNull;
     return id == null
         ? null
@@ -1564,8 +1645,9 @@ class VideoSourceScrapeCoordinator
       runId,
       VideoSourceScrapeRunsCompanion(
         phase: Value<String?>(progress.phase.name),
-        totalWorks:
-            totalWorks == null ? const Value<int>.absent() : Value(totalWorks),
+        totalWorks: totalWorks == null
+            ? const Value<int>.absent()
+            : Value(totalWorks),
         processedWorks: processedWorks == null
             ? const Value<int>.absent()
             : Value(processedWorks),
@@ -1592,17 +1674,16 @@ class VideoSourceScrapeCoordinator
     required int succeededWorks,
     required int failedWorks,
     required int pendingConfirmations,
-  }) =>
-      database.updateVideoSourceScrapeRun(
-        runId,
-        VideoSourceScrapeRunsCompanion(
-          processedWorks: Value<int>(processedWorks),
-          succeededWorks: Value<int>(succeededWorks),
-          failedWorks: Value<int>(failedWorks),
-          pendingConfirmations: Value<int>(pendingConfirmations),
-          updatedAt: Value<int>(DateTime.now().millisecondsSinceEpoch),
-        ),
-      );
+  }) => database.updateVideoSourceScrapeRun(
+    runId,
+    VideoSourceScrapeRunsCompanion(
+      processedWorks: Value<int>(processedWorks),
+      succeededWorks: Value<int>(succeededWorks),
+      failedWorks: Value<int>(failedWorks),
+      pendingConfirmations: Value<int>(pendingConfirmations),
+      updatedAt: Value<int>(DateTime.now().millisecondsSinceEpoch),
+    ),
+  );
 
   Future<void> _finishRun(
     int runId, {
@@ -1731,18 +1812,16 @@ class _ResolvedWork {
 String describeVideoScrapeFailure(
   VideoMetadataResolutionStatus? status,
   String? fallback,
-) =>
-    switch (status) {
-      VideoMetadataResolutionStatus.providerUnavailable =>
-        'AniDB 主资料源不可用：请检查标题目录缓存与网络。完整作品/分集详情另需配置'
-            '已登记的 AniDB HTTP client name/version。',
-      VideoMetadataResolutionStatus.notFound => '没有匹配到作品：标题、类型、年份或季号都没通过严格校验。'
-          '可以改文件名/目录名，或在文件名里写明 anidbid=/tmdbid= 等明确身份。',
-      VideoMetadataResolutionStatus.ambiguous => '匹配结果存在歧义，需要人工确认',
-      VideoMetadataResolutionStatus.matched ||
-      null =>
-        fallback ?? '没有找到严格匹配的作品',
-    };
+) => switch (status) {
+  VideoMetadataResolutionStatus.providerUnavailable =>
+    'AniDB 主资料源不可用：请检查标题目录缓存与网络。完整作品/分集详情另需配置'
+        '已登记的 AniDB HTTP client name/version。',
+  VideoMetadataResolutionStatus.notFound =>
+    '没有匹配到作品：标题、类型、年份或季号都没通过严格校验。'
+        '可以改文件名/目录名，或在文件名里写明 anidbid=/tmdbid= 等明确身份。',
+  VideoMetadataResolutionStatus.ambiguous => '匹配结果存在歧义，需要人工确认',
+  VideoMetadataResolutionStatus.matched || null => fallback ?? '没有找到严格匹配的作品',
+};
 
 class _HydratedWork {
   const _HydratedWork({required this.metadata, required this.complete});

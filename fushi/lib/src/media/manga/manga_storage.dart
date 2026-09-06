@@ -101,7 +101,7 @@ class MangaStorage {
       kImagesDirName,
       ...segments.sublist(0, segments.length - 1),
     ];
-    for (int i = 2;; i++) {
+    for (int i = 2; ; i++) {
       candidate = <String>[...prefix, '$stem ($i)$ext'].join('/');
       key = candidate.toLowerCase();
       if (!used.contains(key)) {

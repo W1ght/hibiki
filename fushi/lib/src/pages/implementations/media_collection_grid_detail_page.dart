@@ -46,7 +46,8 @@ class MediaCollectionGridDetailPage extends StatefulWidget {
     String mediaType,
     String entryKey, {
     VoidCallback? onRemoveFromCollection,
-  }) memberCardBuilder;
+  })
+  memberCardBuilder;
 
   /// 打开某成员（点卡片 / 菜单「打开」）。null = 不提供打开（仅菜单移出）。卡片自身的
   /// 手势被 [IgnorePointer] 屏蔽（避免其内部 long-press 与网格触摸拖拽争用），故「打开」
@@ -61,7 +62,7 @@ class MediaCollectionGridDetailPage extends StatefulWidget {
   /// (mediaType, entryKey) 删底层书/有声书/视频本体 + 磁盘副本，并释放空间。
   /// null = 详情页不提供该选项（确认框不显示复选框），退回纯解链删除。
   final Future<void> Function(List<MediaCollectionItemRow> members)?
-      onDeleteMembersMedia;
+  onDeleteMembersMedia;
 
   @override
   State<MediaCollectionGridDetailPage> createState() =>
@@ -99,8 +100,8 @@ class _MediaCollectionGridDetailPageState
   }
 
   Future<void> _reload() async {
-    final List<MediaCollectionItemRow> rows =
-        await widget.database.getCollectionItems(widget.collection.id);
+    final List<MediaCollectionItemRow> rows = await widget.database
+        .getCollectionItems(widget.collection.id);
     if (!mounted) return;
     setState(() {
       _rows = rows;
@@ -120,13 +121,11 @@ class _MediaCollectionGridDetailPageState
     );
     if (!mounted) return;
     setState(() => _rows = next);
-    await widget.database.reorderCollectionItems(
-      widget.collection.id,
-      <CollectionMemberKey>[
-        for (final MediaCollectionItemRow r in next)
-          (mediaType: r.mediaType, entryKey: r.entryKey),
-      ],
-    );
+    await widget.database
+        .reorderCollectionItems(widget.collection.id, <CollectionMemberKey>[
+          for (final MediaCollectionItemRow r in next)
+            (mediaType: r.mediaType, entryKey: r.entryKey),
+        ]);
     widget.onChanged();
   }
 
@@ -145,13 +144,11 @@ class _MediaCollectionGridDetailPageState
     // [FushiDestructiveConfirmDialog]（经 [confirmDetailCollectionDelete]）。
     final bool canDeleteMembers =
         widget.onDeleteMembersMedia != null && _rows.isNotEmpty;
-    final FushiDestructiveConfirmResult? result =
-        await confirmDetailCollectionDelete(
+    final FushiDestructiveConfirmResult?
+    result = await confirmDetailCollectionDelete(
       checkboxLabel: canDeleteMembers ? t.delete_collection_also_books : null,
       checkedDisclosure: canDeleteMembers
-          ? buildDeletionDisclosure(
-              target: DeletionDisclosureTarget.shelfBook,
-            )
+          ? buildDeletionDisclosure(target: DeletionDisclosureTarget.shelfBook)
           : null,
     );
     if (result == null || !mounted) return;
@@ -159,11 +156,14 @@ class _MediaCollectionGridDetailPageState
     // 行，故随后的解散负责清掉残留引用 + 写合集级墓碑 + 回收合集自有封面
     // （[deleteMediaCollectionWithAssets]，BUG-1319）。
     if (result.checked && widget.onDeleteMembersMedia != null) {
-      await widget
-          .onDeleteMembersMedia!(List<MediaCollectionItemRow>.of(_rows));
+      await widget.onDeleteMembersMedia!(
+        List<MediaCollectionItemRow>.of(_rows),
+      );
     }
     await deleteMediaCollectionWithAssets(
-        widget.database, widget.collection.id);
+      widget.database,
+      widget.collection.id,
+    );
     if (!mounted) return;
     widget.onChanged();
     Navigator.of(context).maybePop();
@@ -172,12 +172,15 @@ class _MediaCollectionGridDetailPageState
   Future<void> _removeMember(MediaCollectionItemRow row) async {
     // 按成员行值移出（行值可能是对端未知种类）→ raw 版，保证移得掉。
     await widget.database.removeFromCollectionRaw(
-        widget.collection.id, row.mediaType, row.entryKey);
+      widget.collection.id,
+      row.mediaType,
+      row.entryKey,
+    );
     if (!mounted) return;
     widget.onChanged();
     // 移空后 removeFromCollection 已自删合集 → 退回上层。
-    final List<MediaCollectionItemRow> remaining =
-        await widget.database.getCollectionItems(widget.collection.id);
+    final List<MediaCollectionItemRow> remaining = await widget.database
+        .getCollectionItems(widget.collection.id);
     if (!mounted) return;
     if (remaining.isEmpty) {
       Navigator.of(context).maybePop();
@@ -212,22 +215,23 @@ class _MediaCollectionGridDetailPageState
       _rows = next;
       _visibleRows = visible;
     });
-    await widget.database.reorderCollectionItems(
-      widget.collection.id,
-      <CollectionMemberKey>[
-        for (final MediaCollectionItemRow r in visible)
-          (mediaType: r.mediaType, entryKey: r.entryKey),
-      ],
-    );
+    await widget.database
+        .reorderCollectionItems(widget.collection.id, <CollectionMemberKey>[
+          for (final MediaCollectionItemRow r in visible)
+            (mediaType: r.mediaType, entryKey: r.entryKey),
+        ]);
     widget.onChanged();
   }
 
   /// 长按（原地松手）/ 右键上下文菜单：移出合集 + 可选打开。照仓库既有卡片长按菜单
   /// 范式（书卡 onLongPress/onSecondaryTap 弹条目动作）。
   Future<void> _showMemberMenu(
-      MediaCollectionItemRow row, Offset globalPosition) async {
-    final RenderObject? overlay =
-        Overlay.of(context).context.findRenderObject();
+    MediaCollectionItemRow row,
+    Offset globalPosition,
+  ) async {
+    final RenderObject? overlay = Overlay.of(
+      context,
+    ).context.findRenderObject();
     if (overlay is! RenderBox) return;
     // BUG-781（与 BUG-129/261/381 同族）：[globalPosition] 是网格右键 / 触摸长按
     // 回调报的真实视口坐标；而 showMenu 的 RelativeRect 落在根 Navigator 的
@@ -280,44 +284,44 @@ class _MediaCollectionGridDetailPageState
 
   /// [availableWidth] 是这条 AppBar 实际拿到的约束宽（由 [LayoutBuilder] 下发）。
   AppBar _buildAppBar(double availableWidth) => AppBar(
-        title: Text(_name, maxLines: 1, overflow: TextOverflow.ellipsis),
-        // BUG-1184：同合集详情页——窄屏把次要动作收进溢出菜单，给合集名让出宽度。
-        actions: narrowAwareAppBarActions(
-          availableWidth: availableWidth,
-          alwaysVisible: <Widget>[_buildSortMenu()],
-          collapsible: <FushiAppBarAction>[
-            FushiAppBarAction(
-              icon: Icons.drive_file_rename_outline,
-              label: t.rename_collection,
-              onPressed: renameDetailCollection,
-            ),
-            FushiAppBarAction(
-              icon: Icons.sell_outlined,
-              label: t.tag_label,
-              onPressed: editDetailCollectionTags,
-            ),
-            FushiAppBarAction(
-              icon: Icons.delete_outline,
-              label: t.delete_collection,
-              onPressed: _delete,
-            ),
-          ],
+    title: Text(_name, maxLines: 1, overflow: TextOverflow.ellipsis),
+    // BUG-1184：同合集详情页——窄屏把次要动作收进溢出菜单，给合集名让出宽度。
+    actions: narrowAwareAppBarActions(
+      availableWidth: availableWidth,
+      alwaysVisible: <Widget>[_buildSortMenu()],
+      collapsible: <FushiAppBarAction>[
+        FushiAppBarAction(
+          icon: Icons.drive_file_rename_outline,
+          label: t.rename_collection,
+          onPressed: renameDetailCollection,
         ),
-      );
+        FushiAppBarAction(
+          icon: Icons.sell_outlined,
+          label: t.tag_label,
+          onPressed: editDetailCollectionTags,
+        ),
+        FushiAppBarAction(
+          icon: Icons.delete_outline,
+          label: t.delete_collection,
+          onPressed: _delete,
+        ),
+      ],
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
     final List<({MediaCollectionItemRow row, Widget card})> members =
         <({MediaCollectionItemRow row, Widget card})>[
-      for (final MediaCollectionItemRow r in _rows)
-        if (widget.memberCardBuilder(
-          r.mediaType,
-          r.entryKey,
-          onRemoveFromCollection: () => _removeMember(r),
-        )
-            case final Widget card)
-          (row: r, card: card),
-    ];
+          for (final MediaCollectionItemRow r in _rows)
+            if (widget.memberCardBuilder(
+                  r.mediaType,
+                  r.entryKey,
+                  onRemoveFromCollection: () => _removeMember(r),
+                )
+                case final Widget card)
+              (row: r, card: card),
+        ];
     _visibleRows = <MediaCollectionItemRow>[
       for (final ({MediaCollectionItemRow row, Widget card}) m in members)
         m.row,
@@ -335,17 +339,17 @@ class _MediaCollectionGridDetailPageState
         child: _loading
             ? Center(child: adaptiveIndicator(context: context))
             : members.isEmpty
-                ? FushiPlaceholderMessage(
-                    icon: Icons.collections_bookmark_outlined,
-                    message: t.collection_empty,
-                  )
-                : Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: <Widget>[
-                      buildDetailTagChips(),
-                      Expanded(child: _buildMemberGrid(members)),
-                    ],
-                  ),
+            ? FushiPlaceholderMessage(
+                icon: Icons.collections_bookmark_outlined,
+                message: t.collection_empty,
+              )
+            : Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  buildDetailTagChips(),
+                  Expanded(child: _buildMemberGrid(members)),
+                ],
+              ),
       ),
     );
   }
@@ -360,7 +364,8 @@ class _MediaCollectionGridDetailPageState
   /// 指针悬停反馈由外层 [_HoverableMemberCard] 补回（IgnorePointer 灭掉了 InkWell
   /// 自身 hover，桌面上成员卡曾读作死内容）。
   Widget _buildMemberGrid(
-      List<({MediaCollectionItemRow row, Widget card})> members) {
+    List<({MediaCollectionItemRow row, Widget card})> members,
+  ) {
     const double spacing = 12;
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
@@ -384,12 +389,15 @@ class _MediaCollectionGridDetailPageState
             mainAxisSpacing: spacing,
             feedbackBorderRadius: FushiBorderRadius.card,
             keyForIndex: (int i) => ValueKey<String>(
-                '${members[i].row.mediaType}|${members[i].row.entryKey}'),
+              '${members[i].row.mediaType}|${members[i].row.entryKey}',
+            ),
             onReorder: _onReorder,
             onActivateItem: widget.onOpenMember == null
                 ? null
                 : (int i) => widget.onOpenMember!(
-                    members[i].row.mediaType, members[i].row.entryKey),
+                    members[i].row.mediaType,
+                    members[i].row.entryKey,
+                  ),
             onContextMenu: (int i, Offset globalPosition) =>
                 _showMemberMenu(members[i].row, globalPosition),
             itemBuilder: (BuildContext context, int i) =>
@@ -439,8 +447,9 @@ class _HoverableMemberCardState extends State<_HoverableMemberCard> {
                           borderRadius: tokens.radii.cardRadius,
                         )
                       : BoxDecoration(
-                          color:
-                              tokens.surfaces.onSurface.withValues(alpha: 0.08),
+                          color: tokens.surfaces.onSurface.withValues(
+                            alpha: 0.08,
+                          ),
                           borderRadius: tokens.radii.cardRadius,
                         ),
                 ),

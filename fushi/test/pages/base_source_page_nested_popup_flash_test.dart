@@ -23,7 +23,7 @@ import '../helpers/test_platform_services.dart';
 /// fake test WebView never fires real lifecycle callbacks).
 class NestedFlashAppModel extends AppModel {
   NestedFlashAppModel({this.results = const <DictionaryEntry>[]})
-      : super(testPlatformServices());
+    : super(testPlatformServices());
 
   /// Entries every searchDictionary returns. Non-empty -> the nested cold layer
   /// must wait for render; empty -> the "no results" Flutter placeholder shows
@@ -131,9 +131,7 @@ Widget buildNestedFlashApp({
   required GlobalKey<NestedFlashHostPageState> hostKey,
 }) {
   return ProviderScope(
-    overrides: <Override>[
-      appProvider.overrideWith((ref) => appModel),
-    ],
+    overrides: <Override>[appProvider.overrideWith((ref) => appModel)],
     child: TranslationProvider(
       child: MaterialApp(
         builder: (context, child) => child ?? const SizedBox.shrink(),
@@ -144,18 +142,17 @@ Widget buildNestedFlashApp({
 }
 
 DictionaryEntry _entry() => DictionaryEntry(
-      dictionaryName: 'd',
-      word: 'b',
-      reading: 'b',
-      meaning: '"def"',
-    );
+  dictionaryName: 'd',
+  word: 'b',
+  reading: 'b',
+  meaning: '"def"',
+);
 
 void main() {
   setUpAll(installFakeInAppWebViewPlatform);
   setUp(() => LocaleSettings.setLocale(AppLocale.en));
 
-  testWidgets(
-      'nested cold popup stays hidden until its WebView renders, '
+  testWidgets('nested cold popup stays hidden until its WebView renders, '
       'parent stays visible (no white flash)', (WidgetTester tester) async {
     final appModel = NestedFlashAppModel(results: <DictionaryEntry>[_entry()]);
     final hostKey = GlobalKey<NestedFlashHostPageState>();
@@ -194,10 +191,10 @@ void main() {
     expect(stack[1].revealOnRender, isFalse);
   });
 
-  testWidgets(
-      'nested lookup with NO results reveals immediately '
-      '(Flutter placeholder, no WebView render to await)',
-      (WidgetTester tester) async {
+  testWidgets('nested lookup with NO results reveals immediately '
+      '(Flutter placeholder, no WebView render to await)', (
+    WidgetTester tester,
+  ) async {
     final appModel = NestedFlashAppModel(results: const <DictionaryEntry>[]);
     final hostKey = GlobalKey<NestedFlashHostPageState>();
 
@@ -221,42 +218,55 @@ void main() {
   });
 
   testWidgets(
-      'reader deferred warm-slot lookup keeps loading cover until popupRendered',
-      (WidgetTester tester) async {
-    final appModel = NestedFlashAppModel(results: <DictionaryEntry>[_entry()]);
-    final hostKey = GlobalKey<NestedFlashHostPageState>();
+    'reader deferred warm-slot lookup keeps loading cover until popupRendered',
+    (WidgetTester tester) async {
+      final appModel = NestedFlashAppModel(
+        results: <DictionaryEntry>[_entry()],
+      );
+      final hostKey = GlobalKey<NestedFlashHostPageState>();
 
-    await tester.pumpWidget(
-      buildNestedFlashApp(appModel: appModel, hostKey: hostKey),
-    );
-    await tester.pump();
-    await tester.pump();
+      await tester.pumpWidget(
+        buildNestedFlashApp(appModel: appModel, hostKey: hostKey),
+      );
+      await tester.pump();
+      await tester.pump();
 
-    await hostKey.currentState!.deferredTopSearch('first');
-    await tester.pump();
+      await hostKey.currentState!.deferredTopSearch('first');
+      await tester.pump();
 
-    var stack = hostKey.currentState!.debugPopupStack;
-    expect(stack, hasLength(1));
-    expect(stack.single.visible, isTrue,
-        reason: 'showDeferredPopup should reveal the shell at the final rect');
-    expect(find.byType(LinearProgressIndicator), findsOneWidget,
-        reason: 'The body must stay covered until the reused WebView reports '
+      var stack = hostKey.currentState!.debugPopupStack;
+      expect(stack, hasLength(1));
+      expect(
+        stack.single.visible,
+        isTrue,
+        reason: 'showDeferredPopup should reveal the shell at the final rect',
+      );
+      expect(
+        find.byType(LinearProgressIndicator),
+        findsOneWidget,
+        reason:
+            'The body must stay covered until the reused WebView reports '
             'that this lookup has rendered; otherwise macOS can expose a '
-            'white empty WebView body.');
+            'white empty WebView body.',
+      );
 
-    hostKey.currentState!.debugFirePopupRendered(0);
-    await tester.pump();
+      hostKey.currentState!.debugFirePopupRendered(0);
+      await tester.pump();
 
-    stack = hostKey.currentState!.debugPopupStack;
-    expect(stack.single.visible, isTrue);
-    expect(find.byType(LinearProgressIndicator), findsNothing,
-        reason: 'popupRendered clears the temporary cover.');
-  });
+      stack = hostKey.currentState!.debugPopupStack;
+      expect(stack.single.visible, isTrue);
+      expect(
+        find.byType(LinearProgressIndicator),
+        findsNothing,
+        reason: 'popupRendered clears the temporary cover.',
+      );
+    },
+  );
 
-  testWidgets(
-      'reader deferred warm-slot lookup with no entries shows the '
-      'Flutter no-results placeholder immediately',
-      (WidgetTester tester) async {
+  testWidgets('reader deferred warm-slot lookup with no entries shows the '
+      'Flutter no-results placeholder immediately', (
+    WidgetTester tester,
+  ) async {
     final appModel = NestedFlashAppModel(results: const <DictionaryEntry>[]);
     final hostKey = GlobalKey<NestedFlashHostPageState>();
 
@@ -273,78 +283,92 @@ void main() {
     expect(stack, hasLength(1));
     expect(stack.single.isWarmSlot, isTrue);
     expect(stack.single.visible, isTrue);
-    expect(find.byType(LinearProgressIndicator), findsNothing,
-        reason: 'A completed empty lookup has no WebView content to wait for; '
-            'waiting exposes the warm WebView shell as a blank white body.');
+    expect(
+      find.byType(LinearProgressIndicator),
+      findsNothing,
+      reason:
+          'A completed empty lookup has no WebView content to wait for; '
+          'waiting exposes the warm WebView shell as a blank white body.',
+    );
     expect(find.text(t.no_search_results), findsOneWidget);
   });
 
   // ── TODO-058 fail-safe：popupRendered 永不发也不卡死 ──────────────────────
   testWidgets(
-      'nested cold popup reveals via timeout fail-safe when popupRendered '
-      'never fires (no permanent hidden popup)', (WidgetTester tester) async {
-    final appModel = NestedFlashAppModel(results: <DictionaryEntry>[_entry()]);
-    final hostKey = GlobalKey<NestedFlashHostPageState>();
+    'nested cold popup reveals via timeout fail-safe when popupRendered '
+    'never fires (no permanent hidden popup)',
+    (WidgetTester tester) async {
+      final appModel = NestedFlashAppModel(
+        results: <DictionaryEntry>[_entry()],
+      );
+      final hostKey = GlobalKey<NestedFlashHostPageState>();
 
-    await tester.pumpWidget(
-      buildNestedFlashApp(appModel: appModel, hostKey: hostKey),
-    );
-    await tester.pump();
-    await tester.pump();
+      await tester.pumpWidget(
+        buildNestedFlashApp(appModel: appModel, hostKey: hostKey),
+      );
+      await tester.pump();
+      await tester.pump();
 
-    await hostKey.currentState!.topSearch('first');
-    await tester.pump();
-    await hostKey.currentState!.nestedSearch('second');
-    await tester.pump();
+      await hostKey.currentState!.topSearch('first');
+      await tester.pump();
+      await hostKey.currentState!.nestedSearch('second');
+      await tester.pump();
 
-    var stack = hostKey.currentState!.debugPopupStack;
-    expect(stack, hasLength(2));
-    expect(stack[1].visible, isFalse, reason: '挂起期不可见');
-    expect(stack[1].revealOnRender, isTrue);
+      var stack = hostKey.currentState!.debugPopupStack;
+      expect(stack, hasLength(2));
+      expect(stack[1].visible, isFalse, reason: '挂起期不可见');
+      expect(stack[1].revealOnRender, isTrue);
 
-    // 故意永不触发 popupRendered（debugFirePopupRendered）：模拟 WebView 加载失败 /
-    // renderPopup 抛异常 / callHandler 失败。超时兜底必须最终把它翻可见。
-    await tester.pump(
-      DictionaryPopupController.kRevealFailsafeTimeout +
-          const Duration(milliseconds: 50),
-    );
-    stack = hostKey.currentState!.debugPopupStack;
-    expect(stack[1].visible, isTrue,
-        reason: 'popupRendered 永不发，超时兜底强制翻可见，不卡死「点查词什么都不出」');
-    expect(stack[1].revealOnRender, isFalse);
-  });
+      // 故意永不触发 popupRendered（debugFirePopupRendered）：模拟 WebView 加载失败 /
+      // renderPopup 抛异常 / callHandler 失败。超时兜底必须最终把它翻可见。
+      await tester.pump(
+        DictionaryPopupController.kRevealFailsafeTimeout +
+            const Duration(milliseconds: 50),
+      );
+      stack = hostKey.currentState!.debugPopupStack;
+      expect(
+        stack[1].visible,
+        isTrue,
+        reason: 'popupRendered 永不发，超时兜底强制翻可见，不卡死「点查词什么都不出」',
+      );
+      expect(stack[1].revealOnRender, isFalse);
+    },
+  );
 
   testWidgets(
-      'nested cold popup reveals on load error (onRenderError) before timeout',
-      (WidgetTester tester) async {
-    final appModel = NestedFlashAppModel(results: <DictionaryEntry>[_entry()]);
-    final hostKey = GlobalKey<NestedFlashHostPageState>();
+    'nested cold popup reveals on load error (onRenderError) before timeout',
+    (WidgetTester tester) async {
+      final appModel = NestedFlashAppModel(
+        results: <DictionaryEntry>[_entry()],
+      );
+      final hostKey = GlobalKey<NestedFlashHostPageState>();
 
-    await tester.pumpWidget(
-      buildNestedFlashApp(appModel: appModel, hostKey: hostKey),
-    );
-    await tester.pump();
-    await tester.pump();
+      await tester.pumpWidget(
+        buildNestedFlashApp(appModel: appModel, hostKey: hostKey),
+      );
+      await tester.pump();
+      await tester.pump();
 
-    await hostKey.currentState!.topSearch('first');
-    await tester.pump();
-    await hostKey.currentState!.nestedSearch('second');
-    await tester.pump();
+      await hostKey.currentState!.topSearch('first');
+      await tester.pump();
+      await hostKey.currentState!.nestedSearch('second');
+      await tester.pump();
 
-    var stack = hostKey.currentState!.debugPopupStack;
-    expect(stack[1].visible, isFalse, reason: '挂起等渲染/错误信号');
+      var stack = hostKey.currentState!.debugPopupStack;
+      expect(stack[1].visible, isFalse, reason: '挂起等渲染/错误信号');
 
-    // WebView 主框架加载失败 -> onReceivedError -> onRenderError -> 立即翻可见。
-    hostKey.currentState!.debugFirePopupRenderError(1);
-    await tester.pump();
-    stack = hostKey.currentState!.debugPopupStack;
-    expect(stack[1].visible, isTrue, reason: '加载失败也显示，不卡死');
-    expect(stack[1].revealOnRender, isFalse);
+      // WebView 主框架加载失败 -> onReceivedError -> onRenderError -> 立即翻可见。
+      hostKey.currentState!.debugFirePopupRenderError(1);
+      await tester.pump();
+      stack = hostKey.currentState!.debugPopupStack;
+      expect(stack[1].visible, isTrue, reason: '加载失败也显示，不卡死');
+      expect(stack[1].revealOnRender, isFalse);
 
-    // 让超时窗口过去：错误已取消 Timer，无残留计时器报「Timer still pending」。
-    await tester.pump(
-      DictionaryPopupController.kRevealFailsafeTimeout +
-          const Duration(milliseconds: 50),
-    );
-  });
+      // 让超时窗口过去：错误已取消 Timer，无残留计时器报「Timer still pending」。
+      await tester.pump(
+        DictionaryPopupController.kRevealFailsafeTimeout +
+            const Duration(milliseconds: 50),
+      );
+    },
+  );
 }

@@ -11,26 +11,28 @@ import 'package:url_launcher/url_launcher.dart';
 typedef AnkiMobileUrlOpener = Future<bool> Function(Uri uri);
 typedef AnkiMobileInfoReader = Future<String?> Function();
 typedef AnkiMobileBackgroundTaskHandler = Future<void> Function();
-typedef _AnkiMobileLocalMediaRefBuilder = Future<String?> Function(
-  String filePath, {
-  String? mimePath,
-});
+typedef _AnkiMobileLocalMediaRefBuilder =
+    Future<String?> Function(String filePath, {String? mimePath});
 
 const String ankiMobileInfoCallback = 'anki://x-callback-url/infoForAdding';
 const String ankiMobileAddNoteCallback = 'anki://x-callback-url/addnote';
 const String fushiAnkiFetchCallback = 'fushi://ankiFetch';
 const String fushiAnkiSuccessCallback = 'fushi://ankiSuccess';
 
-const MethodChannel _ankiMobileChannel =
-    MethodChannel('app.fushi.reader/ankimobile');
+const MethodChannel _ankiMobileChannel = MethodChannel(
+  'app.fushi.reader/ankimobile',
+);
 
 String _encodeAnkiMobileQueryComponent(String value) =>
     Uri.encodeComponent(value);
 
 String _buildAnkiMobileQuery(Iterable<MapEntry<String, String>> entries) {
   return entries
-      .map((entry) => '${_encodeAnkiMobileQueryComponent(entry.key)}='
-          '${_encodeAnkiMobileQueryComponent(entry.value)}')
+      .map(
+        (entry) =>
+            '${_encodeAnkiMobileQueryComponent(entry.key)}='
+            '${_encodeAnkiMobileQueryComponent(entry.value)}',
+      )
       .join('&');
 }
 
@@ -53,7 +55,8 @@ Uri buildAnkiMobileAddNoteUri({
       MapEntry('x-success', successCallback.toString()),
   ];
   return Uri.parse(
-      '$ankiMobileAddNoteCallback?${_buildAnkiMobileQuery(query)}');
+    '$ankiMobileAddNoteCallback?${_buildAnkiMobileQuery(query)}',
+  );
 }
 
 class AnkiMobileRepository extends BaseAnkiRepository {
@@ -63,14 +66,16 @@ class AnkiMobileRepository extends BaseAnkiRepository {
     Duration mediaServerLifetime = const Duration(seconds: 60),
     AnkiMobileBackgroundTaskHandler? beginMediaImportBackgroundTask,
     AnkiMobileBackgroundTaskHandler? endMediaImportBackgroundTask,
-  })  : _openUrl = openUrl ?? _openExternalUrl,
-        _readInfoForAddingJson =
-            readInfoForAddingJson ?? _readInfoForAddingJsonFromPlatform,
-        _mediaServerLifetime = mediaServerLifetime,
-        _beginMediaImportBackgroundTask = beginMediaImportBackgroundTask ??
-            _beginMediaImportBackgroundTaskFromPlatform,
-        _endMediaImportBackgroundTask = endMediaImportBackgroundTask ??
-            _endMediaImportBackgroundTaskFromPlatform;
+  }) : _openUrl = openUrl ?? _openExternalUrl,
+       _readInfoForAddingJson =
+           readInfoForAddingJson ?? _readInfoForAddingJsonFromPlatform,
+       _mediaServerLifetime = mediaServerLifetime,
+       _beginMediaImportBackgroundTask =
+           beginMediaImportBackgroundTask ??
+           _beginMediaImportBackgroundTaskFromPlatform,
+       _endMediaImportBackgroundTask =
+           endMediaImportBackgroundTask ??
+           _endMediaImportBackgroundTaskFromPlatform;
 
   final AnkiMobileUrlOpener _openUrl;
   final AnkiMobileInfoReader _readInfoForAddingJson;
@@ -149,8 +154,10 @@ class AnkiMobileRepository extends BaseAnkiRepository {
 
     final updated = await updateSettings((current) {
       final selectedDeck = selectDeckAfterFetch(info.decks, current);
-      final selectedNoteType =
-          selectNoteTypeAfterFetch(info.noteTypes, current);
+      final selectedNoteType = selectNoteTypeAfterFetch(
+        info.noteTypes,
+        current,
+      );
       return current.copyWith(
         selectedDeckId: selectedDeck.id,
         selectedDeckName: selectedDeck.name,
@@ -195,11 +202,14 @@ class AnkiMobileRepository extends BaseAnkiRepository {
     final AnkiDeck? deck = resolveSelectedDeck(settings);
     if (deck == null) return const MineOutcome.notConfigured();
 
-    final noteType = settings.availableNoteTypes
-            .firstWhereOrNull((t) => t.id == settings.selectedNoteTypeId) ??
+    final noteType =
+        settings.availableNoteTypes.firstWhereOrNull(
+          (t) => t.id == settings.selectedNoteTypeId,
+        ) ??
         (settings.selectedNoteTypeName != null
             ? settings.availableNoteTypes.firstWhereOrNull(
-                (t) => t.name == settings.selectedNoteTypeName)
+                (t) => t.name == settings.selectedNoteTypeName,
+              )
             : null);
     if (noteType == null) return const MineOutcome.notConfigured();
 
@@ -263,10 +273,7 @@ class AnkiMobileRepository extends BaseAnkiRepository {
       }
     }
 
-    Future<String?> localMediaRef(
-      String filePath, {
-      String? mimePath,
-    }) async {
+    Future<String?> localMediaRef(String filePath, {String? mimePath}) async {
       final file = File(filePath);
       if (!file.existsSync()) return null;
       mediaServerFuture ??= _AnkiMobileMediaServer.start();
@@ -412,13 +419,17 @@ class AnkiMobileRepository extends BaseAnkiRepository {
         // 快照）转成 AnkiMobile 可取的 URL，与 localFile 走同一入库通道。
         final data = AnkiAudioRef.decodeDataUri(audio);
         if (data == null) return const _AnkiMobileAudioField('');
-        final tempFile = File('${Directory.systemTemp.path}'
-            '${Platform.pathSeparator}fushi_word_audio_'
-            '${DateTime.now().microsecondsSinceEpoch}.${data.extension}');
+        final tempFile = File(
+          '${Directory.systemTemp.path}'
+          '${Platform.pathSeparator}fushi_word_audio_'
+          '${DateTime.now().microsecondsSinceEpoch}.${data.extension}',
+        );
         try {
           await tempFile.writeAsBytes(data.bytes);
-          final url = await localMediaRef(tempFile.path,
-              mimePath: 'word_audio.${data.extension}');
+          final url = await localMediaRef(
+            tempFile.path,
+            mimePath: 'word_audio.${data.extension}',
+          );
           if (url != null) return _AnkiMobileAudioField(url);
           return const _AnkiMobileAudioField('');
         } finally {
@@ -440,8 +451,10 @@ class AnkiMobileRepository extends BaseAnkiRepository {
     DictionaryMedia media,
     _AnkiMobileLocalMediaRefBuilder localMediaRef,
   ) {
-    final filename =
-        ankiDictionaryMediaCacheFilename(media.dictionary, media.path);
+    final filename = ankiDictionaryMediaCacheFilename(
+      media.dictionary,
+      media.path,
+    );
     final path = '${ankiDictionaryMediaCacheDirPath()}/$filename';
     return localMediaRef(path, mimePath: filename);
   }
@@ -469,8 +482,9 @@ class _AnkiMobileMediaServer {
   var _closed = false;
 
   static Future<_AnkiMobileMediaServer> start() async {
-    final tempDir =
-        await Directory.systemTemp.createTemp('fushi_ankimobile_media_');
+    final tempDir = await Directory.systemTemp.createTemp(
+      'fushi_ankimobile_media_',
+    );
     try {
       final server = await HttpServer.bind(InternetAddress.loopbackIPv4, 0);
       return _AnkiMobileMediaServer._(server, tempDir);
@@ -486,8 +500,10 @@ class _AnkiMobileMediaServer {
     final sourceName = _safeMediaBasename(mimePath ?? file.path);
     final id = _nextId++;
     final path = '/media/$id-$sourceName';
-    final snapshot = File('${_tempDir.path}${Platform.pathSeparator}'
-        '$id-$sourceName');
+    final snapshot = File(
+      '${_tempDir.path}${Platform.pathSeparator}'
+      '$id-$sourceName',
+    );
     file.copySync(snapshot.path);
     _files[path] = _ServedAnkiMobileMedia(
       file: snapshot,
@@ -519,8 +535,10 @@ class _AnkiMobileMediaServer {
 
   Future<void> _handleRequest(HttpRequest request) async {
     try {
-      request.response.headers
-          .set(HttpHeaders.accessControlAllowOriginHeader, '*');
+      request.response.headers.set(
+        HttpHeaders.accessControlAllowOriginHeader,
+        '*',
+      );
       request.response.headers.set(HttpHeaders.cacheControlHeader, 'no-store');
       if (request.method == 'OPTIONS') {
         request.response.statusCode = HttpStatus.noContent;
@@ -565,10 +583,7 @@ class _AnkiMobileMediaServer {
 }
 
 class _ServedAnkiMobileMedia {
-  const _ServedAnkiMobileMedia({
-    required this.file,
-    required this.mimeType,
-  });
+  const _ServedAnkiMobileMedia({required this.file, required this.mimeType});
 
   final File file;
   final String mimeType;
@@ -581,20 +596,14 @@ class _AnkiMobileAudioField {
 }
 
 class AnkiMobileInfoForAdding {
-  const AnkiMobileInfoForAdding({
-    required this.decks,
-    required this.noteTypes,
-  });
+  const AnkiMobileInfoForAdding({required this.decks, required this.noteTypes});
 
   factory AnkiMobileInfoForAdding.fromJson(Map<String, dynamic> json) {
     final decksRaw = (json['decks'] as List? ?? const <Object?>[]);
     final noteTypesRaw = (json['notetypes'] as List? ?? const <Object?>[]);
     final decks = <AnkiDeck>[
       for (var i = 0; i < decksRaw.length; i++)
-        AnkiDeck(
-          id: i,
-          name: _nameFromJsonItem(decksRaw[i]),
-        ),
+        AnkiDeck(id: i, name: _nameFromJsonItem(decksRaw[i])),
     ].where((deck) => deck.name.isNotEmpty).toList(growable: false);
     final noteTypes = <AnkiNoteType>[
       for (var i = 0; i < noteTypesRaw.length; i++)
@@ -609,7 +618,10 @@ class AnkiMobileInfoForAdding {
   static AnkiNoteType _noteTypeFromJsonItem(int id, Object? raw) {
     if (raw is! Map) {
       return AnkiNoteType(
-          id: id, name: raw?.toString() ?? '', fields: const []);
+        id: id,
+        name: raw?.toString() ?? '',
+        fields: const [],
+      );
     }
     final fieldsRaw = raw['fields'] as List? ?? const <Object?>[];
     return AnkiNoteType(

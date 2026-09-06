@@ -77,38 +77,46 @@ Future<void> _pumpGrid(
 }
 
 void main() {
-  testWidgets('mouse press-and-drag reorders immediately (no long-press hold)',
-      (WidgetTester tester) async {
-    final List<int> calls = <int>[];
-    final List<String> order = <String>['A', 'B', 'C'];
-    await _pumpGrid(
-      tester,
-      order: order,
-      onReorder: (int from, int to) {
-        final String item = order.removeAt(from);
-        order.insert(to, item);
-        calls.add(from);
-      },
-    );
+  testWidgets(
+    'mouse press-and-drag reorders immediately (no long-press hold)',
+    (WidgetTester tester) async {
+      final List<int> calls = <int>[];
+      final List<String> order = <String>['A', 'B', 'C'];
+      await _pumpGrid(
+        tester,
+        order: order,
+        onReorder: (int from, int to) {
+          final String item = order.removeAt(from);
+          order.insert(to, item);
+          calls.add(from);
+        },
+      );
 
-    final Offset start = tester.getCenter(find.text('A'));
-    final Offset target = tester.getCenter(find.text('C'));
-    final TestGesture gesture =
-        await tester.startGesture(start, kind: PointerDeviceKind.mouse);
-    await tester.pump();
-    await gesture.moveTo(Offset.lerp(start, target, 0.5)!);
-    await tester.pump();
-    await gesture.moveTo(target);
-    await tester.pump();
-    await gesture.up();
-    await tester.pumpAndSettle();
+      final Offset start = tester.getCenter(find.text('A'));
+      final Offset target = tester.getCenter(find.text('C'));
+      final TestGesture gesture = await tester.startGesture(
+        start,
+        kind: PointerDeviceKind.mouse,
+      );
+      await tester.pump();
+      await gesture.moveTo(Offset.lerp(start, target, 0.5)!);
+      await tester.pump();
+      await gesture.moveTo(target);
+      await tester.pump();
+      await gesture.up();
+      await tester.pumpAndSettle();
 
-    expect(tester.takeException(), isNull);
-    expect(calls, isNotEmpty, reason: 'a mouse drag must reorder without hold');
-    // A 拖到 C 位置：A 现在排在 C 之后。
-    expect(order.indexOf('A'), greaterThan(order.indexOf('C')));
-    expect(order, <String>['B', 'C', 'A']);
-  });
+      expect(tester.takeException(), isNull);
+      expect(
+        calls,
+        isNotEmpty,
+        reason: 'a mouse drag must reorder without hold',
+      );
+      // A 拖到 C 位置：A 现在排在 C 之后。
+      expect(order.indexOf('A'), greaterThan(order.indexOf('C')));
+      expect(order, <String>['B', 'C', 'A']);
+    },
+  );
 
   testWidgets('touch long-press + move reorders', (WidgetTester tester) async {
     final List<int> calls = <int>[];
@@ -141,35 +149,41 @@ void main() {
   });
 
   testWidgets(
-      'touch long-press released in place fires context menu, NOT a reorder',
-      (WidgetTester tester) async {
-    final List<int> reorders = <int>[];
-    final List<int> menus = <int>[];
-    final List<String> order = <String>['A', 'B', 'C'];
-    await _pumpGrid(
-      tester,
-      order: order,
-      onReorder: (int from, int to) => reorders.add(from),
-      onContextMenu: (int index, Offset pos) => menus.add(index),
-    );
+    'touch long-press released in place fires context menu, NOT a reorder',
+    (WidgetTester tester) async {
+      final List<int> reorders = <int>[];
+      final List<int> menus = <int>[];
+      final List<String> order = <String>['A', 'B', 'C'];
+      await _pumpGrid(
+        tester,
+        order: order,
+        onReorder: (int from, int to) => reorders.add(from),
+        onContextMenu: (int index, Offset pos) => menus.add(index),
+      );
 
-    final Offset start = tester.getCenter(find.text('B'));
-    final TestGesture gesture = await tester.startGesture(start);
-    await tester.pump(const Duration(milliseconds: 600));
-    // 原地松手（未移动）→ 上下文菜单，不重排。
-    await gesture.up();
-    await tester.pumpAndSettle();
+      final Offset start = tester.getCenter(find.text('B'));
+      final TestGesture gesture = await tester.startGesture(start);
+      await tester.pump(const Duration(milliseconds: 600));
+      // 原地松手（未移动）→ 上下文菜单，不重排。
+      await gesture.up();
+      await tester.pumpAndSettle();
 
-    expect(tester.takeException(), isNull);
-    expect(reorders, isEmpty,
-        reason: 'a stationary long-press must not reorder');
-    expect(menus, <int>[1],
-        reason: 'long-press release must fire context menu');
-    expect(order, <String>['A', 'B', 'C']);
-  });
+      expect(tester.takeException(), isNull);
+      expect(
+        reorders,
+        isEmpty,
+        reason: 'a stationary long-press must not reorder',
+      );
+      expect(menus, <int>[
+        1,
+      ], reason: 'long-press release must fire context menu');
+      expect(order, <String>['A', 'B', 'C']);
+    },
+  );
 
-  testWidgets('right-click (secondary tap) fires context menu',
-      (WidgetTester tester) async {
+  testWidgets('right-click (secondary tap) fires context menu', (
+    WidgetTester tester,
+  ) async {
     final List<int> menus = <int>[];
     final List<String> order = <String>['A', 'B', 'C'];
     await _pumpGrid(
@@ -191,8 +205,9 @@ void main() {
     expect(menus, <int>[2], reason: 'right-click must fire the context menu');
   });
 
-  testWidgets('primary tap fires onActivate, NOT a reorder',
-      (WidgetTester tester) async {
+  testWidgets('primary tap fires onActivate, NOT a reorder', (
+    WidgetTester tester,
+  ) async {
     final List<int> reorders = <int>[];
     final List<int> activations = <int>[];
     final List<String> order = <String>['A', 'B', 'C'];
@@ -211,28 +226,33 @@ void main() {
     expect(reorders, isEmpty, reason: 'a stationary tap must not reorder');
   });
 
-  testWidgets('a mouse press+up without move does NOT reorder (only activates)',
-      (WidgetTester tester) async {
-    final List<int> reorders = <int>[];
-    final List<String> order = <String>['A', 'B', 'C'];
-    await _pumpGrid(
-      tester,
-      order: order,
-      onReorder: (int from, int to) => reorders.add(from),
-    );
+  testWidgets(
+    'a mouse press+up without move does NOT reorder (only activates)',
+    (WidgetTester tester) async {
+      final List<int> reorders = <int>[];
+      final List<String> order = <String>['A', 'B', 'C'];
+      await _pumpGrid(
+        tester,
+        order: order,
+        onReorder: (int from, int to) => reorders.add(from),
+      );
 
-    final Offset start = tester.getCenter(find.text('A'));
-    final TestGesture gesture =
-        await tester.startGesture(start, kind: PointerDeviceKind.mouse);
-    await gesture.up();
-    await tester.pumpAndSettle();
+      final Offset start = tester.getCenter(find.text('A'));
+      final TestGesture gesture = await tester.startGesture(
+        start,
+        kind: PointerDeviceKind.mouse,
+      );
+      await gesture.up();
+      await tester.pumpAndSettle();
 
-    expect(reorders, isEmpty);
-    expect(order, <String>['A', 'B', 'C']);
-  });
+      expect(reorders, isEmpty);
+      expect(order, <String>['A', 'B', 'C']);
+    },
+  );
 
-  testWidgets('a cancelled drag does NOT commit a reorder',
-      (WidgetTester tester) async {
+  testWidgets('a cancelled drag does NOT commit a reorder', (
+    WidgetTester tester,
+  ) async {
     final List<int> calls = <int>[];
     final List<String> order = <String>['A', 'B', 'C'];
     await _pumpGrid(
@@ -247,8 +267,10 @@ void main() {
 
     final Offset start = tester.getCenter(find.text('A'));
     final Offset target = tester.getCenter(find.text('C'));
-    final TestGesture gesture =
-        await tester.startGesture(start, kind: PointerDeviceKind.mouse);
+    final TestGesture gesture = await tester.startGesture(
+      start,
+      kind: PointerDeviceKind.mouse,
+    );
     await tester.pump();
     await gesture.moveTo(Offset.lerp(start, target, 0.6)!);
     await tester.pump();
@@ -259,130 +281,159 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(tester.takeException(), isNull);
-    expect(calls, isEmpty,
-        reason: 'a cancelled drag must not commit a reorder');
-    expect(order, <String>['A', 'B', 'C'],
-        reason: 'order must revert to the original on cancel');
+    expect(
+      calls,
+      isEmpty,
+      reason: 'a cancelled drag must not commit a reorder',
+    );
+    expect(order, <String>[
+      'A',
+      'B',
+      'C',
+    ], reason: 'order must revert to the original on cancel');
   });
 
   testWidgets(
-      'mouse drag reorders under 0.5 UI scale without flying off (de-scale — '
-      'SDK/pub Reorderable grids fail here, BUG-778)',
-      (WidgetTester tester) async {
-    final List<int> calls = <int>[];
-    final List<String> order = <String>['A', 'B', 'C'];
-    await _pumpGrid(
-      tester,
-      scale: 0.5,
-      order: order,
-      onReorder: (int from, int to) {
-        final String item = order.removeAt(from);
-        order.insert(to, item);
-        calls.add(from);
-      },
-    );
+    'mouse drag reorders under 0.5 UI scale without flying off (de-scale — '
+    'SDK/pub Reorderable grids fail here, BUG-778)',
+    (WidgetTester tester) async {
+      final List<int> calls = <int>[];
+      final List<String> order = <String>['A', 'B', 'C'];
+      await _pumpGrid(
+        tester,
+        scale: 0.5,
+        order: order,
+        onReorder: (int from, int to) {
+          final String item = order.removeAt(from);
+          order.insert(to, item);
+          calls.add(from);
+        },
+      );
 
-    final Offset start = tester.getCenter(find.text('A'));
-    final Offset target = tester.getCenter(find.text('C'));
-    final TestGesture gesture =
-        await tester.startGesture(start, kind: PointerDeviceKind.mouse);
-    await tester.pump();
-    await gesture.moveTo(Offset.lerp(start, target, 0.5)!);
-    await tester.pump();
-    await gesture.moveTo(target);
-    await tester.pump();
-    await gesture.up();
-    await tester.pumpAndSettle();
+      final Offset start = tester.getCenter(find.text('A'));
+      final Offset target = tester.getCenter(find.text('C'));
+      final TestGesture gesture = await tester.startGesture(
+        start,
+        kind: PointerDeviceKind.mouse,
+      );
+      await tester.pump();
+      await gesture.moveTo(Offset.lerp(start, target, 0.5)!);
+      await tester.pump();
+      await gesture.moveTo(target);
+      await tester.pump();
+      await gesture.up();
+      await tester.pumpAndSettle();
 
-    expect(tester.takeException(), isNull);
-    expect(calls, isNotEmpty,
-        reason: 'drag must still reorder when the UI is scaled down');
-    expect(order.indexOf('A'), greaterThan(order.indexOf('C')));
-  });
+      expect(tester.takeException(), isNull);
+      expect(
+        calls,
+        isNotEmpty,
+        reason: 'drag must still reorder when the UI is scaled down',
+      );
+      expect(order.indexOf('A'), greaterThan(order.indexOf('C')));
+    },
+  );
 
   testWidgets(
-      'a system-cancelled TOUCH long-press drag reverts and clears the ghost '
-      'overlay (PointerCancel: notification pull-down / call / backgrounding)',
-      (WidgetTester tester) async {
-    final List<int> calls = <int>[];
-    final List<String> order = <String>['A', 'B', 'C'];
-    await _pumpGrid(
-      tester,
-      order: order,
-      onReorder: (int from, int to) {
-        final String item = order.removeAt(from);
-        order.insert(to, item);
-        calls.add(from);
-      },
-    );
+    'a system-cancelled TOUCH long-press drag reverts and clears the ghost '
+    'overlay (PointerCancel: notification pull-down / call / backgrounding)',
+    (WidgetTester tester) async {
+      final List<int> calls = <int>[];
+      final List<String> order = <String>['A', 'B', 'C'];
+      await _pumpGrid(
+        tester,
+        order: order,
+        onReorder: (int from, int to) {
+          final String item = order.removeAt(from);
+          order.insert(to, item);
+          calls.add(from);
+        },
+      );
 
-    final Offset start = tester.getCenter(find.text('A'));
-    final Offset target = tester.getCenter(find.text('C'));
-    // 触摸（默认 kind）长按越过阈值 → 起拖 → 移动腾位。
-    final TestGesture gesture = await tester.startGesture(start);
-    await tester.pump(const Duration(milliseconds: 600));
-    await gesture.moveTo(Offset.lerp(start, target, 0.6)!);
-    await tester.pump();
-    await gesture.moveTo(target);
-    await tester.pump();
-    // 拖拽中：幽灵浮层存在。
-    expect(find.byKey(const ValueKey<String>('__reorder_grid_feedback__')),
-        findsOneWidget);
-    // 系统取消指针（PointerCancel，非松手）。旧实现只接 start/move/end，取消后
-    // _dragOriginal/_display 残留 → 幽灵浮层 + 下次错序提交。
-    await gesture.cancel();
-    await tester.pumpAndSettle();
+      final Offset start = tester.getCenter(find.text('A'));
+      final Offset target = tester.getCenter(find.text('C'));
+      // 触摸（默认 kind）长按越过阈值 → 起拖 → 移动腾位。
+      final TestGesture gesture = await tester.startGesture(start);
+      await tester.pump(const Duration(milliseconds: 600));
+      await gesture.moveTo(Offset.lerp(start, target, 0.6)!);
+      await tester.pump();
+      await gesture.moveTo(target);
+      await tester.pump();
+      // 拖拽中：幽灵浮层存在。
+      expect(
+        find.byKey(const ValueKey<String>('__reorder_grid_feedback__')),
+        findsOneWidget,
+      );
+      // 系统取消指针（PointerCancel，非松手）。旧实现只接 start/move/end，取消后
+      // _dragOriginal/_display 残留 → 幽灵浮层 + 下次错序提交。
+      await gesture.cancel();
+      await tester.pumpAndSettle();
 
-    expect(tester.takeException(), isNull);
-    expect(calls, isEmpty,
+      expect(tester.takeException(), isNull);
+      expect(
+        calls,
+        isEmpty,
         reason:
-            'a touch drag cancelled by the system must not commit a reorder');
-    expect(order, <String>['A', 'B', 'C'],
-        reason: 'order must revert to the original on cancel');
-    expect(find.byKey(const ValueKey<String>('__reorder_grid_feedback__')),
+            'a touch drag cancelled by the system must not commit a reorder',
+      );
+      expect(order, <String>[
+        'A',
+        'B',
+        'C',
+      ], reason: 'order must revert to the original on cancel');
+      expect(
+        find.byKey(const ValueKey<String>('__reorder_grid_feedback__')),
         findsNothing,
-        reason: 'the ghost feedback overlay must be cleared after a cancel');
-  });
+        reason: 'the ghost feedback overlay must be cleared after a cancel',
+      );
+    },
+  );
 
   testWidgets(
-      'touch drag held at the bottom viewport edge auto-scrolls the enclosing '
-      'SingleChildScrollView (members past one screen become reachable)',
-      (WidgetTester tester) async {
-    final ScrollController controller = ScrollController();
-    addTearDown(controller.dispose);
-    // 3 列 × 15 项 = 5 行、cellH=100 → 内容高 500、视口 240 → 需自动滚动才够得到底部。
-    final List<String> order = <String>[for (int i = 0; i < 15; i++) 'i$i'];
-    await tester.pumpWidget(MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: SizedBox(
-            width: 300,
-            height: 240,
-            child: SingleChildScrollView(
-              controller: controller,
-              child: _Harness(items: order),
+    'touch drag held at the bottom viewport edge auto-scrolls the enclosing '
+    'SingleChildScrollView (members past one screen become reachable)',
+    (WidgetTester tester) async {
+      final ScrollController controller = ScrollController();
+      addTearDown(controller.dispose);
+      // 3 列 × 15 项 = 5 行、cellH=100 → 内容高 500、视口 240 → 需自动滚动才够得到底部。
+      final List<String> order = <String>[for (int i = 0; i < 15; i++) 'i$i'];
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: Center(
+              child: SizedBox(
+                width: 300,
+                height: 240,
+                child: SingleChildScrollView(
+                  controller: controller,
+                  child: _Harness(items: order),
+                ),
+              ),
             ),
           ),
         ),
-      ),
-    ));
-    await tester.pump();
-    expect(controller.offset, 0);
+      );
+      await tester.pump();
+      expect(controller.offset, 0);
 
-    final Rect viewport = tester.getRect(find.byType(SingleChildScrollView));
-    final Offset start = tester.getCenter(find.text('i0'));
-    final TestGesture gesture = await tester.startGesture(start); // touch
-    await tester.pump(const Duration(milliseconds: 600)); // 长按起拖
-    // 按住在视口底边缘带内（不再移动，靠帧步进自动滚动推进）。
-    await gesture.moveTo(Offset(viewport.center.dx, viewport.bottom - 8));
-    await tester.pump(); // 处理 move → 排下一帧的自动滚动
-    for (int i = 0; i < 6; i++) {
-      await tester.pump(const Duration(milliseconds: 16));
-    }
-    expect(controller.offset, greaterThan(0),
-        reason: '指针按在底边缘带应驱动最近 Scrollable 自动向下滚动');
-    await gesture.cancel();
-    await tester.pumpAndSettle();
-    expect(tester.takeException(), isNull);
-  });
+      final Rect viewport = tester.getRect(find.byType(SingleChildScrollView));
+      final Offset start = tester.getCenter(find.text('i0'));
+      final TestGesture gesture = await tester.startGesture(start); // touch
+      await tester.pump(const Duration(milliseconds: 600)); // 长按起拖
+      // 按住在视口底边缘带内（不再移动，靠帧步进自动滚动推进）。
+      await gesture.moveTo(Offset(viewport.center.dx, viewport.bottom - 8));
+      await tester.pump(); // 处理 move → 排下一帧的自动滚动
+      for (int i = 0; i < 6; i++) {
+        await tester.pump(const Duration(milliseconds: 16));
+      }
+      expect(
+        controller.offset,
+        greaterThan(0),
+        reason: '指针按在底边缘带应驱动最近 Scrollable 自动向下滚动',
+      );
+      await gesture.cancel();
+      await tester.pumpAndSettle();
+      expect(tester.takeException(), isNull);
+    },
+  );
 }

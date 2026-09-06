@@ -133,28 +133,21 @@ class _VideoControlLayoutEditOverlayState
           left: paletteLeft,
           right: paletteLeft,
           bottom: 108,
-          child: _buildSlotRegion(
-            VideoControlSlot.hidden,
-            tray: true,
-          ),
+          child: _buildSlotRegion(VideoControlSlot.hidden, tray: true),
         ),
         Positioned(
           left: 12,
           top: 0,
           bottom: 0,
           width: sideWidth,
-          child: Center(
-            child: _buildSlotRegion(VideoControlSlot.screenLeft),
-          ),
+          child: Center(child: _buildSlotRegion(VideoControlSlot.screenLeft)),
         ),
         Positioned(
           right: 12,
           top: 0,
           bottom: 0,
           width: sideWidth,
-          child: Center(
-            child: _buildSlotRegion(VideoControlSlot.screenRight),
-          ),
+          child: Center(child: _buildSlotRegion(VideoControlSlot.screenRight)),
         ),
         Positioned(
           left: 12,
@@ -184,8 +177,9 @@ class _VideoControlLayoutEditOverlayState
 
   Widget _buildCompactLayout(BoxConstraints constraints) {
     final double availableWidth = math.max(0, constraints.maxWidth - 24);
-    final double tileWidth =
-        availableWidth >= 440 ? (availableWidth - 8) / 2 : availableWidth;
+    final double tileWidth = availableWidth >= 440
+        ? (availableWidth - 8) / 2
+        : availableWidth;
     final double paletteMaxHeight = math.min(
       200,
       math.max(0, constraints.maxHeight - 40),
@@ -234,11 +228,7 @@ class _VideoControlLayoutEditOverlayState
       runSpacing: 6,
       children: <Widget>[
         for (final VideoControlItem item in _onVideoDraggableItems)
-          _buildDraggableControlChip(
-            item,
-            sourceSlot: null,
-            sourceIndex: null,
-          ),
+          _buildDraggableControlChip(item, sourceSlot: null, sourceIndex: null),
       ],
     );
     return ConstrainedBox(
@@ -281,8 +271,9 @@ class _VideoControlLayoutEditOverlayState
                             child: Text(t.dialog_save),
                           ),
                           IconButton(
-                            tooltip: MaterialLocalizations.of(context)
-                                .closeButtonTooltip,
+                            tooltip: MaterialLocalizations.of(
+                              context,
+                            ).closeButtonTooltip,
                             icon: const Icon(Icons.close),
                             onPressed: _cancelDraft,
                           ),
@@ -301,9 +292,7 @@ class _VideoControlLayoutEditOverlayState
                     ),
                   ),
                 ),
-                Expanded(
-                  child: SingleChildScrollView(child: chipList),
-                ),
+                Expanded(child: SingleChildScrollView(child: chipList)),
               ],
             ),
           ),
@@ -322,11 +311,7 @@ class _VideoControlLayoutEditOverlayState
       runSpacing: 6,
       children: <Widget>[
         for (final VideoControlItem item in _onVideoDraggableItems)
-          _buildDraggableControlChip(
-            item,
-            sourceSlot: null,
-            sourceIndex: null,
-          ),
+          _buildDraggableControlChip(item, sourceSlot: null, sourceIndex: null),
       ],
     );
     final Widget panel = DecoratedBox(
@@ -403,8 +388,9 @@ class _VideoControlLayoutEditOverlayState
         ),
       ),
     );
-    final Widget boundedPanel =
-        maxHeight == null ? panel : SizedBox(height: maxHeight, child: panel);
+    final Widget boundedPanel = maxHeight == null
+        ? panel
+        : SizedBox(height: maxHeight, child: panel);
     return ConstrainedBox(
       constraints: BoxConstraints(
         maxWidth: maxWidth,
@@ -426,89 +412,91 @@ class _VideoControlLayoutEditOverlayState
       key: ValueKey<String>('video-control-edit-slot-${slot.storageValue}'),
       onWillAcceptWithDetails:
           (DragTargetDetails<VideoControlDragData> details) {
-        final VideoControlItem item = details.data.item;
-        if (!_isOnVideoDraggableItem(item)) return false;
-        return _canAcceptPayload(details.data, slot);
-      },
+            final VideoControlItem item = details.data.item;
+            if (!_isOnVideoDraggableItem(item)) return false;
+            return _canAcceptPayload(details.data, slot);
+          },
       onAcceptWithDetails: (DragTargetDetails<VideoControlDragData> details) {
         _moveOrAddControlItem(details.data, slot, targetIndex: items.length);
       },
-      builder: (
-        BuildContext context,
-        List<VideoControlDragData?> candidate,
-        List<dynamic> rejected,
-      ) {
-        final bool highlighted = candidate.isNotEmpty;
-        final bool rejecting = rejected.isNotEmpty;
-        final Color borderColor = rejecting
-            ? cs.error
-            : highlighted
+      builder:
+          (
+            BuildContext context,
+            List<VideoControlDragData?> candidate,
+            List<dynamic> rejected,
+          ) {
+            final bool highlighted = candidate.isNotEmpty;
+            final bool rejecting = rejected.isNotEmpty;
+            final Color borderColor = rejecting
+                ? cs.error
+                : highlighted
                 ? cs.primary
                 : cs.outlineVariant;
-        return AnimatedContainer(
-          duration: const Duration(milliseconds: 120),
-          constraints: BoxConstraints(
-            minHeight: tray ? 64 : 84,
-            maxHeight: tray ? 120 : 176,
-          ),
-          padding: const EdgeInsets.all(8),
-          decoration: BoxDecoration(
-            color: highlighted
-                ? cs.primaryContainer.withValues(alpha: 0.9)
-                : cs.surface.withValues(alpha: 0.86),
-            borderRadius: tokens.radii.chipRadius,
-            border: Border.all(
-              color: borderColor,
-              width: highlighted || rejecting ? 2 : 1,
-            ),
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                _controlSlotLabel(slot),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: theme.textTheme.labelMedium?.copyWith(
-                  color:
-                      highlighted ? cs.onPrimaryContainer : cs.onSurfaceVariant,
-                  fontWeight: FontWeight.w700,
+            return AnimatedContainer(
+              duration: const Duration(milliseconds: 120),
+              constraints: BoxConstraints(
+                minHeight: tray ? 64 : 84,
+                maxHeight: tray ? 120 : 176,
+              ),
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: highlighted
+                    ? cs.primaryContainer.withValues(alpha: 0.9)
+                    : cs.surface.withValues(alpha: 0.86),
+                borderRadius: tokens.radii.chipRadius,
+                border: Border.all(
+                  color: borderColor,
+                  width: highlighted || rejecting ? 2 : 1,
                 ),
               ),
-              const SizedBox(height: 6),
-              if (items.isEmpty)
-                Text(
-                  t.video_control_slot_drop_hint,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: theme.textTheme.bodySmall?.copyWith(
-                    color: highlighted
-                        ? cs.onPrimaryContainer
-                        : cs.onSurfaceVariant,
-                  ),
-                )
-              else
-                Flexible(
-                  child: SingleChildScrollView(
-                    child: Wrap(
-                      spacing: 6,
-                      runSpacing: 6,
-                      children: <Widget>[
-                        for (int index = 0; index < items.length; index++)
-                          _buildPlacedControlChip(
-                            items[index],
-                            sourceSlot: slot,
-                            sourceIndex: index,
-                          ),
-                      ],
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    _controlSlotLabel(slot),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: theme.textTheme.labelMedium?.copyWith(
+                      color: highlighted
+                          ? cs.onPrimaryContainer
+                          : cs.onSurfaceVariant,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
-                ),
-            ],
-          ),
-        );
-      },
+                  const SizedBox(height: 6),
+                  if (items.isEmpty)
+                    Text(
+                      t.video_control_slot_drop_hint,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: highlighted
+                            ? cs.onPrimaryContainer
+                            : cs.onSurfaceVariant,
+                      ),
+                    )
+                  else
+                    Flexible(
+                      child: SingleChildScrollView(
+                        child: Wrap(
+                          spacing: 6,
+                          runSpacing: 6,
+                          children: <Widget>[
+                            for (int index = 0; index < items.length; index++)
+                              _buildPlacedControlChip(
+                                items[index],
+                                sourceSlot: slot,
+                                sourceIndex: index,
+                              ),
+                          ],
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+            );
+          },
     );
   }
 
@@ -557,64 +545,65 @@ class _VideoControlLayoutEditOverlayState
           targetIndex: sourceIndex,
         );
       },
-      builder: (
-        BuildContext context,
-        List<VideoControlDragData?> candidate,
-        List<dynamic> rejected,
-      ) {
-        final bool highlighted = candidate.isNotEmpty;
-        return AnimatedContainer(
-          duration: const Duration(milliseconds: 120),
-          constraints: const BoxConstraints(maxWidth: 204),
-          padding: const EdgeInsets.only(right: 2),
-          decoration: BoxDecoration(
-            color: highlighted
-                ? cs.primaryContainer.withValues(alpha: 0.82)
-                : cs.secondaryContainer,
-            borderRadius: tokens.radii.controlRadius,
-            border: Border.all(
-              color: highlighted ? cs.primary : Colors.transparent,
-              width: highlighted ? 1.5 : 1,
-            ),
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              _buildDraggableControlChip(
-                item,
-                sourceSlot: sourceSlot,
-                sourceIndex: sourceIndex,
-                maxWidth: 112,
-              ),
-              // TODO-554: hide the remove "x" when the item cannot be removed on
-              // this surface (touch keeps the settings entry pinned), so the UI
-              // never offers a tap that would be silently rejected.
-              if (item.canRemoveFromPlayer(
-                isTouchControls: widget.isTouchControls,
-              ))
-                Theme(
-                  data: theme.copyWith(
-                    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                  ),
-                  child: IconButton(
-                    tooltip: t.video_control_remove_from_slot,
-                    padding: EdgeInsets.zero,
-                    constraints: const BoxConstraints.tightFor(
-                      width: 28,
-                      height: 28,
-                    ),
-                    icon: Icon(
-                      Icons.close,
-                      size: 14,
-                      color: cs.onSecondaryContainer,
-                    ),
-                    onPressed: () => _removeControlItem(item, sourceSlot),
-                  ),
+      builder:
+          (
+            BuildContext context,
+            List<VideoControlDragData?> candidate,
+            List<dynamic> rejected,
+          ) {
+            final bool highlighted = candidate.isNotEmpty;
+            return AnimatedContainer(
+              duration: const Duration(milliseconds: 120),
+              constraints: const BoxConstraints(maxWidth: 204),
+              padding: const EdgeInsets.only(right: 2),
+              decoration: BoxDecoration(
+                color: highlighted
+                    ? cs.primaryContainer.withValues(alpha: 0.82)
+                    : cs.secondaryContainer,
+                borderRadius: tokens.radii.controlRadius,
+                border: Border.all(
+                  color: highlighted ? cs.primary : Colors.transparent,
+                  width: highlighted ? 1.5 : 1,
                 ),
-            ],
-          ),
-        );
-      },
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  _buildDraggableControlChip(
+                    item,
+                    sourceSlot: sourceSlot,
+                    sourceIndex: sourceIndex,
+                    maxWidth: 112,
+                  ),
+                  // TODO-554: hide the remove "x" when the item cannot be removed on
+                  // this surface (touch keeps the settings entry pinned), so the UI
+                  // never offers a tap that would be silently rejected.
+                  if (item.canRemoveFromPlayer(
+                    isTouchControls: widget.isTouchControls,
+                  ))
+                    Theme(
+                      data: theme.copyWith(
+                        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                      ),
+                      child: IconButton(
+                        tooltip: t.video_control_remove_from_slot,
+                        padding: EdgeInsets.zero,
+                        constraints: const BoxConstraints.tightFor(
+                          width: 28,
+                          height: 28,
+                        ),
+                        icon: Icon(
+                          Icons.close,
+                          size: 14,
+                          color: cs.onSecondaryContainer,
+                        ),
+                        onPressed: () => _removeControlItem(item, sourceSlot),
+                      ),
+                    ),
+                ],
+              ),
+            );
+          },
     );
   }
 
@@ -648,10 +637,7 @@ class _VideoControlLayoutEditOverlayState
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Icon(
-              videoControlItemIcon(
-                item,
-                bindings: widget.customActionBindings,
-              ),
+              videoControlItemIcon(item, bindings: widget.customActionBindings),
               size: 15,
               color: cs.onSecondaryContainer,
             ),
@@ -687,10 +673,7 @@ class _VideoControlLayoutEditOverlayState
   ) {
     final VideoControlItem item = payload.item;
     if (!_isOnVideoDraggableItem(item)) return false;
-    if (!item.canMoveToSlot(
-      target,
-      isTouchControls: widget.isTouchControls,
-    )) {
+    if (!item.canMoveToSlot(target, isTouchControls: widget.isTouchControls)) {
       return false;
     }
     final List<VideoControlItem> targetItems = _layout.itemsIn(target);

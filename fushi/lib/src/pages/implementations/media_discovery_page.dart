@@ -125,8 +125,10 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
   AppModel? _resolveAppModel() {
     if (_appModel != null) return _appModel;
     try {
-      _appModel =
-          ProviderScope.containerOf(context, listen: false).read(appProvider);
+      _appModel = ProviderScope.containerOf(
+        context,
+        listen: false,
+      ).read(appProvider);
     } on StateError {
       return null;
     }
@@ -158,8 +160,10 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
   /// 视频/书域，或搜的是压根不给分类的源，不该凭空多一排控件。
   bool get _gameTypeFilterAvailable =>
       _kind == DiscoveryMediaKind.game &&
-      _entries.any((DiscoveryEntry e) =>
-          e is DiscoveryResourceItem && e.gameLocalization != null);
+      _entries.any(
+        (DiscoveryEntry e) =>
+            e is DiscoveryResourceItem && e.gameLocalization != null,
+      );
 
   /// 应用筛选后的条目。目录条目（[DiscoveryFolder]）永远保留——它们是导航结构，
   /// 不是资源，把它们筛掉会让用户下不去。
@@ -209,8 +213,8 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
     if (_pathStack.isNotEmpty) return _DiscoveryIdle.none;
     if (_query.isNotEmpty) return _DiscoveryIdle.none;
     if (_sourceId == kDiscoveryAllSourcesId) return _DiscoveryIdle.pickSource;
-    final MediaDiscoverySource? source =
-        appModel.mediaDiscoveryService.sourceById(_sourceId);
+    final MediaDiscoverySource? source = appModel.mediaDiscoveryService
+        .sourceById(_sourceId);
     if (source != null && !source.capabilities.supportsBrowse) {
       return _DiscoveryIdle.queryRequired;
     }
@@ -258,28 +262,30 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
         page: _page,
       );
       // 追加页（加载更多）不做渐进：旧条目要保序，等整页齐了再接尾。
-      final List<DiscoveryEntry> base =
-          append ? List<DiscoveryEntry>.of(_entries) : const <DiscoveryEntry>[];
-      final DiscoveryAggregateResult result =
-          await appModel.mediaDiscoveryService.load(
-        request,
-        sourceId: _sourceId == kDiscoveryAllSourcesId ? null : _sourceId,
-        disabledSourceIds: _sourceId == kDiscoveryAllSourcesId
-            ? appModel.discoveryDisabledSourceIds
-            : const <String>{},
-        // 渐进交付：快源先上屏，不等慢源（模式与漫画全源搜索一致）。
-        onUpdate: append
-            ? null
-            : (DiscoveryAggregateResult partial) {
-                if (!mounted || seq != _loadSeq) return;
-                setState(() {
-                  _result = partial;
-                  _entries
-                    ..clear()
-                    ..addAll(partial.entries);
-                });
-              },
-      );
+      final List<DiscoveryEntry> base = append
+          ? List<DiscoveryEntry>.of(_entries)
+          : const <DiscoveryEntry>[];
+      final DiscoveryAggregateResult result = await appModel
+          .mediaDiscoveryService
+          .load(
+            request,
+            sourceId: _sourceId == kDiscoveryAllSourcesId ? null : _sourceId,
+            disabledSourceIds: _sourceId == kDiscoveryAllSourcesId
+                ? appModel.discoveryDisabledSourceIds
+                : const <String>{},
+            // 渐进交付：快源先上屏，不等慢源（模式与漫画全源搜索一致）。
+            onUpdate: append
+                ? null
+                : (DiscoveryAggregateResult partial) {
+                    if (!mounted || seq != _loadSeq) return;
+                    setState(() {
+                      _result = partial;
+                      _entries
+                        ..clear()
+                        ..addAll(partial.entries);
+                    });
+                  },
+          );
       if (!mounted || seq != _loadSeq) return;
       setState(() {
         _result = result;
@@ -350,8 +356,8 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
         if (!_resolvingTorrentIds.add(resolvingKey)) return;
         if (mounted) setState(() {});
         try {
-          final MediaDiscoverySource? source =
-              appModel.mediaDiscoveryService.sourceById(item.sourceId);
+          final MediaDiscoverySource? source = appModel.mediaDiscoveryService
+              .sourceById(item.sourceId);
           if (source == null) return;
           final DiscoveryPayload payload =
               item.payload ?? await source.resolvePayload(item);
@@ -443,7 +449,7 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
   Widget _buildControls(BuildContext context) {
     final List<MediaDiscoverySource> sources =
         _appModel?.mediaDiscoveryService.sourcesFor(_kind) ??
-            const <MediaDiscoverySource>[];
+        const <MediaDiscoverySource>[];
     return DiscoveryHeaderControls(
       sources: <DiscoverySourceOption>[
         for (final MediaDiscoverySource source in sources)
@@ -506,11 +512,7 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        kindSelector,
-        const SizedBox(height: 8),
-        typeFilter,
-      ],
+      children: <Widget>[kindSelector, const SizedBox(height: 8), typeFilter],
     );
   }
 
@@ -559,8 +561,9 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
           padding: const EdgeInsets.only(bottom: 8),
           child: Text(
             t.discovery_source_pick_hint,
-            style: theme.textTheme.bodyMedium
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
           ),
         ),
         for (final MediaDiscoverySource source in service.sourcesFor(_kind))
@@ -582,8 +585,9 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
       return Center(
         child: Text(
           t.discovery_enter_query_hint,
-          style: theme.textTheme.bodyMedium
-              ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+          style: theme.textTheme.bodyMedium?.copyWith(
+            color: theme.colorScheme.onSurfaceVariant,
+          ),
         ),
       );
     }
@@ -597,8 +601,9 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
         return Center(
           child: Text(
             t.discovery_source_query_required,
-            style: theme.textTheme.bodyMedium
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
           ),
         );
       case _DiscoveryIdle.none:
@@ -609,8 +614,9 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
       return Center(
         child: Text(
           t.discovery_partial_failure,
-          style: theme.textTheme.bodyMedium
-              ?.copyWith(color: theme.colorScheme.error),
+          style: theme.textTheme.bodyMedium?.copyWith(
+            color: theme.colorScheme.error,
+          ),
         ),
       );
     }
@@ -631,8 +637,9 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
             '${t.discovery_sources_unavailable} '
             '(${result.failures.map((ExternalProviderFailure f) => f.providerId).toSet().join(', ')})',
             textAlign: TextAlign.center,
-            style: theme.textTheme.bodyMedium
-                ?.copyWith(color: theme.colorScheme.error),
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: theme.colorScheme.error,
+            ),
           ),
         );
       }
@@ -640,8 +647,9 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
       return Center(
         child: Text(
           t.discovery_empty,
-          style: theme.textTheme.bodyMedium
-              ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+          style: theme.textTheme.bodyMedium?.copyWith(
+            color: theme.colorScheme.onSurfaceVariant,
+          ),
         ),
       );
     }
@@ -657,58 +665,60 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
               child: Text(
                 '${t.discovery_partial_failure} '
                 '(${result.failures.map((ExternalProviderFailure f) => f.providerId).toSet().join(', ')})',
-                style: theme.textTheme.bodySmall
-                    ?.copyWith(color: theme.colorScheme.error),
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: theme.colorScheme.error,
+                ),
               ),
             ),
           for (final DiscoveryEntry entry in _visibleEntries)
             switch (entry) {
               DiscoveryFolder() => FushiListItem(
-                  leading: const Icon(Icons.folder_outlined),
-                  title: Text(entry.title),
-                  // 目录条目不带来源名，用户看不出这是哪个站的目录。
-                  subtitle: Text(
-                    <String>[
-                      service.sourceById(entry.sourceId)?.displayName ??
-                          entry.sourceId,
-                      if (entry.note?.trim().isNotEmpty == true) entry.note!,
-                      if (entry.itemCount != null)
-                        t.media_source_count_manga(n: entry.itemCount!),
-                    ].join(' · '),
-                  ),
-                  trailing: const Icon(Icons.chevron_right),
-                  onTap: () => _openFolder(entry),
+                leading: const Icon(Icons.folder_outlined),
+                title: Text(entry.title),
+                // 目录条目不带来源名，用户看不出这是哪个站的目录。
+                subtitle: Text(
+                  <String>[
+                    service.sourceById(entry.sourceId)?.displayName ??
+                        entry.sourceId,
+                    if (entry.note?.trim().isNotEmpty == true) entry.note!,
+                    if (entry.itemCount != null)
+                      t.media_source_count_manga(n: entry.itemCount!),
+                  ].join(' · '),
                 ),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => _openFolder(entry),
+              ),
               DiscoveryResourceItem() => FushiListItem(
-                  leading: Icon(
-                    entry.payloadKind == DiscoveryPayloadKind.torrent
-                        ? Icons.link
-                        : Icons.insert_drive_file_outlined,
-                  ),
-                  title: Text(entry.title),
-                  titleMaxLines: 2,
-                  subtitle: Text(_subtitleFor(entry, service)),
-                  trailing: _resolvingTorrentIds.contains(
-                            '${entry.sourceId}\u0000${entry.id}',
-                          ) ||
-                          queue.isPending(entry)
-                      ? const SizedBox(
-                          width: 20,
-                          height: 20,
-                          child: CircularProgressIndicator(strokeWidth: 2),
-                        )
-                      : entry.isDownloadable
-                          ? FushiIconButton(
-                              icon: Icons.download_outlined,
-                              tooltip: t.anime_download_generic_download,
-                              label: t.anime_download_generic_download,
-                              onTap: () => unawaited(_download(entry)),
-                            )
-                          : null,
-                  onTap: entry.isDownloadable
-                      ? () => unawaited(_download(entry))
-                      : null,
+                leading: Icon(
+                  entry.payloadKind == DiscoveryPayloadKind.torrent
+                      ? Icons.link
+                      : Icons.insert_drive_file_outlined,
                 ),
+                title: Text(entry.title),
+                titleMaxLines: 2,
+                subtitle: Text(_subtitleFor(entry, service)),
+                trailing:
+                    _resolvingTorrentIds.contains(
+                          '${entry.sourceId}\u0000${entry.id}',
+                        ) ||
+                        queue.isPending(entry)
+                    ? const SizedBox(
+                        width: 20,
+                        height: 20,
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      )
+                    : entry.isDownloadable
+                    ? FushiIconButton(
+                        icon: Icons.download_outlined,
+                        tooltip: t.anime_download_generic_download,
+                        label: t.anime_download_generic_download,
+                        onTap: () => unawaited(_download(entry)),
+                      )
+                    : null,
+                onTap: entry.isDownloadable
+                    ? () => unawaited(_download(entry))
+                    : null,
+              ),
             },
           if (result != null && result.hasMore)
             Padding(

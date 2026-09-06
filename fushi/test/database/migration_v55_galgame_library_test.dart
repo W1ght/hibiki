@@ -49,8 +49,9 @@ CREATE TABLE preferences (
 
   /// 读当前 user_version（无现成访问器，按仓库既有测试的写法直接 PRAGMA）。
   Future<int> userVersionOf(FushiDatabase db) async {
-    final QueryRow row =
-        await db.customSelect('PRAGMA user_version').getSingle();
+    final QueryRow row = await db
+        .customSelect('PRAGMA user_version')
+        .getSingle();
     return row.read<int>('user_version');
   }
 
@@ -62,15 +63,14 @@ CREATE TABLE preferences (
     String? workdir,
     String? coverPath,
     int addedAt = 1700000000000,
-  }) =>
-      <String, Object?>{
-        'id': id,
-        'name': name,
-        'exePath': exePath,
-        'workdir': workdir,
-        'coverPath': coverPath,
-        'addedAt': addedAt,
-      };
+  }) => <String, Object?>{
+    'id': id,
+    'name': name,
+    'exePath': exePath,
+    'workdir': workdir,
+    'coverPath': coverPath,
+    'addedAt': addedAt,
+  };
 
   test('v53→v55 建三张新表并把旧 JSON 游戏库回填进 galgames', () async {
     final String raw = jsonEncode(<Map<String, Object?>>[

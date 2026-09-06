@@ -8,8 +8,8 @@ void main() {
       final List<int> writes = <int>[];
       final MangaZoomPreferenceDebouncer debouncer =
           MangaZoomPreferenceDebouncer(
-        persist: (int value) async => writes.add(value),
-      );
+            persist: (int value) async => writes.add(value),
+          );
 
       for (int value = 101; value <= 350; value++) {
         debouncer.queue(value);
@@ -27,8 +27,8 @@ void main() {
       final List<int> writes = <int>[];
       final MangaZoomPreferenceDebouncer debouncer =
           MangaZoomPreferenceDebouncer(
-        persist: (int value) async => writes.add(value),
-      );
+            persist: (int value) async => writes.add(value),
+          );
       debouncer.queue(275);
       debouncer.dispose();
       async.flushMicrotasks();

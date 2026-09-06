@@ -5,60 +5,76 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:path/path.dart' as p;
 
 void main() {
-  test('sync_to_mac rejects exclusions when remote branch already exists',
-      () async {
-    final Directory workspace = Directory.current.parent;
-    final File script = File(p.join(workspace.path, 'tool', 'sync_to_mac.ps1'));
-    final Directory repo = await _createRepoWithExcludedCommit(
-      remoteBranch: 'feature-existing',
-      remoteBranchExists: true,
-    );
+  test(
+    'sync_to_mac rejects exclusions when remote branch already exists',
+    () async {
+      final Directory workspace = Directory.current.parent;
+      final File script = File(
+        p.join(workspace.path, 'tool', 'sync_to_mac.ps1'),
+      );
+      final Directory repo = await _createRepoWithExcludedCommit(
+        remoteBranch: 'feature-existing',
+        remoteBranchExists: true,
+      );
 
-    final ProcessResult result = await _runSyncToMacDryRun(
-      script: script,
-      repo: repo,
-      branch: 'feature-existing',
-    );
+      final ProcessResult result = await _runSyncToMacDryRun(
+        script: script,
+        repo: repo,
+        branch: 'feature-existing',
+      );
 
-    _expectExcludedUploadRejected(result);
-  }, skip: !Platform.isWindows);
+      _expectExcludedUploadRejected(result);
+    },
+    skip: !Platform.isWindows,
+  );
 
-  test('sync_to_mac rejects exclusions when creating a remote branch',
-      () async {
-    final Directory workspace = Directory.current.parent;
-    final File script = File(p.join(workspace.path, 'tool', 'sync_to_mac.ps1'));
-    final Directory repo = await _createRepoWithExcludedCommit(
-      remoteBranch: 'feature-new',
-      remoteBranchExists: false,
-    );
+  test(
+    'sync_to_mac rejects exclusions when creating a remote branch',
+    () async {
+      final Directory workspace = Directory.current.parent;
+      final File script = File(
+        p.join(workspace.path, 'tool', 'sync_to_mac.ps1'),
+      );
+      final Directory repo = await _createRepoWithExcludedCommit(
+        remoteBranch: 'feature-new',
+        remoteBranchExists: false,
+      );
 
-    final ProcessResult result = await _runSyncToMacDryRun(
-      script: script,
-      repo: repo,
-      branch: 'feature-new',
-    );
+      final ProcessResult result = await _runSyncToMacDryRun(
+        script: script,
+        repo: repo,
+        branch: 'feature-new',
+      );
 
-    _expectExcludedUploadRejected(result);
-  }, skip: !Platform.isWindows);
+      _expectExcludedUploadRejected(result);
+    },
+    skip: !Platform.isWindows,
+  );
 
-  test('sync_to_mac rejects deletion of a tracked upload exclusion', () async {
-    final Directory workspace = Directory.current.parent;
-    final File script = File(p.join(workspace.path, 'tool', 'sync_to_mac.ps1'));
-    final Directory repo = await _createRepoDeletingTrackedExclusion(
-      remoteBranch: 'feature-delete',
-    );
+  test(
+    'sync_to_mac rejects deletion of a tracked upload exclusion',
+    () async {
+      final Directory workspace = Directory.current.parent;
+      final File script = File(
+        p.join(workspace.path, 'tool', 'sync_to_mac.ps1'),
+      );
+      final Directory repo = await _createRepoDeletingTrackedExclusion(
+        remoteBranch: 'feature-delete',
+      );
 
-    final ProcessResult result = await _runSyncToMacDryRun(
-      script: script,
-      repo: repo,
-      branch: 'feature-delete',
-    );
+      final ProcessResult result = await _runSyncToMacDryRun(
+        script: script,
+        repo: repo,
+        branch: 'feature-delete',
+      );
 
-    _expectExcludedUploadRejected(
-      result,
-      expectedPaths: <String>['手机编译安装ARM.bat'],
-    );
-  }, skip: !Platform.isWindows);
+      _expectExcludedUploadRejected(
+        result,
+        expectedPaths: <String>['手机编译安装ARM.bat'],
+      );
+    },
+    skip: !Platform.isWindows,
+  );
 }
 
 Future<Directory> _createRepoWithExcludedCommit({
@@ -66,16 +82,18 @@ Future<Directory> _createRepoWithExcludedCommit({
   required bool remoteBranchExists,
 }) async {
   final Directory workspace = Directory.current.parent;
-  final File exclusionFile =
-      File(p.join(workspace.path, 'tool', 'sync_upload_exclusions.txt'));
+  final File exclusionFile = File(
+    p.join(workspace.path, 'tool', 'sync_upload_exclusions.txt'),
+  );
   expect(exclusionFile.existsSync(), isTrue);
   final String exclusions = exclusionFile.readAsStringSync();
   expect(exclusions, contains('手机编译安装ARM.bat'));
   expect(exclusions, contains('docs/项目负责人提示词 copy'));
   expect(exclusions, contains('docs/项目负责人提示词'));
 
-  final Directory temp =
-      await Directory.systemTemp.createTemp('hibiki_sync_to_mac_guard_');
+  final Directory temp = await Directory.systemTemp.createTemp(
+    'hibiki_sync_to_mac_guard_',
+  );
 
   final Directory repo = Directory(p.join(temp.path, 'repo'))
     ..createSync(recursive: true);
@@ -103,10 +121,12 @@ Future<Directory> _createRepoWithExcludedCommit({
 
   Directory(p.join(repo.path, 'docs')).createSync();
   File(p.join(repo.path, '手机编译安装ARM.bat')).writeAsStringSync('echo hi\n');
-  File(p.join(repo.path, 'docs', '项目负责人提示词 copy'))
-      .writeAsStringSync('local copy\n');
-  File(p.join(repo.path, 'docs', '项目负责人提示词'))
-      .writeAsStringSync('local prompt\n');
+  File(
+    p.join(repo.path, 'docs', '项目负责人提示词 copy'),
+  ).writeAsStringSync('local copy\n');
+  File(
+    p.join(repo.path, 'docs', '项目负责人提示词'),
+  ).writeAsStringSync('local prompt\n');
   await _runGit(repo, <String>['add', '.']);
   await _runGit(repo, <String>['commit', '-m', 'touch local-only files']);
 
@@ -117,8 +137,9 @@ Future<Directory> _createRepoWithExcludedCommit({
 Future<Directory> _createRepoDeletingTrackedExclusion({
   required String remoteBranch,
 }) async {
-  final Directory temp =
-      await Directory.systemTemp.createTemp('hibiki_sync_to_mac_delete_guard_');
+  final Directory temp = await Directory.systemTemp.createTemp(
+    'hibiki_sync_to_mac_delete_guard_',
+  );
 
   final Directory repo = Directory(p.join(temp.path, 'repo'))
     ..createSync(recursive: true);

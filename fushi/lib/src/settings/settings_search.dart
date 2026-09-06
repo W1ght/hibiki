@@ -73,17 +73,20 @@ List<SettingsSearchEntry> flattenVisibleSettings(
   final List<SettingsSearchEntry> entries = <SettingsSearchEntry>[];
   for (final SettingsDestination destination in destinations) {
     if (!destination.isVisible(context)) continue;
-    for (final SettingsSection section
-        in destination.visibleSections(context)) {
+    for (final SettingsSection section in destination.visibleSections(
+      context,
+    )) {
       for (final SettingsItem item in section.items) {
         final String title = settingsItemSearchTitle(item, context);
         if (title.isEmpty) continue;
-        entries.add(SettingsSearchEntry(
-          destination: destination,
-          sectionTitle: section.title,
-          item: item,
-          resolvedTitle: title,
-        ));
+        entries.add(
+          SettingsSearchEntry(
+            destination: destination,
+            sectionTitle: section.title,
+            item: item,
+            resolvedTitle: title,
+          ),
+        );
       }
     }
     // body 逃生口正文（如「制卡」的 AnkiSettingsBody）不走 sections，索引器
@@ -92,16 +95,18 @@ List<SettingsSearchEntry> flattenVisibleSettings(
     for (final SettingsBodySearchEntry bodyEntry
         in destination.bodySearchEntries) {
       if (!bodyEntry.isVisible(context)) continue;
-      entries.add(SettingsSearchEntry(
-        destination: destination,
-        item: SettingsCustomItem(
-          id: bodyEntry.id,
-          searchTitle: bodyEntry.title,
-          subtitle: bodyEntry.subtitle,
-          builder: (_) => const SizedBox.shrink(),
+      entries.add(
+        SettingsSearchEntry(
+          destination: destination,
+          item: SettingsCustomItem(
+            id: bodyEntry.id,
+            searchTitle: bodyEntry.title,
+            subtitle: bodyEntry.subtitle,
+            builder: (_) => const SizedBox.shrink(),
+          ),
+          isBodyEntry: true,
         ),
-        isBodyEntry: true,
-      ));
+      );
     }
   }
   return entries;
@@ -190,8 +195,9 @@ class _SettingsRevealTargetState extends State<SettingsRevealTarget> {
   Widget build(BuildContext context) {
     final Color highlight = Theme.of(context).colorScheme.primary;
     // MD3 守卫：圆角一律走 design tokens，不自持字面量。
-    final BorderRadius radius =
-        FushiDesignTokens.of(context).radii.controlRadius;
+    final BorderRadius radius = FushiDesignTokens.of(
+      context,
+    ).radii.controlRadius;
     // eink 下闪烁衰减动画归零：TweenAnimationBuilder duration zero 直接落在
     // end（透明），不闪不残影；定位仍由上面的滚动完成。
     return TweenAnimationBuilder<double>(

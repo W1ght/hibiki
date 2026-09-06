@@ -19,8 +19,11 @@ void main() {
   late final String flat;
 
   setUpAll(() {
-    expect(page.existsSync(), isTrue,
-        reason: 'popup_dictionary_page.dart 应存在: ${page.path}');
+    expect(
+      page.existsSync(),
+      isTrue,
+      reason: 'popup_dictionary_page.dart 应存在: ${page.path}',
+    );
     // 去空白后匹配，抗 dart format 换行。
     flat = page.readAsStringSync().replaceAll(RegExp(r'\s+'), '');
   });
@@ -33,7 +36,8 @@ void main() {
           '.withValues(alpha:1.0),',
         ),
         isTrue,
-        reason: '浮窗卡片是透明窗上唯一背景层，须强制不透明，'
+        reason:
+            '浮窗卡片是透明窗上唯一背景层，须强制不透明，'
             '否则带 alpha 的阅读器主题色会透出桌面壁纸（BUG-818）',
       );
     });

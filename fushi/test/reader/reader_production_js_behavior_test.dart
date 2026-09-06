@@ -33,7 +33,8 @@ void main() {
     expect(
       result.exitCode,
       0,
-      reason: 'production JS behavior runner failed:\n'
+      reason:
+          'production JS behavior runner failed:\n'
           'stdout=${result.stdout}\nstderr=${result.stderr}',
     );
     expect(result.stdout.toString().trim(), 'OK');

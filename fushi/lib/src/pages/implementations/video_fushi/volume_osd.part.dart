@@ -40,12 +40,9 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
     );
     _osdTimer?.cancel();
     // TODO-971：突出 OSD（制卡成功）停留更久（3.6s），普通通知仍 2.6s。
-    _osdTimer = Timer(
-      Duration(milliseconds: prominent ? 3600 : 2600),
-      () {
-        _osdNotifier.value = null;
-      },
-    );
+    _osdTimer = Timer(Duration(milliseconds: prominent ? 3600 : 2600), () {
+      _osdNotifier.value = null;
+    });
   }
 
   /// 滑条拖动写音量：即时写 controller + OSD + 同步显示真相源（TODO-377）。
@@ -125,20 +122,13 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
     final VideoPlayerController? controller = _controller;
     if (controller == null) return;
     final double next = await controller.toggleMute();
-    await _applyUserVideoVolume(
-      next,
-      persist: false,
-      applyToController: false,
-    );
+    await _applyUserVideoVolume(next, persist: false, applyToController: false);
   }
 
   void _showLevelHud(_VideoLevelHudKind kind, double value) {
     if (!mounted) return;
     final double clamped = value.clamp(0.0, 100.0).toDouble();
-    _levelHudNotifier.value = _VideoLevelHudState(
-      kind: kind,
-      value: clamped,
-    );
+    _levelHudNotifier.value = _VideoLevelHudState(kind: kind, value: clamped);
     _levelHudTimer?.cancel();
     _levelHudTimer = Timer(const Duration(milliseconds: 1600), () {
       if (!mounted) return;
@@ -284,8 +274,9 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
                   context,
                   const Duration(milliseconds: 180),
                 ),
-                child:
-                    osd == null ? const SizedBox.shrink() : _buildOsdCard(osd),
+                child: osd == null
+                    ? const SizedBox.shrink()
+                    : _buildOsdCard(osd),
               );
             },
           ),
@@ -304,24 +295,21 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
       child: IgnorePointer(
         child: ValueListenableBuilder<({Offset position, double speed})?>(
           valueListenable: _longPressSpeedBadge,
-          builder: (
-            BuildContext _,
-            ({Offset position, double speed})? badge,
-            __,
-          ) {
-            if (badge == null) return const SizedBox.shrink();
-            final ColorScheme cs = _videoChromeColorScheme(context);
-            return Stack(
-              children: <Widget>[
-                VideoLongPressSpeedBadge(
-                  position: badge.position,
-                  speed: badge.speed,
-                  surfaceColor: _osdSurfaceColor(cs),
-                  textColor: _osdTextColor(cs),
-                ),
-              ],
-            );
-          },
+          builder:
+              (BuildContext _, ({Offset position, double speed})? badge, __) {
+                if (badge == null) return const SizedBox.shrink();
+                final ColorScheme cs = _videoChromeColorScheme(context);
+                return Stack(
+                  children: <Widget>[
+                    VideoLongPressSpeedBadge(
+                      position: badge.position,
+                      speed: badge.speed,
+                      surfaceColor: _osdSurfaceColor(cs),
+                      textColor: _osdTextColor(cs),
+                    ),
+                  ],
+                );
+              },
         ),
       ),
     );
@@ -340,8 +328,9 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
     final Color surfaceColor = palette == null
         ? _osdSurfaceColor(cs)
         : palette.background.withValues(alpha: 0.88);
-    final Color textColor =
-        palette == null ? _osdTextColor(cs) : palette.foreground;
+    final Color textColor = palette == null
+        ? _osdTextColor(cs)
+        : palette.foreground;
     final double fontSize = prominent ? 18 : 14;
     final double iconSize = prominent ? 24 : 18;
     final EdgeInsets cardPadding = prominent
@@ -392,11 +381,7 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
                     Icon(palette.icon, size: iconSize, color: textColor),
                     SizedBox(width: prominent ? 12 : 8),
                   ] else if (prominent) ...<Widget>[
-                    Icon(
-                      Icons.check_circle,
-                      size: iconSize,
-                      color: textColor,
-                    ),
+                    Icon(Icons.check_circle, size: iconSize, color: textColor),
                     const SizedBox(width: 12),
                   ],
                   Flexible(
@@ -409,8 +394,9 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
                           style: TextStyle(
                             color: textColor,
                             fontSize: fontSize,
-                            fontWeight:
-                                prominent ? FontWeight.w600 : FontWeight.normal,
+                            fontWeight: prominent
+                                ? FontWeight.w600
+                                : FontWeight.normal,
                             height: 1.2,
                           ),
                         ),
@@ -421,10 +407,12 @@ extension _VideoVolumeOsd on _VideoFushiPageState {
                             child: LinearProgressIndicator(
                               value: osd.progress,
                               minHeight: 3,
-                              backgroundColor:
-                                  textColor.withValues(alpha: 0.25),
-                              valueColor:
-                                  AlwaysStoppedAnimation<Color>(textColor),
+                              backgroundColor: textColor.withValues(
+                                alpha: 0.25,
+                              ),
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                textColor,
+                              ),
                             ),
                           ),
                         ],

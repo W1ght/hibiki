@@ -66,10 +66,9 @@ void main() {
   /// 「dragging_ 的清零点」，于是一个**命名完全正当**的新成员把这条守卫判红。
   /// 新成员名可以合法地以被数的 flag（`dragging_` / `pressed_` …）结尾，
   /// 所以左边界必须钉死：紧邻的前一个字符不能是标识符字符。
-  int countOf(String haystack, String needle) =>
-      RegExp('(?<![A-Za-z0-9_])${RegExp.escape(needle)}')
-          .allMatches(haystack)
-          .length;
+  int countOf(String haystack, String needle) => RegExp(
+    '(?<![A-Za-z0-9_])${RegExp.escape(needle)}',
+  ).allMatches(haystack).length;
 
   /// `dragging_ = false;` 有两种合法出现：终止（在 CancelPointerGesture 里）与
   /// **起始**（WM_LBUTTONDOWN 里紧跟 `pressed_ = true;` 的初始化）。后者不是
@@ -79,9 +78,9 @@ void main() {
     int count = 0;
     // 同 countOf：左边界不能是标识符字符，否则 `scroll_thumb_dragging_ =
     // false;` 会被当成 `dragging_ = false;` 的第二个终止点。
-    for (final Match m
-        in RegExp('(?<![A-Za-z0-9_])${RegExp.escape(flag)}')
-            .allMatches(maskedSource)) {
+    for (final Match m in RegExp(
+      '(?<![A-Za-z0-9_])${RegExp.escape(flag)}',
+    ).allMatches(maskedSource)) {
       final int from = m.start - 80 < 0 ? 0 : m.start - 80;
       if (maskedSource.substring(from, m.start).contains('pressed_ = true;')) {
         continue; // 手势起始的初始化，不是终止

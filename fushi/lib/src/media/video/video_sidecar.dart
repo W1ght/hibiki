@@ -84,9 +84,9 @@ List<String> listSidecarSubtitles(
 /// ext ∈ srt/ass/ssa/vtt，langTag 只允许 `[A-Za-z0-9_-]`）。互联字幕上传端点用它做
 /// 服务端白名单校验（后缀由 client 报，绝不放行路径分隔符/穿越）。
 bool isSidecarSubtitleSuffix(String suffix) => RegExp(
-      r'^(\.[A-Za-z0-9_-]{1,32})?\.(srt|ass|ssa|vtt)$',
-      caseSensitive: false,
-    ).hasMatch(suffix);
+  r'^(\.[A-Za-z0-9_-]{1,32})?\.(srt|ass|ssa|vtt)$',
+  caseSensitive: false,
+).hasMatch(suffix);
 
 /// 在 [videoPath] 同目录查找同名 sidecar 字幕（IO 版，包装 [pickSidecar]）。
 ///
@@ -111,8 +111,11 @@ String? findSidecarSubtitle(String videoPath, {required String langCode}) {
     return null;
   }
 
-  final String? picked =
-      pickSidecar(baseNameNoExt, dirFiles, langCode: langCode);
+  final String? picked = pickSidecar(
+    baseNameNoExt,
+    dirFiles,
+    langCode: langCode,
+  );
   if (picked == null) return null;
   return p.normalize(p.join(dir, picked));
 }

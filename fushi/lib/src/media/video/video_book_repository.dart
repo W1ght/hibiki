@@ -61,8 +61,9 @@ class VideoBookRepository {
   /// 默认 null = 手动导入无来源（向后兼容，现有手动导入调用点一字不改）。只在
   /// [book] 自身没显式设过 sourceId 时才合并进 companion，避免覆盖调用方意图。
   Future<void> saveVideoBook(VideoBooksCompanion book, {int? sourceId}) {
-    final VideoBooksCompanion withSource =
-        sourceId == null ? book : book.copyWith(sourceId: Value(sourceId));
+    final VideoBooksCompanion withSource = sourceId == null
+        ? book
+        : book.copyWith(sourceId: Value(sourceId));
     return _db.upsertVideoBook(withSource);
   }
 
@@ -140,12 +141,11 @@ class VideoBookRepository {
     String bookUid, {
     required Map<String, int> remoteAddedAt,
     Map<String, int> remoteTombstones = const <String, int>{},
-  }) =>
-      _db.mergeRemoteVideoTags(
-        bookUid,
-        remoteAddedAt: remoteAddedAt,
-        remoteTombstones: remoteTombstones,
-      );
+  }) => _db.mergeRemoteVideoTags(
+    bookUid,
+    remoteAddedAt: remoteAddedAt,
+    remoteTombstones: remoteTombstones,
+  );
 
   /// 统一合集 Phase 2：把一个多集播放列表拆成 N 条独立 VideoBooks 行 + 一个 playlist
   /// [MediaCollections]（成员按序）。是「导入时拆集」的单一真相源，与 v38 迁移
@@ -168,8 +168,9 @@ class VideoBookRepository {
     int collectionId = 0;
     await _db.transaction(() async {
       final List<VideoBookRow> existingBooks = await listAll();
-      final Set<String> taken =
-          existingBooks.map((VideoBookRow r) => r.bookUid).toSet();
+      final Set<String> taken = existingBooks
+          .map((VideoBookRow r) => r.bookUid)
+          .toSet();
       for (final PlaylistEntry e in entries) {
         if (reuseExistingPaths) {
           VideoBookRow? existing;
@@ -231,8 +232,9 @@ class VideoBookRepository {
   /// independent automatic download jobs. Manual playlist imports deliberately
   /// keep their authored order; only the download pipeline calls this method.
   Future<void> reorderDownloadedCollectionEpisodes(int collectionId) async {
-    final List<MediaCollectionItemRow> items =
-        await _db.getCollectionItems(collectionId);
+    final List<MediaCollectionItemRow> items = await _db.getCollectionItems(
+      collectionId,
+    );
     final List<VideoBookRow> members = <VideoBookRow>[];
     for (final MediaCollectionItemRow item in items) {
       if (item.mediaType != MediaKind.video.dbValue) continue;
@@ -242,10 +244,10 @@ class VideoBookRepository {
     if (members.length < 2) return;
     final CollectionSeasonRegroup<VideoBookRow> regroup =
         regroupMembersBySeason<VideoBookRow>(
-      members: members,
-      filenameOf: (VideoBookRow row) => row.videoPath,
-      titleOf: (VideoBookRow row) => row.title,
-    );
+          members: members,
+          filenameOf: (VideoBookRow row) => row.videoPath,
+          titleOf: (VideoBookRow row) => row.title,
+        );
     await _db.reorderCollectionItemsAutomatically(
       collectionId,
       <CollectionMemberKey>[
@@ -301,8 +303,9 @@ class VideoBookRepository {
     int added = 0;
     int removed = 0;
     final List<VideoBookRow> existingBooks = await listAll();
-    final Set<String> taken =
-        existingBooks.map((VideoBookRow r) => r.bookUid).toSet();
+    final Set<String> taken = existingBooks
+        .map((VideoBookRow r) => r.bookUid)
+        .toSet();
     final Map<String, VideoBookRow> existingByPath = <String, VideoBookRow>{
       for (final VideoBookRow row in existingBooks)
         normalizeVideoPath(row.videoPath): row,
@@ -446,16 +449,17 @@ class VideoBookRepository {
         // 覆盖等于把手选结果抹掉（正是 gate 当初要防的那个竞态）。
         final bool repaired = await VideoCoverMutationGate.runExclusive(
           () async {
-            final VideoBookRow? current =
-                await _db.getVideoBookByBookUid(row.bookUid);
+            final VideoBookRow? current = await _db.getVideoBookByBookUid(
+              row.bookUid,
+            );
             if (current == null || current.coverPath != cover) return false;
             await _db.updateVideoBookCover(row.bookUid, candidate);
             return true;
           },
         );
-        out.add(repaired
-            ? row.copyWith(coverPath: Value<String?>(candidate))
-            : row);
+        out.add(
+          repaired ? row.copyWith(coverPath: Value<String?>(candidate)) : row,
+        );
       } else {
         out.add(row);
       }
@@ -470,12 +474,11 @@ class VideoBookRepository {
     String bookUid,
     int positionMs, {
     int? playedAt,
-  }) =>
-      _db.updateVideoBookPosition(
-        bookUid,
-        positionMs,
-        playedAt: playedAt ?? DateTime.now().millisecondsSinceEpoch,
-      );
+  }) => _db.updateVideoBookPosition(
+    bookUid,
+    positionMs,
+    playedAt: playedAt ?? DateTime.now().millisecondsSinceEpoch,
+  );
 
   /// Updates local file paths after app-owned media is relocated.
   ///
@@ -491,11 +494,11 @@ class VideoBookRepository {
     }
     return (_db.update(
       _db.videoBooks,
-    )..where((tbl) => tbl.bookUid.equals(bookUid)))
-        .write(
+    )..where((tbl) => tbl.bookUid.equals(bookUid))).write(
       VideoBooksCompanion(
-        videoPath:
-            videoPath == null ? const Value.absent() : Value<String>(videoPath),
+        videoPath: videoPath == null
+            ? const Value.absent()
+            : Value<String>(videoPath),
         subtitleSource: subtitleSource == null
             ? const Value.absent()
             : Value<String?>(subtitleSource),
@@ -536,8 +539,7 @@ class VideoBookRepository {
         final VideoPathRemap remap = entry.value;
         await (_db.update(
           _db.videoBooks,
-        )..where((tbl) => tbl.bookUid.equals(entry.key)))
-            .write(
+        )..where((tbl) => tbl.bookUid.equals(entry.key))).write(
           VideoBooksCompanion(
             videoPath: remap.videoPath == null
                 ? const Value.absent()
@@ -584,11 +586,10 @@ class VideoBookRepository {
   Future<void> updateSecondarySubtitleSource(
     String bookUid,
     String? secondarySubtitleSource,
-  ) =>
-      _db.updateVideoBookSecondarySubtitleSource(
-        bookUid,
-        secondarySubtitleSource,
-      );
+  ) => _db.updateVideoBookSecondarySubtitleSource(
+    bookUid,
+    secondarySubtitleSource,
+  );
 
   /// 更新用户选中的音轨 id（libmpv `AudioTrack.id`；清除存 null）。
   Future<void> updateAudioTrackId(String bookUid, String? audioTrackId) =>
@@ -622,8 +623,9 @@ class VideoBookRepository {
     required String value,
   }) async {
     final int nowMs = DateTime.now().millisecondsSinceEpoch;
-    for (final MediaCollectionItemRow item
-        in await _db.getCollectionItems(collectionId)) {
+    for (final MediaCollectionItemRow item in await _db.getCollectionItems(
+      collectionId,
+    )) {
       if (item.mediaType != MediaKind.video.dbValue) continue;
       await _db.setPrefTyped<String>(valueKeyOf(item.entryKey), value);
       await _db.setPrefTyped<int>(atKeyOf(item.entryKey), nowMs);
@@ -646,13 +648,18 @@ class VideoBookRepository {
     await _db.updateMediaCollectionSubtitleDelayMs(collectionId, delayMs);
     if (delayMs == null) return;
     final int nowMs = DateTime.now().millisecondsSinceEpoch;
-    for (final MediaCollectionItemRow item
-        in await _db.getCollectionItems(collectionId)) {
+    for (final MediaCollectionItemRow item in await _db.getCollectionItems(
+      collectionId,
+    )) {
       if (item.mediaType != MediaKind.video.dbValue) continue;
       await _db.setPrefTyped<int>(
-          videoRemoteDelayPrefKey(item.entryKey), delayMs);
+        videoRemoteDelayPrefKey(item.entryKey),
+        delayMs,
+      );
       await _db.setPrefTyped<int>(
-          videoRemoteDelayAtPrefKey(item.entryKey), nowMs);
+        videoRemoteDelayAtPrefKey(item.entryKey),
+        nowMs,
+      );
     }
   }
 
@@ -666,7 +673,9 @@ class VideoBookRepository {
     int? delayMs,
   ) async {
     await _db.updateMediaCollectionSecondarySubtitleDelayMs(
-        collectionId, delayMs);
+      collectionId,
+      delayMs,
+    );
     await _stampCollectionMemberPrefs(
       collectionId,
       valueKeyOf: videoRemoteSecondaryDelayPrefKey,
@@ -1006,7 +1015,7 @@ class VideoBookRepository {
   /// [excludeBookUid] 非 null 时跳过该 book 自己的引用（删除时取「全库其余 book」的
   /// 引用集，避免被删 book 自己的路径反而把自己的资产护住不删）。
   Future<({Set<String> covers, Set<String> subtitles})>
-      collectReferencedAssetPaths({String? excludeBookUid}) async {
+  collectReferencedAssetPaths({String? excludeBookUid}) async {
     final List<VideoBookRow> all = await listAll();
     final Set<String> covers = <String>{};
     final Set<String> subtitles = <String>{};
@@ -1071,12 +1080,11 @@ class VideoBookRepository {
     required String bookUid,
     required String? subtitleSource,
     required List<AudioCue> cues,
-  }) =>
-      _db.transaction(() async {
-        await _db.replaceCuesForBook(
-          bookUid,
-          cues.map(AudioCue.toCompanion).toList(),
-        );
-        await _db.updateVideoBookSubtitleSource(bookUid, subtitleSource);
-      });
+  }) => _db.transaction(() async {
+    await _db.replaceCuesForBook(
+      bookUid,
+      cues.map(AudioCue.toCompanion).toList(),
+    );
+    await _db.updateVideoBookSubtitleSource(bookUid, subtitleSource);
+  });
 }

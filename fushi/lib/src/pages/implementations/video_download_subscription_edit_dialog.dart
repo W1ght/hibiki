@@ -41,14 +41,11 @@ Future<VideoDownloadSubscriptionEdit?> showVideoDownloadSubscriptionEditDialog({
   required BuildContext context,
   required VideoDownloadSubscriptionRow subscription,
   required List<MediaSourceRow> sources,
-}) =>
-    showAppDialog<VideoDownloadSubscriptionEdit>(
-      context: context,
-      builder: (BuildContext _) => _SubscriptionEditDialog(
-        subscription: subscription,
-        sources: sources,
-      ),
-    );
+}) => showAppDialog<VideoDownloadSubscriptionEdit>(
+  context: context,
+  builder: (BuildContext _) =>
+      _SubscriptionEditDialog(subscription: subscription, sources: sources),
+);
 
 class _SubscriptionEditDialog extends StatefulWidget {
   const _SubscriptionEditDialog({
@@ -65,14 +62,15 @@ class _SubscriptionEditDialog extends StatefulWidget {
 }
 
 class _SubscriptionEditDialogState extends State<_SubscriptionEditDialog> {
-  late final TextEditingController _queryController =
-      TextEditingController(text: widget.subscription.searchQuery);
+  late final TextEditingController _queryController = TextEditingController(
+    text: widget.subscription.searchQuery,
+  );
   late final TextEditingController _startAfterController =
       TextEditingController(
-    text: widget.subscription.startAfterEpisode?.toString() ?? '',
-  );
-  late VideoDownloadSubtitlePolicy _subtitlePolicy = VideoDownloadSubtitlePolicy
-          .values
+        text: widget.subscription.startAfterEpisode?.toString() ?? '',
+      );
+  late VideoDownloadSubtitlePolicy _subtitlePolicy =
+      VideoDownloadSubtitlePolicy.values
           .asNameMap()[widget.subscription.subtitlePolicy] ??
       VideoDownloadSubtitlePolicy.bestEffort;
 
@@ -119,8 +117,9 @@ class _SubscriptionEditDialogState extends State<_SubscriptionEditDialog> {
         startAfterEpisode: _parsedStartAfter.$2,
         subtitlePolicy: _subtitlePolicy,
         // 没动过就传 null（宿主据此不写这一列）。
-        targetSourceId:
-            _sourceId == widget.subscription.targetSourceId ? null : _sourceId,
+        targetSourceId: _sourceId == widget.subscription.targetSourceId
+            ? null
+            : _sourceId,
       ),
     );
   }
@@ -154,10 +153,7 @@ class _SubscriptionEditDialogState extends State<_SubscriptionEditDialog> {
                   runSpacing: 6,
                   children: <Widget>[
                     for (final String part in ruleParts)
-                      FushiTagChip(
-                        label: part,
-                        tone: FushiTagChipTone.surface,
-                      ),
+                      FushiTagChip(label: part, tone: FushiTagChipTone.surface),
                   ],
                 ),
               ],
@@ -172,9 +168,7 @@ class _SubscriptionEditDialogState extends State<_SubscriptionEditDialog> {
               TextField(
                 key: const ValueKey<String>('subscription-edit-query'),
                 controller: _queryController,
-                decoration: InputDecoration(
-                  labelText: t.video_jimaku_query,
-                ),
+                decoration: InputDecoration(labelText: t.video_jimaku_query),
                 maxLines: 1,
                 onChanged: (_) => setState(() {}),
               ),

@@ -87,8 +87,9 @@ class AsrTokenTable {
   factory AsrTokenTable.parse(String text) {
     final Map<int, String> byId = <int, String>{};
     for (final String raw in text.split('\n')) {
-      final String line =
-          raw.endsWith('\r') ? raw.substring(0, raw.length - 1) : raw;
+      final String line = raw.endsWith('\r')
+          ? raw.substring(0, raw.length - 1)
+          : raw;
       if (line.isEmpty) continue;
       final int tab = line.lastIndexOf('\t');
       final int sep = tab >= 0 ? tab : line.lastIndexOf(' ');
@@ -101,8 +102,10 @@ class AsrTokenTable {
     for (final int id in byId.keys) {
       if (id > maxId) maxId = id;
     }
-    final List<String> tokens =
-        List<String>.generate(maxId + 1, (int i) => byId[i] ?? '');
+    final List<String> tokens = List<String>.generate(
+      maxId + 1,
+      (int i) => byId[i] ?? '',
+    );
     int find(String name) => tokens.indexOf(name);
     return AsrTokenTable._(
       tokens,
@@ -186,10 +189,7 @@ class AsrTokenTable {
 /// VAD 切出的一段语音：相对**当前音频文件**的样本偏移 + 该段 16 kHz 单声道样本。
 @immutable
 class AsrSpeechSegment {
-  const AsrSpeechSegment({
-    required this.startSample,
-    required this.samples,
-  });
+  const AsrSpeechSegment({required this.startSample, required this.samples});
 
   final int startSample;
   final Float32List samples;
@@ -203,14 +203,14 @@ class AsrSpeechSegment {
 /// 一段语音的解码结果：字符 token 与各自的**段内**时间（毫秒，相对段起点）。
 @immutable
 class AsrDecodedSegment {
-  const AsrDecodedSegment({
-    required this.tokens,
-    required this.tokenOffsetsMs,
-  }) : assert(tokens.length == tokenOffsetsMs.length);
+  const AsrDecodedSegment({required this.tokens, required this.tokenOffsetsMs})
+    : assert(tokens.length == tokenOffsetsMs.length);
 
   // 注：const 构造里的 assert 不能对 const 列表取 length，故这里只能是 final。
   static final AsrDecodedSegment empty = AsrDecodedSegment(
-      tokens: const <String>[], tokenOffsetsMs: const <int>[]);
+    tokens: const <String>[],
+    tokenOffsetsMs: const <int>[],
+  );
 
   /// 由发射的 token id 与段内时间构造：经 [AsrTokenTable.materialize] 做词表
   /// 形态相关的拼接（`▁` / byte-fallback），两条解码路径共用。
@@ -291,12 +291,12 @@ class AsrTranscribedSegment {
   String get text => tokens.join();
 
   Map<String, Object?> toJson() => <String, Object?>{
-        'f': audioFileIndex,
-        's': startMs,
-        'e': endMs,
-        't': tokens,
-        'm': tokenTimesMs,
-      };
+    'f': audioFileIndex,
+    's': startMs,
+    'e': endMs,
+    't': tokens,
+    'm': tokenTimesMs,
+  };
 }
 
 /// 解码后的 PCM 块：16 kHz 单声道 float32（[-1, 1]），带相对文件起点的样本偏移。

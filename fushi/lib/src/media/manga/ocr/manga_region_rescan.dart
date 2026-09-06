@@ -21,9 +21,8 @@ import 'package:fushi/src/media/manga/ocr/manga_region_ocr.dart';
 
 /// 在裁图目录上启动引擎链。返回 [MangaOcrAutoStartResult.cancelled] 表示「调用方自己
 /// 放弃了」（页面已 dispose、用户在 Lens 告知里点了取消），不该再报错。
-typedef MangaRegionEngineStarter = Future<MangaOcrAutoStartResult> Function(
-  String imageDirPath,
-);
+typedef MangaRegionEngineStarter =
+    Future<MangaOcrAutoStartResult> Function(String imageDirPath);
 
 /// 一次区域重识别的终局。
 enum MangaRegionRescanStatus {
@@ -46,31 +45,31 @@ enum MangaRegionRescanStatus {
 /// 时非空；[previousPage] 是撤销用的替换前快照（喂给 `restoreMangaPage`）。
 class MangaRegionRescanOutcome {
   const MangaRegionRescanOutcome.unavailable(this.unavailableReason)
-      : status = MangaRegionRescanStatus.unavailable,
-        payload = null,
-        previousPage = null,
-        region = null;
+    : status = MangaRegionRescanStatus.unavailable,
+      payload = null,
+      previousPage = null,
+      region = null;
 
   const MangaRegionRescanOutcome.cancelled()
-      : status = MangaRegionRescanStatus.cancelled,
-        unavailableReason = null,
-        payload = null,
-        previousPage = null,
-        region = null;
+    : status = MangaRegionRescanStatus.cancelled,
+      unavailableReason = null,
+      payload = null,
+      previousPage = null,
+      region = null;
 
   const MangaRegionRescanOutcome.empty()
-      : status = MangaRegionRescanStatus.empty,
-        unavailableReason = null,
-        payload = null,
-        previousPage = null,
-        region = null;
+    : status = MangaRegionRescanStatus.empty,
+      unavailableReason = null,
+      payload = null,
+      previousPage = null,
+      region = null;
 
   const MangaRegionRescanOutcome.replaced({
     required MokuroPayload this.payload,
     required MokuroImage this.previousPage,
     required Rect this.region,
-  })  : status = MangaRegionRescanStatus.replaced,
-        unavailableReason = null;
+  }) : status = MangaRegionRescanStatus.replaced,
+       unavailableReason = null;
 
   final MangaRegionRescanStatus status;
 

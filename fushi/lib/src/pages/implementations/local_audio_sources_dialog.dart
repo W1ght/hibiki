@@ -28,8 +28,9 @@ class LocalAudioSourcesDialog extends StatefulWidget {
     List<LocalAudioSourcePref> saved,
     List<String> discovered,
   ) {
-    final Set<String> known =
-        saved.map((LocalAudioSourcePref s) => s.name).toSet();
+    final Set<String> known = saved
+        .map((LocalAudioSourcePref s) => s.name)
+        .toSet();
     return <LocalAudioSourcePref>[
       for (final LocalAudioSourcePref s in saved)
         if (discovered.contains(s.name)) s, // 保序、丢弃已消失的
@@ -56,15 +57,19 @@ class _LocalAudioSourcesDialogState extends State<LocalAudioSourcesDialog>
   Future<void> _load() async {
     final List<String> discovered = await widget.listSources();
     if (!mounted) return;
-    setState(() =>
-        _prefs = LocalAudioSourcesDialog.merge(widget.savedPrefs, discovered));
+    setState(
+      () =>
+          _prefs = LocalAudioSourcesDialog.merge(widget.savedPrefs, discovered),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final double maxHeight =
-        (MediaQuery.of(context).size.height * 0.55).clamp(128.0, 420.0);
+    final double maxHeight = (MediaQuery.of(context).size.height * 0.55).clamp(
+      128.0,
+      420.0,
+    );
 
     return FushiDialogFrame(
       maxWidth: 480,
@@ -128,10 +133,7 @@ class _LocalAudioSourcesDialogState extends State<LocalAudioSourcesDialog>
       return Center(
         child: Padding(
           padding: const EdgeInsets.all(24),
-          child: Text(
-            t.local_audio_no_sources,
-            textAlign: TextAlign.center,
-          ),
+          child: Text(t.local_audio_no_sources, textAlign: TextAlign.center),
         ),
       );
     }

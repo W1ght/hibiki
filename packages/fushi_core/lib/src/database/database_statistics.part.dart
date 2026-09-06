@@ -49,48 +49,51 @@ mixin _FushiDbStatistics
     required String dateKey,
     required int hour,
     required int deltaMs,
-  }) =>
-      _addHourlyReadingTimeRaw(
-        dateKey: dateKey,
-        hour: hour,
-        deltaMs: deltaMs,
-        format: '',
-      );
+  }) => _addHourlyReadingTimeRaw(
+    dateKey: dateKey,
+    hour: hour,
+    deltaMs: deltaMs,
+    format: '',
+  );
 
   Future<void> _addHourlyReadingTimeRaw({
     required String dateKey,
     required int hour,
     required int deltaMs,
     required String format,
-  }) =>
-      transaction(() async {
-        final existing = await (select(readingHourlyLogs)
-              ..where((t) =>
+  }) => transaction(() async {
+    final existing =
+        await (select(readingHourlyLogs)..where(
+              (t) =>
                   t.dateKey.equals(dateKey) &
                   t.hour.equals(hour) &
-                  t.format.equals(format)))
+                  t.format.equals(format),
+            ))
             .getSingleOrNull();
-        if (existing != null) {
-          await (update(readingHourlyLogs)
-                ..where((t) => t.id.equals(existing.id)))
-              .write(ReadingHourlyLogsCompanion(
-            readingTimeMs: Value(existing.readingTimeMs + deltaMs),
-          ));
-        } else {
-          await into(readingHourlyLogs).insert(
-            ReadingHourlyLogsCompanion.insert(
-              dateKey: dateKey,
-              hour: hour,
-              readingTimeMs: deltaMs,
-              format: Value(format),
-            ),
-          );
-        }
-      });
+    if (existing != null) {
+      await (update(
+        readingHourlyLogs,
+      )..where((t) => t.id.equals(existing.id))).write(
+        ReadingHourlyLogsCompanion(
+          readingTimeMs: Value(existing.readingTimeMs + deltaMs),
+        ),
+      );
+    } else {
+      await into(readingHourlyLogs).insert(
+        ReadingHourlyLogsCompanion.insert(
+          dateKey: dateKey,
+          hour: hour,
+          readingTimeMs: deltaMs,
+          format: Value(format),
+        ),
+      );
+    }
+  });
 
   Future<List<ReadingHourlyLogRow>> getHourlyLogsForDate(String dateKey) =>
-      (select(readingHourlyLogs)..where((t) => t.dateKey.equals(dateKey)))
-          .get();
+      (select(
+        readingHourlyLogs,
+      )..where((t) => t.dateKey.equals(dateKey))).get();
 
   /// 逐行读取全部阅读小时日志，供云聚合同步 materialize 快照（TODO-1056 phase B）。
   Future<List<ReadingHourlyLogRow>> getAllReadingHourlyLogs() =>
@@ -105,24 +108,22 @@ mixin _FushiDbStatistics
     required int hour,
     required int readingTimeMs,
     required String format,
-  }) =>
-      into(readingHourlyLogs).insert(
-        ReadingHourlyLogsCompanion.insert(
-          dateKey: dateKey,
-          hour: hour,
-          readingTimeMs: readingTimeMs,
-          format: Value(format),
-        ),
-        onConflict: DoUpdate(
-          (_) =>
-              ReadingHourlyLogsCompanion(readingTimeMs: Value(readingTimeMs)),
-          target: [
-            readingHourlyLogs.dateKey,
-            readingHourlyLogs.hour,
-            readingHourlyLogs.format,
-          ],
-        ),
-      );
+  }) => into(readingHourlyLogs).insert(
+    ReadingHourlyLogsCompanion.insert(
+      dateKey: dateKey,
+      hour: hour,
+      readingTimeMs: readingTimeMs,
+      format: Value(format),
+    ),
+    onConflict: DoUpdate(
+      (_) => ReadingHourlyLogsCompanion(readingTimeMs: Value(readingTimeMs)),
+      target: [
+        readingHourlyLogs.dateKey,
+        readingHourlyLogs.hour,
+        readingHourlyLogs.format,
+      ],
+    ),
+  );
 
   // ── video watch statistics ──────────────────────────────────────
   Future<List<VideoWatchStatisticRow>> getAllVideoWatchStatistics() =>
@@ -147,19 +148,18 @@ mixin _FushiDbStatistics
     String? mediaKey,
     int? durationMs,
     int? charsDelta,
-  }) =>
-      into(activityEvents).insert(
-        ActivityEventsCompanion.insert(
-          eventType: eventType,
-          mediaType: mediaType,
-          title: title,
-          dateKey: dateKey,
-          timestampMs: timestampMs,
-          mediaKey: Value(mediaKey),
-          durationMs: Value(durationMs),
-          charsDelta: Value(charsDelta),
-        ),
-      );
+  }) => into(activityEvents).insert(
+    ActivityEventsCompanion.insert(
+      eventType: eventType,
+      mediaType: mediaType,
+      title: title,
+      dateKey: dateKey,
+      timestampMs: timestampMs,
+      mediaKey: Value(mediaKey),
+      durationMs: Value(durationMs),
+      charsDelta: Value(charsDelta),
+    ),
+  );
 
   /// 取最近 [limit] 条活动事件，按精确时刻倒序（首页 Activity 面板消费）。
   /// [eventTypes] 非空时只取这些类别（如只看 'read'），null = 全部类别。
@@ -171,9 +171,9 @@ mixin _FushiDbStatistics
         select(activityEvents)
           ..orderBy([
             (t) => OrderingTerm(
-                  expression: t.timestampMs,
-                  mode: OrderingMode.desc,
-                ),
+              expression: t.timestampMs,
+              mode: OrderingMode.desc,
+            ),
           ])
           ..limit(limit);
     if (eventTypes != null && eventTypes.isNotEmpty) {
@@ -186,7 +186,7 @@ mixin _FushiDbStatistics
   /// 时长合计，`chars_delta` / `duration_ms` 为 null 记 0。在 SQL 侧先聚合，避免把
   /// 整表活动行拉进内存再分组。
   Future<List<(String dateKey, int charsDelta, int durationMs)>>
-      getActivityDailyTotals(String eventType) async {
+  getActivityDailyTotals(String eventType) async {
     final List<QueryRow> rows = await customSelect(
       'SELECT date_key, '
       'COALESCE(SUM(chars_delta), 0) AS chars_total, '
@@ -207,17 +207,14 @@ mixin _FushiDbStatistics
   /// 某日某类活动按 title 聚合（首页某天详情消费）：返回每个标题的字符/时长合计，
   /// 按时长（duration_ms 合计）降序。null 记 0。
   Future<List<(String title, int charsDelta, int durationMs)>>
-      getActivityTitleTotalsForDay(String eventType, String dateKey) async {
+  getActivityTitleTotalsForDay(String eventType, String dateKey) async {
     final List<QueryRow> rows = await customSelect(
       'SELECT title, '
       'COALESCE(SUM(chars_delta), 0) AS chars_total, '
       'COALESCE(SUM(duration_ms), 0) AS duration_total '
       'FROM activity_events WHERE event_type = ? AND date_key = ? '
       'GROUP BY title ORDER BY duration_total DESC',
-      variables: [
-        Variable.withString(eventType),
-        Variable.withString(dateKey),
-      ],
+      variables: [Variable.withString(eventType), Variable.withString(dateKey)],
     ).get();
     return [
       for (final QueryRow row in rows)
@@ -302,29 +299,27 @@ mixin _FushiDbStatistics
     required String mediaKind,
     required String mediaKey,
   }) =>
-      (select(studySegments)
-            ..where((t) =>
-                t.mediaKind.equals(mediaKind) & t.mediaKey.equals(mediaKey)))
+      (select(studySegments)..where(
+            (t) => t.mediaKind.equals(mediaKind) & t.mediaKey.equals(mediaKey),
+          ))
           .get();
 
   /// 同步 / 备份落地用：按 uid 批量 upsert，**只在对端 `updatedAt` 严格更新时覆盖**
   /// （LWW；同值重放 no-op、旧值不降级）。一次事务。
   Future<void> upsertStudySegmentsIfNewer(
     Iterable<StudySegmentsCompanion> rows,
-  ) =>
-      transaction(() async {
-        for (final StudySegmentsCompanion row in rows) {
-          await into(studySegments).insert(
-            row,
-            onConflict: DoUpdate(
-              (old) => row,
-              target: [studySegments.uid],
-              where: (old) =>
-                  old.updatedAt.isSmallerThanValue(row.updatedAt.value),
-            ),
-          );
-        }
-      });
+  ) => transaction(() async {
+    for (final StudySegmentsCompanion row in rows) {
+      await into(studySegments).insert(
+        row,
+        onConflict: DoUpdate(
+          (old) => row,
+          target: [studySegments.uid],
+          where: (old) => old.updatedAt.isSmallerThanValue(row.updatedAt.value),
+        ),
+      );
+    }
+  });
 
   // zeroStudySegmentsOnDays / deleteStatFactsOnDays 住 _FushiDbContentMisc（同
   // deleteStudySegmentsForMedia：legacy 删行在那层连带调用，mixin 只能向下看）。
@@ -335,32 +330,30 @@ mixin _FushiDbStatistics
     required String mediaKind,
     required String mediaKey,
     required int deletedAt,
-  }) =>
-      transaction(() async {
-        await into(studySegmentTombstones).insert(
-          StudySegmentTombstonesCompanion.insert(
-            mediaKind: mediaKind,
-            mediaKey: mediaKey,
-            deletedAt: deletedAt,
-          ),
-          onConflict: DoUpdate(
-            (old) => StudySegmentTombstonesCompanion(
-              deletedAt: Value(deletedAt),
-            ),
-            target: [
-              studySegmentTombstones.mediaKind,
-              studySegmentTombstones.mediaKey,
-            ],
-            where: (old) => old.deletedAt.isSmallerThanValue(deletedAt),
-          ),
-        );
-        await (delete(studySegments)
-              ..where((t) =>
-                  t.mediaKind.equals(mediaKind) &
-                  t.mediaKey.equals(mediaKey) &
-                  t.updatedAt.isSmallerThanValue(deletedAt)))
-            .go();
-      });
+  }) => transaction(() async {
+    await into(studySegmentTombstones).insert(
+      StudySegmentTombstonesCompanion.insert(
+        mediaKind: mediaKind,
+        mediaKey: mediaKey,
+        deletedAt: deletedAt,
+      ),
+      onConflict: DoUpdate(
+        (old) => StudySegmentTombstonesCompanion(deletedAt: Value(deletedAt)),
+        target: [
+          studySegmentTombstones.mediaKind,
+          studySegmentTombstones.mediaKey,
+        ],
+        where: (old) => old.deletedAt.isSmallerThanValue(deletedAt),
+      ),
+    );
+    await (delete(studySegments)..where(
+          (t) =>
+              t.mediaKind.equals(mediaKind) &
+              t.mediaKey.equals(mediaKey) &
+              t.updatedAt.isSmallerThanValue(deletedAt),
+        ))
+        .go();
+  });
 
   // deleteStudySegmentsForMedia / clearStudySegments 住 _FushiDbContentMisc
   // （legacy 的 delete*Statistics* / clearAll* 在那层连带调用，mixin 只能向下看）。
@@ -388,7 +381,7 @@ mixin _FushiDbStatistics
   /// galgame_sessions 按 (game_id, date_key) 的时长合计（秒）：喂统一事实面
   /// （日明细按游戏分节、热力图游戏时长）。
   Future<List<(String gameId, String dateKey, int totalSeconds)>>
-      getGalgameDailySecondsByGame() async {
+  getGalgameDailySecondsByGame() async {
     final List<QueryRow> rows = await customSelect(
       'SELECT game_id, date_key, COALESCE(SUM(duration_seconds), 0) AS s '
       'FROM galgame_sessions GROUP BY game_id, date_key',
@@ -409,14 +402,13 @@ mixin _FushiDbStatistics
     required String mediaKind,
     required String mediaKey,
     required int deletedAt,
-  }) =>
-      into(studySegmentTombstones).insertOnConflictUpdate(
-        StudySegmentTombstonesCompanion.insert(
-          mediaKind: mediaKind,
-          mediaKey: mediaKey,
-          deletedAt: deletedAt,
-        ),
-      );
+  }) => into(studySegmentTombstones).insertOnConflictUpdate(
+    StudySegmentTombstonesCompanion.insert(
+      mediaKind: mediaKind,
+      mediaKey: mediaKey,
+      deletedAt: deletedAt,
+    ),
+  );
 
   // ── galgames / galgame_sources / galgame_sessions (v55 游戏库) ──────
   //
@@ -442,49 +434,53 @@ mixin _FushiDbStatistics
   /// 删除一条游戏。`galgame_sources` / `galgame_sessions` 经 FK cascade 连带清理；
   /// 标签映射 v77 起是逻辑外键，同事务显式清。
   Future<int> deleteGalgame(String id) => transaction(() async {
-        await deleteTagAssignmentsForHost(TagHostKind.game, id);
-        return (delete(galgames)..where((t) => t.id.equals(id))).go();
-      });
+    await deleteTagAssignmentsForHost(TagHostKind.game, id);
+    return (delete(galgames)..where((t) => t.id.equals(id))).go();
+  });
 
   /// 只改游玩状态（0=未设置 / 1=想玩 / 2=玩过 / 3=在玩 / 4=搁置 / 5=弃坑）。
   Future<int> setGalgamePlayStatus(String id, int status) =>
-      (update(galgames)..where((t) => t.id.equals(id)))
-          .write(GalgamesCompanion(playStatus: Value<int>(status)));
+      (update(galgames)..where((t) => t.id.equals(id))).write(
+        GalgamesCompanion(playStatus: Value<int>(status)),
+      );
 
   /// 只改用户覆盖层 JSON（null = 清空全部自定义，展示回落到刮削值/本地默认名）。
   Future<int> setGalgameCustomData(String id, String? json) =>
-      (update(galgames)..where((t) => t.id.equals(id)))
-          .write(GalgamesCompanion(customDataJson: Value<String?>(json)));
+      (update(galgames)..where((t) => t.id.equals(id))).write(
+        GalgamesCompanion(customDataJson: Value<String?>(json)),
+      );
 
   /// 只改本地封面路径（null = 回落默认手柄图标）。
   Future<int> setGalgameCoverPath(String id, String? path) =>
-      (update(galgames)..where((t) => t.id.equals(id)))
-          .write(GalgamesCompanion(coverPath: Value<String?>(path)));
+      (update(galgames)..where((t) => t.id.equals(id))).write(
+        GalgamesCompanion(coverPath: Value<String?>(path)),
+      );
 
   /// 只改该游戏的窗口超分档位（'auto' / 'installed_only' / 'off'；空串 = 未设置，
   /// 解析层回落到关闭）。列非空，所以清空是写空串而不是写 null。
   Future<int> setGalgameUpscalingMode(String id, String modeKey) =>
-      (update(galgames)..where((t) => t.id.equals(id)))
-          .write(GalgamesCompanion(upscalingMode: Value<String>(modeKey)));
+      (update(galgames)..where((t) => t.id.equals(id))).write(
+        GalgamesCompanion(upscalingMode: Value<String>(modeKey)),
+      );
 
   /// 只改该游戏的日语区域（转区）档位（'auto' / 'on' / 'off'；空串 = 未设置，
   /// 解析层回落 auto）。列非空，所以清空是写空串而不是写 null。
   Future<int> setGalgameJapaneseLocaleMode(String id, String modeKey) =>
-      (update(galgames)..where((t) => t.id.equals(id)))
-          .write(GalgamesCompanion(japaneseLocaleMode: Value<String>(modeKey)));
+      (update(galgames)..where((t) => t.id.equals(id))).write(
+        GalgamesCompanion(japaneseLocaleMode: Value<String>(modeKey)),
+      );
 
   /// 刮削成功后回写主显示源与发行日（发行日上提成列是为了 SQL 排序）。
   Future<int> setGalgameScrapeResult(
     String id, {
     required String? primarySource,
     required String? releaseDate,
-  }) =>
-      (update(galgames)..where((t) => t.id.equals(id))).write(
-        GalgamesCompanion(
-          primarySource: Value<String?>(primarySource),
-          releaseDate: Value<String?>(releaseDate),
-        ),
-      );
+  }) => (update(galgames)..where((t) => t.id.equals(id))).write(
+    GalgamesCompanion(
+      primarySource: Value<String?>(primarySource),
+      releaseDate: Value<String?>(releaseDate),
+    ),
+  );
 
   /// 某游戏的全部元数据源快照。
   Future<List<GalgameSourceRow>> getGalgameSources(String gameId) =>
@@ -506,10 +502,9 @@ mixin _FushiDbStatistics
       into(galgameSources).insertOnConflictUpdate(entry);
 
   /// 移除某游戏的某个源（「换数据源」时清掉旧源）。
-  Future<int> deleteGalgameSource(String gameId, String source) =>
-      (delete(galgameSources)
-            ..where((t) => t.gameId.equals(gameId) & t.source.equals(source)))
-          .go();
+  Future<int> deleteGalgameSource(String gameId, String source) => (delete(
+    galgameSources,
+  )..where((t) => t.gameId.equals(gameId) & t.source.equals(source))).go();
 
   /// 落一条游玩会话。返回自增 id。
   Future<int> insertGalgameSession(GalgameSessionsCompanion entry) =>
@@ -544,17 +539,17 @@ mixin _FushiDbStatistics
   /// 游戏库（[galgames]）与首页活动时间线（[activityEvents]）是独立用户数据，
   /// 不能因统计页的「清空」操作被连带删除。
   Future<int> clearAllGalgameStatistics() => transaction(() async {
-        // v92：hook 字数段（chars-only）与游玩会话同属「游戏统计」，一起清。
-        await clearStudySegments(kActivityMediaGame);
-        return delete(galgameSessions).go();
-      });
+    // v92：hook 字数段（chars-only）与游玩会话同属「游戏统计」，一起清。
+    await clearStudySegments(kActivityMediaGame);
+    return delete(galgameSessions).go();
+  });
 
   /// 全库每个游戏的时长合计（秒）+ 会话次数 + 最后游玩毫秒戳。
   ///
   /// 库页排序（按总时长 / 按最后游玩）与详情页 KPI 都吃这一个查询，取代上游的
   /// `game_statistics` 投影表。
   Future<Map<String, (int totalSeconds, int sessionCount, int lastPlayedMs)>>
-      getGalgamePlayTotals() async {
+  getGalgamePlayTotals() async {
     final List<QueryRow> rows = await customSelect(
       'SELECT game_id, '
       'COALESCE(SUM(duration_seconds), 0) AS total_seconds, '
@@ -603,7 +598,7 @@ mixin _FushiDbStatistics
   /// 游戏统计页与首页汇总只认 [galgameSessions] 事实表；`activity_events` 是时间线，
   /// 不能反过来充当时长统计投影。返回全部历史日期，读取端按今日/周/月窗口筛选。
   Future<Map<String, (int totalSeconds, int sessionCount)>>
-      getAllGalgameDailyTotals() async {
+  getAllGalgameDailyTotals() async {
     final List<QueryRow> rows = await customSelect(
       'SELECT date_key, '
       'COALESCE(SUM(duration_seconds), 0) AS total_seconds, '
@@ -646,26 +641,28 @@ mixin _FushiDbStatistics
     StreamSubscription<void>? updatesSub;
     controller = StreamController<void>(
       onListen: () {
-        updatesSub = tableUpdates(
-          TableUpdateQuery
-              .onAllTables(<ResultSetImplementation<dynamic, dynamic>>[
-            activityEvents,
-            readingStatistics,
-            videoWatchStatistics,
-            // v92：学习统计唯一事实表；本地写入面只写它，首页热力图 / 今日 /
-            // 活动流全部从它派生。
-            studySegments,
-            galgameSessions,
-            videoBooks,
-            // 阅读位置是首页「继续」的数据源（MediaItem.position 与最近阅读时刻
-            // 均派生自它）。此前不在表集里：互联/云同步把更远的对端进度写回
-            // reader_positions 后，首页「继续」不刷新、要重启 app 才生效——
-            // 同步回灌与本机关书是同一张表的写入，理应同一条失效通道。
-            readerPositions,
-          ]),
-        ).listen((_) {
-          if (!controller.isClosed) controller.add(null);
-        });
+        updatesSub =
+            tableUpdates(
+              TableUpdateQuery.onAllTables(
+                <ResultSetImplementation<dynamic, dynamic>>[
+                  activityEvents,
+                  readingStatistics,
+                  videoWatchStatistics,
+                  // v92：学习统计唯一事实表；本地写入面只写它，首页热力图 / 今日 /
+                  // 活动流全部从它派生。
+                  studySegments,
+                  galgameSessions,
+                  videoBooks,
+                  // 阅读位置是首页「继续」的数据源（MediaItem.position 与最近阅读时刻
+                  // 均派生自它）。此前不在表集里：互联/云同步把更远的对端进度写回
+                  // reader_positions 后，首页「继续」不刷新、要重启 app 才生效——
+                  // 同步回灌与本机关书是同一张表的写入，理应同一条失效通道。
+                  readerPositions,
+                ],
+              ),
+            ).listen((_) {
+              if (!controller.isClosed) controller.add(null);
+            });
       },
       onCancel: () async {
         await updatesSub?.cancel();
@@ -690,37 +687,42 @@ mixin _FushiDbStatistics
         // 还会顺带毁掉按 bookUid 收历史 title 的删除墓碑考古）。塌缩只发生在 wire
         // 真知道更多时。
         final List<VideoWatchStatisticRow> rows =
-            await (select(videoWatchStatistics)
-                  ..where((t) =>
+            await (select(videoWatchStatistics)..where(
+                  (t) =>
                       t.title.equals(stat.title.value) &
-                      t.dateKey.equals(stat.dateKey.value)))
+                      t.dateKey.equals(stat.dateKey.value),
+                ))
                 .get();
         int sumChars = 0, sumMs = 0;
         for (final VideoWatchStatisticRow r in rows) {
           sumChars += r.subtitleChars;
           sumMs += r.watchTimeMs;
         }
-        final int wireChars =
-            stat.subtitleChars.present ? stat.subtitleChars.value : 0;
-        final int wireMs =
-            stat.watchTimeMs.present ? stat.watchTimeMs.value : 0;
+        final int wireChars = stat.subtitleChars.present
+            ? stat.subtitleChars.value
+            : 0;
+        final int wireMs = stat.watchTimeMs.present
+            ? stat.watchTimeMs.value
+            : 0;
         if (rows.isNotEmpty && wireChars <= sumChars && wireMs <= sumMs) {
           return;
         }
         // 塌缩时逐列取 max(wire, 本地和)（review4-2）：守卫是两列 AND，单列超出
         // 就整体塌缩——若照抄 wire 值，另一列在「物化→往返→应用」窗口里的本地
         // 新增（还没上过行）会被砍掉，违反 MAX-union 单调。lastModified 同取 max。
-        int maxLastModified =
-            stat.lastModified.present ? stat.lastModified.value : 0;
+        int maxLastModified = stat.lastModified.present
+            ? stat.lastModified.value
+            : 0;
         for (final VideoWatchStatisticRow r in rows) {
           if (r.lastModified > maxLastModified) {
             maxLastModified = r.lastModified;
           }
         }
-        await (delete(videoWatchStatistics)
-              ..where((t) =>
+        await (delete(videoWatchStatistics)..where(
+              (t) =>
                   t.title.equals(stat.title.value) &
-                  t.dateKey.equals(stat.dateKey.value)))
+                  t.dateKey.equals(stat.dateKey.value),
+            ))
             .go();
         await into(videoWatchStatistics).insert(
           VideoWatchStatisticsCompanion.insert(
@@ -748,18 +750,17 @@ mixin _FushiDbStatistics
     required String dateKey,
     required int hour,
     required int watchTimeMs,
-  }) =>
-      into(videoHourlyLogs).insert(
-        VideoHourlyLogsCompanion.insert(
-          dateKey: dateKey,
-          hour: hour,
-          watchTimeMs: watchTimeMs,
-        ),
-        onConflict: DoUpdate(
-          (_) => VideoHourlyLogsCompanion(watchTimeMs: Value(watchTimeMs)),
-          target: [videoHourlyLogs.dateKey, videoHourlyLogs.hour],
-        ),
-      );
+  }) => into(videoHourlyLogs).insert(
+    VideoHourlyLogsCompanion.insert(
+      dateKey: dateKey,
+      hour: hour,
+      watchTimeMs: watchTimeMs,
+    ),
+    onConflict: DoUpdate(
+      (_) => VideoHourlyLogsCompanion(watchTimeMs: Value(watchTimeMs)),
+      target: [videoHourlyLogs.dateKey, videoHourlyLogs.hour],
+    ),
+  );
 
   /// 仅当当前 completed_at 为 null 时写入（幂等首次完成；重看不覆盖）。
   Future<void> markVideoCompleted(String bookUid, DateTime completedAt) =>
@@ -778,37 +779,40 @@ mixin _FushiDbStatistics
     required String dateKey,
     String? bookKey,
     String title = '',
-  }) =>
-      transaction(() async {
-        final existing = await (select(favoriteWords)
-              ..where((t) =>
+  }) => transaction(() async {
+    final existing =
+        await (select(favoriteWords)..where(
+              (t) =>
                   t.expression.equals(expression) &
                   t.reading.equals(reading) &
-                  t.sourceType.equals(sourceType)))
+                  t.sourceType.equals(sourceType),
+            ))
             .getSingleOrNull();
-        if (existing != null) return false;
-        // 删除传播：重新收藏同 (expression,reading,sourceType) → 清其 sync 删除墓碑，
-        // 防「取消了又收藏、墓碑还在」被 aggregate 抑制或跨端误删（范式仿插书清碑）。
-        await clearSyncDeletionTombstone(SyncTombstoneKind.favoriteword.dbValue,
-            FushiDatabase.favoriteWordItemKey(expression, reading, sourceType));
-        // TODO-1252：[bookKey] / [title] 记「首次收藏归属书」——收藏时若在阅读器 / 视频
-        // 页有书上下文则传入，供 per-book/video tile 聚合；无书来源保持 null / ''（只进
-        // 汇总）。uniqueKey 仍 {expression, reading, sourceType} 全局去重，归属标签是新增
-        // 旁路信息，不改去重 / 汇总 / 同步语义。
-        await into(favoriteWords).insert(
-          FavoriteWordsCompanion.insert(
-            expression: expression,
-            reading: Value(reading),
-            glossary: Value(glossary),
-            sourceType: sourceType,
-            bookKey: Value(bookKey),
-            title: Value(title),
-            dateKey: dateKey,
-            createdAt: DateTime.now().millisecondsSinceEpoch,
-          ),
-        );
-        return true;
-      });
+    if (existing != null) return false;
+    // 删除传播：重新收藏同 (expression,reading,sourceType) → 清其 sync 删除墓碑，
+    // 防「取消了又收藏、墓碑还在」被 aggregate 抑制或跨端误删（范式仿插书清碑）。
+    await clearSyncDeletionTombstone(
+      SyncTombstoneKind.favoriteword.dbValue,
+      FushiDatabase.favoriteWordItemKey(expression, reading, sourceType),
+    );
+    // TODO-1252：[bookKey] / [title] 记「首次收藏归属书」——收藏时若在阅读器 / 视频
+    // 页有书上下文则传入，供 per-book/video tile 聚合；无书来源保持 null / ''（只进
+    // 汇总）。uniqueKey 仍 {expression, reading, sourceType} 全局去重，归属标签是新增
+    // 旁路信息，不改去重 / 汇总 / 同步语义。
+    await into(favoriteWords).insert(
+      FavoriteWordsCompanion.insert(
+        expression: expression,
+        reading: Value(reading),
+        glossary: Value(glossary),
+        sourceType: sourceType,
+        bookKey: Value(bookKey),
+        title: Value(title),
+        dateKey: dateKey,
+        createdAt: DateTime.now().millisecondsSinceEpoch,
+      ),
+    );
+    return true;
+  });
 
   /// 取消收藏（按 (expression, reading, sourceType) 删除）。返回删除的行数。
   ///
@@ -823,17 +827,20 @@ mixin _FushiDbStatistics
     required String sourceType,
     bool propagateDeletion = true,
   }) async {
-    final int removed = await (delete(favoriteWords)
-          ..where((t) =>
-              t.expression.equals(expression) &
-              t.reading.equals(reading) &
-              t.sourceType.equals(sourceType)))
-        .go();
+    final int removed =
+        await (delete(favoriteWords)..where(
+              (t) =>
+                  t.expression.equals(expression) &
+                  t.reading.equals(reading) &
+                  t.sourceType.equals(sourceType),
+            ))
+            .go();
     if (removed > 0 && propagateDeletion) {
       await writeSyncDeletionTombstone(
-          SyncTombstoneKind.favoriteword.dbValue,
-          FushiDatabase.favoriteWordItemKey(expression, reading, sourceType),
-          DateTime.now().millisecondsSinceEpoch);
+        SyncTombstoneKind.favoriteword.dbValue,
+        FushiDatabase.favoriteWordItemKey(expression, reading, sourceType),
+        DateTime.now().millisecondsSinceEpoch,
+      );
     }
     return removed;
   }
@@ -843,25 +850,28 @@ mixin _FushiDbStatistics
     required String reading,
     required String sourceType,
   }) async {
-    final row = await (select(favoriteWords)
-          ..where((t) =>
-              t.expression.equals(expression) &
-              t.reading.equals(reading) &
-              t.sourceType.equals(sourceType)))
-        .getSingleOrNull();
+    final row =
+        await (select(favoriteWords)..where(
+              (t) =>
+                  t.expression.equals(expression) &
+                  t.reading.equals(reading) &
+                  t.sourceType.equals(sourceType),
+            ))
+            .getSingleOrNull();
     return row != null;
   }
 
   /// 取某来源（'book' / 'video'）的全部收藏行，供统计页按 dateKey 分桶计数。
   Future<List<FavoriteWordRow>> getFavoriteWordsBySource(String sourceType) =>
-      (select(favoriteWords)..where((t) => t.sourceType.equals(sourceType)))
-          .get();
+      (select(
+        favoriteWords,
+      )..where((t) => t.sourceType.equals(sourceType))).get();
 
   /// 取全部收藏词，按 createdAt 倒序（最近在前），供收藏夹导出（TODO-829）。
   /// 纯 select，不动 schema。
-  Future<List<FavoriteWordRow>> getAllFavoriteWords() =>
-      (select(favoriteWords)..orderBy([(t) => OrderingTerm.desc(t.createdAt)]))
-          .get();
+  Future<List<FavoriteWordRow>> getAllFavoriteWords() => (select(
+    favoriteWords,
+  )..orderBy([(t) => OrderingTerm.desc(t.createdAt)])).get();
 
   // ── mining statistics ───────────────────────────────────────────
   /// 制卡成功计数 +[delta]：累加到 (sourceType, dateKey) 现有计数。
@@ -869,28 +879,29 @@ mixin _FushiDbStatistics
     required String sourceType,
     required String dateKey,
     int delta = 1,
-  }) =>
-      transaction(() async {
-        final existing = await (select(miningStatistics)
-              ..where((t) =>
-                  t.sourceType.equals(sourceType) & t.dateKey.equals(dateKey)))
+  }) => transaction(() async {
+    final existing =
+        await (select(miningStatistics)..where(
+              (t) =>
+                  t.sourceType.equals(sourceType) & t.dateKey.equals(dateKey),
+            ))
             .getSingleOrNull();
-        if (existing != null) {
-          await (update(miningStatistics)
-                ..where((t) => t.id.equals(existing.id)))
-              .write(MiningStatisticsCompanion(
-            count: Value(existing.count + delta),
-          ));
-        } else {
-          await into(miningStatistics).insert(
-            MiningStatisticsCompanion.insert(
-              sourceType: sourceType,
-              dateKey: dateKey,
-              count: Value(delta),
-            ),
-          );
-        }
-      });
+    if (existing != null) {
+      await (update(
+        miningStatistics,
+      )..where((t) => t.id.equals(existing.id))).write(
+        MiningStatisticsCompanion(count: Value(existing.count + delta)),
+      );
+    } else {
+      await into(miningStatistics).insert(
+        MiningStatisticsCompanion.insert(
+          sourceType: sourceType,
+          dateKey: dateKey,
+          count: Value(delta),
+        ),
+      );
+    }
+  });
 
   /// MAX-union semantics: sets the (sourceType, dateKey) bucket to
   /// `max(existing, count)` rather than accumulating. Use this for backup-merge
@@ -902,34 +913,35 @@ mixin _FushiDbStatistics
     required String sourceType,
     required String dateKey,
     required int count,
-  }) =>
-      transaction(() async {
-        final existing = await (select(miningStatistics)
-              ..where((t) =>
-                  t.sourceType.equals(sourceType) & t.dateKey.equals(dateKey)))
+  }) => transaction(() async {
+    final existing =
+        await (select(miningStatistics)..where(
+              (t) =>
+                  t.sourceType.equals(sourceType) & t.dateKey.equals(dateKey),
+            ))
             .getSingleOrNull();
-        if (existing != null) {
-          if (count > existing.count) {
-            await (update(miningStatistics)
-                  ..where((t) => t.id.equals(existing.id)))
-                .write(MiningStatisticsCompanion(count: Value(count)));
-          }
-        } else {
-          await into(miningStatistics).insert(
-            MiningStatisticsCompanion.insert(
-              sourceType: sourceType,
-              dateKey: dateKey,
-              count: Value(count),
-            ),
-          );
-        }
-      });
+    if (existing != null) {
+      if (count > existing.count) {
+        await (update(miningStatistics)..where((t) => t.id.equals(existing.id)))
+            .write(MiningStatisticsCompanion(count: Value(count)));
+      }
+    } else {
+      await into(miningStatistics).insert(
+        MiningStatisticsCompanion.insert(
+          sourceType: sourceType,
+          dateKey: dateKey,
+          count: Value(count),
+        ),
+      );
+    }
+  });
 
   /// 取某来源（'book' / 'video'）的全部制卡计数行，供统计页按 dateKey 分桶。
   Future<List<MiningStatisticRow>> getMiningStatisticsBySource(
-          String sourceType) =>
-      (select(miningStatistics)..where((t) => t.sourceType.equals(sourceType)))
-          .get();
+    String sourceType,
+  ) => (select(
+    miningStatistics,
+  )..where((t) => t.sourceType.equals(sourceType))).get();
 
   /// 逐行读取全部制卡计数行（所有来源），供云聚合同步 materialize 快照
   /// （TODO-1056 phase B）。写回用 [setMiningCount]（MAX 语义、幂等）。
@@ -946,42 +958,45 @@ mixin _FushiDbStatistics
     required String sourceType,
     required String dateKey,
     int delta = 1,
-  }) =>
-      transaction(() async {
-        // v76：匹配键含身份（null 归一 ''）——同名不同视频各记各行，不再互串。
-        // 遗留 '' 行与新带身份行并存时各自独立累加，读取端按身份分组归并
-        // （v39 的 NULL 遗留行共存语义，见 stat_shared）。
-        final String identity = bookKey ?? '';
-        final existing = await (select(lookupMiningCounters)
-              ..where((t) =>
+  }) => transaction(() async {
+    // v76：匹配键含身份（null 归一 ''）——同名不同视频各记各行，不再互串。
+    // 遗留 '' 行与新带身份行并存时各自独立累加，读取端按身份分组归并
+    // （v39 的 NULL 遗留行共存语义，见 stat_shared）。
+    final String identity = bookKey ?? '';
+    final existing =
+        await (select(lookupMiningCounters)..where(
+              (t) =>
                   t.bookKey.equals(identity) &
                   t.title.equals(title) &
                   t.sourceType.equals(sourceType) &
-                  t.dateKey.equals(dateKey)))
+                  t.dateKey.equals(dateKey),
+            ))
             .getSingleOrNull();
-        if (existing != null) {
-          await (update(lookupMiningCounters)
-                ..where((t) => t.id.equals(existing.id)))
-              .write(LookupMiningCountersCompanion(
-            lookupCount: Value(existing.lookupCount + delta),
-          ));
-        } else {
-          await into(lookupMiningCounters).insert(
-            LookupMiningCountersCompanion.insert(
-              bookKey: Value(identity),
-              title: Value(title),
-              sourceType: sourceType,
-              dateKey: dateKey,
-              lookupCount: Value(delta),
-            ),
-          );
-          // 重新查该书/视频的词 = 新活动：清其统计删除墓碑（无书查词 title='' 不立碑
-          // 也无碑可清，跳过；TODO-1204 后续）。
-          if (title.isNotEmpty) {
-            await clearStatisticsTombstone(title, sourceType);
-          }
-        }
-      });
+    if (existing != null) {
+      await (update(
+        lookupMiningCounters,
+      )..where((t) => t.id.equals(existing.id))).write(
+        LookupMiningCountersCompanion(
+          lookupCount: Value(existing.lookupCount + delta),
+        ),
+      );
+    } else {
+      await into(lookupMiningCounters).insert(
+        LookupMiningCountersCompanion.insert(
+          bookKey: Value(identity),
+          title: Value(title),
+          sourceType: sourceType,
+          dateKey: dateKey,
+          lookupCount: Value(delta),
+        ),
+      );
+      // 重新查该书/视频的词 = 新活动：清其统计删除墓碑（无书查词 title='' 不立碑
+      // 也无碑可清，跳过；TODO-1204 后续）。
+      if (title.isNotEmpty) {
+        await clearStatisticsTombstone(title, sourceType);
+      }
+    }
+  });
 
   /// 制卡计数 +[delta]（per-book）：累加到 (title, sourceType, dateKey) 现有行的
   /// [mineCount]。与全局 [addMiningCount] **并行**写（后者不动），只算成功制卡。
@@ -991,39 +1006,42 @@ mixin _FushiDbStatistics
     required String sourceType,
     required String dateKey,
     int delta = 1,
-  }) =>
-      transaction(() async {
-        // v76：匹配键含身份（同 [addLookupCount]）。
-        final String identity = bookKey ?? '';
-        final existing = await (select(lookupMiningCounters)
-              ..where((t) =>
+  }) => transaction(() async {
+    // v76：匹配键含身份（同 [addLookupCount]）。
+    final String identity = bookKey ?? '';
+    final existing =
+        await (select(lookupMiningCounters)..where(
+              (t) =>
                   t.bookKey.equals(identity) &
                   t.title.equals(title) &
                   t.sourceType.equals(sourceType) &
-                  t.dateKey.equals(dateKey)))
+                  t.dateKey.equals(dateKey),
+            ))
             .getSingleOrNull();
-        if (existing != null) {
-          await (update(lookupMiningCounters)
-                ..where((t) => t.id.equals(existing.id)))
-              .write(LookupMiningCountersCompanion(
-            mineCount: Value(existing.mineCount + delta),
-          ));
-        } else {
-          await into(lookupMiningCounters).insert(
-            LookupMiningCountersCompanion.insert(
-              bookKey: Value(identity),
-              title: Value(title),
-              sourceType: sourceType,
-              dateKey: dateKey,
-              mineCount: Value(delta),
-            ),
-          );
-          // 重新在该书/视频制卡 = 新活动：清其统计删除墓碑（TODO-1204 后续）。
-          if (title.isNotEmpty) {
-            await clearStatisticsTombstone(title, sourceType);
-          }
-        }
-      });
+    if (existing != null) {
+      await (update(
+        lookupMiningCounters,
+      )..where((t) => t.id.equals(existing.id))).write(
+        LookupMiningCountersCompanion(
+          mineCount: Value(existing.mineCount + delta),
+        ),
+      );
+    } else {
+      await into(lookupMiningCounters).insert(
+        LookupMiningCountersCompanion.insert(
+          bookKey: Value(identity),
+          title: Value(title),
+          sourceType: sourceType,
+          dateKey: dateKey,
+          mineCount: Value(delta),
+        ),
+      );
+      // 重新在该书/视频制卡 = 新活动：清其统计删除墓碑（TODO-1204 后续）。
+      if (title.isNotEmpty) {
+        await clearStatisticsTombstone(title, sourceType);
+      }
+    }
+  });
 
   /// P4 写侧收敛（2026-08 数据层重构）：一次成功制卡的**唯一记账入口**。
   ///
@@ -1042,17 +1060,16 @@ mixin _FushiDbStatistics
     String title = '',
     required String sourceType,
     required DateTime at,
-  }) =>
-      transaction(() async {
-        final String dateKey = _FushiDbStatistics.statDateKeyOf(at);
-        await addMiningCount(sourceType: sourceType, dateKey: dateKey);
-        await addMineCountPerBook(
-          bookKey: bookKey,
-          title: title,
-          sourceType: sourceType,
-          dateKey: dateKey,
-        );
-      });
+  }) => transaction(() async {
+    final String dateKey = _FushiDbStatistics.statDateKeyOf(at);
+    await addMiningCount(sourceType: sourceType, dateKey: dateKey);
+    await addMineCountPerBook(
+      bookKey: bookKey,
+      title: title,
+      sourceType: sourceType,
+      dateKey: dateKey,
+    );
+  });
 
   /// MAX-union 语义（非累加）：把 (title, sourceType, dateKey) 行的 [lookupCount]
   /// 设为 `max(existing, count)`。为将来备份合并 / 云聚合幂等重导留口（本期 sync
@@ -1063,72 +1080,74 @@ mixin _FushiDbStatistics
     required String sourceType,
     required String dateKey,
     required int count,
-  }) =>
-      transaction(() async {
-        // v76：wire 协议冻结在 title 粒度（LookupMiningRecord 的合并键不含
-        // bookKey），本地行 v76 起 per-identity 可多行。分支（review-5 /
-        // review3-4 后的现行为，注意与 v76 前**不**逐字节一致）：
-        //  - 无行：落单行（带 wire metadata 身份，peer-only 桶保住身份）；
-        //  - wire 值 ≤ 本地和：完全 no-op（不塌缩，防 sync 自回声周期性抹掉
-        //    per-identity 行）；
-        //  - 单行且身份与 wire 一致：行内抬升，身份保留；
-        //  - 其余（身份错配 / 多行）：塌成单一 '' 权威行——归因不可判，''
-        //    如实标未归因。启用同步的库该日行退化回 title 粒度，与视频统计
-        //    同为已知限制。
-        final rows = await (select(lookupMiningCounters)
-              ..where((t) =>
+  }) => transaction(() async {
+    // v76：wire 协议冻结在 title 粒度（LookupMiningRecord 的合并键不含
+    // bookKey），本地行 v76 起 per-identity 可多行。分支（review-5 /
+    // review3-4 后的现行为，注意与 v76 前**不**逐字节一致）：
+    //  - 无行：落单行（带 wire metadata 身份，peer-only 桶保住身份）；
+    //  - wire 值 ≤ 本地和：完全 no-op（不塌缩，防 sync 自回声周期性抹掉
+    //    per-identity 行）；
+    //  - 单行且身份与 wire 一致：行内抬升，身份保留；
+    //  - 其余（身份错配 / 多行）：塌成单一 '' 权威行——归因不可判，''
+    //    如实标未归因。启用同步的库该日行退化回 title 粒度，与视频统计
+    //    同为已知限制。
+    final rows =
+        await (select(lookupMiningCounters)..where(
+              (t) =>
                   t.title.equals(title) &
                   t.sourceType.equals(sourceType) &
-                  t.dateKey.equals(dateKey)))
+                  t.dateKey.equals(dateKey),
+            ))
             .get();
-        if (rows.isEmpty) {
-          await into(lookupMiningCounters).insert(
-            LookupMiningCountersCompanion.insert(
-              bookKey: Value(bookKey ?? ''),
-              title: Value(title),
-              sourceType: sourceType,
-              dateKey: dateKey,
-              lookupCount: Value(count),
-            ),
-          );
-          return;
-        }
-        int sumLookup = 0, sumMine = 0;
-        for (final LookupMiningCounterRow r in rows) {
-          sumLookup += r.lookupCount;
-          sumMine += r.mineCount;
-        }
-        // wire 值不超过本地和：MAX-union 无可抬升，**完全 no-op**——否则每轮
-        // sync 应用都会把 per-identity 行塌回 '' 行，v76 的分身份修复被周期性
-        // 回退、tile 数字震荡（review-5）。塌缩只发生在 wire 真的知道更多时。
-        if (count <= sumLookup) return;
-        // 单行且身份与 wire 一致（review3-4）：行内抬升、身份保留。身份错配
-        // （如本地只有 uid-2 行、wire 是混桶 null）不许行内抬——那会把别的视频
-        // 的查词记到 uid-2 头上；走下面的 '' 塌缩，如实标未归因。
-        final String wireIdentity = bookKey ?? '';
-        if (rows.length == 1 && rows.single.bookKey == wireIdentity) {
-          await (update(lookupMiningCounters)
-                ..where((t) => t.id.equals(rows.single.id)))
-              .write(LookupMiningCountersCompanion(lookupCount: Value(count)));
-          return;
-        }
-        await (delete(lookupMiningCounters)
-              ..where((t) =>
-                  t.title.equals(title) &
-                  t.sourceType.equals(sourceType) &
-                  t.dateKey.equals(dateKey)))
-            .go();
-        await into(lookupMiningCounters).insert(
-          LookupMiningCountersCompanion.insert(
-            bookKey: const Value(''),
-            title: Value(title),
-            sourceType: sourceType,
-            dateKey: dateKey,
-            lookupCount: Value(count),
-            mineCount: Value(sumMine),
-          ),
-        );
-      });
+    if (rows.isEmpty) {
+      await into(lookupMiningCounters).insert(
+        LookupMiningCountersCompanion.insert(
+          bookKey: Value(bookKey ?? ''),
+          title: Value(title),
+          sourceType: sourceType,
+          dateKey: dateKey,
+          lookupCount: Value(count),
+        ),
+      );
+      return;
+    }
+    int sumLookup = 0, sumMine = 0;
+    for (final LookupMiningCounterRow r in rows) {
+      sumLookup += r.lookupCount;
+      sumMine += r.mineCount;
+    }
+    // wire 值不超过本地和：MAX-union 无可抬升，**完全 no-op**——否则每轮
+    // sync 应用都会把 per-identity 行塌回 '' 行，v76 的分身份修复被周期性
+    // 回退、tile 数字震荡（review-5）。塌缩只发生在 wire 真的知道更多时。
+    if (count <= sumLookup) return;
+    // 单行且身份与 wire 一致（review3-4）：行内抬升、身份保留。身份错配
+    // （如本地只有 uid-2 行、wire 是混桶 null）不许行内抬——那会把别的视频
+    // 的查词记到 uid-2 头上；走下面的 '' 塌缩，如实标未归因。
+    final String wireIdentity = bookKey ?? '';
+    if (rows.length == 1 && rows.single.bookKey == wireIdentity) {
+      await (update(lookupMiningCounters)
+            ..where((t) => t.id.equals(rows.single.id)))
+          .write(LookupMiningCountersCompanion(lookupCount: Value(count)));
+      return;
+    }
+    await (delete(lookupMiningCounters)..where(
+          (t) =>
+              t.title.equals(title) &
+              t.sourceType.equals(sourceType) &
+              t.dateKey.equals(dateKey),
+        ))
+        .go();
+    await into(lookupMiningCounters).insert(
+      LookupMiningCountersCompanion.insert(
+        bookKey: const Value(''),
+        title: Value(title),
+        sourceType: sourceType,
+        dateKey: dateKey,
+        lookupCount: Value(count),
+        mineCount: Value(sumMine),
+      ),
+    );
+  });
 
   /// MAX-union 语义（非累加）：把 (title, sourceType, dateKey) 行的 [mineCount]
   /// 设为 `max(existing, count)`。备份合并 / 云聚合幂等留口（本期 sync 不接）。
@@ -1138,66 +1157,68 @@ mixin _FushiDbStatistics
     required String sourceType,
     required String dateKey,
     required int count,
-  }) =>
-      transaction(() async {
-        // v76：三分支与 [setLookupCount] 对称，注释见彼处。
-        final rows = await (select(lookupMiningCounters)
-              ..where((t) =>
+  }) => transaction(() async {
+    // v76：三分支与 [setLookupCount] 对称，注释见彼处。
+    final rows =
+        await (select(lookupMiningCounters)..where(
+              (t) =>
                   t.title.equals(title) &
                   t.sourceType.equals(sourceType) &
-                  t.dateKey.equals(dateKey)))
+                  t.dateKey.equals(dateKey),
+            ))
             .get();
-        if (rows.isEmpty) {
-          await into(lookupMiningCounters).insert(
-            LookupMiningCountersCompanion.insert(
-              bookKey: Value(bookKey ?? ''),
-              title: Value(title),
-              sourceType: sourceType,
-              dateKey: dateKey,
-              mineCount: Value(count),
-            ),
-          );
-          return;
-        }
-        int sumLookup = 0, sumMine = 0;
-        for (final LookupMiningCounterRow r in rows) {
-          sumLookup += r.lookupCount;
-          sumMine += r.mineCount;
-        }
-        // 与 [setLookupCount] 三分支完全对称（review-5 / review3-4 注释见彼处）。
-        if (count <= sumMine) return;
-        final String wireIdentity = bookKey ?? '';
-        if (rows.length == 1 && rows.single.bookKey == wireIdentity) {
-          await (update(lookupMiningCounters)
-                ..where((t) => t.id.equals(rows.single.id)))
-              .write(LookupMiningCountersCompanion(mineCount: Value(count)));
-          return;
-        }
-        await (delete(lookupMiningCounters)
-              ..where((t) =>
-                  t.title.equals(title) &
-                  t.sourceType.equals(sourceType) &
-                  t.dateKey.equals(dateKey)))
-            .go();
-        await into(lookupMiningCounters).insert(
-          LookupMiningCountersCompanion.insert(
-            bookKey: const Value(''),
-            title: Value(title),
-            sourceType: sourceType,
-            dateKey: dateKey,
-            lookupCount: Value(sumLookup),
-            mineCount: Value(count),
-          ),
-        );
-      });
+    if (rows.isEmpty) {
+      await into(lookupMiningCounters).insert(
+        LookupMiningCountersCompanion.insert(
+          bookKey: Value(bookKey ?? ''),
+          title: Value(title),
+          sourceType: sourceType,
+          dateKey: dateKey,
+          mineCount: Value(count),
+        ),
+      );
+      return;
+    }
+    int sumLookup = 0, sumMine = 0;
+    for (final LookupMiningCounterRow r in rows) {
+      sumLookup += r.lookupCount;
+      sumMine += r.mineCount;
+    }
+    // 与 [setLookupCount] 三分支完全对称（review-5 / review3-4 注释见彼处）。
+    if (count <= sumMine) return;
+    final String wireIdentity = bookKey ?? '';
+    if (rows.length == 1 && rows.single.bookKey == wireIdentity) {
+      await (update(lookupMiningCounters)
+            ..where((t) => t.id.equals(rows.single.id)))
+          .write(LookupMiningCountersCompanion(mineCount: Value(count)));
+      return;
+    }
+    await (delete(lookupMiningCounters)..where(
+          (t) =>
+              t.title.equals(title) &
+              t.sourceType.equals(sourceType) &
+              t.dateKey.equals(dateKey),
+        ))
+        .go();
+    await into(lookupMiningCounters).insert(
+      LookupMiningCountersCompanion.insert(
+        bookKey: const Value(''),
+        title: Value(title),
+        sourceType: sourceType,
+        dateKey: dateKey,
+        lookupCount: Value(sumLookup),
+        mineCount: Value(count),
+      ),
+    );
+  });
 
   /// 取某来源（'book' / 'video'）的全部查词/制卡计数行，供统计页汇总 + per-book
   /// tile 按 title 聚合。
   Future<List<LookupMiningCounterRow>> getLookupMiningCountersBySource(
-          String sourceType) =>
-      (select(lookupMiningCounters)
-            ..where((t) => t.sourceType.equals(sourceType)))
-          .get();
+    String sourceType,
+  ) => (select(
+    lookupMiningCounters,
+  )..where((t) => t.sourceType.equals(sourceType))).get();
 
   /// 逐行读取全部查词/制卡计数行（所有来源），供将来云聚合同步 materialize 快照。
   /// 写回用 [setLookupCount] / [setMineCountPerBook]（MAX 语义、幂等）。
@@ -1223,33 +1244,32 @@ mixin _FushiDbStatistics
     int? normCharOffset,
     int? normCharLength,
     int? noteId,
-  }) =>
-      transaction(() async {
-        await into(minedSentences).insert(
-          MinedSentencesCompanion.insert(
-            source: source,
-            dateKey: dateKey,
-            expression: Value(expression),
-            reading: Value(reading),
-            glossary: Value(glossary),
-            sentence: Value(sentence),
-            documentTitle: Value(documentTitle),
-            chapterLabel: Value(chapterLabel),
-            bookKey: Value(bookKey),
-            sectionIndex: Value(sectionIndex),
-            normCharOffset: Value(normCharOffset),
-            normCharLength: Value(normCharLength),
-            noteId: Value(noteId),
-            createdAt: DateTime.now().millisecondsSinceEpoch,
-          ),
-        );
-        await _trimMinedSentences();
-      });
+  }) => transaction(() async {
+    await into(minedSentences).insert(
+      MinedSentencesCompanion.insert(
+        source: source,
+        dateKey: dateKey,
+        expression: Value(expression),
+        reading: Value(reading),
+        glossary: Value(glossary),
+        sentence: Value(sentence),
+        documentTitle: Value(documentTitle),
+        chapterLabel: Value(chapterLabel),
+        bookKey: Value(bookKey),
+        sectionIndex: Value(sectionIndex),
+        normCharOffset: Value(normCharOffset),
+        normCharLength: Value(normCharLength),
+        noteId: Value(noteId),
+        createdAt: DateTime.now().millisecondsSinceEpoch,
+      ),
+    );
+    await _trimMinedSentences();
+  });
 
   /// 取全部制卡历史，按 createdAt 倒序（最近在前），供收藏夹页展示。
-  Future<List<MinedSentenceRow>> getAllMinedSentences() =>
-      (select(minedSentences)..orderBy([(t) => OrderingTerm.desc(t.createdAt)]))
-          .get();
+  Future<List<MinedSentenceRow>> getAllMinedSentences() => (select(
+    minedSentences,
+  )..orderBy([(t) => OrderingTerm.desc(t.createdAt)])).get();
 
   /// 删除一条制卡历史（按 id）。返回删除的行数。
   Future<int> removeMinedSentence(int id) =>
@@ -1267,10 +1287,11 @@ mixin _FushiDbStatistics
     final int total = await minedSentences.count().getSingle();
     final int excess = total - FushiDatabase.kMinedSentenceHistoryLimit;
     if (excess <= 0) return;
-    final List<MinedSentenceRow> oldest = await (select(minedSentences)
-          ..orderBy([(t) => OrderingTerm.asc(t.id)])
-          ..limit(excess))
-        .get();
+    final List<MinedSentenceRow> oldest =
+        await (select(minedSentences)
+              ..orderBy([(t) => OrderingTerm.asc(t.id)])
+              ..limit(excess))
+            .get();
     final List<int> ids = oldest.map((r) => r.id).toList(growable: false);
     if (ids.isEmpty) return;
     await (delete(minedSentences)..where((t) => t.id.isIn(ids))).go();

@@ -33,8 +33,9 @@ Future<File> _generateChapteredMkv() async {
       : Directory('$testRoot${Platform.pathSeparator}fixtures');
   await root.create(recursive: true);
 
-  final File metadata =
-      File('${root.path}${Platform.pathSeparator}chapters.ffmetadata');
+  final File metadata = File(
+    '${root.path}${Platform.pathSeparator}chapters.ffmetadata',
+  );
   await metadata.writeAsString('''
 ;FFMETADATA1
 [CHAPTER]
@@ -55,44 +56,43 @@ title=Credits
 ''');
 
   final File video = File('${root.path}${Platform.pathSeparator}chaptered.mkv');
-  final FfmpegRunResult result = await resolveFfmpegBackend().run(
-    <String>[
-      '-hide_banner',
-      '-y',
-      '-f',
-      'lavfi',
-      '-i',
-      'testsrc=size=320x180:rate=10:duration=6',
-      '-f',
-      'lavfi',
-      '-i',
-      'anullsrc=channel_layout=stereo:sample_rate=44100',
-      '-i',
-      metadata.path,
-      '-map',
-      '0:v:0',
-      '-map',
-      '1:a:0',
-      '-map_chapters',
-      '2',
-      '-c:v',
-      'mpeg4',
-      '-q:v',
-      '5',
-      '-pix_fmt',
-      'yuv420p',
-      '-c:a',
-      'aac',
-      '-shortest',
-      '-t',
-      '6',
-      video.path,
-    ],
-    const Duration(seconds: 30),
+  final FfmpegRunResult result = await resolveFfmpegBackend().run(<String>[
+    '-hide_banner',
+    '-y',
+    '-f',
+    'lavfi',
+    '-i',
+    'testsrc=size=320x180:rate=10:duration=6',
+    '-f',
+    'lavfi',
+    '-i',
+    'anullsrc=channel_layout=stereo:sample_rate=44100',
+    '-i',
+    metadata.path,
+    '-map',
+    '0:v:0',
+    '-map',
+    '1:a:0',
+    '-map_chapters',
+    '2',
+    '-c:v',
+    'mpeg4',
+    '-q:v',
+    '5',
+    '-pix_fmt',
+    'yuv420p',
+    '-c:a',
+    'aac',
+    '-shortest',
+    '-t',
+    '6',
+    video.path,
+  ], const Duration(seconds: 30));
+  expect(
+    result.isSuccess,
+    isTrue,
+    reason: 'ffmpeg must generate the chaptered MKV: ${result.failureSummary}',
   );
-  expect(result.isSuccess, isTrue,
-      reason:
-          'ffmpeg must generate the chaptered MKV: ${result.failureSummary}');
   expect(video.existsSync(), isTrue, reason: 'generated MKV should exist');
   return video;
 }
@@ -106,14 +106,16 @@ VideoFushiTestHooks? _readHooks(WidgetTester tester) {
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-  testWidgets('chaptered MKV shows chapters and seek markers on first open',
-      (WidgetTester tester) async {
+  testWidgets('chaptered MKV shows chapters and seek markers on first open', (
+    WidgetTester tester,
+  ) async {
     final List<String> caught = <String>[];
     final FlutterExceptionHandler? oldHandler = FlutterError.onError;
     FlutterError.onError = (FlutterErrorDetails details) {
       caught.add(details.exceptionAsString());
       debugPrint(
-          '[video-chapter-itest] caught: ${details.exceptionAsString()}');
+        '[video-chapter-itest] caught: ${details.exceptionAsString()}',
+      );
     };
 
     try {
@@ -129,17 +131,24 @@ void main() {
       final AppModel appModel = container.read(appProvider);
       final VideoBookRepository repo = VideoBookRepository(appModel.database);
 
-      await repo.saveVideoBook(VideoBooksCompanion(
-        bookUid: const Value(_kBookUid),
-        title: const Value('itest chaptered mkv'),
-        videoPath: Value(video.absolute.path),
-      ));
+      await repo.saveVideoBook(
+        VideoBooksCompanion(
+          bookUid: const Value(_kBookUid),
+          title: const Value('itest chaptered mkv'),
+          videoPath: Value(video.absolute.path),
+        ),
+      );
 
-      final NavigatorState navigator =
-          tester.state<NavigatorState>(find.byType(Navigator).first);
-      unawaited(navigator.push<void>(MaterialPageRoute<void>(
-        builder: (_) => VideoFushiPage(bookUid: _kBookUid, repo: repo),
-      )));
+      final NavigatorState navigator = tester.state<NavigatorState>(
+        find.byType(Navigator).first,
+      );
+      unawaited(
+        navigator.push<void>(
+          MaterialPageRoute<void>(
+            builder: (_) => VideoFushiPage(bookUid: _kBookUid, repo: repo),
+          ),
+        ),
+      );
 
       bool ready = false;
       for (int i = 0; i < 80; i++) {
@@ -151,8 +160,11 @@ void main() {
           break;
         }
       }
-      expect(ready, isTrue,
-          reason: 'video controller duration should be ready');
+      expect(
+        ready,
+        isTrue,
+        reason: 'video controller duration should be ready',
+      );
 
       bool chaptersReady = false;
       for (int i = 0; i < 80; i++) {
@@ -162,12 +174,18 @@ void main() {
           break;
         }
       }
-      expect(chaptersReady, isTrue,
-          reason: 'first open should read MKV chapters without reloading');
+      expect(
+        chaptersReady,
+        isTrue,
+        reason: 'first open should read MKV chapters without reloading',
+      );
 
       final Finder markers = find.byType(VideoChapterMarkers);
-      expect(markers, findsWidgets,
-          reason: 'chapter marker layer should mount');
+      expect(
+        markers,
+        findsWidgets,
+        reason: 'chapter marker layer should mount',
+      );
       expect(
         find.descendant(of: markers, matching: find.byType(CustomPaint)),
         findsWidgets,

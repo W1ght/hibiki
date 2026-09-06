@@ -33,8 +33,9 @@ void main() {
 
   late Directory pathProviderDir;
   setUpAll(() {
-    pathProviderDir =
-        Directory.systemTemp.createTempSync('hibiki_cover_badge_pp');
+    pathProviderDir = Directory.systemTemp.createTempSync(
+      'hibiki_cover_badge_pp',
+    );
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
       (MethodCall call) async => pathProviderDir.path,
@@ -63,8 +64,9 @@ void main() {
     db = FushiDatabase.forTesting(NativeDatabase.memory());
     final PreferencesRepository prefs = PreferencesRepository(db);
     await prefs.loadFromDb();
-    final Directory storeDir =
-        Directory.systemTemp.createTempSync('hibiki_cover_badge_store');
+    final Directory storeDir = Directory.systemTemp.createTempSync(
+      'hibiki_cover_badge_store',
+    );
     platformServices = testPlatformServices();
     ankiRepository = FakeAnkiRepository();
     appModel = AppModel(platformServices)
@@ -77,29 +79,30 @@ void main() {
   });
 
   Widget buildApp(_FakeRemoteVideoClient client) => ProviderScope(
-        overrides: <Override>[
-          platformServicesProvider.overrideWithValue(platformServices),
-          ankiRepositoryProvider.overrideWithValue(ankiRepository),
-          appProvider.overrideWith((ref) => appModel),
-        ],
-        child: TranslationProvider(
-          child: MaterialApp(
-            home: Scaffold(
-              body: HomeVideoPage(
-                repo: VideoBookRepository(db),
-                // #792 分区化后远端占位卡混排进 series 分区的混排墙，钉住该分区。
-                section: VideoLibrarySection.allVideos,
-                remoteVideoClientLoader: () async => client,
-                remoteVideoDownloadDestination: (RemoteVideoInfo v) async =>
-                    File('${pathProviderDir.path}/${v.id.hashCode}.mp4'),
-              ),
-            ),
+    overrides: <Override>[
+      platformServicesProvider.overrideWithValue(platformServices),
+      ankiRepositoryProvider.overrideWithValue(ankiRepository),
+      appProvider.overrideWith((ref) => appModel),
+    ],
+    child: TranslationProvider(
+      child: MaterialApp(
+        home: Scaffold(
+          body: HomeVideoPage(
+            repo: VideoBookRepository(db),
+            // #792 分区化后远端占位卡混排进 series 分区的混排墙，钉住该分区。
+            section: VideoLibrarySection.allVideos,
+            remoteVideoClientLoader: () async => client,
+            remoteVideoDownloadDestination: (RemoteVideoInfo v) async =>
+                File('${pathProviderDir.path}/${v.id.hashCode}.mp4'),
           ),
         ),
-      );
+      ),
+    ),
+  );
 
-  testWidgets('字幕 / 云端 / 播放列表三处角标均渲染为共享 CoverBadge',
-      (WidgetTester tester) async {
+  testWidgets('字幕 / 云端 / 播放列表三处角标均渲染为共享 CoverBadge', (
+    WidgetTester tester,
+  ) async {
     tester.view.physicalSize = const Size(1280, 800);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.resetPhysicalSize);
@@ -144,14 +147,20 @@ void main() {
   });
 
   test('source guard: 视频库页不再手写黑胶囊角标（收敛 CoverBadge）', () {
-    final String src =
-        File('lib/src/pages/implementations/home_video_page.dart')
-            .readAsStringSync();
+    final String src = File(
+      'lib/src/pages/implementations/home_video_page.dart',
+    ).readAsStringSync();
     expect(src, contains('CoverBadge('), reason: '角标必须走共享 CoverBadge');
-    expect(src, isNot(contains('Colors.black.withValues(alpha: 0.62)')),
-        reason: '手写黑胶囊角标（0.62）应已被 CoverBadge 取代');
-    expect(src, isNot(contains('Colors.black.withValues(alpha: 0.55)')),
-        reason: '手写黑胶囊角标（0.55）应已被 CoverBadge 取代');
+    expect(
+      src,
+      isNot(contains('Colors.black.withValues(alpha: 0.62)')),
+      reason: '手写黑胶囊角标（0.62）应已被 CoverBadge 取代',
+    );
+    expect(
+      src,
+      isNot(contains('Colors.black.withValues(alpha: 0.55)')),
+      reason: '手写黑胶囊角标（0.55）应已被 CoverBadge 取代',
+    );
   });
 }
 
@@ -163,18 +172,18 @@ class _FakeRemoteVideoClient implements RemoteVideoClient {
 
   @override
   Future<List<RemoteVideoInfo>> listRemoteVideos() async => <RemoteVideoInfo>[
-        RemoteVideoInfo.fromJson(<String, Object?>{
-          'id': 'remote/video-1',
-          'title': 'Remote Episode',
-          'sizeBytes': 1024,
-          'hasSubtitle': true,
-          'coverPath': _writeTinyCover().path,
-          'episodes': <Map<String, Object?>>[
-            <String, Object?>{'index': 0, 'title': 'EP1'},
-            <String, Object?>{'index': 1, 'title': 'EP2'},
-          ],
-        }),
-      ];
+    RemoteVideoInfo.fromJson(<String, Object?>{
+      'id': 'remote/video-1',
+      'title': 'Remote Episode',
+      'sizeBytes': 1024,
+      'hasSubtitle': true,
+      'coverPath': _writeTinyCover().path,
+      'episodes': <Map<String, Object?>>[
+        <String, Object?>{'index': 0, 'title': 'EP1'},
+        <String, Object?>{'index': 1, 'title': 'EP2'},
+      ],
+    }),
+  ];
 
   File _writeTinyCover() {
     final File file = File(
@@ -188,12 +197,11 @@ class _FakeRemoteVideoClient implements RemoteVideoClient {
   Future<RemoteVideoStreamUrls> remoteVideoStreamUrls(
     String id, {
     int episodeIndex = 0,
-  }) async =>
-      const RemoteVideoStreamUrls(
-        streamUrl: 'http://127.0.0.1:1/stream',
-        subtitleUrl: null,
-        subtitleFileName: null,
-      );
+  }) async => const RemoteVideoStreamUrls(
+    streamUrl: 'http://127.0.0.1:1/stream',
+    subtitleUrl: null,
+    subtitleFileName: null,
+  );
 
   @override
   Future<void> getRemoteVideoSubtitle(
@@ -215,8 +223,7 @@ class _FakeRemoteVideoClient implements RemoteVideoClient {
   Future<({int positionMs, int updatedAtMs})> remoteVideoPosition(
     String id, {
     int episodeIndex = 0,
-  }) async =>
-      (positionMs: 0, updatedAtMs: 0);
+  }) async => (positionMs: 0, updatedAtMs: 0);
 
   @override
   Future<void> putRemoteVideoPosition(
@@ -227,6 +234,7 @@ class _FakeRemoteVideoClient implements RemoteVideoClient {
   }) async {}
 }
 
-final List<int> _tinyPngBytes =
-    base64Decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJ'
-        'AAAADUlEQVR42mP8z8BQDwAFgwJ/l5YV3wAAAABJRU5ErkJggg==');
+final List<int> _tinyPngBytes = base64Decode(
+  'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJ'
+  'AAAADUlEQVR42mP8z8BQDwAFgwJ/l5YV3wAAAABJRU5ErkJggg==',
+);

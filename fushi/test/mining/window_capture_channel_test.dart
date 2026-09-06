@@ -9,8 +9,9 @@ import 'package:fushi/src/mining/window_capture_channel.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  const MethodChannel channel =
-      MethodChannel('app.fushi.reader/window_capture');
+  const MethodChannel channel = MethodChannel(
+    'app.fushi.reader/window_capture',
+  );
   final TestDefaultBinaryMessenger messenger =
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
 
@@ -102,7 +103,8 @@ void main() {
       messenger.setMockMethodCallHandler(channel, (MethodCall call) async {
         return <Object?, Object?>{
           'pngBytes': png,
-          'diagnostics': 'capture target redirected: Magpie scaling window -> '
+          'diagnostics':
+              'capture target redirected: Magpie scaling window -> '
               'source window (Magpie.SrcHWND)',
         };
       });
@@ -116,7 +118,8 @@ void main() {
       messenger.setMockMethodCallHandler(channel, (MethodCall call) async {
         return <Object?, Object?>{
           'error': 'capture timed out',
-          'diagnostics': 'IGraphicsCaptureSession2 unavailable (needs Windows '
+          'diagnostics':
+              'IGraphicsCaptureSession2 unavailable (needs Windows '
               '10 build 19041+); WGC cursor NOT suppressed hr=0x80004002',
         };
       });

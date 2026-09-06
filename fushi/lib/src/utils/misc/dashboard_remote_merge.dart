@@ -68,29 +68,33 @@ List<RemoteContinueCandidate> remoteContinueCandidates({
     // 内容树的行）不进「继续」：书架远端列表早已按 hasContent 过滤，这里漏了 →
     // 点卡片只会切到书架 tab，而书架上根本没有这张卡（死路卡）。
     if (!b.hasContent) continue;
-    out.add(RemoteContinueCandidate(
-      kind: b.kind,
-      id: b.downloadId,
-      // BUG-1488：[title] 是 display-only（去重/封面缓存键走 [id]），所以取 host
-      // 下发的显示名——母设备改过的书名在子设备首页「继续」上也得跟着变。
-      title: b.displayName,
-      recentMs: b.progressUpdatedAtMs,
-      percent: b.progressPercent,
-      coverUrl: b.coverUrl,
-      collectionName: b.collection?.collectionName,
-    ));
+    out.add(
+      RemoteContinueCandidate(
+        kind: b.kind,
+        id: b.downloadId,
+        // BUG-1488：[title] 是 display-only（去重/封面缓存键走 [id]），所以取 host
+        // 下发的显示名——母设备改过的书名在子设备首页「继续」上也得跟着变。
+        title: b.displayName,
+        recentMs: b.progressUpdatedAtMs,
+        percent: b.progressPercent,
+        coverUrl: b.coverUrl,
+        collectionName: b.collection?.collectionName,
+      ),
+    );
   }
   for (final RemoteVideoInfo v in remoteVideos) {
     if (v.positionMs <= 0) continue;
     if (localVideoUids.contains(v.id)) continue;
-    out.add(RemoteContinueCandidate(
-      kind: MediaKind.video,
-      id: v.id,
-      title: v.title,
-      recentMs: v.positionUpdatedAtMs,
-      coverUrl: v.coverUrl,
-      collectionName: v.collection?.collectionName,
-    ));
+    out.add(
+      RemoteContinueCandidate(
+        kind: MediaKind.video,
+        id: v.id,
+        title: v.title,
+        recentMs: v.positionUpdatedAtMs,
+        coverUrl: v.coverUrl,
+        collectionName: v.collection?.collectionName,
+      ),
+    );
   }
   return out;
 }
@@ -122,7 +126,9 @@ List<ActivityEventRow> mergeActivityEvents(
   int limit = 200,
 }) {
   final List<ActivityEventRow> merged = <ActivityEventRow>[...local, ...remote]
-    ..sort((ActivityEventRow a, ActivityEventRow b) =>
-        b.timestampMs.compareTo(a.timestampMs));
+    ..sort(
+      (ActivityEventRow a, ActivityEventRow b) =>
+          b.timestampMs.compareTo(a.timestampMs),
+    );
   return merged.length <= limit ? merged : merged.sublist(0, limit);
 }

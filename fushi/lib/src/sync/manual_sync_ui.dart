@@ -65,11 +65,11 @@ String summarizeSyncReport(SyncRunReport r) {
 /// （`browserTimeout` 加进来时就正是如此）。switch 表达式对枚举强制穷尽 —— 新增值
 /// 不显式给出登出决定就编译不过。
 bool shouldSignOutOnAuthError(SyncAuthError error) => switch (error.kind) {
-      SyncAuthFailureKind.credentials => true,
-      SyncAuthFailureKind.forbidden => false,
-      SyncAuthFailureKind.browserTimeout => false,
-      SyncAuthFailureKind.cancelled => false,
-    };
+  SyncAuthFailureKind.credentials => true,
+  SyncAuthFailureKind.forbidden => false,
+  SyncAuthFailureKind.browserTimeout => false,
+  SyncAuthFailureKind.cancelled => false,
+};
 
 /// 一条**具名通道**的鉴权失败之后，该不该对这条通道执行登出（BUG-1578）。
 ///
@@ -179,24 +179,22 @@ Future<ManualSyncOutcome> runManualSyncWithFeedback({
   bool announceNotConfigured = true,
   bool announceBusy = true,
   bool announceCompleted = true,
-}) =>
-    _runWithSyncFeedback(
-      context: context,
-      appModel: appModel,
-      announceNotConfigured: announceNotConfigured,
-      announceBusy: announceBusy,
-      announceCompleted: announceCompleted,
-      run: () => runManualFullSync(
-        db: appModel.database,
-        dictionaryResourceRoot: appModel.dictionaryResourceDirectory,
-        audioDatabaseRoot:
-            Directory('${appModel.appDirectory.path}/audiobooks'),
-        tempDir: appModel.temporaryDirectory,
-        localAudioEntries: appModel.localAudioDbs,
-        onLocalAudioImported: appModel.importSyncedLocalAudioDb,
-        onPostRun: appModel.refreshAfterSyncRun,
-      ),
-    );
+}) => _runWithSyncFeedback(
+  context: context,
+  appModel: appModel,
+  announceNotConfigured: announceNotConfigured,
+  announceBusy: announceBusy,
+  announceCompleted: announceCompleted,
+  run: () => runManualFullSync(
+    db: appModel.database,
+    dictionaryResourceRoot: appModel.dictionaryResourceDirectory,
+    audioDatabaseRoot: Directory('${appModel.appDirectory.path}/audiobooks'),
+    tempDir: appModel.temporaryDirectory,
+    localAudioEntries: appModel.localAudioDbs,
+    onLocalAudioImported: appModel.importSyncedLocalAudioDb,
+    onPostRun: appModel.refreshAfterSyncRun,
+  ),
+);
 
 /// 设置页「词典 / 本地音频数据库」两行的显式上传 / 下载动作在 UI 层的入口。
 ///
@@ -208,26 +206,24 @@ Future<ManualSyncOutcome> runAssetTransferWithFeedback({
   required AppModel appModel,
   required SyncAssetKind kind,
   required SyncAssetDirection direction,
-}) =>
-    _runWithSyncFeedback(
-      context: context,
-      appModel: appModel,
-      announceNotConfigured: true,
-      announceBusy: true,
-      announceCompleted: true,
-      run: () => runManualAssetTransfer(
-        db: appModel.database,
-        kind: kind,
-        direction: direction,
-        dictionaryResourceRoot: appModel.dictionaryResourceDirectory,
-        audioDatabaseRoot:
-            Directory('${appModel.appDirectory.path}/audiobooks'),
-        tempDir: appModel.temporaryDirectory,
-        localAudioEntries: appModel.localAudioDbs,
-        onLocalAudioImported: appModel.importSyncedLocalAudioDb,
-        onPostRun: appModel.refreshAfterSyncRun,
-      ),
-    );
+}) => _runWithSyncFeedback(
+  context: context,
+  appModel: appModel,
+  announceNotConfigured: true,
+  announceBusy: true,
+  announceCompleted: true,
+  run: () => runManualAssetTransfer(
+    db: appModel.database,
+    kind: kind,
+    direction: direction,
+    dictionaryResourceRoot: appModel.dictionaryResourceDirectory,
+    audioDatabaseRoot: Directory('${appModel.appDirectory.path}/audiobooks'),
+    tempDir: appModel.temporaryDirectory,
+    localAudioEntries: appModel.localAudioDbs,
+    onLocalAudioImported: appModel.importSyncedLocalAudioDb,
+    onPostRun: appModel.refreshAfterSyncRun,
+  ),
+);
 
 /// 「跑一轮同步 + 统一反馈」的共享外壳。[run] 决定这一轮**跑的是什么**（全量 sweep
 /// 还是一次资产传输），其余全部相同。
@@ -314,7 +310,9 @@ Future<ManualSyncOutcome> _runWithSyncFeedback({
   } catch (e) {
     if (context.mounted) {
       showSyncMessage(
-          context, t.sync_error(message: friendlySyncErrorDetail(e)));
+        context,
+        t.sync_error(message: friendlySyncErrorDetail(e)),
+      );
     }
     return ManualSyncOutcome.notConfigured;
   }

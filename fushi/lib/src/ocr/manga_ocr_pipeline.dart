@@ -65,8 +65,8 @@ class MangaOcrPipeline {
     required OcrRecognizer recognizer,
     this.cache,
     this.rightToLeft = true,
-  })  : _detector = detector,
-        _recognizer = recognizer;
+  }) : _detector = detector,
+       _recognizer = recognizer;
 
   final OcrDetector _detector;
   final OcrRecognizer _recognizer;
@@ -122,8 +122,10 @@ class MangaOcrPipeline {
       for (final DetectedTextRegion region in detections.textRegions)
         region.rect,
     ];
-    final List<int> order =
-        computeReadingOrder(boxes, rightToLeft: rightToLeft);
+    final List<int> order = computeReadingOrder(
+      boxes,
+      rightToLeft: rightToLeft,
+    );
 
     final List<OcrBlock> blocks = <OcrBlock>[];
     for (final int index in order) {
@@ -133,13 +135,15 @@ class MangaOcrPipeline {
       if (text.isEmpty) {
         continue;
       }
-      blocks.add(OcrBlock(
-        box: region.rect,
-        vertical: isVerticalBlock(region.rect),
-        lines: <String>[text],
-        score: region.score,
-        insideBubble: region.insideBubble,
-      ));
+      blocks.add(
+        OcrBlock(
+          box: region.rect,
+          vertical: isVerticalBlock(region.rect),
+          lines: <String>[text],
+          score: region.score,
+          insideBubble: region.insideBubble,
+        ),
+      );
     }
     return OcrPageResult(
       pageIndex: pageIndex,

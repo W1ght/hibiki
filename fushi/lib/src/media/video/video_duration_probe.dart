@@ -153,9 +153,9 @@ class VideoStreamFacts {
 
   /// 归一后的动态范围。判据收口在 `video_dynamic_range.dart`，与播放器侧同一份。
   VideoDynamicRange get dynamicRange => dynamicRangeFromFfprobe(
-        colorPrimaries: colorPrimaries,
-        colorTransfer: colorTransfer,
-      );
+    colorPrimaries: colorPrimaries,
+    colorTransfer: colorTransfer,
+  );
 
   /// 帧率（fps），[frameRateMilli] 为空时返回 null。
   double? get frameRate =>
@@ -257,32 +257,32 @@ class AudioTrackFacts {
   /// 落库用。键名短且稳定——这串 JSON 会存进 `video_file_specs.audio_tracks_json`，
   /// 改键名等于让所有已缓存的行解不出来（届时靠 `kVideoProbeFieldSetVersion` 兜底重探）。
   Map<String, Object?> toJson() => <String, Object?>{
-        'i': index,
-        if (codec != null) 'c': codec,
-        if (channels != null) 'ch': channels,
-        if (channelLayout != null) 'cl': channelLayout,
-        if (sampleRate != null) 'sr': sampleRate,
-        if (bitrate != null) 'br': bitrate,
-        if (language != null) 'l': language,
-        if (title != null) 't': title,
-        if (isDefault) 'd': 1,
-        if (isForced) 'f': 1,
-        if (isCommentary) 'm': 1,
-      };
+    'i': index,
+    if (codec != null) 'c': codec,
+    if (channels != null) 'ch': channels,
+    if (channelLayout != null) 'cl': channelLayout,
+    if (sampleRate != null) 'sr': sampleRate,
+    if (bitrate != null) 'br': bitrate,
+    if (language != null) 'l': language,
+    if (title != null) 't': title,
+    if (isDefault) 'd': 1,
+    if (isForced) 'f': 1,
+    if (isCommentary) 'm': 1,
+  };
 
   static AudioTrackFacts fromJson(Map<String, Object?> json) => AudioTrackFacts(
-        index: _intFrom(json['i']) ?? 0,
-        codec: _stringFrom(json['c']),
-        channels: _intFrom(json['ch']),
-        channelLayout: _stringFrom(json['cl']),
-        sampleRate: _intFrom(json['sr']),
-        bitrate: _intFrom(json['br']),
-        language: _stringFrom(json['l']),
-        title: _stringFrom(json['t']),
-        isDefault: _intFrom(json['d']) == 1,
-        isForced: _intFrom(json['f']) == 1,
-        isCommentary: _intFrom(json['m']) == 1,
-      );
+    index: _intFrom(json['i']) ?? 0,
+    codec: _stringFrom(json['c']),
+    channels: _intFrom(json['ch']),
+    channelLayout: _stringFrom(json['cl']),
+    sampleRate: _intFrom(json['sr']),
+    bitrate: _intFrom(json['br']),
+    language: _stringFrom(json['l']),
+    title: _stringFrom(json['t']),
+    isDefault: _intFrom(json['d']) == 1,
+    isForced: _intFrom(json['f']) == 1,
+    isCommentary: _intFrom(json['m']) == 1,
+  );
 
   /// 声道显示名：`5.1` / `2.0`（`stereo` 与 `mono` 归一成数字写法，与 `5.1` 同形）。
   String? get channelLabel {
@@ -338,13 +338,13 @@ class SubtitleTrackFacts {
 
   /// 落库用，键名约定同 [AudioTrackFacts.toJson]。
   Map<String, Object?> toJson() => <String, Object?>{
-        'i': index,
-        if (codec != null) 'c': codec,
-        if (language != null) 'l': language,
-        if (title != null) 't': title,
-        if (isDefault) 'd': 1,
-        if (isForced) 'f': 1,
-      };
+    'i': index,
+    if (codec != null) 'c': codec,
+    if (language != null) 'l': language,
+    if (title != null) 't': title,
+    if (isDefault) 'd': 1,
+    if (isForced) 'f': 1,
+  };
 
   static SubtitleTrackFacts fromJson(Map<String, Object?> json) =>
       SubtitleTrackFacts(
@@ -388,19 +388,16 @@ Future<VideoProbeFacts> probeVideoFacts(
   @visibleForTesting FfmpegBackend? backend,
 }) async {
   try {
-    final FfmpegRunResult result =
-        await (backend ?? resolveFfmpegBackend()).runProbe(
-      <String>[
-        '-v',
-        'quiet',
-        '-print_format',
-        'json',
-        '-show_entries',
-        kVideoProbeShowEntries,
-        path,
-      ],
-      kVideoDurationProbeTimeout,
-    );
+    final FfmpegRunResult result = await (backend ?? resolveFfmpegBackend())
+        .runProbe(<String>[
+          '-v',
+          'quiet',
+          '-print_format',
+          'json',
+          '-show_entries',
+          kVideoProbeShowEntries,
+          path,
+        ], kVideoDurationProbeTimeout);
     if (result.returnCode != 0) return VideoProbeFacts.empty;
     return parseFfprobeFacts(result.output);
   } catch (e) {
@@ -420,7 +417,8 @@ Future<VideoProbeFacts> probeVideoFacts(
 /// - `stream_tags=` 流的元数据 tag
 ///
 /// 改这里必须同步 +1 [kVideoProbeFieldSetVersion]，否则已落库的旧行不会重探。
-const String kVideoProbeShowEntries = 'format=duration,size,bit_rate:'
+const String kVideoProbeShowEntries =
+    'format=duration,size,bit_rate:'
     'stream=index,codec_type,codec_name,width,height,pix_fmt,'
     'color_primaries,color_transfer,color_space,bits_per_raw_sample,'
     'r_frame_rate,bit_rate,channels,channel_layout,sample_rate:'
@@ -431,8 +429,7 @@ const String kVideoProbeShowEntries = 'format=duration,size,bit_rate:'
 Future<int?> probeVideoDurationMs(
   String path, {
   @visibleForTesting FfmpegBackend? backend,
-}) async =>
-    (await probeVideoFacts(path, backend: backend)).durationMs;
+}) async => (await probeVideoFacts(path, backend: backend)).durationMs;
 
 /// 解析 ffprobe `-print_format json` 的 stdout。纯函数，便于单测。
 ///
@@ -495,7 +492,8 @@ VideoStreamFacts? _videoFrom(Object? streams) {
       width: _intFrom(stream['width']),
       height: _intFrom(stream['height']),
       pixelFormat: pixelFormat,
-      bitDepth: bitDepthFromPixelFormat(pixelFormat) ??
+      bitDepth:
+          bitDepthFromPixelFormat(pixelFormat) ??
           _intFrom(stream['bits_per_raw_sample']),
       frameRateMilli: frameRateMilliFromFraction(
         _stringFrom(stream['r_frame_rate']),
@@ -513,42 +511,50 @@ List<AudioTrackFacts> _audioTracksFrom(Object? streams) {
   final List<AudioTrackFacts> out = <AudioTrackFacts>[];
   for (final Map<String, dynamic> stream in _streamsOfType(streams, 'audio')) {
     final Map<String, dynamic>? disposition = _mapOrNull(stream['disposition']);
-    out.add(AudioTrackFacts(
-      index: _intFrom(stream['index']) ?? out.length,
-      codec: _stringFrom(stream['codec_name']),
-      channels: _intFrom(stream['channels']),
-      channelLayout: _stringFrom(stream['channel_layout']),
-      sampleRate: _intFrom(stream['sample_rate']),
-      bitrate: _intFrom(stream['bit_rate']),
-      language: _languageFrom(stream),
-      title: _tagFrom(stream, 'title'),
-      isDefault: _flagFrom(disposition, 'default'),
-      isForced: _flagFrom(disposition, 'forced'),
-      isCommentary: _flagFrom(disposition, 'comment'),
-    ));
+    out.add(
+      AudioTrackFacts(
+        index: _intFrom(stream['index']) ?? out.length,
+        codec: _stringFrom(stream['codec_name']),
+        channels: _intFrom(stream['channels']),
+        channelLayout: _stringFrom(stream['channel_layout']),
+        sampleRate: _intFrom(stream['sample_rate']),
+        bitrate: _intFrom(stream['bit_rate']),
+        language: _languageFrom(stream),
+        title: _tagFrom(stream, 'title'),
+        isDefault: _flagFrom(disposition, 'default'),
+        isForced: _flagFrom(disposition, 'forced'),
+        isCommentary: _flagFrom(disposition, 'comment'),
+      ),
+    );
   }
   return List<AudioTrackFacts>.unmodifiable(out);
 }
 
 List<SubtitleTrackFacts> _subtitleTracksFrom(Object? streams) {
   final List<SubtitleTrackFacts> out = <SubtitleTrackFacts>[];
-  for (final Map<String, dynamic> stream
-      in _streamsOfType(streams, 'subtitle')) {
+  for (final Map<String, dynamic> stream in _streamsOfType(
+    streams,
+    'subtitle',
+  )) {
     final Map<String, dynamic>? disposition = _mapOrNull(stream['disposition']);
-    out.add(SubtitleTrackFacts(
-      index: _intFrom(stream['index']) ?? out.length,
-      codec: _stringFrom(stream['codec_name']),
-      language: _languageFrom(stream),
-      title: _tagFrom(stream, 'title'),
-      isDefault: _flagFrom(disposition, 'default'),
-      isForced: _flagFrom(disposition, 'forced'),
-    ));
+    out.add(
+      SubtitleTrackFacts(
+        index: _intFrom(stream['index']) ?? out.length,
+        codec: _stringFrom(stream['codec_name']),
+        language: _languageFrom(stream),
+        title: _tagFrom(stream, 'title'),
+        isDefault: _flagFrom(disposition, 'default'),
+        isForced: _flagFrom(disposition, 'forced'),
+      ),
+    );
   }
   return List<SubtitleTrackFacts>.unmodifiable(out);
 }
 
 Iterable<Map<String, dynamic>> _streamsOfType(
-    Object? streams, String type) sync* {
+  Object? streams,
+  String type,
+) sync* {
   if (streams is! List) return;
   for (final Object? stream in streams) {
     if (stream is! Map<String, dynamic>) continue;
@@ -592,8 +598,9 @@ int? bitDepthFromPixelFormat(String? pixelFormat) {
   // 详情页显示「色深 210 bit」；更糟的是它返回了非 null，还会短路掉调用方对
   // `bits_per_raw_sample` 的回退，而正确值就在同一条 JSON 里。
   // （p010/p012/p016 此前是撞巧对上的：子采样位恰好是 0。）
-  final RegExpMatch? semiPlanar =
-      RegExp(r'^p([024])(\d{2})(?:le|be)?$').firstMatch(value);
+  final RegExpMatch? semiPlanar = RegExp(
+    r'^p([024])(\d{2})(?:le|be)?$',
+  ).firstMatch(value);
   if (semiPlanar != null) {
     final int? depth = int.tryParse(semiPlanar.group(2)!);
     if (depth != null && depth > 0) return depth;
@@ -685,11 +692,11 @@ Map<String, dynamic>? _mapOrNull(Object? value) =>
 
 /// ffprobe 的数值字段有的给 int、有的给字符串（`"5443344"`），两种都要认。
 int? _intFrom(Object? value) => switch (value) {
-      final int v => v,
-      final num v => v.toInt(),
-      final String v => int.tryParse(v.trim()),
-      _ => null,
-    };
+  final int v => v,
+  final num v => v.toInt(),
+  final String v => int.tryParse(v.trim()),
+  _ => null,
+};
 
 /// 空串按「没有」处理——与 ffprobe「未标注就整个省略键」同义。
 String? _stringFrom(Object? value) {

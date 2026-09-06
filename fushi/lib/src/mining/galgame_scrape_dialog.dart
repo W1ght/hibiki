@@ -34,11 +34,8 @@ Future<bool> showGalgameScrapeDialog({
 }) async {
   final bool? applied = await showAppDialog<bool>(
     context: context,
-    builder: (BuildContext ctx) => GalgameScrapeDialog(
-      game: game,
-      repo: repo,
-      initialQuery: initialQuery,
-    ),
+    builder: (BuildContext ctx) =>
+        GalgameScrapeDialog(game: game, repo: repo, initialQuery: initialQuery),
   );
   return applied ?? false;
 }
@@ -58,8 +55,9 @@ String normalizeGalgameScrapeQuery(String input) {
   final Uri? uri = _tryParseEntryUrl(input);
   if (uri == null) return input;
   final String rawHost = uri.host.toLowerCase();
-  final String host =
-      rawHost.startsWith('www.') ? rawHost.substring(4) : rawHost;
+  final String host = rawHost.startsWith('www.')
+      ? rawHost.substring(4)
+      : rawHost;
   final List<String> segments = <String>[
     for (final String s in uri.pathSegments)
       if (s.isNotEmpty) s,
@@ -72,8 +70,10 @@ String normalizeGalgameScrapeQuery(String input) {
     return segments[1];
   }
   if (host == 'vndb.org' && segments.isNotEmpty) {
-    final RegExpMatch? m =
-        RegExp(r'^v(\d+)$', caseSensitive: false).firstMatch(segments[0]);
+    final RegExpMatch? m = RegExp(
+      r'^v(\d+)$',
+      caseSensitive: false,
+    ).firstMatch(segments[0]);
     if (m != null) return 'v${m.group(1)!}';
   }
   return input;
@@ -120,8 +120,10 @@ Future<bool> applyGalgameScrapeCandidate({
 }) async {
   final GalgameScrapeController used =
       controller ?? GalgameScrapeController.instance;
-  final GalgameMetadataDraft? draft =
-      await used.fetchById(candidate.source, candidate.externalId);
+  final GalgameMetadataDraft? draft = await used.fetchById(
+    candidate.source,
+    candidate.externalId,
+  );
   if (draft == null) return false;
   // 多个源都有快照时主显示源记 mixed（契约 §1.1）。
   final List<GalgameSourceRow> existing = await repo.sourcesOf(gameId);
@@ -133,8 +135,9 @@ Future<bool> applyGalgameScrapeCandidate({
     gameId: gameId,
     source: candidate.source,
     draft: draft,
-    primarySource:
-        sources.length > 1 ? kGalgamePrimarySourceMixed : candidate.source.key,
+    primarySource: sources.length > 1
+        ? kGalgamePrimarySourceMixed
+        : candidate.source.key,
   );
   await _downloadScrapedCover(
     repo: repo,
@@ -177,7 +180,8 @@ Future<void> _downloadScrapedCover({
   } else {
     final String? existingPath = repo.byId(gameId)?.coverPath;
     shouldDownload = shouldAutoDownloadScrapedCover(
-      hasUsableCoverFile: existingPath != null &&
+      hasUsableCoverFile:
+          existingPath != null &&
           existingPath.isNotEmpty &&
           await File(existingPath).exists(),
       coverUrl: coverUrl,
@@ -411,8 +415,9 @@ class _GalgameScrapeDialogState extends State<GalgameScrapeDialog> {
             Text(
               t.game_scrape_search_failed,
               textAlign: TextAlign.center,
-              style: theme.textTheme.bodyMedium
-                  ?.copyWith(color: theme.colorScheme.error),
+              style: theme.textTheme.bodyMedium?.copyWith(
+                color: theme.colorScheme.error,
+              ),
             ),
           ],
         ),
@@ -474,8 +479,9 @@ class _GalgameScrapeDialogState extends State<GalgameScrapeDialog> {
           ),
           const SizedBox(width: 8),
           FilledButton.tonal(
-            onPressed:
-                _applyingCandidate != null ? null : () => _use(candidate),
+            onPressed: _applyingCandidate != null
+                ? null
+                : () => _use(candidate),
             child: identical(_applyingCandidate, candidate)
                 ? const SizedBox(
                     width: 16,

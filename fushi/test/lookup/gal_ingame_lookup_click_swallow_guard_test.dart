@@ -110,8 +110,7 @@ void main() {
     final String armAndWait = compactCode(
       // 序列搬进了 ArmLowLevelMouseHookWithSampledShield；ArmLowLevelMouseHookAndWait
       // 现在只剩一行转发，在它身上找发布/屏障/暴露顺序只会全部落空。
-      methodBody(
-          hookSource, 'bool ArmLowLevelMouseHookWithSampledShield('),
+      methodBody(hookSource, 'bool ArmLowLevelMouseHookWithSampledShield('),
     );
     final String threadMain = compactCode(
       methodBody(hookSource, 'void HookThreadMain()'),
@@ -232,8 +231,7 @@ void main() {
     final String directArm = compactCode(
       // 序列搬进了 ArmLowLevelMouseHookWithSampledShield；ArmLowLevelMouseHookAndWait
       // 现在只剩一行转发，在它身上找发布/屏障/暴露顺序只会全部落空。
-      methodBody(
-          hookSource, 'bool ArmLowLevelMouseHookWithSampledShield('),
+      methodBody(hookSource, 'bool ArmLowLevelMouseHookWithSampledShield('),
     );
     final String desktopArm = compactCode(
       methodBody(hookSource, 'void ArmLowLevelMouseHook('),
@@ -371,27 +369,41 @@ void main() {
     //   ④ 命中附着字形矩形、BeginAttachedGlyphTransaction 成功之后吞掉 down。
     // 不变式与 ①② 一样：吞 down 的 return 1 之前必须先置同键事务位，否则配对的 up
     // 漏给游戏，引擎收到一个永远不抬起的按键。
-    final int repeatedDownSwallow =
-        hookProc.indexOf('HasActiveAttachedGlyphTransactionFast()');
+    final int repeatedDownSwallow = hookProc.indexOf(
+      'HasActiveAttachedGlyphTransactionFast()',
+    );
     final int repeatedDownMark = hookProc.indexOf(
       'g_swallowed_buttons.fetch_or(kSwallowedLeftButton',
       repeatedDownSwallow,
     );
-    expect(repeatedDownSwallow, greaterThanOrEqualTo(0),
-        reason: '③ 重复/注入 down 的吞噬路径必须还在');
-    expect(repeatedDownMark, greaterThan(repeatedDownSwallow),
-        reason: '③ 吞 down 前必须先置同键事务位');
+    expect(
+      repeatedDownSwallow,
+      greaterThanOrEqualTo(0),
+      reason: '③ 重复/注入 down 的吞噬路径必须还在',
+    );
+    expect(
+      repeatedDownMark,
+      greaterThan(repeatedDownSwallow),
+      reason: '③ 吞 down 前必须先置同键事务位',
+    );
 
-    final int attachedBegin =
-        hookProc.indexOf('BeginAttachedGlyphTransaction(');
+    final int attachedBegin = hookProc.indexOf(
+      'BeginAttachedGlyphTransaction(',
+    );
     final int attachedMark = hookProc.indexOf(
       'g_swallowed_buttons.fetch_or(kSwallowedLeftButton',
       attachedBegin,
     );
-    expect(attachedBegin, greaterThanOrEqualTo(0),
-        reason: '④ 附着字形命中后开事务的路径必须还在');
-    expect(attachedMark, greaterThan(attachedBegin),
-        reason: '④ 只有事务真的开起来了才吞 down，且吞之前先置位');
+    expect(
+      attachedBegin,
+      greaterThanOrEqualTo(0),
+      reason: '④ 附着字形命中后开事务的路径必须还在',
+    );
+    expect(
+      attachedMark,
+      greaterThan(attachedBegin),
+      reason: '④ 只有事务真的开起来了才吞 down，且吞之前先置位',
+    );
 
     expect(
       'g_swallowed_buttons.fetch_or('.allMatches(hookProc).length,
@@ -806,13 +818,14 @@ void main() {
   test('Fushi 只在 helper ready 后发布 popup HWND，Hide/down-up 生命周期不 ABA', () {
     final String directPublish = compactCode(
       methodBody(
-          hookSource, 'SampledShieldPublishResult PublishDirectInputShieldIfReady('),
+        hookSource,
+        'SampledShieldPublishResult PublishDirectInputShieldIfReady(',
+      ),
     );
     final String directArm = compactCode(
       // 序列搬进了 ArmLowLevelMouseHookWithSampledShield；ArmLowLevelMouseHookAndWait
       // 现在只剩一行转发，在它身上找发布/屏障/暴露顺序只会全部落空。
-      methodBody(
-          hookSource, 'bool ArmLowLevelMouseHookWithSampledShield('),
+      methodBody(hookSource, 'bool ArmLowLevelMouseHookWithSampledShield('),
     );
     final String desktopArm = compactCode(
       methodBody(hookSource, 'void ArmLowLevelMouseHook('),

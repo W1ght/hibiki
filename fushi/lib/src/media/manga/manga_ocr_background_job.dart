@@ -27,19 +27,19 @@ class MangaOcrBackgroundEvent {
     this.pageIndex,
     this.page,
     this.acceleration,
-  })  : resultPath = null,
-        external = false,
-        finished = false;
+  }) : resultPath = null,
+       external = false,
+       finished = false;
 
   const MangaOcrBackgroundEvent.finished({
     required this.pagesTotal,
     required String this.resultPath,
     required this.external,
     this.acceleration,
-  })  : pagesDone = pagesTotal,
-        pageIndex = null,
-        page = null,
-        finished = true;
+  }) : pagesDone = pagesTotal,
+       pageIndex = null,
+       page = null,
+       finished = true;
 
   final int pagesDone;
   final int pagesTotal;

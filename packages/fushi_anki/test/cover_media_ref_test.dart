@@ -112,41 +112,41 @@ void main() {
     final List<String> mimeTypes = <String>[];
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(channel, (MethodCall call) async {
-      switch (call.method) {
-        case 'requestAnkidroidPermissions':
-          return true;
-        case 'checkForDuplicates':
-          return false;
-        case 'addFileToMedia':
-          final Map<String, dynamic> args = Map<String, dynamic>.from(
-            call.arguments as Map,
-          );
-          mimeTypes.add(args['mimeType'] as String? ?? '');
-          return args['preferredName'] as String?;
-        case 'addNote':
-          final Map<String, dynamic> args = Map<String, dynamic>.from(
-            call.arguments as Map,
-          );
-          addedFieldArrays.add(List<String>.from(args['fields'] as List));
-          return true;
-        default:
-          fail('Unexpected AnkiDroid channel call: ${call.method}');
-      }
-    });
+          switch (call.method) {
+            case 'requestAnkidroidPermissions':
+              return true;
+            case 'checkForDuplicates':
+              return false;
+            case 'addFileToMedia':
+              final Map<String, dynamic> args = Map<String, dynamic>.from(
+                call.arguments as Map,
+              );
+              mimeTypes.add(args['mimeType'] as String? ?? '');
+              return args['preferredName'] as String?;
+            case 'addNote':
+              final Map<String, dynamic> args = Map<String, dynamic>.from(
+                call.arguments as Map,
+              );
+              addedFieldArrays.add(List<String>.from(args['fields'] as List));
+              return true;
+            default:
+              fail('Unexpected AnkiDroid channel call: ${call.method}');
+          }
+        });
     addTearDown(() {
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
           .setMockMethodCallHandler(channel, null);
     });
 
-    final MineOutcome outcome =
-        await _ConfiguredAnkiRepository(settings).mineEntry(
-      rawPayloadJson: payload,
-      context: AnkiMiningContext(
-        sentence: 'これは言葉です。',
-        coverPath: mp4.path,
-        source: AnkiMiningSource.game,
-      ),
-    );
+    final MineOutcome outcome = await _ConfiguredAnkiRepository(settings)
+        .mineEntry(
+          rawPayloadJson: payload,
+          context: AnkiMiningContext(
+            sentence: 'これは言葉です。',
+            coverPath: mp4.path,
+            source: AnkiMiningSource.game,
+          ),
+        );
     expect(outcome.result, MineResult.success);
     expect(addedFieldArrays, hasLength(1));
     expect(

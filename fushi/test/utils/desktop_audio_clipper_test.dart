@@ -205,38 +205,46 @@ void main() {
       ffmpeg.setFfmpegBackendForTesting(null);
     });
 
-    test('returns null for a non-positive range without running ffmpeg',
-        () async {
-      expect(
-        await extractAudioSegmentViaFfmpeg(
+    test(
+      'returns null for a non-positive range without running ffmpeg',
+      () async {
+        expect(
+          await extractAudioSegmentViaFfmpeg(
+            inputPath: 'whatever',
+            startMs: 1000,
+            endMs: 1000,
+            outputPath: 'x.aac',
+          ),
+          isNull,
+        );
+      },
+    );
+
+    // TODO-1005 / BUG-472：「ffmpeg 还没跑就失败」此前静默 return null，in-app 日志页
+    // 空白。现在这两条早返回必须经 onFailure 回传可诊断摘要（同时也写 ErrorLogService）。
+    test(
+      'TODO-1005: non-positive range reports diagnostics via onFailure',
+      () async {
+        final List<String> failures = <String>[];
+        final String? result = await extractAudioSegmentViaFfmpeg(
           inputPath: 'whatever',
           startMs: 1000,
           endMs: 1000,
           outputPath: 'x.aac',
-        ),
-        isNull,
-      );
-    });
-
-    // TODO-1005 / BUG-472：「ffmpeg 还没跑就失败」此前静默 return null，in-app 日志页
-    // 空白。现在这两条早返回必须经 onFailure 回传可诊断摘要（同时也写 ErrorLogService）。
-    test('TODO-1005: non-positive range reports diagnostics via onFailure',
-        () async {
-      final List<String> failures = <String>[];
-      final String? result = await extractAudioSegmentViaFfmpeg(
-        inputPath: 'whatever',
-        startMs: 1000,
-        endMs: 1000,
-        outputPath: 'x.aac',
-        onFailure: failures.add,
-      );
-      expect(result, isNull);
-      expect(failures, hasLength(1),
-          reason: 'zero/negative-length range must no longer fail silently — '
-              'the «无任何错误日志» bug (TODO-1005/BUG-472).');
-      expect(failures.single, contains('non-positive range'));
-      expect(failures.single, contains('endMs=1000'));
-    });
+          onFailure: failures.add,
+        );
+        expect(result, isNull);
+        expect(
+          failures,
+          hasLength(1),
+          reason:
+              'zero/negative-length range must no longer fail silently — '
+              'the «无任何错误日志» bug (TODO-1005/BUG-472).',
+        );
+        expect(failures.single, contains('non-positive range'));
+        expect(failures.single, contains('endMs=1000'));
+      },
+    );
 
     test('returns null when the input file does not exist', () async {
       expect(
@@ -250,23 +258,29 @@ void main() {
       );
     });
 
-    test('TODO-1005: missing input reports diagnostics via onFailure',
-        () async {
-      final List<String> failures = <String>[];
-      final String? result = await extractAudioSegmentViaFfmpeg(
-        inputPath: '/no/such/input.m4b',
-        startMs: 0,
-        endMs: 1000,
-        outputPath: 'x.aac',
-        onFailure: failures.add,
-      );
-      expect(result, isNull);
-      expect(failures, hasLength(1),
-          reason: 'missing input audio must no longer fail silently '
-              '(TODO-1005/BUG-472).');
-      expect(failures.single, contains('does not exist'));
-      expect(failures.single, contains('/no/such/input.m4b'));
-    });
+    test(
+      'TODO-1005: missing input reports diagnostics via onFailure',
+      () async {
+        final List<String> failures = <String>[];
+        final String? result = await extractAudioSegmentViaFfmpeg(
+          inputPath: '/no/such/input.m4b',
+          startMs: 0,
+          endMs: 1000,
+          outputPath: 'x.aac',
+          onFailure: failures.add,
+        );
+        expect(result, isNull);
+        expect(
+          failures,
+          hasLength(1),
+          reason:
+              'missing input audio must no longer fail silently '
+              '(TODO-1005/BUG-472).',
+        );
+        expect(failures.single, contains('does not exist'));
+        expect(failures.single, contains('/no/such/input.m4b'));
+      },
+    );
 
     test('cuts a real clip when ffmpeg is available', () async {
       // Environment-dependent: skip cleanly if ffmpeg is not installed.
@@ -276,24 +290,27 @@ void main() {
         return;
       }
 
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_test');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_clip_test',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final String input = '${dir.path}/in.m4a';
       final String output = '${dir.path}/out.aac';
 
       // Generate a 3s tone to cut from.
-      final ProcessResult gen =
-          await Process.run(resolveFfmpegExecutable(), <String>[
-        '-y',
-        '-f',
-        'lavfi',
-        '-i',
-        'sine=frequency=440:duration=3',
-        '-c:a',
-        'aac',
-        input,
-      ]);
+      final ProcessResult gen = await Process.run(
+        resolveFfmpegExecutable(),
+        <String>[
+          '-y',
+          '-f',
+          'lavfi',
+          '-i',
+          'sine=frequency=440:duration=3',
+          '-c:a',
+          'aac',
+          input,
+        ],
+      );
       expect(gen.exitCode, 0, reason: gen.stderr.toString());
 
       final String? result = await extractAudioSegmentViaFfmpeg(
@@ -308,45 +325,48 @@ void main() {
       expect(File(output).lengthSync(), greaterThan(0));
     });
 
-    test('reports invalid-image diagnostics when audio clipping fails',
-        () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_fail_test');
-      addTearDown(() => dir.deleteSync(recursive: true));
-      final String input = '${dir.path}/in.mkv';
-      final String output = '${dir.path}/out.aac';
-      File(input).writeAsBytesSync(<int>[0, 1, 2, 3]);
-      final List<String> failures = <String>[];
+    test(
+      'reports invalid-image diagnostics when audio clipping fails',
+      () async {
+        final Directory dir = Directory.systemTemp.createTempSync(
+          'hibiki_clip_fail_test',
+        );
+        addTearDown(() => dir.deleteSync(recursive: true));
+        final String input = '${dir.path}/in.mkv';
+        final String output = '${dir.path}/out.aac';
+        File(input).writeAsBytesSync(<int>[0, 1, 2, 3]);
+        final List<String> failures = <String>[];
 
-      ffmpeg.setFfmpegBackendForTesting(_FakeFfmpegBackend(
-        const ffmpeg.FfmpegRunResult(
-          returnCode: -1073741701,
-          output: 'The application was unable to start correctly.',
-          executable: r'C:\Hibiki\ffmpeg.exe',
-          attemptedExecutables: <String>[
-            r'C:\Hibiki\ffmpeg.exe',
-            'ffmpeg',
-          ],
-          fallbackReason: 'bundled ffmpeg produced STATUS_INVALID_IMAGE_FORMAT',
-        ),
-      ));
+        ffmpeg.setFfmpegBackendForTesting(
+          _FakeFfmpegBackend(
+            const ffmpeg.FfmpegRunResult(
+              returnCode: -1073741701,
+              output: 'The application was unable to start correctly.',
+              executable: r'C:\Hibiki\ffmpeg.exe',
+              attemptedExecutables: <String>[r'C:\Hibiki\ffmpeg.exe', 'ffmpeg'],
+              fallbackReason:
+                  'bundled ffmpeg produced STATUS_INVALID_IMAGE_FORMAT',
+            ),
+          ),
+        );
 
-      final String? result = await extractAudioSegmentViaFfmpeg(
-        inputPath: input,
-        startMs: 1000,
-        endMs: 2000,
-        outputPath: output,
-        onFailure: failures.add,
-      );
+        final String? result = await extractAudioSegmentViaFfmpeg(
+          inputPath: input,
+          startMs: 1000,
+          endMs: 2000,
+          outputPath: output,
+          onFailure: failures.add,
+        );
 
-      expect(result, isNull);
-      expect(File(output).existsSync(), isFalse);
-      expect(failures, hasLength(1));
-      expect(failures.single, contains('0xC000007B'));
-      expect(failures.single, contains('STATUS_INVALID_IMAGE_FORMAT'));
-      expect(failures.single, contains(r'C:\Hibiki\ffmpeg.exe -> ffmpeg'));
-      expect(failures.single, contains('The application was unable'));
-    });
+        expect(result, isNull);
+        expect(File(output).existsSync(), isFalse);
+        expect(failures, hasLength(1));
+        expect(failures.single, contains('0xC000007B'));
+        expect(failures.single, contains('STATUS_INVALID_IMAGE_FORMAT'));
+        expect(failures.single, contains(r'C:\Hibiki\ffmpeg.exe -> ffmpeg'));
+        expect(failures.single, contains('The application was unable'));
+      },
+    );
 
     test('writes a real clip after bundled invalid-image fallback', () async {
       if (!await ffmpegAvailable()) {
@@ -355,29 +375,32 @@ void main() {
         return;
       }
 
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clip_fallback_test');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_clip_fallback_test',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final String input = '${dir.path}/in.m4a';
       final String output = '${dir.path}/sentence.aac';
 
-      final ProcessResult gen =
-          await Process.run(resolveFfmpegExecutable(), <String>[
-        '-y',
-        '-f',
-        'lavfi',
-        '-i',
-        'sine=frequency=440:duration=3',
-        '-c:a',
-        'aac',
-        input,
-      ]);
+      final ProcessResult gen = await Process.run(
+        resolveFfmpegExecutable(),
+        <String>[
+          '-y',
+          '-f',
+          'lavfi',
+          '-i',
+          'sine=frequency=440:duration=3',
+          '-c:a',
+          'aac',
+          input,
+        ],
+      );
       expect(gen.exitCode, 0, reason: gen.stderr.toString());
 
       final _InvalidBundledThenPathFfmpegBackend backend =
           _InvalidBundledThenPathFfmpegBackend(
-        pathExecutable: resolveFfmpegExecutable(),
-      );
+            pathExecutable: resolveFfmpegExecutable(),
+          );
       ffmpeg.setFfmpegBackendForTesting(backend);
       final List<String> failures = <String>[];
 
@@ -409,26 +432,27 @@ void main() {
     });
 
     test('reports invalid-image diagnostics when GIF clipping fails', () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_gif_fail_test');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_gif_fail_test',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final String input = '${dir.path}/in.mkv';
       final String output = '${dir.path}/out.gif';
       File(input).writeAsBytesSync(<int>[0, 1, 2, 3]);
       final List<String> failures = <String>[];
 
-      ffmpeg.setFfmpegBackendForTesting(_FakeFfmpegBackend(
-        const ffmpeg.FfmpegRunResult(
-          returnCode: -1073741701,
-          output: '',
-          executable: r'C:\Hibiki\ffmpeg.exe',
-          attemptedExecutables: <String>[
-            r'C:\Hibiki\ffmpeg.exe',
-            'ffmpeg',
-          ],
-          fallbackReason: 'bundled ffmpeg produced STATUS_INVALID_IMAGE_FORMAT',
+      ffmpeg.setFfmpegBackendForTesting(
+        _FakeFfmpegBackend(
+          const ffmpeg.FfmpegRunResult(
+            returnCode: -1073741701,
+            output: '',
+            executable: r'C:\Hibiki\ffmpeg.exe',
+            attemptedExecutables: <String>[r'C:\Hibiki\ffmpeg.exe', 'ffmpeg'],
+            fallbackReason:
+                'bundled ffmpeg produced STATUS_INVALID_IMAGE_FORMAT',
+          ),
         ),
-      ));
+      );
 
       final String? result = await extractClipGifViaFfmpeg(
         inputPath: input,
@@ -452,36 +476,37 @@ void main() {
         return;
       }
 
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_gif_fallback_test');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_gif_fallback_test',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final String input = '${dir.path}/in.mp4';
       final String output = '${dir.path}/clip.gif';
 
       final ProcessResult gen =
           await Process.run(resolveFfmpegExecutable(), <String>[
-        '-y',
-        '-f',
-        'lavfi',
-        '-i',
-        'testsrc2=duration=2:size=160x90:rate=12',
-        '-f',
-        'lavfi',
-        '-i',
-        'sine=frequency=660:duration=2',
-        '-c:v',
-        'mpeg4',
-        '-c:a',
-        'aac',
-        '-shortest',
-        input,
-      ]);
+            '-y',
+            '-f',
+            'lavfi',
+            '-i',
+            'testsrc2=duration=2:size=160x90:rate=12',
+            '-f',
+            'lavfi',
+            '-i',
+            'sine=frequency=660:duration=2',
+            '-c:v',
+            'mpeg4',
+            '-c:a',
+            'aac',
+            '-shortest',
+            input,
+          ]);
       expect(gen.exitCode, 0, reason: gen.stderr.toString());
 
       final _InvalidBundledThenPathFfmpegBackend backend =
           _InvalidBundledThenPathFfmpegBackend(
-        pathExecutable: resolveFfmpegExecutable(),
-      );
+            pathExecutable: resolveFfmpegExecutable(),
+          );
       ffmpeg.setFfmpegBackendForTesting(backend);
       final List<String> failures = <String>[];
 
@@ -584,51 +609,60 @@ void main() {
       );
     });
 
-    test('TODO-816 ④: reports diagnostics via onFailure when frame grab fails',
-        () async {
-      // 根因（TODO-816 ④）：制卡封面降级链路需要拿到失败摘要才能给用户可感知提示。
-      // 旧 extractVideoFrameViaFfmpeg 只往 ErrorLogService 记日志、不回调 onFailure，
-      // 调用方无从向用户解释「为什么降级成静态图」。本守卫钉住失败摘要经 onFailure 回传。
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_frame_fail_test');
-      addTearDown(() => dir.deleteSync(recursive: true));
-      final String input = '${dir.path}/in.mkv';
-      final String output = '${dir.path}/frame.jpg';
-      File(input).writeAsBytesSync(<int>[0, 1, 2, 3]);
-      final List<String> failures = <String>[];
+    test(
+      'TODO-816 ④: reports diagnostics via onFailure when frame grab fails',
+      () async {
+        // 根因（TODO-816 ④）：制卡封面降级链路需要拿到失败摘要才能给用户可感知提示。
+        // 旧 extractVideoFrameViaFfmpeg 只往 ErrorLogService 记日志、不回调 onFailure，
+        // 调用方无从向用户解释「为什么降级成静态图」。本守卫钉住失败摘要经 onFailure 回传。
+        final Directory dir = Directory.systemTemp.createTempSync(
+          'hibiki_frame_fail_test',
+        );
+        addTearDown(() => dir.deleteSync(recursive: true));
+        final String input = '${dir.path}/in.mkv';
+        final String output = '${dir.path}/frame.jpg';
+        File(input).writeAsBytesSync(<int>[0, 1, 2, 3]);
+        final List<String> failures = <String>[];
 
-      ffmpeg.setFfmpegBackendForTesting(_FakeFfmpegBackend(
-        const ffmpeg.FfmpegRunResult(
-          returnCode: -1073741701,
-          output: 'The application was unable to start correctly.',
-          executable: r'C:\Hibiki\ffmpeg.exe',
-          attemptedExecutables: <String>[
-            r'C:\Hibiki\ffmpeg.exe',
-            'ffmpeg',
-          ],
-          fallbackReason: 'bundled ffmpeg produced STATUS_INVALID_IMAGE_FORMAT',
-        ),
-      ));
+        ffmpeg.setFfmpegBackendForTesting(
+          _FakeFfmpegBackend(
+            const ffmpeg.FfmpegRunResult(
+              returnCode: -1073741701,
+              output: 'The application was unable to start correctly.',
+              executable: r'C:\Hibiki\ffmpeg.exe',
+              attemptedExecutables: <String>[r'C:\Hibiki\ffmpeg.exe', 'ffmpeg'],
+              fallbackReason:
+                  'bundled ffmpeg produced STATUS_INVALID_IMAGE_FORMAT',
+            ),
+          ),
+        );
 
-      final String? result = await extractVideoFrameViaFfmpeg(
-        inputPath: input,
-        outputPath: output,
-        atSeconds: 2,
-        onFailure: failures.add,
-      );
+        final String? result = await extractVideoFrameViaFfmpeg(
+          inputPath: input,
+          outputPath: output,
+          atSeconds: 2,
+          onFailure: failures.add,
+        );
 
-      expect(result, isNull);
-      expect(File(output).existsSync(), isFalse);
-      expect(failures, hasLength(1), reason: '抽帧失败必须经 onFailure 回传给制卡降级提示路径。');
-      expect(failures.single, contains('0xC000007B'));
-      expect(failures.single, contains('STATUS_INVALID_IMAGE_FORMAT'));
-    });
+        expect(result, isNull);
+        expect(File(output).existsSync(), isFalse);
+        expect(
+          failures,
+          hasLength(1),
+          reason: '抽帧失败必须经 onFailure 回传给制卡降级提示路径。',
+        );
+        expect(failures.single, contains('0xC000007B'));
+        expect(failures.single, contains('STATUS_INVALID_IMAGE_FORMAT'));
+      },
+    );
 
     test('grabs a real frame when ffmpeg is available', () async {
       bool ffmpegPresent;
       try {
-        final ProcessResult v =
-            await Process.run(resolveFfmpegExecutable(), <String>['-version']);
+        final ProcessResult v = await Process.run(
+          resolveFfmpegExecutable(),
+          <String>['-version'],
+        );
         ffmpegPresent = v.exitCode == 0;
       } catch (_) {
         ffmpegPresent = false;
@@ -639,8 +673,9 @@ void main() {
         return;
       }
 
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_frame_test');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_frame_test',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final String video = '${dir.path}/clip.mp4';
       final String out = '${dir.path}/thumb.jpg';
@@ -707,65 +742,70 @@ void main() {
       );
     });
 
-    test('extracts an embedded subtitle track when ffmpeg is available',
-        () async {
-      bool ffmpegPresent;
-      try {
-        final ProcessResult v =
-            await Process.run(resolveFfmpegExecutable(), <String>['-version']);
-        ffmpegPresent = v.exitCode == 0;
-      } catch (_) {
-        ffmpegPresent = false;
-      }
-      if (!ffmpegPresent) {
-        // ignore: avoid_print
-        print('ffmpeg not present; skipping real-subtitle extraction test');
-        return;
-      }
+    test(
+      'extracts an embedded subtitle track when ffmpeg is available',
+      () async {
+        bool ffmpegPresent;
+        try {
+          final ProcessResult v = await Process.run(
+            resolveFfmpegExecutable(),
+            <String>['-version'],
+          );
+          ffmpegPresent = v.exitCode == 0;
+        } catch (_) {
+          ffmpegPresent = false;
+        }
+        if (!ffmpegPresent) {
+          // ignore: avoid_print
+          print('ffmpeg not present; skipping real-subtitle extraction test');
+          return;
+        }
 
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_sub_test');
-      addTearDown(() => dir.deleteSync(recursive: true));
-      final String srt = '${dir.path}/src.srt';
-      final String video = '${dir.path}/withsub.mkv';
-      final String out = '${dir.path}/extracted.ass';
-      final String ff = resolveFfmpegExecutable();
+        final Directory dir = Directory.systemTemp.createTempSync(
+          'hibiki_sub_test',
+        );
+        addTearDown(() => dir.deleteSync(recursive: true));
+        final String srt = '${dir.path}/src.srt';
+        final String video = '${dir.path}/withsub.mkv';
+        final String out = '${dir.path}/extracted.ass';
+        final String ff = resolveFfmpegExecutable();
 
-      // 写一条最小 SRT，再 mux 进 mkv 的字幕轨（ffmpeg 转成 ASS）。
-      File(srt).writeAsStringSync(
-        '1\n00:00:00,500 --> 00:00:02,000\n吾輩は猫である。\n\n'
-        '2\n00:00:02,500 --> 00:00:04,000\n名前はまだない。\n',
-      );
-      final ProcessResult mux = await Process.run(ff, <String>[
-        '-y',
-        '-f',
-        'lavfi',
-        '-i',
-        'color=black:s=64x64:d=5',
-        '-i',
-        srt,
-        '-map',
-        '0:v',
-        '-map',
-        '1',
-        '-c:v',
-        'libx264',
-        '-c:s',
-        'ass',
-        video,
-      ]);
-      expect(mux.exitCode, 0, reason: mux.stderr.toString());
+        // 写一条最小 SRT，再 mux 进 mkv 的字幕轨（ffmpeg 转成 ASS）。
+        File(srt).writeAsStringSync(
+          '1\n00:00:00,500 --> 00:00:02,000\n吾輩は猫である。\n\n'
+          '2\n00:00:02,500 --> 00:00:04,000\n名前はまだない。\n',
+        );
+        final ProcessResult mux = await Process.run(ff, <String>[
+          '-y',
+          '-f',
+          'lavfi',
+          '-i',
+          'color=black:s=64x64:d=5',
+          '-i',
+          srt,
+          '-map',
+          '0:v',
+          '-map',
+          '1',
+          '-c:v',
+          'libx264',
+          '-c:s',
+          'ass',
+          video,
+        ]);
+        expect(mux.exitCode, 0, reason: mux.stderr.toString());
 
-      final String? result = await extractEmbeddedSubtitleViaFfmpeg(
-        inputPath: video,
-        streamIndex: 0,
-        outputPath: out,
-      );
+        final String? result = await extractEmbeddedSubtitleViaFfmpeg(
+          inputPath: video,
+          streamIndex: 0,
+          outputPath: out,
+        );
 
-      expect(result, out);
-      expect(File(out).existsSync(), isTrue);
-      expect(File(out).lengthSync(), greaterThan(0));
-    });
+        expect(result, out);
+        expect(File(out).existsSync(), isTrue);
+        expect(File(out).lengthSync(), greaterThan(0));
+      },
+    );
   });
 
   group('buildFfmpegMultiSubtitleArgs (BUG-104 单趟多轨)', () {
@@ -826,89 +866,97 @@ void main() {
       );
     });
 
-    test('extracts MULTIPLE embedded tracks in one pass when ffmpeg available',
-        () async {
-      bool ffmpegPresent;
-      try {
-        final ProcessResult v =
-            await Process.run(resolveFfmpegExecutable(), <String>['-version']);
-        ffmpegPresent = v.exitCode == 0;
-      } catch (_) {
-        ffmpegPresent = false;
-      }
-      if (!ffmpegPresent) {
-        // ignore: avoid_print
-        print('ffmpeg not present; skipping multi-subtitle extraction test');
-        return;
-      }
+    test(
+      'extracts MULTIPLE embedded tracks in one pass when ffmpeg available',
+      () async {
+        bool ffmpegPresent;
+        try {
+          final ProcessResult v = await Process.run(
+            resolveFfmpegExecutable(),
+            <String>['-version'],
+          );
+          ffmpegPresent = v.exitCode == 0;
+        } catch (_) {
+          ffmpegPresent = false;
+        }
+        if (!ffmpegPresent) {
+          // ignore: avoid_print
+          print('ffmpeg not present; skipping multi-subtitle extraction test');
+          return;
+        }
 
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_multisub_test');
-      addTearDown(() => dir.deleteSync(recursive: true));
-      final String srtA = '${dir.path}/a.srt';
-      final String srtB = '${dir.path}/b.srt';
-      final String video = '${dir.path}/twosubs.mkv';
-      final String ff = resolveFfmpegExecutable();
+        final Directory dir = Directory.systemTemp.createTempSync(
+          'hibiki_multisub_test',
+        );
+        addTearDown(() => dir.deleteSync(recursive: true));
+        final String srtA = '${dir.path}/a.srt';
+        final String srtB = '${dir.path}/b.srt';
+        final String video = '${dir.path}/twosubs.mkv';
+        final String ff = resolveFfmpegExecutable();
 
-      File(srtA).writeAsStringSync(
-        '1\n00:00:00,500 --> 00:00:02,000\n吾輩は猫である。\n',
-      );
-      File(srtB).writeAsStringSync(
-        '1\n00:00:00,500 --> 00:00:02,000\n名前はまだない。\n',
-      );
-      // 一个视频 + 两条字幕轨（相对序号 0/1）。
-      final ProcessResult mux = await Process.run(ff, <String>[
-        '-y',
-        '-f',
-        'lavfi',
-        '-i',
-        'color=black:s=64x64:d=5',
-        '-i',
-        srtA,
-        '-i',
-        srtB,
-        '-map',
-        '0:v',
-        '-map',
-        '1',
-        '-map',
-        '2',
-        '-c:v',
-        'libx264',
-        '-c:s',
-        'srt',
-        video,
-      ]);
-      expect(mux.exitCode, 0, reason: mux.stderr.toString());
+        File(
+          srtA,
+        ).writeAsStringSync('1\n00:00:00,500 --> 00:00:02,000\n吾輩は猫である。\n');
+        File(
+          srtB,
+        ).writeAsStringSync('1\n00:00:00,500 --> 00:00:02,000\n名前はまだない。\n');
+        // 一个视频 + 两条字幕轨（相对序号 0/1）。
+        final ProcessResult mux = await Process.run(ff, <String>[
+          '-y',
+          '-f',
+          'lavfi',
+          '-i',
+          'color=black:s=64x64:d=5',
+          '-i',
+          srtA,
+          '-i',
+          srtB,
+          '-map',
+          '0:v',
+          '-map',
+          '1',
+          '-map',
+          '2',
+          '-c:v',
+          'libx264',
+          '-c:s',
+          'srt',
+          video,
+        ]);
+        expect(mux.exitCode, 0, reason: mux.stderr.toString());
 
-      final String out0 = '${dir.path}/sub_0.srt';
-      final String out1 = '${dir.path}/sub_1.srt';
-      final Map<int, String> written = await extractEmbeddedSubtitlesViaFfmpeg(
-        inputPath: video,
-        outputs: <int, String>{0: out0, 1: out1},
-      );
+        final String out0 = '${dir.path}/sub_0.srt';
+        final String out1 = '${dir.path}/sub_1.srt';
+        final Map<int, String> written =
+            await extractEmbeddedSubtitlesViaFfmpeg(
+              inputPath: video,
+              outputs: <int, String>{0: out0, 1: out1},
+            );
 
-      // 单趟抽出两条轨，二者都落盘且非空。
-      expect(written.keys.toSet(), <int>{0, 1});
-      expect(File(out0).existsSync(), isTrue);
-      expect(File(out0).lengthSync(), greaterThan(0));
-      expect(File(out1).existsSync(), isTrue);
-      expect(File(out1).lengthSync(), greaterThan(0));
-    });
+        // 单趟抽出两条轨，二者都落盘且非空。
+        expect(written.keys.toSet(), <int>{0, 1});
+        expect(File(out0).existsSync(), isTrue);
+        expect(File(out0).lengthSync(), greaterThan(0));
+        expect(File(out1).existsSync(), isTrue);
+        expect(File(out1).lengthSync(), greaterThan(0));
+      },
+    );
   });
 
   group('extractEmbeddedSubtitlesViaFfmpeg 毒轨逐轨回退 (BUG-863)', () {
     tearDown(() => ffmpeg.setFfmpegBackendForTesting(null));
 
     test('单遍被一条 output-open 毒轨整批击穿时，逐轨回退保住其余好轨', () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_poison_test');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_poison_test',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final String video = '${dir.path}/in.mkv';
       // 只需存在（extractEmbeddedSubtitlesViaFfmpeg 用 existsSync 门控输入）。
       File(video).writeAsStringSync('fake-container');
-      final _FakePoisonFfmpegBackend fake =
-          _FakePoisonFfmpegBackend(poisonIndex: 1);
+      final _FakePoisonFfmpegBackend fake = _FakePoisonFfmpegBackend(
+        poisonIndex: 1,
+      );
       ffmpeg.setFfmpegBackendForTesting(fake);
 
       final Map<int, String> outputs = <int, String>{
@@ -928,8 +976,11 @@ void main() {
       expect(File(outputs[1]!).existsSync(), isFalse);
 
       // 第一趟单遍全轨（含毒轨→整批失败），随后对 3 条缺失轨各跑一次逐轨。
-      expect(fake.passes.first.keys.toSet(), <int>{0, 1, 2},
-          reason: '第一趟必须是单遍全轨');
+      expect(fake.passes.first.keys.toSet(), <int>{
+        0,
+        1,
+        2,
+      }, reason: '第一趟必须是单遍全轨');
       expect(fake.passes.length, 4, reason: '单遍 + 3 条逐轨回退');
       for (final Map<int, String> p in fake.passes.skip(1)) {
         expect(p.length, 1, reason: '回退每趟只抽一条轨');
@@ -937,13 +988,15 @@ void main() {
     });
 
     test('单遍全部成功时不触发逐轨回退（common path 零开销）', () async {
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_clean_test');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_clean_test',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final String video = '${dir.path}/in.mkv';
       File(video).writeAsStringSync('fake-container');
-      final _FakePoisonFfmpegBackend fake =
-          _FakePoisonFfmpegBackend(poisonIndex: -1); // 无毒轨
+      final _FakePoisonFfmpegBackend fake = _FakePoisonFfmpegBackend(
+        poisonIndex: -1,
+      ); // 无毒轨
       ffmpeg.setFfmpegBackendForTesting(fake);
 
       final Map<int, String> written = await extractEmbeddedSubtitlesViaFfmpeg(
@@ -973,8 +1026,7 @@ void main() {
       dir.deleteSync(recursive: true);
     });
 
-    test(
-        'one undecodable track no longer sinks the good tracks '
+    test('one undecodable track no longer sinks the good tracks '
         '(batch EINVAL → per-track fallback)', () async {
       // idx 0/2 decodable (subrip/ass); idx 1 undecodable by the bundled
       // min-ffmpeg (ttml / eia_608 / teletext …). The single batch command
@@ -1001,41 +1053,48 @@ void main() {
       expect(File(out1).existsSync(), isFalse);
     });
 
-    test('all-good batch succeeds in a single pass (no per-track fallback)',
-        () async {
-      final _MinBuildFakeFfmpegBackend backend =
-          _MinBuildFakeFfmpegBackend(decodableIndices: <int>{0, 1});
-      ffmpeg.setFfmpegBackendForTesting(backend);
-      final String out0 = '${dir.path}/sub_0.srt';
-      final String out1 = '${dir.path}/sub_1.srt';
+    test(
+      'all-good batch succeeds in a single pass (no per-track fallback)',
+      () async {
+        final _MinBuildFakeFfmpegBackend backend = _MinBuildFakeFfmpegBackend(
+          decodableIndices: <int>{0, 1},
+        );
+        ffmpeg.setFfmpegBackendForTesting(backend);
+        final String out0 = '${dir.path}/sub_0.srt';
+        final String out1 = '${dir.path}/sub_1.srt';
 
-      final Map<int, String> written = await extractEmbeddedSubtitlesViaFfmpeg(
-        inputPath: video,
-        outputs: <int, String>{0: out0, 1: out1},
-      );
+        final Map<int, String> written =
+            await extractEmbeddedSubtitlesViaFfmpeg(
+              inputPath: video,
+              outputs: <int, String>{0: out0, 1: out1},
+            );
 
-      expect(written.keys.toSet(), <int>{0, 1});
-      // Exactly one ffmpeg invocation (the batch); fallback must not fire.
-      expect(backend.runCount, 1);
-    });
+        expect(written.keys.toSet(), <int>{0, 1});
+        // Exactly one ffmpeg invocation (the batch); fallback must not fire.
+        expect(backend.runCount, 1);
+      },
+    );
 
-    test('every track undecodable → empty result and no output files',
-        () async {
-      ffmpeg.setFfmpegBackendForTesting(
-        _MinBuildFakeFfmpegBackend(decodableIndices: const <int>{}),
-      );
-      final String out0 = '${dir.path}/sub_0.srt';
-      final String out1 = '${dir.path}/sub_1.srt';
+    test(
+      'every track undecodable → empty result and no output files',
+      () async {
+        ffmpeg.setFfmpegBackendForTesting(
+          _MinBuildFakeFfmpegBackend(decodableIndices: const <int>{}),
+        );
+        final String out0 = '${dir.path}/sub_0.srt';
+        final String out1 = '${dir.path}/sub_1.srt';
 
-      final Map<int, String> written = await extractEmbeddedSubtitlesViaFfmpeg(
-        inputPath: video,
-        outputs: <int, String>{0: out0, 1: out1},
-      );
+        final Map<int, String> written =
+            await extractEmbeddedSubtitlesViaFfmpeg(
+              inputPath: video,
+              outputs: <int, String>{0: out0, 1: out1},
+            );
 
-      expect(written, isEmpty);
-      expect(File(out0).existsSync(), isFalse);
-      expect(File(out1).existsSync(), isFalse);
-    });
+        expect(written, isEmpty);
+        expect(File(out0).existsSync(), isFalse);
+        expect(File(out1).existsSync(), isFalse);
+      },
+    );
   });
 
   group('extractEmbeddedCoverViaFfmpeg', () {
@@ -1052,8 +1111,10 @@ void main() {
     test('extracts an embedded cover when ffmpeg is available', () async {
       bool ffmpegPresent;
       try {
-        final ProcessResult v =
-            await Process.run(resolveFfmpegExecutable(), <String>['-version']);
+        final ProcessResult v = await Process.run(
+          resolveFfmpegExecutable(),
+          <String>['-version'],
+        );
         ffmpegPresent = v.exitCode == 0;
       } catch (_) {
         ffmpegPresent = false;
@@ -1064,8 +1125,9 @@ void main() {
         return;
       }
 
-      final Directory dir =
-          Directory.systemTemp.createTempSync('hibiki_cover_test');
+      final Directory dir = Directory.systemTemp.createTempSync(
+        'hibiki_cover_test',
+      );
       addTearDown(() => dir.deleteSync(recursive: true));
       final String cover = '${dir.path}/cover.png';
       final String audio = '${dir.path}/withcover.m4a';
@@ -1180,11 +1242,16 @@ void main() {
     // 再把 0 哨兵（=不限制）传给 GIF 抽取。截图侧的 0（不缩放）不受此约束。
     test('BUG-1039：没有任何图片档把 GIF 参数留成 0（不限制）哨兵', () {
       for (int t = 0; t < MiningMediaCompression.imageTierCount; t++) {
-        final MiningMediaCompression c =
-            MiningMediaCompression.resolve(imageTier: t, audioTier: 0);
+        final MiningMediaCompression c = MiningMediaCompression.resolve(
+          imageTier: t,
+          audioTier: 0,
+        );
         expect(c.gifFps, greaterThan(0), reason: '档 $t 的 gifFps 不得为 0（源帧率）');
-        expect(c.gifWidth, greaterThan(0),
-            reason: '档 $t 的 gifWidth 不得为 0（源分辨率）');
+        expect(
+          c.gifWidth,
+          greaterThan(0),
+          reason: '档 $t 的 gifWidth 不得为 0（源分辨率）',
+        );
       }
     });
 
@@ -1192,13 +1259,19 @@ void main() {
       // 原片档 maxLongEdge=0 是「不缩放」哨兵（语义上最大），单独排除在截图数值比较外；
       // GIF 侧 BUG-1039 后全档都是有限值，故 gif 参数覆盖到满档一起校单调。
       for (int t = 1; t < MiningMediaCompression.imageTierCount; t++) {
-        final MiningMediaCompression lo =
-            MiningMediaCompression.resolve(imageTier: t - 1, audioTier: 0);
-        final MiningMediaCompression hi =
-            MiningMediaCompression.resolve(imageTier: t, audioTier: 0);
+        final MiningMediaCompression lo = MiningMediaCompression.resolve(
+          imageTier: t - 1,
+          audioTier: 0,
+        );
+        final MiningMediaCompression hi = MiningMediaCompression.resolve(
+          imageTier: t,
+          audioTier: 0,
+        );
         if (t < MiningMediaCompression.imageTierMax) {
-          expect(hi.screenshotMaxLongEdge,
-              greaterThanOrEqualTo(lo.screenshotMaxLongEdge));
+          expect(
+            hi.screenshotMaxLongEdge,
+            greaterThanOrEqualTo(lo.screenshotMaxLongEdge),
+          );
         }
         expect(hi.gifWidth, greaterThanOrEqualTo(lo.gifWidth));
         expect(hi.gifFps, greaterThanOrEqualTo(lo.gifFps));
@@ -1206,15 +1279,21 @@ void main() {
     });
 
     test('resolve 越界档位自动夹取（防损坏偏好值）', () {
-      final MiningMediaCompression under =
-          MiningMediaCompression.resolve(imageTier: -5, audioTier: -3);
-      final MiningMediaCompression zero =
-          MiningMediaCompression.resolve(imageTier: 0, audioTier: 0);
+      final MiningMediaCompression under = MiningMediaCompression.resolve(
+        imageTier: -5,
+        audioTier: -3,
+      );
+      final MiningMediaCompression zero = MiningMediaCompression.resolve(
+        imageTier: 0,
+        audioTier: 0,
+      );
       expect(under.gifWidth, zero.gifWidth);
       expect(under.audioBitrate, zero.audioBitrate);
 
-      final MiningMediaCompression over =
-          MiningMediaCompression.resolve(imageTier: 99, audioTier: 99);
+      final MiningMediaCompression over = MiningMediaCompression.resolve(
+        imageTier: 99,
+        audioTier: 99,
+      );
       final MiningMediaCompression top = MiningMediaCompression.resolve(
         imageTier: MiningMediaCompression.imageTierMax,
         audioTier: MiningMediaCompression.audioTierCount - 1,
@@ -1254,8 +1333,11 @@ void main() {
       final String filter = args[fi + 1];
       expect(filter, isNot(contains('fps=')));
       expect(filter, isNot(contains('scale=')));
-      expect(filter, startsWith('split[s0][s1]'),
-          reason: '原片档滤镜链只剩 palettegen/paletteuse 双遍');
+      expect(
+        filter,
+        startsWith('split[s0][s1]'),
+        reason: '原片档滤镜链只剩 palettegen/paletteuse 双遍',
+      );
       expect(filter, contains('palettegen'));
     });
   });
@@ -1270,15 +1352,13 @@ class _FakeFfmpegBackend implements ffmpeg.FfmpegBackend {
   Future<ffmpeg.FfmpegRunResult> run(
     List<String> args,
     Duration timeout,
-  ) async =>
-      result;
+  ) async => result;
 
   @override
   Future<ffmpeg.FfmpegRunResult> runProbe(
     List<String> args,
     Duration timeout,
-  ) async =>
-      result;
+  ) async => result;
 }
 
 /// Simulates Hibiki's bundled `--disable-everything` min-ffmpeg for BUG-863.
@@ -1315,8 +1395,9 @@ class _MinBuildFakeFfmpegBackend implements ffmpeg.FfmpegBackend {
       );
     }
     maps.forEach((int idx, String out) {
-      File(out)
-          .writeAsStringSync('1\n00:00:00,000 --> 00:00:01,000\ncue $idx\n');
+      File(
+        out,
+      ).writeAsStringSync('1\n00:00:00,000 --> 00:00:01,000\ncue $idx\n');
     });
     return const ffmpeg.FfmpegRunResult(returnCode: 0, output: '');
   }
@@ -1325,8 +1406,7 @@ class _MinBuildFakeFfmpegBackend implements ffmpeg.FfmpegBackend {
   Future<ffmpeg.FfmpegRunResult> runProbe(
     List<String> args,
     Duration timeout,
-  ) async =>
-      const ffmpeg.FfmpegRunResult(returnCode: 0, output: '');
+  ) async => const ffmpeg.FfmpegRunResult(returnCode: 0, output: '');
 }
 
 class _InvalidBundledThenPathFfmpegBackend implements ffmpeg.FfmpegBackend {
@@ -1338,21 +1418,14 @@ class _InvalidBundledThenPathFfmpegBackend implements ffmpeg.FfmpegBackend {
   final List<String> attemptedExecutables = <String>[];
 
   @override
-  Future<ffmpeg.FfmpegRunResult> run(
-    List<String> args,
-    Duration timeout,
-  ) {
+  Future<ffmpeg.FfmpegRunResult> run(List<String> args, Duration timeout) {
     return ffmpeg.runCliFfmpegForTesting(
       override: null,
       bundledPath: bundledPath,
       isWindows: true,
       args: args,
       timeout: timeout,
-      runner: (
-        String executable,
-        List<String> args,
-        Duration timeout,
-      ) async {
+      runner: (String executable, List<String> args, Duration timeout) async {
         attemptedExecutables.add(executable);
         if (executable == bundledPath) {
           return const ffmpeg.FfmpegRunResult(

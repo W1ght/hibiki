@@ -67,7 +67,7 @@ class StorageUsageView extends ConsumerStatefulWidget {
   /// 展示什么就删什么，活库/侧车/待恢复副本结构上删不到）。返回逐文件容错的
   /// 结果——部分文件被占用时其余照删，失败清单原样带给用户。
   final Future<DatabaseSnapshotDeletionResult> Function()
-      deleteDatabaseSnapshots;
+  deleteDatabaseSnapshots;
 
   /// 删除 [StorageEntryKind.derivedFile] 明细指向的路径（文件或目录）。
   ///
@@ -143,22 +143,22 @@ class _StorageUsageViewState extends ConsumerState<StorageUsageView> {
     _scanSub = widget.service
         .scanCategories(books: books, dictionaryNames: dictNames)
         .listen(
-      (StorageCategoryUsage usage) {
-        if (!mounted || epoch != _scanEpoch) return;
-        setState(() => _usage[usage.id] = usage);
-      },
-      onError: (Object e) {
-        debugPrint('[storage] scan failed: $e');
-        if (mounted && epoch == _scanEpoch) {
-          setState(() => _scanning = false);
-        }
-      },
-      onDone: () {
-        if (mounted && epoch == _scanEpoch) {
-          setState(() => _scanning = false);
-        }
-      },
-    );
+          (StorageCategoryUsage usage) {
+            if (!mounted || epoch != _scanEpoch) return;
+            setState(() => _usage[usage.id] = usage);
+          },
+          onError: (Object e) {
+            debugPrint('[storage] scan failed: $e');
+            if (mounted && epoch == _scanEpoch) {
+              setState(() => _scanning = false);
+            }
+          },
+          onDone: () {
+            if (mounted && epoch == _scanEpoch) {
+              setState(() => _scanning = false);
+            }
+          },
+        );
   }
 
   /// 总览之外的附加信息：Anime4K 预设占用（决定着色器类目行给不给删除按钮）
@@ -171,8 +171,8 @@ class _StorageUsageViewState extends ConsumerState<StorageUsageView> {
       debugPrint('[storage] anime4k size failed: $e');
     }
     try {
-      final List<BundledComponentUsage> bundled =
-          await widget.service.scanBundledComponents();
+      final List<BundledComponentUsage> bundled = await widget.service
+          .scanBundledComponents();
       if (mounted) setState(() => _bundled = bundled);
     } catch (e) {
       debugPrint('[storage] bundled scan failed: $e');
@@ -205,25 +205,23 @@ class _StorageUsageViewState extends ConsumerState<StorageUsageView> {
   /// 条目显示名：快照聚合条目按文件数翻译，其余用服务层给的 label。
   String _entryTitle(StorageEntryUsage entry) =>
       entry.kind == StorageEntryKind.databaseSnapshots
-          ? t.storage_entry_database_snapshots_label(n: entry.paths.length)
-          : entry.kind == StorageEntryKind.backupArchives
-              ? t.storage_entry_backups_label(n: entry.paths.length)
-          : entry.label;
+      ? t.storage_entry_database_snapshots_label(n: entry.paths.length)
+      : entry.kind == StorageEntryKind.backupArchives
+      ? t.storage_entry_backups_label(n: entry.paths.length)
+      : entry.label;
 
   Future<void> _deleteEntry(StorageEntryUsage entry) async {
     if (_busyEntryId != null) return;
     final String body = switch (entry.kind) {
       StorageEntryKind.book ||
-      StorageEntryKind.srtBook =>
-        t.storage_entry_delete_book_confirm_body,
+      StorageEntryKind.srtBook => t.storage_entry_delete_book_confirm_body,
       StorageEntryKind.dictionary =>
         t.storage_entry_delete_dictionary_confirm_body,
       StorageEntryKind.databaseSnapshots =>
         t.storage_entry_delete_database_snapshots_confirm_body,
       StorageEntryKind.backupArchives =>
         t.storage_entry_delete_backups_confirm_body,
-      StorageEntryKind.derivedFile =>
-        t.storage_entry_delete_files_confirm_body,
+      StorageEntryKind.derivedFile => t.storage_entry_delete_files_confirm_body,
       StorageEntryKind.readOnly => throw StateError('read-only entry'),
     };
     if (!await _confirmDelete(_entryTitle(entry), body)) return;
@@ -244,8 +242,8 @@ class _StorageUsageViewState extends ConsumerState<StorageUsageView> {
           failure = await widget.deleteDictionary(entry.id);
           changed = failure == null;
         case StorageEntryKind.databaseSnapshots:
-          final DatabaseSnapshotDeletionResult result =
-              await widget.deleteDatabaseSnapshots();
+          final DatabaseSnapshotDeletionResult result = await widget
+              .deleteDatabaseSnapshots();
           changed = result.deleted.isNotEmpty;
           failure = _snapshotDeleteFailureReason(result);
         case StorageEntryKind.backupArchives:
@@ -276,7 +274,8 @@ class _StorageUsageViewState extends ConsumerState<StorageUsageView> {
   /// (+还有几个)」。不新增 i18n key，直接填进既有的
   /// `storage_entry_delete_failed(reason:)` 模板。
   static String? _snapshotDeleteFailureReason(
-      final DatabaseSnapshotDeletionResult result) {
+    final DatabaseSnapshotDeletionResult result,
+  ) {
     if (!result.hasFailures) return null;
     final MapEntry<String, String> first = result.failures.entries.first;
     final int rest = result.failures.length - 1;
@@ -322,21 +321,21 @@ class _StorageUsageViewState extends ConsumerState<StorageUsageView> {
 
   static const Map<StorageCategoryId, IconData> _categoryIcons =
       <StorageCategoryId, IconData>{
-    StorageCategoryId.books: Icons.menu_book_outlined,
-    StorageCategoryId.dictionaries: Icons.translate_outlined,
-    StorageCategoryId.videoDownloads: Icons.movie_outlined,
-    StorageCategoryId.covers: Icons.image_outlined,
-    StorageCategoryId.subtitles: Icons.subtitles_outlined,
-    StorageCategoryId.shaders: Icons.auto_awesome_outlined,
-    StorageCategoryId.customFonts: Icons.font_download_outlined,
-    StorageCategoryId.web: Icons.public_outlined,
-    StorageCategoryId.exports: Icons.output_outlined,
-    StorageCategoryId.backups: Icons.backup_outlined,
-    StorageCategoryId.database: Icons.storage_outlined,
-    StorageCategoryId.ocrModels: Icons.document_scanner_outlined,
-    StorageCategoryId.cache: Icons.cached_outlined,
-    StorageCategoryId.other: Icons.more_horiz_outlined,
-  };
+        StorageCategoryId.books: Icons.menu_book_outlined,
+        StorageCategoryId.dictionaries: Icons.translate_outlined,
+        StorageCategoryId.videoDownloads: Icons.movie_outlined,
+        StorageCategoryId.covers: Icons.image_outlined,
+        StorageCategoryId.subtitles: Icons.subtitles_outlined,
+        StorageCategoryId.shaders: Icons.auto_awesome_outlined,
+        StorageCategoryId.customFonts: Icons.font_download_outlined,
+        StorageCategoryId.web: Icons.public_outlined,
+        StorageCategoryId.exports: Icons.output_outlined,
+        StorageCategoryId.backups: Icons.backup_outlined,
+        StorageCategoryId.database: Icons.storage_outlined,
+        StorageCategoryId.ocrModels: Icons.document_scanner_outlined,
+        StorageCategoryId.cache: Icons.cached_outlined,
+        StorageCategoryId.other: Icons.more_horiz_outlined,
+      };
 
   String _categoryTitle(StorageCategoryId id) {
     switch (id) {
@@ -386,8 +385,10 @@ class _StorageUsageViewState extends ConsumerState<StorageUsageView> {
   }
 
   Widget _buildOverviewSection() {
-    final int total = _usage.values
-        .fold<int>(0, (int sum, StorageCategoryUsage u) => sum + u.bytes);
+    final int total = _usage.values.fold<int>(
+      0,
+      (int sum, StorageCategoryUsage u) => sum + u.bytes,
+    );
     return AdaptiveSettingsSection(
       title: t.storage_overview_section,
       children: <Widget>[
@@ -464,8 +465,8 @@ class _StorageUsageViewState extends ConsumerState<StorageUsageView> {
         ),
         onTap: expandable
             ? () => setState(() {
-                  if (!_expanded.add(id)) _expanded.remove(id);
-                })
+                if (!_expanded.add(id)) _expanded.remove(id);
+              })
             : null,
       ),
       if (expandable && expanded) ..._buildEntryRows(usage),
@@ -476,12 +477,16 @@ class _StorageUsageViewState extends ConsumerState<StorageUsageView> {
     // 可删性由**条目 kind** 决定（书/词典/数据库快照残留各接自己的删除原语）；
     // readOnly 条目是磁盘子项，删它就是裸 `Directory.delete`——会绕过墓碑/引用
     // 护栏，也可能删掉主库文件，故只读展示。
-    final List<StorageEntryUsage> visible =
-        usage.entries.take(kMaxVisibleEntries).toList(growable: false);
-    final List<StorageEntryUsage> rest =
-        usage.entries.skip(kMaxVisibleEntries).toList(growable: false);
-    final int restBytes =
-        rest.fold<int>(0, (int sum, StorageEntryUsage e) => sum + e.bytes);
+    final List<StorageEntryUsage> visible = usage.entries
+        .take(kMaxVisibleEntries)
+        .toList(growable: false);
+    final List<StorageEntryUsage> rest = usage.entries
+        .skip(kMaxVisibleEntries)
+        .toList(growable: false);
+    final int restBytes = rest.fold<int>(
+      0,
+      (int sum, StorageEntryUsage e) => sum + e.bytes,
+    );
     return <Widget>[
       for (final StorageEntryUsage entry in visible)
         FushiListItem(
@@ -493,32 +498,34 @@ class _StorageUsageViewState extends ConsumerState<StorageUsageView> {
             entry.externalPaths.isEmpty
                 ? formatStorageBytes(entry.bytes)
                 : '${formatStorageBytes(entry.bytes)} · '
-                    '${t.storage_entry_external_audio_hint}',
+                      '${t.storage_entry_external_audio_hint}',
           ),
           padding: const EdgeInsetsDirectional.only(start: 32, end: 8),
           density: FushiListDensity.compact,
           trailing: entry.kind == StorageEntryKind.readOnly
               ? null
               : (_busyEntryId == entry.id
-                  ? const SizedBox(
-                      width: 16,
-                      height: 16,
-                      child: CircularProgressIndicator(strokeWidth: 2),
-                    )
-                  : IconButton(
-                      tooltip: t.dialog_delete,
-                      icon: const Icon(Icons.delete_outline, size: 18),
-                      onPressed: _busyEntryId != null
-                          ? null
-                          : () => _deleteEntry(entry),
-                    )),
+                    ? const SizedBox(
+                        width: 16,
+                        height: 16,
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      )
+                    : IconButton(
+                        tooltip: t.dialog_delete,
+                        icon: const Icon(Icons.delete_outline, size: 18),
+                        onPressed: _busyEntryId != null
+                            ? null
+                            : () => _deleteEntry(entry),
+                      )),
         ),
       if (rest.isNotEmpty)
         FushiListItem(
-          title: Text(t.storage_entry_more_rest(
-            n: rest.length,
-            size: formatStorageBytes(restBytes),
-          )),
+          title: Text(
+            t.storage_entry_more_rest(
+              n: rest.length,
+              size: formatStorageBytes(restBytes),
+            ),
+          ),
           padding: const EdgeInsetsDirectional.only(start: 32, end: 8),
           density: FushiListDensity.compact,
         ),

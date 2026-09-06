@@ -102,11 +102,11 @@ mixin CollectionDetailShared<T extends StatefulWidget> on State<T> {
       ],
       builder: (BuildContext context, MenuController controller, Widget? _) =>
           IconButton(
-        tooltip: t.sort_by,
-        icon: const Icon(Icons.sort),
-        onPressed: () =>
-            controller.isOpen ? controller.close() : controller.open(),
-      ),
+            tooltip: t.sort_by,
+            icon: const Icon(Icons.sort),
+            onPressed: () =>
+                controller.isOpen ? controller.close() : controller.open(),
+          ),
     );
   }
 
@@ -133,14 +133,14 @@ mixin CollectionDetailShared<T extends StatefulWidget> on State<T> {
   Future<bool> confirmDetailRemoveMember() async {
     final FushiDestructiveConfirmResult? result =
         await showAppDialog<FushiDestructiveConfirmResult>(
-      context: context,
-      builder: (_) => FushiDestructiveConfirmDialog(
-        title: t.collection_remove_member,
-        message: t.collection_remove_member_confirm,
-        confirmLabel: t.collection_remove_member,
-        leadingIcon: Icons.remove_circle_outline,
-      ),
-    );
+          context: context,
+          builder: (_) => FushiDestructiveConfirmDialog(
+            title: t.collection_remove_member,
+            message: t.collection_remove_member_confirm,
+            confirmLabel: t.collection_remove_member,
+            leadingIcon: Icons.remove_circle_outline,
+          ),
+        );
     return result != null;
   }
 }

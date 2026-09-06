@@ -28,67 +28,98 @@ void main() {
   }
 
   group('YouTube 外挂音轨早于 seek/play 不变量 (TODO-1280)', () {
-    final String ctrl =
-        read('lib/src/media/video/video_player_controller.dart');
+    final String ctrl = read(
+      'lib/src/media/video/video_player_controller.dart',
+    );
 
     test('load() 有 externalAudioTrackUrl 参数（音轨 URL 下沉进 load）', () {
-      expect(ctrl.contains('String? externalAudioTrackUrl'), isTrue,
-          reason:
-              'load() 必须接收 externalAudioTrackUrl，才能在 load 内 seek/play 之前外挂');
+      expect(
+        ctrl.contains('String? externalAudioTrackUrl'),
+        isTrue,
+        reason: 'load() 必须接收 externalAudioTrackUrl，才能在 load 内 seek/play 之前外挂',
+      );
     });
 
     test('load() 内经 AudioTrack.uri 外挂 externalAudioTrackUrl', () {
-      expect(ctrl.contains('AudioTrack.uri(externalAudioTrackUrl)'), isTrue,
-          reason:
-              '必须用 AudioTrack.uri(externalAudioTrackUrl)（libmpv audio-add）外挂音轨');
+      expect(
+        ctrl.contains('AudioTrack.uri(externalAudioTrackUrl)'),
+        isTrue,
+        reason:
+            '必须用 AudioTrack.uri(externalAudioTrackUrl)（libmpv audio-add）外挂音轨',
+      );
     });
 
     test('外挂音轨 (audio-add) 出现在恢复 seek 与 play() 之前', () {
-      final int attachAt =
-          ctrl.indexOf('AudioTrack.uri(externalAudioTrackUrl)');
-      final int seekAt =
-          ctrl.indexOf('player.seek(Duration(milliseconds: resolvedStartMs))');
+      final int attachAt = ctrl.indexOf(
+        'AudioTrack.uri(externalAudioTrackUrl)',
+      );
+      final int seekAt = ctrl.indexOf(
+        'player.seek(Duration(milliseconds: resolvedStartMs))',
+      );
       final int playAt = ctrl.indexOf('await player.play();');
       expect(attachAt, greaterThanOrEqualTo(0), reason: '找不到外挂音轨调用');
       expect(seekAt, greaterThanOrEqualTo(0), reason: '找不到恢复 seek 调用');
-      expect(playAt, greaterThanOrEqualTo(0),
-          reason: '找不到 autoPlay 的 play() 调用');
-      expect(attachAt, lessThan(seekAt),
-          reason: '外挂音轨必须在恢复 seek 之前，seek 才能把音频同步到断点位置');
-      expect(attachAt, lessThan(playAt),
-          reason: '外挂音轨必须在 play() 之前，否则播放已开始、新加音频不会自动 seek → 无声');
+      expect(
+        playAt,
+        greaterThanOrEqualTo(0),
+        reason: '找不到 autoPlay 的 play() 调用',
+      );
+      expect(
+        attachAt,
+        lessThan(seekAt),
+        reason: '外挂音轨必须在恢复 seek 之前，seek 才能把音频同步到断点位置',
+      );
+      expect(
+        attachAt,
+        lessThan(playAt),
+        reason: '外挂音轨必须在 play() 之前，否则播放已开始、新加音频不会自动 seek → 无声',
+      );
     });
 
     test('外挂音轨在 http-header-fields 注入之后（audio-only 流同需 UA 防 403）', () {
       final int headerAt = ctrl.indexOf('applyHttpHeaderFieldsToPlayer');
-      final int attachAt =
-          ctrl.indexOf('AudioTrack.uri(externalAudioTrackUrl)');
+      final int attachAt = ctrl.indexOf(
+        'AudioTrack.uri(externalAudioTrackUrl)',
+      );
       expect(headerAt, greaterThanOrEqualTo(0));
-      expect(attachAt, greaterThan(headerAt),
-          reason:
-              'audio-only 流经 googlevideo，须在 http-header-fields 全局属性设好后再 audio-add');
+      expect(
+        attachAt,
+        greaterThan(headerAt),
+        reason:
+            'audio-only 流经 googlevideo，须在 http-header-fields 全局属性设好后再 audio-add',
+      );
     });
 
     test('旧的 play 之后外挂路径已移除（不得再暴露 setExternalAudioTrack）', () {
-      expect(ctrl.contains('Future<void> setExternalAudioTrack('), isFalse,
-          reason: 'setExternalAudioTrack 是 load 返回后（play 已开始）才外挂的错误路径，'
-              '已下沉进 load，必须删除以杜绝再次误用');
+      expect(
+        ctrl.contains('Future<void> setExternalAudioTrack('),
+        isFalse,
+        reason:
+            'setExternalAudioTrack 是 load 返回后（play 已开始）才外挂的错误路径，'
+            '已下沉进 load，必须删除以杜绝再次误用',
+      );
     });
   });
 
   group('页面按新契约透传音轨 URL、不再 load 后外挂 (TODO-1280)', () {
-    final String page =
-        read('lib/src/pages/implementations/video_fushi_page.dart');
+    final String page = read(
+      'lib/src/pages/implementations/video_fushi_page.dart',
+    );
 
     test('远端 YouTube load 把 audioStreamUrl 透传给 externalAudioTrackUrl', () {
       expect(
-          page.contains('externalAudioTrackUrl: urls.audioStreamUrl'), isTrue,
-          reason: '页面必须把 audio-only 流 URL 透传进 _applyLoad→load 在 seek/play 前外挂');
+        page.contains('externalAudioTrackUrl: urls.audioStreamUrl'),
+        isTrue,
+        reason: '页面必须把 audio-only 流 URL 透传进 _applyLoad→load 在 seek/play 前外挂',
+      );
     });
 
     test('页面不再在 load 返回后调 setExternalAudioTrack（回归无声）', () {
-      expect(page.contains('setExternalAudioTrack('), isFalse,
-          reason: 'load 返回时 play 已开始，此时外挂音轨不会自动 seek 到当前位置 → 无声');
+      expect(
+        page.contains('setExternalAudioTrack('),
+        isFalse,
+        reason: 'load 返回时 play 已开始，此时外挂音轨不会自动 seek 到当前位置 → 无声',
+      );
     });
   });
 }

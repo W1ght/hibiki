@@ -55,8 +55,9 @@ class AggregateMergeService {
     final Map<K, int> out = Map<K, int>.from(local);
     remote.forEach((K key, int value) {
       final int? existing = out[key];
-      out[key] =
-          existing == null ? value : (existing > value ? existing : value);
+      out[key] = existing == null
+          ? value
+          : (existing > value ? existing : value);
     });
     return out;
   }
@@ -104,8 +105,10 @@ class AggregateMergeService {
   ) {
     final Map<String, StudyTombstoneRecord> out =
         <String, StudyTombstoneRecord>{};
-    for (final StudyTombstoneRecord t
-        in <StudyTombstoneRecord>[...local, ...remote]) {
+    for (final StudyTombstoneRecord t in <StudyTombstoneRecord>[
+      ...local,
+      ...remote,
+    ]) {
       final StudyTombstoneRecord? prev = out[t.key];
       if (prev == null || t.deletedAt > prev.deletedAt) out[t.key] = t;
     }
@@ -118,8 +121,9 @@ class AggregateMergeService {
   ///   （用户又读了 = 复活，且防「删除僵尸」反向把新段删掉）。
   static ({
     List<StudySegmentRecord> segments,
-    List<StudyTombstoneRecord> tombstones
-  }) arbitrateStudySegments({
+    List<StudyTombstoneRecord> tombstones,
+  })
+  arbitrateStudySegments({
     required Iterable<StudySegmentRecord> union,
     required Map<String, StudyTombstoneRecord> tombstones,
   }) {
@@ -207,8 +211,10 @@ class AggregateMergeService {
       absorb(s);
     }
     final List<FavoriteSentence> out = byContent.values.toList()
-      ..sort((FavoriteSentence a, FavoriteSentence b) =>
-          b.createdAt.compareTo(a.createdAt));
+      ..sort(
+        (FavoriteSentence a, FavoriteSentence b) =>
+            b.createdAt.compareTo(a.createdAt),
+      );
     return out;
   }
 

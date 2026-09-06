@@ -26,7 +26,9 @@ void main() {
     if (tmp.existsSync()) {
       try {
         tmp.deleteSync(recursive: true);
-      } catch (_) {/* Windows 上偶发句柄延迟释放，不影响断言 */}
+      } catch (_) {
+        /* Windows 上偶发句柄延迟释放，不影响断言 */
+      }
     }
   });
 
@@ -35,69 +37,92 @@ void main() {
   /// + 数据可读」；sidecar 改名分支由改名循环对存在的文件逐个处理，close 后
   /// 是否残留 sidecar 不影响结论。
   Future<void> seedLegacyDb(Directory dir) async {
-    final FushiDatabase legacy =
-        FushiDatabase.atFile(p.join(dir.path, 'hibiki.db'));
-    await legacy.upsertPairedPeer(FushiPairedPeersCompanion.insert(
-      peerId: 'legacy-peer',
-      token: 'legacy-token',
-      pairedAtMs: 42,
-    ));
+    final FushiDatabase legacy = FushiDatabase.atFile(
+      p.join(dir.path, 'hibiki.db'),
+    );
+    await legacy.upsertPairedPeer(
+      FushiPairedPeersCompanion.insert(
+        peerId: 'legacy-peer',
+        token: 'legacy-token',
+        pairedAtMs: 42,
+      ),
+    );
     await legacy.close();
   }
 
-  test('opening a legacy dir renames hibiki.db(+sidecars) and keeps the data',
-      () async {
-    await seedLegacyDb(tmp);
-    expect(File(p.join(tmp.path, 'hibiki.db')).existsSync(), isTrue,
-        reason: 'seed 前提：旧名主库真实落盘');
+  test(
+    'opening a legacy dir renames hibiki.db(+sidecars) and keeps the data',
+    () async {
+      await seedLegacyDb(tmp);
+      expect(
+        File(p.join(tmp.path, 'hibiki.db')).existsSync(),
+        isTrue,
+        reason: 'seed 前提：旧名主库真实落盘',
+      );
 
-    final FushiDatabase db = FushiDatabase(tmp.path);
-    addTearDown(db.close);
-    final List<FushiPairedPeerRow> peers = await db.getPairedPeers();
-    expect(peers.single.peerId, 'legacy-peer', reason: '改名后旧数据必须原样可读');
-    expect(peers.single.token, 'legacy-token');
-    expect(peers.single.pairedAtMs, 42);
+      final FushiDatabase db = FushiDatabase(tmp.path);
+      addTearDown(db.close);
+      final List<FushiPairedPeerRow> peers = await db.getPairedPeers();
+      expect(peers.single.peerId, 'legacy-peer', reason: '改名后旧数据必须原样可读');
+      expect(peers.single.token, 'legacy-token');
+      expect(peers.single.pairedAtMs, 42);
 
-    expect(File(p.join(tmp.path, 'fushi.db')).existsSync(), isTrue,
-        reason: '主库已是新名');
-    for (final String legacyFile in <String>[
-      'hibiki.db',
-      'hibiki.db-wal',
-      'hibiki.db-shm',
-    ]) {
-      expect(File(p.join(tmp.path, legacyFile)).existsSync(), isFalse,
-          reason: '$legacyFile 必须整套改名走，零旧名残留');
-    }
-  });
+      expect(
+        File(p.join(tmp.path, 'fushi.db')).existsSync(),
+        isTrue,
+        reason: '主库已是新名',
+      );
+      for (final String legacyFile in <String>[
+        'hibiki.db',
+        'hibiki.db-wal',
+        'hibiki.db-shm',
+      ]) {
+        expect(
+          File(p.join(tmp.path, legacyFile)).existsSync(),
+          isFalse,
+          reason: '$legacyFile 必须整套改名走，零旧名残留',
+        );
+      }
+    },
+  );
 
-  test('an existing fushi.db is never clobbered by a leftover hibiki.db',
-      () async {
-    // 先造好新库（模拟已迁移安装），写一条行。
-    final FushiDatabase current = FushiDatabase(tmp.path);
-    await current.upsertPairedPeer(FushiPairedPeersCompanion.insert(
-      peerId: 'current-peer',
-      token: 'current-token',
-      pairedAtMs: 1,
-    ));
-    await current.close();
-    // 再放一个旧名残留（内容不同）。
-    final File stale = File(p.join(tmp.path, 'hibiki.db'))
-      ..writeAsStringSync('stale-not-a-db');
+  test(
+    'an existing fushi.db is never clobbered by a leftover hibiki.db',
+    () async {
+      // 先造好新库（模拟已迁移安装），写一条行。
+      final FushiDatabase current = FushiDatabase(tmp.path);
+      await current.upsertPairedPeer(
+        FushiPairedPeersCompanion.insert(
+          peerId: 'current-peer',
+          token: 'current-token',
+          pairedAtMs: 1,
+        ),
+      );
+      await current.close();
+      // 再放一个旧名残留（内容不同）。
+      final File stale = File(p.join(tmp.path, 'hibiki.db'))
+        ..writeAsStringSync('stale-not-a-db');
 
-    final FushiDatabase db = FushiDatabase(tmp.path);
-    addTearDown(db.close);
-    final List<FushiPairedPeerRow> peers = await db.getPairedPeers();
-    expect(peers.single.peerId, 'current-peer',
-        reason: 'fushi.db 已在时残留旧文件绝不能盖掉它');
-    expect(stale.existsSync(), isTrue, reason: '残留旧文件原样不动（不改名、不删除）');
-  });
+      final FushiDatabase db = FushiDatabase(tmp.path);
+      addTearDown(db.close);
+      final List<FushiPairedPeerRow> peers = await db.getPairedPeers();
+      expect(
+        peers.single.peerId,
+        'current-peer',
+        reason: 'fushi.db 已在时残留旧文件绝不能盖掉它',
+      );
+      expect(stale.existsSync(), isTrue, reason: '残留旧文件原样不动（不改名、不删除）');
+    },
+  );
 
-  test('a fresh dir creates fushi.db directly with no legacy artifacts',
-      () async {
-    final FushiDatabase db = FushiDatabase(tmp.path);
-    addTearDown(db.close);
-    expect(await db.getPairedPeers(), isEmpty);
-    expect(File(p.join(tmp.path, 'fushi.db')).existsSync(), isTrue);
-    expect(File(p.join(tmp.path, 'hibiki.db')).existsSync(), isFalse);
-  });
+  test(
+    'a fresh dir creates fushi.db directly with no legacy artifacts',
+    () async {
+      final FushiDatabase db = FushiDatabase(tmp.path);
+      addTearDown(db.close);
+      expect(await db.getPairedPeers(), isEmpty);
+      expect(File(p.join(tmp.path, 'fushi.db')).existsSync(), isTrue);
+      expect(File(p.join(tmp.path, 'hibiki.db')).existsSync(), isFalse);
+    },
+  );
 }

@@ -94,9 +94,15 @@ VideoPathRemap remapVideoBookPaths({
 }) {
   return VideoPathRemap(
     videoPath: remapMediaPath(videoPath, fromPath: fromPath, toPath: toPath),
-    subtitleSource:
-        remapMediaPath(subtitleSource, fromPath: fromPath, toPath: toPath),
-    secondarySubtitleSource: remapMediaPath(secondarySubtitleSource,
-        fromPath: fromPath, toPath: toPath),
+    subtitleSource: remapMediaPath(
+      subtitleSource,
+      fromPath: fromPath,
+      toPath: toPath,
+    ),
+    secondarySubtitleSource: remapMediaPath(
+      secondarySubtitleSource,
+      fromPath: fromPath,
+      toPath: toPath,
+    ),
   );
 }

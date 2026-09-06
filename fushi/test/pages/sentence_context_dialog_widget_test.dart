@@ -78,8 +78,10 @@ void main() {
     await open(tester);
     expect(find.text(t.popup_ctx_modal_title), findsOneWidget);
     // 计数「Selected 0」（初始无上下文）。
-    expect(find.text(t.popup_ctx_modal_count.replaceAll('%d', '0')),
-        findsOneWidget);
+    expect(
+      find.text(t.popup_ctx_modal_count.replaceAll('%d', '0')),
+      findsOneWidget,
+    );
     // 当前句用 Text.rich（三段：対する 高亮）。
     final Finder rich = find.byWidgetPredicate(
       (Widget w) =>
@@ -92,14 +94,21 @@ void main() {
 
   testWidgets('点「后加一句」调 setContext(0,1) 并刷新出后文', (WidgetTester tester) async {
     await open(tester);
-    await tester.tap(find.widgetWithText(OutlinedButton, t.popup_ctx_next_plus));
+    await tester.tap(
+      find.widgetWithText(OutlinedButton, t.popup_ctx_next_plus),
+    );
     await tester.pumpAndSettle();
     // contains 矩阵器对元素做深比较（List.contains 是引用等价，会误判）。
-    expect(setCalls, contains(equals(<int>[0, 1])),
-        reason: '后加一句必须以整体替换语义调 setContext(prev=0, next=1)');
+    expect(
+      setCalls,
+      contains(equals(<int>[0, 1])),
+      reason: '后加一句必须以整体替换语义调 setContext(prev=0, next=1)',
+    );
     // 计数涨到 1，后文出现。
-    expect(find.text(t.popup_ctx_modal_count.replaceAll('%d', '1')),
-        findsOneWidget);
+    expect(
+      find.text(t.popup_ctx_modal_count.replaceAll('%d', '1')),
+      findsOneWidget,
+    );
     expect(find.textContaining('后文0。'), findsOneWidget);
   });
 
@@ -118,14 +127,18 @@ void main() {
     stubNext = 1;
     await open(tester);
     // 先加一句后文（改成 下 2）。
-    await tester.tap(find.widgetWithText(OutlinedButton, t.popup_ctx_next_plus));
+    await tester.tap(
+      find.widgetWithText(OutlinedButton, t.popup_ctx_next_plus),
+    );
     await tester.pumpAndSettle();
     expect(setCalls, contains(equals(<int>[1, 2])));
     // 取消 → 还原到快照 (1,1)。
     await tester.tap(find.text(t.popup_ctx_cancel));
     await tester.pumpAndSettle();
-    expect(setCalls.last, <int>[1, 1],
-        reason: '取消必须调 setContext 还原到打开时的快照 (prev=1, next=1)');
+    expect(setCalls.last, <int>[
+      1,
+      1,
+    ], reason: '取消必须调 setContext 还原到打开时的快照 (prev=1, next=1)');
     expect(find.text(t.popup_ctx_modal_title), findsNothing);
     expect(confirmCalls, 0);
   });

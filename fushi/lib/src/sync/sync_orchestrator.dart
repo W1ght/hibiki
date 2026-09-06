@@ -312,8 +312,10 @@ class SyncRunReport {
     deletionCandidates.addAll(other.deletionCandidates);
     // 逐槽位取 max：两条通道的复核时刻各归各的轴，绝不折成一个标量（那会用一条
     // 通道的时刻去推进另一条通道的基线）。
-    other.deletionTombstonesHighWaterMsByScope
-        .forEach((String scopeId, int at) {
+    other.deletionTombstonesHighWaterMsByScope.forEach((
+      String scopeId,
+      int at,
+    ) {
       final int? prev = deletionTombstonesHighWaterMsByScope[scopeId];
       if (prev == null || at > prev) {
         deletionTombstonesHighWaterMsByScope[scopeId] = at;
@@ -329,22 +331,26 @@ class SyncRunReport {
   void noteError(String label, Object error) {
     errors.add('$label: $error');
     if (error is! SyncAuthError) return;
-    _addAuthFailure(SyncAuthFailure(
-      label: label,
-      kind: error.kind,
-      message: error.message,
-      serverReason: error.serverReason,
-    ));
+    _addAuthFailure(
+      SyncAuthFailure(
+        label: label,
+        kind: error.kind,
+        message: error.message,
+        serverReason: error.serverReason,
+      ),
+    );
   }
 
   /// 按（kind, message, serverReason）去重：一次 401 会让一轮里几百本书逐本
   /// 失败，用户只需要知道「凭据被拒了」一次。label 不进去重键（它只是
   /// 第一个撞上的现场），否则去重就形同虚设。
   void _addAuthFailure(SyncAuthFailure failure) {
-    final bool seen = authFailures.any((SyncAuthFailure f) =>
-        f.kind == failure.kind &&
-        f.message == failure.message &&
-        f.serverReason == failure.serverReason);
+    final bool seen = authFailures.any(
+      (SyncAuthFailure f) =>
+          f.kind == failure.kind &&
+          f.message == failure.message &&
+          f.serverReason == failure.serverReason,
+    );
     if (!seen) authFailures.add(failure);
   }
 }
@@ -447,13 +453,13 @@ class SyncOrchestrator {
     this.onLocalAudioImported,
     this.statsSyncMode = StatisticsSyncMode.merge,
     this.onProgress,
-  })  : _db = db,
-        _backend = backend,
-        _dictionaryResourceRoot = dictionaryResourceRoot,
-        _audioDatabaseRoot = audioDatabaseRoot,
-        _tempDir = tempDir,
-        _scope = syncChannelScopeOf(backend),
-        _packages = SyncAssetPackageService(db: db);
+  }) : _db = db,
+       _backend = backend,
+       _dictionaryResourceRoot = dictionaryResourceRoot,
+       _audioDatabaseRoot = audioDatabaseRoot,
+       _tempDir = tempDir,
+       _scope = syncChannelScopeOf(backend),
+       _packages = SyncAssetPackageService(db: db);
 
   final FushiDatabase _db;
   final SyncBackend _backend;
@@ -512,13 +518,15 @@ class SyncOrchestrator {
   }) {
     final cb = onProgress;
     if (cb == null) return;
-    cb(SyncProgress(
-      phase: phase,
-      itemIndex: itemIndex,
-      itemTotal: itemTotal,
-      title: title,
-      fileFraction: fileFraction,
-    ));
+    cb(
+      SyncProgress(
+        phase: phase,
+        itemIndex: itemIndex,
+        itemTotal: itemTotal,
+        title: title,
+        fileFraction: fileFraction,
+      ),
+    );
   }
 
   int _tmpCounter = 0;
@@ -598,28 +606,35 @@ class SyncOrchestrator {
     // 失效」降级成一条无操作性的杂项错误；且鉴权死了后续阶段本来也无法工作。
     List<SyncBookResult> bookResults = const <SyncBookResult>[];
     try {
-      bookResults = await SyncManager(
-        db: _db,
-        backend: _backend,
-        onContentProgress: (double f) => _emit(SyncPhase.readingData,
-            itemIndex: readingDone,
-            itemTotal: readingTotal,
-            title: readingTitle,
-            fileFraction: f),
-      ).syncAllBooks(
-        syncStats: syncStats,
-        statsSyncMode: statsSyncMode,
-        syncAudioBook: syncAudioBookPosition,
-        syncContent: managerSyncContent,
-        listing: listing,
-        onBookProgress: (int done, int total, String title) {
-          readingDone = done;
-          readingTotal = total;
-          readingTitle = title;
-          _emit(SyncPhase.readingData,
-              itemIndex: done, itemTotal: total, title: title);
-        },
-      );
+      bookResults =
+          await SyncManager(
+            db: _db,
+            backend: _backend,
+            onContentProgress: (double f) => _emit(
+              SyncPhase.readingData,
+              itemIndex: readingDone,
+              itemTotal: readingTotal,
+              title: readingTitle,
+              fileFraction: f,
+            ),
+          ).syncAllBooks(
+            syncStats: syncStats,
+            statsSyncMode: statsSyncMode,
+            syncAudioBook: syncAudioBookPosition,
+            syncContent: managerSyncContent,
+            listing: listing,
+            onBookProgress: (int done, int total, String title) {
+              readingDone = done;
+              readingTotal = total;
+              readingTitle = title;
+              _emit(
+                SyncPhase.readingData,
+                itemIndex: done,
+                itemTotal: total,
+                title: title,
+              );
+            },
+          );
     } on SyncAuthError {
       rethrow;
     } catch (e) {
@@ -712,8 +727,9 @@ class SyncOrchestrator {
     // 冷却窗（[_syncCooldownMs]）压制、整轮重试——即「同步没完成就丢弃中间态、下次
     // 启动再同步」。此前该时间戳写在 SyncManager.syncAllBooks 书阶段末尾（sweep 中途），
     // 书阶段后被打断的残缺同步会误记冷却、错误地压制下次重试。
-    await SyncRepository(_db)
-        .setLastSyncMs(_scope, DateTime.now().millisecondsSinceEpoch);
+    await SyncRepository(
+      _db,
+    ).setLastSyncMs(_scope, DateTime.now().millisecondsSinceEpoch);
 
     return report;
   }
@@ -727,10 +743,10 @@ class SyncOrchestrator {
   /// 维度同纪律）。删除不跨端传播；无 schema 变更。
   Future<void> _syncAggregate(SyncRunReport report) async {
     try {
-      await AggregateSyncService(_db, scope: _scope).sync(
-        store: _backend,
-        deviceId: deviceId,
-      );
+      await AggregateSyncService(
+        _db,
+        scope: _scope,
+      ).sync(store: _backend, deviceId: deviceId);
     } catch (e) {
       report.noteError('aggregate sync', e);
     }
@@ -749,8 +765,8 @@ class SyncOrchestrator {
       if (!await SyncRepository(_db).isInterconnectServiceConfigSyncEnabled()) {
         return;
       }
-      final InterconnectServiceConfigSnapshot? snapshot =
-          await backend.getRemoteServiceConfig();
+      final InterconnectServiceConfigSnapshot? snapshot = await backend
+          .getRemoteServiceConfig();
       if (snapshot == null) return;
       report.serviceConfigsImported += await snapshot.applyTo(_db);
     } catch (e) {
@@ -789,8 +805,7 @@ class SyncOrchestrator {
   Future<void> syncAggregateLiveForTest(
     SyncRunReport report,
     InterconnectSyncBackend backend,
-  ) =>
-      _syncAggregateLive(report, backend);
+  ) => _syncAggregateLive(report, backend);
 
   /// 合集双向同步（多端库联合视图 §2.3 任务4，云后端通道）。
   ///
@@ -853,8 +868,9 @@ class SyncOrchestrator {
 
   Future<void> syncCollections(SyncRunReport report) async {
     try {
-      final String ns =
-          await _backend.ensureNamespace(kSyncCollectionsNamespace);
+      final String ns = await _backend.ensureNamespace(
+        kSyncCollectionsNamespace,
+      );
       final SyncRepository repo = SyncRepository(_db);
 
       // 竞态修复：**读远端清单之前**先预取本轮基线时刻，整轮成功后写这个预取值
@@ -901,15 +917,17 @@ class SyncOrchestrator {
           if (isOwn) {
             ownCorrupt = true;
             report.noteError(
-                'own collections manifest "${e.name}" unreadable;'
-                ' republishing from local+peers this run (self-heal)',
-                err);
+              'own collections manifest "${e.name}" unreadable;'
+              ' republishing from local+peers this run (self-heal)',
+              err,
+            );
           } else {
             skippedPeer = true;
             report.noteError(
-                'peer collections manifest "${e.name}" '
-                'unreadable; skipped this run (baseline held)',
-                err);
+              'peer collections manifest "${e.name}" '
+              'unreadable; skipped this run (baseline held)',
+              err,
+            );
           }
         }
       }
@@ -923,8 +941,9 @@ class SyncOrchestrator {
 
       // 折叠对端 per-device 文件 + 旧单文件成远端并集（按文件级 lastWrittenAt 裁决墓碑，
       // 见 combinePeers）。空并集 = 首轮/无对端，优雅退化为「只上传本机」。
-      final CollectionManifest remote =
-          CollectionSyncEngine.combinePeers(peers);
+      final CollectionManifest remote = CollectionSyncEngine.combinePeers(
+        peers,
+      );
 
       final CollectionSyncOutcome outcome = CollectionSyncEngine.merge(
         local: local,
@@ -933,8 +952,10 @@ class SyncOrchestrator {
         nowMs: nextBaseline,
       );
 
-      report.collectionsUpdated +=
-          await applyCollectionLocalChanges(_db, outcome.changes);
+      report.collectionsUpdated += await applyCollectionLocalChanges(
+        _db,
+        outcome.changes,
+      );
 
       // 回写门槛：本端 per-device 文件内容有变才写自己那份；本端尚无文件且合并结果为空
       // （零合集库）不无中生有地创建空文件；但本端文件损坏时强制回写以自愈。只写 ownName
@@ -943,8 +964,11 @@ class SyncOrchestrator {
           !ownExists && !ownCorrupt && outcome.merged.collections.isEmpty;
       bool ownWritten = false;
       if (!nothingToPublish && outcome.merged.canonicalJson() != ownCanonical) {
-        await _backend.putJsonAsset(ns, ownName,
-            outcome.merged.withLastWrittenAt(nextBaseline).toJson());
+        await _backend.putJsonAsset(
+          ns,
+          ownName,
+          outcome.merged.withLastWrittenAt(nextBaseline).toJson(),
+        );
         ownWritten = true;
       }
 
@@ -988,16 +1012,17 @@ class SyncOrchestrator {
       // 竞态修复：读远端清单**之前**先预取本轮基线时刻，整轮成功后写这个预取值
       // （而非结束时的新 now），并作 publishedAt 发布时戳。
       final int nextBaseline = DateTime.now().millisecondsSinceEpoch;
-      final CollectionManifest? remote =
-          await backend.getRemoteCollectionManifest();
+      final CollectionManifest? remote = await backend
+          .getRemoteCollectionManifest();
       if (remote == null) {
         // 老 host 无 /api/library/collections 端点（对端 app 版本过旧）。以前静默
         // return，用户只看见「合集没同步」却无任何线索（BUG-938 次因）。计入
         // report.errors：错误日志留痕 + 手动「立即同步」按错误计数提示；其余维度
         // 不受影响照常同步。
         report.errors.add(
-            'collections live sync: host has no collections endpoint '
-            '(older app version) — update the host app to sync collections');
+          'collections live sync: host has no collections endpoint '
+          '(older app version) — update the host app to sync collections',
+        );
         return;
       }
 
@@ -1013,8 +1038,10 @@ class SyncOrchestrator {
         nowMs: nextBaseline,
       );
 
-      report.collectionsUpdated +=
-          await applyCollectionLocalChanges(_db, outcome.changes);
+      report.collectionsUpdated += await applyCollectionLocalChanges(
+        _db,
+        outcome.changes,
+      );
 
       // 回写门槛：字节有变才 POST（确定性排序保证内容相等 ⇒ 字节相等，避免每轮
       // 无谓写放大）。
@@ -1032,8 +1059,7 @@ class SyncOrchestrator {
   Future<void> syncCollectionsLiveForTest(
     SyncRunReport report,
     InterconnectSyncBackend backend,
-  ) =>
-      _syncCollectionsLive(report, backend);
+  ) => _syncCollectionsLive(report, backend);
 
   /// 收集本设备当前在库的资产（按 mediaType 分组 → `itemKey → 存在起始时刻`），供删除
   /// 墓碑消费端算 deleteLocal 候选（远端有删除标记 ∧ 本地仍在库 ∧ 标记管得着这条）。
@@ -1079,14 +1105,18 @@ class SyncOrchestrator {
       SyncTombstoneKind.favoriteword.dbValue: <String, int?>{
         for (final FavoriteWordRow r in await _db.getAllFavoriteWords())
           FushiDatabase.favoriteWordItemKey(
-              r.expression, r.reading, r.sourceType): r.createdAt,
+            r.expression,
+            r.reading,
+            r.sourceType,
+          ): r.createdAt,
       },
       // 收藏句无稳定 id，用内容键（[FavoriteSentenceRepository.itemKeyOf]）；与写墓碑点、
       // aggregate 去重键同源。时刻取 createdAt——重新收藏会生成新的 createdAt，正是
       // BUG-2044 仲裁所依据的那个时刻。
       SyncTombstoneKind.favoritesentence.dbValue: <String, int?>{
-        for (final FavoriteSentence s
-            in await FavoriteSentenceRepository(_db).getAll())
+        for (final FavoriteSentence s in await FavoriteSentenceRepository(
+          _db,
+        ).getAll())
           FavoriteSentenceRepository.itemKeyOf(s):
               s.createdAt.millisecondsSinceEpoch,
       },
@@ -1115,14 +1145,15 @@ class SyncOrchestrator {
   /// 是标量，推过头会把那条没读到的、deletedAt 更小的删除永久压成「旧闻」。
   Future<void> syncDeletionTombstones(SyncRunReport report) async {
     try {
-      final String ns =
-          await _backend.ensureNamespace(kSyncTombstonesNamespace);
+      final String ns = await _backend.ensureNamespace(
+        kSyncTombstonesNamespace,
+      );
       final SyncRepository repo = SyncRepository(_db);
       final int nextBaseline = DateTime.now().millisecondsSinceEpoch;
 
       // ── 发布：本机未发布墓碑 → 远端标记 ──
-      final List<SyncDeletionTombstoneRow> localRows =
-          await _db.getSyncDeletionTombstones();
+      final List<SyncDeletionTombstoneRow> localRows = await _db
+          .getSyncDeletionTombstones();
       for (final SyncDeletionTombstoneRow row in localRows) {
         if (row.remotePublishedAt != 0) continue;
         await _backend.putJsonAsset(
@@ -1131,7 +1162,10 @@ class SyncOrchestrator {
           deletionTombstoneJson(row.mediaType, row.itemKey, row.deletedAt),
         );
         await _db.markSyncDeletionPublished(
-            row.mediaType, row.itemKey, nextBaseline);
+          row.mediaType,
+          row.itemKey,
+          nextBaseline,
+        );
       }
 
       // ── 消费：读远端标记 → deleteLocal 候选（过基线守卫）──
@@ -1160,7 +1194,9 @@ class SyncOrchestrator {
           // 按不完整处理——静默 continue 会让后者变成一次无声的永久压制。
           scanComplete = false;
           report.noteError(
-              'deletion tombstone "${e.name}" unreadable', 'empty response');
+            'deletion tombstone "${e.name}" unreadable',
+            'empty response',
+          );
           continue;
         }
         final parsed = parseDeletionTombstoneJson(json);
@@ -1169,11 +1205,15 @@ class SyncOrchestrator {
           // 变好，故不置 scanComplete=false（否则基线被一个坏文件永久钉死，用户每轮
           // 重看同一批确认框）。只如实记一条，别再静默丢。
           report.noteError(
-              'deletion tombstone "${e.name}" malformed', 'skipped');
+            'deletion tombstone "${e.name}" malformed',
+            'skipped',
+          );
           continue;
         }
         final Map<String, int> byKey = remoteTombstones.putIfAbsent(
-            parsed.mediaType, () => <String, int>{});
+          parsed.mediaType,
+          () => <String, int>{},
+        );
         final int? prev = byKey[parsed.itemKey];
         if (prev == null || parsed.deletedAt > prev) {
           byKey[parsed.itemKey] = parsed.deletedAt;
@@ -1214,8 +1254,10 @@ class SyncOrchestrator {
         }
       }
       if (heldBaseline) {
-        report.errors.add('deletion tombstones scan incomplete; '
-            'consumption baseline held until a complete read');
+        report.errors.add(
+          'deletion tombstones scan incomplete; '
+          'consumption baseline held until a complete read',
+        );
       }
     } catch (e) {
       report.noteError('deletion tombstones sync', e);
@@ -1253,8 +1295,10 @@ class SyncOrchestrator {
       final DeletionTombstoneEntries remoteTombstones =
           <String, Map<String, int>>{};
       for (final r in remote) {
-        final Map<String, int> byKey =
-            remoteTombstones.putIfAbsent(r.mediaType, () => <String, int>{});
+        final Map<String, int> byKey = remoteTombstones.putIfAbsent(
+          r.mediaType,
+          () => <String, int>{},
+        );
         final int? prev = byKey[r.itemKey];
         if (prev == null || r.deletedAt > prev) {
           byKey[r.itemKey] = r.deletedAt;
@@ -1313,21 +1357,25 @@ class SyncOrchestrator {
       // 时钟回拨钳制：基线晚于本轮取的 now 时按 now 算，否则一次回拨会把窗口永久关死。
       if (baseline > nextBaseline) baseline = nextBaseline;
 
-      final List<SyncDeletionTombstoneRow> rows =
-          await _db.getSyncDeletionTombstones();
+      final List<SyncDeletionTombstoneRow> rows = await _db
+          .getSyncDeletionTombstones();
       bool retryable = false;
       for (final SyncDeletionTombstoneRow row in rows) {
         // 窗口两端都要卡：晚于 nextBaseline 的（本地时钟超前写出的未来戳）留到下轮，
         // 否则推进基线会把它一并盖掉、这条删除就此蒸发。
         if (row.deletedAt <= baseline || row.deletedAt > nextBaseline) continue;
-        final SyncTombstoneKind? kind =
-            SyncTombstoneKind.tryParse(row.mediaType);
+        final SyncTombstoneKind? kind = SyncTombstoneKind.tryParse(
+          row.mediaType,
+        );
         // 未知 kind = 比本端新的版本写的墓碑，本端不认识就别猜着删（前向兼容）。
         if (kind == null) continue;
         if (!_hasInterconnectDeletionChannel(kind)) continue;
         try {
-          final bool supported =
-              await _pushOneDeletionLive(backend, kind, row.itemKey);
+          final bool supported = await _pushOneDeletionLive(
+            backend,
+            kind,
+            row.itemKey,
+          );
           if (!supported) {
             report.errors.add(
               'host does not support deleting ${row.mediaType} '
@@ -1336,10 +1384,7 @@ class SyncOrchestrator {
           }
         } catch (e) {
           retryable = true;
-          report.noteError(
-            'deletion push ${row.mediaType}/${row.itemKey}',
-            e,
-          );
+          report.noteError('deletion push ${row.mediaType}/${row.itemKey}', e);
         }
       }
       if (!retryable) {
@@ -1405,8 +1450,7 @@ class SyncOrchestrator {
   Future<void> syncDeletionTombstonesLiveForTest(
     SyncRunReport report,
     InterconnectSyncBackend backend,
-  ) =>
-      _syncDeletionTombstonesLive(report, backend);
+  ) => _syncDeletionTombstonesLive(report, backend);
 
   /// 云视频资产同步（多端库联合视图 §2.6 / 任务12，云后端通道）。
   ///
@@ -1436,8 +1480,10 @@ class SyncOrchestrator {
       };
 
       // 远端既有清单（无则空，首轮优雅退化为「只上传本机视频」）。
-      final AssetEntry? manifestAsset =
-          await _backend.findAsset(ns, kSyncVideosManifestName);
+      final AssetEntry? manifestAsset = await _backend.findAsset(
+        ns,
+        kSyncVideosManifestName,
+      );
       RemoteVideoManifest remote = RemoteVideoManifest.empty;
       String? remoteCanonical;
       if (manifestAsset != null) {
@@ -1448,8 +1494,10 @@ class SyncOrchestrator {
           // priorEntry 恒 null → 每个视频每轮都判「远端无同尺寸」全量重传（无幂等判据的
           // 死循环，视频体积大代价惨重）；若回写：空清单覆盖抹掉他端全部条目。无法判幂等
           // 就不传，下轮下载成功即自愈。
-          report.errors.add('video manifest present but unreadable; skipping '
-              'video upload + manifest writeback this run (retried next run)');
+          report.errors.add(
+            'video manifest present but unreadable; skipping '
+            'video upload + manifest writeback this run (retried next run)',
+          );
           return;
         }
         remote = RemoteVideoManifest.fromJson(json);
@@ -1460,26 +1508,33 @@ class SyncOrchestrator {
       // 的 uid 原样保留——upload-only 并集，绝不因本地缺这条而从清单里抹掉它）。
       final Map<String, RemoteVideoManifestEntry> byUid =
           <String, RemoteVideoManifestEntry>{
-        for (final RemoteVideoManifestEntry e in remote.videos) e.uid: e,
-      };
+            for (final RemoteVideoManifestEntry e in remote.videos) e.uid: e,
+          };
 
       // 稳定顺序（uid 升序）遍历本地可上传视频，进度分母 = 可上传视频数。
-      final List<VideoBookRow> localVideos = <VideoBookRow>[
-        for (final VideoBookRow v in await _db.allVideoBooks())
-          if (_isUploadableLocalVideo(v)) v,
-      ]..sort(
-          (VideoBookRow a, VideoBookRow b) => a.bookUid.compareTo(b.bookUid));
+      final List<VideoBookRow> localVideos =
+          <VideoBookRow>[
+            for (final VideoBookRow v in await _db.allVideoBooks())
+              if (_isUploadableLocalVideo(v)) v,
+          ]..sort(
+            (VideoBookRow a, VideoBookRow b) => a.bookUid.compareTo(b.bookUid),
+          );
       final int total = localVideos.length;
       int index = 0;
 
       for (final VideoBookRow v in localVideos) {
-        _emit(SyncPhase.videos,
-            itemIndex: index, itemTotal: total, title: v.title);
+        _emit(
+          SyncPhase.videos,
+          itemIndex: index,
+          itemTotal: total,
+          title: v.title,
+        );
         try {
           final File file = File(v.videoPath);
           if (!file.existsSync()) {
-            report.errors
-                .add('video "${v.title}": local file missing: ${v.videoPath}');
+            report.errors.add(
+              'video "${v.title}": local file missing: ${v.videoPath}',
+            );
             index++;
             continue;
           }
@@ -1507,16 +1562,23 @@ class SyncOrchestrator {
           // 条目 videoAsset 同名 && 记录的明文尺寸 == 本地明文尺寸 ⇒ 跳过。
           final RemoteVideoManifestEntry? priorEntry = byUid[v.bookUid];
           final bool remoteHasByName = remoteSizeByName.containsKey(assetName);
-          final bool manifestSameSize = priorEntry != null &&
+          final bool manifestSameSize =
+              priorEntry != null &&
               priorEntry.videoAsset == assetName &&
               priorEntry.sizeBytes == size;
           if (!(remoteHasByName && manifestSameSize)) {
-            await _backend.putAsset(ns, assetName, file,
-                onProgress: (double f) => _emit(SyncPhase.videos,
-                    itemIndex: index,
-                    itemTotal: total,
-                    title: v.title,
-                    fileFraction: f));
+            await _backend.putAsset(
+              ns,
+              assetName,
+              file,
+              onProgress: (double f) => _emit(
+                SyncPhase.videos,
+                itemIndex: index,
+                itemTotal: total,
+                title: v.title,
+                fileFraction: f,
+              ),
+            );
             remoteSizeByName[assetName] = size;
             report.videosExported++;
           }
@@ -1561,7 +1623,10 @@ class SyncOrchestrator {
           manifestAsset == null && merged.videos.isEmpty;
       if (!nothingToPublish && merged.canonicalJson() != remoteCanonical) {
         await _backend.putJsonAsset(
-            ns, kSyncVideosManifestName, merged.toJson());
+          ns,
+          kSyncVideosManifestName,
+          merged.toJson(),
+        );
       }
     } catch (e) {
       report.noteError('video assets sync', e);
@@ -1590,19 +1655,18 @@ class SyncOrchestrator {
   /// exported / synced / skipped) is left to the existing per-phase tallies
   /// and is NOT counted here. A conflict carries the four fields filled by
   /// [SyncManager] when it detects a genuine three-way fork.
-  void _collectConflicts(
-    List<SyncBookResult> results,
-    SyncRunReport report,
-  ) {
+  void _collectConflicts(List<SyncBookResult> results, SyncRunReport report) {
     for (final SyncBookResult result in results) {
       if (result.direction != SyncResult.conflict) continue;
-      report.conflicts.add(SyncConflict(
-        assetKey: result.conflictAssetKey!,
-        dimension: result.conflictDimension!,
-        title: result.title,
-        localVersion: result.conflictLocalVersion,
-        remoteVersion: result.conflictRemoteVersion,
-      ));
+      report.conflicts.add(
+        SyncConflict(
+          assetKey: result.conflictAssetKey!,
+          dimension: result.conflictDimension!,
+          title: result.title,
+          localVersion: result.conflictLocalVersion,
+          remoteVersion: result.conflictRemoteVersion,
+        ),
+      );
     }
   }
 
@@ -1631,8 +1695,12 @@ class SyncOrchestrator {
 
     for (int i = 0; i < total; i++) {
       final SyncFileRef folder = toImport[i];
-      _emit(SyncPhase.books,
-          itemIndex: i, itemTotal: total, title: folder.name);
+      _emit(
+        SyncPhase.books,
+        itemIndex: i,
+        itemTotal: total,
+        title: folder.name,
+      );
       try {
         if (await importRemoteBookFolder(
           db: _db,
@@ -1641,11 +1709,13 @@ class SyncOrchestrator {
           tempDir: _tempDir,
           // 下载远端书文件夹时一并补下其有声书包（修复云有声书「只上传拿不回」缺口）。
           audioDatabaseRoot: _audioDatabaseRoot,
-          onProgress: (double f) => _emit(SyncPhase.books,
-              itemIndex: i,
-              itemTotal: total,
-              title: folder.name,
-              fileFraction: f),
+          onProgress: (double f) => _emit(
+            SyncPhase.books,
+            itemIndex: i,
+            itemTotal: total,
+            title: folder.name,
+            fileFraction: f,
+          ),
         )) {
           report.booksImported++;
         }
@@ -1711,15 +1781,16 @@ class SyncOrchestrator {
       try {
         // 找到本地行取 extractDir。
         final EpubBookRow? row = localBooks.cast<EpubBookRow?>().firstWhere(
-              (EpubBookRow? b) => sanitizeTtuFilename(b!.title) == key,
-              orElse: () => null,
-            );
+          (EpubBookRow? b) => sanitizeTtuFilename(b!.title) == key,
+          orElse: () => null,
+        );
         if (row == null ||
             row.extractDir.isEmpty ||
             !Directory(row.extractDir).existsSync()) {
           // 本地内容不可用，跳过（与 importRemoteBooks 对称语义）。
-          report.errors
-              .add('live push book "$title": extractDir missing or empty');
+          report.errors.add(
+            'live push book "$title": extractDir missing or empty',
+          );
           index++;
           continue;
         }
@@ -1737,8 +1808,9 @@ class SyncOrchestrator {
             ? await repackageMangaBook(row.extractDir, tmp.path)
             : await repackageExtractedEpub(row.extractDir, tmp.path);
         if (!built) {
-          report.errors
-              .add('live push book "$title": repackage produced no output');
+          report.errors.add(
+            'live push book "$title": repackage produced no output',
+          );
           index++;
           continue;
         }
@@ -1750,11 +1822,13 @@ class SyncOrchestrator {
           tmp,
           displayTitle: override?.title,
           displayTitleAt: override?.updatedAt ?? 0,
-          onProgress: (double f) => _emit(SyncPhase.books,
-              itemIndex: index,
-              itemTotal: total,
-              title: title,
-              fileFraction: f),
+          onProgress: (double f) => _emit(
+            SyncPhase.books,
+            itemIndex: index,
+            itemTotal: total,
+            title: title,
+            fileFraction: f,
+          ),
         );
       } catch (e) {
         report.noteError('live push book "$title"', e);
@@ -1785,11 +1859,13 @@ class SyncOrchestrator {
     final List<EpubBookRow> localBooks = await _db.getAllEpubBooks();
     for (final EpubBookRow book in localBooks) {
       try {
-        final RemoteBookProgress remote =
-            await backend.remoteBookProgress(book.bookKey);
+        final RemoteBookProgress remote = await backend.remoteBookProgress(
+          book.bookKey,
+        );
         // v82：wire 键仍是 bookKey（REST 路径冻结），本地子表键是书 uid。
-        final ReaderPositionRow? localRow =
-            await _db.getReaderPosition(book.uid);
+        final ReaderPositionRow? localRow = await _db.getReaderPosition(
+          book.uid,
+        );
         final RemoteBookProgress local = localRow == null
             ? RemoteBookProgress.empty
             : RemoteBookProgress(
@@ -1798,8 +1874,10 @@ class SyncOrchestrator {
                 charOffset: localRow.charOffset,
                 updatedAtMs: localRow.updatedAt,
               );
-        final RemoteBookProgress winner =
-            resolveBookProgressSync(local: local, remote: remote);
+        final RemoteBookProgress winner = resolveBookProgressSync(
+          local: local,
+          remote: remote,
+        );
 
         // 本地→host：胜者严格新于 host 时上报（host 端再取较新，幂等安全）。
         if (winner.updatedAtMs > remote.updatedAtMs ||
@@ -1811,18 +1889,21 @@ class SyncOrchestrator {
         }
 
         // host→本地：胜者不同于本地时 upsert 回本地 reader_positions。
-        final bool localChanged = winner.sectionIndex != local.sectionIndex ||
+        final bool localChanged =
+            winner.sectionIndex != local.sectionIndex ||
             winner.normCharOffset != local.normCharOffset ||
             winner.charOffset != local.charOffset ||
             winner.updatedAtMs != local.updatedAtMs;
         if (localChanged && winner.updatedAtMs > 0) {
-          await _db.upsertReaderPosition(ReaderPositionsCompanion(
-            bookUid: Value(book.uid),
-            sectionIndex: Value(winner.sectionIndex),
-            normCharOffset: Value(winner.normCharOffset),
-            charOffset: Value(winner.charOffset),
-            updatedAt: Value(winner.updatedAtMs),
-          ));
+          await _db.upsertReaderPosition(
+            ReaderPositionsCompanion(
+              bookUid: Value(book.uid),
+              sectionIndex: Value(winner.sectionIndex),
+              normCharOffset: Value(winner.normCharOffset),
+              charOffset: Value(winner.charOffset),
+              updatedAt: Value(winner.updatedAtMs),
+            ),
+          );
           // BUG-686: a host-newer progress pull lands in reader_positions but
           // writes no book content, so it must still flag the shelf for a
           // refresh — the cached fushiBooksProvider otherwise keeps showing the
@@ -1854,13 +1935,13 @@ class SyncOrchestrator {
     required Set<String> localKeys,
     required Set<String> hostKeys,
     required Future<({int positionMs, int updatedAtMs})> Function(String key)
-        readLocal,
+    readLocal,
     required Future<({int positionMs, int updatedAtMs})> Function(String key)
-        readHost,
+    readHost,
     required Future<void> Function(String key, int positionMs, int updatedAtMs)
-        pushToHost,
+    pushToHost,
     required Future<void> Function(String key, int positionMs, int updatedAtMs)
-        writeBackLocal,
+    writeBackLocal,
   }) async {
     for (final String key in localKeys) {
       if (!hostKeys.contains(key)) continue; // host 无此条目：跳过。
@@ -1947,10 +2028,14 @@ class SyncOrchestrator {
       localKeys: localUids,
       hostKeys: hostById.keys.toSet(),
       readLocal: (String uid) async {
-        final int prefsPos =
-            await _db.getPrefTyped<int>(videoRemotePositionPrefKey(uid), 0);
-        final int prefsAt =
-            await _db.getPrefTyped<int>(videoRemotePositionAtPrefKey(uid), 0);
+        final int prefsPos = await _db.getPrefTyped<int>(
+          videoRemotePositionPrefKey(uid),
+          0,
+        );
+        final int prefsAt = await _db.getPrefTyped<int>(
+          videoRemotePositionAtPrefKey(uid),
+          0,
+        );
         return (
           positionMs: rowPositionByUid[uid] ?? prefsPos,
           updatedAtMs: prefsAt,
@@ -1968,15 +2053,22 @@ class SyncOrchestrator {
           backend.putRemoteVideoPosition(uid, positionMs, updatedAtMs),
       writeBackLocal: (String uid, int positionMs, int updatedAtMs) async {
         await _db.setPrefTyped<int>(
-            videoRemotePositionPrefKey(uid), positionMs);
+          videoRemotePositionPrefKey(uid),
+          positionMs,
+        );
         await _db.setPrefTyped<int>(
-            videoRemotePositionAtPrefKey(uid), updatedAtMs);
+          videoRemotePositionAtPrefKey(uid),
+          updatedAtMs,
+        );
         if (rowPositionByUid.containsKey(uid)) {
           // 时刻用**对端的** updatedAtMs（不是 now）：这是「对方在那个时刻看到这
           // 里」的事实。传 now 会把三天前的远端进度冒充成本机刚看的，直接把合集
           // 续播锚点（BUG-1542）钉在一集用户根本没在看的集上。
-          await _db.updateVideoBookPosition(uid, positionMs,
-              playedAt: updatedAtMs);
+          await _db.updateVideoBookPosition(
+            uid,
+            positionMs,
+            playedAt: updatedAtMs,
+          );
         }
       },
     );
@@ -1995,20 +2087,40 @@ class SyncOrchestrator {
         final VideoPlaybackSyncState host = info.playback;
         final VideoPlaybackSyncState local = VideoPlaybackSyncState(
           delayMs: await _db.getPrefTyped<int>(videoRemoteDelayPrefKey(uid), 0),
-          delayAt:
-              await _db.getPrefTyped<int>(videoRemoteDelayAtPrefKey(uid), 0),
-          audioTrackId: nullableStr(await _db.getPrefTyped<String>(
-              videoRemoteAudioTrackPrefKey(uid), '')),
+          delayAt: await _db.getPrefTyped<int>(
+            videoRemoteDelayAtPrefKey(uid),
+            0,
+          ),
+          audioTrackId: nullableStr(
+            await _db.getPrefTyped<String>(
+              videoRemoteAudioTrackPrefKey(uid),
+              '',
+            ),
+          ),
           audioTrackAt: await _db.getPrefTyped<int>(
-              videoRemoteAudioTrackAtPrefKey(uid), 0),
-          secondarySubtitleSource: nullableStr(await _db.getPrefTyped<String>(
-              videoRemoteSecondarySubtitlePrefKey(uid), '')),
+            videoRemoteAudioTrackAtPrefKey(uid),
+            0,
+          ),
+          secondarySubtitleSource: nullableStr(
+            await _db.getPrefTyped<String>(
+              videoRemoteSecondarySubtitlePrefKey(uid),
+              '',
+            ),
+          ),
           secondarySubtitleAt: await _db.getPrefTyped<int>(
-              videoRemoteSecondarySubtitleAtPrefKey(uid), 0),
-          secondaryDelayMs: int.tryParse(await _db.getPrefTyped<String>(
-              videoRemoteSecondaryDelayPrefKey(uid), '')),
+            videoRemoteSecondarySubtitleAtPrefKey(uid),
+            0,
+          ),
+          secondaryDelayMs: int.tryParse(
+            await _db.getPrefTyped<String>(
+              videoRemoteSecondaryDelayPrefKey(uid),
+              '',
+            ),
+          ),
           secondaryDelayAt: await _db.getPrefTyped<int>(
-              videoRemoteSecondaryDelayAtPrefKey(uid), 0),
+            videoRemoteSecondaryDelayAtPrefKey(uid),
+            0,
+          ),
         );
 
         // 本地→host：只带本地严格较新的字段（at 置 0 的字段 host 端 merge 忽略）。
@@ -2016,13 +2128,14 @@ class SyncOrchestrator {
           delayMs: local.delayMs,
           delayAt: local.delayAt > host.delayAt ? local.delayAt : 0,
           audioTrackId: local.audioTrackId,
-          audioTrackAt:
-              local.audioTrackAt > host.audioTrackAt ? local.audioTrackAt : 0,
+          audioTrackAt: local.audioTrackAt > host.audioTrackAt
+              ? local.audioTrackAt
+              : 0,
           secondarySubtitleSource: local.secondarySubtitleSource,
           secondarySubtitleAt:
               local.secondarySubtitleAt > host.secondarySubtitleAt
-                  ? local.secondarySubtitleAt
-                  : 0,
+              ? local.secondarySubtitleAt
+              : 0,
           secondaryDelayMs: local.secondaryDelayMs,
           secondaryDelayAt: local.secondaryDelayAt > host.secondaryDelayAt
               ? local.secondaryDelayAt
@@ -2033,50 +2146,71 @@ class SyncOrchestrator {
             await backend.putRemoteVideoPlayback(uid, push);
           } catch (e) {
             debugPrint(
-                '[SyncOrchestrator] video playback push "$uid" failed: $e');
+              '[SyncOrchestrator] video playback push "$uid" failed: $e',
+            );
           }
         }
 
         // host→本地：逐字段写回严格较新者。
         final bool hasRow = rowPositionByUid.containsKey(uid);
-        final VideoPlaybackSyncState merged =
-            VideoPlaybackSyncState.merge(local, host);
+        final VideoPlaybackSyncState merged = VideoPlaybackSyncState.merge(
+          local,
+          host,
+        );
         if (merged.delayAt != local.delayAt) {
           await _db.setPrefTyped<int>(
-              videoRemoteDelayPrefKey(uid), merged.delayMs);
+            videoRemoteDelayPrefKey(uid),
+            merged.delayMs,
+          );
           await _db.setPrefTyped<int>(
-              videoRemoteDelayAtPrefKey(uid), merged.delayAt);
+            videoRemoteDelayAtPrefKey(uid),
+            merged.delayAt,
+          );
           if (hasRow) await _db.updateVideoBookDelayMs(uid, merged.delayMs);
         }
         if (merged.audioTrackAt != local.audioTrackAt) {
           await _db.setPrefTyped<String>(
-              videoRemoteAudioTrackPrefKey(uid), merged.audioTrackId ?? '');
+            videoRemoteAudioTrackPrefKey(uid),
+            merged.audioTrackId ?? '',
+          );
           await _db.setPrefTyped<int>(
-              videoRemoteAudioTrackAtPrefKey(uid), merged.audioTrackAt);
+            videoRemoteAudioTrackAtPrefKey(uid),
+            merged.audioTrackAt,
+          );
           if (hasRow) {
             await _db.updateVideoBookAudioTrackId(uid, merged.audioTrackId);
           }
         }
         if (merged.secondarySubtitleAt != local.secondarySubtitleAt) {
           await _db.setPrefTyped<String>(
-              videoRemoteSecondarySubtitlePrefKey(uid),
-              merged.secondarySubtitleSource ?? '');
+            videoRemoteSecondarySubtitlePrefKey(uid),
+            merged.secondarySubtitleSource ?? '',
+          );
           await _db.setPrefTyped<int>(
-              videoRemoteSecondarySubtitleAtPrefKey(uid),
-              merged.secondarySubtitleAt);
+            videoRemoteSecondarySubtitleAtPrefKey(uid),
+            merged.secondarySubtitleAt,
+          );
           if (hasRow) {
             await _db.updateVideoBookSecondarySubtitleSource(
-                uid, merged.secondarySubtitleSource);
+              uid,
+              merged.secondarySubtitleSource,
+            );
           }
         }
         if (merged.secondaryDelayAt != local.secondaryDelayAt) {
-          await _db.setPrefTyped<String>(videoRemoteSecondaryDelayPrefKey(uid),
-              merged.secondaryDelayMs?.toString() ?? '');
+          await _db.setPrefTyped<String>(
+            videoRemoteSecondaryDelayPrefKey(uid),
+            merged.secondaryDelayMs?.toString() ?? '',
+          );
           await _db.setPrefTyped<int>(
-              videoRemoteSecondaryDelayAtPrefKey(uid), merged.secondaryDelayAt);
+            videoRemoteSecondaryDelayAtPrefKey(uid),
+            merged.secondaryDelayAt,
+          );
           if (hasRow) {
             await _db.updateVideoBookSecondaryDelayMs(
-                uid, merged.secondaryDelayMs);
+              uid,
+              merged.secondaryDelayMs,
+            );
           }
         }
       } catch (e) {
@@ -2123,10 +2257,10 @@ class SyncOrchestrator {
     // 命中（BUG-1637）。空 identity（异常行）跳过不进集合。
     final Map<String, RemoteAudiobookInfo> hostById =
         <String, RemoteAudiobookInfo>{
-      for (final RemoteAudiobookInfo info
-          in await backend.listRemoteAudiobooks())
-        if (info.identity.isNotEmpty) info.identity: info,
-    };
+          for (final RemoteAudiobookInfo info
+              in await backend.listRemoteAudiobooks())
+            if (info.identity.isNotEmpty) info.identity: info,
+        };
     if (hostById.isEmpty) return;
 
     await _syncPositionsLive(
@@ -2135,10 +2269,14 @@ class SyncOrchestrator {
       localKeys: localKeys,
       hostKeys: hostById.keys.toSet(),
       readLocal: (String bookKey) async => (
-        positionMs:
-            await _db.getPrefTyped<int>(audiobookPositionPrefKey(bookKey), 0),
-        updatedAtMs:
-            await _db.getPrefTyped<int>(audiobookPositionAtPrefKey(bookKey), 0),
+        positionMs: await _db.getPrefTyped<int>(
+          audiobookPositionPrefKey(bookKey),
+          0,
+        ),
+        updatedAtMs: await _db.getPrefTyped<int>(
+          audiobookPositionAtPrefKey(bookKey),
+          0,
+        ),
       ),
       // 新 host 清单已内联断点（互联完整支持批次）→ 免逐本 GET；旧 host 清单无此
       // 字段（0@0）→ 退回逐本 GET（真无进度的书多打一次也无害，幂等）。
@@ -2156,9 +2294,13 @@ class SyncOrchestrator {
           backend.putRemoteAudiobookPosition(bookKey, positionMs, updatedAtMs),
       writeBackLocal: (String bookKey, int positionMs, int updatedAtMs) async {
         await _db.setPrefTyped<int>(
-            audiobookPositionPrefKey(bookKey), positionMs);
+          audiobookPositionPrefKey(bookKey),
+          positionMs,
+        );
         await _db.setPrefTyped<int>(
-            audiobookPositionAtPrefKey(bookKey), updatedAtMs);
+          audiobookPositionAtPrefKey(bookKey),
+          updatedAtMs,
+        );
       },
     );
 
@@ -2169,23 +2311,35 @@ class SyncOrchestrator {
       final RemoteAudiobookInfo? info = hostById[identity];
       if (info == null) continue;
       try {
-        final int localDelay =
-            await _db.getPrefTyped<int>(audiobookDelayPrefKey(identity), 0);
-        final int localAt =
-            await _db.getPrefTyped<int>(audiobookDelayAtPrefKey(identity), 0);
+        final int localDelay = await _db.getPrefTyped<int>(
+          audiobookDelayPrefKey(identity),
+          0,
+        );
+        final int localAt = await _db.getPrefTyped<int>(
+          audiobookDelayAtPrefKey(identity),
+          0,
+        );
         if (localAt > info.delayUpdatedAtMs) {
           try {
             await backend.putRemoteAudiobookDelay(
-                identity, localDelay, localAt);
+              identity,
+              localDelay,
+              localAt,
+            );
           } catch (e) {
             debugPrint(
-                '[SyncOrchestrator] audiobook delay push "$identity" failed: $e');
+              '[SyncOrchestrator] audiobook delay push "$identity" failed: $e',
+            );
           }
         } else if (info.delayUpdatedAtMs > localAt) {
           await _db.setPrefTyped<int>(
-              audiobookDelayPrefKey(identity), info.delayMs);
+            audiobookDelayPrefKey(identity),
+            info.delayMs,
+          );
           await _db.setPrefTyped<int>(
-              audiobookDelayAtPrefKey(identity), info.delayUpdatedAtMs);
+            audiobookDelayAtPrefKey(identity),
+            info.delayUpdatedAtMs,
+          );
         }
       } catch (e) {
         report.noteError('live audiobook delay "$identity"', e);
@@ -2198,32 +2352,28 @@ class SyncOrchestrator {
   Future<void> syncBookProgressLiveForTest(
     SyncRunReport report,
     InterconnectSyncBackend backend,
-  ) =>
-      _syncBookProgressLive(report, backend);
+  ) => _syncBookProgressLive(report, backend);
 
   /// 测试入口：直接调用 [_syncVideoProgressLive]。
   @visibleForTesting
   Future<void> syncVideoProgressLiveForTest(
     SyncRunReport report,
     InterconnectSyncBackend backend,
-  ) =>
-      _syncVideoProgressLive(report, backend);
+  ) => _syncVideoProgressLive(report, backend);
 
   /// 测试入口：直接调用 [_syncAudiobookProgressLive]。
   @visibleForTesting
   Future<void> syncAudiobookProgressLiveForTest(
     SyncRunReport report,
     InterconnectSyncBackend backend,
-  ) =>
-      _syncAudiobookProgressLive(report, backend);
+  ) => _syncAudiobookProgressLive(report, backend);
 
   /// 测试入口：直接调用 [_syncBooksContentLive]（private 方法对测试文件不可见）。
   @visibleForTesting
   Future<void> syncBooksContentLiveForTest(
     SyncRunReport report,
     InterconnectSyncBackend backend,
-  ) =>
-      _syncBooksContentLive(report, backend);
+  ) => _syncBooksContentLive(report, backend);
 
   /// 测试入口：直接调用 [_syncLocalAudioLive]。
   @visibleForTesting
@@ -2231,16 +2381,14 @@ class SyncOrchestrator {
     SyncRunReport report,
     InterconnectSyncBackend backend, {
     SyncAssetDirection direction = SyncAssetDirection.both,
-  }) =>
-      _syncLocalAudioLive(report, backend, direction);
+  }) => _syncLocalAudioLive(report, backend, direction);
 
   /// 测试入口：直接调用 [_syncAudiobooksLive]。
   @visibleForTesting
   Future<void> syncAudiobooksLiveForTest(
     SyncRunReport report,
     InterconnectSyncBackend backend,
-  ) =>
-      _syncAudiobooksLive(report, backend);
+  ) => _syncAudiobooksLive(report, backend);
 
   /// Union-syncs dictionaries. 互联（InterconnectSyncBackend）→ 直读对端实时库（无暂存）；
   /// 云后端 → 走现有 __dictionaries__ 暂存路径（不变）。无旧设备故无能力探测。
@@ -2276,15 +2424,15 @@ class SyncOrchestrator {
     InterconnectSyncBackend backend,
     SyncAssetDirection direction,
   ) async {
-    final List<DictionaryMetaRow> localDicts =
-        await _db.getAllDictionaryMetadata();
-    final List<RemoteDictionaryInfo> remoteDicts =
-        await backend.listRemoteDictionaries();
+    final List<DictionaryMetaRow> localDicts = await _db
+        .getAllDictionaryMetadata();
+    final List<RemoteDictionaryInfo> remoteDicts = await backend
+        .listRemoteDictionaries();
 
     final SyncKeyDiff diff = computeKeyUnionDiff(
       localKeys: <String>{for (final DictionaryMetaRow d in localDicts) d.name},
       remoteKeys: <String>{
-        for (final RemoteDictionaryInfo d in remoteDicts) d.name
+        for (final RemoteDictionaryInfo d in remoteDicts) d.name,
       },
     );
 
@@ -2296,17 +2444,26 @@ class SyncOrchestrator {
     int index = 0;
 
     for (final String name in pulls) {
-      _emit(SyncPhase.dictionaries,
-          itemIndex: index, itemTotal: total, title: name);
+      _emit(
+        SyncPhase.dictionaries,
+        itemIndex: index,
+        itemTotal: total,
+        title: name,
+      );
       File? tmp;
       try {
         tmp = _tmpFile(_dictionaryAssetSuffix);
-        await backend.getRemoteDictionary(name, tmp,
-            onProgress: (double f) => _emit(SyncPhase.dictionaries,
-                itemIndex: index,
-                itemTotal: total,
-                title: name,
-                fileFraction: f));
+        await backend.getRemoteDictionary(
+          name,
+          tmp,
+          onProgress: (double f) => _emit(
+            SyncPhase.dictionaries,
+            itemIndex: index,
+            itemTotal: total,
+            title: name,
+            fileFraction: f,
+          ),
+        );
         await _packages.importDictionaryPackage(
           packageFile: tmp,
           dictionaryResourceRoot: _dictionaryResourceRoot,
@@ -2321,8 +2478,12 @@ class SyncOrchestrator {
     }
 
     for (final String name in pushes) {
-      _emit(SyncPhase.dictionaries,
-          itemIndex: index, itemTotal: total, title: name);
+      _emit(
+        SyncPhase.dictionaries,
+        itemIndex: index,
+        itemTotal: total,
+        title: name,
+      );
       File? tmp;
       try {
         tmp = _tmpFile(_dictionaryAssetSuffix);
@@ -2331,12 +2492,17 @@ class SyncOrchestrator {
           dictionaryResourceRoot: _dictionaryResourceRoot,
           outputFile: tmp,
         );
-        await backend.putRemoteDictionary(name, tmp,
-            onProgress: (double f) => _emit(SyncPhase.dictionaries,
-                itemIndex: index,
-                itemTotal: total,
-                title: name,
-                fileFraction: f));
+        await backend.putRemoteDictionary(
+          name,
+          tmp,
+          onProgress: (double f) => _emit(
+            SyncPhase.dictionaries,
+            itemIndex: index,
+            itemTotal: total,
+            title: name,
+            fileFraction: f,
+          ),
+        );
         report.dictionariesExported++;
       } catch (e) {
         report.noteError('push dictionary "$name"', e);
@@ -2353,8 +2519,8 @@ class SyncOrchestrator {
     SyncAssetDirection direction,
   ) async {
     final String ns = await _backend.ensureNamespace(kSyncDictionaryNamespace);
-    final List<DictionaryMetaRow> localDicts =
-        await _db.getAllDictionaryMetadata();
+    final List<DictionaryMetaRow> localDicts = await _db
+        .getAllDictionaryMetadata();
     final List<AssetEntry> remote = await _backend.listChildren(ns);
 
     final Set<String> remoteNames = <String>{
@@ -2385,8 +2551,12 @@ class SyncOrchestrator {
 
     // Push local-only dictionaries.
     for (final DictionaryMetaRow d in toPush) {
-      _emit(SyncPhase.dictionaries,
-          itemIndex: index, itemTotal: total, title: d.name);
+      _emit(
+        SyncPhase.dictionaries,
+        itemIndex: index,
+        itemTotal: total,
+        title: d.name,
+      );
       File? tmp;
       try {
         tmp = _tmpFile(_dictionaryAssetSuffix);
@@ -2395,12 +2565,18 @@ class SyncOrchestrator {
           dictionaryResourceRoot: _dictionaryResourceRoot,
           outputFile: tmp,
         );
-        await _backend.putAsset(ns, '${d.name}$_dictionaryAssetSuffix', tmp,
-            onProgress: (double f) => _emit(SyncPhase.dictionaries,
-                itemIndex: index,
-                itemTotal: total,
-                title: d.name,
-                fileFraction: f));
+        await _backend.putAsset(
+          ns,
+          '${d.name}$_dictionaryAssetSuffix',
+          tmp,
+          onProgress: (double f) => _emit(
+            SyncPhase.dictionaries,
+            itemIndex: index,
+            itemTotal: total,
+            title: d.name,
+            fileFraction: f,
+          ),
+        );
         report.dictionariesExported++;
       } catch (e) {
         report.noteError('export dictionary "${d.name}"', e);
@@ -2417,17 +2593,26 @@ class SyncOrchestrator {
       // `.fushidict`）suffix, which otherwise surfaces as a "weird" entry in
       // the progress list.
       final String displayName = _stripDictionaryAssetSuffix(e.name);
-      _emit(SyncPhase.dictionaries,
-          itemIndex: index, itemTotal: total, title: displayName);
+      _emit(
+        SyncPhase.dictionaries,
+        itemIndex: index,
+        itemTotal: total,
+        title: displayName,
+      );
       File? tmp;
       try {
         tmp = _tmpFile(_dictionaryAssetSuffix);
-        await _backend.getAsset(e.id, tmp,
-            onProgress: (double f) => _emit(SyncPhase.dictionaries,
-                itemIndex: index,
-                itemTotal: total,
-                title: displayName,
-                fileFraction: f));
+        await _backend.getAsset(
+          e.id,
+          tmp,
+          onProgress: (double f) => _emit(
+            SyncPhase.dictionaries,
+            itemIndex: index,
+            itemTotal: total,
+            title: displayName,
+            fileFraction: f,
+          ),
+        );
         await _packages.importDictionaryPackage(
           packageFile: tmp,
           dictionaryResourceRoot: _dictionaryResourceRoot,
@@ -2456,8 +2641,8 @@ class SyncOrchestrator {
     InterconnectSyncBackend backend,
     SyncAssetDirection direction,
   ) async {
-    final List<RemoteLocalAudioInfo> remoteEntries =
-        await backend.listRemoteLocalAudio();
+    final List<RemoteLocalAudioInfo> remoteEntries = await backend
+        .listRemoteLocalAudio();
     final Set<String> localNames = <String>{
       for (final LocalAudioDbEntry d in localAudioEntries) d.displayName,
     };
@@ -2478,8 +2663,12 @@ class SyncOrchestrator {
 
     // ── Pull：远端独有 → 下载并注册 ────────────────────────────────────────
     for (final String name in pulls) {
-      _emit(SyncPhase.localAudio,
-          itemIndex: index, itemTotal: total, title: name);
+      _emit(
+        SyncPhase.localAudio,
+        itemIndex: index,
+        itemTotal: total,
+        title: name,
+      );
       File? tmp;
       File? stagingDb;
       try {
@@ -2487,14 +2676,16 @@ class SyncOrchestrator {
         await backend.getRemoteLocalAudio(
           name,
           tmp,
-          onProgress: (double f) => _emit(SyncPhase.localAudio,
-              itemIndex: index, itemTotal: total, title: name, fileFraction: f),
+          onProgress: (double f) => _emit(
+            SyncPhase.localAudio,
+            itemIndex: index,
+            itemTotal: total,
+            title: name,
+            fileFraction: f,
+          ),
         );
-        final LocalAudioPackageContents contents =
-            await _packages.importLocalAudioPackage(
-          packageFile: tmp,
-          stagingDir: _tempDir,
-        );
+        final LocalAudioPackageContents contents = await _packages
+            .importLocalAudioPackage(packageFile: tmp, stagingDir: _tempDir);
         stagingDb = contents.dbFile;
         if (onLocalAudioImported != null) {
           await onLocalAudioImported!(contents);
@@ -2511,18 +2702,24 @@ class SyncOrchestrator {
 
     // ── Push：本端独有 → 打包并上传 ─────────────────────────────────────────
     for (final String name in pushes) {
-      _emit(SyncPhase.localAudio,
-          itemIndex: index, itemTotal: total, title: name);
+      _emit(
+        SyncPhase.localAudio,
+        itemIndex: index,
+        itemTotal: total,
+        title: name,
+      );
       File? tmp;
       try {
-        final LocalAudioDbEntry? entry =
-            localAudioEntries.cast<LocalAudioDbEntry?>().firstWhere(
-                  (LocalAudioDbEntry? d) => d!.displayName == name,
-                  orElse: () => null,
-                );
+        final LocalAudioDbEntry? entry = localAudioEntries
+            .cast<LocalAudioDbEntry?>()
+            .firstWhere(
+              (LocalAudioDbEntry? d) => d!.displayName == name,
+              orElse: () => null,
+            );
         if (entry == null || !File(entry.path).existsSync()) {
           report.errors.add(
-              'live push local audio "$name": DB file missing or not found');
+            'live push local audio "$name": DB file missing or not found',
+          );
           index++;
           continue;
         }
@@ -2537,8 +2734,13 @@ class SyncOrchestrator {
         await backend.putRemoteLocalAudio(
           name,
           tmp,
-          onProgress: (double f) => _emit(SyncPhase.localAudio,
-              itemIndex: index, itemTotal: total, title: name, fileFraction: f),
+          onProgress: (double f) => _emit(
+            SyncPhase.localAudio,
+            itemIndex: index,
+            itemTotal: total,
+            title: name,
+            fileFraction: f,
+          ),
         );
         report.localAudioExported++;
       } catch (e) {
@@ -2570,8 +2772,8 @@ class SyncOrchestrator {
     SyncRunReport report,
     InterconnectSyncBackend backend,
   ) async {
-    final List<RemoteAudiobookInfo> remoteAudiobooks =
-        await backend.listRemoteAudiobooks();
+    final List<RemoteAudiobookInfo> remoteAudiobooks = await backend
+        .listRemoteAudiobooks();
     final List<AudiobookRow> localAudiobooks = await _db.getAllAudiobooks();
     final List<EpubBookRow> localBooks = await _db.getAllEpubBooks();
 
@@ -2617,14 +2819,19 @@ class SyncOrchestrator {
 
     // ── Push：本端独有 → 打包并上传 ─────────────────────────────────────────
     for (final String key in diff.toPush) {
-      _emit(SyncPhase.audiobooks,
-          itemIndex: index, itemTotal: total, title: key);
+      _emit(
+        SyncPhase.audiobooks,
+        itemIndex: index,
+        itemTotal: total,
+        title: key,
+      );
       File? tmp;
       try {
         final SrtBookRow? srt = await _db.getSrtBookByBookKey(key);
         if (srt == null) {
-          report.errors
-              .add('live push audiobook "$key": srtBook not found, skipping');
+          report.errors.add(
+            'live push audiobook "$key": srtBook not found, skipping',
+          );
           index++;
           continue;
         }
@@ -2637,8 +2844,13 @@ class SyncOrchestrator {
         await backend.putRemoteAudiobook(
           key,
           tmp,
-          onProgress: (double f) => _emit(SyncPhase.audiobooks,
-              itemIndex: index, itemTotal: total, title: key, fileFraction: f),
+          onProgress: (double f) => _emit(
+            SyncPhase.audiobooks,
+            itemIndex: index,
+            itemTotal: total,
+            title: key,
+            fileFraction: f,
+          ),
         );
         report.audiobooksExported++;
       } catch (e) {
@@ -2651,16 +2863,25 @@ class SyncOrchestrator {
 
     // ── Pull A（场景B）：远端有、本端有书但缺音频 → 下载并解包落盘 ────────────
     for (final String key in toPullAudioOnly) {
-      _emit(SyncPhase.audiobooks,
-          itemIndex: index, itemTotal: total, title: key);
+      _emit(
+        SyncPhase.audiobooks,
+        itemIndex: index,
+        itemTotal: total,
+        title: key,
+      );
       File? tmp;
       try {
         tmp = _tmpFile('.fushiaudio');
         await backend.getRemoteAudiobook(
           key,
           tmp,
-          onProgress: (double f) => _emit(SyncPhase.audiobooks,
-              itemIndex: index, itemTotal: total, title: key, fileFraction: f),
+          onProgress: (double f) => _emit(
+            SyncPhase.audiobooks,
+            itemIndex: index,
+            itemTotal: total,
+            title: key,
+            fileFraction: f,
+          ),
         );
         // 用本地 EPUB 的 bookKey 作 override：远端 key 已等于本地 EPUB 的 bookKey
         // （toPull 已由 localBookKeys 筛过），显式 override 保写入行与 EPUB 可配对。
@@ -2719,7 +2940,8 @@ class SyncOrchestrator {
       final File file = File(v.videoPath);
       if (!file.existsSync()) {
         report.errors.add(
-            'live push video "${v.title}": local file missing: ${v.videoPath}');
+          'live push video "${v.title}": local file missing: ${v.videoPath}',
+        );
         continue;
       }
       final RemoteVideoInfo? host = hostByUid[v.bookUid];
@@ -2732,7 +2954,8 @@ class SyncOrchestrator {
       // 字幕补推判据与视频同粒度：host 已有任一 sidecar 即跳过（改字幕内容/后加语言
       // 不重推，与视频同尺寸跳过一致）。
       // pushVideo==false 蕴含 host!=null（流程分析已提升，无需判空）。
-      final bool pushSubtitles = (pushVideo || !host.hasSubtitle) &&
+      final bool pushSubtitles =
+          (pushVideo || !host.hasSubtitle) &&
           _localSidecarSubtitles(v.videoPath, sidecarDirCache).isNotEmpty;
       if (!pushVideo && !pushSubtitles) continue;
       toPush.add((row: v, file: file, pushVideo: pushVideo));
@@ -2745,8 +2968,12 @@ class SyncOrchestrator {
     bool subtitleEndpointMissing = false;
     for (final ({VideoBookRow row, File file, bool pushVideo}) item in toPush) {
       final VideoBookRow v = item.row;
-      _emit(SyncPhase.videos,
-          itemIndex: index, itemTotal: total, title: v.title);
+      _emit(
+        SyncPhase.videos,
+        itemIndex: index,
+        itemTotal: total,
+        title: v.title,
+      );
       bool videoOk = !item.pushVideo;
       if (item.pushVideo) {
         try {
@@ -2754,11 +2981,13 @@ class SyncOrchestrator {
             v.bookUid,
             item.file,
             title: v.title,
-            onProgress: (double f) => _emit(SyncPhase.videos,
-                itemIndex: index,
-                itemTotal: total,
-                title: v.title,
-                fileFraction: f),
+            onProgress: (double f) => _emit(
+              SyncPhase.videos,
+              itemIndex: index,
+              itemTotal: total,
+              title: v.title,
+              fileFraction: f,
+            ),
           );
           report.videosExported++;
           videoOk = true;
@@ -2776,8 +3005,9 @@ class SyncOrchestrator {
         );
         if (subtitleEndpointMissing) {
           report.errors.add(
-              'live push subtitles: host has no subtitle endpoint (older app '
-              'version) — update the host app to sync video subtitles');
+            'live push subtitles: host has no subtitle endpoint (older app '
+            'version) — update the host app to sync video subtitles',
+          );
         }
       }
       index++;
@@ -2795,12 +3025,17 @@ class SyncOrchestrator {
     required Map<String, List<String>?> sidecarDirCache,
   }) async {
     final String stem = p.basenameWithoutExtension(row.videoPath);
-    for (final File sub
-        in _localSidecarSubtitles(row.videoPath, sidecarDirCache)) {
+    for (final File sub in _localSidecarSubtitles(
+      row.videoPath,
+      sidecarDirCache,
+    )) {
       final String suffix = p.basename(sub.path).substring(stem.length);
       try {
-        final bool supported = await backend
-            .putRemoteVideoSubtitle(row.bookUid, sub, suffix: suffix);
+        final bool supported = await backend.putRemoteVideoSubtitle(
+          row.bookUid,
+          sub,
+          suffix: suffix,
+        );
         if (!supported) return false;
       } catch (e) {
         report.noteError('live push subtitle "${p.basename(sub.path)}"', e);
@@ -2830,8 +3065,10 @@ class SyncOrchestrator {
     });
     if (names == null) return const <File>[];
     return <File>[
-      for (final String name
-          in listSidecarSubtitles(p.basenameWithoutExtension(videoPath), names))
+      for (final String name in listSidecarSubtitles(
+        p.basenameWithoutExtension(videoPath),
+        names,
+      ))
         File(p.join(dir, name)),
     ];
   }
@@ -2879,8 +3116,12 @@ class SyncOrchestrator {
 
     // Push local-only.
     for (final LocalAudioDbEntry d in toPush) {
-      _emit(SyncPhase.localAudio,
-          itemIndex: index, itemTotal: total, title: d.displayName);
+      _emit(
+        SyncPhase.localAudio,
+        itemIndex: index,
+        itemTotal: total,
+        title: d.displayName,
+      );
       final File dbFile = File(d.path);
       File? tmp;
       try {
@@ -2893,12 +3134,17 @@ class SyncOrchestrator {
           outputFile: tmp,
         );
         await _backend.putAsset(
-            ns, '${d.displayName}$_localAudioAssetSuffix', tmp,
-            onProgress: (double f) => _emit(SyncPhase.localAudio,
-                itemIndex: index,
-                itemTotal: total,
-                title: d.displayName,
-                fileFraction: f));
+          ns,
+          '${d.displayName}$_localAudioAssetSuffix',
+          tmp,
+          onProgress: (double f) => _emit(
+            SyncPhase.localAudio,
+            itemIndex: index,
+            itemTotal: total,
+            title: d.displayName,
+            fileFraction: f,
+          ),
+        );
         report.localAudioExported++;
       } catch (e) {
         report.noteError('export local audio "${d.displayName}"', e);
@@ -2910,8 +3156,12 @@ class SyncOrchestrator {
 
     // Pull remote-only.
     for (final AssetEntry e in toPull) {
-      _emit(SyncPhase.localAudio,
-          itemIndex: index, itemTotal: total, title: e.name);
+      _emit(
+        SyncPhase.localAudio,
+        itemIndex: index,
+        itemTotal: total,
+        title: e.name,
+      );
       File? tmp;
       // Staging .db extracted from the package. AppModel.importSyncedLocalAudioDb
       // *copies* it into the library dir (never moves), so the staging copy
@@ -2920,17 +3170,19 @@ class SyncOrchestrator {
       File? stagingDb;
       try {
         tmp = _tmpFile(_localAudioAssetSuffix);
-        await _backend.getAsset(e.id, tmp,
-            onProgress: (double f) => _emit(SyncPhase.localAudio,
-                itemIndex: index,
-                itemTotal: total,
-                title: e.name,
-                fileFraction: f));
-        final LocalAudioPackageContents contents =
-            await _packages.importLocalAudioPackage(
-          packageFile: tmp,
-          stagingDir: _tempDir,
+        await _backend.getAsset(
+          e.id,
+          tmp,
+          onProgress: (double f) => _emit(
+            SyncPhase.localAudio,
+            itemIndex: index,
+            itemTotal: total,
+            title: e.name,
+            fileFraction: f,
+          ),
         );
+        final LocalAudioPackageContents contents = await _packages
+            .importLocalAudioPackage(packageFile: tmp, stagingDir: _tempDir);
         stagingDb = contents.dbFile;
         if (onLocalAudioImported != null) {
           await onLocalAudioImported!(contents);
@@ -2959,8 +3211,12 @@ class SyncOrchestrator {
     final int total = books.length;
     for (int i = 0; i < total; i++) {
       final EpubBookRow book = books[i];
-      _emit(SyncPhase.audiobooks,
-          itemIndex: i, itemTotal: total, title: book.title);
+      _emit(
+        SyncPhase.audiobooks,
+        itemIndex: i,
+        itemTotal: total,
+        title: book.title,
+      );
       // BUG-619 / TODO-1329: skip empty-key books. bookKey == the sanitized
       // title, so an empty key means ensureBookFolder would collapse onto the
       // sync root and scatter the .fushiaudio package into hibiki-data/ instead
@@ -2979,8 +3235,8 @@ class SyncOrchestrator {
         );
         // 先认新名，再回落 Hibiki 时代的旧名：漏认旧名会把「云上已有有声书」
         // 判成没有，于是重新上传一份新名资产，同一本书在云上留下两份包。
-        final AssetEntry? existing = await _backend.findAsset(
-                folderId, kSyncAudiobookAssetName) ??
+        final AssetEntry? existing =
+            await _backend.findAsset(folderId, kSyncAudiobookAssetName) ??
             await _backend.findAsset(folderId, kLegacySyncAudiobookAssetName);
 
         if (hasLocal && existing == null) {
@@ -2990,12 +3246,18 @@ class SyncOrchestrator {
             srtBookUid: srt.uid,
             outputFile: tmp,
           );
-          await _backend.putAsset(folderId, kSyncAudiobookAssetName, tmp,
-              onProgress: (double f) => _emit(SyncPhase.audiobooks,
-                  itemIndex: i,
-                  itemTotal: total,
-                  title: book.title,
-                  fileFraction: f));
+          await _backend.putAsset(
+            folderId,
+            kSyncAudiobookAssetName,
+            tmp,
+            onProgress: (double f) => _emit(
+              SyncPhase.audiobooks,
+              itemIndex: i,
+              itemTotal: total,
+              title: book.title,
+              fileFraction: f,
+            ),
+          );
           report.audiobooksExported++;
         }
       } catch (e) {
@@ -3074,10 +3336,12 @@ Future<bool> importRemoteBookFolder({
   if (epub == null) return false;
 
   tempDir.createSync(recursive: true);
-  final File tmp = File(p.join(
-    tempDir.path,
-    'hibiki_remote_${DateTime.now().microsecondsSinceEpoch}.epub',
-  ));
+  final File tmp = File(
+    p.join(
+      tempDir.path,
+      'hibiki_remote_${DateTime.now().microsecondsSinceEpoch}.epub',
+    ),
+  );
   try {
     await backend.getAsset(epub.id, tmp, onProgress: onProgress);
     final String importedBookKey = await EpubImporter.importFromPath(
@@ -3139,10 +3403,12 @@ Future<void> _pullRemoteFolderAudiobook({
   }
   if (audioAsset == null) return;
 
-  final File tmp = File(p.join(
-    tempDir.path,
-    'fushi_remote_audio_${DateTime.now().microsecondsSinceEpoch}.fushiaudio',
-  ));
+  final File tmp = File(
+    p.join(
+      tempDir.path,
+      'fushi_remote_audio_${DateTime.now().microsecondsSinceEpoch}.fushiaudio',
+    ),
+  );
   try {
     await backend.getAsset(audioAsset.id, tmp);
     await SyncAssetPackageService(db: db).importAudioDatabasePackage(
@@ -3245,7 +3511,7 @@ Future<void> _applyRemoteBookFolderCss(
 /// 非 Map / 缺 updatedAt / 坏字段一律安全跳过，绝不抛 FormatException。测试可见。
 @visibleForTesting
 Map<String, ({String content, bool deleted, int updatedAt})>
-    parseBookCssSidecar(Object? json) {
+parseBookCssSidecar(Object? json) {
   if (json is! Map) {
     return const <String, ({String content, bool deleted, int updatedAt})>{};
   }
@@ -3262,8 +3528,8 @@ Map<String, ({String content, bool deleted, int updatedAt})>
     final int? ms = updatedAt is int
         ? updatedAt
         : (updatedAt is num
-            ? updatedAt.toInt()
-            : int.tryParse(updatedAt?.toString() ?? ''));
+              ? updatedAt.toInt()
+              : int.tryParse(updatedAt?.toString() ?? ''));
     if (ms == null) return;
     out[rel] = (
       content: v['content']?.toString() ?? '',
@@ -3280,7 +3546,8 @@ Map<String, ({String content, bool deleted, int updatedAt})>
 /// 绝不抛 FormatException。测试可见。
 @visibleForTesting
 ({Map<String, int> addedAt, Map<String, int> tombstones}) parseTagSidecar(
-    Object? json) {
+  Object? json,
+) {
   if (json is! Map) {
     return (addedAt: <String, int>{}, tombstones: <String, int>{});
   }

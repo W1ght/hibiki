@@ -315,8 +315,8 @@ class FfmpegAsrPcmSource implements AsrPcmSource {
     FfmpegBackend? backend,
     Directory? tempDir,
     this.preRollSeconds = kAsrPcmSeekPreRollSeconds,
-  })  : _backend = backend,
-        _tempDir = tempDir ?? Directory.systemTemp;
+  }) : _backend = backend,
+       _tempDir = tempDir ?? Directory.systemTemp;
 
   final FfmpegBackend? _backend;
   final Directory _tempDir;

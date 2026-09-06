@@ -75,16 +75,22 @@ void main() {
 
     test('spread 模式落 spread 首页页码，fraction 钉 0', () {
       final (int page, double fraction) = MangaFushiPage.mangaProgressForSpread(
-          spreads, 2,
-          webtoonFraction: 0.5, isWebtoon: false);
+        spreads,
+        2,
+        webtoonFraction: 0.5,
+        isWebtoon: false,
+      );
       expect(page, 4); // spread 2 -> pages 4/5
       expect(fraction, 0.0);
     });
 
     test('webtoon 模式落 top 页 + 页内 fraction', () {
       final (int page, double fraction) = MangaFushiPage.mangaProgressForSpread(
-          spreads, 2,
-          webtoonFraction: 0.5, isWebtoon: true);
+        spreads,
+        2,
+        webtoonFraction: 0.5,
+        isWebtoon: true,
+      );
       expect(page, 4);
       expect(fraction, 0.5);
     });
@@ -104,8 +110,10 @@ void main() {
     });
 
     test('越界存档 clamp 到末 spread', () {
-      expect(MangaFushiPage.restoreSpreadFromProgress(spreads, 999),
-          spreads.length - 1);
+      expect(
+        MangaFushiPage.restoreSpreadFromProgress(spreads, 999),
+        spreads.length - 1,
+      );
     });
 
     test('空书回 0', () {
@@ -118,20 +126,30 @@ void main() {
 
   group('阅读模式覆盖', () {
     test('toggleMangaMode 双向翻转', () {
-      expect(MangaFushiPage.toggleMangaMode(MangaReadingMode.spread),
-          MangaReadingMode.webtoon);
-      expect(MangaFushiPage.toggleMangaMode(MangaReadingMode.webtoon),
-          MangaReadingMode.spread);
+      expect(
+        MangaFushiPage.toggleMangaMode(MangaReadingMode.spread),
+        MangaReadingMode.webtoon,
+      );
+      expect(
+        MangaFushiPage.toggleMangaMode(MangaReadingMode.webtoon),
+        MangaReadingMode.spread,
+      );
     });
 
     test('模式 <-> DB 字符串双向映射', () {
       expect(MangaFushiPage.modeToDbString(MangaReadingMode.spread), 'spread');
       expect(
-          MangaFushiPage.modeToDbString(MangaReadingMode.webtoon), 'webtoon');
+        MangaFushiPage.modeToDbString(MangaReadingMode.webtoon),
+        'webtoon',
+      );
       expect(
-          MangaFushiPage.modeFromDbString('webtoon'), MangaReadingMode.webtoon);
+        MangaFushiPage.modeFromDbString('webtoon'),
+        MangaReadingMode.webtoon,
+      );
       expect(
-          MangaFushiPage.modeFromDbString('spread'), MangaReadingMode.spread);
+        MangaFushiPage.modeFromDbString('spread'),
+        MangaReadingMode.spread,
+      );
       expect(MangaFushiPage.modeFromDbString('???'), MangaReadingMode.spread);
     });
 
@@ -139,9 +157,13 @@ void main() {
       expect(MangaFushiPage.modeOverrideFromDb(null), isNull);
       expect(MangaFushiPage.modeOverrideFromDb(''), isNull);
       expect(
-          MangaFushiPage.modeOverrideFromDb('spread'), MangaReadingMode.spread);
-      expect(MangaFushiPage.modeOverrideFromDb('webtoon'),
-          MangaReadingMode.webtoon);
+        MangaFushiPage.modeOverrideFromDb('spread'),
+        MangaReadingMode.spread,
+      );
+      expect(
+        MangaFushiPage.modeOverrideFromDb('webtoon'),
+        MangaReadingMode.webtoon,
+      );
     });
   });
 
@@ -165,32 +187,43 @@ void main() {
     test('恢复语义：round-trip 后落回同一 fraction（千分之一精度）', () {
       for (final double f in <double>[0.0, 0.123, 0.5, 0.999, 1.0]) {
         final int stored = MangaFushiPage.webtoonFractionToCharOffset(f);
-        final double restored =
-            MangaFushiPage.charOffsetToWebtoonFraction(stored);
-        expect((restored - f).abs() <= 0.0005, isTrue,
-            reason: 'fraction $f 存取往返漂移超过千分之一（stored=$stored）');
+        final double restored = MangaFushiPage.charOffsetToWebtoonFraction(
+          stored,
+        );
+        expect(
+          (restored - f).abs() <= 0.0005,
+          isTrue,
+          reason: 'fraction $f 存取往返漂移超过千分之一（stored=$stored）',
+        );
       }
     });
   });
 
   group('mangaImageUrl', () {
     test('逐段 percent-encode，保留 / 结构（与拦截器 decodeComponent 对称）', () {
-      expect(MangaFushiPage.mangaImageUrl('p001.jpg'),
-          'https://manga.local/img/p001.jpg');
-      expect(MangaFushiPage.mangaImageUrl('vol 1/p 01.jpg'),
-          'https://manga.local/img/vol%201/p%2001.jpg');
-      expect(MangaFushiPage.mangaImageUrl('images/p001.jpg'),
-          'https://manga.local/img/p001.jpg');
-      expect(MangaFushiPage.mangaImageUrl(r'.\images\p001.jpg'),
-          'https://manga.local/img/p001.jpg');
+      expect(
+        MangaFushiPage.mangaImageUrl('p001.jpg'),
+        'https://manga.local/img/p001.jpg',
+      );
+      expect(
+        MangaFushiPage.mangaImageUrl('vol 1/p 01.jpg'),
+        'https://manga.local/img/vol%201/p%2001.jpg',
+      );
+      expect(
+        MangaFushiPage.mangaImageUrl('images/p001.jpg'),
+        'https://manga.local/img/p001.jpg',
+      );
+      expect(
+        MangaFushiPage.mangaImageUrl(r'.\images\p001.jpg'),
+        'https://manga.local/img/p001.jpg',
+      );
       // 子目录结构保留（不被整体 encode 成 %2F）。
       expect(
-          MangaFushiPage.mangaImageUrl('a/b/c.png').contains('%2F'), isFalse);
+        MangaFushiPage.mangaImageUrl('a/b/c.png').contains('%2F'),
+        isFalse,
+      );
       expect(
-        MangaFushiPage.mangaImageUrl(
-          'vol 1/p 01.jpg',
-          useCustomScheme: true,
-        ),
+        MangaFushiPage.mangaImageUrl('vol 1/p 01.jpg', useCustomScheme: true),
         'fushi-manga://manga.local/img/vol%201/p%2001.jpg',
       );
     });

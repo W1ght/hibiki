@@ -67,7 +67,8 @@ class _FushiCardState extends State<FushiCard> {
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final bool eink = isEinkTheme(context);
-    final Color effectiveColor = widget.color ??
+    final Color effectiveColor =
+        widget.color ??
         (widget.selected ? tokens.surfaces.selected : tokens.surfaces.card);
     final BorderRadius radius = widget.borderRadius ?? tokens.radii.cardRadius;
     // eink 把所有 surface container 塌缩为背景色（theme_notifier eink scheme），
@@ -77,11 +78,11 @@ class _FushiCardState extends State<FushiCard> {
     final BorderSide side = widget.borderColor != null
         ? BorderSide(color: widget.borderColor!)
         : (eink
-            ? BorderSide(
-                color: tokens.surfaces.outline,
-                width: widget.selected ? 2 : 1,
-              )
-            : BorderSide.none);
+              ? BorderSide(
+                  color: tokens.surfaces.outline,
+                  width: widget.selected ? 2 : 1,
+                )
+              : BorderSide.none);
     final Widget content = Padding(
       padding: widget.padding ?? EdgeInsets.all(tokens.spacing.card),
       child: widget.child,
@@ -97,16 +98,14 @@ class _FushiCardState extends State<FushiCard> {
           curve: fushiMd3StateCurve,
           decoration: ShapeDecoration(
             color: effectiveColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: radius,
-              side: side,
-            ),
+            shape: RoundedRectangleBorder(borderRadius: radius, side: side),
           ),
           child: Material(
             type: MaterialType.transparency,
             shape: RoundedRectangleBorder(borderRadius: radius),
             clipBehavior: Clip.antiAlias,
-            child: widget.onTap == null &&
+            child:
+                widget.onTap == null &&
                     widget.onLongPress == null &&
                     widget.onSecondaryTap == null
                 ? content
@@ -206,17 +205,21 @@ class _FushiListItemState extends State<FushiListItem> {
   @override
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final Color color =
-        widget.selected ? tokens.surfaces.selected : Colors.transparent;
+    final Color color = widget.selected
+        ? tokens.surfaces.selected
+        : Colors.transparent;
     final Color selectedForeground = tokens.surfaces.primary;
-    final Color primaryForeground =
-        widget.selected ? selectedForeground : tokens.surfaces.onSurface;
-    final Color secondaryForeground =
-        widget.selected ? selectedForeground : tokens.surfaces.onVariant;
+    final Color primaryForeground = widget.selected
+        ? selectedForeground
+        : tokens.surfaces.onSurface;
+    final Color secondaryForeground = widget.selected
+        ? selectedForeground
+        : tokens.surfaces.onVariant;
     final TextStyle titleStyle = tokens.type.listTitle.copyWith(
       color: primaryForeground,
-      fontWeight:
-          widget.selected ? FontWeight.w700 : tokens.type.listTitle.fontWeight,
+      fontWeight: widget.selected
+          ? FontWeight.w700
+          : tokens.type.listTitle.fontWeight,
     );
     final TextStyle subtitleStyle = tokens.type.listSubtitle.copyWith(
       color: secondaryForeground,
@@ -226,10 +229,12 @@ class _FushiListItemState extends State<FushiListItem> {
     );
     final TextStyle metadataStyle = tokens.type.metadata.copyWith(
       color: secondaryForeground,
-      fontWeight:
-          widget.selected ? FontWeight.w700 : tokens.type.metadata.fontWeight,
+      fontWeight: widget.selected
+          ? FontWeight.w700
+          : tokens.type.metadata.fontWeight,
     );
-    final double resolvedMinHeight = widget.minHeight ??
+    final double resolvedMinHeight =
+        widget.minHeight ??
         switch (widget.density) {
           FushiListDensity.standard => tokens.density.listMinHeight,
           FushiListDensity.compact => tokens.density.compactListMinHeight,
@@ -237,7 +242,8 @@ class _FushiListItemState extends State<FushiListItem> {
     final Widget content = ConstrainedBox(
       constraints: BoxConstraints(minHeight: resolvedMinHeight),
       child: Padding(
-        padding: widget.padding ??
+        padding:
+            widget.padding ??
             EdgeInsets.symmetric(
               horizontal: tokens.spacing.rowHorizontal,
               vertical: tokens.spacing.rowVertical,
@@ -291,8 +297,9 @@ class _FushiListItemState extends State<FushiListItem> {
     );
 
     final bool pill = widget.selectedShape == FushiListItemSelectedShape.pill;
-    final BorderRadius? highlightRadius =
-        pill ? tokens.radii.groupRadius : null;
+    final BorderRadius? highlightRadius = pill
+        ? tokens.radii.groupRadius
+        : null;
     // pill 形态**两态都画边框**，未选中时透明：BoxDecoration 的 border 会把子节点向
     // 内挤 1px，只在选中时给边框会让同一行选中后比未选中高 2px（功能选择卡片在
     // 列表里逐行错位）。几何恒定，颜色才是唯一的选中信号。
@@ -341,10 +348,7 @@ class _FushiListItemState extends State<FushiListItem> {
           },
         ),
       },
-      child: FushiFocusTarget(
-        id: effectiveFocusId,
-        child: material,
-      ),
+      child: FushiFocusTarget(id: effectiveFocusId, child: material),
     );
     if (FushiFocusRoot.maybeControllerOf(context) == null) return material;
     return target;
@@ -428,14 +432,16 @@ class FushiSearchField extends StatelessWidget {
             leading: const Icon(Icons.search),
             trailing: trailing.isEmpty ? null : trailing,
             elevation: const WidgetStatePropertyAll<double>(0),
-            backgroundColor:
-                WidgetStatePropertyAll<Color>(tokens.surfaces.search),
+            backgroundColor: WidgetStatePropertyAll<Color>(
+              tokens.surfaces.search,
+            ),
             shape: WidgetStatePropertyAll<OutlinedBorder>(
               RoundedRectangleBorder(borderRadius: tokens.radii.controlRadius),
             ),
             textStyle: WidgetStatePropertyAll<TextStyle>(tokens.type.listTitle),
-            hintStyle:
-                WidgetStatePropertyAll<TextStyle>(tokens.type.listSubtitle),
+            hintStyle: WidgetStatePropertyAll<TextStyle>(
+              tokens.type.listSubtitle,
+            ),
             onChanged: onChanged,
             onSubmitted: onSubmitted,
           );
@@ -522,7 +528,8 @@ class _FushiTextFieldState extends State<FushiTextField> {
   @override
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final Widget? effectiveSuffix = widget.suffixIcon ??
+    final Widget? effectiveSuffix =
+        widget.suffixIcon ??
         _hibikiTextFieldInputSuffix(
           context: context,
           controller: widget.readOnly ? null : widget.controller,
@@ -560,7 +567,8 @@ class _FushiTextFieldState extends State<FushiTextField> {
         focusedBorder: border.copyWith(
           borderSide: BorderSide(color: tokens.surfaces.primary, width: 2),
         ),
-        contentPadding: widget.contentPadding ??
+        contentPadding:
+            widget.contentPadding ??
             EdgeInsets.symmetric(
               horizontal: tokens.spacing.rowHorizontal,
               vertical: tokens.spacing.rowVertical,
@@ -594,7 +602,8 @@ Widget? _hibikiTextFieldInputSuffix({
 }) {
   if (controller == null) return null;
   final TargetPlatform platform = Theme.of(context).platform;
-  final bool isDesktop = platform == TargetPlatform.windows ||
+  final bool isDesktop =
+      platform == TargetPlatform.windows ||
       platform == TargetPlatform.linux ||
       platform == TargetPlatform.macOS;
   if (isDesktop) {
@@ -657,15 +666,16 @@ class FushiSelectableChip extends StatelessWidget {
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final ColorScheme colors = Theme.of(context).colorScheme;
-    final Color foreground =
-        selected ? colors.onPrimaryContainer : tokens.surfaces.onSurface;
+    final Color foreground = selected
+        ? colors.onPrimaryContainer
+        : tokens.surfaces.onSurface;
     // 仅图标模式（TODO-640）：图标当作 chip 的 label（不再放进 avatar + 文字），
     // chip 收成正方裸图标；需 leadingIcon 非空才生效，否则退化为普通文字 chip。
     final bool effectiveIconOnly = iconOnly && leadingIcon != null;
     final Widget? effectiveAvatar = effectiveIconOnly
         ? null
         : (avatar ??
-            (leadingIcon == null ? null : Icon(leadingIcon, size: 18)));
+              (leadingIcon == null ? null : Icon(leadingIcon, size: 18)));
     final Widget labelWidget = effectiveIconOnly
         ? Icon(leadingIcon, size: 18, color: foreground)
         : Text(
@@ -767,10 +777,7 @@ class FushiActionChip extends StatelessWidget {
           },
         ),
       },
-      child: FushiFocusTarget(
-        id: focusId!,
-        child: button,
-      ),
+      child: FushiFocusTarget(id: focusId!, child: button),
     );
   }
 }
@@ -807,29 +814,36 @@ class _FushiTagChipState extends State<FushiTagChip> {
   /// Stable derived id so a tappable chip is a gamepad/keyboard focus target by
   /// default — Stateful (not Stateless) so identityHashCode is stable across
   /// rebuilds. Mirrors FushiCard / FushiListItem.
-  late final FushiFocusId _fallbackFocusId =
-      FushiFocusId('hibiki-tag-chip-${identityHashCode(this)}');
+  late final FushiFocusId _fallbackFocusId = FushiFocusId(
+    'hibiki-tag-chip-${identityHashCode(this)}',
+  );
 
   @override
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final ColorScheme colors = Theme.of(context).colorScheme;
     final Color tagColor = widget.color ?? colors.primary;
-    final Color baseColor = widget.color ??
+    final Color baseColor =
+        widget.color ??
         (widget.selected ? colors.primaryContainer : tokens.surfaces.overlay);
     final Color background = switch (widget.tone) {
-      FushiTagChipTone.filled => widget.dimmed
-          ? baseColor.withValues(alpha: 0.44)
-          : baseColor.withValues(alpha: widget.color == null ? 1 : 0.88),
-      FushiTagChipTone.surface => widget.selected
-          ? tagColor.withValues(alpha: widget.dimmed ? 0.12 : 0.2)
-          : tokens.surfaces.overlay.withValues(alpha: widget.dimmed ? 0.44 : 1),
+      FushiTagChipTone.filled =>
+        widget.dimmed
+            ? baseColor.withValues(alpha: 0.44)
+            : baseColor.withValues(alpha: widget.color == null ? 1 : 0.88),
+      FushiTagChipTone.surface =>
+        widget.selected
+            ? tagColor.withValues(alpha: widget.dimmed ? 0.12 : 0.2)
+            : tokens.surfaces.overlay.withValues(
+                alpha: widget.dimmed ? 0.44 : 1,
+              ),
     };
     final Color foreground = switch (widget.tone) {
       FushiTagChipTone.filled => _foregroundFor(background),
-      FushiTagChipTone.surface => widget.dimmed
-          ? colors.onSurface.withValues(alpha: 0.4)
-          : colors.onSurface,
+      FushiTagChipTone.surface =>
+        widget.dimmed
+            ? colors.onSurface.withValues(alpha: 0.4)
+            : colors.onSurface,
     };
     final BoxBorder? border = widget.selected
         ? Border.all(
@@ -865,11 +879,7 @@ class _FushiTagChipState extends State<FushiTagChip> {
         InkWell(
           borderRadius: tokens.radii.chipRadius,
           onTap: widget.onDeleted,
-          child: Icon(
-            Icons.close,
-            size: 14,
-            color: foreground,
-          ),
+          child: Icon(Icons.close, size: 14, color: foreground),
         ),
       ],
     ];
@@ -1006,7 +1016,8 @@ class FushiModalSheetFrame extends StatelessWidget {
       if (footer != null) ...<Widget>[
         Divider(height: 1, thickness: 1, color: tokens.surfaces.outline),
         Padding(
-          padding: footerPadding ??
+          padding:
+              footerPadding ??
               EdgeInsets.fromLTRB(
                 tokens.spacing.page,
                 0,
@@ -1226,8 +1237,9 @@ class FushiDialogFrame extends StatelessWidget {
   /// 的 40 为止。用比例而非断点，避免在某个宽度上突然跳变。
   EdgeInsets _resolveInsetPadding(double screenWidth) {
     if (insetPadding != null) return insetPadding!;
-    final double horizontal =
-        screenWidth.isFinite ? (screenWidth * 0.05).clamp(16.0, 40.0) : 40.0;
+    final double horizontal = screenWidth.isFinite
+        ? (screenWidth * 0.05).clamp(16.0, 40.0)
+        : 40.0;
     return EdgeInsets.symmetric(horizontal: horizontal, vertical: 24);
   }
 
@@ -1236,10 +1248,7 @@ class FushiDialogFrame extends StatelessWidget {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final Size screenSize = MediaQuery.sizeOf(context);
     final double screenHeight = screenSize.height;
-    final Widget padded = Padding(
-      padding: padding,
-      child: child,
-    );
+    final Widget padded = Padding(padding: padding, child: child);
     return Dialog(
       clipBehavior: Clip.antiAlias,
       insetPadding: _resolveInsetPadding(screenSize.width),
@@ -1300,8 +1309,9 @@ class FushiColorSwatch extends StatelessWidget {
       width: selected ? 3 : 1,
     );
     final Color foreground = _swatchForegroundFor(color);
-    final Widget? swatchOverlay =
-        selected ? Icon(Icons.check, color: foreground, size: 20) : overlay;
+    final Widget? swatchOverlay = selected
+        ? Icon(Icons.check, color: foreground, size: 20)
+        : overlay;
     final Widget swatch = SizedBox(
       width: resolvedWidth,
       height: resolvedHeight,
@@ -1453,10 +1463,7 @@ class _FushiActivatableFocusTargetState
           },
         ),
       },
-      child: FushiFocusTarget(
-        id: _focusId,
-        child: widget.child,
-      ),
+      child: FushiFocusTarget(id: _focusId, child: widget.child),
     );
   }
 }
@@ -1480,11 +1487,11 @@ Color _swatchForegroundFor(Color background) {
 /// distinct (their backgrounds differ), and makes the three dark presets
 /// readable apart at a glance instead of three near-identical dark circles.
 List<Color> fushiSchemeSwatchColors(ColorScheme scheme) => <Color>[
-      scheme.onSurface,
-      scheme.surface,
-      scheme.primary,
-      scheme.surfaceContainerHigh,
-    ];
+  scheme.onSurface,
+  scheme.surface,
+  scheme.primary,
+  scheme.surfaceContainerHigh,
+];
 
 /// A rounded-square swatch split on the diagonal to preview the four real
 /// generated scheme colours instead of a single seed colour. The top-left
@@ -1537,8 +1544,9 @@ class FushiSchemeSwatch extends StatelessWidget {
       color: selected ? cs.primary : borderColor ?? cs.outlineVariant,
       width: selected ? 3 : 1,
     );
-    final Widget? badgeChild =
-        selected ? const Icon(Icons.check, size: 10) : overlay;
+    final Widget? badgeChild = selected
+        ? const Icon(Icons.check, size: 10)
+        : overlay;
     // TODO-138: every swatch — including system (= auto) and custom (= palette) —
     // now shows the FULL diagonal preview (「文」 glyph + accent dot). The badge is
     // no longer a centred disc that hid that preview; it is a small corner marker
@@ -1712,7 +1720,9 @@ class SchemeDiagonalPainter extends CustomPainter {
     tp.paint(
       canvas,
       Offset(
-          size.width * 0.30 - tp.width / 2, size.height * 0.30 - tp.height / 2),
+        size.width * 0.30 - tp.width / 2,
+        size.height * 0.30 - tp.height / 2,
+      ),
     );
   }
 
@@ -1769,10 +1779,10 @@ class FushiPageHeader extends StatelessWidget {
     this.actions = const <Widget>[],
     this.padding,
     this.compact = false,
-  })  : title = null,
-        titleWidget = title,
-        subtitle = null,
-        bottom = null;
+  }) : title = null,
+       titleWidget = title,
+       subtitle = null,
+       bottom = null;
 
   final String? title;
   final Widget? titleWidget;
@@ -1799,7 +1809,8 @@ class FushiPageHeader extends StatelessWidget {
     // inside FushiAppUiScale, so MediaQuery.sizeOf here is the inflated
     // logical width; multiply by the net app UI scale to recover the real
     // viewport width before applying the compact breakpoint.
-    final bool narrowWindow = windowSizeClassReal(
+    final bool narrowWindow =
+        windowSizeClassReal(
           MediaQuery.sizeOf(context).width,
           FushiAppUiScale.of(context),
         ) ==
@@ -1807,7 +1818,8 @@ class FushiPageHeader extends StatelessWidget {
     final double resolvedTop = compact
         ? tokens.spacing.gap
         : (narrowWindow ? tokens.spacing.page : tokens.spacing.page + 8);
-    final EdgeInsetsGeometry resolvedPadding = padding ??
+    final EdgeInsetsGeometry resolvedPadding =
+        padding ??
         EdgeInsets.fromLTRB(
           tokens.spacing.page,
           resolvedTop,
@@ -1816,7 +1828,8 @@ class FushiPageHeader extends StatelessWidget {
         );
     final String? resolvedSubtitle =
         subtitle == null || subtitle!.trim().isEmpty ? null : subtitle;
-    final Widget resolvedTitle = titleWidget ??
+    final Widget resolvedTitle =
+        titleWidget ??
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -1998,10 +2011,9 @@ class _FushiPageHeaderRowState extends State<_FushiPageHeaderRow> {
     List<FushiIconButton> collapsed,
   ) async {
     final RenderBox button = anchorContext.findRenderObject()! as RenderBox;
-    final RenderBox overlay = Navigator.of(anchorContext)
-        .overlay!
-        .context
-        .findRenderObject()! as RenderBox;
+    final RenderBox overlay =
+        Navigator.of(anchorContext).overlay!.context.findRenderObject()!
+            as RenderBox;
     final RelativeRect position = RelativeRect.fromRect(
       Rect.fromPoints(
         button.localToGlobal(Offset.zero, ancestor: overlay),
@@ -2082,14 +2094,17 @@ class _FushiPageHeaderRowState extends State<_FushiPageHeaderRow> {
                 )
               : 0.0;
           final double maxActionsWidth = constraints.maxWidth.isFinite
-              ? (constraints.maxWidth - actionsGap - titleFloor)
-                  .clamp(0.0, double.infinity)
+              ? (constraints.maxWidth - actionsGap - titleFloor).clamp(
+                  0.0,
+                  double.infinity,
+                )
               : double.infinity;
           // 带 label 的动作是否展开成药丸：按**页头本地可用宽**（而非整窗宽）判定，经
           // UI 缩放还原真实宽后仅 expanded（≥840）才展开。桌面带导航栏 / 分栏时整窗
           // ≥840 但本地宽更窄，若按整窗判定会误展开、把 [Expanded] 标题挤到贴按钮/折行
           // （用户反馈「已经重叠了还没降级成无字」）。经 [FushiHeaderLabelScope] 下发。
-          final bool expandLabels = constraints.maxWidth.isFinite &&
+          final bool expandLabels =
+              constraints.maxWidth.isFinite &&
               windowSizeClassReal(
                     constraints.maxWidth,
                     FushiAppUiScale.of(context),
@@ -2106,7 +2121,8 @@ class _FushiPageHeaderRowState extends State<_FushiPageHeaderRow> {
               !expandLabels &&
               _titleNaturalWidth != null &&
               constraints.maxWidth.isFinite) {
-            final double needed = _titleNaturalWidth! +
+            final double needed =
+                _titleNaturalWidth! +
                 actionsGap +
                 _estimateActionsWidth(widget.actionItems);
             final List<FushiIconButton> collapsible = widget.actionItems
@@ -2229,7 +2245,8 @@ class _FushiPageScaffoldState extends State<FushiPageScaffold> {
   @override
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final Widget? effectiveLeading = widget.leading ??
+    final Widget? effectiveLeading =
+        widget.leading ??
         (widget.automaticallyImplyLeading ? _defaultLeading(context) : null);
     return PrimaryScrollController(
       controller: _scrollController,
@@ -2322,8 +2339,8 @@ class FushiToolScaffold extends StatelessWidget {
     this.bottom,
     this.bottomNavigationBar,
     this.backgroundColor,
-  })  : title = null,
-        titleWidget = title;
+  }) : title = null,
+       titleWidget = title;
 
   final String? title;
   final Widget? titleWidget;
@@ -2363,8 +2380,9 @@ class FushiToolScaffold extends StatelessWidget {
                 child: LayoutBuilder(
                   builder: (BuildContext context, BoxConstraints constraints) {
                     final double gapHalf = tokens.spacing.gap / 2;
-                    final double leadingWidth =
-                        effectiveLeading != null ? 40 + gapHalf : 0;
+                    final double leadingWidth = effectiveLeading != null
+                        ? 40 + gapHalf
+                        : 0;
                     final double titleFloor = constraints.maxWidth.isFinite
                         ? math.min(
                             96.0 * MediaQuery.textScalerOf(context).scale(1),
@@ -2373,10 +2391,10 @@ class FushiToolScaffold extends StatelessWidget {
                         : 0.0;
                     final double maxActionsWidth = constraints.maxWidth.isFinite
                         ? (constraints.maxWidth -
-                                leadingWidth -
-                                gapHalf -
-                                titleFloor)
-                            .clamp(0.0, double.infinity)
+                                  leadingWidth -
+                                  gapHalf -
+                                  titleFloor)
+                              .clamp(0.0, double.infinity)
                         : double.infinity;
                     return Row(
                       children: <Widget>[
@@ -2387,14 +2405,13 @@ class FushiToolScaffold extends StatelessWidget {
                           ),
                           SizedBox(width: gapHalf),
                         ],
-                        Expanded(
-                          child: _buildTitle(tokens),
-                        ),
+                        Expanded(child: _buildTitle(tokens)),
                         if (actions.isNotEmpty) ...<Widget>[
                           SizedBox(width: gapHalf),
                           ConstrainedBox(
-                            constraints:
-                                BoxConstraints(maxWidth: maxActionsWidth),
+                            constraints: BoxConstraints(
+                              maxWidth: maxActionsWidth,
+                            ),
                             child: HorizontalDragScrollable(
                               child: SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
@@ -2498,10 +2515,7 @@ class FushiOverlayScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Widget content = safeArea ? SafeArea(child: body) : body;
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: content,
-    );
+    return Scaffold(backgroundColor: Colors.transparent, body: content);
   }
 }
 
@@ -2537,10 +2551,7 @@ class FushiFilePickerRow extends StatelessWidget {
       subtitle: subtitle == null || subtitle!.isEmpty ? null : Text(subtitle!),
       trailing: actions.isEmpty
           ? null
-          : Row(
-              mainAxisSize: MainAxisSize.min,
-              children: actions,
-            ),
+          : Row(mainAxisSize: MainAxisSize.min, children: actions),
     );
   }
 }
@@ -2576,8 +2587,9 @@ class FushiOverflowMenu<T> extends StatefulWidget {
 class _FushiOverflowMenuState<T> extends State<FushiOverflowMenu<T>> {
   final GlobalKey<PopupMenuButtonState<T>> _menuKey =
       GlobalKey<PopupMenuButtonState<T>>();
-  late final FushiFocusId _fallbackFocusId =
-      FushiFocusId('hibiki-overflow-menu-${identityHashCode(this)}');
+  late final FushiFocusId _fallbackFocusId = FushiFocusId(
+    'hibiki-overflow-menu-${identityHashCode(this)}',
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -2610,10 +2622,7 @@ class _FushiOverflowMenuState<T> extends State<FushiOverflowMenu<T>> {
           },
         ),
       },
-      child: FushiFocusTarget(
-        id: _fallbackFocusId,
-        child: menu,
-      ),
+      child: FushiFocusTarget(id: _fallbackFocusId, child: menu),
     );
   }
 }
@@ -2628,16 +2637,16 @@ class FushiPopupMenuItem<T> extends PopupMenuItem<T> {
     bool selected = false,
     bool enabled = true,
   }) : super(
-          value: value,
-          enabled: enabled,
-          height: 48,
-          child: _FushiPopupMenuItemContent(
-            label: label,
-            icon: icon,
-            color: color,
-            selected: selected,
-          ),
-        );
+         value: value,
+         enabled: enabled,
+         height: 48,
+         child: _FushiPopupMenuItemContent(
+           label: label,
+           icon: icon,
+           color: color,
+           selected: selected,
+         ),
+       );
 }
 
 class _FushiPopupMenuItemContent extends StatelessWidget {
@@ -2656,7 +2665,8 @@ class _FushiPopupMenuItemContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final Color foreground = color ??
+    final Color foreground =
+        color ??
         (selected ? tokens.surfaces.primary : tokens.surfaces.onSurface);
     final TextStyle textStyle = tokens.type.listTitle.copyWith(
       color: foreground,
@@ -2765,7 +2775,7 @@ class _FushiLogPanelState extends State<FushiLogPanel> {
     if (!_hasSelection) return;
     final bool edgeAutoScrollDuringDragSelect =
         notification.dragDetails == null &&
-            _scrollController.pointerSelectionActive;
+        _scrollController.pointerSelectionActive;
     if (edgeAutoScrollDuringDragSelect) return;
     _hasSelection = false;
     _selectionAreaKey.currentState?.selectableRegion.clearSelection();
@@ -2918,9 +2928,9 @@ class _FushiLogPanelState extends State<FushiLogPanel> {
                         // 通知自下而上冒泡，这里既拿得到，又不会拦住外层。
                         onNotification:
                             (ScrollUpdateNotification notification) {
-                          _dropStaleSelectionOnUserScroll(notification);
-                          return false;
-                        },
+                              _dropStaleSelectionOnUserScroll(notification);
+                              return false;
+                            },
                         child: ListView.builder(
                           controller: _scrollController,
                           padding: EdgeInsets.all(tokens.spacing.card),
@@ -3029,7 +3039,7 @@ bool logSelectionScrollDecision({
 
 class _LogSelectionScrollController extends ScrollController {
   _LogSelectionScrollController()
-      : super(debugLabel: 'hibiki-log-selection-scroll');
+    : super(debugLabel: 'hibiki-log-selection-scroll');
 
   // 拖拽选区是否激活。这是 [logSelectionScrollDecision] 唯一需要的状态——
   // TODO-822 简化判据后不再追踪指针几何 / 手动滚动标志（边缘自动滚动整条拿掉，
@@ -3130,11 +3140,7 @@ class _LogSelectionScrollPosition extends ScrollPositionWithSingleContext {
 }
 
 class FushiEditorPanel extends StatelessWidget {
-  const FushiEditorPanel({
-    required this.controller,
-    super.key,
-    this.focusNode,
-  });
+  const FushiEditorPanel({required this.controller, super.key, this.focusNode});
 
   final TextEditingController controller;
   final FocusNode? focusNode;
@@ -3168,7 +3174,8 @@ class FushiEditorPanel extends StatelessWidget {
             Positioned(
               top: tokens.spacing.gap,
               right: tokens.spacing.gap,
-              child: _hibikiTextFieldInputSuffix(
+              child:
+                  _hibikiTextFieldInputSuffix(
                     context: context,
                     controller: controller,
                   ) ??
@@ -3258,13 +3265,7 @@ class FushiPopupSurface extends StatelessWidget {
       ),
       clipBehavior: clipBehavior,
       borderOnForeground: borderOnForeground,
-      child: _borderInsetChild(
-        tokens,
-        Padding(
-          padding: padding,
-          child: child,
-        ),
-      ),
+      child: _borderInsetChild(tokens, Padding(padding: padding, child: child)),
     );
   }
 }
@@ -3300,8 +3301,9 @@ class FushiCompactSearchRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final String closeTooltip =
-        MaterialLocalizations.of(context).closeButtonTooltip;
+    final String closeTooltip = MaterialLocalizations.of(
+      context,
+    ).closeButtonTooltip;
     final Widget? keyboardSuffix = _hibikiTextFieldInputSuffix(
       context: context,
       controller: controller,

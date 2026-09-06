@@ -601,8 +601,11 @@ void main() {
 
     test('翻到上方时底边贴台词：实际卡比 cap 矮 314 px 也不留空隙（修前顶边停在 569）', () {
       final GalRootPlacement placement = resolvePlacement(hit4k, 1933, 1087);
-      final ({int x, int y}) rendered =
-          resolveGalRootTopLeft(placement, 773, hit4k.viewH);
+      final ({int x, int y}) rendered = resolveGalRootTopLeft(
+        placement,
+        773,
+        hit4k.viewH,
+      );
       expect(rendered.y + 773, placement.edgeY, reason: '底边必须贴在字形顶上方');
       expect(rendered.y, 1656 - 773);
       // cap 高度本身回到旧实现的落点：布局原点与修前逐字节一致。
@@ -649,8 +652,11 @@ void main() {
       expect(placement.edgeY, hit.glyphY + hit.glyphH + _kCardGap);
       expect(placement.x, 300);
       // 反推实现在这里会给 (above: true, edgeY: 720) → 根卡 200 高时落到 520。
-      final ({int x, int y}) rendered =
-          resolveGalRootTopLeft(placement, 200, hit.viewH);
+      final ({int x, int y}) rendered = resolveGalRootTopLeft(
+        placement,
+        200,
+        hit.viewH,
+      );
       expect(rendered.y, 344);
       expect(rendered.y, hit.glyphY + hit.glyphH + _kCardGap);
     });

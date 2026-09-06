@@ -258,11 +258,16 @@ class _AidokuCloudflareChallengePageState
                     onLoadStop: (_, __) => unawaited(_check()),
                     // 非 null 本身就是救命动作：Java 侧据此 `return true`，不再连坐杀 app。
                     onRenderProcessGone:
-                        (InAppWebViewController _, RenderProcessGoneDetail detail) =>
-                            unawaited(_deathGuard.handleDeath(
-                      didCrash: detail.didCrash,
-                      rendererPriorityAtExit: detail.rendererPriorityAtExit,
-                    )),
+                        (
+                          InAppWebViewController _,
+                          RenderProcessGoneDetail detail,
+                        ) => unawaited(
+                          _deathGuard.handleDeath(
+                            didCrash: detail.didCrash,
+                            rendererPriorityAtExit:
+                                detail.rendererPriorityAtExit,
+                          ),
+                        ),
                   ),
                 ),
           ),

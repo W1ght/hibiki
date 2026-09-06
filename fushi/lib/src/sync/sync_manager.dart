@@ -136,10 +136,10 @@ class SyncManager {
     required FushiDatabase db,
     required SyncBackend backend,
     this.onContentProgress,
-  })  : _db = db,
-        _repo = SyncRepository(db),
-        _backend = backend,
-        _scope = syncChannelScopeOf(backend);
+  }) : _db = db,
+       _repo = SyncRepository(db),
+       _backend = backend,
+       _scope = syncChannelScopeOf(backend);
 
   final FushiDatabase _db;
   final SyncRepository _repo;
@@ -305,8 +305,9 @@ class SyncManager {
     final folderId = await _backend.ensureBookFolder(
       bookTitle: book.title,
       rootFolderId: rootId,
-      readCoverData:
-          coverPath == null ? null : () => _readCoverBytes(coverPath),
+      readCoverData: coverPath == null
+          ? null
+          : () => _readCoverBytes(coverPath),
     );
 
     // 书的远端文件夹名与它的 assetKey 是同一个值（都是 sanitize 后的书名，见
@@ -366,7 +367,8 @@ class SyncManager {
       // legacy last-write-wins outcome for single-sided / unanimous cases;
       // when both timestamps are equal it returns `synced`, so fall back to
       // the content-aware tie-break for the genuine same-ms collision.
-      syncDir = res.direction == SyncDirection.synced &&
+      syncDir =
+          res.direction == SyncDirection.synced &&
               localPosition?.updatedAt != null &&
               remoteTimestamp != null
           ? _determineSyncDirection(
@@ -385,7 +387,10 @@ class SyncManager {
       // common ancestor is this timestamp regardless of who decided it.
       if (localPosition?.updatedAt != null) {
         await _db.setSyncBaseline(
-            assetKey, 'progress', localPosition!.updatedAt);
+          assetKey,
+          'progress',
+          localPosition!.updatedAt,
+        );
       }
       return SyncBookResult(direction: SyncResult.synced, title: book.title);
     }
@@ -425,7 +430,9 @@ class SyncManager {
       case SyncDirection.exportToTtu:
         if (localPosition == null && !syncContent) {
           return SyncBookResult(
-              direction: SyncResult.skipped, title: book.title);
+            direction: SyncResult.skipped,
+            title: book.title,
+          );
         }
         // BUG-201: see _handleImport above — the export baseline is written
         // inside _handleExport immediately after the remote progress file
@@ -485,8 +492,9 @@ class SyncManager {
     // has read further wins — the larger reading position is the value worth
     // keeping. Only fall back to 'synced' when both sides genuinely agree (or
     // the remote fraction is unparseable / local content unknown).
-    final double? remoteProgress =
-        _parseRemoteProgressFraction(remoteProgressFile!.name);
+    final double? remoteProgress = _parseRemoteProgressFraction(
+      remoteProgressFile!.name,
+    );
     if (localProgress == null || remoteProgress == null) {
       return SyncDirection.synced;
     }
@@ -496,8 +504,10 @@ class SyncManager {
     // normCharOffset 步长」——若按 1e-6 比就误判「本地更靠后」→ 多余地原样重导出，把云端
     // 原值改写成近似（用户报的「差几个字符」）。把远端分数先过同一套存储网格量化，使
     // 「导入后没动」稳定判为 synced、不重导出，云端原值原样保留。
-    final double remoteOnGrid =
-        _quantizeToStorageGrid(remoteProgress, chapters);
+    final double remoteOnGrid = _quantizeToStorageGrid(
+      remoteProgress,
+      chapters,
+    );
     final double delta = localProgress - remoteOnGrid;
     if (delta.abs() <= _progressTieEpsilon) return SyncDirection.synced;
     return delta > 0 ? SyncDirection.exportToTtu : SyncDirection.importFromTtu;
@@ -507,12 +517,16 @@ class SyncManager {
   /// 章内 0-10000 量化）所能表示的最近分数。本地进度本就走 `toExploredCharCount`
   /// 落在该网格上，故远端分数过一遍同样的 round-trip 后即可同分辨率比对。
   double _quantizeToStorageGrid(
-      double fraction, List<ChapterCharInfo> chapters) {
+    double fraction,
+    List<ChapterCharInfo> chapters,
+  ) {
     final int total = totalCharacterCount(chapters);
     if (total <= 0) return fraction;
     final int explored = (fraction * total).round();
-    final pos =
-        fromExploredCharCount(exploredCharCount: explored, chapters: chapters);
+    final pos = fromExploredCharCount(
+      exploredCharCount: explored,
+      chapters: chapters,
+    );
     return toExploredCharCount(
           sectionIndex: pos.sectionIndex,
           normCharOffset: pos.normCharOffset,
@@ -580,12 +594,14 @@ class SyncManager {
       exploredCharCount: remoteProgress.exploredCharCount,
       chapters: chapters,
     );
-    await _db.upsertReaderPosition(ReaderPositionsCompanion(
-      bookUid: Value(book.uid),
-      sectionIndex: Value(pos.sectionIndex),
-      normCharOffset: Value(pos.normCharOffset),
-      updatedAt: Value(remoteProgress.lastBookmarkModified),
-    ));
+    await _db.upsertReaderPosition(
+      ReaderPositionsCompanion(
+        bookUid: Value(book.uid),
+        sectionIndex: Value(pos.sectionIndex),
+        normCharOffset: Value(pos.normCharOffset),
+        updatedAt: Value(remoteProgress.lastBookmarkModified),
+      ),
+    );
 
     // BUG-201: the authoritative progress transfer is the upsert above — after
     // it, local.updatedAt == remoteProgress.lastBookmarkModified == the remote
@@ -599,7 +615,10 @@ class SyncManager {
     // the auto path and the manual (compare useRemote→import) path so a
     // user-resolved conflict's new ancestor is also persisted here.
     await _db.setSyncBaseline(
-        assetKey, 'progress', remoteProgress.lastBookmarkModified);
+      assetKey,
+      'progress',
+      remoteProgress.lastBookmarkModified,
+    );
 
     // Import statistics
     if (syncStats && statsFileId != null) {
@@ -689,8 +708,11 @@ class SyncManager {
         if (statsFileId != null) {
           remoteStats = await _backend.getStatsFile(statsFileId);
         }
-        final merged =
-            _mergeStatistics(remoteStats ?? [], localStats, statsSyncMode);
+        final merged = _mergeStatistics(
+          remoteStats ?? [],
+          localStats,
+          statsSyncMode,
+        );
         if (merged.isNotEmpty) {
           await _backend.updateStatsFile(
             folderId: folderId,
@@ -747,12 +769,15 @@ class SyncManager {
       final fileName = '${sanitizeTtuFilename(book.title)}.epub';
       final existing = await _backend.findContentFile(folderId, fileName);
       if (existing == null) {
-        final Directory tmpDir =
-            Directory.systemTemp.createTempSync('hibiki_epub_export');
+        final Directory tmpDir = Directory.systemTemp.createTempSync(
+          'hibiki_epub_export',
+        );
         final File epubTmp = File(p.join(tmpDir.path, fileName));
         try {
-          final bool built =
-              await repackageExtractedEpub(book.extractDir, epubTmp.path);
+          final bool built = await repackageExtractedEpub(
+            book.extractDir,
+            epubTmp.path,
+          );
           if (built) {
             await _backend.uploadContentFile(
               folderId: folderId,
@@ -764,7 +789,9 @@ class SyncManager {
         } finally {
           try {
             tmpDir.deleteSync(recursive: true);
-          } catch (_) {/* best-effort temp cleanup */}
+          } catch (_) {
+            /* best-effort temp cleanup */
+          }
         }
       }
     }
@@ -775,36 +802,42 @@ class SyncManager {
     // 快照：tagsAddedAt=当前标签名→加入戳；tagTombstones=移除墓碑名→移除戳，让远端按
     // max(add) vs max(removed) 裁决，删除/改名（旧名进墓碑+新名进 add）跨端传播、防复活。
     // v1 兼容字段 tags 仍是名单供旧端只增读取。有标签或有墓碑才写（否则无谓 PUT）。
-    final Map<String, int> tagAddedAt =
-        await _db.bookTagAddedAtByName(book.bookKey);
-    final Map<String, int> tagTombstones =
-        await _db.tagTombstonesByName(book.bookKey, MediaKind.epub);
+    final Map<String, int> tagAddedAt = await _db.bookTagAddedAtByName(
+      book.bookKey,
+    );
+    final Map<String, int> tagTombstones = await _db.tagTombstonesByName(
+      book.bookKey,
+      MediaKind.epub,
+    );
     if (tagAddedAt.isNotEmpty || tagTombstones.isNotEmpty) {
       await _backend
           .putJsonAsset(folderId, kSyncBookTagsAssetName, <String, Object?>{
-        'schemaVersion': 2,
-        'tags': tagAddedAt.keys.toList(),
-        'tagsAddedAt': tagAddedAt,
-        'tagTombstones': tagTombstones,
-      });
+            'schemaVersion': 2,
+            'tags': tagAddedAt.keys.toList(),
+            'tagsAddedAt': tagAddedAt,
+            'tagTombstones': tagTombstones,
+          });
     }
 
     // per-book 自定义 CSS sidecar（LWW by updatedAt）。用户改写的书内 CSS 存 book_css.json
     // 权威全量快照（含重置墓碑 deleted），供他端按 updatedAt 取较新落地。有行才写。
     final List<BookCustomCssRow> cssRows = await _db.getBookCssRows(book.uid);
     if (cssRows.isNotEmpty) {
-      await _backend
-          .putJsonAsset(folderId, kSyncBookCssAssetName, <String, Object?>{
-        'schemaVersion': 1,
-        'files': <String, Object?>{
-          for (final BookCustomCssRow r in cssRows)
-            r.relativePath: <String, Object?>{
-              'content': r.content,
-              'deleted': r.deleted,
-              'updatedAt': r.updatedAt,
-            },
+      await _backend.putJsonAsset(
+        folderId,
+        kSyncBookCssAssetName,
+        <String, Object?>{
+          'schemaVersion': 1,
+          'files': <String, Object?>{
+            for (final BookCustomCssRow r in cssRows)
+              r.relativePath: <String, Object?>{
+                'content': r.content,
+                'deleted': r.deleted,
+                'updatedAt': r.updatedAt,
+              },
+          },
         },
-      });
+      );
     }
 
     // Export audio files
@@ -860,14 +893,18 @@ class SyncManager {
     if (row.audioRoot != null) {
       final dir = Directory(row.audioRoot!);
       if (dir.existsSync()) {
-        final paths = dir
-            .listSync()
-            .whereType<File>()
-            .where((f) =>
-                _audioExtensions.contains(p.extension(f.path).toLowerCase()))
-            .map((f) => f.path)
-            .toList()
-          ..sort();
+        final paths =
+            dir
+                .listSync()
+                .whereType<File>()
+                .where(
+                  (f) => _audioExtensions.contains(
+                    p.extension(f.path).toLowerCase(),
+                  ),
+                )
+                .map((f) => f.path)
+                .toList()
+              ..sort();
         return paths;
       }
     }
@@ -881,8 +918,7 @@ class SyncManager {
     List<TtuStatistics> localStats,
     List<TtuStatistics> externalStats,
     StatisticsSyncMode mode,
-  ) =>
-      mergeStatistics(localStats, externalStats, mode);
+  ) => mergeStatistics(localStats, externalStats, mode);
 
   // ── DB helpers ────────────────────────────────────────────────────
 
@@ -890,29 +926,33 @@ class SyncManager {
     final rows = await _db.getAllReadingStatistics();
     return rows
         .where((r) => r.title == title)
-        .map((r) => TtuStatistics(
-              title: r.title,
-              dateKey: r.dateKey,
-              charactersRead: r.charactersRead,
-              readingTimeSec: r.readingTimeMs / 1000.0,
-              minReadingSpeed: 0,
-              altMinReadingSpeed: 0,
-              lastReadingSpeed: 0,
-              maxReadingSpeed: 0,
-              lastStatisticModified: r.lastStatisticModified,
-            ))
+        .map(
+          (r) => TtuStatistics(
+            title: r.title,
+            dateKey: r.dateKey,
+            charactersRead: r.charactersRead,
+            readingTimeSec: r.readingTimeMs / 1000.0,
+            minReadingSpeed: 0,
+            altMinReadingSpeed: 0,
+            lastReadingSpeed: 0,
+            maxReadingSpeed: 0,
+            lastStatisticModified: r.lastStatisticModified,
+          ),
+        )
         .toList();
   }
 
   Future<void> _writeStatisticsToDb(List<TtuStatistics> stats) async {
     for (final stat in stats) {
-      await _db.setReadingStatistic(ReadingStatisticsCompanion(
-        title: Value(stat.title),
-        dateKey: Value(stat.dateKey),
-        charactersRead: Value(stat.charactersRead),
-        readingTimeMs: Value((stat.readingTimeSec * 1000).round()),
-        lastStatisticModified: Value(stat.lastStatisticModified),
-      ));
+      await _db.setReadingStatistic(
+        ReadingStatisticsCompanion(
+          title: Value(stat.title),
+          dateKey: Value(stat.dateKey),
+          charactersRead: Value(stat.charactersRead),
+          readingTimeMs: Value((stat.readingTimeSec * 1000).round()),
+          lastStatisticModified: Value(stat.lastStatisticModified),
+        ),
+      );
     }
   }
 
@@ -1003,16 +1043,18 @@ List<TtuStatistics> mergeStatistics(
         readingTimeSec: max(existing.readingTimeSec, stat.readingTimeSec),
         minReadingSpeed:
             existing.minReadingSpeed > 0 && stat.minReadingSpeed > 0
-                ? min(existing.minReadingSpeed, stat.minReadingSpeed)
-                : max(existing.minReadingSpeed, stat.minReadingSpeed),
+            ? min(existing.minReadingSpeed, stat.minReadingSpeed)
+            : max(existing.minReadingSpeed, stat.minReadingSpeed),
         altMinReadingSpeed:
             existing.altMinReadingSpeed > 0 && stat.altMinReadingSpeed > 0
-                ? min(existing.altMinReadingSpeed, stat.altMinReadingSpeed)
-                : max(existing.altMinReadingSpeed, stat.altMinReadingSpeed),
+            ? min(existing.altMinReadingSpeed, stat.altMinReadingSpeed)
+            : max(existing.altMinReadingSpeed, stat.altMinReadingSpeed),
         lastReadingSpeed: max(existing.lastReadingSpeed, stat.lastReadingSpeed),
         maxReadingSpeed: max(existing.maxReadingSpeed, stat.maxReadingSpeed),
-        lastStatisticModified:
-            max(existing.lastStatisticModified, stat.lastStatisticModified),
+        lastStatisticModified: max(
+          existing.lastStatisticModified,
+          stat.lastStatisticModified,
+        ),
       );
     }
   }

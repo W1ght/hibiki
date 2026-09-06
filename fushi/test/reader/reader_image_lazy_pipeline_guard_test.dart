@@ -37,42 +37,62 @@ void main() {
       final int endIdx = src.indexOf('String? _chapterFilePath(', injectIdx);
       expect(endIdx, greaterThan(injectIdx));
       final String body = stripLineComments(src.substring(injectIdx, endIdx));
-      expect(body.contains('class="fushi-merged-image"'), isTrue,
-          reason: 'JS 侧靠这个 marker 放行，两端接线必须一致');
-      expect(body.contains('loading="eager"'), isTrue,
-          reason: '注入的前导插图必须显式 eager —— 否则 eager 只由调用顺序保证，'
-              '谁调换顺序 TODO-1339 就复活而三条 JS 守卫全绿');
+      expect(
+        body.contains('class="fushi-merged-image"'),
+        isTrue,
+        reason: 'JS 侧靠这个 marker 放行，两端接线必须一致',
+      );
+      expect(
+        body.contains('loading="eager"'),
+        isTrue,
+        reason:
+            '注入的前导插图必须显式 eager —— 否则 eager 只由调用顺序保证，'
+            '谁调换顺序 TODO-1339 就复活而三条 JS 守卫全绿',
+      );
     });
 
     test('markImagesLazy 跳过显式 loading="eager"（顺序无关的另一半）', () {
-      const String merged = '<body><div class="fushi-merged-image">'
+      const String merged =
+          '<body><div class="fushi-merged-image">'
           '<img src="hoshi://a.png" class="block-img" loading="eager"/>'
           '</div><p>本文</p><img src="b.png"/></body>';
       final String out = ReaderResourceSanitizer.markImagesLazy(merged);
       // 前导插图原样保留 eager；正文普通插图仍挂 lazy（不回退 TODO-1074）。
       expect(out, contains('class="block-img" loading="eager"'));
       expect(
-          out, isNot(contains('loading="lazy" decoding="async" src="hoshi:')));
-      expect('loading="lazy"'.allMatches(out).length, 1,
-          reason: '只有正文那张普通插图该被挂 lazy');
+        out,
+        isNot(contains('loading="lazy" decoding="async" src="hoshi:')),
+      );
+      expect(
+        'loading="lazy"'.allMatches(out).length,
+        1,
+        reason: '只有正文那张普通插图该被挂 lazy',
+      );
     });
 
     test('顺序仍锁住（第二道防线）：markImagesLazy 早于 _injectMergedChapterImages', () {
       final String src = webviewSrc();
-      final int buildIdx =
-          src.indexOf('Uint8List _buildSanitizedChapterHtmlBytes(');
+      final int buildIdx = src.indexOf(
+        'Uint8List _buildSanitizedChapterHtmlBytes(',
+      );
       expect(buildIdx, isNonNegative);
-      final int endIdx =
-          src.indexOf('String _injectMergedChapterImages(', buildIdx);
+      final int endIdx = src.indexOf(
+        'String _injectMergedChapterImages(',
+        buildIdx,
+      );
       expect(endIdx, greaterThan(buildIdx));
       final String body = src.substring(buildIdx, endIdx);
-      final int lazyIdx =
-          body.indexOf('ReaderResourceSanitizer.markImagesLazy(');
+      final int lazyIdx = body.indexOf(
+        'ReaderResourceSanitizer.markImagesLazy(',
+      );
       final int injectIdx = body.indexOf('_injectMergedChapterImages(html');
       expect(lazyIdx, isNonNegative, reason: 'Dart 侧 lazy 标记必须接在净化流水线里');
       expect(injectIdx, isNonNegative);
-      expect(lazyIdx, lessThan(injectIdx),
-          reason: 'markImagesLazy 必须先于 _injectMergedChapterImages');
+      expect(
+        lazyIdx,
+        lessThan(injectIdx),
+        reason: 'markImagesLazy 必须先于 _injectMergedChapterImages',
+      );
     });
   });
 
@@ -87,16 +107,24 @@ void main() {
       final int lazyIdx = src.indexOf(anchor);
       expect(lazyIdx, isNonNegative);
       final EnclosingCall call = enclosingCall(src, lazyIdx + anchor.length);
-      expect(call.name, 'ReaderResourceSanitizer.markImagesLazy',
-          reason: '窗口必须正好是 markImagesLazy 这一层调用');
-      expect(call.text.contains('eagerAll: _isImageOnlyChapterCached('), isTrue,
-          reason: '纯图片章必须整章 eager，否则离屏图 0 尺寸 → maxScroll 塌缩');
+      expect(
+        call.name,
+        'ReaderResourceSanitizer.markImagesLazy',
+        reason: '窗口必须正好是 markImagesLazy 这一层调用',
+      );
+      expect(
+        call.text.contains('eagerAll: _isImageOnlyChapterCached('),
+        isTrue,
+        reason: '纯图片章必须整章 eager，否则离屏图 0 尺寸 → maxScroll 塌缩',
+      );
     });
 
     test('纯图片章：eagerAll 下一个 lazy 都不加', () {
       const String html = '<body><img src="p1.png"/><img src="p2.png"/></body>';
       expect(
-          ReaderResourceSanitizer.markImagesLazy(html, eagerAll: true), html);
+        ReaderResourceSanitizer.markImagesLazy(html, eagerAll: true),
+        html,
+      );
     });
 
     test('gaiji 内联小图无论哪条路径都不挂 lazy（参与文字排版几何）', () {
@@ -110,30 +138,44 @@ void main() {
       final String src = webviewSrc();
       // 窗口=方法体（花括号配对），不再是 `idx + 1800`：该方法体实测 1483 字符，
       // 旧窗口越过方法末尾 317 字符读进下一个方法，两条配额断言可能命中错对象。
-      final String body =
-          methodBody(src, 'void _prefetchAdjacentChapterImages(');
-      expect(body.contains('_kImagePrefetchMaxCount'), isTrue,
-          reason: '预热必须有张数上限');
-      expect(body.contains('_kImagePrefetchMaxBytes'), isTrue,
-          reason: '预热必须有字节上限（整页插图书的内存压力是实打实的）');
+      final String body = methodBody(
+        src,
+        'void _prefetchAdjacentChapterImages(',
+      );
+      expect(
+        body.contains('_kImagePrefetchMaxCount'),
+        isTrue,
+        reason: '预热必须有张数上限',
+      );
+      expect(
+        body.contains('_kImagePrefetchMaxBytes'),
+        isTrue,
+        reason: '预热必须有字节上限（整页插图书的内存压力是实打实的）',
+      );
     });
 
     test('预热跟随阅读方向，而不是写死 +1', () {
       final File navFile = File(
         'lib/src/pages/implementations/reader_fushi/navigation.part.dart',
       );
-      final String src =
-          navFile.readAsStringSync().replaceAll(RegExp(r'\s+'), ' ');
+      final String src = navFile.readAsStringSync().replaceAll(
+        RegExp(r'\s+'),
+        ' ',
+      );
       expect(
-          src.contains(
-              '_prefetchAdjacentChapterImages( _currentChapter + _chapterAdvanceDirection)'),
-          isTrue,
-          reason: '倒着读时必须预热上一章，而不是刚离开的那一章');
+        src.contains(
+          '_prefetchAdjacentChapterImages( _currentChapter + _chapterAdvanceDirection)',
+        ),
+        isTrue,
+        reason: '倒着读时必须预热上一章，而不是刚离开的那一章',
+      );
       expect(
-          src.contains(
-              '_chapterAdvanceDirection = chapter > _currentChapter ? 1 : -1;'),
-          isTrue,
-          reason: '方向必须在唯一的导航采样点 _beginNavigation 更新');
+        src.contains(
+          '_chapterAdvanceDirection = chapter > _currentChapter ? 1 : -1;',
+        ),
+        isTrue,
+        reason: '方向必须在唯一的导航采样点 _beginNavigation 更新',
+      );
     });
   });
 }

@@ -21,8 +21,11 @@ void main() {
     test('all cloud/remote backends are wrapped in ObfuscatingSyncBackend', () {
       for (final type in cloudTypes) {
         final backend = resolveSyncBackend(type);
-        expect(backend, isA<ObfuscatingSyncBackend>(),
-            reason: 'cloud backend must be obfuscation-wrapped (anti-scan)');
+        expect(
+          backend,
+          isA<ObfuscatingSyncBackend>(),
+          reason: 'cloud backend must be obfuscation-wrapped (anti-scan)',
+        );
       }
     });
 
@@ -69,10 +72,16 @@ void _guardSourceFiles() {
       ];
       for (final path in backendFiles) {
         final src = File(path).readAsStringSync();
-        expect(src.contains('obfuscating_sync_backend.dart'), isFalse,
-            reason: 'backend file must not import the decorator');
-        expect(src.contains('SyncObfuscator'), isFalse,
-            reason: 'backend file must not reference the obfuscator');
+        expect(
+          src.contains('obfuscating_sync_backend.dart'),
+          isFalse,
+          reason: 'backend file must not import the decorator',
+        );
+        expect(
+          src.contains('SyncObfuscator'),
+          isFalse,
+          reason: 'backend file must not reference the obfuscator',
+        );
       }
     });
   });

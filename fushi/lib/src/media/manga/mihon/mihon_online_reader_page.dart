@@ -66,9 +66,9 @@ class _MihonChapterReaderPageState extends State<MihonChapterReaderPage> {
       final String? libraryBookKey = widget.libraryBookKey;
       final Directory managedDirectory =
           mihonOnlineLibraryService(widget.manager).chapterDirectory(
-        libraryBookKey ?? _onlineBookKey,
-        MihonLibraryAdapter.chapterOf(widget.chapter),
-      );
+            libraryBookKey ?? _onlineBookKey,
+            MihonLibraryAdapter.chapterOf(widget.chapter),
+          );
       if (!mounted) return;
       setState(() {
         _resolved = MihonReaderChapter(

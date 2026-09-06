@@ -41,8 +41,9 @@ void main() {
     return captured;
   }
 
-  testWidgets('确认弹窗展示占用者（进程名+PID+路径），Esc 取消 → cancelled 不杀',
-      (WidgetTester tester) async {
+  testWidgets('确认弹窗展示占用者（进程名+PID+路径），Esc 取消 → cancelled 不杀', (
+    WidgetTester tester,
+  ) async {
     final BuildContext context = await pumpHost(tester);
     int finderCalls = 0;
     final Future<PortKillDecision> decisionFuture = decidePortKill(
@@ -99,16 +100,15 @@ void main() {
     expect((await decisionFuture).kind, PortKillDecisionKind.cancelled);
   });
 
-  testWidgets('占用者是系统进程（svchost）→ refusedProtected 且不弹确认框',
-      (WidgetTester tester) async {
+  testWidgets('占用者是系统进程（svchost）→ refusedProtected 且不弹确认框', (
+    WidgetTester tester,
+  ) async {
     final BuildContext context = await pumpHost(tester);
     final Future<PortKillDecision> decisionFuture = decidePortKill(
       context,
       port: 19633,
-      findListener: (int port) async => const PortListenerInfo(
-        pid: 1544,
-        processName: 'svchost.exe',
-      ),
+      findListener: (int port) async =>
+          const PortListenerInfo(pid: 1544, processName: 'svchost.exe'),
       isSelfInstance: (PortListenerInfo _) => false,
     );
     await tester.pumpAndSettle();
@@ -119,8 +119,9 @@ void main() {
     expect(decision.listener!.processName, 'svchost.exe');
   });
 
-  testWidgets('确认（直接调用确认按钮回调）→ 同 PID 复核通过 → confirmed',
-      (WidgetTester tester) async {
+  testWidgets('确认（直接调用确认按钮回调）→ 同 PID 复核通过 → confirmed', (
+    WidgetTester tester,
+  ) async {
     final BuildContext context = await pumpHost(tester);
     final Future<PortKillDecision> decisionFuture = decidePortKill(
       context,
@@ -141,8 +142,9 @@ void main() {
     expect(decision.listener!.pid, 188544);
   });
 
-  testWidgets('确认期间占用者换人（PID 变化）→ listenerChanged 放弃杀',
-      (WidgetTester tester) async {
+  testWidgets('确认期间占用者换人（PID 变化）→ listenerChanged 放弃杀', (
+    WidgetTester tester,
+  ) async {
     final BuildContext context = await pumpHost(tester);
     int finderCalls = 0;
     final Future<PortKillDecision> decisionFuture = decidePortKill(

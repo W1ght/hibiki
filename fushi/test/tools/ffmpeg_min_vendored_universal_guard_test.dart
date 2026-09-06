@@ -67,8 +67,10 @@ Directory _repoRoot() {
     if (parent.path == dir.path) break;
     dir = parent;
   }
-  fail('找不到含 tool/ffmpeg-min/build-ffmpeg-min.sh 的仓库根'
-      '（从 ${Directory.current.path} 向上）');
+  fail(
+    '找不到含 tool/ffmpeg-min/build-ffmpeg-min.sh 的仓库根'
+    '（从 ${Directory.current.path} 向上）',
+  );
 }
 
 /// 解析 Mach-O，返回其包含的全部 cputype。瘦二进制返回 1 个，universal 返回 N 个。
@@ -110,15 +112,19 @@ void main() {
   for (final String tool in <String>['ffmpeg', 'ffprobe']) {
     test('vendored macOS $tool 必须是 universal（x86_64 + arm64）', () {
       final File file = File('${root.path}/third_party/ffmpeg-min/macos/$tool');
-      expect(file.existsSync(), isTrue,
-          reason: '缺 ${file.path}——macOS 发布包靠它，见 release-desktop.yml 的装配步。');
+      expect(
+        file.existsSync(),
+        isTrue,
+        reason: '缺 ${file.path}——macOS 发布包靠它，见 release-desktop.yml 的装配步。',
+      );
 
       final List<int> types = machoCpuTypes(file.readAsBytesSync());
       for (final int want in _requiredCpuTypes) {
         expect(
           types,
           contains(want),
-          reason: 'third_party/ffmpeg-min/macos/$tool 缺 ${_cpuNames[want]} 切片'
+          reason:
+              'third_party/ffmpeg-min/macos/$tool 缺 ${_cpuNames[want]} 切片'
               '（实际: ${_describe(types)}）。app 本体是 universal(x86_64+arm64)，'
               'helper 少哪个架构，那种 Mac 上它就无法执行（Bad CPU type / EBADARCH）：'
               '制卡音频与封面、内封字幕抽取、片段导出会全线静默失效（BUG-1668）。'

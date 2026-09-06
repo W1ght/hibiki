@@ -48,8 +48,8 @@ bool shouldCountCueDwell({
 }) {
   final int threshold =
       (cueStartMs != null && cueEndMs != null && cueEndMs > cueStartMs)
-          ? math.min(kCueDwellMs, cueEndMs - cueStartMs)
-          : kCueDwellMs;
+      ? math.min(kCueDwellMs, cueEndMs - cueStartMs)
+      : kCueDwellMs;
   return playedMs >= threshold;
 }
 
@@ -96,15 +96,15 @@ class VideoWatchTracker {
     FutureOr<void> Function()? onEpisodeCompleted,
     Future<String?> Function()? loadCoverage,
     Future<void> Function(String json)? saveCoverage,
-  })  : assert(
-          clock.accrual == StudyAccrual.explicit,
-          '视频面时钟必须是显式记账：时长由 tracker 按首次覆盖推入',
-        ),
-        _clock = clock,
-        _markCompleted = markCompleted,
-        _onEpisodeCompleted = onEpisodeCompleted,
-        _loadCoverage = loadCoverage,
-        _saveCoverage = saveCoverage {
+  }) : assert(
+         clock.accrual == StudyAccrual.explicit,
+         '视频面时钟必须是显式记账：时长由 tracker 按首次覆盖推入',
+       ),
+       _clock = clock,
+       _markCompleted = markCompleted,
+       _onEpisodeCompleted = onEpisodeCompleted,
+       _loadCoverage = loadCoverage,
+       _saveCoverage = saveCoverage {
     _clock.onTick = (DateTime _) {
       unawaited(_checkCompletion());
       unawaited(_persistCoverage());

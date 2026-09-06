@@ -19,11 +19,8 @@ import 'package:xml/xml.dart';
 typedef AniDbCatalogNow = DateTime Function();
 
 class AniDbTitle {
-  AniDbTitle({
-    required this.value,
-    required this.type,
-    required this.language,
-  }) : normalizedValue = TitleNormalizer.normalize(value);
+  AniDbTitle({required this.value, required this.type, required this.language})
+    : normalizedValue = TitleNormalizer.normalize(value);
 
   final String value;
 
@@ -42,7 +39,7 @@ class AniDbTitle {
 
 class AniDbTitleRecord {
   AniDbTitleRecord({required this.animeId, required List<AniDbTitle> titles})
-      : titles = List<AniDbTitle>.unmodifiable(titles);
+    : titles = List<AniDbTitle>.unmodifiable(titles);
 
   final int animeId;
   final List<AniDbTitle> titles;
@@ -91,11 +88,11 @@ class AniDbTitleCatalog {
     AniDbCatalogNow? now,
     this.cacheTtl = const Duration(hours: 24),
     this.downloadTimeout = const Duration(seconds: 30),
-  })  : _client = client ?? createAppHttpIoClient(),
-        _ownsClient = client == null,
-        _cacheDirectory = cacheDirectory,
-        sourceUrl = sourceUrl ?? defaultSourceUrl,
-        _now = now ?? DateTime.now;
+  }) : _client = client ?? createAppHttpIoClient(),
+       _ownsClient = client == null,
+       _cacheDirectory = cacheDirectory,
+       sourceUrl = sourceUrl ?? defaultSourceUrl,
+       _now = now ?? DateTime.now;
 
   static final Uri defaultSourceUrl = Uri.parse(
     'https://anidb.net/api/anime-titles.xml.gz',
@@ -142,8 +139,9 @@ class AniDbTitleCatalog {
     }
 
     final Map<int, AniDbTitleRecord> records = await _records();
-    final _AniDbTitleSearchIndex index =
-        _titleIndex ??= _AniDbTitleSearchIndex(records);
+    final _AniDbTitleSearchIndex index = _titleIndex ??= _AniDbTitleSearchIndex(
+      records,
+    );
     return index.search(normalizedQuery, limit: limit);
   }
 
@@ -156,8 +154,8 @@ class AniDbTitleCatalog {
       return cached;
     }
 
-    final Future<_LoadedTitleCatalog> loading =
-        _loadFuture ??= _loadFromDiskOrNetwork();
+    final Future<_LoadedTitleCatalog> loading = _loadFuture ??=
+        _loadFromDiskOrNetwork();
     try {
       final _LoadedTitleCatalog loaded = await loading;
       _ensureOpen();
@@ -181,7 +179,8 @@ class AniDbTitleCatalog {
     if (await cacheFile.exists()) {
       modifiedAt = await cacheFile.lastModified();
     }
-    final bool isFresh = modifiedAt != null &&
+    final bool isFresh =
+        modifiedAt != null &&
         now.toUtc().difference(modifiedAt.toUtc()) < cacheTtl;
 
     if (isFresh) {
@@ -206,7 +205,8 @@ class AniDbTitleCatalog {
     final Duration? sinceAttempt = lastAttempt == null
         ? null
         : now.toUtc().difference(lastAttempt.toUtc());
-    final bool attemptedRecently = sinceAttempt != null &&
+    final bool attemptedRecently =
+        sinceAttempt != null &&
         (sinceAttempt.isNegative || sinceAttempt < cacheTtl);
     if (attemptedRecently) {
       if (await cacheFile.exists()) {
@@ -281,12 +281,14 @@ class AniDbTitleCatalog {
   Future<_DownloadedTitleCatalog> _download() async {
     final http.Response response;
     try {
-      response = await _client.get(
-        sourceUrl,
-        headers: const <String, String>{
-          'Accept': 'application/gzip, application/xml;q=0.9, */*;q=0.1',
-        },
-      ).timeout(downloadTimeout);
+      response = await _client
+          .get(
+            sourceUrl,
+            headers: const <String, String>{
+              'Accept': 'application/gzip, application/xml;q=0.9, */*;q=0.1',
+            },
+          )
+          .timeout(downloadTimeout);
     } on Object catch (error) {
       throw AniDbTitleCatalogException(
         'AniDB title catalog download failed',
@@ -413,8 +415,9 @@ class AniDbTitleCatalog {
         }
         final String value = element.innerText.trim();
         if (value.isEmpty || value.length > _maxTitleLength) continue;
-        final String type =
-            (element.getAttribute('type') ?? '').trim().toLowerCase();
+        final String type = (element.getAttribute('type') ?? '')
+            .trim()
+            .toLowerCase();
         final String language = _xmlLanguage(element);
         if (type.isEmpty || language.isEmpty) continue;
         final bool duplicate = titles.any(
@@ -501,8 +504,9 @@ bool _looksLikeGzip(List<int> bytes) =>
     bytes.length >= 2 && bytes[0] == 0x1f && bytes[1] == 0x8b;
 
 Set<String> _normalizedGrams(String value) {
-  final List<int> runes =
-      value.runes.where((int rune) => rune != 0x20).toList(growable: false);
+  final List<int> runes = value.runes
+      .where((int rune) => rune != 0x20)
+      .toList(growable: false);
   if (runes.isEmpty) return const <String>{};
   final int width = runes.length >= 3 ? 3 : runes.length;
   final int count = runes.length - width + 1;
@@ -520,10 +524,12 @@ bool _isFuzzyCandidate(
   Set<String> queryTokens,
   String candidate,
 ) {
-  final int longer =
-      query.length > candidate.length ? query.length : candidate.length;
-  final int shorter =
-      query.length < candidate.length ? query.length : candidate.length;
+  final int longer = query.length > candidate.length
+      ? query.length
+      : candidate.length;
+  final int shorter = query.length < candidate.length
+      ? query.length
+      : candidate.length;
   if (longer == 0 || shorter / longer < 0.45) return false;
   if (candidate.contains(query) || query.contains(candidate)) return true;
   for (final String token in queryTokens) {
@@ -532,13 +538,14 @@ bool _isFuzzyCandidate(
   return shorter / longer >= 0.7 && query.runes.first == candidate.runes.first;
 }
 
-String _xmlLanguage(XmlElement element) => (element.getAttribute('xml:lang') ??
-        element.getAttribute(
-          'lang',
-          namespace: 'http://www.w3.org/XML/1998/namespace',
-        ) ??
-        '')
-    .trim();
+String _xmlLanguage(XmlElement element) =>
+    (element.getAttribute('xml:lang') ??
+            element.getAttribute(
+              'lang',
+              namespace: 'http://www.w3.org/XML/1998/namespace',
+            ) ??
+            '')
+        .trim();
 
 int _compareWithinRecord(
   AniDbTitleSearchResult left,
@@ -567,12 +574,12 @@ int _compareSearchResults(
 }
 
 int _titleTypePriority(String type) => switch (type) {
-      'main' => 0,
-      'official' => 1,
-      'syn' || 'synonym' => 2,
-      'short' => 3,
-      _ => 4,
-    };
+  'main' => 0,
+  'official' => 1,
+  'syn' || 'synonym' => 2,
+  'short' => 3,
+  _ => 4,
+};
 
 class _AniDbIndexedTitle {
   const _AniDbIndexedTitle({required this.record, required this.title});
@@ -648,8 +655,8 @@ class _AniDbTitleSearchIndex {
         limit: limit,
         kindFor: (_AniDbIndexedTitle entry) =>
             entry.title.normalizedValue == normalizedQuery
-                ? AniDbTitleMatchKind.exact
-                : AniDbTitleMatchKind.prefix,
+            ? AniDbTitleMatchKind.exact
+            : AniDbTitleMatchKind.prefix,
         query: normalizedQuery,
       );
     }
@@ -666,14 +673,15 @@ class _AniDbTitleSearchIndex {
     }
     final List<_AniDbIndexedTitle> candidates = gramHits.isEmpty
         ? (_byFirstRune[normalizedQuery.runes.first] ??
-            const <_AniDbIndexedTitle>[])
-        : (gramHits.keys.toList()
-          ..sort(
+              const <_AniDbIndexedTitle>[])
+        : (gramHits.keys.toList()..sort(
             (_AniDbIndexedTitle left, _AniDbIndexedTitle right) =>
                 gramHits[right]!.compareTo(gramHits[left]!),
           ));
     return _rank(
-      candidates.take(20000).where(
+      candidates
+          .take(20000)
+          .where(
             (_AniDbIndexedTitle entry) => _isFuzzyCandidate(
               normalizedQuery,
               queryTokens,

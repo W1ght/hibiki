@@ -10,8 +10,8 @@ import 'package:fushi/src/sync/fushi_remote_mining_client.dart';
 import 'package:fushi/src/sync/sync_backend.dart';
 
 /// 加载一条词典媒体（外字/内嵌图）的字节。默认走 `FushiDicts.getMediaFile`。
-typedef DictMediaByteLoader = Uint8List? Function(
-    String dictionary, String path);
+typedef DictMediaByteLoader =
+    Uint8List? Function(String dictionary, String path);
 
 /// 读取本地文件字节（封面/音频临时文件）。默认走 `dart:io File`；文件缺失返回 null。
 typedef LocalFileByteLoader = Future<Uint8List?> Function(String path);
@@ -46,11 +46,11 @@ class RemoteMiningAnkiRepository extends BaseAnkiRepository {
     DictMediaByteLoader? dictMediaLoader,
     LocalFileByteLoader? fileByteLoader,
     RemoteMiningAuthReporter? onAuthRejected,
-  })  : _local = local,
-        _client = client,
-        _dictMediaLoader = dictMediaLoader ?? _defaultDictMediaLoader,
-        _fileByteLoader = fileByteLoader ?? _defaultFileByteLoader,
-        _onAuthRejected = onAuthRejected;
+  }) : _local = local,
+       _client = client,
+       _dictMediaLoader = dictMediaLoader ?? _defaultDictMediaLoader,
+       _fileByteLoader = fileByteLoader ?? _defaultFileByteLoader,
+       _onAuthRejected = onAuthRejected;
 
   /// 主机拒绝互联 token 时给用户看的话。制卡失败与查重失败共用同一句，
   /// 因为它们是同一个 token 被同一台主机拒绝。
@@ -125,8 +125,10 @@ class RemoteMiningAnkiRepository extends BaseAnkiRepository {
   /// 一张重复卡；若反过来谎报 true，用户只会以为卡已做好并就此走开。
   @override
   Future<bool> isDuplicate(String expression, String reading) async {
-    final RemoteDuplicateCheck check =
-        await _client.isDuplicate(expression: expression, reading: reading);
+    final RemoteDuplicateCheck check = await _client.isDuplicate(
+      expression: expression,
+      reading: reading,
+    );
     if (check == RemoteDuplicateCheck.authRejected) {
       _reportAuthRejectedOnce();
       return false;
@@ -146,8 +148,9 @@ class RemoteMiningAnkiRepository extends BaseAnkiRepository {
   }) async {
     // 封面 + 句子音频：context 里是本地文件路径，读成字节。
     final Uint8List? coverBytes = await _readPath(context.coverPath);
-    final Uint8List? sentenceAudioBytes =
-        await _readPath(context.sentenceAudioPath);
+    final Uint8List? sentenceAudioBytes = await _readPath(
+      context.sentenceAudioPath,
+    );
 
     // 单词音频 + 词典外字：从 rawPayloadJson 解析。解析失败不致命——仍转发文本卡。
     Uint8List? wordAudioBytes;
@@ -155,7 +158,8 @@ class RemoteMiningAnkiRepository extends BaseAnkiRepository {
     List<ForwardedDictMedia> dictMedia = const <ForwardedDictMedia>[];
     try {
       final AnkiMiningPayload parsed = AnkiMiningPayload.fromJson(
-          jsonDecode(rawPayloadJson) as Map<String, dynamic>);
+        jsonDecode(rawPayloadJson) as Map<String, dynamic>,
+      );
       final AnkiAudioRefKind audioKind = AnkiAudioRef.classify(parsed.audio);
       if (audioKind == AnkiAudioRefKind.localFile) {
         final String localPath = AnkiAudioRef.localPath(parsed.audio);
@@ -196,14 +200,20 @@ class RemoteMiningAnkiRepository extends BaseAnkiRepository {
   }
 
   List<ForwardedDictMedia> _collectDictionaryMedia(
-      List<DictionaryMedia> media) {
+    List<DictionaryMedia> media,
+  ) {
     final List<ForwardedDictMedia> out = <ForwardedDictMedia>[];
     for (final DictionaryMedia m in media) {
       if (m.dictionary.isEmpty || m.path.isEmpty) continue;
       final Uint8List? bytes = _dictMediaLoader(m.dictionary, m.path);
       if (bytes == null || bytes.isEmpty) continue;
-      out.add(ForwardedDictMedia(
-          dictionary: m.dictionary, path: m.path, bytes: bytes));
+      out.add(
+        ForwardedDictMedia(
+          dictionary: m.dictionary,
+          path: m.path,
+          bytes: bytes,
+        ),
+      );
     }
     return out;
   }
@@ -311,8 +321,9 @@ class RemoteMiningAnkiRepository extends BaseAnkiRepository {
 
   @override
   Future<bool> updateNoteTypeTemplates(
-          String modelName, List<AnkiCardTemplate> templates) =>
-      _client.updateNoteTypeTemplates(modelName, templates);
+    String modelName,
+    List<AnkiCardTemplate> templates,
+  ) => _client.updateNoteTypeTemplates(modelName, templates);
 
   // ── 媒体存储优化：作用于**主机端** collection.media ────────────────────
   //

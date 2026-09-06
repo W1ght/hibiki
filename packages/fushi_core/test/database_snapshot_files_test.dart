@@ -104,13 +104,19 @@ void main() {
     });
 
     test('databaseSnapshotMainFileName 返回实际命中的库名（存储页标题用它）', () {
-      expect(databaseSnapshotMainFileName('fushi.db.corrupt-bak-1.db'),
-          'fushi.db');
       expect(
-          databaseSnapshotMainFileName('hibiki.db-wal.bak.v20.1'), 'hibiki.db');
+        databaseSnapshotMainFileName('fushi.db.corrupt-bak-1.db'),
+        'fushi.db',
+      );
+      expect(
+        databaseSnapshotMainFileName('hibiki.db-wal.bak.v20.1'),
+        'hibiki.db',
+      );
       expect(databaseSnapshotMainFileName('fushi.db'), isNull);
       expect(
-          databaseSnapshotMainFileName('fushi.db.sync-preserve.json'), isNull);
+        databaseSnapshotMainFileName('fushi.db.sync-preserve.json'),
+        isNull,
+      );
     });
   });
 
@@ -118,10 +124,14 @@ void main() {
     test('sidecar 在 ⇒ 被它拥有的 pre-*.bak 不可删；sidecar 不在 ⇒ 才可删', () {
       const String preRestore = 'fushi.db.pre-restore.bak';
       const String preMerge = 'fushi.db.pre-merge.bak';
-      expect(databaseSnapshotOwnerFileName(preRestore),
-          'fushi.db.sync-preserve.json');
-      expect(databaseSnapshotOwnerFileName(preMerge),
-          'fushi.db.merge-preserve.json');
+      expect(
+        databaseSnapshotOwnerFileName(preRestore),
+        'fushi.db.sync-preserve.json',
+      );
+      expect(
+        databaseSnapshotOwnerFileName(preMerge),
+        'fushi.db.merge-preserve.json',
+      );
 
       expect(
         isDeletableDatabaseSnapshot(preRestore, <String>{
@@ -132,8 +142,10 @@ void main() {
         isFalse,
       );
       expect(
-        isDeletableDatabaseSnapshot(
-            preRestore, <String>{'fushi.db', preRestore}),
+        isDeletableDatabaseSnapshot(preRestore, <String>{
+          'fushi.db',
+          preRestore,
+        }),
         isTrue,
       );
       // merge 侧同理，且两条流程互不干扰（merge sidecar 不管 pre-restore.bak）。
@@ -215,8 +227,10 @@ void main() {
 
     test('待恢复的 pre-restore.bak：sidecar 在时不列不删，sidecar 走后才清掉', () async {
       final File live = put('fushi.db', 'LIVE');
-      final File sidecar =
-          put('fushi.db.sync-preserve.json', '{"mode":"prefs"}');
+      final File sidecar = put(
+        'fushi.db.sync-preserve.json',
+        '{"mode":"prefs"}',
+      );
       final File bak = put('fushi.db.pre-restore.bak', 'BAK');
 
       // sidecar 还在 = 下次启动要靠这两个文件补完 device-local 表 replay。

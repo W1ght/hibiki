@@ -14,30 +14,33 @@ void main() {
   ];
 
   Widget harness(double height) => MaterialApp(
-        home: Scaffold(
-          body: Row(
-            children: <Widget>[
-              SizedBox(
-                height: height,
-                child: Builder(
-                  builder: (BuildContext context) => adaptiveNavRail(
-                    context: context,
-                    currentIndex: 1,
-                    onTap: (_) {},
-                    items: items,
-                  ),
-                ),
+    home: Scaffold(
+      body: Row(
+        children: <Widget>[
+          SizedBox(
+            height: height,
+            child: Builder(
+              builder: (BuildContext context) => adaptiveNavRail(
+                context: context,
+                currentIndex: 1,
+                onTap: (_) {},
+                items: items,
               ),
-              const Expanded(child: SizedBox.shrink()),
-            ],
+            ),
           ),
-        ),
-      );
+          const Expanded(child: SizedBox.shrink()),
+        ],
+      ),
+    ),
+  );
 
   testWidgets('矮窗口下导航 rail 不溢出', (WidgetTester tester) async {
     await tester.pumpWidget(harness(260));
     await tester.pump();
-    expect(tester.takeException(), isNull,
-        reason: 'rail 在矮窗口下应可滚动而非 RenderFlex overflow');
+    expect(
+      tester.takeException(),
+      isNull,
+      reason: 'rail 在矮窗口下应可滚动而非 RenderFlex overflow',
+    );
   });
 }

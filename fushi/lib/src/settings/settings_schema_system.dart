@@ -73,8 +73,9 @@ SettingsDestination buildSystemDestination() {
             value: (SettingsContext settingsContext) =>
                 settingsContext.appModel.startupDefaultDictionaryTab,
             onChanged: (SettingsContext settingsContext, bool value) async {
-              await settingsContext.appModel
-                  .setStartupDefaultDictionaryTab(value);
+              await settingsContext.appModel.setStartupDefaultDictionaryTab(
+                value,
+              );
               settingsContext.refresh();
             },
           ),
@@ -101,7 +102,9 @@ SettingsDestination buildSystemDestination() {
             searchTitle: t.onboarding_step_pack_title,
             subtitle: t.onboarding_pack_intro,
             visible: (SettingsContext settingsContext) => settingsContext
-                .appModel.recommendedPackDownloadController.isActive,
+                .appModel
+                .recommendedPackDownloadController
+                .isActive,
             builder: _buildRecommendedPackDownloadRow,
           ),
           SettingsSwitchItem(
@@ -497,8 +500,9 @@ Future<void> _checkUpdateNow(SettingsContext settingsContext) async {
   // 原「正在检查…」提示。
   // BUG-1836：同 home_page，半更新态下 exe 版本资源谎报新版本，
   // 据它比较会永判「已是最新」，用户困在旧代码里没有出路。
-  final String currentVersion =
-      resolveCurrentAppVersion(settingsContext.appModel.packageInfo.version);
+  final String currentVersion = resolveCurrentAppVersion(
+    settingsContext.appModel.packageInfo.version,
+  );
   final String currentBuildNumber =
       settingsContext.appModel.packageInfo.buildNumber;
   final UpdateChannel channel = _channelFromSettings(settingsContext);
@@ -515,8 +519,11 @@ Future<void> _checkUpdateNow(SettingsContext settingsContext) async {
   );
   if (cached != null) {
     final bool newer = updateTagIsNewerThanCurrent(
-        cached.latestTag, currentVersion, channel,
-        localSeq: currentReleaseSeq);
+      cached.latestTag,
+      currentVersion,
+      channel,
+      localSeq: currentReleaseSeq,
+    );
     FushiToast.show(
       msg: newer
           ? t.update_cached_newer(version: cached.latestTag)
@@ -524,10 +531,7 @@ Future<void> _checkUpdateNow(SettingsContext settingsContext) async {
       severity: ToastSeverity.info,
     );
   } else {
-    FushiToast.show(
-      msg: t.update_checking_now,
-      severity: ToastSeverity.info,
-    );
+    FushiToast.show(msg: t.update_checking_now, severity: ToastSeverity.info);
   }
   try {
     await UpdateChecker.scheduleCheck(

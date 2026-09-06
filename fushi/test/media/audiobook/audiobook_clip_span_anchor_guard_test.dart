@@ -37,8 +37,11 @@ void main() {
       }
     }
     final int bodyStart = src.indexOf('{', i);
-    expect(bodyStart, greaterThanOrEqualTo(0),
-        reason: '函数 $signature 参数列表后必须有函数体 "{"。');
+    expect(
+      bodyStart,
+      greaterThanOrEqualTo(0),
+      reason: '函数 $signature 参数列表后必须有函数体 "{"。',
+    );
     int depth = 0;
     for (i = bodyStart; i < src.length; i++) {
       final String ch = src[i];
@@ -51,50 +54,77 @@ void main() {
     fail('函数 $signature 大括号不配平，无法截出函数体。');
   }
 
-  group('export-clip audio anchor shares the sentence?selection span fallback',
-      () {
-    late String audiobookPart;
+  group(
+    'export-clip audio anchor shares the sentence?selection span fallback',
+    () {
+      late String audiobookPart;
 
-    setUpAll(() {
-      audiobookPart = libFile(
-        'lib/src/pages/implementations/reader_fushi/audiobook.part.dart',
-      );
-    });
+      setUpAll(() {
+        audiobookPart = libFile(
+          'lib/src/pages/implementations/reader_fushi/audiobook.part.dart',
+        );
+      });
 
-    test('_miningSpanRange is defined and keeps the selection-range fallback',
+      test(
+        '_miningSpanRange is defined and keeps the selection-range fallback',
         () {
-      final String body = fnBody(
-          audiobookPart, '({int offset, int length})? _miningSpanRange(');
-      expect(body.contains('_cachedSentenceRange'), isTrue,
-          reason: '_miningSpanRange 必须先取句级 span _cachedSentenceRange。');
-      expect(body.contains('_cachedSelectionRange'), isTrue,
-          reason: '_miningSpanRange 必须回退到选区级 span _cachedSelectionRange '
-              '(TODO-1278：否则句级 span 缺失时导出误报跨章)。');
-    });
+          final String body = fnBody(
+            audiobookPart,
+            '({int offset, int length})? _miningSpanRange(',
+          );
+          expect(
+            body.contains('_cachedSentenceRange'),
+            isTrue,
+            reason: '_miningSpanRange 必须先取句级 span _cachedSentenceRange。',
+          );
+          expect(
+            body.contains('_cachedSelectionRange'),
+            isTrue,
+            reason:
+                '_miningSpanRange 必须回退到选区级 span _cachedSelectionRange '
+                '(TODO-1278：否则句级 span 缺失时导出误报跨章)。',
+          );
+        },
+      );
 
-    test(
-        '_currentSentenceAudioRange anchors via _miningSpanRange, not raw '
-        '_cachedSentenceRange', () {
-      final String body = fnBody(
-          audiobookPart, 'AudioPlaybackRange? _currentSentenceAudioRange(');
-      expect(body.contains('_miningSpanRange()'), isTrue,
-          reason: '导出 / 制卡音频区间必须经 _miningSpanRange() 取锚点。');
-      expect(body.contains('_cachedSentenceRange'), isFalse,
-          reason: '不得再裸读 _cachedSentenceRange（会丢选区级回退，TODO-1278 回归）。');
-    });
+      test('_currentSentenceAudioRange anchors via _miningSpanRange, not raw '
+          '_cachedSentenceRange', () {
+        final String body = fnBody(
+          audiobookPart,
+          'AudioPlaybackRange? _currentSentenceAudioRange(',
+        );
+        expect(
+          body.contains('_miningSpanRange()'),
+          isTrue,
+          reason: '导出 / 制卡音频区间必须经 _miningSpanRange() 取锚点。',
+        );
+        expect(
+          body.contains('_cachedSentenceRange'),
+          isFalse,
+          reason: '不得再裸读 _cachedSentenceRange（会丢选区级回退，TODO-1278 回归）。',
+        );
+      });
 
-    test(
-        '_buildAudiobookClipPlan anchors via _miningSpanRange, not raw '
-        '_cachedSentenceRange', () {
-      // BUG-1320：构造器返回类型改成记录 ({plan, range})，签名不再以 `(` 结尾；
-      // 改用共享 methodBody（会跳过命名参数表）。`_buildAudiobookClipPlan({` 只匹配
-      // 定义，调用点是 `_buildAudiobookClipPlan(audioFileCount:`，不会撞。
-      final String body =
-          methodBody(audiobookPart, '_buildAudiobookClipPlan({');
-      expect(body.contains('_miningSpanRange()'), isTrue,
-          reason: '动态多句计划的 span 定位必须经 _miningSpanRange() 取锚点。');
-      expect(body.contains('_cachedSentenceRange'), isFalse,
-          reason: '不得再裸读 _cachedSentenceRange（会丢选区级回退，TODO-1278 回归）。');
-    });
-  });
+      test('_buildAudiobookClipPlan anchors via _miningSpanRange, not raw '
+          '_cachedSentenceRange', () {
+        // BUG-1320：构造器返回类型改成记录 ({plan, range})，签名不再以 `(` 结尾；
+        // 改用共享 methodBody（会跳过命名参数表）。`_buildAudiobookClipPlan({` 只匹配
+        // 定义，调用点是 `_buildAudiobookClipPlan(audioFileCount:`，不会撞。
+        final String body = methodBody(
+          audiobookPart,
+          '_buildAudiobookClipPlan({',
+        );
+        expect(
+          body.contains('_miningSpanRange()'),
+          isTrue,
+          reason: '动态多句计划的 span 定位必须经 _miningSpanRange() 取锚点。',
+        );
+        expect(
+          body.contains('_cachedSentenceRange'),
+          isFalse,
+          reason: '不得再裸读 _cachedSentenceRange（会丢选区级回退，TODO-1278 回归）。',
+        );
+      });
+    },
+  );
 }

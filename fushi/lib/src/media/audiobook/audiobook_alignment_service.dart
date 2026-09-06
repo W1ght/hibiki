@@ -13,10 +13,8 @@ import 'package:fushi/src/utils/misc/error_log_service.dart';
 
 /// 非 UI 进度回调（替代对话框的 reportProgress）。[fraction] 0..1，[message]
 /// 是给用户看的步骤文案（service 不持有 i18n，文案由调用方喂）。
-typedef AudiobookAlignmentProgress = void Function(
-  double fraction,
-  String message,
-);
+typedef AudiobookAlignmentProgress =
+    void Function(double fraction, String message);
 
 /// EPUB + 字幕 + 可选音频 -> 有声书 对齐落库的可复用结果。
 @immutable
@@ -90,17 +88,29 @@ Future<List<AudioCue>> parseCuesForFormat(
   switch (ext) {
     case 'lrc':
       return LrcParser.parse(
-          lrcFile: file, bookKey: bookKey, audioFileIndex: audioFileIndex);
+        lrcFile: file,
+        bookKey: bookKey,
+        audioFileIndex: audioFileIndex,
+      );
     case 'vtt':
       return VttParser.parse(
-          vttFile: file, bookKey: bookKey, audioFileIndex: audioFileIndex);
+        vttFile: file,
+        bookKey: bookKey,
+        audioFileIndex: audioFileIndex,
+      );
     case 'ass':
     case 'ssa':
       return AssParser.parse(
-          assFile: file, bookKey: bookKey, audioFileIndex: audioFileIndex);
+        assFile: file,
+        bookKey: bookKey,
+        audioFileIndex: audioFileIndex,
+      );
     default:
       return SrtParser.parse(
-          srtFile: file, bookKey: bookKey, audioFileIndex: audioFileIndex);
+        srtFile: file,
+        bookKey: bookKey,
+        audioFileIndex: audioFileIndex,
+      );
   }
 }
 
@@ -143,8 +153,11 @@ Future<AudiobookAlignmentResult> alignAndPersistAudiobook({
     final String extractDir = bookRow?.extractDir ?? '';
     sections = epubSectionsFromExtractDir(extractDir);
   } catch (e, stack) {
-    ErrorLogService.instance
-        .log('AudiobookAlignmentService.parseEpub', e, stack);
+    ErrorLogService.instance.log(
+      'AudiobookAlignmentService.parseEpub',
+      e,
+      stack,
+    );
     debugPrint('[fushi-import] parseFromExtracted failed: $e');
   }
   report(0.45, messages.parsing);
@@ -217,10 +230,10 @@ Future<AudiobookAlignmentResult> alignAndPersistAudiobook({
   // 持久目录音频的唯一写入原语（同步成恰好这一组，幂等、不会先删掉自己的源）。
   final List<String> persistedAudioPaths =
       await AudiobookStorage.syncAudioFiles(
-    persistDir,
-    audioPaths,
-    onFile: (String name) => report(0.85, messages._copying(name)),
-  );
+        persistDir,
+        audioPaths,
+        onFile: (String name) => report(0.85, messages._copying(name)),
+      );
 
   report(0.9, messages.saving);
   // 窄写入：一次只说一件事，没有整行入口可以误清别的列（BUG-1678）。
@@ -244,14 +257,8 @@ Future<AudiobookAlignmentResult> alignAndPersistAudiobook({
     srtPath: persistedSrt,
     audioPaths: persistedAudioPaths,
   );
-  await audiobookRepo.saveCues(
-    bookKey: bookKey,
-    cues: cues,
-  );
-  await audiobookRepo.updateHealthOverlay(
-    bookKey: bookKey,
-    health: health,
-  );
+  await audiobookRepo.saveCues(bookKey: bookKey, cues: cues);
+  await audiobookRepo.updateHealthOverlay(bookKey: bookKey, health: health);
   report(1, messages.done);
 
   return AudiobookAlignmentResult(

@@ -28,10 +28,10 @@ void main() {
     final List<MethodCall> calls = <MethodCall>[];
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(testChannel, (MethodCall call) async {
-      calls.add(call);
-      if (call.method == 'isImpellerDisabled') return true;
-      return null;
-    });
+          calls.add(call);
+          if (call.method == 'isImpellerDisabled') return true;
+          return null;
+        });
 
     await service.init();
 
@@ -40,43 +40,47 @@ void main() {
     expect(service.isSupported, isTrue);
   });
 
-  test('setImpellerDisabled forwards the bool arg and caches the value',
-      () async {
-    MethodCall? last;
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-        .setMockMethodCallHandler(testChannel, (MethodCall call) async {
-      last = call;
-      return null;
-    });
+  test(
+    'setImpellerDisabled forwards the bool arg and caches the value',
+    () async {
+      MethodCall? last;
+      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(testChannel, (MethodCall call) async {
+            last = call;
+            return null;
+          });
 
-    final bool ok = await service.setImpellerDisabled(true);
-    expect(ok, isTrue);
-    expect(last?.method, 'setImpellerDisabled');
-    expect(last?.arguments, true);
-    expect(service.impellerDisabled, isTrue);
+      final bool ok = await service.setImpellerDisabled(true);
+      expect(ok, isTrue);
+      expect(last?.method, 'setImpellerDisabled');
+      expect(last?.arguments, true);
+      expect(service.impellerDisabled, isTrue);
 
-    await service.setImpellerDisabled(false);
-    expect(service.impellerDisabled, isFalse);
-  });
+      await service.setImpellerDisabled(false);
+      expect(service.impellerDisabled, isFalse);
+    },
+  );
 
-  test('missing native channel degrades to unsupported without throwing',
-      () async {
-    // A channel with no mock handler surfaces MissingPluginException in tests;
-    // the service must swallow it (non-Android platforms) rather than crash.
-    service.channel = const MethodChannel('test/render_absent');
+  test(
+    'missing native channel degrades to unsupported without throwing',
+    () async {
+      // A channel with no mock handler surfaces MissingPluginException in tests;
+      // the service must swallow it (non-Android platforms) rather than crash.
+      service.channel = const MethodChannel('test/render_absent');
 
-    await service.init();
-    expect(service.isSupported, isFalse);
-    expect(await service.setImpellerDisabled(true), isFalse);
-  });
+      await service.init();
+      expect(service.isSupported, isFalse);
+      expect(await service.setImpellerDisabled(true), isFalse);
+    },
+  );
 
   group('TODO-1232 本次运行后端快照（诊断日志自证测的是哪个后端）', () {
     Future<void> initWith(bool disabled) async {
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
           .setMockMethodCallHandler(testChannel, (MethodCall call) async {
-        if (call.method == 'isImpellerDisabled') return disabled;
-        return null;
-      });
+            if (call.method == 'isImpellerDisabled') return disabled;
+            return null;
+          });
       await service.init();
     }
 
@@ -116,9 +120,12 @@ void main() {
     test('未设置 + Android → false（保持 Impeller；黑屏机型走一键切 Skia 入口降级）', () {
       expect(
         RenderBackendService.resolveImpellerDisabled(
-            storedPref: null, isAndroid: true),
+          storedPref: null,
+          isAndroid: true,
+        ),
         isFalse,
-        reason: '用户从未动开关时，Android 亦保持引擎默认 Impeller（不再全局翻 Skia）；'
+        reason:
+            '用户从未动开关时，Android 亦保持引擎默认 Impeller（不再全局翻 Skia）；'
             'BUG-597 黑屏机型改由播放器设置面板可发现的一键「切 Skia 并重启」降级',
       );
     });
@@ -126,7 +133,9 @@ void main() {
     test('未设置 + 非 Android → false（保持引擎默认 Impeller）', () {
       expect(
         RenderBackendService.resolveImpellerDisabled(
-            storedPref: null, isAndroid: false),
+          storedPref: null,
+          isAndroid: false,
+        ),
         isFalse,
         reason: '非 Android 平台此开关不适用，保持引擎默认 Impeller',
       );
@@ -135,7 +144,9 @@ void main() {
     test('显式 false（用户选 Impeller）→ false（与默认同向，仍遵从显式）', () {
       expect(
         RenderBackendService.resolveImpellerDisabled(
-            storedPref: false, isAndroid: true),
+          storedPref: false,
+          isAndroid: true,
+        ),
         isFalse,
         reason: '用户在设置里显式选「用 Impeller」时遵从其选择',
       );
@@ -144,7 +155,9 @@ void main() {
     test('显式 true（用户选 Skia）→ true（无论平台）', () {
       expect(
         RenderBackendService.resolveImpellerDisabled(
-            storedPref: true, isAndroid: false),
+          storedPref: true,
+          isAndroid: false,
+        ),
         isTrue,
         reason: '显式选 Skia 直接遵从',
       );
@@ -158,19 +171,28 @@ void main() {
     // 面板的一键「切 Skia 并重启」入口显式降级，而非全局默认翻 Skia。
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(testChannel, (MethodCall call) async {
-      if (call.method == 'isImpellerDisabled') return null; // 未设置
-      return null;
-    });
+          if (call.method == 'isImpellerDisabled') return null; // 未设置
+          return null;
+        });
 
     await service.init();
-    expect(service.isSupported, isTrue,
-        reason: 'channel 有响应即已接线，null 只表示「未设置」而非不支持');
     expect(
-        service.impellerDisabled,
-        RenderBackendService.resolveImpellerDisabled(
-            storedPref: null, isAndroid: Platform.isAndroid),
-        reason: 'init 须用同一三态 helper + 物理 OS 兜底未设置态');
-    expect(service.impellerDisabled, isFalse,
-        reason: '未设置态在所有平台（含 Android）均解析为 false（保持 Impeller）');
+      service.isSupported,
+      isTrue,
+      reason: 'channel 有响应即已接线，null 只表示「未设置」而非不支持',
+    );
+    expect(
+      service.impellerDisabled,
+      RenderBackendService.resolveImpellerDisabled(
+        storedPref: null,
+        isAndroid: Platform.isAndroid,
+      ),
+      reason: 'init 须用同一三态 helper + 物理 OS 兜底未设置态',
+    );
+    expect(
+      service.impellerDisabled,
+      isFalse,
+      reason: '未设置态在所有平台（含 Android）均解析为 false（保持 Impeller）',
+    );
   });
 }

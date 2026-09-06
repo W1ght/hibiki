@@ -47,8 +47,9 @@ int computeReadingStreak(Set<String> activeDayKeys, DateTime now) {
   if (activeDayKeys.isEmpty) return 0;
   final DateTime today = DateTime(now.year, now.month, now.day);
   final String todayKey = statDateKey(today);
-  final String yesterdayKey =
-      statDateKey(today.subtract(const Duration(days: 1)));
+  final String yesterdayKey = statDateKey(
+    today.subtract(const Duration(days: 1)),
+  );
   // 起点：今天有记录从今天算；否则昨天有记录从昨天算；都没有则 streak=0。
   DateTime cursor;
   if (activeDayKeys.contains(todayKey)) {
@@ -196,8 +197,10 @@ SpeedSummary computeSpeedSummary(
   if (daily.length >= compareWindow * 2) {
     final int len = daily.length;
     final List<StatDayData> recent = daily.sublist(len - compareWindow);
-    final List<StatDayData> prev =
-        daily.sublist(len - compareWindow * 2, len - compareWindow);
+    final List<StatDayData> prev = daily.sublist(
+      len - compareWindow * 2,
+      len - compareWindow,
+    );
     final double recentCph = _windowWeightedCph(recent);
     final double prevCph = _windowWeightedCph(prev);
     if (prevCph > 0) {

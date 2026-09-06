@@ -40,8 +40,9 @@ void main() {
         const _ReentrantHoverHarness(deferDispatch: true),
       );
 
-      final TestGesture realMouse =
-          await tester.createGesture(kind: PointerDeviceKind.mouse);
+      final TestGesture realMouse = await tester.createGesture(
+        kind: PointerDeviceKind.mouse,
+      );
       addTearDown(() => realMouse.removePointer());
       await realMouse.addPointer(location: const Offset(10, 10));
       await tester.pump();
@@ -54,8 +55,11 @@ void main() {
 
       // 若延迟派发仍重入，testWidgets 会把框架重入错误当未捕获异常令本测试失败；
       // 走到这里且无失败即证明延迟派发安全。
-      expect(tester.takeException(), isNull,
-          reason: '微任务延迟派发不应触发 MouseTracker 重入/并发修改');
+      expect(
+        tester.takeException(),
+        isNull,
+        reason: '微任务延迟派发不应触发 MouseTracker 重入/并发修改',
+      );
     });
   });
 
@@ -74,13 +78,22 @@ void main() {
       expect(end, greaterThan(at), reason: '应有 _dispatchPokeHover 延迟派发 helper');
       final String body = src.substring(at, end);
       expect(
-          body.contains('GestureBinding.instance.handlePointerEvent'), isFalse,
-          reason: 'BUG-425：_pokeControlsVisible 体内不得再同步派发 '
-              'GestureBinding.instance.handlePointerEvent（注释提及不算）');
-      expect(body.contains('scheduleMicrotask(_dispatchPokeHover)'), isTrue,
-          reason: '_pokeControlsVisible 必须经 scheduleMicrotask 延迟派发');
-      expect(body.contains('_pendingPokeHover = PointerHoverEvent('), isTrue,
-          reason: '合成 hover 应先存入 _pendingPokeHover（几何有效时同步构造）');
+        body.contains('GestureBinding.instance.handlePointerEvent'),
+        isFalse,
+        reason:
+            'BUG-425：_pokeControlsVisible 体内不得再同步派发 '
+            'GestureBinding.instance.handlePointerEvent（注释提及不算）',
+      );
+      expect(
+        body.contains('scheduleMicrotask(_dispatchPokeHover)'),
+        isTrue,
+        reason: '_pokeControlsVisible 必须经 scheduleMicrotask 延迟派发',
+      );
+      expect(
+        body.contains('_pendingPokeHover = PointerHoverEvent('),
+        isTrue,
+        reason: '合成 hover 应先存入 _pendingPokeHover（几何有效时同步构造）',
+      );
     });
 
     test('_dispatchPokeHover 在微任务里 mounted 校验后派发待发事件', () {
@@ -89,18 +102,29 @@ void main() {
       final int end = src.indexOf('void _clearRailHover()', at);
       expect(end, greaterThan(at));
       final String body = src.substring(at, end);
-      expect(body.contains('GestureBinding.instance.handlePointerEvent(event)'),
-          isTrue,
-          reason: '真正派发收敛到 _dispatchPokeHover（已脱离 MouseTracker 迭代栈）');
-      expect(body.contains('if (event == null || !mounted) return;'), isTrue,
-          reason: '微任务派发前应重校验 mounted / 待发事件存在');
+      expect(
+        body.contains('GestureBinding.instance.handlePointerEvent(event)'),
+        isTrue,
+        reason: '真正派发收敛到 _dispatchPokeHover（已脱离 MouseTracker 迭代栈）',
+      );
+      expect(
+        body.contains('if (event == null || !mounted) return;'),
+        isTrue,
+        reason: '微任务派发前应重校验 mounted / 待发事件存在',
+      );
     });
 
     test('存在去重旗 _pokeDispatchScheduled + 待发字段 _pendingPokeHover', () {
-      expect(src.contains('bool _pokeDispatchScheduled = false;'), isTrue,
-          reason: '应有微任务去重旗，连按时折叠成单次派发');
-      expect(src.contains('PointerHoverEvent? _pendingPokeHover;'), isTrue,
-          reason: '应有待派发合成 hover 字段');
+      expect(
+        src.contains('bool _pokeDispatchScheduled = false;'),
+        isTrue,
+        reason: '应有微任务去重旗，连按时折叠成单次派发',
+      );
+      expect(
+        src.contains('PointerHoverEvent? _pendingPokeHover;'),
+        isTrue,
+        reason: '应有待派发合成 hover 字段',
+      );
     });
   });
 }

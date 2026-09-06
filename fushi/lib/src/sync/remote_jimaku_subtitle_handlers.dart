@@ -51,7 +51,7 @@ Future<Map<String, dynamic>> buildJimakuSearchResponse(
   Map<String, dynamic> body, {
   required JimakuClient? Function() clientProvider,
   required void Function(String handle, RemoteJimakuCandidate candidate)
-      rememberCandidate,
+  rememberCandidate,
 }) async {
   final JimakuClient? client = clientProvider();
   if (client == null) {
@@ -155,8 +155,9 @@ Future<Map<String, dynamic>> buildJimakuFetchResponse(
     return <String, dynamic>{'ok': false, 'error': 'no-api-key'};
   }
   final String handle = body['handle']?.toString() ?? '';
-  final RemoteJimakuCandidate? candidate =
-      handle.isEmpty ? null : resolveCandidate(handle);
+  final RemoteJimakuCandidate? candidate = handle.isEmpty
+      ? null
+      : resolveCandidate(handle);
   if (candidate == null) {
     // 缓存过期 / app 重启：扩展侧重搜一次即可恢复。
     return <String, dynamic>{'ok': false, 'error': 'unknown-handle'};

@@ -3,10 +3,15 @@ import 'package:fushi/src/media/video/video_mpv_config.dart';
 
 void main() {
   group('buildHttpHeaderFieldsProperty (TODO-850 stage1)', () {
-    test('empty headers -> empty props (no-op, local/plain stream unaffected)',
-        () {
-      expect(buildHttpHeaderFieldsProperty(const <String, String>{}), isEmpty);
-    });
+    test(
+      'empty headers -> empty props (no-op, local/plain stream unaffected)',
+      () {
+        expect(
+          buildHttpHeaderFieldsProperty(const <String, String>{}),
+          isEmpty,
+        );
+      },
+    );
 
     test('single header -> "Key: Value"', () {
       final Map<String, String> p = buildHttpHeaderFieldsProperty(

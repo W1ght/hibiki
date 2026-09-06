@@ -60,8 +60,9 @@ const Set<String> _kLookupActivityPaths = <String>{
 };
 
 class YomitanApiServer {
-  static final RegExp _lookupTraceIdPattern =
-      RegExp(r'^[A-Za-z0-9._:-]{1,64}$');
+  static final RegExp _lookupTraceIdPattern = RegExp(
+    r'^[A-Za-z0-9._:-]{1,64}$',
+  );
 
   YomitanApiServer({
     required int port,
@@ -82,24 +83,24 @@ class YomitanApiServer {
     String? Function()? jimakuApiKeyProvider,
     String? apiKey,
     bool allowLan = false,
-  })  : _requestedPort = port,
-        _lookup = lookupService,
-        _mining = miningService,
-        _history = historyService,
-        _tokenizer = tokenizer,
-        _readingResolver = readingResolver,
-        _themeColorsProvider = themeColorsProvider,
-        _audioSourcesProvider = audioSourcesProvider,
-        _autoReadOnLookupProvider = autoReadOnLookupProvider,
-        _extensionBuildProvider = extensionBuildProvider,
-        _popupDictionaryCssProvider = popupDictionaryCssProvider,
-        _onExtensionPopupSize = onExtensionPopupSize,
-        _onExtensionSeen = onExtensionSeen,
-        _onLookupActivity = onLookupActivity,
-        _onExtensionReport = onExtensionReport,
-        _jimakuApiKeyProvider = jimakuApiKeyProvider,
-        _apiKey = apiKey,
-        _allowLan = allowLan;
+  }) : _requestedPort = port,
+       _lookup = lookupService,
+       _mining = miningService,
+       _history = historyService,
+       _tokenizer = tokenizer,
+       _readingResolver = readingResolver,
+       _themeColorsProvider = themeColorsProvider,
+       _audioSourcesProvider = audioSourcesProvider,
+       _autoReadOnLookupProvider = autoReadOnLookupProvider,
+       _extensionBuildProvider = extensionBuildProvider,
+       _popupDictionaryCssProvider = popupDictionaryCssProvider,
+       _onExtensionPopupSize = onExtensionPopupSize,
+       _onExtensionSeen = onExtensionSeen,
+       _onLookupActivity = onLookupActivity,
+       _onExtensionReport = onExtensionReport,
+       _jimakuApiKeyProvider = jimakuApiKeyProvider,
+       _apiKey = apiKey,
+       _allowLan = allowLan;
 
   final int _requestedPort;
   final FushiRemoteLookupService _lookup;
@@ -246,7 +247,8 @@ class YomitanApiServer {
           authorization.toLowerCase().startsWith(basicPrefix.toLowerCase())) {
         try {
           final String decoded = utf8.decode(
-              base64Decode(authorization.substring(basicPrefix.length)));
+            base64Decode(authorization.substring(basicPrefix.length)),
+          );
           final int colon = decoded.indexOf(':');
           if (colon >= 0) return decoded.substring(colon + 1);
         } catch (_) {
@@ -346,11 +348,13 @@ class YomitanApiServer {
   Future<shelf.Response> _handleJimakuSearch(shelf.Request request) async {
     final Map<String, dynamic>? body = await _readJson(request);
     if (body == null) return shelf.Response(400, body: 'Invalid JSON');
-    return _json(await buildJimakuSearchResponse(
-      body,
-      clientProvider: _jimakuClientFor,
-      rememberCandidate: _rememberJimakuCandidate,
-    ));
+    return _json(
+      await buildJimakuSearchResponse(
+        body,
+        clientProvider: _jimakuClientFor,
+        rememberCandidate: _rememberJimakuCandidate,
+      ),
+    );
   }
 
   /// 「Jimaku 查字幕」扩展桥②下载+解析：body `{handle}`。响应与 `/api/subtitle/parse`
@@ -358,11 +362,13 @@ class YomitanApiServer {
   Future<shelf.Response> _handleJimakuFetch(shelf.Request request) async {
     final Map<String, dynamic>? body = await _readJson(request);
     if (body == null) return shelf.Response(400, body: 'Invalid JSON');
-    return _json(await buildJimakuFetchResponse(
-      body,
-      clientProvider: _jimakuClientFor,
-      resolveCandidate: (String handle) => _jimakuCandidates[handle],
-    ));
+    return _json(
+      await buildJimakuFetchResponse(
+        body,
+        clientProvider: _jimakuClientFor,
+        resolveCandidate: (String handle) => _jimakuCandidates[handle],
+      ),
+    );
   }
 
   /// BUG-726/自更新：状态端点回带当前内置扩展指纹（extensionBuild），扩展
@@ -407,16 +413,16 @@ class YomitanApiServer {
     final Stopwatch handlerWatch = Stopwatch()..start();
     final Map<String, dynamic> response =
         await buildRemoteDictionaryLookupResponse(
-      body,
-      lookup: _lookup,
-      history: _history,
-      popupTiming: popupTiming,
-      themeColorsProvider: _themeColorsProvider,
-      audioSourcesProvider: _audioSourcesProvider,
-      autoReadOnLookupProvider: _autoReadOnLookupProvider,
-      extensionBuildProvider: _extensionBuildProvider,
-      popupDictionaryCssProvider: _popupDictionaryCssProvider,
-    );
+          body,
+          lookup: _lookup,
+          history: _history,
+          popupTiming: popupTiming,
+          themeColorsProvider: _themeColorsProvider,
+          audioSourcesProvider: _audioSourcesProvider,
+          autoReadOnLookupProvider: _autoReadOnLookupProvider,
+          extensionBuildProvider: _extensionBuildProvider,
+          popupDictionaryCssProvider: _popupDictionaryCssProvider,
+        );
     handlerWatch.stop();
 
     // jsonEncode 必须只做一次。把最终编码阶段放进响应 header，避免为了把耗时写回
@@ -430,7 +436,8 @@ class YomitanApiServer {
     final Match? traceIdMatch = rawTraceId is String
         ? _lookupTraceIdPattern.firstMatch(rawTraceId)
         : null;
-    final String? traceId = rawTraceId is String &&
+    final String? traceId =
+        rawTraceId is String &&
             traceIdMatch != null &&
             traceIdMatch.start == 0 &&
             traceIdMatch.end == rawTraceId.length
@@ -497,13 +504,16 @@ class YomitanApiServer {
       switch (path) {
         case '/api/anki/note-type/read':
           return _json(
-              await buildAnkiNoteTypeReadResponse(body, mining: mining));
+            await buildAnkiNoteTypeReadResponse(body, mining: mining),
+          );
         case '/api/anki/note-type/styling':
           return _json(
-              await buildAnkiNoteTypeStylingResponse(body, mining: mining));
+            await buildAnkiNoteTypeStylingResponse(body, mining: mining),
+          );
         default:
           return _json(
-              await buildAnkiNoteTypeTemplatesResponse(body, mining: mining));
+            await buildAnkiNoteTypeTemplatesResponse(body, mining: mining),
+          );
       }
     } on FormatException catch (e) {
       return shelf.Response(400, body: e.message);
@@ -536,10 +546,12 @@ class YomitanApiServer {
       return shelf.Response(400, body: 'Missing videoId');
     }
     final Object? lang = body['preferLang'];
-    return _json(await resolveYoutubeCaptionsForExtension(
-      id,
-      preferLang: lang is String && lang.isNotEmpty ? lang : 'ja',
-    ));
+    return _json(
+      await resolveYoutubeCaptionsForExtension(
+        id,
+        preferLang: lang is String && lang.isNotEmpty ? lang : 'ja',
+      ),
+    );
   }
 
   /// B（asb 招牌）：浏览器扩展**给任意网页视频加载用户自己的外挂字幕文件**端点——扩展读本地
@@ -554,7 +566,8 @@ class YomitanApiServer {
       return shelf.Response(400, body: 'Missing filename/content');
     }
     return _json(
-        buildParsedSubtitleResponse(filename: filename, content: content));
+      buildParsedSubtitleResponse(filename: filename, content: content),
+    );
   }
 
   /// 弹窗尺寸精细化 Phase D：浏览器扩展弹窗被拖右下角把手调整尺寸后，content.js 经
@@ -564,7 +577,8 @@ class YomitanApiServer {
   /// clamp 250-2000/200-1600 + 「拖即解锁」extensionPopupIndependentSize + 只写扩展键，
   /// 绝不碰 overlay/popupMax）。未注入（旧 app / 配对 host）时 404，无副作用（向后兼容）。
   Future<shelf.Response> _handleExtensionPopupSize(
-      shelf.Request request) async {
+    shelf.Request request,
+  ) async {
     final void Function(double, double)? sink = _onExtensionPopupSize;
     if (sink == null) return shelf.Response.notFound('Popup size sink off');
     final Map<String, dynamic>? body = await _readJson(request);
@@ -612,12 +626,15 @@ class YomitanApiServer {
 
   /// 单词音频②取字节：GET /api/lookup/audio/file?id=（免鉴权，靠不可猜 id）。命中即续期
   /// 5 分钟窗口，使正在播放的音频不会中途被 prune。
-  shelf.Response _handleAudioFile(shelf.Request request,
-      {required bool headOnly}) {
+  shelf.Response _handleAudioFile(
+    shelf.Request request, {
+    required bool headOnly,
+  }) {
     _pruneAudioTokens();
     final String? id = request.url.queryParameters['id'];
-    final _YomitanAudioToken? token =
-        id == null ? null : _remoteAudioTokens[id];
+    final _YomitanAudioToken? token = id == null
+        ? null
+        : _remoteAudioTokens[id];
     if (token == null) return shelf.Response.notFound('Not found');
     token.createdAt = DateTime.now();
     return shelf.Response.ok(
@@ -630,10 +647,10 @@ class YomitanApiServer {
   }
 
   shelf.Response _audioMissResponse() => _json(<String, dynamic>{
-        'type': 'audioResult',
-        'url': null,
-        'contentType': null,
-      });
+    'type': 'audioResult',
+    'url': null,
+    'contentType': null,
+  });
 
   String _generateAudioToken() {
     final Random random = Random.secure();
@@ -679,21 +696,25 @@ class YomitanApiServer {
     if (text is List) {
       final List<Map<String, dynamic>> out = <Map<String, dynamic>>[];
       for (int i = 0; i < text.length; i++) {
-        out.add(buildYomitanTokenizeResponse(
-          text: text[i]?.toString() ?? '',
-          index: i,
-          tokenize: _tokenizer,
-          readingOf: _readingResolver,
-        ));
+        out.add(
+          buildYomitanTokenizeResponse(
+            text: text[i]?.toString() ?? '',
+            index: i,
+            tokenize: _tokenizer,
+            readingOf: _readingResolver,
+          ),
+        );
       }
       return _jsonRaw(jsonEncode(out));
     }
-    return _json(buildYomitanTokenizeResponse(
-      text: text?.toString() ?? '',
-      index: 0,
-      tokenize: _tokenizer,
-      readingOf: _readingResolver,
-    ));
+    return _json(
+      buildYomitanTokenizeResponse(
+        text: text?.toString() ?? '',
+        index: 0,
+        tokenize: _tokenizer,
+        readingOf: _readingResolver,
+      ),
+    );
   }
 
   Future<Map<String, dynamic>?> _readJson(shelf.Request request) async {
@@ -740,14 +761,13 @@ class YomitanApiServer {
   shelf.Response _jsonRaw(
     String body, {
     Map<String, String> extraHeaders = const <String, String>{},
-  }) =>
-      shelf.Response.ok(
-        body,
-        headers: <String, String>{
-          ...extraHeaders,
-          'Content-Type': 'application/json; charset=utf-8',
-        },
-      );
+  }) => shelf.Response.ok(
+    body,
+    headers: <String, String>{
+      ...extraHeaders,
+      'Content-Type': 'application/json; charset=utf-8',
+    },
+  );
 }
 
 /// 单词音频短命 token（[YomitanApiServer] 私有，镜像 FushiSyncServer 的同款模型）。

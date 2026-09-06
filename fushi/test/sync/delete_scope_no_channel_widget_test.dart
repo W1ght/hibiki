@@ -27,45 +27,63 @@ void main() {
 
   group('ReaderHistoryDeleteDialog', () {
     testWidgets('有通道 → 渲染勾选框，不渲染无通道说明', (WidgetTester tester) async {
-      await tester.pumpWidget(app(ReaderHistoryDeleteDialog(
-        title: t.epub_delete_title,
-        message: 'msg',
-        onConfirm: (_) {},
-      )));
+      await tester.pumpWidget(
+        app(
+          ReaderHistoryDeleteDialog(
+            title: t.epub_delete_title,
+            message: 'msg',
+            onConfirm: (_) {},
+          ),
+        ),
+      );
 
       expect(find.text(t.delete_scope_sync_everywhere), findsOneWidget);
       expect(find.byType(DeleteScopeUnavailableNote), findsNothing);
     });
 
     testWidgets('无通道 → 勾选框消失，换成说明行', (WidgetTester tester) async {
-      await tester.pumpWidget(app(ReaderHistoryDeleteDialog(
-        title: t.epub_delete_title,
-        message: 'msg',
-        showSyncScope: false,
-        onConfirm: (_) {},
-      )));
+      await tester.pumpWidget(
+        app(
+          ReaderHistoryDeleteDialog(
+            title: t.epub_delete_title,
+            message: 'msg',
+            showSyncScope: false,
+            onConfirm: (_) {},
+          ),
+        ),
+      );
 
-      expect(find.text(t.delete_scope_sync_everywhere), findsNothing,
-          reason: '没有任何同步通道时，这个选项勾了也不可能生效，不该出现');
+      expect(
+        find.text(t.delete_scope_sync_everywhere),
+        findsNothing,
+        reason: '没有任何同步通道时，这个选项勾了也不可能生效，不该出现',
+      );
       expect(find.byType(DeleteScopeUnavailableNote), findsOneWidget);
       expect(find.text(t.delete_scope_no_channel), findsOneWidget);
     });
 
     testWidgets('无通道时确认 → 恒 keepLocalOnly', (WidgetTester tester) async {
       DeleteDecision? got;
-      await tester.pumpWidget(app(ReaderHistoryDeleteDialog(
-        title: t.epub_delete_title,
-        message: 'msg',
-        showSyncScope: false,
-        onConfirm: (DeleteDecision d) => got = d,
-      )));
+      await tester.pumpWidget(
+        app(
+          ReaderHistoryDeleteDialog(
+            title: t.epub_delete_title,
+            message: 'msg',
+            showSyncScope: false,
+            onConfirm: (DeleteDecision d) => got = d,
+          ),
+        ),
+      );
 
       await tester.tap(find.text(t.dialog_delete));
       await tester.pump();
 
       expect(got?.scope, DeleteScope.keepLocalOnly);
-      expect(got?.deleteLocalFiles, isFalse,
-          reason: '没摆「同时删除本地文件」勾选框时恒为 false');
+      expect(
+        got?.deleteLocalFiles,
+        isFalse,
+        reason: '没摆「同时删除本地文件」勾选框时恒为 false',
+      );
     });
   });
 
@@ -88,14 +106,15 @@ void main() {
       // 它不是调用点，要从计数里剔掉。
       final int ctorCount =
           'ReaderHistoryDeleteDialog('.allMatches(source).length -
-              'const ReaderHistoryDeleteDialog('.allMatches(source).length;
+          'const ReaderHistoryDeleteDialog('.allMatches(source).length;
       final int gatedCount = 'showSyncScope:'.allMatches(source).length;
 
       expect(ctorCount, greaterThan(0), reason: '书架页必须存在删除确认框构造点');
       expect(
         gatedCount,
         ctorCount,
-        reason: '有 $ctorCount 个构造点但只有 $gatedCount 处传了 showSyncScope——'
+        reason:
+            '有 $ctorCount 个构造点但只有 $gatedCount 处传了 showSyncScope——'
             '漏接的那个入口会在没有任何同步通道时继续显示「从所有设备删除」，'
             '正是 TODO-2470 死角②的复发形态',
       );
@@ -107,21 +126,31 @@ void main() {
       // 有人在此页新引入一个不查判据的调用点。
       final int calls = 'showDeleteScopeConfirm('.allMatches(source).length;
       if (calls == 0) return;
-      expect('db:'.allMatches(source).length, greaterThanOrEqualTo(calls),
-          reason: '通用删除弹窗必须传 db，否则它无从得知本机有没有传播通道');
+      expect(
+        'db:'.allMatches(source).length,
+        greaterThanOrEqualTo(calls),
+        reason: '通用删除弹窗必须传 db，否则它无从得知本机有没有传播通道',
+      );
     });
   });
 
   group('通用 showDeleteScopeConfirm 弹窗', () {
     /// 不传 db → 判据不查、恒显示（既有调用点与老测试的兼容行为）。
     testWidgets('不传 db → 渲染勾选框', (WidgetTester tester) async {
-      await tester.pumpWidget(app(Builder(
-        builder: (BuildContext ctx) => TextButton(
-          onPressed: () => showDeleteScopeConfirm(ctx,
-              title: t.dialog_delete, message: 'msg'),
-          child: const Text('open'),
+      await tester.pumpWidget(
+        app(
+          Builder(
+            builder: (BuildContext ctx) => TextButton(
+              onPressed: () => showDeleteScopeConfirm(
+                ctx,
+                title: t.dialog_delete,
+                message: 'msg',
+              ),
+              child: const Text('open'),
+            ),
+          ),
         ),
-      )));
+      );
       await tester.tap(find.text('open'));
       await tester.pumpAndSettle();
 
@@ -133,17 +162,26 @@ void main() {
     /// 「本机没有任何同步通道」并据此收起勾选框——这条覆盖的是用户真实遭遇的路径
     /// （全新装、从没配过同步，删书时勾了「从所有设备删除」）。
     testWidgets('传零配置的 db → 自动收起勾选框', (WidgetTester tester) async {
-      final FushiDatabase db =
-          FushiDatabase.forTesting(NativeDatabase.memory());
+      final FushiDatabase db = FushiDatabase.forTesting(
+        NativeDatabase.memory(),
+      );
       addTearDown(db.close);
 
-      await tester.pumpWidget(app(Builder(
-        builder: (BuildContext ctx) => TextButton(
-          onPressed: () => showDeleteScopeConfirm(ctx,
-              title: t.dialog_delete, message: 'msg', db: db),
-          child: const Text('open'),
+      await tester.pumpWidget(
+        app(
+          Builder(
+            builder: (BuildContext ctx) => TextButton(
+              onPressed: () => showDeleteScopeConfirm(
+                ctx,
+                title: t.dialog_delete,
+                message: 'msg',
+                db: db,
+              ),
+              child: const Text('open'),
+            ),
+          ),
         ),
-      )));
+      );
       await tester.tap(find.text('open'));
       await tester.pumpAndSettle();
 

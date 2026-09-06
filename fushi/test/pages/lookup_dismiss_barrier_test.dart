@@ -101,19 +101,22 @@ Widget _harness({
 void main() {
   const Offset bare = Offset(400, 300);
 
-  testWidgets('vertical drag over the barrier does NOT close a layer',
-      (WidgetTester tester) async {
+  testWidgets('vertical drag over the barrier does NOT close a layer', (
+    WidgetTester tester,
+  ) async {
     final controller = _RecordingPlatformViewController(1);
     int dismissed = 0;
-    await tester.pumpWidget(_harness(
-      controller: controller,
-      barrier: LookupDismissBarrier(
-        onTapDismiss: (_) {},
-        onSwipeDismiss: () => dismissed++,
-        swipeEnabled: true,
-        sensitivity: 0.6,
+    await tester.pumpWidget(
+      _harness(
+        controller: controller,
+        barrier: LookupDismissBarrier(
+          onTapDismiss: (_) {},
+          onSwipeDismiss: () => dismissed++,
+          swipeEnabled: true,
+          sensitivity: 0.6,
+        ),
       ),
-    ));
+    );
 
     await _dragVertically(tester, bare);
 
@@ -121,58 +124,75 @@ void main() {
   });
 
   testWidgets(
-      'the barrier fill is opaque to hit-testing (documents the real reason '
-      'content under it gets no touches)', (WidgetTester tester) async {
-    // Measured fact, kept as an executable note so nobody re-derives the wrong
-    // gesture-arena model: it is the transparent FILL that blocks the platform
-    // view, not any recognizer. Same harness, barrier replaced by a bare
-    // ColoredBox with no gestures at all.
-    final controller = _RecordingPlatformViewController(2);
-    await tester.pumpWidget(_harness(
-      controller: controller,
-      barrier: const ColoredBox(color: Colors.transparent),
-    ));
+    'the barrier fill is opaque to hit-testing (documents the real reason '
+    'content under it gets no touches)',
+    (WidgetTester tester) async {
+      // Measured fact, kept as an executable note so nobody re-derives the wrong
+      // gesture-arena model: it is the transparent FILL that blocks the platform
+      // view, not any recognizer. Same harness, barrier replaced by a bare
+      // ColoredBox with no gestures at all.
+      final controller = _RecordingPlatformViewController(2);
+      await tester.pumpWidget(
+        _harness(
+          controller: controller,
+          barrier: const ColoredBox(color: Colors.transparent),
+        ),
+      );
 
-    await _dragVertically(tester, bare);
+      await _dragVertically(tester, bare);
 
-    expect(controller.sawMove, isFalse,
-        reason: 'a plain transparent ColoredBox already withholds every touch '
-            'from the platform view underneath — no gesture involved');
-  });
+      expect(
+        controller.sawMove,
+        isFalse,
+        reason:
+            'a plain transparent ColoredBox already withholds every touch '
+            'from the platform view underneath — no gesture involved',
+      );
+    },
+  );
 
-  testWidgets('horizontal drag past threshold still closes one layer',
-      (WidgetTester tester) async {
+  testWidgets('horizontal drag past threshold still closes one layer', (
+    WidgetTester tester,
+  ) async {
     final controller = _RecordingPlatformViewController(3);
     int dismissed = 0;
-    await tester.pumpWidget(_harness(
-      controller: controller,
-      barrier: LookupDismissBarrier(
-        onTapDismiss: (_) {},
-        onSwipeDismiss: () => dismissed++,
-        swipeEnabled: true,
-        sensitivity: 0.6,
+    await tester.pumpWidget(
+      _harness(
+        controller: controller,
+        barrier: LookupDismissBarrier(
+          onTapDismiss: (_) {},
+          onSwipeDismiss: () => dismissed++,
+          swipeEnabled: true,
+          sensitivity: 0.6,
+        ),
       ),
-    ));
+    );
 
     await _dragHorizontally(tester, bare);
 
-    expect(dismissed, 1,
-        reason: 'TODO-716/1052 swipe-to-close must keep working');
+    expect(
+      dismissed,
+      1,
+      reason: 'TODO-716/1052 swipe-to-close must keep working',
+    );
   });
 
-  testWidgets('below-threshold horizontal drag does not close',
-      (WidgetTester tester) async {
+  testWidgets('below-threshold horizontal drag does not close', (
+    WidgetTester tester,
+  ) async {
     final controller = _RecordingPlatformViewController(4);
     int dismissed = 0;
-    await tester.pumpWidget(_harness(
-      controller: controller,
-      barrier: LookupDismissBarrier(
-        onTapDismiss: (_) {},
-        onSwipeDismiss: () => dismissed++,
-        swipeEnabled: true,
-        sensitivity: 0.6,
+    await tester.pumpWidget(
+      _harness(
+        controller: controller,
+        barrier: LookupDismissBarrier(
+          onTapDismiss: (_) {},
+          onSwipeDismiss: () => dismissed++,
+          swipeEnabled: true,
+          sensitivity: 0.6,
+        ),
       ),
-    ));
+    );
 
     final TestGesture gesture = await tester.startGesture(bare);
     for (int i = 0; i < 3; i++) {
@@ -185,42 +205,53 @@ void main() {
     expect(dismissed, 0);
   });
 
-  testWidgets('swipe switch OFF: horizontal drag is inert (never-break)',
-      (WidgetTester tester) async {
+  testWidgets('swipe switch OFF: horizontal drag is inert (never-break)', (
+    WidgetTester tester,
+  ) async {
     final controller = _RecordingPlatformViewController(5);
     int dismissed = 0;
-    await tester.pumpWidget(_harness(
-      controller: controller,
-      barrier: LookupDismissBarrier(
-        onTapDismiss: (_) {},
-        onSwipeDismiss: () => dismissed++,
-        swipeEnabled: false,
-        sensitivity: 0.6,
+    await tester.pumpWidget(
+      _harness(
+        controller: controller,
+        barrier: LookupDismissBarrier(
+          onTapDismiss: (_) {},
+          onSwipeDismiss: () => dismissed++,
+          swipeEnabled: false,
+          sensitivity: 0.6,
+        ),
       ),
-    ));
+    );
 
     await _dragHorizontally(tester, bare);
 
-    expect(dismissed, 0,
-        reason: 'with the switch off the barrier only taps (old desktop)');
+    expect(
+      dismissed,
+      0,
+      reason: 'with the switch off the barrier only taps (old desktop)',
+    );
   });
 
-  testWidgets('mouse horizontal drag closes a layer too (TODO-716 desktop)',
-      (WidgetTester tester) async {
+  testWidgets('mouse horizontal drag closes a layer too (TODO-716 desktop)', (
+    WidgetTester tester,
+  ) async {
     final controller = _RecordingPlatformViewController(6);
     int dismissed = 0;
-    await tester.pumpWidget(_harness(
-      controller: controller,
-      barrier: LookupDismissBarrier(
-        onTapDismiss: (_) {},
-        onSwipeDismiss: () => dismissed++,
-        swipeEnabled: true,
-        sensitivity: 0.6,
+    await tester.pumpWidget(
+      _harness(
+        controller: controller,
+        barrier: LookupDismissBarrier(
+          onTapDismiss: (_) {},
+          onSwipeDismiss: () => dismissed++,
+          swipeEnabled: true,
+          sensitivity: 0.6,
+        ),
       ),
-    ));
+    );
 
-    final TestGesture gesture =
-        await tester.startGesture(bare, kind: PointerDeviceKind.mouse);
+    final TestGesture gesture = await tester.startGesture(
+      bare,
+      kind: PointerDeviceKind.mouse,
+    );
     for (int i = 0; i < 12; i++) {
       await gesture.moveBy(const Offset(20, 0));
       await tester.pump();
@@ -228,24 +259,31 @@ void main() {
     await gesture.up();
     await tester.pump();
 
-    expect(dismissed, 1,
-        reason: 'TODO-716 exists precisely so DESKTOP (mouse) can swipe the '
-            'barrier to close; barrier is blank so drag has no other meaning');
+    expect(
+      dismissed,
+      1,
+      reason:
+          'TODO-716 exists precisely so DESKTOP (mouse) can swipe the '
+          'barrier to close; barrier is blank so drag has no other meaning',
+    );
   });
 
-  testWidgets('tap on the barrier still dismisses with the global position',
-      (WidgetTester tester) async {
+  testWidgets('tap on the barrier still dismisses with the global position', (
+    WidgetTester tester,
+  ) async {
     final controller = _RecordingPlatformViewController(7);
     Offset? tapped;
-    await tester.pumpWidget(_harness(
-      controller: controller,
-      barrier: LookupDismissBarrier(
-        onTapDismiss: (Offset p) => tapped = p,
-        onSwipeDismiss: () {},
-        swipeEnabled: true,
-        sensitivity: 0.6,
+    await tester.pumpWidget(
+      _harness(
+        controller: controller,
+        barrier: LookupDismissBarrier(
+          onTapDismiss: (Offset p) => tapped = p,
+          onSwipeDismiss: () {},
+          swipeEnabled: true,
+          sensitivity: 0.6,
+        ),
       ),
-    ));
+    );
 
     await tester.tapAt(bare);
     await tester.pump();
@@ -253,23 +291,28 @@ void main() {
     expect(tapped, bare);
   });
 
-  testWidgets('second finger cancels the swipe (multi-touch is not a swipe)',
-      (WidgetTester tester) async {
+  testWidgets('second finger cancels the swipe (multi-touch is not a swipe)', (
+    WidgetTester tester,
+  ) async {
     final controller = _RecordingPlatformViewController(8);
     int dismissed = 0;
-    await tester.pumpWidget(_harness(
-      controller: controller,
-      barrier: LookupDismissBarrier(
-        onTapDismiss: (_) {},
-        onSwipeDismiss: () => dismissed++,
-        swipeEnabled: true,
-        sensitivity: 0.6,
+    await tester.pumpWidget(
+      _harness(
+        controller: controller,
+        barrier: LookupDismissBarrier(
+          onTapDismiss: (_) {},
+          onSwipeDismiss: () => dismissed++,
+          swipeEnabled: true,
+          sensitivity: 0.6,
+        ),
       ),
-    ));
+    );
 
     final TestGesture first = await tester.startGesture(bare, pointer: 11);
-    final TestGesture second =
-        await tester.startGesture(const Offset(200, 300), pointer: 12);
+    final TestGesture second = await tester.startGesture(
+      const Offset(200, 300),
+      pointer: 12,
+    );
     for (int i = 0; i < 12; i++) {
       await first.moveBy(const Offset(20, 0));
       await tester.pump();
@@ -278,7 +321,10 @@ void main() {
     await second.up();
     await tester.pump();
 
-    expect(dismissed, 0,
-        reason: 'a pinch/two-finger gesture must not be read as a swipe-close');
+    expect(
+      dismissed,
+      0,
+      reason: 'a pinch/two-finger gesture must not be read as a swipe-close',
+    );
   });
 }

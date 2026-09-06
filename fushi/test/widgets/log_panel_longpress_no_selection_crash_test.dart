@@ -82,8 +82,9 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('候选④：长按超视口长行的右端（ClipRect 外，BUG-925 同族坐标）',
-      (WidgetTester tester) async {
+  testWidgets('候选④：长按超视口长行的右端（ClipRect 外，BUG-925 同族坐标）', (
+    WidgetTester tester,
+  ) async {
     final String log = '${'x' * 4000}\nshort\n';
     await tester.pumpWidget(buildSubject(log));
     await tester.pumpAndSettle();
@@ -126,7 +127,8 @@ void main() {
     expect(
       tester.takeException(),
       isNull,
-      reason: '既有选区的端点行被回收后再长按，触发了框架的选区端点空断言'
+      reason:
+          '既有选区的端点行被回收后再长按，触发了框架的选区端点空断言'
           '（BUG-1582 / flutter#119355）',
     );
   });
@@ -137,8 +139,9 @@ void main() {
 
     final Rect listRect = tester.getRect(find.byType(ListView));
     // ① 全选（上游 issue 用的是右键菜单「全选」，等价于对 region 发 selectAll）。
-    final SelectableRegionState region =
-        tester.state<SelectableRegionState>(find.byType(SelectableRegion));
+    final SelectableRegionState region = tester.state<SelectableRegionState>(
+      find.byType(SelectableRegion),
+    );
     region.selectAll();
     await tester.pumpAndSettle();
 

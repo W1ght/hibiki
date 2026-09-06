@@ -44,7 +44,8 @@ void main() {
     expect(
       iss,
       contains('StartsWith(\$d, [System.StringComparison]::OrdinalIgnoreCase)'),
-      reason: 'BUG-1459：必须按可执行路径前缀过滤（大小写不敏感），'
+      reason:
+          'BUG-1459：必须按可执行路径前缀过滤（大小写不敏感），'
           '不得按进程名全局杀（会误伤用户自己的同名进程）',
     );
     expect(

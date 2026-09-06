@@ -6,30 +6,29 @@ import 'package:fushi/src/utils/components/fushi_destructive_confirm_dialog.dart
 void main() {
   Future<FushiDestructiveConfirmResult?>? dialogResult;
 
-  Future<void> openDialog(
-    WidgetTester tester, {
-    String? checkboxLabel,
-  }) async {
+  Future<void> openDialog(WidgetTester tester, {String? checkboxLabel}) async {
     dialogResult = null;
-    await tester.pumpWidget(MaterialApp(
-      home: Scaffold(
-        body: Builder(
-          builder: (BuildContext context) => TextButton(
-            onPressed: () {
-              dialogResult = showDialog<FushiDestructiveConfirmResult>(
-                context: context,
-                builder: (_) => FushiDestructiveConfirmDialog(
-                  title: '删除书籍',
-                  message: '此操作不可撤销。',
-                  checkboxLabel: checkboxLabel,
-                ),
-              );
-            },
-            child: const Text('open'),
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: Builder(
+            builder: (BuildContext context) => TextButton(
+              onPressed: () {
+                dialogResult = showDialog<FushiDestructiveConfirmResult>(
+                  context: context,
+                  builder: (_) => FushiDestructiveConfirmDialog(
+                    title: '删除书籍',
+                    message: '此操作不可撤销。',
+                    checkboxLabel: checkboxLabel,
+                  ),
+                );
+              },
+              child: const Text('open'),
+            ),
           ),
         ),
       ),
-    ));
+    );
     await tester.tap(find.text('open'));
     await tester.pumpAndSettle();
   }
@@ -79,8 +78,9 @@ void main() {
     const String longLabel = '同时删除其中的视频（保留你的原始视频文件）';
     await openDialog(tester, checkboxLabel: longLabel);
 
-    final RenderParagraph paragraph =
-        tester.renderObject<RenderParagraph>(find.text(longLabel));
+    final RenderParagraph paragraph = tester.renderObject<RenderParagraph>(
+      find.text(longLabel),
+    );
     expect(
       paragraph.didExceedMaxLines,
       isFalse,

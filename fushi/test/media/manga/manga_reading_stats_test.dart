@@ -8,18 +8,18 @@ import 'package:fushi/src/media/manga/mokuro_payload.dart';
 /// 永远显示 0 字。现在按已读页的 OCR 文本计字数、按已读页计页数，两个量纲各自
 /// 独立，且同一页在一次会话里只记一次。
 MokuroImage _page(List<String> lines) => MokuroImage(
-      url: 'p.jpg',
-      size: const Size(800, 1200),
-      blocks: <MokuroBlock>[
-        MokuroBlock(
-          rectangle: const Rect.fromLTRB(0, 0, 10, 10),
-          isVertical: true,
-          fontSize: 12,
-          zIndex: 0,
-          lines: lines,
-        ),
-      ],
-    );
+  url: 'p.jpg',
+  size: const Size(800, 1200),
+  blocks: <MokuroBlock>[
+    MokuroBlock(
+      rectangle: const Rect.fromLTRB(0, 0, 10, 10),
+      isVertical: true,
+      fontSize: 12,
+      zIndex: 0,
+      lines: lines,
+    ),
+  ],
+);
 
 void main() {
   group('mangaPageCharCount', () {
@@ -30,11 +30,13 @@ void main() {
 
     test('无 OCR 的纯图页为 0', () {
       expect(
-        mangaPageCharCount(const MokuroImage(
-          url: 'p.jpg',
-          size: Size(800, 1200),
-          blocks: <MokuroBlock>[],
-        )),
+        mangaPageCharCount(
+          const MokuroImage(
+            url: 'p.jpg',
+            size: Size(800, 1200),
+            blocks: <MokuroBlock>[],
+          ),
+        ),
         0,
       );
     });

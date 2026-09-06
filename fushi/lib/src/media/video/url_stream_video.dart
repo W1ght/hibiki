@@ -131,13 +131,13 @@ class StreamVideoSpec {
   }
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        if (subtitleUrl != null && subtitleUrl!.isNotEmpty)
-          'subtitleUrl': subtitleUrl,
-        if (subtitleFileName != null && subtitleFileName!.isNotEmpty)
-          'subtitleFileName': subtitleFileName,
-        if (referer != null && referer!.isNotEmpty) 'referer': referer,
-        if (userAgent != null && userAgent!.isNotEmpty) 'userAgent': userAgent,
-      };
+    if (subtitleUrl != null && subtitleUrl!.isNotEmpty)
+      'subtitleUrl': subtitleUrl,
+    if (subtitleFileName != null && subtitleFileName!.isNotEmpty)
+      'subtitleFileName': subtitleFileName,
+    if (referer != null && referer!.isNotEmpty) 'referer': referer,
+    if (userAgent != null && userAgent!.isNotEmpty) 'userAgent': userAgent,
+  };
 
   /// 落库字符串：空 spec → null（不占列）；否则 JSON。
   String? toStorageJson() => isEmpty ? null : jsonEncode(toJson());
@@ -186,8 +186,10 @@ String streamVideoBookUid(String url) {
       return 'video/stream/yt:$videoId';
     }
   }
-  final String digest =
-      sha1.convert(utf8.encode(normalized)).toString().substring(0, 12);
+  final String digest = sha1
+      .convert(utf8.encode(normalized))
+      .toString()
+      .substring(0, 12);
   return 'video/stream/$digest';
 }
 
@@ -364,8 +366,9 @@ class UrlStreamVideoClient implements RemoteVideoClient {
     // 跨站不带凭据（见方法文档）。判据用「字幕 URL 是否与流 URL 同 origin」，
     // 而不是「有没有 header」——后者正是把凭据发出去的那条路。
     final bool sameSite = isSameHttpOrigin(url, streamUrl);
-    final Map<String, String>? headers =
-        (httpHeaderFields.isEmpty || !sameSite) ? null : httpHeaderFields;
+    final Map<String, String>? headers = (httpHeaderFields.isEmpty || !sameSite)
+        ? null
+        : httpHeaderFields;
     final http.Response res = await _httpClient.get(
       Uri.parse(url),
       headers: headers,
@@ -396,8 +399,7 @@ class UrlStreamVideoClient implements RemoteVideoClient {
   Future<({int positionMs, int updatedAtMs})> remoteVideoPosition(
     String id, {
     int episodeIndex = 0,
-  }) async =>
-      (positionMs: 0, updatedAtMs: 0);
+  }) async => (positionMs: 0, updatedAtMs: 0);
 
   /// 本地 prefs 已是断点权威：no-op（不向任何 host 上报）。
   @override

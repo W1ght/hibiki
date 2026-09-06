@@ -218,78 +218,120 @@ CREATE TABLE preferences (
 }
 
 void main() {
-  test('partial pre-v16 schema: already-v16 tables no-op, legacy tables re-key',
-      () async {
-    final FushiDatabase db = _openPartialV16Shaped();
-    addTearDown(db.close);
+  test(
+    'partial pre-v16 schema: already-v16 tables no-op, legacy tables re-key',
+    () async {
+      final FushiDatabase db = _openPartialV16Shaped();
+      addTearDown(db.close);
 
-    // Opening forces onUpgrade(15 -> current); the partial-shape guards (run in
-    // the from<16 step) must not throw "no such column" on the already-v16
-    // tables. Compare against the live schemaVersion so this never goes stale.
-    final QueryRow ver =
-        await db.customSelect('PRAGMA user_version').getSingle();
-    expect(ver.read<int>('user_version'), db.schemaVersion,
-        reason: 'mixed-shape DB lands on the current schema');
+      // Opening forces onUpgrade(15 -> current); the partial-shape guards (run in
+      // the from<16 step) must not throw "no such column" on the already-v16
+      // tables. Compare against the live schemaVersion so this never goes stale.
+      final QueryRow ver = await db
+          .customSelect('PRAGMA user_version')
+          .getSingle();
+      expect(
+        ver.read<int>('user_version'),
+        db.schemaVersion,
+        reason: 'mixed-shape DB lands on the current schema',
+      );
 
-    const String kBookKey = 'Mixed Book';
+      const String kBookKey = 'Mixed Book';
 
-    // ── epub_books re-keyed (drives the map) ─────────────────────────────
-    final books = await db.getAllEpubBooks();
-    expect(books.length, 1);
-    expect(books.single.bookKey, kBookKey,
-        reason: 'legacy int id epub_books re-keyed to sanitized title');
+      // ── epub_books re-keyed (drives the map) ─────────────────────────────
+      final books = await db.getAllEpubBooks();
+      expect(books.length, 1);
+      expect(
+        books.single.bookKey,
+        kBookKey,
+        reason: 'legacy int id epub_books re-keyed to sanitized title',
+      );
 
-    // ── reader_positions: ALREADY v16 -> untouched, original data kept ───
-    // v82 之后 reader_positions 的键是本机稳定的 `EpubBooks.uid`（不是 bookKey），
-    // 故按书行 uid 查；断言意图不变——已是 v16 形状的表不该被再动一次。
-    final pos = await db.getReaderPosition(books.single.uid);
-    expect(pos, isNotNull);
-    expect(pos!.normCharOffset, 4242,
-        reason: 'already-v16 reader_positions skipped (no JOIN), data intact');
-    expect(
-        pos.charOffset, -1); // BUG-162: v24 删 ttu_char_offset，char_offset 默认 -1
+      // ── reader_positions: ALREADY v16 -> untouched, original data kept ───
+      // v82 之后 reader_positions 的键是本机稳定的 `EpubBooks.uid`（不是 bookKey），
+      // 故按书行 uid 查；断言意图不变——已是 v16 形状的表不该被再动一次。
+      final pos = await db.getReaderPosition(books.single.uid);
+      expect(pos, isNotNull);
+      expect(
+        pos!.normCharOffset,
+        4242,
+        reason: 'already-v16 reader_positions skipped (no JOIN), data intact',
+      );
+      expect(
+        pos.charOffset,
+        -1,
+      ); // BUG-162: v24 删 ttu_char_offset，char_offset 默认 -1
 
-    // ── book_tag_mappings: ALREADY v16 (empty) -> skipped, still usable ──
-    // It was skipped (no JOIN on the absent legacy book_id), and survives as a
-    // working v16 table: inserting a mapping against the now-migrated bookKey
-    // succeeds and reads back.
-    expect(await db.getTagsForBook(kBookKey), isEmpty,
-        reason: 'empty already-v16 book_tag_mappings skipped, stays empty');
-    await db.setTagsForBook(kBookKey, <int>{1});
-    final tags = await db.getTagsForBook(kBookKey);
-    expect(tags.map((t) => t.name).toSet(), <String>{'fav'},
+      // ── book_tag_mappings: ALREADY v16 (empty) -> skipped, still usable ──
+      // It was skipped (no JOIN on the absent legacy book_id), and survives as a
+      // working v16 table: inserting a mapping against the now-migrated bookKey
+      // succeeds and reads back.
+      expect(
+        await db.getTagsForBook(kBookKey),
+        isEmpty,
+        reason: 'empty already-v16 book_tag_mappings skipped, stays empty',
+      );
+      await db.setTagsForBook(kBookKey, <int>{1});
+      final tags = await db.getTagsForBook(kBookKey);
+      expect(
+        tags.map((t) => t.name).toSet(),
+        <String>{'fav'},
         reason:
-            'skipped v16 book_tag_mappings is a usable table post-migration');
+            'skipped v16 book_tag_mappings is a usable table post-migration',
+      );
 
-    // ── bookmarks: LEGACY ttu_book_id -> re-keyed（v16 到 book_key，v82 到 uid）─
-    final QueryRow bm = await db.customSelect(
-      'SELECT label FROM bookmarks WHERE book_uid = ?',
-      variables: [Variable<String>(books.single.uid)],
-    ).getSingle();
-    expect(bm.read<String>('label'), 'bm1',
-        reason: 'legacy ttu_book_id bookmark re-keyed all the way to book_uid');
+      // ── bookmarks: LEGACY ttu_book_id -> re-keyed（v16 到 book_key，v82 到 uid）─
+      final QueryRow bm = await db
+          .customSelect(
+            'SELECT label FROM bookmarks WHERE book_uid = ?',
+            variables: [Variable<String>(books.single.uid)],
+          )
+          .getSingle();
+      expect(
+        bm.read<String>('label'),
+        'bm1',
+        reason: 'legacy ttu_book_id bookmark re-keyed all the way to book_uid',
+      );
 
-    // ── audiobooks + cues: LEGACY book_uid -> re-keyed to book_key ───────
-    expect(await db.getAudiobookByBookKey(kBookKey), isNotNull,
-        reason: 'legacy book_uid audiobook re-keyed');
-    final cues = await db.getCuesForBook(kBookKey);
-    expect(cues.length, 1, reason: 'legacy book_uid cues re-keyed to book_key');
+      // ── audiobooks + cues: LEGACY book_uid -> re-keyed to book_key ───────
+      expect(
+        await db.getAudiobookByBookKey(kBookKey),
+        isNotNull,
+        reason: 'legacy book_uid audiobook re-keyed',
+      );
+      final cues = await db.getCuesForBook(kBookKey);
+      expect(
+        cues.length,
+        1,
+        reason: 'legacy book_uid cues re-keyed to book_key',
+      );
 
-    // ── book_profiles: LEGACY book_uid PK -> re-keyed ───────────────────
-    expect(await db.getBookProfile(kBookKey), isNotNull,
-        reason: 'legacy book_uid book_profiles re-keyed');
+      // ── book_profiles: LEGACY book_uid PK -> re-keyed ───────────────────
+      expect(
+        await db.getBookProfile(kBookKey),
+        isNotNull,
+        reason: 'legacy book_uid book_profiles re-keyed',
+      );
 
-    // ── final integrity gate held: no dangling FK across mixed shapes ────
-    final List<QueryRow> violations =
-        await db.customSelect('PRAGMA foreign_key_check').get();
-    expect(violations, isEmpty,
-        reason: 'mixed-shape re-key left a consistent FK graph');
+      // ── final integrity gate held: no dangling FK across mixed shapes ────
+      final List<QueryRow> violations = await db
+          .customSelect('PRAGMA foreign_key_check')
+          .get();
+      expect(
+        violations,
+        isEmpty,
+        reason: 'mixed-shape re-key left a consistent FK graph',
+      );
 
-    // ── cascade still wired after the mixed re-key ──────────────────────
-    await db.deleteEpubBook(kBookKey);
-    expect(await db.getReaderPosition(kBookKey), isNull);
-    expect(await db.getTagsForBook(kBookKey), isEmpty,
-        reason: 'cascade reaches the preserved already-v16 mapping too');
-    expect(await db.getAudiobookByBookKey(kBookKey), isNull);
-  });
+      // ── cascade still wired after the mixed re-key ──────────────────────
+      await db.deleteEpubBook(kBookKey);
+      expect(await db.getReaderPosition(kBookKey), isNull);
+      expect(
+        await db.getTagsForBook(kBookKey),
+        isEmpty,
+        reason: 'cascade reaches the preserved already-v16 mapping too',
+      );
+      expect(await db.getAudiobookByBookKey(kBookKey), isNull);
+    },
+  );
 }

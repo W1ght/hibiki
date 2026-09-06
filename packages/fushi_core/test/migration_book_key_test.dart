@@ -303,23 +303,30 @@ void main() {
     // never undo the re-keying, so the losslessness assertions below still hold
     // at the current schema. Compare against the live schemaVersion so this
     // never goes stale on a bump.
-    final QueryRow ver =
-        await db.customSelect('PRAGMA user_version').getSingle();
-    expect(ver.read<int>('user_version'), db.schemaVersion,
-        reason: 'migration must land on the current schema version');
+    final QueryRow ver = await db
+        .customSelect('PRAGMA user_version')
+        .getSingle();
+    expect(
+      ver.read<int>('user_version'),
+      db.schemaVersion,
+      reason: 'migration must land on the current schema version',
+    );
 
     // ── books: dedup of collided sanitize keys ────────────────────────
     final books = await db.getAllEpubBooks();
     final Set<String> keys = books.map((b) => b.bookKey).toSet();
-    expect(keys,
-        containsAll(<String>['Book A', 'Book A (2)', 'Solo~ttu-star~Book']),
-        reason: 'collision dedup + sanitized char');
+    expect(
+      keys,
+      containsAll(<String>['Book A', 'Book A (2)', 'Solo~ttu-star~Book']),
+      reason: 'collision dedup + sanitized char',
+    );
     expect(books.length, 3);
     // The first imported (id=1, oldest importedAt=100) keeps the bare key.
     final EpubBookRow bookA = books.firstWhere((b) => b.bookKey == 'Book A');
     expect(bookA.extractDir, '/books/1');
-    final EpubBookRow bookA2 =
-        books.firstWhere((b) => b.bookKey == 'Book A (2)');
+    final EpubBookRow bookA2 = books.firstWhere(
+      (b) => b.bookKey == 'Book A (2)',
+    );
     expect(bookA2.extractDir, '/books/2');
 
     // ── reader positions by book uid ──────────────────────────────────
@@ -332,7 +339,9 @@ void main() {
     final p2 = await db.getReaderPosition(bookA2.uid);
     expect(p2, isNotNull);
     expect(
-        p2!.charOffset, -1); // BUG-162: v24 删 ttu_char_offset，char_offset 默认 -1
+      p2!.charOffset,
+      -1,
+    ); // BUG-162: v24 删 ttu_char_offset，char_offset 默认 -1
 
     // ── bookmarks by book uid（v82 起 bookmarks 也改走 uid，同 reader_positions）─
     final bmA = await db
@@ -378,23 +387,35 @@ void main() {
     expect(await db.getBookProfile('Book A (2)'), isNotNull);
 
     // ── prefs: two audiobook_pos spaces merged, uid wins ──────────────
-    expect(await db.getPrefTyped<int>('audiobook_pos_Book A', 0), 2000,
-        reason: 'uid-style live write wins over int-style on merge');
+    expect(
+      await db.getPrefTyped<int>('audiobook_pos_Book A', 0),
+      2000,
+      reason: 'uid-style live write wins over int-style on merge',
+    );
     expect(await db.getPrefTyped<int>('audiobook_pos_Book A (2)', 0), 3000);
-    expect(await db.getPref('audiobook_pos_1'), isNull,
-        reason: 'old int-style key removed');
-    expect(await db.getPref('audiobook_pos_reader_ttu/hoshi://book/1'), isNull,
-        reason: 'old uid-style key removed');
+    expect(
+      await db.getPref('audiobook_pos_1'),
+      isNull,
+      reason: 'old int-style key removed',
+    );
+    expect(
+      await db.getPref('audiobook_pos_reader_ttu/hoshi://book/1'),
+      isNull,
+      reason: 'old uid-style key removed',
+    );
     expect(await db.getPrefTyped<bool>('audiobook_follow_Book A', false), true);
     expect(await db.getPref('audiobook_speed_Book A'), '1.5');
 
     // ── media_items identifier rewritten（v80 后终值在 media_open_history）──
-    final mi =
-        await db.customSelect('SELECT media_id FROM media_open_history').get();
+    final mi = await db
+        .customSelect('SELECT media_id FROM media_open_history')
+        .get();
     // v16 重键出 hoshi://book/<key>，v73 再把前缀改写成 fushi://book/<key>，
     // v80 搬进新表 —— 断言的是阶梯终值。
-    expect(mi.map((r) => r.read<String>('media_id')).toSet(),
-        <String>{'fushi://book/Book A', 'fushi://book/Book A (2)'});
+    expect(mi.map((r) => r.read<String>('media_id')).toSet(), <String>{
+      'fushi://book/Book A',
+      'fushi://book/Book A (2)',
+    });
 
     // ── reading_statistics title aligned to sanitized key + merged ────
     // 'Solo*Book' → 'Solo~ttu-star~Book' (untouched). The two 2026-01-02 rows
@@ -406,12 +427,14 @@ void main() {
     final solo = stats.firstWhere((s) => s.title == 'Solo~ttu-star~Book');
     expect(solo.charactersRead, 500);
     final merged0102 = stats.firstWhere(
-        (s) => s.title == 'Book A~ttu-dend~' && s.dateKey == '2026-01-02');
+      (s) => s.title == 'Book A~ttu-dend~' && s.dateKey == '2026-01-02',
+    );
     expect(merged0102.charactersRead, 300);
     expect(merged0102.readingTimeMs, 30000);
     expect(merged0102.lastStatisticModified, 11);
     final separate0103 = stats.firstWhere(
-        (s) => s.title == 'Book A~ttu-dend~' && s.dateKey == '2026-01-03');
+      (s) => s.title == 'Book A~ttu-dend~' && s.dateKey == '2026-01-03',
+    );
     expect(separate0103.charactersRead, 50);
 
     // ── FK cascade: deleting a book clears its reading data ───────────

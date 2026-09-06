@@ -18,21 +18,20 @@ AniListAiringEpisode _episode({
   String? cover = 'https://x/c.png',
   String? format = 'TV',
   int? seasonYear = 2026,
-}) =>
-    AniListAiringEpisode(
-      mediaId: mediaId,
-      episode: 7,
-      airingAtSeconds: 1770000000,
-      media: AniListMedia(
-        id: mediaId,
-        romaji: romaji,
-        english: english,
-        native: native,
-        coverUrl: cover,
-        seasonYear: seasonYear,
-        format: format,
-      ),
-    );
+}) => AniListAiringEpisode(
+  mediaId: mediaId,
+  episode: 7,
+  airingAtSeconds: 1770000000,
+  media: AniListMedia(
+    id: mediaId,
+    romaji: romaji,
+    english: english,
+    native: native,
+    coverUrl: cover,
+    seasonYear: seasonYear,
+    format: format,
+  ),
+);
 
 void main() {
   group('mediaKindFromAniListFormat', () {
@@ -49,16 +48,20 @@ void main() {
         'whatever',
         null,
       ]) {
-        expect(mediaKindFromAniListFormat(other), VideoMetadataMediaKind.tv,
-            reason: '$other 应按剧集处理');
+        expect(
+          mediaKindFromAniListFormat(other),
+          VideoMetadataMediaKind.tv,
+          reason: '$other 应按剧集处理',
+        );
       }
     });
   });
 
   group('discoveryItemFromAiringEpisode', () {
     test('identity 与发现页 AniList 适配器同口径', () {
-      final VideoDiscoveryItem item =
-          discoveryItemFromAiringEpisode(_episode());
+      final VideoDiscoveryItem item = discoveryItemFromAiringEpisode(
+        _episode(),
+      );
       expect(item.reference.providerId, 'anilist');
       expect(item.reference.mediaId, '42');
       expect(item.reference.anilistId, 42);
@@ -71,8 +74,9 @@ void main() {
     });
 
     test('剧场版 format=MOVIE → mediaKind movie', () {
-      final VideoDiscoveryItem item =
-          discoveryItemFromAiringEpisode(_episode(format: 'MOVIE'));
+      final VideoDiscoveryItem item = discoveryItemFromAiringEpisode(
+        _episode(format: 'MOVIE'),
+      );
       expect(item.reference.mediaKind, VideoMetadataMediaKind.movie);
     });
 
@@ -81,10 +85,15 @@ void main() {
         _episode(english: 'Frieren: Beyond Journey\'s End'),
       );
       expect(
-          item.reference.aliases, contains('Frieren: Beyond Journey\'s End'));
+        item.reference.aliases,
+        contains('Frieren: Beyond Journey\'s End'),
+      );
       expect(item.reference.aliases, contains('葬送のフリーレン'));
-      expect(item.reference.aliases, isNot(contains(item.reference.title)),
-          reason: '主标题重复进别名只会让资源搜索去重多干活');
+      expect(
+        item.reference.aliases,
+        isNot(contains(item.reference.title)),
+        reason: '主标题重复进别名只会让资源搜索去重多干活',
+      );
     });
 
     test('缺 romaji 时标题回退英文/日文，identity 不受影响', () {

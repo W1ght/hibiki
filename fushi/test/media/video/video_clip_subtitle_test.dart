@@ -70,10 +70,7 @@ void main() {
     test('clamps cues that straddle the clip boundaries', () {
       // 头尾各有一句跨界：起点被 clamp 到 0，终点被 clamp 到片段时长。
       final String? srt = buildClipSrtContent(
-        cues: <AudioCue>[
-          _cue(9000, 10500, '跨入'),
-          _cue(19500, 21000, '跨出'),
-        ],
+        cues: <AudioCue>[_cue(9000, 10500, '跨入'), _cue(19500, 21000, '跨出')],
         startMs: 10000,
         endMs: 20000,
       );

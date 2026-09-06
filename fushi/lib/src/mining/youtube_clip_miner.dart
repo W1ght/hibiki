@@ -41,9 +41,10 @@ class YoutubeClipMiner {
     YoutubeResolver? resolve,
     DateTime Function()? now,
     this.ttl = const Duration(minutes: 3),
-  })  : _resolve = resolve ??
-            ((String url) => resolveYoutubeSource(url, withCaptions: false)),
-        _now = now ?? DateTime.now;
+  }) : _resolve =
+           resolve ??
+           ((String url) => resolveYoutubeSource(url, withCaptions: false)),
+       _now = now ?? DateTime.now;
 
   final YoutubeResolver _resolve;
   final DateTime Function() _now;
@@ -78,14 +79,20 @@ class YoutubeClipMiner {
     final DateTime t = _now();
     final _CachedSource? hit = _cache[videoId];
     if (hit != null && t.difference(hit.at) < ttl) return hit.future;
-    final Future<YoutubeResolvedSource> fut =
-        _resolve('https://www.youtube.com/watch?v=$videoId');
+    final Future<YoutubeResolvedSource> fut = _resolve(
+      'https://www.youtube.com/watch?v=$videoId',
+    );
     _cache[videoId] = _CachedSource(fut, t);
     // 失败即从缓存剔除（否则 TTL 内都返回同一个 rejected future，卡住重试）。这个独立监听器
     // 自己吞掉清理分支的错误（不 rethrow），调用方仍从 await fut 拿到原始异常。
-    unawaited(fut.then<void>((_) {}, onError: (Object e, StackTrace s) {
-      if (identical(_cache[videoId]?.future, fut)) _cache.remove(videoId);
-    }));
+    unawaited(
+      fut.then<void>(
+        (_) {},
+        onError: (Object e, StackTrace s) {
+          if (identical(_cache[videoId]?.future, fut)) _cache.remove(videoId);
+        },
+      ),
+    );
     return fut;
   }
 }

@@ -20,14 +20,18 @@ class FakeEncoderSession implements OcrSession {
     receivedInputs.add(inputs);
     // ONNX 只按元素总数收张量，NCHW 写成 NHWC 元素数不变、推理照跑，结果全错。
     // 维度必须逐位断言，否则这条契约在测试里等于没守（BUG-1173 同批审查）。
-    expect(
-      inputs['pixel_values']!.shape,
-      <int>[1, 3, 224, 224],
-      reason: 'encoder 输入是 NCHW，通道在第 1 维',
-    );
+    expect(inputs['pixel_values']!.shape, <int>[
+      1,
+      3,
+      224,
+      224,
+    ], reason: 'encoder 输入是 NCHW，通道在第 1 维');
     return <String, OcrTensor>{
-      'last_hidden_state':
-          OcrTensor.float32(Float32List(1 * 2 * 3), <int>[1, 2, 3]),
+      'last_hidden_state': OcrTensor.float32(Float32List(1 * 2 * 3), <int>[
+        1,
+        2,
+        3,
+      ]),
     };
   }
 
@@ -81,8 +85,9 @@ class FakeDecoderSession implements OcrSession {
 void main() {
   group('MangaOcrTokenizer', () {
     test('vocab 加载与特殊符号定位', () {
-      final MangaOcrTokenizer tokenizer =
-          MangaOcrTokenizer.fromVocabText(kVocabText);
+      final MangaOcrTokenizer tokenizer = MangaOcrTokenizer.fromVocabText(
+        kVocabText,
+      );
       expect(tokenizer.vocabSize, 8);
       expect(tokenizer.padId, 0);
       expect(tokenizer.unkId, 1);
@@ -91,14 +96,17 @@ void main() {
     });
 
     test('decode 跳过特殊符号并剥 ## 前缀', () {
-      final MangaOcrTokenizer tokenizer =
-          MangaOcrTokenizer.fromVocabText(kVocabText);
+      final MangaOcrTokenizer tokenizer = MangaOcrTokenizer.fromVocabText(
+        kVocabText,
+      );
       expect(tokenizer.decode(<int>[2, 5, 6, 7, 3, 0, 1]), 'こんは');
     });
 
     test('缺特殊符号的词表报错', () {
-      expect(() => MangaOcrTokenizer.fromVocabText('a\nb\n'),
-          throwsFormatException);
+      expect(
+        () => MangaOcrTokenizer.fromVocabText('a\nb\n'),
+        throwsFormatException,
+      );
     });
 
     test('postProcess：去空白、省略号与连点归一', () {
@@ -111,22 +119,28 @@ void main() {
 
   group('mangaOcrNormalize', () {
     test('白 -> 1.0、黑 -> -1.0（(x/255-0.5)/0.5）', () {
-      final img.Image white =
-          img.Image(width: kRecInputSize, height: kRecInputSize);
+      final img.Image white = img.Image(
+        width: kRecInputSize,
+        height: kRecInputSize,
+      );
       img.fill(white, color: img.ColorRgb8(255, 255, 255));
       final Float32List whiteChw = mangaOcrNormalize(white);
       expect(whiteChw.first, closeTo(1.0, 1e-6));
       expect(whiteChw.last, closeTo(1.0, 1e-6));
 
-      final img.Image black =
-          img.Image(width: kRecInputSize, height: kRecInputSize);
+      final img.Image black = img.Image(
+        width: kRecInputSize,
+        height: kRecInputSize,
+      );
       final Float32List blackChw = mangaOcrNormalize(black);
       expect(blackChw.first, closeTo(-1.0, 1e-6));
     });
 
     test('彩色按 ITU-R 601-2 灰度化后三通道相同', () {
-      final img.Image red =
-          img.Image(width: kRecInputSize, height: kRecInputSize);
+      final img.Image red = img.Image(
+        width: kRecInputSize,
+        height: kRecInputSize,
+      );
       img.fill(red, color: img.ColorRgb8(255, 0, 0));
       final Float32List chw = mangaOcrNormalize(red);
       // luma = 0.299*255 = 76.245 → (76.245/255 - 0.5)/0.5 ≈ -0.402
@@ -143,8 +157,14 @@ void main() {
       final img.Image page = img.Image(width: 100, height: 100);
       img.fill(page, color: img.ColorRgb8(0, 0, 0));
       // 目标区域填白。
-      img.fillRect(page,
-          x1: 20, y1: 30, x2: 59, y2: 69, color: img.ColorRgb8(255, 255, 255));
+      img.fillRect(
+        page,
+        x1: 20,
+        y1: 30,
+        x2: 59,
+        y2: 69,
+        color: img.ColorRgb8(255, 255, 255),
+      );
       final img.Image out = cropAndResizeForRecognition(
         page,
         const OcrRect(left: 20, top: 30, right: 60, bottom: 70),
@@ -183,15 +203,21 @@ void main() {
 
       // encoder 只跑一次，输入形状 [1,3,224,224]。
       expect(encoder.receivedInputs, hasLength(1));
-      expect(encoder.receivedInputs.single['pixel_values']!.shape,
-          <int>[1, 3, kRecInputSize, kRecInputSize]);
+      expect(encoder.receivedInputs.single['pixel_values']!.shape, <int>[
+        1,
+        3,
+        kRecInputSize,
+        kRecInputSize,
+      ]);
 
       // decoder 每步 batch = numBeams(4)，序列逐步加长。
       expect(decoder.receivedShapes.first, <int>[4, 1]);
       for (int i = 1; i < decoder.receivedShapes.length; i++) {
         expect(decoder.receivedShapes[i][0], 4);
         expect(
-            decoder.receivedShapes[i][1], decoder.receivedShapes[i - 1][1] + 1);
+          decoder.receivedShapes[i][1],
+          decoder.receivedShapes[i - 1][1] + 1,
+        );
       }
     });
   });

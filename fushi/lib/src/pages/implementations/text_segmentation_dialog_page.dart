@@ -166,10 +166,10 @@ class _TextSegmentationDialogPage
   }
 
   List<Widget> get actions => [
-        buildStashButton(),
-        if (widget.onSearch != null) buildSearchButton(),
-        if (widget.onSelect != null) buildSelectButton(),
-      ];
+    buildStashButton(),
+    if (widget.onSearch != null) buildSearchButton(),
+    if (widget.onSelect != null) buildSelectButton(),
+  ];
 
   Widget buildSearchButton() {
     return adaptiveDialogAction(
@@ -205,10 +205,7 @@ class _TextSegmentationDialogPage
       range = TextRange(start: start, end: end);
     }
 
-    return FushiTextSelection(
-      text: widget.sourceText,
-      range: range,
-    );
+    return FushiTextSelection(text: widget.sourceText, range: range);
   }
 
   void executeStash() {

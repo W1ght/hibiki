@@ -17,16 +17,16 @@ void main() {
         provider: VideoMetadataProviderKind.tmdb,
         kind: VideoMetadataMediaKind.movie,
         title: 'TMDB movie match',
-        ids: const <VideoMetadataId>[
-          VideoMetadataId(type: 'tmdb', value: '2'),
-        ],
+        ids: const <VideoMetadataId>[VideoMetadataId(type: 'tmdb', value: '2')],
       ),
     );
 
     expect(merged.kind, VideoMetadataMediaKind.tv);
     expect(merged.provider, VideoMetadataProviderKind.anidb);
-    expect(merged.ids.map((VideoMetadataId id) => id.type),
-        containsAll(<String>['anidb', 'tmdb']));
+    expect(
+      merged.ids.map((VideoMetadataId id) => id.type),
+      containsAll(<String>['anidb', 'tmdb']),
+    );
   });
 
   test('非 TMDB 主源保留展示字段并接入 TMDB 身份和季集骨架', () {

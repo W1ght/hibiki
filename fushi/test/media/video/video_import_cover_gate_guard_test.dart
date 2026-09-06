@@ -28,8 +28,9 @@ void main() {
   late String mainSource;
 
   setUpAll(() {
-    dialogSource =
-        File('lib/src/media/video/video_import_dialog.dart').readAsStringSync();
+    dialogSource = File(
+      'lib/src/media/video/video_import_dialog.dart',
+    ).readAsStringSync();
     mainSource = File('lib/main.dart').readAsStringSync();
   });
 

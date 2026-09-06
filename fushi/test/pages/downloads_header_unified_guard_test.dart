@@ -19,25 +19,44 @@ import '../helpers/source_guard.dart';
 void main() {
   test('下载页门头走 FushiPageHeader.customTitle + 共享分区导航，不再用 AppBar', () {
     final File f = File('lib/src/pages/implementations/downloads_page.dart');
-    expect(f.existsSync(), isTrue,
-        reason: '找不到 downloads_page.dart（路径变了要同步本守卫）');
+    expect(
+      f.existsSync(),
+      isTrue,
+      reason: '找不到 downloads_page.dart（路径变了要同步本守卫）',
+    );
     final String code = maskCommentsAndScriptLines(f.readAsStringSync());
 
-    expect(code, contains('FushiPageHeader.customTitle'),
-        reason: '下载页门头必须与其余顶层库页同范式（分段条作页头主位）');
-    expect(code, contains('LibrarySectionTabs<int>.controlled'),
-        reason: '子页导航必须走库页共享的 LibrarySectionTabs；本页有 TabBarView，'
-            '须用 controlled 形态与它共用同一个 TabController（镜像出第二份选中态会让'
-            '横滑时指示器只能跳、不跟手）');
+    expect(
+      code,
+      contains('FushiPageHeader.customTitle'),
+      reason: '下载页门头必须与其余顶层库页同范式（分段条作页头主位）',
+    );
+    expect(
+      code,
+      contains('LibrarySectionTabs<int>.controlled'),
+      reason:
+          '子页导航必须走库页共享的 LibrarySectionTabs；本页有 TabBarView，'
+          '须用 controlled 形态与它共用同一个 TabController（镜像出第二份选中态会让'
+          '横滑时指示器只能跳、不跟手）',
+    );
     final String header = methodBody(
       f.readAsStringSync(),
       'Widget _buildHeader(',
     );
-    expect(header, isNot(contains('FushiSegmentedStrip<')),
-        reason: 'MD3：分段按钮是 section 级单选控件，不得替代导航 tabs');
-    expect(code, isNot(contains('appBar: AppBar(')),
-        reason: '不得回退到独有的 AppBar 门头（与其它库页不一致）');
-    expect(code, isNot(contains('bottom: TabBar(')),
-        reason: '不得回退到 AppBar 内嵌居中 TabBar 的旧形态');
+    expect(
+      header,
+      isNot(contains('FushiSegmentedStrip<')),
+      reason: 'MD3：分段按钮是 section 级单选控件，不得替代导航 tabs',
+    );
+    expect(
+      code,
+      isNot(contains('appBar: AppBar(')),
+      reason: '不得回退到独有的 AppBar 门头（与其它库页不一致）',
+    );
+    expect(
+      code,
+      isNot(contains('bottom: TabBar(')),
+      reason: '不得回退到 AppBar 内嵌居中 TabBar 的旧形态',
+    );
   });
 }

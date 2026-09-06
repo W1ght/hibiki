@@ -244,8 +244,10 @@ class _FushiFocusRingState extends State<FushiFocusRing>
     if (!mounted) return null;
     final FocusNode? primary = _fm.primaryFocus;
     if (primary == null) return null;
-    final FushiFocusController? controller =
-        FushiFocusRoot.maybeControllerOf(context, listen: false);
+    final FushiFocusController? controller = FushiFocusRoot.maybeControllerOf(
+      context,
+      listen: false,
+    );
     return controller?.geometryContextFor(primary) ?? primary.context;
   }
 

@@ -14,11 +14,7 @@ import 'package:fushi/utils.dart';
 ///
 /// [customProxy] 由设置页透传（`appModel.updateCustomProxy`），与检查更新同源。
 class ChangelogPage extends StatefulWidget {
-  const ChangelogPage({
-    super.key,
-    this.customProxy = '',
-    this.initialReleases,
-  });
+  const ChangelogPage({super.key, this.customProxy = '', this.initialReleases});
 
   final String customProxy;
 
@@ -52,8 +48,9 @@ class _ChangelogPageState extends State<ChangelogPage>
 
   Future<void> _load() async {
     setState(() => _loading = true);
-    final List<Map<String, dynamic>> releases =
-        await fetchAllGitHubReleases(customProxy: widget.customProxy);
+    final List<Map<String, dynamic>> releases = await fetchAllGitHubReleases(
+      customProxy: widget.customProxy,
+    );
     if (!mounted) return;
     setState(() {
       _releases = releases;
@@ -190,8 +187,9 @@ class _ReleaseCard extends StatelessWidget {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final ThemeData theme = Theme.of(context);
     final Object? tagName = release['tag_name'];
-    final String title =
-        tagName is String && tagName.isNotEmpty ? tagName : '—';
+    final String title = tagName is String && tagName.isNotEmpty
+        ? tagName
+        : '—';
     final Object? bodyRaw = release['body'];
     final String body = bodyRaw is String ? bodyRaw.trim() : '';
     final String date = _publishedDate;
@@ -227,8 +225,12 @@ class _ReleaseCard extends StatelessWidget {
               // TODO-966: flutter_markdown 0.6.23 在 selectable 时会无条件解引用
               // onSelectionChanged!，不传则选中文本即崩；补空回调保留可选能力
               // （与 UpdateAvailableDialog 同一约定）。
-              onSelectionChanged: (String? text, TextSelection selection,
-                  SelectionChangedCause? cause) {},
+              onSelectionChanged:
+                  (
+                    String? text,
+                    TextSelection selection,
+                    SelectionChangedCause? cause,
+                  ) {},
               onTapLink: (_, String? href, __) {
                 if (href == null) return;
                 launchUrl(
@@ -236,9 +238,9 @@ class _ReleaseCard extends StatelessWidget {
                   mode: LaunchMode.externalApplication,
                 );
               },
-              styleSheet: MarkdownStyleSheet.fromTheme(theme).copyWith(
-                p: tokens.type.listSubtitle,
-              ),
+              styleSheet: MarkdownStyleSheet.fromTheme(
+                theme,
+              ).copyWith(p: tokens.type.listSubtitle),
             ),
           ],
         ],

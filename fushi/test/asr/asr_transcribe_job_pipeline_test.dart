@@ -129,14 +129,13 @@ class _PlainDecoder implements AsrBatchDecoder {
   @override
   Future<List<AsrDecodedSegment>> decodeBatch(
     List<AsrSpeechSegment> segments,
-  ) async =>
-      <AsrDecodedSegment>[
-        for (final AsrSpeechSegment s in segments)
-          AsrDecodedSegment(
-            tokens: <String>['${s.startMs ~/ 1000}'],
-            tokenOffsetsMs: const <int>[0],
-          ),
-      ];
+  ) async => <AsrDecodedSegment>[
+    for (final AsrSpeechSegment s in segments)
+      AsrDecodedSegment(
+        tokens: <String>['${s.startMs ~/ 1000}'],
+        tokenOffsetsMs: const <int>[0],
+      ),
+  ];
 }
 
 void main() {
@@ -240,8 +239,7 @@ void main() {
         if (state.resumeSamples[0] >= 5 * kAsrSampleRate) {
           segmentsAtCheckpoint = (await AsrTranscribeJob.loadSegments(
             job.jobDir,
-          ))
-              .length;
+          )).length;
         }
       }
     }

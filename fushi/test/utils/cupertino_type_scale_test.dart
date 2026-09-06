@@ -21,14 +21,15 @@ void main() {
   });
 
   test('Cupertino navTitle 派生自 editorial titleLarge', () {
-    expect(
-        tt.navTitleTextStyle.fontSize, FushiTypeScale.titleLarge.size); // 18
+    expect(tt.navTitleTextStyle.fontSize, FushiTypeScale.titleLarge.size); // 18
     expect(tt.navTitleTextStyle.fontWeight, FontWeight.w600);
   });
 
   test('Cupertino navLargeTitle 派生自 editorial displaySmall（大标题保持 w600）', () {
-    expect(tt.navLargeTitleTextStyle.fontSize,
-        FushiTypeScale.displaySmall.size); // 28
+    expect(
+      tt.navLargeTitleTextStyle.fontSize,
+      FushiTypeScale.displaySmall.size,
+    ); // 28
     expect(tt.navLargeTitleTextStyle.fontWeight, FontWeight.w600);
     // 不再是旧的写死 34。
     expect(tt.navLargeTitleTextStyle.fontSize, isNot(34));
@@ -36,7 +37,9 @@ void main() {
 
   test('Cupertino 字号仍分级（body < navTitle < navLargeTitle）', () {
     expect(tt.textStyle.fontSize! < tt.navTitleTextStyle.fontSize!, isTrue);
-    expect(tt.navTitleTextStyle.fontSize! < tt.navLargeTitleTextStyle.fontSize!,
-        isTrue);
+    expect(
+      tt.navTitleTextStyle.fontSize! < tt.navLargeTitleTextStyle.fontSize!,
+      isTrue,
+    );
   });
 }

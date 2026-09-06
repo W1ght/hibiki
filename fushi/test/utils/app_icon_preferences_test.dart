@@ -195,7 +195,8 @@ void main() {
       expect(
         cache.containsKey(fileKey),
         isFalse,
-        reason: '发布走的是唯一发布点，它必须逐出同路径旧解码；'
+        reason:
+            '发布走的是唯一发布点，它必须逐出同路径旧解码；'
             '否则换图后 rail 仍显示上一张',
       );
     });

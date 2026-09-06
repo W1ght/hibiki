@@ -54,18 +54,20 @@ void main() {
       expect(css, contains('--fushi-reader-eink-mode: 1'));
     });
 
-    test('einkMode=true overrides themed colors even for preset themes',
-        () async {
-      final ReaderSettings settings = await _defaultSettings();
-      final String css = ReaderContentStyles.css(
-        settings: settings,
-        themeOverride: 'ecru-theme',
-        einkMode: true,
-      );
-      // ecru 的手调底色被 eink 压掉。
-      expect(css, isNot(contains('#f7f6eb')));
-      expect(css, contains('background: #fff !important'));
-    });
+    test(
+      'einkMode=true overrides themed colors even for preset themes',
+      () async {
+        final ReaderSettings settings = await _defaultSettings();
+        final String css = ReaderContentStyles.css(
+          settings: settings,
+          themeOverride: 'ecru-theme',
+          einkMode: true,
+        );
+        // ecru 的手调底色被 eink 压掉。
+        expect(css, isNot(contains('#f7f6eb')));
+        expect(css, contains('background: #fff !important'));
+      },
+    );
 
     test('einkMode=false (default) leaves normal output untouched', () async {
       final ReaderSettings settings = await _defaultSettings();
@@ -104,8 +106,11 @@ void main() {
 
   group('profile snapshot exclusion', () {
     test('eink_mode is app-global (excluded from per-profile snapshot)', () {
-      expect(ProfileKeys.isExcludedPref('eink_mode'), isTrue,
-          reason: 'eink_mode 描述物理屏幕，切 Profile 不得把整个 app 颜色翻转回去');
+      expect(
+        ProfileKeys.isExcludedPref('eink_mode'),
+        isTrue,
+        reason: 'eink_mode 描述物理屏幕，切 Profile 不得把整个 app 颜色翻转回去',
+      );
     });
   });
 }

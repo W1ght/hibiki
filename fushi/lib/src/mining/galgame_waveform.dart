@@ -53,8 +53,10 @@ List<double> pcmToEnergyEnvelope(
   if (totalFrames == 0) {
     return const <double>[];
   }
-  final int framesPerWindow =
-      math.max(1, (format.sampleRate * windowMs) ~/ 1000);
+  final int framesPerWindow = math.max(
+    1,
+    (format.sampleRate * windowMs) ~/ 1000,
+  );
   final double floorAmp = math.pow(10.0, silenceDb / 20.0).toDouble();
 
   final List<double> envelope = <double>[];

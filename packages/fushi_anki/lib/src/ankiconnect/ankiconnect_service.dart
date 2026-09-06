@@ -52,9 +52,9 @@ class AnkiConnectService {
     http.Client? client,
     Duration timeout = const Duration(seconds: 10),
     Duration connectionTimeout = const Duration(seconds: 5),
-  })  : _injectedClient = client,
-        _timeout = timeout,
-        _connectionTimeout = connectionTimeout;
+  }) : _injectedClient = client,
+       _timeout = timeout,
+       _connectionTimeout = connectionTimeout;
 
   /// Default HTTP client with a phase-tagged connection-establishment timeout.
   ///
@@ -71,11 +71,7 @@ class AnkiConnectService {
   static http.Client _defaultClient(Duration connectionTimeout) {
     final HttpClient ioClient = HttpClient()
       ..connectionTimeout = null
-      ..connectionFactory = (
-        Uri url,
-        String? proxyHost,
-        int? proxyPort,
-      ) async {
+      ..connectionFactory = (Uri url, String? proxyHost, int? proxyPort) async {
         final String targetHost = proxyHost ?? url.host;
         final int targetPort = proxyPort ?? url.port;
         try {
@@ -104,8 +100,11 @@ class AnkiConnectService {
 
   /// [idempotent] 覆盖按 [action] 名推导的默认值。只有 `multi` 需要它：批次
   /// 的可重试性由**里面装了什么**决定，而不是外层动作名。
-  Future<dynamic> _request(String action,
-      [Map<String, dynamic>? params, bool? idempotent]) async {
+  Future<dynamic> _request(
+    String action, [
+    Map<String, dynamic>? params,
+    bool? idempotent,
+  ]) async {
     final body = jsonEncode({
       'action': action,
       'version': 6,
@@ -193,8 +192,9 @@ class AnkiConnectService {
     try {
       return await _post(body);
     } on http.ClientException catch (e) {
-      final bool retryable =
-          idempotent ? _isConnectionDrop(e) : _isPreDeliveryFailure(e);
+      final bool retryable = idempotent
+          ? _isConnectionDrop(e)
+          : _isPreDeliveryFailure(e);
       if (retryable) {
         try {
           return await _post(body);
@@ -241,14 +241,13 @@ class AnkiConnectService {
       e is AnkiConnectPreDeliveryException;
 
   Future<http.Response> _post(String body) {
-    return _client.post(
-      Uri.parse('${useHttps ? 'https' : 'http'}://$host:$port'),
-      body: body,
-      headers: {
-        'Content-Type': 'application/json',
-        'Connection': 'close',
-      },
-    ).timeout(_timeout);
+    return _client
+        .post(
+          Uri.parse('${useHttps ? 'https' : 'http'}://$host:$port'),
+          body: body,
+          headers: {'Content-Type': 'application/json', 'Connection': 'close'},
+        )
+        .timeout(_timeout);
   }
 
   /// True when [e] is a transient connection-drop (stale pooled socket) worth
@@ -325,20 +324,16 @@ class AnkiConnectService {
     final bool idempotent = actions.every(
       (AnkiConnectAction a) => !_nonIdempotentActions.contains(a.action),
     );
-    final dynamic result = await _request(
-      'multi',
-      <String, dynamic>{
-        'actions': <Map<String, dynamic>>[
-          for (final AnkiConnectAction a in actions)
-            <String, dynamic>{
-              'action': a.action,
-              'version': 6,
-              if (a.params != null) 'params': a.params,
-            },
-        ],
-      },
-      idempotent,
-    );
+    final dynamic result = await _request('multi', <String, dynamic>{
+      'actions': <Map<String, dynamic>>[
+        for (final AnkiConnectAction a in actions)
+          <String, dynamic>{
+            'action': a.action,
+            'version': 6,
+            if (a.params != null) 'params': a.params,
+          },
+      ],
+    }, idempotent);
     if (result is! List || result.length != actions.length) {
       throw AnkiConnectException(
         'Unexpected AnkiConnect response for multi (expected '
@@ -446,8 +441,9 @@ class AnkiConnectService {
     }
     final out = <String, int>{};
     result.forEach((dynamic key, dynamic value) {
-      final int? id =
-          value is int ? value : int.tryParse(value?.toString() ?? '');
+      final int? id = value is int
+          ? value
+          : int.tryParse(value?.toString() ?? '');
       if (id != null) out[key.toString()] = id;
     });
     return out;
@@ -609,9 +605,7 @@ class AnkiConnectService {
   /// attempt. The exact-name check also prevents glob results from being
   /// mistaken for the requested file.
   Future<bool> mediaFileExists(String filename) async {
-    final result = await _request('getMediaFilesNames', {
-      'pattern': filename,
-    });
+    final result = await _request('getMediaFilesNames', {'pattern': filename});
     if (result is! List) {
       throw AnkiConnectException(
         'Unexpected AnkiConnect response for getMediaFilesNames '
@@ -675,11 +669,12 @@ class AnkiConnectService {
   /// `null`**，绝不降级成空列表。去重靠这个结果判断「还有没有人引用这个文件」，
   /// 把失败静默当成「没人引用」就会删掉仍在用的媒体——null 强制调用方显式处理。
   Future<List<List<int>?>> findNotesByQueries(List<String> queries) async {
-    final List<AnkiConnectBatchResult> results =
-        await _requestMultiChunked(<AnkiConnectAction>[
-      for (final String q in queries)
-        AnkiConnectAction('findNotes', <String, dynamic>{'query': q}),
-    ]);
+    final List<AnkiConnectBatchResult> results = await _requestMultiChunked(
+      <AnkiConnectAction>[
+        for (final String q in queries)
+          AnkiConnectAction('findNotes', <String, dynamic>{'query': q}),
+      ],
+    );
     return <List<int>?>[
       for (final AnkiConnectBatchResult r in results) _asNoteIds(r),
     ];
@@ -763,7 +758,9 @@ class AnkiConnectService {
 
   /// 覆写 [modelName] 的卡模板正/反面（按模板名匹配）。
   Future<void> updateModelTemplates(
-      String modelName, List<AnkiCardTemplate> templates) async {
+    String modelName,
+    List<AnkiCardTemplate> templates,
+  ) async {
     await _request('updateModelTemplates', {
       'model': {
         'name': modelName,
@@ -781,10 +778,7 @@ class AnkiConnectService {
   // storeMediaFile 一样在连接掉线时安全重试。
   Future<void> updateNoteFields(int noteId, Map<String, String> fields) async {
     await _request('updateNoteFields', {
-      'note': {
-        'id': noteId,
-        'fields': fields,
-      },
+      'note': {'id': noteId, 'fields': fields},
     });
   }
 
@@ -842,8 +836,9 @@ class AnkiConnectService {
     for (final item in result) {
       if (item is! Map) continue;
       final rawId = item['noteId'];
-      final int? id =
-          rawId is int ? rawId : int.tryParse(rawId?.toString() ?? '');
+      final int? id = rawId is int
+          ? rawId
+          : int.tryParse(rawId?.toString() ?? '');
       if (id == null) continue;
       final rawFields = item['fields'];
       if (rawFields is! Map) continue;
@@ -953,8 +948,9 @@ bool isAnkiConnectTransportError(Object error) =>
 /// [host]/[port] 仅用于丰富英文回退文案；缺省时省略（用户看到的 toast 由主 app 按
 /// [code] 本地化，本回退串不含地址也无碍）。
 String ankiConnectErrorHint(String code, {String? host, int? port}) {
-  final String where =
-      (host != null && host.isNotEmpty && port != null) ? ' ($host:$port)' : '';
+  final String where = (host != null && host.isNotEmpty && port != null)
+      ? ' ($host:$port)'
+      : '';
   switch (code) {
     case AnkiErrorCode.connectionRefused:
       return 'Connection refused$where (is Anki Desktop running?).\n'
@@ -976,8 +972,8 @@ bool ankiConnectHostIsLoopback(String host) {
   if (normalized == 'localhost') return true;
   final String unbracketed =
       normalized.startsWith('[') && normalized.endsWith(']')
-          ? normalized.substring(1, normalized.length - 1)
-          : normalized;
+      ? normalized.substring(1, normalized.length - 1)
+      : normalized;
   return InternetAddress.tryParse(unbracketed)?.isLoopback ?? false;
 }
 
@@ -1069,8 +1065,9 @@ String ankiDuplicateSearchQuery({
   if (ids.isEmpty) return '';
   final String escaped = _escapeAnkiQuery(value);
   // 每个子句整体加引号：值里的空格/冒号/括号否则会被 Anki 的查询解析器切开。
-  final String dupeTerms =
-      ids.map((int mid) => '"dupe:$mid,$escaped"').join(' OR ');
+  final String dupeTerms = ids
+      .map((int mid) => '"dupe:$mid,$escaped"')
+      .join(' OR ');
   // 单个笔记类型也照样套括号：与卡组过滤器并置时 `A B OR C` 的结合律会把
   // 卡组条件只绑到第一个子句上，那是一句悄悄查错范围的查询。
   final String dupeGroup = '($dupeTerms)';
@@ -1164,11 +1161,7 @@ String _fieldValueQuery({
 /// are intentionally insufficient: package:http exposes the same shape for
 /// response-phase failures after a request may have committed.
 class AnkiConnectPreDeliveryException extends http.ClientException {
-  AnkiConnectPreDeliveryException(
-    super.message,
-    super.uri,
-    this.cause,
-  );
+  AnkiConnectPreDeliveryException(super.message, super.uri, this.cause);
 
   final Object cause;
 }
@@ -1219,11 +1212,11 @@ class AnkiConnectDuplicateException extends AnkiConnectException {
 
 class AnkiConnectCommitUnknownException extends AnkiConnectException {
   AnkiConnectCommitUnknownException(this.action, this.cause)
-      : super(
-          'AnkiConnect lost the $action response after the request may have '
-          'reached Anki. The operation may have completed; verify Anki before '
-          'retrying.',
-        );
+    : super(
+        'AnkiConnect lost the $action response after the request may have '
+        'reached Anki. The operation may have completed; verify Anki before '
+        'retrying.',
+      );
 
   final String action;
   final Object cause;

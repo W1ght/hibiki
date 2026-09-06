@@ -67,21 +67,21 @@ class BackupImportOverlayView extends StatelessWidget {
     final IconData statusIcon = inProgress
         ? Icons.settings_backup_restore
         : failed
-            ? Icons.error_outline
-            : Icons.check_circle;
+        ? Icons.error_outline
+        : Icons.check_circle;
     final Color statusColor = failed ? cs.error : cs.primary;
     // 主行文案：validating=「正在读取备份…」；running=「正在导入备份」；done/failed=结果文案。
     final String title = validating
         ? t.backup_import_validating_title
         : running
-            ? t.backup_import_overlay_title
-            : (message ?? t.backup_import_success);
+        ? t.backup_import_overlay_title
+        : (message ?? t.backup_import_success);
     // 副行文案（仅进行中）：validating=校验提示；running=「请勿关闭」警示。
     final String? subtitle = validating
         ? t.backup_import_validating_hint
         : running
-            ? t.backup_import_overlay_warning
-            : null;
+        ? t.backup_import_overlay_warning
+        : null;
     return Scaffold(
       backgroundColor: background ?? cs.surface,
       body: Center(
@@ -90,11 +90,7 @@ class BackupImportOverlayView extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Icon(
-                statusIcon,
-                size: 48,
-                color: statusColor,
-              ),
+              Icon(statusIcon, size: 48, color: statusColor),
               const SizedBox(height: 16),
               Text(
                 title,
@@ -127,8 +123,8 @@ class BackupImportOverlayView extends StatelessWidget {
                               // value ≤0 时先走不确定动画（首个 chunk 落盘前），
                               // 有进度后转确定条，避免「卡在 0%」的观感。
                               LinearProgressIndicator(
-                            value: value > 0 ? value : null,
-                          ),
+                                value: value > 0 ? value : null,
+                              ),
                         ),
                 ),
               // validating：进度条下给「取消」出口（中断读取/预览回设置页）。

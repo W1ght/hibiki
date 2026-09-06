@@ -44,7 +44,7 @@ enum NyaaFeedErrorCode {
 
 class NyaaFeedFormatException extends FormatException {
   NyaaFeedFormatException(this.code, String detail)
-      : super('Nyaa RSS ${code.name}: $detail');
+    : super('Nyaa RSS ${code.name}: $detail');
 
   final NyaaFeedErrorCode code;
 }
@@ -228,7 +228,8 @@ DateTime? parseNyaaPubDate(String raw) {
   final String? zone = m.group(7);
   if (zone != null && RegExp(r'^[+-]\d{4}$').hasMatch(zone)) {
     final int sign = zone.startsWith('-') ? -1 : 1;
-    offsetMinutes = sign *
+    offsetMinutes =
+        sign *
         (int.parse(zone.substring(1, 3)) * 60 + int.parse(zone.substring(3)));
   }
   // 其它字母时区（GMT/UT 等）按 0 偏移处理；nyaa 实际恒发 `-0000`。
@@ -549,7 +550,9 @@ List<NyaaTorrent> _parseNyaaHtmlSearch(String body, Uri requestUri) {
   final html_dom.Document document = html_parser.parse(body);
   final html_dom.Element? table = document.querySelector('table.torrent-list');
   if (table == null) {
-    final bool noResults = document.querySelectorAll('h3').any(
+    final bool noResults = document
+        .querySelectorAll('h3')
+        .any(
           (html_dom.Element heading) =>
               heading.text.trim().toLowerCase() == 'no results found',
         );
@@ -575,13 +578,10 @@ List<NyaaTorrent> _parseNyaaHtmlSearch(String body, Uri requestUri) {
     final html_dom.Element? detailLink = cells[1]
         .querySelectorAll('a[href]')
         .cast<html_dom.Element?>()
-        .firstWhere(
-      (html_dom.Element? link) {
-        final String href = link?.attributes['href'] ?? '';
-        return Uri.tryParse(href)?.path.startsWith('/view/') == true;
-      },
-      orElse: () => null,
-    );
+        .firstWhere((html_dom.Element? link) {
+          final String href = link?.attributes['href'] ?? '';
+          return Uri.tryParse(href)?.path.startsWith('/view/') == true;
+        }, orElse: () => null);
     final html_dom.Element? magnetLink = cells[2]
         .querySelectorAll('a[href]')
         .cast<html_dom.Element?>()
@@ -596,8 +596,8 @@ List<NyaaTorrent> _parseNyaaHtmlSearch(String body, Uri requestUri) {
     final String? exactTopic = Uri.tryParse(magnet)?.queryParameters['xt'];
     final String infoHash =
         exactTopic?.toLowerCase().startsWith('urn:btih:') == true
-            ? exactTopic!.substring('urn:btih:'.length).toLowerCase()
-            : '';
+        ? exactTopic!.substring('urn:btih:'.length).toLowerCase()
+        : '';
     if (title.isEmpty ||
         detailLink == null ||
         !RegExp(r'^[0-9a-f]{40}$').hasMatch(infoHash)) {
@@ -617,15 +617,17 @@ List<NyaaTorrent> _parseNyaaHtmlSearch(String body, Uri requestUri) {
     }
     String categoryId = '';
     for (final html_dom.Element link in cells[0].querySelectorAll('a[href]')) {
-      final String? candidate =
-          Uri.tryParse(link.attributes['href'] ?? '')?.queryParameters['c'];
+      final String? candidate = Uri.tryParse(
+        link.attributes['href'] ?? '',
+      )?.queryParameters['c'];
       if (candidate?.isNotEmpty == true) {
         categoryId = candidate!;
         break;
       }
     }
-    final int? timestampSeconds =
-        int.tryParse(cells[4].attributes['data-timestamp'] ?? '');
+    final int? timestampSeconds = int.tryParse(
+      cells[4].attributes['data-timestamp'] ?? '',
+    );
     torrents.add(
       NyaaTorrent(
         title: title,
@@ -633,10 +635,12 @@ List<NyaaTorrent> _parseNyaaHtmlSearch(String body, Uri requestUri) {
         pageUrl: requestUri.resolve(detailLink.attributes['href']!).toString(),
         infoHash: infoHash,
         seeders: cells.length > 5 ? int.tryParse(cells[5].text.trim()) ?? 0 : 0,
-        leechers:
-            cells.length > 6 ? int.tryParse(cells[6].text.trim()) ?? 0 : 0,
-        downloads:
-            cells.length > 7 ? int.tryParse(cells[7].text.trim()) ?? 0 : 0,
+        leechers: cells.length > 6
+            ? int.tryParse(cells[6].text.trim()) ?? 0
+            : 0,
+        downloads: cells.length > 7
+            ? int.tryParse(cells[7].text.trim()) ?? 0
+            : 0,
         sizeText: cells[3].text.trim(),
         sizeBytes: parseNyaaSize(cells[3].text.trim()),
         categoryId: categoryId,

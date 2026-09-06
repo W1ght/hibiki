@@ -111,17 +111,17 @@ void main() {
             onLibraryChanged: () {},
             localLibraryPageBuilder:
                 (_, Widget navigation, VideoLibrarySection section) {
-              lastLocalSection = section;
-              return Column(
-              children: <Widget>[
-                navigation,
-                  _StatefulProbeLeaf(
-                    label: 'local leaf',
-                    onInit: () => localInitCount += 1,
-                  ),
-                ],
-              );
-            },
+                  lastLocalSection = section;
+                  return Column(
+                    children: <Widget>[
+                      navigation,
+                      _StatefulProbeLeaf(
+                        label: 'local leaf',
+                        onInit: () => localInitCount += 1,
+                      ),
+                    ],
+                  );
+                },
             discoveryPageBuilder: (_, Widget navigation) => Column(
               children: <Widget>[
                 navigation,
@@ -138,10 +138,7 @@ void main() {
     );
   }
 
-  Future<void> select(
-    WidgetTester tester,
-    VideoLibrarySection section,
-  ) async {
+  Future<void> select(WidgetTester tester, VideoLibrarySection section) async {
     final FushiSectionTabBar<VideoLibrarySection> strip = tester.widget(
       find.byType(FushiSectionTabBar<VideoLibrarySection>),
     );
@@ -245,8 +242,11 @@ void main() {
     await select(tester, VideoLibrarySection.home);
     await tester.fling(find.text('local leaf'), const Offset(260, 0), 1000);
     await tester.pumpAndSettle();
-    expect(lastLocalSection, VideoLibrarySection.home,
-        reason: '首页已是首位，向右甩无事发生');
+    expect(
+      lastLocalSection,
+      VideoLibrarySection.home,
+      reason: '首页已是首位，向右甩无事发生',
+    );
   });
 
   testWidgets('触屏横滑跨到非本地分区：全部视频向左甩进发现', (WidgetTester tester) async {
@@ -258,8 +258,13 @@ void main() {
     await tester.fling(find.text('local leaf'), const Offset(-260, 0), 1000);
     await tester.pumpAndSettle();
 
-    expect(discoveryInitCount, 1, reason: '横滑与页签同一条 _select 路径，'
-        '首次进入发现才惰性构建');
+    expect(
+      discoveryInitCount,
+      1,
+      reason:
+          '横滑与页签同一条 _select 路径，'
+          '首次进入发现才惰性构建',
+    );
     expect(find.text('discover leaf'), findsOneWidget);
   });
 }

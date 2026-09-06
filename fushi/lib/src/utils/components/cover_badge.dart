@@ -10,15 +10,11 @@ import 'package:fushi/src/utils/adaptive/adaptive_platform.dart';
 ///
 /// eink：半透明黑在墨水屏上合成抖动中间灰，改纯黑实底（前景仍是纯白）。
 class CoverBadge extends StatelessWidget {
-  const CoverBadge({
-    this.icon,
-    this.label,
-    this.iconSize = 14,
-    super.key,
-  }) : assert(
-          icon != null || label != null,
-          'CoverBadge needs an icon, a label, or both',
-        );
+  const CoverBadge({this.icon, this.label, this.iconSize = 14, super.key})
+    : assert(
+        icon != null || label != null,
+        'CoverBadge needs an icon, a label, or both',
+      );
 
   /// 角标图标（14px 白色，与既有视频卡角标同规格）；null 时为纯文字胶囊
   /// （如合集详情「相关作品」卡上的关系类型徽标「前作 / 续作 / 剧场版」）。
@@ -47,9 +43,9 @@ class CoverBadge extends StatelessWidget {
             if (icon != null) const SizedBox(width: 4),
             Text(
               label!,
-              style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                    color: Colors.white,
-                  ),
+              style: Theme.of(
+                context,
+              ).textTheme.labelSmall?.copyWith(color: Colors.white),
             ),
           ],
         ],

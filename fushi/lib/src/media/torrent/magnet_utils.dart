@@ -43,7 +43,8 @@ String? parseMagnetDisplayName(String magnet) {
 
 bool _isHex(String s) {
   for (final int c in s.codeUnits) {
-    final bool ok = (c >= 0x30 && c <= 0x39) || // 0-9
+    final bool ok =
+        (c >= 0x30 && c <= 0x39) || // 0-9
         (c >= 0x41 && c <= 0x46) || // A-F
         (c >= 0x61 && c <= 0x66); // a-f
     if (!ok) return false;

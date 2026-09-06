@@ -50,17 +50,22 @@ class _WindowsJobContainment implements MihonChildProcessContainment {
   static const int _extendedLimitInformationSizeX64 = 144;
   static const int _limitFlagsOffset = 16;
 
-  late final _CreateJobObjectDart _createJobObject =
-      _kernel32.lookupFunction<_CreateJobObjectNative, _CreateJobObjectDart>(
-          'CreateJobObjectW');
-  late final _SetInformationJobObjectDart _setInformationJobObject =
-      _kernel32.lookupFunction<_SetInformationJobObjectNative,
-          _SetInformationJobObjectDart>('SetInformationJobObject');
+  late final _CreateJobObjectDart _createJobObject = _kernel32
+      .lookupFunction<_CreateJobObjectNative, _CreateJobObjectDart>(
+        'CreateJobObjectW',
+      );
+  late final _SetInformationJobObjectDart _setInformationJobObject = _kernel32
+      .lookupFunction<
+        _SetInformationJobObjectNative,
+        _SetInformationJobObjectDart
+      >('SetInformationJobObject');
   late final _OpenProcessDart _openProcess = _kernel32
       .lookupFunction<_OpenProcessNative, _OpenProcessDart>('OpenProcess');
-  late final _AssignProcessToJobObjectDart _assignProcessToJobObject =
-      _kernel32.lookupFunction<_AssignProcessToJobObjectNative,
-          _AssignProcessToJobObjectDart>('AssignProcessToJobObject');
+  late final _AssignProcessToJobObjectDart _assignProcessToJobObject = _kernel32
+      .lookupFunction<
+        _AssignProcessToJobObjectNative,
+        _AssignProcessToJobObjectDart
+      >('AssignProcessToJobObject');
   late final _CloseHandleDart _closeHandle = _kernel32
       .lookupFunction<_CloseHandleNative, _CloseHandleDart>('CloseHandle');
   late final _GetLastErrorDart _getLastError = _kernel32
@@ -76,8 +81,11 @@ class _WindowsJobContainment implements MihonChildProcessContainment {
       );
     }
     final int job = _jobHandle ?? _createConfiguredJob();
-    final int process =
-        _openProcess(_processTerminate | _processSetQuota, 0, pid);
+    final int process = _openProcess(
+      _processTerminate | _processSetQuota,
+      0,
+      pid,
+    );
     if (process == 0) {
       throw _WindowsApiException(
         'OpenProcess failed for Mihon child PID $pid',
@@ -105,8 +113,9 @@ class _WindowsJobContainment implements MihonChildProcessContainment {
       );
     }
 
-    final Pointer<Uint8> information =
-        calloc<Uint8>(_extendedLimitInformationSizeX64);
+    final Pointer<Uint8> information = calloc<Uint8>(
+      _extendedLimitInformationSizeX64,
+    );
     try {
       information.elementAt(_limitFlagsOffset).cast<Uint32>().value =
           _jobObjectLimitKillOnJobClose;
@@ -149,44 +158,35 @@ class _WindowsApiException implements Exception {
   String toString() => '$message (Win32 error $errorCode)';
 }
 
-typedef _CreateJobObjectNative = IntPtr Function(
-  Pointer<Void> jobAttributes,
-  Pointer<Utf16> name,
-);
-typedef _CreateJobObjectDart = int Function(
-  Pointer<Void> jobAttributes,
-  Pointer<Utf16> name,
-);
-typedef _SetInformationJobObjectNative = Int32 Function(
-  IntPtr job,
-  Uint32 informationClass,
-  Pointer<Void> information,
-  Uint32 informationLength,
-);
-typedef _SetInformationJobObjectDart = int Function(
-  int job,
-  int informationClass,
-  Pointer<Void> information,
-  int informationLength,
-);
-typedef _OpenProcessNative = IntPtr Function(
-  Uint32 desiredAccess,
-  Int32 inheritHandle,
-  Uint32 processId,
-);
-typedef _OpenProcessDart = int Function(
-  int desiredAccess,
-  int inheritHandle,
-  int processId,
-);
-typedef _AssignProcessToJobObjectNative = Int32 Function(
-  IntPtr job,
-  IntPtr process,
-);
-typedef _AssignProcessToJobObjectDart = int Function(
-  int job,
-  int process,
-);
+typedef _CreateJobObjectNative =
+    IntPtr Function(Pointer<Void> jobAttributes, Pointer<Utf16> name);
+typedef _CreateJobObjectDart =
+    int Function(Pointer<Void> jobAttributes, Pointer<Utf16> name);
+typedef _SetInformationJobObjectNative =
+    Int32 Function(
+      IntPtr job,
+      Uint32 informationClass,
+      Pointer<Void> information,
+      Uint32 informationLength,
+    );
+typedef _SetInformationJobObjectDart =
+    int Function(
+      int job,
+      int informationClass,
+      Pointer<Void> information,
+      int informationLength,
+    );
+typedef _OpenProcessNative =
+    IntPtr Function(
+      Uint32 desiredAccess,
+      Int32 inheritHandle,
+      Uint32 processId,
+    );
+typedef _OpenProcessDart =
+    int Function(int desiredAccess, int inheritHandle, int processId);
+typedef _AssignProcessToJobObjectNative =
+    Int32 Function(IntPtr job, IntPtr process);
+typedef _AssignProcessToJobObjectDart = int Function(int job, int process);
 typedef _CloseHandleNative = Int32 Function(IntPtr handle);
 typedef _CloseHandleDart = int Function(int handle);
 typedef _GetLastErrorNative = Uint32 Function();

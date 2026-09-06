@@ -26,9 +26,9 @@ class VideoSubtitleSearchRequest {
     this.fingerprint,
     this.page = 1,
     this.anime,
-  })  : alternateTitles = List<String>.unmodifiable(alternateTitles),
-        languages = List<String>.unmodifiable(languages),
-        assert(page > 0);
+  }) : alternateTitles = List<String>.unmodifiable(alternateTitles),
+       languages = List<String>.unmodifiable(languages),
+       assert(page > 0);
 
   final VideoMediaReference? media;
   final String? query;

@@ -20,7 +20,7 @@ import 'package:fushi_core/fushi_core.dart'
 class CollectionEpisodeSlot {
   const CollectionEpisodeSlot.local(VideoBookRow this.local) : remote = null;
   const CollectionEpisodeSlot.remote(RemoteVideoInfo this.remote)
-      : local = null;
+    : local = null;
 
   /// 本机视频行；null = 该集只在对端。
   final VideoBookRow? local;
@@ -73,8 +73,8 @@ Future<List<CollectionEpisodeSlot>> loadCollectionEpisodeSlots({
   required int collectionId,
   Future<List<RemoteVideoInfo>> Function()? loadRemoteVideos,
 }) async {
-  final List<MediaCollectionItemRow> items =
-      await repository.getCollectionItems(collectionId);
+  final List<MediaCollectionItemRow> items = await repository
+      .getCollectionItems(collectionId);
   final List<String> videoKeys = <String>[
     for (final MediaCollectionItemRow item in items)
       if (item.mediaType == MediaKind.video.dbValue) item.entryKey,
@@ -84,8 +84,9 @@ Future<List<CollectionEpisodeSlot>> loadCollectionEpisodeSlots({
     final VideoBookRow? row = await repository.getByBookUid(key);
     if (row != null) localByUid[key] = row;
   }
-  final bool anyMissing =
-      videoKeys.any((String key) => !localByUid.containsKey(key));
+  final bool anyMissing = videoKeys.any(
+    (String key) => !localByUid.containsKey(key),
+  );
   Map<String, RemoteVideoInfo> remoteById = const <String, RemoteVideoInfo>{};
   // 全员本地时一次远端清单都不问：详情页是高频入口，没有缺口就没有理由付网络/缓存
   // 代价（有缓存也仍是一次 provider 往返）。
@@ -131,7 +132,8 @@ class CollectionRemoteContext {
     RemoteVideoInfo episode,
     List<RemoteVideoInfo> members,
     int index,
-  ) openEpisode;
+  )
+  openEpisode;
 
   /// 远端封面取数器（钉扎 HTTP 客户端）；null = 远端集只画占位图标。
   final RemoteCoverFetcher? coverFetcher;

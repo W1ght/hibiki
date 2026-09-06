@@ -21,17 +21,17 @@ import 'package:flutter_test/flutter_test.dart';
 /// and toggle all three buttons, and the video lifecycle must hide on enter /
 /// restore on exit / re-assert after leaving native fullscreen.
 void main() {
-  test(
-      'setMacOSTrafficLightsHidden gates on macOS and toggles all three '
+  test('setMacOSTrafficLightsHidden gates on macOS and toggles all three '
       'traffic-light buttons (BUG-973)', () {
-    final String source =
-        File('lib/src/platform/desktop/macos_traffic_lights.dart')
-            .readAsStringSync();
+    final String source = File(
+      'lib/src/platform/desktop/macos_traffic_lights.dart',
+    ).readAsStringSync();
 
     expect(
       RegExp(r'if\s*\(\s*!\s*Platform\.isMacOS\s*\)').hasMatch(source),
       isTrue,
-      reason: 'The helper must early-return on non-macOS so it is a no-op on '
+      reason:
+          'The helper must early-return on non-macOS so it is a no-op on '
           'Windows/Linux/mobile (no traffic lights there).',
     );
 
@@ -46,25 +46,27 @@ void main() {
       expect(
         source.contains('WindowManipulator.$call'),
         isTrue,
-        reason: 'The helper must call WindowManipulator.$call so every traffic '
+        reason:
+            'The helper must call WindowManipulator.$call so every traffic '
             'light is hidden/restored (a partial hide still leaves overlap).',
       );
     }
   });
 
-  test(
-      'video page hides traffic lights on enter and restores on exit '
+  test('video page hides traffic lights on enter and restores on exit '
       '(BUG-973)', () {
-    final String source =
-        File('lib/src/pages/implementations/video_fushi_page.dart')
-            .readAsStringSync();
+    final String source = File(
+      'lib/src/pages/implementations/video_fushi_page.dart',
+    ).readAsStringSync();
 
     final int initState = source.indexOf('void initState()');
     final int dispose = source.indexOf('void dispose()');
     expect(initState, greaterThanOrEqualTo(0));
-    expect(dispose, greaterThan(initState),
-        reason:
-            'dispose() is expected to follow initState() in the state class.');
+    expect(
+      dispose,
+      greaterThan(initState),
+      reason: 'dispose() is expected to follow initState() in the state class.',
+    );
 
     final String initBody = source.substring(initState, dispose);
     expect(
@@ -81,40 +83,50 @@ void main() {
     expect(
       disposeBody.contains('setMacOSTrafficLightsHidden(false)'),
       isTrue,
-      reason: 'dispose must restore the traffic lights on exit (symmetry with '
+      reason:
+          'dispose must restore the traffic lights on exit (symmetry with '
           'the initState hide), so the home shell gets them back (BUG-973).',
     );
   });
 
-  test('exiting native fullscreen re-asserts the traffic-light hide (BUG-973)',
-      () {
-    final String source = File(
-      'lib/src/pages/implementations/video_fushi/fullscreen.part.dart',
-    ).readAsStringSync();
+  test(
+    'exiting native fullscreen re-asserts the traffic-light hide (BUG-973)',
+    () {
+      final String source = File(
+        'lib/src/pages/implementations/video_fushi/fullscreen.part.dart',
+      ).readAsStringSync();
 
-    // 锚定**定义**而非裸符号：BUG-2043 后同文件里更早处有一个调用点
-    // （_releaseHandedOverNativeFullscreen），裸 indexOf 会先命中它、扫错方法体。
-    final int exitFs =
-        source.indexOf('Future<void> _exitVideoNativeFullscreen()');
-    expect(exitFs, greaterThanOrEqualTo(0));
-    // Scan the method body: from its declaration to the next method.
-    final int nextMethod = source.indexOf('\n  Future<', exitFs + 1);
-    final int nextAny = source.indexOf('\n  Widget ', exitFs + 1);
-    int end = source.length;
-    if (nextMethod > exitFs) end = nextMethod;
-    if (nextAny > exitFs && nextAny < end) end = nextAny;
-    final String body = source.substring(exitFs, end);
+      // 锚定**定义**而非裸符号：BUG-2043 后同文件里更早处有一个调用点
+      // （_releaseHandedOverNativeFullscreen），裸 indexOf 会先命中它、扫错方法体。
+      final int exitFs = source.indexOf(
+        'Future<void> _exitVideoNativeFullscreen()',
+      );
+      expect(exitFs, greaterThanOrEqualTo(0));
+      // Scan the method body: from its declaration to the next method.
+      final int nextMethod = source.indexOf('\n  Future<', exitFs + 1);
+      final int nextAny = source.indexOf('\n  Widget ', exitFs + 1);
+      int end = source.length;
+      if (nextMethod > exitFs) end = nextMethod;
+      if (nextAny > exitFs && nextAny < end) end = nextAny;
+      final String body = source.substring(exitFs, end);
 
-    // AppKit's toggleFullScreen can reset standardWindowButton.isHidden when it
-    // rebuilds the titlebar; the desktop branch must re-hide AFTER exiting.
-    final int defaultExit = body.indexOf('defaultExitNativeFullscreen()');
-    final int reHide = body.indexOf('setMacOSTrafficLightsHidden(true)');
-    expect(defaultExit, greaterThanOrEqualTo(0),
-        reason: 'desktop branch still exits native fullscreen via media_kit.');
-    expect(reHide, greaterThan(defaultExit),
+      // AppKit's toggleFullScreen can reset standardWindowButton.isHidden when it
+      // rebuilds the titlebar; the desktop branch must re-hide AFTER exiting.
+      final int defaultExit = body.indexOf('defaultExitNativeFullscreen()');
+      final int reHide = body.indexOf('setMacOSTrafficLightsHidden(true)');
+      expect(
+        defaultExit,
+        greaterThanOrEqualTo(0),
+        reason: 'desktop branch still exits native fullscreen via media_kit.',
+      );
+      expect(
+        reHide,
+        greaterThan(defaultExit),
         reason:
             'The desktop branch must re-assert the traffic-light hide after '
             'defaultExitNativeFullscreen(), because AppKit can reset the '
-            'button visibility when leaving fullscreen (BUG-973).');
-  });
+            'button visibility when leaving fullscreen (BUG-973).',
+      );
+    },
+  );
 }

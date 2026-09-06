@@ -24,9 +24,10 @@ void main() {
     lines: <String>['テスト'],
   );
 
-  MokuroImage page(String url,
-          {List<MokuroBlock> blocks = const <MokuroBlock>[]}) =>
-      MokuroImage(url: url, size: const Size(100, 140), blocks: blocks);
+  MokuroImage page(
+    String url, {
+    List<MokuroBlock> blocks = const <MokuroBlock>[],
+  }) => MokuroImage(url: url, size: const Size(100, 140), blocks: blocks);
 
   /// 造一个已入库书目录：`manga.json` + 按每页 destRel 落的空页图文件
   /// （判定只看路径/扩展名，不解码像素）。
@@ -39,8 +40,9 @@ void main() {
       rawJson ?? jsonEncode(mangaPayloadToJson(MokuroPayload(images: pages))),
     );
     for (final MokuroImage image in pages) {
-      File(p.joinAll(<String>[dir.path, ...image.url.split('/')]))
-          .createSync(recursive: true);
+      File(
+        p.joinAll(<String>[dir.path, ...image.url.split('/')]),
+      ).createSync(recursive: true);
     }
     return dir;
   }
@@ -62,8 +64,11 @@ void main() {
 
       final MangaOcrFolderStatus status = checkOcrFolder(dir.path);
       expect(status, MangaOcrFolderStatus.alreadyOcred);
-      expect(status, isNot(MangaOcrFolderStatus.noImages),
-          reason: 'BUG-1434：用户看到的正是「此文件夹中没有找到图片」');
+      expect(
+        status,
+        isNot(MangaOcrFolderStatus.noImages),
+        reason: 'BUG-1434：用户看到的正是「此文件夹中没有找到图片」',
+      );
     });
 
     test('有页缺 OCR 块 → valid（可补齐）', () {
@@ -92,10 +97,14 @@ void main() {
         const <MokuroImage>[],
         rawJson: '{ this is not json',
       );
-      File(p.join(dir.path, 'images', 'vol1', '001.jpg'))
-          .createSync(recursive: true);
-      expect(checkOcrFolder(dir.path), MangaOcrFolderStatus.valid,
-          reason: '「元数据坏了」不等于「没有图片」');
+      File(
+        p.join(dir.path, 'images', 'vol1', '001.jpg'),
+      ).createSync(recursive: true);
+      expect(
+        checkOcrFolder(dir.path),
+        MangaOcrFolderStatus.valid,
+        reason: '「元数据坏了」不等于「没有图片」',
+      );
     });
   });
 
@@ -109,8 +118,9 @@ void main() {
 
     test('只有深层子目录里有图 → valid（与 OCR 引擎枚举同口径）', () {
       final Directory dir = plainDir('manga_check_deep_');
-      File(p.join(dir.path, 'vol1', 'ch1', '001.jpg'))
-          .createSync(recursive: true);
+      File(
+        p.join(dir.path, 'vol1', 'ch1', '001.jpg'),
+      ).createSync(recursive: true);
       expect(checkOcrFolder(dir.path), MangaOcrFolderStatus.valid);
     });
 

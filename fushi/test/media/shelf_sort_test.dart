@@ -7,13 +7,12 @@ ShelfSortKey _key({
   String title = '',
   int importedAt = 0,
   String tieKey = '',
-}) =>
-    ShelfSortKey(
-      recentScore: recentScore,
-      title: title,
-      importedAt: importedAt,
-      tieKey: tieKey,
-    );
+}) => ShelfSortKey(
+  recentScore: recentScore,
+  title: title,
+  importedAt: importedAt,
+  tieKey: tieKey,
+);
 
 void main() {
   group('naturalCompare', () {
@@ -147,8 +146,7 @@ void main() {
       int position,
       int duration, {
       int lastReadAt = 0,
-    }) =>
-        (position: position, duration: duration, lastReadAt: lastReadAt);
+    }) => (position: position, duration: duration, lastReadAt: lastReadAt);
 
     test('分类：读完 / 在读 / 无进度维度(duration<=0)跳过 / 未开始(position=0)不计', () {
       final tally = tallyShelfProgress(
@@ -174,9 +172,9 @@ void main() {
       // 修复后有声书在候选里，按 lastReadAt 胜出。
       final List<({int position, int duration, int lastReadAt})> allEpubBacked =
           <({int position, int duration, int lastReadAt})>[
-        item(10, 100, lastReadAt: 100), // 纯 EPUB，较早读
-        item(40, 100, lastReadAt: 500), // 有声书，刚听完（最近）
-      ];
+            item(10, 100, lastReadAt: 100), // 纯 EPUB，较早读
+            item(40, 100, lastReadAt: 500), // 有声书，刚听完（最近）
+          ];
       final tally = tallyShelfProgress(
         allEpubBacked,
         (it) => it.position,
@@ -208,10 +206,10 @@ void main() {
       // 用户诉求：跳过后记/附录进度停在 99% 的书，手动标记后必须计入 Completed。
       final List<({int position, int duration, int lastReadAt})> books =
           <({int position, int duration, int lastReadAt})>[
-        item(99, 100, lastReadAt: 5), // 99%，若被标记完成 → 读完（否则在读）
-        item(30, 100), // 在读、未标记
-        item(0, 100), // 未开始，但被标记完成 → 仍计读完
-      ];
+            item(99, 100, lastReadAt: 5), // 99%，若被标记完成 → 读完（否则在读）
+            item(30, 100), // 在读、未标记
+            item(0, 100), // 未开始，但被标记完成 → 仍计读完
+          ];
       final tally = tallyShelfProgress(
         books,
         (it) => it.position,
@@ -221,8 +219,11 @@ void main() {
       );
       expect(tally.finished, 2, reason: '两本标记完成的都计读完（含 position=0）');
       expect(tally.reading, 1, reason: '只有未标记的 30% 那本在读');
-      expect(tally.inProgress.single.position, 30,
-          reason: '标记完成的不进在读候选，即使进度 99%');
+      expect(
+        tally.inProgress.single.position,
+        30,
+        reason: '标记完成的不进在读候选，即使进度 99%',
+      );
     });
 
     test('isCompleted 为 null → 退回纯进度派生（旧行为向后兼容）', () {

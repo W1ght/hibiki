@@ -85,20 +85,20 @@ List<String> localVideoFileCandidates({
 /// 纯函数：这一行有没有本机可删的原始文件——删除确认框据此决定摆不摆
 /// 「同时删除本地文件」勾选框。
 bool videoBookHasLocalFiles(VideoBookRow row) => localVideoFileCandidates(
-      videoPath: row.videoPath,
-      playlistJson: row.playlistJson,
-    ).isNotEmpty;
+  videoPath: row.videoPath,
+  playlistJson: row.playlistJson,
+).isNotEmpty;
 
 /// 纯函数：[rows] 引用的全部本地文件路径（按 [platformPathKey] 归一），用作删除
 /// 护栏——出现在这个集合里的文件仍被库里某一行引用，绝不删。
 Set<String> referencedLocalVideoPaths(Iterable<VideoBookRow> rows) => <String>{
-      for (final VideoBookRow row in rows)
-        for (final String path in localVideoFileCandidates(
-          videoPath: row.videoPath,
-          playlistJson: row.playlistJson,
-        ))
-          platformPathKey(path),
-    };
+  for (final VideoBookRow row in rows)
+    for (final String path in localVideoFileCandidates(
+      videoPath: row.videoPath,
+      playlistJson: row.playlistJson,
+    ))
+      platformPathKey(path),
+};
 
 /// 删除 [candidates] 中真实存在、且不在 [stillReferenced]（[platformPathKey] 归一
 /// 的路径集）里的文件；逐条结果原样回传，失败不吞。
@@ -108,8 +108,7 @@ Set<String> referencedLocalVideoPaths(Iterable<VideoBookRow> rows) => <String>{
 Future<LocalFileDeleteReport> deleteLocalVideoFiles({
   required Iterable<String> candidates,
   required Set<String> stillReferenced,
-}) =>
-    deleteLocalFiles(<String>[
-      for (final String path in candidates)
-        if (!stillReferenced.contains(platformPathKey(path))) path,
-    ]);
+}) => deleteLocalFiles(<String>[
+  for (final String path in candidates)
+    if (!stillReferenced.contains(platformPathKey(path))) path,
+]);

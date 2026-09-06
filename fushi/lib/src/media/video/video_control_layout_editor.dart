@@ -40,7 +40,7 @@ class VideoControlLayoutEditor extends StatefulWidget {
   /// 改绑回调：点「快捷键 N」chip 选动作后落盘 + 实时生效（调用方负责）。
   /// null = 不提供改绑入口（chip 仍可拖动，只是点不出选择器）。
   final Future<void> Function(VideoCustomActionBindings bindings)?
-      onCustomActionBindingsChanged;
+  onCustomActionBindingsChanged;
 
   @override
   State<VideoControlLayoutEditor> createState() =>
@@ -85,9 +85,9 @@ class _VideoControlLayoutEditorState extends State<VideoControlLayoutEditor> {
             Text(
               _controlMoveRejectionMessage!,
               style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                    color: cs.error,
-                    fontWeight: FontWeight.w600,
-                  ),
+                color: cs.error,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ],
           SizedBox(height: tokens.spacing.gap),
@@ -160,10 +160,14 @@ class _VideoControlLayoutEditorState extends State<VideoControlLayoutEditor> {
               borderRadius: tokens.radii.controlRadius,
               child: LayoutBuilder(
                 builder: (BuildContext context, BoxConstraints preview) {
-                  final double sideWidth =
-                      math.min(224, math.max(128, preview.maxWidth * 0.24));
-                  final double centerWidth =
-                      math.min(236, math.max(128, preview.maxWidth * 0.22));
+                  final double sideWidth = math.min(
+                    224,
+                    math.max(128, preview.maxWidth * 0.24),
+                  );
+                  final double centerWidth = math.min(
+                    236,
+                    math.max(128, preview.maxWidth * 0.22),
+                  );
                   const double inset = 10;
                   return Stack(
                     children: <Widget>[
@@ -199,9 +203,7 @@ class _VideoControlLayoutEditorState extends State<VideoControlLayoutEditor> {
                           padding: const EdgeInsets.only(top: inset),
                           child: SizedBox(
                             width: centerWidth,
-                            child: _buildSlotRegion(
-                              VideoControlSlot.topCenter,
-                            ),
+                            child: _buildSlotRegion(VideoControlSlot.topCenter),
                           ),
                         ),
                       ),
@@ -353,108 +355,108 @@ class _VideoControlLayoutEditorState extends State<VideoControlLayoutEditor> {
           targetIndex: _controlLayout.itemsIn(slot).length,
         );
       },
-      builder: (
-        BuildContext context,
-        List<VideoControlDragData?> candidate,
-        List<dynamic> rejected,
-      ) {
-        final bool highlighted = candidate.isNotEmpty;
-        final bool rejecting = rejected.isNotEmpty;
-        final String? rejectionMessage =
-            rejecting ? _controlMoveRejectionMessage : null;
-        final Color borderColor = rejecting
-            ? cs.error
-            : highlighted
+      builder:
+          (
+            BuildContext context,
+            List<VideoControlDragData?> candidate,
+            List<dynamic> rejected,
+          ) {
+            final bool highlighted = candidate.isNotEmpty;
+            final bool rejecting = rejected.isNotEmpty;
+            final String? rejectionMessage = rejecting
+                ? _controlMoveRejectionMessage
+                : null;
+            final Color borderColor = rejecting
+                ? cs.error
+                : highlighted
                 ? cs.primary
                 : cs.outlineVariant;
-        final Widget chipArea = entries.isEmpty
-            ? SizedBox(
-                height: 32,
-                child: Align(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: Icon(
-                    removalSlot
-                        ? Icons.remove_circle_outline
-                        : Icons.add_circle_outline,
-                    size: 18,
-                    color: highlighted
-                        ? cs.onPrimaryContainer
-                        : cs.onSurfaceVariant,
-                  ),
-                ),
-              )
-            : Wrap(
-                spacing: 6,
-                runSpacing: 6,
-                children: <Widget>[
-                  for (final ({VideoControlItem item, int sourceIndex}) entry
-                      in entries)
-                    _buildPlacedControlChip(
-                      entry.item,
-                      sourceSlot: slot,
-                      sourceIndex: entry.sourceIndex,
+            final Widget chipArea = entries.isEmpty
+                ? SizedBox(
+                    height: 32,
+                    child: Align(
+                      alignment: AlignmentDirectional.centerStart,
+                      child: Icon(
+                        removalSlot
+                            ? Icons.remove_circle_outline
+                            : Icons.add_circle_outline,
+                        size: 18,
+                        color: highlighted
+                            ? cs.onPrimaryContainer
+                            : cs.onSurfaceVariant,
+                      ),
                     ),
-                ],
-              );
-        final BoxConstraints containerConstraints = growToContent
-            ? BoxConstraints(minHeight: tray ? 64 : 58)
-            : BoxConstraints(
-                minHeight: tray ? 64 : 58,
-                maxHeight: tray ? 160 : 148,
-              );
-        return AnimatedContainer(
-          duration: const Duration(milliseconds: 120),
-          constraints: containerConstraints,
-          padding: const EdgeInsets.all(8),
-          decoration: BoxDecoration(
-            color: highlighted
-                ? cs.primaryContainer.withValues(alpha: 0.88)
-                : cs.surface.withValues(alpha: tray ? 1 : 0.88),
-            borderRadius: tokens.radii.controlRadius,
-            border: Border.all(
-              color: borderColor,
-              width: highlighted || rejecting ? 2 : 1,
-            ),
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                _controlSlotLabel(slot),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: theme.textTheme.labelSmall?.copyWith(
-                  color:
-                      highlighted ? cs.onPrimaryContainer : cs.onSurfaceVariant,
-                  fontWeight: FontWeight.w700,
+                  )
+                : Wrap(
+                    spacing: 6,
+                    runSpacing: 6,
+                    children: <Widget>[
+                      for (final ({VideoControlItem item, int sourceIndex})
+                          entry
+                          in entries)
+                        _buildPlacedControlChip(
+                          entry.item,
+                          sourceSlot: slot,
+                          sourceIndex: entry.sourceIndex,
+                        ),
+                    ],
+                  );
+            final BoxConstraints containerConstraints = growToContent
+                ? BoxConstraints(minHeight: tray ? 64 : 58)
+                : BoxConstraints(
+                    minHeight: tray ? 64 : 58,
+                    maxHeight: tray ? 160 : 148,
+                  );
+            return AnimatedContainer(
+              duration: const Duration(milliseconds: 120),
+              constraints: containerConstraints,
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: highlighted
+                    ? cs.primaryContainer.withValues(alpha: 0.88)
+                    : cs.surface.withValues(alpha: tray ? 1 : 0.88),
+                borderRadius: tokens.radii.controlRadius,
+                border: Border.all(
+                  color: borderColor,
+                  width: highlighted || rejecting ? 2 : 1,
                 ),
               ),
-              if (rejectionMessage != null) ...<Widget>[
-                const SizedBox(height: 4),
-                Text(
-                  rejectionMessage,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: theme.textTheme.labelSmall?.copyWith(
-                    color: cs.error,
-                    fontWeight: FontWeight.w600,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    _controlSlotLabel(slot),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: theme.textTheme.labelSmall?.copyWith(
+                      color: highlighted
+                          ? cs.onPrimaryContainer
+                          : cs.onSurfaceVariant,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
-                ),
-              ],
-              const SizedBox(height: 6),
-              if (growToContent)
-                chipArea
-              else
-                Flexible(
-                  child: SingleChildScrollView(
-                    child: chipArea,
-                  ),
-                ),
-            ],
-          ),
-        );
-      },
+                  if (rejectionMessage != null) ...<Widget>[
+                    const SizedBox(height: 4),
+                    Text(
+                      rejectionMessage,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: theme.textTheme.labelSmall?.copyWith(
+                        color: cs.error,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                  const SizedBox(height: 6),
+                  if (growToContent)
+                    chipArea
+                  else
+                    Flexible(child: SingleChildScrollView(child: chipArea)),
+                ],
+              ),
+            );
+          },
     );
   }
 
@@ -479,24 +481,21 @@ class _VideoControlLayoutEditorState extends State<VideoControlLayoutEditor> {
           (DragTargetDetails<VideoControlDragData> details) =>
               _handleControlDragWillAccept(details.data, sourceSlot),
       onAcceptWithDetails: (DragTargetDetails<VideoControlDragData> details) {
-        _moveControlItem(
-          details.data,
-          sourceSlot,
-          targetIndex: sourceIndex,
-        );
+        _moveControlItem(details.data, sourceSlot, targetIndex: sourceIndex);
       },
-      builder: (
-        BuildContext context,
-        List<VideoControlDragData?> candidate,
-        List<dynamic> rejected,
-      ) {
-        return _buildDraggableControlChip(
-          item,
-          sourceSlot: sourceSlot,
-          sourceIndex: sourceIndex,
-          highlighted: candidate.isNotEmpty,
-        );
-      },
+      builder:
+          (
+            BuildContext context,
+            List<VideoControlDragData?> candidate,
+            List<dynamic> rejected,
+          ) {
+            return _buildDraggableControlChip(
+              item,
+              sourceSlot: sourceSlot,
+              sourceIndex: sourceIndex,
+              highlighted: candidate.isNotEmpty,
+            );
+          },
     );
   }
 
@@ -572,8 +571,10 @@ class _VideoControlLayoutEditorState extends State<VideoControlLayoutEditor> {
     // null = 用户点外部 / 返回键取消（区别于显式选了「不绑定」，那是
     // `VideoCustomActionPick(null)`）——取消必须保持原绑定不动。
     if (pick == null || !mounted) return;
-    final VideoCustomActionBindings next =
-        _customActionBindings.withAction(slotIndex, pick.action);
+    final VideoCustomActionBindings next = _customActionBindings.withAction(
+      slotIndex,
+      pick.action,
+    );
     if (next == _customActionBindings) return;
     setState(() => _customActionBindings = next);
     await onChanged(next);
@@ -602,10 +603,12 @@ class _VideoControlLayoutEditorState extends State<VideoControlLayoutEditor> {
       context,
       bindings: _customActionBindings,
     );
-    final Color background =
-        highlighted ? cs.primaryContainer : cs.secondaryContainer;
-    final Color foreground =
-        highlighted ? cs.onPrimaryContainer : cs.onSecondaryContainer;
+    final Color background = highlighted
+        ? cs.primaryContainer
+        : cs.secondaryContainer;
+    final Color foreground = highlighted
+        ? cs.onPrimaryContainer
+        : cs.onSecondaryContainer;
     final String sourceSlotKey = sourceSlot?.storageValue ?? 'palette';
     final String sourceIndexKey = sourceIndex?.toString() ?? 'palette';
     final Widget body = SizedBox.square(
@@ -665,10 +668,7 @@ class _VideoControlLayoutEditorState extends State<VideoControlLayoutEditor> {
   ) {
     final VideoControlItem item = payload.item;
     if (!item.isChipRenderable) return false;
-    if (!item.canMoveToSlot(
-      target,
-      isTouchControls: widget.isTouchControls,
-    )) {
+    if (!item.canMoveToSlot(target, isTouchControls: widget.isTouchControls)) {
       return false;
     }
     if (payload.sourceSlot == target) return true;
@@ -680,8 +680,9 @@ class _VideoControlLayoutEditorState extends State<VideoControlLayoutEditor> {
     VideoControlSlot target,
   ) {
     final bool accepted = _canAcceptControlPayload(payload, target);
-    final String? message =
-        accepted ? null : _controlRejectionMessage(payload.item, target);
+    final String? message = accepted
+        ? null
+        : _controlRejectionMessage(payload.item, target);
     if (_controlMoveRejectionMessage != message) {
       setState(() => _controlMoveRejectionMessage = message);
     }
@@ -700,10 +701,7 @@ class _VideoControlLayoutEditorState extends State<VideoControlLayoutEditor> {
         target == VideoControlSlot.hidden) {
       return t.video_control_reject_required;
     }
-    if (!item.canMoveToSlot(
-      target,
-      isTouchControls: widget.isTouchControls,
-    )) {
+    if (!item.canMoveToSlot(target, isTouchControls: widget.isTouchControls)) {
       return t.video_control_reject_unavailable;
     }
     return null;

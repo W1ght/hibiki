@@ -96,39 +96,49 @@ void main() {
       expect(manager.isRunning('v1'), isFalse);
     });
 
-    test('onComplete failure marks task failed (no silent half-done)',
-        () async {
-      await expectLater(
-        manager.startVideoDownload(
+    test(
+      'onComplete failure marks task failed (no silent half-done)',
+      () async {
+        await expectLater(
+          manager.startVideoDownload(
+            id: 'v1',
+            title: 'Video One',
+            dest: dest('v1.mp4'),
+            run:
+                (
+                  File target, {
+                  void Function(double progress)? onProgress,
+                }) async {},
+            onComplete: (File f) => throw StateError('register failed'),
+          ),
+          throwsA(isA<StateError>()),
+        );
+        expect(
+          manager.taskFor('v1')!.status,
+          InterconnectDownloadStatus.failed,
+        );
+      },
+    );
+
+    test(
+      'task survives independent of any page: snapshot stays after run',
+      () async {
+        // 模拟「页面 dispose」=丢弃所有外部引用；manager 持有的任务状态仍在。
+        await manager.startVideoDownload(
           id: 'v1',
           title: 'Video One',
           dest: dest('v1.mp4'),
-          run: (File target,
-              {void Function(double progress)? onProgress}) async {},
-          onComplete: (File f) => throw StateError('register failed'),
-        ),
-        throwsA(isA<StateError>()),
-      );
-      expect(
-        manager.taskFor('v1')!.status,
-        InterconnectDownloadStatus.failed,
-      );
-    });
-
-    test('task survives independent of any page: snapshot stays after run',
-        () async {
-      // 模拟「页面 dispose」=丢弃所有外部引用；manager 持有的任务状态仍在。
-      await manager.startVideoDownload(
-        id: 'v1',
-        title: 'Video One',
-        dest: dest('v1.mp4'),
-        run: (File target,
-            {void Function(double progress)? onProgress}) async {},
-      );
-      // 没有任何页面 State 参与；任务仍可从 app 级 manager 取到。
-      expect(manager.taskFor('v1'), isNotNull);
-      expect(manager.tasks.containsKey('v1'), isTrue);
-    });
+          run:
+              (
+                File target, {
+                void Function(double progress)? onProgress,
+              }) async {},
+        );
+        // 没有任何页面 State 参与；任务仍可从 app 级 manager 取到。
+        expect(manager.taskFor('v1'), isNotNull);
+        expect(manager.tasks.containsKey('v1'), isTrue);
+      },
+    );
 
     test('clearTask removes finished tasks but not running ones', () async {
       final Completer<void> gate = Completer<void>();
@@ -147,8 +157,11 @@ void main() {
         id: 'done',
         title: 'Done',
         dest: dest('done.mp4'),
-        run: (File target,
-            {void Function(double progress)? onProgress}) async {},
+        run:
+            (
+              File target, {
+              void Function(double progress)? onProgress,
+            }) async {},
       );
       manager.clearTask('done');
       expect(manager.taskFor('done'), isNull);

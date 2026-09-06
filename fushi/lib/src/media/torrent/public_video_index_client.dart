@@ -88,7 +88,7 @@ String normalizePublicVideoIndexInfoHash(String raw) {
 /// 内容边界**——不传分类就是全站搜，成人分区（5xx）会直接混进电影结果里。
 class ApibayClient {
   ApibayClient({this.baseUrl = 'https://apibay.org', http.Client? client})
-      : _client = client ?? createAppHttpIoClient();
+    : _client = client ?? createAppHttpIoClient();
 
   final String baseUrl;
   final http.Client _client;
@@ -136,8 +136,9 @@ class ApibayClient {
     // 的哨兵行。不认它就会把哨兵当成一个种子推给用户。
     final String id = '${entry['id'] ?? ''}'.trim();
     if (id.isEmpty || id == '0') return null;
-    final String infoHash =
-        normalizePublicVideoIndexInfoHash('${entry['info_hash'] ?? ''}');
+    final String infoHash = normalizePublicVideoIndexInfoHash(
+      '${entry['info_hash'] ?? ''}',
+    );
     if (infoHash.isEmpty) return null;
     final String title = '${entry['name'] ?? ''}'.trim();
     if (title.isEmpty) return null;
@@ -224,18 +225,16 @@ class KnabenClient {
   }
 
   PublicVideoIndexTorrent? _parse(Map<dynamic, dynamic> entry) {
-    final String infoHash =
-        normalizePublicVideoIndexInfoHash('${entry['hash'] ?? ''}');
+    final String infoHash = normalizePublicVideoIndexInfoHash(
+      '${entry['hash'] ?? ''}',
+    );
     if (infoHash.isEmpty) return null;
     final String title = '${entry['title'] ?? ''}'.trim();
     if (title.isEmpty) return null;
     final Object? magnetRaw = entry['magnetUrl'];
     final String magnet = magnetRaw is String && magnetRaw.startsWith('magnet:')
         ? magnetRaw
-        : buildPublicVideoIndexMagnet(
-            infoHash: infoHash,
-            displayName: title,
-          );
+        : buildPublicVideoIndexMagnet(infoHash: infoHash, displayName: title);
     final Object? detailsRaw = entry['details'];
     final Object? dateRaw = entry['date'];
     return PublicVideoIndexTorrent(
@@ -247,10 +246,12 @@ class KnabenClient {
       sizeBytes: int.tryParse('${entry['bytes'] ?? ''}'),
       completed: int.tryParse('${entry['grabs'] ?? ''}') ?? 0,
       publishedAt: dateRaw is String ? DateTime.tryParse(dateRaw) : null,
-      category:
-          entry['category'] is String ? entry['category'] as String : null,
-      detailsUrl:
-          detailsRaw is String && detailsRaw.isNotEmpty ? detailsRaw : null,
+      category: entry['category'] is String
+          ? entry['category'] as String
+          : null,
+      detailsUrl: detailsRaw is String && detailsRaw.isNotEmpty
+          ? detailsRaw
+          : null,
     );
   }
 

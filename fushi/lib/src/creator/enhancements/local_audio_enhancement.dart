@@ -26,8 +26,9 @@ Future<File?> materializeWordAudioRef(
 }) async {
   if (ref.isEmpty) return null;
   if (!ref.startsWith('http')) {
-    final String path =
-        ref.startsWith('file://') ? Uri.parse(ref).toFilePath() : ref;
+    final String path = ref.startsWith('file://')
+        ? Uri.parse(ref).toFilePath()
+        : ref;
     final File f = File(path);
     return f.existsSync() ? f : null;
   }
@@ -86,13 +87,13 @@ String wordAudioExtFor(Uri uri, String? contentType) {
 /// Fetches term audio from local Yomitan audio DB, online sources, or TTS.
 class LocalAudioEnhancement extends AudioEnhancement {
   LocalAudioEnhancement({required super.field})
-      : super(
-          uniqueKey: key,
-          label: 'Local Audio',
-          description:
-              'Fetch audio from the local database, online sources, or TTS.',
-          icon: Icons.audio_file_outlined,
-        );
+    : super(
+        uniqueKey: key,
+        label: 'Local Audio',
+        description:
+            'Fetch audio from the local database, online sources, or TTS.',
+        icon: Icons.audio_file_outlined,
+      );
 
   static const String key = 'local_audio';
 
@@ -110,10 +111,14 @@ class LocalAudioEnhancement extends AudioEnhancement {
   }) async {
     final audioField = field as AudioExportField;
 
-    String term =
-        creatorModel.getFieldController(TermField.instance).text.trim();
-    String reading =
-        creatorModel.getFieldController(ReadingField.instance).text.trim();
+    String term = creatorModel
+        .getFieldController(TermField.instance)
+        .text
+        .trim();
+    String reading = creatorModel
+        .getFieldController(ReadingField.instance)
+        .text
+        .trim();
 
     if (term.isEmpty) return;
 
@@ -143,7 +148,10 @@ class LocalAudioEnhancement extends AudioEnhancement {
   }
 
   Future<File?> _generateAudio(
-      AppModel appModel, String term, String reading) async {
+    AppModel appModel,
+    String term,
+    String reading,
+  ) async {
     // 1. Local audio database (Yomitan SQLite): query metadata, then extract
     //    the blob. Native handler on Android; pure-Dart sqlite3 on desktop —
     //    both behind TtsChannel, so this call site is platform-agnostic.
@@ -185,8 +193,10 @@ class LocalAudioEnhancement extends AudioEnhancement {
       final String? ref = await resolveLookupAudioUrl(appModel, term, reading);
       if (ref != null && ref.isNotEmpty) {
         final Directory remoteDir = await getApplicationSupportDirectory();
-        final File? materialized =
-            await materializeWordAudioRef(ref, dir: remoteDir);
+        final File? materialized = await materializeWordAudioRef(
+          ref,
+          dir: remoteDir,
+        );
         if (materialized != null) return materialized;
       }
     } catch (_) {

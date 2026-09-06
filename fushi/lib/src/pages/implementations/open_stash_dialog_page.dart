@@ -45,8 +45,9 @@ class _OpenStashDialogPage extends BasePageState<OpenStashDialogPage> {
 
   Widget buildEmptyMessage() {
     return Padding(
-      padding:
-          EdgeInsets.only(bottom: FushiDesignTokens.of(context).spacing.gap),
+      padding: EdgeInsets.only(
+        bottom: FushiDesignTokens.of(context).spacing.gap,
+      ),
       child: FushiPlaceholderMessage(
         icon: Icons.inventory_2_outlined,
         message: t.stash_placeholder,
@@ -122,19 +123,17 @@ class _OpenStashDialogPage extends BasePageState<OpenStashDialogPage> {
   }
 
   List<Widget> get actions => [
-        buildClearButton(),
-        buildExportButton(),
-        buildSearchButton(),
-        buildSelectButton(),
-      ];
+    buildClearButton(),
+    buildExportButton(),
+    buildSearchButton(),
+    buildSelectButton(),
+  ];
 
   Widget buildClearButton() {
     return adaptiveDialogAction(
       context: context,
       onPressed: executeClear,
-      child: Text(
-        t.dialog_clear,
-      ),
+      child: Text(t.dialog_clear),
     );
   }
 
@@ -198,11 +197,7 @@ class _OpenStashDialogPage extends BasePageState<OpenStashDialogPage> {
 
 @visibleForTesting
 class OpenStashDialogFrame extends StatelessWidget {
-  const OpenStashDialogFrame({
-    required this.content,
-    this.actions,
-    super.key,
-  });
+  const OpenStashDialogFrame({required this.content, this.actions, super.key});
 
   final Widget content;
   final List<Widget>? actions;
@@ -245,10 +240,7 @@ class OpenStashDialogFrame extends StatelessWidget {
 
 @visibleForTesting
 class OpenStashClearDialog extends StatelessWidget {
-  const OpenStashClearDialog({
-    required this.onConfirm,
-    super.key,
-  });
+  const OpenStashClearDialog({required this.onConfirm, super.key});
 
   final VoidCallback onConfirm;
 
@@ -274,10 +266,7 @@ class OpenStashClearDialog extends StatelessWidget {
           tokens.spacing.card,
           tokens.spacing.card,
         ),
-        body: Text(
-          t.stash_clear_description,
-          style: tokens.type.listSubtitle,
-        ),
+        body: Text(t.stash_clear_description, style: tokens.type.listSubtitle),
         footer: Wrap(
           alignment: WrapAlignment.end,
           spacing: tokens.spacing.gap,

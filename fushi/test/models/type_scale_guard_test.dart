@@ -17,16 +17,20 @@ void main() {
 
   testWidgets('editorial type scale 真正穿过 geometry 渲染出来', (tester) async {
     late TextTheme tt;
-    await tester.pumpWidget(MaterialApp(
-      theme: ThemeData(
-        useMaterial3: true,
-        textTheme: FushiTypeScale.buildTextTheme(base),
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: ThemeData(
+          useMaterial3: true,
+          textTheme: FushiTypeScale.buildTextTheme(base),
+        ),
+        home: Builder(
+          builder: (context) {
+            tt = Theme.of(context).textTheme;
+            return const SizedBox();
+          },
+        ),
       ),
-      home: Builder(builder: (context) {
-        tt = Theme.of(context).textTheme;
-        return const SizedBox();
-      }),
-    ));
+    );
 
     // 锚点字号 = editorial B 阶梯（非 M3 默认 57/16/14/16/11）。
     expect(tt.displayLarge?.fontSize, 40, reason: 'editorial display，非 M3 57');

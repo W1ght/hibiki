@@ -30,22 +30,27 @@ void main() {
       expect(args, isNot(contains('h264_v4l2m2m')));
     });
 
-    test('loops the static image and is audio-bounded (-loop 1 + -shortest)',
-        () {
-      final List<String> args = buildFfmpegImageAudioToVideoArgs(
-        imagePath: '/i.png',
-        audioPath: '/a.m4a',
-        outputPath: '/o.mov',
-      );
-      // The image is a single still frame looped; the audio drives duration.
-      expect(args, containsAllInOrder(<String>['-loop', '1', '-i', '/i.png']));
-      expect(args, contains('-shortest'));
-      // Image input precedes audio input.
-      final int imgIdx = args.indexOf('/i.png');
-      final int audIdx = args.indexOf('/a.m4a');
-      expect(imgIdx, greaterThanOrEqualTo(0));
-      expect(audIdx, greaterThan(imgIdx));
-    });
+    test(
+      'loops the static image and is audio-bounded (-loop 1 + -shortest)',
+      () {
+        final List<String> args = buildFfmpegImageAudioToVideoArgs(
+          imagePath: '/i.png',
+          audioPath: '/a.m4a',
+          outputPath: '/o.mov',
+        );
+        // The image is a single still frame looped; the audio drives duration.
+        expect(
+          args,
+          containsAllInOrder(<String>['-loop', '1', '-i', '/i.png']),
+        );
+        expect(args, contains('-shortest'));
+        // Image input precedes audio input.
+        final int imgIdx = args.indexOf('/i.png');
+        final int audIdx = args.indexOf('/a.m4a');
+        expect(imgIdx, greaterThanOrEqualTo(0));
+        expect(audIdx, greaterThan(imgIdx));
+      },
+    );
 
     test('scales+pads to the requested even dimensions, output last', () {
       final List<String> args = buildFfmpegImageAudioToVideoArgs(
@@ -67,21 +72,24 @@ void main() {
     // TODO-2357：H.264 钉 crf 20（高质量近视觉无损）+ preset veryfast + yuv420p
     // （全平台硬解基线色度，也是 H.264 High profile 的基线要求）+ faststart。
     // `-q:v` 是 mpeg4/mjpeg 的 qscale，H.264 用 crf——它回流即说明编码器被换回去了。
-    test('pins -preset veryfast + -crf 20 + yuv420p + faststart, no qscale', () {
-      final List<String> args = buildFfmpegImageAudioToVideoArgs(
-        imagePath: '/i.jpg',
-        audioPath: '/a.aac',
-        outputPath: '/o.mp4',
-      );
-      expect(args, containsAllInOrder(<String>['-preset', 'veryfast']));
-      expect(args, containsAllInOrder(<String>['-crf', '20']));
-      expect(args, containsAllInOrder(<String>['-pix_fmt', 'yuv420p']));
-      expect(args, containsAllInOrder(<String>['-movflags', '+faststart']));
-      expect(args, isNot(contains('-q:v')));
-      // 旧 mjpeg 的 yuvj* 色域不得回流。
-      expect(args, isNot(contains('yuvj444p')));
-      expect(args, isNot(contains('yuvj420p')));
-    });
+    test(
+      'pins -preset veryfast + -crf 20 + yuv420p + faststart, no qscale',
+      () {
+        final List<String> args = buildFfmpegImageAudioToVideoArgs(
+          imagePath: '/i.jpg',
+          audioPath: '/a.aac',
+          outputPath: '/o.mp4',
+        );
+        expect(args, containsAllInOrder(<String>['-preset', 'veryfast']));
+        expect(args, containsAllInOrder(<String>['-crf', '20']));
+        expect(args, containsAllInOrder(<String>['-pix_fmt', 'yuv420p']));
+        expect(args, containsAllInOrder(<String>['-movflags', '+faststart']));
+        expect(args, isNot(contains('-q:v')));
+        // 旧 mjpeg 的 yuvj* 色域不得回流。
+        expect(args, isNot(contains('yuvj444p')));
+        expect(args, isNot(contains('yuvj420p')));
+      },
+    );
 
     // TODO-2357 承重守卫：单图与序列帧两条合成路径必须产出**逐字节相同**的编码器参数段。
     // 此前两条路径各自透传 h264 开关，PR#607 的变异实测就抓到过「只改一条」的空洞
@@ -121,34 +129,46 @@ void main() {
         outputPath: '/tmp/out.mov',
       );
       final int fIdx = args.indexOf('-f');
-      expect(fIdx, greaterThanOrEqualTo(0),
-          reason: 'must pin the input demuxer explicitly');
+      expect(
+        fIdx,
+        greaterThanOrEqualTo(0),
+        reason: 'must pin the input demuxer explicitly',
+      );
       expect(args[fIdx + 1], 'image2');
       // -f image2 must precede the image -i so it applies to that input.
       final int loopIdx = args.indexOf('-loop');
       expect(fIdx, lessThan(loopIdx));
     });
 
-    test('feeds a JPEG image input (never a .png that would need png decoder)',
-        () {
-      final List<String> args = buildFfmpegImageAudioToVideoArgs(
-        imagePath: '/tmp/text.jpg',
-        audioPath: '/tmp/clip.aac',
-        outputPath: '/tmp/out.mov',
-      );
-      // The image input path is the arg right after the first '-i'.
-      final int firstI = args.indexOf('-i');
-      expect(firstI, greaterThanOrEqualTo(0));
-      final String imageArg = args[firstI + 1];
-      expect(imageArg.toLowerCase().endsWith('.jpg'), isTrue,
-          reason: 'still frame must be JPEG so ffmpeg uses mjpeg decoder, '
-              'never the missing png decoder');
-      // No image argument in the command may be a .png.
-      for (final String a in args) {
-        expect(a.toLowerCase().endsWith('.png'), isFalse,
-            reason: 'no .png input: mobile ffmpeg-kit min has no png decoder');
-      }
-    });
+    test(
+      'feeds a JPEG image input (never a .png that would need png decoder)',
+      () {
+        final List<String> args = buildFfmpegImageAudioToVideoArgs(
+          imagePath: '/tmp/text.jpg',
+          audioPath: '/tmp/clip.aac',
+          outputPath: '/tmp/out.mov',
+        );
+        // The image input path is the arg right after the first '-i'.
+        final int firstI = args.indexOf('-i');
+        expect(firstI, greaterThanOrEqualTo(0));
+        final String imageArg = args[firstI + 1];
+        expect(
+          imageArg.toLowerCase().endsWith('.jpg'),
+          isTrue,
+          reason:
+              'still frame must be JPEG so ffmpeg uses mjpeg decoder, '
+              'never the missing png decoder',
+        );
+        // No image argument in the command may be a .png.
+        for (final String a in args) {
+          expect(
+            a.toLowerCase().endsWith('.png'),
+            isFalse,
+            reason: 'no .png input: mobile ffmpeg-kit min has no png decoder',
+          );
+        }
+      },
+    );
   });
 
   // BUG-543：把 Flutter 唯一能直出的 png 帧转成两端 ffmpeg 都能解的 jpeg。
@@ -294,8 +314,7 @@ void main() {
     // TODO-1013：逐句高亮跟随色（sasayaki）——导出卡片当整句背景衬底。
     const Color highlight = Color(0x66FFCC00);
 
-    test(
-        'horizontal default output is landscape 1920x1080 (TODO-1147) and '
+    test('horizontal default output is landscape 1920x1080 (TODO-1147) and '
         'carries theme colors', () {
       final AudiobookClipTextLayout layout = computeClipTextLayout(
         textLength: 6,

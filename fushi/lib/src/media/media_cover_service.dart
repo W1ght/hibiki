@@ -156,8 +156,9 @@ class MediaCoverService {
       return await VideoCoverMutationGate.runExclusive(() async {
         final Directory covers =
             coversDirectory ?? await VideoStorage.coversDir();
-        await CoverMetaStore(covers)
-            .set(bookUid, const CoverMeta(origin: CoverOrigin.manual));
+        await CoverMetaStore(
+          covers,
+        ).set(bookUid, const CoverMeta(origin: CoverOrigin.manual));
         return setVideoCoverFromPickedFile(
           repo: repo,
           bookUid: bookUid,

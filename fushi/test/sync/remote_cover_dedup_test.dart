@@ -114,7 +114,7 @@ void main() {
     test('本端为空 → 全部保留', () {
       final List<RemoteBookInfo> remote = <RemoteBookInfo>[
         book('A'),
-        book('B')
+        book('B'),
       ];
       final List<RemoteBookInfo> kept = dedupeRemoteBooks(
         remote: remote,
@@ -127,7 +127,7 @@ void main() {
     test('本端含全部远端书 → 全部剔除', () {
       final List<RemoteBookInfo> remote = <RemoteBookInfo>[
         book('A'),
-        book('B')
+        book('B'),
       ];
       final Set<String> localKeys = <String>{
         sanitizeTtuFilename('A'),

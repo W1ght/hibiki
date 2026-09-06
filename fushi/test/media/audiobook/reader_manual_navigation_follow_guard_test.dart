@@ -7,8 +7,8 @@ import '../../pages/reader_fushi_page_source_corpus.dart';
 void main() {
   test('manual reader chapter navigation suppresses same-cue auto-follow', () {
     final String controllerSource = File(
-            '../packages/fushi_audio/lib/src/audiobook/audiobook_controller.dart')
-        .readAsStringSync();
+      '../packages/fushi_audio/lib/src/audiobook/audiobook_controller.dart',
+    ).readAsStringSync();
     final String readerSource = readReaderPageSource();
 
     expect(
@@ -26,30 +26,35 @@ void main() {
     expect(
       controllerSource,
       contains(
-          'if (!bypassPlayGuard && _isManualReaderOverrideCue(cue)) return;'),
+        'if (!bypassPlayGuard && _isManualReaderOverrideCue(cue)) return;',
+      ),
       reason:
           'The same cue must not immediately emit another cross-chapter request after a manual reader jump.',
     );
     expect(
       controllerSource,
       contains(
-          '_manualReaderOverrideCue = null;\n    _forceNextReveal = true;'),
+        '_manualReaderOverrideCue = null;\n    _forceNextReveal = true;',
+      ),
       reason:
           'Explicit snap/follow actions should resume normal audio-follow behavior.',
     );
 
     expect(
       readerSource,
-      matches(RegExp(
-        r'Future<void> _navigateToChapter\(\s*int index,\s*\{[\s\S]*?double progress = 0\.0,[\s\S]*?bool manual = false,[\s\S]*?\}\) async \{',
-      )),
+      matches(
+        RegExp(
+          r'Future<void> _navigateToChapter\(\s*int index,\s*\{[\s\S]*?double progress = 0\.0,[\s\S]*?bool manual = false,[\s\S]*?\}\) async \{',
+        ),
+      ),
       reason:
           'The chapter navigation API must keep a manual flag even if additional restore-position parameters are added.',
     );
     expect(
       readerSource,
       contains(
-          'if (manual) {\n      _audiobookController?.noteManualReaderNavigation();\n    }'),
+        'if (manual) {\n      _audiobookController?.noteManualReaderNavigation();\n    }',
+      ),
     );
     expect(
       readerSource,
@@ -64,18 +69,22 @@ void main() {
     );
     expect(
       readerSource,
-      matches(RegExp(
-        r'_navigateToChapter\(\s*_currentChapter - 1,\s*progress: 0\.99,\s*manual: true,',
-        multiLine: true,
-      )),
+      matches(
+        RegExp(
+          r'_navigateToChapter\(\s*_currentChapter - 1,\s*progress: 0\.99,\s*manual: true,',
+          multiLine: true,
+        ),
+      ),
       reason: 'Reverse chapter-edge page turns are user-initiated.',
     );
     expect(
       readerSource,
-      matches(RegExp(
-        r'_navigateToChapterWithFragment\(\s*link\.chapterIndex,\s*link\.fragment,\s*manual: true,',
-        multiLine: true,
-      )),
+      matches(
+        RegExp(
+          r'_navigateToChapterWithFragment\(\s*link\.chapterIndex,\s*link\.fragment,\s*manual: true,',
+          multiLine: true,
+        ),
+      ),
       reason: 'Internal TOC/link jumps are user-initiated.',
     );
   });

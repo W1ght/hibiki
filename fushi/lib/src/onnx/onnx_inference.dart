@@ -17,16 +17,16 @@ enum OnnxTensorType { float32, int64 }
 /// 不可变张量：扁平数据 + 形状。
 class OnnxTensor {
   OnnxTensor.float32(Float32List data, this.shape)
-      : type = OnnxTensorType.float32,
-        floatData = data,
-        intData = null {
+    : type = OnnxTensorType.float32,
+      floatData = data,
+      intData = null {
     _checkLength(data.length);
   }
 
   OnnxTensor.int64(Int64List data, this.shape)
-      : type = OnnxTensorType.int64,
-        floatData = null,
-        intData = data {
+    : type = OnnxTensorType.int64,
+      floatData = null,
+      intData = data {
     _checkLength(data.length);
   }
 
@@ -40,8 +40,9 @@ class OnnxTensor {
   void _checkLength(int length) {
     if (length != elementCount) {
       throw ArgumentError(
-          'OnnxTensor data length $length does not match shape $shape '
-          '($elementCount elements)');
+        'OnnxTensor data length $length does not match shape $shape '
+        '($elementCount elements)',
+      );
     }
   }
 }

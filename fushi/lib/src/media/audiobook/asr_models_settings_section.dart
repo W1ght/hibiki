@@ -109,34 +109,34 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
     row.downloadSub = widget.service
         .downloadModel(language: row.pack.language, variant: plan.variant)
         .listen(
-      (ModelDownloadEvent e) {
-        if (e.fileName != lastFile) {
-          completedBytes += lastFileTotal;
-          lastFile = e.fileName;
-          lastFileTotal = e.totalBytes;
-        }
-        if (!mounted) return;
-        setState(() {
-          row.downloadFile = e.fileName;
-          row.downloadReceived = completedBytes + e.receivedBytes;
-        });
-      },
-      onError: (Object e, StackTrace _) {
-        row.downloadSub = null;
-        if (!mounted) return;
-        setState(() {});
-        FushiToast.show(
-          msg: t.asr_models_download_failed(error: '$e'),
-          severity: ToastSeverity.error,
+          (ModelDownloadEvent e) {
+            if (e.fileName != lastFile) {
+              completedBytes += lastFileTotal;
+              lastFile = e.fileName;
+              lastFileTotal = e.totalBytes;
+            }
+            if (!mounted) return;
+            setState(() {
+              row.downloadFile = e.fileName;
+              row.downloadReceived = completedBytes + e.receivedBytes;
+            });
+          },
+          onError: (Object e, StackTrace _) {
+            row.downloadSub = null;
+            if (!mounted) return;
+            setState(() {});
+            FushiToast.show(
+              msg: t.asr_models_download_failed(error: '$e'),
+              severity: ToastSeverity.error,
+            );
+            unawaited(_refresh(row));
+          },
+          onDone: () {
+            row.downloadSub = null;
+            if (!mounted) return;
+            unawaited(_refresh(row));
+          },
         );
-        unawaited(_refresh(row));
-      },
-      onDone: () {
-        row.downloadSub = null;
-        if (!mounted) return;
-        unawaited(_refresh(row));
-      },
-    );
     setState(() {});
   }
 
@@ -170,8 +170,9 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
     setState(() => row.deleting = true);
     int freed = 0;
     try {
-      final AsrModelStore store =
-          await widget.service.modelStore(row.pack.language);
+      final AsrModelStore store = await widget.service.modelStore(
+        row.pack.language,
+      );
       freed = await store.deleteAll();
     } finally {
       if (mounted) setState(() => row.deleting = false);
@@ -196,13 +197,13 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
             size: FushiByteFormat.bytes(status.diskBytes),
           )
         : status.obtainedBytes > 0
-            ? t.asr_models_status_partial(
-                obtained: FushiByteFormat.bytes(status.obtainedBytes),
-                total: FushiByteFormat.bytes(status.totalBytes),
-              )
-            : t.asr_models_status_missing(
-                size: FushiByteFormat.bytes(status.totalBytes),
-              );
+        ? t.asr_models_status_partial(
+            obtained: FushiByteFormat.bytes(status.obtainedBytes),
+            total: FushiByteFormat.bytes(status.totalBytes),
+          )
+        : t.asr_models_status_missing(
+            size: FushiByteFormat.bytes(status.totalBytes),
+          );
     return '$language · $state';
   }
 
@@ -315,9 +316,7 @@ class _AsrModelsSettingsSectionState extends State<AsrModelsSettingsSection> {
       type: MaterialType.transparency,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          for (final _PackRow row in _rows) _row(theme, row),
-        ],
+        children: <Widget>[for (final _PackRow row in _rows) _row(theme, row)],
       ),
     );
   }

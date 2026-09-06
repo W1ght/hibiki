@@ -31,8 +31,9 @@ void main() {
   ///
   /// 不写死字符串 `'fushi'`：本文件跟着 app 目录一起被 `git mv`，目录再改名时
   /// 这个值自动跟着变，而 workflow 里的过滤项不会——差异正是要守的东西。
-  final String appDir =
-      Directory.current.uri.pathSegments.where((String s) => s.isNotEmpty).last;
+  final String appDir = Directory.current.uri.pathSegments
+      .where((String s) => s.isNotEmpty)
+      .last;
   final Directory repoRoot = Directory('..');
   final Directory workflowsDir = Directory('../.github/workflows');
 
@@ -43,22 +44,30 @@ void main() {
   ];
 
   test('前置：app 目录名解析正确、workflows 目录存在', () {
-    expect(File('../$appDir/pubspec.yaml').existsSync(), isTrue,
-        reason: '从 cwd 推出的 app 目录名是 "$appDir"，但 ../$appDir/pubspec.yaml '
-            '不存在。本守卫的全部断言都建立在这个名字上，先修它。'
-            'cwd=${Directory.current.absolute.path}');
-    expect(workflowsDir.existsSync(), isTrue,
-        reason: 'expected ${workflowsDir.absolute.path}');
+    expect(
+      File('../$appDir/pubspec.yaml').existsSync(),
+      isTrue,
+      reason:
+          '从 cwd 推出的 app 目录名是 "$appDir"，但 ../$appDir/pubspec.yaml '
+          '不存在。本守卫的全部断言都建立在这个名字上，先修它。'
+          'cwd=${Directory.current.absolute.path}',
+    );
+    expect(
+      workflowsDir.existsSync(),
+      isTrue,
+      reason: 'expected ${workflowsDir.absolute.path}',
+    );
   });
 
   final List<File> workflows = workflowsDir.existsSync()
       ? (workflowsDir
-          .listSync()
-          .whereType<File>()
-          .where(
-              (File f) => f.path.endsWith('.yml') || f.path.endsWith('.yaml'))
-          .toList()
-        ..sort((File a, File b) => a.path.compareTo(b.path)))
+            .listSync()
+            .whereType<File>()
+            .where(
+              (File f) => f.path.endsWith('.yml') || f.path.endsWith('.yaml'),
+            )
+            .toList()
+          ..sort((File a, File b) => a.path.compareTo(b.path)))
       : <File>[];
 
   /// 每个 workflow 里所有 `paths:` / `paths-ignore:` 清单项（含被注释掉的块）。
@@ -73,8 +82,9 @@ void main() {
 
   final RegExp hashFilesCall = RegExp(r'hashFiles\(([^)]*)\)');
   final RegExp quoted = RegExp(r"'([^']*)'");
-  final RegExp filterHeaderPattern =
-      RegExp(r'^(\s*)(paths|paths-ignore):\s*(.*)$');
+  final RegExp filterHeaderPattern = RegExp(
+    r'^(\s*)(paths|paths-ignore):\s*(.*)$',
+  );
   final RegExp listItemPattern = RegExp(r"^\s*-\s*'([^']*)'\s*$");
   final RegExp triggerPattern = RegExp(r'^(\s*)([a-z_]+):\s*$');
   final RegExp commentPrefix = RegExp(r'^(\s*)#\s?');
@@ -143,12 +153,20 @@ void main() {
 
   test('守卫没跑空：扫到了路径过滤项与 hashFiles 模式', () {
     expect(workflows, isNotEmpty, reason: '一个 workflow 文件都没扫到');
-    expect(allFilterEntries, isNotEmpty,
-        reason: '一条 paths 过滤项都没扫到，说明块切分坏了或 workflow 改版了；'
-            '此时其余断言全部无意义。');
-    expect(hashFilePatterns, isNotEmpty,
-        reason: '一个 hashFiles() 模式都没扫到——缓存 key 的静默退化正是本守卫'
-            '要防的第二类失效，扫不到就等于没守。');
+    expect(
+      allFilterEntries,
+      isNotEmpty,
+      reason:
+          '一条 paths 过滤项都没扫到，说明块切分坏了或 workflow 改版了；'
+          '此时其余断言全部无意义。',
+    );
+    expect(
+      hashFilePatterns,
+      isNotEmpty,
+      reason:
+          '一个 hashFiles() 模式都没扫到——缓存 key 的静默退化正是本守卫'
+          '要防的第二类失效，扫不到就等于没守。',
+    );
   });
 
   group('发布 workflow 的 push 路径过滤', () {
@@ -156,18 +174,27 @@ void main() {
       test('$name 的 push 过滤覆盖真实 app 目录 $appDir/**', () {
         final List<_FilterEntry> entries = pushPaths[name] ?? <_FilterEntry>[];
         // 反向锚：清单本身还在，下面那条覆盖断言才有对象可查。
-        expect(entries, isNotEmpty,
-            reason: '$name 里找不到 push 触发器下的 paths 清单（启用态和注释态都没找到）。'
-                'push 触发器被整块删掉了？还是注释格式变了让按列还原失效？'
-                '无论哪种，本守卫已失去锚点，先修守卫再谈绿。');
+        expect(
+          entries,
+          isNotEmpty,
+          reason:
+              '$name 里找不到 push 触发器下的 paths 清单（启用态和注释态都没找到）。'
+              'push 触发器被整块删掉了？还是注释格式变了让按列还原失效？'
+              '无论哪种，本守卫已失去锚点，先修守卫再谈绿。',
+        );
 
-        final Set<String> globs =
-            entries.map((_FilterEntry e) => e.value).toSet();
-        expect(globs, contains('$appDir/**'),
-            reason: 'push 过滤没覆盖 app 目录 `$appDir/**`：改 app 代码将不再触发 '
-                '$name 的发版构建，而 GitHub 对匹配不到文件的 paths 过滤**零诊断**——'
-                '症状与「没人推代码」完全一致。当前清单：\n'
-                '${entries.map((_FilterEntry e) => "  ${e.where} ${e.value}").join("\n")}');
+        final Set<String> globs = entries
+            .map((_FilterEntry e) => e.value)
+            .toSet();
+        expect(
+          globs,
+          contains('$appDir/**'),
+          reason:
+              'push 过滤没覆盖 app 目录 `$appDir/**`：改 app 代码将不再触发 '
+              '$name 的发版构建，而 GitHub 对匹配不到文件的 paths 过滤**零诊断**——'
+              '症状与「没人推代码」完全一致。当前清单：\n'
+              '${entries.map((_FilterEntry e) => "  ${e.where} ${e.value}").join("\n")}',
+        );
       });
     }
   });
@@ -181,11 +208,15 @@ void main() {
       if (File(full).existsSync() || Directory(full).existsSync()) continue;
       offenders.add('${entry.where} "${entry.value}" -> 不存在的 $prefix');
     }
-    expect(offenders, isEmpty,
-        reason: '这些 paths / paths-ignore 过滤项指向的路径在仓库里不存在。目录改名'
-            '（如 W9 的 hibiki/ -> fushi/）后忘了同步过滤项就长这样：workflow 不再被'
-            '触发，而 GitHub 不会给任何提示。逐条改成真实路径：\n'
-            '${offenders.join("\n")}');
+    expect(
+      offenders,
+      isEmpty,
+      reason:
+          '这些 paths / paths-ignore 过滤项指向的路径在仓库里不存在。目录改名'
+          '（如 W9 的 hibiki/ -> fushi/）后忘了同步过滤项就长这样：workflow 不再被'
+          '触发，而 GitHub 不会给任何提示。逐条改成真实路径：\n'
+          '${offenders.join("\n")}',
+    );
   });
 
   test('所有 hashFiles() 模式都能匹配到真实文件', () {
@@ -193,19 +224,26 @@ void main() {
     for (final _FilterEntry entry in hashFilePatterns) {
       final String? prefix = _literalPrefix(entry.value);
       final String full = '${repoRoot.path}/${prefix ?? ''}';
-      final bool exists = prefix != null &&
+      final bool exists =
+          prefix != null &&
           prefix.isNotEmpty &&
           (File(full).existsSync() || Directory(full).existsSync());
       if (!exists) {
-        offenders.add("${entry.where} hashFiles('${entry.value}') -> "
-            '匹配不到任何文件');
+        offenders.add(
+          "${entry.where} hashFiles('${entry.value}') -> "
+          '匹配不到任何文件',
+        );
       }
     }
-    expect(offenders, isEmpty,
-        reason: 'hashFiles() 对匹配不到文件的模式**不报错**：它照常返回一个哈希，'
-            '只是这个哈希恒定不变，于是缓存 key 退化成常量、永远命中第一次存下的'
-            '那份陈旧缓存，而日志上一切正常。这是最难发现的一类改名残留：\n'
-            '${offenders.join("\n")}');
+    expect(
+      offenders,
+      isEmpty,
+      reason:
+          'hashFiles() 对匹配不到文件的模式**不报错**：它照常返回一个哈希，'
+          '只是这个哈希恒定不变，于是缓存 key 退化成常量、永远命中第一次存下的'
+          '那份陈旧缓存，而日志上一切正常。这是最难发现的一类改名残留：\n'
+          '${offenders.join("\n")}',
+    );
   });
 }
 

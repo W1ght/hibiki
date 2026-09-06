@@ -53,8 +53,10 @@ class _SubtitleVersionGroupListState extends State<SubtitleVersionGroupList> {
 
   void _onCardTap(SubtitleVersionGroup group) {
     if (_busy || widget.onPickCandidate == null) return;
-    final VideoSubtitleCandidate? picked =
-        pickGroupCandidateForEpisode(group, widget.requestedEpisode);
+    final VideoSubtitleCandidate? picked = pickGroupCandidateForEpisode(
+      group,
+      widget.requestedEpisode,
+    );
     if (picked != null) {
       widget.onPickCandidate!(picked);
       return;
@@ -65,8 +67,10 @@ class _SubtitleVersionGroupListState extends State<SubtitleVersionGroupList> {
   }
 
   String _relativeLabel(int epochMs) {
-    final ActivityRelativeTime rel =
-        activityRelativeTime(epochMs, DateTime.now());
+    final ActivityRelativeTime rel = activityRelativeTime(
+      epochMs,
+      DateTime.now(),
+    );
     return switch (rel.unit) {
       ActivityRelativeUnit.justNow => t.activity_just_now,
       ActivityRelativeUnit.minutesAgo => t.activity_minutes_ago(n: rel.value),
@@ -88,9 +92,7 @@ class _SubtitleVersionGroupListState extends State<SubtitleVersionGroupList> {
       );
     }
     if (group.unnumberedCount > 0) {
-      parts.add(
-        t.subtitle_version_unnumbered_count(n: group.unnumberedCount),
-      );
+      parts.add(t.subtitle_version_unnumbered_count(n: group.unnumberedCount));
     }
     final int? latestAt = group.latestUploadedAtMs;
     if (latestAt != null) parts.add(_relativeLabel(latestAt));
@@ -118,8 +120,9 @@ class _SubtitleVersionGroupListState extends State<SubtitleVersionGroupList> {
   Widget _buildCard(ThemeData theme, SubtitleVersionGroup group) {
     final bool expanded = _expanded.contains(group.key);
     final SubtitleContentLanguage? probed = widget.probedLanguages[group.key];
-    final String? probedLabel =
-        probed == null ? null : subtitleContentLanguageNativeLabel(probed);
+    final String? probedLabel = probed == null
+        ? null
+        : subtitleContentLanguageNativeLabel(probed);
     final String variant = group.variantParts.join(' · ');
     return FushiCard(
       key: ValueKey<String>('subtitle-version-${group.key}'),
@@ -166,8 +169,10 @@ class _SubtitleVersionGroupListState extends State<SubtitleVersionGroupList> {
               ),
               const SizedBox(width: 8),
               if (widget.busyIdentityKey != null &&
-                  group.members.any((VideoSubtitleCandidate candidate) =>
-                      candidate.identityKey == widget.busyIdentityKey))
+                  group.members.any(
+                    (VideoSubtitleCandidate candidate) =>
+                        candidate.identityKey == widget.busyIdentityKey,
+                  ))
                 const Padding(
                   padding: EdgeInsets.all(8),
                   child: SizedBox.square(
@@ -182,10 +187,10 @@ class _SubtitleVersionGroupListState extends State<SubtitleVersionGroupList> {
                   onTap: _busy
                       ? null
                       : () => setState(() {
-                            if (!_expanded.add(group.key)) {
-                              _expanded.remove(group.key);
-                            }
-                          }),
+                          if (!_expanded.add(group.key)) {
+                            _expanded.remove(group.key);
+                          }
+                        }),
                 ),
             ],
           ),
@@ -233,7 +238,8 @@ class _SubtitleVersionGroupListState extends State<SubtitleVersionGroupList> {
     VideoSubtitleCandidate candidate,
   ) {
     final bool busyThis = widget.busyIdentityKey == candidate.identityKey;
-    final bool highlight = widget.requestedEpisode != null &&
+    final bool highlight =
+        widget.requestedEpisode != null &&
         candidate.episode == widget.requestedEpisode;
     final List<String> meta = <String>[
       if (candidate.episode != null) 'EP${candidate.episode}',

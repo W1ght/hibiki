@@ -37,10 +37,14 @@ void main() {
   const String secondPlaceholder = 'fushi_dict_1.svg';
 
   final String cacheDir = ankiDictionaryMediaCacheDirPath();
-  final String cachedName =
-      ankiDictionaryMediaCacheFilename(dictName, gaijiPath);
-  final String secondCachedName =
-      ankiDictionaryMediaCacheFilename(dictName, secondGaijiPath);
+  final String cachedName = ankiDictionaryMediaCacheFilename(
+    dictName,
+    gaijiPath,
+  );
+  final String secondCachedName = ankiDictionaryMediaCacheFilename(
+    dictName,
+    secondGaijiPath,
+  );
 
   late Directory tempDir;
   late File gif;
@@ -52,9 +56,11 @@ void main() {
         .map((m) => '<img class=\\"gloss-image\\" src=\\"${m.filename}\\">')
         .join();
     final String mediaJson = media
-        .map((m) =>
-            '{\\"dictionary\\":\\"$dictName\\",\\"path\\":\\"${m.path}\\",'
-            '\\"filename\\":\\"${m.filename}\\"}')
+        .map(
+          (m) =>
+              '{\\"dictionary\\":\\"$dictName\\",\\"path\\":\\"${m.path}\\",'
+              '\\"filename\\":\\"${m.filename}\\"}',
+        )
         .join(',');
     return '{"expression":"言葉",'
         '"glossary":"$glossaryImgs意味",'
@@ -62,23 +68,23 @@ void main() {
   }
 
   AnkiSettings settings() => AnkiSettings(
-        selectedDeckId: 1,
-        selectedNoteTypeId: 2,
-        availableDecks: const <AnkiDeck>[AnkiDeck(id: 1, name: 'Mining')],
-        availableNoteTypes: const <AnkiNoteType>[
-          AnkiNoteType(
-            id: 2,
-            name: 'Hibiki',
-            fields: <String>['Expression', 'Meaning', 'Picture'],
-          ),
-        ],
-        fieldMappings: const <String, String>{
-          'Expression': '{expression}',
-          'Meaning': '{glossary}',
-          'Picture': '{card-image}',
-        },
-        allowDupes: true,
-      );
+    selectedDeckId: 1,
+    selectedNoteTypeId: 2,
+    availableDecks: const <AnkiDeck>[AnkiDeck(id: 1, name: 'Mining')],
+    availableNoteTypes: const <AnkiNoteType>[
+      AnkiNoteType(
+        id: 2,
+        name: 'Hibiki',
+        fields: <String>['Expression', 'Meaning', 'Picture'],
+      ),
+    ],
+    fieldMappings: const <String, String>{
+      'Expression': '{expression}',
+      'Meaning': '{glossary}',
+      'Picture': '{card-image}',
+    },
+    allowDupes: true,
+  );
 
   void removeCached() {
     for (final String name in <String>[cachedName, secondCachedName]) {
@@ -107,19 +113,17 @@ void main() {
     );
 
     final MineOutcome outcome = await repo.mineEntry(
-      rawPayloadJson: payloadWith(
-        <({String path, String filename})>[
-          (path: gaijiPath, filename: placeholder),
-        ],
-      ),
-      context: AnkiMiningContext(
-        sentence: 'これは言葉です。',
-        coverPath: gif.path,
-      ),
+      rawPayloadJson: payloadWith(<({String path, String filename})>[
+        (path: gaijiPath, filename: placeholder),
+      ]),
+      context: AnkiMiningContext(sentence: 'これは言葉です。', coverPath: gif.path),
     );
 
-    expect(outcome.result, MineResult.success,
-        reason: '一个取不到字节的外字不得让整次制卡失败（BUG-1265）');
+    expect(
+      outcome.result,
+      MineResult.success,
+      reason: '一个取不到字节的外字不得让整次制卡失败（BUG-1265）',
+    );
     expect(service.addedFields, hasLength(1), reason: 'addNote 必须真的被调用，卡片要落地');
     // 这条媒体降级：占位符保持原样（等价于 alt 文本），不会指向不存在的 Anki 媒体。
     expect(service.addedFields.single['Meaning'], contains(placeholder));
@@ -138,9 +142,9 @@ void main() {
 
   test('混排时：能取到的外字照常嵌入，取不到的那条单独降级', () async {
     Directory(cacheDir).createSync(recursive: true);
-    File('$cacheDir/$cachedName').writeAsBytesSync(
-      '<svg xmlns="http://www.w3.org/2000/svg"/>'.codeUnits,
-    );
+    File(
+      '$cacheDir/$cachedName',
+    ).writeAsBytesSync('<svg xmlns="http://www.w3.org/2000/svg"/>'.codeUnits);
 
     final service = _RecordingAnkiConnectService();
     final repo = _ConfiguredAnkiConnectRepository(
@@ -149,13 +153,11 @@ void main() {
     );
 
     final MineOutcome outcome = await repo.mineEntry(
-      rawPayloadJson: payloadWith(
-        <({String path, String filename})>[
-          (path: gaijiPath, filename: placeholder),
-          // 第二条没有缓存文件：以前它会把第一条也一起拖垮。
-          (path: secondGaijiPath, filename: secondPlaceholder),
-        ],
-      ),
+      rawPayloadJson: payloadWith(<({String path, String filename})>[
+        (path: gaijiPath, filename: placeholder),
+        // 第二条没有缓存文件：以前它会把第一条也一起拖垮。
+        (path: secondGaijiPath, filename: secondPlaceholder),
+      ]),
       context: const AnkiMiningContext(sentence: 'これは言葉です。'),
     );
 
@@ -163,12 +165,12 @@ void main() {
     final String meaning = service.addedFields.single['Meaning']!;
     expect(meaning, contains(cachedName), reason: '有缓存的那条外字必须被替换成真实媒体文件名');
     expect(meaning, isNot(contains(placeholder)));
-    expect(meaning, contains(secondPlaceholder),
-        reason: '缺失的那条保持占位符（降级），不影响邻居');
     expect(
-      service.storedMedia.map((e) => e.filename),
-      contains(cachedName),
+      meaning,
+      contains(secondPlaceholder),
+      reason: '缺失的那条保持占位符（降级），不影响邻居',
     );
+    expect(service.storedMedia.map((e) => e.filename), contains(cachedName));
   });
 
   test('对比组：封面缺失仍然中止制卡（两套媒体策略故意不同，别再合并）', () async {
@@ -186,8 +188,11 @@ void main() {
       ),
     );
 
-    expect(outcome.result, MineResult.error,
-        reason: '封面/句子音频缺失的卡片没有价值，必须继续拦住（35e8c96b5 的本意）');
+    expect(
+      outcome.result,
+      MineResult.error,
+      reason: '封面/句子音频缺失的卡片没有价值，必须继续拦住（35e8c96b5 的本意）',
+    );
     expect(service.addedFields, isEmpty);
   });
 }

@@ -197,13 +197,16 @@ void main() {
     final File exe = File('$base/${target.ffmpegName}');
     final File probe = File('$base/${target.ffprobeName}');
 
-    group('ffmpeg-min 入库二进制与构建配方一致性守卫（${target.label}，BUG-1058/1420/1421）',
-        () {
+    group('ffmpeg-min 入库二进制与构建配方一致性守卫（${target.label}，BUG-1058/1420/1421）', () {
       test('ffmpeg 与 ffprobe 两个 exe 都在且是真二进制', () {
         // BUG-1420：ffprobe 有独立消费方（内封字幕字体 / 音频容器元数据），
         // 缺它不会让 ffmpeg 相关功能报错，只会让那两条链静默退化，所以必须单查。
         for (final File f in <File>[exe, probe]) {
-          expect(f.existsSync(), isTrue, reason: '缺 ${f.path}${_revendorHint()}');
+          expect(
+            f.existsSync(),
+            isTrue,
+            reason: '缺 ${f.path}${_revendorHint()}',
+          );
           // 入库的是真 exe（~5-13MB），不是 LFS 指针或占位符。
           expect(
             f.lengthSync(),
@@ -238,7 +241,8 @@ void main() {
         expect(
           problems,
           isEmpty,
-          reason: '入库 ${target.ffmpegName}（${target.label}）与 '
+          reason:
+              '入库 ${target.ffmpegName}（${target.label}）与 '
               'build-ffmpeg-min.sh 不一致：\n'
               '${problems.join("\n")}\n${_revendorHint()}',
         );
@@ -254,7 +258,8 @@ void main() {
           expect(
             configuration.contains(flag),
             isTrue,
-            reason: '入库 ${target.ffmpegName}（${target.label}）的 configure 串缺 '
+            reason:
+                '入库 ${target.ffmpegName}（${target.label}）的 configure 串缺 '
                 '$flag${_revendorHint()}',
           );
         }
@@ -264,14 +269,19 @@ void main() {
         // 两个 exe 出自同一棵源码树、同一条 configure，因此内嵌配方串必须一致。
         // 不一致 = 只换了其中一个（半拉子 vendor），比两个都旧更危险：
         // 能力矩阵对不上，排查时会指向错误的方向。
-        final Set<String> exeEncoders =
-            _parseBinaryList(_embeddedConfiguration(exe), 'encoder');
-        final Set<String> probeEncoders =
-            _parseBinaryList(_embeddedConfiguration(probe), 'encoder');
+        final Set<String> exeEncoders = _parseBinaryList(
+          _embeddedConfiguration(exe),
+          'encoder',
+        );
+        final Set<String> probeEncoders = _parseBinaryList(
+          _embeddedConfiguration(probe),
+          'encoder',
+        );
         expect(
           probeEncoders,
           equals(exeEncoders),
-          reason: '${target.label} 的 ffmpeg 与 ffprobe 内嵌配方不一致，'
+          reason:
+              '${target.label} 的 ffmpeg 与 ffprobe 内嵌配方不一致，'
               '说明只重新 vendor 了其中一个。${_revendorHint()}',
         );
       });
@@ -281,12 +291,15 @@ void main() {
         // configure 的组件名是 movtext，ffmpeg -encoders 列出来的名字是 mov_text，
         // 而片段导出传的是 `-c:s mov_text`。缺它 → 'Unknown encoder' → 静默降级成
         // 无字幕片段（video_clip_exporter.dart 的降级重试）。
-        final Set<String> encoders =
-            _parseBinaryList(_embeddedConfiguration(exe), 'encoder');
+        final Set<String> encoders = _parseBinaryList(
+          _embeddedConfiguration(exe),
+          'encoder',
+        );
         expect(
           encoders,
           contains('movtext'),
-          reason: '入库 ${target.ffmpegName}（${target.label}）没有 movtext 编码器，'
+          reason:
+              '入库 ${target.ffmpegName}（${target.label}）没有 movtext 编码器，'
               '桌面端片段导出永远封不进字幕。${_revendorHint()}',
         );
       });

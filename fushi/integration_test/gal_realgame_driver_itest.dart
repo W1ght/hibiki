@@ -64,22 +64,29 @@ import 'test_helpers.dart';
 
 final DynamicLibrary _user32 = DynamicLibrary.open('user32.dll');
 
-final int Function(int, int) _setCursorPos = _user32.lookupFunction<
-    Int32 Function(Int32, Int32), int Function(int, int)>('SetCursorPos');
-final int Function(int, Pointer<Uint8>, int) _sendInput =
-    _user32.lookupFunction<Uint32 Function(Uint32, Pointer<Uint8>, Int32),
-        int Function(int, Pointer<Uint8>, int)>('SendInput');
+final int Function(int, int) _setCursorPos = _user32
+    .lookupFunction<Int32 Function(Int32, Int32), int Function(int, int)>(
+      'SetCursorPos',
+    );
+final int Function(int, Pointer<Uint8>, int) _sendInput = _user32
+    .lookupFunction<
+      Uint32 Function(Uint32, Pointer<Uint8>, Int32),
+      int Function(int, Pointer<Uint8>, int)
+    >('SendInput');
 final int Function(int, int, Pointer<Utf16>, Pointer<Utf16>) _findWindowEx =
     _user32.lookupFunction<
-        IntPtr Function(IntPtr, IntPtr, Pointer<Utf16>, Pointer<Utf16>),
-        int Function(
-            int, int, Pointer<Utf16>, Pointer<Utf16>)>('FindWindowExW');
-final int Function(int) _isWindowVisible =
-    _user32.lookupFunction<Int32 Function(IntPtr), int Function(int)>(
-        'IsWindowVisible');
-final int Function(int, Pointer<Int32>) _getWindowRect = _user32.lookupFunction<
-    Int32 Function(IntPtr, Pointer<Int32>),
-    int Function(int, Pointer<Int32>)>('GetWindowRect');
+      IntPtr Function(IntPtr, IntPtr, Pointer<Utf16>, Pointer<Utf16>),
+      int Function(int, int, Pointer<Utf16>, Pointer<Utf16>)
+    >('FindWindowExW');
+final int Function(int) _isWindowVisible = _user32
+    .lookupFunction<Int32 Function(IntPtr), int Function(int)>(
+      'IsWindowVisible',
+    );
+final int Function(int, Pointer<Int32>) _getWindowRect = _user32
+    .lookupFunction<
+      Int32 Function(IntPtr, Pointer<Int32>),
+      int Function(int, Pointer<Int32>)
+    >('GetWindowRect');
 final int Function() _getForegroundWindow = _user32
     .lookupFunction<IntPtr Function(), int Function()>('GetForegroundWindow');
 
@@ -204,22 +211,26 @@ void main() {
         ..write('pid=${s.gamePid} audio=${s.audioBackend.name} ')
         ..write('fallback=${s.fallbackReason} err=${s.lastError} ')
         ..write(
-            'attached=${GalHookTextOverlayController.instance.attachedText.status.name}'
-            '/${GalHookTextOverlayController.instance.attachedText.statusReason} ')
+          'attached=${GalHookTextOverlayController.instance.attachedText.status.name}'
+          '/${GalHookTextOverlayController.instance.attachedText.statusReason} ',
+        )
         ..write('lines=${text.entries.length}');
       return sb.toString();
     }
 
     String describeLines(int n) {
       final List<TexthookerLineEntry> entries = text.entries;
-      final Iterable<TexthookerLineEntry> tail =
-          entries.length > n ? entries.sublist(entries.length - n) : entries;
+      final Iterable<TexthookerLineEntry> tail = entries.length > n
+          ? entries.sublist(entries.length - n)
+          : entries;
       return tail
-          .map((TexthookerLineEntry e) =>
-              '${e.id} audio=${e.audioStatus.name}/${e.audioBackend}/'
-              '${e.audioDurationMs}ms reason=${e.fallbackReason} '
-              'ruby=${e.rubySpans.length} '
-              'text=${e.text.replaceAll('\n', '⏎')}')
+          .map(
+            (TexthookerLineEntry e) =>
+                '${e.id} audio=${e.audioStatus.name}/${e.audioBackend}/'
+                '${e.audioDurationMs}ms reason=${e.fallbackReason} '
+                'ruby=${e.rubySpans.length} '
+                'text=${e.text.replaceAll('\n', '⏎')}',
+          )
           .join('\n    ');
     }
 
@@ -268,8 +279,9 @@ void main() {
               // attach <hwnd> <pid> [title]: 对已在运行的游戏附着捕获（同游戏页「捕获窗口」）。
               final int hwnd = int.parse(parts[1]);
               final int pid = int.parse(parts[2]);
-              final String title =
-                  parts.length > 3 ? parts.sublist(3).join(' ') : 'attached';
+              final String title = parts.length > 3
+                  ? parts.sublist(3).join(' ')
+                  : 'attached';
               await session.startAttachedCapture(
                 ExternalWindowInfo(hwnd: hwnd, pid: pid, title: title),
               );
@@ -281,19 +293,23 @@ void main() {
                   ? events.sublist(events.length - n)
                   : events;
               final String rendered = tail
-                  .map((GalHookEvent e) =>
-                      '${e.severity.name} ${e.stage}/${e.code} '
-                      '${e.summary} ${e.details}')
+                  .map(
+                    (GalHookEvent e) =>
+                        '${e.severity.name} ${e.stage}/${e.code} '
+                        '${e.summary} ${e.details}',
+                  )
                   .join('\n    ');
               out('#$seq events:\n    $rendered');
             case 'profile':
               final GalAttachedTextController attached =
                   GalHookTextOverlayController.instance.attachedText;
-              out('#$seq profile status=${attached.status.name} '
-                  'reason=${attached.statusReason} '
-                  'profile=${attached.profile?.toJson()} '
-                  'request=${attached.unsafeRiskAcceptanceRequest?.exePath}/'
-                  '${attached.unsafeRiskAcceptanceRequest?.exeSha256}');
+              out(
+                '#$seq profile status=${attached.status.name} '
+                'reason=${attached.statusReason} '
+                'profile=${attached.profile?.toJson()} '
+                'request=${attached.unsafeRiskAcceptanceRequest?.exePath}/'
+                '${attached.unsafeRiskAcceptanceRequest?.exeSha256}',
+              );
             case 'accept':
               final GalAttachedTextController attached =
                   GalHookTextOverlayController.instance.attachedText;
@@ -303,8 +319,9 @@ void main() {
                 out('#$seq accept: no pending request');
                 break;
               }
-              final bool accepted =
-                  await attached.acceptUnsafeRiskAndRetry(request);
+              final bool accepted = await attached.acceptUnsafeRiskAndRetry(
+                request,
+              );
               out('#$seq accept=$accepted ${describeState()}');
             case 'calibrate':
               // calibrate <l> <t> <w> <h> [fontPerH] [lineHeight] [align] [valign]
@@ -314,8 +331,10 @@ void main() {
               final GalAttachedSurfaceTarget? target = attached.target;
               final GalLookupReferenceClientV1? client = attached.currentClient;
               if (target == null || client == null) {
-                out('#$seq calibrate: no target/client '
-                    '(status=${attached.status.name})');
+                out(
+                  '#$seq calibrate: no target/client '
+                  '(status=${attached.status.name})',
+                );
                 break;
               }
               double at(int i, double fallback) => parts.length > i
@@ -325,11 +344,11 @@ void main() {
                   parts.length > i ? parts[i] : fallback;
               final GalLookupNormalizedRectV1 bodyRect =
                   GalLookupNormalizedRectV1(
-                left: at(1, 0.08),
-                top: at(2, 0.68),
-                width: at(3, 0.84),
-                height: at(4, 0.24),
-              );
+                    left: at(1, 0.08),
+                    top: at(2, 0.68),
+                    width: at(3, 0.84),
+                    height: at(4, 0.24),
+                  );
               final GalLookupTextLayoutV1 layout = GalLookupTextLayoutV1(
                 fontFamily: 'Yu Gothic',
                 fontSizePerClientHeight: at(5, 0.045),
@@ -349,9 +368,11 @@ void main() {
                 ),
               );
               await tester.pump(const Duration(milliseconds: 300));
-              out('#$seq calibrate committed rect=$bodyRect '
-                  'font=${layout.fontSizePerClientHeight} '
-                  'lh=${layout.lineHeight} -> ${describeState()}');
+              out(
+                '#$seq calibrate committed rect=$bodyRect '
+                'font=${layout.fontSizePerClientHeight} '
+                'lh=${layout.lineHeight} -> ${describeState()}',
+              );
               out('#$seq profile=${attached.profile?.toJson()}');
             case 'mine':
               final ProviderContainer container = ProviderScope.containerOf(
@@ -365,8 +386,8 @@ void main() {
                 break;
               }
               final TexthookerLineEntry entry = lines.last;
-              final BaseAnkiRepository repo =
-                  appModel.platformServices.createAnkiRepository();
+              final BaseAnkiRepository repo = appModel.platformServices
+                  .createAnkiRepository();
               final GalHookMiningCoordinator coordinator =
                   GalHookMiningCoordinator();
               final GalHookMiningResult result = await coordinator.mineLine(
@@ -383,18 +404,20 @@ void main() {
                 animatedFormat: appModel.galMiningAnimatedFormat,
                 stillFormat: appModel.galMiningStillFormat,
               );
-              out('#$seq mine lineId=${entry.id} '
-                  'imageMode=${appModel.galMiningImageMode.name} '
-                  'animated=${appModel.galMiningAnimatedFormat.name} '
-                  'result=${result.outcome?.result.name} '
-                  'noteId=${result.outcome?.noteId} '
-                  'aborted=${result.aborted} success=${result.success} '
-                  'audioMissing=${result.sentenceAudioMissing} '
-                  'audioWarning=${result.outcome?.audioWarning} '
-                  'audioFallbackDisabled=${result.audioFallbackDisabled} '
-                  'degradedToStill=${result.degradedToStill} '
-                  'failureReason=${result.failureReason} '
-                  'text=${entry.text.replaceAll('\n', '⏎')}');
+              out(
+                '#$seq mine lineId=${entry.id} '
+                'imageMode=${appModel.galMiningImageMode.name} '
+                'animated=${appModel.galMiningAnimatedFormat.name} '
+                'result=${result.outcome?.result.name} '
+                'noteId=${result.outcome?.noteId} '
+                'aborted=${result.aborted} success=${result.success} '
+                'audioMissing=${result.sentenceAudioMissing} '
+                'audioWarning=${result.outcome?.audioWarning} '
+                'audioFallbackDisabled=${result.audioFallbackDisabled} '
+                'degradedToStill=${result.degradedToStill} '
+                'failureReason=${result.failureReason} '
+                'text=${entry.text.replaceAll('\n', '⏎')}',
+              );
             case 'thread':
               // 只传 native threadId 会让 Dart 侧 `_selectedTextThreadKey` 留空，
               // 而 `selectedSessionLines` 在 key 为空时**恒返回空表**——工作台看得见
@@ -417,9 +440,11 @@ void main() {
             case 'threads':
               final StringBuffer sb = StringBuffer('#$seq threads:');
               for (final TexthookerTextThread thread in session.textThreads) {
-                sb.write('\n    key=${thread.key} '
-                    'native=${thread.nativeThreadId} '
-                    'lines=${thread.lineCount} label=${thread.label}');
+                sb.write(
+                  '\n    key=${thread.key} '
+                  'native=${thread.nativeThreadId} '
+                  'lines=${thread.lineCount} label=${thread.label}',
+                );
               }
               out(sb.toString());
             case 'state':
@@ -428,36 +453,43 @@ void main() {
               final GalAttachedTextController attached =
                   GalHookTextOverlayController.instance.attachedText;
               final GalAttachedShieldStatus sh = attached.shieldStatus;
-              out('#$seq shield available=${sh.available} '
-                  'conclusion=${sh.conclusion.name} '
-                  'request=${sh.requestSeq} applied=${sh.appliedSeq} '
-                  'requiredMask=0x${sh.requiredMask.toRadixString(16)} '
-                  'readyMask=0x${sh.readyMask.toRadixString(16)} '
-                  'observedMask=0x${sh.observedMask.toRadixString(16)} '
-                  'faultMask=0x${sh.faultMask.toRadixString(16)} '
-                  'statusFlags=0x${sh.statusFlags.toRadixString(16)} '
-                  'status=${attached.status.name}/${attached.statusReason}');
+              out(
+                '#$seq shield available=${sh.available} '
+                'conclusion=${sh.conclusion.name} '
+                'request=${sh.requestSeq} applied=${sh.appliedSeq} '
+                'requiredMask=0x${sh.requiredMask.toRadixString(16)} '
+                'readyMask=0x${sh.readyMask.toRadixString(16)} '
+                'observedMask=0x${sh.observedMask.toRadixString(16)} '
+                'faultMask=0x${sh.faultMask.toRadixString(16)} '
+                'statusFlags=0x${sh.statusFlags.toRadixString(16)} '
+                'status=${attached.status.name}/${attached.statusReason}',
+              );
             case 'srctext':
               final GalAttachedTextController attached =
                   GalHookTextOverlayController.instance.attachedText;
               final List<TexthookerLineEntry> selected =
                   session.selectedSessionLines;
-              final TexthookerLineEntry? last =
-                  selected.isEmpty ? null : selected.last;
-              out('#$seq srctext attachedLatest='
-                  '"${attached.latestSourceText}" '
-                  'selectedCount=${selected.length} '
-                  'lastRuby=${last?.rubySpans.length} '
-                  'lastText="${last?.text}"');
+              final TexthookerLineEntry? last = selected.isEmpty
+                  ? null
+                  : selected.last;
+              out(
+                '#$seq srctext attachedLatest='
+                '"${attached.latestSourceText}" '
+                'selectedCount=${selected.length} '
+                'lastRuby=${last?.rubySpans.length} '
+                'lastText="${last?.text}"',
+              );
             case 'lines':
               final int n = parts.length > 1 ? int.parse(parts[1]) : 5;
               out('#$seq lines:\n    ${describeLines(n)}');
             case 'windows':
-              final StringBuffer sb =
-                  StringBuffer('#$seq windows fg=${_getForegroundWindow()}');
+              final StringBuffer sb = StringBuffer(
+                '#$seq windows fg=${_getForegroundWindow()}',
+              );
               for (final w in _lookupWindows()) {
                 sb.write(
-                    '\n    hwnd=${w.hwnd} visible=${w.visible} rect=${w.rect}');
+                  '\n    hwnd=${w.hwnd} visible=${w.visible} rect=${w.rect}',
+                );
               }
               out(sb.toString());
             case 'shot':
@@ -487,7 +519,9 @@ void main() {
               shotSeq++;
               final File png = File(p.join(dir.path, 'shot_$shotSeq.png'));
               png.writeAsBytesSync(cap.pngBytes!, flush: true);
-              out('#$seq shot $target hwnd=$hwnd rect=${_rectOf(hwnd)} -> ${png.path}');
+              out(
+                '#$seq shot $target hwnd=$hwnd rect=${_rectOf(hwnd)} -> ${png.path}',
+              );
             case 'click':
               await _clickAt(int.parse(parts[1]), int.parse(parts[2]));
               out('#$seq click ${parts[1]},${parts[2]}');

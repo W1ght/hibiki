@@ -44,13 +44,13 @@ class SubtitlePos {
 class SubtitleFade {
   /// `\fad(fadeInMs, fadeOutMs)` 简式。
   const SubtitleFade.simple(this.fadeInMs, this.fadeOutMs)
-      : _op1 = 0.0,
-        _op2 = 1.0,
-        _op3 = 0.0,
-        _t1 = null,
-        _t2 = null,
-        _t3 = null,
-        _t4 = null;
+    : _op1 = 0.0,
+      _op2 = 1.0,
+      _op3 = 0.0,
+      _t1 = null,
+      _t2 = null,
+      _t3 = null,
+      _t4 = null;
 
   /// `\fade(...)` 全式（alpha 已换算成 op 0..1，时间为绝对毫秒）。
   const SubtitleFade.full({
@@ -61,15 +61,15 @@ class SubtitleFade {
     required int t2,
     required int t3,
     required int t4,
-  })  : fadeInMs = 0,
-        fadeOutMs = 0,
-        _op1 = op1,
-        _op2 = op2,
-        _op3 = op3,
-        _t1 = t1,
-        _t2 = t2,
-        _t3 = t3,
-        _t4 = t4;
+  }) : fadeInMs = 0,
+       fadeOutMs = 0,
+       _op1 = op1,
+       _op2 = op2,
+       _op3 = op3,
+       _t1 = t1,
+       _t2 = t2,
+       _t3 = t3,
+       _t4 = t4;
 
   /// 简式淡入 / 淡出毫秒（全式恒 0，收尾时间走 [_t3]/[_t4]）。
   final int fadeInMs;
@@ -98,8 +98,16 @@ class SubtitleFade {
     return _evaluate(elapsedMs, t1, t2, t3, t4, _op1, _op2, _op3);
   }
 
-  static double _evaluate(int t, int t1, int t2, int t3, int t4, double op1,
-      double op2, double op3) {
+  static double _evaluate(
+    int t,
+    int t1,
+    int t2,
+    int t3,
+    int t4,
+    double op1,
+    double op2,
+    double op3,
+  ) {
     // 淡入段（含之前）：仅当 t<t2 才可能是 op1 / 入坡。零宽入坡（t1==t2，如 \fad(0,..)）时
     // t==t1 直接落到平台 op2（瞬时不透明），不会误显 op1（透明），也避免除零。
     if (t < t2) {
@@ -368,20 +376,25 @@ class SubtitleClipSegment {
   final double x2, y2;
   final double x3, y3;
   const SubtitleClipSegment.move(this.x1, this.y1)
-      : op = SubtitleClipOp.move,
-        x2 = 0,
-        y2 = 0,
-        x3 = 0,
-        y3 = 0;
+    : op = SubtitleClipOp.move,
+      x2 = 0,
+      y2 = 0,
+      x3 = 0,
+      y3 = 0;
   const SubtitleClipSegment.line(this.x1, this.y1)
-      : op = SubtitleClipOp.line,
-        x2 = 0,
-        y2 = 0,
-        x3 = 0,
-        y3 = 0;
+    : op = SubtitleClipOp.line,
+      x2 = 0,
+      y2 = 0,
+      x3 = 0,
+      y3 = 0;
   const SubtitleClipSegment.cubic(
-      this.x1, this.y1, this.x2, this.y2, this.x3, this.y3)
-      : op = SubtitleClipOp.cubic;
+    this.x1,
+    this.y1,
+    this.x2,
+    this.y2,
+    this.x3,
+    this.y3,
+  ) : op = SubtitleClipOp.cubic;
 }
 
 enum SubtitleClipOp { move, line, cubic }
@@ -415,19 +428,24 @@ SubtitleClip? parseAssClip({
   final List<SubtitleClipSegment> segments = <SubtitleClipSegment>[];
 
   // 矩形形式：恰好 4 个纯数字参数。
-  final List<String> csv =
-      inner.split(',').map((String p) => p.trim()).toList();
+  final List<String> csv = inner
+      .split(',')
+      .map((String p) => p.trim())
+      .toList();
   if (csv.length == 4 && csv.every((String p) => double.tryParse(p) != null)) {
     final double x1 = double.parse(csv[0]) / playResX;
     final double y1 = double.parse(csv[1]) / playResY;
     final double x2 = double.parse(csv[2]) / playResX;
     final double y2 = double.parse(csv[3]) / playResY;
-    return SubtitleClip(inverse: inverse, segments: <SubtitleClipSegment>[
-      SubtitleClipSegment.move(x1, y1),
-      SubtitleClipSegment.line(x2, y1),
-      SubtitleClipSegment.line(x2, y2),
-      SubtitleClipSegment.line(x1, y2),
-    ]);
+    return SubtitleClip(
+      inverse: inverse,
+      segments: <SubtitleClipSegment>[
+        SubtitleClipSegment.move(x1, y1),
+        SubtitleClipSegment.line(x2, y1),
+        SubtitleClipSegment.line(x2, y2),
+        SubtitleClipSegment.line(x1, y2),
+      ],
+    );
   }
 
   // 绘图形式：可选前导 `scale,`（单个正整数）+ 命令串。
@@ -441,34 +459,46 @@ SubtitleClip? parseAssClip({
       divisor = 1 << (scale - 1) == 0 ? 1.0 : (1 << (scale - 1)).toDouble();
     }
   }
-  final List<String> tokens =
-      drawing.split(RegExp(r'\s+')).where((String t) => t.isNotEmpty).toList();
+  final List<String> tokens = drawing
+      .split(RegExp(r'\s+'))
+      .where((String t) => t.isNotEmpty)
+      .toList();
   int i = 0;
   String mode = '';
   final List<double> nums = <double>[];
   void flushNums() {
     if (mode == 'm' || mode == 'n') {
       for (int k = 0; k + 1 < nums.length; k += 2) {
-        segments.add(SubtitleClipSegment.move(
-            nums[k] / divisor / playResX, nums[k + 1] / divisor / playResY));
+        segments.add(
+          SubtitleClipSegment.move(
+            nums[k] / divisor / playResX,
+            nums[k + 1] / divisor / playResY,
+          ),
+        );
       }
     } else if (mode == 'l' || mode == 's' || mode == 'p') {
       // s（B 样条）按折线近似；p（延长点）并入折线近似。
       if (mode == 'p') return;
       for (int k = 0; k + 1 < nums.length; k += 2) {
-        segments.add(SubtitleClipSegment.line(
-            nums[k] / divisor / playResX, nums[k + 1] / divisor / playResY));
+        segments.add(
+          SubtitleClipSegment.line(
+            nums[k] / divisor / playResX,
+            nums[k + 1] / divisor / playResY,
+          ),
+        );
       }
     } else if (mode == 'b') {
       for (int k = 0; k + 5 < nums.length; k += 6) {
-        segments.add(SubtitleClipSegment.cubic(
-          nums[k] / divisor / playResX,
-          nums[k + 1] / divisor / playResY,
-          nums[k + 2] / divisor / playResX,
-          nums[k + 3] / divisor / playResY,
-          nums[k + 4] / divisor / playResX,
-          nums[k + 5] / divisor / playResY,
-        ));
+        segments.add(
+          SubtitleClipSegment.cubic(
+            nums[k] / divisor / playResX,
+            nums[k + 1] / divisor / playResY,
+            nums[k + 2] / divisor / playResX,
+            nums[k + 3] / divisor / playResY,
+            nums[k + 4] / divisor / playResX,
+            nums[k + 5] / divisor / playResY,
+          ),
+        );
       }
     }
     nums.clear();
@@ -833,11 +863,13 @@ class _Style {
 /// 支持行内 `\blur`/`\be`（辉光）、行级 `\fad`/`\fade`（淡入淡出，TODO-1373）、`\frz` 旋转
 /// / `\fscx`\`\fscy`(+`\t`) 缩放 / `\move` 运动（TODO-1374）。其余不支持的标签（卡拉OK `\k`、
 /// 3D 旋转 `\frx`/`\fry`、`\clip`、绘图 `\p` 正文等）静默删除，既不显示控制码也不产出样式。
-SubtitleMarkup parseSubtitleMarkup(String raw,
-    {double? playResX,
-    double? playResY,
-    SubtitleCueStyle? cueStyle,
-    int layer = 0}) {
+SubtitleMarkup parseSubtitleMarkup(
+  String raw, {
+  double? playResX,
+  double? playResY,
+  SubtitleCueStyle? cueStyle,
+  int layer = 0,
+}) {
   final List<({String text, _Style style})> segments =
       <({String text, _Style style})>[];
   final StringBuffer cur = StringBuffer();
@@ -915,8 +947,10 @@ SubtitleMarkup parseSubtitleMarkup(String raw,
     final ({String text, _Style style}) first = segments.first;
     segments[0] = (text: first.text.trimLeft(), style: first.style);
     final ({String text, _Style style}) last = segments.last;
-    segments[segments.length - 1] =
-        (text: last.text.trimRight(), style: last.style);
+    segments[segments.length - 1] = (
+      text: last.text.trimRight(),
+      style: last.style,
+    );
     segments.removeWhere((({String text, _Style style}) s) => s.text.isEmpty);
   }
 
@@ -926,29 +960,31 @@ SubtitleMarkup parseSubtitleMarkup(String raw,
   for (final ({String text, _Style style}) seg in segments) {
     final int len = seg.text.characters.length;
     if (seg.style.hasStyle && len > 0) {
-      spans.add(SubtitleSpan(
-        startGrapheme: g,
-        endGrapheme: g + len,
-        italic: seg.style.italic,
-        bold: seg.style.bold,
-        underline: seg.style.underline,
-        strike: seg.style.strike,
-        colorArgb: seg.style.colorArgb,
-        fontSizePx: seg.style.fontSizePx,
-        fontName: seg.style.fontName,
-        outlineColorArgb: seg.style.outlineColorArgb,
-        shadowColorArgb: seg.style.shadowColorArgb,
-        outlineWidthPx: seg.style.outlineWidthPx,
-        shadowDepthPx: seg.style.shadowDepthPx,
-        blur: seg.style.blur,
-        fillOpacity: seg.style.fillOpacity,
-        letterSpacingPx: seg.style.letterSpacingPx,
-        scaleX: seg.style.scaleX,
-        scaleY: seg.style.scaleY,
-        kMode: seg.style.kMode,
-        kStartCs: seg.style.kStartCs,
-        kDurCs: seg.style.kDurCs,
-      ));
+      spans.add(
+        SubtitleSpan(
+          startGrapheme: g,
+          endGrapheme: g + len,
+          italic: seg.style.italic,
+          bold: seg.style.bold,
+          underline: seg.style.underline,
+          strike: seg.style.strike,
+          colorArgb: seg.style.colorArgb,
+          fontSizePx: seg.style.fontSizePx,
+          fontName: seg.style.fontName,
+          outlineColorArgb: seg.style.outlineColorArgb,
+          shadowColorArgb: seg.style.shadowColorArgb,
+          outlineWidthPx: seg.style.outlineWidthPx,
+          shadowDepthPx: seg.style.shadowDepthPx,
+          blur: seg.style.blur,
+          fillOpacity: seg.style.fillOpacity,
+          letterSpacingPx: seg.style.letterSpacingPx,
+          scaleX: seg.style.scaleX,
+          scaleY: seg.style.scaleY,
+          kMode: seg.style.kMode,
+          kStartCs: seg.style.kStartCs,
+          kDurCs: seg.style.kDurCs,
+        ),
+      );
     }
     plain.write(seg.text);
     g += len;
@@ -968,8 +1004,14 @@ SubtitleMarkup parseSubtitleMarkup(String raw,
         )
       : null;
   final SubtitleMove? move = xf.moveSet
-      ? SubtitleMove(xf.mx1!, xf.my1!, xf.mx2!, xf.my2!,
-          t1Ms: xf.mt1, t2Ms: xf.mt2)
+      ? SubtitleMove(
+          xf.mx1!,
+          xf.my1!,
+          xf.mx2!,
+          xf.my2!,
+          t1Ms: xf.mt1,
+          t2Ms: xf.mt2,
+        )
       : null;
 
   // \N 硬换行占位（'\n'）→ 下标记录 + 替换回空格（plainText 与历史逐字节一致，查词 /
@@ -1028,8 +1070,9 @@ void _applyOverrideBlock(
   // \t(...) 动画：内含 \fscy 等带反斜杠的子标签，会被下面 split('\\') 打碎，故先整体抽出
   // 记录目标，再从 block 里剔除（TODO-1374）。目标缩放的「起点」用后续静态 \fscx\fscy 累积值
   // （在下方循环里设），故此处只记 (t1,t2) 与目标倍数，实际 from 在扫描结束时归一。
-  final String working =
-      block.replaceAllMapped(RegExp(r'\\t\(([^)]*)\)'), (Match m) {
+  final String working = block.replaceAllMapped(RegExp(r'\\t\(([^)]*)\)'), (
+    Match m,
+  ) {
     _parseTransition(m.group(1) ?? '', xf);
     return '';
   });
@@ -1043,16 +1086,17 @@ void _applyOverrideBlock(
     // \an<d> / \a<d>（旧式）
     final RegExpMatch? an = RegExp(r'^an?([1-9])$').firstMatch(tag);
     if (an != null) {
-      final SubtitleAnchor? a =
-          SubtitleAnchor.fromAnCode(int.parse(an.group(1)!));
+      final SubtitleAnchor? a = SubtitleAnchor.fromAnCode(
+        int.parse(an.group(1)!),
+      );
       if (a != null) setAnchor(a);
       continue;
     }
 
     // \pos(x,y)
-    final RegExpMatch? p =
-        RegExp(r'^pos\(\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*\)$')
-            .firstMatch(tag);
+    final RegExpMatch? p = RegExp(
+      r'^pos\(\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*\)$',
+    ).firstMatch(tag);
     if (p != null &&
         playResX != null &&
         playResY != null &&
@@ -1089,24 +1133,27 @@ void _applyOverrideBlock(
     }
 
     // \c&H..& / \1c&H..&（主色，BGR）
-    final RegExpMatch? col =
-        RegExp(r'^1?c&H([0-9a-fA-F]{1,8})&?$').firstMatch(tag);
+    final RegExpMatch? col = RegExp(
+      r'^1?c&H([0-9a-fA-F]{1,8})&?$',
+    ).firstMatch(tag);
     if (col != null) {
       style.colorArgb = assColorToArgb(col.group(1)!);
       continue;
     }
 
     // \3c&H..&（描边色，BGR，TODO-1105）
-    final RegExpMatch? col3 =
-        RegExp(r'^3c&H([0-9a-fA-F]{1,8})&?$').firstMatch(tag);
+    final RegExpMatch? col3 = RegExp(
+      r'^3c&H([0-9a-fA-F]{1,8})&?$',
+    ).firstMatch(tag);
     if (col3 != null) {
       style.outlineColorArgb = assColorToArgb(col3.group(1)!);
       continue;
     }
 
     // \4c&H..&（阴影色，BGR，TODO-1105）
-    final RegExpMatch? col4 =
-        RegExp(r'^4c&H([0-9a-fA-F]{1,8})&?$').firstMatch(tag);
+    final RegExpMatch? col4 = RegExp(
+      r'^4c&H([0-9a-fA-F]{1,8})&?$',
+    ).firstMatch(tag);
     if (col4 != null) {
       style.shadowColorArgb = assColorToArgb(col4.group(1)!);
       continue;
@@ -1142,8 +1189,9 @@ void _applyOverrideBlock(
 
     // \blur<n> / \be<n>：辉光边缘模糊（TODO-1373）。两者都软化字形边缘成辉光，归一到
     // 同一 `blur` 强度字段（span 级，随文本作用域），消除按标签特判。value<=0 视为无。
-    final RegExpMatch? blur =
-        RegExp(r'^(?:blur|be)(\d+(?:\.\d+)?)$').firstMatch(tag);
+    final RegExpMatch? blur = RegExp(
+      r'^(?:blur|be)(\d+(?:\.\d+)?)$',
+    ).firstMatch(tag);
     if (blur != null) {
       final double v = double.parse(blur.group(1)!);
       style.blur = v > 0 ? v : null;
@@ -1151,32 +1199,34 @@ void _applyOverrideBlock(
     }
 
     // \fad(t1,t2)：行级淡入 t1ms / 淡出 t2ms（收尾依赖 cue 时长，渲染时解析，TODO-1373）。
-    final RegExpMatch? fad =
-        RegExp(r'^fad\(\s*(\d+)\s*,\s*(\d+)\s*\)$').firstMatch(tag);
+    final RegExpMatch? fad = RegExp(
+      r'^fad\(\s*(\d+)\s*,\s*(\d+)\s*\)$',
+    ).firstMatch(tag);
     if (fad != null) {
-      setFade(SubtitleFade.simple(
-        int.parse(fad.group(1)!),
-        int.parse(fad.group(2)!),
-      ));
+      setFade(
+        SubtitleFade.simple(int.parse(fad.group(1)!), int.parse(fad.group(2)!)),
+      );
       continue;
     }
 
     // \fade(a1,a2,a3,t1,t2,t3,t4)：行级七参淡变。alpha 0..255（0=不透明）→
     // 不透明度 op=1-alpha/255；时间为绝对毫秒（TODO-1373）。
     final RegExpMatch? fade = RegExp(
-            r'^fade\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)$')
-        .firstMatch(tag);
+      r'^fade\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)$',
+    ).firstMatch(tag);
     if (fade != null) {
       double toOp(String a) => 1.0 - (int.parse(a).clamp(0, 255) / 255.0);
-      setFade(SubtitleFade.full(
-        op1: toOp(fade.group(1)!),
-        op2: toOp(fade.group(2)!),
-        op3: toOp(fade.group(3)!),
-        t1: int.parse(fade.group(4)!),
-        t2: int.parse(fade.group(5)!),
-        t3: int.parse(fade.group(6)!),
-        t4: int.parse(fade.group(7)!),
-      ));
+      setFade(
+        SubtitleFade.full(
+          op1: toOp(fade.group(1)!),
+          op2: toOp(fade.group(2)!),
+          op3: toOp(fade.group(3)!),
+          t1: int.parse(fade.group(4)!),
+          t2: int.parse(fade.group(5)!),
+          t3: int.parse(fade.group(6)!),
+          t4: int.parse(fade.group(7)!),
+        ),
+      );
       continue;
     }
 
@@ -1226,8 +1276,8 @@ void _applyOverrideBlock(
 
     // \move(x1,y1,x2,y2[,t1,t2])：行级运动（TODO-1374）。坐标按 PlayRes 归一化（同 \pos）。
     final RegExpMatch? mv = RegExp(
-            r'^move\(\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*(?:,\s*(\d+)\s*,\s*(\d+)\s*)?\)$')
-        .firstMatch(tag);
+      r'^move\(\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*(?:,\s*(\d+)\s*,\s*(\d+)\s*)?\)$',
+    ).firstMatch(tag);
     if (mv != null &&
         playResX != null &&
         playResY != null &&
@@ -1246,11 +1296,12 @@ void _applyOverrideBlock(
     // \1a&HXX& / \alpha&HXX&：主填充透明度（ASS alpha 00=不透明 FF=全透明）→
     // op=1-a/255。\alpha 一次设四通道，按主填充近似（描边/阴影 alpha 不单独建模，
     // 多层卡拉 OK 光晕层 `\1a&HFF&` 抹透明填充、留模糊描边成辉光）；\2a/\3a/\4a 忽略。
-    final RegExpMatch? a1 =
-        RegExp(r'^(?:1a|alpha)&?H?([0-9A-Fa-f]{1,2})&?$').firstMatch(tag);
+    final RegExpMatch? a1 = RegExp(
+      r'^(?:1a|alpha)&?H?([0-9A-Fa-f]{1,2})&?$',
+    ).firstMatch(tag);
     if (a1 != null) {
-      style.fillOpacity =
-          (1.0 - int.parse(a1.group(1)!, radix: 16) / 255.0).clamp(0.0, 1.0);
+      style.fillOpacity = (1.0 - int.parse(a1.group(1)!, radix: 16) / 255.0)
+          .clamp(0.0, 1.0);
       continue;
     }
 
@@ -1301,8 +1352,9 @@ void _applyOverrideBlock(
 
     // \k / \K / \kf / \ko<cs>：卡拉 OK 音节计时（厘秒）。本块起的文字段=一个音节：
     // 起点=之前音节时长累计，点亮方式 k=瞬切 / K=kf=渐变扫填近似 / ko=点亮前无描边。
-    final RegExpMatch? kar =
-        RegExp(r'^(k|K|kf|ko)(\d+(?:\.\d+)?)$').firstMatch(tag);
+    final RegExpMatch? kar = RegExp(
+      r'^(k|K|kf|ko)(\d+(?:\.\d+)?)$',
+    ).firstMatch(tag);
     if (kar != null) {
       final String mode = switch (kar.group(1)!) {
         'K' || 'kf' => 'kf',
@@ -1332,9 +1384,9 @@ void _parseTransition(String inner, _Transform xf) {
   int? t2;
   double accel = 1.0;
   String rest = inner;
-  final RegExpMatch? times =
-      RegExp(r'^\s*(-?\d+)\s*,\s*(-?\d+)\s*(?:,\s*(-?\d+(?:\.\d+)?)\s*)?,')
-          .firstMatch(inner);
+  final RegExpMatch? times = RegExp(
+    r'^\s*(-?\d+)\s*,\s*(-?\d+)\s*(?:,\s*(-?\d+(?:\.\d+)?)\s*)?,',
+  ).firstMatch(inner);
   if (times != null) {
     t1 = int.parse(times.group(1)!);
     t2 = int.parse(times.group(2)!);
@@ -1342,8 +1394,9 @@ void _parseTransition(String inner, _Transform xf) {
     rest = inner.substring(times.end);
   } else {
     // 纯加速度形式：`accel,<子标签>`。
-    final RegExpMatch? onlyAccel =
-        RegExp(r'^\s*(-?\d+(?:\.\d+)?)\s*,').firstMatch(inner);
+    final RegExpMatch? onlyAccel = RegExp(
+      r'^\s*(-?\d+(?:\.\d+)?)\s*,',
+    ).firstMatch(inner);
     if (onlyAccel != null) {
       accel = double.parse(onlyAccel.group(1)!);
       rest = inner.substring(onlyAccel.end);
@@ -1365,17 +1418,22 @@ void _parseTransition(String inner, _Transform xf) {
   double? blurTo;
   double? bordTo;
   double? frzTo;
-  final RegExpMatch? ta =
-      RegExp(r'\\(?:1a|alpha)&?H?([0-9A-Fa-f]{1,2})&?').firstMatch(rest);
+  final RegExpMatch? ta = RegExp(
+    r'\\(?:1a|alpha)&?H?([0-9A-Fa-f]{1,2})&?',
+  ).firstMatch(rest);
   if (ta != null) {
-    alphaTo =
-        (1.0 - int.parse(ta.group(1)!, radix: 16) / 255.0).clamp(0.0, 1.0);
+    alphaTo = (1.0 - int.parse(ta.group(1)!, radix: 16) / 255.0).clamp(
+      0.0,
+      1.0,
+    );
   }
-  final RegExpMatch? tc =
-      RegExp(r'\\1?c&H([0-9A-Fa-f]{1,8})&?').firstMatch(rest);
+  final RegExpMatch? tc = RegExp(
+    r'\\1?c&H([0-9A-Fa-f]{1,8})&?',
+  ).firstMatch(rest);
   if (tc != null) colorTo = assColorToArgb(tc.group(1)!);
-  final RegExpMatch? tb =
-      RegExp(r'\\(?:blur|be)(\d+(?:\.\d+)?)').firstMatch(rest);
+  final RegExpMatch? tb = RegExp(
+    r'\\(?:blur|be)(\d+(?:\.\d+)?)',
+  ).firstMatch(rest);
   if (tb != null) blurTo = double.parse(tb.group(1)!);
   final RegExpMatch? tbo = RegExp(r'\\bord(\d+(?:\.\d+)?)').firstMatch(rest);
   if (tbo != null) bordTo = double.parse(tbo.group(1)!);

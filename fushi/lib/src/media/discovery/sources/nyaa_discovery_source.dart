@@ -21,9 +21,10 @@ class NyaaDiscoverySource extends MediaDiscoverySource {
     required NyaaClient client,
     this.priority = 10,
     this.trustedOnly = false,
-  })  : _categoryByKind =
-            Map<DiscoveryMediaKind, String>.unmodifiable(categoryByKind),
-        _client = client;
+  }) : _categoryByKind = Map<DiscoveryMediaKind, String>.unmodifiable(
+         categoryByKind,
+       ),
+       _client = client;
 
   @override
   final String id;
@@ -41,10 +42,8 @@ class NyaaDiscoverySource extends MediaDiscoverySource {
   final NyaaClient _client;
 
   @override
-  DiscoveryCapabilities get capabilities => DiscoveryCapabilities(
-        kinds: _categoryByKind.keys,
-        supportsPaging: true,
-      );
+  DiscoveryCapabilities get capabilities =>
+      DiscoveryCapabilities(kinds: _categoryByKind.keys, supportsPaging: true);
 
   @override
   Future<ProviderBatchResult<DiscoveryResultPage>> search(
@@ -81,8 +80,11 @@ class NyaaDiscoverySource extends MediaDiscoverySource {
                 payloadKind: DiscoveryPayloadKind.torrent,
                 payload: DiscoveryTorrentPayload(magnetUri: torrent.magnet),
                 sizeBytes: torrent.sizeBytes,
-                dateText:
-                    torrent.pubDate?.toLocal().toString().split('.').first,
+                dateText: torrent.pubDate
+                    ?.toLocal()
+                    .toString()
+                    .split('.')
+                    .first,
                 seeders: torrent.seeders,
                 leechers: torrent.leechers,
                 detailUrl: torrent.pageUrl,

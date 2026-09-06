@@ -34,10 +34,14 @@ class OcrRect {
 
   /// 与 [other] 的交并比。
   double iou(OcrRect other) {
-    final double ix =
-        math.max(0, math.min(right, other.right) - math.max(left, other.left));
-    final double iy =
-        math.max(0, math.min(bottom, other.bottom) - math.max(top, other.top));
+    final double ix = math.max(
+      0,
+      math.min(right, other.right) - math.max(left, other.left),
+    );
+    final double iy = math.max(
+      0,
+      math.min(bottom, other.bottom) - math.max(top, other.top),
+    );
     final double inter = ix * iy;
     if (inter <= 0) {
       return 0;
@@ -55,25 +59,25 @@ class OcrRect {
       math.min(right, other.right) > math.max(left, other.left);
 
   OcrRect clamp(double maxWidth, double maxHeight) => OcrRect(
-        left: left.clamp(0, maxWidth),
-        top: top.clamp(0, maxHeight),
-        right: right.clamp(0, maxWidth),
-        bottom: bottom.clamp(0, maxHeight),
-      );
+    left: left.clamp(0, maxWidth),
+    top: top.clamp(0, maxHeight),
+    right: right.clamp(0, maxWidth),
+    bottom: bottom.clamp(0, maxHeight),
+  );
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'left': left,
-        'top': top,
-        'right': right,
-        'bottom': bottom,
-      };
+    'left': left,
+    'top': top,
+    'right': right,
+    'bottom': bottom,
+  };
 
   static OcrRect fromJson(Map<String, dynamic> json) => OcrRect(
-        left: (json['left'] as num).toDouble(),
-        top: (json['top'] as num).toDouble(),
-        right: (json['right'] as num).toDouble(),
-        bottom: (json['bottom'] as num).toDouble(),
-      );
+    left: (json['left'] as num).toDouble(),
+    top: (json['top'] as num).toDouble(),
+    right: (json['right'] as num).toDouble(),
+    bottom: (json['bottom'] as num).toDouble(),
+  );
 
   @override
   String toString() =>
@@ -134,20 +138,20 @@ class OcrBlock {
   final bool insideBubble;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'box': box.toJson(),
-        'vertical': vertical,
-        'lines': lines,
-        'score': score,
-        'insideBubble': insideBubble,
-      };
+    'box': box.toJson(),
+    'vertical': vertical,
+    'lines': lines,
+    'score': score,
+    'insideBubble': insideBubble,
+  };
 
   static OcrBlock fromJson(Map<String, dynamic> json) => OcrBlock(
-        box: OcrRect.fromJson(json['box'] as Map<String, dynamic>),
-        vertical: json['vertical'] as bool,
-        lines: (json['lines'] as List<dynamic>).cast<String>(),
-        score: (json['score'] as num?)?.toDouble() ?? 0,
-        insideBubble: json['insideBubble'] as bool? ?? false,
-      );
+    box: OcrRect.fromJson(json['box'] as Map<String, dynamic>),
+    vertical: json['vertical'] as bool,
+    lines: (json['lines'] as List<dynamic>).cast<String>(),
+    score: (json['score'] as num?)?.toDouble() ?? 0,
+    insideBubble: json['insideBubble'] as bool? ?? false,
+  );
 }
 
 /// 单页 OCR 结果（阅读顺序已排好）。
@@ -165,20 +169,20 @@ class OcrPageResult {
   final List<OcrBlock> blocks;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'pageIndex': pageIndex,
-        'imageWidth': imageWidth,
-        'imageHeight': imageHeight,
-        'blocks': blocks.map((OcrBlock b) => b.toJson()).toList(),
-      };
+    'pageIndex': pageIndex,
+    'imageWidth': imageWidth,
+    'imageHeight': imageHeight,
+    'blocks': blocks.map((OcrBlock b) => b.toJson()).toList(),
+  };
 
   static OcrPageResult fromJson(Map<String, dynamic> json) => OcrPageResult(
-        pageIndex: json['pageIndex'] as int,
-        imageWidth: json['imageWidth'] as int,
-        imageHeight: json['imageHeight'] as int,
-        blocks: (json['blocks'] as List<dynamic>)
-            .map((dynamic b) => OcrBlock.fromJson(b as Map<String, dynamic>))
-            .toList(),
-      );
+    pageIndex: json['pageIndex'] as int,
+    imageWidth: json['imageWidth'] as int,
+    imageHeight: json['imageHeight'] as int,
+    blocks: (json['blocks'] as List<dynamic>)
+        .map((dynamic b) => OcrBlock.fromJson(b as Map<String, dynamic>))
+        .toList(),
+  );
 }
 
 /// 检测器窄接口（pipeline 依赖它而非具体实现，测试可 fake）。

@@ -39,12 +39,11 @@ void main() {
     File dest(String name) => File('${dir.path}/$name');
 
     Future<void> runOk(String id) => manager.startVideoDownload(
-          id: id,
-          title: id,
-          dest: dest('$id.mp4'),
-          run: (File target,
-              {void Function(double progress)? onProgress}) async {},
-        );
+      id: id,
+      title: id,
+      dest: dest('$id.mp4'),
+      run: (File target, {void Function(double progress)? onProgress}) async {},
+    );
 
     test('结束态有界保留：超过 maxFinishedTasks 的最旧任务被淘汰（不再只增不减）', () async {
       const int cap = InterconnectDownloadManager.maxFinishedTasks;
@@ -74,7 +73,9 @@ void main() {
 
       await runOk('v1');
       expect(
-          manager.taskFor('v1')!.status, InterconnectDownloadStatus.completed);
+        manager.taskFor('v1')!.status,
+        InterconnectDownloadStatus.completed,
+      );
       expect(manager.tasks.length, 1);
     });
 
@@ -94,8 +95,11 @@ void main() {
       for (int i = 0; i < cap + 5; i++) {
         await runOk('v$i');
       }
-      expect(manager.isRunning('running'), isTrue,
-          reason: '进行中的任务被淘汰会让占位卡的进度环凭空消失');
+      expect(
+        manager.isRunning('running'),
+        isTrue,
+        reason: '进行中的任务被淘汰会让占位卡的进度环凭空消失',
+      );
       released = true;
       await pending;
     });
@@ -127,8 +131,10 @@ void main() {
         isNot(equals(InterconnectDownloadManager.bookTaskId('X'))),
       );
 
-      Future<void> ok(File target,
-          {void Function(double progress)? onProgress}) async {}
+      Future<void> ok(
+        File target, {
+        void Function(double progress)? onProgress,
+      }) async {}
 
       await runOk('X'); // 视频任务（裸键）
       await manager.startBookDownload(
@@ -143,10 +149,15 @@ void main() {
         dest: dest('X.fushiaudio'),
         run: ok,
       );
-      expect(manager.tasks.length, 3,
-          reason: '同名 id 的视频/书/SRT 任务必须各占一格；共享任务表撞键会互相顶掉状态');
       expect(
-          manager.taskFor('X')!.status, InterconnectDownloadStatus.completed);
+        manager.tasks.length,
+        3,
+        reason: '同名 id 的视频/书/SRT 任务必须各占一格；共享任务表撞键会互相顶掉状态',
+      );
+      expect(
+        manager.taskFor('X')!.status,
+        InterconnectDownloadStatus.completed,
+      );
       expect(
         manager.taskFor(InterconnectDownloadManager.bookTaskId('X'))!.status,
         InterconnectDownloadStatus.completed,
@@ -170,8 +181,9 @@ void main() {
         ),
         throwsA(isA<SocketException>()),
       );
-      final InterconnectDownloadTask task =
-          manager.taskFor(InterconnectDownloadManager.bookTaskId('b1'))!;
+      final InterconnectDownloadTask task = manager.taskFor(
+        InterconnectDownloadManager.bookTaskId('b1'),
+      )!;
       expect(task.status, InterconnectDownloadStatus.failed);
       expect(task.error, equals(t.sync_err_network));
     });
@@ -195,8 +207,8 @@ void main() {
 
   group('远端占位卡把失败态渲染出来', () {
     String pageSource() => File(
-          'lib/src/pages/implementations/home_video_page.dart',
-        ).readAsStringSync().replaceAll('\r\n', '\n');
+      'lib/src/pages/implementations/home_video_page.dart',
+    ).readAsStringSync().replaceAll('\r\n', '\n');
 
     test('角标按任务状态分流：running → 进度环，failed → 失败角标', () {
       final String badge = methodBody(
@@ -204,15 +216,25 @@ void main() {
         '  Widget? _remoteDownloadBadge(RemoteVideoInfo video, String safeKey)',
       );
       expect(
-          containsCodeLine(badge, 'InterconnectDownloadStatus.failed'), isTrue,
-          reason: '失败态不分流 = 失败永远没有卡片出口（旧实现只看 isRunning）');
-      expect(containsIdentifierCall(badge, 'RemoteDownloadFailedBadge'), isTrue,
-          reason: '失败角标是失败态唯一恒定的出口（SnackBar 会被 !mounted 吃掉）');
+        containsCodeLine(badge, 'InterconnectDownloadStatus.failed'),
+        isTrue,
+        reason: '失败态不分流 = 失败永远没有卡片出口（旧实现只看 isRunning）',
+      );
       expect(
-          containsIdentifierCall(badge, 'RemoteDownloadProgressBadge'), isTrue,
-          reason: '进行中仍要显示进度环');
-      expect(containsCodeLine(badge, 'task.error'), isTrue,
-          reason: 'tooltip 必须带真实错误文本，否则用户只知道「失败了」');
+        containsIdentifierCall(badge, 'RemoteDownloadFailedBadge'),
+        isTrue,
+        reason: '失败角标是失败态唯一恒定的出口（SnackBar 会被 !mounted 吃掉）',
+      );
+      expect(
+        containsIdentifierCall(badge, 'RemoteDownloadProgressBadge'),
+        isTrue,
+        reason: '进行中仍要显示进度环',
+      );
+      expect(
+        containsCodeLine(badge, 'task.error'),
+        isTrue,
+        reason: 'tooltip 必须带真实错误文本，否则用户只知道「失败了」',
+      );
     });
 
     test('占位卡渲染的是这个分流后的角标，不是裸 isRunning 判据', () {

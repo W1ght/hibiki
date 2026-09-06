@@ -26,46 +26,57 @@ import 'package:flutter_test/flutter_test.dart';
 /// still guards getSentenceContext's presence).
 void main() {
   test(
-      'getSentenceContext boundary characterization (executes selection JS via '
-      'node)', () async {
-    final String? nodeExe = _resolveNode();
-    if (nodeExe == null) {
-      markTestSkipped('node not found on PATH; skipping JS execution');
-      return;
-    }
+    'getSentenceContext boundary characterization (executes selection JS via '
+    'node)',
+    () async {
+      final String? nodeExe = _resolveNode();
+      if (nodeExe == null) {
+        markTestSkipped('node not found on PATH; skipping JS execution');
+        return;
+      }
 
-    final File jsTest = File(
-      'test/reader/reader_get_sentence_context_boundary_test.js',
-    );
-    expect(jsTest.existsSync(), isTrue,
-        reason: 'characterization harness ${jsTest.path} must exist');
+      final File jsTest = File(
+        'test/reader/reader_get_sentence_context_boundary_test.js',
+      );
+      expect(
+        jsTest.existsSync(),
+        isTrue,
+        reason: 'characterization harness ${jsTest.path} must exist',
+      );
 
-    final ProcessResult result = await Process.run(
-      nodeExe,
-      <String>[jsTest.path],
-      workingDirectory: Directory.current.path,
-    );
+      final ProcessResult result = await Process.run(nodeExe, <String>[
+        jsTest.path,
+      ], workingDirectory: Directory.current.path);
 
-    expect(
-      result.exitCode,
-      0,
-      reason: 'getSentenceContext characterization failed.\n'
-          'stdout:\n${result.stdout}\nstderr:\n${result.stderr}',
-    );
-    final String stdout = result.stdout.toString();
-    expect(stdout, contains('all assertions passed'),
-        reason: 'harness must reach its success marker');
-    // The empty-sentence path must remain the whitespace-only case (the toast
-    // `card_mined_no_sentence_captured` keys off exactly this).
-    expect(stdout, contains('case4_whitespace_only :: {"sentence":""'),
-        reason: 'only the whitespace-only container yields an empty sentence');
-  });
+      expect(
+        result.exitCode,
+        0,
+        reason:
+            'getSentenceContext characterization failed.\n'
+            'stdout:\n${result.stdout}\nstderr:\n${result.stderr}',
+      );
+      final String stdout = result.stdout.toString();
+      expect(
+        stdout,
+        contains('all assertions passed'),
+        reason: 'harness must reach its success marker',
+      );
+      // The empty-sentence path must remain the whitespace-only case (the toast
+      // `card_mined_no_sentence_captured` keys off exactly this).
+      expect(
+        stdout,
+        contains('case4_whitespace_only :: {"sentence":""'),
+        reason: 'only the whitespace-only container yields an empty sentence',
+      );
+    },
+  );
 }
 
 /// Resolve a usable `node` executable, returning null when none is on PATH.
 String? _resolveNode() {
-  final List<String> candidates =
-      Platform.isWindows ? <String>['node.exe', 'node'] : <String>['node'];
+  final List<String> candidates = Platform.isWindows
+      ? <String>['node.exe', 'node']
+      : <String>['node'];
   for (final String name in candidates) {
     try {
       final ProcessResult probe = Process.runSync(name, <String>['--version']);

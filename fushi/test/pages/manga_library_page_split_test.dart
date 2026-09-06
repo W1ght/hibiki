@@ -28,15 +28,15 @@ import '../helpers/source_guard.dart';
 /// （BUG-1710 把重复的「浏览」tab 并进「发现」后恒为三视图 + 设置）。
 
 MediaItem _item(String identifier, String sourceKey) => MediaItem(
-      mediaIdentifier: identifier,
-      title: identifier,
-      mediaTypeIdentifier: 'reader',
-      mediaSourceIdentifier: sourceKey,
-      position: 0,
-      duration: 1,
-      canDelete: false,
-      canEdit: true,
-    );
+  mediaIdentifier: identifier,
+  title: identifier,
+  mediaTypeIdentifier: 'reader',
+  mediaSourceIdentifier: sourceKey,
+  position: 0,
+  duration: 1,
+  canDelete: false,
+  canEdit: true,
+);
 
 void main() {
   final MediaItem manga1 = _item('m1', MangaFushiSource.kUniqueKey);
@@ -61,36 +61,48 @@ void main() {
     });
 
     test('两个书架互补：并集 = 全集，交集为空，没有条目凭空消失', () {
-      final List<MediaItem> normal =
-          filterShelfEntriesByMangaSplit(corpus, mangaOnly: false);
-      final List<MediaItem> mangaShelf =
-          filterShelfEntriesByMangaSplit(corpus, mangaOnly: true);
-      expect(normal.length + mangaShelf.length, corpus.length,
-          reason: '分流不得吞条目，也不得让条目同时出现在两个书架');
+      final List<MediaItem> normal = filterShelfEntriesByMangaSplit(
+        corpus,
+        mangaOnly: false,
+      );
+      final List<MediaItem> mangaShelf = filterShelfEntriesByMangaSplit(
+        corpus,
+        mangaOnly: true,
+      );
+      expect(
+        normal.length + mangaShelf.length,
+        corpus.length,
+        reason: '分流不得吞条目，也不得让条目同时出现在两个书架',
+      );
       expect(<MediaItem>{...normal, ...mangaShelf}, corpus.toSet());
       expect(normal.toSet().intersection(mangaShelf.toSet()), isEmpty);
     });
 
     test('空输入两侧都是空列表', () {
       expect(
-          filterShelfEntriesByMangaSplit(const <MediaItem>[], mangaOnly: false),
-          isEmpty);
+        filterShelfEntriesByMangaSplit(const <MediaItem>[], mangaOnly: false),
+        isEmpty,
+      );
       expect(
-          filterShelfEntriesByMangaSplit(const <MediaItem>[], mangaOnly: true),
-          isEmpty);
+        filterShelfEntriesByMangaSplit(const <MediaItem>[], mangaOnly: true),
+        isEmpty,
+      );
     });
 
-    testWidgets('漫画库页的书架视图接的是 mangaOnly: true 的书架实现（没接反）',
-        (WidgetTester tester) async {
+    testWidgets('漫画库页的书架视图接的是 mangaOnly: true 的书架实现（没接反）', (
+      WidgetTester tester,
+    ) async {
       // 只取 build 的产物，不真正挂载子树：整页依赖 DB / WebView / 一堆 provider，
       // 挂起来就成了「测环境」而不是测这条接线。漫画库页现在是三视图壳
       // （书架 / 发现 / 来源），书架仍是其中一个视图——穿过壳取该视图的产物。
       Widget? built;
       await tester.pumpWidget(
-        Builder(builder: (BuildContext context) {
-          built = const MangaLibraryPage().build(context);
-          return const SizedBox.shrink();
-        }),
+        Builder(
+          builder: (BuildContext context) {
+            built = const MangaLibraryPage().build(context);
+            return const SizedBox.shrink();
+          },
+        ),
       );
       expect(built, isA<MediaLibraryShell>());
       final MediaLibraryShell shell = built! as MediaLibraryShell;
@@ -113,24 +125,32 @@ void main() {
         reason: 'BUG-1710：漫画的在线来源清单已并进「发现」，不得再有第二个发现 tab',
       );
       final Widget shelf = shell.views.first.builder(
-          tester.element(find.byType(SizedBox)), const SizedBox.shrink());
+        tester.element(find.byType(SizedBox)),
+        const SizedBox.shrink(),
+      );
       expect(shelf, isA<ReaderFushiHistoryPage>());
       expect((shelf as ReaderFushiHistoryPage).mangaOnly, isTrue);
       // 「发现」是漫画唯一的发现页（横滑行 + 来源清单 + 搜索）。
       expect(
         shell.views[1].builder(
-            tester.element(find.byType(SizedBox)), const SizedBox.shrink()),
+          tester.element(find.byType(SizedBox)),
+          const SizedBox.shrink(),
+        ),
         isA<MangaDiscoveryPage>(),
       );
       // 「来源」视图必须是漫画来源页——本地扫描根 + 扩展 + 在线来源都收在这里。
       expect(
         shell.views[2].builder(
-            tester.element(find.byType(SizedBox)), const SizedBox.shrink()),
+          tester.element(find.byType(SizedBox)),
+          const SizedBox.shrink(),
+        ),
         isA<MangaSourcesPage>(),
       );
       expect(
         shell.views.last.builder(
-            tester.element(find.byType(SizedBox)), const SizedBox.shrink()),
+          tester.element(find.byType(SizedBox)),
+          const SizedBox.shrink(),
+        ),
         isA<ModuleSettingsView>(),
       );
       // 反向锚：普通书架的默认值必须仍是 false，否则漫画会在两边都出现。
@@ -167,8 +187,9 @@ void main() {
         'sourceSettings',
       ]) {
         expect(
-          MediaLibraryViewKind.values
-              .map((MediaLibraryViewKind kind) => kind.name),
+          MediaLibraryViewKind.values.map(
+            (MediaLibraryViewKind kind) => kind.name,
+          ),
           isNot(contains(removed)),
           reason: '$removed 是四视图形态的残留 kind，必须随之删除，否则会被重新用上',
         );

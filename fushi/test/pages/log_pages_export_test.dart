@@ -19,13 +19,12 @@ void main() {
   });
 
   Widget wrap(Widget child) {
-    return TranslationProvider(
-      child: MaterialApp(home: child),
-    );
+    return TranslationProvider(child: MaterialApp(home: child));
   }
 
-  testWidgets('DebugLogPage shows save-as action iff on desktop',
-      (WidgetTester tester) async {
+  testWidgets('DebugLogPage shows save-as action iff on desktop', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(wrap(const DebugLogPage()));
     await tester.pumpAndSettle();
 
@@ -37,8 +36,9 @@ void main() {
     expect(find.byIcon(_kShareIcon), findsOneWidget);
   });
 
-  testWidgets('ErrorLogPage shows save-as action iff on desktop',
-      (WidgetTester tester) async {
+  testWidgets('ErrorLogPage shows save-as action iff on desktop', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(wrap(const ErrorLogPage()));
     await tester.pumpAndSettle();
 

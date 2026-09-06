@@ -23,20 +23,24 @@ Future<AddLocalFolderResult> addLocalFolderAsSource({
   required String path,
 }) async {
   final String norm = normalizeSourceRootPath(path, transport: 'local');
-  final List<MediaSourceRow> existing =
-      await db.getMediaSourcesByKind(mediaKind);
-  final bool duplicate = existing
-      .any((MediaSourceRow r) => r.transport == 'local' && r.rootPath == norm);
+  final List<MediaSourceRow> existing = await db.getMediaSourcesByKind(
+    mediaKind,
+  );
+  final bool duplicate = existing.any(
+    (MediaSourceRow r) => r.transport == 'local' && r.rootPath == norm,
+  );
   if (duplicate) {
     return AddLocalFolderResult(
-        outcome: AddLocalFolderOutcome.duplicate, rootPath: norm);
+      outcome: AddLocalFolderOutcome.duplicate,
+      rootPath: norm,
+    );
   }
   final int sortOrder = existing.isEmpty
       ? 0
       : existing
-              .map((MediaSourceRow r) => r.sortOrder)
-              .reduce((int a, int b) => a > b ? a : b) +
-          1;
+                .map((MediaSourceRow r) => r.sortOrder)
+                .reduce((int a, int b) => a > b ? a : b) +
+            1;
   final int newId = await db.insertMediaSource(
     MediaSourcesCompanion(
       label: Value(defaultLabelFromRoot(norm, transport: 'local')),
@@ -54,7 +58,10 @@ Future<AddLocalFolderResult> addLocalFolderAsSource({
     await SourceLibraryScanner(db).scan(fresh);
   }
   return AddLocalFolderResult(
-      outcome: AddLocalFolderOutcome.added, rootPath: norm, sourceId: newId);
+    outcome: AddLocalFolderOutcome.added,
+    rootPath: norm,
+    sourceId: newId,
+  );
 }
 
 enum AddLocalFolderOutcome { added, duplicate }

@@ -39,15 +39,18 @@ void main() {
       expect(
         bookKey.hasMatch(source),
         isFalse,
-        reason: 'video page must not reuse the book-worded batch strings; '
+        reason:
+            'video page must not reuse the book-worded batch strings; '
             'use the *_video variants (BUG-766).',
       );
     });
 
     test('zh-CN video batch strings say 视频, never 本书', () {
-      final Map<String, dynamic> zhCn = jsonDecode(
-        File('lib/i18n/strings_zh-CN.i18n.json').readAsStringSync(),
-      ) as Map<String, dynamic>;
+      final Map<String, dynamic> zhCn =
+          jsonDecode(
+                File('lib/i18n/strings_zh-CN.i18n.json').readAsStringSync(),
+              )
+              as Map<String, dynamic>;
 
       const List<String> videoKeys = <String>[
         'batch_delete_confirm_video',

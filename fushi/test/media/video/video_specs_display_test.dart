@@ -16,58 +16,63 @@ void main() {
     int? containerBitrate,
     List<AudioTrackFacts> audio = const <AudioTrackFacts>[],
     List<SubtitleTrackFacts> subtitles = const <SubtitleTrackFacts>[],
-  }) =>
-      VideoProbeFacts(
-        containerBitrate: containerBitrate,
-        video: (width == null && codec == null && transfer == null)
-            ? null
-            : VideoStreamFacts(
-                codec: codec,
-                width: width,
-                height: height,
-                bitDepth: bitDepth,
-                frameRateMilli: frameRateMilli,
-                bitrate: videoBitrate,
-                colorPrimaries: primaries,
-                colorTransfer: transfer,
-              ),
-        audioTracks: audio,
-        subtitleTracks: subtitles,
-      );
+  }) => VideoProbeFacts(
+    containerBitrate: containerBitrate,
+    video: (width == null && codec == null && transfer == null)
+        ? null
+        : VideoStreamFacts(
+            codec: codec,
+            width: width,
+            height: height,
+            bitDepth: bitDepth,
+            frameRateMilli: frameRateMilli,
+            bitrate: videoBitrate,
+            colorPrimaries: primaries,
+            colorTransfer: transfer,
+          ),
+    audioTracks: audio,
+    subtitleTracks: subtitles,
+  );
 
   group('封面角标', () {
     test('4K + HDR10 两个', () {
       expect(
-        videoSpecsCoverBadges(factsWith(
-          width: 3840,
-          height: 2160,
-          primaries: 'bt2020',
-          transfer: 'smpte2084',
-        )),
+        videoSpecsCoverBadges(
+          factsWith(
+            width: 3840,
+            height: 2160,
+            primaries: 'bt2020',
+            transfer: 'smpte2084',
+          ),
+        ),
         <String>['4K', 'HDR10'],
       );
     });
 
     test('HLG 也出角标', () {
       expect(
-        videoSpecsCoverBadges(factsWith(
-          width: 1920,
-          height: 1080,
-          primaries: 'bt2020',
-          transfer: 'arib-std-b67',
-        )),
+        videoSpecsCoverBadges(
+          factsWith(
+            width: 1920,
+            height: 1080,
+            primaries: 'bt2020',
+            transfer: 'arib-std-b67',
+          ),
+        ),
         <String>['1080p', 'HLG'],
       );
     });
 
     test('SDR 只出清晰度——「是 SDR」不是信息，不该占角标位', () {
       expect(
-        videoSpecsCoverBadges(factsWith(
-          width: 1920,
-          height: 1080,
-          primaries: 'bt709',
-          transfer: 'bt709',
-        )),
+        videoSpecsCoverBadges(
+          factsWith(
+            width: 1920,
+            height: 1080,
+            primaries: 'bt709',
+            transfer: 'bt709',
+          ),
+        ),
         <String>['1080p'],
       );
     });
@@ -82,19 +87,29 @@ void main() {
     test('无规格 / 无视频流 → 空', () {
       expect(videoSpecsCoverBadges(null), isEmpty);
       expect(videoSpecsCoverBadges(VideoProbeFacts.empty), isEmpty);
-      expect(videoSpecsCoverBadges(factsWith(audio: const <AudioTrackFacts>[
-        AudioTrackFacts(index: 0, codec: 'flac'),
-      ])), isEmpty, reason: '纯音频没有视频流');
+      expect(
+        videoSpecsCoverBadges(
+          factsWith(
+            audio: const <AudioTrackFacts>[
+              AudioTrackFacts(index: 0, codec: 'flac'),
+            ],
+          ),
+        ),
+        isEmpty,
+        reason: '纯音频没有视频流',
+      );
     });
 
     test('最多两个，不会因为编码多出第三个', () {
-      final List<String> badges = videoSpecsCoverBadges(factsWith(
-        width: 3840,
-        height: 2160,
-        codec: 'hevc',
-        primaries: 'bt2020',
-        transfer: 'smpte2084',
-      ));
+      final List<String> badges = videoSpecsCoverBadges(
+        factsWith(
+          width: 3840,
+          height: 2160,
+          codec: 'hevc',
+          primaries: 'bt2020',
+          transfer: 'smpte2084',
+        ),
+      );
       expect(badges, hasLength(2));
     });
   });
@@ -102,26 +117,30 @@ void main() {
   group('紧凑摘要', () {
     test('清晰度 · 动态范围 · 编码', () {
       expect(
-        videoSpecsInlineSummary(factsWith(
-          width: 3840,
-          height: 2160,
-          codec: 'hevc',
-          primaries: 'bt2020',
-          transfer: 'smpte2084',
-        )),
+        videoSpecsInlineSummary(
+          factsWith(
+            width: 3840,
+            height: 2160,
+            codec: 'hevc',
+            primaries: 'bt2020',
+            transfer: 'smpte2084',
+          ),
+        ),
         '4K · HDR10 · HEVC',
       );
     });
 
     test('SDR 时省掉动态范围', () {
       expect(
-        videoSpecsInlineSummary(factsWith(
-          width: 1920,
-          height: 1080,
-          codec: 'h264',
-          primaries: 'bt709',
-          transfer: 'bt709',
-        )),
+        videoSpecsInlineSummary(
+          factsWith(
+            width: 1920,
+            height: 1080,
+            codec: 'h264',
+            primaries: 'bt709',
+            transfer: 'bt709',
+          ),
+        ),
         '1080p · H.264',
       );
     });
@@ -134,38 +153,51 @@ void main() {
 
   group('详情字段', () {
     test('4K 后面补真实像素（档位不等于尺寸）', () {
-      final List<(VideoSpecField, String)> fields =
-          videoSpecsFields(factsWith(width: 4096, height: 1716));
+      final List<(VideoSpecField, String)> fields = videoSpecsFields(
+        factsWith(width: 4096, height: 1716),
+      );
       expect(fields.first.$1, VideoSpecField.resolution);
       expect(fields.first.$2, '4K (4096×1716)');
     });
 
     test('探不到的项整行不出现，不显示「未知」', () {
-      final List<(VideoSpecField, String)> fields =
-          videoSpecsFields(factsWith(width: 1920, height: 1080));
-      final Set<VideoSpecField> present =
-          fields.map(((VideoSpecField, String) f) => f.$1).toSet();
+      final List<(VideoSpecField, String)> fields = videoSpecsFields(
+        factsWith(width: 1920, height: 1080),
+      );
+      final Set<VideoSpecField> present = fields
+          .map(((VideoSpecField, String) f) => f.$1)
+          .toSet();
       expect(present, contains(VideoSpecField.resolution));
       expect(present, isNot(contains(VideoSpecField.bitDepth)));
       expect(present, isNot(contains(VideoSpecField.frameRate)));
-      expect(present, isNot(contains(VideoSpecField.dynamicRange)),
-          reason: 'unknown 不该被写成一行');
+      expect(
+        present,
+        isNot(contains(VideoSpecField.dynamicRange)),
+        reason: 'unknown 不该被写成一行',
+      );
     });
 
     test('码率优先流级，缺失时回退容器级（mkv 不给流级）', () {
       expect(
-        videoSpecsFields(factsWith(
-          width: 1920,
-          videoBitrate: 8000000,
-          containerBitrate: 9000000,
-        )).where((( VideoSpecField, String) f) =>
-            f.$1 == VideoSpecField.bitrate).single.$2,
+        videoSpecsFields(
+              factsWith(
+                width: 1920,
+                videoBitrate: 8000000,
+                containerBitrate: 9000000,
+              ),
+            )
+            .where(
+              ((VideoSpecField, String) f) => f.$1 == VideoSpecField.bitrate,
+            )
+            .single
+            .$2,
         '8.0 Mbps',
       );
       expect(
         videoSpecsFields(factsWith(width: 1920, containerBitrate: 15586453))
-            .where(((VideoSpecField, String) f) =>
-                f.$1 == VideoSpecField.bitrate)
+            .where(
+              ((VideoSpecField, String) f) => f.$1 == VideoSpecField.bitrate,
+            )
             .single
             .$2,
         '16 Mbps',
@@ -226,15 +258,17 @@ void main() {
 
   group('轨道展示', () {
     test('音轨：名字 · 编码 · 声道 + 标志位', () {
-      final TrackDisplay d = audioTrackDisplay(const AudioTrackFacts(
-        index: 1,
-        codec: 'flac',
-        channels: 6,
-        channelLayout: '5.1',
-        language: 'jpn',
-        title: '日本語',
-        isDefault: true,
-      ));
+      final TrackDisplay d = audioTrackDisplay(
+        const AudioTrackFacts(
+          index: 1,
+          codec: 'flac',
+          channels: 6,
+          channelLayout: '5.1',
+          language: 'jpn',
+          title: '日本語',
+          isDefault: true,
+        ),
+      );
       expect(d.headline, '日本語 · FLAC · 5.1');
       expect(d.isDefault, isTrue);
       expect(d.isCommentary, isFalse);
@@ -248,12 +282,14 @@ void main() {
     });
 
     test('字幕轨：名字 · 格式', () {
-      final TrackDisplay d = subtitleTrackDisplay(const SubtitleTrackFacts(
-        index: 4,
-        codec: 'subrip',
-        language: 'chi',
-        isForced: true,
-      ));
+      final TrackDisplay d = subtitleTrackDisplay(
+        const SubtitleTrackFacts(
+          index: 4,
+          codec: 'subrip',
+          language: 'chi',
+          isForced: true,
+        ),
+      );
       expect(d.headline, 'CHI · SRT');
       expect(d.isForced, isTrue);
     });

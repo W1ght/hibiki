@@ -35,8 +35,12 @@ Future<String?> _sayMacOS(String text, String outputPath) async {
   final File out = File(aiffPath);
   out.parent.createSync(recursive: true);
   // `--` terminates options so text starting with `-` is not parsed as a flag.
-  final ProcessResult r =
-      await Process.run('say', <String>['-o', aiffPath, '--', text]);
+  final ProcessResult r = await Process.run('say', <String>[
+    '-o',
+    aiffPath,
+    '--',
+    text,
+  ]);
   if (r.exitCode == 0 && out.existsSync() && out.lengthSync() > 0) {
     return aiffPath;
   }
@@ -55,16 +59,19 @@ Future<String?> _sapiWindows(String text, String outputPath) async {
   out.parent.createSync(recursive: true);
   final String b64 = base64Encode(utf8.encode(text));
   final String escapedOut = outputPath.replaceAll("'", "''");
-  final String script = 'Add-Type -AssemblyName System.Speech; '
+  final String script =
+      'Add-Type -AssemblyName System.Speech; '
       r"$t=[System.Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('"
       "$b64')); "
       r'$s=New-Object System.Speech.Synthesis.SpeechSynthesizer; '
       "\$s.SetOutputToWaveFile('$escapedOut'); "
       r'$s.Speak($t); $s.Dispose();';
-  final ProcessResult r = await Process.run(
-    'powershell',
-    <String>['-NoProfile', '-NonInteractive', '-Command', script],
-  );
+  final ProcessResult r = await Process.run('powershell', <String>[
+    '-NoProfile',
+    '-NonInteractive',
+    '-Command',
+    script,
+  ]);
   if (r.exitCode == 0 && out.existsSync() && out.lengthSync() > 0) {
     return outputPath;
   }

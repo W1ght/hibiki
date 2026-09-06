@@ -22,8 +22,10 @@ void main() {
     expect(video, isNot(contains('tooltip: t.scrape_all')));
     expect(sources, contains("widget.mediaKind == 'video'"));
     expect(sources, contains('tooltip: t.scrape_all'));
-    expect(sources.indexOf('tooltip: t.media_source_add'),
-        lessThan(sources.indexOf('tooltip: t.scrape_all')));
+    expect(
+      sources.indexOf('tooltip: t.media_source_add'),
+      lessThan(sources.indexOf('tooltip: t.scrape_all')),
+    );
 
     expect(books, contains('Future<void> _scrapeEpubCover('));
     expect(books, contains('Future<void> _scrapeAllBooks('));

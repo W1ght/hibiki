@@ -125,16 +125,15 @@ class ReaderContentStyles {
     required double marginBottomPx,
     required double chromeTopInsetPx,
     required double chromeBottomInsetPx,
-  }) =>
-      math.max(
-        fontSizePx,
-        viewportHeightPx -
-            marginTopPx -
-            marginBottomPx -
-            fontSizePx -
-            chromeTopInsetPx -
-            chromeBottomInsetPx,
-      );
+  }) => math.max(
+    fontSizePx,
+    viewportHeightPx -
+        marginTopPx -
+        marginBottomPx -
+        fontSizePx -
+        chromeTopInsetPx -
+        chromeBottomInsetPx,
+  );
 
   static String styleTag({
     required ReaderSettings settings,
@@ -150,20 +149,7 @@ class ReaderContentStyles {
     bool einkDark = false,
     String? contentLanguage,
   }) {
-    return '<style>\n${css(
-      settings: settings,
-      contentLanguage: contentLanguage,
-      fontFaces: fontFaces,
-      fontFamily: fontFamily,
-      customBg: customBg,
-      customFg: customFg,
-      selectionColor: selectionColor,
-      sentenceAudioHighlightColor: sentenceAudioHighlightColor,
-      linkColor: linkColor,
-      themeOverride: themeOverride,
-      einkMode: einkMode,
-      einkDark: einkDark,
-    )}\n</style>';
+    return '<style>\n${css(settings: settings, contentLanguage: contentLanguage, fontFaces: fontFaces, fontFamily: fontFamily, customBg: customBg, customFg: customFg, selectionColor: selectionColor, sentenceAudioHighlightColor: sentenceAudioHighlightColor, linkColor: linkColor, themeOverride: themeOverride, einkMode: einkMode, einkDark: einkDark)}\n</style>';
   }
 
   /// 正文 `font-family` 的值：用户字体 -> 内容语言的明朝体/宋体链 -> `serif`。
@@ -207,9 +193,10 @@ class ReaderContentStyles {
     String? contentLanguage,
   }) {
     final _ThemeColors themedColors = _themeColors(
-        themeOverride ?? settings.theme,
-        customBg: customBg,
-        customFg: customFg);
+      themeOverride ?? settings.theme,
+      customBg: customBg,
+      customFg: customFg,
+    );
     // E-ink 覆盖发生在配色解析之后：正文/滚动条/UA color-scheme 全部吃纯黑白，
     // 高亮的「线式化」由末尾的 _einkOverrideCss 用级联覆盖（同选择器后出现者胜）。
     final _ThemeColors colors = einkMode
@@ -228,8 +215,10 @@ class ReaderContentStyles {
     // (BUG-125)。同时去掉旧的 <rt> 不透明遮罩(原 BUG-123)，那个遮罩会连基字右缘一起
     // 抹掉(竖排 jukugo ruby 的振假名盒压在基字右缘上)。
     final String selectionBase = selectionColor ?? colors.selectionColor;
-    final String selectionOpaque =
-        composeOpaqueColor(selectionBase, colors.backgroundColor);
+    final String selectionOpaque = composeOpaqueColor(
+      selectionBase,
+      colors.backgroundColor,
+    );
 
     final String resolvedFontFaces;
     final String resolvedFontFamily;
@@ -237,8 +226,8 @@ class ReaderContentStyles {
       resolvedFontFaces = fontFaces;
       resolvedFontFamily = _bodyFontFamily(fontFamily, contentLanguage);
     } else {
-      final ({String fontFamily, String fontFaces}) custom =
-          settings.buildCustomFontCss();
+      final ({String fontFamily, String fontFaces}) custom = settings
+          .buildCustomFontCss();
       resolvedFontFaces = custom.fontFaces;
       resolvedFontFamily = _bodyFontFamily(
         custom.fontFamily.isNotEmpty ? custom.fontFamily : null,
@@ -336,12 +325,12 @@ p {
     final double paragraphSpacing = math.max(0, settings.paragraphSpacing);
     final String paragraphSpacingCss = paragraphSpacing > 0
         ? (isVertical
-            ? '''
+              ? '''
 p {
   margin-right: ${paragraphSpacing}em !important;
   margin-left: ${paragraphSpacing}em !important;
 }'''
-            : '''
+              : '''
 p {
   margin-top: ${paragraphSpacing}em !important;
   margin-bottom: ${paragraphSpacing}em !important;
@@ -369,8 +358,8 @@ svg.block-img.blurred {
 
     final String vertKerningCss =
         settings.enableVerticalFontKerning && isVertical
-            ? 'font-kerning: normal !important;'
-            : '';
+        ? 'font-kerning: normal !important;'
+        : '';
 
     final String vpalCss = settings.enableFontVPAL && isVertical
         ? "font-feature-settings: 'vpal' 1 !important;"
@@ -414,17 +403,18 @@ svg.block-img.blurred {
     final String layoutCss = settings.isVnMode
         ? _vnLayoutCss(layoutArgs)
         : settings.isContinuousMode
-            ? _continuousLayoutCss(layoutArgs)
-            : _paginatedLayoutCss(
-                layoutArgs,
-                columnGapCss: columnGapCss,
-                columnWidthCss: columnWidthCss,
-                columnsCss: columnsCss,
-                contentClipCss: contentClipCss,
-              );
+        ? _continuousLayoutCss(layoutArgs)
+        : _paginatedLayoutCss(
+            layoutArgs,
+            columnGapCss: columnGapCss,
+            columnWidthCss: columnWidthCss,
+            columnsCss: columnsCss,
+            contentClipCss: contentClipCss,
+          );
 
-    final String readerStylePriority =
-        settings.prioritizeReaderStyles ? '' : ' !important';
+    final String readerStylePriority = settings.prioritizeReaderStyles
+        ? ''
+        : ' !important';
 
     return '''
 $resolvedFontFaces
@@ -1205,8 +1195,11 @@ rtc > rt {
   font-size: 1em;
 }''';
 
-  static _ThemeColors _themeColors(String theme,
-      {String? customBg, String? customFg}) {
+  static _ThemeColors _themeColors(
+    String theme, {
+    String? customBg,
+    String? customFg,
+  }) {
     switch (theme) {
       case 'ecru-theme':
         return const _ThemeColors(
@@ -1305,9 +1298,9 @@ rtc > rt {
     if (s.startsWith('#')) {
       final String h = s.substring(1);
       int? hx(int start, int len) => int.tryParse(
-            len == 1 ? '${h[start]}${h[start]}' : h.substring(start, start + 2),
-            radix: 16,
-          );
+        len == 1 ? '${h[start]}${h[start]}' : h.substring(start, start + 2),
+        radix: 16,
+      );
       if (h.length == 3 || h.length == 4) {
         final int? r = hx(0, 1), g = hx(1, 1), b = hx(2, 1);
         if (r == null || g == null || b == null) return null;
@@ -1324,15 +1317,19 @@ rtc > rt {
     }
     final RegExpMatch? m = RegExp(r'^rgba?\(([^)]*)\)$').firstMatch(s);
     if (m == null) return null;
-    final List<String> parts =
-        m.group(1)!.split(',').map((String e) => e.trim()).toList();
+    final List<String> parts = m
+        .group(1)!
+        .split(',')
+        .map((String e) => e.trim())
+        .toList();
     if (parts.length < 3) return null;
     final int? r = int.tryParse(parts[0]);
     final int? g = int.tryParse(parts[1]);
     final int? b = int.tryParse(parts[2]);
     if (r == null || g == null || b == null) return null;
-    final double a =
-        parts.length >= 4 ? (double.tryParse(parts[3]) ?? 1.0) : 1.0;
+    final double a = parts.length >= 4
+        ? (double.tryParse(parts[3]) ?? 1.0)
+        : 1.0;
     return _Rgba(r, g, b, a);
   }
 

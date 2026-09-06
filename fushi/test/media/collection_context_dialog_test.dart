@@ -26,8 +26,7 @@ void main() {
   Future<(FushiDatabase, MediaCollectionRow)> buildCollection({
     bool withMembers = true,
   }) async {
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final int id = await db.createMediaCollection('collection-a');
     if (withMembers) {
@@ -219,8 +218,7 @@ void main() {
   testWidgets('一键整理「按名称」：重排落盘 sortIndex 并通知页面刷新', (WidgetTester tester) async {
     // 成员按 book-2 → book-1 的乱序加入；两本书无 epub 行 → 排序元数据按
     // (entryKey, 0) 兜底，标题即 entryKey，「按名称」应重排为 book-1 → book-2。
-    final FushiDatabase db =
-        FushiDatabase.forTesting(NativeDatabase.memory());
+    final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
     final int id = await db.createMediaCollection('collection-sort');
     await db.addToCollection(id, MediaKind.epub, 'book-2');
@@ -248,8 +246,9 @@ void main() {
     expect(probe.changedCount, 1, reason: '排序落盘后必须通知页面重载合集行。');
   });
 
-  testWidgets('extraListActions：媒体特有项渲染、先关弹窗再执行、不触发 onChanged',
-      (WidgetTester tester) async {
+  testWidgets('extraListActions：媒体特有项渲染、先关弹窗再执行、不触发 onChanged', (
+    WidgetTester tester,
+  ) async {
     final (FushiDatabase db, MediaCollectionRow collection) =
         await buildCollection();
     bool ran = false;
@@ -326,7 +325,8 @@ void main() {
       expect(
         src,
         isNot(contains('onDeleteMembersMedia:')),
-        reason: '游戏合集删除只解散容器，绝不提供「连同游戏一起删」——游戏本体'
+        reason:
+            '游戏合集删除只解散容器，绝不提供「连同游戏一起删」——游戏本体'
             '是用户安装目录，从库移除走卡菜单「移除」（2026-07-28 拍板）。',
       );
       expect(src, isNot(contains('delete_collection_also_games')));

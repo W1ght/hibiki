@@ -70,8 +70,9 @@ class MaterialSettingsRenderer implements SettingsRenderer {
           // 标签（如「同步与备份（实验性）」）用 FushiListItem 默认 titleMaxLines:1
           // 截成「同步与…」。放行第二行；全宽布局本就不换行，无害。
           titleMaxLines: 2,
-          subtitle:
-              destination.summary != null ? Text(destination.summary!) : null,
+          subtitle: destination.summary != null
+              ? Text(destination.summary!)
+              : null,
           // Chevron implies push navigation; only show it when tapping actually
           // pushes a detail route (narrow layout), not in the master-detail pane.
           trailing: pushRoutes ? const Icon(Icons.chevron_right) : null,
@@ -128,8 +129,9 @@ class MaterialSettingsRenderer implements SettingsRenderer {
   }) {
     final BuildContext context = settingsContext.context;
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final List<SettingsSection> sections =
-        destination.visibleSections(settingsContext);
+    final List<SettingsSection> sections = destination.visibleSections(
+      settingsContext,
+    );
     final EdgeInsets mediaPadding = MediaQuery.of(context).padding;
     // Left side hugs the pane divider; give it MD3 expanded breathing room
     // (page + gap = 28) so detail content isn't glued to the nav pane. Horizontal
@@ -143,8 +145,9 @@ class MaterialSettingsRenderer implements SettingsRenderer {
     // pane's bespoke 导航 / 有声书 sub-pages instead of double-indenting and
     // rendering narrower (TODO-1321). Mirrors the Cupertino renderer, whose
     // detail body never owns a horizontal inset.
-    final EdgeInsets horizontal =
-        insetHorizontally ? detailHorizontalInsets(tokens) : EdgeInsets.zero;
+    final EdgeInsets horizontal = insetHorizontally
+        ? detailHorizontalInsets(tokens)
+        : EdgeInsets.zero;
     final EdgeInsets padding = EdgeInsets.fromLTRB(
       horizontal.left,
       tokens.spacing.gap,
@@ -153,17 +156,17 @@ class MaterialSettingsRenderer implements SettingsRenderer {
     );
 
     Widget section(int index) => SettingsSchemaSection(
-          section: sections[index],
-          settingsContext: settingsContext,
-          showIcons: true,
-          routeBuilder: (BuildContext context, WidgetBuilder builder) {
-            return MaterialPageRoute<void>(builder: builder);
-          },
-          footerStyle: (BuildContext context) =>
-              Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: FushiDesignTokens.of(context).surfaces.onVariant,
-                  ),
-        );
+      section: sections[index],
+      settingsContext: settingsContext,
+      showIcons: true,
+      routeBuilder: (BuildContext context, WidgetBuilder builder) {
+        return MaterialPageRoute<void>(builder: builder);
+      },
+      footerStyle: (BuildContext context) => Theme.of(context)
+          .textTheme
+          .bodySmall
+          ?.copyWith(color: FushiDesignTokens.of(context).surfaces.onVariant),
+    );
 
     // 整页正文逃生口（见 SettingsDestination.body）：接在所有 schema section 之后，
     // 与它们共享同一个滚动容器与内边距。

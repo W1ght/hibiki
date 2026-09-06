@@ -22,8 +22,11 @@ class FontDecoder {
   /// a valid/decodable WOFF (caller then skips this font).
   static Uint8List? woffToSfnt(Uint8List bytes) {
     if (bytes.length < _headerSize) return null;
-    final ByteData bd =
-        ByteData.view(bytes.buffer, bytes.offsetInBytes, bytes.lengthInBytes);
+    final ByteData bd = ByteData.view(
+      bytes.buffer,
+      bytes.offsetInBytes,
+      bytes.lengthInBytes,
+    );
     if (bd.getUint32(0) != _woffSignature) return null;
 
     final int flavor = bd.getUint32(4);
@@ -34,19 +37,24 @@ class FontDecoder {
     final List<_WoffTable> tables = <_WoffTable>[];
     for (int i = 0; i < numTables; i++) {
       final int o = _headerSize + i * _dirEntrySize;
-      tables.add(_WoffTable(
-        tag: bd.getUint32(o),
-        offset: bd.getUint32(o + 4),
-        compLength: bd.getUint32(o + 8),
-        origLength: bd.getUint32(o + 12),
-        origChecksum: bd.getUint32(o + 16),
-      ));
+      tables.add(
+        _WoffTable(
+          tag: bd.getUint32(o),
+          offset: bd.getUint32(o + 4),
+          compLength: bd.getUint32(o + 8),
+          origLength: bd.getUint32(o + 12),
+          origChecksum: bd.getUint32(o + 16),
+        ),
+      );
     }
 
     for (final _WoffTable t in tables) {
       if (t.offset + t.compLength > bytes.length) return null;
-      final Uint8List comp =
-          Uint8List.sublistView(bytes, t.offset, t.offset + t.compLength);
+      final Uint8List comp = Uint8List.sublistView(
+        bytes,
+        t.offset,
+        t.offset + t.compLength,
+      );
       if (t.compLength >= t.origLength) {
         // Stored uncompressed (spec: compLength == origLength).
         t.data = Uint8List.sublistView(comp, 0, t.origLength);
@@ -58,10 +66,11 @@ class FontDecoder {
     }
 
     return buildSfnt(
-        flavor,
-        tables
-            .map((_WoffTable t) => SfntTable(t.tag, t.origChecksum, t.data!))
-            .toList());
+      flavor,
+      tables
+          .map((_WoffTable t) => SfntTable(t.tag, t.origChecksum, t.data!))
+          .toList(),
+    );
   }
 
   /// Assembles a complete sfnt file from decoded [tables] under [flavor]

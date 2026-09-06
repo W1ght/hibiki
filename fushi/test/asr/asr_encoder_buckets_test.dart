@@ -135,9 +135,9 @@ class _FakeFactory implements OnnxSessionFactory {
 }
 
 AsrSpeechSegment _segment(int ms) => AsrSpeechSegment(
-      startSample: 0,
-      samples: Float32List(ms * kAsrSampleRate ~/ 1000),
-    );
+  startSample: 0,
+  samples: Float32List(ms * kAsrSampleRate ~/ 1000),
+);
 
 const List<AsrEncoderBucket> _buckets = <AsrEncoderBucket>[
   AsrEncoderBucket(frames: 500, batch: 4),

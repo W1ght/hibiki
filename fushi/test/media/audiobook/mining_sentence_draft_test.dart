@@ -11,10 +11,12 @@ void main() {
       );
 
   group('joinMinedSentences', () {
-    test('single sentence is returned trimmed (equivalent to old behavior)',
-        () {
-      expect(joinMinedSentences(<String>['  これは一文です。 ']), 'これは一文です。');
-    });
+    test(
+      'single sentence is returned trimmed (equivalent to old behavior)',
+      () {
+        expect(joinMinedSentences(<String>['  これは一文です。 ']), 'これは一文です。');
+      },
+    );
 
     test('multiple sentences join with newline in order', () {
       expect(
@@ -37,10 +39,7 @@ void main() {
 
   group('mergeMiningAudioRanges', () {
     test('all null yields null (no audio to merge)', () {
-      expect(
-        mergeMiningAudioRanges(<AudioPlaybackRange?>[null, null]),
-        isNull,
-      );
+      expect(mergeMiningAudioRanges(<AudioPlaybackRange?>[null, null]), isNull);
     });
 
     test('same file merges to first start -> last end', () {
@@ -59,10 +58,7 @@ void main() {
 
     test('out-of-order ranges still take global min start / max end', () {
       final AudioPlaybackRange? merged = mergeMiningAudioRanges(
-        <AudioPlaybackRange?>[
-          range(0, 3200, 4100),
-          range(0, 1000, 1800),
-        ],
+        <AudioPlaybackRange?>[range(0, 3200, 4100), range(0, 1000, 1800)],
       );
       expect(merged!.startMs, 1000);
       expect(merged.endMs, 4100);
@@ -70,26 +66,21 @@ void main() {
 
     test('null gaps between present ranges are skipped, still merges', () {
       final AudioPlaybackRange? merged = mergeMiningAudioRanges(
-        <AudioPlaybackRange?>[
-          range(0, 1000, 1800),
-          null,
-          range(0, 3200, 4100),
-        ],
+        <AudioPlaybackRange?>[range(0, 1000, 1800), null, range(0, 3200, 4100)],
       );
       expect(merged!.startMs, 1000);
       expect(merged.endMs, 4100);
     });
 
-    test('cross-file (cross-chapter) degrades to null — never splice bad audio',
-        () {
-      final AudioPlaybackRange? merged = mergeMiningAudioRanges(
-        <AudioPlaybackRange?>[
-          range(0, 1000, 1800),
-          range(1, 200, 900),
-        ],
-      );
-      expect(merged, isNull);
-    });
+    test(
+      'cross-file (cross-chapter) degrades to null — never splice bad audio',
+      () {
+        final AudioPlaybackRange? merged = mergeMiningAudioRanges(
+          <AudioPlaybackRange?>[range(0, 1000, 1800), range(1, 200, 900)],
+        );
+        expect(merged, isNull);
+      },
+    );
 
     test('single present range is returned as-is', () {
       final AudioPlaybackRange? merged = mergeMiningAudioRanges(
@@ -128,10 +119,13 @@ void main() {
       );
       expect(draft.length, 3);
       expect(draft.isEmpty, isFalse);
-      expect(draft.prevSentences.map((e) => e.sentence).toList(),
-          <String>['前1。', '前2。']);
-      expect(
-          draft.nextSentences.map((e) => e.sentence).toList(), <String>['後1。']);
+      expect(draft.prevSentences.map((e) => e.sentence).toList(), <String>[
+        '前1。',
+        '前2。',
+      ]);
+      expect(draft.nextSentences.map((e) => e.sentence).toList(), <String>[
+        '後1。',
+      ]);
     });
 
     test('setContext filters blank / whitespace-only sentences', () {
@@ -217,65 +211,73 @@ void main() {
       expect(merged, isNull);
     });
 
-    test('prevSentences / nextSentences snapshots do not leak internal lists',
-        () {
-      final MiningSentenceDraft draft = MiningSentenceDraft();
-      draft.setContext(prev: <MiningDraftSentence>[s('前。')]);
-      expect(() => draft.prevSentences.add(s('x')), throwsUnsupportedError);
-      expect(() => draft.nextSentences.add(s('x')), throwsUnsupportedError);
-    });
+    test(
+      'prevSentences / nextSentences snapshots do not leak internal lists',
+      () {
+        final MiningSentenceDraft draft = MiningSentenceDraft();
+        draft.setContext(prev: <MiningDraftSentence>[s('前。')]);
+        expect(() => draft.prevSentences.add(s('x')), throwsUnsupportedError);
+        expect(() => draft.nextSentences.add(s('x')), throwsUnsupportedError);
+      },
+    );
   });
 
   group('buildSentenceContextPreview (Niratan 制卡前调整模态)', () {
     MiningDraftSentence s(String text) => MiningDraftSentence(sentence: text);
 
-    test('empty draft yields prev/next empty, total 0, current + offset echoed',
-        () {
-      final MiningSentenceDraft draft = MiningSentenceDraft();
-      final Map<String, Object?> p = buildSentenceContextPreview(
-        draft: draft,
-        current: '当前句。',
-        currentOffset: 3,
-      );
-      expect(p['prev'], <String>[]);
-      expect(p['next'], <String>[]);
-      expect(p['current'], '当前句。');
-      expect(p['currentOffset'], 3);
-      expect(p['total'], 0);
-    });
+    test(
+      'empty draft yields prev/next empty, total 0, current + offset echoed',
+      () {
+        final MiningSentenceDraft draft = MiningSentenceDraft();
+        final Map<String, Object?> p = buildSentenceContextPreview(
+          draft: draft,
+          current: '当前句。',
+          currentOffset: 3,
+        );
+        expect(p['prev'], <String>[]);
+        expect(p['next'], <String>[]);
+        expect(p['current'], '当前句。');
+        expect(p['currentOffset'], 3);
+        expect(p['total'], 0);
+      },
+    );
 
-    test('prev/next real texts echoed in reading order, total = prev + next',
-        () {
-      final MiningSentenceDraft draft = MiningSentenceDraft();
-      draft.setContext(
-        prev: <MiningDraftSentence>[s('前々。'), s('前。')],
-        next: <MiningDraftSentence>[s('后。')],
-      );
-      final Map<String, Object?> p = buildSentenceContextPreview(
-        draft: draft,
-        current: '当前。',
-        currentOffset: null,
-      );
-      expect(p['prev'], <String>['前々。', '前。']);
-      expect(p['next'], <String>['后。']);
-      expect(p['current'], '当前。');
-      expect(p['currentOffset'], isNull);
-      expect(p['total'], 3);
-    });
+    test(
+      'prev/next real texts echoed in reading order, total = prev + next',
+      () {
+        final MiningSentenceDraft draft = MiningSentenceDraft();
+        draft.setContext(
+          prev: <MiningDraftSentence>[s('前々。'), s('前。')],
+          next: <MiningDraftSentence>[s('后。')],
+        );
+        final Map<String, Object?> p = buildSentenceContextPreview(
+          draft: draft,
+          current: '当前。',
+          currentOffset: null,
+        );
+        expect(p['prev'], <String>['前々。', '前。']);
+        expect(p['next'], <String>['后。']);
+        expect(p['current'], '当前。');
+        expect(p['currentOffset'], isNull);
+        expect(p['total'], 3);
+      },
+    );
 
-    test('result is JSON-safe (bridge-serializable) — String/int/List<String>',
-        () {
-      final MiningSentenceDraft draft = MiningSentenceDraft()
-        ..setContext(prev: <MiningDraftSentence>[s('前。')]);
-      final Map<String, Object?> p = buildSentenceContextPreview(
-        draft: draft,
-        current: 'x',
-        currentOffset: 0,
-      );
-      expect(p['prev'], isA<List<String>>());
-      expect(p['next'], isA<List<String>>());
-      expect(p['current'], isA<String>());
-      expect(p['total'], isA<int>());
-    });
+    test(
+      'result is JSON-safe (bridge-serializable) — String/int/List<String>',
+      () {
+        final MiningSentenceDraft draft = MiningSentenceDraft()
+          ..setContext(prev: <MiningDraftSentence>[s('前。')]);
+        final Map<String, Object?> p = buildSentenceContextPreview(
+          draft: draft,
+          current: 'x',
+          currentOffset: 0,
+        );
+        expect(p['prev'], isA<List<String>>());
+        expect(p['next'], isA<List<String>>());
+        expect(p['current'], isA<String>());
+        expect(p['total'], isA<int>());
+      },
+    );
   });
 }

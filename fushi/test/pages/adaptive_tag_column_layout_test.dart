@@ -23,8 +23,10 @@ void main() {
     });
 
     test('bounded height clamps to available slots (min 1)', () {
-      expect(adaptiveTagSlots(maxHeight: 100, tagCount: 8),
-          (100 * 0.55 / 22.0).floor().clamp(1, 8));
+      expect(
+        adaptiveTagSlots(maxHeight: 100, tagCount: 8),
+        (100 * 0.55 / 22.0).floor().clamp(1, 8),
+      );
       expect(adaptiveTagSlots(maxHeight: 0, tagCount: 3), 1);
     });
 
@@ -34,60 +36,72 @@ void main() {
   });
 
   testWidgets(
-      'tag column under Positioned(top,left) in StackFit.expand does not throw',
-      (WidgetTester tester) async {
-    int reportedSlots = -1;
-    await tester.pumpWidget(MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: SizedBox(
-            width: 200,
-            height: 300,
-            child: Stack(
-              fit: StackFit.expand,
-              children: <Widget>[
-                // 封面 sibling：StackFit.expand 下被强制满尺寸。
-                const ColoredBox(key: Key('cover'), color: Colors.grey),
-                // 标签覆盖层：只设 top+left → 拿到 unbounded 约束（复刻生产）。
-                Positioned(
-                  top: 6,
-                  left: 6,
-                  child: LayoutBuilder(
-                    builder:
-                        (BuildContext context, BoxConstraints constraints) {
-                      reportedSlots = adaptiveTagSlots(
-                        maxHeight: constraints.maxHeight,
-                        tagCount: 3,
-                      );
-                      return Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          for (int i = 0; i < reportedSlots; i++)
-                            const SizedBox(height: 22, child: Text('tag')),
-                        ],
-                      );
-                    },
-                  ),
+    'tag column under Positioned(top,left) in StackFit.expand does not throw',
+    (WidgetTester tester) async {
+      int reportedSlots = -1;
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: Center(
+              child: SizedBox(
+                width: 200,
+                height: 300,
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: <Widget>[
+                    // 封面 sibling：StackFit.expand 下被强制满尺寸。
+                    const ColoredBox(key: Key('cover'), color: Colors.grey),
+                    // 标签覆盖层：只设 top+left → 拿到 unbounded 约束（复刻生产）。
+                    Positioned(
+                      top: 6,
+                      left: 6,
+                      child: LayoutBuilder(
+                        builder:
+                            (BuildContext context, BoxConstraints constraints) {
+                              reportedSlots = adaptiveTagSlots(
+                                maxHeight: constraints.maxHeight,
+                                tagCount: 3,
+                              );
+                              return Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  for (int i = 0; i < reportedSlots; i++)
+                                    const SizedBox(
+                                      height: 22,
+                                      child: Text('tag'),
+                                    ),
+                                ],
+                              );
+                            },
+                      ),
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
         ),
-      ),
-    ));
-    await tester.pump();
+      );
+      await tester.pump();
 
-    expect(tester.takeException(), isNull,
-        reason: '无界约束下标签列不得抛 UnsupportedError: Infinity or NaN toInt');
-    expect(reportedSlots, 3, reason: '无界约束应走 isFinite 守卫渲染全部标签');
-    // 封面 sibling 仍按 Stack 全尺寸布局，不被标签层异常波及。
-    expect(
-        tester.getSize(find.byKey(const Key('cover'))), const Size(200, 300));
-  });
+      expect(
+        tester.takeException(),
+        isNull,
+        reason: '无界约束下标签列不得抛 UnsupportedError: Infinity or NaN toInt',
+      );
+      expect(reportedSlots, 3, reason: '无界约束应走 isFinite 守卫渲染全部标签');
+      // 封面 sibling 仍按 Stack 全尺寸布局，不被标签层异常波及。
+      expect(
+        tester.getSize(find.byKey(const Key('cover'))),
+        const Size(200, 300),
+      );
+    },
+  );
 
   group('BUG-220 子2: 卡片标签竖排统一宽度(消除参差)', () {
-    testWidgets('IntrinsicWidth + stretch 让不同文字宽度的标签 chip 渲染成同一宽度',
-        (WidgetTester tester) async {
+    testWidgets('IntrinsicWidth + stretch 让不同文字宽度的标签 chip 渲染成同一宽度', (
+      WidgetTester tester,
+    ) async {
       // 复刻修复后的 _uniformWidthTagColumn 结构：用最宽 chip 决定列宽，
       // 其余被 stretch 拉到同宽（修复前用 crossAxisAlignment.start，
       // 各 chip 宽=自身文字宽 → 一行长一行短）。
@@ -103,8 +117,9 @@ void main() {
                   children: <Widget>[
                     Container(key: const Key('a'), child: const Text('SF')),
                     Container(
-                        key: const Key('b'),
-                        child: const Text('A much longer tag name')),
+                      key: const Key('b'),
+                      child: const Text('A much longer tag name'),
+                    ),
                     Container(key: const Key('c'), child: const Text('x')),
                   ],
                 ),
@@ -138,8 +153,11 @@ void main() {
       expect(start, isNonNegative);
       expect(end, greaterThan(start));
       final String body = source.substring(start, end);
-      expect(body, isNot(contains('CrossAxisAlignment.start')),
-          reason: '_adaptiveTagColumn 不得再用 start 对齐的 Column(那是参差根因)');
+      expect(
+        body,
+        isNot(contains('CrossAxisAlignment.start')),
+        reason: '_adaptiveTagColumn 不得再用 start 对齐的 Column(那是参差根因)',
+      );
       expect(body, contains('_uniformWidthTagColumn('));
     });
   });

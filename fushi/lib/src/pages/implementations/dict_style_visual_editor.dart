@@ -48,15 +48,17 @@ class DictStyleVisualEditor extends StatelessWidget {
 
   /// 该部位在当前作用域下有没有设过东西（给选择器打个点，否则设过什么全靠记）。
   bool _hasRules(DictStylePart part) {
-    final String? scope =
-        dictStylePartSupportsPerDictionary(part) ? scopeDictionary : null;
+    final String? scope = dictStylePartSupportsPerDictionary(part)
+        ? scopeDictionary
+        : null;
     return !dictStylePropsFor(rules, part, scope).isEmpty;
   }
 
   @override
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
-    final bool scopeIgnored = scopeDictionary != null &&
+    final bool scopeIgnored =
+        scopeDictionary != null &&
         !dictStylePartSupportsPerDictionary(selectedPart);
     return SingleChildScrollView(
       child: Column(
@@ -163,8 +165,9 @@ class DictStyleVisualEditor extends StatelessWidget {
           Align(
             alignment: AlignmentDirectional.centerStart,
             child: TextButton.icon(
-              onPressed:
-                  _props.isEmpty ? null : () => _update(const DictStyleProps()),
+              onPressed: _props.isEmpty
+                  ? null
+                  : () => _update(const DictStyleProps()),
               icon: const Icon(Icons.restart_alt, size: 18),
               label: Text(t.dict_style_part_reset),
             ),
@@ -193,7 +196,9 @@ class DictStyleVisualEditor extends StatelessWidget {
             showSelectedIcon: false,
             segments: <ButtonSegment<int>>[
               ButtonSegment<int>(
-                  value: 0, label: Text(t.dict_style_prop_default)),
+                value: 0,
+                label: Text(t.dict_style_prop_default),
+              ),
               ButtonSegment<int>(value: 1, label: Text(t.dict_style_prop_on)),
               ButtonSegment<int>(value: 2, label: Text(t.dict_style_prop_off)),
             ],
@@ -201,8 +206,8 @@ class DictStyleVisualEditor extends StatelessWidget {
               value == null
                   ? 0
                   : value
-                      ? 1
-                      : 2,
+                  ? 1
+                  : 2,
             },
             onSelectionChanged: (Set<int> picked) {
               switch (picked.first) {
@@ -438,24 +443,21 @@ class _ColorChoice extends StatelessWidget {
             color: argb == null ? tokens.surfaces.card : Color(argb!),
             shape: BoxShape.circle,
             border: Border.all(
-              color:
-                  selected ? tokens.surfaces.primary : tokens.surfaces.outline,
+              color: selected
+                  ? tokens.surfaces.primary
+                  : tokens.surfaces.outline,
               width: selected ? 3 : 1,
             ),
           ),
           child: showPaletteIcon
-              ? Icon(
-                  Icons.colorize,
-                  size: 16,
-                  color: tokens.surfaces.onVariant,
-                )
+              ? Icon(Icons.colorize, size: 16, color: tokens.surfaces.onVariant)
               : (argb == null
-                  ? Icon(
-                      Icons.block,
-                      size: 16,
-                      color: tokens.surfaces.onVariant,
-                    )
-                  : null),
+                    ? Icon(
+                        Icons.block,
+                        size: 16,
+                        color: tokens.surfaces.onVariant,
+                      )
+                    : null),
         ),
       ),
     );

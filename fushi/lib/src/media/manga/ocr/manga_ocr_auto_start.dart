@@ -28,19 +28,19 @@ import 'package:fushi/utils.dart';
 /// 在「什么都不说」和「乱报错」之间二选一。
 class MangaOcrAutoStartResult {
   const MangaOcrAutoStartResult.started(this.job, this.engine)
-      : cancelled = false,
-        unavailableReason = null;
+    : cancelled = false,
+      unavailableReason = null;
 
   const MangaOcrAutoStartResult.cancelled()
-      : job = null,
-        engine = null,
-        cancelled = true,
-        unavailableReason = null;
+    : job = null,
+      engine = null,
+      cancelled = true,
+      unavailableReason = null;
 
   const MangaOcrAutoStartResult.unavailable(String reason, this.engine)
-      : job = null,
-        cancelled = false,
-        unavailableReason = reason;
+    : job = null,
+      cancelled = false,
+      unavailableReason = reason;
 
   final MangaOcrBackgroundJob? job;
 
@@ -166,6 +166,7 @@ Future<MangaOcrAutoStartResult> startMangaOcrWithPreferredEngine({
   required String imageDirPath,
   required int startPage,
   required String lensLanguage,
+
   /// 只有走真实装配（[enginesOverride] 为空）时才需要——[MangaOcrWizardEngines.resolve]
   /// 要用它构造互联客户端。测试注入 engines 时不必给。
   FushiDatabase? db,
@@ -173,7 +174,8 @@ Future<MangaOcrAutoStartResult> startMangaOcrWithPreferredEngine({
   GoogleLensDisclosureGate? lensDisclosureGate,
   MangaOcrRemoteRunner? remoteRunnerOverride,
 }) async {
-  final MangaOcrWizardEngines engines = enginesOverride ??
+  final MangaOcrWizardEngines engines =
+      enginesOverride ??
       MangaOcrWizardEngines.resolve(
         context: context,
         db: db!,
@@ -184,8 +186,8 @@ Future<MangaOcrAutoStartResult> startMangaOcrWithPreferredEngine({
 
   final MangaOcrEnginePreference preference =
       MangaOcrEnginePreferenceKey.fromKey(
-    engines.initialEnginePreference ?? kDefaultMangaOcrEnginePreference.key,
-  );
+        engines.initialEnginePreference ?? kDefaultMangaOcrEnginePreference.key,
+      );
   final MangaOcrEngineId? engine = resolveMangaOcrEngine(
     preference: preference,
     hasExistingMetadata: false,

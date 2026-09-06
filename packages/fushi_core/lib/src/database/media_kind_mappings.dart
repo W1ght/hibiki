@@ -21,10 +21,10 @@ import 'tag_host_kind.dart';
 
 /// 合集/书架种类 → 活动事件种类（epub / srt 都折叠进活动域的 `book`）。
 ActivityMediaKind activityMediaKindOf(MediaKind kind) => switch (kind) {
-      MediaKind.epub || MediaKind.srt => ActivityMediaKind.book,
-      MediaKind.video => ActivityMediaKind.video,
-      MediaKind.game => ActivityMediaKind.game,
-    };
+  MediaKind.epub || MediaKind.srt => ActivityMediaKind.book,
+  MediaKind.video => ActivityMediaKind.video,
+  MediaKind.game => ActivityMediaKind.game,
+};
 
 /// 活动事件种类 → 其可能对应的合集/书架种类（**有序**：book 活动行的
 /// mediaKey 不带书架种类标记，按「epub 优先、srt 回退」逐一试探——与
@@ -32,9 +32,9 @@ ActivityMediaKind activityMediaKindOf(MediaKind kind) => switch (kind) {
 List<MediaKind> shelfKindsOfActivityMedia(ActivityMediaKind kind) =>
     switch (kind) {
       ActivityMediaKind.book => const <MediaKind>[
-          MediaKind.epub,
-          MediaKind.srt
-        ],
+        MediaKind.epub,
+        MediaKind.srt,
+      ],
       ActivityMediaKind.video => const <MediaKind>[MediaKind.video],
       ActivityMediaKind.game => const <MediaKind>[MediaKind.game],
     };
@@ -42,20 +42,18 @@ List<MediaKind> shelfKindsOfActivityMedia(ActivityMediaKind kind) =>
 /// 合集/书架种类 → 统计来源种类（epub / srt 都归 `book` 桶；游戏不入
 /// book / video 统计 → null）。
 StatSourceKind? statSourceKindOf(MediaKind kind) => switch (kind) {
-      MediaKind.epub || MediaKind.srt => StatSourceKind.book,
-      MediaKind.video => StatSourceKind.video,
-      MediaKind.game => null,
-    };
+  MediaKind.epub || MediaKind.srt => StatSourceKind.book,
+  MediaKind.video => StatSourceKind.video,
+  MediaKind.game => null,
+};
 
 /// 标签宿主种类 → 标签墓碑域（[BookTagMembershipTombstones].mediaType 的值域，
 /// 复用 [MediaKind]）。只有 epub/video 进 tag live-sync、有墓碑语义；其余
 /// kind 调到这里是调用方 bug——扔 ArgumentError 而不是静默写错域（写错域的
 /// 墓碑所有读取端都命不中，跨端标签移除会静默失传，review5-9）。
 MediaKind tombstoneMediaKindOf(TagHostKind kind) => switch (kind) {
-      TagHostKind.epub => MediaKind.epub,
-      TagHostKind.video => MediaKind.video,
-      TagHostKind.srt ||
-      TagHostKind.collection ||
-      TagHostKind.game =>
-        throw ArgumentError.value(kind, 'kind', '该 kind 不进 tag sync，无墓碑域'),
-    };
+  TagHostKind.epub => MediaKind.epub,
+  TagHostKind.video => MediaKind.video,
+  TagHostKind.srt || TagHostKind.collection || TagHostKind.game =>
+    throw ArgumentError.value(kind, 'kind', '该 kind 不进 tag sync，无墓碑域'),
+};

@@ -34,22 +34,23 @@ const List<Duration> kDiscoveryDownloadRetryBackoff = <Duration>[
 
 /// 把条目物化成可执行 payload（生产接 `MediaDiscoverySource.resolvePayload`；
 /// 注入函数而非源对象，队列不依赖源注册表）。
-typedef DiscoveryPayloadResolver = Future<DiscoveryPayload> Function(
-  DiscoveryResourceItem item,
-);
+typedef DiscoveryPayloadResolver =
+    Future<DiscoveryPayload> Function(DiscoveryResourceItem item);
 
 /// 下载完成后的自动入库回调（按 [DiscoveryResourceItem.kind] 分派到各域导入器；
 /// 生产分派表在组装点注入，本队列不 import 任何域代码）。
-typedef DiscoveryDownloadImporter = Future<DiscoveryImportOutcome> Function(
-  DiscoveryDownloadTask task,
-  File file,
-);
+typedef DiscoveryDownloadImporter =
+    Future<DiscoveryImportOutcome> Function(
+      DiscoveryDownloadTask task,
+      File file,
+    );
 
 /// 测试注入口：替换真实网络（绕 HttpClient）。
-typedef DiscoveryDownloadOpen = Future<ResumableDownloadResponse> Function(
-  Uri uri,
-  Map<String, String> headers,
-);
+typedef DiscoveryDownloadOpen =
+    Future<ResumableDownloadResponse> Function(
+      Uri uri,
+      Map<String, String> headers,
+    );
 
 /// 一次自动入库的结果。
 class DiscoveryImportOutcome {
@@ -87,10 +88,7 @@ class DiscoveryDownloadTask {
     int receivedBytes = 0,
     int? totalBytes,
   }) {
-    return DiscoveryDownloadTask._(
-      item: item,
-      destinationDir: destinationDir,
-    )
+    return DiscoveryDownloadTask._(item: item, destinationDir: destinationDir)
       ..status = status
       ..receivedBytes = receivedBytes
       ..totalBytes = totalBytes;
@@ -145,10 +143,10 @@ class DiscoveryDownloadQueue extends ChangeNotifier {
     required DiscoveryDownloadImporter importer,
     @visibleForTesting DiscoveryDownloadOpen? openOverride,
     @visibleForTesting List<Duration>? retryBackoffOverride,
-  })  : _resolvePayload = resolvePayload,
-        _importer = importer,
-        _openOverride = openOverride,
-        _retryBackoff = retryBackoffOverride ?? kDiscoveryDownloadRetryBackoff;
+  }) : _resolvePayload = resolvePayload,
+       _importer = importer,
+       _openOverride = openOverride,
+       _retryBackoff = retryBackoffOverride ?? kDiscoveryDownloadRetryBackoff;
 
   final DiscoveryPayloadResolver _resolvePayload;
   final DiscoveryDownloadImporter _importer;
@@ -304,11 +302,11 @@ class DiscoveryDownloadQueue extends ChangeNotifier {
       final DiscoveryHttpPayload http = switch (payload) {
         DiscoveryHttpPayload() => payload,
         DiscoveryTorrentPayload() => throw StateError(
-            'source resolved a torrent payload for an httpFile item',
-          ),
+          'source resolved a torrent payload for an httpFile item',
+        ),
         DiscoverySelectedTorrentPayload() => throw StateError(
-            'source resolved a selected torrent payload for an httpFile item',
-          ),
+          'source resolved a selected torrent payload for an httpFile item',
+        ),
       };
       if (task._cancelRequested) throw const _DiscoveryDownloadCancelled();
 
@@ -498,8 +496,9 @@ class DiscoveryDownloadQueue extends ChangeNotifier {
   static bool _isTransientError(Object error) {
     if (error is ResumableDownloadIntegrityException) return false;
     if (error is HttpException) {
-      final RegExpMatch? match =
-          RegExp(r'download failed \((\d{3})\)').firstMatch(error.message);
+      final RegExpMatch? match = RegExp(
+        r'download failed \((\d{3})\)',
+      ).firstMatch(error.message);
       if (match != null) {
         final int code = int.parse(match.group(1)!);
         return code >= 500 || code == 408 || code == 429;

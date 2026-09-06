@@ -61,7 +61,8 @@ void main() {
       expect(
         b.frames,
         greaterThan(prev),
-        reason: '桶表必须按帧数升序：prewarmSmallest 取的是 buckets.first，'
+        reason:
+            '桶表必须按帧数升序：prewarmSmallest 取的是 buckets.first，'
             '乱序会让它预热出最大的那个（显存正是要省的东西）',
       );
       prev = b.frames;

@@ -48,20 +48,20 @@ class FushiClientUrl {
   final String? token;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'url': url,
-        'enabled': enabled,
-        if (fingerprintSha256 != null) 'fingerprintSha256': fingerprintSha256,
-        if (deviceName != null) 'deviceName': deviceName,
-        if (token != null && token!.isNotEmpty) 'token': token,
-      };
+    'url': url,
+    'enabled': enabled,
+    if (fingerprintSha256 != null) 'fingerprintSha256': fingerprintSha256,
+    if (deviceName != null) 'deviceName': deviceName,
+    if (token != null && token!.isNotEmpty) 'token': token,
+  };
 
   factory FushiClientUrl.fromJson(Map<String, dynamic> json) => FushiClientUrl(
-        url: json['url'] as String,
-        enabled: json['enabled'] as bool? ?? true,
-        fingerprintSha256: json['fingerprintSha256'] as String?,
-        deviceName: json['deviceName'] as String?,
-        token: json['token'] as String?,
-      );
+    url: json['url'] as String,
+    enabled: json['enabled'] as bool? ?? true,
+    fingerprintSha256: json['fingerprintSha256'] as String?,
+    deviceName: json['deviceName'] as String?,
+    token: json['token'] as String?,
+  );
 
   /// 复制并覆盖部分字段（不可变更新）。`null` 入参保留原值；要显式清空请直接构造。
   FushiClientUrl copyWith({
@@ -70,14 +70,13 @@ class FushiClientUrl {
     String? fingerprintSha256,
     String? deviceName,
     String? token,
-  }) =>
-      FushiClientUrl(
-        url: url ?? this.url,
-        enabled: enabled ?? this.enabled,
-        fingerprintSha256: fingerprintSha256 ?? this.fingerprintSha256,
-        deviceName: deviceName ?? this.deviceName,
-        token: token ?? this.token,
-      );
+  }) => FushiClientUrl(
+    url: url ?? this.url,
+    enabled: enabled ?? this.enabled,
+    fingerprintSha256: fingerprintSha256 ?? this.fingerprintSha256,
+    deviceName: deviceName ?? this.deviceName,
+    token: token ?? this.token,
+  );
 }
 
 /// BUG-1550：解析某个候选地址该用哪份凭据——地址行自带的 [FushiClientUrl.token]
@@ -150,11 +149,11 @@ class SyncChannelScope {
 
   /// 全部可能的槽位（键目录展开用，见 [SyncRepository.deviceLocalPrefKeys]）。
   static List<SyncChannelScope> get all => <SyncChannelScope>[
-        for (final SyncBackendType t in SyncBackendType.values)
-          SyncChannelScope.forBackendType(t),
-        host,
-        unscoped,
-      ];
+    for (final SyncBackendType t in SyncBackendType.values)
+      SyncChannelScope.forBackendType(t),
+    host,
+    unscoped,
+  ];
 
   final String id;
 
@@ -269,9 +268,10 @@ class SyncRepository {
   // 故读写一律带 [SyncChannelScope]。
 
   Future<String?> getRootFolderId(SyncChannelScope scope) async {
-    final row = await (_db.select(_db.preferences)
-          ..where((t) => t.key.equals(scope.key(_keyRootFolderId))))
-        .getSingleOrNull();
+    final row =
+        await (_db.select(_db.preferences)
+              ..where((t) => t.key.equals(scope.key(_keyRootFolderId))))
+            .getSingleOrNull();
     return row?.value;
   }
 
@@ -281,34 +281,45 @@ class SyncRepository {
       await (_db.delete(_db.preferences)..where((t) => t.key.equals(key))).go();
       return;
     }
-    await _db.into(_db.preferences).insertOnConflictUpdate(
+    await _db
+        .into(_db.preferences)
+        .insertOnConflictUpdate(
           PreferencesCompanion.insert(key: key, value: id),
         );
   }
 
   Future<Map<String, String>> getFolderCache(SyncChannelScope scope) async {
-    final row = await (_db.select(_db.preferences)
-          ..where((t) => t.key.equals(scope.key(_keyFolderCache))))
-        .getSingleOrNull();
+    final row =
+        await (_db.select(_db.preferences)
+              ..where((t) => t.key.equals(scope.key(_keyFolderCache))))
+            .getSingleOrNull();
     if (row == null) return {};
     return Map<String, String>.from(
-        jsonDecode(row.value) as Map<String, dynamic>);
+      jsonDecode(row.value) as Map<String, dynamic>,
+    );
   }
 
   Future<void> setFolderCache(
-      SyncChannelScope scope, Map<String, String> cache) async {
-    await _db.into(_db.preferences).insertOnConflictUpdate(
+    SyncChannelScope scope,
+    Map<String, String> cache,
+  ) async {
+    await _db
+        .into(_db.preferences)
+        .insertOnConflictUpdate(
           PreferencesCompanion.insert(
-              key: scope.key(_keyFolderCache), value: jsonEncode(cache)),
+            key: scope.key(_keyFolderCache),
+            value: jsonEncode(cache),
+          ),
         );
   }
 
   Future<void> clearFolderCache(SyncChannelScope scope) async {
-    await (_db.delete(_db.preferences)
-          ..where((t) => t.key.isIn(<String>[
-                scope.key(_keyRootFolderId),
-                scope.key(_keyFolderCache),
-              ])))
+    await (_db.delete(_db.preferences)..where(
+          (t) => t.key.isIn(<String>[
+            scope.key(_keyRootFolderId),
+            scope.key(_keyFolderCache),
+          ]),
+        ))
         .go();
   }
 
@@ -340,9 +351,9 @@ class SyncRepository {
   ///
   /// 幂等：键已不存在时是 no-op。
   Future<void> migrateFolderCacheToPerChannel() async {
-    await (_db.delete(_db.preferences)
-          ..where(
-              (t) => t.key.isIn(<String>[_keyRootFolderId, _keyFolderCache])))
+    await (_db.delete(_db.preferences)..where(
+          (t) => t.key.isIn(<String>[_keyRootFolderId, _keyFolderCache]),
+        ))
         .go();
   }
 
@@ -401,7 +412,8 @@ class SyncRepository {
   /// 迁移：本槽位无值时回落解耦前的全局键（升级后第一轮不会因为「新键为空」而把
   /// 刚同步过的通道当成从未同步、立刻再跑一轮）。写侧只写本槽位。
   Future<int?> getLastSyncMs(SyncChannelScope scope) async {
-    final s = await _getStringOrNull(scope.key(_keyLastSyncMs)) ??
+    final s =
+        await _getStringOrNull(scope.key(_keyLastSyncMs)) ??
         await _getStringOrNull(_keyLastSyncMs);
     return s == null ? null : int.tryParse(s);
   }
@@ -426,7 +438,7 @@ class SyncRepository {
   Future<int> getCollectionsSyncBaselineMs(SyncChannelScope scope) async {
     final String? s =
         await _getStringOrNull(scope.key(_keyCollectionsBaselineMs)) ??
-            await _getStringOrNull(_keyCollectionsBaselineMs);
+        await _getStringOrNull(_keyCollectionsBaselineMs);
     return s == null ? 0 : int.tryParse(s) ?? 0;
   }
 
@@ -449,13 +461,14 @@ class SyncRepository {
   Future<int> getDeletionTombstonesBaselineMs(SyncChannelScope scope) async {
     final String? s =
         await _getStringOrNull(scope.key(_keyDeletionTombstonesBaselineMs)) ??
-            await _getStringOrNull(_keyDeletionTombstonesBaselineMs);
+        await _getStringOrNull(_keyDeletionTombstonesBaselineMs);
     return s == null ? 0 : int.tryParse(s) ?? 0;
   }
 
   Future<void> setDeletionTombstonesBaselineMs(
-          SyncChannelScope scope, int ms) =>
-      _setString(scope.key(_keyDeletionTombstonesBaselineMs), ms.toString());
+    SyncChannelScope scope,
+    int ms,
+  ) => _setString(scope.key(_keyDeletionTombstonesBaselineMs), ms.toString());
 
   /// 删除墓碑**推送**的因果基线（毫秒，互联通道专用）。本地墓碑 deletedAt 晚于它才
   /// 推给对端 host；早于它视为本设备已推过、不再重复请求。0 = 从未推送过。
@@ -465,8 +478,9 @@ class SyncRepository {
   /// （[getDeletionTombstonesBaselineMs]）也是同样的全局口径，两侧保持一致。
   /// 设备本地（[deviceLocalPrefKeys]），理由见键定义处注释。
   Future<int> getDeletionTombstonesPushBaselineMs() async {
-    final String? s =
-        await _getStringOrNull(_keyDeletionTombstonesPushBaselineMs);
+    final String? s = await _getStringOrNull(
+      _keyDeletionTombstonesPushBaselineMs,
+    );
     return s == null ? 0 : int.tryParse(s) ?? 0;
   }
 
@@ -482,18 +496,18 @@ class SyncRepository {
 
   Future<void> setDesktopCredentials(String? json) async {
     if (json == null) {
-      await (_db.delete(_db.preferences)
-            ..where((t) => t.key.equals(_keyDesktopCredentials)))
-          .go();
+      await (_db.delete(
+        _db.preferences,
+      )..where((t) => t.key.equals(_keyDesktopCredentials))).go();
       return;
     }
     await _setString(_keyDesktopCredentials, _encodeSecret(json));
   }
 
   Future<void> clearDesktopSession() async {
-    await (_db.delete(_db.preferences)
-          ..where((t) => t.key.equals(_keyDesktopCredentials)))
-        .go();
+    await (_db.delete(
+      _db.preferences,
+    )..where((t) => t.key.equals(_keyDesktopCredentials))).go();
   }
 
   // ── Backend type ───────────────────────────────────────────────────
@@ -533,8 +547,11 @@ class SyncRepository {
         // 的 URL，于是「云已配置」为真 → `hasDeletionPropagationChannel` 放行
         // 「从所有设备删除」→ 用户以为删干净了，实际没有任何云通道去发布墓碑。
         return present(await getDesktopCredentials()) ||
-            present(await getRootFolderId(
-                SyncChannelScope.forBackendType(SyncBackendType.googleDrive)));
+            present(
+              await getRootFolderId(
+                SyncChannelScope.forBackendType(SyncBackendType.googleDrive),
+              ),
+            );
       case SyncBackendType.webDav:
         return present(await getWebDavUrl());
       case SyncBackendType.ftp:
@@ -723,9 +740,9 @@ class SyncRepository {
   Future<String?> getWebDavUrl() => _getStringOrNull(_keyWebDavUrl);
   Future<void> setWebDavUrl(String? url) async {
     if (url == null) {
-      await (_db.delete(_db.preferences)
-            ..where((t) => t.key.equals(_keyWebDavUrl)))
-          .go();
+      await (_db.delete(
+        _db.preferences,
+      )..where((t) => t.key.equals(_keyWebDavUrl))).go();
       return;
     }
     await _setString(_keyWebDavUrl, url);
@@ -734,9 +751,9 @@ class SyncRepository {
   Future<String?> getWebDavUsername() => _getStringOrNull(_keyWebDavUsername);
   Future<void> setWebDavUsername(String? username) async {
     if (username == null) {
-      await (_db.delete(_db.preferences)
-            ..where((t) => t.key.equals(_keyWebDavUsername)))
-          .go();
+      await (_db.delete(
+        _db.preferences,
+      )..where((t) => t.key.equals(_keyWebDavUsername))).go();
       return;
     }
     await _setString(_keyWebDavUsername, username);
@@ -749,9 +766,9 @@ class SyncRepository {
 
   Future<void> setWebDavPassword(String? password) async {
     if (password == null) {
-      await (_db.delete(_db.preferences)
-            ..where((t) => t.key.equals(_keyWebDavPassword)))
-          .go();
+      await (_db.delete(
+        _db.preferences,
+      )..where((t) => t.key.equals(_keyWebDavPassword))).go();
       return;
     }
     await _setString(_keyWebDavPassword, _encodeSecret(password));
@@ -1074,8 +1091,9 @@ class SyncRepository {
     final List<FushiClientUrl> urls = await getFushiClientUrls();
     final int existingIdx = urls.indexWhere((FushiClientUrl u) => u.url == url);
 
-    final String? incomingFp =
-        (fingerprint != null && fingerprint.isNotEmpty) ? fingerprint : null;
+    final String? incomingFp = (fingerprint != null && fingerprint.isNotEmpty)
+        ? fingerprint
+        : null;
 
     if (existingIdx >= 0) {
       final FushiClientUrl existing = urls[existingIdx];
@@ -1093,8 +1111,9 @@ class SyncRepository {
       }
       // 指纹处理：已存非空（且与新值归一化相等，否则上面已抛）→ 保留原存值，
       // 不被新写法（大小写/冒号差异）改写；已存为空 → 首次写入新指纹（http→https 升级）。
-      final String? nextFp =
-          (storedFp != null && storedFp.isNotEmpty) ? storedFp : incomingFp;
+      final String? nextFp = (storedFp != null && storedFp.isNotEmpty)
+          ? storedFp
+          : incomingFp;
       final FushiClientUrl upgraded = existing.copyWith(
         fingerprintSha256: nextFp,
         deviceName: deviceName,
@@ -1322,14 +1341,16 @@ class SyncRepository {
   }
 
   Future<String?> _getStringOrNull(String key) async {
-    final row = await (_db.select(_db.preferences)
-          ..where((t) => t.key.equals(key)))
-        .getSingleOrNull();
+    final row = await (_db.select(
+      _db.preferences,
+    )..where((t) => t.key.equals(key))).getSingleOrNull();
     return row?.value;
   }
 
   Future<void> _setString(String key, String value) async {
-    await _db.into(_db.preferences).insertOnConflictUpdate(
+    await _db
+        .into(_db.preferences)
+        .insertOnConflictUpdate(
           PreferencesCompanion.insert(key: key, value: value),
         );
   }

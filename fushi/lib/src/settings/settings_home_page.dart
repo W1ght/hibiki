@@ -14,11 +14,7 @@ import 'package:fushi/src/utils/components/fushi_windows_title_bar.dart';
 import 'package:fushi/utils.dart';
 
 class SettingsHomePage extends BasePage {
-  const SettingsHomePage({
-    super.key,
-    this.embedded = false,
-    this.onBack,
-  });
+  const SettingsHomePage({super.key, this.embedded = false, this.onBack});
 
   final bool embedded;
 
@@ -67,14 +63,17 @@ class _SettingsHomePageState extends BasePageState<SettingsHomePage>
 
   @override
   Widget build(BuildContext context) {
-    final SettingsContext settingsContext =
-        createSettingsContext(appModel: appModel, ref: ref);
-    final List<SettingsDestination> destinations = buildSettingsSchema(
-      settingsContext,
-    )
-        .where((SettingsDestination destination) =>
-            destination.isVisible(settingsContext))
-        .toList(growable: false);
+    final SettingsContext settingsContext = createSettingsContext(
+      appModel: appModel,
+      ref: ref,
+    );
+    final List<SettingsDestination> destinations =
+        buildSettingsSchema(settingsContext)
+            .where(
+              (SettingsDestination destination) =>
+                  destination.isVisible(settingsContext),
+            )
+            .toList(growable: false);
     // 首次进入（null）或当前选中分类被平台门控隐藏时，落到第一个可见分类。
     if (!destinations.any(
       (SettingsDestination destination) =>
@@ -221,8 +220,9 @@ class _SettingsHomePageState extends BasePageState<SettingsHomePage>
   /// body 合成条目（bodySearchEntries）不登记挂点——body 行不是 schema item，
   /// 挂点永远不会被消费，跳转到分类正文即为完整语义。
   void _openSearchResult(SettingsSearchEntry entry, {required bool wide}) {
-    SettingsSearchReveal.pendingItemId =
-        entry.isBodyEntry ? null : entry.item.id;
+    SettingsSearchReveal.pendingItemId = entry.isBodyEntry
+        ? null
+        : entry.item.id;
     _searchController.clear();
     setState(() {
       _searchQuery = '';
@@ -310,23 +310,23 @@ class _SettingsHomePageState extends BasePageState<SettingsHomePage>
               // 溢出（BUG-009 同源）。
               child: _searchQuery.trim().isEmpty
                   ? (cupertino
-                      ? SingleChildScrollView(
-                          child: renderer.buildDestinationList(
+                        ? SingleChildScrollView(
+                            child: renderer.buildDestinationList(
+                              settingsContext: settingsContext,
+                              destinations: destinations,
+                              selectedDestinationId: selectedDestinationId,
+                              onDestinationSelected: _selectDestination,
+                              pushRoutes: false,
+                            ),
+                          )
+                        : renderer.buildDestinationList(
                             settingsContext: settingsContext,
                             destinations: destinations,
                             selectedDestinationId: selectedDestinationId,
                             onDestinationSelected: _selectDestination,
-                            pushRoutes: false,
-                          ),
-                        )
-                      : renderer.buildDestinationList(
-                          settingsContext: settingsContext,
-                          destinations: destinations,
-                          selectedDestinationId: selectedDestinationId,
-                          onDestinationSelected: _selectDestination,
-                          pushRoutes:
-                              false, // master-detail keeps selection in-pane.
-                        ))
+                            pushRoutes:
+                                false, // master-detail keeps selection in-pane.
+                          ))
                   : _buildSearchResults(
                       settingsContext: settingsContext,
                       destinations: destinations,

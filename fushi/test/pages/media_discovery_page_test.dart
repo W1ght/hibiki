@@ -249,8 +249,10 @@ void main() {
     await tester.pumpAndSettle();
 
     // 搜索框里也有 'WHITE ALBUM2'，断言必须限定在列表条目里，否则恒真。
-    final Finder folderItem =
-        find.widgetWithText(FushiListItem, 'WHITE ALBUM2');
+    final Finder folderItem = find.widgetWithText(
+      FushiListItem,
+      'WHITE ALBUM2',
+    );
     expect(site.searchCalls, 1);
     expect(folderItem, findsOneWidget);
     // 选中目录型源时已经 browse 过一次根目录，基线从这里取。
@@ -295,7 +297,9 @@ void main() {
 
     expect(dead.browseCalls, 1);
     expect(
-        find.textContaining(t.discovery_sources_unavailable), findsOneWidget);
+      find.textContaining(t.discovery_sources_unavailable),
+      findsOneWidget,
+    );
     expect(find.text(t.discovery_empty), findsNothing);
   });
 
@@ -332,15 +336,14 @@ class _FailingSource extends MediaDiscoverySource {
 
   @override
   DiscoveryCapabilities get capabilities => DiscoveryCapabilities(
-        kinds: <DiscoveryMediaKind>{DiscoveryMediaKind.game},
-        supportsBrowse: true,
-      );
+    kinds: <DiscoveryMediaKind>{DiscoveryMediaKind.game},
+    supportsBrowse: true,
+  );
 
   @override
   Future<ProviderBatchResult<DiscoveryResultPage>> search(
     DiscoveryRequest request,
-  ) async =>
-      throw StateError('down');
+  ) async => throw StateError('down');
 
   @override
   Future<ProviderBatchResult<DiscoveryResultPage>> browse(
@@ -366,15 +369,14 @@ class _EmptySource extends MediaDiscoverySource {
 
   @override
   DiscoveryCapabilities get capabilities => DiscoveryCapabilities(
-        kinds: <DiscoveryMediaKind>{DiscoveryMediaKind.game},
-        supportsBrowse: true,
-      );
+    kinds: <DiscoveryMediaKind>{DiscoveryMediaKind.game},
+    supportsBrowse: true,
+  );
 
   @override
   Future<ProviderBatchResult<DiscoveryResultPage>> search(
     DiscoveryRequest request,
-  ) async =>
-      _page();
+  ) async => _page();
 
   @override
   Future<ProviderBatchResult<DiscoveryResultPage>> browse(
@@ -415,9 +417,9 @@ class _RecursiveSearchSource extends MediaDiscoverySource {
 
   @override
   DiscoveryCapabilities get capabilities => DiscoveryCapabilities(
-        kinds: <DiscoveryMediaKind>{DiscoveryMediaKind.game},
-        supportsBrowse: true,
-      );
+    kinds: <DiscoveryMediaKind>{DiscoveryMediaKind.game},
+    supportsBrowse: true,
+  );
 
   @override
   Future<ProviderBatchResult<DiscoveryResultPage>> search(

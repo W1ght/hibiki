@@ -36,7 +36,8 @@ void main() {
     expect(
       shouldPaint,
       contains('hasEverLoaded: _hasEverLoaded'),
-      reason: '底栏门控必须用 set-once _hasEverLoaded（切章不翻转），不得退回每切章'
+      reason:
+          '底栏门控必须用 set-once _hasEverLoaded（切章不翻转），不得退回每切章'
           '翻转的 _readerContentReady → 否则切章瞬间底栏卸载再挂回即闪烁。',
     );
     expect(
@@ -45,16 +46,17 @@ void main() {
       reason: '底栏可见性仍须随 _showChrome。',
     );
     final String pureGate = _functionSource(
-      File('lib/src/reader/reader_chrome_floating.dart')
-          .readAsStringSync()
-          .replaceAll('\r\n', '\n'),
+      File(
+        'lib/src/reader/reader_chrome_floating.dart',
+      ).readAsStringSync().replaceAll('\r\n', '\n'),
       'bool bottomBarVisible(',
       'BUG-1195',
     );
     expect(
       pureGate,
       contains('if (!hasEverLoaded || !chromeExpanded) return false'),
-      reason: '纯函数里「未冷加载完成 / 底栏收起 ⇒ 不画」必须是硬门，'
+      reason:
+          '纯函数里「未冷加载完成 / 底栏收起 ⇒ 不画」必须是硬门，'
           '否则页侧喂对了参数也拦不住切章闪烁。',
     );
     final String buildChrome = _functionSource(
@@ -72,40 +74,47 @@ void main() {
     expect(
       src,
       contains('barOccupiesLayout: _hasEverLoaded && _showChrome'),
-      reason: 'popupBottomReserve / _bottomChromeReserve 必须与底栏同门控在 '
+      reason:
+          'popupBottomReserve / _bottomChromeReserve 必须与底栏同门控在 '
           '_hasEverLoaded，不得用 _readerContentReady。',
     );
   });
 
   test(
-      'spread (manga) cold-open marks _hasEverLoaded so bottom bar is not delayed',
-      () {
-    final String spread = _functionSource(
-      src,
-      "handlerName: 'spreadReady'",
-      "handlerName: 'onCueTap'",
-    );
-    expect(
-      spread,
-      contains('_hasEverLoaded = true'),
-      reason: "spread 路径只发 'spreadReady' 不发 'onRestoreComplete'，必须在此置 "
-          '_hasEverLoaded = true，否则 spread 书冷开底栏要等 8s 超时才出现。',
-    );
-  });
+    'spread (manga) cold-open marks _hasEverLoaded so bottom bar is not delayed',
+    () {
+      final String spread = _functionSource(
+        src,
+        "handlerName: 'spreadReady'",
+        "handlerName: 'onCueTap'",
+      );
+      expect(
+        spread,
+        contains('_hasEverLoaded = true'),
+        reason:
+            "spread 路径只发 'spreadReady' 不发 'onRestoreComplete'，必须在此置 "
+            '_hasEverLoaded = true，否则 spread 书冷开底栏要等 8s 超时才出现。',
+      );
+    },
+  );
 
-  test('_hasEverLoaded is set-once (no reset to false except its declaration)',
-      () {
-    // 只数「复位赋值语句」（必带结尾 `;`），不数 prose 注释里出现的 `_hasEverLoaded
-    // = false` 字样 —— 注释描述状态不是复位点，旧正则漏算 `;` 会把注释误判成复位。
-    final int resets =
-        RegExp(r'_hasEverLoaded\s*=\s*false\s*;').allMatches(src).length;
-    expect(
-      resets,
-      1,
-      reason: '_hasEverLoaded 必须 set-once：除声明行 `bool _hasEverLoaded = false;` '
-          '外不得有任何复位语句（复位会让切章底栏重新闪烁）。',
-    );
-  });
+  test(
+    '_hasEverLoaded is set-once (no reset to false except its declaration)',
+    () {
+      // 只数「复位赋值语句」（必带结尾 `;`），不数 prose 注释里出现的 `_hasEverLoaded
+      // = false` 字样 —— 注释描述状态不是复位点，旧正则漏算 `;` 会把注释误判成复位。
+      final int resets = RegExp(
+        r'_hasEverLoaded\s*=\s*false\s*;',
+      ).allMatches(src).length;
+      expect(
+        resets,
+        1,
+        reason:
+            '_hasEverLoaded 必须 set-once：除声明行 `bool _hasEverLoaded = false;` '
+            '外不得有任何复位语句（复位会让切章底栏重新闪烁）。',
+      );
+    },
+  );
 }
 
 /// 截取 [source] 中从 [start] 标记到下一个 [end] 标记之间的片段（含函数体）。

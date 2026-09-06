@@ -8,17 +8,17 @@ import 'package:fushi/utils.dart';
 void main() {
   setUp(() => LocaleSettings.setLocale(AppLocale.en));
 
-  testWidgets('user can choose one Jimaku entry and a language',
-      (WidgetTester tester) async {
+  testWidgets('user can choose one Jimaku entry and a language', (
+    WidgetTester tester,
+  ) async {
     int selectedEntry = 1;
     String? selectedLanguage;
-    final JimakuFileInventory inventory = JimakuFileInventory.fromFiles(
-      const <JimakuFile>[
-        JimakuFile(name: 'Show S01E01.ja.srt', url: 'https://x/1'),
-        JimakuFile(name: 'Show S01E02.zh-cn.ass', url: 'https://x/2'),
-        JimakuFile(name: 'Show.zip', url: 'https://x/archive'),
-      ],
-    );
+    final JimakuFileInventory inventory =
+        JimakuFileInventory.fromFiles(const <JimakuFile>[
+          JimakuFile(name: 'Show S01E01.ja.srt', url: 'https://x/1'),
+          JimakuFile(name: 'Show S01E02.zh-cn.ass', url: 'https://x/2'),
+          JimakuFile(name: 'Show.zip', url: 'https://x/archive'),
+        ]);
     await tester.pumpWidget(
       TranslationProvider(
         child: MaterialApp(
@@ -59,11 +59,13 @@ void main() {
     expect(find.text('Jimaku #1'), findsOneWidget);
     expect(find.text('Jimaku #2'), findsOneWidget);
     expect(
-      find.text(t.video_jimaku_source_summary(
-        files: 2,
-        episodes: 2,
-        languages: '日本語 / 中文',
-      )),
+      find.text(
+        t.video_jimaku_source_summary(
+          files: 2,
+          episodes: 2,
+          languages: '日本語 / 中文',
+        ),
+      ),
       findsOneWidget,
     );
     expect(find.text(t.video_jimaku_source_failed), findsOneWidget);

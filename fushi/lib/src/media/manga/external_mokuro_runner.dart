@@ -17,9 +17,9 @@ class ExternalMokuroRunner {
     String? configuredPath,
     MokuroProcessRunner processRunner = const RealMokuroProcessRunner(),
     Map<String, String>? environment,
-  })  : _configuredPath = configuredPath,
-        _processRunner = processRunner,
-        _environment = environment ?? Platform.environment;
+  }) : _configuredPath = configuredPath,
+       _processRunner = processRunner,
+       _environment = environment ?? Platform.environment;
 
   /// 用户在设置里手填的可执行路径（或命令名）；空/null = 不指定，退回下一探测源。
   final String? _configuredPath;
@@ -35,7 +35,8 @@ class ExternalMokuroRunner {
     final String? cfg = _configuredPath?.trim();
     if (cfg != null && cfg.isNotEmpty) return cfg;
     // 新名优先，旧名回退：FUSHI_MOKURO 是改名前对用户公开的环境变量，不设即断。
-    final String? env = (_environment['FUSHI_MOKURO'] ?? _environment['FUSHI_MOKURO'])?.trim();
+    final String? env =
+        (_environment['FUSHI_MOKURO'] ?? _environment['FUSHI_MOKURO'])?.trim();
     if (env != null && env.isNotEmpty) return env;
     return _whichMokuro();
   }
@@ -108,8 +109,9 @@ class ExternalMokuroRunner {
       idle = Timer(idleTimeout, () {
         handle?.kill();
         if (!controller.isClosed) {
-          controller
-              .addError(const MokuroRunnerException('mokuro 长时间无输出，已超时终止'));
+          controller.addError(
+            const MokuroRunnerException('mokuro 长时间无输出，已超时终止'),
+          );
         }
       });
     }
@@ -122,8 +124,10 @@ class ExternalMokuroRunner {
         return;
       }
       try {
-        handle = await _processRunner
-            .start(exe, <String>['--disable_confirmation', imageDirPath]);
+        handle = await _processRunner.start(exe, <String>[
+          '--disable_confirmation',
+          imageDirPath,
+        ]);
       } catch (e) {
         controller.addError(MokuroRunnerException('启动 mokuro 失败：$e'));
         await controller.close();
@@ -159,7 +163,8 @@ class ExternalMokuroRunner {
       final String? mokuroPath = locateMokuroFile(imageDir);
       if (mokuroPath == null) {
         controller.addError(
-            const MokuroRunnerException('mokuro 运行完成但未找到 .mokuro 产物'));
+          const MokuroRunnerException('mokuro 运行完成但未找到 .mokuro 产物'),
+        );
       } else {
         controller.add(MokuroRunEvent.finished(mokuroPath));
       }
@@ -209,8 +214,10 @@ class ExternalMokuroRunner {
     for (final File f in candidates) {
       if (p.basenameWithoutExtension(f.path) == wantBase) return f.path;
     }
-    candidates.sort((File a, File b) =>
-        b.statSync().modified.compareTo(a.statSync().modified));
+    candidates.sort(
+      (File a, File b) =>
+          b.statSync().modified.compareTo(a.statSync().modified),
+    );
     return candidates.first.path;
   }
 }
@@ -220,22 +227,22 @@ class ExternalMokuroRunner {
 class MokuroRunEvent {
   /// 进程已起、尚无可解析进度时先发一次，让 UI 显示「运行中」不定态。
   const MokuroRunEvent.running()
-      : done = 0,
-        total = 0,
-        mokuroPath = null,
-        finished = false,
-        isRunning = true;
+    : done = 0,
+      total = 0,
+      mokuroPath = null,
+      finished = false,
+      isRunning = true;
 
   const MokuroRunEvent.progress({required this.done, required this.total})
-      : mokuroPath = null,
-        finished = false,
-        isRunning = false;
+    : mokuroPath = null,
+      finished = false,
+      isRunning = false;
 
   const MokuroRunEvent.finished(String this.mokuroPath)
-      : done = 0,
-        total = 0,
-        finished = true,
-        isRunning = false;
+    : done = 0,
+      total = 0,
+      finished = true,
+      isRunning = false;
 
   final int done;
   final int total;
@@ -299,10 +306,12 @@ class RealMokuroProcessRunner implements MokuroProcessRunner {
     Duration? timeout,
   }) async {
     final Process proc = await Process.start(executable, args);
-    final Future<String> outF =
-        proc.stdout.transform(const Utf8Decoder(allowMalformed: true)).join();
-    final Future<String> errF =
-        proc.stderr.transform(const Utf8Decoder(allowMalformed: true)).join();
+    final Future<String> outF = proc.stdout
+        .transform(const Utf8Decoder(allowMalformed: true))
+        .join();
+    final Future<String> errF = proc.stderr
+        .transform(const Utf8Decoder(allowMalformed: true))
+        .join();
     final Future<int> codeF = proc.exitCode;
     int code;
     if (timeout != null) {
@@ -324,7 +333,9 @@ class RealMokuroProcessRunner implements MokuroProcessRunner {
 
   @override
   Future<MokuroProcessHandle> start(
-      String executable, List<String> args) async {
+    String executable,
+    List<String> args,
+  ) async {
     final Process proc = await Process.start(executable, args);
     final StreamController<String> controller = StreamController<String>();
     final _CrLfLineAccumulator acc = _CrLfLineAccumulator((String l) {

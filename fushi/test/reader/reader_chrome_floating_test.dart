@@ -23,9 +23,10 @@ void main() {
     test('top reserve: off -> 0 (requirement A: 关进度回收空白)', () {
       expect(
         topProgressReserve(
-            showTopProgress: false,
-            floating: false,
-            infoStripHeight: infoStrip),
+          showTopProgress: false,
+          floating: false,
+          infoStripHeight: infoStrip,
+        ),
         0,
         reason: '顶部进度关闭时预留必须为 0（旧实现无条件加 18px → 留空白，本次根因修复）',
       );
@@ -34,7 +35,10 @@ void main() {
     test('top reserve: squeeze + shown -> infoStripHeight', () {
       expect(
         topProgressReserve(
-            showTopProgress: true, floating: false, infoStripHeight: infoStrip),
+          showTopProgress: true,
+          floating: false,
+          infoStripHeight: infoStrip,
+        ),
         infoStrip,
       );
     });
@@ -42,7 +46,10 @@ void main() {
     test('top reserve: floating -> 0 (浮于正文上，不占预留)', () {
       expect(
         topProgressReserve(
-            showTopProgress: true, floating: true, infoStripHeight: infoStrip),
+          showTopProgress: true,
+          floating: true,
+          infoStripHeight: infoStrip,
+        ),
         0,
       );
     });
@@ -50,7 +57,10 @@ void main() {
     test('bottom reserve: not occupying -> 0', () {
       expect(
         bottomChromeReserve(
-            barOccupiesLayout: false, floating: false, chromeHeight: chromeH),
+          barOccupiesLayout: false,
+          floating: false,
+          chromeHeight: chromeH,
+        ),
         0,
       );
     });
@@ -58,7 +68,10 @@ void main() {
     test('bottom reserve: squeeze + occupying -> chromeHeight', () {
       expect(
         bottomChromeReserve(
-            barOccupiesLayout: true, floating: false, chromeHeight: chromeH),
+          barOccupiesLayout: true,
+          floating: false,
+          chromeHeight: chromeH,
+        ),
         chromeH,
       );
     });
@@ -66,35 +79,52 @@ void main() {
     test('bottom reserve: floating -> 0 even when occupying', () {
       expect(
         bottomChromeReserve(
-            barOccupiesLayout: true, floating: true, chromeHeight: chromeH),
+          barOccupiesLayout: true,
+          floating: true,
+          chromeHeight: chromeH,
+        ),
         0,
       );
     });
 
-    test('top visible: squeeze follows showTopProgress (transient ignored)',
-        () {
-      expect(
-        topProgressVisible(
-            showTopProgress: true, floating: false, transientVisible: false),
-        isTrue,
-      );
-      expect(
-        topProgressVisible(
-            showTopProgress: false, floating: false, transientVisible: true),
-        isFalse,
-      );
-    });
+    test(
+      'top visible: squeeze follows showTopProgress (transient ignored)',
+      () {
+        expect(
+          topProgressVisible(
+            showTopProgress: true,
+            floating: false,
+            transientVisible: false,
+          ),
+          isTrue,
+        );
+        expect(
+          topProgressVisible(
+            showTopProgress: false,
+            floating: false,
+            transientVisible: true,
+          ),
+          isFalse,
+        );
+      },
+    );
 
     test('top visible: floating gated on transientVisible', () {
       expect(
         topProgressVisible(
-            showTopProgress: true, floating: true, transientVisible: false),
+          showTopProgress: true,
+          floating: true,
+          transientVisible: false,
+        ),
         isFalse,
         reason: '悬浮态默认隐藏，未唤出不绘制',
       );
       expect(
         topProgressVisible(
-            showTopProgress: true, floating: true, transientVisible: true),
+          showTopProgress: true,
+          floating: true,
+          transientVisible: true,
+        ),
         isTrue,
         reason: '悬浮态唤出后绘制',
       );
@@ -126,49 +156,57 @@ void main() {
       expect(source.autoHideChromeMillis, 3000);
     });
 
-    test('topProgressFloating round-trips through per-reader ReaderSettings',
-        () async {
-      final db = FushiDatabase.forTesting(NativeDatabase.memory());
-      addTearDown(db.close);
-      MediaSource.setDatabase(db);
+    test(
+      'topProgressFloating round-trips through per-reader ReaderSettings',
+      () async {
+        final db = FushiDatabase.forTesting(NativeDatabase.memory());
+        addTearDown(db.close);
+        MediaSource.setDatabase(db);
 
-      final source = ReaderFushiSource.instance;
-      await source.refreshPreferencesFromDb();
+        final source = ReaderFushiSource.instance;
+        await source.refreshPreferencesFromDb();
 
-      final ReaderSettings perBook = ReaderSettings(db);
-      await perBook.refreshFromDb();
-      ReaderFushiSource.readerSettings = perBook;
+        final ReaderSettings perBook = ReaderSettings(db);
+        await perBook.refreshFromDb();
+        ReaderFushiSource.readerSettings = perBook;
 
-      // 默认悬浮开启；toggle 一次落到关闭并持久化。
-      expect(source.topProgressFloating, isTrue);
-      source.toggleTopProgressFloating();
-      await Future<void>.delayed(Duration.zero);
-      expect(perBook.topProgressFloating, isFalse);
-      expect(source.topProgressFloating, isFalse);
-      expect(
-          await db.getPref('src:reader_fushi:top_progress_floating'), 'false');
-    });
+        // 默认悬浮开启；toggle 一次落到关闭并持久化。
+        expect(source.topProgressFloating, isTrue);
+        source.toggleTopProgressFloating();
+        await Future<void>.delayed(Duration.zero);
+        expect(perBook.topProgressFloating, isFalse);
+        expect(source.topProgressFloating, isFalse);
+        expect(
+          await db.getPref('src:reader_fushi:top_progress_floating'),
+          'false',
+        );
+      },
+    );
 
-    test('autoHideChromeMillis round-trips + normalizes a bad stored value',
-        () async {
-      final db = FushiDatabase.forTesting(NativeDatabase.memory());
-      addTearDown(db.close);
-      MediaSource.setDatabase(db);
+    test(
+      'autoHideChromeMillis round-trips + normalizes a bad stored value',
+      () async {
+        final db = FushiDatabase.forTesting(NativeDatabase.memory());
+        addTearDown(db.close);
+        MediaSource.setDatabase(db);
 
-      final ReaderSettings perBook = ReaderSettings(db);
-      await perBook.refreshFromDb();
-      ReaderFushiSource.readerSettings = perBook;
+        final ReaderSettings perBook = ReaderSettings(db);
+        await perBook.refreshFromDb();
+        ReaderFushiSource.readerSettings = perBook;
 
-      await perBook.setAutoHideChromeMillis(4000);
-      expect(perBook.autoHideChromeMillis, 4000);
-      expect(
-          await db.getPref('src:reader_fushi:auto_hide_chrome_millis'), '4000');
+        await perBook.setAutoHideChromeMillis(4000);
+        expect(perBook.autoHideChromeMillis, 4000);
+        expect(
+          await db.getPref('src:reader_fushi:auto_hide_chrome_millis'),
+          '4000',
+        );
 
-      // 越界存值（旧脏数据）读取时归一回区间。
-      await db.setPref('src:reader_fushi:auto_hide_chrome_millis', '99999');
-      await perBook.refreshFromDb();
-      expect(perBook.autoHideChromeMillis, 10000);
-    });
+        // 越界存值（旧脏数据）读取时归一回区间。
+        await db.setPref('src:reader_fushi:auto_hide_chrome_millis', '99999');
+        await perBook.refreshFromDb();
+        expect(perBook.autoHideChromeMillis, 10000);
+      },
+    );
 
     test('two books do not cross-contaminate top floating', () async {
       await _withMultipleDatabaseWarningDisabled(() async {
@@ -185,8 +223,11 @@ void main() {
         // 两本书默认都悬浮开启；bookA 关掉不得影响 bookB。
         await bookA.toggleTopProgressFloating();
         expect(bookA.topProgressFloating, isFalse);
-        expect(bookB.topProgressFloating, isTrue,
-            reason: 'per-reader 偏好不得跨书泄漏');
+        expect(
+          bookB.topProgressFloating,
+          isTrue,
+          reason: 'per-reader 偏好不得跨书泄漏',
+        );
       });
     });
   });
@@ -197,13 +238,16 @@ void main() {
     test('reserve truth source: _readerTopOffset uses _topProgressReserve', () {
       expect(
         src.contains(
-            '_stableTopInset + _macosWindowTitlebarInset + _topProgressReserve'),
+          '_stableTopInset + _macosWindowTitlebarInset + _topProgressReserve',
+        ),
         isTrue,
         reason: '顶部预留必须经派生 getter（关进度回收空白），并避开 macOS 拖拽区',
       );
       expect(
-        src.contains('_readerBottomReserve =>\n'
-            '      _bottomChromeReserve + _statusFooterReserve + _stableBottomInset'),
+        src.contains(
+          '_readerBottomReserve =>\n'
+          '      _bottomChromeReserve + _statusFooterReserve + _stableBottomInset',
+        ),
         isTrue,
         reason: '底栏预留必须经派生 getter（悬浮归零 + 桌面状态行挤压预留），单一真相源',
       );
@@ -252,36 +296,44 @@ void main() {
       expect(
         topProgressPillShowsBlur(floating: true, obscured: true),
         isFalse,
-        reason: '设置抽屉开着时 pill 在 scrim 下，blur 不可见但每帧照付 '
+        reason:
+            '设置抽屉开着时 pill 在 scrim 下，blur 不可见但每帧照付 '
             'saveLayer+高斯回读 → 必须跳过',
       );
       expect(
-          topProgressPillShowsBlur(floating: false, obscured: false), isFalse);
+        topProgressPillShowsBlur(floating: false, obscured: false),
+        isFalse,
+      );
       expect(
-          topProgressPillShowsBlur(floating: false, obscured: true), isFalse);
+        topProgressPillShowsBlur(floating: false, obscured: true),
+        isFalse,
+      );
     });
 
-    test('source guard: pill 的 BackdropFilter 必须经 topProgressPillShowsBlur 门控',
-        () {
-      final String src = readReaderPageSource();
-      expect(
-        src.contains('topProgressPillShowsBlur('),
-        isTrue,
-        reason: 'pill 的 blur 分支必须走纯函数门控（真值表可测），不得裸挂 BackdropFilter',
-      );
-      expect(
-        src.contains('obscured: _appearanceSheetOpen'),
-        isTrue,
-        reason: '遮挡信号必须取自快速设置抽屉的重入守卫旗 _appearanceSheetOpen',
-      );
-    });
+    test(
+      'source guard: pill 的 BackdropFilter 必须经 topProgressPillShowsBlur 门控',
+      () {
+        final String src = readReaderPageSource();
+        expect(
+          src.contains('topProgressPillShowsBlur('),
+          isTrue,
+          reason: 'pill 的 blur 分支必须走纯函数门控（真值表可测），不得裸挂 BackdropFilter',
+        );
+        expect(
+          src.contains('obscured: _appearanceSheetOpen'),
+          isTrue,
+          reason: '遮挡信号必须取自快速设置抽屉的重入守卫旗 _appearanceSheetOpen',
+        );
+      },
+    );
 
     test('source guard: onSettingsChangedLive 必须经 CoalescedAsyncRunner 合并', () {
       final String src = readReaderPageSource();
       expect(
         src.contains('_liveSettingsRunner.trigger()'),
         isTrue,
-        reason: '拖 slider 每 tick 直跑「CSS 注入+重锚+整页 setState」会一次拖动上百趟 '
+        reason:
+            '拖 slider 每 tick 直跑「CSS 注入+重锚+整页 setState」会一次拖动上百趟 '
             'WebView 往返（BUG-969 根因），必须经合并执行器收敛',
       );
       expect(
@@ -319,14 +371,15 @@ void main() {
 
     test('all three content-ready flip points re-apply insets', () {
       // _hasEverLoaded 翻 true 的真实内容落点都必须补发，否则首屏底栏漏预留复活。
-      final int calls = RegExp(r'_reapplyChromeInsetsAfterFirstLoad\(\)')
-          .allMatches(src)
-          .length;
+      final int calls = RegExp(
+        r'_reapplyChromeInsetsAfterFirstLoad\(\)',
+      ).allMatches(src).length;
       // 1 处定义体内不调用自身 + 3 处调用点（onRestoreComplete 正常/兜底 + spreadReady）。
       expect(
         calls,
         greaterThanOrEqualTo(3),
-        reason: 'BUG-467：onRestoreComplete 正常路径 + 兜底超时 + spreadReady 三处'
+        reason:
+            'BUG-467：onRestoreComplete 正常路径 + 兜底超时 + spreadReady 三处'
             '都必须在 _hasEverLoaded 翻 true 后补下 chrome insets',
       );
     });

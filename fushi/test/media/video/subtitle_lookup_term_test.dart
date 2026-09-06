@@ -23,8 +23,11 @@ void main() {
     test('点 "hello" 任意 index（含首/中/尾）都从词首起', () {
       const String hello = 'hello';
       for (int i = 0; i < hello.characters.length; i++) {
-        expect(subtitleLookupTerm(hello, i), 'hello',
-            reason: 'tap at index $i should start at the word head');
+        expect(
+          subtitleLookupTerm(hello, i),
+          'hello',
+          reason: 'tap at index $i should start at the word head',
+        );
       }
     });
 
@@ -64,10 +67,16 @@ void main() {
     test('点 "listen" 的任意字母，查询串都保留后续 " to"', () {
       for (int i = 2; i <= 7; i++) {
         final String term = subtitleLookupTerm(s, i);
-        expect(term, 'listen to music.',
-            reason: 'tap at index $i must keep the rest of the sentence');
-        expect(term.startsWith('listen to'), isTrue,
-            reason: '引擎要能把 "listen to" 当候选，查询串必须含空格与后一个词');
+        expect(
+          term,
+          'listen to music.',
+          reason: 'tap at index $i must keep the rest of the sentence',
+        );
+        expect(
+          term.startsWith('listen to'),
+          isTrue,
+          reason: '引擎要能把 "listen to" 当候选，查询串必须含空格与后一个词',
+        );
       }
     });
 

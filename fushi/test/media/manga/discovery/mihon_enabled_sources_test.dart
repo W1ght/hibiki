@@ -26,17 +26,16 @@ void main() {
     String sourceId,
     String extensionPackage, {
     required bool enabled,
-  }) =>
-      MangaOnlineSourceRow(
-        extensionPackage: extensionPackage,
-        sourceId: sourceId,
-        name: sourceId,
-        language: 'ja',
-        baseUrl: '',
-        enabled: enabled,
-        pinned: false,
-        sortOrder: 0,
-      );
+  }) => MangaOnlineSourceRow(
+    extensionPackage: extensionPackage,
+    sourceId: sourceId,
+    name: sourceId,
+    language: 'ja',
+    baseUrl: '',
+    enabled: enabled,
+    pinned: false,
+    sortOrder: 0,
+  );
 
   test('来源启用且扩展启用才算；任一侧关掉都滤掉；保持原序', () {
     final List<MangaOnlineSourceRow> result = filterEnabledMangaOnlineSources(

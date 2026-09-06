@@ -34,24 +34,24 @@ const String _torrentHash = '0123456789abcdef0123456789abcdef01234567';
 
 /// 带 AniDB 规范身份的入队快照（P1 契约下 scrape 阶段的唯一入场券）。
 VideoMediaReference _anidbReference() => VideoMediaReference(
-      providerId: 'anilist',
-      mediaId: '100',
-      mediaKind: VideoMetadataMediaKind.tv,
-      discoveryCategory: VideoDiscoveryCategory.anime,
-      title: 'Show',
-      originalTitle: 'ショー',
-      aliases: const <String>['Show'],
-      year: 2026,
-      season: 1,
-      anidbId: 42,
-      anilistId: 100,
-    );
+  providerId: 'anilist',
+  mediaId: '100',
+  mediaKind: VideoMetadataMediaKind.tv,
+  discoveryCategory: VideoDiscoveryCategory.anime,
+  title: 'Show',
+  originalTitle: 'ショー',
+  aliases: const <String>['Show'],
+  year: 2026,
+  season: 1,
+  anidbId: 42,
+  anilistId: 100,
+);
 const VideoDownloadBackendIdentity _expectedIdentity =
     VideoDownloadBackendIdentity(
-  kind: 'embedded',
-  profileId: 'embedded',
-  fingerprint: 'installation-fingerprint',
-);
+      kind: 'embedded',
+      profileId: 'embedded',
+      fingerprint: 'installation-fingerprint',
+    );
 const String _expectedCategory = 'fushi-video';
 const VideoDownloadBackendTarget _expectedTarget = VideoDownloadBackendTarget(
   identity: _expectedIdentity,
@@ -63,8 +63,9 @@ void main() {
     final _FakeTorrentBackend backend = _FakeTorrentBackend(
       snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.25)],
     );
-    final _PipelineEnvironment environment =
-        await _PipelineEnvironment.create(backend: backend);
+    final _PipelineEnvironment environment = await _PipelineEnvironment.create(
+      backend: backend,
+    );
     addTearDown(environment.close);
     final String jobId = await environment.service.enqueue(
       environment.enqueueRequest(),
@@ -77,9 +78,9 @@ void main() {
 
     final VideoDownloadJobDetails details =
         buildPersistedVideoDownloadJobDetails(
-      job,
-      await environment.database.getVideoDownloadJobFiles(jobId),
-    );
+          job,
+          await environment.database.getVideoDownloadJobFiles(jobId),
+        );
 
     expect(details.backend, isNull);
     expect(details.snapshot.hash, _torrentHash);
@@ -94,108 +95,118 @@ void main() {
   });
 
   test(
-      'enqueue persists intent and verified hash before backend add side effect',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(
-      snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.25)],
-      pauseAdd: true,
-    );
-    final _PipelineEnvironment environment =
-        await _PipelineEnvironment.create(backend: backend);
-    addTearDown(environment.close);
-    VideoDownloadJobRow? intentAtAdd;
-    backend.beforeAdd = () async {
-      intentAtAdd = (await environment.database.getVideoDownloadJobs()).single;
-    };
+    'enqueue persists intent and verified hash before backend add side effect',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(
+        snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.25)],
+        pauseAdd: true,
+      );
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: backend);
+      addTearDown(environment.close);
+      VideoDownloadJobRow? intentAtAdd;
+      backend.beforeAdd = () async {
+        intentAtAdd =
+            (await environment.database.getVideoDownloadJobs()).single;
+      };
 
-    final String jobId = await environment.service.enqueue(
-      environment.enqueueRequest(),
-    );
-    await backend.addEntered.future.timeout(const Duration(seconds: 2));
+      final String jobId = await environment.service.enqueue(
+        environment.enqueueRequest(),
+      );
+      await backend.addEntered.future.timeout(const Duration(seconds: 2));
 
-    final VideoDownloadJobRow persisted = intentAtAdd!;
-    expect(persisted.jobId, jobId);
-    expect(persisted.lifecycle, VideoDownloadJobLifecycle.active);
-    expect(persisted.stage, VideoDownloadJobStage.enqueue);
-    expect(persisted.resourceProvider, 'nyaa:test-instance');
-    expect(persisted.selectedResourceId, 'release-1');
-    expect(persisted.torrentHash, _torrentHash);
-    expect(persisted.fingerprint, _expectedIdentity.fingerprint);
-    expect(persisted.category, _expectedCategory);
-    expect(persisted.targetSourceId, environment.sourceId);
+      final VideoDownloadJobRow persisted = intentAtAdd!;
+      expect(persisted.jobId, jobId);
+      expect(persisted.lifecycle, VideoDownloadJobLifecycle.active);
+      expect(persisted.stage, VideoDownloadJobStage.enqueue);
+      expect(persisted.resourceProvider, 'nyaa:test-instance');
+      expect(persisted.selectedResourceId, 'release-1');
+      expect(persisted.torrentHash, _torrentHash);
+      expect(persisted.fingerprint, _expectedIdentity.fingerprint);
+      expect(persisted.category, _expectedCategory);
+      expect(persisted.targetSourceId, environment.sourceId);
 
-    backend.releaseAdd();
-    final VideoDownloadJobRow downloading = await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) =>
-          row.stage == VideoDownloadJobStage.download && row.claimedBy == null,
-    );
-    expect(downloading.stageProgress, 0.25);
-  });
-
-  test('embedded enqueue checkpoints resume before advancing to download',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(
-      snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.25)],
-    );
-    VideoDownloadJobRow? jobAtCheckpoint;
-    late final _PipelineEnvironment environment;
-    environment = await _PipelineEnvironment.create(
-      backend: backend,
-      onBackendTaskAdded: (VideoDownloadJobRow job) async {
-        jobAtCheckpoint =
-            await environment.database.getVideoDownloadJob(job.jobId);
-      },
-    );
-    addTearDown(environment.close);
-
-    final String jobId = await environment.service.enqueue(
-      environment.enqueueRequest(),
-    );
-    await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) => row.stage == VideoDownloadJobStage.download,
-    );
-
-    expect(jobAtCheckpoint, isNotNull);
-    expect(jobAtCheckpoint!.stage, VideoDownloadJobStage.enqueue);
-    expect(jobAtCheckpoint!.torrentHash, _torrentHash);
-  });
-
-  test('enqueue persists the candidate magnet and skips re-search (BUG-1784)',
-      () async {
-    const String candidateMagnet =
-        'magnet:?xt=urn:btih:$_torrentHash&dn=Show+S01E01'
-        '&tr=udp%3A%2F%2Ftracker.example%3A1337%2Fannounce';
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(
-      snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.25)],
-    );
-    final _PipelineEnvironment environment = await _PipelineEnvironment.create(
-      backend: backend,
-      candidateMagnetUri: candidateMagnet,
-    );
-    addTearDown(environment.close);
-
-    final String jobId = await environment.service.enqueue(
-      environment.enqueueRequest(),
-    );
-    final VideoDownloadJobRow downloading = await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) => row.stage == VideoDownloadJobStage.download,
-    );
-
-    expect(downloading.magnetUri, candidateMagnet);
-    // payload 从任务行磁链物化，物化不回索引器重搜/重解析。
-    expect(environment.provider.searchCalls, 0);
-    expect(environment.provider.resolveCalls, 0);
-    expect(backend.addCalls, 1);
-  });
+      backend.releaseAdd();
+      final VideoDownloadJobRow downloading = await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.stage == VideoDownloadJobStage.download &&
+            row.claimedBy == null,
+      );
+      expect(downloading.stageProgress, 0.25);
+    },
+  );
 
   test(
-      'legacy job without magnet recovers offline from its info hash '
+    'embedded enqueue checkpoints resume before advancing to download',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(
+        snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.25)],
+      );
+      VideoDownloadJobRow? jobAtCheckpoint;
+      late final _PipelineEnvironment environment;
+      environment = await _PipelineEnvironment.create(
+        backend: backend,
+        onBackendTaskAdded: (VideoDownloadJobRow job) async {
+          jobAtCheckpoint = await environment.database.getVideoDownloadJob(
+            job.jobId,
+          );
+        },
+      );
+      addTearDown(environment.close);
+
+      final String jobId = await environment.service.enqueue(
+        environment.enqueueRequest(),
+      );
+      await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.stage == VideoDownloadJobStage.download,
+      );
+
+      expect(jobAtCheckpoint, isNotNull);
+      expect(jobAtCheckpoint!.stage, VideoDownloadJobStage.enqueue);
+      expect(jobAtCheckpoint!.torrentHash, _torrentHash);
+    },
+  );
+
+  test(
+    'enqueue persists the candidate magnet and skips re-search (BUG-1784)',
+    () async {
+      const String candidateMagnet =
+          'magnet:?xt=urn:btih:$_torrentHash&dn=Show+S01E01'
+          '&tr=udp%3A%2F%2Ftracker.example%3A1337%2Fannounce';
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(
+        snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.25)],
+      );
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(
+            backend: backend,
+            candidateMagnetUri: candidateMagnet,
+          );
+      addTearDown(environment.close);
+
+      final String jobId = await environment.service.enqueue(
+        environment.enqueueRequest(),
+      );
+      final VideoDownloadJobRow downloading = await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.stage == VideoDownloadJobStage.download,
+      );
+
+      expect(downloading.magnetUri, candidateMagnet);
+      // payload 从任务行磁链物化，物化不回索引器重搜/重解析。
+      expect(environment.provider.searchCalls, 0);
+      expect(environment.provider.resolveCalls, 0);
+      expect(backend.addCalls, 1);
+    },
+  );
+
+  test('legacy job without magnet recovers offline from its info hash '
       'when re-search misses (BUG-1784)', () async {
     final _FakeTorrentBackend backend = _FakeTorrentBackend(
       snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.25)],
@@ -224,8 +235,7 @@ void main() {
     expect(backend.addCalls, 1);
   });
 
-  test(
-      'public indexer job resolves offline without touching the network '
+  test('public indexer job resolves offline without touching the network '
       '(BUG-1866)', () async {
     final _FakeTorrentBackend backend = _FakeTorrentBackend(
       snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.25)],
@@ -257,53 +267,58 @@ void main() {
     expect(backend.addCalls, 1);
   });
 
-  test('long enqueue renews its lease and cannot be claimed by another worker',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(
-      snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.2)],
-      pauseAdd: true,
-    );
-    final _PipelineEnvironment environment = await _PipelineEnvironment.create(
-      backend: backend,
-      leaseDuration: const Duration(milliseconds: 90),
-    );
-    addTearDown(environment.close);
+  test(
+    'long enqueue renews its lease and cannot be claimed by another worker',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(
+        snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.2)],
+        pauseAdd: true,
+      );
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(
+            backend: backend,
+            leaseDuration: const Duration(milliseconds: 90),
+          );
+      addTearDown(environment.close);
 
-    final String jobId = await environment.service.enqueue(
-      environment.enqueueRequest(),
-    );
-    await backend.addEntered.future.timeout(const Duration(seconds: 2));
-    await Future<void>.delayed(const Duration(milliseconds: 240));
+      final String jobId = await environment.service.enqueue(
+        environment.enqueueRequest(),
+      );
+      await backend.addEntered.future.timeout(const Duration(seconds: 2));
+      await Future<void>.delayed(const Duration(milliseconds: 240));
 
-    final VideoDownloadJobRow held =
-        (await environment.database.getVideoDownloadJob(jobId))!;
-    expect(held.claimedBy, 'pipeline-test-worker');
-    expect(
-      held.claimExpiresAt,
-      greaterThan(DateTime.now().millisecondsSinceEpoch),
-    );
-    final VideoDownloadJobRow? stolen =
-        await environment.database.claimNextVideoDownloadJob(
-      workerId: 'competing-worker',
-      nowAt: DateTime.now().millisecondsSinceEpoch,
-      leaseDurationMs: 1000,
-    );
-    expect(stolen, isNull);
+      final VideoDownloadJobRow held = (await environment.database
+          .getVideoDownloadJob(jobId))!;
+      expect(held.claimedBy, 'pipeline-test-worker');
+      expect(
+        held.claimExpiresAt,
+        greaterThan(DateTime.now().millisecondsSinceEpoch),
+      );
+      final VideoDownloadJobRow? stolen = await environment.database
+          .claimNextVideoDownloadJob(
+            workerId: 'competing-worker',
+            nowAt: DateTime.now().millisecondsSinceEpoch,
+            leaseDurationMs: 1000,
+          );
+      expect(stolen, isNull);
 
-    backend.releaseAdd();
-    final VideoDownloadJobRow downloading = await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) =>
-          row.stage == VideoDownloadJobStage.download && row.claimedBy == null,
-    );
-    expect(downloading.lifecycle, VideoDownloadJobLifecycle.active);
-  });
+      backend.releaseAdd();
+      final VideoDownloadJobRow downloading = await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.stage == VideoDownloadJobStage.download &&
+            row.claimedBy == null,
+      );
+      expect(downloading.lifecycle, VideoDownloadJobLifecycle.active);
+    },
+  );
 
   test('a failed transition CAS stops a worker that lost its claim', () async {
     final _FakeTorrentBackend backend = _FakeTorrentBackend(pauseAdd: true);
-    final _PipelineEnvironment environment =
-        await _PipelineEnvironment.create(backend: backend);
+    final _PipelineEnvironment environment = await _PipelineEnvironment.create(
+      backend: backend,
+    );
     addTearDown(environment.close);
 
     final String jobId = await environment.service.enqueue(
@@ -322,8 +337,8 @@ void main() {
     backend.releaseAdd();
     await Future<void>.delayed(const Duration(milliseconds: 80));
 
-    final VideoDownloadJobRow job =
-        (await environment.database.getVideoDownloadJob(jobId))!;
+    final VideoDownloadJobRow job = (await environment.database
+        .getVideoDownloadJob(jobId))!;
     expect(job.stage, VideoDownloadJobStage.enqueue);
     expect(job.lifecycle, VideoDownloadJobLifecycle.active);
     expect(job.claimedBy, 'competing-worker');
@@ -333,60 +348,62 @@ void main() {
 
   for (final ({String label, VideoDownloadBackendIdentity identity}) mismatch
       in <({String label, VideoDownloadBackendIdentity identity})>[
-    (
-      label: 'fingerprint',
-      identity: const VideoDownloadBackendIdentity(
-        kind: 'embedded',
-        profileId: 'embedded',
-        fingerprint: 'different-installation',
-      ),
-    ),
-    (
-      label: 'profile',
-      identity: const VideoDownloadBackendIdentity(
-        kind: 'embedded',
-        profileId: 'another-profile',
-        fingerprint: 'installation-fingerprint',
-      ),
-    ),
-    (
-      label: 'kind',
-      identity: const VideoDownloadBackendIdentity(
-        kind: 'qbittorrent',
-        profileId: 'embedded',
-        fingerprint: 'installation-fingerprint',
-      ),
-    ),
-  ]) {
-    test('backend ${mismatch.label} mismatch requires attention before enqueue',
-        () async {
-      final _FakeTorrentBackend backend = _FakeTorrentBackend();
-      final _PipelineEnvironment environment =
-          await _PipelineEnvironment.create(
-        backend: backend,
-        backendResolver: (_) async => VideoDownloadBackendBinding(
-          backend: backend,
-          identity: mismatch.identity,
+        (
+          label: 'fingerprint',
+          identity: const VideoDownloadBackendIdentity(
+            kind: 'embedded',
+            profileId: 'embedded',
+            fingerprint: 'different-installation',
+          ),
         ),
-      );
-      addTearDown(environment.close);
+        (
+          label: 'profile',
+          identity: const VideoDownloadBackendIdentity(
+            kind: 'embedded',
+            profileId: 'another-profile',
+            fingerprint: 'installation-fingerprint',
+          ),
+        ),
+        (
+          label: 'kind',
+          identity: const VideoDownloadBackendIdentity(
+            kind: 'qbittorrent',
+            profileId: 'embedded',
+            fingerprint: 'installation-fingerprint',
+          ),
+        ),
+      ]) {
+    test(
+      'backend ${mismatch.label} mismatch requires attention before enqueue',
+      () async {
+        final _FakeTorrentBackend backend = _FakeTorrentBackend();
+        final _PipelineEnvironment environment =
+            await _PipelineEnvironment.create(
+              backend: backend,
+              backendResolver: (_) async => VideoDownloadBackendBinding(
+                backend: backend,
+                identity: mismatch.identity,
+              ),
+            );
+        addTearDown(environment.close);
 
-      final String jobId = await environment.service.enqueue(
-        environment.enqueueRequest(),
-      );
-      final VideoDownloadJobRow job = await _waitForJob(
-        environment.database,
-        jobId,
-        (VideoDownloadJobRow row) =>
-            row.lifecycle == VideoDownloadJobLifecycle.needsAttention,
-      );
+        final String jobId = await environment.service.enqueue(
+          environment.enqueueRequest(),
+        );
+        final VideoDownloadJobRow job = await _waitForJob(
+          environment.database,
+          jobId,
+          (VideoDownloadJobRow row) =>
+              row.lifecycle == VideoDownloadJobLifecycle.needsAttention,
+        );
 
-      expect(job.stage, VideoDownloadJobStage.enqueue);
-      expect(job.lastError, contains('no longer matches this job'));
-      expect(backend.prepareCategoryCalls, 0);
-      expect(backend.addCalls, 0);
-      expect(environment.provider.searchCalls, 0);
-    });
+        expect(job.stage, VideoDownloadJobStage.enqueue);
+        expect(job.lastError, contains('no longer matches this job'));
+        expect(backend.prepareCategoryCalls, 0);
+        expect(backend.addCalls, 0);
+        expect(environment.provider.searchCalls, 0);
+      },
+    );
   }
 
   test('改掉配置里的分类不会拦下已有任务，任务用自己那份分类投递', () async {
@@ -431,190 +448,199 @@ void main() {
     expect(backend.preparedCategories, isNot(contains(_expectedCategory)));
   });
 
-  test('restart resumes persisted download stage without enqueueing again',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(
-      snapshots: <TorrentSnapshot>[_completeSnapshot()],
-      files: const <TorrentFileEntry>[
-        TorrentFileEntry(
-          name: 'Show.S01E01.mkv',
-          size: 1024,
-          progress: 1,
-          index: 0,
-        ),
-      ],
-    );
-    int bindingCalls = 0;
-    late _PipelineEnvironment environment;
-    environment = await _PipelineEnvironment.create(
-      backend: backend,
-      backendResolver: (_) async {
-        bindingCalls += 1;
-        return VideoDownloadBackendBinding(
-          backend: backend,
-          identity: bindingCalls == 1
-              ? _expectedIdentity
-              : const VideoDownloadBackendIdentity(
-                  kind: 'embedded',
-                  profileId: 'embedded',
-                  fingerprint: 'changed-after-download',
-                ),
-        );
-      },
-    );
-    addTearDown(environment.close);
-    const String jobId = 'resume-download-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.download,
-      staleClaim: true,
-    );
-
-    environment.service.wake();
-    final VideoDownloadJobRow job = await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) =>
-          row.lifecycle == VideoDownloadJobLifecycle.needsAttention,
-    );
-
-    expect(job.stage, VideoDownloadJobStage.organize);
-    expect(job.attemptCount, 0);
-    expect(backend.addCalls, 0, reason: '恢复 download 阶段不得重复 add torrent');
-    expect(backend.listTorrentsCalls, 1);
-    final List<VideoDownloadJobFileRow> files =
-        await environment.database.getVideoDownloadJobFiles(jobId);
-    expect(files, hasLength(1));
-    expect(files.single.status, VideoDownloadJobFileStatus.downloaded);
-    expect(files.single.backendFileIndex, 0);
-  });
-
-  test('incomplete download releases poll claim without consuming retry budget',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(
-      snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.4)],
-    );
-    final _PipelineEnvironment environment =
-        await _PipelineEnvironment.create(backend: backend);
-    addTearDown(environment.close);
-    const String jobId = 'poll-download-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.download,
-    );
-
-    environment.service.wake();
-    final VideoDownloadJobRow job = await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) =>
-          row.claimedBy == null && row.nextAttemptAt != null,
-    );
-
-    expect(job.lifecycle, VideoDownloadJobLifecycle.active);
-    expect(job.stage, VideoDownloadJobStage.download);
-    expect(job.stageProgress, 0.4);
-    expect(job.attemptCount, 0);
-    expect(job.lastError, isNull);
-    expect(
-        job.nextAttemptAt, greaterThan(DateTime.now().millisecondsSinceEpoch));
-    expect(backend.addCalls, 0);
-    expect(backend.listTorrentsCalls, 1);
-  });
-
   test(
-      'legacy job imports original files and copies staged subtitle without moving either',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(
-      files: const <TorrentFileEntry>[
-        TorrentFileEntry(
-          name: 'Show.S01E01.mkv',
-          size: 4,
-          progress: 1,
-          index: 0,
-        ),
-      ],
-    );
-    late _PipelineEnvironment environment;
-    late Directory downloadDirectory;
-    environment = await _PipelineEnvironment.create(
-      backend: backend,
-      backendResolver: (_) async => VideoDownloadBackendBinding(
-        backend: backend,
-        identity: _expectedIdentity,
-        pathMappings: <VideoDownloadPathMapping>[
-          VideoDownloadPathMapping(
-            remoteRoot: '/downloads',
-            localRoot: downloadDirectory.path,
+    'restart resumes persisted download stage without enqueueing again',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(
+        snapshots: <TorrentSnapshot>[_completeSnapshot()],
+        files: const <TorrentFileEntry>[
+          TorrentFileEntry(
+            name: 'Show.S01E01.mkv',
+            size: 1024,
+            progress: 1,
+            index: 0,
           ),
         ],
-      ),
-    );
-    addTearDown(environment.close);
-    downloadDirectory = Directory(p.join(environment.root.path, 'legacy'));
-    await downloadDirectory.create(recursive: true);
-    final File video = File(
-      p.join(downloadDirectory.path, 'Show.S01E01.mkv'),
-    );
-    await video.writeAsBytes(<int>[1, 2, 3, 4]);
-    final File staged = File(p.join(environment.root.path, 'episode.zh.srt'));
-    await staged.writeAsString('legacy subtitle');
-    const String jobId = 'legacy-import-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.organize,
-      organizationPolicy: 'legacy',
-      observedSavePath: '/downloads',
-      subtitlePolicy: VideoDownloadSubtitlePolicy.bestEffort,
-      withoutTargetSource: true,
-    );
-    final int now = DateTime.now().millisecondsSinceEpoch;
-    await environment.database.upsertVideoDownloadJobSubtitle(
-      VideoDownloadJobSubtitlesCompanion.insert(
-        subtitleId: 'legacy-subtitle-1',
+      );
+      int bindingCalls = 0;
+      late _PipelineEnvironment environment;
+      environment = await _PipelineEnvironment.create(
+        backend: backend,
+        backendResolver: (_) async {
+          bindingCalls += 1;
+          return VideoDownloadBackendBinding(
+            backend: backend,
+            identity: bindingCalls == 1
+                ? _expectedIdentity
+                : const VideoDownloadBackendIdentity(
+                    kind: 'embedded',
+                    profileId: 'embedded',
+                    fingerprint: 'changed-after-download',
+                  ),
+          );
+        },
+      );
+      addTearDown(environment.close);
+      const String jobId = 'resume-download-job';
+      await environment.insertJob(
         jobId: jobId,
-        provider: 'jimaku',
-        selectedSubtitleId: const Value<String?>('legacy:episode.zh.srt'),
-        language: const Value<String?>('zh'),
-        episode: const Value<int?>(1),
-        originalFileName: const Value<String?>('episode.zh.srt'),
-        stagedPath: Value<String?>(staged.path),
-        status: const Value<String>(VideoDownloadJobSubtitleStatus.staged),
-        createdAt: now,
-        updatedAt: now,
-      ),
-    );
+        stage: VideoDownloadJobStage.download,
+        staleClaim: true,
+      );
 
-    environment.service.wake();
-    final VideoDownloadJobRow completed = await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) =>
-          row.lifecycle == VideoDownloadJobLifecycle.completed,
-    );
+      environment.service.wake();
+      final VideoDownloadJobRow job = await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.lifecycle == VideoDownloadJobLifecycle.needsAttention,
+      );
 
-    expect(completed.stage, VideoDownloadJobStage.import);
-    expect(backend.renameFileCalls, 0);
-    expect(backend.moveStorageCalls, 0);
-    final VideoDownloadJobFileRow jobFile =
-        (await environment.database.getVideoDownloadJobFiles(jobId)).single;
-    expect(jobFile.finalAbsolutePath, video.path);
-    expect(jobFile.status, VideoDownloadJobFileStatus.imported);
-    final VideoBookRow book =
-        (await environment.database.allVideoBooks()).single;
-    expect(book.videoPath, video.path);
-    expect(book.sourceId, isNull, reason: '旧任务保持手动导入的无来源语义');
-    final File sidecar = File(
-      p.join(downloadDirectory.path, 'Show.S01E01.zh.srt'),
-    );
-    expect(await sidecar.readAsString(), 'legacy subtitle');
-    expect(await staged.exists(), isTrue, reason: '迁移不得消费旧 staging');
-    final VideoDownloadJobSubtitleRow subtitle =
-        (await environment.database.getVideoDownloadJobSubtitles(jobId)).single;
-    expect(subtitle.status, VideoDownloadJobSubtitleStatus.placed);
-    expect(subtitle.stagedPath, staged.path);
-    expect(subtitle.finalPath, sidecar.path);
-  });
+      expect(job.stage, VideoDownloadJobStage.organize);
+      expect(job.attemptCount, 0);
+      expect(backend.addCalls, 0, reason: '恢复 download 阶段不得重复 add torrent');
+      expect(backend.listTorrentsCalls, 1);
+      final List<VideoDownloadJobFileRow> files = await environment.database
+          .getVideoDownloadJobFiles(jobId);
+      expect(files, hasLength(1));
+      expect(files.single.status, VideoDownloadJobFileStatus.downloaded);
+      expect(files.single.backendFileIndex, 0);
+    },
+  );
+
+  test(
+    'incomplete download releases poll claim without consuming retry budget',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(
+        snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.4)],
+      );
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: backend);
+      addTearDown(environment.close);
+      const String jobId = 'poll-download-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.download,
+      );
+
+      environment.service.wake();
+      final VideoDownloadJobRow job = await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.claimedBy == null && row.nextAttemptAt != null,
+      );
+
+      expect(job.lifecycle, VideoDownloadJobLifecycle.active);
+      expect(job.stage, VideoDownloadJobStage.download);
+      expect(job.stageProgress, 0.4);
+      expect(job.attemptCount, 0);
+      expect(job.lastError, isNull);
+      expect(
+        job.nextAttemptAt,
+        greaterThan(DateTime.now().millisecondsSinceEpoch),
+      );
+      expect(backend.addCalls, 0);
+      expect(backend.listTorrentsCalls, 1);
+    },
+  );
+
+  test(
+    'legacy job imports original files and copies staged subtitle without moving either',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(
+        files: const <TorrentFileEntry>[
+          TorrentFileEntry(
+            name: 'Show.S01E01.mkv',
+            size: 4,
+            progress: 1,
+            index: 0,
+          ),
+        ],
+      );
+      late _PipelineEnvironment environment;
+      late Directory downloadDirectory;
+      environment = await _PipelineEnvironment.create(
+        backend: backend,
+        backendResolver: (_) async => VideoDownloadBackendBinding(
+          backend: backend,
+          identity: _expectedIdentity,
+          pathMappings: <VideoDownloadPathMapping>[
+            VideoDownloadPathMapping(
+              remoteRoot: '/downloads',
+              localRoot: downloadDirectory.path,
+            ),
+          ],
+        ),
+      );
+      addTearDown(environment.close);
+      downloadDirectory = Directory(p.join(environment.root.path, 'legacy'));
+      await downloadDirectory.create(recursive: true);
+      final File video = File(
+        p.join(downloadDirectory.path, 'Show.S01E01.mkv'),
+      );
+      await video.writeAsBytes(<int>[1, 2, 3, 4]);
+      final File staged = File(p.join(environment.root.path, 'episode.zh.srt'));
+      await staged.writeAsString('legacy subtitle');
+      const String jobId = 'legacy-import-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.organize,
+        organizationPolicy: 'legacy',
+        observedSavePath: '/downloads',
+        subtitlePolicy: VideoDownloadSubtitlePolicy.bestEffort,
+        withoutTargetSource: true,
+      );
+      final int now = DateTime.now().millisecondsSinceEpoch;
+      await environment.database.upsertVideoDownloadJobSubtitle(
+        VideoDownloadJobSubtitlesCompanion.insert(
+          subtitleId: 'legacy-subtitle-1',
+          jobId: jobId,
+          provider: 'jimaku',
+          selectedSubtitleId: const Value<String?>('legacy:episode.zh.srt'),
+          language: const Value<String?>('zh'),
+          episode: const Value<int?>(1),
+          originalFileName: const Value<String?>('episode.zh.srt'),
+          stagedPath: Value<String?>(staged.path),
+          status: const Value<String>(VideoDownloadJobSubtitleStatus.staged),
+          createdAt: now,
+          updatedAt: now,
+        ),
+      );
+
+      environment.service.wake();
+      final VideoDownloadJobRow completed = await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.lifecycle == VideoDownloadJobLifecycle.completed,
+      );
+
+      expect(completed.stage, VideoDownloadJobStage.import);
+      expect(backend.renameFileCalls, 0);
+      expect(backend.moveStorageCalls, 0);
+      final VideoDownloadJobFileRow jobFile =
+          (await environment.database.getVideoDownloadJobFiles(jobId)).single;
+      expect(jobFile.finalAbsolutePath, video.path);
+      expect(jobFile.status, VideoDownloadJobFileStatus.imported);
+      final VideoBookRow book =
+          (await environment.database.allVideoBooks()).single;
+      expect(book.videoPath, video.path);
+      expect(book.sourceId, isNull, reason: '旧任务保持手动导入的无来源语义');
+      final File sidecar = File(
+        p.join(downloadDirectory.path, 'Show.S01E01.zh.srt'),
+      );
+      expect(await sidecar.readAsString(), 'legacy subtitle');
+      expect(await staged.exists(), isTrue, reason: '迁移不得消费旧 staging');
+      final VideoDownloadJobSubtitleRow subtitle =
+          (await environment.database.getVideoDownloadJobSubtitles(
+            jobId,
+          )).single;
+      expect(subtitle.status, VideoDownloadJobSubtitleStatus.placed);
+      expect(subtitle.stagedPath, staged.path);
+      expect(subtitle.finalPath, sidecar.path);
+    },
+  );
 
   test('legacy subtitle never overwrites an existing sidecar', () async {
     final _FakeTorrentBackend backend = _FakeTorrentBackend(
@@ -645,10 +671,12 @@ void main() {
     addTearDown(environment.close);
     downloadDirectory = Directory(p.join(environment.root.path, 'legacy'));
     await downloadDirectory.create(recursive: true);
-    await File(p.join(downloadDirectory.path, 'Show.S01E01.mkv'))
-        .writeAsBytes(<int>[1, 2, 3, 4]);
-    final File existing =
-        File(p.join(downloadDirectory.path, 'Show.S01E01.ja.srt'));
+    await File(
+      p.join(downloadDirectory.path, 'Show.S01E01.mkv'),
+    ).writeAsBytes(<int>[1, 2, 3, 4]);
+    final File existing = File(
+      p.join(downloadDirectory.path, 'Show.S01E01.ja.srt'),
+    );
     await existing.writeAsString('user edited subtitle');
     final File staged = File(p.join(environment.root.path, 'episode.zh.srt'));
     await staged.writeAsString('downloaded subtitle');
@@ -697,460 +725,479 @@ void main() {
     expect(subtitle.error, contains('sidecar already exists'));
   });
 
-  test('source and observed roots can use different backend path mappings',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(
-      files: const <TorrentFileEntry>[
-        TorrentFileEntry(
-          name: 'Show.S01E01.mkv',
-          size: 4,
-          progress: 1,
-          index: 0,
-        ),
-      ],
-    );
-    late _PipelineEnvironment environment;
-    late Directory downloadDirectory;
-    environment = await _PipelineEnvironment.create(
-      backend: backend,
-      backendResolver: (_) async => VideoDownloadBackendBinding(
-        backend: backend,
-        identity: _expectedIdentity,
-        pathMappings: <VideoDownloadPathMapping>[
-          VideoDownloadPathMapping(
-            remoteRoot: '/downloads',
-            localRoot: downloadDirectory.path,
-          ),
-          VideoDownloadPathMapping(
-            remoteRoot: '/media',
-            localRoot: environment.root.path,
+  test(
+    'source and observed roots can use different backend path mappings',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(
+        files: const <TorrentFileEntry>[
+          TorrentFileEntry(
+            name: 'Show.S01E01.mkv',
+            size: 4,
+            progress: 1,
+            index: 0,
           ),
         ],
-      ),
-    );
-    addTearDown(environment.close);
-    downloadDirectory = Directory(p.join(environment.root.path, 'incoming'));
-    await downloadDirectory.create(recursive: true);
-    const String jobId = 'multi-path-mapping-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.organize,
-      observedSavePath: '/downloads',
-      subtitlePolicy: VideoDownloadSubtitlePolicy.none,
-    );
-    await environment.insertDownloadedFile(
-      jobId: jobId,
-      name: 'Show.S01E01.mkv',
-      size: 4,
-    );
-
-    environment.service.wake();
-    // P1 契约：anilist 身份不是 AniDB 规范身份 → import 后直接完成（进视频页
-    // 待确认队列），不再被强制刮到 needsAttention。
-    await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) =>
-          row.lifecycle == VideoDownloadJobLifecycle.completed,
-    );
-
-    expect(backend.moveStoragePaths, <String>['/media']);
-    expect(backend.renameFileCalls, 1);
-  });
-
-  test('organize validates observed path before backend storage side effects',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(
-      files: const <TorrentFileEntry>[
-        TorrentFileEntry(
-          name: 'Show.S01E01.mkv',
-          size: 4,
-          progress: 1,
-          index: 0,
-        ),
-      ],
-    );
-    late _PipelineEnvironment environment;
-    environment = await _PipelineEnvironment.create(
-      backend: backend,
-      backendResolver: (_) async => VideoDownloadBackendBinding(
+      );
+      late _PipelineEnvironment environment;
+      late Directory downloadDirectory;
+      environment = await _PipelineEnvironment.create(
         backend: backend,
-        identity: _expectedIdentity,
-        pathMappings: <VideoDownloadPathMapping>[
-          VideoDownloadPathMapping(
-            remoteRoot: '/downloads',
-            localRoot: p.join(environment.root.path, 'missing'),
-          ),
-          VideoDownloadPathMapping(
-            remoteRoot: '/media',
-            localRoot: environment.root.path,
-          ),
-        ],
-      ),
-    );
-    addTearDown(environment.close);
-    const String jobId = 'inaccessible-observed-path-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.organize,
-      observedSavePath: '/downloads',
-    );
-    environment.service.wake();
-    final VideoDownloadJobRow job = await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) =>
-          row.lifecycle == VideoDownloadJobLifecycle.needsAttention,
-    );
-    expect(job.lastError, contains('not accessible'));
-    expect(backend.renameFileCalls, 0);
-    expect(backend.moveStorageCalls, 0);
-  });
-
-  test('organize requires a forward mapping for the managed source root',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(
-      files: const <TorrentFileEntry>[
-        TorrentFileEntry(
-          name: 'Show.S01E01.mkv',
-          size: 4,
-          progress: 1,
-          index: 0,
+        backendResolver: (_) async => VideoDownloadBackendBinding(
+          backend: backend,
+          identity: _expectedIdentity,
+          pathMappings: <VideoDownloadPathMapping>[
+            VideoDownloadPathMapping(
+              remoteRoot: '/downloads',
+              localRoot: downloadDirectory.path,
+            ),
+            VideoDownloadPathMapping(
+              remoteRoot: '/media',
+              localRoot: environment.root.path,
+            ),
+          ],
         ),
-      ],
-    );
-    late _PipelineEnvironment environment;
-    late Directory downloadDirectory;
-    environment = await _PipelineEnvironment.create(
-      backend: backend,
-      backendResolver: (_) async => VideoDownloadBackendBinding(
-        backend: backend,
-        identity: _expectedIdentity,
-        pathMappings: <VideoDownloadPathMapping>[
-          VideoDownloadPathMapping(
-            remoteRoot: '/downloads',
-            localRoot: downloadDirectory.path,
-          ),
-        ],
-      ),
-    );
-    addTearDown(environment.close);
-    downloadDirectory = Directory(p.join(environment.root.path, 'incoming'));
-    await downloadDirectory.create(recursive: true);
-    const String jobId = 'unmapped-source-root-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.organize,
-      observedSavePath: '/downloads',
-    );
-    environment.service.wake();
-    final VideoDownloadJobRow job = await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) =>
-          row.lifecycle == VideoDownloadJobLifecycle.needsAttention,
-    );
-    expect(job.lastError, contains('outside every backend path mapping'));
-    expect(backend.renameFileCalls, 0);
-    expect(backend.moveStorageCalls, 0);
-  });
+      );
+      addTearDown(environment.close);
+      downloadDirectory = Directory(p.join(environment.root.path, 'incoming'));
+      await downloadDirectory.create(recursive: true);
+      const String jobId = 'multi-path-mapping-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.organize,
+        observedSavePath: '/downloads',
+        subtitlePolicy: VideoDownloadSubtitlePolicy.none,
+      );
+      await environment.insertDownloadedFile(
+        jobId: jobId,
+        name: 'Show.S01E01.mkv',
+        size: 4,
+      );
 
-  test('unconfigured local backend mapping uses the filesystem anchor',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(
-      files: const <TorrentFileEntry>[
-        TorrentFileEntry(
-          name: 'Show.S01E01.mkv',
-          size: 4,
-          progress: 1,
-          index: 0,
-        ),
-      ],
-    );
-    final _PipelineEnvironment environment =
-        await _PipelineEnvironment.create(backend: backend);
-    addTearDown(environment.close);
-    final Directory downloadDirectory =
-        Directory(p.join(environment.root.path, 'incoming'));
-    await downloadDirectory.create(recursive: true);
-    const String jobId = 'default-identity-mapping-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.organize,
-      observedSavePath: downloadDirectory.path,
-      subtitlePolicy: VideoDownloadSubtitlePolicy.none,
-    );
-    await environment.insertDownloadedFile(
-      jobId: jobId,
-      name: 'Show.S01E01.mkv',
-      size: 4,
-    );
+      environment.service.wake();
+      // P1 契约：anilist 身份不是 AniDB 规范身份 → import 后直接完成（进视频页
+      // 待确认队列），不再被强制刮到 needsAttention。
+      await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.lifecycle == VideoDownloadJobLifecycle.completed,
+      );
 
-    environment.service.wake();
-    // P1 契约：无 AniDB 身份 → import 后直接完成，见上一个用例的注释。
-    await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) =>
-          row.lifecycle == VideoDownloadJobLifecycle.completed,
-    );
-
-    final String absoluteSource =
-        p.normalize(p.absolute(environment.root.path));
-    final String anchor = p.rootPrefix(absoluteSource);
-    final VideoDownloadPathMapping identity = VideoDownloadPathMapping.identity(
-        anchor.isEmpty ? absoluteSource : anchor);
-    expect(
-      backend.moveStoragePaths,
-      <String>[identity.localToRemote(environment.root.path)!],
-    );
-  });
-
-  test('legacy embedded resume ids survive JSON archival until terminal state',
-      () async {
-    final _PipelineEnvironment environment = await _PipelineEnvironment.create(
-      backend: _FakeTorrentBackend(),
-    );
-    addTearDown(environment.close);
-    await environment.insertJob(
-      jobId: 'legacy-resume-active',
-      stage: VideoDownloadJobStage.download,
-      organizationPolicy: 'legacy',
-      backendKind: 'embedded',
-    );
-
-    expect(
-      legacyEmbeddedTorrentResumeIds(
-        await environment.database.getVideoDownloadJobs(),
-      ),
-      <String>{_torrentHash},
-    );
-    await environment.database.updateVideoDownloadJob(
-      'legacy-resume-active',
-      const VideoDownloadJobsCompanion(
-        lifecycle: Value<String>(VideoDownloadJobLifecycle.completed),
-      ),
-    );
-    final Set<String> idsAfterCompletion = legacyEmbeddedTorrentResumeIds(
-      await environment.database.getVideoDownloadJobs(),
-    );
-    expect(idsAfterCompletion, isEmpty);
-  });
-
-  test('library embedded resume ids keep completed torrents available to seed',
-      () async {
-    final _PipelineEnvironment environment = await _PipelineEnvironment.create(
-      backend: _FakeTorrentBackend(),
-    );
-    addTearDown(environment.close);
-    await environment.insertJob(
-      jobId: 'library-resume-completed',
-      stage: VideoDownloadJobStage.scrape,
-      organizationPolicy: 'library',
-      backendKind: 'embedded',
-    );
-    await environment.database.updateVideoDownloadJob(
-      'library-resume-completed',
-      const VideoDownloadJobsCompanion(
-        lifecycle: Value<String>(VideoDownloadJobLifecycle.completed),
-      ),
-    );
-
-    expect(
-      legacyEmbeddedTorrentResumeIds(
-        await environment.database.getVideoDownloadJobs(),
-      ),
-      <String>{_torrentHash},
-    );
-  });
-
-  test('manual subtitle selection is durable and resumes an actionable job',
-      () async {
-    final _PipelineEnvironment environment = await _PipelineEnvironment.create(
-      backend: _FakeTorrentBackend(),
-    );
-    addTearDown(environment.close);
-    const String jobId = 'manual-subtitle-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.download,
-    );
-    await environment.database.updateVideoDownloadJob(
-      jobId,
-      const VideoDownloadJobsCompanion(
-        lifecycle: Value<String>(VideoDownloadJobLifecycle.needsAttention),
-        lastError: Value<String?>('subtitle choice required'),
-      ),
-    );
-
-    final String subtitleId = await environment.service.attachSubtitleSelection(
-      jobId: jobId,
-      candidate: _FakeSubtitleCandidate(),
-      season: 1,
-      episode: 2,
-    );
-
-    final VideoDownloadJobSubtitleRow selection =
-        (await environment.database.getVideoDownloadJobSubtitles(jobId)).single;
-    expect(selection.subtitleId, subtitleId);
-    expect(selection.provider, 'opensubtitles');
-    expect(selection.selectedSubtitleId, 'subtitle-42');
-    expect(selection.season, 1);
-    expect(selection.episode, 2);
-    expect(selection.status, VideoDownloadJobSubtitleStatus.pending);
-    final VideoDownloadJobRow job =
-        (await environment.database.getVideoDownloadJob(jobId))!;
-    expect(job.lifecycle, VideoDownloadJobLifecycle.active);
-    expect(job.lastError, isNull);
-  });
+      expect(backend.moveStoragePaths, <String>['/media']);
+      expect(backend.renameFileCalls, 1);
+    },
+  );
 
   test(
-      'restart adopts an already-written resolving subtitle without duplicating it',
-      () async {
-    final Uint8List subtitleBytes = Uint8List.fromList(<int>[49, 10, 50, 10]);
-    final _FakeSubtitleProvider subtitleProvider = _FakeSubtitleProvider(
-      bytes: subtitleBytes,
-    );
-    final _PipelineEnvironment environment = await _PipelineEnvironment.create(
-      backend: _FakeTorrentBackend(),
-      subtitleProvider: subtitleProvider,
-    );
-    addTearDown(environment.close);
-    const String jobId = 'subtitle-rename-crash-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.subtitle,
-    );
-    final Directory season = Directory(
-      p.join(environment.root.path, 'Show (2026)', 'Season 01'),
-    );
-    await season.create(recursive: true);
-    final File video = File(
-      p.join(season.path, 'Show (2026) - S01E02.mkv'),
-    );
-    await video.writeAsBytes(<int>[0, 1, 2, 3], flush: true);
-    final int now = DateTime.now().millisecondsSinceEpoch;
-    await environment.database.upsertVideoDownloadJobFile(
-      VideoDownloadJobFilesCompanion.insert(
-        jobId: jobId,
-        backendFileIndex: const Value<int?>(0),
-        originalRelativePath: p.basename(video.path),
-        currentRelativePath: p.basename(video.path),
-        targetRelativePath: Value<String?>(p.basename(video.path)),
-        finalAbsolutePath: Value<String?>(video.path),
-        kind: const Value<String>('video'),
-        season: const Value<int?>(1),
-        episode: const Value<int?>(2),
-        sizeBytes: Value<int?>(await video.length()),
-        status: const Value<String>(VideoDownloadJobFileStatus.organized),
-        createdAt: now,
-        updatedAt: now,
-      ),
-    );
-    final VideoDownloadJobFileRow jobFile =
-        (await environment.database.getVideoDownloadJobFiles(jobId)).single;
-    final File installed = File(
-      p.join(season.path, 'Show (2026) - S01E02.zh-cn.srt'),
-    );
-    await installed.writeAsBytes(subtitleBytes, flush: true);
-    await environment.database.upsertVideoDownloadJobSubtitle(
-      VideoDownloadJobSubtitlesCompanion.insert(
-        subtitleId: '$jobId:auto',
-        jobId: jobId,
-        jobFileId: Value<int?>(jobFile.id),
-        provider: 'opensubtitles',
-        selectedSubtitleId: const Value<String?>('subtitle-42'),
-        language: const Value<String?>('zh-cn'),
-        season: const Value<int?>(1),
-        episode: const Value<int?>(2),
-        originalFileName: const Value<String?>('Show.zh.srt'),
-        stagedPath: Value<String?>('${installed.path}.$jobId.fushi.tmp'),
-        finalPath: Value<String?>(installed.path),
-        status: const Value<String>(
-          VideoDownloadJobSubtitleStatus.resolving,
+    'organize validates observed path before backend storage side effects',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(
+        files: const <TorrentFileEntry>[
+          TorrentFileEntry(
+            name: 'Show.S01E01.mkv',
+            size: 4,
+            progress: 1,
+            index: 0,
+          ),
+        ],
+      );
+      late _PipelineEnvironment environment;
+      environment = await _PipelineEnvironment.create(
+        backend: backend,
+        backendResolver: (_) async => VideoDownloadBackendBinding(
+          backend: backend,
+          identity: _expectedIdentity,
+          pathMappings: <VideoDownloadPathMapping>[
+            VideoDownloadPathMapping(
+              remoteRoot: '/downloads',
+              localRoot: p.join(environment.root.path, 'missing'),
+            ),
+            VideoDownloadPathMapping(
+              remoteRoot: '/media',
+              localRoot: environment.root.path,
+            ),
+          ],
         ),
-        createdAt: now,
-        updatedAt: now,
-      ),
-    );
-
-    environment.service.wake();
-    // P1 契约：无 AniDB 身份 → import 后直接完成，字幕落位断言不受影响。
-    await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) =>
-          row.lifecycle == VideoDownloadJobLifecycle.completed,
-    );
-
-    final VideoDownloadJobSubtitleRow subtitle =
-        (await environment.database.getVideoDownloadJobSubtitles(jobId)).single;
-    expect(subtitle.status, VideoDownloadJobSubtitleStatus.placed);
-    expect(subtitle.finalPath, installed.path);
-    expect(subtitleProvider.searchCalls, 1);
-    expect(subtitleProvider.downloadCalls, 1);
-    final List<FileSystemEntity> sidecars = (await season.list().toList())
-        .where((FileSystemEntity entity) =>
-            entity is File && p.extension(entity.path) == '.srt')
-        .toList(growable: false);
-    expect(sidecars, hasLength(1));
-    final List<MediaCollectionRow> collections =
-        await environment.database.getAllMediaCollections();
-    expect(collections.single.name, 'Show (2026)');
-  });
-
-  test('scrape never falls back to a same-title unrelated local work',
-      () async {
-    final _PipelineEnvironment environment = await _PipelineEnvironment.create(
-      backend: _FakeTorrentBackend(),
-    );
-    addTearDown(environment.close);
-    const String jobId = 'exact-scrape-path-job';
-    // P1 起 scrape 阶段只对带 AniDB 规范身份的任务运行；本用例守的是
-    // 「身份确认后也绝不按标题回退映射」，故显式带上 anidb 身份。
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.scrape,
-      identityJson: encodeVideoMediaReference(_anidbReference()),
-    );
-    await environment.database.upsertVideoBook(
-      VideoBooksCompanion(
-        bookUid: const Value<String>('video/unrelated-show'),
-        title: const Value<String>('Show'),
-        videoPath: Value<String>(p.join(environment.root.path, 'Other.mkv')),
-        sourceId: Value<int?>(environment.sourceId),
-      ),
-    );
-    final int now = DateTime.now().millisecondsSinceEpoch;
-    await environment.database.upsertVideoDownloadJobFile(
-      VideoDownloadJobFilesCompanion.insert(
+      );
+      addTearDown(environment.close);
+      const String jobId = 'inaccessible-observed-path-job';
+      await environment.insertJob(
         jobId: jobId,
-        backendFileIndex: const Value<int?>(0),
-        originalRelativePath: 'Missing.mkv',
-        currentRelativePath: 'Missing.mkv',
-        finalAbsolutePath: Value<String?>(
-          p.join(environment.root.path, 'Missing.mkv'),
-        ),
-        kind: const Value<String>('video'),
-        status: const Value<String>(VideoDownloadJobFileStatus.imported),
-        createdAt: now,
-        updatedAt: now,
-      ),
-    );
-
-    environment.service.wake();
-    final VideoDownloadJobRow job = await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) =>
-          row.lifecycle == VideoDownloadJobLifecycle.needsAttention,
-    );
-
-    expect(job.lastError, contains('mapped exactly'));
-  });
+        stage: VideoDownloadJobStage.organize,
+        observedSavePath: '/downloads',
+      );
+      environment.service.wake();
+      final VideoDownloadJobRow job = await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.lifecycle == VideoDownloadJobLifecycle.needsAttention,
+      );
+      expect(job.lastError, contains('not accessible'));
+      expect(backend.renameFileCalls, 0);
+      expect(backend.moveStorageCalls, 0);
+    },
+  );
 
   test(
-      'a scrape-stage job without an AniDB identity completes instead of '
+    'organize requires a forward mapping for the managed source root',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(
+        files: const <TorrentFileEntry>[
+          TorrentFileEntry(
+            name: 'Show.S01E01.mkv',
+            size: 4,
+            progress: 1,
+            index: 0,
+          ),
+        ],
+      );
+      late _PipelineEnvironment environment;
+      late Directory downloadDirectory;
+      environment = await _PipelineEnvironment.create(
+        backend: backend,
+        backendResolver: (_) async => VideoDownloadBackendBinding(
+          backend: backend,
+          identity: _expectedIdentity,
+          pathMappings: <VideoDownloadPathMapping>[
+            VideoDownloadPathMapping(
+              remoteRoot: '/downloads',
+              localRoot: downloadDirectory.path,
+            ),
+          ],
+        ),
+      );
+      addTearDown(environment.close);
+      downloadDirectory = Directory(p.join(environment.root.path, 'incoming'));
+      await downloadDirectory.create(recursive: true);
+      const String jobId = 'unmapped-source-root-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.organize,
+        observedSavePath: '/downloads',
+      );
+      environment.service.wake();
+      final VideoDownloadJobRow job = await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.lifecycle == VideoDownloadJobLifecycle.needsAttention,
+      );
+      expect(job.lastError, contains('outside every backend path mapping'));
+      expect(backend.renameFileCalls, 0);
+      expect(backend.moveStorageCalls, 0);
+    },
+  );
+
+  test(
+    'unconfigured local backend mapping uses the filesystem anchor',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(
+        files: const <TorrentFileEntry>[
+          TorrentFileEntry(
+            name: 'Show.S01E01.mkv',
+            size: 4,
+            progress: 1,
+            index: 0,
+          ),
+        ],
+      );
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: backend);
+      addTearDown(environment.close);
+      final Directory downloadDirectory = Directory(
+        p.join(environment.root.path, 'incoming'),
+      );
+      await downloadDirectory.create(recursive: true);
+      const String jobId = 'default-identity-mapping-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.organize,
+        observedSavePath: downloadDirectory.path,
+        subtitlePolicy: VideoDownloadSubtitlePolicy.none,
+      );
+      await environment.insertDownloadedFile(
+        jobId: jobId,
+        name: 'Show.S01E01.mkv',
+        size: 4,
+      );
+
+      environment.service.wake();
+      // P1 契约：无 AniDB 身份 → import 后直接完成，见上一个用例的注释。
+      await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.lifecycle == VideoDownloadJobLifecycle.completed,
+      );
+
+      final String absoluteSource = p.normalize(
+        p.absolute(environment.root.path),
+      );
+      final String anchor = p.rootPrefix(absoluteSource);
+      final VideoDownloadPathMapping identity =
+          VideoDownloadPathMapping.identity(
+            anchor.isEmpty ? absoluteSource : anchor,
+          );
+      expect(backend.moveStoragePaths, <String>[
+        identity.localToRemote(environment.root.path)!,
+      ]);
+    },
+  );
+
+  test(
+    'legacy embedded resume ids survive JSON archival until terminal state',
+    () async {
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: _FakeTorrentBackend());
+      addTearDown(environment.close);
+      await environment.insertJob(
+        jobId: 'legacy-resume-active',
+        stage: VideoDownloadJobStage.download,
+        organizationPolicy: 'legacy',
+        backendKind: 'embedded',
+      );
+
+      expect(
+        legacyEmbeddedTorrentResumeIds(
+          await environment.database.getVideoDownloadJobs(),
+        ),
+        <String>{_torrentHash},
+      );
+      await environment.database.updateVideoDownloadJob(
+        'legacy-resume-active',
+        const VideoDownloadJobsCompanion(
+          lifecycle: Value<String>(VideoDownloadJobLifecycle.completed),
+        ),
+      );
+      final Set<String> idsAfterCompletion = legacyEmbeddedTorrentResumeIds(
+        await environment.database.getVideoDownloadJobs(),
+      );
+      expect(idsAfterCompletion, isEmpty);
+    },
+  );
+
+  test(
+    'library embedded resume ids keep completed torrents available to seed',
+    () async {
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: _FakeTorrentBackend());
+      addTearDown(environment.close);
+      await environment.insertJob(
+        jobId: 'library-resume-completed',
+        stage: VideoDownloadJobStage.scrape,
+        organizationPolicy: 'library',
+        backendKind: 'embedded',
+      );
+      await environment.database.updateVideoDownloadJob(
+        'library-resume-completed',
+        const VideoDownloadJobsCompanion(
+          lifecycle: Value<String>(VideoDownloadJobLifecycle.completed),
+        ),
+      );
+
+      expect(
+        legacyEmbeddedTorrentResumeIds(
+          await environment.database.getVideoDownloadJobs(),
+        ),
+        <String>{_torrentHash},
+      );
+    },
+  );
+
+  test(
+    'manual subtitle selection is durable and resumes an actionable job',
+    () async {
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: _FakeTorrentBackend());
+      addTearDown(environment.close);
+      const String jobId = 'manual-subtitle-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.download,
+      );
+      await environment.database.updateVideoDownloadJob(
+        jobId,
+        const VideoDownloadJobsCompanion(
+          lifecycle: Value<String>(VideoDownloadJobLifecycle.needsAttention),
+          lastError: Value<String?>('subtitle choice required'),
+        ),
+      );
+
+      final String subtitleId = await environment.service
+          .attachSubtitleSelection(
+            jobId: jobId,
+            candidate: _FakeSubtitleCandidate(),
+            season: 1,
+            episode: 2,
+          );
+
+      final VideoDownloadJobSubtitleRow selection =
+          (await environment.database.getVideoDownloadJobSubtitles(
+            jobId,
+          )).single;
+      expect(selection.subtitleId, subtitleId);
+      expect(selection.provider, 'opensubtitles');
+      expect(selection.selectedSubtitleId, 'subtitle-42');
+      expect(selection.season, 1);
+      expect(selection.episode, 2);
+      expect(selection.status, VideoDownloadJobSubtitleStatus.pending);
+      final VideoDownloadJobRow job = (await environment.database
+          .getVideoDownloadJob(jobId))!;
+      expect(job.lifecycle, VideoDownloadJobLifecycle.active);
+      expect(job.lastError, isNull);
+    },
+  );
+
+  test(
+    'restart adopts an already-written resolving subtitle without duplicating it',
+    () async {
+      final Uint8List subtitleBytes = Uint8List.fromList(<int>[49, 10, 50, 10]);
+      final _FakeSubtitleProvider subtitleProvider = _FakeSubtitleProvider(
+        bytes: subtitleBytes,
+      );
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(
+            backend: _FakeTorrentBackend(),
+            subtitleProvider: subtitleProvider,
+          );
+      addTearDown(environment.close);
+      const String jobId = 'subtitle-rename-crash-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.subtitle,
+      );
+      final Directory season = Directory(
+        p.join(environment.root.path, 'Show (2026)', 'Season 01'),
+      );
+      await season.create(recursive: true);
+      final File video = File(p.join(season.path, 'Show (2026) - S01E02.mkv'));
+      await video.writeAsBytes(<int>[0, 1, 2, 3], flush: true);
+      final int now = DateTime.now().millisecondsSinceEpoch;
+      await environment.database.upsertVideoDownloadJobFile(
+        VideoDownloadJobFilesCompanion.insert(
+          jobId: jobId,
+          backendFileIndex: const Value<int?>(0),
+          originalRelativePath: p.basename(video.path),
+          currentRelativePath: p.basename(video.path),
+          targetRelativePath: Value<String?>(p.basename(video.path)),
+          finalAbsolutePath: Value<String?>(video.path),
+          kind: const Value<String>('video'),
+          season: const Value<int?>(1),
+          episode: const Value<int?>(2),
+          sizeBytes: Value<int?>(await video.length()),
+          status: const Value<String>(VideoDownloadJobFileStatus.organized),
+          createdAt: now,
+          updatedAt: now,
+        ),
+      );
+      final VideoDownloadJobFileRow jobFile =
+          (await environment.database.getVideoDownloadJobFiles(jobId)).single;
+      final File installed = File(
+        p.join(season.path, 'Show (2026) - S01E02.zh-cn.srt'),
+      );
+      await installed.writeAsBytes(subtitleBytes, flush: true);
+      await environment.database.upsertVideoDownloadJobSubtitle(
+        VideoDownloadJobSubtitlesCompanion.insert(
+          subtitleId: '$jobId:auto',
+          jobId: jobId,
+          jobFileId: Value<int?>(jobFile.id),
+          provider: 'opensubtitles',
+          selectedSubtitleId: const Value<String?>('subtitle-42'),
+          language: const Value<String?>('zh-cn'),
+          season: const Value<int?>(1),
+          episode: const Value<int?>(2),
+          originalFileName: const Value<String?>('Show.zh.srt'),
+          stagedPath: Value<String?>('${installed.path}.$jobId.fushi.tmp'),
+          finalPath: Value<String?>(installed.path),
+          status: const Value<String>(VideoDownloadJobSubtitleStatus.resolving),
+          createdAt: now,
+          updatedAt: now,
+        ),
+      );
+
+      environment.service.wake();
+      // P1 契约：无 AniDB 身份 → import 后直接完成，字幕落位断言不受影响。
+      await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.lifecycle == VideoDownloadJobLifecycle.completed,
+      );
+
+      final VideoDownloadJobSubtitleRow subtitle =
+          (await environment.database.getVideoDownloadJobSubtitles(
+            jobId,
+          )).single;
+      expect(subtitle.status, VideoDownloadJobSubtitleStatus.placed);
+      expect(subtitle.finalPath, installed.path);
+      expect(subtitleProvider.searchCalls, 1);
+      expect(subtitleProvider.downloadCalls, 1);
+      final List<FileSystemEntity> sidecars = (await season.list().toList())
+          .where(
+            (FileSystemEntity entity) =>
+                entity is File && p.extension(entity.path) == '.srt',
+          )
+          .toList(growable: false);
+      expect(sidecars, hasLength(1));
+      final List<MediaCollectionRow> collections = await environment.database
+          .getAllMediaCollections();
+      expect(collections.single.name, 'Show (2026)');
+    },
+  );
+
+  test(
+    'scrape never falls back to a same-title unrelated local work',
+    () async {
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: _FakeTorrentBackend());
+      addTearDown(environment.close);
+      const String jobId = 'exact-scrape-path-job';
+      // P1 起 scrape 阶段只对带 AniDB 规范身份的任务运行；本用例守的是
+      // 「身份确认后也绝不按标题回退映射」，故显式带上 anidb 身份。
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.scrape,
+        identityJson: encodeVideoMediaReference(_anidbReference()),
+      );
+      await environment.database.upsertVideoBook(
+        VideoBooksCompanion(
+          bookUid: const Value<String>('video/unrelated-show'),
+          title: const Value<String>('Show'),
+          videoPath: Value<String>(p.join(environment.root.path, 'Other.mkv')),
+          sourceId: Value<int?>(environment.sourceId),
+        ),
+      );
+      final int now = DateTime.now().millisecondsSinceEpoch;
+      await environment.database.upsertVideoDownloadJobFile(
+        VideoDownloadJobFilesCompanion.insert(
+          jobId: jobId,
+          backendFileIndex: const Value<int?>(0),
+          originalRelativePath: 'Missing.mkv',
+          currentRelativePath: 'Missing.mkv',
+          finalAbsolutePath: Value<String?>(
+            p.join(environment.root.path, 'Missing.mkv'),
+          ),
+          kind: const Value<String>('video'),
+          status: const Value<String>(VideoDownloadJobFileStatus.imported),
+          createdAt: now,
+          updatedAt: now,
+        ),
+      );
+
+      environment.service.wake();
+      final VideoDownloadJobRow job = await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.lifecycle == VideoDownloadJobLifecycle.needsAttention,
+      );
+
+      expect(job.lastError, contains('mapped exactly'));
+    },
+  );
+
+  test('a scrape-stage job without an AniDB identity completes instead of '
       'getting pinned on needsAttention (BUG-2004)', () async {
     final _PipelineEnvironment environment = await _PipelineEnvironment.create(
       backend: _FakeTorrentBackend(),
@@ -1172,8 +1219,7 @@ void main() {
     );
   });
 
-  test(
-      'an AniDB identity from the enqueue snapshot enters scrape as a '
+  test('an AniDB identity from the enqueue snapshot enters scrape as a '
       'confirmed lookup', () async {
     final _PipelineEnvironment environment = await _PipelineEnvironment.create(
       backend: _FakeTorrentBackend(),
@@ -1223,8 +1269,7 @@ void main() {
     expect(job.lastError, contains('AniDB'));
   });
 
-  test(
-      'a multi-movie torrent imports every standalone movie with its own '
+  test('a multi-movie torrent imports every standalone movie with its own '
       'title (BUG-2007)', () async {
     final _PipelineEnvironment environment = await _PipelineEnvironment.create(
       backend: _FakeTorrentBackend(),
@@ -1278,19 +1323,15 @@ void main() {
     expect(books, hasLength(4));
     // 主片（最大文件）沿用 job.title；解析标题唯一的并列正片用解析结果；
     // 前編/後編 式的解析撞名退回整理后文件名——有损解析绝不承担唯一性。
-    expect(
-      books.map((VideoBookRow book) => book.title).toSet(),
-      <String>{
-        'Show',
-        'Aoi Hana',
-        '[A] Suzume [1080p]',
-        '[B] Suzume [720p]',
-      },
-    );
+    expect(books.map((VideoBookRow book) => book.title).toSet(), <String>{
+      'Show',
+      'Aoi Hana',
+      '[A] Suzume [1080p]',
+      '[B] Suzume [720p]',
+    });
   });
 
-  test(
-      'movie subtitle search only targets the main movie; sibling standalone '
+  test('movie subtitle search only targets the main movie; sibling standalone '
       'movies wait for their own identities (BUG-2007)', () async {
     final Uint8List subtitleBytes = Uint8List.fromList(<int>[49, 10, 50, 10]);
     final _FakeSubtitleProvider subtitleProvider = _FakeSubtitleProvider(
@@ -1357,8 +1398,8 @@ void main() {
     // 只搜了主片一次：并列正片拿 job 身份去搜只会装上主片的字幕，必须留给
     // 刮削后按各自规范身份的补齐链路。
     expect(subtitleProvider.searchCalls, 1);
-    final List<VideoDownloadJobFileRow> files =
-        await environment.database.getVideoDownloadJobFiles(jobId);
+    final List<VideoDownloadJobFileRow> files = await environment.database
+        .getVideoDownloadJobFiles(jobId);
     final int mainFileId = files
         .singleWhere(
           (VideoDownloadJobFileRow row) =>
@@ -1371,8 +1412,7 @@ void main() {
     }
   });
 
-  test(
-      'a multi-movie scrape binds the confirmed identity to the main movie '
+  test('a multi-movie scrape binds the confirmed identity to the main movie '
       'instead of dropping it (BUG-2007)', () async {
     final _PipelineEnvironment environment = await _PipelineEnvironment.create(
       backend: _FakeTorrentBackend(),
@@ -1447,362 +1487,387 @@ void main() {
     expect(job.lastError, contains('AniDB'));
   });
 
-  test('retry resets an actionable job and wakes the persisted stage',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(
-      snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.3)],
-    );
-    final _PipelineEnvironment environment =
-        await _PipelineEnvironment.create(backend: backend);
-    addTearDown(environment.close);
-    const String jobId = 'retry-user-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.download,
-    );
-    await environment.database.updateVideoDownloadJob(
-      jobId,
-      const VideoDownloadJobsCompanion(
-        lifecycle: Value<String>(VideoDownloadJobLifecycle.failed),
-        attemptCount: Value<int>(4),
-        lastError: Value<String?>('temporary failure'),
-        completedAt: Value<int?>(1),
-      ),
-    );
-
-    await environment.service.retryJob(jobId);
-    final VideoDownloadJobRow job = await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) =>
-          row.lifecycle == VideoDownloadJobLifecycle.active &&
-          row.claimedBy == null &&
-          row.nextAttemptAt != null,
-    );
-    expect(job.stage, VideoDownloadJobStage.download);
-    expect(job.attemptCount, 0);
-    expect(job.lastError, isNull);
-    expect(job.completedAt, isNull);
-  });
-
-  test('retry rewinds a missing embedded torrent and enqueues it again',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(pauseAdd: true);
-    final _PipelineEnvironment environment =
-        await _PipelineEnvironment.create(backend: backend);
-    addTearDown(environment.close);
-    const String jobId = 'retry-missing-embedded-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.download,
-    );
-    await environment.database.updateVideoDownloadJob(
-      jobId,
-      const VideoDownloadJobsCompanion(
-        lifecycle: Value<String>(VideoDownloadJobLifecycle.failed),
-        attemptCount: Value<int>(6),
-        lastError: Value<String?>(
-          'Bad state: torrent is not visible in the original backend',
+  test(
+    'retry resets an actionable job and wakes the persisted stage',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(
+        snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.3)],
+      );
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: backend);
+      addTearDown(environment.close);
+      const String jobId = 'retry-user-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.download,
+      );
+      await environment.database.updateVideoDownloadJob(
+        jobId,
+        const VideoDownloadJobsCompanion(
+          lifecycle: Value<String>(VideoDownloadJobLifecycle.failed),
+          attemptCount: Value<int>(4),
+          lastError: Value<String?>('temporary failure'),
+          completedAt: Value<int?>(1),
         ),
-      ),
-    );
+      );
 
-    await environment.service.retryJob(jobId);
-    await backend.addEntered.future.timeout(const Duration(seconds: 2));
-    final VideoDownloadJobRow job =
-        (await environment.database.getVideoDownloadJob(jobId))!;
+      await environment.service.retryJob(jobId);
+      final VideoDownloadJobRow job = await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.lifecycle == VideoDownloadJobLifecycle.active &&
+            row.claimedBy == null &&
+            row.nextAttemptAt != null,
+      );
+      expect(job.stage, VideoDownloadJobStage.download);
+      expect(job.attemptCount, 0);
+      expect(job.lastError, isNull);
+      expect(job.completedAt, isNull);
+    },
+  );
 
-    expect(job.stage, VideoDownloadJobStage.enqueue);
-    expect(job.backendTaskId, isNull);
-    expect(job.torrentHash, _torrentHash);
-    expect(backend.addCalls, 1);
-  });
+  test(
+    'retry rewinds a missing embedded torrent and enqueues it again',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(pauseAdd: true);
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: backend);
+      addTearDown(environment.close);
+      const String jobId = 'retry-missing-embedded-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.download,
+      );
+      await environment.database.updateVideoDownloadJob(
+        jobId,
+        const VideoDownloadJobsCompanion(
+          lifecycle: Value<String>(VideoDownloadJobLifecycle.failed),
+          attemptCount: Value<int>(6),
+          lastError: Value<String?>(
+            'Bad state: torrent is not visible in the original backend',
+          ),
+        ),
+      );
 
-  test('missing active embedded torrent is rewound and consumes retry budget',
-      () async {
-    final _PipelineEnvironment environment = await _PipelineEnvironment.create(
-      backend: _FakeTorrentBackend(),
-    );
-    addTearDown(environment.close);
-    const String jobId = 'active-missing-embedded-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.download,
-    );
+      await environment.service.retryJob(jobId);
+      await backend.addEntered.future.timeout(const Duration(seconds: 2));
+      final VideoDownloadJobRow job = (await environment.database
+          .getVideoDownloadJob(jobId))!;
 
-    environment.service.wake();
-    final VideoDownloadJobRow job = await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) =>
-          row.stage == VideoDownloadJobStage.enqueue && row.claimedBy == null,
-    );
+      expect(job.stage, VideoDownloadJobStage.enqueue);
+      expect(job.backendTaskId, isNull);
+      expect(job.torrentHash, _torrentHash);
+      expect(backend.addCalls, 1);
+    },
+  );
 
-    expect(job.lifecycle, VideoDownloadJobLifecycle.active);
-    expect(job.backendTaskId, isNull);
-    // A rewind is a retry: it spends budget and stays diagnosable, so a task
-    // the engine can never hold cannot loop forever while the UI shows an
-    // eternally running job.
-    expect(job.attemptCount, 1);
-    expect(job.lastError, videoDownloadMissingBackendTaskError);
-    expect(
-        job.nextAttemptAt, greaterThan(DateTime.now().millisecondsSinceEpoch));
-  });
+  test(
+    'missing active embedded torrent is rewound and consumes retry budget',
+    () async {
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: _FakeTorrentBackend());
+      addTearDown(environment.close);
+      const String jobId = 'active-missing-embedded-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.download,
+      );
 
-  test('an embedded task that never survives a rewind lap ends up failed',
-      () async {
-    final _PipelineEnvironment environment = await _PipelineEnvironment.create(
-      backend: _FakeTorrentBackend(),
-      pollInterval: Duration.zero,
-    );
-    addTearDown(environment.close);
-    const String jobId = 'never-holdable-embedded-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.download,
-    );
+      environment.service.wake();
+      final VideoDownloadJobRow job = await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.stage == VideoDownloadJobStage.enqueue && row.claimedBy == null,
+      );
 
-    environment.service.wake();
-    // Every lap re-adds the torrent successfully and then finds it gone again;
-    // re-entering the download stage must not refund the retry budget.
-    final VideoDownloadJobRow job = await _waitForJob(
-      environment.database,
-      jobId,
-      (VideoDownloadJobRow row) =>
-          row.lifecycle == VideoDownloadJobLifecycle.failed,
-    );
+      expect(job.lifecycle, VideoDownloadJobLifecycle.active);
+      expect(job.backendTaskId, isNull);
+      // A rewind is a retry: it spends budget and stays diagnosable, so a task
+      // the engine can never hold cannot loop forever while the UI shows an
+      // eternally running job.
+      expect(job.attemptCount, 1);
+      expect(job.lastError, videoDownloadMissingBackendTaskError);
+      expect(
+        job.nextAttemptAt,
+        greaterThan(DateTime.now().millisecondsSinceEpoch),
+      );
+    },
+  );
 
-    expect(job.attemptCount, greaterThanOrEqualTo(job.maxAttempts));
-    expect(job.lastError, videoDownloadMissingBackendTaskError);
-    expect(job.nextAttemptAt, isNull);
-    expect(job.claimedBy, isNull);
-    expect(job.backendTaskId, isNull);
-    expect(job.stage, VideoDownloadJobStage.enqueue);
-    expect(environment.backend.addCalls, greaterThan(1));
-  });
+  test(
+    'an embedded task that never survives a rewind lap ends up failed',
+    () async {
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(
+            backend: _FakeTorrentBackend(),
+            pollInterval: Duration.zero,
+          );
+      addTearDown(environment.close);
+      const String jobId = 'never-holdable-embedded-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.download,
+      );
 
-  test('delete never follows a backend path out of the observed save path',
-      () async {
-    final _PipelineEnvironment environment = await _PipelineEnvironment.create(
-      backend: _FakeTorrentBackend(),
-    );
-    addTearDown(environment.close);
-    final Directory savePath =
-        Directory(p.join(environment.root.path, 'downloads'));
-    await savePath.create(recursive: true);
-    final File inside = File(p.join(savePath.path, 'Show S01E01.mkv'));
-    await inside.writeAsString('inside');
-    final File outside = File(p.join(environment.root.path, 'private.mkv'));
-    await outside.writeAsString('outside');
+      environment.service.wake();
+      // Every lap re-adds the torrent successfully and then finds it gone again;
+      // re-entering the download stage must not refund the retry budget.
+      final VideoDownloadJobRow job = await _waitForJob(
+        environment.database,
+        jobId,
+        (VideoDownloadJobRow row) =>
+            row.lifecycle == VideoDownloadJobLifecycle.failed,
+      );
 
-    const String jobId = 'escaping-backend-path-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.download,
-      observedSavePath: savePath.path,
-    );
-    // A backend controls these names verbatim. p.join drops its root for an
-    // absolute second argument, so an unchecked join would delete both.
-    for (final String name in <String>[
-      'Show S01E01.mkv',
-      '../private.mkv',
-      outside.path,
-      p.join(environment.root.path, 'private.mkv').replaceAll('/', r'\'),
-    ]) {
-      await environment.insertBackendFile(jobId: jobId, name: name);
-    }
+      expect(job.attemptCount, greaterThanOrEqualTo(job.maxAttempts));
+      expect(job.lastError, videoDownloadMissingBackendTaskError);
+      expect(job.nextAttemptAt, isNull);
+      expect(job.claimedBy, isNull);
+      expect(job.backendTaskId, isNull);
+      expect(job.stage, VideoDownloadJobStage.enqueue);
+      expect(environment.backend.addCalls, greaterThan(1));
+    },
+  );
 
-    final VideoDownloadJobRow job =
-        (await environment.database.getVideoDownloadJob(jobId))!;
-    await deletePersistedVideoDownloadJob(
-      database: environment.database,
-      job: job,
-      deleteFiles: true,
-    );
+  test(
+    'delete never follows a backend path out of the observed save path',
+    () async {
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: _FakeTorrentBackend());
+      addTearDown(environment.close);
+      final Directory savePath = Directory(
+        p.join(environment.root.path, 'downloads'),
+      );
+      await savePath.create(recursive: true);
+      final File inside = File(p.join(savePath.path, 'Show S01E01.mkv'));
+      await inside.writeAsString('inside');
+      final File outside = File(p.join(environment.root.path, 'private.mkv'));
+      await outside.writeAsString('outside');
 
-    expect(await outside.exists(), isTrue);
-    expect(await inside.exists(), isFalse);
-    expect(await environment.database.getVideoDownloadJob(jobId), isNull);
-  });
+      const String jobId = 'escaping-backend-path-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.download,
+        observedSavePath: savePath.path,
+      );
+      // A backend controls these names verbatim. p.join drops its root for an
+      // absolute second argument, so an unchecked join would delete both.
+      for (final String name in <String>[
+        'Show S01E01.mkv',
+        '../private.mkv',
+        outside.path,
+        p.join(environment.root.path, 'private.mkv').replaceAll('/', r'\'),
+      ]) {
+        await environment.insertBackendFile(jobId: jobId, name: name);
+      }
 
-  test('a locked file leaves the durable job deleted and is reported',
-      () async {
-    final _PipelineEnvironment environment = await _PipelineEnvironment.create(
-      backend: _FakeTorrentBackend(),
-    );
-    addTearDown(environment.close);
-    final Directory savePath =
-        Directory(p.join(environment.root.path, 'downloads'));
-    await savePath.create(recursive: true);
-    final File locked = File(p.join(savePath.path, 'Locked S01E01.mkv'));
-    await locked.writeAsString('locked');
-    final File free = File(p.join(savePath.path, 'Free S01E02.mkv'));
-    await free.writeAsString('free');
-    final RandomAccessFile handle = await locked.open(mode: FileMode.write);
-    addTearDown(handle.close);
-
-    const String jobId = 'locked-file-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.download,
-      observedSavePath: savePath.path,
-    );
-    await environment.insertBackendFile(
-      jobId: jobId,
-      name: p.basename(locked.path),
-    );
-    await environment.insertBackendFile(
-      jobId: jobId,
-      name: p.basename(free.path),
-    );
-
-    final VideoDownloadJobRow job =
-        (await environment.database.getVideoDownloadJob(jobId))!;
-    await expectLater(
-      deletePersistedVideoDownloadJob(
+      final VideoDownloadJobRow job = (await environment.database
+          .getVideoDownloadJob(jobId))!;
+      await deletePersistedVideoDownloadJob(
         database: environment.database,
         job: job,
         deleteFiles: true,
-      ),
-      throwsA(isA<VideoDownloadJobFilesNotDeleted>()),
-    );
+      );
 
-    // The durable row must be gone even so, otherwise every retry repeats the
-    // half of the deletion that already succeeded.
-    expect(await environment.database.getVideoDownloadJob(jobId), isNull);
-    expect(await locked.exists(), isTrue);
-    expect(await free.exists(), isFalse);
-  },
-      skip: !Platform.isWindows
-          ? 'holding an open handle only blocks deletion on Windows'
-          : null);
+      expect(await outside.exists(), isTrue);
+      expect(await inside.exists(), isFalse);
+      expect(await environment.database.getVideoDownloadJob(jobId), isNull);
+    },
+  );
 
-  test('cancel pauses the exact backend task and never deletes its files',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend();
-    final _PipelineEnvironment environment =
-        await _PipelineEnvironment.create(backend: backend);
-    addTearDown(environment.close);
-    const String jobId = 'cancel-user-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.download,
-    );
+  test(
+    'a locked file leaves the durable job deleted and is reported',
+    () async {
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: _FakeTorrentBackend());
+      addTearDown(environment.close);
+      final Directory savePath = Directory(
+        p.join(environment.root.path, 'downloads'),
+      );
+      await savePath.create(recursive: true);
+      final File locked = File(p.join(savePath.path, 'Locked S01E01.mkv'));
+      await locked.writeAsString('locked');
+      final File free = File(p.join(savePath.path, 'Free S01E02.mkv'));
+      await free.writeAsString('free');
+      final RandomAccessFile handle = await locked.open(mode: FileMode.write);
+      addTearDown(handle.close);
 
-    await environment.service.cancelJob(jobId);
+      const String jobId = 'locked-file-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.download,
+        observedSavePath: savePath.path,
+      );
+      await environment.insertBackendFile(
+        jobId: jobId,
+        name: p.basename(locked.path),
+      );
+      await environment.insertBackendFile(
+        jobId: jobId,
+        name: p.basename(free.path),
+      );
 
-    final VideoDownloadJobRow job =
-        (await environment.database.getVideoDownloadJob(jobId))!;
-    expect(job.lifecycle, VideoDownloadJobLifecycle.cancelled);
-    expect(job.claimedBy, isNull);
-    expect(backend.pauseCalls, 1);
-    expect(backend.pausedTorrentIds, <String>[_torrentHash]);
-  });
-
-  test('resume restarts the exact paused backend task and durable job',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(
-      snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.4)],
-    );
-    final _PipelineEnvironment environment =
-        await _PipelineEnvironment.create(backend: backend);
-    addTearDown(environment.close);
-    const String jobId = 'resume-user-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.download,
-    );
-    await environment.service.cancelJob(jobId);
-
-    await environment.service.resumeJob(jobId);
-
-    final VideoDownloadJobRow job =
-        (await environment.database.getVideoDownloadJob(jobId))!;
-    expect(job.lifecycle, VideoDownloadJobLifecycle.active);
-    expect(job.stage, VideoDownloadJobStage.download);
-    expect(job.completedAt, isNull);
-    expect(backend.resumeCalls, 1);
-    expect(backend.resumedTorrentIds, <String>[_torrentHash]);
-  });
-
-  test('resume rewinds a paused embedded task missing from fast-resume',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(pauseAdd: true);
-    final _PipelineEnvironment environment =
-        await _PipelineEnvironment.create(backend: backend);
-    addTearDown(environment.close);
-    const String jobId = 'resume-missing-embedded-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.download,
-    );
-    await environment.service.cancelJob(jobId);
-
-    await environment.service.resumeJob(jobId);
-    await backend.addEntered.future.timeout(const Duration(seconds: 2));
-
-    final VideoDownloadJobRow job =
-        (await environment.database.getVideoDownloadJob(jobId))!;
-    expect(job.lifecycle, VideoDownloadJobLifecycle.active);
-    expect(job.stage, VideoDownloadJobStage.enqueue);
-    expect(job.backendTaskId, isNull);
-    expect(job.torrentHash, _torrentHash);
-    expect(backend.resumeCalls, 0);
-    expect(backend.addCalls, 1);
-  });
-
-  test('cancel refuses to touch a task when backend identity changed',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend();
-    final _PipelineEnvironment environment = await _PipelineEnvironment.create(
-      backend: backend,
-      backendResolver: (_) async => VideoDownloadBackendBinding(
-        backend: backend,
-        identity: const VideoDownloadBackendIdentity(
-          kind: 'embedded',
-          profileId: 'embedded',
-          fingerprint: 'another-installation',
+      final VideoDownloadJobRow job = (await environment.database
+          .getVideoDownloadJob(jobId))!;
+      await expectLater(
+        deletePersistedVideoDownloadJob(
+          database: environment.database,
+          job: job,
+          deleteFiles: true,
         ),
-      ),
-    );
-    addTearDown(environment.close);
-    const String jobId = 'cancel-mismatched-backend';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.download,
-    );
+        throwsA(isA<VideoDownloadJobFilesNotDeleted>()),
+      );
 
-    await expectLater(
-      environment.service.cancelJob(jobId),
-      throwsA(isA<VideoDownloadPipelineActionRequired>()),
-    );
+      // The durable row must be gone even so, otherwise every retry repeats the
+      // half of the deletion that already succeeded.
+      expect(await environment.database.getVideoDownloadJob(jobId), isNull);
+      expect(await locked.exists(), isTrue);
+      expect(await free.exists(), isFalse);
+    },
+    skip: !Platform.isWindows
+        ? 'holding an open handle only blocks deletion on Windows'
+        : null,
+  );
 
-    final VideoDownloadJobRow job =
-        (await environment.database.getVideoDownloadJob(jobId))!;
-    expect(job.lifecycle, VideoDownloadJobLifecycle.active);
-    expect(backend.pauseCalls, 0);
-  });
+  test(
+    'cancel pauses the exact backend task and never deletes its files',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend();
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: backend);
+      addTearDown(environment.close);
+      const String jobId = 'cancel-user-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.download,
+      );
 
-  test('delete removes a stale task even when its backend cannot pause it',
-      () async {
-    final _FakeTorrentBackend backend = _FakeTorrentBackend(
-      pauseResult: false,
-    );
-    final _PipelineEnvironment environment =
-        await _PipelineEnvironment.create(backend: backend);
-    addTearDown(environment.close);
-    const String jobId = 'delete-stale-backend-job';
-    await environment.insertJob(
-      jobId: jobId,
-      stage: VideoDownloadJobStage.organize,
-      lifecycle: VideoDownloadJobLifecycle.needsAttention,
-    );
+      await environment.service.cancelJob(jobId);
 
-    await environment.service.deleteJob(jobId, deleteFiles: false);
+      final VideoDownloadJobRow job = (await environment.database
+          .getVideoDownloadJob(jobId))!;
+      expect(job.lifecycle, VideoDownloadJobLifecycle.cancelled);
+      expect(job.claimedBy, isNull);
+      expect(backend.pauseCalls, 1);
+      expect(backend.pausedTorrentIds, <String>[_torrentHash]);
+    },
+  );
 
-    expect(await environment.database.getVideoDownloadJob(jobId), isNull);
-    expect(backend.pauseCalls, 0);
-  });
+  test(
+    'resume restarts the exact paused backend task and durable job',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(
+        snapshots: <TorrentSnapshot>[_downloadingSnapshot(progress: 0.4)],
+      );
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: backend);
+      addTearDown(environment.close);
+      const String jobId = 'resume-user-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.download,
+      );
+      await environment.service.cancelJob(jobId);
+
+      await environment.service.resumeJob(jobId);
+
+      final VideoDownloadJobRow job = (await environment.database
+          .getVideoDownloadJob(jobId))!;
+      expect(job.lifecycle, VideoDownloadJobLifecycle.active);
+      expect(job.stage, VideoDownloadJobStage.download);
+      expect(job.completedAt, isNull);
+      expect(backend.resumeCalls, 1);
+      expect(backend.resumedTorrentIds, <String>[_torrentHash]);
+    },
+  );
+
+  test(
+    'resume rewinds a paused embedded task missing from fast-resume',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(pauseAdd: true);
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: backend);
+      addTearDown(environment.close);
+      const String jobId = 'resume-missing-embedded-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.download,
+      );
+      await environment.service.cancelJob(jobId);
+
+      await environment.service.resumeJob(jobId);
+      await backend.addEntered.future.timeout(const Duration(seconds: 2));
+
+      final VideoDownloadJobRow job = (await environment.database
+          .getVideoDownloadJob(jobId))!;
+      expect(job.lifecycle, VideoDownloadJobLifecycle.active);
+      expect(job.stage, VideoDownloadJobStage.enqueue);
+      expect(job.backendTaskId, isNull);
+      expect(job.torrentHash, _torrentHash);
+      expect(backend.resumeCalls, 0);
+      expect(backend.addCalls, 1);
+    },
+  );
+
+  test(
+    'cancel refuses to touch a task when backend identity changed',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend();
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(
+            backend: backend,
+            backendResolver: (_) async => VideoDownloadBackendBinding(
+              backend: backend,
+              identity: const VideoDownloadBackendIdentity(
+                kind: 'embedded',
+                profileId: 'embedded',
+                fingerprint: 'another-installation',
+              ),
+            ),
+          );
+      addTearDown(environment.close);
+      const String jobId = 'cancel-mismatched-backend';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.download,
+      );
+
+      await expectLater(
+        environment.service.cancelJob(jobId),
+        throwsA(isA<VideoDownloadPipelineActionRequired>()),
+      );
+
+      final VideoDownloadJobRow job = (await environment.database
+          .getVideoDownloadJob(jobId))!;
+      expect(job.lifecycle, VideoDownloadJobLifecycle.active);
+      expect(backend.pauseCalls, 0);
+    },
+  );
+
+  test(
+    'delete removes a stale task even when its backend cannot pause it',
+    () async {
+      final _FakeTorrentBackend backend = _FakeTorrentBackend(
+        pauseResult: false,
+      );
+      final _PipelineEnvironment environment =
+          await _PipelineEnvironment.create(backend: backend);
+      addTearDown(environment.close);
+      const String jobId = 'delete-stale-backend-job';
+      await environment.insertJob(
+        jobId: jobId,
+        stage: VideoDownloadJobStage.organize,
+        lifecycle: VideoDownloadJobLifecycle.needsAttention,
+      );
+
+      await environment.service.deleteJob(jobId, deleteFiles: false);
+
+      expect(await environment.database.getVideoDownloadJob(jobId), isNull);
+      expect(backend.pauseCalls, 0);
+    },
+  );
 
   test('retry rejects a job that is already active', () async {
     final _PipelineEnvironment environment = await _PipelineEnvironment.create(
@@ -1852,14 +1917,17 @@ void main() {
           targetSourceId: environment.sourceId,
         ),
       );
-      final VideoDownloadJobRow? job =
-          await environment.database.getVideoDownloadJob(jobId);
+      final VideoDownloadJobRow? job = await environment.database
+          .getVideoDownloadJob(jobId);
       expect(job, isNotNull);
       expect(job!.resourceProvider, kManualVideoDownloadResourceProvider);
       expect(job.magnetUri, manualMagnet);
       expect(job.torrentHash, _torrentHash);
-      expect(job.metadataProvider, isNull,
-          reason: '手动任务没有发现身份，import 后必须直接完成而不是进 scrape');
+      expect(
+        job.metadataProvider,
+        isNull,
+        reason: '手动任务没有发现身份，import 后必须直接完成而不是进 scrape',
+      );
       expect(job.externalId, isNull);
       expect(job.mediaKind, VideoMetadataMediaKind.movie.name);
       expect(job.organizationPolicy, 'library');
@@ -1872,8 +1940,9 @@ void main() {
       final _PipelineEnvironment environment =
           await _PipelineEnvironment.create(backend: _FakeTorrentBackend());
       addTearDown(environment.close);
-      final InspectedTorrentMetainfo metainfo =
-          inspectTorrentMetainfo(_manualV1Metainfo());
+      final InspectedTorrentMetainfo metainfo = inspectTorrentMetainfo(
+        _manualV1Metainfo(),
+      );
 
       await expectLater(
         environment.service.enqueueManual(
@@ -1923,8 +1992,9 @@ void main() {
     });
 
     test('.torrent 任务：元数据先落盘（<jobId>.torrent），hash 取自 metainfo', () async {
-      final Directory manualDir =
-          await Directory.systemTemp.createTemp('fushi-manual-torrents-');
+      final Directory manualDir = await Directory.systemTemp.createTemp(
+        'fushi-manual-torrents-',
+      );
       addTearDown(() async {
         if (await manualDir.exists()) await manualDir.delete(recursive: true);
       });
@@ -1944,8 +2014,9 @@ void main() {
         pollInterval: const Duration(hours: 1),
       );
       addTearDown(service.dispose);
-      final InspectedTorrentMetainfo metainfo =
-          inspectTorrentMetainfo(_manualV1Metainfo());
+      final InspectedTorrentMetainfo metainfo = inspectTorrentMetainfo(
+        _manualV1Metainfo(),
+      );
 
       final String jobId = await service.enqueueManual(
         VideoDownloadManualEnqueueRequest(
@@ -1961,8 +2032,8 @@ void main() {
         isTrue,
         reason: '重启后 payload 从这份落盘元数据重新物化',
       );
-      final VideoDownloadJobRow? job =
-          await environment.database.getVideoDownloadJob(jobId);
+      final VideoDownloadJobRow? job = await environment.database
+          .getVideoDownloadJob(jobId);
       expect(job!.torrentHash, metainfo.torrentId);
       expect(job.magnetUri, isNull);
     });
@@ -2029,11 +2100,14 @@ void main() {
           targetSourceId: environment.sourceId,
         ),
       );
-      final VideoDownloadJobRow? job =
-          await environment.database.getVideoDownloadJob(jobId);
+      final VideoDownloadJobRow? job = await environment.database
+          .getVideoDownloadJob(jobId);
       expect(job!.organizationPolicy, 'discovery-novel');
-      expect(job.subtitlePolicy, VideoDownloadSubtitlePolicy.none.name,
-          reason: '非视频内容没有字幕概念');
+      expect(
+        job.subtitlePolicy,
+        VideoDownloadSubtitlePolicy.none.name,
+        reason: '非视频内容没有字幕概念',
+      );
       expect(job.targetSourceId, isNull, reason: '发现域任务不进受管视频来源');
       expect(job.mediaKind, DiscoveryMediaKind.novel.name);
     });
@@ -2042,10 +2116,10 @@ void main() {
 
 /// 与 torrent_metainfo_test 同款的最小 v1 metainfo（单文件 name=test）。
 Uint8List _manualV1Metainfo() => Uint8List.fromList(
-      utf8.encode(
-        'd4:infod6:lengthi1e4:name4:test6:pieces20:aaaaaaaaaaaaaaaaaaaaee',
-      ),
-    );
+  utf8.encode(
+    'd4:infod6:lengthi1e4:name4:test6:pieces20:aaaaaaaaaaaaaaaaaaaaee',
+  ),
+);
 
 TorrentSnapshot _downloadingSnapshot({required double progress}) =>
     TorrentSnapshot(
@@ -2059,14 +2133,14 @@ TorrentSnapshot _downloadingSnapshot({required double progress}) =>
     );
 
 TorrentSnapshot _completeSnapshot() => const TorrentSnapshot(
-      hash: _torrentHash,
-      name: 'Show',
-      progress: 1,
-      state: 'uploading',
-      savePath: '/downloads',
-      contentPath: '/downloads/Show',
-      amountLeft: 0,
-    );
+  hash: _torrentHash,
+  name: 'Show',
+  progress: 1,
+  state: 'uploading',
+  savePath: '/downloads',
+  contentPath: '/downloads/Show',
+  amountLeft: 0,
+);
 
 Future<VideoDownloadJobRow> _waitForJob(
   FushiDatabase database,
@@ -2117,10 +2191,12 @@ class _PipelineEnvironment {
     Duration pollInterval = const Duration(hours: 1),
     String? candidateMagnetUri,
   }) async {
-    final FushiDatabase database =
-        FushiDatabase.forTesting(NativeDatabase.memory());
-    final Directory root =
-        await Directory.systemTemp.createTemp('fushi-pipeline-service-');
+    final FushiDatabase database = FushiDatabase.forTesting(
+      NativeDatabase.memory(),
+    );
+    final Directory root = await Directory.systemTemp.createTemp(
+      'fushi-pipeline-service-',
+    );
     final int sourceId = await database.insertMediaSource(
       MediaSourcesCompanion.insert(
         label: 'Managed videos',
@@ -2129,32 +2205,35 @@ class _PipelineEnvironment {
         createdAt: 1,
       ),
     );
-    final _FakeResourceProvider provider =
-        _FakeResourceProvider(candidateMagnetUri: candidateMagnetUri);
-    final VideoResourceRegistry resourceRegistry =
-        VideoResourceRegistry(<VideoResourceProvider>[provider]);
+    final _FakeResourceProvider provider = _FakeResourceProvider(
+      candidateMagnetUri: candidateMagnetUri,
+    );
+    final VideoResourceRegistry resourceRegistry = VideoResourceRegistry(
+      <VideoResourceProvider>[provider],
+    );
     final VideoSubtitleRegistry? subtitleRegistry = subtitleProvider == null
         ? null
         : VideoSubtitleRegistry(<VideoSubtitleProvider>[subtitleProvider]);
     final VideoMetadataProviderRegistry metadataRegistry =
         VideoMetadataProviderRegistry(<VideoMetadataProvider>[
-      _UnavailableAniListMetadataProvider(),
-    ]);
+          _UnavailableAniListMetadataProvider(),
+        ]);
     final VideoSourceScrapeCoordinator scrapeCoordinator =
         VideoSourceScrapeCoordinator(
-      database: database,
-      config: const VideoSourceScrapeGlobalConfig(),
-      registry: metadataRegistry,
-    );
+          database: database,
+          config: const VideoSourceScrapeGlobalConfig(),
+          registry: metadataRegistry,
+        );
     final VideoDownloadPipelineService service = VideoDownloadPipelineService(
       database: database,
       resourceRegistry: resourceRegistry,
       subtitleRegistry: subtitleRegistry,
-      backendResolver: backendResolver ??
+      backendResolver:
+          backendResolver ??
           (_) async => VideoDownloadBackendBinding(
-                backend: backend,
-                identity: _expectedIdentity,
-              ),
+            backend: backend,
+            identity: _expectedIdentity,
+          ),
       scrapeCoordinator: scrapeCoordinator,
       onBackendTaskAdded: onBackendTaskAdded,
       workerId: 'pipeline-test-worker',
@@ -2176,11 +2255,11 @@ class _PipelineEnvironment {
   }
 
   VideoDownloadEnqueueRequest enqueueRequest() => VideoDownloadEnqueueRequest(
-        media: _mediaReference(),
-        resource: provider.candidate,
-        backendTarget: _expectedTarget,
-        targetSourceId: sourceId,
-      );
+    media: _mediaReference(),
+    resource: provider.candidate,
+    backendTarget: _expectedTarget,
+    targetSourceId: sourceId,
+  );
 
   Future<void> insertJob({
     required String jobId,
@@ -2203,9 +2282,7 @@ class _PipelineEnvironment {
         jobId: jobId,
         resourceProvider: 'nyaa:test-instance',
         selectedResourceId: 'release-1',
-        magnetUri: const Value<String?>(
-          'magnet:?xt=urn:btih:$_torrentHash',
-        ),
+        magnetUri: const Value<String?>('magnet:?xt=urn:btih:$_torrentHash'),
         resourceTitle: const Value<String?>('Show S01E01'),
         torrentHash: const Value<String?>(_torrentHash),
         metadataProvider: const Value<String?>('anilist'),
@@ -2287,39 +2364,39 @@ class _PipelineEnvironment {
 }
 
 VideoMediaReference _mediaReference() => VideoMediaReference(
-      providerId: 'anilist',
-      mediaId: '100',
-      mediaKind: VideoMetadataMediaKind.tv,
-      discoveryCategory: VideoDiscoveryCategory.anime,
-      title: 'Show',
-      year: 2026,
-      season: 1,
-    );
+  providerId: 'anilist',
+  mediaId: '100',
+  mediaKind: VideoMetadataMediaKind.tv,
+  discoveryCategory: VideoDiscoveryCategory.anime,
+  title: 'Show',
+  year: 2026,
+  season: 1,
+);
 
 class _FakeResourceCandidate extends VideoResourceCandidate {
   _FakeResourceCandidate({String? magnetUri})
-      : super(
-          providerId: 'nyaa',
-          providerInstanceId: 'test-instance',
-          remoteId: 'release-1',
-          title: 'Show S01E01',
-          providerPriority: 0,
-          infoHash: _torrentHash,
-          magnetUri: magnetUri,
-        );
+    : super(
+        providerId: 'nyaa',
+        providerInstanceId: 'test-instance',
+        remoteId: 'release-1',
+        title: 'Show S01E01',
+        providerPriority: 0,
+        infoHash: _torrentHash,
+        magnetUri: magnetUri,
+      );
 }
 
 class _FakeSubtitleCandidate extends VideoSubtitleCandidate {
   _FakeSubtitleCandidate()
-      : super(
-          providerId: 'opensubtitles',
-          remoteId: 'subtitle-42',
-          fileName: 'Show.S01E02.zh.srt',
-          language: 'zh-CN',
-          providerPriority: 0,
-          season: 1,
-          episode: 2,
-        );
+    : super(
+        providerId: 'opensubtitles',
+        remoteId: 'subtitle-42',
+        fileName: 'Show.S01E02.zh.srt',
+        language: 'zh-CN',
+        providerPriority: 0,
+        season: 1,
+        episode: 2,
+      );
 }
 
 class _FakeSubtitleProvider implements VideoSubtitleProvider {
@@ -2368,7 +2445,7 @@ class _FakeSubtitleProvider implements VideoSubtitleProvider {
 
 class _FakeResourceProvider implements VideoResourceProvider {
   _FakeResourceProvider({String? candidateMagnetUri})
-      : candidate = _FakeResourceCandidate(magnetUri: candidateMagnetUri);
+    : candidate = _FakeResourceCandidate(magnetUri: candidateMagnetUri);
 
   final _FakeResourceCandidate candidate;
   int searchCalls = 0;
@@ -2434,9 +2511,7 @@ class _UnavailableAniListMetadataProvider implements VideoMetadataProvider {
   bool get isAvailable => false;
 
   @override
-  Future<List<VideoMetadataWork>> search(
-    VideoMetadataSearchRequest request,
-  ) =>
+  Future<List<VideoMetadataWork>> search(VideoMetadataSearchRequest request) =>
       throw UnsupportedError('unavailable provider must not be queried');
 
   @override
@@ -2444,17 +2519,14 @@ class _UnavailableAniListMetadataProvider implements VideoMetadataProvider {
       throw UnsupportedError('unavailable provider must not be queried');
 
   @override
-  Future<List<VideoMetadataSeason>> fetchSeasons(
-    VideoMetadataLookup lookup,
-  ) =>
+  Future<List<VideoMetadataSeason>> fetchSeasons(VideoMetadataLookup lookup) =>
       throw UnsupportedError('unavailable provider must not be queried');
 
   @override
   Future<List<VideoMetadataEpisode>> fetchEpisodes(
     VideoMetadataLookup lookup, {
     required int seasonNumber,
-  }) =>
-      throw UnsupportedError('unavailable provider must not be queried');
+  }) => throw UnsupportedError('unavailable provider must not be queried');
 
   @override
   void close() {}

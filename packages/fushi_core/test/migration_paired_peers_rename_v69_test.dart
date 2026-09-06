@@ -56,54 +56,69 @@ Future<List<String>> _pairedPeerTableNames(FushiDatabase db) async {
 }
 
 void main() {
-  test('v68 -> v69 renames hibiki_paired_peers with zero loss of rows',
-      () async {
-    final FushiDatabase db = _openMigratedFromV68();
-    addTearDown(db.close);
+  test(
+    'v68 -> v69 renames hibiki_paired_peers with zero loss of rows',
+    () async {
+      final FushiDatabase db = _openMigratedFromV68();
+      addTearDown(db.close);
 
-    final QueryRow ver =
-        await db.customSelect('PRAGMA user_version').getSingle();
-    expect(ver.read<int>('user_version'), db.schemaVersion,
-        reason: 'migration must land on the current schema version');
-    expect(db.schemaVersion, greaterThanOrEqualTo(69),
-        reason: '表改名自 v69 引入，schema 版本不应回退到其之前');
+      final QueryRow ver = await db
+          .customSelect('PRAGMA user_version')
+          .getSingle();
+      expect(
+        ver.read<int>('user_version'),
+        db.schemaVersion,
+        reason: 'migration must land on the current schema version',
+      );
+      expect(
+        db.schemaVersion,
+        greaterThanOrEqualTo(69),
+        reason: '表改名自 v69 引入，schema 版本不应回退到其之前',
+      );
 
-    // 旧名消失、新名出现（纯 RENAME，不是 drop+create）。
-    expect(await _pairedPeerTableNames(db), <String>['fushi_paired_peers'],
-        reason: 'ALTER TABLE RENAME 后旧名必须零残留');
+      // 旧名消失、新名出现（纯 RENAME，不是 drop+create）。
+      expect(await _pairedPeerTableNames(db), <String>[
+        'fushi_paired_peers',
+      ], reason: 'ALTER TABLE RENAME 后旧名必须零残留');
 
-    // 既有配对行零丢，且经 DAO（新名表）读出的值逐列一致。
-    final List<FushiPairedPeerRow> peers = await db.getPairedPeers();
-    expect(peers.length, 2, reason: '改名不得丢行');
-    expect(peers[0].peerId, 'peer-a');
-    expect(peers[0].deviceName, 'Device A');
-    expect(peers[0].token, 'tok-a');
-    expect(peers[0].pairedAtMs, 1000);
-    expect(peers[0].lastSeenIp, '192.168.1.7');
-    expect(peers[1].peerId, 'peer-b');
-    expect(peers[1].token, 'tok-b');
+      // 既有配对行零丢，且经 DAO（新名表）读出的值逐列一致。
+      final List<FushiPairedPeerRow> peers = await db.getPairedPeers();
+      expect(peers.length, 2, reason: '改名不得丢行');
+      expect(peers[0].peerId, 'peer-a');
+      expect(peers[0].deviceName, 'Device A');
+      expect(peers[0].token, 'tok-a');
+      expect(peers[0].pairedAtMs, 1000);
+      expect(peers[0].lastSeenIp, '192.168.1.7');
+      expect(peers[1].peerId, 'peer-b');
+      expect(peers[1].token, 'tok-b');
 
-    // UNIQUE(peer_id) 约束随表迁移：同 peerId upsert 仍是整行更新不加行。
-    await db.upsertPairedPeer(FushiPairedPeersCompanion.insert(
-      peerId: 'peer-a',
-      token: 'tok-a-rotated',
-      pairedAtMs: 1500,
-    ));
-    final List<FushiPairedPeerRow> after = await db.getPairedPeers();
-    expect(after.length, 2, reason: 'peer_id UNIQUE 必须在改名后继续生效');
-    expect(
-        after.firstWhere((p) => p.peerId == 'peer-a').token, 'tok-a-rotated');
-  });
+      // UNIQUE(peer_id) 约束随表迁移：同 peerId upsert 仍是整行更新不加行。
+      await db.upsertPairedPeer(
+        FushiPairedPeersCompanion.insert(
+          peerId: 'peer-a',
+          token: 'tok-a-rotated',
+          pairedAtMs: 1500,
+        ),
+      );
+      final List<FushiPairedPeerRow> after = await db.getPairedPeers();
+      expect(after.length, 2, reason: 'peer_id UNIQUE 必须在改名后继续生效');
+      expect(
+        after.firstWhere((p) => p.peerId == 'peer-a').token,
+        'tok-a-rotated',
+      );
+    },
+  );
 
-  test('rename step is idempotent when the new-name table already exists',
-      () async {
-    // 模拟「已经改过名的库再次走升级路径」：新名表已在、旧名不在，
-    // user_version 68 触发 from<69 —— 守卫必须 no-op 而不是报错/重建。
-    final FushiDatabase db = FushiDatabase.forTesting(
-      NativeDatabase.memory(
-        setup: (raw) {
-          raw.execute('PRAGMA foreign_keys = ON');
-          raw.execute('''
+  test(
+    'rename step is idempotent when the new-name table already exists',
+    () async {
+      // 模拟「已经改过名的库再次走升级路径」：新名表已在、旧名不在，
+      // user_version 68 触发 from<69 —— 守卫必须 no-op 而不是报错/重建。
+      final FushiDatabase db = FushiDatabase.forTesting(
+        NativeDatabase.memory(
+          setup: (raw) {
+            raw.execute('PRAGMA foreign_keys = ON');
+            raw.execute('''
 CREATE TABLE fushi_paired_peers (
   id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
   peer_id TEXT NOT NULL UNIQUE,
@@ -112,19 +127,20 @@ CREATE TABLE fushi_paired_peers (
   paired_at_ms INTEGER NOT NULL,
   last_seen_ip TEXT
 )''');
-          raw.execute(
-            "INSERT INTO fushi_paired_peers "
-            "(peer_id, token, paired_at_ms) VALUES ('peer-kept', 'tok', 7)",
-          );
-          raw.execute('PRAGMA user_version = 68');
-        },
-      ),
-    );
-    addTearDown(db.close);
+            raw.execute(
+              "INSERT INTO fushi_paired_peers "
+              "(peer_id, token, paired_at_ms) VALUES ('peer-kept', 'tok', 7)",
+            );
+            raw.execute('PRAGMA user_version = 68');
+          },
+        ),
+      );
+      addTearDown(db.close);
 
-    final List<FushiPairedPeerRow> peers = await db.getPairedPeers();
-    expect(peers.length, 1, reason: '重复升级不得动已改名表的行');
-    expect(peers.single.peerId, 'peer-kept');
-    expect(await _pairedPeerTableNames(db), <String>['fushi_paired_peers']);
-  });
+      final List<FushiPairedPeerRow> peers = await db.getPairedPeers();
+      expect(peers.length, 1, reason: '重复升级不得动已改名表的行');
+      expect(peers.single.peerId, 'peer-kept');
+      expect(await _pairedPeerTableNames(db), <String>['fushi_paired_peers']);
+    },
+  );
 }

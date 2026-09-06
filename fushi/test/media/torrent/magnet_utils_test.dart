@@ -7,7 +7,9 @@ void main() {
       const String m =
           'magnet:?xt=urn:btih:C12FE1C06BBA254A9DC9F519B335AA7C1367A88A&dn=x';
       expect(
-          parseMagnetInfoHash(m), 'c12fe1c06bba254a9dc9f519b335aa7c1367a88a');
+        parseMagnetInfoHash(m),
+        'c12fe1c06bba254a9dc9f519b335aa7c1367a88a',
+      );
     });
 
     test('32-char base32 btih decodes to 40-hex', () {
@@ -15,7 +17,9 @@ void main() {
       // 使用一个真实等价对：hex 全 0xFF → base32 '77777777777777777777777777777777'
       const String m = 'magnet:?xt=urn:btih:77777777777777777777777777777777';
       expect(
-          parseMagnetInfoHash(m), 'ffffffffffffffffffffffffffffffffffffffff');
+        parseMagnetInfoHash(m),
+        'ffffffffffffffffffffffffffffffffffffffff',
+      );
     });
 
     test('non-magnet URI → null', () {
@@ -35,14 +39,18 @@ void main() {
       const String m =
           'magnet:?xt=urn:ed2k:deadbeef&xt=urn:btih:C12FE1C06BBA254A9DC9F519B335AA7C1367A88A';
       expect(
-          parseMagnetInfoHash(m), 'c12fe1c06bba254a9dc9f519b335aa7c1367a88a');
+        parseMagnetInfoHash(m),
+        'c12fe1c06bba254a9dc9f519b335aa7c1367a88a',
+      );
     });
   });
 
   group('parseMagnetDisplayName', () {
     test('extracts dn', () {
-      expect(parseMagnetDisplayName('magnet:?xt=urn:btih:abc&dn=My%20Book'),
-          'My Book');
+      expect(
+        parseMagnetDisplayName('magnet:?xt=urn:btih:abc&dn=My%20Book'),
+        'My Book',
+      );
     });
 
     test('no dn → null', () {

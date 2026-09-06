@@ -24,8 +24,9 @@ void main() {
       TargetPlatform.macOS,
       TargetPlatform.android,
     ]) {
-      final Map<ShortcutAction, dynamic> map =
-          ShortcutDefaults.forPlatform(platform);
+      final Map<ShortcutAction, dynamic> map = ShortcutDefaults.forPlatform(
+        platform,
+      );
       for (final ShortcutAction action in ShortcutAction.values) {
         expect(
           map.containsKey(action),
@@ -96,7 +97,8 @@ void main() {
     expect(
       dead,
       isEmpty,
-      reason: '以下 action 在所有执行体文件里都没有派发引用（死项，配了不执行）：'
+      reason:
+          '以下 action 在所有执行体文件里都没有派发引用（死项，配了不执行）：'
           '${dead.map((ShortcutAction a) => a.key).join(', ')}',
     );
   });

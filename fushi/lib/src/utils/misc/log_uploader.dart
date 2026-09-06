@@ -110,7 +110,7 @@ Future<LogUploadOutcome> performLogUpload({
 
 /// 收集设备/版本元信息（平台 + OS 版本字符串，无需额外插件）。
 Future<({String appVersion, String platform, String device})>
-    _collectMeta() async {
+_collectMeta() async {
   // 编译期常量拿不到才是真 unknown：`PackageInfo` 抛异常时它照样可用。
   String appVersion = fushiRunningCodeVersion ?? 'unknown';
   try {
@@ -169,8 +169,9 @@ Future<void> uploadLogToServer({
 }) async {
   void notify(String message) {
     if (!context.mounted) return;
-    ScaffoldMessenger.of(context)
-        .showSnackBar(SnackBar(content: Text(message)));
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(message)));
   }
 
   // 首次上传前征得隐私同意（记住选择）；取消则不上传。
@@ -191,9 +192,11 @@ Future<void> uploadLogToServer({
 
   switch (out.kind) {
     case LogUploadStatus.success:
-      notify(out.id == null
-          ? t.log_upload_success
-          : '${t.log_upload_success} (${out.id})');
+      notify(
+        out.id == null
+            ? t.log_upload_success
+            : '${t.log_upload_success} (${out.id})',
+      );
     case LogUploadStatus.tooLarge:
       notify(t.log_upload_too_large);
     default:

@@ -8,15 +8,19 @@ import 'package:http/http.dart' as http;
 import 'package:fushi/src/media/video/jimaku_batch.dart';
 import 'package:fushi/src/media/video/jimaku_client.dart';
 
-JimakuBatchTarget _t(String uid, String path,
-        {int sortIndex = 0, String? title, bool isStream = false}) =>
-    JimakuBatchTarget(
-      bookUid: uid,
-      title: title ?? path,
-      videoPath: path,
-      sortIndex: sortIndex,
-      isStream: isStream,
-    );
+JimakuBatchTarget _t(
+  String uid,
+  String path, {
+  int sortIndex = 0,
+  String? title,
+  bool isStream = false,
+}) => JimakuBatchTarget(
+  bookUid: uid,
+  title: title ?? path,
+  videoPath: path,
+  sortIndex: sortIndex,
+  isStream: isStream,
+);
 
 JimakuFile _f(String name) => JimakuFile(name: name, url: 'https://x/$name');
 
@@ -28,10 +32,7 @@ void main() {
     });
 
     test('路径无集号则用标题', () {
-      expect(
-        resolveBatchEpisode(_t('b', '/v/opaque.mkv', title: '第12話')),
-        12,
-      );
+      expect(resolveBatchEpisode(_t('b', '/v/opaque.mkv', title: '第12話')), 12);
     });
 
     test('都认不出退回 sortIndex+1（1-based）', () {
@@ -122,8 +123,9 @@ void main() {
     final JimakuFileInventory nonEmpty = JimakuFileInventory.fromFiles(
       <JimakuFile>[_f('Show - 01.ja.srt')],
     );
-    final JimakuFileInventory empty =
-        JimakuFileInventory.fromFiles(const <JimakuFile>[]);
+    final JimakuFileInventory empty = JimakuFileInventory.fromFiles(
+      const <JimakuFile>[],
+    );
 
     test('仅预检查成功且非空的当前来源可下载', () {
       expect(
@@ -144,13 +146,12 @@ void main() {
             const <int, JimakuFileInventory>{},
         Set<int> loading = const <int>{},
         Set<int> failed = const <int>{},
-      }) =>
-          canDownloadJimakuInventory(
-            selectedEntryId: selectedEntryId,
-            inventories: inventories,
-            loadingEntryIds: loading,
-            failedEntryIds: failed,
-          );
+      }) => canDownloadJimakuInventory(
+        selectedEntryId: selectedEntryId,
+        inventories: inventories,
+        loadingEntryIds: loading,
+        failedEntryIds: failed,
+      );
 
       expect(canDownload(selectedEntryId: null), isFalse);
       expect(
@@ -168,9 +169,7 @@ void main() {
         isFalse,
       );
       expect(
-        canDownload(
-          inventories: <int, JimakuFileInventory>{7: empty},
-        ),
+        canDownload(inventories: <int, JimakuFileInventory>{7: empty}),
         isFalse,
       );
     });
@@ -251,7 +250,7 @@ void main() {
             jsonEncode(<Map<String, dynamic>>[
               <String, dynamic>{
                 'name': 'Show - 01.ja.srt',
-                'url': 'https://x/1'
+                'url': 'https://x/1',
               },
             ]),
             200,
@@ -314,11 +313,7 @@ void main() {
         'jimaku subtitles carry no episode numbers',
         reason: '「为什么没配上」要说清，不能只给一个空结果',
       );
-      expect(
-        tempDir.listSync(),
-        isEmpty,
-        reason: '一个错字幕都不许落盘',
-      );
+      expect(tempDir.listSync(), isEmpty, reason: '一个错字幕都不许落盘');
     });
 
     test('BUG-1695 绝对集号条目（13-24）撞本地 01-12 → 全部 noMatch 而非配错集', () async {
@@ -371,9 +366,7 @@ void main() {
       final List<JimakuBatchItem> results = await runJimakuBatch(
         client: client,
         entryIds: <int>[7],
-        targets: <JimakuBatchTarget>[
-          _t('video/a', '/v/Show - 01.mkv'),
-        ],
+        targets: <JimakuBatchTarget>[_t('video/a', '/v/Show - 01.mkv')],
         saveDirectory: tempDir.path,
       );
 
@@ -392,9 +385,7 @@ void main() {
       final List<JimakuBatchItem> malformedResults = await runJimakuBatch(
         client: malformed,
         entryIds: <int>[7],
-        targets: <JimakuBatchTarget>[
-          _t('video/a', '/v/Show - 01.mkv'),
-        ],
+        targets: <JimakuBatchTarget>[_t('video/a', '/v/Show - 01.mkv')],
         saveDirectory: tempDir.path,
       );
       expect(malformedResults.single.status, JimakuBatchStatus.failed);
@@ -409,9 +400,7 @@ void main() {
       final List<JimakuBatchItem> emptyResults = await runJimakuBatch(
         client: validEmpty,
         entryIds: <int>[7],
-        targets: <JimakuBatchTarget>[
-          _t('video/a', '/v/Show - 01.mkv'),
-        ],
+        targets: <JimakuBatchTarget>[_t('video/a', '/v/Show - 01.mkv')],
         saveDirectory: tempDir.path,
       );
       expect(emptyResults.single.status, JimakuBatchStatus.noMatch);

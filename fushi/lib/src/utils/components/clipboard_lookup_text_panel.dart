@@ -65,10 +65,9 @@ class _SourceLookupTextPanelState extends State<SourceLookupTextPanel> {
         ? allChars.sublist(0, kMaxLookupInputChars)
         : allChars;
     // 每个字符是独立可点 span，逐字保持原有点击/Shift 悬停查词行为。
-    final TextStyle charStyle = _dictionaryHeadwordTextStyle(context).copyWith(
-      color: theme.colorScheme.onSurface,
-      height: 1.5,
-    );
+    final TextStyle charStyle = _dictionaryHeadwordTextStyle(
+      context,
+    ).copyWith(color: theme.colorScheme.onSurface, height: 1.5);
     // 左对齐并占满可用宽度：剪贴板文本条挂在 home_dictionary_page 的 Column 下，
     // Column 默认 crossAxisAlignment.center 会把收缩到内容宽度的本条居中。
     // Align(topLeft) 在父级宽度有界时撑满该宽度并把内容钉左上角，宽度无界时
@@ -88,11 +87,7 @@ class _SourceLookupTextPanelState extends State<SourceLookupTextPanel> {
                 builder: (BuildContext charContext) {
                   return MouseRegion(
                     cursor: SystemMouseCursors.click,
-                    onHover: (_) => _handleShiftHover(
-                      i,
-                      context,
-                      charContext,
-                    ),
+                    onHover: (_) => _handleShiftHover(i, context, charContext),
                     onExit: (_) {
                       if (_lastShiftHoverIndex == i) {
                         _lastShiftHoverIndex = null;
@@ -118,8 +113,9 @@ class _SourceLookupTextPanelState extends State<SourceLookupTextPanel> {
   TextStyle _dictionaryHeadwordTextStyle(BuildContext context) {
     final TextStyle base = FushiDesignTokens.of(context).type.pageTitle;
     final double requestedScale = widget.dictionaryHeadwordScale;
-    final double safeScale =
-        requestedScale.isFinite && requestedScale > 0 ? requestedScale : 1.0;
+    final double safeScale = requestedScale.isFinite && requestedScale > 0
+        ? requestedScale
+        : 1.0;
     return base.copyWith(fontSize: kPopupHeadwordFontSize * safeScale);
   }
 
@@ -145,8 +141,9 @@ class _SourceLookupTextPanelState extends State<SourceLookupTextPanel> {
     final String trimmed = widget.text.trim();
     // BUG-442：与 build 同一上限——查词后缀从截断后的字符序列取，避免对超长串
     // 重新展开整个 characters（也与渲染出来的可点字符一一对应）。
-    final Iterable<String> capped =
-        trimmed.characters.take(kMaxLookupInputChars);
+    final Iterable<String> capped = trimmed.characters.take(
+      kMaxLookupInputChars,
+    );
     widget.onLookup(
       capped.skip(index).join(),
       _localRectOf(panelContext, charContext),
@@ -168,8 +165,8 @@ class _SourceLookupTextPanelState extends State<SourceLookupTextPanel> {
     }
     final RenderObject? panel =
         widget.coordinateSpaceKey?.currentContext?.findRenderObject() ??
-            charContext.findAncestorRenderObjectOfType<RenderStack>() ??
-            panelContext.findRenderObject();
+        charContext.findAncestorRenderObjectOfType<RenderStack>() ??
+        panelContext.findRenderObject();
     if (panel is! RenderBox) return Rect.zero;
     final Offset global = child.localToGlobal(Offset.zero);
     return panel.globalToLocal(global) & child.size;

@@ -37,7 +37,8 @@ void main() {
     expect(
       settingsCase.hasMatch(source),
       isTrue,
-      reason: '设置侧栏宽度（_videoSidePanelWidth 的 settings 分支）必须调用 '
+      reason:
+          '设置侧栏宽度（_videoSidePanelWidth 的 settings 分支）必须调用 '
           'fushiQuickSettingsPanelWidth 自适应，不允许回退固定 560 窄条',
     );
   });
