@@ -29,10 +29,11 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2035 条。点号进各自文件。
+> 共 2036 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2187](bugs/BUG-2187-custom-theme-reader-colors-dead.md) | ✅ | ✅ | 自定义主题的正文/背景/选区/链接色在阅读器里永远不生效（key 严格等值 + 读已停写的旧扁平偏好） |
 | [BUG-2186](bugs/BUG-2186-stat-summary-ratio-unbounded.md) | ✅ | ✅ | 统计环比无上限显示 ↑9999900% |
 | [BUG-2185](bugs/BUG-2185-stat-heatmap-absolute-levels.md) | ✅ | ✅ | 热力图档位按窗口最大值线性分级，单日爆量后其余全落最浅档 |
 | [BUG-2184](bugs/BUG-2184-pdf-reader-never-add-pages.md) | ✅ | ✅ | PDF 阅读器从不 addPages，页数统计恒 0 |
