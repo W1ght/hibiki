@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 74086 (4358 per locale)
+/// Strings: 74443 (4379 per locale)
 ///
-/// Built on 2026-09-06 at 19:59 UTC
+/// Built on 2026-09-07 at 07:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6026,6 +6026,36 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  String get video_source_scrape_background_hint =>
+      'Tasks continue when this window is closed.';
+  String get video_source_scrape_queue_cancel_all => 'Cancel all tasks';
+  String get video_source_scrape_queue_waiting => 'Queued';
+  String get video_source_scrape_queue_remove => 'Remove from queue';
+  String get video_source_scrape_queue_submitted => 'Submitted';
+  String get video_source_scrape_pending_empty =>
+      'No works need manual matching.';
+  String get video_source_scrape_list_load_failed =>
+      'Could not load this list. Try again.';
+  String get video_source_scrape_list_reload => 'Reload';
+  String get video_source_scrape_manual_current_work => 'Current work';
+  String get video_source_scrape_manual_query_hint =>
+      'Search by title, or choose AniDB ID to enter an ID or official anime URL. Select a result to apply it to the current work.';
+  String get video_source_scrape_manual_id_invalid =>
+      'Enter a positive AniDB ID or a valid AniDB anime URL.';
+  String get video_source_scrape_manual_by_title => 'By title';
+  String get video_source_scrape_manual_by_id => 'AniDB ID';
+  String get video_source_grouping_mode => 'Video organization';
+  String get video_source_grouping_folder => 'By folder';
+  String get video_source_grouping_series => 'By work';
+  String get video_source_grouping_folder_hint =>
+      'Create one collection per first-level subfolder. Files directly in the selected folder share a collection. Metadata scraping is unavailable in this mode; switch to By work to scrape.';
+  String get video_source_grouping_series_hint =>
+      'Recognize works and episodes from filenames, then match metadata.';
+  String get video_source_grouping_change_hint =>
+      'The next scan uses this setting. Existing collections and metadata are kept.';
+  String get video_source_scrape_manual_ambiguous =>
+      'Several works have this title. Open the pending works tab and select the specific item to match.';
+  String get video_source_scrape_pending_tab => 'Unmatched';
 }
 
 // Path: <root>
@@ -16237,6 +16267,57 @@ class _StringsAr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint =>
+      'تستمر المهام بعد إغلاق هذه النافذة.';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'إلغاء جميع المهام';
+  @override
+  String get video_source_scrape_queue_waiting => 'في قائمة الانتظار';
+  @override
+  String get video_source_scrape_queue_remove => 'إزالة من قائمة الانتظار';
+  @override
+  String get video_source_scrape_queue_submitted => 'تم الإرسال';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'لا توجد أعمال تحتاج إلى مطابقة يدوية.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'تعذّر تحميل هذه القائمة. حاول مرة أخرى.';
+  @override
+  String get video_source_scrape_list_reload => 'إعادة التحميل';
+  @override
+  String get video_source_scrape_manual_current_work => 'العمل الحالي';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'ابحث بالعنوان، أو اختر معرّف AniDB لإدخال معرّف أو رابط أنمي رسمي. اختر نتيجة لتطبيقها على العمل الحالي.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'أدخل معرّف AniDB موجبًا أو رابط أنمي صالحًا من AniDB.';
+  @override
+  String get video_source_scrape_manual_by_title => 'حسب العنوان';
+  @override
+  String get video_source_scrape_manual_by_id => 'معرّف AniDB';
+  @override
+  String get video_source_grouping_mode => 'تنظيم الفيديوهات';
+  @override
+  String get video_source_grouping_folder => 'حسب المجلد';
+  @override
+  String get video_source_grouping_series => 'حسب العمل';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'يُنشأ تجميع لكل مجلد فرعي من المستوى الأول. وتُجمع الملفات الموجودة مباشرة في المجلد المحدد في تجميع واحد. لا يتوفر جلب البيانات الوصفية في هذا الوضع؛ انتقل إلى «حسب العمل» لجلبها.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'تحديد الأعمال والحلقات من أسماء الملفات، ثم مطابقة البيانات الوصفية.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'سيستخدم الفحص التالي هذا الإعداد. ستُحفظ التجميعات والبيانات الوصفية الحالية.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'توجد عدة أعمال بهذا العنوان. افتح تبويب الأعمال المعلّقة واختر العنصر المحدد لمطابقته.';
+  @override
+  String get video_source_scrape_pending_tab => 'غير مطابق';
 }
 
 // Path: <root>
@@ -26672,6 +26753,57 @@ class _StringsDe extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Die Aufgaben laufen nach dem Schließen dieses Fensters weiter.';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'Alle Aufgaben abbrechen';
+  @override
+  String get video_source_scrape_queue_waiting => 'In Warteschlange';
+  @override
+  String get video_source_scrape_queue_remove => 'Aus Warteschlange entfernen';
+  @override
+  String get video_source_scrape_queue_submitted => 'Übermittelt';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Keine Werke müssen manuell zugeordnet werden.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Diese Liste konnte nicht geladen werden. Bitte erneut versuchen.';
+  @override
+  String get video_source_scrape_list_reload => 'Neu laden';
+  @override
+  String get video_source_scrape_manual_current_work => 'Aktuelles Werk';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Nach Titel suchen oder AniDB-ID wählen, um eine ID oder offizielle Anime-URL einzugeben. Ein Ergebnis auswählen, um es dem aktuellen Werk zuzuordnen.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Eine positive AniDB-ID oder eine gültige AniDB-Anime-URL eingeben.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Nach Titel';
+  @override
+  String get video_source_scrape_manual_by_id => 'AniDB-ID';
+  @override
+  String get video_source_grouping_mode => 'Videos organisieren';
+  @override
+  String get video_source_grouping_folder => 'Nach Ordner';
+  @override
+  String get video_source_grouping_series => 'Nach Werk';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Für jeden direkten Unterordner wird eine Sammlung erstellt. Dateien direkt im ausgewählten Ordner bilden eine gemeinsame Sammlung. In diesem Modus können keine Metadaten abgerufen werden. Dafür zu „Nach Werk“ wechseln.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Werke und Episoden anhand der Dateinamen erkennen und anschließend Metadaten zuordnen.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'Der nächste Scan verwendet diese Einstellung. Vorhandene Sammlungen und Metadaten bleiben erhalten.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Mehrere Werke haben diesen Titel. Öffne den Tab für ausstehende Werke und wähle den konkreten Eintrag zur Zuordnung aus.';
+  @override
+  String get video_source_scrape_pending_tab => 'Nicht zugeordnet';
 }
 
 // Path: <root>
@@ -37160,6 +37292,58 @@ class _StringsEs extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Las tareas continúan después de cerrar esta ventana.';
+  @override
+  String get video_source_scrape_queue_cancel_all =>
+      'Cancelar todas las tareas';
+  @override
+  String get video_source_scrape_queue_waiting => 'En cola';
+  @override
+  String get video_source_scrape_queue_remove => 'Quitar de la cola';
+  @override
+  String get video_source_scrape_queue_submitted => 'Enviada';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'No hay obras que necesiten una coincidencia manual.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'No se pudo cargar esta lista. Inténtalo de nuevo.';
+  @override
+  String get video_source_scrape_list_reload => 'Volver a cargar';
+  @override
+  String get video_source_scrape_manual_current_work => 'Obra actual';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Busca por título o elige ID de AniDB para introducir un ID o una URL oficial de anime. Selecciona un resultado para aplicarlo a la obra actual.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Introduce un ID de AniDB positivo o una URL de anime válida de AniDB.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Por título';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID de AniDB';
+  @override
+  String get video_source_grouping_mode => 'Organización de vídeos';
+  @override
+  String get video_source_grouping_folder => 'Por carpeta';
+  @override
+  String get video_source_grouping_series => 'Por obra';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Se crea una colección por cada subcarpeta de primer nivel. Los archivos situados directamente en la carpeta seleccionada comparten una colección. Este modo no permite obtener metadatos; cambia a «Por obra» para hacerlo.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Identifica obras y episodios a partir de los nombres de archivo y después busca los metadatos correspondientes.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'El próximo escaneo usará este ajuste. Se conservarán las colecciones y los metadatos existentes.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Hay varias obras con este título. Abre la pestaña de obras pendientes y selecciona el elemento concreto que quieras vincular.';
+  @override
+  String get video_source_scrape_pending_tab => 'Sin vincular';
 }
 
 // Path: <root>
@@ -47681,6 +47865,58 @@ class _StringsFr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Les tâches continuent après la fermeture de cette fenêtre.';
+  @override
+  String get video_source_scrape_queue_cancel_all =>
+      'Annuler toutes les tâches';
+  @override
+  String get video_source_scrape_queue_waiting => 'En attente';
+  @override
+  String get video_source_scrape_queue_remove => 'Retirer de la file';
+  @override
+  String get video_source_scrape_queue_submitted => 'Envoyée';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Aucune œuvre ne nécessite de correspondance manuelle.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Impossible de charger cette liste. Réessayez.';
+  @override
+  String get video_source_scrape_list_reload => 'Recharger';
+  @override
+  String get video_source_scrape_manual_current_work => 'Œuvre actuelle';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Recherchez par titre ou choisissez ID AniDB pour saisir un identifiant ou une URL officielle d’anime. Sélectionnez un résultat pour l’appliquer à l’œuvre actuelle.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Saisissez un identifiant AniDB positif ou une URL d’anime AniDB valide.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Par titre';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID AniDB';
+  @override
+  String get video_source_grouping_mode => 'Organisation des vidéos';
+  @override
+  String get video_source_grouping_folder => 'Par dossier';
+  @override
+  String get video_source_grouping_series => 'Par œuvre';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Crée une collection par sous-dossier de premier niveau. Les fichiers placés directement dans le dossier sélectionné partagent une collection. La récupération des métadonnées n’est pas disponible dans ce mode ; passez à « Par œuvre » pour l’utiliser.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Identifie les œuvres et les épisodes à partir des noms de fichiers, puis recherche les métadonnées correspondantes.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'La prochaine analyse utilisera ce réglage. Les collections et les métadonnées existantes seront conservées.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Plusieurs œuvres portent ce titre. Ouvrez l’onglet des œuvres en attente et sélectionnez l’élément précis à associer.';
+  @override
+  String get video_source_scrape_pending_tab => 'À associer';
 }
 
 // Path: <root>
@@ -58009,6 +58245,57 @@ class _StringsId extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Tugas tetap berjalan setelah jendela ini ditutup.';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'Batalkan semua tugas';
+  @override
+  String get video_source_scrape_queue_waiting => 'Dalam antrean';
+  @override
+  String get video_source_scrape_queue_remove => 'Hapus dari antrean';
+  @override
+  String get video_source_scrape_queue_submitted => 'Dikirim';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Tidak ada karya yang perlu dicocokkan secara manual.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Daftar ini tidak dapat dimuat. Coba lagi.';
+  @override
+  String get video_source_scrape_list_reload => 'Muat ulang';
+  @override
+  String get video_source_scrape_manual_current_work => 'Karya saat ini';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Cari berdasarkan judul, atau pilih ID AniDB untuk memasukkan ID atau URL anime resmi. Pilih hasil untuk diterapkan ke karya saat ini.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Masukkan ID AniDB berupa bilangan positif atau URL anime AniDB yang valid.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Berdasarkan judul';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID AniDB';
+  @override
+  String get video_source_grouping_mode => 'Pengaturan video';
+  @override
+  String get video_source_grouping_folder => 'Berdasarkan folder';
+  @override
+  String get video_source_grouping_series => 'Berdasarkan karya';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Buat satu koleksi untuk setiap subfolder tingkat pertama. File yang berada langsung di folder terpilih dikelompokkan dalam satu koleksi. Pengambilan metadata tidak tersedia dalam mode ini; beralihlah ke Berdasarkan karya untuk mengambilnya.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Kenali karya dan episode dari nama file, lalu cocokkan metadatanya.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'Pemindaian berikutnya akan menggunakan pengaturan ini. Koleksi dan metadata yang sudah ada tetap disimpan.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Ada beberapa karya dengan judul ini. Buka tab karya yang menunggu konfirmasi dan pilih item yang ingin dicocokkan.';
+  @override
+  String get video_source_scrape_pending_tab => 'Belum cocok';
 }
 
 // Path: <root>
@@ -68426,6 +68713,58 @@ class _StringsIt extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Le attività continuano dopo la chiusura di questa finestra.';
+  @override
+  String get video_source_scrape_queue_cancel_all =>
+      'Annulla tutte le attività';
+  @override
+  String get video_source_scrape_queue_waiting => 'In coda';
+  @override
+  String get video_source_scrape_queue_remove => 'Rimuovi dalla coda';
+  @override
+  String get video_source_scrape_queue_submitted => 'Inviata';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Nessuna opera richiede un abbinamento manuale.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Impossibile caricare questo elenco. Riprova.';
+  @override
+  String get video_source_scrape_list_reload => 'Ricarica';
+  @override
+  String get video_source_scrape_manual_current_work => 'Opera attuale';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Cerca per titolo oppure scegli ID AniDB per inserire un ID o un URL ufficiale dell’anime. Seleziona un risultato per applicarlo all’opera attuale.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Inserisci un ID AniDB positivo o un URL di anime AniDB valido.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Per titolo';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID AniDB';
+  @override
+  String get video_source_grouping_mode => 'Organizzazione dei video';
+  @override
+  String get video_source_grouping_folder => 'Per cartella';
+  @override
+  String get video_source_grouping_series => 'Per opera';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Crea una raccolta per ogni sottocartella di primo livello. I file direttamente nella cartella selezionata condividono una raccolta. Il recupero dei metadati non è disponibile in questa modalità; passa a «Per opera» per utilizzarlo.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Riconosci opere ed episodi dai nomi dei file, quindi abbina i metadati.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'La prossima scansione userà questa impostazione. Le raccolte e i metadati esistenti verranno conservati.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Più opere hanno questo titolo. Apri la scheda delle opere in attesa e seleziona l’elemento specifico da abbinare.';
+  @override
+  String get video_source_scrape_pending_tab => 'Da abbinare';
 }
 
 // Path: <root>
@@ -78235,6 +78574,55 @@ class _StringsJa extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint => 'このウィンドウを閉じてもタスクは続行されます。';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'すべてのタスクをキャンセル';
+  @override
+  String get video_source_scrape_queue_waiting => '待機中';
+  @override
+  String get video_source_scrape_queue_remove => 'キューから削除';
+  @override
+  String get video_source_scrape_queue_submitted => '送信済み';
+  @override
+  String get video_source_scrape_pending_empty => '手動で照合する必要がある作品はありません。';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'リストを読み込めませんでした。もう一度お試しください。';
+  @override
+  String get video_source_scrape_list_reload => '再読み込み';
+  @override
+  String get video_source_scrape_manual_current_work => '現在の作品';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'タイトルで検索するか、「AniDB ID」を選んでIDまたは公式のアニメURLを入力してください。検索結果を選択すると、現在の作品に適用されます。';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      '正の整数のAniDB ID、または有効なAniDBのアニメURLを入力してください。';
+  @override
+  String get video_source_scrape_manual_by_title => 'タイトルで検索';
+  @override
+  String get video_source_scrape_manual_by_id => 'AniDB ID';
+  @override
+  String get video_source_grouping_mode => '動画のまとめ方';
+  @override
+  String get video_source_grouping_folder => 'フォルダー別';
+  @override
+  String get video_source_grouping_series => '作品別';
+  @override
+  String get video_source_grouping_folder_hint =>
+      '直下のサブフォルダーごとにコレクションを作成します。選択したフォルダーに直接含まれるファイルは、同じコレクションにまとめられます。このモードではメタデータを取得できません。取得するには「作品別」に切り替えてください。';
+  @override
+  String get video_source_grouping_series_hint =>
+      'ファイル名から作品とエピソードを識別し、メタデータを照合します。';
+  @override
+  String get video_source_grouping_change_hint =>
+      '次回のスキャンからこの設定が適用されます。既存のコレクションとメタデータは保持されます。';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      '同じタイトルの作品が複数あります。確認待ちタブを開き、照合する項目を選択してください。';
+  @override
+  String get video_source_scrape_pending_tab => '未照合';
 }
 
 // Path: <root>
@@ -88054,6 +88442,55 @@ class _StringsKo extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint => '이 창을 닫아도 작업은 계속됩니다.';
+  @override
+  String get video_source_scrape_queue_cancel_all => '모든 작업 취소';
+  @override
+  String get video_source_scrape_queue_waiting => '대기 중';
+  @override
+  String get video_source_scrape_queue_remove => '대기열에서 제거';
+  @override
+  String get video_source_scrape_queue_submitted => '제출됨';
+  @override
+  String get video_source_scrape_pending_empty => '수동으로 일치시킬 작품이 없습니다.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      '목록을 불러올 수 없습니다. 다시 시도하세요.';
+  @override
+  String get video_source_scrape_list_reload => '새로고침';
+  @override
+  String get video_source_scrape_manual_current_work => '현재 작품';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      '제목으로 검색하거나 AniDB ID를 선택해 ID 또는 공식 애니메이션 URL을 입력하세요. 결과를 선택하면 현재 작품에 적용됩니다.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      '양의 정수인 AniDB ID 또는 유효한 AniDB 애니메이션 URL을 입력하세요.';
+  @override
+  String get video_source_scrape_manual_by_title => '제목으로 검색';
+  @override
+  String get video_source_scrape_manual_by_id => 'AniDB ID';
+  @override
+  String get video_source_grouping_mode => '동영상 정리 방식';
+  @override
+  String get video_source_grouping_folder => '폴더별';
+  @override
+  String get video_source_grouping_series => '작품별';
+  @override
+  String get video_source_grouping_folder_hint =>
+      '바로 아래 하위 폴더마다 컬렉션을 만듭니다. 선택한 폴더에 직접 들어 있는 파일은 하나의 컬렉션으로 묶습니다. 이 모드에서는 메타데이터를 가져올 수 없습니다. 가져오려면 작품별로 전환하세요.';
+  @override
+  String get video_source_grouping_series_hint =>
+      '파일 이름에서 작품과 에피소드를 식별한 후 메타데이터를 일치시킵니다.';
+  @override
+  String get video_source_grouping_change_hint =>
+      '다음 스캔부터 이 설정을 사용합니다. 기존 컬렉션과 메타데이터는 유지됩니다.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      '같은 제목의 작품이 여러 개 있습니다. 확인 대기 탭을 열고 일치시킬 항목을 선택하세요.';
+  @override
+  String get video_source_scrape_pending_tab => '미일치';
 }
 
 // Path: <root>
@@ -98429,6 +98866,57 @@ class _StringsNl extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Taken blijven doorgaan nadat dit venster is gesloten.';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'Alle taken annuleren';
+  @override
+  String get video_source_scrape_queue_waiting => 'In wachtrij';
+  @override
+  String get video_source_scrape_queue_remove => 'Uit wachtrij verwijderen';
+  @override
+  String get video_source_scrape_queue_submitted => 'Verzonden';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Er zijn geen werken die handmatig gekoppeld moeten worden.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Deze lijst kon niet worden geladen. Probeer het opnieuw.';
+  @override
+  String get video_source_scrape_list_reload => 'Opnieuw laden';
+  @override
+  String get video_source_scrape_manual_current_work => 'Huidig werk';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Zoek op titel of kies AniDB-ID om een ID of officiële anime-URL in te voeren. Selecteer een resultaat om het op het huidige werk toe te passen.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Voer een positieve AniDB-ID of een geldige AniDB-anime-URL in.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Op titel';
+  @override
+  String get video_source_scrape_manual_by_id => 'AniDB-ID';
+  @override
+  String get video_source_grouping_mode => 'Video’s indelen';
+  @override
+  String get video_source_grouping_folder => 'Op map';
+  @override
+  String get video_source_grouping_series => 'Op werk';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Maak één collectie per submap op het eerste niveau. Bestanden die direct in de geselecteerde map staan, delen een collectie. Metadata ophalen is niet beschikbaar in deze modus; schakel hiervoor over naar Op werk.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Herken werken en afleveringen aan de bestandsnamen en koppel vervolgens metadata.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'De volgende scan gebruikt deze instelling. Bestaande collecties en metadata blijven behouden.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Meerdere werken hebben deze titel. Open het tabblad met werken die nog moeten worden bevestigd en selecteer het specifieke item om te koppelen.';
+  @override
+  String get video_source_scrape_pending_tab => 'Ongekoppeld';
 }
 
 // Path: <root>
@@ -108857,6 +109345,58 @@ class _StringsPtBr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint =>
+      'As tarefas continuam após fechar esta janela.';
+  @override
+  String get video_source_scrape_queue_cancel_all =>
+      'Cancelar todas as tarefas';
+  @override
+  String get video_source_scrape_queue_waiting => 'Na fila';
+  @override
+  String get video_source_scrape_queue_remove => 'Remover da fila';
+  @override
+  String get video_source_scrape_queue_submitted => 'Enviada';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Nenhuma obra precisa de correspondência manual.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Não foi possível carregar esta lista. Tente novamente.';
+  @override
+  String get video_source_scrape_list_reload => 'Recarregar';
+  @override
+  String get video_source_scrape_manual_current_work => 'Obra atual';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Pesquise pelo título ou escolha ID do AniDB para inserir um ID ou uma URL oficial de anime. Selecione um resultado para aplicá-lo à obra atual.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Insira um ID do AniDB positivo ou uma URL de anime válida do AniDB.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Por título';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID do AniDB';
+  @override
+  String get video_source_grouping_mode => 'Organização de vídeos';
+  @override
+  String get video_source_grouping_folder => 'Por pasta';
+  @override
+  String get video_source_grouping_series => 'Por obra';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Cria uma coleção para cada subpasta de primeiro nível. Os arquivos diretamente na pasta selecionada compartilham uma coleção. A busca de metadados não está disponível neste modo; mude para Por obra para usá-la.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Identifica obras e episódios pelos nomes dos arquivos e depois busca os metadados correspondentes.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'A próxima verificação usará esta configuração. As coleções e os metadados existentes serão mantidos.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Há várias obras com este título. Abra a aba de obras pendentes e selecione o item específico para fazer a correspondência.';
+  @override
+  String get video_source_scrape_pending_tab => 'Não vinculados';
 }
 
 // Path: <root>
@@ -119263,6 +119803,57 @@ class _StringsRu extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Задачи продолжают выполняться после закрытия этого окна.';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'Отменить все задачи';
+  @override
+  String get video_source_scrape_queue_waiting => 'В очереди';
+  @override
+  String get video_source_scrape_queue_remove => 'Убрать из очереди';
+  @override
+  String get video_source_scrape_queue_submitted => 'Отправлено';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Нет произведений, требующих ручного сопоставления.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Не удалось загрузить список. Попробуйте ещё раз.';
+  @override
+  String get video_source_scrape_list_reload => 'Перезагрузить';
+  @override
+  String get video_source_scrape_manual_current_work => 'Текущее произведение';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Найдите по названию или выберите «ID AniDB», чтобы ввести ID или официальную ссылку на аниме. Выберите результат, чтобы применить его к текущему произведению.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Введите положительный ID AniDB или действительную ссылку на страницу аниме в AniDB.';
+  @override
+  String get video_source_scrape_manual_by_title => 'По названию';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID AniDB';
+  @override
+  String get video_source_grouping_mode => 'Группировка видео';
+  @override
+  String get video_source_grouping_folder => 'По папкам';
+  @override
+  String get video_source_grouping_series => 'По произведениям';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Для каждой вложенной папки первого уровня создаётся отдельная коллекция. Файлы непосредственно в выбранной папке объединяются в одну коллекцию. В этом режиме загрузка метаданных недоступна; для неё переключитесь на «По произведениям».';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Определять произведения и эпизоды по именам файлов, затем сопоставлять метаданные.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'Следующее сканирование будет использовать эту настройку. Существующие коллекции и метаданные сохранятся.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Есть несколько произведений с таким названием. Откройте вкладку ожидающих подтверждения и выберите конкретную запись для сопоставления.';
+  @override
+  String get video_source_scrape_pending_tab => 'Не сопоставлено';
 }
 
 // Path: <root>
@@ -129469,6 +130060,57 @@ class _StringsTh extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint =>
+      'งานจะดำเนินต่อแม้ปิดหน้าต่างนี้แล้ว';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'ยกเลิกงานทั้งหมด';
+  @override
+  String get video_source_scrape_queue_waiting => 'อยู่ในคิว';
+  @override
+  String get video_source_scrape_queue_remove => 'นำออกจากคิว';
+  @override
+  String get video_source_scrape_queue_submitted => 'ส่งแล้ว';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'ไม่มีผลงานที่ต้องจับคู่ด้วยตนเอง';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'โหลดรายการนี้ไม่ได้ โปรดลองอีกครั้ง';
+  @override
+  String get video_source_scrape_list_reload => 'โหลดใหม่';
+  @override
+  String get video_source_scrape_manual_current_work => 'ผลงานปัจจุบัน';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'ค้นหาด้วยชื่อ หรือเลือก ID ของ AniDB เพื่อป้อน ID หรือ URL อนิเมะอย่างเป็นทางการ เลือกผลลัพธ์เพื่อนำไปใช้กับผลงานปัจจุบัน';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'ป้อน ID ของ AniDB ที่เป็นจำนวนเต็มบวก หรือ URL อนิเมะของ AniDB ที่ถูกต้อง';
+  @override
+  String get video_source_scrape_manual_by_title => 'ตามชื่อ';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID ของ AniDB';
+  @override
+  String get video_source_grouping_mode => 'การจัดกลุ่มวิดีโอ';
+  @override
+  String get video_source_grouping_folder => 'ตามโฟลเดอร์';
+  @override
+  String get video_source_grouping_series => 'ตามผลงาน';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'สร้างหนึ่งคอลเลกชันต่อโฟลเดอร์ย่อยระดับแรก ไฟล์ที่อยู่ในโฟลเดอร์ที่เลือกโดยตรงจะรวมอยู่ในคอลเลกชันเดียวกัน โหมดนี้ไม่รองรับการดึงข้อมูลเมตา ให้เปลี่ยนเป็น «ตามผลงาน» เพื่อดึงข้อมูลเมตา';
+  @override
+  String get video_source_grouping_series_hint =>
+      'ระบุผลงานและตอนจากชื่อไฟล์ แล้วจับคู่ข้อมูลเมตา';
+  @override
+  String get video_source_grouping_change_hint =>
+      'การสแกนครั้งถัดไปจะใช้การตั้งค่านี้ คอลเลกชันและข้อมูลเมตาที่มีอยู่จะยังคงอยู่';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'มีหลายผลงานที่ใช้ชื่อนี้ เปิดแท็บผลงานที่รอยืนยัน แล้วเลือกรายการที่ต้องการจับคู่';
+  @override
+  String get video_source_scrape_pending_tab => 'ยังไม่จับคู่';
 }
 
 // Path: <root>
@@ -139792,6 +140434,57 @@ class _StringsTr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Bu pencere kapatıldıktan sonra görevler devam eder.';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'Tüm görevleri iptal et';
+  @override
+  String get video_source_scrape_queue_waiting => 'Sırada';
+  @override
+  String get video_source_scrape_queue_remove => 'Kuyruktan kaldır';
+  @override
+  String get video_source_scrape_queue_submitted => 'Gönderildi';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Elle eşleştirilmesi gereken eser yok.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Bu liste yüklenemedi. Tekrar deneyin.';
+  @override
+  String get video_source_scrape_list_reload => 'Yeniden yükle';
+  @override
+  String get video_source_scrape_manual_current_work => 'Geçerli eser';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Ada göre arayın veya bir kimlik ya da resmî anime URL’si girmek için AniDB kimliğini seçin. Geçerli esere uygulamak için bir sonuç seçin.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Pozitif bir AniDB kimliği veya geçerli bir AniDB anime URL’si girin.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Ada göre';
+  @override
+  String get video_source_scrape_manual_by_id => 'AniDB kimliği';
+  @override
+  String get video_source_grouping_mode => 'Video düzeni';
+  @override
+  String get video_source_grouping_folder => 'Klasöre göre';
+  @override
+  String get video_source_grouping_series => 'Esere göre';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Birinci düzeydeki her alt klasör için bir koleksiyon oluşturur. Doğrudan seçilen klasörde bulunan dosyalar aynı koleksiyonda toplanır. Bu modda meta veriler alınamaz; almak için Esere göre moduna geçin.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Dosya adlarından eserleri ve bölümleri tanır, ardından meta verileri eşleştirir.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'Sonraki tarama bu ayarı kullanır. Mevcut koleksiyonlar ve meta veriler korunur.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Bu ada sahip birden fazla eser var. Onay bekleyen eserler sekmesini açın ve eşleştirilecek öğeyi seçin.';
+  @override
+  String get video_source_scrape_pending_tab => 'Eşleşmemiş';
 }
 
 // Path: <root>
@@ -150086,6 +150779,57 @@ class _StringsVi extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Các tác vụ vẫn tiếp tục khi đóng cửa sổ này.';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'Hủy tất cả tác vụ';
+  @override
+  String get video_source_scrape_queue_waiting => 'Trong hàng đợi';
+  @override
+  String get video_source_scrape_queue_remove => 'Xóa khỏi hàng đợi';
+  @override
+  String get video_source_scrape_queue_submitted => 'Đã gửi';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Không có tác phẩm nào cần ghép thủ công.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Không thể tải danh sách này. Vui lòng thử lại.';
+  @override
+  String get video_source_scrape_list_reload => 'Tải lại';
+  @override
+  String get video_source_scrape_manual_current_work => 'Tác phẩm hiện tại';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Tìm theo tên hoặc chọn ID AniDB để nhập ID hay URL anime chính thức. Chọn một kết quả để áp dụng cho tác phẩm hiện tại.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Nhập ID AniDB là số nguyên dương hoặc URL anime AniDB hợp lệ.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Theo tên';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID AniDB';
+  @override
+  String get video_source_grouping_mode => 'Cách nhóm video';
+  @override
+  String get video_source_grouping_folder => 'Theo thư mục';
+  @override
+  String get video_source_grouping_series => 'Theo tác phẩm';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Tạo một bộ sưu tập cho mỗi thư mục con cấp đầu tiên. Các tệp nằm trực tiếp trong thư mục đã chọn được gom vào cùng một bộ sưu tập. Chế độ này không hỗ trợ lấy siêu dữ liệu; hãy chuyển sang Theo tác phẩm để lấy.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Nhận diện tác phẩm và tập phim từ tên tệp, sau đó ghép siêu dữ liệu.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'Lần quét tiếp theo sẽ dùng thiết lập này. Các bộ sưu tập và siêu dữ liệu hiện có sẽ được giữ nguyên.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Có nhiều tác phẩm trùng tên này. Mở thẻ tác phẩm chờ xác nhận và chọn mục cụ thể để ghép.';
+  @override
+  String get video_source_scrape_pending_tab => 'Chưa ghép';
 }
 
 // Path: <root>
@@ -159539,6 +160283,52 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       '运行于 ${provider} · 静态融合图';
+  @override
+  String get video_source_scrape_background_hint => '关闭窗口后，任务会继续在后台执行。';
+  @override
+  String get video_source_scrape_queue_cancel_all => '取消全部任务';
+  @override
+  String get video_source_scrape_queue_waiting => '排队中';
+  @override
+  String get video_source_scrape_queue_remove => '撤回此任务';
+  @override
+  String get video_source_scrape_queue_submitted => '已加入队列';
+  @override
+  String get video_source_scrape_pending_empty => '没有需要手动匹配的作品。';
+  @override
+  String get video_source_scrape_list_load_failed => '列表加载失败，请重试。';
+  @override
+  String get video_source_scrape_list_reload => '重新加载';
+  @override
+  String get video_source_scrape_manual_current_work => '当前作品';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      '按标题搜索，或切换到 AniDB ID 输入编号或官方作品链接。选择结果后才会应用到当前作品。';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      '请输入正整数 AniDB ID 或有效的 AniDB 作品链接。';
+  @override
+  String get video_source_scrape_manual_by_title => '按标题';
+  @override
+  String get video_source_scrape_manual_by_id => '按 AniDB ID';
+  @override
+  String get video_source_grouping_mode => '视频分组方式';
+  @override
+  String get video_source_grouping_folder => '按文件夹';
+  @override
+  String get video_source_grouping_series => '按作品';
+  @override
+  String get video_source_grouping_folder_hint =>
+      '每个一级子文件夹创建一个合集，根目录中的视频归入根合集。此模式仅整理视频，不刮削作品资料；如需刮削，请切换为按作品。';
+  @override
+  String get video_source_grouping_series_hint => '按文件名识别作品与分集，再匹配作品资料。';
+  @override
+  String get video_source_grouping_change_hint => '下次扫描使用此设置，已有合集和资料会保留。';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      '存在多个同名作品。请打开待确认页，选择具体条目进行匹配。';
+  @override
+  String get video_source_scrape_pending_tab => '待确认';
 }
 
 // Path: <root>
@@ -169041,6 +169831,52 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get video_source_scrape_background_hint => '關閉此視窗後，任務仍會繼續執行。';
+  @override
+  String get video_source_scrape_queue_cancel_all => '取消所有任務';
+  @override
+  String get video_source_scrape_queue_waiting => '排隊中';
+  @override
+  String get video_source_scrape_queue_remove => '從佇列移除';
+  @override
+  String get video_source_scrape_queue_submitted => '已提交';
+  @override
+  String get video_source_scrape_pending_empty => '沒有需要手動配對的作品。';
+  @override
+  String get video_source_scrape_list_load_failed => '無法載入此清單，請重試。';
+  @override
+  String get video_source_scrape_list_reload => '重新載入';
+  @override
+  String get video_source_scrape_manual_current_work => '目前作品';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      '按名稱搜尋，或選擇「AniDB ID」輸入 ID 或官方動畫網址。選擇搜尋結果後，便會套用至目前作品。';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      '請輸入正整數的 AniDB ID，或有效的 AniDB 動畫網址。';
+  @override
+  String get video_source_scrape_manual_by_title => '按名稱';
+  @override
+  String get video_source_scrape_manual_by_id => 'AniDB ID';
+  @override
+  String get video_source_grouping_mode => '影片整理方式';
+  @override
+  String get video_source_grouping_folder => '按資料夾';
+  @override
+  String get video_source_grouping_series => '按作品';
+  @override
+  String get video_source_grouping_folder_hint =>
+      '為每個第一層子資料夾建立一個合集。直接放在所選資料夾內的檔案會歸入同一合集。此模式不支援刮削中繼資料；如需刮削，請切換至「按作品」。';
+  @override
+  String get video_source_grouping_series_hint => '從檔案名稱識別作品及集數，再配對中繼資料。';
+  @override
+  String get video_source_grouping_change_hint => '下次掃描會使用此設定。現有合集及中繼資料會保留。';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      '有多個同名作品。請開啟待確認頁，選擇具體項目進行配對。';
+  @override
+  String get video_source_scrape_pending_tab => '待確認';
 }
 
 /// Flat map(s) containing all translations.
@@ -178000,6 +178836,48 @@ extension on _StringsEn {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return 'Tasks continue when this window is closed.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Cancel all tasks';
+      case 'video_source_scrape_queue_waiting':
+        return 'Queued';
+      case 'video_source_scrape_queue_remove':
+        return 'Remove from queue';
+      case 'video_source_scrape_queue_submitted':
+        return 'Submitted';
+      case 'video_source_scrape_pending_empty':
+        return 'No works need manual matching.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Could not load this list. Try again.';
+      case 'video_source_scrape_list_reload':
+        return 'Reload';
+      case 'video_source_scrape_manual_current_work':
+        return 'Current work';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Search by title, or choose AniDB ID to enter an ID or official anime URL. Select a result to apply it to the current work.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Enter a positive AniDB ID or a valid AniDB anime URL.';
+      case 'video_source_scrape_manual_by_title':
+        return 'By title';
+      case 'video_source_scrape_manual_by_id':
+        return 'AniDB ID';
+      case 'video_source_grouping_mode':
+        return 'Video organization';
+      case 'video_source_grouping_folder':
+        return 'By folder';
+      case 'video_source_grouping_series':
+        return 'By work';
+      case 'video_source_grouping_folder_hint':
+        return 'Create one collection per first-level subfolder. Files directly in the selected folder share a collection. Metadata scraping is unavailable in this mode; switch to By work to scrape.';
+      case 'video_source_grouping_series_hint':
+        return 'Recognize works and episodes from filenames, then match metadata.';
+      case 'video_source_grouping_change_hint':
+        return 'The next scan uses this setting. Existing collections and metadata are kept.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Several works have this title. Open the pending works tab and select the specific item to match.';
+      case 'video_source_scrape_pending_tab':
+        return 'Unmatched';
       default:
         return null;
     }
@@ -186954,6 +187832,48 @@ extension on _StringsAr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return 'تستمر المهام بعد إغلاق هذه النافذة.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'إلغاء جميع المهام';
+      case 'video_source_scrape_queue_waiting':
+        return 'في قائمة الانتظار';
+      case 'video_source_scrape_queue_remove':
+        return 'إزالة من قائمة الانتظار';
+      case 'video_source_scrape_queue_submitted':
+        return 'تم الإرسال';
+      case 'video_source_scrape_pending_empty':
+        return 'لا توجد أعمال تحتاج إلى مطابقة يدوية.';
+      case 'video_source_scrape_list_load_failed':
+        return 'تعذّر تحميل هذه القائمة. حاول مرة أخرى.';
+      case 'video_source_scrape_list_reload':
+        return 'إعادة التحميل';
+      case 'video_source_scrape_manual_current_work':
+        return 'العمل الحالي';
+      case 'video_source_scrape_manual_query_hint':
+        return 'ابحث بالعنوان، أو اختر معرّف AniDB لإدخال معرّف أو رابط أنمي رسمي. اختر نتيجة لتطبيقها على العمل الحالي.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'أدخل معرّف AniDB موجبًا أو رابط أنمي صالحًا من AniDB.';
+      case 'video_source_scrape_manual_by_title':
+        return 'حسب العنوان';
+      case 'video_source_scrape_manual_by_id':
+        return 'معرّف AniDB';
+      case 'video_source_grouping_mode':
+        return 'تنظيم الفيديوهات';
+      case 'video_source_grouping_folder':
+        return 'حسب المجلد';
+      case 'video_source_grouping_series':
+        return 'حسب العمل';
+      case 'video_source_grouping_folder_hint':
+        return 'يُنشأ تجميع لكل مجلد فرعي من المستوى الأول. وتُجمع الملفات الموجودة مباشرة في المجلد المحدد في تجميع واحد. لا يتوفر جلب البيانات الوصفية في هذا الوضع؛ انتقل إلى «حسب العمل» لجلبها.';
+      case 'video_source_grouping_series_hint':
+        return 'تحديد الأعمال والحلقات من أسماء الملفات، ثم مطابقة البيانات الوصفية.';
+      case 'video_source_grouping_change_hint':
+        return 'سيستخدم الفحص التالي هذا الإعداد. ستُحفظ التجميعات والبيانات الوصفية الحالية.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'توجد عدة أعمال بهذا العنوان. افتح تبويب الأعمال المعلّقة واختر العنصر المحدد لمطابقته.';
+      case 'video_source_scrape_pending_tab':
+        return 'غير مطابق';
       default:
         return null;
     }
@@ -195953,6 +196873,48 @@ extension on _StringsDe {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return 'Die Aufgaben laufen nach dem Schließen dieses Fensters weiter.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Alle Aufgaben abbrechen';
+      case 'video_source_scrape_queue_waiting':
+        return 'In Warteschlange';
+      case 'video_source_scrape_queue_remove':
+        return 'Aus Warteschlange entfernen';
+      case 'video_source_scrape_queue_submitted':
+        return 'Übermittelt';
+      case 'video_source_scrape_pending_empty':
+        return 'Keine Werke müssen manuell zugeordnet werden.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Diese Liste konnte nicht geladen werden. Bitte erneut versuchen.';
+      case 'video_source_scrape_list_reload':
+        return 'Neu laden';
+      case 'video_source_scrape_manual_current_work':
+        return 'Aktuelles Werk';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Nach Titel suchen oder AniDB-ID wählen, um eine ID oder offizielle Anime-URL einzugeben. Ein Ergebnis auswählen, um es dem aktuellen Werk zuzuordnen.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Eine positive AniDB-ID oder eine gültige AniDB-Anime-URL eingeben.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Nach Titel';
+      case 'video_source_scrape_manual_by_id':
+        return 'AniDB-ID';
+      case 'video_source_grouping_mode':
+        return 'Videos organisieren';
+      case 'video_source_grouping_folder':
+        return 'Nach Ordner';
+      case 'video_source_grouping_series':
+        return 'Nach Werk';
+      case 'video_source_grouping_folder_hint':
+        return 'Für jeden direkten Unterordner wird eine Sammlung erstellt. Dateien direkt im ausgewählten Ordner bilden eine gemeinsame Sammlung. In diesem Modus können keine Metadaten abgerufen werden. Dafür zu „Nach Werk“ wechseln.';
+      case 'video_source_grouping_series_hint':
+        return 'Werke und Episoden anhand der Dateinamen erkennen und anschließend Metadaten zuordnen.';
+      case 'video_source_grouping_change_hint':
+        return 'Der nächste Scan verwendet diese Einstellung. Vorhandene Sammlungen und Metadaten bleiben erhalten.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Mehrere Werke haben diesen Titel. Öffne den Tab für ausstehende Werke und wähle den konkreten Eintrag zur Zuordnung aus.';
+      case 'video_source_scrape_pending_tab':
+        return 'Nicht zugeordnet';
       default:
         return null;
     }
@@ -204943,6 +205905,48 @@ extension on _StringsEs {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return 'Las tareas continúan después de cerrar esta ventana.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Cancelar todas las tareas';
+      case 'video_source_scrape_queue_waiting':
+        return 'En cola';
+      case 'video_source_scrape_queue_remove':
+        return 'Quitar de la cola';
+      case 'video_source_scrape_queue_submitted':
+        return 'Enviada';
+      case 'video_source_scrape_pending_empty':
+        return 'No hay obras que necesiten una coincidencia manual.';
+      case 'video_source_scrape_list_load_failed':
+        return 'No se pudo cargar esta lista. Inténtalo de nuevo.';
+      case 'video_source_scrape_list_reload':
+        return 'Volver a cargar';
+      case 'video_source_scrape_manual_current_work':
+        return 'Obra actual';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Busca por título o elige ID de AniDB para introducir un ID o una URL oficial de anime. Selecciona un resultado para aplicarlo a la obra actual.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Introduce un ID de AniDB positivo o una URL de anime válida de AniDB.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Por título';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID de AniDB';
+      case 'video_source_grouping_mode':
+        return 'Organización de vídeos';
+      case 'video_source_grouping_folder':
+        return 'Por carpeta';
+      case 'video_source_grouping_series':
+        return 'Por obra';
+      case 'video_source_grouping_folder_hint':
+        return 'Se crea una colección por cada subcarpeta de primer nivel. Los archivos situados directamente en la carpeta seleccionada comparten una colección. Este modo no permite obtener metadatos; cambia a «Por obra» para hacerlo.';
+      case 'video_source_grouping_series_hint':
+        return 'Identifica obras y episodios a partir de los nombres de archivo y después busca los metadatos correspondientes.';
+      case 'video_source_grouping_change_hint':
+        return 'El próximo escaneo usará este ajuste. Se conservarán las colecciones y los metadatos existentes.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Hay varias obras con este título. Abre la pestaña de obras pendientes y selecciona el elemento concreto que quieras vincular.';
+      case 'video_source_scrape_pending_tab':
+        return 'Sin vincular';
       default:
         return null;
     }
@@ -213942,6 +214946,48 @@ extension on _StringsFr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return 'Les tâches continuent après la fermeture de cette fenêtre.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Annuler toutes les tâches';
+      case 'video_source_scrape_queue_waiting':
+        return 'En attente';
+      case 'video_source_scrape_queue_remove':
+        return 'Retirer de la file';
+      case 'video_source_scrape_queue_submitted':
+        return 'Envoyée';
+      case 'video_source_scrape_pending_empty':
+        return 'Aucune œuvre ne nécessite de correspondance manuelle.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Impossible de charger cette liste. Réessayez.';
+      case 'video_source_scrape_list_reload':
+        return 'Recharger';
+      case 'video_source_scrape_manual_current_work':
+        return 'Œuvre actuelle';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Recherchez par titre ou choisissez ID AniDB pour saisir un identifiant ou une URL officielle d’anime. Sélectionnez un résultat pour l’appliquer à l’œuvre actuelle.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Saisissez un identifiant AniDB positif ou une URL d’anime AniDB valide.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Par titre';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID AniDB';
+      case 'video_source_grouping_mode':
+        return 'Organisation des vidéos';
+      case 'video_source_grouping_folder':
+        return 'Par dossier';
+      case 'video_source_grouping_series':
+        return 'Par œuvre';
+      case 'video_source_grouping_folder_hint':
+        return 'Crée une collection par sous-dossier de premier niveau. Les fichiers placés directement dans le dossier sélectionné partagent une collection. La récupération des métadonnées n’est pas disponible dans ce mode ; passez à « Par œuvre » pour l’utiliser.';
+      case 'video_source_grouping_series_hint':
+        return 'Identifie les œuvres et les épisodes à partir des noms de fichiers, puis recherche les métadonnées correspondantes.';
+      case 'video_source_grouping_change_hint':
+        return 'La prochaine analyse utilisera ce réglage. Les collections et les métadonnées existantes seront conservées.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Plusieurs œuvres portent ce titre. Ouvrez l’onglet des œuvres en attente et sélectionnez l’élément précis à associer.';
+      case 'video_source_scrape_pending_tab':
+        return 'À associer';
       default:
         return null;
     }
@@ -222912,6 +223958,48 @@ extension on _StringsId {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return 'Tugas tetap berjalan setelah jendela ini ditutup.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Batalkan semua tugas';
+      case 'video_source_scrape_queue_waiting':
+        return 'Dalam antrean';
+      case 'video_source_scrape_queue_remove':
+        return 'Hapus dari antrean';
+      case 'video_source_scrape_queue_submitted':
+        return 'Dikirim';
+      case 'video_source_scrape_pending_empty':
+        return 'Tidak ada karya yang perlu dicocokkan secara manual.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Daftar ini tidak dapat dimuat. Coba lagi.';
+      case 'video_source_scrape_list_reload':
+        return 'Muat ulang';
+      case 'video_source_scrape_manual_current_work':
+        return 'Karya saat ini';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Cari berdasarkan judul, atau pilih ID AniDB untuk memasukkan ID atau URL anime resmi. Pilih hasil untuk diterapkan ke karya saat ini.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Masukkan ID AniDB berupa bilangan positif atau URL anime AniDB yang valid.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Berdasarkan judul';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID AniDB';
+      case 'video_source_grouping_mode':
+        return 'Pengaturan video';
+      case 'video_source_grouping_folder':
+        return 'Berdasarkan folder';
+      case 'video_source_grouping_series':
+        return 'Berdasarkan karya';
+      case 'video_source_grouping_folder_hint':
+        return 'Buat satu koleksi untuk setiap subfolder tingkat pertama. File yang berada langsung di folder terpilih dikelompokkan dalam satu koleksi. Pengambilan metadata tidak tersedia dalam mode ini; beralihlah ke Berdasarkan karya untuk mengambilnya.';
+      case 'video_source_grouping_series_hint':
+        return 'Kenali karya dan episode dari nama file, lalu cocokkan metadatanya.';
+      case 'video_source_grouping_change_hint':
+        return 'Pemindaian berikutnya akan menggunakan pengaturan ini. Koleksi dan metadata yang sudah ada tetap disimpan.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Ada beberapa karya dengan judul ini. Buka tab karya yang menunggu konfirmasi dan pilih item yang ingin dicocokkan.';
+      case 'video_source_scrape_pending_tab':
+        return 'Belum cocok';
       default:
         return null;
     }
@@ -231904,6 +232992,48 @@ extension on _StringsIt {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return 'Le attività continuano dopo la chiusura di questa finestra.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Annulla tutte le attività';
+      case 'video_source_scrape_queue_waiting':
+        return 'In coda';
+      case 'video_source_scrape_queue_remove':
+        return 'Rimuovi dalla coda';
+      case 'video_source_scrape_queue_submitted':
+        return 'Inviata';
+      case 'video_source_scrape_pending_empty':
+        return 'Nessuna opera richiede un abbinamento manuale.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Impossibile caricare questo elenco. Riprova.';
+      case 'video_source_scrape_list_reload':
+        return 'Ricarica';
+      case 'video_source_scrape_manual_current_work':
+        return 'Opera attuale';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Cerca per titolo oppure scegli ID AniDB per inserire un ID o un URL ufficiale dell’anime. Seleziona un risultato per applicarlo all’opera attuale.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Inserisci un ID AniDB positivo o un URL di anime AniDB valido.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Per titolo';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID AniDB';
+      case 'video_source_grouping_mode':
+        return 'Organizzazione dei video';
+      case 'video_source_grouping_folder':
+        return 'Per cartella';
+      case 'video_source_grouping_series':
+        return 'Per opera';
+      case 'video_source_grouping_folder_hint':
+        return 'Crea una raccolta per ogni sottocartella di primo livello. I file direttamente nella cartella selezionata condividono una raccolta. Il recupero dei metadati non è disponibile in questa modalità; passa a «Per opera» per utilizzarlo.';
+      case 'video_source_grouping_series_hint':
+        return 'Riconosci opere ed episodi dai nomi dei file, quindi abbina i metadati.';
+      case 'video_source_grouping_change_hint':
+        return 'La prossima scansione userà questa impostazione. Le raccolte e i metadati esistenti verranno conservati.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Più opere hanno questo titolo. Apri la scheda delle opere in attesa e seleziona l’elemento specifico da abbinare.';
+      case 'video_source_scrape_pending_tab':
+        return 'Da abbinare';
       default:
         return null;
     }
@@ -240823,6 +241953,48 @@ extension on _StringsJa {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return 'このウィンドウを閉じてもタスクは続行されます。';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'すべてのタスクをキャンセル';
+      case 'video_source_scrape_queue_waiting':
+        return '待機中';
+      case 'video_source_scrape_queue_remove':
+        return 'キューから削除';
+      case 'video_source_scrape_queue_submitted':
+        return '送信済み';
+      case 'video_source_scrape_pending_empty':
+        return '手動で照合する必要がある作品はありません。';
+      case 'video_source_scrape_list_load_failed':
+        return 'リストを読み込めませんでした。もう一度お試しください。';
+      case 'video_source_scrape_list_reload':
+        return '再読み込み';
+      case 'video_source_scrape_manual_current_work':
+        return '現在の作品';
+      case 'video_source_scrape_manual_query_hint':
+        return 'タイトルで検索するか、「AniDB ID」を選んでIDまたは公式のアニメURLを入力してください。検索結果を選択すると、現在の作品に適用されます。';
+      case 'video_source_scrape_manual_id_invalid':
+        return '正の整数のAniDB ID、または有効なAniDBのアニメURLを入力してください。';
+      case 'video_source_scrape_manual_by_title':
+        return 'タイトルで検索';
+      case 'video_source_scrape_manual_by_id':
+        return 'AniDB ID';
+      case 'video_source_grouping_mode':
+        return '動画のまとめ方';
+      case 'video_source_grouping_folder':
+        return 'フォルダー別';
+      case 'video_source_grouping_series':
+        return '作品別';
+      case 'video_source_grouping_folder_hint':
+        return '直下のサブフォルダーごとにコレクションを作成します。選択したフォルダーに直接含まれるファイルは、同じコレクションにまとめられます。このモードではメタデータを取得できません。取得するには「作品別」に切り替えてください。';
+      case 'video_source_grouping_series_hint':
+        return 'ファイル名から作品とエピソードを識別し、メタデータを照合します。';
+      case 'video_source_grouping_change_hint':
+        return '次回のスキャンからこの設定が適用されます。既存のコレクションとメタデータは保持されます。';
+      case 'video_source_scrape_manual_ambiguous':
+        return '同じタイトルの作品が複数あります。確認待ちタブを開き、照合する項目を選択してください。';
+      case 'video_source_scrape_pending_tab':
+        return '未照合';
       default:
         return null;
     }
@@ -249746,6 +250918,48 @@ extension on _StringsKo {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return '이 창을 닫아도 작업은 계속됩니다.';
+      case 'video_source_scrape_queue_cancel_all':
+        return '모든 작업 취소';
+      case 'video_source_scrape_queue_waiting':
+        return '대기 중';
+      case 'video_source_scrape_queue_remove':
+        return '대기열에서 제거';
+      case 'video_source_scrape_queue_submitted':
+        return '제출됨';
+      case 'video_source_scrape_pending_empty':
+        return '수동으로 일치시킬 작품이 없습니다.';
+      case 'video_source_scrape_list_load_failed':
+        return '목록을 불러올 수 없습니다. 다시 시도하세요.';
+      case 'video_source_scrape_list_reload':
+        return '새로고침';
+      case 'video_source_scrape_manual_current_work':
+        return '현재 작품';
+      case 'video_source_scrape_manual_query_hint':
+        return '제목으로 검색하거나 AniDB ID를 선택해 ID 또는 공식 애니메이션 URL을 입력하세요. 결과를 선택하면 현재 작품에 적용됩니다.';
+      case 'video_source_scrape_manual_id_invalid':
+        return '양의 정수인 AniDB ID 또는 유효한 AniDB 애니메이션 URL을 입력하세요.';
+      case 'video_source_scrape_manual_by_title':
+        return '제목으로 검색';
+      case 'video_source_scrape_manual_by_id':
+        return 'AniDB ID';
+      case 'video_source_grouping_mode':
+        return '동영상 정리 방식';
+      case 'video_source_grouping_folder':
+        return '폴더별';
+      case 'video_source_grouping_series':
+        return '작품별';
+      case 'video_source_grouping_folder_hint':
+        return '바로 아래 하위 폴더마다 컬렉션을 만듭니다. 선택한 폴더에 직접 들어 있는 파일은 하나의 컬렉션으로 묶습니다. 이 모드에서는 메타데이터를 가져올 수 없습니다. 가져오려면 작품별로 전환하세요.';
+      case 'video_source_grouping_series_hint':
+        return '파일 이름에서 작품과 에피소드를 식별한 후 메타데이터를 일치시킵니다.';
+      case 'video_source_grouping_change_hint':
+        return '다음 스캔부터 이 설정을 사용합니다. 기존 컬렉션과 메타데이터는 유지됩니다.';
+      case 'video_source_scrape_manual_ambiguous':
+        return '같은 제목의 작품이 여러 개 있습니다. 확인 대기 탭을 열고 일치시킬 항목을 선택하세요.';
+      case 'video_source_scrape_pending_tab':
+        return '미일치';
       default:
         return null;
     }
@@ -258731,6 +259945,48 @@ extension on _StringsNl {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return 'Taken blijven doorgaan nadat dit venster is gesloten.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Alle taken annuleren';
+      case 'video_source_scrape_queue_waiting':
+        return 'In wachtrij';
+      case 'video_source_scrape_queue_remove':
+        return 'Uit wachtrij verwijderen';
+      case 'video_source_scrape_queue_submitted':
+        return 'Verzonden';
+      case 'video_source_scrape_pending_empty':
+        return 'Er zijn geen werken die handmatig gekoppeld moeten worden.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Deze lijst kon niet worden geladen. Probeer het opnieuw.';
+      case 'video_source_scrape_list_reload':
+        return 'Opnieuw laden';
+      case 'video_source_scrape_manual_current_work':
+        return 'Huidig werk';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Zoek op titel of kies AniDB-ID om een ID of officiële anime-URL in te voeren. Selecteer een resultaat om het op het huidige werk toe te passen.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Voer een positieve AniDB-ID of een geldige AniDB-anime-URL in.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Op titel';
+      case 'video_source_scrape_manual_by_id':
+        return 'AniDB-ID';
+      case 'video_source_grouping_mode':
+        return 'Video’s indelen';
+      case 'video_source_grouping_folder':
+        return 'Op map';
+      case 'video_source_grouping_series':
+        return 'Op werk';
+      case 'video_source_grouping_folder_hint':
+        return 'Maak één collectie per submap op het eerste niveau. Bestanden die direct in de geselecteerde map staan, delen een collectie. Metadata ophalen is niet beschikbaar in deze modus; schakel hiervoor over naar Op werk.';
+      case 'video_source_grouping_series_hint':
+        return 'Herken werken en afleveringen aan de bestandsnamen en koppel vervolgens metadata.';
+      case 'video_source_grouping_change_hint':
+        return 'De volgende scan gebruikt deze instelling. Bestaande collecties en metadata blijven behouden.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Meerdere werken hebben deze titel. Open het tabblad met werken die nog moeten worden bevestigd en selecteer het specifieke item om te koppelen.';
+      case 'video_source_scrape_pending_tab':
+        return 'Ongekoppeld';
       default:
         return null;
     }
@@ -267711,6 +268967,48 @@ extension on _StringsPtBr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return 'As tarefas continuam após fechar esta janela.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Cancelar todas as tarefas';
+      case 'video_source_scrape_queue_waiting':
+        return 'Na fila';
+      case 'video_source_scrape_queue_remove':
+        return 'Remover da fila';
+      case 'video_source_scrape_queue_submitted':
+        return 'Enviada';
+      case 'video_source_scrape_pending_empty':
+        return 'Nenhuma obra precisa de correspondência manual.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Não foi possível carregar esta lista. Tente novamente.';
+      case 'video_source_scrape_list_reload':
+        return 'Recarregar';
+      case 'video_source_scrape_manual_current_work':
+        return 'Obra atual';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Pesquise pelo título ou escolha ID do AniDB para inserir um ID ou uma URL oficial de anime. Selecione um resultado para aplicá-lo à obra atual.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Insira um ID do AniDB positivo ou uma URL de anime válida do AniDB.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Por título';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID do AniDB';
+      case 'video_source_grouping_mode':
+        return 'Organização de vídeos';
+      case 'video_source_grouping_folder':
+        return 'Por pasta';
+      case 'video_source_grouping_series':
+        return 'Por obra';
+      case 'video_source_grouping_folder_hint':
+        return 'Cria uma coleção para cada subpasta de primeiro nível. Os arquivos diretamente na pasta selecionada compartilham uma coleção. A busca de metadados não está disponível neste modo; mude para Por obra para usá-la.';
+      case 'video_source_grouping_series_hint':
+        return 'Identifica obras e episódios pelos nomes dos arquivos e depois busca os metadados correspondentes.';
+      case 'video_source_grouping_change_hint':
+        return 'A próxima verificação usará esta configuração. As coleções e os metadados existentes serão mantidos.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Há várias obras com este título. Abra a aba de obras pendentes e selecione o item específico para fazer a correspondência.';
+      case 'video_source_scrape_pending_tab':
+        return 'Não vinculados';
       default:
         return null;
     }
@@ -276698,6 +277996,48 @@ extension on _StringsRu {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return 'Задачи продолжают выполняться после закрытия этого окна.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Отменить все задачи';
+      case 'video_source_scrape_queue_waiting':
+        return 'В очереди';
+      case 'video_source_scrape_queue_remove':
+        return 'Убрать из очереди';
+      case 'video_source_scrape_queue_submitted':
+        return 'Отправлено';
+      case 'video_source_scrape_pending_empty':
+        return 'Нет произведений, требующих ручного сопоставления.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Не удалось загрузить список. Попробуйте ещё раз.';
+      case 'video_source_scrape_list_reload':
+        return 'Перезагрузить';
+      case 'video_source_scrape_manual_current_work':
+        return 'Текущее произведение';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Найдите по названию или выберите «ID AniDB», чтобы ввести ID или официальную ссылку на аниме. Выберите результат, чтобы применить его к текущему произведению.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Введите положительный ID AniDB или действительную ссылку на страницу аниме в AniDB.';
+      case 'video_source_scrape_manual_by_title':
+        return 'По названию';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID AniDB';
+      case 'video_source_grouping_mode':
+        return 'Группировка видео';
+      case 'video_source_grouping_folder':
+        return 'По папкам';
+      case 'video_source_grouping_series':
+        return 'По произведениям';
+      case 'video_source_grouping_folder_hint':
+        return 'Для каждой вложенной папки первого уровня создаётся отдельная коллекция. Файлы непосредственно в выбранной папке объединяются в одну коллекцию. В этом режиме загрузка метаданных недоступна; для неё переключитесь на «По произведениям».';
+      case 'video_source_grouping_series_hint':
+        return 'Определять произведения и эпизоды по именам файлов, затем сопоставлять метаданные.';
+      case 'video_source_grouping_change_hint':
+        return 'Следующее сканирование будет использовать эту настройку. Существующие коллекции и метаданные сохранятся.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Есть несколько произведений с таким названием. Откройте вкладку ожидающих подтверждения и выберите конкретную запись для сопоставления.';
+      case 'video_source_scrape_pending_tab':
+        return 'Не сопоставлено';
       default:
         return null;
     }
@@ -285657,6 +286997,48 @@ extension on _StringsTh {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return 'งานจะดำเนินต่อแม้ปิดหน้าต่างนี้แล้ว';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'ยกเลิกงานทั้งหมด';
+      case 'video_source_scrape_queue_waiting':
+        return 'อยู่ในคิว';
+      case 'video_source_scrape_queue_remove':
+        return 'นำออกจากคิว';
+      case 'video_source_scrape_queue_submitted':
+        return 'ส่งแล้ว';
+      case 'video_source_scrape_pending_empty':
+        return 'ไม่มีผลงานที่ต้องจับคู่ด้วยตนเอง';
+      case 'video_source_scrape_list_load_failed':
+        return 'โหลดรายการนี้ไม่ได้ โปรดลองอีกครั้ง';
+      case 'video_source_scrape_list_reload':
+        return 'โหลดใหม่';
+      case 'video_source_scrape_manual_current_work':
+        return 'ผลงานปัจจุบัน';
+      case 'video_source_scrape_manual_query_hint':
+        return 'ค้นหาด้วยชื่อ หรือเลือก ID ของ AniDB เพื่อป้อน ID หรือ URL อนิเมะอย่างเป็นทางการ เลือกผลลัพธ์เพื่อนำไปใช้กับผลงานปัจจุบัน';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'ป้อน ID ของ AniDB ที่เป็นจำนวนเต็มบวก หรือ URL อนิเมะของ AniDB ที่ถูกต้อง';
+      case 'video_source_scrape_manual_by_title':
+        return 'ตามชื่อ';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID ของ AniDB';
+      case 'video_source_grouping_mode':
+        return 'การจัดกลุ่มวิดีโอ';
+      case 'video_source_grouping_folder':
+        return 'ตามโฟลเดอร์';
+      case 'video_source_grouping_series':
+        return 'ตามผลงาน';
+      case 'video_source_grouping_folder_hint':
+        return 'สร้างหนึ่งคอลเลกชันต่อโฟลเดอร์ย่อยระดับแรก ไฟล์ที่อยู่ในโฟลเดอร์ที่เลือกโดยตรงจะรวมอยู่ในคอลเลกชันเดียวกัน โหมดนี้ไม่รองรับการดึงข้อมูลเมตา ให้เปลี่ยนเป็น «ตามผลงาน» เพื่อดึงข้อมูลเมตา';
+      case 'video_source_grouping_series_hint':
+        return 'ระบุผลงานและตอนจากชื่อไฟล์ แล้วจับคู่ข้อมูลเมตา';
+      case 'video_source_grouping_change_hint':
+        return 'การสแกนครั้งถัดไปจะใช้การตั้งค่านี้ คอลเลกชันและข้อมูลเมตาที่มีอยู่จะยังคงอยู่';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'มีหลายผลงานที่ใช้ชื่อนี้ เปิดแท็บผลงานที่รอยืนยัน แล้วเลือกรายการที่ต้องการจับคู่';
+      case 'video_source_scrape_pending_tab':
+        return 'ยังไม่จับคู่';
       default:
         return null;
     }
@@ -294631,6 +296013,48 @@ extension on _StringsTr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return 'Bu pencere kapatıldıktan sonra görevler devam eder.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Tüm görevleri iptal et';
+      case 'video_source_scrape_queue_waiting':
+        return 'Sırada';
+      case 'video_source_scrape_queue_remove':
+        return 'Kuyruktan kaldır';
+      case 'video_source_scrape_queue_submitted':
+        return 'Gönderildi';
+      case 'video_source_scrape_pending_empty':
+        return 'Elle eşleştirilmesi gereken eser yok.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Bu liste yüklenemedi. Tekrar deneyin.';
+      case 'video_source_scrape_list_reload':
+        return 'Yeniden yükle';
+      case 'video_source_scrape_manual_current_work':
+        return 'Geçerli eser';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Ada göre arayın veya bir kimlik ya da resmî anime URL’si girmek için AniDB kimliğini seçin. Geçerli esere uygulamak için bir sonuç seçin.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Pozitif bir AniDB kimliği veya geçerli bir AniDB anime URL’si girin.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Ada göre';
+      case 'video_source_scrape_manual_by_id':
+        return 'AniDB kimliği';
+      case 'video_source_grouping_mode':
+        return 'Video düzeni';
+      case 'video_source_grouping_folder':
+        return 'Klasöre göre';
+      case 'video_source_grouping_series':
+        return 'Esere göre';
+      case 'video_source_grouping_folder_hint':
+        return 'Birinci düzeydeki her alt klasör için bir koleksiyon oluşturur. Doğrudan seçilen klasörde bulunan dosyalar aynı koleksiyonda toplanır. Bu modda meta veriler alınamaz; almak için Esere göre moduna geçin.';
+      case 'video_source_grouping_series_hint':
+        return 'Dosya adlarından eserleri ve bölümleri tanır, ardından meta verileri eşleştirir.';
+      case 'video_source_grouping_change_hint':
+        return 'Sonraki tarama bu ayarı kullanır. Mevcut koleksiyonlar ve meta veriler korunur.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Bu ada sahip birden fazla eser var. Onay bekleyen eserler sekmesini açın ve eşleştirilecek öğeyi seçin.';
+      case 'video_source_scrape_pending_tab':
+        return 'Eşleşmemiş';
       default:
         return null;
     }
@@ -303599,6 +305023,48 @@ extension on _StringsVi {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return 'Các tác vụ vẫn tiếp tục khi đóng cửa sổ này.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Hủy tất cả tác vụ';
+      case 'video_source_scrape_queue_waiting':
+        return 'Trong hàng đợi';
+      case 'video_source_scrape_queue_remove':
+        return 'Xóa khỏi hàng đợi';
+      case 'video_source_scrape_queue_submitted':
+        return 'Đã gửi';
+      case 'video_source_scrape_pending_empty':
+        return 'Không có tác phẩm nào cần ghép thủ công.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Không thể tải danh sách này. Vui lòng thử lại.';
+      case 'video_source_scrape_list_reload':
+        return 'Tải lại';
+      case 'video_source_scrape_manual_current_work':
+        return 'Tác phẩm hiện tại';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Tìm theo tên hoặc chọn ID AniDB để nhập ID hay URL anime chính thức. Chọn một kết quả để áp dụng cho tác phẩm hiện tại.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Nhập ID AniDB là số nguyên dương hoặc URL anime AniDB hợp lệ.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Theo tên';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID AniDB';
+      case 'video_source_grouping_mode':
+        return 'Cách nhóm video';
+      case 'video_source_grouping_folder':
+        return 'Theo thư mục';
+      case 'video_source_grouping_series':
+        return 'Theo tác phẩm';
+      case 'video_source_grouping_folder_hint':
+        return 'Tạo một bộ sưu tập cho mỗi thư mục con cấp đầu tiên. Các tệp nằm trực tiếp trong thư mục đã chọn được gom vào cùng một bộ sưu tập. Chế độ này không hỗ trợ lấy siêu dữ liệu; hãy chuyển sang Theo tác phẩm để lấy.';
+      case 'video_source_grouping_series_hint':
+        return 'Nhận diện tác phẩm và tập phim từ tên tệp, sau đó ghép siêu dữ liệu.';
+      case 'video_source_grouping_change_hint':
+        return 'Lần quét tiếp theo sẽ dùng thiết lập này. Các bộ sưu tập và siêu dữ liệu hiện có sẽ được giữ nguyên.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Có nhiều tác phẩm trùng tên này. Mở thẻ tác phẩm chờ xác nhận và chọn mục cụ thể để ghép.';
+      case 'video_source_scrape_pending_tab':
+        return 'Chưa ghép';
       default:
         return null;
     }
@@ -312488,6 +313954,48 @@ extension on _StringsZhCn {
         return '打开有声书面板';
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) => '运行于 ${provider} · 静态融合图';
+      case 'video_source_scrape_background_hint':
+        return '关闭窗口后，任务会继续在后台执行。';
+      case 'video_source_scrape_queue_cancel_all':
+        return '取消全部任务';
+      case 'video_source_scrape_queue_waiting':
+        return '排队中';
+      case 'video_source_scrape_queue_remove':
+        return '撤回此任务';
+      case 'video_source_scrape_queue_submitted':
+        return '已加入队列';
+      case 'video_source_scrape_pending_empty':
+        return '没有需要手动匹配的作品。';
+      case 'video_source_scrape_list_load_failed':
+        return '列表加载失败，请重试。';
+      case 'video_source_scrape_list_reload':
+        return '重新加载';
+      case 'video_source_scrape_manual_current_work':
+        return '当前作品';
+      case 'video_source_scrape_manual_query_hint':
+        return '按标题搜索，或切换到 AniDB ID 输入编号或官方作品链接。选择结果后才会应用到当前作品。';
+      case 'video_source_scrape_manual_id_invalid':
+        return '请输入正整数 AniDB ID 或有效的 AniDB 作品链接。';
+      case 'video_source_scrape_manual_by_title':
+        return '按标题';
+      case 'video_source_scrape_manual_by_id':
+        return '按 AniDB ID';
+      case 'video_source_grouping_mode':
+        return '视频分组方式';
+      case 'video_source_grouping_folder':
+        return '按文件夹';
+      case 'video_source_grouping_series':
+        return '按作品';
+      case 'video_source_grouping_folder_hint':
+        return '每个一级子文件夹创建一个合集，根目录中的视频归入根合集。此模式仅整理视频，不刮削作品资料；如需刮削，请切换为按作品。';
+      case 'video_source_grouping_series_hint':
+        return '按文件名识别作品与分集，再匹配作品资料。';
+      case 'video_source_grouping_change_hint':
+        return '下次扫描使用此设置，已有合集和资料会保留。';
+      case 'video_source_scrape_manual_ambiguous':
+        return '存在多个同名作品。请打开待确认页，选择具体条目进行匹配。';
+      case 'video_source_scrape_pending_tab':
+        return '待确认';
       default:
         return null;
     }
@@ -321385,6 +322893,48 @@ extension on _StringsZhHk {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'video_source_scrape_background_hint':
+        return '關閉此視窗後，任務仍會繼續執行。';
+      case 'video_source_scrape_queue_cancel_all':
+        return '取消所有任務';
+      case 'video_source_scrape_queue_waiting':
+        return '排隊中';
+      case 'video_source_scrape_queue_remove':
+        return '從佇列移除';
+      case 'video_source_scrape_queue_submitted':
+        return '已提交';
+      case 'video_source_scrape_pending_empty':
+        return '沒有需要手動配對的作品。';
+      case 'video_source_scrape_list_load_failed':
+        return '無法載入此清單，請重試。';
+      case 'video_source_scrape_list_reload':
+        return '重新載入';
+      case 'video_source_scrape_manual_current_work':
+        return '目前作品';
+      case 'video_source_scrape_manual_query_hint':
+        return '按名稱搜尋，或選擇「AniDB ID」輸入 ID 或官方動畫網址。選擇搜尋結果後，便會套用至目前作品。';
+      case 'video_source_scrape_manual_id_invalid':
+        return '請輸入正整數的 AniDB ID，或有效的 AniDB 動畫網址。';
+      case 'video_source_scrape_manual_by_title':
+        return '按名稱';
+      case 'video_source_scrape_manual_by_id':
+        return 'AniDB ID';
+      case 'video_source_grouping_mode':
+        return '影片整理方式';
+      case 'video_source_grouping_folder':
+        return '按資料夾';
+      case 'video_source_grouping_series':
+        return '按作品';
+      case 'video_source_grouping_folder_hint':
+        return '為每個第一層子資料夾建立一個合集。直接放在所選資料夾內的檔案會歸入同一合集。此模式不支援刮削中繼資料；如需刮削，請切換至「按作品」。';
+      case 'video_source_grouping_series_hint':
+        return '從檔案名稱識別作品及集數，再配對中繼資料。';
+      case 'video_source_grouping_change_hint':
+        return '下次掃描會使用此設定。現有合集及中繼資料會保留。';
+      case 'video_source_scrape_manual_ambiguous':
+        return '有多個同名作品。請開啟待確認頁，選擇具體項目進行配對。';
+      case 'video_source_scrape_pending_tab':
+        return '待確認';
       default:
         return null;
     }
