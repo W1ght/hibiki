@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 74443 (4379 per locale)
+/// Strings: 74562 (4386 per locale)
 ///
-/// Built on 2026-09-07 at 07:10 UTC
+/// Built on 2026-09-07 at 08:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4059,7 +4059,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_source_scrape_status_interrupted => 'Interrupted';
   String get video_source_scrape_locale => 'Metadata language';
   String get video_source_scrape_locale_hint =>
-      'Preferred language for titles, summaries and images';
+      'Preferred language for TMDB fallback and supplementary details. MAL uses the titles and text supplied by MAL.';
   String get video_source_scrape_confirmation_title => 'Confirm metadata match';
   String get video_source_scrape_confirmation_hint =>
       'Multiple exact matches were found. Choose the correct work to save its provider binding.';
@@ -4930,10 +4930,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_style_title => 'Dictionary styling';
   String get video_source_scrape_anidb_client => 'AniDB client name';
   String get video_source_scrape_anidb_client_hint =>
-      'Registered AniDB HTTP API client name; leave blank to use the cached title catalog only';
+      'Registered AniDB client name for UDP file identification; hashing is unavailable without a registered client.';
   String get video_source_scrape_anidb_client_version => 'AniDB client version';
   String get video_source_scrape_anidb_client_version_hint =>
-      'Positive version registered with AniDB; HTTP API stays disabled until both fields are valid';
+      'Positive client version registered with AniDB. UDP file identification also requires your account credentials.';
   String get video_scrape_view_source => 'View source details';
   String get video_setting_auto_scrape_hint =>
       'Automatically identify and fetch video metadata after library scans';
@@ -6039,11 +6039,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_source_scrape_list_reload => 'Reload';
   String get video_source_scrape_manual_current_work => 'Current work';
   String get video_source_scrape_manual_query_hint =>
-      'Search by title, or choose AniDB ID to enter an ID or official anime URL. Select a result to apply it to the current work.';
+      'Search by title, or select MAL / TMDB movie / TMDB TV and enter an ID or official URL. Select a result to apply it to the current work.';
   String get video_source_scrape_manual_id_invalid =>
-      'Enter a positive AniDB ID or a valid AniDB anime URL.';
+      'Enter a positive work ID or an official URL matching the selected source and type.';
   String get video_source_scrape_manual_by_title => 'By title';
-  String get video_source_scrape_manual_by_id => 'AniDB ID';
+  String get video_source_scrape_manual_by_id => 'Work ID';
   String get video_source_grouping_mode => 'Video organization';
   String get video_source_grouping_folder => 'By folder';
   String get video_source_grouping_series => 'By work';
@@ -6056,6 +6056,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_source_scrape_manual_ambiguous =>
       'Several works have this title. Open the pending works tab and select the specific item to match.';
   String get video_source_scrape_pending_tab => 'Unmatched';
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB movie';
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB TV';
+  String get video_source_scrape_provider_policy =>
+      'MAL (via Jikan) is the primary metadata source; TMDB is the fallback.';
+  String get video_anidb_hash_enabled => 'Identify files with AniDB ED2K';
+  String get video_anidb_hash_hint =>
+      'Requires an AniDB account and a registered client. Uploads only file size and hash. AniDB UDP login is unencrypted; enable only on a trusted network.';
+  String get video_anidb_username => 'AniDB username';
+  String get video_anidb_password => 'AniDB password';
 }
 
 // Path: <root>
@@ -12959,7 +12968,7 @@ class _StringsAr extends _StringsEn {
   String get video_source_scrape_locale => 'لغة البيانات الوصفية';
   @override
   String get video_source_scrape_locale_hint =>
-      'اللغة المفضلة للعناوين والملخصات والصور';
+      'اللغة المفضلة لبيانات TMDB البديلة والتفاصيل التكميلية. يستخدم MAL العناوين والنصوص الأصلية التي يوفّرها.';
   @override
   String get video_source_scrape_confirmation_title =>
       'تأكيد مطابقة البيانات الوصفية';
@@ -14453,12 +14462,12 @@ class _StringsAr extends _StringsEn {
   String get video_source_scrape_anidb_client => 'اسم عميل AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'اسم عميل AniDB HTTP API المسجّل؛ اتركه فارغاً لاستخدام كتالوج العناوين المخزّن فقط';
+      'اسم عميل AniDB المسجّل للتعرّف على الملفات عبر UDP؛ لا يتوفر التعرّف بالتجزئة دون عميل مسجّل.';
   @override
   String get video_source_scrape_anidb_client_version => 'إصدار عميل AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'إصدار موجب مسجّل لدى AniDB؛ تبقى HTTP API معطّلة حتى يكون كلا الحقلين صالحين';
+      'إصدار العميل المسجّل لدى AniDB، ويجب أن يكون عددًا صحيحًا موجبًا. يتطلب التعرّف على الملفات عبر UDP أيضًا بيانات تسجيل الدخول إلى حسابك.';
   @override
   String get video_scrape_view_source => 'عرض تفاصيل المصدر';
   @override
@@ -16290,14 +16299,14 @@ class _StringsAr extends _StringsEn {
   String get video_source_scrape_manual_current_work => 'العمل الحالي';
   @override
   String get video_source_scrape_manual_query_hint =>
-      'ابحث بالعنوان، أو اختر معرّف AniDB لإدخال معرّف أو رابط أنمي رسمي. اختر نتيجة لتطبيقها على العمل الحالي.';
+      'ابحث بالعنوان، أو اختر MAL أو أفلام TMDB أو مسلسلات TMDB وأدخل المعرّف أو الرابط الرسمي. اختر نتيجة لتطبيقها على العمل الحالي.';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      'أدخل معرّف AniDB موجبًا أو رابط أنمي صالحًا من AniDB.';
+      'أدخل معرّف عمل صحيحًا موجبًا أو رابطًا رسميًا يطابق المصدر والنوع المحدّدين.';
   @override
   String get video_source_scrape_manual_by_title => 'حسب العنوان';
   @override
-  String get video_source_scrape_manual_by_id => 'معرّف AniDB';
+  String get video_source_scrape_manual_by_id => 'معرّف العمل';
   @override
   String get video_source_grouping_mode => 'تنظيم الفيديوهات';
   @override
@@ -16318,6 +16327,23 @@ class _StringsAr extends _StringsEn {
       'توجد عدة أعمال بهذا العنوان. افتح تبويب الأعمال المعلّقة واختر العنصر المحدد لمطابقته.';
   @override
   String get video_source_scrape_pending_tab => 'غير مطابق';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'أفلام TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'مسلسلات TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (عبر Jikan) هو المصدر الرئيسي للبيانات الوصفية؛ وTMDB هو المصدر البديل.';
+  @override
+  String get video_anidb_hash_enabled =>
+      'التعرّف على الملفات باستخدام AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'يتطلب حساب AniDB وعميلاً مسجّلاً. يُرسل حجم الملف وقيمة التجزئة فقط. تسجيل الدخول إلى AniDB عبر UDP غير مشفّر؛ فعّل هذه الميزة على شبكة موثوقة فقط.';
+  @override
+  String get video_anidb_username => 'اسم مستخدم AniDB';
+  @override
+  String get video_anidb_password => 'كلمة مرور AniDB';
 }
 
 // Path: <root>
@@ -23372,7 +23398,7 @@ class _StringsDe extends _StringsEn {
   String get video_source_scrape_locale => 'Metadatensprache';
   @override
   String get video_source_scrape_locale_hint =>
-      'Bevorzugte Sprache für Titel, Zusammenfassungen und Bilder';
+      'Bevorzugte Sprache für TMDB-Ersatzdaten und ergänzende Details. MAL verwendet die von MAL bereitgestellten Titel und Originaltexte.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Metadaten-Abgleich bestätigen';
@@ -24907,12 +24933,12 @@ class _StringsDe extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB-Clientname';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Registrierter AniDB-HTTP-API-Clientname; leer lassen, um nur den zwischengespeicherten Titelkatalog zu verwenden';
+      'Registrierter AniDB-Clientname zur Dateiidentifikation über UDP; ohne registrierten Client ist keine Hash-Erkennung möglich.';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB-Clientversion';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Positive, bei AniDB registrierte Version; die HTTP-API bleibt deaktiviert, bis beide Felder gültig sind';
+      'Bei AniDB registrierte Clientversion als positive ganze Zahl. Die Dateiidentifikation über UDP erfordert außerdem deine Zugangsdaten.';
   @override
   String get video_scrape_view_source => 'Quelldetails anzeigen';
   @override
@@ -26776,14 +26802,14 @@ class _StringsDe extends _StringsEn {
   String get video_source_scrape_manual_current_work => 'Aktuelles Werk';
   @override
   String get video_source_scrape_manual_query_hint =>
-      'Nach Titel suchen oder AniDB-ID wählen, um eine ID oder offizielle Anime-URL einzugeben. Ein Ergebnis auswählen, um es dem aktuellen Werk zuzuordnen.';
+      'Nach Titel suchen oder MAL, TMDB-Film bzw. TMDB-Serie auswählen und eine ID oder offizielle URL eingeben. Ein Ergebnis auswählen, um es auf das aktuelle Werk anzuwenden.';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      'Eine positive AniDB-ID oder eine gültige AniDB-Anime-URL eingeben.';
+      'Eine positive ganzzahlige Werk-ID oder eine offizielle URL eingeben, die zur gewählten Quelle und zum Typ passt.';
   @override
   String get video_source_scrape_manual_by_title => 'Nach Titel';
   @override
-  String get video_source_scrape_manual_by_id => 'AniDB-ID';
+  String get video_source_scrape_manual_by_id => 'Werk-ID';
   @override
   String get video_source_grouping_mode => 'Videos organisieren';
   @override
@@ -26804,6 +26830,23 @@ class _StringsDe extends _StringsEn {
       'Mehrere Werke haben diesen Titel. Öffne den Tab für ausstehende Werke und wähle den konkreten Eintrag zur Zuordnung aus.';
   @override
   String get video_source_scrape_pending_tab => 'Nicht zugeordnet';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB-Film';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB-Serie';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (über Jikan) ist die primäre Metadatenquelle; TMDB dient als Ersatz.';
+  @override
+  String get video_anidb_hash_enabled =>
+      'Dateien mit AniDB ED2K identifizieren';
+  @override
+  String get video_anidb_hash_hint =>
+      'Erfordert ein AniDB-Konto und einen registrierten Client. Überträgt nur Dateigröße und Hash. Die AniDB-Anmeldung über UDP ist unverschlüsselt; nur in einem vertrauenswürdigen Netzwerk aktivieren.';
+  @override
+  String get video_anidb_username => 'AniDB-Benutzername';
+  @override
+  String get video_anidb_password => 'AniDB-Passwort';
 }
 
 // Path: <root>
@@ -33892,7 +33935,7 @@ class _StringsEs extends _StringsEn {
   String get video_source_scrape_locale => 'Idioma de metadatos';
   @override
   String get video_source_scrape_locale_hint =>
-      'Idioma preferido para títulos, resúmenes e imágenes';
+      'Idioma preferido para los datos alternativos y complementarios de TMDB. MAL utiliza los títulos y textos originales que proporciona.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Confirmar coincidencia de metadatos';
@@ -35435,13 +35478,13 @@ class _StringsEs extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nombre de cliente AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nombre de cliente registrado de la API HTTP de AniDB; deje en blanco para usar solo el catálogo de títulos en caché';
+      'Nombre del cliente registrado de AniDB para identificar archivos por UDP; la identificación por hash no está disponible sin un cliente registrado.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Versión de cliente AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Versión positiva registrada en AniDB; la API HTTP se mantiene desactivada hasta que ambos campos sean válidos';
+      'Versión del cliente registrada en AniDB, expresada como un entero positivo. La identificación de archivos por UDP también requiere las credenciales de tu cuenta.';
   @override
   String get video_scrape_view_source => 'Ver detalles de fuente';
   @override
@@ -37316,14 +37359,14 @@ class _StringsEs extends _StringsEn {
   String get video_source_scrape_manual_current_work => 'Obra actual';
   @override
   String get video_source_scrape_manual_query_hint =>
-      'Busca por título o elige ID de AniDB para introducir un ID o una URL oficial de anime. Selecciona un resultado para aplicarlo a la obra actual.';
+      'Busca por título o selecciona MAL, película de TMDB o serie de TMDB e introduce un ID o una URL oficial. Selecciona un resultado para aplicarlo a la obra actual.';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      'Introduce un ID de AniDB positivo o una URL de anime válida de AniDB.';
+      'Introduce un ID de obra entero positivo o una URL oficial que coincida con la fuente y el tipo seleccionados.';
   @override
   String get video_source_scrape_manual_by_title => 'Por título';
   @override
-  String get video_source_scrape_manual_by_id => 'ID de AniDB';
+  String get video_source_scrape_manual_by_id => 'ID de obra';
   @override
   String get video_source_grouping_mode => 'Organización de vídeos';
   @override
@@ -37344,6 +37387,22 @@ class _StringsEs extends _StringsEn {
       'Hay varias obras con este título. Abre la pestaña de obras pendientes y selecciona el elemento concreto que quieras vincular.';
   @override
   String get video_source_scrape_pending_tab => 'Sin vincular';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'Película de TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'Serie de TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (mediante Jikan) es la fuente principal de metadatos; TMDB es la alternativa.';
+  @override
+  String get video_anidb_hash_enabled => 'Identificar archivos con AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Requiere una cuenta de AniDB y un cliente registrado. Solo envía el tamaño y el hash del archivo. El inicio de sesión de AniDB por UDP no está cifrado; actívalo solo en una red de confianza.';
+  @override
+  String get video_anidb_username => 'Nombre de usuario de AniDB';
+  @override
+  String get video_anidb_password => 'Contraseña de AniDB';
 }
 
 // Path: <root>
@@ -44449,7 +44508,7 @@ class _StringsFr extends _StringsEn {
   String get video_source_scrape_locale => 'Langue des métadonnées';
   @override
   String get video_source_scrape_locale_hint =>
-      'Langue préférée pour les titres, résumés et images';
+      'Langue préférée pour les données de repli et les détails complémentaires de TMDB. MAL utilise les titres et les textes originaux qu’il fournit.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Confirmer la correspondance de métadonnées';
@@ -46001,13 +46060,13 @@ class _StringsFr extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nom de client AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nom de client API HTTP AniDB enregistré ; laissez vide pour utiliser uniquement le catalogue de titres en cache';
+      'Nom du client AniDB enregistré pour identifier les fichiers par UDP ; l’identification par hachage est indisponible sans client enregistré.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Version du client AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Version positive enregistrée auprès d\'AniDB ; l\'API HTTP reste désactivée tant que les deux champs ne sont pas valides';
+      'Version du client enregistrée auprès d’AniDB, sous forme d’entier positif. L’identification des fichiers par UDP nécessite également les identifiants de votre compte.';
   @override
   String get video_scrape_view_source => 'Voir les détails de la source';
   @override
@@ -47889,14 +47948,14 @@ class _StringsFr extends _StringsEn {
   String get video_source_scrape_manual_current_work => 'Œuvre actuelle';
   @override
   String get video_source_scrape_manual_query_hint =>
-      'Recherchez par titre ou choisissez ID AniDB pour saisir un identifiant ou une URL officielle d’anime. Sélectionnez un résultat pour l’appliquer à l’œuvre actuelle.';
+      'Recherchez par titre, ou choisissez MAL, film TMDB ou série TMDB et saisissez un identifiant ou une URL officielle. Sélectionnez un résultat pour l’appliquer à l’œuvre actuelle.';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      'Saisissez un identifiant AniDB positif ou une URL d’anime AniDB valide.';
+      'Saisissez un identifiant d’œuvre entier positif ou une URL officielle correspondant à la source et au type sélectionnés.';
   @override
   String get video_source_scrape_manual_by_title => 'Par titre';
   @override
-  String get video_source_scrape_manual_by_id => 'ID AniDB';
+  String get video_source_scrape_manual_by_id => 'Identifiant de l’œuvre';
   @override
   String get video_source_grouping_mode => 'Organisation des vidéos';
   @override
@@ -47917,6 +47976,23 @@ class _StringsFr extends _StringsEn {
       'Plusieurs œuvres portent ce titre. Ouvrez l’onglet des œuvres en attente et sélectionnez l’élément précis à associer.';
   @override
   String get video_source_scrape_pending_tab => 'À associer';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'Film TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'Série TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (via Jikan) est la source principale de métadonnées ; TMDB sert de solution de repli.';
+  @override
+  String get video_anidb_hash_enabled =>
+      'Identifier les fichiers avec AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Nécessite un compte AniDB et un client enregistré. Seuls la taille et le hachage du fichier sont envoyés. La connexion à AniDB par UDP n’est pas chiffrée ; activez cette option uniquement sur un réseau de confiance.';
+  @override
+  String get video_anidb_username => 'Nom d’utilisateur AniDB';
+  @override
+  String get video_anidb_password => 'Mot de passe AniDB';
 }
 
 // Path: <root>
@@ -54905,7 +54981,7 @@ class _StringsId extends _StringsEn {
   String get video_source_scrape_locale => 'Bahasa metadata';
   @override
   String get video_source_scrape_locale_hint =>
-      'Bahasa yang diutamakan untuk judul, ringkasan, dan gambar';
+      'Bahasa pilihan untuk data cadangan dan detail tambahan dari TMDB. MAL menggunakan judul dan teks asli yang disediakan oleh MAL.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Konfirmasi kecocokan metadata';
@@ -56420,12 +56496,12 @@ class _StringsId extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nama klien AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nama klien API HTTP AniDB terdaftar; biarkan kosong untuk hanya menggunakan katalog judul yang di-cache';
+      'Nama klien AniDB terdaftar untuk identifikasi berkas melalui UDP; identifikasi hash tidak tersedia tanpa klien terdaftar.';
   @override
   String get video_source_scrape_anidb_client_version => 'Versi klien AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Versi positif yang terdaftar di AniDB; API HTTP tetap nonaktif sampai kedua kolom valid';
+      'Versi klien berupa bilangan bulat positif yang terdaftar di AniDB. Identifikasi berkas melalui UDP juga memerlukan kredensial akun Anda.';
   @override
   String get video_scrape_view_source => 'Lihat detail sumber';
   @override
@@ -58268,14 +58344,14 @@ class _StringsId extends _StringsEn {
   String get video_source_scrape_manual_current_work => 'Karya saat ini';
   @override
   String get video_source_scrape_manual_query_hint =>
-      'Cari berdasarkan judul, atau pilih ID AniDB untuk memasukkan ID atau URL anime resmi. Pilih hasil untuk diterapkan ke karya saat ini.';
+      'Cari berdasarkan judul, atau pilih MAL, film TMDB, atau serial TV TMDB lalu masukkan ID atau URL resmi. Pilih hasil untuk menerapkannya ke karya saat ini.';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      'Masukkan ID AniDB berupa bilangan positif atau URL anime AniDB yang valid.';
+      'Masukkan ID karya berupa bilangan bulat positif atau URL resmi yang sesuai dengan sumber dan jenis yang dipilih.';
   @override
   String get video_source_scrape_manual_by_title => 'Berdasarkan judul';
   @override
-  String get video_source_scrape_manual_by_id => 'ID AniDB';
+  String get video_source_scrape_manual_by_id => 'ID karya';
   @override
   String get video_source_grouping_mode => 'Pengaturan video';
   @override
@@ -58296,6 +58372,23 @@ class _StringsId extends _StringsEn {
       'Ada beberapa karya dengan judul ini. Buka tab karya yang menunggu konfirmasi dan pilih item yang ingin dicocokkan.';
   @override
   String get video_source_scrape_pending_tab => 'Belum cocok';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'Film TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'Serial TV TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (melalui Jikan) adalah sumber metadata utama; TMDB menjadi cadangan.';
+  @override
+  String get video_anidb_hash_enabled =>
+      'Identifikasi berkas dengan AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Memerlukan akun AniDB dan klien terdaftar. Hanya mengirim ukuran dan hash berkas. Login AniDB melalui UDP tidak terenkripsi; aktifkan hanya di jaringan tepercaya.';
+  @override
+  String get video_anidb_username => 'Nama pengguna AniDB';
+  @override
+  String get video_anidb_password => 'Kata sandi AniDB';
 }
 
 // Path: <root>
@@ -65340,7 +65433,7 @@ class _StringsIt extends _StringsEn {
   String get video_source_scrape_locale => 'Lingua metadati';
   @override
   String get video_source_scrape_locale_hint =>
-      'Lingua preferita per titoli, riepiloghi e immagini';
+      'Lingua preferita per i dati di riserva e i dettagli aggiuntivi di TMDB. MAL usa i titoli e i testi originali forniti da MAL.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Conferma abbinamento metadati';
@@ -66867,13 +66960,13 @@ class _StringsIt extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nome client AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nome client registrato per l\'API HTTP AniDB; lascia vuoto per usare solo il catalogo titoli in cache';
+      'Nome del client AniDB registrato per identificare i file tramite UDP; l’identificazione tramite hash non è disponibile senza un client registrato.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Versione client AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Versione positiva registrata con AniDB; l\'API HTTP resta disabilitata finché entrambi i campi non sono validi';
+      'Versione del client registrata presso AniDB, espressa come intero positivo. L’identificazione dei file tramite UDP richiede anche le credenziali del tuo account.';
   @override
   String get video_scrape_view_source => 'Visualizza dettagli fonte';
   @override
@@ -68737,14 +68830,14 @@ class _StringsIt extends _StringsEn {
   String get video_source_scrape_manual_current_work => 'Opera attuale';
   @override
   String get video_source_scrape_manual_query_hint =>
-      'Cerca per titolo oppure scegli ID AniDB per inserire un ID o un URL ufficiale dell’anime. Seleziona un risultato per applicarlo all’opera attuale.';
+      'Cerca per titolo oppure seleziona MAL, film TMDB o serie TV TMDB e inserisci un ID o un URL ufficiale. Seleziona un risultato per applicarlo all’opera attuale.';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      'Inserisci un ID AniDB positivo o un URL di anime AniDB valido.';
+      'Inserisci un ID dell’opera intero positivo o un URL ufficiale corrispondente alla fonte e al tipo selezionati.';
   @override
   String get video_source_scrape_manual_by_title => 'Per titolo';
   @override
-  String get video_source_scrape_manual_by_id => 'ID AniDB';
+  String get video_source_scrape_manual_by_id => 'ID dell’opera';
   @override
   String get video_source_grouping_mode => 'Organizzazione dei video';
   @override
@@ -68765,6 +68858,22 @@ class _StringsIt extends _StringsEn {
       'Più opere hanno questo titolo. Apri la scheda delle opere in attesa e seleziona l’elemento specifico da abbinare.';
   @override
   String get video_source_scrape_pending_tab => 'Da abbinare';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'Film TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'Serie TV TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (tramite Jikan) è la fonte principale dei metadati; TMDB è la fonte di riserva.';
+  @override
+  String get video_anidb_hash_enabled => 'Identifica i file con AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Richiede un account AniDB e un client registrato. Invia solo dimensione e hash del file. L’accesso ad AniDB tramite UDP non è crittografato; attiva solo su una rete fidata.';
+  @override
+  String get video_anidb_username => 'Nome utente AniDB';
+  @override
+  String get video_anidb_password => 'Password AniDB';
 }
 
 // Path: <root>
@@ -75394,7 +75503,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_source_scrape_locale => 'メタデータの言語';
   @override
-  String get video_source_scrape_locale_hint => 'タイトル、あらすじ、画像の優先言語';
+  String get video_source_scrape_locale_hint =>
+      'TMDB の代替・補足情報で優先する言語です。MAL の情報には、MAL が提供するタイトルと原文を使用します。';
   @override
   String get video_source_scrape_confirmation_title => 'メタデータの一致を確認';
   @override
@@ -76804,12 +76914,12 @@ class _StringsJa extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDBクライアント名';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      '登録済みのAniDB HTTP APIクライアント名。空欄にするとキャッシュされたタイトルカタログのみ使用します';
+      'UDP によるファイル識別に使う登録済み AniDB クライアント名です。登録済みクライアントが未設定の場合、ハッシュによる識別は利用できません。';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDBクライアントバージョン';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'AniDBに登録された正のバージョン番号。両方のフィールドが有効になるまでHTTP APIは無効のままです';
+      'AniDB に登録した正の整数のクライアントバージョンです。UDP によるファイル識別には、アカウントの認証情報も必要です。';
   @override
   String get video_scrape_view_source => 'ソースの詳細を表示';
   @override
@@ -78595,14 +78705,14 @@ class _StringsJa extends _StringsEn {
   String get video_source_scrape_manual_current_work => '現在の作品';
   @override
   String get video_source_scrape_manual_query_hint =>
-      'タイトルで検索するか、「AniDB ID」を選んでIDまたは公式のアニメURLを入力してください。検索結果を選択すると、現在の作品に適用されます。';
+      'タイトルで検索するか、MAL・TMDB 映画・TMDB テレビシリーズを選択して ID または公式 URL を入力してください。検索結果を選択すると現在の作品に適用されます。';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      '正の整数のAniDB ID、または有効なAniDBのアニメURLを入力してください。';
+      '正の整数の作品 ID、または選択したソースと種類に一致する公式 URL を入力してください。';
   @override
   String get video_source_scrape_manual_by_title => 'タイトルで検索';
   @override
-  String get video_source_scrape_manual_by_id => 'AniDB ID';
+  String get video_source_scrape_manual_by_id => '作品 ID';
   @override
   String get video_source_grouping_mode => '動画のまとめ方';
   @override
@@ -78623,6 +78733,22 @@ class _StringsJa extends _StringsEn {
       '同じタイトルの作品が複数あります。確認待ちタブを開き、照合する項目を選択してください。';
   @override
   String get video_source_scrape_pending_tab => '未照合';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB 映画';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB テレビシリーズ';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL（Jikan 経由）を主なメタデータソースとし、TMDB を予備ソースとして使用します。';
+  @override
+  String get video_anidb_hash_enabled => 'AniDB ED2K でファイルを識別';
+  @override
+  String get video_anidb_hash_hint =>
+      'AniDB アカウントと登録済みクライアントが必要です。送信するファイル情報はサイズとハッシュのみです。AniDB の UDP ログインは暗号化されないため、信頼できるネットワークでのみ有効にしてください。';
+  @override
+  String get video_anidb_username => 'AniDB ユーザー名';
+  @override
+  String get video_anidb_password => 'AniDB パスワード';
 }
 
 // Path: <root>
@@ -85267,7 +85393,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_source_scrape_locale => '메타데이터 언어';
   @override
-  String get video_source_scrape_locale_hint => '제목, 요약 및 이미지에 선호하는 언어';
+  String get video_source_scrape_locale_hint =>
+      'TMDB 대체 및 보충 정보에 사용할 선호 언어입니다. MAL은 MAL에서 제공하는 제목과 원문을 사용합니다.';
   @override
   String get video_source_scrape_confirmation_title => '메타데이터 매칭 확인';
   @override
@@ -86676,12 +86803,12 @@ class _StringsKo extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB 클라이언트 이름';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      '등록된 AniDB HTTP API 클라이언트 이름; 캐시된 제목 카탈로그만 사용하려면 비워 두세요';
+      'UDP 파일 식별에 사용할 등록된 AniDB 클라이언트 이름입니다. 등록된 클라이언트가 없으면 해시 식별을 사용할 수 없습니다.';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB 클라이언트 버전';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'AniDB에 등록된 양수 버전; 두 필드가 모두 유효할 때까지 HTTP API는 비활성 상태입니다';
+      'AniDB에 등록된 양의 정수 클라이언트 버전입니다. UDP 파일 식별에는 계정 로그인 정보도 필요합니다.';
   @override
   String get video_scrape_view_source => '소스 상세 보기';
   @override
@@ -88463,14 +88590,14 @@ class _StringsKo extends _StringsEn {
   String get video_source_scrape_manual_current_work => '현재 작품';
   @override
   String get video_source_scrape_manual_query_hint =>
-      '제목으로 검색하거나 AniDB ID를 선택해 ID 또는 공식 애니메이션 URL을 입력하세요. 결과를 선택하면 현재 작품에 적용됩니다.';
+      '제목으로 검색하거나 MAL, TMDB 영화, TMDB TV 시리즈를 선택하고 ID 또는 공식 URL을 입력하세요. 결과를 선택하면 현재 작품에 적용됩니다.';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      '양의 정수인 AniDB ID 또는 유효한 AniDB 애니메이션 URL을 입력하세요.';
+      '양의 정수로 된 작품 ID 또는 선택한 소스와 유형에 맞는 공식 URL을 입력하세요.';
   @override
   String get video_source_scrape_manual_by_title => '제목으로 검색';
   @override
-  String get video_source_scrape_manual_by_id => 'AniDB ID';
+  String get video_source_scrape_manual_by_id => '작품 ID';
   @override
   String get video_source_grouping_mode => '동영상 정리 방식';
   @override
@@ -88491,6 +88618,22 @@ class _StringsKo extends _StringsEn {
       '같은 제목의 작품이 여러 개 있습니다. 확인 대기 탭을 열고 일치시킬 항목을 선택하세요.';
   @override
   String get video_source_scrape_pending_tab => '미일치';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB 영화';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB TV 시리즈';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL(Jikan 경유)을 기본 메타데이터 소스로 사용하고, TMDB를 대체 소스로 사용합니다.';
+  @override
+  String get video_anidb_hash_enabled => 'AniDB ED2K로 파일 식별';
+  @override
+  String get video_anidb_hash_hint =>
+      'AniDB 계정과 등록된 클라이언트가 필요합니다. 파일 크기와 해시만 전송합니다. AniDB UDP 로그인은 암호화되지 않으므로 신뢰할 수 있는 네트워크에서만 활성화하세요.';
+  @override
+  String get video_anidb_username => 'AniDB 사용자 이름';
+  @override
+  String get video_anidb_password => 'AniDB 비밀번호';
 }
 
 // Path: <root>
@@ -95503,7 +95646,7 @@ class _StringsNl extends _StringsEn {
   String get video_source_scrape_locale => 'Metadatataal';
   @override
   String get video_source_scrape_locale_hint =>
-      'Voorkeurstaal voor titels, samenvattingen en afbeeldingen';
+      'Voorkeurstaal voor vervangende gegevens en aanvullende details van TMDB. MAL gebruikt de titels en oorspronkelijke teksten die MAL aanlevert.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Metadatamatch bevestigen';
@@ -97024,12 +97167,12 @@ class _StringsNl extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB-clientnaam';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Geregistreerde AniDB HTTP API-clientnaam; leeg laten om alleen de gecachte titelcatalogus te gebruiken';
+      'Geregistreerde AniDB-clientnaam voor bestandsidentificatie via UDP; hashidentificatie is niet beschikbaar zonder geregistreerde client.';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB-clientversie';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Positieve versie geregistreerd bij AniDB; HTTP API blijft uitgeschakeld tot beide velden geldig zijn';
+      'Bij AniDB geregistreerde clientversie als positief geheel getal. Bestandsidentificatie via UDP vereist ook de inloggegevens van je account.';
   @override
   String get video_scrape_view_source => 'Brondetails bekijken';
   @override
@@ -98889,14 +99032,14 @@ class _StringsNl extends _StringsEn {
   String get video_source_scrape_manual_current_work => 'Huidig werk';
   @override
   String get video_source_scrape_manual_query_hint =>
-      'Zoek op titel of kies AniDB-ID om een ID of officiële anime-URL in te voeren. Selecteer een resultaat om het op het huidige werk toe te passen.';
+      'Zoek op titel of selecteer MAL, TMDB-film of TMDB-serie en voer een ID of officiële URL in. Selecteer een resultaat om het op het huidige werk toe te passen.';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      'Voer een positieve AniDB-ID of een geldige AniDB-anime-URL in.';
+      'Voer een positieve gehele werk-ID in of een officiële URL die overeenkomt met de geselecteerde bron en het type.';
   @override
   String get video_source_scrape_manual_by_title => 'Op titel';
   @override
-  String get video_source_scrape_manual_by_id => 'AniDB-ID';
+  String get video_source_scrape_manual_by_id => 'Werk-ID';
   @override
   String get video_source_grouping_mode => 'Video’s indelen';
   @override
@@ -98917,6 +99060,23 @@ class _StringsNl extends _StringsEn {
       'Meerdere werken hebben deze titel. Open het tabblad met werken die nog moeten worden bevestigd en selecteer het specifieke item om te koppelen.';
   @override
   String get video_source_scrape_pending_tab => 'Ongekoppeld';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB-film';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB-serie';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (via Jikan) is de primaire bron voor metadata; TMDB is de terugvaloptie.';
+  @override
+  String get video_anidb_hash_enabled =>
+      'Bestanden identificeren met AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Vereist een AniDB-account en een geregistreerde client. Verstuurt alleen de bestandsgrootte en hash. Aanmelden bij AniDB via UDP is niet versleuteld; schakel dit alleen in op een vertrouwd netwerk.';
+  @override
+  String get video_anidb_username => 'AniDB-gebruikersnaam';
+  @override
+  String get video_anidb_password => 'AniDB-wachtwoord';
 }
 
 // Path: <root>
@@ -105962,7 +106122,7 @@ class _StringsPtBr extends _StringsEn {
   String get video_source_scrape_locale => 'Idioma dos metadados';
   @override
   String get video_source_scrape_locale_hint =>
-      'Idioma preferido para títulos, sinopses e imagens';
+      'Idioma preferido para os dados alternativos e complementares do TMDB. O MAL usa os títulos e textos originais fornecidos pelo MAL.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Confirmar correspondência de metadados';
@@ -107501,13 +107661,13 @@ class _StringsPtBr extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nome do cliente AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nome de cliente de API HTTP AniDB registrado; deixe em branco para usar apenas o catálogo de títulos em cache';
+      'Nome do cliente AniDB registrado para identificar arquivos via UDP; a identificação por hash não está disponível sem um cliente registrado.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Versão do cliente AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Versão positiva registrada no AniDB; a API HTTP permanece desativada até ambos os campos serem válidos';
+      'Versão do cliente registrada no AniDB, expressa como um inteiro positivo. A identificação de arquivos via UDP também exige as credenciais da sua conta.';
   @override
   String get video_scrape_view_source => 'Ver detalhes da fonte';
   @override
@@ -109369,14 +109529,14 @@ class _StringsPtBr extends _StringsEn {
   String get video_source_scrape_manual_current_work => 'Obra atual';
   @override
   String get video_source_scrape_manual_query_hint =>
-      'Pesquise pelo título ou escolha ID do AniDB para inserir um ID ou uma URL oficial de anime. Selecione um resultado para aplicá-lo à obra atual.';
+      'Pesquise pelo título ou selecione MAL, filme do TMDB ou série do TMDB e insira um ID ou URL oficial. Selecione um resultado para aplicá-lo à obra atual.';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      'Insira um ID do AniDB positivo ou uma URL de anime válida do AniDB.';
+      'Insira um ID de obra inteiro positivo ou uma URL oficial que corresponda à fonte e ao tipo selecionados.';
   @override
   String get video_source_scrape_manual_by_title => 'Por título';
   @override
-  String get video_source_scrape_manual_by_id => 'ID do AniDB';
+  String get video_source_scrape_manual_by_id => 'ID da obra';
   @override
   String get video_source_grouping_mode => 'Organização de vídeos';
   @override
@@ -109397,6 +109557,22 @@ class _StringsPtBr extends _StringsEn {
       'Há várias obras com este título. Abra a aba de obras pendentes e selecione o item específico para fazer a correspondência.';
   @override
   String get video_source_scrape_pending_tab => 'Não vinculados';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'Filme do TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'Série do TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (via Jikan) é a fonte principal de metadados; TMDB é a alternativa.';
+  @override
+  String get video_anidb_hash_enabled => 'Identificar arquivos com AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Requer uma conta AniDB e um cliente registrado. Envia apenas o tamanho e o hash do arquivo. O login no AniDB via UDP não é criptografado; ative apenas em uma rede confiável.';
+  @override
+  String get video_anidb_username => 'Nome de usuário do AniDB';
+  @override
+  String get video_anidb_password => 'Senha do AniDB';
 }
 
 // Path: <root>
@@ -116426,7 +116602,7 @@ class _StringsRu extends _StringsEn {
   String get video_source_scrape_locale => 'Язык метаданных';
   @override
   String get video_source_scrape_locale_hint =>
-      'Предпочтительный язык для названий, описаний и изображений';
+      'Предпочтительный язык резервных и дополнительных данных TMDB. Для MAL используются названия и исходные тексты, предоставленные MAL.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Подтвердите совпадение метаданных';
@@ -117955,12 +118131,12 @@ class _StringsRu extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Имя клиента AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Зарегистрированное имя клиента AniDB HTTP API; оставьте пустым, чтобы использовать только кэшированный каталог';
+      'Имя зарегистрированного клиента AniDB для определения файлов по UDP; без зарегистрированного клиента определение по хешу недоступно.';
   @override
   String get video_source_scrape_anidb_client_version => 'Версия клиента AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Положительный номер версии, зарегистрированный в AniDB; HTTP API остаётся отключённым, пока оба поля не заполнены корректно';
+      'Версия клиента, зарегистрированная в AniDB, в виде положительного целого числа. Для определения файлов по UDP также нужны данные для входа в вашу учётную запись.';
   @override
   String get video_scrape_view_source => 'Подробности источника';
   @override
@@ -119826,14 +120002,14 @@ class _StringsRu extends _StringsEn {
   String get video_source_scrape_manual_current_work => 'Текущее произведение';
   @override
   String get video_source_scrape_manual_query_hint =>
-      'Найдите по названию или выберите «ID AniDB», чтобы ввести ID или официальную ссылку на аниме. Выберите результат, чтобы применить его к текущему произведению.';
+      'Ищите по названию или выберите MAL, фильм TMDB или сериал TMDB и введите ID либо официальную ссылку. Выберите результат, чтобы применить его к текущему произведению.';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      'Введите положительный ID AniDB или действительную ссылку на страницу аниме в AniDB.';
+      'Введите ID произведения в виде положительного целого числа или официальную ссылку, соответствующую выбранному источнику и типу.';
   @override
   String get video_source_scrape_manual_by_title => 'По названию';
   @override
-  String get video_source_scrape_manual_by_id => 'ID AniDB';
+  String get video_source_scrape_manual_by_id => 'ID произведения';
   @override
   String get video_source_grouping_mode => 'Группировка видео';
   @override
@@ -119854,6 +120030,22 @@ class _StringsRu extends _StringsEn {
       'Есть несколько произведений с таким названием. Откройте вкладку ожидающих подтверждения и выберите конкретную запись для сопоставления.';
   @override
   String get video_source_scrape_pending_tab => 'Не сопоставлено';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'Фильм TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'Сериал TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (через Jikan) — основной источник метаданных; TMDB — резервный.';
+  @override
+  String get video_anidb_hash_enabled => 'Определять файлы через AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Требуются учётная запись AniDB и зарегистрированный клиент. Отправляются только размер и хеш файла. Вход в AniDB по UDP не шифруется; включайте только в доверенной сети.';
+  @override
+  String get video_anidb_username => 'Имя пользователя AniDB';
+  @override
+  String get video_anidb_password => 'Пароль AniDB';
 }
 
 // Path: <root>
@@ -126746,7 +126938,7 @@ class _StringsTh extends _StringsEn {
   String get video_source_scrape_locale => 'ภาษาข้อมูลเมตา';
   @override
   String get video_source_scrape_locale_hint =>
-      'ภาษาที่ต้องการสำหรับชื่อ สรุปเนื้อหา และรูปภาพ';
+      'ภาษาที่ต้องการสำหรับข้อมูลสำรองและข้อมูลเสริมจาก TMDB ส่วน MAL ใช้ชื่อเรื่องและข้อความต้นฉบับที่ MAL ให้มา';
   @override
   String get video_source_scrape_confirmation_title =>
       'ยืนยันการจับคู่ข้อมูลเมตา';
@@ -128243,13 +128435,13 @@ class _StringsTh extends _StringsEn {
   String get video_source_scrape_anidb_client => 'ชื่อไคลเอนต์ AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'ชื่อไคลเอนต์ HTTP API ของ AniDB ที่ลงทะเบียนแล้ว เว้นว่างเพื่อใช้เฉพาะแค็ตตาล็อกชื่อเรื่องที่แคชไว้';
+      'ชื่อไคลเอนต์ AniDB ที่ลงทะเบียนสำหรับระบุไฟล์ผ่าน UDP หากไม่มีไคลเอนต์ที่ลงทะเบียน จะไม่สามารถระบุไฟล์ด้วยแฮชได้';
   @override
   String get video_source_scrape_anidb_client_version =>
       'เวอร์ชันไคลเอนต์ AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'เวอร์ชันเลขบวกที่ลงทะเบียนกับ AniDB HTTP API จะไม่ทำงานจนกว่าทั้งสองช่องจะถูกต้อง';
+      'เวอร์ชันไคลเอนต์ที่ลงทะเบียนกับ AniDB ต้องเป็นจำนวนเต็มบวก การระบุไฟล์ผ่าน UDP ต้องใช้ข้อมูลเข้าสู่ระบบบัญชีของคุณด้วย';
   @override
   String get video_scrape_view_source => 'ดูรายละเอียดแหล่ง';
   @override
@@ -130083,14 +130275,14 @@ class _StringsTh extends _StringsEn {
   String get video_source_scrape_manual_current_work => 'ผลงานปัจจุบัน';
   @override
   String get video_source_scrape_manual_query_hint =>
-      'ค้นหาด้วยชื่อ หรือเลือก ID ของ AniDB เพื่อป้อน ID หรือ URL อนิเมะอย่างเป็นทางการ เลือกผลลัพธ์เพื่อนำไปใช้กับผลงานปัจจุบัน';
+      'ค้นหาด้วยชื่อเรื่อง หรือเลือก MAL, ภาพยนตร์ TMDB หรือซีรีส์ TMDB แล้วป้อน ID หรือ URL ทางการ เลือกผลลัพธ์เพื่อนำไปใช้กับผลงานปัจจุบัน';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      'ป้อน ID ของ AniDB ที่เป็นจำนวนเต็มบวก หรือ URL อนิเมะของ AniDB ที่ถูกต้อง';
+      'ป้อน ID ผลงานที่เป็นจำนวนเต็มบวก หรือ URL ทางการที่ตรงกับแหล่งข้อมูลและประเภทที่เลือก';
   @override
   String get video_source_scrape_manual_by_title => 'ตามชื่อ';
   @override
-  String get video_source_scrape_manual_by_id => 'ID ของ AniDB';
+  String get video_source_scrape_manual_by_id => 'ID ผลงาน';
   @override
   String get video_source_grouping_mode => 'การจัดกลุ่มวิดีโอ';
   @override
@@ -130111,6 +130303,22 @@ class _StringsTh extends _StringsEn {
       'มีหลายผลงานที่ใช้ชื่อนี้ เปิดแท็บผลงานที่รอยืนยัน แล้วเลือกรายการที่ต้องการจับคู่';
   @override
   String get video_source_scrape_pending_tab => 'ยังไม่จับคู่';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'ภาพยนตร์ TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'ซีรีส์ TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (ผ่าน Jikan) เป็นแหล่งข้อมูลเมตาหลัก และใช้ TMDB เป็นแหล่งสำรอง';
+  @override
+  String get video_anidb_hash_enabled => 'ระบุไฟล์ด้วย AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'ต้องมีบัญชี AniDB และไคลเอนต์ที่ลงทะเบียนแล้ว ส่งเฉพาะขนาดไฟล์และค่าแฮช การเข้าสู่ระบบ AniDB ผ่าน UDP ไม่ได้เข้ารหัส โปรดเปิดใช้เฉพาะบนเครือข่ายที่เชื่อถือได้';
+  @override
+  String get video_anidb_username => 'ชื่อผู้ใช้ AniDB';
+  @override
+  String get video_anidb_password => 'รหัสผ่าน AniDB';
 }
 
 // Path: <root>
@@ -137085,7 +137293,7 @@ class _StringsTr extends _StringsEn {
   String get video_source_scrape_locale => 'Meta veri dili';
   @override
   String get video_source_scrape_locale_hint =>
-      'Başlıklar, özetler ve görseller için tercih edilen dil';
+      'TMDB yedek verileri ve ek ayrıntıları için tercih edilen dil. MAL, MAL tarafından sağlanan başlıkları ve özgün metinleri kullanır.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Meta veri eşleşmesini onayla';
@@ -138601,12 +138809,12 @@ class _StringsTr extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB istemci adı';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Kayıtlı AniDB HTTP API istemci adı; yalnızca önbelleğe alınmış başlık kataloğunu kullanmak için boş bırakın';
+      'UDP üzerinden dosya tanımlama için kayıtlı AniDB istemci adı; kayıtlı bir istemci olmadan karma ile tanımlama kullanılamaz.';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB istemci sürümü';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'AniDB\'ye kayıtlı pozitif sürüm; her iki alan da geçerli olana kadar HTTP API devre dışı kalır';
+      'AniDB’ye kaydedilmiş, pozitif tam sayı olan istemci sürümü. UDP üzerinden dosya tanımlama için hesap giriş bilgileriniz de gereklidir.';
   @override
   String get video_scrape_view_source => 'Kaynak ayrıntılarını görüntüle';
   @override
@@ -140457,14 +140665,14 @@ class _StringsTr extends _StringsEn {
   String get video_source_scrape_manual_current_work => 'Geçerli eser';
   @override
   String get video_source_scrape_manual_query_hint =>
-      'Ada göre arayın veya bir kimlik ya da resmî anime URL’si girmek için AniDB kimliğini seçin. Geçerli esere uygulamak için bir sonuç seçin.';
+      'Başlığa göre arayın veya MAL, TMDB filmi ya da TMDB dizisini seçip bir kimlik veya resmî URL girin. Geçerli esere uygulamak için bir sonuç seçin.';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      'Pozitif bir AniDB kimliği veya geçerli bir AniDB anime URL’si girin.';
+      'Pozitif tam sayı olan bir eser kimliği veya seçilen kaynak ve türle eşleşen resmî bir URL girin.';
   @override
   String get video_source_scrape_manual_by_title => 'Ada göre';
   @override
-  String get video_source_scrape_manual_by_id => 'AniDB kimliği';
+  String get video_source_scrape_manual_by_id => 'Eser kimliği';
   @override
   String get video_source_grouping_mode => 'Video düzeni';
   @override
@@ -140485,6 +140693,22 @@ class _StringsTr extends _StringsEn {
       'Bu ada sahip birden fazla eser var. Onay bekleyen eserler sekmesini açın ve eşleştirilecek öğeyi seçin.';
   @override
   String get video_source_scrape_pending_tab => 'Eşleşmemiş';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB filmi';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB dizisi';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (Jikan üzerinden) birincil meta veri kaynağıdır; TMDB yedek kaynaktır.';
+  @override
+  String get video_anidb_hash_enabled => 'Dosyaları AniDB ED2K ile tanımla';
+  @override
+  String get video_anidb_hash_hint =>
+      'AniDB hesabı ve kayıtlı bir istemci gerektirir. Yalnızca dosya boyutunu ve karma değerini gönderir. AniDB UDP oturumu şifrelenmeden açılır; yalnızca güvenilir bir ağda etkinleştirin.';
+  @override
+  String get video_anidb_username => 'AniDB kullanıcı adı';
+  @override
+  String get video_anidb_password => 'AniDB parolası';
 }
 
 // Path: <root>
@@ -147442,7 +147666,7 @@ class _StringsVi extends _StringsEn {
   String get video_source_scrape_locale => 'Ngôn ngữ metadata';
   @override
   String get video_source_scrape_locale_hint =>
-      'Ngôn ngữ ưu tiên cho tiêu đề, tóm tắt và hình ảnh';
+      'Ngôn ngữ ưu tiên cho dữ liệu dự phòng và thông tin bổ sung từ TMDB. MAL sử dụng tiêu đề và văn bản gốc do MAL cung cấp.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Xác nhận kết quả khớp metadata';
@@ -148952,13 +149176,13 @@ class _StringsVi extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Tên client AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Tên client HTTP API AniDB đã đăng ký; để trống để chỉ sử dụng danh mục tiêu đề đã lưu';
+      'Tên ứng dụng khách AniDB đã đăng ký để nhận diện tệp qua UDP; không thể nhận diện bằng mã băm nếu chưa có ứng dụng khách đã đăng ký.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Phiên bản client AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Phiên bản dương đã đăng ký với AniDB; HTTP API bị vô hiệu hóa cho đến khi cả hai trường hợp lệ';
+      'Phiên bản ứng dụng khách đã đăng ký với AniDB, là số nguyên dương. Nhận diện tệp qua UDP cũng cần thông tin đăng nhập tài khoản của bạn.';
   @override
   String get video_scrape_view_source => 'Xem chi tiết nguồn';
   @override
@@ -150802,14 +151026,14 @@ class _StringsVi extends _StringsEn {
   String get video_source_scrape_manual_current_work => 'Tác phẩm hiện tại';
   @override
   String get video_source_scrape_manual_query_hint =>
-      'Tìm theo tên hoặc chọn ID AniDB để nhập ID hay URL anime chính thức. Chọn một kết quả để áp dụng cho tác phẩm hiện tại.';
+      'Tìm theo tiêu đề, hoặc chọn MAL, phim điện ảnh TMDB hay phim truyền hình TMDB rồi nhập ID hoặc URL chính thức. Chọn một kết quả để áp dụng cho tác phẩm hiện tại.';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      'Nhập ID AniDB là số nguyên dương hoặc URL anime AniDB hợp lệ.';
+      'Nhập ID tác phẩm là số nguyên dương hoặc URL chính thức khớp với nguồn và loại đã chọn.';
   @override
   String get video_source_scrape_manual_by_title => 'Theo tên';
   @override
-  String get video_source_scrape_manual_by_id => 'ID AniDB';
+  String get video_source_scrape_manual_by_id => 'ID tác phẩm';
   @override
   String get video_source_grouping_mode => 'Cách nhóm video';
   @override
@@ -150830,6 +151054,22 @@ class _StringsVi extends _StringsEn {
       'Có nhiều tác phẩm trùng tên này. Mở thẻ tác phẩm chờ xác nhận và chọn mục cụ thể để ghép.';
   @override
   String get video_source_scrape_pending_tab => 'Chưa ghép';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'Phim điện ảnh TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'Phim truyền hình TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (qua Jikan) là nguồn siêu dữ liệu chính; TMDB là nguồn dự phòng.';
+  @override
+  String get video_anidb_hash_enabled => 'Nhận diện tệp bằng AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Cần tài khoản AniDB và ứng dụng khách đã đăng ký. Chỉ gửi kích thước và mã băm của tệp. Đăng nhập AniDB qua UDP không được mã hóa; chỉ bật trên mạng đáng tin cậy.';
+  @override
+  String get video_anidb_username => 'Tên người dùng AniDB';
+  @override
+  String get video_anidb_password => 'Mật khẩu AniDB';
 }
 
 // Path: <root>
@@ -157275,7 +157515,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_source_scrape_locale => '资料语言';
   @override
-  String get video_source_scrape_locale_hint => '标题、简介与图片的首选语言';
+  String get video_source_scrape_locale_hint =>
+      'TMDB 兜底及补充资料的首选语言；MAL 使用其提供的标题和原始文本。';
   @override
   String get video_source_scrape_confirmation_title => '确认资料匹配';
   @override
@@ -158620,12 +158861,12 @@ class _StringsZhCn extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB 客户端名称';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      '已登记的 AniDB HTTP API 客户端名称；留空时仅使用缓存标题目录';
+      '用于 UDP 文件识别的已注册 AniDB 客户端名称；未配置注册客户端时无法进行哈希识别。';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB 客户端版本';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      '在 AniDB 登记的正整数版本；两项均有效前不会启用 HTTP API';
+      '向 AniDB 登记的正整数客户端版本；UDP 文件识别还需要账号凭据。';
   @override
   String get video_scrape_view_source => '查看来源详情';
   @override
@@ -160303,14 +160544,14 @@ class _StringsZhCn extends _StringsEn {
   String get video_source_scrape_manual_current_work => '当前作品';
   @override
   String get video_source_scrape_manual_query_hint =>
-      '按标题搜索，或切换到 AniDB ID 输入编号或官方作品链接。选择结果后才会应用到当前作品。';
+      '按标题搜索，或选择 MAL、TMDB 电影、TMDB 电视剧并输入 ID 或官方链接。选择结果后才会应用到当前作品。';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      '请输入正整数 AniDB ID 或有效的 AniDB 作品链接。';
+      '请输入正整数作品 ID，或与所选来源及类型一致的官方链接。';
   @override
   String get video_source_scrape_manual_by_title => '按标题';
   @override
-  String get video_source_scrape_manual_by_id => '按 AniDB ID';
+  String get video_source_scrape_manual_by_id => '按作品 ID';
   @override
   String get video_source_grouping_mode => '视频分组方式';
   @override
@@ -160329,6 +160570,22 @@ class _StringsZhCn extends _StringsEn {
       '存在多个同名作品。请打开待确认页，选择具体条目进行匹配。';
   @override
   String get video_source_scrape_pending_tab => '待确认';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB 电影';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB 电视剧';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL（经 Jikan）为主要资料源，TMDB 兜底。';
+  @override
+  String get video_anidb_hash_enabled => '通过 AniDB ED2K 识别文件';
+  @override
+  String get video_anidb_hash_hint =>
+      '需要 AniDB 账号和已注册客户端，仅提交文件大小与哈希。AniDB UDP 登录未加密，请仅在可信网络下开启。';
+  @override
+  String get video_anidb_username => 'AniDB 用户名';
+  @override
+  String get video_anidb_password => 'AniDB 密码';
 }
 
 // Path: <root>
@@ -166776,7 +167033,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_scrape_locale => '資料語言';
   @override
-  String get video_source_scrape_locale_hint => '標題、簡介與圖片的首選語言';
+  String get video_source_scrape_locale_hint =>
+      'TMDB 後備及補充資料的首選語言；MAL 使用其提供的標題和原始文字。';
   @override
   String get video_source_scrape_confirmation_title => '確認資料匹配';
   @override
@@ -168125,12 +168383,12 @@ class _StringsZhHk extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB 客戶端名稱';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      '已登記的 AniDB HTTP API 客戶端名稱；留空時僅使用緩存標題目錄';
+      '用於 UDP 檔案識別的已註冊 AniDB 用戶端名稱；未設定已註冊用戶端時無法進行雜湊識別。';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB 客戶端版本';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      '在 AniDB 登記的正整數版本；兩項均有效前不會啟用 HTTP API';
+      '向 AniDB 登記的正整數用戶端版本；UDP 檔案識別亦需要帳戶憑證。';
   @override
   String get video_scrape_view_source => '查看來源詳情';
   @override
@@ -169851,14 +170109,14 @@ class _StringsZhHk extends _StringsEn {
   String get video_source_scrape_manual_current_work => '目前作品';
   @override
   String get video_source_scrape_manual_query_hint =>
-      '按名稱搜尋，或選擇「AniDB ID」輸入 ID 或官方動畫網址。選擇搜尋結果後，便會套用至目前作品。';
+      '按標題搜尋，或選擇 MAL、TMDB 電影、TMDB 電視劇並輸入 ID 或官方連結。選擇結果後才會套用至目前作品。';
   @override
   String get video_source_scrape_manual_id_invalid =>
-      '請輸入正整數的 AniDB ID，或有效的 AniDB 動畫網址。';
+      '請輸入正整數作品 ID，或與所選來源及類型一致的官方連結。';
   @override
   String get video_source_scrape_manual_by_title => '按名稱';
   @override
-  String get video_source_scrape_manual_by_id => 'AniDB ID';
+  String get video_source_scrape_manual_by_id => '按作品 ID';
   @override
   String get video_source_grouping_mode => '影片整理方式';
   @override
@@ -169877,6 +170135,22 @@ class _StringsZhHk extends _StringsEn {
       '有多個同名作品。請開啟待確認頁，選擇具體項目進行配對。';
   @override
   String get video_source_scrape_pending_tab => '待確認';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB 電影';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB 電視劇';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL（經 Jikan）為主要資料來源，TMDB 作後備。';
+  @override
+  String get video_anidb_hash_enabled => '透過 AniDB ED2K 識別檔案';
+  @override
+  String get video_anidb_hash_hint =>
+      '需要 AniDB 帳戶和已註冊用戶端，僅傳送檔案大小與雜湊值。AniDB UDP 登入未加密，請僅在可信網絡下啟用。';
+  @override
+  String get video_anidb_username => 'AniDB 使用者名稱';
+  @override
+  String get video_anidb_password => 'AniDB 密碼';
 }
 
 /// Flat map(s) containing all translations.
@@ -176055,7 +176329,7 @@ extension on _StringsEn {
       case 'video_source_scrape_locale':
         return 'Metadata language';
       case 'video_source_scrape_locale_hint':
-        return 'Preferred language for titles, summaries and images';
+        return 'Preferred language for TMDB fallback and supplementary details. MAL uses the titles and text supplied by MAL.';
       case 'video_source_scrape_confirmation_title':
         return 'Confirm metadata match';
       case 'video_source_scrape_confirmation_hint':
@@ -177332,11 +177606,11 @@ extension on _StringsEn {
       case 'video_source_scrape_anidb_client':
         return 'AniDB client name';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Registered AniDB HTTP API client name; leave blank to use the cached title catalog only';
+        return 'Registered AniDB client name for UDP file identification; hashing is unavailable without a registered client.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB client version';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Positive version registered with AniDB; HTTP API stays disabled until both fields are valid';
+        return 'Positive client version registered with AniDB. UDP file identification also requires your account credentials.';
       case 'video_scrape_view_source':
         return 'View source details';
       case 'video_setting_auto_scrape_hint':
@@ -178855,13 +179129,13 @@ extension on _StringsEn {
       case 'video_source_scrape_manual_current_work':
         return 'Current work';
       case 'video_source_scrape_manual_query_hint':
-        return 'Search by title, or choose AniDB ID to enter an ID or official anime URL. Select a result to apply it to the current work.';
+        return 'Search by title, or select MAL / TMDB movie / TMDB TV and enter an ID or official URL. Select a result to apply it to the current work.';
       case 'video_source_scrape_manual_id_invalid':
-        return 'Enter a positive AniDB ID or a valid AniDB anime URL.';
+        return 'Enter a positive work ID or an official URL matching the selected source and type.';
       case 'video_source_scrape_manual_by_title':
         return 'By title';
       case 'video_source_scrape_manual_by_id':
-        return 'AniDB ID';
+        return 'Work ID';
       case 'video_source_grouping_mode':
         return 'Video organization';
       case 'video_source_grouping_folder':
@@ -178878,6 +179152,20 @@ extension on _StringsEn {
         return 'Several works have this title. Open the pending works tab and select the specific item to match.';
       case 'video_source_scrape_pending_tab':
         return 'Unmatched';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB movie';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB TV';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (via Jikan) is the primary metadata source; TMDB is the fallback.';
+      case 'video_anidb_hash_enabled':
+        return 'Identify files with AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Requires an AniDB account and a registered client. Uploads only file size and hash. AniDB UDP login is unencrypted; enable only on a trusted network.';
+      case 'video_anidb_username':
+        return 'AniDB username';
+      case 'video_anidb_password':
+        return 'AniDB password';
       default:
         return null;
     }
@@ -185049,7 +185337,7 @@ extension on _StringsAr {
       case 'video_source_scrape_locale':
         return 'لغة البيانات الوصفية';
       case 'video_source_scrape_locale_hint':
-        return 'اللغة المفضلة للعناوين والملخصات والصور';
+        return 'اللغة المفضلة لبيانات TMDB البديلة والتفاصيل التكميلية. يستخدم MAL العناوين والنصوص الأصلية التي يوفّرها.';
       case 'video_source_scrape_confirmation_title':
         return 'تأكيد مطابقة البيانات الوصفية';
       case 'video_source_scrape_confirmation_hint':
@@ -186329,11 +186617,11 @@ extension on _StringsAr {
       case 'video_source_scrape_anidb_client':
         return 'اسم عميل AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'اسم عميل AniDB HTTP API المسجّل؛ اتركه فارغاً لاستخدام كتالوج العناوين المخزّن فقط';
+        return 'اسم عميل AniDB المسجّل للتعرّف على الملفات عبر UDP؛ لا يتوفر التعرّف بالتجزئة دون عميل مسجّل.';
       case 'video_source_scrape_anidb_client_version':
         return 'إصدار عميل AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'إصدار موجب مسجّل لدى AniDB؛ تبقى HTTP API معطّلة حتى يكون كلا الحقلين صالحين';
+        return 'إصدار العميل المسجّل لدى AniDB، ويجب أن يكون عددًا صحيحًا موجبًا. يتطلب التعرّف على الملفات عبر UDP أيضًا بيانات تسجيل الدخول إلى حسابك.';
       case 'video_scrape_view_source':
         return 'عرض تفاصيل المصدر';
       case 'video_setting_auto_scrape_hint':
@@ -187851,13 +188139,13 @@ extension on _StringsAr {
       case 'video_source_scrape_manual_current_work':
         return 'العمل الحالي';
       case 'video_source_scrape_manual_query_hint':
-        return 'ابحث بالعنوان، أو اختر معرّف AniDB لإدخال معرّف أو رابط أنمي رسمي. اختر نتيجة لتطبيقها على العمل الحالي.';
+        return 'ابحث بالعنوان، أو اختر MAL أو أفلام TMDB أو مسلسلات TMDB وأدخل المعرّف أو الرابط الرسمي. اختر نتيجة لتطبيقها على العمل الحالي.';
       case 'video_source_scrape_manual_id_invalid':
-        return 'أدخل معرّف AniDB موجبًا أو رابط أنمي صالحًا من AniDB.';
+        return 'أدخل معرّف عمل صحيحًا موجبًا أو رابطًا رسميًا يطابق المصدر والنوع المحدّدين.';
       case 'video_source_scrape_manual_by_title':
         return 'حسب العنوان';
       case 'video_source_scrape_manual_by_id':
-        return 'معرّف AniDB';
+        return 'معرّف العمل';
       case 'video_source_grouping_mode':
         return 'تنظيم الفيديوهات';
       case 'video_source_grouping_folder':
@@ -187874,6 +188162,20 @@ extension on _StringsAr {
         return 'توجد عدة أعمال بهذا العنوان. افتح تبويب الأعمال المعلّقة واختر العنصر المحدد لمطابقته.';
       case 'video_source_scrape_pending_tab':
         return 'غير مطابق';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'أفلام TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'مسلسلات TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (عبر Jikan) هو المصدر الرئيسي للبيانات الوصفية؛ وTMDB هو المصدر البديل.';
+      case 'video_anidb_hash_enabled':
+        return 'التعرّف على الملفات باستخدام AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'يتطلب حساب AniDB وعميلاً مسجّلاً. يُرسل حجم الملف وقيمة التجزئة فقط. تسجيل الدخول إلى AniDB عبر UDP غير مشفّر؛ فعّل هذه الميزة على شبكة موثوقة فقط.';
+      case 'video_anidb_username':
+        return 'اسم مستخدم AniDB';
+      case 'video_anidb_password':
+        return 'كلمة مرور AniDB';
       default:
         return null;
     }
@@ -194081,7 +194383,7 @@ extension on _StringsDe {
       case 'video_source_scrape_locale':
         return 'Metadatensprache';
       case 'video_source_scrape_locale_hint':
-        return 'Bevorzugte Sprache für Titel, Zusammenfassungen und Bilder';
+        return 'Bevorzugte Sprache für TMDB-Ersatzdaten und ergänzende Details. MAL verwendet die von MAL bereitgestellten Titel und Originaltexte.';
       case 'video_source_scrape_confirmation_title':
         return 'Metadaten-Abgleich bestätigen';
       case 'video_source_scrape_confirmation_hint':
@@ -195364,11 +195666,11 @@ extension on _StringsDe {
       case 'video_source_scrape_anidb_client':
         return 'AniDB-Clientname';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Registrierter AniDB-HTTP-API-Clientname; leer lassen, um nur den zwischengespeicherten Titelkatalog zu verwenden';
+        return 'Registrierter AniDB-Clientname zur Dateiidentifikation über UDP; ohne registrierten Client ist keine Hash-Erkennung möglich.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB-Clientversion';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Positive, bei AniDB registrierte Version; die HTTP-API bleibt deaktiviert, bis beide Felder gültig sind';
+        return 'Bei AniDB registrierte Clientversion als positive ganze Zahl. Die Dateiidentifikation über UDP erfordert außerdem deine Zugangsdaten.';
       case 'video_scrape_view_source':
         return 'Quelldetails anzeigen';
       case 'video_setting_auto_scrape_hint':
@@ -196892,13 +197194,13 @@ extension on _StringsDe {
       case 'video_source_scrape_manual_current_work':
         return 'Aktuelles Werk';
       case 'video_source_scrape_manual_query_hint':
-        return 'Nach Titel suchen oder AniDB-ID wählen, um eine ID oder offizielle Anime-URL einzugeben. Ein Ergebnis auswählen, um es dem aktuellen Werk zuzuordnen.';
+        return 'Nach Titel suchen oder MAL, TMDB-Film bzw. TMDB-Serie auswählen und eine ID oder offizielle URL eingeben. Ein Ergebnis auswählen, um es auf das aktuelle Werk anzuwenden.';
       case 'video_source_scrape_manual_id_invalid':
-        return 'Eine positive AniDB-ID oder eine gültige AniDB-Anime-URL eingeben.';
+        return 'Eine positive ganzzahlige Werk-ID oder eine offizielle URL eingeben, die zur gewählten Quelle und zum Typ passt.';
       case 'video_source_scrape_manual_by_title':
         return 'Nach Titel';
       case 'video_source_scrape_manual_by_id':
-        return 'AniDB-ID';
+        return 'Werk-ID';
       case 'video_source_grouping_mode':
         return 'Videos organisieren';
       case 'video_source_grouping_folder':
@@ -196915,6 +197217,20 @@ extension on _StringsDe {
         return 'Mehrere Werke haben diesen Titel. Öffne den Tab für ausstehende Werke und wähle den konkreten Eintrag zur Zuordnung aus.';
       case 'video_source_scrape_pending_tab':
         return 'Nicht zugeordnet';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB-Film';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB-Serie';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (über Jikan) ist die primäre Metadatenquelle; TMDB dient als Ersatz.';
+      case 'video_anidb_hash_enabled':
+        return 'Dateien mit AniDB ED2K identifizieren';
+      case 'video_anidb_hash_hint':
+        return 'Erfordert ein AniDB-Konto und einen registrierten Client. Überträgt nur Dateigröße und Hash. Die AniDB-Anmeldung über UDP ist unverschlüsselt; nur in einem vertrauenswürdigen Netzwerk aktivieren.';
+      case 'video_anidb_username':
+        return 'AniDB-Benutzername';
+      case 'video_anidb_password':
+        return 'AniDB-Passwort';
       default:
         return null;
     }
@@ -203116,7 +203432,7 @@ extension on _StringsEs {
       case 'video_source_scrape_locale':
         return 'Idioma de metadatos';
       case 'video_source_scrape_locale_hint':
-        return 'Idioma preferido para títulos, resúmenes e imágenes';
+        return 'Idioma preferido para los datos alternativos y complementarios de TMDB. MAL utiliza los títulos y textos originales que proporciona.';
       case 'video_source_scrape_confirmation_title':
         return 'Confirmar coincidencia de metadatos';
       case 'video_source_scrape_confirmation_hint':
@@ -204397,11 +204713,11 @@ extension on _StringsEs {
       case 'video_source_scrape_anidb_client':
         return 'Nombre de cliente AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nombre de cliente registrado de la API HTTP de AniDB; deje en blanco para usar solo el catálogo de títulos en caché';
+        return 'Nombre del cliente registrado de AniDB para identificar archivos por UDP; la identificación por hash no está disponible sin un cliente registrado.';
       case 'video_source_scrape_anidb_client_version':
         return 'Versión de cliente AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Versión positiva registrada en AniDB; la API HTTP se mantiene desactivada hasta que ambos campos sean válidos';
+        return 'Versión del cliente registrada en AniDB, expresada como un entero positivo. La identificación de archivos por UDP también requiere las credenciales de tu cuenta.';
       case 'video_scrape_view_source':
         return 'Ver detalles de fuente';
       case 'video_setting_auto_scrape_hint':
@@ -205924,13 +206240,13 @@ extension on _StringsEs {
       case 'video_source_scrape_manual_current_work':
         return 'Obra actual';
       case 'video_source_scrape_manual_query_hint':
-        return 'Busca por título o elige ID de AniDB para introducir un ID o una URL oficial de anime. Selecciona un resultado para aplicarlo a la obra actual.';
+        return 'Busca por título o selecciona MAL, película de TMDB o serie de TMDB e introduce un ID o una URL oficial. Selecciona un resultado para aplicarlo a la obra actual.';
       case 'video_source_scrape_manual_id_invalid':
-        return 'Introduce un ID de AniDB positivo o una URL de anime válida de AniDB.';
+        return 'Introduce un ID de obra entero positivo o una URL oficial que coincida con la fuente y el tipo seleccionados.';
       case 'video_source_scrape_manual_by_title':
         return 'Por título';
       case 'video_source_scrape_manual_by_id':
-        return 'ID de AniDB';
+        return 'ID de obra';
       case 'video_source_grouping_mode':
         return 'Organización de vídeos';
       case 'video_source_grouping_folder':
@@ -205947,6 +206263,20 @@ extension on _StringsEs {
         return 'Hay varias obras con este título. Abre la pestaña de obras pendientes y selecciona el elemento concreto que quieras vincular.';
       case 'video_source_scrape_pending_tab':
         return 'Sin vincular';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'Película de TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'Serie de TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (mediante Jikan) es la fuente principal de metadatos; TMDB es la alternativa.';
+      case 'video_anidb_hash_enabled':
+        return 'Identificar archivos con AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Requiere una cuenta de AniDB y un cliente registrado. Solo envía el tamaño y el hash del archivo. El inicio de sesión de AniDB por UDP no está cifrado; actívalo solo en una red de confianza.';
+      case 'video_anidb_username':
+        return 'Nombre de usuario de AniDB';
+      case 'video_anidb_password':
+        return 'Contraseña de AniDB';
       default:
         return null;
     }
@@ -212156,7 +212486,7 @@ extension on _StringsFr {
       case 'video_source_scrape_locale':
         return 'Langue des métadonnées';
       case 'video_source_scrape_locale_hint':
-        return 'Langue préférée pour les titres, résumés et images';
+        return 'Langue préférée pour les données de repli et les détails complémentaires de TMDB. MAL utilise les titres et les textes originaux qu’il fournit.';
       case 'video_source_scrape_confirmation_title':
         return 'Confirmer la correspondance de métadonnées';
       case 'video_source_scrape_confirmation_hint':
@@ -213437,11 +213767,11 @@ extension on _StringsFr {
       case 'video_source_scrape_anidb_client':
         return 'Nom de client AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nom de client API HTTP AniDB enregistré ; laissez vide pour utiliser uniquement le catalogue de titres en cache';
+        return 'Nom du client AniDB enregistré pour identifier les fichiers par UDP ; l’identification par hachage est indisponible sans client enregistré.';
       case 'video_source_scrape_anidb_client_version':
         return 'Version du client AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Version positive enregistrée auprès d\'AniDB ; l\'API HTTP reste désactivée tant que les deux champs ne sont pas valides';
+        return 'Version du client enregistrée auprès d’AniDB, sous forme d’entier positif. L’identification des fichiers par UDP nécessite également les identifiants de votre compte.';
       case 'video_scrape_view_source':
         return 'Voir les détails de la source';
       case 'video_setting_auto_scrape_hint':
@@ -214965,13 +215295,13 @@ extension on _StringsFr {
       case 'video_source_scrape_manual_current_work':
         return 'Œuvre actuelle';
       case 'video_source_scrape_manual_query_hint':
-        return 'Recherchez par titre ou choisissez ID AniDB pour saisir un identifiant ou une URL officielle d’anime. Sélectionnez un résultat pour l’appliquer à l’œuvre actuelle.';
+        return 'Recherchez par titre, ou choisissez MAL, film TMDB ou série TMDB et saisissez un identifiant ou une URL officielle. Sélectionnez un résultat pour l’appliquer à l’œuvre actuelle.';
       case 'video_source_scrape_manual_id_invalid':
-        return 'Saisissez un identifiant AniDB positif ou une URL d’anime AniDB valide.';
+        return 'Saisissez un identifiant d’œuvre entier positif ou une URL officielle correspondant à la source et au type sélectionnés.';
       case 'video_source_scrape_manual_by_title':
         return 'Par titre';
       case 'video_source_scrape_manual_by_id':
-        return 'ID AniDB';
+        return 'Identifiant de l’œuvre';
       case 'video_source_grouping_mode':
         return 'Organisation des vidéos';
       case 'video_source_grouping_folder':
@@ -214988,6 +215318,20 @@ extension on _StringsFr {
         return 'Plusieurs œuvres portent ce titre. Ouvrez l’onglet des œuvres en attente et sélectionnez l’élément précis à associer.';
       case 'video_source_scrape_pending_tab':
         return 'À associer';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'Film TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'Série TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (via Jikan) est la source principale de métadonnées ; TMDB sert de solution de repli.';
+      case 'video_anidb_hash_enabled':
+        return 'Identifier les fichiers avec AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Nécessite un compte AniDB et un client enregistré. Seuls la taille et le hachage du fichier sont envoyés. La connexion à AniDB par UDP n’est pas chiffrée ; activez cette option uniquement sur un réseau de confiance.';
+      case 'video_anidb_username':
+        return 'Nom d’utilisateur AniDB';
+      case 'video_anidb_password':
+        return 'Mot de passe AniDB';
       default:
         return null;
     }
@@ -221174,7 +221518,7 @@ extension on _StringsId {
       case 'video_source_scrape_locale':
         return 'Bahasa metadata';
       case 'video_source_scrape_locale_hint':
-        return 'Bahasa yang diutamakan untuk judul, ringkasan, dan gambar';
+        return 'Bahasa pilihan untuk data cadangan dan detail tambahan dari TMDB. MAL menggunakan judul dan teks asli yang disediakan oleh MAL.';
       case 'video_source_scrape_confirmation_title':
         return 'Konfirmasi kecocokan metadata';
       case 'video_source_scrape_confirmation_hint':
@@ -222454,11 +222798,11 @@ extension on _StringsId {
       case 'video_source_scrape_anidb_client':
         return 'Nama klien AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nama klien API HTTP AniDB terdaftar; biarkan kosong untuk hanya menggunakan katalog judul yang di-cache';
+        return 'Nama klien AniDB terdaftar untuk identifikasi berkas melalui UDP; identifikasi hash tidak tersedia tanpa klien terdaftar.';
       case 'video_source_scrape_anidb_client_version':
         return 'Versi klien AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Versi positif yang terdaftar di AniDB; API HTTP tetap nonaktif sampai kedua kolom valid';
+        return 'Versi klien berupa bilangan bulat positif yang terdaftar di AniDB. Identifikasi berkas melalui UDP juga memerlukan kredensial akun Anda.';
       case 'video_scrape_view_source':
         return 'Lihat detail sumber';
       case 'video_setting_auto_scrape_hint':
@@ -223977,13 +224321,13 @@ extension on _StringsId {
       case 'video_source_scrape_manual_current_work':
         return 'Karya saat ini';
       case 'video_source_scrape_manual_query_hint':
-        return 'Cari berdasarkan judul, atau pilih ID AniDB untuk memasukkan ID atau URL anime resmi. Pilih hasil untuk diterapkan ke karya saat ini.';
+        return 'Cari berdasarkan judul, atau pilih MAL, film TMDB, atau serial TV TMDB lalu masukkan ID atau URL resmi. Pilih hasil untuk menerapkannya ke karya saat ini.';
       case 'video_source_scrape_manual_id_invalid':
-        return 'Masukkan ID AniDB berupa bilangan positif atau URL anime AniDB yang valid.';
+        return 'Masukkan ID karya berupa bilangan bulat positif atau URL resmi yang sesuai dengan sumber dan jenis yang dipilih.';
       case 'video_source_scrape_manual_by_title':
         return 'Berdasarkan judul';
       case 'video_source_scrape_manual_by_id':
-        return 'ID AniDB';
+        return 'ID karya';
       case 'video_source_grouping_mode':
         return 'Pengaturan video';
       case 'video_source_grouping_folder':
@@ -224000,6 +224344,20 @@ extension on _StringsId {
         return 'Ada beberapa karya dengan judul ini. Buka tab karya yang menunggu konfirmasi dan pilih item yang ingin dicocokkan.';
       case 'video_source_scrape_pending_tab':
         return 'Belum cocok';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'Film TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'Serial TV TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (melalui Jikan) adalah sumber metadata utama; TMDB menjadi cadangan.';
+      case 'video_anidb_hash_enabled':
+        return 'Identifikasi berkas dengan AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Memerlukan akun AniDB dan klien terdaftar. Hanya mengirim ukuran dan hash berkas. Login AniDB melalui UDP tidak terenkripsi; aktifkan hanya di jaringan tepercaya.';
+      case 'video_anidb_username':
+        return 'Nama pengguna AniDB';
+      case 'video_anidb_password':
+        return 'Kata sandi AniDB';
       default:
         return null;
     }
@@ -230204,7 +230562,7 @@ extension on _StringsIt {
       case 'video_source_scrape_locale':
         return 'Lingua metadati';
       case 'video_source_scrape_locale_hint':
-        return 'Lingua preferita per titoli, riepiloghi e immagini';
+        return 'Lingua preferita per i dati di riserva e i dettagli aggiuntivi di TMDB. MAL usa i titoli e i testi originali forniti da MAL.';
       case 'video_source_scrape_confirmation_title':
         return 'Conferma abbinamento metadati';
       case 'video_source_scrape_confirmation_hint':
@@ -231485,11 +231843,11 @@ extension on _StringsIt {
       case 'video_source_scrape_anidb_client':
         return 'Nome client AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nome client registrato per l\'API HTTP AniDB; lascia vuoto per usare solo il catalogo titoli in cache';
+        return 'Nome del client AniDB registrato per identificare i file tramite UDP; l’identificazione tramite hash non è disponibile senza un client registrato.';
       case 'video_source_scrape_anidb_client_version':
         return 'Versione client AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Versione positiva registrata con AniDB; l\'API HTTP resta disabilitata finché entrambi i campi non sono validi';
+        return 'Versione del client registrata presso AniDB, espressa come intero positivo. L’identificazione dei file tramite UDP richiede anche le credenziali del tuo account.';
       case 'video_scrape_view_source':
         return 'Visualizza dettagli fonte';
       case 'video_setting_auto_scrape_hint':
@@ -233011,13 +233369,13 @@ extension on _StringsIt {
       case 'video_source_scrape_manual_current_work':
         return 'Opera attuale';
       case 'video_source_scrape_manual_query_hint':
-        return 'Cerca per titolo oppure scegli ID AniDB per inserire un ID o un URL ufficiale dell’anime. Seleziona un risultato per applicarlo all’opera attuale.';
+        return 'Cerca per titolo oppure seleziona MAL, film TMDB o serie TV TMDB e inserisci un ID o un URL ufficiale. Seleziona un risultato per applicarlo all’opera attuale.';
       case 'video_source_scrape_manual_id_invalid':
-        return 'Inserisci un ID AniDB positivo o un URL di anime AniDB valido.';
+        return 'Inserisci un ID dell’opera intero positivo o un URL ufficiale corrispondente alla fonte e al tipo selezionati.';
       case 'video_source_scrape_manual_by_title':
         return 'Per titolo';
       case 'video_source_scrape_manual_by_id':
-        return 'ID AniDB';
+        return 'ID dell’opera';
       case 'video_source_grouping_mode':
         return 'Organizzazione dei video';
       case 'video_source_grouping_folder':
@@ -233034,6 +233392,20 @@ extension on _StringsIt {
         return 'Più opere hanno questo titolo. Apri la scheda delle opere in attesa e seleziona l’elemento specifico da abbinare.';
       case 'video_source_scrape_pending_tab':
         return 'Da abbinare';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'Film TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'Serie TV TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (tramite Jikan) è la fonte principale dei metadati; TMDB è la fonte di riserva.';
+      case 'video_anidb_hash_enabled':
+        return 'Identifica i file con AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Richiede un account AniDB e un client registrato. Invia solo dimensione e hash del file. L’accesso ad AniDB tramite UDP non è crittografato; attiva solo su una rete fidata.';
+      case 'video_anidb_username':
+        return 'Nome utente AniDB';
+      case 'video_anidb_password':
+        return 'Password AniDB';
       default:
         return null;
     }
@@ -239179,7 +239551,7 @@ extension on _StringsJa {
       case 'video_source_scrape_locale':
         return 'メタデータの言語';
       case 'video_source_scrape_locale_hint':
-        return 'タイトル、あらすじ、画像の優先言語';
+        return 'TMDB の代替・補足情報で優先する言語です。MAL の情報には、MAL が提供するタイトルと原文を使用します。';
       case 'video_source_scrape_confirmation_title':
         return 'メタデータの一致を確認';
       case 'video_source_scrape_confirmation_hint':
@@ -240456,11 +240828,11 @@ extension on _StringsJa {
       case 'video_source_scrape_anidb_client':
         return 'AniDBクライアント名';
       case 'video_source_scrape_anidb_client_hint':
-        return '登録済みのAniDB HTTP APIクライアント名。空欄にするとキャッシュされたタイトルカタログのみ使用します';
+        return 'UDP によるファイル識別に使う登録済み AniDB クライアント名です。登録済みクライアントが未設定の場合、ハッシュによる識別は利用できません。';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDBクライアントバージョン';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'AniDBに登録された正のバージョン番号。両方のフィールドが有効になるまでHTTP APIは無効のままです';
+        return 'AniDB に登録した正の整数のクライアントバージョンです。UDP によるファイル識別には、アカウントの認証情報も必要です。';
       case 'video_scrape_view_source':
         return 'ソースの詳細を表示';
       case 'video_setting_auto_scrape_hint':
@@ -241972,13 +242344,13 @@ extension on _StringsJa {
       case 'video_source_scrape_manual_current_work':
         return '現在の作品';
       case 'video_source_scrape_manual_query_hint':
-        return 'タイトルで検索するか、「AniDB ID」を選んでIDまたは公式のアニメURLを入力してください。検索結果を選択すると、現在の作品に適用されます。';
+        return 'タイトルで検索するか、MAL・TMDB 映画・TMDB テレビシリーズを選択して ID または公式 URL を入力してください。検索結果を選択すると現在の作品に適用されます。';
       case 'video_source_scrape_manual_id_invalid':
-        return '正の整数のAniDB ID、または有効なAniDBのアニメURLを入力してください。';
+        return '正の整数の作品 ID、または選択したソースと種類に一致する公式 URL を入力してください。';
       case 'video_source_scrape_manual_by_title':
         return 'タイトルで検索';
       case 'video_source_scrape_manual_by_id':
-        return 'AniDB ID';
+        return '作品 ID';
       case 'video_source_grouping_mode':
         return '動画のまとめ方';
       case 'video_source_grouping_folder':
@@ -241995,6 +242367,20 @@ extension on _StringsJa {
         return '同じタイトルの作品が複数あります。確認待ちタブを開き、照合する項目を選択してください。';
       case 'video_source_scrape_pending_tab':
         return '未照合';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB 映画';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB テレビシリーズ';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL（Jikan 経由）を主なメタデータソースとし、TMDB を予備ソースとして使用します。';
+      case 'video_anidb_hash_enabled':
+        return 'AniDB ED2K でファイルを識別';
+      case 'video_anidb_hash_hint':
+        return 'AniDB アカウントと登録済みクライアントが必要です。送信するファイル情報はサイズとハッシュのみです。AniDB の UDP ログインは暗号化されないため、信頼できるネットワークでのみ有効にしてください。';
+      case 'video_anidb_username':
+        return 'AniDB ユーザー名';
+      case 'video_anidb_password':
+        return 'AniDB パスワード';
       default:
         return null;
     }
@@ -248143,7 +248529,7 @@ extension on _StringsKo {
       case 'video_source_scrape_locale':
         return '메타데이터 언어';
       case 'video_source_scrape_locale_hint':
-        return '제목, 요약 및 이미지에 선호하는 언어';
+        return 'TMDB 대체 및 보충 정보에 사용할 선호 언어입니다. MAL은 MAL에서 제공하는 제목과 원문을 사용합니다.';
       case 'video_source_scrape_confirmation_title':
         return '메타데이터 매칭 확인';
       case 'video_source_scrape_confirmation_hint':
@@ -249419,11 +249805,11 @@ extension on _StringsKo {
       case 'video_source_scrape_anidb_client':
         return 'AniDB 클라이언트 이름';
       case 'video_source_scrape_anidb_client_hint':
-        return '등록된 AniDB HTTP API 클라이언트 이름; 캐시된 제목 카탈로그만 사용하려면 비워 두세요';
+        return 'UDP 파일 식별에 사용할 등록된 AniDB 클라이언트 이름입니다. 등록된 클라이언트가 없으면 해시 식별을 사용할 수 없습니다.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB 클라이언트 버전';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'AniDB에 등록된 양수 버전; 두 필드가 모두 유효할 때까지 HTTP API는 비활성 상태입니다';
+        return 'AniDB에 등록된 양의 정수 클라이언트 버전입니다. UDP 파일 식별에는 계정 로그인 정보도 필요합니다.';
       case 'video_scrape_view_source':
         return '소스 상세 보기';
       case 'video_setting_auto_scrape_hint':
@@ -250937,13 +251323,13 @@ extension on _StringsKo {
       case 'video_source_scrape_manual_current_work':
         return '현재 작품';
       case 'video_source_scrape_manual_query_hint':
-        return '제목으로 검색하거나 AniDB ID를 선택해 ID 또는 공식 애니메이션 URL을 입력하세요. 결과를 선택하면 현재 작품에 적용됩니다.';
+        return '제목으로 검색하거나 MAL, TMDB 영화, TMDB TV 시리즈를 선택하고 ID 또는 공식 URL을 입력하세요. 결과를 선택하면 현재 작품에 적용됩니다.';
       case 'video_source_scrape_manual_id_invalid':
-        return '양의 정수인 AniDB ID 또는 유효한 AniDB 애니메이션 URL을 입력하세요.';
+        return '양의 정수로 된 작품 ID 또는 선택한 소스와 유형에 맞는 공식 URL을 입력하세요.';
       case 'video_source_scrape_manual_by_title':
         return '제목으로 검색';
       case 'video_source_scrape_manual_by_id':
-        return 'AniDB ID';
+        return '작품 ID';
       case 'video_source_grouping_mode':
         return '동영상 정리 방식';
       case 'video_source_grouping_folder':
@@ -250960,6 +251346,20 @@ extension on _StringsKo {
         return '같은 제목의 작품이 여러 개 있습니다. 확인 대기 탭을 열고 일치시킬 항목을 선택하세요.';
       case 'video_source_scrape_pending_tab':
         return '미일치';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB 영화';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB TV 시리즈';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL(Jikan 경유)을 기본 메타데이터 소스로 사용하고, TMDB를 대체 소스로 사용합니다.';
+      case 'video_anidb_hash_enabled':
+        return 'AniDB ED2K로 파일 식별';
+      case 'video_anidb_hash_hint':
+        return 'AniDB 계정과 등록된 클라이언트가 필요합니다. 파일 크기와 해시만 전송합니다. AniDB UDP 로그인은 암호화되지 않으므로 신뢰할 수 있는 네트워크에서만 활성화하세요.';
+      case 'video_anidb_username':
+        return 'AniDB 사용자 이름';
+      case 'video_anidb_password':
+        return 'AniDB 비밀번호';
       default:
         return null;
     }
@@ -257157,7 +257557,7 @@ extension on _StringsNl {
       case 'video_source_scrape_locale':
         return 'Metadatataal';
       case 'video_source_scrape_locale_hint':
-        return 'Voorkeurstaal voor titels, samenvattingen en afbeeldingen';
+        return 'Voorkeurstaal voor vervangende gegevens en aanvullende details van TMDB. MAL gebruikt de titels en oorspronkelijke teksten die MAL aanlevert.';
       case 'video_source_scrape_confirmation_title':
         return 'Metadatamatch bevestigen';
       case 'video_source_scrape_confirmation_hint':
@@ -258438,11 +258838,11 @@ extension on _StringsNl {
       case 'video_source_scrape_anidb_client':
         return 'AniDB-clientnaam';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Geregistreerde AniDB HTTP API-clientnaam; leeg laten om alleen de gecachte titelcatalogus te gebruiken';
+        return 'Geregistreerde AniDB-clientnaam voor bestandsidentificatie via UDP; hashidentificatie is niet beschikbaar zonder geregistreerde client.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB-clientversie';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Positieve versie geregistreerd bij AniDB; HTTP API blijft uitgeschakeld tot beide velden geldig zijn';
+        return 'Bij AniDB geregistreerde clientversie als positief geheel getal. Bestandsidentificatie via UDP vereist ook de inloggegevens van je account.';
       case 'video_scrape_view_source':
         return 'Brondetails bekijken';
       case 'video_setting_auto_scrape_hint':
@@ -259964,13 +260364,13 @@ extension on _StringsNl {
       case 'video_source_scrape_manual_current_work':
         return 'Huidig werk';
       case 'video_source_scrape_manual_query_hint':
-        return 'Zoek op titel of kies AniDB-ID om een ID of officiële anime-URL in te voeren. Selecteer een resultaat om het op het huidige werk toe te passen.';
+        return 'Zoek op titel of selecteer MAL, TMDB-film of TMDB-serie en voer een ID of officiële URL in. Selecteer een resultaat om het op het huidige werk toe te passen.';
       case 'video_source_scrape_manual_id_invalid':
-        return 'Voer een positieve AniDB-ID of een geldige AniDB-anime-URL in.';
+        return 'Voer een positieve gehele werk-ID in of een officiële URL die overeenkomt met de geselecteerde bron en het type.';
       case 'video_source_scrape_manual_by_title':
         return 'Op titel';
       case 'video_source_scrape_manual_by_id':
-        return 'AniDB-ID';
+        return 'Werk-ID';
       case 'video_source_grouping_mode':
         return 'Video’s indelen';
       case 'video_source_grouping_folder':
@@ -259987,6 +260387,20 @@ extension on _StringsNl {
         return 'Meerdere werken hebben deze titel. Open het tabblad met werken die nog moeten worden bevestigd en selecteer het specifieke item om te koppelen.';
       case 'video_source_scrape_pending_tab':
         return 'Ongekoppeld';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB-film';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB-serie';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (via Jikan) is de primaire bron voor metadata; TMDB is de terugvaloptie.';
+      case 'video_anidb_hash_enabled':
+        return 'Bestanden identificeren met AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Vereist een AniDB-account en een geregistreerde client. Verstuurt alleen de bestandsgrootte en hash. Aanmelden bij AniDB via UDP is niet versleuteld; schakel dit alleen in op een vertrouwd netwerk.';
+      case 'video_anidb_username':
+        return 'AniDB-gebruikersnaam';
+      case 'video_anidb_password':
+        return 'AniDB-wachtwoord';
       default:
         return null;
     }
@@ -266179,7 +266593,7 @@ extension on _StringsPtBr {
       case 'video_source_scrape_locale':
         return 'Idioma dos metadados';
       case 'video_source_scrape_locale_hint':
-        return 'Idioma preferido para títulos, sinopses e imagens';
+        return 'Idioma preferido para os dados alternativos e complementares do TMDB. O MAL usa os títulos e textos originais fornecidos pelo MAL.';
       case 'video_source_scrape_confirmation_title':
         return 'Confirmar correspondência de metadados';
       case 'video_source_scrape_confirmation_hint':
@@ -267461,11 +267875,11 @@ extension on _StringsPtBr {
       case 'video_source_scrape_anidb_client':
         return 'Nome do cliente AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nome de cliente de API HTTP AniDB registrado; deixe em branco para usar apenas o catálogo de títulos em cache';
+        return 'Nome do cliente AniDB registrado para identificar arquivos via UDP; a identificação por hash não está disponível sem um cliente registrado.';
       case 'video_source_scrape_anidb_client_version':
         return 'Versão do cliente AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Versão positiva registrada no AniDB; a API HTTP permanece desativada até ambos os campos serem válidos';
+        return 'Versão do cliente registrada no AniDB, expressa como um inteiro positivo. A identificação de arquivos via UDP também exige as credenciais da sua conta.';
       case 'video_scrape_view_source':
         return 'Ver detalhes da fonte';
       case 'video_setting_auto_scrape_hint':
@@ -268986,13 +269400,13 @@ extension on _StringsPtBr {
       case 'video_source_scrape_manual_current_work':
         return 'Obra atual';
       case 'video_source_scrape_manual_query_hint':
-        return 'Pesquise pelo título ou escolha ID do AniDB para inserir um ID ou uma URL oficial de anime. Selecione um resultado para aplicá-lo à obra atual.';
+        return 'Pesquise pelo título ou selecione MAL, filme do TMDB ou série do TMDB e insira um ID ou URL oficial. Selecione um resultado para aplicá-lo à obra atual.';
       case 'video_source_scrape_manual_id_invalid':
-        return 'Insira um ID do AniDB positivo ou uma URL de anime válida do AniDB.';
+        return 'Insira um ID de obra inteiro positivo ou uma URL oficial que corresponda à fonte e ao tipo selecionados.';
       case 'video_source_scrape_manual_by_title':
         return 'Por título';
       case 'video_source_scrape_manual_by_id':
-        return 'ID do AniDB';
+        return 'ID da obra';
       case 'video_source_grouping_mode':
         return 'Organização de vídeos';
       case 'video_source_grouping_folder':
@@ -269009,6 +269423,20 @@ extension on _StringsPtBr {
         return 'Há várias obras com este título. Abra a aba de obras pendentes e selecione o item específico para fazer a correspondência.';
       case 'video_source_scrape_pending_tab':
         return 'Não vinculados';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'Filme do TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'Série do TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (via Jikan) é a fonte principal de metadados; TMDB é a alternativa.';
+      case 'video_anidb_hash_enabled':
+        return 'Identificar arquivos com AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Requer uma conta AniDB e um cliente registrado. Envia apenas o tamanho e o hash do arquivo. O login no AniDB via UDP não é criptografado; ative apenas em uma rede confiável.';
+      case 'video_anidb_username':
+        return 'Nome de usuário do AniDB';
+      case 'video_anidb_password':
+        return 'Senha do AniDB';
       default:
         return null;
     }
@@ -275209,7 +275637,7 @@ extension on _StringsRu {
       case 'video_source_scrape_locale':
         return 'Язык метаданных';
       case 'video_source_scrape_locale_hint':
-        return 'Предпочтительный язык для названий, описаний и изображений';
+        return 'Предпочтительный язык резервных и дополнительных данных TMDB. Для MAL используются названия и исходные тексты, предоставленные MAL.';
       case 'video_source_scrape_confirmation_title':
         return 'Подтвердите совпадение метаданных';
       case 'video_source_scrape_confirmation_hint':
@@ -276490,11 +276918,11 @@ extension on _StringsRu {
       case 'video_source_scrape_anidb_client':
         return 'Имя клиента AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Зарегистрированное имя клиента AniDB HTTP API; оставьте пустым, чтобы использовать только кэшированный каталог';
+        return 'Имя зарегистрированного клиента AniDB для определения файлов по UDP; без зарегистрированного клиента определение по хешу недоступно.';
       case 'video_source_scrape_anidb_client_version':
         return 'Версия клиента AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Положительный номер версии, зарегистрированный в AniDB; HTTP API остаётся отключённым, пока оба поля не заполнены корректно';
+        return 'Версия клиента, зарегистрированная в AniDB, в виде положительного целого числа. Для определения файлов по UDP также нужны данные для входа в вашу учётную запись.';
       case 'video_scrape_view_source':
         return 'Подробности источника';
       case 'video_setting_auto_scrape_hint':
@@ -278015,13 +278443,13 @@ extension on _StringsRu {
       case 'video_source_scrape_manual_current_work':
         return 'Текущее произведение';
       case 'video_source_scrape_manual_query_hint':
-        return 'Найдите по названию или выберите «ID AniDB», чтобы ввести ID или официальную ссылку на аниме. Выберите результат, чтобы применить его к текущему произведению.';
+        return 'Ищите по названию или выберите MAL, фильм TMDB или сериал TMDB и введите ID либо официальную ссылку. Выберите результат, чтобы применить его к текущему произведению.';
       case 'video_source_scrape_manual_id_invalid':
-        return 'Введите положительный ID AniDB или действительную ссылку на страницу аниме в AniDB.';
+        return 'Введите ID произведения в виде положительного целого числа или официальную ссылку, соответствующую выбранному источнику и типу.';
       case 'video_source_scrape_manual_by_title':
         return 'По названию';
       case 'video_source_scrape_manual_by_id':
-        return 'ID AniDB';
+        return 'ID произведения';
       case 'video_source_grouping_mode':
         return 'Группировка видео';
       case 'video_source_grouping_folder':
@@ -278038,6 +278466,20 @@ extension on _StringsRu {
         return 'Есть несколько произведений с таким названием. Откройте вкладку ожидающих подтверждения и выберите конкретную запись для сопоставления.';
       case 'video_source_scrape_pending_tab':
         return 'Не сопоставлено';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'Фильм TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'Сериал TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (через Jikan) — основной источник метаданных; TMDB — резервный.';
+      case 'video_anidb_hash_enabled':
+        return 'Определять файлы через AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Требуются учётная запись AniDB и зарегистрированный клиент. Отправляются только размер и хеш файла. Вход в AniDB по UDP не шифруется; включайте только в доверенной сети.';
+      case 'video_anidb_username':
+        return 'Имя пользователя AniDB';
+      case 'video_anidb_password':
+        return 'Пароль AniDB';
       default:
         return null;
     }
@@ -284215,7 +284657,7 @@ extension on _StringsTh {
       case 'video_source_scrape_locale':
         return 'ภาษาข้อมูลเมตา';
       case 'video_source_scrape_locale_hint':
-        return 'ภาษาที่ต้องการสำหรับชื่อ สรุปเนื้อหา และรูปภาพ';
+        return 'ภาษาที่ต้องการสำหรับข้อมูลสำรองและข้อมูลเสริมจาก TMDB ส่วน MAL ใช้ชื่อเรื่องและข้อความต้นฉบับที่ MAL ให้มา';
       case 'video_source_scrape_confirmation_title':
         return 'ยืนยันการจับคู่ข้อมูลเมตา';
       case 'video_source_scrape_confirmation_hint':
@@ -285494,11 +285936,11 @@ extension on _StringsTh {
       case 'video_source_scrape_anidb_client':
         return 'ชื่อไคลเอนต์ AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'ชื่อไคลเอนต์ HTTP API ของ AniDB ที่ลงทะเบียนแล้ว เว้นว่างเพื่อใช้เฉพาะแค็ตตาล็อกชื่อเรื่องที่แคชไว้';
+        return 'ชื่อไคลเอนต์ AniDB ที่ลงทะเบียนสำหรับระบุไฟล์ผ่าน UDP หากไม่มีไคลเอนต์ที่ลงทะเบียน จะไม่สามารถระบุไฟล์ด้วยแฮชได้';
       case 'video_source_scrape_anidb_client_version':
         return 'เวอร์ชันไคลเอนต์ AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'เวอร์ชันเลขบวกที่ลงทะเบียนกับ AniDB HTTP API จะไม่ทำงานจนกว่าทั้งสองช่องจะถูกต้อง';
+        return 'เวอร์ชันไคลเอนต์ที่ลงทะเบียนกับ AniDB ต้องเป็นจำนวนเต็มบวก การระบุไฟล์ผ่าน UDP ต้องใช้ข้อมูลเข้าสู่ระบบบัญชีของคุณด้วย';
       case 'video_scrape_view_source':
         return 'ดูรายละเอียดแหล่ง';
       case 'video_setting_auto_scrape_hint':
@@ -287016,13 +287458,13 @@ extension on _StringsTh {
       case 'video_source_scrape_manual_current_work':
         return 'ผลงานปัจจุบัน';
       case 'video_source_scrape_manual_query_hint':
-        return 'ค้นหาด้วยชื่อ หรือเลือก ID ของ AniDB เพื่อป้อน ID หรือ URL อนิเมะอย่างเป็นทางการ เลือกผลลัพธ์เพื่อนำไปใช้กับผลงานปัจจุบัน';
+        return 'ค้นหาด้วยชื่อเรื่อง หรือเลือก MAL, ภาพยนตร์ TMDB หรือซีรีส์ TMDB แล้วป้อน ID หรือ URL ทางการ เลือกผลลัพธ์เพื่อนำไปใช้กับผลงานปัจจุบัน';
       case 'video_source_scrape_manual_id_invalid':
-        return 'ป้อน ID ของ AniDB ที่เป็นจำนวนเต็มบวก หรือ URL อนิเมะของ AniDB ที่ถูกต้อง';
+        return 'ป้อน ID ผลงานที่เป็นจำนวนเต็มบวก หรือ URL ทางการที่ตรงกับแหล่งข้อมูลและประเภทที่เลือก';
       case 'video_source_scrape_manual_by_title':
         return 'ตามชื่อ';
       case 'video_source_scrape_manual_by_id':
-        return 'ID ของ AniDB';
+        return 'ID ผลงาน';
       case 'video_source_grouping_mode':
         return 'การจัดกลุ่มวิดีโอ';
       case 'video_source_grouping_folder':
@@ -287039,6 +287481,20 @@ extension on _StringsTh {
         return 'มีหลายผลงานที่ใช้ชื่อนี้ เปิดแท็บผลงานที่รอยืนยัน แล้วเลือกรายการที่ต้องการจับคู่';
       case 'video_source_scrape_pending_tab':
         return 'ยังไม่จับคู่';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'ภาพยนตร์ TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'ซีรีส์ TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (ผ่าน Jikan) เป็นแหล่งข้อมูลเมตาหลัก และใช้ TMDB เป็นแหล่งสำรอง';
+      case 'video_anidb_hash_enabled':
+        return 'ระบุไฟล์ด้วย AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'ต้องมีบัญชี AniDB และไคลเอนต์ที่ลงทะเบียนแล้ว ส่งเฉพาะขนาดไฟล์และค่าแฮช การเข้าสู่ระบบ AniDB ผ่าน UDP ไม่ได้เข้ารหัส โปรดเปิดใช้เฉพาะบนเครือข่ายที่เชื่อถือได้';
+      case 'video_anidb_username':
+        return 'ชื่อผู้ใช้ AniDB';
+      case 'video_anidb_password':
+        return 'รหัสผ่าน AniDB';
       default:
         return null;
     }
@@ -293229,7 +293685,7 @@ extension on _StringsTr {
       case 'video_source_scrape_locale':
         return 'Meta veri dili';
       case 'video_source_scrape_locale_hint':
-        return 'Başlıklar, özetler ve görseller için tercih edilen dil';
+        return 'TMDB yedek verileri ve ek ayrıntıları için tercih edilen dil. MAL, MAL tarafından sağlanan başlıkları ve özgün metinleri kullanır.';
       case 'video_source_scrape_confirmation_title':
         return 'Meta veri eşleşmesini onayla';
       case 'video_source_scrape_confirmation_hint':
@@ -294510,11 +294966,11 @@ extension on _StringsTr {
       case 'video_source_scrape_anidb_client':
         return 'AniDB istemci adı';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Kayıtlı AniDB HTTP API istemci adı; yalnızca önbelleğe alınmış başlık kataloğunu kullanmak için boş bırakın';
+        return 'UDP üzerinden dosya tanımlama için kayıtlı AniDB istemci adı; kayıtlı bir istemci olmadan karma ile tanımlama kullanılamaz.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB istemci sürümü';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'AniDB\'ye kayıtlı pozitif sürüm; her iki alan da geçerli olana kadar HTTP API devre dışı kalır';
+        return 'AniDB’ye kaydedilmiş, pozitif tam sayı olan istemci sürümü. UDP üzerinden dosya tanımlama için hesap giriş bilgileriniz de gereklidir.';
       case 'video_scrape_view_source':
         return 'Kaynak ayrıntılarını görüntüle';
       case 'video_setting_auto_scrape_hint':
@@ -296032,13 +296488,13 @@ extension on _StringsTr {
       case 'video_source_scrape_manual_current_work':
         return 'Geçerli eser';
       case 'video_source_scrape_manual_query_hint':
-        return 'Ada göre arayın veya bir kimlik ya da resmî anime URL’si girmek için AniDB kimliğini seçin. Geçerli esere uygulamak için bir sonuç seçin.';
+        return 'Başlığa göre arayın veya MAL, TMDB filmi ya da TMDB dizisini seçip bir kimlik veya resmî URL girin. Geçerli esere uygulamak için bir sonuç seçin.';
       case 'video_source_scrape_manual_id_invalid':
-        return 'Pozitif bir AniDB kimliği veya geçerli bir AniDB anime URL’si girin.';
+        return 'Pozitif tam sayı olan bir eser kimliği veya seçilen kaynak ve türle eşleşen resmî bir URL girin.';
       case 'video_source_scrape_manual_by_title':
         return 'Ada göre';
       case 'video_source_scrape_manual_by_id':
-        return 'AniDB kimliği';
+        return 'Eser kimliği';
       case 'video_source_grouping_mode':
         return 'Video düzeni';
       case 'video_source_grouping_folder':
@@ -296055,6 +296511,20 @@ extension on _StringsTr {
         return 'Bu ada sahip birden fazla eser var. Onay bekleyen eserler sekmesini açın ve eşleştirilecek öğeyi seçin.';
       case 'video_source_scrape_pending_tab':
         return 'Eşleşmemiş';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB filmi';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB dizisi';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (Jikan üzerinden) birincil meta veri kaynağıdır; TMDB yedek kaynaktır.';
+      case 'video_anidb_hash_enabled':
+        return 'Dosyaları AniDB ED2K ile tanımla';
+      case 'video_anidb_hash_hint':
+        return 'AniDB hesabı ve kayıtlı bir istemci gerektirir. Yalnızca dosya boyutunu ve karma değerini gönderir. AniDB UDP oturumu şifrelenmeden açılır; yalnızca güvenilir bir ağda etkinleştirin.';
+      case 'video_anidb_username':
+        return 'AniDB kullanıcı adı';
+      case 'video_anidb_password':
+        return 'AniDB parolası';
       default:
         return null;
     }
@@ -302240,7 +302710,7 @@ extension on _StringsVi {
       case 'video_source_scrape_locale':
         return 'Ngôn ngữ metadata';
       case 'video_source_scrape_locale_hint':
-        return 'Ngôn ngữ ưu tiên cho tiêu đề, tóm tắt và hình ảnh';
+        return 'Ngôn ngữ ưu tiên cho dữ liệu dự phòng và thông tin bổ sung từ TMDB. MAL sử dụng tiêu đề và văn bản gốc do MAL cung cấp.';
       case 'video_source_scrape_confirmation_title':
         return 'Xác nhận kết quả khớp metadata';
       case 'video_source_scrape_confirmation_hint':
@@ -303519,11 +303989,11 @@ extension on _StringsVi {
       case 'video_source_scrape_anidb_client':
         return 'Tên client AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Tên client HTTP API AniDB đã đăng ký; để trống để chỉ sử dụng danh mục tiêu đề đã lưu';
+        return 'Tên ứng dụng khách AniDB đã đăng ký để nhận diện tệp qua UDP; không thể nhận diện bằng mã băm nếu chưa có ứng dụng khách đã đăng ký.';
       case 'video_source_scrape_anidb_client_version':
         return 'Phiên bản client AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Phiên bản dương đã đăng ký với AniDB; HTTP API bị vô hiệu hóa cho đến khi cả hai trường hợp lệ';
+        return 'Phiên bản ứng dụng khách đã đăng ký với AniDB, là số nguyên dương. Nhận diện tệp qua UDP cũng cần thông tin đăng nhập tài khoản của bạn.';
       case 'video_scrape_view_source':
         return 'Xem chi tiết nguồn';
       case 'video_setting_auto_scrape_hint':
@@ -305042,13 +305512,13 @@ extension on _StringsVi {
       case 'video_source_scrape_manual_current_work':
         return 'Tác phẩm hiện tại';
       case 'video_source_scrape_manual_query_hint':
-        return 'Tìm theo tên hoặc chọn ID AniDB để nhập ID hay URL anime chính thức. Chọn một kết quả để áp dụng cho tác phẩm hiện tại.';
+        return 'Tìm theo tiêu đề, hoặc chọn MAL, phim điện ảnh TMDB hay phim truyền hình TMDB rồi nhập ID hoặc URL chính thức. Chọn một kết quả để áp dụng cho tác phẩm hiện tại.';
       case 'video_source_scrape_manual_id_invalid':
-        return 'Nhập ID AniDB là số nguyên dương hoặc URL anime AniDB hợp lệ.';
+        return 'Nhập ID tác phẩm là số nguyên dương hoặc URL chính thức khớp với nguồn và loại đã chọn.';
       case 'video_source_scrape_manual_by_title':
         return 'Theo tên';
       case 'video_source_scrape_manual_by_id':
-        return 'ID AniDB';
+        return 'ID tác phẩm';
       case 'video_source_grouping_mode':
         return 'Cách nhóm video';
       case 'video_source_grouping_folder':
@@ -305065,6 +305535,20 @@ extension on _StringsVi {
         return 'Có nhiều tác phẩm trùng tên này. Mở thẻ tác phẩm chờ xác nhận và chọn mục cụ thể để ghép.';
       case 'video_source_scrape_pending_tab':
         return 'Chưa ghép';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'Phim điện ảnh TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'Phim truyền hình TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (qua Jikan) là nguồn siêu dữ liệu chính; TMDB là nguồn dự phòng.';
+      case 'video_anidb_hash_enabled':
+        return 'Nhận diện tệp bằng AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Cần tài khoản AniDB và ứng dụng khách đã đăng ký. Chỉ gửi kích thước và mã băm của tệp. Đăng nhập AniDB qua UDP không được mã hóa; chỉ bật trên mạng đáng tin cậy.';
+      case 'video_anidb_username':
+        return 'Tên người dùng AniDB';
+      case 'video_anidb_password':
+        return 'Mật khẩu AniDB';
       default:
         return null;
     }
@@ -311195,7 +311679,7 @@ extension on _StringsZhCn {
       case 'video_source_scrape_locale':
         return '资料语言';
       case 'video_source_scrape_locale_hint':
-        return '标题、简介与图片的首选语言';
+        return 'TMDB 兜底及补充资料的首选语言；MAL 使用其提供的标题和原始文本。';
       case 'video_source_scrape_confirmation_title':
         return '确认资料匹配';
       case 'video_source_scrape_confirmation_hint':
@@ -312468,11 +312952,11 @@ extension on _StringsZhCn {
       case 'video_source_scrape_anidb_client':
         return 'AniDB 客户端名称';
       case 'video_source_scrape_anidb_client_hint':
-        return '已登记的 AniDB HTTP API 客户端名称；留空时仅使用缓存标题目录';
+        return '用于 UDP 文件识别的已注册 AniDB 客户端名称；未配置注册客户端时无法进行哈希识别。';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB 客户端版本';
       case 'video_source_scrape_anidb_client_version_hint':
-        return '在 AniDB 登记的正整数版本；两项均有效前不会启用 HTTP API';
+        return '向 AniDB 登记的正整数客户端版本；UDP 文件识别还需要账号凭据。';
       case 'video_scrape_view_source':
         return '查看来源详情';
       case 'video_setting_auto_scrape_hint':
@@ -313973,13 +314457,13 @@ extension on _StringsZhCn {
       case 'video_source_scrape_manual_current_work':
         return '当前作品';
       case 'video_source_scrape_manual_query_hint':
-        return '按标题搜索，或切换到 AniDB ID 输入编号或官方作品链接。选择结果后才会应用到当前作品。';
+        return '按标题搜索，或选择 MAL、TMDB 电影、TMDB 电视剧并输入 ID 或官方链接。选择结果后才会应用到当前作品。';
       case 'video_source_scrape_manual_id_invalid':
-        return '请输入正整数 AniDB ID 或有效的 AniDB 作品链接。';
+        return '请输入正整数作品 ID，或与所选来源及类型一致的官方链接。';
       case 'video_source_scrape_manual_by_title':
         return '按标题';
       case 'video_source_scrape_manual_by_id':
-        return '按 AniDB ID';
+        return '按作品 ID';
       case 'video_source_grouping_mode':
         return '视频分组方式';
       case 'video_source_grouping_folder':
@@ -313996,6 +314480,20 @@ extension on _StringsZhCn {
         return '存在多个同名作品。请打开待确认页，选择具体条目进行匹配。';
       case 'video_source_scrape_pending_tab':
         return '待确认';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB 电影';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB 电视剧';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL（经 Jikan）为主要资料源，TMDB 兜底。';
+      case 'video_anidb_hash_enabled':
+        return '通过 AniDB ED2K 识别文件';
+      case 'video_anidb_hash_hint':
+        return '需要 AniDB 账号和已注册客户端，仅提交文件大小与哈希。AniDB UDP 登录未加密，请仅在可信网络下开启。';
+      case 'video_anidb_username':
+        return 'AniDB 用户名';
+      case 'video_anidb_password':
+        return 'AniDB 密码';
       default:
         return null;
     }
@@ -320125,7 +320623,7 @@ extension on _StringsZhHk {
       case 'video_source_scrape_locale':
         return '資料語言';
       case 'video_source_scrape_locale_hint':
-        return '標題、簡介與圖片的首選語言';
+        return 'TMDB 後備及補充資料的首選語言；MAL 使用其提供的標題和原始文字。';
       case 'video_source_scrape_confirmation_title':
         return '確認資料匹配';
       case 'video_source_scrape_confirmation_hint':
@@ -321400,11 +321898,11 @@ extension on _StringsZhHk {
       case 'video_source_scrape_anidb_client':
         return 'AniDB 客戶端名稱';
       case 'video_source_scrape_anidb_client_hint':
-        return '已登記的 AniDB HTTP API 客戶端名稱；留空時僅使用緩存標題目錄';
+        return '用於 UDP 檔案識別的已註冊 AniDB 用戶端名稱；未設定已註冊用戶端時無法進行雜湊識別。';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB 客戶端版本';
       case 'video_source_scrape_anidb_client_version_hint':
-        return '在 AniDB 登記的正整數版本；兩項均有效前不會啟用 HTTP API';
+        return '向 AniDB 登記的正整數用戶端版本；UDP 檔案識別亦需要帳戶憑證。';
       case 'video_scrape_view_source':
         return '查看來源詳情';
       case 'video_setting_auto_scrape_hint':
@@ -322912,13 +323410,13 @@ extension on _StringsZhHk {
       case 'video_source_scrape_manual_current_work':
         return '目前作品';
       case 'video_source_scrape_manual_query_hint':
-        return '按名稱搜尋，或選擇「AniDB ID」輸入 ID 或官方動畫網址。選擇搜尋結果後，便會套用至目前作品。';
+        return '按標題搜尋，或選擇 MAL、TMDB 電影、TMDB 電視劇並輸入 ID 或官方連結。選擇結果後才會套用至目前作品。';
       case 'video_source_scrape_manual_id_invalid':
-        return '請輸入正整數的 AniDB ID，或有效的 AniDB 動畫網址。';
+        return '請輸入正整數作品 ID，或與所選來源及類型一致的官方連結。';
       case 'video_source_scrape_manual_by_title':
         return '按名稱';
       case 'video_source_scrape_manual_by_id':
-        return 'AniDB ID';
+        return '按作品 ID';
       case 'video_source_grouping_mode':
         return '影片整理方式';
       case 'video_source_grouping_folder':
@@ -322935,6 +323433,20 @@ extension on _StringsZhHk {
         return '有多個同名作品。請開啟待確認頁，選擇具體項目進行配對。';
       case 'video_source_scrape_pending_tab':
         return '待確認';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB 電影';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB 電視劇';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL（經 Jikan）為主要資料來源，TMDB 作後備。';
+      case 'video_anidb_hash_enabled':
+        return '透過 AniDB ED2K 識別檔案';
+      case 'video_anidb_hash_hint':
+        return '需要 AniDB 帳戶和已註冊用戶端，僅傳送檔案大小與雜湊值。AniDB UDP 登入未加密，請僅在可信網絡下啟用。';
+      case 'video_anidb_username':
+        return 'AniDB 使用者名稱';
+      case 'video_anidb_password':
+        return 'AniDB 密碼';
       default:
         return null;
     }
